@@ -51,13 +51,11 @@ adder(2, 6);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-constructor', 'Function constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function")}}
+{{Compat}}
 
 ## 関連情報
 

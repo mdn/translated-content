@@ -90,5 +90,5 @@ _このインターフェイスは親である {{domxref("EventTarget")}} から
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - {{domxref("MediaStreamTrack")}}

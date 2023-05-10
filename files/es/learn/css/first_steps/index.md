@@ -1,13 +1,6 @@
 ---
 title: Primeros pasos en CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Aprender
-  - CSS
-  - Principiante
-  - modulo
-  - primeros pasos
-translation_of: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}
@@ -22,7 +15,7 @@ Antes de comenzar este módulo, deberías:
 2. Un entorno básico de trabajo configurado, como se detalla en la sección de [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), y saber como crear y administrar archivos, o lo puedes ver en el módulo [Manejando los archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos).
 3. Conocimiento básico de HTML, como se muestra en [Introducción a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 
-> **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estás trabajando en un computador/tabla/otro dispositivo en el cual no puedes crear o almacenar tus propios archivos, podrías probar (la mayoría) de los ejemplos de código en un editor de código en línea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -41,5 +34,5 @@ Este módulo contiene los siguientes artículos, que te guiarán a través de to
 
 ## Ver también
 
-- [Conocimiento práctico intermedio Web 1: Introducción a CSS (en Inglés)](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - : Aprende acerca de como agregar estilo a los elementos HTML en una página web, selectores CSS, atributos, y valores.
+- [Usa tu nuevo conocimiento](/es/docs/Learn/CSS/First_steps/Styling_a_biography_page)
+  - : Con lo que has aprendido en los últimos artículos, deberías descubrir que puede formatear documentos de texto simples usando CSS para agregarles su propio estilo. Esta evaluación te da la oportunidad de hacerlo.

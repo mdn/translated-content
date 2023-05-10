@@ -1,6 +1,6 @@
 ---
 title: 字符类
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
 {{JSSidebar("JavaScript Guide")}}
@@ -41,7 +41,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
    <td>
     <p>一个否定或补充的字符类。也就是说，它匹配未包含在方括号中的任何字符。你可以使用连字符指定字符范围，但如果连字符出现在<code>^</code>后的第一个字符或方括号中的或最后一个字符，则将其视为字面连字符，作为普通字符包含在字符类中。例如，<code>[^abc]</code> 与 <code>[^a-c]</code> 相同。它们首先匹配“bacon”中的“o”和“chop”中的“h”。</p>
     <div class="notecard note">
-     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">输入的开始</a>。</p>
+     <p><strong>备注：</strong> ^ 字符也可以表示<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">输入的开始</a>。</p>
     </div>
    </td>
   </tr>
@@ -84,13 +84,17 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\s</code></td>
    <td>
-    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\s\w*/</code> 匹配“foo bar”中的“bar”。</p>
+    <p>匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。相当于
+      <code>[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>\s\w*/</code> 匹配“foo bar”中的“bar”。
+    </p>
    </td>
   </tr>
   <tr>
    <td><code>\S</code></td>
    <td>
-    <p>匹配除空格以外的单个字符。相当于 <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。</p>
+    <p>匹配除空格以外的单个字符。相当于
+      <code>[^\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>。例如，<code>/\S\w*/</code> 匹配“foo bar”中的“foo”。
+    </p>
    </td>
   </tr>
   <tr>
@@ -115,7 +119,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">断言</a>。</td>
+   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -144,7 +148,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
       <code>\p{<em>UnicodeProperty</em>}</code>，<code>\P{<em>UnicodeProperty</em>}</code>
     </td>
     <td>
-      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
+      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
     </td>
   </tr>
   <tr>
@@ -170,7 +174,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
     </p>
     <div class="notecard note">
      <p>
-      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
+      <strong>备注：</strong> 析取是指定“一组选择”的另一种方式，但它不是字符类。析取不是原子的——你需要使用<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">组</a>使其成为一个更大的模式的一部分。<code>[abc]</code> 在功能上等同于 <code>(?:a|b|c)</code>。
      </p>
     </div>
    </td>
@@ -231,12 +235,12 @@ console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
 
 ## 参见
 
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)
+  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [`RegExp()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - [CharacterClass in the ECMAScript specification](https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass)

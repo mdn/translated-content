@@ -13,7 +13,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 ![](android-notification.png)
 
-![](https://mdn.mozillademos.org/files/10961/mac-notification.png)
+![](mac-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。
 
@@ -108,7 +108,7 @@ window.addEventListener('load', function () {
 >
 > 当你接收到一个“close”事件时，并不能保证这个通知是被用户关闭的。这是符合规范的，其中指出：“当一个通知被关闭时，通知的关闭动作都必须执行，不论是底层通知平台导致，还是用户导致。”
 
-### 简单的例子
+### 简单的示例
 
 假定有如下的 HTML:
 
@@ -170,7 +170,7 @@ window.addEventListener('load', function () {
 
 这是实际的结果：
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('简单的示例', '100%', 30) }}
 
 ## 处理重复的通知
 

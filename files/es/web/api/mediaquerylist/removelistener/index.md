@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList.removeListener()
 slug: Web/API/MediaQueryList/removeListener
-translation_of: Web/API/MediaQueryList/removeListener
 ---
 
 {{APIRef("CSSOM View")}}
@@ -50,13 +49,11 @@ mql.removeListener(screenTest);
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-removelistener", "removeListener")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList.removeListener")}}
+{{Compat}}
 
 ## Ver también
 

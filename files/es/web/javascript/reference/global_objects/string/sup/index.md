@@ -1,13 +1,6 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/sup
 ---
 

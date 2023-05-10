@@ -15,4 +15,4 @@ var url_atual = document.URL
 
 ## Documentação
 
-- [DOM - Nível 2 - HTML: URL](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)
+- [DOM - Nível 2 - HTML: URL](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)

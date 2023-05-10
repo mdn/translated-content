@@ -1,7 +1,6 @@
 ---
 title: overflow (excedente)
 slug: Web/CSS/overflow
-translation_of: Web/CSS/overflow
 ---
 
 {{ CSSRef() }}
@@ -121,14 +120,11 @@ p { overflow: auto; /* se dibujan barras según se necesite */ }
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario   |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{ SpecName('CSS3 Box', '#overflow1', 'overflow') }}             | {{ Spec2('CSS3 Box') }} | Sin cambios. |
-| {{ SpecName('CSS2.1', 'visufx.html#overflow', 'overflow') }} | {{ Spec2('CSS2.1') }}     |              |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## Véase también
 

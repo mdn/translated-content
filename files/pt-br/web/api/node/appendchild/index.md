@@ -44,7 +44,7 @@ Este método não permite mover nós entre documentos diferentes. Se você quise
 
 ## Especificação
 
-- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
+- [DOM Level 3 Core: appendChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
 
 ## Ver também
 

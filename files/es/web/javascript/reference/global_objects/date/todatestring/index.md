@@ -1,13 +1,6 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Fecha
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toDateString
 ---
 
@@ -48,9 +41,9 @@ console.log(d.toDateString()); // logs Wed Jun 28 1993
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toDateString")}}
+{{Compat}}
 
 ## Vea también
 

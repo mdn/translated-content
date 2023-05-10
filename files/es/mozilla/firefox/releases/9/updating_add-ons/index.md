@@ -1,7 +1,6 @@
 ---
 title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-translation_of: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
 
 {{FirefoxSidebar}}

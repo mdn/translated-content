@@ -1,11 +1,6 @@
 ---
 title: sub
 slug: Web/HTML/Element/sub
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/sub
 original_slug: Web/HTML/Elemento/sub
 ---
 
@@ -40,14 +35,11 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                                     | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## Ver también
 

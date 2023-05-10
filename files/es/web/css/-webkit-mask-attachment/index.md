@@ -1,12 +1,6 @@
 ---
 title: '-webkit-mask-attachment'
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
 
 {{ CSSRef() }}
@@ -37,9 +31,13 @@ body {
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+No forma parte de ningún estándar.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

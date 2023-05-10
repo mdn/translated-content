@@ -1,7 +1,6 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/values
 ---
 
@@ -44,10 +43,10 @@ console.log(setIter.next().value); // "baz"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
-## See also
+## Ver también
 
 - {{jsxref("Set.prototype.entries()")}}

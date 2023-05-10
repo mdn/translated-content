@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode
 slug: Web/API/AnalyserNode
-translation_of: Web/API/AnalyserNode
 ---
 
 {{APIRef("Web Audio API")}}
@@ -10,7 +9,7 @@ La interfaz **`AnalyserNode`** representa un nodo habilitado para proveer frecue
 
 Un `AnalyzerNode` tiene exactamente una entrada y una salida. El nodo trabaja incluso si la salida no se encuentra conectada.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/9707/WebAudioFFT.png)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 <table class="properties">
   <tbody>
@@ -136,15 +135,13 @@ function draw() {
     draw();
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.AnalyserNode")}}
+{{Compat}}
 
 ## See also
 

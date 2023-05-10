@@ -1,12 +1,6 @@
 ---
 title: '-webkit-mask-box-image'
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
 {{ CSSRef() }}
@@ -70,9 +64,13 @@ Where:
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-box-image")}}
+No forma parte de ningún estándar.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

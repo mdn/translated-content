@@ -1,7 +1,6 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
-translation_of: Web/API/Element/scrollWidth
 ---
 
 {{ APIRef }}

@@ -117,7 +117,7 @@ panel.setAttribute('class', 'msgBox');
 html.appendChild(panel);
 ```
 
-Les deux sections suivantes font usage des mêmes fonctions `createElement()` et `appendChild()` que nous avons déjà vu pour créer deux nouveaux éléments — l'un {{htmlelement("p")}} et l'autre {{htmlelement("button")}} —  et pour les insèrer dans la page en tant qu'enfant du panneau `<div>`. On utilise leur propriété {{domxref("Node.textContent")}} — qui représente le contenu textuel d'un élément — pour insérer un message à l'intérieur du paragraphe, ainsi qu'un 'x' à l'intérieur du bouton. Ce bouton sera cliqué / activé quand l'utilisateur voudra fermer la boîte de message.
+Les deux sections suivantes font usage des mêmes fonctions `createElement()` et `appendChild()` que nous avons déjà vu pour créer deux nouveaux éléments — l'un {{htmlelement("p")}} et l'autre {{htmlelement("button")}} — et pour les insèrer dans la page en tant qu'enfant du panneau `<div>`. On utilise leur propriété {{domxref("Node.textContent")}} — qui représente le contenu textuel d'un élément — pour insérer un message à l'intérieur du paragraphe, ainsi qu'un 'x' à l'intérieur du bouton. Ce bouton sera cliqué / activé quand l'utilisateur voudra fermer la boîte de message.
 
 ```js
 var msg = document.createElement('p');
@@ -131,7 +131,7 @@ panel.appendChild(closeBtn);
 
 Finalement, nous utilisons un gestionnaire d'évènements {{domxref("GlobalEventHandlers.onclick")}} de sorte qu'un clic sur le bouton déclenche le bout de code chargé de supprimer la totalité du panneau de la page — c'est-à-dire fermer la boîte de message.
 
-Le gestionnaire `onclick` est une propriété disponible sur le bouton (en fait, sur n'importe quel élément de la page) qui pourra se voir transmettre une fonction en paramètre pour spécifier quel morceau de code sera déclenché quand le bouton sera cliqué. Vous en apprendrez bien plus dans notre article sur les évènements. Nous avons passé à notre gestionnaire  `onclick` une fonction anonyme, qui contient le code exécuté quand le bouton est cliqué. L'instruction définie dans la fonction utilise la fonction de l'API DOM {{domxref("Node.removeChild()")}} pour indiquer que nous tenons à supprimer un élément enfant spécifique de l'élément HTML — dans notre cas le panneau `<div>`.
+Le gestionnaire `onclick` est une propriété disponible sur le bouton (en fait, sur n'importe quel élément de la page) qui pourra se voir transmettre une fonction en paramètre pour spécifier quel morceau de code sera déclenché quand le bouton sera cliqué. Vous en apprendrez bien plus dans notre article sur les évènements. Nous avons passé à notre gestionnaire `onclick` une fonction anonyme, qui contient le code exécuté quand le bouton est cliqué. L'instruction définie dans la fonction utilise la fonction de l'API DOM {{domxref("Node.removeChild()")}} pour indiquer que nous tenons à supprimer un élément enfant spécifique de l'élément HTML — dans notre cas le panneau `<div>`.
 
 ```js
 closeBtn.onclick = function() {

@@ -1,7 +1,6 @@
 ---
 title: ':focus-visible'
 slug: Web/CSS/:focus-visible
-translation_of: Web/CSS/:focus-visible
 ---
 
 {{CSSRef}}
@@ -103,13 +102,11 @@ Puede que no sea obvio por qué el indicador de enfoque aparece y desaparece si 
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-visible")}}
+{{Compat}}
 
 ## Vea también
 

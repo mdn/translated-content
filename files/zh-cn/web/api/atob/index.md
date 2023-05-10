@@ -36,7 +36,7 @@ let decodedData = window.atob(encodedData);    // 解码
 
 ## 参见
 
-- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [`data` URIs](/zh-CN/docs/data_URIs)
 - {{domxref("btoa()")}}
 - [Components.utils.importGlobalProperties](/zh-CN/docs/Components.utils.importGlobalProperties)

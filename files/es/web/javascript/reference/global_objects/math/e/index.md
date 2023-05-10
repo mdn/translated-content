@@ -1,12 +1,6 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/E
 ---
 
@@ -44,7 +38,7 @@ getNapier(); // 2.718281828459045
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.E")}}
+{{Compat}}
 
 ## Ver también
 

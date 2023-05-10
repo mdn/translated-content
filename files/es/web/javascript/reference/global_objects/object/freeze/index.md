@@ -1,7 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
 
@@ -141,9 +140,9 @@ TypeError: 1 is not an object // Código ES5
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## Mira también
 

@@ -1,7 +1,6 @@
 ---
 title: CSS Transforms
 slug: Web/CSS/CSS_Transforms
-translation_of: Web/CSS/CSS_Transforms
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -25,8 +24,6 @@ translation_of: Web/CSS/CSS_Transforms
 - [Using CSS transforms](/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Transforms') }} | {{ Spec2('CSS3 Transforms') }} | Initial definition. |
+{{Specifications}}

@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions
 - [コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - [ファイルの操作](/ja/docs/Mozilla/Add-ons/WebExtensions/Working_with_files)
-- [多言語対応](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
+- [国際化拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization)
 - [セキュリティのベストプラクティス](/ja/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices)
 - [Content Security Policy](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Native messaging](/ja/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)

@@ -39,13 +39,13 @@ Em algum ponto da história, você tinha duas opções ao criar um site:
 
 Essas duas abordagens, geralmente, resultavam em um site com a melhor aparência na tela da pessoa que o projetava! O site líquido resultou em um design esmagado para telas menores (como visto abaixo) e comprimentos de linha muito longos em telas maiores.
 
-![A layout with two columns squashed into a mobile size viewport.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
 > **Nota:** Veja este layout líquido simples: [exemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). Ao visualizar o exemplo, arraste a janela do navegador para dentro e para fora para ver como isso fica em tamanhos diferentes.
 
 O site de largura fixa criava uma barra de rolagem horizontal em telas menores que a largura do site (como mostrado abaixo) e muito espaço em branco nas bordas do design em telas maiores.
 
-![A layout with a horizontal scrollbar in a mobile viewport.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
 > **Nota:** Veja este layout simples de largura fixa: [exemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Observe novamente o resultado ao alterar o tamanho da janela do navegador.
 
@@ -117,11 +117,11 @@ This approach will be found in many places across the web today, and it is docum
 
 The following example demonstrates a simple responsive design using Media Queries and a flexible grid. On narrow screens the layout displays the boxes stacked on top of one another:
 
-![A mobile view of the layout with boxes stacked on top of each other vertically.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![A mobile view of the layout with boxes stacked on top of each other vertically.](mdn-rwd-mobile.png)
 
 On wider screens they move to two columns:
 
-![A desktop view of a layout with two columns.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
 > **Nota:** You can find the [live example](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) and [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) for this example on GitHub.
 
@@ -222,11 +222,11 @@ We have edited our responsive grid example above to also include responsive type
 
 On mobile the heading is smaller:
 
-![A stacked layout with a small heading size.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![A stacked layout with a small heading size.](mdn-rwd-font-mobile.png)
 
 On desktop however we see the larger heading size:
 
-![A two column layout with a large heading.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
 > **Nota:** See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
@@ -293,18 +293,3 @@ Responsive design refers to a site or application design that responds to the en
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/pt-BR/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/pt-BR/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/pt-BR/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

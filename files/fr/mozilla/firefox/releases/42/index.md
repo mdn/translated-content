@@ -122,7 +122,7 @@ _Pas de changement._
 
 ## La mise en réseau
 
-- La directive [`upgrade-insecure-requests`](/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests) du CSP a été implémentée ({{bug(1139297)}}).
+- La directive [`upgrade-insecure-requests`](/fr/docs/Web/Security/CSP/CSP_policy_directives#upgrade-insecure-requests) du CSP a été implémentée ({{bug(1139297)}}).
 
 ## Sécurité
 

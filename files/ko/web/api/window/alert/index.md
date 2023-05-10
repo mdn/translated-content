@@ -1,13 +1,6 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/alert
 ---
 {{APIRef}}
 
@@ -33,7 +26,7 @@ alert("Hello world!");
 
 상기 두 코드의 동작은 모두 다음과 같습니다.
 
-![Image:AlertHelloWorld.png](/files/130/AlertHelloWorld.png)
+![Image:AlertHelloWorld.png](alerthelloworld.png)
 
 ## 참고
 

@@ -1,9 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 
 {{JSRef}}
@@ -80,7 +77,7 @@ AsyncFunction 생성자를 통해 만들어진 {{jsxref("Statements/async_functi
     });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

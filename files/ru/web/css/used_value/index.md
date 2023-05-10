@@ -10,7 +10,7 @@ translation_of: Web/CSS/used_value
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
-> **Примечание:** **Замечание**: {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
+> **Примечание:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
 
 ## Пример
 
@@ -103,4 +103,21 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 ## Смотреть так же:
 
 - {{domxref("window.getComputedStyle")}}
-- {{CSS_key_concepts}}
+- Ключевые концепции CSS
+  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/Comments)
+  - [специфичность](/ru/docs/Web/CSS/Specificity)
+  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Значения
+    - [начальные](/ru/docs/Web/CSS/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/computed_value)
+    - [используемые](/ru/docs/Web/CSS/used_value)
+    - [действительные](/ru/docs/Web/CSS/actual_value)
+  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)

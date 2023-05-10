@@ -1,11 +1,6 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/POSITIVE_INFINITY
 ---
 
@@ -55,7 +50,7 @@ if (bigNumber === Number.POSITIVE_INFINITY) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.POSITIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver también
 

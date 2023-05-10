@@ -1,11 +1,6 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-tags:
-  - Codigo de Estado
-  - HTTP
-  - Éxito
-translation_of: Web/HTTP/Status/200
 ---
 
 {{HTTPSidebar}}
@@ -29,13 +24,11 @@ El resultado exitoso de un método {{HTTPMethod("PUT")}} o uno {{HTTPMethod("DEL
 
 ## Especificaciones
 
-| Especificaciones                                 | Titulo                                                        |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "200 OK" , "6.3.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.200")}}
+{{Compat}}
 
 ## Ver también
 

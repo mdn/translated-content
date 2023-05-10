@@ -148,7 +148,6 @@ arr.every( (elem, index, arr) => {
 // 2nd iteration: [1,2][1] -> 2
 ```
 
-
 ### 배열이 아닌 객체에서 every() 호출하기
 
 `every()` 메서드는 `this`의 `length` 속성을 읽고 마지막 혹은 `callbackFn`이 `false`를 리턴할때까지 정수 인덱스에 접근합니다.

@@ -47,7 +47,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         </p>
         <div class="notecard note">
           <p>
-            <strong>Note:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
+            <strong>Nota:</strong> Apartir do ES5, isso pode ser ignorado com o {{jsxref("Object.create", "Object.create(null)")}}, mas isso raramente é feito.
           </p>
         </div>
       </td>
@@ -157,7 +157,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         <p>
           (Mas você pode construir sua própria serialização e conversão para o <code>Map</code> usando o
           {{jsxref("JSON.stringify()")}} como o argumento <em>replacer</em>,
-          e usando o  {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
+          e usando o {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
           Veja a questão no Stack Overflow     <a href="https://stackoverflow.com/q/29085197/"
             >How do you JSON.stringify an ES6 Map?</a
           >).

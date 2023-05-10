@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/unshift
 ---
 
@@ -57,9 +50,9 @@ arr.unshift([-3]);
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## Ver también
 

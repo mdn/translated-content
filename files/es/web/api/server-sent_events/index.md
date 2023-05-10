@@ -1,11 +1,6 @@
 ---
 title: Server-sent events
 slug: Web/API/Server-sent_events
-tags:
-  - NeedsTranslation
-  - Server-sent events
-  - TopicStub
-translation_of: Web/API/Server-sent_events
 original_slug: Server-sent_events
 ---
 

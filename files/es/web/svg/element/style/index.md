@@ -1,7 +1,6 @@
 ---
 title: style
 slug: Web/SVG/Element/style
-translation_of: Web/SVG/Element/style
 ---
 
 {{SVGRef}}
@@ -51,9 +50,13 @@ Live result:
 
 Este elemento implementa la interfaz [`SVGStyleElement`](/en/DOM/SVGStyleElement).
 
-## Browser compatibility
+## Especificaciones
 
-{{Compat("svg.elements.style")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## See also
 

@@ -1,12 +1,6 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - Bordes
-  - CSS
-  - Propiedades CSS
-  - Referencia
-translation_of: Web/CSS/border-top
 ---
 
 {{CSSRef}}
@@ -73,12 +67,8 @@ element {
 
 ## Especificaciones
 
-| Especificación                                                                           | Status                                   | Comentarios                                                                                                          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-top', 'border-top')}}         | {{Spec2('CSS3 Backgrounds')}} | No hay cambios directos, aunque la modificación de valores para {{cssxref("border-top-color")}} sí aplican. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-top', 'border-top')}} | {{Spec2('CSS2.1')}}                 | No hay cambios significativos                                                                                        |
-| {{SpecName('CSS1', '#border-top', 'border-top')}}                         | {{Spec2('CSS1')}}                 | Definición inicial                                                                                                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top")}}
+{{Compat}}

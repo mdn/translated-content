@@ -1,7 +1,6 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
-translation_of: Web/API/Document/open
 original_slug: Web/API/Document/abrir
 ---
 

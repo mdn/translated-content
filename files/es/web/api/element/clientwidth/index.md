@@ -1,7 +1,6 @@
 ---
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
-translation_of: Web/API/Element/clientWidth
 ---
 
 {{ APIRef }}
@@ -20,7 +19,7 @@ _intElemClientWidth_ será un entero que corresponde con el **clientWidth** del 
 
 ## Ejemplo
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## Especificaciones
 

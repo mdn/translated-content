@@ -1,9 +1,6 @@
 ---
 title: Operador Coma
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 original_slug: Web/JavaScript/Referencia/Operadores/operador_coma
 ---
 
@@ -47,18 +44,13 @@ function myFunc () {
 }
 ```
 
-## Específicaciones
+## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ESDraft', '#sec-comma-operator', 'Comma operator')}} | {{Spec2('ESDraft')}} |                    |
-| {{SpecName('ES6', '#sec-comma-operator', 'Comma operator')}}     | {{Spec2('ES6')}}         |                    |
-| {{SpecName('ES5.1', '#sec-11.14', 'Comma operator')}}             | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES1', '#sec-11.14', 'Comma operator')}}                 | {{Spec2('ES1')}}         | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Ver también
 

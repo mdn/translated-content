@@ -57,9 +57,9 @@ slug: Web/HTML/Element/embed
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("img")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
@@ -98,14 +98,11 @@ slug: Web/HTML/Element/embed
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-embed-element', '&lt;embed&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-embed-element', '&lt;embed&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-> **メモ:** Firefox のバージョン 45 以前では HTML リソースの内容を表示せず、プラグインが必要である旨の汎用的なメッセージを表示します ({{Bug("730768")}} をご覧ください)。
+> **メモ:** Firefox のバージョン 45 以前では HTML リソースの内容を表示せず、プラグインが必要である旨の汎用的なメッセージを表示します ([Firefox バグ 730768](https://bugzil.la/730768) をご覧ください)。
 
 {{Compat("html.elements.embed")}}
 

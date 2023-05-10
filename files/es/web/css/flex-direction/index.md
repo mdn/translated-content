@@ -1,13 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CCS
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-  - Referencia
-  - flexbox
-translation_of: Web/CSS/flex-direction
 ---
 
 {{CSSRef}}
@@ -111,7 +104,7 @@ Se aceptan los siguientes valores:
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '300', '', 'Web/CSS/flex-direction') }}
+{{EmbedLiveSample('', '', '300')}}
 
 ## Sobre Accesibilidad
 
@@ -122,17 +115,13 @@ Si utilizas `flex-direction` con un valor de `row-reverse` o `column-reverse` en
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-## Specificaciones
+## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentario         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad de Navegadores
-
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## Ver también
 

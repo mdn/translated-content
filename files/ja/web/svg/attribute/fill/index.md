@@ -221,12 +221,7 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 
 ## Specifications
 
-| Specification                                                                        | Status                                   | Comment                                                                    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName("SVG Animations 2", "#FillAttribute", "transform")}} | {{Spec2("SVG Animations 2")}} | Definition for animations                                                  |
-| {{SpecName("SVG2", "painting.html#FillProperty", "fill")}}         | {{Spec2("SVG2")}}                 | Definition for shapes and texts. Adds `context-fill` and `context-stroke`. |
-| {{SpecName("SVG1.1", "animate.html#FillAttribute", "fill")}}     | {{Spec2("SVG1.1")}}                 | Initial definition for animations                                          |
-| {{SpecName("SVG1.1", "painting.html#FillProperty", "fill")}}     | {{Spec2("SVG1.1")}}                 | Initial definition for shapes and texts                                    |
+{{Specifications}}
 
 ## Browser compatibility
 

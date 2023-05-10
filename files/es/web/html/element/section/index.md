@@ -1,7 +1,6 @@
 ---
 title: section
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 original_slug: Web/HTML/Elemento/section
 ---
 
@@ -70,9 +69,13 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 </section>
 ```
 
-## Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.section")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Véase también
 

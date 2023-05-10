@@ -1,11 +1,6 @@
 ---
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
-tags:
-  - API
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Window/outerHeight
 ---
 
 {{APIRef}}
@@ -34,17 +29,15 @@ Para obtener la altura interna de una ventana, por ejemplo, el alto de una pági
 
 La siguiente figura muestra la diferencia entre `innerHeight` y `outerHeight`.
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
-
-## Compatibilidad del navegador
-
-{{Compat("api.Window.outerHeight")}}
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerheight', 'Window.outerHeight') }} | {{ Spec2('CSSOM View') }} |            |
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

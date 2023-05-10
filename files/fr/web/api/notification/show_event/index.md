@@ -26,7 +26,7 @@ Notification.onshow = () => { ... }
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onshow")}}
+{{Compat}}
 
 ## Voir aussi
 

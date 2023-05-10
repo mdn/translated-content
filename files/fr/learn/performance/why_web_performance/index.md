@@ -48,7 +48,7 @@ Les performances Web font référence à la rapidité avec laquelle le contenu d
 
 Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Apprendre/a11y). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
 
-À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article,  avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
+À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article, avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
 
 - Imaginez charger ceci sur un ordinateur de bureau connecté à un réseau de fibre optique. Cela semblerait relativement rapide, et la taille du fichier serait en grande partie sans importance.
 - Imaginez charger ce même site en utilisant des données mobiles connectées sur un iPad de 9 ans tout en vous rendant chez vous en transport en commun. Le même site sera lent à se charger, voir presque inutilisable en fonction de la couverture cellulaire. Vous pourriez abandonner avant la fin du chargement.
@@ -84,18 +84,3 @@ Le suivi des performances est important. Plusieurs facteurs, notamment la vitess
 Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
 
 {{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
-
-## Dans ce module
-
-- [The "why" of web performance](/fr/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/fr/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/fr/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Fonts and performance](/fr/docs/Learn/Performance/Fonts)
-- [Mobile performance](/fr/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/fr/docs/Learn/Performance/business_case_for_performance)

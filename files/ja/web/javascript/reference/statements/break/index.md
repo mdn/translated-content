@@ -1,41 +1,46 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
+l10n:
+  sourceCommit: 57ae0014c67f339b9af6252a451ddd40735ed243
 ---
 
 {{jsSidebar("Statements")}}
 
-**`break` 文**は現在のループや {{jsxref("Statements/switch", "switch")}} 文や{{jsxref("Statements/label", "ラベル", "", 1)}}文を中断し、中断した文の次の文にプログラムの制御を移します。
+**`break`** 文は現在のループや {{jsxref("Statements/switch", "switch")}} 文を終了し、プログラムの制御を終了した文の次の文に移します。[ラベル付きの文](/ja/docs/Web/JavaScript/Reference/Statements/label)の中で使用された場合は、ラベル付きの文を飛び越えるためにも使われます。
 
 {{EmbedInteractiveExample("pages/js/statement-break.html")}}
 
 ## 構文
 
-```
-break [label];
+```js-nolint
+break;
+break label;
 ```
 
 - `label` {{optional_inline}}
-  - : 中断する文のラベルに関連付けられた識別子。中断する文がループでも {{jsxref("Statements/switch", "switch")}} でもない場合、ラベルは必須です。
+  - : 終了する文のラベルに関連付けられた識別子。`break` 文がループや {{jsxref("Statements/switch", "switch")}} の中に入れ子になっていない場合は、ラベル識別子が必要です。
 
 ## 解説
 
-`break` 文は、オプションでラベルを指定して、ラベル付き文の外にプログラムを脱出させることができます。 `break` 文は参照されるラベルの内側にある必要があります。ラベルはあらゆる{{jsxref("Statements/block", "ブロック", "", 1)}}文に付けることができます。ループ文の前である必要はありません。
+`break;` に遭遇すると、プログラムは最も内側の `switch` または[ループ](/ja/docs/Web/JavaScript/Reference/Statements#反復処理)文から抜け出し、その次の文から実行を続けます。
 
-`break` 文は、その後にラベルがあるかどうかに関わらず、 `break` 文で脱出しようとする現在のループや switch やラベル付き文の中に含まれる関数の本体の中で使用することはできません。
+`break label;` に遭遇すると、プログラムは `label` でラベル付けされた文から抜け出し、その次の文の実行を続けます。`break` 文は参照されるラベルの内側にある必要があります。ラベルはあらゆる{{jsxref("Statements/block", "ブロック", "", 1)}}文に付けることができます。ループ文の前である必要はありません。
+
+`break` 文は、その後にラベルがあるかどうかに関わらず、スクリプト、モジュール、関数の本体、[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)のそれぞれ最上位で使用することはできません。その関数やクラスがさらにループの中に含まれていた場合でもです。
 
 ## 例
 
 ### while ループにおける break
 
-次の関数には `i` が `3` の時に {{jsxref("Statements/while", "while")}} 文を中断する `break` 文があるので、`3 * x` の値を返します。
+次の関数には `break` 文があり、`i` が `3` の時に {{jsxref("Statements/while", "while")}} 文を終了させるので、`3 * x` の値を返します。
 
 ```js
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
+    if (i === 3) {
       break;
     }
     i += 1;
@@ -67,75 +72,71 @@ switch (food) {
 
 ### ラベル付きブロックにおける break
 
-次のコードは、ラベル付きブロックで `break` 文を使っています。 `break` 文は、それを参照するラベル付き文の内側になければなりません。 `inner_block` が `outer_block` の中にあることに注意してください。
+次のコードは、ラベル付きブロックで `break` 文を使っています。`break outerBlock` を使用すると、制御は `outerBlock` としてマークされたブロック構文の末尾に移動します。
 
 ```js
-outer_block: {
-  inner_block: {
-    console.log('1');
-    break outer_block; // inner_block および outer_block の両方から抜けます
-    console.log(':-('); // スキップされる
+outerBlock: {
+  innerBlock: {
+    console.log("1");
+    break outerBlock; // innerBlock および outerBlock の両方から抜けます
+    console.log(":-("); // スキップされる
   }
-  console.log('2'); // スキップされる
+  console.log("2"); // スキップされる
 }
 ```
 
-### ラベル付きブロックにおける break でエラーが発生するもの
+### 構文違反の break 文
 
-次のコードもラベル付きブロックで `break` 文を使っていますが、 `break` 文が `block_1` の内側にあるにもかかわらず `block_2` を参照しているので、 `SyntaxError` が発生します。 `break` は、参照先ラベルの内側になければなりません。
+`break` 文は参照先のラベルの中になければなりません。次のコードもラベル付きブロックで `break` 文を使っていますが、`break` 文が `block2` を参照しているにもかかわらず `block2` の中にないので、構文エラーが発生します。
 
-```js
-block_1: {
-  console.log('1');
-  break block_2; // SyntaxError: label not found
+```js example-bad
+block1: {
+  console.log("1");
+  break block2; // SyntaxError: label not found
 }
 
-block_2: {
-  console.log('2');
+block2: {
+  console.log("2");
 }
 ```
 
-### 関数における break
+構文エラーは、次のコードのように `break` がループの中や、`break` 文によって脱出しようとしているラベル付きブロックの中で入れ子になっている関数で使われた場合にも、構文エラーが発生します。
 
-以下のコード例でも `SyntaxError` が発生します。これは `break` をループの中にある関数や、 `break` 文で脱出しようとしているラベル付きブロックの中にある関数の中で使用しているためです。
-
-```js
+```js example-bad
 function testBreak(x) {
-  var i = 0;
+  let i = 0;
 
   while (i < 6) {
-    if (i == 3) {
-      (function() {
+    if (i === 3) {
+      (() => {
         break;
       })();
     }
     i += 1;
   }
 
-return i * x;
+  return i * x;
 }
 
 testBreak(1); // SyntaxError: Illegal break statement
 ```
 
-```js
-block_1: {
-  console.log('1');
-  ( function() {
-    break block_1; // SyntaxError: Undefined label 'block_1'
+```js example-bad
+block1: {
+  console.log("1");
+  (() => {
+    break block1; // SyntaxError: Undefined label 'block1'
   })();
 }
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-break-statement', 'Break statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.statements.break")}}
+{{Compat}}
 
 ## 関連情報
 

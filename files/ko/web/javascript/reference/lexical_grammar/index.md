@@ -1,12 +1,6 @@
 ---
 title: 어휘 문법
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - JavaScript
-  - Keyword
-  - Lexical Grammar
-  - 문법
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 {{JsSidebar("More")}}
 
@@ -308,7 +302,7 @@ false
 0777 // parsed as octal, 511 in decimal
 ```
 
-Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see {{bug(957513)}}. See also the page about [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
+Note that decimal literals can start with a zero (`0`) followed by another decimal digit, but If all digits after the leading `0` are smaller than 8, the number is interpreted as an octal number. This won't throw in JavaScript, see [Firefox bug 957513](https://bugzil.la/957513). See also the page about [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
 
 ##### Exponential
 
@@ -579,7 +573,7 @@ The ECMAScript specification mentions [three rules of semicolon insertion](https
 
 ## 브라우저 호환성
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## 같이 보기
 

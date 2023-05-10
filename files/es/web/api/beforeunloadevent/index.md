@@ -1,7 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}
@@ -55,9 +54,13 @@ window.addEventListener("beforeunload", function (e) {
 });
 ```
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

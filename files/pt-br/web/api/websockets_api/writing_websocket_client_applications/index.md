@@ -32,9 +32,9 @@ O construtor lançará a exceção **`SECURITY_ERR`** se o destino não permitir
 
 ### Erros de Conexão
 
-Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invocando, assim, seu manipulador `onerror`), e então o [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) é enviado ao objeto [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invocando o manipulador `onclose`) para indicar a razão pela qual a conexão foi fechada.
+Se um erro ocorrer durante a tentativa de conexão, primeiro um simpes evento com o nome "error" é enviado ao objeto [`WebSocket`](/pt-BR/WebSockets/WebSockets_reference/WebSocket) (invocando, assim, seu manipulador `onerror`), e então o [`CloseEvent`](/pt-BR/WebSockets/WebSockets_reference/CloseEvent) é enviado ao objeto [`WebSocket`](/pt-BR/WebSockets/WebSockets_reference/WebSocket) (invocando o manipulador `onclose`) para indicar a razão pela qual a conexão foi fechada.
 
-O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
+O browser pode exibir uma descrição de erro mais detalhada na saída do console, ou mesmo um código de encerramento conforme definido na [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) através do [`CloseEvent`](/pt-BR/WebSockets/WebSockets_reference/CloseEvent). Está implementado a partir do Firefox 11.
 
 ### Exemplos
 
@@ -64,7 +64,7 @@ Uma vez a conexão aberta, você pode iniciar a transmisão de dados ao servidor
 exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
 ```
 
-Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer).
+Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/JavaScript_typed_arrays/ArrayBuffer).
 
 > **Nota:** Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
 
@@ -78,7 +78,7 @@ exampleSocket.onopen = function (event) {
 
 ### Utilizando JSON para transmitir objetos
 
-Uma forma conveniente é usar [JSON](/en/JSON) para enviar dados razoavelmente complexos ao servidor. Por exemplo, um aplicação de chat pode interagir com o servidor empregando um protocolo que utilize pacotes de dados JSON encapsulados:
+Uma forma conveniente é usar [JSON](/pt-BR/JSON) para enviar dados razoavelmente complexos ao servidor. Por exemplo, um aplicação de chat pode interagir com o servidor empregando um protocolo que utilize pacotes de dados JSON encapsulados:
 
 ```js
 // Enviar texto para todos os usuarios atraves do servidor
@@ -157,7 +157,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-Aqui utilizamos [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
+Aqui utilizamos [`JSON.parse()`](/pt-BR/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
 
 ### Formato de dados de texto
 

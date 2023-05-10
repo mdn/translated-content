@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
+l10n:
+  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
 
 {{APIRef("UI Events")}}
@@ -9,7 +11,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 
 ## 構文
 
-```js
+```js-nolint
 new KeyboardEvent(type)
 new KeyboardEvent(type, options)
 ```

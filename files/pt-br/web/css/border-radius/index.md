@@ -15,7 +15,7 @@ O raio é aplicável a todo o {{Cssxref("background")}}, mesmo se o elemento nã
 
 Esta propriedade é um [shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) para definir as quatro propriedades {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} e {{Cssxref("border-bottom-left-radius")}}.
 
-> **Note:** Como com qualquer propriedade shorthand, valores individuais herdados não são possíveis, isto é, border-radius: 0 0 inherit inherit, que substituiria definições parciais existentes. Neste caso, a propriedade individual longhand deve ser usada.
+> **Nota:** Como com qualquer propriedade shorthand, valores individuais herdados não são possíveis, isto é, border-radius: 0 0 inherit inherit, que substituiria definições parciais existentes. Neste caso, a propriedade individual longhand deve ser usada.
 
 {{cssinfo}}
 

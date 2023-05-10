@@ -1,7 +1,6 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asinh
 ---
 
@@ -59,9 +58,9 @@ Been formally correct it suffers from a number of issues related to floating poi
 
 {{Specifications}}
 
-## Compatibilidades de buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.asinh")}}
+{{Compat}}
 
 ## See also
 

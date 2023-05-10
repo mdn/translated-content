@@ -1,11 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 ---
 
@@ -157,7 +152,7 @@ console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math")}}
+{{Compat}}
 
 ## Ver también
 

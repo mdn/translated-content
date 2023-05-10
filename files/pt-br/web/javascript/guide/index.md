@@ -41,8 +41,6 @@ Este guia está dividido em vários capítulos:
 
   `for while do...while break/continue for..in for..of`
 
-<!---->
-
 - [Funções](/pt-BR/docs/Web/JavaScript/Guide/Funções)
 
   [Definição de funções](/pt-BR/docs/Web/JavaScript/Guide/Funções#Defining_functions)
@@ -73,8 +71,6 @@ Este guia está dividido em vários capítulos:
   [Modelos de strings](/pt-BR/docs/Web/JavaScript/Guide/Formatando_texto#Multi-line_template_strings)
   [Internacionalização](/pt-BR/docs/Web/JavaScript/Guide/Formatando_texto#Internationalization)
 
-<!---->
-
 - [Expressões Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions)
 
   [Criando uma expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#criando_expressao_regular)
@@ -99,8 +95,6 @@ Este guia está dividido em vários capítulos:
   [Criando Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects)
   [Definindo Métodos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_methods)
   [Getter e setter](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
-
-<!---->
 
 - [Detalhes do modelo de objetos](/pt-BR/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
 

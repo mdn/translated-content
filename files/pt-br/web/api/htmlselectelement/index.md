@@ -14,7 +14,7 @@ The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTM
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified. {{gecko_minversion_inline("2.0")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
   - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
@@ -30,7 +30,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form. {{gecko_minversion_inline("2.0")}}
+  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : A `long` reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
 - {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
@@ -54,11 +54,11 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Adds an element to the collection of `option` elements for this `select` element.
-- {{domxref("HTMLSelectElement.blur()")}}{{obsolete_inline}}
+- {{domxref("HTMLSelectElement.blur()")}}
   - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns `false`).
-- {{domxref("HTMLSelectElement.focus()")}}{{obsolete_inline}}
+- {{domxref("HTMLSelectElement.focus()")}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.

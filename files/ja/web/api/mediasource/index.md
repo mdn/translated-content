@@ -47,9 +47,7 @@ _親インターフェイス{{domxref("EventTarget")}}から、プロパティ�
 
 ## 仕様書
 
-| Specification                                                                                | Status                                           | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Media Source Extensions', '#mediasource', 'MediaSource')}} | {{Spec2('Media Source Extensions')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザの互換性
 

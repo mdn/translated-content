@@ -21,7 +21,7 @@ alt = coordinates.altitude
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Coordinates.altitude")}}
+{{Compat}}
 
 ## Veja também
 

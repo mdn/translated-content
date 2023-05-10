@@ -1,19 +1,8 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
-tags:
-  - API
-  - Blob
-  - Bytes
-  - File API
-  - Files
-  - Property
-  - Reference
-  - length
-  - size
-browser-compat: api.Blob.size
-translation_of: Web/API/Blob/size
 ---
+
 {{APIRef("File API") }}
 
 {{domxref("Blob")}} 인터페이스의 **`size`** 속성은 {{domxref("Blob")}} 또는 {{domxref("File")}}의 크기를 바이트 단위로 반환합니다.

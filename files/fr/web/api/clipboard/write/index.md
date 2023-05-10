@@ -29,7 +29,7 @@ Une {{jsxref("Promise")}} qui sera résolut quand les données seront écrite da
 
 ## Exemple
 
-Cette fonction d'exemple remplace l'actuel contenut du presse-papier par le texte spécifié en paramètre.
+Cette fonction d'exemple remplace l'actuel contenu du presse-papier par le texte spécifié en paramètre.
 
 ```js
 function setClipboard(text) {

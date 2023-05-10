@@ -48,13 +48,13 @@ Les événements ont trois fonctions :
     - `byUser`
       - : `boolean`. `true` si la notification a été fermée par l'utilisateur, ou `false`si elle a été fermée par le système. Cet argument n'est pas supporté dans Firefox.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onClosed")}}
+{{Compat}}
 
 ## Exemples
 
-Dans cet exemple simple, nous ajoutons un écouteur à l'événement  {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
 
 ```js
 browser.notifications.onClosed.addListener(function(notificationId) {

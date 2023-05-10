@@ -1,19 +1,6 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - DOM HTML
-  - Historial de navegación
-  - History
-  - History API
-  - Navegador
-  - Sesion
-  - URL
-  - Web
-  - historial
-  - pushState
-translation_of: Web/API/History/pushState
 ---
 
 {{APIRef("History API")}}
@@ -67,14 +54,11 @@ history.pushState(state, title, url)
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-history-pushstate", "History.pushState()")}} | {{Spec2('HTML WHATWG')}} | Ningún cambio desde {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "history.html#dom-history-pushstate", "History.pushState()")}} | {{Spec2('HTML5 W3C')}}     | Definición Inicial.                                   |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History.pushState")}}
+{{Compat}}
 
 ## Mira también
 

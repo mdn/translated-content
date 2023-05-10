@@ -16,7 +16,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 original_slug: Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Une fois que vous avez correctement créé un contexte WebGL, vous pouvez commencer à y dessiner. Une chose simple que nous pouvons faire est de dessiner un simple carré 2D sans texture, commençons donc par là, en construisant un code pour dessiner un carré 2D.
 

@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/ja/docs/Web/Guide/HTML/HTML5) は、特定の要素に関連付ける必要があるが、定義済みの意味を持つ必要のないデータに対する拡張性を念頭に置いて設計されています。 [`data-*` 属性](/ja/docs/Web/HTML/Global_attributes#attr-dataset)により、標準外の属性、 DOM の追加プロパティ、 {{domxref("Node.setUserData()")}} のような特殊な方法に頼らずに、標準的な意味のある HTML 要素に追加情報を格納することができます。
+[HTML5](/ja/docs/Web/Guide/HTML/HTML5) は、特定の要素に関連付ける必要があるが、定義済みの意味を持つ必要のないデータに対する拡張性を念頭に置いて設計されています。 [`data-*` 属性](/ja/docs/Web/HTML/Global_attributes#attr-dataset)により、標準外の属性やDOM の追加プロパティなどの特殊な方法に頼らずに、標準的な意味のある HTML 要素に追加情報を格納することができます。
 
 ## HTML の構文
 

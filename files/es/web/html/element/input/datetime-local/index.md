@@ -1,11 +1,6 @@
 ---
 title: <input type="datetime">
 slug: Web/HTML/Element/input/datetime-local
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/input/datetime
 original_slug: Web/HTML/Element/input/datetime
 ---
 
@@ -53,10 +48,7 @@ El siguiente elemento tiene los siguientes[atributos globales](/es/docs/Web/HTML
 
 ## Especificaciones
 
-| Especificación                                                                                                                                       | Estatus                          | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "forms.html#date-and-time-state-(type=datetime)", "&lt;input type=\"datetime\"&gt;")}} | {{Spec2("HTML WHATWG")}} |                    |
-| {{SpecName("HTML5.1", "semantics.html#date-and-time-state-(type=datetime)", "&lt;input type=\"datetime\"&gt;")}} | {{Spec2("HTML5.1")}}     | Definición inicial |
+{{Specifications}}
 
 ## Ver también
 

@@ -1,8 +1,8 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: conflicting/Web/API/Element/keydown_event
-translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
+browser-compat: api.Element.keydown_event
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -25,4 +25,4 @@ El evento `keydown` se lanza cuando el usuario presiona una tecla.
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onkeydown")}}
+{{Compat}}

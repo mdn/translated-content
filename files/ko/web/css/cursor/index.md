@@ -1,13 +1,6 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
 {{CSSRef}}
 
@@ -159,7 +152,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>no-drop</code></td>
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
-            현재 위치에 놓을 수 없음.<br />{{bug("275173")}}: Windows와 Mac
+            현재 위치에 놓을 수 없음.<br />[Firefox bug 275173](https://bugzil.la/275173): Windows와 Mac
             OS X에서 <code>no-drop</code>은 <code>not-allowed</code>와 같습니다.
           </td>
         </tr>
@@ -183,7 +176,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            모든 방향으로 이동 가능. (패닝)<br />{{bug("275174")}}:
+            모든 방향으로 이동 가능. (패닝)<br />[Firefox bug 275174](https://bugzil.la/275174):
             Windows에서 <code>all-scroll</code>은 <code>move</code>와 같습니다.
           </td>
         </tr>

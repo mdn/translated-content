@@ -19,9 +19,7 @@ var taskAttributeTiming = PerformanceLongTaskTiming.attribution;
 
 ## 仕様書
 
-| 仕様書                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-performanceentry-attribution','attribution')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

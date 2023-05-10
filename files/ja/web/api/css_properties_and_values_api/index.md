@@ -39,9 +39,7 @@ window.CSS.registerProperty({
 
 ## 仕様
 
-| 仕様                                                         | 状態                                                     | コメント |
-| ------------------------------------------------------------ | -------------------------------------------------------- | -------- |
-| {{SpecName('CSS Properties and Values API')}} | {{Spec2('CSS Properties and Values API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

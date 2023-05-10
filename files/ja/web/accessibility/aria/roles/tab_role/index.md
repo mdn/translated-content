@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: tab ロール'
-slug: Web/Accessibility/ARIA/Roles/Tab_Role
+slug: Web/Accessibility/ARIA/Roles/tab_role
 ---
 
 ARIA のタブ (`tab`) ロールは、タブリスト (`tablist`) 内のインタラクティブな要素を示し、アクティブ化されると、関連するタブパネル ([`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/Tabpanel_Role)) を表示します。
@@ -183,10 +183,7 @@ function changeTabs(e) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tab","tab")}}                                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#tabpanel","tabs")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 優先順位
 

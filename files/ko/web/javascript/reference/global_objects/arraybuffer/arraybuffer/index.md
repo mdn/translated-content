@@ -1,12 +1,6 @@
 ---
 title: ArrayBuffer() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 ---
 
 {{JSRef}}

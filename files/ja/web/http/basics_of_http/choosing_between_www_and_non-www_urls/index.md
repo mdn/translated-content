@@ -36,7 +36,7 @@ HTTP の URL では、先頭の `http://` または `https://` に続く部分�
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) に、[あるドメインから別のドメインへリダイレクトするように Apache を設定する方法](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258) の例があります。
 
-### _`<link rel="canonical">`_ を使用する
+### \<link rel="canonical"> を使用する
 
 ページの正規のアドレスは何かを示す、専用の HTML {{HTMLElement("link")}} 要素をページに追加できます。これは人間向けのページリーダーには影響がありませんが、検索エンジンのクローラーに対してページが実際はどこにあるかを示します。この方法では検索エンジンが同じページで何度もインデックスを作成したり、重複したコンテンツやスパムであると判断されたり、検索エンジンの結果ページでページが排除されたりランクが下がったりすることがなくなります。
 

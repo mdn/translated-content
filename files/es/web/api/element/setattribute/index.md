@@ -1,16 +1,6 @@
 ---
 title: Element.setAttribute
 slug: Web/API/Element/setAttribute
-tags:
-  - API
-  - DOM
-  - Elemento
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Referencia
-  - metodo
-  - setAttribute
-translation_of: Web/API/Element/setAttribute
 ---
 
 {{APIRef}}

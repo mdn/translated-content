@@ -1,18 +1,6 @@
 ---
 title: dt
 slug: Web/HTML/Element/dt
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Elemento
-  - HTML
-  - Lista de definiciones
-  - Referencia
-  - Término
-  - Término de definición
-  - dt
-  - listas
-translation_of: Web/HTML/Element/dt
 original_slug: Web/HTML/Elemento/dt
 ---
 
@@ -91,15 +79,11 @@ Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dt-element', '&lt;dt&gt;')}}     | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dt-element', '&lt;dt&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dt&gt;')}}                 | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## Vea también
 

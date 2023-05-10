@@ -2,6 +2,7 @@
 title: CSS 로 시작하기
 slug: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 이 기사에서는 간단한 HTML 문서를 가져와서 CSS 를 적용하여 언어에 대한 실질적인 내용을 학습합니다.
@@ -281,11 +282,3 @@ body h1 + p .special {
 다음 수업에서는 CSS 가 어떻게 구성되어 있는지 살펴 볼 것입니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 로 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

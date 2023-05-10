@@ -1,12 +1,6 @@
 ---
 title: CSS Positioning
 slug: Web/CSS/CSS_Positioning
-tags:
-  - CSS
-  - CSS Positioning
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}

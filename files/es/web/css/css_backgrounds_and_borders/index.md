@@ -1,15 +1,6 @@
 ---
 title: CSS Background and Borders
 slug: Web/CSS/CSS_Backgrounds_and_Borders
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders
-translation_of_original: Web/CSS/CSS_Background_and_Borders
 original_slug: Web/CSS/CSS_Background_and_Borders
 ---
 
@@ -71,10 +62,6 @@ original_slug: Web/CSS/CSS_Background_and_Borders
 - [Scaling background images](/es/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images)
   - : Describes how to change the appearance of the background images, by stretching them or repeating them, to cover the whole background of the element, or not.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment |
-| -------------------------------------------- | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Backgrounds') }} | {{ Spec2('CSS3 Backgrounds') }} |         |
-| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |         |
-| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |         |
+{{Specifications}}

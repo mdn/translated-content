@@ -1,13 +1,6 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Layout
-  - Reference
-translation_of: Web/CSS/transform-function
 ---
 {{CSSRef}}
 
@@ -17,9 +10,11 @@ translation_of: Web/CSS/transform-function
 
 HTML요소의 크기와 형태, 그리고 요소에 가해진 변형을 표현할 땐 다양한 좌표계를 사용할 수 있습니다. 가장 흔히 사용하는건 [직교좌표계](https://ko.wikipedia.org/wiki/%EC%A7%81%EA%B5%90_%EC%A2%8C%ED%91%9C%EA%B3%84)이나, 가끔 [동차좌표계](https://ko.wikipedia.org/wiki/%EB%8F%99%EC%B0%A8%EC%A2%8C%ED%91%9C)도 쓰입니다.
 
-### [![](/files/3438/coord_in_R2.png)](/@api/deki/files/5796/=coord_in_R2.png)직교좌표
+### 직교좌표계
 
 직교좌표계 평면 위의 점은 X 좌표(가로 좌표)와 Y 좌표(세로 좌표)를 사용해 표현하며, 벡터 표현 `(x, y)`를 사용해 나타냅니다.
+
+![직교 좌표계](coord_in_R2.png)
 
 CSS (및 다른 대부분의 컴퓨터 그래픽)에서, 원점 `(0, 0)`은 요소의 좌상단 꼭짓점을 가리킵니다. 양의 좌표는 원점의 오른쪽과 아래로 진행하고, 음의 좌표는 왼쪽과 위로 진행합니다. 따라서 오른쪽으로 2단위, 아래쪽으로 5단위에 위치한 점은 `(2, 5)`이고 왼쪽으로 3단위, 위쪽으로 12단위 나아간 점은 `(-3, -12)`입니다.
 

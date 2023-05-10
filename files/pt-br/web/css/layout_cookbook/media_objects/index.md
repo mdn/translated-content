@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 O _Media Object_ (Objeto de Mídia) é um padrão que vemos em toda web. [Nomeado por Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.
 
-![](https://mdn.mozillademos.org/files/16112/media-object.png)
+![](media-object.png)
 
 ## Exigências
 
@@ -23,7 +23,7 @@ O Padrão Media Object precisa de algumas ou todas as seguintes características
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-> **Note:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> **Nota:** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
 ## Escolhas feitas
 
@@ -43,7 +43,7 @@ Existem várias alternativas possíveis para esse padrão, dependendo dos navega
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-> **Note:** [Baixe este exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> **Nota:** [Baixe este exemplo](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
 Depois que os elementos flutuantes se tornam itens da grade, o flutuador não se aplica mais; portanto, você não precisa fazer nada de especial para limpá-lo.
 

@@ -56,7 +56,7 @@ As páginas da web podem e serão muito diferentes umas das outras, mas todas te
 - rodapé (footer)
   - : Uma faixa na parte inferior da página que geralmente contém letras pequenas, avisos de direitos autorais ou informações de contato. É um lugar para colocar informações comuns (como o cabeçalho), mas geralmente essas informações não são críticas ou secundárias ao próprio site. O rodapé também é usado às vezes para fins de {{Glossary ("SEO")}}, fornecendo links para acesso rápido a conteúdo popular. Um "site típico" poderia ser colocado assim:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 ## HTML para estruturar conteúdo
 
@@ -254,11 +254,11 @@ Enquanto isso, Harry estava sentado em casa, olhando para sua declaração de re
 
 Depois de planejar o conteúdo de uma página da Web simples, o próximo passo lógico é tentar descobrir qual conteúdo você deseja colocar em um site inteiro, quais páginas você precisa e como elas devem ser organizadas e vinculadas umas às outras. para a melhor experiência de usuário possível. Isso é chamado {{glossary("Information architecture")}}. Em um site grande e complexo, é possível planejar muito esse processo, mas para um site simples de poucas páginas, isso pode ser bastante simples e divertido!
 
-1. Lembre-se de que você terá alguns elementos comuns à maioria das páginas (se não todas), como o menu de navegação e o conteúdo do rodapé. Se seu site é para uma empresa, por exemplo, é uma boa ideia ter suas informações de contato disponíveis no rodapé de cada página. Anote o que você deseja que seja comum a todas as páginas.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2. Em seguida, desenhe um esboço de como a estrutura de cada página deve parecer (pode parecer com nosso site simples acima). Observe o que cada bloco será.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3. Agora, faça um brainstorm de todos os outros conteúdos (comuns a todas as páginas) que você deseja ter no seu site - escreva uma grande lista.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4. Em seguida, tente classificar todos esses itens de conteúdo em grupos, para ter uma idéia de quais partes podem viver juntas em páginas diferentes. Isso é muito semelhante a uma técnica chamada {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
-5. Agora, tente esboçar um mapa do site aproximado - faça um balão para cada página do seu site e desenhe linhas para mostrar o fluxo de trabalho típico entre as páginas. A página inicial provavelmente estará no centro e terá um link para a maioria, senão todas as outras; a maioria das páginas em um site pequeno deve estar disponível na navegação principal, embora haja exceções. Você também pode incluir notas sobre como as coisas podem ser apresentadas.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+1. Lembre-se de que você terá alguns elementos comuns à maioria das páginas (se não todas), como o menu de navegação e o conteúdo do rodapé. Se seu site é para uma empresa, por exemplo, é uma boa ideia ter suas informações de contato disponíveis no rodapé de cada página. Anote o que você deseja que seja comum a todas as páginas.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. Em seguida, desenhe um esboço de como a estrutura de cada página deve parecer (pode parecer com nosso site simples acima). Observe o que cada bloco será.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. Agora, faça um brainstorm de todos os outros conteúdos (comuns a todas as páginas) que você deseja ter no seu site - escreva uma grande lista.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. Em seguida, tente classificar todos esses itens de conteúdo em grupos, para ter uma idéia de quais partes podem viver juntas em páginas diferentes. Isso é muito semelhante a uma técnica chamada {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
+5. Agora, tente esboçar um mapa do site aproximado - faça um balão para cada página do seu site e desenhe linhas para mostrar o fluxo de trabalho típico entre as páginas. A página inicial provavelmente estará no centro e terá um link para a maioria, senão todas as outras; a maioria das páginas em um site pequeno deve estar disponível na navegação principal, embora haja exceções. Você também pode incluir notas sobre como as coisas podem ser apresentadas.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### Aprendizado ativo: crie seu próprio mapa do site
 
@@ -275,15 +275,3 @@ Nesse ponto, você deve ter uma idéia melhor sobre como estruturar uma página 
 - [Seções e estruturas de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document): Guia avançado para elementos semânticos do HTML5 e o algoritmo de estrutura de tópicos do HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)
-- [Criando hyperlinks](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto)
-- [Estrutura de documento e sites](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites)
-- [Debugging HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Debugging_HTML)
-- [Marking up a letter](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

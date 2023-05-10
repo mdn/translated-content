@@ -53,9 +53,7 @@ Reflect.ownKeys(obj)
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

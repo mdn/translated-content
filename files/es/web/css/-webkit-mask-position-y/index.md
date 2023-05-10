@@ -1,13 +1,6 @@
 ---
 title: '-webkit-mask-position-y'
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - Máscaras CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-position-y
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -76,11 +69,11 @@ La propiedad CSS `-webkit-mask-position-y` fija la posición inicial vertical de
 
 ## Especificaciones
 
-Not part of any specification.
+No forma parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-mask-position-y")}}
+{{Compat}}
 
 ## Ver además
 

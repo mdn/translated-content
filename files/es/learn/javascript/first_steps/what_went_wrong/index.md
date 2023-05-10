@@ -1,22 +1,6 @@
 ---
 title: ¿Qué ha salido mal? Corrigiendo JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Aprender
-  - Artículo
-  - CodingScripting
-  - Debugging
-  - Depurando
-  - Error
-  - Herramientas de Desarrollador
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tutorial
-  - console.log
-  - depurar
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
@@ -51,7 +35,7 @@ En este punto, consultemos la consola del desarrollador para ver si podemos ver 
 
 Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript simples en la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) (si no recuerdas cómo abrirla en tu navegador, sigue el enlace anterior para descubrirlo). Lo más útil es que la consola te brinda mensajes de error cada vez que ocurre algún error de sintaxis dentro del JavaScript que alimenta al motor JavaScript del navegador. Ahora vayamos a cazar.
 
-1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](https://mdn.mozillademos.org/files/13496/not-a-function.png)
+1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
     - Una "x" roja para indicar que se trata de un error.
@@ -74,7 +58,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 ### Errores sintácticos, segunda ronda
 
 1. Guarda tu página y refréscala, ahora deberías ver que el error ha desaparecido.
-2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](https://mdn.mozillademos.org/files/13498/variable-is-null.png)
+2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](variable-is-null.png)
 3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
     > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
@@ -101,7 +85,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
     > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
     ```js
@@ -255,15 +239,3 @@ Ahí lo tienes, los conceptos básicos para descubrir errores en programas senci
 - Si encuentras algún error en tu código que no estás seguro de cómo solucionarlo después de leer este artículo, ¡puedes obtener ayuda! Solicita ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn), o en la [sala de MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix). Dinos cuál es tu error e intentaremos ayudarte. Una copia de tu código también sería útil.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## En este modulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

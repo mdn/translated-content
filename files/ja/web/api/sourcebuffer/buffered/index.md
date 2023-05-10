@@ -1,35 +1,29 @@
 ---
 title: SourceBuffer.buffered
 slug: Web/API/SourceBuffer/buffered
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`buffered`** 読み取り専用プロパティは、`SourceBuffer` に現在バッファされている時間範囲を正規化された {{domxref("TimeRanges")}} オブジェクトとして返します。
+**`buffered`** は {{domxref("SourceBuffer")}} インターフェイスの読み取り専用プロパティで、`SourceBuffer` に現在バッファーされている時間範囲を正規化された {{domxref("TimeRanges")}} オブジェクトとして返します。
 
-## 構文
+## 値
 
-```
-var myBufferedRange = sourceBuffer.buffered;
-```
-
-### 値
-
-{{domxref("TimeRanges")}} オブジェクト。
+{{domxref("TimeRanges")}} オブジェクトです。
 
 ## 例
 
-未定
+TBD
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-buffered', 'buffered')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.buffered")}}
+{{Compat}}
 
 ## 関連情報
 

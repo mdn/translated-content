@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
 
@@ -102,13 +95,11 @@ if (!Array.prototype.flatMap) {
 
 ## Especificaciones
 
-| Especificación                                                                                    | Estado         | Comentario |
-| ------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flatMap`](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Ver también
 

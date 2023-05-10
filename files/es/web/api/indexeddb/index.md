@@ -1,13 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.indexedDB
+title: indexedDB
 slug: Web/API/indexedDB
-translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 
 {{ APIRef() }}
 
-La propiedad **`indexedDB`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
+La propiedad **`indexedDB`** proporciona un mecanismo para que las aplicaciones puedan acceder asíncronamente a las capacidades de las bases de datos indexadas.
 
 ## Sintaxis
 
@@ -33,14 +32,11 @@ function openDB() {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Definido en un `WindowOrWorkerGlobalScope` parcial en la última especificación. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | Definición inicial.                                                             |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.indexedDB")}}
+{{Compat}}
 
 ## Ver también
 
@@ -50,4 +46,4 @@ function openDB() {
 - Estableciendo un rango de claves: {{domxref("IDBKeyRange")}}
 - Recuperación y edición de tus datos: {{domxref("IDBObjectStore")}}
 - Utilización de cursores: {{domxref("IDBCursor")}}
-- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ver ejemplo _live_](http://mdn.github.io/to-do-notifications/).)
+- Ejemplo de referencia: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ver ejemplo _live_](https://mdn.github.io/dom-examples/to-do-notifications/).)

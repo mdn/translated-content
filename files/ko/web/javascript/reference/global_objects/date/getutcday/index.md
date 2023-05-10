@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-browser-compat: javascript.builtins.Date.getUTCDay
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
-translation_of: Web/HTTP/Headers/X-Forwarded-For
 ---
 
 {{HTTPSidebar}}
@@ -51,10 +50,6 @@ X-ProxyUser-Ip: 203.0.113.19
 ## Especificaciones
 
 No es parte de especificación actual alguna. La versión estandarizada de este cabezal es {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat("http.headers.X-Forwarded-For")}}
 
 ## See also
 

@@ -1,12 +1,6 @@
 ---
 title: 503 Servicio No Disponible
 slug: Web/HTTP/Status/503
-tags:
-  - Codigo de Estado
-  - Error de servidor
-  - HTTP
-  - error 503
-translation_of: Web/HTTP/Status/503
 ---
 
 {{HTTPSidebar}}
@@ -27,15 +21,11 @@ Debe tenerse cuidado con las cabeceras relacionadas con la caché, ya que un est
 
 ## Especificaciones
 
-| Especificación                                                       | Título                                                                     |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| {{RFC("7231", "503 Service Unavailable" , "6.6.4")}} | Protocolo de Transferencia de HiperTexto (HTTP/1.1): Semántica y Contenido |
+{{Specifications}}
 
-## Compatibilidad entre Navegadores
+## Compatibilidad con navegadores
 
-La información mostrada abajo ha sido obtenida desde el GitHub de MDN (<https://github.com/mdn/browser-compat-data>).
-
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,12 +1,6 @@
 ---
 title: ':dir()'
 slug: Web/CSS/:dir
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-clase
-  - Referencia
-translation_of: Web/CSS/:dir
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -72,14 +66,11 @@ La pseudoclase `:dir()` requiere un parámetro, que representa la direccionalida
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.      |
-| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## Ver también
 

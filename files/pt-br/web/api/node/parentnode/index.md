@@ -47,8 +47,8 @@ if (node.parentNode) {
 
 ## Specificações
 
-- [DOM nível 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM nível 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+- [DOM nível 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
+- [DOM nível 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
 
 ## Veja também
 

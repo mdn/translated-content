@@ -70,10 +70,10 @@ button.onclick = function() {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

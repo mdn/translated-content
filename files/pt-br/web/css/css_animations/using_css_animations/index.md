@@ -47,7 +47,7 @@ Você pode opcionalmente incluir keyframes adicionais que descrevem passos inter
 
 ## Exemplos
 
-> **Note:** **Nota** Os exemplos aqui não usam nenhum prefixo nas propriedades de animação CSS. Navegadores mais antigos podem precisar de prefixos; os exemplos ao vivo que você pode clicar pra ver em seu navegadores também incluem as versões prefixadas -webkit.
+> **Nota:** Os exemplos aqui não usam nenhum prefixo nas propriedades de animação CSS. Navegadores mais antigos podem precisar de prefixos; os exemplos ao vivo que você pode clicar pra ver em seu navegadores também incluem as versões prefixadas -webkit.
 
 ### Fazendo o texto deslizar através da janela do navegador
 
@@ -346,4 +346,4 @@ Apenas por questão de completude, aqui está o HTML que exibe o conteúdo da pa
 ## Veja também
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
-- [Detectando suporte de animação CSS](/en/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detectando suporte de animação CSS](/pt-BR/CSS/CSS_animations/Detecting_CSS_animation_support)

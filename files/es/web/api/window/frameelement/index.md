@@ -1,7 +1,6 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
 
 {{ ApiRef }}
@@ -30,13 +29,11 @@ if (frameEl) {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Observaciones           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{ SpecName('HTML WHATWG', '#dom-frameelement', 'Window.frameElement') }} | {{ Spec2('WebRTC 1.0') }} | Especificación inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## Ver también
 

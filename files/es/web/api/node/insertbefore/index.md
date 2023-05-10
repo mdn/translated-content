@@ -1,13 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - Nodo
-  - Referencia
-  - metodo
-translation_of: Web/API/Node/insertBefore
 original_slug: Web/API/Node/insertarAntes
 ---
 
@@ -123,19 +116,13 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 Cuando el elemento no tiene ub primer hijo, entonces `firstChild` es `null`. Aun así, el elemento se añade al padre después del último hijo. Puesto que el elemento padre no tenía primer hijo, tampoco tiene último hijo. Por tanto, el nuevo elemento es el único elemento después de ser insertado.
 
-## Compatibilidad en navegadores
-
-{{Compat("api.Node.insertBefore")}}
-
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario                                   |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-insertbefore','Node.insertBefore')}}             | {{Spec2('DOM WHATWG')}} | Corrige errores en el algoritmo de inserción |
-| {{SpecName('DOM4','#dom-node-insertbefore','Node.insertBefore')}}                     | {{Spec2('DOM4')}}         | Describe el algoritmo con mayor detalle      |
-| {{SpecName('DOM3 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM3 Core')}}     | Sin cambios notables                         |
-| {{SpecName('DOM2 Core','core.html#ID-952280727','Node.insertBefore')}}                 | {{Spec2('DOM2 Core')}}     | Sin cambios notables                         |
-| {{SpecName('DOM1','level-one-core.html#method-insertBefore','Node.insertBefore')}} | {{Spec2('DOM1')}}         | Introducido                                  |
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

@@ -1,9 +1,8 @@
 ---
 title: Técnicas para el desarrollo de juegos web
 slug: Games/Techniques
-translation_of: Games/Techniques
 l10n:
-  sourceCommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
+  sourceCommit: '048f6b1c75e22103ddb0304d67ee79d6d8a014f0'
 ---
 
 {{GamesSidebar}}
@@ -15,7 +14,7 @@ Esta página muestra las técnicas básicas esenciales para cualquiera que quier
 - [Mejorando rendimiento inicial](/es/docs/Web/Performance/Optimizing_startup_performance)
   - : Cómo asegurarse de que un juego se inicia rápidamente, sin dificultad y sin parecer que bloquea el navegador o el dispositivo del usuario.
 - [Utilizar canales de datos peer-to-peer WebRTC](/es/docs/Games/Techniques/WebRTC_data_channels)
-  - :  Además de proporcionar soporte para comunicaciones de audio y video, WebRTC permite al desarrollador configurar canales de datos _peer-to-peer_ para intercambiar activamente texto o datos binarios entre usuarios. Este artículo explica lo que esto puede significar, y muestra como usar librerías que facilitan el trabajo.
+  - : Además de proporcionar soporte para comunicaciones de audio y video, WebRTC permite al desarrollador configurar canales de datos _peer-to-peer_ para intercambiar activamente texto o datos binarios entre usuarios. Este artículo explica lo que esto puede significar, y muestra como usar librerías que facilitan el trabajo.
 - [Audio para juegos web](/es/docs/Games/Techniques/Audio_for_Web_Games)
   - : El audio es una parte importante de cualquier juego - añade ambiente y retroalimentación para el usuario. El audio basado en web está creciendo rápidamente, pero aún hay muchas diferencias entre navegadores con las que tratar. Este artículo proporciona una guía detallada de cómo implementar audio para juegos web, mirando que funciona actualmente para la mayor cantidad de plataformas posible.
   - [Detección de colisiones en 2D](/es/docs/Games/Techniques/2D_collision_detection)

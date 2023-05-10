@@ -4,6 +4,8 @@ slug: MDN/At_ten
 original_slug: MDN_at_ten
 ---
 
+{{MDNSidebar}}
+
 慶祝文件化網頁 10 年.
 
 ## MDN 的歷史

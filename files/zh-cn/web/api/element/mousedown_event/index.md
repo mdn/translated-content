@@ -1,50 +1,86 @@
 ---
-title: mousedown
+title: Element：mousedown 事件
 slug: Web/API/Element/mousedown_event
 ---
 
 {{APIRef}}
 
-`mousedown` 事件在指针设备按钮按下时触发。
+**`mousedown`** 事件在定点设备（如鼠标或触摸板）按钮在{{domxref("Element", "元素", "", 1)}}内按下时，会在该元素上触发。
 
-## 常规信息
+> **备注：** 其与 {{domxref("Element/click_event", "click")}} 事件的区别是，`click` 事件在完整的单击操作完成后触发；也就是说，`click` 事件在按下并释放鼠标按钮后并且指针仍在同一元素内时触发。`mousedown` 事件在按下鼠标按钮的那一刻触发。
 
-- 规范
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mousedown)
-- 接口
-  - : {{domxref("MouseEvent")}}
-- 是否冒泡
-  - : 是
-- 可取消默认行为
-  - : 是
-- 目标对象
-  - : 元素（Element）
-- 默认行为
-  - : 多种：开始 drag/drop 操作；开始文本选择、开始滚动或移动操作（若支持该操作时，可与鼠标中键协同）
+## 语法
 
-## 属性
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
-| 属性                                     | 类型                                 | 描述                                                                                                                                                                                                                                                           |
-| ---------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | 事件对应的 DOM 树顶级顶级元素                                                                                                                                                                                                                                  |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | 事件类型                                                                                                                                                                                                                                                       |
-| `bubbles` {{readonlyInline}}       | Boolean                              | 事件是否冒泡                                                                                                                                                                                                                                                   |
-| `cancelable` {{readonlyInline}}    | `Boolean`                            | 事件是否可取消                                                                                                                                                                                                                                                 |
-| `view` {{readonlyInline}}          | {{domxref("WindowProxy")}} | {{domxref("document.defaultView")}} (文档 `window`)                                                                                                                                                                                               |
-| `detail` {{readonlyInline}}        | `long` (`float`)                     | 短时间内通过连续点击每次加一自增的计数值                                                                                                                                                                                                                       |
-| `currentTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 挂载监听器的节点                                                                                                                                                                                                                                               |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} | 对于 `mouseover`, `mouseout`, `mouseenter` 及 `mouseleave` 事件：该事件及其互补事件（如 `mouseleave` 对应 `mouseenter` 事件)。不存在时为 `null`                                                                                                               |
-| `screenX` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                          |
-| `screenY` {{readonlyInline}}       | long                                 | 全局屏幕坐标系下鼠标指针的 Y 轴坐标值                                                                                                                                                                                                                          |
-| `clientX` {{readonlyInline}}       | long                                 | 当前（DOM 元素）坐标系下鼠标指针的 X 轴坐标值                                                                                                                                                                                                                  |
-| `clientY` {{readonlyInline}}       | long                                 | 当前（DOM 元素）坐标系下鼠标指针的 Y 轴坐标值                                                                                                                                                                                                                  |
-| `button` {{readonlyInline}}        | unsigned short                       | 点击事件对应的按键序号：0 为左键、1 为中键、2 为右键。在左撇子的配置环境下，按键值相反。                                                                                                                                                                       |
-| `buttons` {{readonlyInline}}       | unsigned short                       | 鼠标事件触发时按下的按键值：左键为 1，右键为 2，中键为 4，第四个（如浏览器返回键）为 8，第五个（如浏览器前进键）为 16。若多个按键按下，则返回全部按下按键的逻辑值之和。例如，按下左键和右键时，返回 3 (= 1 \| 2)。[更多信息](/zh-CN/docs/Web/API/MouseEvent)。 |
-| `mozPressure` {{readonlyInline}}   | float                                | 触发事件时按下触控设备的压力。该值范围最小为 0.0，最大为 1.0                                                                                                                                                                                                   |
-| `ctrlKey` {{readonlyInline}}       | boolean                              | 若事件触发时 control 键按下则为 `true`，否则为 `false`。                                                                                                                                                                                                       |
-| `shiftKey` {{readonlyInline}}      | boolean                              | 若事件触发时 shift 键按下则为 `true`，否则为 `false`                                                                                                                                                                                                           |
-| `altKey` {{readonlyInline}}        | boolean                              | 若事件触发时 alt 键按下则为 `true`，否则为 `false`                                                                                                                                                                                                             |
-| `metaKey` {{readonlyInline}}       | boolean                              | 若事件触发时 meta 键按下则为 `true`，否则为 `false`                                                                                                                                                                                                            |
+```js
+addEventListener("mousedown", (event) => {});
+
+onmousedown = (event) => {};
+```
+
+## 事件类型
+
+一个 {{domxref("MouseEvent")}}。继承自 {{domxref("Event")}}。
+
+{{InheritanceDiagram("MouseEvent")}}
+
+## 事件属性
+
+_这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
+
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
+  - : 当鼠标事件被触发时，如果 <kbd>alt</kbd> 键已被按下，返回 `true`。
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
+  - : 触发鼠标事件时，按下按钮的编号（如果适用）。
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
+  - : 触发鼠标事件时，按下的按钮（如果存在）。
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于局部 DOM 元素的 X 轴坐标。
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于局部 DOM 元素的 Y 轴坐标。
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
+  - : 当鼠标事件被触发时，如果 <kbd>control</kbd> 键已被按下，返回 `true`。
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : 返回事件相对于当前层的水平坐标。
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : 返回事件相对于当前层的垂直坐标。
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
+  - : 当鼠标事件被触发时，如果 <kbd>meta</kbd> 键已被按下，返回 `true`。
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 X 轴坐标。
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于最后一次 {{domxref("Element/mousemove_event", "mousemove")}} 事件位置的 Y 轴坐标。
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于目标节点的内填充边的 X 轴坐标。
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于目标节点的内填充边的 Y 轴坐标。
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于整个文档的 X 轴坐标。
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于整个文档的 Y 轴坐标。
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
+  - : 事件的次要目标（如果存在）。
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于屏幕的 X 轴坐标。
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
+  - : 鼠标指针相对于屏幕的 Y 轴坐标。
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
+  - : 当鼠标事件被触发时，如果 <kbd>shift</kbd> 键已被按下，返回 `true`。
+- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
+  - : 产生事件时施加到触摸或平板电脑设备的压力量；该值在 0.0（最小压力）和 1.0（最大压力）之间。你应该使用 {{domxref("PointerEvent")}} 并查看 {{domxref("PointerEvent.pressure", "pressure")}} 属性，而不是使用此废弃的（和非标准）属性。
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 生成事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，这允许你决定鼠标事件是否由实际的鼠标还是触摸事件生成（这可能会在一定程度影响你对事件相关坐标判断的准确性）。
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 单击时施加的压力大小。
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientX")}} 的别名。
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
+  - : {{domxref("MouseEvent.clientY")}} 的别名。
+
+## 示例
+
+参见 [`mousemove` 事件](/zh-CN/docs/Web/API/Element/mousemove_event#示例)的示例。
 
 ## 规范
 
@@ -56,13 +92,13 @@ slug: Web/API/Element/mousedown_event
 
 ## 参见
 
-- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
-- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
-- [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)
-- [`click`](/zh-CN/docs/Web/API/Element/click_event)
-- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
-- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
-- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
-- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
-- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
-- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}

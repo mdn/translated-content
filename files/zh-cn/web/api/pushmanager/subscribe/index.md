@@ -12,7 +12,7 @@ slug: Web/API/PushManager/subscribe
 ## 语法
 
 ```
-​PushManager.subscribe(options).then(function(pushSubscription) { ... } );
+PushManager.subscribe(options).then(function(pushSubscription) { ... } );
 ```
 
 ### 参数

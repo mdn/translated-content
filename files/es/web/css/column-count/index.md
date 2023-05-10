@@ -1,12 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS Multicolumna
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/column-count
 ---
 
 {{CSSRef}}
@@ -67,15 +61,11 @@ column-count: unset;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol', '#column-count', 'column-count')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.column-count")}}
+{{Compat}}
 
 ## Ver también
 

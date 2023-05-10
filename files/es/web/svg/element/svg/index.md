@@ -1,13 +1,6 @@
 ---
 title: <svg>
 slug: Web/SVG/Element/svg
-tags:
-  - Contenedor SVG
-  - Elemento
-  - Referencia
-  - SVG
-  - red
-translation_of: Web/SVG/Element/svg
 ---
 
 El elemento `svg` es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML.
@@ -30,7 +23,7 @@ Considere la sigiente imagen SVG (representando la bandera nacional de Italia):
 </svg>
 ```
 
-Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
+Esta puede ser incluida en un documento HTML5 de la siguiente manera:
 
 ```html
 <!DOCTYPE html>
@@ -80,15 +73,12 @@ Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
 
 ## Interfaz DOM
 
-Este elemento implementa [`SVGSVGElement`](/en-US/docs/Web/API/SVGSVGElement) en la interfaz.
+Este elemento implementa [`SVGSVGElement`](/es/docs/Web/API/SVGSVGElement) en la interfaz.
 
-## Specificaciones
+## Especificaciones
 
-| Specificación                                                                        | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG2')}} |                    |
-| {{SpecName('SVG1.1', 'struct.html#NewDocument', '&lt;svg&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.svg")}}
+{{Compat}}

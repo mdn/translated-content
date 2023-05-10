@@ -3,20 +3,11 @@ title: height
 slug: Web/SVG/Attribute/height
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 该属性在用户坐标系统中标识了一个垂直长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的高度（请阅读每个元素的文档以了解例外情况）。
 
-除了{{ SVGElement("svg") }}元素之外，别的元素都必须指定该属性，{{ SVGElement("svg") }}的高度默认是**100%**，而{{ SVGElement("filter") }}元素以及{{ SVGElement("mask") }}元素的默认高度是**120%**。
-
-## 用法
-
-| 类别   | 无                                      |
-| ------ | --------------------------------------- |
-| 值     | [\<length>](/zh-CN/SVG/Content_type#Length) |
-| 可变性 | Yes                                     |
-
-{{ page("/zh-CN/Content_type","Length") }}
+除了{{ SVGElement("svg") }}元素之外，别的元素都必须指定该属性，{{ SVGElement("svg") }}的高度默认是 **100%**，而 {{ SVGElement("filter") }} 元素以及 {{ SVGElement("mask") }} 元素的默认高度是 **120%**。
 
 ## 示例
 
@@ -43,6 +34,38 @@ slug: Web/SVG/Attribute/height
 - {{ SVGElement("svg") }}
 - {{ SVGElement("use") }}
 - {{ SVGElement("mask") }}
+
+## 用法
+
+对于 {{SVGElement('use')}} 元素，`height` 定义了引用元素的垂直长度。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>
+        <code>auto</code> |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        >
+        |
+        <strong
+          ><a href="/docs/Web/SVG/Content_type#Percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>auto</code>（视为 <code>0</code>）</td>
+    </tr>
+    <tr>
+      <th scope="row">可变性</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 

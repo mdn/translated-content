@@ -1,12 +1,6 @@
 ---
 title: padding-top
 slug: Web/CSS/padding-top
-tags:
-  - CSS
-  - CSS Padding
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/padding-top
 ---
 
 {{CSSRef}}

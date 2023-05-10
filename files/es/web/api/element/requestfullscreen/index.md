@@ -1,9 +1,6 @@
 ---
 title: Element.requestFullscreen()
-slug: Web/API/Element/requestFullScreen
-tags:
-  - Pantalla completa
-translation_of: Web/API/Element/requestFullScreen
+slug: Web/API/Element/requestFullscreen
 ---
 
 {{APIRef}}{{seeCompatTable}}

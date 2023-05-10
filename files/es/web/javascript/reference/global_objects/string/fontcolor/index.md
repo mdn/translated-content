@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontcolor
 ---
 
@@ -9,7 +8,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontcolor
 
 El método **`fontcolor()`** crea {{HTMLElement("font")}} elemento HTML que cambia el color de la cadena.
 
-> **Nota:** **Usage note:** La etiqueta \<font> fue eliminada en [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no debe ser usada. En lugar de es, es necesario aplicar propiedades [CSS](/es/docs/Web/CSS).
+> **Nota:** La etiqueta \<font> fue eliminada en [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no debe ser usada. En lugar de es, es necesario aplicar propiedades [CSS](/es/docs/Web/CSS).
 
 ## Sintaxis
 
@@ -54,7 +53,7 @@ document.getElementById('yourElemId').style.color = 'red';
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fontcolor")}}
+{{Compat}}
 
 ## Ver también
 

@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
 
 此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 WebGL 图形操作结合起来。
 
-{{EmbedLiveSample("clearing-by-clicking-source",660,425)}}
-
 ### 用随机颜色渲染上下文
+
+{{EmbedLiveSample("用随机颜色渲染上下文",660,425)}}
 
 这个例子提供了一个简单的例子，说明如何结合 {{Glossary("WebGL")}} 和用户交互。每次用户点击画布或按钮时，画布都会使用一种新的随机色。
 

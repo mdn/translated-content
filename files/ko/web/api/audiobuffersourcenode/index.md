@@ -1,7 +1,6 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-translation_of: Web/API/AudioBufferSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
@@ -11,7 +10,7 @@ translation_of: Web/API/AudioBufferSourceNode
 
 여러번 실행을 하면 `AudioBufferSourceNode.stop()`을 통해 정지가 가능하다. 가장 최근의 실행된것이 이전의 것으로 대체가 되어 `AudioBufferSourceNode`버퍼의 마지막에 도착하지 않은 상태가 된다.
 
-![The AudioBufferSourceNode takes the content of an AudioBuffer and m](https://mdn.mozillademos.org/files/9717/WebAudioAudioBufferSourceNode.png)
+![The AudioBufferSourceNode takes the content of an AudioBuffer and m](webaudioaudiobuffersourcenode.png)
 
 | Number of inputs  | `0`                                                            |
 | ----------------- | -------------------------------------------------------------- |
@@ -36,7 +35,7 @@ _{{domxref("AudioNode")}}_ 를 부모로 가지는 프로퍼티.
 ### Event handlers
 
 - {{domxref("AudioBufferSourceNode.onended")}}
-  - : {{event("Event_handlers", "event handler")}}로 {{event("ended_(Web_Audio)", "ended")}}이벤트와 연관된 콜백함수를 가진다.
+  - : event handlers로 ended 이벤트와 연관된 콜백함수를 가진다.
 
 ## Methods
 
@@ -97,13 +96,11 @@ button.onclick = function() {
 
 > **참고:** For a `decodeAudioData` example, see the {{domxref("AudioContext.decodeAudioData")}} page.
 
-## Specification
+## 명세서
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiobuffersourcenode-interface', 'AudioBufferSourceNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

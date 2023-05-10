@@ -1,9 +1,6 @@
 ---
 title: element.clientTop
 slug: Web/API/Element/clientTop
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/clientTop
 ---
 
 {{ ApiRef }}
@@ -12,7 +9,7 @@ translation_of: Web/API/Element/clientTop
 
 El ancho del borde superior de un elemento en pixel. No incluye ni el *margin-top* , ni el *padding-top* . `clientTop` es de sólo lectura.
 
-Las aplicaciones "[Gecko](es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](es/Firefox_3),ver {{ Bug(111207) }}). Esta propiedad no está disponible en Firefox 2 o anteriores.
+Las aplicaciones "[Gecko](/es/Gecko)-based applications" implementan el uso de `clientTop` a partir de Gecko 1.9 ([Firefox 3](/es/Firefox_3),ver [Error 111207 en Firefox](https://bugzil.la/111207)). Esta propiedad no está disponible en Firefox 2 o anteriores.
 
 ## Sintaxis
 
@@ -29,7 +26,7 @@ vartop = element.clientTop;
 
 <p>Suave, individualista y muy leal, los gatos de Birmania tienen un carácter entre los persas y los siameses. Si le gustan los gatos que no son agresivos, disfrutan estar entre los humanos y son generalmente tranquilos, esta es la raza para usted.</p>
 
-<p><span style="float: right;"><img alt="Image:BirmanCat.jpg"></span>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
+<p>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
 
 <p>La imagen del gato y el texto vienen de <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
 
@@ -39,8 +36,6 @@ vartop = element.clientTop;
 ```
 
 {{EmbedLiveSample("",400,300)}}
-
-<img alt="Image:clientTop.png">
 
 ## Especificaciones
 

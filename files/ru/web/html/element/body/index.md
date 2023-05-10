@@ -34,7 +34,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённое содержимое</th>
+      <th scope="row">Допустимое содержимое</th>
       <td>
         <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент"
           >Потоковый контент</a
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Пропуск тега</th>
+      <th scope="row">Пропуск тегов</th>
       <td>
         Открывающий тег может быть пропущен, если первое, что находится внутри
         него, не является пробелом, комментарием, элементом
@@ -53,14 +53,14 @@ translation_of: Web/HTML/Element/body
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые родительские элементы</th>
+      <th scope="row">Допустимые родители</th>
       <td>
         Этот элемент должен быть вторым в элементе
         {{HTMLElement("html")}}
       </td>
     </tr>
     <tr>
-      <th scope="row">Разрешённые роли ARIA</th>
+      <th scope="row">Допустимые ARIA-роли</th>
       <td>Отсутствуют</td>
     </tr>
     <tr>
@@ -86,17 +86,17 @@ translation_of: Web/HTML/Element/body
 
 К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
-- {{htmlattrdef("alink")}} {{obsolete_inline}}
+- {{htmlattrdef("alink")}}
   - : Цвет текста гиперссылок, когда они выделены. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":active")}}._
-- {{htmlattrdef("background")}} {{obsolete_inline}}
+- {{htmlattrdef("background")}}
   - : URI изображения для использования в качестве фона. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("background")}}._
-- {{htmlattrdef("bgcolor")}} {{obsolete_inline}}
+- {{htmlattrdef("bgcolor")}}
   - : Цвет фона документа. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("background-color")}}._
-- {{htmlattrdef("bottommargin")}} {{obsolete_inline}}
+- {{htmlattrdef("bottommargin")}}
   - : Отступ от нижнего края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-bottom")}}._
-- {{htmlattrdef("leftmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("leftmargin")}}
   - : Отступ от левого края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-left")}}._
-- {{htmlattrdef("link")}} {{obsolete_inline}}
+- {{htmlattrdef("link")}}
   - : Цвет текста непосещенных гипертекстовых ссылок. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":link")}}._
 - {{htmlattrdef("onafterprint")}}
   - : Функция для вызова после того, как пользователь распечатал документ.
@@ -134,13 +134,13 @@ translation_of: Web/HTML/Element/body
   - : Функция для вызова, когда произошло продвижение пользователя назад по истории транзакций (например, переход на предыдущую страницу в активной вкладке).
 - {{htmlattrdef("onunload")}}
   - : Функция для вызова, когда пользователь покидает страницу (закрытие вкладки или окна браузера).
-- {{htmlattrdef("rightmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("rightmargin")}}
   - : Отступ от правого края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-right")}}._
-- {{htmlattrdef("text")}} {{obsolete_inline}}
+- {{htmlattrdef("text")}}
   - : Основной цвет текста. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}}._
-- {{htmlattrdef("topmargin")}} {{obsolete_inline}}
+- {{htmlattrdef("topmargin")}}
   - : Отступ от верхнего края элемента `<body>`. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("margin-top")}}._
-- {{htmlattrdef("vlink")}} {{obsolete_inline}}
+- {{htmlattrdef("vlink")}}
   - : Цвет текста посещённой гипертекстовой ссылки. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":visited")}}._
 
 ## Пример

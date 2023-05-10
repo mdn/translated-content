@@ -31,13 +31,13 @@ filter.write(
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.write", 10)}}
+{{Compat}}
 
 ## Exemples
 
-Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par  "WebExtension Example".
+Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par "WebExtension Example".
 
 ```js
 function listener(details) {

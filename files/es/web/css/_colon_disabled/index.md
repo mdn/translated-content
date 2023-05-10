@@ -1,13 +1,6 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:disabled
 ---
 
 {{CSSRef}}
@@ -86,17 +79,11 @@ function toggleBilling() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario                                              |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                          |
-| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica referente a HTML y los formularios. |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                          |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}     | {{Spec2('CSS3 Basic UI')}} | Referencia a los selectores de Nivel 3.                 |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Define la pseudo clase pero no la semántica asociada..  |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.disabled")}}
+{{Compat}}
 
 ## Ver también
 

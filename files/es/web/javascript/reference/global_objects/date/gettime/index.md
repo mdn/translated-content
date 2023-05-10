@@ -1,12 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - Metodo getTime()
-  - Referencia
-  - getTime
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 ---
 
@@ -60,9 +54,9 @@ console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getTime")}}
+{{Compat}}
 
 ## Ver también
 

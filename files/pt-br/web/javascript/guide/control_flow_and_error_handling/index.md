@@ -412,7 +412,7 @@ Uma Promise assume um destes estados:
 - _rejected_: operação falha.
 - _settled_: A Promise é fulfilled ou rejected, mas não pending.
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 ### Carregando uma imagem com XHR
 

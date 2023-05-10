@@ -1,12 +1,6 @@
 ---
 title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::first-line
 ---
 
 {{CSSRef}}
@@ -70,17 +64,7 @@ especial, porque no es un elemento de bloque.</span>
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                                      | Comentario                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#first-line-pseudo', '::first-line')}}             | {{Spec2('CSS4 Pseudo-Elements')}} | Defina más estrictamente dónde `::first-letter` puede ocurrir. Generaliza propiedades permitidas. Define la herencia de `::first-letter`. |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow with ::first-line')}} | {{Spec2('CSS3 Text Decoration')}} | Permite el uso de {{cssxref("text-shadow")}} con `::first-letter`.                                                              |
-| {{SpecName('CSS3 Selectors', '#first-line', '::first-line')}}                                 | {{Spec2('CSS3 Selectors')}}         | Introducción de la sintexis de doble dos puntos.                                                                                          |
-| {{SpecName('CSS2.1', 'selector.html#first-line-pseudo', '::first-line')}}                 | {{Spec2('CSS2.1')}}                     | Sin cambios.                                                                                                                              |
-| {{SpecName('CSS1', '#the-first-line-pseudo-element', '::first-line')}}                     | {{Spec2('CSS1')}}                     | Definición inicial, uso de la sintaxis de doble dos puntos.                                                                               |
-
-**Compatibilidad**
-
-{{Compat("css.selectors.first-line")}}
+{{Specifications}}
 
 ## Ver También
 

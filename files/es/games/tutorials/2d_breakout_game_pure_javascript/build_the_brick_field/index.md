@@ -1,7 +1,6 @@
 ---
 title: Construye el muro de ladrillos
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques
 ---
 

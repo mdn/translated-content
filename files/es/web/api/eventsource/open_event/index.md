@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-translation_of: Web/API/EventSource/onopen
 original_slug: Web/API/EventSource/onopen
 ---
 
@@ -27,13 +26,11 @@ evtSource.onopen = function() {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onopen", "onopen")}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.EventSource.onopen")}}
+{{Compat}}
 
 ## Mira también
 

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/definePrope
 
 {{JSRef}}
 
-**`handler.defineProperty()`** 用于拦截对对象的 {{jsxref("Object.defineProperty()")}} 操作。
+**`handler.defineProperty()`** 用于拦截对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
 ## 语法
 

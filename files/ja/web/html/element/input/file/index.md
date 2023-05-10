@@ -67,7 +67,7 @@ l10n:
 
 ### accept
 
-[`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は**[固有ファイル型指定子](#固有ファイル型指定子)**をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
+[`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は **[固有ファイル型指定子](#固有ファイル型指定子)** をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
 
 例えば、 Microsoft Word ファイルを識別する方法がいくつもあるので、 Word ファイルを受け付けるサイトは次のように `<input>` を使用することがあります。
 
@@ -165,7 +165,7 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリ選択ダイアログ (つまり、 {{htmlattrxref("webkitdirectory", "input/file")}} 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
-> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see {{bug(1384030)}})。
+> **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
 ### 受け付けるファイル型の制限
 
@@ -326,7 +326,7 @@ const preview = document.querySelector('.preview');
 input.style.opacity = 0;
 ```
 
-> **メモ:** ファイル入力欄を非表示に {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
+> **メモ:** ファイル入力欄を非表示にするために {{cssxref("opacity")}} を使用し、 {{cssxref("visibility", "visibility: hidden")}} や {{cssxref("display", "display: none")}} を使用しないのは、支援技術が後二者のファイル入力欄が対話可能ではないと解釈するからです。
 
 次に、[イベントリスナー](/ja/docs/Web/API/EventTarget/addEventListener)を入力欄に追加して、選択された値の変化 (この場合、ファイルが選択されたこと) を監視します。イベントリスナーは独自の `updateImageDisplay()` 関数を呼び出します。
 

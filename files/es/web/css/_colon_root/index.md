@@ -1,13 +1,6 @@
 ---
 title: ':root'
 slug: Web/CSS/:root
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:root
 ---
 {{CSSRef}}
 
@@ -38,11 +31,8 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentarios         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.      |
-| {{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

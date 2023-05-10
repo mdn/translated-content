@@ -156,11 +156,7 @@ _datetime 値_ (機械可読な日時の値) は要素の `datetime` 属性の�
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5.1')}} から変更なし |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,15 +1,6 @@
 ---
 title: Expresiones Regulares
-slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Expresiones Regulares
-  - Guía
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - RegExp
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
@@ -332,7 +323,7 @@ function testInfo(phoneInput) {
 
 #### Resultado
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Herramientas
 
@@ -340,15 +331,5 @@ function testInfo(phoneInput) {
   - : Un constructor/depurador de expresiones regulares en línea
 - [Visualizador de expresiones regulares](https://extendsclass.com/regex-tester.html)
   - : Un probador de expresiones regulares visual en línea.
-
-## Especificaciones
-
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}} |
-
-## Compatibilidad del navegador
-
-{{Compat("javascript.builtins.RegExp")}}
 
 {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

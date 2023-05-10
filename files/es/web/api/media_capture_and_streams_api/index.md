@@ -1,7 +1,6 @@
 ---
 title: API de MediaStream
 slug: Web/API/Media_Capture_and_Streams_API
-translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
 
@@ -217,9 +216,13 @@ Remueve una MediaStreamTrack de la lista de pistas.
 - Excepciones
   - : INVALID_STATE_ERR if the stream is finished (all tracks have ended).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,8 +1,6 @@
 ---
 title: KeyboardEvent.metaKey
 slug: Web/API/KeyboardEvent/metaKey
-translation_of: Web/API/KeyboardEvent/metaKey
-browser-compat: api.KeyboardEvent.metaKey
 ---
 
 {{APIRef("DOM Events")}}

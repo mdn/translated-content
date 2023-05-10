@@ -30,7 +30,7 @@ WebSockets é uma tecnologia avançada que torna possível abrir uma sessão de 
 ## Veja Também
 
 - [RFC 6455 - O Protocolo WebSocket](http://tools.ietf.org/html/rfc6455)
-- [Especificação da API WebSocket](http://www.w3.org/TR/websockets/)
+- [Especificação da API WebSocket](https://www.w3.org/TR/websockets/)
 - [Eventos enviados para servidor](/pt-BR/docs/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - Uma comunidade sem fins lucrativos baseada no site WebSocket
 

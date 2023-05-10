@@ -1,15 +1,6 @@
 ---
 title: Server-Sent Events 사용하기
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -190,7 +181,5 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 ```
 
 ## 브라우저 호환성
-
-### `EventSource`
 
 {{Compat}}

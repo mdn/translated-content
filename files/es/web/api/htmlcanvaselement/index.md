@@ -1,7 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-translation_of: Web/API/HTMLCanvasElement
 ---
 
 {{APIRef("Canvas API")}}
@@ -39,16 +38,11 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 
 ## Especificaciones
 
-| Especificación                                                                                                                                       | Estado                                               | Comentario                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Media Capture DOM Elements', '#html-media-element-media-capture-extensions', 'HTMLCanvasElement')}} | {{Spec2('Media Capture DOM Elements')}} | Añade el método `captureStream()`.                                                                                                                                                                                          |
-| {{SpecName('HTML WHATWG', "#the-canvas-element", "HTMLCanvasElement")}}                                                     | {{Spec2('HTML WHATWG')}}                     | El método `getContext()` ahora retorna un objeto {{domxref("RenderingContext")}} en vez de un objeto opaco. Los métodos `probablySupportsContext()`, `setContext()` y `transferControlToProxy() han sido añadidos`. |
-| {{SpecName('HTML5.1', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5.1')}}                         |                                                                                                                                                                                                                             |
-| {{SpecName('HTML5 W3C', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5 W3C')}}                         | Definición Inicial.                                                                                                                                                                                                         |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## Ver también
 

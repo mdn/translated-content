@@ -9,16 +9,16 @@ slug: Web/API/Storage/getItem
 
 ## 構文
 
-```
+```js
 var aValue = storage.getItem(keyName);
 ```
 
 ### 引数
 
-- _`keyName`_
+- `keyName`
   - : 値を取り出したいキーの名称を持つ {{domxref("DOMString")}}。
 
-### 戻り値
+### 返値
 
 キーに対する値を持つ {{domxref("DOMString")}}。キーが存在しない場合は `null` が返ります。
 
@@ -44,13 +44,11 @@ function setStyles() {
 
 > **メモ:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                               | 策定状況                         | コメント |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage.getItem")}}
 

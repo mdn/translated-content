@@ -1,13 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - Layout
-  - Propiedad CSS
-  - Referencia
-  - Texto
-translation_of: Web/CSS/text-transform
 ---
 
 {{CSSRef}}
@@ -302,16 +295,11 @@ Usuarios con discapacidades cognitivas como dislexia pueden encontrar dificultad
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS4 Text')}} | De {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}}, se añade la palabra clave `full-size-kana` y permite que la palabra clave `full-width` sea usada junto con otro valor.                                                                                                                                                                                                                           |
-| {{SpecName('CSS3 Text', '#text-transform', 'text-transform')}} | {{Spec2('CSS3 Text')}} | De {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}}, se extienden las letras a cualquier caracter unicode en la categoría general de Números o Letras. Modifica el comportamiento de `capitalize` para aplicarse a la primera letra de la palabra, ignorando símbolos iniciales. Añade la palabra clave `full-width` para facilitar la mezcla entre caracteres ideográficos y caracteres alfabéticos. |
-| {{SpecName('CSS2.1', 'text.html#caps-prop', 'text-transform')}} | {{Spec2('CSS2.1')}}     | De {{SpecName('CSS1', '#text-transform', 'text-transform')}}, extiende las letras a alfabetos no latinos bicamerales                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS1', '#text-transform', 'text-transform')}}         | {{Spec2('CSS1')}}     | Definición inicial                                                                                                                                                                                                                                                                                                                                                                                                                        |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-transform")}}
+{{Compat}}
 
 ## Véase también
 

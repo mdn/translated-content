@@ -1,18 +1,6 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Detalles
-  - Detalles de descripción
-  - Elemento
-  - HTML
-  - Lista de descripciones
-  - Referencia
-  - Web
-  - dd
-translation_of: Web/HTML/Element/dd
 original_slug: Web/HTML/Elemento/dd
 ---
 
@@ -92,15 +80,11 @@ Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Elemento/dl#Examples).
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dd-element', '&lt;dd&gt;')}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dd-element', '&lt;dd&gt;')}} | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dd&gt;')}}                 | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## Ver también
 

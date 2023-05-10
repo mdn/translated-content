@@ -1,16 +1,6 @@
 ---
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - Deprecado
-  - File API
-  - Propiedad
-  - Referencia
-  - Solo lectura
-translation_of: Web/API/File/lastModifiedDate
 ---
 
 {{APIRef("File API") }} {{deprecated_header}}
@@ -47,7 +37,7 @@ _Aunque estaba presente en las primeras versiones de la especificacion de File A
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.lastModifiedDate")}}
+{{Compat}}
 
 ## Vea también
 

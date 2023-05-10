@@ -1,12 +1,6 @@
 ---
 title: circle
 slug: Web/SVG/Element/circle
-tags:
-  - Elemento
-  - Gráficos SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/circle
 ---
 
 {{SVGRef}}
@@ -19,7 +13,15 @@ El elemento circle es una forma básica de SVG, usada para crear circulos a part
 
 ## Ejemplo
 
-```xml
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
 <?xml version="1.0"?>
 <svg viewBox="0 0 120 120" version="1.1"
   xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +29,7 @@ El elemento circle es una forma básica de SVG, usada para crear circulos a part
 </svg>
 ```
 
-» [circulo.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+{{EmbedLiveSample}}
 
 ## Atributos
 
@@ -52,9 +54,13 @@ El elemento circle es una forma básica de SVG, usada para crear circulos a part
 
 Este elemento implementa la interfaz {{ domxref("SVGCircleElement") }}.
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("svg.elements.circle")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Relacionado
 

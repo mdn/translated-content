@@ -1,9 +1,9 @@
 ---
 title: GlobalEventHandlers.onpointerenter
 slug: Web/API/Element/pointerenter_event
-translation_of: Web/API/GlobalEventHandlers/onpointerenter
 original_slug: Web/API/GlobalEventHandlers/onpointerenter
 ---
+
 {{ApiRef("HTML DOM")}}
 
 {{domxref("GlobalEventHandlers")}} mixin의 **`onpointerenter`** property는 {{event("pointerenter")}} 이벤트를 처리하는 {{event("Event_handlers", "event handler")}} 이다.
@@ -44,11 +44,11 @@ function init() {
 </html>
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

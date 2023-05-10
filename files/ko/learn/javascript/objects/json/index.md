@@ -2,6 +2,7 @@
 title: JSON으로 작업하기
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷입니다. 웹 어플리케이션에서 데이터를 전송할 때 일반적으로 사용합니다(서버에서 클라이언트로 데이터를 전송하여 표현하려거나 반대의 경우). 여기저기서 자주 보았을테니 여기선 JSON을 파싱, 데이터에 접근하고 JSON을 생성하는 등 Javascript로 JSON을 다루는 법에 대해 알아봅시다.
@@ -39,7 +40,7 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
 
 {{glossary("JSON")}} 는 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford)가 널리 퍼뜨린 Javascript 객체 문법을 따르는 문자 기반의 데이터 포맷입니다. JSON이 Javascript 객체 문법과 매우 유사하지만 딱히 Javascript가 아니더라도 JSON을 읽고 쓸 수 있는 기능이 다수의 프로그래밍 환경에서 제공됩니다.
 
-JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할 때 아주 유용하죠. 데이터에 억세스하기 위해서는 네이티브 JSON 객체로 변환될 필요가 있습니다. 별로 큰 문제는 아닌 것이 Javascript는 [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) 전역 객체를 통해 문자열과 JSON 객체의 상호변환을 지원합니다.
+JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할 때 아주 유용하죠. 데이터에 접근하기 위해서는 네이티브 JSON 객체로 변환될 필요가 있습니다. 별로 큰 문제는 아닌 것이 Javascript는 [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) 전역 객체를 통해 문자열과 JSON 객체의 상호변환을 지원합니다.
 
 > **참고:** 문자열에서 네이티브 객체로 변환하는 것은 파싱(Parsing)이라고 합니다. 네트워크를 통해 전달할 수 있게 객체를 문자열로 변환하는 과정은 문자열화(Stringification)이라고 합니다.
 
@@ -180,7 +181,7 @@ JSON 데이터를 다음 깃허브 링크에서 가져올수 있습니다. <http
 
 페이지에 JSON 데이터를 로딩하고 DOM 조작을 통해 아래와 같이 만들어 봅시다. :
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### JSON 가져오기
 
@@ -358,13 +359,3 @@ myString
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
-
-## 다음 단계
-
-- [Object basics](/ko/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/ko/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ko/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/ko/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ko/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ko/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

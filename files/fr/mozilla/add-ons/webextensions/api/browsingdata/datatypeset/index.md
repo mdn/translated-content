@@ -15,14 +15,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 
 {{AddonSidebar()}}
 
-Le type **`browsingData.DataTypeSet`**  décrit un ensemble de types de données.
+Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
 
 Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.
 
 Ce type est utilisé :
 
 - dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types de données à supprimer
-- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction  "effacer l'historique" du navigateur.
+- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction "effacer l'historique" du navigateur.
 
 ## Type
 
@@ -53,9 +53,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `serviceWorkers` {{optional_inline}}
   - : `boolean`. Données mises en cache par les travailleurs du service.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.DataTypeSet")}}
+{{Compat}}
 
 > **Note :**
 >

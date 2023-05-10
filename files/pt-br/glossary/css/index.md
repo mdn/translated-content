@@ -33,7 +33,7 @@ p {
 ### Referências técnicas
 
 - [A documentação sobre CSS na MDN](/pt-BR/docs/Web/CSS)
-- [O trabalho atual do CSS Working Group](http://www.w3.org/Style/CSS/current-work) (Em inglês)
+- [O trabalho atual do CSS Working Group](https://www.w3.org/Style/CSS/current-work) (Em inglês)
 
 ### Aprenda CSS
 

@@ -1,14 +1,6 @@
 ---
 title: 인라인 요소
 slug: Web/HTML/Inline_elements
-tags:
-  - Beginner
-  - Development
-  - Guide
-  - HTML
-  - Layout
-  - Web
-translation_of: Web/HTML/Inline_elements
 ---
 
 HTML(**Hypertext Markup Language**)의 요소는 역사적으로 ["블록 레벨" 요소](/ko/docs/Web/HTML/Block-level_elements)와 "인라인" 요소로 분류됐습니다. 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지합니다. 이 글은 인라인 요소란 무엇인지와 블록 레벨 요소와의 차이점을 살펴봅니다.

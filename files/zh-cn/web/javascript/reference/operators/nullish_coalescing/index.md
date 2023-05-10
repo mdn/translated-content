@@ -61,7 +61,7 @@ console.log(qty);     // 42，而不是 0
 console.log(message); // "hi!"，而不是 ""
 ```
 
-空值合并运算符可以避免这种陷阱，其只在第一个操作数为`null` 或 `undefined` 时（而不是其它假值）返回第二个操作数：
+空值合并运算符可以避免这种陷阱，其只在第一个操作数为`null` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
 
 ```js
 let myText = ''; // An empty string (which is also a falsy value)

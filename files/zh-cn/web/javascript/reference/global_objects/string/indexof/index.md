@@ -20,9 +20,9 @@ indexOf(searchString, position)
 
 - `searchValue`
 
-  - : 要搜索的子字符串，[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/string#强制转换为字符串)。
+  - : 要搜索的子字符串，[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/string#字符串强制转换)。
 
-    如果不带参数调用方法，`searchString` 将被强制转换为 `"undefined"`。因此，`"undefined". indexof()` 返回 `0`——因为子字符串 `"undefined"` 在字符串 `"undefined"` 中的 `0` 位置找到。但是 `"undefine".indexof()` 返回 `-1`——因为子字符串 `"undefine"` 在字符串 `"undefined"` 中找不到。
+    如果不带参数调用方法，`searchString` 将被强制转换为 `"undefined"`。因此，`"undefined". indexof()` 返回 `0`——因为子字符串 `"undefined"` 在字符串 `"undefined"` 中的 `0` 位置找到。但是 `"undefine".indexof()` 返回 `-1`——因为子字符串 `"undefined"` 在字符串 `"undefine"` 中找不到。
 
 - `position` {{optional_inline}}
 

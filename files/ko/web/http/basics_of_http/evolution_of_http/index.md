@@ -1,11 +1,6 @@
 ---
 title: HTTP의 진화
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - HTTP
-  - HTTP 역사
-  - 가이드
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 
 {{HTTPSidebar}}
@@ -170,7 +165,7 @@ HTTP에 일어났던 가장 큰 변화는 1994년 말에 이미 완료되었습�
 
 HTTP는 웹의 보안 모델인 [same-origin 정책](/ko/docs/Web/Security/Same-origin_policy)에서 독립되어 있습니다. 사실, 현재의 웹 보안 모델은 HTTP이 만들어진 이후에 개발되어 왔습니다! 몇 년에 걸쳐, 이 정책의 몇 가지 정책을 고무시키기 위해 확실한 제약사항 아래 허용함으로써, 좀 더 관대해지도록 하는 것이 유용하다는 것을 증명해왔습니다. 제약사항이 얼마나 그리고 언제 리프트될지는 HTTP 헤더의 새로운 묶음들을 사용하는 서버부터 클라이언트에 의해 전도됩니다. 이러한 내용들은 [Cross-Origin 리소스 공유](/ko/docs/Glossary/CORS) (CORS) 혹은 [컨텐츠 보안 정책](/ko/docs/Web/HTTP/CSP) (CSP)과 같은 스펙 내에 정의되어 있습니다.
 
-이런 커다란 확장에 덧붙여, 다른 많은 헤더들이, 때로는 실험적으로만, 추가되어 오고 있습니다. 주목할 만한 헤더들은 프라이버시를 제어하기 위한 Do Not Track ({{HTTPHeader("DNT")}}) 헤더, {{HTTPHeader("X-Frame-Options")}}, 혹은 {{HTTPHeader('Upgrade-Insecure-Request')}}이 있고, 그 외에도 수많은 헤더들이 존재합니다.
+이런 커다란 확장에 덧붙여, 다른 많은 헤더들이, 때로는 실험적으로만, 추가되어 오고 있습니다. 주목할 만한 헤더들은 프라이버시를 제어하기 위한 Do Not Track ({{HTTPHeader("DNT")}}) 헤더, {{HTTPHeader("X-Frame-Options")}}, 혹은 {{HTTPHeader('Upgrade-Insecure-Requests')}}이 있고, 그 외에도 수많은 헤더들이 존재합니다.
 
 ## HTTP/2 – 더 나은 성능을 위한 프로토콜
 
@@ -194,15 +189,13 @@ HTTP/2 프로토콜은 HTTP/1.1 버전과 다른 몇가지 근본적인 차이�
 HTTP는 HTTP/2의 릴리즈와 함께 진화를 멈추지 않았습니다. HTTP/1.x처럼, 확장성은 여전히 새로운 기능들을 추가하는데 사용되고 있습니다. 주목할 만한 중요성에 있어 2016년에 나타난 HTTP의 새로운 확장들을 들 수 있습니다:
 
 - {{HTTPHeader("Alt-Svc")}} 지원은 좀 더 영리한 {{Glossary("CDN")}} 메커니즘을 따라, 신분 증명의 개념과 주어진 자원의 위치를 분리하도록 해줍니다.
-- {{HTTPHeader("Client-Hints")}}의 도입으로 브라우저 혹은 클라이언트가 요구사항이나 서버의 하드웨어 제약사항에 관한 정보를 사전에 미리 주고 받을 수 있게 되었습니다.
+- [Client Hints](/ko/docs/Web/HTTP/Client_hints)의 도입으로 브라우저 혹은 클라이언트가 요구사항이나 서버의 하드웨어 제약사항에 관한 정보를 사전에 미리 주고 받을 수 있게 되었습니다.
 - {{HTTPHeader("Cookie")}} 내에 보안 관련 접두사 도입은 보안 쿠키가 변경되지 않았다는 것을 보장하는데 도움을 줍니다.
 
 HTTP의 진화는 그것의 확장성과 단순함이 예측 불가능한 애플리케이션과 프로토콜 채택을 만들어내고 있다는 것을 보여줍니다. 오늘날 HTTP가 사용되는 환경은 1990년 초에 상상하던 것과는 완전히 다릅니다. HTTP 본래의 설계가 걸작이 되었음을 지난 25년 넘게 호환되지 않는 진화의 요구없이 웹을 진화시킴으로 증명했습니다. 25년 넘게 HTTP의 성공을 만들어 온 유연함과 확장성을 유지하는 동시에, 수년 넘게 밝혀진 많은 결함들을 수정한 덕택에, HTTP/2의 등장은 프로토콜에 대한 밝은 미래를 암시하는 것처럼 보입니다.
 
 ## HTTP/3 - HTTP over QUIC
 
-{{SeeCompatTable}}
-
 HTTP의 다음 메이저 버전인 HTTP/3에서는 전송 계층 부분에 {{Glossary("TCP")}}/{{Glossary("TLS")}} 대신 {{Glossary("QUIC")}}가 사용됩니다.
 
-Firefox에서의 구현 상태는 {{bug(1158011)}}을 참조해주세요.
+Firefox에서의 구현 상태는 [Firefox bug 1158011](https://bugzil.la/1158011)을 참조해주세요.

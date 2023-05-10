@@ -1,11 +1,6 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - CSS
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Miscellaneous
 ---
 
 {{CSSRef}}

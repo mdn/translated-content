@@ -1,6 +1,6 @@
 ---
 title: console.clear()
-slug: Web/API/Console/clear
+slug: Web/API/console/clear
 ---
 
 {{APIRef("Console API")}}
@@ -21,4 +21,4 @@ console.clear();
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console.clear")}}
+{{Compat}}

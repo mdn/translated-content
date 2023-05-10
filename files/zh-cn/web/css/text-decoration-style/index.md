@@ -44,7 +44,7 @@ text-decoration-style: unset;
 - \-moz-none{{ non-standard_inline }}
   - : 不画线。亦可用 {{ cssxref("text-decoration-line") }}`: none` 替代。
 
-### 格式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -73,7 +73,7 @@ text-decoration-style: unset;
 <p class="wavy">This text has a wavy red line beneath it.</p>
 ```
 
-{{ EmbedLiveSample('Examples', '', '', '') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -83,6 +83,6 @@ text-decoration-style: unset;
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便

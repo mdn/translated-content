@@ -136,7 +136,7 @@ q::after {
 }
 
 h1::before  {
-  content: "Chapitre ";  
+  content: "Chapitre ";
   /* L'espace après la dernière lettre est 
      voulu afin de détacher le mot du reste
      du contenu */

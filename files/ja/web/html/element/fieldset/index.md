@@ -119,13 +119,13 @@ slug: Web/HTML/Element/fieldset
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("radiogroup")}},
-        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
@@ -137,11 +137,7 @@ slug: Web/HTML/Element/fieldset
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                  |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}     | {{Spec2('HTML WHATWG')}} | `fieldset` 要素を定義 |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}             | {{Spec2('HTML4.01')}}     | 初回定義              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

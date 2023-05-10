@@ -1,7 +1,6 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
 
@@ -78,14 +77,11 @@ Usando este manejador de evento tu pagina previene que Firefox cambie el cache d
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "indices.html#event-beforeunload", "beforeunload")}} | {{Spec2("HTML WHATWG")}} |                    |
-| {{SpecName("HTML5 W3C", "browsers.html#unloading-documents", "beforeunload")}} | {{Spec2("HTML5 W3C")}}     | Definicion inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.beforeunload_event")}}
+{{Compat}}
 
 ## Mire tambien
 

@@ -1,7 +1,6 @@
 ---
 title: Expect
 slug: Web/HTTP/Headers/Expect
-translation_of: Web/HTTP/Headers/Expect
 ---
 
 {{HTTPSidebar}}
@@ -59,7 +58,7 @@ Expect: 100-continue
 
 이제 서버는 요청 헤더를 확인하고 {HTTPStatus("100")}} (Continue) 상태를 응답하여 클라이언트가 계속해서 메시지 바디를 전송하도록 안내하거나, {{HTTPStatus("417")}} (Expectation Failed) 상태를 응답하여 어떠한 기대값도 충족되지 않도록 합니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

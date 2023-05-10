@@ -109,7 +109,7 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 </h1>
 ```
 
-Lorsqu'une chaîne est décrite avec un format machine plutôt qu'un format « humain », on la propriété est exprimée avec la valeur de l'attribut `value` de l'élément {{HTMLElement("data")}} et c'est le contenu de l'élément qui fournira la valeur humainement compréhensible.
+Lorsqu'une chaîne est décrite avec un format machine plutôt qu'un format « humain », la propriété est exprimée avec la valeur de l'attribut `value` de l'élément {{HTMLElement("data")}} et c'est le contenu de l'élément qui fournira la valeur humainement compréhensible.
 
 ### Un exemple de mesure
 

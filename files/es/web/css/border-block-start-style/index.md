@@ -1,7 +1,6 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
-translation_of: Web/CSS/border-block-start-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -60,15 +59,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-start-style", "border-block-start-style")}} | {{Spec2("CSS Logical Properties")}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-start-style")}}
+{{Compat}}
 
 ## Mira también
 

@@ -1,11 +1,6 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/min-width
 ---
 
 {{CSSRef}}
@@ -14,7 +9,7 @@ translation_of: Web/CSS/min-width
 
 {{EmbedInteractiveExample("pages/css/min-width.html")}}
 
-`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 높이는 `min-width`의 값을 사용합니다.
+`min-width`가 {{cssxref("max-width")}} 또는 {{cssxref("width")}}보다 커지면 요소의 너비는 `min-width`의 값을 사용합니다.
 
 ## 구문
 

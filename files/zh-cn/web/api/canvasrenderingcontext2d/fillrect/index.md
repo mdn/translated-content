@@ -44,7 +44,7 @@ void ctx.fillRect(x, y, width, height);
 
 下面绘制的矩形左上顶点在 (20, 10)，宽高分别是 150 和 100 像素。
 
-```
+```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
@@ -53,56 +53,19 @@ ctx.fillRect(20, 10, 150, 100);
 
 #### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('A_simple_filled_rectangle', 700, 180) }}
+{{ EmbedLiveSample('一个填充矩形的例子', 700, 180) }}
 
 ### 填充整个画布
 
 下面这个代码片段使用本方法填充了整个画布。这样做通常的目的是在开始绘制其他内容前设置一个背景。为了达到这样的效果，需要让填充的范围和画布的范围相同，需要访问{{HtmlElement("canvas")}}元素的`width` 和 `height` 属性。
 
-```
+```js
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

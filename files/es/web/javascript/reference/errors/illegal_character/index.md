@@ -1,13 +1,6 @@
 ---
 title: 'ErrorDeSintaxis: Caracter ilegal'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - Error
-  - Error de sintaxis
-  - JavaScript
-  - SyntaxError
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 original_slug: Web/JavaScript/Reference/Errors/caracter_ilegal
 ---
 

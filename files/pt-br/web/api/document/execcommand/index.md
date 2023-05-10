@@ -3,11 +3,11 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{Obsolete_header}}
+{{ApiRef("DOM")}}
 
 Quando um documento HTML está em [`designMode`](/pt-BR/docs/Web/API/Document/designMode), seu objeto `document` expõe um metodo **`execCommand`** para editar a região editável corrente, algo como elementos [form inputs](/pt-BR/docs/Web/HTML/Element/input) ou [`contentEditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable).
 
-A maioria dos comandos afetam apaenas uma área selecionada \[[seleção](/pt-BR/docs/Web/API/Selection)] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando `contentEditable`, o metódo `execCommand()` afeta o elemento editável ativo.
+A maioria dos comandos afetam apenas uma área selecionada \[[seleção](/pt-BR/docs/Web/API/Selection)] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando `contentEditable`, o metódo `execCommand()` afeta o elemento editável ativo.
 
 ## Síntaxe
 

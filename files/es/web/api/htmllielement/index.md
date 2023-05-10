@@ -1,10 +1,6 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
-tags:
-  - API
-  - HTML DOM
-translation_of: Web/API/HTMLLIElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -26,16 +22,11 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 
 ## Especificaciones
 
-| Especificacion                                                                                                   | Estado                           | Comentario                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "grouping-content.html#the-li-element", "HTMLLIElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-li-element", "HTMLLIElement")}}     | {{Spec2('HTML5 W3C')}}     | The following property is now obsolete: `type`.  |
-| {{SpecName('DOM2 HTML', 'html.html#ID-74680021', 'HTMLLIElement')}}                         | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName("DOM1")}}.     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-74680021', 'HTMLLIElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                              |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLLIElement")}}
+{{Compat}}
 
 ## Ver también
 

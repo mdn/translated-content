@@ -17,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 В этом задании вам необходимо создать три столбца с отступом 50px между каждый столбцом.
 
-![Three columns of text](https://mdn.mozillademos.org/files/17081/multicol-task1.png)
+![Three columns of text](multicol-task1.png)
 
 Попробуйте обновить живой пример ниже для воссоздания законченного примера:
 
@@ -31,7 +31,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 Затем добавьте серую линейку 5px между каждым столбцом, убедитесь, что между краями линейки и содержимым столбцов есть пространство 10px.
 
-![Three columns of text with a grey rule between them.](https://mdn.mozillademos.org/files/17082/multicol-task2.png)
+![Three columns of text with a grey rule between them.](multicol-task2.png)
 
 Попробуйте обновить живой код ниже для воссоздания законченного примера:
 
@@ -43,7 +43,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 Заставьте элемент содержащий заголовок и подзаголовок растянуться через все столбцы так чтоб это выглядело как на картинке
 
-![Three columns of text with a heading and subheading spanning all three in the middle.](https://mdn.mozillademos.org/files/17083/multicol-task3.png)
+![Three columns of text with a heading and subheading spanning all three in the middle.](multicol-task3.png)
 
 Попробуйте обновить живой код ниже для воссоздания законченного примера:
 

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.getIdentityAssertion()
 slug: Web/API/RTCPeerConnection/getIdentityAssertion
-translation_of: Web/API/RTCPeerConnection/getIdentityAssertion
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

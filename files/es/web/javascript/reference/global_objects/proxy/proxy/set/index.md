@@ -1,12 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
 
@@ -35,7 +29,7 @@ El método `set` recibe los siguientes parámetros. `this` se asocia al handler.
   - : El nuevo valor asignado a la propiedad.
 - `receiver`
   - : El objeto al que originalmente iba dirigida la asignación. Normalmente es el proxy. Sin embargo el manejador o `set` handler puede ser llamado de forma indirecta a través de un prototipo entre otros.
-  
+
     Por ejemplo, suponga que un escript ejecuta la sentencia `obj.name = "jen"`, y `obj` no es un proxy, y no posee la propiedad `.name`, pero tiene un proxy en su cadena de prototipos. El manejador `set` de este proxy será llamado y obj será pasado como el receiver.
 
 ### Valor Devuelto
@@ -86,9 +80,9 @@ console.log(p.a)       // 10
 
 {{Specifications}}
 
-## Compatibilidad con los buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.set")}}
+{{Compat}}
 
 ## Ver también
 

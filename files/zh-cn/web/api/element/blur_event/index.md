@@ -20,7 +20,7 @@ slug: Web/API/Element/blur_event
 - 默认行为
   - : 无
 
-> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（{{bug(452307)}}）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
+> **备注：** {{domxref("Document.activeElement")}} 的值随浏览器的不同而不同（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 把值设为焦点将要移向的对象，而 Firefox 和 Chrome 往往把值设为 `body`。
 
 ## 属性
 
@@ -36,7 +36,7 @@ slug: Web/API/Element/blur_event
 
 有两种方法来为这个事件实现事件代理：在支持 `focusout` 事件的浏览器中使用 focusout 事件（除了 FireFox 以外的浏览器都支持 focusout）或者通过设置 [`addEventListener`](/zh-CN/docs/DOM/element.addEventListener) 方法的第三个参数 "useCapture" 为 `true：`
 
-### HTML Content
+### HTML
 
 ```html
 <form id="form">
@@ -45,7 +45,7 @@ slug: Web/API/Element/blur_event
 </form>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 var form = document.getElementById("form");
@@ -57,7 +57,7 @@ form.addEventListener("blur", function( event ) {
 }, true);
 ```
 
-{{EmbedLiveSample('Event_delegation')}}
+{{EmbedLiveSample('事件代理')}}
 
 ## 规范
 

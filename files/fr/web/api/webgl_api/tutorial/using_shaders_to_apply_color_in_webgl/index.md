@@ -8,7 +8,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Ajouter_des_couleurs_avec_les_shaders
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 Dans la [démonstration précédente](/fr/docs/WebGL/Ajouter_du_contenu_à_WebGL), nous avons créé un carré 2D, la prochaine étape évidente consiste à lui appliquer de la couleur. Nous allons faire cela en révisant les nuanceurs.
 

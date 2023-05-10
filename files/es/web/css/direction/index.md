@@ -1,12 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/direction
 ---
 
 {{ CSSRef() }}

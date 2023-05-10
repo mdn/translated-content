@@ -1,14 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS:Referencias
-  - Fondos CSS
-  - Propiedades de CSS
-  - Referências
-  - Todas_las_Categorías
-translation_of: Web/CSS/background-repeat
 ---
 
 {{CSSRef}}
@@ -116,7 +108,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 160px;
     height: 70px;
 }
@@ -143,8 +135,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-image:  url(starsolid.gif),
+                     url(favicon32.png);
   background-repeat: repeat-x,
                      repeat-y;
   height: 144px;
@@ -159,15 +151,11 @@ En este ejemplo,cada elemento de la listcoincide con un valor diferente de `back
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                   | Comentario                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}         | {{Spec2('CSS3 Backgrounds')}} | Añade soporte para diferentes imágenes de fondo, el atributo de doble valor equivalente permite un comportamiento de repetición diferente para las direcciones verticales y horizontales, las palabras clave `space` y `round` , y para fondos en elementos en la misma línea mediante la definición precisa de la zona disponible del fondo. |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}} | {{Spec2('CSS2.1')}}                 | Sin cambios significativos.                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('CSS1', '#background-repeat', 'background-repeat')}}                             | {{Spec2('CSS1')}}                 | Definición inicial.                                                                                                                                                                                                                                                                                                                           |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-repeat")}}
+{{Compat}}
 
 ## Mira también
 

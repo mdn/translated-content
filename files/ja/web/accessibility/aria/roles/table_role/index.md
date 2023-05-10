@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: table ロール'
-slug: Web/Accessibility/ARIA/Roles/Table_Role
+slug: Web/Accessibility/ARIA/Roles/table_role
 ---
 
 \\{{ariaref}}
@@ -114,10 +114,7 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#table","ARIA Table Role")}}                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#table","ARIA Table Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

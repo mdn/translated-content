@@ -28,7 +28,7 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 
 Большинство структурированных текстов состоят из параграфов и заголовков, независимо от того, читаете ли вы рассказ, или газету, или учебник, журнал и т.д.
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg)
 
 Упорядоченный контент делает чтение более лёгким и приятным.
 
@@ -80,7 +80,7 @@ original_slug: Learn/HTML/Введение_в_HTML/HTML_text_fundamentals
 
 Однако, когда вы откроете документ в своём браузере, вы увидите, что текст выглядит как один большой кусок!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png)
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](screen_shot_2017-03-29_at_09.20.35.png)
 
 Это связано с тем, что нет элементов для создания структуры контента, поэтому браузер не знает, где здесь заголовок и где абзац. Более того:
 

@@ -1,7 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asin
 ---
 
@@ -51,9 +50,9 @@ For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Ver Mas
 

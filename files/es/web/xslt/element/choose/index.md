@@ -1,10 +1,6 @@
 ---
 title: choose
 slug: Web/XSLT/Element/choose
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/choose
 original_slug: Web/XSLT/choose
 ---
 

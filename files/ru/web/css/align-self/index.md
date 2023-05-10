@@ -100,7 +100,7 @@ align-self: unset;
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 {{CSSRef}}
 

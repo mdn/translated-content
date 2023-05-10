@@ -33,7 +33,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}
+{{ EmbedLiveSample('透過 CSSOM 修改樣式表規則') }}
 
 The list of properties available in the DOM from the style property is given on the [DOM CSS Properties List](/zh-TW/docs/DOM/CSS) page.
 
@@ -85,7 +85,7 @@ function resetStyle(elemId) {
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_an_element_style') }}
+{{ EmbedLiveSample('修改元素的樣式') }}
 
 The {{domxref("window.getComputedStyle", "getComputedStyle()")}} method on the `document.defaultView` object returns all styles that have actually been computed for an element. See [Example 6: getComputedStyle](/zh-TW/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) in the examples chapter for more information on how to use this method.
 
@@ -119,7 +119,7 @@ More important than the two properties noted here is the use of the `style` obje
 </html>
 ```
 
-{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}
+{{ EmbedLiveSample('DOM Style Object') }}
 
 The **media** and **type** of the style may or may not be given.
 

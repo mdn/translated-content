@@ -1,7 +1,6 @@
 ---
 title: Content Editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 

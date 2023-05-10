@@ -1,9 +1,7 @@
 ---
 title: Funciones asíncronas
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Funcionesasíncronas
-browser-compat: javascript.builtins.AsyncFunction
 ---
 
 {{JSRef}}
@@ -33,7 +31,7 @@ new AsyncFunction(arg0, arg1, ...argN, functionBody)
 
     Así mismo, los parámetros se procesan de la misma manera que las declaraciones de funciones, aceptando espacios y comentarios. Por ejemplo: `"x", "theValue = 42", "[a, b] /* numbers */"` — o `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` es también correcto, pero muy confuso para leer).
 
-- : `functionBody`
+- `functionBody`
   - : Una cadena que contiene las sentencias de JavaScript que componen la definición de la función.
 
 ## Descripción

@@ -1,13 +1,6 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - API
-  - DOM
-  - Propiedad
-  - Referencia
-  - Referência DOM
-translation_of: Web/API/Node/childNodes
 ---
 
 {{APIRef("DOM")}}
@@ -60,16 +53,11 @@ El objeto `document` contiene 2 hijos: la declaración del Doctype y el elemento
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}         | {{Spec2('DOM WHATWG')}} | Sin cambios        |
-| {{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM3 Core')}}     | Sin cambios        |
-| {{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}     | {{Spec2('DOM2 Core')}}     | Sin cambios        |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}} | {{Spec2('DOM1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Node.childNodes")}}
+{{Compat}}
 
 ## Vea también
 

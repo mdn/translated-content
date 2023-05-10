@@ -131,11 +131,7 @@ slug: Web/HTML/Element/div
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-div-element', '&lt;div&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし。 |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}     | {{Spec2('HTML5 W3C')}}     | `align` を廃止                       |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

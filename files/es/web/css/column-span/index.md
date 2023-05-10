@@ -1,11 +1,6 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/column-span
 ---
 
 {{CSSRef}}
@@ -75,12 +70,8 @@ h2 {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('CSS3 Multicol', '#column-span', 'column-span')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

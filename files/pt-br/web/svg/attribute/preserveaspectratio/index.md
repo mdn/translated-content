@@ -12,7 +12,7 @@ Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}
 ## Example
 
 ```html
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 162 92" xmlns="https://www.w3.org/2000/svg">
   <defs>
      <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>
@@ -47,7 +47,7 @@ html,body,svg { height:100% }
 ```
 
 ```html hidden
-<svg viewBox="-1 -1 162 92" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-1 -1 162 92" xmlns="https://www.w3.org/2000/svg">
   <defs>
      <path id="smiley" d="M50,10 A40,40,1,1,1,50,90 A40,40,1,1,1,50,10 M30,40 Q36,35,42,40 M58,40 Q64,35,70,40 M30,60 Q50,75,70,60 Q50,75,30,60" />
   </defs>

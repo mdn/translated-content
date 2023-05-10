@@ -40,7 +40,7 @@ function init() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
 ## See also
 

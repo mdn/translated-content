@@ -68,7 +68,7 @@ user-select: unset;
 
 > **备注：** CSS UI 4 已[将 `user-select` 的 `element` 属性值重命名为 `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -100,9 +100,9 @@ user-select: unset;
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

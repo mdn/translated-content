@@ -1,15 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - Diseño
-  - Fondo CSS
-  - Propiedad CSS
-  - Referencia
-  - Referência(2)
-  - Web
-translation_of: Web/CSS/background-clip
 ---
 
 {{ CSSRef() }}
@@ -76,13 +67,11 @@ p {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Ver también
 

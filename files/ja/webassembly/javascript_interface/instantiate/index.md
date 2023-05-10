@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/instantiate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiate()`** 関数は WebAssembly コードをコンパイルおよびインスタンス化することができます。この関数は 2 つのオーバーロードを持ちます。
 
@@ -126,9 +126,7 @@ onmessage = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#dom-webassembly-instantiate', 'instantiate()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

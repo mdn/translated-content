@@ -1,9 +1,6 @@
 ---
 title: 숫자와 날짜
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
@@ -304,7 +301,7 @@ Math.sin(1.56)
 
 ## `Date` 객체
 
-자바스크립트에는 날짜 데이터 타입이 없습니다. 그러나, {{jsxref ( "Date")}} 객체와 그 메소드를 사용하여 응용 프로그램에서 날짜와 시간을 처리 할 수 ​​있습니다. `Date` 객체에는 날짜 설정, 가져 오기 및 조작을위한 많은 메소드가 있습니다. 속성(properties)이 없습니다.
+자바스크립트에는 날짜 데이터 타입이 없습니다. 그러나, {{jsxref ( "Date")}} 객체와 그 메소드를 사용하여 응용 프로그램에서 날짜와 시간을 처리 할 수 있습니다. `Date` 객체에는 날짜 설정, 가져 오기 및 조작을위한 많은 메소드가 있습니다. 속성(properties)이 없습니다.
 
 자바스크립트는 자바와 비슷하게 날짜를 처리합니다. 두 언어에는 동일한 날짜 메소드가 많으며 두 언어 모두 1970 년 1 월 1 일 00:00:00 이후의 밀리 초 수로 날짜를 저장합니다. 유닉스 타임 스탬프는 1970 년 1 월 1 일 00:00:00 이후의 초 수입니다.
 

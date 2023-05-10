@@ -1,11 +1,6 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-right
 ---
 
 {{CSSRef}}
@@ -76,14 +71,8 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentario                                                                                                                |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-right', 'border-right')}}         | {{Spec2('CSS3 Backgrounds')}} | No direct changes, though the modification of values for the {{cssxref("border-right-color")}} do apply to it. |
-| {{SpecName('CSS2.1', 'box.html#propdef-border-right', 'border-right')}} | {{Spec2('CSS2.1')}}                 | No significant changes.                                                                                                   |
-| {{SpecName('CSS1', '#border-right', 'border-right')}}                         | {{Spec2('CSS1')}}                 | Initial definition                                                                                                        |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilitidad del navegador
-
-{{Compat("css.properties.border-right")}}
+{{Compat}}

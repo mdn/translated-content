@@ -24,7 +24,7 @@ apply(thisArg, argsArray)
 
 - `argsArray` {{optional_inline}}
 
-  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或  {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
+  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或 {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
 
 ### 返回值
 
@@ -34,7 +34,7 @@ apply(thisArg, argsArray)
 
 > **备注：** 虽然这个函数的语法与 {{jsxref("Function.call", "call()")}} 几乎相同，但根本区别在于，`call()` 接受一个**参数列表**，而 `apply()` 接受一个**参数的单数组**。
 
-> **备注：** 当第一个参数为 {{jsxref("null")}} 或  {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
+> **备注：** 当第一个参数为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
 
 在调用一个存在的函数时，你可以为其指定一个 `this` 对象。`this` 指当前对象，也就是正在调用这个函数的对象。使用 `apply`，你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。
 

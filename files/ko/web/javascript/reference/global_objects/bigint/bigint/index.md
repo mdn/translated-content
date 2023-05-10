@@ -1,12 +1,6 @@
 ---
 title: BigInt() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
 
 {{JSRef}}

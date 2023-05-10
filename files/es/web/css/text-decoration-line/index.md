@@ -1,10 +1,6 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-decoration-line
 ---
 
 {{CSSRef}}
@@ -75,13 +71,11 @@ p {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                       | Comentarios                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}} | {{Spec2('CSS3 Text Decoration')}} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-line")}}
+{{Compat}}
 
 ## Ver también
 

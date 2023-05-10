@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - Arreglo
-  - ECMAScript 5
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
 
@@ -128,11 +118,7 @@ De nuevo, darse cuenta que esta implementación tiene como objeto la completa co
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
-
-## Notas de compatibilidad
-
-- Desde Firefox 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), el método ya no devolverá `-0`. Por ejemplo, `[0].lastIndexOf(0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+{{Compat}}
 
 ## Ver también
 

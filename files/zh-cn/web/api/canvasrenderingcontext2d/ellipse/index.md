@@ -3,7 +3,7 @@ title: CanvasRenderingContext2D.ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
 **`CanvasRenderingContext2D.ellipse()`** 是 Canvas 2D API 添加椭圆路径的方法。椭圆的圆心在（x,y）位置，半径分别是*radiusX* 和 _radiusY_，按照*anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 
@@ -34,79 +34,40 @@ void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, anticlo
 
 ## 示例
 
-### 使用 `ellipse` 方法
+### 画一个完整的椭圆
 
 这是一段绘制椭圆的简单的代码片段。
 
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="200" height="200"></canvas>
 ```
 
 #### JavaScript
 
-```
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-ctx.setLineDash([]);
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Draw the ellipse
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
+ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
 ctx.stroke();
-ctx.setLineDash([5]);
-ctx.moveTo(0,200);
-ctx.lineTo(200,0);
-ctx.stroke();
-```
 
-修改下面的代码并在线查看 canvas 的变化（如果椭圆没有绘制，请在兼容性列表中检查你的浏览器是否支持）：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.setLineDash([]);
+// Draw the ellipse's line of reflection
 ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI); //倾斜 45°角
+ctx.setLineDash([5, 5]);
+ctx.moveTo(0, 200);
+ctx.lineTo(200, 0);
 ctx.stroke();
-ctx.setLineDash([5]);
-ctx.moveTo(0,200);
-ctx.lineTo(200,0);
-ctx.stroke();</textarea>
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+#### 结果
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+{{ EmbedLiveSample('画一个完整的椭圆', 700, 250) }}
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

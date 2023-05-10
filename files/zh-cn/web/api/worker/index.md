@@ -5,7 +5,7 @@ slug: Web/API/Worker
 
 {{APIRef("Web Workers API")}}
 
-Worker 接口是 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker **，**只须调用 `Worker(URL)` 构造函数，函数参数 `URL` 为指定的脚本。
+Worker 接口是 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker，只须调用 `Worker(URL)` 构造函数，函数参数 `URL` 为指定的脚本。
 
 Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者[同源](/zh-CN/docs/Web/Security/Same-origin_policy)（注意：[Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)暂时不支持嵌套 Worker）。
 

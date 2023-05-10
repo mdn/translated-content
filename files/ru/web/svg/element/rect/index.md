@@ -33,7 +33,7 @@ original_slug: Web/SVG/Элемент/rect
 </svg>
 ```
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
+» [rect-1.svg](rect-1.svg)
 
 ### `<rect>` со скруглёнными углами
 
@@ -50,7 +50,7 @@ original_slug: Web/SVG/Элемент/rect
 </svg>
 ```
 
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+» [rect-2.svg](rect-2.svg)
 
 ## Атрибуты
 

@@ -1,12 +1,6 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - 메소드
-  - 문자열
-  - 자바스크립트
-  - 프로토타입
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 
 {{JSRef}}
@@ -23,7 +17,7 @@ str.slice(beginIndex[, endIndex])
 
 ### 매개변수
 
-<dl><dt><code>beginIndex</code></dt><dd>추출 시작점인 0부터 시작하는 인덱스입니다. 만약 음수라면, beginIndex는 <code>strLength(문자열 길이) + beginIndex</code>로 취급됩니다. (예를 들어 <code>beginIndex</code>가 -3이면 시작점은 <code>strLength - 3</code>).</dd><dd>만약 <code>beginIndex</code>가 <code>strLength</code> 보다 크거나 같은 경우, <code>slice()</code>는 빈 문자열을 반환합니다.</dd><dt><code>endIndex</code>{{optional_inline}}</dt><dd>0부터 시작하는 추출 종료점 인덱스로 그 직전까지 추출됩니다. 인덱스 위치의 문자는 추출에 포함되지 않습니다.</dd><dd>만약 <code>endIndex</code>가 생략된다면, <code>silce()</code>는 문자열 마지막까지 추출합니다. 만약 음수라면, endIndex는 <code>strLength(문자열 길이) + endIndex</code> 로 취급됩니다(예를 들어 <code>endIndex</code>가 -3이면 종료점은 <code>strLength - 3</code>).</dd></dl>
+<dl><dt><code>beginIndex</code></dt><dd>추출 시작점인 0부터 시작하는 인덱스입니다. 만약 음수라면, beginIndex는 <code>strLength(문자열 길이) + beginIndex</code>로 취급됩니다. (예를 들어 <code>beginIndex</code>가 -3이면 시작점은 <code>strLength - 3</code>).</dd><dd>만약 <code>beginIndex</code>가 <code>strLength</code> 보다 크거나 같은 경우, <code>slice()</code>는 빈 문자열을 반환합니다.</dd><dt><code>endIndex</code>{{optional_inline}}</dt><dd>0부터 시작하는 추출 종료점 인덱스로 그 직전까지 추출됩니다. 인덱스 위치의 문자는 추출에 포함되지 않습니다.</dd><dd>만약 <code>endIndex</code>가 생략된다면, <code>slice()</code>는 문자열 마지막까지 추출합니다. 만약 음수라면, endIndex는 <code>strLength(문자열 길이) + endIndex</code> 로 취급됩니다(예를 들어 <code>endIndex</code>가 -3이면 종료점은 <code>strLength - 3</code>).</dd></dl>
 
 ### 반환 값
 
@@ -84,11 +78,11 @@ console.log(str.slice(11, -7)) // => "is u";
 console.log(str.slice(-5, -1)) // => "n us";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

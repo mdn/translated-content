@@ -1,10 +1,8 @@
 ---
 title: CanvasCaptureMediaStreamTrack.requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
-tags:
-  - 캔버스
-translation_of: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("CanvasCaptureMediaStreamTrack")}} 의 메서드 **`requestFrame()`** 은 canvas에서 프레임을 캡처하여 stream으로 보낼 것을 요청한다. 렌더링 타이밍과 프레임 캡처를 섬세하게 제어해야하는 애플리케이션은 `requestFrame()` 을 사용해 프레임을 캡처할 시기를 직접 지정할 수 있다.

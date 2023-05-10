@@ -346,7 +346,7 @@ TextTrack addTextTrack(TextTrackKind kind,
                        optional DOMString language = "");
 ```
 
-メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に  \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
+メソッドの引数は、メソッドサブページの構文の節に記載されています。 WebIDL では、括弧の間にカンマで区切られたリストとして順番に記載されています。それぞれの引数には名前（上記参照）と型（例：`'？'`は `null`値が有効であることを意味します）があります。マークされている場合、引数をメソッド呼び出しに含めることは任意であり、構文の節に記載する際に \\{{OptionalInline}} フラグを指定する必要があります。引数の既定値は、等号 (`'='`) の後に表示されます。
 
 ### 返値の型
 
@@ -456,7 +456,7 @@ iterable<keyType, valueType>
 - `entries()` は（_keyType_ 型の）索引の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: E{{domxref('FormData.entries()')}}
 - `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
 - `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox バグ 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 このようなイテレータを使うと，`for (var p in object)` という構文を， `for (var p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
 

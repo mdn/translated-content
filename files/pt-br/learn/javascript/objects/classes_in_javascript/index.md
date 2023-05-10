@@ -353,7 +353,7 @@ class Teacher extends Person {
 }
 ```
 
-Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_` **para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
+Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_`** para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
 
 - Para mostrar o valor atual da propriedade `_subject` do objeto `snape` , podemos usar o método getter `snape.subject`.
 - Para atribuir um novo valor à propriedade `_subject` , podemos usar o método setter `snape.subject="new value"`.
@@ -404,13 +404,3 @@ No próximo artigo, veremos como trabalhar com JavaScript Object Notation (JSON)
 - [Você não sabe JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Parte da excelente série de manuais de JavaScript de Kyle Simpson, o Capítulo 5, em particular, analisa os protótipos com muito mais detalhes do que fazemos aqui. Nós apresentamos uma visão simplificada nesta série de artigos destinados a iniciantes, enquanto Kyle entra em grande profundidade e fornece uma imagem mais complexa, mas mais precisa.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

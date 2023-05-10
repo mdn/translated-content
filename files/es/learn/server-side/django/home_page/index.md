@@ -1,7 +1,6 @@
 ---
 title: 'Tutorial de Django Parte 5: Creación de tu página de inicio'
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -48,7 +47,7 @@ Los principales elementos que necesitamos crear son:
 - Funciones de vista para obtener los datos solicitados desde los modelos, crear una página HTML que muestre los datos, y devolverlo al usuario para que lo vea en el navegador.
 - Plantillas usadas por las vistas para renderizar los datos.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 Como verás en la siguiente sección, vamos a tener 5 páginas para mostrar, que es mucho que documentar en un artículo. Por lo tanto, en la mayor parte de este artículo nos concentraremos en mostrar como implementar solo la página de inicio (nos moverermos a otras páginas en un artículo subsecuente). Esto debe darte un buen entendimiento de extremo a extremo sobre como los mapeadores URL, vistas y modelos funcionan en la práctica.
 
@@ -62,7 +61,7 @@ Las URL que vamos a necesitar para nuestras páginas son:
 - `catalog/books/` — La lista de todos los libros.
 - `catalog/authors/` — La lista de todos los autores.
 - `catalog/book/<id>` — La vista detallada para el libro específico con un campo de clave primaria de `<id>` (el valor por defecto). Así por ejemplo, `/catalog/book/3`, para el tercer libro añadido.
-- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada _`<id>`_. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
+- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada `<id>`. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
 
 La tres primeras URLs son usadas para listar el índice, los libros y autores. Esto no codifica ninguna información adicional, y mientras los resultados retornados dependerán del contenido en la base de datos, las consultas que se ejecutan para obtener la información siempre serán las mismas.
 
@@ -358,7 +357,7 @@ TEMPLATES = [
 
 En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a `http://127.0.0.1:8000/`. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
 > **Nota:** Aún no podrás usar los enlaces **All books** y **All authors** porque las URLs, vistas y plantillas para dichas páginas no se han definido (al momento solo hemos insertado marcadores de posición para esos enlaces en la plantilla `base_generic.html`).
 
@@ -385,21 +384,3 @@ En nuestro siguiente artículo nos basaremos en nuestro conocimiento para crear 
 - [Funciones atajo de Django](https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

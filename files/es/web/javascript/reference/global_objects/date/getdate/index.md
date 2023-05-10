@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDate
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDate
 ---
 
@@ -42,7 +41,7 @@ console.log(day); // 25
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getDate")}}
+{{Compat}}
 
 ## Véase también
 

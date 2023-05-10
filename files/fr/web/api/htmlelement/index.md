@@ -63,7 +63,7 @@ _Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), 
 - [`HTMLElement.properties`](/fr/docs/Web/API/HTMLElement/properties) {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Renvoi un objet [`HTMLPropertiesCollection`](/fr/docs/Web/API/HTMLPropertiesCollection).
 - [`HTMLElement.spellcheck`](/fr/docs/Web/API/HTMLElement/spellcheck)
-  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck).  Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
+  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
 - [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style)
   - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style) de l'élément.
 - [`HTMLElement.tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex)

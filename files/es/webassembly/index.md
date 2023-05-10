@@ -1,11 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - Aterrizaje
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 
 {{WebAssemblySidebar}}
@@ -75,7 +70,7 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}
@@ -98,7 +91,7 @@ URL의 줄을 바꿀 때, 문장 부호 다음에 잘린 경우 독자가 URL이
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}
 
 ## 같이 보기
 

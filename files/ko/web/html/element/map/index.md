@@ -1,15 +1,8 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/map
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<map>` 요소**는 {{htmlelement("area")}} 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용합니다.
@@ -92,10 +85,10 @@ translation_of: Web/HTML/Element/map
 키보드의 탭을 눌렀을 때, 위의 예제는 아래 사진처럼 나와야 합니다.
 
 `left.html` 링크:
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 `right:html` 링크:
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 명세
 
@@ -103,7 +96,7 @@ translation_of: Web/HTML/Element/map
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.map")}}
+{{Compat}}
 
 ## 같이 보기
 

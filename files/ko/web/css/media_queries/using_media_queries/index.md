@@ -1,15 +1,6 @@
 ---
 title: 미디어 쿼리 사용하기
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Media
-  - Media Queries
-  - Responsive Design
-  - Web
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/Media_queries
 ---
 

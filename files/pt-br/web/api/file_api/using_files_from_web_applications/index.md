@@ -6,7 +6,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 Usando a File API adicionada ao DOM em HTML5, agora é possível para conteúdo web solicitar ao usuário para selecionar arquivos locais, e então ler o conteúdo desses arquivos. Essa seleção pode ser feita usando um elemento HTML {{HTMLElement("input") }} ou por arrastar e soltar.
 
-Se você quiser usar a DOM File API através de extensões ou outro código chrome, você pode; Na verdade, há algumas funcionalidades adicionais para se estar ciente. Veja [Usando a DOM File API em código chrome](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) para detalhes.
+Se você quiser usar a DOM File API através de extensões ou outro código chrome, você pode; Na verdade, há algumas funcionalidades adicionais para se estar ciente. Veja [Usando a DOM File API em código chrome](/pt-BR/Extensions/Using_the_DOM_File_API_in_chrome_code) para detalhes.
 
 ## Selecionando arquivos usando HTML
 
@@ -28,7 +28,7 @@ In this case, the file list passed to the `handleFiles()` function contains one 
 
 ### Using hidden file input elements using the click() method
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, you can hide the admittedly ugly file {{ HTMLElement("input") }} element and present your own interface for opening the file picker and displaying which file or files the user has selected. You can do this by styling the input element with `display:none` and calling the {{ domxref("element.click","click()") }} method on the {{ HTMLElement("input") }} element.
+Starting in Gecko 2.0, you can hide the admittedly ugly file {{ HTMLElement("input") }} element and present your own interface for opening the file picker and displaying which file or files the user has selected. You can do this by styling the input element with `display:none` and calling the {{ domxref("element.click","click()") }} method on the {{ HTMLElement("input") }} element.
 
 Consider this HTML:
 
@@ -72,7 +72,7 @@ Note that in this case, the `handleFiles()` function looks up the file list inst
 
 ## Using object URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} introduces support for the DOM {{ domxref("window.URL.createObjectURL()") }} and {{ domxref("window.URL.revokeObjectURL()") }} methods. These let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{ domxref("File") }} object, including local files on the user's computer.
+Gecko 2.0 introduces support for the DOM {{ domxref("window.URL.createObjectURL()") }} and {{ domxref("window.URL.revokeObjectURL()") }} methods. These let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{ domxref("File") }} object, including local files on the user's computer.
 
 When you have a {{ domxref("File") }} object you'd like to reference by URL from HTML, you can create an object URL for it like this:
 
@@ -432,6 +432,6 @@ if (isset($_FILES['myFile'])) {
 - {{ domxref("File") }}
 - {{ domxref("FileList") }}
 - {{ domxref("FileReader") }}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/pt-BR/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{ domxref("XMLHttpRequest") }}

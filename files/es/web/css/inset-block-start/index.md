@@ -1,7 +1,6 @@
 ---
 title: inset-block-start
 slug: Web/CSS/inset-block-start
-translation_of: Web/CSS/inset-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -66,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-block-start", "inset-block-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inset-block-start")}}
+{{Compat}}
 
 ## Mira también
 

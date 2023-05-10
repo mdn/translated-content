@@ -1,8 +1,8 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
-translation_of: Web/API/ReadableStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ko/docs/Web/API/Streams_API)의 `ReadableStream` 인터페이스는 바이트 데이터를 읽을수 있는 스트림을 제공합니다. [Fetch API](/ko/docs/Web/API/Fetch_API)는 Response 객체의 body 속성을 통하여 `ReadableStream`의 구체적인 인스턴스를 제공합니다.
@@ -64,11 +64,11 @@ fetch("https://www.example.org/").then((response) => {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

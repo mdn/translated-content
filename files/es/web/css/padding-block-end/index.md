@@ -1,7 +1,6 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
-translation_of: Web/CSS/padding-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -66,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-block-end", "padding-block-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-block-end")}}
+{{Compat}}
 
 ## Mira también
 

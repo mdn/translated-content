@@ -1,52 +1,48 @@
 ---
 title: <semantics>
 slug: Web/MathML/Element/semantics
+l10n:
+  sourceCommit: a03b4b0e9aaac7409ff1ce974ab1bf2f40c81e03
 ---
 
 {{MathMLRef}}
 
-MathML においては、数学をタグ付けるには二つの方法があり、_表示 (presentation)_ MathML が数式の配置を制御するのに用いられる一方、_内容 (content)_ MathML は数式の論理的意味の符号化及び数式処理系 (computer algebra system) に適するような数式の変換を念頭に設計されています。MathML 要素`<semantics>`、`<annotation>`及び`<annotation-xml>`を用いることで、表示 MathML と内容 MathML を組み合せ、数式の配置情報及び論理的意味の双方を記述できます。
+**`<semantics>`** は [MathML](/ja/docs/Web/MathML) の要素で、 MathML 表現に注釈を付けます。例えば、[軽量マークアップ言語](https://ja.wikipedia.org/wiki/軽量マークアップ言語)としてのテキストソース、または特別な {{glossary("XML")}} 方言で表現されている数学的意味などです。一般的に、その構造は以下の通りです。
 
-`<semantics>`要素は注釈に関連したコンテナ要素として振舞い、子要素を持たなくてはなりません（そうでない場合、*無効なタグ付け*として誤り報告されます）。`<annotation>`要素には非 XML 形式の論理的情報が含まれ、対して`<annotaiton-xml>`要素には XML 形式の情報（例: 内容 MathML や OpenMath）が含まれます。
+- 注釈を付けるべき MathML 式である最初の子。
+- 続く `<annotation>` または `<annotation-xml>` 要素。後者は [OpenMath](https://en.wikipedia.org/wiki/OpenMath) のような XML 形式のために予約されています。
 
-`<semantics>`要素における可視子要素を決定する規則を次に挙げます。
+既定では、`<semantics>`要素の最初の子要素だけがレンダリングされ、他の子要素は [display](/ja/docs/Web/CSS/display) に `none` を設定した状態で保有されます。
 
-- 適用すべき規則がない場合: 既定では最初の子要素のみ描画しますが、当要素は表示 MathML でなくてはなりません。
-- 最初の子要素が`<annotation>`又は`<annotation-xml>`以外の表示 MathML 要素の場合、当要素が描画されます。
-- 表示 MathML が見当らない場合、`<semantics>`要素の最初の`<annotation>`又は`<annotation-xml>`子要素を描画します。
-  `encoding`属性で次の孰れかが指定されている場合、`<annotation-xml>`要素のみが認識されることに気を付けてください。
-
-  - application/mathml-presentation+xml
-  - MathML-Presentation
-  - SVG1.1
-  - text/html
-  - image/svg+xml
-  - application/xml
-
-  ここに「application/mathml+xml」を挙げて*いない*ことに留意してください、というのもこれでは内容 MathML か表示 MathML かを区別できないからです。
+> **メモ:** 古い MathML 仕様では、レンダラーが利用できる注釈に従って既定のレンダリングを決定することができました。可視の子を決定する以下のルールは、いくつかのブラウザーで実装されています。表示する MathML とコンテンツ MathML の区別については、 [MathML 4](https://w3c.github.io/mathml/) を参照してください。
+>
+> - 適用すべき規則が他にない場合、既定では最初の子要素のみ描画され、これが表示 MathML と見なされます。
+> - 最初の子要素が `<annotation>` または `<annotation-xml>` 以外の表示 MathML 要素の場合、当要素が描画されます。
+> - 表示 MathML が見当らない場合、 `src` 属性のない `<semantics>` 要素の最初の `<annotation>` または `<annotation-xml>` 子要素を描画します。 `<annotation-xml>` 要素については、 `encoding` 属性が以下のいずれかの値と等しくなければいけません。
+>   - `"application/mathml-presentation+xml"`
+>   - `"MathML-Presentation"`
+>   - `"SVG1.1"`
+>   - `"text/html"`
+>   - `"image/svg+xml"`
+>   - `"application/xml`".
+>
+> ここに `"application/mathml+xml"` を挙げて*いない*ことに留意してください、というのもこれでは内容 MathML か表示 MathML かを区別できないからです。
 
 ## 属性
 
-`<annotation>`及び`<annotation-xml>`要素には次の属性が設定できます。
+`<semantics>`、`<annotation>`、`<annotation-xml>` の各要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)を受け入れます。さらに、`<annotation>` と `<annotation-xml>` 要素には、以下の属性を設定することができます。
 
-- definitionURL
-  - : The location of the annotation key symbol.
-- encoding
-  - : 当注釈における論理的情報の符号化方法（例: 「MathML-Content」、「MathML-Presentation」、「application/openmath+xml」、「image/png」）。
-- cd
-  - : The content dictionary that contains the annotation key symbol.
-- name
-  - : The name of the annotation key symbol.
-- src
-  - : 論理的情報の為の外部資源の場所。
+- `encoding`
+  - : この注釈における意味的情報の符号化方法（例: `"MathML-Content"`, `"MathML-Presentation"`, `"application/openmath+xml"`, `"image/png"`）。
+- `src` {{deprecated_inline}}
+  - : 意味的情報の外部ソースの場所。
 
 ## 例
 
 ```html
-<math>
+<math display="block">
   <semantics>
-
-    <!-- 表示MathML -->
+    <!-- 最初の子は、既定でレンダリングされる MathML 式です。 -->
     <mrow>
       <msup>
         <mi>x</mi>
@@ -56,12 +52,13 @@ MathML においては、数学をタグ付けるには二つの方法があり�
       <mi>y</mi>
     </mrow>
 
-    <!-- 内容MathML -->
+    <!-- 数式の意味を表現するための専用 XML 方言 "Content MathML" を
+         用いて注釈をつけます。 -->
     <annotation-xml encoding="MathML-Content">
       <apply>
-        <plus/>
+        <plus />
         <apply>
-          <power/>
+          <power />
           <ci>x</ci>
           <cn type="integer">2</cn>
         </apply>
@@ -69,30 +66,22 @@ MathML においては、数学をタグ付けるには二つの方法があり�
       </apply>
     </annotation-xml>
 
-    <!-- 画像注釈 -->
-    <annotation encoding="image/png" src="some/path/formula.png"/>
+    <!-- 数式の PNG 画像で注釈を付けます。 -->
+    <annotation encoding="image/png" src="some/path/formula.png" />
 
-    <!-- TeX形式の注釈 -->
-    <annotation encoding="application/x-tex">
-      x^{2} + y
-    </annotation>
-
+    <!-- 数式を書くための軽量なマークアップ言語である LaTeX で
+         注釈をつけることができます。 -->
+    <annotation encoding="application/x-tex"> x^{2} + y </annotation>
   </semantics>
 </math>
 ```
 
-## 仕様
+{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
 
-| 仕様                                                                                                                                 | 状態                         | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter5.html', 'Mixing Markup Languages for Mathematical Expressions') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter5.html', 'Combining Presentation and Content Markup ') }}                 | {{ Spec2('MathML2') }} | 初期の仕様 |
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザー互換機
 
-{{Compat("mathml.elements.semantics")}}
-
-## Gecko 固有の注記
-
-- {{geckoRelease("23")}}において、semantics 要素下の可視子要素を決定する算法が MathML 仕様に準じるよう修正されました。以前では、最初の子要素が〔無条件に〕描画されていました。
-- Gecko では、src 属性が指定されている場合、`<annotation>`及び`<annotation-xml>`は無視されます。
+{{Compat}}

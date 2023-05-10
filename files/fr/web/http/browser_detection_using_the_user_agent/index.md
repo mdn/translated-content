@@ -121,7 +121,7 @@ if (hasTouchScreen)
 
 En ce qui concerne la taille de l'écran, on utilisera `window.innerWidth` et `window.addEventListener("resize", function(){ /\*refresh screen size dependent things\*/ })`. Sur ce sujet, on ne veut pas que des informations soient masquées sur les plus petits écrans. Cela sera source de frustration et forcera à utiliser la version pour ordinateur. On essaiera plutôt d'avoir moins de colonnes d'informations sur une page plus longue pour les écrans plus étroits et une page avec plus de colonnes mais plus courte sur les écrans plus larges. On peut obtenir cet effet en CSS avec [les boîtes flexibles](/fr/docs/Learn/CSS/CSS_layout/Flexbox), voire avec [le flottement](/fr/docs/Learn/CSS/CSS_layout/Floats) comme méthode alternative de recours.
 
-Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+Pour plus de détails, voir [l'article sur le <i lang="en">responsive design</i>](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 ## Tirer le meilleur parti de l'analyse de la chaîne `userAgent`
 

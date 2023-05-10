@@ -2,6 +2,7 @@
 title: How to implement a promise-based API
 slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 마지막 글에서는 프로미스를 반환하는 API를 사용하는 방법에 대해 알아봤습니다. 이 글에서는 프로미스를 반환하는 API를 구현하는 방법에 대해 살펴보겠습니다. 이것은 프로미스 기반 API를 사용하는 것보다 훨씬 덜 일반적인 작업이지만 그래도 알 가치가 있습니다.
@@ -86,7 +87,7 @@ function alarm(person, delay) {
 
 이 함수는 새로운 `Promise`를 만들어 반환합니다. 프로미스 실행자 안에서 우리는 다음과 같이 합니다.
 
-- `deply`가 음수인지 확인하고, 맞다면 오류를 발생시킨다.
+- `delay`가 음수인지 확인하고, 맞다면 오류를 발생시킨다.
 
 - 콜백과 `delay`를 전달하며 `window.setTimeout()`을 호출한다. 콜백은 타이머가 만료되면 호출되며 `resolve`라고 불리는 콜백을 "Wake up!" 메시지와 함께 전달한다.
 
@@ -145,7 +146,7 @@ button.addEventListener('click', () => {
 
 {{EmbedLiveSample("Using the alarm() API", 600, 160)}}
 
-이름과 `deplay`에 다른 값을 설정해 보세요. `deply`에 음수도 설정해 보세요.
+이름과 `delay`에 다른 값을 설정해 보세요. `delay`에 음수도 설정해 보세요.
 
 ## alarm()을 async와 await와 함께 사용하기
 
@@ -212,11 +213,3 @@ button.addEventListener('click', async () => {
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- **Implementing a promise-based API**
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

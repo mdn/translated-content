@@ -1,12 +1,6 @@
 ---
 title: Evento input
 slug: Web/API/HTMLElement/input_event
-tags:
-  - DOM
-  - Evento
-  - InputEvent
-  - Referencia
-translation_of: Web/API/HTMLElement/input_event
 ---
 
 {{APIRef}}
@@ -80,10 +74,7 @@ function updateValue(e) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#event-input-input", "input event")}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('DOM3 Events', "#event-type-input", "input event")}}                 | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 
@@ -97,4 +88,4 @@ function updateValue(e) {
 
   - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
   - [`change`](/es/docs/Web/Reference/Events/change)
-  - [`invalid`](/en-US/docs/Web/API/Constraint_validation/invalid_event)
+  - [`invalid`](/es/docs/Web/API/Constraint_validation/invalid_event)

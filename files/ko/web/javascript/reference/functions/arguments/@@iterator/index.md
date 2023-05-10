@@ -1,13 +1,6 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-tags:
-  - Deprecated
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
 
 {{jsSidebar("Functions")}}

@@ -19,7 +19,7 @@ L'élément HTML **`<sup>`** est utilisé, pour des raisons typographiques, afin
 
 Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-## **Notes d'utilisation**
+## Notes d'utilisation
 
 Cet élément devrait uniquement être utilisé pour des raisons typographiques lorsque la position du texte est liée à la signification de ce texte (par exemple pour une formule mathématiques) ou aux règles typographiques (par exemple en français pour M<sup>lle</sup>, M<sup>me</sup> ou C<sup>ie</sup>).
 
@@ -62,7 +62,7 @@ Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
 
 #### Résultat
 
-{{EmbedLiveSample("Puissance_mathématique","100%","120")}}
+{{EmbedLiveSample("","100%","120")}}
 
 ### Lettres supérieures
 
@@ -78,7 +78,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 #### Résultat
 
-{{EmbedLiveSample("Lettres_supérieures","650","80")}}
+{{EmbedLiveSample("","650","80")}}
 
 ### Nombres ordinaux
 
@@ -97,7 +97,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 #### Résultat
 
-{{EmbedLiveSample("Nombres_ordinaux", 650, 160)}}
+{{EmbedLiveSample("", 650, 160)}}
 
 ## Résumé technique
 

@@ -17,7 +17,7 @@ var messageEvent = new MessageEvent(type, init);
 
 - type
   - : 要创建的 `MessageEvent` 的类型。这可能是 XXX 中的一个
-- **`init` **{{optional_inline}}
+- **`init`** {{optional_inline}}
 
   - : 可以包含以下属性的 dictionary 对象：
 

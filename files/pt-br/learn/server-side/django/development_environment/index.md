@@ -384,7 +384,7 @@ Quit the server with CONTROL-C.
 > **Nota:** Acima foi mostrado o comando em Linux/macOS. Você já pode ignorar o aviso sobre "15 unapplied migration(s)"!
 
 Uma vez que o servidor está operando, você pode acessar o site colocando a seguinte URL no seu navegador local:`http://127.0.0.1:8000/`. Você deveria ver um site como esse:
-![Django Skeleton App Homepage - Django 2.0](https://mdn.mozillademos.org/files/16288/Django_Skeleton_Website_Homepage_2_1.png)
+![Django Skeleton App Homepage - Django 2.0](django_skeleton_website_homepage_2_1.png)
 
 ## Resumo
 
@@ -399,21 +399,3 @@ Na seção _Testando sua instalação_ você viu brevemente como criar um websit
 - [Como instalar Django no Windows](https://docs.djangoproject.com/en/2.1/howto/windows/) (documentação Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django Parte 3: Utilizando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

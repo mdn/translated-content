@@ -1,7 +1,6 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan2
 ---
 
@@ -59,7 +58,7 @@ Math.atan2(±Infinity, +Infinity); // ±PI/4.
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.atan2")}}
+{{Compat}}
 
 ## Ver también
 

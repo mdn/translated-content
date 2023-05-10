@@ -9,7 +9,7 @@ O evento `keydown` é disparado quando uma tecla é pressionada. Diferente do ev
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keydown)
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Burbulha

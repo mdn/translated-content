@@ -1,7 +1,6 @@
 ---
 title: transition
 slug: Web/CSS/transition
-translation_of: Web/CSS/transition
 ---
 
 {{ CSSRef("CSS Transitions") }}
@@ -48,13 +47,11 @@ Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitio
 
 ## Especificaciones
 
-| Specification                                                                        | Status                                   | Comment |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Transitions', '#transition', 'transition') }} | {{ Spec2('CSS3 Transitions') }} |         |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Véase también
 

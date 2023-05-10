@@ -1,6 +1,6 @@
 ---
 title: <input type="password">
-slug: Web/HTML/Element/Input/password
+slug: Web/HTML/Element/input/password
 ---
 
 {{HTMLSidebar}}
@@ -231,4 +231,4 @@ cpf.oninput = function(event) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-password")}}
+{{Compat}}

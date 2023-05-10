@@ -1,7 +1,6 @@
 ---
 title: Libro de recetas de maquetación CSS
 slug: Web/CSS/Layout_cookbook
-translation_of: Web/CSS/Layout_cookbook
 ---
 
 {{CSSRef}}

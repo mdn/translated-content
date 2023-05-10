@@ -1,13 +1,6 @@
 ---
 title: Origin
 slug: Web/HTTP/Headers/Origin
-tags:
-  - Cabecera
-  - HTTP
-  - Petición del encabezado
-  - Referencia
-  - origin
-translation_of: Web/HTTP/Headers/Origin
 ---
 
 {{HTTPSidebar}}
@@ -44,14 +37,11 @@ Origin: https://developer.mozilla.org
 
 ## Especificaciones
 
-| Especificación                                                           | Comentario                                               |
-| ------------------------------------------------------------------------ | -------------------------------------------------------- |
-| {{RFC("6454", "Origin", "7")}}                                 | El Concepto de Origen Web                                |
-| {{SpecName('Fetch','#origin-header','Origin header')}} | Suplanta la cabecera `Origin` como se define en RFC6454. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Origin")}}
+{{Compat}}
 
 ## Ver también
 

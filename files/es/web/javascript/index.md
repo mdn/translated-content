@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
- - Aprender
- - JavaScript
- - 'l10n:priority'
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}
@@ -16,7 +11,7 @@ Esta sección está dedicada al lenguaje JavaScript en sí, y no a las partes qu
 
 El estándar para JavaScript es [ECMAScript](/es/docs/Web/JavaScript/Language_Resources) (ECMA-262) y [la especificación de la API para la Internacionalización de ECMAScript](https://tc39.es/ecma402/) (ECMA-402). La documentación en MDN está basada enteramente en las últimas versiones preliminares de ECMA-262 y ECMA-402. Y en algunos casos donde algunas [propuestas para nuevas funciones para ECMAScript](https://github.com/tc39/proposals) ya hayan sido implementadas en los navegadores, la documentación y algunos artículos de MDN pueden hacer uso de algunas de estas funciones.
 
-No confundas JavaScript con el [lenguaje de programación Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)). Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países, Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
+No confundas JavaScript con el [lenguaje de programación Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)). Ambos "Java" y "JavaScript" son marcas o marcas registradas de Oracle en los Estados Unidos y otros países. Sin embargo, los dos lenguajes de programación tienen sintaxis, semántica y usos muy diferentes.
 
 > **Observación:** **¿Quieres transformarte en un desarrollador web front-end?**
 >
@@ -52,12 +47,12 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 - [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
   - : Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, ya que proporcionan a los desarrolladores herramientas probadas y comprobadas para crear aplicaciones web interactivas y escalables. Este módulo te brinda algunos conocimientos básicos sobre cómo funcionan los frameworks del lado del cliente y cómo encajan en tu conjunto de herramientas, antes de pasar a la serie de tutoriales que cubren algunos de los más populares en la actualidad.
-- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Language_Overview)
   - : Una descripción general para aquellos que _piensan_ que saben JavaScript.
 - [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
   - : Descripción general de las estructuras de datos disponibles en JavaScript.
 - [Comparaciones de igualdad y similaridad](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness)
-  - : JavaScript proporciona tres diferentes operadores de comparación de valores: igualdad estricta usando `===`, igualdad abstracta usando `==`, y el método {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
+  - : JavaScript proporciona tres diferentes operadores de comparación de valores: igualdad estricta usando `===`, igualdad abstracta usando `==` y el método {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
 - [Cierres (clousures)](/es/docs/Web/JavaScript/Closures)
   - : Un cierre es la combinación de una función y un entorno léxico dentro del cual se declaró esa función.
 
@@ -79,11 +74,11 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 Consulta la documentación completa de la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 - [Objetos Estándar](/es/docs/Web/JavaScript/Reference/Global_Objects)
-  - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, y otros.
+  - : Conoce los objectos estándar integrados {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} y otros.
 - [Expresiones y operadores](/es/docs/Web/JavaScript/Reference/Operators)
-  - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), y más.
+  - : Aprende más sobre el comportamiento de los operadores de JavaScript {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}, el [operador de precedencia](/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) y más.
 - [Sentencias y declaraciones](/es/docs/Web/JavaScript/Reference/Statements)
-  - : Aprende cómo funciona {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}}, y más declaraciones y palabras reservadas de JavaScript.
+  - : Aprende cómo funciona {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} y más declaraciones y palabras reservadas de JavaScript.
 - [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
   - : Aprende cómo trabajar con funciones de JavaScript para desarrollar tus aplicaciones.
 
@@ -91,12 +86,12 @@ Consulta la documentación completa de la [referencia de JavaScript](/es/docs/We
 
 Herramientas útiles para escribir y depurar tu código **JavaScript**.
 
-- [Herramientas para Desarrolladores de Firefox](/es/docs/Tools)
-  - : [Consola Web](/es/docs/Tools/Web_Console), [Generador de Perfiles de JavaScript](/es/docs/Tools/Profiler), [Depurador](/es/docs/Tools/Debugger), y más.
+- [Herramientas para Desarrolladores de Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Consola Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html), [Generador de Perfiles de JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html), [Depurador](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) y más.
 - [Consola de Javascript](/es/docs/Web/JavaScript/Shells)
   - : Una consola de JavaScript te permite probar rápidamente fragmentos de código JavaScript.
 - [Aprende JavaScript](https://learnjavascript.online/)
-  - : Un excelente recurso para aspirantes a desarrollador web — Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratis, y el curso completo está disponible por un pequeño pago único.
+  - : Un excelente recurso para aspirantes a desarrollador web — Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiado por una evaluación automatizada. Las primeras 40 lecciones son gratis y el curso completo está disponible por un pequeño pago único.
 - [TogetherJS](https://togetherjs.com/)
   - : Colaboración fácil. Al agregar TogetherJS a tu sitio web, ¡tus usuarios pueden ayudarse mutuamente en un sitio web en tiempo real!
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)

@@ -1,7 +1,6 @@
 ---
 title: 미디어 컨테이너 포맷 (파일 타입)
 slug: Web/Media/Formats/Containers
-translation_of: Web/Media/Formats/Containers
 original_slug: Web/Media/Formats/컨테이너
 ---
 
@@ -19,15 +18,26 @@ original_slug: Web/Media/Formats/컨테이너
 
 특정 컨테이너 포맷에 대해 더 알아보려면 아래 목록에서 찾아 클릭하세요. 컨테이너 사용법과 지원하는 코덱, 지원하는 브라우저 등을 알 수 있습니다.
 
-- [3GP](#3gp)
-- [ADTS](#adts)
-- [FLAC](#flac)
-- [MPEG / MPEG-2](#mpeg)
-- [MPEG-4 (MP4)](#mp4)
-- [Ogg](#ogg)
-- [QuickTime](#quicktime)
-- [WAVE](#wave)
-- [WebM](#webm)
+- [일반적인 컨테이너 포맷](#일반적인-컨테이너-포맷)
+- [컨테이너 포맷(파일 타입) 인덱스](#컨테이너-포맷파일-타입-인덱스)
+  - [3GP](#3gp)
+  - [ADTS](#adts)
+  - [FLAC](#flac)
+  - [MPEG/MPEG-2](#mpegmpeg-2)
+  - [MPEG-4 (MP4)](#mpeg-4-mp4)
+  - [Ogg](#ogg)
+  - [QuickTime](#quicktime)
+  - [WAVE (WAV)](#wave-wav)
+  - [WebM](#webm)
+- [알맞은 컨테이너 선택하기](#알맞은-컨테이너-선택하기)
+  - [가이드라인](#가이드라인)
+  - [컨테이너 선택 가이드](#컨테이너-선택-가이드)
+    - [오디오 전용 파일](#오디오-전용-파일)
+    - [비디오 파일](#비디오-파일)
+- [다양한 컨테이너간 호환성 극대화](#다양한-컨테이너간-호환성-극대화)
+- [명세서](#명세서)
+- [브라우저 호환성](#브라우저-호환성)
+- [더 보기](#더-보기)
 
 ### 3GP
 
@@ -300,7 +310,7 @@ original_slug: Web/Media/Formats/컨테이너
 
 ### MPEG/MPEG-2
 
-**[MPEG-1](https://ko.wikipedia.org/wiki/MPEG-1)과** **[MPEG-2](https://ko.wikipedia.org/wiki/MPEG-2)**은 근본적으로 동일합니다. the Moving Picture Experts Group (MPEG)에서 만들었으며 DVD 등의 물리적 매체에서 널리 쓰이고 있습니다.
+[**MPEG-1**](https://ko.wikipedia.org/wiki/MPEG-1)과 [**MPEG-2**](https://ko.wikipedia.org/wiki/MPEG-2)은 근본적으로 동일합니다. the Moving Picture Experts Group (MPEG)에서 만들었으며 DVD 등의 물리적 매체에서 널리 쓰이고 있습니다.
 
 인터넷에서 아마 가장 많이 사용되는 MPEG 파일 포맷은 [Layer_III/MP3](https://ko.wikipedia.org/wiki/MPEG-1) 일 겁니다; MP3 파일은 전 세계의 디지털 오디오 장치에서 널리 재생되고 있습니다. 반대로 MPEG-1, MPEG-2는 웹에서 별로 사용하고 있지 않죠.
 
@@ -1045,166 +1055,7 @@ WebM은 2010년 처음 소개되었습니다..
 
 ## 브라우저 호환성
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th rowspan="2" scope="row" style="vertical-align: bottom">
-        컨테이너 포맷 이름
-      </th>
-      <th
-        colspan="3"
-        rowspan="1"
-        scope="col"
-        style="text-align: center; border-right: 2px solid #d4dde4"
-      >
-        오디오
-      </th>
-      <th colspan="3" rowspan="1" scope="col" style="text-align: center">
-        비디오
-      </th>
-    </tr>
-    <tr>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
-      <th
-        scope="col"
-        style="vertical-align: bottom; border-right: 2px solid #d4dde4"
-      >
-        Browser support
-      </th>
-      <th scope="col" style="vertical-align: bottom">MIME type</th>
-      <th scope="col" style="vertical-align: bottom">Extension(s)</th>
-      <th
-        scope="col"
-        style="vertical-align: bottom; border-right: 2px solid #d4dde4"
-      >
-        Browser support
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" style="vertical-align: bottom">3GP</th>
-      <td style="vertical-align: top"><code>audio/3gpp</code></td>
-      <td style="vertical-align: top"><code>.3gp</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top"><code>video/3gpp</code></td>
-      <td style="vertical-align: top"><code>.3gp</code></td>
-      <td style="vertical-align: top">Firefox</td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">
-        ADTS (Audio Data Transport Stream)
-      </th>
-      <td style="vertical-align: top"><code>audio/aac</code></td>
-      <td style="vertical-align: top"><code>.aac</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">FLAC</th>
-      <td style="vertical-align: top"><code>audio/flac</code></td>
-      <td style="vertical-align: top"><code>.flac</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-    </tr>
-    <tr>
-      <th rowspan="2" scope="row" style="vertical-align: top">
-        MPEG-1 / MPEG-2 (MPG or MPEG)
-      </th>
-      <td style="vertical-align: top"><code>audio/mpeg</code></td>
-      <td style="vertical-align: top">
-        <code>.mpg</code><br /><code>.mpeg</code>
-      </td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td rowspan="2" style="vertical-align: top"><code>video/mpeg</code></td>
-      <td rowspan="2" style="vertical-align: top">
-        <code>.mpg</code><br /><code>.mpeg</code>
-      </td>
-      <td rowspan="2" style="vertical-align: top">Firefox</td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top"><code>audio/mp3</code></td>
-      <td style="vertical-align: top"><code>.mp3</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">MPEG-4 (MP4)</th>
-      <td style="vertical-align: top"><code>audio/mp4</code></td>
-      <td style="vertical-align: top">
-        <code>.mp4</code><br /><code>.m4a</code>
-      </td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top"><code>video/mp4</code></td>
-      <td style="vertical-align: top">
-        <code>.mp4</code><br /><code>.m4v</code><br /><code>.m4p</code>
-      </td>
-      <td style="vertical-align: top">Firefox</td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">Ogg</th>
-      <td style="vertical-align: top"><code>audio/ogg</code></td>
-      <td style="vertical-align: top">
-        <code>.oga</code><br /><code>.ogg</code>
-      </td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top"><code>video/ogg</code></td>
-      <td style="vertical-align: top">
-        <code>.ogv</code><br /><code>.ogg</code>
-      </td>
-      <td style="vertical-align: top">Firefox</td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">QuickTime Movie (MOV)</th>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">—</td>
-      <td style="vertical-align: top"><code>video/quicktime</code></td>
-      <td style="vertical-align: top"><code>.mov</code></td>
-      <td style="vertical-align: top"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>
-      <td style="vertical-align: top"><code>audio/wav</code></td>
-      <td style="vertical-align: top"><code>.wav</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-      <td style="vertical-align: top">—</td>
-    </tr>
-    <tr>
-      <th scope="row" style="vertical-align: top">WebM</th>
-      <td style="vertical-align: top"><code>audio/webm</code></td>
-      <td style="vertical-align: top"><code>.webm</code></td>
-      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
-        Firefox
-      </td>
-      <td style="vertical-align: top"><code>video/webm</code></td>
-      <td style="vertical-align: top"><code>.webm</code></td>
-      <td style="vertical-align: top">Firefox</td>
-    </tr>
-  </tbody>
-</table>
+{{compat}}
 
 ## 더 보기
 

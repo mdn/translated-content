@@ -16,7 +16,7 @@ translation_of: Learn/CSS/CSS_layout/Floats_skills
 
 В этом задании вам необходимо чтобы два элемента с классами float1 и float2 обтекали слева и справа соответственно. Текст должен появляться между двумя блоками как на изображении ниже.
 
-![Two blocks displaying left and right of some text.](https://mdn.mozillademos.org/files/17073/float-task1.png)
+![Two blocks displaying left and right of some text.](float-task1.png)
 
 Попробуйте обновить живой код ниже, чтобы воссоздать готовый пример:
 
@@ -28,7 +28,7 @@ translation_of: Learn/CSS/CSS_layout/Floats_skills
 
 В этом примере элемент с классом float должен примыкать к левому краю и обтекаться справа. Далее мы хотим чтобы первая строка текста отображалась рядом с тем элементом, а следующая строка (с классом .below) отображалась под ним. Вы можете посмотреть желаемый результат на этом изображении.
 
-![A box displayed to the left of a line of text, with some more text below.](https://mdn.mozillademos.org/files/17074/float-task2.png)
+![A box displayed to the left of a line of text, with some more text below.](float-task2.png)
 
 Попробуйте обновить живой код ниже, чтобы воссоздать готовый пример:
 
@@ -40,7 +40,7 @@ translation_of: Learn/CSS/CSS_layout/Floats_skills
 
 И наконец у нас есть обтекаемый элемент в этом примере. Блок оборачивающий обтекаемый элемент и текст отображается за ними. Используйте самый последний доступный метод чтобы фон тянулся за обтеканием как показано на изображении.
 
-![A block displayed to the right of some text both wrapped by a box with a background color.](https://mdn.mozillademos.org/files/17075/float-task3.png)
+![A block displayed to the right of some text both wrapped by a box with a background color.](float-task3.png)
 
 Попробуйте обновить живой код ниже, чтобы воссоздать готовый пример:
 

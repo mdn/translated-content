@@ -1,7 +1,6 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-translation_of: Web/API/Document/getElementsByClassName
 ---
 
 {{APIRef("DOM")}}

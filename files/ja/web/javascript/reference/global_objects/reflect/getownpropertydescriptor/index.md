@@ -63,9 +63,7 @@ Object.getOwnPropertyDescriptor('foo', 0)
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.getownpropertydescriptor', 'Reflect.getOwnPropertyDescriptor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

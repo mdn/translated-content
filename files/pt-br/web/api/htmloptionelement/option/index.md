@@ -89,4 +89,4 @@ options.forEach(function(elemento, chave) {
 
 | Especificação                                                                                                                             | Status      | Comentário |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| [HTML5 The definition of 'Option' in that specification.](http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option) | Recomendado |            |
+| [HTML5 The definition of 'Option' in that specification.](https://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option) | Recomendado |            |

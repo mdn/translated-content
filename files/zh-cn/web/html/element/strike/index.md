@@ -7,8 +7,8 @@ slug: Web/HTML/Element/strike
 
 [HTML](/zh-CN/docs/Web/HTML) **`<strike>`** 元素在文本上放置水平的删除线。
 
-> **警告：** 这个元素在 HTML 4 和 XHTML 1 中废除了，并且在[现存的 HTML 标准](https://html.spec.whatwg.org/#strike)被弃用。如果语义上合适的话（也就是如果表示*删除*的内容），使用 {{HTMLElement("del")}} 来代替。在所有其它的情况中，使用 {{HTMLElement("s")}}。
-  
+> **警告：** 这个元素在 HTML 4 和 XHTML 1 中废除了，并且在[现存的 HTML 标准](https://html.spec.whatwg.org/#strike)被弃用。如果语义上合适的话（也就是如果表示*删除*的内容），使用 {{HTMLElement("del")}} 来代替。在所有其他的情况中，使用 {{HTMLElement("s")}}。
+
   <table class="properties">
   <tbody>
     <tr>

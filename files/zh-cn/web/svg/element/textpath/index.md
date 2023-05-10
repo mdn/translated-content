@@ -41,7 +41,7 @@ slug: Web/SVG/Element/textPath
 
 即时结果：
 
-{{EmbedLiveSample("Example",500,175)}}
+{{EmbedLiveSample("示例",500,175)}}
 
 ## 属性
 

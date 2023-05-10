@@ -1,7 +1,6 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration/Vibration
 ---
 {{DefaultAPISidebar("Vibration API")}}
@@ -75,7 +74,7 @@ Of course the snippet above doesn't take into account the array method of vibrat
 
 This API is clearly targeted toward mobile devices. The Vibration API would be good for alerts within mobile web applications, and would be especially awesome when used in games or media-heavy applications. Imagine watching a video on your mobile device, and during an explosion scene, your phone got a bit of a shake. Or playing Bomberman and feeling a gentle kick when a block explodes!
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

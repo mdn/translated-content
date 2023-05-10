@@ -43,7 +43,7 @@ new Promise(function(resolve, reject) { ... });
 
 Так как методы `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` и `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` сами возвращают промис, их можно вызывать цепочкой, создавая _соединения._
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 > **Примечание:** говорят, что промис находится в состоянии _завершён (settled)_ когда он или исполнен или отклонён, т.е. в любом состоянии, кроме ожидания (это лишь форма речи, не являющаяся настоящим состоянием промиса). Также можно встретить термин _исполнен (resolved)_ — это значит что промис _завершён_ или "заблокирован" в ожидании завершения другого промиса. В статье [состояния и fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) приводится более подробное описание терминологии.
 

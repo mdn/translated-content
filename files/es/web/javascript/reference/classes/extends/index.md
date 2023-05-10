@@ -1,7 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 original_slug: Web/JavaScript/Referencia/Classes/extends
 ---
 
@@ -80,14 +79,11 @@ Object.getPrototypeOf(nullExtends.prototype) // null
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'extends')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## Ver también
 

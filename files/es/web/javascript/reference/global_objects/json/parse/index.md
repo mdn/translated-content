@@ -1,13 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript5
-  - JSON
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/parse
 ---
 
@@ -88,9 +81,9 @@ JSON.parse('{"foo" : 1, }');
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON.parse")}}
+{{Compat}}
 
 ## Véase también
 

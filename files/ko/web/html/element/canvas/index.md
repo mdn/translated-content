@@ -1,14 +1,6 @@
 ---
 title: '<canvas>: 그래픽 캔버스 요소'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}
@@ -157,7 +149,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 같이 보기
 

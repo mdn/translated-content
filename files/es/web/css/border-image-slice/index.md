@@ -1,12 +1,6 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-image-slice
 ---
 
 {{CSSRef}}
@@ -77,13 +71,11 @@ border-image-slice: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                                  | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-slice', 'border-image-slice')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-slice")}}
+{{Compat}}
 
 ## Véase también
 

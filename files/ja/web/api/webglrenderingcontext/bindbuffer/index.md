@@ -66,12 +66,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "bindBuffer")}}                             | {{Spec2('WebGL')}}             | WebGL 初回定義。                                                                                                                                                                                                          |
-| {{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL ES 2 API (と同様な) マニュアルページ。                                                                                                                                                                             |
-| {{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}                             | {{Spec2('WebGL2')}}             | WebGL 2 のために定義を更新。以下の新しい `target` バッファーを追加。 `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` |
-| {{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}} | {{Spec2('OpenGL ES 3.0')}} | OpenGL ES 3 API (と同様な) マニュアルページ。                                                                                                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの対応
 

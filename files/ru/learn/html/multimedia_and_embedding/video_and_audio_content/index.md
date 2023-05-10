@@ -43,7 +43,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 Встроенное видео будет выглядеть примерно так:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Вы можете [посмотреть живой пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) (взгляните также на [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
@@ -111,7 +111,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 На выходе получим нечто, подобное этому:
 
-**![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)**Новые параметры:
+**![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)**Новые параметры:
 
 - **{{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}**
   - : Вы можете контролировать размер видео либо с помощью этих атрибутов, либо с помощью {{Glossary("CSS")}}. В обоих случаях видео поддерживают собственное соотношение ширины и высоты — известное как соотношение сторон. Если соотношение сторон не поддерживается установленными вами размерами, видео будет увеличиваться, чтобы заполнить пространство по горизонтали, а заполненному пространству по умолчанию будет задан сплошной цвет фона.
@@ -147,14 +147,14 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 В браузере это вызывает следующее:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Примечание:** Примечание: вы можете запустить [аудио-демо](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Он занимает меньше места, чем видеоплеер, поскольку нет визуального компонента - вам просто нужно отображать элементы управления для воспроизведения звука. Другие отличия от видео HTML5 заключаются в следующем:
 
 - Элемент {{htmlelement ("audio")}} не поддерживает атрибуты `width` и `height` - опять же, нет визуального компонента, поэтому присваивать ширину или высоту не к чему.
-- Он также не поддерживает атрибут​​​​​ `poster` опять же, из-за отсутствия визуального компонента.
+- Он также не поддерживает атрибут `poster` опять же, из-за отсутствия визуального компонента.
 
 Помимо этого, `<audio>` поддерживает все те же функции, что и `<video>` - просмотрите приведённые выше разделы для получения дополнительной информации о них.
 
@@ -168,7 +168,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 Разве было бы неплохо иметь возможность предоставить этим людям транскрипцию слов, произносимых в аудио или видео? Благодаря HTML5 вы можете это сделать с форматом [WebVTT](/ru/docs/Web/API/Web_Video_Text_Tracks_Format) и элементом {{htmlelement ("track")}}.
 
-> **Примечание:** **Замечание :** "Транскрибировать" значит записывать устную речь в виде текста. Полученный текст представляет собой «стенограмму».
+> **Примечание:** "Транскрибировать" значит записывать устную речь в виде текста. Полученный текст представляет собой «стенограмму».
 
 WebVTT - это формат для записи текстовых файлов, содержащих несколько строк текста, а также метаданные, такие как время, в которое вы хотите отображать каждую текстовую строку, и даже ограниченную информацию о стиле/позиционировании. Эти текстовые строки называются репликами, и вы можете отображать разные типы для разных целей, наиболее распространёнными являются:
 
@@ -212,7 +212,7 @@ WEBVTT
 
 Это приведёт к просмотру видео с субтитрами, таким как:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 Подробнее читайте в разделе [добавление титров и субтитров к видео HTML5](/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Вы можете [найти пример](http://iandevlin.github.io/mdn/video-player-with-captions/), который соответствует этой статье в Github, написанной Яном Девлином (см. также [исходный код](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)). В этом примере используется JavaScript, позволяющий пользователям выбирать между различными субтитрами. Обратите внимание, что для включения субтитров вам нужно нажать кнопку «CC» и выбрать вариант - английский, немецкий или испанский.
 

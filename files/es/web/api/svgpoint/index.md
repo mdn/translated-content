@@ -1,12 +1,6 @@
 ---
 title: SVGPoint
 slug: Web/API/SVGPoint
-tags:
-  - SVGPoint
-  - createSVGPoint
-  - getScreenCTM
-  - matrixTransform
-translation_of: Web/API/SVGPoint
 ---
 
 {{APIRef("SVG")}}

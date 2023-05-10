@@ -1,12 +1,9 @@
 ---
 title: XSLT
 slug: Web/XSLT
-tags:
-  - XSLT
-translation_of: Web/XSLT
 ---
 
-**Extensible Stylesheet Language Transformations (XSLT)**는 전문 처리 소프트웨어와 함께 XML 문서 변환에 쓰이는 [XML](ko/XML)에 기반을 둔 언어입니다. 비록 그 처리가 "변환"으로 되어 있더라도, 원 문서는 바뀌지 않습니다. 오히려, 새 XML 문서는 기존 문서의 컨텐트에 바탕을 두고 만듭니다. 그러므로, 새 문서를 표준 XML 문법이나 다른 형식([HTML](ko/HTML)이나 순수 텍스트 같은)으로 처리기가 결과를 직렬(출력)할 수도 있습니다. XSLT는 다른 XML 스키마 사이에 데이터를 바꾸거나 XML 데이터를 웹 페이지나 PDF 문서로 바꾸는데 가장 자주 쓰입니다.
+**Extensible Stylesheet Language Transformations** (**XSLT**)는 전문 처리 소프트웨어와 함께 XML 문서 변환에 쓰이는 [XML](/ko/XML)에 기반을 둔 언어입니다. 비록 그 처리가 "변환"으로 되어 있더라도, 원 문서는 바뀌지 않습니다. 오히려, 새 XML 문서는 기존 문서의 컨텐트에 바탕을 두고 만듭니다. 그러므로, 새 문서를 표준 XML 문법이나 다른 형식([HTML](/ko/HTML)이나 순수 텍스트 같은)으로 처리기가 결과를 직렬(출력)할 수도 있습니다. XSLT는 다른 XML 스키마 사이에 데이터를 바꾸거나 XML 데이터를 웹 페이지나 PDF 문서로 바꾸는데 가장 자주 쓰입니다.
 
 ## Documentation
 

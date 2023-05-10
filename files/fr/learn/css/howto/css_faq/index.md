@@ -179,7 +179,7 @@ Dans l'exemple précédent, le problème apparaît avec des règles destinées �
 }
 ```
 
-### Utiliser le sélecteur `*`
+### Utiliser le sélecteur \*
 
 Le sélecteur `*` fait référence à n'importe quel élément et doit donc être utilisé avec soin.
 
@@ -243,7 +243,7 @@ div {
 
 Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage).
 
-## Quid des propriétés `-moz-*`, `-ms-*`, `-webkit-*`, `-o-*` et `-khtml-*` ?
+## Quid des propriétés -moz-\*, -ms-\*, -webkit-\*, -o-\* et -khtml-\* ?
 
 Ces propriétés, appelées _propriétés préfixées_, sont des extensions au standard CSS. Elles sont utilisées pour les fonctionnalités expérimentales et non-standards afin d'éviter de polluer l'espace de noms usuel pour éviter des incompatibilités lorsque le standard est augmenté.
 

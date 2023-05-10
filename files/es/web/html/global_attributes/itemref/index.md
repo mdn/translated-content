@@ -1,7 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
 original_slug: Web/HTML/Atributos_Globales/itemref
 ---
 
@@ -83,7 +82,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificación
 

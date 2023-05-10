@@ -1,7 +1,6 @@
 ---
 title: Agregando z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Agregando_z-index
 ---
 
@@ -13,7 +12,7 @@ El primer ejemplo, [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/enten
 
 Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál representa la posición del elemento en el eje-Z. Si no estás familiarizado con el eje-Z, imagina que la página tiene muchas capas una encima de la otra. Cada capa es numerada. Una capa con un número mayor es renderizada encima de las capas con números menores.
 
-> **Advertencia:** **Precaución:** z-index solo tiene efecto si un elemento es [posicionado](/es/CSS/position).
+> **Advertencia:** z-index solo tiene efecto si un elemento es [posicionado](/es/CSS/position).
 
 - _bottom: el más lejano al observador_
 - ...
@@ -27,14 +26,12 @@ Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál r
 - ...
 - _top: el más cercano al observador_
 
-> **Nota:** **Notas:**
+> **Nota:**
 >
 > - Cuando la propiedad z-index no ha sido especificada, los elementos son renderizados en la capa de renderizado por defecto 0 (cero).
 > - Si varios elementos comparten el mismo valor z-index (_i.e._ están situados en la misma capa), las reglas de apilamiento explicadas en la sección [Apilando sin z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index) son aplicadas.
 
 En el siguiente ejempo, el orden de apilamiento de las capas es organizado usando z-index. El z-index del DIV#5 no hace efecto ya que este no es un elemento posicionado.
-
-{{ EmbedLiveSample('Example_source_code', '468', '365', '', 'Web/Guide/CSS/Understanding_z_index/Adding_z-index') }}
 
 ### Código fuente de ejemplo
 
@@ -149,6 +146,8 @@ En el siguiente ejempo, el orden de apilamiento de las capas es organizado usand
 </body>
 </html>
 ```
+
+{{EmbedLiveSample('', '468', '365')}}
 
 ### También puedes ver
 

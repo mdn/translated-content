@@ -1,10 +1,6 @@
 ---
 title: asm.js
 slug: Games/Tools/asm.js
-tags:
-  - JavaScript
-  - asm.js
-translation_of: Games/Tools/asm.js
 original_slug: Games/Herramients/asm.js
 ---
 

@@ -15,7 +15,7 @@ _As propriedades são herdadas de seu pai, {{domxref("HTMLElement")}}._
 
 | Nome                             | Tipo                             | Descrição                                                                                                                                                                     |
 | -------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align` {{obsolete_inline}} | {{domxref("DOMString")}} | Propriedade enumerada indicando alinhamento dos conteúdos do elemento, respeitando ao contexto geral. Os valores possíveis são `"left"`, `"right"`, `"justify"`, e`"center"`. |
+| `align` | {{domxref("DOMString")}} | Propriedade enumerada indicando alinhamento dos conteúdos do elemento, respeitando ao contexto geral. Os valores possíveis são `"left"`, `"right"`, `"justify"`, e`"center"`. |
 
 ## Métodos
 

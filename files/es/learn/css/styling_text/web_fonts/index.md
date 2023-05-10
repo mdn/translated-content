@@ -1,7 +1,6 @@
 ---
 title: Fuentes web
 slug: Learn/CSS/Styling_text/Web_fonts
-translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/Fuentes_web
 ---
 
@@ -129,7 +128,7 @@ Para implementar estos tipos de letra en tu ejemplo de demostración, sigue esto
 
 Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
 
-![](https://mdn.mozillademos.org/files/12984/web-font-example.png)
+![](web-font-example.png)
 
 > **Nota:** Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
@@ -183,11 +182,3 @@ Los navegadores disponen hoy de una tecnología de tipos de letra reciente llama
 Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo al texto, es hora de evaluar cuánto has retenido del módulo a partir de la creación de una composición tipográfica de una página de inicio de una escuela comunitaria.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Texto fundamental y estilo de fuente](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Dar estilo a las listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Dar estilo a los enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Las fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

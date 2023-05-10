@@ -1,15 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-tags:
-  - API
-  - FetchEvent
-  - Interfaz
-  - Offline
-  - Referencia
-  - Service Workers
-  - Workers
-translation_of: Web/API/FetchEvent
 ---
 
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
@@ -74,13 +65,11 @@ addEventListener('fetch', event => {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#fetch-event-section', 'FetchEvent')}} | {{Spec2('Service Workers')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.FetchEvent")}}
+{{Compat}}
 
 ## Ver también
 

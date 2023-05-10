@@ -18,8 +18,6 @@ if ("geolocation" in navigator) {
 }
 ```
 
-{{ gecko_minversion_header("1.9.2") }}
-
 Ao iniciar no Gecko 1.9.2 (Firefox 3.6), add-ons podem obter o objeto de geolocalização obtendo a referência para o serviço de geolocaliazação como se ve a seguir:
 
 ```js
@@ -81,8 +79,8 @@ A localização do usuário é impressa usando o objeto Position, que tem os seg
 - timestamp
   - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
 - coords
-  - : Objecto [`nsIDOMGeoPositionCoords`](/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
-- address {{ gecko_minversion_inline("1.9.2") }} {{obsolete_inline("14.0")}}
+  - : Objecto [`nsIDOMGeoPositionCoords`](/pt-BR/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
+- address
   - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
 
 ## <br>Manipulação de erros

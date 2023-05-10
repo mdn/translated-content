@@ -1,13 +1,6 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:visited
 ---
 
 {{ CSSRef }}
@@ -72,17 +65,11 @@ a:visited {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'scripting.html#selector-visited', ':visited') }} | {{ Spec2('HTML WHATWG') }}     |                                                                                                                                                                                 |
-| {{ SpecName('CSS4 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                                                                                                                                                  |
-| {{ SpecName('CSS3 Selectors', '#link', ':visited') }}                             | {{ Spec2('CSS3 Selectors') }} | Ningún cambio.                                                                                                                                                                  |
-| {{ SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':visited') }}     | {{ Spec2('CSS2.1') }}             | Levanta la restricción para aplicar `:visited` solo al elemento {{ HTMLElement("a") }}. Permite a los navegadores restringir su comportamiento por razones de privacidad. |
-| {{ SpecName('CSS1', '#anchor-pseudo-classes', ':visited') }}                     | {{ Spec2('CSS1') }}                 | Definición inicial.                                                                                                                                                             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.visited")}}
+{{Compat}}
 
 ## Ver también
 

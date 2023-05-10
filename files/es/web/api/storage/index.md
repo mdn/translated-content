@@ -1,15 +1,6 @@
 ---
 title: Almacenamiento
 slug: Web/API/Storage
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Interface
-  - Reference
-  - TopicStub
-  - data
-translation_of: Web/API/Storage
 ---
 {{APIRef("Web Storage API")}}
 
@@ -76,13 +67,11 @@ function setStyles() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#the-storage-interface', 'Storage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## Ver también
 

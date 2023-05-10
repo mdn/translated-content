@@ -1,7 +1,6 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-translation_of: Web/CSS/@font-face
 ---
 
 {{ CSSRef() }}
@@ -43,7 +42,7 @@ Puede especificar una fuente por nombre en la computadora local del usuario util
 
 Este ejemplo simplemente especifica una fuente que puede ser descargada para utilizar, aplicando la fuente a todo el cuerpo del documento.
 
-[Muestra en vivo](/@api/deki/files/2935/=webfont-sample.html)
+[Muestra en vivo](webfont-sample.html)
 
 ```
 <html>
@@ -52,7 +51,7 @@ Este ejemplo simplemente especifica una fuente que puede ser descargada para uti
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }

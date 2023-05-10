@@ -1,12 +1,6 @@
 ---
 title: Microdatos
 slug: Web/HTML/Microdata
-tags:
-  - HTML
-  - Microdatos
-  - Referencia
-  - busquedas
-translation_of: Web/HTML/Microdata
 original_slug: Web/HTML/Microdatos
 ---
 
@@ -149,9 +143,9 @@ _[itemref](/es/docs/Web/HTML/Global_attributes/itemref)_: las propiedades que no
 
 ### Resultado
 
-{{ EmbedLiveSample('HTML', '', '100', '', 'Web/HTML/Microdata') }}
+{{EmbedLiveSample('', '', '100')}}
 
-> **Nota:** una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](<https://developers.google.com/structured-data/testing-tool/ Structured Data Testing Tool>) de Google. Ponla a prueba en el HTML mostrado más arriba.
+> **Nota:** una útil herramienta para extraer estructuras de microdatos a partir de HTML es la [Herramienta de pruebas de datos estructurados](https://developers.google.com/structured-data/testing-tool/) de Google. Ponla a prueba en el HTML mostrado más arriba.
 
 ## Véase también
 

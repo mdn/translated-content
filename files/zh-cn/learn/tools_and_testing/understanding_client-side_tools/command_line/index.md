@@ -1,5 +1,5 @@
 ---
-title: Command line crash course
+title: 命令行速成课
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 
@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">预备条件：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
         <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
@@ -207,7 +207,7 @@ ls -l
 - `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
 - `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
 
-  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ​​，因为它将永远消失。
+  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ，因为它将永远消失。
 
 - `touch` —在当前目录中创建一个新的空文件。例如`touch mdn-example.md` 创建一个新的空文件叫做 `mdn-example.md`.
 - `mv` —
@@ -504,11 +504,3 @@ printMe(myObj);
 这使我们结束了对终端/命令行的简短浏览。接下来，我们将更详细地介绍软件包管理器，以及如何使用它们。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

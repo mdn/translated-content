@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Closures
 ---
 
@@ -30,7 +29,6 @@ Ejecuta el código usando [este enlace de JSFiddle](http://jsfiddle.net/xAFs9/3/
 
 En este ejemplo en particular, el ámbito se llama _ámbito de la función_, porque la variable es accesible solo dentro del cuerpo de la función donde se declara.
 
-
 ### Alcance con let y const
 
 Tradicionalmente (antes de ES6), JavaScript sólo tenía dos tipos de ámbitos: _ámbito de función_ y _ámbito global_. Las variables declaradas con `var` tienen ámbito de función o ámbito global, dependiendo de si se declaran dentro o fuera de una función. Esto puede ser complicado, porque los bloques con llaves no crean ámbitos:
@@ -58,7 +56,6 @@ console.log(x); // ReferenceError: x is not defined
 ```
 
 En esencia, los bloques se tratan finalmente como ámbitos en ES6, pero sólo si se declaran variables con `let` o `const`. Además, ES6 introdujo [modules](/es/docs/Web/JavaScript/Guide/Modules), que introdujo otro tipo de ámbito. Los _closures_ son capaces de capturar variables en todos estos ámbitos, que introduciremos más adelante.
-
 
 ## Closure
 
@@ -217,11 +214,11 @@ const makeCounter = function () {
     increment() {
       changeBy(1);
     },
-    
+
     decrement() {
       changeBy(-1);
     },
-    
+
     value() {
       return privateCounter;
     },
@@ -385,7 +382,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
@@ -424,7 +421,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
     document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
@@ -505,7 +502,7 @@ function setupHelp() {
     { id: 'name', help: 'Tu nombre completo' },
     { id: 'age', help: 'Tu edad (debe ser mayor de 16)' },
   ];
-  
+
   helpText.forEach(function (text) {
     document.getElementById(text.id).onfocus = function () {
       showHelp(text.help);
@@ -531,7 +528,7 @@ function MyObject(name, message) {
   this.getName = function () {
     return this.name;
   };
-  
+
   this.getMessage = function () {
     return this.message;
   };

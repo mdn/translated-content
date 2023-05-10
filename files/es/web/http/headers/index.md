@@ -1,13 +1,6 @@
 ---
 title: HTTP headers
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - Headers
-  - Networking
-  - Reference
-  - TopicStub
-translation_of: Web/HTTP/Headers
 ---
 
 {{HTTPSidebar}}Las cabeceras (en inglés _headers_) HTTP permiten al cliente y al servidor enviar información adicional junto a una petición o respuesta. Una cabecera de petición esta compuesta por su nombre (no sensible a las mayusculas) seguido de dos puntos '`:`', y a continuación su valor (sin saltos de línea). Los espacios en blanco a la izquierda del valor son ignoradosSe pueden agregar cabeceras propietarias personalizadas usando el prefijo 'X-', pero esta convención se encuentra desfasada desde Julio de 2012, debido a los inconvenientes causados cuando se estandarizaron campos no estandar en el [RFC 6648](https://tools.ietf.org/html/rfc6648); otras están listadas en un [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cuyo contenido original fue definido en el [RFC 4229](http://tools.ietf.org/html/rfc4229), IANA tambien mantiene un [registro de propuestas para nuevas cabeceras HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html)

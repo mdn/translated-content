@@ -1,12 +1,6 @@
 ---
 title: GitHub para iniciantes
 slug: conflicting/MDN/Community/Contributing/Getting_started
-tags:
-  - Boas práticas
-  - Comunidade
-  - GitHub
-  - MDN
-  - Iniciantes
 original_slug: MDN/Contribute/GitHub_beginners
 ---
 

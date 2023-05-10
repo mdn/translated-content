@@ -1,15 +1,6 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Referencia
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/removeItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -61,13 +52,11 @@ function populateSessionStorage() {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.removeItem")}}
+{{Compat}}
 
 ## Vea también
 

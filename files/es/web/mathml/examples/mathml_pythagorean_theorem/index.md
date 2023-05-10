@@ -1,7 +1,6 @@
 ---
 title: MathML Pythagorean Theorem
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
 <math><mrow><msup><mi>a</mi>

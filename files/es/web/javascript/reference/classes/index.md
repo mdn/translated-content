@@ -1,17 +1,6 @@
 ---
 title: Clases
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Herencia
-  - Intermedio
-  - JavaScript
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Classes
 original_slug: Web/JavaScript/Referencia/Classes
 ---
 
@@ -85,7 +74,7 @@ El cuerpo de las _declaraciones de clase_ y las _expresiones de clase_ son ejecu
 
 ### Constructor
 
-El método [`constructor`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
+El método [`constructor`](/es/docs/Web/JavaScript/Reference/Classes/constructor) es un método especial para crear e inicializar un objeto creado con una `clase`. Solo puede haber un método especial con el nombre "constructor" en una clase. Si esta contiene mas de una ocurrencia del método **`constructor`**, se arrojará un _Error_ {{jsxref("SyntaxError")}}
 
 Un **constructor** puede usar la _palabra reservada_ **`super`** para llamar al **constructor** de una _superclase_
 
@@ -116,7 +105,7 @@ console.log(cuadrado.area); // 100
 
 ### Métodos estáticos
 
-La _palabra clave_ [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y **no** pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
+La _palabra clave_ [`static`](/es/docs/Web/JavaScript/Reference/Classes/static) define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y **no** pueden ser llamados mediante una instancia de clase. Los métodos estáticos son a menudo usados para crear funciones de utilidad para una aplicación.
 
 ```js
 class Punto {
@@ -186,7 +175,7 @@ hablar(); // global object
 
 ## Subclases con `extends`
 
-La palabra clave [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) es usada en _declaraciones de clase_ o _expresiones de clase_ para crear una clase hija.
+La palabra clave [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) es usada en _declaraciones de clase_ o _expresiones de clase_ para crear una clase hija.
 
 ```js
 class Animal {
@@ -277,7 +266,7 @@ console.log(mapped instanceof Array);   // true
 
 ## Llamadas a súperclases con `super`
 
-La palabra clave [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) es usada para llamar funciones del objeto padre.
+La palabra clave [`super`](/es/docs/Web/JavaScript/Reference/Operators/super) es usada para llamar funciones del objeto padre.
 
 ```
 class Gato {
@@ -323,13 +312,11 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 ## Especificaciones
 
-| Specification                                                                                | Status                   | Comment             |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Ver también
 

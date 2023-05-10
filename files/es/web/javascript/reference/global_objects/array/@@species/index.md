@@ -1,12 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@species
 ---
 
@@ -51,7 +45,7 @@ class MyArray extends Array {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@species")}}
+{{Compat}}
 
 ## Ver también
 

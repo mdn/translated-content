@@ -9,7 +9,7 @@ translation_of: Web/EXSLT
 ---
 
 {{ XsltRef() }}
-EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modules existent&nbsp;; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
+EXSLT est un ensemble d'extensions à [XSLT](/fr/XSLT). Un certain nombre de modules existent&nbsp;; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
 
 - [Common](#Common) (`exsl`)
   - : Fournit des éléments et des fonctions basiques d'extension.
@@ -46,8 +46,8 @@ Le package EXSLT Common fournit des fonctions de base qui étendent les capacit�
 
 #### Fonctions
 
-- [exsl:node-set](fr/EXSLT/exsl/node-set)
-- [exsl:object-type](fr/EXSLT/exsl/object-type)
+- [exsl:node-set](/fr/EXSLT/exsl/node-set)
+- [exsl:object-type](/fr/EXSLT/exsl/object-type)
 
 ### Math
 
@@ -55,10 +55,10 @@ Le package EXSLT Math fournit des fonctions permettant de travailler avec des va
 
 #### Fonctions
 
-- [math:highest](fr/EXSLT/math/highest)
-- [math:lowest](fr/EXSLT/math/lowest)
-- [math:max](fr/EXSLT/math/max)
-- [math:min](fr/EXSLT/math/min)
+- [math:highest](/fr/EXSLT/math/highest)
+- [math:lowest](/fr/EXSLT/math/lowest)
+- [math:max](/fr/EXSLT/math/max)
+- [math:min](/fr/EXSLT/math/min)
 
 ### Expressions rationnelles
 
@@ -68,9 +68,9 @@ L'espace de noms pour le package Expressions rationnelles est `http://exslt.org/
 
 #### Fonctions
 
-- [regexp:match](fr/EXSLT/regexp/match)
-- [regexp:replace](fr/EXSLT/regexp/replace)
-- [regexp:test](fr/EXSLT/regexp/test)
+- [regexp:match](/fr/EXSLT/regexp/match)
+- [regexp:replace](/fr/EXSLT/regexp/replace)
+- [regexp:test](/fr/EXSLT/regexp/test)
 
 ### Sets
 
@@ -78,12 +78,12 @@ Le package EXSLT Sets fournit des fonctions permettant des manipulations d'ensem
 
 #### Fonctions
 
-- [set:difference](fr/EXSLT/set/difference)
-- [set:distinct](fr/EXSLT/set/distinct)
-- [set:intersection](fr/EXSLT/set/intersection)
-- [set:has-same-node](fr/EXSLT/set/has-same-node)
-- [set:leading](fr/EXSLT/set/leading)
-- [set:trailing](fr/EXSLT/set/trailing)
+- [set:difference](/fr/EXSLT/set/difference)
+- [set:distinct](/fr/EXSLT/set/distinct)
+- [set:intersection](/fr/EXSLT/set/intersection)
+- [set:has-same-node](/fr/EXSLT/set/has-same-node)
+- [set:leading](/fr/EXSLT/set/leading)
+- [set:trailing](/fr/EXSLT/set/trailing)
 
 ### Strings
 
@@ -91,9 +91,9 @@ Le package EXSLT Strings fournit des fonctions permettant la manipulation de cha
 
 #### Fonctions
 
-- [str:concat](fr/EXSLT/str/concat)
-- [str:split](fr/EXSLT/str/split)
-- [str:tokenize](fr/EXSLT/str/tokenize)
+- [str:concat](/fr/EXSLT/str/concat)
+- [str:split](/fr/EXSLT/str/split)
+- [str:tokenize](/fr/EXSLT/str/tokenize)
 
 ### Voir aussi
 

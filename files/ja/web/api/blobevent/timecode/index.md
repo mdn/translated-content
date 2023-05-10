@@ -19,9 +19,7 @@ var timecode = BlobEvent.timecode
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                                     | 備考       |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording','#dom-blobevent-timecode','timecode')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

@@ -1,14 +1,6 @@
 ---
 title: ':first'
 slug: Web/CSS/:first
-tags:
-  - '@page'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:first
 ---
 
 {{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
@@ -66,14 +58,11 @@ Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la prim
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Ningún cambio.      |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first")}}
+{{Compat}}
 
 ## Ver también
 

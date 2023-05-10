@@ -1,8 +1,8 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: conflicting/Web/API/Element/keyup_event
-translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
+browser-compat: api.Element.keyup_event
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -32,4 +32,4 @@ El evento keyup se lanza cuando el usuario suelta la tecla que ha sido presionad
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onkeyup")}}
+{{Compat}}

@@ -12,12 +12,12 @@ O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos 
 | Conteúdo permitido     | Zero ou mais elementos {{ HTMLElement("dt") }}, cada um seguido de um ou mais elementos {{ HTMLElement("dd") }}                                         |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                               |
-| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/en/HTML/Content_categories#flow_content).                                     |
-| Documentação normativa | [HTML5, section 4.5.8](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](http://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
+| Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content).                                     |
+| Documentação normativa | [HTML5, section 4.5.8](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](https://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
 
 ## Atributos
 
-Como todo elemento HTML, ele fornece os [attributos globais](/en/HTML/Global_attributes).
+Como todo elemento HTML, ele fornece os [attributos globais](/pt-BR/HTML/Global_attributes).
 
 - {{ htmlattrdef("compact") }} {{ Non-standard_inline() }}
   - : Obriga a definição da descrição aparecer na mesma linha que a definição do termo. Funciona apenas no Internet Explorer.
@@ -83,13 +83,13 @@ Também é possível definir vários termos com as definições múltiplas corre
 
 ## Interface DOM
 
-- [HTMLDListElement](/en/DOM/HTMLDListElement)
+- [HTMLDListElement](/pt-BR/DOM/HTMLDListElement)
 
 ## Notas
 
 Não use este elemento, (nor {{ HTMLElement("ul") }} elements), para criar meramente um recuo em uma página. Embora ele funcione, está é uma má prática e obscurece o significado da lista de definição.
 
-Para mudar a indentação de um termo, use a propriedade [CSS](/en/CSS) [margin](/en/CSS/margin).
+Para mudar a indentação de um termo, use a propriedade [CSS](/pt-BR/CSS) [margin](/pt-BR/CSS/margin).
 
 ## Compatibilidade de navegadores
 

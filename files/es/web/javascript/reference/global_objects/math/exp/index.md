@@ -1,7 +1,6 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/exp
 ---
 
@@ -42,7 +41,7 @@ Math.exp(1);  // 2.718281828459045
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Ve también
 

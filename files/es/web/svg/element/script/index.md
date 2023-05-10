@@ -1,15 +1,6 @@
 ---
 title: <script>
 slug: Web/SVG/Element/script
-tags:
-  - Elemento
-  - HTML
-  - HTML scripting
-  - Referencia
-  - Scripting
-  - Web
-  - etiqueta
-translation_of: Web/SVG/Element/script
 original_slug: Web/HTML/Elemento/script
 ---
 
@@ -101,7 +92,7 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
     Nota: en Firefox puedes usar características avanzadas tales como let statements y otras características de la última versión de JS, usando type=application/javascript;version=1.8 {{Non-standard_inline}}. Ten cuidado!, esto no es una característica estándar, es decir, probablemente genere conflictos con otros navegadores, en particular aquellos basados en Chromium.
 
-    Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/en-US/Ap-ons/Code_snippets/Rosetta).
+    Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/es/Ap-ons/Code_snippets/Rosetta).
 
 - {{htmlattrdef("text")}}
   - : Este atributo actúa como el atributo `textContent`, establece el texto contenido del elemento. Pero a diferencia de `textContent`, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.
@@ -124,16 +115,11 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}             | Agrega el tipo module.        |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}                 | {{Spec2('HTML5 W3C')}}                 |                               |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}         | {{Spec2('HTML4.01')}}                 |                               |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}     | {{Spec2('Subresource Integrity')}} | Agrega el atributo integrity. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## Ver también
 

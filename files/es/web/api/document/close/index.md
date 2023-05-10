@@ -1,7 +1,6 @@
 ---
 title: Document.close()
 slug: Web/API/Document/close
-translation_of: Web/API/Document/close
 ---
 
 {{APIRef("DOM")}}

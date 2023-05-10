@@ -1,11 +1,6 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-bottom
 ---
 
 << [Volver](/es/Guía_de_referencia_de_CSS)

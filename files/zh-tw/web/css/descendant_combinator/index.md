@@ -31,7 +31,7 @@ div span { background-color: DodgerBlue; }
 <span>Span 3.</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 50) }}
+{{ EmbedLiveSample('範例', 200, 50) }}
 
 ## Specifications
 

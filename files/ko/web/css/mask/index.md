@@ -1,14 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - SVG
-  - Web
-translation_of: Web/CSS/mask
 ---
 
 {{CSSRef}}

@@ -2,6 +2,7 @@
 title: WebRTC
 slug: Glossary/WebRTC
 ---
+
 **WebRTC** (_Web Real-Time Communication_) {{Glossary("API")}} 는 영상 채팅, 음성 통화, 그리고 P2P 파일 공유 웹 어플리케이션에서 사용할 수 있습니다.
 
 WebRTC 의 3가지 주요 부분:

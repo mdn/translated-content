@@ -1,7 +1,6 @@
 ---
 title: Request.headers
 slug: Web/API/Request/headers
-translation_of: Web/API/Request/headers
 ---
 
 {{APIRef("Fetch")}}
@@ -45,13 +44,11 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                   | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-request-headers','headers')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Request.headers")}}
+{{Compat}}
 
 ## Ver también
 

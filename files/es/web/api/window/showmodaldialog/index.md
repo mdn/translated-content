@@ -1,7 +1,6 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
 ---
 
 {{ deprecated_header() }}{{APIRef}}
@@ -12,7 +11,7 @@ El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo 
 >
 > El soporte ha sido eliminado en [Chrome 37](http://blog.chromium.org/2014/07/disabling-showmodaldialog.html). Pero se añadió temporalmente un [ajuste de Política Coporativa para rehabilitar showModalDialog](http://www.chromium.org/administrators/policy-list-3#EnableDeprecatedWebPlatformFeatures). Este método showModalDialog() fue eliminado definitivamente en Chrome 43.
 >
-> Mozilla ha anunciado que eliminará el soporte para este método ({{bug(981796)}}). Sin plazo específico, debería ser antes de Firefox 46. Esto quiere decir que la función estará fuera de uso sobre mediados de junio de 2016. Una revisión ESR podría soportarla aun por algunas meses más.
+> Mozilla ha anunciado que eliminará el soporte para este método ([Error 981796 en Firefox](https://bugzil.la/981796)). Sin plazo específico, debería ser antes de Firefox 46. Esto quiere decir que la función estará fuera de uso sobre mediados de junio de 2016. Una revisión ESR podría soportarla aun por algunas meses más.
 
 ## Sintaxis
 
@@ -24,7 +23,7 @@ donde
 
 - `valRetorno` es un valor indicando la propiedad returnValue establecida por la ventana del documento especificado por la `uri`.
 - `uri` is es la URI del documento a visualizar en la caja de diálogo.
-- `argumentos` es un parámetro adicional, que contiene valores que deberían ser pasados a la caja de diálogo; estos son puestos a disposición en el la propiedad [`window.dialogArguments`](/en-US/docs/DOM/window.dialogArguments) del objeto [`window`](/en-US/docs/DOM/window).
+- `argumentos` es un parámetro adicional, que contiene valores que deberían ser pasados a la caja de diálogo; estos son puestos a disposición en el la propiedad [`window.dialogArguments`](/es/docs/DOM/window.dialogArguments) del objeto [`window`](/es/docs/DOM/window).
 - `opciones` es una cadena adicional que especifica ornamentaciones de ventana para la caja de diálogo, usando uno o más de los siguientes valores separados por punto y coma:
 
 | Sintaxis                                         | Descripción                                                                                                                                                                            |

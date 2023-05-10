@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 {{JSRef}}
 
-**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)的逻辑。
+**`toString()`** 方法返回一个表示该对象的字符串。该方法旨在重写（自定义）派生类对象的[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)的逻辑。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
@@ -25,9 +25,9 @@ toString()
 
 ## 描述
 
-JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#类型转换)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
+JavaScript 调用 `toString` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)。你很少需要自己去调用 `toString` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
 
-该方法由[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)优先调用，但是[数字的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#numeric_coercion)和[原始值的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_coercion)会优先调用 `valueOf()`。然而，因为基本的 [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 方法返回一个对象，`toString()` 方法通常在结束时调用，除非对象重写了 `valueOf()`。例如，`+[1]` 返回 `1`，因为它的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 方法返回 `"1"`，然后将其转换为数字。
+该方法由[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)优先调用，但是[数字的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[原始值的强制转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)会优先调用 `valueOf()`。然而，因为基本的 [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 方法返回一个对象，`toString()` 方法通常在结束时调用，除非对象重写了 `valueOf()`。例如，`+[1]` 返回 `1`，因为它的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 方法返回 `"1"`，然后将其转换为数字。
 
 所有继承自 `Object.prototype` 的对象（即，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外的对象）都继承 `toString()` 方法。当你创建一个自定义对象时，你可以重写 `toString()` 以调用自定义方法，以便将自定义对象转换为一个字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
 
@@ -51,7 +51,7 @@ Object.prototype.toString.call(arr); // "[object Array]"
 - [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
 - [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象返回 `"[object Arguments]"`。其它所有内容，包括用户自定义的类，除非有一个自定义的 `Symbol.toStringTag`，否则都将返回 `"[object Object]"`。
+[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象返回 `"[object Arguments]"`。其他所有内容，包括用户自定义的类，除非有一个自定义的 `Symbol.toStringTag`，否则都将返回 `"[object Object]"`。
 
 在 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 {{jsxref("undefined")}} 上调用 `Object.prototype.toString()` 分别返回 `[object Null]` 和 `[object Undefined]`。
 
@@ -59,7 +59,7 @@ Object.prototype.toString.call(arr); // "[object Array]"
 
 ### 为自定义对象重写 toString
 
-你可以创建一个要调用的函数来代替默认的 `toString()` 方法。你创建的 `toString()` 函数应该返回一个字符串值。如果它返回一个对象，并且在[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#type_coercion)期间隐式调用它，那么忽略它的结果，并使用相关方法 {{jsxref("Object/valueOf", "valueOf()")}} 的值，或者这些方法都不返回原始值，则抛出 `TypeError`。
+你可以创建一个要调用的函数来代替默认的 `toString()` 方法。你创建的 `toString()` 函数应该返回一个字符串值。如果它返回一个对象，并且在[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)期间隐式调用它，那么忽略它的结果，并使用相关方法 {{jsxref("Object/valueOf", "valueOf()")}} 的值，或者这些方法都不返回原始值，则抛出 `TypeError`。
 
 以下代码定义了 `Dog` 类。
 

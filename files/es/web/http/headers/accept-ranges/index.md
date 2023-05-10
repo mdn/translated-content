@@ -1,7 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-translation_of: Web/HTTP/Headers/Accept-Ranges
 ---
 
 El encabezado de respuesta HTTP **`Accept-Ranges`** es un marcador usado por el servidor para notificar que soporta solicitudes parciales. El valor de este campo indica la unidad que puede ser usada para definir el rango.
@@ -40,7 +39,7 @@ Accept-Ranges: bytes
 
 ## Compatibilidad con navegadores
 
-{{Compat("http/headers/accept-ranges")}}
+{{Compat}}
 
 ## Vea también
 

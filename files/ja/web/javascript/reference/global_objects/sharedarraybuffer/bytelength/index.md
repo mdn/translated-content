@@ -1,11 +1,13 @@
 ---
 title: SharedArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
+l10n:
+  sourceCommit: c4e3558ee1045803df4a685f11f94dca273cd5fe
 ---
 
 {{JSRef}}
 
-**`byteLength`** アクセサープロパティは 、{{jsxref("SharedArrayBuffer")}} の長さをバイト単位で表します。
+**`byteLength`** アクセサープロパティは、{{jsxref("SharedArrayBuffer")}} の長さをバイト単位で表します。
 
 {{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html","shorter")}}
 
@@ -18,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 ### byteLength の使用
 
 ```js
-var sab = new SharedArrayBuffer(1024);
+const sab = new SharedArrayBuffer(1024);
 sab.byteLength; // 1024
 ```
 

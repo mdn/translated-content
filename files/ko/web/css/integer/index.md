@@ -1,12 +1,6 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Web
-translation_of: Web/CSS/integer
 ---
 
 {{CSSRef}}

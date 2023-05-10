@@ -1,11 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
 
 {{JSRef}}

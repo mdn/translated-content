@@ -1,12 +1,6 @@
 ---
 title: XHTML
 slug: Glossary/XHTML
-tags:
-  - HTML
-  - Todas_las_Categorías
-  - XHTML
-  - XML
-translation_of: Glossary/XHTML
 original_slug: XHTML
 ---
 

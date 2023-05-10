@@ -9,7 +9,7 @@ slug: Web/API/PushManager/register
 
 ## 構文
 
-```
+```js-nolint
 var request = navigator.push.register();
 ```
 
@@ -19,7 +19,7 @@ var request = navigator.push.register();
 
 メソッドの呼び出しに成功したら、リクエストの `result` が端点の URL を表す文字列になります。
 
-> **メモ:** この URL が必要なくなったら、 {{domxref("Pushmanager.unregister()")}} を使用して自分自身を掃除してください。
+> **メモ:** この URL が必要なくなったら、{{domxref("Pushmanager.unregister()")}} を使用して自分自身を掃除してください。
 
 ## 例
 
@@ -38,9 +38,7 @@ req.onerror = function(e) {
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考                                 |
-| -------------------------------- | ---------------------------- | ------------------------------------ |
-| {{SpecName('Push API')}} | {{Spec2('Push API')}} | `PushManager` インターフェイスを定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

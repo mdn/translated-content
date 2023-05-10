@@ -1,11 +1,6 @@
 ---
 title: Constructor Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-tags:
-  - Constructor
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/constructor_Error
 ---
 
@@ -44,13 +39,11 @@ const y = new Error('¡Fui construido con la palabra clave "new"!')
 
 ## Especificaciones
 
-| Especificación                                                                               |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.Error")}}
+{{Compat}}
 
 ## Ve también
 

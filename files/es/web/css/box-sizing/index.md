@@ -1,12 +1,6 @@
 ---
 title: box-sizing
 slug: Web/CSS/box-sizing
-tags:
-  - CSS
-  - Layout
-  - Propiedades CSS
-  - Web
-translation_of: Web/CSS/box-sizing
 ---
 
 {{CSSRef}}
@@ -90,15 +84,11 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentario         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad del navegador
-
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## Ver también
 

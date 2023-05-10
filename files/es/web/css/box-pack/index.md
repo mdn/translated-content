@@ -1,13 +1,6 @@
 ---
 title: '-moz-box-pack'
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - Diseño
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/box-pack
 original_slug: Web/CSS/-moz-box-pack
 ---
 
@@ -117,9 +110,9 @@ Si el empaquetado se establece usando el atributo `pack` del elemento el estilo 
 
 Esta propiedad es no estándar aunque una propiedad similar apareción en [draft of CSS3 Flexbox](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/), que a su vez ha sido sustituida para nuevas versiones de la especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.box-pack")}}
+{{Compat}}
 
 ## Ver además
 

@@ -26,18 +26,6 @@ Para mais informações sobre contribuir com a documentação da MDN, veja:
 - [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute)
 - [Guia do Editor MDN](/pt-BR/docs/MDN/Contribute/Editor)
 
-## Junte-se à conversação
-
-Fale conosco! Existem algumas maneiras de entrar em contato com outras pessoas que trabalham no conteúdo do MDN.
-
-### Chat
-
-### Email
-
-Discussões de longo-prazo acontecem em nossa mailing list, [dev-mdc@lists.mozilla.org](https://lists.mozilla.org/listinfo/dev-mdc). você postar na lista sem se inscrever nela, mas neste caso, sua postagem deve ser aprovada por um moderador, o que significa que levará mais tempo para que outros possam vê-lo. Você pode visualizar e postar em dev-mdc através de sua escolha de formatos:
-
-{{ DiscussionList("dev-mdc", "mozilla.dev.mdc") }}
-
 ## Relatar um problema
 
 ### Problemas na documentação

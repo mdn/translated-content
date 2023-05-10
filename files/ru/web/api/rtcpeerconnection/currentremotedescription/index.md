@@ -4,7 +4,7 @@ slug: Web/API/RTCPeerConnection/currentRemoteDescription
 translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 Только для чтения свойство **`RTCPeerConnection.currentRemoteDescription`** возвращает объект {{domxref("RTCSessionDescription")}} , представляющий удалённую сторону соединения, как последний, успешно согласованный объект данных, с момента завершения согласования и установки соединения объектом {{domxref("RTCPeerConnection")}} с удалённым пиром.
 

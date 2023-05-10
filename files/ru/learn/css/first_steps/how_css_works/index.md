@@ -35,7 +35,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 Диаграмма демонстрирует этот процесс.
 
-![](https://mdn.mozillademos.org/files/17080/Browser_simple_rendering_pipeline__ru.png)
+![](browser_simple_rendering_pipeline__ru.png)
 
 ## DOM-дерево
 

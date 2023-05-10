@@ -2,6 +2,7 @@
 title: Prerequisites
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
+
 {{AddonSidebar}}
 
 파이어폭스 45 이후 버젼만 있으면 됩니다.

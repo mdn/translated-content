@@ -104,7 +104,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ EmbedLiveSample('Using the clearRect method', 700, 400) }}
 
 ## 規範
 

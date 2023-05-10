@@ -1,17 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - Propiedad
-  - Referencia
-  - XHR
-  - XHR asincrónico
-  - XMLHttpRequest
-  - XMLHttpRequest asincrónico
-  - tiempo de espera
-  - timeout
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -45,10 +34,8 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.timeout")}}
+{{Compat}}

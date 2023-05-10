@@ -1,7 +1,6 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-translation_of: Web/CSS/min-block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -64,15 +63,13 @@ La propiedad `min-block-size` toma los mismos valores de las propiedades {{cssxr
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-min-block-size", "min-block-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.min-block-size")}}
+{{Compat}}
 
 ## Mira también
 

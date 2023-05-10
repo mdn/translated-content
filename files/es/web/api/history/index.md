@@ -1,15 +1,6 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Interface
-  - NeedsTranslation
-  - TopicStub
-  - Web
-translation_of: Web/API/History
 ---
 
 {{ APIRef("History API") }}
@@ -50,16 +41,13 @@ _The `History`_ _interface doesn't inherit any methods._
 - {{domxref("History.replaceState","replaceState()")}}
   - : Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized. Note that all browsers but Safari currently ignore the _title_ parameter. For more information, see [Working with the History API](/es/docs/Web/API/History_API/Working_with_the_History_API).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                            | Status                           | Comment                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', "browsers.html#the-history-interface", "History")}} | {{Spec2('HTML WHATWG')}} | Adds the `scrollRestoration` attribute. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                     |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## See also
 

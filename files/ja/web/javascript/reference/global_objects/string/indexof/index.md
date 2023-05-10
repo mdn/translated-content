@@ -138,9 +138,7 @@ console.log(count)  // 4 を表示
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

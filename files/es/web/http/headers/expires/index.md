@@ -1,13 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Cache
-  - Expires
-  - HTTP
-  - Respuesta
-  - encabezado
-translation_of: Web/HTTP/Headers/Expires
 ---
 
 {{HTTPSidebar}}
@@ -42,13 +35,11 @@ Expires: Jue, 21 Oct 2017 07:28:00 GMT
 
 ## Especificaciones
 
-| Especificación                               | Título                                          |
-| -------------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## Ver también
 

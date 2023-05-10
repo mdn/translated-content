@@ -1,12 +1,6 @@
 ---
 title: Miga de pan
 slug: Glossary/Breadcrumb
-tags:
-  - Accesibilidad
-  - Glosario
-  - Miga de pan
-  - navegación
-translation_of: Glossary/Breadcrumb
 original_slug: Glossary/miga-de-pan
 ---
 

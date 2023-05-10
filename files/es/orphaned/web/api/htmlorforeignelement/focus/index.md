@@ -1,14 +1,8 @@
 ---
 title: HTMLElement.focus()
 slug: orphaned/Web/API/HTMLOrForeignElement/focus
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLOrForeignElement/focus
 original_slug: Web/API/HTMLOrForeignElement/focus
+browser-compat: api.HTMLElement.focus
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -109,23 +103,17 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 {{ EmbedLiveSample('Focus_prevent_scroll') }}
 
-## Especificación
-
-| Especificación                                                                           | Estado                           | Comentarios |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}             | {{Spec2('HTML5.1')}}     |             |
-| {{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}         | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}         | {{Spec2('DOM2 HTML')}}     |             |
-| {{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}} | {{Spec2('DOM1')}}         |             |
-
 ## Notas
 
 Si se llama a `HTMLElement.focus()` desde un gestor de eventos "mousedown" (ratón presionado), se debe también llamar al método `event.preventDefault()` para evitar que el foco abandone `HTMLElement`**.**
 
-## Compatibilidad en navegadores
+## Especificaciones
 
-{{Compat("api.HTMLElement.focus")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

@@ -1,7 +1,6 @@
 ---
 title: cx
 slug: Web/SVG/Attribute/cx
-translation_of: Web/SVG/Attribute/cx
 ---
 
 {{SVGRef}}

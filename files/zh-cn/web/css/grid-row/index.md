@@ -3,6 +3,8 @@ title: grid-row
 slug: Web/CSS/grid-row
 ---
 
+{{CSSRef}}
+
 **`grid-row`** 属性是一种 {{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 的缩写（[shorthand](/zh-CN/docs/Web/CSS/Shorthand_properties)）形式，它定义了网格单元与网格行（row）相关的尺寸和位置，可以通过在网格布局中的基线（line），跨度（span），或者什么也不做（自动），从而指定 {{glossary("grid areas", "grid area")}} 的行起始与行结束。
 
 {{EmbedInteractiveExample("pages/css/grid-row.html")}}
@@ -66,7 +68,7 @@ grid-row: unset;
 
 ## 示例
 
-### HTML Content
+### HTML
 
 ```html
 <div id="grid">
@@ -76,7 +78,7 @@ grid-row: unset;
 </div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 #grid {
@@ -101,7 +103,7 @@ grid-row: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "200px", "200px")}}
+{{EmbedLiveSample("示例", "200px", "200px")}}
 
 ## IE 中的问题
 

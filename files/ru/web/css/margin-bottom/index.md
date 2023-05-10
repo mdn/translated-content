@@ -13,7 +13,7 @@ translation_of: Web/CSS/margin-bottom
 
 {{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-![Влияние CSS-свойства margin-bottom на блок элемента](https://mdn.mozillademos.org/files/16471/margin-bottomru.png)
+![Влияние CSS-свойства margin-bottom на блок элемента](margin-bottomru.png)
 
 Это свойство не имеет воздействия на незамещаемые элементы, такие как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 

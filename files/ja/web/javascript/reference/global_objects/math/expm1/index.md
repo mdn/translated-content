@@ -50,9 +50,7 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

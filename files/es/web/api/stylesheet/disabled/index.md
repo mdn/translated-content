@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.disabled
 slug: Web/API/StyleSheet/disabled
-translation_of: Web/API/StyleSheet/disabled
 ---
 
 {{ ApiRef() }}

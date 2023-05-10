@@ -1,11 +1,6 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/hidden
 original_slug: Web/HTML/Atributos_Globales/hidden
 ---
 
@@ -21,15 +16,11 @@ Los elementos ocultos no deben de ser vinculados desde elementos no ocultos y el
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentario                                                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}  |
-| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | Define el dibujado por default sugerido del atributo hidden usando CSS |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial   |
+{{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.hidden")}}
+{{Compat}}
 
 ## Ver también
 

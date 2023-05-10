@@ -11,7 +11,7 @@ Um worker pode, por sua vez, gerar outros workers, contanto que estes estejam ho
 
 [Não são todas as interfaces e funções que estão disponíveis](/En/DOM/Worker/Functions_available_to_workers) para o script associado a um `Worker`.
 
-> **Nota:** No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a [js-ctypes](/en/js-ctypes), você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .
+> **Nota:** No Firefox, se você deseja utilizar workers em extensões e gostaria de ter acesso a [js-ctypes](/pt-BR/js-ctypes), você deveria utilizar o objeto {{ domxref("ChromeWorker") }} .
 
 ## Construtores
 

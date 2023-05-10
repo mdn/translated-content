@@ -373,7 +373,7 @@ catch(error) {
 
 この記事ではプロミスのすべての機能には触れず，最も興味深く有用なものだけを取り上げました。プロミスについて学び始めると，もっと多くの機能やテクニックに出会うでしょう。
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API)、[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)、[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)などなど、多くの現代的なウェブ API は、プロミスベースになっています。
+[WebRTC](/ja/docs/Web/API/WebRTC_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)などなど、多くの現代的なウェブ API は、プロミスベースになっています。
 
 ## 関連情報
 
@@ -383,11 +383,3 @@ catch(error) {
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)（英語）
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
-
-## このモジュール
-
-- [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **プロミスの使い方**
-- [プロミスベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [評価課題: アニメーションを順番に再生する](/ja/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

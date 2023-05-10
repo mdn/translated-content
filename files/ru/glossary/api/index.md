@@ -14,5 +14,4 @@ API (Application Programming Interface - интерфейс программны
 
 ## Узнать больше
 
-- {{Interwiki("wikipedia", "API")}} на Википедии
 - [Интерфейсы веб API](/ru/docs/Web/API)

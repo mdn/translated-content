@@ -1,15 +1,8 @@
 ---
 title: '<nav>: 탐색 구획 요소'
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/nav
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<nav>` 요소**는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
@@ -95,4 +88,4 @@ translation_of: Web/HTML/Element/nav
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.nav")}}
+{{Compat}}

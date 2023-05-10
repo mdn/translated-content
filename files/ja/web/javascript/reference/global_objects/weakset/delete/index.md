@@ -42,9 +42,7 @@ ws.has(window);    // false を返します。 window はもう WeakSet の中�
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

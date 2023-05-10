@@ -1,7 +1,6 @@
 ---
 title: Using channel messaging
 slug: Web/API/Channel_Messaging_API/Using_channel_messaging
-translation_of: Web/API/Channel_Messaging_API/Using_channel_messaging
 ---
 {{DefaultAPISidebar("Channel Messaging API")}}
 
@@ -23,7 +22,7 @@ To get your started, we have published a couple of demos on Github. First up, ch
 
 We'll be focusing on the latter example in this article. It looks like so:
 
-![](https://mdn.mozillademos.org/files/10075/channel-messaging-demo.png)
+![](channel-messaging-demo.png)
 
 ## Creating the channel
 
@@ -98,11 +97,11 @@ function handleMessage(e) {
 
 Here we are setting `port1`'s {{domxref("MessagePort.onmessage")}} handler equal to the `handleMessage()` function — when a message is received back from the IFrame confirming that the original message was received successfully, this simply outputs the confirmation to a paragraph and empties the text input ready for the next message to be sent.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -150,7 +150,7 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 > **备注：** 如果共享 worker 可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
 
-> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享 ({{bug(1177621)}})。
+> **备注：** 在 Firefox 中，共享 worker 不能被私有和非私有 window 对象的 document 所共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
 
 ### 生成一个共享 worker
 
@@ -235,7 +235,7 @@ Content-Security-Policy: script-src 'self'
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化拷贝](/zh-CN/DOM/The_structured_clone_algorithm)来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面 (反之亦然) 的通信过程中，变量的「_拷贝而非共享_」行为：
 
@@ -784,9 +784,9 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 当多核系统流行开来，将复杂的运算任务分配给多个 worker 来运行已经变得十分有用，这些 worker 会在多处理器内核上运行这些任务。
 
-## 其它类型的 worker
+## 其他类型的 worker
 
-除了专用和共享的 web worker，还有一些其它类型的 worker：
+除了专用和共享的 web worker，还有一些其他类型的 worker：
 
 - [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API) （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
 - Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且有在你的 worker 中访问 [js-ctypes](/zh-CN/js-ctypes) 的权限，你可以使用 Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。

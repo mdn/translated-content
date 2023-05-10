@@ -1,7 +1,6 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
-translation_of: Web/API/MediaQueryList/matches
 ---
 
 {{APIRef("CSSOM View")}}
@@ -28,15 +27,13 @@ if(mql.matches) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-mediaquerylist-matches", "matches")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaQueryList.matches")}}
+{{Compat}}
 
 ## See also
 

@@ -1,18 +1,11 @@
 ---
 title: 종속
 slug: Web/CSS/Cascade
-tags:
-  - CSS
-  - Guide
-  - Introduction
-  - Layout
-  - Reference
-translation_of: Web/CSS/Cascade
 ---
 
 {{CSSRef}}
 
-**종속(Cascade)**이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} [정의](/ko/docs/Web/API/CSSStyleDeclaration)가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.
+**종속**(**Cascade**)이란 서로 다른 원점에서 가져온 속성 여럿을 조합해 최종 결과를 도출하는 알고리즘입니다. Cascading Style Sheets라는 이름에서도 알 수 있듯 종속은 CSS의 중심입니다. 이 글은 종속이 무엇인지, 선언한 {{Glossary("CSS")}} [정의](/ko/docs/Web/API/CSSStyleDeclaration)가 어떤 순서로 종속되는지, 그리고 여러분, 즉 웹 개발자에게 어떤 영향을 주는지 설명합니다.
 
 ## Which CSS entities participate in the cascade
 
@@ -149,7 +142,7 @@ margin-left: 3px
 
 Note that the declaration defined in the user CSS, though having a greater specifity, is not chosen as the cascade algorithm is applied before the specifity algorithm.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

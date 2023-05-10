@@ -57,9 +57,7 @@ document.ontransitionend = () => {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: Console.time()
-slug: Web/API/Console/time
-translation_of: Web/API/Console/time
+slug: Web/API/console/time
 ---
 
 {{APIRef("Console API")}}
@@ -25,13 +24,11 @@ console.time(label);
 
 ## Especificaciones
 
-| Especificacion                                                           | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.time")}}
+{{Compat}}
 
 ## See also
 

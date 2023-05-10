@@ -1,11 +1,6 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Eventos Server-sent
-  - Interfaz
-translation_of: Web/API/EventSource
 ---
 
 {{APIRef("Websockets API")}}
@@ -62,13 +57,11 @@ evtSource.onmessage = function(e) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## Ver también
 

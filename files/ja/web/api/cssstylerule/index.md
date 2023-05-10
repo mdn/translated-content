@@ -1,28 +1,51 @@
 ---
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
+l10n:
+  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
 {{ APIRef("CSSOM") }}
 
-**`CSSStyleRule`** は、単一の CSS スタイル規則を表します。これは、型定数の値が `1` (`CSSRule.STYLE_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装します。
+**`CSSStyleRule`** は、単一の CSS スタイルルールを表します。
 
-## プロパティ
+{{InheritanceDiagram}}
+
+## インスタンスプロパティ
+
+_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
 
 - {{domxref("CSSStyleRule.selectorText")}}
-  - : この規則のセレクターのテキスト表現を返します。例: `"h1,h2"`
-- {{domxref("CSSStyleRule.style")}} {{readonlyinline}}
-  - : この規則の {{domxref("CSSStyleDeclaration")}} オブジェクトを返します。
-- {{domxref("CSSStyleRule.styleMap")}} {{readonlyinline}}
-  - : {{domxref('StylePropertyMap')}} オブジェクトを返し、これによってこの規則のプロパティと値の組へアクセスできます。
+  - : このルールのセレクターのテキスト表現を返します。例: `"h1,h2"`
+- {{domxref("CSSStyleRule.style")}} {{ReadOnlyInline}}
+  - : このルールの {{domxref("CSSStyleDeclaration")}} オブジェクトを返します。
+- {{domxref("CSSStyleRule.styleMap")}} {{ReadOnlyInline}}
+  - : {{domxref('StylePropertyMap')}} オブジェクトを返し、これによってこのルールのプロパティと値の組へアクセスできます。
+
+## インスタンスメソッド
+
+_固有のメソッドはありません。祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+
+## 例
+
+この CSS は 1 つのスタイルルールを含んでいます。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。
+従って、 `myRules[0]` は `h1` を定義するルールを表す {{domxref("CSSStyleRule")}} オブジェクトを返します。
+
+```css
+h1 {
+  color: pink;
+}
+```
+
+```js
+let myRules = document.styleSheets[0].cssRules;
+console.log(myRules[0]); // a CSSStyleRule representing the h1.
+```
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | 変更なし |
-| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

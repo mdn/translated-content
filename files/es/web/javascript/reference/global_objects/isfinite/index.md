@@ -1,11 +1,6 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Function
-  - JavaScript
-  - isFinite()
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
 
@@ -51,7 +46,7 @@ isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Numbe
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## Vea También
 

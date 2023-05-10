@@ -1,12 +1,6 @@
 ---
 title: Tipos de datos básicos de CSS
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - Referencia
-  - Tipo de Dato CSS
-  - Visión general
-translation_of: Web/CSS/CSS_Types
 ---
 
 {{CssRef}}
@@ -43,6 +37,4 @@ En sintaxis formal, los tipos de datos se denotan con una palabra clave colocada
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentarios         |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS3 Values') }} | {{ Spec2('CSS3 Values') }} | Definición Inicial. |
+{{Specifications}}

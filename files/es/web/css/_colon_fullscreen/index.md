@@ -1,13 +1,6 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Experimental
-  - Pantalla completa
-  - Pseudo-clase
-  - Referencia
-translation_of: Web/CSS/:fullscreen
 ---
 
 {{CSSRef}} {{SeeCompatTable}}
@@ -134,13 +127,11 @@ fullscreenButton.addEventListener('click', enterFullscreen);
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.fullscreen")}}
+{{Compat}}
 
 ## Ver también
 

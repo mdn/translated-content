@@ -1,15 +1,8 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB는 파일이나 블롭 등 많은 양의 구조화된 데이터를 클라이언트에 저장하기 위한 로우 레벨 API입니다. IndexedDB API는 인덱스를 사용해 데이터를 고성능으로 탐색할 수 있습니다. [Web Storage](/ko/docs/Web/API/Web_Storage_API)는 적은 양의 데이터를 저장하는데 유용하지만 많은 양의 구조화된 데이터에는 적합하지 않은데, 이런 상황에서 IndexedDB를 사용할 수 있습니다. 이 페이지는 MDN에서 IndexedDB에 대한 내용을 다루는 시작 문서로 전체 API 참고서, 사용 안내서, 세부적인 브라우저 지원 상황, 그리고 핵심 개념에 대한 설명을 제공하는 링크를 찾을 수 있습니다.
@@ -76,7 +69,7 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ## 예시
 
-- [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
+- [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
 
 ## 명세
 

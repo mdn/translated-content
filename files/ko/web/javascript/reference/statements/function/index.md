@@ -1,16 +1,10 @@
 ---
 title: 함수 선언
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - Function
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 
-**함수 선언(function declaration)**은 지정된 매개변수(parameter)를 갖는 함수를 정의합니다.
+**함수 선언**(**function declaration**)은 지정된 매개변수(parameter)를 갖는 함수를 정의합니다.
 
 {{jsxref("Function")}} 생성자나 {{jsxref("Operators/function", "함수 표현식(function expression)")}}을 사용해서 정의할 수도 있습니다.
 

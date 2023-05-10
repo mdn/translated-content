@@ -1,17 +1,16 @@
 ---
 title: 'Pon a prueba tus habilidades: texto HTML avanzado'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
-translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_text
 ---
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras __[formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)__ articulo.
+El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) articulo.
 
 > **Nota:** Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
 >
-> Si se atasca, pídanos ayuda; consulte la [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) en la parte inferior de esta página.
 
 ## Texto HTML avanzado 1
 
@@ -21,7 +20,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el puno de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Texto HTML avanzado 2
 
@@ -36,7 +35,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](/es/docs/https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
+> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 
@@ -45,7 +44,7 @@ Puede practicar estos ejemplos en los editores interactivos anteriores.
 Si desea que se evalúe su trabajo, o está atascado y desea pedir ayuda:
 
 1. Pon tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o utilizar los archivos de punto de inicio vinculados en las secciones anteriores.
-2. Escriba una publicación solicitando evaluación y / o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
+2. Escriba una publicación solicitando evaluación y / o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
 
     - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de texto avanzado HTML 1".
     - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, p. Ej. si está atascado y necesita ayuda, o quiere una evaluación.

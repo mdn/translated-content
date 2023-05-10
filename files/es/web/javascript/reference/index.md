@@ -1,7 +1,6 @@
 ---
 title: Referencia de JavaScript
 slug: Web/JavaScript/Reference
-translation_of: Web/JavaScript/Reference
 original_slug: Web/JavaScript/Referencia
 ---
 

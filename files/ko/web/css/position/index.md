@@ -1,13 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS Positioninng
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/position
 ---
 
 {{CSSRef}}

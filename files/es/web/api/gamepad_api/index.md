@@ -1,12 +1,6 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - juegos
-translation_of: Web/API/Gamepad_API
 ---
 
 {{DefaultAPISidebar("Gamepad API")}}
@@ -52,14 +46,11 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                                  | Comentario                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Ver también
 

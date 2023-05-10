@@ -9,17 +9,51 @@ The {{domxref("RTCRtpTransceiver")}} property **`direction`** is a string which 
 
 The transceiver's _current_ direction is indicated by the {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} property.
 
-## Syntax
+### 值
 
-```plain
-var direction = RTCRtpTransceiver.direction
-```
+A {{domxref("DOMString")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction.
 
-### Value
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">值</th>
+      <th scope="col"><code>RTCRtpSender</code> 的行为</th>
+      <th scope="col"><code>RTCRtpReceiver</code> 的行为</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><code>"sendrecv"</code></th>
+      <td>
+        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了连接，且至少有一个 sender 的处于编码状态，则发送数据。
+      </td>
+      <td>
+        可以接收 RTP 数据，如果有其他的对等节点接受数据，则接收数据。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"sendonly"</code></th>
+      <td>
+        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了连接，且至少有一个 sender 的处于编码状态，则发送数据。
+      </td>
+      <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"recvonly"</code></th>
+      <td><em>不</em>可以发送 RTP 数据，无论如何都不会发送数据。</td>
+      <td>
+        可以接收 RTP 数据，如果有其他的对等节点接受数据，则接收数据。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row"><code>"inactive"</code></th>
+      <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
+      <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
+    </tr>
+  </tbody>
+</table>
 
-A {{domxref("DOMString")}} whose value is one of the strings which are a member of the `RTCRtpTransceiverDirection` enumerated type, indicating the transceiver's preferred direction. {{page("/en-US/docs/Web/API/RTCRtpTransceiverDirection", "Values")}}
-
-### Exceptions
+### 异常
 
 When setting the value of `direction`, the following exceptions can occur:
 
@@ -42,14 +76,14 @@ The value of `direction` is used by {{domxref("RTCPeerConnection.createOffer()")
 a=sendrecv
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("RTCRtpTransceiver.currentDirection")}}

@@ -1,26 +1,28 @@
 ---
 title: SourceBuffer.appendBuffer()
 slug: Web/API/SourceBuffer/appendBuffer
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`appendBuffer()`** メソッドは、{{jsxref("ArrayBuffer")}} オブジェクトまたは `ArrayBufferView` オブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
+**`appendBuffer()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
 
 ## 構文
 
-```
-sourceBuffer.appendBuffer(source);
+```js-nolint
+appendBuffer(source)
 ```
 
-### パラメーター
+### 引数
 
 - `source`
-  - : `SourceBuffer` に追加するメディアセグメントデータを含む {{domxref("BufferSource")}}（つまり、{{domxref("ArrayBufferView")}} または {{jsxref("ArrayBuffer")}}）。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトで、 `SourceBuffer` に追加するメディアセグメントデータが入ったもの。
 
-### 戻り値
+### 返値
 
-{{jsxref('undefined')}}。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
@@ -28,17 +30,15 @@ sourceBuffer.appendBuffer(source);
 
 ## 例
 
-未定
+TBD.
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                             | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-appendbuffer(buffersource)', 'appendBuffer()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.appendBuffer")}}
+{{Compat}}
 
 ## 関連情報
 

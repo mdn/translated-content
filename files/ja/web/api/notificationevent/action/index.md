@@ -30,9 +30,7 @@ self.addEventListener('notificationclick', function(event) {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                     | 備考            |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notification-actions','action')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

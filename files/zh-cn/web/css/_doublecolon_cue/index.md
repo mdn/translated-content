@@ -26,8 +26,8 @@ slug: Web/CSS/::cue
 
 ## 语法
 
-```plain
-{{csssyntax}}
+```
+::cue | ::cue( <selector> )
 ```
 
 ## 示例

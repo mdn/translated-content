@@ -1,7 +1,6 @@
 ---
 title: Resto (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-translation_of: Web/JavaScript/Reference/Operators/Remainder
 original_slug: Web/JavaScript/Referencia/Operadores/Resto
 ---
 
@@ -57,13 +56,11 @@ Infinity % Infinity // NaN
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-multiplicative-operators', 'Remainder operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.remainder")}}
+{{Compat}}
 
 ## Ver también
 

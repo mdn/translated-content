@@ -54,10 +54,8 @@ document.querySelector("output").textContent = tagNames.join(", ");
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("DOM3 XPath", "xpath.html#XPathResult-snapshotItem", "XPathResult.snapshotItem()")}} | {{Spec2("DOM3 XPath")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}
+{{Compat}}

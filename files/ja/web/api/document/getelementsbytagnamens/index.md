@@ -127,9 +127,7 @@ function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-getelementsbytagnamens', 'document.getElementsByTagNameNS')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

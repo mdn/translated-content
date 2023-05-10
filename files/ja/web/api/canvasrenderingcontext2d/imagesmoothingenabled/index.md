@@ -9,7 +9,7 @@ slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 
 このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `false` に設定すると、ピクセルの鮮明さを維持します。
 
-> **メモ:** 平滑化の品質は、  {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
+> **メモ:** 平滑化の品質は、 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
 
 ## 構文
 

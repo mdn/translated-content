@@ -1,13 +1,6 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-translation_of: Web/CSS/overflow
 ---
 
 {{CSSRef}}

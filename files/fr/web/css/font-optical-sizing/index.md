@@ -10,7 +10,7 @@ translation_of: Web/CSS/font-optical-sizing
 
 {{CSSRef}}
 
-La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille.  Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
+La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille. Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
 
 Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (_serifs_) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.
 

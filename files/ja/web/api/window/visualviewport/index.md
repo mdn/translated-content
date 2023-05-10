@@ -19,9 +19,7 @@ var visualViewport = Window.visualViewport
 
 ## 仕様
 
-| Specification                                                                                            | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Visual Viewport','#dom-window-visualviewport','visualViewport')}} | {{Spec2('Visual Viewport')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

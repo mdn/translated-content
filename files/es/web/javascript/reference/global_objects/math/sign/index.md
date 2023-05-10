@@ -1,12 +1,6 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sign
 ---
 
@@ -77,7 +71,7 @@ if (!Math.sign) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## Ver También
 

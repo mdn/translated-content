@@ -1,7 +1,6 @@
 ---
 title: Propiedades abreviadas
 slug: Web/CSS/Shorthand_properties
-translation_of: Web/CSS/Shorthand_properties
 original_slug: Web/CSS/Shorthand_properties
 ---
 

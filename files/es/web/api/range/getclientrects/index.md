@@ -1,13 +1,6 @@
 ---
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
-tags:
-  - API
-  - Experimental
-  - Rango
-  - Vista CSSOM
-  - metodo
-translation_of: Web/API/Range/getClientRects
 ---
 
 {{ApiRef("DOM")}}{{ seeCompatTable }}
@@ -28,15 +21,13 @@ range.selectNode(document.getElementsByTagName("div").item(0));
 rectList = range.getClientRects();
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estatus                          | Comentario              |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('CSSOM View', '#dom-range-getclientrects', 'Range.getClientRects()')}} | {{Spec2('CSSOM View')}} | Especificación inicial. |
+{{Specifications}}
 
-## Compatibilidad en los Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Range.getClientRects")}}
+{{Compat}}
 
 ## Ver también
 

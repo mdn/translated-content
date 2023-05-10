@@ -1,13 +1,6 @@
 ---
 title: Document structures
 slug: conflicting/MDN/Writing_guidelines/Page_structures
-tags:
-  - Landing
-  - MDN Meta
-  - NeedsTranslation
-  - Structures
-  - TopicStub
-translation_of: MDN/Structures
 original_slug: MDN/Structures
 ---
 

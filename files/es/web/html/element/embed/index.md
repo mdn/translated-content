@@ -1,12 +1,6 @@
 ---
 title: embed
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - para_revisar
-translation_of: Web/HTML/Element/embed
 original_slug: Web/HTML/Elemento/embed
 ---
 

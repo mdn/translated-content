@@ -34,17 +34,7 @@ original_slug: Web/HTML/CORS_settings_attributes
 
 ## Поддержка браузерами
 
-### script crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Смотрите также
 

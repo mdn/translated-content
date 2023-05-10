@@ -1,7 +1,6 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
@@ -226,13 +225,11 @@ Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 
 ## Especificaciones
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaDevices.getUserMedia")}}
+{{Compat}}
 
 ## Ver También
 

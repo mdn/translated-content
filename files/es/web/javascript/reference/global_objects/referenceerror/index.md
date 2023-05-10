@@ -1,15 +1,6 @@
 ---
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
-tags:
-  - Clase
-  - Class
-  - JavaScript
-  - Object
-  - Objeto
-  - ReferenceError
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ReferenceError
 ---
 
@@ -73,13 +64,11 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.ReferenceError")}}
+{{Compat}}
 
 ## Ve también
 

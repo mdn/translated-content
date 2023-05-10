@@ -1,13 +1,6 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Referencia
-translation_of: Web/API/AnimationEvent
 ---
 
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
@@ -41,13 +34,11 @@ _También hereda los métodos de su padre {{domxref("Event")}}_.
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                                  | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-interface', 'AnimationEvent') }} | {{ Spec2('CSS3 Animations') }} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AnimationEvent")}}
+{{Compat}}
 
 ## Ver también
 

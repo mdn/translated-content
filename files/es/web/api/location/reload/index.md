@@ -1,15 +1,6 @@
 ---
 title: 'Location: reload()'
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - Location
-  - Method
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/reload
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -44,14 +35,11 @@ reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de p
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Location.reload")}}
+{{Compat}}
 
 ## Ver también
 

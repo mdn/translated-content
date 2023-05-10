@@ -1,12 +1,6 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
-tags:
-  - DOM
-  - Referencia_DOM_de_Gecko
-  - Todas_las_Categorías
-  - para_revisar
-translation_of: Web/API/HTMLStyleElement
 ---
 
 {{APIRef("HTML DOM")}}

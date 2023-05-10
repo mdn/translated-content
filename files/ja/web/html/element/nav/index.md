@@ -80,10 +80,7 @@ slug: Web/HTML/Element/nav
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-nav-element', '&lt;nav&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新の W3C スナップショットから変更なし |
-| {{SpecName('HTML5 W3C', 'sections.html#the-nav-element', '&lt;nav&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

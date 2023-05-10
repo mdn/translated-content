@@ -1,14 +1,6 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-  - 양식
-translation_of: Web/HTML/Element/form
 ---
 
 {{HTMLSidebar}}
@@ -57,7 +49,7 @@ translation_of: Web/HTML/Element/form
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -168,7 +160,7 @@ translation_of: Web/HTML/Element/form
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.form")}}
+{{Compat}}
 
 ## 같이 보기
 

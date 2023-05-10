@@ -81,9 +81,4 @@ p {
 
 ## 仕様書
 
-| 仕様書                                                  | 状態                    | 備考                                                                                             |
-| ------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Fonts')}}                              | {{Spec2('CSS4 Fonts')}} | `font-variation-settings` (および関連する高水準プロパティ) および `font-optical-sizing` を追加。 |
-| {{SpecName('CSS3 Fonts')}}                              | {{Spec2('CSS3 Fonts')}} | `font-feature-settings` (および関連する高水準プロパティ) を追加。                                |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}     |                                                                                                  |
-| {{SpecName('CSS1', '#font', '')}}                       | {{Spec2('CSS1')}}       | 初回定義                                                                                         |
+{{Specifications}}

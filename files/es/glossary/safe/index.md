@@ -1,7 +1,6 @@
 ---
 title: Seguro
-slug: Glossary/safe
-translation_of: Glossary/safe
+slug: Glossary/Safe
 original_slug: Glossary/seguro
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Parámetros predeterminados
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - Característica del lenguaje
-  - ECMAScript 2015
-  - Funciones
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 ---
 
@@ -222,13 +216,11 @@ f()  // 6
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Definición de Funciones')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.default_parameters")}}
+{{Compat}}
 
 ## Ve también
 

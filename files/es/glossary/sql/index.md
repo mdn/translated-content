@@ -1,7 +1,6 @@
 ---
 title: SQL
 slug: Glossary/SQL
-translation_of: Glossary/SQL
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---

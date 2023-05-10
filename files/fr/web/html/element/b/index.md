@@ -90,7 +90,7 @@ L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un conten
 
 Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent être utilisés pour cet élément.
 
-## **Notes d'utilisation**
+## Notes d'utilisation
 
 - `<b>` est habituellement utilisé pour les mots-clés dans les résumés, les noms de produits dans des tests (sans que ceux-ci aient une importance particulière). Il peut également être utilisé afin d'indiquer la première phrase de chaque paragraphe d'un article.
 - Il ne faut pas confondre l'élément `<b>` avec les éléments [`<strong>`](/fr/docs/Web/HTML/Element/strong), [`<em>`](/fr/docs/Web/HTML/Element/em), ou [`<mark>`](/fr/docs/Web/HTML/Element/mark). L'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) représente un texte d'une certaine _importance_, [`<em>`](/fr/docs/Web/HTML/Element/em) met une emphase sur le texte et [`<mark>`](/fr/docs/Web/HTML/Element/mark) représente un texte avec une certaine _pertinence_. L'élément `<b>` ne porte aucune information sémantique particulière ; utilisez-le lorsque qu'aucun autre ne convient.
@@ -99,7 +99,7 @@ Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent ê
 - Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
 - S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/font-weight) avec une valeur `bold` est à privilégier.
 
-## Exemple
+## Exemples
 
 ```html
 <p>

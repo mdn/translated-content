@@ -28,10 +28,8 @@ navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API','#widl-PermissionStatus-onchange','onchange')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PermissionStatus.onchange")}}
+{{Compat}}

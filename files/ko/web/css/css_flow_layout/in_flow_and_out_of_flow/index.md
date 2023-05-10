@@ -1,15 +1,6 @@
 ---
 title: 대열과 탈대열
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-tags:
-  - 대열
-  - 대열 레이아웃
-  - CSS
-  - CSS 대열 레이아웃
-  - 안내서
-  - 레이아웃
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/대열과_탈대열
 ---
 

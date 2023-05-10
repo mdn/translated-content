@@ -179,11 +179,7 @@ slug: Web/HTML/Element/style
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                                 | 備考                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
-| {{ SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style') }}         | {{ Spec2('HTML WHATWG') }} |                                 |
-| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML5 W3C') }}     | `type` 属性が省略可能になった。 |
-| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                     | {{ Spec2('HTML4.01') }}     |                                 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

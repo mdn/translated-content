@@ -144,7 +144,7 @@ slug: Web/HTML/Element/a
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{ARIARole("link")}} （<code>href</code> 属性がある場合）、
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code> （<code>href</code> 属性がある場合）、
         それ以外は<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
@@ -153,16 +153,16 @@ slug: Web/HTML/Element/a
       <td>
         <p><code>href</code> 属性がある場合</p>
         <ul>
-          <li>{{ARIARole("button")}}</li>
-          <li>{{ARIARole("checkbox")}}</li>
-          <li>{{ARIARole("menuitem")}}</li>
-          <li>{{ARIARole("menuitemcheckbox")}}</li>
-          <li>{{ARIARole("menuitemradio")}}</li>
-          <li>{{ARIARole("option")}}</li>
-          <li>{{ARIARole("radio")}}</li>
-          <li>{{ARIARole("switch")}}</li>
-          <li>{{ARIARole("tab")}}</li>
-          <li>{{ARIARole("treeitem")}}</li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code></li>
+          <li><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code></li>
         </ul>
         <p><code>href</code> 属性がない場合</p>
         <ul>

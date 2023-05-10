@@ -50,7 +50,7 @@ Mountain View, CA<br>
 USA<br>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
 {{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
 

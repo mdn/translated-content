@@ -1,14 +1,6 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-browser-compat: javascript.builtins.WeakMap.get
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
 
 {{JSRef}}

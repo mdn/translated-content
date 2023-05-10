@@ -35,6 +35,10 @@ The review teams for each locale are:
   - [kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko) team, which consists of:
+  - [sunhpark42](https://github.com/sunhpark42)
+  - [jho2301](https://github.com/jho2301)
+  - [swimjiy](https://github.com/swimjiy)
+  - [wisedog](https://github.com/wisedog)
   - [cos18](https://github.com/cos18)
   - [yechoi42](https://github.com/yechoi42)
   - [GwangYeol-Im](https://github.com/GwangYeol-Im)
@@ -43,7 +47,7 @@ The review teams for each locale are:
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
   - [armanpwnz](https://github.com/armanpwnz)
-  - [captainspring](https://github.com/captainspring)
+  - [yanaklose](https://github.com/yanaklose)
   - [myshov](https://github.com/myshov)
   - [Saionaro](https://github.com/Saionaro)
   - [sashasushko](https://github.com/sashasushko)
@@ -109,11 +113,11 @@ Also indicate that your team agrees to adhere by our Code of Conduct and License
 
 If the application is been successful you can start work on your locale. See the [guidelines for set up in the README](README.md).
 
-You can add your team to the [localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize) page.
+You can add your team to the [localizing MDN][] page.
 
 ## Get in touch
 
-If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help][].
 
 ---
 
@@ -125,4 +129,5 @@ Everyone participating in this project is expected to follow our [Code of Conduc
 
 When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
 
----
+[ask for help]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help
+[localizing MDN]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize

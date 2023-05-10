@@ -68,7 +68,7 @@ _Распознавание речи также наследует методы 
 
 ## Примеры
 
-В нашем простом примере [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) , мы создаём новый объект экземпляра `SpeechRecognition` используя этот конструктор {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} , создание нового {{domxref("SpeechGrammarList")}}, И установить его в качестве грамматики, которая будет распознаваться экземпляром распознавание речи с использованием свойства {{domxref("SpeechRecognition.grammars")}}.
+В нашем простом примере [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) , мы создаём новый объект экземпляра `SpeechRecognition` используя этот конструктор {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} , создание нового {{domxref("SpeechGrammarList")}}, И установить его в качестве грамматики, которая будет распознаваться экземпляром распознавание речи с использованием свойства {{domxref("SpeechRecognition.grammars")}}.
 
 После определения некоторых других значений мы затем устанавливаем их так, чтобы служба распознавания началась когда произошло событие по клику ( {{domxref("SpeechRecognition.start()")}}.) Когда результат был успешно распознан, the {{domxref("SpeechRecognition.onresult")}} обработчик извлекаем цвет, который был произнесён из события, а затем меняем цвет фона на данный цвет {{htmlelement("html")}}.
 

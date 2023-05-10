@@ -5,9 +5,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Обработка_коллизий
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Очки")}}
 
 Это **10** из 16 уроков [руководства разработки игры с помощью Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Исходный код этого урока вы можете найти здесь: [Gamedev-Phaser-Content-Kit/demos/lesson10.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html).
 

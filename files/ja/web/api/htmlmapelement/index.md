@@ -24,12 +24,7 @@ _特定のメソッドはありません。親である {{domxref("HTMLElement")
 
 ## 仕様書
 
-| 仕様書                                                                                                               | ステータス                       | コメント                                              |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmlmapelement", "HTMLMapElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                       |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-map-element", "HTMLMapElement")}} | {{Spec2('HTML5 W3C')}}     | `images` プロパティを追加します。                     |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94109203', 'HTMLAreaElement')}}                         | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} からの変更はありません。 |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94109203', 'HTMLAreaElement')}}                 | {{Spec2('DOM1')}}         | 初期定義                                              |
+{{Specifications}}
 
 ## ブラウザの互換性
 

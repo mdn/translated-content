@@ -1,11 +1,6 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Ejemplo
-  - itemscope
-  - itemtype
-translation_of: Web/HTML/Global_attributes/itemscope
 original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
 
@@ -239,14 +234,11 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
 
 ## Especificaciones
 
-| Especificaciones                                                                                 | Estados                              | Comentario |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('HTML Microdata', "#dfn-itemscope", "itemscope")}}                 | {{Spec2('HTML Microdata')}} |            |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemscope", "itemscope")}} | {{Spec2('HTML WHATWG')}}     |            |
+{{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.itemscope")}}
+{{Compat}}
 
 ## Ver tambien
 

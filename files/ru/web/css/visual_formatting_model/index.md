@@ -81,7 +81,7 @@ followed by more inline text.
 
 Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 Выглядеть она будет так:
 

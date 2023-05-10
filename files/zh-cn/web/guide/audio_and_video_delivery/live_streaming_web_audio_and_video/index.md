@@ -47,13 +47,13 @@ slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 
 ### RTSP 2.0
 
-RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RSTP 1.0。
+RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 > **警告：** 虽然 {{ htmlelement("audio") }} 与 {{ htmlelement("video") }} 标签与协议无关，但是目前没有浏览器可以在无插件的情况下支持除了 HTTP 外的协议，尽管这种局面可能会有所转变，但除了 HTTP 以外的协议可能会被防火墙或代理服务器拦截。
 
 ## 使用流式协议
 
-如果你习惯于通过 HTTP 传输媒体，那么使用其它的协议也会让你感到熟悉。
+如果你习惯于通过 HTTP 传输媒体，那么使用其他的协议也会让你感到熟悉。
 
 举个例子：
 
@@ -141,7 +141,7 @@ Opus 是一个无版权的开放格式，针对不同类型文件使用不同的
 
 ### GStreamer
 
-[GStreamer](https://gstreamer.freedesktop.org/)  是一个开源的跨平台的多媒体框架，它可以让你创建各种媒体处理组件，包括流式组件。GStreamer 通过它的插件系统，支持了一百多种编码 (包括 MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV，和 FLV。)
+[GStreamer](https://gstreamer.freedesktop.org/) 是一个开源的跨平台的多媒体框架，它可以让你创建各种媒体处理组件，包括流式组件。GStreamer 通过它的插件系统，支持了一百多种编码 (包括 MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV，和 FLV。)
 
 GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) 和 [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) 通过 HTTP 来传输媒体。你也可以集成 Python 的 Twisted 框架或者使用一些类似 [Flumotion](http://www.flumotion.net/features/) (open source streaming software) 的东西。
 

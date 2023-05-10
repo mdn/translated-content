@@ -10,9 +10,9 @@ original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 
 {{FirefoxSidebar}}
 
-Cette page essaie de donner un aperçu des changements entre [Gecko](fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
+Cette page essaie de donner un aperçu des changements entre [Gecko](/fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
 
-Consultez également [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs).
+Consultez également [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs).
 
 ## Évènements
 
@@ -36,11 +36,11 @@ Pour une explication du fonctionnement de la capture des évènements, consultez
 
 ### `preventBubble` a été supprimée
 
-Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour les empêcher de se propager plus haut. Dans Gecko 1.9, cette méthode a été supprimée. À la place, utilisez la méthode standard [stopPropagation()](fr/DOM/event.stopPropagation), qui fonctionne également dans Gecko 1.8. Ce changement a été produit par le patch pour le {{ Bug(330494) }}. Consultez également le {{ Bug(105280) }}.
+Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour les empêcher de se propager plus haut. Dans Gecko 1.9, cette méthode a été supprimée. À la place, utilisez la méthode standard [stopPropagation()](/fr/DOM/event.stopPropagation), qui fonctionne également dans Gecko 1.8. Ce changement a été produit par le patch pour le {{ Bug(330494) }}. Consultez également le {{ Bug(105280) }}.
 
 ### Quelques autres anciennes API d'évènements ne sont plus supportées
 
-[window.captureEvents](fr/DOM/window.captureEvents), [window.releaseEvents](fr/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
+[window.captureEvents](/fr/DOM/window.captureEvents), [window.releaseEvents](/fr/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
 
 ## DOM
 
@@ -58,15 +58,15 @@ alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un
 
 ### `intersectsNode` a été supprimée
 
-Dans Gecko 1.8, la fonction `intersectsNode` pouvait être utilisée pour vérifier si un nœud faisait partie d'un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
+Dans Gecko 1.8, la fonction `intersectsNode` pouvait être utilisée pour vérifier si un nœud faisait partie d'un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](/fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
 
-Consultez la documentation de [intersectsNode](fr/DOM/range.intersectsNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+Consultez la documentation de [intersectsNode](/fr/DOM/range.intersectsNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
 
 ### `compareNode` a été supprimée
 
-Dans Gecko 1.8, la fonction `compareNode` pouvait être utilisée pour tester l'intersection d'un nœud avec un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
+Dans Gecko 1.8, la fonction `compareNode` pouvait être utilisée pour tester l'intersection d'un nœud avec un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](/fr/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du {{ Bug(358073) }}.
 
-Consultez la documentation de [compareNode](fr/DOM/range.compareNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+Consultez la documentation de [compareNode](/fr/DOM/range.compareNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
 
 ## HTML
 

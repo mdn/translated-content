@@ -1,6 +1,6 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/Console/timeStamp
+slug: Web/API/console/timeStamp
 tags:
   - API
   - DOM
@@ -31,7 +31,7 @@ console.timeStamp(label);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.timestamp")}}
+{{Compat}}
 
 ## Voir aussi
 

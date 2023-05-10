@@ -1,14 +1,6 @@
 ---
 title: Imagen con CORS habilitado
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Avanzado
-  - CORS
-  - Canvas
-  - HTML
-  - Referencia
-  - Seguridad
-translation_of: Web/HTML/CORS_enabled_image
 original_slug: Web/HTML/Imagen_con_CORS_habilitado
 ---
 

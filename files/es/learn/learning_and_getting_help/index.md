@@ -1,13 +1,6 @@
 ---
 title: Aprender y obtener ayuda
 slug: Learn/Learning_and_getting_help
-tags:
-  - Aprender
-  - Desarrollo web
-  - Principiante
-  - conseguir ayuda
-  - obtener ayuda
-translation_of: Learn/Learning_and_getting_help
 original_slug: Learn/Aprender_y_obtener_ayuda
 ---
 

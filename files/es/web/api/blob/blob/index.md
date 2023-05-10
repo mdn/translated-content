@@ -1,13 +1,6 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Archivo
-  - Blob
-  - File API
-  - Referencia
-translation_of: Web/API/Blob/Blob
 ---
 
 {{APIRef("File API")}}
@@ -46,13 +39,11 @@ var oMiBlob = new Blob(unaParteDeArchivo, {type : 'text/html'}); // el blob
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Vea también
 

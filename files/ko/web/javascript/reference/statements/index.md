@@ -1,11 +1,6 @@
 ---
 title: 문 및 선언
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 
 {{jsSidebar("Statements")}}

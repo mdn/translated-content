@@ -10,7 +10,7 @@ The **`Event.initEvent()`** method is used to initialize the value of an {{ domx
 
 Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.
 
-> **Примечание:** **Не используйте этот метод, т.к. он устаревший. (deprecated)**
+> **Примечание:** Не используйте этот метод, т.к. он устаревший. (deprecated)
 >
 > Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
 
@@ -20,11 +20,11 @@ Events initialized in this way must have been created with the {{ domxref("Docum
 event.initEvent(type, bubbles, cancelable);
 ```
 
-- _`type`_
+- `type`
   - : {{domxref("DOMString")}}, определяющая тип события.
-- _`bubbles`_
+- `bubbles`
   - : Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.
-- _`cancelable`_
+- `cancelable`
   - : Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.
 
 ## Пример

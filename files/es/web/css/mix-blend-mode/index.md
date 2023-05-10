@@ -1,9 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-translation_of: Web/CSS/mix-blend-mode
 original_slug: Web/CSS/Referencia_CSS/mix-blend-mode
 ---
 
@@ -582,15 +579,11 @@ circle { mix-blend-mode: screen; }
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentario         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{ SpecName('Compositing', '#mix-blend-mode', 'mix-blend-mode') }} | {{ Spec2('Compositing') }} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}
 
 ## Véase también
 

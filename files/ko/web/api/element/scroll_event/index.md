@@ -1,9 +1,9 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
+
 {{ApiRef("HTML DOM")}}{{domxref("GlobalEventHandlers")}} 의 **`onscroll`** 이벤트는 {{event("Event_handlers", "event handler")}} 의 `scroll` 이벤트를 상속받았습니다.document view 나 element 가 스크롤이 됬을 때 이벤트가 발생합니다.
 
 > **참고:** `onscroll` 과 {{domxref("GlobalEventHandlers.onwheel", "onwheel")}} 이벤트를 혼동하지 마세요. `onwheel` 보통 휠의 회전을 처리하고, `onscroll`은 객체의 내용의 스크롤을 처리합니다.
@@ -58,11 +58,11 @@ function logScroll(e) {
 
 {{EmbedLiveSample("Example", 700, 200)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

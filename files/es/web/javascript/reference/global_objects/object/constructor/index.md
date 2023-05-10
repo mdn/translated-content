@@ -1,12 +1,6 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 ---
 
@@ -93,6 +87,6 @@ console.log( types.join( "\n" ) );
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.constructor")}}
+{{Compat}}

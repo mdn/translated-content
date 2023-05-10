@@ -89,9 +89,7 @@ catch(error)
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

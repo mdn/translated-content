@@ -3,11 +3,11 @@ title: 信令与视频通话
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
-[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)允许在两个设备之间进行实时的对等媒体交换。通过称为**信令**的发现和协商过程建立连接。本教程将指导你构建双向视频通话。
+[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许在两个设备之间进行实时的对等媒体交换。通过称为**信令**的发现和协商过程建立连接。本教程将指导你构建双向视频通话。
 
-[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)是一个完全对等技术，用于实时交换音频、视频和数据，同时提供一个中心警告。如其他地方所讨论的，必须进行一种发现和媒体格式协商，以使不同网络上的两个设备相互定位。这个过程被称为**信令**，并涉及两个设备连接到第三个共同商定的服务器。通过这个第三方服务器，这两台设备可以相互定位，并交换协商消息。
+[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 是一个完全对等技术，用于实时交换音频、视频和数据，同时提供一个中心警告。如其他地方所讨论的，必须进行一种发现和媒体格式协商，以使不同网络上的两个设备相互定位。这个过程被称为**信令**，并涉及两个设备连接到第三个共同商定的服务器。通过这个第三方服务器，这两台设备可以相互定位，并交换协商消息。
 
 在本文中，我们将进一步扩充 [WebSocket chat](https://webrtc-from-chat.glitch.me/) 作为我们的 WebSocket 文档的一部分（本文链接即将发布;它实际上还没有在线），以支持在用户之间的双向视频通话。你可以在[Glitch](https://webrtc-from-chat.glitch.me/)上查看这个例子，你也尝试[修改](https://glitch.com/edit/#!/remix/webrtc-from-chat)这个例子。您还可以在[GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上查看完整的项目代码。
 
@@ -133,7 +133,7 @@ if (sendToClients) {
 
 假设 Naomi 和 Priya 正在使用聊天软件进行讨论，Naomi 决定在两人之间打开一个视频通话。以下是预期的事件顺序：
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](https://mdn.mozillademos.org/files/12363/WebRTC%20-%20Signaling%20Diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
 
 在本文的整个过程中，我们将看到更详细的信息。
 
@@ -141,7 +141,7 @@ if (sendToClients) {
 
 当每端的 ICE 层开始发送候选时，它会在链中的各个点之间进行交换，如下所示：
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
+[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
 
 每一端从本地的 ICE 层接收候选时，都会将其发送给另一方；不存在轮流或成批的候选。一旦两端就一个候选达成一致，双方就都可以用此候选来交换媒体数据，媒体数据就开始流动。即使在媒体数据已经开始流动之后，每一端都会继续向候选发送消息，直到他们没有选择的余地。这样做是为了找到比最初选择的更好的选择。
 
@@ -534,7 +534,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-此代码从`"received_video"` {{HTMLElement("video")}}元素的 {{htmlattrxref("srcObject", "video")}} 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
+此代码从`"received_video"` {{HTMLElement("video")}}元素的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject) 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
 
 如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 `closeVideoCall()`结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 [结束通话](#结束通话) 了解 `closeVideoCall()` 的工作原理。
 
@@ -607,7 +607,7 @@ function closeVideoCall() {
 3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
 4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
-然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 {{htmlattrxref("srcObject", "video")}}和{{htmlattrxref("src", "video")}} 属性。这就完成了流与视频元素的分离。
+然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
 
 最后，我们在"Hang Up"按钮上将{{domxref("HTMLElement.disabled", "disabled")}}属性设置为 `true`，使其在没有调用的情况下不可点击；然后我们将`targetUsername` 设置为 `null` ，因为我们不再与任何人交谈。这允许用户呼叫另一个用户，或接收来电。
 

@@ -2,9 +2,10 @@
 title: Introducing workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 __workers__ 를 소개합니다.
+"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 **workers** 를 소개합니다.
 
 <table>
   <tbody>
@@ -225,12 +226,12 @@ function generatePrimes(quota) {
 
 ## 다른 종류의 워커
 
-우리가 방금 만든 워커가 __dedicated worker__ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
+우리가 방금 만든 워커가 _dedicated worker_ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
 
 다른 유형의 워커도 있습니다.
 
 - [_Shared workers_](/ko/docs/Web/API/SharedWorker)는 서로 다른 창에서 실행되는 여러 스크립트에서 공유될 수 있습니다.
-- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹  애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
+- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹 애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
 
 ## 결론
 
@@ -245,11 +246,3 @@ function generatePrimes(quota) {
 - [Web workers API](/ko/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **Introducing workers**
-- [Assessment: sequencing animations](/ko/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

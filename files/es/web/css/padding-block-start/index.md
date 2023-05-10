@@ -1,7 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-translation_of: Web/CSS/padding-block-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -66,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                               | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-block-start", "padding-block-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-block-start")}}
+{{Compat}}
 
 ## Mira también
 

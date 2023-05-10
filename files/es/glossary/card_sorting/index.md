@@ -1,11 +1,6 @@
 ---
 title: Clasificación por tarjetas (card sorting)
 slug: Glossary/Card_sorting
-tags:
-  - Card sorting
-  - Diseño
-  - Glosario
-translation_of: Glossary/Card_sorting
 original_slug: Glossary/Clasificación_por_tarjetas_(card_sorting)
 ---
 

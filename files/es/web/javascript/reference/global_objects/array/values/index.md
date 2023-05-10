@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterador
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 ---
 
@@ -56,7 +48,7 @@ for (let letra of iterador) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Vea también
 

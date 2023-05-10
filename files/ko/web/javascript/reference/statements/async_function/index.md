@@ -1,13 +1,6 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - JavaScript
-  - Promise
-  - async
-  - await
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
 
 {{jsSidebar("Statements")}}
@@ -182,11 +175,11 @@ async function getProcessedData(url) {
 
 위 예제에서는 return 구문에 await 구문이 없다는 것에 주목하자. 이는 async function의 반환값이 암묵적으로 {{jsxref("Promise.resolve")}}로 감싸지기 때문이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

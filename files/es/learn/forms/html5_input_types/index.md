@@ -1,7 +1,6 @@
 ---
 title: Tipos de input de HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
 
@@ -30,7 +29,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
   </tbody>
 </table>
 
-> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/en-US/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
 
 Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_widgets).
 
@@ -44,7 +43,7 @@ Este tipo de campo se define utilizando el valor `email` en el atributo {{htmlat
 
 Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
 
-![﻿An invalid email input showing the message "Please enter an email address."](https://mdn.mozillademos.org/files/17027/email_address_invalid.png)
+![﻿An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
 Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
@@ -54,7 +53,7 @@ Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/m
 
 En algunos dispositivos, en particular dispositivos táctiles con teclados dinámicos como los smart phones, debería presentarse un teclado virtual que es más adecuado para introducir direcciones de correo electrónico, incluyendo la tecla `@`. Mira como ejemplo la siguiente captura de pantalla del teclado de Firefox para Android:
 
-![firefox for android email keyboard, with ampersand displayed by default.](https://mdn.mozillademos.org/files/17054/fx-android-email-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed by default.](fx-android-email-type-keyboard.jpg)
 
 > **Nota:** Puedes encontrar ejemplos sobre los tipos de entrada de texto básicos en [Ejemplos input básicos](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (Consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/basic-input-examples/index.html)).
 
@@ -82,7 +81,7 @@ La diferéncia principal entre un campo `text` y un campo `search`, es la forma 
 
 La captura de pantalla siguiente muestra un campo de búsqueda con contenido, en Firefox 71, Safari 13, y Chrome 79 en macOS, y Edge 18 y Chrome 79 en Windows 10. Ten en cuenta que el icono de reseteo sólo aparece si el campo tiene un valor y, aparte de Safari, sólo se muestra cuando el campo tiene el foco.
 
-![Screenshots of search fields on several platforms.](https://mdn.mozillademos.org/files/17028/search_focus.png)
+![Screenshots of search fields on several platforms.](search_focus.png)
 
 Otra característica que vale la pena señalar es que se puede guardar los valores de un campo `search` automáticamente y reutilizarse en múltiples páginas del mismo sitio web para ofrecer autocompletado. Esta característica suele ocurrir de forma automática en la mayoría de navegadores modernos.
 
@@ -98,7 +97,7 @@ Cuando se accede desde un dispositivo táctil con teclados dinámicos, muchos de
 
 La siguiente captura de pantalla del teclado de Firefox para Android proporciona un ejemplo:
 
-![firefox for android email keyboard, with ampersand displayed by default.](https://mdn.mozillademos.org/files/17056/fx-android-tel-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed by default.](fx-android-tel-type-keyboard.jpg)
 
 Debido a la gran variedad de formatos de número de teléfono existentes, este tipo de campo no cumple con ningún tipo de restricción sobre el valor introducido por el usuario. (Esto significa que puede incluir letras, etc...).
 
@@ -116,7 +115,7 @@ Este tipo añade restricciones de validación en el campo. El navegador informar
 
 Mira el siguiente ejemplo tomado de Firefox para Android:
 
-![firefox for android email keyboard, with ampersand displayed by default.](https://mdn.mozillademos.org/files/17057/fx-android-url-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
 > **Nota:** Solo porque el URL esté bien formado no significa necesariamente que la dirección al que hace referéncia exista!
 
@@ -126,7 +125,7 @@ Se pueden crear controles para introducir números con el {{htmlattrxref("type",
 
 La siguiente captura de pantalla tomada de Firefox para Android proporciona un ejemplo:
 
-![firefox for android email keyboard, with ampersand displayed by default.](https://mdn.mozillademos.org/files/17055/fx-android-number-type-keyboard.jpg)
+![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
 Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos {{htmlattrxref("min","input")}} y {{htmlattrxref("max","input")}}.
 
@@ -262,7 +261,7 @@ A `color` control can be created using the {{HTMLElement("input")}} element with
 
 When supported, clicking a color control will tend to display the operating system's default color picking functionality for you to actually make your choice with. The following screenshot taken on Firefox for macOS provides an example:
 
-![firefox for android email keyboard, with ampersand displayed by default.](https://mdn.mozillademos.org/files/17058/fx-macos-color.jpg)
+![firefox for android email keyboard, with ampersand displayed by default.](fx-macos-color.jpg)
 
 And here is a live example for you to try out:
 
@@ -277,19 +276,6 @@ The value returned is always a lowercase 6-value hexidecimal color.
 That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped together due to their very specific behaviors, but which are still essential to know about. We cover those in the next article.
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
-
-## In this module
-
-- [Your first form](/es/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/es/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/es/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/es/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/es/docs/Learn/Forms/Form_validation)
-- [Sending form data](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 

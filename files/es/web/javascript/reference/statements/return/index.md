@@ -1,10 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 original_slug: Web/JavaScript/Referencia/Sentencias/return
 ---
 

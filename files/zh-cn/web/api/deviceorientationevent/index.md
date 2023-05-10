@@ -34,11 +34,11 @@ window.addEventListener('deviceorientation', function(event) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceMotionEvent") }}

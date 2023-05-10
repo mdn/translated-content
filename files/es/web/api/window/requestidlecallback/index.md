@@ -1,7 +1,6 @@
 ---
 title: requestIdleCallback
 slug: Web/API/Window/requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -39,13 +38,11 @@ Ver [ejemplo](/es/docs/Web/API/Background_Tasks_API#Example) en el artículo [Pl
 
 ## Especificaciones
 
-| Especificación                               | Estado                                   | Comentarios         |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Background Tasks')}} | {{Spec2('Background Tasks')}} | Definición Inicial. |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.requestIdleCallback")}}
+{{Compat}}
 
 ## Vease también
 

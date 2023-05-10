@@ -1,9 +1,7 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-translation_of: Web/API/AudioNode
 original_slug: Web/API/AudioNode
-browser-compat: api.AudioNode
 ---
 
 {{APIRef("Web Audio API")}}

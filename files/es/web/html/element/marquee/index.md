@@ -1,16 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - etiqueta
-  - marquee
-  - marquesina
-  - obsoleta
-translation_of: Web/HTML/Element/marquee
 original_slug: Web/HTML/Elemento/marquee
 ---
 
@@ -82,11 +72,8 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'obsolete.html#the-marquee-element-2', '&lt;marquee&gt;')}} | {{Spec2('HTML WHATWG')}} | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
-| {{SpecName('HTML5 W3C', 'obsolete.html#the-marquee-element-0', '&lt;marquee&gt;')}} | {{Spec2('HTML5 W3C')}}     | Marcada como obsoleta en favor de CSS. Comportamiento esperado definido por razones de retrocompatibilidad. |
+{{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}

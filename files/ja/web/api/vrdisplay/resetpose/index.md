@@ -10,7 +10,7 @@ original_slug: Web/API/VRDevice/resetPose
 
 > **メモ:** このプロパティは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
-`resetPost()` を呼出した後は、 {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}}  から返された未来予測ポーズは、`resetPose()` が最後に呼び出された時点からの相対的な `VRDisplay` の位置になります。また、`resetPose()` が最後に呼び出された時点の VR ディスプレイのヨー (yaw) を前方として扱います。
+`resetPost()` を呼出した後は、 {{domxref("VRDisplay.getPose()")}}/{{domxref("VRDisplay.getImmediatePose()")}} から返された未来予測ポーズは、`resetPose()` が最後に呼び出された時点からの相対的な `VRDisplay` の位置になります。また、`resetPose()` が最後に呼び出された時点の VR ディスプレイのヨー (yaw) を前方として扱います。
 
 VRDisplay の報告されるロール (roll) とピッチ (pitch) は重力に対して相対的なので `resetPose()` を呼んでも変化しません。 `resetPose()` を呼び出すと {{domxref("VRStageParameters.sittingToStandingTransform")}} 行列が変更される場合があります。
 

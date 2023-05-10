@@ -1,7 +1,6 @@
 ---
 title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-translation_of: Web/CSS/Mozilla_Extensions
 ---
 
 {{CSSRef}}
@@ -590,4 +589,4 @@ W—Z
 
 ## Otros
 
-- {{Cssxref("-moz-alt-content")}} ({{Bug("11011")}})
+- {{Cssxref("-moz-alt-content")}} ([Error 11011 en Firefox](https://bugzil.la/11011))

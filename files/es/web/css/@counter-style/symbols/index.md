@@ -1,10 +1,6 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - Descriptor CSS
-  - Estilos de contadores CSS
-translation_of: Web/CSS/@counter-style/symbols
 ---
 
 ## Summary
@@ -67,17 +63,15 @@ symbols: indic-numbers;
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/symbols') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.symbols")}}
+{{Compat}}
 
 ## Véase también
 

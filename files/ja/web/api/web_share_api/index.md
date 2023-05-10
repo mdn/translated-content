@@ -24,7 +24,7 @@ l10n:
 {{domxref("navigator.canShare()")}} メソッドは、送信のために {{domxref("navigator.share()")}} にデータを渡す前に、最初にデータが「共有可能」であるかどうかを検証するために使用することができます。
 
 {{domxref("navigator.share()")}} メソッドは、基礎となるオペレーティングシステムのネイティブの共有メカニズムを呼び出して、指定されたデータを渡します。
-これは{{Glossary("transient activation", "単発の活性化")}}を必要とします。したがって、ボタンクリックのような UI イベントから発生させる必要があります。
+これは{{Glossary("transient activation", "一時的な有効化")}}を必要とします。したがって、ボタンクリックのような UI イベントから発生させる必要があります。
 さらに、このメソッドでは、ネイティブ実装で共有するために対応している有効なデータを指定する必要があります。
 
 ウェブ共有 API は [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) 権限ポリシーによって制限されています。
@@ -36,7 +36,7 @@ l10n:
   - : 論理値で、指定したデータが共有可能であるかどうかを返します。
 - {{domxref("navigator.share()")}}
   - : 渡されたデータが共有対象に正常に送信されたら解決する {{jsxref("Promise")}} を返します。
-    このメソッドはボタンクリックやその他のユーザーによる有効化で呼び出す必要があります（{{Glossary("transient activation", "単発の活性化")}}が必要です）。
+    このメソッドはボタンクリックやその他のユーザーによる有効化で呼び出す必要があります（{{Glossary("transient activation", "一時的な有効化")}}が必要です）。
 
 ## 例
 
@@ -52,7 +52,7 @@ const shareData = {
 const btn = document.querySelector('button');
 const resultPara = document.querySelector('.result');
 
-// シェアは「ユーザーの活性化」により起動させる必要があります
+// シェアは「ユーザーによる有効化」により起動させる必要があります
 btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)

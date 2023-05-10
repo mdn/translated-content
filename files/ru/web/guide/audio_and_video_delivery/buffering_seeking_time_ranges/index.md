@@ -111,7 +111,7 @@ myAudio.buffered.end(1);   // returns 19
 
 Это наглядно работает с длинными фрагментами аудио или видео. Нажмите кнопку воспроизведения и нажмите на панели прогресса и вы должны получить что-то вроде того, что показано на картинке ниже. Each red filled white rectangle represents a time range.
 
-![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](https://mdn.mozillademos.org/files/7347/bufferedtimeranges.png)
+![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
 > **Примечание:** You can see the [timerange code running live on JS Bin](http://jsbin.com/memazaro/1/edit).
 
@@ -215,7 +215,7 @@ The timeupdate event is fired 4 times a second as the media plays and that's whe
 
 This should give you results similar to the following, where the light grey bar represents the buffered progress and green bar shows the played progress:
 
-![A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered.](https://mdn.mozillademos.org/files/7349/bufferedprogress.png)
+![A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered.](bufferedprogress.png)
 
 > **Примечание:** You can see the [buffering code running live on JS Bin](http://jsbin.com/badimipi/1/edit).
 

@@ -1,15 +1,6 @@
 ---
 title: transitionend
 slug: Web/API/Element/transitionend_event
-tags:
-  - DOM
-  - Event
-  - Referencia
-  - Transiciones CSS
-  - Transiciones CSS3
-  - TransitionEvent
-  - transitionend
-translation_of: Web/API/HTMLElement/transitionend_event
 original_slug: Web/API/HTMLElement/transitionend_event
 ---
 
@@ -20,7 +11,7 @@ El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/U
 ## Información general
 
 - Especificación
-  - : {{SpecName("CSS3 Transitions")}}
+  - : [CSS Transitions](https://drafts.csswg.org/css-transitions/)
 - Interfaz
   - : {{domxref("TransitionEvent")}}
 - Burbuja

@@ -8,7 +8,7 @@ slug: Web/Guide/AJAX
 **AJAX** é o acrônimo para **JavaScript assíncrono + XML.** Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo [HTML](/pt-BR/docs/HTML) ou [XHTML](/pt-BR/docs/XHTML), [CSS](/pt-BR/docs/CSS), [JavaScript](/pt-BR/docs/JavaScript), [DOMl](/pt-BR/docs/DOM), [XML](/pt-BR/docs/XML), [XSLT](/pt-BR/docs/XSLT), e o mais importante: [objeto XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest).
 Quando essas tecnologias são combinadas no modelo AJAX, as aplicações web que a utilizam são capazes de fazer rapidamente atualizações incrementais para a interface do usuário sem recarregar a página inteira do navegador. Isso torna a aplicação mais rápida e sensível às ações do usuário.
 
-Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSON) é mais utilizado que o XML devido às suas vantagens, como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados ​​para obter informações do pacote no modelo AJAX.
+Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSON) é mais utilizado que o XML devido às suas vantagens, como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados para obter informações do pacote no modelo AJAX.
 
 ## Documentação
 
@@ -26,18 +26,10 @@ Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSO
   - : Alex Bosworth has written this article outlining some of the mistakes AJAX application developers can make.
 - [HTML no XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest)
   - : MDN guide
-- [Especificação XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/)
+- [Especificação XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest/)
   - : W3C Working draft
 - [Outros recursos](/pt-BR/docs/AJAX/Other_Resources)
   - : Outros recursos do AJAX que podem ser úteis.
-
-## Comunidade
-
-- Consulte os fóruns da Mozilla...
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
-
-- [Links da comunidade AJAX](/pt-BR/docs/AJAX/Community)
 
 ## Ferramentas
 

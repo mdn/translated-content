@@ -65,9 +65,7 @@ var x = Math.min(f(foo), boundary);
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

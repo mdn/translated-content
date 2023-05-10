@@ -1,13 +1,6 @@
 ---
 title: delete 연산자
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - Operator
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/delete
-browser-compat: javascript.operators.delete
 ---
 
 {{jsSidebar("Operators")}}

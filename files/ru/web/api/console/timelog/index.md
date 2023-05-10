@@ -1,6 +1,6 @@
 ---
 title: Console.timeLog()
-slug: Web/API/Console/timeLog
+slug: Web/API/console/timeLog
 translation_of: Web/API/Console/timeLog
 ---
 
@@ -61,7 +61,7 @@ console.timeEnd("answer time");
 
 Отчёт таймера начинается с момента вызова `console.time()`. Сначала выводится время от начала отсчёта до закрытия первого уведомления. Затем выводится время с начала отсчёта до закрытия второго уведомления:
 
-![timerresult.png](https://mdn.mozillademos.org/files/16113/console-timeLog.png)
+![timerresult.png](console-timelog.png)
 
 Обратите внимание, имя таймера печатается как при вызовах `timeLog()` , так и при завершении таймера.
 

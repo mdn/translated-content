@@ -55,9 +55,7 @@ console.log(a, b);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

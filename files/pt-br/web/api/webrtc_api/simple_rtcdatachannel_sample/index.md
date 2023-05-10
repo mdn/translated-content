@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 original_slug: Web/API/WebRTC_API/Simples_RTCDataChannel_amostra
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 A interface {{domxref("RTCDataChannel")}} é um recurso da [WebRTC API](/pt-BR/docs/Web/API/WebRTC_API) que permite abrir um canal entre dois pares sobre os quais você pode enviar e receber dados arbitrários. A API é intencionalmente semelhante à [WebSocket API](/pt-BR/docs/Web/API/WebSocket_API), de modo que o mesmo modelo de programação pode ser usado para ambos.
 

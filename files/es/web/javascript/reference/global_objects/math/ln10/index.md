@@ -1,12 +1,6 @@
 ---
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN10
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LN10
 ---
 
@@ -42,7 +36,7 @@ getNatLog10(); // 2.302585092994046
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.LN10")}}
+{{Compat}}
 
 ## Ver también
 

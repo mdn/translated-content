@@ -1,6 +1,6 @@
 ---
 title: <input type="time">
-slug: Web/HTML/Element/Input/time
+slug: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar}}
@@ -17,19 +17,19 @@ A interface de usuário deste tipo de campo varia de navegador para navegador. A
 
 No Chrome/Opera, o campo de `time` é simples, com espaços onde o usuário pode inserir horas e minutos (no formato 24 horas), além de setas para cima e para baixo que servem para, respectivamente, incrementar e decrementar o componente atualmente selecionado. Um botão "X" também é apresentado para limpar o conteúdo do campo.
 
-![](https://mdn.mozillademos.org/files/15399/chrome-time.png)
+![](chrome-time.png)
 
 ### Firefox
 
 O campo de `time` do Firefox é bem parecido com o do Chrome, exceto pela ausência das setas para cima e para baixo e por estar no formato 12 horas (com um espaço adicional para inserir AM ou PM).
 
-![](https://mdn.mozillademos.org/files/15403/firefox-time.png)
+![](firefox-time.png)
 
 ### Edge
 
 O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minuto com rolagem infinita. Assim como o Chrome, ele também adota o formato 24 horas:
 
-![](https://mdn.mozillademos.org/files/15401/edge-time.png)
+![](edge-time.png)
 
 <table class="properties">
   <tbody>
@@ -251,7 +251,7 @@ Se você tentar enviar o formulário com um horário incompleto (ou com um horá
 
 Here's a screenshot for those of you who aren't using a browser that supports `time` inputs:
 
-![](https://mdn.mozillademos.org/files/15405/firefox-validation-message.png)
+![](firefox-validation-message.png)
 
 > **Warning:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
@@ -259,7 +259,7 @@ Here's a screenshot for those of you who aren't using a browser that supports `t
 
 As mentioned above, Safari and a few other, less common, browsers don't yet support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
 
-![](https://mdn.mozillademos.org/files/15407/chrome-android-time.png)
+![](chrome-android-time.png)
 
 Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -454,7 +454,7 @@ function populateMinutes() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-time")}}
+{{Compat}}
 
 ## See also
 

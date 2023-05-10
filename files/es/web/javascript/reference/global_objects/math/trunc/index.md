@@ -1,13 +1,6 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Método(2)
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/trunc
 ---
 
@@ -67,9 +60,9 @@ Math.trunc = Math.trunc || function (x) {
 
 {{Specifications}}
 
-## Compatibilidad con navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Vea también.
 

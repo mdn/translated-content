@@ -45,7 +45,7 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : Définit la hauteur du masque.
-    _Valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 - {{SVGAttr("maskContentUnits")}}
   - : Définit le système de coordonnées pour le contenu du `<mask>`.
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
@@ -54,13 +54,13 @@ html,body,svg { height:100% }
     _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `objectBoundingBox`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Définit la coordonnée de l'axe x du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Définit la coordonnée de l'axe y du coin supérieur gauche du masque.
-    _Valeur_: [**\<coordinate>**](/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
+    _Valeur_: [**\<coordinate>**](/fr/docs/Web/SVG/Content_type#Coordinate) ; _Valeur par défaut_: `-10%`; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Définit la largeur du masque.
-    _Valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
+    _Valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length) ; Valeur par défaut: `120%`; _Animation_: **oui**
 
 ### Attributs globaux
 

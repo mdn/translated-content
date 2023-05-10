@@ -1,7 +1,6 @@
 ---
 title: 基线
-slug: Glossary/baseline
-original_slug: Glossary/基线
+slug: Glossary/Baseline
 ---
 
 **基线**是指欧洲和西亚文字排版中，用于在上面放置字符的一条假想的基准线。

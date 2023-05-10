@@ -1,14 +1,6 @@
 ---
 title: '-webkit-mask-repeat'
 slug: Web/CSS/mask-repeat
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/mask-repeat
-translation_of_original: Web/CSS/-webkit-mask-repeat
 original_slug: Web/CSS/-webkit-mask-repeat
 ---
 
@@ -80,9 +72,9 @@ Se puede especificar, seperados por comas, un `<repeat-style>` para cada una de 
 
 Cada imagen se relaciona con el correspondiente estilo, desde la primera especificada hasta la última.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-repeat")}}
+{{Compat}}
 
 ## Ver además
 

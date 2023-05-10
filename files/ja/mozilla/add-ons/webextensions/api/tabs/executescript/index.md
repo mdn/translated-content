@@ -67,7 +67,7 @@ var executing = browser.tabs.executeScript(
 var foo='my result';foo;
 ```
 
-この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[structured clone](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
+この場合、結果配列には、文字列 "`my result`" が含まれます。結果は、[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が可能でなければなりません。最後の文を [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) にすることもできますが、[webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) ライブラリではサポートされていません。
 
 エラーが発生した場合、Promise はエラーメッセージを使って rejected 状態にされます。
 
@@ -136,7 +136,8 @@ executing.then(onExecuted, onError);
 
 > **メモ:** この API は Chromium の [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) API に基づいています。このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -163,4 +164,4 @@ executing.then(onExecuted, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

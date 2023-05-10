@@ -1,30 +1,23 @@
 ---
 title: 'Prueba tus habilidades: controles HTML5'
 slug: Learn/Forms/Test_your_skills:_HTML5_controls
-tags:
-  - Aprendizaje
-  - Evaluación
-  - Formulário
-  - HTML5
-  - Principiante
-translation_of: Learn/Forms/Test_your_skills:_HTML5_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5
 ---
 
 {{learnsidebar}}
 
-El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [The HTML5 input types](/es/docs/Learn/Forms/HTML5_input_types).
+El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [Los tipos de entrada de HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
 > **Nota:** Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
-> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
+> Si tienes problemas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) al final de esta página.
 
 ## Controles HTML5 1
 
 Primero exploraremos algunos de los tipos nuevos de `input` en HTML5. Crea las etiquetas `input` apropiadas para que un usuario actualice sus detalles para:
 
-1. Email
-2. Website
+1. Correo electrónico
+2. Sitio web
 3. Número de teléfono
 4. Color favorito
 
@@ -32,7 +25,7 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](/es/docshttps://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Controles HTML5 2
 
@@ -55,7 +48,7 @@ Puedes practicar estos ejemplos en los editores interactivos que se encuentran m
 Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayuda:
 
 1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
-2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
+2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
 
     - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de controles HTML5 1".
     - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.

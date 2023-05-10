@@ -1,49 +1,51 @@
 ---
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}
 
-{{domxref("SourceBuffer")}} インターフェイスの **`remove()`** メソッドは、特定の時間範囲内のメディアセグメントを `SourceBuffer` から削除します。 このメソッドは、{{domxref("SourceBuffer.updating")}} が `false` の場合にのみ呼び出すことができます。 `SourceBuffer.updating` が `false` に等しくない場合、{{domxref("SourceBuffer.abort()")}} を呼び出します。
+**`remove()`** は {{domxref("SourceBuffer")}} インターフェイスのメソッドで、特定の時間範囲内のメディアセグメントを `SourceBuffer` から削除します。 このメソッドは、{{domxref("SourceBuffer.updating")}} が `false` の場合にのみ呼び出すことができます。 `SourceBuffer.updating` が `false` に等しくない場合、{{domxref("SourceBuffer.abort()")}} を呼び出します。
 
 ## 構文
 
+```js-nolint
+remove(start, end)
 ```
-sourceBuffer.remove(start, end);
-```
 
-### パラメーター
+### 引数
 
-- start
-  - : 時間範囲の始まりを秒単位で表す double 型。
-- end
-  - : 時間範囲の終わりを秒単位で表す double 型。
+- `start`
+  - : double 型で、時間範囲の始まりを秒単位で表します。
+- `end`
+  - : double 型で、時間範囲の終わりを秒単位で表します。
 
-### 戻り値
+### 返値
 
-{{jsxref('undefined')}}。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-| 例外                 | 説明                                                                                                                                                                                                                                     |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidAccessError` | {{domxref("MediaSource.duration")}} プロパティが `NaN` に等しいか、`start` パラメーターが負であるか {{domxref("MediaSource.duration")}} より大きいか、`end` パラメーターが `start` 以下または `NaN` に等しい。 |
-| `InvalidStateError`  | {{domxref("SourceBuffer.updating")}} プロパティが `true` に等しいか、この `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれています。                                                                    |
+- `InvalidAccessError` {{domxref("DOMException")}}
+
+  - : {{domxref("MediaSource.duration")}} プロパティが `NaN` に等しいか、`start` 引数が負であるか {{domxref("MediaSource.duration")}} より大きいか、`end` 引数が `start` 以下または `NaN` に等しい場合に発生します。
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : {{domxref("SourceBuffer.updating")}} プロパティが `true` に等しいか、この `SourceBuffer` が {{domxref("MediaSource")}} から取り除かれている場合に発生します。
 
 ## 例
 
-未定
+TBD.
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                 | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-remove(double,unrestricted_double)', 'remove()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer.remove")}}
+{{Compat}}
 
 ## 関連情報
 

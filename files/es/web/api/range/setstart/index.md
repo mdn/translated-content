@@ -1,7 +1,6 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
-translation_of: Web/API/Range/setStart
 ---
 
 {{ApiRef("DOM")}}
@@ -38,14 +37,11 @@ range.setStart(startNode,startOffset);
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estatus                                      | Comentario              |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG', '#dom-range-setstart', 'Range.setStart()')}}                                         | {{Spec2('DOM WHATWG')}}             | Sin cambio.             |
-| {{SpecName('DOM2 Traversal_Range', 'ranges.html#Level2-Range-method-setStart', 'Range.setStart()')}} | {{Spec2('DOM2 Traversal_Range')}} | Especificación inicial. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Range.setStart")}}
+{{Compat}}
 
 ## Ver también
 

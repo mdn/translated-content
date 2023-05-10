@@ -10,9 +10,9 @@ slug: Web/HTTP/Methods/DELETE
 | 请求是否有主体                                             | 可以有 |
 | ---------------------------------------------------------- | ------ |
 | 成功的返回是否有主体                                       | 可以有 |
-| {{Glossary("安全")}}                               | 否     |
-| {{Glossary("幂等")}}                               | 是     |
-| {{Glossary("可缓存")}}                           | 否     |
+| {{Glossary("Safe/HTTP", "安全")}}                               | 否     |
+| {{Glossary("Idempotent", "幂等")}}                               | 是     |
+| {{Glossary("Cacheable", "可缓存")}}                           | 否     |
 | 可以在[HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms)中使用 | 否     |
 
 ## 语法

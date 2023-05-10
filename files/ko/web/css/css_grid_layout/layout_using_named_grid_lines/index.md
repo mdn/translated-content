@@ -1,11 +1,6 @@
 ---
 title: Layout using named grid lines
-slug: Web/CSS/CSS_Grid_Layout/Layout_using_named_grid_lines
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
+slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 
 이전 가이드에선 그리드 트랙을 정의하면 생성되는 라인을 사용해서 아이템을 배치하는 법을 살펴보았으며, 또한 이름이 명명된 템플릿 영역을 가지고 어떻게 아이템들을 배치하는지도 알아보았습니다. 이번 가이드에선 이름이 주어진 라인을 쓰는 상황에서 이 두 가지 방법이 서로 어떻게 작용하는지 알아보겠습니다. 라인에 이름을 지어 주는 것이 매우 유용할 때도 있지만, 이름과 트랙 크기가 혼합돼서 사용되는 그리드 용법을 보고 있으면 매우 헷갈릴 수도 있습니다. 하지만 몇 가지 예제를 가지고 작업해 보시면 점점 명확해지면서 나중엔 작업하기도 훨씬 수월해지실 겁니다.
@@ -157,7 +152,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 이름이 주어진 라인의 모습은 아래 그림에서 확인할 수 있는데, 몇몇 라인들은 두 개의 이름을 가지고 있는 것을 확인하실 수 있습니다. 예를 들면, `sd-end`와 `main-start`는 같은 열 방향의 라인을 가리키고 있습니다.
 
-![An image showing the implicit line names created by our grid areas.](https://mdn.mozillademos.org/files/14699/5_multiple_lines_from_areas.png)
+![An image showing the implicit line names created by our grid areas.](5_multiple_lines_from_areas.png)
 
 여기서 잠재적으로 이름이 주어진 라인을 써서 `overlay` 요소를 배치하는 방법은 이름을 직접 지정한 라인을 써서 아이템을 배치하는 방법과 똑같습니다.
 
@@ -291,7 +286,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 
 이 레이아웃을 Firefox Grid Highlighter에서 살펴보면 세로 열 라인이 어떻게 구성되어 있는지 그리고 또 아이템들이 이 라인들에 따라 어떻게 배치되었는지 확인하실 수 있습니다.
 
-![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](https://mdn.mozillademos.org/files/14695/5_named_lines1.png)
+![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
 
 반복 용법은 또한 트랙의 목록을 나열해서 사용할 수 있으며, 오직 하나의 트랙 크기만 반복하도록 쓰실 필요는 없습니다. 아래의 코드는 여덟 개의 트랙으로 구성된 그리드를 만드는데, 상대적으로 더 좁은 `1fr` 너비의 `col1-start`라는 라인 이름이 지정된 세로 열 트랙 다음으로 `3fr` 너비의 `col2-start`라는 라인 이름이 지정된 세로 열 트랙으로 구성되어 있습니다.
 
@@ -432,7 +427,7 @@ grid-row: 2;
 
 다시 한번 말씀드리지만, Firefox Grid Highlighter는 지금까지 우리가 배치했던 아이템들이 그리드 위에 어떻게 놓였는지 확인할 때 아주 유용하답니다.
 
-<img alt="The layout with the grid highlighted." src="https://mdn.mozillademos.org/files/14697/5_named_lines2.png" style="height: 378px; width: 1958px;">
+<img alt="The layout with the grid highlighted." src="5_named_lines2.png" style="height: 378px; width: 1958px;">
 
 필요한 건 이게 전부 다입니다. 복잡한 계산 작업도 필요하지 않고, 그리드가 1fr 크기의 세로 열 트랙에 공간을 할당하기 전에, 자동으로 10픽셀 크기의 경계 여백 트랙이 차지하는 공간을 알아서 제거해 줍니다. 차차 여러분만의 레이아웃을 만들다 보면, 용법에 점점 더 익숙해 지면서 자기에게 맞는 작업 방식을 터득하게 되고, 나중에 만들고자 하는 프로젝트의 유형에 따라 적당한 것을 고를 수 있는 요령이 생기게 되실 겁니다. 우선은 지금까지 소개된 여러 방법들을 가지고 몇몇 자주 쓰이는 레이아웃의 형태들을 만들어 보신다면, 아마도 곧 가장 효율적인 자기만의 작업 방식을 찾으실 수 있을 겁니다. 그러면, 다음 가이드에선 배치 관련 프로퍼티를 전혀 쓰지 않고도 아이템들이 그리드 위에 알아서 배치되도록 만드는 방법을 알아보겠습니다.
 

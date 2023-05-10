@@ -57,14 +57,15 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 屬性
 
-{{page('zh-TW/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','屬性')}}
+- `ArrayBuffer.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- {{jsxref("ArrayBuffer.prototype.byteLength")}}
+  - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
 
 ### 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype','方法')}}
-
-- {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
-  - : Has the same functionality as {{jsxref("ArrayBuffer.prototype.slice()")}}.
+- {{jsxref("ArrayBuffer.prototype.slice()")}}
+  - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 ## 範例
 

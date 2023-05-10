@@ -1,9 +1,6 @@
 ---
 title: CSSStyleRule
 slug: Web/API/CSSStyleRule
-tags:
-  - API
-translation_of: Web/API/CSSStyleRule
 ---
 
 {{ APIRef("CSSOM") }}
@@ -30,13 +27,8 @@ interface CSSStyleRule : CSSRule {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estatus                          | Comentario  |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | Sin cambios |
-| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |             |
+{{Specifications}}
 
-## Compatibilidad entre Navegadores
+## Compatibilidad con navegadores
 
-Para obtener informacion de compatibilidad en los distintos navegadores, por favor consulta la tabla de compatibilidad de la interfaz asociada.
-
-{{Compat("api.CSSStyleRule")}}
+{{Compat}}

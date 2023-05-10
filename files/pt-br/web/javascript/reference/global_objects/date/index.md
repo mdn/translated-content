@@ -67,8 +67,6 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 - Date.length
   - : O valor de `Date.length` é 7. Esse é o número de argumentos manipulados pelo construtor.
 
-{{ jsOverrides("Function", "properties", "prototype") }}
-
 ## Métodos
 
 - {{jsxref("Date.now()")}}
@@ -77,8 +75,6 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
   - : Analisa uma string que representa uma data e retorna o número de milisegundos desde 1 de Janeiro, 1970, 00:00:00, hora local.
 - {{jsxref("Date.UTC()")}}
   - : Aceita os mesmos parâmetros como a forma mais longa do construtor (i.e. 2 até 7) e retorna o número de milisegundos desde 1 de Janeiro, 1970, 00:00:00 UTC.
-
-{{ jsOverrides("Function", "Methods", "now", "parse", "UTC") }}
 
 ## Instâncias JavaScript de `Date`
 

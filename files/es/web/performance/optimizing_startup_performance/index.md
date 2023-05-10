@@ -1,11 +1,6 @@
 ---
 title: Mejorando el Rendimiento Inicial
 slug: Web/Performance/Optimizing_startup_performance
-tags:
-  - Apps
-  - Performance
-  - Rendimiento
-translation_of: Web/Performance/Optimizing_startup_performance
 original_slug: Web/Performance/mejorando_rendimienot_inicial
 ---
 

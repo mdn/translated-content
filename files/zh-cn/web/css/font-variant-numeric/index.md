@@ -5,7 +5,7 @@ slug: Web/CSS/font-variant-numeric
 
 {{CSSRef}}
 
-**`font-variant-numeric`** CSS 属性控制数字，分数和序号标记的替代字形的使用。
+**`font-variant-numeric`** CSS 属性控制数字、分数和序号标记的替代字形的使用。
 
 {{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
@@ -61,49 +61,19 @@ font-variant-numeric: unset;
     - `diagonal-fractions` 启用斜角分数显示。使分子和分母变成像下标字，并用变长的斜线分隔。等同于 OpenType 特性 frac。
     - `stacked-fractions` 启用标准分数显示。使分子在上，分母在下，并用水平线分隔。等同于 OpenType 特性 afrc。
 
-## Formal definition
+## 形式定义
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### Setting ordinal numeric forms
+### 设置序数形式
 
-#### HTML
-
-```html
-<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
-```
-
-#### CSS
-
-```css
-/*
-This example uses the Source Sans Pro OpenType font, developed by Adobe
-and used here under the terms of the SIL Open Font License, Version 1.1:
-http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
-*/
-
-@font-face {
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://mdn.mozillademos.org/files/15757/SourceSansPro-Regular.otf") format("opentype");
-}
-
-.ordinal {
-  font-variant-numeric: ordinal;
-  font-family: "Source Sans Pro";
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Setting_ordinal_numeric_forms')}}
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
 
 ## 规范
 

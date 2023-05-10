@@ -1,13 +1,6 @@
 ---
 title: border-block-end-color
 slug: Web/CSS/border-block-end-color
-tags:
-  - CSS
-  - Experimental
-  - Propiedad CSS
-  - Propiedad Lógica CSS
-  - Referencia
-translation_of: Web/CSS/border-block-end-color
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -62,15 +55,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                       | Estado                                           | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-color", "border-block-end-color")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-end-color")}}
+{{Compat}}
 
 ## Mira también
 

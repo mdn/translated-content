@@ -1,9 +1,7 @@
 ---
 title: '::file-selector-button'
 slug: Web/CSS/::file-selector-button
-translation_of: Web/CSS/::file-selector-button
 original_slug: Web/CSS/::file-selector-button
-browser-compat: css.selectors.file-selector-button
 ---
 
 {{CSSRef}}

@@ -1,10 +1,6 @@
 ---
 title: Guía de estilo
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - Proyecto_MDC
-  - Todas_las_Categorías
-translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
 

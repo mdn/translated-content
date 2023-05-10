@@ -94,7 +94,7 @@ new Request(input, options)
 
 ## 例
 
-[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) ([Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/) を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("fetch()")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Response.blob")}} を実行しています。それから、オブジェクト URL を生成して、  {{htmlelement("img")}} 要素に表示しています。
+[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) ([Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/) を参照) では、コンストラクターを使用して新しいリクエストオブジェクトを生成してから、 {{domxref("fetch()")}} 呼び出しを使用して取得しています。画像を取得してから、それを適切に処理できるように MIME タイプを設定するため、レスポンスの {{domxref("Response.blob")}} を実行しています。それから、オブジェクト URL を生成して、 {{htmlelement("img")}} 要素に表示しています。
 
 ```js
 const myImage = document.querySelector('img');

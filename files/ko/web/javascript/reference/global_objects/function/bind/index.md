@@ -1,13 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Method
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 
 {{JSRef}}
@@ -248,7 +241,7 @@ if (!Function.prototype.bind) {
 이 알고리즘과 스펙화된 알고리즘 간 많은 차이(충분히 다른 차이가 있을 수 있습니다, 이 목록은 정말 철저히 하지 않았기에) 중 일부는 다음입니다:
 
 - 부분 구현은 {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} 및 {{jsxref("Function.prototype.apply()")}}, 원래 값을 갖는 내장 메소드에 의존합니다.
-- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("Global_Objects/TypeError", "TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 {{jsxref("Object.defineGetter", "__defineGetter__")}} 및 {{jsxref("Object.defineSetter", "__defineSetter__")}} 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
+- 부분 구현은 불변(immutable) "poison pill" {{jsxref("Function.caller", "caller")}} 및 get, set 또는 삭제 시 {{jsxref("Global_Objects/TypeError", "TypeError")}}가 발생하는 `arguments` 속성이 없는 함수를 만듭니다. (이는 구현이 {{jsxref("Object.defineProperty")}}를 지원하는 경우 추가 또는 구현이 [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 및 [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메소드를 지원하는 경우 \[삭제 시 오류 발생(throw-on-delete) 동작(behavior) 없이] 부분 구현될 수 있습니다.)
 - 부분 구현은 `prototype` 속성이 있는 함수를 만듭니다. (고유 바인딩된 함수는 없습니다.)
 - 부분 구현은 {{jsxref("Function.length", "length")}} 속성이 ECMA-262에 의해 부여된(mandated) 그것과 일치하지 않는 바인딩된 함수를 만듭니다: 길이 0인 함수를 만듭니다, 반면에 전체 구현은 대상 함수의 길이 및 미리 지정된 인수의 수에 따라 0이 아닌 길이를 반환할 수 있습니다.
 

@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-translation_of: Web/API/HTMLMediaElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -166,18 +165,13 @@ These methods are obsolete and should not be used, even if a browser still suppo
 - {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : This method, available only in Mozilla's implementation, loads data from another media element. This works similarly to `load()` except that instead of running the normal resource selection algorithm, the source is simply set to the `other` element's `currentSrc`. This is optimized so this element gets access to all of the `other` element's cached and buffered data; in fact, the two elements share downloaded data, so data downloaded by either element is available to both.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                            | Status                               | Comment                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | No change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Initial definition.                                                                                                                                                                                            |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Adds {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, {{domxref("setMediaKeys")}}, {{domxref("onencrypted")}}, and {{domxref("onwaitingforkey")}}. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Adds `sinkId` and `setSinkId()`, and `captureStream()`.                                                                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

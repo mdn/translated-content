@@ -1,11 +1,6 @@
 ---
 title: difference
 slug: Web/EXSLT/set/difference
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/set/difference
 ---
 
 {{XsltRef}}

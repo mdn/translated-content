@@ -42,18 +42,18 @@ slug: Web/HTML/Element/source
 
 该元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("sizes")}} {{experimental_inline}}
-  - : Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in {{htmlattrxref("srcset", "source")}} to use.
+- `sizes` {{experimental_inline}}
+  - : Is a list of source sizes that describes the final rendered width of the image represented by the source. Each source size consists of a comma-separated list of media condition-length pairs. This information is used by the browser to determine, before laying the page out, which image defined in [`srcset`](/zh-CN/docs/Web/HTML/Element/source#srcset) to use.
     The `sizes` attribute has an effect only when the {{HTMLElement("source")}} element is the direct child of a {{HTMLElement("picture")}} element.
-- {{htmlattrdef("src")}}
+- `src`
   - : Required for {{HTMLElement("audio")}} and {{HTMLElement("video")}}, address of the media resource. The value of this attribute is ignored when the `<source>` element is placed inside a {{HTMLElement("picture")}} element.
-- {{htmlattrdef("srcset")}} {{experimental_inline}}
+- `srcset` {{experimental_inline}}
   - : A list of one or more strings separated by commas indicating a set of possible images represented by the source for the browser to use. Each string is composed of:1. one URL to an image, 2. a width descriptor, that is a positive integer directly followed by `'w'`. The default value, if missing, is the infinity. 3. a pixel density descriptor, that is a positive floating number directly followed by `'x'`. The default value, if missing, is `1x`.Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor.
     The browser chooses the most adequate image to display at a given point of time.
     The `srcset` attribute has an effect only when the {{HTMLElement("source")}} element is the direct child of a {{HTMLElement("picture")}} element.
-- {{htmlattrdef("type")}}
+- `type`
   - : The MIME-type of the resource, optionally with a `codecs` parameter. See [RFC 4281](http://tools.ietf.org/html/rfc4281) for information about how to specify codecs.
-- {{htmlattrdef("media")}} {{experimental_inline}}
+- `media` {{experimental_inline}}
   - : [Media query](/zh-CN/docs/CSS/Media_queries) of the resource's intended media; this should be used only in a {{HTMLElement("picture")}} element.
 
 If the **type** attribute isn't specified, the media's type is retrieved from the server and checked to see if Gecko can handle it; if it can't be rendered, the next **source** is checked. If the **type** attribute is specified, it's compared against the types Gecko can play, and if it's not recognized, the server doesn't even get queried; instead, the next **source** element is checked at once.

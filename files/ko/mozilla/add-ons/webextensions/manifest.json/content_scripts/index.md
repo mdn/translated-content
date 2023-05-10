@@ -2,6 +2,7 @@
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -347,6 +348,6 @@ This injects two content scripts into all pages under `mozilla.org` or any of it
 
 The content scripts see the same view of the DOM and are injected in the order they appear in the array, so `borderify.js` can see global variables added by `jquery.js`.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

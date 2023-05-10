@@ -200,7 +200,7 @@ Um site estático é aquele que retorna o mesmo conteúdo codificado do servidor
 
 Vamos recapitular como isso funciona, olhando novamente para o diagrama de arquitetura de site estático que vimos no último artigo.
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 Quando o usuário deseja navegar em uma página, O navegador envia uma solicitação HTTP `GET` especificando o URL dessa página HTML. O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [HTTP Response status code](/pt-BR/docs/Web/HTTP/Status) de "`200 OK`" (indicando). O servidor pode retornar um diferente código de status, por exemplo "`404 Not Found`" se o arquivo não estiver presente no servidor, ou "`301 Moved Permanently`" se o arquivo existe, mas foi redirecionado para um local diferente.
 
@@ -222,7 +222,7 @@ Esta seção fornece uma visão geral passo a passo da solicitação HTTP "dinâ
 
 O diagrama abaixo mostra os principais elementos do site do "treinador de equipe", juntamente com rótulos numerados para a sequência de operações quando o treinador acessa sua lista de "melhores equipes". As partes do site que o tornam dinâmico são o Web application(é assim que nos referiremos ao código do lado do servidor que processa solicitações HTTP e retorna respostas HTTP), o Banco de Dados, que contém informações sobre jogadores, times, treinadores e seus relacionamentos e os modelos HTML.
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png)
+![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 Após o treinador enviar o formulário com o nome da equipe e número de jogadores, a sequência de operações é:
 
@@ -303,10 +303,3 @@ Neste ponto, você deve ter uma boa visão geral das operações que o código d
 Em um módulo a seguir, vamos ajudá-lo a escolher o melhor Web Framework para seu primeiro site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## Neste módulo
-
-- [Introduction to the server side](/pt-BR/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/pt-BR/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)

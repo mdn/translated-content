@@ -47,9 +47,7 @@ regexObj.compile('new foo', 'g');
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,11 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/accesskey
 original_slug: Web/HTML/Atributos_Globales/accesskey
 ---
 
@@ -76,16 +71,11 @@ Notar que Firefox puede personalizar la tecla de modificación requerida por las
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                          | Comentario                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el útlimo snapshot {{SpecName('HTML5.1')}}                                                                                                                                                                                                                |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                 |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}. De {{SpecName('HTML4.01')}}, varios caracteres pueden se pueden establecer como el accesskey . Tambien puede establecerse sobre cualquier elemento.                                                                       |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | Solo soportado en {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} y {{ HTMLElement("textarea") }} |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.accesskey")}}
+{{Compat}}
 
 ## Ver también
 

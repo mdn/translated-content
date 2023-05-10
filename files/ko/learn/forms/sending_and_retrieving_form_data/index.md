@@ -3,6 +3,7 @@ title: Sending and retrieving form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 많은 경우 HTML 폼은 서버에 데이터를 전송할 목적으로 사용된다. 서버는 데이터를 처리하고 사용자에게 응답을 보낼 것이다. 간단한 것 처럼 보이지만 데이터가 서버나 사용자에게 피해를 입히지 않기 위해서는 몇가지를 명심해야한다.
 
 ## 데이터는 어디로 갈까?

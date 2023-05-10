@@ -18,7 +18,7 @@ Combinado ao comportamento do seu evento simétrico, `mouseleave`, o evento DOM 
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
 - Interface
   - : {{domxref('MouseEvent')}}
 - Sincronismo

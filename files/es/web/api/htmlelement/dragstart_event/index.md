@@ -1,10 +1,7 @@
 ---
-title: "HTMLElement: dragstart event"
+title: 'HTMLElement: dragstart event'
 slug: Web/API/HTMLElement/dragstart_event
-translation_of: Web/API/HTMLElement/dragstart_event
 original_slug: Web/API/HTMLElement/dragstart_event
-page-type: web-api-event
-browser-compat: api.HTMLElement.dragstart_event
 ---
 
 El evento `dragstart` se dispara cuando el usuario arrastra un elemento o una selección de texto.
@@ -40,7 +37,7 @@ En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intent
 
 Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparente mientras se arrastra.
 
-For a more complete example of [drag](/en-US/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
+For a more complete example of [drag](/es/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
 
 #### HTML
 

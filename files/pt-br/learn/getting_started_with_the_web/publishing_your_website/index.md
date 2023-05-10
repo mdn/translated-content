@@ -25,7 +25,7 @@ Muitos sites profissionais ficam online dessa maneira.
 
 Você vai precisar ainda de um programa de {{Glossary("FTP", "Protocolo de Transferência de Arquivos (FTP)")}} (veja [Quanto custa: software](/pt-BR/docs/Learn/Common_questions/Quanto_custa_fazer_algo_web#Software) para mais detalhes) para transferir os arquivos do site ao servidor. Programas FTP variam, mas geralmente você tem que logar no servidor usando detalhes fornecidos por sua empresa de hospedagem (ex. nome de usuário, senha, nome de host). Então, o programa mostra para você os arquivos locais e do servidor em duas janelas, para que você possa transferí-los ao servidor e de volta para o computador:
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### Dicas para encontrar hospedagem e domínios
 
@@ -54,7 +54,7 @@ Tente codificar com alguns desses exemplos, e veja qual se encaixa melhor para v
 - [JSBin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## Publicando via Github
 
@@ -63,7 +63,7 @@ Agora vamos mostrar como publicar seu site facilmente por meio das páginas do G
 1. Primeiro de tudo, [inscreva-se no GitHub](https://github.com) e verifique seu e-mail.
 2. Em seguida, você precisa [criar um repositório](https:/github.com/new) para colocar seus arquivos.
 3. Nesta página, na caixa _Repository name_ (nome do repositório), digite username.github.io, onde _username_ é o seu nome de usuário. Então, por exemplo, nosso amigo bobsmith entraria em bobsmith.github.io. Além disso, marque _Initialize this repository with a README_ (inicializar este repositório com um README) e então clique em _Create repository_ (Criar repositório).
-4. ![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+4. ![](github-create-repo.png)
 5. Arraste e solte o conteúdo da pasta do site no seu repositório e clique em _Commit changes_ (confirmar alterações).
 
     > **Nota:** Nota: Certifique-se que sua pasta possui um arquivo `index.html`.
@@ -83,14 +83,3 @@ Para aprender mais, consulte a [Ajuda do Github Pages](https://help.github.com/e
 - [Hospedagem baratas ou gratuitas de sites estáticos](https://alignedleft.com/resources/cheap-web-hosting), por Scott Murray, tem algumas idéias úteis sobre serviços disponíveis.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Comp será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

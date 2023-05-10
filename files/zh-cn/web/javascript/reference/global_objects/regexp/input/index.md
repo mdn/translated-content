@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
 
 {{JSRef}} {{non-standard_header}}
 
-**`input` **非标准属性是正则表达式静态属性，含有正则表达式所匹配的字符串。`RegExp.$_`是这个属性的别名。
+**`input`** 非标准属性是正则表达式静态属性，含有正则表达式所匹配的字符串。`RegExp.$_`是这个属性的别名。
 
 ## 语法
 

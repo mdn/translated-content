@@ -1,8 +1,8 @@
 ---
 title: The Netscape XSLT/XPath Reference
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
 ---
+
 다음은 W3C의 XSLT 1.0 권고안뿐만 아니라 XPath 권고안의 알맞은 절로부터 알파벳순으로 주석을 단 요소, 축, 함수 목록입니다. XSLT 처리기 개발이 진행중이고 이 문서는 기능을 확장하는 대로 갱신할 것입니다.
 
 ### Elements

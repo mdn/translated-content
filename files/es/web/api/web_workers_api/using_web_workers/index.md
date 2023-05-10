@@ -1,7 +1,6 @@
 ---
 title: Usando Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/Guide/Performance/Usando_web_workers
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: What next?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 
 {{AddonSidebar}}
@@ -14,13 +13,13 @@ No necesitas ninguna herramienta de desarrollo ni entorno de creación en especi
 
 Si utilizas herramientas de minificación u ofuscación para obtener tu código final, deberás proporcionar tu código fuente al [proceso de revisión de AMO](/es/docs/Mozilla/Add-ons/WebExtensions/What_next_#The_review_process). Además, las herramientas que uses (aquellas para los procesos de minificación, ofuscación y creación) deberán ser de código abierto (u ofrecer un uso gratuito ilimitado) y estar disponibles para ejecutarse en la computadora del revisor (Windows, Mac o Linux). Desafortunadamente, nuestros revisores no pueden trabajar con herramientas comerciales o basadas en la web.
 
-[Aprenda más sobre las herramientas de construcción](/en-US/Add-ons/Source_Code_Submission#About_build_tools)
+[Aprenda más sobre las herramientas de construcción](/es/Add-ons/Source_Code_Submission#About_build_tools)
 
 ## Bibliotecas de Terceros
 
 Las bibliotecas de terceros son una excelente manera de agregar características complejas o funcionalidades a su extensiones para navegador rápidamente. Cuando envía una extensión al [proceso de revisión de AMO](/es/docs/Mozilla/Add-ons/WebExtensions/What_next_#The_review_process), el proceso también considerará las bibliotecas de terceros utilizadas. Para simplificar la revisión, asegúrese de descargar siempre bibliotecas de terceros desde su sitio web oficial o repositorio, y si la biblioteca está minimizada, proporcione un enlace al código fuente. Tenga en cuenta que las bibliotecas de terceros no se pueden modificar de ninguna manera.
 
-[Aprenda más sobre el envío de código fuente](/en-US/Add-ons/Source_Code_Submission)
+[Aprenda más sobre el envío de código fuente](/es/Add-ons/Source_Code_Submission)
 
 ## Acuerdo de Distribución para Complementos de Firefox
 
@@ -28,19 +27,19 @@ Las extensiones del navegador deben estar firmadas para instalarse en la versió
 
 [Lea el Acuerdo](/Add-ons/AMO/Policy/Agreement)
 
-[Aprenda más sobre la firma](/en-US/Add-ons/WebExtensions/Distribution)
+[Aprenda más sobre la firma](/es/Add-ons/WebExtensions/Distribution)
 
 ## Proceso de revisión
 
 Cuando se envíe una extensión del navegador para su firma, estará sujeta a revisión automática. También podría estar sujeto a una revisión manual, cuando la revisión automática determine que se necesita una revisión manual. La extensión de su navegador no se firmará hasta que haya pasado la revisión automática y puede revocarse su firma si no pasa la revisión manual. El proceso de revisión sigue un estricto conjunto de pautas, por lo que es fácil verificar y evitar cualquier posible problema de revisión.
 
-[Echa un vistazo a las políticas y directrices de revisión](/en-US/Add-ons/AMO/Policy/Reviews)
+[Echa un vistazo a las políticas y directrices de revisión](/es/Add-ons/AMO/Policy/Reviews)
 
 ## Entensiones de navegador destacadas AMO
 
 Si eliges enlistar tu extensión de navegador en AMO, tu extensión podría aparecer en el sitio web de AMO, en el administrador de complementos del navegador Firefox, o en cualquier otro lugar en un sitio web de Mozilla. Hemos compilado una lista de pautas sobre cómo se seleccionan las extensiones para presentarlas; al seguir estas pautas, le da a su extensión la mejor oportunidad de ser presentada.
 
-[Aprenda más sobre como destacar sus complementos](/en-US/Add-ons/AMO/Policy/Featured)
+[Aprenda más sobre como destacar sus complementos](/es/Add-ons/AMO/Policy/Featured)
 
 ## Continua tu experiencia de aprendizaje
 

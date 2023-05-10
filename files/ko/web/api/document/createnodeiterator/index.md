@@ -1,13 +1,9 @@
 ---
 title: NodeFilter
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/NodeFilter
 original_slug: Web/API/NodeFilter
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeFilter`** 인터페이스는 {{ domxref("NodeIterator") }}나 {{ domxref("TreeWalker") }}에서 노드를 거를 때 사용하는 객체를 나타냅니다. `NodeFilter`는 DOM이나 노드 순회 방법은 알지 못하며, 주어진 필터에 대해 단일 노드를 평가하는 방법만 알 수 있습니다.
@@ -61,11 +57,11 @@ while ((node = nodeIterator.nextNode())) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

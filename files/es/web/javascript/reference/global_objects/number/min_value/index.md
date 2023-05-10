@@ -1,7 +1,6 @@
 ---
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MIN_VALUE
 ---
 
@@ -37,9 +36,9 @@ if (num1 / num2 >= Number.MIN_VALUE) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.MIN_VALUE")}}
+{{Compat}}
 
 ## Ver también
 

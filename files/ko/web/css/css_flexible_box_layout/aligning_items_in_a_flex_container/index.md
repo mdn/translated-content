@@ -1,7 +1,6 @@
 ---
 title: Aligning Items in a Flex Container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ flexbox가 웹 개발자들의 관심 받게된 이유 중 하나는 웹 최초�
 
 박스 내부를 중앙 정렬 하기 위해 박스에 `align-items` 속성을 지정하면 교차 축에 대해 flex 항목을 정렬할 수 있습니다. 아래 경우, 교차 축은 수직 축입니다. `justify-content` 속성을 지정하면 flex 항목을 주축에 대해 정렬 할 수 있습니다. 아래 경우, 주축은 수평 방향입니다.
 
-![A containing element with another box centered inside it.](https://mdn.mozillademos.org/files/15627/align1.png)
+![A containing element with another box centered inside it.](align1.png)
 
 아래 예제의 코드를 살펴보세요. flex 컨테이너(역주: .box로 지정된 div 태그)나 flex 항목(역주: .box div로 지정된 div 태그)의 크기를 조절해도 flex 컨테이너 내부는 중앙 정렬됨을 보실 수 있습니다.
 
@@ -35,9 +34,9 @@ flexbox가 웹 개발자들의 관심 받게된 이유 중 하나는 웹 최초�
 
 가장 간단한 flex예시는 교차축을 이용합니다. `display: flex`를 컨테이너에 추가하게되면, 모든 자식 항목들이 열 (row), 즉 가로 방향으로 정렬이 되는 flex 항목이 됩니다. 이 경우 가장 큰 y축의 크기, 즉 높이가 가장 큰 자식 항목이 교차축의 높이를 정의하게 되고, 나머지 자식 항목들은 이 높이에 맞추어 높이가 늘어나게 됩니다. 만약 flex 컨테이너의 높이가 지정이 되어있다면, 자식 항목 내용에 상관없이 지정된 높이 만큼 모든 자식 항목들이 늘어나게됩니다.
 
-![Three items, one with additional text causing it to be taller than the others.](https://mdn.mozillademos.org/files/15628/align2.png)
+![Three items, one with additional text causing it to be taller than the others.](align2.png)
 
-![Three items stretched to 200 pixels tall](https://mdn.mozillademos.org/files/15629/align3.png)
+![Three items stretched to 200 pixels tall](align3.png)
 
 모든 항목들이 같은 높이를 갖게되는 이유는 교차축을 중심으로 정렬을 제어하는 속성인 `align-items`에 지정된 초기값이 `stretch`로 설정이 되어있기 때문입니다.
 
@@ -65,11 +64,11 @@ In this next live example, the flex container has `align-items: flex-start`, whi
 
 So far we have looked at the behaviour when our `flex-direction` is `row`, and while working in a language written top to bottom. This means that the main axis runs along the row horizontally, and our cross axis alignment moves the items up and down.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](https://mdn.mozillademos.org/files/15630/align4.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the vertical axis.](align4.png)
 
 If we change our `flex-direction` to column, `align-items` and `align-self` will align the items to the left and right.
 
-![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](https://mdn.mozillademos.org/files/15631/align5.png)
+![Three items, the first aligned to flex-start, second to center, third to flex-end. Aligning on the horizontal axis.](align5.png)
 
 You can try this out in the example below, which has a flex container with `flex-direction: column` yet otherwise is exactly the same as the previous example.
 
@@ -111,7 +110,7 @@ Now that we have seen how alignment works on the cross axis, we can take a look 
 
 In our initial example with `display: flex` on the container, the items display as a row and all line up at the start of the container. This is due to the initial value of `justify-content` being `flex-start`. Any available space is placed at the end of the items.
 
-![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](https://mdn.mozillademos.org/files/15632/align6.png)
+![Three items, each 100 pixels wide in a 500 pixel container. The available space is at the end of the items.](align6.png)
 
 The `justify-content` property accepts the same values as `align-content`.
 
@@ -135,11 +134,11 @@ If the main axis is in the block direction because `flex-direction` is set to `c
 
 Remember that with all of these alignment methods, the values of `flex-start` and `flex-end` are writing mode-aware. If the value of `justify-content` is `start` and the writing mode is left-to-right as in English, the items will line up starting at the left side of the container.
 
-![Three items lined up on the left](https://mdn.mozillademos.org/files/15638/Basics5.png)
+![Three items lined up on the left](basics5.png)
 
 However if the writing mode is right-to-left as in Arabic, the items will line up starting at the right side of the container.
 
-![Three items lined up from the right](https://mdn.mozillademos.org/files/15639/Basics6.png)
+![Three items lined up from the right](basics6.png)
 
 The live example below has the `direction` property set to `rtl` to force a right-to-left flow for our items. You can remove this, or change the values of `justify-content` to see how flexbox behaves when the start of the inline direction is on the right.
 
@@ -155,17 +154,17 @@ In this next example I have items laid out with `flex-direction: row-reverse` an
 
 While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `flex-start` will be where the start of a sentence of text would begin.
 
-![Diagram showing start on the left and end on the right.](https://mdn.mozillademos.org/files/15634/align8.png)
+![Diagram showing start on the left and end on the right.](align8.png)
 
 You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. Then `flex-start` will then be where the top of your first paragraph of text would start.
 
-![Diagram showing start at the top and end at the bottom.](https://mdn.mozillademos.org/files/15636/align10.png)
+![Diagram showing start at the top and end at the bottom.](align10.png)
 
 If you change flex-direction to one of the reverse values, then they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. `flex-start` will then change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
 
-![Diagram showing start on the right and end on the left.](https://mdn.mozillademos.org/files/15635/align9.png)
+![Diagram showing start on the right and end on the left.](align9.png)
 
-![Diagram showing end at the top and start at the bottom](https://mdn.mozillademos.org/files/15637/align11.png)
+![Diagram showing end at the top and start at the bottom](align11.png)
 
 ## Using auto margins for main axis alignment
 
@@ -173,7 +172,7 @@ We don’t have a `justify-items` or `justify-self` property available to us on 
 
 A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
 
-![Five items, in two groups. Three on the left and two on the right.](https://mdn.mozillademos.org/files/15633/align7.png)
+![Five items, in two groups. Three on the left and two on the right.](align7.png)
 
 Instead we can target item 4 and separate it from the first three items by giving it a `margin-left` value of `auto`. Auto margins will take up all of the space that they can in their axis — it is how centering a block with margin auto left and right works. Each side tries to take as much space as it can, and so the block is pushed into the middle.
 

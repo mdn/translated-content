@@ -40,11 +40,11 @@ animation.currentTime =
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
 - {{domxref("Animation.startTime")}} for the time an animation is scheduled to start.

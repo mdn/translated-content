@@ -41,7 +41,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `String`. Suite de chiffrement utilisée pour la connexion, formatée selon la [specification TLS](https://tools.ietf.org/html/rfc5246#appendix-A.5) : par exemple, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".
 - `errorMessage` {{optional_inline}}
 
-  - : `String`. S'il y a eu un problème avec le protocole TLS  (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.
+  - : `String`. S'il y a eu un problème avec le protocole TLS (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.
 
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
 
@@ -85,8 +85,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `weaknessReasons` {{optional_inline}}
   - : `String`. Si l'`état` est "faible", cela indique la raison. Actuellement, il ne peut contenir qu'une seule valeur "chiffre", ce qui indique que la suite de chiffres négociée est considérée comme faible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.SecurityInfo", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}

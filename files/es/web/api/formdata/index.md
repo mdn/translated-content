@@ -1,13 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-tags:
-  - API
-  - FormData
-  - Interfaz
-  - Referencia
-  - XMLHttpRequest
-translation_of: Web/API/FormData
 original_slug: Web/API/XMLHttpRequest/FormData
 ---
 
@@ -49,13 +42,11 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------- |
-| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | FormData definido en XHR spec |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.FormData")}}
+{{Compat}}
 
 ## Ver también
 

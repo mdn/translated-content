@@ -55,9 +55,7 @@ Reflect.setPrototypeOf(target, proto)  // false
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

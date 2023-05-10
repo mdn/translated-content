@@ -1,11 +1,6 @@
 ---
 title: Layout mode
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - Layout
-  - Referencia
-translation_of: Web/CSS/Layout_mode
 ---
 
 {{cssref}}

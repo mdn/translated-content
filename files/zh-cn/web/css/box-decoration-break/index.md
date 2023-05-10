@@ -3,7 +3,7 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **`box-decoration-break`** 属性用来定义当元素跨多行、多列或多页时，元素的片段应如何呈现。
 
@@ -39,9 +39,13 @@ box-decoration-break: unset;
 - `slice`
   - : 元素被按照盒子被切割前的原始样式渲染，之后，针对每个行/列/页面将此假设框渲染成片段。请注意，假设框对于每个片段可以是不同的，因为如果中断发生在行内方向，则它使用自己的高度，如果中断发生在块方向，则它使用自己的宽度。有关详细信息，请参阅 CSS 规范。
 - `clone`
-  - : 每个框片段与指定的边框、填充和边距独立呈现。The {{ Cssxref("border-radius") }}、{{ Cssxref("border-image") }}、 {{ Cssxref("box-shadow") }}独立地应用于每个片段，每个片段的背景也是独立绘制的，这意味着使用 {{ Cssxref("background-repeat") }}`: no-repeat` 的背景图片仍然可能重复多次。
+  - : 每个框片段与指定的边框、填充和边距独立呈现。{{ Cssxref("border-radius") }}、{{ Cssxref("border-image") }}、{{ Cssxref("box-shadow") }}独立地应用于每个片段，每个片段的背景也是独立绘制的，这意味着使用 {{ Cssxref("background-repeat") }}`: no-repeat` 的背景图片仍然可能重复多次。
 
-### 正式语法
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
@@ -85,13 +89,13 @@ box-decoration-break: clone;
 
 ![A screenshot of the rendering of an inline element styled with box-decoration-break:clone and styles given in the example](box-decoration-break-inline-clone.png)
 
-你可以 [尝试这两个例子](https://mdn.mozillademos.org/files/8179/box-decoration-break-inline.html).
+你可以[尝试这两个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)。
 
 下面是一个使用大圆角值的内联元素示例。第二个“iM”在“i”和“M”之间有一个分界线，作为比较，第一个“iM”是没有换行符的。请注意，如果您将两个片段的呈现水平地排列在一起，就会导致非分段呈现。
 
 ![A screenshot of the rendering of the second inline element example.](box-decoration-break-slice-inline-2.png)
 
-你可以 [尝试这个例子](https://mdn.mozillademos.org/files/8191/box-decoration-break-inline-extreme.html).
+你可以[尝试这个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)。
 
 ### 块状盒子片段
 
@@ -109,15 +113,13 @@ box-decoration-break: clone;
 
 ![A screenshot of the rendering of the fragmented block used in the examples styled with box-decoration-break:clone.](box-decoration-break-block-clone.png)
 
-请注意，每个片段都具有相同的 border，box-shadow 和 background。
+请注意，每个片段都具有相同的 border、box-shadow 和 background。
 
-你可以 [尝试这个例子](https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html)。
+你可以[尝试这个例子](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)。
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
@@ -125,4 +127,4 @@ box-decoration-break: clone;
 
 ## 参见
 
-- {{cssxref("break-after")}}, {{cssxref("break-before")}}, {{cssxref("break-inside")}}
+- {{cssxref("break-after")}}、{{cssxref("break-before")}}、{{cssxref("break-inside")}}

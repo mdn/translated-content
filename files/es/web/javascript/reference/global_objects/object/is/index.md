@@ -1,16 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparación
-  - Condición
-  - ECMAScript2015
-  - JavaScript
-  - Objeto
-  - condicional
-  - igualdad
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
 
@@ -98,9 +88,9 @@ if (!Object.is) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.is")}}
+{{Compat}}
 
 ## Ver también
 

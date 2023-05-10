@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reverse
 ---
 
@@ -51,9 +45,9 @@ console.log(a); // [3, 2, 1]
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Ver también
 

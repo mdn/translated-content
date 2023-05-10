@@ -1,16 +1,6 @@
 ---
 title: '<sup>: 위 첨자 요소'
 slug: Web/HTML/Element/sup
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sup
 ---
 
 {{HTMLSidebar}}
@@ -128,7 +118,7 @@ languages as follows:</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.sup")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -243,7 +243,7 @@ Parlons un peu de la {{glossary("portée")}} — un concept très important lors
 
 Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe quelle partie du code.
 
-Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
+Le JavaScript est construit de cette façon pour plusieurs raisons — mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
 
 Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers JavaScript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom :
 
@@ -351,7 +351,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     b();
     ```
 
-    Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle  `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
+    Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
 
 7. Pour finir, essayez de mettre à jour le code comme ceci :
 
@@ -374,7 +374,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     b();
     ```
 
-    Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)"  — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
+    Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)" — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
 
 > **Note :** Ces règles de portée ne s'appliquent pas aux boucles (ex. `for() { ... }`) ni aux instructions conditionnelles (ex. `if() { ... }`) — elles semblent très similaires, mais ce n'est pas la même chose ! Prenez garde de ne pas les confondre.
 
@@ -439,16 +439,4 @@ Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvra
 - [Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) — aborde certaines fonctionnalités avancées non incluses ici.
 - [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) — références avancées
 
-<!---->
-
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code — conditions](/fr/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — des blocs de code réutilisables](/fr/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux évènements](/fr/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Galerie d'images](/fr/Apprendre/JavaScript/Building_blocks/Image_gallery)

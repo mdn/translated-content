@@ -1,9 +1,7 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
-browser-compat: html.elements.input
 ---
 
 ## Resumen
@@ -70,19 +68,19 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     - `button`: Botón sin un comportamiento específico.
     - `checkbox`: Casilla de selección. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado. También se puede usar el atributo **indeterminate** (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
-    - `color`:  Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-    - `date`:  Control para introducir una fecha (año, mes y día, sin tiempo).
-    - `datetime`:  {{deprecated_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
-    - `datetime-local`:  Control para introducir fecha y hora, sin zona horaria específica.
+    - `color`: Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `date`: Control para introducir una fecha (año, mes y día, sin tiempo).
+    - `datetime`: {{deprecated_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+    - `datetime-local`: Control para introducir fecha y hora, sin zona horaria específica.
     - `email`: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
     - `file`: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo **accept** para definir los tipos de archivo que el control podrá seleccionar.
     - `hidden`: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
     - `image`: Botón de envío de formulario con gráfico. Se debe usar el atributo **src** para definir el origen de la imagen y el atributo **alt** para definir un texto alternativo. Se puede usar los atributos **height** y **width** para definir el tamaño de la imagen en píxeles.
-    - `month`:  Control para introducir un mes y año, sin zona horaria específica.
-    - `number`:  Control para introducir un número de punto flotante.
+    - `month`: Control para introducir un mes y año, sin zona horaria específica.
+    - `number`: Control para introducir un número de punto flotante.
     - `password`: Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo **maxlength** para especificar la longitud máxima del valor que se puede introducir.
     - `radio`: Botón radio. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo **name** están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.
-    - `range`:  Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
+    - `range`: Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
 
       - `min`: 0
       - `max`: 100
@@ -176,7 +174,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
 
-    El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase {{bug(654072)}}.
+    El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
 
     Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo **autocomplete** _no_ previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase [El atributo autocomplete y campos de inicio de sesión](/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields).
 
@@ -319,7 +317,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ### Introducción de archivos
 
-> **Nota:** A partir de {{Gecko("2.0")}}, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
+> **Nota:** A partir de Gecko 2.0, llamar al método `click()` en un elemento `<input>` de tipo "file" abre el selector de archivos y permite al usuario seleccionar archivos. Véase [Utilizar ficheros desde aplicaciones web](/es/docs/Using_files_from_web_applications) para ejemplos y más detalles.
 
 No se puede establecer el valor de un selector de archivos desde un script. Hacer algo como lo siguiente no tiene efecto alguno:
 
@@ -351,7 +349,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '100')}}
 
 ## Ejemplo 2: Escenario de uso común
 
@@ -369,7 +367,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Resultado
 
-{{ EmbedLiveSample('Example_2_Common_use-case_scenario', '', '200', '', 'Web/HTML/Element/input') }}
+{{EmbedLiveSample('', '', '200')}}
 
 ### Usando mozactionhint en Firefox mobile
 
@@ -381,7 +379,7 @@ Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especi
 
 El resultado es:
 
-[![mozactionhint.png](/@api/deki/files/4970/=mozactionhint.png?size=webview)](/@api/deki/files/4970/=mozactionhint.png)
+[![mozactionhint.png](mozactionhint.png?size=webview)](mozactionhint.png)
 
 ## Regionalización
 

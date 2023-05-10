@@ -15,7 +15,7 @@ var observer = new PerformanceObserver(callback);
 
 ### 引数
 
-- _`callback`_
+- `callback`
   - : 監視対象のパフォーマンスイベントが記録されたときに呼び出される `PerformanceObserverCallback` コールバック。コールバックが呼び出されるとき、その最初の引数は {{domxref("PerformanceObserverEntryList","パフォーマンスオブザーバエントリのリスト",'','true')}} で、2 番目の引数は {{domxref("PerformanceObserver","observer")}} オブジェクトです。
 
 ### 返値
@@ -42,9 +42,7 @@ observer2.observe({entryTypes: ["measure"]});
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | ステータス                                               | コメント                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ---------------------------------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#idl-def-performanceobservercallback', 'PerformanceObserver()')}} | {{Spec2('Performance Timeline Level 2')}} | `PerformanceObserver()` コンストラクターの初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

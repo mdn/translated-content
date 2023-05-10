@@ -1,7 +1,6 @@
 ---
 title: Encadenamiento opcional
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 original_slug: Web/JavaScript/Referencia/Operadores/Encadenamiento_opcional
 ---
 
@@ -170,13 +169,11 @@ console.log(customerCity); // Unknown city
 
 ## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-OptionalExpression', 'optional expression')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,16 +1,6 @@
 ---
 title: 'Tutorial Django Parte 3: Uso de modelos'
 slug: Learn/Server-side/Django/Models
-tags:
-  - Aprender
-  - Artículo
-  - Datos
-  - Modelo
-  - Principiante
-  - Tutorial
-  - django
-  - lado-servidor
-translation_of: Learn/Server-side/Django/Models
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
@@ -62,7 +52,7 @@ Con esto en mente, el diagrama de asociación UML a continuación muestra los mo
 
 El diagrama también muestra las relaciones entre los modelos, incluida su _cardinalidad_. La cardinalidad expresa la cantidad de instancias (máximo y mínimo) de cada modelo que pueden estar presentes en la relación. Por ejemplo, la línea de conexión entre los cuadros muestra que _Book_ y _Genre_ están relacionados. Los números cercanos al modelo _Book_ muestran que un libro debe tener uno o más _Genres_ (tantos como desee), mientras que los números al otro lado de la línea al lado de _Genre_ muestran que puede tener cero o más libros asociados.
 
-![LocalLibrary Model UML](https://mdn.mozillademos.org/files/15646/local_library_model_uml.png)
+![LocalLibrary Model UML](local_library_model_uml.svg)
 
 > **Nota:** La siguiente sección proporciona un manual básico que explica cómo se definen y utilizan los modelos. Mientras lo lees, considera cómo construiremos cada uno de los modelos en el diagrama de arriba.
 
@@ -472,21 +462,3 @@ En este punto nos desviaremos brevemente de la creación del sitio, y miraremos 
 - [Referencia del API QuerySet](https://docs.djangoproject.com/en/1.10/ref/models/querysets/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
-
-## En este modulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

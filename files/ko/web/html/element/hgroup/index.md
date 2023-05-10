@@ -1,13 +1,6 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/hgroup
 ---
 
 {{HTMLSidebar}}
@@ -53,7 +46,7 @@ translation_of: Web/HTML/Element/hgroup
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 규칙</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -93,7 +86,7 @@ translation_of: Web/HTML/Element/hgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.hgroup")}}
+{{Compat}}
 
 ## 같이 보기
 

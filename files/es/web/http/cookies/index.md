@@ -1,21 +1,6 @@
 ---
 title: HTTP cookies
 slug: Web/HTTP/Cookies
-tags:
-  - Almacenamiento
-  - Articulo sobre Cookies
-  - Cookies
-  - Datos
-  - Desarrollo web
-  - HTTP
-  - JavaScript
-  - Navegador
-  - Petición
-  - Protocolos
-  - Servidor
-  - privacidad
-  - seguimiento
-translation_of: Web/HTTP/Cookies
 ---
 
 {{HTTPSidebar}}

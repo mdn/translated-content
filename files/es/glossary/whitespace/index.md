@@ -1,11 +1,6 @@
 ---
 title: Espacio en blanco
 slug: Glossary/Whitespace
-tags:
-  - Glosario
-  - Gramática léxica
-  - espacioenblanco
-translation_of: Glossary/Whitespace
 original_slug: Glossary/Espacio_en_blanco
 ---
 

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/
 browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.RuntimeError()`** crée un nouvel objet `RuntimeError` WebAssembly, une erreur levée quand WebAssembly définit une [trappe](https://webassembly.org/docs/semantics/#traps).
 
@@ -58,6 +58,6 @@ try {
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

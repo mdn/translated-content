@@ -34,7 +34,7 @@ Eventos são ações ou ocorrências que acontecem no sistema que estamos desenv
 
 Como mencionado acima, **eventos** são ações ou ocorrências que acontecem no sistema que estamos desenvolvendo — o sistema irá disparar algum tipo de sinal quando o evento acontecer, além de prover um mecanismo pelo qual alguma ação automática possa ser executada (ou seja, rodar algum código) quando o evento ocorrer. Por exemplo, em um aeroporto, quando a pista está livre para um avião decolar, um sinal é repassado ao piloto, e como resultado, ele inicia a decolagem.
 
-![](https://mdn.mozillademos.org/files/14077/MDN-mozilla-events-runway.png)
+![](mdn-mozilla-events-runway.png)
 
 No caso da web, eventos são disparados dentro da janela do navegador, e tende a estarem anexados a algum item especifico nele — pode ser um único elemento, um conjunto de elementos, o HTML carregado na guia atual, ou toda a janela do navegador. Existem vários tipos diferentes de eventos que podem vir a acontecer, por exemplo:
 
@@ -519,7 +519,7 @@ Na fase de **bubbling**, ocorre exatamente o oposto:
 - O navegador verifica se o elemento que realmente foi clicado tem um manipulador de eventos `onclick` registrado nele na fase de bubbling e o executa em caso afirmativo.
 - Em seguida, ele passa para o próximo elemento ancestral imediato e faz a mesma coisa, depois o próximo, e assim por diante, até alcançar o elemento `<html>`.
 
-[![](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)
+[![](bubbling-capturing.png)](bubbling-capturing.png)
 
 (Clique na imagem para um diagrama maior)
 
@@ -570,13 +570,3 @@ Se houver algo que você não entendeu, fique à vontade para ler o artigo novam
 - [Event reference](/pt-BR/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

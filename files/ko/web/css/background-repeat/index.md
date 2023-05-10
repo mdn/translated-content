@@ -1,13 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/background-repeat
 ---
 {{CSSRef}}
 
@@ -44,7 +37,7 @@ background-repeat: unset;
 
 - `<repeat-style>`
   - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
-  
+
     <table class="standard-table">
       <tbody>
         <tr>
@@ -152,7 +145,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 160px;
     height: 70px;
 }
@@ -179,7 +172,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
+  background-image:  url(starsolid.gif),
                      url(https://developer.mozilla.org/static/img/favicon32.png);
   background-repeat: repeat-x,
                      repeat-y;

@@ -1,13 +1,6 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Enlaces
-  - HTTP
-  - HTTP Headers
-  - Links
-  - Referencia
-translation_of: Web/HTTP/Headers/Link
 ---
 
 {{HTTPSidebar}}
@@ -49,14 +42,11 @@ Link: <https://uno.ejemplo.com>; rel="preconnect", <https://dos.ejemplo.com>; re
 
 ## Especificaciones
 
-| Especificaciones                                                         | Estado   | Comentarios        |
-| ------------------------------------------------------------------------ | -------- | ------------------ |
-| {{RFC(8288, "Link Serialisation in HTTP Headers", 3)}} | IETF RFC |                    |
-| {{RFC(5988, "The Link Header Field", 5)}}                 | IETF RFC | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Link")}}
+{{Compat}}
 
 ## Ver también
 

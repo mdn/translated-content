@@ -1,15 +1,6 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/API/ClipboardEvent
 ---
 
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
@@ -32,15 +23,13 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 
 _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                               | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }} | {{ Spec2('Clipboard API') }} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -9,7 +9,7 @@ The **`Performance`** interface represents timing-related performance informatio
 
 An object of this type can be obtained by calling the {{domxref("Window.performance")}} read-only attribute.
 
-> **Nota:**This interface and its members are available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API), except where indicated below. Note that some available parts of the interface are not yet documented (see the [Performance Timeline](http://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute) and [User Timing](http://www.w3.org/TR/user-timing/#extensions-performance-interface) specs for more details.) Also note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
+> **Nota:**This interface and its members are available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API), except where indicated below. Note that some available parts of the interface are not yet documented (see the [Performance Timeline](https://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute) and [User Timing](https://www.w3.org/TR/user-timing/#extensions-performance-interface) specs for more details.) Also note that performance markers and measures are per context. If you create a mark on the main thread (or other worker), you cannot see it in a worker thread, and vice versa.
 
 ## Properties
 

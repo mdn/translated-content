@@ -1,7 +1,6 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-translation_of: Web/CSS/margin-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -67,15 +66,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin-inline-end")}}
+{{Compat}}
 
 ## Mira también
 

@@ -70,9 +70,7 @@ console.log(e.toString()); // 'hello'
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

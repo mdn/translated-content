@@ -1,12 +1,8 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-tags:
-  - 로컬 스토리지
-  - 세션 스토리지
-  - 웹 스토리지
-translation_of: Web/API/Storage/key
 ---
+
 {{APIRef("Web Storage API")}}
 
 {{domxref("Storage")}} 인터페이스의 `key()` 메서드는 숫자 `n`이 전달되면 Storage의 `n`번째 key 이름을 반환합니다. key의 순서는 user-agent에 의해 정의되므로 이 순서에 의존성이 있어서는 안됩니다.
@@ -48,7 +44,7 @@ for(var i =0; i < localStorage.length; i++){
 
 > **참고:** 실제로 쓰이는 예제를 보려면 우리의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) 를 참조하세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -89,7 +89,7 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Example", 500, 120)}}
+{{EmbedLiveSample("示例", 500, 120)}}
 
 ## 規範
 

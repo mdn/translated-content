@@ -1,14 +1,6 @@
 ---
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
-tags:
-  - API
-  - Clipboard API
-  - Experimental
-  - Portapapeles
-  - Solo lectura
-  - metodo
-translation_of: Web/API/ClipboardEvent/clipboardData
 ---
 
 {{ apiref("Clipboard API") }} {{SeeCompatTable}}
@@ -28,13 +20,11 @@ data = ClipboardEvent.clipboardData
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Clipboard API', '#widl-ClipboardEvent-clipboardData', 'ClipboardEvent.clipboardData') }} | {{ Spec2('Clipboard API') }} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.ClipboardEvent.clipboardData")}}
+{{Compat}}
 
 ## Ver también
 

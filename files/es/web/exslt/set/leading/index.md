@@ -1,11 +1,6 @@
 ---
 title: leading
 slug: Web/EXSLT/set/leading
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/set/leading
 ---
 
 {{XsltRef}}

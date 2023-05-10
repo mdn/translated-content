@@ -1,13 +1,6 @@
 ---
 title: '-webkit-mask'
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/mask
-translation_of_original: Web/CSS/-webkit-mask
 original_slug: Web/CSS/-webkit-mask
 ---
 
@@ -70,9 +63,9 @@ La propiedad `-webkit-mask` es una manera corta de establecer, en un único siti
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask")}}
+{{Compat}}
 
 ## See also
 

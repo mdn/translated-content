@@ -14,7 +14,7 @@ original_slug: Setting_up_extension_development_environment
 
 これらの変更を行う前に、下記の「開発用のプロファイル」を参考にして別個の開発用プロファイルを作成してください。
 
-- **javascript.options.showInConsole** = **true**。chrome ファイルでのエラーを [エラーコンソール](ja/Error_Console) に出力します。
+- **javascript.options.showInConsole** = **true**。chrome ファイルでのエラーを [エラーコンソール](/ja/Error_Console) に出力します。
 - **nglayout.debug.disable_xul_cache** = **true**。XUL キャッシュを無効にして、再起動しなくてもウィンドウとダイアログの変更が反映されるようにします。これは [JAR ファイルの代わりにディレクトリを使用](#using_directories_rather_than_jars) している事が前提です。この設定が有効であっても、XUL オーバーレイに対する変更を反映させるにはオーバーレイされているドキュメントを再読み込みする必要があります。
 - **browser.dom.window\.dump.enabled** = **true**。標準コンソールへの出力をする為の dump() 文の使用を可能にします。詳しくは {{ Domxref("window.dump") }} を参照してください。特権スクリプトからならば `nsIConsoleService` を使用することも出来ます。
 - **javascript.options.strict** = **true**。エラーコンソールでの厳密な警告を有効にします。開発の際にこの設定を無効にしている人は多いので、あなた自身の拡張機能の警告に加えて彼らのコードによる警告が大量に表示されるようになるでしょうから注意が必要です。[Console2](https://addons.mozilla.org/en-US/firefox/addon/1815) を使えばそれらをフィルタリングできます。

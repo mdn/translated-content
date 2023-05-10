@@ -1,7 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/entries
 ---
 
@@ -80,9 +79,9 @@ To add compatible `Object.entries` support in older environments that do not nat
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.entries")}}
+{{Compat}}
 
 ## See also
 

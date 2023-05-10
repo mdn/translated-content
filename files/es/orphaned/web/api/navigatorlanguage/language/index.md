@@ -1,19 +1,7 @@
 ---
 title: NavigatorLanguage.language
 slug: orphaned/Web/API/NavigatorLanguage/language
-tags:
-  - API
-  - Gecko
-  - Idioma
-  - Lenguaje
-  - NavigatorLanguage
-  - Propiedad
-  - Referencia
-  - Referencia DOM de Gecko
-  - Solo lectura
-translation_of: Web/API/NavigatorLanguage/language
 original_slug: Web/API/NavigatorLanguage/language
-browser-compat: api.NavigatorLanguage.language
 ---
 
 {{APIRef("HTML DOM")}}

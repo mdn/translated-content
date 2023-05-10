@@ -20,7 +20,7 @@ translation_of: Learn/JavaScript/First_steps
 
 Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme «&nbsp;qu'est-ce que JavaScript&nbsp;?&nbsp;», «&nbsp;à quoi ressemble-t-il&nbsp;?&nbsp;» et «&nbsp;de quoi est-il capable&nbsp;?&nbsp;». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
 
-## **Prérequis**
+## Prérequis
 
 Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 

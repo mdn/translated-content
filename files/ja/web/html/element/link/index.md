@@ -362,7 +362,7 @@ myStylesheet.onerror = function() {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの {{ARIARole("link")}}</td>
+      <td><code>href</code> 属性つきの <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

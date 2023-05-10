@@ -11,7 +11,7 @@ WebVR обеспечивает поддержку для использован�
 
 Любые VR-устройства, подключённые к вашему компьютеру, будут возвращены методом {{domxref("Navigator.getVRDisplays()")}}; каждое из которых будет представлено {{domxref("VRDisplay")}} объектом.
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
 
 {{domxref("VRDisplay")}} является центральным интерфейсом в API WebVR - с помощью его свойств и методов вы получить доступ к функциям:
 

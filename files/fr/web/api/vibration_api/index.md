@@ -41,7 +41,7 @@ Faire appel à {{domxref("Navigator.vibrate()")}} avec une valeur 0, un tableau 
 
 ### Vibrations continues
 
-Quelques codes de base comme  `setInterval` et `clearInterval` vont vous permettre de créer une vibration persistante:
+Quelques codes de base comme `setInterval` et `clearInterval` vont vous permettre de créer une vibration persistante:
 
 ```js
 var vibrateInterval;

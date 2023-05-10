@@ -14,7 +14,7 @@ slug: Web/API/ShadowRoot
 - {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
   - : フォーカスを持っているシャドウツリー内の {{domxref('Element')}} を返します。
 - {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : シャドウが取り付けられたときに  `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
+  - : シャドウが取り付けられたときに `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : このシャドウツリーで現在全画面モードになっている要素です。
 - {{domxref("ShadowRoot.host")}} {{readonlyinline}}

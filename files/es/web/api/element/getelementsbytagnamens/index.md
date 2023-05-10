@@ -1,7 +1,6 @@
 ---
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-translation_of: Web/API/Element/getElementsByTagNameNS
 ---
 
 {{APIRef}}

@@ -8,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/No_Checkbox_Check_Shown.html
 
 チェックボックスをタップし、チェックを入れる操作を行ってもレ点が表示されません。
 
-![](https://mdn.mozillademos.org/files/9985/0303.jpg)
+![](0303.jpg)
 
 ## 要因
 

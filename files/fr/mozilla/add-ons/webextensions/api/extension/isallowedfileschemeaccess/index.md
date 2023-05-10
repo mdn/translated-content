@@ -34,9 +34,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Firefox retournera toujours `false`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.isAllowedFileSchemeAccess")}}
+{{Compat}}
 
 ## Exemples
 

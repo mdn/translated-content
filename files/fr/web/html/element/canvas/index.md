@@ -106,7 +106,7 @@ Comme les autres éléments HTML, cet élément possède les [attributs globaux]
 - **`height`**
   - : La hauteur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 150.
 - **`moz-opaque`** {{non-standard_inline}}{{deprecated_inline}}
-  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard [`canvas.getContext('2d', { alpha: false})`](fr/docs/Web/API/HTMLCanvasElement/getContext) à la place.
+  - : Cet attribut permet d'indiquer s'il y aura de la transparence ou non. Si le canevas sait qu'il n'y aura pas de transparence, les performances de rendu pourront être améliorées. Cet attribut est uniquement pris en charge par les navigateurs Mozilla, il est préférable d'utiliser la méthode standard [`canvas.getContext('2d', { alpha: false})`](/fr/docs/Web/API/HTMLCanvasElement/getContext) à la place.
 - **`width`**
   - : La largeur de l'espace pour l'élément, exprimée en pixels CSS. La valeur par défaut est 300.
 

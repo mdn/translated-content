@@ -1,7 +1,6 @@
 ---
 title: SVG
 slug: Web/SVG
-translation_of: Web/SVG
 ---
 
 **[Comenzando con SVG](/es/docs/SVG/Tutorial)**

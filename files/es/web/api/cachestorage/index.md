@@ -1,17 +1,6 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-translation_of: Web/API/CacheStorage
 ---
 
 {{APIRef("Service Workers API")}}
@@ -20,7 +9,7 @@ The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}}
 
 The interface:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the [Service Workers](https://w3c.github.io/ServiceWorker/) spec defines it).
 
   > **Nota:** [Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
 
@@ -30,7 +19,7 @@ Use {{domxref("CacheStorage.open()")}} to obtain a {{domxref("Cache")}} instance
 
 Use {{domxref("CacheStorage.match()")}} to check if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks.
 
-You can access `CacheStorage` through the global {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}} property.
+You can access `CacheStorage` through the global {{domxref("caches", "caches")}} property.
 
 > **Nota:** CacheStorage always rejects with a `SecurityError` on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing, you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.
 
@@ -165,18 +154,16 @@ try {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                               | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.CacheStorage")}}
+{{Compat}}
 
 ## See also
 
 - [Using Service Workers](/es/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WindowOrWorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

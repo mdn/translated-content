@@ -1,23 +1,6 @@
 ---
 title: Elementos básicos de JavaScript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - CodingScripting
-  - Condicionales
-  - Evaluación
-  - Funciones
-  - Guía
-  - JavaScript
-  - Landing
-  - NeedsTranslation
-  - Principiante
-  - TopicStub
-  - bucles
-  - eventos
-  - introducción
-  - l10n:priority
-  - modulo
-translation_of: Learn/JavaScript/Building_blocks
 ---
 
 {{LearnSidebar}}
@@ -34,7 +17,7 @@ Hemos reunido un curso que incluye toda la información esencial que necesitas p
 
 Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/es/docs/Learn/CSS/Introduction_to_CSS), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
 
-> **Nota:** Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

@@ -2,6 +2,7 @@
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 이전 기사에서는 웹 클라이언트와 서버 간의 통신 모습, HTTP 요청 및 응답의 성격, 서버 측 웹 애플리케이션이 웹 브라우저의 요청에 응답하기 위해 수행해야하는 작업에 대해 설명했습니다. 이러한 지식을 바탕으로, 지금 시간에는 웹 프레임 워크가 어떻게 그러한 작업을 간단히 만드는지 탐색하고, 당신의 첫 서버측 애플리케이션을 위한 프레임 워크를 어떻게 선택하는지 의견을 드리겠습니다.
@@ -296,10 +297,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/ko/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/ko/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)

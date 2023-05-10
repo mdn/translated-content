@@ -1,13 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-tags:
-  - API
-  - DOM
-  - NecesitaCompatiblidadNavegador
-  - Nodo
-  - Propiedad
-translation_of: Web/API/Node/parentElement
 original_slug: Web/API/Node/elementoPadre
 ---
 
@@ -31,15 +24,13 @@ if (node.parentElement) {
 }
 ```
 
-## Compatibilidad en navegadores
-
-En algunos navegadores, la propiedad `elementoPadre` es solo definida en nodos que ellos mismos son {{domxref("Element")}}. En particular, esto no está definido en nodos de texto.
-
-{{Compat("api.Node.parentElement")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

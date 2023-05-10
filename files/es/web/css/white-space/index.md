@@ -1,7 +1,6 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-translation_of: Web/CSS/white-space
 ---
 
 {{CSSRef}}
@@ -151,7 +150,7 @@ p {
 .wspPreLine { white-space: pre-line; }
 ```
 
-{{EmbedLiveSample("white-space", "100%", 530, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("", "100%", 530, "", "", "")}}
 
 {{cssinfo}}
 
@@ -276,14 +275,11 @@ select.addEventListener("change", function(e) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario                                 |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------ |
-| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Precisely defines the breaking algorithms. |
-| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Definition inicial.                        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.white-space")}}
+{{Compat}}
 
 ## See also
 

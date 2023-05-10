@@ -55,13 +55,11 @@ Une [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webap
 
 ## Spécifications
 
-| Spécification                                                             | Statut | Commentaire          |
-| ------------------------------------------------------------------------- | ------ | -------------------- |
-| [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) | Draft  | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}
+{{Compat}}
 
 ## Voir aussi
 

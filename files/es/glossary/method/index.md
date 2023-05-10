@@ -1,10 +1,6 @@
 ---
 title: Método
 slug: Glossary/Method
-tags:
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Method
 original_slug: Glossary/Método
 ---
 
@@ -17,8 +13,8 @@ Un **metodo** es una {{glossary("function", "función")}} la cual es {{glossary(
 ### Aprender acerca de esto
 
 - [Método (informática)](https://es.wikipedia.org/wiki/Método_%28informática%29) en Wikipedia
-- [Definiendo un método en JavaScript](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparacion de la sintaxis tradicionas y la nueva abreviación)
+- [Definiendo un método en JavaScript](/es/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparacion de la sintaxis tradicionas y la nueva abreviación)
 
 ### Referencia Técnica
 
-- [Lista de los métodos integrados de JavaScript](/en-US/docs/Web/JavaScript/Reference/Methods_Index)
+- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference/Methods_Index)

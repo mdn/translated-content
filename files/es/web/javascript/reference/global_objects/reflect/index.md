@@ -1,14 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - NeedsTranslation
-  - Overview
-  - Reflect
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 
 {{JSRef}}
@@ -54,9 +46,9 @@ El objeto `Reflect` proporciona las siguientes funciones estáticas con los mism
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## También ver
 

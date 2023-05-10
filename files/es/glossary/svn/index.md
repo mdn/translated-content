@@ -1,10 +1,6 @@
 ---
 title: SVN
 slug: Glossary/SVN
-tags:
-  - Colaboración
-  - Glosario
-translation_of: Glossary/SVN
 ---
 
 Apache Subversion (**SVN**) es un sistema ({{Glossary("SCM")}}) de código abierto de control de almacenamiento. Permite a los desarrolladores mantener un historial de modificaciones de texto y código. Aunque SVN también puede manejar archivos binarios, no recomendamos su utilización para tales archivos.
@@ -18,4 +14,4 @@ Apache Subversion (**SVN**) es un sistema ({{Glossary("SCM")}}) de código abier
 
 ### Véase tambiém
 
-- [Guía SVN para localizadores en MDN](/en-US/docs/Mozilla/Localization/SVN_guide_for_localizers)
+- [Guía SVN para localizadores en MDN](/es/docs/Mozilla/Localization/SVN_guide_for_localizers)

@@ -26,7 +26,7 @@ slug: Web/Guide
 - [Localizações e codificação de caracteres](/pt-BR/docs/Localizations_and_character_encodings)
   - : Internamente, navegadores processam texto como Unicode. Entretanto, uma forma de representar caracteres em termos de bytes (codificação de caracteres) deve ser utilizada para transferência de texto da rede para o navegador. A recomendação da especificação HTML é utilizar UTF-8 (que é capaz de representar todo o conteúdo Unicode). Independentemente da escolha da codificação, ela precisa ser declarada no conteúdo Web.
 - [Desenvolvimento Web móvel](/pt-BR/docs/Web/Guide/Mobile)
-  - : Esta página fornece uma visão geral de algumas das principais técnicas necessárias para projetar sites que funcionam bem em dispositivos móveis. Se você está procurando informações sobre o projeto Firefox OS da Mozilla, consulte a página [Firefox OS](/en/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
+  - : Esta página fornece uma visão geral de algumas das principais técnicas necessárias para projetar sites que funcionam bem em dispositivos móveis. Se você está procurando informações sobre o projeto Firefox OS da Mozilla, consulte a página [Firefox OS](/pt-BR/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/pt-BR/Mozilla/Firefox_for_Android).
 - [Aplicativos da web progressivos](/en-US/Apps/Progressive#Core_PWA_guides)
   - : Aplicações progressivas web(PWAs) usam modernas web APIs juntamente com a estratégia tradicional de aprimoramento progressivo para criar aplicações web multiplataforma. Esses aplicações funcionam em qualquer lugar e fornecem vários recursos que proporcionam as mesmas vantagens da experiência de usuário (UX) tal como em aplicações nativas. Este conjunto de guias informa tudo o que você precisa saber sobre PWAs.
 - [Otimização e desempenho](/pt-BR/docs/Web/Guide/Performance)
@@ -36,7 +36,7 @@ slug: Web/Guide
 - [O Web Open Font Format (WOFF)](/pt-BR/docs/Web/Guide/WOFF)
   - : **WOFF** (**Web Open Font Format**) é um formato de arquivo para fontes que é livre para qualquer um usar.
 - [Usando Objetos FormData](/pt-BR/docs/Web/Guide/Using_FormData_Objects)
-  - : O objeto [`FormData`](/en/DOM/XMLHttpRequest/FormData) permite compilar um conjunto de pares de chave / valor para enviar usando XMLHttpRequest. É destinado principalmente para o envio de dados do formulário, mas pode ser utilizado de forma independente destes a fim de transmitir dados. A transmissão é realizada no mesmo formato que o método do formulário `submit()` iria usar para enviar os dados se o tipo de forma de codificação fosse definido como "multipart / form-data".
+  - : O objeto [`FormData`](/pt-BR/DOM/XMLHttpRequest/FormData) permite compilar um conjunto de pares de chave / valor para enviar usando XMLHttpRequest. É destinado principalmente para o envio de dados do formulário, mas pode ser utilizado de forma independente destes a fim de transmitir dados. A transmissão é realizada no mesmo formato que o método do formulário `submit()` iria usar para enviar os dados se o tipo de forma de codificação fosse definido como "multipart / form-data".
 - [Glossário](/pt-BR/docs/Glossary)
   - : Define vários termos técnicos relacionados à Web e Internet.
 

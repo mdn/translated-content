@@ -5,7 +5,7 @@ slug: Web/HTML/Element/datalist
 
 {{HTMLSidebar}}
 
-**_HTML_ `<datalist>`_元素_**包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
+[HTML](/zh-CN/docs/Web/HTML) **`<datalist>`** 元素包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其他表单控件可选值。
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
@@ -52,5 +52,5 @@ slug: Web/HTML/Element/datalist
 
 ## 参见
 
-- {{ HTMLElement("input") }} 元素，它更特殊的 {{ htmlattrxref("list", "input") }} 属性;
+- {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性;
 - {{ HTMLElement("option") }}元素。

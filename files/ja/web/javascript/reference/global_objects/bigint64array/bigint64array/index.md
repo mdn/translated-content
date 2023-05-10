@@ -61,9 +61,7 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName("ESDraft", "#sec-typedarray-constructors", "BigInt64Array")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

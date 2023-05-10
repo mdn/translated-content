@@ -1,11 +1,6 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
-tags:
-  - Experimental
-  - Expérimental(2)
-  - metodo
-translation_of: Web/API/Element/scrollIntoView
 ---
 
 {{ APIRef("DOM")}}

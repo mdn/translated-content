@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onselectstart
 slug: Web/API/Node/selectstart_event
-translation_of: Web/API/GlobalEventHandlers/onselectstart
 original_slug: Web/API/Document/selectstart_event
 ---
 
@@ -25,13 +24,11 @@ document.onselectstart = function() { console.log("¡Selección iniciada!"); };
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Observaciones      |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Selection API','','GlobalEventHandlers.onselectstart')}} | {{Spec2('Selection API')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onselectstart")}}
+{{Compat}}
 
 ## Ver también
 

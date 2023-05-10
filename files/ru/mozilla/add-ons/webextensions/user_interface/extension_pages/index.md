@@ -13,7 +13,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 
 В расширение можно добавить HTML-страницы, чтобы предоставить пользователю формы, помощь или другое необходимое содержимое.
 
-![Example of a simple bundled page displayed as a detached panel.](https://mdn.mozillademos.org/files/15752/bundled_page_as_panel_small.png)
+![Example of a simple bundled page displayed as a detached panel.](bundled_page_as_panel_small.png)
 
 Эти страницы получат доступ к привилегированным средствам JavaScript API — таким же как те, что доступны фоновым скриптам расширения. Но каждая из них будет открыта в своей отдельной вкладке — со своей очередью задач JavaScript, своими глобальными переменными и т. д.
 

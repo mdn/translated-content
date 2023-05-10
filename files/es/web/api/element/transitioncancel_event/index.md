@@ -1,12 +1,6 @@
 ---
 title: transitioncancel
 slug: Web/API/Element/transitioncancel_event
-tags:
-  - DOM
-  - Evento
-  - Referencia
-  - eventos
-translation_of: Web/API/HTMLElement/transitioncancel_event
 original_slug: Web/API/HTMLElement/transitioncancel_event
 ---
 

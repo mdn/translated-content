@@ -83,31 +83,31 @@ Para fazer login no site, abra o URL /_admin_ (e.g. [http://127.0.0.1:8000/admin
 
 Esta parte do site exibe todos os nossos modelos, agrupados por aplicativo instalado. Você pode clicar no nome de um modelo para ir a uma tela que lista todos os seus registros associados e clicar nos registros para editá-los. Você também pode clicar diretamente no link Adicionar ao lado de cada modelo para começar a criar um registro desse tipo.
 
-![Admin Site - Home page](https://mdn.mozillademos.org/files/13975/admin_home.png)
+![Admin Site - Home page](admin_home.png)
 
 Clique no link Adicionar à direita de Books para criar um novo livro (isso exibirá um diálogo muito parecido com o abaixo). Observe como os títulos de cada campo, o tipo de widget usado e o `help_text` (se houver) correspondem aos valores especificados no modelo.
 
 Digite valores para os campos. Você pode criar novos autores ou gêneros pressionando o botão + ao lado dos respectivos campos (ou selecione os valores existentes nas listas, se você já os criou). Quando estiver pronto, você pode pressionar **SALVAR, Salvar** **e adicionar** outro ou S**alvar e continuar editando** para salvar o registro.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 > **Nota:** Observação: neste ponto, gostaríamos que você passasse algum tempo adicionando alguns livros, autores e gêneros (por exemplo, Fantasia) à sua inscrição. Certifique-se de que cada autor e gênero inclua alguns livros diferentes (isso tornará suas visualizações de lista e detalhes mais interessantes quando forem implementadas posteriormente na série de artigos).
 
 Quando terminar de adicionar livros, clique no link **Home** no marcador superior para ser levado de volta à página principal do administrador. Então clique no link **Books** para exibir a lista atual de livros (ou em um dos outros links para ver outras listas de modelos). Agora que você adicionou alguns livros, a lista pode ser semelhante à captura de tela abaixo. O título de cada livro é exibido; este é o valor retornado no modelo do livro pelo método `__str__()` que especificamos no último artigo.
 
-![Admin Site - List of book objects](https://mdn.mozillademos.org/files/13935/admin_book_list.png)
+![Admin Site - List of book objects](admin_book_list.png)
 
 Nessa lista, você pode excluir livros marcando a caixa de seleção ao lado do livro que não deseja, selecionando a ação excluir ... na lista suspensa Ação e pressionando o botão Ir. Você também pode adicionar novos livros pressionando o botão **ADD BOOK**.
 
 Você pode editar um livro selecionando seu nome no link. A página de edição de um livro, mostrada abaixo, é quase idêntica à página "Adicionar". As principais diferenças são o título da página (Change book) e a adição de botões **Delete**, **HISTORY** e **VIEW ON SITE** (este último botão aparece porque definimos o método `get_absolute_url()` em nosso modelo).
 
-![Admin Site - Book Edit](https://mdn.mozillademos.org/files/13977/admin_book_modify.png)
+![Admin Site - Book Edit](admin_book_modify.png)
 
 Agora navegue de volta para o **Home** page (usando o link Home, a trilha de navegação) e, em seguida, **Author** e listas de **Genre** — você já deve ter criado a partir de quando adicionou os novos livros, mas fique à vontade para adicionar um pouco mais.
 
 O que você não terá é qualquer instância do livro, porque elas não são criadas a partir de livros (embora você possa criar `Book` a partir de `BookInstance` — esta é a natureza da `ForeignKey` field). Navegue de volta para a _Página inicial_ e pressione o botão _Adicionar_ associado para exibir a tela _Adicionar instância_ do livro abaixo. Observe o ID grande e globalmente exclusivo, que pode ser usado para identificar separadamente uma única cópia de um livro na biblioteca.
 
-![Admin Site - BookInstance Add](https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png)
+![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
 Crie vários desses registros para cada um de seus livros. Defina o status como _Disponível_ para pelo menos alguns registros e _Em empréstimo_ para outros. Se o status **não** for _Disponível_, defina também uma _data de vencimento_ futura.
 
@@ -194,7 +194,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 Agora navegue até a lista de autores em seu site. Os campos acima devem agora ser exibidos, assim:
 
-![Admin Site - Improved Author List](https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png)
+![Admin Site - Improved Author List](admin_improved_author_list.png)
 
 Para o nosso `Book` model nós vamos adicionalmente exibir o `author` e `genre`. O `author` é uma variável `ForeignKey` (um-para-um) relacionamento, e assim será representado pelo valor `__str__()` para o registro associado. Substitua o `BookAdmin` class com a versão abaixo.
 
@@ -219,7 +219,7 @@ Adicione o seguinte código ao seu `Book` model (**models.py**). Isso cria uma s
 
 Depois de salvar o modelo e o administrador atualizado, abra o site e vá para a página da lista Livros; você deve ver uma lista de livros como a abaixo:
 
-![Admin Site - Improved Book List](https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png)
+![Admin Site - Improved Book List](admin_improved_book_list.png)
 
 O `Genre` model (e a `Language` model, se você definiu um) ambos têm um único campo, portanto, não faz sentido criar um modelo adicional para exibir campos adicionais.
 
@@ -236,7 +236,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 A visualização de lista agora incluirá uma caixa de filtro à direita. Observe como você pode escolher datas e status para filtrar os valores:
 
-![Admin Site - BookInstance List Filters](https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png)
+![Admin Site - BookInstance List Filters](admin_improved_bookinstance_list_filters.png)
 
 ### Organizando o layout da detail view
 
@@ -258,7 +258,7 @@ O atributo `fields` lista apenas os campos que devem ser exibidos no formulário
 
 No seu site, acesse a visualização de detalhes do autor. Agora, ele deve aparecer como mostrado abaixo:
 
-![Admin Site - Improved Author Detail](https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png)
+![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
 > **Nota:** Nota: você também pode usar o atributo `exclude` para declarar uma lista de atributos a serem excluídos do formulário (todos os outros atributos no modelo serão exibidos).
 
@@ -287,7 +287,7 @@ Cada seção tem seu próprio título (ou `None`,se você não quiser um título
 
 Agora, navegue até uma visualização de instância do livro em seu website; o formulário deve aparecer como mostrado abaixo:
 
-![Admin Site - Improved BookInstance Detail with sections](https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png)
+![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 
 ### Edição inline de registros associados
 
@@ -307,7 +307,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Agora navegue até uma view pala um `Book` no seu site - na parte inferior, você verá as instâncias do livro relacionadas a este livro (imediatamente abaixo dos campos de gênero do livro):
 
-![Admin Site - Book with Inlines](https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png)
+![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 
 Nesse caso, tudo o que fizemos foi declarar nossa classe inline tabular, que apenas adiciona todos os campos do modelo embutido. Você pode especificar todos os tipos de informações adicionais para o layout, incluindo os campos a serem exibidos, sua ordem, se eles são somente leitura ou não, etc. (veja [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) para maiores informações).
 
@@ -330,21 +330,3 @@ Aprendemos muito nesta seção, então agora é hora de você tentar algumas coi
 - [O Django Admin site](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

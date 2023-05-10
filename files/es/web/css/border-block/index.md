@@ -1,7 +1,6 @@
 ---
 title: border-block
 slug: Web/CSS/border-block
-translation_of: Web/CSS/border-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -64,17 +63,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block", "border-block")}} | {{Spec2("CSS Logical Properties")}} | Definition inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-La tabla de compatibilidad en esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, visite <https://github.com/mdn/browser-compat-data> y envíanos un pull request.
-
-{{Compat("css.properties.border-block")}}
+{{Compat}}
 
 ## Mira también
 

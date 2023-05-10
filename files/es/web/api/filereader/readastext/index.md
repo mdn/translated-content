@@ -1,12 +1,6 @@
 ---
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
-tags:
-  - API
-  - File API
-  - api de lectura de archivos
-  - leer archivos
-translation_of: Web/API/FileReader/readAsText
 ---
 
 {{APIRef("File API")}}
@@ -28,13 +22,11 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 
 ## Especificaciones
 
-| Specification                                                                        | Status                       | Comment            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.FileReader.readAsText")}}
+{{Compat}}
 
 ## Vea también
 

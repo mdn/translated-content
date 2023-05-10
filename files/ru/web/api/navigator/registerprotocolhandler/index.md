@@ -39,7 +39,7 @@ navigator.registerProtocolHandler("burger",
 
 Пользователь будет уведомлен о регистрации этого протокола, для примера смотрите на изображение ниже.
 
-![](https://mdn.mozillademos.org/files/9683/protocolregister.png)
+![](protocolregister.png)
 
 > **Примечание:** "[Регистрация службы веб-почты, как mailto-обработчик](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window)", показывает как сделать это в рамках XPCOM.
 

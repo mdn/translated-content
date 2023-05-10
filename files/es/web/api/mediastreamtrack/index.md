@@ -1,7 +1,6 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-translation_of: Web/API/MediaStreamTrack
 ---
 
 {{APIRef("WebRTC")}}
@@ -64,13 +63,11 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 ## Especificaciones
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
 ## Ver támbien
 

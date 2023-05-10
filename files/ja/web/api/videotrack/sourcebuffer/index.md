@@ -19,9 +19,7 @@ var sourceBuffer = VideoTrack.sourceBuffer;
 
 ## 仕様
 
-| 仕様                                                                                                                                 | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#dom-videotrack-sourcebuffer', 'VideoTrack: sourceBuffer')}} | {{Spec2('Media Source Extensions')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

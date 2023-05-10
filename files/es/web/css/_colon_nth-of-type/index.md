@@ -1,13 +1,6 @@
 ---
 title: ':nth-of-type'
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-of-type
 ---
 
 {{CSSRef}}
@@ -74,14 +67,11 @@ p:nth-of-type(1) {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-of-type")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - Cadena
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/padStart
 ---
 
@@ -42,11 +35,11 @@ Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno ap
 
 ## Especificaciones
 
-Este método aún no ha alcanzado el estándar ECMAScript. Actualmente es una [propuesta para ECMAScript](https://github.com/tc39/proposal-string-pad-start-end).
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.padStart")}}
+{{Compat}}
 
 ## Ver también
 

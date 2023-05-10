@@ -1,12 +1,6 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 
 {{HTTPSidebar}}
@@ -184,20 +178,13 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 
 See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5) for more examples.
 
-## Espeficicaciones
+## Especificaciones
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                                      |
-| -------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Adds `disown-opener`, `manifest-src`, `navigate-to`, `report-to`, `strict-dynamic`, `worker-src`. Undeprecates `frame-src`. Deprecates `report-uri` in favor if `report-to`. |
-| {{specName("Mixed Content")}}                 | {{Spec2('Mixed Content')}}                 | Adds `block-all-mixed-content`.                                                                                                                                              |
-| {{specName("Subresource Integrity")}}         | {{Spec2('Subresource Integrity')}}         | Adds `require-sri-for`.                                                                                                                                                      |
-| {{specName("Upgrade Insecure Requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Adds `upgrade-insecure-requests`.                                                                                                                                            |
-| {{specName("CSP 1.1")}}                         | {{Spec2('CSP 1.1')}}                         | Adds `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecates `frame-src`.                                        |
-| {{specName("CSP 1.0")}}                         | {{Spec2('CSP 1.0')}}                         | Defines `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src,` and `style-src`.                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Mirar tambien
 

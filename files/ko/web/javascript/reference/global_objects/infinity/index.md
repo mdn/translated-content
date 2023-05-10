@@ -1,32 +1,29 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
 
 {{jsSidebar("Objects")}}
 
-**`Infinity`** 전역 속성은 무한대를 나타내는 숫자값입니다.
-
-{{js_property_attributes(0,0,0)}}
+**`Infinity`** 전역 속성은 무한대를 나타내는 숫자 값입니다.
 
 {{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
+## 값
+
+{{jsxref("Number.POSITIVE_INFINITY")}}와 동일한 숫자 값입니다.
+
+{{js_property_attributes(0, 0, 0)}}
+
 ## 설명
 
-`Infinity`는 전역 객체의 속성입니다. 즉, 전역 스코프의 변수입니다.
+`Infinity`는 전역 객체의 속성입니다. 즉, 전역 범위의 변수입니다.
 
-`Infinity`의 초기값은 {{jsxref("Number.POSITIVE_INFINITY")}}입니다. `Infinity`(양의 무한대)는 다른 어떤 수보다 더 큽니다.
-
-수학적인 무한대와는 일부 차이점이 있습니다. {{jsxref("Number.POSITIVE_INFINITY")}} 문서에서 더 알아보세요.
-
-`Infinity`는 ECMAScript 5 명세에 따라 읽기 전용입니다.
+`Infinity`(양의 무한대)는 다른 어떤 수보다 더 큽니다. 수학적인 무한대와는 일부 차이점이 있습니다. {{jsxref("Number.POSITIVE_INFINITY")}} 문서에서 더 알아보세요.
 
 ## 예제
+
+### Infinity 사용하기
 
 ```js
 console.log(Infinity);          /* Infinity */

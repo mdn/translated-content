@@ -1,12 +1,6 @@
 ---
 title: Notification.body
-slug: Web/API/notification/body
-tags:
-  - API
-  - API Notificaciones
-  - Javascript Notificador
-  - Notificaciones
-translation_of: Web/API/Notification/body
+slug: Web/API/Notification/body
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

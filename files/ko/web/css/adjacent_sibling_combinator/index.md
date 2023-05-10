@@ -1,11 +1,6 @@
 ---
 title: 인접 형제 결합자
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/인접_형제_선택자
 ---
 

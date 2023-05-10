@@ -76,9 +76,7 @@ function check_PerformanceEntry(obj) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | ステータス                                               | コメント                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ----------------------------- |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry-tojson', 'toJSON')}} | {{Spec2('Performance Timeline Level 2')}} | `toJSON()` メソッドの初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

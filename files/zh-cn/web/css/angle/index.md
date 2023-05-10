@@ -3,7 +3,7 @@ title: <angle>
 slug: Web/CSS/angle
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<angle>`** 用于表示角的大小，单位为度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）。在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些方法等场景中有所应用。
 
@@ -26,11 +26,11 @@ slug: Web/CSS/angle
 
 ## 示例
 
-| ![Angle90.png](/@api/deki/files/5704/=Angle90.png)           | 直角：`90deg = 100grad = 0.25turn ≈ 1.5708rad`               |
+| ![Angle90.png](angle90.png)           | 直角：`90deg = 100grad = 0.25turn ≈ 1.5708rad`               |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Angle180.png](/@api/deki/files/5706/=Angle180.png)         | 平角：`180deg = 200grad = 0.5turn ≈ 3.1416rad`               |
-| ![AngleMinus90.png](/@api/deki/files/5707/=AngleMinus90.png) | 直角（逆时针）：`-90deg = -100grad = -0.25turn ≈ -1.5708rad` |
-| ![Angle0.png](/@api/deki/files/5708/=Angle0.png)             | 零角：`0 = 0deg = 0grad = 0turn = 0rad`                      |
+| ![Angle180.png](angle180.png)         | 平角：`180deg = 200grad = 0.5turn ≈ 3.1416rad`               |
+| ![AngleMinus90.png](angleminus90.png) | 直角（逆时针）：`-90deg = -100grad = -0.25turn ≈ -1.5708rad` |
+| ![Angle0.png](angle0.png)             | 零角：`0 = 0deg = 0grad = 0turn = 0rad`                      |
 
 ## 规范
 

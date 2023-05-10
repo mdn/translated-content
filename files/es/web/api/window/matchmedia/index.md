@@ -1,15 +1,6 @@
 ---
 title: Window.matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - JavaScript
-  - Media Queries
-  - Referencia
-  - Window
-  - metodo
-translation_of: Web/API/Window/matchMedia
 ---
 
 {{APIRef}}
@@ -40,13 +31,11 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) pa
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | Definición initial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## Ver también
 

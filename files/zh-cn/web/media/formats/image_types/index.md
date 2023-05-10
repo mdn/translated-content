@@ -382,7 +382,7 @@ The ICO (Microsoft Windows icon) file format was designed by Microsoft for deskt
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each. Following the directory comes the data for the icons. Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header). If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
-> **警告：** ICO files _should not_ be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in {{SectionOnPage("/en-US/docs/Web/HTML/Element/link", "Providing icons for different usage contexts")}}.
+> **警告：** ICO files _should not_ be used in web content. Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标).
 
 <table class="standard-table">
   <tbody>

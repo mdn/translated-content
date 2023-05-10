@@ -1,10 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/length
 ---
 
 {{CSSRef}}
@@ -13,7 +9,7 @@ translation_of: Web/CSS/length
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<length>` denota medidas de distancia. Es un valor {{cssxref("&lt;number&gt;")}} seguido por una unidad de longitud (`px`, `em`, `pc`, `in`, `mm`, …). Al igual que en cualquier dimensión CSS, no debe haber espacio entre la unidad y el número. La unidad de longitud es opcional después del valor {{cssxref("&lt;number&gt;")}} `0`.
 
-Muchas propiedades CSS ([CSS properties](es/CSS_Reference)) reciben valores `<length>`, como por ejemplo {{ Cssxref("width") }}, {{ Cssxref("margin-top") }}, y {{ Cssxref("font-size") }}.
+Muchas propiedades CSS ([CSS properties](/es/CSS_Reference)) reciben valores `<length>`, como por ejemplo {{ Cssxref("width") }}, {{ Cssxref("margin-top") }}, y {{ Cssxref("font-size") }}.
 
 Para algunas propiedades, el uso de longitudes negativas es un error de sintaxis, mientras que para algunas propiedades está permitido. Nótese que aunque los valores {{cssxref("&lt;percentage&gt;")}} también son dimensiones CSS y son aceptadas por algunas propiedades CSS que aceptan valores `<length>`, no son valores `<length>` en sí.
 
@@ -101,12 +97,8 @@ Algunos ejemplos específicos:
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios                                                                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Values', '#lengths', '&lt;length&gt;')}}                 | {{Spec2('CSS3 Values')}} | Añadidos `ch`, `rem`, `vw`, `vh`, `vmin`, `vmax` y `q`                                  |
-| {{SpecName('CSS2.1', 'syndata.html#length-units', '&lt;length&gt;')}} | {{Spec2('CSS2.1')}}         | `pt`, `pc`, `px` son definidos explícitamente (fueron definidos implícitamente en CSS1) |
-| {{SpecName('CSS1', '#length-units', '&lt;length&gt;')}}                     | {{Spec2('CSS1')}}         | Definición inicial                                                                      |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.length")}}
+{{Compat}}

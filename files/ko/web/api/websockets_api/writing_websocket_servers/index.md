@@ -1,9 +1,9 @@
 ---
 title: 웹소켓 서버 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 original_slug: WebSockets/Writing_WebSocket_servers
 ---
+
 {{APIRef("Websockets API")}}
 
 ## 개요
@@ -84,7 +84,7 @@ Either the client or the server can choose to send a message at any time — tha
  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
 +-+-+-+-+-------+-+-------------+-------------------------------+
 |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-|I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+|I|S|S|S| (4)   |A|     (7)     |             (16/64)           |
 |N|V|V|V|       |S|             |   (if payload len==126/127)   |
 | |1|2|3|       |K|             |                               |
 +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +

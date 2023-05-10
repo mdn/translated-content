@@ -26,7 +26,7 @@ O Objeto sendo selado.
 
 Por padrão, objetos são {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (novas propriedades podem ser adicionadas à eles). Selar um objeto evita que novas propriedades sejam adicionadas e marca todas as propriedades existentes como não configuráveis. Isto tem o efeito de tornar as propriedades no objeto fixas e imutáveis. Tornando todas as propriedades não configuráveis também evita que as mesmas sejam convertidas de propriedades de dados para propriedades de acesso e vice-versa, mas não evita que os valores das propriedades de dados sejam alterados. A tentativa de deletar ou adicionar propriedades à um objeto selado, ou converter uma propriedade de dado para uma propriedade de acesso ou vice-versa, irá falhar, seja silenciosamente como jogando o erro {{jsxref("TypeError")}} (mais comumente, mas não exclusivamente, quando em modo rigoroso {{jsxref("Strict_mode", "strict mode", "", 1)}} de código).
 
-A cadeia de prototipação permanece intocada. Entretanto, a propriedade {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} é selada também.
+A cadeia de prototipação permanece intocada. Entretanto, a propriedade [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} é selada também.
 
 Retorna a referência ao Objeto passado.
 

@@ -10,7 +10,7 @@ API Web Authentication - расширение [Credential Management API](/ru/do
 
 ## Принципы и использование веб-аутентификации
 
-API Web Authentication (также называемое WebAuthn) использует {{interwiki("wikipedia", "Public-key_cryptography", "ассиметричную криптографию (систему с открытым ключом)")}} вместо паролей или SMS-сообщений для регистрации, входа и {{interwiki("wikipedia", "Multi-factor_authentication", "двухфакторной аутентификации")}} на веб-сайтах. Это устраняет многие значительные проблемы безопасности, такие как {{interwiki("wikipedia", "Phishing", "фишинг")}}, {{interwiki("wikipedia", "Data_breach", "утечки данных")}} и атаки на SMS или иные методы двухфакторной аутентификации, при этом сильно упрощая использование, т.к. пользователям не нужно запоминать десятки сложных паролей.
+API Web Authentication (также называемое WebAuthn) использует [криптосистему с открытым ключом](https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%81_%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D1%8B%D0%BC_%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%BC) вместо паролей или SMS-сообщений для регистрации, входа и [многофакторной аутентификации](https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B3%D0%BE%D1%84%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%B0%D1%83%D1%82%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F) на веб-сайтах. Это устраняет многие значительные проблемы безопасности, такие как [фишинг](https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D1%88%D0%B8%D0%BD%D0%B3), [утечка данных](https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D1%81%D0%B0%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF) и атаки на SMS или иные методы двухфакторной аутентификации, при этом сильно упрощая использование, т.к. пользователям не нужно запоминать десятки сложных паролей.
 
 На многих сайтах уже есть страницы для регистрации и входа в существующие учётные записи, и Web Authentication API может быть как заменой, так и дополнением для них. Как и остальные виды [Credential Management API](/ru/docs/Web/API/Credential_Management_API), Web Authentication API содержит два базовых метода: для регистрации и для входа:
 
@@ -30,7 +30,7 @@ In order to understand how the create() and get() methods fit into the bigger pi
 
 A typical registration process has six steps, as illustrated in Figure 1 and described further below. This is a simplification of the data required for the registration process that is only intended to provide an overview. The full set of required fields, optional fields, and their meanings for creating a registration request can be found in the {{domxref("PublicKeyCredentialCreationOptions")}} dictionary. Likewise, the full set of response fields can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAttestationResponse")}} interface). Note most JavaScript programmers that are creating an application will only really care about steps 1 and 5 where the create() function is called and subsequently returns; however, steps 2, 3, and 4 are essential to understanding the processing that takes place in the browser and authenticator and what the resulting data means.
 
-![Web Authentication API registration component and dataflow diagram](https://mdn.mozillademos.org/files/16189/WebAuthn_Registration_r4.png)
+![Web Authentication API registration component and dataflow diagram](webauthn_registration_r4.png)
 
 _Figure 1 - a diagram showing the sequence of actions for a web authentication registration and the essential data associated with each action._
 
@@ -54,7 +54,7 @@ The registration steps are:
 
 After a user has registered with web authentication, they can subsequently authenticate (a.k.a. - login or sign-in) with the service. The authentication flow looks similar to the registration flow, and the illustration of actions in Figure 2 may be recognizable as being similar to the illustration of registration actions in Figure 1. The primary differences between registration and authentication are that: 1) authentication doesn't require user or relying party information; and 2) authentication creates an assertion using the previously generated key pair for the service rather than creating an attestation with the key pair that was burned into the authenticator during manufacturing. Again, the description of authentication below is a broad overview rather than getting into all the options and features of the Web Authentication API. The specific options for authenticating can be found in the {{domxref("PublicKeyCredentialRequestOptions")}} dictionary, and the resulting data can be found in the {{domxref("PublicKeyCredential")}} interface (where {{domxref("PublicKeyCredential.response")}} is the {{domxref("AuthenticatorAssertionResponse")}} interface) .
 
-![WebAuthn authentication component and dataflow diagram](<https://mdn.mozillademos.org/files/15802/MDN%20Webauthn%20Authentication%20(r1).png>)
+![WebAuthn authentication component and dataflow diagram](<mdn_webauthn_authentication_(r1).png>)
 
 _Figure 2 - similar to Figure 1, a diagram showing the sequence of actions for a web authentication and the essential data associated with each action._
 

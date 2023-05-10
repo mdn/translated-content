@@ -1,17 +1,6 @@
 ---
 title: Google Chrome
 slug: Glossary/Google_Chrome
-tags:
-  - Chrome
-  - Chrome canary
-  - Chrome stable
-  - Chromium
-  - Glosario
-  - Navegador
-  - Web
-  - google
-  - google chrome
-translation_of: Glossary/Google_Chrome
 ---
 
 _Google Chrome_ es un [navegador](/es/docs/Glossary/Browser) web gratuito desarrollado por Google. Está basado en el proyecto open source (código abierto / software libre) [Chromium](http://www.chromium.org/). Algunas de las principales diferencias se encuentran en [Chromium wiki](https://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome). El motor de diseño que utilizan ambos es una copia del motor [Blink](/es/docs/Glossary/Blink) de [WebKit](/es/docs/Glossary/WebKit). Cabe señalar que en la versión de Chrome en iOS se utiliza WebKit y no Blink.

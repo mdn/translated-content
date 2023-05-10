@@ -1,12 +1,6 @@
 ---
 title: <dt>
 slug: Web/HTML/Element/dt
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/dt
 ---
 
 {{HTMLSidebar}}
@@ -59,7 +53,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/term_role'><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
@@ -86,7 +80,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dt")}}
+{{Compat}}
 
 ## 같이 보기
 

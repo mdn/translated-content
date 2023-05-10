@@ -1,11 +1,6 @@
 ---
 title: 사용자 에이전트를 이용한 브라우저 감지
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-tags:
-  - Compatibility
-  - HTTP
-  - Web Development
-translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/User_agent를_이용한_브라우저_감지
 ---
 

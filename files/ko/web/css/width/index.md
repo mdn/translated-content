@@ -1,11 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/width
 ---
 
 {{CSSRef}}

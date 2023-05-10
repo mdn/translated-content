@@ -124,7 +124,7 @@ RGB запись в виде функции, как и шестнадцатер�
 
 ### HSL запись в виде функции
 
-Дизайнеры часто предпочитают использовать цветовую модель {{interwiki("wikipedia", "HSL and HSV", "HSL")}}, где H - Hue (оттенок), S - Saturation (насыщенность), L - Lightness or Luminance (светлота). В браузерах HSL цвет представлен через запись HSL в виде функции. CSS функция `hsl()` очень похожа на `rgb()` функцию.
+Дизайнеры часто предпочитают использовать цветовую модель [HSL](https://ru.wikipedia.org/wiki/HSL), где H - Hue (оттенок), S - Saturation (насыщенность), L - Lightness or Luminance (светлота). В браузерах HSL цвет представлен через запись HSL в виде функции. CSS функция `hsl()` очень похожа на `rgb()` функцию.
 
 ![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
 
@@ -309,7 +309,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 
 ## Предоставляем возможность пользователю выбрать цвет
 
-There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -381,7 +381,7 @@ Coming up with just the right colors can be tricky, especially without training 
 
 #### Base color
 
-The first step is to choose your **base color**. This is the color that in some way defines your web site or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
+The first step is to choose your **base color**. This is the color that in some way defines your web site or the subject matter of the site. Just as we associate green with the beverage Mountain Dew and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
 
 - A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
 - A color that comes from imagery associated with what your content is about. If you're creating a web site about a given item or product, choose a color that's physically present on that item.
@@ -411,14 +411,12 @@ A full review of color theory is beyond the scope of this article, but there are
 
 - [Color Science](https://www.khanacademy.org/partner-content/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
   - : An online course which introduces concepts such as what color is, how it's percieved, and how to use colors to express ideas. Presented by Pixar artists and designers.
-- {{interwiki("wikipedia", "Color theory")}} on Wikipedia
-  - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.
 
 ### Color and accessibility
 
 There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a web site or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
 
-You should do at least basic research into {{interwiki("wikipedia", "color blindness")}}. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
+You should do at least basic research into color blindness. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
 
 > **Примечание:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
 
@@ -436,23 +434,23 @@ Using an eyedropper tool, we identify a color we like and determine that the col
 
 Having selected our base color, we need to build out our palette. We decide to use [Paletteon](http://www.paletteon.com/) to come up with the other colors we need. Upon opening Paletton, we see:
 
-![Right after loading Paletton.](https://mdn.mozillademos.org/files/15451/paletton1.png)
+![Right after loading Paletton.](paletton1.png)
 
 Next, we enter our color's hex code (`D79C7A`) into the "Base RGB" box at the bottom-left corner of the tool:
 
-![After entering base color](https://mdn.mozillademos.org/files/15453/paletton2.png)
+![After entering base color](paletton2.png)
 
 We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is `#508D7C`.
 
-![Now with complementary colors included.](https://mdn.mozillademos.org/files/15455/paletton3.png)
+![Now with complementary colors included.](paletton3.png)
 
 If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:
 
-![Triad color scheme selected](https://mdn.mozillademos.org/files/15457/paletton4.png)
+![Triad color scheme selected](paletton4.png)
 
 That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's `#556E8D`. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:
 
-![Triad color scheme selected](https://mdn.mozillademos.org/files/15459/paletton-color-detail.png)
+![Triad color scheme selected](paletton-color-detail.png)
 
 Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.
 

@@ -1,17 +1,6 @@
 ---
 title: Manejo de archivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Archivos
-  - Guía
-  - HTML
-  - Novato
-  - Principiante
-  - Scripting
-  - Sitios Web
-  - l10n:priority
-  - teorias
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/Manejando_los_archivos
 ---
 
@@ -70,7 +59,7 @@ Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de ar
 4. Inserta la ruta del archivo en tu código HTML entre las comillas dobles del código `src=""`.
 5. Guarda tu archivo HTML, luego cárgalo en tu navegador web (haz doble clic en el archivo). ¡Deberías ver tu nueva página web mostrando tu imagen!
 
-![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](website-screenshot.png)
 
 Algunas reglas generales para las rutas de archivo:
 
@@ -87,17 +76,6 @@ Por ahora, esto es todo lo que necesitas saber.
 
 Eso es todo por ahora. La estructura de tu directorio debería verse así:
 
-![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
-- [¿Cómo se verá tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Manejo de archivos](/es/Learn/Getting_started_with_the_web/Manejando_los_archivos)
-- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicar tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

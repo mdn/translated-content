@@ -1,13 +1,6 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-elemento
-  - Referencia
-  - Web
-translation_of: Web/CSS/::spelling-error
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -41,13 +34,11 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## Ver también
 

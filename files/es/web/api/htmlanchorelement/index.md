@@ -1,12 +1,6 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-tags:
-  - API
-  - HTML DOM
-  - Interfaz
-  - Referencia
-translation_of: Web/API/HTMLAnchorElement
 ---
 
 {{APIRef ("HTML DOM")}}
@@ -88,17 +82,11 @@ Los métodos blur () y focus () se heredan de {{domxref ("HTMLElement")}} de HTM
 
 ## Especificaciones
 
-| Epecificacion                                                                                                                            | Estado                               | Commentario                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Se agregó la propiedad de referencia.                                                                                                                                                                                                                                                                                                                                   |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}}                 | {{Spec2('HTML WHATWG')}}     | Se agregó el refe. Se agregó la siguiente propiedad: descargar. Técnicamente, las propiedades relacionadas con URL, medios, host, nombre de host, ruta, puerto, protocolo, búsqueda y hash, se han movido a la interfaz {{domxref ("URLUtils")}}, y HTMLAreaElement implementa esta propiedad de interface.                                                     |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-a-element", "HTMLAnchorElement")}}                 | {{Spec2('HTML5 W3C')}}         | Los métodos blur () y focus (), así como las propiedades tabindex y accessKey, ahora están definidos en {{domxref ("HTMLElement")}}. Las siguientes propiedades ahora están obsoletas: charset, coords, name, rev y shape. Se han agregado las siguientes propiedades: hash, host, nombre de host, medios, ruta, puerto, protocolo, relList, búsqueda y texto. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-48250443', 'HTMLAnchorElement')}}                                         | {{Spec2('DOM2 HTML')}}         | Sin cambios desde {{SpecName ("DOM1")}}.                                                                                                                                                                                                                                                                                                                         |
-| {{SpecName('DOM1', 'level-one-html.html#ID-48250443', 'HTMLAnchorElement')}}                                     | {{Spec2('DOM1')}}             | definicion Inicial .                                                                                                                                                                                                                                                                                                                                                    |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLAnchorElement")}}
+{{Compat}}
 
 ## Ver tambien
 

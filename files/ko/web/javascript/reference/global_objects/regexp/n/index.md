@@ -1,7 +1,6 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -50,7 +49,7 @@ RegExp.$2; // "Smith"
 
 Non-standard. Not part of any current specification.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

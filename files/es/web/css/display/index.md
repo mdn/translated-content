@@ -1,11 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS Display
-  - Propiedades CSS
-translation_of: Web/CSS/display
 ---
 
 {{CSSRef}}
@@ -221,18 +216,11 @@ Para más información por favor referirse a los siguientes artículos:
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentario                                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName ('CSS3 Display', '# the-display-properties', 'display')}} | {{Spec2 ('Pantalla CSS3')}}     | Agregado `run-in`, `flow`, `flow-root`, `contents`, y los valores de varias palabras clave. |
-| {{SpecName ('CSS3 Ruby', '# ruby-display', 'display')}}                     | {{Spec2 ('CSS3 Ruby')}}         | Agregado `ruby`, `ruby-base`, `ruby-text`, `ruby-base-container`, y `ruby-text-container`.  |
-| {{SpecName ('CSS3 Grid', '# grid-containers', 'display')}}                 | {{Spec2 ('Cuadrícula CSS3')}} | Se agregaron los valores del modelo de cuadrícula.                                          |
-| {{SpecName ('CSS3 Flexbox', '# flex-containers', 'display')}}             | {{Spec2 ('CSS3 Flexbox')}}     | Se agregaron los valores del modelo de caja flexible.                                       |
-| {{SpecName ('CSS2.1', 'visuren.html # display-prop', 'display')}}     | {{Spec2 ('CSS2.1')}}             | Se agregaron los valores del modelo de tabla e `inline-block.`                              |
-| {{SpecName ('CSS1', '#display', 'display')}}                                 | {{Spec2 ('CSS1')}}                 | Definición inicial. Valores básicos: `none`, `block`, `inline`, y `list-item`.              |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.display")}}
+{{Compat}}
 
 ## Ver también
 

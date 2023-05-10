@@ -1,13 +1,6 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
-tags:
-  - Class
-  - InternalError
-  - JavaScript
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
-browser-compat: javascript.builtins.InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}

@@ -56,12 +56,12 @@ slug: Web/HTML/Element/li
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("radio")}}, {{ARIARole("separator")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role">treeitem</a></code>
       </td>
     </tr>
     <tr>
@@ -137,11 +137,7 @@ slug: Web/HTML/Element/li
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                             |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                             |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | `type` 属性を非推奨にした。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

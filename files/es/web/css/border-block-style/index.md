@@ -1,7 +1,6 @@
 ---
 title: border-block-style
 slug: Web/CSS/border-block-style
-translation_of: Web/CSS/border-block-style
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -58,15 +57,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-style", "border-block-style")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-style")}}
+{{Compat}}
 
 ## Mira también
 

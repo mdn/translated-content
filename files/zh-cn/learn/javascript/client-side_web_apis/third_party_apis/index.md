@@ -87,7 +87,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 其他 API 的包含方式稍微不同，但是大多数 API 的模式都非常相似。
 
-需要密钥的原因是：所用使用 API 功能的人都需要承担责任。当开发者注册一个密钥之后，如果他们开始恶意使用 API（例如跟踪位置，试图用大量的垃圾邮件干扰用户正常工作），此时 API 的提供者可以采取措施。最简单的措施是撤销开发者的 API 的使用权。
+需要密钥的原因是：所有使用 API 功能的人都需要承担责任。当开发者注册一个密钥之后，如果他们开始恶意使用 API（例如跟踪位置，试图用大量的垃圾邮件干扰用户正常工作），此时 API 的提供者可以采取措施。最简单的措施是撤销开发者的 API 的使用权。
 
 ## 扩展 the Google Maps 示例
 
@@ -219,7 +219,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### 将 API 连接到应用
 
@@ -426,7 +426,7 @@ function displayResults(json) {
 
 ![](youtube-example.png)
 
-本文不会对该示例做过多的叙述 — [源码](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) 中有详细的注释。
+本文不会对该示例做过多的叙述，[源码](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube)中有详细的注释。
 
 运行源码需要：
 
@@ -439,13 +439,3 @@ function displayResults(json) {
 本文介绍了如何使用第三方 API 给网页添加功能。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

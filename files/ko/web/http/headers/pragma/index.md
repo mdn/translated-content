@@ -1,14 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Deprecated
-  - HTTP
-  - 삭제됨
-  - 요청
-  - 캐싱
-  - 헤더
-translation_of: Web/HTTP/Headers/Pragma
 ---
 
 {{HTTPSidebar}}
@@ -56,17 +48,15 @@ Pragma: no-cache
 Pragma: no-cache
 ```
 
-## 세부사항
+## 명세서
 
-| Specification                                | Title                                           |
-| -------------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
 ## 브라우저 호환성
 
 <p class="hidden">이 페이지의 호환성 테이블은 특정하게 구조화된 데이터를 기반으로 만들어졌다. 당신이 만일 이 데이터에 기여하고 싶다면 아래의 링크를 따라가 우리에게 Pull Request 를 보내면 된다.</p>
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## 그외 볼것들
 

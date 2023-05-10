@@ -580,7 +580,7 @@ ICO ファイルには、複数のアイコンを含むことができ、それ�
 ICO ファイル内で PNG を使用する方法は Windows Vista までは対応しておらず、対応が十分でない可能性があるため、 ICO ファイルを使用する場合は、 BMP 形式を使用することをお勧めします。
 
 > **警告:** ICO ファイルは、ウェブコンテンツに使用すべきではありません。
-> また、ファビコンでの利用は {{SectionOnPage("/ja/docs/Web/HTML/Element/link", "異なる利用場面のアイコンの提供")}} で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
+> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Element/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
 
 <table class="standard-table">
   <tbody>

@@ -1,7 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-translation_of: Web/HTTP/Methods/PATCH
 ---
 
 {{HTTPSidebar}}
@@ -77,7 +76,7 @@ Content-Length: 100
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

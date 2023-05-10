@@ -1,7 +1,6 @@
 ---
 title: document.characterSet
 slug: Web/API/Document/characterSet
-translation_of: Web/API/Document/characterSet
 ---
 
 {{ ApiRef("DOM") }}

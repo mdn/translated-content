@@ -1,15 +1,6 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - CSS
-  - Layout
-  - NeedsContent
-  - Pantalla completa
-  - Pseudo Elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::backdrop
 ---
 
 {{CSSRef}} {{SeeCompatTable}}
@@ -22,13 +13,11 @@ No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones 
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Ver además
 

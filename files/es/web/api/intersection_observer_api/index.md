@@ -1,7 +1,6 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-translation_of: Web/API/Intersection_Observer_API
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -500,13 +499,11 @@ Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemen
 
 ## Especificaciones
 
-| Especificación                                   | Estado                                       | Comentario |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Ver también
 

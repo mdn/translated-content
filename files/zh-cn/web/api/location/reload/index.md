@@ -7,7 +7,7 @@ slug: Web/API/Location/reload
 
  **`location.reload()`** 方法用来刷新当前页面，就像刷新按钮一样。
 
-该方法在跨域调用（执行该方法的脚本文件的域和 {{domxref("Location")}} 对象所在页面的域不同）时，将会抛出  `SECURITY_ERROR` {{domxref("DOMException")}} 异常。有关更多信息，请参阅[浏览器的同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
+该方法在跨域调用（执行该方法的脚本文件的域和 {{domxref("Location")}} 对象所在页面的域不同）时，将会抛出 `SECURITY_ERROR` {{domxref("DOMException")}} 异常。有关更多信息，请参阅[浏览器的同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
 ## 语法
 

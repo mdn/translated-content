@@ -1,13 +1,6 @@
 ---
 title: '502'
 slug: conflicting/Web/HTTP/Status/502
-tags:
-  - '502'
-  - Errores HTTP
-  - Glosario
-  - Infraestructura
-  - navegación
-translation_of: Glossary/502
 original_slug: Glossary/502
 ---
 

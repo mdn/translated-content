@@ -1,15 +1,6 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-tags:
-  - Archivo
-  - Entidades Archivo y Directorio de la API
-  - File API
-  - Propiedad
-  - Referencia
-  - Solo lectura
-  - Web
-translation_of: Web/API/File/webkitRelativePath
 ---
 
 {{APIRef("File API")}}{{non-standard_header}}
@@ -58,15 +49,11 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## Especificaciones
 
-| Especificacion                                                                                                       | Estado                                   | Comentario              |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-| {{ SpecName('File System API', '#dom-file-webkitrelativepath', 'webkitRelativePath') }} | {{ Spec2('File System API') }} | Especificacion inicial. |
-
-Esta API no tiene especificacion W3C o WHATWG.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.webkitRelativePath")}}
+{{Compat}}
 
 ## Vea también
 

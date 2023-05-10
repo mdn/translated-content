@@ -1,15 +1,7 @@
 ---
 title: 'Document: keyup event'
 slug: conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
-tags:
-  - DOM
-  - Document
-  - Event
-  - KeyboardEvent
-  - Reference
-  - keyup
 original_slug: Web/API/Document/keyup_event
-browser-compat: api.Document.keyup_event
 ---
 
 {{APIRef}}

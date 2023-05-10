@@ -1,13 +1,6 @@
 ---
 title: Tecnología para desarrolladores web
 slug: Web
-tags:
-  - API
-  - Desarrollo web
-  - Landing
-  - Lanzamiento
-  - Web
-translation_of: Web
 ---
 
 La Web abierta presenta increíbles oportunidades para los desarrolladores. Para aprovechar al máximo estas tecnologías, debes saber cómo utilizarlas. A continuación, encontrarás enlaces a nuestra documentación de tecnología web.

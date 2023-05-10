@@ -1,14 +1,6 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Propiedad
-  - Referencia
-  - Web Storage
-  - WindowLocalStorage
-  - localStorage
-translation_of: Web/API/Window/localStorage
 ---
 
 {{APIRef()}}
@@ -67,13 +59,11 @@ localStorage.clear();
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-localstorage', 'localStorage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,7 +1,6 @@
 ---
 title: PushManager.supportedContentEncodings
 slug: Web/API/PushManager/supportedContentEncodings
-translation_of: Web/API/PushManager/supportedContentEncodings
 ---
 
 {{SeeCompatTable}}{{APIRef("Push API")}}
@@ -18,12 +17,10 @@ var encodings[] = PushManager.supportedContentEncodings
 
 Un _array_ de _Strings_
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Push API','#dom-pushmanager-supportedcontentencodings','supportedContentEncodings')}} | {{Spec2('Push API')}} | Initial definition. |
+{{Specifications}}
 
-## Browser Compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.PushManager.supportedContentEncodings")}}
+{{Compat}}

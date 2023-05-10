@@ -54,9 +54,7 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     | 備考                |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Resource Timing 3', '#sec-timing-allow-origin', 'Timing-Allow-Origin')}} | {{Spec2("Resource Timing 3")}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

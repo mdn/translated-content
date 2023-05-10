@@ -1,12 +1,6 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Funciones
-  - Guia(2)
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Functions
 original_slug: Web/JavaScript/Referencia/Funciones
 ---
 
@@ -57,7 +51,7 @@ Los parámetros en la llamada a una función son los argumentos de la función. 
  window.alert(mycar.marca);
 ```
 
-La palabra clave [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
+La palabra clave [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) no hace referencia a la función que está ejecutandose actualmente, por lo que debes referirte a los objetos Function por nombre, incluso dentro del cuerpo de la función. Como alternativa, puedes utilizar la propiedad [arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee) (que no se recomienda).
 
 ## Definiendo funciones
 
@@ -351,11 +345,11 @@ function fuerade() {
 resultado = fuerade()(20); // retorna 20 en lugar de 10
 ```
 
-El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` del `dentro` y la variable `x` del `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `inside` tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro` de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
+El conflicto de nombres ocurre en la sentencia `return x` y está entre el parámetro `x` de la función `dentro` y la variable `x` de la función `fuerade`. La cadena de alcance aquí es {`dentro`, `fuerade`, global object}. Por lo tanto, la `x` de `dentro` tiene precedentes sobre la `x` de `fuerade`, y 20 (`dentro` de `x`) se devuelve en lugar de 10 (`fuerade` de `x`).
 
 ## Constructor vs declaración vs expresión
 
-Las diferencias entre la `Function` constructora, la de declaración y la de expresión.
+Diferencias entre la función constructora `Function`, la de declaración y la de expresión.
 
 Compare lo siguiente:
 
@@ -532,9 +526,9 @@ if (0)
 
 ## Funciones como manejadores de eventos
 
-En JavaScript, los controladores de eventos [DOM](es/DOM) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](es/DOM/event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
+En JavaScript, los controladores de eventos [DOM](/es/DOM) son funciones (en oposición a los objetos que contienen un método `handleEvent` en otros enlaces de idioma DOM). Las funciones se pasan un objeto de [evento](/es/DOM/event) como el primer y único parámetro. Como cualquier otro parámetro, si el objeto de evento no necesita ser utilizado, puede omitirse en la lista de parámetros formales.
 
-Los posibles objetivos de eventos en un documento [HTML](es/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](http://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
+Los posibles objetivos de eventos en un documento [HTML](/es/HTML) incluyen: `window` (`Window` objects("objeto de ventana"), including frames("marcos")), `document` (`HTMLDocument` objects("objetos HTMLDocument")), y elementos (`Element` objects("objetos Elemento")). En el [HTML DOM](http://www.w3.org/TR/DOM-Level-2-HTML/), los destinos de evento tienen propiedades de controlador de eventos. Estas propiedades son nombres de eventos en minúsculas con prefijo "on", e.g. `onfocus`. Los eventos [DOM Level 2 Events](http://www.w3.org/TR/DOM-Level-2-Events/) proporcionan una forma alternativa y más sólida de agregar oyentes de eventos.
 
 > **Nota:** Los eventos son parte del DOM, no de JavaScript. (JavaScript simplemente proporciona un enlace al DOM.)
 
@@ -613,13 +607,13 @@ No puede anidar una sentencia de función en otra instrucción o en sí misma.
 
 ### Variables locales dentro de las funciones
 
-[arguments](es/Referencia_de_JavaScript_1.5/Funciones/arguments): Objeto similar a una matriz que contiene los argumentos pasados a la función en ejecución.
+[arguments](/es/Referencia_de_JavaScript_1.5/Funciones/arguments): Objeto similar a una matriz que contiene los argumentos pasados a la función en ejecución.
 
-[arguments.callee](es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee): Especifica la función en ejecución.
+[arguments.callee](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/callee): Especifica la función en ejecución.
 
-[arguments.caller](es/Referencia_de_JavaScript_1.5/Funciones/arguments/caller): Especifica la función que invocó la función en ejecución.
+[arguments.caller](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/caller): Especifica la función que invocó la función en ejecución.
 
-[arguments.length](es/Referencia_de_JavaScript_1.5/Funciones/arguments/length): Especifica el número de argumentos pasados a la función.
+[arguments.length](/es/Referencia_de_JavaScript_1.5/Funciones/arguments/length): Especifica el número de argumentos pasados a la función.
 
 ### Ejemplos
 
@@ -665,4 +659,4 @@ Puede determinar si existe una función utilizando el operador `typeof`. En el e
 
 ### Ver también
 
-[Function](es/Referencia_de_JavaScript_1.5/Objetos_globales/Function), [sentencia function](es/Referencia_de_JavaScript_1.5/Sentencias/function), [operador function](es/Referencia_de_JavaScript_1.5/Operadores/Operadores_globales/function)
+[Function](/es/Referencia_de_JavaScript_1.5/Objetos_globales/Function), [sentencia function](/es/Referencia_de_JavaScript_1.5/Sentencias/function), [operador function](/es/Referencia_de_JavaScript_1.5/Operadores/Operadores_globales/function)

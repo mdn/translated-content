@@ -1,12 +1,6 @@
 ---
 title: canvas
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - HTML
-  - HTML:Elemento
-  - para_revisar
-translation_of: Web/HTML/Element/canvas
 original_slug: Web/HTML/Elemento/canvas
 ---
 

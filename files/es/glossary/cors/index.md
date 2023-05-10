@@ -1,11 +1,6 @@
 ---
 title: CORS
 slug: Glossary/CORS
-tags:
-  - Infrastructure
-  - infraestructura
-  - Security
-  - Seguridad
 ---
 
 **CORS** (*Cross-Origin Resource Sharing* o en español Intercambio de recursos de origen cruzado) es un sistema que consiste en transmitir {{Glossary("HTTP_header", "HTTP headers")}}, que determina si los navegadores bloquean el acceso del código JavaScript frontend a las respuestas de peticiones de origen cruzado.

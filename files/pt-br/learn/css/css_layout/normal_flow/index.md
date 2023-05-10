@@ -62,7 +62,7 @@ Let's look at a simple example that explains all of this:
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css
@@ -91,18 +91,3 @@ span {
 Now that you understand normal flow, and how the browser lays things out by default, move on to understand how to change this default display to create the layout needed by your design.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/pt-BR/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/pt-BR/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/pt-BR/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

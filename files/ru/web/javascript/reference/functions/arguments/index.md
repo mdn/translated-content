@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments
 
 > **Примечание:** Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
 
-> **Примечание:** "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
+> **Примечание:** "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
@@ -27,7 +27,7 @@ arguments
 
 ## Описание
 
-Объект `arguments` - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект `arguments` позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:
+Объект `arguments` - это локальная переменная, доступная внутри любой (нестрелочной) функции. Объект `arguments` позволяет ссылаться на аргументы функции внутри неё. Он состоит из переданных в функцию аргументов, индексация начинается с 0. Например, если в функцию было передано 3 аргумента, обратиться к ним можно следующим образом:
 
 ```js
 arguments[0]
@@ -88,7 +88,7 @@ var args = [...arguments];
 
 - [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Ссылка на функцию, которая выполняется в текущий момент.
-- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
+- [`arguments.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/caller)
   - : Ссылка на функцию, которая вызвала функцию, выполняющуюся в текущий момент.
 - [`arguments.length`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Количество переданных в функцию аргументов.

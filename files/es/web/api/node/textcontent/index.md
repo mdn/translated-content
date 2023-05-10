@@ -1,7 +1,6 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-translation_of: Web/API/Node/textContent
 ---
 
 {{APIRef("DOM")}}
@@ -59,14 +58,10 @@ document.getElementById("divA").textContent = "Esto es un nuevo texto";
 //   <div id="divA">Esto es un nuevo texto</div>
 ```
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("api.Node.textContent")}}
-
-## Especificación
-
-| Especificación                                                                                       | Estado                           | Comentario              |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-textcontent','Node.textContent')}}         | {{Spec2('DOM WHATWG')}} | Sin cambios desde DOM 4 |
-| {{SpecName('DOM4','#dom-node-textcontent','Node.textContent')}}                 | {{Spec2('DOM4')}}         |                         |
-| {{SpecName('DOM3 Core','core.html#Node3-textContent','Node.textContent')}} | {{Spec2('DOM3 Core')}}     | Introducido             |
+{{Compat}}

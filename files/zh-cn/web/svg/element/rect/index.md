@@ -55,7 +55,7 @@ html,body,svg { height:100% }
 
 这个元素实现了 [`SVGRectElement`](/zh-CN/DOM/SVGRectElement) 接口。
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 

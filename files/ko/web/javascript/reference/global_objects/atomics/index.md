@@ -1,30 +1,36 @@
 ---
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
-tags:
-  - JavaScript
-  - Namespace
-  - Shared Memory
-  - Specifications
-browser-compat: javascript.builtins.Atomics
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
 
-**`Atomics`** 객체는 atomic 작업을 정적 메서드로 제공합니다. {{jsxref("SharedArrayBuffer")}} 와 {{jsxref("ArrayBuffer")}} 객체와 함께 사용됩니다.
+**`Atomics`** 객체는 아토믹 연산(Atomic operation, 원자적 연산)을 정적 메서드로 제공합니다.
+{{jsxref("SharedArrayBuffer")}} 와 {{jsxref("ArrayBuffer")}} 객체와 함께 사용됩니다.
 
 ## 설명
 
-Atomic 작업은 `Atomic` 모듈에 설치됩니다. 다른 전역 개체와 달리 `Atomics`는 생성자가 아니기 때문에, [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 사용하거나 `Atomics` 객체를 함수로 호출할 수 없습니다. `Atomics`의 모든 속성과 메서드는 정적입니다. (예를 들어 {{jsxref("Math")}} 객체의 경우와 같습니다.)
+아토믹 연산은 `Atomic` 모듈에 설치됩니다. 다른 전역 객체와 달리 `Atomics`는 생성자가 아니기 때문에,
+[`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 사용하거나
+`Atomics` 객체를 함수로 호출할 수 없습니다. {{jsxref("Math")}} 객체처럼 `Atomics`의 모든 속성과
+메서드는 정적입니다.
 
-### Atomic 연산
+### 아토믹 연산
 
-메모리가 공유되면 여러 스레드가 메모리에서 동일한 데이터를 읽고 쓸 수 있습니다. Atomic 연산은 예측 가능한 값을 쓰고 읽고, 다음 연산이 시작되기 전에 연산을 완료하여 연산이 중단되지 않도록 합니다.
+메모리가 공유되면 여러 스레드가 메모리에서 동일한 데이터를 읽고 쓸 수 있습니다.
+아토믹 연산은 예측 가능한 값을 쓰고 읽고, 다음 연산이 시작되기 전에 연산을 완료하여 연산이 중단되지 않도록 합니다.
 
 ### Wait와 notify
 
-`wait()`와 `notify()` 메서드는 Linux 퓨텍스(futex)("빠른 사용자 공간 뮤텍스(mutex)")에서 모델링되어 특정 조건이 참이 될 때까지 기다리는 방법을 제공하며 일반적으로 차단 구문으로 사용됩니다.
+`wait()`와 `notify()` 메서드는 Linux 퓨텍스(futex)("빠른 사용자 공간 뮤텍스(mutex)")에서 모델링되어
+특정 조건이 참이 될 때까지 기다리는 방법을 제공하며 일반적으로 차단 구문으로 사용됩니다.
+
+## 정적 속성
+
+- `Atomics[@@toStringTag]`
+  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 `"Atomics"` 문자열입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
 ## 정적 메서드
 
@@ -55,7 +61,7 @@ Atomic 작업은 `Atomic` 모듈에 설치됩니다. 다른 전역 개체와 달
 - {{jsxref("Atomics.xor()")}}
   - : 제공된 값을 사용하여 배열의 지정된 인덱스에 있는 값에 대해 XOR 연산을 수행합니다. 해당 인덱스의 이전 값을 반환합니다.
 
-## 예제들
+## 예제
 
 ### Atomic 사용하기
 
@@ -95,16 +101,17 @@ Atomics.xor(ta, 0, 1); // 10
 Atomics.load(ta, 0); // 11
 ```
 
-### Wait와 notify
+### Waiting과 notifying
 
-주어진 공유 `Int32Array`
+`Int32Array`를 공유한다고 했을 때
 
 ```js
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```
 
-읽기 스레드는 0이 될 것으로 예상되는 위치 0에서 sleep 상태이며 대기 중입니다. 이것이 사실인 한 계속되지 않습니다. 그러나 쓰기 스레드가 새 값을 저장하면 쓰기 스레드에서 이를 알리고 새 값을 반환합니다. (123)
+읽기 스레드는 0이 될 것으로 예상되는 위치 0에서 sleep 상태이며 대기 중입니다. 이것이 사실인 한 계속되지 않습니다.
+그러나 쓰기 스레드가 새 값을 저장하면 쓰기 스레드에서 이를 알리고 새 값을 반환합니다. (123)
 
 ```js
 Atomics.wait(int32, 0, 0);

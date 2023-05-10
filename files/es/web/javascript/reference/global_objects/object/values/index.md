@@ -1,12 +1,6 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
 
@@ -66,9 +60,9 @@ Para dar soporte compatible con `Object.values()` a entornos antiguos que no la 
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.values")}}
+{{Compat}}
 
 ## Ver también
 

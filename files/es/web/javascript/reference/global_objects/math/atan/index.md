@@ -1,13 +1,6 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Matemática
-  - Math
-  - Method
-  - Trigonometría
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan
 ---
 
@@ -64,9 +57,9 @@ Nota que podrías querer evitar usar **±**`Infinity` por razones de estilo. En 
 
 {{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.atan")}}
+{{Compat}}
 
 ## Ver también
 

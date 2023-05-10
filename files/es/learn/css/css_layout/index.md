@@ -1,22 +1,6 @@
 ---
 title: Diseño CSS
 slug: Learn/CSS/CSS_layout
-tags:
-  - Aprender
-  - CSS
-  - Floating
-  - Grids
-  - Guía
-  - Landing
-  - Layout
-  - Module
-  - Multiple column
-  - Positioning
-  - Principiante
-  - TopicStub
-  - flexbox
-  - float
-translation_of: Learn/CSS/CSS_layout
 ---
 
 {{LearnSidebar}}
@@ -31,7 +15,7 @@ Antes de comenzar este módulo, ya deberías:
 2. Sentirte cómodo con los fundamentos de CSS, que se discuten en [Introduction to CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 3. Entender como diseñar cajas [style boxes](/es/docs/Learn/CSS/Styling_boxes).
 
-> **Nota:** Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estás trabajando en un dispositivo donde no tengas la posibilidad de crear tus propios archivos, puedes probar la mayoría de los ejemplos de código en un programa online como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -49,7 +33,7 @@ Estos artículos te proporcionarán instrucciones sobre las herramientas y técn
   - : Inicialmente utilizado para imágenes flotantes dentro de bloques de texto, la propiedad {{cssxref("float")}} se ha convertido en una de las herramientas más utilizadas para crear maquetaciones de varias columnas en páginas web. Con la venida de Flexbox y Grid se ha regresado a su propósito original, como lo explica este artículo.
 - [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
   - : El posicionamiento te permite sacar elementos del flujo normal de maquetación del documento para hacer que se comporten de manera diferente, p.ej: colocando unos encima de otros, o fijándolos a un lugar de la ventana principal. Este artículo explica los diferentes valores para {{cssxref("position")}} y cómo utilizarlos.
-- [Ejemplos prácticos de posicionamiento](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
+- [Ejemplos prácticos de posicionamiento](/es/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
   - : Una vez cubiertas las nociones básicas de posicionamiento en el artículo anterior, vamos ahora a construir un par de ejemplos reales, para explicar las cosas que puedes hacer con el posicionamiento.
 - [Diseño Multi-columna](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
   - : El diseño multi-columna te proporciona un método de maquetación de contenido en columnas, como lo podrías ver en un periódico. Este artículo explica como usar esta característica.

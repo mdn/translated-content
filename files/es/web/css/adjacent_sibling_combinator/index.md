@@ -1,12 +1,6 @@
 ---
 title: Selectores de hermanos adyacentes
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
 
@@ -57,15 +51,11 @@ que coincidiría con los siguientes elementos {{HTMLElement("span")}} :
 
 ## Especificaciones
 
-| Especificacion                                                                                                               | Estado                               | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}         | {{Spec2('CSS2.1')}}             | Initial definition |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.adjacent_sibling")}}
+{{Compat}}
 
 ## Ver también
 

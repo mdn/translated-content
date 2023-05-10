@@ -191,11 +191,11 @@ The last part of the page is the error code. This simply prints a list of errors
 
 Run the application, open your browser to <http://localhost:3000/>, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
 
-![Genre Create Page - Express Local Library site](https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png)
+![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 
 The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
 
-![](https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png)
+![](locallibary_express_genre_create_error.png)
 
 > **Примечание:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >

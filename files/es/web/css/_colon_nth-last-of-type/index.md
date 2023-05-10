@@ -1,13 +1,6 @@
 ---
 title: ':nth-last-of-type()'
 slug: Web/CSS/:nth-last-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-last-of-type
 ---
 
 {{CSSRef}}
@@ -64,14 +57,11 @@ span:nth-last-of-type(2) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-last-of-type-pseudo', ':nth-last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

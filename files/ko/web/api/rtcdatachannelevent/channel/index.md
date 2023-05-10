@@ -1,8 +1,8 @@
 ---
 title: RTCDataChannelEvent.channel
 slug: Web/API/RTCDataChannelEvent/channel
-translation_of: Web/API/RTCDataChannelEvent/channel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 읽기 속성인 **`RTCDataChannelEvent.channel`** 는 {{domxref("RTCDataChannel")}}와 관련이 있는 이벤트를 반환합니다.

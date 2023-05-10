@@ -1,11 +1,6 @@
 ---
 title: ':lang'
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Pseudo-clase
-  - Web
-translation_of: Web/CSS/:lang
 ---
 
 {{CSSRef}}
@@ -58,15 +53,11 @@ En este ejemplo, la pseudo-clase `:lang()` se usa para hacer coincidir los eleme
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentarios                  |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------------- |
-| {{SpecName('CSS4 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.               |
-| {{SpecName('CSS3 Selectors', '#lang-pseudo', ':lang()')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio significativo. |
-| {{SpecName('CSS2.1', 'selector.html#lang', ':lang()')}}     | {{Spec2('CSS2.1')}}             | Definición Inicial.          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## Ver también
 

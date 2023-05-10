@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 
 Метод **`some()`** проверяет, удовлетворяет ли какой-либо элемент массива условию, заданному в передаваемой функции.
 
-> **Примечание:** **Обратите внимание**: метод возвращает `false` при любом условии для пустого массива.
+> **Примечание:** метод возвращает `false` при любом условии для пустого массива.
 
 {{EmbedInteractiveExample("pages/js/array-some.html")}}
 
@@ -75,7 +75,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
-{{ EmbedLiveSample('Проверка_значений_элементов_массива', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Проверка_значений_элементов_массива') }}
 
 ### Проверка элементов массива с использованием стрелочных функций
 
@@ -86,7 +86,7 @@ function isBiggerThan10(element, index, array) {
 [12, 5, 8, 1, 4].some(elem => elem > 10); // true
 ```
 
-{{ EmbedLiveSample('Проверка_элементов_массива_с_использованием_стрелочных_функций', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Проверка_элементов_массива_с_использованием_стрелочных_функций') }}
 
 ### Проверка наличия элемента в массиве
 
@@ -105,7 +105,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве') }}
 
 ### Проверка наличия элемента в массиве с использованием стрелочной функции
 
@@ -120,7 +120,7 @@ checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true
 ```
 
-{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}
+{{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции') }}
 
 ### Приведение значения к логическому типу
 
@@ -145,7 +145,7 @@ getBoolean(1);       // true
 getBoolean('true');  // true
 ```
 
-{{ EmbedLiveSample('Приведение_значения_к_логическому_типу', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}
+{{ EmbedLiveSample('Приведение_значения_к_логическому_типу') }}
 
 ## Полифил
 

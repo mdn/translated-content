@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module/exports
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Module.exports()`** 関数は、指定された `Module` のエクスポート宣言の定義の配列を返します。
 

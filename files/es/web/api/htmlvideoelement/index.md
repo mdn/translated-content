@@ -1,7 +1,6 @@
 ---
 title: Elementos HTML para Video
 slug: Web/API/HTMLVideoElement
-translation_of: Web/API/HTMLVideoElement
 original_slug: Web/API/ElementosHTMLparaVideo
 ---
 
@@ -52,15 +51,11 @@ _Hereda los métodos anteriores de_ _{{domxref("HTMLMediaElement")}} y_ _{{domxr
 
 ## Especificaciones
 
-| Especificacion                                                                                                                           | Estado                                           | Comentario                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- |
-| {{SpecName('Media Source Extensions', '#idl-def-HTMLVideoElement', 'Extensions to HTMLVideoElement')}} | {{Spec2("Media Source Extensions")}} | Anadio el metodo `getVideoPlaybackQuality()` .    |
-| {{SpecName('HTML WHATWG', "the-video-element.html#the-video-element", "HTMLAreaElement")}}                 | {{Spec2('HTML WHATWG')}}                 | Sin cambios del {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-video-element", "HTMLAreaElement")}}                 | {{Spec2('HTML5 W3C')}}                     | Definicion incial.                                |
+{{Specifications}}
 
-## Compatibilidad con Navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## Lea Tambien
 

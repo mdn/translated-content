@@ -1,15 +1,6 @@
 ---
 title: DOMString
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - API
-  - DOM
-  - Referencia
-  - Referencia DOM Gecko
-  - Referência DOM
-  - String
-  - WebAPI
-translation_of: Web/API/DOMString
 original_slug: Web/API/DOMString
 ---
 

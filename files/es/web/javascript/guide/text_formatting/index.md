@@ -1,10 +1,6 @@
 ---
 title: Formato de texto
 slug: Web/JavaScript/Guide/Text_formatting
-tags:
-  - Guía
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
@@ -15,7 +11,7 @@ Este capítulo presenta cómo trabajar con cadenas de caracteres (`String`) y te
 
 El tipo {{Glossary("String")}} de JavaScript se utiliza para representar datos textuales. Es un conjunto de "elementos" de valores enteros sin signo de 16 bits (unidades de código UTF-16). Cada elemento de la cadena de caracteres ocupa una posición en la cadena. El primer elemento está en el índice 0, el siguiente en el índice 1, y así sucesivamente. La longitud de una cadena es el número de elementos que contiene. Puedes crear cadenas utilizando cadena literales u objetos **string**.
 
-PRECAUCIÓN: si editas esta página, no incluyas ningún caracter por encima de U+FFFF, hasta que se solucione el ({{bug(857438)}} de MDN).
+PRECAUCIÓN: si editas esta página, no incluyas ningún caracter por encima de U+FFFF, hasta que se solucione el ([Error 857438 en Firefox](https://bugzil.la/857438) de MDN).
 
 ### Cadenas literales
 
@@ -87,7 +83,7 @@ hello[0] = 'L'; // Esto no tiene ningún efecto, porque las cadenas son inmutabl
 hello[1];       // Esto devuelve "H"
 ```
 
-Los caracteres cuyos valores escalares Unicode son mayores que U+FFFF (tal como algunos caracteres chinos/japoneses/coreanos/vietnamitas raros y algunos «emoji»s) se almacenan en UTF-16 con dos unidades de código sustituto cada uno. Por ejemplo, una cadena que contenga el caracter único U+1F600 "Cara sonriente de emoji" tendrá una longitud de 2. El acceso a las unidades de código individual en una cadena de este tipo utilizando corchetes puede tener consecuencias indeseables, como la formación de cadenas con diferentes unidades de código suplente, violando el estándar Unicode. (Se deben agregar ejemplos a esta página después de que se corrija el error MDN {{bug(857438)}}). Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.prototype.codePointAt()")}}.
+Los caracteres cuyos valores escalares Unicode son mayores que U+FFFF (tal como algunos caracteres chinos/japoneses/coreanos/vietnamitas raros y algunos «emoji»s) se almacenan en UTF-16 con dos unidades de código sustituto cada uno. Por ejemplo, una cadena que contenga el caracter único U+1F600 "Cara sonriente de emoji" tendrá una longitud de 2. El acceso a las unidades de código individual en una cadena de este tipo utilizando corchetes puede tener consecuencias indeseables, como la formación de cadenas con diferentes unidades de código suplente, violando el estándar Unicode. (Se deben agregar ejemplos a esta página después de que se corrija el error MDN [Error 857438 en Firefox](https://bugzil.la/857438)). Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.prototype.codePointAt()")}}.
 
 Un objeto `String` tiene una variedad de métodos: por ejemplo, aquellos que devuelven una variación de la cadena en sí, como `substring` y `toUpperCase`.
 

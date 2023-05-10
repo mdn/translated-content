@@ -66,7 +66,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 
 Если вы откроете Firefox Grid Inspector, сможете увидеть, как линия сетки находится в правильном месте по центру промежутка, поэтому когда мы устанавливаем gap = 0, он действует аналогично применению отрицательного margin для элемента, создавая пространство от промежутка обратно до элемента.
 
-![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](https://mdn.mozillademos.org/files/16628/gap.png)
+![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](gap.png)
 
 ## Именованные grid-линии
 
@@ -95,4 +95,4 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 
 | Specification                        | Status                           | Comment                                                                                                   |
 | ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
+| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |

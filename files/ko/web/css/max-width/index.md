@@ -1,11 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/max-width
 ---
 
 {{CSSRef}}

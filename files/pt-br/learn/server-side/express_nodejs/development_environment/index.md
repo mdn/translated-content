@@ -353,7 +353,7 @@ O comando DEBUG gera um loggin bem útil, apresentando resultados, como abaixo:
 
 Abre um browser e navegue para `http://127.0.0.1:3000/` e veja a página default apresentada pelo aplicativo.
 
-![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
+![Express - Generated App Default Screen](express_default_screen.png)
 
 Vamos falar mais sobre o "gerador" quando chegarmos ao artigo referente à geração de esqueletos de uma aplicação.
 

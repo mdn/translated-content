@@ -1,13 +1,6 @@
 ---
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
-tags:
-  - CSS
-  - CSS Animations
-  - Experimental
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -40,15 +33,9 @@ translation_of: Web/CSS/CSS_Animations
 - [Using CSS animations](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
   - : Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
-
-## Browser compatibility
-
-{{Compat("css.properties.animation")}}
+{{Specifications}}
 
 ## See also
 

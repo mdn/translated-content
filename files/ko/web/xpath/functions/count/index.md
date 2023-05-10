@@ -1,9 +1,6 @@
 ---
 title: count
 slug: Web/XPath/Functions/count
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/count
 ---
 
 {{ XsltRef() }}

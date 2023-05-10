@@ -1,7 +1,6 @@
 ---
 title: scroll
 slug: Web/API/Document/scroll_event
-translation_of: Web/API/Document/scroll_event
 ---
 
 {{ ApiRef() }}

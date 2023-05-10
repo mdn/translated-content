@@ -34,7 +34,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 ## Rendre les choses simples
 
-Comme les [formulaires HTML](/fr/docs/Learn/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/Learn/Forms) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -203,24 +203,10 @@ L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp
 
 ### Faites attention aux performances
 
-Même si des scripts comme Modernizr sont très attentifs aux performances, le chargement d'un polyfill de 200 kilooctets peut affecter les performances de votre application.  Ceci est particulièrement critique avec les navigateurs historiques ; beaucoup d'entre eux ont un moteur JavaScript très lent qui peut rendre l'exécution de tous vos polyfills pénibles pour l'utilisateur. La performance est un sujet en soi&nbsp;; les navigateurs historiques y sont très sensibles : fondamentalement, ils sont lents et ils ont plus besoin de polyfills, et donc ils ont besoin de traiter encore plus de JavaScript. Ils sont donc doublement surchargés par rapport aux navigateurs modernes. Testez votre code avec les navigateurs historiques pour voir comment leur fonctionnement en conditions réelles. Parfois, l'abandon de certaines fonctionnalités amène un meilleur ressenti pour l'utilisateur que d'avoir exactement la même fonctionnalité dans tous les navigateurs. Dernier rappel&nbsp;: pensez toujours à l'utilisateur final.
+Même si des scripts comme Modernizr sont très attentifs aux performances, le chargement d'un polyfill de 200 kilooctets peut affecter les performances de votre application. Ceci est particulièrement critique avec les navigateurs historiques ; beaucoup d'entre eux ont un moteur JavaScript très lent qui peut rendre l'exécution de tous vos polyfills pénibles pour l'utilisateur. La performance est un sujet en soi&nbsp;; les navigateurs historiques y sont très sensibles : fondamentalement, ils sont lents et ils ont plus besoin de polyfills, et donc ils ont besoin de traiter encore plus de JavaScript. Ils sont donc doublement surchargés par rapport aux navigateurs modernes. Testez votre code avec les navigateurs historiques pour voir comment leur fonctionnement en conditions réelles. Parfois, l'abandon de certaines fonctionnalités amène un meilleur ressenti pour l'utilisateur que d'avoir exactement la même fonctionnalité dans tous les navigateurs. Dernier rappel&nbsp;: pensez toujours à l'utilisateur final.
 
 ## Conclusion
 
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
 Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

@@ -51,7 +51,7 @@ myFunction();
 
 #### Escopo da função
 
-Lembre-se que [funções tem seu próprio escopo](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts) — você não pode acessar um conjunto de valores de variáveis ​​dentro de uma função fora da função, a não ser que você tenha declarado a variável globalmente (i.e. não dentro de nenhuma função), ou retorne o valor or [retorne o valor](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values) fora da função
+Lembre-se que [funções tem seu próprio escopo](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts) — você não pode acessar um conjunto de valores de variáveis dentro de uma função fora da função, a não ser que você tenha declarado a variável globalmente (i.e. não dentro de nenhuma função), ou retorne o valor or [retorne o valor](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values) fora da função
 
 #### Executar o código antes de uma declaração de retorno
 
@@ -83,9 +83,6 @@ var myObject = {
 - [O que são strings?](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
 - [O que é um vetor?](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
 - [O que é um laço?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [O que é uma função?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
 - [O que é um evento?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 - [O que é um objeto?](/pt-BR/docs/Learn/JavaScript/Objects/Basics#Object_basics)

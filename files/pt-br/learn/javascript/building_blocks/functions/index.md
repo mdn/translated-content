@@ -281,7 +281,7 @@ Manter parte de seus código trancada em funções evita tais problemas, e é co
 
 Parece um pouco com um zoológico. Os leões, zebras, tigres, e pinguins são mantidos em seus próprios cercados, e só tem acesso as coisas dentro de seu cercado — da mesma maneira que escopos de função. Se eles forem capazes de entrar em outros cercados, problemas podem acontecer. No melhor caso, diferentes animais poderiam sentir-se ralmente desconfortáveis dentro de habitats não familiares — um leão e um tigre poderiam sentir-se muito mal dentro de um úmido e gelado terreno. No pior caso, os leões e tigres poderiam tentar comer os pinguins!
 
-![](https://mdn.mozillademos.org/files/14079/MDN-mozilla-zoo.png)
+![](mdn-mozilla-zoo.png)
 
 O zelador do zoológico é como o escopo global — ele ou ela tem as chaves para acessar cada cercado, reabastecer comida, tratar animais doentes, etc.
 
@@ -442,13 +442,3 @@ Este arquivo explorou os conceitos fundamentais por trás das funções, pavimen
 - [Parâmetros padrão](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Funções de flexa](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — referências de conceito avançado
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## Neste módulo
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/this
 
 A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) e o modo não estrito.
 
-Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](../Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
+Em muitos casos, o valor `this` é determinado pela forma como a função é chamada. Ele não pode ser assinado durante a execução, e isso pode ser diferente a cada vez que a função é chamada. ES5 introduziu o método [`bind`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) para estabelecer o valor `this` da função, independentemente de como ela seja chamada, e ECMAScript 2015 introduziu o [arrow functions](/pt-BR/docs/Functions/Arrow_functions), cujo `this` é lexicalmente delimitado (o valor `this` é estabelecido segundo o escopo de execução no qual está inserido).
 
 ## Sintaxe
 

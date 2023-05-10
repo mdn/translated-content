@@ -1,12 +1,6 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Documents
-  - Tutorials
-translation_of: Web/API/Page_Visibility_API
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 
@@ -106,7 +100,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

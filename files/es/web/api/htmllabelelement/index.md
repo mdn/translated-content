@@ -1,13 +1,6 @@
 ---
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLLabeledElement
-  - Interface
-  - Referencia
-translation_of: Web/API/HTMLLabelElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -33,16 +26,11 @@ _No hay metodos específicos, hereda los metodos de los elelemtos padres, {{domx
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentario                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmllabelelement", "HTMLLabelElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                            |
-| {{SpecName('HTML5 W3C', "forms.html#the-label-element", "HTMLLabelElement")}} | {{Spec2('HTML5 W3C')}}     | La propiedad `accessKey` ahora está definida en: {{domxref("HTMLElement")}}. La siguiente propiedad ha sido agregada: `control`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-13691394', 'HTMLLabelElement')}}             | {{Spec2('DOM2 HTML')}}     | Sin cambios desde: {{SpecName("DOM1")}}.                                                                                           |
-| {{SpecName('DOM1', 'level-one-html.html#ID-13691394', 'HTMLLabelElement')}}     | {{Spec2('DOM1')}}         | definición inicial                                                                                                                         |
+{{Specifications}}
 
-## Compatibilidad de Navegador Web
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLLabelElement")}}
+{{Compat}}
 
 ## Ver también
 

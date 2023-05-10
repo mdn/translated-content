@@ -1,17 +1,8 @@
 ---
 title: <u>
 slug: Web/HTML/Element/u
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/u
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<u>` 요소**는 글자로 표현하지 않는 주석을 가진 것으로 렌더링 해야 하는 텍스트를 나타냅니다. 기본값에서는 단순한 밑줄로 표시하지만 CSS를 사용해 바꿀 수 있습니다.
@@ -188,7 +179,7 @@ cite {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.u")}}
+{{Compat}}
 
 ## 같이 보기
 

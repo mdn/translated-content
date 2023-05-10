@@ -1,7 +1,6 @@
 ---
 title: clip
 slug: Web/CSS/clip
-translation_of: Web/CSS/clip
 ---
 
 {{CSSRef}}{{deprecated_header}}
@@ -70,18 +69,15 @@ p { border:dotted;  position:relative; }
 }
 ```
 
-![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
+![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg) ![hut.jpg](hut.jpg)
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario                     |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------ |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'clip') }} | {{ Spec2('CSS3 Transitions') }} | Define `clip` como animatable. |
-| {{ SpecName('CSS2.1', 'visufx.html#clipping', 'clip') }}     | {{ Spec2('CSS2.1') }}             |                                |
+{{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.clip")}}
+{{Compat}}
 
 ## Ver también
 

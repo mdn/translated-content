@@ -5,7 +5,7 @@ slug: Web/JavaScript
 
 {{JsSidebar}}
 
-**JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](http://nodejs.org/)、[Apache CouchDB](http://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。 閱讀[關於 JavaScript](/zh-TW/docs/Web/JavaScript/About_JavaScript) 以取得更多資訊。
+**JavaScript** (簡稱 **JS**) 是具有一級函數 ({{Glossary("First-class Function", "First-class functions")}}) 的輕量級、直譯式或即時編譯（JIT-compiled）的程式語言。它因為用作網頁的腳本語言而大為知名，但也用於[許多非瀏覽器的環境](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages)，像是 [node.js](http://nodejs.org/)、[Apache CouchDB](http://couchdb.apache.org)。JavaScript 是一個基於原型的 ({{Glossary("Prototype-based programming", "Prototype-based")}})、多範型的、動態語言，支援物件導向、指令式以及宣告式 (如函數式程式設計) 風格。
 
 本章節主要說明 JavaScript，不涉及網頁特有項目或主機環境。有關網頁特有的 {{Glossary("API","APIs")}} ，請參考 [Web API](/zh-TW/docs/Web/API) 和 [DOM](/zh-TW/docs/Glossary/DOM)。
 
@@ -52,11 +52,11 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : 對於原型繼承的常見的迷思和誤解。
 - [嚴謹模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
   - : 嚴謹模式會禁止您使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
-- [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
 - [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_Management)
   - : JavaScript 的記憶體生命週期和垃圾回收機制。
-- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/EventLoop)
+- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/Event_loop)
   - : JavaScript 具有基於「事件循環」的併行模組。
 
 ## 參考
@@ -76,9 +76,9 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
 
 有用的工具和資源幫助你更好的撰寫及除錯 **JavaScript** 程式碼。
 
-- [Firefox 開發工具](/zh-TW/docs/Tools)
-  - : [程式碼速記本 (Scratchpad)](/zh-TW/docs/Tools/Scratchpad)、[網頁主控台 (Web Console)](/zh-TW/docs/Tools/Web_Console)、[JavaScript 效能分析器(JavaScript Profiler)](/zh-TW/docs/Tools/Profiler)、[除錯器 (Debugger)](/zh-TW/docs/Tools/Debugger) 等等。
-- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/Shells)
+- [Firefox 開發工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [網頁主控台 (Web Console)](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript 效能分析器(JavaScript Profiler)](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[除錯器 (Debugger)](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等等。
+- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview#shell)
   - : JavaScript Shell 讓你更快的測試片段的 JavaScript。
 - [TogetherJS](https://togetherjs.com/)Paste
   - : 合作更簡單了。藉著在你的網站增加 TogetherJS，你的用戶們能在網站上互助 in real time！

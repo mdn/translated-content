@@ -11,7 +11,7 @@ slug: Web/API/StorageEvent
 
 {{InheritanceDiagram}}
 
-> **备注：** 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在，但是并不符合规范。老的事件模型直到 `nsIDOMStorageEventObsolete` 确定才被表现出来。
+> **备注：** 尽管这个事件已经早在 Gecko 2.0 时就已存在，但是并不符合规范。老的事件模型直到 `nsIDOMStorageEventObsolete` 确定才被表现出来。
 
 ## 方法描述
 

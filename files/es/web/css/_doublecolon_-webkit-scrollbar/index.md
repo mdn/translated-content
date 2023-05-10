@@ -1,12 +1,6 @@
 ---
 title: '::-webkit-scrollbar'
 slug: Web/CSS/::-webkit-scrollbar
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-scrollbar
 ---
 
 {{CSSRef}}

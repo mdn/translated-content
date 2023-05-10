@@ -1,12 +1,6 @@
 ---
 title: Macros usadas comunmente
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-tags:
-  - CSS
-  - Estructuras
-  - Macros
-  - Referencia
-translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
 
@@ -49,13 +43,6 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Headers).
 - [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
 - [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
-
-### Enlazar a errores
-
-- `Bugs`
-
-  - [`bug`](https://github.com/mdn/yari/tree/main/kumascript/macros/bug.ejs) te permite enlazar a un error en bugzilla.mozilla.org fácilmente usando esta sintaxis: `\{{Bug(123456)}}`. Esto te da: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/tree/main/kumascript/macros/WebkitBug.ejs) inserta un enlace a un error en la base de datos de errores de `WebKit`. For example, `\{{WebkitBug(31277)}}` inserta {{WebkitBug(31277)}}.
 
 ### Ayuda a la navegación para guías multipágina
 
@@ -129,12 +116,11 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 
 ##### Sintaxis
 
-`\{{Deprecated_Inline}}` o `\{{Deprecated_Inline("gecko5")}}`
+`\{{Deprecated_Inline}}`
 
-##### Ejemplos
+##### Ejemplo
 
 - Icon: {{Deprecated_Inline}}
-- Insignia: {{Deprecated_Inline("gecko5")}}
 
 ### Plantilla de insignias
 

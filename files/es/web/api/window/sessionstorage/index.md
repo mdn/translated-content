@@ -1,12 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - Almacenaje
-  - Propiedad
-  - Referencia
-  - Sesion
-translation_of: Web/API/Window/sessionStorage
 ---
 
 {{APIRef()}}
@@ -59,13 +53,11 @@ field.addEventListener("change", function() {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#the-sessionstorage-attribute', 'sessionStorage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Vea También
 

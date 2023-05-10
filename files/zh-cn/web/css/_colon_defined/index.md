@@ -3,7 +3,7 @@ title: ':defined'
 slug: Web/CSS/:defined
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 **`:defined`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示任何已定义的元素。这包括任何浏览器内置的标准元素以及已成功定义的自定义元素 (例如通过 {{domxref("CustomElementRegistry.define()")}} 方法)。
 
@@ -94,4 +94,4 @@ simple-custom:defined {
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)

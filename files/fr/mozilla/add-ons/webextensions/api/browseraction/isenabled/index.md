@@ -47,10 +47,6 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'action du navigateur de l'extension est activée, et `false` dans le cas contraire.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.isEnabled",2)}}
-
 ## Exemples
 
 Vérifiez l'état global :
@@ -75,5 +71,9 @@ async function enabledInActiveTab() {
   console.log(enabled);
 }
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}

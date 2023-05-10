@@ -1,17 +1,6 @@
 ---
 title: Window.navigator
 slug: Web/API/Window/navigator
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - HTML-DOM
-  - Property
-  - Reference
-  - WebAPI
-  - Window
-  - Window.navigator
-translation_of: Web/API/Window/navigator
 ---
 
 {{ApiRef}}
@@ -62,10 +51,8 @@ function obtenerIdNavegador() {
 console.log(obtenerIdNavegador());
 ```
 
-## Especificación
+## Especificaciones
 
-- {{SpecName("HTML5 W3C", "webappapis.html#the-navigator-object","window.navigator")}}
-- {{SpecName("HTML5.1", "webappapis.html#the-navigator-object", "window.navigator")}}
-- {{SpecName("HTML WHATWG", "timers.html#the-navigator-object", "window.navigator")}}
+{{Specifications}}
 
 ## Vea además

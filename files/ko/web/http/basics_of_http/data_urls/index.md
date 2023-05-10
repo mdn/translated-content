@@ -1,18 +1,16 @@
 ---
-title: Data URIs
+title: 데이터 URIs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
-browser-compat: http.data-url
 ---
 
 {{HTTPSidebar}}
 
-**Data URIs**, 즉 `data:` 스킴이 접두어로 붙은 URL은 컨텐츠 작성자가 작은 파일을 문서 내에 인라인으로 임베드할 수 있도록 해줍니다.
+**Data URIs**, `data:` 스킴이 접두어로 붙은 URL은 컨텐츠 작성자가 작은 파일을 문서 내에 인라인으로 삽입할 수 있도록 해줍니다.
 
 ## 구문
 
-Data URIs는 네 가지 파트로 구성됩니다: 접두사(`data:`), 데이터의 타입을 가리키는 MIME 타입, 텍스트가 아닌 경우 사용될 부가적인 `base64` 토큰 그리고 데이터 자체:
+Data URIs는 접두사(`data:`), 데이터의 타입을 가리키는 MIME 타입, 텍스트가 아닌 경우 사용될 부가적인 `base64` 토큰 그리고 데이터 자체 총 네가지 부분으로 구성됩니다.
 
 ```
 data:[<mediatype>][;base64],<data>
@@ -64,7 +62,7 @@ Data URI는 초기 헤더줄 다음의 인코딩된 데이터를 사용하게 �
 - 구문
   - : `data` URIs를 위한 문법은 매우 간단하지만, "data" 세그먼트 앞에 콤마를 넣는 것을 쉽게 잊거나 데이터를 base64 포맷으로 부정확하게 인코딩하는 경우가 있습니다.
 - HTML 내에 포맷시키기
-  - : `data` URI는 동봉된 문서의 너비에 비례할 가능성이 높은 파일 내에 파일을 제공하게 됩니다. URL로 `data`를 공백 문자(라인 피드, 탭 혹은 스페이스)을 사용해 포맷이 가능해야 하지만 [base64 인코딩을 사용할 때](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12) 일어나는 실질적인 문제가 있습니다.
+  - : `data` URI는 동봉된 문서의 너비에 비례할 가능성이 높은 파일 내에 파일을 제공하게 됩니다. URL로 `data`를 공백 문자(라인 피드, 탭 혹은 스페이스)을 사용해 포맷이 가능해야 하지만 [base64 인코딩을 사용할 때](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12) 일어나는 실질적인 문제가 있습니다.
 - 길이 제한
   - : 파이어폭스는 기본적으로 길이 제한이 없는 `data` URIs를 지원하지만, 브라우저들은 데이터의 개별적인 최대 길이를 제공해야 할 의무가 없습니다. 예를 들어, 오페라 11 브라우저는 `data` URL을 65529 문자로 제한하는 65535 개의 character long으로 제한합니다(MIME 타입을 지정하지 않고 plain `data`를 사용한다면, 소스가 아닌 인코딩된 데이터의 길이는 65529자가 됩니다).
 - 오류 처리의 부족

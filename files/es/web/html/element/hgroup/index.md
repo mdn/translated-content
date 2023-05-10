@@ -1,7 +1,6 @@
 ---
 title: hgroup
 slug: Web/HTML/Element/hgroup
-translation_of: Web/HTML/Element/hgroup
 original_slug: Web/HTML/Elemento/hgroup
 ---
 
@@ -46,6 +45,10 @@ Este elemento implementa la interfaz `HTMLElement`.
 </hgroup>
 ```
 
-### Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.hgroup")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

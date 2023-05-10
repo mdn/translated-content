@@ -23,7 +23,7 @@ void ctx.drawFocusIfNeeded(path, element);
 
 ## 示例
 
-### 使用 `drawFocusIfNeeded` 方法
+### 控制按钮焦点
 
 这是一段使用 `drawFocusIfNeeded` 方法的简单的代码片段。
 
@@ -31,82 +31,84 @@ void ctx.drawFocusIfNeeded(path, element);
 
 ```html
 <canvas id="canvas">
-  <input id="button" type="range" min="1" max="12">
+  <button id="button1">Continue</button>
+  <button id="button2">Quit</button>
 </canvas>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var button = document.getElementById("button");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
 
-button.focus();
+document.addEventListener('focus', redraw, true);
+document.addEventListener('blur', redraw, true);
+canvas.addEventListener('click', handleClick, false);
+redraw();
 
-ctx.beginPath();
-ctx.rect(10, 10, 30, 30);
-ctx.drawFocusIfNeeded(button);
-```
-
-修改下面的代码并在线查看 canvas 的变化：
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas">
-<input id="button" type="range" min="1" max="12">
-</canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.rect(10, 10, 30, 30);
-ctx.drawFocusIfNeeded(button);</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var button = document.getElementById("button");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-button.focus();
-
-function drawCanvas() {
+function redraw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+  drawButton(button1, 20, 20);
+  drawButton(button2, 20, 80);
 }
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+function handleClick(e) {
+  // Calculate click coordinates
+  const x = e.clientX - canvas.offsetLeft;
+  const y = e.clientY - canvas.offsetTop;
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+  // Focus button1, if appropriate
+  drawButton(button1, 20, 20);
+  if (ctx.isPointInPath(x, y)) {
+    button1.focus();
+  }
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+  // Focus button2, if appropriate
+  drawButton(button2, 20, 80);
+  if (ctx.isPointInPath(x, y)) {
+    button2.focus();
+  }
+}
+
+function drawButton(el, x, y) {
+  const active = document.activeElement === el;
+  const width = 150;
+  const height = 40;
+
+  // Button background
+  ctx.fillStyle = active ? 'pink' : 'lightgray';
+  ctx.fillRect(x, y, width, height);
+
+  // Button text
+  ctx.font = '15px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = active ? 'blue' : 'black';
+  ctx.fillText(el.textContent, x + width / 2, y + height / 2);
+
+  // Define clickable area
+  ctx.beginPath();
+  ctx.rect(x, y, width, height);
+
+  // Draw focus ring, if appropriate
+  ctx.drawFocusIfNeeded(el);
+}
 ```
 
-{{EmbedLiveSample('Playable_code', 700, 360)}}
+#### 结果
 
-## 规范描述
+{{EmbedLiveSample('控制按钮焦点', 700, 180)}}
+
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
-
-### 兼容性注解
-
-- \[1] 在 Gecko 28 中，此方法通过 "`drawSystemFocusRing`" 实现，但是在 Gecko 29 中已经改名。
-- \[1] 在 Gecko 32 之前，此方法默认是无效的，受控于 flag "`canvas.focusring.enabled`"标识。
 
 ## 参见
 

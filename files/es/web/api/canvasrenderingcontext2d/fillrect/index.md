@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
-translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
@@ -91,13 +90,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificaciones
 
-| Specification                                                                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.fillRect")}}
+{{Compat}}
 
 ## Documentos relacionados
 

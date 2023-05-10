@@ -63,11 +63,11 @@ String.prototype                   // код ES6
 
 ### Примечания по Opera
 
-Хотя старые версии Opera и не поддерживают метод `Object.getPrototypeOf()`, Opera поддерживает нестандартное свойство {{jsxref("Object.proto", "__proto__")}}, начиная с версии Opera 10.50.
+Хотя старые версии Opera и не поддерживают метод `Object.getPrototypeOf()`, Opera поддерживает нестандартное свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), начиная с версии Opera 10.50.
 
 ## Смотрите также
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - Запись в блоге Джона Резига о [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)

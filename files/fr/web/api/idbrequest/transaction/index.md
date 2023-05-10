@@ -24,7 +24,7 @@ Une {{domxref("IDBTransaction","transaction")}}.
 
 ## Exemple
 
-L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé du {{domxref("IDBObjectStore","magasin d'objects")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objects. La {{domxref("IDBTransaction","transaction")}} à l'origine de la deuxième {{domxref("IBBRequest","requête")}} est affichée sur la console du développeur (Ps, les deux requêtes proviennent de la même transaction). En bas est une fonction onerror qui affiche le code d'erreur si la requête échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/)).
+L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient l'enregistrement associé du {{domxref("IDBObjectStore","magasin d'objects")}} (mis à disposition en tant que `objectStoreTitleRequest.result`), on met à jour une propriété de l'enregistrement, puis le sauve dans le magasin d'objects. La {{domxref("IDBTransaction","transaction")}} à l'origine de la deuxième {{domxref("IBBRequest","requête")}} est affichée sur la console du développeur (Ps, les deux requêtes proviennent de la même transaction). En bas est une fonction onerror qui affiche le code d'erreur si la requête échoue. Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -100,4 +100,4 @@ openRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

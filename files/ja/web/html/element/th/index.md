@@ -38,7 +38,7 @@ slug: Web/HTML/Element/th
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{ARIARole("columnheader")}} または {{ARIARole("rowheader")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role">columnheader</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role">rowheader</a></code>
       </td>
     </tr>
     <tr>

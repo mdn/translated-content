@@ -18,7 +18,7 @@ Geralmente o elemento `title` deve ser o primeiro elemento filho de seu pai. Obs
 O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
 ```xml
-<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="300" xmlns="https://www.w3.org/2000/svg">
   <g>
     <title>Exemplo Demonstrativo de Título SVG</title>
     <rect x="10" y="10" width="200" height="50"

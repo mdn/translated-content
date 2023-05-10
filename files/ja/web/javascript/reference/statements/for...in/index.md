@@ -1,6 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
+l10n:
+  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
 ---
 
 {{jsSidebar("Statements")}}
@@ -11,45 +13,54 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 ## 構文
 
-```
+```js-nolint
 for (variable in object)
-  文
+  statement
 ```
 
+### 引数
+
 - `variable`
-  - : 反復するごとに、 `variable` に異なるプロパティ名が代入されます。
+  - : それぞれの反復処理において、文字列でプロパティ名を受け取ります。[`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) の何れかの宣言、または[代入](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)ターゲット（例えば、以前宣言された変数や、オブジェクトプロパティ）です。
 - `object`
-  - : このオブジェクトの列挙可能プロパティに対して反復処理がされます。
+  - : シンボルではない列挙可能なプロパティを反復処理するオブジェクトです。
+- `statement`
+  - : それぞれの反復処理で実行される文です。 `variable` を参照することができます。[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)を使用して、複数の文を使用することができます。
 
 ## 解説
 
-`for...in` ループは、列挙可能なシンボル以外のプロパティに対してのみ反復処理を行います。 `Array` や `Object` のような組込みコンストラクターから生成したオブジェクトは、列挙可能でないプロパティを `Objet.prototype` や `String.prototype` から、例えば {{jsxref("String")}} の {{jsxref("String.indexOf", "indexOf()")}} メソッドや {{jsxref("Object")}} の {{jsxref("Object.toString", "toString()")}} メソッドを継承しています。このループは、対象オブジェクト自身とそのオブジェクトがプロトタイプから継承しているすべての列挙可能なプロパティを反復します (プロトタイプチェーンで対象オブジェクトに近いプロパティは、親プロトタイプのプロパティを上書きします)。
+このループは、オブジェクト自身と、オブジェクトがそのプロトタイプチェーンから継承するプロパティ（プロトタイプチェーンにおいて、オブジェクトから遠いプロトタイプのプロパティよりも、近いプロトタイプのプロパティが優先される）のすべての列挙可能なプロパティを反復処理することになります。
 
-### プロパティの変更や削除
+`for...in` ループは、列挙可能なシンボル以外のプロパティに対してのみ反復処理を行います。 `Array` や `Object` のような組み込みコンストラクターから生成したオブジェクトは、列挙可能でないプロパティを `Array.prototype` や `Objet.prototype` から、例えば {{jsxref("Array")}} の {{jsxref("Array/indexOf", "indexOf()")}} メソッドや {{jsxref("Object")}} の {{jsxref("Object/toString", "toString()")}} メソッドを継承していますが、これらは `for...in` ループでは処理されません。
 
-`for...in` ループは、任意の順序でオブジェクトのプロパティに対して反復します (なぜ繰り返しの見かけの順序に依存できないのかについては、詳細は {{jsxref("Operators/delete", "delete")}} 演算子を見てください)。
+現代の ECMAScript の仕様では、走査順序は明確に定義されており、 実装同士の間で一貫しています。プロトタイプチェーンのそれぞれの成分内では、非負の整数値（配列の添字となるもの）はすべて値の昇順で最初に走査され、次に文字列のキーがプロパティの作成時系列で昇順に走査されます。
 
-もしプロパティがある反復で修正されて、その後に訪問されたなら、ループにより公開される値は後の時点での値となります。訪問される前に削除されたプロパティは、それから後には訪問されません。オブジェクトに対する反復が起きている中でそのオブジェクトに追加されたプロパティは、訪問されるかもしれませんし反復から省略されるかもしれません。
+`for...in` の `variable` 部分は、`=` 演算子の前に来ることができるものであれば、何でも受け入れることができます。ループ本体の中で再代入されない限り、{{jsxref("Statements/const", "const")}} を使用して変数を宣言できます（これらは反復処理毎に別々の変数と見なされるため、変化が可能です）。そうでない場合は、{{jsxref("Statements/let", "let")}} を使用してください。[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) や `for (x.y in iterable)` のようなオブジェクトプロパティを使用することもできます。
 
-一般的に、現在訪問しているプロパティ以外のものに関しては、反復の間はオブジェクトにプロパティを追加、修正、または削除しないのが一番です。追加したプロパティが訪問されるか、(現在のもの以外の)修正したプロパティが修正される前または後に訪問されるか、または削除したプロパティが削除される前に訪問されるかといったことには、何の保証もありません。
+[古い構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#文)では、初期化子付きのループ変数を `var` 宣言で行うことができます。これは厳格モードでは[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)が発生し、非厳格モードでは無視されます。
 
-### 配列の繰り返しと for...in
+### 削除、追加、変更されたプロパティ
 
-> **メモ:** `for...in` はインデックスの順序が重要となる {{jsxref("Array", "配列")}} の繰り返しには使うべきではありません。
+プロパティがある反復処理で変更され、その後に処理された場合は、ループでの値はその後の時点での値となります。処理される前に削除されたプロパティは、その後処理されません。反復処理が行われているオブジェクトに追加されたプロパティは、処理されたり、反復処理から除外されたりします。
 
-配列のインデックスは単に整数値の名前で列挙できるプロパティであり、そうでないと一般的なオブジェクトのプロパティとして一意になりません。 `for...in` は特定の順序で並べられる保証はありません。 `for...in` ループ文はすべての列挙できるプロパティを返し、その中には非整数型やそれを引き継いだインデックス名があります。
+一般的に、現在処理しているプロパティ以外のものに関しては、反復の間にオブジェクトのプロパティを追加、修正、または削除しないのが一番です。追加したプロパティが処理されるか、(現在のもの以外の)修正したプロパティが修正される前または後に処理されるか、または削除したプロパティが削除される前に処理されるかといったことには、何の保証もありません。
 
-繰り返しの順序が実装依存なため、配列の繰り返しは要素を一貫した順番で参照することになるとは限りません。このため、アクセスの順番が大事となる配列を繰り返す時には、数値のインデックスでの {{jsxref("Statements/for", "for")}} ループ (か {{jsxref("Array.prototype.forEach()")}} か {{jsxref("Statements/for...of", "for...of")}} ループ) を使った方が良いです。
+### 配列の反復処理と for...in
 
-### 独自のプロパティだけで繰り返す
+配列の添字は整数名を持つ単なる列挙可能なプロパティであり、それ以外は一般的なオブジェクトのプロパティと同じです。`for...in` ループは、すべての整数キーを他のキーの前に、厳密に増加する順序で反復処理するので、`for...in` の動作は通常の配列の反復処理に近いものです。しかし、`for...in` ループは、非整数の名前を持つプロパティや継承されるプロパティも含めて、列挙可能なすべてのプロパティを返します。`for...of` とは異なり、`for...in` は配列のイテレーターの代わりにプロパティの列挙を使用します。[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)では、`for...of` は空のスロットにアクセスしますが、`for...in` はそうではありません。
 
-オブジェクトに付属するプロパティだけを考えればよい場合、 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} を使うか、 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} を実行してチェックします({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable")}} も使用できます)。または、外部のコードインターフェイスをまったく知らない場合は、チェックメソッドを備えた組み込みの prototypes を継承できます。
+数値の添字を使った {{jsxref("Statements/for", "for")}} ループ（か {{jsxref("Array.prototype.forEach()")}} か {{jsxref("Statements/for...of", "for...of")}} ループ）を使った方が、文字列ではなく数値の添字を返し、インデックス以外のプロパティを避けることができるので適しています。
 
-## for...in を使用する理由
+### 固有のプロパティだけで繰り返す
 
-`for...in` はオブジェクトのプロパティを反復するために作られたものであり、配列での使用は推奨されず、 `Array.prototype.forEach()` や `for...of` などの選択肢があるわけですが、それでは `for...in` を使用する場面は何なのでしょうか？
+オブジェクトのプロトタイプではなく、オブジェクト自体に付属するプロパティのみを考えたい場合は、以下のテクニックを使用することができます。
 
-最も具体的な使い方はデバッグ目的であるかもしれません。これは、オブジェクトのプロパティを (コンソールに出力するなどして) 簡単にチェックする方法になります。データを格納するには配列の方が実用的な場合が多いですが、データを扱うにはキーと値のペアが好まれる状況では (プロパティが "キー" として機能します)、それらのキーが特定の値を保持しているかどうかをチェックしたい場合があるかもしれません。
+- {{jsxref("Object.keys", "Object.keys(myObject)")}}
+- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+
+`Object.keys` は列挙可能な自分自身の文字列プロパティのリストを返す一方、 `Object.getOwnPropertyNames` は列挙可能でないプロパティも格納します。
+
+多くの JavaScript スタイルガイドやリンターは、`for...in` の使用を推奨していません。なぜなら、プロトタイプチェーン全体を反復処理するので、望んだ結果になることはほとんどなく、より広く使用されている `for...of` ループと混同してしまう可能性があるからです。`for...in` の最も実用的な用途はデバッグで、（コンソールに出力するなどして）オブジェクトのプロパティを調べるのに簡単な方法でしょう。オブジェクトがアドホックなキーと値のペアとして使用されるような状況では、`for...in`によって、それらのキーのいずれかが具体的な値を保持しているかどうかを調べることができます。
 
 ## 例
 
@@ -58,13 +69,13 @@ for (variable in object)
 以下の `for...in` ループは、オブジェクトの列挙可能なシンボルではないプロパティをすべて反復し、そのプロパティ名と値を文字列で記録します。
 
 ```js
-var obj = {a: 1, b: 2, c: 3};
+const obj = { a: 1, b: 2, c: 3 };
 
 for (const prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
 }
 
-// Output:
+// ログ:
 // "obj.a = 1"
 // "obj.b = 2"
 // "obj.c = 3"
@@ -72,64 +83,42 @@ for (const prop in obj) {
 
 ### 自身のプロパティの反復処理
 
-次の関数では {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}: の使い方を例示しています。継承されたプロパティは表示されません。
+次の関数では {{jsxref("Object.hasOwn", "Object.hasOwn()")}} の使い方を例示しています。継承されたプロパティは表示されません。
 
 ```js
-var triangle = {a: 1, b: 2, c: 3};
+const triangle = { a: 1, b: 2, c: 3 };
 
 function ColoredTriangle() {
-  this.color = 'red';
+  this.color = "red";
 }
 
 ColoredTriangle.prototype = triangle;
 
-var obj = new ColoredTriangle();
+const obj = new ColoredTriangle();
 
 for (const prop in obj) {
-  if (obj.hasOwnProperty(prop)) {
+  if (Object.hasOwn(obj, prop)) {
     console.log(`obj.${prop} = ${obj[prop]}`);
   }
 }
 
-// Output:
+// ログ:
 // "obj.color = red"
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...in statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.statements.for_in")}}
-
-### 厳格モードにおける初期化式の互換性について
-
-Firefox 40 より前では、`for...in` ループ内で初期化式 (`i=0`) が使用可能でした。
-
-```js example-bad
-var obj = {a: 1, b: 2, c: 3};
-for (var i = 0 in obj) {
-  console.log(obj[i]);
-}
-// 1
-// 2
-// 3
-```
-
-この標準外の動作はバージョン 40 以降では無視され、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)での {{jsxref("SyntaxError")}} ("[for-in loop head declarations may not have initializers](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)") エラーが表示されます ([bug 748550](https://bugzilla.mozilla.org/show_bug.cgi?id=748550) および [bug 1164741](https://bugzilla.mozilla.org/show_bug.cgi?id=1164741))。
-
-v8 (Chrome), Chakra (IE/Edge), JSC (WebKit/Safari) といった他のエンジンも同様に非標準のふるまいを削除するよう開発しています。
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("Statements/for...of", "for...of")}} - プロパティ値に対して繰り返す同様の文
-- {{jsxref("Statements/for_each...in", "for each...in")}} - `for...in` に似ていますが、プロパティ名そのものではなく、オブジェクトのプロパティの値に対して反復します。(廃止されました)
+- {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for", "for")}}
-- [ジェネレーター式](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators) (`for...of` とあわせて利用できます)
 - [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

@@ -1,13 +1,6 @@
 ---
 title: 곱하기 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Multiplication
-browser-compat: javascript.operators.multiplication
 ---
 
 {{jsSidebar("Operators")}}

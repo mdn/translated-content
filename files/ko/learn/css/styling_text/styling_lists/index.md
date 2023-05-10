@@ -2,6 +2,7 @@
 title: 목록 스타일링
 slug: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [목록](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
@@ -153,7 +154,7 @@ ol {
 
 This gives us the following look:
 
-![an ordered list with the bullet points set to appear outside the list item text.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
 You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
 
@@ -170,7 +171,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Using a custom bullet image
 
@@ -214,7 +215,7 @@ Here we've done the following:
 
 This gives us the following result:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/16226/list_formatting.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### list-style shorthand
 
@@ -385,11 +386,3 @@ CSS counters provide advanced tools for customizing list counting and styling, b
 Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article we'll get on to link styling techniques.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## In this module
-
-- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ko/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ko/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ko/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

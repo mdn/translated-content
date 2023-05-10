@@ -1,7 +1,6 @@
 ---
 title: Browser support for JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-translation_of: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 ---
 
 {{AddonSidebar}}

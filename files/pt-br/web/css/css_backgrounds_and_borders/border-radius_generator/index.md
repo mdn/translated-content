@@ -232,11 +232,11 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
 .ui-input-slider-left, .ui-input-slider-right {
   width: 16px;
   cursor: pointer;
-  background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center left no-repeat;
+  background: url("arrows.png") center left no-repeat;
 }
 
 .ui-input-slider-right {
-  background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center right no-repeat;
+  background: url("arrows.png") center right no-repeat;
 }
 
 .ui-input-slider-name {
@@ -291,7 +291,7 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
   line-height: 1em;
 
   background-color: #888;
-  background-image: url("https://mdn.mozillademos.org/files/5683/disabled.png");
+  background-image: url("disabled.png");
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -317,7 +317,7 @@ Esta ferramenta pode ser utilizada para gerar o efeito {{cssxref("border-radius"
 }
 
 .ui-checkbox > input:checked + label {
-  background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
+  background-image: url("checked.png");
   background-color: #379B4A;
 }
 
@@ -404,28 +404,28 @@ body {
   top: -12px;
   left: -12px;
   cursor: se-resize;
-  background: url("https://mdn.mozillademos.org/files/5677/resize-handle.png") top left no-repeat;
+  background: url("resize-handle.png") top left no-repeat;
 }
 
 .handle-top-right {
   top: -12px;
   right: -12px;
   cursor: sw-resize;
-  background: url("https://mdn.mozillademos.org/files/5677/resize-handle.png") top right no-repeat;
+  background: url("resize-handle.png") top right no-repeat;
 }
 
 .handle-bottom-right {
   bottom: -12px;
   right: -12px;
   cursor: nw-resize;
-  background: url("https://mdn.mozillademos.org/files/5677/resize-handle.png") bottom right no-repeat;
+  background: url("resize-handle.png") bottom right no-repeat;
 }
 
 .handle-bottom-left {
   bottom: -12px;
   left: -12px;
   cursor: ne-resize;
-  background: url("https://mdn.mozillademos.org/files/5677/resize-handle.png") bottom left no-repeat;
+  background: url("resize-handle.png") bottom left no-repeat;
 }
 
 
@@ -644,7 +644,7 @@ body {
   height: 20px;
   display: block;
   background-color: #555;
-  background-image: url("https://mdn.mozillademos.org/files/5675/dropdown.png");
+  background-image: url("dropdown.png");
   background-position: center center;
   background-repeat: no-repeat;
   top: 0px;

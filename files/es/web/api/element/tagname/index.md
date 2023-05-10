@@ -1,9 +1,6 @@
 ---
 title: element.tagName
 slug: Web/API/Element/tagName
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/tagName
 ---
 
 {{ APIRef }}
@@ -22,7 +19,7 @@ elementName = element.tagName
 
 ### Notas
 
-En XML (y los lenguajes basados en XML tales como XHTML) el código `tagName` es sensible a las mayúsculas. En HTML, `tagName` devuelve el nombre del elemento en forma canonica, es decir con todas sus letras en mayúscula. El valor del código of `tagName` es el mismo que el de la instrucción [nodeName](es/DOM/element.nodeName).
+En XML (y los lenguajes basados en XML tales como XHTML) el código `tagName` es sensible a las mayúsculas. En HTML, `tagName` devuelve el nombre del elemento en forma canonica, es decir con todas sus letras en mayúscula. El valor del código of `tagName` es el mismo que el de la instrucción [nodeName](/es/DOM/element.nodeName).
 
 ### Ejemplo
 

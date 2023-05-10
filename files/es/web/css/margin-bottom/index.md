@@ -1,7 +1,6 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-translation_of: Web/CSS/margin-bottom
 ---
 
 {{CSSRef()}}
@@ -49,15 +48,10 @@ margin-bottom: inherit; /*margen heredado*/
 
 [Ver en el JSFiddle](https://jsfiddle.net/V3hrF)
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                                   | Comment                                |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-bottom')}}                 | {{Spec2('CSS3 Box')}}             | No significant change.                 |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | Defines `margin-bottom` as animatable. |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | Removes its effect on inline elements. |
-| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Initial definition.                    |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin-bottom")}}
+{{Compat}}

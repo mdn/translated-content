@@ -1,11 +1,6 @@
 ---
 title: caption
 slug: Web/HTML/Element/caption
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/caption
 original_slug: Web/HTML/Elemento/caption
 ---
 
@@ -13,12 +8,12 @@ original_slug: Web/HTML/Elemento/caption
 
 - Es el encargado de darle un título descriptivo a las tablas.
   - : **Sus etiquetas son**: `<caption>` y `</caption>` (ambas obligatorias).
-  
+
     **Crea una caja**: .
 
-    **Está definido como**: Elemento [para tablas](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
 
 #### Atributos
 

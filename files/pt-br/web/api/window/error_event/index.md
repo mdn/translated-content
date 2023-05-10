@@ -28,8 +28,8 @@ Parâmetros da função:
 - `message`: mensagem de erro (string). Disponível como `event` (sic!) no manipulador HTML `onerror=""` .
 - `source`: URL do script onde o erro foi disparado(string)
 - `lineno`: Número da linha onde o evento foi disparado (number)
-- `colno`: Número da coluna para a linha onde o evento ocorreu (number) {{gecko_minversion_inline("31.0")}}
-- `error`: [Error Object](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+- `colno`: Número da coluna para a linha onde o evento ocorreu (number)
+- `error`: [Error Object](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 Quando a função retorna verdadeira, ela evita o disparo do manipulador de evento padrão
 

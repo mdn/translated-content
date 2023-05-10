@@ -44,7 +44,7 @@ l10n:
 
 ### サードパーティのサーバーにある
 
-ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_はどのように動作するのか)ウェブ音声 API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
+ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_はどのように動作するのか)ウェブオーディオ API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
 
 ```js
 const audioCtx = new AudioContext();
@@ -184,7 +184,7 @@ L.marker([53.480759, -2.242631], {
 
 1. 記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
 2. 結果のページから API キーを取得します。
-3. さて、例題を始めるために、 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) ディレクトリー内のすべてのファイルをコピーしてください。すでに  [examples リポジトリーをクローン](/ja/docs/Learn#コード例の入手)している場合は、 _javascript/apis/third-party-apis/nytimes_ ディレクトリーに既にこれらのファイルのコピーがあります。最初に `script.js` ファイルには、例のセットアップに必要な変数がいくつか含まれています。以下では、必要な機能を埋めていきます。
+3. さて、例題を始めるために、 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) ディレクトリー内のすべてのファイルをコピーしてください。すでに [examples リポジトリーをクローン](/ja/docs/Learn#コード例の入手)している場合は、 _javascript/apis/third-party-apis/nytimes_ ディレクトリーに既にこれらのファイルのコピーがあります。最初に `script.js` ファイルには、例のセットアップに必要な変数がいくつか含まれています。以下では、必要な機能を埋めていきます。
 
 このアプリは、検索用語とオプションの開始日と終了日を入力することを可能にし、 Article Search API をクエリーして検索結果を表示するために使用します。
 
@@ -399,13 +399,3 @@ function displayResults(json) {
 この記事では、サードパーティ API を使用してウェブサイトに機能を追加するための便利な方法を紹介しました。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- **サードパーティ API**
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

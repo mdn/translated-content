@@ -3,8 +3,6 @@ title: '<big>: Elemento para deixar o texto maio'
 slug: Web/HTML/Element/big
 ---
 
-{{obsolete_header}}
-
 The obsolete **HTML Big Element** (**`<big>`**) renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example). The size is capped at the browser's maximum permitted font size.
 
 > **Note:** **Usage note:** As it was purely presentational, this element has been removed in [HTML5](/pt-BR/docs/Web/Guide/HTML/HTML5) and shouldn't be used anymore. Instead web developers should use the CSS {{cssxref("font-size")}} property to adjust the font size.
@@ -73,6 +71,6 @@ This element implements the {{domxref('HTMLElement')}} interface.
 
 - CSS: {{cssxref("font-size")}}, {{cssxref("font")}}
 - HTML: {{htmlelement("small")}}, {{htmlelement("font")}}, {{htmlelement("style")}}
-- HTML 4.01 Specification: [Font Styles](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
+- HTML 4.01 Specification: [Font Styles](https://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
 {{HTMLSidebar}}

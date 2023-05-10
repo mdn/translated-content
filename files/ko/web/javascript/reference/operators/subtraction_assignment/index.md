@@ -1,14 +1,6 @@
 ---
 title: 빼기 할당 (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Subtraction_assignment
-browser-compat: javascript.operators.subtraction_assignment
 ---
 
 {{jsSidebar("Operators")}}

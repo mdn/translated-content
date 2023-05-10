@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
 
+{{CSSRef}}
+
 « [CSS](/zh-CN/CSS) «[理解 z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 使用 {{ cssxref("z-index") }}
@@ -32,8 +34,6 @@ original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 > - 当多个元素的 z-index 属性相同的时候 (在同一个层里面)，那么将按照 [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) 中描述的规则进行布局。
 
 在下一个例子中，所有的层都是用 z-index 进行排序的。元素 div#5 的 z-index 无效，因为他没有被指定 position 属性。
-
-![Example of stacking rules modified using z-index](/@api/deki/files/912/=Understanding_zindex_03.png)
 
 ### Example source code
 

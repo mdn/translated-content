@@ -1,16 +1,6 @@
 ---
 title: CSS로 이미지 스프라이트 구현하기
 slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - Advanced
-  - CSS
-  - CSS Image
-  - Graphics
-  - Guide
-  - Sprites
-  - Web
-  - 스프라이트
-translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 ---
 {{CSSRef}}
 

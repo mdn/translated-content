@@ -1,14 +1,6 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - Reference
-  - Web
-translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 
@@ -557,11 +549,11 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 {{EmbedLiveSample("Complete_example", 230, 250)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

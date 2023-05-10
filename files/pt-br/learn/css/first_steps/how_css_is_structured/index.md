@@ -43,7 +43,7 @@ A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS
 
 ### Folha de Estilos Externa
 
-Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o metodo mias comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
+Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
 
 `Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
@@ -146,9 +146,9 @@ Estilos inline são declarações CSS que afetam apenas um determinado elemento,
 
 Existem alguns lugares onde o estilo embutido é mais comum, ou mesmo aconselhável. Você pode ter que recorrer ao uso deles se seu ambiente de trabalho for realmente restritivo (talvez o seu CMS permita apenas que você edite o corpo do HTML). Você também os verá sendo muito usados em e-mails em HTML de modo a obter compatibilidade com o maior número possível de clientes de e-mail.
 
-## Playing with the CSS in this article
+## Brincando com o CSS neste artigo
 
-There is a lot of CSS to play with in this article. To do so, we'd recommend creating a new directory/folder on your computer, and inside it creating a copy of the following two files:
+Há muito CSS para brincar neste artigo. Para fazê-lo, recomendamos criar um novo diretório/pasta em seu computador e, dentro dele, criar uma cópia dos seguintes dois arquivos:
 
 index.html:
 
@@ -178,19 +178,19 @@ p {
 }
 ```
 
-Then, when you come across some CSS you want to experiment with, replace the HTML `<body>` contents with some HTML to style, and start adding CSS to style it inside your CSS file.
+Então, quando você encontrar algum CSS com o qual queira experimentar, substitua o conteúdo do <_body_> HTML por algum HTML para estilizar e comece a adicionar CSS para estilizá-lo dentro do seu arquivo CSS.
 
-If you are not using a system where you can easily create files, you can instead use the interactive editor below to experiment.
+Se você não estiver usando um sistema em que possa criar arquivos facilmente, você pode usar o editor interativo abaixo para experimentar.
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}
 
-Read on, and have fun!
+Continue lendo e divirta-se!
 
 ## Seletores
 
 Não é possível falar de CSS sem conhecer os seletores, e nós já descobrimos vários tipos diferentes no tutorial Começando com o Css. Um seletor é o modo pelo qual nós apontamos para alguma coisa no nosso documento HTML para aplicar os estilos à ela. Se os seus estilos não forem aplicados, então é provável que o seu seletor não esteja ligado aquilo que você pensa que ele deveria.
 
-Each CSS rule starts with a selector or a list of selectors in order to tell the browser which element or elements the rules should apply to. All of the following are examples of valid selectors, or lists of selectors.
+Cada regra CSS começa com um seletor ou uma lista de seletores para informar ao navegador em qual elemento ou elementos as regras devem ser aplicadas. Todos os exemplos a seguir são válidos como seletores ou listas de seletores.
 
 ```css
 h1
@@ -203,13 +203,13 @@ a:link
 h1, h2, .intro
 ```
 
-**Try creating some CSS rules that use the above selectors, and some HTML to be styled by them. If you don't know what some of the above syntax means, try searching for it on MDN!**
+**Tente criar algumas regras CSS que usem os seletores acima e algum HTML para ser estilizado por eles. Se você não souber o que significa alguma das sintaxes acima, tente procurar no MDN!**
 
-> **Nota:** You will learn a lot more about selectors in our [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) tutorials, in the next module.
+> **Nota:** Você aprenderá muito mais sobre seletores em nossos tutoriais [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors), no próximo módulo.
 
-### Specificity
+### Especificidade
 
-There will often be scenarios where two selectors could select the same HTML element. Consider the stylesheet below where I have a rule with a `p` selector that will set paragraphs to blue, and also a class that will set selected elements red.
+Muitas vezes, haverá cenários em que dois seletores podem selecionar o mesmo elemento HTML. Considere a folha de estilo abaixo, onde há uma regra com um seletor p que definirá parágrafos como azuis e também uma classe que definirá elementos selecionados como vermelhos.
 
 ```css
 .special {
@@ -221,13 +221,13 @@ p {
 }
 ```
 
-Let's say that in our HTML document we have a paragraph with a class of `special`. Both rules could apply, so which one wins? What color do you think our paragraph will become?
+Digamos que em nosso documento HTML tenhamos um parágrafo com uma classe `special`. Ambas as regras poderiam ser aplicadas, então qual delas vence? Qual cor você acha que nosso parágrafo ficará?
 
 ```html
 <p class="special">What color am I?</p>
 ```
 
-The CSS language has rules to control which rule will win in the event of a collision — these are called **cascade** and **specificity**. In the below code block we have defined two rules for the `p` selector, but the paragraph ends up being colored blue. This is because the declaration that sets it to blue appears later in the stylesheet, and later styles override earlier ones. This is the cascade in action.
+A linguagem CSS possui regras para controlar qual regra vencerá em caso de colisão - elas são chamadas de **cascata** e **especificidade**. No bloco de código abaixo, definimos duas regras para o seletor p, mas o parágrafo acaba sendo colorido de azul. Isso ocorre porque a declaração que o define como azul aparece posteriormente na folha de estilo, e estilos mais recentes substituem os anteriores. Isso é a cascata em ação.
 
 ```css
 p {
@@ -239,34 +239,36 @@ p {
 }
 ```
 
-However, in the case of our earlier block with the class selector and the element selector, the class will win, making the paragraph red — even thought it appears earlier in the stylesheet. A class is described as being more specific, or having more specificity than the element selector, so it wins.
+No entanto, no caso do nosso bloco anterior com o seletor de classe e o seletor de elemento, a classe vencerá, tornando o parágrafo vermelho - mesmo que apareça anteriormente na folha de estilo. Uma classe é descrita como sendo mais específica, ou tendo mais especificidade do que o seletor de elemento, então ela vence.
 
-**Try the above experiment for yourself — add the HTML to your experiment, then add the two `p { ... }` rules to your stylesheet. Next, change the first `p` selector to `.special` to see how it changes the styling.**
+**Experimente o exemplo acima por si mesmo - adicione o HTML ao seu experimento, em seguida, adicione as duas regras p {...} à sua folha de estilo. Em seguida, altere o primeiro seletor p para .special para ver como ele muda o estilo.**
 
-The rules of specificity and the cascade can seem a little complicated at first and are easier to understand once you have built up further CSS knowledge. In our [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) article, which you'll get to in the next module, I'll explain this in detail, including how to calculate specificity. For now, remember that this exists, and that sometimes CSS might not apply like you expect it to because something else in your stylesheet has a higher specificity. Identifying that more than one rule could apply to an element is the first step in fixing such issues.
+As regras de especificidade e cascata podem parecer um pouco complicadas no início e são mais fáceis de entender depois que você tiver acumulado mais conhecimento de CSS. Em nosso artigo [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), que você verá no próximo módulo, explicarei isso em detalhes, incluindo como calcular a especificidade. Por enquanto, lembre-se de que isso existe e que às vezes o CSS pode não ser aplicado como você espera porque algo mais em sua folha de estilo tem uma especificidade maior. Identificar que mais de uma regra pode ser aplicada a um elemento é o primeiro passo para resolver esses problemas.
 
 ## Propriedades e valores
 
-At its most basic level, CSS consists of two building blocks:
+Em seu nível mais básico, CSS consiste em dois blocos de construção:
 
-- **Properties**: Human-readable identifiers that indicate which stylistic features (e.g. [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) you want to change.
-- **Values**: Each specified property is given a value, which indicates how you want to change those stylistic features (e.g. what you want to change the font, width or background color to.)
+- **Properties**: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) que você deseja alterar.
+- **Valores**: Cada propriedade especificada recebe um valor, que indica como você deseja alterar essas características estilísticas (por exemplo, o que deseja mudar a fonte, a largura ou a cor de fundo para).
 
-The below image highlights a single property and value. The property name is `color`, and the value `blue`.
+A imagem abaixo destaca uma única propriedade e valor. O nome da propriedade é `color` e o valor é `blue`.
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![Uma declaração destacada no CSS](declaration.png)
 
 A property paired with a value is called a _CSS declaration_. CSS declarations are put within _CSS Declaration Blocks_. This next image shows our CSS with the declaration block highlighted.
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+Uma propriedade associada a um valor é chamada de _Declaração CSS_. As declarações CSS são colocadas dentro de _Blocos de Declaração CSS_. A próxima imagem mostra nosso CSS com o bloco de declaração destacado.
 
-Finally, CSS declaration blocks are paired with _selectors_ to produce _CSS Rulesets_ (or _CSS Rules_). Our image contains two rules, one for the `h1` selector and one for the `p` selector. The rule for `h1` is highlighted.
+![Uma declaração de bloco destacada](declaration-block.png)
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+Por fim, blocos de declarações CSS são pareados com _seletores_ para produzir _Conjuntos de Regras CSS_ (ou _Regras CSS_). Nossa imagem contém duas regras, uma para o seletor `h1` e outra para o seletor `p`. A regra para o seletor h1 está destacada.
 
-Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (`:`).
+![A regra para h1 destacada](rules.png)
 
-**Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements:**
+Definir propriedades CSS para valores específicos é a função central da linguagem CSS. O motor CSS calcula quais declarações se aplicam a cada elemento de uma página para ajustá-la e estilizá-la adequadamente. O que é importante lembrar é que tanto as propriedades quanto os valores diferenciam letras maiúsculas e minúsculas em CSS. A propriedade e o valor em cada par são separados por dois pontos (`:`).
+
+**Tente procurar diferentes valores das seguintes propriedades e escrever regras CSS que as apliquem a diferentes elementos HTML:**
 
 - **{{cssxref("font-size")}}**
 - **{{cssxref("width")}}**
@@ -274,13 +276,13 @@ Setting CSS properties to specific values is the core function of the CSS langua
 - **{{cssxref("color")}}**
 - **{{cssxref("border")}}**
 
-> **Aviso:** **Important**: If a property is unknown or if a value is not valid for a given property, the declaration is deemed _invalid_ and is completely ignored by the browser's CSS engine.
+> **Aviso:** **Importante**: Se uma propriedade é desconhecida ou se um valor não é válido para uma determinada propriedade, a declaração é considerada _inválida_ e é completamente ignorada pelo motor CSS do navegador.
 
-> **Aviso:** **Important**: In CSS (and other web standards), US spelling has been agreed on as the standard to stick to where language uncertainty arises. For example, `color` should _always_ be spelled `color`. `colour` won't work.
+> **Aviso:** **Importante**: Em CSS (e em outros padrões da web), a ortografia americana foi estabelecida como padrão a ser seguido quando houver incerteza linguística. Por exemplo, `color` deve ser _sempre_ escrito como `color`. `colour` não funcionará.
 
-### Functions
+### Funções
 
-While most values are relatively simple keywords or numeric values, there are some possible values which take the form of a function. An example would be the `calc()` function. This function allows you to do simple math from within your CSS, for example:
+Embora a maioria dos valores sejam palavras-chave relativamente simples ou valores numéricos, existem alguns valores possíveis que assumem a forma de uma função. Um exemplo seria a função `calc()`. Essa função permite que você faça cálculos simples dentro do seu CSS, por exemplo:
 
 ```html
 <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
@@ -299,13 +301,13 @@ While most values are relatively simple keywords or numeric values, there are so
 }
 ```
 
-This renders like so:
+Isto é renderizado assim:
 
 {{EmbedLiveSample('calc_example', '100%', 200)}}
 
-A function consists of the function name, and then some brackets into which the allowed values for that function are placed. In the case of the `calc()` example above I am asking for the width of this box to be 90% of the containing block width, minus 30 pixels. This isn't something I can calculate ahead of time and just enter the value into the CSS, as I don't know what 90% will be. As with all values, the relevant page on MDN will have usage examples so you can see how the function works.
+Uma função consiste no nome da função e, em seguida, em alguns parênteses nos quais os valores permitidos para essa função são inseridos. No exemplo `calc()` acima, estou pedindo para a largura desta caixa ser 90% da largura do bloco contenedor, menos 30 pixels. Isso não é algo que eu possa calcular com antecedência e simplesmente inserir o valor no CSS, pois não sei qual será 90%. Como em todos os valores, a página relevante no MDN terá exemplos de uso para que você possa ver como a função funciona.
 
-Another example would be the various values for {{cssxref("transform")}}, such as `rotate()`.
+Outro exemplo seriam os vários valores para {{cssxref("transform")}}, como `rotate()`.
 
 ```html
 <div class="box"></div>
@@ -321,11 +323,11 @@ Another example would be the various values for {{cssxref("transform")}}, such a
 }
 ```
 
-The output from the above code looks like this:
+A saída do código acima se parece com isso:
 
 {{EmbedLiveSample('transform_example', '100%', 200)}}
 
-**Try looking up different values of the following properties, and writing CSS rules that apply them to different HTML elements:**
+**Tente procurar diferentes valores das seguintes propriedades, e escreva regras CSS que as apliquem a diferentes elementos HTML:**
 
 - **{{cssxref("transform")}}**
 - **{{cssxref("background-image")}}, in particular gradient values**
@@ -333,15 +335,15 @@ The output from the above code looks like this:
 
 ## @rules
 
-As yet, we have not encountered [`@rules`](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules"). These are special rules giving CSS some instruction on how to behave. Some `@rules` are simple with the rule name and a value. For example, to import an additional stylesheet into your main CSS stylesheet you can use `@import`:
+Até agora, não encontramos as regras, em inglês [`@rules`](/en-US/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
 
 ```css
 @import 'styles2.css';
 ```
 
-One of the most common `@rules` you will come across is `@media`, which allows you to use [media queries](/pt-BR/docs/Web/CSS/Media_Queries) to apply CSS only when certain conditions are true (e.g. when the screen resolution is above a certain amount, or the screen is wider than a certain width).
+Uma das `@rules` mais comuns que você encontrará é a `@media`, que permite usar [media queries](/pt-BR/docs/Web/CSS/Media_Queries) para aplicar CSS somente quando certas condições são verdadeiras (por exemplo, quando a resolução da tela está acima de um certo valor ou a tela é mais larga que uma largura específica).
 
-In the below CSS, we have a stylesheet that gives the `<body>` element a pink background color. However, we then use `@media` to create a section of our stylesheet that will only be applied in browsers with a viewport wider than 30em. If the browser is wider than 30em then the background color will be blue.
+Nesse CSS abaixo, temos um estilo que dá ao elemento `<body>` uma cor de fundo rosa. No entanto, usamos `@media` para criar uma seção do nosso estilo que será aplicada apenas em navegadores com uma viewport mais larga que 30em. Se o navegador for mais largo que 30em, a cor de fundo será azul.
 
 ```css
 body {
@@ -355,15 +357,15 @@ body {
 }
 ```
 
-You will encounter other `@rules` throughout these tutorials.
+Você encontrará outras `@rules` durante estes tutoriais.
 
-**See if you can add a media query to your CSS that changes styles based on the viewport width. Change the width of your browser window to see the result.**
+**Veja se você consegue adicionar uma consulta de mídia ao seu CSS que altere estilos com base na largura da viewport. Altere a largura da janela do seu navegador para ver o resultado.**
 
-## Shorthands
+## Atalhos
 
-Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties** — this is because they allow you to set several property values in a single line, saving time and making your code neater in the process.
+Algumas propriedades como {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}} e {{cssxref("margin")}} são chamadas de **propriedades abreviadas** - isso porque elas permitem que você defina vários valores de propriedade em uma única linha, economizando tempo e tornando seu código mais organizado no processo.
 
-For example, this line:
+Por exemplo, está linha:
 
 ```css
 /* In 4-value shorthands like padding and margin, the values are applied
@@ -373,7 +375,7 @@ For example, this line:
 padding: 10px 15px 15px 5px;
 ```
 
-Does the same thing as all these together:
+Faz a mesma coisa que todos eles juntos:
 
 ```css
 padding-top: 10px;
@@ -382,13 +384,13 @@ padding-bottom: 15px;
 padding-left: 5px;
 ```
 
-Whereas this line:
+Por exemplo, está linha:
 
 ```css
 background: red url(bg-graphic.png) 10px 10px repeat-x fixed;
 ```
 
-Does the same thing as all these together:
+Faz a mesma coisa que todos eles juntos:
 
 ```css
 background-color: red;
@@ -398,17 +400,17 @@ background-repeat: repeat-x;
 background-scroll: fixed;
 ```
 
-We won't attempt to teach these exhaustively now — you'll come across many examples later on in the course, and you are advised to look up the shorthand property names in our [CSS reference](/pt-BR/docs/Web/CSS/Reference) to find out more.
+Não tentaremos ensinar isso exaustivamente agora - você encontrará muitos exemplos mais tarde no curso, e é aconselhável procurar os nomes das propriedades abreviadas em nossa [Referência de CSS](/pt-BR/docs/Web/CSS/Reference) para saber mais.
 
-**Try adding the above declarations to your CSS to see how it affects the styling of your HTML. Try experimenting with some different values.**
+**Tente adicionar as declarações acima ao seu CSS para ver como elas afetam o estilo do seu HTML. Tente experimentar com alguns valores diferentes.**
 
-> **Aviso:** While shorthands often allow you to miss out values, they will then reset any values that you do not include to their initial values. This ensures that a sensible set of values are used. However, this might be confusing if you were expecting the shorthand to only change the values you passed in.
+> **Aviso:** Embora os atalhos geralmente permitam que você deixe de fora valores, eles então redefinem quaisquer valores que você não incluir para seus valores iniciais. Isso garante que um conjunto sensato de valores seja usado. No entanto, isso pode ser confuso se você estiver esperando que o atalho apenas mude os valores que passou.
 
-## Comments
+## Comentários
 
-As with HTML, you are encouraged to make comments in your CSS, to help you understand how your code works when coming back to it after several months, and to help others coming to the code to work on it understand it.
+Assim como no HTML, você é incentivado a fazer comentários em seu CSS, para ajudá-lo a entender como seu código funciona quando voltar a ele depois de vários meses, e para ajudar outras pessoas a entenderem o código quando estiverem trabalhando nele.
 
-Comments in CSS begin with `/*` and end with `*/`. In the below code block I have used comments to mark the start of different distinct code sections. This is useful to help you navigate your codebase as it gets larger — you can search for the comments in your code editor.
+Comentários em CSS começam com `/*` e terminam com `*/`. No bloco de código abaixo, foram usados comentários para marcar o início de diferentes seções de código distintas. Isso é útil para ajudar na navegação da sua base de código à medida que ela cresce - você pode procurar pelos comentários no seu editor de código.
 
 ```css
 /* Handle basic element styling */
@@ -447,7 +449,7 @@ div p + p {
 }
 ```
 
-Comments are also useful for temporarily _commenting out_ certain parts of the code for testing purposes, for example if you are trying to find which part of your code is causing an error. In the next example I have commented out the rules for the `.special` selector.
+Os comentários também são úteis para _comentar_ temporariamente partes do código para fins de teste, por exemplo, se você estiver tentando encontrar qual parte do seu código está causando um erro. No próximo exemplo, comentei as regras para o seletor `.special`.
 
 ```css
 /*.special {
@@ -459,13 +461,13 @@ p {
 }
 ```
 
-**Add some comments to your CSS, to get used to using them.**
+**Adicione alguns comentários ao seu CSS, para se acostumar a usá-los.**
 
-## Whitespace
+## Espaçamento
 
-White space means actual spaces, tabs and new lines. In the same manner as HTML, the browser tends to ignore much of the whitespace inside your CSS; a lot of the whitespace is just there to aid readability.
+Espaços em branco significam espaços, tabulações e novas linhas. Da mesma forma que no HTML, o navegador tende a ignorar grande parte do espaçamento dentro do seu CSS; grande parte do espaçamento está presente apenas para ajudar na legibilidade.
 
-In our first example below we have each declaration (and rule start/end) on its own line — this is arguably a good way to write CSS, as it makes it easy to maintain and understand:
+No exemplo abaixo, temos cada declaração (e início/fim de regra) em sua própria linha - essa é uma maneira recomendada de escrever CSS, já que torna fácil manter e entender:
 
 ```css
 body {
@@ -501,7 +503,7 @@ div p + p {
 }
 ```
 
-You could write exactly the same CSS like so, with most of the whitespace removed — this is functionally identical to the first example, but I'm sure you'll agree that it is somewhat harder to read:
+Você poderia escrever exatamente o mesmo CSS como abaixo, com grande parte do espaçamento removido - isto é, funcionalmente idêntico ao primeiro exemplo, mas é mais difícil de ler:
 
 ```css
 body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
@@ -514,36 +516,28 @@ div p {margin: 0; padding: 1em;}
 div p + p {padding-top: 0;}
 ```
 
-The code layout you choose is usually a personal preference, although when you start to work in teams, you may find that the existing team has its own styleguide that specifies an agreed convention to follow.
+O layout de código que você escolher geralmente é uma preferência pessoal, embora quando você começar a trabalhar em equipes, pode descobrir que a equipe existente tem seu próprio guia de estilo que especifica uma convenção acordada a seguir.
 
-The whitespace you do need to be careful of in CSS is the whitespace between the properties and their values. For example, the following declarations are valid CSS:
+O espaçamento que você precisa ter cuidado no CSS é o espaçamento entre as propriedades e seus valores. Por exemplo, as seguintes declarações são CSS válidos:
 
 ```css
 margin: 0 auto;
 padding-left: 10px;
 ```
 
-But the following are invalid:
+Mas os seguintes são inválidos:
 
 ```css
 margin: 0auto;
 padding- left: 10px;
 ```
 
-`0auto` is not recognised as a valid value for the `margin` property (`0` and `auto` are two separate values,) and the browser does not recognise `padding-` as a valid property. So you should always make sure to separate distinct values from one another by at least a space, but keep property names and property values together as single unbroken strings.
+`0auto` não é reconhecido como um valor válido para a propriedade `margin` (`0` e `auto` são dois valores separados), e o navegador não reconhece `padding-` como uma propriedade válida. Portanto, você sempre deve garantir que valores distintos estejam separados um do outro por pelo menos um espaço, mas mantenha os nomes das propriedades e os valores das propriedades juntos como uma única cadeia ininterrupta.
 
-**Try playing with whitespace inside your CSS, to see what breaks things and what doesn't.**
+**Experimente brincar com espaçamento dentro do seu CSS, para ver o que quebra as coisas e o que não quebra.**
 
-## What's next?
+## Qual é o próximo passo?
 
-It's useful to understand a little about how the browser takes your HTML and CSS and turns it into a webpage, so in the next article — [How CSS works](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works) — we will take a look at that process.
+É útil entender um pouco sobre como o navegador pega seu HTML e CSS e transforma-o em uma página da web, então no próximo artigo — [Como CSS Funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works) — vamos dar uma olhada nesse processo.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## Neste módulo
-
-1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3. [Como o CSS é estruturad](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)o
-4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Usando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

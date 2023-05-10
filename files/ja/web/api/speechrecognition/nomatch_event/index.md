@@ -1,64 +1,74 @@
 ---
-title: SpeechRecognition.onnomatch
+title: 'SpeechRecognition: nomatch イベント'
 slug: Web/API/SpeechRecognition/nomatch_event
 original_slug: Web/API/SpeechRecognition/onnomatch
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-{{domxref("SpeechRecognition")}}インターフェイスの **`onnomatch`** プロパティ、文法の辞書による音声認識サービスの最終結果として何も認識されていない場合 ({{event("nomatch")}}イベントが発生した時)、実行するイベントハンドラーになります。
+**`nomatch`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスが明確に認識できたものなしに最終結果を返したときに発生します。
 
-{{domxref("SpeechRecognitionAlternative.confidence","confidence")}}の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
-
-> **メモ:** `onnomatch` ハンドラーは Firefox でまだ良く動作していませんので — 音声認識 API は正規なマッチを返し、文法の辞書による項目を推測します。この不具合は今対応中です。
+{{domxref("SpeechRecognitionAlternative.confidence","confidence")}} の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('nomatch', (event) => { })
+
+onnomatch = (event) => { }
 ```
-mySpeechRecognition.onnomatch = function() { ... };
-```
+
+## イベント型
+
+{{domxref("SpeechRecognitionEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("SpeechRecognitionEvent")}}
+
+## イベントプロパティ
+
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+
+- {{domxref("SpeechRecognitionEvent.emma")}} {{ReadOnlyInline}}
+  - : 結果の EMMA (Extensible MultiModal Annotation markup language) - XML - 表現を返します。
+- {{domxref("SpeechRecognitionEvent.interpretation")}} {{ReadOnlyInline}}
+  - : ユーザーが言ったことの意味づけを返します。
+- {{domxref("SpeechRecognitionEvent.resultIndex")}} {{ReadOnlyInline}}
+  - : 実際に変更された {{domxref("SpeechRecognitionResultList")}} 「配列」の中で最もインデックス値の小さい結果を返します。
+- {{domxref("SpeechRecognitionEvent.results")}} {{ReadOnlyInline}}
+  - : 現在のセッションのすべての音声認識結果を表す {{domxref("SpeechRecognitionResultList")}} オブジェクトを返します。
 
 ## 例
 
+`nomatch` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.onnomatch = function() {
-  console.log('音声は認識できませんでした。');
+recognition.addEventListener('nomatch', (event) => {
+  console.error('音声が認識されませんでした');
+});
+```
+
+または `onnomatch` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onnomatch = () => {
+  console.error('音声が認識されませんでした');
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                             | 状態                                 | コメント |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onnomatch', 'onnomatch')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onnomatch")}}
-
-### Firefox OS の権限
-
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加するのは必要になります。
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-privileged アプリも必要なので、下記の追加も必要になります。
-
-```json
-  "type": "privileged"
-```
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

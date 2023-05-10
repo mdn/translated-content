@@ -1,13 +1,6 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-translation_of: Web/API/Animation/finished
 original_slug: Web/API/Animation/terminado
 ---
 

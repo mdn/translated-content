@@ -12,7 +12,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 240 40" xmlns="https://www.w3.org/2000/svg">
   <style>
     text  { font: italic 12px serif; }
     tspan { font: bold 10px sans-serif; fill: red; }

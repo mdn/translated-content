@@ -1,19 +1,6 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Almacenamiento
-  - Contexto seguro
-  - Cuota
-  - Referencia
-  - Storage API
-  - StorageManager
-  - Uso
-  - estimación
-  - estimate
-  - metodo
-translation_of: Web/API/StorageManager/estimate
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}
@@ -64,13 +51,11 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## Ver también
 

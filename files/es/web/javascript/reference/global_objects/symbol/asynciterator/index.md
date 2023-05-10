@@ -1,9 +1,7 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-browser-compat: javascript.builtins.Symbol.asyncIterator
 l10n:
   sourceCommit: 12da8f89b59995a777e13d518ffd39c331fb95d4
 ---

@@ -63,9 +63,7 @@ Symbol.for('mdn.bar');
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

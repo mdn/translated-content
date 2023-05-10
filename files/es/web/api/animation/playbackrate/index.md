@@ -1,15 +1,6 @@
 ---
 title: Animation.playbackRate
 slug: Web/API/Animation/playbackRate
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - playbackRate
-translation_of: Web/API/Animation/playbackRate
 ---
 
 {{APIRef("Web Animations")}}

@@ -16,7 +16,7 @@ slug: Web/API/DOMParser
 ## 语法
 
 ```js
-let domparser = new DOMParser()​​;
+let domparser = new DOMParser();
 ```
 
 ## 方法
@@ -71,7 +71,7 @@ let parser = new DOMParser(),
 </parsererror>
 ```
 
-解析错误会显示在[错误控制台](../../../zh-cn/Error_Console)，包括文档的地址和错误的源代码。
+解析错误会显示在[错误控制台](/zh-CN/docs/Error_Console)，包括文档的地址和错误的源代码。
 
 ## 解析 SVG 或者 HTML 文档
 

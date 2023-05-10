@@ -1,13 +1,6 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - At-rule
-  - CSS
-  - Reference
-  - 미디어 쿼리
-translation_of: Web/CSS/@media
 ---
 
 {{CSSRef}}

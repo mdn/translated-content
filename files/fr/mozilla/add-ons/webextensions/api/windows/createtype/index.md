@@ -27,9 +27,9 @@ Les valeurs de ce type sont des objets `strings`. Les valeurs possibles sont :
 - `"panel"`
 - `"detached_panel"`
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.CreateType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

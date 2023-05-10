@@ -1,7 +1,6 @@
 ---
 title: 'Evaluación: Estructurando datos planetarios'
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Learn/HTML/Tablas/Structuring_planet_data
 ---
 
@@ -32,7 +31,7 @@ En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sis
 
 Para comenzar esta evaluación, crea una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), y [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) en una nueva carpeta de tu ordenador.
 
-> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
+> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
 
 ## Resumen del proyecto
 
@@ -40,7 +39,7 @@ Estás trabajando en la escuela; tus estudiantes están estudiando los planetas 
 
 La tabla finalizada debería de verse así:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 

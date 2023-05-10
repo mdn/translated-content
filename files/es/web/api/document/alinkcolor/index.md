@@ -1,7 +1,6 @@
 ---
 title: document.alinkColor
 slug: Web/API/Document/alinkColor
-translation_of: Web/API/Document/alinkColor
 ---
 
 {{APIRef("DOM")}}{{ Deprecated_header() }}

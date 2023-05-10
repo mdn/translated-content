@@ -3,779 +3,303 @@ title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-A interface HTMLInputElement fornece propriedades e métodos especiais (além da interface regular {{domxref ("HTMLElement")}}) que também tem disponível por herança) para manipular o layout e a apresentação dos elementos de entrada.
+A interface **`HTMLInputElement`** fornece propriedades e métodos especiais para manipular as opções, layout e apresentação de elementos {{HtmlElement("input")}}.
 
-## Propriedades
+{{InheritanceDiagram}}
 
-_Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
+## Propriedades da instância
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>accept</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflete o {{ htmlattrxref("accept", "input") }} atributo
-        HTML, contendo uma lista separada por vírgula de tipos de arquivos
-        aceitos pelo servidor quando
-        {{htmlattrxref("type","input")}} é <code>file</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>accessKey</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Um único caractere que alterna o foco de entrada para o controle.</td>
-    </tr>
-    <tr>
-      <td><code>align</code> {{obsolete_inline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Alinhamento do elemento.</td>
-    </tr>
-    <tr>
-      <td><code>alt</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflete o {{ htmlattrxref("alt", "input") }} atributo HTML,
-        contendo texto alternativo para usar quando
-        {{htmlattrxref("type","input")}} é <code>image.</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>autocapitalize</code> {{experimental_inline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Define o comportamento de capitalização para entrada do usuário. Valores
-        válidos são <code>none</code>, <code>off</code>,
-        <code>characters</code>, <code>words</code>, ou <code>sentences</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>autocomplete</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{htmlattrxref("autocomplete", "input")}}
-        HTML attribute, indicating whether the value of the control can be
-        automatically completed by the browser. Ignored if the value of the
-        {{htmlattrxref("type","input")}} attribute is
-        <code>hidden</code>,
-        <code>checkbox</code>,
-        <code>radio</code>,
-        <code>file</code>, or a button type
-        (<code>button</code>,
-        <code>submit</code>,
-        <code>reset</code>,
-        <code>image</code>). Possible values
-        are:
-        <ul>
-          <li>
-            <code>off</code>: The user must
-            explicitly enter a value into this field for every use, or the
-            document provides its own auto-completion method; the browser does
-            not automatically complete the entry.
-          </li>
-          <li>
-            <code>on</code>: The browser can
-            automatically complete the value based on values that the user has
-            entered during previous uses.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>autofocus</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("autofocus", "input") }} HTML
-        attribute, which specifies that a form control should have input focus
-        when the page loads, unless the user overrides it, for example by typing
-        in a different control. Only one form element in a document can have the
-        {{htmlattrxref("autofocus","input")}} attribute. It cannot be
-        applied if the {{htmlattrxref("type","input")}} attribute is
-        set to <code>hidden</code> (that is, you cannot automatically set focus
-        to a hidden control).
-      </td>
-    </tr>
-    <tr>
-      <td><code>checked</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        The current state of the element when
-        {{htmlattrxref("type","input")}} is <code>checkbox</code> or
-        <code>radio</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>defaultChecked</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        The default state of a radio button or checkbox as originally specified
-        in HTML that created this object.
-      </td>
-    </tr>
-    <tr>
-      <td><code>defaultValue</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        The default value as originally specified in HTML that created this
-        object.
-      </td>
-    </tr>
-    <tr>
-      <td><code>dirName</code></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("disabled", "input") }} HTML
-        attribute, indicating that the control is not available for interaction.
-        The input values will not be submitted with the form. See also
-        {{ htmlattrxref("readOnly", "input") }}
-      </td>
-    </tr>
-    <tr>
-      <td><code>files</code> {{readonlyInline}}</td>
-      <td>{{domxref("FileList")}}</td>
-      <td>A list of selected files.</td>
-    </tr>
-    <tr>
-      <td><code>form</code> {{readonlyInline}}</td>
-      <td>{{domxref("HTMLFormElement")}}</td>
-      <td>
-        The containing form element, if this element is in a form. If this
-        element is not contained in a form element:
-        <ul>
-          <li>
-            {{ HTMLVersionInline(5) }} this can be the
-            {{ htmlattrxref("id", "form") }} attribute of any
-            {{ HTMLElement("form") }} element in the same document. Even
-            if the attribute is set on {{ HTMLElement("input") }},
-            this property will be <code>null</code>, if it isn't the id of a
-            {{ HTMLElement("form") }} element.
-          </li>
-          <li>
-            {{ HTMLVersionInline(4) }} this must be <code>null</code>.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>formAction</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("formaction", "input") }}
-        HTML attribute, containing the URI of a program that processes
-        information submitted by the element. If specified, this attribute
-        overrides the {{ htmlattrxref("action", "form") }} attribute
-        of the {{ HTMLElement("form") }} element that owns this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>formEncType</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("formenctype", "input") }}
-        HTML attribute, containing the type of content that is used to submit
-        the form to the server. If specified, this attribute overrides the
-        {{ htmlattrxref("enctype", "form") }} attribute of the
-        {{ HTMLElement("form") }} element that owns this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>formMethod</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("formmethod", "input") }}
-        HTML attribute, containing the HTTP method that the browser uses to
-        submit the form. If specified, this attribute overrides the
-        {{ htmlattrxref("method", "form") }} attribute of the
-        {{ HTMLElement("form") }} element that owns this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>formNoValidate</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Reflects the
-        {{ htmlattrxref("formnovalidate", "input") }} HTML
-        attribute, indicating that the form is not to be validated when it is
-        submitted. If specified, this attribute overrides the
-        {{ htmlattrxref("novalidate", "form") }} attribute of the
-        {{ HTMLElement("form") }} element that owns this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>formTarget</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("formtarget", "input") }}
-        HTML attribute, containing a name or keyword indicating where to display
-        the response that is received after submitting the form. If specified,
-        this attribute overrides the
-        {{ htmlattrxref("target", "form") }} attribute of the
-        {{ HTMLElement("form") }} element that owns this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>height</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("height", "input") }} HTML
-        attribute, which defines the height of the image displayed for the
-        button, if the value of {{htmlattrxref("type","input")}} is
-        <code>image</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>indeterminate</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>Indicates that a checkbox is neither on nor off.</td>
-    </tr>
-    <tr>
-      <td><code>labels</code> {{readonlyInline}}</td>
-      <td>{{domxref("NodeList")}}</td>
-      <td>
-        A list of {{ HTMLElement("label") }} elements that are labels
-        for this element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>list</code></td>
-      <td>{{domxref("HTMLElement")}}</td>
-      <td>
-        Identifies a list of pre-defined options to suggest to the user. The
-        value must be the <strong>id</strong> of a
-        {{HTMLElement("datalist")}} element in the same document. The
-        browser displays only options that are valid values for this input
-        element. This attribute is ignored when the
-        {{htmlattrxref("type","input")}} attribute's value is
-        <code>hidden</code>,
-        <code>checkbox</code>,
-        <code>radio</code>,
-        <code>file</code>, or a button type.
-      </td>
-    </tr>
-    <tr>
-      <td><code>max</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("max", "input") }} HTML
-        attribute, containing the maximum (numeric or date-time) value for this
-        item, which must not be less than its minimum (<strong>min</strong>
-        attribute) value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>maxLength</code></td>
-      <td><code>long</code></td>
-      <td>
-        Reflects the {{ htmlattrxref("maxlength", "input") }} HTML
-        attribute, containing the maximum length of text (in Unicode code
-        points) that the value can be changed to. The constraint is evaluated
-        only when the value is changed
-        <div class="note">
-          <strong>Note:</strong> If you set <code>maxLength</code> to a negative
-          value programmatically, an exception will be thrown.
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td><code>min</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("min", "input") }} HTML
-        attribute, containing the minimum (numeric or date-time) value for this
-        item, which must not be greater than its maximum
-        ({{htmlattrxref("max","input")}} attribute) value.
-      </td>
-    </tr>
-    <tr>
-      <td><code>multiple</code></td>
-      <td></td>
-      <td>
-        Reflects the {{ htmlattrxref("multiple", "input") }} HTML
-        attribute, indicating whether more than one value is possible (e.g.,
-        multiple files).
-      </td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("name", "input") }} HTML
-        attribute, containing a name that identifies the element when submitting
-        the form.
-      </td>
-    </tr>
-    <tr>
-      <td><code>pattern</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("pattern", "input") }} HTML
-        attribute, containing a regular expression that the control's value is
-        checked against. The pattern must match the entire value, not just some
-        subset. Use the {{htmlattrxref("title","input")}} attribute
-        to describe the pattern to help the user. This attribute applies when
-        the value of the {{htmlattrxref("type","input")}} attribute
-        is <code>text</code>,
-        <code>search</code>,
-        <code>tel</code>,
-        <code>url</code> or
-        <code>email</code>; otherwise it is
-        ignored.
-      </td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("placeholder", "input") }}
-        HTML attribute, containing a hint to the user of what can be entered in
-        the control. The placeholder text must not contain carriage returns or
-        line-feeds. This attribute applies when the value of the
-        {{htmlattrxref("type","input")}} attribute is
-        <code>text</code>,
-        <code>search</code>,
-        <code>tel</code>,
-        <code>url</code> or
-        <code>email</code>; otherwise it is
-        ignored.
-      </td>
-    </tr>
-    <tr>
-      <td><code>readOnly</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        <p>
-          Reflects the {{ htmlattrxref("readonly", "input") }} HTML
-          attribute, indicating that the user cannot modify the value of the
-          control.<br />{{HTMLVersionInline(5)}}This is ignored if the
-          value of the {{htmlattrxref("type","input")}} attribute is
-          <code>hidden</code>,
-          <code>range</code>,
-          <code>color</code>,
-          <code>checkbox</code>,
-          <code>radio</code>,
-          <code>file</code>, or a button type.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("required", "input") }} HTML
-        attribute, indicating that the user must fill in a value before
-        submitting a form.
-      </td>
-    </tr>
-    <tr>
-      <td><code>selectionDirection</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        The direction in which selection occurred. This is
-        <code>"forward"</code> if selection was performed in the start-to-end
-        direction of the current locale, or <code>"backward"</code> for the
-        opposite direction. This can also be <code>"none"</code> if the
-        direction is unknown."
-      </td>
-    </tr>
-    <tr>
-      <td><code>selectionEnd</code></td>
-      <td><code>unsigned long</code></td>
-      <td>The index of the end of selected text.</td>
-    </tr>
-    <tr>
-      <td><code>selectionStart</code></td>
-      <td><code>unsigned long</code></td>
-      <td>
-        The index of the beginning of selected text. When nothing is selected,
-        this is also the caret position inside of the
-        <code>&#x3C;input></code> element.
-      </td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td><code>unsigned long</code></td>
-      <td>
-        Reflects the {{ htmlattrxref("size", "input") }} HTML
-        attribute, containing size of the control. This value is in pixels
-        unless the value of {{htmlattrxref("type","input")}} is
-        <code>text</code> or
-        <code>password</code>, in which case,
-        it is an integer number of characters.
-        {{ HTMLVersionInline(5) }} Applies only when
-        {{htmlattrxref("type","input")}} is set to
-        <code>text</code>,
-        <code>search</code>,
-        <code>tel</code>,
-        <code>url</code>,
-        <code>email</code>, or
-        <code>password</code>; otherwise it is
-        ignored.
-      </td>
-    </tr>
-    <tr>
-      <td><code>src</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("src", "input") }} HTML
-        attribute, which specifies a URI for the location of an image to display
-        on the graphical submit button, if the value of
-        {{htmlattrxref("type","input")}} is
-        <code>image</code>; otherwise it is
-        ignored.
-      </td>
-    </tr>
-    <tr>
-      <td><code>step</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("step", "input") }} HTML
-        attribute, which works with<strong
-        > </strong>{{htmlattrxref("min","input")}} and
-        {{htmlattrxref("max","input")}} to limit the increments at
-        which a numeric or date-time value can be set. It can be the string
-        <code>any</code> or a positive floating
-        point number. If this is not set to
-        <code>any</code>, the control accepts
-        only values at multiples of the step value greater than the minimum.
-      </td>
-    </tr>
-    <tr>
-      <td><code>tabIndex</code></td>
-      <td>long</td>
-      <td>
-        The position of the element in the tabbing navigation order for the
-        current document.
-      </td>
-    </tr>
-    <tr>
-      <td><code>type</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("type", "input") }} HTML
-        attribute, indicating the type of control to display. See
-        {{ htmlattrxref("type", "input") }} attribute of
-        {{ HTMLElement("input") }} for possible values.
-      </td>
-    </tr>
-    <tr>
-      <td><code>useMap</code> {{ obsolete_inline }}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>A client-side image map.</td>
-    </tr>
-    <tr>
-      <td><code>validationMessage</code> {{readonlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        A localized message that describes the validation constraints that the
-        control does not satisfy (if any). This is the empty string if the
-        control is not a candidate for constraint validation
-        ({{htmlattrxref("willValidate","input")}} is
-        <code>false</code>), or it satisfies its constraints.
-      </td>
-    </tr>
-    <tr>
-      <td><code>validity</code> {{readonlyInline}}</td>
-      <td>{{domxref("ValidityState")}}</td>
-      <td>The validity state that this element is in.</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        <p>Current value in the control.</p>
-        <div class="note">
-          <p>
-            <strong>Note: </strong>for certain input types the returned value
-            might not match the value the user has entered. For example, if the
-            user enters a non-numeric value into an &#x3C;input type="number">,
-            the returned value might be an empty string instead.
-          </p>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a id="property-valueasdate" name="property-valueasdate"></a
-          >valueAsDate</code
-        >
-      </td>
-      <td>{{jsxref("Date")}}</td>
-      <td>
-        The value of the element, interpreted as a date, or <code>null</code> if
-        conversion is not possible.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a id="property-valueasnumber" name="property-valueasnumber"></a
-          >valueAsNumber</code
-        >
-      </td>
-      <td><code>double</code></td>
-      <td>
-        The value of the element, interpreted as one of the following in order:
-        <ol>
-          <li>a time value</li>
-          <li>a number</li>
-          <li><code>NaN</code> if conversion is not possible</li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>
-        Reflects the {{ htmlattrxref("width", "input") }} HTML
-        attribute, which defines the width of the image displayed for the
-        button, if the value of {{htmlattrxref("type","input")}} is
-        <code>image</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>willValidate</code></td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Indicates whether the element is a candidate for constraint validation.
-        It is <code>false</code> if any conditions bar it from constraint
-        validation.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suportam os atributos correspondentes.
 
-## Methods
+- {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
 
-_Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
+  - : `string`: **Representa** o alinhamento do elemento. _Em vez disso, use CSS._
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th>Name &#x26; Arguments</th>
-      <th>Return</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>blur()</code></td>
-      <td><code>void</code></td>
-      <td>
-        Removes focus from input; keystrokes will subsequently go nowhere.
-      </td>
-    </tr>
-    <tr>
-      <td><code>checkValidity</code>()</td>
-      <td>{{jsxref("Boolean")}}</td>
-      <td>
-        Returns false if the element is a candidate for constraint validation,
-        and it does not satisfy its constraints. In this case, it also fires an
-        {{event("invalid")}} event at the element. It returns true if
-        the element is not a candidate for constraint validation, or if it
-        satisfies its constraints.
-      </td>
-    </tr>
-    <tr>
-      <td><code>click()</code></td>
-      <td><code>void</code></td>
-      <td>Simulates a click on the element.</td>
-    </tr>
-    <tr>
-      <td><code>focus()</code></td>
-      <td><code>void</code></td>
-      <td>Focus on input; keystrokes will subsequently go to this element.</td>
-    </tr>
-    <tr>
-      <td>
-        <code>mozSetFileArray(files)</code>{{non-standard_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Sets the files selected on the input to the given array of
-        <code><a href="/pt-BR/docs/Web/API/File">File</a></code> objects. This
-        is an alternative to <code>mozSetFileNameArray</code> which can be used
-        in frame scripts: a chrome script can
-        <a href="/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
-          >open files as <code>File</code> objects</a
-        >
-        and send them via
-        <a href="/pt-BR/Firefox/Multiprocess_Firefox/The_message_manager"
-          >message manager</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en/DOM/Input.mozGetFileNameArray"
-            >mozGetFileNameArray</a
-          >(length, filenames)</code
-        >{{non-standard_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>Returns an array of all the file names from the input.</td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en/DOM/Input.mozSetFileNameArray"
-            >mozSetFileNameArray</a
-          >(filenames, length)</code
-        >{{non-standard_inline}}
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Sets the filenames for the files selected on the input. Not for use in
-        <a
-          href="/pt-BR/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts"
-          >frame scripts</a
-        >, because it accesses the filesystem.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a href="/en/DOM/Input.select">select</a
-          >()</code
-        >
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Selects the input text in the element, and focuses it so the user can
-        subsequently replace the whole entry.
-      </td>
-    </tr>
-    <tr>
-      <td><code>setCustomValidity(error)</code></td>
-      <td><code>void</code></td>
-      <td>
-        Sets a custom validity message for the element. If this message is not
-        the empty string, then the element is suffering from a custom validity
-        error, and does not validate.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          ><a
-            href="/en/DOM/Input.setSelectionRange"
-            >setSelectionRange</a
-          >(selectionStart, selectionEnd, [optional] selectionDirection)</code
-        >
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Selects a range of text in the element (but does not focus it). The
-        optional <code>selectionDirection</code> parameter may be
-        <code>"forward"</code> or <code>"backward"</code> to establish the
-        direction in which selection was set, or <code>"none"</code> if the
-        direction is unknown or not relevant. The default is
-        <code>"none"</code>. Specifying a
-        <code>selectionDirection</code> parameter sets the value of the
-        <code>selectionDirection</code> property.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >setRangeText(replacement, [optional] start, [optional] end,
-          [optional] selectMode)</code
-        >
-      </td>
-      <td><code>void</code></td>
-      <td>
-        Replaces a range of text with the new text. Supported input types:
-        <code>text</code>, <code>search</code>, <code>url</code>,
-        <code>tel</code>, <code>password.</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>stepDown(n)</code></td>
-      <td><code>void</code></td>
-      <td>
-        Decrements the {{htmlattrxref("value","input")}} by
-        ({{htmlattrxref("step","input")}} * <code>n</code>), where
-        <code>n</code> defaults to <code>1</code> if not specified. Throws an
-        <code>INVALID_STATE_ERR</code> exception:
-        <ul>
-          <li>
-            if the method is not applicable to for the current
-            {{htmlattrxref("type","input")}} value.
-          </li>
-          <li>
-            if the element has no {{htmlattrxref("step","input")}}
-            value.
-          </li>
-          <li>
-            if the {{htmlattrxref("value","input")}} cannot be
-            converted to a number.
-          </li>
-          <li>
-            if the resulting value is above the
-            {{htmlattrxref("max","input")}} or below the
-            {{htmlattrxref("min","input")}}.
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><code>stepUp(n)</code></td>
-      <td><code>void</code></td>
-      <td>
-        Increments the {{htmlattrxref("value","input")}} by
-        ({{htmlattrxref("step","input")}} * <code>n</code>), where
-        <code>n</code> defaults to <code>1</code> if not specified. Throws an
-        <code>INVALID_STATE_ERR</code> exception:
-        <ul>
-          <li>
-            if the method is not applicable to for the current
-            {{htmlattrxref("type","input")}} value.
-          </li>
-          <li>
-            if the element has no {{htmlattrxref("step","input")}}
-            value.
-          </li>
-          <li>
-            if the {{htmlattrxref("value","input")}} cannot be
-            converted to a number.
-          </li>
-          <li>
-            if the resulting value is above the
-            {{htmlattrxref("max","input")}} or below the
-            {{htmlattrxref("min","input")}}.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{Experimental_Inline}}
 
-## Specifications
+  - : `string`: **Define** o comportamento de capitalização para a entrada do usuário. Os valores válidos são `none`, `off`, `characters`, `words` ou `sentences`.
 
-| Specification                                                                                                                | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "tthe-input-element.html#the-input-element", "HTMLInputElement")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}                     | {{Spec2('HTML5 W3C')}}     | Technically, the `tabindex` and `accesskey` properties, as well as the `blur()`, `click()`, and `focus()` methods, are now defined on {{domxref("HTMLElement")}}. The following properties are now obsolete: `align` and `useMap`. The following properties have been added: `autocomplete`, `autofocus`, `dirName`, `files`, `formAction`, `formEncType`, `formMethod`, `formNoValidate`, `formTarget`, `height`, `indeterminate`, `labels`, `list`, `max`, `min`, `multiple`, `pattern`, `placeholder`, `required`, `selectionDirection`, `selectionEnd`, `selectionStart`, `step`, `validationMessage`, `validity`, `valueAsDate`, `valueAsNumber`, `width`, and `willValidate`. The following methods have been added: `checkValidity()`, `setCustomValidity()`, `setSelectionRange()`, `stepUp()`, and `stepDown()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}                                 | {{Spec2('DOM2 HTML')}}     | The `size` property is now an `unsigned long`. The `type` property must be entirely given in lowercase characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| {{SpecName('DOM1', 'level-one-html.html#ID-6043025', 'HTMLInputElement')}}                         | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+- {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
 
-## Browser compatibility
+  - : `string`: **Retorna / Define** o valor padrão como originalmente especificado no HTML que criou este objeto.
 
-{{Compat("api.HTMLInputElement")}}
+- {{domxref("HTMLInputElement.dirName", "dirName")}}
 
-## See also
+  - : `string`: **Retorna / Define** a direcionalidade do elemento.
 
-- HTML element implementing this interface: {{ HTMLElement("input") }}.
+- {{domxref("HTMLInputElement.inputmode", "inputmode")}}
+
+  - : Fornece uma dica aos navegadores quanto ao tipo de configuração do teclado virtual a ser usado ao editar este elemento ou seu conteúdo.
+
+- {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
+
+  - : {{domxref("NodeList")}} array: **Retorna** uma lista de elementos {{ HTMLElement("label") }} que são rótulos para este elemento.
+
+- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
+
+  - : {{domxref("HTMLElement")}}: **Retorna** o elemento apontado pelo atributo [`list`](/pt-BR/docs/Web/HTML/Element/Input#list). A propriedade pode ser `null` se nenhum elemento HTML for encontrado na mesma árvore.
+
+- {{domxref("HTMLInputElement.multiple", "multiple")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/Input#multiple) do elemento, indicando se mais de um valor é possível (ex. , vários arquivos).
+
+- {{domxref("HTMLInputElement.name", "name")}}
+
+  - : `string`: **Retorna / Define** o atributo [`name`](/pt-BR/docs/Web/HTML/Element/Input#name) do elemento, contendo um nome que identifica o elemento ao enviar o formulário.
+
+- {{domxref("HTMLInputElement.step", "step")}}
+
+  - : `string`: **Retorna / Define** o atributo [`step`](/pt-BR/docs/Web/HTML/Element/Input#step) do elemento, que funciona com [`min`](/pt-BR/docs/Web/HTML/Element/Input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) para limitar os incrementos nos quais um número ou data - valor de tempo pode ser definido. Pode ser a string `any` ou um número de ponto flutuante positivo. Se isso não for definido como `any`, o controle aceitará apenas valores em múltiplos do valor da etapa maior que o mínimo.
+
+- {{domxref("HTMLInputElement.type", "type")}}
+
+  - : `string`: **Retorna / Define** o atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) do elemento, indicando o tipo de controle a ser exibido. Para valores possíveis, consulte a documentação do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type).
+
+- {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
+
+  - : `string`: **Representa** um mapa de imagem do lado do cliente.
+
+- {{domxref("HTMLInputElement.value", "value")}}
+
+  - : `string`: **Retorna / Define** o valor atual do controle. Se o usuário inserir um valor diferente do valor esperado, isso pode retornar uma string vazia.
+
+- {{domxref("HTMLInputElement.valueAsDate", "valueAsDate")}}
+
+  - : {{jsxref("Date")}}: **Retorna / Define** o valor do elemento, interpretado como uma data, ou `null` se a conversão não for possível.
+
+- {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
+  - : `double`: **Retorna** o valor do elemento, interpretado como um dos seguintes, em ordem: Um valor de tempo, um número ou `NaN` se a conversão for impossível
+
+### Propriedades de instância relacionadas ao formulário pai
+
+- {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
+
+  - : {{domxref("HTMLFormElement")}}: **Retorna** uma referência ao elemento pai {{HtmlElement("form")}}.
+
+- {{domxref("HTMLInputElement.formAction", "formAction")}}
+
+  - : `string`: **Retorna / Define** o atributo [`formaction`](/pt-BR/docs/Web/HTML/Element/Input#formaction) do elemento, contendo a URL de um programa que processa as informações enviadas pelo elemento. Isso substitui o atributo {{ htmlattrxref("action", "form") }} do formulário pai.
+
+- {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
+
+  - : `string`: **Retorna / Define** o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/Input#formenctype) do elemento, contendo o tipo de conteúdo que é usado para enviar o formulário para o servidor. Isso substitui o atributo {{ htmlattrxref("enctype", "form") }} do formulário pai.
+
+- {{domxref("HTMLInputElement.formMethod", "formMethod")}}
+
+  - : `string`: **Retorna / Define** o atributo [`formmethod`](/pt-BR/docs/Web/HTML/Element/Input#formmethod) do elemento, contendo o método HTTP que o navegador usa para enviar a forma. Isso substitui o atributo {{ htmlattrxref("method", "form") }} do formulário pai.
+
+- {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/Input#formnovalidate) do elemento, indicando que o formulário não deve ser validado quando ele é submetido. Isso substitui o atributo {{ htmlattrxref("novalidate", "form") }} do formulário pai.
+
+- {{domxref("HTMLInputElement.formTarget", "formTarget")}}
+  - : `string`: **Retorna / Define** o atributo [`formtarget`](/pt-BR/docs/Web/HTML/Element/Input#formtarget) do elemento, contendo um nome ou palavra-chave indicando onde exibir o resposta recebida após o envio do formulário. Isso substitui o atributo {{ htmlattrxref("target", "form") }} do formulário pai.
+
+### Propriedades de instância que se aplicam a qualquer tipo de elemento de entrada que não esteja oculto
+
+- {{domxref("HTMLInputElement.autofocus", "autofocus")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus).
+- {{domxref("HTMLInputElement.disabled", "disabled")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`disabled`](/pt-BR/docs/Web/HTML/Element/Input#disabled) do elemento, indicando que o controle não está disponível para interação. Os valores de entrada não serão enviados com o formulário. Veja também [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly).
+
+- {{domxref("HTMLInputElement.required", "required")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`required`](/pt-BR/docs/Web/HTML/Element/Input#required) do elemento, indicando que o usuário deve preencher um valor antes de enviar um formulário.
+
+- {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
+
+  - : `string`: **Retorna** uma mensagem localizada que descreve as restrições de validação que o controle não atende (se houver). Esta é a string vazia se o controle não for um candidato para validação de restrição ([`willValidate`](/pt-BR/docs/Web/API/HTMLObjectElement/willValidate) é `false`), ou se satisfizer suas restrições. Este valor pode ser definido pelo método {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}.
+
+- {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
+
+  - : {{domxref("ValidityState")}}: **Retorna** o estado de validade atual do elemento.
+
+- {{domxref("HTMLInputElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
+  - : `boolean`: **Retorna** se o elemento é um candidato para validação de restrição. É `false` se alguma condição o impedir de validação de restrição, incluindo: seu `type` é um dos `hidden`, `reset` ou `button`, tem um ancestral {{HTMLElement("datalist")}} ou sua propriedade `disabled` é `true`.
+
+### Propriedades de instância que se aplicam apenas a elementos do tipo caixa de seleção ou rádio
+
+- {{domxref("HTMLInputElement.checked", "checked")}}
+
+  - : `boolean`: **Retorna / Define** o estado atual do elemento.
+
+- {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}}
+
+  - : `boolean`: **Retorna / Define** o estado padrão de um botão de rádio ou caixa de seleção conforme originalmente especificado no HTML que criou este objeto.
+
+- {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
+  - : `boolean`: **Retorna** se a caixa de seleção ou o botão de opção está em estado indeterminado. Para caixas de seleção, o efeito é que a aparência da caixa de seleção é obscurecida/acinzentada de alguma forma para indicar que seu estado é indeterminado (não marcado, mas não desmarcado). Não afeta o valor do atributo `checked`, e clicar na caixa de seleção definirá o valor como falso.
+
+### Propriedades de instância que se aplicam apenas a elementos do tipo imagem
+
+- {{domxref("HTMLInputElement.alt", "alt")}}
+
+  - : `string`: **Retorna / Define** o atributo [`alt`](/pt-BR/docs/Web/HTML/Element/Input#alt) do elemento, contendo texto alternativo a ser usado.
+
+- {{domxref("HTMLInputElement.height", "height")}}
+
+  - : `string`: **Retorna / Define** o atributo [`height`](/pt-BR/docs/Web/HTML/Element/Input#height) do elemento, que define a altura da imagem exibida para o botão.
+
+- {{domxref("HTMLInputElement.src", "src")}}
+
+  - : `string`: **Retorna / Define** o atributo [`src`](/pt-BR/docs/Web/HTML/Element/Input#src) do elemento, que especifica um URI para a localização de uma imagem para exibir no botão gráfico de envio.
+
+- {{domxref("HTMLInputElement.width", "width")}}
+
+  - : `string`: **Retorna / Define** o atributo [`width`](/pt-BR/docs/Web/HTML/Element/Input#width) do elemento, que define a largura da imagem exibida para o botão.
+
+### Propriedades de instância que se aplicam apenas a elementos do tipo arquivo
+
+- {{domxref("HTMLInputElement.accept", "accept")}}
+
+  - : `string`: **Retorna / Define** o atributo [`accept`](/pt-BR/docs/Web/HTML/Element/Input#accept) do elemento, contendo uma lista separada por vírgulas de tipos de arquivos que podem ser selecionado.
+
+- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
+
+  - : `boolean`: Parte da API de upload de diretório não padrão. Indica se permite ou não que diretórios e arquivos sejam selecionados na lista de arquivos. Implementado apenas no Firefox e está oculto atrás de uma preferência.
+
+- {{domxref("HTMLInputElement.files", "files")}}
+
+  - : {{domxref("FileList")}}: **Retorna / Define** uma lista de objetos {{domxref("File")}} representando os arquivos selecionados para upload.
+
+- {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
+
+  - : `boolean`: **Retorna** o atributo [`webkitdirectory`](/pt-BR/docs/Web/HTML/Element/Input#webkitdirectory). Se for verdadeiro, a interface do seletor do sistema de arquivos aceita apenas diretórios em vez de arquivos.
+
+- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
+  - : {{domxref("FileSystemEntry")}} array: **Descreve** os arquivos ou diretórios atualmente selecionados.
+
+### Propriedades de instância que se aplicam apenas a elementos visíveis contendo texto ou números
+
+- {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
+
+  - : `string`: **Retorna / Define** o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/Input#autocomplete) do elemento, indicando se o valor do controle pode ser automaticamente preenchido pelo navegador.
+
+- {{domxref("HTMLInputElement.max", "max")}}
+
+  - : `string`: **Retorna / Define** o atributo [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) do elemento, contendo o valor (numérico ou data-hora) máximo para este item, que não deve ser menor que seu valor mínimo (atributo [`min`](/pt-BR/docs/Web/HTML/Element/Input#min)).
+
+- {{domxref("HTMLInputElement.maxLength", "maxLength")}}
+
+  - : `unsigned long`: **Retorna / Define** o atributo [`maxlength`](/pt-BR/docs/Web/HTML/Element/Input#maxlength) do elemento, contendo o número máximo de caracteres (em pontos de código Unicode) que o valor pode ter.
+
+- {{domxref("HTMLInputElement.min", "min")}}
+
+  - : `string`: **Retorna / Define** o atributo [`min`](/pt-BR/docs/Web/HTML/Element/Input#min) do elemento, contendo o valor (numérico ou data-hora) mínimo para este item, que não deve ser maior que seu valor máximo (atributo [`max`](/pt-BR/docs/Web/HTML/Element/Input#max)).
+
+- {{domxref("HTMLInputElement.minLength", "minLength")}}
+
+  - : `unsigned long`: **Retorna / Define** o atributo [`minlength`](/pt-BR/docs/Web/HTML/Element/Input#minlength) do elemento, contendo o número mínimo de caracteres (em Unicode pontos de código) que o valor pode ter.
+
+- {{domxref("HTMLInputElement.pattern", "pattern")}}
+
+  - : `string`: **Retorna / Define** o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/Input#pattern) do elemento, contendo uma expressão regular em que o valor do controle é verificado contra. Use o atributo [`title`](/pt-BR/docs/Web/HTML/Element/Input#title) para descrever o padrão para ajudar o usuário. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
+
+- {{domxref("HTMLInputElement.placeholder", "placeholder")}}
+
+  - : `string`: **Retorna / Define** o atributo [`placeholder`](/pt-BR/docs/Web/HTML/Element/Input#placeholder) do elemento, contendo uma dica para o usuário do que pode ser inserido no controle. O texto do espaço reservado não deve conter retornos de carro ou avanços de linha. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
+
+- {{domxref("HTMLInputElement.readOnly", "readOnly")}}
+
+  - : `boolean`: **Retorna / Define** o atributo [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly) do elemento, indicando que o usuário não pode modificar o valor do controle. Isso é ignorado se o [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) for `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, ou um tipo de botão.
+
+- {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
+
+  - : `unsigned long`: **Retorna / Define** o índice final do texto selecionado. Quando não há seleção, isso retorna o deslocamento do caractere imediatamente após a posição atual do cursor de entrada de texto.
+
+- {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
+
+  - : `unsigned long`: **Retorna / Define** o índice inicial do texto selecionado. Quando nada é selecionado, retorna a posição do cursor de entrada de texto (caret) dentro do elemento {{HTMLElement("input")}}.
+
+- {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
+
+  - : `string`: **Retorna / Define** a direção em que a seleção ocorreu. Os valores possíveis são: `forward` (a seleção foi realizada na direção de início a fim do local atual), `backward` (a direção oposta) ou `none` (a direção é desconhecida).
+
+- {{domxref("HTMLInputElement.size", "size")}}
+  - : `unsigned long`: **Retorna / Define** o atributo [`size`](/pt-BR/docs/Web/HTML/Element/Input#size) do elemento, contendo o tamanho visual do controle. Este valor está em pixels, a menos que o valor de [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) seja `text` ou `password`, caso em que é um número inteiro indicando o número de caracteres. Aplica-se somente quando [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é definido como `text`, `search`, `tel`, `url`, `email` ou `senha`.
+
+## Métodos de instância
+
+- {{domxref("HTMLElement/blur", "blur()")}}
+
+  - : Remove o foco do elemento de entrada; as teclas digitadas subsequentemente não irão a lugar nenhum.
+
+- {{domxref("HTMLElement.click()", "click()")}}
+
+  - : Simula um clique no elemento de entrada.
+
+- {{domxref("HTMLElement/focus", "focus()")}}
+
+  - : Foca no elemento de entrada; os pressionamentos de tecla irão posteriormente para este elemento.
+
+- {{domxref("HTMLInputElement.select()", "select()")}}
+
+  - : Seleciona todo o texto no elemento de entrada e o foca para que o usuário possa substituir posteriormente todo o seu conteúdo.
+
+- {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
+
+  - : Seleciona um intervalo de texto no elemento de entrada (mas não o focaliza).
+
+- {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
+
+  - : Substitui um intervalo de texto no elemento de entrada por um novo texto.
+
+- {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
+
+  - : Define uma mensagem de validação personalizada para o elemento. Se esta mensagem não for a string vazia, o elemento está sofrendo de um erro de validade personalizado e não é validado.
+
+- {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
+
+  - : Mostra um seletor de navegador para data, hora, cor e arquivos.
+
+- {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
+
+  - : Retorna um valor booleano que é `false` se o elemento for um candidato para validação de restrição e não satisfizer suas restrições. Nesse caso, ele também dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}} no elemento. Ele retorna `true` se o elemento não for um candidato para validação de restrição ou se satisfizer suas restrições.
+
+- {{domxref("HTMLInputElement.reportValidity()", "reportValidity()")}}
+
+  - : Executa o método `checkValidity()` e, se retornar falso (para uma entrada inválida ou nenhum atributo de padrão fornecido), ele relata ao usuário que a entrada é inválida da mesma maneira como se você enviasse um formulário.
+
+- {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
+
+  - : Decrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+    - se o método não for aplicável para o valor [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) atual,
+    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
+    - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
+
+- {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
+  - : Incrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+    - se o método não for aplicável para o valor atual de [`type`](/pt-BR/docs/Web/HTML/Element/Input#type),
+    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
+    - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
+
+## Eventos
+
+Ouça esses eventos usando [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener) ou atribuindo um ouvinte de evento à propriedade `oneventname` desta interface:
+
+- [`input`](/pt-BR/docs/Web/API/HTMLElement/input_event)
+  - : Dispara quando o `value` de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} foi alterado. Observe que na verdade isso é acionado na interface {{domxref("HTMLElement")}} e também se aplica a elementos [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable), mas também listamos aqui porque é mais comumente usado com elementos de entrada de formulário.
+- [`invalid`](/pt-BR/docs/Web/API/HTMLInputElement/invalid_event)
+  - : Disparado quando um elemento não satisfaz suas restrições durante a validação da restrição.
+- [`search`](/pt-BR/docs/Web/API/HTMLInputElement/search_event) {{Non-standard_Inline}}
+  - : Disparado quando uma pesquisa é iniciada em um {{HTMLElement("input")}} de `type="search"`.
+- {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} evento {{Experimental_Inline}}
+  - : Dispara quando a seleção de texto em um elemento {{HTMLElement("input")}} foi alterada.
+
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
+
+## Veja também
+
+- Elemento HTML implementando esta interface: {{ HTMLElement("input") }}

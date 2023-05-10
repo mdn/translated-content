@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{WebAssemblySidebar}}{{SeeCompatTable}}
 
 Объект JavaScript **`WebAssembly`** действует как пространство имён для всего [WebAssembly](/ru/docs/WebAssembly)-связанной функциональности.
 

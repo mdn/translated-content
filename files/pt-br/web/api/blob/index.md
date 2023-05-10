@@ -11,7 +11,7 @@ Um objeto `Blob` representa um objeto do tipo arquivo, com dados brutos imutáve
 
 Para construir um `Blob` a partir de outro objeto ou dado não-blob , utilize o construtor {{domxref("Blob.Blob","Blob()")}}. Para criar um blob que contém um subconjunto de dados de outro blob, use o método {{domxref("Blob.slice()", "slice()")}}. Para obter um objeto Blob de um arquivo no sistema de arquivos do usuário, veja a documentação {{domxref("File")}}.
 
-The APIs accepting `Blob` objects are also listed on the {{domxref("File")}} documentation.
+As APIs que aceitam objetos `Blob` também são listados na documentação {{domxref("File")}}.
 
 > **Nota:** O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
 
@@ -94,7 +94,7 @@ Ao usar outros métodos de {{domxref("FileReader")}}, é possível ler o conteú
 
 ### Notas para Gecko
 
-Anterior ao Gecko 12.0 {{ geckoRelease("12.0") }}, havia um bug que afetava o comportamento do [slice](#slice); que não funcionava para as posições `start` e `end` fora do intervalo de valores assinados como 64-bit; este bug foi corrigido para dar suporte a valores assinados como 64-bit.
+Anterior ao Gecko 12.0, havia um bug que afetava o comportamento do [slice](#slice); que não funcionava para as posições `start` e `end` fora do intervalo de valores assinados como 64-bit; este bug foi corrigido para dar suporte a valores assinados como 64-bit.
 
 ## Chrome Code - Disponibilidade de Escopo
 

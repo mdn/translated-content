@@ -1,43 +1,61 @@
 ---
-title: Network Information API
+title: A API de informações de rede
 slug: Web/API/Network_Information_API
-original_slug: WebAPI/Network_Information
 ---
 
-{{ SeeCompatTable() }}
+{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
-A API de Informações de Rede fornece informação sobre a conexão do sistema, assim como a banda atual do dispositivo do usuário ou qualquer conexão que seja medida. Essa pode também ser usada para selecionar conteúdo de alta ou baixa definição baseado na conexão do usuário. Toda a API consiste na adição da interface domxref("Connection") e uma única propriedade a interface {{domxref("Navigator")}}: {{domxref("Navigator.connection")}}.
+A API de informações de rede fornece informações sobre a conexão do sistema em termos de tipo de conexão geral (por exemplo, 'wifi, 'celular' etc.).
+Isso pode ser usado para selecionar conteúdo de alta definição ou conteúdo de baixa definição com base na conexão do usuário.
 
-## Detectando mudanças de conexão
+A interface consiste em um único objeto {{domxref("NetworkInformation")}}, cuja instância é retornada pela propriedade {{domxref("Navigator.connection")}}.
 
-Este é um exemplo vê mudança na conexão do usuário. Essa é similar a como uma app pode alertar quando o usuário move de uma conexão de alto para baixo custo por exemplo, a fim de reduzir a demanda da banda para previnir que o usuário seja submetido a cargos substanciais.
+{{AvailableInWorkers}}
+
+## Interfaces
+
+- {{domxref("NetworkInformation")}}
+  - : fornece informações sobre a conexão que um dispositivo está usando para se comunicar com a rede e fornece um meio para que os scripts sejam notificados se o tipo de conexão for alterado. A interface `NetworkInformation` não pode ser instanciada. Em vez disso, é acessado através da interface {{domxref("Navigator")}}.
+
+## Exemplos
+
+### Detectar alterações de conexão
+
+Este exemplo observa as alterações na conexão do usuário.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+let type = navigator.connection.effectiveType;
 
 function updateConnectionStatus() {
-  alert("Connection bandwidth: " + connection.bandwidth + " MB/s");
-  if (connection.metered) {
-    alert("The connection is metered!");
-  }
+  console.log(`Tipo de conexão alterado de ${type} para ${navigator.connection.effectiveType}`);
+  type = navigator.connection.effectiveType;
 }
 
-connection.addEventListener("change", updateConnectionStatus);
-updateConnectionStatus();
+navigator.connection.addEventListener('change', updateConnectionStatus);
+```
+
+### Pré-carregue grandes recursos
+
+O objeto de conexão é útil para decidir se deve pré-carregar recursos que consomem grandes quantidades de largura de banda ou memória. Este exemplo seria chamado logo após o carregamento da página para verificar um tipo de conexão em que o pré-carregamento de um vídeo pode não ser desejável. Se uma conexão de celular for encontrada, o sinalizador `preloadVideo` será definido como `false`. Para simplicidade e clareza, este exemplo testa apenas um tipo de conexão. Um caso de uso do mundo real provavelmente usaria uma instrução switch ou algum outro método para verificar todos os valores possíveis de {{domxref("NetworkInformation.type")}}. Independentemente do valor `type`, você pode obter uma estimativa da velocidade da conexão através da propriedade {{domxref("NetworkInformation.effectiveType")}}.
+
+```js
+let preloadVideo = true;
+const connection = navigator.connection;
+if (connection) {
+  if (connection.effectiveType === 'slow-2g') {
+    preloadVideo = false;
+  }
+}
 ```
 
 ## Especificações
 
-| Specification                                                                                | Status                                       | Comment               |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------- |
-| {{ SpecName('Network Information', '', 'Network Information API') }} | {{ Spec2('Network Information') }} | Initial specification |
+{{Specifications}}
 
-## Compatibilidade com navegadores
+## Compatibilidade do navegador
 
-{{Page('/pt-BR/docs/Web/API/window.navigator.connection','Browser compatibility')}}
+{{Compat}}
 
 ## Veja também
 
-- {{ spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Network Information API Specification", "ED") }}
-- [Online and offline events](/en/Online_and_offline_events)
-- {{domxref("window.navigator.connection")}}
+- [Eventos online e offline](/pt-BR/docs/Web/API/Navigator/onLine)

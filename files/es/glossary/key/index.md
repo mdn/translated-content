@@ -1,11 +1,6 @@
 ---
 title: Clave
 slug: Glossary/Key
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-translation_of: Glossary/Key
 original_slug: Glossary/Clave
 ---
 

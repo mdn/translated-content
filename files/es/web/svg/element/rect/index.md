@@ -1,12 +1,6 @@
 ---
 title: rect
 slug: Web/SVG/Element/rect
-tags:
-  - Elemento
-  - Gráficos SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/rect
 ---
 
 {{SVGRef}}
@@ -22,7 +16,15 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 ### Uso simple de `rect`
 
-```xml
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
 <?xml version="1.0"?>
 <svg width="120" height="120"
      viewBox="0 0 120 120"
@@ -32,11 +34,19 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 </svg>
 ```
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
+{{EmbedLiveSample}}
 
 ### `rect` con esquinas redondeados
 
-```xml
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
 <?xml version="1.0"?>
 <svg width="120" height="120"
      viewBox="0 0 120 120"
@@ -49,7 +59,7 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 </svg>
 ```
 
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+{{EmbedLiveSample}}
 
 ## Atributos
 
@@ -77,9 +87,13 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 
 Este elemento implementa la interfaz [`SVGRectElement`](/en/DOM/SVGRectElement).
 
-## Compatibilidad de los Navegadores
+## Especificaciones
 
-{{Compat("svg.elements.rect")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

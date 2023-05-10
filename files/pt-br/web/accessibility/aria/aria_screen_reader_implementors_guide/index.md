@@ -26,4 +26,4 @@ Este é apenas um guia. Uma marcação de região ativa é uma área complexa qu
 
 ### Detalhes para Processamento via APIs Platform Acessibility
 
-Esperamos que o desenvolvedor do navegador irá trabalhar para fornecer implementações consistentes. A imlementação mais completa das regiões ativas atualmente está no Firefox 3. Aqui está como [regiões ativas WAI-ARIA são expostas no Firefox 3](/en/AJAX/WAI_ARIA_Live_Regions//API_Support).
+Esperamos que o desenvolvedor do navegador irá trabalhar para fornecer implementações consistentes. A imlementação mais completa das regiões ativas atualmente está no Firefox 3. Aqui está como [regiões ativas WAI-ARIA são expostas no Firefox 3](/pt-BR/AJAX/WAI_ARIA_Live_Regions//API_Support).

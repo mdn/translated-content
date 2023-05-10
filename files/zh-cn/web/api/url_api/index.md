@@ -57,10 +57,8 @@ try {
 
 URL API 是一个简单的 API，它的名字只有几个接口：
 
--
 - [`URL`](/zh-CN/docs/Web/API/URL)
 - [`URLSearchParams`](/zh-CN/docs/Web/API/URLSearchParams)
--
 
 该规范的旧版本包括一个名为{{domxref("URLUtilsReadOnly")}}的接口，该接口已经合并到{{domxref("WorkerLocation")}} 接口中。
 

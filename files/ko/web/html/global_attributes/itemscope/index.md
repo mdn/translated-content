@@ -1,15 +1,8 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - 마이크로데이터
-translation_of: Web/HTML/Global_attributes/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** 전역 특성은 연관된 메타데이터의 범위를 지정하는 불리언 특성입니다. 요소에 `itemscope` 특성을 지정하면 새로운 아이템을 생성하고, 그 결과로 요소에 관련된 키-값 쌍 다수를 낳습니다. 관련 특성인 {{htmlattrxref("itemtype")}}은 어휘([schema.org](https://schema.org/) 등)의 유효한 {{glossary("URL")}}을 지정할 때 사용합니다. 아래 각각의 예제는 [schema.org](https://schema.org/)의 어휘를 사용합니다.
@@ -255,7 +248,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemscope")}}
+{{Compat}}
 
 ## 같이 보기
 

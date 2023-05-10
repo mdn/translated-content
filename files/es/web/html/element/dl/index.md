@@ -1,13 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Agrupando contenido HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
 
@@ -67,7 +60,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -101,7 +94,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 Salida:
 
-![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
+![Image:HTML-dl1.png](html-dl1.png)
 
 ### Múltiples términos, descripción sencilla
 
@@ -123,7 +116,7 @@ Salida:
 
 Salida:
 
-![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
+![Image:HTML-dl2.png](html-dl2.png)
 
 ### Término sencillo, múltiples descripciones
 
@@ -149,7 +142,7 @@ Salida:
 
 Output:
 
-![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
+![Image:HTML-dl3.png](html-dl3.png)
 
 ### Múltiples términos y descripciones
 
@@ -213,15 +206,11 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad Web
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## See also
 

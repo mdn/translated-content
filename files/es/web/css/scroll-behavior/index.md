@@ -1,12 +1,6 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/CSS/scroll-behavior
 ---
 
 {{ CSSRef }}
@@ -98,10 +92,8 @@ scroll-page {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentarios           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Initial specification |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

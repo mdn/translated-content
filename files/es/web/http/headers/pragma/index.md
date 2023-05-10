@@ -1,7 +1,6 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-translation_of: Web/HTTP/Headers/Pragma
 ---
 
 {{HTTPSidebar}}
@@ -50,19 +49,15 @@ Pragma: no-cache
 Pragma: no-cache
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                               | Título                                                          |
-| -------------------------------------------- | --------------------------------------------------------------- |
-| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): almacenamiento en caché |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## Véase también
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Expires")}}
-
-Traducción realizada por Ervin A. Santos R.

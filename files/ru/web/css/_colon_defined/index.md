@@ -101,7 +101,7 @@ simple-custom:defined {
 
 ## Смотрите также
 
-- [Веб-компоненты](ru/docs/Web/Web_Components)
+- [Веб-компоненты](/ru/docs/Web/Web_Components)
 - {{cssxref(":host")}}
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

@@ -1,11 +1,6 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - Location
-  - contexto
-  - navegación
-translation_of: Web/API/Window/location
 ---
 
 {{APIRef}}
@@ -190,14 +185,11 @@ var showBookmark = (function () {
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Window.location")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Window.location")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.location")}}
+{{Compat}}
 
 ## Ver también
 

@@ -70,7 +70,7 @@ ctx.arc(120,38,30,0,2*Math.PI);
 ctx.stroke();
 ```
 
-{{ EmbedLiveSample('Using_the_arc_method', 315, 165) }}
+{{ EmbedLiveSample('使用 arcTo 方法', 315, 165) }}
 
 ### 尝试 `arcTo` 参数
 
@@ -135,7 +135,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Trying_the_arcTo_parameters', 700, 360) }}
+{{ EmbedLiveSample('尝试 arcTo 参数', 700, 360) }}
 
 ## 规范描述
 

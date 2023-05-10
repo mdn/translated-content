@@ -1,13 +1,6 @@
 ---
-title: 'Comprueba tus habilidades: Matematicas.'
+title: 'Comprueba tus habilidades: Matematicas'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
-tags:
-  - JavaScript
-  - Matemática
-  - Principiante
-  - Prueba tus habilidades
-  - aprende
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Math
 ---
 
 {{learnsidebar}}
@@ -20,7 +13,7 @@ El objetivo de esta prueba de habilidad es conocer si has entendido nuestra clas
 >
 > **Nota**: En los ejemplos a continuación, si hay un error en su código, se mostrará en el panel de resultados de la página, para ayudarlo a tratar de averiguar la respuesta (o en la consola JavaScript del navegador, en el caso de la versión descargable).
 
-## Math 1
+## Matemáticas 1
 
 Iniciemos poniendo a prueba sus conocimientos acerca de los operadores matemáticos básicos. Usted tendrá que crear 4 valores númericos, unir los 2 primeros, hacer una resta del cuarto con el tercero y multiplicar los resultados secundarios juntos para obtener un resultado final de 48. Y finalmente, necesita ejecutar una prueba para comprobar si el resultado es un numero par.
 
@@ -28,49 +21,49 @@ Asi que intente realizar la actualización del código descrito abajo para crear
 
 1. Crea cuatro variables que contengan numeros. Llama a las variables razonablemente.
 2. Agrega las dos primeras variables juntas y guarda el resultado en otra variable.
-3. Subtract the fourth variable from the third and store the result in another variable.
-4. Multiply the results from the last two steps together, storing the result in a variable called `finalResult`. The product should be 48. If it isn't, you'll have to adjust some of the initial input values.
-5. Finally, write a calculation that checks whether `finalResult` is an even number. Store the result in a variable called `evenOddResult`.
+3. Resta la cuarta variable de la tercera y almacena el resultado en otra variable.
+4. Multiplique los resultados de los dos últimos pasos juntos, almacenando el resultado en una variable llamada `finalResult`. El producto debe ser 48. Si no lo es, deberá ajustar algunos de los valores de entrada iniciales.
+5. Finalmente, escribe un cálculo que verifique si `finalResult` es un número par. Almacene el resultado en una variable llamada `evenOddResult`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **Nota:** [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html) para trabajar en su propio editor o en un editor en línea.
 
-## Math 2
+## Matemáticas 2
 
-In the second task you are already provided with two calculations, with the results stored in the variables `result` and `result2`. But these results aren't what we want; you'll need to take the calculations and change them to give us what we want.
+En la segunda tarea ya tienes dos cálculos, con los resultados almacenados en las variables `result` y `result2`. Pero estos resultados no son los que queremos; tendrás que tomar los cálculos y cambiarlos para darnos lo que queremos.
 
-What do we want? After multiplying the two results together and formatting the result to 2 decimal places, the final result should be 10.42.
+¿Qué queremos? Después de multiplicar los dos resultados y formatear el resultado con 2 decimales, el resultado final debería ser 10,42.
 
-Try updating the live code below to recreate the finished example, following these steps:
+Intente actualizar el código en vivo a continuación para recrear el ejemplo terminado, siguiendo estos pasos:
 
-1. Write a calculation that multiples `result` and `result2` together and assigns the result back to `result`. This will require assignment shorthand.
-2. Write a line of code that takes result and formats it to 2 decimal places, storing the result of this in a variable called `finalResult`.
-3. Check the data type of `finalResult` using `typeof`; you'll probably see that it is actually of `string` type! Write a line of code that converts it to a `number` type, storing the result in a variable called `finalNumber`.
-4. The value of `finalNumber` needs to be `10.42`. Go back and update the original calculations you were provided with so that they give this final result. Don't update the numbers or the operators.
+1. Escribe un cálculo que multiplique `result` y `result2` y asigne el resultado de nuevo a `result`.
+2. Escriba una línea de código que tome el resultado y lo formatee con 2 decimales, almacenando el resultado de esto en una variable llamada `finalResult`.
+3. Verifique el tipo de dato de `finalResult` usando `typeof`; ¡Probablemente verás que en realidad es del tipo `string`! Escriba una línea de código que lo convierta en un tipo `number`, almacenando el resultado en una variable llamada `finalNumber`.
+4. El valor de `finalNumber` debe ser `10.42`. Regrese y actualice los cálculos originales que se le proporcionaron para que den este resultado final. No actualice los números ni los operadores.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **Nota:** [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html) para trabajar en su propio editor o en un editor en línea.
 
-## Math 3
+## Matemáticas 3
 
-In the final task for this article, we want you to write some tests. You've got three groups, each consisting of a statement and two variables. For each one, write a test that proves or disproves the statement made. Store the results of those tests in variables called `weightComparison`, `heightComparison`, and `pwdMatch`, respectively.
+En la tarea final de este artículo, queremos que escriba algunas pruebas. Tiene tres grupos, cada uno de los cuales consta de una declaración y dos variables. Para cada uno, escriba una prueba que pruebe o refute la afirmación hecha. Almacene los resultados de esas pruebas en variables llamadas `weightComparison`, `heightComparison` y `pwdMatch`, respectivamente.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}
 
-> **Nota:** [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) to work in your own editor or in an online editor.
+> **Nota:** [Descargue el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html) para trabajar en su propio editor o en un editor en línea.
 
-## Assessment or further help
+## Evaluación o ayuda adicional
 
-You can practice these examples in the Interactive Editors above.
+Puede practicar estos ejemplos en los editores interactivos anteriores.
 
-If you would like your work assessed, or are stuck and want to ask for help:
+Si desea que se evalúe su trabajo, o está atascado y quiere pedir ayuda:
 
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. Coloque su trabajo en un editor compartible en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o usar los archivos de punto de partida vinculados en las secciones anteriores.
+2. Escriba una publicación solicitando evaluación o ayuda en la [categoría de aprendizaje del foro de Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:
 
-    - A descriptive title such as "Assessment wanted for Math 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+    - Un título descriptivo como "Evaluación buscada para la prueba de habilidad de Matemáticas 1".
+    - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, por ejemplo si está atascado y necesita ayuda, o desea una evaluación.
+    - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor compartible en línea (como se mencionó en el paso 1). Esta es una buena práctica para comenzar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
+    - Un enlace a la tarea real o página de evaluación, para que podamos encontrar la pregunta con la que necesita ayuda.

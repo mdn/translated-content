@@ -1,7 +1,6 @@
 ---
 title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
-translation_of: Web/API/Element/attachShadow
 ---
 
 {{APIRef}}

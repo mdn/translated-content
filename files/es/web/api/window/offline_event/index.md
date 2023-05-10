@@ -1,12 +1,6 @@
 ---
 title: Offline
 slug: Web/API/Window/offline_event
-tags:
-  - Event
-  - Evento
-  - Reference
-  - Referencia
-translation_of: Web/API/Window/offline_event
 ---
 
 {{APIRef}}

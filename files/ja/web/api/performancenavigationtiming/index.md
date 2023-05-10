@@ -62,9 +62,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Navigation Timing Level 2', '#sec-PerformanceNavigationTiming', 'PerformanceNavigationTiming')}} | {{Spec2('Navigation Timing Level 2')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

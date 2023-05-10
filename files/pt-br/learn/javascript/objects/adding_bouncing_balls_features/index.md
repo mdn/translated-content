@@ -39,7 +39,7 @@ Nossa demo com bola saltitante é divertida, mas agora queremos torná-la um pou
 
 A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 
@@ -169,13 +169,3 @@ Para implementar o contador de pontuação, siga os seguintes passos:
 Se você está seguindo esta avaliação como parte de um curso organizado, você deve poder dar seu trabalho ao seu professor / mentor para marcação. Se você é auto-didata, então você pode obter o guia de marcação com bastante facilidade, perguntando no tópico de [discussão para este exercício](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou no canal de [#mdn](irc://irc.mozilla.org/mdn) IRC da [Mozilla IRC](https://wiki.mozilla.org/IRC). Tente o exercício primeiro — não há nada a ganhar com a trapaça!
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## Neste módulo
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

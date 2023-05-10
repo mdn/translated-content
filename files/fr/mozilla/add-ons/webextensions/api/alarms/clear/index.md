@@ -50,7 +50,7 @@ clearAlarm.then(onCleared);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.clear")}}
+{{Compat}}
 
 **Remerciements :**
 

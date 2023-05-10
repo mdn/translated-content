@@ -53,7 +53,7 @@ Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamo
 Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
 
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
-    ![](https://mdn.mozillademos.org/files/15590/nao-e-uma-funcao.png)
+    ![](nao-e-uma-funcao.png)
 2. Esse é um erro bem fácil de identifcar, e o navegador lhe fornece várias informações úteis para lhe ajudar (a captura de tela acima foi feita no Firefox, mas os outros navegadores oferecem informações similares). Da esquerda para a direita, nós temos:
 
     - Um "x" laranja para indicar que esse é um erro.
@@ -77,7 +77,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 
 1. Salve o arquivo e atualize a aba do navegador, e você poderá ver que o erro foi corrigido.
 2. Agora se você tentar enviar um palpite e pressionar o botão !Enviar palpite" você verá... outro erro!
-    ![](https://mdn.mozillademos.org/files/15591/variavel-e-nula.png)
+    ![](variavel-e-nula.png)
 3. Dessa vez o erro informado é "TypeError: baixoOuAlto is null", na linha 78.
 
     > **Nota:** [`Null`](/en-US/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
@@ -105,7 +105,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
     > **Nota:** [`console.log()`](/en-US/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
-    ![](https://mdn.mozillademos.org/files/15592/console-log-saida.png)
+    ![](console-log-saida.png)
     Pois bem, nesse ponto o valor de `baixoOuAlto` e `null`, então definitivamente há um problema com a linha 48.
 8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
 

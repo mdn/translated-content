@@ -1,12 +1,6 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-translation_of: Web/CSS/margin-left
 ---
 
 {{CSSRef}}

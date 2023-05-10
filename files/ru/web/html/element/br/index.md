@@ -1,5 +1,5 @@
 ---
-title: <br>
+title: <br> - элемент переноса строки
 slug: Web/HTML/Element/br
 tags:
   - HTML
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/br
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 

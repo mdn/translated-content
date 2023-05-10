@@ -1,12 +1,6 @@
 ---
 title: Promise() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-tags:
-  - Constructor
-  - JavaScript
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
 
 {{JSRef}}

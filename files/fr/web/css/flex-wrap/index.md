@@ -33,7 +33,7 @@ La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suiv
 - `nowrap`
   - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à **start** ou à **before** selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.
 - `wrap`
-  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à  **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
+  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
 - `wrap-reverse`
   - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 

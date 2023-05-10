@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 [WebRTC](/ru/docs/Web/API/WebRTC_API) позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым **сигнализацией (signaling)**. Эта статья объясняет, как сделать двусторонний видеозвонок.
 
@@ -132,7 +132,7 @@ The signaling process involves this exchange of messages among a number of point
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](https://mdn.mozillademos.org/files/16137/WebRTC_-_Signaling_Diagram.svg)](https://mdn.mozillademos.org/files/12363/WebRTC%20-%20Signaling%20Diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 
@@ -140,7 +140,7 @@ We'll see this detailed more over the course of this article.
 
 When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:
 
-[![Diagram of ICE candidate exchange process](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
+[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 

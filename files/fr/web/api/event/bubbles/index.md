@@ -40,7 +40,7 @@ function goInput(e) {
 }
 ```
 
-> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
+> **Note :** Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à `true`. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.
 
 ## Spécifications
 

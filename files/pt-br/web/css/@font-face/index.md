@@ -72,7 +72,7 @@ Este exemplo simplesmente especifica uma fonte para download a ser usada, aplica
 ```css
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
 }
 
 p { font-family: "Bitstream Vera Serif Bold", serif }

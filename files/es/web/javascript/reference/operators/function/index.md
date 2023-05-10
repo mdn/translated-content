@@ -1,12 +1,6 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - Operator
-  - Primary Expressions
-translation_of: Web/JavaScript/Reference/Operators/function
 original_slug: Web/JavaScript/Referencia/Operadores/function
 ---
 

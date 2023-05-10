@@ -1,9 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Plantilla
-translation_of: Web/HTML/Element/template
 original_slug: Web/HTML/Elemento/template
 ---
 
@@ -24,7 +21,7 @@ Piensa en la plantilla como un fragmento de contenido que está siendo almacenad
 
 Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-SInembargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
+Sin embargo, {{domxref("HTMLTemplateElement")}} tiene una propiedad {{domxref("HTMLTemplateElement.content", "content")}}, que es solo-lectura cuyo {{domxref("DocumentFragment")}} contiene el subárbol DOM que representa a la plantilla.
 
 ## Ejemplo
 
@@ -101,14 +98,11 @@ table td {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG','scripting.html#the-template-element','template element')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C','/scripting-1.html#the-template-element','template element')}} | {{Spec2('HTML5 W3C')}}     | Initial definition |
+{{Specifications}}
 
-## Compatibilidad navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## Ver también
 

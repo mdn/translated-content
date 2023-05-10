@@ -93,7 +93,7 @@ NPM 套件管理器站點上，有許多 ODM / ORM 解決方案（查看 [odm](h
 
 > **備註：** 正如我們在下面的**Mongoose 入門**中所討論的那樣，通常只需要在一個模型中定義文檔/模型之間關係的字段（通過在另一個模型中搜索相關的`_id`仍然可以找到反向關係）。下面我們選擇在書本綱要（Book schema）中定義 Book/Genre 和 Book/Author 之間的關係，以及書本實例綱要（BookInstance Schema）中 Book/BookInstance 之間的關係。這種選擇有點武斷—我們同樣可以在其他綱要中擁有該字段。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **備註：** 下一節提供了一個基本的入門知識，解釋如何定義和使用模型。在您閱讀它時，請想想我們將如何構建上圖中的每個模型。
 
@@ -502,9 +502,9 @@ SomeModel.find(callback_function);
 
 登錄後，您將進入[mLab 主](https://mlab.com/home)畫面:
 
-1. 單擊*MongoDB Deployments*部分中的**Create New。**![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 單擊*MongoDB Deployments*部分中的**Create New。**![](mlabcreatenewdeployment.png)
 2. 這將打開“雲提供商”Cloud Provider 選擇畫面。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 從“計劃類型”Plan Type 部分中，選擇“SANDBOX（免費）”計劃。
     - 從“雲提供商” *Cloud Provider*部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
@@ -512,26 +512,26 @@ SomeModel.find(callback_function);
 
 3. 這將打開“選擇區域” _Select Region_ 畫面。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 選擇離您最近的地區，然後選擇繼續**Continue** .
 
 4. 這將打開 Final Details 畫面。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 輸入新數據庫的名稱`local_library`，然後選擇繼續**Continue**。
 
 5. 這將打開訂單確認畫面。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 單擊“提交訂單” **Submit Order**以創建數據庫。
 
 6. 您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
     您需要用來訪問數據庫的 URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在 URL 中指定的數據庫用戶。
 7. 單擊用戶**Users**選項卡，並選擇添加數據庫用戶按鈕**Add database user**。
 8. 輸入用戶名和密碼（兩次），然後按創建**Create**。不要選擇只讀*read-only*。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 您現在已經創建了數據庫，並且有一個可以用來訪問它的 URL（帶有用戶名和密碼）。這看起來像是這樣的：`mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 
@@ -681,7 +681,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 我們在這裡展示的新東西，是字段選項：
 
 - 枚舉`enum`:這允許我們設置字符串的允許值。在這種情況下，我們用它來指定我們書籍的可用性狀態（使用枚舉，意味著我們可以防止錯誤拼寫和任意值，成為我們的狀態）
-- 默認值`default`:我們使用默認值，將新創 ​​ 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
+- 默認值`default`:我們使用默認值，將新創 建的書本實例的默認狀態，設置為維護，並將默認的`due_back`日期，設置為現在`now`（請注意在設置日期時，如何調用 Date 函數！）
 
 其他所有內容，大夥應該在前面教程裡邊已經熟悉了。
 
@@ -692,7 +692,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 該定義將與其他模型非常相似：
 
 - 該模型應該有一個名為`name`的`String`SchemaType ，來描述種類。
-- 這個`name`字段應該是必要的，並且有 3 到 ​​100 個字符。
+- 這個`name`字段應該是必要的，並且有 3 到 100 個字符。
 - 為類型的 URL 聲明虛擬，名為`url`。
 - 導出模型。
 
@@ -715,7 +715,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 3. 在命令提示符下，使用 node 運行此腳本，傳遞 MongoDB 數據庫的 URL（與之前在`app.js`中替換 insert_your_database_url_here 佔位符的那個相同）：
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. 該腳本應一路運行至完成，並在終端中創建它們時顯示各項目。
@@ -740,15 +740,3 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

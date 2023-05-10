@@ -1,13 +1,6 @@
 ---
 title: ':not()'
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-  - pseudoclase
-translation_of: Web/CSS/:not
 original_slug: Web/CSS/:not()
 ---
 
@@ -82,11 +75,8 @@ body :not(.crazy, .fancy) {
 
 ## Especificaciones
 
-| Specification                                                            | Status                               | Comment                                                            |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | Extiende su argumento para permitir algunos selectores no simples. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

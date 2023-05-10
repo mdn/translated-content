@@ -1,14 +1,6 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-  - API
-  - Compatibilidad de los Navegadores en Móviles
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/localName
 ---
 
 {{APIRef}}
@@ -70,7 +62,7 @@ El nombre local de un nodo es la parte del nombre completo del nodo que va situa
 6  </ecomm:business>
 ```
 
-> **Nota:** En {{Gecko("1.9.2")}} y anteriores,devuelve la versión en mayúsculas del nombre local para elementos HTML en HTML DOMs (en contraposición a elementos XHTML en XML DOMs). En versiones posteriores, en concordancia con HTML5,la propiedad devuelve en el caso de almacenamiento interno DOM , minúscula para ambos elementos HTML en HTML DOM y elementos XHTML en DOM XML. La propiedad {{domxref("element.tagName","tagName")}} continua devolviéndolo en mayúsculas para elementos HTML en HTML DOMs.
+> **Nota:** En Gecko 1.9.2 y anteriores,devuelve la versión en mayúsculas del nombre local para elementos HTML en HTML DOMs (en contraposición a elementos XHTML en XML DOMs). En versiones posteriores, en concordancia con HTML5,la propiedad devuelve en el caso de almacenamiento interno DOM , minúscula para ambos elementos HTML en HTML DOM y elementos XHTML en DOM XML. La propiedad {{domxref("element.tagName","tagName")}} continua devolviéndolo en mayúsculas para elementos HTML en HTML DOMs.
 
 ## Especificaciones
 

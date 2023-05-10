@@ -93,4 +93,4 @@ Cette propriété avait été définie dans [un brouillon de spécification pour
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-points-x")}}
+{{Compat}}

@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLElement/offsetLeft
 
 Renvoie le nombre de pixels dont le
 _coin supérieur gauche_
-de l'élément courant est décalé vers la gauche au sein du nœud [`offsetParent`](fr/DOM/element.offsetParent).
+de l'élément courant est décalé vers la gauche au sein du nœud [`offsetParent`](/fr/DOM/element.offsetParent).
 
 ### Syntaxe
 
@@ -68,7 +68,7 @@ Note&nbsp;: il s'agit d'une image de l'exemple, pas d'un rendu direct dans le na
 
 ### Voir aussi
 
-[`offsetParent`](fr/DOM/element.offsetParent), [`offsetTop`](fr/DOM/element.offsetTop), [`offsetWidth`](fr/DOM/element.offsetWidth), [`offsetHeight`](fr/DOM/element.offsetHeight)
+[`offsetParent`](/fr/DOM/element.offsetParent), [`offsetTop`](/fr/DOM/element.offsetTop), [`offsetWidth`](/fr/DOM/element.offsetWidth), [`offsetHeight`](/fr/DOM/element.offsetHeight)
 
 ### Spécification
 

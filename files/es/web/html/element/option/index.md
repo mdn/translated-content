@@ -1,14 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Elemento
-  - Formulários HTML
-  - Referencia
-  - Web
-  - formulários
-  - htmls
-translation_of: Web/HTML/Element/option
 original_slug: Web/HTML/Elemento/option
 ---
 
@@ -43,15 +35,11 @@ Ver los ejemplos {{HTMLElement("select")}}.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-option-element', '&lt;option&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'forms.html#the-option-element', '&lt;option&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;option&gt;')}}                         | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.option")}}
+{{Compat}}
 
 ## Ver también
 

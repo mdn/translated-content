@@ -1,9 +1,6 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-tags:
-  - Propiedad
-translation_of: Web/API/Element/clientHeight
 ---
 
 {{ APIRef }}
@@ -24,7 +21,7 @@ var h = element.clientHeight;
 
 ## Ejemplo
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## Especificaciones
 

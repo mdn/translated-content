@@ -1,7 +1,6 @@
 ---
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
 {{HTTPSidebar}}
@@ -95,7 +94,7 @@ Content-Security-Policy: connect-src 'self';
                          worker-src 'self'
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -103,7 +102,7 @@ Content-Security-Policy: connect-src 'self';
 
 The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("http.headers.csp.default-src")}}
+{{Compat}}
 
 ## See also
 

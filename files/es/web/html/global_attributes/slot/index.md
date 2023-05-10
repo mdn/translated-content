@@ -1,11 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/slot
 original_slug: Web/HTML/Atributos_Globales/slot
 ---
 
@@ -15,14 +10,11 @@ El [atributo global](/es/docs/Web/HTML/Global_attributes) **slot** asigna un esp
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-slot", "slot attribute")}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('DOM WHATWG', "#dom-element-slot", "slot attribute")}} | {{Spec2('DOM WHATWG')}} |         |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.slot")}}
+{{Compat}}
 
 ## Vea también
 

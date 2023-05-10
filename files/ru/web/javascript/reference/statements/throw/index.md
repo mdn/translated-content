@@ -61,7 +61,7 @@ function getMonthName(mo) {
       "Dec"
    ];
    if (months[mo] !== undefined) return months[mo];
-   
+
    throw new UserException("Неверно указан номер месяца");
 }
 

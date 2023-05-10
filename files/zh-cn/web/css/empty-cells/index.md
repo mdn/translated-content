@@ -83,9 +83,9 @@ th {
 }
 ```
 
-### Result
+### 结果
 
-{{ EmbedLiveSample('Examples', '100%', '200') }}
+{{ EmbedLiveSample('示例', '100%', '200') }}
 
 ## 规范
 

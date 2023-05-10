@@ -96,7 +96,7 @@ Cache-Control: must-revalidate
 
 共有キャッシュのプロキシがある場合の処理例を以下に示します。
 
-![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](https://mdn.mozillademos.org/files/13771/HTTPStaleness.png)
+![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](httpstaleness.png)
 
 鮮度の寿命は、いくつかのヘッダーを基に計算されます。"`Cache-Control: max-age=N`" ヘッダーが指定された場合は、鮮度の寿命が N に等しくなります。このヘッダーが与えられない場合がよくありますが、そのときは {{HTTPHeader("Expires")}} ヘッダーが与えられたかを確認します。`Expires` ヘッダーがある場合は、その値から {{HTTPHeader("Date")}} ヘッダーの値を減算した結果を鮮度の寿命にします。最後に、どちらのヘッダーも与えられていない場合は {{HTTPHeader("Last-Modified")}} ヘッダーを参照します。このヘッダーがある場合は、`Date` ヘッダーの値から `Last-modified` ヘッダーの値を減算して 10 で割った結果をキャッシュの寿命にします。
 有効期限は以下のように計算します。
@@ -115,7 +115,7 @@ expirationTime = responseTime + freshnessLifetime - currentAge
 
 この手法には、さらなる利点があります。同時に 2 つのキャッシュ済みリソースを更新すると、ひとつのリソースが期限切れのバージョン、もうひとつのリソースが新しいバージョンという組み合わせで使用されることがなくなります。これは相互依存、すなわち、それぞれが同じ HTML 要素を参照しているためにお互いに依存しあっている CSS スタイルシートと JS スクリプトを使用するウェブサイトで特に重要です。
 
-![](https://mdn.mozillademos.org/files/13779/HTTPRevved.png)
+![](httprevved.png)
 
 revving を適用したリソースに追加するリビジョン情報は 1.1.3 のような伝統的なリビジョン文字列である必要はなく、単純に増加していく一組の番号でもかまいません。ハッシュ値や日付など、衝突を避けた情報にすることもできます。
 
@@ -139,7 +139,7 @@ revving を適用したリソースに追加するリビジョン情報は 1.1.3
 
 `Vary` ヘッダーフィールドを持つキャッシュ済みレスポンスに合致可能なリクエストをキャッシュが受け取ったとき、`Vary` ヘッダーで指定されたすべてのヘッダーフィールドが元の (キャッシュ済み) リクエストと新たなリクエストの両方で一致しなければ、キャッシュ済みレスポンスを使用してはいけません。
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](https://mdn.mozillademos.org/files/13769/HTTPVary.png)
+![The Vary header leads cache to use more HTTP headers as key for the cache.](httpvary.png)
 
 これは、例えば動的にコンテンツを提供する場合に有用です。`Vary: User-Agent` ヘッダーを使用すると、キャッシュサーバーはページをキャッシュから提供するかを判断するために、ユーザーエージェントを考慮します。モバイルユーザー向けに別のコンテンツを提供している場合、モバイルユーザー向けに誤ってデスクトップ版のサイトが提供されてしまうことを防ぐ助けになります。加えて、Google などの検索エンジンがモバイル版のページを発見する助けになり、[クローキング](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0) を意図していないと知らせることもできるでしょう。
 

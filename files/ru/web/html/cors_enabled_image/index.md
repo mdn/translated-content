@@ -115,6 +115,6 @@ function imageReceived() {
 
 - [Using Cross-domain images in WebGL and Chrome 13](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
-- [Веб хранилище (API)](ru/docs/Web/API/Web_Storage_API)
+- [Веб хранилище (API)](/ru/docs/Web/API/Web_Storage_API)
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}

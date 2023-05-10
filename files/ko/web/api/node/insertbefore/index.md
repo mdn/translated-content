@@ -1,7 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
 {{APIRef("DOM")}}
 
@@ -113,11 +112,11 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 When the element does not have a first child, then `firstChild` is `null`. The element is still appended to the parent, after the last child. Since the parent element did not have a first child, it did not have a last child either. Consequently, the new element is the only element, after insertion.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

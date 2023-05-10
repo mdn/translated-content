@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
 ---
 
 {{ CSSRef() }}
@@ -34,7 +33,7 @@ La mayoría de los valores de alinean verticalmente el elemento de forma relativ
   - : Aligns the bottom of the element with the bottom of the parent element's font.
 - `middle`
   - : Aligns the middle of the element with the middle of lowercase letters in the parent.
-- [`<length>`](/en-US/docs/CSS/length)
+- [`<length>`](/es/docs/CSS/length)
   - : Aligns the baseline of the element at the given length above the baseline of its parent.
 - `<percentage>`
 
@@ -74,15 +73,11 @@ img {
 
 ## Especificaciones
 
-| Specification                                                                                                | Status                                   | Comment                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align') }}             | {{ Spec2('CSS3 Transitions') }} | Defines `visibility` as animatable.                                                                                                                         |
-| {{ SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align') }} | {{ Spec2('CSS2.1') }}             | Add the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to element with a {{ cssxref("display") }} type of `table-cell`. |
-| {{ SpecName('CSS1', '#vertical-align', 'vertical-align') }}                             | {{ Spec2('CSS1') }}                 | Initial definition.                                                                                                                                         |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.vertical-align")}}
+{{Compat}}
 
 ## Ver también
 

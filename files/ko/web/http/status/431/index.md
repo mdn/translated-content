@@ -1,7 +1,6 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-translation_of: Web/HTTP/Status/431
 ---
 
 {{HTTPSidebar}}
@@ -21,7 +20,7 @@ HTTP **`431 Request Header Fields Too Large`** 응답 코드는 [HTTP 헤더](/k
 431 Request Header Fields Too Large
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

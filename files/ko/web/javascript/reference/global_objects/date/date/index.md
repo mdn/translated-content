@@ -1,13 +1,6 @@
 ---
 title: Date() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
-browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}

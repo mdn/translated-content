@@ -1,7 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-translation_of: Web/Manifest
 ---
 
 El manifiesto de aplicaciones web proporciona información sobre una aplicación (como nombre, autor, icono y descripción) en un documento simplificado. Su principal propósito es crear [progressive web apps](/es/docs/Web/Apps/Progressive): aplicaciones web que se pueden instalar desde la pantalla principal de un dispositivo sin necesidad de hacerlo a traves de una app store (y otras ventajas como disponibilidad offline y enviar notificaciones push cuando cambia el contenido de la aplicación.)
@@ -160,7 +159,7 @@ Provides a human-readable name for the application as it is intended to be displ
 Define la orientación por defecto for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 Orientation puede ser alguno de los siguentes valores:
@@ -248,12 +247,10 @@ En Chrome 47 y posteriores, se muestra una pantalla de bienvenida para las aplic
 
 Los manifiestos web se deben servir con el tipo MIME `application/manifest+json`. Sin embargo, esto es opcional.
 
-## Especificación
+## Especificaciones
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest')}} | {{Spec2('Manifest')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.manifest")}}
+{{Compat}}

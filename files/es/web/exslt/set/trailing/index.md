@@ -1,11 +1,6 @@
 ---
 title: trailing
 slug: Web/EXSLT/set/trailing
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/set/trailing
 ---
 
 {{XsltRef}}

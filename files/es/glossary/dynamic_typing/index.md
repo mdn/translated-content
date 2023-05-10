@@ -1,11 +1,6 @@
 ---
 title: Tipado Dinámico
 slug: Glossary/Dynamic_typing
-tags:
-  - Código
-  - Glosario
-  - LenguajeDeProgramación
-translation_of: Glossary/Dynamic_typing
 original_slug: Glossary/Tipado_dinámico
 ---
 

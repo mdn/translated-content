@@ -1,11 +1,6 @@
 ---
 title: Columnas CSS
 slug: Web/CSS/CSS_Columns
-tags:
-  - CSS
-  - Referencia CSS
-  - Visión general
-translation_of: Web/CSS/CSS_Columns
 original_slug: Web/CSS/Columnas_CSS
 ---
 
@@ -38,6 +33,4 @@ original_slug: Web/CSS/Columnas_CSS
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
+{{Specifications}}

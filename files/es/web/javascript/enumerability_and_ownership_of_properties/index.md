@@ -1,13 +1,6 @@
 ---
 title: Enumerabilidad y posesión de propiedades
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Enumerabilidad
-  - Enumeración
-  - Guía
-  - JavaScript
-  - Propiedades
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
 ---
 

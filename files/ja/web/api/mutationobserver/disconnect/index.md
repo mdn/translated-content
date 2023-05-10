@@ -48,9 +48,7 @@ observer.disconnect();
 
 ## 仕様
 
-| Specification                                                                                                                    | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-disconnect', 'MutationObserver.disconnect()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

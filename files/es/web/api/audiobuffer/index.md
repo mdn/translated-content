@@ -1,7 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-translation_of: Web/API/AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}
@@ -74,13 +73,11 @@ source.start();
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API', '#the-audiobuffer-interface', 'AudioBuffer')}} | {{Spec2('Web Audio API')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## Mira también
 

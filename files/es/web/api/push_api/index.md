@@ -1,13 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Experimental
-  - Notificaciones
-  - Push
-  - Referencia
-translation_of: Web/API/Push_API
 ---
 
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
@@ -58,25 +51,17 @@ Las siguientes adiciones al [Service Worker API](/es/docs/Web/API/Service_Worker
 
 Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) contiene varios ejemplos Push muy utiles
 
-## Specifications
+## Especificaciones
 
-| Specification                    | Status                       | Comment            |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Initial definition |
+{{Specifications}}
 
-## Browser Compatibility
+## Compatibilidad con navegadores
 
-### `PushEvent`
+{{Compat}}
 
-{{Compat("api.PushEvent")}}
+## Ver tambien
 
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
-
-## See also
-
-- [¿Cómo usar la API Push?](Web/API/Push_API/Using_the_Push_API)
+- [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API/Using_the_Push_API)
 - [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), on Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/es/docs/Web/API/Service_Worker_API)

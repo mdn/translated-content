@@ -1,15 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Referencia
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/getItem
 ---
 
 {{APIRef("Web Storage API")}}
@@ -55,13 +46,11 @@ function setStyles() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Storage.getItem")}}
+{{Compat}}
 
 ## Vea también
 

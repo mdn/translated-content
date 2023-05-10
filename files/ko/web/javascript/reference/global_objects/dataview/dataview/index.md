@@ -1,13 +1,6 @@
 ---
 title: DataView() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 ---
 
 {{JSRef}}

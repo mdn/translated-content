@@ -1,55 +1,38 @@
 ---
-title: Window.toolbar
+title: "Window: toolbar 속성"
+short-title: toolbar
 slug: Web/API/Window/toolbar
-tags:
-  - 참고
-  - 창
-translation_of: Web/API/Window/toolbar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
+
 {{APIRef}}
 
-## 요약
+`toolbar` 객체를 반환합니다.
 
-창에서 끌 수 있는, 눈에 보이는 toolbar 문제를 해결합니다.
+이 속성은 불리언 `visible` 속성을 포함하는 객체로, 유사한 역할의 다른 `Window` 속성들처럼 과거에는 웹 브라우저 사용자 인터페이스의 특정 부분이 보이는지를 나타냈었습니다.
 
-## 문법
+개인정보 보호 및 호환성을 위해, 지금은 `visible` 속성의 값이 `Window`가 팝업이면 `false`, 그 외에는 모두 `true`입니다.
 
-```js
-objRef = window.toolbar
-```
+## 값
 
-## 예제
+하나의 속성을 포함하는 객체입니다.
 
-{{deprecated_inline()}} 주어진 HTML 예제는 다양한 "바" 객체의 visible 프로퍼티의 사용방법과, 권한상승 역시 현재창에서 어떠한 bar의 visible 프로퍼티로 쓰여지는것을 필요로한다는 것을 보여주고 있습니다. 하지만 [deprecation of enablePrivilege](/ko/docs/Bypassing_Security_Restrictions_and_Signing_Code) 때문에 이 기능은 웹 페이지에서 사용할 수 없습니다. EnablePrivilege는 Firefox 15 에서 작동하지 않고, Firefox 17 에서 삭제 될 것입니다.
+- `visible` {{ReadOnlyInline}}
+  - : 불리언 속성으로, `Window`가 팝업이면 `false`, 아니면 `true`입니다.
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Various DOM Tests</title>
-<script>
+## 명세서
 
-// 현재창에서 존재하는 바의 상태를 변경
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.toolbar.visible=!window.toolbar.visible;
+{{Specifications}}
 
-</script>
-</head>
+## 브라우저 호환성
 
-<body>
-  <p>Various DOM Tests</p>
-</body>
-</html>
-```
+{{Compat}}
 
-## 설명
+## 같이 보기
 
-페이지를 띄울때, 브라우저는 다음과 같은 dialog를 출력할 것입니다. : <img alt="Image:Modify_any_open_window_dialog.png">
-
-이러한 눈에 보이는 바들을 끄기 위해서, 당신의 스크립트를 확인하거나 위의 예제처럼 적절한 권한을 활성화 시켜야 합니다. 또한 주의해야 할 점은 동적으로 업데이트 되는 다양한 보이는 toolbar는 창의 크기에 따라 동적으로 업데이트 될 수 있고, 당신의 페이지의 레이아웃에 영향을 끼칠 수 있습니다.
-
-See also: [window.locationbar](/ko/docs/Window.locationbar), [window.menubar](/ko/docs/Window.menubar), [window.personalbar](/ko/docs/Window.personalbar), [window.scrollbars](/ko/docs/Window.scrollbars), [window.statusbar](/ko/docs/Window.statusbar)
-
-## 사양
-
-HTML5
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.personalbar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}

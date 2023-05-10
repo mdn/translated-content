@@ -3,7 +3,7 @@ title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 在上一章節，我們做了一些[基礎動畫](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations)且知道它的移動方式。在這部分我們更仔細的介紹它的動畫效果且並增加一些特效，使它看起來更高級。
 
@@ -155,7 +155,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("First_demo", "610", "310")}}
+{{EmbedLiveSample("第一個示範", "610", "310")}}
 
 ## 加速性能
 
@@ -224,7 +224,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("Second_demo", "610", "310")}}
+{{EmbedLiveSample("加速性能", "610", "310")}}
 
 ## 追蹤效果
 
@@ -292,7 +292,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("Third_demo", "610", "310")}}
+{{EmbedLiveSample("追蹤效果", "610", "310")}}
 
 ## 增加滑鼠控制
 
@@ -371,7 +371,7 @@ ball.draw();
 
 用你的滑鼠移動這顆球且點擊鬆放它。
 
-{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}
+{{EmbedLiveSample("增加滑鼠控制", "610", "310")}}
 
 ## 突破性(遊戲)
 

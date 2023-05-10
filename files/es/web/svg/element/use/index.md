@@ -1,12 +1,6 @@
 ---
 title: <use>
 slug: Web/SVG/Element/use
-tags:
-  - Elementos
-  - Gráficos SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/use
 ---
 
 {{SVGRef}}
@@ -67,6 +61,10 @@ Por razones de seguridad, algunos navegadores podrían aplicar una política del
 
 Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement).
 
-## Compatibilidad entre navegadores
+## Especificaciones
 
-{{Compat("svg.elements.use")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

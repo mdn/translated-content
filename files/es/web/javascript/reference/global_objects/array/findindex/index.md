@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Protitipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
 
@@ -49,7 +40,7 @@ El método `findIndex()` ejecuta la función de _`callback`_ una vez por cada í
 
 Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índice del elemento. Si la función _`callback`_ nunca devuelve un valor verdadero (o el tamaño del array es 0), `findIndex` devuelve `-1`.
 
-> **Nota:** **Alerta de Edge Case:** A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
+> **Nota:** A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
 
 _`callback`_ se invoca con tres argumentos:
 
@@ -154,13 +145,11 @@ Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Objec
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}} |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.findIndex")}}
+{{Compat}}
 
 ## Ver también
 

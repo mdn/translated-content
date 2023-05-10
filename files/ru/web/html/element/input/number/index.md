@@ -1,8 +1,9 @@
 ---
 title: <input type="number">
-slug: Web/HTML/Element/Input/number
+slug: Web/HTML/Element/input/number
 translation_of: Web/HTML/Element/input/number
 ---
+
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы типа **`number`** используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения. Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.
@@ -76,7 +77,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value. The following screenshot is taken from Firefox for Android:
 
-![](https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png)
+![](number-keyboard-fxa.png)
 
 ### A simple number input
 

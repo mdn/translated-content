@@ -1,13 +1,6 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/namespaceURI
 ---
 
 {{APIRef}}

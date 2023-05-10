@@ -3,7 +3,7 @@ title: 繪製圖形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 網格(Grid)
 
@@ -49,7 +49,7 @@ function draw() {
 
 本例結果如下:
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形範例", 160, 160, "canvas_rect.png")}}
 
 fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數清除中央 60 x 60 pixels 大的正方形區域，接著 strokeRect()在被清除區域內畫上一個 50 x 50 pixels 的矩形邊框。
 
@@ -111,7 +111,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("畫一個三角形", 110, 110, "triangle.png")}}
 
 ### 移動畫筆
 
@@ -153,15 +153,15 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("移動畫筆", 160, 160, "canvas_smiley.png")}}
 
-移除 moveTo()便可以看到線條連結起來。
+移除 moveTo() 便可以看到線條連結起來。
 
 > **備註：** 有關 arc()，請參照下方[弧形](#弧形)。
 
 ### 線條
 
-用 lineTo()方法畫直線。
+用 lineTo() 方法畫直線。
 
 - {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
   - : 從目前繪圖點畫一條直線到指定的(x, y)座標點。
@@ -204,7 +204,7 @@ function draw() {
 
 從呼叫 beginPath()起始一個新圖形路徑，然後用 moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。
 
-{{EmbedLiveSample("Lines", 160, 160, "canvas_lineTo.png")}}
+{{EmbedLiveSample("線條", 160, 160, "canvas_lineTo.png")}}
 
 我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫 closePaht()的話，只會畫出兩條線而非三角形。
 
@@ -264,7 +264,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
+{{EmbedLiveSample("弧形", 160, 210, "canvas_arc.png")}}
 
 ### 貝茲曲線(Bezier curve)與二次曲線(quadratic curve)
 
@@ -313,7 +313,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
+{{EmbedLiveSample("二次貝茲曲線", 160, 160, "canvas_quadratic.png")}}
 
 #### 三次貝茲曲線
 
@@ -347,7 +347,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
+{{EmbedLiveSample("三次貝茲曲線", 160, 160, "canvas_bezier.png")}}
 
 ### 矩形
 
@@ -458,7 +458,7 @@ function roundedRect(ctx,x,y,width,height,radius){
 
 結果如下:
 
-{{EmbedLiveSample("Making_combinations", 160, 160)}}
+{{EmbedLiveSample("多樣組合", 160, 160)}}
 
 畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了 fillStyle 屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。
 

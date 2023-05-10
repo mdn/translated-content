@@ -1,9 +1,6 @@
 ---
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
-tags:
-  - Animacion
-translation_of: Web/API/Animation/currentTime
 original_slug: Web/API/Animation/tiempoActual
 ---
 

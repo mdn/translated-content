@@ -10,7 +10,7 @@ Este capítulo documenta todos os objetos nativos do JavaScript padrão, assim c
 
 O termo "objetos globais" (ou objetos nativos por padrão) aqui não deve ser confundido com o de **objeto global**. Aqui, objetos globais se referem aos **objetos no escopo global** (somente se o modo estrito/_strict mode_ do ECMAScript 5 não for usado; Nesse caso retorna {{jsxref("undefined")}}). O **objeto global** pode ser acessado usando o operador {{jsxref("Operators/this", "this")}} no escopo global. De fato, o escopo global **consiste em** propriedades do objeto global, incluindo propriedades herdadas, se houver.
 
-Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API/Reference). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/DOM/DOM_Reference) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects) ou fornecido pela aplicação _host_. Os objetos disponíveis no _host_ no contexto do browser são documentados na [API reference](/pt-BR/docs/Web/API/Reference). Para maiores informações sobre as distinções entre [DOM](/pt-BR/docs/DOM/DOM_Reference) e core [JavaScript](/pt-BR/docs/Web/JavaScript), veja [visão geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ## Objetos padrão (por categoria)
 
@@ -21,7 +21,7 @@ Propriedades globais retornam um valor simples; eles não tem propriedades ou m�
 - {{jsxref("Global_Objects/Infinity", "Infinity")}}
 - {{jsxref("Global_Objects/NaN", "NaN")}}
 - {{jsxref("Global_Objects/undefined", "undefined")}}
-- {{jsxref("Global_Objects/null", "null")}} literal
+- {{jsxref("Operators/null", "null")}} literal
 
 ### Propriedades de função
 
@@ -86,7 +86,7 @@ Estes objetos representam coleções de dados que são ordenados pelo valor de u
 - [`Uint16Array`](/pt-BR/docs/JavaScript_typed_arrays/Uint16Array)
 - [`Uint32Array`](/pt-BR/docs/JavaScript_typed_arrays/Uint32Array)
 - [`Uint8Array`](/pt-BR/docs/JavaScript_typed_arrays/Uint8Array)
-- [`Uint8ClampedArray`](/pt-BR/docs/JavaScript_typed_arrays/Uint8ClampedArray)
+- [`Uint8ClampedArray`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
 - {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
 
 ### Coleções chaveadas
@@ -124,7 +124,7 @@ Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 - {{jsxref("Global_Objects/Intl", "Intl")}}
 - {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
 - {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
 
 ### Objetos não-padrão
 

@@ -1,8 +1,6 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
-browser-compat: api.MediaStreamAudioSourceNode
-translation_of: Web/API/MediaStreamAudioSourceNode
 original_slug: Web/API/MediaStreamAudioSourceNode
 ---
 

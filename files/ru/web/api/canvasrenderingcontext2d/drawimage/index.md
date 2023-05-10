@@ -22,7 +22,7 @@ void ctx.drawImage(image, dx, dy, dWidth, dHeight);
 void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
-![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
+![drawImage](canvas_drawimage.jpg)
 
 ### Параметры
 
@@ -64,7 +64,7 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 
 ```html
 <canvas id="canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+  <img id="source" src="rhino.jpg"
        width="300" height="227">
 </div>
 ```
@@ -83,7 +83,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227">
 </div>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -144,7 +144,7 @@ var image = new Image(60, 45);   // Размер изображения
 image.onload = drawImageActualSize; // Рисуем изображение, когда оно будет загружено
 
 // load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+image.src = 'rhino.jpg';
 
 function drawImageActualSize() {
   // use the intrinsic size of image in CSS pixels for the canvas element
@@ -178,12 +178,12 @@ function drawImageActualSize() {
 
 ## Дополнительно о совместимости
 
-- Поддержка переворачивания изображения с использованием отрицательных значений `sw` и `sh` была добавлена в Gecko 5.0 {{geckoRelease("5.0")}}.
-- Начиная с {{geckoRelease("5.0")}}, `drawImage()` поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.
-- Начиная с {{geckoRelease("5.0")}}, передача `null` или `undefined` как источника для `drawImage()` корректно выбрасывает исключение `TYPE_MISMATCH_ERR`.
-- Вплоть до Gecko 7.0 {{ geckoRelease("7.0") }} Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.
-- Gecko 9.0 {{ geckoRelease("9.0") }} теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- Gecko 11.0 {{ geckoRelease("11.0") }} теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Поддержка переворачивания изображения с использованием отрицательных значений `sw` и `sh` была добавлена в Gecko 5.0.
+- Начиная с Gecko 5.0, `drawImage()` поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.
+- Начиная с Gecko 7.0, передача `null` или `undefined` как источника для `drawImage()` корректно выбрасывает исключение `TYPE_MISMATCH_ERR`.
+- Вплоть до Gecko 7.0 Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.
+- Gecko 9.0 теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Дополнительно
 

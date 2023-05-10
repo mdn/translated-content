@@ -1,13 +1,6 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:required
 ---
 
 {{ CSSRef }}
@@ -44,16 +37,11 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                   |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-required', ':required') }}         | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                |
-| {{ SpecName('HTML5 W3C', '#selector-required', ':required') }}         | {{ Spec2('HTML5 W3C') }}         | Define la semántica de HTML y la validación de restricciones. |
-| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':required') }}             | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                                |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':required') }} | {{ Spec2('CSS3 Basic UI') }}     | Define la pseudo-clase, pero no la semántica asociada.        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.required")}}
+{{Compat}}
 
 ## Ver también
 

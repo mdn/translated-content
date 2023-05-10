@@ -1,13 +1,6 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - 파일
-translation_of: Web/HTML/Element/input/file
+slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}
@@ -84,7 +77,7 @@ translation_of: Web/HTML/Element/input/file
 
 ### {{htmlattrdef("accept")}}
 
-[`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성은 파일 입력 칸이 허용할 파일 유형을 나타내는 문자열로, 쉼표로 구분한 **[고유 파일 유형 지정자](#고유_파일_유형_지정자)**의 목록입니다. 주어진 파일 유형의 식별 방법이 여러 가지일 수도 있으므로, 특정 파일 형식이 필요할 땐 유형의 집합을 제공하는 것이 좋습니다.
+[`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성은 파일 입력 칸이 허용할 파일 유형을 나타내는 문자열로, 쉼표로 구분한 [**고유 파일 유형 지정자**](#고유_파일_유형_지정자)의 목록입니다. 주어진 파일 유형의 식별 방법이 여러 가지일 수도 있으므로, 특정 파일 형식이 필요할 땐 유형의 집합을 제공하는 것이 좋습니다.
 
 예를 들어, Microsoft Word 파일을 식별하는 방법은 여러가지이므로, Word 파일을 허용하는 `<input>`은 다음과 같은 형태를 갖게 됩니다.
 
@@ -188,7 +181,7 @@ div {
 - `webkitRelativePath` {{non-standard_inline}}
   - : {{htmlattrxref("webkitdirectory", "input/file")}} 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
-<div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see {{bug(1384030)}}).</p></div>
+<div class="hidden note"><p><strong>Note</strong>: You can set as well as get the value of <code>HTMLInputElement.files</code> in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).</p></div>
 
 ### 가능한 파일 유형 제한하기
 
@@ -230,7 +223,7 @@ div {
 
 외형은 유사해 보일지라도, 이번 예제에서 파일을 선택하려고 한다면 `accept`에 지정한 파일 유형만 선택 가능함을 확인할 수 있습니다. (정확한 동작은 브라우저와 운영체제에 따라 다를 수 있습니다)
 
-![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](https://mdn.mozillademos.org/files/15183/file-chooser.png)
+![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](file-chooser.png)
 
 `accept` 특성은 선택한 파일 유형을 검증하지는 않으며, 단순히 브라우저가 사용자를 올바른 파일 유형으로 유도하도록 힌트를 제공할 뿐입니다. (대부분의 경우) 사용자가 파일 선택 창의 옵션을 설정해 `accept`를 덮어쓰고 자신이 원하는 아무 파일이나 선택할 수 있으므로, 파일 입력 칸에 잘못된 유형의 파일이 올 수 있습니다.
 
@@ -443,7 +436,7 @@ function returnFileSize(number) {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## 같이 보 기
 

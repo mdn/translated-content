@@ -1,9 +1,7 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 original_slug: Web/JavaScript/Reference/Global_Objects/Promise
-browser-compat: javascript.builtins.Promise
 ---
 
 {{JSRef}}
@@ -226,7 +224,7 @@ Consulte la [guía de Microtask](/es/docs/Web/API/HTML_DOM_API/Microtask_guide) 
 
 - {{jsxref("Promise.prototype.catch()")}}
   - : Agrega un _callback_ del controlador de rechazo a la promesa y devuelve una nueva promesa que se resuelve en el valor de devolución del _callback_ si se llama, o en su valor de cumplimiento original si la promesa se cumple.
-  
+
 - {{jsxref("Promise.prototype.then()")}}
   - : Agrega manejadores de cumplimiento y rechazo a la promesa, y devuelve una nueva promesa resolviendo el valor de retorno del manejador llamado, o su valor establecido original si la promesa no fue manejada (es decir, si el manejador relevante `onFulfilled` u `onRejected` no es una función).
 - {{jsxref("Promise.prototype.finally()")}}

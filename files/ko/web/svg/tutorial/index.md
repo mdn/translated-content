@@ -1,11 +1,6 @@
 ---
 title: SVG 튜토리얼
 slug: Web/SVG/Tutorial
-tags:
-  - SVG
-  - SVG:튜토리얼
-  - 중급
-translation_of: Web/SVG/Tutorial
 ---
 
 확장 가능한 벡터 그래픽(Scalable Vector Graphics), [SVG](/ko/docs/Web/SVG)는 그래픽을 마크업하기 위한 W3C XML의 특수언어(dialect)입니다. SVG는 파이어폭스, 오페라, 웹킷 브라우저, 인터넷 익스플로러 및 기타 여러 브라우저에서 부분적으로 지원하고 있습니다.

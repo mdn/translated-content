@@ -1,7 +1,6 @@
 ---
 title: AJAX
 slug: Web/Guide/AJAX
-translation_of: Web/Guide/AJAX
 ---
 
 **[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**

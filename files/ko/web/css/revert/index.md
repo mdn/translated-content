@@ -1,17 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS 속성
-  - Cascade
-  - Style
-  - all:revert
-  - revert
-  - revert style 속성
-  - revert 속성
-  - 스타일
-translation_of: Web/CSS/revert
 ---
 
 {{CSSRef}}
@@ -104,11 +93,9 @@ section 요소가 돌아갔음에도 paragraph는 여전히 빨강인 것에 주
 
 {{EmbedLiveSample('Revert_on_a_parent')}}
 
-## 특성
+## 명세서
 
-| 특성                                                                 | 상태                             | 비고                |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

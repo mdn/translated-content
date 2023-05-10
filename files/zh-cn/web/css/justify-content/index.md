@@ -81,13 +81,13 @@ justify-content: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-### 语法格式
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### CSS content
+### CSS
 
 ```css
 #container {
@@ -134,15 +134,15 @@ justifyContent.addEventListener("change", function (evt) {
 });
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 140)}}
+{{EmbedLiveSample("示例", "100%", 140)}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 

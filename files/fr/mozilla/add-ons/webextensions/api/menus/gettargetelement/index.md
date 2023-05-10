@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 
 Renvoie l'élément pour un `targetElementId` donné
 
-Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un  `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
+Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
 
 La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode `targetElementId` expire lorsque l'utilisateur ouvre un autre menu contextuel.
 
@@ -58,9 +58,9 @@ browser.menus.create({
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.getTargetElement")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,6 @@
 ---
 title: Math.LOG10E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
-tags:
-  - JavaScript
-  - Math
-  - Propiedad
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LOG10E
 ---
 
@@ -38,9 +32,9 @@ getLog10e(); // 0.4342944819032518
 
 {{Specifications}}
 
-## Navegadores Compatibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.LOG10E")}}
+{{Compat}}
 
 ## Ver tambien
 

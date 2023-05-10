@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Prototype
-  - Reduce
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduce
 ---
 
@@ -184,13 +175,11 @@ var integrado = [[0,1], [2,3], [4,5]].reduce(function(a,b) {
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## Ver también
 

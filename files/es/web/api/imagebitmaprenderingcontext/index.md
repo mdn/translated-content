@@ -1,7 +1,6 @@
 ---
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
-translation_of: Web/API/ImageBitmapRenderingContext
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
@@ -17,11 +16,11 @@ Esta interface es posible en ambos , la ventana y el ["worker context"](/es/docs
 
 ## Especificaciones
 
-Escrito como una propuesta en la especificaación [OffscreenCanvas](https://wiki.whatwg.org/wiki/OffscreenCanvas).
+{{Specifications}}
 
-## Compatibilidad del Buscador
+## Compatibilidad con navegadores
 
-{{Compat("api.ImageBitmapRenderingContext")}}
+{{Compat}}
 
 ## Ver también
 

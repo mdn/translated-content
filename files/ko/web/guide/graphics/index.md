@@ -1,16 +1,6 @@
 ---
 title: 웹 상 그래픽
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphics
-  - HTML5
-  - SVG
-  - WebGL
-  - WebRTC
-translation_of: Web/Guide/Graphics
 original_slug: Web/Guide/그래픽
 ---
 

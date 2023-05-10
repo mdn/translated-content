@@ -129,9 +129,7 @@ oReq.send(null);
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考               |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの対応
 

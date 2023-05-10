@@ -9,7 +9,7 @@ O evento `focusout` é acionado assim que o elemento perde o foco. A principal d
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Borbulha

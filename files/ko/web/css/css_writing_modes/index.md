@@ -1,12 +1,6 @@
 ---
 title: CSS Writing Modes
 slug: Web/CSS/CSS_Writing_Modes
-tags:
-  - CSS
-  - CSS Writing Modes
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Writing_Modes
 ---
 
 {{CSSRef}}

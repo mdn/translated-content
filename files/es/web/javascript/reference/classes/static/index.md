@@ -1,7 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-translation_of: Web/JavaScript/Reference/Classes/static
 original_slug: Web/JavaScript/Referencia/Classes/static
 ---
 
@@ -46,13 +45,11 @@ console.log(tp.tripple()); //Logs 'tp.tripple is not a function'.
 
 ## Especificaciones
 
-| Specification                                                                            | Status               | Comment             |
-| ---------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.static")}}
+{{Compat}}
 
 ## Véase también
 

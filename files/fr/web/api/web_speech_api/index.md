@@ -73,7 +73,7 @@ Pour plus de détails concernant ces fonctionnalités, voir [Using the Web Speec
 
 ## Exemples
 
-Le [Web Speech API repo](https://github.com/mdn/web-speech-api/) sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.
+Le [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) sur GitHub contient des démos qui illustrent la reconnaissance vocale et la synthèse vocale.
 
 ## Spécifications
 

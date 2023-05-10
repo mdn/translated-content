@@ -14,5 +14,5 @@ Cada padrão passa por quatro estágios de maturidade: Rascunho em Desenvolvimen
 
 ### Conhecimentos Gerais
 
-- [Site Oficial da W3C](http://www.w3.org/)
+- [Site Oficial da W3C](https://www.w3.org/)
 - {{Interwiki("wikipedia", "World Wide Web Consortium", "W3C")}} na Wikipedia

@@ -1,7 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-translation_of: Web/HTTP/Status/401
 ---
 
 {{HTTPSidebar}}
@@ -28,13 +27,11 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## Especificaciones
 
-| Specification                                            | Title                    |
-| -------------------------------------------------------- | ------------------------ |
-| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.401")}}
+{{Compat}}
 
 ## Vea también
 

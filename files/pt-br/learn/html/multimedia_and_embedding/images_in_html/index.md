@@ -78,7 +78,7 @@ Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o e
 
 Nosso código acima nos daria o seguinte resultado:
 
-![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > **Nota:** Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.
 
@@ -96,7 +96,7 @@ O próximo atributo que veremos é `alt`. Seu valor deve ser uma descrição tex
 
 A maneira mais fácil de testar seu texto `alt` é digitar incorretamente seu nome de arquivo. Se, por exemplo, o nome da nossa imagem estivesse escrito `dinosooooor.jpg`, o navegador não exibiria a imagem, mas exibiria o texto alternativo:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 Então, por que você veria ou precisaria de texto alternativo? Pode ser útil por vários motivos:
 
@@ -131,7 +131,7 @@ Você pode usar os atributos `width` e `height`, para especificar a largura e al
 
 Isso não resulta em muita diferença para a tela, em circunstâncias normais. Mas se a imagem não estiver sendo exibida, por exemplo, o usuário acabou de navegar para a página e a imagem ainda não foi carregada, você notará que o navegador está deixando um espaço para a imagem aparecer:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 É uma coisa boa a fazer, resultando no carregamento da página mais rápido e sem problemas.
 
@@ -154,7 +154,7 @@ Como [nos links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks
 
 Isso nos dá uma dica de ferramenta, assim como os títulos dos links:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
 Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor incluir essas informações de suporte no texto principal do artigo, em vez de anexá-las à imagem. No entanto, eles são úteis em algumas circunstâncias; por exemplo, em uma galeria de imagens quando você não tem espaço para legendas.
 
@@ -345,7 +345,7 @@ window.addEventListener("load", drawOutput);
 
 ## Imagens de fundo CSS
 
-Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e o outras propriedades `background-*`, são usados ​​para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
+Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e outras propriedades `background-*`, são usados para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
 
 ```css
 p {

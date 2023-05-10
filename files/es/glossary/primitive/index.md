@@ -1,11 +1,6 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Primitive
 original_slug: Glossary/Primitivo
 ---
 

@@ -72,9 +72,7 @@ Reflect.get(obj, 'foo', y) // "3bar"
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

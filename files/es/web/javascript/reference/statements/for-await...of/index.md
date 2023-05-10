@@ -1,15 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Iteración
-  - JavaScript
-  - Referencia
-  - Sentencia
-  - asincrónico
-  - await
-  - iterar
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for-await...of
 ---
 
@@ -124,9 +115,9 @@ getResponseSize('https://jsonplaceholder.typicode.com/photos');
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_await_of")}}
+{{Compat}}
 
 ## Ver también
 

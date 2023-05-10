@@ -1,9 +1,6 @@
 ---
 title: Sustracción (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
 
@@ -36,13 +33,11 @@ Operator: x - y
 
 ## Especificaciones
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}} |
+{{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.subtraction")}}
+{{Compat}}
 
 ## También revisa
 

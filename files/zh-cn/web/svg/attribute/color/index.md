@@ -27,7 +27,7 @@ slug: Web/SVG/Attribute/color
 </svg>
 ```
 
-{{ EmbedLiveSample('Example', '100%', '110') }}
+{{ EmbedLiveSample('示例', '100%', '110') }}
 
 ## 元素
 

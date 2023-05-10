@@ -30,7 +30,7 @@ var saving = browser.tabs.saveAsPDF(
 ### Paramètres
 
 - `pageSettings`
-  - : `object`. Paramètres de la page enregistrée, en tant qu'objet  {{WebExtAPIRef("tabs.PageSettings")}}. Cet objet doit être donné, mais toutes ses propriétés sont facultatives. Toutes les propriétés non spécifiées ici recevront les valeurs par défaut répertoriées dans la documentation  {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}}.
+  - : `object`. Paramètres de la page enregistrée, en tant qu'objet {{WebExtAPIRef("tabs.PageSettings")}}. Cet objet doit être donné, mais toutes ses propriétés sont facultatives. Toutes les propriétés non spécifiées ici recevront les valeurs par défaut répertoriées dans la documentation {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}}.
 
 ### Valeur retournée
 
@@ -55,6 +55,6 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.saveAsPDF")}}
+{{Compat}}

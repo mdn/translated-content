@@ -1,22 +1,6 @@
 ---
 title: ¿Qué es JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - APIs
-  - Aprender
-  - Artículo
-  - Añadir JavaScript
-  - Curso
-  - Dinámico
-  - En línea
-  - Gestores de JavaScript en linea
-  - JavaScript
-  - Navegador
-  - Núcleo
-  - Principiante
-  - comentários
-  - externo
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 ---
 
@@ -32,7 +16,7 @@ original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 
 JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales ([HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS)) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
 
-![](https://mdn.mozillademos.org/files/13502/cake.png)
+![](cake.png)
 
 - {{Glossary("HTML")}} es el lenguaje de marcado que usamos para estructurar y dar significado a nuestro contenido web, por ejemplo, definiendo párrafos, encabezados y tablas de datos, o insertando imágenes y videos en la página.
 - {{Glossary("CSS")}} es un lenguaje de reglas de estilo que usamos para aplicar estilo a nuestro contenido HTML, por ejemplo, establecer colores de fondo y tipos de letra, y distribuir nuestro contenido en múltiples columnas.
@@ -44,7 +28,7 @@ Las tres capas se superponen muy bien. Tomemos una etiqueta de texto simple como
 <p>Player 1: Chris</p>
 ```
 
-![](https://mdn.mozillademos.org/files/13422/just-html.png)
+![](just-html.png)
 
 Luego, podemos agregar algo de CSS a la mezcla para que se vea bien:
 
@@ -65,7 +49,7 @@ p {
 }
 ```
 
-![](https://mdn.mozillademos.org/files/13424/html-and-css.png)
+![](html-and-css.png)
 
 Y finalmente, podemos agregar algo de JavaScript para implementar un comportamiento dinámico:
 
@@ -101,7 +85,7 @@ Las API son conjuntos de bloques de construcción de código listos para usar qu
 
 Generalmente se dividen en dos categorías.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 Las **APIs del navegador** están integradas en tu navegador web y pueden exponer datos del entorno informático circundante o realizar tareas complejas y útiles. Por ejemplo:
 
@@ -127,7 +111,7 @@ Aquí, de hecho, comenzaremos a ver algo de código y, mientras lo hacemos, expl
 
 Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
 
-![](https://mdn.mozillademos.org/files/13504/execution.png)
+![](execution.png)
 
 Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento (como se mencionó anteriormente). Ten en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores. Aprenderás formas de evitar esto más adelante en el artículo, en la sección [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies).
 
@@ -182,7 +166,7 @@ Una página web sin contenido que se actualiza dinámicamente se denomina **est�
 
 ## ¿Cómo agregas JavaScript a tu página?
 
-JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {htmlelement("script")}}. Aprendamos cómo funciona esto.
+JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS usa elementos {{htmlelement("link")}} para aplicar hojas de estilo externas y elementos {{htmlelement("style")}} para aplicar hojas de estilo internas a HTML, JavaScript solo necesita un amigo en el mundo de HTML: el elemento {{htmlelement("script")}}. Aprendamos cómo funciona esto.
 
 ### JavaScript interno
 
@@ -412,15 +396,3 @@ Así que ahí tienes, tu primer paso en el mundo de JavaScript. Comenzamos solo 
 JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## En este modulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Primer contacto con JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Solución de problemas de JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Almacenamiento de la información que necesita — Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluación: Generador de historias tontas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

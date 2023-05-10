@@ -1,16 +1,6 @@
 ---
 title: webkitAudioContext에서 이주하기
 slug: Web/API/Web_Audio_API/Migrating_from_webkitAudioContext
-tags:
-  - API
-  - Audio
-  - Guide
-  - Migrating
-  - Migration
-  - Updating
-  - Web Audio API
-  - porting
-  - webkitAudioContext
 ---
 Web Audio API는 현 상태에 이르기까지 많은 반복을 거쳤습니다. 이것은 처음에 WebKit에서 구현되었고, 이것의 낡은 부분들의 일부는 그것들이 명세에서 대체되는 동안 즉시 제거되지 않았는데, 이는 많은 사이트들이 비호환되는 코드를 사용하는 것으로 이어졌습니다. 이 글에서, 우리는 Web Audio API가 WebKit에서 처음 구현된 이후로의 Web Audio API에서의 차이를 다루고 현대 Web Audio API를 사용하기 위해 어떻게 코드를 업데이트해야 되는지를 다룹니다.
 

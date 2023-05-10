@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 
 {{AddonSidebar()}}
 
-La méthode  `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
+La méthode `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -63,7 +63,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
       </tbody>
     </table>
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 

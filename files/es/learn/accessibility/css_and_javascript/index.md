@@ -1,7 +1,6 @@
 ---
 title: Buenas prácticas de accesibilidad CSS y JavaScript
 slug: Learn/Accessibility/CSS_and_JavaScript
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
@@ -150,9 +149,9 @@ a:active {
 
 Las convenciones de enlace estándar son subrayado y un color diferente (predeterminado: azul) en su estado estándar, otra variación de color cuando el enlace ha sido visitado anteriormente (predeterminado: púrpura) y otro color más cuando el enlace está activado (predeterminado: rojo) . Además, el puntero del ratón cambia a un ícono de puntero cuando se pasa el ratón sobre los enlaces, y el enlace recibe un resaltado cuando se enfoca (por ejemplo, mediante tabulación) o se activa. La siguiente imagen muestra el resaltado tanto en Firefox (contorno punteado) como en Chrome (contorno azul):
 
-![](https://mdn.mozillademos.org/files/14371/focus-highlight-firefox.png)
+![](focus-highlight-firefox.png)
 
-![](https://mdn.mozillademos.org/files/14369/focus-highlight-chrome.png)
+![](focus-highlight-chrome.png)
 
 Puedes ser creativo con los estilos de enlaces, siempre y cuando sigas dando información a los usuarios cuando interactúan con los enlaces. Definitivamente, algo debería suceder cuando los estados cambian, y no debes deshacerte del cursor del puntero o del contorno; ambos son ayudas de accesibilidad muy importantes para quienes usan los controles del teclado.
 
@@ -195,7 +194,7 @@ Otro consejo es no confiar solo en el color para las señales / información, ya
 
 Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
 A los usuarios de lectores de pantalla no les importa nada de esto: están contentos con el contenido siempre que el orden del código fuente tenga sentido y puedan acceder a todo. El posicionamiento absoluto (como se usa en este ejemplo) generalmente se considera uno de los mejores mecanismos para ocultar contenido para lograr un efecto visual, porque no impide que los lectores de pantalla accedan a él.
 
@@ -301,7 +300,7 @@ function createLink(testItem) {
 
 Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
 
-> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte {{bug (277178)}}).
+> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
 
 Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
 
@@ -357,13 +356,3 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 ¡Siguiente parada, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/es/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/es/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/es/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)

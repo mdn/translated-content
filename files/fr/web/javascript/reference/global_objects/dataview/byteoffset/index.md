@@ -26,7 +26,7 @@ dataview.byteOffset
 
 ## Description
 
-La propriété `byteOffset` est un accesseur/mutateur dont la fonction du mutateur vaut  `undefined`. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
+La propriété `byteOffset` est un accesseur/mutateur dont la fonction du mutateur vaut `undefined`. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
 
 ## Exemples
 

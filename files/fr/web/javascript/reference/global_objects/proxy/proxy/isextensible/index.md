@@ -50,7 +50,7 @@ Cette trappe intercepte les opérations suivantes :
 
 ### Invariants
 
-Si les invariants suivants ne sont pas respectés, le proxy renverra une exception  {{jsxref("TypeError")}} :
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
 - `Object.isExtensible(proxy)` doit renvoyer la même valeur que `Object.isExtensible(cible)`.
 

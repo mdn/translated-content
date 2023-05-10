@@ -1,14 +1,6 @@
 ---
 title: Animation.oncancel
 slug: Web/API/Animation/cancel_event
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - oncancel
-translation_of: Web/API/Animation/oncancel
 original_slug: Web/API/Animation/oncancel
 ---
 

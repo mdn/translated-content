@@ -119,7 +119,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`maxLength`](/fr/docs/Web/API/HTMLInputElement/maxLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre maximal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`min`](/fr/docs/Web/API/HTMLInputElement/min)
-- : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
+  - : Une chaîne de caractères qui permet de lire ou d'écrire l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) de l'élément, qui contient la valeur minimale (numérique ou temporelle) de la valeur pour ce champ. Cette valeur ne doit pas être supérieure à la valeur maximale portée par l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max).
 - [`minLength`](/fr/docs/Web/API/HTMLInputElement/minLength)
   - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength) de l'élément, qui contient le nombre minimal de caractères (exprimés en codets Unicode) que doit contenir la valeur.
 - [`pattern`](/fr/docs/Web/API/HTMLInputElement/pattern)
@@ -135,7 +135,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`selectionDirection`](/fr/docs/Web/API/HTMLInputElement/selectionDirection)
   - : Une chaîne de caractères qui permet de lire ou d'écrire la direction selon laquelle la sélection est effectuée. Les valeurs possibles sont&nbsp;: `forward` (la sélection a été effectuée dans le sens d'écriture de la locale courante), `backward` (le sens opposé), ou `none` (la direction est inconnue).
 - [`size`](/fr/docs/Web/API/HTMLInputElement/size)
-  - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`size`](/fr/docs/Web/HTML/Element/input#size) de l'élément, qui contient la taille visuelle du contrôle. La valeur est exprimée en pixels à moins que [`type`](/fr/docs/Web/HTML/Element/input#type)  vaille `text` ou `password`, auquel cas il s'agit du nombre de caractères. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `text`, `search`, `tel`, `url`, `email`, ou `password`.
+  - : Une valeur numérique de type `unsigned long` qui permet de lire ou d'écrire l'attribut [`size`](/fr/docs/Web/HTML/Element/input#size) de l'élément, qui contient la taille visuelle du contrôle. La valeur est exprimée en pixels à moins que [`type`](/fr/docs/Web/HTML/Element/input#type) vaille `text` ou `password`, auquel cas il s'agit du nombre de caractères. Cet attribut s'applique uniquement lorsque l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `text`, `search`, `tel`, `url`, `email`, ou `password`.
 
 ## Méthodes
 
@@ -158,7 +158,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`checkValidity()`](/fr/docs/Web/API/HTMLInputElement/checkValidity)
   - : Renvoie un booléen qui vaut `false` si l'élément est candidat à la validation des contraintes, mais qu'il ne les respecte pas toutes. Dans ce cas, un évènement [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event) est également déclenché sur l'élément. Cette méthode renvoie `true` si l'élément ne participe pas à la validation des contraintes ou si les contraintes sont respectées.
 - [`reportValidity()`](/fr/docs/Web/API/HTMLInputElement/reportValidity)
-  - :  Exécute la méthode `checkValidity()` et, si celle-ci renvoie `false` (si un champ est invalide ou si aucun motif n'a été fourni), fourni la même indication à l'utilisatrice ou l'utilisateur, que celle affichée en cas de champ invalide lorsque le formulaire est envoyé.
+  - : Exécute la méthode `checkValidity()` et, si celle-ci renvoie `false` (si un champ est invalide ou si aucun motif n'a été fourni), fourni la même indication à l'utilisatrice ou l'utilisateur, que celle affichée en cas de champ invalide lorsque le formulaire est envoyé.
 - [`stepDown()`](/fr/docs/Web/API/HTMLInputElement/stepDown)
   - : Décrémente la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de ([`step`](/fr/docs/Web/HTML/Element/input#step) \* n), où n vaut 1 par défaut. Cette méthode déclenche une exception si&nbsp;:
     - Elle n'est pas applicable pour un champ qui a cet attribut [`type`](/fr/docs/Web/HTML/Element/input#type),

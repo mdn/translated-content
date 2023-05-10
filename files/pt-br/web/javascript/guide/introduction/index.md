@@ -59,7 +59,7 @@ Para mais informações sobre as diferenças entre JavaScript e Java, veja a se�
 
 O JavaScript é padronizado pela [Ecma International](http://www.ecma-international.org/) — a associação Europeia para a padronização de sistemas de comunicação e informação (antigamente ECMA era um acrônimo para European Computer Manufacturers Association) para entregar uma linguagem de programação padronizada, internacional baseada em JavaScript. Esta versão padronizada de JavaScript, chamada ECMAScript, comporta-se da mesma forma em todas as aplicações que suportam o padrão. As empresas podem usar a linguagem de padrão aberto para desenvolver a sua implementação de JavaScript. O padrão ECMAScript é documentado na especificação ECMA-262. Veja [Novidades em JavaScript](/pt-BR/docs/Web/JavaScript/New_in_JavaScript) para aprender mais sobre diferentes versões de JavaScript e edições da especificação ECMAScript.
 
-O padrão ECMA-262 também é aprovado pela [ISO](http://www.iso.ch/) (International Organization for Standardization) como ISO-16262. Você também pode encontrar a especificação no site da [Ecma International](http://www.ecma-international.org/publications/standards/Ecma-262.htm). A especificação ECMAScript não descreve o Document Object Model (DOM), que é padronizado pelo [World Wide Web Consortium (W3C)](http://www.w3.org/). O DOM define a maneira na qual os objetos do documento HTML estão expostos no seu script. Para ter uma ideia melhor sobre as diferentes tecnologias que são usadas durante a programação com JavaScript, consultar o artigo [Visão Geral do JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+O padrão ECMA-262 também é aprovado pela [ISO](http://www.iso.ch/) (International Organization for Standardization) como ISO-16262. Você também pode encontrar a especificação no site da [Ecma International](http://www.ecma-international.org/publications/standards/Ecma-262.htm). A especificação ECMAScript não descreve o Document Object Model (DOM), que é padronizado pelo [World Wide Web Consortium (W3C)](https://www.w3.org/). O DOM define a maneira na qual os objetos do documento HTML estão expostos no seu script. Para ter uma ideia melhor sobre as diferentes tecnologias que são usadas durante a programação com JavaScript, consultar o artigo [Visão Geral do JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
 
 ### Documentação JavaScript versus Especificação ECMAScript
 
@@ -83,7 +83,7 @@ O [console web](/pt-BR/docs/Tools/Web_Console) mostra informações sobre a pág
 
 Para abrir o console (Ctrl+Shift+K), selecione "Web Console" do menu "Web Developer", que está sob o menu "Tools" no Firefox. Ele aparece na parte inferior da janela do navegador. Na parte inferior do console está a linha de comando que você pode usar para colocar o JavaScript, e a saída é exibida no painel acima:
 
-![](https://mdn.mozillademos.org/files/7363/web-console-commandline.png)
+![](web-console-commandline.png)
 
 ### Scratchpad
 
@@ -91,7 +91,7 @@ O Web Console é excelente para executar linhas únicas de JavaScript, mas embor
 
 Para abrir o Scratchpad (Shift+F4), selecione "Scratchpad" do menu "Web Developer", que está sob o menu "Tools/Ferramentas" do Firefox. Ele abre em uma janela separada e é um editor que você pode usar para escrever e executar JavaScript no navegador. Você também pode salvar os scripts para o disco e carregá-los a partir do disco.
 
-![](https://mdn.mozillademos.org/files/7365/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

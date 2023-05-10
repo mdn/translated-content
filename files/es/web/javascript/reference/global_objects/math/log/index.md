@@ -1,7 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log
 ---
 
@@ -65,9 +64,9 @@ If you run `getBaseLog(10, 1000)` it returns `2.9999999999999996` due to floatin
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## See also
 

@@ -1,9 +1,7 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
 original_slug: Web/HTML/Elemento/td
-browser-compat: html.elements.td
 ---
 
 {{HTMLSidebar}}
@@ -85,7 +83,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - {{htmlattrdef("colspan")}}
 
-  - :  Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la {{ HTMLElement ( "colgroup" ) }} , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
+  - : Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la {{ HTMLElement ( "colgroup" ) }} , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
 
     > **Nota:** En HTML5 este atributo solo acepta valores mayores que 0 this attribute only accepts values greater than zero since it [must not be used to overlap cells](http://dev.w3.org/html5/spec/single-page.html#attr-tdth-colspan). Además, Firefox is the only browser to support the 0 value as defined in the HTML4.01 specification.
 

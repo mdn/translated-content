@@ -1,7 +1,6 @@
 ---
 title: attr
 slug: Web/CSS/attr
-translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
 ---
 
@@ -61,13 +60,10 @@ p::before {
 
 {{ EmbedLiveSample("Examples", '100%', '80') }}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                            | Status                               | Comment                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Values', '#attr', 'attr()') }}         | {{ Spec2('CSS3 Values') }} | Added two optional parameters; can be used on all properties; may return other values than {{cssxref("&lt;string&gt;")}}. These changes are {{ experimental_inline() }} and may be dropped during the CR phase if browser support is too small. |
-| {{ SpecName('CSS2.1', 'generate.html#x18', 'attr()') }} | {{ Spec2('CSS2.1') }}         | Limited to the {{ cssxref("content") }} property; always return a {{cssxref("&lt;string&gt;")}}                                                                                                                                                  |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.types.attr")}}
+{{Compat}}

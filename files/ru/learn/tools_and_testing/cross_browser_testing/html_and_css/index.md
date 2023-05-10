@@ -32,7 +32,7 @@ Basically, it is a matter of checking whether your HTML and CSS code is well for
 
 For HTML, validation involves making sure all your tags are properly closed and nested, you are using a DOCTYPE, and you are using tags for their correct purpose. A good strategy is to validate your code regularly. One service that can do this is the W3C [Markup Validation Service](https://validator.w3.org/), which allows you to point to your code, and returns a list of errors:
 
-![The HTML validator homepage](https://mdn.mozillademos.org/files/12441/validator.png)
+![The HTML validator homepage](validator.png)
 
 CSS has a similar story — you need to check that your property names are spelled correctly, property values are spelled correctly and are valid for the properties they are used on, you are not missing any curly braces, and so on. The W3C has a [CSS Validator](http://jigsaw.w3.org/css-validator/) available too, for this purpose.
 
@@ -42,7 +42,7 @@ Another good option to choose is a so-called Linter application, which not only 
 
 There are many online linter applications, the best of which are probably [Dirty Markup](https://www.dirtymarkup.com/) (HTML, CSS, JavaScript), and [CSS Lint](http://csslint.net/) (CSS only). These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the _Clean_ button.
 
-![](https://mdn.mozillademos.org/files/14113/dirty-markup.png)
+![](dirty-markup.png)
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
@@ -54,7 +54,7 @@ Many code editors have linter plugins. Github's [Atom](https://atom.io/) code ed
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
 5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
-![](https://mdn.mozillademos.org/files/14109/atom-htmltidy.png)![](https://mdn.mozillademos.org/files/14107/atom-csslint.png)
+![](atom-htmltidy.png)![](atom-csslint.png)
 
 Other popular editors have similar linting packages available. For example, see:
 
@@ -69,7 +69,7 @@ The developer tools built into most browsers also feature useful tools for hunti
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
-![](https://mdn.mozillademos.org/files/14111/css-message-devtools.png)
+![](css-message-devtools.png)
 
 Other browser devtools have similar features.
 
@@ -190,7 +190,7 @@ CSS is arguably better at fallbacks than HTML. If a browser encounters a declara
 
 Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS3 features:
 
-![](https://mdn.mozillademos.org/files/14141/blingy-button.png)
+![](blingy-button.png)
 
 > **Примечание:** You can also see this example running live on GitHub as [button-with-fallback.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
@@ -218,7 +218,7 @@ button:active {
 
 Here we are providing an [RGBA](</ru/docs/Web/CSS/color_value#rgba()>) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
-![](https://mdn.mozillademos.org/files/14135/unreadable-button.png)
+![](unreadable-button.png)
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
@@ -262,7 +262,7 @@ Of course, no CSS features will apply at all if you don't use the right [selecto
 
 For example, in the Firefox dev tools, you get this kind of output at the bottom of the DOM inspector:
 
-![](https://mdn.mozillademos.org/files/14139/dom-breadcrumb-trail.png)
+![](dom-breadcrumb-trail.png)
 
 If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:
 
@@ -287,7 +287,7 @@ However, another issue that appears in versions of IE older than 9 is that none 
 
 If you try running this in an old version of IE, it should work fine.
 
-![](https://mdn.mozillademos.org/files/14137/new-selector-ie7.png)
+![](new-selector-ie7.png)
 
 #### Handling CSS prefixes
 

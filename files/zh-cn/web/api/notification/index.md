@@ -75,7 +75,7 @@ slug: Web/API/Notification
 
 ## 实例方法
 
-这些属性仅用于 `Notification` 实例对象或者通过 [`prototype`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 提供。`Notification` 对象也继承自  {{domxref("EventTarget")}} 接口。
+这些属性仅用于 `Notification` 实例对象或者通过 [`prototype`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 提供。`Notification` 对象也继承自 {{domxref("EventTarget")}} 接口。
 
 - {{domxref("Notification.close()")}}
   - : 以编程方式关闭通知实例。

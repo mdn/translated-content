@@ -1,14 +1,8 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - Reference
-  - WebAPI
-translation_of: Web/API/Network_Information_API
 ---
+
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 네트워크 정보 API는 사용자 기기의 현재 대역폭이나 과금이 되는 연결인지와 같은 시스템의 연결 정보를 알려줍니다. 이를 이용해서 사용자에게 높은 용량의 콘텐츠를 제공할지 낮은 용량의 콘텐츠를 제공할지 사용자의 연결 상태에 따라서 제공할 수 있습니다. 전체 API는 DOM에 추가된 단일한 객체로 구성되어 있습니다: {{domxref("window.navigator.connection")}}.
@@ -37,16 +31,9 @@ updateConnectionStatus();
 
 ## 브라우저 호환성
 
-### NetworkInformation
-
-{{Compat("api.NetworkInformation")}}
-
-### Navigator.connection
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## 같이 보기
 
-- {{ spec("http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html", "Network Information API Specification", "ED") }}
 - [Online and offline events](/en/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

@@ -44,7 +44,7 @@ Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 
 ## Especificação
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 
 ## Veja também:
 

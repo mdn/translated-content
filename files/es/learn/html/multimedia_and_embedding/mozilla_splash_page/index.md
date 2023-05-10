@@ -1,25 +1,6 @@
 ---
 title: Página de bienvenida de Mozilla
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Codificación de Secuencia de comandos
-  - CodingScripting
-  - Evaluación
-  - HTML
-  - Imagenes
-  - Inserción
-  - JPEG
-  - Medidas
-  - Multimedia
-  - PNG
-  - Principiante
-  - Video
-  - iframe
-  - img
-  - receptivo
-  - src
-  - srcset
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -103,9 +84,9 @@ Dentro del elemento {{htmlelement("div")}} con clase `red-panda`, queremos inser
 
 Las siguientes capturas de pantalla muestran como debería verse la página de bienvenida después de haber sido marcada correctamente, en una pantalla ancha y estrecha.
 
-![A wide shot of our example splash page](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![A wide shot of our example splash page](wide-shot.png)
 
-![A narrow shot of our example splash page](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![A narrow shot of our example splash page](narrow-shot.png)
 
 ## Evaluación o ayuda adicional
 
@@ -120,12 +101,3 @@ Si quieres evaluar tu trabajo, estás atorado o quieres pedir ayuda:
     - Un enlace a la página de evaluación actual, para que podamos encontrar la pregunta con la que desea ayuda.
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes in HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [De \<object> to \<iframe> - otras tecnologías de inserción](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Agregar gráficos vectoriales a la Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes receptivas](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de bienvenida de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

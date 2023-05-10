@@ -67,7 +67,7 @@ Outra coisa especial sobra as variáveis é que elas podem conter praticamente q
 
 > **Nota:** Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
 
-![](https://mdn.mozillademos.org/files/13506/boxes.png)
+![](boxes.png)
 
 ## Declarando uma variável
 
@@ -349,15 +349,3 @@ Você chegou ao final deste artigo, mas consegue se lembrar das informações ma
 Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo
-
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript)
-- [Um primeiro mergulho no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [O que deu errado? Resolvendo problemas no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis)
-- [Matemática básica no JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Matematica)
-- [Trabalhando com textos — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos úteis de string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Avaliação: Gerador de histórias bobas](/pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas)

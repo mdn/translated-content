@@ -1,6 +1,6 @@
 ---
 title: Propriedade (JavaScript)
-slug: Glossary/property/JavaScript
+slug: Glossary/Property/JavaScript
 original_slug: Glossario/property/JavaScript
 ---
 

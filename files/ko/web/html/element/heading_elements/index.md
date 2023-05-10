@@ -1,14 +1,8 @@
 ---
 title: '<h1>–<h6>: HTML 구획 제목 요소'
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/Heading_Elements
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
@@ -55,7 +49,7 @@ translation_of: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -213,7 +207,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 같이 보기
 

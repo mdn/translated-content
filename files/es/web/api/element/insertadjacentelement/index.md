@@ -1,7 +1,6 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-translation_of: Web/API/Element/insertAdjacentElement
 ---
 
 {{APIRef}}

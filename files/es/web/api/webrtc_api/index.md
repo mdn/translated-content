@@ -1,13 +1,9 @@
 ---
 title: API de WebRTC
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - WebRTC
-translation_of: Web/API/WebRTC_API
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 **WebRTC** (_Web real-time communications_ o comunicaciones web en tiempo real) es una tecnología que permite a aplicaciones y sitios web capturar y opcionalmente retransmitir audio/vídeo, así como intercambiar datos arbitrarios entre navegadores sin necesidad de un intermediario. El conjunto de estándares que comprende WebRTC hace posible compartir datos y realizar teleconferencias de igual-a-igual (_peer-to-peer_), sin requerir que el usuario instale complementos (_plug-ins_) o cualquier otro software de terceros.
 
@@ -77,13 +73,7 @@ WebRTC consta de varias API y protocolos interrelacionados que trabajan juntos p
 
 ## Especificaciones
 
-| Specification                                            | Status                                               | Comment                                                                     |
-| -------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('WebRTC 1.0')}}                     | {{Spec2('WebRTC 1.0')}}                     | The initial definition of the API of WebRTC.                                |
-| {{SpecName('Media Capture')}}                 | {{Spec2('Media Capture')}}                 | The initial definition of the object conveying the stream of media content. |
-| {{SpecName('Media Capture DOM Elements')}} | {{Spec2('Media Capture DOM Elements')}} | The initial definition on how to obtain stream of content from DOM Elements |
-
-In additions to these specifications defining the API needed to use WebRTC, there are several protocols, listed under [resources](#Protocols).
+{{Specifications}}
 
 ## Ver también
 

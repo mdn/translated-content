@@ -1,8 +1,6 @@
 ---
 title: 'Notification: evento close'
 slug: Web/API/Notification/close_event
-page-type: web-api-event
-browser-compat: api.Notification.close_event
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

@@ -1,10 +1,8 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
-page-type: web-api-constructor
-browser-compat: api.FormData.FormData
-translation_of: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** 생성자(Constructor)는 새로운 {{domxref("FormData")}}객체를 만듭니다.
@@ -63,11 +61,11 @@ var myForm = document.getElementById('myForm');
 formData = new FormData(myForm);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

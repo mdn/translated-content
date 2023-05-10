@@ -1,14 +1,6 @@
 ---
 title: Clases de caracteres
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - RegExp
-  - clases de caracteres
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
 
@@ -188,9 +180,7 @@ Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emoji
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Clases de caracteres')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -3,20 +3,20 @@ title: 语法
 slug: Web/CSS/Syntax
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-层叠样式表（Cascading Stylesheet，简称[CSS](/zh-CN/CSS) ），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色，定位，装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
+层叠样式表（Cascading Stylesheet，简称 [CSS](/zh-CN/docs/Web/CSS)），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色、定位、装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
-- 属性（ **property）**是一个标识符，用可读的名称来表示其特性。
-- 值（**value）**则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。
+- **属性**（property）是一个标识符，用可读的名称来表示其特性。
+- **值**（value）则描述了浏览器引擎如何处理该特性。每个属性都包含一个有效值的集合，它有正式的语法和语义定义，被浏览器引擎实现。
 
 ## CSS 声明
 
-CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值的键值对被称为”声明“（declaration） 。CSS 引擎会计算页面上每个元素都有哪些声明，并且会根据结果绘制元素，排布样式。
+CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值的键值对被称为“声明”（declaration） 。CSS 引擎会计算页面上每个元素都有哪些声明，并且会根据结果绘制元素，排布样式。
 
 在 CSS 中，无论是属性名还是属性值都是对大小写不敏感的。属性与值之间以英文冒号 ':' （U+003A COLON）隔开。属性与值前面、后面与两者之间的空白不是必需的，会被自动忽略。
 
-![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
+![css syntax - declaration.png](css_syntax_-_declaration.png)
 
 目前 CSS 中有 [100 多个属性](/zh-CN/CSS/CSS_Reference) ，并且几乎有无限多个不同的值。并非所有的属性与值的配对都是被允许的，每个属性都定义了它的合法值。如果值对给定的属性而言非法时，声明就会被视为无效的，整个声明就会被 CSS 引擎忽略。
 
@@ -24,11 +24,11 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 声明会按照**块**的形式被组合。声明块（declaration block）以英文左大括号 ('{' U+007B LEFT CURLY BRACKET) 开始，以英文右大括号 '}' (U+007D RIGHT CURLY BRACKET) 结束。块有时会嵌套，所以开始与结束大括号必须要匹配。
 
-![css syntax - block.png](/@api/deki/files/6165/=css_syntax_-_block.png)
+![css syntax - block.png](css_syntax_-_block.png)
 
 **声明块**里面的声明之间使用英文分号（';' U+003B SEMICOLON）隔开。声明块可能为空，也就是包含空的声明。声明之间的空格会被忽略，声明块里最后一个声明可以不用分号，不过建议加上，以方便扩展声明块。
 
-![css syntax - declarations block.png](/@api/deki/files/6166/=css_syntax_-_declarations_block.png)
+![css syntax - declarations block.png](declaration-block.png)
 
 > **备注：** 声明块的内容—开始与结束大括号之间的声明，可以放在 HTML [`style`](/zh-CN/HTML/Global_attributes#attr-style) 特性里。
 
@@ -38,7 +38,7 @@ CSS 的核心功能是将 CSS 属性设定为特定的值。一个属性与值�
 
 为此，CSS 可以在声明块前面放置选择器（selector)，选择器用来选择页面多个元素的条件。一对选择器与声明块称为规则集（ruleset)，常简称为规则（rule)。
 
-![css syntax - ruleset.png](/@api/deki/files/6167/=css_syntax_-_ruleset.png)
+![css syntax - ruleset.png](ruleset.png)
 
 一个元素可能被多个选择器选中，因此会有多个规则，有可能以不同的值去设置同一属性。CSS 标准会规定哪个优先级最高并生效，称之为 [层叠（cascade)](/zh-CN/CSS/Getting_Started/Cascading_and_inheritance) 算法。
 
@@ -48,11 +48,11 @@ _这会导致一个重要的后果：如果其中的一个选择器是无效的�
 
 ## CSS 语句
 
-规则是样式表的主体，通常样式表会包括大量的规则列表。但有时候网页的作者也希望在样式表中包括其他的一些信息，比如字符集，导入其它的外部样式表，字体等，这些需要专门的语句表示。
+规则是样式表的主体，通常样式表会包括大量的规则列表。但有时候网页的作者也希望在样式表中包括其他的一些信息，比如字符集，导入其他的外部样式表，字体等，这些需要专门的语句表示。
 
 语句以非空格的字符开头，以第一个反花括号或分号结束。
 
-![css syntax - statements Venn diag.png](/@api/deki/files/6168/=css_syntax_-_statements_Venn_diag.png)
+![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
 
 语句类型：
 

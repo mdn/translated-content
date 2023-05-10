@@ -17,5 +17,4 @@ original_slug: Глоссарий/OOP
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "Объектно-ориентированное программирование")}} на Википедии
 - [Введение в объектно-ориентированный JavaScript](/ru/docs/Learn/JavaScript/Objects)

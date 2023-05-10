@@ -1,11 +1,6 @@
 ---
 title: Diseño de caja flexible CSS
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 
 {{CSSRef}}
@@ -78,9 +73,7 @@ Las propiedades `align-content`, `align-self`, `align-items` y `justify-content`
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario          |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

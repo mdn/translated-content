@@ -1,11 +1,6 @@
 ---
 title: isolation
 slug: Web/CSS/isolation
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/isolation
 ---
 
 {{CSSRef}}

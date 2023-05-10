@@ -1,12 +1,6 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - Experimental
-  - Propiedad CSS
-  - Propiedad Lógica CSS
-  - Referencia
-translation_of: Web/CSS/block-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -76,15 +70,13 @@ La propiedad `block-size` toma los mismos valores que las propiedades {{cssxref(
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estatus                                          | Comentarios        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.block-size")}}
+{{Compat}}
 
 ## Véase también
 

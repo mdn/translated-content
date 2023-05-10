@@ -16,15 +16,6 @@ slug: Web/MathML
 - [Escrevendo em MathML](/pt-BR/docs/Web/MathML/Authoring)
   - : Dicas e sugestões para escrever em MathML, incluindo sugestões de editores MathML e como capturar suas saídas para integrar em conteúdos Web.
 
-## Obtendo ajuda da comunidade
-
-- Visualizar os fóruns da Mozilla...
-  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
-- [Canal IRC](irc://irc.mozilla.org/%23mathml)
-- [Wiki usado pelos colaboradores da Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
-- [Página inicial da W3C Math](http://www.w3.org/Math/)
-- [Arquivo de e-mails www-math w3.org](http://lists.w3.org/Archives/Public/www-math/)
-
 ## Ferramentas
 
 - [Validador W3C](http://validator.w3.org)

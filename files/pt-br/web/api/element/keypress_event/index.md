@@ -11,7 +11,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Bolhas

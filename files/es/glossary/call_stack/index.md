@@ -1,11 +1,6 @@
 ---
 title: Pila de llamadas
 slug: Glossary/Call_stack
-tags:
-  - Glosario
-  - JavaScript
-  - Pila de llamadas
-translation_of: Glossary/Call_stack
 original_slug: Glossary/Pila_llamadas
 ---
 

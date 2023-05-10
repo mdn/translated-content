@@ -1,14 +1,6 @@
 ---
 title: HTMLInputElement.select()
 slug: Web/API/HTMLInputElement/select
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - NeedsCompatTable
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLInputElement/select
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -21,11 +13,9 @@ El método **`HTMLInputElement.select()`** selecciona todo el texto en un elemen
 element.select()
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'forms.html#dom-textarea/input-select', 'select')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Notas
 

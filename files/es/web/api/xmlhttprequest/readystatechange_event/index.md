@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 
@@ -41,10 +40,8 @@ xhr.send();
 
 ## Especificaciones
 
-| Specification                                                                            | Status                               | Comment                |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#handler-xhr-onreadystatechange')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
-## Compatibilidad con navegadores Web
+## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.readystatechange_event")}}
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
 
 {{JSRef}}
@@ -54,7 +53,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

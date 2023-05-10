@@ -1,12 +1,6 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/grid-area
 ---
 
 **`grid-area`** 속성은 {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} and {{cssxref("grid-column-end")}} 값을 한번에 설정하는 [shorthand](/ko/docs/Web/CSS/Shorthand_properties) property 입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다., specifying a grid item’s size and location within the {{glossary("grid rows", "grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the edges of its {{glossary("grid areas", "grid area")}}.
@@ -120,13 +114,13 @@ grid-area: unset;
 
 {{EmbedLiveSample("Example", "100%", "150px")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

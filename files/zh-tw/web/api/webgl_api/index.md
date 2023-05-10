@@ -3,7 +3,7 @@ title: WebGL
 slug: Web/API/WebGL_API
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL (Web Graphics Library) 是一個透過瀏覽器渲染 3D 及 2D 圖像的 JavaScript API ，且不需要安裝任何插件。 WebGL 透過與 OpenGL ES 2.0 緊密連結的 API，將 3D 圖像帶入 HTML5 中，並可透過 canvas 元素呈現於瀏覽器中
 

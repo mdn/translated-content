@@ -1,15 +1,6 @@
 ---
 title: 미디어 쿼리
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - CSS 미디어 쿼리
-  - Media Queries
-  - Overview
-  - Reference
-  - 미디어 쿼리
-  - 반응형 디자인
-translation_of: Web/CSS/Media_Queries
 ---
 
 {{CSSRef}}

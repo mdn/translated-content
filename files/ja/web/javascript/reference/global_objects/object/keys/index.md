@@ -125,9 +125,7 @@ if (!Object.keys) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,11 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-tags:
-  - Error
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
 {{jsSidebar("Errors")}}

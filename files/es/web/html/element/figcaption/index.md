@@ -1,12 +1,6 @@
 ---
 title: <figcaption>
 slug: Web/HTML/Element/figcaption
-tags:
-  - Elemento
-  - Elementos de agrupación de contenido en HTML
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/figcaption
 original_slug: Web/HTML/Elemento/figcaption
 ---
 
@@ -72,16 +66,11 @@ Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## Ver además
 

@@ -1,15 +1,6 @@
 ---
 title: Primeros Pasos en la Programación de Lado-Servidor
 slug: Learn/Server-side/First_steps
-tags:
-  - Aprendizaje
-  - Aterrizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps
 original_slug: Learn/Server-side/Primeros_pasos
 ---
 

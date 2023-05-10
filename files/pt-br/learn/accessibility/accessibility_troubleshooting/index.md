@@ -35,7 +35,7 @@ Para começar esta avaliação, você deve pegar [o arquivo ZIP que contém os a
 
 O site de avaliação final, deve ser parecido com esse:
 
-![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
+![](assessment-site-finished.png)
 
 Você verá algumas diferenças e/ou problemas com a exibição do estado inicial do site da avaliação - isso se deve principalmente as diferenças na marcação de código, o que, por sua vez, causa alguns problemas de estilo, pois o CSS não está aplicado corretamente. Não se preocupe - você irá corrigir esses problemas nas próximas seções!
 
@@ -86,13 +86,3 @@ Você pode citar mais duas ideias de melhorias que poderiam tornar o site mais a
 Se você está fazendo esta avaliação como parte de um curso, você deverá entregar o seu trabalho para um professor para que possa corrigí-lo. Se você é auto-didata, então você pode obter o guia com a marcação correta perguntando no [tópico de discussão para este exercício](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhh-F4r0i3lAG4IX8kI3Nk9lrJQa0A), ou no canal de IRC [#mdn](irc://irc.mozilla.org/mdn) no [IRC do Mozilla](https://wiki.mozilla.org/IRC&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgC5oFTH3iLqIFiwi9njruuEgsWHA). Experimente tentar fazer o exercício primeiro - você não ganhará nada trapaceando!
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## Neste módulo
-
-- [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjKbO6WIg9b4xWjdZSQcnXxP1foyg)
-- [HTML: uma boa base para acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhg8RYEjwUHElGCpA1Q_60OiOtXeLg)
-- [Práticas recomendadas de acessibilidade de CSS e JavaScript](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjUFLV1YWbEtSBOMPU_Bt7V-OmzDw)
-- [Noções básicas de WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhj5LnkD6EVmrTiupwf932KoV4VCTw)
-- [Multimídia acessível](/pt-BR/docs/Learn/Accessibility/Multimedia&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgWAjBOw_jwWHOvK_zBEob2xQdEmA)
-- [Acessibilidade móvel](/pt-BR/docs/Learn/Accessibility/Mobile&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgnwNfnWbOmqpMWRI1c1zBqGFfU1Q)
-- [Solução de problemas de acessibilidade](/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjy6mgQ3Y6D6sT4QvsOicr2-Fmt9Q)

@@ -13,7 +13,7 @@ slug: Web/API/CSSMediaRule/media
 
 ## 例
 
-この CSS には、単一のスタイルルールを持つメディアクエリーが含まれています。これは `document.styleSheets[0].cssRules` が返す最初の {{domxref("CSSRule")}}  になります。
+この CSS には、単一のスタイルルールを持つメディアクエリーが含まれています。これは `document.styleSheets[0].cssRules` が返す最初の {{domxref("CSSRule")}} になります。
 したがって、 `myRules[0].media` を呼び出すと、メディアクエリーを表す {{domxref("MediaList")}} オブジェクトを返します。
 
 ```css

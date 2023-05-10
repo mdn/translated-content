@@ -59,9 +59,7 @@ g.throw(new Error('Something went wrong'));
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

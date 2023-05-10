@@ -23,7 +23,7 @@ A {{domxref("Boolean")}} value which is `true` if the event has not been cancele
 
 The value returned by `returnValue` is the opposite of the value returned by {{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
-## 使用备注
+## 使用说明
 
 `returnValue` was introduced into the DOM by Internet Explorer 6, and due to that browser's ubiquity became so commonly used that other browsers eventually implemented it as well. It has been adopted into the DOM specification, primarily to ensure that existing web content continues to function going forward.
 

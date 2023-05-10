@@ -1,15 +1,6 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Class
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
-browser-compat: javascript.builtins.ArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 
 {{JSRef}}

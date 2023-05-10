@@ -116,7 +116,7 @@ source.onended = function() {
 
 ## 仕様書
 
-2014 年 8 月 29 日の[ウェブ音声 API 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
+2014 年 8 月 29 日の[ウェブオーディオ API 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
 
 これは [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
@@ -126,4 +126,4 @@ source.onended = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

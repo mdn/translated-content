@@ -1,14 +1,6 @@
 ---
 title: TypedArray.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
-browser-compat: javascript.builtins.TypedArray.sort
 ---
 
 {{JSRef}}

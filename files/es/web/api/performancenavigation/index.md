@@ -1,18 +1,6 @@
 ---
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
-tags:
-  - API
-  - API de tiempo de navegación
-  - Compatibilidad
-  - Deprecada
-  - Interfaz
-  - Legado
-  - Referencia
-  - Rendimiento
-  - TIempo
-  - Tiempo de navegación
-translation_of: Web/API/PerformanceNavigation
 ---
 
 {{APIRef("Navigation Timing")}}
@@ -52,13 +40,11 @@ _La interfaz `PerformanceNavigation` no hereda ninguna propiedad._
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-navigation-info-interface', 'PerformanceNavigation')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.PerformanceNavigation")}}
+{{Compat}}
 
 ## Ver también
 

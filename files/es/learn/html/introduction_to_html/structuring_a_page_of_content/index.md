@@ -1,17 +1,6 @@
 ---
 title: Estructuración de una Página de contenido
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - Aprendizaje
-  - Diseño
-  - Escribir Código
-  - Estructuración
-  - Evaluación
-  - HTML
-  - Principiante
-  - Prototipado
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Learn/HTML/Introduccion_a_HTML/Estructuración_de_una_página_de_contenido
 ---
 
@@ -30,7 +19,7 @@ La estructuración de una página de contenido lista para su uso mediante CSS es
             en el resto del curso, con un énfasis particular en la
           </span></span
         ><a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
           >Estructura del Documento y del Sitio Web.</a
         ><a
           href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura"
@@ -61,7 +50,7 @@ Para comenzar esta evaluación, debería tomar el [archivo zip que contiene todo
 - CSS para dar el estilo a tu marcado.
 - Las imágenes que serán utilizadas en la página.
 
-Crée el ejemplo en su ordenador personal, o como alternativa utilize un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer su evaluación.
+Crée el ejemplo en su ordenador personal, o como alternativa utilize un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación.
 
 ## Breve Proyecto
 
@@ -95,7 +84,7 @@ También debería:
 
 La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la letra después de haber sido marcada.
 
-![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](https://mdn.mozillademos.org/files/12449/example-page.png)
+![El ejemplo terminado para la evaluación; una página web simple sobre la observación de aves, que incluye un encabezado de "Observación de aves", fotos de aves y un mensaje de bienvenida](example-page.png)
 
 ## Evaluación
 

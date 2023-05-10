@@ -71,27 +71,9 @@ Cross-Origin-Embedder-Policy: require-corp
 
 これらのヘッダーは、最上位の文書がクロスオリジン文書と閲覧コンテキストグループを共有しないことを保証します。 COOP プロセスは、文書を分離し、潜在的な攻撃者がポップアップでそれを開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のクロスオリジン攻撃を防止しています。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-   <td>インターフェイスと型について、より厳密な定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}</td>
-   <td>{{Spec2('Highres Time')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 ## 仕様書
 

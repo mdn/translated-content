@@ -1,16 +1,6 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
-tags:
-  - Apps
-  - Batería
-  - Battery
-  - Firefox OS
-  - Mobile
-  - Móvil
-  - WebAPI
-translation_of: Web/API/BatteryManager/charging
-browser-compat: api.BatteryManager.charging
 ---
 
 {{deprecated_header}}{{APIRef("Battery API")}}

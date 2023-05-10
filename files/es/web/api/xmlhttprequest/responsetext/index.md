@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
-translation_of: Web/API/XMLHttpRequest/responseText
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -31,10 +30,8 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificaciones                                                                 | estado                               | Comentarios            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.responseText")}}
+{{Compat}}

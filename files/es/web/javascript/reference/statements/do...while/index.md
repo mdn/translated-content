@@ -1,10 +1,6 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/do...while
 original_slug: Web/JavaScript/Referencia/Sentencias/do...while
 ---
 

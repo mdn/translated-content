@@ -1,14 +1,9 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-translation_of: Web/MathML
 ---
 
-**MathML(Mathematical Markup Language)**은 수학 표기를 기술하고 그 구조와 내용을 모두 담고 있는 [XML](/ko/docs/XML) 마크 업 언어이다. 여기에는 이 강력한 기술을 사용하게 해주는 문서와 예제, 도구에 대한 링크를 제공하고 있다.
+**MathML**(**Mathematical Markup Language**)은 수학 표기를 기술하고 그 구조와 내용을 모두 담고 있는 [XML](/ko/docs/XML) 마크 업 언어이다. 여기에는 이 강력한 기술을 사용하게 해주는 문서와 예제, 도구에 대한 링크를 제공하고 있다.
 
 ## MathML 레퍼런스
 

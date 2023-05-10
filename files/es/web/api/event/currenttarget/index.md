@@ -1,12 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-translation_of: Web/API/Event/currentTarget
 ---
 
 {{APIRef("DOM")}}
@@ -38,16 +32,11 @@ document.body.addEventListener('click', hide, false);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-currenttarget", "Event.currentTarget")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-currenttarget", "Event.currentTarget")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM3 Events", "#dfn-current-event-target", "current event target")}} | {{Spec2("DOM3 Events")}} |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-currentTarget", "Event.currentTarget")}} | {{Spec2("DOM2 Events")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Event.currentTarget")}}
+{{Compat}}
 
 ## Ver también
 

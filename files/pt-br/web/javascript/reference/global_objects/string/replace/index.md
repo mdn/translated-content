@@ -11,6 +11,8 @@ O método `replace()` retorna uma nova string com algumas ou todas as correspond
 
 A string original não é modificada.
 
+{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+
 ## Sintaxe
 
 ```

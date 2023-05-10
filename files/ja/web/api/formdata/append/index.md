@@ -71,9 +71,7 @@ formData.getAll('name'); // ["true", "74", "John"]
 
 ## Specifications
 
-| Specification                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザの互換性
 

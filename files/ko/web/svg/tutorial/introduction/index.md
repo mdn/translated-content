@@ -1,18 +1,13 @@
 ---
 title: 소개
 slug: Web/SVG/Tutorial/Introduction
-tags:
-  - SVG
-  - SVG:튜토리얼
-  - 가이드
-  - 초보자
-  - 튜토리얼
-translation_of: Web/SVG/Tutorial/Introduction
 ---
 
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/ko/SVG)는 [XHTML](/ko/XHTML)과 비슷한 [XML](/ko/XML) 언어로 오른쪽에 있는 것과 같은 그래픽을 그리는 데 사용된다. SVG 이미지는 필요한 모든 선과 모양을 직접 일일이 지정하거나, 이미 존재하는 래스터 이미지를 수정하거나, 이 두 가지 방법을 조합해서 만들 수 있다. 이미지와 그 구성요소들은 변형되고, 조합되고, 필터링될 수 있으며, 이를 통해 원래의 형태를 완전히 바꿀 수도 있다.
+![Mozilla dino logo](dino.svg)
+
+[SVG](/ko/docs/Web/SVG)는 [XHTML](/ko/docs/Glossary/XHTML)과 비슷한 [XML](/ko/docs/Web/XML) 언어로 오른쪽에 있는 것과 같은 그래픽을 그리는 데 사용된다. SVG 이미지는 필요한 모든 선과 모양을 직접 일일이 지정하거나, 이미 존재하는 래스터 이미지를 수정하거나, 이 두 가지 방법을 조합해서 만들 수 있다. 이미지와 그 구성요소들은 변형되고, 조합되고, 필터링될 수 있으며, 이를 통해 원래의 형태를 완전히 바꿀 수도 있다.
 
 SVG는 비슷한 경쟁 포맷들이 [W3C](http://www.w3.org)에 제출되었지만 완전히 승인되지는 않았던 1999년에 등장했다. 명세는 오랫동안 존재해 왔지만 웹 브라우저에서 느리게 받아들여졌기 때문에, 웹 문서에서 바로 SVG를 포함하는 컨텐츠는 2009년까지도 많지 않았다. 사용할 수 있는 구현조차도 경쟁기술인 [HTML5 캔버스](/ko/HTML/Canvas)나 (애플리케이션 인터페이스로서) 어도비 플래시보다 느린 편이다. SVG는 캔버스나 플래시와 비교했을 때 [DOM 인터페이스](/ko/docs/Web/API)를 사용할 수 있는 점과 서드파티 확장을 필요로 하지 않는 이점을 가지고 있다. SVG를 활용할 지는 사용자의 목적에 달려있다.
 

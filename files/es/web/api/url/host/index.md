@@ -1,7 +1,6 @@
 ---
 title: Estabilidad
-slug: Web/API/URL/Host
-translation_of: Web/API/URL/host
+slug: Web/API/URL/host
 ---
 
 {{ApiRef("URL API")}}
@@ -35,15 +34,13 @@ url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org:4097"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                    | Status               | Comment            |
-| ---------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('URL', '#dom-url-host', 'URL.host')}} | {{Spec2('URL')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.host")}}
+{{Compat}}
 
 ## See also
 

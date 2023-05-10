@@ -149,7 +149,7 @@ _create-react-app_ vai mostrar várias mensagens em seu terminal enquanto ele tr
 
 Quando o processo finalizar, dê um `cd` para dentro da pasta `moz-todo-react` e execute o comando `npm start`. Os scripts instalados pelo _create-react-app_ vão começar a serem servidos em um servidor local, no endereço _localhost:3000,_ e abrirão o aplicativo em uma nova aba em seu navegador. Seu navegador vai mostrar algo como isto:
 
-![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](https://mdn.mozillademos.org/files/17203/default-create-react-app.png)
+![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-create-react-app.png)
 
 ### Estrutura da aplicação
 
@@ -458,38 +458,3 @@ No React
 - _Props_ são escritas bem como atributos dentro das invocações de componentes e são passadas para dentro de componentes.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## Neste módulo
-
-- [Introdução a frameworks _client-side_](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Principais características de frameworks](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Começando com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Começando nossa app de lista de afazares](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizando nosso aplicativo React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [Interatividade no React: _events_ e _state_](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [Interatividade no React: Editando, filtrando e renderização condicional](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibilidade no React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [Recursos sobre React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Começando com o Ember](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember: estrutura de apps e componetização](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Interatividade no Ember: Events, classes e state](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Interatividade no Ember: Funcionalidade do rodapé e renderização condicional](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Roteamento no Ember](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Recursos sobre o Ember e problemas comuns](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Começando com o Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Criando nosso primeiro componente com o Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Renderizando uma lista de componentes Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adicionando um novo formulário de afazeres: Events do Vue, métodos e models](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Estilizando componentes Vue com CSS](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Utilizando propriedades computadas do Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Renderização condicional no Vue: Editando afazeres existentes](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Gerenciamento de foco com Vue refs](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Recursos sobre Vue](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)

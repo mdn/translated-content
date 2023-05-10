@@ -1,14 +1,6 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-tags:
-  - API
-  - Constraint Validation API
-  - HTML DOM
-  - HTMLSelectElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -23,14 +15,11 @@ var result = selectElt.checkValidity();
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                           | Comentario                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}}             | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-checkvalidity', 'HTMLSelectElement.checkValidity()')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial, snapshot de {{SpecName('HTML WHATWG')}}    |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement.checkValidity")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,15 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - CSS
-  - Capas
-  - Propiedad CSS
-  - Referencia
-  - Transformaciones CSS
-  - Web
-  - graficos
-translation_of: Web/CSS/perspective
 ---
 
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
@@ -55,13 +46,11 @@ perspective: inherited
 
 ## Especificaciones
 
-| Especifiación                                                                        | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ Specname('CSS3 Transforms', '#perspective', 'perspective') }} | {{ Spec2('CSS3 Transforms') }} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.perspective")}}
+{{Compat}}
 
 ## Ver también
 

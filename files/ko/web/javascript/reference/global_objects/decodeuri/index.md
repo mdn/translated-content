@@ -1,18 +1,6 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-tags:
-  - Decode
-  - JavaScript
-  - Method
-  - String
-  - Text
-  - URI
-  - URL
-  - decodeURI
-  - decoding
-browser-compat: javascript.builtins.decodeURI
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
 
 {{jsSidebar("Objects")}}

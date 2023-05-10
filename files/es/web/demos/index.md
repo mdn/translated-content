@@ -1,17 +1,6 @@
 ---
 title: Demostraciones de tecnologías de Web Abierta
 slug: Web/Demos
-tags:
-  - 2D
-  - 3D
-  - CSS
-  - Canvas
-  - Design
-  - HTML
-  - SVG
-  - Video
-  - transform
-translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
 

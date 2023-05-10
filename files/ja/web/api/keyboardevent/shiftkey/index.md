@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.shiftKey
 slug: Web/API/KeyboardEvent/shiftKey
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("UI Events")}}
@@ -13,29 +15,39 @@ slug: Web/API/KeyboardEvent/shiftKey
 
 ## 例
 
-```js
-<html>
-<head>
-<title>シフトキーの例</title>
+```html
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>シフトキーの例</title>
 
-<script type="text/javascript">
+    <script>
+      function showChar(e) {
+        alert(
+          "押されたキー: " +
+            String.fromCharCode(e.charCode) + 
+            "\n" +
+            "charCode: " +
+            e.charCode +
+            "\n" +
+            "SHIFT key pressed: " +
+            e.shiftKey +
+            "\n" +
+            "ALT key pressed: " +
+            e.altKey +
+            "\n"
+        );
+      }
+    </script>
+  </head>
 
-function showChar(e){
-  alert(
-    "押されたキー: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT key pressed: " + e.shiftKey + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
-  );
-}
-
-</script>
-</head>
-
-<body onkeypress="showChar(event);">
-<p>SHIFT キーを押しながら、または押さずに、任意の文字キーを押してください。<br />
-SHIFT キーと ALT キーを併用することもできます。</p>
-</body>
+  <body onkeypress="showChar(event);">
+    <p>
+      SHIFT キーを押しながら、または押さずに、任意の文字キーを押してください。<br />
+      SHIFT キーと ALT キーを併用することもできます。
+    </p>
+  </body>
 </html>
 ```
 

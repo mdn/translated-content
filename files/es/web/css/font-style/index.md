@@ -1,14 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - Propiedad de CSS
-  - Referencia
-  - Tipos de letra de CSS
-  - Web
-  - tipo de letra
-translation_of: Web/CSS/font-style
 ---
 
 {{CSSRef}}
@@ -71,16 +63,12 @@ El ejemplo muestra los valores diferentes de `font-style`.
 
 {{ EmbedLiveSample('Ejemplo') }}
 
-Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `oblique` y `italic`, si este no es el caso, los navegadores simulan el estilo que falta utilizando el tipo de letra presente. Un ejemplo de representación de una fuente con ambos tipos de letra:
-
-![](https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png)
+Ten en cuenta que no todas las fuentes tienen tipos de letra distintos para `oblique` y `italic`, si este no es el caso, los navegadores simulan el estilo que falta utilizando el tipo de letra presente.
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS3 Fonts')}} | Sin cambio         |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}         | Sin cambio         |
-| {{SpecName('CSS1', '#font-style', 'font-style')}}                             | {{Spec2('CSS1')}}         | Definición inicial |
+{{Specifications}}
 
-{{Compat("css.properties.font-style")}}
+## Compatibilidad con navegadores
+
+{{Compat}}

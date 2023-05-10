@@ -1,7 +1,6 @@
 ---
 title: frame rate (FPS)
 slug: Glossary/FPS
-translation_of: Glossary/FPS
 ---
 
 Un **cuadro por segundo** es la velocidad en la cual el navegador web, es capaz de recalcular la disposición y dibujar el contenido de la pantalla.

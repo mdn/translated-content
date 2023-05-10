@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toPrecision
 ---
 
@@ -60,9 +59,9 @@ console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toPrecision")}}
+{{Compat}}
 
 ## Vea También
 

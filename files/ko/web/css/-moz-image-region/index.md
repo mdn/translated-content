@@ -1,12 +1,6 @@
 ---
 title: '-moz-image-region'
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Non-standard
-translation_of: Web/CSS/-moz-image-region
 ---
 
 {{CSSRef}}{{Non-standard_header}}

@@ -1,13 +1,6 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - Clase
-  - Experimental
-  - Interfaz
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/AggregateError
 ---
 
@@ -59,13 +52,11 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.AggregateError")}}
+{{Compat}}
 
 ## Ve también
 

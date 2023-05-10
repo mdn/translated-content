@@ -5,7 +5,7 @@ slug: Web/CSS/break-before
 
 {{CSSRef}}
 
-The** `break-before`** [CSS](/zh-CN/docs/CSS) 属性定义页面，列或区域在生成的盒子之前应如何处理中断。如果没有生成的盒子，则忽略该属性。
+**`break-before`** [CSS](/zh-CN/docs/CSS) 属性定义页面，列或区域在生成的盒子之前应如何处理中断。如果没有生成的盒子，则忽略该属性。
 
 ```css
 /* Generic break values */

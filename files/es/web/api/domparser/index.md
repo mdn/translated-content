@@ -1,7 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-translation_of: Web/API/DOMParser
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -27,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Manejo de errores
 
-Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):
+Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see [Error 45566 en Firefox](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -113,17 +112,15 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}} | {{Spec2('DOM Parsing')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## Ver también
 
 - [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/es/docs/XMLHttpRequest)
 - [XMLSerializer](/es/docs/XMLSerializer)
-- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)
+- [Parsing HTML to DOM](/es/Add-ons/Code_snippets/HTML_to_DOM)

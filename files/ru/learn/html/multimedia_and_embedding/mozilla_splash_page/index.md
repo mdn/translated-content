@@ -67,9 +67,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 
 Следующие скриншоты демонстрируют, как сайт-визитка выглядит, при правильной разметке, на широких и узких экранах.
 
-![A wide shot of our example splash page](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![A wide shot of our example splash page](wide-shot.png)
 
-![A narrow shot of our example splash page](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![A narrow shot of our example splash page](narrow-shot.png)
 
 ## Заключение
 

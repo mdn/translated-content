@@ -15,7 +15,7 @@ Geolocation API позволяет пользователю предоставл
 
 ## Объект геолокации
 
-[API геолокации](ru/docs/Web/API/Geolocation) доступен через объект {{domxref("navigator.geolocation")}}.
+[API геолокации](/ru/docs/Web/API/Geolocation) доступен через объект {{domxref("navigator.geolocation")}}.
 
 Если объект существует, функции определения местоположения доступны. Вы можете проверить это следующим образом:
 

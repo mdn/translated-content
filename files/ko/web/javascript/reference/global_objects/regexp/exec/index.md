@@ -1,14 +1,6 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - 정규 표현식
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
 
 {{JSRef}}

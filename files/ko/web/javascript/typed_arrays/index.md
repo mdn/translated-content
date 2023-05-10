@@ -1,10 +1,6 @@
 ---
 title: JavaScript 형식화 배열
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -17,7 +13,7 @@ JavaScript 형식화 배열(typed array)은 배열같은 객체이고 원시(raw
 
 최대 유연성 및 효율을 달성하기 위해, JavaScript 형식화 배열은 구현을 **버퍼** 및 **뷰**로 나눕니다. 버퍼 ({{jsxref("ArrayBuffer")}} 객체에 의해 구현됨)는 데이터 부분(chunk, 덩어리)을 나타내는 객체입니다; 이야기 할 형식이 없으며, 그 콘텐츠에 액세스하기 위한 메커니즘을 제공하지 않습니다. 버퍼에 포함된 메모리에 액세스하기 위해, 뷰를 사용할 필요가 있습니다. 뷰는 문맥(context, 즉 데이터 형, 시작 오프셋 및 요소 수)을 제공해 데이터를 실제 형식화 배열로 바꿉니다.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### ArrayBuffer
 

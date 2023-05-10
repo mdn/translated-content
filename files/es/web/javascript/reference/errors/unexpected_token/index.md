@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
-tags:
-  - JavaScript
-  - SyntaxError
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
 {{jsSidebar("Errors")}}

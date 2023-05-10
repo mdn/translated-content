@@ -1,15 +1,6 @@
 ---
 title: Grupos y rangos
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Rangos
-  - Referencia
-  - grupos
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
 
@@ -76,9 +67,7 @@ do {
 
 ## Especificaciones
 
-| Especificación                                                                   |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

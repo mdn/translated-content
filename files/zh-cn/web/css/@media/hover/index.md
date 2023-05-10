@@ -3,9 +3,9 @@ title: hover
 slug: Web/CSS/@media/hover
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-该**`hover`** [CSS](/zh-CN/docs/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
+该 **`hover`** [CSS](/zh-CN/docs/Web/CSS) {{cssxref("@media")}} 可以根据用户的主要输入机制是否可以悬停在元素之上来应用样式。
 
 ## 语法
 
@@ -16,7 +16,7 @@ slug: Web/CSS/@media/hover
 - `hover`
   - : 主要输入机制可以方便地悬停在元素上。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -36,7 +36,7 @@ slug: Web/CSS/@media/hover
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -46,6 +46,6 @@ slug: Web/CSS/@media/hover
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [the `any-hover` media feature](/zh-CN/docs/Web/CSS/@media/any-hover)

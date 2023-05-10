@@ -1,23 +1,11 @@
 ---
 title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Aprender
-  - Artículo
-  - Autenticacion de Django
-  - Autenticación
-  - Principiante
-  - Python
-  - Sesiones
-  - Tutorial
-  - django autenticación
-  - permisos
-translation_of: Learn/Server-side/Django/Authentication
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
+En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
 
 <table>
   <tbody>
@@ -46,7 +34,7 @@ Django proporciona un sistema de autenticación y autorización ("permisos"), co
 
 > **Nota:** Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
 
-En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
+En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
 
 El sistema de autenticación es muy flexible, y puedes crear tus URLs, formularios, vistas y plantillas desde el inicio si quieres, simplemente llamando a la API provista para loguear al usuario. Sin embargo, en este artículo vamos a usar las vistas y formularios de autenticación "en stock" de Django para nuestras páginas de login y logout. De todos modos necesitaremos crear algunas plantillas, pero eso es bastante fácil.
 
@@ -99,24 +87,24 @@ A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengam
 
 Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (`http://127.0.0.1:8000/admin/`). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
 
-![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
+![Admin site - add groups or users](admin_authentication_add.png)
 
 Primero vamos a crear un nuevo grupo para los miembros de nuestra biblioteca.
 
-1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+1. Da click en el boton **Add** "Añadir" (Enseguida de Group) para crear un nuevo grupo ; ingresa el **Nombre** "Name" para el grupo de "Library Members".![Admin site - add group](admin_authentication_add_group.png)
 2. No necesitamos de ningun permiso para el grupo , entonces solo presiona Save (Seras redirigido a una lista de los grupos disponibles).
 
 Ahora vamos a crear un usuario:
 
 1. Navega de vuelta a la pagina de inicio "home" del sitio de administracion "Admin site".
-2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+2. Da click en el boton **Add** "Añadir" que queda enseguida de Users "Usuarios" para abrir el cuadro de dialogo de Usuario **Add** "Añadir usuario".![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. Ingresa un **Nombre de Usuario** "Username", **Contraseña** "Password" y **Confirmacion de Contraseña** "Password confirmation" apropiado para tu usuario de prueba.
 4. Presiona **Save** "Guardar" para crear el usuario.
 
     El sitio de administrador creara el nuevo usuario e inmediatamente te llevara a la pantalla de _Change user_ "Cambios del usuario" donde puedes cambiar tu **nombre de usuario** "Username" y agregar informacion para los campos opcionales del modelo de Usuario "User". Estos campos incluyen el primer nombre "first name", el apellido "last name", la direcion de correo electronico "email adress", los estados de los usuarios y sus permisos "users status and permissions" (solo el indicador **Active** "Activo" deberia ser activado). Mas abajo puedes especificar los grupos y permisos del usuario, y ver datos importantes relacionados a el usuario (ej: la fecha en que se agrego y la fecha del ultimo inicio de sesion)
 
-5. ![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
-6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+5. ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+6. En la seccion _Groups_ "Grupos", selecciona el grupo **Library Member** de la lista de grupos disponibles, y entonces presiona la **la flecha apuntando a la derecha** entre las dos cajas para moverlo dentro de la caja de _Chosen groups_ "Grupos seleccionados".![Admin site - add user to group](admin_authentication_user_add_group.png)
 7. Aqui no necesitamos hacer nada adicional, entonces de nuevo solo seleciona **SAVE** "Guardar", para ir a la lista de usuarios.
 
 ¡Esta hecho! Ahora tienes la cuenta de un miembro normal de la libreria, el cual estara disponible para ser usado en tus pruebas (una vez que hayamos implementado las paginas para permitirles iniciar sesion).
@@ -247,7 +235,7 @@ Estas plantillas comparten algunas similitudes con algunas que hemos visto antes
 
 Navega de vuelta a la página de inicio sesión (`http://127.0.0.1:8000/accounts/login/`) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
 
-![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
+![Library login page v1](library_login.png)
 
 Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
 
@@ -276,7 +264,7 @@ Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**.
 
 Esta plantilla es muy simple. Tan sólo muestra un mensaje informándote que has cerrado sesión, y provee un enlace que puedes pulsar para volver a la página de inicio de sesión. Si vas a la url de cierre de sesión otra vez, deberías ver esta página:
 
-![Library logout page v1](https://mdn.mozillademos.org/files/14103/library_logout.png)
+![Library logout page v1](library_logout.png)
 
 ### Plantillas de reinicio de contraseña "Password reset"
 
@@ -611,7 +599,7 @@ Abre la plantilla base (**/locallibrary/catalog/templates/base_generic.html**) y
 
 Cuando cualquier usuario ha iniciado sesión, verán el enlace _My Borrowed_ (Mis Alquileres) en la barra lateral, y la lista de libros mostrados como se ve abajo (¡el primer libro no tiene fecha de vencimiento, que es un bug que esperamos arreglar en un tutorial posterior!).
 
-![Library - borrowed books by user](https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png)
+![Library - borrowed books by user](library_borrowed_by_user.png)
 
 ## Permisos
 
@@ -688,7 +676,7 @@ Deberías ser capaz de seguir el mismo patrón que el de la otra vista. La princ
 
 Cuando hayas terminado, tu página debería verse algo parecida a la captura de pantalla de abajo.
 
-![All borrowed books, restricted to librarian](https://mdn.mozillademos.org/files/14115/library_borrowed_all.png)
+![All borrowed books, restricted to librarian](library_borrowed_all.png)
 
 ## Sumario
 
@@ -703,21 +691,3 @@ En nuestro siguiente artículo observaremos cómo puedes usar los formularios de
 - [Introducción a clases basadas en vistas > Decoradores](https://docs.djangoproject.com/en/1.10/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

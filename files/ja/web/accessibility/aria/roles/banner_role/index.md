@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: banner ロール'
-slug: Web/Accessibility/ARIA/Roles/Banner_role
+slug: Web/Accessibility/ARIA/Roles/banner_role
 ---
 
 バナー (`banner`) ロールは、ページの先頭に頻繁に配置される一般的で有益なコンテンツを表します。 これには、通常、ロゴ、会社名、検索アイコン、ページに関連する写真、またはスローガンが含まれます。
@@ -67,10 +67,7 @@ HTML5 の {{htmlelement("header")}} 要素は、{{htmlelement("aside")}}、{{htm
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#banner","ARIA: banner role")}}                                         | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_banner","Banner landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

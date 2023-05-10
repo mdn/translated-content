@@ -1,13 +1,6 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - Class
-  - JavaScript
-  - Number
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Number
 ---
 
 {{JSRef}}**`Number`** 는 `37`이나 `-9.25`와 같은 숫자를 표현하고 다룰 때 사용하는 [원시 래퍼 객체](/ko/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)입니다.

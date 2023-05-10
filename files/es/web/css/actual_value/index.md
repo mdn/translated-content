@@ -1,7 +1,6 @@
 ---
 title: Valor real
 slug: Web/CSS/actual_value
-translation_of: Web/CSS/actual_value
 ---
 
 {{CSSRef}}
@@ -12,9 +11,7 @@ El **valor real** (**actual value**) de una propiedad CSS es el valor usado una 
 
 ## Especificaciones
 
-| Especificación                                                                           | Estatus                  | Comentarios        |
-| ---------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

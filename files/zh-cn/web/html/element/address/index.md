@@ -13,7 +13,6 @@ slug: Web/HTML/Element/address
 
 `<address>`可以使用在多种语境中，例如在文章开头提供商务的联系方式，或者放在{{HTMLElement("article")}}元素内，指明该文章的作者。
 
-| [内容分类](/zh-CN/docs/Web/HTML/Content_categories) | [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content), palpable content.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 <table class="properties">
  <tbody>
   <tr>
@@ -73,7 +72,7 @@ slug: Web/HTML/Element/address
 
 ### 结果
 
-{{EmbedLiveSample("Example", "300", "200")}}
+{{EmbedLiveSample("示例", "300", "200")}}
 
 虽然 `<address>` 元素看起来只是使用了 {{HTMLElement("i")}} 或者 {{HTMLElement("em")}} 元素的默认样式来渲染其中的文本，但是当处理联系信息时使用它更为合适，因为它表达了额外的语义信息。
 
@@ -85,7 +84,7 @@ slug: Web/HTML/Element/address
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}};
 - [使用 HTML 章节和大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)

@@ -1,7 +1,6 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
-translation_of: Web/CSS/border-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -66,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end", "border-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline-end")}}
+{{Compat}}
 
 ## Mira también
 

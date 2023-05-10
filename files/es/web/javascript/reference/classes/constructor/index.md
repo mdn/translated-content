@@ -1,11 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - Clases
-  - ECMAScript6
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Classes/constructor
 original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
 
@@ -75,16 +70,11 @@ constructor(...args) {
 
 ## Especificaciones
 
-| Specification                                                                                                        | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-static-semantics-constructormethod', 'Constructor Method')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.constructor")}}
-
-La tabla de compatibilidad de esta pagina está generada a partir de data estructurada. Si quieres contribuir a la data, por favor dirígete a <https://github.com/mdn/browser-compat-data> y envíanos una solicitud de extracción
+{{Compat}}
 
 ## Ver también
 

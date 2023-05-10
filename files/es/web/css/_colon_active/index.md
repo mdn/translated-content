@@ -1,13 +1,6 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:active
 ---
 
 {{CSSRef}}
@@ -52,17 +45,11 @@ a:active { color: lime; }        /* Enlaces activos */
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-active', ':active')}} | {{Spec2('HTML WHATWG')}}     |                     |
-| {{SpecName('CSS4 Selectors', '#active-pseudo', ':active')}}                 | {{Spec2('CSS4 Selectors')}} | Ningún cambio.      |
-| {{SpecName('CSS3 Selectors', '#useraction-pseudos', ':active')}}             | {{Spec2('CSS3 Selectors')}} | Ningún cambio.      |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':active')}} | {{Spec2('CSS2.1')}}             | Ningún cambio.      |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':active')}}                     | {{Spec2('CSS1')}}             | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.active")}}
+{{Compat}}
 
 ## Ver también
 

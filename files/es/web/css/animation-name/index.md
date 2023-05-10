@@ -1,13 +1,6 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-name
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -54,13 +47,11 @@ Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations).
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentario |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Animations', '#animation-name', 'animation-name')}} | {{Spec2('CSS3 Animations')}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-name")}}
+{{Compat}}
 
 ## Ver también
 

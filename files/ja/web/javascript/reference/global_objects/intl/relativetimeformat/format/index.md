@@ -73,9 +73,7 @@ rtf.format(1, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態      | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ---- |
-| {{SpecName('ES Int Draft', '#sec-Intl.RelativeTimeFormat.prototype.format', 'RelativeTimeFormat.format()')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

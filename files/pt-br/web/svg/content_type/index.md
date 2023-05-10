@@ -37,13 +37,13 @@ slug: Web/SVG/Content_type
     anything ::= Char*
     ```
 
-    onde [Char](http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) é a produção de um caractere, como definido no XML 1.0 , seção 2.2).
+    onde [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) é a produção de um caractere, como definido no XML 1.0 , seção 2.2).
 
 ## Clock-value
 
 - \<clock-value>
 
-  - : Clock values have the same syntax as in [SMIL Animation](http://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
+  - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
 
     ```
     Clock-val         ::= Full-clock-val | Partial-clock-val
@@ -88,11 +88,11 @@ slug: Web/SVG/Content_type
 
   - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}} and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
-    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/).
+    SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/).
 
     A \<color> is either a keyword or a numerical RGB specification.
 
-    In addition to these color keywords, users may specify keywords that correspond to the colors used by objects in the user's environment. The normative definition of these keywords is found in [User preferences for colors](http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
+    In addition to these color keywords, users may specify keywords that correspond to the colors used by objects in the user's environment. The normative definition of these keywords is found in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
     The format of an RGB value in hexadecimal notation is a "#" immediately followed by either three or six hexadecimal characters. The three-digit RGB notation (#rgb) is converted into six-digit form (#rrggbb) by replicating digits, not by adding zeros. For example, `#fb0` expands to `#ffbb00`. This ensures that white (`#ffffff`) can be specified with the short notation (`#fff`) and removes any dependencies on the color depth of the display. The format of an RGB value in the functional notation is an RGB start-function followed by a comma-separated list of three numerical values (either three integer values or three percentage values) followed by ")". An RGB start-function is the case-insensitive string "rgb(", for example "RGB(" or "rGb(". For compatibility, the all-lowercase form "rgb(" is preferred. The integer value 255 corresponds to 100%, and to F or FF in the hexadecimal notation: `rgb(255,255,255)` = `rgb(100%,100%,100%)` = `#FFF`. White space characters are allowed around the numerical values. All RGB colors are specified in the sRGB color space. Using sRGB provides an unambiguous and objectively measurable definition of the color, which can be related to international standards.
 
@@ -104,7 +104,7 @@ slug: Web/SVG/Content_type
     hexdigit ::= [0-9A-Fa-f]
     ```
 
-    where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/), or one of the system color keywords listed in [User preferences for colors](http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
+    where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
     The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
 
@@ -197,7 +197,7 @@ slug: Web/SVG/Content_type
     - local _IRI_ references, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`)
     - non-local _IRI_ references, where the _IRI_ reference does contain an `<absoluteIRI>` or `<relativeIRI>`
 
-    For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](http://www.w3.org/TR/SVG/linking.html#IRIReference).
+    For the full specification of IRI references in SVG, see [SVG 1.1 (2nd Edition): IRI references](https://www.w3.org/TR/SVG/linking.html#IRIReference).
 
 ## Length
 
@@ -209,7 +209,7 @@ slug: Web/SVG/Content_type
     length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?
     ```
 
-    [See the CSS2 specification](http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units) for the meanings of the unit identifiers.
+    [See the CSS2 specification](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units) for the meanings of the unit identifiers.
 
     For properties defined in CSS2, a length unit identifier must be provided. For length values in SVG-specific properties and their corresponding presentation attributes, the length unit identifier is optional. If not provided, the length value represents a distance in the current user coordinate system. In presentation attributes for all properties, whether defined in SVG1.1 or in CSS2, the length identifier, if specified, must be in lower case.
 
@@ -299,7 +299,7 @@ slug: Web/SVG/Content_type
 
 - \<paint>
 
-  - : Os valores das propriedades {{SVGAttr("fill")}} e {{SVGAttr("stroke")}} são especificações do tipo de pintura a ser utilizada quando o preenchimento ou acariciando um determinado elemento gráfico. As opções disponíveis e sintaxe para \<paint> estão descritos na [especificação de pintura](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
+  - : Os valores das propriedades {{SVGAttr("fill")}} e {{SVGAttr("stroke")}} são especificações do tipo de pintura a ser utilizada quando o preenchimento ou acariciando um determinado elemento gráfico. As opções disponíveis e sintaxe para \<paint> estão descritos na [especificação de pintura](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
 
     Dentro do DOM do SVG, os valores do \<paint> são representados usando objetos {{domxref("SVGPaint")}}.
 

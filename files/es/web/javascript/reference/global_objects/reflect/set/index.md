@@ -1,7 +1,6 @@
 ---
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
 
 {{JSRef}}
@@ -69,7 +68,7 @@ Reflect.getOwnPropertyDescriptor(obj, 'undefined');
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## Ver también
 

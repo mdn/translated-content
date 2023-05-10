@@ -1,7 +1,6 @@
 ---
 title: Example 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 ---
 
 这是第一个[如果构建自定义表单小部件](/zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets)的代码解释事例。
@@ -142,9 +141,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 }
 ```
 
-### 基本状态结果
+### 结果
 
-{{ EmbedLiveSample('Basic_state', 120, 130) }}
+{{ EmbedLiveSample('基本状态', 120, 130) }}
 
 ## 活动状态
 
@@ -282,9 +281,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 }
 ```
 
-### 活动状态结果
+### 结果
 
-{{ EmbedLiveSample('Active_state', 120, 130) }}
+{{ EmbedLiveSample('活动状态', 120, 130) }}
 
 ## 展开状态
 
@@ -422,6 +421,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1
 }
 ```
 
-### 展开状态结果
+### 结果
 
-{{ EmbedLiveSample('Open_state', 120, 130) }}
+{{ EmbedLiveSample('展开状态', 120, 130) }}

@@ -1,17 +1,6 @@
 ---
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-tags:
-  - API
-  - Apps
-  - Batería
-  - Battery
-  - Firefox OS
-  - Gecko DOM Reference
-  - WebAPI
-  - aplicaciones
-translation_of: Web/API/BatteryManager/dischargingTime
-browser-compat: api.BatteryManager.dischargingTime
 ---
 
 {{deprecated_header}}{{APIRef("Battery API")}}

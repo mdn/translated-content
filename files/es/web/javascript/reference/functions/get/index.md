@@ -1,11 +1,6 @@
 ---
 title: get
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Functions/get
 original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
 
@@ -62,19 +57,19 @@ Note que intentar asignar un valor a `latest` no lo cambiará.
 delete o.latest;
 ```
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-Basado en la página de [página de Robert Nyman](http://robertnyman.com/javascript/javascript-getters-setters.html#regular-getters-and-setters)
+{{Specifications}}
 
-Sin soporte (notablemente en IE6-8) significa que el script lanzará un error de sintaxis.
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.get")}}
+{{Compat}}
 
 ## Consulta también
 
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters) in JavaScript Guide

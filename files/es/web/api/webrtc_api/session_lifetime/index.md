@@ -1,7 +1,6 @@
 ---
 title: WebRTC Introduction
 slug: Web/API/WebRTC_API/Session_lifetime
-translation_of: Web/API/WebRTC_API/Session_lifetime
 original_slug: WebRTC/Introduction
 ---
 

@@ -1,11 +1,9 @@
 ---
 title: comment
 slug: Web/XSLT/Element/comment
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/comment
 original_slug: Web/XSLT/comment
 ---
+
 {{ XsltRef() }}
 
 `<xsl:comment>` 요소는 출력 문서에 주석을 작성합니다. 오직 텍스트만 포함해야 합니다.

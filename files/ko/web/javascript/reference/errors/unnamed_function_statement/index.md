@@ -1,14 +1,6 @@
 ---
 title: 'SyntaxError: function statement requires a name'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - IIEF
-  - 객체 메소드
-  - 구문 에러
-  - 자바스크립트
-  - 콜백 함수
-  - 함수 이름
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 
 {{jsSidebar("Errors")}}

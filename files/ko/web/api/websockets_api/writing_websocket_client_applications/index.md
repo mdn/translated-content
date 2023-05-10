@@ -1,14 +1,6 @@
 ---
 title: WebSocket을 이용하여 클라이언트 애플리케이션 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - 가이드
-  - 네트워킹
-  - 예제
-  - 웹소켓
-  - 웹소켓API
-  - 클라이언트
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
 WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술입니다. 일반적인 웹소켓 클라이언트는 사용자의 브라우저일 것이지만, 그렇다고 해서 이 프로토콜이 플랫폼에 종속적이지는 않습니다.
@@ -172,8 +164,6 @@ exampleSocket.onmessage = function(event) {
 ### Text data format
 
 웹소켓을 통해 전달되는 텍스트들은 UTF-8 포멧을 가집니다.
-
-Gecko 9.0 {{ geckoRelease("9.0") }} 먼저 버전들은 유효한 UTF-8 텍스트가 아닌 문자가 들어올 경우 연결이 종료되었습니다. 지금은 이 값들을 정상적으로 허용합니다.
 
 ## 연결을 종료하기
 

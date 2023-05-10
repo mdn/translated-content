@@ -1,13 +1,6 @@
 ---
 title: ':last-of-type'
 slug: Web/CSS/:last-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:last-of-type
 ---
 
 {{CSSRef}}
@@ -83,14 +76,11 @@ article :last-of-type {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.last-of-type")}}
+{{Compat}}
 
 ## Ver también
 

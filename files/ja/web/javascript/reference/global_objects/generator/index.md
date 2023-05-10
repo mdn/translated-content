@@ -53,9 +53,7 @@ console.log(generator.next().value); // 2
 
 ## 仕様
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

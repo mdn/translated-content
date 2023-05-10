@@ -86,7 +86,7 @@ Estes são excelentes recursos para pessoas que estão tentando descobrir por on
 
 A ferramenta Emscripten é capaz de pegar qualquer código fonte C/C++ e compilá-lo para um módulo .wasm, além da "cola" JavaScript necessária para carregar e executar o módulo, e um documento HTML para exibir os resultados do código.
 
-![](https://mdn.mozillademos.org/files/14647/emscripten-diagram.png)
+![](emscripten-diagram.png)
 
 De maneira resumida, o processo funciona da seguinte maneira:
 

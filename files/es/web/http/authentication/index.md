@@ -1,13 +1,6 @@
 ---
 title: Autenticación HTTP
 slug: Web/HTTP/Authentication
-tags:
-  - Acceso de control
-  - Autenticación
-  - Guía
-  - HTTP
-  - HTTP Basic
-translation_of: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +11,7 @@ HTTP nos brinda un marco general para el control de acceso y de autenticación. 
 
 {{RFC("7235")}} define el marco de autenticación HTTP que puede ser usado por un servidor para revisar la solicitud de un cliente y por un cliente para proveer información de autenticación. El flujo de la revisión y la respuesta funciona de la siguiente manera: El servidor responde al cliente con un estado de respuesta {{HTTPStatus("401")}} (Unauthorized) y devuelve al cliente información sobre cómo autorizarse con un encabezado de respuesta {{HTTPHeader("WWW-Authenticate")}} que contiene al menos una revisión. Un cliente que quiera autenticarse con un servidor puede hacerlo incluyendo un encabezado de solicitud {{HTTPHeader("Authorization")}} con sus credenciales. Normalmente un cliente hará una solicitud de contraseña al usuario y luego enviará la solicitud incluyendo el encabezado `Authorization` correcto al servidor.
 
-![](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![](http-auth-sequence-diagram.png)
 
 En el caso de una autenticación "Basic" como la mostrada en la figura, el intercambio se **debe** realizar sobre una conexión HTTPS (TLS) para que sea seguro.
 
@@ -58,7 +51,7 @@ El esquema de autenticaón mas común es "Basic", que es introducido con mas det
 
 - **Basic** (ver {{rfc(7617)}}, credenciales codificadas en base64 . Ver mas abajo para mas información.),
 - **Bearer** (ver {{rfc(6750)}}, bearer tokens de acceso en recursos protegidos mediante OAuth 2.0),
-- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver {{bug(472823)}} para encriptado SHA),
+- **Digest** (ver {{rfc(7616)}}, has MD5 solo soportado en Firefox, ver [Error 472823 en Firefox](https://bugzil.la/472823) para encriptado SHA),
 - **HOBA** (ver {{rfc(7486)}} (borrador), **H**TTP **O**rigin-**B**ound **A**uthentication, basado en firma digital),
 - **Mutual** (ver [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
 - **AWS4-HMAC-SHA256** (ver [AWS docs](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).

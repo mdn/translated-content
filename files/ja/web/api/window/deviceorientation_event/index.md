@@ -51,9 +51,7 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#deviceorientation", "DeviceOrientation event")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

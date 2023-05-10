@@ -1,12 +1,6 @@
 ---
 title: CSS Shapes
 slug: Web/CSS/CSS_Shapes
-tags:
-  - CSS
-  - CSS Shapes
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Shapes
 ---
 
 {{CSSRef}}

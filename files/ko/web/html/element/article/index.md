@@ -1,14 +1,8 @@
 ---
 title: <article>
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<article>` 요소**는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다. 사용 예제로 게시판과 블로그 글, 매거진이나 뉴스 기사 등이 있습니다.
@@ -70,15 +64,15 @@ translation_of: Web/HTML/Element/article
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ariarole("article")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/article_role'><code>article</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("application")}}, {{ARIARole("document")}},
-        {{ARIARole("feed")}}, {{ARIARole("main")}},
-        {{ARIARole("none")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/document_role'><code>document</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/main_role'><code>main</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/region_role'><code>region</code></a>
       </td>
     </tr>
     <tr>
@@ -141,4 +135,4 @@ translation_of: Web/HTML/Element/article
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.article")}}
+{{Compat}}

@@ -55,12 +55,12 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
 3. Navegue até a página de criação do autor (que deve estar na URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Digite os nomes e os detalhes de data para um novo usuário, e então acrescente o seguinte texto no campo Last Name :
     `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
+    ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **Nota:** Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
 
 5. Pressione **Submit** para salvar o registro.
-6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
+6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](author_detail_alert_xss.png)
 
 Se você visualizar o código fonte da página HTML, poderá ver que os carcteres perigosos para as tags de script foram trasnformadoes em seus equivalentes de código de escape inofensivos (ex. `>` agora é `&gt;`)
 
@@ -153,21 +153,3 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Protegendo seu site](/pt-BR/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django Parte 3: Usando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- Segurança de aplicações web Django
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -1,11 +1,6 @@
 ---
 title: highest
 slug: Web/EXSLT/math/highest
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/highest
 ---
 
 {{XsltRef}}

@@ -51,10 +51,10 @@ window.onhashchange = locationHashChanged;
 
 O evento hashchange disparado possui os seguintes campos
 
-| Campo                                                 | Tipo        | Descrição                                       |
-| ----------------------------------------------------- | ----------- | ----------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | A nova URL para a qual a janela está navegando. |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | A antiga URL da qual a janela veio.             |
+| Campo    | Tipo        | Descrição                                       |
+| -------- | ----------- | ----------------------------------------------- |
+| `newURL` | `DOMString` | A nova URL para a qual a janela está navegando. |
+| `oldURL` | `DOMString` | A antiga URL da qual a janela veio.             |
 
 ## Especificações
 

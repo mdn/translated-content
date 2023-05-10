@@ -56,7 +56,7 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 
 ### JavaScript
 
-- Les expressions régulières ne sont plus appelable comme si il s'agissait de fonctions, ce changement a été fait de concert avec l'équipe de WebKit afin d'assurer la compatibilité (voir {{WebkitBug(28285)}}. Cette fonctionnalité existait depuis longtemps déjà mais n'a jamais été documentée (du moins, pas sur MDN).
+- Les expressions régulières ne sont plus appelable comme si il s'agissait de fonctions, ce changement a été fait de concert avec l'équipe de WebKit afin d'assurer la compatibilité (voir [la bogue WebKit 28285](https://webkit.org/b/28285). Cette fonctionnalité existait depuis longtemps déjà mais n'a jamais été documentée (du moins, pas sur MDN).
 - La méthode [`Function.prototype.isGenerator()`](/fr/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) est désormais supportée, ce qui vous permet de déterminer si une fonction est [génératrice](/fr/docs/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators).
 - Les [mots suivants ont été réservés](/fr/docs/JavaScript/Reference/Reserved_Words) : `class`, `enum`, `export`, `extends`, `import` et `super`. Auparavant, ils étaient uniquement considérés comme réservés en mode strict.
 - Les documents DOM crées dans le chrome ne peuvent plus être exposés à des scripts en sandbox.
@@ -100,7 +100,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 5, voir
 ### Changements dans les interfaces
 
 - L'interface `nsIHttpChannelInternal` a maintenant de nouveaux attributs donnant accès à des informations sur les points finaux des canaux des adresses et des ports. Ces informations sont fournies principalement à des fins de débogage.
-- Les attribut {{htmlattrxref("width", "canvas")}} et {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/en/DOM/HTMLCanvasElement)).
+- Les attributs {{htmlattrxref("width", "canvas")}} et {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)).
 - Les interfaces `nsIAppStartup2` et `nsIAppStartup_MOZILLA_2_0` ont été fusionnées avec l'interface `nsIAppStartup`.
 - L'interface `nsIDocShell_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIDocShell`.
 - L'interface `nsIFocusManager_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIFocusManager`.

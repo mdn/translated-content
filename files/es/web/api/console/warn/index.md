@@ -1,9 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
-tags:
-  - Desarrollo web
-translation_of: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
 
 {{APIRef("Console API")}}
@@ -34,13 +31,11 @@ Vea [Outputting text to the console](/es/docs/Web/API/console#Outputting_text_to
 
 ## Especificaciones
 
-| Especificación                                                           | Estatus                          | Comentario         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#warn", "console.warn()")}} | {{Spec2("Console API")}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad del Navegador
 
-{{Compat("api.Console.warn")}}
+{{Compat}}
 
 ## Ver también
 

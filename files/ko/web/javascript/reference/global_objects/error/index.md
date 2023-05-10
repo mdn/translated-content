@@ -1,12 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
-browser-compat: javascript.builtins.Error
 ---
 
 {{JSRef}}

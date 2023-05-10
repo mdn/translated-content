@@ -1,20 +1,6 @@
 ---
 title: ¿Qué hay en la cabecera? Metadatos en HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Cabecera
-  - CodingScripting
-  - Guía
-  - HTML
-  - Meta
-  - Metadatos
-  - Novato
-  - Principiante
-  - favicon
-  - head
-  - lang
-  - metadata
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Metados_en
 ---
 
@@ -112,9 +98,9 @@ El ejemplo que vimos arriba incluía esta línea:
 
 Este elemento simplemente especifica la codificación de caracteres del documento — es decir, el conjunto de caracteres que el documento puede usar. `utf-8` es un conjunto de caracteres universal que incluye casi todos los caracteres de casi cualquier idioma humano. Esto significa que tu página web podrá gestionar la visualización de cualquier idioma; por lo tanto, resulta una buena idea configurarlo en cada página web que crees. Por ejemplo, tu página podría gestionar inglés y japonés sin problemas:
 
-![Una página web que contiene caracteres en inglés y japonés, con la codificación de caracteres establecida en universal o utf-8. Ambos idiomas se muestran bien.](https://mdn.mozillademos.org/files/12343/correct-encoding.png)Si configuras tu codificación de caracteres en `ISO-8859-1`, por ejemplo (el juego de caracteres para el alfabeto latino), la representación de tu página puede aparecer desordenada:
+![Una página web que contiene caracteres en inglés y japonés, con la codificación de caracteres establecida en universal o utf-8. Ambos idiomas se muestran bien.](correct-encoding.png)Si configuras tu codificación de caracteres en `ISO-8859-1`, por ejemplo (el juego de caracteres para el alfabeto latino), la representación de tu página puede aparecer desordenada:
 
-![una página web que contiene caracteres en inglés y japonés, con la codificación de caracteres configurada en latín. Los caracteres japoneses no se muestran correctamente](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
+![una página web que contiene caracteres en inglés y japonés, con la codificación de caracteres configurada en latín. Los caracteres japoneses no se muestran correctamente](bad-encoding.png)
 
 > **Nota:** Algunos navegadores (Chrome, por ejemplo) automáticamente arreglan la codificación de caracteres incorrecta, de modo que según el navegador que uses, puede que no te topes con este problema. Aun así, deberías incluir una codificación de caracteres `utf-8` en tu página web para evitar que se presenten potenciales problemas con otros navegadores.
 
@@ -174,7 +160,7 @@ La descripción también se usa en las páginas de resultados del motor de búsq
 
 4. Ahora busca "Mozilla Developer Network" en tu motor de búsqueda favorito (nosotros hemos utilizado Google). Observarás que efectivamente merece la pena que tener el contenido de la descripción `<meta>` y el elemento `<title>` que se utiliza en la búsqueda.
 
-   ![Resultado de búsqueda en Yahoo para "Mozilla Developer Network"](https://mdn.mozillademos.org/files/16074/mdn-search-result.png)
+   ![Resultado de búsqueda en Yahoo para "Mozilla Developer Network"](mdn-search-result.png)
 
 > **Nota:** En Google verás algunas subpáginas relevantes de MDN enumeradas debajo del enlace principal a la página principal de MDN (se trata de los llamados **sitelinks** y se pueden configurar con las [Herramientas de administrador de Google](http://www.google.com/webmasters/tools/)), una forma de mejorar los resultados para tu sitio con el motor de búsqueda de Google.
 
@@ -202,7 +188,7 @@ y aplicaciones HTML5. También documenta productos Mozilla, como el sistema oper
 
 Un efecto de esto es que cuando desde Facebook enlazas a un MDN, el enlace aparece con una imagen y una descripción, lo que resulta en una experiencia más enriquecedora para los usuarios.
 
-![Datos abiertos del protocolo de gráficos de la página de inicio de MDN como se muestra en Facebook, mostrando una imagen, título y descripción.](https://mdn.mozillademos.org/files/12349/facebook-output.png)
+![Datos abiertos del protocolo de gráficos de la página de inicio de MDN como se muestra en Facebook, mostrando una imagen, título y descripción.](facebook-output.png)
 
 Twitter también tiene sus metadatos propios, las [Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards), que tienen un efecto similar cuando la URL del sitio se muestra en twitter.com. Por ejemplo:
 
@@ -227,7 +213,7 @@ Para añadir un `favicon` a tu página:
 
 Los navegadores modernos usan `favicon`s en diversos lugares, como en la etiqueta de la página que está abierta y en el panel de favoritos cuando la añades a tu lista de páginas favoritas:
 
-![El panel de marcadores de Firefox, que muestra un ejemplo marcado con un favicon junto a él.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
+![El panel de marcadores de Firefox, que muestra un ejemplo marcado con un favicon junto a él.](bookmark-favicon.png)
 
 Hoy día hay un montón de otros tipos de iconos a tener presentes. Por ejemplo, los encontrarás en el código fuente de la página de inicio de MDN:
 
@@ -266,7 +252,7 @@ Los comentarios explican para qué se usa cada icono (estos elementos abarcan si
 
 No te preocupes demasiado sobre la implementación de todos estos tipos de iconos por el momento; se trata de una característica bastante avanzada y no se espera que tengas conocimientos de ello para avanzar en el curso. El propósito principal aquí es darte a conocer estos elementos por si te los encuentras mientras examinas el código fuente de otros sitios web.
 
-> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
+> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/es/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
 
 ## Aplicar CSS y JavaScript a HTML
 
@@ -278,7 +264,7 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)).
+- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)).
 
   ```html
   <script src="my-js-file.js"></script>
@@ -294,7 +280,7 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
 
 Si lo has hecho correctamente, al guardar tu HTML y actualizar tu navegador, deberías poder ver que las cosas han cambiado:
 
-![Ejemplo que muestra una página con CSS y JavaScript aplicados. El CSS ha hecho que la página se vuelva verde, mientras que JavaScript ha agregado una lista dinámica a la página](https://mdn.mozillademos.org/files/12359/js-and-css.png)
+![Ejemplo que muestra una página con CSS y JavaScript aplicados. El CSS ha hecho que la página se vuelva verde, mientras que JavaScript ha agregado una lista dinámica a la página](js-and-css.png)
 
 - El JavaScript ha añadido una lista vacía a la página. Ahora, cuando haces clic en cualquier sitio de la lista, aparece un cuadro de diálogo que te solicita que introduzcas el texto para un nuevo elemento de la lista. Cuando pulsas el botón OK, se añade a la lista el elemento con el texto nuevo. Cuando haces clic a un elemento de la lista aparece un cuadro de diálogo que te permite cambiar el texto del elemento.
 - El CSS ha pintado el fondo de verde y ha agrandado el texto. También ha aplicado estilo a algún contenido que el JavaScript ha añadido a la página (la barra roja con el borde negro es el estilo que el CSS ha aplicado a la lista generada con JavaScript).
@@ -324,15 +310,3 @@ El estándar [ISO_639-1](https://es.wikipedia.org/wiki/ISO_639-1) define estos c
 Esto marca el final de nuestra guía rápida del {{Glossary("head")}} de HTML — aún hay muchas más cosas que puedes hacer aquí, pero una guía exhaustiva puede ser aburrida y confusa a estas alturas, ¡y nosotros queremos darte una idea de las cuestiones más comunes con las que te encontrarás aquí por ahora! En el siguiente artículo veremos los fundamentos de texto de HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

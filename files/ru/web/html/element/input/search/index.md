@@ -1,8 +1,9 @@
 ---
 title: <input type="search">
-slug: Web/HTML/Element/Input/search
+slug: Web/HTML/Element/input/search
 translation_of: Web/HTML/Element/input/search
 ---
+
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/en-US/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
@@ -131,11 +132,11 @@ This renders like so:
 
 The main basic differences come in the way browsers handle them. The first thing to note is that some browsers show a cross icon that can be clicked on to remove the search term instantly if desired. The following screenshot comes from Chrome:
 
-![](https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png)
+![](chrome-cross-icon.png)
 
 In addition, modern browsers also tend to automatically store search terms previously entered across domains, which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain. This helps users who tend to do searches on the same or similar search queries over time. This screenshot is from Firefox:
 
-![](https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
+![](firefox-auto-complete.png)At this point, let's look at some useful techniques you can apply to your search forms.
 
 ### Setting placeholders
 
@@ -268,7 +269,7 @@ This renders like so:
 
 In addition, if you try to submit the form with no search term entered into it, the browser will show a message. The following example is from Firefox:
 
-![form field with attached message that says Please fill out this field](https://mdn.mozillademos.org/files/15241/firefox-required-message.png)
+![form field with attached message that says Please fill out this field](firefox-required-message.png)
 
 Different messages will be shown when you try to submit the form with different types of invalid data contained inside the inputs; see the below examples.
 

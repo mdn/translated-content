@@ -1,13 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Referencia
-  - Rendimiento
-  - Web Performance API
-  - metodo
-translation_of: Web/API/Performance/now
 ---
 
 {{APIRef("High Resolution Timing")}}
@@ -40,14 +33,11 @@ También a diferencia de `Date.now()`, los valores devueltos por `Performance.no
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}} | {{Spec2('Highres Time Level 2')}} | Definiciones más estrictas de interfaces y tipos. |
-| {{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}             | {{Spec2('Highres Time')}}             | Definición inicial                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## Vea también
 

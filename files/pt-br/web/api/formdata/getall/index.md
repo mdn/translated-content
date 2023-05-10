@@ -39,7 +39,7 @@ formData.append('username', 'Chris');
 formData.append('username', 'Bob');
 ```
 
-A seguinte função `getAll()` retornara um arrat com os valore dentro de `username`:
+A seguinte função `getAll()` retornara um array com os valores dentro de `username`:
 
 ```js
 formData.getAll('username'); // Returns ["Chris", "Bob"]

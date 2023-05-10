@@ -19,9 +19,7 @@ var length = CSSUnparsedValue.length;
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                     | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssunparsedvalue-length','length')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

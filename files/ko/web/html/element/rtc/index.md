@@ -1,14 +1,8 @@
 ---
 title: '<rtc>: 루비 텍스트 콘테이너 요소'
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/rtc
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<rtc>` 요소**는 {{htmlelement("rb")}} 요소가 표시하는 문자의 의미에 대한 주석을 나타냅니다. `<rb>`는 발음({{htmlelement("rt")}})과 의미(`<rtc>`) 둘 다 가질 수 있습니다.
@@ -90,7 +84,7 @@ translation_of: Web/HTML/Element/rtc
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.rtc")}}
+{{Compat}}
 
 ## 같이 보기
 

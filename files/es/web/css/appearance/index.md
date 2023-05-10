@@ -1,11 +1,6 @@
 ---
 title: '-moz-appearance (-webkit-appearance)'
 slug: Web/CSS/appearance
-tags:
-  - Apariencia CSS
-  - CSS Referencia(2)
-  - No-estándar
-translation_of: Web/CSS/appearance
 ---
 
 {{non-standard_header}}{{CSSRef}}
@@ -40,7 +35,7 @@ Esta propiedad es frecuentemente utilizada en hojas de estilo [XUL](/es/docs/Moz
 
 | Value                              | Description                                                                                                                                                                                                     |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `none`                             | No special styling is applied. This is the default. Note, however, [error 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849) and [error 605985](https://bugzilla.mozilla.org/show_bug.cgi?id=605985). |
+| `none`                             | No special styling is applied. This is the default. Note, however, [error 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849) and [error 605985](https://bugzilla.mozilla.org/show_bug.cgi?id=605985). |
 | `button`                           | The element is drawn like a button.                                                                                                                                                                             |
 | `button-arrow-down`                |                                                                                                                                                                                                                 |
 | `button-arrow-next`                |                                                                                                                                                                                                                 |
@@ -169,7 +164,7 @@ La propiedad `appearance` no se encuentra actualmente presente en ninguna nueva 
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.appearance")}}
+{{Compat}}
 
 ## Ver también
 

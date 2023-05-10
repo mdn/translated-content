@@ -20,7 +20,7 @@ slug: Web/API/KeyboardEvent/key
 `KeyboardEvent` 事件以一个预设的次序触发，理解这一点对于理解特定 `KeyboardEvent` 的 `key` 属性值大有帮助。对于一个给定的按键操作，`KeyboardEvent` 将假定 {{domxref("Event.preventDefault")}} 未调用并按下面次序触发：
 
 1. 首先触发 [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event) 事件。如果按键长按且生成一个字符，则事件将以一个与平台实现方式相关的时间间隔持续发出，同时将只读属性 {{domxref("KeyboardEvent.repeat")}} 设定为 `true`。
-2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其它某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}、[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)事件。注意某些实现中若支持 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件则可能将其触发。当按键长按时重复触发。
+2. 如果按键生成的字符即将插入某个 {{HTMLElement("input")}}、{{HTMLElement("textarea")}} 或其他某个 {{domxref("HTMLElement.contentEditable")}} 设为 true 的元素，则依次触发 {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}、[`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)事件。注意某些实现中若支持 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件则可能将其触发。当按键长按时重复触发。
 3. 当按键松开时触发 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件。操作结束。
 
 在次序 1、3 中，`KeyboardEvent.key` 属性按照事先定义的规则设定为恰当的值。
@@ -37,52 +37,45 @@ slug: Web/API/KeyboardEvent/key
 ### HTML
 
 ```html
-<div class="flex flex-left">
-    <textarea rows="5" id="test-target"></textarea>
-    <button id="btn-clear-console">清空控制台</button>
+<div class="fx">
+  <div>
+    <textarea rows="5" name="test-target" id="test-target"></textarea>
+    <button type="button" name="btn-reset" id="btn-reset">Reset</button>
+  </div>
+  <div class="flex">
+    <pre id="console-log"></pre>
+  </div>
 </div>
-<div class="flex flex-right">
-    <div id="console-log"></div>
-</div>
-<script src="main.js"></script>
 ```
 
 ### CSS
 
 ```css
-body {
-    -webkit-display: flex;
-    display: flex;
+.fx {
+  -webkit-display: flex;
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.fx > div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.fx > div:first-child {
+  width: 30%;
 }
 
 .flex {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.flex-left {
-    flex: 1;
-    flex-grow: 1;
-    -webkit-flex: 1;
-    -webkit-flex-grow: 1;
-}
-
-.flex-right {
-    flex: 2;
-    flex-grow: 2;
-    -webkit-flex: 2;
-    -webkit-flex-grow: 2;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 #test-target {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    resize: none;
-}
-
-#console-log {
-    overflow: auto;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
 ```
 
@@ -91,112 +84,45 @@ body {
 ```js
 let textarea = document.getElementById('test-target'),
 consoleLog = document.getElementById('console-log'),
-btnClearConsole = document.getElementById('btn-clear-console');
+btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  let p = document.createElement('p');
-  p.appendChild(document.createTextNode(message));
-  consoleLog.appendChild(p);
+  consoleLog.innerHTML += `${message}<br>`;
 }
 
 textarea.addEventListener('keydown', (e) => {
-  if (!e.repeat)
-    logMessage(`第一个 keydown 事件。key 属性的值为"${e.key}"`);
-  else
-    logMessage(`keydown 事件重复。key 属性的值为"${e.key}"`);
+  if (!e.repeat) {
+    logMessage(`按下 "${e.key}" 键 [事件：keydown]`);
+  } else {
+    logMessage(`重复 "${e.key}" 键 [事件：keydown]`);
+  }
 });
 
 textarea.addEventListener('beforeinput', (e) => {
-  logMessage(`beforeinput 事件。你准备输入"${e.data}"`);
+  logMessage(`即将输入 "${e.data}" 键 [事件：beforeinput]`);
 });
 
 textarea.addEventListener('input', (e) => {
-  logMessage(`input 事件。你刚刚输入了"${e.data}"`);
+  logMessage(`输入 "${e.data}" 键 [事件：input]`);
 });
 
 textarea.addEventListener('keyup', (e) => {
-  logMessage(`keyup 事件。key 属性的值为"${e.key}"`);
+  logMessage(`释放 "${e.key}" 键 [事件： keyup]`);
 });
 
-btnClearConsole.addEventListener('click', (e) => {
+btnReset.addEventListener('click', (e) => {
   let child = consoleLog.firstChild;
   while (child) {
    consoleLog.removeChild(child);
    child = consoleLog.firstChild;
   }
+  textarea.value = ''
 });
 ```
 
-### 运行结果
+### 结果
 
-```html hidden
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <style>
-    body { -webkit-display: flex; display: flex; }
-    .flex { padding-left: 20px; padding-right: 20px; }
-    .flex-left { flex: 1; flex-grow: 1; -webkit-flex: 1; -webkit-flex-grow: 1; }
-    .flex-right { flex: 2; flex-grow: 2; -webkit-flex: 2; -webkit-flex-grow: 2; }
-    #test-target { display: block; width: 100%; margin-bottom: 10px; resize: none; }
-    #console-log { overflow: auto; }
-    </style>
-    <title>KeyboardEvent.key</title>
-</head>
-
-<body>
-    <div class="flex flex-left">
-        <textarea rows="5" id="test-target"></textarea>
-        <button id="btn-clear-console">清空控制台</button>
-    </div>
-    <div class="flex flex-right">
-        <div id="console-log"></div>
-    </div>
-    <script>
-    let textarea = document.getElementById('test-target'),
-    consoleLog = document.getElementById('console-log'),
-    btnClearConsole = document.getElementById('btn-clear-console');
-
-    function logMessage(message) {
-        let p = document.createElement('p');
-        p.appendChild(document.createTextNode(message));
-        consoleLog.appendChild(p);
-    }
-
-    textarea.addEventListener('keydown', (e) => {
-        if (!e.repeat)
-            logMessage(`第一个 keydown 事件。key 属性的值为"${e.key}"`);
-        else
-            logMessage(`keydown 事件重复。key 属性的值为"${e.key}"`);
-    });
-
-    textarea.addEventListener('beforeinput', (e) => {
-        logMessage(`beforeinput 事件。你准备输入"${e.data}"`);
-    });
-
-    textarea.addEventListener('input', (e) => {
-        logMessage(`input 事件。你刚刚输入了"${e.data}"`);
-    });
-
-    textarea.addEventListener('keyup', (e) => {
-        logMessage(`keyup 事件。key 属性的值为"${e.key}"`);
-    });
-
-
-    btnClearConsole.addEventListener('click', (e) => {
-        let child = consoleLog.firstChild;
-        while (child) {
-            consoleLog.removeChild(child);
-            child = consoleLog.firstChild;
-        }
-    });
-    </script>
-</body>
-</html>
-```
-
-{{ EmbedLiveSample('Key', '100%', 480, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('KeyboardEvent 次序示例') }}
 
 ### 用例 1
 

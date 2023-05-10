@@ -1,13 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.caches
+title: caches
 slug: Web/API/caches
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
 
-La propiedad de sólo-lectura **`caches`**, de la interfaz {{domxref("WindowOrWorkerGlobalScope")}}, devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.
+La propiedad de sólo-lectura **`caches`** devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.
 
 ## Sintaxis
 
@@ -46,14 +45,11 @@ this.addEventListener('install', function(event) {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario                                                                      |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName('Service Workers', '#self-caches', 'caches')}} | {{Spec2('Service Workers')}} | Definido en un `WindowOrWorkerGlobalScope` parcial en la última especificación. |
-| {{SpecName('Service Workers')}}                                     | {{Spec2('Service Workers')}} | Definición inicial.                                                             |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.caches")}}
+{{Compat}}
 
 ## Ver también
 

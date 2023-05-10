@@ -1,13 +1,6 @@
 ---
 title: Funciones
 slug: Web/XPath/Functions
-tags:
-  - Referência_XPath
-  - Referência_XSLT
-  - Transformando_XML_con_XSLT
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Functions
 original_slug: Web/XPath/Funciones
 ---
 

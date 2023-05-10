@@ -3,9 +3,7 @@ title: column-rule-width
 slug: Web/CSS/column-rule-width
 ---
 
-{{ CSSRef("CSS Multi-columns") }}
-
-## Summary
+{{CSSRef("CSS Multi-columns")}}
 
 CSS 特性 `column-rule-width` 让你可以设置在多列布局中被画在两列之间的规则（线条）的宽度。
 

@@ -1,7 +1,6 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log2
 ---
 
@@ -63,9 +62,9 @@ Math.log2 = Math.log2 || function(x) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.log2")}}
+{{Compat}}
 
 ## See also
 

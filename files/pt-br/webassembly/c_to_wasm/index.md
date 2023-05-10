@@ -59,7 +59,7 @@ Neste ponto em seu diretório de origem, você deve ter:
 
 Agora tudo o que resta é você carregar o resultado `hello.html` em um navegador que suporte WebAssembly. Ele é ativado por padrão no Firefox 52, Chrome 57, Edge 57, Opera 44.
 
-> **Nota:**  Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt_BR/docs/Learn/Common_questions/set_up_a_local_testing_server)  Para maiores informações.
+> **Nota:** Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt_BR/docs/Learn/Common_questions/set_up_a_local_testing_server) Para maiores informações.
 
 Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no console do Emscripten aparecendo na página da Web e no console JavaScript do seu navegador. Parabéns, você acabou de compilar C para WebAssembly e executá-lo em seu navegador!
 ![image](helloworld.png)
@@ -100,7 +100,7 @@ Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no co
 
 ### Chamando uma função personalizada definida em C
 
-Se você tiver uma função definida em seu código C que deseja chamar conforme necessário do JavaScript, você pode fazer isso usando o Emscripten com  a função `ccall()`, e a declaração `EMSCRIPTEN_KEEPALIVE` (que adiciona suas funções à lista de funções exportadas (consulte [Por que as funções no meu código-fonte C/C++ desaparecem quando compilo para JavaScript e/ou recebo Nenhuma função para processar](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)). Vejamos como isso funciona
+Se você tiver uma função definida em seu código C que deseja chamar conforme necessário do JavaScript, você pode fazer isso usando o Emscripten com a função `ccall()`, e a declaração `EMSCRIPTEN_KEEPALIVE` (que adiciona suas funções à lista de funções exportadas (consulte [Por que as funções no meu código-fonte C/C++ desaparecem quando compilo para JavaScript e/ou recebo Nenhuma função para processar](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)). Vejamos como isso funciona
 
 1. Para começar, salve o seguinte código como `hello3.c` em um novo diretório:
 

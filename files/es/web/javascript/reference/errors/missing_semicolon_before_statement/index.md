@@ -1,12 +1,6 @@
 ---
 title: 'ErrordeSintaxis: Punto y coma ; faltante antes de la declaracion'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - JavaScript
-  - errores
-  - errorsintaxis
-  - puntoycoma
-translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion
 ---
 

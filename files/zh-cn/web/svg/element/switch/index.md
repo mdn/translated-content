@@ -36,6 +36,6 @@ slug: Web/SVG/Element/switch
 
 该元素实现了[`SVGSwitchElement`](/zh-CN/docs/DOM/SVGSwitchElement) 接口。
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}

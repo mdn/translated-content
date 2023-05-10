@@ -108,7 +108,7 @@ div.menu-bar li:hover > ul {
 - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
 - [层叠](/zh-CN/docs/Web/CSS/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
-- [解释器](</zh-CN/docs/Glossary/Descriptor_(CSS)>)
+- [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
 - [继承](/zh-CN/docs/Web/CSS/inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)

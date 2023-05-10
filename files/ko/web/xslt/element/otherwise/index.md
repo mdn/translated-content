@@ -1,9 +1,6 @@
 ---
 title: otherwise
 slug: Web/XSLT/Element/otherwise
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/otherwise
 original_slug: Web/XSLT/otherwise
 ---
 

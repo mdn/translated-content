@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Método(2)
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 ---
 
@@ -226,13 +220,9 @@ var result = mapped.map(function(el){
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.sort")}}
-
-## Compatibilidad en navegadores
-
-La tabla de compatibilidad en esta página es generada por una data estructurada. Si deseas contribuir a la data, por favor entra a <https://github.com/mdn/browser-compat-data> y envíanos un pull request.
+{{Compat}}
 
 ## Ver también
 

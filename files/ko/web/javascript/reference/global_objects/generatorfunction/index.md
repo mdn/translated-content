@@ -1,15 +1,6 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.GeneratorFunction
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 
 {{JSRef}}
@@ -58,11 +49,11 @@ var iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

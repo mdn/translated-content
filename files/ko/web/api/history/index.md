@@ -1,14 +1,6 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Interface
-  - Reference
-  - Web
-translation_of: Web/API/History
 ---
 {{APIRef("HTML DOM")}}
 

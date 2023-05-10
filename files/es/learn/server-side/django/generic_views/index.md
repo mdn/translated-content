@@ -1,14 +1,6 @@
 ---
 title: 'Tutorial de Django Parte 6: Listas genéricas y vistas de detalle'
 slug: Learn/Server-side/Django/Generic_views
-tags:
-  - Aprender
-  - Principiante
-  - Tutorial
-  - django
-  - plantillas django
-  - vistas django
-translation_of: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
@@ -558,11 +550,11 @@ En este punto deberíamos haber creado todo lo necesario para desplegar tanto la
 
 Haz click en el enlace **All books** para desplegar la lista de libros.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 Luego haz click en un enlace a uno de tus libros. Si todo está correcto, deberías ver algo como la siguiente pantalla.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Paginación
 
@@ -622,14 +614,14 @@ La captura de pantalla de abajo muestra cómo se ve la paginación -- si no has 
 
 Los enlaces de paginación se muestran en la parte de abajo, con enlaces de next/previous desplegados dependiendo de en qué página estés
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## Rétate a tí mismo
 
 El reto en este artículo es crear las vistas de lista y detalle para autores, que se requieren para completar el proyecto. Estas deberían estar disponibles en las siguientes URLs:
 
 - `catalog/authors/` — La lista de todos los autores.
-- `catalog/author/<id>` — La vista de detalle para el autor específico con un valor en el campo de clave primaria de _`<id>`_
+- `catalog/author/<id>` — La vista de detalle para el autor específico con un valor en el campo de clave primaria de `<id>`
 
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 
@@ -644,9 +636,9 @@ El código requerido para los mapeadores URL y las vistas debería ser virtualme
 
 Cuando termines, tus páginas deberían lucir similares a las capturas de pantalla de abajo.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## Resumen
 
@@ -665,21 +657,3 @@ En los siguientes artículos extenderemos esta biblioteca para añadir soporte p
 - [Paginación](https://docs.djangoproject.com/en/1.10/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

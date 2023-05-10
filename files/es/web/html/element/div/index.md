@@ -1,11 +1,6 @@
 ---
 title: div
 slug: Web/HTML/Element/div
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/div
 original_slug: Web/HTML/Elemento/div
 ---
 
@@ -13,12 +8,12 @@ original_slug: Web/HTML/Elemento/div
 
 - **div** de "division" -_división_ . Sirve para crear secciones o agrupar contenidos.
   - : **Sus etiquetas son**: `<div>` y `</div>` (ambas obligatorias).
-  
+
     **Está definido como**: [Elemento en bloque](/es/docs/Web/HTML/Block-level_elements).
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Texto, y/o cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 

@@ -970,9 +970,9 @@ translation_of: Web/CSS/color_value
 
 Ключевое слово `transparent` представляет собой полностью прозрачный цвет. Это делает фон позади цветного элемента полностью видимым. Технически `transparent`- это ярлык для `rgba (0,0,0,0)`.
 
-> **Примечание:** **Примечание по совместимости:** чтобы предотвратить непредвиденное поведение, например, в {{cssxref ("градиент")}}, текущая спецификация CSS утверждает, что `transparent` должен быть вычислен в [Альфа-предварительно умноженном цветовом пространстве](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). Однако имейте в виду, что старые браузеры могут рассматривать его как чёрный с Альфа-значением `0`.
+> **Примечание:** чтобы предотвратить непредвиденное поведение, например, в {{cssxref ("градиент")}}, текущая спецификация CSS утверждает, что `transparent` должен быть вычислен в [Альфа-предварительно умноженном цветовом пространстве](https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax). Однако имейте в виду, что старые браузеры могут рассматривать его как чёрный с Альфа-значением `0`.
 
-> **Примечание:** **Историческая запись:** `transparent` не был истинным цветом на уровне CSS 2 (Редакция 1). Это было специальное ключевое слово, которое можно было использовать вместо обычного значения `<color>` для двух свойств CSS: {{Cssxref("background")}} и {{Cssxref("border")}}. Он был существенно добавлен, чтобы позволить разработчикам переопределить унаследованный сплошной цвет. С появлением Альфа-каналов в CSS Colors Level 3, `transparent` был переопределён как истинный цвет. Теперь его можно использовать везде, где можно использовать значение `<color>`.
+> **Примечание:** `transparent` не был истинным цветом на уровне CSS 2 (Редакция 1). Это было специальное ключевое слово, которое можно было использовать вместо обычного значения `<color>` для двух свойств CSS: {{Cssxref("background")}} и {{Cssxref("border")}}. Он был существенно добавлен, чтобы позволить разработчикам переопределить унаследованный сплошной цвет. С появлением Альфа-каналов в CSS Colors Level 3, `transparent` был переопределён как истинный цвет. Теперь его можно использовать везде, где можно использовать значение `<color>`.
 
 ### [`currentColor`]() ключевое слово
 
@@ -1244,9 +1244,9 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 - \-moz-CellHighlightText
   - : Цвет текста для выбранного элемента в дереве. Следует использовать с цветом фона `moz-CellHighlight background`. Смотрите также `-moz-html-CellHighlightText` выделения ячейки.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline ("1.9.2")}} цвет фона для комбинированных полей `-moz-ComboboxText`. Должен использоваться с цветом переднего плана текста-moz-Combobox. В версиях до 1.9.2 вместо этого используйте `-moz-Field`.
+  - : цвет фона для комбинированных полей `-moz-ComboboxText`. Должен использоваться с цветом переднего плана текста-moz-Combobox. В версиях до 1.9.2 вместо этого используйте `-moz-Field`.
 - \-moz-ComboboxText
-  - : {Gecko_minversion_inline ("1.9.2")}} цвет текста для комбинированных полей. Следует использовать с цветом фона `-moz-Combobox`. В версиях до 1.9.2 вместо этого используйте `-moz-FieldText`.
+  - : цвет текста для комбинированных полей. Следует использовать с цветом фона `-moz-Combobox`. В версиях до 1.9.2 вместо этого используйте `-moz-FieldText`.
 - \-moz-Dialog
   - : Цвет фона для диалоговых окон. Должен использоваться с цветом переднего плана -`-moz-DialogText`.
 - \-moz-DialogText
@@ -1255,16 +1255,16 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} цвет фона для чётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте-moz-поле. Смотрите также `-moz-OddTreeRow`.
+  - : цвет фона для чётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте-moz-поле. Смотрите также `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color. Цвет фона текстового поля. Должен использоваться с цветом переднего плана`-moz-FieldText`.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color. Текстовое поле цвет текста. Следует использовать с `-moz-Field`, `-moz-EvenTreeRow` или `-moz-OddTreeRow` цветом фона строки дерева.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`. {{gecko_minversion_inline ("1.9")}} цвет фона для выделенного элемента в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом переднего плана `-moz-html-CellHighlight`. До Gecko 1.9, используйте `-moz-CellHighlightText`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`. цвет фона для выделенного элемента в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом переднего плана `-moz-html-CellHighlight`. До Gecko 1.9, используйте `-moz-CellHighlightText`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline ("1.9")}} цвет текста для `-moz-html-CellHighlight` выделенных элементов в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом фона. До Gecko 1.9, используйте `moz-html-CellHighlight`.
+  - : цвет текста для `-moz-html-CellHighlight` выделенных элементов в HTML {{HTMLElement ("select")}} s. должен использоваться с цветом фона. До Gecko 1.9, используйте `moz-html-CellHighlight`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1281,10 +1281,7 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
-
 - \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
 - \-moz-mac-focusring
 
   \-moz-mac-menuselect
@@ -1300,32 +1297,30 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color. Цвет текста для зависших пунктов меню. Часто похоже на выделение текста `HighlightText`. Следует использовать с `-moz-MenuHover` наведите цвет фона.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline ("1.9.2")}} цвет текста в строках меню. Часто похоже на текст меню "`MenuText`". Должен использоваться поверх фона `Menu`.
+  - : цвет текста в строках меню. Часто похоже на текст меню "`MenuText`". Должен использоваться поверх фона `Menu`.
 - \-moz-MenuBarHoverText
   - : Цвет для зависшего текста в строках меню. Часто похоже на `-moz-MenuHoverText` меню наведения текста. Следует использовать поверх `-moz-MenuHover` наведите фон.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline ("1.9.1")}} цвет гиперссылки платформы по умолчанию.
+  - : цвет гиперссылки платформы по умолчанию.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} цвет фона для нечётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте `-moz-Field`. Смотрите также `-moz-EvenTreeRow`.
+  - : цвет фона для нечётных строк в дереве. Должен использоваться с цветом переднего плана `-moz-FieldText`. В версиях Gecko до 1.9, используйте `-moz-Field`. Смотрите также `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline ("1.9")}} следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-communications-toolbox;`.
+  - : следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline ("1.9")}} следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-media-toolbox`.
+  - : следует использовать для текста в объектах с `{{cssxref ("- moz-appearance")}}:- moz-win-media-toolbox`.
 - \-moz-win-accentcolor
-  - : {{gecko_minversion_inline ("56")}}
-    Используется для доступа к пользовательскому цвету акцента Windows 10, который можно установить в меню Пуск, панели задач, заголовках и т. д.
+  - : Используется для доступа к пользовательскому цвету акцента Windows 10, который можно установить в меню Пуск, панели задач, заголовках и т. д.
 - \-moz-win-accentcolortext
-  - : {{gecko_minversion_inline ("56")}}
-    Используется для доступа к цвету текста, размещённого над цветом пользовательского акцента Windows 10 в меню Пуск, панели задач, заголовках и т. д.
+  - : Используется для доступа к цвету текста, размещённого над цветом пользовательского акцента Windows 10 в меню Пуск, панели задач, заголовках и т. д.
 
 ### Расширения Цветовых Предпочтений Mozilla
 
 - \-moz-activehyperlinktext
   - : Пользовательское предпочтение цвета текста активных ссылок. Должен использоваться с цветом фона документа по умолчанию.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline ("5.0")}} предпочтения пользователя для цвета фона документа.
+  - : предпочтения пользователя для цвета фона документа.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline ("5.0")}} предпочтения пользователя для цвета текста.
+  - : предпочтения пользователя для цвета текста.
 - \-moz-hyperlinktext
   - : Предпочтения пользователя для цвета текста непрошеных ссылок. Должен использоваться с цветом фона документа по умолчанию.
 - \-moz-visitedhyperlinktext

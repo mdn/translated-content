@@ -30,7 +30,7 @@ O objeto especificado.
 
 Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo `[[Prototype]]` é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '`prototype'` não for um objeto ou {{jsxref("null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o `[[Prototype]]` do `obj` para um novo valor.
 
-`Object.setPrototypeOf() é uma especificação` ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa {{jsxref("Object.prototype.__proto__")}}.
+`Object.setPrototypeOf() é uma especificação` ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ## Exemplos
 
@@ -40,7 +40,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Polyfill
 
-Usando a propriedade mais antiga {{jsxref("Object.prototype.__proto__")}}, nós podemos facilmente definir `Object.setPrototypeOf` se já não estiver disponível:
+Usando a propriedade mais antiga [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), nós podemos facilmente definir `Object.setPrototypeOf` se já não estiver disponível:
 
 ```js
 // Funciona somente no Chrome e FireFox, não funciona no IE:
@@ -52,7 +52,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 ## Adicionando 'Prototype' em cadeia
 
-Uma combinação de `Object.getPrototypeOf() e` {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite anexar toda uma cadeia de 'prototype' a um novo objeto 'prototype':
+Uma combinação de `Object.getPrototypeOf()` e [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) permite anexar toda uma cadeia de 'prototype' a um novo objeto 'prototype':
 
 ```js
 /**
@@ -176,4 +176,4 @@ george(); // 'Hello guys!!'
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

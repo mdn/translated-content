@@ -23,7 +23,7 @@ Un entier égal à la taille du contexte dans le contexte d'évaluation d'expres
 
 ### Notes
 
-- Cette fonction est souvent utilisée avec la fonction [position()](fr/XPath/Fonctions/position) pour déterminer si un nœud particulier est le dernier d'un ensemble de nœud.
+- Cette fonction est souvent utilisée avec la fonction [position()](/fr/XPath/Fonctions/position) pour déterminer si un nœud particulier est le dernier d'un ensemble de nœud.
 
 ### Définition
 

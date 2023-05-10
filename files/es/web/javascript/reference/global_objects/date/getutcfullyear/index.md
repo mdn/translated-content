@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getUTCFullYear
 ---
 
@@ -38,9 +37,9 @@ var year = today.getUTCFullYear();
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getUTCFullYear")}}
+{{Compat}}
 
 ## Ver también
 

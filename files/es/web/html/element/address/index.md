@@ -1,11 +1,6 @@
 ---
 title: <address>
 slug: Web/HTML/Element/address
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/address
 original_slug: Web/HTML/Elemento/address
 ---
 
@@ -47,21 +42,17 @@ Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Atributos_
 
 Above HTML will output:
 
-![Image:HTML-address.png](/@api/deki/files/238/=HTML-address.png)
+![Image:HTML-address.png](html-address.png)
 
 Aunque el elemento de dirección representa el texto con el mismo estilo predeterminado de los elementos {{HTMLElement("i")}} o {{HTMLElement("em")}}, es más apropiado utilizarlo cuando se trata información de contacto, ya que transmite la información semántica adicional.
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'sections.html#the-address-element', '&lt;address&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}                 | {{Spec2('HTML4.01')}}     |         |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## Ver también
 

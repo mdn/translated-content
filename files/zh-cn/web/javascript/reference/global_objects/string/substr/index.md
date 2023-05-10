@@ -34,7 +34,7 @@ str.substr(start[, length])
 
 ## 示例
 
-### 例子：使用 `substr`
+### 示例：使用 `substr`
 
 ```js
 var str = "abcdefghij";

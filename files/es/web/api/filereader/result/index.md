@@ -1,11 +1,6 @@
 ---
 title: FileReader.result
 slug: Web/API/FileReader/result
-tags:
-  - API
-  - Archivos
-  - Ficheros
-translation_of: Web/API/FileReader/result
 ---
 
 {{APIRef("File API")}}La propiedad **`result`** de {{domxref("FileReader")}} retorna el contenido del archivo. Esta propiedad es válida únicamente después de que la operación de lectura del archivo es completada. El formato de la infomación devuelta depende de cuál de los métodos de lectura fue usado.
@@ -24,10 +19,10 @@ Los tipos de resultados son descritos a continuación.
 
 | Método                                                                      | Descripción                                                                                                                                        |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
-| [`readAsBinaryString()`](/en-US/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                       |
-| [`readAsDataURL()`](/en-US/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                     |
-| [`readAsText()`](/en-US/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                      |
+| [`readAsArrayBuffer()`](/es/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
+| [`readAsBinaryString()`](/es/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                       |
+| [`readAsDataURL()`](/es/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                     |
+| [`readAsText()`](/es/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                      |
 
 ## Ejemplo
 
@@ -52,13 +47,11 @@ function read(callback) {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                      | Comentario         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.FileReader.result")}}
+{{Compat}}
 
 ## Ver también
 

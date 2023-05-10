@@ -9,7 +9,7 @@ O evento `focusin` é acionado no momento em que o elemento receba o foco. A gra
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Borbulha

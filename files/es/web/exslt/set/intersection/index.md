@@ -1,11 +1,6 @@
 ---
 title: intersection
 slug: Web/EXSLT/set/intersection
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/set/intersection
 ---
 
 {{XsltRef}}

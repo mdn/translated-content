@@ -1,7 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-translation_of: Web/HTML/Element/main
 original_slug: Web/HTML/Elemento/main
 ---
 
@@ -57,23 +56,11 @@ Algunos lectores de pantalla reconocen la etiqueta `main` y proveen un atajo par
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario                                                                                                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} | Eliminada la restricción acerca de usar `<main>` como un descendente del elemento {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, o {{HTMLElement("nav")}}. |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | Sin cambios desde {{SpecName('HTML5 W3C')}}                                                                                                                                                                                                            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial.                                                                                                                                                                                                                                           |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-Como una caracterisca nueva propuesta para HTML, el elemento `<main>` no está todavía ampliamente soportado. Es sumamente recomendable añadir el rol ARIA `"main"` a cualquier elemento `<main>`:
-
-```html
-<main role="main">
-  ...
-</main>
-```
-
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## Ver también
 

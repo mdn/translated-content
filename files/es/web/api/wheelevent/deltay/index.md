@@ -1,7 +1,6 @@
 ---
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
-translation_of: Web/API/WheelEvent/deltaY
 ---
 
 {{APIRef("DOM Events")}}
@@ -24,13 +23,11 @@ console.log(syntheticEvent.deltaY);
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events','#widl-WheelEvent-deltaY','WheelEvent.deltaY')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WheelEvent.deltaY")}}
+{{Compat}}
 
 ## Ver más
 

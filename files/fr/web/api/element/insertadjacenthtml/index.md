@@ -22,7 +22,7 @@ element.insertAdjacentHTML(position, text);
 ### Paramètres
 
 - `position`
-  - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
+  - : une {{domxref("DOMString")}} représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
 
 <!---->
 
@@ -34,7 +34,7 @@ element.insertAdjacentHTML(position, text);
 <!---->
 
 - `text`
-  - :  est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.
+  - : est la chaîne de caractères qui doit être analysée en tant qu'HTML ou XML et insérée dans l'arbre du DOM.
 
 ### Visualisation des noms de position
 

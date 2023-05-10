@@ -150,12 +150,6 @@ option:checked {
 
 {{EmbedLiveSample("Toggling_elements_with_a_hidden_checkbox", "auto", 220)}}
 
-### 画像ギャラリー
-
-`:checked` 擬似クラスを使って、ユーザーがサムネイルをクリックしたときだけフルサイズの画像が表示される画像ギャラリーを構築できます。実行してみるには[このデモ](/@api/deki/files/6268/=css-checked-gallery.zip)を参照してください。
-
-> **メモ:** 似たような効果で、 [`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスを使用して隠しラジオボタンを使わないものについては、 [`:hover`](/ja/docs/Web/CSS/:hover) のリファレンスページからの[このデモ](/@api/deki/files/6247/=css-gallery.zip)を参照してください。
-
 ## 仕様書
 
 {{Specifications}}

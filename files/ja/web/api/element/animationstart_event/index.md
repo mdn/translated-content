@@ -55,9 +55,7 @@ document.onanimationstart = () => {
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("CSS3 Animations", "#eventdef-animationevent-animationstart")}} | {{Spec2("CSS3 Animations")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

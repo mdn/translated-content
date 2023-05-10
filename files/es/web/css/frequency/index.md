@@ -1,14 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - Presentación
-  - Referencia
-  - Tipos de datos CSS
-  - Unidad CSS
-  - Web
-translation_of: Web/CSS/frequency
 ---
 
 {{CSSRef}}
@@ -47,12 +39,8 @@ Aunque todas las unidades representen la misma frecuencia para el valor `0`, la 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Values', '#frequency', '&lt;frequency&gt;')}} | {{Spec2('CSS3 Values')}} | Definición inicial |
+{{Specifications}}
 
-Este tipo de dato fue introducido inicialmente en [CSS Nivel 2](http://www.w3.org/TR/CSS2/) para el ya obsoleto [grupo de merios aural](/en/CSS/Aural), donde era usado para definir el tono de la voz. Dicho grupo fue descontinuado desde entonces, pero el tipo de datos `<frequency>` ha sido reintroducido en CSS3, aunque ninguna propiedad CSS lo usa por el momento.
+## Compatibilidad con navegadores
 
-## Compatibilidad de navegadores
-
-{{Compat("css.types.frequency")}}
+{{Compat}}

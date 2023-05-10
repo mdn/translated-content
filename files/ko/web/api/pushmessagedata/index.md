@@ -1,8 +1,8 @@
 ---
 title: PushMessageData
 slug: Web/API/PushMessageData
-translation_of: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 The **`PushMessageData`** interface of the [Push API](/ko/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
@@ -41,10 +41,10 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

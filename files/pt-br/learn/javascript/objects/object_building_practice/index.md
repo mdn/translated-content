@@ -36,7 +36,7 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
 
 ## Vamos saltitar algumas bolas
 
-Neste artigo, vamos escrever uma demo clássica de "bolas saltitantes", para mostrar o quão úteis os objetos podem ser em JavaScript. Nossas bolinhas vão saltar pela tela e mudam de cor quando se tocam. O exemplo acabado vai parecer um pouco assim:![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
+Neste artigo, vamos escrever uma demo clássica de "bolas saltitantes", para mostrar o quão úteis os objetos podem ser em JavaScript. Nossas bolinhas vão saltar pela tela e mudam de cor quando se tocam. O exemplo acabado vai parecer um pouco assim:![](bouncing-balls.png)
 
 Este exemplo fará uso da [Canvas API](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), para desenhar as bolas na tela, e da [requestAnimationFrame](/pt-BR/docs/Web/API/window/requestAnimationFrame) API para animar toda a exibição — você não precisa ter nenhum conhecimento prévio dessas APIs e esperamos que, no momento em que você terminar este artigo, você esteja interessado em explorá-los mais. Ao longo do caminho, faremos uso de alguns objetos bacanas, e mostraremos algumas técnicas legais, como bolas quicando nas paredes, e verificando se elas se chocaram (também conhecidas como **detecção de colisão**).
 
@@ -301,13 +301,3 @@ Esperamos que você tenha se divertido escrevendo seu próprio exemplo de bolas 
 - [2D breakout game using Phaser](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica conceitos básicos da criação de um jogo 2D utilizando uma biblioteca JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

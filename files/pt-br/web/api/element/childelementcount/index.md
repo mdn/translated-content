@@ -61,7 +61,7 @@ Essa propriedade não é suportada em versões anteriores ao IE9. Já no IE9 ou 
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ParentNode.childElementCount")}}
+{{Compat}}
 
 ## Veja também
 

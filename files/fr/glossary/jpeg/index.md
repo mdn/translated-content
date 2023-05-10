@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 tags:
   - Composing
   - Débutant
@@ -12,8 +12,8 @@ original_slug: Glossaire/jpeg
 
 **JPEG** (_Joint Photographic Experts Group_) est une méthode de compression avec pertes très utilisée pour les images numériques.
 
-## **Pour en savoir plus**
+## Pour en savoir plus
 
-### **Culture générale**
+### Culture générale
 
 - [JPEG](https://fr.wikipedia.org/wiki/JPEG) sur Wikipédia

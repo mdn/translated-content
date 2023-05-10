@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Referencia
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/indexOf
 ---
 
@@ -213,11 +205,7 @@ if (!Array.prototype.indexOf) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.indexOf")}}
-
-## Notas de compatibilidad
-
-- Comenzando con Firefox 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), este método ya no devolverá `-0`. Por ejemplo, `[0] .indexOf (0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+{{Compat}}
 
 ## Ver también
 

@@ -1,60 +1,48 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
+l10n:
+  sourceCommit: 802049f9c94f21038426fa10c91209a442d164cb
 ---
 
-{{MathMLRef()}}
+{{MathMLRef}}
 
-MathML の `<msub>` 要素は式に下付きを付けるために用います。
-構文は `<msub> base subscript </msub>` となります。
+**`<msub>`** は [MathML](/ja/docs/Web/MathML) の要素で、式に下付き文字を付けるために用います。
+
+`<msub> ベース 下付き文字 </msub>` という構文を使用します。
 
 ## 属性
 
-- class, id, style
-  - : Provided for use with [stylesheets](/ja/docs/CSS).
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- subscriptshift
-  - : 下付き部分を本体のベースラインから下げる最小量を [length value](/ja/docs/MathML/Attributes/Values#Lengths) として指定します。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他、以下の非推奨属性があります。
+
+- `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、下付き文字部分を本体のベースラインから下げる最小量を示します。
+
+> **メモ:** `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Attribute/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 
-Sample rendering: ![x1](msub.png)
-
-Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
-
 ```html
-<math>
-
+<math display="block">
   <msub>
     <mi>X</mi>
     <mn>1</mn>
   </msub>
-
 </math>
 ```
 
+{{ EmbedLiveSample('msub_example', 700, 200, "", "") }}
+
+## 仕様書
+
+{{Specifications}}
+
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.msub")}}
+{{Compat}}
 
-### Gecko-specific notes
+## 関連情報
 
-- Starting with Gecko 26.0 {{geckoRelease("26")}} it is no longer possible to use `<none />` as a child element. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
-
-## 仕様
-
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML2') }} | Initial specification |
-
-## See also
-
-- {{ MathMLElement("msup") }} (Superscript)
-- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
-- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)
+- {{ MathMLElement("msub") }} (上付き文字)
+- {{ MathMLElement("msubsup") }} (上付き文字と下付き文字の組)
+- {{ MathMLElement("mmultiscripts") }} (前付き文字とテンソルインデックス)

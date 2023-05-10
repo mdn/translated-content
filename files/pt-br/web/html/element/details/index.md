@@ -9,7 +9,7 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Contexto de uso
 
-| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/en/HTML/Content_categories#Flow_content) |
+| Conteúdo permitido        | Um elemento {{ HTMLElement("summary") }} seguido por [flow content](/pt-BR/HTML/Content_categories#Flow_content) |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag            | Nenhuma, tanto as tas iniciais quanto as finais são obrigatórias.                                                                                               |
 | Elementos pais permitidos | Qualquer elemento que aceite flow content.                                                                                                                      |
@@ -17,14 +17,14 @@ O elemento HTML _details_ (`<details>`) é usado como uma ferramenta de onde o u
 
 ## Atributos
 
-Como todos os elementos HTML, esse elemento aceita os [global attributes](/en/HTML/Global_attributes).
+Como todos os elementos HTML, esse elemento aceita os [global attributes](/pt-BR/HTML/Global_attributes).
 
 - {{ htmlattrdef("open") }}
   - : Esse atributo Booleano indica se os detalhes serão mostrados para o usuário ao carregar a página. Se omitido os detalhes não serão mostrados.
 
 ## Interface do DOM
 
-Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsElement).
+Esse elemento implementa a interface[`HTMLDetailsElement`](/pt-BR/DOM/HTMLDetailsElement).
 
 ## Exemplos
 
@@ -34,10 +34,6 @@ Esse elemento implemena a interface[`HTMLDetailsElement`](/en/DOM/HTMLDetailsEle
   <p>Mais informações sobre os detalhes.</p>
 </details>
 ```
-
-### Demonstração
-
-[Demo](http://html5-demos.appspot.com/static/html5-whats-new/template/index.html#5)
 
 ## Compatibilidade com navegadores
 

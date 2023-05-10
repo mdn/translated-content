@@ -32,19 +32,19 @@ var querying = browser.idle.queryState(
 ### Paramètres
 
 - `detectionIntervalInSeconds`
-  - : `integer`. Le système est considéré inactif si  `detectionIntervalInSeconds` secondes s'est écoulé depuis la dernière entrée utilisateur détectée.
+  - : `integer`. Le système est considéré inactif si `detectionIntervalInSeconds` secondes s'est écoulé depuis la dernière entrée utilisateur détectée.
 
 ### Valeur renvoyée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.queryState")}}
+{{Compat}}
 
 ## Exemples
 
-Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de  `detectionIntervalInSeconds` de 15, un état `inactif`  ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
+Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de `detectionIntervalInSeconds` de 15, un état `inactif`  ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
 
 ```js
 function onGot(newState) {

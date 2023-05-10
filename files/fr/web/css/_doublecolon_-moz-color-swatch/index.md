@@ -13,7 +13,7 @@ translation_of: Web/CSS/::-moz-color-swatch
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`** est [un pseudo-élément spécifique à Mozilla](/fr/docs/Web/CSS/Extensions_Mozilla) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
 
-> **Note :** Utiliser `::-moz-color-swatch` sur tout autre élément qu'un  `<input type="color">` n'aura aucun effet.
+> **Note :** Utiliser `::-moz-color-swatch` sur tout autre élément qu'un `<input type="color">` n'aura aucun effet.
 
 ## Syntaxe
 
@@ -46,7 +46,7 @@ Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécifi
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-color-swatch")}}
+{{Compat}}
 
 ## Voir aussi
 

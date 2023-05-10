@@ -42,28 +42,28 @@ slug: Web/HTML/Element/menuitem
 
 该标签支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)；特别地， `title` 常常用来描述命令，或者提供有用的注释。
 
-- {{HTMLAttrDef("checked")}}
+- `checked`
   - : 布尔值，指示是否选择了命令。只能作为属性使用在 `checkbox` 或 `radio` 中。
-- {{HTMLAttrDef("command")}}
+- `command`
   - : 指定一个单独元素的 ID，指示要间接调用的命令。在包含属性的菜单项中也不能使用。`checked`、`disabled`、`icon`、`label`、`radiogroup` 或 `type`。
-- {{HTMLAttrDef("default")}}
+- `default`
   - : 布尔值，表示使用与菜单主题元素相同的命令。（如 `button` 或 `input`）。
-- {{HTMLAttrDef("disabled")}}
+- `disabled`
   - : 布尔值，表示命令在当前状态下不可用。请注意，禁用与隐藏不同；禁用的属性适用于任何环境变化可能导致命令相关的上下文中。
-- {{HTMLAttrDef("icon")}}
+- `icon`
   - : 图片 URL，用于提供图片来表示命令。
-- {{HTMLAttrDef("label")}}
+- `label`
   - : 展示给用户一个命令的名字，当 `command` 属性不存在时是必须的。
-- {{HTMLAttrDef("radiogroup")}}
+- `radiogroup`
   - : 此属性指定要切换为单选按钮时，选定的一组命令的名称。只能作为 radio 的属性使用。
-- {{HTMLAttrDef("type")}}
+- `type`
   - : 这个属性指定命令的类型，可以为以下三个命令之一。
 
     - `command`：有关联动作的常规命令。这是缺少时的值默认值。
     - `checkbox`：代表一个命令可以在两个不同状态之间的切换。
     - `radio`：代表一组单选按钮，可切换为命令中的一个选择。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -100,7 +100,7 @@ div {
 
 ### 结果
 
-{{EmbedLiveSample("Example", '100%', 80)}}
+{{EmbedLiveSample("示例", '100%', 80)}}
 
 ## 规范
 

@@ -1,10 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - atributo
-  - metatag
-translation_of: Web/HTML/Global_attributes/itemprop
 original_slug: Web/HTML/Atributos_Globales/itemprop
 ---
 

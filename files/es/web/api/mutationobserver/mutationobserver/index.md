@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
-translation_of: Web/API/MutationObserver/MutationObserver
 ---
 {{APIRef("DOM WHATWG")}}
 
@@ -74,10 +73,8 @@ Desde este momento y hasta que se llame al método {{domxref("MutationObserver.d
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |            |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

@@ -20,7 +20,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 }
 ```
 
-Вы можете сделать это сокращённым {{ cssxref("background") }} свойством и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Вы можете сделать это сокращённым свойством {{ cssxref("background") }} и отдельными свойствами кроме {{ cssxref("background-color") }}. Таким образом, следующие свойства могут быть определены в виде списка по одному на фон: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Пример
 
@@ -38,7 +38,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 .multi_bg_example {
   width: 100%;
   height: 400px;
-  background-image: url(https://mdn.mozillademos.org/files/11305/firefox.png), url(https://mdn.mozillademos.org/files/11307/bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: bottom right, left, right;
   background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
@@ -49,7 +49,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Множественные_ф�
 
 (If image does not appear in CodePen, click the TIdy button in the CSS section)
 
-{{EmbedLiveSample('Example','100%','400')}}
+{{EmbedLiveSample('Example','600','400')}}
 
 Как вы можете видеть, логотип Firefox (первый в списке) расположен сверху, далее идёт градиент и в самом низу фон с пузырями. Каждое последующее под-свойство ({{ cssxref("background-repeat") }} и {{ cssxref("background-position") }}) применяется к соответствующим фонам. Например первое значение свойства {{ cssxref("background-repeat") }} применяется к первому фону, и т.д.
 

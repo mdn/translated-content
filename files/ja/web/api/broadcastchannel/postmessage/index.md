@@ -20,7 +20,7 @@ channel.postMessage(message)
 ### 引数
 
 - `message`
-  - : 他のウィンドウに送信するデータ。データは[構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。
+  - : 他のウィンドウに送信するデータ。データは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。
     つまり、様々なデータオブジェクトを自分でシリアライズすることなく、安全に出力先のウィンドウに渡すことができます。
 
 ### 返値

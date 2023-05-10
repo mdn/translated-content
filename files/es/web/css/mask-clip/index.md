@@ -1,10 +1,6 @@
 ---
 title: '-webkit-mask-clip'
 slug: Web/CSS/mask-clip
-tags:
-  - CSS
-translation_of: Web/CSS/mask-clip
-translation_of_original: Web/CSS/-webkit-mask-clip
 original_slug: Web/CSS/-webkit-mask-clip
 ---
 
@@ -45,9 +41,9 @@ div {
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-clip")}}
+{{Compat}}
 
 ## Ver además
 

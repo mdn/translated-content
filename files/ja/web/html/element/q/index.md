@@ -87,11 +87,7 @@ slug: Web/HTML/Element/q
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                     | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

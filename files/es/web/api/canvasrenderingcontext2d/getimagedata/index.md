@@ -1,14 +1,6 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
-tags:
-  - CanvasRenderingContext2D
-  - Context 2D
-  - Español
-  - Method
-  - Reference
-  - getImageData
-translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 
 {{APIRef}}
@@ -69,13 +61,11 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## Especificaciones
 
-| Especificación                                                                                                                                           | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-getimagedata", "CanvasRenderingContext2D.getImageData")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ## Véase también
 

@@ -1,6 +1,6 @@
 ---
 title: accent
-slug: Glossary/accent
+slug: Glossary/Accent
 ---
 
 Um **accent** é uma cor tipicamente brilhante que contrasta com as cores de fundo e de primeiro plano mais utilitárias dentro de um esquema de cores. Estes estão presentes no estilo visual de muitas plataformas (embora não todas).
@@ -9,6 +9,6 @@ Na web, um acento às vezes é usado em elementos {{HTMLElement("input")}} para 
 
 ## Veja tmbém
 
-### CSS relaciondo ao **accent**
+### CSS relacionado ao **accent**
 
-Você pode definir a cor do acento para um determinado elemento definindo a propriedade CSS {{cssxref("accent-color")}} do elemento para o valor {{cssxref("&lt;color&gt;")}} apropriado.
+Você pode definir a cor do `accent` para um determinado elemento definindo a propriedade CSS {{cssxref("accent-color")}} do elemento para o valor {{cssxref("&lt;color&gt;")}} apropriado.

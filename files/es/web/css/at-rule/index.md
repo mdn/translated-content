@@ -1,7 +1,6 @@
 ---
 title: Regla-At
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
 
 {{cssref}}
@@ -40,10 +39,7 @@ Como cada grupo de condición puede incluir también declaraciones anidadas, pue
 
 ## Especificaciones
 
-| Especificatión                                                           | Estado                                   | Comentarios                         |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Conditional')}}                             | {{Spec2('CSS3 Conditional')}} | Definición inicial                  |
-| {{SpecName('Compat', '#css-at-rules', 'CSS At-rules')}} | {{Spec2('Compat')}}                 | `@-webkit-keyframes estandarizado`. |
+{{Specifications}}
 
 ## Véase también
 

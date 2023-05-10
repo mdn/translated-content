@@ -26,15 +26,15 @@ Il n'y a pas de permission de l'API `contentScripts`, mais une extension doit di
 ## Types
 
 - {{WebExtAPIRef("contentScripts.RegisteredContentScript")}}
-  - : Un objet de ce type est renvoyé par la fonction  {{WebExtAPIRef("contentScripts.register()")}}. Il représente les scripts de contenu enregistrés par cet appel et peut être utilisé pour annuler l'enregistrement du script de contenu.
+  - : Un objet de ce type est renvoyé par la fonction {{WebExtAPIRef("contentScripts.register()")}}. Il représente les scripts de contenu enregistrés par cet appel et peut être utilisé pour annuler l'enregistrement du script de contenu.
 
 ## Fonctions
 
 - {{WebExtAPIRef("contentScripts.register()")}}
   - : Enregistre les scripts de contenu donnés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts", 10, 1)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

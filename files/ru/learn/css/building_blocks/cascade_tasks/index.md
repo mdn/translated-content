@@ -20,7 +20,7 @@ original_slug: Learn/CSS/Building_blocks/Каскад_задачи
 
 В этом задании вам надо использовать одно из специальных значений, рассмотренных нами в разделе [Контроль наследования](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D0%BD%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F), чтобы написать в новом правиле объявление, которое восстановит белый цвет фона без использования фактического значения цвета.
 
-![Barely visible yellow links on a white background.](https://mdn.mozillademos.org/files/17146/mdn-cascade.png)
+![Barely visible yellow links on a white background.](mdn-cascade.png)
 
 Посмотрите, сможете ли вы повторить эту картинку в примере ниже.
 

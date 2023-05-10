@@ -75,7 +75,7 @@ translation_of: Web/CSS/@font-face
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }

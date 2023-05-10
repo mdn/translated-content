@@ -1,7 +1,6 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toFixed
 ---
 
@@ -59,9 +58,9 @@ numObj.toFixed(6);      // Returns '12345.678900': note added zeros
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toFixed")}}
+{{Compat}}
 
 ## See also
 

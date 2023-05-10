@@ -1,12 +1,6 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-tags:
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 ---
 
@@ -77,13 +71,11 @@ console.log(object2);
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado  |
-| ------------------------------------------------------------------------------------------------ | ------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | Etapa 4 |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## Véase tambien
 

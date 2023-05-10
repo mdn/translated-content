@@ -1,7 +1,6 @@
 ---
 title: border-inline
 slug: Web/CSS/border-inline
-translation_of: Web/CSS/border-inline
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -64,15 +63,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline", "border-inline")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline")}}
+{{Compat}}
 
 ## Mira también
 

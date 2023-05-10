@@ -1,11 +1,6 @@
 ---
 title: split
 slug: Web/EXSLT/str/split
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/str/split
 ---
 
 {{XsltRef}}

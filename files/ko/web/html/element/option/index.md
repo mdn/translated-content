@@ -1,13 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-translation_of: Web/HTML/Element/option
 ---
 
 {{HTMLSidebar}}
@@ -82,4 +75,4 @@ translation_of: Web/HTML/Element/option
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.option")}}
+{{Compat}}

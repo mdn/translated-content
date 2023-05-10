@@ -136,7 +136,7 @@ Les règles qui suivent doivent être suivies pour s'assurer que les exemples de
 ### Taille pour l'affichage des résultats d'exemples de code
 
 - **La largeur doit être fixée à 100%**
-  - :  La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
+  - : La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
 - **La hauteur doit être inférieure à 700px**
   - : Nous recommandons d'utiliser cette hauteur maximale pour une meilleure lisibilité à l'écran.
 

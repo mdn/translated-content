@@ -1,13 +1,6 @@
 ---
 title: '::-moz-range-track'
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-moz-range-track
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -44,15 +37,15 @@ input[type=range]::-moz-range-track {
 
 Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:
 
-![A range with the track green.](https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png)
+![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
 
 ## Especificaciones
 
-No es parte de ninguna especificación. Es un pseudo-elemento propietario específico del motor Gecko.
+No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.-moz-range-track")}}
+{{Compat}}
 
 ## Ver además
 

@@ -1,10 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Element/font
-tags:
-  - 요소
-  - 폐기됨
-translation_of: Web/HTML/Element/font
 ---
 
 ## 개요
@@ -36,6 +32,6 @@ This element implements the {{domxref("HTMLFontElement")}} interface.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.font")}}
+{{Compat}}
 
 {{HTMLSidebar}}

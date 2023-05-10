@@ -5,7 +5,7 @@ translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_select
 original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 ---
 
-{{ gecko_minversion_header("1.9.1") }}Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/en-US/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
+Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/en-US/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
 
 ## Интерфейс NodeSelector (The NodeSelector interface)
 

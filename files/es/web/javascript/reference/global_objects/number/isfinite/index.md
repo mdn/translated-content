@@ -1,7 +1,6 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isFinite
 ---
 
@@ -58,9 +57,9 @@ Number.isFinite = Number.isFinite || function(value) {
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## Ver también
 

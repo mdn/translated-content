@@ -1,12 +1,11 @@
 ---
-title: Lineas de Cuadricula
+title: Líneas de Cuadrícula
 slug: Glossary/Grid_Lines
-translation_of: Glossary/Grid_Lines
 ---
 
-Las **Lineas de Cuadricula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadricula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+Las **Líneas de Cuadrícula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadrícula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout).
 
-En el siguiente ejemplo hay una cuadricula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Lineas de Columnas** y **3 Lineas de Fila**.
+En el siguiente ejemplo hay una cuadrícula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Líneas de Columnas** y **3 Líneas de Fila**.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -47,17 +46,17 @@ color: #d9480f;
 }
 ```
 
-Podemos referenciar a **Las Lineas** de nuestra plantilla usando su numero de linea. De manera izquierda-a-derecha y de arriba-a-abajo; la linea 1 de la columna 1 estará en la izquierda de la cuadricula, la linea 1 de la fila 1 estara al inicio de la cuadricula. Los numeros de lineas siguen el tipo de "[writing mode](/en-US/docs/Web/CSS/CSS_Writing_Modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estara a la derecha de la cuadricula. La imagen de abajo muestra, en fondo gris los numeros de linea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
+Podemos referenciar a **Las Líneas** de nuestra plantilla usando su número de línea. De manera izquierda-a-derecha y de arriba-a-abajo; la línea 1 de la columna 1 estará en la izquierda de la cuadrícula, la línea 1 de la fila 1 estará al inicio de la cuadrícula. Los números de líneas siguen el tipo de "[modo de escritura](/es/docs/Web/CSS/CSS_Writing_Modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estará a la derecha de la cuadrícula. La imagen de abajo muestra, en fondo gris los números de línea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
 
-![Diagram showing the grid with lines numbered.](https://mdn.mozillademos.org/files/14763/1_diagram_numbered_grid_lines.png)
+![Diagrama mostrando la cuadrícula con líneas numeradas.](1_diagram_numbered_grid_lines.png)
 
 Las líneas también se crean en la cuadrícula _implícita_ cuando se crean pistas implícitas para mantener el contenido posicionado fuera de la _cuadrícula explícita_, sin embargo, estas líneas no se pueden abordar mediante un número.
 
 ## Ubicar elementos en la cuadrícula usando el número de línea
 
-Al crear una cuadricula usted puede ubicar los elementos dentro de ésta, usando los numeros de lineas.
+Al crear una cuadrícula usted puede ubicar los elementos dentro de ésta, usando los números de líneas.
 
-En el siguiente ejemplo, el elemento esta posicionado desde la linea de columna 1 hasta la linea de columna 3 y desde la linea de fila 1 hasta la linea de fila 3.
+En el siguiente ejemplo, el elemento está posicionado desde la línea de columna 1 hasta la línea de columna 3 y desde la línea de fila 1 hasta la línea de fila 3.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -102,11 +101,12 @@ color: #d9480f;
 
 {{ EmbedLiveSample('example_2', '500', '250') }}
 
-## Nombrando las lineas
+## Nombrando las líneas
 
-Las lineas creadas _en la cuadricula explicita_, pueden ser nombradas, asignándoles un nombre dentro de corchetes antes ó después de la información del tamaño de pistas. Asi podemos utlizar estos nombres como referencia para cada línea en vez de utilizar los numeros de linea.
+Las líneas creadas _en la cuadrícula explícita_, pueden ser nombradas, asignándoles un nombre dentro de corchetes antes o después de la información del tamaño de pistas. Así podemos utlizar estos nombres como referencia para cada línea en vez de utilizar los números de línea.
 
-<div class="hidden"><pre class="brush: css">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
 border: 2px solid #f76707;
@@ -124,8 +124,7 @@ background-color: #ffd8a8;
 padding: 1em;
 color: #d9480f;
 }
-
-</pre></div>
+```
 
 ```html
 <div class="wrapper">
@@ -149,9 +148,9 @@ color: #d9480f;
 
 {{ EmbedLiveSample('example_3', '500', '250') }}
 
-## Learn more
+## Aprende Más
 
-### Property reference
+### Propiedades de referencia
 
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-rows")}}
@@ -162,10 +161,10 @@ color: #d9480f;
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-row")}}
 
-### Further reading
+### Otras lecturas
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- CSS Grid Layout Guide: _[Layout using named grid lines](/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
-- CSS Grid Layout Guide: _[CSS Grids, Logical Values and Writing Modes](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)_
-- [Definition of Grid Lines in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)
+- Guía de Grid Layout CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de Grid Layout CSS: _[Colocación basada en línea con Grid CSS](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Guía de Grid Layout CSS: _[Diseño usando líneas de cuadrícula con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
+- Guía de Grid Layout CSS: _[Cuadrículas CSS, Valores Lógicos y Modos de Escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)_
+- [Definición de Línea de Cuadrícula en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)

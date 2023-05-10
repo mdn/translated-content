@@ -69,7 +69,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
-    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet  `détails` transmis à l'auditeur
+    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet `détails` transmis à l'auditeur
 
 ## Objets supplémentaires
 
@@ -132,9 +132,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}
+{{Compat}}
 
 ## Exemples
 

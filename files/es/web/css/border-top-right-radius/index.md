@@ -1,11 +1,6 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-top-right-radius
 ---
 
 {{CSSRef}}
@@ -14,7 +9,7 @@ translation_of: Web/CSS/border-top-right-radius
 
 La propiedad CSS **`border-top-right-radius`** establece el redondeo de la esquina superior derecha del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.
 
-![border-top-right-radius.png](/@api/deki/files/6133/=border-top-right-radius.png)
+![border-top-right-radius.png](border-top-right-radius.png)
 
 Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
 
@@ -151,13 +146,11 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-right-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top-right-radius")}}
+{{Compat}}
 
 ## Véase también
 

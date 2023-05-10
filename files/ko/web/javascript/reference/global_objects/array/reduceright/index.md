@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
-slug: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
 {{JSRef}}

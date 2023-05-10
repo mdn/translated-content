@@ -313,7 +313,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Abas inativas
 
-Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.
+Iniciado no Gecko 5.0, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.
 
 ## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
 
@@ -599,7 +599,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}
+{{Compat}}
 
 ## See also
 

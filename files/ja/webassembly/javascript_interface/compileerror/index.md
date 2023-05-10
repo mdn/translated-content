@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/CompileError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.CompileError`** オブジェクトは、 WebAssembly のデコードや検証の間のエラーを示します。
 

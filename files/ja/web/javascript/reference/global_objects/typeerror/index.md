@@ -69,9 +69,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

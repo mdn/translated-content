@@ -1,6 +1,6 @@
 ---
 title: LTR（从左到右）
-slug: Glossary/ltr
+slug: Glossary/LTR
 ---
 
 **LTR**（**从左到右**，Left To Right）是{{Glossary("locale", "区域设置")}}的属性之一，用于指示语言从左到右的书写方向。例如，使用美式英语的 `en-US` 区域就是从左到右的书写方向。
@@ -20,8 +20,8 @@ slug: Glossary/ltr
 
 - [HTML 全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 
-  - {{htmlattrxref("dir")}}
-  - {{htmlattrxref("lang")}}
+  - [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#dir)
+  - [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)
 
 - [CSS](/zh-CN/docs/Web/CSS)
 

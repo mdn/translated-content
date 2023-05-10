@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 Метод **`isPrototypeOf()`** проверяет, входит ли объект в цепочку прототипов другого объекта.
 
-> **Примечание:** **Обратите внимание:** метод `isPrototypeOf()` отличается от оператора {{jsxref("Operators/instanceof", "instanceof")}}. Выражение "`object instanceof AFunction`" проверяет, присутствует ли в цепочке прототипов объекта `object` объект `AFunction.prototype`, а не сам объект `AFunction`.
+> **Примечание:** метод `isPrototypeOf()` отличается от оператора {{jsxref("Operators/instanceof", "instanceof")}}. Выражение "`object instanceof AFunction`" проверяет, присутствует ли в цепочке прототипов объекта `object` объект `AFunction.prototype`, а не сам объект `AFunction`.
 
 ## Синтаксис
 
@@ -83,4 +83,4 @@ if (Fi.prototype.isPrototypeOf(fum)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

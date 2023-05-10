@@ -252,7 +252,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Annule la capture des évènements d'un certain type par la fenêtre.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.
-- {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
+- {{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}
   - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
 - {{domxref("Window.resizeBy()")}}
   - : Redimensionne la fenêtre en cours d'une certaine quantité.
@@ -319,7 +319,7 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> **Note :** à partir de Gecko 9.0, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 

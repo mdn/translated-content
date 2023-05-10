@@ -1,12 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - Borrador
-  - CSS
-  - Experimental
-translation_of: Web/CSS/:blank
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -21,13 +15,11 @@ La [pseudo-clase CSS](/es/docs/Web/CSS) **`:blank`** selecciona elementos de ent
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## Ver también
 

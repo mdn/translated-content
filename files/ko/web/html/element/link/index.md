@@ -1,17 +1,6 @@
 ---
 title: '<link>: 외부 리소스 연결 요소'
 slug: Web/HTML/Element/link
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - Reference
-  - Web
-  - favicon
-  - metadata
-  - 메타데이터
-  - 파비콘
-translation_of: Web/HTML/Element/link
 ---
 
 {{HTMLSidebar}}
@@ -204,7 +193,7 @@ function sheetError() {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.link", 3)}}
+{{compat}}
 
 ## 같이 보기
 

@@ -1,7 +1,6 @@
 ---
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/SQRT2
 ---
 
@@ -33,9 +32,9 @@ getRoot2(); // 1.4142135623730951
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.SQRT2")}}
+{{Compat}}
 
 ## Ver también
 

@@ -3,6 +3,7 @@ title: 모바일 접근성
 slug: Learn/Accessibility/Mobile
 original_slug: Learn/접근성/모바일
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 모바일 기기에서 웹 접근이 매우 자주 발생하고 iOS와 안드로이드와 같은 유명 플랫폼들은 전문적인 접근성 점검도구들이 있기 때문에 웹콘텐츠의 접근성을 고려하는 것이 더욱 중요하다. 여기서는 모바일환경을 중심으로 접근성 고려사항을 살펴본다.
@@ -275,13 +276,3 @@ In this article, we have provided you with some details about common mobile acce
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/ko/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/ko/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/ko/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/ko/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/ko/docs/Learn/Accessibility/Accessibility_troubleshooting)

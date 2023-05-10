@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.offsetParent
 slug: Web/API/HTMLElement/offsetParent
-tags:
-  - API
-  - CSSOM View
-  - Propiedad
-  - Reference
-  - Referencia
-translation_of: Web/API/HTMLElement/offsetParent
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -24,12 +17,10 @@ parentObj = element.offsetParent;
 
 - _parentObj_ es una referencia de objeto al elemento en el cual el elemento actual es offset.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                       | Estatus                          | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetparent', 'offsetParent')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
-## Compatibilidad de Browser
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.offsetParent")}}
+{{Compat}}

@@ -1,14 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Interfaz
-  - Referencia
-  - Rendimiento
-  - Rendimiento Web
-  - Tiempo de navegación
-translation_of: Web/API/Performance
 ---
 
 {{APIRef("High Resolution Time")}}
@@ -69,18 +61,8 @@ Escucha a estos eventos que están usando `addEventListener()` o por asignación
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                       | Estado                                                   | Comentario                                                                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Highres Time Level 2', '#the-performance-interface', 'toJSON()')}}                                                             | {{Spec2('Highres Time Level 2')}}             | Se define el método `toJson()`.                                                                                                |
-| {{SpecName('Highres Time', '#the-performance-interface', 'Performance')}}                                                                     | {{Spec2('Highres Time')}}                         | Se define el método `now()`.                                                                                                   |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance')}}                                                     | {{Spec2('Navigation Timing')}}                 | Se definen las propiedades `timing` and `navigation`.                                                                          |
-| {{SpecName('Performance Timeline Level 2', '#extensions-to-the-performance-interface', 'Performance extensions')}}             | {{Spec2('Performance Timeline Level 2')}} | Cambia la interfaz `getEntries()`.                                                                                             |
-| {{SpecName('Performance Timeline', '#sec-window.performance-attribute', 'Performance extensions')}}                                 | {{Spec2('Performance Timeline')}}             | Se definen los métodos `getEntries()`, `getEntriesByType()` y `getEntriesByName()` .                                           |
-| {{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}                                         | {{Spec2('Resource Timing')}}                     | Se definen los métdos `clearResourceTimings()` y `setResourceTimingBufferSize()` y la propiedad `onresourcetimingbufferfull` . |
-| {{SpecName('User Timing Level 2', '#extensions-performance-interface', 'Performance extensions')}}                                 | {{Spec2('User Timing Level 2')}}             | Se clarifican los métodos `mark()`, `clearMark()`, `measure()` y `clearMeasure()`.                                             |
-| {{SpecName('User Timing', '#extensions-performance-interface', 'Performance extensions')}}                                             | {{Spec2('User Timing')}}                         | Se definen los métodos `mark()`, `clearMark()`, `measure()` y `clearMeasure()`.                                                |
-| {{SpecName('Frame Timing', '#extensions-performance-interface','Performance extensions')}} | {{Spec2('User Timing')}}                         | Se definen los métodos `clearFrameTimings()`, `setFrameTimingBufferSize()`, y `onframetimingbufferfull`.                       |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance")}}
+{{Compat}}

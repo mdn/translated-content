@@ -1,7 +1,6 @@
 ---
 title: calc
 slug: Web/CSS/calc
-translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
 
@@ -107,13 +106,11 @@ El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entr
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.calc")}}
+{{Compat}}
 
 ## Ver también
 

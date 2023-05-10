@@ -84,7 +84,7 @@ Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRe
 
 D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).
 
-La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes  `on*`).
+La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes `on*`).
 
 ## Méthodes
 
@@ -111,7 +111,7 @@ La plupart des navigateurs récents gère également les évènements via la mé
 > **Attention :** Cette méthode ne doit pas être appelée depuis du code JavaScript.
 
 - {{domxref("XMLHttpRequest.openRequest()")}}
-  - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](</en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open()>) ci-avant pour initialiser une requête de façon standard en JavaSCript.
+  - : Initialise une requête depuis du code natif. Voir la méthode [`open()`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest#open) ci-avant pour initialiser une requête de façon standard en JavaSCript.
 - {{domxref("XMLHttpRequest.sendAsBinary()")}}{{deprecated_inline()}}
   - : Une variante de `send()` afin d'envoyer des données binaires.
 

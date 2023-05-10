@@ -1,11 +1,6 @@
 ---
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
-tags:
-  - JavaScript
-  - Objeto
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertyDescriptors
 ---
 
@@ -84,9 +79,9 @@ subclass.prototype = Object.create(
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertyDescriptors")}}
+{{Compat}}
 
 ## Ver también:
 

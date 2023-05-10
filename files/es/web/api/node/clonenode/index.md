@@ -1,13 +1,6 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-tags:
-  - API
-  - DOM
-  - Referencia
-  - Referência DOM
-  - metodo
-translation_of: Web/API/Node/cloneNode
 ---
 
 {{APIRef("DOM")}}
@@ -56,12 +49,8 @@ Para clonar un nodo con el fin de agregarlo a un domento distinto, utiliza {{dom
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                    |
-| {{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM2 Core")}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

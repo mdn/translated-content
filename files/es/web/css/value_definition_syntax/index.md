@@ -1,7 +1,6 @@
 ---
 title: Sintaxis de definición de valor
 slug: Web/CSS/Value_definition_syntax
-translation_of: Web/CSS/Value_definition_syntax
 original_slug: Web/CSS/Sintaxis_definición_de_valor
 ---
 
@@ -355,11 +354,7 @@ Pero no:
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Values', '#value-defs', 'Value definition syntax') }}             | {{ Spec2('CSS3 Values') }} | Desde {{ SpecName('CSS2.1', 'about.html#value-defs', 'Value definition syntax') }}, añade el multiplicador hash                 |
-| {{ SpecName('CSS2.1', 'about.html#value-defs', 'Value definition syntax') }}         | {{ Spec2('CSS2.1') }}         | Desde {{ SpecName('CSS1', '#notation-for-property-values', 'Value definition syntax') }}, añade el combinador doble ampersand |
-| {{SpecName('CSS1', '#notation-for-property-values', 'Value definition syntax') }} | {{ Spec2('CSS1') }}             | Definición inicial                                                                                                                                      |
+{{Specifications}}
 
 ## Vea también
 

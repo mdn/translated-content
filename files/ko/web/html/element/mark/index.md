@@ -1,13 +1,6 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/mark
 ---
 
 {{HTMLSidebar}}
@@ -151,4 +144,4 @@ mark::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.mark")}}
+{{Compat}}

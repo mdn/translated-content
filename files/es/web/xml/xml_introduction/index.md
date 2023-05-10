@@ -1,11 +1,6 @@
 ---
 title: Introducción a XML
 slug: Web/XML/XML_introduction
-tags:
-  - Principiante
-  - XML
-  - introducción
-translation_of: Web/XML/XML_introduction
 original_slug: Web/XML/Introducción_a_XML
 ---
 

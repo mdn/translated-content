@@ -1,9 +1,7 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
-browser-compat: css.types.transform-function.rotate3d
 ---
 
 {{CSSRef}}
@@ -12,7 +10,7 @@ La [función](/es/docs/Web/CSS/CSS_Functions) **`rotate3d()`** de [CSS](/es/docs
 
 {{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
-En el espacio tridimencional, las rotaciones tienen tres grados de libertad, juntos describen un ángulo de rotación. El ángulo de rotación está definido por un vector \[x, y, z] y pasa por el origen (como lo define la propiedad {{cssxref("transform-origin")}}. Si el vector no está _normalizado_ (ej. si la suma del cuadrado de sus tres coordenadas no es igual a 1), el  {{glossary("user agent")}} lo normalizará internamente. Un vector no-normalizable, como es el caso del vector nulo, \[0, 0, 0], causará que la rotación no sea aplicada, pero sin que esto invalide la propiedad CSS en su totalidad.
+En el espacio tridimencional, las rotaciones tienen tres grados de libertad, juntos describen un ángulo de rotación. El ángulo de rotación está definido por un vector \[x, y, z] y pasa por el origen (como lo define la propiedad {{cssxref("transform-origin")}}. Si el vector no está _normalizado_ (ej. si la suma del cuadrado de sus tres coordenadas no es igual a 1), el {{glossary("user agent")}} lo normalizará internamente. Un vector no-normalizable, como es el caso del vector nulo, \[0, 0, 0], causará que la rotación no sea aplicada, pero sin que esto invalide la propiedad CSS en su totalidad.
 
 > **Nota:** Contrario a las rotaciones en el plano 2D, la composición de las rotaciones 3D normalmente no es conmutativa; lo que significa que el orden en el que dichas rotaciones son aplicadas impacta al resultado.
 

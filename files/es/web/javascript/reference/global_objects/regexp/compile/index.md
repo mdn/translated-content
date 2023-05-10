@@ -1,16 +1,6 @@
 ---
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
-tags:
-  - Desaprovado
-  - Expresion Regular
-  - JavaScript
-  - Obsoleto
-  - Prototype
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/compile
 ---
 
@@ -56,14 +46,11 @@ regexObj.compile('new foo', 'g');
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Commentario                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Definición inicial. Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Definido en la (norma) Annex B ECMAScript para Características Adicionales para Navegadores Web.                     |
+{{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Ver también
 

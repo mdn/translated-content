@@ -618,8 +618,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                     | コメント                               |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------------------------------------- |
-| {{SpecName("SVG2", "paths.html#DProperty", "d")}}                     | {{Spec2("SVG2")}} | `<path>`の定義                         |
-| {{SpecName("SVG1.1", "fonts.html#GlyphElementDAttribute", "d")}} | {{Spec2("SVG1.1")}} | `<glyph>`と`<missing-glyph>`の初期定義 |
-| {{SpecName("SVG1.1", "paths.html#DAttribute", "d")}}                 | {{Spec2("SVG1.1")}} | `<path>`の初期定義                     |
+{{Specifications}}

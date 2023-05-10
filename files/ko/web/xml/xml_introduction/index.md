@@ -1,16 +1,13 @@
 ---
 title: XML Introduction
-slug: Web/XML/XML_Introduction
-tags:
-  - XML
-translation_of: Web/XML/XML_introduction
+slug: Web/XML/XML_introduction
 ---
 
 ### XML이란?
 
 XML은 **Extensible Markup Language**을 뜻하며, [W3C 권고](http://www.w3.org/) 범용 마크업 언어다. XML은 SGML의 부분집합이다.
 
-많은 언어가 XML을 기반으로 한다; 예로 [XHTML](ko/XHTML), [MathML](ko/MathML), [SVG](ko/SVG), [XUL](ko/XUL), [RSS](ko/RSS), 그리고 [RDF](ko/RDF) 는 모두 XML기반이다.
+많은 언어가 XML을 기반으로 한다; 예로 [XHTML](/ko/XHTML), [MathML](/ko/MathML), [SVG](/ko/SVG), [XUL](/ko/XUL), [RSS](/ko/RSS), 그리고 [RDF](/ko/RDF) 는 모두 XML기반이다.
 
 ### 왜 HTML 이 제대로 동작하지 않는가
 

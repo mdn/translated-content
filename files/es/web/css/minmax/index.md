@@ -1,15 +1,6 @@
 ---
 title: minmax()
 slug: Web/CSS/minmax
-tags:
-  - CSS
-  - CSS Grid
-  - Diseño
-  - Función CSS
-  - Referencia
-  - Rejilla CSS
-  - Web
-translation_of: Web/CSS/minmax()
 original_slug: Web/CSS/minmax()
 ---
 
@@ -123,13 +114,11 @@ La función `minmax()` puede ser usada dentro de:
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-minmax", "minmax()")}} | {{Spec2("CSS Grid")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.grid-template-columns.minmax")}}
+{{Compat}}
 
 ## Mira también
 

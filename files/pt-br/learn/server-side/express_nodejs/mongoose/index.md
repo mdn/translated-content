@@ -97,7 +97,7 @@ O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinal
 
 > **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
 
-![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **Nota:** A próxima seção fornece um guia explicando como os modelos são definidos e usados. Ao ler, considere como iremos construir cada um dos modelos no diagrama acima.
 
@@ -503,40 +503,40 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
 1. Click **Buid a Cluster** button in the Clusters Overview section.
-    ![Create a cluster on MongoDB Atlas.](https://mdn.mozillademos.org/files/16516/MongoDB_Atlas_-_CreateCluster.jpg)
+    ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
 2. This will open the _Create New Cluster_ screen.
-    ![Choose a cloud provider when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16511/MongoDB_Atlas_-_ChooseProviderRegion.jpg)
+    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
 
     - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
     - Select any region marked "FREE TIER AVAILABLE".
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
 3. You will return to the _Cluster Overview_ screen.
-    ![Setup a collection on MongoDB Atlas.](https://mdn.mozillademos.org/files/16517/MongoDB_Atlas_-_CreateCollection.jpg)
+    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
     - Click the **Collections** button.
 
 4. This will open the _Collections_ section.
-    ![Create a database on MongoDB Atlas.](https://mdn.mozillademos.org/files/16518/MongoDB_Atlas_-_CreateDatabase.jpg)
+    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 
     - Click the **Create Database** button.
 
 5. This will open the _Create Database_ screen.
-    ![Details during database creation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16520/MongoDB_Atlas_-_DatabaseDetails.jpg)
+    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as Collection0.
     - Click the **Create** button to create the database.
 
 6. You will return to the Collection screen with your database created.
-    ![Database creation confirmation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16519/MongoDB_Atlas_-_DatabaseCreated.jpg)
+    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
 
     - Click the _Overview_ tab to return the cluster overview.
 
 7. From the Cluster0 Overview screen click the **Connect** button.
-    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](https://mdn.mozillademos.org/files/16512/MongoDB_Atlas_-_Connectbutton.jpg)
+    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 8. This will open the Connect to Cluster screen.
-    ![Setup a connection when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16513/MongoDB_Atlas_-_ConnectCluster.jpg)
+    ![Setup a connection when using MongoDB Atlas.](mongodb_atlas_-_connectcluster.jpg)
 
     - Click the **Add a Different IP Address** button, enter `0.0.0.0/0` for the IP Address and click **Add IP Address** button.
 
@@ -550,17 +550,17 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Click the **Choose a connection method** button.
 
 9. This will access the _Choose a connection_ method tab.
-    ![Choose a connection type when connecting with MongoDB Atlas.](https://mdn.mozillademos.org/files/16510/MongoDB_Atlas_-_ChooseAConnectionMethod.jpg)
+    ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
     - Click the **Connect Your Application** option.
 
 10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](https://mdn.mozillademos.org/files/16514/MongoDB_Atlas_-_ConnectForShortSRV.jpg)
+    ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
     - Click the **Short SRV connection string** option to copy the connection string.
 
 11. This will open the connection string URL.
-    ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](https://mdn.mozillademos.org/files/16515/MongoDB_Atlas_-_CopyShortSRV.jpg)
+    ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](mongodb_atlas_-_copyshortsrv.jpg)
 
     - Choose **Copy** button to copy the string.
     - Save this string somewhere safe.
@@ -756,7 +756,7 @@ In order to test the models (and to create some example books and other items th
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
     > **Nota:** **Note for Windows operating system users**: If the above command results in the error `DeprecationWarning: current URL string parser is deprecated`, change the `mongoose.connect(mongoDB);` line in `populatedb.js` file with `mongoose.connect(mongoDB, { useNewUrlParser:true });`
@@ -783,15 +783,3 @@ Last of all we tested our models by creating a number of instances (using a stan
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## Neste módulo
-
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)

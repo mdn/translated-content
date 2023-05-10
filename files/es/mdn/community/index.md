@@ -1,7 +1,6 @@
 ---
 title: Enviar feedback sobre MDN
 slug: MDN/Community
-translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Codigo de Estado
-  - Error de Cliente
-  - HTTP
-translation_of: Web/HTTP/Status/404
 ---
 
 {{HTTPSidebar}}
@@ -40,13 +35,11 @@ Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 
 ## Especificaciones
 
-| Especificacion                                           | Titulo                                                         |
-| -------------------------------------------------------- | -------------------------------------------------------------- |
-| {{RFC("7231", "404 Not Found" , "6.5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semanticas y contenido |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## Vea también
 

@@ -1,11 +1,6 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - Descriptor CSS
-  - Estilos de Contador CSS
-  - Referencia
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
 
 ## Resumen
@@ -60,13 +55,11 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                                      | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.additive-symbols")}}
+{{Compat}}
 
 ## Véase también
 

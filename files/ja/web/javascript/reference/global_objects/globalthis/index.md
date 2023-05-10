@@ -57,9 +57,7 @@ if (typeof globalThis.setTimeout !== 'function') {
 
 ## 仕様
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-globalthis", "globalThis")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

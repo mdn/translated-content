@@ -5,7 +5,7 @@ slug: Web/API/Performance/now
 
 {{APIRef("High Resolution Timing")}}
 
-**`performance.now()`**方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}} 。
+**`performance.now()`** 方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}}。
 
 > **警告：** 这个时间戳实际上并不是高精度的。为了降低像[Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
 
@@ -51,7 +51,7 @@ performance.now();
 // ...
 
 
-// 降低时间经度 当 `privacy.resistFingerprinting` 启用
+// 降低时间精度 当 `privacy.resistFingerprinting` 启用
 performance.now();
 // 8865400
 // 8866200

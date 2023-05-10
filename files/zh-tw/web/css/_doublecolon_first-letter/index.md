@@ -3,7 +3,7 @@ title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概要
 

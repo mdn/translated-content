@@ -3,11 +3,13 @@ title: 一个 2D WebGL 动画的基础示例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 在这个 WebGL 示例中，我们创建一个画布，并在其中使用 WebGL 渲染旋转正方形。我们用来表示场景的坐标系与画布的坐标系相同。也就是说，（0, 0）这个坐标在左上角，右下角是坐标在（600, 460）。
 
-## Vertex shader
+## 旋转正方形示例
+
+### Vertex shader
 
 首先，让我们看一下顶点着色器。它的工作如同以往，是将我们用于场景的坐标转换为剪贴空间的坐标（即系统中的（0，0）位于上下文的中心，每个轴从 -1.0 扩展到 1.0，而不管上下文的实际大小）。
 
@@ -39,7 +41,7 @@ Then the final position is computed by multiplying the rotated position by the s
 
 The standard WebGL global `gl_Position` is then set to the transformed and rotated vertex's position.
 
-## Fragment shader
+### Fragment shader
 
 Next comes the fragment shader. Its role is to return the color of each pixel in the shape being rendered. Since we're drawing a solid, untextured object with no lighting applied, this is exceptionally simple:
 
@@ -59,7 +61,7 @@ Next comes the fragment shader. Its role is to return the color of each pixel in
 
 This starts by specifying the precision of the `float` type, as required. Then we set the global `gl_FragColor` to the value of the uniform `uGlobalColor`, which is set by the JavaScript code to the color being used to draw the square.
 
-## HTML
+### HTML
 
 The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
@@ -68,8 +70,6 @@ The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a We
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
-
-## JavaScript
 
 ### Globals and initialization
 
@@ -119,23 +119,22 @@ function startup() {
   const shaderSet = [
     {
       type: gl.VERTEX_SHADER,
-      id: "vertex-shader"
+      id: "vertex-shader",
     },
     {
       type: gl.FRAGMENT_SHADER,
-      id: "fragment-shader"
-    }
+      id: "fragment-shader",
+    },
   ];
 
   shaderProgram = buildShaderProgram(shaderSet);
 
-  aspectRatio = glCanvas.width/glCanvas.height;
+  aspectRatio = glCanvas.width / glCanvas.height;
   currentRotation = [0, 1];
   currentScale = [1.0, aspectRatio];
 
   vertexArray = new Float32Array([
-      -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
-      -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
+    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
   ]);
 
   vertexBuffer = gl.createBuffer();
@@ -143,10 +142,9 @@ function startup() {
   gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
 
   vertexNumComponents = 2;
-  vertexCount = vertexArray.length/vertexNumComponents;
+  vertexCount = vertexArray.length / vertexNumComponents;
 
   currentAngle = 0.0;
-  rotationRate = 6;
 
   animateScene();
 }
@@ -172,23 +170,21 @@ Finally, `animateScene()` is called to render the first frame and schedule the r
 
 ### Compiling and linking the shader program
 
-#### Constructing and linking the program
-
 The `buildShaderProgram()` function accepts as input an array of objects describing a set of shader functions to be compiled and linked into the shader program and returns the shader program after it's been built and linked.
 
 ```js
 function buildShaderProgram(shaderInfo) {
-  let program = gl.createProgram();
+  const program = gl.createProgram();
 
-  shaderInfo.forEach(function(desc) {
-    let shader = compileShader(desc.id, desc.type);
+  shaderInfo.forEach((desc) => {
+    const shader = compileShader(desc.id, desc.type);
 
     if (shader) {
       gl.attachShader(program, shader);
     }
   });
 
-  gl.linkProgram(program)
+  gl.linkProgram(program);
 
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     console.log("Error linking shader program:");
@@ -211,20 +207,24 @@ If an error occurrs while linking the program, the error message is logged to co
 
 Finally, the compiled program is returned to the caller.
 
-#### Compiling an individual shader
+### Compiling an individual shader
 
 The `compileShader()` function, below, is called by `buildShaderProgram()` to compile a single shader.
 
 ```js
 function compileShader(id, type) {
-  let code = document.getElementById(id).firstChild.nodeValue;
-  let shader = gl.createShader(type);
+  const code = document.getElementById(id).firstChild.nodeValue;
+  const shader = gl.createShader(type);
 
   gl.shaderSource(shader, code);
   gl.compileShader(shader);
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    console.log(`Error compiling ${type === gl.VERTEX_SHADER ? "vertex" : "fragment"} shader:`);
+    console.log(
+      `Error compiling ${
+        type === gl.VERTEX_SHADER ? "vertex" : "fragment"
+      } shader:`
+    );
     console.log(gl.getShaderInfoLog(shader));
   }
   return shader;
@@ -249,18 +249,15 @@ function animateScene() {
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  let radians = currentAngle * Math.PI / 180.0;
+  const radians = (currentAngle * Math.PI) / 180.0;
   currentRotation[0] = Math.sin(radians);
   currentRotation[1] = Math.cos(radians);
 
   gl.useProgram(shaderProgram);
 
-  uScalingFactor =
-      gl.getUniformLocation(shaderProgram, "uScalingFactor");
-  uGlobalColor =
-      gl.getUniformLocation(shaderProgram, "uGlobalColor");
-  uRotationVector =
-      gl.getUniformLocation(shaderProgram, "uRotationVector");
+  uScalingFactor = gl.getUniformLocation(shaderProgram, "uScalingFactor");
+  uGlobalColor = gl.getUniformLocation(shaderProgram, "uGlobalColor");
+  uRotationVector = gl.getUniformLocation(shaderProgram, "uRotationVector");
 
   gl.uniform2fv(uScalingFactor, currentScale);
   gl.uniform2fv(uRotationVector, currentRotation);
@@ -268,18 +265,23 @@ function animateScene() {
 
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-  aVertexPosition =
-      gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  aVertexPosition = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 
   gl.enableVertexAttribArray(aVertexPosition);
-  gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-        gl.FLOAT, false, 0, 0);
+  gl.vertexAttribPointer(
+    aVertexPosition,
+    vertexNumComponents,
+    gl.FLOAT,
+    false,
+    0,
+    0
+  );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
-  window.requestAnimationFrame(function(currentTime) {
-    let deltaAngle = ((currentTime - previousTime) / 1000.0)
-          * degreesPerSecond;
+  requestAnimationFrame((currentTime) => {
+    const deltaAngle =
+      ((currentTime - previousTime) / 1000.0) * degreesPerSecond;
 
     currentAngle = (currentAngle + deltaAngle) % 360;
 
@@ -313,13 +315,13 @@ At this point, the frame has been drawn. All that's left to do is to schedule to
 
 Our `requestAnimationFrame()` callback receives as input a single parameter, `currentTime`, which specifies the time at which the frame drawing began. We use that and the saved time at which the last frame was drawn, `previousTime`, along with the number of degrees per second the square should rotate (`degreesPerSecond`) to calculate the new value of `currentAngle`. Then the value of `previousTime` is updated and we call `animateScene()` to draw the next frame (and in turn schedule the next frame to be drawn, ad infinitum).
 
-## Result
+## 结果
 
 This is a pretty simple example, since it's just drawing one simple object, but the concepts used here extend to much more complex animations.
 
-{{EmbedLiveSample("live-sample", 660, 500)}}
+{{EmbedLiveSample("旋转正方形示例", 660, 500)}}
 
-## See also
+## 参见
 
 - [WebGL API](/zh-CN/docs/Web/API/WebGL_API)
 - [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)

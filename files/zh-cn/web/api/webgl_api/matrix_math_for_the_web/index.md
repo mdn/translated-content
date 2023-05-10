@@ -3,7 +3,7 @@ title: Matrix math for the web
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合[CSS3 变换](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms)和 matrix3d 变换类型使用矩阵。
 
@@ -77,7 +77,7 @@ function multiplyMatrixAndPoint(matrix, point) {
 var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
 ```
 
-返回同一个点并没有什么用处，但还有一些其它的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
+返回同一个点并没有什么用处，但还有一些其他的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
 
 ### 两个矩阵相乘
 

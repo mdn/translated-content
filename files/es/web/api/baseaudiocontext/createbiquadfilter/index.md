@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-translation_of: Web/API/BaseAudioContext/createBiquadFilter
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -52,13 +51,11 @@ biquadFilter.gain.value = 25;
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estados                              | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## Ver tambien
 

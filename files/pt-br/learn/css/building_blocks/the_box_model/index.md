@@ -115,7 +115,7 @@ Making up a block box in CSS we have the:
 
 The below diagram shows these layers:
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 ### The standard CSS box model
 
@@ -135,7 +135,7 @@ If we assume that the box has the following CSS defining `width`, `height`, `mar
 
 The space taken up by our box using the standard box model will actually be 410px (350 + 25 + 25 + 5 + 5), and the height 210px (150 + 25 + 25 + 5 + 5), as the padding and border are added to the width used for the content box.
 
-![Showing the size of the box when the standard box model is being used.](https://mdn.mozillademos.org/files/16559/standard-box-model.png)
+![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
 > **Nota:** The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.
 
@@ -143,7 +143,7 @@ The space taken up by our box using the standard box model will actually be 410p
 
 You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border. The same CSS as used above would give the below result (width = 350px, height = 150px).
 
-![Showing the size of the box when the alternate box model is being used.](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)
+![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
 By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting `box-sizing: border-box` on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.
 
@@ -180,7 +180,7 @@ In the below example, you can see two boxes. Both have a class of `.box`, which 
 
 Your [browser developer tools](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
-![Inspecting the box model of an element using Firefox DevTools](https://mdn.mozillademos.org/files/16560/box-model-devtools.png)
+![Inspecting the box model of an element using Firefox DevTools](box-model-devtools.png)
 
 ## Margins, padding, and borders
 
@@ -314,24 +314,3 @@ That's most of what you need to understand about the box model. You may want to 
 In the next lesson, we will take a look at how [backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) can be used to make your plain boxes look more interesting.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

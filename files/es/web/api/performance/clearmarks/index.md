@@ -1,12 +1,6 @@
 ---
 title: performance.clearMarks()
 slug: Web/API/Performance/clearMarks
-tags:
-  - API
-  - Referencia
-  - Rendimiento Web
-  - metodo
-translation_of: Web/API/Performance/clearMarks
 ---
 
 {{APIRef("User Timing API")}}
@@ -64,11 +58,8 @@ logMarkCount() // "Found this many entries: 0"
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                   |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmarks', 'clearMarks()')}} | {{Spec2('User Timing Level 2')}} | Se clarifica `clearMarks()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmarks', 'clearMarks()')}}         | {{Spec2('User Timing')}}             | Definición básica.           |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.clearMarks")}}
+{{Compat}}

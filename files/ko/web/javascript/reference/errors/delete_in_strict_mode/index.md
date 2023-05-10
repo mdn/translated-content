@@ -3,12 +3,6 @@ title: >-
   SyntaxError: applying the 'delete' operator to an unqualified name is
   deprecated
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
-tags:
-  - 가비지 컬렉터
-  - 구문 에러
-  - 변수 삭제
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
 {{jsSidebar("Errors")}}

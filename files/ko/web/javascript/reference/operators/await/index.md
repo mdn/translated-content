@@ -1,7 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 
 {{jsSidebar("Operators")}}`await`연산자는 {{jsxref("Promise")}}를 기다리기 위해 사용됩니다. 연산자는 {{jsxref("Statements/async_function", "async function")}} 내부에서만 사용할 수 있습니다.
@@ -93,11 +92,11 @@ try블럭 없이 rejected `Promise`다루기
     // response will be undefined if the promise is rejected
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

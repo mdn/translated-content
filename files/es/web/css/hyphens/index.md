@@ -1,12 +1,11 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-translation_of: Web/CSS/hyphens
 ---
 
 {{CSSRef}}La propiedad [CSS](/es/docs/Web/CSS) **`hyphens`** especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas. Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.{{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
+Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
 
 > **Nota:** Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.
 
@@ -100,15 +99,11 @@ p.auto {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Initial definition |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad de navegadores
-
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## Ver también
 

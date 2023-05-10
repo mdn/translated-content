@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-stroke-color'
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad CSS
-translation_of: Web/CSS/-webkit-text-stroke-color
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -41,18 +36,11 @@ La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                                                                               | Estado                                  | Comentario              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ----------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}                                                                                                                                                             | {{Spec2('Compat')}}                | Estandarización Inicial |
-| [Referencia CSS de Safari CSS '-webkit-text-stroke-color' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color) | Documentación no estándar y no oficial. | Documentación Inicial   |
+{{Specifications}}
 
-No es parte de ninguna especificación.
+## Compatibilidad con navegadores
 
-Apple tiene una descripción de `-webkit-text-stroke-color` en la referencia CSS de Safari.
-
-## Compatibilidad con los distintos navegadores
-
-{{Compat("css.properties.-webkit-text-stroke-color")}}
+{{Compat}}
 
 ## Ver además
 

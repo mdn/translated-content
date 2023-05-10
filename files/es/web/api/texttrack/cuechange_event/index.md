@@ -1,20 +1,6 @@
 ---
 title: 'TextTrack: evento cuechange'
 slug: Web/API/TextTrack/cuechange_event
-tags:
-  - API
-  - Audio
-  - Event
-  - Media
-  - Reference
-  - TextTrack
-  - Video
-  - WebVTT
-  - cuechange
-  - events
-  - oncuechange
-  - track
-translation_of: Web/API/TextTrack/cuechange_event
 ---
 
 {{APIRef}}
@@ -88,13 +74,11 @@ textTrackElem.oncuechange = (event) => {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TextTrack.cuechange_event")}}
+{{Compat}}
 
 ## Ver también
 

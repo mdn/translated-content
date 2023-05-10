@@ -8,7 +8,7 @@ O evento `click` event é disparado quando o botão de um dispositivo apontador 
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-click)
 - Interface
   - : {{domxref("MouseEvent")}}
 - Bubbles

@@ -1,12 +1,6 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
-tags:
-  - API
-  - HTML DOM
-  - Interfaz
-  - Reference
-translation_of: Web/API/HTMLImageElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -88,20 +82,13 @@ document.body.appendChild(img2);
 alert(document.images[0].src);
 ```
 
-## Especificiaciones
+## Especificaciones
 
-| Especicifación                                                                                                                                   | Estado                               | Comentario                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}}         | {{Spec2('Referrer Policy')}} | Añadida la propiedad `referrerPolicy`.                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName("CSSOM View", "#excensions-to-the-htmlimageelement-interface", "Extensions to HTMLImageElement")}} | {{Spec2('CSSOM View')}}     | Añadidas propiedades `x` e `y`                                                                                                                                                                                                                                                                                                                                            |
-| {{SpecName('HTML WHATWG', "embedded-content.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML WHATWG')}}     | Las siguientes propiedades han sido añadidas: `srcset`, `currentSrc` y `sizes`.                                                                                                                                                                                                                                                                                           |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-img-element", "HTMLImageElement")}}                             | {{Spec2('HTML5 W3C')}}         | Un constructor (con 2 parámetros opcionales) añadido. Las siguientes propiedades quedaron obsoletas: `name`, `border`, `align`, `hspace`, `vspace`, y `longdesc`. Las siguientes propiedades son ahora `unsigned long`, en lugar de `long`: `height`, y width.Las siguientes propiedades fueron añadidas: `crossorigin`, `naturalWidth`, `naturalHeight`, `y` `complete`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-17701901', 'HTMLImgElement')}}                                                     | {{Spec2('DOM2 HTML')}}         | La propiedad `lowSrc` fue eliminada. Las siguientes propiedades son ahora `long`, en lugar de `DOMString`: `height`, `width`, `hspace`, y `vspace`.                                                                                                                                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-17701901', 'HTMLImgElement')}}                                                 | {{Spec2('DOM1')}}             | Definición inicial.                                                                                                                                                                                                                                                                                                                                                       |
+{{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## Ver también
 

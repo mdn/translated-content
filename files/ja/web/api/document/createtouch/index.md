@@ -1,19 +1,20 @@
 ---
 title: Document.createTouch()
 slug: Web/API/Document/createTouch
+l10n:
+  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
-
-> **メモ:** {{Gecko("25.0")}} 以前では、このメソッドは {{DOMxRef("DocumentTouch")}} ミックスインで定義されていました。
+{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 **`Document.createTouch()`** メソッドは、新しい {{DOMxRef("Touch")}} オブジェクトを生成して返します。
 
+> **メモ:** {{domxref("TouchEvent.TouchEvent", "TouchEvent()")}} コンストラクターを使用してください。
+
 ## 構文
 
-```
-var touch = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
-                                      screenX, screenY);
+```js-nolint
+createTouch(view, target, identifier, pageX, pageY, screenX, screenY)
 ```
 
 ### 引数
@@ -62,17 +63,15 @@ var touch = DocumentTouch.createTouch(view, target, identifier, pageX, pageY,
 以下のコードスニペットでは、2 つの {{DOMxRef("Touch")}} オブジェクトが `target` 要素に生成されます。
 
 ```js
-var target = document.getElementById("target");
+const target = document.getElementById("target");
 
-var touch1 = Document.createTouch(window, target, 1, 15, 20, 35, 40);
-var touch2 = Document.createTouch(window, target, 2, 25, 30, 45, 50);
+const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
+const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                                                                                                       | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("Touch Events", "#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY", "Document.createTouch()")}} | {{Spec2("Touch Events")}} | 初回定義 |
+この機能は、現在のどの仕様にも属しません。標準化の予定はなくなりました。
 
 ## ブラウザーの互換性
 

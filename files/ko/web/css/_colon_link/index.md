@@ -1,13 +1,6 @@
 ---
 title: ':link'
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:link
 ---
 
 {{ CSSRef }}

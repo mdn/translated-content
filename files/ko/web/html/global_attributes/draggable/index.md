@@ -1,12 +1,8 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/draggable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`draggable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 드래그 가능 여부를 나타내는 열거형 특성으로, 네이티브 브라우저 동작 방식과 [HTML Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API) 모두 통제합니다.
@@ -26,7 +22,7 @@ translation_of: Web/HTML/Global_attributes/draggable
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.draggable")}}
+{{Compat}}
 
 ## 같이 보기
 

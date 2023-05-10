@@ -30,5 +30,3 @@ floor( number )
 ### Поддержка Gecko
 
 Поддерживается
-
-{{ languages( { "fr": "fr/XPath/Fonctions/floor", "ja": "ja/XPath/Functions/floor", "pl": "pl/XPath/Funkcje/floor", "en": "en/XPath/Fonctions/floor" } ) }}

@@ -1,12 +1,6 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-translation_of: Web/CSS/white-space
 ---
 
 {{CSSRef}}

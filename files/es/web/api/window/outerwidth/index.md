@@ -1,7 +1,6 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
 
 {{APIRef}}
@@ -26,15 +25,13 @@ Para cambiar el tamaño de la ventana, ver {{domxref("window.resizeBy()")}} y {{
 
 Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina desplegada, ver {{domxref("window.innerWidth")}}.
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.Window.outerWidth")}}
+{{Specifications}}
 
-## Specificaciones
+## Compatibilidad con navegadores
 
-| Specification                                                                                        | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Compat}}
 
 ## Ver también
 

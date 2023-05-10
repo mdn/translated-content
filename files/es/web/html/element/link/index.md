@@ -1,15 +1,6 @@
 ---
 title: link
 slug: Web/HTML/Element/link
-tags:
-  - HTML
-  - HTML:Elemento
-  - Metadatos
-  - Metadatos de documento HTML
-  - Referencia
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/link
 original_slug: Web/HTML/Elemento/link
 ---
 
@@ -139,16 +130,11 @@ function sheetError() {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                                      | Comentarios                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}         | {{Spec2('Subresource Integrity')}} | Se añade el atributo `integrity`.                                                                                                                    |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-link-element', '&lt;link&gt;')}}         | {{Spec2('HTML WHATWG')}}             | No hay cambios desde la versión anterior                                                                                                             |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-link-element', '&lt;link&gt;')}} | {{Spec2('HTML5 W3C')}}                 | Se añaden los atributos `crossorigin` y `sizes`; valores extendidos para `media` para cualquier media query; se añaden numerosos valores para `rel`. |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.3', '&lt;link&gt;')}}                     | {{Spec2('HTML4.01')}}                 |                                                                                                                                                      |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.link")}}
+{{Compat}}
 
 ## Véase también
 

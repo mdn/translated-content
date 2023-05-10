@@ -1,12 +1,6 @@
 ---
 title: <picture>
 slug: Web/HTML/Element/picture
-tags:
-  - Elemento
-  - Fotografía
-  - Imagen
-  - graficos
-translation_of: Web/HTML/Element/picture
 original_slug: Web/HTML/Elemento/picture
 ---
 
@@ -54,7 +48,7 @@ El atributo `media` permite especificar una media query que el agente de usuario
 El atributo `type` permite especificar un tipo MIME para los recursos dados en el atributo srcset del elemento {{HTMLElement("source")}}. Si el agente de usuario no soporta dicho tipo, el elemento {{HTMLElement("source")}} es omitido.
 
 ```html
-​<picture>
+<picture>
  <source srcset="mdn-logo.svg" type="image/svg+xml">
  <img src="mdn-logo.png" alt="MDN">
 </picture>
@@ -62,13 +56,11 @@ El atributo `type` permite especificar un tipo MIME para los recursos dados en e
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.picture")}}
+{{Compat}}
 
 ## Ver también
 

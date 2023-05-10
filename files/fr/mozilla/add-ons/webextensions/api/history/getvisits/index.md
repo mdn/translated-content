@@ -41,9 +41,9 @@ var getting = browser.history.getVisits(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets `{{WebExtAPIRef('history.VisitItem')}}` représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.getVisits")}}
+{{Compat}}
 
 ## Exemples
 

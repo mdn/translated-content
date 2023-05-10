@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-translation_of: Web/API/ServiceWorkerContainer/register
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -69,12 +68,10 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                        | Status                               | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-container', 'ServiceWorkerContainer')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ServiceWorkerContainer.register")}}
+{{Compat}}

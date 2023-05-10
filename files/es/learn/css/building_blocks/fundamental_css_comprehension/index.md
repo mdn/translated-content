@@ -1,17 +1,6 @@
 ---
 title: Comprensión de los fundamentos de CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - CSS
-  - Estilo
-  - Evaluación
-  - Modelo de Caja
-  - Principiante
-  - Selectores
-  - Sintaxis
-  - comentários
-  - reglas
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
 
@@ -45,7 +34,7 @@ Para comenzar esta evaluación, debes:
 - Ve y coge el [archivo HTML del ejercicio](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html), y el [archivo de imagen asociada](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg), y guárdalos en un nuevo directorio en tu ordenador local. Si quieres usar tu propio archivo de imagen y rellenar tu propio nombre, eres bienvenido - sólo asegúrate de que la imagen es cuadrada.
 - Coge el [archivo de texto de los recursos CSS](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — este contiene un conjunto de selectores y conjuntos de reglas en estado puro que necesitarás estudiar y combinar para responder a parte de esta evaluación.
 
-> **Nota:** Alternativamente, se puede utilizar un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer la evaluación. Puede pegar el HTML y completar el CSS en uno de estos editores en línea, y usar [esta URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) para apuntar el elemento `<img>` al archivo de imagen. Si el editor en línea que estás usando no tiene un panel CSS separado, no dudes en ponerlo en un elemento `<style>` en el encabezado del documento.
+> **Nota:** Alternativamente, se puede utilizar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer la evaluación. Puede pegar el HTML y completar el CSS en uno de estos editores en línea, y usar [esta URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) para apuntar el elemento `<img>` al archivo de imagen. Si el editor en línea que estás usando no tiene un panel CSS separado, no dudes en ponerlo en un elemento `<style>` en el encabezado del documento.
 
 ## Resumen del Proyecto
 
@@ -64,24 +53,24 @@ Encargandonos de los selectores y conjuntos de reglas proporcionados:
 - Ahora es el momento de poner el selector correcto en el conjunto de reglas correcto! Tienes cuatro pares de selectores y reglas que coinciden en tus recursos de CSS. Hazlo ahora y agrégalos a tu archivo CSS. Necesitaras:
 
   - Asignar al contenedor principal de tarjetas un ancho/alto fijo (width/height), color de fondo sólido (background-color), borde (border) y radio de borde (border-radius), entre otras cosas.
-  - Asigna al header un degradado (linear-gradient) de fondo que va de más oscuro a más claro, además de esquinas redondeadas que encajan con las esquinas redondeadas establecidas en el contenedor principal de tarjetas.
+  - Asigna al `header` un degradado (linear-gradient) de fondo que va de más oscuro a más claro, además de esquinas redondeadas que encajan con las esquinas redondeadas establecidas en el contenedor principal de tarjetas.
   - Asigna al pie de página un degradado (linear-gradient) de fondo que vaya de más claro a más oscuro, además de esquinas redondeadas que encajen con las esquinas redondeadas establecidas en el contenedor principal de tarjetas.
-  - Asigna a la imagen un float a la derecha para que se pegue al lado derecho del contenido principal de la tarjeta de presentación, y dale una altura máxima (max-height) del 100% (un truco inteligente que asegura que crecerá/encogerá para que se mantenga a la misma altura que el contenedor principal, sin importar a que altura se trasforme).
+  - Asigna a la imagen un `float` a la derecha para que se pegue al lado derecho del contenido principal de la tarjeta de presentación, y dale una altura máxima (max-height) del 100% (un truco inteligente que asegura que crecerá/encogerá para que se mantenga a la misma altura que el contenedor principal, sin importar a que altura se trasforme).
 
 - ¡Cuidado! Hay dos errores en los conjuntos de reglas proporcionados. Utilizando cualquier técnica que conozcas, localízalas y arréglalas antes de seguir adelante.
 
 Nuevos conjuntos de reglas que necesitas escribir:
 
-- Escribe un conjunto de reglas que apunte tanto al header de la tarjeta como al footer de la misma, dándoles una altura total de 50px, (que incluye una altura de contenido de 30px y un padding de 10px en todos los lados). Pero expresalo en `em`s.
+- Escribe un conjunto de reglas que apunte tanto al header de la tarjeta como al footer de la misma, dándoles una altura total de 50px, (que incluye una altura de contenido de 30px y un padding de 10px en todos los lados). Pero expresalo en `em`.
 - El margen por defecto aplicado a los elementos `<h2>` y `<p>` por el navegador interferirá con nuestro diseño, así que escribe una regla que apunte a todos estos elementos y establezca su margen en 0.
-- Para evitar que la imagen se derrame del contenido principal de la tarjeta de presentación (el elemento `<article>`), necesitamos darle una altura específica. Ajustar la altura del `<article>` a 120px, expresada en `em`s. También asigna un background-color negro semitransparente, resultando en un tono ligeramente más oscuro que deja que el color rojo del fondo brille un poco también.
-- Escribe un conjunto de reglas que le asigne al `<h2>` un font-size efectivo de 20px (pero expresado en `em`s) y una line-height (altura de línea) apropiada para colocarlo en el centro de la caja de contenido del header. Recuerde que la altura de la caja de contenido debe ser de 30px - esto te proporciona todos los números que necesitas para calcular la line-height.
-- Escribe un conjunto de reglas que le asigne al `<p>` dentro del footer un font-size efectivo de 15px (pero expresado en `em`s) y una line-height apropiada para colocarlo en el centro de la caja de contenido del footer. Recuerda que la altura de la caja de contenido debe ser de 30px - esto te proporciona todos los números que necesitas para calcular la line-height.
+- Para evitar que la imagen se derrame del contenido principal de la tarjeta de presentación (el elemento `<article>`), necesitamos darle una altura específica. Ajustar la altura del `<article>` a 120px, expresada en `em`. También asigna un `background-color` negro semitransparente, resultando en un tono ligeramente más oscuro que deja que el color rojo del fondo brille un poco también.
+- Escribe un conjunto de reglas que le asigne al `<h2>` un `font-size` efectivo de 20px (pero expresado en `em`) y un `line-height` (altura de línea) apropiada para colocarlo en el centro de la caja de contenido del header. Recuerde que la altura de la caja de contenido debe ser de 30px - esto te proporciona todos los números que necesitas para calcular `line-height`.
+- Escribe un conjunto de reglas que le asigne al `<p>` dentro del footer un `font-size` efectivo de 15px (pero expresado en `em`) y un `line-height` apropiada para colocarlo en el centro de la caja de contenido del footer. Recuerda que la altura de la caja de contenido debe ser de 30px - esto te proporciona todos los números que necesitas para calcular `line-height`.
 - Como último toque, asigna al párrafo dentro del `<article>` un padding apropiado para que su borde izquierdo se alinee con el `<h2>` y el párrafo del footer, y ajuste su color para que sea bastante claro y sea fácil de leer.
 
 Otras cosas en las que pensar:
 
-- Obtendrás puntos adicionales si escribes tu CSS para una legibilidad máxima, con una declaración separada en cada línea..
+- Obtendrás puntos adicionales si escribes tu CSS para una legibilidad máxima, con una declaración separada en cada línea.
 - Deberás incluir `.card` al principio de la cadena de selección en todas tus reglas, para que estas reglas no interfieran con el estilo de cualquier otro elemento si la tarjeta de presentación se pusiera en una página con un montón de otro contenido.
 
 ## Consejos y Sugerencias
@@ -93,7 +82,7 @@ Otras cosas en las que pensar:
 
 La siguiente captura de pantalla muestra un ejemplo de cómo debe ser el diseño terminado:
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](https://mdn.mozillademos.org/files/12616/business-card.png)
+![Una vista de la tarjeta de presentación terminada, muestra un encabezado y un pie de página del lector, y un panel central más oscuro que contiene los detalles principales y la imagen.](business-card.png)
 
 ## Evaluación
 

@@ -16,7 +16,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 20 10" xmlns="https://www.w3.org/2000/svg">
   <!-- Simple color stroke -->
   <circle cx="5" cy="5" r="4" fill="none"
           stroke="green" />

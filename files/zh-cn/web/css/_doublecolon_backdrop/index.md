@@ -20,7 +20,9 @@ dialog::backdrop {
 
 ## 语法
 
-{{CSSSyntax}}
+```
+::backdrop
+```
 
 ## 示例
 

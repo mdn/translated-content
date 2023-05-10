@@ -18,9 +18,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 
 La fonction **`removeFile()`** de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.
 
-Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel  {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.
+Cette API supprime le fichier du disque, mais ne le supprime pas de l'historique des téléchargements du navigateur, donc un appel {{WebExtAPIRef("downloads.search()")}} renvoie toujours l'élément comme {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, mais son attribut `exists` sera `false`.
 
-Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser  {{WebExtAPIRef("downloads.erase()")}}.
+Pour supprimer un fichier de l'historique des téléchargements, vous devez utiliser {{WebExtAPIRef("downloads.erase()")}}.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -37,15 +37,15 @@ var removing = browser.downloads.removeFile(
 ### Paramètres
 
 - `downloadId`
-  - : Un `integer` représentant l'identifiant de  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.
+  - : Un `integer` représentant l'identifiant de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} que vous souhaitez supprimer du disque.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.removeFile")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,20 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - Colores CSS
-  - Colores HTML
-  - Diseño
-  - Estilo HTML
-  - Estilo Texto
-  - Estilos HTML
-  - Propiedad CSS
-  - Referencia
-  - Referencia_CSS
-  - Web
-  - color
-translation_of: Web/CSS/color
 ---
 
 {{CSSRef}}
@@ -208,17 +194,11 @@ p { color: hsla(0, 100%, 50%, 0.5); }
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Colors', '#the-color-property', 'color')}} | {{Spec2('CSS4 Colors')}}         | Agrega sintaxis sin comas para las funciones `rgb()`, `rgba()`, `hsl()`, y `hsla()`. Permite valores alfa en `rgb()` y `hsl()`, convirtiéndose `rgba()` y `hsla()` en alias (obsoletos) para ellos. Agrega una palabra clave de color `rebeccapurple`. Agrega valores de color hexadecimal de 4 y 8 dígitos, donde el último dígito representa el valor alfa. Añade las funciones `hwb()`, `device-cmyk()`, y `color()`. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'color')}} | {{Spec2('CSS3 Transitions')}} | Define `color` como animable.                                                                                                                                                                                                                                                                                                                                                                                            |
-| {{SpecName('CSS3 Colors', '#color', 'color')}}                     | {{Spec2('CSS3 Colors')}}         | Desprecia los colores del sistema. Agrega colores SVG. Agrega las funciones `rgba()`, `hsl()`, y `hsla()`.                                                                                                                                                                                                                                                                                                               |
-| {{SpecName('CSS2.1', 'colors.html#colors', 'color')}}         | {{Spec2('CSS2.1')}}                 | Añade el color `orange` y los colores del sistema.                                                                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('CSS1', '#color', 'color')}}                             | {{Spec2('CSS1')}}                 | Definicion inicial.                                                                                                                                                                                                                                                                                                                                                                                                      |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.color")}}
+{{Compat}}
 
 ## Ver también
 

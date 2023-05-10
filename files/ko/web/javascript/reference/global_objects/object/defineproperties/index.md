@@ -1,7 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
 
 {{JSRef}}
@@ -22,7 +21,7 @@ Object.defineProperties(obj, props)
   - : 속성을 정의하거나 수정할 객체.
 - `props`
   - : 정의하거나 수정할 속성의 이름을 키로, 그 속성을 서술하는 객체를 값으로 갖는 객체. `props`의 각 값은 데이터 서술자(data descriptor) 혹은 접근자 서술자(accessor descriptor) 중 하나여야 하며, 동시에 두 유형을 포함할 수 없다({{jsxref("Object.defineProperty()")}} 참조).
-  
+
   데이터 서술자와 접근자 서술자 모두 다음 키를 선택적으로 포함할 수 있다.
 - `configurable`
   - : `true`일 경우 이 속성 서술자의 형태를 변경하거나, 속성을 해당 객체에서 삭제할 수 있다.

@@ -1,14 +1,6 @@
 ---
 title: ':right'
 slug: Web/CSS/:right
-tags:
-  - '@page'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:right
 ---
 
 {{ CSSRef() }}
@@ -40,14 +32,11 @@ Que una página dada sea "izquierda" o "derecha" está determinada por la direcc
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Paged Media', '#left-right-first', ':right') }} | {{ Spec2('CSS3 Paged Media') }} | Ningún cambio.      |
-| {{ SpecName('CSS2.1', 'page.html#page-selectors', ':right') }}     | {{ Spec2('CSS2.1') }}             | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.right")}}
+{{Compat}}
 
 ## Ver también
 

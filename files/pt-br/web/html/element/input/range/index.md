@@ -1,6 +1,6 @@
 ---
 title: <input type="range">
-slug: Web/HTML/Element/Input/range
+slug: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar}}
@@ -137,7 +137,7 @@ Isto é o que você obtem se não especificar o atributo {{htmlattrxref("list", 
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14989/macslider-plain.png"
+          src="macslider-plain.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -180,7 +180,7 @@ Este controle está usando um atributo `list` especificando o ID de uma {{HTMLEl
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14991/macslider-ticks.png"
+          src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -223,7 +223,7 @@ Você pode adicionar rótulos para seu controle usando o atributo {{htmlattrxref
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14993/macslider-labels.png"
+          src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
       </td>
@@ -231,7 +231,7 @@ Você pode adicionar rótulos para seu controle usando o atributo {{htmlattrxref
   </tbody>
 </table>
 
-> **Note:** **Nota**: Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
+> **Nota:** Atualmente nenhum navegador suporta estes recursos totalmente. Firefox não suporta pontos e rótulos, por exemplo, enquanto o Chrome suporta as marcações de pontos, porém não suporta as etiquetas.
 
 ### Change the orientation
 
@@ -241,7 +241,7 @@ Considerando este controle:
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}
+{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
 
 Esse controle é horizontal (pelo menos na maioria, senão em todos os principais navegadores, outros podem variar). Fazê-lo vertical é tão simples como adicionar CSS para alterar as dimensões do controle para que ele seja mais alto que o largo, como este:
 
@@ -262,7 +262,7 @@ Esse controle é horizontal (pelo menos na maioria, senão em todos os principai
 
 #### Resultado
 
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}
+{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
 
 **Atualmente, nenhum dos principais navegadores suporta a criação de entradas de alcance vertical usando o CSS desta maneira, mesmo que seja a maneira como a especificação recomenda que eles o façam.**
 
@@ -307,7 +307,7 @@ O tamanho do controle está configurado para ter 150 pixels de comprimento por 2
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
+{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
 
 ## Validação
 

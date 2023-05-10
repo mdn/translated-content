@@ -1,13 +1,6 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/border-radius
 ---
 
 {{CSSRef}}
@@ -75,14 +68,14 @@ border-radius: unset;
 
 ### 값
 
-| _radius_                    | ![all-corner.png](/@api/deki/files/6138/=all-corner.png)                       | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 한 개 값 구문에서만 사용합니다.                        |
-| --------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](/@api/deki/files/6141/=top-left-bottom-right.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 값 구문에서만 사용합니다.            |
-| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](/@api/deki/files/6143/=top-right-bottom-left.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 또는 세 개 값 구문에서만 사용합니다. |
-| _top-left_                  | ![top-left.png](/@api/deki/files/6142/=top-left.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 세 개 또는 네 개 값 구문에서만 사용합니다.               |
-| _top-right_                 | ![top-right.png](/@api/deki/files/6144/=top-right.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
-| _bottom-right_              | ![bottom-rigth.png](/@api/deki/files/6140/=bottom-rigth.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                      |
-| _bottom-left_               | ![bottom-left.png](/@api/deki/files/6139/=bottom-left.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
+| _radius_    | ![all-corner.png](all-corner.png) | 테두리의 각 꼭짓점 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 한 개 값 구문에서만 사용합니다. |
+|---|---|---|
+| _top-left-and-bottom-right_ | ![top-left-bottom-right.png](top-left-bottom-right.png) | 왼쪽 위와 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 값 구문에서만 사용합니다.            |
+| _top-right-and-bottom-left_ | ![top-right-bottom-left.png](top-right-bottom-left.png) | 오른쪽 위와 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 두 개 또는 세 개 값 구문에서만 사용합니다. |
+| _top-left_                  | ![top-left.png](top-left.png)                           | 왼쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 세 개 또는 네 개 값 구문에서만 사용합니다.               |
+| _top-right_                 | ![top-right.png](top-right.png)                         | 오른쪽 위 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
+| _bottom-right_              | ![bottom-right.png](bottom-right.png)                   | 오른쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                      |
+| _bottom-left_               | ![bottom-left.png](bottom-left.png)                     | 왼쪽 아래 꼭짓점의 반지름을 나타내는 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}. 네 개 값 구문에서만 사용합니다.                        |
 
 - {{cssxref("&lt;length&gt;")}}
   - : 길이 값을 사용해 원의 반지름 또는 타원의 짧은반지름과 긴반지름을 지정합니다. 음의 값은 유효하지 않습니다.
@@ -162,11 +155,11 @@ border-bottom-left-radius:  3px 4px;
 
 ### 라이브 샘플
 
-1. <http://jsfiddle.net/Tripad/qnGKj/2/>
-2. <http://jsfiddle.net/Tripad/qnGKj/3/>
-3. <http://jsfiddle.net/Tripad/qnGKj/4/>
-4. <http://jsfiddle.net/Tripad/qnGKj/5/>
-5. <http://jsfiddle.net/Tripad/qnGKj/6/>
+1. <https://jsfiddle.net/Tripad/qnGKj/2/>
+2. <https://jsfiddle.net/Tripad/qnGKj/3/>
+3. <https://jsfiddle.net/Tripad/qnGKj/4/>
+4. <https://jsfiddle.net/Tripad/qnGKj/5/>
+5. <https://jsfiddle.net/Tripad/qnGKj/6/>
 
 ## 명세
 

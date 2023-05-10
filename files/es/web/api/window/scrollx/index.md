@@ -1,7 +1,6 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-translation_of: Web/API/Window/scrollX
 ---
 
 {{ APIRef() }}
@@ -49,15 +48,13 @@ var y = (window.pageYOffset !== undefined)
   : (document.documentElement || document.body.parentNode || document.body).scrollTop;
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }} | {{ Spec2('CSSOM View') }} |               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.scrollX")}}
+{{Compat}}
 
 ## Ver también
 

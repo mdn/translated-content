@@ -1,7 +1,6 @@
 ---
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 
 {{AddonSidebar}}
@@ -53,6 +52,6 @@ Puede usar SVG y el navegador escalará su icono adecuadamente. Sin embargo, hay
 
 > **Nota:** Si está usando un programa como Inkscape para crear SVG, puede que quiera guardarlo como un "SVG simple". Firefox podría confundirse con varios espacios de nombres especiales y no mostrar su icono.
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.manifest.icons")}}
+{{Compat}}

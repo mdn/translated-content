@@ -1,17 +1,6 @@
 ---
 title: Making content editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - Avanzado
-  - Ejemplo
-  - Entrada de texto
-  - Guía
-  - HTML
-  - HTML5
-  - Texto
-  - Web
-  - contentediatable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
 
@@ -219,7 +208,7 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](/@api/deki/files/6243/=rich-text-editor.zip).
+> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](rich-text-editor.zip).
 
 ## Véase también
 

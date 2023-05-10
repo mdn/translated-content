@@ -1,9 +1,6 @@
 ---
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
-tags:
-  - Atributos SVG
-translation_of: Web/SVG/Attribute/stop-color
 ---
 
 « [SVG Attribute reference hom](/en/SVG/Attribute)e
@@ -27,9 +24,13 @@ El siguiente elemento puede usar el atributo `stop-color`
 
 - {{ SVGElement("stop") }}
 
-## Compatibilidad entre navegadores
+## Especificaciones
 
-{{Compat("svg.attributes.presentation.stop-color")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

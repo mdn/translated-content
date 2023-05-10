@@ -1,13 +1,6 @@
 ---
 title: Alertas
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accesibilidad
-  - Forms
-  - Web
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
 

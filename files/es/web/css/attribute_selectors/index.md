@@ -1,12 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Atributos
-  - CSS
-  - Selectores
-  - Selectores de Atributo
-translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Selectores_atributo
 ---
 
@@ -207,15 +201,11 @@ ol[type="A" s] {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentarios                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Agrega un modificador para la selección de valores de atributos insensibles a mayúsculas / minúsculas ASCII. |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                                              |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Definición Inicial.                                                                                          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}
 
 ## Ver también
 

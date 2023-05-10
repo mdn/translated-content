@@ -3,6 +3,7 @@ title: 점수 추가와 승패 판정 방법
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Track_the_score_and_win
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
@@ -81,7 +82,7 @@ function collisionDetection() {
 }
 ```
 
-결국 사용자는 모든 벽돌을 파괴한 순간, 실제로 게임에서 승리할 수 ​​있습니다. 이는 게임과 관련하여 굉장히 중요합니다. `document.location.reload()`기능은 페이지를 다시 로드하고 경고 버튼이 클릭되면 게임을 다시 시작합니다.
+결국 사용자는 모든 벽돌을 파괴한 순간, 실제로 게임에서 승리할 수 있습니다. 이는 게임과 관련하여 굉장히 중요합니다. `document.location.reload()`기능은 페이지를 다시 로드하고 경고 버튼이 클릭되면 게임을 다시 시작합니다.
 
 ## 코드 비교
 

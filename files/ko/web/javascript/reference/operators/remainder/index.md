@@ -1,13 +1,6 @@
 ---
 title: 나머지 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Remainder
-browser-compat: javascript.operators.remainder
 ---
 
 {{jsSidebar("Operators")}}

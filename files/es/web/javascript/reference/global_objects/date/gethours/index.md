@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getHours
 ---
 
@@ -36,9 +35,9 @@ console.log(hours); // 23
 
 {{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getHours")}}
+{{Compat}}
 
 ## Ver tambien
 

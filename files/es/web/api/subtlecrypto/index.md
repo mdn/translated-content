@@ -1,13 +1,6 @@
 ---
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
-tags:
-  - API
-  - Interfaz
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-translation_of: Web/API/SubtleCrypto
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -118,13 +111,11 @@ _Esta interfaz no hereda ningún método._
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#subtlecrypto-interface', 'SubtleCrypto') }} | {{ Spec2('Web Crypto API') }} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.SubtleCrypto")}}
+{{Compat}}
 
 ## Ver también
 

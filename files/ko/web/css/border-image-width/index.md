@@ -1,12 +1,6 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-width
 ---
 
 {{CSSRef}}
@@ -71,7 +65,7 @@ border-image-width: unset;
 
 다음 예제는 아래의 가로 90픽셀, 세로 90픽셀 이미지를 사용해 테두리 이미지를 생성합니다.
 
-![](https://mdn.mozillademos.org/files/10470/border.png)
+![](border.png)
 
 원본 이미지의 각 원은 가로 30픽셀, 세로 30픽셀입니다.
 
@@ -89,7 +83,7 @@ border-image-width: unset;
 ```css
 p {
   border: 20px solid;
-  border-image: url("https://mdn.mozillademos.org/files/10470/border.png") 30 round;
+  border-image: url("border.png") 30 round;
   border-image-width: 16px;
   padding: 40px;
 }

@@ -1,12 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image
 ---
 
 {{CSSRef("CSS Borders")}}
@@ -84,10 +78,8 @@ Resultado:
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------- |
-| {{SpecName('CSS3 Backgrounds', '#border-image', 'border-image')}} | {{Spec2('CSS3 Backgrounds')}} |             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image")}}
+{{Compat}}

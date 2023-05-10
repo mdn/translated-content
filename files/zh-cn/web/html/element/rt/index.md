@@ -9,7 +9,7 @@ slug: Web/HTML/Element/rt
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td>无  </td>
+   <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -17,7 +17,7 @@ slug: Web/HTML/Element/rt
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>如果 {{HTMLElement("rt")}} 元素紧紧跟随  {{HTMLElement("rt")}} 或者 {{HTMLElement("rp")}} 元素，或者父元素中没有更多内容了，结束标签可以省略。</td>
+   <td>如果 {{HTMLElement("rt")}} 元素紧紧跟随 {{HTMLElement("rt")}} 或者 {{HTMLElement("rp")}} 元素，或者父元素中没有更多内容了，结束标签可以省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>

@@ -16,25 +16,25 @@ the {{cssxref("flex-direction")}} property can take one of four values:
 - `row-reverse`
 - `column-reverse`
 
-The first two values ​​keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
+The first two values keep the items in the same order that they appear in the document source order and display them sequentially from the start line.
 
-![The items are displayed in a row starting on the left.](https://mdn.mozillademos.org/files/15649/Basics1.png)
+![The items are displayed in a row starting on the left.](basics1.png)
 
-![The items are displayed as a column starting from the top ](https://mdn.mozillademos.org/files/15650/align10.png)
+![The items are displayed as a column starting from the top ](align10.png)
 
-The second two values ​​reverse the items by switching the start and end lines.
+The second two values reverse the items by switching the start and end lines.
 
-![The items are displayed in reverse order starting on the right-hand line.](https://mdn.mozillademos.org/files/15651/align9.png)
+![The items are displayed in reverse order starting on the right-hand line.](align9.png)
 
-![The items are displayed in a column in reverse order starting at the bottom line.](https://mdn.mozillademos.org/files/15652/align11.png)
+![The items are displayed in a column in reverse order starting at the bottom line.](align11.png)
 
 Remember that the start line relates to writing modes. The row-related examples above demonstrate how `row` and `row-reverse` work in a left-to-right language such as English. If you are working in a right-to-left language like Arabic then `row` would start on the right, `row-reverse` on the left.
 
-![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](https://mdn.mozillademos.org/files/15647/order-rtl.png)
+![Flex containers with Arabic letters showing how row starts from the right hand side and row-reverse from the left.](order-rtl.png)
 
 This can seem like a neat way to display things in reverse order however you should be mindful that the items are only _visually_ displayed in reverse order. The specification says the following on this matter:
 
-> “Note: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
+> “Nota: The reordering capabilities of flex layout intentionally affect only the visual rendering, leaving speech order and navigation based on the source order. This allows authors to manipulate the visual presentation while leaving the source order intact for non-CSS UAs and for linear models such as speech and sequential navigation.” - [Ordering and Orientation](https://www.w3.org/TR/css-flexbox-1/#flow-order)
 
 If your items were links or some other element that the user could tab to, then the tabbing order would be the order that these items appear in the document source — not your visual order.
 
@@ -42,7 +42,7 @@ If you are using a reverse value, or otherwise reordering your items, you should
 
 > “Authors _must not_ use order or the \*-reverse values of flex-flow/flex-direction as a substitute for correct source ordering, as that can ruin the accessibility of the document.”
 
-> **Note:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
+> **Nota:** For some years Firefox had a bug whereby it would attempt to follow the visual order and not the source order, making it behave differently to other browsers. This has now been fixed. You should always take the source order as the logical order of the document as all up-to-date user agents will be following the specification and doing so.
 
 In the live example below I have added a focus style in order that as you tab from link to link you can see which is highlighted. If you change the order using `flex-direction` you can see how the tab order continues to follow the order that the items are listed in the source.
 
@@ -72,7 +72,7 @@ These items would be displayed on the page in the following order:
 - Source item 2: `order: 3`
 - Source item 4: `order: 3`
 
-![Items have a number showing their source order which has been rearranged.](https://mdn.mozillademos.org/files/15653/order-property.png)
+![Items have a number showing their source order which has been rearranged.](order-property.png)
 
 You can play around with the values in this live example below and see how that changes the order. Also, try changing `flex-direction` to `row-reverse` and see what happens — the start line is switched so the ordering begins from the opposite side.
 
@@ -106,7 +106,7 @@ There are sometimes places where the fact that the logical and therefore reading
 
 You might have a design, perhaps a card that will display a news item. The heading of the news item is the key thing to highlight and would be the element that a user might jump to if they were tabbing between headings to find content they wanted to read. The card also has a date; the finished design we want to create is something like this.
 
-![A design component with a date, then heading and then content.](https://mdn.mozillademos.org/files/15648/order-card.png)
+![A design component with a date, then heading and then content.](order-card.png)
 
 Visually the date appears above the heading, in the source. However, if the card was read out by a screen reader I would prefer that the title was announced first and then the publication date. We can make this so using the `order` property.
 

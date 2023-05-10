@@ -42,7 +42,7 @@ See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more exa
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## See also
 

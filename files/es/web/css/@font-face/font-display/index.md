@@ -1,16 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-tags:
-  - '@font-face'
-  - CSS
-  - Descriptor CSS
-  - Experimental
-  - Fuentes CSS
-  - Referencia
-  - font-display
-  - web fonts
-translation_of: Web/CSS/@font-face/font-display
 ---
 
 {{CSSRef}}
@@ -73,10 +63,8 @@ font-display: optional;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.font-display")}}
+{{Compat}}

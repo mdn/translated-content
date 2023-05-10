@@ -69,7 +69,7 @@ translation_of: Web/API/Navigator
   - : Возвращает {{domxref("window.navigator.mozApps", "Apps")}} объект, который вы можете использовать для установки, управления и контроля [Open Web apps](/Open_Web_Apps).
 - {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
   - : Объект `navigator.mozAudioChannelManager` обеспечивает доступ к {{domxref("mozAudioChannelManager")}} интерфейсу, который используется для управления аудио-каналами этого Firefox OS устройства, включая настройку громкости канала, когда кнопка громкости нажата внутри конкретного приложения.
-- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
+- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline}} {{non-standard_inline}}
   {{domxref("window.navigator.webkitNotification","navigator.webkitNotification")}}
   - : Возвращает {{domxref("navigator.mozNotification", "notification")}} объект, который можно использовать для доставки уведомлений пользователю из вашего веб-приложения.
 - {{domxref("navigator.mozSocial")}} {{non-standard_inline}}
@@ -99,9 +99,9 @@ translation_of: Web/API/Navigator
   - : Разрешает веб-сайту зарегистрировать себя в качестве возможного обработчика для данного MIME типа.
 - {{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}
   - : Разрешает веб-сайту зарегистрировать себя в качестве возможного обработчика для данного протокола.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
   - : Возвращает `false`. JavaScript taint/untaint функции отключены в JavaScript 1.2.
-- {{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}
+- {{domxref("Navigator.vibrate()")}}
   - : Причина вибрации устройства с поддержкой её. Не делает ничего, если нет поддержки вибрации.
 
 ### Не стандартизированные
@@ -110,7 +110,7 @@ translation_of: Web/API/Navigator
   - : Позволяет коду проверить, есть ли документ в данном URI без использования сети.
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Разрешает оплату в приложении.
-- {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
+- {{domxref("window.navigator.preference", "navigator.preference")}} {{non-standard_inline}}
   - : Устанавливает предпочтение пользователя. Этот метод доступен [только для привилегированного кода](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) и является устаревшим; вы должны использовать вместо него XPCOM [Preferences API](/ru/docs/Preferences_API).
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Запрос установки блокировки пробуждения для ресурса. Блокировка пробуждения препятствует определённой части устройства включится автоматически.

@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 ---
 
 {{JSRef}}
@@ -34,11 +33,11 @@ let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
 console.log(langObj.language); // Prints "es"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

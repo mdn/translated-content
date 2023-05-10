@@ -1,6 +1,8 @@
 ---
-title: Express Web フレームワーク (Node.js/JavaScript)
+title: Express ウェブフレームワーク (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
+l10n:
+  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
 {{LearnSidebar}}
@@ -13,14 +15,14 @@ Express は、JavaScript で書かれ、Node.js 実行環境内でホストさ�
 
 > **メモ:** このウェブサイトには、クライアントサイド開発のコンテキストで JavaScript を学習するための多くの有用なリソースがあります。[JavaScript](/ja/docs/Web/JavaScript)、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)、[JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)、[JavaScript](/ja/docs/Learn/JavaScript)(学習)。JavaScript のコアとなる言語と概念は、Node.js でのサーバーサイド開発と同じであり、この資料は関連性があります。Node.js は、ブラウザーレス環境で役立つ機能をサポートするための[追加の API](https://nodejs.org/dist/latest-v10.x/docs/api/) を提供します (たとえば、HTTP サーバーを作成してファイルシステムにアクセスするため。ただし、ブラウザーおよび DOM を操作するための JavaScript API はサポートしません)。
 >
-> このガイドは Node.js と Express を使った作業についての情報を提供します。インターネットや本には他にもたくさんの優れたリソースがあります。これらのうち一部は [How do I get started with Node.js](http://stackoverflow.com/a/5511507/894359) (StackOverflow) と [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora) からリンクされています。
+> このガイドは Node.js と Express を使った作業についての情報を提供します。インターネットや本には他にもたくさんの優れたリソースがあります。これらのうち一部は [How do I get started with Node.js](https://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js/5511507) (StackOverflow) と [What are the best resources for learning Node.js?](https://www.quora.com/What-is-the-greatest-resource-for-learning-Node-js-for-a-newbie) (Quora) からリンクされています。
 
 ## ガイド
 
 - [Express/Node の入門](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
   - : この最初の Express 記事では、"Node とは何ですか？"、"Express とは何ですか？" という質問に答えます。Express ウェブフレームワークが特別になった理由の概要を説明します。主な機能の概要を説明し、Express アプリケーションの主な構成要素をいくつか紹介します (ただし、現時点ではテスト用の開発環境はまだありません)。
 - [Node (Express) 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-  - : Express の目的がわかったので、Windows、Linux (Ubuntu)、および Mac OS X 上で Node/Express 開発環境を設定およびテストする方法を説明します。この記事は、オペレーティングシステム共通の、Express アプリの開発を始めるために必要なものを提供します。
+  - : Express の目的がわかったので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境を設定およびテストする方法を説明します。この記事は、オペレーティングシステム共通の、Express アプリの開発を始めるために必要なものを提供します。
 - [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
   - : 私たちの実用的なチュートリアルシリーズの最初の記事はあなたが何を学ぶかについて説明して、それを通して研究し、そしてその後の記事で進化するであろう "地域図書館" の例のウェブサイトの概要を提供します。
 - [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
@@ -32,23 +34,18 @@ Express は、JavaScript で書かれ、Node.js 実行環境内でホストさ�
 - [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
   - : これで、「地域図書館」のウェブサイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したりテンプレートを使用したりする実際的な経験を積むことになります。
 - [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : このチュートリアルでは Pug を使用して Express で [HTML フォーム](/ja/docs/Learn/HTML/Forms)を操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
+  - : このチュートリアルでは Pug を使用して Express で [HTML フォーム](/ja/docs/Learn/Forms)を操作する方法、特にデータベースからドキュメントを作成、更新、削除するためのフォームを作成する方法を説明します。
 - [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : これで素晴らしい「地域図書館」ウェブサイトを作成したので、それを公共のウェブサーバーにインストールして、図書館のスタッフとメンバーがインターネットを介してアクセスできるようにします。この記事では、ウェブサイトをデプロイするためのホストを見つける方法、およびサイトを運用に向けて準備するために必要な作業の概要について説明します。
 
-## 関連情報
-
-- [PWS/Cloud Foundry に LocalLibrary をインストールする](/ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry)
-  - : この記事では、[Pivotal Web サービスの PaaS クラウド](http://run.pivotal.io/)に「地域図書館」をインストールする方法の実際的なデモンストレーションを行います。これは、上記のチュートリアルの第 7 部で使用されている PaaS クラウドサービスである Heroku に代わるフル機能のオープンソースです。PWS/Cloud Foundry は、Heroku (または別の PaaS クラウドサービス) に代わるものを探している場合、または単に何か違うことを試したい場合には、絶対にチェックする価値があります。
-
 ## チュートリアルを追加する
 
-既存のチュートリアル記事は以上となります。あなたがそれを拡張したいならば、カバーする他の興味深いトピックは以下の通りです：
+既存のチュートリアル記事は以上となります。あなたがそれを拡張したいならば、カバーする他の興味深いトピックは以下の通りです。
 
 - セッションの使用
 - ユーザー認証
 - ユーザーの認可と権限
 - Express ウェブアプリケーションをテストする
-- Express ウェブアプリケーションの Web セキュリティ
+- Express ウェブアプリケーションのウェブセキュリティ
 
 そしてもちろん、評価作業を行うのは素晴らしいことです。

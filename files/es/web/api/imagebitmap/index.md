@@ -1,12 +1,6 @@
 ---
 title: ImageBitmap
 slug: Web/API/ImageBitmap
-tags:
-  - API
-  - Canvas
-  - Imagen de mapa de bits
-  - Referencia
-translation_of: Web/API/ImageBitmap
 ---
 
 {{APIRef("Canvas API")}}
@@ -25,15 +19,13 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 - {{domxref("ImageBitmap.close()")}}
   - : Disposes of all graphical resources associated with an `ImageBitmap`.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#imagebitmap", "ImageBitmap")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ImageBitmap")}}
+{{Compat}}
 
 ## See also
 

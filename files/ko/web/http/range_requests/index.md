@@ -1,11 +1,6 @@
 ---
-title: HTTP range requests
+title: HTTP 범위 요청
 slug: Web/HTTP/Range_requests
-tags:
-  - HTTP
-  - HTTP 범위 요청
-  - 가이드
-translation_of: Web/HTTP/Range_requests
 ---
 
 {{HTTPSidebar}}
@@ -14,7 +9,7 @@ HTTP 범위 요청은 HTTP의 일정 부분만 서버에서 클라이언트로 �
 
 ## 서버가 부분 요청을 지원하는지 확인
 
-서버가 range 요청을 지원한다면, HTTP 응답에 {{HTTPHeader("Accept-Ranges")}}이 존재(그리고 그 값이 "`none`"이 아님)할 것입니다. 이는 예를들면 {{HTTPMethod("HEAD")}} 를 cURL에서 요청함으로 확인할 수 있습니다.
+서버가 범위 요청을 지원한다면, HTTP 응답에 {{HTTPHeader("Accept-Ranges")}}이 존재(그리고 그 값이 "`none`"이 아님)할 것입니다. 이는 예를들면 {{HTTPMethod("HEAD")}} 를 cURL에서 요청함으로 확인할 수 있습니다.
 
 ```
 curl -I http://i.imgur.com/z4d4kWk.jpg

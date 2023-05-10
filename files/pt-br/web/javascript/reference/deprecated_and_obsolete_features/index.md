@@ -63,7 +63,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 - {{jsxref("Object.watch", "watch")}} e {{jsxref("Object.unwatch", "unwatch")}} foram descontinuados. No lugar deles, use {{jsxref("Proxy")}} .
 - `__iterator__` foi descontinuado.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} foi descontinuado. Use {{jsxref("Proxy")}} em seu lugar.
+- `Object.prototype.__noSuchMethod__` foi descontinuado. Use {{jsxref("Proxy")}} em seu lugar.
 
 ### Métodos de data
 
@@ -106,14 +106,8 @@ Estas _features_ obsoletas foram totamente removidas do JavaScript e não podem 
 
 ### Object
 
-| Property                                                                                 | Description                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
+- The [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Function
 

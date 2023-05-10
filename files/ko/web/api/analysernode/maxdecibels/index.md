@@ -1,14 +1,6 @@
 ---
 title: AnalyserNode.maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDecibels
-browser-compat: api.AnalyserNode.maxDecibels
 ---
 {{APIRef("Web Audio API")}}
 

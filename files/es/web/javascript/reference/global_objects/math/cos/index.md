@@ -1,7 +1,6 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cos
 ---
 
@@ -48,13 +47,11 @@ Math.cos(2 * Math.PI); // 1
 
 ## Especificaciones
 
-| Especificación                                                       |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.cos")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,5 +1,5 @@
 ---
-title: '<figcaption>: Элемент подписи иллюстрации'
+title: "<figcaption>: Элемент подписи иллюстрации"
 slug: Web/HTML/Element/figcaption
 tags:
   - Element
@@ -15,13 +15,13 @@ translation_of: Web/HTML/Element/figcaption
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                         |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                           |
-| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                    |
-| Разрешённые родители                                             | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком. |
-| Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                          |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                        |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | Нет                                                                                                                                                                                |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                            | [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент)                                                                                                  |
+| Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                |
+| Допустимые родители                                              | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
+| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                         |
 
 ## Атрибуты
 

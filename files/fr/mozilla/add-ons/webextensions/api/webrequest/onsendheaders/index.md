@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 
 {{AddonSidebar()}}
 
-Cet événement est déclenché juste avant l'envoi des en-têtes. Si votre extension ou une autre extension a modifié les en-têtes dans  `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, vous verrez la version modifiée ici.
+Cet événement est déclenché juste avant l'envoi des en-têtes. Si votre extension ou une autre extension a modifié les en-têtes dans `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, vous verrez la version modifiée ici.
 
 Cet événement est à titre d'information seulement.
 
@@ -117,9 +117,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onSendHeaders", 10)}}
+{{Compat}}
 
 ## Exemples
 

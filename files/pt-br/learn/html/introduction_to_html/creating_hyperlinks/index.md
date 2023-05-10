@@ -45,7 +45,7 @@ Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem
 
 A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro (ferramentas do usuário) e muito mais.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## Anatomia de um link
 
@@ -106,7 +106,7 @@ Um URL ou _Uniform Resource Locator_ é simplesmente uma sequência de texto que
 
 Os URLs usam caminhos para encontrar arquivos. Os caminhos especificam onde, no explorador de arquivos, o recurso que você está interessado está localizado. Vejamos um exemplo simples de uma estrutura de diretório (veja o diretório de [criação de hiperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 A raiz dessa estrutura de diretório é chamada de `criação de hiperlinks`. Ao trabalhar localmente com um site, você terá um diretório no qual ele todo esta dentro. Incluído na raiz, temos um arquivo `index.html` e um arquivo `contacts.html`. Em um site real, `index.html` seria nossa página inicial ou página de entrada (uma página da web que serve como ponto de entrada para um site ou uma seção específica de um site).
 
@@ -264,7 +264,7 @@ Você deve:
 
 O exemplo final acabaria por parecer algo assim:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
 > **Nota:** Se você ficar preso, ou não tem certeza se o fez bem, você pode verificar o diretório de [navegação-menu-marcado](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver a resposta correta.
 

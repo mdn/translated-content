@@ -474,7 +474,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 - {{CSSxRef("::-moz-pagebreak")}}
 - {{CSSxRef("::-moz-pagecontent")}}
 - {{CSSxRef(":placeholder-shown")}} {{deprecated_inline}}
-- {{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}
+- {{CSSxRef("::placeholder")}}{{Deprecated_Inline}}
 - {{CSSxRef("::-moz-progress-bar")}}
 - {{CSSxRef("::-moz-range-progress")}}
 - {{CSSxRef("::-moz-range-thumb")}}

@@ -1,6 +1,6 @@
 ---
 title: Propriedade (CSS)
-slug: Glossary/property/CSS
+slug: Glossary/Property/CSS
 original_slug: Glossario/property/CSS
 ---
 
@@ -31,4 +31,4 @@ div {
 ### Referências Técnicas
 
 - [A referencia sobre CSS no MDN](/pt-BR/docs/Web/CSS/CSS_Reference)
-- [The CSS Working Group current work](http://www.w3.org/Style/CSS/current-work)
+- [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)

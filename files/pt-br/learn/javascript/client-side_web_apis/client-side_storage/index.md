@@ -50,7 +50,7 @@ O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem 
 - Salvar dados e ativos localmente para que o download de um site seja mais rápido (e potencialmente mais barato) ou possa ser usado sem uma conexão de rede.
 - Salvar documentos gerados por aplicativos da web localmente para uso offline
 
-Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados ​​juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados ​​por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
+Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
 
 > **Nota:** : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obter mais informações..
 
@@ -149,7 +149,7 @@ Let's apply this new-found knowledge by writing a simple working example to give
 
 You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a simple website with a header, content, and footer, and a form for entering your name.
 
-![](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![](web-storage-demo.png)
 
 Let's build up the example, so you can understand how it works.
 
@@ -254,7 +254,7 @@ Here we'll run you through an example that allows you to store notes in your bro
 
 The app looks something like this:
 
-![](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![](idb-demo.png)
 
 Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
 
@@ -655,7 +655,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
 
 The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
 
-![](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![](ff-offline.png)
 
 This is where [Service workers](/pt-BR/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/pt-BR/docs/Web/API/Cache) come in.
 
@@ -763,13 +763,3 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Service worker API](/pt-BR/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

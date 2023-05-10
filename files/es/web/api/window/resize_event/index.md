@@ -1,11 +1,6 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/Window/resize_event
-tags:
-  - API
-  - DOM
-  - Propiedad
-translation_of: Web/API/GlobalEventHandlers/onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 ---
 
@@ -56,8 +51,6 @@ function resize()
 
 El evento **resize** es activado después de que la ventana ha sido redimensionada.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Status                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onresize','onresize')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}

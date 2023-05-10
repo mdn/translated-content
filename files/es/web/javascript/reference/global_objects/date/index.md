@@ -1,9 +1,7 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 original_slug: Web/JavaScript/Referencia/Objetos_Globales/Date
-browser-compat: javascript.builtins.Date
 ---
 
 {{JSRef}}

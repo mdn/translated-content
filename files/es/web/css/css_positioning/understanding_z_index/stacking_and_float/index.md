@@ -1,14 +1,6 @@
 ---
 title: Apilamiento y float
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-tags:
-  - Avanzado
-  - CSS
-  - Entendiendo_CSS_z-index
-  - Guía
-  - Referencia
-  - z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Apilamiento_y_float
 ---
 
@@ -34,8 +26,6 @@ Este comportamiento puede ser explicado con una versión mejorada de la lista pr
 5. Elementos posicionados descendentemente , en orden de aparición (en HTML)
 
 > **Nota:** En el ejemplo debajo, todos los bloques excepto el no posicionado son translúcidos para mostrar el orden de apilamiento. Si la opacidad del bloque no posicionado (DIV #4) es reducida, entonces algo extraño ocurre: el fondo y el borde de ese bloque sobresale por encima de los bloques flotantes, pero aun debajo de los bloques posicionados. Yo no pude entender si esto es un bug o una interpretación peculiar de la especificación. (Aplicar opacidad debería crear implícitamente un contexto de apilamiento.)
-
-{{ EmbedLiveSample('Example_source_code', '563', '255', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_and_float') }}
 
 ## Código fuente de ejemplo
 
@@ -118,6 +108,10 @@ b {
   background-color: #fdd;
 }
 ```
+
+### Resultado
+
+{{EmbedLiveSample('', '563', '255')}}
 
 ### También puedes ver
 

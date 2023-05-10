@@ -1,18 +1,6 @@
 ---
 title: 'Tutorial de Django Parte 7: Framework de sesiones'
 slug: Learn/Server-side/Django/Sessions
-tags:
-  - Artículo
-  - Principiante
-  - Python
-  - Servidor
-  - Sesion
-  - Sesiones
-  - Tutorial
-  - aprende
-  - django
-  - lado-servidor
-translation_of: Learn/Server-side/Django/Sessions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication", "Learn/Server-side/Django")}}
@@ -149,7 +137,7 @@ def index(request):
 
 Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, estableciendo el valor a 0 si no había sido establecido previamente. Cada vez que se recibe la solicitud, incrementamos el valor y lo guardamos de vuelta en la sesión (para la siguiente vez que el usuario visita la página). La variable `num_visits` se envía entonces a la plantilla en nuestra variable de contexto.
 
-> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](/es/docs/https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
+> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
 
 Añade la línea que se ve al final del siguiente bloque a tu plantilla HTML principal (**/locallibrary/catalog/templates/index.html**) al final de la sección "Dynamic content" para desplegar la variable de contexto:
 
@@ -180,21 +168,3 @@ En nuestros siguientes artículos explicaremos el framework de autenticación y 
 - [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

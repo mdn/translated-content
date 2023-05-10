@@ -1,12 +1,6 @@
 ---
 title: CanvasImageSource
 slug: conflicting/Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Auxiliar
-  - Canvas
-  - Referencia
-translation_of: Web/API/CanvasImageSource
 original_slug: Web/API/CanvasImageSource
 ---
 

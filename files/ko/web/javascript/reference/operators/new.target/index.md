@@ -1,12 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
 
 {{JSSidebar("Operators")}}

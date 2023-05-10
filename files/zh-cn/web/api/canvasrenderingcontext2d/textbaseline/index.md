@@ -36,7 +36,7 @@ ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographi
 
 ## 示例
 
-### 使用 `textBaseline` 属性
+### 属性值比较
 
 这是一段简单的代码片段，使用 `textBaseline` 属性设置不同的文本基线。
 
@@ -56,45 +56,22 @@ const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bot
 ctx.font = '36px serif';
 ctx.strokeStyle = 'red';
 
-baselines.forEach(function (baseline, index) {
+baselines.forEach((baseline, index) => {
   ctx.textBaseline = baseline;
-  let y = 75 + index * 75;
+  const y = 75 + index * 75;
   ctx.beginPath();
   ctx.moveTo(0, y + 0.5);
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
-});
-```
-
-```html hidden
-<canvas id="canvas" width="550" height="500"></canvas>
-```
-
-```js hidden
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
-
-baselines.forEach(function (baseline, index) {
-  ctx.textBaseline = baseline;
-  let y = 75 + index * 75;
-  ctx.beginPath();
-  ctx.moveTo(0, y + 0.5);
-  ctx.lineTo(550, y + 0.5);
-  ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y);
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('Playable_code', 700, 550) }}
+{{ EmbedLiveSample('属性值比较', 700, 550) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

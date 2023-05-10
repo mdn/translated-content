@@ -122,6 +122,6 @@ function updateValue(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.GlobalEventHandlers.onchange")}}
+{{Compat}}
 
-すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 `change` イベントは Enter を押すか `<select>` からフォーカスが離れるまで発生しませんでした（{{bug("126379")}} を参照）。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。
+すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 `change` イベントは Enter を押すか `<select>` からフォーカスが離れるまで発生しませんでした（[Firefox バグ 126379](https://bugzil.la/126379) を参照）。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。

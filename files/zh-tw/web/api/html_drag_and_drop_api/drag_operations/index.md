@@ -17,7 +17,7 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
-- 在想要拖曳的元素上設定 `{{htmlattrxref("draggable")}}` 屬性為 `true`。
+- 在想要拖曳的元素上設定 `[`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable)` 屬性為 `true`。
 - 註冊 `[`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)` 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
@@ -314,7 +314,7 @@ function doDrop(event)
 
 ## 參見
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

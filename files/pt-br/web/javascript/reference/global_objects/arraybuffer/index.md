@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 {{JSRef}}
 
-O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/en/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
+O objeto **`ArrayBuffer`** é um tipo de dado usado para representar um genérico, buffer de dados binários de tamanho fixo. Você não pode manipular diretamente os conteúdos de um `ArrayBuffer`; em vez disso, você cria um objeto [`ArrayBufferView`](/pt-BR/JavaScript_typed_arrays/ArrayBufferView) que representa o buffer em um formato específico, e usa para ler e escrever os conteúdos do buffer.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
 

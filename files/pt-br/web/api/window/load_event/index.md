@@ -11,7 +11,7 @@ dependentes terminaram de carregar.
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
 - Interface
   - : UIEvent
 - Bubbles

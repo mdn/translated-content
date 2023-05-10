@@ -23,15 +23,6 @@ Localização (L10n) é o processo de tradução de interfaces de software a par
 - [Frequently Asked Localization Questions](/pt-BR/docs/Frequently_Asked_Localization_Questions)
   - : Frequently asked questions about localization.
 
-## Comunidade
-
-- View Mozilla forums...
-
-{{ DiscussionList("dev-l10n", "mozilla.dev.l10n") }}
-
-- [Tools](/Special:Tags?tag=Localization:Tools&language=en)
-- [Community](https://wiki.mozilla.org/L10n)
-
 ## Related Topics
 
 - [Extensions](/pt-BR/docs/Extensions),

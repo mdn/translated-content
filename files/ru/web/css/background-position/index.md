@@ -86,17 +86,17 @@ div {
 
 /* В этих примерах используется сокращённое свойство 'background' */
 .exampleone {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 3em 50% no-repeat;
+  background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
    с соответствующей позицией, от первого указанного до последнего. */
 .examplethree {
-  background-image:    url("https://mdn.mozillademos.org/files/11987/startransparent.gif"),
-                       url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:    url("startransparent.gif"),
+                       url("catfront.png");
   background-position: 0px 0px,
                        center;
 }

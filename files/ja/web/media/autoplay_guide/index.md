@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
-ページが読み込まれるとすぐに音声（または音声トラックを含む動画）の再生を自動的に開始することは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック (autoplay blocking) を提供します。 このガイドでは、さまざまなメディアおよびウェブ音声 API (Web Audio API) の自動再生機能について説明します — 自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。
+ページが読み込まれるとすぐに音声（または音声トラックを含む動画）の再生を自動的に開始することは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック (autoplay blocking) を提供します。 このガイドでは、さまざまなメディアおよびウェブオーディオ API (Web Audio API) の自動再生機能について説明します — 自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。
 
 ソースメディアに音声トラックがない場合、または音声トラックがミュートされている場合、自動再生のブロックは {{HTMLElement("video")}} 要素には適用*されません*。 アクティブな音声トラックを持つメディアは**可聴である**と見なされ、自動再生のブロックがそれらに適用されます。 **可聴でない**メディアは自動再生のブロックの影響を受けません。
 
@@ -30,7 +30,7 @@ audioElement.play();
 次のウェブ機能および API は自動再生のブロックの影響を受ける可能性があります。
 
 - {{Glossary("HTML")}} の {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) (Web Audio API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) (Web Audio API)
 
 ユーザーの観点からは、警告なしに自発的にノイズを発し始めるウェブページまたはアプリは、耳障り、不便、または気まずいものになる可能性があります。 そのため、ブラウザーでは通常、特定の状況下でのみ自動再生が正常に行われるようにすることしかできません。
 
@@ -174,7 +174,7 @@ let playAttempt = setInterval(() => {
 
 ## ウェブ音声 API を使用した自動再生
 
-[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) では、ウェブサイトまたはアプリは、 {{domxref("AudioContext")}} にリンクされているソースノードで `start()` メソッドを使用して音声の再生を開始できます。 ユーザ入力イベント処理のコンテキストの外側でそうすることは、自動再生規則の影響を受けます。
+[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) では、ウェブサイトまたはアプリは、 {{domxref("AudioContext")}} にリンクされているソースノードで `start()` メソッドを使用して音声の再生を開始できます。 ユーザ入力イベント処理のコンテキストの外側でそうすることは、自動再生規則の影響を受けます。
 
 ## autoplay 機能ポリシー
 
@@ -279,7 +279,7 @@ Feature-Policy: autoplay 'none'
 - `media.autoplay.allow-muted`
   - : `true`（既定）の場合、現在ミュートされている音声メディアを自動的に再生することを許可する論理型設定。 これが `false` に変更された場合、音声トラックのあるメディアはミュートされていても再生が許可されません。
 - `media.autoplay.block-webaudio`
-  - : [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) に自動再生のブロックを適用するかどうかを示す論理型設定。 既定値は `true` です。
+  - : [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) に自動再生のブロックを適用するかどうかを示す論理型設定。 既定値は `true` です。
 - `media.autoplay.default`
   - : 既定で自動再生サポートのドメインごとの設定を許可する（`0`）、ブロックする（`1`）、使用時のプロンプト（`2`）のどちらにするかを指定する整数設定。 既定値は `0` です。
 - `media.autoplay.enabled.user-gestures-needed`（ナイトリービルドのみ）
@@ -291,5 +291,5 @@ Feature-Policy: autoplay 'none'
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)（学習ガイド）
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [クロスブラウザー音声の基本](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)

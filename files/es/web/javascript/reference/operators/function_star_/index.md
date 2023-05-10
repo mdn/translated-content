@@ -1,14 +1,6 @@
 ---
 title: expresión function*
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript 2015
-  - Expresión Primaria
-  - Function
-  - Iterator
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Referencia/Operadores/function*
 ---
 
@@ -53,14 +45,11 @@ var x = function*(y) {
 
 ## Especificaciones
 
-| Especificación                                           | Estado                       | Comentario          |
-| -------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}}     | {{Spec2('ES2015')}}     | Definición Inicial. |
-| {{SpecName('ESDraft', '#', 'function*')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.function_star")}}
+{{Compat}}
 
 ## Vea también
 

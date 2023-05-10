@@ -33,7 +33,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
 舉例來說, 如果您的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
@@ -73,7 +73,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 > **備註：** \<img>和\<video>之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
 
-> **備註：** 您可以從在[Github](/zh-TW/docs/https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)上找到本節完成的示例（參見[開源碼](/zh-TW/docs/https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
+> **備註：** 您可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
 
 ### 替代性文字
 
@@ -324,7 +324,7 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **備註：** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> **備註：** From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -483,19 +483,10 @@ p {
 
 ## 試試看!
 
-您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/zh-TW/docs//zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 總結
 
 目前就是這樣啦。 我們已經詳細介紹了圖片和標題說明。 在下一篇文章中我們將進一步介紹，如何使用 HTML 將視頻和音頻嵌入在網頁中。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 在這個主題中
-
-- [Images in HTML](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

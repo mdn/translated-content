@@ -1,10 +1,6 @@
 ---
 title: Preguntas frecuentes sobre CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Proyecto MDC
-translation_of: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Preguntas_frecuentes_sobre_CSS
 ---
 

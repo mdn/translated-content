@@ -4,7 +4,7 @@ slug: orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 
-<div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
+<div>{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
 
 <div class="summary">{{HTMLElement("canvas")}} 自体は単なるビットマップであり、描かれているオブジェクトに関する情報は提供しません。canvas の内容物は、セマンティック HTML のようなアクセシビリティ機能に公開されません。通常、アクセシブルなウェブサイトやアプリでは、canvas の使用を避けるべきでしょう。以下のガイドラインは、canvas をよりアクセシブルにする助けになります。</div>
 

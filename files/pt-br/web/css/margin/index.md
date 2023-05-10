@@ -135,5 +135,5 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Veja também
 
-- [CSS Box Model](/en/CSS/box_model)
-- [Margin collapsing](/en/CSS/margin_collapsing)
+- [CSS Box Model](/pt-BR/CSS/box_model)
+- [Margin collapsing](/pt-BR/CSS/margin_collapsing)

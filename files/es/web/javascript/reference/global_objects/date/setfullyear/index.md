@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setFullYear
 ---
 
@@ -49,7 +48,7 @@ theBigDay.setFullYear(1997);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.setFullYear")}}
+{{Compat}}
 
 ## Ver también
 

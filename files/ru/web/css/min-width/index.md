@@ -6,7 +6,7 @@ translation_of: Web/CSS/min-width
 
 {{CSSRef}}
 
-Свойство [CSS](ru/docs/Web/CSS) **`min-width`** устанавливает минимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления меньше, чем значение, указанное для `min-width`.
+Свойство [CSS](/ru/docs/Web/CSS) **`min-width`** устанавливает минимальную ширину элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("width") }} от становления меньше, чем значение, указанное для `min-width`.
 
 {{EmbedInteractiveExample("pages/css/min-width.html")}}
 

@@ -1,13 +1,6 @@
 ---
 title: 가변상자의 대표적인 사용례
 slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-tags:
-  - 가변상자
-  - CSS
-  - 안내서
-  - 용례
-  - 패턴
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례
 ---
 
@@ -69,7 +62,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사�
 
 가변상자 또는 CSS 격자를 사용하여 카드 구성 요소의 목록을 레이아웃하더라도, 이들 레이아웃 메서드는 가변 또는 격자 구성 요소의 직계 자식에서만 작동합니다. 즉, 콘텐츠의 크기가 가변적이면 카드가 격자 영역의 높이나 가변 컨테이너의 높이까지 늘어납니다. 모든 내부 콘텐츠는 친숙한 블록 레이아웃을 사용합니다. 즉, 콘텐츠가 적은 카드에서는 바닥글이 카드의 아래쪽에 고정되지 않고 콘텐츠의 밑단까지 차오릅니다.
 
-![구성 요소의 내부가 (상위) 랩퍼와 함께 늘어나지 않음을 표시하는 두 개의 카드 구성 요소.](https://mdn.mozillademos.org/files/15669/flex-cards.png)
+![구성 요소의 내부가 (상위) 랩퍼와 함께 늘어나지 않음을 표시하는 두 개의 카드 구성 요소.](flex-cards.png)
 
 가변상자가 이를 해결할 수 있습니다. 우리는 {{cssxref("flex-direction")}}`: column` 속성를 가진 카드를 가변 컨테이너로 만듭니다. 그런 다음 컨텐츠 영역을 `flex: 1`로 설정합니다. 이는 `flex: 1 1 0`의 축약형입니다. — 항목이 `0`의 가변 기준에서 커지거나 줄어들 수 있습니다. 이것이(컨텐츠 영역이) 커질 수 있는 유일한 항목이므로 가변 컨테이너에 있는 잉여 공간을 차지하고 바닥글을 바닥으로 밉니다. 라이브 예제에서 `flex` 속성을 제거하면 바닥글이 컨텐츠 바로 아래로 이동하는 방식을 볼 수 있습니다.
 

@@ -22,7 +22,7 @@ CSS의 경우입니다. 다양한 종류의 과일을 나타내기 위해서는 
 
 기본적으로 대부분의 브라우저의 [사용자 에이전트 스타일시트](/ko/docs/Web/CSS/Cascade#User-agent_stylesheets) {{htmlelement("h1")}} 가 제목(heading) 처럼 _보이도록_ 큰사이즈 폰트로 스타일을 만듭니다(당신이 원하는 대로 스타일을 바꿀 수도 있지만요).
 
-반면에 모든 요소를 ​​'최상위 제목'처럼 _보이게_ 할 수 있습니다. 다음을 고려하세요:
+반면에 모든 요소를 '최상위 제목'처럼 _보이게_ 할 수 있습니다. 다음을 고려하세요:
 
 ```html
 <span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>

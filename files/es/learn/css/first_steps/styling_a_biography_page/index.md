@@ -1,11 +1,6 @@
 ---
 title: Usa tu nuevo conocimiento
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Aprendizaje
-  - CSS
-  - Principiante
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
 
@@ -20,7 +15,7 @@ Con las cosas que has aprendido en las últimas lecciones, puedes darle formato 
       <td>
         Antes de intentar esta evaluación, deberías haber trabajado a través del
         módulo de CSS básico, y también comprender HTML básico (estudia la
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >Introducción a HTML</a
         >).
       </td>
@@ -36,7 +31,7 @@ Con las cosas que has aprendido en las últimas lecciones, puedes darle formato 
 
 Puedes trabajar en el editor en vivo más abajo, o puedes descargar el punto de partida para trabajar con tu propio editor. Esta es una página HTML, con el inicio del CSS en el `<head>` del documento. Si prefieres, puedes mover este CSS a un archivo separado cuando crees el ejemplo en tu computador. Alternativamente, puedes usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 
-> **Nota:** Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
+> **Nota:** Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) al final de esta página.
 
 ## Trabajando con CSS
 
@@ -61,7 +56,7 @@ Usa CSS para cambiar el aspecto de esta biografía, cambiando los valores de las
 
 Deberías conseguir algo parecido a esta página:
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Captura de pantalla de cómo debería verse el ejemplo después de completar la evaluación.](learn-css-basics-assessment.png)
 
 Posteriormente intenta buscar algunas propiedades no mencionadas en esta página en la [referencia de CSS de MDN](/es/docs/Web/CSS/Reference) y ¡arriésgate!.
 
@@ -86,11 +81,3 @@ Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayud
 Felicitaciones por completar este primer modulo!. Deberías tener un buen entendimiento general de CSS, y ser capaz de comprender bastante de los que está sucediendo en una hoja de estilo. En el módulo siguiente, [bloques de construccion CSS](/es/docs/Learn/CSS/Building_blocks), revisaremos en profundidad algunas áreas clave.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## En este módulo
-
-1. [¿Qué es CSS?](/es/docs/Web/CSS/Como_iniciar/Que_es_CSS)
-2. [Empezando con CSS](/es/docs/Learn/CSS/First_steps/Comenzando_CSS)
-3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS)
-4. [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/Como_funciona_CSS)
-5. [Usa tu nuevo conocimiento](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

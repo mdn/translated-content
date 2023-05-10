@@ -1,14 +1,8 @@
 ---
 title: Text()
 slug: Web/API/Text/Text
-tags:
-  - API
-  - DOM
-  - Text
-  - 생성자
-  - 실험중
-translation_of: Web/API/Text/Text
 ---
+
 {{ Apiref("DOM")}}{{seeCompatTable}}
 
 **`Text()`** 생성자는 옵션인 파라미터로 주어진 문자형 컨텐츠인 {{domxref("DOMString")}} 으로 새롭게 생성된 {{domxref("Text")}} 객체를 반환합니다.

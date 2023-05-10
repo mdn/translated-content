@@ -1,13 +1,6 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - Formas de Escritura CSS
-  - Orientacion del Texto CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/text-orientation
 ---
 
 {{CSSRef}}
@@ -72,15 +65,13 @@ p {
 
 {{EmbedLiveSample('Examples')}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                       | Estado                                   | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Writing Modes', '#text-orientation', 'text-orientation')}} | {{Spec2('CSS3 Writing Modes')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-orientation")}}
+{{Compat}}
 
 ## Vea tambien
 

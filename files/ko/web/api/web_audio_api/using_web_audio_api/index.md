@@ -1,18 +1,6 @@
 ---
 title: Web Audio API 사용하기
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -79,7 +67,11 @@ const audioElement = document.querySelector('audio');
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **참고:** 위의 `<audio>` 요소는 {{domxref("HTMLMediaElement")}} 유형의 객체에 의해 DOM에 표현되는데, 이는 고유한 기능을 가지고 있습니다. 이것의 모든 것은 그대로 남아 있습니다; Web Audio API에서 사운드를 사용할 수 있도록 허용할 뿐입니다.
+> **참고:**
+>
+> 위의 `<audio>` 요소는 {{domxref("HTMLMediaElement")}} 유형의 객체에 의해 DOM에 표현되는데, 이는 고유한 기능을 가지고 있습니다.
+>
+> 이것의 모든 것은 그대로 남아 있습니다. Web Audio API에서 사운드를 사용할 수 있도록 허용할 뿐입니다.
 
 ## 사운드 제어하기
 
@@ -170,7 +162,9 @@ gain의 기본값은 1입니다; 이것은 현재 볼륨을 같게 유지할 것
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
 ```
 
-> **참고:** 범위 입력은 오디오 노드의 값을 갱신하는 데 있어 정말로 유용한 입력 유형입니다. 여러분은 범위의 값을 명시할 수 있고 오디오 노드의 파라미터와 함께 이것을 바로 사용할 수 있습니다.
+> **참고:**
+> 범위 입력은 오디오 노드의 값을 갱신하는 데 있어 정말로 유용한 입력 유형입니다.
+> 여러분은 범위의 값을 명시할 수 있고 오디오 노드의 파라미터와 함께 이것을 바로 사용할 수 있습니다.
 
 그러므로 이 입력값을 취하고 입력 노드가 유저에 의해 바뀐 값을 가지고 있을 때 gain 값을 업데이트해 봅시다:
 
@@ -182,7 +176,11 @@ volumeControl.addEventListener('input', function() {
 }, false);
 ```
 
-> **참고:** 노드 객체의 값 (예: `GainNode.gain`)은 단순한 값이 아닙니다. 이 값은 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것은 파라미터라고 불립니다. 이것이 바로 `gain`에 직접 값을 설정하기보다, `GainNode.gain`의 `value` 속성을 설정해야 하는 이유입니다. 이렇게 함은 이 객체가 좀 더 유연해 질 수 있게 하는데, 예를 들자면 파라미터에 주어진 시간 사이에서 변화시킬 값들의 집합을 전달하는 것을 고려해 볼 수 있겠습니다.
+> **참고:**
+> 노드 객체의 값 (예: `GainNode.gain`)은 단순한 값이 아닙니다.
+> 이 값은 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것은 파라미터라고 불립니다.
+> 이것이 바로 `gain`에 직접 값을 설정하기보다, `GainNode.gain`의 `value` 속성을 설정해야 하는 이유입니다.
+> 이렇게 함은 이 객체가 좀 더 유연해 질 수 있게 하는데, 예를 들자면 파라미터에 주어진 시간 사이에서 변화시킬 값들의 집합을 전달하는 것을 고려해 볼 수 있겠습니다.
 
 좋습니다, 이제 사용자는 트랙의 볼륨을 업데이트할 수 있습니다! gain 노드는 만약 여러분이 무음 기능을 추가하기를 원한다면 사용하기에 완벽한 노드입니다.
 
@@ -192,7 +190,11 @@ volumeControl.addEventListener('input', function() {
 
 {{domxref("StereoPannerNode")}} 노드가 있는데, 이는 만약 사용자가 스테레오를 사용할 수 있다면, 좌측과 우측 스피커 사이의 소리의 균형을 변화시킵니다.
 
-**참고**: `StereoPannerNode`는 여러분이 단지 좌에서 우로 스테레오 패닝을 원하는 단순한 상황을 위한 것입니다. {{domxref("PannerNode")}}도 있는데, 이는 더욱 복잡한 효과를 생성하기 위해, 3D 공간, 즉 사운드 _공간화_ 제어의 훌륭한 방법을 고려합니다. 예를 들자면 이것은 머리 위를 나는 새나 사용자의 뒤로부터 오른 소리를 생성하기 위해 게임과 3D 앱에서 사용됩니다.
+> **참고:**
+>
+> `StereoPannerNode`는 여러분이 단지 좌에서 우로 스테레오 패닝을 원하는 단순한 상황을 위한 것입니다.
+> {{domxref("PannerNode")}}도 있는데, 이는 더욱 복잡한 효과를 생성하기 위해, 3D 공간, 즉 사운드 _공간화_ 제어의 훌륭한 방법을 고려합니다.
+> 예를 들자면 이것은 머리 위를 나는 새나 사용자의 뒤로부터 오는 소리를 생성하기 위해 게임과 3D 앱에서 사용됩니다.
 
 이것을 시각화하기 위해서, 우리는 우리의 오디오 그래프를 다음과 같이 보이게 만들 것입니다.
 
@@ -205,7 +207,9 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **참고:** **노트**: 노드 생성의 생성자 메서드는 이 시점에서 모든 브라우저에서 지원되지 않습니다. 오래된 팩토리 메서드는 더욱 널리 지원됩니다.
+> **참고:**
+>
+> 노드 생성의 생성자 메서드는 이 시점에서 모든 브라우저에서 지원되지 않습니다. 오래된 팩토리 메서드는 더욱 널리 지원됩니다.
 
 여기서 우리의 값은 범위가 -1 (극좌)에서 1 (극우)까지입니다. 이 파라미터를 달라지게 하기 위해 다시 범위 유형 입력을 사용합시다:
 
@@ -229,7 +233,7 @@ pannerControl.addEventListener('input', function() {
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-유일하게 남은 것은 테스트해보는 것입니다: [Codepen에서 최종 데모를 확인해 보세요.](https://codepen.io/Rumyra/pen/qyMzqN/)
+유일하게 남은 것은 테스트해보는 것입니다. [Codepen에서 최종 데모를 확인해 보세요.](https://codepen.io/Rumyra/pen/qyMzqN/)
 
 ## 요약
 

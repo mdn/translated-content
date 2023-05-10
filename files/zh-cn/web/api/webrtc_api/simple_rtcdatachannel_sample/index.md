@@ -3,15 +3,15 @@ title: RTCDataChannel 简单示例
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
-{{domxref("RTCDataChannel")}} 接口是[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。API 有意地类似于[WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
+{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
 
-在本示例中，我们会在一个页面内建立 一条{{domxref("RTCDataChannel")}}链接 . 这个场景是为了演示如何链接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立链接的过程，定位和链接另外一台主机的场景在另外的一个示例中。
+在本示例中，我们会在一个页面内建立 一条 {{domxref("RTCDataChannel")}} 连接。这个场景是为了演示如何连接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立连接的过程，定位和连接另外一台主机的场景在另外的一个示例中。
 
 ## The HTML
 
-首先让我们看看我们需要的 HTML 代码[HTML that's needed](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html). 其实很简单，我们先有两个按钮用来链接和断开链接。
+首先让我们看看我们[需要的 HTML 代码](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html)。其实很简单，我们先有两个按钮用来链接和断开连接。
 
 ```html
 <button id="connectButton" name="connectButton" class="buttonleft">
@@ -234,7 +234,7 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
   }
 ```
 
-首先，待发送的消息文本从文本输入框的 {{htmlattrxref("value", "input")}}属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
+首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
 
 ### 接收消息
 

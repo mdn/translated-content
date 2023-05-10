@@ -3,6 +3,8 @@ title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 ---
 
+{{CSSRef}}
+
 **`animation-fill-mode`** [CSS](/zh-TW/CSS) 属性指定 CSS 动画应该如何在其执行前后的样式展示情况。
 
 ```css
@@ -26,9 +28,7 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : 不执行动画时，动画不会应用任何样式。该元素会使用其 **`keyframes`** 关键动画帧规则来显示动画。这是默认值。
 - `forwards`
-  - : 动画执行后停留到最后一个关键帧动画的计算值，简单来说执行结束动画会停留到结束时候的状态，不会是动画执行之前的效果。比如一个元素从左往右运动，添加当前属性值 **`forwards`** 元素会停留到动画执行结束后的右边而不是最初的左边。可以看以下图
-
-    ![](https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_forwards.gif)
+  - : 动画执行后停留到最后一个关键帧动画的计算值，简单来说执行结束动画会停留到结束时候的状态，不会是动画执行之前的效果。比如一个元素从左往右运动，添加当前属性值 **`forwards`** 元素会停留到动画执行结束后的右边而不是最初的左边。
 
     当然最后动画停留显示的关键帧会取决于 `"animation-direction"` 和 `"animation-iteration-count"` 这两个属性 运行方向和运行次数:
 
@@ -48,8 +48,6 @@ animation-fill-mode: both, forwards, none;
 
     会在延迟之后才开始执行关键帧动画，而不是一开始使用第一帧进行停留，具体可以结合 **`both`** 的例子进行尝试。
 
-    ![](https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_backwards.gif)
-
     第一个相关关键帧会取决于 `"animation-direction"` 方向属性:
 
     | `animation-direction` | `first relevant keyframe` |
@@ -59,8 +57,6 @@ animation-fill-mode: both, forwards, none;
 
 - `both`
   - : 动画将遵循开始和结束后的帧动画进行停留，也就是说会从第一帧开始停留显示，动画执行之后会停留到动画结束时的状态。
-
-    ![](https://gitee.com/yoonasy/externalLink/raw/master/animation-fill-mode_both.gif)
 
     与上面两个值的差别是，如果元素使用 **`forwards`**、**`backwards`** 两个值会在没有添加动画之前的展示状态进行停留，执行动画的时候才会开始执行关键帧，有这么一些细小的差别。
 

@@ -1,16 +1,6 @@
 ---
 title: BaseAudioContext
 slug: Web/API/BaseAudioContext
-tags:
-  - API
-  - Audio
-  - BaseAudioContext
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Audio API
-translation_of: Web/API/BaseAudioContext
 ---
 
 {{APIRef("Web Audio API")}}
@@ -106,15 +96,13 @@ var finish = audioCtx.destination;
 // etc.
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                | Status                               | Comment |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#BaseAudioContext', 'BaseAudioContext')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.BaseAudioContext")}}
+{{Compat}}
 
 ## See also
 

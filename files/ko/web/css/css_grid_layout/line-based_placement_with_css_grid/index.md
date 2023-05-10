@@ -1,11 +1,6 @@
 ---
 title: Line-based placement with CSS Grid
-slug: Web/CSS/CSS_Grid_Layout/Line-based_placement_with_CSS_grid
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 [그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
@@ -18,7 +13,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 그리드 컨테이너 안에는 네 개의 자식 요소가 있습니다. 이것들을 아무런 조건 없이 그대로 그리드 위에 위치시키면, 자동 배치 규칙에 따라 각 아이템은 처음에 있는 네 개의 셀 위에 놓이게 됩니다. 여기서 [Firefox의 Grid Highlighter](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 그리드의 열과 행이 어떻게 정의되어 있는지 확인하실 수 있습니다.
 
-![Our Grid highlighted in DevTools](https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png)
+![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
 * {box-sizing: border-box;}

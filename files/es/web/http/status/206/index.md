@@ -1,7 +1,6 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-translation_of: Web/HTTP/Status/206
 ---
 
 {{HTTPSidebar}}
@@ -57,13 +56,11 @@ Content-Range: bytes 4590-7999/8000
 
 ## Especificaciones
 
-| Specification                                                | Title                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------ |
-| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.206")}}
+{{Compat}}
 
 ## Mira también
 

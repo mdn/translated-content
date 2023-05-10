@@ -1,15 +1,6 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-tags:
-  - '@media'
-  - CSS
-  - Consulta de medios
-  - Media Queires
-  - Referencia
-  - característica de medios
-  - media feature
-translation_of: Web/CSS/@media/hover
 ---
 
 {{cssref}}
@@ -49,10 +40,8 @@ La característica hover es especificada como un valor de palabra clave elegida 
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Media Queries', '#hover', 'hover')}} | {{Spec2('CSS4 Media Queries')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.hover")}}
+{{Compat}}

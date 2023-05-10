@@ -44,7 +44,7 @@ Uma versão anterior da especificação também define estas interfaces agora re
 
 - {{domxref("IDBVersionChangeRequest")}}
   - : Representa uma requisição para alterar a versão do banco de dados. O modo de alterar a versão do banco de dados mudou então (chamando IDBFactory.open sem também chamar IDBDatabase.setVersion) e a interface IDBOpenDBRequest agora tem a funcionalidade do removido IDBVersionChangeRequest.
-- {{domxref("IDBDatabaseException")}} {{ obsolete_inline() }}
+- {{domxref("IDBDatabaseException")}}
   - : Representa condições de erro que podem ser encontradas enquanto performando operações no banco de dados.
 
 > **Nota:** há também a [versão síncrona da API](/pt-BR/docs/IndexedDB/Syncronous_API). A versão síncrona não tem implementação em qualquer navegador. É feita para ser utilizada com [WebWorkers](/pt-BR/docs/DOM/Using_web_workers).
@@ -66,7 +66,7 @@ Não há qualquer limite em um único elemento da database. Entretanto podem hav
 - [Conceitos Básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)
 - [Utilizando IndexedDB](/pt-BR/docs/IndexedDB/Using_IndexedDB)
 - [Armazenando Imagens e Arquivos com IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
-- [Especificação da API de Indexed Database](http://www.w3.org/TR/IndexedDB/)
+- [Especificação da API de Indexed Database](https://www.w3.org/TR/IndexedDB/)
 - [IndexedDB — O armazenamento em seu Navegador](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 - [IndexedDB Exemplos](http://nparashuram.com/IndexedDB/trialtool/index.html)
 - [IndexedDB Polyfill/Shim](https://github.com/axemclion/IndexedDBShim) para navegadores que apenas suportam WebSQL (e.g. mobile WebKit)

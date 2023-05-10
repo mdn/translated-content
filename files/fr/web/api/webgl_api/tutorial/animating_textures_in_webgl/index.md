@@ -10,7 +10,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 Dans cette démonstration, nous construisons sur l'exemple précédent en remplaçant nos textures statiques par les images d'un fichier vidéo mp4 en cours de lecture. C'est en fait assez facile à faire, mais c'est amusant à regarder, alors commençons. Un code similaire peut être réalisé pour utiliser n'importe quel type de données (comme un {{HTMLElement ("canvas")}}) comme source pour vos textures..
 
@@ -137,12 +137,12 @@ Si `copierVideo` est true, alors `mettreAJourTexture()` est appelé à chaque fo
 
 C'est tout pour ce qu'il y a à faire pour cela !
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample8/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample8) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample8/)
 
 ## Voir aussi
 
-- [Utilisation de l'audio et de la video dans Firefox](/fr/Using_HTML5_audio_and_video)
+- [Utilisation de l'audio et de la video dans Firefox](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

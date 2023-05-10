@@ -2,6 +2,7 @@
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 하이퍼 링크는 중요하다. — 웹을 웹답게 만들기 때문이다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명한다.
@@ -41,7 +42,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 예를 들면, BBC 홈페이지엔 많은 링크들이 있는데요. 그것들은 수많은 뉴스들 뿐만 아니라 다른 웹사이트들 (navigation functionality), 로그인/등록 페이지들 (user tools) 그리고 더 많은 다른 곳에도 연결되어 있습니다.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## 링크의 구조
 
@@ -105,7 +106,7 @@ URL, 혹은 Uniform Resource Locator 은 단순히 무언가가 웹상의 어디
 
 URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관심있어 하는 파일이 파일 시스템 어디에 있는지 구체적으로 명시하구요. 디렉토리 구조에 대한 예제를 보시죠. (see the [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks) directory.)
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 이 디렉토리 구조의 **root**는 `creating-hyperlinks`. 웹사이트를 로컬 단에서 다룰 때에는 전체 웹사이트가 모두 들어갈 수 있는 하나의 디렉토리를 가져야 할 것입니다. Root 안에서 우리는 `index.html` 파일과 `contacts.html` 파일을 갖습니다. 진짜 웹사이트 안에서 `index.html` 는 우리의 홈 페이지 또는 랜딩 페이지(웹사이트의 접속 포인트 또는 웹사이트의 특정 부분 이 되는 페이지)가 될 것입니다.
 
@@ -160,7 +161,7 @@ Document fragments(문서 조각)를 단독으로 사용하여 동일한 문서�
 
 웹에서는 절대 URL과 상대 URL 두 가지의 용어를 찾아볼 수 있습니다.
 
-**절대 URL**: 웹에서 정의된 상대적인 위치를 가리킵니다. {{glossary("protocol")}} and {{glossary("domain name")}} 포함. 예를 들어, 만약 `index.html` 페이지가 `projects` 폴더에 업로드 되면 이는 웹 서버의 root 안에 위치하게 되고
+**절대 URL**: {{glossary("protocol")}}과 {{glossary("domain name")}}을 포함한, 웹에서 정의된 절대적인 위치를 가리킵니다. 예를 들어, 만약 `index.html` 페이지가 `projects` 폴더에 업로드 되면 이는 웹 서버의 root 안에 위치하게 되고
 웹 사이트 도메인은 `http://www.example.com`,
 그 페이지는 `http://www.example.com/projects/index.html`
 (혹은 그저 `http://www.example.com/projects/`, 대부분의 웹 서버는 URL에서 명시되지 않은 경우 페이지를 불러오기 위해 `index.html` 과 같은 랜딩 페이지를 찾습니다.)
@@ -279,7 +280,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 완성된 예는 다음과 같다:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
 > **참고:** 만약 당신이 막히거나, 당신이 그것을 제대로 가지고 있는지 확신할 수 없다면, 당신은 정확한 답을 보기 위해 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 디렉토리를 확인할 수 있다.
 

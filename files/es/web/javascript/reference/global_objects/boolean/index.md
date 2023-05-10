@@ -1,14 +1,6 @@
 ---
 title: Booleano
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Clase
-  - Class
-  - Constructor
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
 
@@ -98,13 +90,11 @@ var bObjProto = new Boolean({});
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-boolean-objects', 'Boolean')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## Ve también
 

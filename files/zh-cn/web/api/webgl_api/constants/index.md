@@ -3,7 +3,7 @@ title: WebGL 相关常量
 slug: Web/API/WebGL_API/Constants
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 提供了一些常量，这些常量常作为参数传入函数调用，或常作为函数的返回值。所有这些常量都是 {{domxref("GLenum")}} 类型。
 
@@ -23,7 +23,7 @@ var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
-[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其它资源。
+[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 中有更多关于 WebGL 的信息，示例和如何开始 WebGL 编程的其他资源。
 
 ## 常量表
 

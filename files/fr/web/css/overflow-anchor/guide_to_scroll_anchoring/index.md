@@ -64,9 +64,7 @@ Les évènements en question sont les modifications des [valeurs calculées](/fr
 
 ## Compatibilité des navigateurs
 
-Si vous souhaitez appliquer une amélioration progressive et détecter si cette fonctionnalité est disponible dans le navigateur utilisé, vous pouvez utiliser [les requêtes de fonctionnalité](/fr/docs/Web/CSS/@supports) afin de tester la prise en charge de la propriété `overflow-anchor`.
-
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

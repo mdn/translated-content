@@ -67,7 +67,7 @@ event.type
 
 ### Result
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('範例')}}
 
 ## 規範
 

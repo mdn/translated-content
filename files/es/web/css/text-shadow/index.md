@@ -1,10 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-shadow
 ---
 
 {{CSSRef}}
@@ -125,14 +121,11 @@ text-shadow: unset;
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                       | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-shadow')}} | {{Spec2('CSS3 Transitions')}}     | Incluye `text-shadow` en la lista de propiedades que pueden ser animadas.                                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow')}} | {{Spec2('CSS3 Text Decoration')}} | La propiedad CSS `text-shadow` fue [inadecuadamente definida en CSS2](http://www.w3.org/TR/2008/REC-CSS2-20080411/text.html#text-shadow-props) y descartada en CSS2 (Nivel 1). La especificación del Módulo de Textos Nivel 3 de CSS mejoró y clarificó la sintaxis. Más adelante fue movido al nuevo borrador de trabajo del [Módulo de Textos Nivel 3 de CSS](http://www.w3.org/TR/2012/WD-css-text-decor-3-20121113/). |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-shadow")}}
+{{Compat}}
 
 ## Véase también
 

@@ -241,7 +241,7 @@ l10n:
 
 - `controls` 属性を指定しない場合、音声プレイヤーはブラウザーの既定のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} API を使用して、独自のカスタムコントロールを作成することができます。
 - 音声コンテンツを詳細に制御できるように、 `HTMLMediaElement` はさまざまな[イベント](/ja/docs/Web/API/HTMLMediaElement#イベント)を発行します。これは音声の読み込みプロセスを監視する方法も提供するので、エラーを監視したり、再生や捜査を始めることができるようになったことを検出したりすることができます。
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) を使用すると、既存の音声ファイルのストリーミングではなく、 JavaScript コードから音声ストリームを直接生成および操作することもできます。
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用すると、既存の音声ファイルのストリーミングではなく、 JavaScript コードから音声ストリームを直接生成および操作することもできます。
 - `<audio>` 要素は `<video>` 要素と同じような方法で字幕を持つことができません。 Ian Devlin による [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) で、役立つ情報や作業があります。
 
 HTML の `<audio>` 要素の使用に関する良い情報源として、[映像および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の初心者向けチュートリアルがあります。
@@ -427,7 +427,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

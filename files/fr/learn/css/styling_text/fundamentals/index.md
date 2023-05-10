@@ -44,7 +44,7 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus,  pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> **Note :** si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
@@ -103,7 +103,9 @@ avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
 occasions, comme maintenant.</p>
 ```
 
-{{ EmbedLiveSample('Couleur', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250)}}
 
 ### Familles de fontes
 
@@ -179,8 +181,6 @@ p {
 }
 ```
 
-Cela donne le résultat suivant :
-
 ```html hidden
 <h1>Tommy le Chat</h1>
 
@@ -195,7 +195,9 @@ avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
 occasions, comme maintenant.</p>
 ```
 
-{{ EmbedLiveSample('Un_exemple_de_font-family', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Taille de la police de caractères
 
@@ -254,7 +256,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Un_simple_exemple_de_dimensionnement', '100%', 220) }}
+##### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Style de fonte, graisse, transformation et décoration de texte
 
@@ -328,7 +332,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Style_de_fonte_graisse_transformation_et_décoration_de_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Ombres du texte
 
@@ -399,7 +405,9 @@ p {
   }
 ```
 
-{{ EmbedLiveSample('Ombres_du_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 > **Note :** Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
 
@@ -458,7 +466,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Alignement_du_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 220) }}
 
 ### Hauteur de ligne
 
@@ -468,7 +478,7 @@ La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne d
 line-height: 1.5;
 ```
 
-En appliquant cette règle à l'élément {{htmlelement("p")}}  de l'exemple, nous obtenons :
+En appliquant cette règle à l'élément {{htmlelement("p")}} de l'exemple, nous obtenons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -510,6 +520,8 @@ p {
 }
 ```
 
+#### Résultat
+
 {{ EmbedLiveSample('Hauteur_de_ligne', '100%', 250) }}
 
 ### Espacement entre les lettres et les mots
@@ -524,8 +536,6 @@ p::first-line {
   word-spacing: 4px;
 }
 ```
-
-Nous obtiendrons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -573,7 +583,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Espacement_entre_les_lettres_et_les_mots', '100%', 250) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### D'autres propriétés intéressantes
 
@@ -683,11 +695,3 @@ window.addEventListener("load", drawOutput);
 Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composition d'une page d'accueil d'une école communale](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

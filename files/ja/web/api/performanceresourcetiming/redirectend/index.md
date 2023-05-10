@@ -1,67 +1,82 @@
 ---
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
+l10n:
+  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`redirectEnd`** 読み取り専用プロパティは、最後のリダイレクトのレスポンスの最後のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`redirectEnd`** は読み取り専用プロパティで、最後のリダイレクトのレスポンスの最後のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
 リソースを取得するとき、複数の HTTP リダイレクトがあり、いずれかのリダイレクトが現在のドキュメントとは異なる起点を持ち、タイミング許可チェックアルゴリズムがリダイレクトされたリソースごとに渡される場合、このプロパティは、最後のリダイレクトのレスポンスの最後のバイトを受信した直後の時間を返します。そうでなければ、ゼロが返されます。
 
-{{AvailableInWorkers}}
+リダイレクトの回数を取得する場合は、 {{domxref("PerformanceNavigationTiming.redirectCount")}} も参照してください。
 
-## 構文
+## 値
 
-```
-resource.redirectEnd;
-```
+`redirectEnd` プロパティは以下の値を取ります。
 
-### 返値
-
-最後のリダイレクトの応答の最後のバイトを受信した直後の {{domxref("DOMHighResTimeStamp","timestamp")}}。
+- 最後のリダイレクトのレスポンスの最後のバイトを受け取った直後の {{domxref("DOMHighResTimeStamp","timestamp")}}。
+- リソースがキャッシュから即座に取得された場合は `0` です。
+- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+### リダイレクト時間の測定
+
+`redirectEnd` と {{domxref("PerformanceResourceTiming.redirectStart", "redirectStart")}} プロパティを使用して、リダイレクトにどれだけ時間がかかったかを測定することができます。
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const redirect = entry.redirectEnd - entry.redirectStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const redirect = entry.redirectEnd - entry.redirectStart;
+    if (redirect > 0) {
+      console.log(`${entry.name}: Redirect time: ${redirect}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const redirect = entry.redirectEnd - entry.redirectStart;
+  if (redirect > 0) {
+    console.log(`${entry.name}: Redirect time: ${redirect}ms`);
   }
-}
+});
+```
+
+### オリジン間のタイミング情報
+
+`redirectStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+
+例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## 仕様書
 
-| 仕様                                                                                                                         | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-redirectEnd', 'redirectEnd')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceResourceTiming.redirectEnd")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("PerformanceNavigationTiming.redirectCount")}}
+- {{HTTPHeader("Timing-Allow-Origin")}}

@@ -40,7 +40,7 @@ Um [Formulário HTML](/pt-BR/docs/Web/Guide/HTML/Forms) é um grupo de um ou mai
 
 Apesar de ainda não termos criado formulários até o momento neste tutorial, já os encontramos na página do Django Admin — por exemplo, a captura de tela abaixo mostra um formulário para editar um dos nossos modelos de [Livros](/pt-BR/docs/Learn/Server-side/Django/Models), incluindo algumas listas de seleção e editores de texto.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 Trabalhar com formulários pode ser complicado! Desenvolvedores precisam escrever HTML para o formulário, validar e limpar dados submetidos ao servidor (e possivelmente também ao navegador), programar mensagens de erro no formulário para informar o usuário de quaisquer preenchimentos inválidos, lidar com os dados quando enviados com sucesso e, finalmente, mostrar ao usuário algum indicativo de sucesso. Os _Django Forms_ adiantam boa parte desses passos disponibilizando uma estrutura que permite a você definir formulários e seus campos programaticamente, e então utilizar esses objetos tanto para gerar o código HTML do formulário como para cuidar de boa parte da validação e interação de usuário.
 
@@ -50,7 +50,7 @@ Neste tutorial, vamos te mostrar alguns dos métodos para se criar e trabalhar c
 
 Antes de mais nada, um breve resumo de [Formulários HTML](/pt-BR/docs/Learn/HTML/Forms). Considere um formulário HTML simples, com um único campo de texto para entrada do nome de uma "equipe", e sua respectiva legenda:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 O formulário é definido no HTML como uma coleção de elementos dentro das tags `<form>...</form>`, contendo ao menos um elemento `input` do tipo `type="submit"`.
 
@@ -82,7 +82,7 @@ O tratamento de formulários do Django usa todas as mesmas técnicas que aprende
 
 Um fluxograma do processo de como o Django lida com solicitações de formulário é mostrado abaixo, começando com uma solicitação para uma página contendo um formulário (mostrado em verde).
 
-![Updated form handling process doc.](https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png)
+![Updated form handling process doc.](form_handling_-_standard.png)
 
 Com base no diagrama acima, as principais coisas que o manuseio de formulários do Django faz são:
 
@@ -449,15 +449,15 @@ Você pode, alternativamente, construir manualmente uma URL de teste como esta �
 
 Se você tiver sucesso, o formulário padrão será semelhante a este:
 
-![](https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png)
+![](forms_example_renew_default.png)
 
 O formulário com um valor inválido inserido terá a seguinte aparência:
 
-![](https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png)
+![](forms_example_renew_invalid.png)
 
 A lista de todos os livros com o link de renovação será assim:
 
-![](https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png)
+![](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -624,7 +624,7 @@ Primeiro, efetue login no site com uma conta que possua as permissões que você
 
 Então navegue para a página de criação de autor: `http://127.0.0.1:8000/catalog/author/create/`, que deve parecer como a captura de tela abaixo.
 
-![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
+![Form Example: Create Author](forms_example_create_author.png)
 
 Entre com valores para os campos e então pressione **Submit** para dalvar o registro de autor. Você agora deve ser direcionado para uma visualização detalhada para o seu novo autor, com uma URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
 
@@ -632,13 +632,13 @@ Você pode testar edição de registros enexando _/update/_ ao final da URL da p
 
 Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visualização detalhada do autor (ex. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django deve exibir a página de exclusão mostrada abaixo. Pressione **Yes, delete.** para remover o registro e ser levado para a lista de todos os autores.
 
-![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
+![](forms_example_delete_author.png)
 
 ## Desafie-se
 
 Crie alguns _forms_ para criar, editar e excluir registros de `Book`. Você pode utilizar exatamente a mesma estrutura que a de `Authors`. Se seu _template_ **book_form.html** é apenas uma cópia renomeada de **author_form.html** , então a nova página "criar livro" será semelhante a captura de tela abaixo:
 
-![](https://mdn.mozillademos.org/files/14225/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Resumo
 
@@ -658,21 +658,3 @@ Há muito mais que pode ser feito com formulários (confira abaixo nossa lista V
 - [Views genéricas de edição](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

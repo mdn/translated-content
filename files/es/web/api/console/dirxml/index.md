@@ -1,12 +1,6 @@
 ---
 title: Console.dirxml()
-slug: Web/API/Console/dirxml
-tags:
-  - API
-  - DOM
-  - Depuración
-  - metodo
-translation_of: Web/API/Console/dirxml
+slug: Web/API/console/dirxml
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -24,9 +18,13 @@ console.dirxml(objeto);
 - `objeto`
   - : Un objeto JavaScript cuyas propiedades deben ser mostradas.
 
-## Browser compatibility
+## Especificaciones
 
-{{Compat("api.console.dirxml")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

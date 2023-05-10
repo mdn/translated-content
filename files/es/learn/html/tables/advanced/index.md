@@ -1,7 +1,6 @@
 ---
 title: Funciones avanzadas de las tablas HTML y accesibilidad
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
 original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad
 ---
 
@@ -454,9 +453,3 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## En este módulo
-
-- [Conceptos básicos de las tablas en HTML](/es/docs/Learn/HTML/Tables/Basics)
-- [Funciones avanzadas de las tablas HTML y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced)
-- [Estructuración de datos planetarios](/es/docs/Learn/HTML/Tables/Structuring_planet_data)

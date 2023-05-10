@@ -35,7 +35,7 @@ Un booléen qui indique si oui ou non l'objet passé en argument peut être éte
 
 ## Description
 
-Par défaut, les objets sont extensibles, on peut leur ajouter de nouvelles propriétés (et pour les moteurs qui supportent {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}, leur propriété \_\_proto\_\_ peut être modifiée). Un objet peut devenir non-extensible en utilisant les méthodes {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
+Par défaut, les objets sont extensibles, on peut leur ajouter de nouvelles propriétés (et pour les moteurs qui supportent [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}, leur propriété \_\_proto\_\_ peut être modifiée). Un objet peut devenir non-extensible en utilisant les méthodes {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
 
 ## Exemples
 

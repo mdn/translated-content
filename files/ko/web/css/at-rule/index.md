@@ -1,11 +1,6 @@
 ---
 title: '@-규칙'
 slug: Web/CSS/At-rule
-tags:
-  - At-rule
-  - CSS
-  - CSS Reference
-translation_of: Web/CSS/At-rule
 ---
 
 {{cssref}}

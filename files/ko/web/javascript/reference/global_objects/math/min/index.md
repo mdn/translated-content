@@ -1,7 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
 
 {{JSRef}}
@@ -62,11 +61,11 @@ var x = Math.min(f(foo), boundary);
 
 {{jsxref("Math.max()")}} 함수 또한 같은 방식으로 기준보다 크거나 같은 값으로 제한하는 용도로 사용할 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

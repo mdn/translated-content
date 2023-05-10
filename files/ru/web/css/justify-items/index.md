@@ -130,7 +130,7 @@ justify-items: unset;
 
 ### Поддержка в разметке Grid
 
-{{Compat("css.properties.justify-items.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

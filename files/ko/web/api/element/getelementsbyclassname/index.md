@@ -1,7 +1,6 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
 {{APIRef("DOM")}}
 
@@ -93,10 +92,10 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

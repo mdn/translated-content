@@ -1,10 +1,6 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-tags:
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/prompt
 ---
 
 {{ApiRef("Window")}}
@@ -41,7 +37,7 @@ Cuando el usuario hace clic en el botón OK, el valor introducido en el campo de
 
 El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## Notas
 
@@ -51,7 +47,7 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Nótese que el resultado es una cadena de texto. Esto significa que a veces se deberá hacer una conversión al valor introducido por el usuario. Por ejemplo, si la respuesta debe ser un valor numérico, se debe hacer la conversión del valor a tipo Number. `var aNumber = Number(window\.prompt("Type a number", ""))`;
 
-Usuarios de [Mozilla Chrome](/en-US/Chrome) (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
+Usuarios de [Mozilla Chrome](/es/Chrome) (p.ej. extensiones de Firefox) deben usar preferentemente métodos de `nsIPromptService`.
 
 A partir de Chrome 46.0 este método está bloqueado para los elementos {{htmlelement("iframe")}}, , a menos que su atributo [sandbox](/es/docs/Web/HTML/Elemento/iframe#attr-sandbox) tenga el valor `allow-modal`.
 
@@ -59,11 +55,9 @@ En Safari, si el usuario presiona el botón Cancel, la función devuelve una cad
 
 Esta función no tiene efecto en la versión Modern UI/Metro de Internet Explorer para Windows 8. No se muestra un diálogo al usuario, y siempre devuelve `undefined`. No está claro si esto es un bug o un comportamiento previsto. Las versiones de escritorio de IE sí implementan esta función
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                       | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('HTML5 Web application', '#dom-prompt', 'prompt()')}} | {{Spec2('HTML5 Web application')}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

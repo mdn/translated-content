@@ -16,7 +16,7 @@ slug: Web/API/SpeechRecognitionAlternative
 
 ## 例
 
-このコードは、私たちの [Speech color changer](https://github.com/mdn/web-speech-api/blob/master/speech-color-changer/script.js) の例から抜粋しました。
+このコードは、私たちの [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) の例から抜粋しました。
 
 ```js
 recognition.onresult = function(event) {
@@ -36,9 +36,7 @@ recognition.onresult = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-alternative', 'SpeechRecognitionAlternative')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

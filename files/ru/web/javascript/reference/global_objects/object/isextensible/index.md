@@ -28,7 +28,7 @@ Object.isExtensible(obj)
 
 ## Описание
 
-Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство {{jsxref("Object.proto", "__proto__")}}) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.
+Объекты являются расширяемыми по умолчанию: к ним можно добавлять новые свойства и (в движках, поддерживающих свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) их можно изменять. Объект может быть помечен, как не изменяемый с помощью методов {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} или {{jsxref("Object.freeze()")}}.
 
 ## Примеры
 

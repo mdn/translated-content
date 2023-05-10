@@ -1,11 +1,6 @@
 ---
 title: Transformando XML con XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - Todas_las_Categorías
-  - Transformando_XML_con_XSLT
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT
 original_slug: Web/XSLT/Transformando_XML_con_XSLT
 ---
 

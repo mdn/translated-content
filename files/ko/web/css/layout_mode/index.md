@@ -1,12 +1,6 @@
 ---
 title: 레이아웃 모드
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-translation_of: Web/CSS/Layout_mode
 ---
 
 {{cssref}}

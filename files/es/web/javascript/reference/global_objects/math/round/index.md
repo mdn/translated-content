@@ -1,7 +1,6 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/round
 ---
 
@@ -132,9 +131,9 @@ Math.ceil10(-59, 1);       // -50
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.round")}}
+{{Compat}}
 
 ## Véase también
 

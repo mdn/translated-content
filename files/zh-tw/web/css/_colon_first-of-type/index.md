@@ -44,7 +44,7 @@ p:first-of-type {
 
 會有這樣的效果 － 只有第一段文章變為紅色，因為它是 body 中第一個文章節點：
 
-{{EmbedLiveSample('Example_1_Simple_first_paragraph')}}
+{{EmbedLiveSample('例一：選取第一段文章')}}
 
 ### 例二：預定通用選擇器（Assumed universal selector）
 
@@ -73,7 +73,7 @@ div :first-of-type {
 
 會有這樣的效果:
 
-{{EmbedLiveSample('Example_2_Assumed_universal_selector','100%', '120')}}
+{{EmbedLiveSample('例二：預定通用選擇器（Assumed universal selector）','100%', '120')}}
 
 ## 特定規格
 

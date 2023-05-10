@@ -2,6 +2,8 @@
 title: setInterval()
 slug: Web/API/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
+l10n:
+  sourceCommit: c8485a8f94319d289a8892fd261d2fe38b623aa0
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,7 +14,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 ## 構文
 
-```js
+```js-nolint
 setInterval(code)
 setInterval(code, delay)
 
@@ -20,7 +22,7 @@ setInterval(func)
 setInterval(func, delay)
 setInterval(func, delay, arg0)
 setInterval(func, delay, arg0, arg1)
-setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
+setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 ```
 
 ### 引数
@@ -29,9 +31,9 @@ setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
   - : `delay` ミリ秒が経過するたびに実行する{{jsxref("function", "関数")}}です。最初の実行は `delay` ミリ秒後に行われます。
 - `code`
   - : 関数の代わりに文字列を含める構文も許容されており、 `delay` ミリ秒が経過するたびに文字列をコンパイルして実行します。 {{jsxref("Global_Objects/eval", "eval()")}} の使用にリスクがあるのと同じ理由で、この構文は**推奨しません**。
-- `delay`{{optional_inline}}
+- `delay` {{optional_inline}}
   - : 指定した関数またはコードを実行する前にタイマーが待つべき時間をミリ秒 (1/1000 秒) 単位で指定します。引数が 10 より小さい場合は、10 を使用します。実際の遅延が長くなることがあります。例えば[遅延の制約](#遅延の制約)をご覧ください。
-- `arg0, ..., argN` {{optional_inline}}
+- `arg0, …, argN` {{optional_inline}}
   - : タイマーが満了したときに、 _func_ で指定した関数に渡す追加の引数です。
 
 ### 返値
@@ -49,7 +51,7 @@ setInterval(func, delay, arg0, arg1, /* ... ,*/ argN)
 以下の例は、 `setInterval()` の基本的な構文を示します。
 
 ```js
-var intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
 
 function myCallback(a, b)
 {
@@ -100,11 +102,7 @@ function changeColor() {
 
 function flashText() {
   const oElem = document.getElementById("my_box");
-  if (oElem.className === "go") {
-    oElem.className = "stop";
-  } else {
-    oElem.className = "go";
-  }
+  oElem.className = oElem.className === "go" ? "stop" : "go";
 }
 
 function stopTextColor() {
@@ -135,7 +133,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = function (sProperty) {
-    alert(arguments.length > 0 ? this[sProperty] : this);
+  alert(arguments.length > 0 ? this[sProperty] : this);
 };
 
 myArray.myMethod(); // "zero,one,two" と表示
@@ -154,7 +152,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 同じエラー
 
 ### 取りうる解決策
 
-最近の JavaScript ランタイムはすべて（ブラウザーとそそれ以外を含め）、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)と `this` 表記と組み合わせると、 `myArray` メソッドの内部にいる場合は `setInterval( () => this.myMethod)` と記述することが可能です。
+最近の JavaScript ランタイムはすべて（ブラウザーとそそれ以外を含め）、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)と `this` 表記と組み合わせると、 `myArray` メソッドの内部にいる場合は `setInterval(() => this.myMethod())` と記述することが可能です。
 
 IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) メソッドを使用すると、与えられた関数へのすべての呼び出しに対して `this` として使用する値を指定することができます。これにより、関数が呼び出されたときのコンテキストによって `this` が何であるかが不明確な問題を簡単に回避することができます。
 
@@ -177,8 +175,8 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 この場合は、再帰的な `setTimeout()` のパターンを推奨します。
 
 ```js
-(function loop(){
-   setTimeout(function() {
+(function loop() {
+   setTimeout(() => {
       // Your logic here
 
       loop();

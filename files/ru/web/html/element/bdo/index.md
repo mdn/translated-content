@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: The Bidirectional Text Override element'
+title: '<bdo>: Элемент переопределения направления текста'
 slug: Web/HTML/Element/bdo
 tags:
   - направление текста
@@ -8,7 +8,7 @@ translation_of: Web/HTML/Element/bdo
 
 {{HTMLSidebar}}
 
-**HTML-элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
+**HTML - элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
 
 {{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 
@@ -19,8 +19,8 @@ translation_of: Web/HTML/Element/bdo
 | Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                 |
 | Закрывающий тег                                        | {{no_tag_omission}}                                                                                                                                                               |
 | Допустимые родители                                    | Все элементы, принимающие [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content),                                                                                       |
-| Допустимые ARIA-роли                                   | Любый                                                                                                                                                                                  |
-| DOM interface                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                                                                  |
+| DOM-интерфейс                                          | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) для этого элемента. |
 
 ## Атрибуты
 

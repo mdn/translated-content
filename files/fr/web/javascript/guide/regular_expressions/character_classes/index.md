@@ -1,6 +1,6 @@
 ---
 title: Classes de caractères
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 tags:
   - Classes
   - Guide
@@ -33,7 +33,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
           un caractère de saut de ligne.
         </p>
         <p>
-          Ainsi, <code>/.n/</code> correspond à  'un' et 'en' dans "Un baobab
+          Ainsi, <code>/.n/</code> correspond à 'un' et 'en' dans "Un baobab
           nain en cours de croissance" mais pas à 'nain'.
         </p>
         <p>

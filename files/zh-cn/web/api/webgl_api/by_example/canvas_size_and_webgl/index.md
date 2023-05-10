@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 
 此 WebGL 案例将探究设置（或不设置）Canvas 属性的宽高值在浏览器中显示的影响。
 
-{{EmbedLiveSample("canvas-size-and-webgl-source",660,180)}}
+## canvas 属性值大小对 WebGL 渲染的作用
 
-### canvas 属性值大小对 WebGL 渲染的作用
+{{EmbedLiveSample("canvas 属性值大小对 WebGL 渲染的作用",660,180)}}
 
 使用 {{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}} 我们可以观察到 canvas 属性大小是如何影响 WebGL 绘图展示的。
 

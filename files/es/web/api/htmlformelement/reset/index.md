@@ -1,15 +1,6 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Referencia
-translation_of: Web/API/HTMLFormElement/reset
 ---
 
 {{APIRef("HTML DOM")}}
@@ -32,13 +23,11 @@ document.getElementById('myform').reset();
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-form-reset', 'HTMLFormElement: reset')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLFormElement.reset")}}
+{{Compat}}
 
 ## Vea también
 

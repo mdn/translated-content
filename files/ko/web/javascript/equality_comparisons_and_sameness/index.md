@@ -1,15 +1,6 @@
 ---
 title: 동치 비교 및 동일성
 slug: Web/JavaScript/Equality_comparisons_and_sameness
-tags:
-  - Comparison
-  - Equality
-  - Intermediate
-  - JavaScript
-  - SameValue
-  - SameValueZero
-  - Sameness
-translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 
 {{jsSidebar("Intermediate")}}

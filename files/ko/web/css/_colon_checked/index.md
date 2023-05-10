@@ -1,13 +1,6 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:checked
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: Operador delete
 slug: Web/JavaScript/Reference/Operators/delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
 
 {{jsSidebar("Operators")}}

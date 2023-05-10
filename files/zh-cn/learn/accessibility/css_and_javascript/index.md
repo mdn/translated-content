@@ -20,13 +20,13 @@ slug: Learn/Accessibility/CSS_and_JavaScript
     <tr>
       <th scope="row">目标：</th>
       <td>
-        熟悉在 Web 文档中适当地使用 CSS 和 JavaScript，以最大限度地提高无障碍，并且不损害访问性。
+        熟悉在 Web 文档中适当地使用 CSS 和 JavaScript，以最大限度地提高无障碍，并且不损害它。
       </td>
     </tr>
   </tbody>
 </table>
 
-## CSS 和 JavaScript 是可访问的吗？
+## CSS 和 JavaScript 也是无障碍的吗？
 
 CSS 和 JavaScript 对无障碍直接的重要性都不如 HTML，但是它们仍然能够帮助或破坏无障碍，这取决于它们是如何被使用的。换句话说，重要的是考虑一些最佳实践建议，以确保使用 CSS 和 JavaScript 不会破坏文档的无障碍。
 
@@ -212,7 +212,7 @@ a:active {
 
 JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
-现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 可访问——你只需尽力而为，并使你的应用尽可能可访问。
+现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 无障碍——你只需尽力而为，并使你的应用尽可能无障碍。
 
 简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)一文中提到的，主要注意事项包括：
 
@@ -296,7 +296,7 @@ function createLink(testItem) {
 
 每个链接都有双重用途，即它不仅告诉你错误是什么，而且可以单击它或激活它直接跳转到有问题的输入元素，并且更正输入。
 
-> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 {{bug(277178)}}）。
+> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 [Firefox bug 277178](https://bugzil.la/277178)）。
 
 此外，`errorField` 被放置在源顺序的顶部（与 UI 中使用 CSS 时相比，位置不同），这意味着用户可以准确找出表单提交时的问题，并通过返回到页面的开头，来获悉有问题的输入元素。
 
@@ -313,7 +313,7 @@ function createLink(testItem) {
 
 > **备注：** 一些人可能会考虑这样一个事实，即 HTML5 表单有内置的验证机制，如 `required`、`min`/`minlength` 和 `max`/`maxlength` 属性（详细信息，请参阅 {{htmlelement("input")}}元素引用）。我们最终没有在演示中使用这些功能，因为不是所有的浏览器都支持（例如，仅 IE10 及以上版本支持，Safari 不支持）。
 
-> **备注：** WebAIM 的[可用且可访问的表单验证和错误恢复](http://webaim.org/techniques/formvalidation/)提供了一些有关可访问表单验证的更多的有用信息。
+> **备注：** WebAIM 的[可用且无障碍的表单验证和错误恢复](http://webaim.org/techniques/formvalidation/)提供了一些有关无障碍表单验证的更多的有用信息。
 
 ### 其他 JavaScript 无障碍问题
 
@@ -348,13 +348,3 @@ imgThumb.onblur = hideImg;
 下一篇内容是，WAI-ARIA！
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## 在本模块中
-
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础知识基础知识](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [无障碍的多媒体](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍故障排除](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

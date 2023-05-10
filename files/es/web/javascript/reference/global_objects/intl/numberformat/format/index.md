@@ -1,7 +1,6 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format
 ---
 
@@ -55,9 +54,9 @@ console.log(formatted.join('; '));
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.NumberFormat.format")}}
+{{Compat}}
 
 ## See also
 

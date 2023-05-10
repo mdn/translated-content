@@ -8,13 +8,13 @@ browser-compat: javascript.builtins.TypedArray
 
 {{JSRef}}
 
-Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`.  En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
+Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`. En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
 
 {{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
 
 ## Description
 
-ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de  `%TypedArray%` global ou de propriété `TypedArray`.  Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
+ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de `%TypedArray%` global ou de propriété `TypedArray`. Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
 
 Lorsqu'on crée une instance de _TypedArray_ (par exemple, une instance de `Int8Array` ou autre), un tampon de mémoire tableau est créé en interne par le moteur (si un objet `ArrayBuffer` est passé en argument, c'est celui-ci qui est utilisé). C'est l'adresse de cette mémoire tampon qui est sauvegardée comme une propriété interne à l'objet. Toutes les méthodes de `%TypedArray%.prototype` utiliseront ensuite cet espace pour les opérations.
 

@@ -44,7 +44,7 @@ opacity: inherit;
     | 任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}} | 元素半透明 (即元素后面的背景可见).       |
     | `1`                                                                  | 元素完全不透明 (即元素后面的背景不可见). |
 
-### 正式规则
+### 形式语法
 
 {{csssyntax("opacity")}}
 
@@ -71,7 +71,7 @@ div { background-color: yellow; }
 <div class="heavy">This is very easy to see.</div>
 ```
 
-{{EmbedLiveSample('Basic_example', '640', '64')}}
+{{EmbedLiveSample('基本示例', '640', '64')}}
 
 ### :hover 时 opacity 的不同
 
@@ -95,7 +95,7 @@ img.opacity:hover {
      class="opacity">
 ```
 
-{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}
+{{EmbedLiveSample(':hover 时 opacity 的不同', '150', '175')}}
 
 ## 规范
 
@@ -105,6 +105,6 @@ img.opacity:hover {
 
 {{Compat}}
 
-## 阅读更多
+## 参见
 
 - [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)

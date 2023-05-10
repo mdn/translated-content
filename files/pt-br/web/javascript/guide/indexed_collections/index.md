@@ -468,7 +468,7 @@ Array.prototype.forEach.call('uma string', function(chr) {
 
 Para alcançar máxima flexibilidade e eficiência, as views de array tipado do JavaScript dividem a implementação em **buffers** e **views.** Um buffer (implementado pelo objeto {{jsxref("ArrayBuffer")}}) é um objeto que representa um monte de dados; não possui nenhum formato específico e não oferece nenhum mecanismo para acessar seu conteúdo. Para acessar a memória contida em um buffer, você precisa usar uma view. Uma view provê um contexto — ou seja, um tipo de dado, um offset inicial e número de elementos — que transforma o dado em um array tipado real.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### ArrayBuffer
 

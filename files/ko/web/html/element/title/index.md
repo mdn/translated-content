@@ -1,18 +1,6 @@
 ---
 title: '<title>: 문서 제목 요소'
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
-  - 제목
-  - 창 제목
-  - 탭 제목
-  - 페이지 제목
-translation_of: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}
@@ -121,4 +109,4 @@ translation_of: Web/HTML/Element/title
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.title")}}
+{{Compat}}

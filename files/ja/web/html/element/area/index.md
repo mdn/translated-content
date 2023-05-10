@@ -49,7 +49,7 @@ slug: Web/HTML/Element/area
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         {{htmlattrxref("href", "area")}} 属性がある場合は
-        {{ARIARole("link")}}、そうでなければ<a
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>、そうでなければ<a
           href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >

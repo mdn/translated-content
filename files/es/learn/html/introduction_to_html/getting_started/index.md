@@ -1,14 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Atributos
-  - Elemento
-  - Guía
-  - HTML
-  - Principiante
-  - comentários
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
@@ -57,7 +49,7 @@ Si queremos que la línea sea independiente de otras, podemos especificar que es
 
 Exploremos un poco el elemento párrafo:
 
-![Anatomía de los elementos HTML](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![Anatomía de los elementos HTML](grumpy-cat-small.png)
 
 Las principales partes de nuestro elemento son:
 
@@ -265,7 +257,7 @@ Este texto mostrará lo siguiente en tu página:
 
 Los elementos también pueden tener atributos. Los atributos tienen este aspecto:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información extra sobre el elemento que no se mostrará en el contenido. En este caso, el atributo `class` asigna al elemento un identificador que se puede utilizar para dotarlo de información de estilo.
 
@@ -279,9 +271,12 @@ Un atributo debería tener:
 
 Otro ejemplo de un elemento es {{htmlelement("a")}}. Esto significa _ancla_. Una ancla puede convertir el texto que encierra en un hipervínculo. Las anclas pueden tener varios atributos, pero varios son como sigue:
 
-- **`href`**: El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
-- **`title`**: El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
-- **`target`**: El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
+- `href`
+  - : El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
+- `title`
+  - : El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
+- `target`
+  - : El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
 
 Edita la línea de abajo en el área de _Entrada_ para convertirlo en un enlace a tu sitio web favorito.
 
@@ -548,7 +543,9 @@ Si quieres escribir algo de HTML en tu ordenador local para experimentar, puedes
 
 Ahora puedes abrir este archivo en un navegador web para ver cómo se ve el código renderizado. Edita el código y actualiza el navegador para ver cuál es el resultado. En principio se verá algo así:
 
-![Una sencilla página HTML que dice esta es mi página](https://mdn.mozillademos.org/files/12279/template-screenshot.png)En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
+![Una sencilla página HTML que dice esta es mi página](template-screenshot.png)
+
+En este ejercicio, puedes editar el código en tu ordenador como se indica arriba, o puedes editarlo en la ventana editable que tienes a continuación (la ventana editable representa solo el contenido del elemento {{htmlelement("body")}}, en este caso). Intenta reproducir los siguientes pasos:
 
 - Justo debajo de la etiqueta de apertura {{htmlelement("body")}}, añade un título principal para el documento. Este deberá estar dentro de una etiqueta de apertura `<h1>` y una etiqueta de cierre `</h1>`.
 - Edita el contenido del párrafo e incluye algún texto sobre algo que te interese.
@@ -768,15 +765,3 @@ En este punto ya deberías entender el lenguaje, cómo funciona en un nivel bás
 - [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en la cabecera? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcando para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

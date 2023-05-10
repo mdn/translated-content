@@ -33,8 +33,8 @@ Uma **`view`** é uma maneira definida de visualizar a imagem, como um nível de
 
 ```html
 <svg width="600" height="200" viewBox="0 0 600 200"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns="https://www.w3.org/2000/svg"
+    xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="gradient">
       <stop offset="0%" stop-color="#8cffa0" />

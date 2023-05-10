@@ -1,11 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - Elementos flexibles
-  - Propiedades CSS
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}
@@ -94,17 +89,15 @@ flex-grow: unset;
 
 ### Resultado
 
-{{EmbedLiveSample('Example', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{EmbedLiveSample('', '700px', '300px')}}
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox','#flex-grow','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-grow")}}
+{{Compat}}
 
 ## Ver también
 

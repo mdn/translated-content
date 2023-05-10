@@ -9,7 +9,7 @@ original_slug: Web/Compatibility_FAQ/Overwrapped_Icon.html
 アイコンが隣接する他のアイコンと重なってしまい、正しく表示できません。
 隣のアイコンと重なっている部分が、欠けてしまったり、隣のアイコンの上に表示されてしまう場合があります。
 
-表示画面![](https://mdn.mozillademos.org/files/9993/0106.jpg)
+表示画面![](0106.jpg)
 
 ## 要因
 

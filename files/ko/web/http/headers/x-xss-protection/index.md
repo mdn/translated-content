@@ -1,7 +1,6 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
 
 {{HTTPSidebar}}
@@ -67,13 +66,13 @@ Nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 
-## Specifications
+## 명세서
 
-Not part of any specifications or drafts.
+{{Specifications}}
 
 ## 지원 브라우저
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## See also
 

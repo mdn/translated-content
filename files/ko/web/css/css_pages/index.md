@@ -1,12 +1,6 @@
 ---
 title: CSS Paged Media
 slug: Web/CSS/CSS_Pages
-tags:
-  - CSS
-  - CSS Paged Media
-  - CSS Reference
-  - Overview
-translation_of: Web/CSS/CSS_Pages
 ---
 
 {{CSSRef}}

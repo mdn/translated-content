@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 
 ## 示例
 
-### 例子：使用 `Math.LN10`
+### 示例：使用 `Math.LN10`
 
 下面的函数返回 10 的自然对数：
 

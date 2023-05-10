@@ -3,7 +3,7 @@ title: WebGL でのライティング
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 始めに WebGL について理解すべきことは、より広い OpenGL 標準とは異なり、WebGL はライティングをサポートしていないということです。これは自分自身で行う必要があります。幸いそれは難しいことではありませんので、この記事では基礎的な内容を扱います。
 

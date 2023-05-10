@@ -1,14 +1,6 @@
 ---
 title: '::-moz-progress-bar'
 slug: Web/CSS/::-moz-progress-bar
-tags:
-  - CSS
-  - 'CSS: Extensiones Mozilla'
-  - NeedsCompatTable
-  - No estandar
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-moz-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -47,7 +39,7 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`**
 
 La primera barra de arriba debe tener este aspecto:
 
-![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
+![Custom styled progress bar](redbar.png)
 
 ## Ver también
 

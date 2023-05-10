@@ -1,11 +1,6 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/min-height
 ---
 
 {{CSSRef}}

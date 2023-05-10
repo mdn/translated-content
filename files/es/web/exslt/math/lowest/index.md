@@ -1,11 +1,6 @@
 ---
 title: lowest
 slug: Web/EXSLT/math/lowest
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/lowest
 ---
 
 {{XsltRef}}

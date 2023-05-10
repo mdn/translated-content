@@ -1,13 +1,6 @@
 ---
 title: ':read-only'
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:read-only
 ---
 
 {{CSSRef}}
@@ -67,15 +60,11 @@ p[contenteditable="true"] { color: blue; }
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios                                                                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-read-only', ':read-only') }} | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                                    |
-| {{ SpecName('HTML5 W3C', '#selector-read-only', ':read-only') }}     | {{ Spec2('HTML5 W3C') }}         | Define la semántica relacionada con HTML y de la validación de las restricciones. |
-| {{ SpecName('CSS4 Selectors', '#rw-pseudos', ':read-only') }}         | {{ Spec2('CSS4 Selectors') }} | Define la pseudoclase, pero no la semántica asociada.                             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.read-only")}}
+{{Compat}}
 
 ## Ver también
 

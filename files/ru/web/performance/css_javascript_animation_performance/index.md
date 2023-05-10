@@ -41,11 +41,11 @@ API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} пре
 Для начала нам нужно включить инструменты измерения частоты кадров (FPS Tools), чтобы иметь возможность видеть текущую частоту кадров
 
 1. В поле ввода URL наберите _about:config_; Нажмите на кнопку _I’ll be careful, I promise!, чтобы войти на страницу конфигурации_.
-    ![](https://mdn.mozillademos.org/files/11137/Pic1.png)
+    ![](pic1.png)
 
 2. В поле поиска введите `layers.acceleration.draw-fps`.
 3. Нажмите два раза на ячейку, чтобы присвоить значение `true`. Теперь вы видите три розовых блока в верхнем левом углу окна. Первый блок указывает FPS.
-    ![](https://mdn.mozillademos.org/files/11139/Pic2.png)
+    ![](pic2.png)
 
 ### Запуск теста
 
@@ -65,7 +65,7 @@ API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} пре
 
 Вы можете отключить выведение анимации в отдельный поток, чтобы посмотреть, как эта особенность влияет на FPS. Для этого в настройках Firefox найдите флаг `layers.offmainthreadcomposition.async-animations`. И переключите его в `false`.
 
-![](https://mdn.mozillademos.org/files/11141/Pic3.png)
+![](pic3.png)
 
 После выключения этой опции вы увидите, что FPS при использовании CSS стал таким же, как и при использовании JS.
 

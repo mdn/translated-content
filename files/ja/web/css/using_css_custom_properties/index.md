@@ -267,7 +267,7 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 {{Compat("css.properties.custom-property")}}
 
-> **メモ:** 初期仕様のカスタムプロパティの接頭辞は `var-` でしたが、最新の仕様では `--` に変更されました。 Firefox 31 以上は最新仕様に従っています。 ({{bug(985838)}})
+> **メモ:** 初期仕様のカスタムプロパティの接頭辞は `var-` でしたが、最新の仕様では `--` に変更されました。 Firefox 31 以上は最新仕様に従っています。 ([Firefox バグ 985838](https://bugzil.la/985838))
 
 ## 関連情報
 

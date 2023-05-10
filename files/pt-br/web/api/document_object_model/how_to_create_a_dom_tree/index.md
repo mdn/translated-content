@@ -1,12 +1,13 @@
 ---
-title: How to create a DOM tree
+title: Como criar uma árvore DOM
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
-original_slug: DOM/Referencia_do_DOM/How_to_create_a_DOM_tree
 ---
 
-Esta página descreve como usar [DOM Core](http://www.w3.org/TR/DOM-Level-3-Core/core.html) API DOM em JavaScript para criar e modificar objetos do DOM. Aplica-se a todas as aplicações baseadas em Gecko (como o Firefox), tanto em código privilegiado (extensões) como em código não privilegiado (páginas web)
+{{DefaultAPISidebar("DOM")}}
 
-### Criando uma árvore DOM dinamicamente
+Esta página descreve como usar a API [DOM Core](https://www.w3.org/TR/DOM-Level-3-Core/) em JavaScript para criar e modificar objetos DOM. Aplica-se a todos os aplicativos baseados em Gecko (como Firefox), tanto em código privilegiado (extensões) quanto não privilegiado (páginas da web).
+
+### Criando dinamicamente uma árvore DOM
 
 Considere o seguinte documento XML:
 
@@ -26,50 +27,50 @@ Considere o seguinte documento XML:
 </people>
 ```
 
-A W3C DOM API, suportada pelo Mozilla, pode ser usada para criar uma representação na memória deste documento, da seguinte forma:
+A API W3C DOM, suportada pela Mozilla, pode ser usada para criar uma representação na memória deste documento da seguinte forma:
 
 ```js
-var doc = document.implementation.createDocument("", "", null);
-var peopleElem = doc.createElement("people");
+const doc = document.implementation.createDocument("", "", null);
+const peopleElem = doc.createElement("people");
 
-var personElem1 = doc.createElement("person");
+const personElem1 = doc.createElement("person");
 personElem1.setAttribute("first-name", "eric");
 personElem1.setAttribute("middle-initial", "h");
 personElem1.setAttribute("last-name", "jung");
 
-var addressElem1 = doc.createElement("address");
+const addressElem1 = doc.createElement("address");
 addressElem1.setAttribute("street", "321 south st");
 addressElem1.setAttribute("city", "denver");
 addressElem1.setAttribute("state", "co");
 addressElem1.setAttribute("country", "usa");
 personElem1.appendChild(addressElem1);
 
-var addressElem2 = doc.createElement("address");
+const addressElem2 = doc.createElement("address");
 addressElem2.setAttribute("street", "123 main st");
 addressElem2.setAttribute("city", "arlington");
 addressElem2.setAttribute("state", "ma");
 addressElem2.setAttribute("country", "usa");
 personElem1.appendChild(addressElem2);
 
-var personElem2 = doc.createElement("person");
+const personElem2 = doc.createElement("person");
 personElem2.setAttribute("first-name", "jed");
 personElem2.setAttribute("last-name", "brown");
 
-var addressElem3 = doc.createElement("address");
+const addressElem3 = doc.createElement("address");
 addressElem3.setAttribute("street", "321 north st");
 addressElem3.setAttribute("city", "atlanta");
 addressElem3.setAttribute("state", "ga");
 addressElem3.setAttribute("country", "usa");
 personElem2.appendChild(addressElem3);
 
-var addressElem4 = doc.createElement("address");
+const addressElem4 = doc.createElement("address");
 addressElem4.setAttribute("street", "123 west st");
 addressElem4.setAttribute("city", "seattle");
 addressElem4.setAttribute("state", "wa");
 addressElem4.setAttribute("country", "usa");
 personElem2.appendChild(addressElem4);
 
-var addressElem5 = doc.createElement("address");
+const addressElem5 = doc.createElement("address");
 addressElem5.setAttribute("street", "321 south avenue");
 addressElem5.setAttribute("city", "denver");
 addressElem5.setAttribute("state", "co");
@@ -81,11 +82,11 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 ```
 
-Veja também o capítulo [DOM chapter of the XUL Tutorial](/en/XUL_Tutorial/Document_Object_Model).
+Veja também o [capítulo DOM do Tutorial XUL](/pt-BR/docs/XUL_Tutorial/Document_Object_Model).
 
-Você pode automatizar a criação de uma árvore DOM usando um [algoritmo reverso JXON](/en/JXON#JXON_reverse_algorithms) em associação com a seguinte representação JSON:
+Você pode automatizar a criação de uma árvore DOM usando um [algoritmo reverso JXON](/pt-BR/docs/JXON#jxon_reverse_algorithms) em associação com a seguinte representação JSON:
 
-```js
+```json
 {
   "people": {
     "person": [{
@@ -129,15 +130,14 @@ Você pode automatizar a criação de uma árvore DOM usando um [algoritmo rever
 
 ### E daí?
 
-As árvores DOM podem ser consultadas [usando expressões XPath](/en/Using_XPath), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/en/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed para um servidor web](/en/DOM/XMLHttpRequest) (via XMLHttpRequest), transformado usando [XSLT](/en/XSLT), [XLink](/en/XLink), convertido para um objeto JavaScript através de um [algoritmo JXON](/en/JXON), etc.
+As árvores DOM podem ser [consultadas usando expressões XPath](/pt-BR/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript), convertidas em strings ou gravadas em arquivos locais ou remotos usando [XMLSerializer](/pt-BR/docs/Web/ Guide/Parsing_and_serializing_XML) (sem ter que primeiro converter para uma string), [POSTed to a web server](/pt-BR/docs/Web/API/XMLHttpRequest) (via `XMLHttpRequest`), transformado usando [XSLT](/ pt-BR/docs/Web/XSLT), [XLink](/pt-BR/docs/Glossary/XLink), convertido em um objeto JavaScript por meio de um [algoritmo JXON](/pt-BR/docs/JXON), etc .
 
-Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, uma vez que XUL é XML, a UI de sua aplicação pode ser manipulada, baixada, carregada, salva, carregada, convertida ou transformada de forma bastante fácil.
+Você pode usar árvores DOM para modelar dados que não são adequados para RDF (ou talvez você simplesmente não goste de RDF). Outra aplicação é que, como XUL é XML, a interface do usuário do seu aplicativo pode ser dinamicamente manipulada, baixada, carregada, salva, carregada, convertida ou transformada com bastante facilidade.
 
 ## Veja também
 
-- [XML](/en/XML)
-- [JXON](/en/JXON)
-- [XPath](/en/XPath)
-- [E4X (ECMAScript for XML)](/en/E4X)
-- [Parsing and serializing XML](/en/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en/DOM/XMLHttpRequest)
+- [XML](/pt-BR/docs/Web/XML)
+- [JXON](/pt-BR/docs/JXON)
+- [XPath](/pt-BR/docs/Web/XPath)
+- [Parsing and serializing XML](/pt-BR/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest)

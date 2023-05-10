@@ -1,7 +1,6 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_VALUE
 ---
 
@@ -41,9 +40,9 @@ verificarValorMaximo(numero2); // El número es infinito
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.MAX_VALUE")}}
+{{Compat}}
 
 ## Ver también
 

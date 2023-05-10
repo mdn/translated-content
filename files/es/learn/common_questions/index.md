@@ -1,20 +1,11 @@
 ---
 title: Preguntas frecuentes
 slug: Learn/Common_questions
-tags:
-  - CodingScripting
-  - Infrastructure
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - WebMechanics
-translation_of: Learn/Common_questions
 ---
 
 {{LearnSidebar}}
 
-Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](/en-US/docs/Learn/HTML) o [CSS](/en-US/docs/Learn/CSS)). Éstos artículos están diseñados para trabajar por su cuenta.
+Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](/es/docs/Learn/HTML) o [CSS](/es/docs/Learn/CSS)). Éstos artículos están diseñados para trabajar por su cuenta.
 
 ## Cómo funciona la Web
 
@@ -23,7 +14,7 @@ Esta sección cubre los mecanismos de la web -preguntas relativas al conocimient
 - [¿Cómo funciona la Web?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : **Internet** es la columna vertebral de la Web, la infraestructura técnica que hace la Web posible. Básicamente, Internet es una gran red de ordenadores que se comunican todos entre sí. Este artículo explica cómo funciona, en un nivel básico.
 
-- [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+- [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](/es/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
   - : En este artículo se describen varios conceptos relacionados con la web: páginas web, sitios web, servidores web y motores de búsqueda. Estos términos son confundidos habitualmente por los novatos en la Web, o son incorrectamente usados. ¡ Vamos a aprender que significa cada uno de ellos !
 - [¿Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
   - : Con {{Glossary("Hypertext")}} y {{Glossary("HTTP")}}, URL es uno de los conceptos clave de la Web. Es el mecanismo usado por {{Glossary("Browser","browsers")}} para recoger cualquier recurso publicado en la Web.
@@ -56,7 +47,7 @@ Preguntas relacionadas con las herramientas/software que puedes usar para hacer 
   - : Este artículo muestra cómo publicar su sitio en línea con herramientas FTP, una de las formas más comunes de obtener un sitio web en línea para que otros puedan acceder a él desde sus computadoras.
 - [¿Cómo uso las páginas de](/es/docs/Learn/Common_questions/Using_GitHub_Pages)[GitHub?](/es/docs/Learn/Common_questions/Using_GitHub_Pages)
   - : Este artículo proporciona una guía básica para publicar contenido utilizando la función gh-pages de GitHub.
-- [¿Cómo alojar tu sitio web en Google App Engine?](/en-US/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
+- [¿Cómo alojar tu sitio web en Google App Engine?](/es/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : ¿Buscas un lugar donde alojar tu sitio web? Aquí hay una guía paso a paso para alojar tu sitio web en Google App Engine.
 - [¿Qué herramientas están disponibles para depurar y mejorar el rendimiento del sitio web?](/es/docs/Tools/Performance)
   - : Este conjunto de artículos le muestra cómo utilizar las herramientas de desarrollo en Firefox para depurar y mejorar el rendimiento de su sitio web, utilizando las herramientas para comprobar el uso de la memoria, el árbol de nodos de JavaScript, la cantidad de nodos que se renderizan en el DOM y más.
@@ -80,6 +71,6 @@ Esta sección enlista preguntas relacionadas con la estética, estructura de pá
 
 Para soluciones a problemas comunes de HTML/CSS/JavaScript, trata con los siguientes artículos.
 
-- [Usa HTML para solucionar problemas comunes](/en-US/docs/Learn/HTML/Howto)
+- [Usa HTML para solucionar problemas comunes](/es/docs/Learn/HTML/Howto)
 - [Usa CSS para solucionar problemas comunes](/es/docs/Learn/CSS/Howto)
 - [Usa JavaScript para solucionar problemas comunes](/es/docs/Learn/JavaScript/Howto)

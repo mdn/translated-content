@@ -13,7 +13,7 @@ slug: Web/API/Element/keydown_event
 
 キーボードイベントは `<inputs>`, `<textarea>` と `contentEditable` 属性または `tabindex="-1"` を持つものだけが生成します。
 
-Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（{{bug(354358)}}）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
+Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
 
 ```js
 eventTarget.addEventListener("keydown", event => {
@@ -52,7 +52,7 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
 
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
-    > **警告:** これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが  QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
+    > **警告:** これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{Readonlyinline}}
 

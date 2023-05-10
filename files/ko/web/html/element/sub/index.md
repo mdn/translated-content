@@ -1,16 +1,6 @@
 ---
 title: '<sub>: 아래 첨자 요소'
 slug: Web/HTML/Element/sub
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sub
 ---
 
 {{HTMLSidebar}}
@@ -124,7 +114,7 @@ commonly known as "caffeine."</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## 같이 보기
 

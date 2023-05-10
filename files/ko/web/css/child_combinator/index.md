@@ -1,11 +1,6 @@
 ---
 title: 자식 결합자
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Child_combinator
 ---
 
 {{CSSRef("Selectors")}}

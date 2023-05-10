@@ -23,135 +23,6 @@ white-space: initial;
 white-space: unset;
 ```
 
-```html hidden
-<div class="grid">
-<div class="col">
-  <div class="cell">
-    <div class="label">normal</div>
-    <div>
-  <p class="wspNormal">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre-wrap</div>
-    <div>
-  <p class="wspPreWrap">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre-line</div>
-    <div>
-  <p class="wspPreLine">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="label">nowrap</div>
-    <div>
-  <p class="wspNowrap">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="label">pre</div>
-    <div>
-  <p class="wspPre">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla pellentesque metus eget massa feugiat lobortis.
-  </p>
-    </div>
-  </div>
-  <div class="note">
-    Examples above are applied to the following HTML (square represents white spaces):
-    <pre>☐☐&lt;p&gt;
-☐☐☐☐Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-☐☐☐☐Nulla pellentesque metus eget massa feugiat lobortis.
-☐☐&lt;/p&gt;</pre>
-  </div>
-</div>
-</div>
-```
-
-```css hidden
-html,body {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-pre { margin-bottom: 0; }
-
-.grid {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #EEE;
-  font: 1em monospace;
-}
-
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
-}
-
-.cell {
-  box-sizing: border-box;
-  margin: .5em;
-  padding: 0;
-  background-color: #FFF;
-  overflow: hidden;
-  text-align: center;
-}
-
-.note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: .5em;
-  font: .8em sans-serif;
-  text-align: left;
-  flex: none;
-}
-
-p {
-  width: 50%;
-  font: .8em sans-serif;
-  max-width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  resize: horizontal;
-  background: #E4F0F5;
-  padding: .5em;
-  margin: .5em auto 0;
-  text-align: left;
-}
-
-.wspNormal  { white-space: normal; }
-.wspNowrap  { white-space: nowrap; }
-.wspPre     { white-space: pre; }
-.wspPreWrap { white-space: pre-wrap; }
-.wspPreLine { white-space: pre-line; }
-```
-
-{{EmbedLiveSample("white-space", "100%", 530, "", "", "example-outcome-frame")}}
-
 {{cssinfo}}
 
 ## Syntax
@@ -271,7 +142,7 @@ select.addEventListener("change", function(e) {
 
 ### CSS + Result
 
-{{ EmbedLiveSample('See_in_action', '80%', '500px') }}
+{{ EmbedLiveSample('See it in action', '80%', '500px') }}
 
 ## Specifications
 

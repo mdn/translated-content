@@ -56,7 +56,7 @@ transition-timing-function: ease-in, ease-out; // ease-in to width and ease-out 
 
 ## 範例
 
-`transition-timing-function: ease`
+### `transition-timing-function: ease`
 
 ```html hidden
  <div class="parent">
@@ -117,9 +117,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_ease",275,150)}}
+{{EmbedLiveSample("transition-timing-function: ease",275,150)}}
 
-`transition-timing-function: ease-in`
+### `transition-timing-function: ease-in`
 
 ```html hidden
  <div class="parent">
@@ -180,9 +180,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_easein",275,150)}}
+{{EmbedLiveSample("transition-timing-function: ease-in",275,150)}}
 
-`transition-timing-function: ease-out`
+### `transition-timing-function: ease-out`
 
 ```html hidden
  <div class="parent">
@@ -243,9 +243,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_easeout",275,150)}}
+{{EmbedLiveSample("transition-timing-function: ease-out",275,150)}}
 
-`transition-timing-function: ease-in-out`
+### `transition-timing-function: ease-in-out`
 
 ```html hidden
  <div class="parent">
@@ -306,9 +306,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_easeinout",275,150)}}
+{{EmbedLiveSample("transition-timing-function: ease-in-out",275,150)}}
 
-`transition-timing-function: linear`
+### `transition-timing-function: linear`
 
 ```html hidden
  <div class="parent">
@@ -369,9 +369,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_linear",275,150)}}
+{{EmbedLiveSample("transition-timing-function: linear",275,150)}}
 
-`transition-timing-function: step-start`
+### `transition-timing-function: step-start`
 
 ```html hidden
  <div class="parent">
@@ -432,9 +432,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_stepstart",275,150)}}
+{{EmbedLiveSample("transition-timing-function: step-start",275,150)}}
 
-`transition-timing-function: step-end`
+### `transition-timing-function: step-end`
 
 ```html hidden
  <div class="parent">
@@ -495,9 +495,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_stepend",275,150)}}
+{{EmbedLiveSample("transition-timing-function: step-end",275,150)}}
 
-`transition-timing-function: steps(4, end)`
+### `transition-timing-function: steps(4, end)`
 
 ```html hidden
  <div class="parent">
@@ -558,7 +558,7 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("ttf_step4end",275,150)}}
+{{EmbedLiveSample("transition-timing-function: steps(4, end)",275,150)}}
 
 ## 規格
 

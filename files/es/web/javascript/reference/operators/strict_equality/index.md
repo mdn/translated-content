@@ -1,7 +1,6 @@
 ---
 title: Igualdad Estricta (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
 
@@ -77,13 +76,11 @@ console.log(object1 === object1);  // true
 
 ## Especificaciones
 
-| Specification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.strict_equality")}}
+{{Compat}}
 
 ## También revisa
 

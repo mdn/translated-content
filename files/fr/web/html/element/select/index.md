@@ -76,7 +76,7 @@ Pour plus d'informations sur la mise en forme de `<select>` :
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_basique","100%","150")}}
+{{EmbedLiveSample("","100%","150")}}
 
 ### Exemple multi-selection
 
@@ -98,6 +98,10 @@ L'exemple qui suit est légèrement plus complexe et illustre certaines fonction
   </select>
 </label>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("","100%","150")}}
 
 Cet exemple n'est pas disponible de façon interactive (le moteur de MDN supprime l'attribut `multiple` lors de l'affichage de la page) mais vous pouvez voir [l'exemple sur GitHub](https://mdn.github.io/learning-area/html/forms/select-example/select-multiple.html).
 
@@ -227,7 +231,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisé</th>
-      <td>{{ARIARole("menu")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

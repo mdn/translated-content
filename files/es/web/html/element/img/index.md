@@ -1,9 +1,7 @@
 ---
 title: "<img>: El elemento incrustado de imagen"
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 original_slug: Web/HTML/Elemento/img
-browser-compat: html.elements.img
 ---
 
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.

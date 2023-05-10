@@ -45,7 +45,7 @@ As APIs (Application Programming Interfaces) são construções disponíveis nas
 
 Pense no seguinte exemplo: o uso de energia elétrica em sua casa ou apartamento. Quando você deseja utilizar um eletrodoméstico, você precisa somente ligar o aparelho na tomada. Não é preciso conectar diretamente o fio do aparelho diretamente na caixa de luz. Isso seria, além de muito ineficiente, difícil e perigoso de ser feito (caso você não seja eletricista).
 
-![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
+![](plug-socket.png)
 
 _Fonte da imagem: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) por [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), retirado do Flickr._
 
@@ -60,7 +60,7 @@ A linguagem JavaScript, especialmente client-side, possui diversas APIs disponí
 - **APIs de navegadores:** fazem parte do seu navegador web, sendo capazes de expor dados do navegador e do ambiente ao redor do computador circundante, além de fazer coisas úteis com esses dados. Por exemplo, a [API Web Áudio](/pt-BR/docs/Web/API/API_Web_Audio) fornece construções JavaScript simples para manipular áudio em seu navegador - pegar uma faixa de áudio, alterar o volume dela, aplicar efeitos, etc. Por trás dos panos, o navegador utiliza códigos complexos de baixo nível (ex: C++) para realizar o processamento de áudio de fato. Como foi dito anteriormente, essa complexidade toda é abstraída de você pela API.
 - **APIs de terceiros:** geralmente, não fazem parte do navegador e você precisa recuperar seu código e suas informações de outro local da web. A [API do Twitter](https://developer.twitter.com/en/docs), por exemplo, permite mostrar os seus últimos tweets no seu site. Ela fornece um conjunto de construções especiais para ser usado de maneira a consultar o serviço do Twitter e retornar informações específicas.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 ### Relacionamento entre JavaScript, APIs, e outras ferramentas JavaScript
 
@@ -258,11 +258,11 @@ WebAPI features are subject to the same security considerations as JavaScript an
 
 In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, you may have noticed a dialog like the following when loading up our earlier [Geolocation](/pt-BR/docs/Web/API/Geolocation) example:
 
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
+![](location-permission.png)
 
 The [Notifications API](/pt-BR/docs/Web/API/Notifications_API) asks for permission in a similar fashion:
 
-![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
+![](notification-permission.png)
 
 These permission prompts are given to users for security — if they weren't in place, then sites could start secretly tracking your location without you knowing it, or spamming you with a lot of annoying notifications.
 
@@ -271,13 +271,3 @@ These permission prompts are given to users for security — if they weren't in 
 Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Neste módulo
-
-- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

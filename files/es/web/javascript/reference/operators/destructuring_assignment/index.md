@@ -1,16 +1,6 @@
 ---
 title: La desestructuración
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Característica del lenguaje
-  - Desestructuración
-  - Desestructurar arreglos y objetos anidados
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Objetos anidados y desestructuración de array
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
 
@@ -443,13 +433,11 @@ const {self, prot} = obj;
 
 ## Especificaciones
 
-| Especificación                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Desestructuración de asignación')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Ve también
 

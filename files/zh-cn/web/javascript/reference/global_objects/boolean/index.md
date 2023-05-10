@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean
 
 ## 描述
 
-如果需要，作为第一个参数传递的值将转换为布尔值。如果省略该参数或参数值为 `0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}，或空字符串（`""`），则该对象具有的初始值为 `false`。所有其它值，包括任何对象，空数组（`[]`）或字符串 `"false"`，都会创建一个初始值为 `true` 的对象。
+如果需要，作为第一个参数传递的值将转换为布尔值。如果省略该参数或参数值为 `0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}，或空字符串（`""`），则该对象具有的初始值为 `false`。所有其他值，包括任何对象，空数组（`[]`）或字符串 `"false"`，都会创建一个初始值为 `true` 的对象。
 
 注意不要将基本类型中的布尔值 `true` 和 `false` 与值为 `true` 和 `false` 的 `Boolean` 对象弄混了。
 
@@ -107,5 +107,5 @@ const bObjProto = new Boolean({});
 ## 参见
 
 - [Boolean](/zh-CN/docs/Glossary/Boolean)
-- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#布尔类型)
+- [基本类型：布尔类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)
 - [布尔类型（维基百科）](https://zh.wikipedia.org/wiki/布林_(資料類型))

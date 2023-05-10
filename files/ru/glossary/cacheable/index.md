@@ -1,12 +1,13 @@
 ---
 title: Кешируемые методы
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 tags:
   - Glossary
   - HTTP
 translation_of: Glossary/cacheable
 original_slug: Глоссарий/cacheable
 ---
+
 **Кешируемые** ответы - это HTTP-ответы, которые могут быть закешированы, то есть сохранены для дальнейшего восстановления и использования позже, тем самым снижая число запросов к серверу. Не все HTTP-ответы могут быть закешированы. Вот несколько ограничений:
 
 - Метод, используемый в запросе, кешируемый, если это {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}}. Ответ для {{HTTPMethod("POST")}} или {{HTTPMethod("PATCH")}} запросов может также быть закеширован, если указан признак "свежести" данных и установлен заголовок {{HTTPHeader("Content-Location")}}, но это редко реализуется. (Например, Firefox не поддерживает это согласно <https://bugzilla.mozilla.org/show_bug.cgi?id=109553>.) Другие методы, такие как {{HTTPMethod("PUT")}} и {{HTTPMethod("DELETE")}} не кешируемые, и результат их выполнения не кешируется.

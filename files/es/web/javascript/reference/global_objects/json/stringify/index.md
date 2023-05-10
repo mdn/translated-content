@@ -1,12 +1,6 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - stringify
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/stringify
 ---
 
@@ -231,7 +225,7 @@ console.log(restoredSession);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON.stringify")}}
+{{Compat}}
 
 ## Ver también
 

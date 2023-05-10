@@ -6,9 +6,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 
 Remove o dado de navegação especificado.
 
-O dado de navegação a ser removido está especificado na opção  `dataTypes`, em que é um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}.
+O dado de navegação a ser removido está especificado na opção `dataTypes`, em que é um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}.
 
-Você pode usar a opção `removalOptions`, um {{WebExtAPIRef("browsingData.RemovalOptions")}} objeto, para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover  de aplicativos e extensões hospedados também.
+Você pode usar a opção `removalOptions`, um {{WebExtAPIRef("browsingData.RemovalOptions")}} objeto, para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover de aplicativos e extensões hospedados também.
 
 Isso é uma função assíncrona que retorna uma [`Promise`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -24,7 +24,7 @@ let removing = browser.browsingData.remove(
 ### Parâmetros
 
 - `removalOptions`
-  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover  de aplicativos e extensões hospedados também.
+  - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}, que pode ser usado para controlar o quão longe no passado a remoção de dados será feita e se deseja remover dados apenas de páginas normais ou remover de aplicativos e extensões hospedados também.
 - `dataTypes`
   - : `object`. Um objeto {{WebExtAPIRef("browsingData.DataTypeSet")}}, descrevendo os tipos de dados para remover (e.g. histórico, downloads, ...).
 

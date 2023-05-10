@@ -11,7 +11,7 @@ Trabalhar com identidades contextuais: listar, criar, remover e atualizar identi
 
 Com a funcionalidade de identidades contextuais, cada uma possui um nome, cor e um ícone. Novas abas são atribuidas a uma identidade, e o nome, ícone e cor aparecerão na barra de endereço. Internamente, cada identidade guarda seu próprio cookie e não os compartilha entre outras abas.
 
-![](https://mdn.mozillademos.org/files/14719/containers.png)Identidade contextual é uma funcionalidade experimental no Firefox e está habilitado apenas no Firefox Nightly. Para habilitá-lo em outras versões do Firefox, atribua true as seguintes preferências: `privacy.userContext.enabled`. Observe que embora identidades contextuais estejam disponíveis no Firefox para Android, não há uma interface gráfica funcionando com ela para esta versão de navegador.
+![](containers.png)Identidade contextual é uma funcionalidade experimental no Firefox e está habilitado apenas no Firefox Nightly. Para habilitá-lo em outras versões do Firefox, atribua true as seguintes preferências: `privacy.userContext.enabled`. Observe que embora identidades contextuais estejam disponíveis no Firefox para Android, não há uma interface gráfica funcionando com ela para esta versão de navegador.
 
 Antes do Firefox 57, a API `contextualIdentities` é disponível apenas se a funcionalidade de identidade contextual está habilitada por si mesma. Se uma extensão tentou usar a API `contextualIdentities` API sem a funcionalidade estar habilitada, então as chamadas do método deveria resolver suas promises com `false`.
 

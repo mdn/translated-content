@@ -19,7 +19,7 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 JavaScript 对象是动态的属性“包”（指其自己的属性）。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。
 
-> **备注：** 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符号是用于指向 `someObject` 的原型。从 ECMAScript 6 开始，`[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 `__proto__`。但它不应该与构造函数 `func` 的 `prototype` 属性相混淆。被构造函数创建的实例对象的 `[[Prototype]]` 指向 `func` 的 `prototype` 属性。**`Object.prototype` **属性表示 {{jsxref("Object")}} 的原型对象。
+> **备注：** 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符号是用于指向 `someObject` 的原型。从 ECMAScript 6 开始，`[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 `__proto__`。但它不应该与构造函数 `func` 的 `prototype` 属性相混淆。被构造函数创建的实例对象的 `[[Prototype]]` 指向 `func` 的 `prototype` 属性。**`Object.prototype`** 属性表示 {{jsxref("Object")}} 的原型对象。
 
 这里演示当尝试访问属性时会发生什么：
 
@@ -74,7 +74,7 @@ console.log(o.d); // undefined
 
 代码来源链接：<https://repl.it/@khaled_hossain_code/prototype>
 
-给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当继承的属性带有 [getter 或 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) 时。
+给对象设置属性会创建自有属性。获取和设置行为规则的唯一例外是当继承的属性带有 [getter 或 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter) 时。
 
 ### 继承方法
 
@@ -367,7 +367,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 对于从 Java 或 C++ 转过来的开发人员来说，JavaScript 会有点让人困惑，因为它完全是动态的，都是运行时，而且不存在类（class）。所有的都是实例（对象）。即使我们模拟出的“类”，也只是一个函数对象。
 
-你可能已经注意到我们的 function A 有一个叫做 `prototype` 的特殊属性。该特殊属性可与 JavaScript 的 `new` 操作符一起使用。对原型对象的引用被复制到新实例的内部 `[[Prototype]]` 属性。例如，当执行 `var a1 = new A();` 时，JavaScript（在内存中创建对象之后，和在运行函数 `A()` 把 `this` 指向对象之前）设置 `a1.[[Prototype]] = A.prototype;`。然后当您访问实例的属性时，JavaScript 首先会检查它们是否直接存在于该对象上，如果不存在，则会 `[[Prototype]]` 中查找。这意味着你在 `prototype` 中定义的所有内容都可以由所有实例有效地共享，你甚至可以稍后更改部分 `prototype`，并在所有现有实例中显示更改（如果有必要的话）。
+你可能已经注意到我们的 function A 有一个叫做 `prototype` 的特殊属性。该特殊属性可与 JavaScript 的 `new` 操作符一起使用。对原型对象的引用被复制到新实例的内部 `[[Prototype]]` 属性。例如，当执行 `var a1 = new A();` 时，JavaScript（在内存中创建对象之后，和在运行函数 `A()` 把 `this` 指向对象之前）设置 `a1.[[Prototype]] = A.prototype;`。然后当您访问实例的属性时，JavaScript 首先会检查它们是否直接存在于该对象上，如果不存在，则会在 `[[Prototype]]` 中查找。这意味着你在 `prototype` 中定义的所有内容都可以由所有实例有效地共享，你甚至可以稍后更改部分 `prototype`，并在所有现有实例中显示更改（如果有必要的话）。
 
 像上面的例子中，如果你执行 `var a1 = new A(); var a2 = new A();` 那么 `a1.doSomething` 事实上会指向 `Object.getPrototypeOf(a1).doSomething`，它就是你在 `A.prototype.doSomething` 中定义的内容。也就是说：`Object.getPrototypeOf(a1).doSomething == Object.getPrototypeOf(a2).doSomething == A.prototype.doSomething`（补充：实际上，执行 `a1.doSomething()` 相当于执行 `Object.getPrototypeOf(a1).doSomething.call(a1)==A.prototype.doSomething.call(a1)`）
 
