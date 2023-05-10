@@ -203,16 +203,16 @@ TEMPLATES = [
     {% csrf_token %}
     <table>
       <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
+        <td>\{{ form.username.label_tag }}</td>
+        <td>\{{ form.username }}</td>
       </tr>
       <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
+        <td>\{{ form.password.label_tag }}</td>
+        <td>\{{ form.password }}</td>
       </tr>
     </table>
     <input type="submit" value="login">
-    <input type="hidden" name="next" value="{{ next }}">
+    <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
@@ -272,9 +272,9 @@ LOGIN_REDIRECT_URL = '/'
   <form action="" method="post">
   {% csrf_token %}
   {% if form.email.errors %}
-    {{ form.email.errors }}
+    \{{ form.email.errors }}
   {% endif %}
-      <p>{{ form.email }}</p>
+      <p>\{{ form.email }}</p>
     <input type="submit" class="btn btn-default btn-lg" value="Reset password">
   </form>
 {% endblock %}
@@ -297,8 +297,8 @@ LOGIN_REDIRECT_URL = '/'
 該模板提供了 HTML 電子郵件的文本，其中包含我們將發送給用戶的重置鏈接。 創建**/locallibrary/templates/registration/password_reset_email.html**，並為其提供以下內容：
 
 ```django
-Someone asked for password reset for email {{ email }}. Follow the link below:
-{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+Someone asked for password reset for email \{{ email }}. Follow the link below:
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### 密碼重置確認
@@ -315,14 +315,14 @@ Someone asked for password reset for email {{ email }}. Follow the link below:
         {% csrf_token %}
             <table>
                 <tr>
-                    <td>{{ form.new_password1.errors }}
+                    <td>\{{ form.new_password1.errors }}
                         <label for="id_new_password1">New password:</label></td>
-                    <td>{{ form.new_password1 }}</td>
+                    <td>\{{ form.new_password1 }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.new_password2.errors }}
+                    <td>\{{ form.new_password2.errors }}
                         <label for="id_new_password2">Confirm password:</label></td>
-                    <td>{{ form.new_password2 }}</td>
+                    <td>\{{ form.new_password2 }}</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -387,10 +387,10 @@ Someone asked for password reset for email {{ email }}. Follow the link below:
     …
 
    {% if user.is_authenticated %}
-     <li>User: {{ user.get_username }}</li>
-     <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
+     <li>User: \{{ user.get_username }}</li>
+     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-     <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
+     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
   </ul>
 ```
@@ -555,7 +555,7 @@ urlpatterns += [
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">{{ bookinst.book.title }}</a> ({{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -579,13 +579,13 @@ urlpatterns += [
 ```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
-   <li>User: {{ user.get_username }}</li>
+   <li>User: \{{ user.get_username }}</li>
 
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
 
-   <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
+   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
+   <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```
