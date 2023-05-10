@@ -5,7 +5,7 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-**`File.webkitRelativePath`** は、 {{htmlattrxref("webkitdirectory", "input")}} 属性が設定された {{HTMLElement("input")}} 要素でユーザーが選択したディレクトリーに対するファイルのパスを指定する {{domxref("USVString")}} を持つ読み取り専用のプロパティです。
+**`File.webkitRelativePath`** は、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素でユーザーが選択したディレクトリーに対するファイルのパスを指定する {{domxref("USVString")}} を持つ読み取り専用のプロパティです。
 
 ## 構文
 

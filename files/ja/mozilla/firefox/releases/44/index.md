@@ -23,7 +23,7 @@ l10n:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、{{htmlattrxref("crossorigin", "link")}} 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
+- [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
 
 ### CSS
 

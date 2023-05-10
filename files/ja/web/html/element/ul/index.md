@@ -188,5 +188,5 @@ slug: Web/HTML/Element/ul
 
   - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
-  - {{CSSxRef("line-height")}} プロパティ: 非推奨の {{htmlattrxref("compact", "ul")}} 属性のシミュレート
+  - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](/ja/docs/Web/HTML/Element/ul#compact)ment/ul#compact)ment/ul#compact) 属性のシミュレート
   - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御

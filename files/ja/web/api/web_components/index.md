@@ -56,7 +56,7 @@ original_slug: Web/Web_Components
 
   - : 以下の拡張機能が定義されています。
 
-    - {{htmlattrxref("is")}} グローバル HTML 属性: 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
+    - [`is`](/ja/docs/Web/HTML/Global_attributes#is) グローバル HTML 属性: 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション: カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
 
 - CSS の擬似クラス
@@ -72,7 +72,7 @@ original_slug: Web/Web_Components
 
   - : カスタム要素に関連する擬似要素です。
 
-    - {{cssxref("::part")}}: [シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内にある要素で、一致する {{HTMLAttrxRef("part")}} 属性を持つものを表します。
+    - {{cssxref("::part")}}: [シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つものを表します。
 
 ### シャドウ DOM
 

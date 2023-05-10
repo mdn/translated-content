@@ -22,7 +22,7 @@ HTML5 の文書型宣言を使ってください。短く、覚えやすく、�
 
 ### 文書の言語
 
-{{htmlelement("html")}} 要素に {{htmlattrxref('lang')}} 属性を使い、文書の言語を設定してください。
+{{htmlelement("html")}} 要素に [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を使い、文書の言語を設定してください。
 
 ```html example-good
 <html lang="ja">

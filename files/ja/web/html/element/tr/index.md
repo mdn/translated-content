@@ -9,7 +9,7 @@ slug: Web/HTML/Element/tr
 
 {{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
 
-セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で {{htmlattrxref("colspan", "td")}} 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す {{htmlattrxref("rowspan", "td")}} 属性も使用できます。
+セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性も使用できます。
 
 表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか[例](#例)がありますが、さらに多くの例や詳しいチュートリアルは、[ウェブ開発を学ぶ](/ja/docs/Learn)領域の [HTML 表](/ja/docs/Learn/HTML/Tables)シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。
 
@@ -34,7 +34,7 @@ slug: Web/HTML/Element/tr
     - `justify`
       - : テキストが各セルの幅全体を満たす（両端揃え）ように、テキスト内のホワイトスペースを広げます。
     - `char`
-      - : 行内の各セルを、特定の文字に対して揃えます (この方法で設定された列内の各行は、その文字に対して揃えます)。これは {{htmlattrxref("char", "tr")}} および {{htmlattrxref("charoff", "tr")}} を使用して、揃える文字 (数値データを揃える際の "." や "," が一般的です) および揃える文字に続く文字の数を指定します。この配置方法は、広くは対応されていませんでした。
+      - : 行内の各セルを、特定の文字に対して揃えます (この方法で設定された列内の各行は、その文字に対して揃えます)。これは [`char`](/ja/docs/Web/HTML/Element/tr#char) および [`charoff`](/ja/docs/Web/HTML/Element/tr#charoff) を使用して、揃える文字 (数値データを揃える際の "." や "," が一般的です) および揃える文字に続く文字の数を指定します。この配置方法は、広くは対応されていませんでした。
 
     `align` の値が明示的に設定されていない場合は、親ノードの値を継承します。
 
@@ -48,9 +48,9 @@ slug: Web/HTML/Element/tr
 
 - `char` {{deprecated_inline}}
 
-  - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 {{htmlattrxref("align", "tr")}} 属性が `char` ではない場合は、この属性は無視されます。
+  - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性が `char` ではない場合は、この属性は無視されます。
 
-    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 {{htmlattrxref("char", "tr")}} と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
+    > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 [`char`](/ja/docs/Web/HTML/Element/tr#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
 - `charoff` {{deprecated_inline}}
 
@@ -146,8 +146,8 @@ th, td {
 
 見出し領域が実際は2行あることに注目してください。ひとつは "Name", "ID", "Membership Dates", "Balance" の見出し、もうひとつは "Joined" と "Canceled" であり、これは "Membership Dates" の小見出しです。これは以下のようにして実現します。
 
-- 1 行目の "Name", "ID", "Balance" の見出しセルは、{{htmlattrxref("rowspan")}} 属性を使用して 2 行にまたがっており、それぞれのセルの高さが 2 行分になります。
-- 1 行目の "Membership Dates" の見出しセルは、{{htmlattrxref("colspan")}} 属性を使用して 2 列にまたがっており、実際に見出しの幅が 2 列分になります。
+- 1 行目の "Name", "ID", "Balance" の見出しセルは、[`rowspan`](#rowspan) 属性を使用して 2 行にまたがっており、それぞれのセルの高さが 2 行分になります。
+- 1 行目の "Membership Dates" の見出しセルは、[`colspan`](#colspan) 属性を使用して 2 列にまたがっており、実際に見出しの幅が 2 列分になります。
 - 2 行目の {{HTMLElement("th")}} 要素は、"Joined" と "Canceled" しか持っていません。ほかの列は 2 行目にまたがっている 1 行目のセルがすでに占有しているためであり、 2 行目のセルは "Membership Dates" の下へ適切に配置されます。
 
 #### HTML

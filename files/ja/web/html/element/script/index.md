@@ -151,7 +151,7 @@ l10n:
 
 ## メモ
 
-{{HTMLAttrxRef("async", "script")}}, {{HTMLAttrxRef("defer", "script")}}, `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
+[`async`](/ja/docs/Web/HTML/Element/script#async), [`defer`](/ja/docs/Web/HTML/Element/script#defer), `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
 
 スクリプトは `text/javascript` の MIME タイプで提供するべきですが、ブラウザーは寛大であり、画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、`text/csv` のタイプで提供されたスクリプトに限りブロックします。スクリプトがブロックされると、 {{domxref("Element/error_event", "error")}} イベントがその要素に送られ、そうではない場合は {{domxref("Element/load_event", "load")}} イベントが送られます。
 
@@ -175,7 +175,7 @@ l10n:
 
 ### モジュールの代替
 
- `module` の値を持つ {{htmlattrxref("type", "script")}} 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
+ `module` の値を持つ [`type`](/ja/docs/Web/HTML/Element/script#type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
 
 ```html
 <script type="module" src="main.js"></script>

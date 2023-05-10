@@ -67,7 +67,7 @@ slug: Web/HTML/Element/pre
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
 
 - `cols` {{non-standard_inline}}{{deprecated_inline}}
-  - : 1 行あたりの*望ましい*文字数を示します。これは {{htmlattrxref("width", "pre")}} の標準外の別名です。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。
+  - : 1 行あたりの*望ましい*文字数を示します。これは [`width`](/ja/docs/Web/HTML/Element/pre#width) の標準外の別名です。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。
 - `width` {{deprecated_inline}}
   - : 1 行あたりの*望ましい*文字数を示します。この属性は技術的には実装されていますが、視覚上の効果はありません。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。
 - `wrap` {{non-standard_inline}}
@@ -96,7 +96,7 @@ body {
 
 弱視の人や、読み上げソフトのような支援技術を使用している人は、順番に読んだときに整形済みテキストで表現されているものが何か理解できないかもしれません。
 
-{{HTMLElement("figure")}} および {{HTMLElement("figcaption")}} 要素の組み合わせに、 {{htmlattrxref("id")}} および [ARIA](/ja/docs/Web/Accessibility/ARIA) `role` および `aria-labelledby` 属性を補ったもので、整形済みテキストを図形として扱い、 `figcaption` を図形の別の説明として提供することができます。
+{{HTMLElement("figure")}} および {{HTMLElement("figcaption")}} 要素の組み合わせに、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) および [ARIA](/ja/docs/Web/Accessibility/ARIA) `role` および `aria-labelledby` 属性を補ったもので、整形済みテキストを図形として扱い、 `figcaption` を図形の別の説明として提供することができます。
 
 ### 例
 

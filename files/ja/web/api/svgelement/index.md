@@ -14,7 +14,7 @@ SVG 言語における要素に直接対応する SVG DOM インタフェース�
 _Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeignElement")}}_
 
 - {{domxref("SVGElement.dataset")}}{{ ReadOnlyInline }}
-  - : 要素に付与された[カスタム・データ属性](/ja/docs/Web/Guide/HTML/Using_data_attributes)に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで `*` は、その対のキーの名前です。これは、HTML の {{domxref("HTMLElement.dataset")}} 属性および HTML の {{htmlattrxref("data-*")}} グローバル属性とちょうど同様に、うまく機能します。
+  - : 要素に付与された[カスタム・データ属性](/ja/docs/Web/Guide/HTML/Using_data_attributes)に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで `*` は、その対のキーの名前です。これは、HTML の {{domxref("HTMLElement.dataset")}} 属性および HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) グローバル属性とちょうど同様に、うまく機能します。
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : An {{DOMxRef("SVGAnimatedString")}} that reflects the value of the {{SVGAttr("class")}} attribute on the given element, or the empty string if `class` is not present. This attribute is deprecated and may be removed in a future version of this specification. Authors are advised to use {{DOMxRef("Element.classList")}} instead.
 - {{domxref("SVGElement.ownerSVGElement")}}{{ ReadOnlyInline }}
@@ -61,6 +61,6 @@ Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget
 
 ## 参照
 
-- HTML {{htmlattrxref("data-*")}} attribute
+- HTML [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) attribute
 - SVG {{SVGAttr("data-*")}} attribute
 - [Using custom data attributes in HTML](/ja/docs/Web/Guide/HTML/Using_data_attributes)

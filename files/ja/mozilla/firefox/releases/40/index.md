@@ -93,7 +93,7 @@ _変更なし。_
 
 #### DOM & HTML DOM
 
-- 最新の仕様書の要求に従い、{{htmlattrxref("srcset", "image")}} をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
+- 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Element/image#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
 - 画像と同様に、Firefox は非表示の {{HTMLElement("iframe")}} に対して {{domxref("Window.requestAnimationFrame()")}} を抑制するようになりました ([Firefox バグ 1145439](https://bugzil.la/1145439))。
 - {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} はウェブワーカーで使用できなくなりました ([Firefox バグ 1154878](https://bugzil.la/1154878))。
 

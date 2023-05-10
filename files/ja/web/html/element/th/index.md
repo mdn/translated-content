@@ -5,7 +5,7 @@ slug: Web/HTML/Element/th
 
 {{HTMLSidebar}}
 
-**`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、{{htmlattrxref("scope", "th")}} 属性と {{htmlattrxref("headers", "th")}} 属性で定義します。
+**`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、[`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性と [`headers`](/ja/docs/Web/HTML/Element/th#headers) 属性で定義します。
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -85,20 +85,20 @@ slug: Web/HTML/Element/th
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify` (テキストのみ): セルの中で幅が全体にわたるように、中身が引き延ばされます。
-    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "th")}} 属性および {{htmlattrxref("charoff", "th")}} 属性で定義します。
+    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/th#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/th#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **メモ:** この属性は最新の標準仕様で廃止されたため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに {{htmlattrxref("char", "th")}} で使用する値と同じものを指定してください。
+    > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに [`char`](/ja/docs/Web/HTML/Element/th#char) で使用する値と同じものを指定してください。
 
 - `axis` {{deprecated_inline}}
 
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに {{htmlattrxref("scope", "th")}} 属性を使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性を使用してください。
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/th
 
 - `char` {{deprecated_inline}}
 
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 {{htmlattrxref("align", "th")}} 属性を `char` に設定していない場合は、この属性を無視します。
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/th#align) 属性を `char` に設定していない場合は、この属性を無視します。
 
     > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
 

@@ -117,7 +117,7 @@ l10n:
 
 - {{domxref("DOMImplementation.hasFeature()")}} は、どのような場合でも `true` を返すようになりました ([Firefox バグ 984778](https://bugzil.la/984778))。
 - {{domxref("HTMLInputElement")}} および {{domxref("HTMLTextAreaElement")}} の `selectionStart` および `selectionEnd` プロパティが、テキストが選択されていない場合に 0 ではなく、現在のテキスト入力カーソルの位置を正しく返すようになりました ([Firefox バグ 1287655](https://bugzil.la/1287655))。
-- {{domxref("HTMLImageElement")}} インターフェイスと対応する {{HTMLElement("img")}} 要素で {{htmlattrxref("onerror")}} イベントハンドラーをサポートしました。 {{domxref("Element/error_event", "error")}} イベントを、[画像の読み込みや解釈を行おうとしてエラーが発生](/ja/docs/Web/API/HTMLImageElement#errors)したときに、要素に送信します。
+- {{domxref("HTMLImageElement")}} インターフェイスと対応する {{HTMLElement("img")}} 要素で `onerror` イベントハンドラーをサポートしました。 {{domxref("Element/error_event", "error")}} イベントを、[画像の読み込みや解釈を行おうとしてエラーが発生](/ja/docs/Web/API/HTMLImageElement#errors)したときに、要素に送信します。
 - {{domxref("Animation.effect", "effect")}} プロパティに値を設定して、ウェブアニメーション ({{domxref("Animation")}}) のエフェクトを変更できるようになりました。以前は、このプロパティが読み取り専用でした ([Firefox バグ 1049975](https://bugzil.la/1049975))。
 - Permissions API の {{domxref("Permissions.revoke()")}} メソッドを追加しました。設定項目 (`dom.permissions.revoke.enable`) で制御しており、設計や存在自体について [Web Application Security Working Group](https://www.w3.org/2011/webappsec/) で議論されているため、デフォルトで無効化しています。
 - [ストレージ API](/ja/docs/Web/API/Storage_API) の {{domxref("NavigatorStorage.storage", "navigator.storage")}} プロパティおよび {{domxref("StorageManager.estimate()")}} メソッドを、必要なサポートコードと共に実装しました。ストレージユニットの永続化機能は未実装です。[Firefox バグ 1267941](https://bugzil.la/1267941) をご覧ください。

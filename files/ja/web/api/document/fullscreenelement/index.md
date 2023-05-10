@@ -44,4 +44,4 @@ function isVideoInFullscreen() {
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 属性
+- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

@@ -69,10 +69,10 @@ slug: Web/HTML/Element/output
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
 - `for`
-  - : 他の要素の {{htmlattrxref("id")}} の空白区切りのリストで、入力値が計算に使用される (または何らかの影響を与える) 要素を示します。
+  - : 他の要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) の空白区切りのリストで、入力値が計算に使用される (または何らかの影響を与える) 要素を示します。
 - `form`
 
-  - : この要素に関連付けられた (*フォームオーナー*である) {{HTMLElement("form")}} 要素を指定します。この値は、同じ文書内の `<form>` 要素の {{htmlattrxref("id")}} である必要があります。 (この属性が設定されていない場合、 `<output>` 要素は祖先の `<form>` があれば、その要素に関連づけられます。
+  - : この要素に関連付けられた (*フォームオーナー*である) {{HTMLElement("form")}} 要素を指定します。この値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) である必要があります。 (この属性が設定されていない場合、 `<output>` 要素は祖先の `<form>` があれば、その要素に関連づけられます。
 
     この属性は `<output>` 要素を、包含する `<form>` に限らず文書中のどこにある `<form>` にも結び付けることができます。これは祖先の `<form>` 要素を上書きもします。
 
