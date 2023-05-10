@@ -97,13 +97,13 @@ slug: Web/HTML/Element/menu
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+- `label` {{Deprecated_inline}}
   - : ユーザーに対して表示されるメニューの名称です。入れ子のメニューの中で、サブメニューへアクセスするためのラベルを提供するために使用されます。親要素が {{HTMLElement("menu")}} で*コンテキストメニュー*状態である場合に限り、指定する必要があります。
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : この属性は定義済みのメニューの種類を示すものであり、以下 2 つの値のいずれかを指定します。
 
-    - `context` {{Deprecated_inline}} : 他の要素を介して起動されるコマンドのグループを表す*ポップアップメニュー*状態を表します。これは {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性で参照されるボタンメニューや、 [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) 属性のある要素のコンテキストメニューである可能性があります。この値はこの属性がなく、その親要素も `<menu>` であった場合の既定値です。
+    - `context` {{Deprecated_inline}} : 他の要素を介して起動されるコマンドのグループを表す*ポップアップメニュー*状態を表します。これは {{HTMLElement("button")}} 要素の [`menu`](/ja/docs/Web/HTML/Element/button#menu) 属性で参照されるボタンメニューや、 [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) 属性のある要素のコンテキストメニューである可能性があります。この値はこの属性がなく、その親要素も `<menu>` であった場合の既定値です。
     - `toolbar`: *ツールバー*状態であり、ユーザーと対話するための一連のコマンドから成るツールバーを表します。これは {{HTMLElement("li")}} の番号なしリストの形か、子要素に `<li>` を含まない場合は、利用できるコマンドを記述した[フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)です。この値はこの属性が指定されていない場合の既定値です。
 
 ## 使用上の注意
@@ -112,7 +112,7 @@ slug: Web/HTML/Element/menu
 
 HTML メニューは、コンテキストメニュー (一般的に、別の要素を右クリックすると表示される) またはツールバーを作成するために使用することができます。
 
-**[コンテキストメニュー](#context_menu)**は、 `<menu>` 要素の中にメニューで選択可能な項目を表す {{HTMLElement("menuitem")}} 要素、メニュー内のサブメニューを表す `<menu>` 要素、メニューの内容をセクションに分けるセパレーター行を表す {{HTMLElement("hr")}} 要素が含まれたもので構成されます。 コンテキストメニューは、関連付ける要素の {{HTMLAttrxRef("contextmenu")}} 属性、または[ボタンでアクティブにするメニュー](#button_menu)であれば {{HTMLElement("button")}} 要素の {{HTMLAttrxRef("menu", "button")}} 属性を使用して、メニューをアクティブ化する要素に紐づけます。
+**[コンテキストメニュー](#context_menu)**は、 `<menu>` 要素の中にメニューで選択可能な項目を表す {{HTMLElement("menuitem")}} 要素、メニュー内のサブメニューを表す `<menu>` 要素、メニューの内容をセクションに分けるセパレーター行を表す {{HTMLElement("hr")}} 要素が含まれたもので構成されます。 コンテキストメニューは、関連付ける要素の [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#contextmenu) 属性、または[ボタンでアクティブにするメニュー](#button_menu)であれば {{HTMLElement("button")}} 要素の [`menu`](/ja/docs/Web/HTML/Element/button#menu) 属性を使用して、メニューをアクティブ化する要素に紐づけます。
 
 **[ツールバーメニュー](#toolbar)** は、 `<menu>` 要素の中身が 2 通りのうちの一方で記述されたもので構成されます。 {{HTMLElement("li")}} 要素で表した項目の順不同リスト (それぞれの項目が、ユーザーが利用できるコマンドやオプションを表す) または、 (`<li>` 要素がない場合) 使用なコマンドやオプションを表す[フローコンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ)のどちらかです。
 
@@ -156,7 +156,7 @@ div {
 
 ### メニューボタン
 
-> **警告:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の {{HTMLAttrxRef("type", "menu")}} 属性は廃止されました。
+> **警告:** メニューボタンを実装しているブラウザーはまだ知られていません。 `<menu>` 要素の [`type`](/ja/docs/Web/HTML/Element/menu#type) 属性は廃止されました。
 
 > **警告:** {{HTMLElement("menuitem")}} 要素は廃止されました。
 
@@ -223,4 +223,4 @@ div {
 ## 関連情報
 
 - 他のリスト関連 HTML 要素: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}} および廃止済の {{HTMLElement("dir")}}
-- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) [グローバル属性](/ja/docs/Web/HTML/Global_attributes): {{HTMLAttrxRef("type", "menu", 'type="context"')}} がついた `menu` の `id` を参照するために使用することができる
+- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#attr-contextmenu) [グローバル属性](/ja/docs/Web/HTML/Global_attributes): [`type="context"`](/ja/docs/Web/HTML/Element/menu#type) がついた `menu` の `id` を参照するために使用することができる

@@ -66,17 +66,17 @@ slug: Web/HTML/Element/source
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("media")}}
+- `media`
   - : リソースの志向するメディアの[メディアクエリ](/ja/docs/Web/CSS/Media_queries)。この属性は {{HTMLElement("picture")}} 要素の内部でのみ使用します。
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
-  - : ソースの寸法のリストで、そのソースが表す画像が最終的に表示される幅を表します。それぞれのソースの寸法、条件と長さの組をカンマ区切りで並べたものです。この情報は {{htmlattrxref("srcset", "source")}} で指定された画像を使用する際に、ページのレイアウトを行う前にブラウザーが使用します。なお、 `sizes` は `srcset` でピクセル倍率ではなく幅指定子が提供された時 (例えば 2x ではなく 200w の場合) のみ、効果があることに注意してください。
+  - : ソースの寸法のリストで、そのソースが表す画像が最終的に表示される幅を表します。それぞれのソースの寸法、条件と長さの組をカンマ区切りで並べたものです。この情報は [`srcset`](/ja/docs/Web/HTML/Element/source#srcset) で指定された画像を使用する際に、ページのレイアウトを行う前にブラウザーが使用します。なお、 `sizes` は `srcset` でピクセル倍率ではなく幅指定子が提供された時 (例えば 2x ではなく 200w の場合) のみ、効果があることに注意してください。
 
     `sizes` 属性は、 {{HTMLElement("source")}} 要素が {{HTMLElement("picture")}} 要素の子要素である場合にのみ効果があります。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : メディアのリソースの場所であり、 {{HTMLElement("audio")}} および {{HTMLElement("video")}} では必須です。 {{HTMLElement("picture")}} 要素の内部にある `<source>` 要素では、この値は無視されます。
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : 1 つ以上の文字列をカンマ区切りで並べたリストであり、ブラウザーが使用できる画像のセットを示します。それぞれの文字列の構成は以下のとおりです。
 
@@ -88,7 +88,7 @@ slug: Web/HTML/Element/source
 
     `srcset` 属性は、 {{HTMLElement("source")}} 要素が {{HTMLElement("picture")}} 要素の子要素である場合にのみ効果があります。
 
-- {{htmlattrdef("type")}}
+- `type`
   - : [リソースの MIME メディアタイプ](/ja/docs/Web/Media/Formats/Image_types) で、オプションで [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter) を伴います。
 
 `type` 属性が指定されていない場合は、サーバーからメディア形式を取得して、ユーザーエージェントが扱うことができるものであるかどうかを確認します。表示ができない場合は、次の `<source>` をチェックします。 `type` 属性が指定された場合、ユーザーエージェントが表示できる形式と比較し、扱えないものであれば、サーバーはクエリーさえ行わず、次の `<source>` 要素をチェックします。

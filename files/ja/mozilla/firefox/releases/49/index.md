@@ -35,12 +35,12 @@ l10n:
 ### HTML
 
 - {{HTMLElement("details")}} 要素および {{HTMLElement("summary")}} 要素をサポートしました ([Firefox バグ 1226455](https://bugzil.la/1226455))。
-- {{HTMLElement("input")}} 要素の {{htmlattrxref("pattern", "input")}} 属性は、背後の JavaScript {{jsxref("RegExp")}} で `'u'` 引数ーを使用するようになりました ([Firefox バグ 1227906](https://bugzil.la/1227906))。
-- 仕様書の変更に合わせて、{{HTMLElement('track')}} 要素の {{htmlattrxref("kind", "track")}} 属性で無効な値は、`'subtitles'` ではなく `'metadata'` と同様に扱うようになりました ([Firefox バグ 1269712](https://bugzil.la/1269712))。
-- {{HTMLElement("iframe")}} 要素の {{htmlattrxref("sandbox", "iframe")}} 属性で値 `'allow-popups-to-escape-sandbox'` および `'allow-modals'` をサポートしました ([Firefox バグ 1190641](https://bugzil.la/1190641))。
+- {{HTMLElement("input")}} 要素の [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性は、背後の JavaScript {{jsxref("RegExp")}} で `'u'` 引数ーを使用するようになりました ([Firefox バグ 1227906](https://bugzil.la/1227906))。
+- 仕様書の変更に合わせて、{{HTMLElement('track')}} 要素の [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性で無効な値は、`'subtitles'` ではなく `'metadata'` と同様に扱うようになりました ([Firefox バグ 1269712](https://bugzil.la/1269712))。
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性で値 `'allow-popups-to-escape-sandbox'` および `'allow-modals'` をサポートしました ([Firefox バグ 1190641](https://bugzil.la/1190641))。
 - microdata 属性および Microdata API のサポートを廃止しました ([Firefox バグ 909633](https://bugzil.la/909633))。
-- {{HTMLElement("a")}} 要素の {{htmlattrxref("referrerpolicy", "a")}} 属性で値 `'no-referrer-when-downgrade`' および `'origin-when-cross-origin'` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
-- {{HTMLElement("label")}} 要素の {{htmlattrxref("form", "label")}} コンテンツ属性を削除しました。{{domxref("HTMLLabelElement.form")}} はまだ存在していますが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました ([Firefox バグ 1268852](https://bugzil.la/1268852))。
+- {{HTMLElement("a")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) 属性で値 `'no-referrer-when-downgrade`' および `'origin-when-cross-origin'` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
+- {{HTMLElement("label")}} 要素の [`form`](/ja/docs/Web/HTML/Element/label#form) コンテンツ属性を削除しました。{{domxref("HTMLLabelElement.form")}} はまだ存在していますが、コントロールが存在する (およびそのコントロールがフォームに関連付けられている) 場合に、ラベルのコントロールが関連付けられているフォームを返すようになりました ([Firefox バグ 1268852](https://bugzil.la/1268852))。
 
 ### CSS
 

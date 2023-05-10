@@ -9,24 +9,27 @@ HTTP 請求中的 **`Authorization`** 是 user agent 用來向伺服器做身份
 通常是在伺服器回應 {{HTTPStatus("401")}}
 `Unauthorized` 狀態及 {{HTTPHeader("WWW-Authenticate")}} 標頭後才會在後續請求使用這個標頭。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 語法
 
-```html
+```http
 Authorization: <type> <credentials>
 ```
 
 ## 指令
 
 - \<type>
+
   - : [認證方式](/zh-TW/docs/Web/HTTP/Authentication#authentication_schemes)，通常是 ["Basic"](/zh-TW/docs/Web/HTTP/Authentication#basic_authentication_scheme)。其他方式可以參考：
 
     - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html) for AWS servers (`AWS4-HMAC-SHA256`)
+
 - \<credentials>
+
   - : 如果使用「Basic」方式，則憑證的格式會長的像這樣：
 
     - 帳號、密碼會用冒號（:）串起來（`aladdin:opensesame`）。

@@ -66,7 +66,7 @@ slug: Web/HTML/Element/caption
 
 以下の属性は非推奨であり、使用するべきではありません。以下に記述しているのは、既存コードを更新する際の参考や、歴史的な関心としてのためのみです。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は caption 要素の、自身の指し示す table 要素を基準とした相対的な位置を指定します。以下の値を指定できます。
 

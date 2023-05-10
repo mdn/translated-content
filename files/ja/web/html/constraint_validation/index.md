@@ -4,6 +4,8 @@ slug: Web/HTML/Constraint_validation
 original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
+{{HTMLSidebar}}
+
 ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は[制約検証 API](/ja/docs/Web/API/Constraint_validation) を使用して検査することができます。
 
 これらの概念の基本的な入門 (サンプル付き) は、[フォーム検証チュートリアル](/ja/docs/Learn/Forms/Form_validation)をご覧ください。
@@ -14,19 +16,19 @@ original_slug: Web/Guide/HTML/Constraint_validation
 
 HTML5 では、基本的な制約は 2 通りの方法で定義されます。
 
-- {{ HTMLElement("input") }} 要素の {{ htmlattrxref("type", "input") }} 属性に意味的に最も適切な値を選択する。例えば `email` を選択することで、値が妥当なメールアドレスであるかどうかをチェックする制約が自動的に作成されます。
+- {{ HTMLElement("input") }} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に意味的に最も適切な値を選択する。例えば `email` を選択することで、値が妥当なメールアドレスであるかどうかをチェックする制約が自動的に作成されます。
 - 検証関連属性を設定することで、基本的な制約を簡単な方法で、JavaScript の必要なく記述できます。
 
 ### 意味を持つ入力型
 
-{{ htmlattrxref("type", "input") }} 属性の組込み制約は次の通りです。
+[`type`](/ja/docs/Web/HTML/Element/input#type) 属性の組込み制約は次の通りです。
 
 | 入力型                                                         | 制約の説明                                                                                                                                        | 関連付けられた違反                                                                    |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | [`<input type="URL">`](/ja/docs/Web/HTML/Element/input/url)     | 値は絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) であり、 [URL Living Standard](https://url.spec.whatwg.org/) で定義された通りでなければなりません。 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 | [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                               | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 
-これらの入力型のどちらでも、{{ htmlattrxref("multiple", "input") }} 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。これらの中でここで書かれた条件に満足しないものがある場合、 **Type mismatch** 制約違反が発生します。
+これらの入力型のどちらでも、[`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。これらの中でここで書かれた条件に満足しないものがある場合、 **Type mismatch** 制約違反が発生します。
 
 なお、ほとんどの入力型には内部的な制約がありません。制約検証が禁止されているものや、不正な値を正しい既定値に変換する無害化アルゴリズムがあるものがあるためです。
 
@@ -211,7 +213,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
 
 > **メモ:**
 >
-> - {{ htmlattrxref("novalidate", "form") }} 属性が {{ HTMLElement("form") }} 要素に設定されている場合、制約の*対話的*な検証は行われません。
+> - [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性が {{ HTMLElement("form") }} 要素に設定されている場合、制約の*対話的*な検証は行われません。
 > - `submit()` メソッドを [`HTMLFormElement`](/ja/docs/Web/API/HTMLFormElement) インターフェイスで呼び出しても、制約検証は行われません。言い換えれば、このメソッドは制約を満たさなくてもフォームデータをサーバーに送信します。代わりに送信ボタンの `click()` メソッドを呼び出してください。
 
 ## 制約検証 API を使用した複雑な制約
@@ -348,7 +350,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 #### :required および :optional 擬似クラス
 
-{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{ htmlattrxref("required") }} 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
+{{cssxref(':required')}} と {{cssxref(':optional')}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある、またはないフォーム要素に一致するセレクターを書くことができます。
 
 #### :placeholder-shown 擬似クラス
 

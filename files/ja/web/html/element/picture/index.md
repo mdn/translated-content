@@ -9,7 +9,7 @@ l10n:
 
 **`<picture>`** は [HTML](/ja/docs/Web/HTML) の要素で、0 個以上の {{HTMLElement("source")}} 要素と 1 つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
 
-ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の {{htmlattrxref("src", "img")}} 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
+ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
 {{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
@@ -108,7 +108,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 ### srcset 属性
 
-[{{htmlattrdef("srcset")}}](/ja/docs/Web/HTML/Element/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
+[`srcset`](/ja/docs/Web/HTML/Element/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
 
 これは画像記述子のカンマ区切りのリストで構成されます。それぞれの画像記述子は画像の URL と、次の*いずれか*で構成されます。
 
