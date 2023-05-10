@@ -29,14 +29,14 @@ elem.dispatchEvent(event);
 舉例來說，可以以下面方式建立事件：
 
 ```js
-var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+var event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
 它可以讓你傳送自訂資料到事件的監聽器：
 
 ```js
 function eventHandler(e) {
-  log('The time is: ' + e.detail);
+  log("The time is: " + e.detail);
 }
 ```
 
@@ -46,15 +46,19 @@ function eventHandler(e) {
 
 ```js
 // 建立事件
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // 設定事件名稱為 “build” 。
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // 監聽事件
-elem.addEventListener('build', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target matches elem
+  },
+  false
+);
 
 // 事件對象可以是任一 HTML 元素或是 EventTarget 。
 elem.dispatchEvent(event);
@@ -66,12 +70,12 @@ elem.dispatchEvent(event);
 
 ```js
 function simulateClick() {
-  var event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': true
+  var event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
   });
-  var cb = document.getElementById('checkbox');
+  var cb = document.getElementById("checkbox");
   var canceled = !cb.dispatchEvent(event);
   if (canceled) {
     // A handler called preventDefault.
