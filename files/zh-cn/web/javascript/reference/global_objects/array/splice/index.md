@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 {{JSRef}}
 
-**`splice()`** 方法[原地](https://zh.wikipedia.org/wiki/原地算法)改变一个数组的内容，通过移除或者替代已存在的元素和/或添加新元素。
+**`splice()`** 方法通过移除或者替换已存在的元素和/或添加新元素[就地](https://zh.wikipedia.org/wiki/原地算法)改变一个数组的内容。
 
 要创建一个删除和/或替换部分内容而不改变原数组的新数组，请使用 {{jsxref("Array/toSpliced", "toSpliced()")}}。要访问数组的一部分而不修改它，参见 {{jsxref("Array.prototype.slice()", "slice()")}}。
 
@@ -34,7 +34,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
   - : 一个整数，表示数组中要从 `start` 开始删除的元素数量。
 
-    如果省略了 `deleteCount`，或者如果其值大于或等于由 `start` 指定的位置之后的元素数, 那么从 `start` 到数组末尾的所有元素将被删除。但是，如果你想要传递任何 `itemN` 参数，则应将 `Infinity` 作为 `deleteCount` 传递，以删除 `start` 之后的所有元素，因为显式的 `undefined` 会[转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
+    如果省略了 `deleteCount`，或者其值大于或等于由 `start` 指定的位置到数组末尾的元素数量，那么从 `start` 到数组末尾的所有元素将被删除。但是，如果你想要传递任何 `itemN` 参数，则应向 `deleteCount` 传递 `Infinity` 值，以删除 `start` 之后的所有元素，因为显式的 `undefined` 会[转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
 
     如果 `deleteCount` 是 `0` 或者负数，则不会移除任何元素。在这种情况下，你应该至少指定一个新元素（请参见下文）。
 
@@ -54,7 +54,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 ## 描述
 
-`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建一个空数组实例并返回。
+`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建一个新数组实例并返回。
 
 如果删除的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则 `splice()` 返回的数组也是稀疏的，对应的索引为空槽。
 
