@@ -85,7 +85,7 @@ if (x === undefined) { // lanza un ReferenceError
 
 Sin embargo, existe otra alternativa. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en el contexto que la contiene.
 
-El alcance global está vinculado al {{jsxref("globalThis", "objeto global", "", 1)}}, por lo que se puede comprobar la existencia de una variable en el contexto global comprobando la existencia de una propiedad en el objeto global, utilizando el operador  {{jsxref("Operators/in", "in")}}, por ejemplo:
+El alcance global está vinculado al {{jsxref("globalThis", "objeto global", "", 1)}}, por lo que se puede comprobar la existencia de una variable en el contexto global comprobando la existencia de una propiedad en el objeto global, utilizando el operador {{jsxref("Operators/in", "in")}}, por ejemplo:
 
 ```js
 if ("x" in window) {
