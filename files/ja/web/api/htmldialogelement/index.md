@@ -14,7 +14,7 @@ slug: Web/API/HTMLDialogElement
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : {{domxref("Boolean")}} で、ダイアログが対話可能であることを示す {{htmlattrxref("open", "dialog")}} 属性の値を反映します。
+  - : {{domxref("Boolean")}} で、ダイアログが対話可能であることを示す [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性の値を反映します。
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : {{domxref("DOMString")}} で、ダイアログの返値を設定させたり返したりします。
 

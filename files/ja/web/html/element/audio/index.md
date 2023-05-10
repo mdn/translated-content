@@ -19,23 +19,23 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
 
-- {{htmlattrdef("controls")}}
+- `controls`
 
   - : この属性が指定された場合、ブラウザーは再生・一時停止、音量、シークの各機能を制御するコントロールを表示します。
 
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}{{non-standard_inline}}
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
 
   - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性は、指定された場合、ブラウザーが自分自身で一連のコントロールを表示するとき（つまり、 `controls` 属性が指定されたとき）、 `audio` 要素にどのようなコントロールを表示するかを選択するのを支援します。
 
     取ることができる値は `nodownload`、`nofullscreen`、`noremoteplayback` です。
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
 
@@ -46,17 +46,17 @@ l10n:
 
     この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
-- {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
+- `disableremoteplayback` {{experimental_inline}}
 
   - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
     > **メモ:** Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 論理型の属性です。指定された場合、音声プレイヤーは音声の末尾に達すると、自動的に先頭に戻ります。
-- {{htmlattrdef("muted")}}
+- `muted`
   - : 論理型の属性で、音声の既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` です。
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、ユーザーに取って最良の結果をもたらすと作者が考えていることのヒントをブラウザーに伝えるためのものです。以下の値のうちひとつを持つことができます。
 
@@ -72,7 +72,7 @@ l10n:
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは音声を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : 埋め込む音声コンテンツの URL を指定します。この属性は [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)に従います。これはオプションです。代わりに {{htmlelement("source")}} 要素を audio ブロック内で使用して、埋め込む音声を指定することもできます。
 
 ## イベント
@@ -385,7 +385,7 @@ elem.audioTrackList.onremovetrack = (event) => {
           >記述コンテンツ</a
         >、<a href="/ja/docs/HTML/Content_categories#埋め込みコンテンツ"
           >埋め込みコンテンツ</a
-        >。 {{htmlattrxref("controls", "audio")}}
+        >。 <a href="/ja/docs/Web/HTML/Element/audio#controls"><code>controls</code></a>
         属性を持つ場合は、<a
           href="/ja/docs/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
@@ -397,7 +397,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        要素が {{htmlattrxref("src", "audio")}} 属性を持つ場合:
+        要素が <a href="/ja/docs/Web/HTML/Element/audio#src"><code>src</code></a> 属性を持つ場合:
         0個以上の {{HTMLElement("track")}}
         要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち
         {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}}

@@ -25,7 +25,7 @@ HTML フォームに関する例をいくつか見ていきましょう。
 
 #### HTML の入力型
 
-HTML5 で追加された入力型は、劣化の仕方が高度に予測可能であるため、古いブラウザーでもすべて使用可能です。ブラウザーにとって未知の {{htmlattrxref("type","input")}} 属性の値が {{HTMLElement("input")}} 要素にあった場合、その値が `text` であったかのように代替されます。
+HTML5 で追加された入力型は、劣化の仕方が高度に予測可能であるため、古いブラウザーでもすべて使用可能です。ブラウザーにとって未知の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値が {{HTMLElement("input")}} 要素にあった場合、その値が `text` であったかのように代替されます。
 
 ```html
 <label for="myColor">
@@ -63,7 +63,7 @@ HTML5 で追加された入力型は、劣化の仕方が高度に予測可能�
 
 HTML フォームでボタンを定義する方法は 2 つあります。
 
-- {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に `button`、`submit`、`reset`、`image` のいずれかの値に設定したもの
+- {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `button`、`submit`、`reset`、`image` のいずれかの値に設定したもの
 - {{HTMLElement("button")}} 要素
 
 ##### {{HTMLElement("input")}}
@@ -103,8 +103,8 @@ input[type="button"] {
 
 {{HTMLElement("button")}} 要素は 2 つの問題に悩まされていましたが、すでに解決しました。
 
-- 古いバージョンの Internet Explorer では、クリックされたときに、 {{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツが、 {{htmlattrxref("value","button")}} 属性の内容の代わりに送信されるというバグがありました。これは、ユーザーがどのボタンをクリックしたかによってデータ処理が決まる場合など、その値を送信する必要がある場合にのみ問題となっていました。
-- 一部のとても古いブラウザーは `submit` を {{htmlattrxref("type","button")}} 属性の既定値として使用していませんでした。すべての現在のブラウザーでは解決していますが、 {{htmlattrxref("type","button")}} 属性を常に {{HTMLElement("button")}} 要素に設定することを推奨します。
+- 古いバージョンの Internet Explorer では、クリックされたときに、 {{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツが、 [`value`](/ja/docs/Web/HTML/Element/button#value) 属性の内容の代わりに送信されるというバグがありました。これは、ユーザーがどのボタンをクリックしたかによってデータ処理が決まる場合など、その値を送信する必要がある場合にのみ問題となっていました。
+- 一部のとても古いブラウザーは `submit` を [`type`](/ja/docs/Web/HTML/Element/button#type) 属性の既定値として使用していませんでした。すべての現在のブラウザーでは解決していますが、 [`type`](/ja/docs/Web/HTML/Element/button#type) 属性を常に {{HTMLElement("button")}} 要素に設定することを推奨します。
 
 ```html
 <!-- ボタンをクリックすると "A" ではなく "<em>Do A</em>" を送信する場合があります -->

@@ -13,9 +13,9 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 
 `X-Forwarded-For` 也是個說明 email-message 是從哪個帳戶轉發的 email-header。
 
-| 標頭屬性                                         | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| 標頭屬性                              | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 語法
 

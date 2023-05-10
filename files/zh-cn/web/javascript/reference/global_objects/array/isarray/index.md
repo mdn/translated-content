@@ -22,11 +22,11 @@ Array.isArray(value)
 
 ### 返回值
 
-如果值是 {{jsxref("Array")}}，则为 `true`；否则为 `false`。如果 `value` 是 {{jsxref("TypedArray")}} 实例，则总是返回 `false`。
+如果 `value` 是 {{jsxref("Array")}}，则为 `true`；否则为 `false`。如果 `value` 是 {{jsxref("TypedArray")}} 实例，则总是返回 `false`。
 
 ## 描述
 
-`Array.isarray()` 检查传递的值是否为 {{jsxref("Array")}}。它不检查值的原型链，也不依赖于它所附加的 `Array` 构造函数。对于使用数组字面量语法或 `array` 构造函数创建的任何值，它都会返回 `true`。这使得它可以安全地使用跨领域（cross-realm）对象，其中 `Array` 构造函数的标识是不同的，因此会导致[`instanceof Array`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 失败。
+`Array.isArray()` 检查传递的值是否为 {{jsxref("Array")}}。它不检查值的原型链，也不依赖于它所附加的 `Array` 构造函数。对于使用数组字面量语法或 `Array` 构造函数创建的任何值，它都会返回 `true`。这使得它可以安全地使用跨领域（cross-realm）对象，其中 `Array` 构造函数的标识是不同的，因此会导致 [`instanceof Array`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 失败。
 
 有关更多细节，请参阅文章[“确定 JavaScript 对象是否为数组”](https://web.mit.edu/jwalden/www/isArray.html)。
 
@@ -60,7 +60,7 @@ Array.isArray(new Uint8Array(32));
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### `instanceof` VS `isArray`
+### instanceof vs. Array.isArray()
 
 当检测 `Array` 实例时，`Array.isArray` 优于 `instanceof`，因为 `Array.isArray` 能跨领域工作。
 

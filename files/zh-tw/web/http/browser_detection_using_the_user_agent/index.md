@@ -27,24 +27,25 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 如果要避免用戶代理偵測，有以下選項！
 
 - 功能偵測
+
   - : 功能偵測使你無須弄清是哪種瀏覽器在渲染你的網頁，只須檢查需要的具體功能是否能用。如果不能用，就採取備用方案。在極少數的情況下，各瀏覽器行為有所不同。面對這種情況，不要偵測用戶代理，而是用實作測試來檢查瀏覽器 API、並搞清楚用法。最近有個好例子：[Chrome 針對正規表達式，添加了實驗性的 lookbehind 支援](https://www.chromestatus.com/feature/5668726032564224)，但其他瀏覽器並不支援。你可能以為要這麼用：
 
     ```js
     // 這個程式以特殊表示法把字串分開來
 
-    if (navigator.userAgent.indexOf("Chrome") !== -1){
+    if (navigator.userAgent.indexOf("Chrome") !== -1) {
       // 好，這用戶應該是支援 look-behind regexps
       // 不要在不支援該功能的瀏覽器使用 /(?<=[A-Z])/
       // 因為瀏覽器都會解析整個腳本，包括從未執行過的代碼部分。
       // 進而讓不支援該功能的瀏覽器拋出語法錯誤。
       var camelCaseExpression = new RegExp("(?<=[A-Z])");
-      var splitUpString = function(str) {
-        return (""+str).split(camelCaseExpression);
+      var splitUpString = function (str) {
+        return ("" + str).split(camelCaseExpression);
       };
     } else {
       /* 這個語法的性能差得多，但能動 */
-      var splitUpString = function(str){
-        return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
+      var splitUpString = function (str) {
+        return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
       };
     }
     console.log(splitUpString("fooBare")); // ["fooB", "are"]
@@ -57,24 +58,28 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
     var isLookBehindSupported = false;
     try {
       isLookBehindSupported = !!new RegExp("(?<=)");
-    } catch(e){
+    } catch (e) {
       // 不支援的瀏覽器會出現 lookbehind expressions err
     }
-    var splitUpString = isLookBehindSupported ? function(str) {
-      return (""+str).split(new RegExp("(?<=[A-Z])"));
-    } : function(str) {
-      return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
-    };
+    var splitUpString = isLookBehindSupported
+      ? function (str) {
+          return ("" + str).split(new RegExp("(?<=[A-Z])"));
+        }
+      : function (str) {
+          return str.replace(/[A-Z]/g, "z$1").split(/z(?=[A-Z])/g);
+        };
     ```
 
     這程式**一定**會讓瀏覽器在不嗅探用戶代理的情況下測試功能。要作類似這樣的事情，**完全沒有**動用用戶代理嗅探的理由。
 
-    最後，上面的程式碼還附帶一個必須考量的，有關跨瀏覽器的關鍵問題：不要在不支援的瀏覽器，使用到要測試的API。這聽來簡單，但有時候不是這樣：同樣以上面為例，在簡寫正規表達式使用 lookbehind（如 `/reg/igm`）會讓不支援該功能瀏覽器的解析器出錯。因此，你需要使用 _new RegExp("(?<=look_behind_stuff)");_ 而非 _/(?<=look_behind_stuff)/_，哪怕 lookbehind 已經支援了。
+    最後，上面的程式碼還附帶一個必須考量的，有關跨瀏覽器的關鍵問題：不要在不支援的瀏覽器，使用到要測試的 API。這聽來簡單，但有時候不是這樣：同樣以上面為例，在簡寫正規表達式使用 lookbehind（如 `/reg/igm`）會讓不支援該功能瀏覽器的解析器出錯。因此，你需要使用 _new RegExp("(?<=look_behind_stuff)");_ 而非 _/(?<=look_behind_stuff)/_，哪怕 lookbehind 已經支援了。
+
 - 漸進增強（Progressive Enhancement）
   - : 此設計技術與網站開發的「層次」有關：它運用下而上的途徑、從簡單的層次開始，透過一連串的層次，漸漸增強網站的能力。
 - 優雅降級（Graceful degradation）
   - : 這種由上而下的途徑，是先在建造網站時，就用上所有需要的功能，再調整到令舊版瀏覽器也能執行。這種途徑與漸進增強相比，難度更高、效率也更糟，不過在某些情況下也可能更管用。
 - 行動設備偵測（Mobile Device Detection）
+
   - : 檢查是否透過行動設備上網，大概是用戶代理嗅探最常見的用途與誤用。偵測後要作什麼事，卻往往是被忽略的問題所在。開發者通常透過用戶代理嗅探，將用戶設備導向至易於觸碰的小螢幕，以便加強網站體驗。
 
     用戶代理這方面有時有用，但問題是所有設備不完全相同：有些行動設備的尺寸很大、有些桌機有一小塊觸控螢幕、有些人使用完全是不同世界的智慧型電視、甚至還有藉由翻轉平板、來動態改變設備長寬的人！
@@ -135,33 +140,55 @@ Internet Explorer 在第九代以前，有著各種難以置信的問題。問�
 蘋果強迫所有瀏覽器使用 Webkit 核心，所以 Webkit 的情形更糟糕；用戶也無法在舊設備上，得到更新的瀏覽器。大多數錯誤都能找出來，但某些錯誤，需要花更多時間抓出來。在這種情況下，使用用戶代理嗅探來可能是更有益的。
 
 ```js
-var UA=navigator.userAgent, isWebkit=/\b(iPad|iPhone|iPod)\b/.test(UA) &&
-               /WebKit/.test(UA) && !/Edge/.test(UA) && !window.MSStream;
+var UA = navigator.userAgent,
+  isWebkit =
+    /\b(iPad|iPhone|iPod)\b/.test(UA) &&
+    /WebKit/.test(UA) &&
+    !/Edge/.test(UA) &&
+    !window.MSStream;
 
-var mediaQueryUpdated = true, mqL = [];
-function whenMediaChanges(){mediaQueryUpdated = true}
+var mediaQueryUpdated = true,
+  mqL = [];
+function whenMediaChanges() {
+  mediaQueryUpdated = true;
+}
 
-var listenToMediaQuery = isWebkit ? function(mQ, f) {
-    if(/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-    mQ.addListener(f), mQ.addListener(whenMediaChanges);
-} : function(){};
-var destroyMediaQuery = isWebkit ? function(mQ) {
-    for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
+var listenToMediaQuery = isWebkit
+  ? function (mQ, f) {
+      if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
+      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+    }
+  : function () {};
+var destroyMediaQuery = isWebkit
+  ? function (mQ) {
+      for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
         if (mqL[i][0] === mQ) mqL.splice(i, 1);
-    mQ.removeListener(whenMediaChanges);
-} : listenToMediaQuery;
+      mQ.removeListener(whenMediaChanges);
+    }
+  : listenToMediaQuery;
 
 var orientationChanged = false;
-addEventListener("orientationchange", function(){
+addEventListener(
+  "orientationchange",
+  function () {
     orientationChanged = true;
-}, PASSIVE_LISTENER_OPTION);
+  },
+  PASSIVE_LISTENER_OPTION
+);
 
-addEventListener("resize", setTimeout.bind(0,function(){
-    if (orientationChanged && !mediaQueryUpdated)
-        for (var i=0,len=mqL.length|0; i<len; i=i+1|0)
-            mqL[i][1]( mqL[i][0] );
-    mediaQueryUpdated = orientationChanged = false;
-},0));
+addEventListener(
+  "resize",
+  setTimeout.bind(
+    0,
+    function () {
+      if (orientationChanged && !mediaQueryUpdated)
+        for (var i = 0, len = mqL.length | 0; i < len; i = (i + 1) | 0)
+          mqL[i][1](mqL[i][0]);
+      mediaQueryUpdated = orientationChanged = false;
+    },
+    0
+  )
+);
 ```
 
 ## 你想找到用戶代理的哪個資訊

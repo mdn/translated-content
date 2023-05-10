@@ -73,7 +73,7 @@ HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datet
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : この属性は要素の日付や時刻を表し、下記に示す書式のうちの一つでなければなりません。
 
 ## 使用上のメモ

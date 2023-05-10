@@ -10730,10 +10730,6 @@
     "modified": "2020-09-15T21:48:26.513Z",
     "contributors": ["Nachec"]
   },
-  "Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes": {
-    "modified": "2020-09-17T10:02:16.387Z",
-    "contributors": ["Nachec"]
-  },
   "Web/JavaScript/Guide/Text_formatting": {
     "modified": "2020-09-15T10:00:50.941Z",
     "contributors": [
@@ -13378,6 +13374,10 @@
   "Web/JavaScript/Reference/Operators/yield*": {
     "modified": "2020-03-12T19:43:03.721Z",
     "contributors": ["germanf"]
+  },
+  "Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape": {
+    "modified": "2020-09-17T10:02:16.387Z",
+    "contributors": ["Nachec"]
   },
   "Web/JavaScript/Reference/Statements": {
     "modified": "2020-05-11T14:52:51.956Z",

@@ -29,7 +29,7 @@ l10n:
   - これらの要素のデフォルトのスタイルが、仕様書に合致するようになりました ([Firefox バグ 1258657](https://bugzil.la/1258657))。
   - {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが、{{HTMLElement("details")}} 要素を開いたり閉じたりしたときに送られるようになりました ([Firefox バグ 1225412](https://bugzil.la/1225412))。
 
-- {{htmlattrxref("meta", "referrer")}} 属性で、値 `no-referrer-when-downgrade` および `origin-when-cross-origin` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
+- [`meta`](/ja/docs/Web/HTML/Element/referrer#meta) 属性で、値 `no-referrer-when-downgrade` および `origin-when-cross-origin` をサポートしました ([Firefox バグ 1178337](https://bugzil.la/1178337))。
 
 ### CSS
 

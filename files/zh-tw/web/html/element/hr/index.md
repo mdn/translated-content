@@ -9,10 +9,10 @@ slug: Web/HTML/Element/hr
 
 | [內容類型](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#流內容（Flow_content）).                |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Permitted content                               | 否。這是個 {{Glossary("empty element")}}.                                 |
+| Permitted content                               | 否。這是個 {{Glossary("empty element")}}.                                            |
 | 標籤省略                                        | 一定要有起始標籤、同時絕不能有結束標籤                                               |
 | Permitted parent elements                       | 任何允許[流內容](/zh-TW/docs/HTML/Content_categories#流內容（Flow_content）)的元素。 |
-| DOM interface                                   | {{domxref("HTMLHRElement")}}                                                 |
+| DOM interface                                   | {{domxref("HTMLHRElement")}}                                                         |
 
 ## 屬性
 
@@ -32,17 +32,17 @@ slug: Web/HTML/Element/hr
 ## 範例
 
 ```html
-<p>This is the first paragraph of text.
-This is the first paragraph of text.
-This is the first paragraph of text.
-This is the first paragraph of text.
+<p>
+  This is the first paragraph of text. This is the first paragraph of text. This
+  is the first paragraph of text. This is the first paragraph of text.
+</p>
 
-<hr>
+<hr />
 
-<p>This is second paragraph of text.
-This is second paragraph of text.
-This is second paragraph of text.
-This is second paragraph of text.
+<p>
+  This is second paragraph of text. This is second paragraph of text. This is
+  second paragraph of text. This is second paragraph of text.
+</p>
 ```
 
 上面的 HTML 會輸出：

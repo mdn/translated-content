@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 {{JSRef}}
 
-**`indexOf()`** 方法返回在数组中可以找到给定元素的第一个索引，如果不存在，则返回 -1。
+**`indexOf()`** 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 -1。
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
 

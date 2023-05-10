@@ -20,7 +20,7 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 - `value` {{optional_inline}}
   - : {{domxref("DOMString")}} で、この {{domxref("HTMLOptionElement")}} の値、すなわち対応する {{htmlelement("option")}} 要素の value 属性を表します。指定されなかった場合は、 text の値が value、例えば、フォームがサーバーへ送信されるときの {{htmlelement("select")}} 要素の値として使用されます。
 - `defaultSelected` {{optional_inline}}
-  - : `true` または `false` のどちらかの値で、 {{htmlattrxref("selected", "option")}} 属性の値を設定するものです。すなわち、ページが最初に読み込まれたときに、この {{htmlelement("option")}} が {{htmlelement("select")}} 要素で選択される既定値になるようにします。これが指定されていない場合は、既定値の false が使用されます。なお、 true を指定しても、その選択肢が selected になっていない場合は、 selected にはなりません。
+  - : `true` または `false` のどちらかの値で、 [`selected`](/ja/docs/Web/HTML/Element/option#selected) 属性の値を設定するものです。すなわち、ページが最初に読み込まれたときに、この {{htmlelement("option")}} が {{htmlelement("select")}} 要素で選択される既定値になるようにします。これが指定されていない場合は、既定値の false が使用されます。なお、 true を指定しても、その選択肢が selected になっていない場合は、 selected にはなりません。
 - `selected` {{optional_inline}}
   - : `true` または `false` のどちらかの値で、その選択肢の選択状態を設定します。既定値は false (未選択) です。省略された場合、 defaultSelected 引数が true であっても、その選択肢は選択されません。
 
