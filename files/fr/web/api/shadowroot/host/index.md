@@ -9,6 +9,7 @@ tags:
   - shadow dom
 translation_of: Web/API/ShadowRoot/host
 ---
+
 {{APIRef("Shadow DOM")}}
 
 La propriété **`host`** est une propriété en lecture seule, rattachée à l'interface {{domxref("ShadowRoot")}} et qui représente une référence à l'élément du DOM auquel la racine `ShadowRoot` est attachée.
@@ -37,10 +38,8 @@ let hostElem = shadow.host;
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('DOM WHATWG','#dom-shadowroot-host','ShadowRoot.host')}} | {{Spec2('DOM WHATWG')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.ShadowRoot.host")}}
+{{Compat}}

@@ -1,14 +1,8 @@
 ---
 title: CSSConditionRule
 slug: Web/API/CSSConditionRule
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSConditionRule
-translation_of: Web/API/CSSConditionRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSConditionRule`** インターフェイスを自訴すしているオブジェクトは、条件と文のブロックからなる単一の条件付き CSS [アットルール](/ja/docs/Web/CSS/At-rule)を表します。

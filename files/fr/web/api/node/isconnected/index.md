@@ -8,6 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/isConnected
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`isConnected`** de l'interface {{domxref("Node")}} renvoie un booléen indiquant si le noeud est connecté (directement ou indirectement) à l'objet contexte, par exemple l'objet {{domxref("Document")}} dans le cas d'un DOM normal ou l'objet {{domxref("ShadowRoot")}} dans le cas du DOM shadow.
@@ -71,10 +72,8 @@ console.log(style.isConnected); // renvoie true (vrai)
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           | Commentaire          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}} | {{Spec2('DOM WHATWG')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isConnected")}}
+{{Compat}}

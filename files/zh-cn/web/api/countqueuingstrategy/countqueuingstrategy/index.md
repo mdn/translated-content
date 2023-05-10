@@ -1,17 +1,9 @@
 ---
 title: CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - CountQueuingStrategy
-  - Experimental
-  - Reference
-  - Streams
-translation_of: Web/API/CountQueuingStrategy/CountQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 **`CountQueuingStrategy()`** 构造函数创建并返回一个 `CountQueuingStrategy` 对象实例。
 
@@ -42,17 +34,17 @@ const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 const writableStream = new WritableStream({
   // Implement the sink
   write(chunk) {
-    ...
+    // …
   },
   close() {
-    ...
+    // …
   },
   abort(err) {
     console.log("Sink error:", err);
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
 ## 规范

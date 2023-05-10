@@ -9,6 +9,7 @@ tags:
   - Plein écran
 translation_of: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 La méthode **`Document.exitFullscreen()`** extrait le document du mode plein écran ; elle est utilisée pour inverser les effets d'un appel au mode plein écran réalisé avec la méthode {{domxref("Element.requestFullscreen()")}}.
@@ -36,13 +37,11 @@ document.onclick = function (event) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## Voir aussi
 

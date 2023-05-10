@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/IndexedDB_API
 original_slug: Web/API/API_IndexedDB
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB est une API de bas niveau qui permet le stockage côté client de quantités importantes de données structurées, incluant des fichiers/blobs. Cette API utilise des index afin de permettre des recherches performantes sur ces données. Alors que [Web Storage](/fr/docs/Web/API/Web_Storage_API) est utile pour stocker de petites quantités de données, il est moins utile pour stocker de grandes quantités de données structurées. IndexedDB fournit une solution. Cette page est le point d'entrée pour tout ce qui concerne IndexedDB sur MDN - vous y trouverez les liens vers la référence complète de l'API et les guides d'utilisation, le support par les navigateurs, et quelques explications des concepts clés.
@@ -75,22 +76,22 @@ Pour accèder à une base de données, il faut apeller [`open()`](/fr/docs/Web/A
 Cette spécification provoque des évènements avec les interfaces personnalisées suivantes:
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : `L'interface IDBVersionChangeEvent` indique que la version de la base de données à changé, résultat de la fonction de saisie d'un évènement  {{domxref("IDBOpenDBRequest.onupgradeneeded")}}.
+  - : `L'interface IDBVersionChangeEvent` indique que la version de la base de données à changé, résultat de la fonction de saisie d'un évènement {{domxref("IDBOpenDBRequest.onupgradeneeded")}}.
 
 ### Interfaces obsolètes
 
 Une précedente version des spécifications a défini ces interfaces, désormais supprimées. Elles sont toujours documentées dans le cas où vous avez besoin de mettre à jour du code déja écrit :
 
 - {{domxref("IDBVersionChangeRequest")}} {{deprecated_inline}}
-  - : Représente une requête de changement de version de la base de données. Le moyen pour changer de version de la base de données a désormais changé (avec un appel de {{domxref("IDBFactory.open")}} sans aussi appeler {{domxref("IDBDatabase.setVersion")}}), et l'interface  {{domxref("IDBOpenDBRequest")}} a désormais la fonction de l'ancienne (supprimée) {{domxref("IDBVersionChangeRequest")}}.
-- {{domxref("IDBDatabaseException")}}  {{deprecated_inline}}
+  - : Représente une requête de changement de version de la base de données. Le moyen pour changer de version de la base de données a désormais changé (avec un appel de {{domxref("IDBFactory.open")}} sans aussi appeler {{domxref("IDBDatabase.setVersion")}}), et l'interface {{domxref("IDBOpenDBRequest")}} a désormais la fonction de l'ancienne (supprimée) {{domxref("IDBVersionChangeRequest")}}.
+- {{domxref("IDBDatabaseException")}} {{deprecated_inline}}
   - : Représente une exception (erreur) qui peut survenir durant les opérations sur la base de données.
 - {{domxref("IDBTransactionSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBTransaction")}}.
 - {{domxref("IDBObjectStoreSync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBObjectStore")}}.
 - {{domxref("IDBIndexSync")}} {{deprecated_inline}}
-  - : Version synchrone de  {{domxref("IDBIndex")}}.
+  - : Version synchrone de {{domxref("IDBIndex")}}.
 - {{domxref("IDBFactorySync")}} {{deprecated_inline}}
   - : Version synchrone de {{domxref("IDBFactory")}}.
 - {{domxref("IDBEnvironmentSync")}} {{deprecated_inline}}
@@ -103,15 +104,12 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 ## Exemples
 
 - [eLibri:](http://marco-c.github.io/eLibri/) Une application puissante de bibliothèque et de lecteur de livres électroniques, écrit par Marco Castelluccio, gagnant du _DevDerby IndexedDB_ de Mozilla.
-- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([voir la démonstration en ligne](http://mdn.github.io/to-do-notifications/)): L'application de référence pour les exemples de la documentation.
+- [To-do Notifications](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) ([voir la démonstration en ligne](https://mdn.github.io/dom-examples/to-do-notifications/)): L'application de référence pour les exemples de la documentation.
 - [Stocker des images et des fichiers dans IndexedDB](http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/)
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire         |
-| ------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('IndexedDB')}}     | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2")}} | {{Spec2("IndexedDB 2")}} |                     |
+{{Specifications}}
 
 ## Voir aussi
 

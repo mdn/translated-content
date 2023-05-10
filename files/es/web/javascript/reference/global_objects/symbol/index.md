@@ -1,11 +1,14 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-browser-compat: javascript.builtins.Symbol
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol
+l10n:
+  sourceCommit: 54ae754f4d18601ee91f741c7b774d2238e2656e
 ---
+
 {{JSRef}}
 
-**`Symbol`** es un objeto incorporado cuyo constructor devuelve un `symbol` [primitivo](/es-US/docs/Glossary/Primitive) — también llamado **Symbol value** o simplemente **Symbol** — que está garantizado que sea único. Los Symbols se utilizan a menudo para añadir claves de propiedades únicas a un objeto que no sean iguales a las claves que cualquier otro código pueda añadir al objeto, y que están ocultas de cualquier mecanismo que otro código utilice normalmente para acceder al objeto. Esto permite una forma de {{Glossary("encapsulation")}} débil, o una forma débil de [ocultación de información](https://en.wikipedia.org/wiki/Information_hiding).
+**`Symbol`** es un objeto incorporado cuyo constructor devuelve un `symbol` [primitivo](/es/docs/Glossary/Primitive) — también llamado **Symbol value** o simplemente **Symbol** — que está garantizado que sea único. Los Symbols se utilizan a menudo para añadir claves de propiedades únicas a un objeto que no sean iguales a las claves que cualquier otro código pueda añadir al objeto, y que están ocultas de cualquier mecanismo que otro código utilice normalmente para acceder al objeto. Esto permite una forma de {{Glossary("encapsulation")}} débil, o una forma débil de [ocultación de información](https://en.wikipedia.org/wiki/Information_hiding).
 
 Se garantiza que cada llamada a `Symbol()` devuelve un único Symbol. Cada llamada a `Symbol.for("key")` devolverá siempre el mismo Symbol para un valor dado de `"key"`. Cuando se llama a `Symbol.for("key")`, si se puede encontrar un símbolo con la clave dada en el registro global de símbolos, se devuelve ese Symbol. En caso contrario, se crea un nuevo Symbol, se añade al registro global de Symbols con la clave dada y se devuelve.
 
@@ -52,19 +55,19 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
 
 ## Constructor
 
-- [`Symbol()`](/es-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
+- [`Symbol()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol)
   - : Crea un nuevo objeto `Symbol`. Está incompleto como constructor porque no soporta la sintaxis "`new Symbol()`".
 
 ## Propiedades estáticas
 
 - {{jsxref("Symbol.asyncIterator")}}
-  - : Un método que devuelve el AsyncIterator por defecto para un objeto. Utilizado por [`for await...of`](/es-US/docs/Web/JavaScript/Reference/Statements/for-await...of).
+  - : Un método que devuelve el AsyncIterator por defecto para un objeto. Utilizado por [`for await...of`](/es/docs/Web/JavaScript/Reference/Statements/for-await...of).
 - {{jsxref("Symbol.hasInstance")}}
   - : Un método que determina si un objeto constructor reconoce un objeto como su instancia. Utilizado por {{jsxref("Operators/instanceof", "instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : Un valor booleano que indica si un objeto debe ser convertido a sus elementos de matriz. Utilizado por {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.iterator")}}
-  - : Un método que devuelve el iterador por defecto de un objeto. Utilizado por [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+  - : Un método que devuelve el iterador por defecto de un objeto. Utilizado por [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of).
 - {{jsxref("Symbol.match")}}
   - : Un método que coincide con una cadena, también se utiliza para determinar si un objeto puede ser utilizado como una expresión regular. Utilizado por {{jsxref("String.prototype.match()")}}.
 - {{jsxref("Symbol.matchAll")}}
@@ -82,7 +85,7 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
 - {{jsxref("Symbol.toStringTag")}}
   - : Valor de cadena utilizado para la descripción por defecto de un objeto. Utilizado por {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Symbol.unscopables")}}
-  - : Un valor de objeto cuyos nombres de propiedades propias y heredadas se excluyen de los enlaces de entorno [`with`](/es-US/docs/Web/JavaScript/Reference/Statements/with) del objeto asociado.
+  - : Un valor de objeto cuyos nombres de propiedades propias y heredadas se excluyen de los enlaces de entorno [`with`](/es/docs/Web/JavaScript/Reference/Statements/with) del objeto asociado.
 
 ## Métodos estáticos
 
@@ -125,11 +128,11 @@ Algunas cosas a tener en cuenta cuando se trabaja con la conversión de tipo de 
   (e.g. `+sym` or `sym | 0`).
 - Cuando se utiliza la igualdad suelta, `Object(sym) == sym` devuelve `true`.
 - `Symbol("foo") + "bar"` lanza un {{jsxref("TypeError")}} (no se puede convertir Symbol en cadena). Esto impide crear silenciosamente un nuevo nombre de propiedad de cadena a partir de un Symbol, por ejemplo.
-- La conversión ["más segura" `String(sym)`](/es-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) funciona como una llamada a {{jsxref("Symbol.prototype.toString()")}} con Symbols, pero ten en cuenta que `new String(sym)` será lanzado.
+- La conversión ["más segura" `String(sym)`](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_conversion) funciona como una llamada a {{jsxref("Symbol.prototype.toString()")}} con Symbols, pero ten en cuenta que `new String(sym)` será lanzado.
 
 ### Iteración de Symbols y for...in
 
-Los Symbols no son enumerables en las iteraciones [`for...in`](/es-US/docs/Web/JavaScript/Reference/Statements/for...in). Además, {{jsxref("Object.getOwnPropertyNames()")}} no devolverá las propiedades del objeto Symbol, sin embargo, puede utilizar {{jsxref("Object.getOwnPropertySymbols()")}} para obtenerlas.
+Los Symbols no son enumerables en las iteraciones [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Además, {{jsxref("Object.getOwnPropertyNames()")}} no devolverá las propiedades del objeto Symbol, sin embargo, puede utilizar {{jsxref("Object.getOwnPropertySymbols()")}} para obtenerlas.
 
 ```js
 let obj = {}
@@ -177,7 +180,6 @@ obj[Object(sym)]     // sigue siendo 1
 ## Véase también
 
 - [Polyfill de `Symbol` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [Glosario: Tipo de datos de los Symbols](/en-US/docs/Glossary/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Tipos y estructuras de datos](/en-US/docs/Web/JavaScript/Data_structures)
+- [Tipos y estructuras de datos](/es/docs/Web/JavaScript/Data_structures)
 - ["ES6 en profundidad: Symbols" en hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)

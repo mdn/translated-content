@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/delete
 ---
+
 {{JSRef}}
 
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `WeakSet`.
@@ -48,14 +49,11 @@ ws.has(window);    // Renvoie false, window n'appartient plus au WeakSet.
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakSet.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

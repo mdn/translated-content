@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Link_prefetching_FAQ
 original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 ---
+
 ### Qu’est ce que le préchargement de liens&nbsp;?
 
 Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l’utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.
@@ -37,7 +38,7 @@ L’en-tête `Link:` peut également être spécifiée à l’intérieur d’un 
 <meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
 ```
 
-Le format pour l’en-tête `Link:`est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
+Le format pour l’en-tête `Link:` est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
 
 > **Note :** Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](http://tools.ietf.org/html/rfc2616) ne décrit pas l’en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
 
@@ -72,7 +73,7 @@ Oui et non. Si vous téléchargez quelque chose en utilisant Mozilla, le précha
 
 ### Existe-t-il des restrictions sur ce qui peut être préchargé&nbsp;?
 
-Oui, uniquement les URL http\:// (et, à partir de {{ Gecko("1.9.1") }}, https\://) peuvent être préchargées. Les autres protocoles (comme FTP) ne fournissent pas de support suffisamment riche pour la gestion du cache côté client. En plus de cette restriction, les URL ayant une chaîne de paramètres ne sont pas préchargées. Ceci parce que de telles URL sont souvent dans des documents qui ne peuvent pas être réutilisés en dehors du cache du navigateur. Donc précharger de telles URL n’apporterait pas grand chose. Nous avons constaté que des sites existants utilisent la balise \<link rel="next"> avec des URL contenant des chaînes de paramètres pour référencer le document suivant dans une série de documents. Bugzilla est un de ces sites et il s'avère que les rapports de bug dans Bugzilla ne peuvent être mis en cache, aussi précharger ces URL reviendrait à peu près à doubler la charge de ce pauvre Bugzilla&nbsp;! On peut se douter que d’autres sites ont été conçus comme Bugzilla donc on ne fait explicitement pas de préchargement d’URL contenant des chaînes de paramètres. (Il pourrait être sensé d’autoriser le préchargement de ces documents avec une relation de type `rel=prefetch`, puisque cela n'apparait pas dans aucun contenu existant). Il n’y a pas d’autres restrictions en ce qui concerne les URL préchargées.
+Oui, uniquement les URL http\:// (et, à partir de Gecko 1.9.1, https\://) peuvent être préchargées. Les autres protocoles (comme FTP) ne fournissent pas de support suffisamment riche pour la gestion du cache côté client. En plus de cette restriction, les URL ayant une chaîne de paramètres ne sont pas préchargées. Ceci parce que de telles URL sont souvent dans des documents qui ne peuvent pas être réutilisés en dehors du cache du navigateur. Donc précharger de telles URL n’apporterait pas grand chose. Nous avons constaté que des sites existants utilisent la balise \<link rel="next"> avec des URL contenant des chaînes de paramètres pour référencer le document suivant dans une série de documents. Bugzilla est un de ces sites et il s'avère que les rapports de bug dans Bugzilla ne peuvent être mis en cache, aussi précharger ces URL reviendrait à peu près à doubler la charge de ce pauvre Bugzilla&nbsp;! On peut se douter que d’autres sites ont été conçus comme Bugzilla donc on ne fait explicitement pas de préchargement d’URL contenant des chaînes de paramètres. (Il pourrait être sensé d’autoriser le préchargement de ces documents avec une relation de type `rel=prefetch`, puisque cela n'apparait pas dans aucun contenu existant). Il n’y a pas d’autres restrictions en ce qui concerne les URL préchargées.
 
 ### Mozilla peut-il précharger un document d’un hôte différent&nbsp;?
 
@@ -121,7 +122,7 @@ Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Moz
 
 Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer&nbsp;:-)
 
-#### Voir également
+#### Voir aussi
 
 - [Prefetching Hints (en)](http://www.edochan.com/programming/pf.htm)
 

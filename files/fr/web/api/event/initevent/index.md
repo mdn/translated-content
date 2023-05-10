@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Event/initEvent
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 La méthode **`Event.initEvent()`** est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.
@@ -26,11 +27,11 @@ event.initEvent(type, bubbles, cancelable)
 ```
 
 - `type`
-  - : est une {{domxref("DOMString")}}  qui définit le type d'évènement.
+  - : est une {{domxref("DOMString")}} qui définit le type d'évènement.
 - `bubbles`
-  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule  {{domxref("Event.bubbles")}} donnera sa valeur.
+  - : est un {{jsxref("Boolean")}} indiquant si l'évènement doit se propager vers le haut dans la chaîne des évènements ou non. Une fois déterminé, la propriété en lecture seule {{domxref("Event.bubbles")}} donnera sa valeur.
 - `cancelable`
-  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule  {{ domxref("Event.cancelable") }}  donnera sa valeur.
+  - : Une valeur booléenne définissant si l'évènement peut être annulé. Une fois déterminé, la propriété en lecture seule {{ domxref("Event.cancelable") }} donnera sa valeur.
 
 ## Exemple
 
@@ -52,14 +53,11 @@ elem.dispatchEvent(event);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}         | {{Spec2("DOM WHATWG")}} | Depuis {{SpecName('DOM2 Events')}}, dépréciée, remplacée par les constructeurs d'événements. |
-| {{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}} | {{Spec2('DOM2 Events')}} | Définition initiale.                                                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

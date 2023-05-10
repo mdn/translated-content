@@ -1,15 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - File API
-  - ファイル
-  - プロパティ
-  - リファレンス
-browser-compat: api.File.name
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("File")}} オブジェクトによって表されるファイルの名前を返します。セキュリティ上の理由から、パスはこのプロパティから除外されます。
@@ -65,4 +58,4 @@ function processSelectedFiles(fileInput) {
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

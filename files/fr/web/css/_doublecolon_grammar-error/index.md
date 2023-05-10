@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::grammar-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le pseudo-élément CSS **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
@@ -60,13 +61,11 @@ p::grammar-error { color:red }
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-grammar-error', '::grammar-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.grammar-error")}}
+{{Compat}}
 
 ## Voir aussi
 

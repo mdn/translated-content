@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Geolocation/clearWatch
 ---
+
 {{ APIref("Geolocation API") }}
 
 La méthode **`Geolocation.clearWatch()`** est utilisée pour libérer les ressources de localisation/erreur créées antérieurement en utilisant {{domxref("Geolocation.watchPosition()")}}.
@@ -59,13 +60,11 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire             |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation.clearWatch")}}
+{{Compat}}
 
 ## Voir aussi
 

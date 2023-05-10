@@ -1,20 +1,11 @@
 ---
-title: 学习 HTML：指南与教程
+title: 使用 HTML 组织网站内容
 slug: Learn/HTML
-tags:
-  - HTML
-  - HTML5
-  - 主题
-  - 入门指导
-  - 基础
-  - 学习
-  - 新手
-  - 简介
-translation_of: Learn/HTML
 ---
+
 {{LearnSidebar}}
 
-为了创建一个网站，你需要了解 {{Glossary('HTML')}} —— 一项用于定义网页结构的基本技术。HTML 用于标识你的网页内容是应该被解析为段落、列表、头部、链接、图像、多媒体播放器、表单或是其他众多可用的元素之一，亦或是你定义的新元素。
+为了创建一个网站，你需要了解 {{Glossary('HTML')}}——一项用于定义网页结构的基本技术。HTML 用于标识你的网页内容是应该被解析为段落、列表、头部、链接、图像、多媒体播放器、表单或是其他众多可用的元素之一，亦或是你定义的新元素。
 
 > **标注：**
 >
@@ -26,9 +17,9 @@ translation_of: Learn/HTML
 
 ## 须知
 
-在开始这个主题的学习之前，你至少要基本熟悉使用电脑和被动地使用网络（即单纯地查看内容）。你应该设置好一个基础的工作环境，详细参照 [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software), 并且理解如何新建和管理文件，详细参照[文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)——这两者都在 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 的完全新手模块里。
+在开始这个主题的学习之前，你至少要基本熟悉使用电脑和被动地使用网络（即单纯地查看内容）。你应该设置好一个基础的工作环境，详细参照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并且理解如何新建和管理文件，详细参照[文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)——这两者都在 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)的零基础模块里。
 
-在尝试学习这个主题之前，建议先完成 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)主题，不过这并不是必要的。[HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)里大多数的文章在 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中也有涉及，不过要详细得多。
+在尝试学习这个主题之前，建议先完成 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)主题，不过这并不是必要的。[HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)里大多数的文章在 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)中也有涉及，不过要详细得多。
 
 在学习了 HTML 之后，你就可以继续学习其他进阶主题了，例如：
 
@@ -52,7 +43,7 @@ translation_of: Learn/HTML
 
 ## 参见
 
-- [Web 表单](/zh-CN/docs/Learn/Forms)
-  - : 本模块提供了一系列文章以助你掌握 Web 表单的要领。Web 表单是一种非常强大的用户交互工具--其最常见的应用是收集用户的数据，或允许他们控制用户界面。然而，由于历史和技术原因，想要充分发挥他们的潜能并不是一件易事。本模块将介绍 Web 表单的所有基本要素，包括标记其 HTML 结构、表单控件的样式、验证表单数据以及向服务器提交数据。
+- [web 表单](/zh-CN/docs/Learn/Forms)
+  - : 本模块提供了一系列文章以助你掌握 web 表单的要领。web 表单是一种非常强大的用户交互工具--其最常见的应用是收集用户的数据，或允许他们控制用户界面。然而，由于历史和技术原因，想要充分发挥他们的潜能并不是一件易事。本模块将介绍 web 表单的所有基本要素，包括标记其 HTML 结构、表单控件的样式、验证表单数据以及向服务器提交数据。
 - [MDN 上的 HTML（超文本标记语言）](/zh-CN/docs/Web/HTML)
   - : MDN 上 HTML 相关参考文档的主入口，涵盖了详细的元素和属性参考——比如说如果你想知道一个元素有什么属性或者一个属性有什么值，此页面是一个查询它们的好地方。

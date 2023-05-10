@@ -6,6 +6,7 @@ translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 ---
+
 ## Introduction
 
 Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.
@@ -161,7 +162,7 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
     myBody = document.getElementsByTagName("body")[0]
     ```
 
-    Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `{{mediawiki.external(0)}}`.
+    Puisqu'il n'existe qu'un seul élément body dans un document HTML valide, cette liste ne comporte qu'un élément, que l'on récupère en sélectionnant le premier élément de la liste grace à `[0]`.
 
 2. Ensuite, on récupère tous les éléments p qui sont des enfants de body en utilisant
 
@@ -196,7 +197,7 @@ Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée text
 
 ### Insertion d'éléments avec appendChild(...)
 
-En invoquant `myP.appendChild` ({{mediawiki.external('node_element')}}) , vous définissez `element_nœud` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
+En invoquant `myP.appendChild('node_element')` , vous définissez `node_element` comme un nouvel enfant du second élément `p` (`myP` a été défini plus haut comme étant le second élément p).
 
 ```js
 myP.appendChild(noeudTexte);
@@ -306,7 +307,7 @@ Le code source qui suit est un exemple commenté qui crée le tableau de Exemple
 
 ### Récupérer un nœud texte dans le tableau
 
-Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la méthode `{{ mediawiki.external('x') }}` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
+Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut `childNodes` qui est utilisé pour récupérer la liste des nœuds enfants de `cel`. A la différence de `getElementsByTagName`, la liste renvoyée par `childNodes` comporte tous les enfants sans considération de type. Une fois la liste obtenue, la notation `[x]` est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans `celtext`. Ensuite, un nouveau nœud texte contenant les données de `celtext` est greffé en tant qu'enfant sur l'élément \<body>.
 
 > **Note :** Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut `data`.
 
@@ -376,6 +377,6 @@ Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez défini
 - Author(s)
   - : Marcio Galli
 - Migrated from
-  - : http\://web.archive.org/web/20000815054125/http\://mozilla.org/docs/dom/technote/tn-dom-table/
+  - : <http://web.archive.org/web/20000815054125/http://mozilla.org/docs/dom/technote/tn-dom-table/>
 
 Interwik

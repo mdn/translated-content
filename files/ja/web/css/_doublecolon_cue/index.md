@@ -1,19 +1,8 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - CSS
-  - メディア
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ動画テキストトラック
-  - WebVTT
-  - cue
-browser-compat: css.selectors.cue
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 **`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付けする](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)ことができます。

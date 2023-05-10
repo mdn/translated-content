@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-top
 ---
+
 {{CSSRef}}
 
 La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
@@ -43,9 +44,13 @@ padding-top: unset;
 - `<percentage>`
   - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -75,18 +80,11 @@ padding-top: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding-top')}}                     | {{Spec2('CSS3 Box')}}             | Aucun changement depuis {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}}. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-top')}}     | {{Spec2('CSS3 Transitions')}} | `padding-top` peut désormais être animée.                                                                             |
-| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}} | {{Spec2('CSS2.1')}}                 | Aucun changement depuis {{Specname('CSS1', '#padding-top', 'padding-top')}}.                         |
-| {{Specname('CSS1', '#padding-top', 'padding-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-top")}}
+{{Compat}}
 
 ## Voir aussi
 

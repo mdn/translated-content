@@ -1,22 +1,11 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/input/text
-tags:
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力型
-  - リファレンス
-  - Text
-  - テキスト入力
-  - text input
-browser-compat: html.elements.input.input-text
-translation_of: Web/HTML/Element/input/text
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 
@@ -27,7 +16,7 @@ translation_of: Web/HTML/Element/input/text
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        テキスト入力欄に含まれる文字列を表す {{domxref("DOMString")}}。
+        テキスト入力欄に含まれるテキストを表す文字列。
       </td>
     </tr>
     <tr>
@@ -56,6 +45,10 @@ translation_of: Web/HTML/Element/input/text
       <td>{{htmlattrxref("list", "input")}}, <code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -68,65 +61,65 @@ translation_of: Web/HTML/Element/input/text
 
 ## 値
 
- {{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている {{domxref("DOMString")}} です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
+ {{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
 
 ```js
 let theText = myTextInput.value;
 ```
 
-入力欄に検証の制約がない場合 (詳しくは[検証](#検証)を参照)、値は空文字列 ("") にすることができます。
+入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照）、値は空文字列 ("") にすることができます。
 
 ## 追加の属性
 
 型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `text` 型の入力欄は次の属性にも対応しています。
 
-### list
+### `list`
 
 list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
-### maxlength
+### `maxlength`
 
 ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
-### minlength
+### `minlength`
 
 ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
 
 入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
-### pattern
+### `pattern`
 
 `pattern` 属性は、指定する場合は正規表現であり、入力欄の {{htmlattrxref("value")}} が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **Note:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
-### placeholder
+### `placeholder`
 
 `placeholder` 属性は文字列で、その欄にどのような種類の情報が求められるかについてのユーザーに対する短いヒントを提供します。これは求められるデータの種類を紹介する一語または短い句であり、説明的なメッセージではありません。テキストには改行を含めることは<em>できません</em>。
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **Note:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
 
-### readonly
+### `readonly`
 
 論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
-> **Note:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> **メモ:** 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
 
-### size
+### `size`
 
 `size` 属性は数値であり、入力欄の幅を何文字分とするかを示します。値はゼロより大きな数値である必要があり、既定値は 20 です。文字の幅は様々であるため、これは正確ではない可能性もあり、依存することはできません。結果の入力欄は文字数やフォント（使用中の {{cssxref("font")}} 設定）によって、指定された文字数より狭くなったり広くなったりすることがあります。
 
 これはユーザーがフィールドに入力することができる文字数の制限を設定するものではありません。これは一度に見える文字数をおよそ指定するだけです。入力データの長さの上限を設定するには、 [`maxlength`](#maxlength) 属性を使用してください。
 
-### spellcheck
+### `spellcheck`
 
 `spellcheck` はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
 
@@ -134,7 +127,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
   - : この要素でスペルチェックを無効にします。
 - `true`
   - : この要素でスペルチェックを有効にします。
-- "" (空文字列) または値なし
+- `""` (空文字列) または値なし
   - : スペルチェックについて、要素の既定の動作に従います。これは親の `spellcheck` 設定や、その他の要因に基づくことがあります。
 
 入力欄では、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
@@ -145,7 +138,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ブラウザーによっては、以下の標準外の属性が利用できます。一般的な規則として、できれば使用することを避けてください。
 
-### autocorrect
+### `autocorrect`
 
 Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
 
@@ -154,13 +147,11 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 - `off`
   - : 自動修正やテキストの置き換えを無効にします。
 
-### mozactionhint
+### `mozactionhint`
 
-Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。この情報は仮想キーボードの <kbd>Enter</kbd> キーにどのようなラベルを使用するかを決定するために使用されます。
+Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-> **Note:** これはグローバル属性 {{htmlattrxref("enterkeyhint")}} として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 {{bug(1490661)}} を参照してください。
-
-許可されている値は `go`, `done`, `next`, `search`, `send` です。ブラウザーはこのヒントを使用して、 Enter キーにどのラベルを置くかを決定します。
+この属性は非推奨です。変わらいにグローバル属性 {{htmlattrxref("enterkeyhint")}} を使用してください。
 
 ## テキスト入力欄の使用
 
@@ -172,7 +163,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name">
+    <input type="text" id="uname" name="name" />
   </div>
   <div>
     <button>送信</button>
@@ -182,7 +173,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 これは次のように表示されます。
 
-{{EmbedLiveSample("Basic_example", 600, 50)}}
+{{EmbedLiveSample("Basic_example", 600, 80)}}
 
 送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 {{htmlattrxref("name", "input")}} 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
 
@@ -194,8 +185,11 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="小文字で一語">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="小文字で一語で" />
   </div>
   <div>
     <button>送信</button>
@@ -205,7 +199,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 プレイスホルダーがどう表示されるかを以下で確認できます。
 
-{{EmbedLiveSample("Setting_placeholders", 600, 50)}}
+{{EmbedLiveSample("Setting_placeholders", 600, 80)}}
 
 プレイスホルダーはふつう、要素の前景色よりも薄い色で表示され、ユーザーが入力欄にテキストを入力し始めると（または、 `value` 属性に設定することで、プログラム的に値を設定する場合も）自動的に消滅します。
 
@@ -217,9 +211,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="小文字で一語"
-           size="30">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="小文字で一語で"
+      size="30" />
   </div>
   <div>
     <button>送信</button>
@@ -227,13 +224,13 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 </form>
 ```
 
-{{ EmbedLiveSample('Physical_input_element_size', 600, 50) }}
+{{EmbedLiveSample('Physical_input_element_size', 600, 80)}}
 
 ## 検証
 
 `text` 型の `<input>` 要素には、適用される自動的な検証はありませんが（基本的なテキスト入力欄は、自由な文字列を受け付けることが求められるからです）、以下に解説するように、クライアント側の検証のオプションがいくつか利用できます。
 
-> **Note:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
+> **メモ:** HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、間違った種類のデータなど）がデータベースに入力された場合に災害が発生するおそれがあります。
 
 ### スタイル付けのメモ
 
@@ -249,14 +246,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -271,7 +269,7 @@ input:valid+span:after {
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name" required>
+    <input type="text" id="uname" name="name" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -288,21 +286,21 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
 次のように表示されます。
 
-{{ EmbedLiveSample('Making_input_required', 600, 70) }}
+{{EmbedLiveSample('Making_input_required', 600, 100)}}
 
 検索用語を入力せずにフォームを送信しようとした場合、ブラウザーはエラーメッセージを表示します。
 
@@ -316,9 +314,15 @@ input:valid+span:after {
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name" required size="10"
-           placeholder="ユーザー名"
-           minlength="4" maxlength="8">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="10"
+      placeholder="ユーザー名"
+      minlength="4"
+      maxlength="8" />
     <span class="validity"></span>
   </div>
   <div>
@@ -335,25 +339,25 @@ div {
 input + span {
   padding-right: 30px;
 }
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
 以下のように表示されます。
 
-{{ EmbedLiveSample('Input_value_length', 600, 70) }}
+{{EmbedLiveSample('Input_value_length', 600, 100)}}
 
 4 文字未満でフォームを送信しようとすると、適切なエラーメッセージが表示されます（ブラウザーによって異なります）。 8 文字を超えて入力しようとしても、ブラウザーが許しません。
 
-> **Note:** `minlength` を指定して `required` を指定しないと、ユーザーが値を指定する必要がなくなるので、入力は妥当と判断されます。
+> **メモ:** `minlength` を指定して `required` を指定しないと、ユーザーが値を指定する必要がなくなるので、入力は妥当と判断されます。
 
 ### パターンの指定
 
@@ -365,8 +369,13 @@ input:valid+span:after {
 <form>
   <div>
     <label for="uname">ユーザー名を選んでください: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}" />
     <span class="validity"></span>
     <p>ユーザー名は小文字で 4～8 文字でなければなりません。</p>
   </div>
@@ -391,22 +400,22 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
 次のように表示されます。
 
-{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
+{{EmbedLiveSample('Specifying_a_pattern', 600, 130)}}
 
 ## 例
 

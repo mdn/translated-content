@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/flatMap
 ---
+
 {{JSRef}}
 
 La méthode **`flatMap()`** permet d'appliquer une fonction à chaque élément du tableau puis d'aplatir le résultat en un tableau. Cela correspond à l'enchaînement de {{jsxref("Array.prototype.map()")}} suivi de {{jsxref("Array.prototype.flat()")}} de profondeur 1. `flatMap` est plus efficace que la combinaison de ces deux opérations, souvent réalisées conjointement.
@@ -97,13 +98,11 @@ arr.reduce((acc, x) => acc.concat([x, x * 2]), []);
 
 ## Spécifications
 
-| Spécification                                                                                              | État     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [ECMAScript 2019](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flatmap) | Finalisé | Proposition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Voir aussi
 

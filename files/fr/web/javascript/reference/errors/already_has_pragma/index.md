@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Already_has_pragma
 original_slug: Web/JavaScript/Reference/Erreurs/Already_has_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

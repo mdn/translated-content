@@ -7,6 +7,7 @@ tags:
   - redirections
 translation_of: Web/HTTP/Redirections
 ---
+
 {{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
 
 ## Principe
@@ -51,7 +52,7 @@ En plus de ces redirections habituelles, il existe deux redirections spécifique
 
 ## Autre façon de spécifier les redirections
 
-Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/en-US/docs/Web/API/Document_Object_Model).
+Les redirections HTTP ne sont pas les seuls moyens de définir des redirections. Il existe deux autres méthodes: les redirections HTML en utilisant l'élément {{HTMLElement("meta")}}, et les redirections JavaScript en utilisant le [DOM](/fr/docs/Web/API/Document_Object_Model).
 
 ### Redirections HTML
 

@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.font
 slug: Web/API/CanvasRenderingContext2D/font
 translation_of: Web/API/CanvasRenderingContext2D/font
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.font`** de l'API Canvas 2D API spécifie le style de texte à utiliser pour dessiner du texte. Cette chaîne utilise la même syntaxe que le spécificateur de [police CSS](/fr-FR/docs/Web/CSS/font). La police par défaut est 10px sans-serif.
@@ -97,21 +98,11 @@ f.load().then(function() {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-font", "CanvasRenderingContext2D.font")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.font")}}
-
-## Notes spécifiques à Gecko
-
-- Dans les navigateurs basés sur Gecko, tels que Firefox, une propriété non standard et désapprouvée `ctx.mozTextStyle` est implémentée en plus de cette propriété. Ne l'utilisez pas.
-
-### Notes relatives à Quantum
-
-- Un bug ({{bug(1374885)}}) a été corrigé avec Quantum et qui empêchait de récupérer la police d'un contexte lorsqu'une police système était utilisée. Cela a été corrigée avec [Stylo](https://wiki.mozilla.org/Quantum/Stylo) qui a été publié avec Firefox 57.
+{{Compat}}
 
 ## Voir aussi
 

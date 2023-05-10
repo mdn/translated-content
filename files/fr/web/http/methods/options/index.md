@@ -4,6 +4,7 @@ slug: Web/HTTP/Methods/OPTIONS
 translation_of: Web/HTTP/Methods/OPTIONS
 original_slug: Web/HTTP/Méthode/OPTIONS
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP `OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.
@@ -73,9 +74,9 @@ x-ec-custom-error: 1
 Content-Length: 0
 ```
 
-### Requête de pré-vérification cross-origin [CORS](https://developer.mozilla.org/fr/docs/Glossaire/CORS)
+### Requête de pré-vérification cross-origin [CORS](/fr/docs/Glossary/CORS)
 
-En [CORS](/en-US/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
+En [CORS](/fr/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
 
 ```
 OPTIONS /resources/post-here/ HTTP/1.1
@@ -110,15 +111,13 @@ Content-Type: text/plain
 
 ## Spécifications
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "OPTIONS", "4.3.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.methods.OPTIONS")}}
+{{Compat}}
 
 ## Voir aussi
 
 - en-tête {{HTTPHeader("Allow")}}
-- [CORS](/en-US/docs/Web/HTTP/Access_control_CORS)
+- [CORS](/fr/docs/Web/HTTP/Access_control_CORS)

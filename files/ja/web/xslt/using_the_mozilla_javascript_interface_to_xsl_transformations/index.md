@@ -1,31 +1,32 @@
 ---
 title: Mozilla JavaScript インターフェイスを使用した XSL 変換
 slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-tags:
-  - XSLT
-translation_of: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+l10n:
+  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
 ---
+
 この文書では、 Mozilla 1.2 の JavaScript インターフェイスと XSLT 処理エンジン (TransforMiiX) について説明します。
 
-### XSLTProcessorの作成
+### XSLTProcessor の作成
 
-まず、{{domxref("XSLTProcessor")}} オブジェクトを作成する必要があります。
+まず、 {{domxref("XSLTProcessor")}} オブジェクトを作成する必要があります。
 
 ```js
-var processor = new XSLTProcessor();
+const processor = new XSLTProcessor();
 ```
 
 ### スタイルシートの指定
 
 これを使用するには、 {{domxref("XSLTProcessor.importStylesheet()")}} メソッドを使用してスタイルシートをインポートする必要があります。これには単一の引数があり、インポートする XSLT スタイルシートの DOM ノードを指定します。
 
-> **Note:** インポートはライブです。つまりインポート後にスタイルシートの DOM を変更すると、処理に反映されます。 DOM を変更するよりも、スタイルシートの引数を使用することが推奨されています。通常より簡単に、より良いパフォーマンスを得ることができます。
+> **メモ:** インポートはライブです。つまりインポート後にスタイルシートの DOM を変更すると、処理に反映されます。 DOM を変更するよりも、スタイルシートの引数を使用することが推奨されています。通常より簡単に、より良いパフォーマンスを得ることができます。
 
 ```js
-var testTransform = document.implementation.createDocument("", "test", null);
-// just an example to get a transform into a script as a DOM
-// XMLDocument.load is asynchronous, so all processing happens in the
-// onload handler
+const testTransform = document.implementation.createDocument("", "test", null);
+
+// DOM としてスクリプトに変換を取得する例です
+// XMLDocument.load は非同期なので、すべての処理が onload ハンドラーで
+// 行われる
 testTransform.addEventListener("load", onload, false);
 testTransform.load("test-transform.xml");
 function onload() {
@@ -44,7 +45,7 @@ function onload() {
 {{domxref("XSLTProcessor.transformToDocument()")}} は変換するソースノードを1つ引数として、変換結果とともに新しい {{domxref("Document")}} を返します。
 
 ```js
-var newDocument = processor.transformToDocument(domToBeTransformed);
+const newDocument = processor.transformToDocument(domToBeTransformed);
 ```
 
 結果のオブジェクトはスタイルシートの[出力メソッド](https://www.w3.org/TR/1999/REC-xslt-19991116/#output)に依存します。
@@ -55,16 +56,16 @@ var newDocument = processor.transformToDocument(domToBeTransformed);
 
 #### transformToFragment
 
-<p>{{domxref("DocumentFragment")}} ノードを返す {{domxref("XSLTProcessor.transformToFragment()")}} を使用することもできます。フラグメントを別のノードに追加すると、そのフラグメントのすべての子が透過的に追加され、フラグメント自体はマージされないため、これは便利です。したがってフラグメントは、完全な文書オブジェクトのオーバーヘッドなしにノードを移動して格納するのに便利です。
+{{domxref("XSLTProcessor.transformToFragment()")}} を使用することもでき、こちらは {{domxref("DocumentFragment")}} ノードを返します。フラグメントを別のノードに追加すると、そのフラグメントのすべての子が透過的に追加され、フラグメント自体はマージされないため、これは便利です。したがってフラグメントは、完全な文書オブジェクトのオーバーヘッドなしにノードを移動して格納するのに便利です。
 
  {{domxref("XSLTProcessor.transformToFragment()")}} は、変換するソース文書（上記）とフラグメントを所有する {{domxref("Document")}} オブジェクトの 2 つの引数をとります（すべてのフラグメントは文書が所有しなければなりません）。
 
 ```js
-var ownerDocument = document.implementation.createDocument("", "test", null);
-var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
+const ownerDocument = document.implementation.createDocument("", "test", null);
+const newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
 ```
 
-{{domxref("XSLTProcessor.transformToFragment()")}} は、所有文書自体が {{domxref("HTMLDocument")}} の場合、またはスタイルシートの出力メソッドが HTML の場合、 HTML DOM オブジェクトを生成します。これは、{{domxref("XSLTProcessor.transformToFragment()")}} がこの要素の作成に使用されることはほとんど**ない**ので、結果の最上位要素のみが {{HTMLElement("html")}} の場合、HTML DOMオブジェクトを生成しません。これをオーバーライドする場合は、通常の方法で出力メソッドを通常どおりに設定できます。
+{{domxref("XSLTProcessor.transformToFragment()")}} は、所有文書自体が {{domxref("HTMLDocument")}} の場合、またはスタイルシートの出力メソッドが HTML の場合、 HTML DOM オブジェクトを生成します。これは、 {{domxref("XSLTProcessor.transformToFragment()")}} がこの要素の作成に使用されることはほとんど**ない**ので、結果の最上位要素のみが {{HTMLElement("html")}} の場合、 HTML DOM オブジェクトを生成しません。これをオーバーライドする場合は、通常の方法で出力メソッドを通常どおりに設定できます。
 
 #### transforming HTML
 
@@ -84,30 +85,13 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 以下のものは {{domxref("XSLTProcessor")}} オブジェクトのインターフェイスを反映しています。
 
-- {{ Source("dom/xslt/nsIXSLTProcessor.idl", "nsIXSLTProcessor.idl") }}
-- {{ Source("dom/webidl/XSLTProcessor.webidl", "XSLTProcessor.webidl") }}
-
-### XPCOM コンポーネントから XSLTProcessor を使用
-
-XPCOM コンポーネントから {{domxref("XSLTProcessor")}} をインスタンス化するには、コンストラクターがコンポーネント内で定義されていないため、別の構文が必要です。
-
-次のようにする代わりに、
-
-```js
-var processor = new XSLTProcessor();
-```
-
-次のようにします。
-
-```js
-var processor = Components.classes["@mozilla.org/document-transformer;1?type=xslt"]
-                          .createInstance(Components.interfaces.nsIXSLTProcessor);
-```
+- [XSLTProcessor.webidl](https://dxr.mozilla.org/mozilla-central/source/dom/webidl/XSLTProcessor.webidl)
+- [txXSLTProcessor.cpp](https://dxr.mozilla.org/mozilla-central/source/dom/xslt/xslt/txXSLTProcessor.cpp)
 
 ### 関連情報
 
-- [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
-- XML文書の読み込みに関する [document.load()](/ja/docs/Web/API/XMLDocument/load) （上記で使用したもの）
+- [Gecko の XSLT JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+- XML 文書の読み込みに関する [document.load()](/ja/docs/Web/API/XMLDocument/load) （上記で使用したもの）
 
 ### 原著情報
 

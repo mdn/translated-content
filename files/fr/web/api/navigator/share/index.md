@@ -3,6 +3,7 @@ title: Navigator.share
 slug: Web/API/Navigator/share
 translation_of: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 La méthode **`Navigator.share()`** invoque le mécanisme de partage natif de l'appareil. Celle-ci appartient à l'API Web Share. Si l'API Web Share n'est pas supportée, alors la méthode sera `undefined`.
@@ -42,12 +43,10 @@ navigator.share({
 }); // partage l'URL de MDN
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                            | Status                               | Comment |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Share API','#share-method','share()')}} | {{Spec2('Web Share API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.share")}}
+{{Compat}}

@@ -9,9 +9,10 @@ tags:
   - Reference
 translation_of: Web/API/Document/Document
 ---
+
 {{APIRef}}
 
-Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}}, lequel c'est la référence de la page courante dans le navigateur et servant comme point d'entrer aux contenus de la page.
+Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}}, qui est une référence de la page courante du navigateur et sert de point d'entrée vers les contenus de celle-ci.
 
 ## Syntaxe
 
@@ -23,12 +24,10 @@ var document = new Document()
 
 None.
 
-Spécifications
+## Spécifications
 
-| Specification                                                                    | Status                           | Comment             |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#interface-document','Document')}} | {{Spec2('DOM WHATWG')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilité Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Document.Document")}}
+{{Compat}}

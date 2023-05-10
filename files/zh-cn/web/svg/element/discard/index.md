@@ -1,14 +1,8 @@
 ---
 title: <discard>
 slug: Web/SVG/Element/discard
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/discard
 ---
+
 {{SVGRef}}
 
 **`<discard>`** [SVG](/zh-CN/docs/Web/SVG) 元素允许作者指定在何时丢弃特定元素，从而减少 SVG 用户代理所需的资源。这对于帮助 SVG 查看器在显示长时间运行的文档时节省内存特别有用。

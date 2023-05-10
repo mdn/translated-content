@@ -1,17 +1,8 @@
 ---
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-tags:
-  - Class
-  - 実験的
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。

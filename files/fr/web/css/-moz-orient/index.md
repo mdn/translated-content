@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
@@ -71,7 +72,7 @@ Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-orient")}}
+{{Compat}}
 
 ## Voir aussi
 

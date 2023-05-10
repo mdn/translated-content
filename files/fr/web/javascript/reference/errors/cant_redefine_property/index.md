@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_redefine_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

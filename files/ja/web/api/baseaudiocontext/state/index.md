@@ -1,19 +1,9 @@
 ---
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - state
-browser-compat: api.BaseAudioContext.state
-translation_of: Web/API/BaseAudioContext/state
 original_slug: Web/API/AudioContext/state
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `state` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、現在の `AudioContext` の状態を返します。
@@ -62,4 +52,4 @@ function play() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

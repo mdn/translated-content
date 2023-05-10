@@ -1,18 +1,9 @@
 ---
 title: '<optgroup>: 選択肢グループ要素'
 slug: Web/HTML/Element/optgroup
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.optgroup
-translation_of: Web/HTML/Element/optgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢 ({{HTMLElement("option")}}) のグループを作成します。
 
@@ -42,7 +33,7 @@ translation_of: Web/HTML/Element/optgroup
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
@@ -55,7 +46,7 @@ translation_of: Web/HTML/Element/optgroup
   </tbody>
 </table>
 
-> **Note:** optgroup 要素を入れ子にすることはできません。
+> **メモ:** optgroup 要素を入れ子にすることはできません。
 
 ## 属性
 

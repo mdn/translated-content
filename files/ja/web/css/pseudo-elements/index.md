@@ -1,15 +1,8 @@
 ---
 title: 擬似要素
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/Pseudo-elements
 ---
+
 {{CSSRef}}
 
 CSS の **擬似要素** (Pseudo-elements) は、セレクターに付加するキーワードで、選択された要素の特定の部分にスタイル付けできるようにするものです。例えば {{CSSxRef("::first-line")}} 擬似要素は、段落の最初の行のフォントを変更するために使用することができます。
@@ -22,7 +15,7 @@ p::first-line {
 }
 ```
 
-> **Note:** 擬似要素とは対照的に、{{CSSxRef("pseudo-classes", "擬似クラス")}}は要素の<em>状態</em>に基づいてスタイル付けを行うことができます。
+> **メモ:** 擬似要素とは対照的に、{{CSSxRef("pseudo-classes", "擬似クラス")}}は要素の<em>状態</em>に基づいてスタイル付けを行うことができます。
 
 ## 構文
 
@@ -34,7 +27,7 @@ selector::pseudo-element {
 
 擬似要素は 1 つのセレクターに 1 つだけ使用することができます。文内の単純セレクターの後に置く必要があります。
 
-> **Note:** ルールとして、単一コロン (`:`) の代わりに二重コロン (`::`) を使用してください。これで擬似要素と擬似クラスを区別します。但し、この区別は W3C の古いバージョンの仕様書には存在しなかったため、多くのブラウザーは元々の擬似要素に対して両方の構文に対応しています。
+> **メモ:** ルールとして、単一コロン (`:`) の代わりに二重コロン (`::`) を使用してください。これで擬似要素と擬似クラスを区別します。但し、この区別は W3C の古いバージョンの仕様書には存在しなかったため、多くのブラウザーは元々の擬似要素に対して両方の構文に対応しています。
 
 ## 索引
 
@@ -42,12 +35,12 @@ CSS の一連の仕様で定義される擬似要素には、以下のような�
 
 A
 
-- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::after", "::after (:after)")}}
 
 B
 
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
-- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::before", "::before (:before)")}}
 
 C
 
@@ -56,28 +49,28 @@ C
 
 F
 
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
+- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
 - {{CSSxRef("::file-selector-button")}}
 
 G
 
-- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
 
 M
 
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}} {{Experimental_Inline}}
 
 P
 
-- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::part", "::part()")}} {{Experimental_Inline}}
+- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
 
 S
 
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
-- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
 
 T
 
@@ -85,9 +78,7 @@ T
 
 ## 仕様書
 
-| 仕様書               | 状態              | 備考                         |
-| -------------------- | ----------------- | ---------------------------- |
-| {{SpecName("CSS1")}} | {{Spec2("CSS1")}} | 擬似クラスと擬似要素を定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

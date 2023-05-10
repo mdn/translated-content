@@ -1,18 +1,12 @@
 ---
 title: DataTransfer.getData()
 slug: Web/API/DataTransfer/getData
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-translation_of: Web/API/DataTransfer/getData
 ---
 {{APIRef("HTML DOM")}}
 
-**`DataTransfer.getData()`** 메소드는 특정 형태를 위해 ({{domxref("DOMString")}}로) 끌어낸 데이터를 회수한다. 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, 이 메소드는 빈 문자열을 반환한다.
+**`DataTransfer.getData()`** 메소드는 특정 형태를 위해 ({{domxref("DOMString")}}로) 끌어낸 데이터를 회수한다. 가령, 끌어내는 동작이 데이터를 포함하지 않는다면, 이 메소드는 빈 문자열을 반환한다.
 
-예시 데이터 형식으로는 `text/plain` 와 `text/uri-list` 이 있다.
+예시 데이터 형식으로는 `text/plain` 와 `text/uri-list` 이 있다.
 
 ## 구문
 
@@ -23,16 +17,16 @@ dataTransfer.getData(format);
 ### 매개변수
 
 - `format`
-  - : 회수할 데이터 형식을 나타내는 {{domxref("DOMString")}}
+  - : 회수할 데이터 형식을 나타내는 {{domxref("DOMString")}}
 
 ### 반환 값
 
 - {{domxref("DOMString")}}
-  - : 특정 `format`을 위해 끌어낸 데이터를 나타내는 {{domxref("DOMString")}}. 만약 끌어내는 동작이 데이터를 가지고 있지 않거나 동작이 특정 `format` 에 대한 데이터를 가지고 있지 않다면, 이 메소드는 빈 문자열을 반환한다.
+  - : 특정 `format`을 위해 끌어낸 데이터를 나타내는 {{domxref("DOMString")}}. 만약 끌어내는 동작이 데이터를 가지고 있지 않거나 동작이 특정 `format` 에 대한 데이터를 가지고 있지 않다면, 이 메소드는 빈 문자열을 반환한다.
 
 ## 예제
 
-이 예시는 {{domxref("DataTransfer")}} 객체의 {{domxref("DataTransfer.getData()","getData()")}} 와 {{domxref("DataTransfer.setData()","setData()")}} 메소드의 사용을 보여준다.
+이 예시는 {{domxref("DataTransfer")}} 객체의 {{domxref("DataTransfer.getData()","getData()")}} 와 {{domxref("DataTransfer.setData()","setData()")}} 메소드의 사용을 보여준다.
 
 ### HTML 내용
 

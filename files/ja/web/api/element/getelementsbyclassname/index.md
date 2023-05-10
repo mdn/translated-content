@@ -1,19 +1,11 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-tags:
-  - API
-  - クラス
-  - Element
-  - メソッド
-  - リファレンス
-  - getElementsByClassName
-browser-compat: api.Element.getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} の **`getElementsByClassName()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxref("HTMLCollection")}} で返します。
+{{domxref("Element")}} の **`getElementsByClassName()`** メソッドは、引数で与えられたクラス名を含むすべての子要素を、生きた {{domxref("HTMLCollection")}} で返します。
 
 {{domxref("Document.getElementsByClassName", "getElementsByClassName()")}} メソッドはこのメソッドとほぼ同様に動作しますが、 {{domxref("Document")}} 全体に働きます。特定された文書ルート要素の子孫のうち、与えられたクラス名に合う複数の要素を返します。
 
@@ -30,7 +22,7 @@ var elements = element.getElementsByClassName(names);
 
 ### 返値
 
-{{domxref("HTMLCollection")}} で、 `names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
+{{domxref("HTMLCollection")}} で、 `names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
 
 ## 使用上の注意
 
@@ -38,7 +30,7 @@ var elements = element.getElementsByClassName(names);
 
 逆もしかりです。 `names` に一致しなくなったりツリーから外された要素は、すぐにコレクションから除外されます。
 
-> **Note:** クラス名は[後方互換モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)では大文字・小文字が区別されず、それ以外では区別されます。
+> **メモ:** クラス名は[後方互換モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)では大文字・小文字が区別されず、それ以外では区別されます。
 
 ## 例
 
@@ -50,7 +42,7 @@ var elements = element.getElementsByClassName(names);
 element.getElementsByClassName('test');
 ```
 
-この例は `main` の `id` を持つ要素の子孫の中で、`test` クラスをもつ全要素を見つけます。
+この例は `main` の `id` を持つ要素の子孫の中で、`test` クラスをもつ全要素を見つけます。
 
 ```js
 document.getElementById('main').getElementsByClassName('test');
@@ -88,11 +80,11 @@ while (matches.length > 0) {
 }
 ```
 
-このコードは、`"colorbox"` クラスを持つ子孫要素を見つけ、`item(0)`を呼び出して `"hueframe"` クラスを追加し、（配列記法で） `"colorbox"` を削除します。その後、（もし残っていれば）別の要素が `item(0)` になります。
+このコードは、`"colorbox"` クラスを持つ子孫要素を見つけ、`item(0)`を呼び出して `"hueframe"` クラスを追加し、（配列記法で） `"colorbox"` を削除します。その後、（もし残っていれば）別の要素が `item(0)` になります。
 
 ### Array メソッドで結果を抽出する
 
-このメソッドの戻り値を `this` 値として {{jsxref("Array.prototype")}} メソッドに与えることで、任意の {{ domxref("HTMLCollection") }} で `Array` メソッドを使うことができます。次の例では `test` クラスを持つすべての {{HTMLElement("div")}} 要素を見つけられます。
+このメソッドの戻り値を `this` 値として {{jsxref("Array")}} のメソッドに与えることで、任意の {{ domxref("HTMLCollection") }} で `Array` のメソッドを使うことができます。次の例では `test` クラスを持つすべての {{HTMLElement("div")}} 要素を見つけられます。
 
 ```js
 var testElements = document.getElementsByClassName('test');

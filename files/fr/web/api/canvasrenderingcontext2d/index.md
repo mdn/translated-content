@@ -8,6 +8,7 @@ tags:
   - graphique
 translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectangles, du texte, des images et d'autres objets sur l'élément canvas. Il fournit le contexte de rendu 2D pour la surface de dessin d'un élément {{HTMLElement("canvas")}}.
@@ -124,7 +125,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
   - : Connects the last point in the subpath to the `x, y` coordinates with a straight line.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
-  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()`before creating the Bézier curve.
+  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
   - : Adds a quadratic Bézier curve to the current path.
 - {{domxref("CanvasRenderingContext2D.arc()")}}
@@ -147,7 +148,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/fr/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -175,7 +176,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 ## Compositing
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0`(opaque).
+  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
   - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
 
@@ -307,16 +308,14 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - {{domxref("HTMLCanvasElement")}}

@@ -13,11 +13,12 @@ tags:
   - hierarchy
 translation_of: Web/API/Node
 ---
+
 {{ApiRef("DOM")}}
 
 **`Node`** (_nœud)_ est une classe abstraite de laquelle de nombreux objets de type DOM API héritent, leur permettant d'être traités de manière similaire et souvent interchangeable. Étant une classe abstraire, il n'existe pas d'objet qui soit directement un `Node`. Tous les objets implantant les fonctionnalités de `Node` sont des instances d'une de ses sous-classes, dont les plus notables sont {{domxref("Document")}}, {{domxref("Element")}} et {{domxref("DocumentFragment")}}.
 
-De pls, tous les types de nœuds du DOM sont représentés par une classe héritant des propriétés et méthodes de `Node` : {{domxref("CharacterData")}} (duquel {{domxref("Text")}}, {{domxref("Comment")}} et {{domxref("CDATASection")}} héritent), {{domxref("ProcessingInstruction")}}, , {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}} et {{domxref("EntityReference")}}.
+De plus, tous les types de nœuds du DOM sont représentés par une classe héritant des propriétés et méthodes de `Node` : {{domxref("CharacterData")}} (duquel {{domxref("Text")}}, {{domxref("Comment")}} et {{domxref("CDATASection")}} héritent), {{domxref("ProcessingInstruction")}}, , {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}} et {{domxref("EntityReference")}}.
 
 Les propriétés ou méthodes de ces interfaces peuvent retourner `null` lorsque leur existence n'est pas pertinente. Elles peuvent aussi générer une exception – par exemple lors de l'ajout d'un enfant à un type de nœud pour lequel aucun enfant ne peut exister.
 
@@ -40,7 +41,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.nextSibling")}} {{readonlyInline}}
   - : Retourne un {{domxref("Node")}} représentant le nœud suivant dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.nodeName")}} {{readonlyInline}}
-  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un  {{domxref("Document")}}  doit avoir la chaîne `'#document'.`.
+  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un {{domxref("Document")}} doit avoir la chaîne `'#document'.`.
 - {{DOMxRef("Node.nodeType")}}{{readonlyInline}}
   - : Retourne un `unsigned short` (_non signé court_) représentant le type du nœud. Les valeurs possibles sont :
 
@@ -62,13 +63,13 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.nodeValue")}}
   - : Retourne / définit la valeur du nœud courant.
 - {{DOMxRef("Node.ownerDocument")}}{{readonlyInline}}
-  - : Retourne le {{domxref("Document")}}  auquel ce noeud appartient. Si aucun document ne lui est associé, il retourne `null` .
+  - : Retourne le {{domxref("Document")}} auquel ce noeud appartient. Si aucun document ne lui est associé, il retourne `null` .
 - {{DOMxRef("Node.parentNode")}}{{readonlyInline}}
   - : Retourne un {{domxref("Node")}} qui est le parent de ce nœud. S'il n'existe pas, parce qu'il est en haut de l'arbre ou parce qu'il ne participe pas à un arbre, cette propriété retourne `null` .
 - {{DOMxRef("Node.parentElement")}}{{readonlyInline}}
-  - : Retourne un {{domxref("Element")}} qui est le parent de ce nœud. Si le nœud n'a aucun parent ou si ce parent n'est pas un  {{domxref("Element")}} , cette propriété retourne `null`.
+  - : Retourne un {{domxref("Element")}} qui est le parent de ce nœud. Si le nœud n'a aucun parent ou si ce parent n'est pas un {{domxref("Element")}} , cette propriété retourne `null`.
 - {{DOMxRef("Node.previousSibling")}}{{readonlyInline}}
-  - : Retourne un {{domxref("Node")}} représentant le nœud précédent dans l'arbre ou  `null` s'il n'y en a pas.
+  - : Retourne un {{domxref("Node")}} représentant le nœud précédent dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.textContent")}}
   - : Retourne / définit le contenu textuel d'un élément et de tous ses descendants.
 
@@ -77,12 +78,12 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 ### Propriétés obsolètes
 
 - {{DOMxRef("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Retourne un {{domxref("DOMString")}}  représentant la partie locale du nom d'un élément.
+  - : Retourne un {{domxref("DOMString")}} représentant la partie locale du nom d'un élément.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.
 
 - {{DOMxRef("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : L'URI du "Namespace" de ce nom, ou  `null` s'il n'y en a pas.
+  - : L'URI du "Namespace" de ce nom, ou `null` s'il n'y en a pas.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
 
@@ -142,7 +143,7 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
 - {{domxref("Node.isSupported()")}} {{deprecated_inline}}
   - : Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le nœud spécifique.
 - {{domxref("Node.setUserData()")}} {{deprecated_inline}}
-  - : Permet à un utilisateur d'attacher ou d'enlever  {{domxref("DOMUserData")}} du nœud.
+  - : Permet à un utilisateur d'attacher ou d'enlever {{domxref("DOMUserData")}} du nœud.
 
 ## Exemples
 
@@ -176,7 +177,7 @@ Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `pare
 - `parentNode`
   - : Le nœud parent (`Node Object`)
 - `callbackFunction`
-  - : La fonction de rappel ([`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)).
+  - : La fonction de rappel ([`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemples d'utilisation
 
@@ -210,13 +211,8 @@ document.body.removeAll();
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                 | {{Spec2('DOM WHATWG')}} | Supprime les propriétés suivantes : `attributes`, `namespaceURI`, `prefix`, et `localName`. Supprime les méthodes suivantes : `isSupported()`, `hasAttributes()`, `getFeature()`, `setUserData()`, et `getUserData()`.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| {{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node')}}         | {{Spec2('DOM3 Core')}}     | Les méthodes `insertBefore()`, `replaceChild()`, `removeChild()`, et`appendChild()` renvoient un autre type d'erreur (`NOT_SUPPORTED_ERR`) si elles sont appelées par {{domxref("Document")}}. La méthode `normalize()`  a été modifiée, ainsi ce mode {{domxref("Text")}} peut aussi être normalisé si la marque {{domxref("DOMConfiguration")}} est définie. Ajout des méthodes suivantes : `compareDocumentPosition()`, `isSameNode()`, `lookupPrefix()`, `isDefaultNamespace()`, `lookupNamespaceURI()`, `isEqualNode()`, `getFeature()`, `setUserData()`, et `getUserData().` Ajout des propriétés suivantes : `baseURI` et `textContent`. |
-| {{SpecName('DOM2 Core', 'core.html#ID-1950641247', 'Node')}}         | {{Spec2('DOM2 Core')}}     | La propriété `ownerDocument`a été légèrement modifiée pour que  {{domxref("DocumentFragment")}} renvoie également `null`. Ajout des propriétés suivantes : `namespaceURI`, `prefix`, et `localName`. Ajout des méthodes suivantes : `normalize()`, `isSupported()` et `hasAttributes()`.                                                                                                                                                                                                                                                                                                                                                                      |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1950641247', 'Node')}} | {{Spec2('DOM1')}}         | Définition initiale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node")}}
+{{Compat}}

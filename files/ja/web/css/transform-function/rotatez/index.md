@@ -1,16 +1,9 @@
 ---
 title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotateZ()
 original_slug: Web/CSS/transform-function/rotateZ()
-browser-compat: css.types.transform-function.rotateZ
 ---
+
 {{CSSRef}}
 
 **`rotateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに Z 軸の周りを回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
@@ -19,9 +12,9 @@ browser-compat: css.types.transform-function.rotateZ
 
 回転軸は、 {{ cssxref("transform-origin") }} CSS プロパティで定義される原点を通ります。
 
-> **Note:** `rotate(a)` または `rotate3d(0, 0, 1, a)` と等価です。
+> **メモ:** `rotate(a)` または `rotate3d(0, 0, 1, a)` と等価です。
 
-> **Note:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> **メモ:** 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 

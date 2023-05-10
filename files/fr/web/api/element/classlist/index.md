@@ -10,9 +10,10 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
+La propriété en lecture seule **`Element.classList`** retourne une collection directe {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
 
 L'utilisation de `classList` est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
 
@@ -22,7 +23,7 @@ L'utilisation de `classList` est une alternative à la propriété {{domxref("el
 const elementClasses = elementNodeReference.classList;
 ```
 
-_elementClasses_ est une [DOMTokenList](/en-US/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
+_elementClasses_ est une [DOMTokenList](/fr/docs/DOM/DOMTokenList) représentant l'attribut class de _elementNodeReference_. Si l'attribut class n'a pas été défini ou est vide _elementClasses.length_ retourne 0. `element.classList` est en lecture seule. Pour la modifier il convient d'utiliser les méthodes `add()` et `remove()`.
 
 ## Méthodes
 
@@ -245,15 +246,11 @@ Une note mineure est que dans IE6-7, cette prothèse utilise la propriété `win
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-classlist", "Element.classList")}} | {{Spec2("HTML WHATWG")}} | Note dans la spécification HTML relative à l'attribut {{htmlattrxref("class")}}. |
-| {{SpecName("DOM WHATWG", "#dom-element-classlist", "Element.classList")}}     | {{Spec2("DOM WHATWG")}} | Définition initiale.                                                                    |
-| {{SpecName("DOM4", "#dom-element-classlist", "Element.classList")}}             | {{Spec2("DOM4")}}         |                                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.classList")}}
+{{Compat}}
 
 ## Voir aussi
 

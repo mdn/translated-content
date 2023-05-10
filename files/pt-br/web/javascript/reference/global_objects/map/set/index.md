@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.set
 ---
+
 {{JSRef}}
 
 O método **`set()`** adiciona ou atualiza um elemento com a chave especificada e um valor do objeto `Map`.

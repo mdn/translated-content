@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Apprendre/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
 
 Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a déjà côtoyées dans les modules précédents — telles que les différentes valeurs de {{cssxref("display")}} — et en introduit de nouveaux que nous aborderons dans ce module.
@@ -384,7 +385,7 @@ Le positionnement relatif vous permet de décaler un élément de la position qu
 }
 ```
 
-Ici, nous donnons au paragraphe médian à la propriété  {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut&nbsp;: il en résulte un déplacement vers la droite et vers le bas.
+Ici, nous donnons au paragraphe médian à la propriété {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut&nbsp;: il en résulte un déplacement vers la droite et vers le bas.
 
 Ajouter ce code donne le résultat suivant&nbsp;:
 
@@ -600,7 +601,7 @@ Prenons un exemple. Tout d'abord, un simple balisage qui crée un formulaire HTM
 
 Maintenant, le CSS pour cet exemple. Le gros de la CSS est plutôt ordinaire, à l'exception de l'utilisation de la propriété {{cssxref("display")}}. Les éléments {{htmlelement("form")}}, {{htmlelement("div")}} et {{htmlelement("label")}} ainsi que {{htmlelement("input")}} ont été configurés pour disposés en tableau, en lignes de tableau et en cellules de tableau respectivement — à la base, ils se comporteront comme dans le cas d'un balisage de tableau HTML, avec pour résultat un bon alignement par défaut entre les étiquettes et le texte. Tout ce qu'il nous reste à faire est d'ajouter un peu d'ampleur, des marges, etc. pour que tout soit agréable visuellement et c'est tout.
 
-Notez que les propriétés `display: table-caption;` et `caption-side: bottom;` ont été affectées au paragraphe légende — il sera donc disposé comme une légende de tableau ({{htmlelement("caption")}})  placée en bas de la table pour des raisons de style, même si son balisage est placé avant les éléments `input` dans le code source. Voilà une bonne dose de souplesse.
+Notez que les propriétés `display: table-caption;` et `caption-side: bottom;` ont été affectées au paragraphe légende — il sera donc disposé comme une légende de tableau ({{htmlelement("caption")}}) placée en bas de la table pour des raisons de style, même si son balisage est placé avant les éléments `input` dans le code source. Voilà une bonne dose de souplesse.
 
 ```css
 html {
@@ -696,16 +697,3 @@ body { max-width: 800px; margin: 0 auto; }
 Cet article donne un bref résumé de toutes les techniques de mise en page à connaître. Poursuivez la lecture pour en savoir plus à propos de chaque technique !
 
 {{NextMenu("Apprendre/CSS/CSS_layout/Floats", "Apprendre/CSS/CSS_layout")}}
-
-## In this module
-
-- [La mise en page avec les CSS](/fr/docs/Apprendre/CSS/CSS_layout)
-- [Cours normal](/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

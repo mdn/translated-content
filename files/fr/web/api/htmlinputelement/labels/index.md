@@ -8,6 +8,7 @@ tags:
   - Étiquettes
 translation_of: Web/API/HTMLInputElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`HTMLInputElement.labels`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) des éléments {{HTMLElement("label")}} (_étiquette_) associés avec l'élément {{HTMLElement("input")}} (_entrée_).
@@ -47,11 +48,8 @@ window.addEventListener("DOMContentLoaded", function() {
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "forms.html#dom-lfe-labels", "labels")}} | {{Spec2("HTML WHATWG")}} | Pas de changement.   |
-| {{SpecName("HTML5 W3C", "forms.html#dom-lfe-labels", "labels")}}     | {{Spec2("HTML5 W3C")}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLInputElement.labels")}}
+{{Compat}}

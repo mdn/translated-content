@@ -1,19 +1,11 @@
 ---
 title: URLSearchParams
 slug: Web/API/URLSearchParams
-tags:
-  - API
-  - Interface
-  - Landing
-  - Reference
-  - URL API
-  - URLSearchParams
-  - Polyfill
-translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
-**`URLSearchParams`** 인터페이스는 URL의 쿼리 문자열을 대상으로 작업할 수 있는 유틸리티 메서드를 정의합니다.
+**`URLSearchParams`** 인터페이스는 URL의 쿼리 문자열을 대상으로 작업할 수 있는 유틸리티 메서드를 정의합니다.
 
 `URLSearchParams`를 구현하는 객체는 {{jsxref("Statements/for...of", "for...of")}} 반복문으로 직접 키/값 쌍을 순회할 수 있습니다. 키/값 쌍의 순회 순서는 쿼리 문자열에 나타나는 순서와 같습니다. 예를 들어, 다음 두 줄의 코드는 동일합니다.
 
@@ -27,7 +19,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 생성자
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - :  `URLSearchParams` 객체 인스턴스를 반환합니다.
+  - : `URLSearchParams` 객체 인스턴스를 반환합니다.
 
 ## 메서드
 
@@ -103,7 +95,7 @@ searchParams.getAll('foo');              // ["bar", "baz"]
 
 ### URL 파싱 없음
 
-`URLSearchParams` 생성자에 URL 파싱 기능은 없습니다. 다만 쿼리 문자열이 `?`로 시작하면 무시합니다.
+`URLSearchParams` 생성자에 URL 파싱 기능은 없습니다. 다만 쿼리 문자열이 `?`로 시작하면 무시합니다.
 
 ```js
 const paramsString1 = 'http://example.com/search?query=%40';

@@ -1,263 +1,254 @@
 ---
-title: 자바스크립트 문제해결
+title: 뭐가 잘못됐을까요? JavaScript 문제 해결
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Article
-  - Beginner
-  - CodingScripting
-  - Debugging
-  - Developer Tools
-  - Error
-  - JavaScript
-  - Learn
-  - Tutorial
-  - console.log
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
-이전 수업에서 "숫자맞추기" 프로그램을 만들어봤을때, 프로그램이 돌아가지 않는다는 것을 볼 것이다. 하지만 여기서 자바스크립트의 에러를 찾고 고치는 방법에 대해 알려주니 겁먹지 말고 도전해보자!
+앞선 글의 "숫자 알아맞히기" 게임을 따라 만들다가 프로그램이 동작하지 않았나요? 두려워 마세요. 이 글에서는 JavaScript 프로그램에서 그런 문제를 찾아 수정하는 방법에 대한 팁을 제공하여 여러분이 머리카락을 쥐어뜯지 않도록 지켜드리겠습니다.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">알아야 할 것</th>
-      <td>기본적인 컴퓨터 이해. HTML, CSS, 자바스크립트의 이해</td>
+      <th scope="row">필요한 사전 지식:</th>
+      <td>
+        기본적인 컴퓨터 이해 능력, HTML과 CSS 기초, JavaScript 기본 개념.
+      </td>
     </tr>
     <tr>
-      <th scope="row">목표</th>
-      <td>코드상의 문제를 고치는 능력과 자신감 고취</td>
+      <th scope="row">목표:</th>
+      <td>
+        스스로의 코드에서 문제를 수정할 수 있는 능력과 자신감 얻기.
+      </td>
     </tr>
   </tbody>
 </table>
 
-## 에러의 종류
+## 오류의 종류
 
-일반적으로, 코드가 잘못된 이유에는 2가지 종류가 있으니 살펴보자.
+일반적으로, 여러분의 코드에서 뭔가 잘못됐다면 마주하게 될 오류에는 크게 두 종류가 있습니다.
 
-- **구문 에러(Syntax errors)**: 코드 상의 구문 에러로 대개 철자가 잘못되어 작동이 안되거나 중간에 프로그램이 중지된다. 물론 여기서 에러 메시지가 출력되므로 확인할 수 있다. 코드 편집기 툴을 사용하고 에러 메시지의 의미만 파악할 수 있다면, 충분히 고칠 수 있다.
-- **논리 에러(Logic errors)**: 구문은 올바르지만, 코드의 의미자체가 잘못된 경우이다. 즉 프로그램은 정상적으로 돌아가지만, 원하는 결과를 얻지 못하는 경우이다. 에러 메시지가 직접적으로 표시되지 않기 때문에, 일반적으로 구문에러보다 에러 수정이 힘들다.
+- **구문 오류**: 코드에 잘못된 철자가 있으면 발생하는 오류로, 프로그램이 아예 구동하지 못하거나 중간에 멈춰버리는 현상을 일으키며, 모종의 오류 메시지도 나타납니다. 올바른 도구와, 메시지의 뜻만 파악하고 있으면 그럭저럭 고칠 만합니다!
+- **논리 오류**: 구문은 올바르지만 의도한 동작과 실제 코드에 차이가 있는 경우입니다. 따라서 프로그램은 성공적으로 돌아가지만 잘못된 결과를 낳습니다. 보통 오류를 직접 가리키는 메시지가 없기 때문에 구문 오류보다 고치기도 힘든 편입니다.
 
-물론, 간단하지는 않지만 좀 더 세분화된 분류가 있다. 그렇지만, 위의 분류가 처음에는 이해하기 좋다. 우리는 앞으로 이 두가지 종류에 대해 알아볼 것이다.
+음, 이렇게 간단하게 끝은 아니고, 더 파고 들면 다른 분류도 있습니다. 하지만 이렇게만 나눠도 커리어의 초반에는 부족하지 않을 겁니다. 이제 아래로 나아가면서 두 종류 모두 하나씩 알아보겠습니다.
 
-## 잘못된 예
+## 오류를 포함한 예제
 
-시작하기 앞서, 이전에 볼 '숫자맞추기'게임을 살펴보자 (이번 시간을 제외하고는 앞으로 일부러 에러를 만든 코드를 볼 것입니다.) 깃허브에 가서 로컬 지역에 저장합니다. -> [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) (see it [running live here](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
+시작하기 앞서서 숫자 맞히기 게임으로 돌아갑시다. 하지만 여기서는 의도적으로 오류를 추가한 버전을 사용할 겁니다. GitHub에 가서 [number-game-errors.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) 파일의 로컬 복사본을 만들어 주세요([실행 결과 미리보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html)).
 
-1.  시작하기에 앞서, 파일을 본인이 사용하는 텍스트 에디터와 브라우저를 통해 연다.
-2.  프로그램을 실행시켜본다.("Submit Button"을 눌렀을 때, 정상적으로 실행이 되면 안된다)
+1. 시작하려면 로컬 복사본을 선호하는 텍스트 편집기와 브라우저에서 열어주세요.
+2. 게임 플레이를 시도해 보세요. "Submit guess" 버튼을 눌러도 아무 일이 없다는 걸 볼 수 있습니다.
 
-> **참고:** You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
+> **참고:** 직접 작성한 게임 예제가 동작하지 않는 경우에도 우선 예제 파일로 진행하는 걸 추천합니다. 이 글에 적힌 기법을 먼저 알아본 다음에 여러분의 코드로 돌아가서 활용해 보세요.
 
-여기서 구문 에러가 발생했을때 볼 수 있는 개발자 콘솔에 대해 살펴보고, 이를 통해 수정해보자. 이제부터 시작이다!
+이제 개발자 콘솔을 열어 구문 오류가 기록됐는지 확인하세요. 오류가 보인다면 수정해 봅시다. 바로 아래에서 그 방법을 확인하세요.
 
-## 구문(Syntax) 에러 고치기
+## 구문 오류 고치기
 
-수업 앞쪽에서 간단한 자바스크립트 명령어를 [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) 에서 살펴보았다 (만약 모르겠다면 앞의 링크를 살펴보자). 좋은 것은, 브라우저의 자바스크립트 엔진이 구문에러가 발생할 대마다 에러메시지를 콘솔에게 던져준다.  자, 이제 시작해보자
+앞선 과정에서 [JavaScript 개발자 도구 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 간단한 JavaScript 명령을 입력해 봤었습니다. (콘솔을 여는 방법이 기억나지 않으면 링크에서 알아보세요) 하지만 콘솔은 단순히 명령을 입력하는 기능보다 유용한데, 브라우저의 JavaScript 엔진이 읽은 JavaScript 안에 구문 오류가 존재하면 콘솔에 그 오류가 기록되기 때문입니다. 오류를 잡아 봅시다.
 
-1.  열려져 있는 `number-game-errors.html`이 있는 탭으로 가서 자바스크립트 콘솔창을 연다. 다음줄을 따라 에러메시지를 볼 수 있을 것이다. ![](not-a-function.png)
-2.  이는 쉬운 에러에 속하기 때문에, 브라우저가 해결하도록 팁등을 알려준다. (위의 캡처사진은 FireFox이지만, 아마 다른 브라우저에서도 비슷한 내용을 제공해준다). 왼쪽부터 살펴보면,
+1. `number-game-errors.html`을 연 탭으로 이동해서 JavaScript 콘솔을 여세요. 스크린샷과 비슷한 내용의 오류 메시지를 볼 수 있어야 합니다. ![](not-a-function.png)
+2. 이 오류는 찾기 쉬운 편이고, 브라우저도 도움이 될 다양한 정보를 제공합니다. (위의 스크린샷은 Firefox에서 촬영했지만 다른 브라우저도 비슷한 정보를 제공합니다) 우리가 알 수 있는 사실은, 왼쪽에서 오른쪽으로...
 
-    - 빨간색 "x"는 에러라는 것을 의미한다.
-    - 무엇이 잘못됬는지 알려준다. 여기서는 "TypeError: guessSubmit.addeventListener is not a function"
-    - "Learn More" 링크는 다양한 내용이 있는 MDN 페이지와 연결해 에러의 의미를 설명해준다.
-    - 자바스크립트 파일의 이름으로 개발자툴의 디버거 탭을 연결한다. 이 링크를 따라가면, 에러가 발생한 정확한 위치를 찾을 수 있다.
-    - 에러가 발생한 줄번호와, 그 줄에서 몇번째 문자에 있는지 알려준다.  여기서는 86번줄, 앞에서 3번째 문자이다
+    - 붉은 "x"는 오류라는 뜻입니다.
+    - 오류 메시지는 무엇이 잘못됐는지 나타냅니다. "TypeError: guessSubmit.addeventListener is not a function"
+    - "Learn More" 링크는 오류의 뜻을 더 자세히 알아볼 수 있는 MDN 페이지로 향합니다.
+    - JavaScript 파일 이름은 개발자 도구의 디버거 탭을 엽니다. 이 링크를 따라가면 오류가 발생한 정확한 위치를 볼 수 있습니다.
+    - 오류가 발생한 줄 번호와, 오류를 처음으로 마주한 문자 번호를 볼 수 있습니다. 이 예제에서는 86번째 줄, 3번째 글자입니다.
 
-3.  편집기에서 86번째 줄을 보자.
+3. 코드 편집기에서 86번째 줄을 보면 다음 코드를 볼 수 있습니다.
 
     ```js
     guessSubmit.addeventListener('click', checkGuess);
     ```
 
-4.  "guessSubmit.addeventListener is not a function"라고 에러메시지가 뜨는걸로 보아, 아마 철자가 잘못되었을 것이다. 만약 철자가 애매하거나하면, MDN에서 찾아보는것이 좋을 것이다. 현재로 가장 좋은 방법은 검색엔진에서 "mdn _name-of-feature_" 를 검색하는 것이다. 예를들자면 다음을 살펴보자 -> [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
-5.  여기서 살펴보며, 함수의 이름 철자가 틀려서 에러가 났음을 알수 있다. 자바스크립트와 같은 프로그래밍은 정확하기 때문에 한글자라도 틀리면 에러가 날 것이다. `addeventListener`를 `addEventListener`러 바꿈으로 에러는 해결된다. 고쳐보자.
+4. 오류 메시지 "guessSubmit.addeventListener is not a function"은 우리가 호출한 함수를 JavaScript 인터프리터가 인식하지 못했다는 뜻입니다. 보통 이 오류는 철자를 잘못 적은 경우 발생합니다. 구문의 올바른 철자가 확실하지 않을 땐 MDN에서 기능 참고서를 살펴보는 게 도움이 되곤 합니다. 선호하는 검색 엔진에서 "mdn '기능 이름'"을 검색해 보세요. 하지만 지금은 시간을 아끼기 위해 링크를 바로 드리겠습니다. [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)입니다.
+5. `addEventListener()` 페이지를 보니, 함수 이름을 잘못 적었네요! JavaScript는 대소문자를 구분한다는 점을 기억하세요. 철자는 물론 대소문자도 잘못 적으면 오류가 발생합니다. `addeventListener`를 `addEventListener`로 수정하면 될 겁니다. 지금 해보세요.
 
-> **참고:** See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
+> **참고:** MDN의 [TypeError: "x" is not a function](/ko/docs/Web/JavaScript/Reference/Errors/Not_a_function) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
-### 반복되는 구문에러
+### 구문 오류 2회차
 
-1.  저장하고 새로고침해보자. 하지만 그래도 여전히 에러가 난다.
-2.  이제 숫자를 입력하고 "Submit guess" 버튼을 눌러보자. 그런데, 또 다른 에러가 나타났다! ![](variable-is-null.png)
-3.  이번에는 에러 메시지가  78번 줄에 "TypeError: lowOrHi is null" 라고 떳다.
+1. 페이지를 저장하고 새로고침하세요. 오류가 사라진 모습을 확인할 수 있어야 합니다.
+2. 이제 숫자를 입력하고 Submit guess 버튼을 누르면... 다른 오류네요! ![](variable-is-null.png)
+3. 이번 오류는 78번째 줄에서 "TypeError: lowOrHi is null"입니다.
 
-    > **참고:** [`Null`](/en-US/docs/Glossary/Null) is a special value that means "nothing", or "no value". So `lowOrHi` has been declared and initialized, but not with any meaningful value — it has no type or value.
+    > **참고:** [`Null`](/ko/docs/Glossary/Null)은 "아무것도 아닌 것", 또는 "값이 없음"을 뜻하는 특별한 값입니다. 즉 `lowOrHi`가 선언됐고 초기화도 됐지만 의미 있는 값을 가지진 못한 겁니다. 타입도, 값도 없는 거죠.
 
-    > **참고:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { ... }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+    > **참고:** 이 오류는 페이지를 불러온 직후에 나타나진 않았는데, 함수 내부(`checkGuess() { ... }` 블록의 안)에서 발생했기 때문입니다. 이후 [함수에 관한 글](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 더 알아보겠지만, 함수 안의 코드는 함수 바깥과 다른 범위(스코프)에서 동작합니다. 이 예제에서는 86번째 줄에 의해 `checkGuess()` 함수가 구동하기 전에는 코드가 동작하지 않았고, 따라서 오류도 발생하지 않았습니다.
 
-4.  78번줄은 다음 코드다.
+4. 78번째 줄을 보면 다음 코드를 볼 수 있습니다.
 
     ```js
     lowOrHi.textContent = 'Last guess was too high!';
     ```
 
-5.  이줄에서는 `lowOrHi`변수의` textContent`속성을 문자열로 지정하지만, `lowOrHi`가 어떤 역할을 하는지 포함하지 않았기 때문에 동작되지 않는다. 왜 그런지 살펴보면, 예제의 `lowOrHi`의 다른 예제를 보면 알 수 있다. 가장 가까이에 잇는 부분은 48번줄에서 찾을 수 있다.
+5. 위의 코드에서는 `lowOrHi` 상수의 `textContent` 속성에 텍스트 문자열을 할당하려고 시도했지만, `lowOrHi`에 들어있어야 할 값이 없어서 동작하지 못했습니다. 이유를 알아봅시다. 코드 내에서 `lowOrHi`가 등장하는 다른 곳을 탐색해 보세요. JavaScript에서 `lowOrHi`가 제일 먼저 등장하는 곳은 48번째 줄입니다.
 
     ```js
-    var lowOrHi = document.querySelector('lowOrHi');
+    const lowOrHi = document.querySelector('lowOrHi');
     ```
 
-6.  여기서는 변수로 하여금 HTML안의 요소로 정보를 가지도록 하려고 한다. 이 줄이 실행되고 나서 값의 null인지도 확인해보자. 49번줄에 다음 코드를 추가해보자.
+6. 여기서는 문서 HTML의 요소 참조를 변수에 저장하려고 시도하고 있습니다. 48번째 줄이 실행된 후에 `lowOrHi`가 `null`인지 확인해 봅시다. 49번째 줄에 아래의 코드를 추가하세요.
 
     ```js
     console.log(lowOrHi);
     ```
 
-    > **참고:** [`console.log()`](/en-US/docs/Web/API/console/log) is a really useful debugging function that prints a value to the console. So it will print the value of `lowOrHi` to the console as soon as we have tried to set it in line 48.
+    > **참고:** [`console.log()`](/ko/docs/Web/API/console/log)는 콘솔에 값을 기록하는 엄청나게 유용한 디버깅 함수입니다. 따라서 이 코드는 48번째 줄에서 `lowOrHi`의 값을 설정하려고 시도한 직후에 그 결과를 콘솔에 기록합니다.
 
-7.  저장하고 새로고침해보면, 콘솔창에서 `console.log()` 의 결과를 볼 수 있을 것이다. ![](console-log-output.png) 물론, `lowOrHi`'s값은 여전히 null이므로 48번줄은 문제가 있다고 볼 수 있다.
+7. 저장하고 새로고침하세요. `console.log()`가 콘솔에 기록한 결과를 볼 수 있을 겁니다. ![](console-log-output.png) `lowOrHi`의 값이 명백히 `null`이므로, 48번째 줄에 문제가 있는 게 틀림없습니다.
+8. 어떤 문제일지 생각해 봅시다. 48번째 줄은 [`document.querySelector()`](/ko/docs/Web/API/Document/querySelector) 메서드를 사용해, CSS 선택자로 선택한 요소의 참조를 가져옵니다. 우리 파일의 더 위쪽에서 우리가 찾으려는 문단을 볼 수 있습니다.
 
-8.  문제가 무엇인지 생각해보자. 49번줄 [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) 메소드는 CSS 선택자로금 선택되는 요소의 정보를 갖도록 만든다. 파일을 살펴보면, 다음과 같은 코드를 볼 수 있다.
-
-    ```js
+    ```html
     <p class="lowOrHi"></p>
     ```
 
-9.  따라서 여기에 점(.) 으로 시작되는 클래스 선택자가 필요한 것이다 . 하지만 48번줄의 querySelector() 메소드에서는 바로 이 '점(.)' 이 없다. `lowOrHi`를 `.lowOrHi` 로 바꾸어 문제를 해결할 수 있다.
-10. 저장하고 새로고침하면, `console.log() `에서 우리가 원하는 \<p> 요소를 반환할 것이다. 자, 이제 다른 에러가 해결되었다. `console.log()`를 지금 제거해도 되고 나중을 위해 놔둬도 되니 알아서 하자.
+9. 보아하니 우리가 사용했어야 하는 선택자는 마침표(`.`)로 시작하는 클래스 선택자였는데, 48번째 줄의 `querySelector()` 메서드에 제공한 선택자에는 마침표가 없습니다. 이게 문제일 수 있겠네요! `lowOrHi`를 `.lowOrHi`로 바꿔보세요.
+10. 저장 후 다시 새로고침해보면 `console.log()` 명령문이 우리가 원하는 `<p>` 요소를 반환하는 모습을 볼 수 있습니다. 휴, 다른 오류를 고쳤네요. 이제 `console.log()`는 지워도 되고, 아니면 나중에 다시 보기 위해 남겨놔도 됩니다. 선호하는 쪽으로 선택하세요.
 
-> **참고:** See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
+> **참고:** MDN의 [TypeError: "x" is (not) "y"](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_type) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
-### 세번씩 반복되는 구문에러
+### 구문 오류 3회차
 
-1.  이제 프로그램을 계속 실행할수록, 성공횟수는 많아진다. 즉 프로그램이 종료될때까지 정확한 수를 추측하든, 횟수에 상관없이 완벽한 프로그램이 동작된다는 것이다.
-2.  여기서 프로그램에 처음에 보았던 똑같던 에러가 발생한다. "TypeError: resetButton.addeventListener is not a function"이라고! 하지만 이번에는 94번줄이라고 표시된다.
-3.  94번줄을 보면, 똑같은 실수를 하고 있다는 것을 쉽게 찾아볼 수 있다. 단지 `addeventListener` 를 `addEventListener` 로 철자만 주의해서 바꾸면 된다.
+1. 이제는 게임을 성공적으로 플레이할 수 있습니다. 올바른 숫자를 입력하거나, 턴을 모두 소모하기 전까지는요.
+2. 게임이 정상적으로 끝나야 하는 순간, 다시 실패해버립니다. 맨 처음 봤던 것과 같은 종류의 오류, "TypeError: resetButton.addeventListener is not a function"과 함께요. 하지만 이번에는 94번째 줄에서 발생할 겁니다.
+3. 94번째 줄을 확인하면 똑같은 실수가 있었다는 걸 알 수 있습니다. `addeventListener`를 `addEventListener`로 바꾸기만 하면 됩니다. 바로 수정해 보세요.
 
-## 논리(Logic) 에러
+## 논리 오류
 
-이제, 프로그램은 잘 작동되지만, 몇 번 프로그램을 돌리면 추측해야 할 수가 항상 1이라는 것을 명백히 알 수 있다. 즉, 프로그램의 목표에 어긋난다는 것이다.
+여기까지 왔으면 게임을 끝까지 플레이할 수 있을 겁니다. 하지만 몇 번 해보면, 우리가 맞춰야 할 "무작위" 숫자가 항상 1이라는 사실을 깨닫게 됩니다. 의도한 동작과 상당한 거리가 있네요!
 
-이는 분명 어딘가에 프로그램 논리적으로 무슨 문제가 있다는 것이다.(물론, 에러가 검출되지도 않고, 잘 작동된다)
+게임 논리 어딘가에 확실히 문제가 있습니다. 오류를 반환하진 않지만, 정상적인 동작을 하지 못하기 때문입니다.
 
-1.  `randomNumber` 변수를 찾고, 임의의 수를 처음으로 지정된 곳도 찾는다. 임의의 수가 저장된 부분은 아마 44번 줄 언저리일 것이다.
+1. `randomNumber` 변수에 무작위 수를 설정하는 부분을 찾아보세요. 게임을 시작할 때 맞혀야 하는 무작위 수는 44번째 줄 부근에서 저장합니다.
 
     ```js
-    var randomNumber = Math.floor(Math.random()) + 1;
+    let randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-    또한 한 게임이 끝나면 다시 임의의 수를 지정하는 부분은 아마 113번 줄 정도일 것이다.
+2. 후속 라운드를 시작할 때 새로운 무작위 수를 생성하는 코드는 113번째 줄 근처입니다.
 
     ```js
     randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-2.  `이 줄에서 문제가 발생되었는지 알기위해, console.log()` 를 불러오자. 다음 코드를 앞선 두 코드 아래에 넣는 것도 잊지 말자.
+3. 위의 두 줄이 정말 문제일까요? 이전에 만났던 `console.log()`를 다시 꺼내옵시다. 각각의 줄 바로 밑에 다음 코드를 추가하세요.
 
     ```js
     console.log(randomNumber);
     ```
 
-3.  저장하고, 새로고침하게되면 randomNumer 변수가 항상 1이 콘솔창에 표시되는 것을 알 수 있다.
+4. 저장, 새로고침, 그리고 몇 판 플레이해 보세요. 콘솔에 기록하는 시점에서, `randomNumber`가 정말 1임을 볼 수 있습니다.
 
-### 논리에 대한 고찰
+### 논리 파고들기
 
-고치기 전에, 이 코드가 무슨 역할을 하는지 살펴보자. 먼저, 0과 1사이의  임의의 10진수를 생성하는 `Math.random() `을 살펴보자.
+문제를 수정하기 전에 이 코드가 어떻게 동작하는지 상기해 봅시다. 먼저, 0.5675493843처럼 0과 1 사이의 무작위 10진수 숫자를 생성하는 [`Math.random()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random)을 호출합니다.
 
 ```js
 Math.random()
 ```
 
-다음으로 가장 가까운 정수로 전달되는 [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)안의 `Math.random()`의 결과는 넘어간다. 그러고 결과값에 1을 더한다.
+다음으로, `Math.random()`을 호출한 결과를 [`Math.floor()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)에 제공합니다. `Math.floor()`는 주어진 수의 버림을 반환합니다. 그리고 여기에 1을 더합니다.
 
 ```js
 Math.floor(Math.random()) + 1
 ```
 
-0과 1사이의 임의의 10진수와 가장 가까운 수 중에 작은 수는 항상 0이므로, 여기서 1을 더하면 항상 1이 된다.  따라서 가까운 수를 찾기전에 임의수에 100을 곱해야 한다. 다음 코드는 곧 0과 99사이의 수를 나타낸다.
+0과 1 사이의 무작위 10진수 수를 버림하면 결과는 항상 0이니, 여기에 1을 더한 결과는 항상 1입니다. 무작위 수를 버림하기 전에 먼저 100을 곱해야 원하는 숫자를 얻을 수 있을 겁니다. 다음 코드는 0부터 99까지의 무작위 수를 생성합니다.
 
 ```js
 Math.floor(Math.random()*100);
 ```
 
-그러므로 여기서 1을 더하게 되면, 우리가 원하는 1과 100사이의 수가 될 것이다.
+그러므로, 여기에 1을 더하면 1과 100 사이의 수를 얻을 수 있습니다.
 
 ```js
 Math.floor(Math.random()*100) + 1;
 ```
 
-코드를 위와 같이 고치고, 저장 후 새로고침해보자. 그러면 프로그램은 우리가 생각하는 대로 작동될 것이다.
+두 줄 모두 이렇게 고친 후에 저장하고 새로고침해보세요. 이제 처음 의도했던 대로 게임을 플레이할 수 있을 겁니다.
 
-## 다른 일반적인 에러
+## 다른 일반적인 오류
 
-코드상에서 맞딱드릴 수 있는 에러는 여러가지가 있다. 이번 섹션은 이러한 에러들에 대해 말해줄 것이다.
+코드를 작성하다 보면 자주 마주치는 몇몇 오류들이 더 있습니다. 여기서는 그런 오류를 설명해 보겠습니다.
 
 ### SyntaxError: missing ; before statement
 
-이번 에러는 일반적으로 코드의 끝부분에 세미콜론이 빠졌을 때 발생하지만, 때로는 헷갈릴 때도 있다. 예를 들어 `checkGuess()` 함수안의 코드를 고칠때를 살펴보자.
+이 오류는 여러분의 코드 어딘가의 줄 끝에 세미콜론을 빠뜨렸을 때 보통 발생하지만, 간혹 더 알아채기 힘든 원인으로 인해 나타나기도 합니다. 예를 들어, `checkGuess()` 함수의 아래 코드를...
 
 ```js
-var userGuess = Number(guessField.value);
+const userGuess = Number(guessField.value);
 ```
 
-이 코드를 다음코드로 바꾼다.
+이렇게 바꾸면,
 
 ```js
-var userGuess === Number(guessField.value);
+const userGuess === Number(guessField.value);
 ```
 
-당연히 이 둘의 코드가 다르기때문에 오류가 발생했을 것이다. 즉, 대입 연산자(=, 값을 변수에 지정하도록 함)와 비교연산자(===, 어떤 값과 다른값을 비교할때 쓰며, true와false중 하나가 반환됨)를 함께 혼동해서 쓰면 안된다.
+전혀 다른 작업으로 인식해서 오류를 던질 겁니다. 변수를 어떤 값과 동일하게 만드는 할당 연산자(`=`)와, 어떤 값이 다른 값과 같은지 판별해서 `true`/`false`를 반환하는 일치 연산자(`===`)를 헷갈리지 않도록 주의하세요.
 
-> **참고:** See our [SyntaxError: missing ; before statement](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) reference page for more details about this error.
+> **참고:** MDN의 [SyntaxError: missing ; before statement](/ko/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
-### 어떤 값을 입력해도, 항상 성공표시가 뜬다.
+### 어떤 값을 입력해도 항상 이겼다고 함
 
-이 또한, 앞처럼 대입연산자와 비교연산자를 혼동해서 사용한 경우이다. 예를들어, `checkGuess()`함수 안의 다음코드
+이 현상 또한 할당과 일치 연산자를 혼동해서 발생할 수 있습니다. 예를 들어, `checkGuess()` 함수의 아래 코드를...
 
 ```js
 if (userGuess === randomNumber) {
 ```
 
-를
+이렇게 바꾸면,
 
 ```js
 if (userGuess = randomNumber) {
 ```
 
-로 바꾼다면, 조건문은 항상 참이므로, 프로그램은 항상 성공했다고 뜰 것이니 주의하자!
+조건이 항상 `true`가 돼서 언제나 게임을 이겼다고 생각할 겁니다. 조심하세요!
 
 ### SyntaxError: missing ) after argument list
 
-이는 보통 함수나 메소드 호출의 끝부분에 괄호 닫는것을 빼먹은 것을 의미한다.
+이건 단순한 편입니다. 보통 함수나 메서드를 호출할 때 닫는 괄호를 누락하면 발생합니다.
 
-> **참고:** See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
+> **참고:** MDN의 [SyntaxError: missing ) after argument list](/ko/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) 참고서에서 오류에 대한 자세한 설명을 확인하세요.
 
 ### SyntaxError: missing : after property id
 
-이 오류는 자바스립트의 객체가 잘못되었을 때 발생하지만,  다음의 경우에는 변경할 수 있다.
+일반적으로는 JavaScript 객체를 잘못된 형태로 작성했을 때 발생하지만, 아래의 코드를
 
 ```js
 function checkGuess() {
 ```
 
-\->
+이렇게 바꾸기만 해도 발생합니다.
 
 ```js
 function checkGuess( {
 ```
 
-이는 브라우저로 하여금 함수안의 컨텐츠를 인자로 함수에게 넘겨주는 역할을 한다. 괄호에 주의하도록 하자!
+브라우저가 함수의 본문을 본문이 아니라 매개변수로 잘못 인식하기 때문입니다. 괄호를 주의하세요!
 
 ### SyntaxError: missing } after function body
 
-일반적으로 함수나 조건문에서 중괄호를 닫지 않아서 발생한다.  `checkGuess()` 함수의 아래부분의 중괄호를 닫지않아서 에러가 발생한다.
+쉬운 오류입니다. 일반적으로 함수나 조건문 구조에 사용한 중괄호를 누락할 때 발생합니다. 예컨대 `checkGuess()` 함수 끝부분의 닫는 중괄호를 하나 제거하면 오류를 재현할 수 있습니다.
 
-### SyntaxError: expected expression, got '_string_' or SyntaxError: unterminated string literal
+### SyntaxError: expected expression, got '_string_' 또는 SyntaxError: unterminated string literal
 
-이는 보통 문자열을 열거나 닫는 따옴표를 생략한 경우 에러가 발생한다.위의 첫 번째 에러를 살펴보면, *string은* 문자열이 시작하는 부분에서 따옴표 대신 브라우저가 검색한 예상치 못한 문자열로 대체된다. 두번째 에러는 따옴표로 문자열이 끝나지 못했기 때문에 발생했다.
+이 두 오류는 대개 문자열 값의 열거나 닫는 따옴표가 빠지면 발생합니다. 첫 번째 오류의 _string_ 부분에는 브라우저가 따옴표 대신 마주친, 예상치 못한 문자 또는 문자열이 들어갑니다. 두 번째 오류는 따옴표로 닫지 않은 문자열이 있다는 뜻입니다.
 
-모든 경우의 에러를 보았을 때, 지금까지 살펴본 예제에 어떻게 씨름했는지 생각해보자. 에러가 발생하면 , 발생된 줄 번호를 보고, 그 줄로 이동해 무엇이 잘못되었는지 살펴보는것이다.  이 오류가 반드시 해당 라인에 있는 것은 아니며, 위에서 언급되어진 문제로 인해  오류가 발생하지 않을 수도 있다는 점을 명심하자!
+> **참고:** MDN의 [SyntaxError: Unexpected token](/ko/docs/Web/JavaScript/Reference/Errors/Unexpected_token)과 [SyntaxError: unterminated string literal](/ko/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) 참고서에서 두 오류에 대한 자세한 설명을 확인하세요.
 
-> **참고:** See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: unterminated string literal](/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) reference pages for more details about these errors.
+위의 오류 중 어떤 걸 만나더라도, 이 글에서 오류를 어떻게 해결했는지 기억하세요. 오류가 발생한 줄 번호로 가서 잘못된 부분을 찾을 수 있는지 확인하세요. 하지만 정말 그 줄이 오류의 원인이라는 법은 없고, 위에서 설명한 원인과는 다른 이유로 발생할 수도 있다는 점은 기억해야 합니다!
 
-## 요약
+## 정리
 
-자, 지끔까지 자바스크립트 프로그램에서의 에러의 특징에 대해 살펴보았다.물론, 코드상의 에러가 항상 간단한 것만은 아니다. 하지만 최소한 업무량은 줄어줄 것이며, 작업도 빠르게 마치도록 해줄 것이다.
+간단한 JavaScript 프로그램에서 오류를 잡아내는 기초 방법을 알아봤습니다. 여러분의 코드에서 잘못된 곳을 찾는 일이 항상 이렇게 쉽진 않을 겁니다. 하지만 여러분의 배움 과정 초기에는 이 방법들로도 뭔가 잘못되더라도 문제 해결 속도를 약간 높여서 수면 시간을 확보하기에는 충분할 겁니다.
 
-## 더보기
+## 같이 보기
 
-- 여기서 소개하지 못한 에러들도 많으니, 다음 링크에서 정보들을 찾아보며 그때그때 자세히 알아보자l — [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
-- 이것을 보고도 에러를 해결하지 힘들다면 MDN 토론 포럼로 에러를 보내면 도와줄 것이다. 또한 다른 코드를 살펴보는 것도 좋다.
+- 이 글에는 없지만, JavaScript에는 더 많은 종류의 오류들이 있습니다. [JavaScript 오류 참고서](/ko/docs/Web/JavaScript/Reference/Errors)에서 오류 각각의 뜻을 자세히 설명하고 있습니다.
+- 이 글을 마친 후에도 어떻게 수정해야 할지 모르는 오류가 있으면 도움을 구해보세요! (영어) [MDN Discourse 포럼의 Learning 카테고리](https://discourse.mozilla.org/c/mdn/learn/250), 아니면 [Matrix](https://wiki.mozilla.org/Matrix)의 [MDN Web Docs 채팅방](https://chat.mozilla.org/#/room/#mdn:mozilla.org)에서 어떤 오류인지 설명하면 도와드리겠습니다. 여러분의 코드를 문의에 포함하면 더 좋습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

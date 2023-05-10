@@ -1,21 +1,8 @@
 ---
 title: AudioWorkletGlobalScope
 slug: Web/API/AudioWorkletGlobalScope
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - AudioWorkletGlobalScope
-  - Background
-  - Interface
-  - Reference
-  - Web Audio API
-  - Worklet
-  - global
-  - scope
-  - sound
-browser-compat: api.AudioWorkletGlobalScope
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`AudioWorkletGlobalScope`** 인터페이스는 커스텀 {{domxref("AudioWorkletProcessor")}}에서 파생된 클래스를 정의하는 코드에 대한 전역 실행 컨텍스트를 나타냅니다.
@@ -55,7 +42,7 @@ class TestProcessor extends AudioWorkletProcessor {
     console.log(currentTime)
   }
   // process 메서드는 필수적입니다 - 아무 소리도 나지 않는데,
-  // outputs에 값을 넣지 않았기 때문입니다
+  // outputs에 값을 넣지 않았기 때문입니다
   process (inputs, outputs, parameters) {
     return true
   }

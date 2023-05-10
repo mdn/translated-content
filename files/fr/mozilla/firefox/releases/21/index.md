@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/21
 original_slug: Mozilla/Firefox/Versions/21
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changements dans Firefox 21 qui sont utiles aux développeurs, que vous soyez développeur web, développeur Firefox et Gecko, ou développeur d'add-ons.
@@ -102,7 +103,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 - `nsIHttpChannel.redirectTo` a été ajouté pour permettre de rediriger les canaux HTTP sans faire des bidouilles fragiles.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 21 Release Notes](http://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
 - [Site Compatibility for Firefox 21](/fr/docs/Site_Compatibility_for_Firefox_21)

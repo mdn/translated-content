@@ -4,6 +4,7 @@ slug: Web/CSS/max-block-size
 translation_of: Web/CSS/max-block-size
 browser-compat: css.properties.max-block-size
 ---
+
 {{CSSRef}}
 
 La propriété **`max-block-size`** définit la taille maximale d'un élément selon l'axe perpendiculaire (l'axe de bloc) au sens d'écriture indiqué par [`writing-mode`](/fr/docs/Web/CSS/writing-mode). Elle correspond à la propriété [`max-width`](/fr/docs/Web/CSS/max-width) ou [`max-height`](/fr/docs/Web/CSS/max-height) selon la valeur utilisée pour [`writing-mode`](/fr/docs/Web/CSS/writing-mode). Si le mode d'écriture est orienté verticalement, `max-block-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément.

@@ -1,17 +1,8 @@
 ---
 title: クラス
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - クラス
-  - コンストラクター
-  - ECMAScript 2015
-  - ガイド
-  - 継承
-  - 中級者
-  - JavaScript
-browser-compat: javascript.classes
-translation_of: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 クラスはオブジェクトを作成するためのテンプレートです。それらは、そのデータを処理するためのコードでデータをカプセル化します。JS のクラスはプロトタイプに基づいて構築されていますが、ES5 のクラス風のセマンティクスとは共有されない構文やセマンティクスも持っています。
@@ -69,7 +60,7 @@ console.log(Rectangle.name);
 // 出力: "Rectangle2"
 ```
 
-> **Note:** クラス**式**にも[クラス宣言](#class_declarations)で言及したのと同様の巻き上げ問題があります。
+> **メモ:** クラス**式**にも[クラス宣言](#class_declarations)で言及したのと同様の巻き上げ問題があります。
 
 ## クラス本体とメソッド定義
 
@@ -117,13 +108,13 @@ console.log(square.area); // 100
 ```js
 class Polygon {
   constructor(...sides) {
-    this.sides = sides;
+    this.sides = sides;
   }
   // Method
   *getSides() {
     for(const side of this.sides){
       yield side;
-    }
+    }
   }
 }
 
@@ -143,7 +134,7 @@ class Point {
     this.y = y;
   }
 
-  static displayName = "Point";
+  static displayName = "Point";
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
@@ -261,7 +252,7 @@ class Rectangle {
 
 プライベートフィールドの参照はクラス本体内でのみ可能となり、クラス外からの参照はエラーとなります。クラス外からは見えないものを定義することで、クラスのユーザーが (変更される可能性のある) 内部状態に依存できないようにします。
 
-> **Note:** プライベートフィールドは、事前宣言のみ可能です。
+> **メモ:** プライベートフィールドは、事前宣言のみ可能です。
 
 プライベートフィールドは通常のプロパティとは違い、`this` への追加によって後から作成することができません。
 
@@ -417,7 +408,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 クラスを再定義することはできません。再定義しようとすると `SyntaxError` が発生します。
 
-Firefox のウェブコンソール（**メニュー** > **ウェブ開発** > **ウェブコンソール**）などでコードを試しているときに、同じ名前のクラス定義を 2 回実行すると、`SyntaxError: redeclaration of let ClassName` が発生します。（この問題については {{Bug(1428672)}} でさらに詳しく説明しています。）Chrome 開発者ツールで同様の操作を行うと、`Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1` のようなメッセージが表示されます。
+Firefox のウェブコンソール（**メニュー** > **ウェブ開発** > **ウェブコンソール**）などでコードを試しているときに、同じ名前のクラス定義を 2 回実行すると、`SyntaxError: redeclaration of let ClassName` が発生します。（この問題については [Firefox バグ 1428672](https://bugzil.la/1428672) でさらに詳しく説明しています。）Chrome 開発者ツールで同様の操作を行うと、`Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1` のようなメッセージが表示されます。
 
 ## Specifications
 

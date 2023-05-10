@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -312,4 +313,4 @@ Les scripts de contenu ont la même vue du DOM et sont injectés dans l’ordre 
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

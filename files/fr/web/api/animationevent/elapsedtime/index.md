@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/AnimationEvent/elapsedTime
 ---
+
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
 
 ## Résumé
@@ -24,13 +25,11 @@ temps = AnimationEvent.elapsedTime
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                                   | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations', '#AnimationEvent-elapsedTime', 'AnimationEvent.elapsedTime') }} | {{ Spec2('CSS3 Animations')}} | Première définition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AnimationEvent.elapsedTime")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: initial-value
 slug: Web/CSS/@property/initial-value
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.initial-value
-translation_of: Web/CSS/@property/initial-value
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`initial-value`** は [CSS](/ja/docs/Web/CSS) の記述子で、構文があらゆる有効なトークンストリームを受け入れない限り {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用する上で必須です。そのプロパティの初期値を設定します。

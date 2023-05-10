@@ -7,6 +7,7 @@ tags:
   - Méthodes
 translation_of: Web/API/DOMImplementation/hasFeature
 ---
+
 {{ApiRef("DOM")}}
 
 {{deprecated_header()}}
@@ -30,16 +31,11 @@ flag = document.implementation.hasFeature(feature, version);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | Statut                           | Commentaire                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-domimplementation-hasfeature', 'DOMImplementation.hasFeature')}} | {{Spec2('DOM WHATWG')}} | Modifié pour toujours renvoyer `true` sauf pour les fonctionnalités SVG. |
-| {{SpecName('DOM3 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}                     | {{Spec2('DOM3 Core')}}     | Pas de modification de {{SpecName("DOM2 Core")}}                  |
-| {{SpecName('DOM2 Core', 'core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}                     | {{Spec2('DOM2 Core')}}     | Pas de modification de {{SpecName("DOM1")}}                      |
-| {{SpecName('DOM1', 'level-one-core.html#ID-5CED94D7', 'DOMImplementation.hasFeature')}}             | {{Spec2('DOM1')}}         | Définition initiale.                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMImplementation.hasFeature")}}
+{{Compat}}
 
 ## Voir aussi
 

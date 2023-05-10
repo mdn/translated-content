@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/counter-reset
 ---
+
 {{CSSRef}}
 
 La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) avec une valeur donnée.
@@ -52,9 +53,13 @@ Cette propriété se définit grâce à :
 - `none`
   - : Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur. Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -94,16 +99,11 @@ li::before {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}                         | {{Spec2('CSS3 Lists')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -13,13 +13,14 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 ---
+
 {{AddonSidebar()}}
 
 L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
 
 Les sessions sont représentées comme des objets {{WebExtAPIRef("tabs.Tab", "Tab")}} si l'onglet a été fermé mais sa fenêtre n'a pas été fermée : par exemple, parce que l'utilisateur a cliqué sur le bouton "fermer l'onglet", et cet onglet n'était pas le seul onglet de sa fenêtre.
 
-Les sessions sont représentées par des objets  {{WebExtAPIRef("windows.Window", "Window")}} si la fenêtre est fermée :  parce que l'utilisateur a cliqué sur le bouton "Fermer la fenêtre", ou a fermé le seul onglet ouvert dans une fenêtre.
+Les sessions sont représentées par des objets {{WebExtAPIRef("windows.Window", "Window")}} si la fenêtre est fermée : parce que l'utilisateur a cliqué sur le bouton "Fermer la fenêtre", ou a fermé le seul onglet ouvert dans une fenêtre.
 
 Notez que les différents navigateurs peuvent avoir une idée différente quand une session est un onglet et quand il s'agit d'une fenêtre. Par exemple :
 
@@ -37,9 +38,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `window`{{optional_inline}}
   - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Session")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -47,7 +48,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -74,4 +76,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

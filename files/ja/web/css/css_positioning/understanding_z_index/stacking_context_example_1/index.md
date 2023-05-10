@@ -1,16 +1,11 @@
 ---
 title: 重ね合わせコンテキストの例 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - Understanding_CSS_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
+
 {{CSSRef}}
 
-« [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index "CSS の z-index を理解する")
+« [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
 
 ## 重ね合わせコンテキストの例 1
 
@@ -37,9 +32,9 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 
-> **Note:** DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
+> **メモ:** DIV #1 と DIV #3 は半透明ではありません。位置指定された要素に1未満の不透明度を与えると、ちょうど z-index 値を追加したのと同じように、暗黙的に重ね合わせコンテキストが作られることを忘れないのは大切です。また、この例は、親要素が重ね合わせコンテキストを作らないときに、何が起こるのかを示しています。
 
-<h2 id="Example">例</h2>
+## 例
 
 ### HTML
 
@@ -101,7 +96,7 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
     z-index: 2;
     position: absolute;
     width: 200px;
-    height: 70px;
+    height: 80px;
     top: 65px;
     left: 50px;
     border: 1px dashed #000099;
@@ -113,7 +108,7 @@ DIV #2 に正の (ゼロでなく auto でもない) z-index 値が代入され�
 
 ### 結果
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{ EmbedLiveSample('Example', '', '300') }}
 
 ## 関連情報
 

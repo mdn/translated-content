@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette
 ---
+
 {{CSSRef}}
 
 Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans cette section de MDN, nous vous expliquons ici quelles étapes suivre pour que vos exemples soient publiés.
@@ -55,7 +56,7 @@ Dans l'en-tête, il y a deux blocs pour le style. Le premier concerne les élém
 
 Le HTML du composant doit être ajouté deux fois. Pour commencer dans la section avec la classe `preview` puis dans l'élément `textarea` `playable-html`.
 
-Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section  `playable-css`.
+Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section `playable-css`.
 
 Pour voir un exemple existant et comprendre les différentes parties, vous pouvez consulter [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) qui est utilisé sur la page [Comment centrer un élément](/fr/docs/Web/CSS/Layout_cookbook/Center_an_element).
 
@@ -77,7 +78,7 @@ Ouvrez une _pull request_ depuis votre _fork_ vers le [dépôt des exemples CSS]
 
 ### 5. Créer la page sur MDN
 
-Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/en-US/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
+Une fois l'exemple fusionné, vous pouvez créer l'article correspondant sur MDN. Pour cela, vous aurez besoin d'un compte et [des permissions pour la création de page](/fr/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions). Vous pourrez alors créer une page comme sous-page de la section. [Cette page modèle pourra vous servir de point de départ pour votre contenu](/fr/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 Le modèle explique le contenu de chaque section. Vous pouvez également consulter les recettes existantes comme références. Si vous cliquez sur le bouton d'édition en haut de page, vous pourrez ainsi accéder au contenu « brut » de la page et voir comment les macros sont utilisées afin d'intégrer les données de compatibilité ou les exemples interactifs.
 

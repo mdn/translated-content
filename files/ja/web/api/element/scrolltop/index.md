@@ -1,16 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-tags:
-  - API
-  - CSSOM View
-  - NeedsArtUpdate
-  - NeedsMarkupWork
-  - プロパティ
-  - リファレンス
-browser-compat: api.Element.scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.scrollTop`** プロパティは、要素の内容が垂直にスクロールするピクセル数を取得または設定します。
@@ -19,7 +11,7 @@ translation_of: Web/API/Element/scrollTop
 
 `scrollTop` がルート要素 (`<html>` 要素) に対して使用されると、ウィンドウの `scrollY` が返されます。[これは `scrollTop` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop)。
 
-> **Warning:** 画面の拡大縮小を使用するシステムでは、 `scrollTop` が小数になることがあります。
+> **警告:** 画面の拡大縮小を使用するシステムでは、 `scrollTop` が小数になることがあります。
 
 ## 構文
 
@@ -105,6 +97,6 @@ scroller.addEventListener("scroll", event => {
 
 ## 関連情報
 
-- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollLeft")}}
 - {{domxref("Element.scrollTo()")}}

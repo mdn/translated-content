@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
-tags:
-  - API
-  - HTML DOM
-  - HTMLInputElement
-  - メソッド
-  - リファレンス
-  - テキスト欄選択 API
-browser-compat: api.HTMLInputElement.setSelectionRange
-translation_of: Web/API/HTMLInputElement/setSelectionRange
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.setSelectionRange()`** メソッドは、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の中で現在のテキストの選択範囲の開始位置と終了位置を設定します。

@@ -1,15 +1,8 @@
 ---
 title: ReadableStream.cancel()
 slug: Web/API/ReadableStream/cancel
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - cancel
-translation_of: Web/API/ReadableStream/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`cancel()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 会在流被取消的时候兑现。

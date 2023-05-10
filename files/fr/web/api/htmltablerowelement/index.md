@@ -9,6 +9,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLTableRowElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLTableRowElement`** fournit des propriétés et des méthodes spéciales (au-delà de l'interface {{domxref("HTMLElement")}} dont elle dispose également par héritage) pour manipuler la mise en page et la présentation des lignes dans un tableau HTML.
@@ -43,20 +44,15 @@ _Hérite des méthodes de son parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableRowElement.deleteCell()")}}
   - : Supprime la cellule à la position donnée dans la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `0`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`.
 - {{domxref("HTMLTableRowElement.insertCell()")}}
-  - : Insère une nouvelle cellule juste avant la position donnée dans la ligne. Si la position donnée n'est pas donnée ou est `-1`, elle ajoute la cellule à la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `-1`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`. Renvoie une référence à un [HTMLTableCellElement \[en-US\]](/en-US/docs/Web/API/HTMLTableCellElement).
+  - : Insère une nouvelle cellule juste avant la position donnée dans la ligne. Si la position donnée n'est pas donnée ou est `-1`, elle ajoute la cellule à la ligne. Si la position donnée est supérieure (ou égale car elle commence à zéro) au nombre de cellules dans la ligne, ou est inférieure à `-1`, elle déclenche une {{domxref("DOMException")}} avec la valeur `IndexSizeError`. Renvoie une référence à un [HTMLTableCellElement \[en-US\]](/fr/docs/Web/API/HTMLTableCellElement).
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commantaire                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmltablerowelement", "HTMLTableRowElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                          |
-| {{SpecName('HTML5 W3C', "tabular-data.html#the-tr-element", "HTMLTableRowElement")}} | {{Spec2('HTML5 W3C')}}     | Le paramètre de `insertCell` est désormais facultatif et vaut par défaut `-1`.                                                                                           |
-| {{SpecName('DOM2 HTML', 'html.html#ID-6986576', 'HTMLTableRowElement')}}                 | {{Spec2('DOM2 HTML')}}     | Les propriétés `cells`, `rowIndex`, et `selectionRowIndex` sont désormais en lecture seule. Les méthodes `insertCell` et `deleteCell` peuvent déclencher des exceptions. |
-| {{SpecName('DOM1', 'level-one-html.html#ID-6986576', 'HTMLTableRowElement')}}         | {{Spec2('DOM1')}}         | Défintion initiale.                                                                                                                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLTableRowElement")}}
+{{Compat}}
 
 ## Voir aussi
 

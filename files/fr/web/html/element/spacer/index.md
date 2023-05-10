@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/spacer
 ---
-{{non-standard_header}}{{deprecated_header}}{{HTMLRef}}
+
+{{non-standard_header}}{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<spacer>`** était utilisé pour insérer des blancs au sein d'une page web. Il a été créé par Netscape pour obtenir le même effet que celui qui était créé avec des images GIF d'un pixel, permettant d'ajouter des espaces blancs. Cependant, `<spacer>` n'est pas pris en charge par les principaux navigateurs principaux et il faut utiliser les règles CSS pour obtenir ces effets d'alignement. Firefox ne prend plus en charge cet élément depuis la version 4.
 
@@ -49,4 +50,4 @@ Cet élément ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.spacer")}}
+{{Compat}}

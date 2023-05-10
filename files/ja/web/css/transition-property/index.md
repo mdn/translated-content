@@ -1,22 +1,15 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS トランジション
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-property
-translation_of: Web/CSS/transition-property
 ---
+
 {{CSSRef}}
 
 **`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-> **Note:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
+> **メモ:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
 
 一括指定プロパティ (例えば {{cssxref("background")}}) を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
 

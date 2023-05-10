@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.rotate()`** de l'API Canvas 2D ajoute une rotation à la matrice de transformation. L'argument `angle` représente un angle de rotation horaire et il est exprimé en radians.
@@ -93,13 +94,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.rotate")}}
+{{Compat}}
 
 ## Voir aussi
 

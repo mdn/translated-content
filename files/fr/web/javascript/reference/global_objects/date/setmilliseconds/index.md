@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la date, selon l'heure locale.
@@ -46,16 +47,11 @@ leGrandJour.setMilliseconds(100);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.28', 'Date.prototype.setMilliseconds')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmilliseconds', 'Date.prototype.setMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.setMilliseconds")}}
+{{Compat}}
 
 ## Voir aussi
 

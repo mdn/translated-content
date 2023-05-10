@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
@@ -46,7 +47,7 @@ var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
 ## Notes
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
 
 `btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
 
@@ -77,20 +78,15 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                           | Commentaire                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | Méthode déplacée dans le mixin `WindowOrWorkerGlobalScope` dans la spéc la plus récente.                                               |
-| {{SpecName('HTML WHATWG', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                     | {{Spec2('HTML WHATWG')}} | Pas de changement depuis le dernier instantané, {{SpecName("HTML5.1")}}.                                                      |
-| {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}                         | {{Spec2('HTML5.1')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Pas de changement.                                                                 |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}}                     | {{Spec2('HTML5 W3C')}}     | Instantané de {{SpecName("HTML WHATWG")}}. Création de `WindowBase64` (les propriétés se trouvaient sur la cible avant cela). |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Base64 encoding and decoding](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/fr/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
-- {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [`atob()`](/fr/docs/Web/API/atob)
+- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)

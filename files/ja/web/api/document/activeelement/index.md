@@ -1,19 +1,9 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - フォーカス
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - activeElement
-browser-compat: api.Document.activeElement
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
-translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`activeElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、DOM 内で現在フォーカスを持っている要素 ({{domxref("Element")}}) を返します。
@@ -23,7 +13,7 @@ original_slug: Web/API/DocumentOrShadowRoot/activeElement
 
 通常、ユーザーはタブキーを押して、フォーカス可能な要素間でページ内のフォーカスを移動させ、スペースバーを使用して 1 つの要素をアクティブにします（つまり、ボタンを押したり、ラジオボタンをトグル切り替えしたりします）。どの要素にフォーカスが当たるかは、プラットフォームやブラウザーの現在の設定によって異なります。例えば、 macOS システムでは通常、既定では、テキスト入力要素以外の要素はフォーカスされません。
 
-> **Note:** フォーカス（どの要素がユーザー入力イベントを受信しているか）と選択範囲（文書内で現在強調表示されている部分）は同じものではありません。現在の選択範囲は {{domxref("window.getSelection()")}} で取得することができます。
+> **メモ:** フォーカス（どの要素がユーザー入力イベントを受信しているか）と選択範囲（文書内で現在強調表示されている部分）は同じものではありません。現在の選択範囲は {{domxref("window.getSelection()")}} で取得することができます。
 
 ## 値
 

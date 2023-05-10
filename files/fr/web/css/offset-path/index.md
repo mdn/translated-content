@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/offset-path
 ---
+
 {{SeeCompatTable}}{{CSSRef}}
 
 La propriété **`offset-path`** définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
@@ -57,7 +58,7 @@ offset-path: unset;
   - : Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline` ou `rect` et d'utiliser la géométrie de la forme visée pour construire le chemin.
 - `<basic-shape>`
 
-  - : Cette valeur indique une [forme CSS](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
+  - : Cette valeur indique une [forme CSS](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
 
     - `path()`
       - : Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.
@@ -65,9 +66,13 @@ offset-path: unset;
 - `none`
   - : Aucun chemin de mouvement n'est indiqué.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -141,15 +146,11 @@ Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin e
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.offset-path")}}
+{{Compat}}
 
 ## Voir aussi
 

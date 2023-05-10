@@ -7,6 +7,7 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of_original: Web/API/WebRTC_API/WebRTC_basics
 original_slug: Web/Guide/API/WebRTC/WebRTC_basics
 ---
+
 Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
 
 ## Contenu semi-ancien, à partir de RTCPeerConnection
@@ -15,7 +16,7 @@ Les informations ci-dessous proviennent de RTCPeerConnection; elles pourraient r
 
 ## Usage basique
 
-l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, en générant {{interwiki("wikipedia", "Session Description Protocol")}} a échanger entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
+l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine et une machine distante,et ce, au format [SDP](https://fr.wikipedia.org/wiki/Session_Description_Protocol) entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
 
 Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
 
@@ -99,7 +100,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error)
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 
@@ -126,7 +127,7 @@ C'est le point de départ pour créer une connexion avec un pair. Il accepte des
 var pc = new PeerConnection(configuration, options);
 ```
 
-### **`RTCConfiguration`**
+### RTCConfiguration
 
 L'objet {{domxref("RTCConfiguration")}} contient l’information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
 
@@ -140,9 +141,9 @@ var configuration = {
 }
 ```
 
-Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez http\://numb.viagenie.ca/ pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
+Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
 
-### **`options`** (Cf. "Note" avant)
+### options (Cf. "Note" avant)
 
 Selon le type de connexion, vous devez passer des options.
 
@@ -210,7 +211,7 @@ pc.createOffer(function (offer) {
 }, errorHandler, constraints);
 ```
 
-### **`errorHandler`**
+### errorHandler
 
 S'il y avait un problème lors de la génération d’une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
 
@@ -220,7 +221,7 @@ var errorHandler = function (err) {
 };
 ```
 
-### **`constraints`**
+### constraints
 
 Options pour l'offre SDP.
 
@@ -266,11 +267,11 @@ var channel = pc.createDataChannel(channelName, channelOptions);
 
 L'auteur de l'offre doit être le pair qui crée le canal. Le répondeur recevra le canal dans le rappel (callback) `ondatachannel` dans le PeerConnection. Vous devez appeler `createDataChannel()` une fois avant de créer l'offre.
 
-### **`channelName`**
+### channelName
 
 Il s'agit d'une chaîne qui agit comme une étiquette pour le nom de votre canal. _AVERTISSEMENT : Assurez-vous que votre nom de canal n'a pas d'espaces ou Chrome va échouer sur `createAnswer()`._
 
-### **`channelOptions`**
+### channelOptions
 
 ```js
 var channelOptions = {};
@@ -280,11 +281,11 @@ Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça
 
 ### Méthodes et événements de canal
 
-#### **`onopen`**
+#### onopen
 
 Exécuté lorsque la connexion est établie.
 
-#### **`onerror`**
+#### onerror
 
 Exécuté s'il y a une erreur de création de la connexion. Le premier argument est un objet d'erreur.
 
@@ -294,7 +295,7 @@ channel.onerror = function (err) {
 };
 ```
 
-#### **`onmessage`**
+#### nmessage
 
 ```js
 channel.onmessage = function (e) {
@@ -304,11 +305,11 @@ channel.onmessage = function (e) {
 
 Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s’exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
 
-#### **`onclose`**
+#### onclose
 
 Exécuté si l'autre pair ferme la connexion.
 
-### **Lier les événements**
+### Lier les événements
 
 Si vous êtes le créateur du canal(l'auteur de l'offre), vous pouvez lier des événements directement à la DataChannel que vous avez créé avec `createChannel`. Si vous êtes l'auteur de la réponse, vous devez utiliser le callback `ondatachannel` dans le PeerConnection afin d'accéder au même canal.
 
@@ -320,7 +321,7 @@ pc.ondatachannel = function (e) {
 
 Le canal est disponible dans l’objet événement passé dans le descripteur en tant que `e.channel`.
 
-#### **`send()`**
+#### send()
 
 ```js
 channel.send("Hi Peer!");
@@ -328,7 +329,7 @@ channel.send("Hi Peer!");
 
 Cette méthode vous permet d'envoyer des données directement au pair! Incroyable. Vous devez envoyer un String, Blob, ArrayBuffer ou ArrayBufferView, alors assurez-vous de "stringifier" les objets.
 
-#### **`close()`**
+#### close()
 
 Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l’ unload de la page.
 
@@ -360,13 +361,13 @@ var mediaOptions = {
 
 Si vous voulez juste une conversation audio, supprimez la clé `video`.
 
-#### **`errorHandler`**
+#### errorHandler
 
 Exécuté s'il y a une erreur retournée par le support demandé.
 
 ### Événements Médias et Méthodes
 
-#### **`addStream`**
+#### addStream
 
 Ajoute le flux de `getUserMedia` au PeerConnection.
 
@@ -374,7 +375,7 @@ Ajoute le flux de `getUserMedia` au PeerConnection.
 pc.addStream(stream);
 ```
 
-#### **`onaddstream`**
+#### onaddstream
 
 ```js
 <video id="otherPeer" autoplay></video>

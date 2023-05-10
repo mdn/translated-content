@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Shorthand_properties
 original_slug: Web/CSS/Propriétés_raccourcies
 ---
+
 {{CSSRef}}
 
 _Les propriétés raccourcies sont des propriétés CSS qui permettent de définir la valeur de plusieurs propriétés via une seule déclaration. En manipulant des propriétés raccourcies, un développeur web peut créer des feuilles de style plus concises et plus lisibles, améliorant ainsi la maintenabilité_.
@@ -191,7 +192,7 @@ margin: 10px 5px 10px 5px;
 
 CSS fournit une propriété raccourcie qui permet d'appliquer une même valeur à l'ensemble des propriétés du document : {{cssxref("all")}}.
 
-Voir l'article sur [la cascade et l'héritage](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) pour plus d'informations sur le fonctionnement de l'héritage.
+Voir l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) pour plus d'informations sur le fonctionnement de l'héritage.
 
 ## Voir aussi
 

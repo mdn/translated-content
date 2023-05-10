@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/nextNode
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.nextNode()`** déplace le {{domxref("Node")}} courant au noeud suivant _visible_ dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. Si aucun noeud n'existe, elle renvoie `null` et le noeud courant est inchangé.
@@ -33,14 +34,11 @@ var node = treeWalker.nextNode(); // renvoie le premier enfant de la racine, car
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                                       | Commentaire                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-nextnode', 'TreeWalker.nextNode')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-nextNode', 'TreeWalker.nextNode')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.nextNode")}}
+{{Compat}}
 
 ## Voir aussi
 

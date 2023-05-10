@@ -1,13 +1,8 @@
 ---
 title: 相乘運算子 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 相乘運算子 (`*`) 是用來取得兩個運算元的乘積。

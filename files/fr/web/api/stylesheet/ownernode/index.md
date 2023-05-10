@@ -3,6 +3,7 @@ title: StyleSheet.ownerNode
 slug: Web/API/StyleSheet/ownerNode
 translation_of: Web/API/StyleSheet/ownerNode
 ---
+
 {{APIRef ("CSSOM")}}
 
 **OwnerNode** renvoie le noeud qui associe cette feuille de style au document.

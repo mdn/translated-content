@@ -1,14 +1,6 @@
 ---
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - WeakSet
-  - Polyfill
-browser-compat: javascript.builtins.WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 {{JSRef}}
 

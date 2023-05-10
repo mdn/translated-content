@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduceRight
 ---
+
 {{JSRef}}
 
 La méthode **`reduceRight()`** applique une fonction sur un accumulateur et chaque valeur du tableau typé (de la droite vers la gauche) afin de réduire le tableau en une seule valeur. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reduceRight()")}}. Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -70,14 +71,11 @@ var total = new Uint8Array([0, 1, 2, 3]).reduceRight(function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduceRight', '%TypedArray%.prototype.reduceRight')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.reduceRight")}}
+{{Compat}}
 
 ## Voir aussi
 

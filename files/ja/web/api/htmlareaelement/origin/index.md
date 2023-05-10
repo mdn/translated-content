@@ -1,17 +1,9 @@
 ---
 title: HTMLAreaElement.origin
 slug: Web/API/HTMLAreaElement/origin
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.HTMLAreaElement.origin
-translation_of: Web/API/HTMLAreaElement/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。

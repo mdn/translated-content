@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/interagir_avec_le_presse_papier
 ---
+
 {{AddonSidebar}}
 
 La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).
@@ -17,7 +18,7 @@ La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execC
 - Pour le contenu textuel simple, on utilisera [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText).
 - Pour les images, le texte riche, du HTML ou d'autre contenu complexe, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write).
 
-On notera cependant que, bien que [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText) fonctionnent pour tous les navigateurs, ce n'est pas le cas de  [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Ainsi, au moment où nous écrivons ces lignes, Firefox n'implémente pas complètement [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Il faudra alors&nbsp;:
+On notera cependant que, bien que [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText) fonctionnent pour tous les navigateurs, ce n'est pas le cas de [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Ainsi, au moment où nous écrivons ces lignes, Firefox n'implémente pas complètement [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Il faudra alors&nbsp;:
 
 - Pour manipuler des images, utiliser [`browser.clipboard.setImageData()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) pour écrire des images dans le presse-papier et [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand) pour coller des images sur une page web.
 - Pour écrire du contenu riche (comme du HTML, du texte complexe incluant des images, etc.) dans le presse-papier, utiliser [`document.execCommand("copy")`](/fr/docs/Web/API/Document/execCommand) ou [`document.execCommand("cut")`](/fr/docs/Web/API/Document/execCommand). Pour lire le contenu équivalent depuis le presse-papier, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) (recommandée) ou [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand).
@@ -158,13 +159,7 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 
 ## Compatibilité des navigateurs
 
-### `navigator.clipboard`
-
-{{Compat("api.Clipboard")}}
-
-### `clipboard.setImageData`
-
-{{Compat("webextensions.api.clipboard")}}
+{{Compat}}
 
 ## Voir aussi
 

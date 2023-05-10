@@ -7,6 +7,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGLFramebuffer
 ---
+
 {{APIRef("WebGL")}}
 
 L'interface **WebGL Framebuffer** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et représente une collection de tampons servant de destination de rendu.
@@ -32,13 +33,11 @@ var tampon = gl.createFramebuffer();
 
 ## Spécifications
 
-| Spécification                                                    | Statut                   | Commentaire          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.5", "WebGLFramebuffer")}} | {{Spec2('WebGL')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLFramebuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

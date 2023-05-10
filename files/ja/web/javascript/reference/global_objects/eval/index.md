@@ -1,19 +1,11 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - Evaluating JavaScript
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - 警告
-  - eval
-browser-compat: javascript.builtins.eval
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
+
 {{jsSidebar("Objects")}}
 
-> **Warning:** 文字列から JavaScript を実行することは、非常に大きなセキュリティリスクを伴います。`eval()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [eval() を使わないでください!](#eval_を使わないでください!)を参照してください。
+> **警告:** 文字列から JavaScript を実行することは、非常に大きなセキュリティリスクを伴います。`eval()` を使用すると、悪意のある者が任意のコードを実行することがあまりにも簡単になります。下記の [eval() を使わないでください!](#eval_を使わないでください!)を参照してください。
 
 **`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。
 
@@ -214,7 +206,7 @@ var result = setDescendantProp(obj, propPath, 1);  // obj.a.b.c は 1 になる
 
 ### コードの断片を評価する場合、代わりに関数を使う
 
-JavaScript {{interwiki("wikipedia","第一級関数")}}を備えており、関数を他の API の引数としたり、変数やオブジェクトのプロパティに保存したりすることができます。多くの DOM API はこれを考慮して作られているので、次のように書くことができます (また、書くべきです)。
+JavaScript [第一級関数](https://ja.wikipedia.org/wiki/第一級関数)を備えており、関数を他の API の引数としたり、変数やオブジェクトのプロパティに保存したりすることができます。多くの DOM API はこれを考慮して作られているので、次のように書くことができます (また、書くべきです)。
 
 ```js
 // setTimeout(" ... ", 1000) を使う代わりに

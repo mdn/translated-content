@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules
 browser-compat: javascript.builtins.Intl.PluralRules
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.PluralRules`** permet de mettre en forme des chaînes de caractères en fonction des règles de nombre (pluriel) d'une locale donnée.

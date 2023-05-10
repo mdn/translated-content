@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
 translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas instaure différentes manières de dessiner des images dans les balises canvas.
@@ -119,22 +120,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.drawImage")}}
-
-## Notes concernant la compatibilité
-
-- Un support pour l'inversion de l'image pour les valeurs négatives pour `sLargeur` et `sHauteur` a été ajouté à Gecko 5.0 {{geckoRelease("5.0")}}.
-- A partir de {{geckoRelease("5.0")}} `drawImage()` gère les arguments négatifs, conformément à la spécification, en inversant ces valeurs par rapport aux axes.
-- Spécifier une image `null` ou `undefined` en appellant `drawImage()` correctement retournera une exception `TYPE_MISMATCH_ERR` à partir de {{geckoRelease("5.0")}}.
-- Prior to Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox ajoute une exception si une des coordonnées est nulle ou négative. Selon la spécification, cela ne durera pas.
-- Gecko 9.0 {{ geckoRelease("9.0") }} supporte désormais correctement le CORS pour dessiner des images de domaines étrangers sans [corrompre le canvas](/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP).
-- Gecko 11.0 {{ geckoRelease("11.0") }} permet désormais de dessiner les images SVG dans le canvas sans [corrompre le canevas](/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP).
+{{Compat}}
 
 ## Notes
 

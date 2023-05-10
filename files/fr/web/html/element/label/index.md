@@ -1,6 +1,6 @@
 ---
 title: <label>
-slug: Web/HTML/Element/Label
+slug: Web/HTML/Element/label
 tags:
   - Element
   - Formulaires
@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/label
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
 
@@ -112,7 +113,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ### Titres
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/en-US/docs/Web/HTML/Element/Heading_Elements#Navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
+Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#Navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
 
 S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
 
@@ -206,15 +207,11 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'forms.html#the-label-element', '&lt;label&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.9.1', '&lt;label&gt;')}}     | {{Spec2('HTML4.01')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.label")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,19 +1,11 @@
 ---
 title: サブグリッド
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
-tags:
-  - CSS
-  - CSS 表示
-  - CSS グリッド
-  - ガイド
-  - サブグリッド
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
+
 {{CSSRef}}
 
 CSS グリッドレイアウトの Level 2 は、 `subgrid` の値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しています。このガイドでは、サブグリッドでできること、いくつかの使用例、この機能で解決されるデザインパターンを詳述します。
-
-> **Warning:** この機能は Firefox 71 で使用可能になりますが、今のところ、これがサブグリッドを実装している唯一のブラウザーです。
 
 ## サブグリッドの導入
 
@@ -93,9 +85,7 @@ subgrid 値は、通常の入れ子のグリッドとほとんど同じ方法で
 
 ## 仕様書
 
-| 仕様書                        | 状態                           | 備考                                                                                                      |
-| ------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | [subgrids](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid) の初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

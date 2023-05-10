@@ -10,6 +10,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/top
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`top`** de l'interface **`DOMRectReadOnly`** renvoie la valeur de la coordonnée haute du `DOMRect.` (A la même valeur que `y`, ou `y + height` _(y + hauteur)_ si `height` est négative.)
@@ -26,13 +27,11 @@ Un double.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                       | Commentaire                                        |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-domrectreadonly-top', 'top')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMRectReadOnly.top")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -12,6 +12,7 @@ tags:
   - onInputCancelled
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur a annulé son interaction avec votre poste (par exemple, en cliquant en dehors de la barre d'adresse).
@@ -37,9 +38,9 @@ Les événements ont trois fonctions :
 
 La fonction d'écouteur n'a pas de paramètres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputCancelled")}}
+{{Compat}}
 
 ## Exemples
 

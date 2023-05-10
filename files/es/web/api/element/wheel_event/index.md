@@ -1,38 +1,22 @@
 ---
 title: 'Element: wheel event'
 slug: Web/API/Element/wheel_event
-translation_of: Web/API/Element/wheel_event
 original_slug: Web/API/Element/wheel_event
-browser-compat: api.Element.wheel_event
 ---
+
 {{APIRef}}
 
-El evento **`wheel`** se activa cuando el usuario gira un botón de rueda en un dispositivo señalador (normalmente un ratón).
+El evento `wheel` se activa cuando el usuario gira un botón de rueda en un dispositivo señalador (normalmente un ratón).
 
 Este evento reemplaza el evento obsoleto no estándar {{domxref("Element/mousewheel_event", "mousewheel")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>Burbujas</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Sí</td>
-    </tr>
-    <tr>
-      <th>Interfaz</th>
-      <td>{{domxref("WheelEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Propiedades del manejador de eventos</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onwheel", "onwheel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Propiedades
+
+| Burbujas                             | Sí                                                                                                   |
+|--------------------------------------|------------------------------------------------------------------------------------------------------|
+| Cancelable                           | Sí                                                                                                   |
+| Interfaz                             | [`WheelEvent`](/es/docs/Web/API/WheelEvent)                             |
+| Propiedades del manejador de eventos | [`onwheel`](/es/docs/conflicting/Web/API/Element/wheel_event) |
 
 > **Nota:** No confundir el evento `wheel` con el evento {{domxref("Element/scroll_event", "scroll")}}. La acción predeterminada de un evento `wheel` es específica de la implementación y no necesariamente envía un evento `scroll`. Incluso cuando lo hace, los valores `delta*` en el evento `wheel` no reflejan necesariamente la dirección de desplazamiento del contenido. Por lo tanto, no confíe en las propiedades `delta*` del evento `wheel` para obtener la dirección de desplazamiento. En su lugar, detecte los cambios de valor de {{domxref("Element.scrollLeft", "scrollLeft")}} y {{domxref("Element.scrollTop", "scrollTop")}} del objetivo en el evento `scroll`.
 

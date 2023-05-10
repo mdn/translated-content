@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/Request_header
 original_slug: Glossaire/En-tête_de_requête
 ---
+
 Un **en-tête de requête** est un {{glossary("header","en-tête HTTP")}} qui peut être utilisé dans une requête HTTP et ne concerne pas le contenu du message. Les en-têtes de requête, comme {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}} ou {{HTTPHeader("If-Modified-Since","If-*")}}, permettent d'effectuer des requêtes conditionnelles ; d'autres comme {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}} ou {{HTTPHeader("Referer")}} précisent le contexte pour que le serveur adapte la réponse.
 
 Tous les en-têtes apparaissant dans une requête ne sont pas des _en-têtes de requête_. Par exemple, l'en-tête {{HTTPHeader("Content-Length")}} apparaissant dans une requête {{HTTPMethod("POST")}} est en fait un {{glossary("entity header","en-tête d'entité")}} faisant référence à la taille du corps du message de requête. Cependant, ces en-têtes d'entité sont souvent appelés en-têtes de requête dans un tel contexte.
@@ -41,7 +42,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Content-Length: 128
 ```
 
-## En apprendre plus
+## Voir aussi
 
 ### Savoir technique
 

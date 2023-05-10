@@ -1,8 +1,6 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
-page-type: web-api-instance-method
-browser-compat: api.Notification.close
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

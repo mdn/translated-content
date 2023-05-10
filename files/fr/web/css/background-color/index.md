@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 La propriété **`background-color`** permet de définir la couleur utilisée pour l'arrière-plan d'un élément (celle-ci peut être une couleur transparente).
@@ -56,9 +57,13 @@ La propriété `background-color` se définit grâce à une valeur de type `<col
 - `<color>`
   - : Une valeur de type {{cssxref("&lt;color&gt;")}} qui indique la couleur uniforme de l'arrière-plan. Même si une ou plusieurs images sont définies grâce à {{cssxref("background-image")}}, la couleur peut avoir un impact en fonction de la transparence des images. De façon générale, c'est une bonne pratique que de définir une couleur malgré la présence d'image pour prévenir aux problèmes de chargement des images.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -113,17 +118,11 @@ Le ratio de contraste entre les couleurs est déterminé en comparant la luminos
 
 ## Spécifications
 
-| Spécification                                                                                                | Commentaires                                                                                                                                                                    | Retours                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#background-color', 'background-color')}}             | Le mot-clé `transparent` a été retiré de la propriété pour être intégré au type de données {{cssxref("&lt;color&gt;")}} (dans la pratique, il n'y a aucune différence). | [_Issues_ GitHub pour la spécification Background de niveau 3 (en anglais)](https://github.com/w3c/csswg-drafts/labels/css-backgrounds-3) |
-| {{SpecName('CSS2.1', 'colors.html#propdef-background-color', 'background-color')}} | Aucune modification.                                                                                                                                                            |                                                                                                                                           |
-| {{SpecName('CSS1', '#background-color', 'background-color')}}                             | Définition initiale.                                                                                                                                                            |                                                                                                                                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## Voir aussi
 

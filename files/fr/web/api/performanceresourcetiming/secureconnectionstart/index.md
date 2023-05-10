@@ -11,6 +11,7 @@ tags:
   - secureConnectionStart
 translation_of: Web/API/PerformanceResourceTiming/secureConnectionStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`secureConnectionStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence le processus de poignée de main (_handshake_) pour sécuriser la connexion actuelle. Si une connexion sécurisée n'est pas utilisée, la propriété renvoie zéro.
@@ -64,10 +65,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-secureconnectionstart', 'secureConnectionStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.secureConnectionStart")}}
+{{Compat}}

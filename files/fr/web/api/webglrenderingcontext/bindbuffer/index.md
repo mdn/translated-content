@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) lie un {{domxref("WebGLBuffer")}} donné à une cible.
@@ -73,54 +74,11 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.14.5", "bindBuffer")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale pour WebGL.</p></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 2.0', "glBindBuffer.xml", "glBindBuffer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 2.0')}}</td>
-      <td>Page man de l’API OpenGL ES 2 (similaire).</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>
-        <p>Définition mise à jour pour WebGL 2.</p>
-        <p>
-          Ajoute de nouveaux tampons <code>cible</code> :<br /><code
-            >gl.COPY_READ_BUFFER</code
-          >,<br /><code>gl.COPY_WRITE_BUFFER</code>,<br /><code
-            >gl.TRANSFORM_FEEDBACK_BUFFER</code
-          >,<br /><code>gl.UNIFORM_BUFFER</code>,<br /><code
-            >gl.PIXEL_PACK_BUFFER</code
-          >,<br /><code>gl.PIXEL_UNPACK_BUFFER</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('OpenGL ES 3.0', "glBindBuffer.xhtml", "glBindBuffer")}}
-      </td>
-      <td>{{Spec2('OpenGL ES 3.0')}}</td>
-      <td>Page man de l’API OpenGL ES 3 (similaire).</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.bindBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

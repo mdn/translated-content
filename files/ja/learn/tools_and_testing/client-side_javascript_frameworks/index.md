@@ -1,15 +1,8 @@
 ---
 title: クライアントサイドの JavaScript フレームワークを理解する
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - client-side
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
+l10n:
+  sourceCommit: 5fa776ca3c79d0298cdf07c50ed0024d8b185716
 ---
 
 {{LearnSidebar}}
@@ -27,116 +20,145 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 その後、異なるフレームワークの選択の要点をカバーするチュートリアルをいくつか提供し、あなたが自分自身でより深く学び始めるのに十分なコンテキストと親しみやすさを提供します。アクセシビリティなどのウェブプラットフォームの基本的なベストプラクティスを忘れずに、実用的な方法でフレームワークについて学んでいただきたいと思います。
 
-**[Get started now, with "Introduction to client-side frameworks"](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
+**[これから「クライアントサイドフレームワーク入門」で始めよう](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
-## 前提となる知識
+## 前提知識
 
 クライアントサイドのフレームワークを学習する前に、ウェブ開発で用いる主要な言語の基礎を学ぶ必要があります。それは [HTML](/ja/docs/Learn/HTML) と [CSS](/ja/docs/Learn/CSS)、そして特に [JavaScript](/ja/docs/Learn/JavaScript) です。
 
 ウェブプラットフォームの基本的な機能を理解すれば、その上で構築されているフレームワークのトラブルも自信を持って解決できるでしょう。そうすれば、あなたの書くコードはより豪華でプロフェッショナルなものになるはずです。
 
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者になりたい方へ
+>
+> このコースの中には、目標に向かって作業するために必要な、すべての必須情報が記載されています。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+
 ## 入門ガイド
 
-- [1. Introduction to client-side frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [1. クライアントサイドフレームワークの紹介](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+  - : フレームワークの一般的な概要から始め、 JavaScript とフレームワークの簡単な歴史、フレームワークがなぜ存在し、何を与えてくれるのか、学習するフレームワークを選ぶにはどう考え始めるべきか、クライアント側のフレームワークにどんな選択肢があるのか、について見ていきます。
+- [2. フレームワークの主な機能](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+  - : 主要な JavaScript フレームワークでは、 DOM の更新、ブラウザーイベントの処理、および楽しい開発体験を提供するために、それぞれ異なる手法が採用されています。この記事では、「4大フレームワーク」の主な機能を調べ、フレームワークがどのように動作する傾向があるのかを高いレベルから見ていき、フレームワーク間の違いについて見ていきます。
 
-  - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
+## React のチュートリアル
 
-- [2. Framework main features](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of “the big 4” frameworks, looking at how frameworks tend to work from a high level and the differences between them.
-
-## React チュートリアル
-
-> **Note:** この React チュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この React のチュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
 >
-> もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[todo-react repository](https://github.com/mdn/todo-react) で最新版を見ることができます。実行中のライブバージョンについては、[https://mdn.github.io/todo-react-build/](https://mdn.github.io/todo-react-build/) から確認ができます。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-react リポジトリー](https://github.com/mdn/todo-react)で最新版を見ることができます。実行中のライブバージョンについては、 <https://mdn.github.io/todo-react-build/> から確認ができます。
 
-- [1. React をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. React を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : この記事では React のはじめかたを説明します。React の背景と使い方について説明し、ローカル環境で基本的な React ツールチェーンを設定します。また、シンプルな基本アプリを作成して、React がどのようなプロセスで機能するのかを学んでいきます。
 - [2. React ToDo リストをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - : 例えば、React でアイディアを検証するためにアプリを試作してみることになったとします(いわゆる、Proof of Concept - 概念実証)。ユーザーが作業したいタスクを追加、編集、削除することができ、また、タスクを削除せずに完了とすることができるアプリです。この記事では、基本的な App コンポーネントの構造とスタイルを整え、後から追加する個々のコンポーネントの定義とインタラクティブな機能の準備を行っていきます。
+  - : 例えば、React でアイディアを検証するためにアプリを試作してみることになったとします（いわゆる、Proof of Concept - 概念実証）。ユーザーが作業したいタスクを追加、編集、削除することができ、また、タスクを削除せずに完了とすることができるアプリです。この記事では、基本的な App コンポーネントの構造とスタイルを整え、後から追加する個々のコンポーネントの定義とインタラクティブな機能の準備を行っていきます。
 - [3. React アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - : この時点では、アプリは一枚岩です。アプリに何かをさせる前に、管理しやすく、記述しやすいコンポーネントに分解する必要があります。React には、何がコンポーネントで何がコンポーネントでないかという難しいルールはありません。それはあなた次第なのです！この記事では、アプリをコンポーネントに分解するための賢明な方法を紹介します。
-- [4. React interactivity: Events and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - : With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way.
-- [5. React interactivity: Editing, filtering, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - : As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
-- [6. Accessibility in React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
-- [7. React resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-  - : Our final article provides you with a list of React resources that you can use to go further in your learning.
+- [4. React での対話: イベントと状態](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+  - : コンポーネント計画がうまくいったら、今度はアプリを完全に静的な UI から、実際に対話したり変更したりできるような UI に更新し始めましょう。この記事では、イベントと状態について調べながら、この作業を行います。
+- [5. React の対話性: 編集、フィルタリング、条件付きレンダリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+  - : React の旅が終わりに近づくにつれて（少なくとも今は）、Todo リスト アプリの主要な機能領域に最後の仕上げを追加します。これには、既存のタスクを編集できるようにすることと、タスクのリストをすべて、完了、未完了の間でフィルタリングすることが含まれます。その過程で、条件付きUIレンダリングについても見ていきます。
+- [6. React におけるアクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+  - : 最後のチュートリアル記事では、 React のフォーカス管理など、キーボードのみのユーザーと画面リーダーユーザーの両方にとってユーザビリティを向上させ、混乱を軽減することができる（シャレた）アクセシビリティに焦点を当てます。
+- [7. React のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - : この記事の最終回では、さらに学習を進めるために使用できる React のリソースの一覧を提供しています。
 
-## Ember チュートリアル
+## Ember のチュートリアル
 
-> **Note:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
 >
-> もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては [https://nullvoxpopuli.github.io/ember-todomvc-tutorial/](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) から確認ができます(ただしチュートリアルで取り扱っていない機能も含まれています)。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial リポジトリー](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> から確認ができます（ただしチュートリアルで取り扱っていない機能も含まれています）。
 
-- [1. Getting started with Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - : In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
-- [2. Ember app structure and componentization](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - : In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
-- [3. Ember interactivity: Events, classes and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - : At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
-- [4. Ember Interactivity: Footer functionality, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
-- [5. Routing in Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - : In this article we learn about routing or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
-- [6. Ember resources and troubleshooting](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-  - : Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
+- [1. Ember を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+  - : 最初の Ember 記事では、Ember がどのように作業し、何のために有益なのかを見、Ember ツールチェーンをローカルにインストールし、サンプルアプリを作成し、そして開発に必要な初期設定を行います。
+- [2. Ember アプリの構成とコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+  - : この記事では、TodoMVC Ember アプリの構造を計画し、そのための HTML を追加し、その HTML 構造をコンポーネントに分割することに、すぐに取りかかりましょう。
+- [3. Ember の対話: イベント、クラス、状態](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+  - : この点では、アプリに対話機能を追加し、新しい ToDo アイテムを追加して表示する機能を提供することを始めます。その過程で、Ember のイベントの使用、インタラクティブ機能を制御する JavaScript コードを含むコンポーネント クラスの作成、アプリのデータ状態を追跡するサービスの設定を見ていきます。
+- [4. Ember の対話性: フッター機能、条件付きレンダリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+  - : これで、このアプリのフッター機能に取り組み始める時刻になりました。ここでは、まだ完了していない ToDo の数を正しく表示するために ToDo カウンターを取得し、完了した ToDo (チェックボックスがチェックされているもの) に正しくスタイルを適用します。また、「完了をクリアする」ボタンの配線も行います。その過程で、テンプレートで条件付きレンダリングを使用する方法について学びます。
+- [5. Ember におけるルーティング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+  - : この記事では、ルーティングまたは URL ベースのフィルタリングについて学びます。これを使用して、 3 つの Todo ビュー（"All"、"Active"、"Completed"）それぞれに固有の URL を提供することにします。
+- [6. Ember のリソースとトラブルシューティング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - : 最後の Ember 記事では、学習をさらに進めるために使用できるリソースのリストと、有益なトラブルシューティングなどの情報を提供しています。
 
-## Vue チュートリアル
+## Vue のチュートリアル
 
-> **Note:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
 >
-> もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、 [todo-vue repository](https://github.com/mdn/todo-vue) で最新版を見ることができます。実行中のライブバージョンについては [https://mdn.github.io/todo-vue/dist/](https://mdn.github.io/todo-vue/dist/) から確認ができます。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、 [todo-vue リポジトリー](https://github.com/mdn/todo-vue)で最新版を見ることができます。実行中のライブバージョンについては <https://mdn.github.io/todo-vue/dist/> から確認ができます。
 
-- [1. Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - : Now let's introduce Vue, the third of our frameworks. In this article, we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
-- [2. Creating our first Vue component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - : Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props and saving data state.
-- [3. Rendering a list of Vue components](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - : At this point we've got a fully working component; we're now ready to add multiple `ToDoItem` components to our App. In this article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
-- [4. Adding a new todo form: Vue events, methods, and models](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - : We now have sample data in place and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that, we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
-- [5. Styling Vue components with CSS](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - : The time has finally come to make our app look a bit nicer. In this article, we'll explore the different ways of styling Vue components with CSS.
-- [6. Using Vue computed properties](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - : In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods but only re-run when one of their dependencies changes.
-- [7. Vue conditional rendering: editing existing todos](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - : Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
-- [8. Focus management with Vue refs](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - : We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using Vue refs to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
-- [9. Vue resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-  - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
+- [1. Vue を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - : これで、フレームワークの 3 つ目である Vue を紹介することができます。この記事では、 Vue の背景を少し見て、インストールと新しいプロジェクトの作成方法を学び、プロジェクト全体と個々のコンポーネントのハイレベルな構造を勉強し、プロジェクトをローカルで実行する方法を確認し、例の構築を始めるために取得します。
+- [2. 最初の Vue コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+  - : これで、 Vue をより深く掘り下げ、自分自身でカスタムコンポーネントを作成する時が来ました。まず、 Todo リストの各項目を表すコンポーネントを作成するところから始めます。その過程で、他のコンポーネントの内部でコンポーネントを呼び出すこと、 props を介してデータを渡すこと、データの状態を保存することなど、いくつかの重要な概念について学びます。
+- [3. Vueコンポーネントの一覧の表示](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+  - : この点で、完全に動作するコンポーネントを保有することができました。これで、アプリに複数の `ToDoItem` コンポーネントを追加する準備が整いました。この記事では、 `App.vue` コンポーネントに Todo データの集合を追加し、それをループさせて `v-for` ディレクティブを使用して `ToDoItem` コンポーネント内に表示するところを見ていきます。
+- [4. 新しい todo フォームの追加: Vue のイベント、メソッド、モデル](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - : これでサンプルデータを所有し、各データを受け取ってアプリの `ToDoItem` 内にレンダリングするループができました。次に本当に必要なのは、ユーザーが自分自身でアプリに ToDo 項目を入力できるようにする機能です。そのためには、テキスト `<input>` と、データが送信されたときに発行されるイベント、送信時にデータを追加してリストを再レンダリングするメソッド、データを制御するモデルが必要になります。この記事で扱うのは、このようなものです。
+- [5. CSS による Vue コンポーネントのスタイル設定](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+  - : いよいよ、アプリの見栄えを少しばかり良くする時刻が到来しました。この記事では、 Vue のコンポーネントを CSS でスタイル設定するための異なる形を探ります。
+- [6. Vue の computed プロパティの使用](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+  - : この記事では、 Vue の computed プロパティと呼ばれる機能を使用して、完了した Todo アイテムの数を表示するカウンターを追加します。この著作物はメソッドと似たような作業をしますが、依存関係の 1 つが動作したときだけ再実行されます。
+- [7. Vue の条件付きレンダリング: 既存の TODO の編集](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+  - : これで、まだ欠けている機能の主要な部分の一つである、既存のTodoアイテムを編集する機能を追加する時が来ました。この機能を実現するために、 Vue の条件付きレンダリング機能である `v-if` と `v-else` を利用して、既存の Todo アイテムビューと、 Todo アイテムのラベルを更新できる編集ビューを切り替えられるようにします。また、 Todo アイテムを削除する機能の追加も見ていきます。
+- [8. Vue refs によるフォーカス管理](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+  - : Vue の使用はほぼ終了しました。最後に見るべき機能は、フォーカス管理です。別の言い方をすれば、アプリのキーボードアクセシビリティをどのように向上させるか、ということです。この処理に Vue refs を使用することを見ていきます。この機能は、仮想 DOM の下にある基礎 DOM ノードに直接アクセスしたり、あるコンポーネントから子コンポーネントの内部 DOM 構造に直接アクセスしたりすることができる先進的な機能です。
+- [9. Vue のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - : これで、 Vue の学習の締めくくりとして、さらに学習を進めるために使用できるリソースのリストと、他にも有益なヒントを提供します。
 
-## Angular チュートリアル
+## Svelte のチュートリアル
 
-> **Note:** この Angular チュートリアルは Angular CLI (NG) 13.3.4 で、 2022 年 5 月に動作確認を行いました。
+> **メモ:** Svelte のチュートリアルは 2020 年 8 月に、 Svelte 3.24.1 でテストしました。
 >
-> もし、コードをこのバージョンと照合する必要がある場合は、サンプルの Angular アプリコードの完成版を [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) で確認ができます。
+> もし、コードとサンプルのバージョンとを確認する必要があれば、 [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) リポジトリーで最新版を見ることができます。実行中のライブバージョンについては <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> から確認ができます。
 
-- [1. Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
-- [2. Beginning our Angular todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - : At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
-- [3. Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - : Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.
-- [4. Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - : Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
-- [5. Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - : Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
-- [6. Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
-  - : This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
+- [1. Svelte を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - : この記事では、 [Svelte フレームワーク](https://svelte.dev/)の簡単な紹介をします。 Svelte がどのように動作するのか、そしてこれまで見てきた他のフレームワークやツールと何が違うのかを見ていきます。その後、開発環境を構築し、サンプルアプリを作成し、プロジェクトの構造を理解し、ローカルで実行し、本番用にビルドする方法を学びます。
+- [2. Svelte Todo リストアプリを始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - : さて、 Svelte でこれらがどのように動作するのか基本的な理解ができたところで、例のアプリであるTodoリストの作成を始めてみましょう。この記事では、まずアプリに求められる機能を見ていきます。次に `Todos.svelte` コンポーネントを作成し、静的なマークアップとスタイルを所有し、 ToDo リストアプリの機能を開発し始めるための準備をすべて整えます（この後の記事で詳しく説明します）。
+- [3. Svelte の動的な動作: 変数とプロップを一緒に作業する](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - : これでマークアップとスタイルが保有されたので、 Svelte の ToDo リストアプリに必要な機能の開発に取り掛かることができます。この記事では、変数と props を使用してアプリを動的にし、 ToDo を追加したり削除したり、完了マークをつけたり、ステータスでフィルタリングしたりできるようにします。
+- [4. Svelte アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - : この記事の主な目的は、アプリを管理しやすいコンポーネントに分割し、それらのコンポーネント間で情報を共有する方法を見ることです。アプリをコンポーネント化し、さらにユーザーが既存のコンポーネントを更新できるように機能を追加していきます。
+- [5. 高度な Svelte: リアクティブ、ライフサイクル、アクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - : この記事では、アプリの最終的な機能を追加し、さらにアプリをコンポーネント化します。オブジェクトや配列の更新に関連するリアクティビティの問題に対処する方法について学びます。よくある落とし穴を避けるために、 Svelte のリアクティブシステムを少し深く掘り下げる必要があります。また、アクセシビリティのフォーカスに関する問題の解決や、その他の問題にも目を向けていきます。
+- [6. Svelte のストアでの作業](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
+- [7. TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - : これで、 Svelte アプリケーションで TypeScript を使用する方法を学ぶことができます。まず、 TypeScript とは何か、そして TypeScript が私たちにもたらす好ましいこととは何かを学びます。次に、 TypeScript ファイルを使用して作業するために、プロジェクトをどのように設定するかを見ていきます。最後に、 TypeScript の機能を十分に活かすためにはどのような修正が必要なのか、アプリを確認します。
+- [8. 展開と次の手順](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - : この最終記事では、アプリケーションを展開してオンラインにする方法と、 Svelte の学習を継続するために取得すべきリソースをいくつか紹介します。
+
+## Angular のチュートリアル
+
+> **メモ:** この Angular のチュートリアルは 2022 年 5 月に、 Angular CLI (NG) 13.3.4 で動作確認を行いました。
+
+- [1. Angular を始める](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - : この記事では、Angular が提供するものを確認し、前提条件をインストールしてサンプルアプリを設定し、Angular の基本的なアーキテクチャを確認します。
+- [2. Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - : この時点で、Angular を使用して todo リストアプリケーションの作成を開始する準備が整いました。 完成したアプリケーションには、やることのリストが表示され、機能の編集、削除、追加が含まれます。 この記事では、アプリケーションの構造を理解し、やることの基本的なリストを表示するようになります。
+- [3. Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - : 基本的なアプリケーション構造がセットアップされ、アプリケーションが表示されるようになったので、次の段階へ移って、Angular がアプリケーションのスタイリングをどのように処理するかを見てみましょう。
+- [4. item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - : コンポーネントは、アプリケーションを整理するための方法を提供されます。この記事では、リスト内の個々の項目を処理するコンポーネントを作成し、チェック、編集、削除の機能を追加する方法を説明します。 Angular のイベントモデルについて説明します。
+- [5. To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - : これで、ユーザーが ToDo 項目をフィルタリングして、アクティブ、完了、すべての項目を表示できるようにする機能を追加することにしましょう。
+- [6. Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - : この最後の Angular の記事は、プロダクションに適したアプリを構築する方法を取り上げ、学習の旅を続けるためのさらなるリソースを提供します。
 
 ## どのフレームワークを選ぶべきか？
 
-ここでは主要なフレームワークである３つに焦点を当てて、そのガイトを取り扱いました。React/ReactDOM、Ember、Vue です。これらを取り上げた理由は以下の通りです。
+私たちは、 5 つのフレームワークに焦点を当てたガイド付きの記事の最初のセットを公開しています。そのうち4つのフレームワークは、 React/ReactDOM、Ember、Vue、Angular と非常に人気があり確立されたものですが、 Svelte は比較的新しいもので、多くのプロミスを示し、最近多くの人気を獲得しているものです。
 
-- どのようなツールでもそうですが、積極的に開発がなされ、廃止される可能性がないもの、また就職活動でも助けになるスキルを選ぶことが望ましい。
-- 初心者が複雑なものを学ぶ際に手助けを得られることは非常に重要であるため、活発なコミュニティと優れたドキュメントがあること。
-- モダンなフレームワークの**すべて**を網羅するリソースはありません。常に新たなフレームワークが登場するため、このリストをその度に更新することは非常に困難です。
-- 初心者は数ある選択肢の中から、何を選べば良いのかを悩みます。そのため、リストを短くすると役に立ちます。
+これらを取り上げた理由は以下の通りです。
 
-前もって言っておきますが、取り上げたフレームワークは私たちが**ベストだと思うから選んだわけではありません**。また推奨しているわけでもありません。ただ、上記の基準を満たしていると考えただけです。
+- どのようなソフトウェアツールでもそうですが、積極的に開発されているもので、来週には開発中止になっていないようなもの、また、就職活動で自分のスキルセットに加えるのに望ましいものを選ぶとよいでしょう。
+- 強力なコミュニティと優れた文書化があります。特に始めたばかりの頃は、複雑なテーマを学習する際に助けを得られることがとても重要です。
+- 私たちは現代のフレームワークをすべて網羅するためのリソースは持っていません。常に新しいものが現れるため、最新版を掲載するのはとても難しいでしょう。
+- 初心者のうちは、利用できる膨大な数の選択肢の中から何に注目すべきかを選ぼうとするのは、とても難しい問題です。そのため、リストを短くすることが有効です。
 
-初期の段階では、もっと多くのフレームワークを取り上げたいと考えていましたが、このコンテンツの公開を遅らせることよりも、後からフレームワークを追加する方が良いと考えました。もし、あなたのお気に入りのフレームワークがこのコンテンツに含まれておらず、それを変える手助けをしたいのであれば、私たちと気軽に意見を交わしましょう！[Matrix](https://wiki.mozilla.org/Matrix) や [Discourse](https://discourse.mozilla.org/c/mdn) を通じて私たちと連絡を取るか、[mdn-admins list](mailto:mdn-admins@mozilla.org) にメールを送ってください。
+前もって言っておきますが、取り上げたフレームワークは私たちがベストだと思うから選んだわけでは**ありません**。また推奨しているわけでもありません。ただ、上記の基準を満たしていると考えただけです。
+
+初期の段階では、もっと多くのフレームワークを取り上げたいと考えていましたが、このコンテンツの公開を遅らせることよりも、後からフレームワークを追加する方が良いと考えました。もし、あなたのお気に入りのフレームワークがこのコンテンツに含まれておらず、それを変える手助けをしたいのであれば、私たちと気軽に意見を交わしましょう！[Matrix](https://wiki.mozilla.org/Matrix) や [Discourse](https://discourse.mozilla.org/c/mdn/236) を通じて私たちと連絡を取るか、[mdn-admins list](mailto:mdn-admins@mozilla.org) にメールを送ってください。

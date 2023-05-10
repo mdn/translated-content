@@ -11,7 +11,8 @@ tags:
   - applet
 translation_of: Web/HTML/Element/applet
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 > **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.
 
@@ -117,7 +118,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 - **`width`** {{deprecated_inline}}
   - : Cet attribut définit la largeur, en pixels, dont l'applet a besoin
 
-## Exemple
+## Exemples
 
 ### HTML
 

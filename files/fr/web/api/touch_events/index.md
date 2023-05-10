@@ -5,6 +5,7 @@ translation_of: Web/API/Touch_events
 original_slug: Web/Guide/DOM/Events/Touch_events
 browser-compat: api.Touch
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 Pour correctement prendre en charge les interfaces utilisateur tactiles, les évènements tactiles fournissent des informations pour interpréter l'activité d'un doigt ou d'un stylet sur un écran ou un pavé tactile.

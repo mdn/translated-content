@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 original_slug: Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image
 ---
+
 Dans cet article, nous verrons comment construire une carte imagée cliquable en commençant par les inconvénients de cette méthode.
 
 <table class="standard-table">
@@ -56,7 +57,7 @@ N'importe quelle image ne fera pas l'affaire pour construire une telle carte.
 - L'image doit indiquer de façon claire où commencent et où se terminent les différentes régions.
 - Les différentes zones de la cartes doivent être suffisamment grandes pour qu'on puisse cliquer ou appuyer dessus, quelle que soit la taille de l'écran utilisé. [Une image de 72 pixels CSS de long et de large](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) est un minimum acceptable (pour voir le problème posé par de trop petites régions : [50languages.com](http://www.goethe-verlag.com/book2/), où les grandes régions sont suffisamment grande mais où, pour l'Albanie et l'Estonie, c'est beaucoup plus compliqué
 
-On insère une image [de la même façon que d'habitude](http://developer.mozilla.org/en-US/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut {{htmlattrxref("alt",'img')}}). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents {{htmlattrxref("alt",'area')}} sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
+On insère une image [de la même façon que d'habitude](/fr/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut {{htmlattrxref("alt",'img')}}). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents {{htmlattrxref("alt",'area')}} sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
 
 Cette image contiendra une attribut spécial {{htmlattrxref("usemap","img")}}. Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
 
@@ -122,7 +123,7 @@ Si votre carte imagée mesure plus de 240px environ, vous devrez réfléchir à 
 
 Si vous devez nécessairement utiliser de telles cartes, vous pouvez regarder [ce plugin jQuery réalisé par Matt Stow.](https://github.com/stowball/jQuery-rwdImageMaps) Dudley Storey illustre une méthode qui consiste à [utiliser SVG pour réaliser un effet de carte imagée](http://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps) ainsi qu'une bidouille pour les images matricielles avec [une combinaison de SVG](http://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG).
 
-## En savoir plus
+## Voir aussi
 
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}

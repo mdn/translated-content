@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLDialogElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLElement("dialog")}} elements. It inherits properties and methods from the {{domxref("HTMLElement")}} interface.
@@ -105,17 +106,14 @@ The following example shows a simple button that, when clicked, opens a {{htmlel
 
 > **Note :** You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                            | Status                           | Comment            |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', '#htmldialogelement', 'HTMLDialogElement')}}                             | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLDialogElement")}}
+{{Compat}}
 
-## See also
+## Voir aussi
 
 - The HTML element implementing this interface: {{ HTMLElement("dialog") }}.

@@ -9,6 +9,7 @@ tags:
   - Noeuds
 translation_of: Web/API/TreeWalker/firstChild
 ---
+
 {{ APIRef("DOM") }}
 
 La méthode **`TreeWalker.firstChild()`** déplace le {{domxref("Node")}} courant vers le premier enfant _visible_ du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle renvoie `null` et le noeud courant n'est pas modifié.
@@ -33,14 +34,11 @@ var node = treeWalker.firstChild(); // renvoie le premier enfant de l'élément 
 
 ## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                       | Commentaire                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-treewalker-firstchild', 'TreeWalker.firstChild')}}                                         | {{Spec2('DOM WHATWG')}}             | Pas de changement de {{SpecName('DOM2 Traversal_Range')}} |
-| {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-TreeWalker-firstChild', 'TreeWalker.firstChild')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.TreeWalker.firstChild")}}
+{{Compat}}
 
 ## Voir aussi
 

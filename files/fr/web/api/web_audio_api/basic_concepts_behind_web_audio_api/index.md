@@ -3,6 +3,7 @@ title: Les concepts de base de la Web Audio API
 slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
+
 Cet article explique une partie de la théorie sur laquelle s'appuient les fonctionnalités de la Web Audio API. Il ne fera pas de vous un ingénieur du son, mais vous donnera les bases nécessaires pour comprendre pourquoi la Web Audio API fonctionne de cette manière, et vous permettre de mieux l'utiliser.
 
 ## Graphes audio
@@ -13,7 +14,7 @@ Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant un
 
 1. Création d'un contexte audio
 2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance, compresseur
 4. Choix final de la sortie audio, par exemple les enceintes du système
 5. Connection des sources aux effets, et des effets à la sortie.
 
@@ -28,19 +29,19 @@ Les sources audio peuvent être de provenance variée&nbsp;:
 - générées directement en JavaScript avec un noeud audio (tel qu'un oscillateur)
 - créées à partir de données PCM brutes (le contexte audio a des méthodes pour décoder les formats audio supportés)
 - fournies par une balise HTML media (telle que {{HTMLElement("video")}} ou {{HTMLElement("audio")}})
-- récupérées directement avec [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} (une webcam ou un microphone)
+- récupérées directement avec [WebRTC](/fr/docs/WebRTC) {{domxref("MediaStream")}} (une webcam ou un microphone)
 
 ## Données audio: ce qu'on trouve dans un échantillon
 
 Lors du traitement d'un signal audio, **l'échantillonage** désigne la conversion d'un [signal continu](http://en.wikipedia.org/wiki/Continuous_signal) en [signal discret](http://en.wikipedia.org/wiki/Discrete_signal); formulé autrement, une onde de son continue, comme un groupe qui joue en live, est convertie en une séquence d'échantillons (un signal temporel discret) qui permet à l'ordinateur de traiter le son en blocs distincts.
 
-On peut trouver davantage de détails sur la page Wikipedia [Echantillonage (signal)](<https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)>).
+On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (signal)](https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)).
 
 ## Mémoire tampon&nbsp;: trames, échantillons et canaux
 
 Un {{ domxref("AudioBuffer") }} prend comme paramètres un nombre de canaux (1 pour mono, 2 pour stéréo, etc), une longueur, qui correspond au nombre de trames d'échantillon dans la mémoire tampon, et un taux d'échantillonage, qui indique le nombre de trames d'échantillons lues par seconde.
 
-Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.)  à un point précis dans le temps.
+Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.) à un point précis dans le temps.
 
 Le taux d'échantillonage est le nombre d'échantillons (ou de trames, puisque tous les échantillons d'une trame jouent en même temps) qui sont joués en une seconde, exprimés en Hz. Plus le taux d'échantillonage est élevé, meilleure est la qualité du son.
 
@@ -383,7 +384,7 @@ On peut accéder aux données en utilisant les méthodes suivantes:
 - {{domxref("AnalyserNode.getByteTimeDomainData()")}}
   - : Copie les données de l'onde de forme, ou domaine temporel, dans le tableau d'octets non signés {{domxref("Uint8Array")}} passé en argument.
 
-> **Note :** Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
+> **Note :** Pour plus d'informations, voir notre article [Visualizations with Web Audio API](/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API).
 
 ## Spatialisations
 
@@ -393,11 +394,11 @@ La position du panoramique est décrite avec des coodonnées cartésiennes selon
 
 ![Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné](pannernode.svg)
 
-La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite,  son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
+La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite, son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
 
 ![On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°](listener.svg)
 
-> **Note :** For more information, see our [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
+> **Note :** For more information, see our [Web audio spatialization basics](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics) article.
 
 ## Fan-in et Fan-out
 

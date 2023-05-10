@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Grammar_and_types
 original_slug: Web/JavaScript/Guide/Types_et_grammaire
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs")}}
 
 Ce chapitre décrit les bases de la grammaire et des types de données JavaScript.
@@ -349,13 +350,13 @@ Une autre méthode pour récupérer un nombre à partir d'une chaîne de caract�
 
 Les littéraux sont utilisés pour représenter des valeurs en JavaScript. Ce sont des valeurs fixes, pas des variables, qui sont fournies _littéralement_ au script. Cette section décrit les différents types de littéraux :
 
-- [Littéraux de tableaux](<#littéraux tableaux>)
-- [Littéraux booléens](<#littéraux booléens>)
-- [Littéraux de nombres flottants](<#littéraux décimaux>)
-- [Littéraux numériques](<#littéraux numériques>)
-- [Littéraux d'objets](<#littéraux objets>)
-- [Littéraux d'expressions rationnelles](#regexp)
-- [Littéraux de chaînes de caractères](<#littéraux chaînes>)
+- [Littéraux de tableaux](<#les_littéraux_de_tableaux>)
+- [Littéraux booléens](<#les_littéraux_booléens>)
+- [Littéraux de nombres flottants](<#les_littéraux_de_nombres_décimaux>)
+- [Littéraux numériques](<#les_littéraux_numériques>)
+- [Littéraux d'objets](<#les_littéraux_dobjets>)
+- [Littéraux d'expressions rationnelles](#les_littéraux_dexpressions_rationnelles)
+- [Littéraux de chaînes de caractères](<#les_littéraux_de_chaînes_de_caractères>)
 
 ### Les littéraux de tableaux
 

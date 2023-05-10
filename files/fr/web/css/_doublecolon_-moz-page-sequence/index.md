@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-moz-page-sequence
 ---
+
 {{CSSRef}}{{non-standard_header}}
 
 Le pseudo-élément `::-moz-page-sequence`, spécifique à Mozilla, représente l'arrière-plan du document lors de la prévisualisation avant une impression.
@@ -22,7 +23,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-page-sequence")}}
+{{Compat}}
 
 ## Voir aussi
 

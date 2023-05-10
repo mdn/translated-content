@@ -9,6 +9,7 @@ tags:
   - Éléments SRC
 translation_of: Web/API/Event/srcElement
 ---
+
 {{ApiRef("DOM")}}
 
 {{ Non-standard_header() }}
@@ -21,7 +22,7 @@ Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## Voir aussi
 

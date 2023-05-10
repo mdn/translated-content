@@ -1,17 +1,8 @@
 ---
 title: 'Element: auxclick イベント'
 slug: Web/API/Element/auxclick_event
-tags:
-  - Element
-  - イベント
-  - MouseEvent
-  - リファレンス
-  - UI
-  - auxclick
-  - マウス
-browser-compat: api.Element.auxclick_event
-translation_of: Web/API/Element/auxclick_event
 ---
+
 {{APIRef}}
 
 **`auxclick`** イベントは、ポインティングデバイスの第 1 ボタン以外のボタン (マウスの第 1 の—通常は左端の—ボタン) が同じ要素 ({{domxref("Element")}}) 内で押されて離されたとき、その要素で発行されます。
@@ -119,7 +110,7 @@ h1 {
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
-> **Note:** 3 ボタンマウスを使用している場合、左以外のボタンがクリックされると、`onauxclick` ハンドラーが実行されることがわかります (通常、ゲーミングマウスの「特殊」ボタンも含みます)。
+> **メモ:** 3 ボタンマウスを使用している場合、左以外のボタンがクリックされると、`onauxclick` ハンドラーが実行されることがわかります (通常、ゲーミングマウスの「特殊」ボタンも含みます)。
 
 ## 仕様書
 

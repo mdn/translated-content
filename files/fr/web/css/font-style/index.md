@@ -4,6 +4,7 @@ slug: Web/CSS/font-style
 translation_of: Web/CSS/font-style
 browser-compat: css.properties.font-style
 ---
+
 {{CSSRef}}
 
 La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/font-family).

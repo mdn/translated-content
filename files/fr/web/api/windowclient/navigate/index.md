@@ -12,9 +12,10 @@ tags:
   - WindowClient
 translation_of: Web/API/WindowClient/navigate
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-La méthode **`navigate()`** de l'interface  {{domxref("WindowClient")}} charge une URL spécifiée dans une page de client contrôlée, puis retourne une  {{jsxref("Promise")}}  qui devra être analysée par  {{domxref("WindowClient")}} (le demandeur).
+La méthode **`navigate()`** de l'interface {{domxref("WindowClient")}} charge une URL spécifiée dans une page de client contrôlée, puis retourne une {{jsxref("Promise")}} qui devra être analysée par {{domxref("WindowClient")}} (le demandeur).
 
 ## Syntaxe
 
@@ -31,14 +32,12 @@ WindowClient.navigate(url).then(function(WindowClient) {
 
 ### Retour
 
-Une {{jsxref("Promise")}}  qui sera analysée par le demandeur {{domxref("WindowClient")}} (fonctionnement asynchrone : je te promet de faire, mais je suis pas sûr, à toi de vérifier) .
+Une {{jsxref("Promise")}} qui sera analysée par le demandeur {{domxref("WindowClient")}} (fonctionnement asynchrone : je te promet de faire, mais je suis pas sûr, à toi de vérifier) .
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-navigate-method', 'navigate()')}} | {{Spec2('Service Workers')}} | définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WindowClient.navigate")}}
+{{Compat}}

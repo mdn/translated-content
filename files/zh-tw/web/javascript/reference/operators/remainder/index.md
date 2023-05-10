@@ -1,13 +1,8 @@
 ---
 title: 餘數運算子 (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 The remainder operator (`%`) returns the remainder left over when one

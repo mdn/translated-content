@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/transform
 ---
+
 {{SVGRef}}
 
 L'attribut **`transform`** définit une liste de définitions de transformation qui sont appliquées à l'élément ainsi qu'à ses éléments fils.
@@ -246,9 +247,4 @@ html,body,svg { height:100% }
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#svg-transform', 'transform')}}         | {{Spec2('CSS Transforms 2')}} |                      |
-| {{SpecName('CSS3 Transforms', '#svg-transform', 'transform')}}         | {{Spec2('CSS3 Transforms')}}     |                      |
-| {{SpecName("SVG2", "coords.html#TransformProperty", "transform")}}     | {{Spec2("SVG2")}}                 |                      |
-| {{SpecName("SVG1.1", "coords.html#TransformAttribute", "transform")}} | {{Spec2("SVG1.1")}}                 | Définition initiale. |
+{{Specifications}}

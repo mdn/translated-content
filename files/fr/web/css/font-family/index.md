@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.
@@ -110,9 +111,13 @@ font-family: #POUND, sans-serif;
 font-family: Hawaii 5-0, sans-serif;
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -194,15 +199,8 @@ Voici un exemple de police fangsong.
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Fonts', '#generic-font-families', 'generic font families')}} | {{Spec2('CSS4 Fonts')}} | Ajout de nouvelles familles génériques dont : `system-ui`, `emoji`, `math` et `fangsong`. |
-| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}                     | {{Spec2('CSS3 Fonts')}} | Aucune modification significative.                                                        |
-| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}}         | {{Spec2('CSS2.1')}}         | Aucune modification significative.                                                        |
-| {{SpecName('CSS1', '#font-family', 'font-family')}}                                     | {{Spec2('CSS1')}}         | Définition initiale.                                                                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

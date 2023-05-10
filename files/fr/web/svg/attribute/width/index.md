@@ -3,6 +3,7 @@ title: width
 slug: Web/SVG/Attribute/width
 translation_of: Web/SVG/Attribute/width
 ---
+
 {{SVGRef}}
 
 L'attribut **`width`** définit la longueur horizontale d'un élément dans le système des coordonnées de l'utilisatrice ou l'utilisateur.

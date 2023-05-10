@@ -1,13 +1,10 @@
 ---
 title: グローバル間フェッチの使用
 slug: Web/API/Fetch_API/Cross-global_fetch_usage
-tags:
-  - Cross global
-  - Fetch
-  - edge case
-  - relative URL
-translation_of: Web/API/Fetch_API/Cross-global_fetch_usage
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 この記事では、フェッチ（および潜在的に同種のリソース取得の振る舞いを示す他の API）で発生するエッジケースについて説明します。 相対 URL を含む オリジン間フェッチ（cross-origin fetch）が {{htmlelement("iframe")}} から開始される場合、相対 URL は iframe の位置ではなく現在のグローバルな位置に対して解決していました。
@@ -33,7 +30,7 @@ let absolute = new URL(relative, window.location.href)
 
 ## 解決策
 
-Firefox 60 以降では、 Mozilla は、使用している `fetch()` 関数を所有するグローバルに対して相対 URL を解決するようになりました（{{bug(1432272)}} を参照）。 したがって、上記の場合、次のように、 iframe の位置に対して解決します。
+Firefox 60 以降では、 Mozilla は、使用している `fetch()` 関数を所有するグローバルに対して相対 URL を解決するようになりました（[Firefox バグ 1432272](https://bugzil.la/1432272) を参照）。 したがって、上記の場合、次のように、 iframe の位置に対して解決します。
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href)

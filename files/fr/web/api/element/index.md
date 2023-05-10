@@ -4,6 +4,7 @@ slug: Web/API/Element
 translation_of: Web/API/Element
 browser-compat: api.Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** est la classe de base la plus générique dont héritent tous les objets qui représentent des éléments d'un [`Document`](/fr/docs/Web/API/Document). Elle contient uniquement des méthodes et propriétés communes à l'ensemble des éléments. Des classes plus spécifiques héritent d'`Element`. Ainsi, l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) correspond à l'interface de base pour les éléments HTML tandis que l'interface [`SVGElement`](/fr/docs/Web/API/SVGElement) représente la base pour les éléments SVG. La plupart des fonctionnalités sont définies dans les classes situées plus loin dans la hiérarchie.

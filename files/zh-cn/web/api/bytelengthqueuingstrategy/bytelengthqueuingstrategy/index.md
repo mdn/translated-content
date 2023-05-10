@@ -1,17 +1,9 @@
 ---
 title: ByteLengthQueuingStrategy()
 slug: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
-page-type: web-api-constructor
-tags:
-  - API
-  - ByteLengthQueuingStrategy
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
-translation_of: Web/API/ByteLengthQueuingStrategy/ByteLengthQueuingStrategy
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 **`ByteLengthQueuingStrategy()`** 构造函数创建并返回一个 `ByteLengthQueuingStrategy` 对象实例。
 
@@ -24,7 +16,7 @@ new ByteLengthQueuingStrategy(highWaterMark)
 ### 参数
 
 - `highWaterMark`
-  - : 一个包含 `highWaterMark` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列包含的分块的总数。
+  - : 一个包含 `highWaterMark` 属性的对象。这个属性是一个非负整数，定义了在应用背压之前内部队列可以包含的分块的总数。
 
 ### 返回值
 
@@ -41,17 +33,17 @@ const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);
   }
 }, queuingStrategy);
 
-var size = queuingStrategy.size(chunk);
+const size = queuingStrategy.size(chunk);
 ```
 
 ## 规范

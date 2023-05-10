@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 original_slug: Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive","Web/CSS/CSS_Grid_Layout")}}

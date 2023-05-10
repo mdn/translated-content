@@ -1,18 +1,8 @@
 ---
 title: FileSystemFileEntry.file()
 slug: Web/API/FileSystemFileEntry/file
-page-type: web-api-instance-method
-tags:
-  - API
-  - File
-  - ファイルとディレクトリー項目 API
-  - FileSystemFileEntry
-  - ファイル
-  - メソッド
-  - リファレンス
-browser-compat: api.FileSystemFileEntry.file
-translation_of: Web/API/FileSystemFileEntry/file
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`file()`** メソッドは、子のディレクトリー項目が表現しているファイルからデータを読むために使用できる {{domxref("File")}} オブジェクトを返します。

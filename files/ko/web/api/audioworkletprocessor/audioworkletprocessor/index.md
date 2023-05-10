@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Constructor
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 ---
 {{APIRef("Web Audio API")}}
 
@@ -92,7 +83,7 @@ const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
 
 ```js
 > 1 // AudioWorkletNode options.numberOfInputs가 기본 값으로 설정됨
-> Map(2) {1 => "one", 2 => "two"} // someUsefulVariable 아래의 복제된 map
+> Map(2) {1 => "one", 2 => "two"} // someUsefulVariable 아래의 복제된 map
 ```
 
 ## 명세

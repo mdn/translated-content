@@ -1,14 +1,8 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - クラス
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** は[プリミティブラッパーオブジェクト](/ja/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)で、{{Glossary("Primitive", "プリミティブ")}}の `bigint` 値、すなわち[大きすぎて](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) `number` {{Glossary("Primitive", "プリミティブ")}}で表すことができない数を、表現したり操作したりするために使用します。
@@ -47,7 +41,7 @@ typeof 1n === 'bigint'           // true
 typeof BigInt('1') === 'bigint'  // true
 ```
 
-BitInt の値は `Object` でラップすることができます。
+BigInt の値は `Object` でラップすることができます。
 
 ```js
 typeof Object(1n) === 'object'  // true

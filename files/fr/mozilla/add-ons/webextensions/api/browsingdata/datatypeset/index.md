@@ -12,16 +12,17 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
+
 {{AddonSidebar()}}
 
-Le type **`browsingData.DataTypeSet`**  décrit un ensemble de types de données.
+Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
 
 Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.
 
 Ce type est utilisé :
 
 - dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types de données à supprimer
-- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction  "effacer l'historique" du navigateur.
+- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction "effacer l'historique" du navigateur.
 
 ## Type
 
@@ -52,9 +53,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `serviceWorkers` {{optional_inline}}
   - : `boolean`. Données mises en cache par les travailleurs du service.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.DataTypeSet")}}
+{{Compat}}
 
 > **Note :**
 >
@@ -62,7 +63,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,4 +91,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

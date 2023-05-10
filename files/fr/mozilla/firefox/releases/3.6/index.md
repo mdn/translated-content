@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3.6
 original_slug: Mozilla/Firefox/Versions/3.6
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
@@ -237,7 +238,7 @@ Les modifications suivantes ont été faites :
 - L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
 - Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
 - [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)

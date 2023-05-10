@@ -1,14 +1,8 @@
 ---
 title: '技能测试：变量'
 slug: 'Learn/JavaScript/First_steps/Test_your_skills:_variables'
-translation_of: 'Learn/JavaScript/First_steps/Test_your_skills:_variables'
-tags:
-  - 初学者
-  - JavaScript
-  - 学习
-  - 技能测试
-  - 变量
 ---
+
 {{learnsidebar}}
 
 本测试旨在评估读者对 [存储所需信息 - 变量](/zh-CN/docs/Learn/JavaScript/First_steps/Variables) 一文的理解程度。

@@ -7,6 +7,7 @@ tags:
   - Recette
 translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
+
 {{CSSRef}}
 
 Ce motif permet d'aligner le contenu d'une grille au centre grâce à un élément qui l'enveloppe. On peut également choisir quels éléments aligner au centre et lesquels adosser aux côtés.
@@ -63,13 +64,11 @@ On a ainsi une méthode plus compatible mais qui ne permet pas d'aligner les él
 
 ## Accessibilité
 
-Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) pour plus de détails).
+Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) pour plus de détails).
 
 ## Compatibilité des navigateurs
 
-### `grid-template-columns`
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

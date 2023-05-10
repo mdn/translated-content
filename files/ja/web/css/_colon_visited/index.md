@@ -1,15 +1,8 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーがすでに訪問したリンクを表します。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。
@@ -33,11 +26,13 @@ a:visited {
 - これらのスタイルはエンドユーザーに対する表示色を変更できるようになっていますが、 {{domxref("window.getComputedStyle")}} メソッドは嘘をつき、 `:visited` 状態ではない色の値を返します。
 - [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
 
-> **Note:** これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/CSS/Privacy_and_the_:visited_selector)を参照してください。
+> **メモ:** これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/CSS/Privacy_and_the_:visited_selector)を参照してください。
 
 ## 構文
 
-{{csssyntax}}
+```
+visited
+```
 
 ## 例
 

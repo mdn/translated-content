@@ -1,18 +1,8 @@
 ---
 title: DOMRect
 slug: Web/API/DOMRect
-tags:
-  - API
-  - DOM
-  - DOMRect
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Rectangle
-  - Reference
-browser-compat: api.DOMRect
-translation_of: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect`** 인터페이스는 직사각형의 크기와 위치를 나타냅니다.
@@ -56,7 +46,7 @@ translation_of: Web/API/DOMRect
 ## 정적 메서드
 
 - {{domxref("DOMRectReadOnly.fromRect()")}}
-  - : 주어진 위치와 면적을 갖는 새로운 `DOMRect` 객체를 생성합니다.
+  - : 주어진 위치와 면적을 갖는 새로운 `DOMRect` 객체를 생성합니다.
 
 ## 명세
 

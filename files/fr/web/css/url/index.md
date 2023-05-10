@@ -5,6 +5,7 @@ translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
 browser-compat: css.types.url
 ---
+
 {{CSSRef}}
 
 La fonction [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme [`attr()`](/fr/docs/Web/CSS/attr()). Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style.

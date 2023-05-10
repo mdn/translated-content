@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/List_group_with_badges
 original_slug: Web/CSS/Layout_cookbook/Liste_groupes_avec_indicateurs
 ---
+
 {{CSSRef}}
 
 Dans cet article, nous verrons comment créer une liste de groupes dont chaque élément possède un compteur sous la forme d'un indicateur (_badge_).
@@ -34,15 +35,7 @@ Pour aligner le contenu horizontalement, on utilise la propriété `align-items`
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes utilisées ici peuvent avoir une prise en charge différentes par les navigateurs. Se référer à chacun des tableaux pour avoir plus de détails.
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,8 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.type
-translation_of: Web/API/Event/type
 ---
+
 {{APIRef}}
 
 **`type`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。

@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeList/length
 ---
+
 {{APIRef("DOM")}}
 
 ## Résumé
@@ -49,4 +50,4 @@ Malgré l'emplacement de cette page dans la référence, `length` n'est pas une 
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.length")}}
+{{Compat}}

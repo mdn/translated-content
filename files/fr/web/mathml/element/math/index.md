@@ -7,6 +7,7 @@ tags:
   - Référence MathML
 translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef}}
 
 L'élément racine de MathML est `<math>`. Tout objet représenté en MathML doit être encadré de balises `<math>`. De plus, il est interdit d'imbriquer un autre élément `<math>` à l'intérieur d'un premier. Il est toutefois possible d'avoir un nombre arbitraire d'éléments fils à l'intérieur d'un élément `<math>`.
@@ -119,20 +120,11 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                       | Commentaires           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter2.html#interf.toplevel', 'The Top-Level math Element') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter7.html#interf.toplevel', 'The Top-Level math Element') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.math")}}
-
-## Notes relatives à Firefox
-
-Firefox 7.0 {{ geckoRelease("7.0") }} a introduit le support de tous les attributs MathML sur l'élément racine math (c'est à dire le même comportement que l'élément {{ MathMLElement("mstyle") }}). Cependant, l'attribut `displaystyle` n'avait pas été pris en compte et a [été ajouté](https://bugzilla.mozilla.org/show_bug.cgi?id=669719) dans Firefox 8.0 {{ geckoRelease("8.0") }}.
-
-Un moyen textuel alternatif (`alttext`) ou une référence à une image alternative utilisant les attributs `altimg`, `altimg-width`, `altimg-height` ou `altimg-valign` n'est pas encore, à l'heure actuelle, implémentée dans Firefox.
+{{Compat}}
 
 ## Voir aussi
 

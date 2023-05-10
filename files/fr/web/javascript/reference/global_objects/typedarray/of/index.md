@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/of
 ---
+
 {{JSRef}}
 
 La méthode **`TypedArray.of()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un nombre variable d'arguments. Cette méthode est similaire à {{jsxref("Array.of()")}}.
@@ -61,14 +62,11 @@ Int16Array.of(undefined);    // Int16Array [ 0 ]
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                    |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.of', '%TypedArray%.of')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.of', '%TypedArray%.of')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.of")}}
+{{Compat}}
 
 ## Voir aussi
 

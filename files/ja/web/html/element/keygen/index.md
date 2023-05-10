@@ -1,19 +1,9 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
-tags:
-  - 非推奨
-  - 要素
-  - HTML
-  - HTML5
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.keygen
-translation_of: Web/HTML/Element/keygen
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<keygen>`** は [HTML](/ja/docs/Web/HTML) の要素で、鍵の材料の生成を容易にするため、および [HTML フォーム](/ja/docs/Learn/Forms)の一部として公開鍵を送信するための要素です。この仕組みは、ウェブベースの資格情報管理システムと合わせて使用するものとして設計されています。証明書の要求に必要な他の情報を伴う HTML フォームで `<keygen>` 要素を使用して、その処理結果が署名済み資格情報になることを想定しています。
 
@@ -22,12 +12,12 @@ translation_of: Web/HTML/Element/keygen
     <tr>
       <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, 対話型コンテンツ,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_listed">リスト化</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_labelable">ラベル付け可能</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_submittable">サブミット可能</a>,
-        <a href="/ja/docs/Web/HTML/Content_categories#Form_resettable">リセット可能</a>な<a href="/ja/docs/Web/HTML/Content_categories#Form-associated_content">フォーム関連要素</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>, 対話型コンテンツ,
+        <a href="/ja/docs/Web/HTML/Content_categories#リスト化">リスト化</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能">ラベル付け可能</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#送信可能">サブミット可能</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能">リセット可能</a>な<a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>,
         知覚可能コンテンツ
       </td>
     </tr>
@@ -42,7 +32,7 @@ translation_of: Web/HTML/Element/keygen
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>

@@ -1,18 +1,9 @@
 ---
 title: BaseAudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - currentTime
-browser-compat: api.BaseAudioContext.currentTime
-translation_of: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `currentTime` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、再生、タイムラインの可視化などのスケジューリングで使用できる単純増加するハードウェア時間の秒数を倍精度浮動小数点型で返します。 0 から始まります。
@@ -54,7 +45,7 @@ audioCtx.currentTime;
 // ...
 ```
 
-Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または  `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
+Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
 
 ## 仕様書
 
@@ -66,4 +57,4 @@ Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度�
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

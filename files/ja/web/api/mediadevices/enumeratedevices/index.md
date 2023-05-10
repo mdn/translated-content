@@ -1,15 +1,8 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-tags:
-  - API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-browser-compat: api.MediaDevices.enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("MediaDevices")}} の **`enumerateDevices()`** メソッドは、マイクやカメラ、ヘッドセットなど、利用可能なメディア入出力機器の一覧を要求します。

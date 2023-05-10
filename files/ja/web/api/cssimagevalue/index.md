@@ -1,17 +1,8 @@
 ---
 title: CSSImageValue
 slug: Web/API/CSSImageValue
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSImageValue
-  - 実験的
-  - Houdini
-  - インターフェイス
-  - リファレンス
-browser-compat: api.CSSImageValue
-translation_of: Web/API/CSSImageValue
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 **`CSSImageValue`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Object_Model#css_typed_object_model) のインターフェイスで、 {{cssxref('background-image')}}, {{cssxref('list-style-image')}}, {{cssxref('border-image-source')}} のような画像を取るプロパティの値を表します。

@@ -7,6 +7,7 @@ tags:
   - DOM
 translation_of: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}} .
@@ -44,10 +45,8 @@ Cela équivaudrait à définir la balise HTML suivante dans le {{htmlelement("bo
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName("HTML WHATWG", "embedded-content.html#dom-image", "Image()")}} | {{spec2("HTML WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLImageElement.Image")}}
+{{Compat}}

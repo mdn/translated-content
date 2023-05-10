@@ -1,15 +1,6 @@
 ---
 title: 'HTMLFormElement: submit event'
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
-  - submit
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 
 {{APIRef}}

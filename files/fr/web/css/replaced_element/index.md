@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Élément_remplacé
 ---
+
 {{CSSRef}}
 
 En CSS, un **élément remplacé** est un élément dont la représentation est en dehors du champ de CSS. Ce sont des objets externes dont la représentation sera indépendante de CSS.
@@ -43,7 +44,7 @@ On notera que certains éléments remplacés ont des dimensions intrinsèques ou
 
 ### Contrôler la position des objets au sein de la boîte de contenu
 
-Certaines propriétés CSS permettent d'indiquer la façon dont l'objet contenu dans l'élément remplacé doit occuper la boîte de l'élément. Ces propriétés sont définies dans les spécifications {{SpecName("CSS3 Images")}} et {{SpecName("CSS4 Images")}} :
+Certaines propriétés CSS permettent d'indiquer la façon dont l'objet contenu dans l'élément remplacé doit occuper la boîte de l'élément. Ces propriétés sont définies dans les spécifications CSS3 Images et CSS4 Images&nbsp;:
 
 - {{cssxref("object-fit")}}
   - : Indique la façon dont le contenu de l'élément remplacé doit s'inscrire dans la boîte de l'élément et comment il doit être redimensionné si besoin.

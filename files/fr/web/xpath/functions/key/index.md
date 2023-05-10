@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/key
 original_slug: Web/XPath/Fonctions/key
 ---
+
 {{ XsltRef() }}
 
 La fonction `key` retourne un ensemble de nœuds ayant la valeur donnée pour la clef donnée.
@@ -19,7 +20,7 @@ key( nom-de-clef , valeur )
 ### Arguments
 
 - `nom-de-clef`
-  - : Une chaîne contenant le nom de l'élément [`xsl:key`](fr/XSLT/key) à utiliser.
+  - : Une chaîne contenant le nom de l'élément [`xsl:key`](/fr/XSLT/key) à utiliser.
 
 <!---->
 
@@ -32,7 +33,7 @@ Un ensemble de nœuds.
 
 ### Notes
 
-- L'élément [`xsl:key`](fr/XSLT/key) définit quel attribut de quels éléments donnés sera utilisé pour la comparaison.
+- L'élément [`xsl:key`](/fr/XSLT/key) définit quel attribut de quels éléments donnés sera utilisé pour la comparaison.
 
 Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas partie de la bibliothèque de fonctions XPath principale.
 

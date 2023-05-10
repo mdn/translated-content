@@ -13,7 +13,8 @@ tags:
 translation_of: Web/HTML/Element/details
 browser-compat: html.elements.details
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<details>`** est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).
 
@@ -33,7 +34,7 @@ Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour affic
 
 > **Note :** Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
 
-Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [personnaliser le marqueur de révélation](#customizing_the_disclosure_widget) pour plus de détails.
+Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [Personnaliser l'apparence](#personnaliser_lapparence) pour plus de détails.
 
 <table class="properties">
   <tbody>
@@ -146,7 +147,9 @@ Dans cet exemple, on utilise un élément `<details>` sans résumé/intitulé.
 
 Ici, le navigateur utilisera alors un intitulé par défaut (généralement, ce sera "Détails").
 
-{{EmbedLiveSample("Un_exemple_simple", "", 100)}}
+#### Résultat
+
+{{EmbedLiveSample("", "", 100)}}
 
 ### Créer un contrôle déjà ouvert
 
@@ -162,9 +165,9 @@ Pour obtenir une boîte `<details>` dans un état ouvert, il suffit d'ajouter l'
 </details>
 ```
 
-Cela se traduit par :
+#### Résultat
 
-{{EmbedLiveSample("Créer_un_contrôle_déjà_ouvert", "", 130)}}
+{{EmbedLiveSample("", "", 130)}}
 
 ### Personnaliser l'apparence
 

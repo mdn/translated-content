@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/indexOf
 ---
+
 {{JSRef}}
 
 La méthode **`indexOf()`** renvoie le premier indice (le plus petit) auquel on peut trouver un élément donné dans le tableau typé. Si l'élément n'est pas trouvé, la valeur de retour sera -1. L'algorithme utilisé pour cette méthode est le même que celui pour {{jsxref("Array.prototype.indexOf()")}}. Pour le reste de l'article _TypedArray_ correspond à l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -52,18 +53,11 @@ uint8.indexOf(2, -3); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.indexOf")}}
-
-## Notes de compatibilité
-
-- À partir de Firefox 47 ({{geckoRelease(47)}}), cette méthode ne renverra plus `-0`. Ainsi, `new Uint8Array([0]).indexOf(0, -0)` renverra toujours `+0` (cf. {{bug(1242043)}}).
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
-tags:
-  - API
-  - HTML DOM
-  - インターフェイス
-  - NeedsNewLayout
-  - リファレンス
-browser-compat: api.HTMLHeadingElement
-translation_of: Web/API/HTMLHeadingElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHeadingElement`** インターフェイスは、 [`<h1>` から `<h6>` まで](/ja/docs/Web/HTML/Element/Heading_Elements)様々な見出し要素を表します。 {{domxref("HTMLElement")}} インターフェイスからメソッドとプロパティを継承しています。

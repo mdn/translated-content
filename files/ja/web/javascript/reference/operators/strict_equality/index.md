@@ -1,14 +1,8 @@
 ---
 title: 厳密等価 (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.strict_equality
-translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 厳密等価演算子 (`===`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子とは異なり、厳密等価演算子はオペランドの型が異なる場合、常に異なるものと判断します。
@@ -34,7 +28,7 @@ x === y
   - 数値型は同じ値の数値である必要があります。 `+0` と `-0` は同じ値と見なされます。
   - 文字列型は同じ文字が同じ順序で並んでいる必要があります。
   - 論理型は両方が `true` であるか両方が `false` である必要があります。
-  
+
 この演算子と[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality) (`==`) 演算子の最も顕著な違いは、オペランドの型が異なる場合、 `==` 演算子は比較前に同じ型に変換しようとすることです。
 
 ## 例

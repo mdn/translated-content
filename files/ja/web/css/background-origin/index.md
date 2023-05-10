@@ -1,15 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-origin
-translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`background-origin`** プロパティは、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。

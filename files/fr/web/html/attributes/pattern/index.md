@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Attributes/pattern
 original_slug: Web/HTML/Attributs/pattern
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété [`patternMismatch`](/fr/docs/Web/API/ValidityState/patternMismatch) en lecture seule, rattachée à l'objet [`ValidityState`](/fr/docs/Web/API/ValidityState), vaudra `true`.
@@ -124,15 +125,11 @@ L'attribut `title` est utilisé par certains navigateurs pour écrire les messag
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}         | {{Spec2('HTML5.1')}}     |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-pattern', 'l\'attribut pattern')}}     | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - CSS プロパティ
-  - ポインターイベント
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.touch-action
-translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 **`touch-action`** は CSS のプロパティで、タッチ画面のユーザーが要素のある領域をどのように操作できるか（例えば、ブラウザー内に組み込まれたパンまたはズーム機能）を設定します。
@@ -38,7 +31,7 @@ touch-action: unset;
 
 ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
 
-> **Note:** ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
+> **メモ:** ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
 
 ## 構文
 
@@ -118,6 +111,6 @@ touch-action: unset;
 
 - {{cssxref("pointer-events","pointer-events")}}
 - {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
-- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
 - Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
 - [スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)

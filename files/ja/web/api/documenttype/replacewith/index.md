@@ -1,26 +1,20 @@
 ---
-title: DocumentType.replaceWith()
+title: "DocumentType: replaceWith() メソッド"
 slug: Web/API/DocumentType/replaceWith
-page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - メソッド
-  - DocumentType
-  - リファレンス
-browser-compat: api.DocumentType.replaceWith
-translation_of: Web/API/DocumentType/replaceWith
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType.replaceWith()`** メソッドは、文書型宣言を指定されたノードで置き換えます。
 
 ## 構文
 
-```js
+```js-nolint
 replaceWith(node1)
 replaceWith(node1, node2)
-replaceWith(node1, node2, /* ... ,*/ nodeN)
+replaceWith(node1, node2, /* … ,*/ nodeN)
 ```
 
 ### 引数
@@ -43,9 +37,9 @@ replaceWith(node1, node2, /* ... ,*/ nodeN)
 
 ```js
 let svg_dt = document.implementation.createDocumentType(
-  'svg:svg',
-  '-//W3C//DTD SVG 1.1//EN',
-  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'
+  "svg:svg",
+  "-//W3C//DTD SVG 1.1//EN",
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
 );
 
 document.doctype.replaceWith(svg_dt);

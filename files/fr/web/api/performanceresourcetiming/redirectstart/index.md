@@ -11,6 +11,7 @@ tags:
   - redirectStart
 translation_of: Web/API/PerformanceResourceTiming/redirectStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`redirectStart`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant l'instant du début de la récupération qui initie la redirection.
@@ -66,10 +67,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Resource Timing', '#dom-performanceresourcetiming-redirectstart', 'redirectStart')}} | {{Spec2('Resource Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceResourceTiming.redirectStart")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
 **`Object.create()`** 方法用于创建一个新对象，使用现有的对象来作为新创建对象的原型（prototype）。
@@ -60,7 +53,7 @@ alert(normalObj); // shows [object Object]
 alert(nullProtoObj); // throws error: Cannot convert object to primitive value
 ```
 
-其它方法也同样会失败。
+其他方法也同样会失败。
 
 ```js
 normalObj.valueOf() // shows {}
@@ -131,7 +124,7 @@ if (user.authenticated) {
 
 ## 示例
 
-### 用 `Object.create()` 实现类式继承
+### 用 `Object.create()` 实现类式继承
 
 下面的例子演示了如何使用 `Object.create()` 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。
 
@@ -169,7 +162,7 @@ console.log('Is rect an instance of Shape?', rect instanceof Shape); // true
 rect.move(1, 1); // Outputs, 'Shape moved.'
 ```
 
-### 使用 `Object.create()` 的 `propertyObject` 参数
+### 使用 `Object.create()` 的 `propertyObject` 参数
 
 ```js
 let o;

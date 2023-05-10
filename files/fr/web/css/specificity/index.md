@@ -2,6 +2,7 @@
 title: Spécificité
 slug: Web/CSS/Specificity
 ---
+
 {{CSSRef}}
 
 La **spécificité** est le moyen par lequel les navigateurs décident quelles valeurs de propriété CSS d'un élément sont les plus pertinentes et seront appliquées. La spécificité est basée sur les règles, ciblant un élément, composées par différents types de [sélecteurs CSS](/fr/docs/Web/CSS/Reference#sélecteurs).
@@ -107,6 +108,7 @@ Quelques exemples avec une spécificité accrue&nbsp;:
 table td    { height: 50px !important; }
 .monTableau td { height: 50px !important; }
 #monTableau td { height: 50px !important; }
+```
 
 B) Ou ajouter le même sélecteur après le sélecteur existant&nbsp;:
 
@@ -124,6 +126,7 @@ C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement
 p.genial {
   color: red;
 }
+```
 
 Inclure un identifiant comme un sélecteur d'attribut au lieu d'un sélecteur d'identifiant (`#someElement`) lui donne la même spécificité qu'une classe. Les deux sélecteurs ci-dessus ont à présent la même importance. Lors d'une égalité de spécificité, la dernière règle définie est prise en compte.
 
@@ -208,6 +211,7 @@ div p {
     <p>Ce texte est dans la div interne.</p>
   </div>
 </div>
+```
 
 &hellip;s'affiche sur l'écran ainsi&nbsp;:
 
@@ -301,17 +305,27 @@ h1 {
 
 Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, mais le sélecteur vert (_green_) est uniquement hérité de ses parents.
 
-## Caractéristiques
+## Spécifications
 
-| Spécification                                                                                                                | État                              | Commentaire                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Selectors", "#specificity-rules", "Calculer la spécificité d'un sélecteur")}} | {{Spec2("CSS4 Selectors")}} | Ajout du sélecteur d'ajustement de spécificité {{CSSxRef(":where", ":where()")}}. |
-| {{SpecName("CSS3 Selectors", "#specificity", "Calculer la spécificité d’un sélecteur")}}         | {{Spec2("CSS3 Selectors")}} | Ajout des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements).                           |
-| {{SpecName("CSS2.1", "cascade.html#specificity", "Calculer la spécificité d'un sélecteur")}}     | {{Spec2("CSS2.1")}}             | Ajout des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes).                             |
-| {{SpecName("CSS1", "#cascading-order", "Ordre dans la cascade")}}                                             | {{Spec2("CSS1")}}             | Définition initiale.                                                                   |
+{{Specifications}}
 
 ## Voir aussi
 
 - Calculateur de spécificité&nbsp;: un site web interactif permettant de tester et comprendre vos propres règles CSS - <https://specificity.keegan.st/>
 - Spécificité des sélecteurs CSS3 - [http://www.w3.org/TR/selectors/#specificity](https://www.w3.org/TR/selectors/#specificity)
-- {{CSS_Key_Concepts}}
+- Concepts clés de CSS&nbsp;:
+  - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+  - [Spécificité](/fr/docs/Web/CSS/Specificity)
+  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
+  - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Valeurs
+    - [Initiales](/fr/docs/Web/CSS/initial_value)
+    - [Calculées](/fr/docs/Web/CSS/computed_value)
+    - [Utilisées](/fr/docs/Web/CSS/used_value)
+    - [Effectives](/fr/docs/Web/CSS/actual_value)
+  - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
+  - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
+  - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)

@@ -1,23 +1,14 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createBufferSource
-browser-compat: api.BaseAudioContext.createBufferSource
-translation_of: Web/API/BaseAudioContext/createBufferSource
 original_slug: Web/API/AudioContext/createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBufferSource()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい {{ domxref("AudioBufferSourceNode") }} を作成するために使用します。これは {{ domxref("AudioBuffer") }} オブジェクトに含まれる音声データを再生するために使用されます。 {{ domxref("AudioBuffer") }} は {{domxref("BaseAudioContext.createBuffer")}} で生成さされたり、音声トラックのデコードに成功したときに {{domxref("BaseAudioContext.decodeAudioData")}} から返されたりします。
 
-> **Note:** {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}} コンストラクターは、 {{domxref("AudioBufferSourceNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}} コンストラクターは、 {{domxref("AudioBufferSourceNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -37,7 +28,7 @@ createBufferSource()
 
 この例では、 2 秒間のバッファーを作成してホワイトノイズで満たし、 {{ domxref("AudioBufferSourceNode") }} で再生しています。コメントでは、何が起こっているのかを簡単に説明しています。
 
-> **Note:** [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)したりすることもできます。
+> **メモ:** [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)したりすることもできます。
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -63,13 +54,13 @@ button.onclick = function() {
    var nowBuffering = myArrayBuffer.getChannelData(channel);
    for (var i = 0; i < frameCount; i++) {
      // Math.random() は [0; 1.0] である
-     // 音声は [-1.0; 1.0] である必要がある
+     // 音声は [-1.0; 1.0] である必要がある
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
   // AudioBufferSourceNode を得る
-  // これは AudioBuffer を再生するときに使う AudioNode である
+  // これは AudioBuffer を再生するときに使う AudioNode である
   var source = audioCtx.createBufferSource();
   // AudioBufferSourceNode にバッファーを設定する
   source.buffer = myArrayBuffer;
@@ -91,4 +82,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

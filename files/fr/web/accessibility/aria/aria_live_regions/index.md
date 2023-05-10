@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Live_Regions
 original_slug: Accessibilité/ARIA/Zones_live_ARIA
 ---
+
 ## Introduction
 
 Dans le passé, un changement dans une page web débouchait souvent sur une relecture intégrale, ce qui agaçait souvent l’utilisateur, ou au contraire très peu ou pas de lecture du tout, rendant inaccessible une partie, voire l’ensemble des informations. Jusqu’à récemment, les lecteurs d’écran n’étaient en mesure d’améliorer cela du fait de l’absence d’éléments standardisés pour prévenir le lecteur d’écran d’un changement. Les zones «&nbsp;live&nbsp;» ARIA comblent cette lacune et fournissent des solutions aux lecteurs d’écran afin de savoir si et comment interrompre l'utilisateur lors d’un changement.

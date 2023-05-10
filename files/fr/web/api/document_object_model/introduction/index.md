@@ -11,6 +11,7 @@ tags:
   - Tutorial
 translation_of: Web/API/Document_Object_Model/Introduction
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 Le Modèle Objet de Document (**DOM: Document object Model**) est la representation objet des données qui composent la structure et le contenu d'un document sur le web. Dans ce guide, nous présenterons brièvement le DOM. Nous verrons comment le DOM représente un document {{Glossary("HTML")}} ou {{Glossary("XML")}} en mémoire et comment vous utilisez les API pour créer du contenu web et des applications.

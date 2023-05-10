@@ -14,6 +14,7 @@ tags:
   - fetchStart
 translation_of: Web/API/PerformanceTiming/fetchStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -26,15 +27,13 @@ L'ancienne propriété en lecture seule **`fetchStart`** retourne un `unsigned l
 let time = performance.timing.fetchStart;
 ```
 
-## Specifications
+## Spécifications
 
-| Spécification                                                                                                                                        | Statut                                   | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancetiming-fetchstart', 'PerformanceTiming.fetchStart')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceTiming.fetchStart")}}
+{{Compat}}
 
 ## Voir aussi
 

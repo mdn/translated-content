@@ -1,8 +1,8 @@
 ---
 title: Precedencia de operadores
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 La **precedencia de operadores** determina el orden en el cual los operadores son evaluados uno respecto del otro. Los operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.
@@ -195,7 +195,7 @@ Cortocircuitar es una jerga para la evaluación condicional. Por ejemplo, en la 
 la expresión `(b + c)` no será evaluada, incluso si está dentro de
 paréntesis. Se podría decir que el operador de conjunción lógica ("&&") está
 "cortocircuitado". Junto con la conjunción lógica, otros operadores cortocircuitados
-son la disyunción lógica ("||"), la coalescencia nula ("??"), el encadenamiento opcional ("?."), 
+son la disyunción lógica ("||"), la coalescencia nula ("??"), el encadenamiento opcional ("?."),
 y el operador condicional ternario. A continuación, algunos ejemplos.
 
 ```js

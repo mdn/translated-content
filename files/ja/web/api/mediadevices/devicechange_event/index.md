@@ -1,20 +1,9 @@
 ---
 title: 'MediaDevices: devicechange イベント'
 slug: Web/API/MediaDevices/devicechange_event
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Video
-  - Event
-browser-compat: api.MediaDevices.devicechange_event
-translation_of: Web/API/MediaDevices/devicechange_event
 original_slug: Web/API/MediaDevices/ondevicechange
 ---
+
 {{APIRef}}
 
 `devicechange` はイベントで、カメラ、マイク、スピーカーなどのメディア機器がシステムに接続・切断されるたびに {{domxref("MediaDevices")}} へ送られます。

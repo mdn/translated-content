@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/messageerror_event
 ---
+
 {{APIRef}}
 
 L'événement `messageerror` est déclenché sur un objet {{domxref('Window')}} lorsqu'il reçoit un message qui ne peut pas être désérialisé.
@@ -56,15 +57,13 @@ window.onmessageerror = (event) => {
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                           |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.messageerror_event")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("Window.postMessage()")}}
 - Événements liés: {{domxref("Window/message_event", "message")}}.

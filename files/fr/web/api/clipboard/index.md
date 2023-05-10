@@ -13,17 +13,18 @@ tags:
   - Reference
 translation_of: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}}
 
-> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
+> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une [mémoire tampon](https://fr.wikipedia.org/wiki/M%C3%A9moire_tampon) temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des [interfaces de programmation](https://fr.wikipedia.org/wiki/Interface_de_programmation) définies.
 >
-> Une application typique accède aux fonctionnalités du presse-papiers en associant des {{interwiki("wikipedia", "Entr%C3%A9es-sorties", "entrées utilisateur")}} telles que des {{interwiki("wikipedia", "Raccourci_clavier", "raccourcis clavier")}}, des éléments de {{interwiki("wikipedia", "Menu_(informatique)", "menus")}}, etc. à ces interfaces.
+> Une application typique accède aux fonctionnalités du presse-papiers en associant des [entrées utilisateur](https://fr.wikipedia.org/wiki/Entr%C3%A9es-sorties) telles que des [raccourcis clavier](https://fr.wikipedia.org/wiki/Raccourci_clavier), des éléments de [menus](https://fr.wikipedia.org/wiki/Menu_(informatique)), etc. à ces interfaces.
 
-L’interface **`Clipboard`** implémente l’[API clipboard](/en-US/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
+L’interface **`Clipboard`** implémente l’[API clipboard](/fr/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
 
 Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 
-Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
+Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/fr/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
 > **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
 
@@ -54,10 +55,8 @@ De plus, {{domxref("Clipboard.read", "read()")}} et {{domxref("Clipboard.write",
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Clipboard API','#clipboard-interface','Clipboard')}} | {{Spec2('Clipboard API')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Clipboard")}}
+{{Compat}}

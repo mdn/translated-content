@@ -1,6 +1,6 @@
 ---
 title: Expressions rationnelles
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 tags:
   - Guide
   - Intermédiaire
@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 original_slug: Web/JavaScript/Guide/Expressions_régulières
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}
 
 Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « _RegExp_ »).
@@ -401,7 +402,7 @@ La tableau qui suit fournit une liste complète des caractères spéciaux pouvan
       <td><code>\b</code></td>
       <td>
         <p>
-          Correspond à la position d'uneAfter the <em>limite de mot</em>. Une
+          Correspond à la position d'une <em>limite de mot</em>. Une
           limite de mot correspond à la position où un caractère d'un mot n'est
           pas suivi ou précédé d'un autre caractère de mot. Il faut savoir que
           la limite correspondante n'est pas incluse dans le résultat. Autrement
@@ -645,7 +646,7 @@ Les parenthèses encadrant une partie du motif de l'expression régulière peuve
 
 Ainsi, le motif `/Chapitre (\d+)\.\d*/` utilise des caractères échappés et spéciaux et indique une partie du motif à garder en mémoire. Ce motif correspond aux caractères 'Chapitre ' suivi par un ou plusieurs caractères numériques (`\d` correspond à un chiffre et `+` indiquant que une série de 1 ou plusieurs chiffres), suivis par un point (qu'il est nécessaire d'échapper car c'est un caractère spécial, on utilise donc '\\' pour indiquer qu'on souhaite reconnaître le caractère '.'), suivi par 0 ou plusieurs chiffres (`\d` correspondant à un chiffre et l'astérisque indiquant que le caractère est présent 0 ou plusieurs fois). Les parenthèses sont utilisées pour garder en mémoire les premiers chiffres correspondant.
 
-Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans  "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
+Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
 
 Pour qu'une partie de la chaîne de caractère corresponde mais que la correspondance ne soit pas gardée en mémoire, on pourra utiliser `?:`. Ainsi, `(?:\d+)` correspondra pour une séquence de chiffres (1 ou plusieurs chiffres) mais on ne gardera pas en mémoire les caractères correspondants.
 

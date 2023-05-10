@@ -3,6 +3,7 @@ title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 translation_of: Web/API/EventTarget/addEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 \>La méthode **`addEventListener()`** de {{domxref("EventTarget")}} attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.
@@ -222,7 +223,7 @@ el.addEventListener("click", () => {
 
 {{EmbedLiveSample('Écouteur_d\'évènement_avec_une_fonction_fléchée')}}
 
-Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
+Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](/fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
 
 Cela signifie que les variables et constantes disponibles pour la fonction contenante sont aussi disponibles pour le gestionnaire d'évènements lors de l'utilisation d'une fonction fléchée.
 
@@ -621,7 +622,7 @@ La méthode `attachEvent()` peut être couplée avec l'évènement `onresize` po
 
 ### Prothèse d'émulation (_polyfill_)
 
-Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement {{event("DOMContentLoaded")}}.
+Vous pouvez contourner le fait que `addEventListener()`, `removeEventListener()`, {{domxref("Event.preventDefault()")}} et {{domxref("Event.stopPropagation()")}} ne sont pas pris en charge par IE 8 en utilisant le code suivant au début de votre script. Le code prend en charge l'utilisation de `handleEvent()`, et aussi l'évènement [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event).
 
 > **Note :** `useCapture` n'est pas pris en charge, du fait qu'IE 8 n'a aucune méthode alternative. Le code suivant ajoute seulement la prise en charge d'IE 8. Cette émulation pour IE 8 fonctionne uniquement en mode standard : une déclaration `doctype` est requise.
 
@@ -767,7 +768,7 @@ for (let i=0, j=0 ; i<els.length ; i++) {
 
 D'après la spécification, la valeur par défaut pour l'option `passive` est toujours `false`. Toutefois, cela introduit la possibilité que des écouteurs d'évènements gérant certains évènements tactiles (parmi d'autres) bloquent le fil d'exécution principal du navigateur pendant qu'il essaye de gérer le défilement, avec possiblement pour résultat une énorme réduction de performance pendant la gestion du défilement.
 
-Pour prévenir ce problème, certains navigateurs (spécifiquement, Chrome et Firefox) ont changé la valeur par défault de l'option `passive` à `true` pour les évènements {{event("touchstart")}} et {{event("touchmove")}} dans les nœuds de niveau document {{domxref("Window")}}, {{domxref("Document")}}, et {{domxref("Document.body")}}. Cela empêche que l'écouteur d'évènement ne soit appelé, de sorte qu'il ne peut pas bloquer le rendu de la page pendant que l'utilisateur fait un défilement.
+Pour prévenir ce problème, certains navigateurs (spécifiquement, Chrome et Firefox) ont changé la valeur par défault de l'option `passive` à `true` pour les évènements [`touchstart`](/fr/docs/Web/API/Element/touchstart_event) et [`touchmove`](/fr/docs/Web/API/Element/touchmove_event) dans les nœuds de niveau document {{domxref("Window")}}, {{domxref("Document")}}, et {{domxref("Document.body")}}. Cela empêche que l'écouteur d'évènement ne soit appelé, de sorte qu'il ne peut pas bloquer le rendu de la page pendant que l'utilisateur fait un défilement.
 
 > **Note :** Voir la table de compatibilité ci-dessous si vous avez besoin de savoir quels navigateurs (et/ou quelles versions de ces navigateurs) implémentent ce comportement modifié.
 
@@ -797,19 +798,15 @@ window.addEventListener('scroll', function(event) {
 
 Dans les navigateurs anciens qui ne prennent pas en charge le paramètre `options` d'`addEventListener()`, le fait d'essayer de l'utiliser empêche l'utilisation de l'argument `useCapture` sans utilisation appropriée de la [détection de fonctionnalité](#safely_detecting_option_support).
 
-Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évènement {{event("scroll")}} de base. Du fait qu'il ne peut pas être annulé, les écouteurs d'évènements ne peuvant pas bloquer le rendu de la page de toute façon.
+Vous n'avez pas besoin de vous inquiéter de la valeur de `passive` pour l'évènement [`scroll`](/fr/docs/Web/API/Element/scroll_event) de base. Du fait qu'il ne peut pas être annulé, les écouteurs d'évènements ne peuvant pas bloquer le rendu de la page de toute façon.
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                      |
-| {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                      |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.EventTarget.addEventListener", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

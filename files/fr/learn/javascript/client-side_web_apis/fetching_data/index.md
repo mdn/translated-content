@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.
@@ -88,7 +89,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 `XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
 
 1. Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
-2. À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'évènement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
+2. À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'évènement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction `updateDisplay()`.
 
     ```js
     var verseChoose = document.querySelector('select');
@@ -136,7 +137,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     request.responseType = 'text';
     ```
 
-8. Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
+8. Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement [`load`](/fr//docs/Web/API/Window/load_event) est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
     Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 
@@ -198,11 +199,11 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
     });
     ```
 
-4. Chargez l'exemple dans votre navigateur (en l'exécutant à travers un serveur web) et il devrait produire le même résultat que la version XHR  — pourvu que vous utilisiez un navigateur moderne.
+4. Chargez l'exemple dans votre navigateur (en l'exécutant à travers un serveur web) et il devrait produire le même résultat que la version XHR — pourvu que vous utilisiez un navigateur moderne.
 
 #### Que se passe-t-il dans le code Fetch?
 
-Tout d'abord, nous invoquons la méthode {{domxref("WindowOrWorkerGlobalScope.fetch()","fetch()")}}, en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
+Tout d'abord, nous invoquons la méthode [`fetch()`](/fr/docs/Web/API/Fetch), en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
 
 Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment-là. C'est l'équivalent du gestionnaire d'évènement `onload` dans la version XHR.
 
@@ -392,13 +393,3 @@ Il y a beaucoup de sujets abordés dans cet article, dont nous n'avons qu'égrat
 - [Programmation de sites web, côté serveur](/fr/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données du serveur](/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data)
-- [API tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [API vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage)

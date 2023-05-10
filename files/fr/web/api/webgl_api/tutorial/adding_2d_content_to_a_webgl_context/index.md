@@ -15,7 +15,8 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 original_slug: Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL
 ---
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 Une fois que vous avez correctement créé un contexte WebGL, vous pouvez commencer à y dessiner. Une chose simple que nous pouvons faire est de dessiner un simple carré 2D sans texture, commençons donc par là, en construisant un code pour dessiner un carré 2D.
 
@@ -37,7 +38,7 @@ Chaque fois qu'une forme est rendue, le shader de sommet est exécuté pour chaq
 
 Les informations de position sont stockées dans une variable spéciale fournie par GLSL, appelée `gl_Position`.
 
-Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du {{interwiki ("wikipedia", "texel")}} à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
+Le shader de sommet peut, au besoin, aussi faire des choses comme déterminer les coordonnées dans la texture des faces du [texel](https://fr.wikipedia.org/wiki/Texel_(infographie)) à appliquer au sommet, appliquer les normales pour déterminer le facteur d'éclairage à appliquer au sommet, et ainsi de suite. Ces informations peuvent alors être stockées dans des variations ou des attributs comme approprié, pour être partagées avec le shader de fragment.
 
 Notre shader de sommet ci-dessous reçoit des valeurs de position de sommet à partir d'un attribut que nous définissons, appelé `aVertexPosition`. Cette position est ensuite multipliée par deux matrices 4x4 que nous fournissons, appelées `uProjectionMatrix` et `uModelMatrix` ; `gl_Position` est définie comme étant le résultat. Pour plus d'informations sur la projection et autres matrices, [vous pourriez trouver cet article utile](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html).
 
@@ -308,6 +309,6 @@ Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
 - les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;
-- l'article [matrice](<https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)>) sur Wikipedia.
+- l'article [matrice](https://fr.wikipedia.org/wiki/Matrice_(math%C3%A9matiques)) sur Wikipédia.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

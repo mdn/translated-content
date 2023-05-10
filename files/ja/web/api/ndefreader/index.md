@@ -1,13 +1,8 @@
 ---
 title: NDEFReader
 slug: Web/API/NDEFReader
-tags:
-  - NDEF
-  - リファレンス
-  - ウェブ NFC
-browser-compat: api.NDEFReader
-translation_of: Web/API/NDEFReader
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFReader`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API)のインターフェイスで、互換性のある NFC 機器、たとえば NDEF に対応している NFC タグなどがリーダーの磁気誘導範囲にあるときに、これらの機器からデータを読み取ったり、書き込んだりするために使用されます。

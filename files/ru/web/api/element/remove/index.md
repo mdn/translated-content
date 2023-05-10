@@ -8,6 +8,7 @@ tags:
   - Method
 browser-compat: api.Element.remove
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Element.remove()`** удаляет элемент из DOM-дерева, в котором он находится.

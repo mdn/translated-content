@@ -4,12 +4,11 @@ slug: Web/API/ScriptProcessorNode/audioprocess_event
 translation_of: Web/API/ScriptProcessorNode/audioprocess_event
 original_slug: Web/Events/audioprocess
 ---
+
 L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une API Web audio {{domxref("ScriptProcessorNode")}} est prêt à être traité.
 
 ## Informations générales
 
-- Spécification
-  - : {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}}
 - Interface
   - : {{domxref("AudioProcessingEvent")}}
 - Propagation
@@ -97,13 +96,11 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilités navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.ScriptProcessorNode.audioprocess_event")}}
+{{Compat}}
 
 ## Voir aussi
 

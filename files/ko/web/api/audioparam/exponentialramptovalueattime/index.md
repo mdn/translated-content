@@ -1,15 +1,8 @@
 ---
 title: AudioParam.exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - exponentialRampToValueAtTime
-browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioParam") }} 인터페이스의 **`exponentialRampToValueAtTime()`** 메서드는 {{domxref("AudioParam")}}의 값에 점진적인 지수적 변화를 예정합니다. 변화는 **이전** 이벤트에 명시된 시간에 시작해, 지수적 경사(ramp)를 따라 `value` 매개변수에 주어진 새로운 값으로 향하고, `endTime` 매개변수에 주어진 시간에 새로운 값에 도달합니다.
@@ -70,11 +63,11 @@ gainNode.connect(audioCtx.destination);
 
 // onclick이 발생했을 때 무언가를 하기 위해 버튼을 설정합니다
 expRampPlus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
 expRampMinus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
 ```
 

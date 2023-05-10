@@ -1,16 +1,8 @@
 ---
 title: バーコード検出 API
 slug: Web/API/Barcode_Detection_API
-tags:
-  - API
-  - ランディング
-  - 概要
-  - バーコード
-  - バーコード検出
-  - 形状認識
-  - 実験的
-translation_of: Web/API/Barcode_Detection_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
 
 バーコード検出 API (Barcode Detection API) は、線形および二次元のバーコードを画像内から検出します。

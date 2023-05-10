@@ -10,12 +10,13 @@ tags:
   - Reference
 translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSStyleDeclaration` représente une collection de paires propriété/valeur CSS. Elle est utilisée dans quelques API&nbsp;:
 
 - {{domxref("HTMLElement.style")}} - pour manipuler le style d'un seul élément (\<elem style="...">)&nbsp;;
-- (AFAIRE : à reformuler) est une interface avec le [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) renvoyé par la propriété [`style`](/en/DOM/cssRule.style) d'une `cssRule` dans une [feuille de style](/fr/docs/Web/API/StyleSheet), lorsque la règle est une [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule)&nbsp;;
+- L'API [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet). Par exemple, `document.styleSheets[0].cssRules[0].style` renvoie un objet `CSSStyleDeclaration` décrivant la première règle CSS dans la première feuille de style du document.
 - `CSSStyleDeclaration` est également une interface en **lecture seule** pour le résultat de [window.getComputedStyle()](/fr/docs/Web/API/Window/getComputedStyle).
 
 ## Attributs
@@ -60,13 +61,10 @@ console.log(objStyle.cssText);
 
 Le bloc de déclaration est la partie de la règle de mise en forme qui apparaît dans les accolades et qui fournit les définitions de mise en forme (pour le sélecteur, la partie qui précède les accolades).
 
+## Spécifications
+
+{{Specifications}}
+
 ## Voir aussi
 
 - [Référence des propriétés CSS](/fr/docs/Web/CSS/CSS_Properties_Reference)
-
-## Spécifications
-
-| Spécification                                                                                                    | Statut                           | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                      |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale. |

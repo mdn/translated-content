@@ -7,9 +7,10 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-right
 ---
+
 {{CSSRef}}
 
-La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte "http://developer.mozilla.org/en/CSS/Box_model#padding") correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
+La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
 
 {{EmbedInteractiveExample("pages/css/padding-right.html")}}
 
@@ -41,9 +42,13 @@ padding-right: unset;
 - `<percentage>`
   - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -73,18 +78,11 @@ padding-right: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-padding', 'padding-right')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.                           |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-right')}} | {{Spec2('CSS3 Transitions')}} | `padding-right` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                           |
-| {{Specname('CSS1', '#padding-right', 'padding-right')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-right")}}
+{{Compat}}
 
 ## Voir aussi
 

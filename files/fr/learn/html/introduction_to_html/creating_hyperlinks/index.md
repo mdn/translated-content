@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML")}}
 
@@ -74,7 +75,7 @@ Je suis en train de créer un lien à [la page d'accueil de Mozilla](https://www
 
 ### Ajouter des informations d'assistance avec l'attribut title
 
-L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenes dans la page ou ce qu'il faut savoir. Par exemple :
+L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenues dans la page ou ce qu'il faut savoir. Par exemple :
 
 ```html
 <p>Je suis en train de créer un lien à
@@ -86,7 +87,7 @@ L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est de
 
 Voici le résultat (le contenu de `title` apparaît dans une info-bulle quand le pointeur de souris passe sur le lien) :
 
-Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/ "Le meilleur endroit pour trouver plus d'informations sur la mission de Mozilla et la manière de contribuer")
+Je suis en train de créer un lien vers [la page d'accueil de Mozilla](https://www.mozilla.org/fr/)
 
 > **Note :** le `title` d'un lien n'est révélé que lors du survol de la souris, ce qui signifie que les personnes utilisant les commandes clavier pour naviguer dans les pages web auront des difficultés à accéder aux informations de `title`. Si une information de `title` est vraiment importante pour l'utilisation d'une page, alors vous devez la présenter de manière accessible à tout utilisateur, par exemple, en la mettant dans le texte normal.
 
@@ -131,7 +132,7 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
   Voyez comment faire sur notre page <a href="contacts.html">Contacts</a>.</p>
   ```
 
-- **Descendre dans les sous-répertoires** : si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier`projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html` :
+- **Descendre dans les sous-répertoires** : si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier `projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html` :
 
   ```html
   <p>Visitez la <a href="projects/index.html">page d'accueil</a> de mon projet.</p>
@@ -284,7 +285,7 @@ L'exemple terminé devrait finir par ressembler à quelque chose comme ce qui su
 
 ## Liens de courriel
 
-Il est possible de créer des liens ou des boutons qui, losrqu'ils sont cliqués, ouvrent un nouveau message de courriel sortant plutôt que de faire un lien vers une ressource ou une page. C'est fait en utilisant l'élément {{HTMLElement("a")}} et le schéma d'URL `mailto:`.
+Il est possible de créer des liens ou des boutons qui, lorsqu'ils sont cliqués, ouvrent un nouveau message de courriel sortant plutôt que de faire un lien vers une ressource ou une page. C'est fait en utilisant l'élément {{HTMLElement("a")}} et le schéma d'URL `mailto:`.
 
 Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto:` indique simplement l'adresse du destinataire voulu. Par exemple :
 
@@ -294,7 +295,7 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Ceci donne un résultat qui ressemble à ceci : [Envoyer un courriel à nullepart](mailto:nowhere@mozilla.org).
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un email à l'adresse de leur choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
 
 ### Spécification des détails
 
@@ -304,7 +305,7 @@ Voici un exemple incluant cc (carbon copy), bcc (blind cc), subject (sujet) et b
 
 ```html
 <a href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&bcc=nom3@rapidtables.com&subject=L%27objet%20du%20courriel&body=Le%20corps%20du%20courriel">
-  Envoyer un mail avec copie, copie cachée, sujet et corps de message
+  Envoyer un e-mail avec copie, copie cachée, sujet et corps de message
 </a>
 ```
 
@@ -323,15 +324,3 @@ Voici quelques autres exemples d'URL `mailto` :
 C'est tout pour les liens, du moins pour l'instant ! Vous reviendrez aux liens plus loin dans le cours quand vous en serez arrivé à les mettre en forme. Pour la prochaine étape HTML, nous reviendrons à l'analyse sémantique du texte et verrons quelques fonctionnalités plus avancées ou inhabituelles que vous trouverez utiles : le formatage avancé de texte est votre prochain arrêt.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- Création d'hyperliens
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

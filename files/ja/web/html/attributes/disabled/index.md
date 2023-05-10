@@ -1,14 +1,6 @@
 ---
 title: 'HTML 属性: disabled'
 slug: Web/HTML/Attributes/disabled
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - フォーム
-  - required
-spec-urls: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-disabled
-translation_of: Web/HTML/Attributes/disabled
 ---
 
 {{HTMLSidebar}}
@@ -21,7 +13,7 @@ translation_of: Web/HTML/Attributes/disabled
 
 論理属性の disabled は、ユーザーがコントロールやその子孫のコントロールと対話できないことを示します。この属性が指定されていない場合、コントロールは、例えば `fieldset` のような包含要素からその設定を継承します。 `disabled` 属性が設定されている包含要素がなく、コントロール自体がこの属性を持っていない場合、コントロールは有効になります。 {{ HTMLElement("optgroup") }}上で宣言された場合、 select は（特に無効化されていない限り）操作可能になりますが、オプショングループの項目はどれも選択不可能になります。
 
-> **Note:** {{ HTMLElement("fieldset") }}が 無効になると、 {{ HTMLElement("legend") }} 内のフォーム制御を除いて、子孫のフォーム制御もすべて無効になります。
+> **メモ:** {{ HTMLElement("fieldset") }}が 無効になると、 {{ HTMLElement("legend") }} 内のフォーム制御を除いて、子孫のフォーム制御もすべて無効になります。
 
 対応する要素に `disabled` 属性が適用されている場合、 {{cssxref(":disabled")}} 擬似クラスも適用されます。逆に、 `disabled` 属性に対応しているが、その属性が設定されていない要素は、 {{cssxref(":enabled")}} 擬似クラスに一致します。
 
@@ -35,7 +27,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 無効にされたフィールドはその値を変更することができないので、 [`required`](/ja/docs/Web/HTML/Attributes/required) は `disabled` 属性も指定されている入力に対しては効果がありません。さらに、要素が変更不可になるので、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) のような他のほとんどの属性も、コントロールが有効になるまで効果がありません。
 
-> **Note:** `disabled` 属性が指定されている入力フィールドでは、 `required` 属性は許可されません。
+> **メモ:** `disabled` 属性が指定されている入力フィールドでは、 `required` 属性は許可されません。
 
 ### ユーザビリティ
 
@@ -111,7 +103,7 @@ Firefox は他のブラウザーとは異なり、ページを再読み込みし
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attributes.disabled")}}
+{{Compat}}
 
 ## 関連情報
 

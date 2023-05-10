@@ -1,16 +1,8 @@
 ---
 title: CSS モーションパス
 slug: Web/CSS/CSS_Motion_Path
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - ガイド
-  - モーションパス
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Motion_Path
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **モーションパス** (Motion Path) は CSS のモジュールの一つで、任意のグラフィックオブジェクトを独自の経路に沿って動作させるためのものです。
@@ -57,9 +49,7 @@ translation_of: Web/CSS/CSS_Motion_Path
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | コメント             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/8
 original_slug: Mozilla/Firefox/Versions/8
 ---
+
 1. Notes de versions pour développeurs
 
     1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
@@ -194,7 +195,7 @@ L'interface [`nsIWorkerFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface
 - La nouvelle propriété [`document.mozSyntheticDocument`](/fr/docs/Web/API/Document/mozSyntheticDocument) des objets [`Document`](/fr/docs/Web/API/Document) vous permet de déterminer si un document est synthétique (comme une image, une vidéo ou un fichier audio) plutôt qu'un document DOM standard. Cela peut être utile, par exemple, si vous voulez présenter une interface utilisateur différente dans cette situation (comme l'ajout d'éléments contextuels différemment selon le cas présent).
 - Vous pouvez désormais spécifier un filtre en ouvrant `about:config` ; par exemple, "about:config?filter=sessionstore" n'affichera que les préférences liées au stockage des sessions.
 
-## Voir également
+## Voir aussi
 
 - [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/7)
 - [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/6)

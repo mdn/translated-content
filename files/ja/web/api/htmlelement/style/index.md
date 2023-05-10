@@ -1,21 +1,13 @@
 ---
 title: HTMLElement.style
 slug: Web/API/HTMLElement/style
-tags:
-  - API
-  - CSSOM
-  - HTMLElement
-  - プロパティ
-  - リファレンス
-  - Style
-browser-compat: api.HTMLElement.style
-translation_of: Web/API/HTMLElement/style
 ---
+
 {{APIRef("CSSOM")}}
 
 **`style`** プロパティは読み取り専用で、要素のインラインスタイルを {{domxref("CSSStyleDeclaration")}} オブジェクトの形で返します。このオブジェクトには、その要素のインラインの [`style` 属性](/ja/docs/Web/HTML/Global_attributes/style)で定義されている属性に値が割り当てられている、その要素のすべてのスタイルプロパティのリストが入っています。
 
-> **Note:** `style` 経由でアクセス可能な CSS プロパティのリストについては、[CSS プロパティリファレンス](/ja/docs/Web/CSS/CSS_Properties_Reference)を参照してください。`style` プロパティは CSS カスケードで `style` 属性によるインラインスタイル宣言と同じ（かつ最高の）優先順位を持ちます。
+> **メモ:** `style` 経由でアクセス可能な CSS プロパティのリストについては、[CSS プロパティリファレンス](/ja/docs/Web/CSS/CSS_Properties_Reference)を参照してください。`style` プロパティは CSS カスケードで `style` 属性によるインラインスタイル宣言と同じ（かつ最高の）優先順位を持ちます。
 
 ## 値
 

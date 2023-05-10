@@ -1,25 +1,15 @@
 ---
 title: HTMLInputElement.webkitEntries
 slug: Web/API/HTMLInputElement/webkitEntries
-tags:
-  - API
-  - ファイルシステム API
-  - ファイルとディレクトリー項目 API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - 標準外
-  - プロパティ
-  - webkitEntries
-browser-compat: api.HTMLInputElement.webkitEntries
 ---
+
 {{APIRef("File System API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
 **`webkitEntries`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、ユーザーが `file` 型の {{HTMLElement("input")}} 要素を用いて選択したファイルやディレクトリーを表す、ファイルシステムのエントリー（ {{domxref("FileSystemEntry")}} に基づくオブジェクト）の配列を含みます。その選択がドラッグ＆ドロップで行われた場合にのみ、ダイアログ内でファイルを選択しても、プロパティは空になります。
 
 {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} プロパティが `true` である場合のみ、配列が入ることがあります。これは、 `<input>` 要素でユーザーがディレクトリーを選択することができることを意味します。
 
-> **Note:** このプロパティは仕様書で `webkitEntries` と呼ばれていますが、これはもともと Google Chrome 独自の API であったためです。いつか改名される可能性があります。
+> **メモ:** このプロパティは仕様書で `webkitEntries` と呼ばれていますが、これはもともと Google Chrome 独自の API であったためです。いつか改名される可能性があります。
 
 ## 構文
 

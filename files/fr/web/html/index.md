@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
@@ -65,13 +66,13 @@ La section [Apprendre HTML](/fr/docs/Learn/HTML) contient plusieurs modules pour
 ## Références
 
 - [Référence HTML](/fr/docs/Web/HTML/Reference)
-  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/en-US/docs/Web/HTML/Link_types)
+  - : HTML est un langage décrivant la structure et le contenu sémantique d'un document web. Il est constitué d'**éléments**, chacun pouvant être paramétré grâce à différents **attributs**. Les documents HTML sont connectés à d'autres via des [liens](/fr/docs/Web/HTML/Link_types)
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Element)
   - : Cette page liste les différents éléments HTML.
 - [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
   - : Les éléments du langage HTML possèdent des **attributs**. Il s'agit de valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de diverses manières.
 - [Attributs universels](/fr/docs/Web/HTML/Global_attributes)
-  - : Les attributs universels peuvent être spécifiés sur tous les [éléments HTML](/fr/docs/Web/HTML/Element), _même ceux qui ne sont pas spécifiés dans la norme_. Par exemple, les navigateurs qui prennent en charge HTML5 masquent les contenus marqués comme ` <toto hidden>…<toto>`` , bien que ``<toto> ` ne soit pas un élément valide HTML.
+  - : Les attributs universels peuvent être spécifiés sur tous les [éléments HTML](/fr/docs/Web/HTML/Element), _même ceux qui ne sont pas spécifiés dans la norme_. Par exemple, les navigateurs qui prennent en charge HTML5 masquent les contenus marqués comme `<toto hidden>…<toto>` , bien que `<toto>` ne soit pas un élément valide HTML.
 - [Éléments en ligne](/fr/docs/Web/HTML/Inline_elements) et [éléments de bloc](/fr/docs/Web/HTML/Block-level_elements)
   - : Les éléments HTML sont habituellement des éléments « en ligne » ou des éléments de bloc. Un élément en ligne occupe seulement l'espace associé aux balises. Les éléments de bloc sont une catégorie d'éléments HTML opposés aux éléments en ligne. Leur caractéristique principale réside dans le fait qu'ils sont séparés par un saut de ligne avant et après l'élément. Ce faisant, ils prennent la largeur de leurs conteneurs (créant ainsi un bloc de contenu).
 - [Types de lien](/fr/docs/Web/HTML/Link_types)

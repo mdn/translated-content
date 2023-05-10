@@ -11,6 +11,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
 ---
+
 {{AddonSidebar()}}
 
 Suspend une demande. Après cet appel, plus aucune donnée ne sera livrée jusqu'à ce que la requête soit reprise avec un appel à {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}}.
@@ -31,9 +32,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}
+{{Compat}}
 
 ## Exemples
 

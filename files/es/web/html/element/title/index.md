@@ -1,12 +1,10 @@
 ---
 title: '<title>: El elemento Título del documento'
 slug: Web/HTML/Element/title
-translation_of: Web/HTML/Element/title
 original_slug: Web/HTML/Elemento/title
-browser-compat: html.elements.title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.
 
@@ -37,15 +35,15 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
     <tr>
       <th scope="row">Omisión de etiqueta</th>
       <td>
-        Se requieren etiquetas de apertura y cierre. Tenga en cuenta que 
-        omitir <code>&#x3C;/title></code> haría que el navegador 
+        Se requieren etiquetas de apertura y cierre. Tenga en cuenta que
+        omitir <code>&#x3C;/title></code> haría que el navegador
         ignore el resto de la página.
       </td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
       <td>
-        Un elemento {{ HTMLElement("head") }} que no contiene ningún 
+        Un elemento {{ HTMLElement("head") }} que no contiene ningún
         otro elemento {{ HTMLElement("title") }}.
       </td>
     </tr>
@@ -108,7 +106,6 @@ Una técnica de navegación común para los usuarios de tecnología de asistenci
 ```
 
 Si el envío de un formulario contiene errores y el envío vuelve a representar la página actual, el título se puede usar para ayudar a que los usuarios se den cuenta de cualquier error en su envío. Por ejemplo, actualice el valor de `title` de la página para reflejar cambios significativos en el estado de la página (como problemas de validación de formularios).
-
 
 ### Ejemplo
 

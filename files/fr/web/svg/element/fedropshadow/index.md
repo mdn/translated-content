@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feDropShadow
 ---
+
 {{SVGRef}}
 
 La primitive de filtre **`<feDropShadow>`** crée une ombre portée pour l'image en entrée. Il s'agit d'un raccourci, le résultat du filtre `<feDropShadow>` revient à appliquer les primitives suivantes:
@@ -73,13 +74,11 @@ Cet élément implémente l'interface {{domxref("SVGFEDropShadowElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                           | Commentaire         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#feDropShadow", "&lt;feDistantLight&gt;")}} | {{Spec2("Filters 1.0")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feDropShadow")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/includes
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`includes()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un booléen si la clé est contenue dans un intervalle de clé.
@@ -69,13 +70,11 @@ IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key)
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                       | Commentaire |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB 2', '#dom-idbkeyrange-includes', 'includes()')}} | {{Spec2('IndexedDB')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBKeyRange.includes")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -85,4 +84,4 @@ IDBKeyRange.prototype.includes = IDBKeyRange.prototype.includes || function(key)
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

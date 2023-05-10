@@ -1,25 +1,22 @@
 ---
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
-tags:
-  - API
-  - HTMLSlotElement
-  - インターフェイス
-  - リファレンス
-  - シャドウ DOM
-browser-compat: api.HTMLSlotElement
-translation_of: Web/API/HTMLSlotElement
+l10n:
+  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
+
 {{APIRef('Web Components')}}
 
-**`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
+**`HTMLSlotElement`** は [Shadow DOM API](/ja/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。
 
-## プロパティ
+{{InheritanceDiagram}}
+
+## インスタンスプロパティ
 
 - {{domxref('HTMLSlotElement.name')}}
-  - : {{domxref("DOMString","文字列","",1)}}で、スロットの名前を取得または設定するために使用します。
+  - : 文字列で、スロットの名前を取得または設定するために使用します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref('HTMLSlotElement.assign()')}}
   - : このスロットに手動で割り当てられたノードを、指定されたノードに設定します。
@@ -31,17 +28,17 @@ translation_of: Web/API/HTMLSlotElement
 ## イベント
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/en-US/docs/Web/HTML/Element/slot) 要素) に発生します。
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/ja/docs/Web/HTML/Element/slot) 要素) に発生します。
 
 ## 例
 
-以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/master/slotchange)からとりました  ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
+以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)からとりました ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');
-slots[1].addEventListener('slotchange', function(e) {
-  let nodes = slots[1].assignedNodes();
-  console.log('Element in Slot "' + slots[1].name + '" changed to "' + nodes[0].outerHTML + '".');
+slots[1].addEventListener('slotchange', (e) => {
+  let nodes = slots[1].assignedNodes();
+  console.log(`Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`);
 });
 ```
 

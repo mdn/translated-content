@@ -1,11 +1,6 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-tags:
-  - Constructor
-  - Reference
-browser-compat: api.Event.Event
-translation_of: Web/API/Event/Event
 ---
 {{APIRef("DOM")}}
 
@@ -59,4 +54,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [이벤트 생성 및 발동](/en-US/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)

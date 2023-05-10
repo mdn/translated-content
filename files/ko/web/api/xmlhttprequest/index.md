@@ -1,23 +1,11 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - API
-  - Communication
-  - HTTP
-  - Interface
-  - Reference
-  - Web
-  - XHR
-  - XMLHttpRequest
-browser-compat: api.XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
-`XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
+`XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
 
 `XMLHttpRequest`는 [AJAX](/ko/docs/Web/Guide/AJAX) 프로그래밍에 많이 사용됩니다.
 
@@ -32,7 +20,7 @@ translation_of: Web/API/XMLHttpRequest
 ## 생성자
 
 - {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()")}}
-  - : `XMLHttpRequst`를 초기화합니다. 다른 메서드가 호출되기 전에 호출되어야 합니다.
+  - : `XMLHttpRequest`를 초기화합니다. 다른 메서드가 호출되기 전에 호출되어야 합니다.
 
 ## 속성
 
@@ -67,19 +55,20 @@ translation_of: Web/API/XMLHttpRequest
 ## 비표준 속성들
 
 - {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
- - : 요청을 수행할 때 객체에서 사용하는 채널입니다.
+  - : 요청을 수행할 때 객체에서 사용하는 채널입니다.
 - {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
- - : 'boolean'입니다. `true`인 경우 쿠키 및 인증 헤더 없이 요청이 전송됩니다.
+  - : 'boolean'입니다. `true`인 경우 쿠키 및 인증 헤더 없이 요청이 전송됩니다.
 - {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
- - : 'boolean'입니다. `true`인 경우 `same origin policy`가 요청에 적용되지 않습니다.
+  - : 'boolean'입니다. `true`인 경우 `same origin policy`가 요청에 적용되지 않습니다.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
- - : 'boolean'입니다. 객체가 백그라운드에서 서비스 요청을 나타내는지 여부를 나타냅니다.      
+  - : 'boolean'입니다. 객체가 백그라운드에서 서비스 요청을 나타내는지 여부를 나타냅니다.
+
 ## 메서드
 
 - {{domxref("XMLHttpRequest.abort()")}}
   - : 이미 요청을 전송한 경우, 그 요청을 중단합니다.
 - {{domxref("XMLHttpRequest.getAllResponseHeaders()")}}
-  - : 모든 응답 헤더를 {{Glossary("CRLF")}}로 구분해서 하나의 문자열로 반환합니다. 응답을 받지 못한 경우 `null`을 반환합니다.
+  - : 모든 응답 헤더를 {{Glossary("CRLF")}}로 구분해서 하나의 문자열로 반환합니다. 응답을 받지 못한 경우 `null`을 반환합니다.
 - {{domxref("XMLHttpRequest.getResponseHeader()")}}
   - : 지정한 헤더의 텍스트를 담은 문자열을 반환합니다. 응답을 받지 못했거나, 지정한 헤더가 응답에 존재하지 않으면 `null`을 반환합니다.
 - {{domxref("XMLHttpRequest.open()")}}

@@ -3,6 +3,7 @@ title: Style de listes
 slug: Learn/CSS/Styling_text/Styling_lists
 translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 Les [listes](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#listes) se comportent comme la plupart des autres textes, mais il existe des propriétés CSS propres aux listes que vous devez connaître, et quelques bonnes pratiques à prendre en compte. Cet article explique tout.
@@ -390,11 +391,3 @@ Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informat
 Les listes sont relativement faciles à saisir lorsque vous connaissez les quelques principes de base associés et les propriétés spécifiques. Dans le prochain article, nous allons évoquer des techniques de style des liens.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
-- [Fontes Web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composition de la page d'accueil d'une école de communauté](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

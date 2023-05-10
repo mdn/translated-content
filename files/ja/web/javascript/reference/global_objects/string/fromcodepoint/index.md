@@ -1,21 +1,11 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - String
-  - UTF-32
-  - Unicode
-  - ポリフィル
-browser-compat: javascript.builtins.String.fromCodePoint
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef}}
 
-**`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントのシーケンスを使って生成された文字列を返します。
+**`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントのシーケンスを使って生成された文字列を返します。
 
 {{EmbedInteractiveExample("pages/js/string-fromcodepoint.html","shorter")}}
 
@@ -54,39 +44,39 @@ String.fromCodePoint(num1, num2, ..., numN)
 
 ```js
 if (!String.fromCodePoint) (function(stringFromCharCode) {
-    var fromCodePoint = function(_) {
-      var codeUnits = [], codeLen = 0, result = "";
-      for (var index=0, len = arguments.length; index !== len; ++index) {
-        var codePoint = +arguments[index];
-        // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
-        // The surrounding `!(...)` is required to correctly handle `NaN` cases
-        // The (codePoint>>>0) === codePoint clause handles decimals and negatives
-        if (!(codePoint < 0x10FFFF && (codePoint>>>0) === codePoint))
-          throw RangeError("Invalid code point: " + codePoint);
-        if (codePoint <= 0xFFFF) { // BMP code point
-          codeLen = codeUnits.push(codePoint);
-        } else { // Astral code point; split in surrogate halves
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          codePoint -= 0x10000;
-          codeLen = codeUnits.push(
-            (codePoint >> 10) + 0xD800,  // highSurrogate
-            (codePoint % 0x400) + 0xDC00 // lowSurrogate
-          );
-        }
-        if (codeLen >= 0x3fff) {
-          result += stringFromCharCode.apply(null, codeUnits);
-          codeUnits.length = 0;
-        }
-      }
-      return result + stringFromCharCode.apply(null, codeUnits);
-    };
-    try { // IE 8 only supports `Object.defineProperty` on DOM elements
-      Object.defineProperty(String, "fromCodePoint", {
-        "value": fromCodePoint, "configurable": true, "writable": true
-      });
-    } catch(e) {
-      String.fromCodePoint = fromCodePoint;
-    }
+    var fromCodePoint = function(_) {
+      var codeUnits = [], codeLen = 0, result = "";
+      for (var index=0, len = arguments.length; index !== len; ++index) {
+        var codePoint = +arguments[index];
+        // correctly handles all cases including `NaN`, `-Infinity`, `+Infinity`
+        // The surrounding `!(...)` is required to correctly handle `NaN` cases
+        // The (codePoint>>>0) === codePoint clause handles decimals and negatives
+        if (!(codePoint < 0x10FFFF && (codePoint>>>0) === codePoint))
+          throw RangeError("Invalid code point: " + codePoint);
+        if (codePoint <= 0xFFFF) { // BMP code point
+          codeLen = codeUnits.push(codePoint);
+        } else { // Astral code point; split in surrogate halves
+          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+          codePoint -= 0x10000;
+          codeLen = codeUnits.push(
+            (codePoint >> 10) + 0xD800,  // highSurrogate
+            (codePoint % 0x400) + 0xDC00 // lowSurrogate
+          );
+        }
+        if (codeLen >= 0x3fff) {
+          result += stringFromCharCode.apply(null, codeUnits);
+          codeUnits.length = 0;
+        }
+      }
+      return result + stringFromCharCode.apply(null, codeUnits);
+    };
+    try { // IE 8 only supports `Object.defineProperty` on DOM elements
+      Object.defineProperty(String, "fromCodePoint", {
+        "value": fromCodePoint, "configurable": true, "writable": true
+      });
+    } catch(e) {
+      String.fromCodePoint = fromCodePoint;
+    }
 }(String.fromCharCode));
 ```
 
@@ -123,7 +113,7 @@ String.fromCodePoint(NaN);      // RangeError
 
 ```js
 String.fromCharCode(0xD83C, 0xDF03); // Code Point U+1F303 "Night with
-String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
+String.fromCharCode(55356, 57091);   // Stars" == "\uD83C\uDF03"
 ```
 
 一方、 `String.fromCodePoint()` はコードポイント (UTF-32 のコードユニットに相当) を指定することで、 4 バイトの補助文字や、一般的な 2 バイトの BMP 文字を返すことができます。

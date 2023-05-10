@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getUint32
 ---
+
 {{JSRef}}
 
 La méthode **`getUint32()`** permet de lire un entier non-signé sur 32 bits (type _unsigned long_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
@@ -55,15 +56,11 @@ dataview.getUint32(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}}     | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint32', 'DataView.prototype.getUint32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getUint32")}}
+{{Compat}}
 
 ## Voir aussi
 

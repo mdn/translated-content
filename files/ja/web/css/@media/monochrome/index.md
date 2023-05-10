@@ -1,15 +1,8 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.monochrome
-translation_of: Web/CSS/@media/monochrome
 ---
+
 {{CSSRef}}
 
 **`light-level`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のモノクロフレームバッファのピクセルあたりのビット数を調べるために使用することができます。
@@ -36,17 +29,17 @@ p {
 
 /* 任意のモノクロ機器 */
 @media (monochrome) {
-  p.mono {
+  p.mono {
     display: block;
-    color: #333;
-  }
+    color: #333;
+  }
 }
 
 /* 任意のモノクロでない機器 */
 @media (monochrome: 0) {
   p.no-mono {
     display: block;
-    color: #ee3636;
+    color: #ee3636;
   }
 }
 ```

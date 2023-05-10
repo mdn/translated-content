@@ -1,15 +1,6 @@
 ---
 title: '<marquee>: マーキー要素'
 slug: Web/HTML/Element/marquee
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - marquee
-browser-compat: html.elements.marquee
-translation_of: Web/HTML/Element/marquee
 ---
 
 {{deprecated_header}}

@@ -1,17 +1,6 @@
 ---
 title: 'HTML 属性: maxlength'
 slug: Web/HTML/Attributes/maxlength
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - Input
-  - リファレンス
-  - maxlength
-  - textarea
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength
-translation_of: Web/HTML/Attributes/maxlength
 ---
 
 {{HTMLSidebar}}
@@ -40,7 +29,7 @@ maxlength が指定されなかった場合、または無効な値が指定さ�
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## 関連情報
 

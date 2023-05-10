@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_define_property_object_not_extensible
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

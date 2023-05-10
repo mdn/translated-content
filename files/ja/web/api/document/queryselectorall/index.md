@@ -1,22 +1,8 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Document
-  - Finding Elements
-  - Locating Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelectorAll
-browser-compat: api.Document.querySelectorAll
-translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} の **`querySelectorAll()`** メソッドは、与えられた CSS セレクターに一致する文書中の要素のリストを示す静的な (ライブではない) {{domxref("NodeList")}} を返します。
@@ -32,13 +18,13 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selectors`
   - : {{domxref("DOMString")}} で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターは、カンマで区切って指定することができます。
 
-> **Note:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
+> **メモ:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
 
 ### 返値
 
 ライブではない {{domxref("NodeList")}} で、指定されたセレクターの少なくとも 1 つに一致する要素ごとに {{domxref("Element")}} を一つずつ含みます。または一致するものがなければ空の {{domxref("NodeList")}} です。
 
-> **Note:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> **メモ:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 

@@ -1,19 +1,11 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Object.assign
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 ---
+
 {{JSRef}}
 
-**`Object.assign()`** 方法将所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}（`Object.propertyIsEnumerable()` 返回 true）和{{jsxref("Object/hasOwnProperty", "自有", "", 1)}}（`Object.hasOwnProperty()` 返回 true）属性从一个或多个源对象复制到目标对象，返回修改后的对象。
+**`Object.assign()`** 方法将所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}（`Object.propertyIsEnumerable()` 返回 true）的{{jsxref("Object/hasOwnProperty", "自有", "", 1)}}（`Object.hasOwnProperty()` 返回 true）属性从一个或多个源对象复制到目标对象，返回修改后的对象。
 
 {{EmbedInteractiveExample("pages/js/object-assign.html")}}
 

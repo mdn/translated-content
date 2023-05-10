@@ -1,24 +1,13 @@
 ---
 title: Element.getClientRects()
 slug: Web/API/Element/getClientRects
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Method
-  - Reference
-  - clientHeight
-  - getBoundingClientRect
-  - getClientRects
-  - offsetHeight
-  - scrollHeight
-browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
+{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
 
-대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/en-US/docs/Web/HTML/Inline_elements)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
+대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/ko/docs/Web/HTML/Inline_elements)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
 
 ## 구문
 
@@ -32,7 +21,7 @@ let rectCollection = object.getClientRects();
 
 원래 Microsoft는 각각의 텍스트 _줄_ 에 대한 `TextRectangle` 객체를 반환하기 위해 이 메서드를 만들었습니다. 하지만 CSSOM 작업 초안은 이 메서드가 각각의 _테두리 박스_ 에 대한 {{DOMxRef("DOMRect")}}를 반환하도록 명세합니다. 인라인 엘리먼트의 경우 두 정의가 동일합니다. 하지만 블록 엘리먼트의 경우 Mozilla는 단 하나의 사각형만 반환합니다.
 
-{{Fx_MinVersion_Note(3.5, "Firefox 3.5는 <code>width</code>와 <code>height</code> 프로퍼티를 <code>TextRectangle</code> 객체에 추가합니다.")}}
+> **참고:** Firefox 3.5는 `width`와 `height` 속성을 `TextRectangle` 객체에 추가합니다.
 
 뷰포트 영역(또는 기타 스크롤 가능한 엘리먼트)에서 수행된 스크롤 양은 사각형을 계산할 때 고려됩니다.
 
@@ -116,29 +105,29 @@ HTML {{HtmlElement("area")}} 엘리먼트, 스스로는 어떠한 것도 렌더�
 <p>테이블의 테두리 박스가 캡션을 포함하지는 않지만, 클라이언트 사각형은 캡션을 포함합니다.</p>
 
 <div>
-  <strong>원본</strong>
-  <table>
-    <caption>캡션</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>원본</strong>
+  <table>
+    <caption>캡션</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div>
-  <strong>table의 사각형</strong>
-  <table class="withClientRectsOverlay">
-    <caption>캡션</caption>
-    <thead>
-      <tr><th>thead</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>tbody</td></tr>
-    </tbody>
-  </table>
+  <strong>table의 사각형</strong>
+  <table class="withClientRectsOverlay">
+    <caption>캡션</caption>
+    <thead>
+      <tr><th>thead</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>tbody</td></tr>
+    </tbody>
+  </table>
 </div>
 ```
 
@@ -168,23 +157,23 @@ JavaScript 코드는 `withClientRectsOverlay` CSS 클래스가 할당된 모든 
 
 ```js
 function addClientRectsOverlay(elt) {
-  /* 각 클라이언트 사각형에서 div를 절대적으로 배치하였기 때문에 div의 테두리 너비는 사각형의 너비와 동일합니다.
-     Note: 유저가 크기를 조정하거나 확대/축소하는 경우 오버레이가 제 위치를 벗어날 수 있습니다. */
-  var rects = elt.getClientRects();
-  for (var i = 0; i != rects.length; i++) {
-    var rect = rects[i];
-    var tableRectDiv = document.createElement('div');
-    tableRectDiv.style.position = 'absolute';
-    tableRectDiv.style.border = '1px solid red';
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
-    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
-    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
-    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
-    // rect.width가 테두리 너비가 되어야 하므로 콘텐츠 너비는 2px 더 작습니다.
-    tableRectDiv.style.width = (rect.width - 2) + 'px';
-    tableRectDiv.style.height = (rect.height - 2) + 'px';
-    document.body.appendChild(tableRectDiv);
+  /* 각 클라이언트 사각형에서 div를 절대적으로 배치하였기 때문에 div의 테두리 너비는 사각형의 너비와 동일합니다.
+     Note: 유저가 크기를 조정하거나 확대/축소하는 경우 오버레이가 제 위치를 벗어날 수 있습니다. */
+  var rects = elt.getClientRects();
+  for (var i = 0; i != rects.length; i++) {
+    var rect = rects[i];
+    var tableRectDiv = document.createElement('div');
+    tableRectDiv.style.position = 'absolute';
+    tableRectDiv.style.border = '1px solid red';
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    tableRectDiv.style.margin = tableRectDiv.style.padding = '0';
+    tableRectDiv.style.top = (rect.top + scrollTop) + 'px';
+    tableRectDiv.style.left = (rect.left + scrollLeft) + 'px';
+    // rect.width가 테두리 너비가 되어야 하므로 콘텐츠 너비는 2px 더 작습니다.
+    tableRectDiv.style.width = (rect.width - 2) + 'px';
+    tableRectDiv.style.height = (rect.height - 2) + 'px';
+    document.body.appendChild(tableRectDiv);
   }
 }
 

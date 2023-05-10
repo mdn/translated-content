@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/of
 ---
+
 {{JSRef}}
 
 La methode **`Array.of()`** permet de créer une nouvelle instance d'objet `Array` à partir d'un nombre variable d'arguments, quels que soient leur nombre ou leur type.
@@ -73,14 +74,11 @@ if (!Array.of) {
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.of', 'Array.of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.of', 'Array.of')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Voir aussi
 

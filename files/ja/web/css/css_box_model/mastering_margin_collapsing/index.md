@@ -1,13 +1,8 @@
 ---
 title: マージンの相殺の習得
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 ブロックの[上端](/ja/docs/Web/CSS/margin-top)と[下端](/ja/docs/Web/CSS/margin-bottom)のマージンは、それぞれのマージンの最も大きい寸法 (または等しい場合はいずれか 1 つ) の単一のマージンに結合される (折り畳まれる、collapsed) ことがあり、**マージンの相殺**という動作として知られています。なお、[浮動](/ja/docs/Web/CSS/float)要素と[絶対位置指定](/ja/docs/Web/CSS/position#types_of_positioning)要素では折り畳まれません。
@@ -27,8 +22,9 @@ translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 - このルールはマージン幅がゼロの場合にも当てはまるので、親要素のマージンがゼロであるかどうかに関わらず、先頭/末尾の子要素のマージンは最終的に、 (上のルールに従って) その親要素より外側に出ます。
 - 負のマージンが含まれる場合には、相殺されるマージンの大きさは、一番大きな正のマージンと一番小さな (もっともマイナス寄りの) マージンの合計値になります。
 - すべてのマージンが負の場合、折りたたまれたマージンのサイズは、最小の (最もマイナス寄りの) マージンとなります。これは、隣接する要素と入れ子になった要素の両方に適用されます。
+- マージンの相殺は、縦方向にのみ関係します。
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -64,10 +60,24 @@ p {
 
 ## 仕様書
 
-| 仕様書                                                                     | 状態                | 備考     |
-| -------------------------------------------------------------------------- | ------------------- | -------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 
-- {{css_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

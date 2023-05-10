@@ -1,15 +1,10 @@
 ---
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
-tags:
-  - API
-  - NavigationPreloadManager
-  - プロパティ
-  - サービスワーカー
-  - ワーカー
-browser-compat: api.ServiceWorkerRegistration.navigationPreload
-translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`navigationPreload`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカー登録に関連する {{domxref("NavigationPreloadManager")}} を返します。

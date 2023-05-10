@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/ObjectStoreNames
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété **`objectStoreNames`** de l'interface {{domxref("IDBTransaction")}} renvoie la {{domxref("DOMStringList","liste")}} des noms des magasins d'objets de la {{domxref("IDBTransaction","transaction")}} .
@@ -24,13 +25,11 @@ Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB2', '#dom-idbtransaction-objectstorenames', 'db')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBTransaction.objectStoreNames")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -40,4 +39,4 @@ Une liste {{domxref("DOMStringList")}} contenant les noms des magasins d'objets 
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

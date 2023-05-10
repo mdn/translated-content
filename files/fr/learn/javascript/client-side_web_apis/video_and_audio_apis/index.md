@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
@@ -286,7 +287,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     media.addEventListener('ended', stopMedia);
     ```
 
-    L'événement {{event("click")}} est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement {{event("ended")}}, nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
+    L'événement [`click`](/fr//docs/Web/API/Element/click_event) est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement [`ended`](/fr//docs/Web/API/HTMLMediaElement/ended_event), nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
 
 2. Ensuite, définissons `stopMedia()` — ajoutez ce qui suit après la fonction `playPauseMedia()` :
 
@@ -357,7 +358,7 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
     1. Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
     2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
     3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
-    4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}. Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
+    4. Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant [`setInterval()`](/fr/docs/Web/API/setInterval). Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler [`clearInterval()`](/fr/docs/Web/API/clearInterval) en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
 
 3. Pour en finir avec cette section, nous devons définir les fonctions `windBackward()` et `windForward()` invoquées dans les appels `setInterval()`. Ajoutez ce qui suit après les deux fonctions précédentes :
 
@@ -390,7 +391,7 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
 
 #### Mettre à jour le temps écoulé
 
-La dernière chose à implémenter pour notre lecteur multimédia est l'affichage du temps écoulé. Pour ce faire, nous allons exécuter une fonction pour mettre à jour le temps affiché à chaque fois que l'événement {{event("timeupdate")}} est déclenché sur l'élément `<video>`. La fréquence à laquelle cet événement se déclenche dépend de votre navigateur, de la puissance de votre CPU, etc ([voir post stackoverflow](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+La dernière chose à implémenter pour notre lecteur multimédia est l'affichage du temps écoulé. Pour ce faire, nous allons exécuter une fonction pour mettre à jour le temps affiché à chaque fois que l'événement [`timeupdate`](/fr//docs/Web/API/HTMLMediaElement/timeupdate_event) est déclenché sur l'élément `<video>`. La fréquence à laquelle cet événement se déclenche dépend de votre navigateur, de la puissance de votre CPU, etc ([voir post stackoverflow](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Ajoutez la ligne `addEventListener()` suivante à la suite des autres :
 
@@ -484,13 +485,3 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/HTML/Formats_pour_audio_video).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données du serveur](/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data)
-- [APIs tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage)

@@ -1,15 +1,8 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - API
-  - HTML DOM
-  - 履歴 API
-  - インターフェイス
-  - ウェブ
-browser-compat: api.History
-translation_of: Web/API/History
 ---
+
 {{ APIRef("History API") }}
 
 **`History`** インターフェイスで、ブラウザーの*セッション履歴*、つまり現在のページが読み込まれたタブまたはフレームで訪問したページを操作することができます。

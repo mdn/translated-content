@@ -1,23 +1,8 @@
 ---
 title: JavaScript で queueMicrotask() によるマイクロタスクの使用
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - バッチ
-  - ガイド
-  - HTML DOM
-  - JavaScript
-  - マイクロタスク
-  - キュー
-  - リファレンス
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - ワーカー
-  - 非同期
-  - queueMicrotask
-translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 **マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/EventLoop#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。
@@ -52,7 +37,7 @@ JavaScript の[プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Pr
 
 次に、マイクロタスクが {{domxref("queueMicrotask()")}} を呼び出してキューにさらにマイクロタスクを追加すると、それらの新しく追加されたマイクロタスクは次のタスクが実行される前に*実行*されます。これは、イベントループが、たとえ追加され続けても、キューに何も残らなくなるまでマイクロタスクを呼び続けるからです。
 
-> **Warning:** マイクロタスクはそれ自身がさらにマイクロタスクをキューに入れることができ、イベントループはキューが空になるまでマイクロタスクを処理し続けるので、イベントループがマイクロタスクを延々と処理し続けるという現実的なリスクが存在します。再帰的にマイクロタスクを追加する方法には注意が必要です。
+> **警告:** マイクロタスクはそれ自身がさらにマイクロタスクをキューに入れることができ、イベントループはキューが空になるまでマイクロタスクを処理し続けるので、イベントループがマイクロタスクを延々と処理し続けるという現実的なリスクが存在します。再帰的にマイクロタスクを追加する方法には注意が必要です。
 
 ## マイクロタスクの使用
 

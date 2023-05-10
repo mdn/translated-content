@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 tags:
   - Error
   - JavaScript
@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/Stack
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété non-standard **`stack`** des objets {{jsxref("Error")}} fournit une trace des fonctions qui ont été appelées, dans quel ordre, depuis quelle ligne de quel fichier, et avec quels arguments. La chaine de pile remonte des appels les plus récents jusqu'aux plus anciens, ramenant à l'appel original de la portée globale.
@@ -55,7 +56,7 @@ Le code HTML suivant démontre l'utilisation de la propriété `stack`.
 
 En supposant que ce code a été enregistré comme `C:\exemple.html` sur un système de fichier Windows, il produira un message d'alerte dans une nouvelle fenêtre avec le texte suivant :
 
-À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne  ({{bug(762556)}}) :
+À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne ({{bug(762556)}}) :
 
 ```html
 trace@file:///C:/exemple.html:9:17
@@ -85,7 +86,7 @@ a("premier appel, premierarg")@file:///C:/exemple.html:19
 
 ### Pile d'un code evalué
 
-À partir de Firefox 30 {{geckoRelease("30")}}, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
+À partir de Firefox 30, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
 
 ```js
 try {
@@ -108,7 +109,7 @@ try {
 // @file:///C:/exemple.html:7:6
 ```
 
-Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger/How_to/Debug_eval_sources) dans les docs [Débogueur](https://developer.mozilla.org/fr-FR/docs/Tools/Debugger), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
+Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
 
 ## Spécifications
 
@@ -116,7 +117,7 @@ Ne fait partie d'aucune spécification. Non-standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.stack")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,8 @@
 ---
 title: 'レシピ: メディアオブジェクト'
 slug: Web/CSS/Layout_cookbook/Media_objects
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - メディアオブジェクト
-  - 料理帳
-  - fit-content
-  - float
-  - グリッド
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
+
 {{CSSRef}}
 
 *メディアオブジェクト*は、ウェブ上のいたるところで見られるパターンです。 [Nicole Sullivan によって命名](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)され、一方の側に画像を、そして他方の側に説明的なテキストを有する Facebook の投稿やツイートのような 2 列のボックスを指します。
@@ -32,7 +23,7 @@ translation_of: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
@@ -54,7 +45,7 @@ translation_of: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 3000)}}
 
-> **Callout:**
+> **注目:**
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 

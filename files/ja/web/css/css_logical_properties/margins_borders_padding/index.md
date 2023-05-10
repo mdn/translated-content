@@ -1,14 +1,8 @@
 ---
 title: マージン、境界、パディングの論理的プロパティ
 slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - ガイド
-  - 概念
-  - 書字方向
-translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
+
 {{CSSRef}}
 
 [論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) では、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義します。

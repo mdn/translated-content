@@ -1,44 +1,40 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
+page-type: web-api-instance-property
 translation_of: Web/API/SharedWorker/port
+browser-compat: api.SharedWorker.port
+l10n:
+  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
+
 {{APIRef("Web Workers API")}}
 
-La propriété **`port`** de l'interface {{domxref("SharedWorker")}} retourne un objet {{domxref("MessagePort")}} utilisé pour contrôler et communiquer avec le _worker_ partagé.
-
-## Syntaxe
-
-```js
-myWorker.port;
-```
+La propriété **`port`** de l'interface [`SharedWorker`](/fr/docs/Web/API/SharedWorker) retourne un objet [`MessagePort`](/fr/docs/Web/API/MessagePort) utilisé pour contrôler et communiquer avec le <i lang="en">worker</i> partagé.
 
 ### Valeur
 
-Un objet {{domxref("MessagePort")}}.
+Un objet [`MessagePort`](/fr/docs/Web/API/MessagePort).
 
 ## Exemple
 
-L'exemple de code suivant montre la création de l'objet `SharedWorker` en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Plusieurs scriptes peuvent accéder au _worker_ avec l'objet {{domxref("MessagePort")}} accessible grâce à la propriété `SharedWorker.port` — le port est ouvert avec la méthode `start()`.
+L'exemple de code suivant montre la création d'un objet `SharedWorker` à l'aide du constructeur [`SharedWorker()`](/fr/docs/Web/API/SharedWorker/SharedWorker). Plusieurs scripts peuvent accéder au <i lang="en">worker</i> avec l'objet [`MessagePort`](/fr/docs/Web/API/MessagePort) accessible grâce à la propriété `SharedWorker.port`. Le port est ouvert avec la méthode `start()`.
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 myWorker.port.start();
 ```
 
-Pour un exemple complet, voir [(en) Exemple basique de _worker_ partagé](https://github.com/mdn/simple-shared-worker) ([(en) démonstration d'un _worker_ partagé](https://mdn.github.io/simple-shared-worker/).)
+Pour un exemple complet, voir [un exemple simple de <i lang="en">worker</i> partagé](https://github.com/mdn/dom-examples/tree/master/web-workers/simple-shared-worker) ([exécuter le <i lang="en">worker</i> correspondant](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)).
 
 ## Spécifications
 
-| Spécifications                                                                                           | Status                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.SharedWorker.port")}}
+{{Compat}}
 
 ## Voir aussi
 
-- L'interface {{domxref("SharedWorker")}} auquel il appartient.
-- [(en) Une autre démonstration de multiplication.](https://anlexn.github.io/shared-worker-mdn/)
+- [`SharedWorker`](/fr/docs/Web/API/SharedWorker)

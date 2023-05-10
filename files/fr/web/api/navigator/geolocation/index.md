@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Navigator/geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Navigator.geolocation`** est une propriété en lecture seule, qui retoune un objet {{domxref("Geolocation")}} donnant accès aux contenus web de localisation de l'appareil. Ceci permet à un site Internet ou à une application d'offrir des résultats personnalisés basés sur la localisation des utilisateurs.
@@ -23,13 +24,11 @@ geo = navigator.geolocation
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Geolocation', '#navi-geo', 'Navigator.geolocation')}} | {{Spec2('Geolocation')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## Voir aussi
 

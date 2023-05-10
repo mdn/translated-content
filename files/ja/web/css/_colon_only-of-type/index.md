@@ -1,16 +1,8 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-browser-compat: css.selectors.only-of-type
-translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`:only-of-type`** [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、同じ型の兄弟要素がない要素を表します。
@@ -22,11 +14,13 @@ p:only-of-type {
 }
 ```
 
-> **Note:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
+> **メモ:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-of-type
+```
 
 ## 例
 

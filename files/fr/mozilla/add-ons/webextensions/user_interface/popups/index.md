@@ -6,6 +6,7 @@ tags:
   - interface utilisateur
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
+
 {{AddonSidebar}}
 
 Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
@@ -32,7 +33,7 @@ Le fichier HTML est inclus dans la WebExtension et spécifié en partie à la cl
 
 Vous pouvez demander au navigateur d'inclure une feuille de style dans votre fenêtre contextuelle qui la rendra compatible avec l'interface utilisateur du navigateur. Pour ce faire, ajoutez `"browser_style": true` dans la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
 
-Les popups ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle ils peuvent charger des ressources et interdire certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)  pour plus de détails à ce sujet.
+Les popups ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle ils peuvent charger des ressources et interdire certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails à ce sujet.
 
 ## Déboguer des fenêtres pop-up
 

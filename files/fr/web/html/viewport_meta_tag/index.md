@@ -10,6 +10,7 @@ tags:
   - viewport
 translation_of: Web/HTML/Viewport_meta_tag
 ---
+
 Le [_viewport_](/fr/docs/Glossary/Viewport) du navigateur est la zone de la fenêtre dans laquelle le contenu web peut être vu. Souvent, cette zone n'a pas la même taille que la page rendue, auquel cas le navigateur fournit des barres de défilement pour que l'utilisateur et l'utilisatrice puissent faire défiler la page et accéder à tout le contenu.
 
 ## Contexte
@@ -82,10 +83,6 @@ Si vous voulez savoir quels appareils mobiles et tablettes ont quelles largeurs 
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                           | Commentaire                                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}} | {{Spec2('CSS3 Device')}} | Décrit de manière non normative l'élément META Viewport |
-
-Il existe manifestement une demande pour la métabalise viewport, puisqu'elle est prise en charge par la plupart des navigateurs mobiles populaires et utilisée par des milliers de sites web. Il serait bon de disposer d'une véritable norme permettant aux pages web de contrôler les propriétés de la fenêtre d'affichage. Au fur et à mesure que le processus de normalisation avance, Mozilla s'efforcera de se tenir au courant de tout changement.
+{{Specifications}}
 
 {{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}

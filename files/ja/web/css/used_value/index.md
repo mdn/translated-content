@@ -1,19 +1,15 @@
 ---
 title: 使用値
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - リファレンス
-  - レイアウト
-translation_of: Web/CSS/used_value
 ---
+
 {{CSSRef}}
 
 **使用値** (used value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、[計算値](/ja/docs/Web/CSS/computed_value)で行われたすべての計算が実行された後の値です。
 
 {{glossary("user agent", "ユーザーエージェント")}}が計算を終了した後、すべての CSS プロパティは使用値を持ちます。長さ ({{cssxref("width")}} や {{cssxref("line-height")}} など) の使用値はピクセル数です。一括指定プロパティ ({{cssxref("background")}} など) の使用値は、各成分 ({{cssxref("background-color")}} や {{cssxref("background-size")}} など) のプロパティに、 {{cssxref("position")}} や {{cssxref("float")}} が加味されたものと一致します。
 
-> **Note:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
+> **メモ:** DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/computed_value)または[使用値](/ja/docs/Web/CSS/used_value)のどちらかになります。
 
 ## 例
 
@@ -64,9 +60,9 @@ div {
 
 ```js
 function updateUsedWidth(id) {
-  var div = document.querySelector(`#${id}`);
-  var par = div.querySelector('.show-used-width');
-  var wid = window.getComputedStyle(div)["width"];
+  const div = document.getElementById(id);
+  const par = div.querySelector('.show-used-width');
+  const wid = window.getComputedStyle(div)["width"];
   par.textContent = `Used width: ${wid}.`;
 }
 
@@ -98,33 +94,25 @@ CSS 2.0 では、プロパティの計算の最後のステップとして*計�
 
 ## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.2")}}</td>
-      <td>変更なし</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}}
-      </td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## 関連情報
 
 - {{domxref("window.getComputedStyle")}}
-- {{CSS_key_concepts}}
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/At-rule)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

@@ -1,22 +1,9 @@
 ---
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
-tags:
-  - API
-  - CSS セレクター
-  - DOM
-  - Element
-  - Finding Elements
-  - メソッド
-  - リファレンス
-  - Searching Elements
-  - Selecting Elements
-  - セレクター
-  - querySelector
-browser-compat: api.Element.querySelectorAll
-translation_of: Web/API/Element/querySelectorAll
 original_slug: Web/API/ParentNode/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} の **`querySelectorAll()`** メソッドは、静的な (ライブではない) {{domxref("NodeList")}} で、メソッド呼び出しの時点でそのオブジェクトの子孫にあたる要素のうち、一連のセレクターに一致するもののリストを返します。
@@ -32,13 +19,13 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selectors`
   - : 照合する 1 つまたは複数のセレクターを含む {{domxref("DOMString")}}。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターを指定する際は、カンマで区切ります。
 
-> **Note:** 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は [Escaping special characters](#escaping_special_characters) を参照してください。
+> **メモ:** 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は [Escaping special characters](#escaping_special_characters) を参照してください。
 
 ### 返値
 
 ライブではない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。
 
-> **Note:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> **メモ:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
@@ -116,7 +103,7 @@ highlightedItems.forEach(function(userItem) {
 });
 ```
 
-> **Note:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
+> **メモ:** `NodeList` は、厳密には配列ではありません。つまり、`slice`、`some`、`map` などの配列メソッドを持っていません。これを配列に変換するには、 `Array.from(nodeList)` と実行してください。
 
 ## ユーザーのメモ
 

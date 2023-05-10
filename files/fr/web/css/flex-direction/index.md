@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).
@@ -52,9 +53,13 @@ flex-direction: unset;
 - `column-reverse`
   - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -115,15 +120,11 @@ Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-rev
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## Voir aussi
 

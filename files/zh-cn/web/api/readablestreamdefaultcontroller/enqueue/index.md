@@ -1,15 +1,8 @@
 ---
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - enqueue
-translation_of: Web/API/ReadableStreamDefaultController/enqueue
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定数据块送入到关联的流中。

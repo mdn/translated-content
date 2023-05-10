@@ -1,16 +1,8 @@
 ---
 title: HTMLAnchorElement.rel
 slug: Web/API/HTMLAnchorElement/rel
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.rel
-translation_of: Web/API/HTMLAnchorElement/rel
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement.rel`** プロパティは {{htmlattrxref("rel", "a")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("a")}} 要素で表されるリソースと現在の文書との関係を示します。

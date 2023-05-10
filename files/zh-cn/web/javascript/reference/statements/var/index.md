@@ -1,13 +1,8 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/var
 ---
+
 {{jsSidebar("Statements")}}
 
 **`var` 语句** 用于声明一个函数范围或全局范围的变量，并可将其初始化为一个值（可选）。
@@ -36,7 +31,7 @@ var { bar } = foo; // foo = { bar:10, baz:12 };
 
 无论在何处声明变量，都会在执行任何代码之前进行处理。这被称为{{Glossary("Hoisting", "变量提升")}}，我们将在下面进一步讨论。
 
-用 `var` 声明的变量的作用域是它当前的执行上下文及其闭包（嵌套函数），或者对于声明在任何函数外的变量来说是全局。使用 `var` 重复声明 JavaScript 变量并不会抛出错误（即使在严格模式 (strict mode) 下），同时，变量也不会丢失其值，直到调用其它的赋值操作。
+用 `var` 声明的变量的作用域是它当前的执行上下文及其闭包（嵌套函数），或者对于声明在任何函数外的变量来说是全局。使用 `var` 重复声明 JavaScript 变量并不会抛出错误（即使在严格模式 (strict mode) 下），同时，变量也不会丢失其值，直到调用其他的赋值操作。
 
 ```js
 'use strict';
@@ -185,7 +180,7 @@ console.log(x, y); // 0 1
 
 // 在非严格模式下：
 // x 是全局变量。
-// y 是隐式声明的全局变量。 
+// y 是隐式声明的全局变量。 
 ```
 
 在严格模式下运行相同的示例：

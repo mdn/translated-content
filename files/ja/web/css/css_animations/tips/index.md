@@ -1,14 +1,8 @@
 ---
 title: CSS アニメーションのヒントとコツ
 slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations/Tips
 ---
+
 {{CSSRef}}
 
 CSS アニメーションを使えば、文書やアプリを構成する要素に、驚くようなことができるようになります。しかし、当たり前のようで当たり前でないことや、すぐには思いつかないような賢い方法があるかもしれません。この記事では、止まってしまったアニメーションを再び動かす方法など、作業を楽にするために見つけたヒントをまとめています。
@@ -115,25 +109,25 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 ```css
 .slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  animation-name: none;
 }
 
 @keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 ```
 
@@ -146,10 +140,10 @@ let watchme = document.getElementById('watchme')
 
 watchme.className = 'slidein'
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
+  watchme.className = 'slidein stopped'
 }
 watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
+  watchme.addEventListener('animationiteration', listener, false)
 )
 ```
 

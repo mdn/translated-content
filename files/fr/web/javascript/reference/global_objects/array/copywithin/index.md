@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/copyWithin
 ---
+
 {{JSRef}}
 
 La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
@@ -156,15 +157,11 @@ if (!Array.prototype.copyWithin) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## Voir aussi
 

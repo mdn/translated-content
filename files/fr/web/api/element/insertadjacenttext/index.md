@@ -10,6 +10,7 @@ tags:
   - Texte
 translation_of: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 La méthode `insertAdjacentText()` insère un noeud texte donné à une position donnée par rapport à l'élément sur lequel elle est appelé.
@@ -88,15 +89,13 @@ if (!Element.prototype.insertAdjacentText)
   }
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.insertAdjacentText")}}
+{{Compat}}
 
 ## Voir aussi
 

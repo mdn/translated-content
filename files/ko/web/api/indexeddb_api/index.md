@@ -1,15 +1,8 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB는 파일이나 블롭 등 많은 양의 구조화된 데이터를 클라이언트에 저장하기 위한 로우 레벨 API입니다. IndexedDB API는 인덱스를 사용해 데이터를 고성능으로 탐색할 수 있습니다. [Web Storage](/ko/docs/Web/API/Web_Storage_API)는 적은 양의 데이터를 저장하는데 유용하지만 많은 양의 구조화된 데이터에는 적합하지 않은데, 이런 상황에서 IndexedDB를 사용할 수 있습니다. 이 페이지는 MDN에서 IndexedDB에 대한 내용을 다루는 시작 문서로 전체 API 참고서, 사용 안내서, 세부적인 브라우저 지원 상황, 그리고 핵심 개념에 대한 설명을 제공하는 링크를 찾을 수 있습니다.
@@ -21,7 +14,7 @@ IndexedDB는 파일이나 블롭 등 많은 양의 구조화된 데이터를 클
 
 IndexedDB는 SQL을 사용하는 관계형 데이터베이스(RDBMS)와 같이 트랜잭션을 사용하는 데이터베이스 시스템입니다. 그러나 IndexedDB는 RDBMS의 고정컬럼 테이블 대신 JavaScript 기반의 객체지향 데이터베이스입니다. IndexedDB의 데이터는 인덱스 **키**를 사용해 저장하고 검색할 수 있으며, [구조화된 복사 알고리즘](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)을 지원하는 객체라면 모두 저장할 수 있습니다. 사용하려면 데이터베이스 스키마를 지정하고, 데이터베이스와 통신을 연 후에, 일련의 **트랜잭션**을 통해 데이터를 가져오거나 업데이트해야 합니다.
 
-- [IndexedDB 주요 특성 및 기본 용어 (en-US)](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology)에 대해 더 알아보세요.
+- [IndexedDB 주요 특성 및 기본 용어 (en-US)](/ko/docs/Web/API/IndexedDB_API/Basic_Terminology)에 대해 더 알아보세요.
 - [IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB) 안내서를 통해 IndexedDB의 기초적인 비동기 사용법을 배워보세요.
 - [서비스 워커를 사용해 PWA가 오프라인에서 동작하게 만들기](/ko/docs/Web/Progressive_web_apps/Offline_Service_workers) 문서에서 IndexedDB를 사용해 오프라인 데이터를 저장하고, 서비스 워커를 사용해 오프라인 자산을 저장하는 방법을 살펴보세요.
 
@@ -33,11 +26,11 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ### 저장 용량 한도와 제거 기준
 
-하나의 종류 또는 다른 종류의 데이터를 클라이언트 측(즉, 로컬 디스크 상)에 저장하는 웹 기술은 많습니다. IndexedDB는 가장 일반적으로 언급되는 것입니다. 브라우저가 얼마만큼의 공간을 web data storage에 할당할지 그리고 용량이 한계에 도달했을 때 무엇을 지울지의 프로세스는 간단하지 않고, 브라우저마다 다릅니다. [브라우저 저장 공간 제한과 축출 기준 (en-US)](/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)을 Firefox의 경우에 이것이 어떻게 작동하는지 설명하려고 시도합니다.
+하나의 종류 또는 다른 종류의 데이터를 클라이언트 측(즉, 로컬 디스크 상)에 저장하는 웹 기술은 많습니다. IndexedDB는 가장 일반적으로 언급되는 것입니다. 브라우저가 얼마만큼의 공간을 web data storage에 할당할지 그리고 용량이 한계에 도달했을 때 무엇을 지울지의 프로세스는 간단하지 않고, 브라우저마다 다릅니다. [브라우저 저장 공간 제한과 축출 기준 (en-US)](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)을 Firefox의 경우에 이것이 어떻게 작동하는지 설명하려고 시도합니다.
 
 ## 인터페이스
 
-데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/en-US/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/en-US/docs/Web/API/IDBFactory/open)을 호춣해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
+데이터베이스에 접속하기 위해서는 [window](/ko/docs/Web/API/Window) 객체의 [`indexedDB` (en-US)](/ko/docs/Web/API/indexedDB) 속성에서 [`open()` (en-US)](/ko/docs/Web/API/IDBFactory/open)을 호출해야 합니다. 이 메소드는 {{domxref("IDBRequest")}} 객체를 반환합니다. 비동기 작업은 {{domxref("IDBRequest")}} 객체에서 이벤트를 발생시켜 호출한 애플리케이션과 통신합니다.
 
 ### 데이터베이스에 연결하기
 
@@ -65,7 +58,7 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 - {{domxref("IDBKeyRange")}}
   - : 특정 범위의 데이터베이스에서 데이터를 검색할 때 사용할 수 있는 키 범위를 정의합니다.
 - {{domxref("IDBLocaleAwareKeyRange")}} {{Non-standard_inline}}
-  - : 특정 인덱스에 대해 지정된 로케일 규칙에 따라 정렬된 특정 범위의 데이터베이스에서 데이터를 검색하는 데 사용할 수 있는 키 범위를 정의합니다. ([`createIndex()`'의 선택적 파라미터 (en-US)](/en-US/docs/Web/API/IDBObjectStore/createIndex#parameters)를 보세요) 이 인터페이스는 2.0 사양의 일부가 아닙니다.
+  - : 특정 인덱스에 대해 지정된 로케일 규칙에 따라 정렬된 특정 범위의 데이터베이스에서 데이터를 검색하는 데 사용할 수 있는 키 범위를 정의합니다. ([`createIndex()`'의 선택적 파라미터 (en-US)](/ko/docs/Web/API/IDBObjectStore/createIndex#parameters)를 보세요) 이 인터페이스는 2.0 사양의 일부가 아닙니다.
 
 ### 사용자 정의 이벤트 인터페이스
 
@@ -76,13 +69,11 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ## 예시
 
-- [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
+- [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
 
 ## 명세
 
-| 명세                                                      |
-| -------------------------------------------------------- |
-| [Indexed Database API](https://w3c.github.io/IndexedDB/) |
+{{Specifications}}
 
 ## See also
 

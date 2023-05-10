@@ -1,18 +1,15 @@
 ---
-title: Node.previousSibling
+title: "Node: previousSibling プロパティ"
 slug: Web/API/Node/previousSibling
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-browser-compat: api.Node.previousSibling
-translation_of: Web/API/Node/previousSibling
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`previousSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親ノードの {{domxref("Node.childNodes", "childNodes")}} リスト内で、直前にある ノードを返します。指定されたノードがリストの先頭にあった倍は `null` を返します。
 
-> **Note:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
+> **メモ:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
 > そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や `Node.previousSibling` を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
@@ -35,11 +32,11 @@ translation_of: Web/API/Node/previousSibling
 この例では、一連の `img` 要素が互いに隣り合っており、その間にホワイトスペースがありません。
 
 ```html
-<img id="b0"><img id="b1"><img id="b2">
+<img id="b0" /><img id="b1" /><img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b1").previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
@@ -48,17 +45,17 @@ document.getElementById("b2").previousSibling.id; // "b1"
 この例では、 `img` 要素の間にホワイトスペースのテキストノード（改行）があります。
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling; // #text
 document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
-document.getElementById("b2").previousSibling;                 // #text
-document.getElementById("b2").previousSibling.id;              // undefined
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
 ```
 
 ## 仕様書

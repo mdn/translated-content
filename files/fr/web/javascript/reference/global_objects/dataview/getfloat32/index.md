@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getFloat32
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getFloat32
 ---
+
 {{JSRef}}
 
 La méthode **`getFloat32()`** permet de lire un nombre flottant signé sur 32 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
@@ -55,15 +56,11 @@ dataview.getFloat32(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                             | Commentaires                                    |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getfloat32', 'DataView.prototype.getFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getFloat32")}}
+{{Compat}}
 
 ## Voir aussi
 

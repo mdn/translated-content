@@ -6,6 +6,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feImage
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feImage>`** extrait les données d'une image d'une source externe et retourne les pixels récupérés en sortie (autrement dit, si l'image récupérée est une image SVG, elle sortira comme raster)
@@ -55,14 +56,11 @@ Cet élément implémente l'interface {{domxref("SVGFEImageElement")}}.
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("Filters 1.0", "#feImageElement", "&lt;feImage&gt;")}}         | {{Spec2("Filters 1.0")}} | Ajoute l'attribut {{SVGAttr("href")}} et déprécie {{SVGAttr("xlink:href")}}. Ajoute l'attribut {{SVGAttr("crossorigin")}}. |
-| {{SpecName("SVG1.1", "filters.html#feImageElement", "&lt;feImage&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale                                                                                                                              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.feImage")}}
+{{Compat}}
 
 ## Voir aussi
 

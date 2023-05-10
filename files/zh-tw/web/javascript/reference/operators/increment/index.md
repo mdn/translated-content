@@ -1,13 +1,8 @@
 ---
 title: 遞增運算子 (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.increment
 ---
+
 {{jsSidebar("Operators")}}
 
 遞增運算子 (`++`) 遞增（加一）它的運算元並將結果回傳。
@@ -23,9 +18,9 @@ x++
 
 ## 詳細說明
 
-若將遞增運算子作為後綴（例如 `x++`），則會先回傳原本的值，在進行遞增。
+若將遞增運算子作為後綴（例如 `x++`），則會先回傳原本的值，再進行遞增。
 
-若作為前綴（例如 `++x`），則會先進行遞增，在將遞增後的結果回傳。
+若作為前綴（例如 `++x`），則會先進行遞增，再將遞增後的結果回傳。
 
 ## 範例
 

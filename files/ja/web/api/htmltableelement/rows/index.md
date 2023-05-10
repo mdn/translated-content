@@ -1,20 +1,8 @@
 ---
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-  - 表の行
-  - rows
-browser-compat: api.HTMLTableElement.rows
-translation_of: Web/API/HTMLTableElement/rows
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLTableElement")}} の **`rows`** プロパティは読み取り専用で、表のすべての行を表す生きた {{domxref("HTMLCollection")}} を返し、すべての {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("tbody")}} 要素に含まれる行を示します。

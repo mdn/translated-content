@@ -1,20 +1,8 @@
 ---
 title: ':any-link'
 slug: Web/CSS/:any-link
-tags:
-  - ':any-link'
-  - CSS
-  - 実験的
-  - レイアウト
-  - リンク
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - ハイパーリンク
-browser-compat: css.selectors.any-link
-translation_of: Web/CSS/:any-link
 ---
+
 {{CSSRef}}
 
 **`:any-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、訪問の有無とは独立したソースアンカーとして振る舞う要素を表します。言い換えれば、 `href` 属性を持つすべての {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を選択します。つまり、 {{cssxref(":link")}} または {{cssxref(":visited")}} に一致するすべての要素を選択します。
@@ -28,7 +16,9 @@ translation_of: Web/CSS/:any-link
 
 ## 構文
 
-{{csssyntax}}
+```
+:any-link
+```
 
 ## 例
 

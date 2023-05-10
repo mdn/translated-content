@@ -1,15 +1,8 @@
 ---
 title: <string>
 slug: Web/CSS/string
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/string
 ---
+
 {{CSSRef}}
 
 **`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
@@ -26,7 +19,7 @@ translation_of: Web/CSS/string
 
 ただし、改行を行うためには、{{cssxref("white-space")}} プロパティに適切な値を設定する必要があります。
 
-> **Note:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
+> **メモ:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
 
 ## 例
 

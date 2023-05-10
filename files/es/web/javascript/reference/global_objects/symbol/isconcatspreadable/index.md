@@ -1,8 +1,11 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-browser-compat: javascript.builtins.Symbol.isConcatSpreadable
+original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
+l10n:
+  sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.isConcatSpreadable`** se utiliza para configurar si un objeto debe ser aplanado a sus elementos del array cuando se utiliza el método {{jsxref("Array.prototype.concat()")}}.

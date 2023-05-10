@@ -9,9 +9,10 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/item
 ---
+
 {{APIRef("DOM")}}
 
-Renvoie un noeud depuis une [`NodeList`](/en-US/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est renvoyée si l'index est hors des limites et une `TypeError` est lancée si aucun argument n'est fourni.
+Renvoie un noeud depuis une [`NodeList`](/fr/docs/Web/API/NodeList) par l'index. Cette méthode ne lance pas d'exceptions tant que vous fournissez des arguments. Une valeur `null` est renvoyée si l'index est hors des limites et une `TypeError` est lancée si aucun argument n'est fourni.
 
 ## Syntaxe
 
@@ -19,7 +20,7 @@ Renvoie un noeud depuis une [`NodeList`](/en-US/docs/Web/API/NodeList) par l'ind
 nodeItem = nodeList.item(index)
 ```
 
-- `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/en-US/docs/Web/API/Node/childNodes).
+- `nodeList` est une `NodeList`. Elle est généralement obtenue à partir d'une autre propriété ou méthode DOM, telle que [childNodes](/fr/docs/Web/API/Node/childNodes).
 - `index` est l'index du noeud à chercher. L'index commence à zéro.
 - `nodeItem` est le numéro d'`index` du noeud dans la `nodeList` retourné par la méthode `item`.
 
@@ -46,4 +47,4 @@ var firstTable = tables.item(1); // ou simplement tables[1] - renvoie le second 
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.item")}}
+{{Compat}}

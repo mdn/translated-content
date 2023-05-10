@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-block-end`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant à la fin de l'élément dans l'axe orthogonal au sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-block-end-width")}}, {{cssxref("border-block-end-style")}} et {{cssxref("border-block-end-color")}}.
@@ -41,9 +42,13 @@ Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 - `<'color'>`
   - : La couleur de la bordure, voir {{cssxref("color")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,15 +81,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end", "border-block-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-end")}}
+{{Compat}}
 
 ## Voir aussi
 

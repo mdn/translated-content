@@ -3,6 +3,7 @@ title: WebSocket.send()
 slug: Web/API/WebSocket/send
 browser-compat: api.WebSocket.send
 ---
+
 {{APIRef("Web Sockets API")}}
 
 La méthode **`WebSocket.send()`** rajoute les données indiquées à la queue pour transmission au serveur via la connexion WebSocket, augmentant ainsi la valeur de `bufferedAmount` du nombre d'octets nécessaires pour les données. Si les données ne peuvent être envoyées (par exemple parce qu'elles doivent être mises en tampon mais que la mémoire tampon est pleine), la socket est fermée automatiquement.

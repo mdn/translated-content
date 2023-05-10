@@ -1,21 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - CSS スタイル
-  - HTML 色
-  - リファレンス
-  - Styling HTML
-  - border-color
-  - 境界
-  - 色
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-color
-translation_of: Web/CSS/border-color
 ---
+
 {{CSSRef}}
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
@@ -24,7 +11,7 @@ translation_of: Web/CSS/border-color
 
 各辺を個々に設定する場合は、 {{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、 {{CSSxRef("border-bottom-color")}}、 {{CSSxRef("border-left-color")}}、 または書字方向を意識した{{CSSxRef("border-block-start-color")}}、 {{CSSxRef("border-block-end-color")}}、 {{CSSxRef("border-inline-start-color")}}、 {{CSSxRef("border-inline-end-color")}} を使用します。
 
-境界線の色についての詳細な情報は、 {{SectionOnPage("/ja/docs/Web/HTML/Applying_color", "Borders")}} にあります。
+境界線の色についての詳細な情報は、 [CSS colors](/ja/docs/Web/CSS/CSS_Colors/Applying_color#%E5%A2%83%E7%95%8C%E7%B7%9A_2) にあります。
 
 ## 構成要素のプロパティ
 

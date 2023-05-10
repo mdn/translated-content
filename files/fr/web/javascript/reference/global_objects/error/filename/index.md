@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`fileName`** contient le chemin vers le fichier qui a déclenché l'erreur.
@@ -35,7 +36,7 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.fileName")}}
+{{Compat}}
 
 ## Voir aussi
 

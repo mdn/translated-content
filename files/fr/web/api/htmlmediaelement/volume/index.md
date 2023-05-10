@@ -12,6 +12,7 @@ tags:
   - sound
 translation_of: Web/API/HTMLMediaElement/volume
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLMediaElement.volume`** définit le volume auquel le média doit être lu.
@@ -34,16 +35,13 @@ console.log(obj.volume); // 1
 obj.volume = 0.75;
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                                                                                                    | Statut                           | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "#dom-media-volume", "HTMLMediaElement.volume")}}                             | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.volume")}} | {{Spec2('HTML5 W3C')}}     |             |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("api.HTMLMediaElement.volume")}}
+{{Compat}}
 
 ## Voir aussi
 

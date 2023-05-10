@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_l_API_cookies
 ---
+
 {{AddonSidebar}}
 
 Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires à celles utilisées par les sites Web pour stocker et lire les cookies. Les fonctionnalités de l'API permettent aux extensions de stocker des informations site par site. Ainsi, comme nous le verrons dans l'exemple, vous pouvez stocker des détails sur le choix de la couleur de fond d'un site pour un utilisateur. Ensuite, lorsque l'utilisateur revient sur le site, votre extension peut utiliser la capacité de l'API pour obtenir des détails sur les cookies et les lire pour récupérer le choix de l'utilisateur et l'appliquer au site Web.
@@ -20,7 +21,7 @@ Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires
 
 ## Permissions
 
-Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les  [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
+Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
 
 <table>
   <colgroup>
@@ -154,7 +155,7 @@ for(var i = 0; i < bgBtns.length; i++) {
   var imgName = bgBtns[i].getAttribute('class');
   var bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;
-  
+
   bgBtns[i].onclick = function(e) {
 ```
 
@@ -208,7 +209,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 
 ### Scripts—background.js
 
-Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée.  `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
+Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée. `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
 
 ```js
     var gettingCookies = browser.cookies.get({

@@ -1,18 +1,9 @@
 ---
 title: element()
 slug: Web/CSS/element
-tags:
-  - CSS
-  - CSS 関数
-  - CSS4-images
-  - 関数
-  - レイアウト
-  - Reference
-  - ウェブ
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
-browser-compat: css.types.image.element
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`element()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、任意の HTML 要素から生成された {{cssxref("&lt;image&gt;")}} 値を定義します。この画像は動的で、HTML 要素が変更されると、この関数の結果を使う CSS プロパティが自動的に更新されます。

@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.strokeStyle`** de l'API Canvas 2D spécifie la couleur ou le style à utiliser pour dessiner les lignes autour des formes. La valeur par défaut est `#000` (black).
@@ -119,24 +120,11 @@ Le résultat devrait ressembler à ça:
 
 ## Spécifications
 
-| Specification                                                                                                                                        | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-strokestyle", "CanvasRenderingContext2D.strokeStyle")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.CanvasRenderingContext2D.strokeStyle")}}
-
-## Notes spécifiques à WebKit/Blink
-
-- Dans les navigateurs basés sur WebKit et Blink, une méthode non standard et dépréciée, `ctx.setStrokeColor()`, est implémentée en plus de cette propriété.
-
-  ```js
-  setStrokeColor(color, optional alpha);
-  setStrokeColor(grayLevel, optional alpha);
-  setStrokeColor(r, g, b, a);
-  setStrokeColor(c, m, y, k, a);
-  ```
+{{Compat}}
 
 ## Voir aussi
 

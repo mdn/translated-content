@@ -6,6 +6,7 @@ tags:
   - Glisser-deposer
 translation_of: Web/API/DataTransfer
 ---
+
 L'objet `DataTransfer` contient les données glissées au cours d'une opération de glisser-déposer. Il peut contenir un ou plusieurs éléments, du même type ou de types différents. Pour plus d'informations sur le glisser-déposer, voir [Glisser et déposer](/fr/docs/Glisser_et_d%C3%A9poser).
 
 Cet objet est disponible depuis la propriété `dataTransfer` de tous les événements de glisser. Il ne peut pas être créé séparément.
@@ -193,7 +194,7 @@ Cet objet est disponible depuis la propriété `dataTransfer` de tous les évén
 
 L'effet utilisé, qui doit toujours être l'une des valeurs possibles de `effectAllowed`.
 
-Pour les événements ` d``ragenter ` et `dragover`, la propriété `dropEffect` est initialisée en fonction des actions initiées par l'utilisateur. Ceci est spécifique à la plateforme, mais en général, l'utilisateur peut appuyer sur les touches de modification pour ajuster l'action souhaitée. Dans un gestionnaire d'événement ` d``ragenter ` et `dragover`, la propriété `dropEffect` peut être modifiée si l'action de l'utilisateur demandée n'est pas celle souhaitée.
+Pour les événements `dragenter` et `dragover`, la propriété `dropEffect` est initialisée en fonction des actions initiées par l'utilisateur. Ceci est spécifique à la plateforme, mais en général, l'utilisateur peut appuyer sur les touches de modification pour ajuster l'action souhaitée. Dans un gestionnaire d'événement `dragenter` et `dragover`, la propriété `dropEffect` peut être modifiée si l'action de l'utilisateur demandée n'est pas celle souhaitée.
 
 Pour les évènements `dragstart`, `drag`, and `dragleave` events, `dropEffect` est initialisé à "none". Toute valeur peut être assignée à `dropEffect`, mais elle sera ignorée.
 
@@ -407,7 +408,7 @@ nsIVariant mozGetDataAt(
 
 ### mozSetDataAt()
 
-Un transfert de données peut stocker plusieurs éléments, chacun à un index commençant à zéro. ` mozSetDataAt(``) ` ne peut être appelé qu'avec un index inférieur à `mozItemCount,` auquel cas un élément existant est modifié, ou égal à `mozItemCount,` auquel cas un nouvel élément est ajouté, et `mozItemCount` est incrémenté de un.
+Un transfert de données peut stocker plusieurs éléments, chacun à un index commençant à zéro. `mozSetDataAt()` ne peut être appelé qu'avec un index inférieur à `mozItemCount,` auquel cas un élément existant est modifié, ou égal à `mozItemCount,` auquel cas un nouvel élément est ajouté, et `mozItemCount` est incrémenté de un.
 
 Les données doivent être ajoutées par ordre de préférence, avec le format le plus spécifique ajouté en premier et le format moins spécifique ajouté en dernier. Si la donnée du format spécifié existe déjà, elle est remplacée dans la même position que la donnée précédente.
 
@@ -451,4 +452,4 @@ nsIVariant mozTypesAt(
 
 ## Voir Aussi
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/fr/docs/Web/DragDrop/Drag_and_Drop)

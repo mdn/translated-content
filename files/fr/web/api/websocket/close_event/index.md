@@ -4,6 +4,7 @@ slug: Web/API/WebSocket/close_event
 translation_of: Web/API/WebSocket/close_event
 browser-compat: api.WebSocket.close_event
 ---
+
 {{APIRef}}
 
 L'évènement `close` est déclenché lorsqu'une connexion avec une `WebSocket` est fermée.

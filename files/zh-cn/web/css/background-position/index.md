@@ -1,18 +1,11 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-tags:
-  - Background
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-position
-browser-compat: css.properties.background-position
 ---
 
 {{CSSRef}}
 
-The **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
+**`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
 
 {{EmbedInteractiveExample("pages/css/background-position.html")}}
 
@@ -87,7 +80,7 @@ background-position: unset;
 
 给定背景图像位置的百分比偏移量是相对于容器的。值 0% 表示背景图像的左（或上）边界与容器的相应左（或上）边界对齐，或者说图像的 0% 标记将位于容器的 0% 标记上。值为 100% 表示背景图像的 _右_（或 _下_）边界与容器的 _右_（或 _下_）边界对齐，或者说图像的 100% 标记将位于容器的 100% 标记上。因此 50% 的值表示水平或垂直居中背景图像，因为图像的 50% 将位于容器的 50% 标记处。类似的，`background-position: 25% 75%` 表示图像上的左侧 25% 和顶部 75% 的位置将放置在距容器左侧 25% 和距容器顶部 75% 的容器位置。
 
-基本上发生的情况是从相应的容器尺寸中 _减去_ 背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
+基本上发生的情况是从相应的容器尺寸中*减去*背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
 
 ```
 (container width - image width) * (position x%) = (x offset value)
@@ -120,15 +113,15 @@ background-position: unset;
 
 值得一提的是，如果您的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。您将需要使用绝对值进行偏移。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 定位背景图像
 

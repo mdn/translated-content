@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 ---
+
 {{CSSRef}}
 
 Les nouvelles méthodes de disposition telles que les boîtes flexibles (_flexbox_) et la grille CSS (_CSS Grid_) apportent la possibilité de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.
@@ -37,7 +38,7 @@ Les deux valeurs suivantes inversent l'ordre des éléments en échangeant les l
 
 ![Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas.](align11.png)
 
-Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment `row` et `row-reverse` fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), `row` correspondrait au côté droit et  `row-reverse` au côté gauche.
+Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment `row` et `row-reverse` fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), `row` correspondrait au côté droit et `row-reverse` au côté gauche.
 
 ![Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse.](order-rtl.png)
 
@@ -70,8 +71,8 @@ Dans l'exemple qui suit, on dispose de 5 objets flexibles et on affecte les vale
 - Premier élément selon la source : `order: 2`
 - Deuxième élément selon la source : `order: 3`
 - Troisième élément selon la source : `order: 1`
-- Quatrième élément selon la source :`order: 3`
-- Cinquième élément selon la source :`order: 1`
+- Quatrième élément selon la source : `order: 3`
+- Cinquième élément selon la source : `order: 1`
 
 Les éléments seront affichés sur la page dans l'ordre suivant :
 

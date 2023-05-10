@@ -1,16 +1,8 @@
 ---
 title: History.go()
 slug: Web/API/History/go
-tags:
-  - API
-  - HTML DOM
-  - History
-  - 履歴 API
-  - メソッド
-  - リファレンス
-browser-compat: api.History.go
-translation_of: Web/API/History/go
 ---
+
 {{APIRef("History API")}}
 
 **`History.go()`** メソッドは、セッション履歴から特定のページを読み込みます。これを用いると、引数の値に応じて履歴の中を前方や後方に移動することができます。

@@ -1,10 +1,9 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 original_slug: Web/JavaScript/Reference/Global_Objects/Promise
-browser-compat: javascript.builtins.Promise
 ---
+
 {{JSRef}}
 
 El objeto **`Promise`** representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante.
@@ -202,7 +201,7 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
     Devuelve una promesa que se resuelve después de que todas las promesas dadas se cumplan o se rechacen, con una matriz de objetos que describen el resultado de cada promesa.
 
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
-    - : Toma un iterable de objetos `Promise` y, tan pronto como se cumple una de las promesas en el iterable, devuelve una única promesa que se resuelve con el valor de esa promesa.
+  - : Toma un iterable de objetos `Promise` y, tan pronto como se cumple una de las promesas en el iterable, devuelve una única promesa que se resuelve con el valor de esa promesa.
 - {{JSxRef("Promise.race", "Promise.race(iterable)")}}
 
   - : Espera hasta que alguna de las promesas se cumpla o se rechace.
@@ -216,7 +215,7 @@ En el ejemplo anterior, el texto interno del `<iframe>` se actualizará solo si 
 - {{JSxRef("Promise.resolve", "Promise.resolve(value)")}}
 
   - : Devuelve un nuevo objeto `Promise` que se resuelve con el valor dado. Si el valor tiene un método `then`, la promesa devuelta "seguirá" ese método, adoptando su estado eventual; de lo contrario, la promesa devuelta se cumplirá con el valor.
-    
+
     Generalmente, si no sabe si un valor es una promesa o no, {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} actua en su lugar y trabaja con el valor de retorno como una promesa.
 
 ## Métodos de instancia
@@ -225,7 +224,7 @@ Consulte la [guía de Microtask](/es/docs/Web/API/HTML_DOM_API/Microtask_guide) 
 
 - {{jsxref("Promise.prototype.catch()")}}
   - : Agrega un _callback_ del controlador de rechazo a la promesa y devuelve una nueva promesa que se resuelve en el valor de devolución del _callback_ si se llama, o en su valor de cumplimiento original si la promesa se cumple.
-  
+
 - {{jsxref("Promise.prototype.then()")}}
   - : Agrega manejadores de cumplimiento y rechazo a la promesa, y devuelve una nueva promesa resolviendo el valor de retorno del manejador llamado, o su valor establecido original si la promesa no fue manejada (es decir, si el manejador relevante `onFulfilled` u `onRejected` no es una función).
 - {{jsxref("Promise.prototype.finally()")}}

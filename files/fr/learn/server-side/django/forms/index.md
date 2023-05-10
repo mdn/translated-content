@@ -3,6 +3,7 @@ title: 'Django didactique - Section 9 : Travailler avec des formulaires'
 slug: Learn/Server-side/Django/Forms
 translation_of: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 Dans cette formation, nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs.
@@ -346,7 +347,7 @@ def renew_book_librarian(request, pk):
   else:
     proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
     form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
-  
+
   context = {
     'form': form,
     'book_instance': book_instance,
@@ -434,7 +435,7 @@ Pour plus d'exemples sur la manière de rendre manuellement des formulaires dans
 Si vous avez accepté le "challenge" dans [Django didactique - section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself), vous avez une liste de tous les livres empruntés dans la bibliothèque, ce qui n'est visible que pour le staff de la bibliothèque. Nous pouvons ajouter un lien vers notre page de renouvellement après chaque élément, en utilisant le code de template suivant.
 
 ```html
-{% if perms.catalog.can_mark_returned %} <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}  
+{% if perms.catalog.can_mark_returned %} <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}
 ```
 
 > **Note :** Souvenez-vous que votre login de test devra avoir la permission "`catalog.can_mark_returned`" pour pouvoir accéder à la page de renouvellement de livre (utilisez peut-être votre compte superuser).
@@ -626,11 +627,11 @@ Ensuite, naviguez à la page de création d'auteur, _<http://127.0.0.1:8000/cata
 
 ![Exemple de formulaire&nbsp;: création d'un auteur](forms_example_create_author.png)
 
-Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre _http\://127.0.0.1:8000/catalog/author/10_.
+Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre `http://127.0.0.1:8000/catalog/author/10`.
 
-Vous pouvez tester l'édition d'un enregistrement en ajoutant */update/* à la fin de l'URL "détail" (par exemple, _http\://127.0.0.1:8000/catalog/author/10/update/_). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
+Vous pouvez tester l'édition d'un enregistrement en ajoutant */update/* à la fin de l'URL "détail" (par exemple, `http://127.0.0.1:8000/catalog/author/10/update/`). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
 
-Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
+Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, `http://127.0.0.1:8000/catalog/author/10/delete/`). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
 
 ![](forms_example_delete_author.png)
 
@@ -658,21 +659,3 @@ Il y a bien d'autres choses qui peuvent être faites avec les formulaires (regar
 - [Vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) (Documentation de Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Introduction à Django](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Mettre en place un environnement de développement Django](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django didactique&nbsp;: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2&nbsp;: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3&nbsp;: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4&nbsp;: Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5&nbsp;: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django didactique Section 6&nbsp;: Vues génériques pour les listes et les détails](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django didactique Section 7&nbsp;: Framework pour les sessions](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django didactique Section 8&nbsp;: Authentification des utilisateurs et permission](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django didactique Section 9&nbsp;: Travailler avec des formulaires](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django didactique Section 10&nbsp;: Tester une application web Django](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django didactique Section 11&nbsp;: Déployer une application Django en production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [La sécurité des applications web Django](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [Mise en pratique&nbsp;: construisez votre mini blog avec Django](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

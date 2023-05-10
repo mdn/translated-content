@@ -1,16 +1,8 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - CSS 背景
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.background-position-x
-translation_of: Web/CSS/background-position-x
 ---
+
 {{CSSRef}}
 
 **`background-position-x`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における水平の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
@@ -88,13 +80,13 @@ background-position-x: unset;
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom 10px;
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom 10px;
 }
 ```
 

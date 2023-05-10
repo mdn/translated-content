@@ -1,12 +1,8 @@
 ---
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.forEach
-translation_of: Web/API/DOMTokenList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 **`forEach()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.NumberFormat.prototype.formatRange()`** formate un intervalle numérique selon la locale et les options de formatage associées à l'objet [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) sur lequel la méthode est appelée.

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/17
 original_slug: Mozilla/Firefox/Versions/17
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page résume les principaux changements dans Firefox 17 qui sont utiles aux développeurs.
@@ -68,6 +69,6 @@ La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de c
 - `nsIRefreshURI`
   - : La méthode `setupRefreshURIFromHeader()` a un paramètre `principal` en plus.
 
-## Voir également
+## Voir aussi
 
 {{Firefox_for_developers('16')}}

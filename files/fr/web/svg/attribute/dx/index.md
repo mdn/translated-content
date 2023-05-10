@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/dx
 ---
+
 {{SVGRef}}
 
 L'attribut **`dx`** indique un décalage sur l'axe x de la position d'un élément ou de son contenu.
@@ -273,13 +274,4 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire                                    |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------- |
-| {{ SpecName('Filters 1.0', '#element-attrdef-fedropshadow-dx', 'dx') }} | {{Spec2('Filters 1.0')}} | Définition initiale pour `<feDropShadow>`      |
-| {{ SpecName('Filters 1.0', '#element-attrdef-feoffset-dx', 'dx') }}         | {{Spec2('Filters 1.0')}} | Définition pour `<feOffset>`                   |
-| {{SpecName("SVG2", "text.html#TextElementDXAttribute", "dx")}}             | {{Spec2("SVG2")}}         | Définition pour `<text>` et `<tspan>`          |
-| {{SpecName("SVG1.1", "filters.html#feOffsetDxAttribute", "dx")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<feOffset>`          |
-| {{SpecName("SVG1.1", "text.html#AltGlyphElementDXAttribute", "dx")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<altGlyph>`          |
-| {{SpecName("SVG1.1", "text.html#GlyphRefElementDXAttribute", "dx")}}     | {{Spec2("SVG1.1")}}         | Définition initiale pour `<glyphRef>`          |
-| {{SpecName("SVG1.1", "text.html#TextElementDXAttribute", "dx")}}             | {{Spec2("SVG1.1")}}         | Définition initiale pour `<text>`              |
-| {{SpecName("SVG1.1", "text.html#TSpanElementDXAttribute", "dx")}}         | {{Spec2("SVG1.1")}}         | Définition initiale pour `<tref>` et `<tspan>` |
+{{Specifications}}

@@ -6,6 +6,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLBRElement
 ---
+
 {{ApiRef}}
 
 L'interface **`HTMLBRElement`** représente un retour à la ligne. Il hérite de {{domxref("HTMLElement")}}.
@@ -24,16 +25,11 @@ _Aucune méthode spécifique ;_ _hérite les méthodes de son parent, {{domxref(
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           | Commentaires                                                    |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "text-level-semantics.html#the-br-element", "HTMLBRElement")}} | {{Spec2('HTML WHATWG')}} | Aucun changement par rapport à {{SpecName("HTML5 W3C")}} |
-| {{SpecName('HTML5 W3C', "text-level-semantics.html#the-br-element", "HTMLBRElement")}} | {{Spec2('HTML5 W3C')}}     | Aucun changement par rapport à {{SpecName("DOM2 HTML")}} |
-| {{SpecName('DOM2 HTML', 'html.html#ID-ID-56836063', 'HTMLBodyElement')}}                     | {{Spec2('DOM2 HTML')}}     | Aucun changement par rapport à {{SpecName("DOM1")}}.    |
-| {{SpecName('DOM1', 'level-one-html.html#ID-56836063', 'HTMLBodyElement')}}                 | {{Spec2('DOM1')}}         | Première définition.                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLBRElement")}}
+{{Compat}}
 
 ## Voir aussi
 

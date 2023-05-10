@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
+
 {{CSSRef}}{{non-standard_header}}
 
 Le pseudo-élément **`::-moz-scrolled-page-sequence`** est un pseudo-élément spécifique à Mozilla et représente l'arrière-plan de la prévisualisation de l'impression.
@@ -22,7 +23,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-scrolled-page-sequence")}}
+{{Compat}}
 
 ## Voir aussi
 

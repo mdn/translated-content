@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 La propriété **`max-height`** est utilisée pour définir la hauteur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("height")}} de devenir supérieure à la valeur spécifiée par `max-height` (autrement dit, `max-height` est une borne supérieure pour `height`).
@@ -56,9 +57,13 @@ max-height: unset;
 - `fit-content` {{experimental_inline}}
   - : Un synonyme pour `max-content`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -100,21 +105,15 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-h
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Sizing', '#height-height-keywords', 'max-height')}} | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `fit-content` et `fill-available`. Les deux brouillons de spécification CSS3 Box et CSS3 Writing Modes définissaient ces mots-clés mais ces spécifications ont été remplacées par celles-ci. |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'max-height')}}     | {{Spec2('CSS3 Transitions')}} | `max-height` peut désormais être animée.                                                                                                                                                                                                       |
-| {{SpecName('CSS2.1', 'visudet.html#min-max-heights', 'max-height')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                                                                                           |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.max-height")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{cssxref("height")}}
 - {{cssxref("min-height")}}
 - {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte "en/CSS/box_model")
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

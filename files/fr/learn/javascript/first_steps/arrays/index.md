@@ -18,6 +18,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Arrays
 original_slug: Learn/JavaScript/First_steps/tableaux
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 Dans le dernier article de ce module, nous examinerons les tableaux — une façon de stocker proprement une liste d'éléments de données sous un seul nom de variable. Ici nous verrons pourquoi c'est utile, puis nous apprendrons comment créer un tableau, y retrouver, y ajouter ou en enlever les éléments dedans, et quelques à‑côtés en bonus.
@@ -346,7 +347,7 @@ Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des
 
 4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
-6. Nous souhaitons que vous modifiez la ligne au‑dessous de  `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
+6. Nous souhaitons que vous modifiez la ligne au‑dessous de `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
 
 ```html hidden
 <div class="output" style="min-height: 150px;">
@@ -535,15 +536,3 @@ La seule chose restant à faire est de procéder à l'évaluation de ce module p
 - {{jsxref("Array")}} — la page de référence de l'objet `Array` — pour un guide de référence détaillé à propos des fonctionnalités discutées dans cette page, et plus encore.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## Dans ce module
-
-- [What is JavaScript?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/fr/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)

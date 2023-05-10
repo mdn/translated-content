@@ -1,12 +1,8 @@
 ---
 title: CSS グリッドと論理的な値と書字方向
 slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
-tags:
-  - CSS
-  - CSS グリッド
-  - ガイド
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
+
 {{CSSRef}}
 
 一連のガイドでは、グリッドレイアウトの重要な特徴である、仕様に組み込まれているさまざまな書字方向への対応についてすでに触れています。このガイドでは、グリッドやその他の最新のレイアウト方法のこの機能について、書字方向や論理的プロパティおよび物理的プロパティについて少しずつ学んでいきたいと思います。

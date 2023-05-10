@@ -10,6 +10,7 @@ tags:
   - HTML
 translation_of: Web/HTML/Attributes/capture
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`capture`** spécifie que, facultativement, un nouveau fichier doit être capturé, et le périphérique qui devrait être utilisé pour capturer ce nouveau média d'un type défini par l'attribut [`accept`](accept). Les valeurs comprennent `user` et `environment`. L'attribut capture est pris en charge sur les champs de formulaire de type [`file`](/fr/docs/Web/HTML/Element/Input/file).
@@ -48,13 +49,11 @@ Notez que ceux-ci fonctionnent mieux sur les appareils mobiles ; si votre appare
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                   |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName('HTML Media Capture', '#the-capture-attribute','capture attribute')}} | {{Spec2('HTML Media Capture')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.capture")}}
+{{Compat}}
 
 ## Voir aussi
 

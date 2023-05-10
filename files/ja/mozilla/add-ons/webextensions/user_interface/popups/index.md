@@ -1,13 +1,8 @@
 ---
 title: ポップアップ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-tags:
-  - UI
-  - ユーザーインターフェイス
-  - WebExtensions
-  - ポップアップ
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
+
 {{AddonSidebar}}
 
 ポップアップは[ツールバーボタン](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)や[アドレスバーボタン](/ja/Add-ons/WebExtensions/user_interface/Page_actions)に関連したダイアログです。このページでは、ポップアップの一般的な説明、指定方法、デバッグ、サイズ変更、デザインについて、使用例も含めて解説しています。

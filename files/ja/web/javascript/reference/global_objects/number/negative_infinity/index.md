@@ -1,14 +1,8 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-  - リファレンス
-browser-compat: javascript.builtins.Number.NEGATIVE_INFINITY
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.NEGATIVE_INFINITY`** プロパティは負の無限大を表す値です。

@@ -1,13 +1,8 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-browser-compat: api.Event.defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{ APIRef("DOM") }}
 
 **`defaultPrevented`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、論理値で {{ domxref("Event.preventDefault()") }} の呼び出しがイベントをキャンセルしたかどうかを示す値を返します。

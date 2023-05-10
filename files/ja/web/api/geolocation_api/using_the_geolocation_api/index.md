@@ -1,12 +1,8 @@
 ---
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
-tags:
-  - 位置情報 API
-  - ガイド
-  - チュートリアル
-translation_of: Web/API/Geolocation_API/Using_the_Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 位置情報 API (Geolocation API) により、ユーザーは希望すれば自身の場所をウェブアプリケーションに通知することができるようになります。この記事では、その使い方の基本を説明します。
@@ -29,7 +25,7 @@ if('geolocation' in navigator) {
 
 ユーザーの現在位置を取得するには、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} メソッドを呼び出します。このメソッドはユーザーの現在位置を特定するための非同期通信を開始するとともに、位置取得デバイスから最新の情報を取得します。現在位置が特定されるとコールバック関数が実行されます。また、オプションとして第二引数にコールバック関数を指定することで、エラー発生時に実行される関数を指定することができます。省略可能な第三引数は、最大試行回数、要求待ち時間、高精度の位置情報を求めるかを指定するオブジェクトです。
 
-> **Note:** 既定では、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば GPS を備えている端末でも GPS が確定するまでには数分以上かかる可能性がありますので、 `getCurrentPosition()` からは (IP ロケーションや Wi-Fi による) 低精度のデータを返すことがあります。
+> **メモ:** 既定では、 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} は低精度の結果を使い、なるべく高速に応答しようとします。これは、正確さに関わらず速い応答を必要とする場合に役立ちます。例えば GPS を備えている端末でも GPS が確定するまでには数分以上かかる可能性がありますので、 `getCurrentPosition()` からは (IP ロケーションや Wi-Fi による) 低精度のデータを返すことがあります。
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -43,7 +39,7 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 位置情報が変化した場合（端末が移動した時や、より正確な位置情報が得られた時）は、位置情報の更新と同時に呼び出されるコールバック関数を指定することができます。これは {{domxref("Geolocation.watchPosition","watchPosition()")}} 関数を使うことで実現できますが、こちらの入力引数は {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} と同じです。コールバック関数は繰り返し呼び出され、ブラウザーは移動に応じて位置情報を更新したり、位置の特定に別の技術を使用することでより詳細な位置情報を提供したりすることが可能です。エラー発生時に呼び出されるコールバック関数は `getCurrentPosition()` と同様に任意指定であり、繰り返し呼び出される場合があります。
 
-> **Note:** {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
+> **メモ:** {{domxref("Geolocation.watchPosition","watchPosition()")}} を使用する際に、先に {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}} を呼び出す必要はありません。
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {

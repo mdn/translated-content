@@ -1,20 +1,9 @@
 ---
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - Function
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - gradient
-translation_of: Web/CSS/gradient/radial-gradient()
 original_slug: Web/CSS/gradient/radial-gradient()
-browser-compat: css.types.image.gradient.radial-gradient
 ---
+
 {{CSSRef}}
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形にになります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
@@ -52,7 +41,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
     `<ending-shape>` を `circle` と指定した場合、大きさを明示的に [`<length>`](/ja/docs/Web/CSS/length) として与えることができ、円形の広がりの大きさを明示的に指定します。負の値は不正です。
 
-    `<ending-shape>` を `ellipse` と指定するか省略した場合、大きさを二つの [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で指定して明示的な楕円の大きさを指定することができます。 1 つ目の値は水平の広がり、 2 つ目の値は垂直の広がりです。パーセント値はグラデーションボックスの対応する長さからの相対値です。負の値は不正です。
+    `<ending-shape>` を `ellipse` と指定するか省略した場合、大きさを二つの [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で指定して明示的な楕円の大きさを指定することができます。 1 つ目の値は水平の広がり、 2 つ目の値は垂直の広がりです。パーセント値はグラデーションボックスの対応する長さからの相対値です。負の値は不正です。
 
 - `<linear-color-stop>`
   - : 色経由点の {{cssxref("&lt;color&gt;")}} 値と、それに続く 1 つまたは 2 つの省略可能な経由位置 (グラデーション軸沿いの {{cssxref("&lt;percentage&gt;")}} または {{cssxref("&lt;length&gt;")}}) です。 percentage が `0%`、または length が `0` の場合は、グラデーションの中心を表します。 `100%` は末端図形と仮想グラデーション光線の交点を表します。その間のパーセント値はグラデーション光線における直線的な位置です。

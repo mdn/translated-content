@@ -1,19 +1,9 @@
 ---
 title: '<applet>: 埋め込み Java アプレット要素'
 slug: Web/HTML/Element/applet
-tags:
-  - 要素
-  - HTML
-  - Java
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - applet
-browser-compat: html.elements.applet
-translation_of: Web/HTML/Element/applet
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **HTML の アプレット要素** (**`<applet>`**) は文書に Java アプレットを埋め込みます。この要素は {{HTMLElement("object")}} にとって代わり、廃止されました。
 
@@ -26,9 +16,9 @@ translation_of: Web/HTML/Element/applet
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>,
         対話型コンテンツ,
         知覚可能コンテンツ
       </td>
@@ -36,7 +26,7 @@ translation_of: Web/HTML/Element/applet
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-      0 個以上の {{HTMLElement("param")}} 要素、その後で <a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a>
+      0 個以上の {{HTMLElement("param")}} 要素、その後で <a href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ">透過的コンテンツ</a>
       </td>
     </tr>
     <tr>
@@ -46,7 +36,7 @@ translation_of: Web/HTML/Element/applet
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#embedded_content">埋め込みコンテンツ</a>を受け付けるすべての要素</td>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>を受け付けるすべての要素</td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

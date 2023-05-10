@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/PasswordCredential/PasswordCredential
 ---
+
 {{APIRef("")}}{{Non-standard_header}}
 
 Le constructeur **`PasswordCredential`** permet de créer un nouvel objet {{domxref("PasswordCredential")}}.
@@ -68,10 +69,8 @@ navigator.credentials.store(creds)
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential.PasswordCredential")}}
+{{Compat}}

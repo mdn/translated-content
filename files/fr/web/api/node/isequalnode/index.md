@@ -3,6 +3,7 @@ title: Node.isEqualNode()
 slug: Web/API/Node/isEqualNode
 translation_of: Web/API/Node/isEqualNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.isEqualNode()`** permet de tester l'égalité entre deux éléments du DOM. Deux noeuds sont équivalents s'ils ont le même type, les mêmes caractéristiques de définition (ID, nombre d'enfants et autres), des attributs qui correspondent etc. L'ensemble spécifique de points des données qui doit correspondre varie en fonction des types de nœuds.
@@ -59,13 +60,11 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ## Spécifications
 
-| Spécification                                                                                    | Statut                           | Commentaire |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-node-isequalnode', 'Node.isEqualNode')}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.isEqualNode")}}
+{{Compat}}
 
 ## Voir aussi
 

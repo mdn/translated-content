@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propriété **`lineNumber`** contient le numéro de la ligne qui a déclenché l'erreur dans le fichier.
@@ -41,7 +42,7 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Error.lineNumber")}}
+{{Compat}}
 
 ## Voir aussi
 

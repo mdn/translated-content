@@ -1,14 +1,8 @@
 ---
 title: 段のスタイル付け
 slug: Web/CSS/CSS_Columns/Styling_Columns
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - ガイド
-  - レイアウト
-  - 日本語処理
-translation_of: Web/CSS/CSS_Columns/Styling_Columns
 ---
+
 {{CSSRef}}
 
 段組みコンテナー内に作られた段ボックスは無名ボックスなので、スタイル付けできることはわずかです。しかし、できることは少数ながらあります。このガイドは、段同士の間隔および段間罫をスタイル付けする方法を説明します。

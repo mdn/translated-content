@@ -1,22 +1,15 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.arcTo
-translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arcTo()`** はキャンバス 2D APIのメソッドで、制御点と半径を指定して現在のサブパスに円弧を追加します。円弧は、指定された引数で必要に応じて、パスの最後の点に自動的に直線で接続されます。
 
 このメソッドは、主に角丸の図形を描画するのに使用されます。
 
-> **Note:** 相対的に大きな半径を指定した場合、得られる角丸の描線が期待するものとは異なる可能性があります。円弧と連結する直線は円弧の半径に合うように描線されます。
+> **メモ:** 相対的に大きな半径を指定した場合、得られる角丸の描線が期待するものとは異なる可能性があります。円弧と連結する直線は円弧の半径に合うように描線されます。
 
 ## 構文
 

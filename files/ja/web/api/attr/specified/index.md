@@ -1,20 +1,15 @@
 ---
-title: Attr.specified
+title: "Attr: specified プロパティ"
 slug: Web/API/Attr/specified
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - リファレンス
-  - 読み取り専用
-  - 非推奨
-browser-compat: api.Attr.specified
-translation_of: Web/API/Attr/specified
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 **`specified`** は {{domxref("Attr")}} インターフェイスのプロパティで、常に `true` を返します。
 
-### 値
+## 値
 
 常に `true` を返します。
 

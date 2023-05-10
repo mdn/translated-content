@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/getAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.getAttribLocation()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne l'emplacement d'une variable d'attribut dans le {{domxref("WebGLProgram")}} indiqué.
@@ -38,14 +39,11 @@ gl.getAttribLocation(programme, 'vColor');
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | Définition initiale.             |
-| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | Page principale de l'API OpenGL. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WebGLRenderingContext.getAttribLocation")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,17 +1,10 @@
 ---
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - source
-browser-compat: api.MessageEvent.source
-translation_of: Web/API/MessageEvent/source
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
@@ -23,7 +16,7 @@ translation_of: Web/API/MessageEvent/source
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.source);

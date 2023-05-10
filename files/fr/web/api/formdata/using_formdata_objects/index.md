@@ -12,7 +12,8 @@ tags:
 translation_of: Web/API/FormData/Using_FormData_Objects
 original_slug: Web/API/FormData/Utilisation_objets_FormData
 ---
-L’objet [`FormData`](/en-US/docs/Web/API/FormData) vous permet de compiler un ensemble de paires clé/valeur à envoyer à l’aide de l’API [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest). Il est principalement destiné à l’envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu’utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l’encodage de ce dernier était défini sur `multipart/form-data`.
+
+L’objet [`FormData`](/fr/docs/Web/API/FormData) vous permet de compiler un ensemble de paires clé/valeur à envoyer à l’aide de l’API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Il est principalement destiné à l’envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu’utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l’encodage de ce dernier était défini sur `multipart/form-data`.
 
 ## Création intégrale d’un objet FormData
 
@@ -38,9 +39,9 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note :** Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()>) (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne&nbsp;: **s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne**).
+> **Note :** Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode [`FormData.append()`](/fr/docs/Web/API/FormData/append) (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne&nbsp;: **s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne**).
 
-Dans cet exemple, une instance `FormData` contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode `XMLHttpRequest` [`send()`](</en/DOM/XMLHttpRequest#send()>) est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet `Blob` représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet `Blob`, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un `Blob`, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.
+Dans cet exemple, une instance `FormData` contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode `XMLHttpRequest` [`send()`](/fr/docs/Web/API/XMLHttpRequest/send) est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet `Blob` représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet `Blob`, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un `Blob`, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.
 
 ## Récupération d’un objet FormData dans un formulaire HTML
 
@@ -139,13 +140,13 @@ $.ajax({
 });
 ```
 
-## Envoi de formulaires et de fichiers via AJAX *sans* objet `FormData`
+## Envoi de formulaires et de fichiers via AJAX sans objet `FormData`
 
-Si vous voulez en savoir plus sur la sérialisation des données et l’envoi d’un formulaire via [AJAX](/en-US/docs/AJAX) *sans* utiliser d’objets FormData, consultez [ce paragraphe](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+Si vous voulez en savoir plus sur la sérialisation des données et l’envoi d’un formulaire via [AJAX](/fr/docs/AJAX) *sans* utiliser d’objets FormData, consultez [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## Voir aussi
 
-- [Utiliser XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Tableaux typés](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays)

@@ -3,6 +3,7 @@ title: États et propriétés ARIA
 slug: Web/Accessibility/ARIA/Attributes
 translation_of: Web/Accessibility/ARIA/Attributes
 ---
+
 Cette page constitue un index des pages de référence couvrant l'ensemble des attributs WAI-ARIA sur MDN.
 
 Les attributs ARIA permettent de modifier les états et les propriétés d'un élément dans l'arbre d'accessibilité.

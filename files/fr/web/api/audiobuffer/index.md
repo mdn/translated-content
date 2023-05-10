@@ -8,6 +8,7 @@ tags:
   - Web Audio API
 translation_of: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface AudioBuffer représente une ressource audio stockée en mémoire, créée à partir d'un fichier audio avec la méthode {{ domxref("AudioContext.decodeAudioData()") }}, ou à partir de données brutes avec {{ domxref("AudioContext.createBuffer()") }}. Une fois mises en mémoire dans un AudioBuffer, les données audio sont transférées dans un {{ domxref("AudioBufferSourceNode") }} afin d'être lues.
@@ -41,7 +42,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 
 ## Exemple
 
-L'exemple suivant montre comment créer un  `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
+L'exemple suivant montre comment créer un `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
 
 ```js
 // Stéréo
@@ -84,13 +85,11 @@ bouton.onclick = function() {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API', '#AudioBuffer-section', 'AudioBuffer')}} | {{Spec2('Web Audio API')}} | Définition initiale |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer")}}
+{{Compat}}
 
 ## Voir aussi
 

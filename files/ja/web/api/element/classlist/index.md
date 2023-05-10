@@ -1,16 +1,8 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - Element
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Element.classList
-translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`** は読み取り専用のプロパティで、生きた {{domxref("DOMTokenList")}} コレクションでその要素の `class` 属性を返します。これを使用してクラスリストを操作することができます。
@@ -66,7 +58,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **Note:** Firefox 26 以前のバージョンでは、 add/remove/toggle メソッドでいくつかの引数の使用を実装していません。詳しくは <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> を参照してください。
+> **メモ:** Firefox 26 以前のバージョンでは、 add/remove/toggle メソッドでいくつかの引数の使用を実装していません。詳しくは <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> を参照してください。
 
 ## 仕様書
 

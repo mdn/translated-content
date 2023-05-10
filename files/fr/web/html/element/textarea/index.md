@@ -1,6 +1,6 @@
 ---
 title: <textarea>
-slug: Web/HTML/Element/Textarea
+slug: Web/HTML/Element/textarea
 tags:
   - Element
   - Formulaires
@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/textarea
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<textarea>`** représente un contrôle qui permet d'éditer du texte sur plusieurs lignes.
 
@@ -127,7 +128,9 @@ L'exemple qui suit illustre une configuration simple avec un nombre donné de li
    rows="10" cols="50">Vous pouvez écrire ici.</textarea>
 ```
 
-{{EmbedLiveSample('Exemple_simple','600','150')}}
+#### Résultat
+
+{{EmbedLiveSample('','600','150')}}
 
 ### Longueur minimale et longueur maximale
 
@@ -139,7 +142,9 @@ Cet exemple fixe un nombre de caractère minimal et maximal. Vous pouvez essayer
    minlength="10" maxlength="30">Vous pouvez écrire ici.</textarea>
 ```
 
-{{EmbedLiveSample('Longueur_minimale_et_longueur_maximale','600','80')}}
+#### Résultat
+
+{{EmbedLiveSample('','600','80')}}
 
 On notera que `minlength` n'empêche pas de retirer des caractères afin de réduire le texte en dessous de la longueur minimale. En revanche, cela rend la valeur `<textarea>` invalide. On notera aussi que, même lorsque `minlength` est défini, une valeur vide est considérée valide à moins que `required` soit présent.
 
@@ -153,9 +158,11 @@ Dans cet exemple, on utilise l'attribut `placeholder` afin d'afficher une indica
    placeholder="Voici une indication."></textarea>
 ```
 
-{{EmbedLiveSample('Indication','600','80')}}
+#### Résultat
 
-> **Note :** Les indications ne remplacent pas les élément {{HTMLElement("label")}}.
+{{EmbedLiveSample('','600','80')}}
+
+> **Note :** Les indications ne remplacent pas les éléments {{HTMLElement("label")}}.
 
 ### Lecture seule et contrôle désactivé
 
@@ -170,7 +177,9 @@ Cet exemple affiche deux éléments `<textarea>` : le premier est désactivé av
    readonly>Je suis en lecture seule</textarea>
 ```
 
-{{EmbedLiveSample('Lecture_seule_et_contrôle_désactivé','600','80')}}
+#### Résultat
+
+{{EmbedLiveSample('','600','80')}}
 
 ## Résumé technique
 
@@ -229,15 +238,11 @@ Cet exemple affiche deux éléments `<textarea>` : le premier est désactivé av
 
 ## Spécifications
 
-| Spécification                                                                                                | État                             | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'forms.html#the-textarea-element', '&lt;textarea&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.7', '&lt;textarea&gt;')}}         | {{Spec2('HTML4.01')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## Voir aussi
 

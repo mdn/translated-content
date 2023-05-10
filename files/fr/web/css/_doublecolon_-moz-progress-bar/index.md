@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-moz-progress-bar
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 Le pseudo-élément **`::-moz-progress-bar`** s'appliquant à la zone d'élément HTML {{HTMLElement("progress")}} représente la valeur de la progression effectuée jusqu'à présent. Vous pourrez par exemple, modifier la couleur de la barre de progression.

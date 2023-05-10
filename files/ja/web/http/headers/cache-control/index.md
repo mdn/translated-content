@@ -1,15 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - HTTP ヘッダー
-  - リクエストヘッダー
-  - レスポンスヘッダー
-  - リファレンス
-browser-compat: http.headers.Cache-Control
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
 
 {{HTTPSidebar}}

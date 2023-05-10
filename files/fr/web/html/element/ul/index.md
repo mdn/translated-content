@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ul
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
 
@@ -164,11 +165,11 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}},
-        {{ARIARole("tablist")}}, {{ARIARole("toolbar")}},
-        {{ARIARole("tree")}}, {{ARIARole("presentation")}}
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>,
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>
@@ -180,14 +181,11 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.ul")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: 符号なし右シフト (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 **符号なし右シフト演算子 (`>>>`)** (ゼロ埋め右シフト) は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0 のビットが左からずれて入ります。符号ビットは `0` になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし 32 ビット整数を返します。
@@ -61,5 +54,5 @@ a >>> b
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
 - [符号なし右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
