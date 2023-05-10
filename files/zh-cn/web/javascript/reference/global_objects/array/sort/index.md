@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 {{JSRef}}
 
-**`sort()`** 方法[_原地_](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回相同数组的引用。默认排序是将元素转换为字符串，然后比较它们的 UTF-16 码元值按升序排序。
+**`sort()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回对相同数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
 
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂度。
 
@@ -176,7 +176,7 @@ items.sort(function (a, b) {
 // 需要被排序的数组
 const data = ["delta", "alpha", "charlie", "bravo"];
 
-// 对需要排序的数字和位置的临时存储
+// 用于存放位置和排序值的对象数组
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
 });

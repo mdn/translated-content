@@ -44,7 +44,7 @@ console.log("调用 shift 之前：", myFish);
 const shifted = myFish.shift();
 
 console.log('调用 shift 之后：', myFish);
-// "调用 shift 之后： ['clown', 'mandarin', 'surgeon']
+// 调用 shift 之后： ['clown', 'mandarin', 'surgeon']
 
 console.log('被删除的元素：' + shifted);
 // "被删除的元素：angel"

@@ -121,7 +121,7 @@ console.log([1, undefined, 1].some((x) => x !== 1)); // true
 
 ### 在非数组对象上调用 some()
 
-`some()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引，直到到达末尾或 `callbackFn` 返回 `ture`。
+`some()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引，直到到达末尾或 `callbackFn` 返回 `true`。
 
 ```js
 const arrayLike = {
