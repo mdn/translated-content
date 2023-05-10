@@ -27,7 +27,7 @@ slice(start, end)
 - `end` {{optional_inline}}
   - : 提取终止处的索引（从 `0` 开始），会[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。`slice()` 会提取到但不包括 `end` 的位置。
     - 如果索引是负数，则从数组末尾开始计算——如果 `end < 0`，则使用 `end + array.length`。
-    - 如果 `end < -array.length` 或者省略了 `end`，则使用 `0`。
+    - 如果 `end < -array.length`，则使用 `0`。
     - 如果 `end >= array.length` 或者省略了 `end`，则使用 `array.length`，提取所有元素直到末尾。
     - 如果 `end` 在规范化后小于或等于 `start`，则不提取任何元素。
 
@@ -48,8 +48,8 @@ slice(start, end)
 ### 返回现有数组的一部分
 
 ```js
-var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
-var citrus = fruits.slice(1, 3);
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
 
 // fruits 包含 ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus 包含 ['Orange','Lemon']
