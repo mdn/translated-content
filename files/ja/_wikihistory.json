@@ -11800,10 +11800,6 @@
     "modified": "2020-10-15T22:15:57.077Z",
     "contributors": ["mfuji09"]
   },
-  "Web/API/PublicKeyCredentialRequestOptions": {
-    "modified": "2020-10-15T22:26:52.032Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/API/PushEvent": {
     "modified": "2020-10-15T21:45:21.780Z",
     "contributors": ["Potappo", "dskmori", "YuichiNukiyama"]
@@ -30930,6 +30926,10 @@
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
+  },
+  "orphaned/Web/API/PublicKeyCredentialRequestOptions": {
+    "modified": "2020-10-15T22:26:52.032Z",
+    "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2020-04-13T14:01:47.252Z",

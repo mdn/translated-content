@@ -1,6 +1,7 @@
 ---
 title: PublicKeyCredentialRequestOptions
-slug: Web/API/PublicKeyCredentialRequestOptions
+slug: orphaned/Web/API/PublicKeyCredentialRequestOptions
+original_slug: Web/API/PublicKeyCredentialRequestOptions
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
