@@ -1,9 +1,11 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
+l10n:
+  sourceCommit: 7594b50698a76ce79209b159835e615052915723
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`type="date"`** は、ユーザーに日付を入力させる入力欄を、検証付きのテキストボックスまたは特殊な日付選択インターフェイスのどちらかで生成します。
 
@@ -18,7 +20,7 @@ slug: Web/HTML/Element/input/date
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        {{domxref("DOMString")}} で、 YYYY-MM-DD 形式の日付、または空欄を表す
+        文字列で、 YYYY-MM-DD 形式の日付、または空欄を表します
       </td>
     </tr>
     <tr>
@@ -44,6 +46,10 @@ slug: Web/HTML/Element/input/date
       </td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -56,12 +62,12 @@ slug: Web/HTML/Element/input/date
 
 ## 値
 
-入力欄に入力された日付を表す {{domxref("DOMString")}} です。日付は ISO8601 に従って書式化されており、これは [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
+入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
 
 次のように、日付の入力欄の既定値を {{htmlattrxref("value", "input")}} 属性に設定することができます。
 
 ```html
-<input type="date" value="2017-06-01">
+<input type="date" value="2017-06-01" />
 ```
 
 {{EmbedLiveSample('Value', 600, 40)}}
@@ -71,7 +77,7 @@ slug: Web/HTML/Element/input/date
 JavaScript での日付値を取得したり設定したりするには、次のように {{domxref("HTMLInputElement")}} の `value` および `valueAsNumber` プロパティで行うことができます。
 
 ```js
-var dateControl = document.querySelector('input[type="date"]');
+const dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2017-06-01';
 console.log(dateControl.value); // "2017-06-01" と表示
 console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイムスタンプを表示
@@ -81,7 +87,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 要素で共通する属性と共に、 `date` 型の入力欄は以下の属性に対応しています。
+すべての {{HTMLElement("input")}} 要素に共通する属性は `date` 入力型にも適用されますが、その表示に影響を与えないかもしれません。例えば、 `size` や `placeholder` は動作しないかもしれません。 `date` 入力には以下の追加属性があります。
 
 ### max
 
@@ -97,7 +103,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、 {{htmlattrxref("value", "input")}} そうでなければ適切な既定値）のみが妥当となります。
+`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}} 、どちらも提供されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約に制限されます）。
 
@@ -109,11 +115,9 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ## date 入力欄の使用
 
-日付入力は便利に見えます。 — 日付の選択に簡単なインターフェイスを提供し、サーバーに送信するデータの書式をユーザーのロケールに関係なく正規化してくれます。しかし、今のところブラウザーの対応が限定されているため、 `<input type="date">` には問題があります。
+日付入力は日付を選ぶための簡単なインターフェイスを提供し、ユーザーのロケールに関係なくサーバーに送信されるデータ形式を正規化します。
 
-この節では、 `<input type="date">` の基本的な使い方と少し複雑な使い方を見てみてから、その後でブラウザーの互換性の問題を緩和するアドバイスを提供しましょう ([ブラウザーの互換性の扱い](#ブラウザーの互換性の扱い) を参照してください)。
-
-> **メモ:** 今後ブラウザーの互換性がもっと普遍的になり、この問題が消滅することを願います。
+この節では、`<input type="date">` の基本的な使用方法から、より複雑な使用方法まで見ていきます。
 
 ## 日付入力の基本的な使用
 
@@ -123,7 +127,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 <form action="https://example.com">
   <label>
     誕生日を入力してください。
-    <input type="date" name="bday">
+    <input type="date" name="bday" />
   </label>
 
   <p><button>Submit</button></p>
@@ -141,7 +145,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 ```html
 <form>
   <label>希望するパーティーの日を選んでください。
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30">
+    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
 ```
@@ -170,7 +174,12 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 <form>
   <label>
     推奨したいパーティーの日を選択してください (必須、4月1日～20日):
-    <input type="date" name="party" min="2017-04-01" max="2017-04-20" required>
+    <input
+      type="date"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </label>
 
@@ -197,11 +206,11 @@ span::after {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
-input:valid+span::after {
-  content: '✓';
+input:valid + span::after {
+  content: "✓";
 }
 ```
 
@@ -209,11 +218,9 @@ input:valid+span::after {
 
 ## ブラウザーの互換性の扱い
 
-前述のように、現時点で日付入力を書く上で一番の問題は[ブラウザーの互換性](#ブラウザーの互換性)です。
+この入力型に対応していないブラウザーでは、テキスト入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性（表示されるコントロールが異なること）とデータの扱い方の両方で問題を生みます。
 
-対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性（表示されるコントロールが異なること）とデータの扱い方の両方で問題を生みます。
-
-2 番目の問題はより深刻です。日付入力に対応していると、値が `yyyy-mm-dd` の書式で正規化されます。しかし、文字列入力欄では、ブラウザーには日付がどの書式で入力されるかの認識がなく、また、以下のように人間が日付を書く書式は様々なものがあります。
+2 番目の問題はより深刻です。 date 入力型に対応していると、値が `yyyy-mm-dd` の書式で正規化されます。しかし、テキスト入力欄では、ブラウザーには日付がどの書式で入力されるかの認識がなく、また、以下のように人間が日付を書く書式は様々なものがあります。
 
 - `ddmmyyyy`
 - `dd/mm/yyyy`
@@ -227,7 +234,7 @@ input:valid+span::after {
 ```html
 <form>
   <label>誕生日を入力してください。
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
   <p>
@@ -251,11 +258,11 @@ span::after {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -283,8 +290,7 @@ HTML は次のようになります。
   <p class="fallbackLabel">誕生日を入力してください。</p>
   <div class="fallbackDatePicker">
     <span>
-      <select id="year" name="year">
-      </select>
+      <select id="year" name="year"></select>
       <label for="year">年</label>
     </span>
     <span>
@@ -321,11 +327,11 @@ span {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -337,29 +343,29 @@ input:valid + span::after {
 
 ```js
 // 変数を定義
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
-var daySelect = document.querySelector('#day');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+const daySelect = document.querySelector('#day');
 
 // 最初は代替を隠す
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
 // 新しい日付入力が文字列入力に代替されるかどうか
-var test = document.createElement('input');
+const test = document.createElement('input');
 
 try {
   test.type = 'date';
 } catch (e) {
-  console.log(e.description);
+  console.log(e.message);
 }
 
 // もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
-if(test.type === 'text') {
+if (test.type === 'text') {
   // ネイティブの日付選択を隠して代替版を表示
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
@@ -374,28 +380,28 @@ if(test.type === 'text') {
 function populateDays(month) {
   // delete the current set of <option> elements out of the
   // day <select>, ready for the next set to be injected
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
   // 挿入する日数を保持する変数を作成
-  var dayNum;
+  let dayNum;
 
   // 31 日か 30 日か？
-  if(month === '1' | month === '3' | month === '5' | month === '7' | month === '8' | month === '10' | month === '12') {
+  if (month === '1' | month === '3' | month === '5' | month === '7' | month === '8' | month === '10' | month === '12') {
     dayNum = 31;
   } else if(month === '4' | month === '6' | month === '9' | month === '11') {
     dayNum = 30;
   } else {
   // 2 月の場合は、閏年かどうかを計算する
-  var year = yearSelect.value;
-  var isLeap = new Date(year, 1, 29).getMonth() == 1;
-  isLeap ? dayNum = 29 : dayNum = 28;
+    const year = yearSelect.value;
+    const isLeap = new Date(year, 1, 29).getMonth() === 1;
+    dayNum = isLeap ? 29 : 28;
   }
 
   // <select> に正しい数の新しい <option> 要素を挿入
-  for(i = 1; i <= dayNum; i++) {
-    var option = document.createElement('option');
+  for (let i = 1; i <= dayNum; i++) {
+    const option = document.createElement('option');
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -403,22 +409,22 @@ function populateDays(month) {
   // 前回の日が既に設定されていたら、 daySelect の値を
   // 日に設定し、年を変えたときに1に戻ることを
   // 避ける
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // 前回設定されていた日が大きい数字、例えば31であり、
     // その後で日数が少ない月 (例えば2月) を選択した場合、
     // このコードで空欄の日選択を表示するのではなく、
     // 利用可能な最大の日を選択するように保証する
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -426,24 +432,24 @@ function populateDays(month) {
 
 function populateYears() {
   // 今年を数値として取得
-  var date = new Date();
-  var year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
 
   // 今年から 100 年前までの年が <select> で選択できるようにする
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 // 年や月の <select> 値が変更されたら、 populateDays() を
 // 再実行して日数を調整する
-yearSelect.onchange = function() {
+yearSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
-monthSelect.onchange = function() {
+monthSelect.onchange = () => {
   populateDays(monthSelect.value);
 }
 
@@ -452,13 +458,12 @@ var previousDay;
 
 // 以前どの日が設定されていたかを保存する
 // 使い方は populateDays() を参照
-daySelect.onchange = function() {
+daySelect.onchange = () => {
   previousDay = daySelect.value;
 }
 ```
 
 > **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
-</div>
 
 ## 仕様書
 

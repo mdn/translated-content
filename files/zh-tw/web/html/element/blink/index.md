@@ -21,7 +21,7 @@ slug: Web/HTML/Element/blink
 
 ### 結果（已經過淡化！）
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
 ## 規範
 
@@ -71,4 +71,4 @@ blink {
 - {{htmlelement("marquee")}}，類似的非標準元素。
 - [CSS 動畫](/zh-TW/docs/Web/Guide/CSS/Using_CSS_animations)能得出與此元素相同的效果。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

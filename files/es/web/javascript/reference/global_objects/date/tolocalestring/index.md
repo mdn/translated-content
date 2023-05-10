@@ -1,9 +1,9 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleString()`** devuelve un cadena con la representación al idioma de la fecha especificada. Los nuevos argumentos `locales` y `options` permiten a las aplicaciones especificar el idioma cuyas convenciones de formato deben usarse y personalizar el comportamiento de la función. En implementaciones anteriores, ignoran los argumentos de las configuraciones `locales` y `options` , la configuración regional utilizada y la forma de la cadena devuelta dependen completamente de la implementación .
@@ -136,16 +136,13 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toLocaleString")}}
+{{Compat}}
 
 ## See also
 

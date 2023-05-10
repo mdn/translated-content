@@ -1,6 +1,6 @@
 ---
 title: Notification.renotify
-slug: Web/API/notification/renotify
+slug: Web/API/Notification/renotify
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -33,7 +33,7 @@ var n = new Notification('Test notification',options);
 n.renotify // should return true
 ```
 
-## 使用注意
+## 使用说明
 
 renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。
 

@@ -3,6 +3,7 @@ title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 ---
+
 {{JSRef}}
 
 Метод **`Symbol.for(key)`** ищет ранее созданный разделяемый символ по заданному ключу и возвращает его, если он найден. В противном случае создаётся новый разделяемый символ для данного ключа в глобальном реестре символов.

@@ -1,16 +1,9 @@
 ---
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/includes
 ---
+
 {{JSRef}}
 
 El método **`includes()`** determina si una matriz incluye un determinado elemento, devuelve `true` o `false` según corresponda.
@@ -35,7 +28,7 @@ arr.includes(searchElement[, fromIndex])
 
 Un {{jsxref ("Boolean")}} que es `true` si el valor `valueToFind` se encuentra dentro de la matriz (o la parte de la matriz indicada por el índice `fromIndex`, si se especifica). Todos los valores de cero se consideran iguales independientemente del signo (es decir, -0 se considera igual a 0 y +0), pero `false` no se considera igual a 0.
 
-> **Nota:** Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar si se encuentra el elemento dado
+> **Nota:** Técnicamente hablando, `include()` usa el algoritmo [`sameValueZero`](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) para determinar si se encuentra el elemento dado
 
 ## Ejemplos
 
@@ -145,14 +138,11 @@ Si necesita admitir motores de JavaScript realmente obsoletos que no son compati
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentarios         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES7', '#sec-array.prototype.includes', 'Array.prototype.includes')}}     | {{Spec2('ES7')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.includes', 'Array.prototype.includes')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Ver también
 

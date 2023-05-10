@@ -1,14 +1,8 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Example
-  - JavaScript
-  - Promise
-  - async
-  - await
-translation_of: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 **`async function`** 선언은 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}객체를 반환하는 하나의 비동기 함수를 정의합니다. 비동기 함수는 이벤트 루프를 통해 비동기적으로 작동하는 함수로, 암시적으로 {{jsxref("Promise")}}를 사용하여 결과를 반환합니다. 그러나 비동기 함수를 사용하는 코드의 구문과 구조는, 표준 동기 함수를 사용하는것과 많이 비슷합니다.
@@ -181,11 +175,11 @@ async function getProcessedData(url) {
 
 위 예제에서는 return 구문에 await 구문이 없다는 것에 주목하자. 이는 async function의 반환값이 암묵적으로 {{jsxref("Promise.resolve")}}로 감싸지기 때문이다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

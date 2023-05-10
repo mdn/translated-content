@@ -1,17 +1,9 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript5
-  - JavaScript
-  - 'Null'
-  - Objeto
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
+
 {{JSRef}}
 
 El método **`Object.create()`** crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.
@@ -350,15 +342,11 @@ Note that while the setting of `null` as `[[Prototype]]` is supported in the rea
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.create', 'Object.create')}}         | {{Spec2('ES2015')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.create")}}
+{{Compat}}
 
 ## Ver también
 

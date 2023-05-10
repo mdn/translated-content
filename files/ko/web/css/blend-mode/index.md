@@ -1,14 +1,8 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - 블렌드 모드
-  - 혼합 모드
-translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<blend-mode>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소가 겹칠 경우 색상이 어떻게 나타나야 하는지 정의합니다. {{cssxref("background-blend-mode")}}와 {{cssxref("mix-blend-mode")}} 속성에서 사용합니다.
@@ -62,7 +56,7 @@ translation_of: Web/CSS/blend-mode
   - : `difference`와 유사하지만 더 적은 대비를 가진 색을 반환합니다.
       `difference`와 마찬가지로 검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.
 - `hue`
-  - :  최종 색은 전경색의 색조를 가지며 배경색의 채도와 밝기를 가집니다.
+  - : 최종 색은 전경색의 색조를 가지며 배경색의 채도와 밝기를 가집니다.
 - `saturation`
   - : 최종 색은 전경색의 채도를 가지며 배경색의 색조와 밝기를 가집니다.
       색조 없는 순수한 회색 배경으로는 아무런 효과도 없습니다.
@@ -428,11 +422,11 @@ selectElem.addEventListener('change', () => {
 
 {{EmbedLiveSample('Blend_mode_comparison', '100%', 400)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

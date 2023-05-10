@@ -162,7 +162,7 @@ Mais il ne correspondra pas à :
 
 Un multiplicateur est un signe qui indique nombre de fois qu'une entité peut être répétée. Sans aucun multiplicateur, une entité doit apparaître exactement une fois.
 
-### L'astérisque (`*`)
+### L'astérisque (\*)
 
 L'astérisque indique qu'une entité peut apparaître **zéro, une ou plusieurs fois**.
 

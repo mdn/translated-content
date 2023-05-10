@@ -1,13 +1,9 @@
 ---
 title: 사용자 에이전트를 이용한 브라우저 감지
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-tags:
-  - Compatibility
-  - HTTP
-  - Web Development
-translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/User_agent를_이용한_브라우저_감지
 ---
+
 {{HTTPSidebar}}
 
 보통 브라우저마다 다른 웹 페이지 또는 서비스를 제공하는 것은 나쁜 생각입니다. 웹은 사용자가 어떤 브라우저나 디바이스를 사용하고 있는지 개의치 않고 모두에게 접근성이 용이해야 하기 때문입니다. 따라서 특정 브라우저를 타겟으로 개발하는 것보다 가용적인 기능들 (예를 들어 Web API 등)을 이용하여 당신의 웹 사이트를 개선하는 것을 추천합니다.

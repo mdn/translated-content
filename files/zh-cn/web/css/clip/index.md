@@ -48,25 +48,66 @@ clip: inherit
 
 ## 示例
 
+### 裁剪图像
+
+#### HTML
+
+```html
+<p class="dotted-border">
+  <img
+    src="macarons.png"
+    title="Original graphic" />
+  <img
+    id="top-left"
+    src="macarons.png"
+    title="Graphic clipped to upper left" />
+  <img
+    id="middle"
+    src="macarons.png"
+    title="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    title="Graphic clipped to bottom right" />
+</p>
+```
+
+#### CSS
+
 ```css
-p { border:dotted;  position:relative; }
-
-#img2 {
-  position:absolute;  left:263px;
-
-  clip: rect(40px, 200px, 150px, 30px);
-  /* 标准语法，Internet Explorer 4-7 不支持 */
+.dotted-border {
+  border: dotted;
+  position: relative;
+  width: 390px;
+  height: 400px;
 }
 
-#img3 {
-  position: absolute; left:526px;
+#top-left,
+#middle,
+#bottom-right {
+  position: absolute;
+  top: 0;
+}
 
-  clip: rect(40px  200px  150px  30px);
-  /* 非标准语法，但是包括火狐与 IE 在内的主要浏览器均支持 */
+#top-left {
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
+}
+
+#middle {
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
+}
+
+#bottom-right {
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
 }
 ```
 
-![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg) ![hut.jpg](/@api/deki/files/3613/=hut.jpg)
+#### 结果
+
+{{EmbedLiveSample('裁剪图像', '', '450px')}}
 
 ## 规范
 
@@ -76,6 +117,6 @@ p { border:dotted;  position:relative; }
 
 {{Compat}}
 
-## See also
+## 参见
 
 - Related CSS properties: {{ cssxref("text-overflow") }}, {{ cssxref("white-space") }}, {{ Cssxref("overflow-x") }}, {{ Cssxref("overflow-y") }}, {{ Cssxref("overflow") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}

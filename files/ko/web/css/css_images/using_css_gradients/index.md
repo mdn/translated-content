@@ -1,16 +1,8 @@
 ---
 title: CSS 그레이디언트 사용하기
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
-tags:
-  - Advanced
-  - CSS
-  - CSS Images
-  - Example
-  - Gradients
-  - Guide
-  - Web
-translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 ---
+
 {{CSSRef}}
 
 **CSS 그레이디언트**는 {{cssxref("&lt;image&gt;")}} 자료형의 특별한 종류인 {{cssxref("&lt;gradient&gt;")}}로 나타내며 두 개 이상의 색 간의 점진적 전환을 표현합니다. 그레이디언트에는 선형({{cssxref("linear-gradient")}} 함수), 방사형({{cssxref("radial-gradient")}} 함수), 각진 원형({{cssxref("conic-gradient")}} 함수) 세 종류가 있으며, 각각의 변형본으로 계속해서 반복하는 {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}} 함수도 있습니다.
@@ -304,7 +296,7 @@ div {
 ```css
 .layered-image {
   background: linear-gradient(to right, transparent, mistyrose),
-      url("https://mdn.mozillademos.org/files/15525/critters.png");
+      url("critters.png");
 }
 ```
 

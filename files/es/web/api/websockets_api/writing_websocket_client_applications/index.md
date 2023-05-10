@@ -1,10 +1,8 @@
 ---
 title: Escribiendo aplicaciones con WebSockets
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - Guía WebSocket WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
 
 > **Nota:** Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
@@ -178,7 +176,7 @@ Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para
 
 El texto recibido a través de la conexión WebSocket está en formato UTF-8.
 
-Antes de Gecko 9.0 {{ geckoRelease("9.0") }}, algunos no-caracteres que siguen siendo texto UTF-8 válido podrían causar el cierre de la conexión. Ahora Gecko permite esos valores.
+Antes de Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), algunos no-caracteres que siguen siendo texto UTF-8 válido podrían causar el cierre de la conexión. Ahora Gecko permite esos valores.
 
 ## Cerrando la conexión
 

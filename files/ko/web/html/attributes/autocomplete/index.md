@@ -1,13 +1,8 @@
 ---
 title: HTML autocomplete 특성
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - 자동완성
-translation_of: Web/HTML/Attributes/autocomplete
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`autocomplete`** 특성을 사용하면 {{glossary("user agent", "사용자 에이전트")}}의 자동완성을 허용할 양식 입력 필드를 지정할 수 있으며, 사용자 에이전트에게 어떤 정보에 대한 자동완성을 원하는지 안내할 수도 있습니다. HTML `autocomplete` 특성은 텍스트와 숫자를 허용하는 {{HTMLElement("input")}} 요소, {{HTMLElement("textarea")}} 요소, {{HTMLElement("select")}} 요소, {{HTMLElement("form")}} 요소에 사용할 수 있습니다.
@@ -175,7 +170,7 @@ translation_of: Web/HTML/Attributes/autocomplete
 - 충청남도 홍성군 홍북읍 충남대로 21
 - `address-level1`
 
-  - :&#x20;
+  - : &#x20;
 
     시/도: "서울특별시", "경기도", "충청남도"
 
@@ -216,7 +211,7 @@ Exampleville CA 95555
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,17 +1,8 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-tags:
-  - API
-  - Complementos
-  - Interfaz
-  - No estandar
-  - Reference
-  - WebExtensions
-  - extensiones
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
+
 {{AddonSidebar}}
 
 Funciones para internacionalizar su extensión. Es posible utilizar estas API para obtener cadenas de texto traducidas a partir de archivos de configuración regional incluidos en la extensión, conocer el idioma actual del navegador y recuperar el valor de su [cabecera Accept-Language](/es/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header).
@@ -39,9 +30,9 @@ Para obtener más información sobre el uso de i18n en su extensión, consulte:
 
 <!---->
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

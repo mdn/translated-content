@@ -1,8 +1,8 @@
 ---
 title: Optional chaining
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 **optional chaining** 연산자 (**`?.`**) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.

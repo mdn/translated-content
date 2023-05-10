@@ -8,13 +8,14 @@ tags:
 translation_of: Web/MathML/Attribute
 original_slug: Web/MathML/Атрибут
 ---
+
 {{MathMLRef}}
 
 Ниже приведён список атрибутов MathML в алфавитном порядке. Более подробная информация о каждом атрибуте доступна на [странице элементов](/ru/docs/Web/MathML/Element).
 
 Примечания:
 
-- Элементы MathML {{ MathMLElement("mstyle") }} и {{ MathMLElement("math") }} {{ gecko_minversion_inline("7.0") }} принимают все атрибуты MathML.
+- Элементы MathML {{ MathMLElement("mstyle") }} и {{ MathMLElement("math") }} принимают все атрибуты MathML.
 - Смотри [примечания](/ru/docs/MathML/Attributes/Values) к значениям и единицам измерения в MathML.
 - Атрибуты `background`, `color`, `fontfamily`, `fontsize`, `fontstyle`, `fontweight` и `xlink:href` являются устаревшими.
 - [XLink](/ru/docs/Glossary/XLink) атрибуты для элементов MathML: `xlink:actuate`, `xlink:href`, `xlink:show` и `xlink:type` также устарели.

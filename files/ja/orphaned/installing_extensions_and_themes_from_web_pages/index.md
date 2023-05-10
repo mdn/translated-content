@@ -4,7 +4,7 @@ slug: orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 original_slug: Installing_Extensions_and_Themes_From_Web_Pages
 ---
 
-[拡張機能](ja/Extension) と [テーマ](ja/Themes) を Web ページからインストールするには、XPI ファイルに直接リンクしたり、[InstallTrigger](ja/XPInstall_API_Reference/InstallTrigger_Object) オブジェクトを使用するなど様々な方法があります。
+[拡張機能](/ja/Extension) と [テーマ](/ja/Themes) を Web ページからインストールするには、XPI ファイルに直接リンクしたり、[InstallTrigger](/ja/XPInstall_API_Reference/InstallTrigger_Object) オブジェクトを使用するなど様々な方法があります。
 
 拡張機能と Web ページの作者はユーザに対して最高の経験を提供するように、以下にかかれた方法で XPI をインストールできるようにすることを奨励します。
 
@@ -74,7 +74,7 @@ return false;
 
 #### Hash
 
-`Hash` プロパティは XPI ファイルコンテンツのハッシュ値を指定します。これはダウンロードしたファイルを検証し、例えば、ミラーサーバによって改変されたファイルが供給されるのを防ぐために使用されます。[nsICryptoHash](ja/NsICryptoHash) によってサポートされた任意のハッシュ関数を使用することができます。ハッシュ値は `hash function:hash value` の書式で、例えば、`sha1:28857e60d043447c5f4550853f2d40770b326a13` のように指定します。
+`Hash` プロパティは XPI ファイルコンテンツのハッシュ値を指定します。これはダウンロードしたファイルを検証し、例えば、ミラーサーバによって改変されたファイルが供給されるのを防ぐために使用されます。[nsICryptoHash](/ja/NsICryptoHash) によってサポートされた任意のハッシュ関数を使用することができます。ハッシュ値は `hash function:hash value` の書式で、例えば、`sha1:28857e60d043447c5f4550853f2d40770b326a13` のように指定します。
 
 #### toString()
 

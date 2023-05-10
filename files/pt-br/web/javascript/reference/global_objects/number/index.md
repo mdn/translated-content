@@ -1,12 +1,8 @@
 ---
 title: Número
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Número
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Sumário
@@ -52,8 +48,6 @@ Os principais usos para o objeto `Number` são:
 - {{jsxref("Number.prototype")}}
   - : Permite a adição de propriedades a um objeto Number.
 
-{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
-
 ## Methods
 
 - {{jsxref("Number.isNaN()")}} {{experimental_inline}}
@@ -64,14 +58,12 @@ Os principais usos para o objeto `Number` são:
   - : Determina se o tipo do valor passado é inteiro.
 - {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
   - : Determina se o tipo do valor passado é um inteiro seguro (número entre -(253 -1) e 253 -1).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Usado para avaliar o valor passado e convertê-lo a um inteiro (ou infinito), mas foi removido.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.
-
-{{jsOverrides("Function", "methods", "isNaN")}}
 
 ## Instâncias `Number`
 

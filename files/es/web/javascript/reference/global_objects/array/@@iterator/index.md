@@ -1,17 +1,9 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator
 ---
+
 {{JSRef}}
 
 El valor inicial de la propiedad **`@@iterator`** es el mismo objeto de función que el valor inicial de la propiedad {{jsxref("Array.prototype.values()", "values()")}}.
@@ -54,14 +46,11 @@ console.log(eArr.next().value); // p
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario           |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Definición inicial.. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Ver también
 

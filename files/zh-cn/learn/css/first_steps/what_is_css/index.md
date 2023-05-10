@@ -81,13 +81,13 @@ p {
 }
 ```
 
-你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在 MDN 上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其它的值，这些页面都可以帮助你。
+你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在 MDN 上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其他的值，这些页面都可以帮助你。
 
-> **备注：** 在 MDN 上的 [CSS reference](/zh-CN/docs/Web/CSS/Reference) 页面列举了所有的 CSS 属性页面（同时也包括其它的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索 "mdn _css-feature-name_" 。例如，搜索 "mdn color" 和 "mdn font-size"！
+> **备注：** 在 MDN 上的 [CSS reference](/zh-CN/docs/Web/CSS/Reference) 页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索 "mdn _css-feature-name_" 。例如，搜索 "mdn color" 和 "mdn font-size"！
 
 ## CSS 模块
 
-你可以通过 CSS 为许多东西添加样式，CSS 由许多*模块 (modules)* 构成。你可以在 MDN 上浏览这些模块的参考内容 (MDN reference)，许多模块都被组织在自己单独的文档页面。例如，我想查找一下 MDN reference 的 [Backgrounds and Borders](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders) 模块的相关内容，来了解它是用来做什么的、它还包括什么属性、它还有什么其它特性等。你也可以在 _CSS Specification_ 查找（见下文），它定义了 CSS 规范。
+你可以通过 CSS 为许多东西添加样式，CSS 由许多*模块 (modules)* 构成。你可以在 MDN 上浏览这些模块的参考内容 (MDN reference)，许多模块都被组织在自己单独的文档页面。例如，我想查找一下 MDN reference 的 [Backgrounds and Borders](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders) 模块的相关内容，来了解它是用来做什么的、它还包括什么属性、它还有什么其他特性等。你也可以在 _CSS Specification_ 查找（见下文），它定义了 CSS 规范。
 
 在这个阶段你不必过于担心 CSS 是如何组织的 (how CSS is structured)，但是它能帮助你更好的掌握 CSS。例如，你注意到某个属性和另外一些属性的相似点，并且它们可能确实是相同的格式。
 
@@ -101,26 +101,14 @@ CSS 也不例外——它是由 W3C(万维网联盟) 中的一个名叫 [CSS Wor
 
 新的 CSS 特性被开发出来，或是因为某个浏览器热衷于开发新功能，或是因为 Web 设计人员与开发者要求增加一个新特性，又或是 CSS Working Group 内部的讨论决定。CSS 始终在发展，并伴随着新的特性。然而，有一件事情从始至终都未改变，那就是不让新的改变破坏旧的网站，即使是 2000 年建立的网站，如今也能正常访问！
 
-作为一个 CSS 新手，你会发现阅读 CSS 规范 中的内容非常吃力——它旨在为工程师在用户代理 (user agents) 中实现对 CSS 各种特性的支持，而不是作为一本为 Web 开发者理解 CSS 内容的教程。即使是有经验的开发者，也更倾向于使用 MDN 文档或者其它教程。但是，知晓它的存在，理解 CSS、规范 和 浏览器支持（见下文）之间的关系是很有价值的。
+作为一个 CSS 新手，你会发现阅读 CSS 规范 中的内容非常吃力——它旨在为工程师在用户代理 (user agents) 中实现对 CSS 各种特性的支持，而不是作为一本为 Web 开发者理解 CSS 内容的教程。即使是有经验的开发者，也更倾向于使用 MDN 文档或者其他教程。但是，知晓它的存在，理解 CSS、规范 和 浏览器支持（见下文）之间的关系是很有价值的。
 
 ## 浏览器支持
 
-当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) 一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态 (implementation status) 是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
-
-以下是 CSS [`font-family`](/zh-CN/docs/Web/CSS/font-family) 属性的兼容数据表。
-
-{{Compat}}
+当一个浏览器支持 CSS 后，我们就可以用它来进行 Web 开发了。这意味着我们写在 CSS 文件中的代码可以被指令执行，展示到荧幕中。在 [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)一节中我们会学习到更多的相关知识。但是让所有的浏览器都同时支持一个 CSS 新特性是不现实的，通常都会一个空档期——一些浏览器已经支持而另一些仍未支持。因此，查看特性的实现状态是非常有用的。在 MDN 上的每个属性的页面中都标有它们对应的状态，你可以通过这种方法来查看你是否可以去使用它。
 
 ## 下一步
 
 现在你对 CSS 已经有了一定的理解，接下来，通过 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)的学习，你将可以自己写一些 CSS 代码了。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## 本章目录
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [用用你刚学到的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

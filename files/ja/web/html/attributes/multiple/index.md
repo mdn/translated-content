@@ -163,10 +163,7 @@ select[multiple]:active {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'multiple attribute')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'multiple attribute')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## 関連情報
 

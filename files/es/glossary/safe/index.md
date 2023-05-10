@@ -1,9 +1,9 @@
 ---
 title: Seguro
-slug: Glossary/safe
-translation_of: Glossary/safe
+slug: Glossary/Safe
 original_slug: Glossary/seguro
 ---
+
 Un método HTTP es **seguro** cuando no altera el estado del servidor. En otras palabras, un método HTTP es seguro solo cuando ejecuta una operación de lectura. Todos los métodos seguros también son {{glossary("idempotent")}} así como algunos, pero no todos, métodos inseguros como {{HTTPMethod("PUT")}}, o {{HTTPMethod("DELETE")}}.
 
 Incluso si los métodos seguros tienen una semántica de solo lectura, los servidores pueden alterar su estado: por ejemplo, pueden registrar o mantener estadísticas. Lo importante aquí es que al llamar a un método seguro, el cliente no solicita ningún cambio en el servidor y, por lo tanto, no creará una carga o carga innecesaria para el servidor. Los navegadores pueden llamar a métodos seguros sin temor a causar ningún daño al servidor: esto les permite realizar actividades como la búsqueda previa sin riesgos. Los rastreadores web también confían en llamar a métodos seguros.

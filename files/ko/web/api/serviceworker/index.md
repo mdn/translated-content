@@ -1,18 +1,8 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - 서비스 워커
-  - 워커
-translation_of: Web/API/ServiceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 [Service Worker API](/ko/docs/Web/API/Service_Worker_API)의 **`ServiceWorker`** 인터페이스는 서비스 워커로의 참조를 제공합니다. 다수의 {{glossary("browsing context", "브라우징 맥락")}}(e.g. 페이지, 다른 워커, 등등)는 고유한 `ServiceWorker` 객체를 통해 동일한 서비스 워커와 연결할 수 있습니다.

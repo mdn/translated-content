@@ -1,17 +1,8 @@
 ---
 title: Quirks Mode e Standards Mode
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desenvolvimento Web
-  - Gecko
-  - Guia(2)
-  - Guía
-  - HTML
-  - Padrões Web
-  - Web Standars
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 Nos velhos dias da web, páginas eram tipicamente escritas em duas versões: Uma para o Netscape Navigator, e outra para o Microsoft Internet Explorer. Quando os padrões web foram criados pelo W3C, navegadores não puderam começar a usá-los imediatamente, pois isto iria quebrar a maior parte dos sites existentes na web. Portanto os navegadores introduziram dois modos para tratar os novos padrões em sites condescendentes diferentemente dos antigos sites legados.
 
 Existem agora três modos usados pelos mecanismos de layout nos navegadores web: "quirks mode" ("modo equivocado"), "almost standards mode" ("modo quase padrão"), e "full standards mode" ("modo de padrões completos"). Em **quirks mode**, o layout emula o comportamento não-padrão do Netscape Navigator 4 e do Internet Explorer 5 para Windows que é requerido para não quebrar o conteúdo existente na Web. No **full standards mode**, o comportamento é (espera-se) o descrito pelas especificações do HTML e CSS. No **almost standards mode**, há apenas um número muito pequeno de peculiaridades não-padrão implementadas.

@@ -1,8 +1,8 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-translation_of: Web/CSS/inline-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`inline-size`** define el tamaño horizontal o vertical de un bloque de elementos, dependiendo del modo de escritura. Esto corresponde ya sea a la propiedad {{cssxref("width")}} o {{cssxref("height")}}, dependiendo del valor de {{cssxref("writing-mode")}}.
@@ -66,15 +66,13 @@ La propiedad `inline-size` toma los mismos valores de las propiedades {{cssxref(
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                       | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## Mira también
 

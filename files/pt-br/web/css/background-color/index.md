@@ -1,8 +1,8 @@
 ---
 title: background-color
 slug: Web/CSS/background-color
-translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-color`** define a cor de fundo de um elemento.

@@ -1,8 +1,8 @@
 ---
 title: border-inline-start-width
 slug: Web/CSS/border-inline-start-width
-translation_of: Web/CSS/border-inline-start-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start-width`** define el ancho del borde lógico inicial en línea de un elemento, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-width")}} y {{cssxref("border-bottom-width")}}, o {{cssxref("border-left-width")}}, y {{cssxref("border-right-width")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -58,15 +58,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                               | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start-width", "border-inline-start-width")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline-start-width")}}
+{{Compat}}
 
 ## Mira también
 

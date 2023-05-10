@@ -1,22 +1,10 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/input/text
-tags:
-  - Entrada de texto
-  - Form input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Input Type
-  - Referencia
-  - Text
-  - Texto
-  - formulários
-  - text input
-translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean campos de texto básicos de una sola línea.
 
@@ -37,7 +25,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} y {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes admitidos</strong></td>
@@ -119,7 +107,7 @@ El atributo {{HTMLAttrDef("pattern")}}, cuando se especifica, es una expresión 
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
-> **Nota:** **Consejo**:: Utiliza el atributo {{HTMLAttrxRef("title", "input")}} para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
+> **Nota:** Utiliza el atributo {{HTMLAttrxRef("title", "input")}} para especificar el texto que la mayoría de los navegadores mostrarán como información sobre herramientas para explicar cuáles son los requisitos para coincidir con el patrón. También debes incluir otro texto explicativo cercano.
 
 Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
 
@@ -127,9 +115,9 @@ Consulta [Especificación de un patrón](#especificación_de_un_patrón) para ob
 
 El atributo {{HTMLAttrDef("placeholder")}} es una cadena que proporciona una breve pista al usuario sobre el tipo de información que se espera en el campo. Debe ser una palabra o frase corta que demuestre el tipo de datos esperado, en lugar de un mensaje explicativo. El texto _no debe_ incluir retornos de carro o saltos de línea.
 
-Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta {{SectionOnPage("/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Anulación de BiDi mediante caracteres de control Unicode")}} para esos caracteres.
+Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
 
-> **Nota:** Evita utilizar el atributo {{HTMLAttrDef("placeholder")}} si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta {{SectionOnPage("/es/docs/Web/HTML/Element/input", "Etiquetas y marcadores de posición")}} para obtener más información.
+> **Nota:** Evita utilizar el atributo {{HTMLAttrDef("placeholder")}} si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
 
 ### {{HTMLAttrDef("readonly")}}
 
@@ -180,7 +168,7 @@ Una extensión de Safari, el atributo {{HTMLAttrDef("autocorrect")}} es una cade
 
 Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
 
-> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global {{HTMLAttrxRef("enterkeyhint")}}, pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta {{bug(1490661)}}.
+> **Nota:** Este [se ha estandarizado](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) como el atributo global {{HTMLAttrxRef("enterkeyhint")}}, pero aún no está ampliamente implementado. Para ver el estado del cambio que se está implementando en Firefox, consulta [Error 1490661 en Firefox](https://bugzil.la/1490661).
 
 Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegador decide, utilizando esta sugerencia, qué etiqueta poner en la tecla Intro.
 
@@ -404,19 +392,16 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                       | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#text-(type=text)-state-and-search-state-(type=search)', '&lt;input type="text"&gt;')}} | {{ Spec2('HTML WHATWG') }} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#text-typetext-state-and-search-state-typesearch', '&lt;input type="text"&gt;')}}         | {{Spec2('HTML5.1')}}         | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.input.input-text")}}
+{{Compat}}
 
 ## Ve también
 
 - [Formularios HTML](/es/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
 - [Compatibilidad de propiedades CSS](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

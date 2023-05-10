@@ -1,27 +1,15 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Documentação
-  - Element
-  - Elementos Input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Referencia
-  - Tipos de Input
-  - botões
-  - button
-  - formulários
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+> **Nota:** Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
 
 <table class="properties">
   <tbody>
@@ -329,7 +317,7 @@ draw();
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Veja também
 

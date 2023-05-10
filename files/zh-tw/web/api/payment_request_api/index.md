@@ -23,7 +23,7 @@ Payment Request API 提供商家與用戶雙方一致的用戶體驗。它並不
 
 你可以在 [使用 Payment Request API](/zh-TW/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API) 文章看到完整教學。
 
-> **備註：** 此 API 只有在設定 {{htmlattrxref("allowpaymentrequest","iframe")}} 屬性下，才可支援跨域 {{htmlelement("iframe")}} 元素。
+> **備註：** 此 API 只有在設定 [`allowpaymentrequest`](/zh-TW/docs/Web/HTML/Element/iframe#allowpaymentrequest) 屬性下，才可支援跨域 {{htmlelement("iframe")}} 元素。
 
 ## 介面
 
@@ -54,7 +54,7 @@ Payment Request API 提供商家與用戶雙方一致的用戶體驗。它並不
 ### Related dictionaries for the Basic Card specification
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : An object providing _redacted_ address information that is provided as the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} on the {{event("paymentmethodchange")}} event sent to the {{domxref("PaymentRequest")}} when the user changes payment information.
+  - : An object providing _redacted_ address information that is provided as the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} on the `paymentmethodchange` event sent to the {{domxref("PaymentRequest")}} when the user changes payment information.
 - {{domxref("BasicCardErrors")}}
   - : An object providing any error messages associated with the fields in the {{domxref("BasicCardResponse")}} object that are not valid. This is used as the value of the {{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}} property on the {{domxref("PaymentValidationErrors")}} object sent to the {{domxref("PaymentRequest")}} when an error occurs.
 - {{domxref('BasicCardRequest')}}

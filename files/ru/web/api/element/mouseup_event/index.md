@@ -3,6 +3,7 @@ title: 'Элемент: mouseup событие'
 slug: Web/API/Element/mouseup_event
 translation_of: Web/API/Element/mouseup_event
 ---
+
 {{APIRef}}
 
 Событие **`mouseup`** возникает на {{domxref("Element")}}, когда кнопка на аппаратном манипуляторе курсора (на мыши или трекпаде) отпущена, в то время как указатель находится на элементе. Событие mouseup является противоположным {{domxref("Element.mousedown_event", "mousedown")}} событию.

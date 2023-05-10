@@ -13,8 +13,6 @@ slug: Web/SVG/Element/feComponentTransfer
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
 ### 全局属性
@@ -37,7 +35,7 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ### SVG
 
-```plain
+```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
     <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
@@ -96,15 +94,15 @@ slug: Web/SVG/Element/feComponentTransfer
 
 ### CSS
 
-```plain
+```css
 rect {
   fill: url(#rainbow);
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 340)}}
+{{EmbedLiveSample("示例", "100%", 340)}}
 
 ## 参见
 

@@ -1,14 +1,8 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
-tags:
-  - AJAX
-  - Property
-  - Reference
-  - XML
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/readyState
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 A propriedade **XMLHttpRequest.readyState** retorna o estado de um XMLHttpRequest. Uma requisição XHR que existe em um dos seguintes estados:

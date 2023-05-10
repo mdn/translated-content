@@ -1,8 +1,8 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-translation_of: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 El constructor **`URL()`** devuelve un objeto {{domxref("URL")}} recién creado que representa la URL definida por los parámetros.
@@ -56,15 +56,13 @@ var d = new URL('/en-US/docs', b);                     // => 'https://developer.
         new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (ver URL relativas)
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                   | Estado               | Comentario          |
-| ---------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('URL', '#constructors', 'URL.URL()')}} | {{Spec2('URL')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.URL.URL")}}
+{{Compat}}
 
 ## Ver también
 

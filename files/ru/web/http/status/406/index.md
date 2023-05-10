@@ -6,6 +6,7 @@ tags:
   - Код состояния HTTP
 translation_of: Web/HTTP/Status/406
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not Acceptable`** означает, что сервер не может вернуть ответ, соответствующий списку допустимых значений, определённых в заголовках упреждающего [согласования контента](/ru/docs/Web/HTTP/Content_negotiation), и что сервер не желает вернуть представление контента по умолчанию.

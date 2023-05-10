@@ -1,10 +1,9 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-translation_of: Web/HTML/Global_attributes/itemid
 original_slug: Web/HTML/Global_attributes/itemid
-browser-compat: html.global_attributes.itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Global_attributes) **`itemid`** proporciona microdatos en forma de un identificador global único de un elemento.

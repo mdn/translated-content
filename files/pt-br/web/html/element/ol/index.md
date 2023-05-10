@@ -1,15 +1,8 @@
 ---
 title: <ol>
 slug: Web/HTML/Element/ol
-tags:
-  - Agrupamento de conteúdo HTML
-  - Elemento
-  - Guía
-  - HTML:Conteúdo flutuante
-  - Listagem <ol>
-  - Referencia
-translation_of: Web/HTML/Element/ol
 ---
+
 ## Sumário
 
 O **Elemento HTML \<ol>** (ou _Elemento HTML de lista ordenada_) representa uma lista de itens ordenados. De forma característica esses itens ordenados em uma lista são mostrados com uma contagem que os precede, que pode ser de qualquer tipo, como numerais, letras, algarismos romanos, ou simples símbolos. Esse modelo numerado não é definido na descrição html da página, mas na folha de estilos CSS associada, pela propriedade {{cssxref("list-style-type")}}.
@@ -33,9 +26,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     > **Nota:** Não utilize este atributo, pois ele se tornou obsoleto. O elemento {{HTMLElement("ol")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS). Para dar um efeito semelhante ao do atributo compacto, a propriedade [CSS](/pt-BR/docs/CSS) {{cssxref("line-height")}} pode ser utilizada com o valor de 80%.
 
-- {{htmlattrdef("reversed")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("reversed")}}
   - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
-- {{htmlattrdef("start")}}{{HTMLVersionInline(5)}}
+- {{htmlattrdef("start")}}
   - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize \<ol start="3">.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.
@@ -49,7 +42,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `'I'` indica algarismos romanos maiúsculos,
     - e `'1'` indica números (padrão).
 
-    O tipo de marcação é usado na lista inteira, a menos que um atributo {{htmlattrxref("type", "li")}} diferente seja utilizado dentro do elemento  {{HTMLElement("li")}}.
+    O tipo de marcação é usado na lista inteira, a menos que um atributo {{htmlattrxref("type", "li")}} diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS {{cssxref("list-style-type")}} deve ser usada em seu lugar.
 
@@ -157,4 +150,4 @@ A saída HTML acima será:
   - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto {{htmlattrxref("compact", "ol")}},
   - a propriedade {{cssxref("margin")}}, aplicável para controlar a indentação da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

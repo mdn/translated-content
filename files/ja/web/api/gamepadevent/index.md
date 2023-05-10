@@ -40,9 +40,7 @@ window.addEventListener("gamepaddisconnected", function(e) {
 
 ## 仕様書
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#gamepadevent-interface", "GamepadEvent")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

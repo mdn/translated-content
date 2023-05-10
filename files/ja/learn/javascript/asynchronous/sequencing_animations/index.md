@@ -44,7 +44,7 @@ tags:
 
 ## プロジェクト概要
 
-このページを、 3 つの画像すべてにアニメーションを適用し、  1 つずつ順番に更新していくように更新してください。つまり、最初の画像が終了したら 2 つ目の画像を、 2 つ目の画像が終了したら 3 つ目の画像をアニメーションさせるわけです。
+このページを、 3 つの画像すべてにアニメーションを適用し、 1 つずつ順番に更新していくように更新してください。つまり、最初の画像が終了したら 2 つ目の画像を、 2 つ目の画像が終了したら 3 つ目の画像をアニメーションさせるわけです。
 
 このアニメーションは、すでに "main.js" で定義されているもので、画像を回転させ、消えるまで縮小させるだけです。
 
@@ -108,11 +108,3 @@ alice1.animate(aliceTumbling, aliceTiming);
    - 実際の課題または評価ページへのリンクで、助けを求めている問題を探すことができます。
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## このモジュール
-
-- [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-- [プロミスベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **評価課題: アニメーションを順番に再生する**

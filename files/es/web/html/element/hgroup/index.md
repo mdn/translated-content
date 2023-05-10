@@ -1,9 +1,9 @@
 ---
 title: hgroup
 slug: Web/HTML/Element/hgroup
-translation_of: Web/HTML/Element/hgroup
 original_slug: Web/HTML/Elemento/hgroup
 ---
+
 ## Resumen
 
 El _elemento de grupo de cabeceras HTML_ (\<hgroup>) representa el encabezado de una sección. Define un solo título que participa de [la estructura del documento](/en/Sections_and_Outlines_of_an_HTML5_document) como el encabezado de la sección implícita o explícita a la que pertenece.
@@ -45,6 +45,10 @@ Este elemento implementa la interfaz `HTMLElement`.
 </hgroup>
 ```
 
-### Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.hgroup")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

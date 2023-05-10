@@ -1,8 +1,8 @@
 ---
 title: border-left
 slug: Web/CSS/border-left
-translation_of: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -38,14 +38,10 @@ element {
 
 Si las reglas no especifican un color de borde, el borde tendrá la propiedad {{ Cssxref("color") }}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                                   | Comment                                                                                                                   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Backgrounds', '#border-left', 'border-left') }}         | {{ Spec2('CSS3 Backgrounds') }} | No direct changes, though the modification of values for the {{ cssxref("border-left-color") }} do apply to it. |
-| {{ SpecName('CSS2.1', 'box.html#propdef-border-left', 'border-left') }} | {{ Spec2('CSS2.1') }}             | No significant changes                                                                                                    |
-| {{ SpecName('CSS1', '#border-left', 'border-left') }}                         | {{ Spec2('CSS1') }}                 | Initial definition                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-left")}}
+{{Compat}}

@@ -112,13 +112,11 @@ if (navigator.getUserMedia) {
 pre.innerHTML = myScript.innerHTML;
 ```
 
-> **メモ:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに再び入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
+> **メモ:** `createMediaStreamSource()`の呼び出しによるメディアストリームの音声は、再び`AudioContext`の処理グラフに入ります。よって、ストリームの再生/停止は、まだメディア API とプレイヤーの操作で行えます。
 
 ## 仕様
 
-| Specification                                                                                                                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaStreamSource-MediaStreamAudioSourceNode-MediaStream-mediaStream', 'createMediaStreamSource()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

@@ -1,14 +1,9 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Clases
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 La propiedad **`new.target`** te permite detectar si una función o constructor fue llamado usando el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new). En constructores y funciones instanciadas con el operador [new](/es/docs/Web/JavaScript/Referencia/Operadores/new), `new.target` devuelve una referencia al constructor o función. En llamadas a funciones normales, `new.target` es {{jsxref("undefined")}}.
@@ -60,18 +55,15 @@ var b = new B(); // escribe en el log "B"
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estatus                      | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new_target")}}
+{{Compat}}
 
 ## Ver también
 
 - [Funciones](/es/docs/Web/JavaScript/Guide/Funciones)
 - [Clases](/es/docs/Web/JavaScript/Referencia/Classes)
 - [`new`](/es/docs/Web/JavaScript/Referencia/Operadores/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`this`](/es/docs/Web/JavaScript/Reference/Operators/this)

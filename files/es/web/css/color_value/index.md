@@ -1,15 +1,8 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Necesita Compatibilidad con Navegadores Móviles
-  - Referencia
-  - Tipos de datos CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -26,7 +19,7 @@ Asociado con el color en el espacio sRGB, un valor `<color>` también consiste e
 
 Aunque los valores de colores en CSS son definidos de manera precisa existe la posibilidad de que parezcan distintos en dispositivos diferentes. La mayoría de ellos no están calibrados y algunos navegadores no soportan los [color profile](http://en.wikipedia.org/wiki/ICC_profile) de algunos dispositivos de salidas. En esta situación el color puede variar bastante.
 
-> **Nota:** **Notas:** La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
+> **Nota:** La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
 
 ## Interpolación
 
@@ -73,7 +66,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -170,14 +163,14 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="128">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="128"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Module Level 3</a></td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -946,7 +939,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a></td>
       <td style="background: #639"></td>
       <td style="text-align: center"><code>rebeccapurple</code></td>
       <td><code>#663399</code></td>
@@ -961,7 +954,7 @@ El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar in
 
 La palaba `transparent` representa un color totalmente transparente, es decir, el color que veremos será el colore de fondo. Técnicamente es un color negro con un valor mínimo en el canal alfa y la manera de representarlo es `rgba(0,0,0,0)`.
 
-> **Nota:** **Nota histórica**
+> **Nota:**
 > La palabra clave `transparent` no fue un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor \<color> regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.
 >
 > Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent` fue redefinido como un color verdadero más en CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor `<color>` , como la propiedad {{Cssxref("color")}}.
@@ -1250,16 +1243,11 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario                                                                                                             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Añadido el color `rebeccapurple`.                                                                                      |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Colores de sistema depreciados; añadidos colores SVG; añadidos las notaciones funcionales `rgba()`, `hsl()`, `hsla().` |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Añadidos el naranja y los colores de sistema.                                                                          |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Definición Inicial                                                                                                     |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.color")}}
+{{Compat}}
 
 ## Ver además
 

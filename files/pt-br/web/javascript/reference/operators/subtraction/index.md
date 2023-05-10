@@ -1,8 +1,6 @@
 ---
 title: Subtração (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-browser-compat: javascript.operators.subtraction
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
 
 {{jsSidebar("Operators")}}

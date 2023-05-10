@@ -20,9 +20,9 @@ Définit l'icône pour l'action du navigateur.
 
 Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .
 
-Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets  `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
+Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est  [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
+Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -90,10 +90,6 @@ Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setIcon",2)}}
-
 ## Exemples
 
 Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise `setIcon()` pour indiquer si l'écoute est activée ou désactivée :
@@ -155,6 +151,10 @@ browser.browserAction.onClicked.addListener((tab) => {
   });
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

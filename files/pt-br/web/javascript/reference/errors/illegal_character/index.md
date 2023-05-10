@@ -1,14 +1,8 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
-tags:
-  - Erro
-  - ErroSintaxe
-  - ErrodeSintaxe
-  - Erros
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -76,7 +70,7 @@ var foo = 'bar';​
 Quando inspeciona-se este código em um editor como o Vim, você pode ver que, na verdade, há um caractere [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space).
 
 ```js
-var foo = 'bar';​<200b>
+var foo = 'bar';<200b>
 ```
 
 ## Veja também

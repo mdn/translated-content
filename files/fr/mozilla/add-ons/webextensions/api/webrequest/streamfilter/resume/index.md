@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
 
 Reprend une requête qui a été précédemment suspendue par un appel à {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
 ## Syntaxe
 
@@ -32,9 +32,9 @@ None.
 
 None.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.suspend", 10)}}
+{{Compat}}
 
 ## Exemples
 

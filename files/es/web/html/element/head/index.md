@@ -1,15 +1,10 @@
 ---
 title: head
 slug: Web/HTML/Element/head
-tags:
-  - HTML
-  - HTML:Elemento
-  - Metadatos de documento HTML
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/head
 original_slug: Web/HTML/Elemento/head
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.
 
@@ -24,7 +19,7 @@ El **elemento HTML `<head>`** provee información general (metadatos) acerca del
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}} {{obsolete_inline}}
+- {{htmlattrdef("profile")}} {{deprecated_inline}}
   - : Los URIs de uno o más perfiles de metadatos, separados por un espacio en blanco.
 
 ## Ejemplo
@@ -43,15 +38,11 @@ Navegadores modernos que cumplen con el estándar HTML5 construyen automáticame
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                          | Comentarios                         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última versión |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | Atributo `profile` obsoleto         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## Véase también
 

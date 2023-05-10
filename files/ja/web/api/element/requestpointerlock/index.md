@@ -1,9 +1,11 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{ APIRef("DOM") }}{{ SeeCompatTable }}
+{{ APIRef("DOM") }}
 
 **`Element.requestPointerLock()`** メソッドで、ポインターをこの要素にロックすることを非同期にリクエストすることができます。
 
@@ -11,9 +13,21 @@ slug: Web/API/Element/requestPointerLock
 
 ## 構文
 
-```js
-instanceOfElement.requestPointerLock();
+```js-nolint
+requestPointerLock()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+## セキュリティ
+
+[単発のユーザーアクティベーション](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するためには、ユーザーがページまたは UI 要素を操作する必要があります。
 
 ## 仕様書
 

@@ -7,6 +7,7 @@ tags:
   - Разметка
 translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:indeterminate`** находит элементы в неопределённом состоянии.

@@ -35,8 +35,4 @@ slug: Web/CSS/CSS_Basic_User_Interface
 
 ## 仕様書
 
-| 仕様書                            | 状態                       | 備考     |
-| --------------------------------- | -------------------------- | -------- |
-| {{SpecName("CSS4 Basic UI")}}     | {{Spec2("CSS4 Basic UI")}} |          |
-| {{SpecName("CSS3 Basic UI")}}     | {{Spec2("CSS3 Basic UI")}} |          |
-| {{SpecName("CSS2.1", "ui.html")}} | {{Spec2("CSS2.1")}}        | 初回定義 |
+{{Specifications}}

@@ -1,14 +1,8 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
+
 {{JSRef}}
 
 **`split()`** 메서드는 {{jsxref("String")}} 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.

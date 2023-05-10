@@ -1,9 +1,9 @@
 ---
 title: Elemento vacío
 slug: Glossary/Void_element
-translation_of: Glossary/Empty_element
 original_slug: Glossary/Empty_element
 ---
+
 Un **elemento vacío** es un {{Glossary("elemento")}} de HTML, SVG, o MathML que **no puede** tener nodos secundarios (es decir, elementos anidados o nodos de texto).
 
 Las especificaciones [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), y [MathML](https://www.w3.org/TR/MathML3/) definen con precisión lo que cada elemento puede contener. Muchas combinaciones no tienen sentido semántico, por ejemplo un elemento {{HTMLElement("audio")}} anidado dentro de un elemento {{HTMLElement("hr")}}.

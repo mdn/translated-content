@@ -1,16 +1,9 @@
 ---
 title: Proxy handler
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - NeedsTranslation
-  - Proxy
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
-translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 ---
+
 {{JSRef}}
 
 The proxy's handler object is a placeholder object which contains traps for {{jsxref("Proxy", "proxies", "", 1)}}.
@@ -48,16 +41,13 @@ All traps are optional. If a trap has not been defined, the default behavior is 
 
 Some non-standard traps are [obsolete and have been removed](/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#Proxy).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                                                    | Status                       | Comment                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ES2015')}}     | Initial definition.                       |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | The `enumerate` handler has been removed. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Proxy.handler")}}
+{{Compat}}
 
 ## See also
 

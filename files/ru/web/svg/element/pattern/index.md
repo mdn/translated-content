@@ -6,6 +6,7 @@ tags:
 translation_of: Web/SVG/Element/pattern
 original_slug: Web/SVG/Элемент/pattern
 ---
+
 {{SVGRef}}
 Элемент **`<pattern>`** определяет графический объект, который может быть перерисован с повторяющимися координатами **x** и **y** («мозаичным»), чтобы покрыть область.
 На ссылку `<pattern>` ссылаются атрибуты {{SVGAttr("fill")}} и / или {{SVGAttr("stroke")}} на других [графических элементах](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) , чтобы заполнить или обвести эти элементы указанным шаблоном.
@@ -42,7 +43,7 @@ html,body,svg { height:100% }
   - : Этот атрибут определяет систему координат содержимого {{ SVGElement("pattern") }}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-    > **Примечание:** **Сноска:** Этот атрибут не действует, если в элементе `<pattern>` указан атрибут `viewBox`.
+    > **Примечание:** Этот атрибут не действует, если в элементе `<pattern>` указан атрибут `viewBox`.
 
 - {{SVGAttr("patternTransform")}}
   - : Этот атрибут содержит определение необязательного дополнительного преобразования из системы координат шаблона в целевую систему координат.
@@ -62,12 +63,12 @@ html,body,svg { height:100% }
 - {{SVGAttr("x")}}
   - : Этот атрибут определяет смещение координаты x мозаичного изображения.
     _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
   - : Этот атрибут ссылается на пример шаблона, предоставляющего значения по умолчанию для атрибутов `<pattern>`.
     _Value type_: [**\<URL>**](/docs/Web/SVG/Content_type#URL); _Default value_: _none_; _Animatable_: **yes**
 
-    > **Примечание:** **Сноска:** Для браузеров, реализующих `href`, если заданы как `href`, так и `xlink:href`, `xlink:href` будет игнорироваться, используя только `href`.
+    > **Примечание:** Для браузеров, реализующих `href`, если заданы как `href`, так и `xlink:href`, `xlink:href` будет игнорироваться, используя только `href`.
 
 - {{SVGAttr("y")}}
   - : Этот атрибут определяет смещение координат y мозаичного элемента.

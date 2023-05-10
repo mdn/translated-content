@@ -1,21 +1,14 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Arreglo
-  - ECMAScript 5
-  - JavaScript
-  - Prototipo
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/every
 ---
+
 {{JSRef}}
 
 Determina si todos los elementos en el array satisfacen una condición.
 
-> **Nota:** **Precaución**: ¡Llamar este método en un array vacío devuelve `true` para cualquier condición!
+> **Advertencia:** ¡Llamar este método en un array vacío devuelve `true` para cualquier condición!
 
 {{EmbedInteractiveExample("pages/js/array-every.html")}}
 
@@ -156,15 +149,11 @@ if (!Array.prototype.every) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}                     | {{Spec2('ES5.1')}}     | Initial definition. Implemented in JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## Ver también
 

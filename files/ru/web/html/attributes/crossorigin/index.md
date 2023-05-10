@@ -4,6 +4,7 @@ slug: Web/HTML/Attributes/crossorigin
 translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/CORS_settings_attributes
 ---
+
 В HTML5 некоторые теги поддерживают [CORS](/ru/docs/HTTP/Access_control_CORS), например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут `crossorigin` (`crossOrigin` свойство), которое позволяет настроить CORS запросы для данных получаемых элементом. Эти атрибуты могут иметь следующие значения:
 
 | Ключевое слово    | Описание                                                           |
@@ -33,17 +34,7 @@ original_slug: Web/HTML/CORS_settings_attributes
 
 ## Поддержка браузерами
 
-### script crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Смотрите также
 

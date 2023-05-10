@@ -1,14 +1,8 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Definición
@@ -51,7 +45,7 @@ animation-fill-mode: unset;
     | `alternate`           | even                        | `0%` or `from`              |
     | `alternate`           | odd                         | `100%` or `to`              |
     | `alternate-reverse`   | even                        | `100%` or `to`              |
-    |  `alternate-reverse`  | odd                         | `0%` or `from`              |
+    | `alternate-reverse`  | odd                         | `0%` or `from`              |
 - `backwards`
   - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
     | `animation-direction`           | primer keyframe |
@@ -111,13 +105,11 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-fill-mode")}}
+{{Compat}}
 
 ## Ver también
 

@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/State
 
 Le type d'`état` de l'API {{WebExtAPIRef("downloads")}} définit différents états dans lesquels un téléchargement en cours peut se trouver.
 
-Une propriété d'`state` {{WebExtAPIRef('downloads.DownloadItem')}}  contiendra une chaîne tirée des valeurs définies dans ce type.
+Une propriété d'`state` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.
 
 ## Type
 
@@ -33,9 +33,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 > **Note :** Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.State")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

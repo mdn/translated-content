@@ -10,7 +10,7 @@ slug: Web/API/MediaDevices/selectAudioOutput
 
 このメソッドは、ボタンのクリックなどの UI 操作から起動されなければなりません（より正確には、{{Glossary("transient activation", "一時的な有効化")}}を必要とします）。
 
-音声出力機器へのアクセスは[権限 API] (/ja/docs/Web/API/Permissions_API) によって制限されています。
+音声出力機器へのアクセスは[権限 API](/ja/docs/Web/API/Permissions_API) によって制限されています。
 `speaker-selection` 権限が与えられていない場合、プロンプトは表示されません。
 
 ## 構文

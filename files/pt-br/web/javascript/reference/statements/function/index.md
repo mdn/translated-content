@@ -1,7 +1,6 @@
 ---
 title: Declaração de função
 slug: Web/JavaScript/Reference/Statements/function
-translation_of: Web/JavaScript/Reference/Statements/function
 ---
 {{jsSidebar("Statements")}}
 

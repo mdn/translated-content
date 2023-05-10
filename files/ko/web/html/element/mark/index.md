@@ -1,15 +1,9 @@
 ---
 title: <mark>
 slug: Web/HTML/Element/mark
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/mark
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<mark>` 요소**는 현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한 부분을 나타냅니다.
 
@@ -150,4 +144,4 @@ mark::after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.mark")}}
+{{Compat}}

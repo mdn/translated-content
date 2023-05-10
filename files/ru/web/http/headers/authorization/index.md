@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Headers/Authorization
 original_slug: Web/HTTP/Заголовки/Authorization
 ---
+
 {{HTTPSidebar}}
 
 Заголовок HTTP запроса **`Authorization`** включает в себя данные пользователя для проверки подлинности пользовательского агента с сервером обычно после того, как сервер ответил со статусом {{HTTPStatus("401")}} `Unauthorized` и заголовком {{HTTPHeader("WWW-Authenticate")}}.

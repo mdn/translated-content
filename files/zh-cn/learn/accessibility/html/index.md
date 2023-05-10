@@ -1,7 +1,6 @@
 ---
-title: 'HTML: 为无障碍提供一个良好的基础'
+title: 'HTML：无障碍的良好基础'
 slug: Learn/Accessibility/HTML
-original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -13,9 +12,9 @@ original_slug: learn/Accessibility/HTML:为无障碍提供一个良好的基础
     <tr>
       <th scope="row">前提：</th>
       <td>
-        有一定的 HTML 基础 (可参阅
+        有一定的 HTML 基础（可参阅
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >)，理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
+        >），理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>
@@ -249,7 +248,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 如果您使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
 
-创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅 [此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)） - 您只能使用嵌套的 `{{htmlelement("div")}}` 元素创建布局，但最好使用适当的分段元素包裹您的主导航（`{{htmlelement("nav")}}`），`footer` (`{{htmlelement("footer")}}`），重复内容单元 (`{{htmlelement("article")}}`) 等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
+创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Element#Content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹您的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://web.archive.org/web/20220331133701/https://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/)，了解屏幕阅读器的支持是什么样的原理）。
 
 > **备注：** 除了您的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 您可以随时将它放在您想要使用 CSS 的位置，但是您应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
@@ -327,7 +326,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button" tabindex="0">And me!</div>
 ```
 
-基本上，`{{htmlattrxref("tabindex")}}` 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
+基本上，[`tabindex`](/zh-CN/docs/Web/HTML/Global_attributes#tabindex) 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
 
 - `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的的地方。
 - `tabindex="-1"` — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。
@@ -374,15 +373,15 @@ document.onkeydown = function(e) {
 
 表单标签也很重要，可以让您了解您需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
-```html
+```html example-bad
 Fill in your name: <input type="text" id="name" name="name">
-```html
+```
 
 但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
 
 以下是一个更好的例子：
 
-```html
+```html example-good
 <div>
   <label for="name">Fill in your name:</label>
   <input type="text" id="name" name="name">
@@ -526,13 +525,3 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 您现在应该精通编写大多数场合可访问的 HTML。我们的 WAI-ARIA 基础知识文章也将填补这些知识中的一些空白，但本文已经关注了此基础知识。接下来，我们将探索 CSS 和 JavaScript，以及无障碍如何受其好坏影响。
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## 在此模块
-
-- [什么是无障碍 (What is accessibility?)](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [无障碍的良好的基础 (HTML: A good basis for accessibility)](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍的最好练习 (CSS and JavaScript accessibility best practices)](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI_ARIA 基础 (WAI-ARIA basics)](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体的无障碍 (Accessible multimedia)](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端的无障碍 (Mobile accessibility)](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍问题的解决处理 (Accessibility troubleshooting)](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)

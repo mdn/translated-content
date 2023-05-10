@@ -1,6 +1,6 @@
 ---
 title: '<form> : l''élément représentant un formulaire'
-slug: Web/HTML/Element/Form
+slug: Web/HTML/Element/form
 tags:
   - Element
   - Form Element
@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/form
 browser-compat: html.elements.form
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<form>`** représente un formulaire, c'est-à-dire une section d'un document qui contient des contrôles interactifs permettant à un utilisateur de fournir des informations.
 

@@ -9,7 +9,7 @@ slug: Mozilla/Firefox/Releases/21
 
 ### HTML
 
-- 实现了{{HTMLElement("style")}}元素上的{{htmlattrxref("scoped", "style")}}属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.({{bug("508725")}}).
+- 实现了{{HTMLElement("style")}}元素上的[`scoped`](/zh-CN/docs/Web/HTML/Element/style#scoped)属性。拥有该属性的{{HTMLElement("style")}}元素可以通过在 Firefox 20 中实现的 CSS 伪类{{cssxref(":scope")}}选择器选择到.({{bug("508725")}}).
 - 实现了新的{{HTMLElement("main")}}元素 ({{bug("820508")}}).
 
 ### JavaScript
@@ -91,7 +91,7 @@ slug: Mozilla/Firefox/Releases/21
 ## 相关链接
 
 - [Firefox 21 发行说明](http://www.mozilla.org/zh-CN/firefox/21.0/releasenotes/)
-- [Firefox 21 网站兼容性](../../../../../zh-CN/docs/Site_Compatibility_for_Firefox_21)
+- [Firefox 21 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_21)
 - [Firefox 21 附加组件兼容性](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 
 ### 更早版本

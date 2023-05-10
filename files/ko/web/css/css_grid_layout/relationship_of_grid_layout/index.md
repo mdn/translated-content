@@ -1,12 +1,8 @@
 ---
 title: Relationship of grid layout to other layout methods
-slug: Web/CSS/CSS_Grid_Layout/Relationship_of_grid_layout
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
+slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
+
 CSS 그리드 레이아웃은 레이아웃 작업을 위한 전체 시스템 중의 일부로서, 다른 CSS 기술과 함께 어우러져 작동하도록 설계되었습니다. 이번 가이드에서는 이미 사용하고 계신 다른 기술과 그리드가 어떻게 잘 어울리는지 설명해 드리겠습니다.
 
 ## 그리드와 플랙스박스
@@ -376,7 +372,7 @@ color: #d9480f;
 
 만약에 단독으로 위치를 지정한 자식 요소가 그리드 컨테이너에 속해 있지만, 해당 컨테이너가 위치를 참고하는 새로운 기준 요소로 정의되지 않았다면, 앞의 예제에서처럼 일반 배치 흐름에서 배제됩니다. 위치의 기준이 되는 요소는, 다른 레이아웃 방법에 공통으로 적용되는 것과 마찬가지로, 새로운 위치 기준 요소로 정의된 요소가 맡게 됩니다. 이번 경우에 만약 위에 있는 감싸는 요소에서 `position: relative`를 삭제한다면, 위치의 기준이 되는 것은 아래의 그림에서 보여주듯이 최상위 도큐먼트 오브젝트에 해당하는 기본 뷰포트(viewport)가 맡게 됩니다.
 
-![부모 요소로서의 그리드 컨테이너 모습을 담은 그림](https://mdn.mozillademos.org/files/14661/2_abspos_example.png)
+![부모 요소로서의 그리드 컨테이너 모습을 담은 그림](2_abspos_example.png)
 
 여기도 마찬가지로 해당 아이템은, 다른 아이템들의 크기 조정과 자동 배치와 관련해서, 더는 그리드 레이아웃에 관여하지 않게 됩니다.
 

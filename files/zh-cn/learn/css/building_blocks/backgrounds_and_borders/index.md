@@ -168,7 +168,7 @@ CSS {{cssxref("background")}} 属性是我们将在本课中学习的许多普�
 
 > **备注：** 渐变可以与常规的背景图像很好地混合在一起。
 
-其它 `background-*` 属性，该属性值用逗号分隔的方式设置。例如下列 `background-image`：
+其他 `background-*` 属性，该属性值用逗号分隔的方式设置。例如下列 `background-image`：
 
 ```css
 background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
@@ -190,7 +190,7 @@ background-position: 10px 20px,  top right;
 - `fixed`: 使元素的背景固定在视图端口上，这样当页面或元素内容滚动时，它就不会滚动。它将始终保持在屏幕上相同的位置。
 - `local`: 这个值是后来添加的 (它只在 Internet Explorer 9+中受支持，而其他的在 IE4+中受支持)，因为滚动值相当混乱，在很多情况下并不能真正实现您想要的功能。局部值将背景固定在设置的元素上，因此当您滚动元素时，背景也随之滚动。
 
-{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (或者看看这儿的 [源代码](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds)))。
+{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)（或者看看这儿的[源代码](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)）。
 
 ### 使用 background 的简写
 
@@ -300,24 +300,3 @@ background-position: 10px 20px,  top right;
 在下一课中，我们将了解文档排版与 CSS 的相互影响。以及了解当文本不是从左向右流动时会发生什么？
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

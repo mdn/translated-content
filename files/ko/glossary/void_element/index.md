@@ -3,6 +3,7 @@ title: 빈 요소
 slug: Glossary/Void_element
 original_slug: Glossary/Empty_element
 ---
+
 **빈 요소**는 HTML, SVG, MathML의 {{glossary("element", "요소")}} 중 자식 노드를 가질 수 **없는** 요소입니다.
 
 [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/), [MathML](https://www.w3.org/TR/MathML3/)의 명세는 각각의 요소가 무엇을 담을 수 있는지 매우 정확하게 명시하고 있습니다. 많은 수의 조합은 {{htmlelement("hr")}} 안의 {{htmlelement("audio")}}와 같이, 아무런 의미도 갖지 않습니다.

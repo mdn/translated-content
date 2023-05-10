@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Microsoft_Internet_Explorer
 original_slug: Глоссарий/Microsoft_Internet_Explorer
 ---
+
 Internet Explorer (или IE) - это бесплатный графический {{glossary("browser", "браузер")}}, созданный Microsoft для использования внутри компании. {{glossary("Microsoft Edge")}} - на данный момент Windows браузер по умолчанию.
 
 Microsoft впервые выпустила IE в сборке вместе с Windows в 1995 как часть пакета "Microsoft Plus!". Примерно в 2002 году Internet Explorer стал самым используемым браузером в мире, но с тех пор утратил свои популярность, уступив свои позиции Chrome, Firefox, Edge и Safari.
@@ -15,12 +16,6 @@ Microsoft впервые выпустила IE в сборке вместе с W
 IE прошёл через огромное количество релизов, и сейчас его текущая версия 11.0.12. Он доступен на персональных компьютерах, телефонах и консоле Xbox. Прежде был доступен на Mac и UNIX, но Microsoft прекратили поддержку этих версий в 2003 и 2001 соответственно.
 
 ## Смотрите также
-
-### Основная информация
-
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} в Википедии
-- {{interwiki("wikipedia", "History of Internet Explorer", "История Internet Explorer")}} в Википедии
-- {{interwiki("wikipedia", "Internet Explorer versions", "Версии Internet Explorer")}} в Википедии
 
 ### Изучение Internet Explorer
 

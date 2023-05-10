@@ -1,12 +1,13 @@
 ---
 title: Итераторы и  генераторы
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 tags:
   - yield
   - Генераторы
   - Итераторы
 translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
 
 Обработка каждого элемента коллекции является весьма распространённой операцией. JavaScript предоставляет несколько способов перебора коллекции, от простого цикла [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) до [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) и [array comprehensions](/ru/docs/Web/JavaScript/Reference/Operators/Array_comprehensions). Итераторы и генераторы внедряют концепцию перебора непосредственно в ядро языка и обеспечивают механизм настройки поведения [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) циклов.

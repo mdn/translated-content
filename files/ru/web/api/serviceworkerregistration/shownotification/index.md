@@ -3,6 +3,7 @@ title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active service worker.
@@ -12,7 +13,7 @@ The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} 
 ## Syntax
 
 ```
-​ServiceWorkerRegistration.showNotification(title, [options]).then(function(NotificationEvent) { ... });
+ServiceWorkerRegistration.showNotification(title, [options]).then(function(NotificationEvent) { ... });
 ```
 
 ### Returns

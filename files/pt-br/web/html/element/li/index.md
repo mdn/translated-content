@@ -1,16 +1,8 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Elementos
-  - Guía
-  - HTML
-  - Indentação
-  - Referencia
-  - listagem <li>
-  - menu+HTML
-translation_of: Web/HTML/Element/li
 ---
+
 ## Resumo
 
 O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ({{HTMLElement("ol")}}), uma lista desordenada ({{HTMLElement("ul")}}) , ou um menu ({{HTMLElement("menu")}}) e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum contador ascendente - como um número, ou letra - à sua esquerda.
@@ -29,9 +21,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Este atributo de número inteiro indica o valor ordinal atual do item na lista, definido pelo elemento {{HTMLElement("ol")}}. O único valor possível para este atributo é um número, ainda que a lista seja exibida com algarismos romanos, ou letras. A lista de itens que virá em seguida continuará a ser numerada a partir desta posição. O atributo **value** não tem significado para listas desordenadas ({{HTMLElement("ul")}}), nem para menus ({{HTMLElement("menu")}}).
 
-    > **Note:** **Nota**: Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
+    > **Nota:** Este atributo, abandonado na HTML4, foi reintroduzido na HTML5.
 
-    > **Note:** **Nota:** Antes de {{Gecko("9.0")}}, os valores negativos eram, incorretamente, convertidos a 0. A partir de {{Gecko("9.0")}} todos os valores inteiros são analisados corretamente.
+    > **Nota:** Antes de Gecko 9.0, os valores negativos eram, incorretamente, convertidos a 0. A partir de Gecko 9.0 todos os valores inteiros são analisados corretamente.
 
 - {{htmlattrdef("type")}} {{Deprecated_inline}}
 
@@ -95,7 +87,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 - Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:
 
   - a propriedade {{cssxref("list-style")}}, para escolher a maneira como os posicionamentos serão exibidos,
-  - [contadores CSS](/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
+  - [contadores CSS](/pt-BR/docs/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
   - a propriedade {{cssxref("margin")}}, para controlar a indentação dos itens da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

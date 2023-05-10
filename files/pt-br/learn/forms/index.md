@@ -1,17 +1,9 @@
 ---
 title: Formulários da Web - Trabalhando com dados do usuário
 slug: Learn/Forms
-tags:
-  - Aprender
-  - Funcionalidades
-  - Guía
-  - HTML
-  - Iniciante
-  - Web
-  - formulários
-translation_of: Learn/Forms
 original_slug: Web/Guide/HTML/Forms
 ---
+
 {{LearnSidebar}}
 
 Este guia tem uma série de artigos que vão ajudar você a ficar craque em HTML forms. HTML forms são ferramentas poderosas para interagir com usuários; contudo, por razões técnicas e históricas, nem sempre é óbvio como usá-los em seu pleno potencial. Neste guia, vamos cobrir todos os aspectos dos HTML forms, da estrutura ao estilo, do manuseio de dados à widgets personalizados. Você vai aprender a desfrutar do grande poder que elas lhes oferecem!

@@ -3,6 +3,7 @@ title: animation
 slug: Web/CSS/animation
 translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.

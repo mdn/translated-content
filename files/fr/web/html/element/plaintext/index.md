@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/plaintext
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 L'élément HTML **`<plaintext>`** permet d'afficher du texte qui n'est pas interprété comme du HTML. Il ne possède pas de balise de fermeture, car tout ce qui suit n'est plus considéré comme du HTML.
 
@@ -33,7 +33,7 @@ Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.plaintext")}}
+{{Compat}}
 
 ## Voir aussi
 

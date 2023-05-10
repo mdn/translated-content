@@ -87,7 +87,7 @@ gen.next('california'); // california
 gen.next('mayonnaise'); // mayonnaise
 ```
 
-### Exemple utilisant `yield*`
+### Exemple utilisant yield\*
 
 ```js
 function* autreGenerateur(i) {

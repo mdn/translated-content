@@ -1,8 +1,8 @@
 ---
 title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 Começando com ECMAScript 6, o JavaScript ganha suporte para os objetos {{jsxref("Proxy")}} e {{jsxref("Reflect")}}, permitindo você interceptar e definir o comportamento personalizado para operações fundamentais da linguagem (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc). Com a ajuda destes dois objetos você será capaz de programar a nível [meta](https://pt.wikipedia.org/wiki/Metaprograma%C3%A7%C3%A3o) em JavaScript.
@@ -21,13 +21,13 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-O objeto Proxy define um _target_ (um objeto vazio aqui) e um objeto _handler_ em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
+O objeto Proxy define um `target` (um objeto vazio aqui) e um objeto `handler` em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
 
 Exemplos adicionais estão disponíveis na página de referência de {{jsxref("Proxy")}} .
 
 ### Terminologia
 
-Os seguintes termos são usados ​​quando se fala sobre a funcionalidade de proxies.
+Os seguintes termos são usados quando se fala sobre a funcionalidade de proxies.
 
 - {{jsxref("Global_Objects/Proxy/handler","handler","","true")}}
   - : Espaço reservado de objeto que contenha traps.

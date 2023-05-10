@@ -1,19 +1,8 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - Archivos multimedia
-  - CSS
-  - Formato de pistas de texto para la web
-  - Pseudo-elemento
-  - Referencia
-  - Selector
-  - WebVTT
-  - anotaciones
-  - subtítulos
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::cue`** señala las pistas de texto [WebVTT](/es/docs/Web/API/WebVTT_API) dentro del elemento seleccionado. Esto puede ser usado para [estilizar subtítulos y otras pistas de texto](/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT) multimedia con pistas de texto.
@@ -84,13 +73,11 @@ El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanc
 
 ## Especificaciones
 
-| Especificacion                                                               | Estado                   | Comentario          |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## Ver también
 

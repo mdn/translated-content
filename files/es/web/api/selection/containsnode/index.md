@@ -1,10 +1,8 @@
 ---
 title: containsNode
 slug: Web/API/Selection/containsNode
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/containsNode
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

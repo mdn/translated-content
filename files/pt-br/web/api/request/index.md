@@ -1,15 +1,8 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Requisições
-  - request
-translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch")}}
 
 A interface **`Request`** da [Fetch API](/pt-BR/docs/Web/API/Fetch_API) representa uma requisição de recursos.

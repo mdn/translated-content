@@ -20,12 +20,7 @@ slug: Web/API/HTMLTitleElement
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 策定状況                         | コメント                                      |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', "semantics.html#the-title-element", "HTMLTitleElement")}}         | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} より変更無し |
-| {{SpecName('HTML5 W3C', "document-metadata.html#the-title-element", "HTMLTitleElement")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}} より変更無し |
-| {{SpecName('DOM2 HTML', 'html.html#ID-79243169', 'HTMLTitleElement')}}                             | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} より変更無し     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-79243169', 'HTMLTitleElement')}}                     | {{Spec2('DOM1')}}         | 最初期の定義                                  |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

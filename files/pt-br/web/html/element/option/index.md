@@ -1,8 +1,8 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-translation_of: Web/HTML/Element/option
 ---
+
 ## Sumário
 
 Em um formulário Web, o **elemento HTML** `<option>` é usado para criar um controle que representa um item dentro de um elemento HTML5 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("datalist")}}.
@@ -23,7 +23,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 
   - : Este atributo é o texto para o rótulo indicando o significado da opção. Se o atributo **label** não estiver definido, seu valor é o conteúdo de texto do elemento.
 
-    > **Note:** _Nota de uso:_ o atributo **label** é projetado para conter um rótulo curto tipicamente usado num menu hierárquico. O atributo **value** descreve descreve um rótulo maior, designado para ser usado perto de um botão de escolha, por exemplo.
+    > **Note:** O atributo **label** é projetado para conter um rótulo curto tipicamente usado num menu hierárquico. O atributo **value** descreve descreve um rótulo maior, designado para ser usado perto de um botão de escolha, por exemplo.
 
 - {{htmlattrdef("selected")}}
   - : Se presente, este atributo booleano indica que a opção está selecionada inicialmente. Se o elemento `<option>` for descendente de um elemento {{HTMLElement("select")}} cujo atributo {{htmlattrxref("multiple", "select")}} não está definido, apenas um único `<option>` deste elemento {{HTMLElement("select")}} pode ter o atributo **selected**.
@@ -31,7 +31,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 
   - : O conteúdo textual deste atributo representa o rótulo que explica a opção. Se ele não estiver definido, seu valor padrão é o texto contido no elemento.
 
-    > **Note:** _Nota de uso:_ o atributo **label** é projetado para conter um rótulo curto tipicamente usado num menu hierárquico. O atributo **value** descreve descreve um rótulo maior, designado para ser usado perto de um botão de escolha, por exemplo.
+    > **Note:** O atributo **label** é projetado para conter um rótulo curto tipicamente usado num menu hierárquico. O atributo **value** descreve descreve um rótulo maior, designado para ser usado perto de um botão de escolha, por exemplo.
 
 ## Exemplos
 
@@ -53,4 +53,4 @@ Veja os exemplos do elemento {{HTMLElement("select")}}.
 
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

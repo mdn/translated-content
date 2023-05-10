@@ -29,7 +29,7 @@ console.log("Current style sheet set: " + document.selectedStyleSheetSet);
 document.selectedStyleSheetSet = "Some other style sheet";
 ```
 
-> **备注：**  这个例子会帮助你理解设置 `selectedStyleSheetSet` 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异。
+> **备注：** 这个例子会帮助你理解设置 `selectedStyleSheetSet` 的值和调用{{ domxref("document.enableStyleSheetsForSet()") }}之间行为的差异。
 
 ## 参看
 

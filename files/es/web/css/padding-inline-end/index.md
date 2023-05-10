@@ -1,8 +1,8 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
-translation_of: Web/CSS/padding-inline-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`padding-inline-end`** define el relleno final lógico en línea de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, o {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -65,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-inline-end", "padding-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-inline-end")}}
+{{Compat}}
 
 ## Mira también
 

@@ -1,10 +1,8 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/continue
 ---
+
 {{jsSidebar("Statements")}}
 
 A palavra chave **continue** termina a atual iteração do laço em que ele se encontra ou de um laço rotulado, e continua a execução deste laço com a próxima iteração.

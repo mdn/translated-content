@@ -25,7 +25,7 @@ void で完了する{{jsxref("Promise")}}。コンテキストが既に閉じて
 
 ## 例
 
-次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし`running`ならば、{{domxref("suspend()")}}が呼ばれます。`suspended`ならば、`resume()`が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。
+次のスニペットは[AudioContext states デモ](https://github.com/mdn/audiocontext-states/settings)([すぐ実行](http://mdn.github.io/audiocontext-states/))から取ったものです。suspend/resume ボタンをクリックすると、{{domxref("AudioContext.state")}}を問い合わせます—もし`running`ならば、{{domxref("AudioContext.suspend()", "suspend()")}}が呼ばれます。`suspended`ならば、`resume()`が呼ばれます。両方ともプロミスに成功するとボタンのラベルが適したものに更新されます。
 
 ```js
 susresBtn.onclick = function() {
@@ -43,13 +43,11 @@ susresBtn.onclick = function() {
 
 ## 仕様
 
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-resume', 'resume()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 
-{{Compat("api.BaseAudioContext.resume")}}
+{{Compat}}
 
 ## 参考
 

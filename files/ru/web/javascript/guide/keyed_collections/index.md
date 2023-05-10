@@ -7,6 +7,7 @@ tags:
   - структура данных
 translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 Этот раздел содержит обзор коллекций {{jsxref("Set")}} и словарей {{jsxref("Map")}} - встроенных {{Glossary("Data_structure","структур данных")}} с доступом по ключу.

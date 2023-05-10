@@ -1,11 +1,8 @@
 ---
 title: MitM
 slug: Glossary/MitM
-tags:
-  - Glosario
-  - Seguridad
-translation_of: Glossary/MitM
 ---
+
 Un ataque de Intermediario \[**Man-in-the-middle attack** (MitM)] intercepta una comunicación entre dos sistemas. Por ejemplo, un router Wi-Fi puede estar en peligro.
 
 Comparémoslo con un correo físico: si usted está escribiendo una carta a una persona, el cartero puede interceptar cada carta que envíe. Ellos la abren, la leen y finalmente la modifican, y entonces la reempaquetan y solamente entonces la envían a los destinatarios que usted pretendió. El receptor original podría entonces contestarle y el cartero abriría de nuevo la carta, la leería y finalmente la modificaria, la reempaquetaría y se la da. Usted ignoraría que hay un hombre en medio de su canal de comunicación – el cartero es invisible para usted y para su destinatario.

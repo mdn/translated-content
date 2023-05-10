@@ -3,7 +3,7 @@ title: '<dt>: 説明用語要素'
 slug: Web/HTML/Element/dt
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<dt>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明または定義リストの中で用語を表す部分であり、 {{HTMLElement("dl")}} の子要素としてのみ用いることができます。普通は {{HTMLElement("dd")}} 要素が続きます。しかし、複数の `<dt>` 要素が続くと、複数の用語がすぐ後に続く {{HTMLElement("dd")}} 要素で定義されていることを表します。
 
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/dt
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role">term</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

@@ -1,14 +1,9 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-tags:
-  - Date
-  - JavaScript
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getDay
 ---
+
 {{JSRef}}
 
 El método **`getDay()`** devuelve el día de la semana de la fecha especificada en función de la fecha local; siendo 0 (Domingo) el primer día.
@@ -42,15 +37,11 @@ console.log(weekday); // 1
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                   | Comentario                                  |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------- |
-| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ES6')}}     |                                             |
-| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}                 | {{Spec2('ES5.1')}} |                                             |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}     | Definición inicial. Implementado en JS 1.0. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getDay")}}
+{{Compat}}
 
 ## Ver también
 

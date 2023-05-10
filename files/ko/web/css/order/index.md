@@ -1,13 +1,8 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/order
 ---
+
 {{CSSRef}}
 
 **`order`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 또는 그리드 컨테이너 안에서 현재 요소의 배치 순서를 지정합니다. 컨테이너 아이템의 정렬 순서는 오름차순 `order` 값이고, 같은 값일 경우 소스 코드의 순서대로 정렬됩니다.

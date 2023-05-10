@@ -3,6 +3,7 @@ title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
+
 {{APIRef}}
 
 Метод **`window.cancelAnimationFrame()`** останавливает анимацию, запланированную с помощью {{domxref("window.requestAnimationFrame()")}}.

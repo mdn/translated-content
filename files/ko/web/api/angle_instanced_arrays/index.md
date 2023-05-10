@@ -1,7 +1,6 @@
 ---
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
-translation_of: Web/API/ANGLE_instanced_arrays
 ---
 {{APIRef ( "WebGL")}}
 
@@ -37,11 +36,9 @@ WebGL 확장은 {{domxref ( "WebGLRenderingContext.getExtension()")}} 메서드�
 var ext = gl.getExtension ( 'ANGLE_instanced_arrays');
 ```
 
-## 사양
+## 명세서
 
-| 사양                                                                                         | 지위                                             | 논평       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------- |
-| {{SpecName ( 'ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}} | {{Spec2 ( 'ANGLE_instanced_arrays')}} | 초기 정의. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

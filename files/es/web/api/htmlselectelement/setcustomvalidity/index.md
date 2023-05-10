@@ -1,8 +1,8 @@
 ---
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
-translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El metodo **`HTMLSelectElement.setCustomValidity()`** define el mensaje de validación personalizado para el elemento seleccionado con el mensaje especifico. Usa una string vacia para indicar que ese elemento no tiene error de validación customizado.
@@ -17,16 +17,13 @@ selectElt.setCustomValidity(string);
 
 - `string` is the {{domxref("DOMString")}} containing the error message.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                | Status                           | Comment                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}}         | {{Spec2('HTML WHATWG')}} | No change since the latest snapshot, {{SpecName('HTML5 W3C')}}. |
-| {{SpecName('HTML5 W3C', 'forms.html#dom-cva-setcustomvalidity', 'HTMLSelectElement.setCustomValidity()')}} | {{Spec2('HTML5 W3C')}}     | Initial definition, snapshot of {{SpecName('HTML WHATWG')}}   |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement.setCustomValidity")}}
+{{Compat}}
 
 ## See also
 

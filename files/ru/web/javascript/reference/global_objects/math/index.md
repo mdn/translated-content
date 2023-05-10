@@ -92,8 +92,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
   - : Возвращает наибольшее число из своих аргументов.
 - {{jsxref("Global_Objects/Math/min", "Math.min([x[, y[, …]]])")}}
   - : Возвращает наименьшее число из своих аргументов.
-- {{jsxref("Global_Objects/Math/pow", "Math.pow(x, y)")}}
-  - : Возвращает основание в степени экспоненты, то есть, значение выражения `основаниеэкспонента`.
+- {{jsxref("Global_Objects/Math/pow", "Math.pow(a, n)")}}
+  - : Возвращает `a` в `n`-й степени, то есть _a_<sup><i>n</i></sup>.
 - {{jsxref("Global_Objects/Math/random", "Math.random()")}}
   - : Возвращает псевдослучайное число в диапазоне от 0 до 1.
 - {{jsxref("Global_Objects/Math/round", "Math.round(x)")}}
@@ -119,14 +119,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math
 
 Как и большинство встроенных объектов в Javascript, объект `Math` может быть расширен пользовательскими способами и методами. Чтобы расширить объект `Math`, не используют `prototype`. Вместо этого, расширяют `Math` напрямую:
 
-```
+```js
 Math.propName = propValue;
 Math.methodName = methodRef;
 ```
 
 Например, следующий код добавляет метод к объекту Math для вычисления наибольшего общего делителя списка аргументов.
 
-```
+```js
 /* Вариативная функция -- Возвращает наибольший общий делитель списка аргументов */
 Math.gcd = function() {
     if (arguments.length == 2) {
@@ -145,7 +145,7 @@ Math.gcd = function() {
 
 Попробуйте:
 
-```
+```js
 console.log(Math.gcd(20, 30, 15, 70, 40)); // `5`
 ```
 

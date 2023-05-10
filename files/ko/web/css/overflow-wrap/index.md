@@ -1,16 +1,10 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-translation_of: Web/CSS/overflow-wrap
 ---
 {{CSSRef}}
 
-**`overflow`\*\***`-wrap`\*\* CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
+**`overflow-wrap`** CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
 
 > **참고:** {{cssxref("word-break")}}와는 달리, `overflow-wrap`은 모든 단어가 넘치지 않으면 자신의 줄 안에 놓여 있을 수 없을 때 줄 바꿈을 한 번만 할 것입니다.
 
@@ -88,11 +82,9 @@ p {
 
 {{ EmbedLiveSample('Example', '100%', 260) }}
 
-## 사양
+## 명세서
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 

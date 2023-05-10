@@ -13,7 +13,7 @@ original_slug: Web/API/GlobalEventHandlers/onwheel
 
 {{ ApiRef("DOM") }}
 
-La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courrant.
+La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courant.
 
 ## Syntaxe
 

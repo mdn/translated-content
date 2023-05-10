@@ -1,18 +1,9 @@
 ---
 title: Gerenciamento de Conexão em HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-tags:
-  - Guide
-  - Guía
-  - HTTP
-  - Short-lived
-  - Web
-  - conexões
-  - performace
-  - sharding
-translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 original_slug: Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x
 ---
+
 Gerenciamento de Conexão é um tema central em HTTP: abertura e manutenção de conexões e em grande parte tem impacto sobre o desempenho de Web sites e aplicações Web. Existem vários modelos, em HTTP/1.x: _ligações de curta duração, conexões persistentes, canalização e HTTP (HTTP pipelining)_.
 
 HTTP é um protocolo de transporte que fornece conexão entre o cliente e o servidor geralmente depende de TCP. Em sua infância, HTTP usava um único modelo para lidar com tais conexões. Sua conexão é de curta duração. Essas conexões foram de curta duração: criado um novo cada vez que enviar um pedido necessário, e fechado uma vez a resposta tinha sido recebida.
@@ -24,7 +15,7 @@ Dois novos modelos foram criados no HTTP/1.1.
 1. **O modelo de conexão persistente**, mantém conexões abertas entre solicitações sucessivas, reduzindo o tempo necessário para abrir novas conexões.
 2. **O modelo de pipelining HTTP**, vai um passo além, enviando várias solicitações sucessivas sem nem esperar por uma resposta, reduzindo em grande parte a latência da rede.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
 > **Nota:** HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
 
@@ -60,7 +51,7 @@ Em HTTP/1.1, persistencia é o padrão e o cabeçalho não é mais necessário (
 >
 > Por estas razões, o pipelining tem sido substituído por um algoritmo melhor, multiplexação, que é usado pelo HTTP/2.
 
-Por padrão, [HTTP](/en/HTTP) as solicitações são emitidas sequencialmente. A próxima solicitação só é emitida depois que recebeu a resposta para a solicitação atual. Como eles são afetados pelas latências de rede e as limitações de largura de banda, isso pode resultar em atrasos significativos antes que a próxima solicitação é vista pelo servidor.
+Por padrão, [HTTP](/pt-BR/HTTP) as solicitações são emitidas sequencialmente. A próxima solicitação só é emitida depois que recebeu a resposta para a solicitação atual. Como eles são afetados pelas latências de rede e as limitações de largura de banda, isso pode resultar em atrasos significativos antes que a próxima solicitação é vista pelo servidor.
 
 Pipelining é o processo para enviar solicitações sucessivas, sobre a mesma conexão persistente, sem esperar pela resposta. Isso evita a latência da conexão. Teoricamente, desempenho também poderia ser melhorado se duas solicitações HTTP para ser embalado na mesma mensagem TCP. O [MSS](https://en.wikipedia.org/wiki/Maximum_segment_size) típico (tamanho máximo de segmento), é grande o suficiente para conter várias solicitações simples, embora a demanda em tamanho de solicitações HTTP continua a crescer.
 
@@ -76,7 +67,7 @@ Como uma conexão de HTTP/1.x está serializando solicitações, mesmo sem qualq
 
 Se o servidor deseja um site de Web mais rápido ou resposta do aplicativo, é possível para o servidor forçar a abertura de mais conexões. Por exemplo, em vez de ter todos os recursos no mesmo domínio, diz www\.example.com, poderia dividir em vários domínios, www1.example.com, www2.example.com, www3.example.com. Cada um destes domínios resolver acessar o mesmo servidor e o navegador da Web abrirá 6 conexões para cada (no nosso exemplo, impulsionando as conexões para 18). Esta técnica é chamada sharding do domínio.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Conclusão
 

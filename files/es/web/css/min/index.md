@@ -1,19 +1,9 @@
 ---
 title: min()
 slug: Web/CSS/min
-tags:
-  - CSS
-  - CSS Function
-  - CSS Grid
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - min
-translation_of: Web/CSS/min()
 original_slug: Web/CSS/min()
 ---
+
 {{CSSRef}}
 
 La [función](/es/docs/Web/CSS/CSS_Functionals) [CSS](/es/docs/Web/CSS) **`min()`** permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función `min()` puede ser usada donde quiera que {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.
@@ -84,13 +74,11 @@ Aquí, el formulario en si mismo, junto con el margen, borde y padding, será de
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentario          |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "min()")}} | {{Spec2("CSS4 Values")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,11 +1,6 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
 {{jsSidebar("Statements")}}
 
@@ -63,8 +58,6 @@ a + b;
 ```
 
 콘솔이 "unreachable code after return statement" 경고를 출력할 것입니다.
-
-<div class="note">Gecko 40 {{geckoRelease(40)}}부터, <code>return</code> 이후에 위치하여 도달할 수 없는 코드를 발견하면 콘솔에 경고를 출력합니다.</div>
 
 문제를 해결하려면 괄호를 사용해 ASI를 방지해야 합니다.
 

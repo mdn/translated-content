@@ -1,6 +1,6 @@
 ---
 title: '<progress> : l''élément d''indicateur de progression'
-slug: Web/HTML/Element/Progress
+slug: Web/HTML/Element/progress
 tags:
   - Element
   - HTML
@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/progress
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<progress>`** indique l'état de complétion d'une tâche et est généralement représenté par une barre de progression.
 

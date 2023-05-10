@@ -1,9 +1,9 @@
 ---
 title: Setting Parameters
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 original_slug: Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters
 ---
+
 ## Parameter 설정
 
 이미 코딩된 .xsl과 .xml 파일을 이용하여 변환을 실행하는 것은 꽤 쓸모있는데, .xml파일을 JavaScript로부터 설정하는 것은 좀 더 쓸모있다.예로, JavaScript와 XSLT는 XML데이터를 정렬하여 표시하는 데 쓸 수 있다. 정렬은 오름차순과 내림차순을 바꿀 수 있어야 할 것이다. XSLT는 `xsl:param` 요소를 제공하는데, 그것은 `xsl:stylesheet` 요소의 자식이다. `XSLTProcessor()`는 이 파라메터와 상호작용하기 위해 3가지 JavaScript 메소드를 제공한다: `setParameter`, `getParameter`, `removeParameter.`

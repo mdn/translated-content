@@ -395,13 +395,3 @@ function toggleMusician(bool) {
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — W3C 標準針對每一個 HTML 特徵定義由瀏覽器設置隱含特徵的無障礙(ARIA)語意，以及如果需要額外的語意，你可以設置的 WAI-ARIA 特徵。
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
-
-## 本模組章節
-
-- [何謂無障礙網頁?](/zh-TW/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: 無障礙網頁的好開始](/zh-TW/docs/Learn/Accessibility/HTML)
-- [充分實踐 CSS 與 JavaScript 的無障礙](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基礎](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [無障礙多媒體](/zh-TW/docs/Learn/Accessibility/Multimedia)
-- [行動無障礙網頁](/zh-TW/docs/Learn/Accessibility/Mobile)
-- [無障礙問題排除](/zh-TW/docs/Learn/Accessibility/Accessibility_troubleshooting)

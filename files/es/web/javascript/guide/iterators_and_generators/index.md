@@ -1,12 +1,8 @@
 ---
 title: Iteradores y generadores
-slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guía
-  - Intermedio
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
 
 Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Sentencias/for","for")}} hasta métodos como {{jsxref("Objetos_globales/Array/map","map()")}} y {{jsxref("Objetos_globales/Array/filter","filter()")}}. Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Sentencias/for...of","for...of")}}.

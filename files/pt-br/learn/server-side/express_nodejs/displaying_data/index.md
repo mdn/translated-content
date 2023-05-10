@@ -1,8 +1,8 @@
 ---
 title: 'Express Tutorial Part 5: Displaying library data'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 We're now ready to add the pages that display the [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website books and other data. The pages will include a home page that shows how many records we have of each model type, and list and detail pages for all of our models. Along the way we'll gain practical experience in getting records from the database, and using templates.
@@ -69,15 +69,3 @@ In our next article we'll build on our knowledge, creating HTML forms and form h
 - [Moment](http://momentjs.com/docs/) (Moment docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## Neste módulo
-
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)

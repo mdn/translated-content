@@ -1,14 +1,8 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Atributos
-  - Atributos globais
-  - HTML
-  - Referências
-  - itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O atributo global **`itemprop`** é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo `itemprop` especificado, e um `itemprop` consiste em um par de nome e valor. Cada par de nome e valor é chamado de **propriedade,** e um grupo de uma ou mais propriedades forma um **item**. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.

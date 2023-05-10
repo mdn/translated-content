@@ -7,6 +7,7 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/attributeName
 ---
+
 {{SVGRef}}
 
 Атрибут **`attributeName`** задаёт имя свойства CSS или атрибута целевого элемента, которое будет изменено во время анимации.

@@ -1,8 +1,8 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.
@@ -401,7 +401,7 @@ Las constantes y variables que establecimos aquí son:
 - `decreasingColor`
   - : Similarly, this is a string defining a color we'll apply when the visibility ratio is decreasing.
 
-We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the {{event("load")}} event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
+We call {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} to start listening for the [`load`](/es/docs/Web/Reference/Events/load) event; once the page has finished loading, we get a reference to the element with the ID `"box"` using {{domxref("Document.querySelector", "querySelector()")}}, then call the `createObserver()` method we'll create in a moment to handle building and installing the intersection observer.
 
 #### Creating the intersection observer
 
@@ -499,13 +499,11 @@ Hay un ejemplo aún más extensivo en [Cronometrando la visibilidad de un elemen
 
 ## Especificaciones
 
-| Especificación                                   | Estado                                       | Comentario |
-| ------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Ver también
 

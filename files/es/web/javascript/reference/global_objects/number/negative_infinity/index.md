@@ -1,13 +1,9 @@
 ---
 title: Number.NEGATIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef("Objetos_globales", "Number")}}
 
 ## Resumen
@@ -51,15 +47,11 @@ if (smallNumber === Number.NEGATIVE_INFINITY) {
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1ra Edición. Implementado en JavaScript 1.1                                                       | Estándar                 | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver también
 

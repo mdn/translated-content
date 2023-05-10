@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Module`** オブジェクトには、ブラウザーでコンパイルされたステートレスな WebAssembly コードが含まれています。これを効率的に[ワーカー間で共有](/ja/docs/Web/API/Worker/postMessage)したり、複数回インスタンス化したりすることができます。
 

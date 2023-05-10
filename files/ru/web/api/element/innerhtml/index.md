@@ -7,7 +7,7 @@ translation_of: Web/API/Element/innerHTML
 
 Свойство интерфейса {{domxref("Element")}} **`innerHTML`** устанавливает или получает HTML или XML разметку дочерних элементов.
 
-> **Примечание:**Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
+> **Примечание:** Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы `(&), (<),` или `(>)`, `innerHTML` вернёт эти символы как \&amp, \&lt и \&gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов.
 
 Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.
 
@@ -19,7 +19,7 @@ const content = element.innerHTML;
 element.innerHTML = htmlString;
 ```
 
-### Value
+### Значение
 
 Строка {{domxref("DOMString")}}, которая содержит части HTML разметки. Установка значения `innerHTML` удаляет всё содержимое элемента и заменяет его на узлы, которые были разобраны как HTML, указанными в строке _htmlString._
 
@@ -62,7 +62,7 @@ name = "<script>alert('Я Джон в раздражающем alert!')</script>
 el.innerHTML = name; // безвредный в этом случае
 ```
 
-Хотя это может выглядеть как атака {{interwiki("wikipedia", "cross-site scripting")}}, результат безопасный. HTML5 указывает на тег {{HTMLElement("script")}} вставленный через InnerHTM [должен не выполнится.](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)
+Хотя это может выглядеть как [XSS-атака](https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B6%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%B2%D1%8B%D0%B9_%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B8%D0%BD%D0%B3), результат безопасный. HTML5 указывает на тег {{HTMLElement("script")}} вставленный через InnerHTM [должен не выполнится.](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)
 
 Однако, есть способы запустить JavaScript без использования элементов {{HTMLElement("script")}}, так что есть риск безопасности всякий раз, когда вы используете innerHTML для набора строк, над которыми у вас нет контроля. Например:
 

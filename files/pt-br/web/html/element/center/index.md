@@ -1,19 +1,7 @@
 ---
 title: '<center>: O elemento de texto centralizado (obsoleto)'
 slug: Web/HTML/Element/center
-tags:
-  - Alinhamento de Texto
-  - Elemento
-  - HTML
-  - Obsoleto
-  - Referencia
-  - Texto
-  - Web
-  - alinhamento
-  - center
-translation_of: Web/HTML/Element/center
 ---
-{{obsolete_header()}}
 
 O elemento **Center do HTML** (**`<center>`**) se tornou obsoleto, é um [elemento de nível de bloco](/pt-BR/docs/Web/HTML/Elementos_block-level) que exibe o conteúdo em nível de bloco ou em linha centralizado horizontalmente dentro do elemento que o contém. O contêiner {{HTMLElement ("body")}} geralmente está presente, mas não é necessário. Essa tag foi descontinuada no HTML 4 (e XHTML 1) em favor da propriedade CSS {{Cssxref ("text-align")}}, que pode ser aplicada ao elemento {{HTMLElement ("div")}} ou à um paragráfo indivídual {{HTMLElement ("p")}}. Para blocos de centralização, use outras propriedades CSS como {{Cssxref ("margin-left")}} e {{Cssxref ("margin-right")}} e defina-as como `auto` (ou defina {{Cssxref ("margin") }} para `0 auto`).
 
@@ -63,4 +51,4 @@ Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

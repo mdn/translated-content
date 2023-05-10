@@ -3,7 +3,7 @@ title: '<dfn>: 定義要素'
 slug: Web/HTML/Element/dfn
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の定義要素** (**_\<dfn>_**) は、定義句や文の文脈の中で定義している用語を示すために用いられます。 `<dfn>` の直近の祖先である {{HTMLElement("p")}} 要素、 {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、 {{HTMLElement("section")}} 要素が用語の定義とみなされます。
 
@@ -48,7 +48,7 @@ slug: Web/HTML/Element/dfn
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("term")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role">term</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
@@ -176,11 +176,7 @@ arguably done more to advance science than any device ever built.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dfn-element', '&lt;dfn&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-dfn-element', '&lt;dfn&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

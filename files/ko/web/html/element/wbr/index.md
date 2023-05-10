@@ -1,15 +1,9 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/wbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<wbr>` 요소**는 현재 요소의 줄 바꿈 규칙을 무시하고 브라우저가 줄을 바꿀 수 있는 위치를 나타냅니다.
 
@@ -97,7 +91,7 @@ URL의 줄을 바꿀 때, 문장 부호 다음에 잘린 경우 독자가 URL이
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.wbr")}}
+{{Compat}}
 
 ## 같이 보기
 

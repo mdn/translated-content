@@ -1,16 +1,9 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/blink
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 {{deprecated_header}}

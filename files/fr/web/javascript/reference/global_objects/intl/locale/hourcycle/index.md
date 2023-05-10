@@ -49,13 +49,11 @@ console.log(us12hour.hourCycle); // Affichera "h12" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                      | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.hourCycle) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.hourCycle")}}
+{{Compat}}
 
 ## Voir aussi
 

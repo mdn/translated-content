@@ -1,17 +1,9 @@
 ---
 title: Trabajando con objetos
-slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Comparación de objetos
-  - Constructor
-  - Documento
-  - Guía
-  - JavaScript
-  - Objeto
-  - Principiante
-translation_of: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 original_slug: Web/JavaScript/Guide/Trabajando_con_objectos
 ---
+
 {{jsSidebar("Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript está diseñado en un paradigma simple basado en objetos. Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o _clave_) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos. Este capítulo describe cómo usar objetos, propiedades, funciones y métodos; y cómo crear tus propios objectos.
@@ -49,7 +41,7 @@ var myCar = {
 };
 ```
 
-Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y​no {{jsxref("null")}}).
+Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("null")}}).
 
 ```js
 myCar.color; // undefined

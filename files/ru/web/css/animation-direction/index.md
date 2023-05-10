@@ -3,6 +3,7 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 translation_of: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание

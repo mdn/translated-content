@@ -1,8 +1,9 @@
 ---
 title: Регулярные выражения
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec) и [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test) объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp) а также [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace), [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search), [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) объекта [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String). Данная глава описывает регулярные выражения в JavaScript.
@@ -594,7 +595,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
           табуляция, прогон страницы, перевод строки. Эквивалентен
           <code
             >[
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>Например, <code>/\s\w*/</code> совпадает с ' bar' в "foo bar."</p>
@@ -614,7 +615,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
           Соответствует одиночному символу непустого пространства.
           Эквивалентен<code>
             [^
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000-\u200a​​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>Например, <code>/\S\w*/</code> совпадает с 'foo' в "foo bar."</p>

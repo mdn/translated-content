@@ -1,12 +1,9 @@
 ---
 title: Tu primera extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Guía
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension
 ---
+
 {{AddonSidebar}}
 
 > **Nota:** Si estás familiarizado/a con los conceptos básicos de las extensiones de navegador, omite esta sección y ve a [cómo se ponen juntos los archivos](/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Entonces, usa la [documentación de referencia](/es/docs/Mozilla/Add-ons/WebExtensions#Reference) para empezar a construir tu extensión. Visita el [Firefox Extension Workshop](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension) para aprender más sobre el flujo de trabajo para probar y publicar extensiones para Firefox.
@@ -53,9 +50,9 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
 }
 ```
 
-- Los primeros 3 parámetros:[`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name), y [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
-- [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
+- Los primeros 3 parámetros:[`manifest_version`](/es/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/es/Add-ons/WebExtensions/manifest.json/name), y [`version`](/es/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
+- [`description`](/es/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
+- [`icons`](/es/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
 
 El parámetro más interesante aquí es [`content_scripts`](/es/Add-ons/WebExtensions/manifest.json/content_scripts), el cual le dice a Firefox que cargue el script en las páginas Web, cuyas URL coincidan con un patrón especifico. En este caso, le estamos pidiendo a Firefox que cargue el script llamado "borderify.js" en todas las paginas HTTP o HTTPS cargadas desde "mozilla.org" o cualquiera de sus subdominios.
 
@@ -123,7 +120,7 @@ Abre "about:debugging" en Firefox, da click en "Cargar complemento temporal" y s
 
 La extensión se encontrará instalada, y lo estará hasta que reinicies Firefox.
 
-Alternativamente, puede ejecuturar la extensión desde la línea de comandos utilizando la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
+Alternativamente, puede ejecutar la extensión desde la línea de comandos utilizando la herramienta [web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext).
 
 ### Probando
 

@@ -1,13 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - Promises
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 O método **`finally()`** retorna uma {{jsxref("Promise")}}. Quando a promise for estabelecida, tenha ela sido realizada ou rejeitada, executa-se a função callback especificada. Isso permite a execução de um código que acontecerá independentemente da `Promise` ter sido realizada (com sucesso) ou rejeitada (com falha).

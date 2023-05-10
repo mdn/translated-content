@@ -24,7 +24,6 @@ HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 
 | [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | 当拖拽元素或选中的文本时触发。                                                                                        |
 | [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 当拖拽操作结束时触发 (比如松开鼠标按键或敲“Esc”键). (见[结束拖拽](/zh-CN/docs/DragDrop/Drag_Operations#dragend))      |
 | [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 当拖拽元素或选中的文本到一个可释放目标时触发（见 [指定释放目标](/zh-CN/docs/DragDrop/Drag_Operations#droptargets)）。 |
-| {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | 当元素变得不再是拖拽操作的选中目标时触发。                                                                            |
 | [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 当拖拽元素或选中的文本离开一个可释放目标时触发。                                                                      |
 | [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | 当元素或选中的文本被拖到一个可释放目标上时触发（每 100 毫秒触发一次）。                                               |
 | [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 当用户开始拖拽一个元素或选中的文本时触发（见[开始拖拽操作](/zh-CN/docs/DragDrop/Drag_Operations#dragstart)）。        |
@@ -52,7 +51,7 @@ HTML 的拖拽接口有 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {
 
 ### Gecko 专用接口
 
-Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 [拖放多个项目](/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
+Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
 
 ## 基础
 
@@ -60,7 +59,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。它们是
 
 ### 确定什么是可拖拽的
 
-让一个元素被拖拽需要添加 {{htmlattrxref("draggable")}} 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
+让一个元素被拖拽需要添加 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
 
 ```html
 <script>
@@ -159,7 +158,7 @@ function drop_handler(ev) {
 <p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)">Drop Zone</p>
 ```
 
-注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其它处理过程（如触点事件或指针事件）。
+注意每个处理程序调用 {{domxref("Event.preventDefault","preventDefault()")}} 来阻止对这个事件的其他处理过程（如触点事件或指针事件）。
 
 欲了解更多信息，参见 [指定释放目标](/zh-CN/docs/Web/Guide/HTML/Drag_operations#droptargets)。
 
@@ -219,7 +218,6 @@ function drop_handler(ev) {
 ## 参见
 
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [拖放多个项目](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [推荐拖拽元素类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard：HTML5 拖放操作](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
 - [来自 CanIUse 的拖放兼容数据](http://caniuse.com/#search=draganddrop)

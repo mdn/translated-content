@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: switch ロール'
-slug: Web/Accessibility/ARIA/Roles/Switch_role
+slug: Web/Accessibility/ARIA/Roles/switch_role
 ---
 
 ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
@@ -150,10 +150,7 @@ label.switch {
 
 ## 仕様
 
-| 仕様                                                                 | 状態                             | コメント                                                      |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- |
-| {{SpecName('ARIA', '#switch')}}                             | {{Spec2('ARIA')}}         | ARIA 全般を全てのロール、プロパティなどとともに定義します。   |
-| {{SpecName('ARIA in HTML', '#index-aria-switch')}} | {{Spec2('ARIA in HTML')}} | ARIA の機能がどのように HTML に統合されているかを説明します。 |
+{{Specifications}}
 
 ## 関連情報
 

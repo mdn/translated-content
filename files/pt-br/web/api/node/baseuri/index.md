@@ -1,8 +1,8 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-translation_of: Web/API/Node/baseURI
 ---
+
 {{APIRef("DOM")}}
 
 ## Resumo

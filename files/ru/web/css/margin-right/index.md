@@ -3,6 +3,7 @@ title: margin-right
 slug: Web/CSS/margin-right
 translation_of: Web/CSS/margin-right
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/en/CSS) **`margin-right`** устанавливает [внешний отступ](/ru/docs/Web/CSS/box_model) справа от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.

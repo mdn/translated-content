@@ -56,7 +56,7 @@ SVG 文件是这样的一种图像：不被当做外部资源加载，不可以�
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 250, 260)}}
+{{EmbedLiveSample("示例", 250, 260)}}
 
 ## 规范
 

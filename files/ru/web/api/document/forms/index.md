@@ -9,11 +9,12 @@ tags:
   - Property
 translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 `forms` возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе
 
-> **Примечание:** **На заметку:** Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
+> **Примечание:** Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
 
 ## Синтаксис
 

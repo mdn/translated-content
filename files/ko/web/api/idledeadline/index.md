@@ -1,7 +1,6 @@
 ---
 title: IdleDeadline
 slug: Web/API/IdleDeadline
-translation_of: Web/API/IdleDeadline
 ---
 {{APIRef("Background Tasks")}}
 
@@ -23,11 +22,11 @@ request callback이 작동하는 방식에 대해 자세히알아 보려면, [Co
 
 [Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example)를 참조하세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

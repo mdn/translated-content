@@ -1,16 +1,10 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - Elemento
-  - HTML
-  - Obsoleto
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/xmp
 original_slug: Web/HTML/Elemento/xmp
 ---
-{{Obsolete_header}}
+
+{{Deprecated_Header}}
 
 ## Resumen
 
@@ -30,11 +24,11 @@ Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web
 
 Este elemento implementa la interface {{domxref('HTMLElement')}} .
 
-> **Nota:** **Nota de implementación:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
+> **Nota:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
 
 ## Ver también
 
 - Los elementos {{HTMLElement("pre")}} y {{HTMLElement("code")}} que se usan en su lugar .
 - Los elementos {{HTMLElement("plaintext")}} y {{HTMLElement("listing")}} , similares a {{HTMLElement("xmp")}} pero también obsoletos .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

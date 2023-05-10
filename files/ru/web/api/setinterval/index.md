@@ -4,6 +4,7 @@ slug: Web/API/setInterval
 translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 Метод **`setInterval()`** предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом. Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный **`setInterval`** c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.
@@ -313,7 +314,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Inactive tabs
 
-Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.
+Starting in Gecko 5.0, intervals are clamped to fire no more often than once per second in inactive tabs.
 
 ## Проблема с "[`this`](/ru/docs/Web/JavaScript/Reference/Operators/this)"
 

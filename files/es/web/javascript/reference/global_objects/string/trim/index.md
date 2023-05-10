@@ -1,9 +1,9 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/Trim
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumen
@@ -56,14 +56,11 @@ if (!String.prototype.trim) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                  | Comentario                                            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.5.4.20', 'String.prototype.trim')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementado en JavaScript 1.8.1. |
-| {{SpecName('ES6', '#sec-string.prototype.trim', 'String.prototype.trim')}} | {{Spec2('ES6')}}     |                                                       |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.trim")}}
+{{Compat}}
 
 ## Ver también
 

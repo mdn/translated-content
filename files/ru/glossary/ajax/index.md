@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/AJAX
 original_slug: Глоссарий/AJAX
 ---
+
 **Ajax**, который изначально означал «Асинхронный {{Glossary("JavaScript")}} и {{Glossary("XML")}}», — это практика программирования для создания сложных, динамических веб-страниц с использованием технологии {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
 
 Ajax позволяет обновлять части {{Glossary("DOM")}} {{Glossary("HTML")}}-страницы без перезагрузки всей страницы целиком. Ajax также позволяет вам работать асинхронно, что означает, что ваш код продолжает работать, пока обновляемая часть веб-страницы пытается перезагрузиться (по сравнению с синхронным подходом, в котором код блокируется до тех пор, пока часть веб-страницы не будет перезагружена полностью).
@@ -19,7 +20,6 @@ Ajax позволяет обновлять части {{Glossary("DOM")}} {{Glos
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- {{interwiki("wikipedia", "AJAX")}} на Wikipedia
 - [Ajax](/ru/docs/Web/Guide/AJAX)
 - [Ajax - начало работы](/ru/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}

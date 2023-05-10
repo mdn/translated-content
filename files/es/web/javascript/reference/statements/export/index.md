@@ -1,15 +1,9 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Módulos
-  - Sentencia
-  - export
-translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración **`export`** se utiliza al crear módulos de JavaScript para exportar funciones, objetos o tipos de dato primitivos del módulo para que puedan ser utilizados por otros programas con la sentencia {{jsxref("Statements/import", "import")}}.
@@ -157,14 +151,11 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-exports', 'Exports')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatiblidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Vea también
 

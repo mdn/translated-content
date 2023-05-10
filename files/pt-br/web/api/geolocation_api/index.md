@@ -1,12 +1,9 @@
 ---
 title: Usando geolocation
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guia(2)
-translation_of: Web/API/Geolocation_API
 original_slug: Using_geolocation
 ---
+
 A **API geolocation** permite que o usuário forneça sua localização a aplicativos web se ele desejar. Por questões de privacidade, o usuário é perguntado se permite fornecer informações de localização.
 
 ## O objeto geolocation
@@ -20,8 +17,6 @@ if ("geolocation" in navigator) {
   alert("I'm sorry, but geolocation services are not supported by your browser.");
 }
 ```
-
-{{ gecko_minversion_header("1.9.2") }}
 
 Ao iniciar no Gecko 1.9.2 (Firefox 3.6), add-ons podem obter o objeto de geolocalização obtendo a referência para o serviço de geolocaliazação como se ve a seguir:
 
@@ -84,8 +79,8 @@ A localização do usuário é impressa usando o objeto Position, que tem os seg
 - timestamp
   - : Momento em que a leitura foi feita, como `DOMTimeStamp`.
 - coords
-  - : Objecto [`nsIDOMGeoPositionCoords`](/en/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
-- address {{ gecko_minversion_inline("1.9.2") }} {{obsolete_inline("14.0")}}
+  - : Objecto [`nsIDOMGeoPositionCoords`](/pt-BR/XPCOM_Interface_Reference/NsIDOMGeoPositionCoords) indicando a localização.
+- address
   - : `nsIDOMGeoPositionAddress` objeto especificando o endereço correspondente, se disponível.
 
 ## <br>Manipulação de erros

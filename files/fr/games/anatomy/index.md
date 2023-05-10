@@ -54,7 +54,7 @@ Temporiser la boucle principale avec le rafraîchissement du navigateur permet �
 
 Pourtant n'imaginez pas que les animations requièrent un contrôle image-par-image. De simples animations peuvent être éxécutées, même avec une accélération matérielle, avec des animations CSS et d'autres outils inclus dans le navigateur. Bon nombre vont vous faciliter la vie.
 
-## Construire une *meilleure* boucle principale en Javascript
+## Construire une meilleure boucle principale en Javascript
 
 Il y a deux problèmes évidents avec notre boucle principale précédente: `main()` pollue l'objet `{{ domxref("window") }}` (où sont stockées toutes les variables globales) et l'exemple donné ne nous permet pas de *stopper* la boucle à moins que l'onglet du navigateur ne soit fermé ou rafraîchit. Pour le premier problème, si vous désirez que la boucle principale tourne simplement sans y accéder directement, vous pouvez en crééer une fonction à accès immédiat -(FAI ou "Immediately-Invoked Function Expression - IIFE").
 
@@ -112,7 +112,7 @@ window.cancelAnimationFrame( MyGame.stopMain );
 
 La clé pour programmer une boucle principale, en JavaScript, est d'attacher n'importe quel évènement qui doit diriger votre action et porter attention aux systèmes interconnectés. Vous pourriez avoir différents composants dirigés par différents évènements. Cela paraît comme d'une complexité inutile mais cela peut être une bonne optimisation (pas nécessairement, bien sûr). Le problème c'est que vous ne programmez pas une boucle principale typique. En Javascript, vous utilisez la boucle principale du navigateur et vous essayez de le faire avec efficacité.
 
-## Construire une boucle principale *encore plus optimisée* en JavaScript
+## Construire une boucle principale encore plus optimisée en JavaScript
 
 En fin de compte, en JavaScript, le navigateur roule sa propre boucle principale et votre code existe dans certaines de ses étapes. La section ci-dessus décrit des boucles principales qui essaient de ne pas lâcher le contrôle du navigateur. Ces méthodes principales s'attachent à `window.requestAnimationFrame()`, qui demandent au navigateur le contrôle sur la prochaine image qui arrive. C'est au navigateur de décider de la gestion de sa boucle principale. Les spécifications du [W3C en matière de requestAnimationFrame](http://www.w3.org/TR/animation-timing/) ne définissent pas exactement quand les navigateur doivent éxécuter les rappels de requestAnimationFrame. Cela pourrait être bénéfique car cela laisse aux concepteurs de navigateurs la liberté d'expérimenter les solutions qu'ils pensent être les meilleures au travers du temps.
 
@@ -129,7 +129,7 @@ Bien que nous ne discutons pas du gain de temps, plusieurs navigateur ont un out
 
 **Note**: Les systèmes (matériels ou logiciels) qui ne sont pas capables d'avoir une précision à la microseconde sont autorisés à fournir une précision à la milliseconde au minimum. Sinon, ils devraient fournir une précision de 0.001ms s'ils en sont capables.
 
-Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un évènement peu intéressant, mais ils peut quand même être soustrait d'une autre prise de temps pour déterminer plus précisément combien de temps s'est déroulé entre ces deux poins. Pour obtenir une de ces prises de temps, vous pouvez appeler la fonction `window.performance.now()` et stocker le résultat dans une variable.
+Seule, cette valeur n'est pas très utile, considérant qu'il est relatif à un évènement peu intéressant, mais ils peut quand même être soustrait d'une autre prise de temps pour déterminer plus précisément combien de temps s'est déroulé entre ces deux points. Pour obtenir une de ces prises de temps, vous pouvez appeler la fonction `window.performance.now()` et stocker le résultat dans une variable.
 
 ```js
 var tNow = window.performance.now();

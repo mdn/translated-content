@@ -19,7 +19,7 @@ slug: Glossary/Forbidden_header_name
 - {{HTTPHeader("Date")}}
 - {{HTTPHeader("DNT")}}
 - {{HTTPHeader("Expect")}}
-- {{HTTPHeader("Feature-Policy")}}
+- {{HTTPHeader("Permissions-Policy")}}
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Keep-Alive")}}
 - {{HTTPHeader("Origin")}}

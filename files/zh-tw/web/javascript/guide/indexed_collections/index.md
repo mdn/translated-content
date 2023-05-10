@@ -462,7 +462,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 ## Typed Arrays
 
-[JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/zh-TW/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
+[JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/zh-TW/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
 
 ### Buffers and views: typed array architecture
 
@@ -473,13 +473,5 @@ To achieve maximum flexibility and efficiency, JavaScript typed arrays split the
 ### ArrayBuffer
 
 The {{jsxref("ArrayBuffer")}} is a data type that is used to represent a generic, fixed-length binary data buffer. You can't directly manipulate the contents of an `ArrayBuffer`; instead, you create a typed array view or a {{jsxref("DataView")}} which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
-
-### Typed array views
-
-Typed array views have self descriptive names and provide views for all the usual numeric types like `Int8`, `Uint32`, `Float64` and so forth. There is one special typed array view, the `Uint8ClampedArray`. It clamps the values between 0 and 255. This is useful for [Canvas data processing](/zh-TW/docs/Web/API/ImageData), for example.
-
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
-
-For more information, see [JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) and the reference documentation for the different {{jsxref("TypedArray")}} objects.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

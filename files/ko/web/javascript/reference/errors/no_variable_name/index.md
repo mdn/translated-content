@@ -1,8 +1,8 @@
 ---
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

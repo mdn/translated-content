@@ -1,9 +1,9 @@
 ---
 title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMinutes
 ---
+
 {{JSRef}}
 
 El método **`getMinutes()`** devuelve los minutos de la fecha especificada en función de la hora local.
@@ -37,15 +37,11 @@ console.log(minutos); // 15
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                   | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}     | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.20', 'Date.prototype.getMinutes')}}                 | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getminutes', 'Date.prototype.getMinutes')}} | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getMinutes")}}
+{{Compat}}
 
 ## Ver también
 

@@ -3,6 +3,7 @@ title: GamepadButton.value
 slug: Web/API/GamepadButton/value
 translation_of: Web/API/GamepadButton/value
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`GamepadButton.value`** интерфейса {{domxref("GamepadButton")}} возвращает состояние аналоговой клавиши геймпада, такой, как, например триггеры.

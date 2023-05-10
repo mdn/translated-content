@@ -84,7 +84,7 @@ console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
 
-### La valeur de l'expression `yield*`
+### La valeur de l'expression yield\*
 
 `yield*` est une expression et non une instruction, elle est donc évaluée et fournit une valeur :
 

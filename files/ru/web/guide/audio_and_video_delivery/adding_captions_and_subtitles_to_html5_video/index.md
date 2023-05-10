@@ -5,13 +5,14 @@ slug: >-
 translation_of: >-
   Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 ---
+
 > В других статьях мы рассмотрели как [создать cross browser видео плеер](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
 
 ## Пример видео с подписями
 
 В этой статье мы сошлёмся на пример плеера с подписями. Этот пример использует отрывок из [Sintel open movie](http://www.sintel.org/), созданного [Blender Foundation](http://www.blender.org/foundation/).
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 > **Примечание:** вы можете найти [source on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а так же [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
 

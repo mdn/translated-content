@@ -4,6 +4,7 @@ slug: Web/API/Element/localName
 translation_of: Web/API/Node/localName
 original_slug: Web/API/Node/localName
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.localName`** только для чтения, возвращает локальную часть полного имени этого узла.
@@ -59,7 +60,7 @@ name = element.localName
 </ecomm:business>
 ```
 
-> **Примечание:** В {{Gecko("1.9.2")}} и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML-элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML-элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML-элементов в HTML DOMs.
+> **Примечание:** В Gecko 1.9.2 и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML-элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML-элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML-элементов в HTML DOMs.
 
 Для узла другого [типа](/ru/docs/DOM/Node.nodeType) отличного от `ELEMENT_NODE` и `ATTRIBUTE_NODE` `localName` всегда `null`.
 

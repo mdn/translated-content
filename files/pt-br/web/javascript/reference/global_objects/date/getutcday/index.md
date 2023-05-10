@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 ---
+
 {{JSRef}}
 
 O método **`getUTCDay()`** retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.

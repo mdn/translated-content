@@ -18,7 +18,7 @@ slug: Web/API/SourceBuffer/timestampOffset
 为该属性设置新值时可能会引发以下异常：
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - :  如果 {{domxref("SourceBuffer")}} 对象正在更新（即它的 {{domxref("SourceBuffer.updating")}} 属性当前为 `true`）、当前正在解析 `SourceBuffer` 内的媒体片段或者此 `SourceBuffer` 已经从 {{domxref("MediaSource")}} 移除。
+  - : 如果 {{domxref("SourceBuffer")}} 对象正在更新（即它的 {{domxref("SourceBuffer.updating")}} 属性当前为 `true`）、当前正在解析 `SourceBuffer` 内的媒体片段或者此 `SourceBuffer` 已经从 {{domxref("MediaSource")}} 移除。
 
 ## 示例
 

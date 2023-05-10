@@ -3,6 +3,7 @@ title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 translation_of: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`replace()`** интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то `replace()` сразу же возвращает `false`, без добавления нового класса в список классов.

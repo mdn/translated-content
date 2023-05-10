@@ -1,14 +1,9 @@
 ---
 title: Função
 slug: Glossary/Function
-tags:
-  - Glossário
-  - Iniciante
-  - Intro
-  - JavaScript
-translation_of: Glossary/Function
 original_slug: Glossario/Função
 ---
+
 Uma **função** **(function)** é um fragmento de código que pode ser invocado por outro código, por si mesmo ou uma {{Glossary ("variável")}} que se refere à função. Quando uma função é invocada, o {{Glossary ("Argument", "argumento")}} é passado para a função como input (entrada) e a função pode opcionalmente retornar um output (saída). Uma função em {{glossary ("JavaScript")}} também é um {{glossary ("objeto")}}.
 
 O nome da função é um {{Glossary ("identificador")}} declarado como parte de uma declaração de função ou expressão de função. O nome da função {{Glossary ("escopo")}} depende se o nome da função é uma declaração ou expressão.
@@ -68,7 +63,7 @@ Uma **Expressão de Função Invocada Imediatamente** (IIFE em Inglês) é uma f
 ```js
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

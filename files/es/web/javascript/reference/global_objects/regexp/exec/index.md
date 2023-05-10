@@ -1,16 +1,9 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-tags:
-  - Expresiones Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - RegExp
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/exec
 ---
+
 {{JSRef}}
 
 El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.
@@ -165,16 +158,11 @@ Esto logueará un mensaje que contiene 'hola mundo!'.
 
 ## Especificaciones
 
-| Especificación                                                                               | Status                       | Comment                                             |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.10.6.21', 'RegExp.exec')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-regexp.prototype.exec', 'RegExp.exec')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.exec', 'RegExp.exec')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatiblidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.exec")}}
+{{Compat}}
 
 ## Ver también
 

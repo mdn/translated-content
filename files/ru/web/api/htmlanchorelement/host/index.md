@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/host
 original_slug: Web/API/HTMLHyperlinkElementUtils/host
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.host`** – это {{domxref("USVString")}}, содержащий хост, а именно _имя хоста_ и, если _порт_ не пустой, `':'` и _порт_.

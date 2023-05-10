@@ -5,8 +5,6 @@ slug: Web/CSS/grid-template-columns
 
 {{CSSRef}}
 
-## Summary
-
 The `grid-template-columns` CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 
 {{cssinfo}}

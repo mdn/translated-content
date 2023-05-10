@@ -1,15 +1,10 @@
 ---
 title: Exemplo de Composição
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
-tags:
-  - Canvas
-  - Example
-  - HTML5
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo
 ---
-{{CanvasSidebar}}
+
+{{DefaultAPISidebar("Canvas API")}}
 
 Esse exemplo demonstra várias [operações de composição](/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). A saída se parece assim:
 

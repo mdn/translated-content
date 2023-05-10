@@ -88,9 +88,7 @@ myObj + 3; // 7
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

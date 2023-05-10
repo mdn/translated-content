@@ -67,7 +67,7 @@ f.load().then(function() {
 ### Gecko 特有のメモ
 
 - Firefox など Gecko ベースのブラウザーでは、このプロパティのほかに標準外かつ非推奨の `ctx.mozTextStyle` を定義しています。代わりに `ctx.font` を使用してください。
-- Gecko では、システムフォントをキャンバスの 2D コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} (例えば `menu`) の値として設定した場合、フォントの値を取得しても期待したフォントが返されない (何も返されない) ことがありました。これは、Firefox 57 でリリースされた Firefox の並列 CSS エンジン [Quantum/Stylo]("https://wiki.mozilla.org/Quantum/Stylo) で修正されました (bug 1374885)。
+- Gecko では、システムフォントをキャンバスの 2D コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} (例えば `menu`) の値として設定した場合、フォントの値を取得しても期待したフォントが返されない (何も返されない) ことがありました。これは、Firefox 57 でリリースされた Firefox の並列 CSS エンジン [Quantum/Stylo](https://wiki.mozilla.org/Quantum/Stylo) で修正されました (bug 1374885)。
 
 ## 関連情報
 

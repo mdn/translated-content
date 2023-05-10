@@ -1,11 +1,8 @@
 ---
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' missing'
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
-tags:
-  - Cabeceras
-  - Seguridad
-translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
+
 {{HTTPSidebar}}
 
 ## Motivo

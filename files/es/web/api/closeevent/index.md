@@ -1,8 +1,8 @@
 ---
 title: CloseEvent
 slug: Web/API/CloseEvent
-translation_of: Web/API/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 Un `CloseEvent` se envia a los clientes usando {{Glossary("WebSockets")}} cuando la conexión esta cerrada. Esto se entrega al que escucha indicado por el atributo `onclose` del objeto `WebSocket.`
@@ -53,12 +53,16 @@ _Esta interface tambien hereda propiedades de su padre, {{domxref("Event")}}._
 
 _Esta interface tambien hereda metodos de su padre, {{domxref("Event")}}._
 
-- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}
+- {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{deprecated_inline}}
   - : Inicializa el valor de un `CloseEvent` creado. Si el evento ya ha sido enviado, este método no funciona. No use más este método, use el {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} constructor en su lugar.
 
-## Compatibilidad entre Navegadores
+## Especificaciones
 
-{{Compat("api.CloseEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver tambien
 

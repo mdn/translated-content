@@ -33,9 +33,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `transition`
   - : {{WebExtAPIRef('history.TransitionType')}}. Décrit comment le navigateur a navigué vers la page à cette occasion.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.VisitItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

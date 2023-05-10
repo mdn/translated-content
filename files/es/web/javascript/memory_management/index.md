@@ -1,17 +1,9 @@
 ---
 title: Gestión de Memoria
-slug: Web/JavaScript/Memory_Management
-tags:
-  - Advanced
-  - JavaScript
-  - Performance
-  - Reference
-  - Referencia
-  - Rendimiento
-  - memoria
-translation_of: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 original_slug: Web/JavaScript/Gestion_de_Memoria
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Introducción

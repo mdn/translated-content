@@ -1,8 +1,8 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-translation_of: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -40,14 +40,11 @@ left:20em; top:-25px; opacity:0.9</span></div>
 
 ## Especificaciones
 
-| Specification                                                                            | Status                                   | Comment                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | Define `visibility` como animable. |
-| {{SpecName('CSS2.1', 'visuren.html#z-index', 'z-index')}}             | {{Spec2('CSS2.1')}}                 | Especificación inicial.            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.z-index")}}
+{{Compat}}
 
 ## Ver también
 

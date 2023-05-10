@@ -36,10 +36,7 @@ slug: Web/API/DOMHighResTimeStamp
 
 ## 仕様
 
-| 仕様書                                                                                                               | 策定状況                                     | コメント                                 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-domhighrestimestamp', 'DOMHighResTimeStamp')}} | {{Spec2('Highres Time Level 2')}} | インターフェイスや型を、より厳密に定義。 |
-| {{SpecName('Highres Time', '#sec-DOMHighResTimeStamp', 'DOMHighResTimeStamp')}}             | {{Spec2('Highres Time')}}             | 初期定義                                 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

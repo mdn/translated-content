@@ -5,6 +5,7 @@ tags:
   - Псевдо-класс
 translation_of: Web/CSS/:disabled
 ---
+
 {{CSSRef}}
 
 ## Описание
@@ -63,7 +64,7 @@ function toggleBilling() {
 
 Результатом будет отключение всех полей в группе адреса оплаты и окраска их в серый цвет.
 
-{{EmbedLiveSample('Пример_использования', '300px', '250px', '', 'Web/CSS/:disabled')}}
+{{EmbedLiveSample('Пример_использования', '300px', '250px')}}
 
 ## Спецификации
 

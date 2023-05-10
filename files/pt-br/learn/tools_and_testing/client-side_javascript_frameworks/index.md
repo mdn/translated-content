@@ -1,16 +1,8 @@
 ---
 title: Entendendo frameworks JavaScript do lado do cliente
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-tags:
-  - Beginner
-  - Frameworks
-  - JavaScript
-  - Learn
-  - NeedsTranslation
-  - TopicStub
-  - client-side
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 As estruturas JavaScript são uma parte essencial do desenvolvimento front-end da Web moderna, que fornecem aos desenvolvedores ferramentas utilizadas e testadas para a criação de aplicativos Web interativos e escalonáveis. Muitas empresas modernas usam estruturas como parte padrão de suas ferramentas, portanto, muitos trabalhos de desenvolvimento front-end agora exigem experiência em estruturas.

@@ -3,7 +3,7 @@ title: '<ul>: 順序なしリスト要素'
 slug: Web/HTML/Element/ul
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<ul>` 要素**は、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
@@ -60,12 +60,12 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("none")}},
-        {{ARIARole("presentation")}},
-        {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}},
-        {{ARIARole("toolbar")}}, {{ARIARole("tree")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
       </td>
     </tr>
     <tr>
@@ -175,10 +175,7 @@ slug: Web/HTML/Element/ul
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-ul-element', '&lt;ul&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-ul-element', '&lt;ul&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

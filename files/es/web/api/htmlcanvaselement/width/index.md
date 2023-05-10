@@ -1,8 +1,8 @@
 ---
 title: HTMLCanvasElement.width
 slug: Web/API/HTMLCanvasElement/width
-translation_of: Web/API/HTMLCanvasElement/width
 ---
+
 {{APIRef("Canvas API")}}
 
 TLa propiedad **`HTMLCanvasElement.width`** es un entero positivo que refleja el atributo {{htmlattrxref("width", "canvas")}} del elemento {{HTMLElement("canvas")}} interpretado en pixeles CSS. Cuando el atributo no esta especificado o se define con un valor invalido (ej. Número negativo), es usado el valor por defecto de 150.
@@ -33,15 +33,11 @@ console.log(canvas.width); // 300
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Status                           | Comentarios                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML WHATWG')}} | No hay cambios desde la ultima foto {{SpecName('HTML5 W3C')}}          |
-| {{SpecName('HTML5.1', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}}     | {{Spec2('HTML5.1')}}     |                                                                               |
-| {{SpecName('HTML5 W3C', "scripting-1.html#attr-canvas-width", "HTMLCanvasElement.width")}} | {{Spec2('HTML5 W3C')}}     | Foto que contiene la definición inicial {{SpecName('HTML WHATWG')}}. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.width")}}
+{{Compat}}
 
 ## Ver también
 

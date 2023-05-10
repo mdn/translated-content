@@ -1,14 +1,8 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/namespaceURI
 ---
+
 {{APIRef}}
 
 La propiedad `Element.namespaceURI` unicamente de lectura devuelve la URI namespace de el elemento, `o la anula si el elemento no está en un` namespace.

@@ -9,34 +9,47 @@ slug: Web/API/Battery_Status_API
 
 Battery Status API 向 {{domxref("window.navigator")}} 扩展了一个 {{domxref("navigator.getBattery")}} 方法，其返回了一个 battery promise, 完成后传递一个 {{domxref("BatteryManager")}} 对象，并提供了一些新的可以操作电池状态的事件。
 
-## 例子
+## 示例
 
-在这个例子中，我们同时监听放电状态和电池等级和剩余事件的事件（不论是否正在充电还是在使用电池）。这可以通过监听 {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}}, {{event("dischargingtimechange")}} 事件完成。
+在这个例子中，我们同时监听放电状态和电池等级和剩余事件的事件（不论是否正在充电还是在使用电池）。这可以通过监听 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}、{{domxref("BatteryManager.levelchange_event", "levelchange")}}、{{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}、{{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}} 事件完成。
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
+  function updateAllBatteryInfo() {
+    updateChargeInfo();
+    updateLevelInfo();
+    updateChargingInfo();
+    updateDischargingInfo();
+  }
+  updateAllBatteryInfo();
 
-  console.log("Battery charging? " + (battery.charging ? "Yes" : "No"));
-  console.log("Battery level: " + battery.level * 100 + "%");
-  console.log("Battery charging time: " + battery.chargingTime + " seconds");
-  console.log("Battery discharging time: " + battery.dischargingTime + " seconds");
-
-  battery.addEventListener('chargingchange', function() {
-    console.log("Battery charging? " + (battery.charging ? "Yes" : "No"));
+  battery.addEventListener("chargingchange", () => {
+    updateChargeInfo();
   });
+  function updateChargeInfo() {
+    console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
+  }
 
-  battery.addEventListener('levelchange', function() {
-    console.log("Battery level: " + battery.level * 100 + "%");
+  battery.addEventListener("levelchange", () => {
+    updateLevelInfo();
   });
+  function updateLevelInfo() {
+    console.log(`Battery level: ${battery.level * 100}%`);
+  }
 
-  battery.addEventListener('chargingtimechange', function() {
-    console.log("Battery charging time: " + battery.chargingTime + " seconds");
+  battery.addEventListener("chargingtimechange", () => {
+    updateChargingInfo();
   });
+  function updateChargingInfo() {
+    console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+  }
 
-  battery.addEventListener('dischargingtimechange', function() {
-    console.log("Battery discharging time: " + battery.dischargingTime + " seconds");
+  battery.addEventListener("dischargingtimechange", () => {
+    updateDischargingInfo();
   });
-
+  function updateDischargingInfo() {
+    console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+  }
 });
 ```
 

@@ -1,12 +1,9 @@
 ---
 title: <head>
 slug: Web/HTML/Element/head
-tags:
-  - HTML head
-  - head
-translation_of: Web/HTML/Element/head
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos.
 
@@ -65,7 +62,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
 
 Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}} {{obsolete_inline}}
+- {{htmlattrdef("profile")}}
   - : A URIs de um ou mais perfis de metadados , separado por espaço em branco.
 
 ## Exemplo

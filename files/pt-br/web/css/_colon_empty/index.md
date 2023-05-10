@@ -1,8 +1,8 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-translation_of: Web/CSS/:empty
 ---
+
 {{ CSSRef() }}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:empty`** representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.

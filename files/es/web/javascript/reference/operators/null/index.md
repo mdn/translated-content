@@ -1,13 +1,9 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - Literal
-  - Primitivo
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -47,15 +43,11 @@ null  == undefined // true
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                   | Comentarios         |
-| -------------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 1st Edition.                                              | Standard                 | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}} | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-null-value', 'null value')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.null")}}
+{{Compat}}
 
 ## Véase también
 

@@ -15,6 +15,7 @@ tags:
   - Workers
 translation_of: Web/API/ExtendableEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
@@ -82,7 +83,7 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-> **Примечание:** **Important**: When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
+> **Примечание:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
 
 ## Specifications
 

@@ -101,9 +101,7 @@ class StaticMethodCall {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

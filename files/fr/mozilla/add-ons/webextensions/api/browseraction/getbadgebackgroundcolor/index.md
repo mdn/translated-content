@@ -46,11 +46,7 @@ browser.browserAction.getBadgeBackgroundColor (
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec la couleur récupérée en tant que  {{WebExtAPIRef('browserAction.ColorArray')}}.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getBadgeBackgroundColor",2)}}
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec la couleur récupérée en tant que {{WebExtAPIRef('browserAction.ColorArray')}}.
 
 ## Exemples
 
@@ -67,6 +63,10 @@ function onFailure(error) {
 
 browser.browserAction.getBadgeBackgroundColor({}).then(onGot, onFailure);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

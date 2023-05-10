@@ -1,8 +1,8 @@
 ---
 title: pointer-events
 slug: Web/CSS/pointer-events
-translation_of: Web/CSS/pointer-events
 ---
+
 {{CSSRef}}
 
 ## Resumo

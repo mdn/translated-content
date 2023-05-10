@@ -1,8 +1,8 @@
 ---
 title: Symbol.toPrimitive
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 ---
+
 {{JSRef}}
 
 O **`Symbol.toPrimitive`** é um símbolo que específica uma propriedade com valor função que é chamada para converter um ojbeto para um valor primitivo correspondente.

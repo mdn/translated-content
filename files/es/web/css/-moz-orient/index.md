@@ -1,8 +1,8 @@
 ---
 title: '-moz-orient'
 slug: Web/CSS/-moz-orient
-translation_of: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-moz-orient` [CSS](/es/docs/Web/CSS) especifica la orientación del elemento al que se aplica.
@@ -60,9 +60,9 @@ The `-moz-orient` [CSS](/es/docs/Web/CSS) especifica la orientación del element
 
 Aunque [somete](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396.html) al W3C , con retroalimentación positiva inicial , esta propiedad no es todavía parte de ninguna especificación ; Actualmente , esto es una extensión de Mozilla-specific (that is, `-moz-orient`).
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-moz-orient")}}
+{{Compat}}
 
 ## Ver también
 

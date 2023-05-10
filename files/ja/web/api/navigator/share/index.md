@@ -43,7 +43,7 @@ navigator.share(data)
 {{jsxref("Promise")}} は以下の `DOMException` 値のいずれかで拒否される可能性がある。
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) の権限が与えられていないか、ウィンドウが{{Glossary("transient activation", "単発の活性化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
+  - : [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) の権限が与えられていないか、ウィンドウが{{Glossary("transient activation", "一時的な有効化")}}されていないか、セキュリティ上の配慮からファイル共有がブロックされているかです。
 - {{jsxref("TypeError")}}
 
   - : 指定した共有データを検証することができません。想定される理由は以下の通りです。
@@ -111,7 +111,7 @@ navigator.share(data)
 
 ## セキュリティ
 
-このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "単発の活性化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
+このメソッドは、現在の文書が [web-share](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) 権限ポリシーと{{Glossary("transient activation", "一時的な有効化")}}を持っていることが必要です（ボタンクリックなどのUIイベントをきっかけに起動しなければならず、スクリプトによって任意の時点で起動させることはできない）。さらに、このメソッドでは、ネイティブ実装で共有に対応している有効なデータを指定する必要があります。
 
 ## 例
 
@@ -140,7 +140,7 @@ const shareData = {
 const btn = document.querySelector('button');
 const resultPara = document.querySelector('.result');
 
-// 共有は「ユーザーによる活性化」で発生させること。
+// 共有は「ユーザーによる有効化」で発生させること。
 btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData);

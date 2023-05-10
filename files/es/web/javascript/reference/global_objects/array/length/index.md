@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Propiedad
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/length
 ---
+
 {{JSRef}}
 
 La propiedad **`length`** de un objeto que es una instancia de tipo Array establece o devuelve la cantidad de elementos en esa matriz. El valor es un entero sin signo de 32 bits que siempre es numéricamente mayor que el índice más alto en la matriz.
@@ -105,16 +99,11 @@ console.log(numbers.length); // 3
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| ECMAScript 1ra Edición.                                                                                          | Estándar                     | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.4.5.2', 'Array.length')}}                                         | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-properties-of-array-instances-length', 'Array.length')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-properties-of-array-instances-length', 'Array.length')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## Ver también
 

@@ -4,6 +4,7 @@ slug: Web/API/Element/prefix
 translation_of: Web/API/Node/prefix
 original_slug: Web/API/Node/prefix
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.prefix`** только для чтения, возвращающее префикс пространства имён указанного узла или `null,` если не указан префикс. Это свойство только для чтения.

@@ -1,15 +1,9 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 El método **`Object.getOwnPropertySymbols()`** regresa una colección de todos las propiedades de los simbolos encontrados directamente en un objeto dado.
@@ -50,13 +44,11 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
+{{Compat}}
 
 ## Ver también
 

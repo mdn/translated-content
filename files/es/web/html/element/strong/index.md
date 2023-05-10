@@ -1,23 +1,19 @@
 ---
 title: strong
 slug: Web/HTML/Element/strong
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/strong
 original_slug: Web/HTML/Elemento/strong
 ---
+
 ### Definición
 
 - El elemento **strong** es el apropiado para marcar con especial énfasis las partes más importantes de un texto.
   - : **Sus etiquetas son**: \<strong> y \</strong> (ambas obligatorias)
-  
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+
+    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

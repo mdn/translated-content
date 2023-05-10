@@ -216,7 +216,7 @@ ul li {
 
 效果显示如下：
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](image-bullets.png)
 
 ### list-style 速记
 
@@ -246,7 +246,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性允许你从 1 以外的数字开始计数。示例如下：
+[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。示例如下：
 
 ```html
 <ol start="4">
@@ -263,7 +263,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性将启动列表倒计数。示例如下：
+[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将启动列表倒计数。示例如下：
 
 ```html
 <ol start="4" reversed>
@@ -280,7 +280,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性允许设置列表项指定数值，示例如下：
+[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，示例如下：
 
 ```html
 <ol>
@@ -372,16 +372,16 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('主动学习：为嵌套式列表添加样式', 700, 800) }}
 
-## 另请参阅
+## 总结
+
+一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——为链接提供样式的各种技巧。
+
+## 参见
 
 CSS 计数器提供用于自定义列表计数和样式的高级工具，但它们相当复杂。如果你想更深入了解，请查看如下资源：
 
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
-
-## 总结
-
-一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——为链接提供样式的各种技巧。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}

@@ -4,6 +4,7 @@ slug: Web/CSS/url
 translation_of: Web/CSS/url()
 original_slug: Web/CSS/url()
 ---
+
 {{CSSRef}}
 
 The **`url()`** [CSS](/ru/docs/Web/CSS) function is used to include a file. The parameter is an absolute URL, a relative URL, or a data URI. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref('attr()')}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The url() functional notation is the value for the \<url> data type.
@@ -16,7 +17,7 @@ url(myFont.woff);
 url(#IDofSVGpath);
 
 /* associated properties */
-background-image: url("https://mdn.mozillademos.org/files/16761/star.gif");
+background-image: url("star.gif");
 list-style-image: url('../images/bullet.jpg');
 content: url("pdficon.jpg");
 cursor: url(mycursor.cur);
@@ -29,7 +30,7 @@ mask-image: url("masks.svg#mask1");
 cursor: url(pointer.cur), pointer;
 
 /* Associated short-hand properties */
-background: url('https://mdn.mozillademos.org/files/16761/star.gif') bottom right repeat-x blue;
+background: url('star.gif') bottom right repeat-x blue;
 border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* As a parameter in another CSS function */
@@ -101,7 +102,7 @@ url( <string> <url-modifier>* )
 
 ```css
 li::after {
-  content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
+  content: ' - ' url(star.gif);
 }
 ```
 

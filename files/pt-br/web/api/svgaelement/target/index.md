@@ -1,13 +1,9 @@
 ---
 title: SVGAElement.target
 slug: Web/API/SVGAElement/target
-tags:
-  - Imagem vetorial
-  - Vetores
-translation_of: Web/API/SVGAElement/target
-translation_of_original: Web/API/SVGAElement/SVGAlement.target
 original_slug: Web/API/SVGAElement/SVGAlement.target
 ---
+
 {{APIRef("SVGAElement")}}
 
 O **`SVGAElement.target`** propriedade somente ler de {{domxref("SVGAElement")}} retorna um objeto {{domxref("SVGAnimatedString")}} que especifica a porção de um alvo sendo ele "window", "frame" ou "pane" no qual um documento será aberto quando o link for acionado.

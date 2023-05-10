@@ -3,11 +3,12 @@ title: Переполнение содержимого
 slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим другую важную концепцию в CSS — **переполнение**. Переполнение это то, что случается когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.
 
-| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](ru/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](ru/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS (study [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
+| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](/ru/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](/ru/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS (study [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:                | Понять, что такое переполнение и как с ним работать.                                                                                                                                                                                                                                                                                                                                                        |
 

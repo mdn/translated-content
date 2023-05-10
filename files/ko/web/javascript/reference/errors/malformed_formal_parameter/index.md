@@ -1,8 +1,8 @@
 ---
 title: 'SyntaxError: Malformed formal parameter'
 slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
-translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

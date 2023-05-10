@@ -1,10 +1,9 @@
 ---
 title: '<tr>: El elemento Fila de la tabla'
 slug: Web/HTML/Element/tr
-translation_of: Web/HTML/Element/tr
 original_slug: Web/HTML/Elemento/tr
-browser-compat: html.elements.tr
 ---
+
 ## Resumen
 
 El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos {{HTMLElement("td")}} y {{HTMLElement("th")}}.
@@ -80,4 +79,4 @@ Ver {{HTMLElement("table")}} para ejemplos de `<tr>`.
   - El {{cssxref(":nth-child")}} pseudo-clase para establecer la alineación en las células de la columna;
   - El {{cssxref("text-align")}} propiedad para alinear todas las células contenidos en el mismo carácter, como '.'. <
 
-{{HTMLRef}}
+{{HTMLSidebar}}

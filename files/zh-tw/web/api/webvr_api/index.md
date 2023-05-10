@@ -76,24 +76,24 @@ The WebVR API extends the following APIs, adding the listed features.
 #### Window events
 
 - {{domxref("Window.onvrdisplaypresentchange")}}
-  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the {{event("vrdisplaypresentchange")}} event fires).
+  - : Represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the `vrdisplaypresentchange` event fires).
 - {{domxref("Window.onvrdisplayconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been connected to the computer (when the {{event("vrdisplayconnect")}} event fires).
+  - : Represents an event handler that will run when a compatible VR display has been connected to the computer (when the `vrdisplayconnect` event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}
-  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer (when the {{event("vrdisplaydisconnect")}} event fires).
+  - : Represents an event handler that will run when a compatible VR display has been disconnected from the computer (when the `vrdisplaydisconnect` event fires).
 - {{domxref("Window.onvrdisplayactivate")}}
-  - : Represents an event handler that will run when a display is able to be presented to (when the {{event("vrdisplayactivate")}} event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
+  - : Represents an event handler that will run when a display is able to be presented to (when the `vrdisplayactivate` event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on.
 - {{domxref("Window.onvrdisplaydeactivate")}}
-  - : Represents an event handler that will run when a display can no longer be presented to (when the {{event("vrdisplaydeactivate")}} event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
+  - : Represents an event handler that will run when a display can no longer be presented to (when the `vrdisplaydeactivate` event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 
 #### Unimplemented window events
 
 The following events are listed in the spec, but do not currently seem to be implemented anywhere as yet.
 
 - {{domxref("Window.onvrdisplayblur")}}
-  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the {{event("vrdisplayblur")}} event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
+  - : Represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the `vrdisplayblur` event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience.
 - {{domxref("Window.onvrdisplayfocus")}}
-  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the {{event("vrdisplayfocus")}} event fires).
+  - : Represents an event handler that will run when presentation to a display has resumed after being blurred (when the `vrdisplayfocus` event fires).
 
 ## Examples
 

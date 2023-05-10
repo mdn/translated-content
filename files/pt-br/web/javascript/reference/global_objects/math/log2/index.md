@@ -1,8 +1,8 @@
 ---
 title: Math.log2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log2
 ---
+
 {{JSRef}}
 
 A função **`Math.log2()`** retorna o logaritmo de base 2 de um número, que é

@@ -1,11 +1,8 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - Contorno CSS
-  - Propiedad CSS
-translation_of: Web/CSS/outline
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`outline`** es una [forma reducida](/es/docs/Web/CSS/Shorthand_properties) para establecer una o más de las propiedades individuales de contorno {{cssxref("outline-style")}}, {{cssxref("outline-width")}} y {{cssxref("outline-color")}} en una sola declaración. En la mayoría de los casos el uso de este atajo es preferible y más conveniente.
@@ -101,11 +98,8 @@ a:focus {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentarios        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#outline', 'outline')}}             | {{Spec2('CSS3 Basic UI')}} | Sin cambios        |
-| {{SpecName('CSS2.1', 'ui.html#propdef-outline', 'outline')}} | {{Spec2('CSS2.1')}}             | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline")}}
+{{Compat}}

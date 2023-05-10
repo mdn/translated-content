@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A propriedade **`HTMLElement.offsetHeight`** é somente leitura e retorna um valor do tipo inteiro a altura de um elemento incluindo padding-top+padding-bottom+border-top+border-bottom.

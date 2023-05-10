@@ -331,7 +331,7 @@ x = "The answer is " + 42 // "The answer is 42"
 y = 42 + " is the answer" // "42 is the answer"
 ```
 
-在涉及其它运算符（译注：如下面的减号'-'）时，JavaScript 语言不会把数字变为字符串。例如（译注：第一例是数学运算，第二例是字符串运算）：
+在涉及其他运算符（译注：如下面的减号'-'）时，JavaScript 语言不会把数字变为字符串。例如（译注：第一例是数学运算，第二例是字符串运算）：
 
 ```js
 "37" - 7 // 30
@@ -384,7 +384,7 @@ console.log(a.length); // 1
 console.log(a[0]); // 3
 ```
 
-> **备注：** 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Using_Object_Initializers)。
+> **备注：** 这里的数组字面值也是一种对象初始化器。参考[对象初始化器的使用](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用对象初始化器)。
 
 若在顶层（全局）脚本里用字面值创建数组，JavaScript 语言将会在每次对包含该数组字面值的表达式求值时解释该数组。另一方面，在函数中使用的数组，将在每次调用函数时都会被创建一次。
 
@@ -400,7 +400,7 @@ var fish = ["Lion", , "Angel"];
 
 在这个数组中，有两个已被赋值的元素，和一个空元素（fish\[0] 是"Lion"，fish\[1] 是 undefined，而 fish\[2] 是"Angel"；译注：此时数组的长度属性 fish.length 是 3)。
 
-如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是 3，并不存在 myList\[3] 这个元素（译注：这是指数组的第 4 个元素噢，作者是在帮大家复习数组元素的排序命名方法）。元素列表中其它所有的逗号都表示一个新元素（的开始）。
+如果你在元素列表的尾部添加了一个逗号，它将会被忽略。在下面的例子中，数组的长度是 3，并不存在 myList\[3] 这个元素（译注：这是指数组的第 4 个元素噢，作者是在帮大家复习数组元素的排序命名方法）。元素列表中其他所有的逗号都表示一个新元素（的开始）。
 
 > **备注：** 尾部的逗号在早期版本的浏览器中会产生错误，因而编程时的最佳实践方式就是移除它们。
 
@@ -703,7 +703,7 @@ and so is foo.`
 - [流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [循环与迭代](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 下一章，流程控制与错误处理
 

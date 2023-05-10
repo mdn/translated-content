@@ -1,18 +1,8 @@
 ---
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
-tags:
-  - API
-  - Elocução
-  - Experimental
-  - Fala
-  - Interface
-  - Referencia
-  - SpeechSynthesis
-  - Web Speech API
-  - sintetização
-translation_of: Web/API/SpeechSynthesis
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.
@@ -50,7 +40,7 @@ _`SpeechSynthesis` também herda métodos da sua interface pai, {{domxref("Event
 
 ## Exemplos
 
-Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
+Na nossa demonstração básica [Speech synthesiser demo](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), nós primeiro pegamos uma referência para o controlador SpeechSynthesis usando `window.speechSynthesis`. Após definir algumas variáveis necessárias, nós obtemos uma lista de vozes disponíveis usando o método {{domxref("SpeechSynthesis.getVoices()")}} usando-as para popular um menu de seleção de forma que o usuário possa escolher a voz que desejar.
 
 Dentro do tratamento `inputForm.onsubmit`, nós impedimos a submissão do formulário com [preventDefault()](/pt-BR/docs/Web/API/Event/preventDefault), instanciamos uma {{domxref("SpeechSynthesisUtterance")}} contendo o texto presente no {{htmlelement("input")}}, atribuímos a voz da elocução para a voz selecionada no elemento {{htmlelement("select")}}, e iniciamos a reprodução da elocução através do método {{domxref("SpeechSynthesis.speak()")}}.
 

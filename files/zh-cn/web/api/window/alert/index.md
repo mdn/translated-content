@@ -33,7 +33,7 @@ window.alert("Hello world!");
 
 显示如下 (不同的浏览器下显示不同):
 
-![Image:AlertHelloWorld.png](/@api/deki/files/30/=AlertHelloWorld.png)
+![Image:AlertHelloWorld.png](alerthelloworld.png)
 
 ### 附注
 

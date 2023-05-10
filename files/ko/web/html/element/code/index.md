@@ -1,15 +1,9 @@
 ---
 title: '<code>: 인라인 코드 요소'
 slug: Web/HTML/Element/code
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/code
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시합니다. 기본 스타일은 {{glossary("user agent", "사용자 에이전트")}}의 고정폭 글씨체입니다.
 
@@ -86,7 +80,7 @@ CSS `code` 태그 선택자를 사용해 브라우저의 기본 글씨체를 바
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.code")}}
+{{Compat}}
 
 ## 같이 보기
 

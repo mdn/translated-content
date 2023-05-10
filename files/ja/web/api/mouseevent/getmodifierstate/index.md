@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
+l10n:
+  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効（すなわち、修飾キーが押されているかロックされている）ならば `true`、そうでなければ `false` を返します。
 
@@ -11,20 +13,20 @@ slug: Web/API/MouseEvent/getModifierState
 
 ## 構文
 
-```js
-getModifierState(keyArg)
+```js-nolint
+getModifierState(key)
 ```
+
+### 引数
+
+- `key`
+  - : 修飾キーの値です。
+    値は修飾キーまたは `"Accel"` {{deprecated_inline}} を表す {{domxref("KeyboardEvent.key")}} 値のいずれかである必要があります。
+    これは大文字と小文字を区別します。
 
 ### 返値
 
 論理値です。
-
-### Parameters
-
-- _`keyArg`_
-  - : A modifier key value.
-    The value must be one of the {{domxref("KeyboardEvent.key")}} values which represent modifier keys or `"Accel"`{{deprecated_inline}}.
-    This is case-sensitive.
 
 ## 仕様書
 
@@ -36,5 +38,5 @@ getModifierState(keyArg)
 
 ## 関連情報
 
-- The {{domxref("MouseEvent")}} this method belongs to.
+- 所属先の {{domxref("MouseEvent")}}
 - {{domxref("KeyboardEvent.getModifierState")}}

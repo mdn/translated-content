@@ -77,10 +77,7 @@ Usually, a `foreignObject` will be used in conjunction with the {{SVGElement("sw
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('SVG2', 'embedded.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG2')}} |            |
-| {{SpecName('SVG1.1', 'extend.html#ForeignObjectElement', '&lt;foreignObject&gt;')}} | {{Spec2('SVG1.1')}} | 初期の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

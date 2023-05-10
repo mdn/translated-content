@@ -1,9 +1,9 @@
 ---
 title: WindowOrWorkerGlobalScope.setInterval()
 slug: Web/API/setInterval
-translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 O método **`setInterval()`** oferecido das interfaces {{domxref("Window")}} e {{domxref("Worker")}}, repetem chamadas de funções ou executam trechos de código, com um tempo de espera fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo remove-lo mais tarde apenas o chamando {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Este metodo é definido pelo mixin {{domxref("WindowOrWorkerGlobalScope")}}.
@@ -313,7 +313,7 @@ var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);
 
 ### Abas inativas
 
-Iniciado no Gecko 5.0 {{geckoRelease("5.0")}}, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.
+Iniciado no Gecko 5.0, intervalos são fixados para disparar não mais do que uma vez por segundo em abas inativas.
 
 ## O problema do "[`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)"
 
@@ -384,7 +384,7 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 ```
 
-Outra, mais complexa, solução para o problema do `this` é [the following framework](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval$edit#A_little_framework).
+Outra, mais complexa, solução para o problema do `this` é [the following framework](#a_little_framework).
 
 > **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
@@ -599,7 +599,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}
+{{Compat}}
 
 ## See also
 

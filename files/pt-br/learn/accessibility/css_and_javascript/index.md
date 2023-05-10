@@ -1,16 +1,9 @@
 ---
 title: CSS e JavaScript - melhores práticas de acessibilidade
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Acessibilidade
-  - Artigo
-  - CSS
-  - JavaScript
-  - color
-  - contraste
-translation_of: Learn/Accessibility/CSS_and_JavaScript
 original_slug: Learn/Accessibility/CSS_e_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS e JavaScript, quando usados de maneira correta, têm também potencial para permitir experiências web acessíveis... ou podem causar danos significativos se usados de forma indevida. Este artigo descreve algumas das melhores práticas em CSS e JavaScript a serem consideradas para garantir que até mesmo conteúdos complexos estejam tão acessíveis quanto possível.
@@ -156,9 +149,9 @@ a:active {
 
 The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):
 
-![](https://mdn.mozillademos.org/files/14371/focus-highlight-firefox.png)
+![](focus-highlight-firefox.png)
 
-![](https://mdn.mozillademos.org/files/14369/focus-highlight-chrome.png)
+![](focus-highlight-chrome.png)
 
 You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.
 
@@ -201,7 +194,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
-![](https://mdn.mozillademos.org/files/13368/tabbed-info-box.png)
+![](tabbed-info-box.png)
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.
 
@@ -360,13 +353,3 @@ We hope this article has given you a good amount of detail and understanding abo
 Next up, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/pt-BR/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/pt-BR/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/pt-BR/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting)

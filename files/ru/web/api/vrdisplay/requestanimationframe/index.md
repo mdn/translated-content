@@ -3,6 +3,7 @@ title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Метод **`requestAnimationFrame()`** интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента колбэк-функцию. Эта функция будет вызвана, когда объект типа `VRDisplay` будет готов отобразить новый кадр сцены:

@@ -1,16 +1,8 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Generator.return
 ---
+
 {{JSRef}}
 
 제너레이터의 **`return()`** 메서드는 현재 중단된 위치에서 제너레이터 본체에 리턴 문이 삽입 된 것처럼 작동합니다. 이는 [`try...finally`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally-block) 블록을 사용하여 제너레이터를 정리 할 수 있도록 합니다.
@@ -64,7 +56,7 @@ g.next();        // { value: undefined, done: true }
 
 제너레이터가 이미 "완료" 상태 일때 `return(value)`가 호출되면 제너레이터는 "완료" 상태를 유지합니다.
 
-인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은  해당 값이 됩니다.
+인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은 해당 값이 됩니다.
 
 ```js
 function* gen() {

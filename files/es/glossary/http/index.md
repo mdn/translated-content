@@ -1,12 +1,8 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Beginner
-  - Intro
-  - Web
-translation_of: Glossary/HTTP
 ---
+
 El protocolo de transferencia de hipertexto o HTTP (HyperText Transfer Protocol) es el protocolo de red que permite la transferencia de documentos de hipermedia en la red, generalmente entre un navegador y un servidor, para que los humanos puedan leerlos. La versión actual de la especificación se llama HTTP/2.
 
 En un {{glossary("URI")}}, como por ejemplo <https://developer.mozilla.org>, se indica en el esquema y puede tomar los valores: 'http:' o 'https:'. 'https:' se refiere a la versión segura del protocolo.
@@ -18,4 +14,4 @@ También se puede utilizar como base para los servicios web {{glossary("REST")}}
 ## Learn more
 
 - [HTTP en MDN](/es/docs/Web/HTTP)
-- {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}} on Wikipedia
+- [HTTP](https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol) on Wikipedia

@@ -1,8 +1,8 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-translation_of: Web/CSS/@keyframes
 ---
+
 {{ CSSRef() }} {{ SeeCompatTable() }}
 
 ### Resumen
@@ -79,13 +79,11 @@ Mira los ejemplos del [CSS animations](/en/CSS/CSS_animations).
 
 ## Especificaciones
 
-Compatibilidad del navegador
+{{Specifications}}
 
-| Especificaciones                                                                 | Estadp                                   | Comentario |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#keyframes', '@keyframes') }} | {{ Spec2('CSS3 Animations') }} |            |
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## Vease también
 

@@ -1,14 +1,8 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - Constructor
-  - JavaScript
-  - Shared Memory
-  - SharedArrayBuffer
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 **`SharedArrayBuffer`** 객체는 제네릭, 고정된 길이의 원시 바이너리 데이터 버퍼를 표현하는데 사용됩니다. {{jsxref("ArrayBuffer")}} 객체와 유사하지만, 공유된 메모리상의 뷰를 생성하는데 사용될 수 있습니다. `ArrayBuffer` 와는 달리, `SharedArrayBuffer` 는 분리될 수 없습니다.

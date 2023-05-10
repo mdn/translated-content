@@ -1,17 +1,9 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterador
-  - Iterator
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/entries
 ---
+
 {{JSRef}}El método **`entries()`** retorna un nuevo objeto **`Array Iterator`** que contiene los pares clave/valor para cada índice de la matriz.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
@@ -44,14 +36,11 @@ for (let e of iterator) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.entries', 'Array.prototype.entries')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## Ver también
 

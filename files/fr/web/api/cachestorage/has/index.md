@@ -30,7 +30,7 @@ caches.has(cacheName).then(function(true) {
 ### Paramètres
 
 - cacheName
-  - : Un  {{domxref("DOMString")}} représentant le nom de l'objet {{domxref("Cache")}} que vous cherchez dans le {{domxref("CacheStorage")}}.
+  - : Un {{domxref("DOMString")}} représentant le nom de l'objet {{domxref("Cache")}} que vous cherchez dans le {{domxref("CacheStorage")}}.
 
 ### Retour
 

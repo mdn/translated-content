@@ -1,16 +1,9 @@
 ---
 title: API de almacenamiento web
 slug: Web/API/Web_Storage_API
-tags:
-  - API
-  - API de almacenamiento web
-  - Almacenamiento web
-  - Storage
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API
 original_slug: Web/API/API_de_almacenamiento_web
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 La **API de almacenamiento web** proporciona los mecanismos mediante los cuales el navegador puede almacenar información de tipo clave/valor, de una forma mucho más intuitiva que utilizando cookies.
@@ -41,27 +34,15 @@ Estos mecanismos están disponibles mediante las propiedades [`Window.sessionSto
 
 Para ilustrar algunos usos típicos del almacenamiento web, hemos creado un ejemplo simple, llamado [Demo de almacenamiento web](https://github.com/mdn/web-storage-demo). La [página de inicio](http://mdn.github.io/web-storage-demo/) proporciona controles que puedes utilizar para personalizar el color, la tipografía y la imagen decorativa. Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
-También creamos una[página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento {{event("StorageEvent")}}.
+También creamos una[página de salida del evento](http://mdn.github.io/web-storage-demo/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un evento [`StorageEvent`](/es/docs/Web/Reference/Events/StorageEvent).
 
 ## Especificaciones
 
-| Especificación                       | Estado                           | Comentario |
-| ------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
-
-Todos los navegadores tienen distintos niveles de capacidad tanto para localStorage como para sessionStorage. Aquí está una [análisis detallado de todas las capacidades de almacenamiento de diferentes navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Nota:** Desde iOS 5.1, Safari Mobile almacena los datos de localStorage en la carpeta de caché, la cual está sujeta a limpiezas ocasionales, a petición del sistema operativo, típicamente cuando el espacio es reducido.
+{{Compat}}
 
 ## Navegación privada / Modo incógnito
 

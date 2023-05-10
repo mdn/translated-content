@@ -3,7 +3,7 @@ title: '<b>: 注目付け要素'
 slug: Web/HTML/Element/b
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の注目付け要素 (`<b>`)** は、要素の内容に読み手の注意を惹きたい場合で、他の特別な重要性が与えられないものに使用します。これは以前は太字要素と呼ばれており、ほとんどのブラウザーでは文字列を太字で描画していました。しかし、 `<b>` を文字列の装飾に使うべきではありません。太字の文字列を作成するには、 CSS の {{cssxref("font-weight")}} プロパティを使用し、特別な重要性を持つテキストを示すには {{HTMLElement("strong")}} 要素を使用してください。
 
@@ -92,11 +92,7 @@ Keywords are displayed with the default style of the <b>element, likely in bold.
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-b-element', '&lt;b&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-b-element', '&lt;b&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.2.1', '&lt;b&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

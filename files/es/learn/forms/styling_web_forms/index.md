@@ -1,9 +1,9 @@
 ---
 title: Estilizando formularios HTML
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades.
@@ -374,19 +374,6 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 Como puede ver, siempre que queramos crear formularios con solo campos de texto y botones, es fácil diseñarlos usando CSS. [En el próximo artículo](/es/docs/Learn/Forms/Advanced_form_styling), veremos cómo manejar los controles de formulario que caen en las categorías "malo" y "feo".
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Controles básicos de formularios nativos](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada de HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Estilizando formularios HTML](/es/docs/Learn/Forms/Styling_web_forms)
-- [Estilo de formulario avanzado](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases de interfaz de usuario](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación de formularios del lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Envío de datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

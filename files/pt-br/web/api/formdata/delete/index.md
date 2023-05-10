@@ -1,8 +1,8 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O metodo **`delete()`** da interface {{domxref("FormData")}} deleta uma chave/valor pares do Objecto `FormData` .

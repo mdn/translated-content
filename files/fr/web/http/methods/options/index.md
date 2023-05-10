@@ -111,13 +111,11 @@ Content-Type: text/plain
 
 ## Spécifications
 
-| Specification                                    | Title                                                         |
-| ------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "OPTIONS", "4.3.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.methods.OPTIONS")}}
+{{Compat}}
 
 ## Voir aussi
 

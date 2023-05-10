@@ -135,7 +135,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Skipping_example', '100%', 200)}}
+{{EmbedLiveSample('当浏览器遇到无法解析的 CSS 代码会发生什么', '100%', 200)}}
 
 这样做好处多多，代表着你使用最新的 CSS 优化的过程中浏览器遇到无法解析的规则也不会报错。当你为一个元素指定多个 CSS 样式的时候，浏览器会加载样式表中的最后的 CSS 代码进行渲染（样式表，优先级等请读者自行了解），也正因为如此，你可以为同一个元素指定多个 CSS 样式来解决有些浏览器不兼容新特性的问题（比如指定两个`width`）。
 
@@ -155,11 +155,3 @@ p {
 恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## 模块目标
-
-1. [什么是 CSS](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [入门 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 的结构](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 如何运行](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

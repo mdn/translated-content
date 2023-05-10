@@ -1,9 +1,9 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCodePoint
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumen
@@ -127,15 +127,13 @@ if (!String.fromCodePoint) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status               | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fromCodePoint")}}
+{{Compat}}
 
 ## See also
 

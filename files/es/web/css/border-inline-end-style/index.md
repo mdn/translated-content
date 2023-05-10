@@ -1,8 +1,8 @@
 ---
 title: border-inline-end-style
 slug: Web/CSS/border-inline-end-style
-translation_of: Web/CSS/border-inline-end-style
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end-style`** [CSS](/es/docs/Web/CSS) property defines the style of the logical inline end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-style")}} y {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}}, y {{cssxref("border-right-style")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -59,15 +59,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end-style", "border-inline-end-style")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline-end-style")}}
+{{Compat}}
 
 ## Mira también
 

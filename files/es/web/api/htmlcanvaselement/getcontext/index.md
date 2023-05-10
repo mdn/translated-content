@@ -1,8 +1,8 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 El método **`HTMLCanvasElement.getContext()`** retorna un contexto de dibujo en el lienzo, o {{jsxref("null")}} si el identificador del contexto no está soportado.
@@ -83,15 +83,11 @@ Ahora tienes el [contexto de renderizado 2D](/es/docs/Web/API/CanvasRenderingCon
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                           | Comentarios                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}                |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}}     | {{Spec2('HTML5.1')}}     |                                                                                       |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-getcontext", "HTMLCanvasElement.getContext")}} | {{Spec2('HTML5 W3C')}}     | Snapshot del {{SpecName('HTML WHATWG')}} que contiene la definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.getContext")}}
+{{Compat}}
 
 ## See also
 

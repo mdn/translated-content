@@ -1,16 +1,8 @@
 ---
 title: Expressões Regulares
-slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Expressões Regulares
-  - Guía
-  - JavaScript
-  - Nível Intermediário
-  - Referencia
-  - RegExp
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos [`exec`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/exec) e [`test`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp/test) do objeto [`RegExp`](/pt-BR/docs/JavaScript/Reference/Global_Objects/RegExp), e com os métodos [`match`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/replace),[`search`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/search), e [`split`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String/split) do objeto [`String`](/pt-BR/docs/JavaScript/Reference/Global_Objects/String). Este capítulo descreve o uso de expressões regulares em JavaScript.
@@ -623,7 +615,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
           espaço, tabulação, avanço de página, quebra de linha. Equivalente a
           <code
             >[
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>
@@ -647,7 +639,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
           branco. Equivalente a
           <code
             >[^
-            \f\n\r\t\v​\u00A0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004​\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00A0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>
@@ -935,9 +927,6 @@ Isto imprime "Smith, John".
 
 As expressões regulares possuem quatro flags opcionais as quais se incluem a pesquisa global e case insensitive. Para realizar uma pesquisa global, utilize a flag g. Para realizar uma pesquisa sem diferenciar letras maiúsculas de minúsculas, utilize a flag i. Para realizar uma pesquisa multi-linhas, utilize a flag m. Ao realizar uma pesquisa "sticky", o ponto de partida será a posição corrente da string alvo, use com a flag y.Estas flags podem ser usadas separadamente ou juntas, em qualquer ordem, e serão inclusas como parte da expressão regular.
 
-{{Fx_minversion_note (3, "Suporte para o sinalizador <code>y </code>foi adicionado no Firefox 3. <br>
- O sinalizador <code>y </code>falha se a correspondência não for bem-sucedida na posição atual na cadeia de destino.")}}
-
 Para incluir um sinalizador com a expressão regular, use esta sintaxe:
 
 ```js
@@ -1017,7 +1006,7 @@ var bySurnameList = [];
 // e substitui-o pela sequência memorizada - segunda parte memorizada
 // seguido por espaço de vírgula seguido pela primeira parte memorizada.
 //
-// As variáveis ​​$ 1 e $ 2 se referem às partes
+// As variáveis $ 1 e $ 2 se referem às partes
 // memorizado enquanto corresponde ao padrão.
 
 output.push("---------- Após Separar pela Expressão Regular");

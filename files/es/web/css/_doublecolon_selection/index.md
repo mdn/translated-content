@@ -1,8 +1,8 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
-translation_of: Web/CSS/::selection
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
@@ -39,6 +39,6 @@ El `::selection` CSS pseudo-elemento fue redactado selector CSS nivel 3 pero qui
 
 En estos momentos, el seudo elemento CSS `::selection` no esta en ninguna especificación.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.selection")}}
+{{Compat}}

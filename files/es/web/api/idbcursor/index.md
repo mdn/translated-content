@@ -1,19 +1,8 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-tags:
-  - API
-  - Database
-  - IDBCursor
-  - IndexedDB
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - Storage
-  - TopicStub
-translation_of: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La interfaz **`IDBCursor`** de la [IndexedDB API](/es/docs/IndexedDB) representa un [cursor](/es/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravesar o iterar varios registros de una base de datos.
@@ -56,7 +45,7 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 
 {{ deprecated_header(13) }}
 
-> **Advertencia:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(891944) }})
+> **Advertencia:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Error 891944 en Firefox](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : The cursor shows all records, including duplicates. It starts at the lower bound of the key range and moves upwards (monotonically increasing in the order of keys).
 - `NEXTUNIQUE` : `"nextunique"` : The cursor shows all records, excluding duplicates. If multiple records exist with the same key, only the first one iterated is retrieved. It starts at the lower bound of the key range and moves upwards.
@@ -87,15 +76,13 @@ function displayData() {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                       | Comment |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#idl-def-IDBCursor', 'cursor')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.IDBCursor")}}
+{{Compat}}
 
 ## See also
 
@@ -105,4 +92,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

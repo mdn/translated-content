@@ -1,10 +1,9 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-translation_of: Web/API/HTMLElement/accessKey
-translation_of_original: Web/API/Element/accessKey
 original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade **Element.accessKey** define a tecla pelo qual o usuário pode pressionar para saltar para este elemento.

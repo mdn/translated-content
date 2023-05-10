@@ -1,14 +1,9 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
+
 {{JSRef}}
 
 La funcion **`Math.tanh()`** devuelve la hyperbolica tangente de un numero, esto es
@@ -59,14 +54,11 @@ Math.tanh = Math.tanh || function(x){
 
 ## Especificaciones
 
-| Especificacion                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Definicion inicial. |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.tanh")}}
+{{Compat}}
 
 ## Ver también
 

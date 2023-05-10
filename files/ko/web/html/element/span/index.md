@@ -1,16 +1,9 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/span
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<span>` 요소**는 구문 콘텐츠를 위한 통용 인라인 컨테이너로, 본질적으로는 아무것도 나타내지 않습니다. 스타일을 적용하기 위해서, 또는 {{htmlattrxref("lang")}} 등 어떤 특성의 값을 서로 공유하는 요소를 묶을 때 사용할 수 있습니다. 적절한 의미를 가진 다른 요소가 없을 때에만 사용해야 합니다. `<span>`은 {{htmlelement("div")}}와 매우 유사하지만, {{htmlelement("div")}}는 [블록 레벨 요소](/ko/docs/Web/HTML/Block-level_elements)인 반면 `<span>`은 [인라인 요소](/ko/docs/Web/HTML/Inline_elements)입니다.
 
@@ -109,7 +102,7 @@ li span {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## 같이 보기
 

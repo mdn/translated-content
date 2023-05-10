@@ -1,8 +1,8 @@
 ---
 title: Storage.key()
 slug: Web/API/Storage/key
-translation_of: Web/API/Storage/key
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método **`key()`** da interface {{domxref("Storage")}}, quando passado um número n, retorna o nome da n-ésima chave no dado objeto `Storage`. A ordem das chaves é definida pelo user-agent, então não deve-se confiar nela.

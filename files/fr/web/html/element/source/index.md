@@ -1,6 +1,6 @@
 ---
 title: <source>
-slug: Web/HTML/Element/Source
+slug: Web/HTML/Element/source
 tags:
   - Element
   - HTML
@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/source
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<source>`** définit différentes ressources média pour un élément {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}}. C'est un élément vide : il ne possède pas de contenu et ne nécessite pas de balise fermante. Il est généralement utilisé pour distribuer le même contenu en utilisant [les différents formats pris en charge par les différents navigateurs](/fr/docs/Web/HTML/formats_media_support).
 

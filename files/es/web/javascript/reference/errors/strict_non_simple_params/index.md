@@ -1,14 +1,9 @@
 ---
 title: 'SyntaxError: "use strict" no permitida en función con parámetros complejos'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-tags:
-  - Error
-  - JavaScript
-  - TypeError
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 original_slug: Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos
 ---
+
 {{jsSidebar("Errors", "Errores")}}
 
 La excepción de JavaScript: "`'use strict' no permitida en función`" ocurre cuando se usa una directiva `"use strict"` en la parte superior de una función con {{jsxref("Functions/Default_parameters", "parámetros predeterminados", "", 1)}}, {{jsxref("Functions/rest_parameters", "parámetros rest", "", 1)}} o {{jsxref("Operators/Destructuring_assignment" , "Desestructuración de parámetros", "", 1)}}.

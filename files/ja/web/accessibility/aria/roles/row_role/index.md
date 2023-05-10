@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: row ロール'
-slug: Web/Accessibility/ARIA/Roles/Row_Role
+slug: Web/Accessibility/ARIA/Roles/row_role
 ---
 
 行ロール (`role="row"`) を持つ要素は、表形式の構造内に並んだセルの一行です。 行には、1 つ以上のセル、グリッドセル、列ヘッダー、場合によっては行ヘッダーが含まれます。 行は、グリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role))、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role))、ツリーグリッド ([`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)) 内に含まれ、任意で行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)) 内に含まれることもあります。
@@ -187,10 +187,7 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                                             |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#row","ARIA row role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#row","ARIA row role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

@@ -1,15 +1,8 @@
 ---
 title: <progress>
 slug: Web/HTML/Element/progress
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/progress
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<progress>` 요소**는 어느 작업의 완료 정도를 나타내며, 주로 진행 표시줄의 형태를 띕니다.
 
@@ -90,17 +83,13 @@ translation_of: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("예제", 200, 50) }}
 
-Windows 7에서는 다음과 같은 모습으로 나타납니다.
-
-![progress-firefox.JPG](/@api/deki/files/6031/=progress-firefox.JPG)
-
 ## 명세
 
 {{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.progress")}}
+{{Compat}}
 
 ## 같이 보기
 

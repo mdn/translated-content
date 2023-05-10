@@ -1,14 +1,8 @@
 ---
 title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
+
 {{JSRef}}
 
 **`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.

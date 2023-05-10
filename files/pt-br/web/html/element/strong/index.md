@@ -1,13 +1,6 @@
 ---
 title: <strong>
 slug: Web/HTML/Element/strong
-tags:
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Semântica HTML a nível de texto(2)
-  - Web
-translation_of: Web/HTML/Element/strong
 ---
 ```
 O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente mostrado em negrito.
@@ -122,4 +115,4 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 - [HTML bold element](/pt-BR/docs/HTML/Element/b)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,13 +1,13 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-translation_of: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 El método **`exitFullscreen()`** de {{domxref("Document")}} solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.
 
-La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un {{interwiki("wikipedia", "Stack_(abstract_data_type)", "stack")}} de elementos de pantalla completa.
+La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un [stack](https://es.wikipedia.org/wiki/Stack_(abstract_data_type)) de elementos de pantalla completa.
 
 ## Sintaxis
 
@@ -37,7 +37,7 @@ document.onclick = function (event) {
 };
 ```
 
-> **Nota:** Para un ejemplo más completo, vea {{SectionOnPage("/en-US/docs/Web/API/Element/requestFullScreen", "Example")}}.
+> **Nota:** Para un ejemplo más completo, vea [Example](/es/docs/Web/API/Element/requestFullScreen#example).
 
 ## Especificaciones
 

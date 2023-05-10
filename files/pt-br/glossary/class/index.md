@@ -1,12 +1,9 @@
 ---
 title: Class
 slug: Glossary/Class
-tags:
-  - Classe
-  - Glossário
-translation_of: Glossary/Class
 original_slug: Glossario/Class
 ---
+
 Em {{glossary("OOP","programação orientada a objeto")}}, uma classe define as características de um {{glossary("object","objecto")}}. A classe é uma definição de modelo de {{glossary("property","propriedades")}} e {{glossary("method","metódos")}} de um objeto, o "projeto" a partir do qual outras instâncias mais específicas do objeto são desenhados.
 
 ## Aprenda mais

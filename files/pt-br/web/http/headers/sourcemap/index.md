@@ -1,8 +1,8 @@
 ---
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
-translation_of: Web/HTTP/Headers/SourceMap
 ---
+
 {{HTTPSidebar}}
 
 The **`SourceMap`** [HTTP](/pt-BR/docs/Web/HTTP) response header links generated code to a [source map](/pt-BR/docs/Tools/Debugger/How_to/Use_a_source_map), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.

@@ -3,6 +3,7 @@ title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имён классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.

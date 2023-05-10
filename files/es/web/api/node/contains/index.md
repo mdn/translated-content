@@ -1,13 +1,8 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-tags:
-  - API
-  - DOM
-  - Nodo
-  - metodo
-translation_of: Web/API/Node/contains
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.contains()`** devuelve un valor {{jsxref("Boolean")}} indicando si un nodo es descendiente de un nodo dado o no, por ejemplo, el propio nodo, uno de sus hijos directos (({{domxref("Node.childNodes", "childNodes")}})), uno de los hijos directos de su nodo hijo, etc.
@@ -30,13 +25,11 @@ function isInPage(node) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}} | {{Spec2("DOM WHATWG")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## Ver también
 

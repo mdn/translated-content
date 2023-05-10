@@ -1,15 +1,8 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - Referencia
-  - Respuesta
-translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 La interfaz **`Response`** de la [Fetch API](/es/docs/Web/API/Fetch_API) representa la respuesta a una petición.
@@ -94,13 +87,11 @@ var myResponse = new Response();
 
 ## Especificaciones
 
-| Specification                                                        | Status                   | Comment            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#response-class','Response')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## Ver también
 

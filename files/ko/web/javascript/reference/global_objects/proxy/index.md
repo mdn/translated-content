@@ -1,14 +1,8 @@
 ---
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-browser-compat: javascript.builtins.Proxy
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 `Proxy` 객체를 사용하면 한 객체에 대한 기본 작업을 가로채고 재정의하는 프록시를 만들 수 있습니다.

@@ -11,6 +11,7 @@ tags:
   - insertAdjacentElement
 translation_of: Web/API/Element/insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`insertAdjacentElement()`** добавляет переданный элемент в DOM-дерево относительно элемента, вызвавшего метод.

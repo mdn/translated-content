@@ -1,278 +1,324 @@
 ---
 title: Introdução ao JavaScript Async
 slug: Learn/JavaScript/Asynchronous/Introducing
-translation_of: Learn/JavaScript/Asynchronous/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introdução
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}Neste artigo nós recapitulamos brevemente os problemas que são associados com o JavaScript síncrono, e dar uma primeira olhada em algumas das diferentes técnicas assíncronas que você vai encontrar, mostrando como elas podem nos ajudar a resolver tais problemas.
 
-<table class="learn-box standard-table">
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+
+Neste artigo, explicaremos o que é programação assíncrona, por que precisamos dela e discutiremos brevemente algumas das maneiras pelas quais as funções assíncronas foram implementadas historicamente em JavaScript.
+
+<table>
   <tbody>
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        Conhecimentos básicos de informática e sobre os fundamentos do
-        JavaScript.
+        Conhecimento básico de informática, uma compreensão razoável de fundamentos de
+        JavaScript, incluindo funções e manipuladores de eventos.
       </td>
     </tr>
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        Ganhar familiaridade com o que é o Js assíncrono e como ele se difere do
-        Js síncrono.
+        Para se familiarizar com o que é JavaScript assíncrono, como ele difere do JavaScript síncrono e por que precisamos dele.
       </td>
     </tr>
   </tbody>
 </table>
 
-## JavaScript síncrono
+A programação assíncrona é uma técnica que permite que seu programa inicie uma tarefa potencialmente de longa duração e ainda seja capaz de responder a outros eventos enquanto essa tarefa é executada, em vez de ter que esperar até que essa tarefa seja concluída. Uma vez que essa tarefa tenha terminado, seu programa é apresentado com o resultado.
 
-Para entendermos o que é o **{{Glossary("asynchronous")}}** JavaScript, nós primeiro temos que ter certeza que entedemos o que é o **{{Glossary("synchronous")}}** JavaScript. Essa seção revê um pouco das informações que nós vimos no artigo anterior.
+Muitas funções fornecidas pelos navegadores, especialmente as mais interessantes, podem levar muito tempo e, portanto, são assíncronas. Por exemplo:
 
-Muitas das funcionalidades que nós vimos em áreas anteriores são síncronas — você executa um código, e o reultado é retornado assim que o navegador puder. Vamos ver um exemplo simples ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html), e [veja o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html)):
+- Fazendo solicitações HTTP usando {{domxref("fetch", "fetch()")}}
+- Acessar a câmera ou o microfone de um usuário usando {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
+- Pedindo a um usuário para selecionar arquivos usando {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}
+
+Portanto, mesmo que você não precise _implementar_ suas próprias funções assíncronas com muita frequência, é muito provável que você precise _usá-las_ corretamente.
+
+Neste artigo, começaremos analisando o problema com funções síncronas de longa duração, que tornam a programação assíncrona uma necessidade.
+
+## Programação síncrona
+
+Considere o seguinte código:
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  alert('Você clicou em mim!');
+const name = 'Miriam';
+const greeting = `Hello, my name is ${name}!`;
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'Este é um novo parágrafo adicionado';
-  document.body.appendChild(pElem);
+Este código:
+
+1. Declara uma string chamada `name`.
+2. Declara outra string chamada `greeting`, que usa `name`.
+3. Emite a saudação para o console JavaScript.
+
+Devemos observar aqui que o navegador efetivamente percorre o programa uma linha de cada vez, na ordem em que o escrevemos. Em cada ponto, o navegador espera que a linha termine seu trabalho antes de seguir para a próxima linha. Tem que fazer isso porque cada linha depende do trabalho feito nas linhas anteriores.
+
+Isso torna este um **programa síncrono**. Ainda seria síncrono mesmo se chamássemos uma função separada, como esta:
+
+```js
+function makeGreeting(name) {
+  return `Hello, my name is ${name}!`;
+}
+
+const name = 'Miriam';
+const greeting = makeGreeting(name);
+console.log(greeting);
+// "Hello, my name is Miriam!"
+```
+
+Aqui, `makeGreeting()` é uma **função síncrona** porque o chamador precisa esperar que a função termine seu trabalho e retorne um valor antes que o chamador possa continuar.
+
+### Uma função síncrona de longa duração
+
+E se a função síncrona demorar muito?
+
+O programa abaixo usa um algoritmo muito ineficiente para gerar vários números primos grandes quando um usuário clica no botão "Gerar primos". Quanto maior o número de primos que um usuário especificar, mais tempo a operação levará.
+
+```html
+<label for="quota">Número de primos:</label>
+<input type="text" id="quota" name="quota" value="1000000" />
+
+<button id="generate">Gerar primos</button>
+<button id="reload">Recarregar</button>
+
+<div id="output"></div>
+```
+
+```js
+const MAX_PRIME = 1000000;
+
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return n > 1;
+}
+
+const random = (max) => Math.floor(Math.random() * max);
+
+function generatePrimes(quota) {
+  const primes = [];
+  while (primes.length < quota) {
+    const candidate = random(MAX_PRIME);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
+
+document.querySelector('#generate').addEventListener('click', () => {
+  const primes = generatePrimes(quota.value);
+  output.textContent = `Finished generating ${quota.value} primes!`;
+});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload();
 });
 ```
 
-Neste bloco, as linhas são executadas uma após a outra:
+{{EmbedLiveSample("Uma função síncrona de longa duração", 600, 120)}}
 
-1. Nós damos referência à um elemento {{htmlelement("button")}} que já está disponível na DOM.
-2. Nós adicionamos um evento de [`click`](/en-US/docs/Web/API/Element/click_event), e quando ele for clicado ele fará o seguinte:
+Tente clicar em "Gerar primos". Dependendo da velocidade do seu computador, provavelmente levará alguns segundos até que o programa exiba a mensagem "Concluído!" mensagem.
 
-    1. Mostrar uma mensagem no [`alert()`](/en-US/docs/Web/API/Window/alert).
-    2. Uma vez que o alert for dispensado, nós criamos um elemento {{htmlelement("p")}}.
-    3. Depois nós o preenchemos com um texto.
-    4. E finalmente, o adicionamos no body.
+### O problema com funções síncronas de longa duração
 
-Enquanro cada operação é processada, nada mais pode acontecer — a renderização é pausada. Isso acontece porque o JavaScript opera em uma única thread ([JavaScript é single threaded](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_is_single_threaded)). Apenas uma coisa pode acontecer por vez, em uma única thread principal, e tudo é bloqueado até que a operação seja concluída.
+O próximo exemplo é igual ao anterior, exceto que adicionamos uma caixa de texto para você digitar. Desta vez, clique em "Gerar números primos" e tente digitar na caixa de texto imediatamente depois.
 
-Então, no exemplo acima, depois que você tenha clicado no botão, o parágrafo não vai aparecer até que o botão OK do alert seja pressionado. Tente isso com o botão a seguir:
+Você verá que enquanto nossa função `generatePrimes()` está sendo executado, nosso programa não responde: você não pode digitar nada, clicar em nada ou fazer qualquer outra coisa.
 
 ```html hidden
-<button>Clique em mim</button>
+<label for="quota">Number of primes:</label>
+<input type="text" id="quota" name="quota" value="1000000" />
+
+<button id="generate">Gerar primos</button>
+<button id="reload">Recarregar</button>
+
+<textarea id="user-input" rows="5" cols="62">
+Tente digitar aqui imediatamente após pressionar "Gerar primos"
+</textarea>
+
+<div id="output"></div>
 ```
 
-{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}
-
-> **Nota:** É importante lembrar que, mesmo sendo muito útil para demonstar uma situação de blocking, o [`alert()`](/en-US/docs/Web/API/Window/alert) não é de bom uso em aplicativos reais.
-
-## Asynchronous JavaScript
-
-Por razões esclarecidas anteriormente (e.g. relativas ao blocking), muitas funcionalidades de APIs da Web agora usam código assíncrono na execução, especialmente aquelas que acessam ou buscam algum tipo de recurso de um dispositivo externo, como pegar um arquivo da rede, acessar um banco de dados e retornar dados dele, acessar uma stream de uma web cam, ou transmitir uma tela para um dispositivo VR.
-
-Por que é tão difícil trabalhar com isso usando códigos síncronos? Vamos dar uma olhada em um exemplo rápido. Quando você pega uma imagem de um servidor, você não pode retornar o resultado imediatamente. Isso significa que o pseudocódigo a seguir não poderia funcionar:
-
-```js
-let resposta = fetch('myImage.png');
-let blob = resposta.blob();
-// Mostra sua imagem na UI
+```css hidden
+textarea {
+  display: block;
+  margin: 1rem 0;
+}
 ```
 
-Isso acontece por que você não sabe quanto tempo a imagem levará para ser baixada, então quando você executar a segunda linha, ela vai resultar em um erro (provalvelmente sempre) porque a `resposta` não estará disponível ainda. Você precisa que o seu código espere até que a `resposta` seja retornada antes de fazer algo com ela.
+```js hidden
+const MAX_PRIME = 1000000;
 
-Existem dois tipos principais de estilo de código assíncrono que você encontrará no código JavaScript, as callbacks com um estilo old-school e código em um estilo das promises mais recente. Nas seções abaixo, revisaremos cada um deles por vez.
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return n > 1;
+}
 
-## Callbacks assíncronas
+const random = (max) => Math.floor(Math.random() * max);
 
-Callback são funções que são passada como parâmetros na chamada de outra função que vai executar código por trás do panos. Quando esse código por trás dos panos terminar de ser executado, a função callback será chamada para te informar que a tarefa foi finalizada ou que algo do seu interesse aconteceu. O uso das callbacks é um pouco antiquado agora, mas você ainda pode vê-las em um número de APIs comumente usadas.
+function generatePrimes(quota) {
+  const primes = [];
+  while (primes.length < quota) {
+    const candidate = random(MAX_PRIME);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
 
-Um exemplo de uma callback async é o segundo parâmetro do método {{domxref("EventTarget.addEventListener", "addEventListener()")}} (como vimos em ação anteriormente):
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
 
-```js
-btn.addEventListener('click', () => {
-  alert('Você clicou em mim!');
+document.querySelector('#generate').addEventListener('click', () => {
+  const primes = generatePrimes(quota.value);
+  output.textContent = `Terminou de gerar ${quota.value} primos!`;
+});
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'Este é um novo parágrafo.';
-  document.body.appendChild(pElem);
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload();
 });
 ```
 
-O primeiro parâmetro é o tipo de evento a ser executado e o segundo parâmetro é uma função callback que é chamada quando o evento é disparado.
+{{EmbedLiveSample("O problema com funções síncronas de longa duração", 600, 200)}}
 
-Quando passamos uma função callback como um parâmetro em outra função, nós apenas estamos passando a rêferencia da função como argumento, ou seja, a função callback **não** **é** executada imediatamente. Ela é chamada de volta assíncronamente dentro do corpo da função que a contém, que é responsável por executar a função callback quando for necessário.
+Este é o problema básico com funções síncronas de longa duração. O que precisamos é de uma maneira para o nosso programa:
 
-Você pode escrever a sua própria função que contém uma callback facilmente. Vamos dar uma olhada em outro exemplo que carrega uma arquivo usando a [API `XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html), and [veja o código fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html)):
+1. Inicie uma operação de longa duração chamando uma função.
+2. Faça com que essa função inicie a operação e retorne imediatamente, para que nosso programa ainda possa responder a outros eventos.
+3. Notifique-nos com o resultado da operação quando ela for concluída.
+
+Isso é precisamente o que as funções assíncronas podem fazer. O restante deste módulo explica como eles são implementados em JavaScript.
+
+## Manipuladores de eventos
+
+A descrição que acabamos de ver de funções assíncronas pode lembrá-lo de manipuladores de eventos e, se isso acontecer, você estará certo. Os manipuladores de eventos são realmente uma forma de programação assíncrona: você fornece uma função (o manipulador de eventos) que será chamada, não imediatamente, mas sempre que o evento ocorrer. Se "o evento" for "a operação assíncrona foi concluída", esse evento poderá ser usado para notificar o chamador sobre o resultado de uma chamada de função assíncrona.
+
+Algumas APIs assíncronas iniciais usavam eventos exatamente dessa maneira. A API {{domxref("XMLHttpRequest")}} permite que você faça solicitações HTTP para um servidor remoto usando JavaScript. Como isso pode levar muito tempo, é uma API assíncrona e você é notificado sobre o andamento e a eventual conclusão de uma solicitação anexando ouvintes de eventos ao objeto `XMLHttpRequest`.
+
+O exemplo a seguir mostra isso em ação. Pressione "Clique para iniciar a solicitação" para enviar uma solicitação. Criamos um novo {{domxref("XMLHttpRequest")}} e ouvimos seu evento {{domxref("XMLHttpRequest/loadend_event", "loadend")}}. O manipulador registra um "Concluído!" mensagem junto com o código de status.
+
+Depois de adicionar o ouvinte do evento, enviamos a solicitação. Observe que, depois disso, podemos registrar "Requisição XHR iniciada": ou seja, nosso programa pode continuar em execução enquanto a solicitação estiver em andamento, e nosso manipulador de eventos será chamado quando a solicitação for concluída.
+
+```html
+<button id="xhr">Clique para iniciar a solicitação</button>
+<button id="reload">Recarregar</button>
+
+<pre readonly class="event-log"></pre>
+```
+
+```css hidden
+pre {
+  display: block;
+  margin: 1rem 0;
+}
+```
 
 ```js
-function loadAsset(url, type, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.responseType = type;
+const log = document.querySelector('.event-log');
 
-  xhr.onload = function() {
-    callback(xhr.response);
-  };
+document.querySelector('#xhr').addEventListener('click', () => {
+  log.textContent = '';
 
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('loadend', () => {
+    log.textContent = `${log.textContent}Concluído com status: ${xhr.status}`;
+  });
+
+  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
   xhr.send();
+  log.textContent = `${log.textContent}Iniciada solicitação XHR\n`;});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  log.textContent = '';
+  document.location.reload();
+});
+```
+
+{{EmbedLiveSample("Manipuladores de eventos", 600, 120)}}
+
+Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
+
+## Manipuladores de eventos
+
+Um manipulador de eventos é um tipo específico de callback. Um callback é apenas uma função que é passada para outra função, com a expectativa de que o callback seja chamado no momento apropriado. Como acabamos de ver, os retornos de chamada costumavam ser a principal forma de implementação de funções assíncronas em JavaScript.
+
+No entanto, o código baseado em callback pode ficar difícil de entender quando o próprio callback precisa chamar funções que aceitam um callback. Esta é uma situação comum se você precisar realizar alguma operação que se decompõe em uma série de funções assíncronas. Por exemplo, considere o seguinte:
+
+```js
+function doStep1(init) {
+  return init + 1;
 }
 
-function displayImage(blob) {
-  let objectURL = URL.createObjectURL(blob);
-
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
+function doStep2(init) {
+  return init + 2;
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);
+function doStep3(init) {
+  return init + 3;
+}
+
+function doOperation() {
+  let result = 0;
+  result = doStep1(result);
+  result = doStep2(result);
+  result = doStep3(result);
+  console.log(`result: ${result}`);
+}
+
+doOperation();
 ```
 
-Aqui nós criamos uma função `displayImage()` que simplesmente representa um blob que foi passada à ela como uma URL de objeto, e depois cria uma imagem para mostrar a URL, adicionando-a ao `<body>` do documento. Entretando, nós criamos depois uma função `loadAsset()` que pega uma callback como parâmetro, junto com uma URL a ser buscada e um tipo para o conteúdo. Ela usa o `XMLHttpRequest` (abreviação: "XHR") para buscar o recurso na URL dada, para depois passar a resposta para a callback para fazer algo com isso. Neste caso a callback está esperando o XHR terminar de baixar o recurso (usando o manipulador de eventos [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) antes de passá-lo para a callback.
-
-Callback são versáteis — elas não apenas lhe permitem controlar a ordem em que as funções são executadas e quais dados são passados entre elas, elas também podem passar dados para diferentes funçoes dependendo das circunstâncias. Então você pode ter ações diferentes para executar na resposta baixada, como `processJSON()`, `displayText()`, etc.
-
-Note que nem todas as callback são assíncronas — algumas são executadas de um modo síncrono. Um exemplo é quando nós usamos o método {{jsxref("Array.prototype.forEach()")}} para iterar sobre os itens de uma array ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html), e a [fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html)):
+Aqui temos uma única operação que é dividida em três etapas, onde cada etapa depende da última etapa. Em nosso exemplo, a primeira etapa adiciona 1 à entrada, a segunda adiciona 2 e a terceira adiciona 3. Começando com uma entrada de 0, o resultado final é 6 (0 + 1 + 2 + 3). Como um programa síncrono, isso é muito simples. Mas e se implementássemos as etapas usando retornos de chamada?
 
 ```js
-const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
 
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
-});
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+
+function doOperation() {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
+        console.log(`result: ${result3}`);
+      });
+    });
+  });
+}
+
+doOperation();
 ```
 
-Neste exemplo nós iteramos sobra uma array de Deuses Gregos e imprimos o índice e seus valores no console. O parâmetro de `forEach()` é uma callback function, que por si só toma dois parâmetros: uma refêrencia ao nome da array e e os valores dos índices. Entretanto, ela não espera por algo para fazer a execução, pois isso acontece imediatamente
+Como temos que chamar callbacks dentro de callbacks, obtemos uma função `doOperation()` profundamente aninhada, que é muito mais difícil de ler e depurar. Isso às vezes é chamado de "inferno de callback" ou "pirâmide da desgraça" (porque o recuo parece uma pirâmide de lado).
 
-## Promises
+Quando aninhamos callbacks como este, também pode ficar muito difícil lidar com erros: muitas vezes você precisa lidar com erros em cada nível da "pirâmide", em vez de lidar com erros apenas uma vez no nível superior.
 
-Promises são uma nova maneira de escrever código assíncrono que você verá em APIs Web modernas. Um bom exemplo disso é a API [`fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), que é basicamente uma versão mais moderna e eficiente de {{domxref("XMLHttpRequest")}}. Vamos dar uma olhada em um exemplo rápido, do nosso artigo de [Pegando dados do servidor](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
+Por esses motivos, as APIs assíncronas mais modernas não usam retornos de chamada. Em vez disso, a base da programação assíncrona em JavaScript é a {{jsxref("Promise")}}, e esse é o assunto do próximo artigo.
 
-```js
-fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  products = json;
-  initialize();
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});
-```
-
-> **Nota:** Você pode encontrar a versão finalizada no GitHub ([veja aqui](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), e também [seja a execução](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
-
-Aqui nós vemos `fetch()` pegando um único parâmetro — a URL de um recurso que você quer pegar da rede — e retornando uma [promise](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise). A promise é um objeto que representa a conclusão ou falha da operação assíncrona. Ela represente um estado intermediário, por assim dizer. É praticamente o jetio do navegador de dizer "Eu prometo voltar para você com a resposta o mais rápido possível", daí o nome "promessa".
-
-Você pode levar um tempo para se acostumar com esse conceito; Ele se parece um pouco com o {{interwiki("wikipedia", "Gato de Schrödinger")}} em ação. Nenhum dos possíveis resultados aconteceu ainda, então a operação fetch está esperando pelo resultado do navegador que vai completar a operação em algum ponto no futuro.
-
-Nós temos três blocos de código encadeados ao fim do `fetch()`:
-
-- Dois blocos [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then). Ambos contém uma função callback que será executada se a operação anterior for executada, então você pode fazer algo com o resultado. Cada bloco `.then()` retorna outra promise, o que significa que você pode encadear múltiplos blocos `.then()` um ao outro, para que múltiplas operações assíncronas possam ser executadas uma atrás da outra.
-- O bloco [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) no final será executado em casos em que erros ocorrem quando um dos `.then()` falhe — de um modo similar aos blocos [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) síncronos, um objeto de erro fica disponível dentro do `catch()`, e pode ser usado para reportar erros que ocorreram. Note que o bloco `try...catch` não funcionará com promises, embora funcione com [async/await](/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await), como você aprenderá mais adiante.
-
-> **Nota:** Você vai aprender mais sobre promises mais tarde no módulo, então não se preocupe se você não entendeu muito bem.
-
-### A fila de eventos
-
-Operações assíncronas como as promises são colocadas em uma **fila de eventos**, que é executada depois que a main thread terminar de ser processada. As operações serão completadas assim que for possível e depois retornam seus resultados para o ambiente JavaScript.
-
-### Promises versus callbacks
-
-As promises tem algumas semelhanças com as callbacks. Elas são basicamente um objeto retornado em que você vincula funções callback, ao invés de passar as callbacks para uma função.
-
-Entretanto, as promises são feitas especificamente para lidarmos com operações async, e ter muitas vantagens sobre as velhas callbacks:
-
-- Você pode encadear múltiplas operações assíncronas usando múltiplos blocos `.then()`, passando o resultado de uma delas como o resultado como parâmetro da próxima operação. Isso é muito mais difícil de se fazer usando as callback, que normalmente termina em algo chamado de [callback hell](http://callbackhell.com/).
-- As callbacks das promises sempre são chamadas na ordem estrita em quesão colocadas na fila de eventos.
-- O tratamento de erros é muito melhor — todos os erros são tratados por um único bloco `.catch()` no final do encadeamento, ao invés de ser tratado individualmente em cada função callback.
-- Promessas evitam inversão de controle. Ao contrário das callbacks, que perdem totalmente o controle de como a função será executada quando passada para uma biblioteca de terceiros.
-
-## A natureza do código assíncrono
-
-Vamos explorar um exemplo que ilustra a natureza do código assíncrono, mostrando o que pode acontecer quando nós não estamos cientes da ordem de execução e dos problemas em tentar tratar código async como código síncrono. O exemplo a seguir é muito similar ao que vimos antes ([veja aqui](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html), e [a fonte](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html)). Uma diferença e que nós icluimos um número de declarações {{domxref("console.log()")}} para ilustrar na ordem que você pensa que o código fosse executado.
-
-```js
-console.log ('Starting');
-let image;
-
-fetch('coffee.jpg').then((response) => {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) => {
-  let objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) => {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
-
-console.log ('All done!');
-```
-
-O navegador vai começar a executar o código, veja a primeira declaração `console.log()`(`Starting`) e a execute, e depois crie a variável `image`.
-
-Depois a segunda linha vai começar a ser executada começando com o bloco `fetch()`, mas desde que `fetch()` é executado assíncronamente sem bloquear nada, a execução do código continua mesmo depois do código promise, alcançando a última declaração `console.log()`(`All done!`) e imprimindo a no console.
-
-Uma vez que o bloco `fetch()` tenha terminado a sua execução e retornado seu resultado com os blocos `.then()`, nós finalmente veremos a segunda mensagem `console.log()` (`It worked :)`) appear. Então as mensagens aparecem nessa ordem:
-
-- Starting
-- All done!
-- It worked :)
-
-Se isso te deixa confuso, então considere o exemplo a seguir:
-
-```js
-console.log("registering click handler");
-
-button.addEventListener('click', () => {
-  console.log("get click");
-});
-
-console.log("all done");
-```
-
-Isso é bem similar no comportamento — a primeira e a terceira mensagens `console.log()` são mostradas imediatamente, mas a segunda está bloqueada até alguém clique no botão. O exemplo anterior funciona da mesma forma, exceto que no caso a segunda mensagem está bloqueada na promise pegando um recurso e depois o mostra na tela.
-
-Em um exemplo mais superficial, esse tipo de configuração poderia causar um problema — você não pode incluir um bloco async que retorna um resultado, que depois depende de um código síncrono. Você não pode garantir que a função async vai retornar antes que o navegador processou o bloco síncrono.
-
-Para ver isso em ação, tente fazer uma cópia local do [nosso exemplo](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html), e mudar o terceiro `console.log()` para o seguinte:
-
-```js
-console.log ('Tudo Feito! ' + image.src + 'mostrada.');
-```
-
-Agora você deve ter um erro no seu console ao invés da terceira mensagem:
-
-```
-TypeError: image is undefined; can't access its "src" property
-```
-
-Isso acontece porque o navegador tenta executar o terceiro `console.log()` e o bloco `fetch()` não terminou de ser executado e não foi dado um valor para a variável `image`.
-
-> **Nota:** :Por razões de segurança, você não pode usar o `fetch()` com arquivos do seu sistema local (ou executar operações localmente); para executar o exemplo acima você teria que rodá-lo em um [servidor local](/pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server).
-
-## Aprendizado ativo: faça tudo async!
-
-Faça que o exemplo problemático de `fetch()` imprima três mensagens `console.log()` na tela na ordem desejada, você pode fazer a útima declaração `console.log()` assíncrona também. Isso pode ser feito colocando ela em outro bloco `.then()` encadeamo no final do segundo bloco, ou por simplesmente movê-lo para dentro do segundo bloco `then()`.
-
-> **Nota:** If you get stuck, you can [find an answer here](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html) (see it [running live](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html) also). You can also find a lot more information on promises in our [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises) guide, later on in the module.
-
-## Conclusion
-
-In its most basic form, JavaScript is a synchronous, blocking, single-threaded language, in which only one operation can be in progress at a time. But web browsers define functions and APIs that allow us to register functions that should not be executed synchronously, and should instead be invoked asynchronously when some kind of event occurs (the passage of time, the user's interaction with the mouse, or the arrival of data over the network, for example). This means that you can let your code do several things at the same time without stopping or blocking your main thread.
-
-Whether we want to run code synchronously or asynchronously will depend on what we're trying to do.
-
-There are times when we want things to load and happen right away. For example when applying some user-defined styles to a webpage you'll want the styles to be applied as soon as possible.
-
-If we're running an operation that takes time however, like querying a database and using the results to populate templates, it is better to push this off the main thread and complete the task asynchronously. Over time, you'll learn when it makes more sense to choose an asynchronous technique over a synchronous one.
-
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
-
-## In this module
-
-- [General asynchronous programming concepts](/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}

@@ -8,6 +8,7 @@ tags:
   - Псевдоэлементы
 translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).

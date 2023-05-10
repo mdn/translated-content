@@ -1,15 +1,9 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/concat
 ---
+
 {{JSRef}}
 
 El método **`concat()`** combina dos o más cadenas de texto y devuelve una cadena de texto nueva.
@@ -64,13 +58,11 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Ver también
 

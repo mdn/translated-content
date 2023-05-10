@@ -1,9 +1,9 @@
 ---
 title: Propiedades abreviadas
 slug: Web/CSS/Shorthand_properties
-translation_of: Web/CSS/Shorthand_properties
 original_slug: Web/CSS/Shorthand_properties
 ---
+
 {{CSSRef}}
 
 Las **_propiedades abreviadas_** son propiedades CSS que le permiten establecer los valores de varias otras propiedades CSS simultáneamente. Usando una propiedad abreviada, puede escribir hojas de estilo más concisas (y a menudo más legibles), ahorrando tiempo y energía.

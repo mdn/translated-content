@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{JSRef}}
 
-**`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) として提供します。
+**`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) として提供します。
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 
@@ -139,7 +139,7 @@ Function.prototype.construct = function(aArgs) {
 
 > **メモ:** 上記で使用している `Object.create()` メソッドは比較的新しいです。代わりの方法として、以下の例を検討してください。
 >
-> {{jsxref("Object/__proto__", "Object.__proto__")}} を利用:
+> [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) を利用:
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {
@@ -199,9 +199,7 @@ console.log(myInstance.constructor);              // logs 'MyConstructor'
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

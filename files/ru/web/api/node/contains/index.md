@@ -8,6 +8,7 @@ tags:
   - Node
 translation_of: Web/API/Node/contains
 ---
+
 {{APIRef("DOM")}}Метод **`Node.contains()`** возвращает {{jsxref ("Boolean")}} значение, указывающее, является ли узел потомком данного узла, т. е. сам узел, один из его прямых потомков ({{domxref ("Node. childNodes "," childNodes ")}}), один из детей его детей и так далее.
 
 ## Синтаксис

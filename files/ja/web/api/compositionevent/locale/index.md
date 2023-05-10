@@ -1,31 +1,28 @@
 ---
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
+l10n:
+  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}{{Non-standard_header}}
 
-**`locale`** は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力メソッドのロケール (例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール) を返します。
+**`locale`** は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力システムのロケール（例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール）を返します。
 
-## 構文
+> **警告:** 対応しているブラウザーでも、このプロパティに含まれる値は信用しないでください。
+> 技術的にはアクセス可能であるとしても、 {{domxref("CompositionEvent")}} を作成する際の設定方法が一貫している保証はありません。
 
-```
-myLocale = CompositionEvent.locale
-```
+## 値
 
-### 値
-
-{{domxref("DOMString")}} で、現在の入力メソッドのロケールを表します。
+文字列で、現在の入力システムのロケールを表します。
 
 ## 仕様書
 
-| 仕様書                               | 状態                             | 備考                                                 |
-| ------------------------------------ | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('DOM3 Events')}} | {{Spec2('DOM3 Events')}} | すでに仕様書にはありませんが、まだ対応されています。 |
+このプロパティは、異なる仕様の早期のバージョンにありました。現在では互換性のためだけに残されており、 {{domxref("CompositionEvent")}} を作成するときにその値を設定する方法は[よく定義されていません](https://github.com/w3c/uievents/issues/48)。
 
 ## ブラウザーの互換性
 
-{{Compat("api.CompositionEvent.locale")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,13 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Cabecera HTTP
-  - Cabecera de Pedido
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/Accept
 ---
+
 {{HTTPSidebar}}
 
 `La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
@@ -74,13 +69,11 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
 ## Especificaciones
 
-| Especificación                               | Titulo                                                        |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## Tambien Ver
 

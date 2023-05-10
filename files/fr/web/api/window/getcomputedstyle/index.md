@@ -23,7 +23,7 @@ var style = window.getComputedStyle(element[, pseudoElt]);
 
 > **Note :** Avant Gecko 2.0, le paramètre `pseudoElt` était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.
 
-La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/en/DOM/CSSStyleDeclaration).
+La valeur de retour `style` est un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration).
 
 ## Exemple
 

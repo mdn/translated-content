@@ -1,8 +1,8 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
+
 {{JSRef}}
 
 A propriedade leitura somente **`description`** é uma string que retorna a descrição opcional de objetos {{JSxRef("Symbol")}}.

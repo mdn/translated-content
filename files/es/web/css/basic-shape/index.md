@@ -1,12 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -108,13 +104,11 @@ TODO
 
 ## Especificaciones
 
-| Especificicación                                                                                         | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;') }} | {{ Spec2('CSS Shapes') }} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.basic-shape")}}
+{{Compat}}
 
 ## Véase también
 

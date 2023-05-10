@@ -20,7 +20,7 @@ La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()
 - `image-tags` {{Optional_Inline}}
   - : La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
 - `image-src` {{Optional_Inline}}
-  - : Zéro, une ou plusieurs [URL](fr/docs/Web/CSS/url) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
+  - : Zéro, une ou plusieurs [URL](/fr/docs/Web/CSS/url) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
 - `color` {{Optional_Inline}}
   - : Une couleur par défaut. Cette couleur sera utilisée par défaut si aucune image n'est trouvée ou prise en charge parmi les images fournies via `image-src`.
 

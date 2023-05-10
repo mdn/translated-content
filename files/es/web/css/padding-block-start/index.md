@@ -1,8 +1,8 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-translation_of: Web/CSS/padding-block-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`padding-block-start`** define el bloque lógico de inicio de relleno de un elemento, que se asigna a un relleno físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a las propiedades {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, or {{cssxref("padding-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -65,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                               | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-block-start", "padding-block-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.padding-block-start")}}
+{{Compat}}
 
 ## Mira también
 

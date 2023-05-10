@@ -1,18 +1,9 @@
 ---
 title: Vibración API
 slug: Web/API/Vibration_API
-tags:
-  - API
-  - Firefox OS
-  - Mobile
-  - Principiante
-  - Vibración
-  - Vibrado
-  - Vibrar
-  - WebAPI
-translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration
 ---
+
 La mayoría de los dispositivos modernos pueden vibrar a través del hardware, esto permite que a través del código de software se pueda emitir estas vibraciones. La **Vibration API** ofrece a las aplicaciones web la capacidad de acceder a este hardware en caso este lo soporte, caso contrario el dispositivo no hace nada.
 
 ## Describiendo vibraciones
@@ -84,13 +75,11 @@ Esta API es claramente accesible a través de dispositivos móbiles. Vibration A
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario              |
-| ---------------------------------------- | ------------------------------------ | ----------------------- |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Especificación inicial. |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## Ver También
 

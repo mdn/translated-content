@@ -8,6 +8,7 @@ tags:
   - Справка
 translation_of: Web/API/Storage/length
 ---
+
 {{APIRef("Web Storage API")}}
 
 Свойство length интерфейса {{domxref("Storage")}} доступно только для чтения и возвращает число с количеством элементов, которые хранятся в объекте Storage на данный момент.

@@ -3,6 +3,7 @@ title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 translation_of: Web/JavaScript/Reference/Statements/do...while
 ---
+
 {{jsSidebar("Statements")}}
 
 Выражение **`do...while`** создаёт цикл, который выполняет указанное выражение до тех пор, пока условие не станет ложным. Условие проверяется после выполнения выражения, то есть выражение выполнится как минимум один раз.
@@ -45,7 +46,7 @@ var i = 0;
 do {
    i += 1;
    result += i + ' ';
-} while (i > 0 && i < 5); // Немотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
+} while (i > 0 && i < 5); // Несмотря на то, что i == 0, цикл всё равно продолжится, так как начинается без теста
 document.getElementById('example').innerHTML = result;
 ```
 

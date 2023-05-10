@@ -1,8 +1,8 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-translation_of: Web/HTTP/Status/101
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP **`101 Switching Protocols`** indica para qual protocolo o servidor está trocando, conforme solicitado por um cliente que tenha enviado uma mensagem incluindo {{HTTPHeader("Upgrade")}} no cabeçalho da requisição.

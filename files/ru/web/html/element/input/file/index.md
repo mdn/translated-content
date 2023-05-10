@@ -1,9 +1,10 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
+slug: Web/HTML/Element/input/file
 translation_of: Web/HTML/Element/input/file
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).
 
@@ -128,7 +129,7 @@ This produces a similar-looking output to the previous example:
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact nature differs across browsers and operating systems).
 
-![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](https://mdn.mozillademos.org/files/15183/file-chooser.png)
+![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](file-chooser.png)
 
 The `accept` attribute doesn't validate the types of the selected files; it simply provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
 

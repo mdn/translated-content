@@ -1,8 +1,8 @@
 ---
 title: 'Propiedades personalizadas (--*): variables CSS'
 slug: Web/CSS/--*
-translation_of: Web/CSS/--*
 ---
+
 {{CSSRef}}
 
 Los nombres de las propiedades que tiene el prefijo `--`, como `--ejemplo-nombre`, representan las _propiedades personalizadas_ que contienen un valor que puede ser usado en otras declaraciones usando la función {{cssxref("var")}}.
@@ -74,13 +74,11 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Ver también
 

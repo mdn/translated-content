@@ -10,6 +10,7 @@ tags:
   - XMLHttpRequest API
 translation_of: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.

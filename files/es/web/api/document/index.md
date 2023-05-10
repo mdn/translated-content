@@ -1,10 +1,9 @@
 ---
 title: Document
 slug: Web/API/Document
-browser-compat: api.Document
-translation_of: Web/API/Document
 original_slug: Web/API/Document
 ---
+
 {{APIRef("DOM")}}
 
 La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
@@ -447,13 +446,13 @@ Puede detectar estos eventos usando `addEventListener()` o asignando un detector
 Firefox define algunos métodos no estándar:
 
 - {{DOMxRef("Document.execCommandShowHelp()")}} {{deprecated_inline}}
-  - : Este método nunca hizo nada y siempre arrojaba una excepción, por lo que se eliminó en Gecko 14.0 {{geckoRelease("14.0")}}.
+  - : Este método nunca hizo nada y siempre arrojaba una excepción, por lo que se eliminó en Gecko 14.0 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11).
 - {{DOMxRef("Document.getBoxObjectFor()")}} {{deprecated_inline}}
   - : Utilice el método {{DOMxRef("Element.getBoundingClientRect()")}} en su lugar.
 - {{DOMxRef("Document.loadOverlay()")}} {{deprecated_inline}}
   - : Carga una [superposición XUL](/es/docs/XUL_Overlays) dinámicamente. Esto solo funciona en documentos XUL.
 - {{DOMxRef("Document.queryCommandText()")}} {{deprecated_inline}}
-  - : Este método nunca hizo nada más que generar una excepción y se eliminó en Gecko 14 {{GeckoRelease("14")}}.
+  - : Este método nunca hizo nada más que generar una excepción y se eliminó en Gecko 14 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11).
 
 ### Notas de Internet Explorer
 

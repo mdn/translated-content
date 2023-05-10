@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/Global
 browser-compat: javascript.builtins.WebAssembly.Global.Global
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.Global()`** permet de créer un nouvel objet `Global` représentant une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable dans plusieurs instances de [`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module). Cela permet la liaison dynamique de plusieurs modules.
 
@@ -73,6 +73,6 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

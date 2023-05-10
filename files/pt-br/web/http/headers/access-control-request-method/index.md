@@ -1,14 +1,8 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
-tags:
-  - CORS
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Access-Control-Request-Method
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **`Access-Control-Request-Method`** é usado pelos navegadores quando executando uma {{glossary("preflight request")}}, para deixar o servidor sabendo quais [métodos HTTP](/pt-BR/docs/Web/HTTP/Methods) vão ser usados quando a requisição verdadeira for feita. Este cabeçalho é necessário como toda requisição pré-vôo é um {{HTTPMethod("OPTIONS")}} e não usa o mesmo método na requisição verdadeira.

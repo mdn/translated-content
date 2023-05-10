@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Positioning
 ---
+
 {{CSSRef}}
 
 **CSS Positioning** is a module of CSS that defines how to absolutely and relavitely position elements on the page.

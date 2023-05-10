@@ -1,8 +1,8 @@
 ---
 title: BaseAudioContext.createBiquadFilter()
 slug: Web/API/BaseAudioContext/createBiquadFilter
-translation_of: Web/API/BaseAudioContext/createBiquadFilter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 El metodo `createBiquadFilter()` de la interfaz {{ domxref("BaseAudioContext") }} crea un {{ domxref("BiquadFilterNode") }}, el cual representa un filtro de segundo orden configurable, asi como varios tipos de filtros comunes diferentes.
@@ -51,13 +51,11 @@ biquadFilter.gain.value = 25;
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estados                              | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-createbiquadfilter', 'createBiquadFilter()')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.BaseAudioContext.createBiquadFilter")}}
+{{Compat}}
 
 ## Ver tambien
 

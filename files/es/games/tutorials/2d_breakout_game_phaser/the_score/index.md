@@ -1,17 +1,8 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 2D
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiantes
-  - Puntuación
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}

@@ -1,12 +1,8 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/style
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`style`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소에 적용할 [CSS](/ko/docs/Web/CSS) 스타일 선언을 담습니다. 스타일은 별도의 파일에 정의하는 것이 권장된다는 점을 참고하세요. 이 특성과 {{HTMLElement("style")}} 요소는 주로 테스트 등 빠른 스타일링을 위한 목적으로 사용됩니다.
@@ -23,7 +19,7 @@ translation_of: Web/HTML/Global_attributes/style
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.style")}}
+{{Compat}}
 
 ## 같이 보기
 

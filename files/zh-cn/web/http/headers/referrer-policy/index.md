@@ -3,6 +3,8 @@ title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
+{{HTTPSidebar}}
+
 **`Referrer-Policy`** 首部用来监管哪些访问来源信息——会在 {{HTTPHeader("Referer")}} 中发送——应该被包含在生成的请求当中。
 
 | Header type                                      | {{Glossary("Response header")}} |

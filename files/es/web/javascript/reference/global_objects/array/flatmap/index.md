@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flatMap
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
@@ -101,13 +95,11 @@ if (!Array.prototype.flatMap) {
 
 ## Especificaciones
 
-| Especificación                                                                                    | Estado         | Comentario |
-| ------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flatMap`](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Ver también
 

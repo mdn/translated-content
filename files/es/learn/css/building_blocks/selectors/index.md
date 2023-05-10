@@ -1,9 +1,9 @@
 ---
 title: Selectores CSS
 slug: Learn/CSS/Building_blocks/Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 En {{Glossary( "CSS")}} los selectores se utilizan para delimitar los elementos {{glossary("HTML")}} de nuestra página web a los que queremos aplicar estilo. Hay una amplia variedad de selectores CSS, lo que permite una gran precisión a la hora de seleccionar elementos a los que aplicar estilo. En este artículo y sus subartículos veremos con detalle todos los tipos y el modo como funcionan.
@@ -38,7 +38,7 @@ En {{Glossary( "CSS")}} los selectores se utilizan para delimitar los elementos 
 
 En un artículo anterior explicamos qué son los selectores. Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades CSS. El elemento o los elementos seleccionados por el selector se denominan _sujeto del selector_.
 
-![Fragmento de código con el elemento h1 resaltado.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Fragmento de código con el elemento h1 resaltado.](selector.png)
 
 En artículos anteriores ya has visto algunos selectores y has aprendido que hay diversas maneras de organizar el documento. Por ejemplo, seleccionando un elemento, como `h1`, o seleccionando una clase, como `.special`.
 
@@ -184,24 +184,3 @@ La tabla que te mostramos a continuación proporciona una descripción general d
 | [Operador de combinación de elementos hijo](/es/docs/Web/CSS/Child_combinator)                              | `article > p`       | [Operadores de combinación de elementos hijo](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Selector_de_combinaci%C3%B3n_de_elementos_hijo) |
 | [Operador de combinación de elementos hermanos adyacentes](/es/docs/Web/CSS/Selectores_hermanos_adyacentes) | `h1 + p`            | [Hermanos adyacentes](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Hermanos_adyacentes)                                                    |
 | [Operador de combinación general de elementos hermanos](/es/docs/Web/CSS/Selectores_hermanos_generales)     | `h1 ~ p`            | [Hermanos generales](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Hermanos_generales)                                                      |
-
-## En este módulo
-
-1. [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Operadores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

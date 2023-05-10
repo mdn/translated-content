@@ -1,11 +1,11 @@
 ---
 title: Aplicación de estilo a listas
 slug: Learn/CSS/Styling_text/Styling_lists
-translation_of: Learn/CSS/Styling_text/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Las [listas](/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+Las [listas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
 <table>
   <tbody>
@@ -155,7 +155,7 @@ ol {
 
 Esto nos da el aspecto siguiente:
 
-![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](outer-bullets.png)
 
 Puedes encontrar muchas más opciones si echas un vistazo a la página de referencia de {{cssxref("list-style-type")}}.
 
@@ -172,7 +172,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Uso de una imagen personalizada como viñeta
 
@@ -217,7 +217,7 @@ Aquí hemos hecho lo siguiente:
 
 Esto nos da el resultado siguiente:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### Propiedad abreviada list-style
 
@@ -388,11 +388,3 @@ Los contadores CSS proporcionan herramientas avanzadas para la personalización 
 La aplicación de estilo a listas se domina con relativa facilidad una vez que conoces algunos principios básicos y propiedades específicas asociados. En el artículo siguiente vamos a continuar con las técnicas de aplicación de estilo a enlaces.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Nociones de aplicación de estilo con CSS a textos y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicar estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicar estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

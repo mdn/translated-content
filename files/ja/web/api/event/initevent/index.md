@@ -22,11 +22,11 @@ event.initEvent(type, bubbles, cancelable);
 
 ### 引数
 
-- _`type`_
+- `type`
   - : 文字列で、イベントの種類を定義します。
-- _`bubbles`_
+- `bubbles`
   - : 論理値で、イベントがイベントチェーンを通じてバブルアップするかどうかを決定します。設定されると、読み取り専用のプロパティ {{ domxref("Event.bubbles") }} がその値を提供します。
-- _`cancelable`_
+- `cancelable`
   - : 論理値で、イベントをキャンセルできるかどうかを定義します。設定されると、読み取り専用のプロパティ {{ domxref("Event.cancelable") }} がその値を提供します。
 
 ### 返値

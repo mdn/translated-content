@@ -1,9 +1,9 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-translation_of: Web/HTML/Element/s
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento HTML `<s>`** renderiza um texto tachado ou uma linha cortando o texto. Use o elemento `<s>` para representar texto que não sejam relevante ou que não estam corretos. Não é apropriado o uso do `<s>` indicar edições no texto; para indicar edições no texto utilize {{HTMLElement("del")}} e {{HTMLElement("ins")}}, que são elementos mais apropriados.
 

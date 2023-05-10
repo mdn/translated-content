@@ -1,13 +1,8 @@
 ---
 title: Selectores de hijo
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Child_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 El combinador `>` separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos **directos** del primero. EN contraste, cuando se combinan dos selectores con el [selector de descendiente](/es/docs/Web/CSS/Descendant_selectors), la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.
@@ -40,12 +35,8 @@ div > span {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                              | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}     | {{Spec2('CSS3 Selectors')}} | Sin cambios        |
-| {{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}} | {{Spec2('CSS2.1')}}             | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.child")}}
+{{Compat}}

@@ -1,12 +1,8 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 O método **`Object.getOwnPropertyNames()`** retorna um vetor com todas as propriedades (enumeráveis ou não) encontradas diretamente em um dado objeto.
@@ -132,7 +128,7 @@ Object.getOwnPropertyNames('foo');
 
 ## Notas específicas para SpiderMonkey
 
-Antes do SpiderMonkey 28 {{geckoRelease("28")}}, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
+Antes do SpiderMonkey 28, `Object.getOwnPropertyNames` não via propriedades não resolvidas de objetos {{jsxref("Error")}}. Isto foi resolvido em versões posteriores ({{bug("724768")}}).
 
 ## Veja também
 

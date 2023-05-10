@@ -584,11 +584,11 @@ IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建�
 
 1. 受影响的数据库（在浏览器关闭的场景下，所有打开的数据库）的所有事务会以 AbortError 错误中断。该影响和在每个事务中调用 {{domxref("IDBTransaction.abort()")}} 相同。
 2. 所有的事务完成后，数据库连接就会关闭。
-3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{event("close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
+3. 最终，表示数据库连接的 {{domxref("IDBDatabase")}} 对象收到一个 {{domxref("IDBDatabase/close_event", "close")}} 事件。你可以使用 {{domxref("IDBDatabase.onclose")}} 事件句柄来监听这些事件，这样你就可以知道什么时候数据库被意外关闭了。
 
 上述的行为只在 Firefox 50、Google Chrome 31（近似的）发行版本中支持。
 
-在这些版本之前的浏览器，事务会静默中断，并且 {{event("close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
+在这些版本之前的浏览器，事务会静默中断，并且 {{domxref("IDBDatabase/close_event", "close")}} 事件不会触发，这样就无法察觉数据库的异常关闭。
 
 由于用户可以在任何时候关闭浏览器，因此你不能依赖于任何特定事务的完成。并且在老版本的浏览器，你甚至都无法感知它们是否顺利完成。针对这种行为这里有一些启示：
 
@@ -598,7 +598,7 @@ Since the user can exit the browser at any time, this means that you cannot rely
 
 其次，你不应该把数据库事务绑定到卸载事件上。如果卸载事件被浏览器关闭所触发，卸载事件处理函数中的任何事务都不会完成。跨浏览器会话维护信息的直观的实现方法时在浏览器（或特定页）打开时从数据库读取它，在用户和浏览器交互式更新它，然后在浏览器（或页面）关闭时保存至数据库。然而，这并不会生效。这样一来，数据库事务会在卸载事件句柄中被创建，但由于它们时异步的，所以它们在它们执行之前就会被中断。
 
-实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 {{ bug(870645)}}。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
+实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 [Firefox bug 870645](https://bugzil.la/870645)。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
 
 至少通过添加中断提醒和 {{domxref("IDBDatabse.onclose")}}，你可以得知它何时关闭了。
 
@@ -1304,7 +1304,7 @@ input {
 
 > **备注：** `window.indexedDB.open()` 是异步的。该方法在 `success` 事件触发前很长一段时间就执行完毕。这意味着一个调用 `open()` 和 `onsuccess` 的方法（例如 `openDb()`），会在 `onsuccess` 句柄开始运行前就已经返回了。这种情况同样适用于其他请求方法，比如 `transaction()` 和 `get()`。
 
-## 另请参阅
+## 参见
 
 如有需要，请进一步阅读以获取更多信息。
 
@@ -1323,7 +1323,7 @@ input {
 
 ### 库
 
-- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不持支 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
+- [localForage](https://localforage.github.io/localForage/): 一个提供 name:value 的简单语法的客户端数据存储垫片（Polyfill），它基于 IndexedDB 实现，并在不支持 IndexedDB 的浏览器中自动回退只 WebSQL 和 localStorage。
 - [dexie.js](http://www.dexie.org/): 对 IndexedDB 的封装，通过提供更友好和简单语法以进行快速的编码开发。
 - [ZangoDB](https://github.com/erikolson186/zangodb): 一个类 MongoDB 的 IndexedDB 接口实现，提供了诸如过滤、投影、排序、更新和聚合等大多数 MongoDB 常见的特性。
 - [JsStore](http://jsstore.net/): 一个具备类 SQL 语法的简单和先进的 IndexedDB 封装实现。

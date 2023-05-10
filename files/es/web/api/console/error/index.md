@@ -1,15 +1,8 @@
 ---
 title: console.error()
-slug: Web/API/Console/error
-tags:
-  - API
-  - DOM
-  - Depurando
-  - Desarrollo web
-  - consola web
-  - metodo
-translation_of: Web/API/Console/error
+slug: Web/API/console/error
 ---
+
 {{APIRef("Console API")}}
 
 Muestra un mensaje de error en la Consola Web.
@@ -40,13 +33,11 @@ Vea "[Mostrando texto en la consola](/es/docs/Web/API/console#Outputting_text_to
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario          |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("Console API", "#error", "console.error()")}} | {{Spec2("Console API")}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.console.error")}}
+{{Compat}}
 
 ## Vea también
 

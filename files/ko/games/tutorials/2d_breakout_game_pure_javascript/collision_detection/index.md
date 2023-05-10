@@ -3,6 +3,7 @@ title: 충돌 감지
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Collision_detection
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

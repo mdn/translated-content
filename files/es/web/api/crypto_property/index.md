@@ -1,9 +1,9 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura {{domxref("Window.crypto")}} devuelve el objeto [Crypto](/es/docs/Web/API/Crypto) asociado a un objeto global. Este objeto permite a las páginas web acceder a ciertos servicios relacionados con criptografía.
@@ -16,13 +16,11 @@ var cryptoObj = window.crypto || window.msCrypto; // para IE 11
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.crypto")}}
+{{Compat}}
 
 ## Ver También
 

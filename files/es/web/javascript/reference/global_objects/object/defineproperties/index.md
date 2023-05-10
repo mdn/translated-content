@@ -1,15 +1,9 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
+
 {{JSRef("Objetos_globales", "Object")}}
 
 ## Sumario
@@ -118,16 +112,11 @@ function defineProperties(obj, properties) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentario                                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                 | {{Spec2('ES5.1')}} | Definición inicial. Implementada en JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ES6')}}     |                                                      |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-Basado en [Kangax's compat tables](http://kangax.github.com/es5-compat-table/).
-
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## Ver también
 

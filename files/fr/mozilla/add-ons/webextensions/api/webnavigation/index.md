@@ -41,7 +41,7 @@ Chaque navigation est une transition d'URL dans un cadre de navigateur particuli
 
 L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
 
-L'écouteur d'événement `onCommitted` reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un  {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
+L'écouteur d'événement `onCommitted` reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
 
@@ -80,9 +80,9 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
   - : Lancé lorsque la page a utilisé l' [API d'histoirique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

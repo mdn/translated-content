@@ -17,8 +17,8 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 要使其他的 HTML 元素可拖拽，必须做三件事：
 
-- 将想要拖拽的元素的 `{{htmlattrxref("draggable")}}` 属性设置成 `{{htmlattrxref("draggable")}}="true"`。
-- 为 `[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)` 事件添加一个监听程序。
+- 将想要拖拽的元素的 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性设置成 `"true"`。
+- 为 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件添加一个监听程序。
 - 在上一步定义的监听程序中 {{domxref("DataTransfer.setData","设置拖拽数据")}}。
 
 下面的例子允许拖拽一个段落的内容：
@@ -29,9 +29,9 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 </p>
 ```
 
-属性 `{{htmlattrxref("draggable")}}` 设置为 `"true"`，所以这个元素变成可拖拽的。如果该属性被省略或被设置为 `"false"`，则该元素将不可拖拽，此时拖拽只会选中文本。
+属性 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 设置为 `"true"`，所以这个元素变成可拖拽的。如果该属性被省略或被设置为 `"false"`，则该元素将不可拖拽，此时拖拽只会选中文本。
 
-`{{htmlattrxref("draggable")}}` 属性可在任意元素上设置，包括图像和链接。然而，对于后两者，该属性的默认值是 `true`，所以你只会在禁用这二者的拖拽时使用到 `{{htmlattrxref("draggable")}}` 属性，将其设置为 `false`。
+[`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性可在任意元素上设置，包括图像和链接。然而，对于后两者，该属性的默认值是 `true`，所以你只会在禁用这二者的拖拽时使用到 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性，将其设置为 `false`。
 
 > **备注：** 当一个元素被设置成可拖拽时，元素中的文本和其他子元素不能再以正常的方式（通过鼠标点击和拖拽）被选中。用户必须按住 <kbd>alt</kbd> 键，再用鼠标选择文本，或者使用键盘选择。
 
@@ -316,7 +316,6 @@ function doDrop(event) {
 
 ## 参见
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Recommended Drag Types](/zh-CN/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

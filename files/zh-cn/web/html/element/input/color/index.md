@@ -1,9 +1,9 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
+slug: Web/HTML/Element/input/color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`color`** 类型的 {{HTMLElement("input")}} 元素为用户提供了指定颜色的用户界面，或使用可视化颜色选择器，或以 `#rrggbb` 十六进制格式输入颜色值。
 
@@ -31,8 +31,8 @@ slug: Web/HTML/Element/Input/color
     <tr>
       <td><strong>支持的公共属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} 和
-        {{htmlattrxref("list", "input")}}
+        <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> 和
+        <a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>
       </td>
     </tr>
     <tr>
@@ -54,7 +54,7 @@ slug: Web/HTML/Element/Input/color
 
 ## 值
 
-`color` 类型的 {{HTMLElement("input")}} 元素的 {{htmlattrxref("value", "input")}} 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
+`color` 类型的 {{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 总是包含一个 7 个字符的字符串，它以 16 进制格式指定 RGB 颜色。虽然你可以用大写字母或小写字母输入颜色，但它将以小写字母形式存储。该值从不以任何其他形式出现，也从不为空。
 
 > **备注：** 将该值设置为任何不是有效的、完全不透明的、RGB 颜色的*十六进制表示*，都将导致该值被设置为 `#000000`。特别是，你不能使用 CSS 的标准化颜色名称或任何 CSS 函数语法来设置该值（记住，HTML 和 CSS 是独立的语言和规范）。此外，不支持带有透明通道的颜色；用 9 个字符的十六进制表示（例如 `#009900aa`）指定颜色，也会导致颜色被设置为 `#000000`。
 
@@ -76,7 +76,7 @@ slug: Web/HTML/Element/Input/color
 
 ### 监听颜色变化
 
-正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 {{htmlattrxref("value", "input")}} 属性获取新值。
+正如其他类型的 {{HTMLElement("input")}} 元素，有两个和值的改变相关的事件，{{domxref("HTMLElement/input_event", "input")}} 和 {{domxref("HTMLElement/change_event", "change")}}。每次颜色变更都会触发 `<input>` 元素上的 `input` 事件。用户关闭选色器之后会触发 `change` 事件。对于这两个事件，都可以通过 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性获取新值。
 
 以下代码为监听颜色值变化的示例：
 
@@ -173,7 +173,7 @@ function updateFirst(event) {
 }
 ```
 
-当退出颜色选择器时，表明值不会再改变（除非用户重新打开颜色选择器），会向该元素发送 `change` 事件。我们使用 `updateAll()` 函数来处理该事件，使用 {{htmlattrxref("value", "input", "Event.target.value")}} 来获得最终选择的颜色：
+当退出颜色选择器时，表明值不会再改变（除非用户重新打开颜色选择器），会向该元素发送 `change` 事件。我们使用 `updateAll()` 函数来处理该事件，使用 [`Event.target.value`](/zh-CN/docs/Web/HTML/Element/input#value) 来获得最终选择的颜色：
 
 ```js
 function updateAll(event) {

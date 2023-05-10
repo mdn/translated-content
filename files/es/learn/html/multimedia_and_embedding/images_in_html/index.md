@@ -1,19 +1,8 @@
 ---
 title: Imágenes en HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Aprendiz
-  - Article
-  - HTML
-  - Imagenes
-  - captions
-  - figcaption
-  - img
-  - pie de imagen
-  - subtítulos
-  - texto alt
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -83,15 +72,15 @@ Pero esto no tiene sentido, solo hace que el navegador trabaje más buscando la 
 
 > **Advertencia:** La mayoría de imágenes tienen derechos de autor. **No** muestres una imagen en tu página web a menos que:
 >
-> 1\) seas dueño de la imagen,  
-> 2\) tengas permiso escrito explícito del dueño de la imagen o  
-> 3\) tengas suficientes pruebas de que la imagen es de dominio público.  
+> 1. seas dueño de la imagen,
+> 2. tengas permiso escrito explícito del dueño de la imagen o
+> 3. tengas suficientes pruebas de que la imagen es de dominio público
 >
 > El incumplimiento de las normas de los derechos de autor es un acto ilegal y poco ético. Por lo tanto, no apuntes **nunca** tu atributo `src` a una imagen que esté alojada en un sitio web si no tienes el permiso para hacerlo. Esto se llama _hotlinking_. Asimismo es ilegal robar el ancho de banda de alguien. Además, ralentiza tu página y te deja sin control sobre la imagen si la eliminan o reemplazan por otra que incluso podría resultar embarazosa.
 
 Nuestro código anterior debería darnos el resultado siguiente:
 
-![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > **Nota:** Los elementos como {{htmlelement("img")}} y {{htmlelement("video")}} a veces se denominan **elementos reemplazados**. Esto se debe a que el tamaño y el contenido del elemento se especifican en un recurso externo (como un archivo de imagen o video), no en el contenido del elemento en sí.
 
@@ -109,7 +98,7 @@ El próximo atributo que veremos es `alt`. Su valor debe ser una descripción te
 
 La forma más fácil de probar el texto `alt` es escribir mal el nombre de archivo. Si, por ejemplo, escribimos el nombre archivo de nuestra imagen como `dinosooooor.jpg`, el navegador no podrá mostrar la imagen, en su lugar mostrará el texto alternativo:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 ¿Por qué vas a ver o necesitar el texto alternativo? Puede ser por varias razones:
 
@@ -144,7 +133,7 @@ Puedes usar los atributos ancho (`width`) y alto (`height`) para especificar la 
 
 Esto no proporciona una gran diferencia en la pantalla en circunstancias normales. Pero si la imagen no se muestra, por ejemplo, porque el usuario acaba de acceder a la página y esta aún no se ha cargado, observarás que el navegador reserva un espacio para la imagen:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 Hacerlo así es bueno porque la página se carga con mayor rapidez y fluidez.
 
@@ -167,7 +156,7 @@ Al igual que con los enlaces, también puedes añadir atributos `title` a las im
 
 Esto nos da una etiqueta de ayuda (`tooltip`) como las de los enlaces:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
 Sin embargo, no se recomienda incluir esta propiedad en las imágenes. `title` presenta algunos problemas de accesibilidad, principalmente porque los lectores de pantalla (_screen readers_) tienen un comportamiento imprevisible y la mayoría de navegadores no la mostrarán a menos que pases el ratón por encima de la imagen (y por tanto es inútil para quien usa teclado). Si estás interesado en esta cuestión, puedes leer el artículo [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) de Scott O'Hara.
 
@@ -507,12 +496,3 @@ En resumen: si una imagen tiene significado en términos del contenido de tu pá
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## En este módulo
-
-- [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenido de video y audio](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> a \<iframe>: otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Añadir gráficos vectoriales a la web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imágenes _responsive_ (adaptativas)](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Página de bienvenida de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

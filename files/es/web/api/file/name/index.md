@@ -1,14 +1,8 @@
 ---
 title: File.name
 slug: Web/API/File/name
-tags:
-  - API
-  - Archivo
-  - Archivos
-  - Propiedad
-  - Referencia
-translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 Retorna el nombre del archivo representado por el objeto {{domxref("File")}}. Por razones de seguridad, la ruta de directorios es excluida de esta propiedad.
@@ -45,13 +39,11 @@ Prueba el resultado:
 
 ## Especificaciones
 
-| Especificacion                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#file-attrs', 'name')}} | {{Spec2('File API')}} | Definicion inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.name")}}
+{{Compat}}
 
 ## Vea también
 

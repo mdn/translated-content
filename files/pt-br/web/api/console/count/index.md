@@ -1,8 +1,8 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
-translation_of: Web/API/Console/count
+slug: Web/API/console/count
 ---
+
 {{APIRef("Console API")}}
 
 Exibe o número de vezes em que a chamada `count()` em particular foi invocada. Essa função recebe um argumento opcional `label`.

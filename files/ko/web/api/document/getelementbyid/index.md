@@ -1,16 +1,8 @@
 ---
 title: Document.getElementById()
 slug: Web/API/Document/getElementById
-tags:
-  - API
-  - DOM
-  - Document
-  - Elements
-  - Method
-  - Reference
-  - Web
-translation_of: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.getElementById()`** 메서드는 주어진 문자열과 일치하는 {{domxref("Element.id", "id")}} 속성을 가진 요소를 찾고, 이를 나타내는 {{domxref("Element")}} 객체를 반환합니다. ID는 문서 내에서 유일해야 하기 때문에 특정 요소를 빠르게 찾을 때 유용합니다.

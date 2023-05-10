@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
 translation_of: Web/JavaScript/Reference/Errors/No_non-null_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Сообщения

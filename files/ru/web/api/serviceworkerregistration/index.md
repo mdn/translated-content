@@ -14,13 +14,14 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
 
-> **Примечание:** **Эта функция доступна в** [Web Workers](/ru/docs/Web/API/Web_Workers_API).
+> **Примечание:** Эта функция доступна в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
 
 ## Свойства
 

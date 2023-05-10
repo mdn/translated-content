@@ -1,9 +1,9 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobrir onde está o erro no código? Este artigo apresentará algumas ferramentas que podem ajudá-lo a encontrar e corrigir erros no HTML.
@@ -42,7 +42,7 @@ Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobr
 
 Ao escrever algum tipo de código, tudo costuma ir bem, até o temido momento quando ocorre um erro — você fez algo errado, então seu código não funciona - talvez não funcione mais nada ou não funciona exatamente como você queria. Por exemplo, a seguir é mostrado um erro relatado ao tentar {{glossary("Compile")}} um programa simples escrito na linguagem [Rust](https://www.rust-lang.org/).
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/error-message.png)Aqui, a mensagem de erro é relativamente fácil de entender — "string de aspas duplas sem terminação". Se você olhar a listagem, provavelmente verá como `println!(Hello, world!");` pode estar faltando logicamente uma aspa dupla. No entanto, as mensagens de erro podem ficar mais complicadas e menos fáceis de interpretar à medida que os programas se tornam maiores, e até mesmo casos simples podem parecer um pouco intimidadores para alguém que não sabe nada sobre o Rust.
+![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Aqui, a mensagem de erro é relativamente fácil de entender — "string de aspas duplas sem terminação". Se você olhar a listagem, provavelmente verá como `println!(Hello, world!");` pode estar faltando logicamente uma aspa dupla. No entanto, as mensagens de erro podem ficar mais complicadas e menos fáceis de interpretar à medida que os programas se tornam maiores, e até mesmo casos simples podem parecer um pouco intimidadores para alguém que não sabe nada sobre o Rust.
 
 Depurar um código não tem que ser assustador, porém — a chave para se sentir confortável em escrever e depurar qualquer linguagem ou código de programação é a familiaridade com a linguagem e as ferramentas.
 
@@ -66,7 +66,7 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
 É hora de estudar a natureza permissiva do código HTML.
 
 1. Primeiramente, faça o download do [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) e o salve localmente. Esse exemplo contém erros propositais para que possamos explorá-los (tal código HTML é dito _**badly-formed**_, em contraponto ao HTML _**well-formed**_).
-2. Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/badly-formed-html.png)
+2. Em seguida, abra o arquivo em um navegador. Você verá algo como:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. Isso claramente não parece bom; vamos dar uma olhada no código fonte para tentar achar os erros (somente o conteúdo de _body_ é mostrado):
 
     ```html
@@ -94,7 +94,7 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
     - O valor do atributo {{htmlattrxref("href","a")}} não tem as aspas de fechamento. Isso parece ter causado o maior problema — o _link_ não foi renderizado.
 
 5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
-6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/html-inspector.png)
+6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
 
     - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
@@ -123,7 +123,7 @@ Então, você pode ver pelo exemplo acima que você realmente quer ter certeza d
 
 A melhor estratégia é começar rodando a sua página HTML através do [Markup Validation Service](https://validator.w3.org/) — criado e mantido pelo W3C, uma organização que cuida das especificações que define o HTML, CSS, e outras tecnologias WEB. Esta página considera um documento HTML como uma entrada, fazendo a leitura dela e retornando o que há de errado com o seu HTML.
 
-![The HTML validator homepage](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/validator.png)
+![The HTML validator homepage](validator.png)
 
 Para especificar o HTML a ser validado, você pode dar um endereço web, fazer o upload de um arquivo HTML, ou diretamente inserir o código HTML.
 
@@ -138,7 +138,7 @@ Vamos tentar fazer isto com o nosso [sample document](https://github.com/mdn/lea
 
 Você deverá receber uma lista de erros e outras informações.
 
-![A list of of HTML validation results from the W3C markup validation service](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/validation-results.png)
+![A list of of HTML validation results from the W3C markup validation service](validation-results.png)
 
 #### Interpretando as mensagens de erros
 
@@ -162,22 +162,10 @@ Se você não descobrir o significado de todas mensagens de erro, não se preocu
 
 Você vai saber quando todos os seus erros forem resolvidos quando ver a seguinte bandeira no output:
 
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML/valid-html-banner.png)
+![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
 
 ## Sumário
 
 Então é isso, uma introdução a debugação de HTML, na qual deve te dar dicas úteis quando você começar a debugar CSS, JavaScript, e outros tipos de códigos mais tarde na sua carreira. Isso também significa o fim dos artigos de aprendizado do Módulo de Introdução ao HTML — agora você pode testar a si mesmo com nossa avaliação: a primeira está no link abaixo.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estrutura de documento e sites](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -3,7 +3,7 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 ## 概要
 
@@ -35,11 +35,11 @@ list-style-image: unset;
 - `none`
   - : 说明没有图片被用作标记。如果这个值被设定，那么 {{ Cssxref("list-style-type") }} 中定义的值会被取代。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 举例
+## 示例
 
 ### HTML
 
@@ -54,13 +54,13 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+  list-style-image: url("starsolid.gif")
 }
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('Examples') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -70,6 +70,6 @@ ul {
 
 {{Compat}}
 
-## 其他链接
+## 参见
 
 - {{ Cssxref("list-style") }}, {{ Cssxref("list-style-type") }}, {{ Cssxref("list-style-position") }}

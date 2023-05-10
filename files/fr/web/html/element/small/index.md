@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/small
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<small>`** permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d'un contrat, des mentions relatives au droit d'auteur, etc.) quelle que soit la présentation.
 
@@ -33,7 +33,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("","100%",'')}}
 
 ## Résumé technique
 

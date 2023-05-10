@@ -1,12 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/user-select
 ---
 {{CSSRef}}
 

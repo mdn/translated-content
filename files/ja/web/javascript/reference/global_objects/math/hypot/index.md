@@ -95,9 +95,7 @@ if (!Math.hypot) Math.hypot = function () {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

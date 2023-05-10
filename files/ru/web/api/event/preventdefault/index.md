@@ -8,6 +8,7 @@ tags:
   - события
 translation_of: Web/API/Event/preventDefault
 ---
+
 {{ apiRef("DOM") }}Метод preventDefault () интерфейса {{domxref ("Event")}} сообщает {{Glossary("User agent")}}, что если событие не обрабатывается явно, его действие по умолчанию не должно выполняться так, как обычно. Событие продолжает распространяться как обычно, до тех пор, пока один из его обработчиков не вызывает методы {{domxref ("Event.stopPropagation", " stopPropagation ()")}} или {{domxref (" Event.stopImmediatePropagation", " stopImmediatePropagation ()")}}, любой из которых сразу же прекращает распространение.Как отмечено ниже, вызов метода preventDefault () для события, не подлежащего отмене, например события, отправленного через {{domxref("EventTarget.dispatchEvent ()")}}, без указания cancelable: true не имеет эффекта.
 
 ## Синтаксис
@@ -103,7 +104,7 @@ function checkName(evt) {
 
 Вызов `preventDefault` на любой стадии выполнения потока событий отменяет событие, а это означает, что любое действие по умолчанию обычно принимается реализацией, как результат события, которое не произойдёт.
 
-> **Примечание:** В {{Gecko("6.0")}}, вызов `preventDefault()` приводит к {{ domxref("event.defaultPrevented") }} к переходу значения в состояние `True`.
+> **Примечание:** В Gecko 6.0, вызов `preventDefault()` приводит к {{ domxref("event.defaultPrevented") }} к переходу значения в состояние `True`.
 
 Вы можете использовать [event.cancelable](/ru/docs/Web/API/event.cancelable) чтобы проверить, является ли событие отменяемым. Вызов `preventDefault` для неотменяемых событий не имеет никакого эффекта.
 

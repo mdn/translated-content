@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/br
 browser-compat: html.elements.br
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<br>`** crée un saut de ligne (un retour chariot) dans le texte. Il s'avère utile lorsque les sauts de ligne ont une importance (par exemple lorsqu'on écrit une adresse ou un poème).
 
@@ -50,7 +50,7 @@ Mountain View, CA<br>
 USA<br>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
 {{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
 

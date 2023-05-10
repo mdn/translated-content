@@ -1,14 +1,8 @@
 ---
 title: CSS 참고서
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - l10n:priority
-translation_of: Web/CSS/Reference
 ---
+
 {{CSSRef}}
 
 **CSS 참고서**를 이용해 [알파벳 순서로 정리한](#키워드_색인) 모든 표준 [CSS](/ko/docs/Web/CSS) 속성, [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes), [의사 요소](/ko/docs/Web/CSS/Pseudo-elements), [CSS 자료형](/ko/docs/Web/CSS/CSS_Types)과 [@규칙](/ko/docs/Web/CSS/At-rule)을 찾아보세요. 또한 [유형별로 정리한 CSS 선택자](#선택자)와 [주요 CSS 개념](#개념)도 찾아볼 수 있습니다. 추가로 간단한 [DOM-CSS / CSSOM](#DOM-CSS_CSSOM) 참조도 들어 있습니다.

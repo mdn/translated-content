@@ -1,9 +1,9 @@
 ---
 title: API de MediaStream
 slug: Web/API/Media_Capture_and_Streams_API
-translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
+
 {{SeeCompatTable}}
 
 La **API de proceso **_MediaStream_**, a veces llamada *Media Stream API* o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
@@ -18,25 +18,25 @@ Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#ed
 
 ## Referencia
 
-- {{event("addtrack")}} (event)
+- [`addtrack`](/es/docs/Web/Reference/Events/addtrack) (event)
 - {{domxref("AudioStreamTrack")}}
 - {{domxref("BlobEvent")}}
 - {{domxref("BlobEventInit")}}
-- {{event("ended (MediaStream)")}} (event)
-- {{event("ended (MediaStreamTrack)")}} (event)
+- [`ended (MediaStream)`](/es/docs/Web/Reference/Events/ended (MediaStream)) (event)
+- [`ended (MediaStreamTrack)`](/es/docs/Web/Reference/Events/ended (MediaStreamTrack)) (event)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamConstraints")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
 - {{domxref("MediaStreamTrackList")}}
 - {{domxref("MediaTrackConstraints")}}
-- {{event("muted")}} (event)
+- [`muted`](/es/docs/Web/Reference/Events/muted) (event)
 - {{domxref("NavigatorUserMedia")}}
 - {{domxref("NavigatorUserMediaError")}}
-- {{event("overconstrained")}} (event)
-- {{event("removetrack")}} (event)
-- {{event("started")}} (event)
-- {{event("unmuted")}} (event)
+- [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) (event)
+- [`removetrack`](/es/docs/Web/Reference/Events/removetrack) (event)
+- [`started`](/es/docs/Web/Reference/Events/started) (event)
+- [`unmuted`](/es/docs/Web/Reference/Events/unmuted) (event)
 - {{domxref("URL")}}
 - {{domxref("VideoStreamTrack")}}
 
@@ -216,9 +216,13 @@ Remueve una MediaStreamTrack de la lista de pistas.
 - Excepciones
   - : INVALID_STATE_ERR if the stream is finished (all tracks have ended).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("api.MediaStream")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,15 +1,10 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/wbr
 original_slug: Web/HTML/Elemento/wbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento HTML _word break opportunity_ `<wbr>` representa una posición dentro del texto donde el explorador puede opcionalmente saltar una línea , aunque sus reglas de salto de línea de otra manera no crearían un salto en esa posición .En páginas codificadas en UTF-8 , \<wbr> se comporta como el punto de código `U+200B ZERO-WIDTH SPACE`. En particular se comporta como un punto de código unicode bidi BN , significando esto que no tiene efecto en ordenamiento bidi : `<div dir=rtl>123,<wbr>456</div>` muestra , cuando no se rompa en dos líneas , 123, 456 y no 456 , 123 .
 
@@ -43,6 +38,10 @@ La [guia de estilo de Yahoo](http://styleguide.yahoo.com/) recomienda [romper un
 
 {{EmbedLiveSample("Example")}}
 
-## Compatibilidad en exploradores
+## Especificaciones
 
-{{Compat("html.elements.wbr")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

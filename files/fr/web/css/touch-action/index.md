@@ -123,5 +123,5 @@ Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela 
 
 - [Les événements de pointage](/fr/docs/Web/API/Pointer_events)
 - Un billet du blog WebKit : [une gestion plus responsive du toucher sur iOS (en anglais)](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
-- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](*https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
 - [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_Scroll_Snap)

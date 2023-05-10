@@ -1,8 +1,8 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-translation_of: Web/CSS/line-break
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A propriedade CSS **`line-break`** é usada para especificar como (ou se) quebrar linhas.

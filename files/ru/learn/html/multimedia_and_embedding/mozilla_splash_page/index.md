@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 В этом задании мы проверим ваши знания приёмов, рассмотренных в статьях этого модуля, через добавление изображений и видео на забавную страницу о Mozilla!
@@ -66,9 +67,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 
 Следующие скриншоты демонстрируют, как сайт-визитка выглядит, при правильной разметке, на широких и узких экранах.
 
-![A wide shot of our example splash page](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![A wide shot of our example splash page](wide-shot.png)
 
-![A narrow shot of our example splash page](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![A narrow shot of our example splash page](narrow-shot.png)
 
 ## Заключение
 

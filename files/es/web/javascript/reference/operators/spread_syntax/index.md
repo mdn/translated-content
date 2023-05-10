@@ -1,13 +1,9 @@
 ---
 title: Sintaxis Spread
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript6
-  - Iteradores
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 ---
+
 {{jsSidebar("Operators")}}**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_Array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales)) son esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 La fuente para este ejemplo interactivo está almacenada en el repositorio de GitHub. Si quieres contribuir al proyecto interactivo de ejemplos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de descarga (pull).
@@ -225,15 +221,11 @@ La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado po
 
 ## Especificaciones
 
-| Specification                                                        | Status                       | Comment                                                                                                                                                                                                                             |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-array-initializer')}}     | {{Spec2('ES2015')}}     | Definido en varias secciones de la especificación: [Array Initializer](http://www.ecma-international.org/ecma-262/6.0/#sec-array-initializer), [Argument Lists](http://www.ecma-international.org/ecma-262/6.0/#sec-argument-lists) |
-| {{SpecName('ESDraft', '#sec-array-initializer')}}     | {{Spec2('ESDraft')}} | Sin cambios.                                                                                                                                                                                                                        |
-| {{SpecName('ESDraft', '#sec-object-initializer')}} | {{Spec2('ESDraft')}} | Definido en [Object Initializer](https://tc39.github.io/ecma262/2018/#sec-object-initializer)                                                                                                                                       |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.spread")}}
+{{Compat}}
 
 ## Vea también
 

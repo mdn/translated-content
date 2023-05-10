@@ -88,7 +88,7 @@ WebAssembly の低レベルのメモリーモデルでは、メモリーは[線�
 
 しかし、利用可能なメモリー範囲がプロセス全体に及ぶネイティブの C/C++ プログラムとは異なり、特定の WebAssembly インスタンスがアクセスできるメモリーは、 WebAssembly Memory オブジェクトが含む特定の（潜在的に非常に小さな）範囲に制限されています。これにより、単一のウェブアプリで複数の独立したライブラリー（それぞれが内部で WebAssembly を使用している）を使用し、互いに完全に分離された個別のメモリーを持つことができます。さらに、新しい実装では[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#共有メモリー)を作成することもでき、これは [`postMessage()`](/ja/docs/Web/API/Window/postMessage) によってウィンドウとワーカーコンテキスト間で転送して複数の場所で使用することが可能です。
 
-JavaScript では、Memory インスタンスはリサイズ可能な  [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (または共有メモリーの場合は [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)) とみなすことができます。`ArrayBuffer` と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (省略可) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクターから作成することができます。
+JavaScript では、Memory インスタンスはリサイズ可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (または共有メモリーの場合は [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)) とみなすことができます。`ArrayBuffer` と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (省略可) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクターから作成することができます。
 
 簡単な例を見ながら、探索を始めましょう。
 

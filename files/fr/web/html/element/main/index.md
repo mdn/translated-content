@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/main
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
 

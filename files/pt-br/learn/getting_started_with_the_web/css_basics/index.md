@@ -1,17 +1,9 @@
 ---
 title: CSS básico
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Aprender
-  - CSS
-  - Codificação de Scripts
-  - Estilo
-  - Iniciante
-  - Web
-  - l10n:prioridade
-translation_of: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Aprender/Getting_started_with_the_web/CSS_basico
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Folha de Estilo em Cascata) é o código que você usa para dar estilo à sua página Web. _CSS básico_ apresenta tudo que você precisa para começar. Responderemos a perguntas do tipo: Como mudo meu texto para preto ou vermelho? Como faço para que meu conteúdo apareça em determinados lugares na tela? Como decoro minha página com imagens e cores de fundo?
@@ -38,13 +30,13 @@ Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o es
 
 2. Salve o arquivo `index.html` e abra ele no seu navegador. Você deve ver uma página como essa:
 
-![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png)Se o texto do seu parágrafo estiver vermelho, parabéns! Você acabou de escrever seu primeiro CSS de sucesso.
+![A mozilla logo and some paragraphs. The paragraph text has been styled red by our css.](website-screenshot-styled.png)Se o texto do seu parágrafo estiver vermelho, parabéns! Você acabou de escrever seu primeiro CSS de sucesso.
 
 ### Anatomia de um conjunto de regras CSS
 
 Vamos dar uma olhada no CSS acima com mais detalhes:
 
-![](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png)
+![](css-declaration-small.png)
 
 Toda essa estrutura é chamada de **conjunto de regras** (mas geralmente usamos o termo "regra", por ser mais curto). Note os nomes das partes individuais:
 
@@ -135,13 +127,13 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
     }
     ```
 
-Você pode ajustar esses valores de `px` para o que você desejar, para deixar seu design com a aparência que quiser, mas no geral seu design deve parecer com isso:![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-font-small.png)
+Você pode ajustar esses valores de `px` para o que você desejar, para deixar seu design com a aparência que quiser, mas no geral seu design deve parecer com isso:![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
 ## Caixas, caixas, é tudo sobre caixas
 
 Uma coisa que você notará sobre escrever CSS é que muito disso é sobre caixas — indicar seu tamanho, cor, posição, etc. Muitos dos elementos HTML da sua página podem ser pensados como caixas umas em cima das outras.
 
-![a big stack of boxes or crates sat on top of one another](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/boxes.jpg)
+![a big stack of boxes or crates sat on top of one another](boxes.jpg)
 
 Como esperado, o layout CSS é baseado principalmente no _modelo de caixas_. Cada um dos blocks que ocupam espaço na sua página tem propriedades como essas:
 
@@ -149,7 +141,7 @@ Como esperado, o layout CSS é baseado principalmente no _modelo de caixas_. Cad
 - `border`, a linha sólida do lado de fora do padding.
 - `margin`, o espaço externo a um elemento.
 
-![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/box-model.png)
+![three boxes sat inside one another. From outside to in they are labelled margin, border and padding](box-model.png)
 
 Nessa seção nós também vamos usar:
 
@@ -234,21 +226,10 @@ Finalmente, centralizaremos a imagem para melhorar a aparência. Nós poderiamos
 
 Se você seguiu todas as instruções desse artigo, você deve terminar com uma página parecida com essa (você também pode [ver nossa versão aqui](http://mdn.github.io/beginner-html-site-styled/)):
 
-![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-final.png)
+![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [exemplo finalizado no Github](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
 Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/Aprender/CSS).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [JavaScript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

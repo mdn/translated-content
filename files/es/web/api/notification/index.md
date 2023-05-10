@@ -1,8 +1,8 @@
 ---
 title: Notification
-slug: Web/API/notification
-translation_of: Web/API/Notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 La interfaz `Notification` de la [Notifications API](/es/docs/Web/API/Notifications_API) se usa para configurar y mostrar notificaciones de escritorio al usuario. La apariencia y las funcionalidad especificas de esta notificacion varia a traves de las distintas plataformas, pero generalmente esta plataformas proveen un camino para proveer informacion al usuario de manera asincronica.
@@ -85,18 +85,18 @@ Las siguientes propiedades están listadas en las especificaciones más actualiz
 #### Manejador de Eventos(Event Handler)
 
 - {{domxref("Notification.onclick")}}
-  - : Un manejador para el {{event("click")}} event. Sera inicializado cada vez que el usuario de click en la notificacion.
+  - : Un manejador para el [`click`](/es/docs/Web/Reference/Events/click) event. Sera inicializado cada vez que el usuario de click en la notificacion.
 - {{domxref("Notification.onerror")}}
-  - : A handler for the {{event("error")}} event. It is triggered each time the notification encounters an error.
+  - : A handler for the [`error`](/es/docs/Web/Reference/Events/error) event. It is triggered each time the notification encounters an error.
 
 #### Obsolete handlers
 
 The following event handlers are still supported as listed in the [browser compatibility](#browser_compatibility) section below, but are no longer listed in the current spec. It is safe therefore to assume they are obsolete, and may stop working in future browser versions.
 
 - {{domxref("Notification.onclose")}}
-  - : A handler for the {{event("close")}} event. It is triggered when the user closes the notification.
+  - : A handler for the [`close`](/es/docs/Web/Reference/Events/close) event. It is triggered when the user closes the notification.
 - {{domxref("Notification.onshow")}}
-  - : A handler for the {{event("show")}} event. It is triggered when the notification is displayed.
+  - : A handler for the [`show`](/es/docs/Web/Reference/Events/show) event. It is triggered when the notification is displayed.
 
 ## Methods
 
@@ -174,15 +174,13 @@ function spawnNotification(theBody,theIcon,theTitle) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## See also
 

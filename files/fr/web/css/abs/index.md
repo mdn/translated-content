@@ -30,7 +30,7 @@ La fonction `abs()` prend une seule expression comme argument.
 
 ### Variables positives
 
-La fonction `abs()` peut être utilisée afin de s'assurer qu'une valeur est toujours positive. Dans l'exemple suivant, on a une propriété personnalisée,`--font-size`, qui est utilisée comme valeur pour [`font-size`](/fr/docs/Web/CSS/font-size). Envelopper cette propriété dans un appel à la fonction `abs()` convertira une valeur négative en une valeur positive.
+La fonction `abs()` peut être utilisée afin de s'assurer qu'une valeur est toujours positive. Dans l'exemple suivant, on a une propriété personnalisée, `--font-size`, qui est utilisée comme valeur pour [`font-size`](/fr/docs/Web/CSS/font-size). Envelopper cette propriété dans un appel à la fonction `abs()` convertira une valeur négative en une valeur positive.
 
 ```css
 h1 {

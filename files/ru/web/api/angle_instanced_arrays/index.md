@@ -3,6 +3,7 @@ title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 translation_of: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 Расширение **ANGLE_instanced_arrays** является частью API WebGL и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, если они используют одни и те же данные вершин, количество примитивов и тип.

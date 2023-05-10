@@ -1,13 +1,13 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-translation_of: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/CSS/Media_queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas conditionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales).
+La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/Web/CSS/Media_Queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas condicionales](/es/docs/Web/CSS/At-rule#grupos_de_reglas_condicionales).
 
 La regla-at `@media` puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.
 
@@ -19,16 +19,14 @@ Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto
 
 ## Tipos de medios
 
-- all
+- `all`
   - : Aplicable a todos los dispositivos.
-- print
-  - : Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Introducción/Media) para más información acerca de problemas de formateo específicos para los medios paginados.
-- screen
+- `print`
+  - : Destinado a material paginado y documentos visibles en una pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Media_Queries/Using_media_queries) para más información acerca de problemas de formateo específicos para los medios paginados.
+- `screen`
   - : Destinado a principalmente a pantallas de computadora a color.
-- speech
-  - : Destinado a sintetizadores de voz. Nota: CSS2 tenía un tipo de medio similar llamado 'aural' para este propósito. Vea el apéndice sobre hojas de estilo aural para más detalles.
 
-> **Nota:** CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), pero fueron descontinuados en [Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
+> **Nota:** CSS2.1 y Media Queries 3 definió varios tipos de media adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`, `speech`), pero fueron descontinuados en [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) y no deben ser usados.
 
 ## Características de Medios (media feature)
 
@@ -48,7 +46,7 @@ Cada _característica de medios_ verifica una característica específica del na
 | [`overflow-inline`](/es/docs/Web/CSS/@media/overflow-inline)                                                        | ¿Puede desplazarse hacia el contenido que excede los límites del viewport?                                                                                 | Incluido en Media Queries Nivel 4                                                                                                |
 | [`color`](/es/docs/Web/CSS/@media/color)                                                                            | Componente de número de bits por color del dispositivo, o cero si el dispositivo no es a color.                                                            |                                                                                                                                  |
 | [`color-index`](/es/docs/Web/CSS/@media/color-index)                                                                | Número de entradas en la tabla de búsqueda de color del dispositivo, o cero si el dispositivo no usa una tabla.                                            |                                                                                                                                  |
-| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                           | Modo de visualización de la aplicación, según se especifique en la [propiedad display](/es/docs/Web/Manifest#display) del manifiesto de la aplicación web. | Definido en la [especificación del Manifiesto de Aplicación Web](http://w3c.github.io/manifest/#the-display-mode-media-feature). |
+| [`display-mode`](/es/docs/Web/CSS/@media/display-mode)                                                           | Modo de visualización de la aplicación, según se especifique en la [propiedad display](/es/docs/Web/Manifest#display) del manifiesto de la aplicación web. | Definido en la [especificación del Manifiesto de Aplicación Web](http://w3c.github.io/manifest/#the-display-mode-media-feature). |
 | [`monochrome`](/es/docs/Web/CSS/@media/monochrome)                                                                  | Bits por pixel en el buffer de marco monocromático del dispositivo, o 0 si el dispositivo no es monocromático.                                             |                                                                                                                                  |
 | [`inverted-colors`](/es/docs/Web/CSS/@media/inverted-colors)                                                        | ¿El agente usuario o el Sistema Operativo está invirtiendo los colores?                                                                                    | Incluido en Media Queries Nivel 4                                                                                                |
 | [`pointer`](/es/docs/Web/CSS/@media/pointer)                                                                        | ¿El mecanismo de entrada principal es un dispositivo apuntador? y de ser así, ¿qué tan preciso es?                                                         | Incluido en Media Queries Nivel 4                                                                                                |
@@ -57,9 +55,9 @@ Cada _característica de medios_ verifica una característica específica del na
 | [`any-hover`](/es/docs/Web/CSS/@media/any-hover)                                                                    | ¿Algún mecanismo de entrada disponible permite que el usuario posicione el puntero sobre los elementos?                                                    | Incluido en Media Queries Nivel 4                                                                                                |
 | [`light-level`](/es/docs/Web/CSS/@media/light-level)                                                                | Nivel de luz ambiental actual                                                                                                                              | Incluido en Media Queries Nivel 4                                                                                                |
 | [`scripting`](/es/docs/Web/CSS/@media/scripting)                                                                    | ¿Se soporta lenguaje de script (p.ej. JavaScript)?                                                                                                         | Incluido en Media Queries Nivel 4                                                                                                |
-| [`device-width`](/es/docs/Web/CSS/@media/device-width) {{obsolete_inline}}                                     | Anchura de la superficie de representación del dispositivo                                                                                                 | Descontinuado en Media Queries Nivel 4                                                                                           |
-| [`device-height`](/es/docs/Web/CSS/@media/device-height) {{obsolete_inline}}                                   | Altura de la superficie de representación del dispositivo                                                                                                  | Descontinuado en Media Queries Nivel 4                                                                                           |
-| [`device-aspect-ratio`](/es/docs/Web/CSS/@media/device-aspect-ratio) {{obsolete_inline}}                       | Relación de aspecto anchura-altura del dispositivo                                                                                                         | Descontinuado en Media Queries Nivel 4                                                                                           |
+| [`device-width`](/es/docs/Web/CSS/@media/device-width) {{deprecated_inline}}                                     | Anchura de la superficie de representación del dispositivo                                                                                                 | Descontinuado en Media Queries Nivel 4                                                                                           |
+| [`device-height`](/es/docs/Web/CSS/@media/device-height) {{deprecated_inline}}                                   | Altura de la superficie de representación del dispositivo                                                                                                  | Descontinuado en Media Queries Nivel 4                                                                                           |
+| [`device-aspect-ratio`](/es/docs/Web/CSS/@media/device-aspect-ratio) {{deprecated_inline}}                       | Relación de aspecto anchura-altura del dispositivo                                                                                                         | Descontinuado en Media Queries Nivel 4                                                                                           |
 | [`-webkit-device-pixel-ratio`](/es/docs/Web/CSS/@media/-webkit-device-pixel-ratio) {{non-standard_inline}} | Número de pixeles reales del dispositivo por pixel CSS                                                                                                     | No estándar; Específica de WebKit/Blink. De ser posible, use la característica `resolution en su lugar`.                         |
 | [`-webkit-transform-3d`](/es/docs/Web/CSS/@media/-webkit-transform-3d) {{non-standard_inline}}             | ¿Se soportan {{cssxref("transform", "transformaciones")}} 3D?                                                                              | No estándar; Específica de WebKit/Blink                                                                                          |
 | [`-webkit-transform-2d`](/es/docs/Web/CSS/@media/-webkit-transform-2d) {{non-standard_inline}}             | ¿Se soportan {{cssxref("transform", "transformaciones")}} 2D?                                                                              | No estándar; Específica de WebKit                                                                                                |
@@ -88,19 +86,13 @@ Cada _característica de medios_ verifica una característica específica del na
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentarios                                                                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Compat', '#css-media-queries', 'CSS Media Queries')}} | {{Spec2('Compat')}}                 | Estandariza las características `-webkit-device-pixel-ratio` y `-webkit-transform-3d`.                                                                                                                                            |
-| {{SpecName('CSS3 Conditional', '#at-media', '@media')}}                 | {{Spec2('CSS3 Conditional')}} | Define la sintaxis básica de la regla `@media`.                                                                                                                                                                                   |
-| {{SpecName('CSS4 Media Queries', '#media', '@media')}}                 | {{Spec2('CSS4 Media Queries')}} | Se agregan las características `scripting`, `pointer`, `hover`, `light-level`, `update-frequency`, `overflow-block`, y `overflow-inline`. Se descontinúan todos los tipos de medios excepto `screen`, `print`, `speech`, y `all`. |
-| {{SpecName('CSS3 Media Queries', '#media0', '@media')}}                 | {{Spec2('CSS3 Media Queries')}} | Sin cambios.                                                                                                                                                                                                                      |
-| {{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}         | {{Spec2('CSS2.1')}}                 | Definición inicial.                                                                                                                                                                                                               |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media")}}
+{{Compat}}
 
 ## Véase también
 
-- [Media queries](/en/CSS/Media_queries)
+- [Media queries](/es/docs/Web/CSS/Media_Queries)
 - El modelo CSSOM {{ domxref("CSSMediaRule") }} asociado a esta regla-at.

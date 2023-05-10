@@ -45,4 +45,4 @@ CSS 的 `code` 選擇器設定可以透過蓋過瀏覽器預設，而用戶個�
 - {{HTMLElement("command")}} (deprecated)
 - {{HTMLElement("var")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

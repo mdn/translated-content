@@ -1,13 +1,8 @@
 ---
 title: Evento input
 slug: Web/API/HTMLElement/input_event
-tags:
-  - DOM
-  - Evento
-  - InputEvent
-  - Referencia
-translation_of: Web/API/HTMLElement/input_event
 ---
+
 {{APIRef}}
 
 El evento **`input`** se dispara cuando el valor (`value`) de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido cambiado.
@@ -43,9 +38,9 @@ El evento **`input`** se dispara cuando el valor (`value`) de un elemento {{HTML
 
 El evento también aplica a los elementos con la propiedad {{domxref("HTMLElement.contentEditable", "contenteditable")}} habilidado, y para cualquier otro elemento cuando la propiedad {{domxref("Document.designMode", "designMode")}} esta encendida. En el caso de un `contenteditable` y `designMode`, el objetivo del evento es el the event target is the _editing host_. Si estas propiedades aplian a múltiples elementos, el host de edición es el elemento ancestro más cercano cuyo padre no es editable.
 
-Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento {{event("change")}} en su lugar para estos tipos.
+Para elementos `<input>` con `type=checkbox` o `type=radio`, el evento `input` debería disparar cuando el usuario alterna el control, por [la especificación HTML5](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2). Sin embargo, históricamente no siempre es el caso. Revise la compatibilidad o use el evento [`change`](/es/docs/Web/Reference/Events/change) en su lugar para estos tipos.
 
-> **Nota:** A diferencia de `input`, el evento {{event("change")}} no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
+> **Nota:** A diferencia de `input`, el evento [`change`](/es/docs/Web/Reference/Events/change) no es disparado necesariamente por cada alteración al valor (`value`) de un elemento.
 
 ## Ejemplos
 
@@ -79,10 +74,7 @@ function updateValue(e) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#event-input-input", "input event")}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('DOM3 Events', "#event-type-input", "input event")}}                 | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 
@@ -94,6 +86,6 @@ function updateValue(e) {
 - {{domxref("GlobalEventHandlers.oninput")}}
 - Eventos relacionados
 
-  - {{event("beforeinput")}}
-  - {{event("change")}}
-  - [`invalid`](/en-US/docs/Web/API/Constraint_validation/invalid_event)
+  - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
+  - [`change`](/es/docs/Web/Reference/Events/change)
+  - [`invalid`](/es/docs/Web/API/Constraint_validation/invalid_event)

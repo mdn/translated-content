@@ -1,14 +1,9 @@
 ---
 title: 'HTML el atributo: min'
 slug: Web/HTML/Attributes/min
-tags:
-  - Atributos
-  - Restricción de validación
-  - atributo
-  - min
-translation_of: Web/HTML/Attributes/min
 original_slug: Web/HTML/Atributos/min
 ---
+
 El atributo {{HTMLAttrxRef("min", "input")}} define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el [value](/es/docs/Web/HTML/Element/input#attr-value) del elemento es menor que esto, el elemento falla la [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Este valor debe ser menor o igual que el valor del atributo {{HTMLAttrxRef("max", "input")}}. Si se especifica un valor para {{HTMLAttrxRef("min", "input")}} que no es un número válido, la entrada no tiene un valor mínimo.
 
 Válido para los tipos de entrada numérica, incluidos los tipos {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} y {{HTMLElement("input/range", "range")}}, y el elemento {{htmlelement('meter')}}, el atributo {{HTMLAttrxRef("min", "input")}} es un número que especifica el valor mínimo de un control de formulario para ser considerado válido.
@@ -63,14 +58,11 @@ Si no se incluye explícitamente, `step` tiene como valor predeterminado 1 para 
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{ Spec2('HTML WHATWG') }} |            |
-| {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}} | {{ Spec2('HTML5 W3C') }}     |            |
+{{Specifications}}
 
 ## Problemas de accesibilidad
 

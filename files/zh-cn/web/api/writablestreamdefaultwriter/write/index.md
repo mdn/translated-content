@@ -5,9 +5,9 @@ slug: Web/API/WritableStreamDefaultWriter/write
 
 {{APIRef("Streams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层 sink，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
+{{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层接收器，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
 
-请注意，“成功”的含义取决于底层 sink；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
+请注意，“成功”的含义取决于底层接收器；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
 
 ## 语法
 
@@ -31,7 +31,7 @@ write(chunk)
 
 ## 示例
 
-下面的例子说明了这个接口的几个功能。它展示了使用自定义 sink 和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
+下面的例子说明了这个接口的几个功能。它展示了使用自定义接收器和由 API 提供的队列策略创建的 `WritableStream`。然后它调用一个 `sendMessage()` 的函数，传递新创建的流和一个字符串。在这个函数内部，它调用流的 `getWriter()` 方法，该方法返回一个 {{domxref("WritableStreamDefaultWriter")}} 实例。`forEach()` 用于将字符串的每个分块写入流。最后，`write()` 和 `close()` 方法都会返回 promise，promise 的状态由对应的操作是否成功来决定。
 
 ```js
 const list = document.querySelector('ul');

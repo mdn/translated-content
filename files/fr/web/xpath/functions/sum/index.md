@@ -20,7 +20,7 @@ sum( ensemble-de-nœuds )
 ### Arguments
 
 - `ensemble-de-nœuds`
-  - : L'ensemble de nœuds à évaluer. Chaque nœud de l'ensemble est évalué comme s'il était passé à la fonction [`number()`](fr/XPath/Fonctions/number), et la somme des nombres résultants est retournée.
+  - : L'ensemble de nœuds à évaluer. Chaque nœud de l'ensemble est évalué comme s'il était passé à la fonction [`number()`](/fr/XPath/Fonctions/number), et la somme des nombres résultants est retournée.
 
 ### Retour
 

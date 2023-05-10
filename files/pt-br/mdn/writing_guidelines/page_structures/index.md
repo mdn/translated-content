@@ -1,14 +1,14 @@
 ---
 title: Tabelas de compatibilidade
 slug: MDN/Writing_guidelines/Page_structures
-translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
+
 {{MDNSidebar}}
 
 A MDN possui um formato padrão para tabelas de compatibilidade para nossa documentação da Web aberta; isto é, documentação de tecnologias como DOM, HTML, CSS, JavaScript, SVG etc., compartilhadas em todos os navegadores. Este artigo é um guia de "introdução" sobre como adicionar, manter o banco de dados a partir do qual as tabelas de compatibilidade são geradas e como integrar as tabelas em artigos.
 
-Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados ​​para representar os dados, consulte o [guia do colaborador](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md) do repositório de dados e o [guia de diretrizes de dados](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md).
+Para obter uma documentação mais avançada, bem como as alterações mais recentes nos processos e esquemas JSON usados para representar os dados, consulte o [guia do colaborador](https://github.com/mdn/browser-compat-data/blob/master/docs/contributing.md) do repositório de dados e o [guia de diretrizes de dados](https://github.com/mdn/browser-compat-data/blob/master/docs/data-guidelines.md).
 
 Se você tiver dúvidas ou descobrir problemas, compartilhe conosco no [fórum de discussão da MDN](https://discourse.mozilla-community.org/c/mdn).
 
@@ -143,12 +143,7 @@ Inside a feature `__compat` member, you need to include the following members:
 
 The names of the browser members are defined in the schema (see [Browser identifiers](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers)). You should use the full list of currently defined identifiers. If you wish to add another browser, talk to us first, as this could have a wide-ranging impact and should not be done without careful thought.
 
-In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on). The different values you might want to include are as follows:
-
-- A version number: If you know the exact version in which a browser started to support your feature, use a string representing the number, e.g. "47".
-- `true`: If a browser supports a feature but you don't know the exact version number, use the value `true`. This equivalent to the `\{{CompatVersionUnknown}}` macro call in the old manual tables.
-- `false`: If a browser does not support a feature, use the value `false`. This is equivalent to the the `\{{CompatNo}}` macro call in the old manual tables.
-- `null`: If you don't know whether a browser supports a feature or not, use the value `null`. This is equivalent to the `\{{CompatUnknown}}` macro call in the old manual tables.
+In a basic browser compat data file, you'll only need to include "version_added" inside the browser identifier members (we'll cover [Advanced cases](#advanced_cases) later on).
 
 Inside the `status` member, you'll include three submembers:
 

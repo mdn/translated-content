@@ -1,12 +1,8 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -55,13 +51,11 @@ align-self: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Box Alignment', '#align-self-property', 'align-self') }} | {{ Spec2('CSS3 Box Alignment') }} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.align-self")}}
+{{Compat}}
 
 ## Véase también
 

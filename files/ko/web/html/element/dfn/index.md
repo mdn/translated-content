@@ -1,15 +1,9 @@
 ---
 title: '<dfn>: 정의 요소'
 slug: Web/HTML/Element/dfn
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/dfn
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dfn>` 요소**는 현재 맥락이나 문장에서 정의하고 있는 용어를 나타냅니다. `<dfn>`에서 가장 가까운 {{htmlelement("p")}}, {{htmlelement("dt")}}/{{htmlelement("dd")}} 쌍, {{htmlelement("section")}} 조상 요소를 용어 정의로 간주합니다.
 
@@ -52,7 +46,7 @@ translation_of: Web/HTML/Element/dfn
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/definition_role'><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
@@ -176,7 +170,7 @@ arguably done more to advance science than any device ever built.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dfn")}}
+{{Compat}}
 
 ## 같이 보기
 

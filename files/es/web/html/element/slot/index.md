@@ -1,18 +1,9 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Componentes Web
-  - Componentes Web HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - slot
-  - sombra dom
-translation_of: Web/HTML/Element/slot
 original_slug: Web/HTML/Elemento/slot
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
 
@@ -43,7 +34,7 @@ original_slug: Web/HTML/Elemento/slot
     </tr>
     <tr>
       <th scope="row">Eventos</th>
-      <td>{{event("slotchange")}}</td>
+      <td>[`slotchange`](/es/docs/Web/Reference/Events/slotchange)</td>
     </tr>
     <tr>
       <th scope="row">Omisión de etiqueta</th>
@@ -83,7 +74,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("name")}}
   - : El nombre del slot.
-  
+
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
 
 ## Ejemplos
@@ -118,13 +109,10 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 > **Nota:** Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots).
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}                             | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

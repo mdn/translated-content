@@ -1,8 +1,8 @@
 ---
 title: left
 slug: Web/CSS/left
-translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 La propiedad `left` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
@@ -128,12 +128,11 @@ pre {
 
 ## Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-left)
-- [CSS 3](http://www.w3.org/Style/CSS/current-work#positioning)
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.left")}}
+{{Compat}}
 
 ## Ver también
 

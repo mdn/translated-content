@@ -3,6 +3,7 @@ title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
 translation_of: Web/HTTP/Status/415
 ---
+
 {{HTTPSidebar}}
 
 Код ответа на ошибку клиента HTTP **415 Unsupported Media Type** указывает, что сервер отказывается принять запрос, потому что формат содержимого не поддерживается сервером.

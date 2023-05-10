@@ -1,8 +1,8 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
-translation_of: Web/API/DOMError
 ---
+
 {{ APIRef("DOM") }}
 
 La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de error.
@@ -38,13 +38,9 @@ La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de
 | `InvalidNodeTypeError`       | El nodo (o uno de sus antecedentes) es incorrecto.                      |
 | `DataCloneError`             | El objeto no puede clonarse.                                            |
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DOMError")}}
-
-## Especificaciones
-
-- [DOM 4 DOMError specification](https://www.w3.org/TR/dom/#interface-domerror)
+{{Compat}}
 
 ## Véase también
 

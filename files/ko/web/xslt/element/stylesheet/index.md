@@ -1,11 +1,9 @@
 ---
 title: stylesheet
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/stylesheet
 original_slug: Web/XSLT/stylesheet
 ---
+
 {{ XsltRef() }}
 
 `<xsl:stylesheet>`(나 동등한 `<xsl:transform>`) 요소는 스타일시트의 최외곽 요소입니다.

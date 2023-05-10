@@ -1,15 +1,9 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
+
 {{JSRef}}
 
 El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propiedad interna `[[Prototype]]`) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.
@@ -33,7 +27,7 @@ Object.setPrototypeOf(obj, prototype);
 
 Arroja una excepción del tipo {{jsxref("TypeError")}} si el objeto cuyo `[[Prototype]]` se va a modificar no es extensible de acuerdo con {{jsxref("Object.isExtensible()")}}. No hace nada si el parametro `prototype` no es un objeto o {{jsxref("null")}} (p.e., número, cadena, booleano, o {{jsxref("undefined")}}). De cualquier otra forma, este método cambia la propiedad `[[Prototype]]` del `obj` al valor nuevo.
 
-`Object.setPrototypeOf()` está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial {{jsxref("Object.prototype.__proto__")}}.
+`Object.setPrototypeOf()` está en el último borrador del estandar ECMAScript6. Es considerado generalmente la manera adecuada de establecer el prototipo de un objeto, contra la propiedad más controversial [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ## Ejemplos
 
@@ -43,7 +37,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Polyfill
 
-Utilizando la vieja propiedad {{jsxref("Object.prototype.__proto__")}}, podemos definir facilmente `Object.setPrototypeOf` si aún no está disponible:
+Utilizando la vieja propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), podemos definir facilmente `Object.setPrototypeOf` si aún no está disponible:
 
 ```js
 // Solo funciona en Chrome y FirefoxOnly works in Chrome y FireFox, no funciona en IE:
@@ -55,7 +49,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 ## Agregando cadenas de prototipo
 
-Una combinación de `Object.getPrototypeOf()` y {{jsxref("Object.proto", "Object.prototype.__proto__")}} permite agregar una nueva cadena de prototipos al nuevo prototipo del objeto.
+Una combinación de `Object.getPrototypeOf()` y [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) permite agregar una nueva cadena de prototipos al nuevo prototipo del objeto.
 
 ```js
 /**
@@ -165,17 +159,15 @@ george(); // 'Hello guys!!'
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado               | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-object.setprototypeof', 'Object.setProtoypeOf')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## Ver también
 
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

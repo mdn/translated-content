@@ -1,13 +1,8 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - Layout
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`writing-mode`** define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem
@@ -164,7 +159,7 @@ O CSS que ajusta a direcionalidade do conteúdo é algo como esse:
 
 Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte do seu navegador para `writing-mode` estiver incompleto.
 
-![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
+![](writing-mode-actual-result.png)
 
 ## Especificação
 

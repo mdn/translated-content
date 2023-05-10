@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 В этом упражнении мы будем использовать проект прыгающих шаров из предыдущей статьи и добавим в него новые интересные возможности.
@@ -26,7 +27,7 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 Следующий скриншот даёт вам представление о том, как должна выглядеть готовая программа:
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Чтобы дать вам больше идеи, посмотрите на [законченный пример](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (не заглядывая в исходный код!)
 

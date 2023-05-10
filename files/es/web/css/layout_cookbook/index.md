@@ -1,8 +1,8 @@
 ---
 title: Libro de recetas de maquetación CSS
 slug: Web/CSS/Layout_cookbook
-translation_of: Web/CSS/Layout_cookbook
 ---
+
 {{CSSRef}}
 
 El libro de recetas de maquetación CSS tiene como objetivo reunir recetas para patrones de diseño comunes, cosas que podrías necesitar para implementar en tus propios sitios. Además de proporcionar código que puedes utilizar como punto de partida en tus proyectos, estas recetas resaltan las diferentes formas en que se pueden utilizar las especificaciones de diseño y las opciones que puedes tomar como desarrollador.

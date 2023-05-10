@@ -1,14 +1,8 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
@@ -58,14 +52,11 @@ main :only-of-type {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.only-of-type")}}
+{{Compat}}
 
 ## Ver también
 

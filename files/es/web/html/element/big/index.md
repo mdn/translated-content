@@ -1,25 +1,21 @@
 ---
 title: big
 slug: Web/HTML/Element/big
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/big
 original_slug: Web/HTML/Elemento/big
 ---
+
 ### Definición
 
 **big** de big=grande
 
 - Muestra el texto marcado con un tamaño de fuente más grande. El tamaño de la fuente puede definirse en una escala del 1 al 7, **big** aumenta este valor en un punto.
   - : **Sus etiquetas son**: `<big>` y `</big>` (Ambas obligatorias).
-  
+
     **Crea una caja**: En línea.
 
-    **Está definido como**: Elemento [de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Está definido como**: Elemento [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
 
 #### Atributos
 
@@ -266,7 +262,7 @@ Observa el siguiente ejemplo:
 
 ### Notas
 
-- **big** tiene un elemento opuesto, [small](es/HTML/Elemento/small). Si **big** aumenta el tamaño de la fuente [small](es/HTML/Elemento/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
+- **big** tiene un elemento opuesto, [small](/es/HTML/Elemento/small). Si **big** aumenta el tamaño de la fuente [small](/es/HTML/Elemento/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
 - El W3C (y nosotros) desaconseja el uso de este elemento, para manejar el tamaño del texto es mejor usar CSS.
 
 ### Referencia

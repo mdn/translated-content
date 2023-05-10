@@ -1,14 +1,9 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
-tags:
-  - Date
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toISOString
 ---
+
 {{JSRef}}
 
 El método **`toISOString()`** devuelve una cadena en el formato _simplificado_ extendido ISO ([ISO 8601](http://en.wikipedia.org/wiki/ISO_8601)), que siempre mide 24 o 27 caracteres de largo: (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectivamente). El uso horario no tiene retraso respecto a UTC, como lo denota el sufijo `"Z"`.
@@ -67,14 +62,11 @@ if (!Date.prototype.toISOString) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                  | Comentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}                     | {{Spec2('ES5.1')}} | Definición inicial. Implementado en javascript 1.8 |
-| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toISOString")}}
+{{Compat}}
 
 ## Ver también
 

@@ -11,6 +11,7 @@ tags:
   - метод
 translation_of: Web/API/USB/requestDevice
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Метод **`requestDevice()`** интерфейса {{domxref("USB")}} возвращает {{jsxref("Promise")}}, возвращающий экземпляр {{domxref("USBDevice")}}, если необходимое устройство было найдено. Вызов этого метода начинает процесс соединения браузера с устройством.

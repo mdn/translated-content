@@ -1,15 +1,9 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/details
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<details>` 요소**는 "열림" 상태일 때만 내부 정보를 보여주는 정보 공개 위젯을 생성합니다. 요약이나 레이블은 {{htmlelement("summary")}} 요소를 통해 제공할 수 있습니다.
 
@@ -56,7 +50,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
@@ -258,7 +252,7 @@ details > p {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## 같이 보기
 

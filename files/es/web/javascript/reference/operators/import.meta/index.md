@@ -1,9 +1,9 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 El objeto **`import.meta`** expone el contenido especifico de la metadata al módulo JavaScript. Este contiene informacion sobre el módulo, como por ejemplo, la URL del mismo.
@@ -71,14 +71,11 @@ Tal argumento específico del archivo podria ser complementario al usado en toda
 
 ## Especificaciones
 
-| Especificaciones                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| [`import.meta`](https://tc39.es/proposal-import-meta/#prod-ImportMeta) proposal                                          |
-| {{SpecName("HTML WHATWG", "webappapis.html#hostgetimportmetaproperties", "import.meta")}} |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Ver también
 

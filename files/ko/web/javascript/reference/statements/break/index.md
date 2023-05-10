@@ -1,12 +1,8 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
+
 {{jsSidebar("Statements")}}
 
 **`break` 문**은 현재 반복문, {{jsxref("Statements/switch", "switch")}} 문, 또는 {{jsxref("Statements/label", "label")}} 문을 종료하고, 그 다음 문으로 프로그램 제어를 넘깁니다.

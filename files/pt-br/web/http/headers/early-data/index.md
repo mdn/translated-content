@@ -1,13 +1,6 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Headers/Early-Data
-tags:
-  - Cabeçalho HTTP
-  - Client hints
-  - HTTP
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Early-Data
 ---
 {{SeeCompatTable}}{{HTTPSidebar}}
 

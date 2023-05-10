@@ -3,6 +3,7 @@ title: Navigator.getVRDisplays()
 slug: Web/API/Navigator/getVRDisplays
 translation_of: Web/API/Navigator/getVRDisplays
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 Метод **`getVRDisplays()`** интерфейса {{domxref("Navigator")}} возвращает объект типа [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), из которого можно получить массив объектов типа {{domxref("VRDisplay")}}, являющихся отображением любого доступного из подключённых к компьютеру VR устройств.

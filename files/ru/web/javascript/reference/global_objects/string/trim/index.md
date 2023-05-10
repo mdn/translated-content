@@ -1,6 +1,6 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 tags:
   - ECMAScript5
   - JavaScript
@@ -10,6 +10,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка

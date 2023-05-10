@@ -1,14 +1,13 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-tags:
-  - Numérico
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
+
 {{JSRef}}
 
 O método **`Number.isInteger()`** determina se o valor passado é um inteiro.
+
+{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 
 ## Sintaxe
 

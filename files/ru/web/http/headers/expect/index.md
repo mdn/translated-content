@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Expect
 translation_of: Web/HTTP/Headers/Expect
 original_slug: Web/HTTP/Заголовки/Expect
 ---
+
 {{HTTPSidebar}}
 
 Запрос "HTTP Expect" указывает ожидания, которые должен выполнить сервер, чтобы правильно обработать запрос.

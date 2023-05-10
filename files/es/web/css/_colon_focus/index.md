@@ -1,14 +1,8 @@
 ---
 title: ':focus'
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:focus`** [CSS](/es/docs/Web/CSS) representa un elemento (como una entrada de formulario) que ha recibido el foco. Generalmente se activa cuando el usuario hace clic, toca un elemento o lo selecciona con la tecla "Tab" del teclado.
@@ -67,16 +61,11 @@ Nunca elimines el outline de un foco sin reemplazarlo por otro tipo de indicador
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentarios                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                     | {{Spec2('HTML WHATWG')}}     | Define la semántica específica de HTML. |
-| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                                     | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                          |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio.                          |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}                 | {{Spec2('CSS2.1')}}             | Definición Inicial.                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus")}}
+{{Compat}}
 
 ## Ver también
 

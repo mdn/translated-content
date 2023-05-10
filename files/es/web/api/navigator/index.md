@@ -1,11 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-page-type: web-api-interface
-translation_of: Web/API/Navigator
 l10n:
-  sourceCommit: 165b70e57270af4ba85526d92cce74d51d12c39d165b70e57270af4ba85526d92cce74d51d12c39d
-browser-compat: api.Navigator
+  sourceCommit: 165b70e57270af4ba85526d92cce74d51d12c39d
 ---
 
 {{APIRef("DOM")}}

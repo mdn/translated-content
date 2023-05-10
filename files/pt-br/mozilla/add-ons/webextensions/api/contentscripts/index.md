@@ -1,8 +1,8 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 ---
+
 {{AddonSidebar}}
 
 Use esta API para registrar o conteúdo de scripts. Registrando um conteúdo de scripts instrui o navegador para inserir conteúdo de script fornecido em páginas que batem com um padrão de URL fornecida.

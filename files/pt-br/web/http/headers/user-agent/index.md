@@ -1,13 +1,8 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - Agente de Usuário
-  - Cabeçalho HTTP
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.

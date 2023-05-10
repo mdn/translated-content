@@ -1,15 +1,9 @@
 ---
 title: ':any'
 slug: Web/CSS/:is
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-Clase CSS
-  - Referencia
-translation_of: Web/CSS/:is
-translation_of_original: Web/CSS/:any
 original_slug: Web/CSS/:any
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -142,6 +136,10 @@ y lo siguiente es rápido:
 :-moz-any(.a, .d) > .b, :-moz-any(.a, .d) > .c
 ```
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("css.selectors.is")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

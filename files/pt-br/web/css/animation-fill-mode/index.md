@@ -1,8 +1,8 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`animation-fill-mode`** define como uma animação [CSS](/pt-BR/docs/Web/CSS) aplica estilos ao seu destino antes e depois de sua execução.
@@ -54,7 +54,7 @@ animation-fill-mode: both, forwards, none;
 - `both`
   - : The animation will follow the rules for both forwards and backwards, thus extending the animation properties in both directions.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
+> **Nota:** When you specify multiple comma-separated values on an `animation-*` property, they will be assigned to the animations specified in the {{cssxref("animation-name")}} property in different ways depending on how many there are. For more information, see [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
 
 ### Formal syntax
 
@@ -101,7 +101,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 
 {{EmbedLiveSample('Example',700,300)}}
 
-See [CSS animations](/en/CSS/CSS_animations) for more examples.
+See [CSS animations](/pt-BR/CSS/CSS_animations) for more examples.
 
 ## Specifications
 

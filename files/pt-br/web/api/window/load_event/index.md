@@ -1,7 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
 ```
@@ -12,7 +11,7 @@ dependentes terminaram de carregar.
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
 - Interface
   - : UIEvent
 - Bubbles

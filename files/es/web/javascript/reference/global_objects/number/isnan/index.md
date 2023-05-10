@@ -1,7 +1,6 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isNaN
 ---
 {{JSRef}}
@@ -63,14 +62,11 @@ Number.isNaN = Number.isNaN || function(value) {
 
 ## Especificaciones
 
-| Specification                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isnan', 'Number.isnan')}}     | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Ver también
 

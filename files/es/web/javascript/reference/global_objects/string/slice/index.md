@@ -1,15 +1,9 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - Cadena
-  - JavaScript
-  - Método(2)
-  - Prototipo
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/slice
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen
@@ -73,16 +67,11 @@ cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.slice', 'String.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.slice")}}
+{{Compat}}
 
 ## Vea También
 

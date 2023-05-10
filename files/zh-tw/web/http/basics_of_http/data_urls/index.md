@@ -4,6 +4,8 @@ slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
+{{HTTPSidebar}}
+
 `data` URIs, 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 文件定義, 允許作者在文件中嵌入檔案.
 
 ## 表達式
@@ -73,7 +75,7 @@ function generateDataURI(file) {
 
 ## 安全
 
-> **備註：** Prior to {{Gecko("6.0")}}, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
+> **備註：** Prior to Gecko 6.0, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
 
 ## 常見的問題
 

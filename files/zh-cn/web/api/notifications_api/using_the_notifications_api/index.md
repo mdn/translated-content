@@ -13,7 +13,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 ![](android-notification.png)
 
-![](https://mdn.mozillademos.org/files/10961/mac-notification.png)
+![](mac-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。
 
@@ -84,13 +84,13 @@ window.addEventListener('load', function () {
 
 一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：
 
-- [`show`](/zh-CN/docs/Web/API/Element/show_event)
+- {{domxref("Notification.show_event","show")}}
   - : 当通知被显示给用户时触发。
-- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- {{domxref("Notification.click_event","click")}}
   - : 当用户点击通知时触发。
-- {{event("close")}}
+- {{domxref("Notification.close_event","close")}}
   - : 当通知被关闭时触发。
-- [`error`](/zh-CN/docs/Web/API/Element/error_event)
+- {{domxref("Notification.error_event","error")}}
   - : 当通知发生错误的时候触发。这通常是因为通知由于某些原因而无法显示。
 
 这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
@@ -108,7 +108,7 @@ window.addEventListener('load', function () {
 >
 > 当你接收到一个“close”事件时，并不能保证这个通知是被用户关闭的。这是符合规范的，其中指出：“当一个通知被关闭时，通知的关闭动作都必须执行，不论是底层通知平台导致，还是用户导致。”
 
-### 简单的例子
+### 简单的示例
 
 假定有如下的 HTML:
 
@@ -170,7 +170,7 @@ window.addEventListener('load', function () {
 
 这是实际的结果：
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('简单的示例', '100%', 30) }}
 
 ## 处理重复的通知
 
@@ -246,7 +246,7 @@ window.addEventListener('load', function () {
 
 实际效果如下：
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('使用标记的例子', '100%', 30) }}
 
 ## 接收点击应用通知的通知
 

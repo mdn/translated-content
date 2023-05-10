@@ -5,33 +5,37 @@ slug: Web/API/ReadableStreamDefaultReader
 
 {{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 的接口 表示一个可被用于读取来自网络提供的流数据 (例如 fetch 请求) 的默认读取器
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认 reader。
 
-## 构造方法
+`ReadableStreamDefaultReader` 可以用于读取底层为任意类型源的 {{domxref("ReadableStream")}}（这与 {{domxref("ReadableStreamBYOBReader")}} 不同，后者仅可以和*底层为字节源*的可读流一起使用）。
+
+然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其他底层源，流将始终使用来自内置队列的数据满足读取请求。
+
+## 构造函数
 
 - [`ReadableStreamDefaultReader()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader)
-  - : 创建 和 返回 一个 `ReadableStreamDefaultReader()` 对象实例。
+  - : 创建和返回一个 `ReadableStreamDefaultReader()` 对象实例。
 
-## 属性
+## 实例属性
 
 - [`ReadableStreamDefaultReader.closed`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/closed)
 
-  - : 允许你编写 当 stream 结束时 执行的代码 . 如果这个 stream 变成关闭状态或者 reader 的锁 (lock) 被释放 则返回一个状态是 fulfills 的 promise，如果这个 stream 报错则返回 rejects 的 promise.
+  - : 返回一个 promise，该 promise 在流关闭时兑现，如果流抛出错误或 reader 的锁被释放，则拒绝。此属性使你能够编写响应流过程结束时执行的代码。
 
-## 方法
+## 实例方法
 
 - [`ReadableStreamDefaultReader.cancel()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/cancel)
-  - : 取消这个 stream，表示对这个 stream 失去了兴趣。提供的参数将传递给源 source，可能会也可能不会用到这些参数。
+  - : 返回一个 {{jsxref("Promise")}}，当流被取消时兑现。调用该方法表示消费者对该流失去兴趣。提供的 `reason` 参数将会传递给底层源，其可能使用它，也可能不使用它。
 - [`ReadableStreamDefaultReader.read()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/read)
-  - : 返回一个 promise，提供对 stream 内部队列中下一个块 (chunk) 访问的 promise.
+  - : 返回一个 promise，提供对流内部队列中下一个分块的访问权限。
 - [`ReadableStreamDefaultReader.releaseLock()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/releaseLock)
   - : 释放读取这个 stream 的锁。
 
-## 例子
+## 示例
 
-在下面的例子中，{{domxref("Response")}} 被创建为流 HTML 片段 fetched 来自其他源。
+在下面的示例中，创建自定义 {{domxref("Response")}}，将从其他资源获取的 HTML 片段流式传输到浏览器。
 
-它展示了一个 {{domxref("ReadableStream")}} 和一个 [`Uint8Array`](/zh-CN/docs/Web/API/Uint8Array)组合使用的例子。
+它展示了一个 {{domxref("ReadableStream")}} 和一个 [`Uint8Array`](/zh-CN/docs/Web/API/Uint8Array) 组合使用的例子。
 
 ```js
 fetch("https://www.example.org/").then((response) => {
@@ -51,11 +55,12 @@ fetch("https://www.example.org/").then((response) => {
 
           // Get the data and send it to the browser via the controller
           controller.enqueue(value);
-        }).then(push);
-      };
+          push();
+        });
+      }
 
       push();
-    }
+    },
   });
 
   return new Response(stream, { headers: { "Content-Type": "text/html" } });

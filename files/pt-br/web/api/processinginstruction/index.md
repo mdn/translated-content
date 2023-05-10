@@ -1,10 +1,6 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
-tags:
-  - API
-  - DOM
-translation_of: Web/API/ProcessingInstruction
 ---
 {{APIRef("DOM")}}
 
@@ -25,9 +21,9 @@ Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/
 
 ### Especificações
 
-- [DOM Level 1 Core: ProcessingInstruction interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
+- [DOM Level 1 Core: ProcessingInstruction interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
 
 ### Veja também
 
-- [document.createProcessingInstruction](/en/DOM/document.createProcessingInstruction)
+- [document.createProcessingInstruction](/pt-BR/DOM/document.createProcessingInstruction)
 - [whitespace no DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)

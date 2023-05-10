@@ -70,9 +70,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout
 
 ## 仕様書
 
-| 仕様書                         | 状態                        | 備考     |
-| ------------------------------ | --------------------------- | -------- |
-| {{ SpecName('CSS3 Flexbox') }} | {{ Spec2('CSS3 Flexbox') }} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

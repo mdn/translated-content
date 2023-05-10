@@ -198,10 +198,7 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## 仕様書
 
-| 仕様                                                                                                             | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}                                     | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

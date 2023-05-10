@@ -36,7 +36,7 @@ Ne fait partie d'aucune spécification. C'est une méthode propriétaire propre 
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollIntoViewIfNeeded")}}
+{{Compat}}
 
 ## Voir aussi
 

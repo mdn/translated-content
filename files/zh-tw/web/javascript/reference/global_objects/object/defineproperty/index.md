@@ -63,7 +63,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : 作為 setter 形式，為屬性存在的函式，如果沒有 setter 的話則回傳 {{jsxref("undefined")}}。 The function will receive as only argument the new value being assigned to the property.
     **預設 {{jsxref("undefined")}}**
 
-請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object.prototype")}} upfront 預設能被保存，請明確指定所有選項，或把 {{jsxref("Object.prototype.__proto__", "__proto__")}} 屬性指向 {{jsxref("null")}}。
+請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object.prototype")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("null")}}。
 
 ```js
 // using __proto__

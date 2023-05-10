@@ -1,9 +1,9 @@
 ---
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/valueOf
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 El método **`valueOf()`** retorna el valor primitivo del objeto especificado.
@@ -67,16 +67,11 @@ myObj + 3; // 7
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Commentario                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| ECMAScript 1ra Edición.                                                                                          | Estándar                     | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Vea también
 

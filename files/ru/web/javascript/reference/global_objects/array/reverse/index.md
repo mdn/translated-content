@@ -10,6 +10,7 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
+
 {{JSRef}}
 
 Метод **`reverse()`** на месте обращает порядок следования элементов массива. Первый элемент массива становится последним, а последний — первым.

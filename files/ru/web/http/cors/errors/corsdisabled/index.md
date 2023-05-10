@@ -3,6 +3,7 @@ title: 'Ошибка: CORS disabled'
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 translation_of: Web/HTTP/CORS/Errors/CORSDisabled
 ---
+
 ## Ошибка
 
 ```

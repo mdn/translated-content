@@ -1,13 +1,9 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/class
 original_slug: Web/HTML/Global_attributes/클래스
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`class`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 공백으로 구분한 요소 클래스의 목록으로, 대소문자를 구분하지 않습니다. 클래스는 CSS나 JavaScript에서 [클래스 선택자](/ko/docs/Web/CSS/Class_selectors)나 DOM 메서드의 {{domxref("document.getElementsByClassName()")}}과 같은 메서드를 통해 요소에 접근할 수 있는 방법입니다.
@@ -24,7 +20,7 @@ original_slug: Web/HTML/Global_attributes/클래스
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.class")}}
+{{Compat}}
 
 ## 같이 보기
 

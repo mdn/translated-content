@@ -66,13 +66,9 @@ slug: Web/SVG/Element/feDiffuseLighting
 </svg>
 ```
 
-预计的呈现：
-
-![Expected rendering for the example](/files/4447/feDiffuseLighting.png)
-
 实时呈现：
 
-{{EmbedLiveSample("Example",470,170)}}
+{{EmbedLiveSample("示例",470,170)}}
 
 ## 属性
 

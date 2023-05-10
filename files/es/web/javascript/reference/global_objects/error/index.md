@@ -1,12 +1,9 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
+
 {{JSRef}}
 
 Los objetos `Error` se lanzan cuando ocurren errores en tiempo de ejecución. También puedes utilizar el objeto `Error` como objeto base para excepciones definidas por el usuario. Ve más adelante los tipos de errores estándar integrados.
@@ -181,13 +178,11 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error-objects', 'Error')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error")}}
+{{Compat}}
 
 ## Ve también
 

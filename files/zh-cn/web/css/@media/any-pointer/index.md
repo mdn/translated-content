@@ -3,7 +3,7 @@ title: any-pointer
 slug: Web/CSS/@media/any-pointer
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **`any-pointer`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 测试用户是否拥有*任意*定点装置（如鼠标）。以及如果存在定点装置，它的精确度是什么样的。
 
@@ -63,9 +63,9 @@ input[type="checkbox"]:checked {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -75,6 +75,6 @@ input[type="checkbox"]:checked {
 
 {{Compat}}
 
-## 更多资料
+## 参见
 
 - [`pointer` media feature](/zh-CN/docs/Web/CSS/@media/pointer)

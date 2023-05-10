@@ -1,9 +1,9 @@
 ---
 title: Básico sobre HTTP
 slug: Web/HTTP/Basics_of_HTTP
-translation_of: Web/HTTP/Basics_of_HTTP
 original_slug: Web/HTTP/Basico_sobre_HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP é um protocolo bem extensivo. Isso depende um pouco do conceito básico com noção de recursos e URIs, uma simples estrutura de mensagens, e uma estrutura de cliente-servidor para a comunicação ocorrer. Em cima destes conceitos básicos, várias versões surgiram ao longo do tempo, adicionando novas funcionalidades e novas semanticas para criar novos métodos HTTP ou cabeçalhos.

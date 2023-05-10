@@ -1,12 +1,6 @@
 ---
 title: CSS Lists and Counters
 slug: Web/CSS/CSS_Lists_and_Counters
-tags:
-  - CSS
-  - CSS Lists
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
 {{CSSRef}}
 
@@ -26,9 +20,6 @@ translation_of: Web/CSS/CSS_Lists_and_Counters
 - [일관된 리스트 들여쓰기](/ko/docs/Consistent_List_Indentation)
   - : 서로 다른 브라우저 사이에 일관된 들여쓰기를 이루는 법을 설명합니다.
 
-## 명세
+## 명세서
 
-| 명세                                                 | 상태                             | 설명      |
-| ---------------------------------------------------- | -------------------------------- | --------- |
-| {{SpecName('CSS3 Lists')}}                 | {{Spec2('CSS3 Lists')}} |           |
-| {{SpecName('CSS2.1', 'generate.html')}} | {{Spec2('CSS2.1')}}         | 초기 정의 |
+{{Specifications}}

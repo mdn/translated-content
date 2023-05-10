@@ -48,4 +48,4 @@ CSS 规则可以覆盖浏览器默认的 `code` 标签字体样式。但用户�
 - {{HTMLElement("command")}}
 - {{HTMLElement("var")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

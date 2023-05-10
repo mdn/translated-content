@@ -13,7 +13,7 @@ translation_of: Web/CSS/font
 
 La propriété **`font`** est :
 
-- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
+- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
 - ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
 
 {{EmbedInteractiveExample("pages/css/font.html")}}
@@ -87,7 +87,7 @@ Si `font` est définie comme une propriété raccourcie :
   - : Voir la propriété {{cssxref("line-height")}}.
 - `<'font-family'>`
   - : Voir la propriété {{cssxref("font-family")}}.
-- Polices système :`caption` `icon` `menu` `message-box` `small-caption` `status-bar`
+- Polices système : `caption` `icon` `menu` `message-box` `small-caption` `status-bar`
 
   - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
 

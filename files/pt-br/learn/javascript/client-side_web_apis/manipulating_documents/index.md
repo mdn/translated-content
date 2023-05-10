@@ -1,18 +1,17 @@
 ---
 title: JavaScript e CSS
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-translation_of_original: Web/Guide/CSS/Getting_started/JavaScript
 original_slug: Web/CSS/Getting_Started/JavaScript
 ---
-Esta é a primeira sessão da Parte II do [Tutorial de CSS](/en/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
+
+Esta é a primeira sessão da Parte II do [Tutorial de CSS](/pt-BR/CSS/Getting_Started). A parte II contém alguns exemplos que mostram o escopo do CSS usado com outras tecnologias web e Mozilla.
 
 Cada página da Parte II ilustra como o CSS interage com outras tecnologias. Essas páginas não destinam-se a ensiná-lo como usar outras tecnologias. Para aprender sobre elas com detalhes, vá para os outros tutoriais.
 
 Em vez disso, estas páginas são usadas para ilustrar os diversos usos do CSS. Para usar estas páginas, você deve ter algum conhecimento de CSS, mas você não precisa de nenhum conhecimento de outras tecnologias.
 
-Sessão Anterior (da Parte I): [Media](/en/CSS/Getting_Started/Media)
-Próxima sessão: [SVG](/en/CSS/Getting_Started/SVG_graphics)
+Sessão Anterior (da Parte I): [Media](/pt-BR/CSS/Getting_Started/Media)
+Próxima sessão: [SVG](/pt-BR/CSS/Getting_Started/SVG_graphics)
 
 ### Informação: JavaScript
 
@@ -26,7 +25,7 @@ Há três formas de fazer isso:
 - Trabalhando com as regras em uma stylesheet — por exemplo: adicionando, removendo ou modificando uma regra.
 - Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
 
-| Para mais informações sobre JavaScript, veja a página [JavaScript](/en/JavaScript) nesta wiki. |
+| Para mais informações sobre JavaScript, veja a página [JavaScript](/pt-BR/JavaScript) nesta wiki. |
 | -------------------------------------------------------------------------------------------------------------- |
 
 ### Ação: Uma demonstração de JavaScript
@@ -121,20 +120,21 @@ Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar
   </tbody>
 </table>
 
-> **Nota:** **Notas importantes** sobre esta demonstração:- O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
+> **Nota:** Sobre esta demonstração:
 >
+> - O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
 > - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.
 > - Em JavaScript, `document.getElementById("square")` é similar em função ao seletor CSS `#square`.
 > - Em JavaScript, `backgroundColor` corresponde à propriedade CSS `background-color`. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.
-> - Seu browser tem uma regra built-in CSS para `button{{ mediawiki.external('disabled=\"true\"') }}` ela muda a aparência dos botões quando está disabilitado.
+> - Seu browser tem uma regra built-in CSS para `button[disabled="true"]` ela muda a aparência dos botões quando está disabilitado.
 
 | Altere o script para que o quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base. |
 | --------------------------------------------------------------------------------------------------------------------------------- |
 
-[Veja a solução deste desafio.](/en/CSS/Getting_Started/Challenge_solutions#JavaScript)
+[Veja a solução deste desafio.](/pt-BR/CSS/Getting_Started/Challenge_solutions#JavaScript)
 
 O que vem agora?
 
 Se você teve dificuldade para entender esta página, ou se tem algum comentário sobre ela, por favor, contribua nesta página de [Discussão](/Talk:en/CSS/Getting_Started/JavaScript).
 
-Nesta demonstração, o documento HTML é vinculado ao script, embora apenas o elemento botão o utilize. ozilla estende CSS para permitir que você associe código JavaScript (assim como conteúdo e outras folhas de estilo) com elementos selecionados. A próxima página demonstra isso: **[Ligações XBL](/en/CSS/Getting_Started/XBL_bindings)**
+Nesta demonstração, o documento HTML é vinculado ao script, embora apenas o elemento botão o utilize. ozilla estende CSS para permitir que você associe código JavaScript (assim como conteúdo e outras folhas de estilo) com elementos selecionados. A próxima página demonstra isso: **[Ligações XBL](/pt-BR/CSS/Getting_Started/XBL_bindings)**

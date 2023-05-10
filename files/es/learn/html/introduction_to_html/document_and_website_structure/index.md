@@ -1,22 +1,6 @@
 ---
 title: Estructura web y documentación
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - CodingScripting
-  - Composición
-  - Diseño
-  - Formato
-  - Guía
-  - HTML
-  - Presentación
-  - Principiante
-  - Sitio
-  - Sitio Web
-  - bloques
-  - pagina
-  - programar
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Learn/HTML/Introduccion_a_HTML/estructura
 ---
 
@@ -65,7 +49,7 @@ Las páginas web pueden y se deben diferenciar las unas de las otras, pero todas
 
 Una página web «típica» se podría parecer a esta:
 
-![Un ejemplo de estructura de sitio web simple con un encabezado principal, menú de navegación, contenido principal, barra lateral y pie de página.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![Un ejemplo de estructura de sitio web simple con un encabezado principal, menú de navegación, contenido principal, barra lateral y pie de página.](sample-website.png)
 
 ## HTML para dar estructura al contenido
 
@@ -73,7 +57,7 @@ El ejemplo no es muy atractivo, pero puede servir para ilustrar un ejemplo de di
 
 La parte visual no lo es todo. Utilizarás diferentes fuentes y colores para llamar la atención de los usuarios sin discapacidad visual de las partes más importantes del contenido, como el menú de navegación y sus enlaces correspondientes, pero ¿qué ocurre con los usuarios con discapacidad visual que no pueden distinguir los colores llamativos o el tamaño grande de las fuentes?
 
-> **Nota:** Los daltónicos representan alrededor del [4% de la población mundial](http://www.color-blindness.com/2006/04/28/colorblind-population/) (aproximadamente 1 de cada 12 hombres y 1 de cada 200 mujeres son daltónicos). Los invidentes y las personas con discapacidad visual representan aproximadamente el 4-5% de la población mundial (en 2012 había {{Interwiki("wikipedia", "Discapacidad visual")}} 285 millones de personas con alguna de estas características en el mundo, mientras que el total de la población estaba {{Interwiki("wikipedia", "World_human_population#/media/File:World_population_history.svg", "alrededor de los 7,000 millones")}}.
+> **Nota:** Los daltónicos representan alrededor del [4% de la población mundial](http://www.color-blindness.com/2006/04/28/colorblind-population/) (aproximadamente 1 de cada 12 hombres y 1 de cada 200 mujeres son daltónicos). Los invidentes y las personas con discapacidad visual representan aproximadamente el 4-5% de la población mundial (en 2012 había [Discapacidad visual](https://es.wikipedia.org/wiki/Discapacidad_visual) 285 millones de personas con alguna de estas características en el mundo, mientras que el total de la población estaba [alrededor de los 7,000 millones](https://es.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg).
 
 En tu código HTML puedes crear secciones de contenido basadas en su _funcionalidad_ — puedes usar elementos que representen sin ambigüedad las diferentes secciones de contenido descritas, de forma que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como «encontrar el menú de navegación», o «encontrar el contenido principal». Como se mencionó anteriormente en el curso, hay una serie de [consecuencias por no usar la estructura de elementos y semántica adecuada para hacer el trabajo correctamente](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Por_qué_necesitamos_estructura).
 
@@ -306,23 +290,23 @@ Una vez has planificado el contenido de una página web sencilla, el paso lógic
 
 1. Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página.
 
-   ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](https://mdn.mozillademos.org/files/12423/common-features.png)
+   ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](common-features.png)
 
 2. A continuación, esboza un esquema sencillo de cuál podría ser la estructura deseada de la apariencia de cada página (podría ser algo tan sencillo como el siguiente dibujo). Anota los bloques principales.
 
-   ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](https://mdn.mozillademos.org/files/12429/site-structure.png)
+   ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](site-structure.png)
 
 3. Ahora, elabora una lista completa con todo el resto del contenido de tu sitio web que no sea común a todas las páginas.
 
-   ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](https://mdn.mozillademos.org/files/12425/feature-list.png)
+   ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](feature-list.png)
 
 4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}.
 
-   ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](https://mdn.mozillademos.org/files/12421/card-sorting.png)
+   ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](card-sorting.png)
 
 5. Ahora trata de esquematizar un mapa de tu sitio — dibuja un globo para cada página de tu sitio web y dibuja líneas que identifiquen el flujo de datos entre las distintas páginas. La página de inicio normalmente estará ubicada en el centro y enlazará con el resto de páginas; la mayoría de las páginas de una web sencilla estarán enlazadas desde el menú de navegación principal, aunque puede haber excepciones. También puedes incluir notas sobre cómo se pueden presentar las cosas.
 
-   ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](https://mdn.mozillademos.org/files/12427/site-map.png)
+   ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](site-map.png)
 
 ### Aprendizaje activo: Creación de un mapa del sitio web
 
@@ -343,15 +327,3 @@ En este punto, deberías tener una mejor idea sobre cómo estructurar una págin
 - [Uso de secciones y esquemas HTML](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -1,13 +1,8 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - Código de Status HTTP
-  - HTTP
-  - Redirecionamento
-  - Referencia
-translation_of: Web/HTTP/Status/303
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta de status de redirecionamento do HyperText Transfer Protocol (HTTP) **`303 See Other`** indica que o direcionamento não une a um recurso carregado novo, mas a outra página, com uma página de confirmação ou de progresso de carregamento. Este código de resposta normalmente é retornado como resultado de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}. O método usado para mostrar esta página redirecionada é sempre {{HTTPMethod("GET")}}.

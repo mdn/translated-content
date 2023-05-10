@@ -8,6 +8,7 @@ tags:
   - Выпуск
 translation_of: Mozilla/Firefox/Releases/63
 ---
+
 {{FirefoxSidebar}}
 
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 63 был выпущен 23 октября 2018 года.

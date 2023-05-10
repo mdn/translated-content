@@ -48,15 +48,15 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 - `errorOccurred`
   - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.
 - `url`
-  - : `string`. L'URL actuellement associée à cette trame, si la trame identifiée par  `frameId` existait à un point de l'onglet identifié par `tabId`. Le fait qu'une URL soit associée à un `frameId` donné n'implique pas que la trame correspondante existe toujours.
+  - : `string`. L'URL actuellement associée à cette trame, si la trame identifiée par `frameId` existait à un point de l'onglet identifié par `tabId`. Le fait qu'une URL soit associée à un `frameId` donné n'implique pas que la trame correspondante existe toujours.
 - `parentFrameId`
   - : `integer`. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.
 
 Si l'onglet ou l'ID de trame spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.getFrame")}}
+{{Compat}}
 
 ## Exemples
 

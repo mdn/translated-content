@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 
 Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 
-Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les  [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou d'[action page](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions), mais n'inclut pas les [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts).
+Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou d'[action page](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions), mais n'inclut pas les [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts).
 
 Notez que les variables déclarées à l'aide de [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) ou [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) n'apparaissaient pas dans l'objet window retourné par cette fonction.
 
@@ -42,9 +42,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 

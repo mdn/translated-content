@@ -1,16 +1,9 @@
 ---
 title: expresión class
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Classes
-  - ECMAScript6
-  - Expression
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/class
 original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
+
 {{jsSidebar("Operators")}}
 
 La **expresión class** es una forma de definir una clase en ECMAScript 2015 (ES6). Similar a las [funciones](/es/docs/Web/JavaScript/Referencia/Operadores/function), las expresiones de clase pueden ser nombradas o no. Si se nombran, el nombre de la clase es local sólo en el cuerpo de la clase. Las clases en JavaScript utilizan herencia basada en prototipos.
@@ -80,14 +73,11 @@ Foo.name; // "NamedFoo"
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Ver también
 

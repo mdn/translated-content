@@ -3,6 +3,7 @@ title: Создаём свою функцию
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 Эта статья призвана дать практический опыт на основе теоретических знаний приведённых в [предыдущей статье](/ru/docs/Learn/JavaScript/Building_blocks/Functions). Попутно мы также объясним некоторые важные детали работы с функциями.

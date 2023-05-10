@@ -39,19 +39,19 @@ var gettingCurrent = browser.windows.getCurrent(
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
-      - : Un ensemble d'objets `{{WebExtAPIRef('windows.WindowType')}}`. Si défini, le  {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panneau'` qui sont limités aux propres fenêtres de l'extension.
+      - : Un ensemble d'objets `{{WebExtAPIRef('windows.WindowType')}}`. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panneau'` qui sont limités aux propres fenêtres de l'extension.
 
 > **Note :**
 >
-> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de  `windowTypes` a été dépréciée à partir de Firefox 62.
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getCurrent",2)}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,8 +1,8 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
+
 {{jsSidebar("Operators")}}O operador **`instanceof`** testa se um objeto tem, em seu prototype, a função construtora.
 
 {{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}

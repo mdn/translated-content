@@ -1,13 +1,8 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
+
 {{JSRef}}
 
 **`Math.acos()`** 함수는 주어진 수의 아크코사인 값을 숫자(라디안)로 반환합니다. 즉,

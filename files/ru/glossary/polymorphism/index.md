@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/Polymorphism
 original_slug: Глоссарий/Polymorphism
 ---
+
 **Полиморфизм** - это представление одного интерфейса для разных типов данных.
 
 Например, целые числа (integers), числа с плавающей запятой (floats) и числа с плавающей запятой двойной точности (double) полностью полиморфны: независимо от их отличающихся типов, их можно складывать, вычитать, перемножать, и так далее.
@@ -17,5 +18,4 @@ original_slug: Глоссарий/Polymorphism
 
 ### Общие знания
 
-- {{Interwiki("wikipedia", "Полиморфизм (информатика)", "Полиморфизм")}} на Википедии.
 - [Polymorphism](https://en.wikipedia.org/wiki/Polymorphism_%28computer_science%29) на Википедии (англ.)

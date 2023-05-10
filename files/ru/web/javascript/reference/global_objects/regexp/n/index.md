@@ -3,6 +3,7 @@ title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 Нестандартные свойства **$1, $2, $3, $4, $5, $6, $7, $8, $9** являются статическими и доступными только для чтения свойствами регулярных выражений, которые содержат найденные подстроки, обёрнутые в скобки.

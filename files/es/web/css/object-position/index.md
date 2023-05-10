@@ -1,8 +1,8 @@
 ---
 title: object-position
 slug: Web/CSS/object-position
-translation_of: Web/CSS/object-position
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -37,19 +37,20 @@ object-position: unset;
 #### Ejemplo de HTML
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 #### Ejemplo de CSS
 
 ```css
 img {
-  width: 150px;
-  height: 100px;
-  border: 1px solid #000;
-  background-color: yellow;
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  background-color: silver;
   margin-right: 1em;
+  object-fit: none;
 }
 
 #object-position-1 {
@@ -57,24 +58,21 @@ img {
 }
 
 #object-position-2 {
-  object-position: 20% 10%;
+  object-position: 100% 10%;
 }
 ```
 
 #### Resultado
 
-{{ EmbedLiveSample('Example', 360, 120) }}
+{{ EmbedLiveSample('Example', 360, 300) }}
 
 ## Especificaciones
 
-| Specification                                                                                | Status                           | Comment                                                    |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS4 Images')}} | Las `palabras clave from-image` y `flip` an sido añadidas. |
-| {{SpecName('CSS3 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS3 Images')}} | Definición incial                                          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.object-position")}}
+{{Compat}}
 
 ## Contenido relacionado
 

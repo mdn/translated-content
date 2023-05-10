@@ -1,12 +1,8 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - Declaração
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração `return`** finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada.
@@ -50,7 +46,7 @@ a + b;
 
 O console irá alertar "unreachable code after return statement" (código inacessível após a declaração return).
 
-> **Nota:** A partir do Gecko 40 {{geckoRelease(40)}}, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
+> **Nota:** A partir do Gecko 40, um alerta é mostrado no console se um código inacessível é encontrado após uma declaração `return`.
 
 ## Exemplos
 

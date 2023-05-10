@@ -1,14 +1,8 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:optional
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:optional`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que no tenga el atributo {{ htmlattrxref("required", "input") }} establecido en él.
@@ -43,16 +37,11 @@ Las entradas requeridas también deben indicarse visualmente, utilizando un trat
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentario                                                    |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', '#selector-optional', ':optional') }}         | {{ Spec2('HTML WHATWG') }}     | Ningún cambio.                                                |
-| {{ SpecName('HTML5 W3C', '#selector-optional', ':optional') }}         | {{ Spec2('HTML5 W3C') }}         | Define la semántica de HTML y la validación de restricciones. |
-| {{ SpecName('CSS4 Selectors', '#opt-pseudos', ':optional') }}             | {{ Spec2('CSS4 Selectors') }} | Ningún cambio.                                                |
-| {{ SpecName('CSS3 Basic UI', '#pseudo-required-value', ':optional') }} | {{ Spec2('CSS3 Basic UI') }}     | Define la pseudoclase, pero no la semántica asociada.         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.optional")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,8 +1,8 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave **super** é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.

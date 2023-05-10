@@ -1,12 +1,9 @@
 ---
 title: for-each
 slug: Web/XSLT/Element/for-each
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/for-each
 original_slug: Web/XSLT/for-each
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:for-each>` selecciona un conjunto de nodos y procesa cada uno de ellos de la misma manera. Se usa comúnmente para iterar a través de un conjunto de nodos o para cambiar el nodo actual. Si se encuentran uno o más elementos `<xsl:sort>` como hijos de este elemento, el ordenado de los nodos ocurrirá antes del procesamiento. De otra manera, los nodos se procesarán en el orden del documento.

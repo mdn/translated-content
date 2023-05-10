@@ -1,16 +1,9 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - JavaScript
-  - Matemáticas
-  - Math
-  - Method
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
+
 {{JSRef}}
 
 La función **`Math.expm1()`** regresa `e^x - 1`, donde `x` es el argumento, y {{jsxref("Math.E", "e", "", 1)}} la base del logaritmo natural.
@@ -58,13 +51,11 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## Vea también
 

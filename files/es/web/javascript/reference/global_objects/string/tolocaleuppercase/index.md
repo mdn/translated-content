@@ -1,9 +1,9 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 El método **`toLocaleUpperCase()`** devuelve el valor de la cadena que lo llama convertido en mayúsculas, de acuerdo con las asignaciones de casos específicos de la configuración regional.
@@ -49,17 +49,11 @@ let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Status                           | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.19', 'String.prototype.toLocaleUpperCase')}}                                         | {{Spec2('ES5.1')}}         |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}             | {{Spec2('ES6')}}             |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}}     | {{Spec2('ESDraft')}}     |                                                    |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocaleuppercase', 'String.prototype.toLocaleUpperCase')}} | {{Spec2('ES Int Draft')}} | ES Intl 2017 added the `locale` parameter.         |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
+{{Compat}}
 
 ## Ver también
 

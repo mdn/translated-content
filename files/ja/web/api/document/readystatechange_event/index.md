@@ -107,9 +107,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "indices.html#event-readystatechange", "readystatechange")}} | {{Spec2("HTML WHATWG")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

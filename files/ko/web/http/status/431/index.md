@@ -1,8 +1,8 @@
 ---
 title: 431 Request Header Fields Too Large
 slug: Web/HTTP/Status/431
-translation_of: Web/HTTP/Status/431
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`431 Request Header Fields Too Large`** 응답 코드는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)의 크기가 너무 크기 때문에 처리가 불가능함을 알려준다. 요청 헤더의 크기를 줄인 후, 재요청을 할 수 있다.
@@ -20,7 +20,7 @@ HTTP **`431 Request Header Fields Too Large`** 응답 코드는 [HTTP 헤더](/k
 431 Request Header Fields Too Large
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

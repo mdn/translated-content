@@ -1,7 +1,6 @@
 ---
 title: <var>
 slug: Web/HTML/Element/var
-translation_of: Web/HTML/Element/var
 ---
 ## Resumo
 
@@ -41,4 +40,4 @@ var {
 
 A simple equation: _x_ = _y_ + 2
 
-{{HTMLRef}}
+{{HTMLSidebar}}

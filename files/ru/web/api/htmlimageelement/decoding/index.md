@@ -3,6 +3,7 @@ title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
 translation_of: Web/API/HTMLImageElement/decoding
 ---
+
 {{APIRef}}
 
 Свойство **`decoding`** интерфейса {{domxref("HTMLImageElement")}} предназначено для указания браузеру, как он должен декодировать изображение.

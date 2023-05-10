@@ -1,8 +1,9 @@
 ---
 title: z-index 적용
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
+{{CSSRef}}
+
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### {{ cssxref("z-index") }} 적용
@@ -13,17 +14,13 @@ z-index 속성은 하나의 정수 값을 가질 수 있다(양수, 음수 모�
 
 **다시한번 경고!** z-index는 [position](/en/CSS/position) 속성이 설정된 엘리먼트에 대해서만 의미를 갖는다.
 
-- _가장 아래(사용자로부터 가장 멀다)_
-- ...
-- Layer -3
-- Layer -2
-- Layer -1
-- Layer 0 _기본 렌더링 레이어_
-- Layer 1
-- Layer 2
-- Layer 3
-- ...
-- _가장 위(사용자로부터 가장 가깝다)_
+| 레이어         | 설명                           |
+| ------------ | ----------------------------- |
+| 바닥 레이어     | 사용자로부터 가장 멀다             |
+| 레이어 -X     | 음의 `z-index` 값을 가진 레이어     |
+| 레이어 0      | 기본 렌더링 레이어                  |
+| 레이어 X      | 양의 `z-index` 값을 가진 레이어      |
+| 가장 위 레이어  | 사용자로부터 가장 가깝다              |
 
 > **참고:** **노트:**
 >
@@ -32,9 +29,7 @@ z-index 속성은 하나의 정수 값을 가질 수 있다(양수, 음수 모�
 
 다음 예제에서는 레이어들의 쌓임 순서가 z-index를 이용하여 바뀌어있다. DIV#5는 position 속성이 지정되지 않았으므로 z-index 속성 값은 쌓임 순서를 결정하는데에 아무 영향을 미치지 않는다.
 
-![Example of stacking rules modified using z-index](/@api/deki/files/912/=Understanding_zindex_03.png)
-
-### Example source code
+### 예제
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -143,6 +138,10 @@ span.bold { font-weight: bold; }
 
 </body></html>
 ```
+
+## 결과
+
+{{EmbedLiveSample("예제", 600, 400)}}
 
 ### See also
 

@@ -2,6 +2,7 @@
 title: 거짓같은 값
 slug: Glossary/Falsy
 ---
+
 **거짓 같은 값**(Falsy, **falsey**로 쓰이기도 함) 값은 {{Glossary("Boolean","불리언")}} 문맥에서 `false`로 평가되는 값입니다.
 
 {{Glossary("JavaScript")}}는 {{Glossary("Conditional", "조건절")}}, {{Glossary("Loop", "반복문")}} 등 불리언 값이 필요한 곳에서 {{Glossary("Type_Conversion", "형 변환")}}을 이용해 특정 값을 불리언 값으로 변환합니다.

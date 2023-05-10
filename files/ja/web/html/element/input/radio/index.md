@@ -1,9 +1,11 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
+l10n:
+  sourceCommit: a03b4b0e9aaac7409ff1ce974ab1bf2f40c81e03
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶしや強調表示されます。
 
@@ -11,32 +13,37 @@ slug: Web/HTML/Element/input/radio
 
 ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。
 
-![古い時代のラジオボタンの外観を示します。](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
+![古い時代のラジオボタンの外観を示します。](old-radio.jpg)
 
-> **メモ:** [**注**:](https://github.com/mdn/interactive-examples) [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
+> **メモ:** [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
 
 <table class="properties">
   <tbody>
     <tr>
+      <td><strong><a href="#value">値</a></strong></td>
       <td>
-        <strong><a href="#value">値</a></strong>
+        ラジオボタンの値を表す文字列です。
       </td>
-      <td>ラジオボタンの値を表す {{domxref("DOMString")}}</td>
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
-      <td>{{event("change")}} および {{event("input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>
-      <td><code>checked</code> および <code>value</code></td>
+      <td>
+        <code><a href="#attr-checked">checked</a></code
+        >,
+        <code><a href="#attr-value">value</a></code>,
+        <code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
-      <td>
-        <code><a href="#checked">checked</a></code> および
-        <code><a href="#value">value</a></code>
-      </td>
+      <td><code>checked</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
       <td><strong>メソッド</strong></td>
@@ -49,7 +56,7 @@ slug: Web/HTML/Element/input/radio
 
 ## 値
 
-`value` 属性はラジオボタンの値を持つ {{domxref("DOMString")}} です。値は{{Glossary("user agent", "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
+`value` 属性はラジオボタンの値を持つ文字列です。値は{{Glossary("user agent", "ユーザーエージェント")}}がユーザーに表示することはありません。代わりに、グループ内のどのラジオボタンが選択されているかを識別するために使用されます。
 
 ### ラジオグループの定義
 
@@ -63,23 +70,22 @@ slug: Web/HTML/Element/input/radio
 
 ```html
 <form>
-  <p>希望する連絡方法を選択してください。</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email">
-    <label for="contactChoice1">電子メール</label>
+  <fieldset>
+    <legend>希望する連絡方法を選択してください。</legend>
+    <div>
+      <input type="radio" id="contactChoice1" name="contact" value="email" />
+      <label for="contactChoice1">メール</label>
 
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
-    <label for="contactChoice2">電話</label>
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
+      <label for="contactChoice2">電話</label>
 
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
-    <label for="contactChoice3">郵便</label>
-  </div>
-  <div>
-    <button type="submit">送信</button>
-  </div>
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
+      <label for="contactChoice3">郵便</label>
+    </div>
+    <div>
+      <button type="submit">送信</button>
+    </div>
+  </fieldset>
 </form>
 ```
 
@@ -97,47 +103,49 @@ HTML で `value` 属性を省略すると、送信されたフォームデータ
 
 > **メモ:** フォームが送信されたときにラジオボタンが全く選択されていないと、ラジオグループが送信されたフォームにまったく含まれず、報告される値がなくなります。
 
-実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを `checked` 状態を設定しておくことには意味があります。下記の[既定のラジオボタンの選択](#selecting_a_radio_button_by_default)を参照してください。
+実際には、フォームがグループ内のラジオボタンをまったく選択しない状態で送信するのを許可することは一般的ではないので、既定で一つを `checked` 状態を設定しておくことには意味があります。下記の[既定のラジオボタンの選択](#既定のラジオボタンの選択)を参照してください。
 
 例に若干のコードを加えて、このフォームで生成されるデータを確認できるようにしましょう。 HTML を変更して、フォームデータを出力するための {{HTMLElement("pre")}} を追加します。
 
 ```html
 <form>
-  <p>希望する連絡方法を選択してください。</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-           name="contact" value="email">
-    <label for="contactChoice1">電子メール</label>
-    <input type="radio" id="contactChoice2"
-           name="contact" value="phone">
-    <label for="contactChoice2">電話</label>
-    <input type="radio" id="contactChoice3"
-           name="contact" value="mail">
-    <label for="contactChoice3">郵便</label>
-  </div>
-  <div>
-    <button type="submit">送信</button>
-  </div>
+  <fieldset>
+    <legend>希望する連絡方法を選択してください。</legend>
+    <div>
+      <input type="radio" id="contactChoice1" name="contact" value="email" />
+      <label for="contactChoice1">メール</label>
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
+      <label for="contactChoice2">電話</label>
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
+      <label for="contactChoice3">郵便</label>
+    </div>
+    <div>
+      <button type="submit">送信</button>
+    </div>
+  </fieldset>
 </form>
-<pre id="log">
-</pre>
+<pre id="log"></pre>
 ```
 
 それから、いくらかの [JavaScript](/ja/docs/Web/JavaScript) を追加して、ユーザーが「送信」ボタンをクリックしたときに発生する {{domxref("HTMLFormElement/submit_event", "submit")}} イベントのイベントリスナーを設定します。
 
 ```js
-var form = document.querySelector("form");
-var log = document.querySelector("#log");
+const form = document.querySelector("form");
+const log = document.querySelector("#log");
 
-form.addEventListener("submit", function(event) {
-  var data = new FormData(form);
-  var output = "";
-  for (const entry of data) {
-    output = output + entry[0] + "=" + entry[1] + "\r";
-  };
-  log.innerText = output;
-  event.preventDefault();
-}, false);
+form.addEventListener(
+  "submit",
+  (event) => {
+    const data = new FormData(form);
+    let output = "";
+    for (const entry of data) {
+      output = `${output}${entry[0]}=${entry[1]}\r`;
+    }
+    log.innerText = output;
+    event.preventDefault();
+  },
+  false
+);
 ```
 
 この例を試してみて、 `contact` グループに二つ以上の結果が出ないことを確認してください。
@@ -148,20 +156,18 @@ form.addEventListener("submit", function(event) {
 
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `radio` 型の入力は次の属性にも対応しています。
 
-| 属性                  | 説明                                                                                               |
-| --------------------- | -------------------------------------------------------------------------------------------------- |
-| [`checked`](#checked) | 論理属性で、このラジオボタンがグループ内で項目が現在選択されているかどうかを示す                   |
-| [`value`](#value)     | ラジオボタンがオンになっている場合に、フォームを投稿したときラジオボタンの値として使用される文字列 |
+- {{htmlattrdef("checked")}}
 
-### {{htmlattrdef("checked")}}
+  - : 論理属性で、もしあれば、このラジオボタンがラジオグループ内で現在選択されているものであることを示します。
 
-論理属性で、もしあれば、このラジオボタンがラジオグループ内で現在選択されているものであることを示します。
+    他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
 
-他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
-
-### {{htmlattrdef("value")}}
+- {{htmlattrdef("value")}}
 
 `value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、 `radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` という文字列になります。これは前述の[値](#value)の節で説明しています。
+
+- {{htmlattrdef("required")}}
+  - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループに `required` 属性がある場合、そのグループのラジオボタンはチェックされなければなりませんが、その属性が適用されているラジオボタンである必要はありません。
 
 ## ラジオボタンの使用
 
@@ -173,61 +179,21 @@ form.addEventListener("submit", function(event) {
 
 ```html
 <form>
-  <p>希望する連絡方法を選択してください。</p>
-  <div>
-    <input type="radio" id="contactChoice1"
-     name="contact" value="email" checked>
-    <label for="contactChoice1">電子メール</label>
-
-    <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
-    <label for="contactChoice2">電話</label>
-
-    <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
-    <label for="contactChoice3">郵便</label>
-  </div>
-  <div>
-    <button type="submit">送信</button>
-  </div>
-</form>
-```
-
-{{EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130)}}
-
-In this case, the first radio button is now selected by default.
-
-> **メモ:** If you put the `checked` attribute on more than one radio button, later instances will override earlier ones; that is, the last `checked` radio button will be the one that is selected. This is because only one radio button in a group can ever be selected at once, and the user agent automatically deselects others each time a new one is marked as checked.
-
-### ラジオボタンのヒット領域を大きくする
-
-In the above examples, you may have noticed that you can select a radio button by clicking on its associated {{htmlelement("label")}} element, as well as on the radio button itself. This is a really useful feature of HTML form labels that makes it easier for users to click the option they want, especially on small-screen devices like smartphones.
-
-Beyond accessibility, this is another good reason to properly set up `<label>` elements on your forms.
-
-## 検証
-
-Radio buttons don't participate in constraint validation; they have no real value to be constrained.
-
-## ラジオボタンの整形
-
-The following example shows a slightly more thorough version of the example we've seen throughout the article, with some additional styling, and with better semantics established through use of specialized elements. The HTML looks like this:
-
-```html
-<form>
   <fieldset>
     <legend>希望する連絡方法を選択してください。</legend>
     <div>
-      <input type="radio" id="contactChoice1"
-       name="contact" value="email" checked>
-      <label for="contactChoice1">電子メール</label>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
+      <label for="contactChoice1">メール</label>
 
-      <input type="radio" id="contactChoice2"
-       name="contact" value="phone">
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
       <label for="contactChoice2">電話</label>
 
-      <input type="radio" id="contactChoice3"
-       name="contact" value="mail">
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
       <label for="contactChoice3">郵便</label>
     </div>
     <div>
@@ -237,9 +203,53 @@ The following example shows a slightly more thorough version of the example we'v
 </form>
 ```
 
-There's not much new to note here except for the addition of {{htmlelement("fieldset")}} and {{htmlelement("legend")}} elements, which help to group the functionality nicely and in a semantic way.
+{{EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130)}}
 
-The CSS involved is a bit more significant:
+この場合、最初のラジオボタンは既定で選択されるようになります。
+
+> **メモ:** 複数のラジオボタンに `checked` 属性を指定した場合、後から指定したものが先に指定したものを上書きします。つまり、最後に `checked` されたラジオボタンが選択されることになります。これは、一度に選択できるラジオボタンはグループ内の 1 つだけであり、ユーザーエージェントは新しいラジオボタンがチェックされるたびに、他のラジオボタンの選択を自動的に解除するからです。
+
+### ラジオボタンのヒット領域を大きくする
+
+上記の例では、ラジオボタンそのものだけでなく、関連する {{htmlelement("label")}} 要素をクリックすることで、ラジオボタンを選択できることにお気づきでしょうか。これは HTML フォームのラベルの実に便利な機能で、特にスマートフォンのような画面の小さな機器では、ユーザーが望む選択肢をクリックしやすくなります。
+
+アクセシビリティを越えて、このこともフォームに `<label>` 要素を適切に設定する良い理由です。
+
+## 検証
+
+ラジオボタンは制約の検証に参加しません。制約されるべき実際の値を持ちません。
+
+## ラジオボタンの整形
+
+以下の例は、この記事を通して見てきた例を少し徹底させたもので、スタイルを追加し、特殊な要素を使用することでより良い意味づけを確立しています。 HTML はこのようになっています。
+
+```html
+<form>
+  <fieldset>
+    <legend>希望する連絡方法を選択してください。</legend>
+    <div>
+      <input
+        type="radio"
+        id="contactChoice1"
+        name="contact"
+        value="email"
+        checked />
+      <label for="contactChoice1">メール</label>
+
+      <input type="radio" id="contactChoice2" name="contact" value="phone" />
+      <label for="contactChoice2">電話</label>
+
+      <input type="radio" id="contactChoice3" name="contact" value="mail" />
+      <label for="contactChoice3">郵便</label>
+    </div>
+    <div>
+      <button type="submit">送信</button>
+    </div>
+  </fieldset>
+</form>
+```
+
+この例では、 CSS が絡んでいるのが少し特徴的です。
 
 ```css
 html {
@@ -258,8 +268,6 @@ label {
 }
 
 input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 
   border-radius: 50%;
@@ -300,20 +308,17 @@ button:active {
 }
 ```
 
-Most notable here is the use of the {{cssxref("-moz-appearance")}} property (with prefixes needed to support some browsers). By default, radio buttons (and [checkboxes](/ja/docs/Web/HTML/Element/input/checkbox)) are styled with the operating system's native styles for those controls. By specifying `appearance: none`, you can remove the native styling altogether, and create your own styles for them. Here we've used a {{cssxref("border")}} along with {{cssxref("border-radius")}} and a {{cssxref("transition")}} to create a nice animating radio selection. Notice also how the {{cssxref(":checked")}} pseudo-class is used to specify the styles for the radio button's appearance when selected.
+ここで最も注目すべきは、{{cssxref("appearance")}}プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。既定で、ラジオボタン（と [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appearance: none` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxref("border")}} と {{cssxref("border-radius")}} と {{cssxref("transition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxref(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
 
-> **メモ:** **Compatibility note**: If you wish to use the {{cssxref("appearance")}} property, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies widely. In older browsers, even the keyword `none` does not have the same effect across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
+> **メモ:** もし {{cssxref("appearance")}} プロパティを使用したい場合は、とても慎重にテストする必要があります。このプロパティはほとんどの現代のブラウザーで対応していますが、その実装は大きく異なっています。古いブラウザーでは、キーワード `none` でさえ異なる形で同じ効果を持たず、まったく対応していないブラウザーもあります。最新のブラウザーでは、そのような違いは小さくなっています。
 
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
-Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
+ラジオボタンをクリックすると、 2 つのボタンの状態が変わるときに、きれいで滑らかなフェードアウト/イン効果があることに注意してください。さらに、凡例と送信ボタンのスタイルと色は、強いコントラストを保有するようにカスタマイズされています。これは、実際のウェブアプリケーションで使用したい外観ではないかもしれませんが、その可能性を示していることは間違いありません。
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             |     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --- |
-| {{SpecName('HTML WHATWG', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML WHATWG')}} |     |
-| {{SpecName('HTML5 W3C', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}} | {{Spec2('HTML5 W3C')}}     |     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

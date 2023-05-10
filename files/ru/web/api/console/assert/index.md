@@ -1,6 +1,6 @@
 ---
 title: console.assert()
-slug: Web/API/Console/assert
+slug: Web/API/console/assert
 tags:
   - API
   - Debugging
@@ -9,13 +9,14 @@ tags:
   - Отладка
 translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}{{Non-standard_Header}}
 
 Метод **`console.assert()`** записывает сообщение об ошибке в консоль в случае, если утверждение ложно. Если утверждение истинно - ничего не происходит.
 
 {{AvailableInWorkers}}
 
-> **Примечание:** **Важно:** Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
+> **Примечание:** Реализация м*етода `console.assert()` в браузере и Node.js отличается.*
 >
 > В браузере, вызов console.assert() с ложным утверждением вызовет печать ошибки в консоль без прерывания текущего выполнения скрипта, а в Node.js в аналогичном случае будет выброшена ошибка - AssertionError.
 

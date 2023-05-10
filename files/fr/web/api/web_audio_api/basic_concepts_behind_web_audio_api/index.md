@@ -14,7 +14,7 @@ Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant un
 
 1. Création d'un contexte audio
 2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance, compresseur
 4. Choix final de la sortie audio, par exemple les enceintes du système
 5. Connection des sources aux effets, et des effets à la sortie.
 
@@ -41,7 +41,7 @@ On peut trouver davantage de détails sur la page Wikipédia [Echantillonage (si
 
 Un {{ domxref("AudioBuffer") }} prend comme paramètres un nombre de canaux (1 pour mono, 2 pour stéréo, etc), une longueur, qui correspond au nombre de trames d'échantillon dans la mémoire tampon, et un taux d'échantillonage, qui indique le nombre de trames d'échantillons lues par seconde.
 
-Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.)  à un point précis dans le temps.
+Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.) à un point précis dans le temps.
 
 Le taux d'échantillonage est le nombre d'échantillons (ou de trames, puisque tous les échantillons d'une trame jouent en même temps) qui sont joués en une seconde, exprimés en Hz. Plus le taux d'échantillonage est élevé, meilleure est la qualité du son.
 
@@ -394,7 +394,7 @@ La position du panoramique est décrite avec des coodonnées cartésiennes selon
 
 ![Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné](pannernode.svg)
 
-La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite,  son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
+La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite, son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
 
 ![On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°](listener.svg)
 

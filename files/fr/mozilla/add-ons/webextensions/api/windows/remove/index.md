@@ -37,9 +37,9 @@ var removing = browser.windows.remove(
 
 Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,7 +74,7 @@ document.querySelector('#close').addEventListener(async ({ button, }) => { try {
 } catch (error) { console.error('Closing failed:', error); } });
 ```
 
-Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre  `.allowScriptsToClose` et `window.close()`.
+Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre `.allowScriptsToClose` et `window.close()`.
 
 {{WebExtExamples}}
 

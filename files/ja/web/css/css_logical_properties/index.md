@@ -115,9 +115,7 @@ slug: Web/CSS/CSS_Logical_Properties
 
 ## 仕様書
 
-| 仕様書                                 | 状態                                | 備考     |
-| -------------------------------------- | ----------------------------------- | -------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

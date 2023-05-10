@@ -1,8 +1,8 @@
 ---
 title: Worker.terminate()
 slug: Web/API/Worker/terminate
-translation_of: Web/API/Worker/terminate
 ---
+
 {{APIRef("Web Workers API")}}
 
 El método **`terminate()`** de la interfaz {{domxref("Worker")}} termina inmediatamente el {{domxref("Worker")}}. Esto no ofrece la oportunidad de finalizar las operaciones que estuviera realizando el worker, termina la ejecución por completo.
@@ -33,14 +33,11 @@ myWorker.terminate();
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("Web Workers")}}. |
-| {{SpecName('Web Workers', "#dom-worker-terminate", "Worker.postMessage()")}} | {{Spec2('Web Workers')}} | Definición inicial.                                  |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Worker.terminate")}}
+{{Compat}}
 
 ## Mirar también
 

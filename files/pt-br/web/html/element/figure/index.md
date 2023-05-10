@@ -1,86 +1,167 @@
 ---
-title: <figure>
+title: '<figure>: O elemento Figure com Caption opcional'
 slug: Web/HTML/Element/figure
-translation_of: Web/HTML/Element/figure
-original_slug: Web/HTML/Element/figura
 ---
-## Resumo
 
-O **Elemento HTML `<figure>` **representa o conteúdo independente, frequentemente com uma legenda ({{HTMLElement("figcaption")}}), e é normalmente referido como uma única unidade. Enquanto ela está relacionada com o fluxo principal, sua posição é independente do fluxo principal.Normalmente, isso é uma imagem, uma ilustração, um diagrama, um trecho de código ou uma esquema que é referenciado no texto principal, mas que pode ser movido para outra página ou para um apêndice, sem afetar o fluxo principal.
+{{HTMLSidebar}}
 
-> **Note:** _Notas de uso:_
->
-> - Being a [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root), the outline of the content of the \<figure> element is excluded from the main outline of the document.
-> - Uma legenda pode ser associada com o elemento `<figure>` inserindo o elemento {{HTMLElement("figcaption")}} dentro dele (no inicio ou no fim).
+O elemento **`<figure>`** [HTML](/pt-BR/docs/Web/HTML) representa conteúdo autocontido, potencialmente com uma legenda opcional, que é especificada usando o {{HTMLElement("figcaption" )}} elemento. A figura, sua legenda e seu conteúdo são referenciados como uma única unidade.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root), palpable content.
-- _Permite conteúdo_ A {{HTMLElement("figcaption")}} element, followed by [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content); or flow content followed by a {{HTMLElement("figcaption")}} element; or flow content.
-- _Omissão de TAGs_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
-- _DOM interface_ {{domxref("HTMLElement")}}
+{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
+          >Categorias de conteúdo</a
+        >
+      </th>
+      <td>
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Conteudo de fluxo</a
+        >,
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#palpable_content"
+          >conteúdo palpável</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Conteúdo permitido</th>
+      <td>
+        Um elemento {{HTMLElement("figcaption")}}, seguido por
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >conteúdo de fluxo</a
+        >; ou conteúdo de fluxo seguido por um
+        {{HTMLElement("figcaption")}} elemento; ou conteúdo de fluxo.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omissão de tag</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Pais permitidos</th>
+      <td>
+        Qualquer elemento que aceite
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+          >Contúdo de fluxo</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Função ARIA implícita</th>
+      <td>
+        <a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
+          >figure</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Funções ARIA permitidas</th>
+      <td>
+        Com nenhum
+        <a href="/pt-BR/docs/Web/HTML/Element/figcaption">figcaption </a
+        >descendente:
+        <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">qualquer</a>,
+        caso contrário, não há papéis permitidos
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">interface DOM</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+
+## Notas de uso
+
+- Normalmente uma `<figure>` é uma imagem, ilustração, diagrama, trecho de código, etc., que é referenciado no fluxo principal de um documento, mas que pode ser movido para outra parte do documento ou para um apêndice sem afetar o fluxo principal.
+- Uma legenda pode ser associada ao elemento `<figure>` inserindo um {{HTMLElement("figcaption")}} dentro dele (como o primeiro ou o último filho). O primeiro elemento `<figcaption>` encontrado na figura é apresentado como legenda da figura.
 
 ## Exemplos
 
-### Exemplo 1
+### Imagens
 
 ```html
-<!-- Apenas uma imagem-->
+<!-- Apenas uma imagem -->
 <figure>
-  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
+  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
 </figure>
-<p></p>
+
 <!-- Imagem com legenda -->
 <figure>
-  <img src="https://developer.mozilla.org/static/img/favicon144.png" alt="Uma imagem impressionante">
-  <figcaption>Legenda para a imagem impressionante</figcaption>
+  <img src="favicon-192x192.png" alt="O lindo logotipo do MDN." />
+  <figcaption>Logotipo MDN</figcaption>
 </figure>
-<p></p>
 ```
 
-### Example 2
+{{EmbedLiveSample("Images", "100%", 375)}}
 
-```html
-    <figure>
-      <figcaption>Obtenha os detalhes do browser usando navigator</figcaption>
-        <pre>
-          function NavigatorExample(){
-          var txt;
-          txt = "Browser CodeName: " + navigator.appCodeName;
-          txt+= "Browser Name: " + navigator.appName;
-          txt+= "Browser Version: " + navigator.appVersion ;
-          txt+= "Cookies Enabled: " + navigator.cookieEnabled;
-          txt+= "Platform: " + navigator.platform;
-          txt+= "User-agent header: " + navigator.userAgent;
-          }
-        </pre>
-```
-
-### Exemplo 3
+### Trechos de codigo
 
 ```html
 <figure>
-      <figcaption><cite>Edsger Dijkstra :-</cite></figcaption>
-      <p>"Se o debugging é o processo de remoção de bugs de software, <br /> então programação deve ser o processo de colocá-los"<br /></p>
-    </figure>
+  <figcaption>Obtenha detalhes do navegador usando o <code>navigator</code>.</figcaption>
+  <pre>
+function NavigatorExample() {
+  var txt;
+  txt = "Nome do código do navegador: " + navigator.appCodeName + "; ";
+  txt+= "Nome do navegador: " + navigator.appName + "; ";
+  txt+= "Versão do navegador: " + navigator.appVersion + "; ";
+  txt+= "Cookies habilitados: " + navigator.cookieEnabled + "; ";
+  txt+= "Plataforma: " + navigator.platform + "; ";
+  txt+= "Cabeçalho do agente do usuário: " + navigator.userAgent + "; ";
+  console.log("Exemplo de Navegador", txt);
+}
+  </pre>
+</figure>
 ```
+
+{{EmbedLiveSample("Code_snippets", "100%", 250)}}
+
+### Citações
+
+```html
+<figure>
+  <figcaption><b>Edsger Dijkstra:</b></figcaption>
+  <blockquote>
+    Se a depuração é o processo de remoção de bugs de software, então a programação deve
+    ser o processo de colocá-los.
+  </blockquote>
+</figure>
+```
+
+{{EmbedLiveSample("Quotations")}}
+
+### Poemas
+
+```html
+<figure>
+  <p style="white-space:pre">
+    Ofereça-me um discurso, encantarei seu ouvido, Ou como uma viagem de fadas sobre o
+    verde, Ou, como uma ninfa, com longos cabelos desgrenhados, Dança na areia, e
+    mas nenhum fundamento visto: O amor é um espírito todo compacto de fogo, Não grosseiro para
+    afundar, mas leve, e vai aspirar.
+  </p>
+  <figcaption><cite>Vênus e Adônis</cite>, de William Shakespeare</figcaption>
+</figure>
+```
+
+{{EmbedLiveSample("Poemas", "100%", 250)}}
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
-## Navegadores compatíveis
+## Compatibilidade do navegador
 
-{{Compat("html.elements.figure")}}
+{{Compat}}
 
-## Veja Também
+## Veja também
 
-- O {{HTMLElement("figcaption")}} elemento.
-
-{{HTMLRef}}
+- O elemento {{HTMLElement("figcaption")}}.

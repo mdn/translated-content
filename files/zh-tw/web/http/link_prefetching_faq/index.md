@@ -3,6 +3,8 @@ title: 預先取回連結 (Prefetch) 問答集
 slug: Web/HTTP/Link_prefetching_FAQ
 ---
 
+{{HTTPSidebar}}
+
 ### 何謂預先取回連結 ?
 
 預先取回連結 (Prefetch) 是一項瀏覽器機制；這項機制利用瀏覽器閒置時間，預先下載取回使用者稍後可能造訪的網頁資源。只要網頁告訴瀏覽器哪些資源可以預先取回，當瀏覽完成當下網頁載入工作後，瀏覽器便會在背景預先取回這些資源，並且存入快取之中，然後當使用者造訪預先取回的網頁時，網頁便可以快速地從快取中取出載入。
@@ -64,7 +66,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 預先取回有限制嗎 ?
 
-有。只有 http\:// (and, starting in {{ Gecko("1.9.1") }} https\://) URLs 能被預先取回，其它如 FTP 則無法。
+有。只有 http\:// (and, starting in Gecko 1.9.1 https\://) URLs 能被預先取回，其它如 FTP 則無法。
 
 ### Mozilla 會預先取回不同網域的文件嗎 ?
 

@@ -1,11 +1,8 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - Descriptor CSS
-  - Estilos de contadores CSS
-translation_of: Web/CSS/@counter-style/symbols
 ---
+
 ## Summary
 
 El descriptor `symbols` es usado para definir los símbolos que usará un sistema de conteo específico para construir una representación de conteo. Un símbolo puede ser un texto, una imagen o un identificador. El descriptor symbols debe ser especificado cuando el valor del descriptor {{cssxref('system')}} es _cyclic_, _numeric_, _alphabetic_, _symbolic_, o _fixed_. Cuando se usa el sistema _additive_, el descriptor {{cssxref('additive-symbols')}} es usado para especificar los símbolos.
@@ -66,17 +63,15 @@ symbols: indic-numbers;
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/symbols') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                       | Comentarios        |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.counter-style.symbols")}}
+{{Compat}}
 
 ## Véase también
 

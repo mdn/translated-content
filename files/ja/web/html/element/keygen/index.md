@@ -3,7 +3,7 @@ title: <keygen>
 slug: Web/HTML/Element/keygen
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<keygen>`** は [HTML](/ja/docs/Web/HTML) の要素で、鍵の材料の生成を容易にするため、および [HTML フォーム](/ja/docs/Learn/Forms)の一部として公開鍵を送信するための要素です。この仕組みは、ウェブベースの資格情報管理システムと合わせて使用するものとして設計されています。証明書の要求に必要な他の情報を伴う HTML フォームで `<keygen>` 要素を使用して、その処理結果が署名済み資格情報になることを想定しています。
 

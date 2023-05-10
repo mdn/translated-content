@@ -1,8 +1,8 @@
 ---
 title: HTMLTableElement.align
 slug: Web/API/HTMLTableElement/align
-translation_of: Web/API/HTMLTableElement/align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header()}}
 
 La propiedad **`HTMLTableElement.align`** representa la alineación de la tabla.
@@ -16,7 +16,7 @@ varalignment =HTMLTableElement.align;
 
 ### Parámetros
 
-- `alignment` {{deprecatedGeneric('inline','HTML4')}}
+- `alignment` {{deprecated_inline}}
 
   - : `alignment` es una cadena con uno de los siguientes valores:
 

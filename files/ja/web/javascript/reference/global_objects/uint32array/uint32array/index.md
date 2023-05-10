@@ -61,9 +61,7 @@ var uint32 = new Uint32Array(iterable);
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-constructors', 'TypedArray constructors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3,6 +3,7 @@ title: Document.evaluate()
 slug: Web/API/Document/evaluate
 translation_of: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 Возвращает экземпляр объекта типа [`XPathResult`](/en-US/docs/XPathResult) исходя из данного [XPath](/ru/docs/XPath) и других входных параметров.

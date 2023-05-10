@@ -1,8 +1,8 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
-translation_of: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLOptionElement`** interface represents {{HTMLElement("option")}} elements and inherits all classes and methods of the {{domxref("HTMLElement")}} interface.
@@ -37,11 +37,11 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 - Option()
   - : Is a constructor creating an `HTMLOptionElement` object. It has four values: the text to display, `text`, the value associated, `value`, the value of `defaultSelected`, and the value of `selected`. The last three values are optional.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

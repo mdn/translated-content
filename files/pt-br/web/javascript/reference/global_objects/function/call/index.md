@@ -1,12 +1,8 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Função
-  - JavaScript
-  - Método(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Introdução

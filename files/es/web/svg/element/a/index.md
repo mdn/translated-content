@@ -1,8 +1,8 @@
 ---
 title: <a>
 slug: Web/SVG/Element/a
-translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 El elemento SVG \<a> crea un hipervínculo a otras páginas web, archivos, ubicaciones dentro de la misma página, direcciones de correo electrónico o cualquier otra URL.
@@ -82,7 +82,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("type", "a")}}
   - : Este atributo especifica el tipo de medio en forma de un {{Glossary ( "tipo MIME ")}} para la dirección URL vinculada.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : Este atributo contiene la dirección URL o el fragmento de URL al que apunta el hipervínculo.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
 
@@ -109,12 +109,8 @@ svgns|a:hover, svgns|a:active {
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentatio                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadido el atributo `referrerpolicy`.                                                  |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Se sustituye el atributo {{SVGAttr("xlink:href")}} por {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Definición inicial                                                                     |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("svg.elements.a")}}
+{{Compat}}

@@ -28,7 +28,7 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 
 ## 示例
 
-### 使用`direction` 属性
+### 使用 `direction` 属性
 
 这是一段简单的代码片段，对文本设置不同的 direction 数值。
 
@@ -66,9 +66,9 @@ ctx.fillText('Hi!', 150, 130);
 
 #### 结果
 
-{{ EmbedLiveSample('Playable_code', 700, 180) }}
+{{ EmbedLiveSample('使用 direction 属性', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

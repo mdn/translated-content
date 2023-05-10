@@ -367,7 +367,7 @@ for (var i=0; i<2; i++) {
 ### 注意
 
 - 表的{{domxref("element.innerHTML","innerHTML")}}属性不应该被用来修改表，虽然你可以用它来写一个完整的表格或单元格的内容。
-- 如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其它浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。
+- 如果用 DOM 核心方法{{domxref("document.createElement")}}和{{domxref("Node.appendChild")}}创建表的行和单元，IE 会要求它们附加到一个 tbody 元素，而其他浏览器允许它们附加到一个 table 元素（行会被添加到最后的 tbody 元素）。
 - [表接口](/zh-CN/docs/Web/API/HTMLTableElement#Methods)还有一些可用于创建和修改的表的便利方法。
 
 ## Subnav

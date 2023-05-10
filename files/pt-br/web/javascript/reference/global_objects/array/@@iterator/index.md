@@ -1,8 +1,8 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 O valor inicial da propriedade **`@@iterator`** é o mesmo objeto função que o valor inicial da propriedade {{jsxref("Array.prototype.values()", "values()")}}.

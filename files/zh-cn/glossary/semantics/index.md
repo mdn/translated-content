@@ -1,7 +1,6 @@
 ---
 title: Semantics（语义）
 slug: Glossary/Semantics
-original_slug: Glossary/语义
 ---
 
 在编程中，**语义**指的是一段代码的含义 — 例如 "运行这行 JavaScript 代码会产生怎样的影响？", 或者 "这个 HTML 的元素有什么作用，扮演了什么样的角色"（而不只是 "它看上去像是什么？"。）
@@ -32,17 +31,17 @@ HTML 中，例如，{{htmlelement("h1")}} 元素是一个语义化元素，赋�
 
 这将会把这个元素渲染得像是一个最高级别的标题，但是它的值没有对应到最“最高级别标题”这一语义，所以在此之上，它不会获得更多额外的描述（只是一个普通“span”元素而不是“最高级别标题”这一语义）。所以在恰当的需求下使用恰当的 HTML 元素是一个不错的主意。
 
-HTML should be coded to represent the _data_ that will be populated and not based on its default presentation styling. Presentation (how it should look), is the sole responsibility of [CSS](/zh-CN/docs/Web/CSS).
+HTML 应该编写为表示将要填充的数据，而不是基于其默认的演示样式。演示（应该是什么样子），是 [CSS](/zh-CN/docs/Web/CSS) 的唯一责任。
 
-Some of the benefits from writing semantic markup are as follows:
+写语义标记的一些好处如下：
 
-- Search engines will consider its contents as important keywords to influence the page's search rankings (see {{glossary("SEO")}})
-- Screen readers can use it as a signpost to help visually impaired users navigate a page
-- Finding blocks of meaningful code is significantly easier than searching though endless `div`s with or without semantic or namespaced classes
-- Suggests to the developer the type of data that will be populated
-- Semantic naming mirrors proper custom element/component naming
+- 搜索引擎将其内容视为影响页面搜索排名的重要关键字（参见 {{ glossary ("SEO")}}）。
+- 屏幕阅读器可以将其用作指引，帮助视力受损的用户导航页面。
+- 比起搜索无休止的带有或不带有语义/命名空间类的 `div`，找到有意义的代码块显然容易得多。
+- 向开发人员建议将要填充的数据类型。
+- 语义命名反映了正确的自定义元素/组件命名。
 
-When approaching which markup to use, ask yourself, "What element(s) best describe/represent the data that I'm going to populate?" For example, is it a list of data?; ordered, unordered?; is it an article with sections and an aside of related information?; does it list out definitions?; is it a figure or image that needs a caption?; should it have a header and a footer in addition to the global site-wide header and footer?; etc.
+当接近要使用的标记时，问问自己，“什么元素最能描述/表示我要填充的数据？”例如，它是数据列表吗？有序或无序？是否是一篇具有章节和相关信息旁注的文章？它是否列出了定义？它是需要标题的图形还是图像？除了全局网站范围的页眉和页脚之外，它还应该有页眉和页脚吗？等等。
 
 ## 语义化元素
 

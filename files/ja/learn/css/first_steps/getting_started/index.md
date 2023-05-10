@@ -71,7 +71,7 @@ HTML ファイルと CSS ファイルを保存し、ブラウザーでこのペ�
 
 ## HTML 要素をスタイリングする
 
-見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。\_**要素セレクタ**（\_HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして `p` を使うことができます。すべての段落を緑色にするために次を使います:
+見出しを赤くすることで、HTML 要素に焦点をあてたスタイリングを試しました。**要素セレクタ**（HTML の要素名を直接あてはめるセレクタ）に焦点をあてたのです。文書内のすべての段落に焦点をあてるなら、セレクタとして `p` を使うことができます。すべての段落を緑色にするために次を使います:
 
 ```css
 p {
@@ -256,11 +256,3 @@ HTML のうち、スタイルが適用されるのは `<span class="special">` �
 次のレッスンでは、CSS の構造を見ていきます。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## このモジュールの記事
-
-1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

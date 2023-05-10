@@ -1,15 +1,8 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - toLowerCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
+
 {{JSRef}}
 
 O método **`toLowerCase()`** retorna o valor da string que foi chamada convertido para minúsculo.

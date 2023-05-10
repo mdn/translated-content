@@ -8,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/No_Decoreation_Shown.html
 
 枠のシャドウ(影付け装飾)や角丸(アイコンやボタンの角の丸み)が表示されません。
 
-![](https://mdn.mozillademos.org/files/9987/0204.jpg)
+![](0204.jpg)
 
 ## 要因
 

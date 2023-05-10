@@ -1,14 +1,8 @@
 ---
 title: CSS Animations tips and tricks
 slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - Animações CSS
-  - CSS
-  - Comofazer
-  - Exemplo
-  - Tutorial
-translation_of: Web/CSS/CSS_Animations/Tips
 ---
+
 Animações CSS tornam possível fazer coisas incríveis com os elementos que compoem seus documentos e aplicativos. No entanto, existem coisas que você pode querer fazer que não são óbvias, ou jeitos espertos de fazer coisas que você pode não ter pensado de imediato. Esse artigo é uma coleção de dicas e truques que descobrimos que podem tornar seu trabalho mais fácil, incluindo como rodar uma animação parada novamente.
 
 ## Rode uma animação novamente

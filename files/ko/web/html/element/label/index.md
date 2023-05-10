@@ -1,15 +1,9 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<label>` 요소**는 사용자 인터페이스 항목의 설명을 나타냅니다.
 
@@ -195,4 +189,4 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.label")}}
+{{Compat}}

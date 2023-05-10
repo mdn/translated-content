@@ -1,8 +1,8 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
-translation_of: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`scrollbar-color`** define as cores da barra de rolagem do navegador.
@@ -43,7 +43,7 @@ scrollbar-color: unset;
     | `light`           | Mostra uma scrollbar mais clara, podendo ser um estilo padrão definido pelo navegador, ou personalizado com cores escuras.  |
     | `<color> <color>` | A primeira cor é aplicada à **thumb**, a segunda cor ao **track**                                                           |
 
-    > **Note:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+    > **Nota:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
 
 ### Sintaxe formal
 

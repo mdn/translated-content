@@ -1,19 +1,6 @@
 ---
 title: Instalación de software básico
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Aprender
-  - Configuración
-  - Herramientas
-  - Navegadores
-  - Novato
-  - Principiantes
-  - aprende
-  - buscador
-  - editor de textos
-  - instalar
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Instalacion_de_software_basico
 ---
 
@@ -39,7 +26,7 @@ Esto parece una lista espeluznante pero, afortunadamente, puedes comenzar a trab
 
 ### Instalación de un editor de texto
 
-Probablemente ya tengas un editor de texto básico instalado en tu computadora. De manera predeterminada Windows incluye el {{Interwiki("wikipedia", "Bloc de notas")}} y OS X viene con {{Interwiki("wikipedia", "TextEdit")}}. Las _distros_ (versiones) de Linux varían: Ubuntu viene con {{Interwiki("wikipedia", "Gedit")}}; distribuciones basadas en KDE suelen traer [Kate](http://kate-editor.org/) o [Kwrite](https://es.wikipedia.org/wiki/KWrite).
+Probablemente ya tengas un editor de texto básico instalado en tu computadora. De manera predeterminada Windows incluye el [Bloc de notas](https://es.wikipedia.org/wiki/Bloc_de_notas) y OS X viene con [TextEdit](https://es.wikipedia.org/wiki/TextEdit). Las _distros_ (versiones) de Linux varían: Ubuntu viene con [Gedit](https://es.wikipedia.org/wiki/Gedit); distribuciones basadas en KDE suelen traer [Kate](http://kate-editor.org/) o [Kwrite](https://es.wikipedia.org/wiki/KWrite).
 
 Para el desarrollo Web, probablemente hay cosas mejores que el Bloc de notas o TextEdit. Una recomendación puede ser empezar con [Brackets](http://brackets.io), un editor gratuito que ofrece vistas previas en vivo y sugerencias de código.
 
@@ -60,14 +47,3 @@ Antes de continuar, deberías instalar al menos dos de estos navegadores y tener
 Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
-- [¿Cómo se verá tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Manejo de archivos](/es/Learn/Getting_started_with_the_web/Manejando_los_archivos)
-- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicar tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

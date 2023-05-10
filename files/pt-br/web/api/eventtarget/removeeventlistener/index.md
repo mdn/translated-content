@@ -1,15 +1,8 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - DOM
-  - Gecko
-  - JavaScript
-  - Method
-  - events
-translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.
@@ -57,7 +50,7 @@ div.removeEventListener('click', listener, false);
 
 ### Notas para Gecko
 
-- Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro `useCapture não estive explicitamente cofigurado como` false. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, `addEventListener()` retornaria uma exception se o parâmetro do listener fosse `null`; agora o método retorna sem erros, mas sem fazer nada.
+- Antes do Firefox 6, o navegador poderia retornar um erro se o parâmetro `useCapture não estive explicitamente cofigurado como` false. Antes do Gecko 9.0, `addEventListener()` retornaria uma exception se o parâmetro do listener fosse `null`; agora o método retorna sem erros, mas sem fazer nada.
 
 ### Notas para Opera
 
@@ -73,7 +66,7 @@ div.removeEventListener('click', listener, false);
 
 ### Especificação
 
-- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
+- [removeEventListener](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
 
 ## Polyfill para oferecer suporte aos navegadores antigos
 

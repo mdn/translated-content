@@ -1,13 +1,9 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - JavaScript
-  - Propiedad
-  - función
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/length
 ---
+
 {{JSRef("Global_Objects", "Function")}}
 
 ## Sumario
@@ -42,15 +38,11 @@ console.log((function(a, b = 1, c) {}).length); /* 1, solo parámetros antes del
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Estado                   | Comentario                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Standard                 | Definición inicial. Implementado en JavaScript 1.1.           |
-| `length` property of the {{jsxref("Global_Objects/Function", "Function")}} constructor: {{SpecName('ES5.1', '#sec-15.3.3.2', 'Function.length')}} `length` property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object: {{SpecName('ES5.1', '#sec-properties-of-the-function-prototype-object', 'Function.length')}} `length` property of {{jsxref("Global_Objects/Function", "Function")}} instances: {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}} | {{Spec2('ES5.1')}} |                                                               |
-| `length` property of the {{jsxref("Global_Objects/Function", "Function")}} constructor: {{SpecName('ES6', '#sec-function.length', 'Function.length')}} `length` property of the {{jsxref("Global_Objects/Function", "Function")}} prototype object: {{SpecName('ES6', '#sec-15.3.4', 'Function.length')}} `length` property of {{jsxref("Global_Objects/Function", "Function")}} instances: {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}                         | {{Spec2('ES6')}}     | El atributo `configurable` de esta propiedad ahora es `true`. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Ver también
 

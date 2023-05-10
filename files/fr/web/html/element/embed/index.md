@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/embed
 browser-compat: html.elements.embed
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<embed>`** permet d'intégrer du contenu externe à cet endroit dans le document. Le contenu peut être fourni par une application externe ou une autre source telle qu'un _plugin_ du navigateur.
 
@@ -121,7 +121,7 @@ Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attri
 
 Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
 
-## Exemple
+## Exemples
 
 ```html
 <embed type="video/quicktime" src="film.mov" width="640" height="480" title="Titre de ma vidéo">

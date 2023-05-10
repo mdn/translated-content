@@ -1,9 +1,9 @@
 ---
 title: Módulos JavaScript
 slug: Web/JavaScript/Guide/Modules
-translation_of: Web/JavaScript/Guide/Modules
 original_slug: Web/JavaScript/Guide/Módulos
 ---
+
 {{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 Este guia fornece tudo o que você precisa para começar com a sintaxe de módulo do JavaScript.

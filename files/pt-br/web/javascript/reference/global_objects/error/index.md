@@ -1,15 +1,8 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Custom Error
-  - Erro
-  - Error
-  - JavaScript
-  - Reference
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 O construtor de **`Error`** cria um objeto de erro. Instâncias de objetos `Error` são lançadas quando erros de tempo de execução ocorrem. O objeto `Error` também pode ser usado como objeto base para exceções definidas pelo usuário. Veja abaixo tipos de erro padrões embutidos.

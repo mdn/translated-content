@@ -4,6 +4,7 @@ slug: Learn/Forms/Styling_web_forms
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
 
 В этой статье Вы узнает, как использовать CSS с HTML-формами, чтобы сделать их (надеюсь) более красивыми. Удивительно, но это может быть немного сложнее. По историческим и техническим причинам виджеты форм плохо сочетаются с CSS. Из-за этих трудностей многие разработчики предпочитают создавать свои собственные HTML-виджеты, чтобы получить контроль над своим внешним видом. Однако в современных браузерах веб-дизайнеры все больше контролируют дизайн элементов формы. Давайте приступим!

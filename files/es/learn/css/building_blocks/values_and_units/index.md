@@ -1,9 +1,9 @@
 ---
 title: Valores y unidades CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
-translation_of: Learn/CSS/Building_blocks/Values_and_units
 original_slug: Learn/CSS/Building_blocks/Valores_y_unidades_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de valores que esa propiedad admite, y echar un vistazo a cualquier página de propiedades en MDN te ayudará a comprender qué valores admite una propiedad en particular. En este artículo veremos algunos de los valores y unidades más comunes en uso.
@@ -277,24 +277,3 @@ Lo que debes recordar es que cada propiedad tiene una lista definida de valores 
 Por ejemplo, comprender que [`<image>`](/es/docs/Web/CSS/image) también te permite crear un degradado de color es útil, ¡pero quizás no sea un conocimiento obvio!
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
-
-## En este módulo
-
-1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Selectores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

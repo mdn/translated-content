@@ -1,13 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS Display
-  - CSS Property
-  - Reference
-  - display
-translation_of: Web/CSS/display
 ---
 {{CSSRef}}
 
@@ -147,10 +140,7 @@ with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
         readers will not look at what's inside. See the
         [Accessibility concerns](#accessibility_concerns) section below for more details._
     - `none`
-      - : Turns off the display of an element so that it has no effect on layout (the document is rendered as though the
-        element did not exist). All descendant elements also have their display turned off. To have an element take up
-        the space that it would normally take, but without actually rendering anything, use the
-        {{CSSxRef("visibility")}} property instead.
+      - : 레이아웃에 영향을 주지 않도록 요소의 display를 끄게 합니다(웹문서는 마치 해당 요소가 존재하지 않는 것처럼 렌더링되어집니다). 모든 하위 요소들 또한 display를 끄게 합니다. 요소가 정상적으로 본연의 공간을 가지고 있게 하면서 해당 공간에 아무것도 렌더링되지 않게 하려면, {{CSSxRef("visibility")}} 속성으로 대체하여 사용하시기 바랍니다.
 
 ### 레거시
 

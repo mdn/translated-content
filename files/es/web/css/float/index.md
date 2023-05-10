@@ -1,15 +1,8 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS Float
-  - CSS Posicionamiento
-  - CSS Propiedad
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#Absolute_positioning)).

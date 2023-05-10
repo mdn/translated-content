@@ -1,8 +1,8 @@
 ---
 title: position
 slug: Web/CSS/position
-translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.{{EmbedInteractiveExample("pages/css/position.html")}}
 
 ### Tipos de posicionamentos
@@ -106,7 +106,7 @@ A simple example follows:
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
 ```
 
 ```css

@@ -3,6 +3,7 @@ title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
+
 {{JSRef}}
 
 The **`BigInt.asUintN`** static method is used to wrap a BigInt value to an unsigned integer between 0 and 2width-1.

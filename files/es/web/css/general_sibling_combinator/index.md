@@ -1,14 +1,9 @@
 ---
 title: Selectores de hermanos generales
 slug: Web/CSS/General_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/General_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_generales
 ---
+
 {{CSSRef("Selectors")}}
 
 ## Resumen
@@ -40,14 +35,11 @@ p ~ span {
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                               | Comentarios |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{ SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator') }} | {{Spec2('CSS4 Selectors')}} |             |
-| {{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}     | {{Spec2('CSS3 Selectors')}} |             |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## Ver también
 

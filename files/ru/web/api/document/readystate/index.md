@@ -6,9 +6,9 @@ tags:
   - Property
 translation_of: Web/API/Document/readyState
 ---
-{{APIRef("DOM")}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef("DOM")}}
 
-Свойство** `Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
+Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
 
 Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.
 

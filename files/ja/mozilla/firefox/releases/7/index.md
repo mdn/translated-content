@@ -9,7 +9,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### HTML
 
-- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは {{ gecko("2.0") }} から非推奨となっていました。
+- {{ domxref("HTMLHeadElement") }} の `profile` プロパティが削除されました。このプロパティは Gecko 2.0 から非推奨となっていました。
 - {{ domxref("HTMLImageElement") }} の `x` プロパティと `y` プロパティが削除されました。
 - {{ domxref("HTMLSelectElement") }} の `add()` メソッドの `before` 引数が optional となりました。
 - {{ HTMLElement("body") }} の {{ htmlattrxref("background", "body") }} 属性が URI として解決されなくなりました。この変更は HTML 仕様への準拠によるものです。
@@ -123,7 +123,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `nsIDOMWindow_2_0_BRANCH` インタフェースは [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インタフェースへ統合されました。
 - URI 引数付きで [`nsINavHistoryObserver`](/ja/docs/XPCOM_Interface_Reference/nsINavHistoryObserver) メソッドを使う場合、GUID も必要となります。
 - `nsISHistory_2_0_BRANCH` インタフェースは [`nsISHistory`](/ja/docs/XPCOM_Interface_Reference/nsISHistory) インタフェースへ統合されました。
-- [`nsITelemetry`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry) に、ID からヒストグラムを返す [`getHistogramById()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#getHistogramById%28%29) メソッドと、`false` 設定時に [使用統計情報 (Telemetry)](http://mozilla.jp/legal/privacy/firefox/#telemetry) の記録を無効化できる `canRecord` 属性が追加されました。使用統計情報はプライベートブラウジングモードでは記録されなくなりました。({{ bug("661574") }}、{{ bug("661573") }})
+- [`nsITelemetry`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry) に、ID からヒストグラムを返す [`getHistogramById()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#getHistogramById%28%29) メソッドと、`false` 設定時に [使用統計情報 (Telemetry)](http://mozilla.jp/legal/privacy/firefox/#telemetry) の記録を無効化できる `canRecord` 属性が追加されました。使用統計情報はプライベートブラウジングモードでは記録されなくなりました。([Firefox バグ 661574](https://bugzil.la/661574)、[Firefox バグ 661573](https://bugzil.la/661573))
   [`newHistogram()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#newHistogram%28%29) で定義された使用統計ヒストグラムは、Mozilla への定期報告に含まれません。
 - [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インタフェースに大幅な変更が行われました。使用する場合はコードに変更を加える必要があるでしょう。
 - [`nsIXMLHttpRequest.setRequestHeader()`](/ja/docs/nsIXMLHttpRequest#setRequestHeader%28%29) によって設定されたヘッダが、リダイレクトを辿る際にもリクエストに含まれて送信されるようになりました。これまでこの方法で設定されたヘッダは送信されていませんでした。

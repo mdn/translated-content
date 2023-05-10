@@ -1,20 +1,8 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Almacenamiento
-  - Contexto seguro
-  - Cuota
-  - Referencia
-  - Storage API
-  - StorageManager
-  - Uso
-  - estimación
-  - estimate
-  - metodo
-translation_of: Web/API/StorageManager/estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 El método **`estimate()`** de la interfaz {{domxref("StorageManager")}} solicita al Gestor de Almacenamiento la información de cuota y uso para el origen actual. Este método opera de forma asíncrona, por lo que devuelve una {{jsxref("Promise")}} que se resuelve una vez que la información esté disponible. La función que controla el cumplimiento de la promesa recibe un {{domxref("StorageEstimate")}} como entrada con la informción de uso y cuota.
@@ -63,13 +51,11 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-estimate','estimate()')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,8 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-tags:
-  - DNS
-  - HTTP
-  - Prefetch-Control
-  - X-DNS-Prefetch-Control
-translation_of: Web/HTTP/Headers/X-DNS-Prefetch-Control
 ---
+
 {{HTTPSidebar}}O cabeçalho de resposta HTTP **`X-DNS-Prefetch-Control`** controla a pré-busca de DNS, um recurso pelo qual os navegadores realizam proativamente a resolução de nomes de domínio em ambos os links que o usuário pode escolher, além de URLs para itens referenciados pelo documento, incluindo imagens , CSS, JavaScript e assim por diante.
 
 Essa pré-busca é realizada em segundo plano, de forma que o {{glossary ("DNS")}} provavelmente tenha sido resolvido quando os itens referenciados forem necessários. Isso reduz a latência quando o usuário clica em um link.
@@ -81,7 +76,7 @@ Da mesma forma, o elemento de link pode ser usado para resolver nomes de host se
 <link rel="dns-prefetch" href="//www.spreadfirefox.com">
 ```
 
-Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página inicial de um site para forçar a pré-resolução de nomes de domínio que são referenciados com frequência em todo o site, mesmo que eles não sejam usados ​​na própria home page. Isso melhorará o desempenho geral do site, mesmo que o desempenho da página inicial não seja afetado.
+Pré-busca forçada de nomes de host pode ser útil, por exemplo, na página inicial de um site para forçar a pré-resolução de nomes de domínio que são referenciados com frequência em todo o site, mesmo que eles não sejam usados na própria home page. Isso melhorará o desempenho geral do site, mesmo que o desempenho da página inicial não seja afetado.
 
 ## Compatibilidade com navegadores
 

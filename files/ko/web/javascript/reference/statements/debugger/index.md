@@ -1,11 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
 {{jsSidebar("Statements")}}
 
@@ -30,7 +25,7 @@ function potentiallyBuggyCode() {
 
 디버거가 활성화되면 디버거 문의 위치에서 실행이 일시중지됩니다. 스크립트 소스의 중단점과 비슷합니다.
 
-[![Paused at a debugger statement.](https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png)](<https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png>)
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](<screen_shot_2014-02-07_at_9.14.35_am.png>)
 
 ## 명세서
 

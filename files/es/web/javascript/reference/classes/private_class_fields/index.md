@@ -1,9 +1,9 @@
 ---
 title: Private class fields
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 ---
+
 Las propiedades de la clase son públicas de forma predeterminada y se pueden examinar o modificar fuera de la clase. Sin embargo, existe [una propuesta experimental](https://github.com/tc39/proposal-class-fields) para permitir la definición de campos de clase privados utilizando un `#` prefijo hash .
 
 ## Syntax
@@ -155,7 +155,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Los métodos de instancia privada pueden ser funciones generadoras, asíncronas o asíncronas. Los getters y setters privados también son posibles:
@@ -178,18 +178,16 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.private_class_fields")}}
+{{Compat}}
 
 ## See also
 

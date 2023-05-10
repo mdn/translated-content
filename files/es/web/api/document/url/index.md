@@ -1,14 +1,8 @@
 ---
 title: document.URL
 slug: Web/API/Document/URL
-tags:
-  - API
-  - Documento
-  - HTML DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`URL`** de la interfaz {{domxref("Document")}} devuelve la ubicación del documento como una cadena de texto.

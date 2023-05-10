@@ -1,14 +1,14 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 El método **`fontsize()`** crea {{HTMLElement("font")}} elemento HTML que muestra una cadena con el tamaño especificado.
 
-> **Nota:** **Usage note:** El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
+> **Nota:** El elemento \<font> ha sido eliminado [HTML5](/es/docs/Web/Guide/HTML/HTML5) y no se debe usar. Los desarrolladores web deben usar propiedades [CSS](/es/docs/Web/CSS).
 
 ## Sintaxis
 
@@ -47,15 +47,13 @@ With the {{domxref("HTMLElement.style", "element.style")}} object you can get th
 document.getElementById('yourElemId').style.fontSize = '0.7em';
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status               | Comment                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES6', '#sec-string.prototype.fontsize', 'String.prototype.fontsize')}} | {{Spec2('ES6')}} | Initial definition. Implemented in JavaScript 1.0. Defined in the (normative) Annex B for Additional ECMAScript Features for Web Browsers. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fontsize")}}
+{{Compat}}
 
 ## See also
 

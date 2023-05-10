@@ -1,8 +1,8 @@
 ---
 title: Expresiones regulares (regexp)
 slug: Web/EXSLT/regexp
-translation_of: Web/EXSLT/regexp
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 El paquete de Expresiones regulares (regexp) de EXSLT proporciona funciones que permiten probar,

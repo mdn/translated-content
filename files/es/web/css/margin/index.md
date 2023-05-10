@@ -1,9 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/margin
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -120,17 +119,12 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 
 ## Especificaciones
 
-| Specification                                                                        | Status                                   | Comment                                |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------- |
-| {{ SpecName('CSS3 Box', '#margin', 'margin') }}                     | {{ Spec2('CSS3 Box') }}         | No significant change                  |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'margin') }} | {{ Spec2('CSS3 Transitions') }} | Defines `margin` as animatable.        |
-| {{ SpecName('CSS2.1', 'box.html#margin-properties', 'margin') }} | {{ Spec2('CSS2.1') }}             | Removes its effect on inline elements. |
-| {{ SpecName('CSS1', '#margin', 'margin') }}                             | {{ Spec2('CSS1') }}                 | Initial definition                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin")}}
+{{Compat}}
 
 ## Ver también
 
-- [Entendiendo el colapso de margen](es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)
+- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)

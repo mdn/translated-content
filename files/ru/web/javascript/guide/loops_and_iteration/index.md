@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 original_slug: Web/JavaScript/Guide/Циклы_и_итерации
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Циклы - простой способ сделать какое-то действие несколько раз. Эта глава [руководства JavaScript Guide](/ru/docs/Web/JavaScript/Guide) познакомит вас с различными операторами доступными в JavaScript.
@@ -258,9 +259,9 @@ while (i < 5) {
 
 ### Пример 2
 
-Выражение, отмеченное _`checkiandj`_ содержит выражение отмеченное _`checkj`_. При встрече с `continue`, программа прерывает текущую итерацию _`checkj`_ и начинает следующую итерацию. Каждый раз при встрече с `continue`, _`checkj`_ переходит на следующую итерацию, пока условие возвращает `false`. Когда возвращается `false`, после вычисления остатка от деления _`checkiandj`_, _`checkiandj`_ переходит на следующую итерацию, пока его условие возвращает `false`. Когда возвращается `false`, программа продолжает выполнение с выражения после _`checkiandj`_.
+Выражение, отмеченное `checkiandj` содержит выражение отмеченное `checkj`. При встрече с `continue`, программа прерывает текущую итерацию `checkj` и начинает следующую итерацию. Каждый раз при встрече с `continue`, `checkj` переходит на следующую итерацию, пока условие возвращает `false`. Когда возвращается `false`, после вычисления остатка от деления `checkiandj`, `checkiandj` переходит на следующую итерацию, пока его условие возвращает `false`. Когда возвращается `false`, программа продолжает выполнение с выражения после `checkiandj`.
 
-Если у `continue` проставлена метка _`checkiandj`_, программа может продолжиться с начала метки _`checkiandj`_.
+Если у `continue` проставлена метка `checkiandj`, программа может продолжиться с начала метки `checkiandj`.
 
 ```js
 checkiandj:

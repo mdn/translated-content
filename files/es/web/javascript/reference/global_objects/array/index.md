@@ -1,15 +1,9 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Matriz unidimensional
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
+
 {{JSRef}}
 El objeto **`Array`** de JavaScript es un objeto global que es usado en la construcción de _arrays_, que son objetos tipo lista de alto nivel.
 
@@ -413,13 +407,11 @@ da como resultado:
 
 ## Especificaciones
 
-| Especificación                                                           | Publicación inicial |
-| ------------------------------------------------------------------------ | ------------------- |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | ECMAScript 1        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## Ver también
 

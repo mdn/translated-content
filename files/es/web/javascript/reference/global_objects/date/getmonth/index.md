@@ -1,14 +1,9 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMonth
 ---
+
 {{JSRef}}
 
 ## Resumen
@@ -44,15 +39,11 @@ console.log(mes); // 11
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Comentario                                          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}     | Primera definición. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.12', 'Date.prototype.getMonth')}}                 | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-date.prototype.getmonth', 'Date.prototype.getMonth')}} | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.getMonth")}}
+{{Compat}}
 
 ## Vea también
 

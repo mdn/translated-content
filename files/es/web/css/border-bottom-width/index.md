@@ -1,12 +1,8 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-bottom-width
 ---
+
 << [Volver](/es/Guía_de_referencia_de_CSS)
 
 ### Resumen
@@ -36,7 +32,7 @@ border-bottom-width: <border-width> | inherit
   - : un borde grueso.
 - \<length>
   - : El espesor de un borde tiene un valor explícito. los anchos de borde no pueden ser negativos.
-  
+
     Nota : El valor `em` también es soportada.
 
 ### Propiedades relacionadas

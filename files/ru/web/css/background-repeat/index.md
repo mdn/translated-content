@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-repeat
 ---
+
 {{CSSRef}}
 
 Свойство **`background-repeat`** устанавливает, как фоновые изображения будет повторяться. Они могут повторяться по горизонтальной и вертикальной оси или не повторяться вовсе.
@@ -25,9 +26,9 @@ translation_of: Web/CSS/background-repeat
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 background-repeat: repeat;
-​​​​​​​background-repeat: space;
-​​​​​​​background-repeat: round;
-​​​​​​​background-repeat: no-repeat;
+background-repeat: space;
+background-repeat: round;
+background-repeat: no-repeat;
 
 /*Два значения: горизонтальное | вертикальное*/
 background-repeat: repeat space;
@@ -87,7 +88,7 @@ background-repeat: unset;
 /* Совместно для всех DIVS в примере */
 li {margin-bottom: 12px;}
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 144px;
     height: 84px;
 }
@@ -108,7 +109,7 @@ div {
 
 /* Несколько изображений */
 .five {
-    background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
+    background-image:  url(starsolid.gif),
                        url(https://developer.mozilla.org/static/img/favicon32.png);
     background-repeat: repeat-x,
                        repeat-y;

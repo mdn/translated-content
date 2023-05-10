@@ -1,11 +1,8 @@
 ---
 title: 사용값
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/used_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **사용값**은 [계산값](/ko/docs/Web/CSS/computed_value)에 모든 계산을 수행한 후의 결과 값입니다.

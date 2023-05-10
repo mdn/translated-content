@@ -1,15 +1,8 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - padStart()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 ---
+
 {{JSRef}}
 
 O método `padStart()` preenche a string original com um determinado caractere, ou conjunto de caracteres, (várias vezes, se necessário) até que a string resultante atinja o comprimento fornecido. O preenchimento é aplicado antes do primeiro caractere da string original. A string original não é modificada.

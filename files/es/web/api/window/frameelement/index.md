@@ -1,8 +1,8 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
+
 {{ ApiRef }}
 
 Retorna el elemento (como es {{HTMLElement("iframe")}} ó {{HTMLElement("object")}}) en el cual la ventana está incrustada o `null` si el elemento es bien de nivel superior (top-level) o bien está inrustada en un documento con un origen de diferente; esto es, en situaciones de origen cruzado.
@@ -29,13 +29,11 @@ if (frameEl) {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Observaciones           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{ SpecName('HTML WHATWG', '#dom-frameelement', 'Window.frameElement') }} | {{ Spec2('WebRTC 1.0') }} | Especificación inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## Ver también
 

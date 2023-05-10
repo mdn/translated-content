@@ -1,188 +1,210 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-original_slug: Web/HTML/Element/Input/月份
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。
+类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。输入的值是一个经过“`YYYY-MM`”格式化的字符串，其中 `YYYY` 是四位数的年份，而 `MM` 是月份的数值表示。
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
-这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到[`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text).
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端被大部分现代浏览器所支持。在不支持的浏览器中，这个控件会被优雅的降级到 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
 
-对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。
+对于那些使用不支持 `month` 控制器的浏览器用户，以下的截图呈现了 Chrome 和 Opera 的月份控制器。单击右侧的向下箭头会显示日期选择器，以便选择年份和月份。
 
-![](month-control-chrome.png)
+![Chrome 浏览器的月份控制器](month-control-chrome.png)
 
-Edge 的 `month` 看起来像这样的：
+Edge 的 `month` 控制器看起来像这样的：
 
-![](month-control-edge.png)
+![Edge 浏览器的月份控制器](month-control-edge.png)
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>一个 {{domxref("DOMString")}} 代表一个月，一年，或者是空。</td>
+   <td><strong><a href="#值">值</a></strong></td>
+   <td>代表月份和年份的字符串，或为空字符串</td>
   </tr>
   <tr>
-   <td><strong>Events</strong></td>
-   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event).</td>
+   <td><strong>事件</strong></td>
+   <td>
+     {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
+    </td>
   </tr>
   <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, 和 {{htmlattrxref("step", "input")}}.</td>
+   <td><strong>支持的共有属性</strong></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>value</code>.</td>
+   <td><strong>IDL 属性</strong></td>
+   <td><code>value</code></td>
   </tr>
   <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.</td>
+   <td><strong>DOM 接口</strong></td>
+   <td><p>{{domxref("HTMLInputElement")}}</p></td>
+  </tr>
+  <tr>
+   <td><strong>方法</strong></td>
+   <td>{{domxref("HTMLInputElement.select", "select()")}}、{{domxref("HTMLInputElement.stepDown", "stepDown()")}} 和 {{domxref("HTMLInputElement.stepUp", "stepUp()")}}</td>
   </tr>
  </tbody>
 </table>
 
-## Value
+## 值
 
-{{domxref("DOMString")}} 表示输入输入的月份和年份的值，in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.
+一个以 YYYY-MM 形式（4 个或更多位数的年，接一个连字符 `-`，再接一个两位数月份）表示月份和年份的字符串。月份字符串的格式在[月份字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#月份字符串)中有描述。
 
-你可以设置一个默认的属性值插入到 {{htmlattrxref("value", "input")}} 里，像这样：
+### 设置默认值
+
+你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中包含月份和年份来设置该输入控件的默认值，像这样：
 
 ```html
-<label for="bday-month">What month were you both in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2017-06">
+<label for="bday-month">你在哪个月出生？</label>
+ <input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
-{{EmbedLiveSample('value-example-1', 600, 60)}}
+{{EmbedLiveSample('设置默认值', 600, 60)}}
 
-需要注意的是显示的如期格式不同于实际的`value` — 日期显示的格式将根据用户的操作系统的时区设置，而时间的格式通常会格式化为 `yyyy-MM`。
+需要注意的是显示的如期格式不同于实际的 `value` ；大部分{{Glossary("user agent", "用户代理")}}基于操作系统，根据合适的本地化形式显示月份和年份，而日期的 `value` 总是会格式化为 `yyyy-MM`。
 
-在向服务器提交上述值的时候他们看起来像这样：`bday-month=1978-06`.
+在向服务器提交上述值的时候它们看起来像这样：`bday-month=1978-06`。
 
-你也可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 来设置日期的值。例如：
+### 通过 JavaScript 代码设置 value
+
+当然你也可以使用 JavaScript 代码通过 {{domxref("HTMLInputElement.value")}} 属性来获取或设置日期的值。例如：
+
+```html
+<label for="bday-month">你在哪个月出生？</label>
+<input id="bday-month" type="month" name="bday-month" />
+```
 
 ```js
-var monthControl = document.querySelector('input[type="month"]');
-monthControl.value = '1978-06';
+const monthControl = document.querySelector('input[type="month"]');
+monthControl.value = '2001-06';
 ```
 
-{{EmbedLiveSample("value-example-2", 600, 60)}}
+{{EmbedLiveSample("通过 JavaScript 代码设置 value", 600, 60)}}
 
-## Additional attributes
+## 其他属性
 
-In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes:
+除了 {{HTMLElement("input")}} 元素的共有属性外，month 输入还提供以下属性：
 
-| Attribute                    | Description                                                                                |
-| ---------------------------- | ------------------------------------------------------------------------------------------ |
-| [`max`](#attr-max)           | The latest year and month to accept as a valid input                                       |
-| [`min`](#attr-min)           | The earliest year and month to accept as a valid input                                     |
-| [`readonly`](#attr-readonly) | A Boolean which, if present, indicates that the input's value can't be edited              |
-| [`step`](#attr-step)         | A stepping interval to use when incrementing and decrementing the value of the input field |
+### list
 
-### {{htmlattrdef("max")}}
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
-The latest year and month, in the string format discussed in the [Value](#value) section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
+### max
 
-This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
 
-### {{htmlattrdef("min")}}
+该值必须晚于或等于 `min` 属性所指定的年份-月份对。
 
-The latest year and month to accept, in the same "`yyyy-MM`" format described above. If the {{htmlattrxref("value", "input")}} of the element is less than this, the element fails [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation). If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
+### min
 
-This value must be a year-month pairing which is earlier than or equal to the one specified by the `max` attribute.
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
 
-### {{htmlattrdef("readonly")}}
+该值必须早于或等于 `max` 属性所指定的年份-月份对。
 
-A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
+### readonly
 
-> **备注：** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement.value")}} 属性来更改。
 
-### {{htmlattrdef("step")}}
+> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
-{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}
+### step
 
-For `month` inputs, the value of `step` is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months). The default value of `step` is 1 month.
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
-## Using month inputs
+字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
-与日期相关的输入乍一看很方便，它们提供了一个简单的用户界面来选择日期，并且它们将发送到服务器的数据格式规范化，而不考虑用户的本地环境。但是，由于浏览器支持有限，所以这个 `<input type="month">`还是存在兼容性问题。
+> **备注：** 当用户输入的数据不符合步进配置时，{{Glossary("user agent", "用户代理")}}可能会四舍五入到最近的有效值，当有两个同样接近的选项时，更倾向于正方向的数字。
 
-我们在往下看更多关于`<input type="month">`基础和更多的高级的用法
+对于 `month` 输入，`step` 的值以月份为单位，缩放因子为 1（基础数值也是以月份为单位的）。`step` 的默认值为 1，表示 1 个月。
 
-, 下面将讲有关缓解浏览器支持问题的建议 (请参阅[Handling browser support](#handling_browser_support)).
+## 使用 month 输入
 
-### Basic uses of month
+与日期相关的输入（包含 `month`）乍一看很方便：它们提供了一个简单的用户界面来选择日期，并且它们将发送到服务器的数据格式规范化，无论用户的本地化配置如何。但是，`<input type="month">` 还是存在兼容性问题，大多数主流浏览器还没有支持它。
 
-最简单的`<input type="month">` 涉及到基础的 `<input>` 和 {{htmlelement("label")}} 的元素组合，像下面这样：
+我们先看看 `<input type="month">` 的基础和高级的用法，然后再讨论有关缓解浏览器支持问题的建议（请参阅[处理浏览器支持问题](#处理浏览器支持问题)）。
+
+### 基本使用方法
+
+最简单的 `<input type="month">` 涉及到基础的 {{HTMLElement("input")}} 和 {{htmlelement("label")}} 的元素组合，像下面这样：
 
 ```html
 <form>
-  <label for="bday-month">What month were you both in?</label>
-  <input id="bday-month" type="month" name="bday-month">
+  <label for="bday-month">你在哪个月出生？</label>
+  <input id="bday-month" type="month" name="bday-month" />
 </form>
 ```
 
-{{ EmbedLiveSample('Basic_uses_of_month', 600, 40) }}
+{{ EmbedLiveSample('基本使用方法', 600, 40) }}
 
-### 设置最长和最短日期
+### 设置最大和最小日期
 
-你可以使用{{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性 来限制用户选择日期。在下列的例子中我们设置最小月份`1900-01` 最大月份到 `2017-08`:
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户选择日期的范围。在下列的例子中我们指定最小月份 `1900-01` 和最大月份 `2013-12`：
 
 ```html
 <form>
-  <label for="bday-month">What month were you both in?</label>
-  <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="2017-08">
+  <label for="bday-month">你在哪个月出生？</label>
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2013-12" />
 </form>
 ```
 
-{{ EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40) }}
+{{ EmbedLiveSample('设置最大和最小日期', 600, 40) }}
 
 结果是这样：
 
-- 月份只有在 2017 年八月份到 1900 年一月可以选择 — 在这个控件里这个范围以外的月份不能滚动选择。
-- Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see [Validation](#validation)) but still available (e.g. Chrome).
+- 只有从 1900 年的 1 月到 2013 年的 12 月的月份才可以选择，在这个控件里这个范围以外的月份不能滚动选择。
+- 取决于你使用的浏览器，你可能会发现不能在月份选择器中选择在所指定范围之外的月份（如 Edge），或显示不合法（参见[验证](#验证)小节）但仍然可选（例如 Chrome）。
 
-> **备注：** You should be able to use the {{htmlattrxref("step", "input")}} attribute to vary the number of days jumped each time the date is incremented (e.g. maybe you only want to make Saturdays selectable). However, this does not seem to work effectively in any implementation at the time of writing.
+### 控制输入大小
 
-### Controlling input size
+`<input type="month">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
-`<input type="month">` doesn't support form sizing attributes such as {{htmlattrxref("size", "input")}}. You'll have to resort to [CSS](/zh-CN/docs/Web/CSS) for sizing needs.
+## 验证
 
-## Validation
+默认情况下，`<input type="month">` 不会对输入的值应用任何验证，用户界面实现会屏蔽所有非日期值的输入，尽管这很有用，但是仍然无法完全依赖于该值的合法性。你仍然可以不填入任何值而提交，或输入不合法的日期值（如 4 月 32 日）。
 
-By default, `<input type="month">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still not fill in a date and submit, or enter an invalid date (e.g. the 32th of April).
+为了避免这种情况，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 来限制可用的日期（参见[设置最大和最小日期](#设置最大和最小日期)），并使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性令日期必填。在支持的浏览器中，当你尝试提交超出范围的日期，或空日期值时，会显示错误信息。
 
-You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see [Setting maximum and minimum dates](#设置最长和最短日期), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
-
-Let's look at an example — here we've set minimum and maximum dates, and also made the field required:
+我们来看一个例子，这里我们设定了最小和最大的日期，并令该字段必填：
 
 ```html
 <form>
   <div>
-    <label for="month">What Month would you like to visit us? (Summer months only.)</label>
-    <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required>
+    <label for="month">
+      你愿意在哪个月拜访（6 月至 9 月）？
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="提交表单" />
   </div>
 </form>
 ```
 
-If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
+如果你尝试在未指定月份或年份，或指定超出给定范围的日期情况下提交表单，浏览器会显示错误。请试试以下实时演示：
 
-{{ EmbedLiveSample('Validation', 600, 120) }}
+{{ EmbedLiveSample('验证', 600, 120) }}
 
-Here's'a screenshot for those of you who aren't using a supporting browser:
+对于那些没有使用支持的浏览器的人们来说，以下是该错误的屏幕截图：
 
-![](month-required.png)
+![Chrome 浏览器中的 Month 控件必填提示](month-required.png)
 
-Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
+下面是上述例子中使用的 CSS。这里我们使用了 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 这两个 CSS 属性，根据当前值是否有效来为输入添加样式。我们不得不把图标放在 input 旁边的 {{htmlelement("span")}} 上，而不是放在 input 框本身，因为在 Chrome 中，生成的内容被放在表单控件里面，无法有效地进行样式设计或显示。
 
 ```css
 div {
@@ -198,61 +220,67 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
-> **警告：** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
+> **警告：** HTML 表单验证并*不能*替代确保输入数据格式正确的脚本。很容易对 HTML 进行调整，使他们能够绕过验证，或完全删除验证。也有可能会完全绕过 HTML 代码，直接将数据提交给你的服务器。如果你的服务器端代码不能验证它所收到的数据，那么当提交的数据格式不当（或数据过大、类型错误等等）时，灾难就会降临。
 
-## Handling browser support
+## 处理浏览器支持
 
-As mentioned above, the major problem with using date inputs at the time of writing is browser support — only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile. As an example, the `month` picker on Chrome for Android looks like this:
+如前所述，使用 month 输入的最大问题是大部分主流浏览器还没有实现它们；只有桌面端的 Chrome/Opera、Edge 和大部分的移动端现代浏览器支持它们。例如，安卓版 Chrome 的 `month` 选择器看起来像这样：
 
-![](month-android.png)
+![Android 手机上 Chrome 的月份选择器样式](month-android.png)
 
-Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
+不支持的浏览器会优雅地降级为文本输入，但这在用户界面的一致性（呈现的控件会有所不同）和数据处理方面都会产生问题。
 
-The second problem is the most serious — as we mentioned earlier, with a `month` input the actual value is always normalized to the format `yyyy-mm`. With a text input on the other hand, by default the browser has no recognition of what format the date should be in, and there multiple ways in which people write dates, for example:
+第二个问题更为严重；如前所述，`month` 输入的值总是被规范为 `yyyy-mm` 的格式。另一方面，对于文本输入，默认情况下，浏览器不知道时间应该是什么格式，而且人们有多种写法，如：
 
-- `mmyyyy`
-- `mm/yyyy`
-- `mm-yyyy`
-- `yyyy-mm`
-- etc.
+- `mmyyyy` (072022)
+- `mm/yyyy` (07/2022)
+- `mm-yyyy` (07-2022)
+- `yyyy-mm` (2022-07)
+- `Month yyyy` (July 2022)
+- 等等
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `month` input. Even though the `month` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
+一个办法是在你的 `month` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `month` 输入不使用它，text 输入回退也会使用。例如，试着在一个不支持 month 输入的浏览器中查看下面的演示：
 
 ```html
 <form>
   <div>
-    <label for="month">What Month would you like to visit us? (Summer months only, yyyy-mm)</label>
-    <input id="month" type="month" name="month"
-           min="2017-06" max="2017-09" required
-           pattern="[0-9]{4}-[0-9]{2}">
+    <label for="month">
+      愿意在哪个月访问（6 月至 9 月）？
+    </label>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required
+      pattern="[0-9]{4}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="Submit form">
+    <input type="submit" value="提交表单" />
   </div>
 </form>
 ```
 
-{{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
+{{ EmbedLiveSample('处理浏览器支持', 600, 100) }}
 
-If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `nnnn-nn`, where `n` is a number from 0 to 9. Of course, this doesn't stop people from entering invalid dates, or incorrectly formatted dates that follow the pattern.
+如果你尝试提交，你会发现，如果你的输入不符合模式 `nnnn-nn`（其中 `n` 是 0 到 9 的数字），不支持的浏览器现在会显示一个错误信息（并突出显示输入无效）。当然，这并不能阻止人们输入无效的日期（如 `0000-42`），或者不正确但遵循格式的日期。
 
-And what user is going to understand the pattern they need to enter the date in?
-
-We still have a problem.
+还有一个问题，就是用户不知道到底应该输入什么格式的日期。还有一些事情要做。
 
 ```css hidden
 div {
@@ -268,37 +296,39 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
-The best way to deal with dates in forms in a cross-browser way at the moment is to get the user to enter the month and year in separate controls ({{htmlelement("select")}} elements being popular — see below for an implementation), or use JavaScript libraries such as [jQuery date picker](https://jqueryui.com/datepicker/), and the [jQuery timepicker plugin](http://timepicker.co/).
+目前，以跨浏览器方式处理时间的最佳方法（至少在所有主流浏览器实现它们之前）是让用户在单独的控件中输入月份和年份（特别是在 {{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)插件）。
 
-## Examples
+## 示例
 
-In this example we create two sets of UI elements for choosing dates — a native picker created with `<input type="month">`, and a set of two {{htmlelement("select")}} elements for choosing months/years in older browsers that don't support the native input.
+在此示例中，我们创建了两组用于选择日期的接口元素：使用 `<input type="month">` 创建的原生选择器，以及为不支持 month 输入类型的旧版浏览器准备的两个分别用于选择月份和年份的 {{HTMLElement("select")}} 元素。
 
-{{ EmbedLiveSample('Examples', 600, 140) }}
+{{ EmbedLiveSample('示例', 600, 140) }}
 
-The HTML looks like so:
+### HTML
+
+用于请求月份和年份的表单看起来像这样：
 
 ```html
 <form>
   <div class="nativeDatePicker">
-    <label for="month-visit">What Month would you like to visit us?</label>
-    <input type="month" id="month-visit" name="month-visit">
+    <label for="month-visit">What month would you like to visit us?</label>
+    <input type="month" id="month-visit" name="month-visit" />
     <span class="validity"></span>
   </div>
-  <p class="fallbackLabel">What Month would you like to visit us?</p>
+  <p class="fallbackLabel">What month would you like to visit us?</p>
   <div class="fallbackDatePicker">
     <div>
       <span>
@@ -320,15 +350,16 @@ The HTML looks like so:
       </span>
       <span>
         <label for="year">Year:</label>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
       </span>
     </div>
   </div>
 </form>
 ```
 
-The months are hardcoded (as they are always the same), while the year values are dynamically generated depending on the current year (see the code comments below for detailed explanations of how these functions work.)
+ID 为 `nativeDatePicker` 的 {{HTMLElement("div")}} 使用 `month` 输入类型来请求月份和年份，而 ID 为 `fallbackDatePicker` 的 `<div>` 则使用一对 `<select>` 元素。第一个元素请求月份，第二个元素请求年份。
+
+用于选择月份的 `<select>` 是硬编码的，因为月份的名称不会改变（不考虑本地化）。可用的年份值列表是根据当前年份动态生成的（关于这些函数如何工作的详细解释，见下面的代码注释）。
 
 ```css hidden
 div {
@@ -344,62 +375,74 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
 
-The other part of the code that may be of interest is the feature detection code — to detect whether the browser supports `<input type="month">`, we create a new {{htmlelement("input")}} element, set its `type` to `month`, then immediately check what its type is set to — non-supporting browsers will return `text`, because the `date` type falls back to type `text`. If `<input type="month">` is not supported, we hide the native picker and show the fallback picker UI ({{htmlelement("select")}}) instead.
+### JavaScript
+
+处理选择哪种方案并设定一系列包含于非原生的 `<select>` 的年份列表的 JavaScript 代码如下所示。
+
+该代码中可能有趣的另一部分是特性检测代码。要检测浏览器是否支持 `<input type="month">`，我们创建一个新的 {{htmlelement("input")}} 元素，尝试将其 `type` 设置为 `month`，然后立即检查其 `type` 值。不支持的浏览器将返回 `text`，与 month 的回退行为相符。如果不支持 `<input type="month">`，我们将隐藏原生选择器并显示作为回退的选择器 UI。
 
 ```js
-// define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+// 获取 UI 元素
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
 
-// hide fallback initially
+// 最初，隐藏回退元素
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
-test.type = 'month';
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// 测试一个新的 date 输入框是否会回退至 text 输入框
+const test = document.createElement('input');
+
+try {
+  test.type = 'month';
+} catch (e) {
+  console.log(e.description);
+}
+
+// 如果回退了，运行 if 代码块中的代码
+if (test.type === 'text') {
+  // 隐藏原生选择器，显示回退元素
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
 
-  // populate the years dynamically
-  // (the months are always the same, therefore hardcoded)
+  // 动态生成年份
+  // 月份总是相同的，故将它们硬编码
   populateYears();
 }
 
 function populateYears() {
-  // get the current year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+  // 获取当前年份的数值表示
+  const date = new Date();
+  const year = date.getFullYear();
 
-  // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  // 在年份 <select> 中，令该年和之前的 100 年可选
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 ```
+
+> **备注：** 请记住有些年份有 53 周（见[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
 
 ## 规范
 
@@ -411,7 +454,8 @@ function populateYears() {
 
 ## 参见
 
-- The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and time formats used in HTML](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week)
+- 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
+- [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
+- [日期时间选择器教程](/zh-CN/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

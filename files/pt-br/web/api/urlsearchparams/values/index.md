@@ -1,8 +1,8 @@
 ---
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
-translation_of: Web/API/URLSearchParams/values
 ---
+
 {{APIRef("URL API")}}
 
 O m*étodo* **`URLSearchParams.values()`**retorna um {{jsxref("Iteration_protocols",'iterator')}} que permite passar por todos os valores do objeto. Os valores são objetos {{domxref("USVString")}}.

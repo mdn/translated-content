@@ -8,6 +8,7 @@ tags:
   - Новичку
 translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 API, которые мы рассмотрели до сих пор, встроены в браузер, но не все API таковы. Многие крупные веб-сайты и сервисы, такие как Google Maps, Twitter, Facebook, PayPal и т. д., Предоставляют API-интерфейсы, позволяющие разработчикам использовать свои данные (например, показывать ваш твиттер-поток в вашем блоге) или сервисы (например, отображение пользовательских карт Google на вашем сайте, или использование логина Facebook для входа в систему ваших пользователей). В этой статье рассматривается различие между API-интерфейсами браузера и сторонними API и показано типичное использование последних.
@@ -91,7 +92,7 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
     6. Нажмите _Create credentials_, затем выберите _API key_.
     7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
 
-    > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена ​​учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
+    > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
 
 3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
 
@@ -206,7 +207,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### Connect the API to your app
 
@@ -414,7 +415,7 @@ We also built another example for you to study and learn from — see our [YouTu
 
 This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Google Maps (with constructors, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results, so you don't have to write them out yourself using say fetch or XHR.
 
-![](https://mdn.mozillademos.org/files/14823/youtube-example.png)
+![](youtube-example.png)
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 

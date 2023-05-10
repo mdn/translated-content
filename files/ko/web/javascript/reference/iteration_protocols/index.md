@@ -1,7 +1,6 @@
 ---
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 

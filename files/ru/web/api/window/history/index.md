@@ -3,6 +3,7 @@ title: Window.history
 slug: Web/API/Window/history
 translation_of: Web/API/Window/history
 ---
+
 {{ APIRef }}
 
 `Window.history` является свойством только для чтения, ссылающимся на объект {{domxref("History")}}, который предоставляет интерфейс для манипулирования историей сессии браузера (страницы, посещённые в текущей вкладке или фрейме, который был загружен на текущей странице).

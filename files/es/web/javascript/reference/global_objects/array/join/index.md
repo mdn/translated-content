@@ -1,16 +1,9 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/join
 ---
+
 {{JSRef}}
 
 El método **`join()`** une todos los elementos de una matriz (o un [objeto similar a una matriz](/es/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) en una cadena y devuelve esta cadena.
@@ -67,16 +60,11 @@ f(1, 'a', true);
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| ECMAScript 1st Edition                                                                               | Estándar                     | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}                 | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.join")}}
+{{Compat}}
 
 ## Ver también
 

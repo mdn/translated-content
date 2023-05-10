@@ -1,8 +1,8 @@
 ---
 title: HTMLMediaElement.paused
 slug: Web/API/HTMLMediaElement/paused
-translation_of: Web/API/HTMLMediaElement/paused
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propiedad **`HTMLMediaElement.paused`** es solo de lectura, indica si el elemento multimedia está en pausa.
@@ -26,14 +26,11 @@ console.log(obj.paused); // true
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "#dom-media-paused", "HTMLMediaElement.paused")}}                             | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement.paused")}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.paused")}}
+{{Compat}}
 
 ## Ver también
 

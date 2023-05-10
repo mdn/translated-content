@@ -1,13 +1,8 @@
 ---
 title: ':visited'
 slug: Web/CSS/:visited
-tags:
-  - CSS
-  - Layout
-  - Pseudo-classes
-  - Web
-translation_of: Web/CSS/:visited
 ---
+
 {{ CSSRef }}
 
 O **`:visited`** é uma [Pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) do [CSS](/pt-BR/docs/Web/CSS) para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.
@@ -41,7 +36,7 @@ Por razões de privacidade, navegadores limitam estritamente quais estilos você
 - Os componentes alpha permitidos de estilos seram ignorados. Ao invés disso, o componente alpha do elemento de estado non-`:visited` será usado, exceto quando o componente é `0`, no qual o estilo definido em `:visited` será inteiramente ignorado.
 - Embora esses estilos podem mudar como as cores serão mostradas ao usuário, o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-`:visited.`
 
-> **Note:** **Nota:** Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
+> **Nota:** Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
 
 ## Syntaxe
 

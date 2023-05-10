@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 original_slug: Learn/Server-side/Express_Nodejs/Учебник_сайт_local_library
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 Первая статья в нашей серии практических уроков объясняет, что вы будете изучать, и предоставит обзор сайта "локальной библиотеки" ("local library"), над которым мы будем работать и развивать в последующих статьях.

@@ -1,11 +1,8 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - JavaScript
-  - UTC
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
+
 {{JSRef}}
 
 O método **`Date.UTC()`** aceita os mesmos parâmetros que o construtor mais longo de **`Date`** e retorna o total de milisegundos desde 1º de Janeiro de 1970 às 00:00:00 (horário universal). O valor retornado por **`Date.UTC()`** pode ser usado como parâmetro para criar uma instância de {{jsxref("Date")}}.

@@ -4,6 +4,7 @@ slug: Glossary/Semantics
 translation_of: Glossary/Semantics
 original_slug: Глоссарий/Semantics
 ---
+
 В программировании, **Семантика** означает _значение_ фрагмента кода - например, «К какому результату приведёт выполнение этой строки JavaScript?», или «Каково предназначение или какая роль у этого элемента HTML?», а не «Как он выглядит?».
 
 ## Семантика в JavaScript
@@ -66,10 +67,6 @@ HTML должен предоставлять структуру информац
 
 - [HTML element reference](/ru/docs/Web/HTML/Element#Inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Problems_solved_by_HTML5) on MDN
-- {{interwiki("wikipedia", "Semantics#Computer_science", "The meaning of semantics in computer science")}} on Wikipedia
-
-<!---->
-
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
 
   - {{Glossary("SEO")}}

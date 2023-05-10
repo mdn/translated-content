@@ -1,8 +1,8 @@
 ---
 title: Element.scrollWidth
 slug: Web/API/Element/scrollWidth
-translation_of: Web/API/Element/scrollWidth
 ---
+
 {{ APIRef("DOM") }}
 
 A propriedade de somente leitura **`Element.scrollWidth`** retorna a largura em pixels do conteúdo de um elemento ou a largura do elemento em si, o que for maior. Se o elemento for mais amplo do que a área de conteúdo (por exemplo, se houver barras de rolagem para percorrer o conteúdo), o `scrollWidth` é maior do que o `clientWidth`.

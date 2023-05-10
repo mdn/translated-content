@@ -32,9 +32,7 @@ let myMap = new Map([
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map-constructor', 'Map constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

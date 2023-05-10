@@ -1,8 +1,8 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-translation_of: Web/CSS/border-left-color
 ---
+
 ### Resumen
 
 `border-left-color` pone el color del borde izquierdo de un elemento,con el valor de el color en hexadecimal o con palabras clave, como azul, verde, rojo `transparente`.

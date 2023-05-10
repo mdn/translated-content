@@ -1,15 +1,10 @@
 ---
 title: samp
 slug: Web/HTML/Element/samp
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/samp
 original_slug: Web/HTML/Elemento/samp
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.
 
@@ -21,12 +16,12 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 - Señala lo que es una salida de un programa.
   - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
-  
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+
+    **Puede contener**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

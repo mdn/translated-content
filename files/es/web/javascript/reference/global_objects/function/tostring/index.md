@@ -1,9 +1,9 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** retorna una cadena representando el código fuente de la función.
@@ -16,7 +16,7 @@ function.toString(indentation)
 
 ### Parámetros
 
-- `indentation` {{non-standard_inline}} {{obsolete_inline(17)}}
+- `indentation` {{non-standard_inline}} {{deprecated_inline(17)}}
   - : La cantidad de espacios a indentar en la representación de cadena del código fuente. Si `indentation` es menor o igual a `-1`, la mayoría de los espacios innecesarios son eliminados.
 
 ## Descripción
@@ -36,21 +36,11 @@ Function.prototype.toString.call(proxy); // TypeError
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Observaciones                                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1.                       |
-| {{SpecName('ES5.1', '#sec-15.3.4.2', 'Function.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                                           |
-| {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}     | {{Spec2('ES6')}}         | Añadidos requerimientos más específicos para la representación de cadena. |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.toString")}}
-
-## Notas específicas para Gecko
-
-- Desde Gecko 17.0 {{geckoRelease("17")}}, `Function.prototype.toString()` fue implementada salvando el código fuente de la función. El descompilador fue eliminado, de modo que el parámetro `indentation` ya no se necesita más. Ver {{bug("761723")}} para más detalles.
-- A partir de Gecko 38 {{geckoRelease("38")}}, `Function.prototype.toString()` produce error para objetos {{jsxref("Proxy")}} ({{bug(1100936)}}).
+{{Compat}}
 
 ## Ver también
 

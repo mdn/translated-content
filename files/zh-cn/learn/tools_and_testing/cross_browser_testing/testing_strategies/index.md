@@ -54,7 +54,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 > **备注：** 您一次只能在计算机上安装一个版本的 IE 或 Edge，因此您可能必须使用虚拟机或其他方法来执行所需的测试。稍后请参阅[虚拟机](#虚拟机)部分。
 
-很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 ​​ 板电脑上测试它们，以确保响应式设计正常运行。
+很多人使用 iOS 和 Android，因此您可能还想测试最新版本的 iOS Safari，最近几个版本的 Android stock 浏览器，以及适用于 iOS 和 Android 的 Chrome 和 Firefox。理想情况下，您应该在手机和平 板电脑上测试它们，以确保响应式设计正常运行。
 
 您也许知道很多人仍然在使用 IE 9，它版本老旧而且功能较少，所以我们把它列为 B 级别。
 
@@ -289,14 +289,3 @@ You may notice from the text in the example that it won't work in IE8 — this i
 接下来，我们将把注意力转向测试可能发现的实际代码问题，从 HTML 和 CSS 开始。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-**本章内容**
-
-- [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [进行测试的策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的辅助功能问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [执行特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动化测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [搭建你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

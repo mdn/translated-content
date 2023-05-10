@@ -3,6 +3,7 @@ title: margin-left
 slug: Web/CSS/margin-left
 translation_of: Web/CSS/margin-left
 ---
+
 {{CSSRef()}}
 
 Свойство [CSS](/en/CSS) **`margin-left`** устанавливает [внешний отступ](/ru/docs/Web/CSS/box_model) слева от элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.

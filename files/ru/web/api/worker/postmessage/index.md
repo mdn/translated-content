@@ -11,6 +11,7 @@ tags:
   - метод
 translation_of: Web/API/Worker/postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 Метод **`postMessage()`** интерфейса {{domxref("Worker")}} отправляет сообщение во внутреннее пространство `worker`-а. Метод имеет один параметр с данными для отправки в `worker`. Данные могут быть любым значением или объектом JavaScript, которые может обработать [алгоритм структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), поддерживающий циклические ссылки.
@@ -57,7 +58,7 @@ second.onchange = function() {
 
 Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-> **Примечание:** **Замечание**: `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
+> **Примечание:** `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
 
 ### Пример с Transfer
 

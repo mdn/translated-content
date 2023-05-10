@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/href
 original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.href`** – это {{domxref("USVString")}}, содержащий URL целиком.

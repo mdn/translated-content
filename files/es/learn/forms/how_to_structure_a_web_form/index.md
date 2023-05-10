@@ -1,9 +1,9 @@
 ---
 title: Cómo estructurar un formulario HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 Una vez examinados los conceptos básicos, vamos a ver más en detalle los elementos que se utilizan para proporcionar estructura y significado a las diferentes partes de un formulario.
@@ -297,7 +297,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
 
 Debajo puedes ver en acción el formulario terminado (también lo encontrarás en GitHub; consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) de nuestro payment-form.html y [ejecútalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "/en-US/Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample('',"100%",620)}}
 
 ## ¡Prueba tus habilidades!
 
@@ -312,18 +312,6 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario HTML](/es/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [Cómo estructurar un formulario HTML](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [Los controles básicos de formulario originales](/es/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Tipos de entrada HTML5](/es/docs/Learn/HTML/Forms/HTML5_input_types)
-- [Controles de formulario adicionales](/es/docs/Learn/HTML/Forms/Additional_form_controls)
-- [Pseudoclasses UI](/es/docs/Learn/HTML/Forms/UI_pseudo-classes)
-- [Aplicar estilo a formularios HTML](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Validación de datos en un formulario](/es/docs/Learn/HTML/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

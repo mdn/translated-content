@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Language
 translation_of: Web/HTTP/Headers/Content-Language
 original_slug: Web/HTTP/Заголовки/Content-Language
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP-заголовок")}} **`Content-Language`** используется для описания языков контента доступных для аудитории, позволяя таким образом пользователю выбрать язык в соответствии со своими предпочтениями.

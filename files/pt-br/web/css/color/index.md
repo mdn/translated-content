@@ -1,14 +1,8 @@
 ---
 title: Propriedade color do CSS
 slug: Web/CSS/color
-tags:
-  - CSS
-  - HTML
-  - Layout
-  - Web
-  - color
-translation_of: Web/CSS/color
 ---
+
 {{CSSRef}}
 
 A propriedade **`color`** do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos). Também define o valorer da {{cssxref("currentcolor")}}, no qual pode ser usado um valor indireto de outra propriedade, e tem como padrão as cores de outras propriedades (enquanto não definida), tal como a propriedade {{cssxref("border-color")}}.

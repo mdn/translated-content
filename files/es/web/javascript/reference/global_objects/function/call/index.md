@@ -1,13 +1,9 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 ## Resumen
@@ -26,7 +22,7 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 
   - : El valor a usar como `this` cuando se llama a _`function`_.
 
-    > **Nota:** **Advertencia:** En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
+    > **Advertencia:** En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
     >
     > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 

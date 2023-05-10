@@ -13,11 +13,11 @@ original_slug: Глоссарий/Main_Axis
 
 Если вы выберите `row` или `row-reverse`, то главная ось будет проходить вдоль направления строк.
 
-![In this image the flex-direction is row which forms the main axis](https://mdn.mozillademos.org/files/15708/Basics1.png)
+![In this image the flex-direction is row which forms the main axis](basics1.png)
 
 Выберите `column` или `column-reverse`, и главная ось будет проходить сверху вниз в направлении блоков.
 
-![](https://mdn.mozillademos.org/files/15709/Basics2.png)
+![](basics2.png)
 
 На главной оси вы можете контролировать размеры flex элементов, добавляя к ним свободное пространство с помощью свойства `flex` на самих элементах. Также, вы можете контролировать пространство между и вокруг элементов свойством `justify-content`.
 

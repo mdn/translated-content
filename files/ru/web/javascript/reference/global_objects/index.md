@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Сводка

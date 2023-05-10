@@ -1,18 +1,8 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - metodo
-  - play
-  - waapi
-translation_of: Web/API/Animation/play
 ---
+
 {{ APIRef("Web Animations") }}
 
 El método `play()` de la interfaz {{ domxref("Animation") }} de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) inicia o reanuda la reproducción de una animación. Si la animación ha finalizado, llamando a `play()` reinicia la animación y la reproduce desde el principio.

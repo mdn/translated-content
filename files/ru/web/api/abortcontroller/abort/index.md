@@ -3,6 +3,7 @@ title: AbortController.abort()
 slug: Web/API/AbortController/abort
 translation_of: Web/API/AbortController/abort
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 Метод `abort()` интерфейса {{domxref("AbortController")}} прерывает DOM запрос (например Fetch запрос) до его завершения. Это позволяет прервать [fetch запросы](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), использование любого ответа {{domxref("Body")}} и потоков.

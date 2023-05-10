@@ -1,9 +1,9 @@
 ---
 title: Cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 original_slug: Learn/Herramientas_y_pruebas/Cross_browser_testing
 ---
+
 {{LearnSidebar}}
 
 Este módulo se centra en probar proyectos web en diferentes navegadores. Nos fijamos en la identificación de su público objetivo (por ejemplo, qué usuarios, navegadores y dispositivos son los que más le preocupan?), cómo realizar las pruebas, los principales problemas a los que se enfrentará con los diferentes tipos de código y cómo mitigarlos, qué herramientas son las más útiles para ayudarle a probar y solucionar problemas, y cómo utilizar la automatización para acelerar las pruebas.

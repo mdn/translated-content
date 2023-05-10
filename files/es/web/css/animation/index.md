@@ -1,14 +1,8 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -48,13 +42,11 @@ Para más información (en inglés):
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation', 'animation') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## Consulte también
 

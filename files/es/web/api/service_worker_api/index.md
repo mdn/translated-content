@@ -1,19 +1,9 @@
 ---
 title: Service Worker API
 slug: Web/API/Service_Worker_API
-tags:
-  - API
-  - Landing
-  - NeedsTranslation
-  - Offline
-  - Overview
-  - Reference
-  - Service Workers
-  - TopicStub
-  - Workers
-translation_of: Web/API/Service_Worker_API
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar}}
 
 Los Service workers actúan esencialmente como proxy servers asentados entre las aplicaciones web, el navegador y la red (cuando está accesible). Están destinados, entre otras cosas, a permitir la creación de experiencias offline efectivas, interceptando peticiones de red y realizando la acción apropiada si la conexión de red está disponible y hay disponibles contenidos actualizados en el servidor. También permitirán el acceso a notificaciones tipo push y APIs de sincronización en segundo plano.
 
@@ -93,7 +83,7 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 - {{domxref("ExtendableEvent") }}
   - : Extiende el tiempo de vida de los eventos `install` y `activate` lanzados en {{domxref("ServiceWorkerGlobalScope")}} como parte del ciclo de vida del service worker. Esto asegura que cualquier evento funcional (como {{domxref("FetchEvent")}}) no se despachan al {{domxref("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, borra entradas de caché antiguas, etc.
 - {{domxref("ExtendableMessageEvent") }}
-  - : Es el objeto evento de un {{event("message_(ServiceWorker)","message")}} lanzado en un service worker (cuando se recibe un mensaje en el {{domxref("ServiceWorkerGlobalScope")}} desde otro contexto) — extiende el tiempo de vida de tales eventos.
+  - : Es el objeto evento de un [`message`](/es/docs/Web/Reference/Events/message_(ServiceWorker)) lanzado en un service worker (cuando se recibe un mensaje en el {{domxref("ServiceWorkerGlobalScope")}} desde otro contexto) — extiende el tiempo de vida de tales eventos.
 - {{domxref("FetchEvent") }}
   - : Parametro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` representa una acción de consulta (fetch) despachada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Contiene información sobre la petición y respuesta resultante, y proporciona el método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, que nos permite proporcionar una respuesta arbitraria a la página controlada.
 - {{domxref("InstallEvent") }}
@@ -121,9 +111,7 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 
 ## Especificaciones
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers')}} | {{Spec2('Service Workers')}} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

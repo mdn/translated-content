@@ -29,9 +29,9 @@ Un `tableau` d'`objet`s. Chaque objet a les propriétés suivantes :
 - `binaryValue`{{optional_inline}}
   - : `array` d'`integer`. Valeur de l'en-tête HTTP s'il ne peut pas être représenté par UTF-8, représenté par en octets (0..255). Soit cette propriété ou cette `valeur` doit être présente.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.HttpHeaders")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

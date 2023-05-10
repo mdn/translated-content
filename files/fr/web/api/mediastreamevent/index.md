@@ -42,7 +42,7 @@ pc.onaddstream = function( ev ) {
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStreamEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

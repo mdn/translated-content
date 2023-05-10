@@ -1,14 +1,8 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - Layout
-  - Maquetación
-  - Referencia
-  - Web
-translation_of: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 ## Sumario
@@ -58,13 +52,11 @@ Desde Firefox 3.5, el valor inicial de la propiedad de las citas se puede leer u
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Commentario        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{ SpecName('CSS2.1', 'generate.html#quotes', 'quotes') }} | {{ Spec2('CSS2.1') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.quotes")}}
+{{Compat}}
 
 ## Ver también
 

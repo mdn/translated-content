@@ -1,14 +1,8 @@
 ---
 title: ':valid'
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:valid
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:valid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyo contenido se [valide](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.
@@ -39,15 +33,11 @@ El color verde se usa comúnmente para indicar una entrada válida. Las personas
 
 ## Especificaciones
 
-| Specification                                                                    | Status                               | Comment                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}     | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}         | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.valid")}}
+{{Compat}}
 
 ## Ver también
 

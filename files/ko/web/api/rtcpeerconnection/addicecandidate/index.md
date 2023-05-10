@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
-translation_of: Web/API/RTCPeerConnection/addIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}}을 사용하는 웹이나 앱이 신규 ICE candidate를 signaling 채널을 통해 원격 유저로부터 수신하게되면, **`RTCPeerConnection.addIceCandidate()`**를 호출해서 브라우저의 {{Glossary("ICE")}} 에이전트에게 새로 수신한 candidate를 전달합니다. 이 메소드는 `RTCPeerConnection`의 원격 설명 (remote description)에 연결의 원격쪽 상태를 설명해주는 신규 원격 candidate를 추가합니다.

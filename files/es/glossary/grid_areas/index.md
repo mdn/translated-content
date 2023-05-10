@@ -1,15 +1,15 @@
 ---
 title: Grid Areas
 slug: Glossary/Grid_Areas
-translation_of: Glossary/Grid_Areas
 ---
-Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un ítem usando [disposición basada en líneas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) o cuando se definen áreas usando [grid areas con nombre](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
 
-![Image showing a highlighted grid area](https://mdn.mozillademos.org/files/14771/1_Grid_Area.png)
+Un **grid area** es una o más {{glossary("grid cell", "grid cells")}} que forman un área rectangular en la cuadrícula. Los grid areas se crean cuando se coloca un elemento usando [disposición basada en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) o cuando se definen áreas usando [grid areas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas).
+
+![Imagen mostrando una grid area resaltada](1_grid_area.png)
 
 Las Grid areas _deben_ ser de naturaleza rectangular; no es posible crear, por ejemplo, un grid area en forma de T o L.
 
-En el siguiente ejemplo, tengo un contenedor de cuadrícula con dos ítems. Los he nombrado con la propiedad {{cssxref ("grid-area")}} y luego los he distribuido en la cuadrícula usando {{cssxref ("grid-template-areas")}}. Esto crea dos áreas de cuadrícula, una que cubre cuatro celdas de la cuadrícula, la otra dos.
+En el siguiente ejemplo, tengo un contenedor de cuadrícula con dos elementos. Los he nombrado con la propiedad {{cssxref ("grid-area")}} y luego los he distribuido en la cuadrícula usando {{cssxref ("grid-template-areas")}}. Esto crea dos áreas de cuadrícula, una que cubre cuatro celdas de la cuadrícula, la otra dos.
 
 ## Ejemplo
 
@@ -70,6 +70,6 @@ color: #d9480f;
 
 ### Otras lecturas
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Grid template areas](/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
+- Guía de diseño Grid CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de diseño Grid CSS: _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- [Definición de Grid Areas en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-area-concept)

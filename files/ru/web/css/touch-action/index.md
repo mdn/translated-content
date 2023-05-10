@@ -26,7 +26,7 @@ touch-action: initial;
 touch-action: unset;
 ```
 
-По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнёт обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь своё поведение для оставшихся жестов благодаря прослушиванию событий {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use `touch-action` to ensure the browser knows the intent of the application before any event listeners have been invoked.
+По умолчанию, жесты панорамирование, прокрутка и сужающий обрабатываются исключительно браузером. Приложение, использующие {{domxref("Pointer_events", "Pointer events", "", 1)}} получит событие {{domxref("HTMLElement/pointercancel_event", "pointercancel")}}, когда браузер начнёт обрабатывать тач жест. Явно указывая жесты обрабатываемые браузером, приложение может иметь своё поведение для оставшихся жестов благодаря прослушиванию событий {{domxref("HTMLElement/pointermove_event", "pointermove")}} и {{domxref("HTMLElement/pointerup_event", "pointerup")}}. Приложения, использующие {{domxref("Touch_events", "Touch events", "", 1)}}, отключают обработку жестов браузером вызовом {{domxref("Event.preventDefault","preventDefault()")}}, но также следует использовать `touch-action`, чтобы убедиться, что веб-обозреватель знает о намерениях приложения до того, как "проснутся" обработчики событий.
 
 When a gesture is started, the browser intersects the **touch-action** values of the touched element and all its ancestors up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, **touch-action** is typically applied only to individual elements which have some custom behavior, without needing to specify **touch-action** explicitly on any of that element's descendants. After a gesture has started, changes to **touch-action** values will not have any impact on the behavior of the current gesture.
 
@@ -37,7 +37,7 @@ The `touch-action` property may be specified as either:
 - any one of the keywords [`auto`](#auto), [`none`](#none), [`manipulation`](#manipulation), _or_
 - one of the keywords [`pan-x`](#pan-x), [`pan-left`](#pan-keywords), [`pan-right`](#pan-keywords), and/or one of the keywords [`pan-y`](#pan-y), [`pan-up`](#pan-keywords), [`pan-down`](#pan-keywords), plus optionally the keyword [`pinch-zoom`](#).
 
-### Values
+### Значения
 
 - `auto`
   - : Enable browser handling of all panning and zooming gestures.
@@ -58,7 +58,7 @@ The `touch-action` property may be specified as either:
 
 {{csssyntax}}
 
-## Examples
+## Примеры
 
 The most common usage is to disable all gestures on an element (and its non-scrollable descendants) that provides its own dragging and zooming behavior – such as a map or game surface.
 
@@ -86,7 +86,7 @@ html {
 }
 ```
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                                | Status                                   | Comment                                                              |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------------------------- |
@@ -94,11 +94,11 @@ html {
 | {{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events 2')}} | Added `pan-left`, `pan-right`, `pan-up`, `pan-down` property values. |
 | {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}} | {{Spec2('Pointer Events')}}     | Initial definition                                                   |
 
-## Browser compatibility
+## Поддержка браузерами
 
 {{compat("css.properties.touch-action")}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Pointer_events","Pointer Events")}}
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)

@@ -3,6 +3,8 @@ title: 格線佈局的基本概念
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 ---
 
+{{CSSRef}}
+
 [CSS 格線佈局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
 
 ## 什麽是格線？
@@ -71,7 +73,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 }
 ```
 
-{{ EmbedLiveSample('The_Grid_container', '200', '330') }}
+{{ EmbedLiveSample('格線容器', '200', '330') }}
 
 在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
 
@@ -130,7 +132,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('grid_first', '610', '200') }}
+{{ EmbedLiveSample('格線軌道（Grid Track）', '610', '200') }}
 
 ### fr 單位
 
@@ -175,7 +177,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}
+{{ EmbedLiveSample('fr 單位', '220', '180') }}
 
 接著下例將創建有一個 `2fr` 的軌道，接著還有兩個 `1fr` 的軌道。可用空間會因此被分為四塊：其中兩塊給第一個軌道、剩下兩塊給兩個軌道各一個。
 
@@ -281,7 +283,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 }
 ```
 
-{{ EmbedLiveSample('The_implicit_and_explicit_grid', '210', '410') }}
+{{ EmbedLiveSample('明式與暗式格線', '210', '410') }}
 
 ### 軌道縮放與 `minmax()`
 
@@ -328,7 +330,7 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 </div>
 ```
 
-{{ EmbedLiveSample('Track_sizing_and_minmax()', '230', '490') }}
+{{ EmbedLiveSample('軌道縮放與_minmax', '230', '490') }}
 
 ## Grid Lines
 
@@ -517,7 +519,7 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 }
 ```
 
-{{ EmbedLiveSample('nesting', '600', '410') }}
+{{ EmbedLiveSample('Nesting grids', '600', '410') }}
 
 In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.
 
@@ -596,7 +598,7 @@ Grid items can occupy the same cell. If we return to our example with items posi
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '210', '410') }}
+{{ EmbedLiveSample('Layering items with z-index', '210', '410') }}
 
 The item `box2` is now overlapping `box1`, it displays on top as it comes later in the source order.
 
@@ -662,5 +664,3 @@ We can control the order in which items stack up by using the `z-index` property
 ## 下一步
 
 In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout).
-
-<section id="Quick_links"><ol><li><a href="/zh-TW/docs/Web/CSS"><strong>CSS</strong></a></li><li><a href="/zh-TW/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li><li><a href="/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="/zh-TW/docs/Web/CSS/grid">grid</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-area">grid-area</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column">grid-column</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-end">grid-column-end</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-column-start">grid-column-start</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-gap">grid-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row">grid-row</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-end">grid-row-end</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-row-start">grid-row-start</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template">grid-template</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li><li><a href="/zh-TW/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Glossary</strong></a><ol><li><a href="/zh-TW/docs/Glossary/Grid">Grid</a></li><li><a href="/zh-TW/docs/Glossary/Grid_lines">Grid lines</a></li><li><a href="/zh-TW/docs/Glossary/Grid_tracks">Grid tracks</a></li><li><a href="/zh-TW/docs/Glossary/Grid_cell">Grid cell</a></li><li><a href="/zh-TW/docs/Glossary/Grid_areas">Grid areas</a></li><li><a href="/zh-TW/docs/Glossary/Gutters">Gutters</a></li><li><a href="/zh-TW/docs/Glossary/Grid_Axis">Grid Axis</a></li><li><a href="/zh-TW/docs/Glossary/Grid_rows">Grid row</a></li><li><a href="/zh-TW/docs/Glossary/Grid_column">Grid column</a></li></ol></li></ol></section>

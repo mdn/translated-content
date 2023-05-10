@@ -3,6 +3,7 @@ title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 translation_of: Web/API/Element/getElementsByTagName
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.getElementsByTagName()`** метод возвращает живую коллекцию элементов {{domxref("HTMLCollection")}} , учитывая [имя тэга](/en/DOM/element.tagName). Поиск осуществляется в поддереве указанного элемента, в результат поиска не попадает сам элемент, в поддереве которого осуществлялся поиск. Возвращает живой список, который автоматически обновляется при изменении DOM. Поэтому не нужно вызывать метод `Element.getElementsByTagName()` несколько раз с одними и теми же аргументами, содержимое списка обновляется автоматически.

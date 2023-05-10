@@ -1,12 +1,6 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - API
-  - HTML
-  - Window
-  - 레퍼런스
-translation_of: Web/API/Window/location
 ---
 {{APIRef}}
 
@@ -188,7 +182,7 @@ var showBookmark = (function () {
 })();
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

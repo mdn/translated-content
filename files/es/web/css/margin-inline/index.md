@@ -1,8 +1,8 @@
 ---
 title: margin-inline
 slug: Web/CSS/margin-inline
-translation_of: Web/CSS/margin-inline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`margin-inline`** define los márgenes lógicos de inicio y final en línea de un elemento, que se asignan a márgenes físicos según el modo de escritura, la direccionalidad y la orientación del texto del elemento.
@@ -65,17 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                               | Estado                                           | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline", "margin-inline")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-{{CSSInfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad en navegadores
-
-{{Compat("css.properties.margin-inline")}}
+{{Compat}}
 
 ## Mira también
 

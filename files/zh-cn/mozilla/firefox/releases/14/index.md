@@ -20,14 +20,14 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - {{ domxref("DOMException", "DOMException.code") }}已被废弃，根据最新的 DOM Level 4 规范。
 - {{ domxref("Range.insertNode()") }} method now works correctly when used on collapsed ranges.
 - The {{ domxref("BlobBuilder", "MozBlobBuilder") }} interface has been deprecated in favor of the constructor on {{ domxref("Blob") }}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
-- The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ({{bug(736686)}}).
+- The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ([Firefox bug 736686](https://bugzil.la/736686)).
 - Support for the [Mutation Observers](/zh-CN/DOM/DOM_Mutation_Observers) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
 - The {{ domxref("HTMLImageElement") }} interface's `x` and `y` properties were removed in Gecko 7.0 but restored in this release for compatibility reasons.
 - {{ domxref("Document") }}上的方法`execCommandShowHelp()`和`queryCommandText()`,没有任何作用，已被删除。
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/zh-CN/Using_geolocation) API, has been removed.
 - {{ domxref("Storage", "localStorage/sessionStorage") }} now correctly return `undefined` instead of `null` for undeclared keys through property access.
-- The {{domxref("ImageData")}} object has been implemented ({{bug(550309)}}).
-- Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ({{bug(737122)}}).
+- The {{domxref("ImageData")}} object has been implemented ([Firefox bug 550309](https://bugzil.la/550309)).
+- Attributes and methods related to child nodes on {{domxref("Attr")}} interface where obsoleted ([Firefox bug 737122](https://bugzil.la/737122)).
 
 ### CSS
 

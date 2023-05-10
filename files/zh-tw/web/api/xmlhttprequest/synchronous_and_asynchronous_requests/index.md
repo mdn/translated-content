@@ -3,7 +3,7 @@ title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 
-`XMLHttpRequest 支持同步和非同步請求，一般來說，建議使用非同步請求。`
+`XMLHttpRequest` 支持同步和非同步請求，一般來說，建議使用非同步請求。
 
 In short, synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience.
 
@@ -116,7 +116,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **備註：** Support for `timeout` was added in {{Gecko("12.0")}}.
+> **備註：** Support for `timeout` was added in Gecko 12.0.
 
 ## Synchronous request
 
@@ -142,43 +142,46 @@ Line 3 sends the request. The `null` parameter indicates that no body content is
 
 Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
 
-### Example: Synchronous HTTP request from a `Worker`
+### Example: Synchronous HTTP request from a Worker
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/zh-TW/DOM/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of {{domxref('XMLHttpRequest')}} within a [`Worker`](/zh-TW/docs/Web/API/Worker).
 
 **`example.html`** (the main page):
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-  var worker = new Worker("myTask.js");
-  worker.onmessage = function(event) {
-    alert("Worker said: " + event.data);
-  };
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MDN Example</title>
+    <script>
+      const worker = new Worker("myTask.js");
+      worker.onmessage = (event) => {
+        alert(`Worker said: ${event.data}`);
+      };
 
-  worker.postMessage("Hello");
-</script>
-</head>
-<body></body>
+      worker.postMessage("Hello");
+    </script>
+  </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/zh-TW/DOM/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous {{domxref('XMLHttpRequest')}} invocation):
 
-```plain
+```
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/zh-TW/DOM/Worker)):
+**`myTask.js`** (the [`Worker`](/zh-TW/docs/Web/API/Worker)):
 
 ```js
-self.onmessage = function (event) {
+self.onmessage = (event) => {
   if (event.data === "Hello") {
-    var xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", "myFile.txt", false);  // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
@@ -186,78 +189,37 @@ self.onmessage = function (event) {
 };
 ```
 
-> **備註：** The effect, because of the use of the `Worker`, is however asynchronous.
+> **備註：** The effect is asynchronous, because of the use of the `Worker`.
 
-It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/En/DOM/Using_web_workers) for examples and details.
+This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See [Using web workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers) for examples and details.
 
-### Irreplaceability of the synchronous use
+### Adapting Sync XHR use cases to the Beacon API
 
-There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the [`window.onunload`](/zh-TW/DOM/window.onunload) and [`window.onbeforeunload`](/zh-TW/DOM/window.onbeforeunload) events ([see also below](#XMLHttpRequests_being_stopped)).
+There are some cases in which the synchronous usage of {{domxref('XMLHttpRequest')}} is not replaceable, like during the {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, and {{domxref("Window.pagehide_event", "pagehide")}} events. You should consider using the `fetch()` API with the `keepalive` flag. When `fetch` with `keepalive` isn't available, you can consider using the {{domxref("navigator.sendBeacon()")}} API, which can support these use cases while typically delivering a good UX.
 
-Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.
-
-![](/@api/deki/files/6227/=AsyncUnload.jpg)
-
-A possible solution is to make sure that any AJAX requests that you make on unload are make synchronously instead of asynchronously. This will ensure that the page doesn’t finish unloading before the server response comes back.
-
-#### Example #1: Automatic logout before exit
+The following example shows theoretical analytics code that attempts to submit data to a server by using a synchronous {{domxref('XMLHttpRequest')}} in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.onbeforeunload = function () {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "logout.php?nick=" + escape(myName), false);  // synchronous request
-  xhr.send(null);
-  if (xhr.responseText.trim() !== "logout done"); {  // "logout done" is the expected response text
-    return "Logout has failed. Do you want to complete it manually?";
-  }
-};
+window.addEventListener('unload', logData, false);
+
+function logData() {
+  const client = new XMLHttpRequest();
+  client.open("POST", "/log", false); // third parameter indicates sync xhr. :(
+  client.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+  client.send(analyticsData);
+}
 ```
 
-#### Example #2: Noting if a user abandon the site without clicking any link and registering the boring page
+Using the **`sendBeacon()`** method, the data will be transmitted asynchronously to the web server when the User Agent has had an opportunity to do so, **without delaying the unload or affecting the performance of the next navigation.**
+
+The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-<!doctype html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-(function () {
+window.addEventListener('unload', logData, false);
 
-  function dontPanic () {
-    bForsake = false;
-    return true;
-  }
-
-  onload = function () {
-    for (
-      var aLinks = document.links, nLen = aLinks.length, nIdx = 0;
-      nIdx < nLen;
-      aLinks[nIdx++].onclick = dontPanic
-    );
-  };
-
-  onbeforeunload = function () {
-    if (bForsake) {
-      /* silent synchronous request */
-      var oReq = new XMLHttpRequest();
-      oReq.open("GET", "exit.php?leave=" + escape(location.href), false);
-      oReq.send(null);
-    }
-  };
-
-  var bForsake = true;
-
-})();
-</script>
-</head>
-
-<body>
-
-<p><a href="https://developer.mozilla.org/">Example link</a></p>
-
-</body>
-</html>
+function logData() {
+  navigator.sendBeacon("/log", analyticsData);
+}
 ```
 
 ## See also

@@ -1,13 +1,8 @@
 ---
 title: Arguments object
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Funções
-  - JavaScript
-  - Referência(2)
-  - argumentos
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 O objeto **`arguments`** é como um objeto Array correspondendo aos argumentos passados para uma função.
@@ -79,7 +74,7 @@ var args = [...arguments];
 
 - [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee)
   - : Referência para a função atualmente em execução.
-- [`arguments.caller`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/caller) {{ Obsolete_inline() }}
+- [`arguments.caller`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/caller)
   - : Referência para a função que invocou a função atualmente em execução.
 - [`arguments.length`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : Referência para o número de argumentos passados para a função.

@@ -1,8 +1,8 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
+
 {{JSRef}}
 
 A função **`Math.log()`** retorna o logaritmo natural(base {{jsxref("Math.E", "e")}}) de um número, que é:

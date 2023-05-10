@@ -8,6 +8,7 @@ tags:
   - Элемент
 translation_of: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getElementsByClassName()`** метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.

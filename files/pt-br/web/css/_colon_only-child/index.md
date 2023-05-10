@@ -1,11 +1,8 @@
 ---
 title: ':only-child'
 slug: Web/CSS/:only-child
-tags:
-  - Pseudo-classe
-  - Referencia
-translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/CSS/Pseudo-classes) de CSS **`:only-child`** representa um elemento sem nenhum elemento-irmão. É o mesmo que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mas com uma especificidade mais baixa.
@@ -18,7 +15,7 @@ p:only-child {
 }
 ```
 
-> **Note:** **Nota**: Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
+> **Nota:** Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
 
 ## Sintaxe
 

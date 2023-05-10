@@ -1,10 +1,8 @@
 ---
 title: isCollapsed
 slug: Web/API/Selection/isCollapsed
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/isCollapsed
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

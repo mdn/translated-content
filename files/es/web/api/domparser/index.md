@@ -1,8 +1,8 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-translation_of: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 `DOMParser` puede analizar gramaticalmente (parsear, en adelante) código XML o HTML almacenado en una cadena de texto y convertirlo en un [Documento](/es/docs/Web/API/Document) DOM. `DOMParser` está especificado en [DOM Parsing and Serialization](https://w3c.github.io/DOM-Parsing/).
@@ -26,7 +26,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ### Manejo de errores
 
-Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see {{Bug(45566)}}):
+Es importante tener en cuenta que si el proceso de parseado falla, actualmente `DOMParser` no arroja una excepción, pero devuelve en cambio un documento de error (see [Error 45566 en Firefox](https://bugzil.la/45566)):
 
 ```xml
 <parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
@@ -39,7 +39,7 @@ Los errores de parseo son reportados también a la [Consola de errores](/es/docs
 
 ## Parseando un documento SVG o HTML
 
-El `DOMParser` puede ser usado para parsear un documento SVG {{geckoRelease("10.0")}} o un documento HTML{{geckoRelease("12.0")}}. Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
+El `DOMParser` puede ser usado para parsear un documento SVG (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) o un documento HTML (Firefox 12.0 / Thunderbird 12.0 / SeaMonkey 2.9). Hay 3 resultados diferentes posibles, dependiendo del tipo MIME dado. Si el tipo del MIME es `text/xml`, el objeto resultante será un `XMLDocument`, si el tipo MIME es `image/svg+xml` será un `SVGDocument,` y si el tipo MIME es `text/html` será un `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();
@@ -112,17 +112,15 @@ Ver artículo aquí: [nsIDOMParser](/es/docs/nsIDOMParser)
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}} | {{Spec2('DOM Parsing')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.DOMParser")}}
+{{Compat}}
 
 ## Ver también
 
 - [Parsing and serializing XML](/es/docs/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/es/docs/XMLHttpRequest)
 - [XMLSerializer](/es/docs/XMLSerializer)
-- [Parsing HTML to DOM](/en-US/Add-ons/Code_snippets/HTML_to_DOM)
+- [Parsing HTML to DOM](/es/Add-ons/Code_snippets/HTML_to_DOM)

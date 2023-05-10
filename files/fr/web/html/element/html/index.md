@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/html
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.
 
@@ -24,7 +24,7 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 - {{htmlattrdef("xmlns")}}
   - : Définit l'espace de noms XML du document. La valeur par défaut est "http\://www\.w3.org/1999/xhtml". Cet attribut est obligatoire dans un document XML et optionnel dans un document de type text/html.
 
-## Exemple
+## Exemples
 
 Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un document HTML5.
 

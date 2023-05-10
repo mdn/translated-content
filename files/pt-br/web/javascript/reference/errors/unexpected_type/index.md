@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-tags:
-  - Erros
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

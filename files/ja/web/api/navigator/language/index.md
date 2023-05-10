@@ -16,7 +16,7 @@ const lang = navigator.language
 
 ### 値
 
-{{domxref("DOMString")}} です。_`lang`_ は、[BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) で定義された言語バージョンを表す文字列が格納されます。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
+{{domxref("DOMString")}} です。`lang` は、[BCP 47](https://tools.ietf.org/rfc/bcp/bcp47.txt) で定義された言語バージョンを表す文字列が格納されます。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
 
 iOS 10.2 以前の Safari では、国コードは "en-us"、"fr-fr" のように小文字で返されます。
 

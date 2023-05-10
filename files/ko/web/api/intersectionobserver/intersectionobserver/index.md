@@ -1,15 +1,8 @@
 ---
 title: IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
-tags:
-  - API
-  - Constructor
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-browser-compat: api.IntersectionObserver.IntersectionObserver
-translation_of: Web/API/IntersectionObserver/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 **`IntersectionObserver()`** 생성자는 새로운 {{domxref("IntersectionObserver")}} 객체를 생성하고 반환합니다.

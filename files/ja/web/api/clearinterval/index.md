@@ -2,15 +2,18 @@
 title: clearInterval()
 slug: Web/API/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
+l10n:
+  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
 {{APIRef("HTML DOM")}}
 
 グローバルの **`clearInterval()`** メソッドは、以前に {{domxref("setInterval", "setInterval()")}} の呼び出しによって確立されたタイマーを利用した繰り返し動作を取り消します。
+指定された引数で前回確立されたアクションを識別できなかった場合、このメソッドは何も行いません。
 
 ## 構文
 
-```js
+```js-nolint
 clearInterval(intervalID)
 ```
 
@@ -24,7 +27,7 @@ clearInterval(intervalID)
 
 ### 返値
 
-{{jsxref("undefined")}}
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -40,9 +43,7 @@ clearInterval(intervalID)
 
 ## 関連情報
 
-- [JavaScript タイマー](/ja/docs/JavaScript/Timers)
 - {{domxref("setTimeout")}}
 - {{domxref("setInterval")}}
 - {{domxref("clearTimeout")}}
 - {{domxref("Window.requestAnimationFrame")}}
-- [_デーモン_ 管理](/ja/docs/JavaScript/Timers/Daemons)

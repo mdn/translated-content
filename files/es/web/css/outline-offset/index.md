@@ -1,11 +1,8 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - Contorno CSS
-  - Propiedad CSS
-translation_of: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -75,11 +72,8 @@ El código anterior producirá este efecto:
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentarios                                                 |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------- |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset') }} | {{ Spec2('CSS3 Transitions') }} | Define `outline-offset` como propiedad que se puede animar. |
-| {{ SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset') }}     | {{ Spec2('CSS3 Basic UI') }}     | Definición inicial                                          |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

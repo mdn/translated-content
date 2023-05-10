@@ -1,8 +1,8 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-translation_of: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
 O status de resposta **`409 Conflict`** indica que a solicitação atual conflitou com o recurso que está no servidor.

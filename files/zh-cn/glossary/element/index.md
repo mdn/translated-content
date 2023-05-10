@@ -1,7 +1,6 @@
 ---
 title: Element（元素）
 slug: Glossary/Element
-original_slug: Glossary/元素
 ---
 
 **元素**是网页的一部分，在 {{glossary("XML")}} 和 {{glossary("HTML")}} 中，一个元素可以包含一个数据项，或是一块文本，或是一张照片，亦或是什么也不包含。一个典型的元素包括一个具有一些{{glossary("attribute", "属性")}}的开始标签，中间的文本内容和一个结束标签。
@@ -12,5 +11,5 @@ original_slug: Glossary/元素
 ## 相关信息
 
 - [开始学习 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [自定义元素（Custom elements）](/zh-CN/docs/Web/Web_Components/Using_custom_elements)
+- [自定义元素（Custom element）](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
 - {{domxref("Element")}} 接口，在 DOM 中表示一个元素

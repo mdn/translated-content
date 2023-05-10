@@ -1,15 +1,8 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - RegExp
-  - 정규 표현식
-  - 정규식
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 생성자는 패턴을 사용해 텍스트를 판별할 때 사용합니다.

@@ -5,6 +5,7 @@ tags:
   - микроданные
 translation_of: Web/HTML/Global_attributes/itemid
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. Атрибут `itemid` может быть указан только для элемента, который имеет оба атрибута {{htmlattrxref("itemscope")}} и {{htmlattrxref("itemtype")}}. Также, `itemid` может быть указан только для элементов, обладающих атрибутом `itemscope`, соответствующий ссылке `itemtype` или определяющий словарь, поддерживающий глобальные идентификаторы.
@@ -58,7 +59,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 
 ### Результат
 
-{{EmbedLiveSample('HTML', '', '', '', 'Web/HTML/Global_attributes/itemid')}}
+{{EmbedLiveSample('Пример')}}
 
 ## Спецификации
 

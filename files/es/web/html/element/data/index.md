@@ -1,14 +1,9 @@
 ---
 title: <data>
 slug: Web/HTML/Element/data
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/data
 original_slug: Web/HTML/Elemento/data
 ---
+
 ## Resúmen
 
 El **Elemento HTML `<data>`** vincula un contenido dado con una traducción legible por una máquina. Si el contenido está relacionado con `time-` o `date-`, debe usarse el elemento {{HTMLElement("time")}}.
@@ -42,17 +37,14 @@ El siguiente ejemplo muestra nombres de productos pero también asocia a cada un
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                             |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## Ver también
 
 - The HTML {{HTMLElement("time")}} element.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

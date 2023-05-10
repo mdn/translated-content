@@ -1,19 +1,8 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
-tags:
-  - Date
-  - Deprecated
-  - Depreciado
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`setYear()`** atribui o ano para a data especificada de acordo com o horário local. Devido `setYear()` não colocar o anos cheios ("problema do ano 2000"), ele não é mais utilizado e foi substituído pelo método {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}}.

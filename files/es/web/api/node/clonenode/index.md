@@ -1,14 +1,8 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-tags:
-  - API
-  - DOM
-  - Referencia
-  - Referência DOM
-  - metodo
-translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.cloneNode()`** devuelve un duplicado del nodo en el que este método fue llamado.
@@ -26,9 +20,9 @@ var dupNode = node.cloneNode(deep);
 - _deep {{optional_inline}}_
   - : `true` si los hijos del nodo también deben ser clonados, o `false` para clonar únicamente al nodo.
 
-> **Nota:** En la especificación DOM4 (como se implementó en Gecko 13.0 {{geckoRelease(13)}}), `deep` es un argumento opcional. Si éste se omite, el método actua como si el valor se estableciera en **`true`**, estableciendo el uso de la clonación profunda como el comportamiento por defecto. Para crear un clon superficial, `deep` debe establecerse en `false`.
+> **Nota:** En la especificación DOM4 (como se implementó en Gecko 13.0 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)), `deep` es un argumento opcional. Si éste se omite, el método actua como si el valor se estableciera en **`true`**, estableciendo el uso de la clonación profunda como el comportamiento por defecto. Para crear un clon superficial, `deep` debe establecerse en `false`.
 >
-> Este comportamiento ha sido modificado en la última especificación, si es omitido, el método se comportará como si `deep` fuera **`false`**. Aunque sigue siendo opcional, usted siempre debería proporcionar el argumento `deep` tanto para la compatibilidad con las nuevas y anteriores especificaciones. Con Gecko 28.0 {{geckoRelease(28)}}), la consola advierte a los desarrolladores a no omitir el argumento. Desde Gecko 29.0 {{geckoRelease(29)}}), una copia superficial, es el comportamiento por defecto en lugar de una copia profunda.
+> Este comportamiento ha sido modificado en la última especificación, si es omitido, el método se comportará como si `deep` fuera **`false`**. Aunque sigue siendo opcional, usted siempre debería proporcionar el argumento `deep` tanto para la compatibilidad con las nuevas y anteriores especificaciones. Con Gecko 28.0 (Firefox 28 / Thunderbird 28 / SeaMonkey 2.25 / Firefox OS 1.3))), la consola advierte a los desarrolladores a no omitir el argumento. Desde Gecko 29.0 (Firefox 29 / Thunderbird 29 / SeaMonkey 2.26)), una copia superficial, es el comportamiento por defecto en lugar de una copia profunda.
 
 ## Ejemplo
 
@@ -55,12 +49,8 @@ Para clonar un nodo con el fin de agregarlo a un domento distinto, utiliza {{dom
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                    |
-| {{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM2 Core")}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

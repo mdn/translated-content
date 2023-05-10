@@ -1,16 +1,8 @@
 ---
 title: Response.status
 slug: Web/API/Response/status
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - status
-translation_of: Web/API/Response/status
 ---
+
 {{APIRef("Fetch")}}
 
 La propiedad de solo lectura **`status`** de la interfaz {{domxref("Response")}} contiene el código de estado de la respuesta (ejm., `200` para un éxito).
@@ -47,13 +39,11 @@ fetch(myRequest).then(function(response) {
 
 ## Especificaciones
 
-| Especificación                                                           | Estatus                  | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#dom-response-status','status')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Response.status")}}
+{{Compat}}
 
 ## Ver también
 

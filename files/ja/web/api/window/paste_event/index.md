@@ -40,13 +40,11 @@ document.addEventListener('paste', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-paste')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.paste_event")}}
+{{Compat}}
 
 ## 関連情報
 

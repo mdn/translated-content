@@ -1,8 +1,8 @@
 ---
 title: Node.nodeValue
 slug: Web/API/Node/nodeValue
-translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad **`Nodo.nodeValue`** devuelve o actualiza el valor del nodo actual.

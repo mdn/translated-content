@@ -1,8 +1,8 @@
 ---
 title: Desde object hasta iframe - otras tecnologías de incrustación
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incluyendo imágenes, video y audio. En este punto nos gustaría que des algo así como un paso al costado, prestando atención a elementos que te permiten integrar una amplia variedad de tipos de contenido en tus páginas web: los elementos {{htmlelement("iframe")}}, {{htmlelement("embed")}} y {{htmlelement("object")}}. Los `<iframe>`s son para incrustar otras páginas web, y los otros dos te permiten incrustar PDFs, SVG e incluso Flash — una tecnología que está en su camino de despedida, pero la cual seguirás viendo semi-regularmente.
@@ -227,7 +227,7 @@ Arriba mencionamos nuestra preocupación por la seguridad — vamos a entrar en 
 
 Los creadores de navegadores y los desarrolladores web han aprendido por las malas que los iframes son un objetivo común (término oficial: **vector de ataque**) para los "malos" de la Web (a menudo denominados **hackers**,o más exactamente, **crackers**) para atacar si están tratando de modificar maliciosamente tu página web, o engañar a las personas para que hagan algo que no quieren hacer, como revelar información confidencial como nombre de usuario o contraseña. Debido a esto, los ingenieros de especificaciones y los desarrolladores de navegadores han desarrollado varios mecanismos para hacer que los `<iframe>`s sean más seguros, y también hay mejores prácticas a considerar — cubriremos algunas de estas a continuación.
 
-> **Nota:** {{interwiki('wikipedia','Clickjacking')}} es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
+> **Nota:** [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
 
 Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
 
@@ -262,7 +262,7 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 #### Configure CSP directives
 
-{{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/Security/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable {{interwiki('wikipedia','clickjacking')}} and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
+{{Glossary("CSP")}} stands for **[content security policy](/es/docs/Web/Security/CSP)**, and provides [a set of HTTP Headers](/es/docs/Web/Security/CSP/CSP_policy_directives) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/es/docs/Web/HTTP/X-Frame-Options)_ This can prevent other websites from embedding your content in their webpages (which would enable [clickjacking](https://es.wikipedia.org/wiki/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
 > **Nota:** You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
 
@@ -317,7 +317,7 @@ Once upon a time, plugins were indispensable on the Web. Remember the days when 
 - **Give yourself a break from the [extra accessibility headaches](http://webaim.org/techniques/flash/) that come with Flash and other plugins.**
 - **Stay clear of additional security hazards.** Adobe Flash is [notoriously insecure,](http://www.cvedetails.com/product/6761/Adobe-Flash-Player.html?vendor_id=53) even after countless patches. In 2015, Alex Stamos, chief security officer of Facebook, even [requested that Adobe discontinue Flash.](http://www.theverge.com/2015/7/13/8948459/adobe-flash-insecure-says-facebook-cso)
 
-So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/es/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
+So what should you do? If you need interactivity, HTML and {{glossary("JavaScript")}} can readily get the job done for you with no need for Java applets or outdated ActiveX/BHO technology. Instead of relying on Adobe Flash, you can use [HTML5 video](/es/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage) for your media needs, [SVG](/es/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage) for vector graphics, and [Canvas](/es/docs/Web/API/Canvas_API/Tutorial) for complex images and animations. [Peter Elst was already writing some years ago](https://plus.google.com/+PeterElst/posts/P5t4pFhptvp) that Adobe Flash is rarely the right tool for the job, except for specialized gaming and business applications. As for ActiveX, even Microsoft's {{glossary("Microsoft Edge","Edge")}} browser no longer supports it.
 
 ## Summary
 
@@ -326,12 +326,3 @@ The topic of embedding other content in web documents can quickly become very co
 There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{htmlelement("svg")}} for embedding vector graphics. We'll look at [SVG](/es/docs/Web/SVG) in the next article of the module.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -1,11 +1,13 @@
 ---
-title: 関数宣言
+title: function 宣言
 slug: Web/JavaScript/Reference/Statements/function
+l10n:
+  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
 ---
 
 {{jsSidebar("Statements")}}
 
-**関数宣言** (関数文) は、指定された引数を使用して関数を定義します。
+**`function`** 宣言は、指定された引数を使用して関数を定義します。
 
 また、 {{jsxref("Function")}} のコンストラクターと{{jsxref("Operators/function", "関数式", "", 1)}}を使用して関数を定義することもできます。
 
@@ -13,22 +15,22 @@ slug: Web/JavaScript/Reference/Statements/function
 
 ## 構文
 
-```
-function name([param[, param,[..., param]]]) {
-   [statements]
+```js-nolint
+function name(param0) {
+  statements
+}
+function name(param0, param1) {
+  statements
+}
+function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 
 - `name`
   - : 関数の名前です。
-
-<!---->
-
 - `param` {{optional_inline}}
   - : 関数に渡す引数の名前です。引数の最大数はエンジンによって異なります。
-
-<!---->
-
 - `statements` {{optional_inline}}
   - : 関数の本体を構成する文です。
 
@@ -42,59 +44,85 @@ function name([param[, param,[..., param]]]) {
 
 ### 条件付きで作成される関数
 
-関数は条件付きで宣言できます。つまり、関数文を `if` 文の中に入れ子にすることができますが、結果は実装によって一貫性がないので、このパターンを本番コードでは使用すべきではありません。条件付きの関数の作成には、代わりに関数式を使用してください。
+> **警告:** [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではない場合、ブロック内での関数宣言は奇妙な動きをします。ブロック内での関数宣言は、厳格モード時のみ行ってください。
+
+関数は条件付きで宣言できます。つまり、関数文を [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の中に入れ子にすることができますが、結果は実装によって一貫性がないので、このパターンを本番コードでは使用すべきではありません。条件付きの関数の作成には、代わりに関数式を使用してください。
 
 ```js
-var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
 if (false) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
-// 'foo' name is hoisted. typeof foo is undefined
+// 'foo' の名前はグローバル。typeof foo は undefined
 //
 // In Firefox:
-// 'foo' name is hoisted. typeof foo is undefined
-//
-// In Edge:
-// 'foo' name is not hoisted. typeof foo is undefined
+// 'foo' の名前はグローバル。typeof foo は undefined
 //
 // In Safari:
-// 'foo' name is hoisted. typeof foo is function
+// 'foo' の名前はグローバル。typeof foo は function
 ```
 
-真と評価される条件でも結果はまったく同じです。
+`if` 本体が実際に実行されるかどうかにかかわらず、スコープと巻き上げの効果は変わりません。
 
 ```js
-var hoisted = "foo" in this;
-console.log(`'foo' name ${hoisted ? "is" : "is not"} hoisted. typeof foo is ${typeof foo}`);
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
 if (true) {
-  function foo(){ return 1; }
+  function foo() {
+    return 1;
+  }
 }
 
 // In Chrome:
-// 'foo' name is hoisted. typeof foo is undefined
+// 'foo' の名前はグローバル。typeof foo は undefined
 //
 // In Firefox:
-// 'foo' name is hoisted. typeof foo is undefined
-//
-// In Edge:
-// 'foo' name is not hoisted. typeof foo is undefined
+// 'foo' の名前はグローバル。typeof foo は undefined
 //
 // In Safari:
-// 'foo' name is hoisted. typeof foo is function
+// 'foo' の名前はグローバル。typeof foo は function
+```
+
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、[ブロック](/ja/docs/Web/JavaScript/Reference/Statements/block)レベルの関数宣言はそのブロックのスコープとなり、そのブロックの先頭に巻き上げられます。
+
+```js
+"use strict";
+
+{
+  foo(); // Logs "foo"
+  function foo() {
+    console.log("foo");
+  }
+}
+
+console.log(
+  `'foo' name ${
+    "foo" in globalThis ? "is" : "is not"
+  } global. typeof foo is ${typeof foo}`,
+);
+// 'foo' name is not global. typeof foo is undefined
 ```
 
 ### 関数宣言の巻き上げ
 
-JavaScript の関数宣言は、それを囲む関数やグローバルスコープの先頭に巻き上げられ、関数を宣言する前に使うことができます。
+JavaScript の関数宣言は、それを囲む関数やグローバルスコープの先頭に[巻き上げられ](/ja/docs/Glossary/Hoisting)、関数を宣言する前に使うことができます。
 
 ```js
-hoisted(); // logs "foo"
+hoisted(); // "foo" とログ出力
 
 function hoisted() {
-  console.log('foo');
+  console.log("foo");
 }
 ```
 
@@ -103,8 +131,8 @@ function hoisted() {
 ```js
 notHoisted(); // TypeError: notHoisted is not a function
 
-var notHoisted = function() {
-   console.log('bar');
+var notHoisted = function () {
+  console.log("bar");
 };
 ```
 
@@ -112,23 +140,21 @@ var notHoisted = function() {
 
 ### function の使用
 
-以下のコードは、商品 `a`, `b`, `c` の販売個数が与えられた場合に、販売個数の合計を返す関数を宣言しています。
+以下のコードは、3 つの商品の販売個数が指定されたときに、売上の合計額を返す関数を宣言しています。
 
 ```js
-function calc_sales(units_a, units_b, units_c) {
-   return units_a * 79 + units_b * 129 + units_c * 699;
+function calcSales(unitsA, unitsB, unitsC) {
+  return unitsA * 79 + unitsB * 129 + unitsC * 699;
 }
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.statements.function")}}
+{{Compat}}
 
 ## 関連情報
 

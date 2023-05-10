@@ -1,15 +1,13 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-translation_of: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Los objetos **`KeyboardEvent`** describen una interacción del usuario con el teclado. Cada evento describe una tecla; el tipo de evento(`keydown`, `keypress`, o `keyup`) identifica el tipo de acción realizada.
 
-> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/en-US/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
+> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
 
 ## Constructor
 
@@ -35,7 +33,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or  <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
+  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline()}}{{Deprecated_inline}}{{Readonlyinline}}
 
@@ -103,7 +101,7 @@ There are `keydown`, `keypress`, and `keyup` events. For most keys, Gecko dispat
 
 Certain keys toggle the state of an LED indicator, such as Caps Lock, Num Lock, and Scroll Lock. On Windows and Linux, these keys dispatch only the `keydown` and `keyup` events. Note that on Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
 
-On Mac, however, Caps Lock dispatches only the `keydown` event due to a platform event model limitation. Num Lock had been supported on old MacBook (2007 model and older) but Mac hasn't supported Num Lock feature even on external keyboards in these days. On the old MacBook which has Num Lock key, Num Lock doesn't cause any key events. And Gecko supports Scroll Lock key if an external keyboard which has F14 is connected. However, it generates `keypress` event. This inconsistent behavior is a bug; see {{bug(602812)}}.
+On Mac, however, Caps Lock dispatches only the `keydown` event due to a platform event model limitation. Num Lock had been supported on old MacBook (2007 model and older) but Mac hasn't supported Num Lock feature even on external keyboards in these days. On the old MacBook which has Num Lock key, Num Lock doesn't cause any key events. And Gecko supports Scroll Lock key if an external keyboard which has F14 is connected. However, it generates `keypress` event. This inconsistent behavior is a bug; see [Error 602812 en Firefox](https://bugzil.la/602812).
 
 ### Auto-repeat handling
 
@@ -135,7 +133,7 @@ In these environments, unfortunately, there's no way for web content to tell the
 
 #### Auto-repeat handling prior to Gecko 4.0
 
-Before Gecko 4.0 {{geckoRelease('4.0')}}, keyboard handling was less consistent across platforms.
+Before Gecko 4.0, keyboard handling was less consistent across platforms.
 
 - Windows
   - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
@@ -185,14 +183,10 @@ function metaKeyUp (event) {
 </html>
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events', '#interface-KeyboardEvent', 'KeyboardEvent')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
+{{Specifications}}
 
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+## Compatibilidad con navegadores
 
-## Browser compatibility
-
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}

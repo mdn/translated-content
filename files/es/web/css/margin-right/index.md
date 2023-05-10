@@ -1,8 +1,8 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-translation_of: Web/CSS/margin-right
 ---
+
 ### Definicion
 
 El margen derecho de propiedad establece el margen derecho de un elemento.

@@ -3,6 +3,8 @@ title: <param>
 slug: Web/HTML/Element/param
 ---
 
+{{HTMLSidebar}}{{Deprecated_Header}}
+
 ## 概要
 
 **HTML `<param>元素`**为{{ HTMLElement("object") }}元素定义参数
@@ -36,13 +38,13 @@ slug: Web/HTML/Element/param
 
 这个元素包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
 
-- {{ htmlattrdef("name") }}
+- `name`
   - : 参数的名字。
-- {{ htmlattrdef("type") }} {{Deprecated_Inline}}
+- `type` {{Deprecated_Inline}}
   - : 仅当 valuetype 设置为“ref”时才使用。根据 URI 中给定的数据确定 MIME 类型。
-- {{ htmlattrdef("value") }}
+- `value`
   - : 确定参数的值。
-- {{ htmlattrdef("valuetype") }} {{Deprecated_Inline}}
+- `valuetype` {{Deprecated_Inline}}
   - : 确定参数的类型。可选值如下：
 
     - data: 默认值。该值作为字符串变量传递给对象实例。
@@ -65,4 +67,4 @@ slug: Web/HTML/Element/param
 
 - {{ HTMLElement("object") }}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

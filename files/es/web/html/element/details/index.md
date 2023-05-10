@@ -1,16 +1,9 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Elemento
-  - Elementos HTML interactivos
-  - HTML
-  - HTML5
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/details
 original_slug: Web/HTML/Elemento/details
 ---
+
 {{ SeeCompatTable() }}
 
 ## Resumen
@@ -82,21 +75,16 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 {{EmbedLiveSample("Example")}}
 
-> **Nota:** Si el el ejemplo de arriba no funciona , ver [Compatibilidad con navegadores](#compatibilidad_con_navegadores) para determinar si el navegador soporta esta característica .
-
 ## Especificaciones
 
-| Especificaciones                                                                                                                 | Estatus                          | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'interactive-elements.html#the-details-element', '&lt;details&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5.1', 'semantics.html#the-details-element', '&lt;details&gt;')}}                     | {{Spec2('HTML5.1')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## Ver también
 
 - {{HTMLElement("summary")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

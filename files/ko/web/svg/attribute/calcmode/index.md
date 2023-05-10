@@ -1,8 +1,8 @@
 ---
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
-translation_of: Web/SVG/Attribute/calcMode
 ---
+
 « [SVG Attribute reference home](/en/SVG/Attribute)
 
 이 속성은 애니메이션의 interpolation 모드를 지정합니다. 기본 모드는 linear 이지만 속성이 linear interpolation을 지원하지 않으면(예: 문자열의 경우) calcMode 속성이 무시되고 discrete interpolation이 사용됩니다.

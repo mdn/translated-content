@@ -3,15 +3,15 @@ title: RTCDataChannel 简单示例
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
-{{domxref("RTCDataChannel")}} 接口是[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。API 有意地类似于[WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
+{{domxref("RTCDataChannel")}} 接口是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。API 有意地类似于 [WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。
 
-在本示例中，我们会在一个页面内建立 一条{{domxref("RTCDataChannel")}}链接 . 这个场景是为了演示如何链接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立链接的过程，定位和链接另外一台主机的场景在另外的一个示例中。
+在本示例中，我们会在一个页面内建立 一条 {{domxref("RTCDataChannel")}} 连接。这个场景是为了演示如何连接两个 Peer，实际场景并不常见。在本示例中解释了协商和建立连接的过程，定位和连接另外一台主机的场景在另外的一个示例中。
 
 ## The HTML
 
-首先让我们看看我们需要的 HTML 代码[HTML that's needed](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html). 其实很简单，我们先有两个按钮用来链接和断开链接。
+首先让我们看看我们[需要的 HTML 代码](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html)。其实很简单，我们先有两个按钮用来链接和断开连接。
 
 ```html
 <button id="connectButton" name="connectButton" class="buttonleft">
@@ -99,7 +99,7 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-远程端的建立过程类似“local”端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{event("datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
+远程端的建立过程类似“local”端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
 
 #### 设立 ICE 候选人
 
@@ -117,7 +117,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
         .catch(handleAddCandidateError);
 ```
 
-我们配置每个 {{domxref("RTCPeerConnection")}} 对于事件 {{event("icecandidate")}} 建立事件处理。
+我们配置每个 {{domxref("RTCPeerConnection")}} 对于事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 建立事件处理。
 
 #### 启动连接尝试
 
@@ -147,7 +147,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 #### 对成功的对等连接的处理
 
-当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}}的{{event("icecandidate")}} 事件将被触发。在事件的处理中可以执行任何需要的操作，但在本例中，我们所需要做的只是更新用户界面。
+当 peer-to-peer 连接的任何一方成功连接，相应的 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件将被触发。在事件的处理中可以执行任何需要的操作，但在本例中，我们所需要做的只是更新用户界面。
 
 ```js
   function handleLocalAddCandidateSuccess() {
@@ -163,7 +163,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
 
 #### 数据通道（data channel）的连接
 
-{{domxref("RTCPeerConnection")}} 一旦 open，事件{{event("datachannel")}} 被发送到远端以完成打开数据通道的处理，该事件触发 `receiveChannelCallback()` 方法，如下所示：
+{{domxref("RTCPeerConnection")}} 一旦 open，事件{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 被发送到远端以完成打开数据通道的处理，该事件触发 `receiveChannelCallback()` 方法，如下所示：
 
 ```js
   function receiveChannelCallback(event) {
@@ -174,7 +174,7 @@ remoteConnection.ondatachannel = receiveChannelCallback;
   }
 ```
 
-事件{{event("datachannel")}} 在它的 channel 属性中包括了：对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向，它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。一旦侦听建立，每当 remote 节点接收到数据 `handleReceiveMessage()` 方法将被调用，每当通道的连接状态发生改变 `handleReceiveChannelStatusChange()` 方法将被调用，因此通道完全打开或者关闭时我们都可以作出相应的相应。
+事件 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 在它的 channel 属性中包括了：对代表 remote 节点的 channel 的{{domxref("RTCDataChannel")}} 的指向，它保存了我们用以在该 channel 上对我们希望处理的事件建立的事件监听。一旦侦听建立，每当 remote 节点接收到数据 `handleReceiveMessage()` 方法将被调用，每当通道的连接状态发生改变 `handleReceiveChannelStatusChange()` 方法将被调用，因此通道完全打开或者关闭时我们都可以作出相应的相应。
 
 ### 对通道状态变化的处理
 
@@ -234,7 +234,7 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
   }
 ```
 
-首先，待发送的消息文本从文本输入框的 {{htmlattrxref("value", "input")}}属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
+首先，待发送的消息文本从文本输入框的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)属性获得，之后该文本通过调用 {{domxref("RTCDataChannel.send", "sendChannel.send()")}}发送到 remote 节点。都搞定了！余下的只是些用户体验糖 ——清空并聚焦文本输入框，以便用户可以立即开始下一条消息的输入。
 
 ### 接收消息
 

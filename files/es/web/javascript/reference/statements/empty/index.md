@@ -1,13 +1,9 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - JavaScript
-  - Sentencia
-  - Vacía
-translation_of: Web/JavaScript/Reference/Statements/Empty
 original_slug: Web/JavaScript/Referencia/Sentencias/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 Un **empty statement** o sentencia vacía es usada para no proveer una sentencia, incluso si la sintaxis JavaScript esperase una.
@@ -53,17 +49,11 @@ console.log(b); // 0
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Empty statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-empty-statement', 'Empty statement')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.3', 'Empty statement')}}                 | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES3')}}         |                     |
-| {{SpecName('ES1', '#sec-12.3', 'Empty statement')}}                     | {{Spec2('ES1')}}         | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.empty")}}
+{{Compat}}
 
 ## Vea también
 

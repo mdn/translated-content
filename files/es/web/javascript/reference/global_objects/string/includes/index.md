@@ -1,16 +1,9 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - Cadena de texto
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
+
 {{JSRef}}
 
 El método **`includes()`** determina si una cadena de texto puede ser encontrada dentro de otra cadena de texto, devolviendo **`true`** o **`false`** según corresponda.
@@ -83,13 +76,11 @@ console.log(str.includes(''))             // true
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.includes")}}
+{{Compat}}
 
 ## Ver también
 

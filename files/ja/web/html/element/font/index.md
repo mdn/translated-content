@@ -34,4 +34,4 @@ slug: Web/HTML/Element/font
 
 {{Compat}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

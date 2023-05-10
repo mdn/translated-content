@@ -1,13 +1,8 @@
 ---
 title: MimeType
 slug: Web/API/MimeType
-tags:
-  - API
-  - Interface
-  - Plugins
-  - Referencia
-translation_of: Web/API/MimeType
 ---
+
 {{SeeCompatTable}}{{APIRef("HTML DOM")}}
 
 La interfaz **`MimeType`** provee información acerca de un tipo MIME asociado con un plugin en particular. {{domxref("NavigatorPlugins.mimeTypes")}} retorna un arreglo de estos objetos.
@@ -25,10 +20,8 @@ La interfaz **`MimeType`** provee información acerca de un tipo MIME asociado c
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                           | Comentario          |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG','#mimetype','MimeType')}} | {{Spec2('HTML WHATWG')}} | Definición Inicial. |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MimeType")}}
+{{Compat}}

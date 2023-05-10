@@ -1,12 +1,8 @@
 ---
 title: table.width
 slug: Web/API/HTMLTableElement/width
-tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-translation_of: Web/API/HTMLTableElement/width
 ---
+
 {{ ApiRef() }}
 
 ### 요약

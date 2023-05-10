@@ -5,7 +5,7 @@ browser-compat: html.elements.menu
 translation_of: Web/HTML/Element/menu
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Element/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Element/li)).
 
@@ -36,7 +36,7 @@ Dans cet exemple, on utilise un élément `<menu>` afin de créer une barre d'ou
   <li><button onclick="paste()">Coller</button></li>
 </menu>
 ```
-  
+
 On notera que, sur le plan fonctionnel, cela est équivalent à&nbsp;:
 
 ```html
@@ -84,7 +84,7 @@ button {
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs occurrences de  <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>,  <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et  <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
+      <td>Zéro ou plusieurs occurrences de <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
       </td>
     </tr>
     <tr>

@@ -1,15 +1,8 @@
 ---
 title: window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
-tags:
-  - API
-  - DOM
-  - Intermediário
-  - Método(2)
-  - Referência do DOM
-  - Timers JavaScript
-translation_of: Web/API/window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
 ---
+
 {{APIRef}}
 O método **`window.requestAnimationFrame()`** fala para o navegador que deseja-se realizar uma animação e pede que o navegador chame uma função específica para atualizar um quadro de animação antes da próxima repaint (repintura). O método tem como argumento uma callback que deve ser invocado antes da repaint.
 
@@ -64,7 +57,7 @@ window.requestAnimationFrame(step);
 
 {{Compat("api.Window.requestAnimationFrame")}}
 
-\[1] Anteriro ao Gecko 11.0 {{geckoRelease("11.0")}}, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
+\[1] Anteriro ao Gecko 11.0, mozRequestAnimationFrame() podia ser chamado sem parâmetros de entrada. Isso não é mais suportado, como provavelmente não será parte do padrão
 
 \[2] O parâmetro do callback é {{domxref("DOMTimeStamp")}} ao invés de {{domxref("DOMHighResTimeStamp")}} se a versão prefixada do método foi utilizada `DOMTimeStamp` possui apenas precisão de milisegundo, mas `DOMHighResTimeStamp` possui precisão mínima de microsegundos. Portanto, o tempo zero é diferente: `DOMHighResTimeStamp` possui o mesmo tempo zero que `performance.now()`, mas DOMTimeStamp possui o mesmo tempo zero que `Date.now().`
 

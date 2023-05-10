@@ -1,14 +1,8 @@
 ---
 title: 'Location: origin'
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - Propiedad
-  - Referencia
-  - Ubicación
-translation_of: Web/API/Location/origin
 ---
+
 {{APIRef("Location")}}
 
 La propiedad de sólo-lectura **`origin`** de la interfaz {{domxref("Location")}} es una {{domxref("USVString")}} que contiene la serialización Unicode del origen de la URL que representa; que es:
@@ -34,10 +28,8 @@ var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Location.origin")}}
+{{Compat}}

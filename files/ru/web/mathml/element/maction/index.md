@@ -8,6 +8,7 @@ tags:
   - MathML:Enlivening Expressions
 translation_of: Web/MathML/Element/maction
 ---
+
 {{MathMLRef}}
 
 Элемент MathML **`<maction>`** обеспечивает возможность связать действия с (под-) выражениями. Само действие задаётся с помощью атрибута`actiontype`, который может принимать несколько значений. Чтобы указать каким дочерним элементам адресовано действие, вы можете использовать атрибут `selection`.
@@ -85,8 +86,8 @@ translation_of: Web/MathML/Element/maction
 
 ## Специфика Gecko
 
-- До Gecko 9.0 {{ geckoRelease("9.0") }} была поддержка нестандартного значения `restyle` для атрибута `actiontype`. Это значение было удалено.
-- До Gecko 14.0 {{ geckoRelease("14.0") }} значение `statusline` для атрибута `actiontype` использовало нестандартный синтаксис. Это было исправлено в соответствии со спецификацией MathML.
+- До Gecko 9.0 была поддержка нестандартного значения `restyle` для атрибута `actiontype`. Это значение было удалено.
+- До Gecko 14.0 значение `statusline` для атрибута `actiontype` использовало нестандартный синтаксис. Это было исправлено в соответствии со спецификацией MathML.
 
   ```html
   <maction actiontype="statusline#(message)">
@@ -94,5 +95,5 @@ translation_of: Web/MathML/Element/maction
   </maction>
   ```
 
-- В Gecko 15.0 {{geckoRelease("15.0")}} атрибут `selection` учитывается только со значением actiontype `"toggle"`.
-- Начиная с Gecko 16.0 {{geckoRelease("16.0")}} атрибут `selection` учитывается с произвольным значением `actiontype`. Если `actiontype` не указан (пуст) или атрибут `selection` недопустимый, возникнет ошибка MathML (недопустимая разметка).
+- В Gecko 15.0 атрибут `selection` учитывается только со значением actiontype `"toggle"`.
+- Начиная с Gecko 16.0 атрибут `selection` учитывается с произвольным значением `actiontype`. Если `actiontype` не указан (пуст) или атрибут `selection` недопустимый, возникнет ошибка MathML (недопустимая разметка).

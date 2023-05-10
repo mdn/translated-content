@@ -42,9 +42,7 @@ console.log((function(a, b = 1, c) {}).length);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

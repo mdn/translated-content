@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Connectivity
 translation_of: Web/API/WebRTC_API/Connectivity
 original_slug: Web/API/WebRTC_API/связь
 ---
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 Теперь, когда мы рассмотрели протоколы по отдельности, мы можем сложить их вместе. Эта статья описывает, как различные связанные с WebRTC протоколы взаимодействуют друг с другом для того, чтобы создать соединение и передать данные и/или медиа между узлами.
 
@@ -61,4 +61,4 @@ original_slug: Web/API/WebRTC_API/связь
 
 ## Весь обмен в сложной схеме
 
-[![A complete architectural diagram showing the whole WebRTC process.](https://mdn.mozillademos.org/files/6119/webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)
+[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/wp-content/uploads/2013/07/webrtc-complete-diagram.png)

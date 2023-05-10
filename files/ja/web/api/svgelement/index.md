@@ -53,10 +53,7 @@ Listen to these events using [`addEventListener()`](/ja/docs/Web/API/EventTarget
 
 ## 仕様
 
-| Specification                                                                                | Status                   | Comment                                                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "types.html#InterfaceSVGElement", "SVGElement")}} | {{Spec2("SVG2")}} | Adds the {{domxref("SVGElement.dataset", "dataset")}} property. |
-| {{SpecName("SVG1.1", "types.html#InterfaceSVGElement", "SVGElement")}} | {{Spec2("SVG1.1")}} | Initial definition                                                              |
+{{Specifications}}
 
 ## ブラウザ互換性
 

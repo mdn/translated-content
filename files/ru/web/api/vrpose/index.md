@@ -14,6 +14,7 @@ tags:
   - WebVR
 translation_of: Web/API/VRPose
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`VRPose`** interface of the [WebVR API](/ru/docs/Web/API/WebVR_API) represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
@@ -37,7 +38,7 @@ This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and 
 
 ### Obsolete properties
 
-- {{domxref("VRPose.timeStamp")}} {{readonlyInline}} {{obsolete_inline}}
+- {{domxref("VRPose.timeStamp")}} {{readonlyInline}}
   - : Returns the current time stamp of the system — a monotonically increasing value useful for determining if position data has been updated, and what order updates have occured in. **This version of `timestamp` has been removed from the spec — instead, timestamps are now returned when {{domxref("VRDisplay.getFrameData()")}} is called — see {{domxref("VRFrameData.timestamp")}}.**
 
 ## Examples

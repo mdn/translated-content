@@ -8,6 +8,7 @@ tags:
   - Method
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 ---
+
 {{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
 
 ## Сводка

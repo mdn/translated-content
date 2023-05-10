@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 Возвращает или задаёт цвет активной ссылки в теле документа. Ссылка активна в течение времени между событиями mousedown и mouseup.

@@ -1,9 +1,11 @@
 ---
 title: '<h1>–<h6>: HTML の見出し要素'
 slug: Web/HTML/Element/Heading_Elements
+l10n:
+  sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。
 
@@ -33,7 +35,7 @@ slug: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>
@@ -46,25 +48,19 @@ slug: Web/HTML/Element/Heading_Elements
 
 見出し要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。
-
 ## 使用上の注意
 
 - 見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。
 - テキストの大きさを変えるために見出し要素を使用しないでください。代わりに {{glossary("CSS")}} の {{cssxref("font-size")}} プロパティを使用してください。
-- 見出しレベルを飛ばすことは避けてください。常に `<h1>` から始め、次に `<h2>`、以下も同様にしてください。
-- `<h1>` はページまたはビューにつき 1 つだけ使用してください。コンテンツの全体的な目的を簡潔に記載すべきです。
+- 見出しレベルを飛ばさないでください。常に `<h1>` から始め、次に `<h2>`、以下も同様にしてください。
 
-### 複数の `<h1>` 要素の使用
+### 1 ページに複数の `<h1>` 要素を使用することは避けてください
 
-複数の `<h1>` を使用することは HTML の仕様では認められていますが、ベストプラクティスとは見なされていません。`<h1>` を 1 つだけ使用することは、スクリーンリーダーの利用者にとって有益です。
+1 つのページに複数の `<h1>` 要素を使用することは HTML 標準では認められていますが（[入れ子](#入れ子)でない限り）、これはベストプラクティスとはみなされません。1 つのページには、ページの内容を説明する 1 つの `<h1>` 要素（ドキュメントの [`<title> 要素`](/ja/docs/Web/HTML/Element/title)と同様）を置くのが一般的です。
 
-HTML の仕様には、`<section>` 要素で形成されるアウトラインという概念があります。もしこれが実装されれば、複数の `<h1>` 要素の使用が可能になり、スクリーンリーダーを含むユーザーエージェントが、セクションの中にネストされた `<h1>` が小見出しであると理解することができるようになります。しかし、この機能はまだ実装されていません。したがって、見出し要素を適切に使用して文書の概要を記述することが重要です。
+> **メモ:** 入れ子になった[セクショニング要素](/ja/docs/Web/HTML/Element#content_sectioning)の中で複数の `<h1>` 要素を入れ子にすることは、HTML 標準の古いバージョンでは認められていました。しかし、これはベストプラクティスとはみなされず、現在は非適合となっています。詳しくは、[There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html) をご覧ください。
 
-アウトラインの状況については、以下の記事で詳しく解説しています。
-
-- [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
-- [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
+1 ページに 1 つの `<h1>` を使用し、レベルをスキップせずに[見出しを入れ子](#入れ子)にすることを推奨します。
 
 ## 例
 

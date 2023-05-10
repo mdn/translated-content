@@ -1,15 +1,8 @@
 ---
 title: ':last-child'
 slug: Web/CSS/:last-child
-tags:
-  - CSS
-  - CSS Pseudo-classe
-  - Layout
-  - Reference
-  - Referencia
-  - Web
-translation_of: Web/CSS/:last-child
 ---
+
 {{ CSSRef() }}
 
 ## Resumo

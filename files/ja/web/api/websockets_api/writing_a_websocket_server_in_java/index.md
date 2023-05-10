@@ -64,7 +64,7 @@ public class WebSocket {
 write(byte[] b, int off, int len)
 ```
 
-指定された byte 配列からオフセット _`off`_ で始まる _`len`_ バイトをこの出力ストリームに書き込みます。
+指定された byte 配列からオフセット `off` で始まる `len` バイトをこの出力ストリームに書き込みます。
 
 ### InputStream
 

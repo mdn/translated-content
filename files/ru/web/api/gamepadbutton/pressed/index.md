@@ -3,6 +3,7 @@ title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
 translation_of: Web/API/GamepadButton/pressed
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`GamepadButton.pressed`** интерфейса {{domxref("GamepadButton")}} возвращает `boolean`, указывающий, нажата ли текущая кнопка (`true`), или нет (`false`).

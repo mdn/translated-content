@@ -1,21 +1,9 @@
 ---
 title: '<template>: 콘텐츠 템플릿 요소'
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - HTML:Flow content
-  - HTML:Metadata content
-  - HTML:Phrasing content
-  - HTML:Script-supporting element
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/template
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<template>` 요소**는 페이지를 불러온 순간 즉시 그려지지는 않지만, 이후 JavaScript를 사용해 인스턴스를 생성할 수 있는 {{glossary("HTML")}} 코드를 담을 방법을 제공합니다.
 
@@ -154,7 +142,7 @@ table td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.template")}}
+{{Compat}}
 
 ## 같이 보기
 

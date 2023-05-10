@@ -14,20 +14,20 @@ slug: Web/API/Crypto
 _このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたプロパティを実装します。_
 
 - {{domxref("Crypto.subtle")}} {{experimental_inline}}{{readOnlyInline}}
-  - : ハッシュや署名、暗号化、複合など、共通の暗号プリミティブへのアクセスを提供する {{domxref("SubtleCrypto")}} オブジェクトを返します。
+  - : ハッシュや署名、暗号化、復号など、共通の暗号プリミティブへのアクセスを提供する {{domxref("SubtleCrypto")}} オブジェクトを返します。
 
 ## メソッド
 
 _このインターフェイスは、{{domxref("RandomSource")}} 上に定義されたメソッドを実装します。_
 
-- {{domxref("RandomSource.getRandomValues()")}}
-  - : 渡された {{ jsxref("TypedArray") }} を意味不明の乱数値で埋めます。
+- {{domxref("Crypto.getRandomValues()")}}
+  - : 渡された {{ jsxref("TypedArray") }} を暗号強度の強い乱数値で埋めます。
+- {{domxref("Crypto.randomUUID()")}}
+  - : ランダムに生成された 36 文字の v4 UUID を返します。
 
 ## 仕様
 
-| 仕様書                                                                           | 策定状況                             | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

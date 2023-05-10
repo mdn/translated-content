@@ -3,7 +3,7 @@ title: '<object>: 外部オブジェクト要素'
 slug: Web/HTML/Element/object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
@@ -42,7 +42,7 @@ slug: Web/HTML/Element/object
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("image")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/image_role">image</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

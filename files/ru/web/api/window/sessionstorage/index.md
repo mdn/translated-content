@@ -3,6 +3,7 @@ title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
 translation_of: Web/API/Window/sessionStorage
 ---
+
 {{APIRef()}}
 
 `Свойство sessionStorage` позволяет получить доступ к объекту {{domxref("Storage")}} текущей сессии. Свойство sessionStorage очень похоже на свойство {{domxref("Window.localStorage")}}, единственное различие заключается в том, что все данные, сохранённые в localStorage не имеют определённого времени жизни, а данные в sessionStorage очищаются в момент окончания сессии текущий страницы. Сессия страницы остаётся активной все время пока окно браузера открыто и сохраняется между перезагрузками страниц. **Открытие той же страницы в новом окне браузера или новой вкладке приводит к созданию новой сессии страницы,** что отличается от поведения session cookies**.**
@@ -50,7 +51,7 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **Примечание:** **Замечание**: Обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), чтобы изучить полный пример.
+> **Примечание:** Обратитесь к статье [Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API), чтобы изучить полный пример.
 
 ## Спецификации
 

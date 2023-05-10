@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.quadraticCurveTo()
 slug: Web/API/CanvasRenderingContext2D/quadraticCurveTo
-translation_of: Web/API/CanvasRenderingContext2D/quadraticCurveTo
 ---
+
 {{APIRef}}
 
 o método **`CanvasRenderingContext2D.quadraticCurveTo()`** da API Canvas 2D adiciona uma Curva de Bézier quadrática ao caminho. São exigidos dois pontos. O primeiro ponto é um ponto de controle e o segundo é o ponto final. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the quadratic Bézier curve.

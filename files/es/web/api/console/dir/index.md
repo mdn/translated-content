@@ -1,8 +1,8 @@
 ---
 title: Console.dir()
-slug: Web/API/Console/dir
-translation_of: Web/API/Console/dir
+slug: Web/API/console/dir
 ---
+
 {{APIRef("Console API")}}
 
 El método **`dir()`** de {{domxref("Console")}} despliega una lista interactiva de las propiedades del objeto JavaScript especificado. El resultado es presentado como un listado jerárquico con triángulos de despliegue que te dejan ver los contenidos de los objetos hijos.
@@ -11,7 +11,7 @@ Dicho de otra manera, `console.dir()` es la manera de ver todas las propiedades 
 
 {{AvailableInWorkers}}
 
-![console-dir.png](/@api/deki/files/6081/=console-dir.png)
+![console-dir.png](console-dir.png)
 
 ## Sintaxis
 
@@ -26,13 +26,11 @@ console.dir(objeto);
 
 ## Especificaciones
 
-| Especificación                                                                           | Estatus                          | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoledirobject", "console.dir()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.dir")}}
+{{Compat}}
 
 ## Ver también
 

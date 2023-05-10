@@ -1,13 +1,8 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::first-letter
 ---
+
 {{CSSRef}}
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Web/HTML/Block-level_elements), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
@@ -83,17 +78,11 @@ p::first-letter {
 
 ## Especificaciones
 
-| Specification                                                                                                        | Status                                       | Comment                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS4 Pseudo-Elements', '#first-letter-pseudo', '::first-letter')}}             | {{ Spec2('CSS4 Pseudo-Elements')}} | Generaliza propiedades permitidas, {{ cssxref("opacity") }}, and {{ cssxref("box-shadow") }}.                                   |
-| {{ SpecName('CSS3 Text Decoration', '#text-shadow', 'text-shadow with ::first-letter')}} | {{ Spec2('CSS3 Text Decoration')}} | Permite el uso de {{cssxref("text-shadow")}} con `::first-letter`.                                                                     |
-| {{ SpecName('CSS3 Selectors', '#first-letter', '::first-letter') }}                             | {{ Spec2('CSS3 Selectors') }}     | Introducción de la sintaxis de doble dos puntos. Definición de casos particulares, como con idiomas específicos (ej., el dígrafo holandés `IJ`). |
-| {{ SpecName('CSS2.1', 'selector.html#first-letter', '::first-letter') }}                     | {{ Spec2('CSS2.1') }}                 | Sin cambios.                                                                                                                                     |
-| {{ SpecName('CSS1', '#the-first-letter-pseudo-element', '::first-letter') }}                 | {{ Spec2('CSS1') }}                     | Definición inicial, uso de la sintaxis de doble dos puntos.                                                                                      |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.first-letter")}}
+{{Compat}}
 
 ## Ver También
 

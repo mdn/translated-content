@@ -26,7 +26,7 @@ void ctx.rect(x, y, width, height);
 
 ## 示例
 
-### 使用 `rect` 方法
+### 绘制矩形
 
 这是一段简单的代码片段，使用 `rect` 方法创建一条路径。实际上，在 canvas 中绘制矩形路径，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或者 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。参见 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 和{{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} 方法，只需一步即可绘制。
 
@@ -39,54 +39,15 @@ void ctx.rect(x, y, width, height);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+ctx.rect(10, 20, 150, 100);
 ctx.fill();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+{{ EmbedLiveSample('绘制矩形', 700, 360) }}
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea>
-```
-
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

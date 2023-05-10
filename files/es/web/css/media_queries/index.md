@@ -1,8 +1,8 @@
 ---
 title: Media queries
 slug: Web/CSS/Media_Queries
-translation_of: Web/CSS/Media_Queries
 ---
+
 {{CSSRef}}
 
 Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.
@@ -43,19 +43,7 @@ Puede obtener más información sobre el uso programático de consultas de medio
 
 ## Especificaciones
 
-| Especificación                                   | Estado                                   | Comentario         |
-| ------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS5 Media Queries')}}     | {{Spec2('CSS5 Media Queries')}} |                    |
-| {{SpecName('CSS3 Conditional')}}     | {{Spec2('CSS3 Conditional')}} |                    |
-| {{SpecName('CSS4 Media Queries')}}     | {{Spec2('CSS4 Media Queries')}} |                    |
-| {{SpecName('CSS3 Media Queries')}}     | {{Spec2('CSS3 Media Queries')}} |                    |
-| {{SpecName('CSS2.1', 'media.html')}} | {{Spec2('CSS2.1')}}                 | Initial definition |
-
-## Compatibilidades con navegadores
-
-### @media rule
-
-{{Compat("css.at-rules.media")}}
+{{Specifications}}
 
 ## Ver también
 

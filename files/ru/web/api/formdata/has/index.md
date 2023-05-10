@@ -3,6 +3,7 @@ title: FormData.has()
 slug: Web/API/FormData/has
 translation_of: Web/API/FormData/has
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.

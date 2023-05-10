@@ -1,16 +1,8 @@
 ---
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-browser-compat: api.IntersectionObserver.observe
-translation_of: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}의 **`observe()`** 메서드는 `IntersectionObserver`의 주시 대상 목록에 요소를 추가합니다. 하나의 감지기는 하나의 루트와 하나의 역치 목록만 가질 수 있지만, 동시에 여러 요소를 주시할 수 있습니다.

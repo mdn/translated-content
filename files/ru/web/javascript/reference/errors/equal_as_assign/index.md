@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
 translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщения

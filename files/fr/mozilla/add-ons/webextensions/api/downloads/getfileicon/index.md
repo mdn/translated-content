@@ -48,9 +48,9 @@ var gettingIcon = browser.downloads.getFileIcon(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.getFileIcon")}}
+{{Compat}}
 
 ## Exemples
 

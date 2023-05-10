@@ -1,7 +1,6 @@
 ---
 title: Using readable streams
 slug: Web/API/Streams_API/Using_readable_streams
-translation_of: Web/API/Streams_API/Using_readable_streams
 ---
 {{apiref("Streams")}}
 
@@ -170,7 +169,7 @@ const stream = new ReadableStream({
 첫번째 인자인 객체는 5개의 맴버를 가질수 있으며, 제일 첫번째 맴버만 필수 입니다.
 
 1. `start(controller)` — `ReadableStream` 이 생성되자 마자 딱 한번만 호출 되는 메서드 입니다. 이 메서드에는 스트림을 기능을 설정할 수 있는 코드가 포함되어야 합니다. 예를 들면 데이터 생성을 시작한다거나 아니면 소스에 접근하여 데이터를 가져오는 코드등이 들어가게 될것입니다.
-2. `pull(controller)` — 이 메서드는 스트림 내부의 queue가 가득 찰때까지 반복적으로 호출 됩니다. 더 많은 청크가 큐에 들어갈 때 스트림을 제어하는 ​​데 사용할 수 있습니다.
+2. `pull(controller)` — 이 메서드는 스트림 내부의 queue가 가득 찰때까지 반복적으로 호출 됩니다. 더 많은 청크가 큐에 들어갈 때 스트림을 제어하는 데 사용할 수 있습니다.
 3. `cancel()` — 이 메서드는 스트림이 캔슬될때 호출 됩니다 (예를 들어 {domxref("ReadableStream.cancel()")}} 이 호출 되었을때). 메서드의 내용은 스트림 소스에 대한 액세스를 해제하는 데 필요한 모든 것을 수행해야합니다.
 4. `type` and `autoAllocateChunkSize` — 스트림이 바이트 스트림임을 나타 내기 위해 사용됩니다. 바이트 스트림은 목적과 사용 사례가 일반 (기본) 스트림과 약간 다르므로 향후 자습서에서 별도로 다룰 것입니다. 또한 아직 어느 곳에서도 구현되지 않았습니다.
 

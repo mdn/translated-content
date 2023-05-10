@@ -1,12 +1,8 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - HTTP method
-  - Reference
-translation_of: Web/HTTP/Methods/HEAD
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `HEAD` 메서드**는 특정 리소스를 {{httpmethod("GET")}} 메서드로 요청했을 때 돌아올 헤더를 요청합니다.
@@ -58,7 +54,7 @@ HEAD /index.html
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.HEAD")}}
+{{Compat}}
 
 ## 같이 보기
 

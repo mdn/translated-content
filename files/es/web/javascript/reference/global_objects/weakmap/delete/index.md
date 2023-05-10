@@ -1,14 +1,9 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Referencia/Objetos_globales/WeakMap/delete
 ---
+
 {{JSRef}}
 
 El método **`delete()`** elimina un elemento específico del objeto `WeakMap` .
@@ -43,18 +38,11 @@ wm.has(window);    // Devuelve false. El elemento window ya no es parte de WeakM
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WeakMap.delete")}}
-
-## Notas especificas de Firefox
-
-- Anterior a SpiderMonkey 38 {{geckoRelease(38)}}, este método lanzaba {{jsxref("TypeError")}} cuando el parámetro `key` no era un objeto. Esto ha sido corregido en la versión 38 y posteriormente devuelve `false` como parte del estándar de ES6 ({{bug(1127827)}}).
+{{Compat}}
 
 ## Vea también
 

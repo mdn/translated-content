@@ -7,6 +7,7 @@ tags:
   - ловушка
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
+
 {{JSRef}}
 
 Метод **`handler.apply()`** является ловушкой для вызова функции.

@@ -1,9 +1,9 @@
 ---
 title: readystatechange
 slug: Web/API/Document/readystatechange_event
-translation_of: Web/API/Document/readystatechange_event
 original_slug: Web/Events/readystatechange
 ---
+
 {{ApiRef}}
 
 O evento `readystatechange` é ativado quando o atributo [`readyState`](/pt-BR/docs/Web/API/Document/readyState) de um documento é alterado.

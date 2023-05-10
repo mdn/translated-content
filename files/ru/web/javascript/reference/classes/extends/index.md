@@ -7,6 +7,7 @@ tags:
   - Расширение
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 Ключевое слово **`extends`** используется в [объявлении класса](/ru/docs/Web/JavaScript/Reference/Statements/class) или в [выражениях класса](/ru/docs/Web/JavaScript/Reference/Operators/class) для создания дочернего класса.

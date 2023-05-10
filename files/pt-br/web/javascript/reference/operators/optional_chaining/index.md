@@ -1,8 +1,8 @@
 ---
 title: Encadeamento opcional
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 O operador de **encadeamento opcional** **`?.`** permite a leitura do valor de uma propriedade localizada internamente em uma cadeia de objetos conectados, sem que a validação de cada referência da cadeia seja expressivamente realizada.

@@ -1,15 +1,9 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/area
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<area>` 요소**는 이미지의 핫스팟 영역을 정의하고 {{glossary("hyperlink", "하이퍼링크")}}를 추가할 수 있습니다. {{htmlelement("map")}} 요소 안에서만 사용할 수 있습니다.
 
@@ -55,7 +49,7 @@ translation_of: Web/HTML/Element/area
       <th scope="row">암시적 ARIA 역할</th>
       <td>
         {{htmlattrxref("href", "area")}} 특성이 존재하면
-        {{ariarole("link")}}, 그 외의 경우
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/link_role'><code>link</code></a>, 그 외의 경우
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >대응하는 역할 없음</a
         >
@@ -166,4 +160,4 @@ No effect. Browsers ignore it. (The W3C 5.3 fork of the HTML specification defin
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.area")}}
+{{Compat}}

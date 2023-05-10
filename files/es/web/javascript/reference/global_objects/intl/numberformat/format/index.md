@@ -1,9 +1,9 @@
 ---
 title: Intl.NumberFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/NumberFormat/format
 ---
+
 {{JSRef}}
 
 El método **`Intl.NumberFormat.prototype.format()`** formatea un número de acuerdo con la configuración regional y las opciones de formato de este objeto {{jsxref("NumberFormat")}}.
@@ -52,15 +52,11 @@ console.log(formatted.join('; '));
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('ES Int 1.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 1.0')}} | Initial definition. |
-| {{SpecName('ES Int 2.0', '#sec-11.3.2', 'Intl.NumberFormat.prototype.format')}}                                         | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.format', 'Intl.NumberFormat.prototype.format')}} | {{Spec2('ES Int Draft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.NumberFormat.format")}}
+{{Compat}}
 
 ## See also
 

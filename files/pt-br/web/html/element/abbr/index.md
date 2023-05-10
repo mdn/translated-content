@@ -1,26 +1,13 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Semántica HTML a nivel de texto
-  - Web
-  - abbr
-  - abreviação
-  - acrônimo
-  - definições
-  - semántica
-translation_of: Web/HTML/Element/abbr
 ---
+
 ## Sumário
 
 O _Elemento_ _HTML `<abbr>` _(ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **`title`** deve conter a descrição completa e apenas ela.
 
-> **Note:** **Nota de uso:** Quando presente, o número gramatical (singular/plural) do texto no atributo **`title`** deve ser correspondente ao do conteúdo do elemento `<abbr>`. Isso também deve ocorrer no caso das linguagens com mais de dois números gramaticais (por exemplo, em árabe não há somente palavras no singular e plural, mas tem também uma categoria dual).
+> **Note:** Quando presente, o número gramatical (singular/plural) do texto no atributo **`title`** deve ser correspondente ao do conteúdo do elemento `<abbr>`. Isso também deve ocorrer no caso das linguagens com mais de dois números gramaticais (por exemplo, em árabe não há somente palavras no singular e plural, mas tem também uma categoria dual).
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conteúdo palpável
 - _Conteúdo permitido_[Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
@@ -78,4 +65,4 @@ Obama é presidente dos EUA
 
 - Outros elementos que possuem [semântica à nível de texto](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,15 +1,9 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<noscript>` 요소**는 페이지의 스크립트 유형을 지원하지 않거나, 브라우저가 스크립트를 비활성화한 경우 보여줄 HTML 구획을 정의합니다.
 
@@ -104,4 +98,4 @@ Rocks!
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.noscript")}}
+{{Compat}}

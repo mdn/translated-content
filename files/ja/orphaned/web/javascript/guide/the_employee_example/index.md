@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Guide/The_Employee_Example
 
 この章の残りは次の図で示す従業員の階層を使用していきます。
 
-![Image:hier01.gif](/@api/deki/files/1904/=Hier01.gif)
+![Image:hier01.gif](hier01.gif)
 
 **図 8.1：単純なオブジェクト階層**
 

@@ -3,7 +3,7 @@ title: '<tr>: 表の行要素'
 slug: Web/HTML/Element/tr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
 

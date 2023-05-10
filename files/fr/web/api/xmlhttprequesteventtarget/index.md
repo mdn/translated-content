@@ -46,4 +46,4 @@ translation_of: Web/API/XMLHttpRequestEventTarget
 ## Voir aussi
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

@@ -1,12 +1,9 @@
 ---
 title: Teclado (Keyboard)
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-tags:
-  - Accesibilidad
-  - teclado
-translation_of: Web/Accessibility/Understanding_WCAG/Keyboard
 original_slug: Web/Accesibilidad/Understanding_WCAG/Teclado
 ---
+
 Para ser completamente accesible, una página web debe ser operable por alguién utilizando únicamente un teclado para acceder y controlarla. Esto incluye usuarios de lectores de pantalla, pero también puede incluir a quienes tienen dificultades utilizando un dispositivo apuntador como un ratón o una bola de rastreo, o aquellos cuyo ratón no esta funcionando temporalmente, o la gente que simplemente prefiere usar un teclado como entrada siempre que les sea posible.
 
 ## Los elementos enfocables deben tener una semántica interactiva
@@ -66,7 +63,7 @@ Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o 
 
 ## Elementos enfocables deben tener un estilo al estar enfocados
 
-Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/en-US/docs/Web/CSS/:focus).
+Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/es/docs/Web/CSS/:focus).
 
 Elementos enfocables estándar como enlaces y los campos de entrada reciben un estilo especial por parte del navegador de forma predeterminada, por lo que podría no ser necesario especificar un estilo de enfoque para éstos, a menos que se quiera que el estilo de enfoque sea más distintivo.
 

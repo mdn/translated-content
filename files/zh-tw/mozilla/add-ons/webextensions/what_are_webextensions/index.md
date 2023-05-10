@@ -11,7 +11,7 @@ Firefox 的附加元件開發基於能跨瀏覽器的 WebExtensions APIs ，在�
 
 在過去，你可以使用三種系統開發 Firefox 附加元件： [XUL/XPCOM overlays](/zh-TW/Add-ons/Overlay_Extensions)、[bootstrapped extensions](/zh-TW/docs/Mozilla/Add-ons/Bootstrapped_extensions)、或是 [Add-on SDK](/zh-TW/docs/Mozilla/Add-ons/SDK)。但 2017 年 11 月底之後，WebExtensions 將成為唯一開發 Firefox 附加元件的方式，而其他方式會被廢棄。
 
-如果你有任何想法或問題，甚至是需要協助轉換舊附加元件到新系統，你可以在 [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) 或 [IRC](https://wiki.mozilla.org/IRC) 的 [#webextensions](irc://irc.mozilla.org/webextensions) 找到我們。
+如果你有任何想法或問題，甚至是需要協助轉換舊附加元件到新系統，你可以在 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)、[IRC](https://wiki.mozilla.org/IRC) 的 [#webextensions](irc://irc.mozilla.org/webextensions) 或 Telegram [MozTW dev/add-on](https://t.me/moztw_dev) 找到我們。
 
 ## 接下來呢？
 

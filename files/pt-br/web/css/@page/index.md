@@ -1,12 +1,8 @@
 ---
 title: '@page'
 slug: Web/CSS/@page
-tags:
-  - '@page'
-  - CSS
-  - pagina
-translation_of: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 ## Resumo
@@ -15,7 +11,7 @@ A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando 
 
 A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.
 
-> **Note:** **Nota:** A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
+> **Nota:** A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
 
 ## Sintaxe
 

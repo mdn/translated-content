@@ -62,9 +62,7 @@ if (!String.prototype.startsWith) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

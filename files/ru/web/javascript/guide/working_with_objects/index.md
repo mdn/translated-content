@@ -1,8 +1,9 @@
 ---
 title: Работа с объектами
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript спроектирован на основе простой парадигмы. В основе концепции лежат простые объекты. Объект — это набор свойств, и каждое свойство состоит из имени и значения, ассоциированного с этим именем. Значением свойства может быть функция, которую можно назвать _методом_ объекта. В дополнение к встроенным в браузер объектам, вы можете определить свои собственные объекты. Эта глава описывает как пользоваться объектами, свойствами, функциями и методами, а также как создавать свои собственные объекты.

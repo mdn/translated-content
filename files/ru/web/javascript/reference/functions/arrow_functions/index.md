@@ -7,6 +7,7 @@ tags:
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 ## Сводка
@@ -46,8 +47,6 @@ params => ({foo: bar})
 var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
 f();  // 6
 ```
-
-Подробные примеры синтаксиса можно посмотреть [здесь](http://wiki.ecmascript.org/doku.php?id=harmony:arrow_function_syntax).
 
 ## Описание
 

@@ -1,8 +1,8 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
-translation_of: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
+
 {{APIRef("Console API")}}{{non-standard_header}}
 
 Escreve uma mensagem de alerta no Console Web.

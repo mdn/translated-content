@@ -86,7 +86,7 @@ console.log(test);
 - CSS
 - JavaScript
 - 结果
-  
+
 在上面列出的各个小节中编写代码块。在**结果**小节中，添加对 [`EmbedLiveSample` 宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples#运行实例宏)的调用，最好在这个小节中再加入一些文字来描述结果。
 如果不使用某个特定的语言类型（例如，如果你不使用 JavaScript），或者隐藏了它，那么就应该省略相应的标题。
 

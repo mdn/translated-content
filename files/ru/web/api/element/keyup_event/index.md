@@ -3,6 +3,7 @@ title: keyup
 slug: Web/API/Element/keyup_event
 translation_of: Web/API/Element/keyup_event
 ---
+
 {{APIRef}}
 
 Событие **`keyup`** срабатывает, когда клавиша была отпущена.

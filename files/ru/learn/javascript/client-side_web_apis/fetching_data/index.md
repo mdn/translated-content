@@ -10,9 +10,10 @@ tags:
   - Новичку
 translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Другой очень распространённой задачей в современных веб-сайтах и ​​приложениях является получение отдельных элементов данных с сервера для обновления разделов веб-страницы без необходимости загрузки всей новой страницы. Эта, казалось бы, небольшая деталь оказала огромное влияние на производительность и поведение сайтов, поэтому в этой статье мы объясним концепцию и рассмотрим технологии, которые делают это возможным, например XMLHttpRequest и API Fetch.
+Другой очень распространённой задачей в современных веб-сайтах и приложениях является получение отдельных элементов данных с сервера для обновления разделов веб-страницы без необходимости загрузки всей новой страницы. Эта, казалось бы, небольшая деталь оказала огромное влияние на производительность и поведение сайтов, поэтому в этой статье мы объясним концепцию и рассмотрим технологии, которые делают это возможным, например XMLHttpRequest и API Fetch.
 
 | Необходимые условия: | Основы JavaScript (см. [первые шаги](/ru/docs/Learn/JavaScript/First_steps), [структурные элементы](/ru/docs/Learn/JavaScript/Building_blocks), [объекты JavaScript](/ru/docs/Learn/JavaScript/Objects)), [основы клиентских API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +23,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Первоначальная загрузка страницы в Интернете была простой - вы отправляли запрос на сервер web-сайта, и если всё работает, как и должно, то вся необходимая информация о странице будет загружена и отображена на вашем компьютере.
 
-![A basic representation of a web site architecture](https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png)
+![A basic representation of a web site architecture](web-site-architechture@2x.png)
 
 Проблема с этой моделью заключается в том, что всякий раз, когда вы хотите обновить любую часть страницы, например, чтобы отобразить новый набор продуктов или загрузить новую страницу, вам нужно снова загрузить всю страницу. Это очень расточительно и приводит к плохому пользовательскому опыту, особенно по мере того, как страницы становятся все более сложными.
 
@@ -34,7 +35,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 > **Примечание:** Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
 
-![A simple modern architecture for web sites](https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png)
+![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
 Модель Ajax предполагает использование веб-API в качестве прокси для более разумного запроса данных, а не просто для того, чтобы браузер перезагружал всю страницу. Давайте подумаем о значении этого:
 
@@ -48,7 +49,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Чтобы ускорить работу, некоторые сайты также сохраняют необходимые файлы и данные на компьютере пользователя при первом обращении к сайту, а это означает, что при последующих посещениях они используют локальные версии вместо загрузки свежих копий, как при первой загрузке страницы. Содержимое загружается с сервера только при его обновлении.
 
-![A basic web app data flow architecture](https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png)
+![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 ## Основной запрос Ajax
 
@@ -261,7 +262,7 @@ fetch(url).then(function(response) {
 
 Чтобы завершить статью, мы рассмотрим несколько более сложный пример, который показывает более интересные применения Fetch. Мы создали образец сайта под названием The Can Store - это вымышленный супермаркет, который продаёт только консервы. Вы можете найти этот пример [в прямом эфире на GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/) и [посмотреть исходный код](https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](https://mdn.mozillademos.org/files/14779/can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
 
 По умолчанию на сайте отображаются все продукты, но вы можете использовать элементы управления формы в столбце слева, чтобы отфильтровать их по категориям, поисковому запросу или и тому и другому.
 

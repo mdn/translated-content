@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Memory/buffer
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`buffer`** は {{jsxref("WebAssembly.Memory")}} オブジェクトのプロトタイププロパティで、メモリーに含まれるバッファーを返します。
 

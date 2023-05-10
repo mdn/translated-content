@@ -1,17 +1,9 @@
 ---
 title: Cadenas binarias
 slug: Web/API/btoa
-tags:
-  - Arreglos tipados JavaScript
-  - Cadena
-  - Cadena de caracteres
-  - DOM
-  - JavaScript
-  - Referencia
-  - String
-translation_of: Web/API/DOMString/Binary
 original_slug: Web/API/DOMString/Binary
 ---
+
 {{jsxref("String", "Cadenas JavaScript")}} son cadenas codificadas en UTF-16. Esto significa que cada unidad de código requiere dos bytes de memoria y puede representar `65535` puntos de código diferentes. Un subconjunto de estas cadenas está representado por cadenas UTF-16 que contienen solo caracteres ASCII (es decir, caracteres cuyo punto de código no excede `127`). Por ejemplo, la cadena `"¡Hola mundo!"` pertenece al subconjunto ASCII, mientras que la cadena `"ÀÈÌÒÙ"` no. Una **cadena binaria** es un concepto similar al subconjunto ASCII, pero en lugar de limitar el rango a `127`, permite hasta `255` puntos de código. Sin embargo, su propósito no es representar caracteres, sino datos binarios. El tamaño de los datos así representados es el doble de lo que sería en formato binario normal, sin embargo, esto no será visible para el usuario final, ya que la longitud de las cadenas de JavaScript se calcula usando dos bytes como unidad.
 
 Las cadenas binarias no forman parte del diseño del lenguaje JavaScript. Sin embargo, al menos una función nativa requiere cadenas binarias como entrada, {{domxref("WindowBase64.btoa", "btoa()")}}: invocarla en una cadena que contiene puntos de código mayores de `255` causará un error `Caracter fuera de rango`.

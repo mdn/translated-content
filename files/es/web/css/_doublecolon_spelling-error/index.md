@@ -1,14 +1,8 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-elemento
-  - Referencia
-  - Web
-translation_of: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 El [pseudo-elemento](/en/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::spelling-error`** representa un segmento de texto que el {{glossary("user agent")}} ha marcado como deletreado incorrectamente.
@@ -40,13 +34,11 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,16 +1,8 @@
 ---
 title: HTML básico
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprender
-  - Codificação de Scripts
-  - HTML
-  - Iniciante
-  - Web
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
-original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.
@@ -66,7 +58,7 @@ Você pode colocar elementos dentro de outros elementos também — isso é cham
 
 Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente aninhados. No exemplo acima, abrimos primeiro o elemento {{htmlelement ("p")}}, depois o elemento {{htmlelement ("strong")}}; portanto, temos que fechar primeiro o elemento {{htmlelement ("strong")}}, depois o elemento {{htmlelement ("p")}}. O código abaixo está incorreto:
 
-```html example-bad
+```html-nolint example-bad
 <p>Meu gatinho é <strong>muito mal humorado.</p></strong>
 ```
 
@@ -84,17 +76,18 @@ Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há 
 
 ### Anatomia de um documento HTML
 
-Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)):
+Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Minha página de teste</title>
   </head>
   <body>
-    <img src="imagens/firefox-icon.png" alt="minha página de teste">
+    <img src="images/firefox-icon.png" alt="minha página de teste">
   </body>
 </html>
 ```
@@ -113,7 +106,7 @@ Aqui nós temos:
 Vamos voltar nossa atenção para o elemento {{htmlelement("img")}} novamente:
 
 ```html
-<img src="imagens/firefox-icon.png" alt="Minha imagem de teste">
+<img src="images/firefox-icon.png" alt="Minha imagem de teste">
 ```
 
 Como dissemos antes, isso incorpora uma imagem na nossa página na posição que aparece. Isso é feito pelo atributo `src` (_source_), que contém o caminho para nosso arquivo de imagem.
@@ -123,13 +116,13 @@ Incluímos também um atributo `alt` (_alternative_). Neste atributo, você espe
 1. Eles são deficientes visuais. Usuários com deficiências visuais significativas costumam usar ferramentas chamadas leitores de tela para ler o texto alternativo para eles.
 2. Algo deu errado, fazendo com que a imagem não seja exibida. Por exemplo, tente alterar deliberadamente o caminho dentro do atributo `src` para torná-lo incorreto. Se você salvar e recarregar a página, você deve ver algo assim no lugar da imagem:
 
-![](https://i.imgur.com/35Rirpx.png)
+![As palavras: my test image](alt-text-example.png)
 
 As palavras-chave para o texto alternativo são "texto descritivo". O texto alternativo que você escreve deve fornecer ao leitor informações suficientes para ter uma boa ideia do que a imagem mostra. Neste exemplo, nosso texto "Minha imagem teste" não é bom para todos. Uma alternativa muito melhor para o nosso logotipo do Firefox seria "A logo do Firefox: uma raposa em chamas envolvendo a Terra."
 
 Tente criar um texto alternativo melhor para sua imagem agora.
 
-> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Acessibilidade)
+> **Nota:** Saiba mais sobre acessibilidade em [módulo de aprendizagem sobre acessibilidade.](/pt-BR/docs/Web/Accessibility)
 
 ## Marcando o texto
 
@@ -148,7 +141,11 @@ Os elementos de cabeçalhos permitem especificar que certas partes do seu conte�
 
 Agora, tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
-> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados ​​para [acessibilidade](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura) e [outros motivos, como SEO](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML#Por_que_precisamos_de_estrutura). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+> **Nota:** Você verá que seu nível de cabeçalho 1 tem um estilo implícito. Não use elementos de cabeçalho para aumentar ou negritar o texto, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular os níveis.
+
+Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
+
+> **Nota:** você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
 
 ### Parágrafo
 
@@ -158,7 +155,7 @@ Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parág
 <p>Este é um parágrafo simples</p>
 ```
 
-Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
+Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
 
 ### Listas
 
@@ -172,7 +169,10 @@ Cada item dentro das listas é posto dentro de um elemento {{htmlelement("li")}}
 Por exemplo, se nós quisermos tornar uma parte de um parágrafo numa lista:
 
 ```html
-<p>Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores trabalhando juntos ... </p>
+<p>
+  Na Mozilla, somos uma comunidade global de tecnólogos, pensadores e construtores
+  trabalhando juntos ...
+</p>
 ```
 
 Nós podemos fazer assim:
@@ -198,21 +198,21 @@ Links são muito importantes — eles são o que faz da web ser de fato uma REDE
 1. Escolha algum texto. Nós escolhemos o texto "Mozilla Manifesto".
 2. Envolva o texto em um elemento {{htmlelement("a")}} , assim:
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
-3. Dê ao elemento \<a> um atributo href, assim:
+3. Dê ao elemento {{htmlelement("a")}} um atributo `href`, como mostrado abaixo:
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. Preencha o valor desse atributo com o endereço da Web que você deseja vincular o link:
 
-    ```html
-    <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/pt-BR/about/manifesto/">Mozilla Manifesto</a>
+   ```
 
 Você pode obter resultados inesperados se omitir a parte `https://` ou o `http://`, o chamado _protocolo_, no começo do endereço web. Então depois de criar um link, clique nele para ter certeza de que ele está indo para onde você deseja.
 
@@ -222,23 +222,12 @@ Adicione um link em sua página agora, se ainda não tiver feito isso.
 
 ## Conclusão
 
-Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](http://mdn.github.io/beginner-html-site/)):
+Se você seguiu todas as instruções neste artigo, você deve terminar com uma página que pareça algo do tipo (você também pode [vê-la aqui](https://mdn.github.io/beginner-html-site/)):
 
-![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
+![Uma captura de tela da página da Web mostrando um logotipo do Firefox, um título dizendo que o mozilla é legal e dois parágrafos de texto de preenchimento](finished-test-page-small.png)
 
 Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código de exemplo finalizado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) no Github.
 
-Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Aprender/HTML).
+Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Learn/HTML).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

@@ -7,6 +7,7 @@ tags:
   - Перенаправление
 translation_of: Web/HTTP/Status/307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} код перенаправления `307 Temporary Redirect` означает, что запрошенный ресурс был временно перемещён в URL-адрес, указанный в заголовке {{HTTPHeader("Location")}}.

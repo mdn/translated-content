@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
 
 ## Сводка

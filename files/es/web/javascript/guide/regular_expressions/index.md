@@ -1,16 +1,8 @@
 ---
 title: Expresiones Regulares
-slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Expresiones Regulares
-  - Guía
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - RegExp
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan con los métodos {{jsxref("RegExp.exec", "exec()")}} y {{jsxref("RegExp.test", "test()")}} de {{jsxref("RegExp")}}, y con {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.replaceAll", "replaceAll()")}}, {{jsxref("String.search", "search()")}} y {{jsxref("String.split", "split()")}} métodos de {{jsxref("String")}}. Este capítulo describe las expresiones regulares de JavaScript.
@@ -331,7 +323,7 @@ function testInfo(phoneInput) {
 
 #### Resultado
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Herramientas
 
@@ -339,15 +331,5 @@ function testInfo(phoneInput) {
   - : Un constructor/depurador de expresiones regulares en línea
 - [Visualizador de expresiones regulares](https://extendsclass.com/regex-tester.html)
   - : Un probador de expresiones regulares visual en línea.
-
-## Especificaciones
-
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}} |
-
-## Compatibilidad del navegador
-
-{{Compat("javascript.builtins.RegExp")}}
 
 {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}

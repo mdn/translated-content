@@ -39,9 +39,7 @@ pc.addStream(stream);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                                                                   | 策定状況                                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Media Capture DOM Elements', '#widl-HTMLCanvasElement-captureStream-CanvasCaptureMediaStream-double-frameRate', 'HTMLCanvasElement.captureStream()')}} | {{Spec2('Media Capture DOM Elements')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Headers/Content-Encoding
 original_slug: Web/HTTP/Заголовки/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Encoding`** - это сущность заголовка, используемая для сжатия медиа-типа. При наличии её значение определяет кодировку, применённую к сущности **`body`**. Это позволяет клиенту информацию как декодировать **`body`**, чтобы получить медиа-тип ссылающийся на заголовок **`Content-Type`**

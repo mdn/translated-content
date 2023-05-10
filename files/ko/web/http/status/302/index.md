@@ -1,35 +1,42 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Status/302
-tags:
-  - HTTP
-  - HTTP 상태 코드
-  - 레퍼런스
-  - 리다이렉트
-translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
-하이퍼텍스트 전송 프로토콜 (HTTP)의 302 Found 리다이렉트 상태 응답 코드는 클라이언트가 요청한 리소스가 {{HTTPHeader("Location")}} 헤더에 주어진 URL에 일시적으로 이동되었음을 가리킨다. 브라우저는 사용자를 이 URL의 페이지로 리다이렉트시키지만 검색 엔진은 그 리소스가 일시적으로 이동되었다고 해서 그에 대한 링크를 갱신하지는 않는다 ('SEO 관점' 에서 말하자면, 링크 주스(Link Juice)가 새로운 URL로 보내지지는 않는다).
+HTTP(HyperText Transfer Protocol) **`302 Found`** 리디렉션 상태 응답 코드는 요청한 리소스가
+{{HTTPHeader("Location")}} 헤더에 지정된 URL로 일시적으로 이동되었음을 나타냅니다. 브라우저는 이 페이지로
+리디렉션되지만 검색 엔진은 리소스에 대한 링크를 업데이트하지 않습니다('SEO-speak'에서는 'link-juice'가 새
+URL로 전송되지 않는다고 합니다).
 
-명세는 리다이렉션이 수행되었을 때 메서드 (그리고 몸체) 가 변경되어서는 안된다고 명시했지만, 모든 사용자 에이전트들이 이를 따르는 것은 아니다 - 이러한 종류의 버그가 있는 소프트웨어를 쉽게 찾아볼 수도 있다. 따라서, 리다이렉트할 때에도 메서드 변경이 되지 않는 {{HTTPStatus("307", "307 Temporary Redirect")}} 을 대신 사용하고고 {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 요청에 대한 응답으로는 `302` 코드를 설정하는 것이 권장된다.메서드가 {{HTTPMethod("GET")}} 으로 변경되도록 하고 싶은 경우에는, {{HTTPStatus("303", "303 See Other")}} 를 대신 사용하라. 이 응답 코드는 {{HTTPMethod("PUT")}} 을 통해 리소스를 업로드하고 나서 업로드된 리소스 대신 '성공적으로 XYZ'를 업로드했습니다' 와 같은 메시지를 보여주는 응답을 할 때 유용하다.
+명세서에서 리디렉션이 수행될 때 메서드(및 본문)가 변경되지 않도록 요구하더라도 모든 사용자 에이전트가 이를 준수하는
+것은 아닙니다. 여러분은 여전히 이러한 유형의 버그가 있는 소프트웨어를 찾을 수 있습니다. 따라서 따라서 `302` 코드는
+{{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 메서드에 대한 응답으로만 설정하고 이 경우 메서드
+변경이 명시적으로 금지되므로 {{HTTPStatus("307", "307 Temporary Redirect")}} 를 대신 사용하는 것이
+좋습니다.
 
-## Status
+사용하던 메서드를 {{HTTPMethod("GET")}}으로 변경하려는 경우,
+{{HTTPStatus("303", "303 See Other")}}을 대신 사용하십시오.
+{{HTTPMethod("PUT")}} 메서드에 대한 응답을 업로드된 리소스가 아니라 'You successfully updown XYZ'와
+같은 확인 메시지로 주고 싶을때 유용합니다.
 
-```
+## 상태
+
+```http
 302 Found
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.status.302")}}
+{{Compat}}
 
-## See also
+## 같이 보기
 
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, the equivalent of this status code where the method used never changes.
-- {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method used to {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, the permanent redirect.
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, 사용된 메서드가 절대 변경되지 않는 이 상태 코드와 동일합니다.
+- {{HTTPStatus("303", "303 See Other")}}, {{HTTPMethod("GET")}}에 사용되는 메서드를 변경하는 임시 리디렉션입니다.
+- {{HTTPStatus("301", "301 Moved Permanently")}}, 영구 리다이렉션

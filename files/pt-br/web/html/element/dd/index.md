@@ -1,21 +1,8 @@
 ---
 title: '<dd>: elemento Detalhes da Descrição'
 slug: Web/HTML/Element/dd
-tags:
-  - Definição
-  - Detalhes da Descrição
-  - Elemento
-  - Elemento HTML
-  - HTML
-  - Internet
-  - Referencia
-  - Web
-  - dd
-  - detalhes
-  - lista de descrições
-  - lista descritiva
-translation_of: Web/HTML/Element/dd
 ---
+
 O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do termo precedente (definido por {{HTMLElement("dt")}}) numa lista de descrições ({{HTMLElement("dl")}}).
 
 <table class="properties">

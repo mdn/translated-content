@@ -24,7 +24,7 @@ ctx.imageSmoothingEnabled = value;
 
 ## 示例
 
-### 使用 `imageSmoothingEnabled` 属性
+### 禁用图像平滑
 
 本示例比较了三个图像。第一个图像以其自然大小绘制，第二个图像缩放为 3 倍并启用了图像平滑，而第三个图像缩放为 3 倍但禁用了图像平滑。
 
@@ -45,37 +45,7 @@ ctx.textAlign = 'center';
 
 const img = new Image();
 img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
-  const w = img.width,
-        h = img.height;
-
-  ctx.fillText('Source', w * .5, 20);
-  ctx.drawImage(img, 0, 24, w, h);
-
-  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
-  ctx.imageSmoothingEnabled = true;
-  ctx.drawImage(img, w, 24, w * 3, h * 3);
-
-  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
-  ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
-};
-```
-
-```html hidden
-<canvas id="canvas" width="460" height="210"></canvas>
-```
-
-```js hidden
-const canvas = document.getElementById('canvas');
-
-const ctx = canvas.getContext('2d');
-ctx.font = '16px sans-serif';
-ctx.textAlign = 'center';
-
-const img = new Image();
-img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
-img.onload = function() {
+img.onload = () => {
   const w = img.width,
         h = img.height;
 
@@ -94,9 +64,9 @@ img.onload = function() {
 
 #### 结果
 
-{{ EmbedLiveSample('Disabling_image_smoothing', 700, 240) }}
+{{ EmbedLiveSample('禁用图像平滑', 700, 240) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

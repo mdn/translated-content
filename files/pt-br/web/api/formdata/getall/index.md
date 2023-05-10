@@ -1,8 +1,8 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-translation_of: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.
@@ -39,7 +39,7 @@ formData.append('username', 'Chris');
 formData.append('username', 'Bob');
 ```
 
-A seguinte função `getAll()` retornara um arrat com os valore dentro de `username`:
+A seguinte função `getAll()` retornara um array com os valores dentro de `username`:
 
 ```js
 formData.getAll('username'); // Returns ["Chris", "Bob"]

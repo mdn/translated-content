@@ -1,9 +1,11 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Element/input/text) 入力欄と機能的には同じですが、{{Glossary("user agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
@@ -14,7 +16,7 @@ slug: Web/HTML/Element/input/search
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        検索フィールドに入っている値を表す {{domxref("DOMString")}}。
+        検索フィールドに入っている値を表す文字列。
       </td>
     </tr>
     <tr>
@@ -42,6 +44,10 @@ slug: Web/HTML/Element/input/search
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -54,7 +60,7 @@ slug: Web/HTML/Element/input/search
 
 ## 値
 
-{{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている {{domxref("DOMString")}} です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
+{{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
 
 ```js
 searchTerms = mySearch.value;
@@ -150,11 +156,9 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 ### mozactionhint
 
-Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。この情報は仮想キーボードの <kbd>Enter</kbd> キーにどのようなラベルを使用するかを決定するために使用されます。
+Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-> **メモ:** これはグローバル属性 {{htmlattrxref("enterkeyhint")}} として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 {{bug(1490661)}} を参照してください。
-
-許可されている値は `go`, `done`, `next`, `search`, `send` です。ブラウザーはこのヒントを使用して、 Enter キーにどのラベルを置くかを決定します。
+この属性は非推奨です。代わりにグローバル属性 {{htmlattrxref("enterkeyhint")}} を使用してください。
 
 ### results
 
@@ -171,7 +175,7 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>検索</button>
   </div>
 </form>
@@ -189,11 +193,11 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 
 主な違いはブラウザーによる扱い方です。特筆するべき最初のことは、ブラウザーによっては×印を表示して、クリックすると簡単に検索語を削除できることです。次のスクリーンショットは Chrome のものです。
 
-![](chrome-cross-icon.png)
+![フォーカスリング付きの検索入力で、テキストは 'cats'。入力欄の右横に × のアイコンが並んでいます。](chrome-cross-icon.png)
 
 加えて、最近のブラウザーは以前ドメイン内で入力された検索語を自動的に格納し、そのドメインの検索入力欄で従属的な検索が行われたときに、自動補完オプションに上がってくるようにする傾向があります。これは同じ又は似た検索を繰り返して行う傾向があるユーザーにとって便利です。次のスクリーンショットは Firefox のものです。
 
-![](firefox-auto-complete.png)この点について、検索フォームに適用することができる有用なテクニックを見てみましょう。
+![エラー状態で、フォーカスリングが赤くなっている入力。ユーザーは文字 'h' を入力した。入力ボックスの直下に、 hello と hermansje という 2 つの選択肢を持つポップアップ選択リストが表示されている。](firefox-auto-complete.png)この点について、検索フォームに適用することができる有用なテクニックを見てみましょう。
 
 ### プレイスホルダーの設定
 
@@ -202,8 +206,11 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="サイトを検索...">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..." />
     <button>検索</button>
   </div>
 </form>
@@ -227,9 +234,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="サイトを検索..."
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      aria-label="Search through site content" />
     <button>検索</button>
   </div>
 </form>
@@ -250,8 +260,12 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="サイトを検索..." size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      size="30" />
     <button>検索</button>
   </div>
 </form>
@@ -272,16 +286,16 @@ Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフ
 ユーザーにとって値が妥当かそうでないかが分かりやすくなるように、フォーム要素のスタイル付けに便利な擬似クラスが利用できます。 {{cssxref(":valid")}} および {{cssxref(":invalid")}} です。この節では、以下の CSS を使用して入力欄の値が妥当であれば隣にチェックマークを表示し、妥当な値でなければ隣にバツ（X) マークを表示します。
 
 ```css
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -294,8 +308,12 @@ input:valid ~ span:after {
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="サイトを検索..." required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="サイトを検索..."
+      required />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -307,16 +325,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -340,9 +358,15 @@ input:valid ~ span:after {
 <form>
   <div>
     <label for="mySearch">ユーザーを検索</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="ユーザー ID は 4～8 文字です" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="ユーザー ID は 4～8 文字です"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -354,16 +378,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -383,9 +407,14 @@ This renders like so:
 <form>
   <div>
     <label for="mySearch">製品 ID で検索:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="2 文字に続いて 4 桁の数字" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="2 文字に続いて 4 桁の数字"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>検索</button>
     <span class="validity"></span>
   </div>
@@ -397,16 +426,16 @@ input {
   margin-right: 10px;
 }
 
-input:invalid ~ span:after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+input:invalid ~ span::after {
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
-input:valid ~ span:after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+input:valid ~ span::after {
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -416,7 +445,7 @@ input:valid ~ span:after {
 
 ## 例
 
-[website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
+[website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
 
 ## 仕様書
 

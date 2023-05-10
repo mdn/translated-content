@@ -9,6 +9,7 @@ tags:
   - Selectors
 translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 Метод **`querySelectorAll()`** {{domxref("Document")}} возвращает статический (не динамический) {{domxref("NodeList")}}, содержащий все найденные элементы документа, которые соответствуют указанному селектору.

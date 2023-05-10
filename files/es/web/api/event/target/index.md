@@ -1,12 +1,8 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-tags:
-  - Evento
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Event/target
 ---
+
 {{ApiRef("DOM")}}
 
 La propiedad **`target`** de la interfaz del {{domxref("event.currentTarget")}} es una referencia al objeto en el cual se lanzo el evento. Es diferente de {{domxref("event.currentTarget")}} donde el controlador de eventos (event handler) es llamado durante la fase de bubbling or capturing del evento.
@@ -44,27 +40,11 @@ ul.addEventListener('click', hide, false);
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-event-target", "Event.target")}}     | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-event-target", "Event.target")}}             | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-Event-target", "Event.target")}} | {{Spec2("DOM2 Events")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Event.target")}}
-
-## Notas de compatibilidad
-
-En IE 6-8 el evento 'model' es diferente. Los eventos 'listeners' son are incluidos con el método no estándar {{domxref('EventTarget.attachEvent')}}. En este modelo, el evento 'object' tiene una propiedad {{domxref('Event.srcElement')}}, en vez de la propiedad `target`, y tiene la misma semántica que `event.target`.
-
-```js
-function hide(e) {
-  // Soporte en IE6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = 'hidden';
-}
-```
+{{Compat}}
 
 ## También ver
 

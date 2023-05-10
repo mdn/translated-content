@@ -1,9 +1,9 @@
 ---
 title: Use HTML para resolver problemas comuns
 slug: Learn/HTML/Howto
-translation_of: Learn/HTML/Howto
 original_slug: Aprender/HTML/como-fazer
 ---
+
 {{LearnSidebar}}
 
 Os links a seguir apontam para soluções de problemas comuns que você precisará resolver utilizando HTML.

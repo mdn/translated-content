@@ -1,15 +1,8 @@
 ---
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
-tags:
-  - API
-  - Criptografía
-  - Propiedad
-  - Referencia
-  - Sólo-Lectura
-  - Web Crypto API
-translation_of: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}
 
 La propiedad de sólo lectura **`Crypto.subtle`** retorna un objeto {{domxref("SubtleCrypto")}} permitiendo realizar operaciones criptográficas.
@@ -22,13 +15,11 @@ var crypto = crypto.subtle;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,8 +1,8 @@
 ---
 title: Node.contains
 slug: Web/API/Node/contains
-translation_of: Web/API/Node/contains
 ---
+
 {{ApiRef("DOM")}}
 
 ## Sumário
@@ -38,7 +38,7 @@ function isInPage(node) {
 
 ## Especificação
 
-- [DOM Level 4: contains](http://www.w3.org/TR/domcore/#dom-node-contains)
+- [DOM Level 4: contains](https://www.w3.org/TR/domcore/#dom-node-contains)
 
 ## Ver também
 

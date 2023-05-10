@@ -7,6 +7,7 @@ tags:
   - WebAssembly
 translation_of: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/C_to_wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.
@@ -80,7 +81,7 @@ fetch('simple.wasm').then(response =>
 
 В Firefox 54+, в отладочной панели инструментов разработчика имеется возможность отображения текстового представления любого wasm-кода, включённого в веб-страницу. Для того чтобы просмотреть его, вы можете перейти на отладочную панель и нажать на пункт "wasm://".
 
-![](https://mdn.mozillademos.org/files/15823/wasm-debug.png)
+![](wasm-debug.png)
 
 В ближайших версиях в Firefox, в дополнении к просмотру wasm-кода как текста, разработчики будут иметь возможность отлаживать wasm используя текстовый формат (устанавливать точки останова, изучать стек вызовов, построчно переходить, и.т.д). См. [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) в видео-анонсе.
 

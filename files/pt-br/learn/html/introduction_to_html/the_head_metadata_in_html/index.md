@@ -1,16 +1,9 @@
 ---
 title: O que está no cabeçalho? Metadados em HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Guía
-  - HTML
-  - Iniciante
-  - head
-  - lang
-  - metadados
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibida no navegador da Web quando a página é carregada. Ele contém informações como {{glossary("title")}} , links para {{htmlelement("CSS")}} (se você deseja modelar seu conteúdo HTML com CSS), links para favicons personalizados e outros metadados (dados sobre o HTML, como quem o escreveu, e palavras-chave importantes que descrevem o documento.) Neste artigo, abordaremos todas as coisas acima e mais. Dando-lhe uma boa base para lidar com marcação.
@@ -90,13 +83,13 @@ Nós já vimos o elemento {{htmlelement("title")}} em ação — ele pode ser us
 
 2. Agora abra o arquivo no seu navegador. Você deve ver algo assim:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Agora deve ser completamente óbvio onde o conteúdo `<h1>` aparece e onde o conteúdo `<title>` aparece!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)Agora deve ser completamente óbvio onde o conteúdo `<h1>` aparece e onde o conteúdo `<title>` aparece!
 
 3. Você também deve tentar abrir o código no seu editor, editar o conteúdo desses elementos e atualizar a página no seu navegador. divirta-se.
 
 O conteúdo do elemento `<title>` também é usado de outras maneiras. Por exemplo, se você tentar favoritar a página, (_Favoritos > Adicionar página aos favoritos_ ou o ícone da estrela na barra de URL no Fireofx), você verá o conteúdo `<title>` preenchido como o nome sugerido do favorito.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 Os conteúdos `<title>` também são usados nos resultados de pesquisa, conforme você verá abaixo.
 
@@ -114,9 +107,9 @@ No exemplo que vimos acima, esta linha foi incluída:
 
 Este elemento simplesmente especifica a codificação de caracteres do documento — o conjunto de caracteres que o documento está autorizado a usar. `utf-8` é um conjunto de caracteres universal que inclui praticamente qualquer caractere de qualquer linguagem humana. Isso significa que sua página web poderá lidar com a exibição de qualquer idioma; portanto, é uma boa idéia configurar isso em todas as páginas web que você cria! Por exemplo, sua página poderia lidar com o Inglês e Japonês muito bem:
 
-![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](https://mdn.mozillademos.org/files/12343/correct-encoding.png)Se você definir sua codificação de caracteres para `ISO-8859-1`, por exemplo (o conjunto de caracteres para o alfabeto latino), a renderização de sua página ficaria toda bagunçada:
+![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](correct-encoding.png)Se você definir sua codificação de caracteres para `ISO-8859-1`, por exemplo (o conjunto de caracteres para o alfabeto latino), a renderização de sua página ficaria toda bagunçada:
 
-![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
+![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
 > **Nota:** Alguns navegadores (como o Chrome) corrigem automaticamente as codificações incorretas, então, dependendo do navegador que você usar, você pode não ver esse problema. Ainda assim, você deve definir uma codificação do `utf-8` em sua página, para evitar problemas em outros navegadores.
 
@@ -152,7 +145,7 @@ Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo 
 
 A descrição também é usada nas páginas de resultados do mecanismo de pesquisa. Vamos passar por um exercício para explorar isso
 
-1. Vá para a [página inicial da Mozilla Developer Network.](https://developer.mozilla.org/en-US/)
+1. Vá para a [página inicial da Mozilla Developer Network.](/en-US/)
 2. Veja a fonte da página (botão direito do mouse/
 
     <kbd>Ctrl</kbd>
@@ -169,7 +162,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
 
 4. Agora, procure por "Mozilla Developer Network" no seu motor de busca favorito (Utilizamos o Yahoo.) Você notará a descrição `<meta>` e `<title>` elemento usado no resultado da pesquisa — definitivamente vale a pena ter!
 
-    ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
+    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
 > **Nota:** No Google, você verá algumas subpáginas relevantes do MDN listadas abaixo do principal link da página inicial do MDN — estes são chamados de sitelinks e são configuráveis nas [Ferramentas para webmasters do Google](http://www.google.com/webmasters/tools/) — uma maneira de melhorar os resultados de pesquisa do seu site no mecanismo de pesquisa do Google.
 
@@ -191,7 +184,7 @@ e aplicativos HTML5. Ele também documenta produtos Mozilla, como o sistema oper
 
 Um efeito disso é que, quando você liga a MDN no facebook, o link aparece junto com uma imagem e descrição: uma experiência mais rica para usuários.
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)O Twitter também possui seus próprios metadados proprietários, o que tem um efeito semelhante quando o URL do site é exibido no twitter.com. Por exemplo:
+![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)O Twitter também possui seus próprios metadados proprietários, o que tem um efeito semelhante quando o URL do site é exibido no twitter.com. Por exemplo:
 
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network">
@@ -214,7 +207,7 @@ Um favicon pode ser adicionado à sua página:
 
 Aqui está um exemplo de um favicon em um painel de faforitos:
 
-![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
+![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
 Há muitos outros tipos de ícones para considerar nestes dias também. Por exemplo, você encontrará isso no código-fonte da página inicial do MDN Web Docs:
 
@@ -263,7 +256,7 @@ Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} 
 
 Se for feito corretamente, quando você salvar seu HTML e atualizar seu navegador, verá que as coisas mudaram:
 
-![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](https://mdn.mozillademos.org/files/12359/js-and-css.png)
+![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
 - O JavaScript adicionou uma lista vazia à página. Agora, quando você clica em qualquer lugar da lista, uma caixa de diálogo aparecerá pedindo para que você, insira algum texto para um novo item de lista. Quando você pressiona o botão OK, um novo item será adicionado à lista contendo o texto. Quando você clica em um item de lista existente, uma caixa de diálogo será exibida permitindo que você altere o texto do item.
 - O CSS fez com que o plano de fundo ficasse verde e o texto se tornasse maior. Ele também estilizou parte do conteúdo que o JavaScript adicionou à página (a barra vermelha com a borda preta é o estilo que o CSS adicionou à lista gerada por JS).

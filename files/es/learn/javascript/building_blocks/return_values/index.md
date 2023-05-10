@@ -1,8 +1,8 @@
 ---
 title: Una función retorna valores
 slug: Learn/JavaScript/Building_blocks/Return_values
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Hay un último concepto esencial para que discutamos en este curso, para cerrar nuestra visión de las funciones: — lo valores que se devuelven. Algunas funciones no devuelven un valor significativo después de su finalización, pero otras sí, y es importante comprender cuáles son sus valores, cómo utilizarlos en su código y cómo hacer que sus propias funciones personalizadas devuelvan valores útiles. Cubriremos todos estos a continuación.
@@ -21,7 +21,7 @@ var newString = myText.replace('string', 'sausage');
 console.log(newString);
 // la función de cadena replace () toma una cadena,
 // sustituyendo una subcadena con otra y devoviendo
-// ​​una cadena nueva con la sustitución realizada
+// una cadena nueva con la sustitución realizada
 ```
 
 Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.
@@ -143,7 +143,7 @@ This exercise has brought up a couple of important points besides being a study 
 
 So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/Learn#Contact_us) to ask for help.
 
 ## See also
 
@@ -151,13 +151,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/es/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/es/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/es/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -69,9 +69,7 @@ usedOptions.useGrouping;           // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.resolvedoptions', 'Intl.NumberFormat.prototype.resolvedOptions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

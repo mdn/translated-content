@@ -1,15 +1,9 @@
 ---
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
-tags:
-  - Clase
-  - Class
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 ---
+
 {{JSRef}}
 
 Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
@@ -194,13 +188,11 @@ Int8Array.prototype.foo = 'bar';
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## Ve también
 

@@ -1,8 +1,9 @@
 ---
 title: Уведомление
-slug: Web/API/notification
+slug: Web/API/Notification
 translation_of: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 Интерфейс `Notification` из [Notifications API](/ru/docs/Web/API/Notifications_API) используется для настройки и отображения уведомлений на рабочий стол пользователя.

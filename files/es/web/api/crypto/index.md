@@ -1,13 +1,8 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
-tags:
-  - API
-  - Interfaz
-  - Referencia
-  - Web Crypto API
-translation_of: Web/API/Crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 La interfaz **`Crypto`** representa las características básicas de criptografía disponibles en el contexto actual. Permite acceder a un generador de números aleatorios criptográficamente fuerte y a primitivos criptográficos.
@@ -30,13 +25,11 @@ _Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Crypto")}}
+{{Compat}}
 
 ## Ver también
 

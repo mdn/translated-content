@@ -69,7 +69,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example','100%')}}
+{{EmbedLiveSample('示例','100%')}}
 
 ## 规范
 

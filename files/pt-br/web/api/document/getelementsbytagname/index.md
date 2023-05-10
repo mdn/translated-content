@@ -1,8 +1,8 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
-translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{APIRef("DOM")}}
 
 O método getElementsByTagName da interface Document retorna um HTMLCollection de elementos com o nome da tag fornecido. O documento completo é pesquisado, incluindo o nó raiz. A HTMLCollection retornada é ao vivo, o que significa que ela se atualiza automaticamente para permanecer em sincronia com a árvore DOM sem ter que chamar document.getElementsByTagName () novamente.

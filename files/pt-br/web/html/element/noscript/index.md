@@ -1,15 +1,9 @@
 ---
 title: <noscript>
 slug: Web/HTML/Element/noscript
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - script HTML
-translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 ## Resumo
 
@@ -20,7 +14,7 @@ O **Elemento HTML `<noscript>`** define uma seção de html a ser inserida se um
   Quando o script está desativado e quando não é descendente do elemento {{HTMLElement("head")}} : qualquer conteúdo transparente, mas nenhum elemento `<noscript>` entre seus descendentes.
   Nos outros casos: conteúdo de fluxo ou conteúdo de texto.
 - _Omissão da tag_ Tags inicial e final obrigatórias.
-- _Elemento pai permitidos_ Qualquer elemento que aceite '[contúdo de texto](/pt-BR/docs/HTML/Content_categories#Phrasing_content)' ([phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)), se não há um elemento `<noscript>` anterior ou em um elemento {{HTMLElement("head")}} (mas somente em um documento HTML), e também se não existe elemento `<noscript>` anterior.
+- _Elemento pai permitidos_ Qualquer elemento que aceite '[conteúdo de texto](/pt-BR/docs/HTML/Content_categories#Phrasing_content)' ([phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content)), se não há um elemento `<noscript>` anterior ou em um elemento {{HTMLElement("head")}} (mas somente em um documento HTML), e também se não existe elemento `<noscript>` anterior.
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos

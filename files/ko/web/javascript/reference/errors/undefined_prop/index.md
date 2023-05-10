@@ -1,8 +1,8 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

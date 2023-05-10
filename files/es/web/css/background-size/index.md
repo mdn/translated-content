@@ -1,13 +1,8 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/background-size
 ---
+
 {{ CSSRef() }}
 
 ## Resumen
@@ -43,11 +38,11 @@ donde **:**
 
 La interpretación de los valores posibles depende de las dimensiones propias de la imagen (ancho y alto) y proporción propia (relación entre la anchura y altura). Una imagen de mapa de bits siempre tiene dimensiones propias y una proporción propia. Una imagen del vector puede tener ambas dimensiones propias (y por lo tanto debe tener una proporción propia). También puede tener una o ningúna dimensiones propias, y en cualquier caso se podría o no tener una proporción propia. Los gradientes son tratados como imágenes sin dimensiones propias o proporción propia.
 
-Este comportamiento ha cambiado en Gecko 8.0 {{geckoRelease ("8.0")}}. Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
+Este comportamiento ha cambiado en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Antes de esto, los gradientes se tratan como imágenes sin dimensiones propias, con una proporción propia idéntica al área de posicionamiento de fondo.
 
 Las imágenes de fondo generados a partir de elementos con {{ cssxref("-moz-element") }} (que en realidad coincide con un elemento) se tratan actualmente como las imágenes con las dimensiones del elemento, o de la zona de posicionamiento de fondo si el elemento es SVG, con la proporción propia correspondiente.
 
-> **Nota:** **Nota**: El comportamiento de los `<degradados>` cambió en Gecko 8.0 {{geckoRelease("8.0")}}. Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
+> **Nota:** El comportamiento de los `<degradados>` cambió en Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5). Anteriormente se trataban como imágenes sin dimensiones intrínsecas, pero con proporciones intrínsecas idénticas a las del área de posicionamiento del fondo.
 
 El tamaño representado de la imagen de fondo se calcula como sigue:
 
@@ -91,13 +86,11 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estados                                  | Comentario |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Backgrounds', '#the-background-size', 'background-size') }} | {{ Spec2('CSS3 Backgrounds') }} |            |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.background-size")}}
+{{Compat}}
 
 ## Ver también
 

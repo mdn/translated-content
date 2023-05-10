@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/footer
 browser-compat: html.elements.footer
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/Guide/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
 
@@ -140,11 +140,31 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
 ## Exemples
 
 ```html
-<footer>
-  Quelques informations de copyright ou bien quelques informations
-  sur l'auteur de l'article.
-</footer>
+<body>
+  <h3>Les écrivains français du XIX<sup>ème</sup> siècle</h3>
+  <ul>
+    <li>Hugo</li>
+    <li>Flaubert</li>
+    <li>Zola</li>
+    <li>Maupassant</li>
+  </ul>
+
+  <footer><small>Copyright © 2023 Littérature.com. Tous droits réservés.</small></footer>
+</body>
 ```
+
+```css
+footer {
+  text-align:center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Accessibilité
 

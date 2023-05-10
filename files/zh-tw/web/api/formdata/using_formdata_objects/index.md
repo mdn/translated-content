@@ -2,6 +2,7 @@
 title: Using FormData Objects
 slug: Web/API/FormData/Using_FormData_Objects
 ---
+
 The [`FormData`](/zh-TW/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using [`XMLHttpRequest`](/zh-TW/docs/Web/API/XMLHttpRequest). It is primarily intended for use in sending form data, but can be used independently from forms in order to transmit keyed data. The transmitted data is in the same format that the form's {{domxref("HTMLFormElement.submit","submit()")}} method would use to send the data if the form's encoding type were set to `multipart/form-data`.
 
 ## Creating a FormData object from scratch
@@ -138,4 +139,4 @@ If you want to know how to serialize and submit a form via [AJAX](/zh-TW/docs/AJ
 - [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)

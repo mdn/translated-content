@@ -12,7 +12,7 @@ La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr
 
 Si besoin d'obtenir uniquement le nombre de contrôles du formulaire, on pourra utiliser la propriété [`length`](/fr/docs/Web/API/HTMLFormElement/length).
 
-On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut  `name` ou `id` de l'élément.
+On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut `name` ou `id` de l'élément.
 
 Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
 

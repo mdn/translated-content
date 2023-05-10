@@ -3,7 +3,7 @@ title: '<button>: ボタン要素'
 slug: Web/HTML/Element/button
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<button>` 要素**はクリックできるボタンを表し、[フォーム](/ja/docs/Learn/Forms)や、文書で単純なボタン機能が必要なあらゆる場所で使用することができます。既定では、 HTML のボタンは {{Glossary("user agent", "ユーザーエージェント")}} が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
 
@@ -74,12 +74,12 @@ slug: Web/HTML/Element/button
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("checkbox")}}, {{ARIARole("link")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role">menuitem</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role">menuitemcheckbox</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role">menuitemradio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role">switch</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role">tab</a></code>
       </td>
     </tr>
     <tr>
@@ -96,7 +96,7 @@ slug: Web/HTML/Element/button
 - {{htmlattrdef("autofocus")}}
   - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLOrForeignElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
-  - : {{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。 {{bug(654072)}} をご覧ください。
+  - : {{HTMLElement("button")}} におけるこの属性は標準外であり、 Firefox 固有のものです。他のブラウザーとは異なり、 Firefox はページを再度読み込む時に[動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。そのボタンに `autocomplete="off"` に設定すると、この機能が無効になります。 [Firefox バグ 654072](https://bugzil.la/654072) をご覧ください。
 - {{htmlattrdef("disabled")}}
 
   - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
@@ -252,11 +252,7 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'form-elements.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-button-element', '&lt;button&gt;')}}         | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                     | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

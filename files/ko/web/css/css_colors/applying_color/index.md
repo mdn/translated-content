@@ -1,19 +1,10 @@
 ---
 title: CSS로 HTML 요소에 색 입히기
 slug: Web/CSS/CSS_Colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS Colors
-  - Guide
-  - HTML
-  - HTML Colors
-  - color
-  - 색
-translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 색은 인간의 감정을 표현하는 기본적인 형태입니다. 아이들은 뭔가 그릴 수 있는 민첩성을 갖추기도 전에 색을 가지고 놉니다. 사람들이 웹 사이트를 개발할 때 보통 색을 제일 먼저 입혀보고 싶어 하는 건 이런 이유일지도 모릅니다. [CSS](/ko/docs/Web/CSS)와 함께라면 무궁무진한 방법으로 여러분의 [HTML](/ko/docs/Web/HTML) [요소](/ko/docs/Web/HTML/Element)에 색을 넣어 원하는 모습을 만들 수 있습니다. 이 글은 CSS 색을 HTML에 적용하는 기초를 소개합니다.
 
@@ -41,7 +32,7 @@ original_slug: Web/HTML/Applying_color
 
   - : 글씨의 그림자 효과를 설정합니다. 여러 옵션 중에서 그림자 색을 정할 수 있습니다. (이후 다른 옵션에 따라 흐려지고 배경과 섞입니다)
 
-    See {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}} to learn more.
+    See [Text drop shadows](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.
 
 - {{cssxref("text-decoration-color")}}
   - : 기본 설정에서 글씨 장식(밑줄, 윗줄, 취소선 등)은 `color` 속성의 값을 색으로 사용합니다. 그러나 `text-decoration-color` 속성을 지정하면 다른 색으로 바꿀 수 있습니다.
@@ -65,7 +56,7 @@ original_slug: Web/HTML/Applying_color
 
 ### 테두리
 
-모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
+모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. See [Box properties](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
 
 {{cssxref("border")}} 단축 속성을 사용하면 색은 물론 [너비](/ko/docs/Web/CSS/border-width)와 [스타일](/ko/docs/Web/CSS/border-style)(실선, 점선 등)같은 속성을 한 번에 설정할 수 있습니다.
 

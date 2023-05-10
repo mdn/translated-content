@@ -1,8 +1,8 @@
 ---
 title: O que são extensões?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 ---
+
 {{AddonSidebar}}
 
 Extensões são bits de código que modificam a funcionalidade do navegador. Eles são escritos usando as tecnologias padrões da Web - JavaScript, HTML e CSS - além de APIs JavaScript dedicadas. Entre outras coisas, extensões podem adicionar novas funcionalidades para o navegador, ou mudar sua aparência, ou o conteúdo de páginas particulares.

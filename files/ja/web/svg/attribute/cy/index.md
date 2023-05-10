@@ -97,10 +97,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                 | コメント                           |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------- |
-| {{SpecName("SVG2", "geometry.html#CY", "cy")}}                                             | {{Spec2("SVG2")}} | ジオメトリプロパティとしての定義   |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementCYAttribute", "cy")}}     | {{Spec2("SVG2")}} | SVG2 ペイントサーバに対する定義    |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementCYAttribute", "cy")}} | {{Spec2("SVG1.1")}} | `<radialGradient>`に対する初期定義 |
-| {{SpecName("SVG1.1", "shapes.html#EllipseElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | `<ellipse>`に対する初期定義        |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementCYAttribute", "cy")}}             | {{Spec2("SVG1.1")}} | `<circle>`に対する初期定義         |
+{{Specifications}}

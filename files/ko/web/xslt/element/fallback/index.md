@@ -1,11 +1,9 @@
 ---
 title: fallback
 slug: Web/XSLT/Element/fallback
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/fallback
 original_slug: Web/XSLT/fallback
 ---
+
 {{ XsltRef() }}
 
 `<xsl:fallback>` 요소는 주어진 확장(이나 결국에는 새 버전) 요소에서 지원하지 않으면 쓸 템플릿을 지정합니다.

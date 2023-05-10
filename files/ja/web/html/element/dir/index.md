@@ -3,7 +3,7 @@ title: '<dir>: ディレクトリー要素'
 slug: Web/HTML/Element/dir
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<dir>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("user agent","ユーザーエージェント")}}が適用するスタイルやアイコンを用いて表示する、ファイルやフォルダーのディレクトリーのコンテナとして使われます。この要素は廃止されたので使わないで下さい。代わりに、ファイル一覧を含め、一覧には {{HTMLElement("ul")}} 要素を使用してください。
 

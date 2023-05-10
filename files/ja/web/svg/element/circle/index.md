@@ -50,10 +50,7 @@ slug: Web/SVG/Element/circle
 
 ## 仕様
 
-| 仕様書                                                                                       | 策定状況                 | 備考     |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("SVG2", "shapes.html#CircleElement", "&lt;circle&gt;")}}     | {{Spec2("SVG2")}} |          |
-| {{SpecName("SVG1.1", "shapes.html#CircleElement", "&lt;circle&gt;")}} | {{Spec2("SVG1.1")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

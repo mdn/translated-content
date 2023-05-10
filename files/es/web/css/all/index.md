@@ -1,12 +1,8 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - Cascada CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/all
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -137,14 +133,11 @@ El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentarios                |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------------- |
-| {{ SpecName('CSS4 Cascade', '#all-shorthand', 'all') }} | {{ Spec2('CSS4 Cascade') }} | Añadido el valor `revert`. |
-| {{ SpecName('CSS3 Cascade', '#all-shorthand', 'all') }} | {{ Spec2('CSS3 Cascade') }} | Definición inicial.        |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.all")}}
+{{Compat}}
 
 ## Véase también
 

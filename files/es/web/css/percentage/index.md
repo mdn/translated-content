@@ -1,9 +1,9 @@
 ---
 title: <percentage>
 slug: Web/CSS/percentage
-translation_of: Web/CSS/percentage
 original_slug: Web/CSS/porcentaje
 ---
+
 {{CSSRef}}
 
 ## Sumario
@@ -49,12 +49,8 @@ El codigo de arriba de renderizara así:
 
 ## Especificaciones
 
-| Especificacion                                                                                           | Estatus                              | Comentarios                                                 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| {{ SpecName('CSS3 Values', '#percentages', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS3 Values') }} | No hay cambios significantes desde CSS Level 2 (Revision 1) |
-| {{ SpecName('CSS2.1', 'syndata.html#percentage-units', '&lt;percentage&gt;') }} | {{ Spec2('CSS2.1') }}         | No hay cambios desde CSS Level 1                            |
-| {{ SpecName('CSS1', '#percentage-units', '&lt;percentage&gt;') }}                 | {{ Spec2('CSS1') }}             |                                                             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.percentage")}}
+{{Compat}}

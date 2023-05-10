@@ -3,6 +3,7 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` - это не функциональный, а простой объект, он не является сконструированным.

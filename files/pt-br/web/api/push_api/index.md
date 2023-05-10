@@ -1,19 +1,9 @@
 ---
 title: API Push
 slug: Web/API/Push_API
-tags:
-  - API
-  - Experimental
-  - Notificações
-  - Push
-  - Referencia
-  - Service Workers
-translation_of: Web/API/Push_API
 original_slug: Web/API/API_Push
-browser-compat:
-  - api.PushEvent
-  - api.PushMessageData
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 A **API Push** torna possível que aplicações web recebam mensagens enviadas a elas de um servidor, indepententemente de aplicação estar ou não em primeiro plano, ou até mesmo carregada, em um agente de usuário. Isso permite que desenvolvedores entreguem notificações e atualizações assíncronas a usuários que optarem por elas, resultando num melhor engajamento com conteúdo novo oportuno.
@@ -28,7 +18,7 @@ O resultado de {{domxref("PushSubscription")}} inclui toda informação que a ap
 
 O service worker será iniciado conforme o necessário para lidar com as mensagens recebidas, que são entregues ao manipulador de evento {{domxref("ServiceWorkerGlobalScope.onpush")}} . Isto permite que a aplicação reaja a cada mensagem recebida, por exemplo para exibir a notificação ao usuário (usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.)
 
-Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](http://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
+Cada assinatura é única para um service worker. O endpoint para a assinatura é uma [capability URL](https://www.w3.org/TR/capability-urls/) única: o conhecimento do endpoint é tudo que é necessário para enviar uma mensagem para sua aplicação. A URL do endpoint precisa ser mantida em segredo, ou outras aplicações estranhas poderão enviar mensagens push para a sua aplicação.
 
 A ativação de um service worker para entregar mensagens push pode resultar em um aumento de uso de recursos, particularmente de bateria. Diferentes navegadores tem diferentes formas para lidar com isso — atualmente não existe uma forma padrão. Firefox permite um número limitado (cota) de mensagens push para serem enviadas para uma aplicação, embora as mensagens Push que gerem notificações são isentas deste limite. O limite é atualizado a cada site visitado. Numa comparação, Chrome não aplica nenhum limite, mas requer que cada mensagem push exiba uma notificação.
 
@@ -71,6 +61,6 @@ As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/We
 ## Veja também
 
 - [Usando Push API](/pt-BR/docs/Web/API/Push_API/Using_the_Push_API)
-- [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), no Github
+- [Push API Demo](/pt-BR/docs/Web/API/Push_API), no Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API)

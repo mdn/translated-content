@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка

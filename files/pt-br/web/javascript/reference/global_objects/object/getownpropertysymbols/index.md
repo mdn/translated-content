@@ -1,8 +1,8 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 O **`Object.getOwnPropertySymbols()`** método retorna uma array com todas propriedades de símbolo encontradas diretamente em um determinado objeto dado.

@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.beginPath()`** del API Canvas 2D comienza una nueva ruta vaciando la lista de sub-rutas. Invoca este método cuando quieras crear una nueva ruta.
@@ -106,13 +100,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estatus                          | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-beginpath", "CanvasRenderingContext2D.beginPath")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.beginPath")}}
+{{Compat}}
 
 ## Ver también
 

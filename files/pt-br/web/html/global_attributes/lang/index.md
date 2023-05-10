@@ -1,12 +1,8 @@
 ---
 title: lang
 slug: Web/HTML/Global_attributes/lang
-tags:
-  - Atributos globais
-  - Referencia
-  - lang
-translation_of: Web/HTML/Global_attributes/lang
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única “tag de idioma” em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).

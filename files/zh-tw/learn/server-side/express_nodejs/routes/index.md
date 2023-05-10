@@ -113,7 +113,7 @@ router.get('/about', function (req, res) {
 
 ### HTTP 動詞
 
-上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`​​​​​​, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
+上面的示例路由使用`Router.get()`方法，響應具有特定路徑的 HTTP GET 請求。路由器`Router`還為所有其他 HTTP 動詞提供路由方法，這些方法多數以完全相同的方式使用：`post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`,和`connect()`。
 
 例如，下面的代碼就像上一個`/about`路由一樣，但只響應 HTTP POST 請求。
 
@@ -626,15 +626,3 @@ app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 - [Routing guide](http://expressjs.com/en/guide/routing.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

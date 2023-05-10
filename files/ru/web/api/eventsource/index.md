@@ -3,6 +3,7 @@ title: EventSource
 slug: Web/API/EventSource
 translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 `Интерфейс EventSource` используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.

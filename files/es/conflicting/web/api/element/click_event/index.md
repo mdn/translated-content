@@ -1,9 +1,10 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: conflicting/Web/API/Element/click_event
-translation_of: Web/API/GlobalEventHandlers/onclick
 original_slug: Web/API/GlobalEventHandlers/onclick
+browser-compat: api.Element.click_event
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 La propiedad **onclick** devuelve el manejador del evento `click` del elemento actual.
@@ -65,12 +66,10 @@ El evento `click` se genera cuando el usuario hace clic en un elemento. El event
 
 Solo se puede asignar un controlador `click` a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estatus                          | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GlobalEventHandlers.onclick")}}
+{{Compat}}

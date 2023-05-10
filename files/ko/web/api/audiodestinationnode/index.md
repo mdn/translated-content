@@ -1,9 +1,6 @@
 ---
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
-tags:
-  - 오디오
-translation_of: Web/API/AudioDestinationNode
 ---
 {{APIRef()}}
 
@@ -44,11 +41,11 @@ gainNode.connect(audioCtx.destination);
 
 To see a more complete implementation, check out one of our MDN Web Audio examples, such as [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) or [Violent Theremin](http://mdn.github.io/violent-theremin/).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

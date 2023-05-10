@@ -3,7 +3,7 @@ title: CSS 属性值定义语法
 slug: Web/CSS/Value_definition_syntax
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 **CSS 属性值定义语法**（CSS value definition syntax）是用来限定 CSS 属性合法取值的专门语法。在此基础之上，一个 CSS 属性的合法取值也由语义所限制，比如一些数字必须是正数。
 
@@ -147,8 +147,8 @@ bold && <length>
 
 但以下不是合法取值：
 
-- `center 3%` as only one of the components must be present.
-- `3em 4.5em` as a component must be present at most one time.
+- `center 3%` 因为最多只能出现一个组成部分
+- `3em 4.5em` 因为每个组成部分最多只能出现一次
 
 > **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
 

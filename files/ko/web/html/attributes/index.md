@@ -1,11 +1,8 @@
 ---
 title: HTML 특성 참고서
 slug: Web/HTML/Attributes
-tags:
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes
 ---
+
 {{HTMLSidebar}}
 
 HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자가 원하는 기준에 맞도록 요소를 설정하거나 다양한 방식으로 요소의 동작을 조절하기 위한 값을 말합니다.
@@ -188,7 +185,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>{{ HTMLElement("input") }}</td>
       <td>
         From the
-        {{SpecName('HTML Media Capture', '#the-capture-attribute','media capture')}}spec,
+        media capture spec,
         specifies a new file can be captured.
       </td>
     </tr>

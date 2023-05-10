@@ -3,6 +3,7 @@ title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 translation_of: Web/API/HTMLHeadElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 Интерфейс **`HTMLHeadElement`** содержит описательную информацию, или метаданные, для документа. Этот объект наследует все свойства и методы описанные в {{domxref("HTMLElement")}} интерфейсе.
@@ -11,7 +12,7 @@ translation_of: Web/API/HTMLHeadElement
 
 _Наследует свойства от родителя, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLHeadElement.profile")}} {{obsolete_inline}}
+- {{domxref("HTMLHeadElement.profile")}}
   - : Это {{domxref("DOMString")}} представляющая URI одного или более профилей метаданных (через запятую).
 
 ## Методы

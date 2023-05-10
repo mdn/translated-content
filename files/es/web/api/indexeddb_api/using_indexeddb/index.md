@@ -1,18 +1,9 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - API
-  - Almacenamiento
-  - Avanzado
-  - Base de datos
-  - Guía
-  - IndexedDB
-  - Tutorial
-  - jsstore
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
+
 IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
 
 ## Acerca de este documento
@@ -577,7 +568,7 @@ function useDatabase(db) {
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-It's important to note that IndexedDB doesn't work for content loaded into a frame from another site (either {{ HTMLElement("frame") }} or {{ HTMLElement("iframe") }}. This is a security and privacy measure and can be considered analogous the blocking of third-party cookies. For more details, see {{ bug(595307) }}.
+It's important to note that IndexedDB doesn't work for content loaded into a frame from another site (either {{ HTMLElement("frame") }} or {{ HTMLElement("iframe") }}. This is a security and privacy measure and can be considered analogous the blocking of third-party cookies. For more details, see [Error 595307 en Firefox](https://bugzil.la/595307).
 
 ## Warning About Browser Shutdown
 
@@ -587,7 +578,7 @@ First, you should take care to always leave your database in a consistent state 
 
 Second, you should never tie database transactions to unload events. If the unload event is triggered by the browser closing, any transactions created in the unload event handler will never complete. An intuitive approach to maintaining some information across browser sessions is to read it from the database when the browser (or a particular page) is opened, update it as the user interacts with the browser, and then save it to the database when the browser (or page) closes. However, this will not work. The database transactions will be created in the unload event handler, but because they are asynchronous they will be aborted before they can execute.
 
-In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See {{ bug(870645) }}.
+In fact, there is no way to guarantee that IndexedDB transactions will complete, even with normal browser shutdown. See [Error 870645 en Firefox](https://bugzil.la/870645).
 
 ## Full IndexedDB example
 

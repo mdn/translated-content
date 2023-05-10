@@ -1,18 +1,9 @@
 ---
 title: Os widgets nativos
 slug: Learn/Forms/Basic_native_form_controls
-tags:
-  - Aprender
-  - Contrôles
-  - Exemplos
-  - Guía
-  - HTML
-  - Iniciantes
-  - Intermediário
-  - Web
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Web/Guide/HTML/Forms/Os_widgets_nativos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Veremos agora, detalhadamente, a funcionalidade dos diferentes widgets dos formulários, observando as opções disponíveis para coletar diferentes tipos de dados. Este guia é um tanto exaustivo, cobrindo todos os widgets de formulários nativos disponíveis.
@@ -97,7 +88,7 @@ This type of field is set with the value `email` for the {{htmlattrxref("type","
 
 When this `type` is used, the user is required to type a valid e-mail address into the field; any other content causes the browser to display an error when the form is submitted. Note that this is client-side error validation, performed by the browser:
 
-![An invalid email input showing the message Please enter an email address.](https://mdn.mozillademos.org/files/14781/email-invalid.png)
+![An invalid email input showing the message Please enter an email address.](email-invalid.png)
 
 It's also possible to let the user type several e-mail addresses into the same input (separated by commas) by including the {{htmlattrxref("multiple","input")}} attribute.
 
@@ -266,7 +257,7 @@ Once a data list is affiliated with a form widget, its options are used to auto-
 </datalist>
 ```
 
-> **Nota:** According to [the HTML specification](http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
+> **Nota:** According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
 
 ![Screenshots of datalist on several platforms.](/files/4593/all-datalist.png)
 
@@ -647,17 +638,3 @@ To dig into the different form widgets, there are some useful external resources
 - [HTML5 Tests - inputs](http://www.quirksmode.org/html5/inputs.html) on Quirksmode (also [available for mobile](http://www.quirksmode.org/html5/inputs_mobile.html) browsers)
 
 {{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/pt-BR/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/pt-BR/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/pt-BR/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/pt-BR/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/pt-BR/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/pt-BR/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -1,13 +1,8 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - Experimental
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -183,13 +178,11 @@ th, p, td {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estatus                              | Comentarios        |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Transforms', '#backface-visibility-property', 'backface-visibility')}} | {{Spec2('CSS3 Transforms')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Véase también
 

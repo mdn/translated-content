@@ -1,8 +1,8 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
-translation_of: Web/API/console/assert
+slug: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 Escreve uma mensagem de erro para o console se a afirmação é falsa. Se a firmação é verdadeira, nada acontece.

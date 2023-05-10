@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Sumário

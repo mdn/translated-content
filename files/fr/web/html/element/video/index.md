@@ -12,7 +12,7 @@ tags:
 translation_of: Web/HTML/Element/video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<video>`** intègre un contenu vidéo dans un document.
 
@@ -54,7 +54,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     > **Note :** Cet attribut est un attribut booléen et indiquer `autoplay="false"` ne suffira pas à retirer la lecture automatique. Pour ce faire, il faut complètement retirer l'attribut.
 
-    > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute`n'est présent.
+    > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute` n'est présent.
 
 - {{htmlattrdef("buffered")}}
   - : Un attribut qui peut être lu afin de déterminer l'intervalle temporel mis en mémoire tampon. Cet attribut contient un objet {{domxref("TimeRanges")}}.
@@ -333,7 +333,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

@@ -1,14 +1,8 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 O método **`Promise.all(iterable)`** retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.

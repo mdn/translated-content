@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/meta
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<meta>`** représente toute information de métadonnées qui ne peut pas être représentée par un des éléments ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}})
 

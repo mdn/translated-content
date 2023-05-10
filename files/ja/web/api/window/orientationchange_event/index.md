@@ -50,9 +50,7 @@ window.onorientationchange = function() {
 
 ## 仕様書
 
-| Specification                                                                                    | Status                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------ |
-| {{SpecName('Compat', '#event-orientationchange', 'orientationchange')}} | {{Spec2('Compat')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

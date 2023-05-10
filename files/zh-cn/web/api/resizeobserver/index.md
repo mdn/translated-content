@@ -7,7 +7,7 @@ slug: Web/API/ResizeObserver
 
 **`ResizeObserver`** 接口监视 {{domxref('Element')}} 内容盒或边框盒或者 {{domxref('SVGElement')}} 边界尺寸的变化。
 
-> **备注：** 内容盒是盒模型放置内容的部分，这意味着边框盒减去外边距和边框的宽度就是内容盒。边框盒包含内容、边距和边框。有关进一步阐述，参见[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+> **备注：** 内容盒是盒模型放置内容的部分，这意味着边框盒减去内边距和边框的宽度就是内容盒。边框盒包含内容、内边距和边框。有关进一步阐述，参见[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
 
 `ResizeObserver` 避免了通过回调函数调整大小时，通常创建的无限回调循环和循环依赖项。它只能通过在后续的帧中处理 DOM 中更深层次的元素来做到这一点。如果它的实现遵循规范，则应在绘制前和布局后调用 resize 事件。
 

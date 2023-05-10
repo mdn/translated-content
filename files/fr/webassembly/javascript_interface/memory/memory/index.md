@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.Memory()`** permet de créer un nouvel objet `Memory` dont la propriété [`buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) est un tableau tampon [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionnable ou un `SharedArrayBuffer` contenant les octets bruts de mémoire à laquelle accède une `Instance` WebAssembly.
 
@@ -82,6 +82,6 @@ La propriété `buffer` de l'objet mémoire correspondant renverra alors un obje
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

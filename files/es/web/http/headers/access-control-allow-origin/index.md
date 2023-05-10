@@ -1,19 +1,8 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
-tags:
-  - Access Control
-  - Access-Control-Allow-Origin
-  - CORS
-  - HTTP
-  - Lidiando con CORS
-  - Origen
-  - Referencia
-  - Seguridad
-  - encabezado HTTP
-  - error cross-origin
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Access-Control-Allow-Origin`** indica si los recursos de la respuesta pueden ser compartidos con el {{glossary("origin", "origen")}} dado.
@@ -77,13 +66,11 @@ Vary: Origin
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                   | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Definición Inicial. |
+{{Specifications}}
 
-## Compatibilidad del Navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Veáse también
 

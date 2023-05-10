@@ -1,8 +1,8 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-translation_of: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 O **`Event()`** cria uma nova {{domxref("Event")}}.

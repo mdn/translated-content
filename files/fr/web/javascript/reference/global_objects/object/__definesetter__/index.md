@@ -88,11 +88,11 @@ console.log(o.uneAutreValeur); // 5
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.defineGetter","Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - L'opérateur {{jsxref("Opérateurs/L_opérateur_set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.lookupGetter","Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.lookupSetter","Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [Guide JavaScript : Définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters)
 - [\[Billet de blog\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (en anglais)
 - {{bug(647423)}}

@@ -1,11 +1,6 @@
 ---
-title: "SyntaxError: as declarações da cabeça do laço for-in podem não ter inicializadores"
+title: 'SyntaxError: as declarações da cabeça do laço for-in podem não ter inicializadores'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - Error
-  - JavaScript
-  - Strict Mode
-  - SyntaxError
 ---
 
 {{jsSidebar("Errors")}}

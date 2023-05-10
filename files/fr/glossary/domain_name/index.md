@@ -14,7 +14,7 @@ Un nom de domaine est l'adresse d'un site web sur l'{{Glossary("Internet")}}. Le
 
 ## Pour en savoir plus
 
-### **Culture générale**
+### Culture générale
 
 - [Nom de domaine](https://fr.wikipedia.org/wiki/Nom_de_domaine) sur Wikipédia
 - [Comprendre les noms de domaine](/fr/Apprendre/Comprendre_noms_de_domaine)

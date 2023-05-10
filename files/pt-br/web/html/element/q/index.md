@@ -1,15 +1,9 @@
 ---
 title: <q>
 slug: Web/HTML/Element/q
-tags:
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Semântica(2)
-  - Web
-translation_of: Web/HTML/Element/q
 ---
-{{HTMLRef}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
+
+{{HTMLSidebar}}O elemento HTML \<q> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento {{HTMLElement("blockquote")}}.
 
 <table class="properties">
   <tbody>
@@ -58,7 +52,7 @@ translation_of: Web/HTML/Element/q
   </tbody>
 </table>
 
-> **Note:** **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
+> **Nota:** A maioria dos browsers modernos adicionará automaticamente marcas de citação em volta do texto dentro de um elemento `<q>`. Talvez seja necessário criar uma regra de estilo para adicionar marcas de citação em browsers antigos.
 
 ## Atributos
 

@@ -1,14 +1,8 @@
 ---
 title: ':nth-child'
 slug: Web/CSS/:nth-child
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS) **`:nth-child()`** de [CSS](/es/docs/Web/CSS) coincide con uno o más elementos en función de su posición entre un grupo de hermanos.
@@ -146,14 +140,11 @@ div em {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentarios                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Agrega la sintaxis `of <selector>` y especifica que no se requiere que los elementos coincidentes tengan un padre. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                                                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Ver también
 

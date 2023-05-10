@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Векторная графика очень полезна во многих случаях. Она имеет малые размеры файла и высокую масштабируемость – при увеличении масштаба пиксели не увеличиваются вместе с графикой. В данной статье мы покажем, как встраивать векторную графику на Вашу страницу.
@@ -25,9 +26,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 Различия становятся заметны, когда вы изменяете масштаб страницы — PNG изображение становится неровным (становятся видны пиксели), потому что оно содержит информацию о положении и цвете каждого пикселя. При увеличении каждый пиксель также увеличивается, охватывая несколько пикселей дисплея, поэтому становятся заметны "кирпичики". Векторное изображение продолжает выглядеть ровным и красивым, потому что фигуры, масштабируются совместно с ним.
 
-![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![Two star images](raster-vector-default-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
 > **Примечание:** Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
 
@@ -141,9 +142,7 @@ background-size: contain;
 - Браузер не может кешировать встроенный SVG, так как он кеширует обычные изображения.
 - Вы можете добавить альтернативный вариант в элементе {{svgelement("foreignObject")}}, но браузеры поддерживающие SVG будут продолжать загружать все альтернативные изображения. Вы должны взвесить действительно стоит ли поддержка устаревших браузеров дополнительных накладных расходов (ресурсов).
 
-<!---->
-
-### Как встраивать SVG при помощи {{htmlelement("iframe")}}
+### Как встраивать SVG при помощи \<iframe>
 
 Вы можете открывать ваши SVG изображения в браузере просто как веб-страницы. Таким образом встраивание SVG документа с помощью `<iframe>` выполняется как мы изучали ранее в главе [От \<object> к \<iframe> — другие технологии внедрения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 

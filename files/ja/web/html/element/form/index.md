@@ -3,7 +3,7 @@ title: '<form>: フォーム要素'
 slug: Web/HTML/Element/form
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。
 
@@ -55,7 +55,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
           ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role"
             >search</a
           ></code
-        >, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        >, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>

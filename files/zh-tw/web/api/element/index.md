@@ -83,9 +83,9 @@ _Inherits properties from its parent interface, {{domxref("Node")}}, and by exte
 ### 事件處理器
 
 - {{ domxref("Element.ongotpointercapture") }}
-  - : Returns the event handler for the {{event("gotpointercapture")}} event type.
+  - : Returns the event handler for the `gotpointercapture` event type.
 - {{ domxref("Element.onlostpointercapture") }}
-  - : Returns the event handler for the {{event("lostpointercapture")}} event type.
+  - : Returns the event handler for the `lostpointercapture` event type.
 - {{ domxref("Element.onwheel") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `wheel` event.
 

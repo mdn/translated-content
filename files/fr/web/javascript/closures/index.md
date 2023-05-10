@@ -68,7 +68,7 @@ console.log(ajouter_10(2)); // 12
 
 On définit une fonction `ajouterA(x)` avec un seul argument `x` et qui renvoie une fonction anonyme. La fonction anonyme a un seul argument `y`, et renvoie la somme de `x` et `y`.
 
-La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée  `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5&nbsp;; dans `ajouter_10`, `x` vaut 10.
+La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5&nbsp;; dans `ajouter_10`, `x` vaut 10.
 
 ## Les fermetures en pratique
 

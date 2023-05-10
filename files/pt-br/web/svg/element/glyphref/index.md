@@ -1,13 +1,8 @@
 ---
 title: glyphRef
 slug: Web/SVG/Element/glyphRef
-tags:
-  - Conteúdo de Texto SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/glyphRef
 ---
+
 {{SVGRef}}
 
 O elemento `glyphRef` fornece um único glifo possível referenciando a substituição do {{ SVGElement("altGlyph") }}.

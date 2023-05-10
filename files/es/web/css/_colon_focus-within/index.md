@@ -1,14 +1,8 @@
 ---
 title: ':focus-within'
 slug: Web/CSS/:focus-within
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-  - pseudo-clases
-translation_of: Web/CSS/:focus-within
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:focus-within`** representa un elemento que ha recibido el foco o que _contiene_ un elemento que ha recibido el foco. En otras palabras, representa un elemento que en sí coincide con la pseudoclase {{cssxref(":focus")}} o tiene descendientes que coincidan con `:focus`. (Esto incluye descendientes en [shadow DOM](/es/docs/Web/Web_Components/Shadow_DOM))
@@ -69,13 +63,11 @@ input {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                               | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.focus-within")}}
+{{Compat}}
 
 ## Ver también
 

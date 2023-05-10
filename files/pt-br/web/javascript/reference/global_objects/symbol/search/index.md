@@ -1,8 +1,8 @@
 ---
 title: Symbol.search
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.search`** é um método conhecido por retornar o índice com uma string que corresponde a expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.search()")}}.

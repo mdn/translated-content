@@ -1,8 +1,8 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-translation_of: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 O **`IDBCursor`** é uma interface da [API IndexedDB](/pt-BR/docs/IndexedDB) que representa o [cursor](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.
@@ -42,8 +42,6 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
   - : Retorna a chave para o registro na posição do cursor. Se o cursor estiver fora do seu alcance, isso é definido como indefinido. A chave do cursor pode ser qualquer tipo de dados.
 
 ## Constantes
-
-{{ obsolete_header(25) }}
 
 > **Aviso:** These constants are no longer available. You should use the string constants directly instead. ({{ bug(891944) }})
 
@@ -94,4 +92,4 @@ function displayData() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

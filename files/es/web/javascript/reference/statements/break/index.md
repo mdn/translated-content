@@ -1,12 +1,9 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/break
 original_slug: Web/JavaScript/Referencia/Sentencias/break
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

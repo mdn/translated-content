@@ -58,4 +58,4 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 - {{HTMLElement("i")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

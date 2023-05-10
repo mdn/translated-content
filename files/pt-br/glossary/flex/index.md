@@ -1,7 +1,6 @@
 ---
 title: Flex
 slug: Glossary/Flex
-translation_of: Glossary/Flex
 original_slug: Glossario/Flex
 ---
 `flex` é um novo valor adicionado à propriedade {{cssxref("display")}}. Junto com o `inline-flex`, este valor faz com que o elemento aplicado seja um {{glossary("flex container")}}, e seus filhos se transformem então em {{glossary("flex item")}}.Os itens então farão parte de um layout flex, e todas as propriedades definidas no CSS Flexbox poderão ser aplicadas.

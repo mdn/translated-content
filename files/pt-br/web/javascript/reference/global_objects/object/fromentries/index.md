@@ -1,8 +1,8 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 O método **`Object.fromEntries()`** transforma uma lista de pares chave-valor em um objeto.

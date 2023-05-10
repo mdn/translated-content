@@ -78,10 +78,6 @@ _這個介面繼承了 {{domxref("Node")}} 以及 {{domxref("EventTarget")}} 介
 - {{domxref("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
-The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
-
-{{page("/en-US/docs/Web/API/ParentNode","Properties")}}
-
 ### HTML 文件擴充
 
 _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("HTMLDocument")}} 介面，或是來自 `Document` 從 HTML5 之後擴充的屬性。_
@@ -156,9 +152,9 @@ _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("
 - {{domxref("Document.oncut")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`cut`](/zh-TW/docs/Web/API/Element/cut_event) event.
 - {{domxref("Document.onfullscreenchange")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) event is raised.
 - {{domxref("Document.onfullscreenerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the [`fullscreenerror`](/zh-TW/docs/Web/API/Document/fullscreenerror_event) event is raised.
+  - : Is an event handler representing the code to be called when the [`fullscreenerror`](/zh-TW/docs/Web/API/Document/fullscreenerror_event) event is raised.
 - {{domxref("Document.onpaste")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`paste`](/zh-TW/docs/Web/API/Element/paste_event) event.
 - {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
@@ -168,13 +164,9 @@ _**`window.document`** 物件的部分屬性繼承自 HTML 文件的 {{domxref("
 - {{domxref("Document.onreadystatechange")}}
   - : Represents the event handling code for the [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event.
 - {{domxref("Document.onselectionchange")}} {{experimental_inline}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("selectionchange")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`selectionchange`](/zh-TW/docs/Web/API/Document/selectionchange_event) event is raised.
 - {{domxref("Document.onwheel")}} {{non-standard_inline}}
   - : Represents the event handling code for the [`wheel`](/zh-TW/docs/Web/API/Element/wheel_event) event.
-
-_此介面繼承了 {{domxref("GlobalEventHandlers")}} 的事件處理器：_
-
-{{Page("/zh-TW/docs/Web/API/GlobalEventHandlers", "屬性")}}
 
 ## 方法
 

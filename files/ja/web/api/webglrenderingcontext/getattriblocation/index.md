@@ -32,10 +32,7 @@ gl.getAttribLocation(program, 'vColor');
 
 ## 仕様策定状況
 
-| Specification                                                                                            | Status                               | Comment                       |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "getAttribLocation")}}                                 | {{Spec2('WebGL')}}             | 初回定義                      |
-| {{SpecName('OpenGL ES 2.0', "glGetAttribLocation.xml", "glGetAttribLocation")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ |
+{{Specifications}}
 
 ## ブラウザーの対応
 

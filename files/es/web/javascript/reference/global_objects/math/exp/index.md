@@ -1,9 +1,9 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/exp
 ---
+
 {{JSRef}}La función **Math.exp()** devuelve `ex`, donde `x` es el argumento, y `e` es {{jsxref("Math.E", "El número de Euler (también conocido como la constante de Napier)", "", 1)}}, la base de los algoritmos naturales.
 
 ## Sintaxis
@@ -37,16 +37,11 @@ Math.exp(1);  // 2.718281828459045
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario                                          |
-| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.exp")}}
+{{Compat}}
 
 ## Ve también
 

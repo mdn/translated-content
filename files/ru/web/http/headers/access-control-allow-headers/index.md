@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 Заголовок ответа **`Access-Control-Allow-Headers`** используется в ответ на {{glossary("preflight request")}}, чтобы указать, какие заголовки HTTP могут использоваться во время фактического запроса.

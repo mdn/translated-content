@@ -7,6 +7,7 @@ tags:
   - Справка
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 Отступы [margin-top](/ru/docs/Web/CSS/margin-top) и [margin-bottom](/ru/docs/Web/CSS/margin-bottom) иногда объединяются в один, с размером равным наибольшему из них (или размеру одного, если они равны).

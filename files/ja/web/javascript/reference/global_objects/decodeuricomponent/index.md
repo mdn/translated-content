@@ -68,9 +68,7 @@ decodeQueryParam('search+query%20%28correct%29');
 
 ## 仕様
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-decodeuricomponent-encodeduricomponent', 'decodeURIComponent')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

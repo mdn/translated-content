@@ -1,13 +1,8 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemref
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemref`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 사용하면 {{htmlattrxref("itemscope")}} 특성을 가진 요소 바깥의 속성도 아이템과 연결할 수 있습니다.
@@ -58,7 +53,7 @@ translation_of: Web/HTML/Global_attributes/itemref
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemref")}}
+{{Compat}}
 
 ## 같이 보기
 

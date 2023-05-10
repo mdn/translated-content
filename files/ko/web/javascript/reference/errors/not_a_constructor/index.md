@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

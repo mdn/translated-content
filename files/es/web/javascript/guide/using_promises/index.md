@@ -1,15 +1,9 @@
 ---
 title: Usar promesas
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Asíncrono
-  - Guía
-  - Intermedio
-  - Promesa
-  - Promesas
-translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Una {{jsxref("Promise")}} (promesa en castellano) es un objeto que representa la terminación o el fracaso de una operación asíncrona. Dado que la mayoría de las personas consumen `promises` ya creadas, esta guía explicará primero cómo consumirlas, y luego cómo crearlas.
@@ -190,7 +184,7 @@ async function foo() {
 }
 ```
 
-Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions).
+Se construye sobre `promesas`, por ejemplo, `hazAlgo()` es la misma función que antes. Puedes leer más sobre la sintaxis [aquí](https://web.dev/async-functions/).
 
 Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callback, capturando todos los errores, incluso excepciones lanzadas y errores de programación. Esto es esencial para la composición funcional de operaciones asíncronas.
 
@@ -366,7 +360,7 @@ Nota que `() => x` es un atajo para `() => { return x; }`.
 
 Ahora tenemos una cadena determinística simple con un manejador de error adecuado.
 
-El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/es/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Vea también
 

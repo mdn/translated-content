@@ -4,6 +4,7 @@ slug: Glossary/Vendor_Prefix
 translation_of: Glossary/Vendor_Prefix
 original_slug: Глоссарий/Vendor_Prefix
 ---
+
 Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties and JavaScript APIs, so developers can experiment with new ideas while—in theory—preventing their experiments from being relied upon and then breaking web developers' code during the standardization process. Developers should wait to include the unprefixed property until browser behavior is standardized.
 
 > **Примечание:** Browser vendors are working to stop using vendor prefixes for experimental features. Web developers have been using them on production Web sites, despite their experimental nature. This has made it more difficult for browser vendors to ensure compatibility and to work on new features; it's also been harmful to smaller browsers who wind up forced to add other browsers' prefixes in order to load popular web sites.
@@ -64,7 +65,5 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 ## Learn more
 
 ### General knowledge
-
-- {{Interwiki("wikipedia", "CSS_hack#Browser_prefixes", "Vendor prefix")}} on Wikipedia
 
 {{QuickLinksWithSubpages("/en-US/docs/Glossary")}}

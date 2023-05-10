@@ -16,6 +16,7 @@ tags:
   - WebVR
 translation_of: Web/API/VRDisplay
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`VRDisplay`** interface of the [WebVR API](/ru/docs/Web/API/WebVR_API) represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.
@@ -69,9 +70,9 @@ An array of all connected VR Devices can be returned by invoking the {{domxref("
 
 ### Obsolete methods
 
-- {{domxref("VRDisplay.getImmediatePose()")}} {{obsolete_inline}}
+- {{domxref("VRDisplay.getImmediatePose()")}}
   - : Returns a {{domxref("VRPose")}} object defining the current pose of the `VRDisplay`, with no prediction applied. This is no longer needed, and has been removed from the spec.
-- {{domxref("VRDisplay.hardwareUnitId")}} {{obsolete_inline}}
+- {{domxref("VRDisplay.hardwareUnitId")}}
   - : Returns a {{domxref("DOMString")}} defining the shared ID of the display, and any other devices that are part of that hardware set (e.g. controllers). This is no longer needed, and has been removed from the spec. Displays now use {{domxref("VRDisplay.displayId")}}, and corresponsing controllers will now return the same ID under {{domxref("Gamepad.displayId")}}.
 
 ## Examples

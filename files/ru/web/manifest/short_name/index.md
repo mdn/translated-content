@@ -7,6 +7,7 @@ tags:
   - short-name
 translation_of: Web/Manifest/short_name
 ---
+
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
 
 <table class="fullwidth-table standard-table">

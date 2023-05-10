@@ -1,9 +1,9 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-translation_of: Web/API/GlobalEventHandlers/onblur
 original_slug: Web/API/GlobalEventHandlers/onblur
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propiedad **onblur** retorna el código del manejador de evento onBlur, si existe, en el elemento actual.
@@ -74,8 +74,6 @@ El evento blur es generado cuando un elemento pierde el foco.
 
 A diferencia de MSIE --en el cual la mayoría de tipos de elementos reciben el evento blur-- la mayoría de elementos de los navegadores basados en Gecko NO funcionan con este evento.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}} | {{Spec2('HTML WHATWG')}} |               |
+{{Specifications}}

@@ -1,8 +1,8 @@
 ---
 title: Document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-translation_of: Web/API/Document/getElementsByName
 ---
+
 {{APIRef("DOM")}}
 
 Returns a nodelist collection with a given {{domxref("element.name","name")}} in the (X)HTML document.

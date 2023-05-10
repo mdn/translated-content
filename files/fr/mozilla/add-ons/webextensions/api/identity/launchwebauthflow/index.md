@@ -71,13 +71,13 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+{{Compat}}
 
 ## Exemples
 
-Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
+Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
 
 ```js
 function validate(redirectURL) {

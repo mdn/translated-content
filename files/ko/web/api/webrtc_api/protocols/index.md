@@ -1,15 +1,15 @@
 ---
 title: WebRTC 프로토콜 소개
 slug: Web/API/WebRTC_API/Protocols
-translation_of: Web/API/WebRTC_API/Protocols
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 이 글은 WebRTC API에 대한 프로토콜을 소개하기 위해 작성 되었습니다.
 
 ## ICE
 
-[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) 는 브라우저가 peer를 통한 연결이 가능하도록 하게 해주는 프레임워크입니다. Peer A에서 Peer B까지 단순하게 연결하는 것으로는 작동하지 않는 것에 대한 이유는 많이 있습니다. 연결을 시도하는 방화벽을 통과해야하기도 하고, 단말에 퍼블릭 IP가 없다면 유일한 주소값을 할당해야할 필요도 있으며 라우터가 peer간의 직접연결을 허용하지 않을 때에는 데이터를 릴레이해야할 경우도 있습니다. ICE는 이러한 작업을 수행하기 위해 STUND과 TURN 서버 둘다 혹은 하나의 서버를 사용합니다.
+[Interactive Connectivity Establishment (ICE)](http://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment) 는 브라우저가 peer를 통한 연결이 가능하도록 하게 해주는 프레임워크입니다. Peer A에서 Peer B까지 단순하게 연결하는 것으로는 작동하지 않는 것에 대한 이유는 많이 있습니다. 연결을 시도하는 방화벽을 통과해야하기도 하고, 단말에 퍼블릭 IP가 없다면 유일한 주소값을 할당해야할 필요도 있으며 라우터가 peer간의 직접연결을 허용하지 않을 때에는 데이터를 릴레이해야할 경우도 있습니다. ICE는 이러한 작업을 수행하기 위해 STUN과 TURN 서버 둘다 혹은 하나의 서버를 사용합니다.
 
 ## STUN
 
@@ -17,7 +17,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 클라이언트는 인터넷을 통해 클라이언트의 공개주소와 라우터의 NAT 뒤에 있는 클라이언트가 접근가능한지에 대한 답변을 위한 요청을 STUN서버에 보냅니다.
 
-![An interaction between two users of a WebRTC application involving a STUN server.](https://mdn.mozillademos.org/files/6115/webrtc-stun.png)
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
 ## NAT
 
@@ -31,7 +31,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) 은 TURN 서버와 연결하고 모든 정보를 그 서버에 전달하는 것으로 Symmetric NAT 제한을 우회하는 것을 의미합니다. 이를 위해 TURN 서버와 연결을 한 후 모든 peer들에게 저 서버에 모든 패킷을 보내고 다시 나에게 전달해달라고 해야 합니다. 이것은 명백히 오버헤드가 발생하므로 이 방법은 다른 대안이 없을 경우만 사용하게 됩니다.
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://mdn.mozillademos.org/files/6117/webrtc-turn.png)
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
 ## SDP
 

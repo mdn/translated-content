@@ -9,6 +9,7 @@ tags:
   - Справка
 translation_of: Web/HTTP/Status/417
 ---
+
 {{HTTPSidebar}}
 
 Код ошибки HTTP **`417 Expectation Failed`** указывает на то, что ожидание, указанное в {{HTTPHeader("Expect")}}, не может быть выполнено.

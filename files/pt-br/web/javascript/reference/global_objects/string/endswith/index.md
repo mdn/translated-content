@@ -1,15 +1,8 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - endsWith()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
+
 {{JSRef}}
 
 O método **`endsWith()`** indica se uma string termina com determinados caracteres, retornando `true` ou `false`.

@@ -1,8 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}{{SeeCompatTable}}El objeto WebSocket provee la API para la creación y administración de una conexión [WebSocket](/es/docs/Web/API/WebSockets_API)a un servidor, así como también para enviar y recibir datos en la conexión.El constructor de WebSocket acepta un parámetro requerido y otro opcional.
 
 ```
@@ -88,7 +88,7 @@ void close(
 - `SYNTAX_ERR`
   - : La `reason` cadena es demasiado larga o continene caracteres no validos.
 
-> **Nota:** En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.
+> **Nota:** En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 ### send()
 
@@ -120,9 +120,9 @@ void send(
 - `SYNTAX_ERR`
   - : La data tiene caracteres no válidos que no se pueden decodificar.
 
-> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
+> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en Gecko 6.0; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en Gecko 8.0.
 >
-> A partir de {{Gecko("11.0")}}, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
+> A partir de Gecko 11.0, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
 
 ## Ejemplo
 
@@ -143,13 +143,11 @@ socket.addEventListener('message', function (event) {
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}} | {{Spec2("Websockets")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Referencias adicionales
 

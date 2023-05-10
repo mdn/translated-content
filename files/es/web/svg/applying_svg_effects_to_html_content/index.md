@@ -1,16 +1,9 @@
 ---
 title: Aplicación de efectos de SVG para el contenido HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - Firefox 3.5
-  - Firefox 4.0
-  - HTML
-  - HTML 5
-  - SVG
-  - XHTML
 original_slug: Applying_SVG_effects_to_HTML_content
 ---
+
 Aplicación de efectos de SVG para el contenido HTML.
 
 Firefox 3.5 introduce soporte para usar SVG como un componente de estilos CSS para aplicar efectos de SVG para el contenido HTML.
@@ -63,7 +56,7 @@ En realidad, de aplicar el efecto SVG a XHTML o HTML se hace simplemente asignar
 
 En este ejemplo se incrusta un iframe que contiene el sitio web de Mozilla.org, que se representa con la máscara que se le aplica.
 
-[View this example live](/@api/deki/files/3213/=maskdemo.xhtml).
+[View this example live](maskdemo.xhtml).
 
 ### Ejemplo: Recorte
 
@@ -88,7 +81,7 @@ Tenga en cuenta también que puede realizar cambios en el SVG en tiempo real y v
     circle.r.baseVal.value = 0.40 - circle.r.baseVal.value;
 ```
 
-[View this example live](/@api/deki/files/3214/=clipdemo.xhtml). El ejemplo incluye un botón, puede hacer clic para cambiar la ruta de clip y ver que el cambio surta efecto.
+[View this example live](clipdemo.xhtml). El ejemplo incluye un botón, puede hacer clic para cambiar la ruta de clip y ver que el cambio surta efecto.
 
 ### Ejemplo: Filtrar
 
@@ -129,7 +122,7 @@ Los cinco filtros se aplican mediante el siguiente código CSS:
   </style>
 ```
 
-[View this example live](/@api/deki/files/3217/=filterdemo.xhtml).
+[View this example live](filterdemo.xhtml).
 
 ## Uso de referencias externas
 

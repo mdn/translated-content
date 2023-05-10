@@ -1,15 +1,8 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - Reference
-  - header
-  - referer
-  - referrer
-translation_of: Web/HTTP/Headers/Referer
-browser-compat: http.headers.Referer
 ---
+
 {{HTTPSidebar}}
 
 **`Referer`** 요청 헤더는 현재 요청을 보낸 페이지의 절대 혹은 부분 주소를 포함합니다. 만약 링크를 타고 들어왔다면 해당 링크를 포함하고 있는 페이지의 주소가, 다른 도메인에 리소스 요청을 보내는 경우라면 해당 리소스를 사용하는 페이지의 주소가 이 헤더에 포함됩니다.`Referer` 헤더는 사람들이 어디로부터 와서 방문 중인지를 인식할 수 있도록 해주며 해당 데이터는 예를 들어, 분석, 로깅, 혹은 캐싱 최적화에 사용될 수도 있습니다.

@@ -1,8 +1,8 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
-translation_of: Web/API/Window/applicationCache
 ---
+
 {{APIRef}}
 
 ## Sumário
@@ -21,7 +21,11 @@ cache = window.applicationCache
 
 ## Especificação
 
-- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
+Não faz parte de denhuma especificação.
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

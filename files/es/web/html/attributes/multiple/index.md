@@ -1,11 +1,6 @@
 ---
-title: "HTML el atributo: multiple"
+title: 'HTML el atributo: multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Atributos
-  - Resticción de validación
-  - atributo
-translation_of: Web/HTML/Attributes/multiple
 original_slug: Web/HTML/Atributos/multiple
 ---
 
@@ -175,10 +170,7 @@ Hay varias formas de seleccionar varias opciones en un elemento `<select>` con u
 
 ## Especificaciones
 
-| Especificación                                                                     | Estado                     | Comentario |
-| ---------------------------------------------------------------------------------- | -------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'Atributo multiple')}} | {{ Spec2('HTML WHATWG') }} |            |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'Atributo multiple')}}   | {{ Spec2('HTML5 W3C') }}   |            |
+{{Specifications}}
 
 ## Problemas de accesibilidad
 

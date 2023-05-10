@@ -3,7 +3,7 @@ title: '<dl>: 説明リスト要素'
 slug: Web/HTML/Element/dl
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<dl>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。
 
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/dl
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("group")}}, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, {{ARIARole("none")}}, {{ARIARole("presentation")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
       </td>
     </tr>
     <tr>

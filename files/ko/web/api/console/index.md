@@ -1,15 +1,8 @@
 ---
 title: console
 slug: Web/API/console
-tags:
-  - API
-  - Debugging
-  - Interface
-  - Reference
-  - web console
-browser-compat: api.console
-translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 **`console`** 객체는 브라우저의 디버깅 콘솔(Firefox [웹 콘솔](/ko/docs/Tools/Web_Console) 등)에 접근할 수 있는 메서드를 제공합니다. 동작 방식은 브라우저마다 다르지만, 사실상 표준으로 여겨지는 기능도 여럿 있습니다.

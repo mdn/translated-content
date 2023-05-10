@@ -50,10 +50,7 @@ window.onafterprint = (event) => {
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-|                                                                  |                                  |
-| {{SpecName('HTML WHATWG', '#event-afterprint')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

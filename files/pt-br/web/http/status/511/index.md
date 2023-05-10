@@ -1,13 +1,8 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
-tags:
-  - Código de Estado HTTP
-  - Erro no servidor
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Status/511
 ---
+
 {{HTTPSidebar}}
 
 O código de erro HTTP para o cliente **`511 Network Authentication Required`** indica que o cliente precisa realizar uma autenticação para utilizar a rede.

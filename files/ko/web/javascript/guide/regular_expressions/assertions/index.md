@@ -1,9 +1,9 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 original_slug: Web/JavaScript/Guide/정규식/Assertions
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Assertions에는 행이나 단어의 시작 · 끝을 나타내는 경계와 (앞, 뒤 읽고 조건식을 포함한) 어떤 식 으로든 매치가 가능한 것을 나타내는 다른 패턴이 포함됩니다.
@@ -287,7 +287,7 @@ let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

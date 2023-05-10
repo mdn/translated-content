@@ -1,8 +1,8 @@
 ---
 title: 'Reason: CORS request not HTTP'
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## Razón

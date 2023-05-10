@@ -1,7 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 ---
 {{DefaultAPISidebar("Web Audio API")}}
 
@@ -60,7 +59,7 @@ Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반�
 - {{domxref("AudioContext")}}
   - : **`AudioContext`** 인터페이스는 오디오 모듈이 서로 연결되어 구성된 오디오 프로세싱 그래프를 표현하며, 각각의 그래프는 {{domxref("AudioNode")}}로 표현됩니다. `AudioContext`는 자신이 가지고 있는 노드의 생성과 오디오 프로세싱 혹은 디코딩의 실행을 제어합니다. 어떤 작업이든 시작하기 전에 `AudioContext`를 생성해야 합니다. 모든 작업은 컨텍스트 내에서 이루어집니다.
 - {{domxref("AudioNode")}}
-  - : **`AudioNode`\*\*** \*\*인터페이스는 오디오 소스({{HTMLElement("audio")}}나 {{HTMLElement("video")}} 요소), 오디오 목적지, 중간 처리 모듈({{domxref("BiquadFilterNode")}}이나 {{domxref("GainNode")}})과 같은 오디오 처리 모듈을 나타냅니다.
+  - : **`AudioNode`** 인터페이스는 오디오 소스({{HTMLElement("audio")}}나 {{HTMLElement("video")}} 요소), 오디오 목적지, 중간 처리 모듈({{domxref("BiquadFilterNode")}}이나 {{domxref("GainNode")}})과 같은 오디오 처리 모듈을 나타냅니다.
 - {{domxref("AudioParam")}}
   - : **`AudioParam`** 인터페이스는 {{domxref("AudioNode")}}중 하나와 같은 오디오 관련 파라미터를 나타냅니다. 이는 특정 값 또는 값 변경으로 세팅되거나, 특정 시간에 발생하고 특정 패턴을 따르도록 스케쥴링할 수 있습니다.
 - {{domxref("AudioParamMap")}}
@@ -75,7 +74,7 @@ Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반�
 Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터페이스입니다.
 
 - {{domxref("AudioScheduledSourceNode")}}
-  - : **`AudioScheduledSourceNode`**는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
+  - : **`AudioScheduledSourceNode`** 는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.
 - {{domxref("OscillatorNode")}}
   - : **`OscillatorNode`** 인터페이스는 삼각파 또는 사인파와 같은 주기적 파형을 나타냅니다. 이것은 주어진 주파수의 파동을 생성하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.
 - {{domxref("AudioBuffer")}}
@@ -83,9 +82,9 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - {{domxref("AudioBufferSourceNode")}}
   - : **`AudioBufferSourceNode`** 인터페이스는 {{domxref("AudioBuffer")}}에 저장된 메모리상의 오디오 데이터로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : **`MediaElementAudio`\*\***`SourceNode`\*\* 인터페이스는 {{ htmlelement("audio") }} 나 {{ htmlelement("video") }} HTML 엘리먼트로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.
+  - : **`MediaElementAudioSourceNode`** 인터페이스는 {{ htmlelement("audio") }} 나 {{ htmlelement("video") }} HTML 엘리먼트로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : **`MediaStreamAudio`\*\***`SourceNode`\*\* 인터페이스는 [WebRTC](/ko/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}}(웹캠, 마이크 혹은 원격 컴퓨터에서 전송된 스트림)으로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.
+  - : **`MediaStreamAudioSourceNode`** 인터페이스는 [WebRTC](/ko/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}}(웹캠, 마이크 혹은 원격 컴퓨터에서 전송된 스트림)으로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.
 - {{domxref("MediaStreamTrackAudioSourceNode")}}
   - : {{domxref("MediaStreamTrackAudioSourceNode")}} 유형의 노드는 데이터가 {{domxref("MediaStreamTrack")}}로부터 오는 오디오 소스를 표현합니다. 이 노드를 생성하기 위해 {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} 메서드를 사용하여 이 노드를 생성할 때, 여러분은 어떤 트랙을 사용할 지 명시합니다. 이것은 `MediaStreamAudioSourceNode`보다 더 많은 제어를 제공합니다.
 
@@ -96,7 +95,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - {{domxref("BiquadFilterNode")}}
   - : **`BiquadFilterNode`** 인터페이스는 간단한 하위 필터를 나타냅니다. 이것은 여러 종류의 필터나 톤 제어 장치 혹은 그래픽 이퀄라이저를 나타낼 수 있는 {{domxref("AudioNode")}}입니다. `BiquadFilterNode`는 항상 단 하나의 입력과 출력만을 가집니다.
 - {{domxref("ConvolverNode")}}
-  - : **`Convolver`\*\***`Node`\*\* 인터페이스는 주어진 {{domxref("AudioBuffer")}}에 선형 콘볼루션을 수행하는 {{domxref("AudioNode")}}이며, 리버브 이펙트를 얻기 위해 자주 사용됩니다.
+  - : **`ConvolverNode`** 인터페이스는 주어진 {{domxref("AudioBuffer")}}에 선형 콘볼루션을 수행하는 {{domxref("AudioNode")}}이며, 리버브 이펙트를 얻기 위해 자주 사용됩니다.
 - {{domxref("DelayNode")}}
   - : **`DelayNode`** 인터페이스는 지연선을 나타냅니다. 지연선은 입력 데이터가 출력에 전달되기까지의 사이에 딜레이를 발생시키는 {{domxref("AudioNode")}} 오디오 처리 모듈입니다.
 - {{domxref("DynamicsCompressorNode")}}
@@ -117,7 +116,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 - {{domxref("AudioDestinationNode")}}
   - : **`AudioDestinationNode`** 인터페이스는 주어진 컨텍스트 내의 오디오 소스의 최종 목적지를 나타냅니다. 주로 기기의 스피커로 출력할 때 사용됩니다.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : **`MediaStreamAudio`\*\***`DestinationNode`\*\* 인터페이스는 단일 `AudioMediaStreamTrack` 을 가진 [WebRTC](/ko/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}}로 구성된 오디오 목적지를 나타내며, 이는 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}에서 얻은 {{domxref("MediaStream")}}과 비슷한 방식으로 사용할 수 있습니다. 이것은 오디오 목적지 역할을 하는 {{domxref("AudioNode")}}입니다.
+  - : **`MediaStreamAudioDestinationNode`** 인터페이스는 단일 `AudioMediaStreamTrack` 을 가진 [WebRTC](/ko/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}}로 구성된 오디오 목적지를 나타내며, 이는 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}에서 얻은 {{domxref("MediaStream")}}과 비슷한 방식으로 사용할 수 있습니다. 이것은 오디오 목적지 역할을 하는 {{domxref("AudioNode")}}입니다.
 
 ### 데이터 분석 및 시각화
 
@@ -195,9 +194,7 @@ Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터�
 
 ## 브라우저 호환성
 
-### AudioContext
-
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 같이 보기
 

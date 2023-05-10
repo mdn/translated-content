@@ -3,7 +3,7 @@ title: '<dd>: 詳細説明要素'
 slug: Web/HTML/Element/dd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<dd>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リスト要素 ({{HTMLElement("dl")}}) 内で、その前の用語 ({{HTMLElement("dt")}}) の説明、定義、値などを示します。
 
@@ -37,7 +37,7 @@ slug: Web/HTML/Element/dd
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/definition_role">definition</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

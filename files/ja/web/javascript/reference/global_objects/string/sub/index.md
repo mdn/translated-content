@@ -40,9 +40,7 @@ console.log('これは' + subText.sub() + 'の見え方を示しています。'
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -50,7 +50,7 @@ API références : [HTML input element](/fr/docs/Web/HTML/Element/input/file) | 
 
 ## Ouverture de fichiers dans une extension avec glisser-déposer
 
-L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements [dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_, [dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et [drop](/fr/docs/Web/Events/drop)  _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
+L'API Web Drag and Drop offre une alternative à l'utilisation d'un sélecteur de fichiers. Pour utiliser cette méthode, établissez une zone de stockage qui correspond à votre interface utilisateur, puis ajoutez les récepteurs pour les évènements [dragenter](/fr/docs/Web/Events/dragenter) _(entrer)_, [dragover](/fr/docs/Web/Events/dragover) _(glisser)_, et [drop](/fr/docs/Web/Events/drop) _(déposer)_. Dans le gestionnaire de l'événement "déposer", votre code peut accéder à tout fichier déposé par l'utilisateur à partir de l'objet offert par la propriété dataTransfer en utilisant [DataTransfer.files](/fr/docs/Web/API/DataTransfer/files). Votre code peut alors accéder aux fichiers et les traiter en utilisant le [DOM File API](/fr/docs/Web/API/File).
 
 Exemple : [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 Guides : [Using files from web applications](/fr/docs/Using_files_from_web_applications) | [File drag and drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop)
@@ -124,14 +124,14 @@ async function removeStoredImages(storedImages) {
 }
 ```
 
-`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données “stored-images”  et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
+`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données “stored-images” et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
 
 Notez l'utilisation de [URL.revokeObjectURL()](/fr/docs/Web/API/URL/revokeObjectURL) pour révoquer explicitement l'URL du blob. Cela permet de libérer la mémoire allouée à l'URL. Si cela n'est pas fait, la mémoire n'est pas libérée jusqu'à ce que la page sur laquelle l'URL a été créée soit fermée. Si l'URL a été créée dans la page d'arrière-plan d'une extension, celle-ci n'est pas déchargée jusqu'à ce que l'extension soit désactivée, désinstallée ou rechargée, ce qui risque d'affecter inutilement les performances du navigateur. Si l'URL est créée dans la page d'une extension (nouvel onglet, fenêtre contextuelle ou barre latérale), la mémoire est libérée lorsque la page est fermée, mais il demeure de bonne pratique de révoquer l'URL lorsqu'elle n'est plus nécessaire.
 
 Une fois que l'URL du blob a été révoquée, toute tentative de la charger entraînera une erreur. Par exemple, si l'URL du blob était utilisée comme attribut `SRC` d'un `IMG` tag, l'image ne sera pas chargée et ne sera pas visible. Il est donc recommandé de supprimer les URL de blobs révoquées des éléments HTML générés après leur révocation.
 
 Exemple : [Store Collected Images](https://github.com/mdn/webextensions-examples/tree/master/store-collected-images/webextension-plain)
-API Référence :  [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
+API Référence : [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > **Note :** Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/API_IndexedDB) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/Add-ons/WebExtensions/API/Storage).
 
@@ -146,7 +146,7 @@ Vous avez deux options :
 
 Pour ajouter le fichier ou le blob, vous souhaitez que l'application native utilise [JSON.stringify()](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
 
-Pour utiliser cette méthode, l'extension doit demander la [permission](fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
+Pour utiliser cette méthode, l'extension doit demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "nativeMessaging" dans son fichier manifest.json. Réciproquement, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ "allowed_extensions" de l'application "manifest".
 
 Exemple : [Native Messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) (illustre simplement une messagerie)
 Guide : [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging)

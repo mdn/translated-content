@@ -1,15 +1,9 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-tags:
-  - Elemento
-  - HTML
-  - Media
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/source
 original_slug: Web/HTML/Elemento/source
 ---
+
 El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements).
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
@@ -110,13 +104,11 @@ Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-source-element', '&lt;source&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compaibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.source")}}
+{{Compat}}
 
 ## Ver también
 
@@ -124,4 +116,4 @@ Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/
 - Elemento {{HTMLElement("audio")}}
 - Elemento {{HTMLElement("video")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -3,6 +3,7 @@ title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
 translation_of: Web/HTTP/Status/426
 ---
+
 {{HTTPSidebar}}
 
 Код ответа на HTTP **`426 Upgrade Required`** указывает, что сервер отказывается выполнять запрос с использованием текущего протокола, но может захотеть сделать это после того, как клиент обновится до другого протокола.

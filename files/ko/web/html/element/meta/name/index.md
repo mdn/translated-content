@@ -1,16 +1,9 @@
 ---
 title: 표준 메타데이터 이름
 slug: Web/HTML/Element/meta/name
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
-  - 메타데이터
-translation_of: Web/HTML/Element/meta/name
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{htmlelement("meta")}} 요소는 {{htmlattrxref("name", "meta")}} 특성을 메타데이터 이름으로, {{htmlattrxref("content", "meta")}} 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
 
@@ -135,4 +128,4 @@ CSS {{cssxref("@viewport")}} @-규칙
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meta.name")}}
+{{Compat}}

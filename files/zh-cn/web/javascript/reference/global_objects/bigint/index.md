@@ -215,7 +215,7 @@ JSON.stringify(BigInt(1));
 // '"1"'
 ```
 
-## 例子
+## 示例
 
 ### Calculating Primes
 

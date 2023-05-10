@@ -1,14 +1,8 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}{{SeeCompatTable}}
 
 Devuelve los ajustes de do-not-track del usuario. Esto es `"1"` si el usuario ha solicitado no ser rastreado por sitios web, contenidos, o anuncios.
@@ -30,13 +24,11 @@ console.log(navigator.doNotTrack);
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Tracking", "#widl-Navigator-doNotTrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.doNotTrack")}}
+{{Compat}}
 
 ## Vea también
 

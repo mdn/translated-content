@@ -1,9 +1,9 @@
 ---
 title: 'Escrevendo um servidor WebSocket em C #'
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 original_slug: WebSockets/Writing_WebSocket_server
 ---
+
 ## Introdução
 
 Se você quiser usar uma API WebSocket, você precisara ter um servidor. Neste artigo vou mostrar como escrever um WebSocket em C#. Você pode fazer isso em qualquer linguagem server-side, mas para manter as coisas simples e mais compreensíveis eu escolhi uma linguagem Microsoft.
@@ -36,8 +36,8 @@ Métodos:
 
 Veja como usar o que aprendemos:
 
-```cpp
-​using System.Net.Sockets;
+```cs
+using System.Net.Sockets;
 using System.Net;
 using System;
 

@@ -1,20 +1,11 @@
 ---
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
-browser-compat: javascript.builtins.Array.find
 ---
+
 {{JSRef}}
 
-**`find()`\*\*** **메서드는 주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값\*\*을 반환합니다. 그런 요소가 없다면 {{jsxref("undefined")}}를 반환합니다.
+**`find()`** 메서드는 주어진 판별 함수를 만족하는 **첫 번째 요소**의 **값**을 반환합니다. 그런 요소가 없다면 {{jsxref("undefined")}}를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 
@@ -33,8 +24,9 @@ browser-compat: javascript.builtins.Array.find
 ### 매개변수
 
 - `callback`
-  - : 배열의 각 값에 대해 실행할 함수. 아래의 세 인자를 받습니다._ `element`
-    _ : 콜백함수에서 처리할 현재 요소.
+  - : 배열의 각 값에 대해 실행할 함수. 아래의 세 인자를 받습니다.
+    - `element`
+      - : 콜백함수에서 처리할 현재 요소.
     - `index`{{optional_inline}}
       - : 콜백함수에서 처리할 현재 요소의 인덱스.
     - `array`{{optional_inline}}

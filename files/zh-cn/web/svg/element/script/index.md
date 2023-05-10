@@ -42,7 +42,7 @@ slug: Web/SVG/Element/script
 
 示例输出：
 
-{{EmbedLiveSample("Example",150,165)}}
+{{EmbedLiveSample("示例",150,165)}}
 
 ## 属性
 

@@ -1,8 +1,8 @@
 ---
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
+
 O CSS Grid Layout foi projetado para funcionar junto com outras partes do CSS, como parte de um sistema completo para fazer o layout. Neste guia, explicarei como uma grade se encaixa com outras técnicas que você já pode estar usando.
 
 ## Grid e flexbox
@@ -372,7 +372,7 @@ If we remove `position: absolute` from the rules for `.box3` you can see how it 
 
 If the absolutely positioned child has a grid container as a parent but that container does not create a new positioning context, then it is taken out of flow as in the previous example. The positioning context will be whatever element creates a positioning context as is common to other layout methods. In our case, if we remove `position: relative` from the wrapper above, positioning context is from the viewport, as shown in this image.
 
-![Image of grid container as parent](https://mdn.mozillademos.org/files/14661/2_abspos_example.png)
+![Image of grid container as parent](2_abspos_example.png)
 
 Once again the item no longer participates in the grid layout in terms of sizing or when other items are auto-placed.
 

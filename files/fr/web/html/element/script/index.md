@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/script
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<script>`** est utilisé pour intégrer ou faire référence à un script exécutable. Cela fait généralement référence à du code JavaScript mais ce peut également être un autre type de script (par exemple [WebGL](/fr/docs/Apprendre/WebGL)).
 

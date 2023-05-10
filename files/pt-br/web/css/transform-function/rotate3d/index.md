@@ -1,20 +1,16 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-tags:
-  - Função CSS
-  - Referencia
-  - Transformações CSS
-translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
 ---
+
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`rotate3d()`** define uma transformação que gira um elemento em torno de um eixo fixo no espaço 3D, sem deformá-lo. Seu resultado é um dado do tipo {{cssxref("&lt;transform-function&gt;")}}.
 
 No espaço 3D, rotações têm três graus de liberdade que, juntos, descrevem um único eixo de rotação. O eixo de rotação é definido por um vetor \[x, y, z] e passado pela origem (como definido pela propriedade {{ cssxref("transform-origin") }}). Se, como especificado, o vetor não for _normalizado_ (isto é, se a soma dos quadrados das suas três coordenadas não for 1), o {{glossary("user agent")}} irá normalizá-lo internamente. Um vetor não-normalizável, como o vetor nulo \[0, 0, 0], fará com que a rotação seja ignorada, mas sem invalidar toda a propriedade CSS.
 
-> **Note:** **Nota:** Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.
+> **Nota:** Diferente de rotações no plano 2D, a composição de rotações 3D normalmente não é comutativa. Em outras palavras, a ordem na qual as rotações são aplicadas impacta o resultado.
 
 ## Sintaxe
 

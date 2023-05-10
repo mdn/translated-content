@@ -1,8 +1,8 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 **`Expires`** 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다.

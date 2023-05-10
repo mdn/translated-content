@@ -1,15 +1,9 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Referencia
-  - Seleção
-translation_of: Web/API/Selection
 original_slug: Web/API/Seleção
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 Um objeto **`Selection`** representa um intervalo do texto selecionado pelo usuário ou a posição atual do cursor. Para obter o objeto Selection para inspecionar ou modificar, use {{DOMxRef("Window.getSelection()")}}.
@@ -94,13 +88,13 @@ var range  = selObj.getRangeAt(0);
 - `selObj` é um objeto selection
 - `range` é um objeto {{DOMxRef("Range")}}
 
-Como consta nas [Especificações da API de seleção](http://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
+Como consta nas [Especificações da API de seleção](https://www.w3.org/TR/selection-api/#h_note_15), a API foi inicialmente criada pela Netscape e usados multiplos intervalos, por instância, para permitir ao usuário selecionar uma coluna de uma {{HTMLElement("table")}}. Outros navegadores como Gecko não implementaram multiplos intervalos, e a especificação exige que a seleção sempre tenha um único intervalo.
 
 ### Seleção e foco de input
 
 Seleção e foco de input (indicado por {{DOMxRef("Document.activeElement")}}) tem uma relação complexa, que depende do navegador. Para um código compatível com vários navegadores, o melhor é manter os códigos separados.
 
-O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e {{WebKitBug("38696")}}).
+O Safari e o Chrome (ao contrário do Firefox) historicamente foca no elemento contendo a seleção quando a seleção é modificada programaticamente, mas isto pode mudar no futuro (veja [W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) e [WebKit bug 38696](https://webkit.org/b/38696)).
 
 ### Comportamento da API de Seleção em termos de edição e alterações de foco do host
 
@@ -167,4 +161,4 @@ Outras palavras chaves usadas nesta seção.
 
 - Gecko/Firefox provide additional features, available to chrome (internal and add-on) code only. These are defined in `nsISelectionPrivate`.
 - Mozilla source code: [`Selection.webidl`](https://searchfox.org/mozilla-central/source/dom/webidl/Selection.webidl)
-- {{DOMxRef("Selection.selectionLanguageChange()")}}{{Obsolete_Inline("gecko29")}} used to be exposed to the web content until Firefox 29
+- {{DOMxRef("Selection.selectionLanguageChange()")}} used to be exposed to the web content until Firefox 29

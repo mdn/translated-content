@@ -1,16 +1,9 @@
 ---
 title: Elementos block-level
 slug: Web/HTML/Block-level_elements
-tags:
-  - Desenvolvimento
-  - Guía
-  - HTML
-  - HTML5
-  - Iniciante
-  - Web
-translation_of: Web/HTML/Block-level_elements
 original_slug: Web/HTML/Elementos_block-level
 ---
+
 Elementos HTML **(Linguagem de marcação de hipertexto)** historicamente foram categorizados como “nível de bloco” ou [elementos “em linha”](/pt-BR/docs/HTML/Inline_elements). Um elemento em nível de bloco ocupa todo o espaço de seu elemento pai (container), criando assim um “bloco”. Este artigo ajuda a explicar o que isso significa.
 
 Navegadores normalmente mostram o elemento em nível de bloco com uma nova linha antes e depois do elemento. O exemplo a seguir demonstra a influência desse elemento em nível de bloco:
@@ -52,9 +45,9 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
 
 - {{ HTMLElement("address") }}
   - : Informação de contato.
-- {{ HTMLElement("article") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("article") }}
   - : Conteúdo do artigo.
-- {{ HTMLElement("aside") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("aside") }}
   - : Conteúdo lateral.
 - {{ HTMLElement("blockquote") }}
   - : Citação longa ("bloco").
@@ -70,19 +63,19 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Lista de descrição.
 - {{ HTMLElement("fieldset") }}
   - : Rótulo de conjunto de campos.
-- {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figcaption") }}
   - : Legenda da figura.
-- {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("figure") }}
   - : Groups media content with a caption (see {{ HTMLElement("figcaption") }}).
-- {{ HTMLElement("footer") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("footer") }}
   - : Section or page footer.
 - {{ HTMLElement("form") }}
   - : Input form.
 - {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
   - : Heading levels 1-6.
-- {{ HTMLElement("header") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("header") }}
   - : Section or page header.
-- {{ HTMLElement("hgroup") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("hgroup") }}
   - : Groups header information.
 - {{ HTMLElement("hr") }}
   - : Horizontal rule (dividing line).
@@ -98,7 +91,7 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Paragraph.
 - {{ HTMLElement("pre") }}
   - : Preformatted text.
-- {{ HTMLElement("section") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("section") }}
   - : Section of a web page.
 - {{ HTMLElement("table") }}
   - : Table.
@@ -106,7 +99,7 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Table footer.
 - {{ HTMLElement("ul") }}
   - : Unordered list.
-- {{ HTMLElement("video") }} {{ HTMLVersionInline(5) }}
+- {{ HTMLElement("video") }}
   - : Video player.
 
 ### Veja também

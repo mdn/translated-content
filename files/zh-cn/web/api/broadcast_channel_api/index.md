@@ -39,7 +39,7 @@ bc.postMessage('This is a test message.');
 
 ### 接收消息
 
-当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 {{event("message")}} 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
+当消息被发送之后，所有连接到该频道的 {{domxref("BroadcastChannel")}} 对象上都会触发 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件。该事件没有默认的行为，但是可以使用 {{domxref("BroadcastChannel.onmessage", "onmessage")}} 事件处理程序来定义一个函数来处理消息。
 
 ```js
 // 简单示例，用于将事件打印到控制台

@@ -1,9 +1,9 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/round
 ---
+
 {{JSRef}}La función **`Math.round()`**`retorna el valor de un número redondeado al entero más cercano.`
 
 ## Sumario
@@ -129,15 +129,11 @@ Math.ceil10(-59, 1);       // -50
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                   | Comentario                                          |
-| ------------------------------------------------------------------------ | ------------------------ | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}     | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.15', 'Math.round')}} | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-math.round', 'Math.round')}}     | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.round")}}
+{{Compat}}
 
 ## Véase también
 

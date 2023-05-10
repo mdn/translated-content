@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
 Метод **`Object.values()`** возвращает массив значений перечисляемых свойств объекта в том же порядке что и цикл {{jsxref("Statements/for...in", "for...in")}}. Разница между циклом и методом в том, что цикл перечисляет свойства и из цепочки прототипов.

@@ -1,11 +1,8 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-decoration
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`text-decoration`** se usa para establecer el formato de texto a subrayado (`underline`) y suprarrayado (`overline`), tachado (`line-through`) o parpadeo (`blink`). El subrayado y el suprarrayado son posicionados bajo el texto, mientras la línea a través de éste se posiciona por encima.
@@ -74,15 +71,11 @@ p.underover {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                                       | Comentarios                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformada a propiedad reducida. Soporte agregado para el valor de {{cssxref('text-decoration-style')}}. |
-| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}             | {{Spec2('CSS2.1')}}                     | Sin cambios significativos                                                                                             |
-| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                                 | {{Spec2('CSS1')}}                     | Definición inicial                                                                                                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration")}}
+{{Compat}}
 
 ## Véase también
 

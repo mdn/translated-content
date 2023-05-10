@@ -1,8 +1,8 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 O método **`getElementsByClassName()`** da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.

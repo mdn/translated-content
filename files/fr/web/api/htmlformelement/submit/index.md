@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLFormElement/submit
 
 {{APIRef("HTML DOM")}}
 
-La méthode  **`HTMLFormElement.submit()`**  soumet un {{HtmlElement("form")}} donné
+La méthode **`HTMLFormElement.submit()`** soumet un {{HtmlElement("form")}} donné
 
 Cette méthode est similaire, mais pas identique, à l’activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:
 
@@ -37,4 +37,4 @@ document.forms["myform"].submit();
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.HTMLFormElement.submit")}}
+{{Compat}}

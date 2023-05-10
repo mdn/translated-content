@@ -1,18 +1,8 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - Propiedad
-  - Referencia
-  - XHR
-  - XHR asincrónico
-  - XMLHttpRequest
-  - XMLHttpRequest asincrónico
-  - tiempo de espera
-  - timeout
-translation_of: Web/API/XMLHttpRequest/timeout
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propiedad **`XMLHttpRequest.timeout`** es un `unsigned long` que representa el número de milisegundos que puede tomar una solicitud antes de que se finalice automáticamente. El valor por defecto es 0, lo que significa que no hay tiempo de espera (_timeout_). _Timeout_ no debe utilizarse para solicitudes XMLHttpRequests sincrónicas usadas en un {{Glossary('document environment')}}, pues generará una excepción `InvalidAccessError`. Cuando ocurre un tiempo de espera, se dispara un evento [timeout](/es/docs/Web/Events/timeout).
@@ -44,10 +34,8 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                               | Comentario             |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-timeout-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.timeout")}}
+{{Compat}}

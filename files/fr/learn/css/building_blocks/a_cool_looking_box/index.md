@@ -44,7 +44,7 @@ Pour débuter, vous devez&nbsp;:
 
 - faire des copies locales de ces [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) — enregistrez‑les sous les noms `index.html` et `style.css` dans un nouveau répertoire.
 
-> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+> **Note :** Autrement, vous pouvez utiliser un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
 
 ## Résumé du projet
 
@@ -77,16 +77,6 @@ Cette capture d'écran montre un exemple de ce à quoi l'aspect final pourrait r
 
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## Dans ce module
-
-- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
-- [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
-- [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
-- [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)
-- [Effets de boîte avancés](/fr/Apprendre/CSS/styliser_boites/Advanced_box_effects)
-- [Creation d'un en-tête de papier à lettre élégant](/fr/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [Une boîte d'aspect rafraîchissant](/fr/Apprendre/CSS/styliser_boites/A_cool_looking_box)

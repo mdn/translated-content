@@ -1,11 +1,8 @@
 ---
 title: Using promises
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Promise
-  - Promises
-translation_of: Web/JavaScript/Guide/Using_promises
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 {{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.

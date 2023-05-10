@@ -1,13 +1,8 @@
 ---
 title: Gramática léxica
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Gramática léxica
-  - JavaScript
-  - Literais
-  - Palavras-chave
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
+
 {{JsSidebar("More")}}
 
 Esta página descreve a gramática léxica da linguagem JavaScript. O código fonte de um script ECMAScript é lido da esquerda para direita e traduzido em uma sequência de elementos de entrada, como símbolos, caracteres de controle, finalizadores de linha, comentários ou espaços em branco. ECMAScript também define certas palavras-chave e literais e possui regras para inserção automática de ponto e vírgula ao final de declarações.
@@ -37,7 +32,7 @@ Espaços em branco ajudam na legibilidade do código e separam os símbolos um d
 
 ## Finalizadores de linha
 
-Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
+Além dos caracteres de espaço em branco, caracteres finalizadores de linha são usados para melhorar a legibilidade do código. Contudo, em alguns casos, finalizadores de linha podem influenciar a execução do código JavaScript, por isso você não poderá usá-los em alguns casos. Eles também afetam o [processo automático de inserção de ponto e vírgula](#automatic_semicolon_insertion). Em [expressões regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) os finalizadores de linha podem ser indicados com a classe **\s**.
 
 Apenas os seguintes códigos Unicode são tratados como finalizadores de linha no ECMAScript, outros caracteres de quebra de linha são tratados apenas como espaço em branco (por exemplo, Next Line, NEL, U+0085 são considerados espaço em branco).
 
@@ -211,7 +206,7 @@ function import() {} // Proibido.
 
 ### Null
 
-Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/null) para mais informações.
+Veja também [`null`](/pt-BR/docs/Web/JavaScript/Reference/Operators/null) para mais informações.
 
 ```js
 null
@@ -239,7 +234,7 @@ false
 0777 // Convertido como octal, 511 em decimal
 ```
 
-Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix).
+Veja que números decimais podem começar com zero (`0`) seguido de outro dígito decimal, porém se todos dígitos após o zero inicial forem menores que 8, o número é interpretado como um número octal. Isso não vai disparar um erro em JavaScript, veja {{bug(957513)}}. Veja também esta página sobre conversão de tipo [`parseInt()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt#octal_interpretations_with_no_radix).
 
 #### Binário
 
@@ -346,7 +341,7 @@ Veja também [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegE
 
 ### Templates
 
-Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/template_strings) para mais informações .
+Veja também [template strings](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) para mais informações .
 
 ```js
 `texto`
@@ -373,7 +368,7 @@ Algumas [declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements) JavaScr
 
 A especificação ECMAScript menciona [três regras para inserção de ponto e vírgula](https://tc39.github.io/ecma262/#sec-rules-of-automatic-semicolon-insertion).
 
-1\. Um ponto e vírgula é inserido antes, quando um [finalizador de linha](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar$edit#Line_terminators) ou um "}" é encontrado em local não permitido pela sintaxe.
+1\. Um ponto e vírgula é inserido antes, quando um [finalizador de linha](#line_terminators) ou um "}" é encontrado em local não permitido pela sintaxe.
 
 ```js
 { 1 2 } 3
@@ -427,7 +422,7 @@ a + b;
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## Firefox-notas específicas
 
@@ -435,8 +430,8 @@ a + b;
 
 ## Veja também
 
-- [Jeff Walden: Binary and octal numbers](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

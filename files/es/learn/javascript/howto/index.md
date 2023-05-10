@@ -1,12 +1,8 @@
 ---
 title: Resuelva problemas comunes en su código JavaScript
 slug: Learn/JavaScript/Howto
-tags:
-  - Aprendizaje
-  - JavaScript
-  - Principante
-translation_of: Learn/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 Los siguientes enlaces apuntan a soluciones a problemas comunes de todos los días que deberá solucionar para que su código JavaScript se ejecute correctamente..

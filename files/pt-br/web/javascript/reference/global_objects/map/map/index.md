@@ -1,13 +1,6 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
-tags:
-  - Constructor
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 

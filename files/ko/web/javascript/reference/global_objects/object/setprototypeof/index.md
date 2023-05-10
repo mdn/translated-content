@@ -1,8 +1,6 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-browser-compat: javascript.builtins.Object.setPrototypeOf
 ---
 {{JSRef}}
 
@@ -31,7 +29,7 @@ Object.setPrototypeOf(obj, prototype);
 
 만일 프로토타입이 변경될 객체가 {{jsxref("Object.isExtensible()")}} 에 의해서 non-extensible 하다면, {{jsxref("TypeError")}} 예외처리를 해라. 만일 프로토타입 파라미터가 객체가 아니거나 {{jsxref("null")}} (i.e., number, string, boolean, {{jsxref("undefined")}}) 인 경우가 아니라면 어떠한 작업도 하지마라. 이 방법을 통해서 객제의 프로토타입이 새로운 값으로 변경될 것이다.
 
-Object.setPrototypeOf는 ECMAScript 2015 스펙으로 규정되어 있다. 해당 메소드는 일반적으로 객체의 프로토타입과 논쟁이 되는 {{jsxref("Object.prototype.__proto__")}} 프로퍼티를 설정하는 적절한 방법으로 고려된다.
+Object.setPrototypeOf는 ECMAScript 2015 스펙으로 규정되어 있다. 해당 메소드는 일반적으로 객체의 프로토타입과 논쟁이 되는 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 프로퍼티를 설정하는 적절한 방법으로 고려된다.
 
 Examples
 
@@ -41,7 +39,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Polyfill
 
-예전 버전의 프로퍼티 {{jsxref("Object.prototype.__proto__")}} 를 사용한다면, 우리는 쉽게 Object.setPrototypeOf 가 쉽게 정의 할수 있다.
+예전 버전의 프로퍼티 [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 를 사용한다면, 우리는 쉽게 Object.setPrototypeOf 가 쉽게 정의 할수 있다.
 
 ```js
 // Only works in Chrome and FireFox, does not work in IE:
@@ -53,7 +51,7 @@ Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
 
 ## Appending Prototype Chains
 
-`Object.getPrototypeOf()` and {{jsxref("Object.proto", "Object.prototype.__proto__")}} 의 결합은 새로운 프로토타입 오브젝트에 전반적인 프로토타입 Chain을 설정하도록 할수 있다.
+`Object.getPrototypeOf()` and [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 의 결합은 새로운 프로토타입 오브젝트에 전반적인 프로토타입 Chain을 설정하도록 할수 있다.
 
 ```js
 /**
@@ -174,4 +172,4 @@ george(); // 'Hello guys!!'
 - {{jsxref("Reflect.setPrototypeOf()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

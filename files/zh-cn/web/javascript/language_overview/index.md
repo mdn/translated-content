@@ -1,6 +1,6 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
@@ -225,7 +225,7 @@ var a;
 var name = "simon";
 ```
 
-一个使用 **`var` **声明变量的语句块的例子：
+一个使用 **`var`** 声明变量的语句块的例子：
 
 ```js
 // myVarVariable 在这里 *能* 被引用

@@ -12,6 +12,7 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка

@@ -3,6 +3,7 @@ title: WebGLRenderingContext.clearColor()
 slug: Web/API/WebGLRenderingContext/clearColor
 translation_of: Web/API/WebGLRenderingContext/clearColor
 ---
+
 {{APIRef("WebGL")}}
 
 Метод **`WebGLRenderingContext.clearColor()`** из [WebGL API](/ru/docs/Web/API/WebGL_API) определяет значения, используемые для задания цвета во время очистки буферов цвета.

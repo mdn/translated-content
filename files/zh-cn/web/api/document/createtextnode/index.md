@@ -50,7 +50,7 @@ var text = document.createTextNode(data);
 </html>
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ### 规范
 

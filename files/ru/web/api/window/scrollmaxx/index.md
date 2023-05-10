@@ -3,6 +3,7 @@ title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
 translation_of: Web/API/Window/scrollMaxX
 ---
+
 {{APIRef}} {{Non-standard_header}}
 
 Свойство **`Window.scrollMaxX`** (только для чтения) возвращает максимальное количество пикселей в документе, которые могут быть прокручены по горизонтали.

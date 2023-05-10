@@ -1,21 +1,17 @@
 ---
 title: col
 slug: Web/HTML/Element/col
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/col
 original_slug: Web/HTML/Elemento/col
 ---
+
 ### Definición
 
 - Permite especificar propiedades para una columna o un grupo de ellas.
   - : **Sus etiquetas son**: `<col>` (solo tiene una).
-  
+
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas.](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas.](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
     **Puede contener**: Nada.
 

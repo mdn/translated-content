@@ -96,7 +96,7 @@ Si la même valeur de {{SVGAttr("result")}} apparaît à de multiples endroits d
 
 ## Éléments
 
-Les éléments suivants peuvent utiliser l'attribut  `in`:
+Les éléments suivants peuvent utiliser l'attribut `in`:
 
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

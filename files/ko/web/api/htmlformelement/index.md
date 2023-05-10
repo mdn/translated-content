@@ -1,14 +1,8 @@
 ---
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("HTMLFormElement")}}** interface represents a {{HTMLElement("form")}} element in the DOM; it allows access to and in some cases modification of aspects of the form, as well as access to its component elements.
@@ -197,11 +191,11 @@ Submit a form into a new window:
 
 If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/ko/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

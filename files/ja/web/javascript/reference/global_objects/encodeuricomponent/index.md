@@ -123,9 +123,7 @@ function encodeRFC5987ValueChars2(str) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

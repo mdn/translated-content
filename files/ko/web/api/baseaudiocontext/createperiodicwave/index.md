@@ -1,18 +1,8 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - createPeriodicWave
-browser-compat: api.BaseAudioContext.createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("BaseAudioContext") }} 인터페이스의 `createPeriodicWave()` 메서드는 {{domxref("PeriodicWave")}}를 생성하기 위해 사용되는데, 이는 {{ domxref("OscillatorNode") }}의 출력을 형성하기 위해 사용될 수 있는 주기적인 파형을 정의하기 위해 사용됩니다.

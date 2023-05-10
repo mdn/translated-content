@@ -1,8 +1,8 @@
 ---
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
-translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 La interfaz HTMLMediaElement añade a {{domxref("HTMLElement")}} las propiedades y métodos necesarios para soportar las capacidades básicas relacionadas con los medios de comunicación que son comunes en audio y vídeo. Los elementos {{domxref("HTMLVideoElement")}}} y {{domxref("HTMLAudioElement")}}} heredan esta interfaz.
@@ -115,16 +115,16 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 
 These attributes are obsolete and should not be used, even if a browser still supports them.
 
-- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a `double` that indicates the initial playback position in seconds.
 - {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a `double` representing the number of channels in the audio resource (e.g., `2` for stereo).
 
 ### Obsolete event handlers
 
-- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{obsolete_inline}}
-  - : Sets the {{event("Event_handlers", "event handler")}} called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
-- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{obsolete_inline}}
+- {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
+  - : Sets the [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
+- {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 
 ## Methods
@@ -165,18 +165,13 @@ These methods are obsolete and should not be used, even if a browser still suppo
 - {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : This method, available only in Mozilla's implementation, loads data from another media element. This works similarly to `load()` except that instead of running the normal resource selection algorithm, the source is simply set to the `other` element's `currentSrc`. This is optimized so this element gets access to all of the `other` element's cached and buffered data; in fact, the two elements share downloaded data, so data downloaded by either element is available to both.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                            | Status                               | Comment                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "the-video-element.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML WHATWG')}}     | No change from {{SpecName('HTML5 W3C')}}                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#htmlmediaelement", "HTMLMediaElement")}} | {{Spec2('HTML5 W3C')}}         | Initial definition.                                                                                                                                                                                            |
-| {{SpecName('EME', '#introduction', 'Encrypted Media Extensions')}}                                 | {{Spec2('EME')}}                 | Adds {{domxref("MediaKeys")}}, {{domxref("MediaEncryptedEvent")}}, {{domxref("setMediaKeys")}}, {{domxref("onencrypted")}}, and {{domxref("onwaitingforkey")}}. |
-| {{SpecName('Media Capture','#htmlmediaelement-extensions','HTMLMediaElement')}}                 | {{Spec2('Media Capture')}} | Adds `sinkId` and `setSinkId()`, and `captureStream()`.                                                                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

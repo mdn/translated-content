@@ -48,7 +48,7 @@ Object.defineProperties(obj, props)
 
 `Object.defineProperties` 本质上定义了 `obj` 对象上 `props` 的可枚举属性相对应的所有属性。
 
-## 例子
+## 示例
 
 ```js
 var obj = {};

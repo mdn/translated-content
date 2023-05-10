@@ -1,12 +1,8 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - Descriptor CSS
-  - Fuentes CSS
-  - Referencia
-translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 El descriptor CSS **`src`** de la regla {{cssxref("@font-face")}} especifica el recurso que contiene a la fuente. Es requerido para que la regla `@font-face` sea válida.
@@ -61,10 +57,8 @@ src: local(font), url(path/to/font.svg) format("svg"),
 
 ## Especificaciones
 
-| Especificación                                               | Estatus                          | Comentarios        |
-| ------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#src-desc', 'src')}} | {{Spec2('CSS3 Fonts')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

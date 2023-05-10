@@ -1,6 +1,8 @@
 ---
 title: MessageEvent.ports
 slug: Web/API/MessageEvent/ports
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,11 +16,11 @@ slug: Web/API/MessageEvent/ports
 ## 例
 
 ```js
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = (e) => {
+  const port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener('message', (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
   });
 

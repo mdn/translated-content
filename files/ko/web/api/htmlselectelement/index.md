@@ -1,16 +1,8 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.
@@ -110,11 +102,11 @@ console.log(select.options[select.selectedIndex].value) // Second
 
 A better way to track changes to the user's selection is to watch for the {{domxref("HTMLElement/change_event", "change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/ko/docs/Web/API/HTMLElement/change_event#select_element) in the documentation for the `change` event for details.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

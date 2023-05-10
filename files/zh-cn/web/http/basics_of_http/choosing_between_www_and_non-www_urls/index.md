@@ -36,7 +36,7 @@ slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 
 [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) 有一个示例 [how to configure an Apache server to redirect one domain to the other](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258)。
 
-### 使用 _`<link rel="canonical">`_
+### 使用 \<link rel="canonical">
 
 它可以将一个特殊的 HTML {{HTMLElement("link")}} 元素添加到网页指示什么网页的标准地址，这对页面的访问者没有影响，但在搜索引擎检索时会告诉搜索引擎当页面实际的地址。通过这种方式，搜索引擎不需要索引同一页面多次，那样可能导致它被视为重复的内容或垃圾邮件，甚至从搜索引擎结果中删除或者降低你的页面显示排名。
 

@@ -1,11 +1,8 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - Math
-  - Trunc
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 ---
+
 {{JSRef}}
 
 O método **`Math.trunc()`** retorna a parte inteira de um número, descartando suas casas decimais.

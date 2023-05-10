@@ -1,8 +1,8 @@
 ---
 title: Window.close()
 slug: Web/API/Window/close
-translation_of: Web/API/Window/close
 ---
+
 {{ ApiRef() }}
 
 ## Resumen
@@ -57,12 +57,10 @@ function closeCurrentWindow()
 </script>
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', '#dom-window-close', 'window.close()')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Referencia adicional
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.close")}}
+{{Compat}}

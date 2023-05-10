@@ -1,8 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 > **Nota:** Este artículo describe manifest.json para extensiones web. Si estás buscando información acerca de manifest.json en PWAs, revisa el artículo sobre [Web App Manifest](/es/docs/Web/Manifest).
@@ -33,11 +33,11 @@ Puedes acceder a el manifest desde el código JavaScript de tu extensión utiliz
 browser.runtime.getManifest().version;
 ```
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
 Para un resumen extendido de las llaves y sub-llaves ver la [tabla completa de compatibilidad de `manifest.json` en navegadores](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}
 
 ## Ver También
 

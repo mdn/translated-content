@@ -11,6 +11,7 @@ tags:
 translation_of: Glossary/ATAG
 original_slug: Глоссарий/ATAG
 ---
+
 ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines) - это {{Glossary("W3C")}} рекомендации для создания общедоступных инструментов разработчика, которые создают общедоступный контент.
 
 ## Подробнее

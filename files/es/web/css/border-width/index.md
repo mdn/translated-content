@@ -1,12 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-width
 ---
+
 ### Resumen
 
 La propiedad **`border-width`** define el ancho del borde.

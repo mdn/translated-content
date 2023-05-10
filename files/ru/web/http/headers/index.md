@@ -7,6 +7,7 @@ tags:
 translation_of: Web/HTTP/Headers
 original_slug: Web/HTTP/Заголовки
 ---
+
 {{ HTTPSidebar }}
 
 **Заголовки HTTP** позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (`:`) непосредственно значение. [Пробелы](/ru/docs/Glossary/Whitespace) перед значением игнорируются.
@@ -207,7 +208,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -235,7 +236,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -263,7 +264,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -291,7 +292,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -319,7 +320,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -347,7 +348,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("2") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -375,7 +376,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -403,7 +404,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         <a class="external" href="http://www.w3.org/TR/cors/"
@@ -941,7 +942,7 @@ HTTP-заголовки сопровождают обмен данными по 
           href="/en-US/docs/Server-Side_Access_Control"
           title="En/Server-Side Access Control"
           >Server Side Access Control</a
-        >{{ gecko_minversion_inline("1.9.1") }}
+        >
       </td>
       <td>
         More recently defined in the
@@ -1409,7 +1410,7 @@ HTTP-заголовки сопровождают обмен данными по 
 
 ## Примечание
 
-> **Примечание:** The Keep-Alive request header is not sent by {{Gecko ("5.0") }}; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
+> **Примечание:** The Keep-Alive request header is not sent by Gecko 5.0; previous versions did send it but it was not formatted correctly, so the decision was made to remove it for the time being. The {{ httpheader("Connection") }} or {{ httpheader("Proxy-Connection") }} header is still sent, however, with the value "keep-alive".
 
 ## Смотрите также
 

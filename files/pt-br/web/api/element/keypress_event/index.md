@@ -1,9 +1,9 @@
 ---
 title: keypress
 slug: Web/API/Element/keypress_event
-translation_of: Web/API/Document/keypress_event
 original_slug: Web/API/Document/keypress_event
 ---
+
 {{APIRef}}
 
 O evento **`keypress`** é disparado quando uma tecla que produz um valor do tipo caractere é pressionada. Exemplos de chaves que produzem um valor de caractere são chaves alfabéticas, numéricas e de pontuação. Exemplos de chaves que não produzem um valor de caractere são as teclas modificadoras, como <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, ou <kbd>Meta</kbd>.
@@ -11,7 +11,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline ()}}
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Bolhas

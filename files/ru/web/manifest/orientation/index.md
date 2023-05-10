@@ -7,6 +7,7 @@ tags:
   - Web
 translation_of: Web/Manifest/orientation
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
@@ -52,7 +53,7 @@ translation_of: Web/Manifest/orientation
 ## Пример
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 ## Specifications

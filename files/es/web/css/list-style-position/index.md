@@ -1,13 +1,8 @@
 ---
 title: list-style-position
 slug: Web/CSS/list-style-position
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/list-style-position
 ---
+
 {{ CSSRef() }}
 
 ### Resumen
@@ -72,7 +67,7 @@ list-style-position: inside | outside | inherit
 }
 
 .three {
-  list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
+  list-style-image: url("starsolid.gif");
   list-style-position: inherit;
 }
 ```

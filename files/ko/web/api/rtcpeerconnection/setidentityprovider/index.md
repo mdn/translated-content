@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.setIdentityProvider()
 slug: Web/API/RTCPeerConnection/setIdentityProvider
-translation_of: Web/API/RTCPeerConnection/setIdentityProvider
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 

@@ -1,8 +1,8 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-translation_of: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 El codigo de respuesta con estado exitoso HTTP **`206 Partial Content`** indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera {{HTTPHeader("Range")}} de la solicitud.
@@ -56,13 +56,11 @@ Content-Range: bytes 4590-7999/8000
 
 ## Especificaciones
 
-| Specification                                                | Title                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------ |
-| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.206")}}
+{{Compat}}
 
 ## Mira también
 

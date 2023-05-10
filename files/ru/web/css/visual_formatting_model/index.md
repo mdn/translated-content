@@ -4,6 +4,7 @@ slug: Web/CSS/Visual_formatting_model
 translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
+
 {{CSSRef}}
 
 _Модель визуального форматирования_ CSS - это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно [боксовой модели CSS](/ru/docs/Web/CSS/box_model). Расположение (layout) каждого бокса определяется:
@@ -80,7 +81,7 @@ followed by more inline text.
 
 Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 Выглядеть она будет так:
 

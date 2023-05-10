@@ -1,11 +1,9 @@
 ---
 title: processing-instruction
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/processing-instruction
 original_slug: Web/XSLT/processing-instruction
 ---
+
 {{ XsltRef() }}
 
 `<xsl:processing-instruction>` 요소는 출력 문서에 처리 명령을 씁니다.

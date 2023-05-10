@@ -1,9 +1,9 @@
 ---
 title: Otras macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-translation_of: MDN/Structures/Macros/Other
 original_slug: MDN/Structures/Macros/Other
 ---
+
 {{MDNSidebar}}
 
 A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Structures/Macros/Commonly-used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
@@ -12,7 +12,6 @@ A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Str
 
 Estas macros se usan solo con contextos particulares, como una referencia de API específica.
 
-- [`Interwiki`](https://github.com/mdn/yari/blob/main/kumascript/macros/Interwiki.ejs) facilita la creación de enlaces _interwiki_. Actualmente admite enlaces a Wikipedia y Wikimo. El primer parámetro es el nombre de la wiki ("wikipedia" o "wikimo"), y el segundo es la ruta del artículo. Por ejemplo, `\{\{interwiki("wikipedia", "Firefox")\}\}` aparece como {{ interwiki("wikipedia", "Firefox") }}. Esta plantilla detecta automáticamente el idioma de la página y dirige al mismo idioma en Wikipedia, por ejemplo.
 - [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) crea un enlace al RFC especificado, dado su número. La sintaxis es: `\{\{RFC(número)\}\}`. Por ejemplo, `\{\{RFC(2616)\}\}` se convierte en {{ RFC(2616) }}.
 
 ### Componentes de la página destino
@@ -31,12 +30,3 @@ Tenemos una variedad de macros que se pueden usar para generar automáticamente 
 Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Structures/Quicklinks):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.
-
-## Obsoletas
-
-Estas macros han sido reemplazadas por otras formas de hacer lo mismo y ya no deberían usarse. Si los encuentra en artículos existentes, reemplácelos.
-
-### Enlaces
-
-- La macro [`SectionOnPage`](https://github.com/mdn/yari/blob/main/kumascript/macros/SectionOnPage.ejs) crea una frase que enlaza con el nombre de una sección y el artículo que contiene esa sección. Por ejemplo, `\{{SectionOnPage("/es/docs/Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}` genera lo siguiente: _{{SectionOnPage("/es/docs/ Mozilla/Firefox/Releases/21", "Cambios para desarrolladores web")}}_.
-- La macro [`Link`](https://github.com/mdn/yari/blob/main/kumascript/macros/Link.ejs) inserta un enlace a la página especificada en MDN, utilizando el título de la página como la cadena visible para hacer clic y la información sobre herramientas extraída del resumen de SEO de la página.

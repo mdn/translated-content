@@ -1,15 +1,8 @@
 ---
 title: ':left'
 slug: Web/CSS/:left
-tags:
-  - '@page'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:left
 ---
+
 {{ CSSRef() }}
 
 La **`:left`** [CSS](/es/docs/Web/CSS) [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), utilizada con la regla @page at, representa todas las páginas de la izquierda de un documento impreso.
@@ -39,14 +32,11 @@ La dirección principal de escritura del documento determina si una página es "
 
 ## Especificaciones
 
-| Especificaciones                                                                     | Estatus                                  | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Paged Media', '#left-right-first', ':left') }} | {{ Spec2('CSS3 Paged Media') }} | Sin Cambio.         |
-| {{ SpecName('CSS2.1', 'page.html#page-selectors', ':left') }}     | {{ Spec2('CSS2.1') }}             | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## Ver También
 

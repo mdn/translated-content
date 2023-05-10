@@ -1,12 +1,8 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Referencia
-translation_of: Web/HTTP/Headers/Content-Language
 ---
+
 {{HTTPSidebar}}
 
 O [cabeçalho de entidade](/pt-BR/docs/Glossario/Entity_header) **`Content-Language`** é usado para descrever a língua(s) destinada para a audiência, para que isto permita um usuário de se diferenciar de acordo com a língua preferida do usuário.

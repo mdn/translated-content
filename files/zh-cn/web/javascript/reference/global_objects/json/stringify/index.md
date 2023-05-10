@@ -118,7 +118,7 @@ replacer 参数可以是一个函数或者一个数组。作为函数，它有�
 
 **注意：** 不能用 replacer 方法，从数组中移除值（values），如若返回 undefined 或者一个函数，将会被 null 取代。
 
-#### 例子 (function)
+#### 示例 (function)
 
 ```plain
 function replacer(key, value) {
@@ -134,7 +134,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 JSON 序列化结果为 `{"week":45,"month":7}`.
 
-#### 例子 (array)
+#### 示例 (array)
 
 如果 `replacer` 是一个数组，数组的值代表将被序列化成 JSON 字符串的属性名。
 

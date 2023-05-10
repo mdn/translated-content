@@ -39,9 +39,7 @@ wm.has('baz');  // false を返す
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

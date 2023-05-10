@@ -1,8 +1,6 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-translation_of: Web/CSS/transition-delay
-browser-compat: css.properties.transition-delay
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
@@ -308,11 +306,11 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 {{EmbedLiveSample("delay_4s",275,150)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

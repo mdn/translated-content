@@ -3,6 +3,7 @@ title: WebXR Device API
 slug: Web/API/WebXR_Device_API
 translation_of: Web/API/WebXR_Device_API
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 **WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
@@ -22,7 +23,7 @@ At the most basic level, a scene is presented in 3D by computing the perspective
 
 Example WebXR hardware setup
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](hw-setup.png)
 
 While the older [WebVR API](/ru/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
 

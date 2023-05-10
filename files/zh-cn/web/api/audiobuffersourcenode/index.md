@@ -54,11 +54,11 @@ _从父级的_ _{{domxref("AudioNode")}} 继承属性_.
 ### 事件
 
 - {{domxref("AudioBufferSourceNode.onended")}}
-  - : 是一个 {{event("Event_handlers", "event handler")}} 类型，包含了与 {{event("ended_(Web_Audio)", "ended")}} 相关联的结束事件。
+  - : 是一个事件处理器类型，包含了与 `ended` 相关联的结束事件。
 
 ## 方法
 
-_从父级的_ _{{domxref("AudioNode")}} 继承方法_.
+_从父级的 {{domxref("AudioNode")}} 继承方法。_
 
 - {{domxref("AudioBufferSourceNode.start()")}}
   - : Schedules the start of the playback of the audio asset.

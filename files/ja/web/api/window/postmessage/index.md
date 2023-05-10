@@ -1,19 +1,21 @@
 ---
 title: Window.postMessage()
 slug: Web/API/Window/postMessage
+l10n:
+  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
 
 {{ApiRef("HTML DOM")}}
 
 **`window.postMessage()`** は、 {{domxref("Window")}} オブジェクト間で安全にオリジン間通信を可能にするためのメソッドです。例えば、ポップアップとそれを表示したページの間や、iframe とそれが埋め込まれたページの間での通信に使うことができます。
 
-通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じプロトコル、ポート番号、ホストである場合に限りお互いにアクセスすることが可能です ("[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)" とも呼ばれます)。正しく使用した `window.postMessage` はこの制限を安全に回避するための制御された仕組みを提供します。
+通常、異なった複数のページでのスクリプトはそれらが実行されたページが同じプロトコル、ポート番号、ホストである場合に限りお互いにアクセスすることが可能です（「[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)」とも呼ばれます）。正しく使用した `window.postMessage` はこの制限を安全に回避するための制御された仕組みを提供します。
 
-大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合 ( `targetWindow = window.opener` など)、`targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/Guide/Events)することができます。`window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
+大まかには、ウィンドウが他のウィンドウへの参照を取得できる場合 ( `targetWindow = window.opener` など)、`targetWindow.postMessage()` を使って {{domxref("MessageEvent")}} をそのウィンドウ上で配信することができます。受け取ったウィンドウでは必要に応じて自由に[イベントを処理](/ja/docs/Web/Events/Event_handlers)することができます。`window.postMessage()` に渡された引数 ("message") は[イベントオブジェクトを通して対象のウィンドウに公開されます](#配信されるイベント)。
 
 ## 構文
 
-```js
+```js-nolint
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
 ```
@@ -21,7 +23,7 @@ postMessage(message, targetOrigin, transfer)
 ### 引数
 
 - `message`
-  - : 他のウィンドウに送られるデータ。データは{{domxref("Web_Workers_API/Structured_clone_algorithm", "構造化クローンアルゴリズム", "", 1)}}に従ってシリアル化されます。つまり、手動でシリアル化することなく様々なデータオブジェクトを宛先に安全に渡すことができます。
+  - : 他のウィンドウに送られるデータ。データは{{domxref("Web_Workers_API/Structured_clone_algorithm", "構造化複製アルゴリズム", "", 1)}}に従ってシリアル化されます。つまり、手動でシリアル化することなく様々なデータオブジェクトを宛先に安全に渡すことができます。
 - `targetOrigin`
   - : イベントを配信するこのウィンドウのオリジンを指定します。リテラル文字列 `"*"` (優先順位なし) か URI のどちらかで指定します。イベントが配信される予定時刻に、このウィンドウの文書のスキーム、ホスト名、ポートが `targetOrigin` で指定されたものと一致しない場合、イベントは配信されません。この仕組みにより、メッセージが送信される場所を制御できます。例えば、 `postMessage()` をパスワードを送信するために使用する場合、悪意のある第三者によるパスワードの傍受を防ぐために、この引数がパスワードを含むメッセージの受信予定者と同じオリジンの URI であることが絶対に重要でしょう。 **他のウィンドウの文書がどこにあるものか知っている場合は、 `*` ではなく、常に特定の `targetOrigin` を指定してください。特定のターゲットを指定しないと、悪意のあるサイトに送信したデータが開示されてしまいます。**
 - `transfer` {{optional_Inline}}
@@ -40,7 +42,7 @@ window.addEventListener("message", (event) => {
   if (event.origin !== "http://example.org:8080")
     return;
 
-  // ...
+  // …
 }, false);
 ```
 
@@ -68,7 +70,7 @@ window.addEventListener("message", (event) => {
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} で `same-origin` を値に指定する（オリジンを攻撃者から保護する）
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} で `require-corp` を値に指定する（このオリジンから被害者を守る）
 
-```plain
+```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
@@ -83,7 +85,7 @@ if (crossOriginIsolated) {
 }
 ```
 
-ブラウザー（例えば Firefox 79）に展開され始めている{{jsxref("Global_Objects/SharedArrayBuffer/Planned_changes", "共有メモリーに関する変更予定", "", 1)}}もご覧ください。
+ブラウザー（例えば Firefox 79）に展開され始めている{{jsxref("Global_Objects/SharedArrayBuffer", "共有メモリーに関する変更予定", "", 1)}}もご覧ください。
 
 ## 例
 
@@ -92,7 +94,7 @@ if (crossOriginIsolated) {
  * http://example.com:8080 にある、window A のスクリプト:
  */
 
-var popup = window.open(/* ポップアップの詳細 */);
+const popup = window.open(/* ポップアップの詳細 */);
 
 // ポップアップブロッカーでブロックされず、ポップアップが完全にロードされたとき
 
@@ -136,7 +138,7 @@ window.addEventListener("message", (event) => {
   event.source.postMessage("hi there yourself!  the secret response " +
                            "is: rheeeeet!",
                            event.origin);
-}, false);
+});
 ```
 
 ## メモ

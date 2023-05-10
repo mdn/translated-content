@@ -3,6 +3,7 @@ title: grid-row-start
 slug: Web/CSS/grid-row-start
 translation_of: Web/CSS/grid-row-start
 ---
+
 Свойство CSS **`grid-row-start`** определяет начальную позицию элемента грид в строке, добавляя линию, span или ничего (автоматически) к его расположению в сетке, тем самым определяя начальный край inline-элемента его {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
@@ -44,7 +45,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - `auto`
   - : Ключевое слово, указывающее, что свойство никак не влияет на размещение элемента сетки, обозначающее автоматическое размещение, автоматический диапазон или диапазон по умолчанию, равный 1.
 - `<custom-ident>`
-  - : Если есть именованная строка с именем '\<custom-ident>-start', он вносит первую такую ​​строку в размещение элемента сетки.
+  - : Если есть именованная строка с именем '\<custom-ident>-start', он вносит первую такую строку в размещение элемента сетки.
 
     > **Примечание:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с `<custom-ident>`.
 - `<integer> && <custom-ident>?`

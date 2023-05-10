@@ -3,6 +3,7 @@ title: Gamepad.timestamp
 slug: Web/API/Gamepad/timestamp
 translation_of: Web/API/Gamepad/timestamp
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`Gamepad.timestamp`** интерфейса {{domxref("Gamepad")}} возвращает {{domxref("DOMHighResTimeStamp")}}, представляющий собой время последнего обновления геймпада.

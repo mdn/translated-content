@@ -1,17 +1,15 @@
 ---
 title: keyup
 slug: Web/API/Element/keyup_event
-tags:
-  - Evento de teclado
-translation_of: Web/API/Document/keyup_event
 original_slug: Web/API/Document/keyup_event
 ---
+
 O evento keyup é acionado quando uma tecla é liberada.
 
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Método Bolha

@@ -24,7 +24,7 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 
 ### `StylePropertyMap`
 
-{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、  CSSStyleDeclaration の代替となる CSS 宣言ブロックの表現を提供します。
+{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、 CSSStyleDeclaration の代替となる CSS 宣言ブロックの表現を提供します。
 
 - {{domxref('StylePropertyMap.set()')}}
   - : StylePropertyMap インターフェイスのメソッドで、指定されたプロパティを持つ CSS 宣言を指定された値に変更します。

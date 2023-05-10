@@ -1,11 +1,13 @@
 ---
 title: '<slot>: ウェブコンポーネントのスロット要素'
 slug: Web/HTML/Element/slot
+l10n:
+  sourceCommit: 7d86bc540b9aa3d8d4a8d3109667f73d0b3ff701
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**`<slot>`** は [HTML](/ja/docs/Web/HTML) の要素 — <a href="/ja/docs/Web/Web_Components">ウェブコンポーネント</a>技術の一部 — は、ウェブコンポーネント内で別な DOM ツリーを構築し、いっしょに表示することができる独自のマークアップを入れることができるプレイスホルダーです。
+**`<slot>`** は [HTML](/ja/docs/Web/HTML) の要素 — [ウェブコンポーネント](/ja/docs/Web/Web_Components) — は、ウェブコンポーネント内で別な DOM ツリーを構築し、一緒に表示することができる独自のマークアップを入れることができるプレイスホルダーです。
 
 <table class="properties">
   <tbody>
@@ -26,7 +28,7 @@ slug: Web/HTML/Element/slot
     </tr>
     <tr>
       <th scope="row">イベント</th>
-      <td>{{event("slotchange")}}</td>
+      <td>{{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -70,8 +72,14 @@ slug: Web/HTML/Element/slot
 ```html
 <template id="element-details-template">
   <style>
-    details {font-family: "Open Sans Light", Helvetica, Arial, sans-serif }
-    .name {font-weight: bold; color: #217ac0; font-size: 120% }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
     h4 {
       margin: 10px 0 -8px 0;
       background: #217ac0;
@@ -80,24 +88,30 @@ slug: Web/HTML/Element/slot
       border: 1px solid #cee9f9;
       border-radius: 4px;
     }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
       <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
-      <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+      <span class="desc"><slot name="description">NEED DESCRIPTION</slot></span>
     </summary>
     <div class="attributes">
       <h4>Attributes</h4>
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
-> **メモ:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)にも説明があります。
+> **メモ:** この完全な例は、 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) で見ることができます（[ライブ実行](https://mdn.github.io/web-components-examples/element-details/)もご覧ください）。また、[テンプレートとスロットの利用](/ja/docs/Web/Web_Components/Using_templates_and_slots)にも説明があります。
 
 ## 仕様書
 

@@ -3,13 +3,13 @@ title: HTML 中使用的日期与时间格式
 slug: Web/HTML/Date_and_time_formats
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 
-使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 {{htmlattrxref("datetime", "ins")}} 属性指定了插入或删除内容的日期或日期和时间。
+使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Element/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
 
-对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 {{htmlattrxref("value")}} 的 {{htmlattrxref("type", "input")}} 的值为：
+对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为：
 
 - [`date`](/zh-CN/docs/Web/HTML/Element/Input/date)
 - [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)
@@ -287,7 +287,7 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
 
-当你设置 `datetime-local` 输入的 {{htmlattrxref("value", "input")}} 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
+当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
 
 <table class="standard-table">
   <caption>

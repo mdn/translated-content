@@ -1,14 +1,8 @@
 ---
 title: Date() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
-tags:
-  - Constructor
-  - Date
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/Date
-browser-compat: javascript.builtins.Date.Date
 ---
+
 {{JSRef}}
 
 **`Date`** 생성자는 시간의 특정 지점을 나타내는 `Date` 객체를 플랫폼에 종속되지 않는 형태로 생성합니다.

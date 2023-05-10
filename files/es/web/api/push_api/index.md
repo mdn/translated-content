@@ -1,14 +1,8 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Experimental
-  - Notificaciones
-  - Push
-  - Referencia
-translation_of: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 La **API Push** otorga a las aplicaciones web la habilidad de recibir mensajes enviados a ellas desde un servidor, sin importar si la aplicación está o no en primer plano o cargada. Esto permite a los desarrolladores enviar notificaciones asíncronas y actualizaciones para los usuarios que las aceptan.
@@ -49,33 +43,25 @@ Las siguientes adiciones al [Service Worker API](/es/docs/Web/API/Service_Worker
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Devuelve una referencia a la interfaz {{domxref("PushManager")}} para el manejo de las suscripciones incluyendo: la suscripción, obteniendo una suscripción activa y accediendo al estado de permiso de push. Este es el punto de inicio para el uso de Push messaging.
 - {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : Manipulador de eventos activado, cada vez que ocurre un evento {{Event("push")}}; Eto es, cada vez que se recibe un push-message del servidor.
+  - : Manipulador de eventos activado, cada vez que ocurre un evento [`push`](/es/docs/Web/Reference/Events/push); Eto es, cada vez que se recibe un push-message del servidor.
 - {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : Manipulador de eventos activado, cada vez que ocurre un evento {{Event("pushsubscriptionchange")}}; Por ejemplo, cuando una suscripción ha sido invalidada o esta apunto de serlo. (P.ej. cuando un push service determina un tiempo de expiración.)
+  - : Manipulador de eventos activado, cada vez que ocurre un evento [`pushsubscriptionchange`](/es/docs/Web/Reference/Events/pushsubscriptionchange); Por ejemplo, cuando una suscripción ha sido invalidada o esta apunto de serlo. (P.ej. cuando un push service determina un tiempo de expiración.)
 
 ## Ejemplos
 
 Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) contiene varios ejemplos Push muy utiles
 
-## Specifications
+## Especificaciones
 
-| Specification                    | Status                       | Comment            |
-| -------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | Initial definition |
+{{Specifications}}
 
-## Browser Compatibility
+## Compatibilidad con navegadores
 
-### `PushEvent`
+{{Compat}}
 
-{{Compat("api.PushEvent")}}
+## Ver tambien
 
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
-
-## See also
-
-- [¿Cómo usar la API Push?](Web/API/Push_API/Using_the_Push_API)
+- [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API/Using_the_Push_API)
 - [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), on Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/es/docs/Web/API/Service_Worker_API)

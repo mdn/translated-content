@@ -1,9 +1,9 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/freeze
 ---
+
 {{JSRef}}
 
 El método **`Object.freeze()`** _congela_ un objeto, es decir: impide que se le agreguen nuevas propiedades; impide que se puedan eliminar las propiedades ya existentes; impide que dichas propiedades, o su capacidad de enumeración, configuración, o escritura, puedan ser modificadas; impide también que se pueda modificar su prototipo. El método devuelve el objeto recibido.
@@ -138,15 +138,11 @@ TypeError: 1 is not an object // Código ES5
 
 ## Especificaciones
 
-| Specification                                                                        | Status                       | Comment                                               |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}             | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## Mira también
 

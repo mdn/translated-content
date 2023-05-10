@@ -9,6 +9,7 @@ tags:
   - Текст
 translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.textAlign`** Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение `textAlign` равно `"center"`, то текст будет прорисован в `x - (width / 2)`.

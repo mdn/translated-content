@@ -3,7 +3,7 @@ title: '<select>: HTML 選択要素'
 slug: Web/HTML/Element/select
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<select>` 要素**は、選択式のメニューを提供するコントロールを表します。
 
@@ -630,8 +630,8 @@ document.forms[0].onsubmit = function(e) {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        {{ARIARole("combobox")}}、それ以外の場合は
-        {{ARIARole("listbox")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>、それ以外の場合は
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>
       </td>
     </tr>
     <tr>
@@ -639,7 +639,7 @@ document.forms[0].onsubmit = function(e) {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        {{ARIARole("menu")}}、それ以外の場合は許可されている
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>、それ以外の場合は許可されている
         <code>role</code> はなし
       </td>
     </tr>
@@ -652,11 +652,7 @@ document.forms[0].onsubmit = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-select-element', '&lt;select&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}             | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

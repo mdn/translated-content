@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/code
 browser-compat: html.elements.code
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<code>`** représente un court fragment de code machine. Par défaut, l'agent utilisateur utilise une police à chasse fixe (_monospace_) afin d'afficher le texte contenu dans cet élément.
 
@@ -106,9 +106,9 @@ Un paragraphe de texte qui contient `<code>` :
 </p>
 ```
 
-La sortie générée par ce HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample('Exemples', '', 100)}}
+{{EmbedLiveSample('', '', 100)}}
 
 ## Notes
 

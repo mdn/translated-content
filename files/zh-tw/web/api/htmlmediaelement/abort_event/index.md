@@ -4,6 +4,8 @@ slug: Web/API/HTMLMediaElement/abort_event
 original_slug: Web/Events/abort
 ---
 
+{{APIRef}}
+
 當資源載入被拒絕時將會觸發**`abort`**事件。
 
 ## 一般資訊

@@ -32,9 +32,7 @@ if (document.compatMode == "BackCompat") {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-compatmode','compatMode')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

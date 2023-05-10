@@ -1,19 +1,8 @@
 ---
 title: ServiceWorkerRegistration
 slug: Web/API/ServiceWorkerRegistration
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerRegistration
-  - TopicStub
-  - Workers
-translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `ServiceWorkerRegistration` interface of the [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
@@ -91,11 +80,11 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

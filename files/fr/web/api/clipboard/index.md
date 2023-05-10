@@ -24,7 +24,7 @@ L’interface **`Clipboard`** implémente l’[API clipboard](/fr/docs/Web/API/C
 
 Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 
-Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
+Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/fr/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
 > **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
 

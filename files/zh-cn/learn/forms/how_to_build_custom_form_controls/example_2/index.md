@@ -1,14 +1,13 @@
 ---
 title: Example 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 ---
 
 这是解释 [如何构建自定义表单小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)的第二个示例。
 
 ## 使用 JS
 
-### HTML 内容
+### HTML
 
 ```html
 <form class="no-widget">
@@ -33,7 +32,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 <form>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .widget select,
@@ -160,7 +159,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_2
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 window.addEventListener("load", function () {
@@ -171,13 +170,13 @@ window.addEventListener("load", function () {
 });
 ```
 
-### 使用 JS 的结果
+### 结果
 
-{{ EmbedLiveSample('JS', 120, 130) }}
+{{ EmbedLiveSample('使用 JS', 120, 130) }}
 
 ## 不使用 JS
 
-### HTML 内容
+### HTML
 
 ```html
 <form class="no-widget">
@@ -202,7 +201,7 @@ window.addEventListener("load", function () {
 <form>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 .widget select,
@@ -214,6 +213,6 @@ window.addEventListener("load", function () {
 }
 ```
 
-### 不使用 JS 的结果
+### 结果
 
-{{ EmbedLiveSample('No_JS', 120, 130) }}
+{{ EmbedLiveSample('不使用 JS', 120, 130) }}

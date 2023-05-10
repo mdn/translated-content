@@ -1,14 +1,8 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - Presentación
-  - Referencia
-  - Tipo de Dato CSS
-  - Web
-translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 El [tipo de dato](/es/docs/Web/CSS/CSS_Types) **`<time>`** de [CSS](/es/docs/Web/CSS) representa un valor de tiempo expresado en segundos o milisegundos. Se usa en {{cssxref("animation")}}, {{cssxref("transition")}} y propiedades relacionadas.
@@ -51,11 +45,8 @@ El tipo de datos `<time>` consta de un {{cssxref("&lt;number&gt;")}} seguido de 
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario                          |
-| ---------------------------------------------------------------------------- | -------------------------------- | ----------------------------------- |
-| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Definición normativa de `s` y `ms`. |
-| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Definición informal de `s` y `ms`.  |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.types.time")}}
+{{Compat}}

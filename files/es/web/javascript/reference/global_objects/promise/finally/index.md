@@ -1,9 +1,9 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/finally
 ---
+
 {{JSRef}}
 
 El método **`finally()`** devuelve una {{jsxref("Promise")}}. Cuando la promesa se resuelve, sea exitosa o rechazada, la función de callback específicada será ejecutada. Esto ofrece una forma de ejecutar código sin importar como se haya resuelto la promesa.
@@ -61,13 +61,11 @@ fetch(myRequest).then(function(response) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}} | {{Spec2('ESDraft')}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Ver también
 

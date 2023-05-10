@@ -3,7 +3,7 @@ title: '<address>: 連絡先要素'
 slug: Web/HTML/Element/address
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<address>` 要素**は、これを含んでいる HTML が個人、団体、組織の連絡先を提供していることを示します。
 
@@ -122,11 +122,7 @@ slug: Web/HTML/Element/address
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-address-element', '&lt;address&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

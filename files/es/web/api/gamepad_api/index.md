@@ -1,13 +1,8 @@
 ---
 title: Gamepad API
 slug: Web/API/Gamepad_API
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - juegos
-translation_of: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 **Gamepad API** es la manera de los desarrolladores de acceder y responder a las señales de los gamepads y otros controles para juegos de una manera simple y consistente. Éste contiene tres interfaces, dos eventos y una función especializada, para responder a los gamepads siendo conectados y desconectados, y acceder a otra información sobre los mismos gamepads, y que botones y otros controles están siendo presionados.
@@ -40,9 +35,9 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 #### Eventos del Window
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento {{event('gamepadconnected')}}).
+  - : Representa un manejador de evento que se ejecutará cuando un gamepad es conectado (cuando se dispara el evento [`gamepadconnected`](/es/docs/Web/Reference/Events/gamepadconnected)).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento {{event('gamepaddisconnected')}}).
+  - : Representa un manejador de evento que se ejecutará cuando un gamepad es desconectado (cuando se dispara el evento [`gamepaddisconnected`](/es/docs/Web/Reference/Events/gamepaddisconnected)).
 
 ## Guías y tutoriales
 
@@ -51,14 +46,11 @@ Ver también las [extensiones para la interfaz del navegador](/es/docs/Web/API/G
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                                  | Comentario                                                                       |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](#experimental_gamepad_extensions). |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                               |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Ver también
 

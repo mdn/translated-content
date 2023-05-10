@@ -1,12 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `POST` 메서드**는 서버로 데이터를 전송합니다. 요청 본문의 유형은 {{httpheader("Content-Type")}} 헤더로 나타냅니다.
@@ -15,7 +11,7 @@ translation_of: Web/HTTP/Methods/POST
 
 `POST` 요청은 보통 [HTML 양식](/ko/docs/Learn/HTML/Forms)을 통해 서버에 전송하며, 서버에 변경사항을 만듭니다. 이 경우의 콘텐츠 유형(`Content-Type`)은 *{{HTMLElement("form")}} 요소의 {{htmlattrxref("enctype", "form")}} 특성이나 {{HTMLElement("input") }}, {{HTMLElement("button")}} *요소의 _{{htmlattrxref("formenctype", "input")}} 특성 안에 적당한 문자열을 넣어 결정합니다._
 
-- `application/`_`x-www-form-urlencoded`: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다.\_\_ 영어 알파벳이 아닌 문자들은 {{glossary("percent encoded")}} 으로 인코딩됩니다. 따라서, 이 content type은 바이너리 데이터에 사용하기에는 적절치 않습니다. (바이너리 데이터에는 use `multipart/form-data` 를 사용해 주세요.)_
+- `application/x-www-form-urlencoded`: &으로 분리되고, "=" 기호로 값과 키를 연결하는 key-value tuple로 인코딩되는 값입니다. 영어 알파벳이 아닌 문자들은 {{glossary("percent encoded")}} 으로 인코딩됩니다. 따라서, 이 content type은 바이너리 데이터에 사용하기에는 적절치 않습니다. (바이너리 데이터에는 use `multipart/form-data` 를 사용해 주세요.)_
 - _`multipart/form-data`_
 - _`text/plain`_
 
@@ -101,7 +97,7 @@ value2
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## 같이 보기
 

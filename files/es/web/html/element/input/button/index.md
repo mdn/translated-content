@@ -1,15 +1,10 @@
 ---
 title: <input type ="button">
 slug: Web/HTML/Element/input/button
-tags:
-  - Elemento
-  - Elemento Input
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/input/button
 original_slug: Web/HTML/Elemento/input/Botón
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento HTML **`<input type="button">`** es una versión específica del elemento **`<input>`**`,` que se usa para crear un botón en el que se puede hacer click sin ningún valor por defecto, es decir, **no tiene un comportamiento predeterminado** como por ejemplo **`<input type="reset">`** . En HTML5 ha sido sustituido por el elemento **[\<button>](/es/docs/Web/HTML/Element/button)**.
 
@@ -116,11 +111,11 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 
     Firefox, al contrario que otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Use el atributo {{htmlattrxref("autocomplete","button")}} para controlar esta característica.
 
-- {{htmlattrdef("autofocus")}} 
+- {{htmlattrdef("autofocus")}}
   - : Este atributo booleano le permite especificar que el botón deba tener el foco cuando la página se cargue, a no ser que el usuario lo anule, por ejemplo, escribiendo en otro cuadro de texto. Únicamente un elemento asociado con los formularios en un documento puede tener este atributo especificado.
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
   - : El uso de este atributo en un {{HTMLElement("button")}} es algo fuera de lo común, y específico de Firefox. Firefox, por defecto y al contrario de otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Establecer el valor de este atributo a `off` (`autocomplete="off"`) desactiva esta característica.
-- {{htmlattrdef("form")}} 
+- {{htmlattrdef("form")}}
   - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button>` debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
 - {{htmlattrdef("formenctype")}}
 
@@ -132,7 +127,7 @@ Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/G
 
     Si este atributo se especifica, ignora el atributo {{htmlattrxref("enctype","form")}} del formulario dueño del botón.
 
-- {{htmlattrdef("formaction")}} 
+- {{htmlattrdef("formaction")}}
   - : La URI de la aplicación que procesa la información enviada por le botón. Si se especifica se anula el atributo {{htmlattrxref("action","form")}} del formulario dueño del botón.
 - {{htmlattrdef("formmethod")}}
 
@@ -175,17 +170,13 @@ Se crea un nuevo input tipo botón con el valor 'Click me'.
 <input type="button" value="Click me">
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                                           | Status                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'the-button-element.html#the-button-element', '&lt;button&gt;')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', 'forms.html#the-button-element', '&lt;button&gt;')}}                     | {{Spec2('HTML5 W3C')}}     |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.5', '&lt;button&gt;')}}                         | {{Spec2('HTML4.01')}}     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Ver también
 

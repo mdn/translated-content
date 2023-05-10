@@ -5,6 +5,7 @@ tags:
   - тестирование
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Эта статья начинает модуль с обзора темы кросс-браузерного тестирования, отвечая на такие вопросы как "что такое кросс-браузерное тестирование?", "с какими распространёнными проблемами можно столкнуться?" и "какие основные подходы для тестирования, обнаружения и исправления проблем существуют?"

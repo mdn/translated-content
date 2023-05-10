@@ -3,6 +3,7 @@ title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 ---
+
 {{JSRef}}
 
 Объект **`Uint8Array`** представляет типизированный массив 8-разрядных целых беззнаковых значений. Содержимое инициализируется значением 0. Создав экземпляр **`Uint8Array`**, возможно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации).

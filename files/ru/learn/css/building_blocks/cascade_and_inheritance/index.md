@@ -12,6 +12,7 @@ tags:
   - Специфичность
 translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 Цель этого урока — углубить ваше понимание некоторых основополагающих концепций CSS — каскадов, спецификаций и наследования, — которые контролируют то, как CSS применяется к HTML и как разрешаются конфликты.

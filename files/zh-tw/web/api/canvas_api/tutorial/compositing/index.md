@@ -3,7 +3,7 @@ title: 合成效果
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 在前述的範例中，新繪製的圖形總會覆蓋在之前的圖形上，對大多數情況來說這相當正常，不過它也限制了圖形繪製的順序。其實我們可以透過 globalCompositeOperation 屬性來改變這項預設行為。
 
@@ -98,6 +98,6 @@ draw();
 
 繪製裁剪路徑之後，所產生的所有圖形都只會出現在路徑以內，從後來繪製的漸層背景中可看出此特性。我們用自訂的 drawStar() 函數產生 50 個隨機散佈、大小不一的星星。這些星星同樣只會出現在裁剪路徑的範圍之內。
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("clip 範例", "180", "180", "canvas_clip.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Transformations", "Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}

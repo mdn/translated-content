@@ -1,8 +1,8 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
+
 {{JSRef}}
 
 A propriedade somente-leitura **`name`** de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou `"anonymous"` para funções criadas anonimamente.

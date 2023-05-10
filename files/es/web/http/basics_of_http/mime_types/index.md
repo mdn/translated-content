@@ -1,16 +1,8 @@
 ---
 title: Tipos MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Cabecera de solicitud
-  - Guide
-  - HTTP
-  - Meta
-  - Tipos MIME
-  - Tipos de contenido
-  - application/json
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 El **tipo Extensiones multipropósito de Correo de Internet (MIME)** es una forma estandarizada de indicar la naturaleza y el formato de un documento, archivo o conjunto de datos. Está definido y estandarizado en [IETF RFC 6838](https://tools.ietf.org/html/rfc6838). La [Autoridad de Números Asignados de Internet (IANA)](https://www.iana.org/) es el organismo oficial responsable de realizar un seguimiento de todos los tipos MIME oficiales, y puede encontrar la lista más actualizada y completa en la página de [tipos de medios (Media Types)](https://www.iana.org/assignments/media-types/media-types.xhtml).

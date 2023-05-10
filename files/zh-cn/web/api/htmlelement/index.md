@@ -5,11 +5,11 @@ slug: Web/API/HTMLElement
 
 {{APIRef}}
 
-HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其它的间接实现 HTMLElement 接口。
+HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其他的间接实现 HTMLElement 接口。
 
 ## 属性
 
-_继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}} **的属性**_
+_继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}} 的属性。_
 
 | 属性名称                                                                                                  | 属性类型                                             | Description                                                                |
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -17,7 +17,6 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.accessKeyLabel")}}                                                  | {{domxref("DOMString")}}                     | 返回一个包含元素访问的快捷键的字符串（只读）                               |
 | {{domxref("HTMLElement.contentEditable")}}                                                  | {{domxref("DOMString")}}                     | 获取/设置元素的可编辑状态                                                  |
 | {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}                     | {{domxref("Boolean")}}                         | 表明元素的内容是否可编辑（只读）                                           |
-| {{domxref("HTMLElement.contextMenu")}}                                                      | {{domxref("HTMLMenuElement")}}             | 设置/获取元素的右键菜单                                                    |
 | {{domxref("HTMLElement.dataset")}} {{readonlyInline}}                                     | {{domxref("DOMStringMap")}}                 | 获取元素的自定义属性，是一个对象（key-value，只读）                        |
 | {{domxref("HTMLElement.dir")}}                                                                  | {{domxref("DOMString")}}                     | 获取/设置元素的方向，可选的值有：ltr，rtl，auto                            |
 | {{domxref("HTMLElement.draggable")}}                                                          | {{domxref("Boolean")}}                         | 设置/获取元素是否可以拖拽                                                  |
@@ -42,22 +41,18 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.title")}}                                                              | {{domxref("DOMString")}}                     | 获取/设置元素的 title 属性                                                 |
 | {{domxref("HTMLElement.translate")}}                                                          | {{domxref("Boolean")}}                         | 获取/设置元素是否可以被翻译                                                |
 
-### Event handlers
+## 事件
 
-The events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("HTMLElement.onTouchStart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) event.
-- {{domxref("HTMLElement.onTouchEnd")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) event.
-- {{domxref("HTMLElement.onTouchMove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) event.
-- {{domxref("HTMLElement.onTouchEnter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{domxref("HTMLElement.onTouchLeave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
-- {{domxref("HTMLElement.onTouchCancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) event.
+- {{DOMxRef("HTMLElement.copy_event", "copy")}}
+  - : Fired when the user initiates a copy action through the browser's user interface.
+- {{DOMxRef("HTMLElement.cut_event", "cut")}}
+  - : Fired when the user initiates a cut action through the browser's user interface.
+- {{DOMxRef("HTMLElement.paste_event", "paste")}}
+  - : Fired when the user initiates a paste action through the browser's user interface.
+- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
+  - : Fired when an element does not satisfy its constraints during constraint validation.
 
 ## 方法
 

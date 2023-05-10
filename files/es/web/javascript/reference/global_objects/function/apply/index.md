@@ -1,15 +1,9 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - función
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 ## Resumen
@@ -142,16 +136,11 @@ Este método es especialmente útil cuando quieres depurar eventos, o interfaces
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Definición Inicial. Implementada in JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.apply")}}
+{{Compat}}
 
 ## Véase también
 

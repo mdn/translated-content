@@ -1,10 +1,6 @@
 ---
 title: message
 slug: Web/XSLT/Element/message
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/message
 original_slug: Web/XSLT/message
 ---
 {{XsltRef}}

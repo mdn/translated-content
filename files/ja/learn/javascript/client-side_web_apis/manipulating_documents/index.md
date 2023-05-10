@@ -69,7 +69,7 @@ l10n:
 
 一方、 DOM はこのようになります。
 
-![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML  要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
+![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML 要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
 
 > **メモ:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 
@@ -294,13 +294,3 @@ linkPara.parentNode.removeChild(linkPara);
 （私たちの [Web API の索引](/ja/docs/Web/API) で、 MDN で文書化されている Web API の全リストを参照できます。）
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール内
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [サードパーティの API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

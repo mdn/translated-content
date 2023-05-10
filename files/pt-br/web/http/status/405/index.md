@@ -1,8 +1,8 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
-translation_of: Web/HTTP/Status/405
 ---
+
 Este status de resposta indica que o verbo HTTP utilizado não é suportado, por exemplo: a requisição ocorre por meio de um get, porém o único método disponível é o post.Curiosidade: Existem um método chamado OPTIONS que retorna todos os verbos suportados naquela requisiçãoobs: ele também pode não ser permitido
 
 ## Status

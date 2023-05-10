@@ -36,10 +36,10 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - 归属它的 {{domxref("DOMImplementation")}} 接口。

@@ -61,9 +61,9 @@ Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API p
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Lancé quand la fenêtre courante change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

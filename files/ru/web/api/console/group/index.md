@@ -1,8 +1,9 @@
 ---
 title: Console.group()
-slug: Web/API/Console/group
+slug: Web/API/console/group
 translation_of: Web/API/Console/group
 ---
+
 {{APIRef("Console API")}}Создаёт новую группу сообщений в [веб-консоли](/ru/docs/Tools/Web_Console). После вызова последующие сообщения, выводимые в консоль, будут иметь дополнительный уровень отступа, до тех пор пока не будет вызван метод {{domxref("console.groupEnd()")}}.
 
 {{AvailableInWorkers}}

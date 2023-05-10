@@ -1,12 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Eventos Server-sent
-  - Interfaz
-translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 La interfaz **`EventSource`** se utiliza para recibir eventos server-side. Se realiza la conexión a un servidor sobre HTTP y se reciben eventos en formato `text/event-stream` sin tener que cerrar la conexión.
@@ -30,11 +26,11 @@ _Esta interfaz también heredará propiedades de su antecesor, {{domxref("EventT
 ### Manejadores de Eventos
 
 - {{domxref("EventSource.onerror")}}
-  - : En un {{event("Event_handlers", "event handler")}} que se invoca cuando ocurre un error y se envía el evento {{event("error")}} a través del objeto `EventSource`.
+  - : En un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando ocurre un error y se envía el evento [`error`](/es/docs/Web/Reference/Events/error) a través del objeto `EventSource`.
 - {{domxref("EventSource.onmessage")}}
-  - : Es un {{event("Event_handlers", "event handler")}} que se invoca cuando se recibe un evento {{event("message")}}, que indica que se ha enviado un mensaje desde la fuente.
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando se recibe un evento [`message`](/es/docs/Web/Reference/Events/message), que indica que se ha enviado un mensaje desde la fuente.
 - {{domxref("EventSource.onopen")}}
-  - : Es un {{event("Event_handlers", "event handler")}} que se invoca cuando se recibe un evento {{event("open")}}, que sucede en el momento que la conexión se abre.
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que se invoca cuando se recibe un evento [`open`](/es/docs/Web/Reference/Events/open), que sucede en el momento que la conexión se abre.
 
 ## Métodos
 
@@ -61,13 +57,11 @@ evtSource.onmessage = function(e) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "comms.html#the-eventsource-interface", "EventSource")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}
 
 ## Ver también
 

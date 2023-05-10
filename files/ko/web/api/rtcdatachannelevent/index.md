@@ -1,7 +1,6 @@
 ---
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
-translation_of: Web/API/RTCDataChannelEvent
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
@@ -19,7 +18,7 @@ WebRTC가 적절한 시기에 생성하고 전달해주기 때문에, `RTCDataCh
 _[`Event`](/ko/docs/Web/API/Event)의 속성을 상속합니다._
 
 - {{domxref("RTCDataChannelEvent.channel")}} {{readOnlyInline}}
-  - : 읽기 속성인 **`RTCDataChannelEvent`\*\***`.channel`\*\*는 이벤트와 관련된 RTCDataChannel를 반환합니다.
+  - : 읽기 속성인 **`RTCDataChannelEvent.channel`** 는 이벤트와 관련된 RTCDataChannel를 반환합니다.
 
 ## 메소드
 

@@ -6,6 +6,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript поддерживает компактный набор инструкций, особенно управляющих инструкций, которые вы можете использовать, чтобы реализовать интерактивность в вашем приложении. В данной главе даётся обзор этих инструкций.
@@ -373,7 +374,7 @@ try {
 - _отклонено (rejected)_: операция завершена с ошибкой.
 - _заданный (settled)_: промис выполнен или отклонен, но не находится в состоянии ожидания.
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 ### Загрузка изображения при помощи XHR
 

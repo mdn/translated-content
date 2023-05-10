@@ -31,7 +31,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 讓我們考慮一個農民的例子，他要確保他有足夠的食物來養家糊口。 他可能使用以下循環來實現此目的：
 
-![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
+![](loop_js-02-farm.png)
 
 循環通常具有以下一項或多項功能：
 
@@ -871,13 +871,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

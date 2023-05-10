@@ -1,13 +1,8 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - Cabecera
-  - HTTP
-  - Respuesta
-  - privacidad
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
@@ -86,29 +81,15 @@ Referrer-Policy: unsafe-url
 
 ## Especificaciones
 
-| Especificación                                                                                     | Estado                   |
-| -------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Directiva de referentes](https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-header) | Anteproyecto de editores |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Referrer-Policy")}}
-
-> **Nota:** **Notas**:
->
-> - A partir de la versión 53 en adelante, Gecko incluye una preferencia de `about:config` para permitir a los usuarios definir su directiva `Referrer-Policy` predeterminada: `network.http.referer.userControlPolicy`.
-> - A partir de la versión 59 (consulte el informe n.º [587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), esta preferencia ha cambiado de nombre: ahora son `network.http.referer.defaultPolicy` y `network.http.referer.defaultPolicy.pbmode`.
->
-> Los valores posibles son:
->
-> - 0: `no-referrer`
-> - 1: `same-origin`
-> - 2: `strict-origin-when-cross-origin`
-> - 3: `no-referrer-when-downgrade` (la predeterminada)
+{{Compat}}
 
 ## Véase también
 
-- {{interwiki("wikipedia", "HTTP_referer", "Referente HTTP en Wikipedia")}}
+- [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
 
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).

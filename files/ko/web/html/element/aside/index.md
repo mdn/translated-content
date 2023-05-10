@@ -1,16 +1,9 @@
 ---
 title: '<aside>: 별도 구획 요소'
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/aside
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<aside>` 요소**는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.
 
@@ -73,9 +66,9 @@ translation_of: Web/HTML/Element/aside
     <tr>
       <th scope="row">가능한 ARIA 요소</th>
       <td>
-        {{ARIARole("feed")}}, {{ariarole("none")}},
-        {{ARIARole("note")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}, {{ARIARole("search")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/feed_role'><code>feed</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/none_role'><code>none</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/note_role'><code>note</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/region_role'><code>region</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/search_role'><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -124,7 +117,7 @@ translation_of: Web/HTML/Element/aside
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.aside")}}
+{{Compat}}
 
 ## 같이 보기
 

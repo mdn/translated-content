@@ -155,7 +155,7 @@ function updateName() {
 }
 ```
 
-Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;»  (<i lang="en">event listener</i>)  ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
+Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;» (<i lang="en">event listener</i>) ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
 
 Si vous échangiez les deux premières lignes de code, rien ne fonctionnerait plus, vous obtiendriez une erreur dans la console développeur du navigateur&nbsp;: `TypeError: para is undefined`. Cela signifie que l'objet `para` n'existe pas encore, donc nous ne pouvons pas y ajouter de gestionnaire d'évènement.
 
@@ -397,18 +397,3 @@ Et voilà votre premier pas dans le monde du JavaScript. Nous avons commencé pa
 Le JavaScript peut sembler un peu impressionnant pour l'instant, mais pas d'inquiétude, ce cours progressera pas à pas. Dans le prochain article [Notre premier code JavaScript,](/fr/docs/Learn/JavaScript/First_steps/A_first_splash) nous entrons au cœur du sujet et vous réaliserez vos propres exemples de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## Dans ce module
-
-- [Qu'est-ce que JavaScript&nbsp;?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un premier code JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [Quel est le souci&nbsp;? Analyser un problème avec JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Stocker les informations nécessaires&nbsp;: les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-- [Opérations mathématiques de base en JavaScript&nbsp;: les nombres et les opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math)
-- [Gérer le texte&nbsp;: les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-- [Les méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Les tableaux <i lang="en">(arrays)</i>](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-
-  <i lang="en">(arrays)</i>
-
-- [Évaluation&nbsp;: Générateur d'histoires aléatoires](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)

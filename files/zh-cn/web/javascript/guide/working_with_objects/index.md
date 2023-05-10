@@ -1,6 +1,6 @@
 ---
 title: 使用对象
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -9,7 +9,7 @@ JavaScript 的设计是一个简单的基于对象的范式。一个对象就是
 
 ## 对象概述
 
-javascript 中的对象 (物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
+javascript 中的对象 (物体)，和其他编程语言中的对象一样，可以比照现实生活中的对象 (物体) 来理解它。javascript 中对象 (物体) 的概念可以比照着现实生活中实实在在的物体来理解。
 
 在 javascript 中，一个对象可以是一个单独的拥有属性和类型的实体。我们拿它和一个杯子做下类比。一个杯子是一个对象 (物体)，拥有属性。杯子有颜色，图案，重量，由什么材质构成等等。同样，javascript 对象也有属性来定义它的特征。
 
@@ -36,7 +36,7 @@ myCar.year = 1969;
 myCar.noProperty; // undefined
 ```
 
-JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
+JavaScript 对象的属性也可以通过方括号访问或者设置（更多信息查看 [property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)）. 对象有时也被叫作关联数组，因为每个属性都有一个用于访问它的字符串值。例如，你可以按如下方式访问 `myCar` 对象的属性：
 
 ```js
 myCar["make"] = "Ford";
@@ -144,7 +144,7 @@ var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
             "property n": value_n }; // 或一个字符串
 ```
 
-这里 `obj` 是新对象的名称，每一个 `property_i` 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 `value_i` 是一个其值将被赋予 property\__i_ 的表达式。`obj` 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）
+这里 `obj` 是新对象的名称，每一个 `property_i` 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 `value_i` 是一个其值将被赋予 `property_i` 的表达式。`obj` 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）
 
 如果一个对象是通过在顶级脚本的对象初始化器创建的，则 JavaScript 在每次遇到包含该对象字面量的表达式时都会创建对象。同样的，在函数中的初始化器在每次函数调用时也会被创建。
 
@@ -278,7 +278,7 @@ fish.displayType(); // Output:Fishes
 
 在 JavaScript 1.0 中，你可以通过名称或序号访问一个属性。但是在 JavaScript 1.1 及之后版本中，如果你最初使用名称定义了一个属性，则你必须通过名称来访问它；而如果你最初使用序号来定义一个属性，则你必须通过索引来访问它。
 
-这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 `Car` 对象类型所做的那样）并且显式地定义了单独的属性（如 `m`yCar.color = "red"）之时。如果你最初使用索引定义了一个对象属性，例如 `myCar[5] = "25"`，则你只可能通过 `myCar[5]` 引用它。
+这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 `Car` 对象类型所做的那样）并且显式地定义了单独的属性（如 `myCar.color = "red"`）之时。如果你最初使用索引定义了一个对象属性，例如 `myCar[5] = "25"`，则你只可能通过 `myCar[5]` 引用它。
 
 这条规则的例外是从与 HTML 对应的对象，例如 `forms` 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 `<form>` 标签有一个 `NAME` 属性且值为 `"myForm"`，访问该 `form` 的方式可以是 `document.forms[1]`，`document.forms["myForm"]` 或 `document.myForm`。
 
@@ -389,11 +389,11 @@ function validate(obj, lowval, hival) {
 </form>
 ```
 
-## **定义 getters 与 setters**
+## 定义 getter 与 setter
 
 一个 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 是一个获取某个特定属性的值的方法。一个 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 是一个设定某个属性的值的方法。你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。定义 getter 和 setter 的语法采用对象字面量语法。
 
-下面例子描述了 getters 和 setters 是如何为用户定义的对象 `o` 工作的。
+下面例子描述了 getter 和 setter 是如何为用户定义的对象 `o` 工作的。
 
 ```js
 var o = {
@@ -526,4 +526,4 @@ fruit === fruitbear // return true
 - 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)。
 - 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

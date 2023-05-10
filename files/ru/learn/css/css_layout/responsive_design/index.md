@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 На заре веб-дизайна страницы создавались для экрана определённого размера. Если у пользователя был экран большего или меньшего размера чем ожидал дизайнер, то результат мог быть от нежелательных полос прокрутки, до слишком длинной строки и плохого использования пространства. Поскольку становились доступны много различных размеров экранов, появилась концепция _отзывчивого (адаптивного) веб-дизайна_ _(responsive web design_ (RWD)) — набор методов, которые позволяют веб-страницам менять свой макет и внешний вид в соответствии с разной шириной экрана, разрешением и т.д. Это та самая, идея которая изменила подход к дизайну веба для множества устройств, и в этой статье мы поможем вам понять основные методы, которые вам необходимо знать, чтобы освоить его.
@@ -21,13 +22,13 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 Эти два подхода, как правило, приводили к тому, что веб-сайт лучше всего выглядел на экране человека, создавшего сайт! Жидкий сайт приводил к раздавленному дизайну на маленьких экранах (как видно ниже) и не читаемо длинным строкам на больших.
 
-![A layout with two columns squashed into a mobile size viewport.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
 > **Примечание:** Посмотрите этот простой жидкий макет: [пример](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). При просмотре примера, растягивайте и сжимайте окно браузера чтобы увидеть, как это выглядит при разных размерах.
 
 Сайт с фиксированной шириной рисковал иметь горизонтальную полосу прокрутки на экранах меньших чем ширина сайта (как видно ниже) и много белого пространства на краях дизайна на больших экранах.
 
-![A layout with a horizontal scrollbar in a mobile viewport.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
 > **Примечание:** Посмотрите этот простой макет с фиксированной шириной: [пример](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Снова изучите результат по мере изменения размера окна браузера.
 
@@ -99,11 +100,11 @@ target / context = result
 
 Следующий пример демонстрирует простой отзывчивый дизайн, с использованием медиавыражений и гибких сеток. На узких экранах макет отображает блоки, расположенные друг над другом:
 
-![A mobile view of the layout with boxes stacked on top of each other vertically.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![A mobile view of the layout with boxes stacked on top of each other vertically.](mdn-rwd-mobile.png)
 
 На более широких экранах они перемещаются в два столбца:
 
-![A desktop view of a layout with two columns.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
 > **Примечание:** вы можете найти [живой пример](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) и [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) этого примера на GitHub.
 
@@ -204,11 +205,11 @@ h1 {
 
 В мобильных версиях заголовок меньше:
 
-![A stacked layout with a small heading size.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![A stacked layout with a small heading size.](mdn-rwd-font-mobile.png)
 
 На компьютерах, однако, мы видим больший размер заголовка:
 
-![A two column layout with a large heading.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
 > **Примечание:** смотрите этот пример в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 

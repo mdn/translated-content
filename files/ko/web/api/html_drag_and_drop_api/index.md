@@ -1,15 +1,6 @@
 ---
 title: HTML 드래그 앤 드롭 API
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-  - 가이드
-  - 개요
-  - 고급
-  - 드래그 앤 드롭
-  - 이벤트
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: Web/API/HTML_드래그_앤_드롭_API
 ---
 {{DefaultAPISidebar("HTML 드래그 앤 드롭 API")}}
@@ -22,7 +13,7 @@ HTML 드래그 앤 드롭 인터페이스는 파이어폭스와 다른 브라우
 
 ## 드래그 이벤트
 
-HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxref("DragEvent","drag events")}}_ 를\_ \_{{domxref("MouseEvent","mouse events")}} 로부터 상속받습니다. 보통 드래그는 사용자가 draggable 요소를 마우스로 선택하고, 마우스 포인터를 droppable 요소로 가져가 마우스 버튼을 때는 것으로 이루어집니다. 드래그하는 도중에 많은 이벤트가 발생하고, 몇몇 이벤트는 여러번 발생하기도 합니다. ( {{event("drag")}}와 {{event("dragover")}}).
+HTML 드래그 앤 드롭은 {{domxref("Event","DOM event model")}} 과 _{{domxref("DragEvent","drag events")}}_ 를 {{domxref("MouseEvent","mouse events")}} 로부터 상속받습니다. 보통 드래그는 사용자가 draggable 요소를 마우스로 선택하고, 마우스 포인터를 droppable 요소로 가져가 마우스 버튼을 때는 것으로 이루어집니다. 드래그하는 도중에 많은 이벤트가 발생하고, 몇몇 이벤트는 여러번 발생하기도 합니다. ( {{event("drag")}}와 {{event("dragover")}}).
 
 모든 [드래그 이벤트](/ko/docs/Web/API/DragEvent#Event_types)는 [글로벌 이벤트 핸들러](/ko/docs/Web/API/DragEvent#GlobalEventHandlers)와 연결되어 있습니다. 각 드래그 이벤트와 드래그 전역 속성은 참조 문서를 가지고 있습니다. 아래 표는 각 이벤트에 대한 간략한 설명과 참조 문서로의 링크를 담고 있습니다.
 

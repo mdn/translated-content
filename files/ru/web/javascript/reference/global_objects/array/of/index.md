@@ -11,6 +11,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 Метод **`Array.of()`** создаёт новый экземпляр массива `Array` из произвольного числа аргументов, вне зависимости от числа или типа аргумента.

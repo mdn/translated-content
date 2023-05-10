@@ -1,14 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - 자바스크립트
-  - 클래스
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 **static** 키워드는 클래스의 정적 메서드를 정의합니다.

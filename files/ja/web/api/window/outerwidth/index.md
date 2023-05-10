@@ -15,9 +15,7 @@ slug: Web/API/Window/outerWidth
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

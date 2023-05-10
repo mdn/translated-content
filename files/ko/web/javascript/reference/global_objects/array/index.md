@@ -1,15 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - Class
-  - Example
-  - Global Objects
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 

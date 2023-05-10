@@ -8,6 +8,7 @@ tags:
   - Строгий режим
 translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

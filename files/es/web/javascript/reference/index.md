@@ -1,9 +1,9 @@
 ---
 title: Referencia de JavaScript
 slug: Web/JavaScript/Reference
-translation_of: Web/JavaScript/Reference
 original_slug: Web/JavaScript/Referencia
 ---
+
 {{JsSidebar}}
 
 Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/Web/JavaScript/Reference/About).

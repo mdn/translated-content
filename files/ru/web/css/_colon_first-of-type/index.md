@@ -5,6 +5,7 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 ## Описание

@@ -1,18 +1,9 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Reference
-  - Variables
-  - env
-  - env()
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).
@@ -52,7 +43,7 @@ env(safe-area-inset-left, 1.4rem);
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : As variáveis `safe-area-inset-*` são quatro variáveis de ambiente que definem um retângulo por seus valores de inserção: _top, right, bottom_ e _left_ a partir da borda da janela de visualização, no qual é seguro colocar o conteúdo sem o risco de ser cortado pela forma de um visor não retangular. Para janelas de visualização retangulares, como o monitor de um laptop comum, seu valor é igual a zero. Para telas não retangulares - como um visor de um relógio redondo - os quatro valores definidos pelo agente do usuário formam um retângulo de modo que todo o conteúdo dentro do retângulo seja visível.
 
-> **Note:** **Nota**: Ao contrário de outras propriedades CSS, os nomes de propriedades definidos pelo agente do usuário fazem distinção entre maiúsculas e minúsculas.
+> **Nota:** Ao contrário de outras propriedades CSS, os nomes de propriedades definidos pelo agente do usuário fazem distinção entre maiúsculas e minúsculas.
 
 ### Sintaxe formal
 
@@ -99,7 +90,7 @@ padding: env(x, 50px, 20px); /* ignorado '50px, 20px' porque não é um valor de
 
 A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas se o valor da propriedade não suportar vírgulas, o valor não é válido.
 
-> **Note:** **Nota**: As propriedades do agente do usuário não são redefinidas pela propriedade [all](/pt-BR/docs/Web/CSS/all).
+> **Nota:** As propriedades do agente do usuário não são redefinidas pela propriedade [all](/pt-BR/docs/Web/CSS/all).
 
 ## Especificações
 

@@ -1,17 +1,9 @@
 ---
 title: Introducción a Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprendizaje
-  - CodigoScript
-  - Principiante
-  - Programación lado servidor
-  - Python
-  - django
-  - introducción
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 En este primer artículo de Django responderemos la pregunta ¿Qué es Django? y daremos una visión general de lo que hace que este framework sea tan especial. Vamos a delinear las características principales, incluidas algunas de las funcionalidades avanzadas que no tendremos tiempo de cubrir con detalle en este módulo. Tambien mostraremos algunos de los componentes principales de una aplicación de Django. (aunque en este momento no cuentes con un entorno de desarrollo en el cual probarlo).
@@ -103,7 +95,7 @@ En un sitio web tradicional basado en datos, una aplicación web espera peticion
 
 Las aplicaciones web de Django normalmente agrupan el código que gestiona cada uno de estos pasos en ficheros separados:
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 - **URLs:** Aunque es posible procesar peticiones de cada URL individual vía una función individual, es mucho más sostenible escribir una función de visualización separada para cada recurso. Se usa un mapeador URL para redirigir las peticiones HTTP a la vista apropiada basándose en la URL de la petición. El mapeador URL se usa para redirigir las peticiones HTTP a la vista apropiada basándose en la URL de la petición. El mapeador URL puede también emparejar patrones de cadenas o dígitos específicos que aparecen en una URL y los pasan a la función de visualización como datos.
 - **Vista (View):** Una vista es una función de gestión de peticiones que recibe peticiones HTTP y devuelve respuestas HTTP. Las vistas acceden a los datos que necesitan para satisfacer las peticiones por medio de _modelos_, y delegan el formateo de la respuesta a las _plantillas_ (_"templates"_).
@@ -248,21 +240,3 @@ Las secciones prededentes muestran las principales características que usarás 
 Has visto ya algo de código real de Django más arriba, pero a diferencia del código de lado cliente, necesitas configurar un entorno de desarrollo para hacerlo funcionar. Ese será nuestro siguiente paso.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducci%C3%B3n)
-- [Puesta en marcha de un entorno de desarrollo de Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: Sitio web "Biblioteca Local"](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creación del esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Uso de modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de Administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creación de tu página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación y permisos de Usuario](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajo con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Desplegando Django a producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad de las aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

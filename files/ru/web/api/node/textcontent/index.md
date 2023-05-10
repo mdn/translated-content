@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Node/textContent
 ---
+
 {{ApiRef}}
 
 ## Аннотация

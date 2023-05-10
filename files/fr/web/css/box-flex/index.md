@@ -99,7 +99,7 @@ Cette propriété n'est pas une propriété standard. [Une ancienne version de l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-flex")}}
+{{Compat}}
 
 ## Voir aussi
 

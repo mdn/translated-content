@@ -1,15 +1,8 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-  - Audio
-  - Interface
-  - Referencia
-  - Som
-  - api de áudio
-translation_of: Web/API/AudioContext
 ---
+
 {{APIRef("Web Audio API")}}
 
 A interface `AudioContext` representa um grafo de processamento de áudio construído a partir de nós de áudio conectados, cada um representado por um {{domxref("AudioNode")}} Um contexto de áudio controla a criação dos nós que contém e a execução do processamento de áudio, ou decodificação. Você precisa criar um AudioContext antes de fazer qualquer outra coisa, pois tudo acontece dentro de um contexto.
@@ -24,7 +17,7 @@ Um `AudioContext`pode ser um alvo de eventos, portanto, ele implementa a interfa
 ## Propriedades
 
 - {{domxref("AudioContext.currentTime")}} {{readonlyInline}}
-  - : Retorna um double representando um tempo cada vez maior de hardware em segundos usados ​​para agendamento. Começa em `0`.
+  - : Retorna um double representando um tempo cada vez maior de hardware em segundos usados para agendamento. Começa em `0`.
 - {{domxref("AudioContext.destination")}} {{readonlyInline}}
   - : Retorna um {{domxref("AudioDestinationNode")}} representando o destino final de todo o áudio no contexto. Pode ser pensado como o dispositivo de renderização de áudio.
 - {{domxref("AudioContext.listener")}} {{readonlyInline}}

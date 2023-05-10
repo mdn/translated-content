@@ -1,21 +1,13 @@
 ---
 title: String.prototype.fontsize()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - fontsize()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método `fontsize()` cria um elemento HTML [\<font>](/pt-BR/docs/Web/HTML/Element/font) que faz com que uma string seja exibida no tamanho da fonte especificada.
 
-> **Nota:** **Nota de uso:** O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
+> **Nota:** O elemento `<font>` foi removido do [HTML5](/pt-BR/docs/Web/HTML/HTML5) e não deve mais ser usado. Em vez disso, web developers devem usar a [propriedade CSS correspondente](/pt-BR/docs/Web/CSS/font-size).
 
 ## Sintaxe
 

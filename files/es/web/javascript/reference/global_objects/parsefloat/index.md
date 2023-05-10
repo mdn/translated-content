@@ -1,10 +1,9 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/parseFloat
-browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 La función **`parseFloat()`** analiza un argumento (si es necesario, lo convierte en una cadena) y devuelve un número de coma flotante.

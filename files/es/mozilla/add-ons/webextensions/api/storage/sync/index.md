@@ -1,17 +1,15 @@
 ---
 title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
-tags:
-  - Complementos Extensiones
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/sync
 ---
+
 {{AddonSidebar()}}
 
 Representa el área de almacenamiento de sincronización. Los elementos en el almacenamiento de sincronización están sincronizados por el navegador y están disponibles en todas las instancias de ese navegador en el que el usuario está conectado (por ejemplo, a través de Firefox Sync o una cuenta de Google), en diferentes dispositivos.
 
 Para Firefox, un usuario debe tener complementos seleccionados en las opciones de "about:preferences".
 
-Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json.
+Tenga en cuenta que la implementación de storage.sync en Firefox se basa en la ID del complemento. Si usa storage.sync, debe establecer una ID para su extensión usando la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) manifest.json.
 
 El principal caso de uso de esta API es almacenar las preferencias sobre su extensión y permitir que el usuario las sincronice con diferentes perfiles. Puede almacenar hasta 100 KB de datos utilizando esta API. Si intenta almacenar más que esto, la llamada fallará con un mensaje de error. La API se proporciona sin ninguna garantía sobre el tiempo de actividad o el rendimiento.
 
@@ -30,9 +28,9 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Elimina todos los elementos del área de almacenamiento.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

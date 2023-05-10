@@ -1,13 +1,8 @@
 ---
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
-tags:
-  - API
-  - Referencia
-  - Rendimiento Web
-  - metodo
-translation_of: Web/API/Performance/clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 El método **`clearMeasures()`** elimina _la medida llamada_ del búfer de rendimiento de entrada, si el método es llamado sin argumentos, todos los {{domxref("PerformanceEntry","performance entries")}} con un {{domxref("PerformanceEntry.entryType","entry type")}} de "`measure`" serán eliminados del búfer de rendimiento de entrada.
@@ -64,11 +59,8 @@ logMeasureCount() // "Found this many entries: 0"
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                       | Comentario                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------- |
-| {{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}} | {{Spec2('User Timing Level 2')}} | Se clarifica `clearMeasures()`. |
-| {{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}         | {{Spec2('User Timing')}}             | Definición básica.              |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.clearMeasures")}}
+{{Compat}}

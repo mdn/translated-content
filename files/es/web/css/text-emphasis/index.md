@@ -1,8 +1,8 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-translation_of: Web/CSS/text-emphasis
 ---
+
 La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
 
 Esta **propiedad** aplicara el énfasis a cada carácter especificado en el texto del elemento, a excepción de caracteres separados como espacios y caracteres de control .
@@ -96,15 +96,13 @@ h2 {
 
 {{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 70)}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-emphasis")}}
+{{Compat}}
 
 ## Ver también
 

@@ -51,9 +51,7 @@ elem1 = document.forms["named.item.with.periods"];
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}} | {{ Spec2('DOM WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

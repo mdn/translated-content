@@ -3,6 +3,7 @@ title: Window.console
 slug: Web/API/Window/console
 translation_of: Web/API/Window/console
 ---
+
 {{ APIRef }}
 
 Свойство **`window.console`** даёт доступ к интерфейсу {{domxref("Console")}}, предоставляющий методы для вывода информации в консоль браузера. Данные методы предназначены для отладки приложения, и не должны использоваться конечными пользователями.

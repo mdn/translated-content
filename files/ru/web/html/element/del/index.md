@@ -5,6 +5,7 @@ tags:
   - доступность
 translation_of: Web/HTML/Element/del
 ---
+
 Элемент **HTML `<del>` **представляет диапазон текста, который был удалён из документа. Он может быть использован, например, при отображении "отслеживания изменений" или различий в исходном коде. Элемент {{HTMLElement("ins")}} можно использовать для противоположной цели: указание текста, который был добавлен в документ.
 
 {{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
@@ -13,11 +14,11 @@ translation_of: Web/HTML/Element/del
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
-| Пропуск тега                                           | {{no_tag_omission}}                                                                                                                      |
+| Допустимое содержимое                                  | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                      |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
-| Допустимые ARIA роли                                   | Любые                                                                                                                                         |
-| DOM интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                         |
+| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
 
 ## Атрибуты
 
@@ -85,4 +86,4 @@ del::after {
 - {{HTMLElement("ins")}} элемент для вставки в текст
 - {{HTMLElement("s")}} элемент для зачёркивания, отдельный от представления удалённого текста
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,8 +1,8 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-translation_of: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("WebRTC")}}
 
 ## Sumario
@@ -36,15 +36,15 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 ### Disparador de eventos
 
 - {{domxref("MediaStreamTrack.onstarted")}}
-  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción a realizar cuando el evento {{event("started")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es añadido.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción a realizar cuando el evento [`started`](/es/docs/Web/Reference/Events/started) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es añadido.
 - {{domxref("MediaStreamTrack.onmute")}}
-  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("mute")}} es disparado sobre el objeto, que es cuando la transmición es terminada.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`mute`](/es/docs/Web/Reference/Events/mute) es disparado sobre el objeto, que es cuando la transmición es terminada.
 - {{domxref("MediaStreamTrack.onunmute")}}
-  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("unmute")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`unmute`](/es/docs/Web/Reference/Events/unmute) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 - {{domxref("MediaStreamTrack.onoverconstrained")}}
-  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un objeto {{event("overconstrained")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un objeto [`overconstrained`](/es/docs/Web/Reference/Events/overconstrained) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 - {{domxref("MediaStreamTrack.oneended")}}
-  - : Es un contenedor {{event("Event_handlers", "event handler")}} de la acción ha realizar cuando un evento {{event("ended_(MediaStream)", "ended")}} es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
+  - : Es un contenedor [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la acción ha realizar cuando un evento [`ended`](/es/docs/Web/Reference/Events/ended_(MediaStream)) es disparado sobre el objeto, que es cuando un objeto {{domxref("MediaStreamTrack")}} es removido por este.
 
 ## Métodos
 
@@ -63,13 +63,11 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 ## Especificaciones
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediastreamtrack', 'MediaStreamTrack')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.MediaStreamTrack")}}
+{{Compat}}
 
 ## Ver támbien
 

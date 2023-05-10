@@ -1,17 +1,8 @@
 ---
 title: Event
 slug: Web/API/Event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 A interface de **eventos** representa qualquer evento de DOM. Ele contém propriedades comuns e métodos para qualquer evento.
@@ -106,15 +97,15 @@ _Esta interface não herda nenhum método._
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : Inicializa o valor de um evento criado. Se o evento já está sendo despachado, este método não faz nada.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
   - : Impede o evento de borbulhar. Obsoleto, use {{domxref ("event.stopPropagation")}} em vez disso.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
   - : Obsoleto, use {{domxref("event.stopPropagation")}} ao invés.
 - {{domxref("Event.preventDefault()")}}
   - : Cancela o evento (caso seja cancelável).
 - {{domxref("Event.stopImmediatePropagation()")}}
   - : Para este evento em particular, nenhum outro ouvinte será chamado. Ou aqueles ligados no mesmo elemento, nem aqueles associados em elementos que serão percorridos mais tarde
-    (em fase de captura, por exemplo)​.
+    (em fase de captura, por exemplo).
 - {{domxref("Event.stopPropagation()")}}
   - : Para a propagação de eventos mais adiante no DOM.
 - {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}

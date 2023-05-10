@@ -1,75 +1,83 @@
 ---
-title: 'AudioTrackList: removetrack イベント'
+title: "AudioTrackList: removetrack イベント"
 slug: Web/API/AudioTrackList/removetrack_event
+l10n:
+  sourceCommit: 19dbdc2139ab1c68651da2b9338061d64567665d
 ---
 
 {{APIRef}}
 
-`removeTrack` イベントは、トラックが {{domxref("AudioTrackList")}} から取り除かれたときに発生します。
+`removetrack` イベントは、トラックが [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) から取り除かれたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("TrackEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラプロパティ</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/API/AudioTrackList/onremovetrack"
-            >onremovetrack</a
-          ></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js-nolint
+addEventListener("removetrack", (event) => { })
+
+onremovetrack = (event) => { }
+```
+
+## イベント型
+
+{{domxref("TrackEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("TrackEvent")}}
+
+## イベントプロパティ
+
+_`TrackEvent` は {{domxref("Event")}} に基づいているため、 `Event` のプロパティも `TrackEvent` オブジェクトで利用できます。_
+
+- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
+  - : このイベントが参照している DOM track オブジェクト。 `null` でなければ、これは常にいずれかのメディアトラック型のオブジェクトになります。{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}}) のいずれかです。
+
+## 解説
+
+### トリガー
+
+{{domxref("AudioTrackList/removetrack_event", "removetrack")}} イベントは、 `AudioTrackList` オブジェクトで表される音声トラックを持つメディア要素からトラックが取り外されるたびに呼び出されます。
+
+このイベントはキャンセル不可で、バブリングしません。
+
+### 用途
+
+このイベントを使用して、新しい音声トラックが利用できるようになったことに反応することができます。例えば、新しい音声トラックをユーザーが選択できるように、 UI 要素を更新することができます。
 
 ## 例
 
-`AddEventListener()` を使用する場合
+`AddEventListener()` を使用する場合:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
-videoElement.audioTracks.addEventListener('removetrack', (event) => {
+videoElement.audioTracks.addEventListener("removetrack", (event) => {
   console.log(`Audio track: ${event.track.label} removed`);
 });
 ```
 
-`onremovetrack` イベントハンドラプロパティを使用する場合
+`onremovetrack` イベントハンドラープロパティを使用する場合:
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 
 videoElement.audioTracks.onremovetrack = (event) => {
   console.log(`Audio track: ${event.track.label} removed`);
 };
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                         | 状態                             |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-removetrack', 'removetrack')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.AudioTrackList.removetrack_event")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- 関連情報: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event), [`change`](/ja/docs/Web/API/AudioTrackList/change_event)
-- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) 対象でのこのイベント: [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event)
-- [`MediaStream`](/ja/docs/Web/API/MediaStream) 対象でのこのイベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
-- [Media Streams API](/ja/docs/Web/API/Media_Streams_API)
+- 関連イベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event), [`change`](/ja/docs/Web/API/AudioTrackList/change_event)
+- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) を対象としたこのイベント: [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event)
+- [`MediaStream`](/ja/docs/Web/API/MediaStream) を対象としたこのイベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
+- [メディアキャプチャおよびストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)

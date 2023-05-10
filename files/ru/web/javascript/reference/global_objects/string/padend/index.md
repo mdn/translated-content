@@ -9,6 +9,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
+
 {{JSRef}}{{SeeCompatTable}}
 
 Метод **`padEnd()`** дополняет текущую строку с помощью заданной строки (в конечном счёте повторяя), так чтобы результирующая строка достигла заданной длины. Дополнение применяется в конце (справа) текущей строки.

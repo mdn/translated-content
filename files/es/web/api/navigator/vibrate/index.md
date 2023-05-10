@@ -1,8 +1,8 @@
 ---
 title: window.navigator.vibrate
 slug: Web/API/Navigator/vibrate
-translation_of: Web/API/Navigator/vibrate
 ---
+
 {{ApiRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -28,13 +28,13 @@ Si se especifica el valor 0, un array vacío o un array que contenga todos los v
 
 Podrá producirse una excepción si el patrón de vibración especificado es demasiado largo o si cualquiera de sus elementos son demasiado grandes.
 
-## Compatibilidad con navegadores
-
-{{Compat("api.Navigator.vibrate")}}
-
 ## Especificaciones
 
 {{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Véase también
 

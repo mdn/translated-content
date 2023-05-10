@@ -8,6 +8,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
+
 {{JSRef}}
 
 Метод **`toString()`** возвращает строку, представляющую объект.

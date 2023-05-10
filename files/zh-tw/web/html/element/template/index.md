@@ -3,7 +3,7 @@ title: <template>
 slug: Web/HTML/Element/template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<template>` 元素**是用作保存用戶端內容的機制。該內容在頁面載入時不受渲染，但可以在運行時使用 JavaScript 實例化。
 
@@ -89,7 +89,7 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Example", 500, 120)}}
+{{EmbedLiveSample("示例", 500, 120)}}
 
 ## 規範
 

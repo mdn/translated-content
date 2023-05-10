@@ -1,8 +1,8 @@
 ---
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
-translation_of: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`HTMLTableElement.insertRow()`** inserta una nueva fila en la tabla.
@@ -53,19 +53,15 @@ addRow('TableA');
 
 Para ser válida en un documento HTML, una TR debe contener al menos un elemento TD.
 
-Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/en-US/docs/DOM/document.createElement) para crear el nuevo elemento TR.
+Observese que `insertRow` inserta la fila diréctamente en la tabla y retorna una referencia a la nueva fila. La fila no necesita ser añadida separadamente (p.e. con [`document.appendChild()`](/es/docs/DOM/document.appendChild)) tal sería el caso si se usase [`document.createElement()`](/es/docs/DOM/document.createElement) para crear el nuevo elemento TR.
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                           | Observaciones                                        |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "tables.html#dom-table-insertrow", "HTMLTableElement.insertRow()")}} | {{Spec2("HTML WHATWG")}} |                                                      |
-| {{SpecName("DOM2 HTML", "html.html#ID-93995626", "HTMLTableElement.insertRow()")}}                 | {{Spec2("DOM2 HTML")}}     | Especificó con más detalle dónde se inserta la fila. |
-| {{SpecName("DOM1", "level-one-html.html#ID-39872903", "HTMLTableElement.insertRow()")}}         | {{Spec2("DOM1")}}         | Definición inicial                                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLTableElement.insertRow")}}
+{{Compat}}
 
 ## Ver también
 

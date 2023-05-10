@@ -27,7 +27,7 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
 
 ## 示例
 
-本例中，我们使用了 {{event("transitionrun")}} 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。
+本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其他效果来实现连锁反应。
 
 ### HTML
 
@@ -84,7 +84,7 @@ box.ontransitionend = function(event) {
 
 最后的效果如下：
 
-{{EmbedLiveSample('Example', 600, 280)}}
+{{EmbedLiveSample('示例', 600, 280)}}
 
 注意观察当鼠标悬浮在元素上以及移出时发生的变化。
 
@@ -98,6 +98,8 @@ box.ontransitionend = function(event) {
 
 ## 参见
 
-- 触发此事件处理函数的 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件。
-- {{domxref("TransitionEvent")}}
-- 在 transition 开始时触发的 {{event("transitionrun")}} 事件。
+- {{domxref("TransitionEvent")}} 接口
+- CSS 属性：{{cssxref("transition")}}、{{cssxref("transition-delay")}}、{{cssxref("transition-duration")}}、{{cssxref("transition-property")}}、{{cssxref("transition-timing-function")}}
+- 相关事件：{{domxref("Element/transitionrun_event", "transitionrun")}}、{{domxref("Element/transitionstart_event", "transitionstart")}}、{{domxref("Element/transitioncancel_event", "transitioncancel")}}
+- 以 {{domxref("Document")}} 为目标的该事件：{{domxref("Document/transitionend_event", "transitionend")}}
+- 以 {{domxref("Window")}} 为目标的该事件：{{domxref("Window/transitionend_event", "transitionend")}}

@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 dateObj.toISOString()
 ```
 
-## 例子
+## 示例
 
 ```js
 var today = new Date("05 October 2011 14:48 UTC");

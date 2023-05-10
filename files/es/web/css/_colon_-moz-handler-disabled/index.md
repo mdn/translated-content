@@ -1,11 +1,6 @@
 ---
 title: ':-moz-handler-disabled'
 slug: Web/CSS/:-moz-handler-disabled
-tags:
-  - CSS
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-handler-disabled
 ---
 
 {{Non-standard_header}}{{ CSSRef() }}

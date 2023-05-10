@@ -13,6 +13,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 > **Предупреждение:** Изменение прототипа `[[Prototype]]` объекта является, по самой природе оптимизации доступа к свойствам в современных движках JavaScript, очень медленной операцией, это справедливо для **_любого_** браузера и движка JavaScript. Изменение прототипов очень тонко и обширно влияет на производительность, причём это влияние не ограничивается просто временем, проведённым внутри метода `Object.setPrototypeOf()`, оно может распространяться на **_любой_** код, который имеет доступ к **_любому_** объекту, чей прототип `[[Prototype]]` был изменён. Если вы заботитесь о производительности, вы никогда не должны изменять прототип `[[Prototype]]` объекта. Вместо этого создайте объект с нужным прототипом `[[Prototype]]`, с помощью метода {{jsxref("Object.create()")}}.
@@ -46,7 +47,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Полифил
 
-Используя старое свойство {{jsxref("Object.proto", "Object.prototype.__proto__")}}, мы можем легко определить `Object.setPrototypeOf()`, если он ещё не доступен:
+Используя старое свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), мы можем легко определить `Object.setPrototypeOf()`, если он ещё не доступен:
 
 ```js
 if (!Object.setPrototypeOf) {
@@ -72,7 +73,7 @@ if (!Object.setPrototypeOf) {
 
 ## Добавление цепочки прототипов
 
-Сочетание метода `Object.getPrototypeOf()` и свойства {{jsxref("Object.proto", "Object.prototype.__proto__")}} позволяет добавить целую цепочку прототипов к новому прототипу объекта:
+Сочетание метода `Object.getPrototypeOf()` и свойства [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) позволяет добавить целую цепочку прототипов к новому прототипу объекта:
 
 ```js
 /**
@@ -192,4 +193,4 @@ george(); // 'Привет, парни!!'
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

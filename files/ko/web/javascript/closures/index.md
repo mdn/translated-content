@@ -1,15 +1,9 @@
 ---
 title: 클로저
 slug: Web/JavaScript/Closures
-tags:
-  - Closure
-  - ES5
-  - Intermediate
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Guide/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 **클로저**는 함수와 함수가 선언된 어휘적 환경의 조합이다. 클로저를 이해하려면 자바스크립트가 어떻게 변수의 유효범위를 지정하는지(Lexical scoping)를 먼저 이해해야 한다.

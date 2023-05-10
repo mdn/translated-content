@@ -1,11 +1,8 @@
 ---
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
-tags:
-  - Propriedade
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
+
 {{JSRef}}
 
 O symbol bem-conhecido **`Symbol.hasInstance`** é usado para determinar se um objeto construtor reconhece um objeto como de sua instância. O comportamento do operador {{jsxref("Operators/instanceof", "instanceof")}} pode ser customizado por este symbol.

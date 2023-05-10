@@ -1,10 +1,9 @@
 ---
 title: Ejemplo 3 del contexto de apilamiento
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-original_slug: >-
-  Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento
+original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/ejemplo_3_del_contexto_de_apilamiento
 ---
+
 « [CSS](/en/CSS) « [Understanding CSS z-index](/en/CSS/Understanding_z-index)
 
 Este último ejemplo muestra los problemas que surgen cuando se combinan varios elementos posicionados en una jerarquía HTML multi nivel y cuando los valores z-index son asignados usando selectores de clase.
@@ -12,8 +11,6 @@ Este último ejemplo muestra los problemas que surgen cuando se combinan varios 
 Tomemos como ejemplo un menú jerárquico de tres niveles formado por varios DIVs posicionados. DIVs de segundo y tercer nivel aparecen cuando se pone el cursor encima o se hace clic en sus padres. Usualmente este tipo de menú es generado mediante un script del lado del cliente o del lado del servidor, así que las reglas de estilos son asignadas con un selector de clase en lugar de un selector de id.
 
 Si los tres niveles del menú se superponen parcialmente, entonces gestionar el apilamiento se podría convertir en un problema.
-
-{{ EmbedLiveSample('Example_source_code', '320', '330', '', 'Web/Guide/CSS/Understanding_z_index/Stacking_context_example_3') }}
 
 El menú de primer nivel solo tiene posición relativa, así que ningún contexto de apilamiento es creado.
 
@@ -154,6 +151,8 @@ div.lev3 {
 
 </body></html>
 ```
+
+{{EmbedLiveSample('', '320', '330')}}
 
 ### También puedes ver
 

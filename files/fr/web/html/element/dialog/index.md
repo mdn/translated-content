@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/dialog
 browser-compat: html.elements.dialog
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
 
@@ -110,6 +110,10 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 </dialog>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('')}}
+
 ### Exemple avancé
 
 #### HTML
@@ -170,7 +174,7 @@ favDialog.addEventListener('close', function onClose() {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_avancé", "", 300)}}
+{{EmbedLiveSample("", "", 300)}}
 
 ## Spécifications
 

@@ -1,12 +1,9 @@
 ---
 title: Desarrollo Web Móvil
 slug: Web/Guide/Mobile
-tags:
-  - Intermedio
-  - NecesitaEjemplo
-translation_of: Web/Guide/Mobile
 original_slug: Web/Guide/Movil
 ---
+
 Esta página proporciona una visión general de algunas de las principales técnicas necesarias para diseñar sitios web que funcionen bien en dispositivos móviles. Si está buscando información sobre el proyecto Firefox OS de Mozilla, consulte la página de [Firefox OS](/en/Mozilla/Firefox_OS). O podría estar interesado en detalles sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
 
 Hemos organizado esta documentación en dos secciones, [diseñando para dispositivos móviles](#DisenandoParaDispositivosMoviles) y [desarrollo para diferentes navegadores](#DesarrolloParaDiferentesNavegadores). Vea también la guía a la [amigabilidad móvil](/es/docs/Web_Development/Mobile/Mobile-friendliness) para desarrolladores web de Jason Grlicky.
@@ -67,4 +64,4 @@ Si hace esto, asegúrese de que su algoritmo es correcto y no está sirviendo el
 Compruebe su sitio web en múltiples navegadores. Esto significa probarlo en múltiples plataformas — al menos iOS y Android.
 
 - Pruebe Safari móvil en iPhone usando el [simulador iOS](https://developer.apple.com/devcenter/ios/index.action).
-- Pruebe Opera y Firefox utilizando el [Android SDK](https://developer.android.com/sdk/index.html). Vea estas instrucciones adicionales para [ejecutar Firefox para Android usando el emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- Pruebe Opera y Firefox utilizando el [Android SDK](https://developer.android.com/studio#command-tools). Vea estas instrucciones adicionales para [ejecutar Firefox para Android usando el emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).

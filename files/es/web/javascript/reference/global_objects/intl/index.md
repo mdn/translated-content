@@ -1,7 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 ---
 {{JSRef}}
@@ -61,17 +60,13 @@ The `options` argument must be an object with properties that vary between const
 
 One property is supported by all language sensitive constructors and functions: The `localeMatcher` property, whose value must be a string `"lookup"` or `"best fit"` and which selects one of the locale matching algorithms described above.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                        | Status                           | Comment                                            |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Initial definition.                                |
-| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                    |
-| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Added Intl.getCanonicalLocales in the 4th edition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## See also
 

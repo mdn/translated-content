@@ -1,13 +1,8 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - Método HTTP
-  - Referencia
-  - Request method
-translation_of: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 El **método HTTP PATCH** aplica modificaciones parciales a un recurso.

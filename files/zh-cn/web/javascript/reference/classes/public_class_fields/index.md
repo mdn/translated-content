@@ -29,7 +29,7 @@ class ClassWithPublicInstanceMethod {
 
 ### 公有静态字段
 
-公有静态字段在你想要创建一个只在每个类里面只存在一份，而不会存在于你创建的每个类的实例中的属性时可以用到。你可以用它存放缓存数据、固定结构数据或者其它你不想在所有实例都复制一份的数据。
+公有静态字段在你想要创建一个只在每个类里面只存在一份，而不会存在于你创建的每个类的实例中的属性时可以用到。你可以用它存放缓存数据、固定结构数据或者其他你不想在所有实例都复制一份的数据。
 
 公有静态字段是使用关键字 `static` 声明的。我们在声明一个类的时候，使用 {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} 方法将公有静态字段添加到类的构造函数中。在类被声明之后，可以从类的构造函数访问公有静态字段。
 
@@ -39,7 +39,7 @@ class ClassWithStaticField {
 }
 
 console.log(ClassWithStaticField.staticField)
-// 预期输出值："static field"​ 
+// 预期输出值："static field" 
 ```
 
 没有设定初始化的字段将默认被初始化为 `undefined`。

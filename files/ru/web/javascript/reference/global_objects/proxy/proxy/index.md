@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 ---
+
 {{JSRef}}
 
 The **`Proxy()`** constructor is used to create {{jsxref("Proxy")}} objects.

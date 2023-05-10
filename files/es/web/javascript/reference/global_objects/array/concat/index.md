@@ -1,17 +1,9 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - Array
-  - JavaScript
-  - Métodos
-  - Prototipo
-  - Referencia
-  - array.concat
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/concat
 ---
+
 {{JSRef}}
 
 El método **`concat()`** se usa para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.
@@ -108,13 +100,11 @@ console.log(nums);
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.concat")}}
+{{Compat}}
 
 ## Ver también
 

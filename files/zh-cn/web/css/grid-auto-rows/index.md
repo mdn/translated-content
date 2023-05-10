@@ -3,6 +3,8 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
+{{CSSRef}}
+
 CSS 属性 **`grid-auto-rows`** 用于指定隐式创建的行轨道大小。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
@@ -79,7 +81,7 @@ grid-auto-rows: unset;
 
 ## 示例
 
-### HTML 内容
+### HTML
 
 ```html
 <div id="grid">
@@ -89,7 +91,7 @@ grid-auto-rows: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
 ```css
 #grid {
@@ -105,7 +107,7 @@ grid-auto-rows: unset;
 }
 ```
 
-{{EmbedLiveSample("Example", "210px", "210px")}}
+{{EmbedLiveSample("示例", "210px", "210px")}}
 
 ## 规范
 
@@ -117,7 +119,7 @@ grid-auto-rows: unset;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
 - 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
@@ -128,7 +130,7 @@ grid-auto-rows: unset;
 3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
 4. **指南**
 
-    1. [与其它布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    1. [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
     2. [线性布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
     3. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
     4. [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)

@@ -49,7 +49,7 @@ let srcset = htmlImageElement.srcset;
 
 有关可用于 {{HTMLElement("img")}} 元素的图像格式的详细信息，请参阅 [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types) 。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -99,7 +99,7 @@ box.appendChild(newElem);
 
 输出展示在下面，所选 URL 将取决于您显示的图像版本，1x 版本还是 2x 版本？。如果您碰巧有标准和高密度显示器，请尝试在它们之间移动此窗口并重新加载页面以查看结果变化。
 
-{{EmbedLiveSample("Example", 640, 320)}}
+{{EmbedLiveSample("示例", 640, 320)}}
 
 有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南。
 

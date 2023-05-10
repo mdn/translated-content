@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flat
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 El método **`flat()`** crea una nueva matriz con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada.
@@ -142,13 +136,11 @@ if (!Array.prototype.flat) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado         | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------- | ---------- |
-| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Finalizado (4) |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.flat")}}
+{{Compat}}
 
 ## Ver también
 

@@ -3,6 +3,7 @@ title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 translation_of: Web/API/HTMLCanvasElement/getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 Метод **`HTMLCanvasElement.getContext()`** возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.

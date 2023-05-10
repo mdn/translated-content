@@ -3,7 +3,7 @@ title: '<figure>: キャプションが付けられる図要素'
 slug: Web/HTML/Element/figure
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<figure>` (キャプションが付けられる図) 要素**は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一つの単位として参照されます。
 
@@ -159,11 +159,7 @@ Love is a spirit all compact of fire,
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figure-element', '&lt;figure&gt;')}}         | {{Spec2('HTML WHATWG')}} |                       |
-| {{SpecName('HTML5.2', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}     | {{Spec2('HTML5.2')}}     | HTML 5.0 から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

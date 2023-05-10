@@ -3,7 +3,7 @@ title: <input type="url">
 slug: Web/HTML/Element/input/url
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`url`** 型は、ユーザーに URL を入力および編集させるために使用します。
 
@@ -149,7 +149,7 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。この情報は仮想キーボードの <kbd>Enter</kbd> キーにどのようなラベルを使用するかを決定するために使用されます。
 
-> **メモ:** これはグローバル属性 {{htmlattrxref("enterkeyhint")}} として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 {{bug(1490661)}} を参照してください。
+> **メモ:** これはグローバル属性 {{htmlattrxref("enterkeyhint")}} として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 [Firefox バグ 1490661](https://bugzil.la/1490661) を参照してください。
 
 許可されている値は `go`, `done`, `next`, `search`, `send` です。ブラウザーはこのヒントを使用して、 Enter キーにどのラベルを置くかを決定します。
 
@@ -233,7 +233,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### 提案値の提供
 
-さらに一歩進んで、既定の選択肢のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには {{htmlattrxref("list", "input")}} 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる URL をより迅速に選択できるようにします。これは  {{htmlattrxref("autocomplete", "input")}} へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は URL 入力ボックスの対応する提案値となっています。
+さらに一歩進んで、既定の選択肢のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには {{htmlattrxref("list", "input")}} 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる URL をより迅速に選択できるようにします。これは {{htmlattrxref("autocomplete", "input")}} へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は URL 入力ボックスの対応する提案値となっています。
 
 ```html
 <input id="myURL" name="myURL" type="url"

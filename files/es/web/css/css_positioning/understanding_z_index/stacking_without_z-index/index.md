@@ -1,9 +1,9 @@
 ---
 title: Apilando sin z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/CSS/CSS_Positioning/entendiendo_z_index/Stacking_without_z-index
 ---
+
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
 
 Cuando ningún elemento tiene z-index, los elementos son apilados en este orden (de abajo hacia arriba):
@@ -14,12 +14,12 @@ Cuando ningún elemento tiene z-index, los elementos son apilados en este orden 
 
 En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son apropiadamente dimensionados y posicionados para ilustrar las reglas de apilamiento.
 
-> **Nota:** **Notas:**
+> **Nota:**
 >
 > - Dado un grupo homogéneo de elementos sin propiedad z-index, tales como los bloques posicionados (DIV #1 al #4) en el ejemplo, el orden de apilamiento de los elementos es su orden en la jerarquía HTML, independientemente de su posición.
 > - Bloques estándar (DIV #5) en el flujo normal, sin ninguna propiedad de posicionamiento, siempre son renderizados antes de los elementos posicionados y aparecen debajo de los mismos, incluso si están después en la jerarquía HTML.
 
-![understanding_zindex_01.png](/@api/deki/files/910/=understanding_zindex_01.png)
+![understanding_zindex_01.png](understanding_zindex_01.png)
 
 ## Ejemplo
 
@@ -106,7 +106,7 @@ En el siguiente ejemplo, los bloques con posiciones absolutas y relativas son ap
 
 (Si la imagen no aparece en CodePen, haz clic en el botón Tidy en la sección CSS)
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index') }}
+{{EmbedLiveSample('', '', '')}}
 
 ### También puedes ver
 

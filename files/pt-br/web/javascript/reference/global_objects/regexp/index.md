@@ -1,14 +1,8 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Construtor
-  - Expressões Regulares
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## Sumário
@@ -166,7 +160,7 @@ var re = new RegExp('\\w+');
           Unicode. Equivalente a
           <code
             >[
-            \f\n\r\t\v​\u00a0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>
@@ -182,7 +176,7 @@ var re = new RegExp('\\w+');
           Equivalente a
           <code
             >[^
-            \f\n\r\t\v​\u00a0\u1680​\u180e\u2000​\u2001\u2002​\u2003\u2004\u2005\u2006​\u2007\u2008​\u2009\u200a​\u2028\u2029​\u202f\u205f​\u3000]</code
+            \f\n\r\t\v\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]</code
           >.
         </p>
         <p>Por exemplo, <code>/\S\w*/</code> corresponde "foo" em "foo bar".</p>
@@ -680,13 +674,9 @@ var re = new RegExp('\\w+');
 - `RegExp.length`
   - : O valor of `RegExp.length` é 2.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Métodos
 
 O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns métodos através da cadeia de prototype.`
-
-{{jsOverrides("Function", "Methods", "prototype")}}
 
 ## Objetos e instancias
 

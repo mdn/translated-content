@@ -1,15 +1,8 @@
 ---
 title: FileReader.readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
-tags:
-  - API
-  - API Arquivos
-  - Arquivos
-  - File API
-  - Métodos
-  - Referencias(2)
-translation_of: Web/API/FileReader/readAsBinaryString
 ---
+
 {{APIRef("File API")}} {{non-standard_header}}
 
 O método `readAsBinaryString` é usado para iniciar a leitura do conteúdo de um {{domxref("Blob")}} especificado, ou {{domxref("File")}}. Quando a operação de leitura é finalizada, o {{domxref("FileReader.readyState","readyState")}} se torna "`DONE"`, e o evento {{event("loadend")}} é acionado. Neste momento, o atributo {{domxref("FileReader.result","result")}} contém o dado binário bruto do arquivo.

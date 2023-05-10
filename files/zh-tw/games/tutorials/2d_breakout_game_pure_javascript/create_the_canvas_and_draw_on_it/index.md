@@ -19,23 +19,28 @@ slug: >-
 ```html
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +73,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

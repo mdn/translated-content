@@ -49,9 +49,7 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(', '));
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.supportedlocalesof', 'Intl.NumberFormat.supportedLocalesOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

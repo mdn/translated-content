@@ -1,8 +1,8 @@
 ---
 title: objeto Stylesheet
 slug: Web/API/StyleSheet
-translation_of: Web/API/StyleSheet
 ---
+
 {{ ApiRef("CSSOM") }}
 
 Esta sección describe el objeto [CSSStyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet), que representa una única hoja de estilos CSS.

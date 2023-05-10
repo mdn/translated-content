@@ -7,6 +7,7 @@ tags:
   - Определение
 translation_of: Web/HTML/Global_attributes/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 (Mozilla / 5.0 (Windows NT 6.3, WOW64; rv: 29.0) Gecko / 20100101 Firefox / 29.0)

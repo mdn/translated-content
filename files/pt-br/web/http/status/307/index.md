@@ -1,8 +1,8 @@
 ---
 title: 307 Redirecionamento temporário
 slug: Web/HTTP/Status/307
-translation_of: Web/HTTP/Status/307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} O código de estado **`307 Redirecionamento temporário`** indica que o recurso da requisição foi temporariamente alterado para a URL informada no cabeçalho {{HTTPHeader("Location")}}.

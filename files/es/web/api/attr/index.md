@@ -1,8 +1,8 @@
 ---
 title: Attr
 slug: Web/API/Attr
-translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 Este tipo representa un atributo de un elemento DOM como un objeto. En muchos métodos DOM, probablemente vas a obtener el atributo como una cadena (e.g., {{domxref("Element.getAttribute()")}}, pero algunas funciones (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating give `Attr` types.
@@ -54,7 +54,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Utilizar {{domxref("Attr.value")}} en su lugar.
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
-- `ownerElement` {{deprecated_inline("7.0")}} {{obsolete_inline("29.0")}} {{readOnlyInline}}
+- `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
 
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
@@ -64,7 +64,7 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
   - : Estra propiedad ahora siempre devuelve `NULL`.
 - `previousSibling`
   - : Estra propiedad ahora siempre devuelve `NULL`.
-- `schemaTypeInfo` {{obsolete_inline}} {{readOnlyInline}}
+- `schemaTypeInfo` {{deprecated_inline}} {{readOnlyInline}}
   - : The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.
 - `specified`
   - : Estra propiedad ahora siempre devuelve `true`.
@@ -85,7 +85,7 @@ Los siguientes metodos ahora son obsoletos.
   - : Use {{domxref("Element.getAttribute()")}} instead.
 - `getAttributeNodeNS()`
   - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()`{{obsolete_inline("21.0")}}
+- `hasAttributes()` {{deprecated_inline}}
   - : Estra propiedad ahora retorna false.
 - `hasChildNodes()`
   - : Estra propiedad ahora devuelve `false`.
@@ -110,11 +110,8 @@ Los siguientes metodos ahora son obsoletos.
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                       | Comentario                                                                                                                                        |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM4", "#interface-attr", "Attr")}}                 | {{Spec2("DOM4")}}     | Moved `namespaceURI`, `prefix` and `localName` from {{domxref("Node")}} to this API and removed `ownerElement`, `schemaTypeInfo` and `isId`. |
-| {{SpecName("DOM3 Core", "core.html#ID-637646024", "Attr")}} | {{Spec2("DOM3 Core")}} | Definición inicial                                                                                                                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Attr")}}
+{{Compat}}

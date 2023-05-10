@@ -30,7 +30,7 @@ p {
 
 В первом CSS-правиле я выбираю элемент div и задаю его стиль (цвет текста — зелёный). Во втором CSS-правиле выбираю элемент p и задаю красный цвет текста. Вот как выглядит результат:
 
-![CSS selector coding results](https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg)
+![CSS selector coding results](cssselectormdnglossary.jpg)
 
 ## Смотрите также
 

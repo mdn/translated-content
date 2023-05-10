@@ -1,14 +1,9 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/min
 ---
+
 {{JSRef}}
 
 La función **`Math.min()`** devuelve el menor de cero o más números.
@@ -65,16 +60,11 @@ var x = Math.min(f(foo), limite);
 
 ## Especificaciones
 
-| Especificación                                                       | Estatus                      | Comentario                                          |
-| -------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Definición inicial. Implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}} | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-math.min', 'Math.min')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.min")}}
+{{Compat}}
 
 ## Ver además
 

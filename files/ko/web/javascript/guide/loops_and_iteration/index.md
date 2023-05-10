@@ -1,8 +1,8 @@
 ---
 title: 루프와 반복
 slug: Web/JavaScript/Guide/Loops_and_iteration
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 루프는 어떤 것을 반복적으로 시행할때 빠르고 간편한 방법을 제공합니다. [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)의 이 항목은 JavaScript 에서 사용이 가능한 서로 다른 여러가지 반복문을 소개합니다.

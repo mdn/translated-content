@@ -1,5 +1,5 @@
 ---
-title: 循环吧代码
+title: 循环吧，代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
@@ -681,7 +681,7 @@ for (initializer; exit-condition; final-expression) {
 ```plain
 initializer
 while (exit-condition) {
-  // code to run
+  // 要运行的代码
 
   final-expression
 }
@@ -692,7 +692,7 @@ while (exit-condition) {
 ```plain
 initializer
 do {
-  // code to run
+  // 要运行的代码
 
   final-expression
 } while (exit-condition)
@@ -717,13 +717,3 @@ do {
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## 在本单元中
-
-- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

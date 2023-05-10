@@ -1,15 +1,8 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.setPrototypeOf()`** 메서드는 {{jsxref("Object.setPrototypeOf()")}}에 대한 트랩입니다.

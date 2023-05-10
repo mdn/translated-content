@@ -1,13 +1,8 @@
 ---
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
-tags:
-  - Construtor
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
+
 {{JSRef}}
 
 A matriz do tipo **`Int16Array`** representa uma matriz de inteiros assinados de 16 bits com dois complementos na ordem de bytes da plataforma. Se o controle sobre a ordem de bytes for necessário, use {{jsxref ("DataView")}}. O conteúdo é inicializado em 0. Uma vez estabelecido, você pode fazer referência a elementos na matriz usando os métodos do objeto ou usando a sintaxe de índice da matriz padrão (ou seja, usando a notação de colchetes).

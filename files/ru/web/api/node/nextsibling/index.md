@@ -12,6 +12,7 @@ tags:
   - Узлы
 translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.nextSibling`** используется только для чтения и возвращает узел, непосредственно следующий за данным узлом в списке {{domxref("Node.childNodes","childNodes")}} его родительского элемента, или `null` если данный узел последний в этом списке.

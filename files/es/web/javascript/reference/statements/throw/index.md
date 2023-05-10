@@ -1,12 +1,9 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/throw
 original_slug: Web/JavaScript/Referencia/Sentencias/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

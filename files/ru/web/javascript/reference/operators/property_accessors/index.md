@@ -1,8 +1,9 @@
 ---
 title: Property accessors
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 Доступ к свойствам объекта можно получить, используя точечную и скобочную записи.

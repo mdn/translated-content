@@ -27,7 +27,7 @@ Oculus Rift の人気とその他の多くの機器が間もなく市場に登�
 
 現在、 WebVR API のブラウザー対応はまだ実験的です — [nightly builds of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/) と [experimental builds of Chrome](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&amp;usp=sharing#list) で動作しますが（Mozilla と Google が一丸となって実装に取り組みます）、遅かれ早かれ通常のビルドで見ることができるようになるでしょう。
 
-[WebVR 仕様](|http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
+[WebVR 仕様](http://mozvr.github.io/webvr-spec/webvr.html)は、編集者草案の状態にあり、これはまだ変更される可能性があることを意味します。 開発は、Mozilla の [Vladimir Vukicevic](https://twitter.com/vvuk) と Google の [Brandon Jones](https://twitter.com/tojiro) が主導しています。 詳細については、 <https://mixedreality.mozilla.org/> および [WebVR.info](https://webvr.info/) のウェブサイトにアクセスしてください。
 
 ### WebVR API の使用
 

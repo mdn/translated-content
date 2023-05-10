@@ -1,12 +1,9 @@
 ---
 title: copy
 slug: Web/XSLT/Element/copy
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/copy
 original_slug: Web/XSLT/copy
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:copy>` genera una copia superficial (el nodo y cualquier nodo del nombre de espacio asociado) del nodo actual al documento de salida. Este elemento no copia ni elementos hijo ni atributos del nodo actual.

@@ -1,16 +1,8 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - Referrer-Policy
-  - Resposta
-  - privacidade
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho HTTP **`Referrer-Policy`** controla quanta [informação de referência](/pt-BR/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (enviado pelo cabeçalho {{HTTPHeader("Referer")}}) deve ser incluída nas requisições.
@@ -230,6 +222,6 @@ No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-or
 
 - {{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}
 - Quando usando [Fetch](/pt-BR/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
-- A obsoleta diretiva {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{Obsolete_Inline}}.
+- A obsoleta diretiva {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}}.
 - [Política de mesma origem (_Same-origin policy_)](/pt-BR/docs/Web/Security/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

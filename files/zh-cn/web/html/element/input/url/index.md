@@ -1,336 +1,382 @@
 ---
 title: <input type="url">
-slug: Web/HTML/Element/Input/url
+slug: Web/HTML/Element/input/url
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-{{HTMLElement("input")}} 元素有一个 **`url`** 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+**`url`** 类型的 {{HTMLElement("input")}} 元素用来让用户输入和编辑 URL。
 
-The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
+{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
 
-On browsers that don't support inputs of type `url`, a `url` input falls back to being a standard {{HTMLElement("input/text", "text")}} input.
+所输入的值在表单提交前会自动经过验证，以确认它为空，或为一个合法的 URL 格式。{{cssxref(":valid")}} 和 {{cssxref(":invalid")}} CSS 伪类会适当地自动应用，以在视觉上表示当前值是否为一个合法的 URL 值。
+
+对于不支持类型为 `url` 的输入框的浏览器，它会回退为标准的 {{HTMLElement("input/text", "text")}} 输入框。
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong><a href="#value">Value</a></strong></td>
-   <td>A {{domxref("DOMString")}} representing a URL, or empty</td>
+   <td><strong><a href="#值">值</a></strong></td>
+   <td>代表 URL 的字符串，或为空</td>
   </tr>
   <tr>
-   <td><strong>Events</strong></td>
-   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) and [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)</td>
+   <td><strong>事件</strong></td>
+   <td>
+    {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
+   </td>
   </tr>
   <tr>
-   <td><strong>Supported Common Attributes</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}} and {{htmlattrxref("size", "input")}}</td>
+   <td><strong>支持的通用属性</strong></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a></td>
   </tr>
   <tr>
-   <td><strong>IDL attributes</strong></td>
-   <td><code>list</code>, <code>value</code>, <code>selectionEnd</code>, <code>selectionDirection</code></td>
+   <td><strong>IDL 属性</strong></td>
+   <td><code>list</code>、<code>value</code>、<code>selectionEnd</code> 和 <code>selectionDirection</code></td>
   </tr>
+    <tr>
+      <td><strong>DOM 接口</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
   <tr>
-   <td><strong>Methods</strong></td>
-   <td>{{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}} and {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.</td>
+   <td><strong>方法</strong></td>
+   <td>{{domxref("HTMLInputElement.select", "select()")}}、{{domxref("HTMLInputElement.setRangeText", "setRangeText()")}} 和 {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}。</td>
   </tr>
  </tbody>
 </table>
 
-## Value
+## 值
 
-The {{HTMLElement("input")}} element's {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+{{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含了自动验证为 URL 格式的字符串。具体来说，有两种可能的格式可以通过验证：
 
-1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
+1. 一个空字符串（""），代表用户没有输入任何值，或者有值被移除。
+2. 一个正确的绝对 URL 格式。这并不代表 URL 所指地址实际存在，但至少要符合格式。简单来说，要类似于 `urlscheme://restofurl`。
 
-See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
+查看[验证](#验证)小节，以了解 URL 如何经过验证来确保格式正确性。
 
-## Additional attributes
+## 附加属性
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes:
+除了所有 {{HTMLElement("input")}} 元素上共有的可操作的属性外，`url` 输入框还支持以下属性：
 
-| Attribute                     | Description                                                                                                                         |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | The id of the \<datalist> element that contains the optional pre-defined autocomplete options                                        |
-| [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
-| [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
-| [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |
-| [`placeholder`](#placeholder) | An exemplar value to display in the input field whenever it is empty                                                                |
-| [`readonly`](#readonly)       | A Boolean attribute indicating whether or not the contents of the input should be read-only                                         |
-| [`size`](#size)               | A number indicating how many characters wide the input field should be                                                              |
-| [`spellcheck`](#spellcheck)   | Controls whether or not to enable spell checking for the input field, or if the default spell checking configuration should be used |
+### list
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}
+`list` 属性指定了一个 {{HTMLElement("datalist")}} 元素的 id，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### maxlength
 
-The maximum number of characters (as UTF-16 code units) the user can enter into the `url` input. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `url` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+用户可以输入到 `url` 输入框中的最大字符数（以 UTF-16 代码单元为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `url` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### minlength
 
-The minimum number of characters (as UTF-16 code units) the user can enter into the `url` input. This must be an non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the `url` input has no minimum length.
+用户可以输入到 `url` 输入框中的最小字符数（以 UTF-16 代码单元为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `url` 输入将没有最小值。
 
-The input will fail [constraint validation](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation) if the length of the text entered into the field is fewer than `minlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
+如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### pattern
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "pattern-include")}}
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
-See the section [Pattern validation](#pattern_validation) for details and an example.
+如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
+> **备注：** 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}
+参见[模式验证](#模式验证)小节以获取细节和例子。
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}
+### placeholder
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "spellcheck", 0, 1, 2)}}
+`placeholder` 属性是一个字符串，可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。
 
-## Non-standard attributes
+如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
-The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
+> **备注：** 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
 
-| Attribute                         | Description                                                                                                                                                                                                                                                             |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`autocorrect`](#autocorrect)     | A string indicating whether or not autocorrect is `on` or `off`. **Safari only.**                                                                                                                                                                                       |
-| [`mozactionhint`](#mozactionhint) | A string indicating the type of action that will be taken when the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field; this is used to determine an appropriate label for that key on a virtual keyboard. **Firefox for Android only.** |
+### readonly
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "autocorrect", 0, 1, 2)}}
+一个布尔属性，如果存在，则表示该字段不能由用户编辑。但是，仍可以通过 JavaScript 代码直接设置 {{domxref("HTMLInputElement")}} 的 `value` 属性来更改。
 
-{{page("/en-US/docs/Web/HTML/Element/input/text", "mozactionhint", 0, 1, 2)}}
+> **备注：** 因为只读字段不能有值，所以 `required` 对指定了 `readonly` 属性的输入没有任何影响。
 
-## Using URL inputs
+### size
 
-When you create a URL input with the proper `type` value, `url`, you get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL. This can help avoid cases in which the user mis-types their web site's address, or provides an invalid one.
+`size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（{{cssxref("font")}} 使用中的设置）。
 
-It's important, however, to note that this is not enough to ensure that the specified text is a URL which actually exists, corresponds to the user of the site, or is acceptable in any other way. It simply ensures that the value of the field is properly formatted to be a URL.
+这并*不*限制用户可以在该字段中输入多少个字符，仅能指定一次可以看到多少个。要设置输入数据长度的上限，请使用 [`maxlength`](#maxlength) 属性。
 
-> **备注：** It's also crucial to remember that a user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
+### spellcheck
 
-### A simple URL input
+`spellcheck` 是一个全局属性，用于指示是否启用元素的拼写检查。它可以用于任何可编辑的内容，但是这里我们考虑在 {{HTMLElement("input")}} 元素上使用 `spellcheck` 的细节。 `spellcheck` 的允许值为：
 
-Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
+- `false`
+  - : 禁用此元素的拼写检查。
+- `true`
+  - : 对此元素启用拼写检查。
+- `""`（空字符串）或空值
+  - : 遵循元素的默认行为进行拼写检查。这可能基于父元素 `spellcheck` 设置或其他因素。
+
+如果输入字段没有设置 [readonly](#readonly) 属性且未禁用，则可以启用拼写检查。
+
+如果{{Glossary("user agent", "用户代理的")}}首选项覆盖了设置，则通过读取 `spellcheck` 返回的值可能无法反映控件中拼写检查的实际状态。
+
+## 非标准属性
+
+以下非标准属性在某些浏览器上也可用。一般来说，除非万不得已，否则你应该避免使用它们。
+
+### autocorrect
+
+Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编辑此字段时是否激活自动更正。允许的值为：
+
+- `on`
+  - : 启用拼写错误的自动更正，以及配置文本替换（如果已配置）的处理。
+- `off`
+  - : 禁用自动更正和文本替换。
+
+### mozactionhint
+
+Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。
+
+此属性已经废弃：请使用全局属性 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes#enterkeyhint) 作为替代。
+
+## 使用 URL 输入框
+
+当你用适当的 `type` 值 `url` 创建一个 URL 输入时，所输入的文本会得到自动验证，它们至少可以形成一个合法的 URL。可以避免用户输入错误的网站地址，或者提供一个无效的地址。
+
+然而，重要的是，这并不足以确保指定的文本是一个实际存在与网站的用户相对应的 URL，或在任何其他方面可以接受。它只是确保该字段的值被正确格式化为一个 URL。
+
+> **备注：** 用户可以在背后改动你的 HTML 代码，所以你的站点*不能*依赖此验证提供安全性。*必须*在服务端验证用户所输入的 URL，以确认用户提供的文本不会产生任何额外的安全隐患。
+
+### 简单的 URL 输入框
+
+目前，所有浏览器都将此元素实现为带有基本认证特性的标准文本输入框。对于其最基本的形式，一个 URL 输入框看起来像这样：
 
 ```html
-<input id="myURL" name="myURL" type="url">
+<input id="myURL" name="myURL" type="url" />
 ```
 
-{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
+{{ EmbedLiveSample('简单的 URL 输入框', 600, 40) }}
 
-Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the {{htmlattrxref("required", "input")}} attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
+请注意，当输入为空或输入一个有效格式的 URL 地址时，认为输入是有效的，但在其他情况下则不认为有效。通过添加 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，只允许正确格式的 URL；当输入为空时不再被视为有效。
 
-There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=http%3A%2F%2Fwww.example.com`. Note how characters are escaped as necessary.
+这里没什么特别的，提交这个表单会将 `myURL=http%3A%2F%2Fwww.example.com` 数据提交至服务器，注意其中的字符是如何进行必要的转义的。
 
-### Placeholders
+### 占位符
 
-Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value that demonstrates the form the `value` should take by presenting an example of a valid value, which is displayed inside the edit box when the element's `value` is "". Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
+有时，提供一个上下文提示，说明输入数据应该采取什么形式，是很有帮助的。如果页面设计没有为每个 {{HTMLElement("input")}} 提供描述性的标签，这一点就特别重要。这就是**占位符**的作用。占位符是一个值，它通过展示一个有效值的例子来证明 `value` 应该采取的形式，当元素的 `value` 为 "" 时，它将显示在编辑框内。一旦数据被输入框中，占位符就会消失；如果框被清空，占位符会重新出现。
 
-Here, we have a `url` input with the placeholder `http://www.example.com`. Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
+在这里，我们有一个具有 `http://www.example.com` 占位符的 `url` 输入框。注意在编辑输入框的值的时候，占位符如何出现和消失。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       placeholder="http://www.example.com">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  placeholder="http://www.example.com" />
 ```
 
-{{ EmbedLiveSample('Placeholders', 600, 40) }}
+{{ EmbedLiveSample('占位符', 600, 40) }}
 
-### Controlling the input size
+### 控制输入框大小
 
-You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.
+不仅可以控制输入框的物理大小，还可以控制允许输入的最大与最小文字的长度。
 
-#### Physical input element size
+#### 物理元素大小
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
+输入框的物理尺寸可以用 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性来控制。通过它，你可以指定输入框一次可以显示的字符数。例如，在这个例子中，`url` 编辑框的宽度为 30 个字符：
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30">
+<input id="myURL" name="myURL" type="url" size="30" />
 ```
 
-{{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
+{{ EmbedLiveSample('物理元素大小', 600, 40) }}
 
-#### Element value length
+#### 元素值长度
 
-The `size` is separate from the length limitation on the entered URL itself. You can specify a minimum length, in characters, for the entered URL using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered URL. If `maxLength` exceeds `size`, the input box's contents will scroll as needed to show the current selection or insertion point as the content is manipulated.
+输入框的 `size` 是与输入的 URL 本身的长度限制分开的。你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性为输入的 URL 指定一个最小长度，以字符为单位；同样，使用 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 来设置输入 URL 的最大长度。如果 `maxLength` 超过 `size`，输入框的内容将根据内容操作需要滚动，以显示当前的选择或插入点。
 
-The example below creates a 30-character wide URL address entry box, requiring that the contents be no shorter than 10 characters and no longer than 80 characters.
+下面的例子创建了一个 30 个字符宽的 URL 地址输入框，要求内容不能短于 10 个字符，不能长于 80 个字符。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  size="30"
+  minlength="10"
+  maxlength="80" />
 ```
 
-{{EmbedLiveSample("Element_value_length", 600, 40) }}
+{{EmbedLiveSample("元素值长度", 600, 40) }}
 
-> **备注：** These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will simply refuse to let the user enter a value longer than the specified maximum length.
+> **备注：** 这些属性也影响验证；小于或大于指定的最小值或最大值的长度将会判定为不合法；而且大部分浏览器也会拒绝让用户输入长度大于指定限制的值。
 
-### Providing default options
+### 提供默认值
 
-As always, you can provide a default value for a `url` input box by setting its {{htmlattrxref("value", "input")}} attribute:
+#### 使用 value 属性提供单个默认值
+
+你总是可以通过设置 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性来为 `url` 输入框提供一个默认值：
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       value="http://www.example.com">
+<input id="myURL" name="myURL" type="url" value="http://www.example.com" />
 ```
 
-{{EmbedLiveSample("Default_value", 600, 40)}}
+{{EmbedLiveSample("使用 value 属性提供单个默认值", 600, 40)}}
 
-#### Offering suggested values
+#### 提供一系列建议的值
 
-Taking it a step farther, you can provide a list of default options from which the user can select by specifying the {{htmlattrxref("list", "input")}} attribute. This doesn't limit the user to those options, but does allow them to select commonly-used URLs more quickly. This also offers hints to {{htmlattrxref("autocomplete", "input")}}. The `list` attribute specifies the ID of a {{HTMLElement("datalist")}}, which in turn contains one {{HTMLElement("option")}} element per suggested value; each `option`'s `value` is the corresponding suggested value for the URL entry box.
+让我们更进一步，你可以通过指定 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性来为用户提供一系列默认的选项。这并不使得用户限制在这些选项中，且允许他们更快选择常用的 URL 地址。它也为 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 提供提示。`list` 属性指定了 {{HTMLElement("datalist")}} 的 ID，对于每个可用的选项，包含一个 {{HTMLElement("option")}} 元素；每个 `option` 的 `value` 是 URL 输入框的相应建议值。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
-  <option value="http://w3.org/">
+  <option value="https://developer.mozilla.org/"></option>
+  <option value="http://www.google.com/"></option>
+  <option value="http://www.microsoft.com/"></option>
+  <option value="https://www.mozilla.org/"></option>
+  <option value="http://w3.org/"></option>
 </datalist>
 ```
 
-{{EmbedLiveSample("Offering_suggested_values", 600, 40)}}
+{{EmbedLiveSample("提供一系列建议的值", 600, 40)}}
 
-With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the URL; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested URLs. Then, as the user types, the list is adjusted to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
+有了 {{HTMLElement("datalist")}} 元素及其 {{HTMLElement("option")}}，浏览器将提供指定的值作为 URL 的潜在值；这通常以弹出式或下拉式菜单的形式呈现，其中包含建议。虽然具体的用户体验可能因浏览器而异，但通常情况下，点击编辑框会出现一个下拉的建议 URL。然后，随着用户的输入，列表被调整为只显示匹配的值。每个键入的字符都会缩小列表的范围，直到用户做出选择或键入一个自定义值。
 
-#### Using labels for suggested values
+#### 为建议值使用 label
 
-You can opt to include the {{htmlattrxref("label", "option")}} attribute on one or all of your `<option>` elements to provide textual labels. Some browsers may display only the labels, while others may display both the label and the URL.
+你可以选择在一个或所有的 `<option>` 元素上包含 [`label`](/zh-CN/docs/Web/HTML/Element/option#label) 属性来提供文本标签。一些浏览器可能只显示标签，而其他浏览器可能同时显示标签和 URL。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
-  <option value="http://w3.org/" label="W3C">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
+  <option value="http://www.google.com/" label="Google"></option>
+  <option value="http://www.microsoft.com/" label="Microsoft"></option>
+  <option value="https://www.mozilla.org/" label="Mozilla"></option>
+  <option value="http://w3.org/" label="W3C"></option>
 </datalist>
 ```
 
-{{EmbedLiveSample("Using_labels_for_suggested_values", 600, 40)}}
+{{EmbedLiveSample("为建议值使用 label", 600, 40)}}
 
-## Validation
+## 验证
 
-There are two levels of content validation available for `url` inputs. First, there's the standard level of validation offered to all {{HTMLElement("input")}}s, which automatically ensures that the contents meet the requirements to be a valid URL. But there's also the option to add additional filtering to ensure that your own specialized needs are met, if you have any.
+针对 `url` 输入，有两种等级的校验方式。首先，针对每一个 {{HTMLElement("input")}} 元素，有一种标准级别的校验方式，以验证其中的内容是一个合法的 URL。其次，你也可以额外添加一些过滤器，来满足自己的需求。
 
-> **警告：** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> **警告：** HTML 表单验证*不能*替代服务端代码，以确保输入的数据格式正确。对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。有人也可以完全绕开你的 HTML 并将数据直接提交到你的服务器。如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大、类型错误的数据等等）输入数据库时，灾难可能会发生。
 
-### Basic validation
+### 基本验证
 
-Browsers that support the `url` input type automatically provide validation to ensure that only text that matches the standard format for URLs is entered into the input box.
+支持 `url` 输入类型的浏览器会自动提供验证，以确保只有符合标准格式的 URL 文本被输入到输入框。
 
-The syntax of a URL is fairly intricate. It's defined by WHATWG's [URL Living Standard](https://url.spec.whatwg.org/) and is described for newcomers in our article [What is a URL?](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
+URL 的语法是相当复杂的。它由 WHATWG 的 [URL 现行标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)中为初学者做了描述。
 
-### Making a URL required
+### 使 URL 必填
 
-As mentioned earlier, to make a URL entry required before the form can be submitted (you can't leave the field blank), you just need to include the {{htmlattrxref("required", "input")}} attribute on the input.
+如前所述，要使一个 URL 表单项在表单提交前成为必填项（不能让该字段空白），只需要在输入项上包含 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性即可。
 
 ```html
 <form>
-  <input id="myURL" name="myURL" type="url" required>
-  <button>Submit</button>
+  <input id="myURL" name="myURL" type="url" required />
+  <button>提交</button>
 </form>
 ```
 
-{{EmbedLiveSample("Making_a_URL_required", 600, 40)}}
+{{EmbedLiveSample("使 URL 必填", 600, 40)}}
 
-Try submitting the above form with no value entered to see what happens.
+试试看，不输入任何值的时候提交上面的表单会发生什么。
 
-### Pattern validation
+### 模式验证
 
-If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the {{htmlattrxref("pattern", "input")}} attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
+如果你需要进一步限制输入的 URL，不仅仅需要“任何看起来像 URL 的字符串”，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。
 
-For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
+例如，假设你正在为 Myco 公司的员工建立一个支持页面，如果他们的某个页面出现问题，他们可以联系 IT 部门寻求帮助。在我们的简化表单中，用户需要输入出现问题的页面的 URL，以及描述问题所在的信息。但我们希望只有当输入的 URL 在 Myco 域中时，才能成功地验证该 URL。
 
-Since inputs of type `url` validate against both the standard URL validation _and_ the specified {{htmlattrxref("pattern", "input")}}, you can implement this easily. Let's see how:
+由于 `url` 类型的输入可同时进行标准的 URL *和*指定的 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 进行验证，你可以轻松实现。让我们来看看怎么做：
 
 ```css hidden
 div {
   margin-bottom: 10px;
   position: relative;
-  }
+}
 
-  input[type="number"] {
-    width: 100px;
-  }
+input[type="number"] {
+  width: 100px;
+}
 
-  input + span {
-    padding-right: 30px;
-  }
+input + span {
+  padding-right: 30px;
+}
 
-  input:invalid+span:after {
-    position: absolute; content: '✖';
-    padding-left: 5px;
-  }
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
 
-  input:valid+span:after {
-    position: absolute;
-    content: '✓';
-    padding-left: 5px;
-  }
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 ```html
 <form>
   <div>
-    <label for="myURL">Enter the problem website address:</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain">
+    <label for="myURL">输入出问题的网址：</label>
+    <input
+      id="myURL"
+      name="myURL"
+      type="url"
+      required
+      pattern=".*\.myco\..*"
+      title="URL 必须属于 myco 域" />
     <span class="validity"></span>
   </div>
   <div>
-    <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
+    <label for="myComment">出了什么问题？</label>
+    <input id="myComment" name="myComment" type="text" required />
     <span class="validity"></span>
   </div>
   <div>
-    <button>Submit</button>
+    <button>提交</button>
   </div>
 </form>
 ```
 
-{{EmbedLiveSample("Pattern_validation", 700, 150)}}
+{{EmbedLiveSample("模式验证", 700, 150)}}
 
-First of all, the {{htmlattrxref("required", "input")}} attribute is specified, making it mandatory that a valid email address be provided.
+首先，表单指定了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，这意味着必须输入合法的 URL 地址。
 
-Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
+其次，我们设定 `url` 输入框必须满足的 `pattern` 为 `".*\.myco\..*"`，这个简单的正则表达式要求任意长度的字符串，跟随一个点号，再跟随“myco”，再跟随一个点号，再跟随任意长度的字符串。由于浏览器对给定文字同时运行标准的 URL 过滤器和我们自定义的模式文字过滤器，以上两层认证方法可合并为“确保这是一个合法的 Myco 域 URL”。
 
-This isn't perfect, but it is good enough for this simple demo's requirements.
+这并不完美，但足以满足演示场景的需求。
 
-It's advisable to use the {{htmlattrxref("title")}} attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
+建议在使用 `pattern` 属性的同时使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。如果你这样做，`title` 必须描述模式；它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或读出。例如，浏览器可能会显示”请与请求的格式相匹配。“然后跟随指定的 `title` 。如果你的 `title` 是类似于”URL“的东西，结果就是“请与请求的格式相匹配。URL”，用户体验并不好。
 
-That's why, instead, we specify the string "The URL must be in a myco domain". By doing that, the resulting full error message might be something like "The entered text doesn't match the required pattern. The URL should be in a myco domain."
+这就是为什么我们要指定字符串“URL 必须属于 myco 域”的原因。通过这样做，产生的完整错误信息可能是这样的：“请与请求的格式匹配。URL 必须属于 myco 域”。
 
-> **备注：** If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
+> **备注：** 如果你在编写验证正则表达式时遇到麻烦，它们不能正常工作，请检查你的浏览器控制台；那里可能有有用的错误信息来帮助你解决问题。
 
-## Examples
+## 示例
 
-There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
+关于 `url` 类型的输入没有太多可说的地方了；请查看[模式验证](#模式验证)和[使用 URL 输入框](#使用_url_输入框)部分的大量例子。
 
-You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
+你也可以找到我们的 [GitHub 上的模式验证例子](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html)（试试[在线运行](https://mdn.github.io/learning-area/html/forms/url-example/)它）。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [HTML forms guide](/zh-CN/docs/Learn/HTML/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
-- [Compatibility of CSS properties](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/Input/email)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
-translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
+
 {{APIRef}}
 
 La propiedad **`CanvasRenderingContext2D.lineCap`** del API Canvas 2D determina la forma usada para dibujar los puntos finales de las líneas.
@@ -90,21 +90,15 @@ for (let i = 0; i < lineCap.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "canvas_linecap.png")}}
 
 ## Especificaciones
 
-| Specification                                                                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Compatibilidad de navegador.
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.lineCap")}}
-
-### WebKit/Blink-specific notes
-
-- En WebKit- y navegadores basados en Blink, el método no estandard y obsoleto `ctx.setLineCap()` es implementado ademas de esta propiedad.
+{{Compat}}
 
 ## Ver también
 

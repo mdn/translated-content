@@ -10,6 +10,7 @@ tags:
   - WebUSB API
 translation_of: Web/API/USB
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Интерфейс **`USB`** [WebUSB API](/ru/docs/Web/API/WebUSB_API) представляет атрибуты и методы для поиска и подключения USB устройств из WEB страницы.

@@ -3,7 +3,7 @@ title: '<image>: 画像要素'
 slug: Web/HTML/Element/image
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。
 **使用しないでください**。

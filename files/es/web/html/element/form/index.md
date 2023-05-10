@@ -1,9 +1,9 @@
 ---
 title: form
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 original_slug: Web/HTML/Elemento/form
 ---
+
 ## Resumen
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
@@ -22,11 +22,11 @@ Es posible usar las pseudo-clasess de CSS [`:valid`](/es/CSS/%3Avalid) e [`:inva
 
 Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/en/HTML/Global_attributes)
 
-- {{ htmlattrdef("accept") }}  {{ obsolete_inline() }}
+- {{ htmlattrdef("accept") }} {{deprecated_inline}}
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
-    > **Nota:** **Nota de uso:** este atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
+    > **Nota:** este atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/HTML/Element/Input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - {{ htmlattrdef("accept-charset") }}
 
@@ -36,7 +36,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 - {{ htmlattrdef("action") }}
   - : La URI de un programa que procesa la información enviada por medio del formulario. Este valor puede ser sobreescrito por un atributo {{ htmlattrxref("formaction", "button") }} en un {{ HTMLElement("button") }} o en el elemento{{ HTMLElement("input") }}.
-- {{ htmlattrdef("autocomplete") }} 
+- {{ htmlattrdef("autocomplete") }}
 
   - : Indica cuales de los controles en este formulario puede tener sus valores automáticamente completados por el navegador. Esta configuración puede ser sobreescrita por un atributo `autocomplete` en un elemento que pertenezca al formulario:
 
@@ -67,7 +67,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 
 - {{ htmlattrdef("name") }}
   - : El nombre del formulario. En HTML4 ha quedado en desuso (debe usarse un id en su lugar). Debe ser único entre los formularios en un documento y no una cadena vacia en HTML5.
-- {{ htmlattrdef("novalidate") }} 
+- {{ htmlattrdef("novalidate") }}
   - : Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe {{ htmlattrxref("formnovalidate", "button") }} en un {{ HTMLElement("button") }} o en un elemento {{ HTMLElement("input") }} que pertenece al formulario.
 - {{ htmlattrdef("target") }}
 
@@ -110,9 +110,13 @@ Este elemento implementa la interfaz [`HTMLFormElement`](/es/DOM/HTMLFormElement
 </form>
 ```
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("html.elements.form")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Consulte también
 

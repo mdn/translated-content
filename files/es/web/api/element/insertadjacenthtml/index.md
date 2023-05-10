@@ -1,18 +1,8 @@
 ---
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - Cambiando el DOM
-  - DOM
-  - HTML
-  - Insertando Elementos
-  - Insertando Nodos
-  - Referencia
-  - insertAdjacentHTML
-  - metodo
-translation_of: Web/API/Element/insertAdjacentHTML
 ---
+
 {{APIRef}}
 
 EL método `insertAdjacentHTML()` de la interfaz {{domxref("Element")}} analiza la cadena de texto introducida como cadena HTML o XML e inserta al árbol DOM los nodos resultantes de dicho análisis en la posición especificada. Este método no re-analiza el elemento sobre el cual se está invocando y por lo tanto no corrompe los elementos ya existentes dentro de dicho elemento. Esto evita el paso adicional de la serialización, haciéndolo mucho más rápido que la manipulación directa con {{domxref("Element.innerHTML", "innerHTML")}}.

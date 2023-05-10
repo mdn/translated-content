@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/USB/onconnect
 original_slug: Web/API/USB/onconnect
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Свойство **`onconnect`** интерфейса {{DOMxRef("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство подключается.

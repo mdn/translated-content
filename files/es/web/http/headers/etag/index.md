@@ -1,8 +1,8 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta de HTTP **`ETag`** es un identificador para una versión específica de un recurso. Permite a la memoria caché ser más eficiente, y ahorrar ancho de banda, en tanto que un servidor web no necesita enviar una respuesta completa si el contenido no ha cambiado. Por otro lado, si el contenido cambió, los etags son útiles para ayudar a prevenir actualizaciones simultáneas de un recurso de sobre-escribirlo por otro ("colisiones en el aire").
@@ -64,13 +64,11 @@ El servidor compara el `ETag` del cliente (enviado con un `If-None-Match`) con e
 
 ## Especificaciones
 
-| Especificación                           | Título                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Protocolo de Transferencia por Hipertexto (HTTP/1.1): Peticiones Condicionales |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Vea también
 

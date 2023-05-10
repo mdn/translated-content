@@ -148,7 +148,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 | 名前                     | 型                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `headerURL`              | `String`            | Fully optional from Firefox 60 onwards. One of theme_frame or headerURL had to be specified before Firefox 60. Note also that in Firefox 60 onwards, any {{cssxref("text-shadow")}} applied to the header text is removed if no `headerURL` is specified (see {{bug(1404688)}}).The URL of a foreground image to be added to the header area and anchored to the upper right corner of the header area.   |
+| `headerURL`              | `String`            | Fully optional from Firefox 60 onwards. One of theme_frame or headerURL had to be specified before Firefox 60. Note also that in Firefox 60 onwards, any {{cssxref("text-shadow")}} applied to the header text is removed if no `headerURL` is specified (see [Firefox バグ 1404688](https://bugzil.la/1404688)).The URL of a foreground image to be added to the header area and anchored to the upper right corner of the header area.   |
 | `theme_frame`            | `String`            | Fully optional from Firefox 60 onwards. One of theme_frame or headerURL had to be specified before Firefox 60.Alias for `headerURL`, provided for Chrome compatibility.                                                                                                                                                                                                                                                 |
 | `additional_backgrounds` | `Array` of `String` | オプション An array of URLs for additional background images to be added to the header area and displayed behind the `"headerURL":` image. These images layer the first image in the array on top, the last image in the array at the bottom.既定では all images are anchored to the upper right corner of the header area, but their alignment and repeat behavior can be controlled by properties of `"properties":`. |
 
@@ -289,7 +289,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -319,7 +319,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            those used in <code>frame</code>,  <code>frame_inactive</code>,
+            those used in <code>frame</code>, <code>frame_inactive</code>,
             <code>button_background_active</code>, and
             <code>button_background_hover</code>.
           </p>
@@ -528,7 +528,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background.  The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -609,7 +609,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -633,7 +633,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item.  The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
     </tr>
     <tr>
@@ -659,7 +659,7 @@ See [the example screenshot below](#example-screenshot) to understand the parts 
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar.  The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
       </td>
     </tr>
     <tr>

@@ -105,6 +105,6 @@ console.log(obj.baz); // "baz"
 - [getter](/ru/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/ru/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) в руководстве по JavaScript

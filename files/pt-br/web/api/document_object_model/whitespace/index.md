@@ -1,12 +1,9 @@
 ---
 title: Whitespace no DOM
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-  - Intermediário
-translation_of: Web/API/Document_Object_Model/Whitespace
 original_slug: DOM/Referencia_do_DOM/Whitespace_in_the_DOM
 ---
+
 ## O problema
 
 A presença de espaço branco no [DOM](/pt-BR/docs/DOM) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/CSS)). Isso significa que:
@@ -31,7 +28,7 @@ Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como
 </html>
 ```
 
-![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
+![](whitespace_tree.png)
 
 Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM).
 

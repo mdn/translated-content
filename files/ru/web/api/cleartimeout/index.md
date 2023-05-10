@@ -4,6 +4,7 @@ slug: Web/API/clearTimeout
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`clearTimeout()`** метод {{domxref("WindowOrWorkerGlobalScope")}} отменяет таймаут, ранее установленный вызовом {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.

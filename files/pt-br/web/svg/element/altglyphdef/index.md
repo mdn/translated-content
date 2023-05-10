@@ -1,12 +1,8 @@
 ---
 title: altGlyphDef
 slug: Web/SVG/Element/altGlyphDef
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/altGlyphDef
 ---
+
 {{SVGRef}}
 
 O elemento `altGlyphDef` define a substituição representativa para os símbolos.

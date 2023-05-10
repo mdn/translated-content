@@ -1,13 +1,8 @@
 ---
 title: <b>
 slug: Web/HTML/Element/b
-tags:
-  - Elemento
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
 ---
+
 ## Resumo
 
 O **elemento HTML \<b>** representa um intervalo de texto estilísticamente diferente do texto normal, sem transmitir qualquer importância ou relevância. Ele é geralmente usado para destacar palavras-chaves em um resumo, nomes de produtos em um comentário ou outros vãos de texto cuja a apresentação típica seria negrito. Outro exemplo de seu uso é como marcação da frase principal de cada paragrafo de um artigo.
@@ -60,6 +55,6 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 ## Veja Também
 
 - Outros elementos de transporte [text-level semantics](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
-- [Using \<b> and \<i> elements (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
+- [Using \<b> and \<i> elements (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

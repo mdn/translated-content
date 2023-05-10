@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Tools_and_testing/GitHub
 original_slug: Learn/Tools_and_testing/GitHub
 ---
+
 {{LearnSidebar}}
 
 Все разработчики используют ту или иную **систему контроля версий (СКВ, VCS)**, инструмент, позволяющий им взаимодействовать с другими разработчиками на проекте без угрозы того, что кто-то перезапишет чужую работу, а также вернуться к предыдущим версиям кода при обнаружении проблем позднее.
@@ -25,7 +26,7 @@ original_slug: Learn/Tools_and_testing/GitHub
 
 СКВ обеспечивают инструменты для решения всех вышеуказанных задач. [Git](https://git-scm.com/) является примером СКВ, а [GitHub](https://github.com/) - это сайт, обеспечивающий веб-интерфейс для работы с гит, а также множество полезных инструментов для работы с гит-репозиториями лично или в командах, такие как фиксация проблем с кодом, инструменты для проверки кода, инструменты для управления созданием продукта, например назначение задач и их статусов, и т.д.
 
-> **Примечание:** **Важно**: ГИТ на самом деле - распределённая система контроля версий, это значит что полная копия репозитория, содержащая всю кодовую базу сохраняется на твой компьютер (и кого-либо ещё). Ты вносишь изменения в свою копию и затем отправляешь эти изменения обратно на сервер, на котором администратор решит соединять ли твои изменения с оригиналом.
+> **Примечание:** ГИТ на самом деле - распределённая система контроля версий, это значит что полная копия репозитория, содержащая всю кодовую базу сохраняется на твой компьютер (и кого-либо ещё). Ты вносишь изменения в свою копию и затем отправляешь эти изменения обратно на сервер, на котором администратор решит соединять ли твои изменения с оригиналом.
 
 ## Подготовка
 
@@ -39,31 +40,31 @@ original_slug: Learn/Tools_and_testing/GitHub
 
 Также желательно, чтобы у вас были некоторые базовые знания о терминале, например, перемещение между каталогами, создание файлов и изменение системного `PATH`.
 
-> **Примечание:** **Важно**: Github не единственный сайт / инструментарий который ты можешь использовать с Git. Есть и альтернативы, такие как [GitLab](https://about.gitlab.com/), которые ты можешь попробовать, а также ты можешь попробовать настроить свой собственный сервер Git и использовать вместо GitHub. Мы в этом курсе остановились на GitHub, чтобы показать один из рабочих способов.
+> **Примечание:** Github не единственный сайт / инструментарий который ты можешь использовать с Git. Есть и альтернативы, такие как [GitLab](https://about.gitlab.com/), которые ты можешь попробовать, а также ты можешь попробовать настроить свой собственный сервер Git и использовать вместо GitHub. Мы в этом курсе остановились на GitHub, чтобы показать один из рабочих способов.
 
-## Guides
+## Руководства
 
-Note that the links below take you to resources on external sites. Eventually we will are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject in hand.
+Все указанные ниже ссылки ведут на внешние ресурсы. Со временем у нас появится свой собственный курс по Git/GitHub. А сейчас они помогут вам подробнее разобраться в материале.
 
 - [Hello World (from GitHub)](https://guides.github.com/activities/hello-world/)
-  - : This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
+  - : Это практическое руководство поможет вам сразу начать пользоваться GitHub. Оно содержит основы использования Git, такие как создание репозиториев, веток, создание коммитов, открытие и слияние пулл-реквестов.
 - [Git Handbook (from GitHub)](https://guides.github.com/introduction/git-handbook/)
-  - : This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
+  - : Этот справочник по Git подробнее объясняет, что такое система контроля версий (VCS), что такое репозиторий, на чём основана модель работы GitHub, описывает команды Git, примеры их использования и многое другое.
 - [Forking Projects (from GitHub)](https://guides.github.com/activities/forking/)
-  - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
+  - : Это руководство объясняет, как при помощи создания форка (fork) чужого проекта вы можете поучаствовать в его разработке.
 - [About Pull Requests (from GitHub)](https://help.github.com/en/articles/about-pull-requests)
-  - : A useful guide to managing pull requests, the way that your suggested code changes are delivered to people's repositories for consideration.
+  - : Полезное руководство по работе с пулл-реквестами - механизмом GitHub, с помощью которого ваши изменения отправляются на рассмотрение в чужие проекты.
 - [Mastering issues (from GitHub)](https://guides.github.com/features/issues/)
-  - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This articles gives you what you need to know about issues.
+  - : На вкладке с обсуждением проблем (issue) пользователи могут задавать вопросы и сообщать об ошибках, а вы можете курировать работу над обновлениями кода: назначать ответственных за исправление возникших проблем, отвечать на вопросы пользователей, сообщать об исправлении ошибок. Эта статья поможет вам разобраться со всем, что касается работы над проблемами.
 
-> **Примечание:** There is **a lot more** that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realise that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and [Dangit, git!](https://dangitgit.com/)
+> **Примечание:** На самом деле вы можете делать при помощи Git и GitHub **намного больше** , но мы считаем, что эти руководства необходимый минимум для начала его эффективного использования. По мере погружения в Git и использования более сложных команд к вам придёт понимание, что очень легко сделать что-то неправильно. Не беспокойтесь, даже профессиональные разработчики иногда испытывают трудности с Git и ищут решения в Интернете. Например, на сайте [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) или [Dangit, git!](https://dangitgit.com/)
 
-## See also
+## Материалы для изучения
 
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-- [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (the text format you write in on PR, issue comments, and `.md` files).
-- [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (how to publish demos and websites on GitHub).
-- [Learn Git branching](https://learngitbranching.js.org/)
-- [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).
-- [Dangit, git!](https://dangitgit.com/) (another useful compendium, specifically of ways to correct things when you went wrong).
+- [Git command list](https://git-scm.com/docs) (справочник по командам git)
+- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (правила оформления сообщений в пулл-реквестах (PR), комментариях, и `.md`-файлах).
+- [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (правила публикаций страниц и демо-сайтов на GitHub).
+- [Learn Git branching](https://learngitbranching.js.org/) (интерактивный справочник по правилам ветвления в Git)
+- [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (полезный справочник решений конкретных задач, возникающих при работе с Git, и ситуаций, когда что-то пошло не так).
+- [Dangit, git!](https://dangitgit.com/) (ещё один полезный справочник, сосредоточенный на решении проблем при работе Git).

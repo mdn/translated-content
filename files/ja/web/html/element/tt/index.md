@@ -3,7 +3,7 @@ title: '<tt>: テレタイプテキスト要素'
 slug: Web/HTML/Element/tt
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<tt>`** は [HTML](/ja/docs/Web/HTML) は、{{Glossary("user agent", "ユーザーエージェント")}}の既定の等幅フォントで表示される行内文字列を生成します。この要素は、テレタイプ、テキスト専用画面、ラインプリンターのような等幅の表示装置で表示されるテキストとしてスタイルを設定しようとするものです。
 

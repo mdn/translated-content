@@ -1,14 +1,9 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-  - Sentencia
-translation_of: Web/JavaScript/Reference/Statements/for...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada elemento de un [objeto iterable](/es/docs/Web/JavaScript/Guide/iterable), como lo son: {{jsxref("String")}}, {{jsxref("Array")}}, objetos similares a array (por ejemplo, {{jsxref("Functions/arguments", "arguments")}} or [`NodeList`](/es/docs/Web/API/NodeList)), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} e iterables definidos por el usuario.
@@ -180,7 +175,7 @@ for (let n of fibonacci()) {
 }
 ```
 
-> **Nota:** **No se deben reutilizar los generadores** Los generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug {{Bug(1147371)}} haya sido corregido.
+> **Nota:** **No se deben reutilizar los generadores.** Los generadores no deben ser reutilizados, incluso si el bucle **`for...of`** se ha terminado antes de tiempo con la sentencia [break](/es/docs/Web/JavaScript/Referencia/Sentencias/break). Una vez abandonado el bucle, el generador está cerrado y tratar de iterar sobre él de nuevo no dará más resultados. Firefox no ha implementado aún este comportamiento y el generador puede ser reutilizado en contra de lo escrito en el estándar ES6 ([13.7.5.13, step 5m](https://www.ecma-international.org/ecma-262/6.0/#sec-13.7.5.13)), pero esto cambiará una vez que el bug [Error 1147371 en Firefox](https://bugzil.la/1147371) haya sido corregido.
 
 ```js example-bad
 var gen = (function *(){
@@ -249,14 +244,11 @@ for (let i of arr) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Cometario           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-for-in-and-for-of-statements', 'for...of statement')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.for_of")}}
+{{Compat}}
 
 ## Vea también
 

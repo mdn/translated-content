@@ -3,6 +3,7 @@ title: class expression
 slug: Web/JavaScript/Reference/Operators/class
 translation_of: Web/JavaScript/Reference/Operators/class
 ---
+
 {{jsSidebar("Operators")}}
 
 **Class expression** это способ определения класса в ECMAScript 2015 (ES6). Схожий с [function expressions](/ru/docs/Web/JavaScript/Reference/Operators/function), class expressions может быть именованным либо не иметь имени. Если он именованный, то его имя доступно только внутри класса. JavaScript классы используют прототипно-ориентирование наследование.

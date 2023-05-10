@@ -1,13 +1,8 @@
 ---
 title: CSS 트랜지션 사용하기
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - Advanced
-  - CSS
-  - CSS Transitions
-  - Guide
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSRef}}
 
 **CSS 트랜지션**은 CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법을 제공합니다. 속성 변경이 즉시 영향을 미치게 하는 대신, 그 속성의 변화가 일정 기간에 걸쳐 일어나도록 할 수 있습니다. 예를 들어, 여러분이 어떤 요소의 색상을 흰색에서 검은색으로 변경한다면, 변화는 대개 즉시 일어납니다. CSS 트랜지션을 이용하면, 모두 커스터마이즈 가능한 어떤 가속도 곡선을 따르는 시간 주기마다 변화가 일어납니다.

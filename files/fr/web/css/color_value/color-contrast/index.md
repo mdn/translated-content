@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La notation fonctionnelle  **`color-contrast()`** prend une couleur et la compare à une liste d'autres couleurs (voir [`<color>`](/fr/docs/Web/CSS/color_value) pour les valeurs possibles) afin de sélectionner la valeur de la liste qui offre le contraste le plus important avec la première couleur.
+La notation fonctionnelle **`color-contrast()`** prend une couleur et la compare à une liste d'autres couleurs (voir [`<color>`](/fr/docs/Web/CSS/color_value) pour les valeurs possibles) afin de sélectionner la valeur de la liste qui offre le contraste le plus important avec la première couleur.
 
 ## Syntaxe
 

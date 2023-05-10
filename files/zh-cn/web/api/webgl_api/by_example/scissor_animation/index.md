@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Scissor_animation
 
 使用剪切和清除操作实现一些动画的简单 WebGL 的例子。
 
-{{EmbedLiveSample("scissor-animation-source",660,425)}}
-
 ### 剪切动画
+
+{{EmbedLiveSample("剪切动画",660,425)}}
 
 本例中，我们使用{{domxref("WebGLRenderingContext.scissor()","scissor()")}} 和 {{domxref("WebGLRenderingContext.clear()","clear()")}}。我们再次建立一个动画循环使用计时器。注意，这次是方块的位置 (剪切区) 更新每一帧 (我们设置帧率大约每 17 毫秒，约 60 fps -帧每秒)
 

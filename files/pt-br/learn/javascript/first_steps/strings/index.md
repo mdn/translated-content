@@ -1,8 +1,8 @@
 ---
 title: Trabalhando com texto — strings em JavaScript
 slug: Learn/JavaScript/First_steps/Strings
-translation_of: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 Agora vamos dar atenção às strings - isto é como é chamado em programação qualquer parte de texto. Neste artigo nós veremos tudo que você realmente deve saber sobre strings quando está aprendendo JavaScript. Como criar, fazer citações e como juntar strings.
@@ -162,7 +162,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
     var badString = This is a test';
     ```
 
-    Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um é erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.
+    Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.
 
 3. O seguinte funcionará se você definiu previamente a variável `string` - tente isto agora:
 
@@ -303,22 +303,10 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
       typeof myString;
       ```
 
-    Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 61](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61).
+    Estas construções podem ser bem úteis em algumas situações. Por exemplo, se o usuário colocar um número em um campo de texto, isso será uma string. Entretanto, se você quiser adicionar este número a algo, você precisa que seja um número, então você pode passar isto através do `Number()` para poder manipular.Nós fizemos exatamente isto no nosso [Number Guessing Game, in line 59](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L59).
 
 ## Conclusão
 
 Então isto é o basico sobre strings em JavaScript. No próximo artigo nós iremos continuar daqui, vendo alguns métodos de construção de strings disponíveis em JavaScript e como nós podemos usá-los para manipular nossa string da forma como quisermos.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo
-
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Um primeiro mergulho em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [O que deu errado? Solução de erros em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Armazenando a informação que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemática básica em JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-- [Manipulando texto — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos úteis de strings](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Avaliação: gerador de história boba](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

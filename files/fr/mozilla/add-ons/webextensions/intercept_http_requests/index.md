@@ -126,7 +126,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Là encore, on utilise le gestionnaire d'évènement [`onBeforeRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest)  pour exécuter une fonction juste avant que la requête soit émise. Cette fonction remplace `redirectUrl` avec l'URL cible indiquée dans la fonction. Ici, il s'agit d'une image de grenouille tirée [de notre deuxième tutoriel sur les extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
+Là encore, on utilise le gestionnaire d'évènement [`onBeforeRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) pour exécuter une fonction juste avant que la requête soit émise. Cette fonction remplace `redirectUrl` avec l'URL cible indiquée dans la fonction. Ici, il s'agit d'une image de grenouille tirée [de notre deuxième tutoriel sur les extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
 
 Cette fois, toutes les requêtes ne sont pas interceptées. L'option `{urls:[pattern], types:["image"]}` indique qu'on intercepte uniquement les requêtes pour&nbsp;:
 

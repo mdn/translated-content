@@ -1,19 +1,8 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - TopicStub
-  - WebAPI
-translation_of: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 The `PushManager` interface of the [Push API](/es/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
@@ -75,15 +64,13 @@ navigator.serviceWorker.register('serviceworker.js').then(
   });
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                       | Comment             |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.PushManager")}}
+{{Compat}}
 
 ## See also
 

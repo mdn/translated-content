@@ -263,6 +263,8 @@ p {
 
 ### 函数
 
+#### calc() 函数
+
 虽然大多数值是相对简单的关键字或数值，但也有一些可能的值以函数的形式出现。一个例子是 calc() 函数。这个函数允许您在 CSS 中进行简单的计算，例如：
 
 ```html
@@ -284,11 +286,13 @@ color: white;
 
 如下所示：
 
-{{EmbedLiveSample('calc_example', '100%', 200)}}
+{{EmbedLiveSample('calc() 函数', '100%', 200)}}
 
 一个函数由函数名和一些括号组成，其中放置了该函数的允许值。在上面的 `calc()` 示例中，我要求此框的宽度为包含块宽度的 90%，减去 30 像素。这不是我可以提前计算的东西，只是在 CSS 中输入值，因为我不知道 90% 会是什么。与所有值一样，MDN 上的相关页面将有使用示例，这样您就可以看到函数是如何工作的。
 
-另一个例子是{{cssxref("&lt;transform&gt;")}}, 例如 `rotate()`.
+#### transform 函数
+
+另一个例子是 {{cssxref("&lt;transform&gt;")}}，例如 `rotate()`。
 
 ```html
 <div class="box"></div>
@@ -306,7 +310,7 @@ color: white;
 
 以上代码的输出如下所示：
 
-{{EmbedLiveSample('transform_example', '100%', 200)}}
+{{EmbedLiveSample('transform 函数', '100%', 200)}}
 
 **尝试查找一下属性的不同值，并编写将他们应用于不同 HTML 元素的 CSS 规则：**
 
@@ -524,11 +528,3 @@ padding- left: 10px;
 了解一下浏览器如何将 HTML 和 CSS 转换成网页是很有用的，所以在下一篇文章——[CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)——我们将看看这个过程。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 在这个模块中
-
-1. [什么是 CSS?](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [开始使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [如何构建 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

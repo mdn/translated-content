@@ -50,7 +50,7 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 
   - : Le format du message produit. Les valeurs possibles sont :
 
-    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
+    - `"always"` : la valeur par défaut (par exemple `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 
 - `numberingSystem`
@@ -70,14 +70,11 @@ usedOptions.numberingSystem; // "latn"
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-|                                                                                                                                                   |                         |              |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

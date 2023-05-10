@@ -1,12 +1,9 @@
 ---
 title: Anatomia de uma WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - Extensões
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension
 ---
+
 Uma extensão consiste de uma coleção de arquivos, empacotados para distribuição e instalação. Nesse artigo vamos falar rapidamente sobre os arquivos que podem estar presentes em uma extensão.
 
 Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#manifest.json). Ele pode conter ponteiros para quatro outros tipos de arquivos:
@@ -16,7 +13,7 @@ Toda extensão contém um arquivo chamado ["manifest.json"](/pt-BR/Add-ons/WebEx
 - [browser action files](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions): implementação de botões na toolbar
 - [web accessible resources](/pt-BR/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources): torna o conteúdo do pacote acessível a páginas web e scripts de conteúdo
 
-![](https://mdn.mozillademos.org/files/11465/webextension-anatomy.svg)
+![](webextension-anatomy.svg)
 
 ## manifest.json
 

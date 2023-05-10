@@ -3,6 +3,7 @@ title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 translation_of: Web/API/MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 **MediaStream Recording API**, иногда просто называемый _Media Recording API_ или _MediaRecorder API_, тесно связан с [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API) и [WebRTC API](/ru/docs/Web/API/WebRTC_API). MediaStream Recording API делает возможным захват данных, сгенерированных {{domxref("MediaStream")}} или {{domxref("HTMLMediaElement")}} объектом для анализа, обработки или сохранения на дисковое пространство. С ним так же удивительно легко работать.

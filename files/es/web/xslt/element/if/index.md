@@ -1,12 +1,9 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/if
 original_slug: Web/XSLT/if
 ---
+
 {{XsltRef}}
 El elemento \<xsl:if> contiene un atributo a probar y una plantilla. Si el atributo resulta verdadero, la plantilla es procesada. Este comportamiento es similar a la sentencia if de otros lenguajes. Sin embargo, para conseguir la funcionalidad de una sentencia if-then-else, es necesario utilizar el elemento \<xsl:choose> con un elemento hijo \<xsl:when>, y otro elemento hijo \<xsl:otherwise>
 

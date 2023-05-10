@@ -1,10 +1,9 @@
 ---
 title: '<br>: El elemento de salto de línea'
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 original_slug: Web/HTML/Elemento/br
-browser-compat: html.elements.br
 ---
+
 ## Resumen
 
 El elemento HTML _line break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.
@@ -25,7 +24,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 - {{htmlattrdef("clear")}} {{Deprecated_Inline}}
   - : Indica donde empieza la siguiente línea después del salto.
 
-> **Nota:** **Nota de uso:** Este atributo está obsoleot en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
+> **Nota:** Este atributo está obsoleto en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
 
 ## Ejemplo
 
@@ -58,4 +57,4 @@ USA
 - Elemento {{HTMLElement("address")}}
 - Elemento {{HTMLElement("p")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

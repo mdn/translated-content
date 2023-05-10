@@ -1,12 +1,8 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`is`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 표준 HTML 요소가 사용자 지정 요소처럼 행동하도록 지정합니다. [사용자 지정 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)를 방문해 더 자세한 정보를 알아보세요.
@@ -44,7 +40,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## 같이 보기
 

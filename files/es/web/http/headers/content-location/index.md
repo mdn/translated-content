@@ -1,8 +1,8 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-translation_of: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Content-Location`** indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation).
@@ -68,7 +68,7 @@ Content-Location: /my-first-blog-post
 
 ### Indicating the URL of a transaction's result
 
-Digamos que tiene un formulario [`<form>`](/en-US/docs/Web/HTML/Element/form) para el envío de dinero a otro usuario de un sitio web.
+Digamos que tiene un formulario [`<form>`](/es/docs/Web/HTML/Element/form) para el envío de dinero a otro usuario de un sitio web.
 
 ```html
 <form action="/enviar-pago" method="post">
@@ -105,13 +105,11 @@ Content-Location: /mis-recibos/38
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Ver también
 

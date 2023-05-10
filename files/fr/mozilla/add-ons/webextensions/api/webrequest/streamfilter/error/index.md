@@ -16,9 +16,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 
 Une chaîne de caractères qui contiendra un message d'erreur après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.StreamFilter.error", 10)}}
+{{Compat}}
 
 ## Exemples
 

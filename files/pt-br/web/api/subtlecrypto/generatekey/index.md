@@ -1,14 +1,8 @@
 ---
 title: SubtleCrypto.generateKey()
-slug: Web/API/SubtleCrypto/GenerateKey
-tags:
-  - API
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - metodo
-translation_of: Web/API/SubtleCrypto/generateKey
+slug: Web/API/SubtleCrypto/generateKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`SubtleCrypto.generateKey()`** retorna como {{jsxref("Promise")}} de uma recentemente gerada {{domxref("CryptoKey")}}, para algoritmos simétricos, ou uma {{domxref("CryptoKeyPair")}}, contendo duas keys recentemente geradas, para algoritmos assimétricos, que combina com o algoritmo, o uso e a extractividade são dados como parâmetro.
@@ -50,7 +44,7 @@ var result = crypto.subtle.generateKey(algo, extractable, keyUsages);
 
 A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando `keyUsages` está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
 
 ## Especificações
 

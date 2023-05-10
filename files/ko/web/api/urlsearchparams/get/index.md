@@ -1,16 +1,8 @@
 ---
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
-page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - URL API
-  - URLSearchParams
-  - get
-browser-compat: api.URLSearchParams.get
-translation_of: Web/API/URLSearchParams/get
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} 인터페이스의 **`get()`** 메서드는 지정한 키와 연관된 첫 번째 값을 반환합니다.

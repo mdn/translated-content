@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/link
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
 
@@ -21,7 +21,7 @@ Pour lier une feuille de style externe, on inclut un élément `<link>` de la fo
 <link href="main.css" rel="stylesheet">
 ```
 
-Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut  `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
+Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
 
 Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
 
@@ -79,7 +79,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 - {{htmlattrdef("disabled")}}
 
-  - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false`via un script.
+  - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
 
     Toutefois, une fois que la feuille de style a été chargée, toute modification à l'attribut `disabled` n'aura aucun impact, sa valeur ne sera pas liée à la propriété {{domxref("StyleSheet.disabled")}}. Modifier cet attribut ne fait qu'activer/désactiver la capacité de charger et d'appliquer la feuille de style au document.
 

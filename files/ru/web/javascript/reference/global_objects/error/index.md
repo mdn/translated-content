@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
 ---
+
 {{JSRef}}
 
 Конструктор **`Error`** создаёт объект ошибки. Экземпляры объекта `Error` выбрасываются при возникновении ошибок во время выполнения. Объект `Error` также может использоваться в качестве базового для пользовательских исключений. Смотрите ниже стандартные встроенные типы ошибок.
@@ -37,10 +38,10 @@ new Error([message[, fileName[, lineNumber]]])
 
 Когда `Error` используется как функции-- без {{jsxref("Operators/new", "new")}}, она возвращает `Error` объект. Следовательно простой вызов `Error` произведёт тот же результат, что и конструктор `Error` объявленный через `new`.
 
-```
+```js
 // this:
 const x = Error('I was created using a function call!');
-​​​​// Такая же функциональность:
+// Такая же функциональность:
 const y = new Error('I was constructed via the "new" keyword!');
 ```
 

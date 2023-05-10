@@ -1,11 +1,8 @@
 ---
 title: ':nth-last-child()'
 slug: Web/CSS/:nth-last-child
-tags:
-  - Pseudo-classe
-  - Referencia
-translation_of: Web/CSS/:nth-last-child
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-last-child()`** seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos, contando a partir do último.
@@ -19,7 +16,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 }
 ```
 
-> **Note:** **Nota:** Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
+> **Nota:** Essa pseudo-classe é essencialmente o mesmo que usar {{Cssxref(":nth-child")}}, porém conta os itens de trás para a frente, e não do início para o final.
 
 ## Sintaxe
 

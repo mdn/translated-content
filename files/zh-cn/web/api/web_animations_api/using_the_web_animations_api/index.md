@@ -106,7 +106,7 @@ document.getElementById("alice").animate(
 
 And boom: the animation starts playing (see the finished [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
 
-可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不是为关键帧和时间属性制作对象：
+可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不需要为关键帧和时间属性创建对象：
 
 ```js
 document.getElementById("alice").animate(
@@ -195,8 +195,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 - {{domxref("Animation.finish()")}} 动画结束。
 - {{domxref("Animation.cancel()")}} 终止动画。
-- {{domxref("Animation.reverse()")}} 设置动画播放速度
-- ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行。
+- {{domxref("Animation.reverse()")}} 反向播放动画。相当于设置动画播放速度（{{domxref("Animation.playbackRate")}}）为负值，并播放。
 
 让我们先来看一下 playbackRate - 一个否定的播放速度将导致一个动画反向运行。当爱丽丝从瓶中喝酒时，她越来越小。这是因为瓶子将动画的播放速度从 1 更改为 -1：
 

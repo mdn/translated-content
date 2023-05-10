@@ -223,7 +223,7 @@ el.addEventListener("click", () => {
 
 {{EmbedLiveSample('Écouteur_d\'évènement_avec_une_fonction_fléchée')}}
 
-Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
+Notez que si les fonctions anonymes et fléchées sont similaires, elles ont des liaisons `this` différentes. Alors que les fonctions anonymes (et toutes les fonctions JavaScript traditionnelles) créent leurs propres liaisons `this`, les fonctions fléchées héritent la liaison `this` de la fonction contenante. [Voir la page sur l'opérateur `this` pour plus d'informations.](/fr/docs/Web/JavaScript/Reference/Operators/this#avec_les_fonctions_fléchées)
 
 Cela signifie que les variables et constantes disponibles pour la fonction contenante sont aussi disponibles pour le gestionnaire d'évènements lors de l'utilisation d'une fonction fléchée.
 

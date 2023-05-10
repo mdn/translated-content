@@ -36,9 +36,7 @@ class MyRegExp extends RegExp {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

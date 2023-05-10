@@ -1,14 +1,9 @@
 ---
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
-tags:
-  - JavaScript
-  - Métodos
-  - Number
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/valueOf
 ---
+
 {{JSRef}}
 
 El método **`valueOf()`** retorna el valor primitivo inserto en un objeto {{jsxref("Number")}}.
@@ -42,16 +37,11 @@ console.log(typeof num);    // número
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                       | Comment                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.valueOf")}}
+{{Compat}}
 
 ## Ver también
 

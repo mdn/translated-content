@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 Функция **`parseFloat()`** принимает строку в качестве аргумента и возвращает десятичное число (число с плавающей точкой)
@@ -59,7 +60,7 @@ parseFloat(foo);
 
 var foo = Object.create(null);
 foo.valueOf = function () { return "3.14"; };
-parseFloat(foo);​​​​​
+parseFloat(foo);
 ```
 
 ### `parseFloat` возвращает NaN

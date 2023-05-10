@@ -178,7 +178,7 @@ exports.book_update_post = [
 
 Форма должна выглядеть так же, как страница _Create book_, только с заголовком 'Update book' и предварительно заполнены значениями записей.
 
-![](https://mdn.mozillademos.org/files/14498/LocalLibary_Express_Book_Update_NoErrors.png)
+![](locallibary_express_book_update_noerrors.png)
 
 > **Примечание:** Другие страницы для обновления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задание.
 

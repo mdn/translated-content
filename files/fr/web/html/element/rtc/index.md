@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/rtc
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
 
@@ -20,7 +20,7 @@ L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est
 
 Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-## Exemple
+## Exemples
 
 ### HTML
 
@@ -42,7 +42,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple",600,120)}}
+{{EmbedLiveSample("",600,120)}}
 
 ## Résumé technique
 

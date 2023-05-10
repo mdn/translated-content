@@ -1,18 +1,9 @@
 ---
 title: Instalando os programas básicos
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Aprender
-  - Ferramentas
-  - Iniciante
-  - Mecânica da Web
-  - Navegador
-  - configuração
-  - editor de texto
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Aprender/Getting_started_with_the_web/instalando_programas_basicos
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 Em _Instalando os programas básicos_, mostraremos quais ferramentas você precisa para o desenvolvimento web simples e como instalá-los apropriadamente.
@@ -56,14 +47,3 @@ Antes de continuar, você deve instalar pelo menos dois desses navegadores e tê
 Alguns exemplos precisarão ser executados por um servidor web para funcionar com êxito. Você pode ver como fazer isso em [Como eu configuro um servidor de teste localmente?](/pt-BR/docs/Learn/Common_questions/Como_configurar_um_servidor_de_testes_local)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Com será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu site](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)

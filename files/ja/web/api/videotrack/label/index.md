@@ -47,9 +47,7 @@ function getTrackList(el) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-label', 'VideoTrack: label')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

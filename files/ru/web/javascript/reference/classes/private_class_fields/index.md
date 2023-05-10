@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Приватные_поля_класса
 ---
+
 {{JsSidebar("Classes")}}
 
 Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. Тем не менее, есть [экспериментальное предложение](https://github.com/tc39/proposal-class-fields), позволяющее определить приватные поля класса, используя префикс хэша `#`.
@@ -161,7 +162,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:
@@ -184,7 +185,7 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Спецификации
@@ -193,7 +194,7 @@ new ClassWithPrivateAccessor();
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Смотрите также
 

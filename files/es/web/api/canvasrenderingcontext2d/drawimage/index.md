@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContect2D
-  - Métodos
-  - Referencia
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.drawImage()`** de la API Canvas 2D proporciona diferentes formas para dibujar una imagen dentro de canvas.
@@ -21,7 +15,7 @@ void ctx.drawImage(image, dx, dy, dWidth, dHeight);
 void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
-![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
+![drawImage](canvas_drawimage.jpg)
 
 ### Parámetros
 
@@ -63,7 +57,7 @@ Este es sólo un simple fragmento de código que utiliza el método drawImage.
 
 ```html
 <canvas id="canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+  <img id="source" src="rhino.jpg"
        width="300" height="227">
 </div>
 ```
@@ -82,7 +76,7 @@ Edita el código debajo y observa los cambios actualizarse en vivo en el canvas:
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227">
 </div>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -123,22 +117,17 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.drawImage")}}
+{{Compat}}
 
-## Notas de compatibilidad
+## Notas
 
-- Soporte para voltear imagen usando valores negativos para `sw` y `sh` fue añadido en Gecko 5.0 {{geckoRelease("5.0")}}.
-- Empezando con {{geckoRelease("5.0")}} `drawImage()` maneja argumentos negativos de acuerdo con la especificación, volteando el rectangulo alrededor del eje apopiado.
-- Especificación de una imagen `null` o `undefined` al llamar o `drawImage()` correctamente lanzando una excepción `TYPE_MISMATCH_ERR` empezando con {{geckoRelease("5.0")}}.
-- antes de Gecko 7.0 {{ geckoRelease("7.0") }}, Firefox lanzó una excepción si alguno de los valores de las coordenadas no eran finitos o cero. De acuerado a la especificación esto ya no ocurre.
-- Gecko 9.0 {{ geckoRelease("9.0") }} ahora soporta correctamente CORS para dibujar imágenes a través de dominios sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- Gecko 11.0 {{ geckoRelease("11.0") }} ahora permite SVG-como-una-imagen para ser dibujada en el canvas sin [manchar el canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- `drawImage()` solo funciona correctamente en un {{domxref("HTMLVideoElement")}} cuando su {{domxref("HTMLMediaElement.readyState")}} es mayor que 1 (es decir, el evento de búsqueda se activa después de configurar la propiedad `currentTime`).
+- `drawImage()` siempre utilizará del elemento de origen _el tamaño intrínseco en píxeles de CSS_ al dibujar, recortar o escalar.
+- En algunas versiones anteriores del navegador, `drawImage()` ignorará todos los metadatos EXIF en las imágenes, incluida la Orientación. Este comportamiento es especialmente problemático en dispositivos iOS. Debe detectar la Orientación usted mismo y usar la función `rotate()` para corregirla.
 
 ## Mira también
 

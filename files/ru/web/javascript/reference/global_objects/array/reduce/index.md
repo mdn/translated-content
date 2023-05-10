@@ -1,6 +1,6 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 tags:
   - Array
   - ECMAScript5
@@ -13,6 +13,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
+
 {{JSRef}}
 
 Метод **`reduce()`** применяет функцию **reducer** к каждому элементу массива (слева-направо), возвращая одно результирующее значение.

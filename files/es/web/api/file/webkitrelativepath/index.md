@@ -1,16 +1,8 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-tags:
-  - Archivo
-  - Entidades Archivo y Directorio de la API
-  - File API
-  - Propiedad
-  - Referencia
-  - Solo lectura
-  - Web
-translation_of: Web/API/File/webkitRelativePath
 ---
+
 {{APIRef("File API")}}{{non-standard_header}}
 
 La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su {{htmlattrxref("webkitdirectory", "input")}} atributo definido.
@@ -27,7 +19,7 @@ Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al director
 
 ## Ejemplo
 
-En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento {{event("change")}} ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
+En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento [`change`](/es/docs/Web/Reference/Events/change) ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
 
 ### HTML
 
@@ -57,15 +49,11 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## Especificaciones
 
-| Especificacion                                                                                                       | Estado                                   | Comentario              |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------- |
-| {{ SpecName('File System API', '#dom-file-webkitrelativepath', 'webkitRelativePath') }} | {{ Spec2('File System API') }} | Especificacion inicial. |
-
-Esta API no tiene especificacion W3C o WHATWG.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.File.webkitRelativePath")}}
+{{Compat}}
 
 ## Vea también
 

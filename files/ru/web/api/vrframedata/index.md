@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Интерфейс VRFrameData API WebVR представляет всю информацию, необходимую для визуализации одного кадра сцены Виртуальной реальности; сконструирован с помощью {{domxref ("VRDisplay.getFrameData ()")}}.

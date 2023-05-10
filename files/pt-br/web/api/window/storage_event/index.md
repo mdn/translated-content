@@ -1,15 +1,9 @@
 ---
 title: WindowEventHandlers.onstorage
 slug: Web/API/Window/storage_event
-tags:
-  - API
-  - Armazenamento web
-  - Propriedade
-  - Referencia
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onstorage
 original_slug: Web/API/WindowEventHandlers/onstorage
 ---
+
 {{ ApiRef() }}
 
 A propriedade **`WindowEventHandlers.onstorage`** contém um manipulador de eventos que executa quando o evento {{event("storage")}} dispara. Isto ocorre quando a área de armazenamento é mudada. (ex. um novo item é armazenado.)

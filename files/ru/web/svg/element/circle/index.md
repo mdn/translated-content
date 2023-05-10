@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Element/circle
 original_slug: Web/SVG/Элемент/circle
 ---
+
 {{SVGRef}}
 
 `Элемент circle` — базовая SVG фигура, используется для создания кругов c помощью координат центра и размера радиуса.
@@ -25,7 +26,7 @@ original_slug: Web/SVG/Элемент/circle
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circle.svg](circle2.svg)
 
 ## Атрибуты
 

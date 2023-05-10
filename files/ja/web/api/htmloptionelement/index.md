@@ -39,12 +39,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "#htmloptionelement", "HTMLOptionElement")}}             | {{Spec2('HTML WHATWG')}} |                                                                                                                                                                                                        |
-| {{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}} | {{Spec2('HTML5 W3C')}}     | コンストラクターである `Option()` を追加した。 `form` プロパティが `null` 値を取れるようになった。                                                                                                     |
-| {{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}         | {{Spec2('DOM2 HTML')}}     | `selected` プロパティの意味を変更した。その選択肢が現在選択されているかどうかを示すようになり、最初に選択されているかどうかではなくなった。 `defaultSelected` プロパティが読み取り専用ではなくなった。 |
-| {{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}     | {{Spec2('DOM1')}}         | 初回定義                                                                                                                                                                                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

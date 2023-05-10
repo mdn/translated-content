@@ -1,16 +1,8 @@
 ---
 title: Animation.startTime
 slug: Web/API/Animation/startTime
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - startTime
-translation_of: Web/API/Animation/startTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad `Animation.startTime` de la interfaz {{domxref ("Animación")}} es un valor de punto flotante de doble precisión que indica el tiempo programado en el que debe comenzar la reproducción de una animación.

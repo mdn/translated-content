@@ -1,8 +1,8 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-translation_of: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`image-rendering`** provee una sugerencia al navegador acerca del algoritmo que debe usar para escalar imágenes.
@@ -65,24 +65,20 @@ div {
 
 #### image-rendering: auto;
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: pixelated; (-ms-interpolation-mode: nearest-neighbor)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: crisp-edges; (-webkit-optimize-contrast)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}} | {{Spec2('CSS3 Images')}} | Initial definition |
-
-> **Nota:** Aunque similar al atributo SVG {{svgattr("image-rendering")}}, los valores son bastante diferentes ahora.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.image-rendering")}}
+{{Compat}}

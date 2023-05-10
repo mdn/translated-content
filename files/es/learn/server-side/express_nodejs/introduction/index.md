@@ -1,17 +1,8 @@
 ---
 title: Introducción a Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Aprender
-  - Express
-  - MDN
-  - Node
-  - Servidor
-  - javascri
-  - lado del servidor
-  - nodejs
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Aprendizaje/Lado-Servidor/Express_Nodejs/Ambiente-Desarrollo", "Aprendizaje/Lado-Servidor/Express_Nodejs")}}
 
 En este primer articulo de Express resolveremos las preguntas "¿Qué es Node?" y "¿Qué es Express?", y te daremos una visión general de que hace especial al framework web "Express". Delinearemos las características principales, y te mostraremos algunos de los principales bloques de construcción de una aplicación en Express (aunque en este punto no tendrás todavía un entorno de desarrollo en que probarlo).
@@ -490,15 +481,3 @@ Por supuesto, Express es deliberadamente un un framework de aplicaciones web muy
 - [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
-
-## En este modulo
-
-- [Express/Node introduction](/es/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/es/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/es/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/es/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/es/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/es/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/es/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/es/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/es/docs/Learn/Server-side/Express_Nodejs/deployment)

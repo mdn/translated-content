@@ -143,9 +143,7 @@ function defineProperties(obj, properties) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

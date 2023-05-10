@@ -40,7 +40,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 另一种在主轴上对齐元素的方式就是使用自动边距。这种方式将创造出一部分元素左对齐而另一部分右对齐的导航栏设计。
 
-这儿我们使用在 [Using auto margins for main axis alignment](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#Using_auto_margins_for_main_axis_alignment) 这篇文章中介绍的自动边距技术。所有的元素在主轴上按照弹性盒布局的默认设定 `flex-start` 进行对齐，同时我们给那个需要右对齐的元素添加 `margin-left: auto;` 样式。你可以尝试将那个类名转移到其它元素上以改变（向右）分割作用的位置。
+这儿我们使用在 [Using auto margins for main axis alignment](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#Using_auto_margins_for_main_axis_alignment) 这篇文章中介绍的自动边距技术。所有的元素在主轴上按照弹性盒布局的默认设定 `flex-start` 进行对齐，同时我们给那个需要右对齐的元素添加 `margin-left: auto;` 样式。你可以尝试将那个类名转移到其他元素上以改变（向右）分割作用的位置。
 
 在这个例子里我们也为每个元素启用了 `margin` 属性来控制元素间的间隔，并给容器添加负边距以保证元素与容器的接洽处没有缝隙。在弹性盒布局实现盒式对齐规范中的 `gap` 属性前，如果我们想要控制元素的间隔就不得不使用使用边距属性。
 

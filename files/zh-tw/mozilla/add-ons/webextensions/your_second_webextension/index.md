@@ -54,7 +54,6 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -65,9 +64,7 @@ cd beastify
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -80,7 +77,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -102,7 +98,7 @@ cd beastify
 
 一個 extension 應該要有一個 icon。icon 將會顯示在 Add-ons Manager 的 extension 列表中。（在 Firefox 網址列輸入 "about:addons" 開啟 Add-ons Manager）。
 
-在 beastify 下建立一個名為 "icons" 的資料夾，並準備一個命名為 "beasts-48.png" 的 icon 並存在 "beastify/icons" 的資料夾中（可以使用我們的[範例圖檔](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png)，圖檔來源：[Free Retina Icon Set](https://www.iconfinder.com/iconsets/free-retina-icon-set)，遵照[使用條款](http://www.aha-soft.com/free-icons/free-retina-icon-set/)來使用）。並在 manifest.json 裡告訴他要使用 "icons/beasts-48.png" 路徑下的 icon。
+在 beastify 下建立一個名為 "icons" 的資料夾，並準備一個命名為 "beasts-48.png" 的 icon 並存在 "beastify/icons" 的資料夾中（可以使用我們的[範例圖檔](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png)，圖檔來源：[Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/)，遵照使用條款來使用）。並在 manifest.json 裡告訴他要使用 "icons/beasts-48.png" 路徑下的 icon。
 
 如果你想要使用自己的 icon，icon 大小必須是 48x48 pixels，另外也可使用 96x96 pixel 來支援較高解析度的顯示。
 
@@ -146,23 +142,23 @@ HTML 內容長得像這樣：
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -175,7 +171,8 @@ HTML 內容長得像這樣：
 CSS 定義了 pop-up 的大小，並確保三個選項有填滿整個 pop-up，並給他們幾個基本的 style：
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -188,19 +185,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
- background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .clear {
- background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .clear:hover {
- background-color: #EAEAC9;
+  background-color: #eaeac9;
 }
 ```
 
@@ -243,15 +240,17 @@ document.addEventListener("click", (e) => {
     var chosenBeastURL = beastNameToURL(chosenBeast);
 
     browser.tabs.executeScript(null, {
-      file: "/content_scripts/beastify.js"
+      file: "/content_scripts/beastify.js",
     });
 
-    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-    gettingActiveTab.then((tabs) => {
-      browser.tabs.sendMessage(tabs[0].id, {beastURL: chosenBeastURL});
+    var gettingActiveTab = browser.tabs.query({
+      active: true,
+      currentWindow: true,
     });
-  }
-  else if (e.target.classList.contains("clear")) {
+    gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, { beastURL: chosenBeastURL });
+    });
+  } else if (e.target.classList.contains("clear")) {
     browser.tabs.reload();
     window.close();
   }

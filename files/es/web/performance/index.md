@@ -1,13 +1,8 @@
 ---
 title: Rendimiento Web
 slug: Web/Performance
-tags:
-  - Mejores Practicas
-  - Pagina de Inicio
-  - Rendimiento
-  - Rendimiento Web
-translation_of: Web/Performance
 ---
+
 El rendimiento web es la medición objetiva y la experiencia percibida por el usuario del tiempo de carga y el tiempo de ejecución; es el tiempo que tarda un sitio en cargarse, ser interactivo y responsivo, y que tan fluido es el contenido durante las interacciones del usuario: ¿el desplazamiento es suave? ¿Se puede hacer clic en los botones? ¿Las ventanas emergentes se abren rápidamente y se animan fluidamente al hacerlo? El rendimiento web incluye mediciones objetivas como el tiempo de carga, cuadros por segundo y tiempo para interactuar y subjetivas de cuánto tiempo se sintió que tardó en cargarse el contenido.
 
 Cuanto más tarde un sitio en responder, más usuarios abandonarán el sitio. Es importante minimizar los tiempos de carga y respuesta, y agregar funciones adicionales para ocultar la latencia al hacer que la experiencia sea lo más accesible e interactiva posible, tan pronto como sea posible, mientras se carga de forma asíncrona en las partes que más tarda la experiencia.
@@ -92,13 +87,13 @@ Este artículo inicia el módulo con un buen vistazo a lo que realmente es el re
 
 ### Rendimiento de aplicaciones
 
-- [Fundamentos de rendimiento](/en-US/Apps/Developing/Performance/Performance_fundamentals)
+- [Fundamentos de rendimiento](/es/Apps/Developing/Performance/Performance_fundamentals)
   - : Una visión general del rendimiento de las aplicaciones web, qué es, cómo el navegador ayuda a mejorarlo, y qué herramientas y procesos puede utilizar para probar y mejorarlo aún más.
-- [Optimizando el rendimiento de inicio](/en-US/Apps/Developing/Performance/Optimizing_startup_performance)
+- [Optimizando el rendimiento de inicio](/es/Apps/Developing/Performance/Optimizing_startup_performance)
   - : Consejos y sugerencias para ayudarlo a mejorar el rendimiento de inicio, tanto al escribir una nueva aplicación como al migrar una aplicación de otra plataforma a la Web.
 - [Profiling con el profiler integrado](/es/docs/Performance/Profiling_with_the_Built-in_Profiler)
   - : Aprenda como rastrear el performance de las aplicaciones con el profiler integrado de Firefox.
-- [Rendimiento en animaciones con CSS y con JavaScript](/en-US/Apps/Build/Performance/CSS_JavaScript_animation_performance)
+- [Rendimiento en animaciones con CSS y con JavaScript](/es/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre las animaciones basadas en CSS y JavaScript.
 
 {{LandingPageListSubpages}}

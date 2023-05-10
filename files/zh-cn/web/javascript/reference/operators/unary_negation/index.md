@@ -1,23 +1,23 @@
 ---
-title: Unary negation (-)
+title: 一元减（-）
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
 
 {{jsSidebar("Operators")}}
 
-The unary negation operator (`-`) precedes its operand and negates it.
+**一元减**（**`-`**）运算符在其操作数之前，并对其取反。
 
 {{EmbedInteractiveExample("pages/js/expressions-unary-negation.html")}}
 
 ## 语法
 
-```plain
-Operator: -x
+```js-nolint
+-x
 ```
 
-## Examples
+## 示例
 
-### Negating numbers
+### 数字取反
 
 ```js
 const x = 3;
@@ -27,9 +27,9 @@ const y = -x;
 // x = 3
 ```
 
-### Negating non-numbers
+### 非数字取反
 
-The unary negation operator can convert a non-number into a number.
+一元减运算符可以[将非数字转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)。
 
 ```js
 const x = "4";
@@ -38,22 +38,22 @@ const y = -x;
 // y = -4
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [求幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

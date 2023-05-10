@@ -1,14 +1,8 @@
 ---
 title: Timing-Allow-Origin
 slug: Web/HTTP/Headers/Timing-Allow-Origin
-tags:
-  - CORS
-  - HTTP
-  - Referencia
-  - Timing-Allow-Origin
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Timing-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Timing-Allow-Origin`** especifica origens que são permitidas de ver os valores dos atributos por funcionalidades da [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API), na qual caso contrário será reportada como zero dada as restrições entre origens.

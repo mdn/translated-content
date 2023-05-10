@@ -61,6 +61,6 @@ Il s'agit d'une chaîne qui peut prendre l'une des valeurs suivantes:
 "incognito": "not_allowed"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.incognito")}}
+{{Compat}}

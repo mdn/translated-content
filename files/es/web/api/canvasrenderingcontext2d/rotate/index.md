@@ -1,10 +1,8 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
-tags:
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade una rotación a la matriz de transformación.
@@ -15,7 +13,7 @@ El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade un
 void ctx.rotate(angulo);
 ```
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 ### Parámetros
 
@@ -110,13 +108,11 @@ El rectángulo no rotado es gris, y el rectángulo rotado es rojo.
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Status                           | Comentarios |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-rotate", "CanvasRenderingContext2D.rotate")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.rotate")}}
+{{Compat}}
 
 ## Véase también
 

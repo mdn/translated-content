@@ -3,7 +3,7 @@ title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}
 
 本章介绍在 Javascript 中如何使用字符串与文本内容。
 
@@ -81,7 +81,7 @@ hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"
 ```
 
-Characters whose Unicode scalar values are greater than U+FFFF (such as some rare Chinese/Japanese/Korean/Vietnamese characters and some emoji) are stored in UTF-16 with two surrogate code units each. For example, a string containing the single character U+1F600 "Emoji grinning face" will have length 2. Accessing the individual code units in such a string using brackets may have undesirable consequences such as the formation of strings with unmatched surrogate code units, in violation of the Unicode standard. (Examples should be added to this page after MDN bug 857438 is fixed.) See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
+Unicode 标量值（Unicode scalar value）大于 U+FFFF 的字符（比如中文、日文、韩文、越南语中的一些不常用的文字或者 emoji 表情）使用 2 个代理码点存储在 UTF-16 中。比如，一个包含 U+20BB7“𠮷”字符的字符串，其长度为 2。使用括号访问单个码点的时候，可能不会得到你所期望的结果，你得到的可能是一个不匹配字符串位置的代理码点，并且其违反了 Unicode 规范。请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
 
 `String`对象有许多方法：举例来说有些方法返回字符串本身的变体，如 `substring` 和`toUpperCase`.
 
@@ -219,4 +219,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 关于{{jsxref("Intl")}} API 的更多信息，请参考 [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/)。
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}

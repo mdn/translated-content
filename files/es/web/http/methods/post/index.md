@@ -1,12 +1,8 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Metodo de pedido
-  - Referencia
-translation_of: Web/HTTP/Methods/POST
 ---
+
 {{HTTPSidebar}}
 
 El **método HTTP `POST`** envía datos al servidor. El tipo del cuerpo de la solicitud es indicada por la cabecera {{HTTPHeader("Content-Type")}}.
@@ -73,13 +69,11 @@ value2
 
 ## Especificaciones
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## Ver también
 

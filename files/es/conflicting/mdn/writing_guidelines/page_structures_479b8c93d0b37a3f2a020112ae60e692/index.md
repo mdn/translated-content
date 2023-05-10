@@ -1,10 +1,9 @@
 ---
 title: Ejemplos ejecutables
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-translation_of: MDN/Structures/Live_samples
+slug: conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 original_slug: MDN/Structures/Live_samples
 ---
+
 {{MDNSidebar}}
 
 MDN puede convertir ejemplos de código de los artículos a ejemplos ejecutables que el lector puede ver en acción. Estos ejemplos ejecutables pueden contener HTML, CSS, y JavaScript en cualquier combinación. Ten en cuenta que los ejemplos "ejecutables" _no son interactivos_; sin embargo, aseguran que el output coincida exactamente con el código de ejemplo, porque es generado por este.
@@ -33,10 +32,10 @@ El sistema de ejemplos ejecutables tiene muchas opciones disponibles, trataremos
 
 Hay dos macros que puedes usar para desplegar ejemplos ejecutables:
 
-- [`EmbedLiveSample`](/en-US/docs/Template:EmbedLiveSample) despliega el ejemplo ejecutable en un frame embebido dentro de la misma página
-- [`LiveSampleLink`](/en-US/docs/Template:LiveSampleLink) crea un link que abre el ejemplo ejecutable en una página nueva
+- [`EmbedLiveSample`](/es/docs/Template:EmbedLiveSample) despliega el ejemplo ejecutable en un frame embebido dentro de la misma página
+- [`LiveSampleLink`](/es/docs/Template:LiveSampleLink) crea un link que abre el ejemplo ejecutable en una página nueva
 
-En muchos casos, tienes la posibilidad de agregar la macro [`EmbedLiveSample`](/en-US/docs/Template:EmbedLiveSample) o la [`LiveSampleLink`](/en-US/docs/Template:LiveSampleLink) con ¡poco o nada de trabajo adicional! Mientras el ejemplo pueda ser identificado por un ID de un header o esté en un bloque de contenido con un ID que puedas usar, simplemente agregar la macro será suficiente.
+En muchos casos, tienes la posibilidad de agregar la macro [`EmbedLiveSample`](/es/docs/Template:EmbedLiveSample) o la [`LiveSampleLink`](/es/docs/Template:LiveSampleLink) con ¡poco o nada de trabajo adicional! Mientras el ejemplo pueda ser identificado por un ID de un header o esté en un bloque de contenido con un ID que puedas usar, simplemente agregar la macro será suficiente.
 
 #### Macro EmbedLiveSample
 
@@ -92,7 +91,7 @@ Así que asegurate que la distinción de sintaxis de los bloques {{HTMLElement("
 
 Una vez que el código está en su lugar y propiamente configurado para identificar cada bloque de lenguaje, necesitas insertar la macro que crea el frame.
 
-1.  Haz clic en el botón **Insert Live Code Sample iFrame** en la barra de herramientas; luce así: ![](https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png). Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable: ![](https://mdn.mozillademos.org/files/5385/sample-finder.png)
+1.  Haz clic en el botón **Insert Live Code Sample iFrame** en la barra de herramientas; luce así: ![](insert-live-sample-btn.png). Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable: ![](sample-finder.png)
 2.  Bajo **Document**, ingresa el título del artículo que contiene el ejemplo que deseas desplegar. Por default, es el artículo que estás editando, pero puedes escoger un artículo en otra parte de MDN. Esto hace posible reusar ejemplos en múltiples páginas si es necesario. (Si escribes un texto nuevo en este campo, aparecerá un menú de coincidencias parciales; selecciona el título de la página que desees.)
 3.  En el menú **Sections in Document**, selecciona la sección en el artículo que contiene los bloques de código del ejemplo que quieres desplegar.
 4.  Haz clic en el botón **OK** para generar e insertar la macro que crea el frame del ejemplo. La macro luce algo así:
@@ -103,7 +102,7 @@ Una vez que el código está en su lugar y propiamente configurado para identifi
 Si estás escribiendo una página nueva, y quieres insertar código que deseas mostrar como ejemplo ejecutable, ¡aun más del trabajo puede ser realizado por el editor para ti!
 
 1.  Haz clic el botón **Insert Code Sample Template** en la barra de herramientas, luce así: ![](/files/4265/live-sample-button.png). Esto presenta un simple cuadro de diálogo pidiéndote que nombres a tu ejemplo ejecutable:
-    ![](https://mdn.mozillademos.org/files/5387/insert-live-sample-template.png)
+    ![](insert-live-sample-template.png)
 2.  Ingresa el nombre del ejemplo; esto es usado como el header para el ejemplo. Asegúrate que tu título sea coherente con la pagína que escribes.
 3.  Haz clic en **OK**. Se creó un header nuevo con el título que elegiste, con sub-headers y bloques de código vacios para HTML, CSS y JavaScript.
 4.  Elimina cualquier sub-header y bloque de código que no necesites.
@@ -149,7 +148,7 @@ MDN tiene montontes de ejemplos viejos que aun no usan el sistema de ejemplos ej
 
 - Empieza por darle un vistazo a esto [lista de páginas etiquetadas con "NeedsLiveSample"](/es/docs/tag/NeedsLiveSample). Estas son las páginas que los usuarios han marcadado como que necesitan actualizarse. Deberías agregar esta etiqueta tu mismo, si ves una página que necesita ser actualizada para usar ejemplos ejecutables pero no tienes tiempo de arreglarla enseguida.
 - Navega por ligas de documentación que es probable que incluyan ejemplos, como [JavaScript Guide](/es/docs/Web/JavaScript/Guide), [HTML documentation](/es/docs/Web/HTML), y [CSS reference](/es/docs/Web/CSS/Reference).
-- Busca término como "[example](/en-US/search?q=example)" o "[sample](/en-US/search?q=sample)" y revisar los resultados para páginas que actualizar.
+- Busca término como "[example](/es/search?q=example)" o "[sample](/es/search?q=sample)" y revisar los resultados para páginas que actualizar.
 
 ## Demo de ejemplo ejecutable
 

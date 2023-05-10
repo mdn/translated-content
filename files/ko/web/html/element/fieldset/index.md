@@ -1,15 +1,9 @@
 ---
 title: '<fieldset>: 필드셋 요소'
 slug: Web/HTML/Element/fieldset
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<fieldset>` 요소**는 웹 양식의 여러 컨트롤과 레이블({{htmlelement("label")}})을 묶을 때 사용합니다.
 
@@ -127,7 +121,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -143,4 +137,4 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.fieldset")}}
+{{Compat}}

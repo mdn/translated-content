@@ -1,12 +1,9 @@
 ---
 title: Polyfill
 slug: Glossary/Polyfill
-tags:
-  - ECMAScript6
-  - polyfill
-translation_of: Glossary/Polyfill
 original_slug: Glossario/Polyfill
 ---
+
 Um polyfill é um pedaço de código (geralmente JavaScript na Web) usado para fornecer funcionalidades modernas em navegadores mais antigos que não o suportam nativamente.
 
 Por exemplo, um polyfill pode ser usado para imitar a funcionalidade de um elemento HTML Canvas no Microsoft Internet Explorer 7, usando um plugin Silverlight, ou imitar o suporte para unidades rem CSS, ou {{cssxref ("text-shadow")}}, ou o que você quiser.

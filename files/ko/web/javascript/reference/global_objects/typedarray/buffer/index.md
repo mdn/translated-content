@@ -2,6 +2,7 @@
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 ---
+
 {{JSRef}}
 
 **`buffer`** 접근자 속성은 생성 시 *TypedArray*에서 참조하는 {{jsxref("ArrayBuffer")}}를 나타냅니다.

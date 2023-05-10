@@ -1,8 +1,8 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Headers/If-Unmodified-Since
-translation_of: Web/HTTP/Headers/If-Unmodified-Since
 ---
+
 {{HTTPSidebar}}
 
 A requisição **`If-Unmodified-Since`** do cabeçalho HTTP realiza uma requisição condicional: o servidor enviará de volta o recurso solicitado ou o aceitará no caso de um {{HTTPMethod("POST")}} ou non-{{Glossary("safe")}} método, somente se não tiver sido modificado pela última vez após a data especificada. Se a solicitação tiver sido modificada após a data já especificada, a resposta será um erro {{HTTPStatus("412")}} (Precondition Failed).

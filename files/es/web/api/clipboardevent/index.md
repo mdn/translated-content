@@ -1,19 +1,11 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is {{event("cut")}}, {{event("copy")}}, and {{event("paste")}} events.
+The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is [`cut`](/es/docs/Web/Reference/Events/cut), [`copy`](/es/docs/Web/Reference/Events/copy), and [`paste`](/es/docs/Web/Reference/Events/paste) events.
 
 ## Constructor
 
@@ -25,22 +17,20 @@ The **`ClipboardEvent`** interface represents events providing information relat
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{event("cut")}}, {{event("copy")}}, or {{event("paste")}} operation, along with its MIME type.
+  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated [`cut`](/es/docs/Web/Reference/Events/cut), [`copy`](/es/docs/Web/Reference/Events/copy), or [`paste`](/es/docs/Web/Reference/Events/paste) operation, along with its MIME type.
 
 ## Methods
 
 _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                               | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }} | {{ Spec2('Clipboard API') }} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## See also
 
-- Copy-related events: {{event("copy")}}, {{event("cut")}}, {{event("paste")}}
+- Copy-related events: [`copy`](/es/docs/Web/Reference/Events/copy), [`cut`](/es/docs/Web/Reference/Events/cut), [`paste`](/es/docs/Web/Reference/Events/paste)

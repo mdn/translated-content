@@ -19,6 +19,4 @@ original_slug: Web/API/DeviceAcceleration
 
 ## 仕様
 
-| Specification                                                                                                | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}} | {{Spec2("Device Orientation")}} | Initial definition |
+{{Specifications}}

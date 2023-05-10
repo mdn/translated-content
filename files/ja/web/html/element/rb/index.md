@@ -3,7 +3,7 @@ title: '<rb>: ルビベース要素'
 slug: Web/HTML/Element/rb
 ---
 
-{{HTMLRef}}{{Non-standard_Header}}
+{{HTMLSidebar}}{{Non-standard_Header}}
 
 **HTML ルビベース (`<rb>`) 要素**は、 {{HTMLElement("ruby") }} 表記のベースとなるテキストの部分を区切るために使用されます。つまり、修飾される文字列です。一つの `<rb>` 要素がベーステキストの不可分な区間を隔てるように囲みます。
 
@@ -108,9 +108,7 @@ body {
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                         | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---- |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-rb-element', '&lt;rb&gt;')}} | {{Spec2('HTML5 W3C')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

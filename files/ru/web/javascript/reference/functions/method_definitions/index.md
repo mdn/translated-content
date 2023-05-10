@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Functions/Определение_методов
 ---
+
 {{JsSidebar("Functions")}}
 
 Начиная с ECMAScript 6, существует короткий синтаксис для определения методов в инициализаторе объекта. По сути, это сокращение для функции, которая назначена имени метода.
@@ -123,14 +124,14 @@ console.log(bar.foo2()); // 2
 
 ## SpiderMonkey-specific notes
 
-- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, "`get`" and "`set`" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.
-- Prior to SpiderMonkey 41 {{geckoRelease(41)}}, curly braces were not required in method definitions. They are required from now on to conform to the ES6 specification and will throw a {{jsxref("SyntaxError")}} in this and later versions ({{bug(1150855)}}).
+- Prior to SpiderMonkey 38, "`get`" and "`set`" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.
+- Prior to SpiderMonkey 41, curly braces were not required in method definitions. They are required from now on to conform to the ES6 specification and will throw a {{jsxref("SyntaxError")}} in this and later versions ({{bug(1150855)}}).
 
   ```js example-bad
   var o = {x() 12}; // SyntaxError
   ```
 
-- The restriction that only generator methods are constructors has been implemented in SpiderMonkey 41 {{geckoRelease(41)}}. See also {{bug(1059908)}} and {{bug(1166950)}}.
+- The restriction that only generator methods are constructors has been implemented in SpiderMonkey 41. See also {{bug(1059908)}} and {{bug(1166950)}}.
 
 ## Смотрите также
 

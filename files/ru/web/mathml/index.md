@@ -11,6 +11,7 @@ tags:
   - XML
 translation_of: Web/MathML
 ---
+
 **Mathematical Markup Language (MathML)** разновидность языка разметки [XML](/ru/docs/XML), предназначенная для построения математических выражений с сохранением их структуры и содержания. Здесь вы найдёте ссылки к документации, примеры и инструменты, которые помогут вам работать с этой мощной технологией. Для быстрого обзора - смотрите [слайды для выставки инноваций на саммите Mozilla 2013](http://fred-wang.github.io/MozSummitMathML/index.html).
 
 ## Справочные данные по MathML
@@ -26,8 +27,6 @@ translation_of: Web/MathML
 
 ## Получение помощи из сообщества
 
-- Смотреть форумы Mozilla...
-  {{ DiscussionList("dev-tech-mathml", "mozilla.dev.tech.mathml") }}
 - [IRC канал](irc://irc.mozilla.org/%23mathml)
 - [Wiki от авторов Mozilla](https://wiki.mozilla.org/MathML:Home_Page)
 - [Домашняя страница W3C Math](http://www.w3.org/Math/)

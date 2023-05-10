@@ -1,8 +1,8 @@
 ---
 title: border-top-color
 slug: Web/CSS/border-top-color
-translation_of: Web/CSS/border-top-color
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`border-top-color`** establece el color superior de un elemento {{cssxref("border")}}. Tenga en cuenta que en la mayoria de los casos las propiedades abreviadas {{cssxref("border-color")}} o {{cssxref("border-top")}} son mas convenientes y preferidas.
@@ -71,14 +71,11 @@ La propiedad `border-top-color` es especificada con un valor unico.
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentarios                                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Sin cambios significativos, aunque la palabra clave `transparent` , ahora incluida en {{cssxref("&lt;color&gt;")}} que se ha extendido, se ha eliminado formalmente. |
-| {{SpecName('CSS2.1', 'box.html#border-color-properties', 'border-top-color')}} | {{Spec2('CSS2.1')}}                 | Definición inicial                                                                                                                                                           |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-top-color")}}
+{{Compat}}
 
 ## Ver tambien
 

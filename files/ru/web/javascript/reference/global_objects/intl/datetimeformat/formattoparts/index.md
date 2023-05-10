@@ -10,6 +10,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 ---
+
 {{JSRef}}Метод **`Intl.DateTimeFormat.prototype.formatToParts()`** позволяет выполнять форматирование строк с учётом форматирования `DateTimeFormat`.
 
 ## Синтаксис

@@ -11,6 +11,7 @@ tags:
 browser-compat: api.Element.append
 translation_of: Web/API/Element/append
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Element.append()`** вставляет {{domxref("Node", "узлы")}} или {{domxref("DOMString", "строки с текстом")}} в конец `Element`. {{domxref("DOMString", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.

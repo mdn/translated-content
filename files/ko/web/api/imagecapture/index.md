@@ -1,15 +1,8 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - Interface
-  - MediaStream Image Capture API
-  - Reference
-translation_of: Web/API/ImageCapture
 ---
+
 {{APIRef("MediaStream Image")}}
 
 [MediaStream Image Capture API](/ko/docs/Web/API/MediaStream_Image_Capture_API)의 **`ImageCapture`** 인터페이스는 유효한 {{domxref("MediaStreamTrack")}}이 참조하는 카메라 또는 기타 촬영 장치를 통해 이미지나 사진을 촬영하기 위한 메서드를 제공합니다.

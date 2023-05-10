@@ -36,7 +36,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Compatibibilité du navigateur
 
-{{Compat("webextensions.api.cookies.getAllCookieStores")}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,7 +53,7 @@ var getting = browser.cookies.getAllCookieStores();
 getting.then(logStores);
 ```
 
-Chaque membre du tableau `cookieStores` est un objet  {{WebExtAPIRef("cookies.CookieStore")}}.
+Chaque membre du tableau `cookieStores` est un objet {{WebExtAPIRef("cookies.CookieStore")}}.
 
 {{WebExtExamples}}
 

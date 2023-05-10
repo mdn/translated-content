@@ -1,5 +1,5 @@
 ---
-title: "Temps de chargement\_: à partir de quel moment un site est-il «\_lent\_»\_?"
+title: "Temps de chargement : à partir de quel moment un site est-il « lent » ?"
 slug: Web/Performance/How_long_is_too_long
 translation_of: Web/Performance/How_long_is_too_long
 ---

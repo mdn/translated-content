@@ -1,19 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Communications
-  - EventSource
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Server Sent Events
-  - Server-sent events
-  - TopicStub
-  - messaging
-translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 **`EventSource`** 인터페이스는 [server-sent events](/ko/docs/Web/API/Server-sent_events)에 대한 웹 콘텐츠 인터페이스입니다. `EventSource` 인스턴스는 `text/event-stream` 포맷으로 이벤트를 보내는 [HTTP](/ko/docs/Web/HTTP) 서버에 지속적인 연결을 합니다. 연결은{{domxref("EventSource.close()")}} 호출로 종료되지 전까지 지속됩니다.
@@ -74,11 +63,11 @@ evtSource.onmessage = function(e) {
 
 > **참고:** You can find a full example on GitHub — see [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

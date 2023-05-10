@@ -6,6 +6,7 @@ tags:
   - Operators
 translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{jsSidebar("Operators")}}
 
 Эта глава описывает все операторы, выражения и ключевые слова языка JavaScript.
@@ -125,7 +126,7 @@ translation_of: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
   - : Оператор больше или равно.
 
-> **Примечание:** **Заметьте: =>** это не оператор. Это нотация для [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> **Примечание:** => это не оператор. Это нотация для [Стрелочных функций](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Операторы равенства
 

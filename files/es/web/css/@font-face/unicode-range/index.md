@@ -1,13 +1,8 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - CSS
-  - Experimental
-  - Layout
-  - Reference
-translation_of: Web/CSS/@font-face/unicode-range
 ---
+
 {{cssref}}
 
 La regla CSS **`unicode-range`** especifica un rango específico de caracteres a ser usados por una fuente definida {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.
@@ -57,16 +52,12 @@ div {
 }
 ```
 
-### Reultado
+{{EmbedLiveSample}}
 
-![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
+## Especificaciones
 
-## Especificación
-
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Fonts', '#descdef-font-face-unicode-range', 'unicode-range')}} | {{Spec2('CSS3 Fonts')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.font-face.unicode-range")}}
+{{Compat}}

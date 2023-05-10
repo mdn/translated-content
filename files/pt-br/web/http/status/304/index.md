@@ -1,13 +1,8 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - Redirecionamento
-  - Referencia
-  - Status code
-translation_of: Web/HTTP/Status/304
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta HTTP de redirecionamento do cliente **`304`** **`Not Modified`** indica que não há necessidade de retransmitir a requisição de recursos. É um redirecionamento implícito para o recurso em cache. Isto ocorre quando o método de requisição é {{glossary("safe")}}, assim como uma requisição {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, ou quando a requisição é condicional e usa um cabeçalho {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.

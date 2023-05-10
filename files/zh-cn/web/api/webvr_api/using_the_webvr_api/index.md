@@ -2,6 +2,7 @@
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 The [WebVR API](/zh-CN/docs/Web/API/WebVR_API) is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the [Oculus Rift](https://developer.oculus.com/), and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.
 [WebVR API](/zh-CN/docs/Web/API/WebVR_API) 对于 web 开发者来说，是一个令人心动的功能包，允许你连接到类似于[Oculus Rift](https://developer.oculus.com/) 这样的虚拟现实硬件，并且能够在你的 web app 中，将从硬件获取到的位置移动数据和姿态角数据，实时更新你的渲染显示输出。具体要如何在 Web 上开始开发你的 VR app 呢？这篇文章将会提供基础的引导信息。
 
@@ -30,7 +31,7 @@ Once your environment is set up, try visiting one of our [MozVR projects](http:/
 There are a number of WebVR demos available at the [MozVR team repo](https://github.com/MozVR/), and the [MDN webvr-tests repo](https://github.com/mdn/webvr-tests), but the main one we will be focusing on in this article is our [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) demo ([view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)):
 在[MozVR team repo](https://github.com/MozVR/)和[MDN webvr-tests repo](https://github.com/mdn/webvr-tests)提供了一定数量的 WebVR 示例，在这篇文章里，我们将着重关注我们的 [positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) 提供的示例 (点此访问 live [view it live](http://mdn.github.io/webvr-tests/positionsensorvrdevice/))
 
-![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
+![](vrpositionsensor-demo.png)
 
 This is a simple 2.5D demo showing a Firefox logo seen on a left and right eye view, rendered on [HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas). When you view the demo with a VR HMD and click the canvas, the demo will go fullscreen, and you'll be able to approach the Firefox logo. It will move realistically as you move your head towards and away from it, up and down and side to side, and rotate your head in any direction.
 这是一个简单的 2.5D 的示例，在左右眼两个区域，以[HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas)的方式，同时渲染了 Firefox 的 LOGO。当你使用 VR 头显来观看这个示例时，点击画面，这个 DEMO 就会切换到全屏形式，可以尝试靠近 Firefox 图标。将会非常真实地同步你的头部运动后应该看到的内容，包括可以上下移动、左右移动、转动你的头部看想看的方向。

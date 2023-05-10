@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.save()
 slug: Web/API/CanvasRenderingContext2D/save
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/save
 ---
+
 {{APIRef}}
 
 El método **`CanvasRenderingContext2D.save()`** del API Canvas 2D guarda el estado completo del canvas añadiendo el estado actual a una pila.
@@ -64,13 +58,11 @@ ctx.fillRect(150, 40, 100, 100);
 
 ## Especificaciones
 
-| Especificación                                                                                                                       | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-save", "CanvasRenderingContext2D.save")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.CanvasRenderingContext2D.save")}}
+{{Compat}}
 
 ## Véase también
 

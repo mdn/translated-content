@@ -1,16 +1,8 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-  - 마이크로데이터
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemprop`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 아이템에 속성을 추가할 때 사용합니다. 모든 요소는 `itemprop` 특성을 가질 수 있으며, 하나의 `itemprop`은 키-값 쌍으로 구성됩니다. 각각의 키-값 쌍은 **속성**이라고 부르고, 하나 이상의 속성으로 구성한 그룹을 **아이템**이라고 부릅니다. 속성의 값으로는 문자열이나 {{glossary("URL")}}을 사용할 수 있고, {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, {{HTMLElement("video")}} 등 다양한 요소와 연관지을 수 있습니다.
@@ -287,7 +279,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
   </tbody>
 </table>
 
-**토큰(Tokens)**은 문자열이거나 URL일 수 있습니다. item이 URL일 경우는 **typed item**이라고 하고 그렇지 않은 경우는 문자열(string)이라고 합니다. 문자열에는 마침표(period)나 콜론(colon)이 포함되어서는 안됩니다(아래 참고).
+**토큰**(**Tokens**)은 문자열이거나 URL일 수 있습니다. item이 URL일 경우는 **typed item**이라고 하고 그렇지 않은 경우는 문자열(string)이라고 합니다. 문자열에는 마침표(period)나 콜론(colon)이 포함되어서는 안됩니다(아래 참고).
 
 1. 아이템이 typed item일 경우 다음 중 하나이어야 합니다:
 
@@ -307,7 +299,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 - 해당 요소가 **itemscope** 속성을 가지고 있을 경우
 
-  - 그 값은 해당 요소가 생성한 **아이템(item)**입니다.
+  - 그 값은 해당 요소가 생성한 **아이템**(**item**)입니다.
 
 - 해당 요소가 **meta** 요소일 경우
 
@@ -445,7 +437,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.itemprop")}}
+{{compat}}
 
 ## 같이 보기
 

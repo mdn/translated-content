@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onchange
 original_slug: Web/API/GlobalEventHandlers/onchange
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события {{event("change")}} (Изменение чего-либо).

@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 3: Using models'
 slug: Learn/Server-side/Django/Models
 ---
+
 803{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 이 문서에서는 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트의 모델을 어떻게 정의할지 보여줄 것입니다. 모델이라는 것이 무엇인지, 어떻게 선언하는지, 그리고 주된 필드 타입들에 대해서 설명합니다. 그리고 모델의 데이터에 접근할 수 있는 몇몇 방법에 대해서 간단히 보여줄 것입니다.
@@ -45,7 +46,7 @@ slug: Learn/Server-side/Django/Models
 
 이 다이어그램은 또한 다중도(multiplicities)을 포함한 모델 간의 관계를 보여줍니다. 다중도(multiplicities)는 관계 안에 존재하는 각각의 모델의 숫자(최대 그리고 최소)를 보여주는 다이어그램 위의 숫자입니다. 예를 들어, 상자 사이를 연결하는 선은 책과 장르가 연관되어 있다는 것을 보여줍니다. 장르(Genre) 모델에 가까이 있는 숫자들은 책이 하나 또는 그 이상의 장르(원하는 만큼 많이)를 가지고 있어야 함을 보여주는 반면, 선의 반대편 끝에 있는 책(Book) 모델 옆의 숫자들은 장르 모델이 0 또는 여러 개의 관련된 책 모델을 가질 수 있음을 보여줍니다 .
 
-![LocalLibrary Model UML](https://mdn.mozillademos.org/files/15646/local_library_model_uml.png)
+![LocalLibrary Model UML](local_library_model_uml.png)
 
 > **참고:** **주의**: 다음 섹션은 모델이 어떻게 정의되고 사용되는지에 대한 초보적인 설명입니다. 읽으면서 위 다이어그램의 각각의 모델들을 어떻게 구성할 지 생각해 보십시오.
 
@@ -228,7 +229,7 @@ record.save()
 all_books = Book.objects.all()
 ```
 
-장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**)\*\* \*\*필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
+장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**) 필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
 
 ```python
 wild_books = Book.objects.filter(title__contains='wild')
@@ -424,21 +425,3 @@ At this point we'll divert briefly from creating the site, and check out the _Dj
 - [QuerySet API Reference](https://docs.djangoproject.com/en/2.0/ref/models/querysets/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ko/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ko/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ko/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ko/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ko/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ko/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ko/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ko/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ko/docs/Learn/Server-side/Django/django_assessment_blog)

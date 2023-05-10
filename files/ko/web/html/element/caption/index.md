@@ -1,15 +1,9 @@
 ---
 title: '<caption>: 표 설명 요소'
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/caption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<caption>` 요소**는 표의 설명 또는 제목을 나타냅니다.
 
@@ -125,4 +119,4 @@ table, th, td {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.caption")}}
+{{Compat}}

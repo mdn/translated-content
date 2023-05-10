@@ -1,17 +1,9 @@
 ---
 title: <dl>
 slug: Web/HTML/Element/dl
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/dl
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dl>` 요소**는 설명 목록을 나타냅니다. `<dl>`은 {{htmlelement("dt")}}로 표기한 용어와 {{htmlelement("dd")}} 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다. 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다.
 
@@ -63,7 +55,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -215,7 +207,7 @@ dt:after {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## 같이 보기
 

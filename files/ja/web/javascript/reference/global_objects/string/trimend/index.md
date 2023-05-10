@@ -50,9 +50,7 @@ console.log(str);        // '   foo'
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

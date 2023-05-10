@@ -1,10 +1,8 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - Referencia_CSS
-translation_of: Web/CSS/position
 ---
+
 {{CSSRef}}
 
 La propiedad **`position`** de [CSS](/es/docs/CSS) especifica cómo un elemento es posicionado en el documento. Las propiedades {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, y {{Cssxref("left")}} determinan la ubicación final de los elementos posicionados.
@@ -283,13 +281,8 @@ Los elementos que se desplazan que contienen contenido `fixed` o `sticky` conten
 
 ## Especificaciones
 
-| Especificación                                                                           | Status                                   | Comentario                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                                       |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Añade valor de la propiedad `sticky`. |
+{{Specifications}}
 
-{{cssinfo}}
+## Compatibilidad con navegadores
 
-## Compatibilidad
-
-{{Compat("css.properties.position")}}
+{{Compat}}

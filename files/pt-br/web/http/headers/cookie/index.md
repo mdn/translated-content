@@ -1,15 +1,8 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cabeçalho de requisição
-  - Cookies
-  - HTTP
-  - Referencia
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Cookie`** contém [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.

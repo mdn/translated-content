@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/nav
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **\<nav>** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.).
 

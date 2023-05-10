@@ -1,17 +1,8 @@
 ---
 title: Puesta en marcha de un entorno de desarrollo Django
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Entorno de Desarrollo
-  - Principiante
-  - Python
-  - django
-  - instalación
-  - introducción
-translation_of: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 Ahora que sabes para qué se utiliza Django, te enseñaremos cómo configurar y probar un entorno de desarrollo Django en Windows, Linux (Ubuntu), y Mac OS X — cualquiera que sea el sistema operativo común que estés utilizando, este artículo te dará lo que necesitas para ser capaz de empezar a desarrollar aplicaciones Django.
@@ -196,7 +187,7 @@ pip3 list
 
 ## Uso de Django dentro de un entorno virtual de Python
 
-Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/en-US/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
+Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/es/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
 
 ### Instalación del software del entorno virtual
 
@@ -374,7 +365,7 @@ Quit the server with CONTROL-C.
 
 Una vez que tengas funcionando el servidor puedes ver el sitio navegando a la siguiente URL en tu explorador web local : `http://127.0.0.1:8000/`. Deberías ver un sitio parecido a este:
 
-![The home page of the skeleton Django app.](https://mdn.mozillademos.org/files/13893/Django_Skeleton_Website_Homepage.png)
+![The home page of the skeleton Django app.](django_skeleton_app_homepage_django_4_0.png)
 
 ## Sumario
 
@@ -391,21 +382,3 @@ En el siguiente artículo expandimos este proceso, construyendo una aplicación 
 - [Cómo instalar Django en Windows](https://docs.djangoproject.com/es/2.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

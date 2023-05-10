@@ -1,9 +1,9 @@
 ---
 title: Usando Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/Guide/Performance/Usando_web_workers
 ---
+
 Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador. Sin embargo, **los workers trabajan dentro de un [contexto global](/es/docs/JavaScript/DedicatedWorkerGlobalScope) diferente de la ventana actual** (usar el atajo {{ domxref("window") }} en lugar de {{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un {{ domxref("Worker") }} retornaría, de hecho, un error).
 
 El hilo worker puede realizar tareas sin interferir con la interfaz de usuario. Ademas, pueden realizar I/O usando [`XMLHttpRequest`](/en/nsIXMLHttpRequest) (aunque el responseXML y los atributos channel son siempre null).
@@ -40,7 +40,7 @@ myWorker.postMessage(""); // start the worker.
 
 La Línea 1 en este ejemplo crea un nuevo worker (_worker thread)_. La Línea 3 configura un manejador de eventos (_listener_) para encargarse de los eventos `message` del worker. Este manejador de eventos se llamará cuando el worker llame a su propia función {{domxref("Worker.postMessage()")}}. Finalmente, la Linea 7 inicia el worker _(worker thread)_.
 
-> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 {{ geckoRelease("10.0") }} y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
+> **Nota:** : La URI pasada como parámetro del constructor de `Worker` debe obedecer la política [same-origin policy](/en/Same_origin_policy_for_JavaScript) . Actualmente hay desacuerdo entre los desarolladores de navegadores sobre qué URIs son del mismo origen; Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7) y posteriores sí permiten data URIs e Internet Explorer 10 no permite Blob URIs como un script válido para los workers.
 
 ## Pasando datos
 

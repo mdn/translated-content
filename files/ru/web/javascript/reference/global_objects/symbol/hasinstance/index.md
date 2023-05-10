@@ -7,6 +7,7 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
+
 {{JSRef}}
 
 **`Symbol.hasInstance`** — известный символ, который используется для определения является ли объект экземпляром конструктора. Этот символ используется для изменения поведения оператора {{jsxref("Operators/instanceof", "instanceof")}}.

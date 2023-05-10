@@ -1,15 +1,8 @@
 ---
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Lienzo
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 El método **`HTMLCanvasElement.toDataURL()`** devuelve un [data URI](/es/docs/Web/HTTP/data_URIs) el cual contiene una representación de la imagen en el formato especificado por el parámetro `type` (por defecto es [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). La imagen obtenida tendrá una resolución de 96 dpi.
@@ -120,15 +113,11 @@ function quitarColor() {
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentarios                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde el último snapshot, {{SpecName('HTML5 W3C')}}       |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5.1')}}     |                                                                              |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-todataurl", "HTMLCanvasElement.toDataURL")}} | {{Spec2('HTML5 W3C')}}     | Snapshot del {{SpecName('HTML WHATWG')}} con la definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## Ver también
 

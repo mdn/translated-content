@@ -1,9 +1,9 @@
 ---
 title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/proto
 ---
+
 > **Advertencia:** Cambiar la propiedad `[[Prototype]]` de un objeto es, por como los navegadores modernos optimizan las propiedades de acceso, una operación muy lenta en **_todos_** los navegadores y motores JavaScript. Los efectos en el rendimiento de alterar la herencia son muchos y delicados, y no se limita simplemente al tiempo que necesita la asignación `obj.__proto__ = ...` sentencia, sin embargo afecta a **_cualquier_** código que tiene acceso a **_cualquier_** objeto cuya propiedad `[[Prototype]]` ha sido alterada, por lo que se debe de tener mucho cuidado.Si el rendimiento en tu aplicación es necesario, deberías evitar modificar la propiedad `[[Prototype]]` de un objeto. En su lugar, crea un objecto nuevo con la propiedad `[[Prototype]]` deseada usando {{jsxref("Object.create()")}}.
 
 > **Advertencia:** Mientras `Object.prototype.__proto__` es soportado hoy día por la mayoría de navegadores, su existencia y comportamiento exacto solo ha sido estandarizado en la especificación ECMAScript 6 como una característica de legado y para asegurar la compatibilidad entre los navegadores web. Para tener un mejor soporte, es recomendable que se utilice {{jsxref("Object.getPrototypeOf()")}} para obtener el prototipo de un objeto.
@@ -44,13 +44,11 @@ La propiedad `__proto__` es una simple propiedad de acceso a {{jsxref("Object.pr
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                                     | Estado               | Comentario                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ES6')}} | Incluída en el anexo (normativa) para características de legado ECMAScript para navegadores web (observar que la especificación de codificación es lo que ya está en las implementaciones). |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.proto")}}
+{{Compat}}
 
 ## Notas de compatibilidad
 

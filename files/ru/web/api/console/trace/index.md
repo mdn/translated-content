@@ -1,8 +1,9 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
+slug: Web/API/console/trace
 translation_of: Web/API/Console/trace
 ---
+
 {{APIRef("Console API")}}
 
 Выводит стэк трэйс в [Веб Консоль](/ru/docs/Tools/Web_Console).

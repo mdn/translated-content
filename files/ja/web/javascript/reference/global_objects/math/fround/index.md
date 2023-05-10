@@ -99,9 +99,7 @@ if (!Math.fround) Math.fround = function(arg) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

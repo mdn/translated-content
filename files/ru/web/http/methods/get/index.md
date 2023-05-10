@@ -7,6 +7,7 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 **HTTP-метод `GET`** запрашивает представление указанного ресурса. `GET`-запросы должны только получать данные.

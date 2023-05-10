@@ -4,7 +4,7 @@ slug: orphaned/The_Importance_of_Correct_HTML_Commenting
 original_slug: The_Importance_of_Correct_HTML_Commenting
 ---
 
-HTML を [標準モード](ja/Mozilla's_DOCTYPE_sniffing) で記述する場合、不正確に書かれたコメントによってページの表示が崩れ、コンテンツの一部または全体がコメントアウトされた状態になってしまいます。XHTML や XML を記述する場合、不正確なコメントが含まれると、ドキュメントそのものが表示できなくなります。
+HTML を [標準モード](/ja/Mozilla's_DOCTYPE_sniffing) で記述する場合、不正確に書かれたコメントによってページの表示が崩れ、コンテンツの一部または全体がコメントアウトされた状態になってしまいます。XHTML や XML を記述する場合、不正確なコメントが含まれると、ドキュメントそのものが表示できなくなります。
 
 ### HTML 4.01
 
@@ -63,8 +63,8 @@ XML におけるコメントの文法に書かれている通り、コメント�
 
 - [HTML 4.01 Recommendation: 3.2.4 - Comments](http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4)
 - [XML Recommendation: 2.5 - Comments](http://www.w3.org/TR/REC-xml#sec-comments)
-- {{bug(144432) }}
-- {{bug(102127) }}
+- [Firefox バグ 144432](https://bugzil.la/144432)
+- [Firefox バグ 102127](https://bugzil.la/102127)
 
 ### 原文書の情報
 

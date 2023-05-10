@@ -1,14 +1,9 @@
 ---
 title: handler.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Proxy
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}El método **`handler.getOwnPropertyDescriptor()`** captura {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
 ## Sintaxis
@@ -87,14 +82,11 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}     | {{Spec2('ES2015')}}     | Definición Inicial. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad con buscadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Ver también
 

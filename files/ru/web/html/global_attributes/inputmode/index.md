@@ -3,6 +3,7 @@ title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
 translation_of: Web/HTML/Global_attributes/inputmode
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Общие_атрибуты) **`inputmode`** является вычисленным атрибутом, который предоставляет подсказку для типа данных, которые может ввести пользователь при редактировании содержания элемента. Атрибут может принимать следующие значения:

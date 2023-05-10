@@ -3,6 +3,7 @@ title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 translation_of: Web/API/WebGLRenderingContext/compileShader
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext.compileShader()** метод [WebGL API](/ru/docs/Web/API/WebGL_API) компилирующий исходный код GLSL шейдера в бинарные данные для использования программой {{domxref("WebGLProgram")}}.

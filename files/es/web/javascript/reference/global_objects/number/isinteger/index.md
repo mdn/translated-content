@@ -1,14 +1,9 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-tags:
-  - JavaScript
-  - Number
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/isInteger
 ---
+
 {{JSRef}}
 
 El método **`Number.isInteger()`** determina si el valor pasado es de tipo entero.
@@ -66,14 +61,11 @@ Number.isInteger = Number.isInteger || function(value) {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-number.isinteger', 'Number.isInteger')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatitibilidad con navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.isInteger")}}
+{{Compat}}
 
 ## Ver también
 

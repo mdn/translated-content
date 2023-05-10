@@ -3,7 +3,7 @@ title: 像素操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 到目前为止，我们尚未深入了解 Canvas 画布真实像素的原理，事实上，你可以直接通过 ImageData 对象操纵像素数据，直接读取或将数据数组写入该对象中。稍后我们也将深入了解如何控制图像使其平滑（反锯齿）以及如何从 Canvas 画布中保存图像。
 
@@ -20,7 +20,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 
 data 属性返回一个 {{jsxref("Uint8ClampedArray")}}，它可以被使用作为查看初始像素数据。每个像素用 4 个 1bytes 值 (按照红，绿，蓝和透明值的顺序; 这就是"RGBA"格式) 来代表。每个颜色值部份用 0 至 255 来代表。每个部份被分配到一个在数组内连续的索引，左上角像素的红色部份在数组的索引 0 位置。像素从左到右被处理，然后往下，遍历整个数组。
 
-{{jsxref("Uint8ClampedArray")}} 包含高度 × 宽度 × 4 bytes 数据，索引值从 0 到 (`高度`× 宽度 ×4)-1
+{{jsxref("Uint8ClampedArray")}} 包含 `height` × `width` × 4 字节数据，索引值从 0 到 (`height`× `width` × 4)-1
 
 例如，要读取图片中位于第 50 行，第 200 列的像素的蓝色部份，你会写以下代码：
 
@@ -34,7 +34,7 @@ blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
 imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 0/1/2/3];
 ```
 
-你可能用会使用 Uint8ClampedArray.length 属性来读取像素数组的大小（以 bytes 为单位）：
+你可能用会使用 `Uint8ClampedArray.length` 属性来读取像素数组的大小（以字节为单位）：
 
 ```js
 var numBytes = imageData.data.length;
@@ -42,15 +42,15 @@ var numBytes = imageData.data.length;
 
 ## 创建一个 ImageData 对象
 
-去创建一个新的，空白的 ImageData`对象`，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 createImageData() 方法。
+去创建一个新的，空白的 `ImageData` 对象，你应该会使用{{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}} 方法。有 2 个版本的 `createImageData()` 方法。
 
 ```js
 var myImageData = ctx.createImageData(width, height);
 ```
 
-上面代码创建了一个新的具体特定尺寸的 ImageData`对象`。所有像素被预设为透明黑。
+上面代码创建了一个新的具体特定尺寸的 `ImageData` 对象。所有像素被预设为透明黑。
 
-你也可以创建一个被 anotherImageData`对象`指定的相同像素的 ImageData`对象`。这个新的`对象`像素全部被预设为透明黑。这个并非复制了图片数据。
+你也可以创建一个被 `anotherImageData` 对象指定的相同像素的 `ImageData` 对象。这个新的对象像素全部被预设为透明黑。这个并非复制了图片数据。
 
 ```js
 var myImageData = ctx.createImageData(anotherImageData);
@@ -58,21 +58,21 @@ var myImageData = ctx.createImageData(anotherImageData);
 
 ## 得到场景像素数据
 
-为了获得一个包含画布场景像素数据的 ImageData 对像，你可以用 getImageData() 方法：
+为了获得一个包含画布场景像素数据的 `ImageData` 对象，你可以用 `getImageData()` 方法：
 
 ```js
 var myImageData = ctx.getImageData(left, top, width, height);
 ```
 
-这个方法会返回一个 ImageData`对象`，它代表了画布区域的`对象`数据，此画布的四个角落分别表示为 (left, top), (left + width, top), (left, top + height), 以及 (left + width, top + height) 四个点。这些坐标点被设定为画布坐标空间元素。
+这个方法会返回一个 `ImageData` 对象，它代表了画布区域的对象数据，此画布的四个角落分别表示为 (`left`, `top`), (`left + width`, `top`), (`left`, `top + height`), 以及 (`left + width`, `top + height`) 四个点。这些坐标点被设定为画布坐标空间元素。
 
-> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 ImageData 对像。
+> **备注：** 任何在画布以外的元素都会被返回成一个透明黑的 `ImageData` 对象。
 
 这个方法也会在文章[用画布操作视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)中展示。
 
 ### 颜色选择器
 
-在这个例子里面，我们会使用`getImageData()`去展示鼠标光标下的颜色。为此，我们要当前鼠标的位置，记为 layerX 和 layerY，然后我们去查询`getImageData()`给我们提供的在那个位置的像数数组里面的像素数据。最后我们使用数组数据去设置背景颜色和\<div>的文字去展示颜色值。
+在这个例子里面，我们会使用 `getImageData()` 去展示鼠标光标下的颜色。为此，我们要当前鼠标的位置，记为 layerX 和 layerY，然后我们去查询 `getImageData()` 给我们提供的在那个位置的像数数组里面的像素数据。最后我们使用数组数据去设置背景颜色和 `<div>` 的文字去展示颜色值。
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -81,7 +81,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js hidden
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -141,7 +141,7 @@ canvas.addEventListener('click', function(event) {
 
 ## 在场景中写入像素数据
 
-你可以用 putImageData() 方法去对场景进行像素数据的写入。
+你可以用 `putImageData()` 方法去对场景进行像素数据的写入。
 
 ```js
 ctx.putImageData(myImageData, dx, dy);
@@ -149,7 +149,7 @@ ctx.putImageData(myImageData, dx, dy);
 
 dx 和 dy 参数表示你希望在场景内左上角绘制的像素数据所得到的设备坐标。
 
-例如，为了在场景内左上角绘制 myImageData 代表的图片，你可以写如下的代码：
+例如，为了在场景内左上角绘制 `myImageData` 代表的图片，你可以写如下的代码：
 
 ```js
 ctx.putImageData(myImageData, 0, 0);
@@ -157,7 +157,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ### 图片灰度和反相颜色
 
-在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过 putImageData() 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255.grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 x = 0.299r + 0.587g + 0.114b 这个公式。更多资料请参考维基百科的[Grayscale](http://en.wikipedia.org/wiki/Grayscale)。
+在这个例子里，我们遍历所有像素以改变他们的数值。然后我们将被修改的像素数组通过[putImageData()](/zh-CN/docs/Web/API/CanvasRenderingContext2D/putImageData) 放回到画布中去。invert 函数仅仅是去减掉颜色的最大色值 255。grayscale 函数仅仅是用红绿和蓝的平均值。你也可以用加权平均，例如 `x = 0.299r + 0.587g + 0.114b` 这个公式。更多资料请参考维基百科的[Grayscale](http://en.wikipedia.org/wiki/Grayscale)。
 
 ```html hidden
 <canvas id="canvas" width="300" height="227"></canvas>
@@ -169,7 +169,7 @@ ctx.putImageData(myImageData, 0, 0);
 
 ```js hidden
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -278,7 +278,7 @@ zoomctx.drawImage(canvas,
                   10, 10, 0, 0, 200, 200);
 ```
 
-因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 imageSmoothingEnabled 属性的效果（不同浏览器需要不同前缀）。
+因为反锯齿默认是启用的，我们可能想要关闭它以看到清楚的像素。你可以通过切换勾选框来看到 `imageSmoothingEnabled` 属性的效果（不同浏览器需要不同前缀）。
 
 ###### Zoom example
 
@@ -295,7 +295,7 @@ zoomctx.drawImage(canvas,
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -335,7 +335,7 @@ function draw(img) {
 
 ## 保存图片
 
-{{domxref("HTMLCanvasElement")}} 提供一个 toDataURL() 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/HTTP/data_URIs)。返回的图片分辨率是 96dpi。
+{{domxref("HTMLCanvasElement")}} 提供一个 `toDataURL()` 方法，此方法在保存图片的时候非常有用。它返回一个包含被类型参数规定的图像表现格式的[数据链接](/zh-CN/docs/Web/HTTP/data_URIs)。返回的图片分辨率是 96 dpi。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : 默认设定。创建一个 PNG 图片。
@@ -347,7 +347,7 @@ function draw(img) {
 你也可以从画布中创建一个{{domxref("Blob")}}对像。
 
 - {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
-  - : 这个创建了一个在画布中的代表图片的 Blob 对像。
+  - : 这个创建了一个在画布中的代表图片的 `Blob` 对像。
 
 ## 参见
 
@@ -355,4 +355,4 @@ function draw(img) {
 - [Manipulating video using canvas](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Canvas, images and pixels – by Christian Heilmann](https://codepo8.github.io/canvas-images-and-pixels/)
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

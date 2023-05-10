@@ -1,9 +1,6 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Cabeçalhos
-translation_of: Web/HTTP/Headers/Age
 ---
 {{HTTPSidebar}}
 

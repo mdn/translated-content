@@ -1,8 +1,8 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
+
 {{JSRef}}
 
 A função **`Math.acos()`** retorna o arco cosseno (em radianos de um numero, sendo esse

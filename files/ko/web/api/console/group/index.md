@@ -1,15 +1,6 @@
 ---
 title: console.group()
 slug: Web/API/console/group
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
-browser-compat: api.console.group
-translation_of: Web/API/Console/group
 ---
 
 {{APIRef("Console API")}}
@@ -34,7 +25,7 @@ console.group([label]);
 중첩 그룹을 사용하여 관련 메시지를 시각적으로 연결하여 출력을 구성할 수 있습니다. 새 중첩 블록을 만들려면 `console.group()`을 호출하세요. `console.groupCollapsed()` 메서드와 비슷하지만 새 블록이 접혀 있고 이를 읽으려면 공개 버튼을 클릭해야 합니다.
 
 > **참고:** Gecko 9부터 Gecko 51까지 `groupCollapsed()` 메소드는 `group()`과 동일했습니다.
-> 축소된 그룹은 Gecko 52부터 완전히 지원됩니다. {{bug("1088360")}}를 참조하세요.
+> 축소된 그룹은 Gecko 52부터 완전히 지원됩니다. [Firefox bug 1088360](https://bugzil.la/1088360)를 참조하세요.
 
 현재 그룹을 종료하려면 `console.groupEnd()`를 호출하세요. 예를 들어...
 

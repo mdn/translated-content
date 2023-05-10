@@ -10,6 +10,7 @@ tags:
   - аудио
 translation_of: Web/API/MediaSource
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`MediaSource`** – это интерфейс [Media Source Extensions API](/ru/docs/Web/API/Media_Source_Extensions_API) для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.

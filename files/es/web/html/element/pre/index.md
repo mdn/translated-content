@@ -1,9 +1,9 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-translation_of: Web/HTML/Element/pre
 original_slug: Web/HTML/Elemento/pre
 ---
+
 ## Sumario
 
 El **Elemento** **HTML \<pre>** (o _Texto HTML Preformateado_) representa texto preformateado. El texto en este elemento típicamente se muestra en una fuente fija, no proporcional, exactamente como es mostrado en el archivo. Los espacios dentro de este elemento también son mostrados como están escritos.
@@ -45,15 +45,11 @@ a   {
 
 ## Especificaciones
 
-| Epecificación                                                                                                    | Estado                           | Comentarios |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-pre-element', '&lt;pre&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'the-pre-element.html#the-pre-element', '&lt;pre&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'text.html#h-9.3.4', '&lt;dl&gt;')}}                                 | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Véase también
 

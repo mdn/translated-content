@@ -1,18 +1,9 @@
 ---
 title: '<sub>: 아래 첨자 요소'
 slug: Web/HTML/Element/sub
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sub
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML** **`<sub>`** 요소는 활자 배치를 아래 첨자로 해야 하는 인라인 텍스트를 지정합니다. 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 합니다.
 
@@ -123,7 +114,7 @@ commonly known as "caffeine."</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.sub")}}
+{{Compat}}
 
 ## 같이 보기
 

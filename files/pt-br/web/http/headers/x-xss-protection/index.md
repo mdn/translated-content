@@ -1,14 +1,8 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Referencia
-  - Segurança
-  - XSS
-  - cabeçalho
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`X-XSS-Protection`** é uma funcionalidade do Internet Explorer, Chrome e Safari que impede páginas de carregarem quando eles detectam ataques de scripting entre sites ({{Glossary("XSS")}}) refletidos. Apesar destas proteções serem majoritariamente desnecessárias em navegadores modernos em sites utilizando uma forte {{HTTPHeader("Content-Security-Policy")}} que desabilita o uso de JavaScript _inline_ (`'unsafe-inline'`), eles ainda podem oferecer proteções para usuários de navegadores mais antigos que ainda não suportam {{Glossary("CSP")}}.

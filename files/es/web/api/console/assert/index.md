@@ -1,18 +1,8 @@
 ---
 title: Console.assert()
 slug: Web/API/console/assert
-tags:
-  - API
-  - Consola
-  - DOM
-  - Debug
-  - Debugging
-  - Gecko DOM Referencia
-  - Métodos
-  - afirmación
-  - consola web
-translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Aparece un mensaje de error en la consola si la afirmación es falsa. Si la afirmación es verdadera, no aparecerá nada.
@@ -45,13 +35,11 @@ Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#O
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoleassertexpression-object", "console.assert()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.assert")}}
+{{Compat}}
 
 ## Ver también
 

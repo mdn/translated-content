@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté, généralement écrit avec une [police à chasse fixe](https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe). Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
 

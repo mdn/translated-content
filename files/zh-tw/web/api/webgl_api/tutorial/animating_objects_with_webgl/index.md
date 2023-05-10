@@ -3,7 +3,7 @@ title: 利用 WebGL 產生動畫
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 這個章節中，我們將示範如何旋轉之前的正方形平面。
 

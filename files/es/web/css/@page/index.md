@@ -1,8 +1,8 @@
 ---
 title: '@page'
 slug: Web/CSS/@page
-translation_of: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -43,12 +43,8 @@ Por favor dirígete a las [pseudo-classes](/es/docs/CSS/Pseudo-classes) de `@pag
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                                          | Comentario                                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS Logical Properties', '#logical-page', ':recto and :verso')}} | {{Spec2('CSS Logical Properties')}} | Agrega los selectores de página`:recto` y `:verso.`                                                          |
-| {{SpecName('CSS3 Paged Media', '#at-page-rule', '@page')}}                         | {{Spec2('CSS3 Paged Media')}}         | Ningún cambio desde {{SpecName('CSS2.1')}}, aunque mas reglas CSS pueden ser usadas dentro de `@page`. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', '@page')}}                     | {{Spec2('CSS2.1')}}                         | Definición inicial                                                                                           |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.page")}}
+{{Compat}}

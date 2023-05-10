@@ -1,12 +1,8 @@
 ---
 title: Cookies HTTP
 slug: Web/HTTP/Cookies
-tags:
-  - Cookies
-  - Guía
-  - HTTP
-translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 Um cookie HTTP (um cookie web ou cookie de navegador) é um pequeno fragmento de dados que um servidor envia para o navegador do usuário. O navegador pode armazenar estes dados e enviá-los de volta na próxima requisição para o mesmo servidor. Normalmente é utilizado para identificar se duas requisições vieram do mesmo navegador — ao manter um usuário logado, por exemplo. Ele guarda informações dinâmicas para o protocolo HTTP sem estado.
@@ -122,7 +118,7 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 - `Lax`
   - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, mas serão enviadas quando um usuário navegar para o URL de um site externo.
 
-O comportamento padrão se a flag não estiver setada ou não sem suporte donavegador é incluir os cookies em qualquer solicitação, incluindo solicitações cross-origin.
+O comportamento padrão se a flag não estiver setada ou sem suporte do navegador é incluir os cookies em qualquer solicitação, incluindo solicitações cross-origin.
 
 ### Acesso via JavaScript usando `Document.cookie`
 

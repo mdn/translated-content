@@ -1,8 +1,8 @@
 ---
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
-translation_of: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 La **`API Fullscreen`** provee una manera fácil de presentar contenido web usando la pantalla completa del usuario. La API permite indicar al navegador que un elemento y sus hijos, si los tiene, ocupar la pantalla completa, ocultando toda la interfaz del usuario y otras aplicaciones de la pantalla mientras se esté en pantalla completa.
@@ -46,7 +46,7 @@ Por otro lado, si quieres emular el comportamiento de WebKit en Gecko, necesitar
 
 ### Notificación
 
-Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento {{ event("fullscreenchange") }}. Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento {{ event("fullscreenchange") }}. Nótese que el evento {{ event("fullscreenchange") }} no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
+Cuando el modo de pantalla completa sea invocado exitosamente, el documento que contiene al elemento recibe un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Cuando se sale del modo de pantalla completa, el documento recibe de nuevo un evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange). Nótese que el evento [`fullscreenchange`](/es/docs/Web/Reference/Events/fullscreenchange) no provee información alguna sobre si el documento está entrando o saliendo a modo de pantalla completa, pero puedes saber si está en dicho modo si la propiedad {{ domxref("document.fullscreenElement", "fullscreenElement") }} del documento no es nula.
 
 ### Cuando la solicitud de pantalla completa falla
 
@@ -127,31 +127,11 @@ De momento, no todos los navegadores están implementando la versión sin prefij
 
 ## Especificaciones
 
-| Especificación                       | Estatus                          | Comentarios      |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Versión inicial. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-### `Document.fullscreen`
-
-{{Compat("api.Document.fullscreen")}}
-
-### `Document.fullscreenElement`
-
-{{Compat("api.Document.fullscreenElement")}}
-
-### `Document.fullscreenEnabled`
-
-{{Compat("api.Document.fullscreenEnabled")}}
-
-### `Document.exitFullscreen`
-
-{{Compat("api.Document.exitFullscreen")}}
-
-### `Element.requestFullscreen`
-
-{{Compat("api.Element.requestFullscreen")}}
+{{Compat}}
 
 ## Véase también
 

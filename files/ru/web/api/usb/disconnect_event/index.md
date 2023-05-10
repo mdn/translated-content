@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/USB/ondisconnect
 original_slug: Web/API/USB/ondisconnect
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Свойство **`ondisconnect`** интерфейса {{domxref("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство отключается.

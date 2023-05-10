@@ -1,8 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 ## Sumário

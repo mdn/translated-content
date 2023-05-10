@@ -3,7 +3,7 @@ title: <blockquote>：块级引用元素
 slug: Web/HTML/Element/blockquote
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<blockquote>` 元素**（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（[注](/zh-CN/docs/Web/HTML/Element/blockquote#Notes) 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 {{HTMLElement("cite")}} 元素。
 
@@ -42,10 +42,10 @@ slug: Web/HTML/Element/blockquote
 
 此元素的属性包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。
 
-## 使用备注
+## 使用说明
 
 若要修改被引用内容的缩进距离，可以使用 {{Glossary("CSS")}} {{cssxref("margin-left")}} 和/或 {{cssxref("margin-right")}} 属性，或使用 {{cssxref("margin")}} 缩写属性。
 
@@ -53,7 +53,7 @@ slug: Web/HTML/Element/blockquote
 
 如果想要使用短引用（行间引用），可以使用{{HTMLElement("q")}} 标签。
 
-## 例子
+## 示例
 
 下面的这个例子演示了使用 `<blockquote>` 元素引用一段来自 {{RFC(1149)}} 的内容，以禽类作为载体的 IP 数据包传输标准。
 
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/blockquote
 
 上面的 HTML 代码将会生成：
 
-{{EmbedLiveSample("Example", 640, 180)}}
+{{EmbedLiveSample("示例", 640, 180)}}
 
 ## 规范
 

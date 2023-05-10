@@ -1,14 +1,9 @@
 ---
 title: Optimizar sus páginas para análisis especulativo
-slug: Glossary/speculative_parsing
-tags:
-  - Avanzado
-  - Desarrollo web
-  - HTML
-  - HTML5
-translation_of: Glossary/speculative_parsing
+slug: Glossary/Speculative_parsing
 original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 ---
+
 Tradicionalmente en los navegadores el analizador de HTML corre en el hilo de ejecución principal y se queda bloqueado después de una etiqueta \</script> hasta que el código se haya recuperado y ejecutado. El analizador de HTML de Firefox 4 y posteriores soporta análisis especulativo fuera del hilo de ejecución principal. Este analiza anticipadamente mientras el codigo está siendo descargado y ejecutado. Como en Firefox 3.5 y 3.6, el analizador de HTML es el que inicia la carga especulativa de código, las hojas de estilos y las imagenes que va encontrando en el flujo de la página. Sin embargo en Firefox 4 y posteriores el analizador de HTML también ejecuta el algoritmo especulativo de la construcción del árbol HTML. La ventaja es que cuando lo especulado tiene exito, no hay necesidad de reanalizar la parte del archivo de entrada que ya fue analizada junto la descarga de código, hojas de estilo y las imágenes. La desventaja es que se ha realizado un trabajo inútil cuando la especulación fracasa.
 
 Este documento le ayuda a evitar este tipo de situaciones que hacen que la especulación falle y ralentize la carga de la página.

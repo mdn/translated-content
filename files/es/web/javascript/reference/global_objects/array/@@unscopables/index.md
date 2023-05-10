@@ -1,15 +1,9 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-tags:
-  - Array
-  - JavaScript
-  - Matriz
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables
 ---
+
 {{JSRef}}
 
 La propiedad de símbolo **`@@unscopable`** contiene nombres de propiedad que no se incluyeron en el estándar ECMAScript antes de la versión ES2015. Estas propiedades se excluyen de los enlaces de declaración [`with`](/es/docs/Web/JavaScript/Reference/Statements/with).
@@ -46,14 +40,11 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@unscopables', 'Array.prototype[@@unscopables]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@unscopables")}}
+{{Compat}}
 
 ## Ver también
 

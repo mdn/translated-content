@@ -1,12 +1,6 @@
 ---
 title: HTTP 기본
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - HTTP
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
 {{HTTPSidebar}}
 

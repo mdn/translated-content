@@ -15,6 +15,7 @@ tags:
   - сайт
 translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 Веб-сайт состоит из множества файлов: текстового контента, кода, стилей, медиа-контента, и так далее. Когда вы создаёте веб-сайт, вы должны собрать эти файлы в рациональную структуру на вашем локальном компьютере, убедитесь, что они могут общаться друг с другом, и весь ваш контент выглядит правильно, прежде чем вы, в конечном итоге [загрузите их на сервер](/ru/Learn/Getting_started_with_the_web/Publishing_your_website). В статье _Работа с файлами_ обсуждаются некоторые вопросы, о которых вам следует знать, чтобы вы могли рационально настроить файловую структуру для своего веб-сайта.
@@ -70,7 +71,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 4. Вставьте путь к файлу в ваш HTML код между двойными кавычками `src=""`.
 5. Сохраните ваш HTML файл, а затем загрузите его в вашем браузере (двойной щелчок по файлу). Вы должны увидеть вашу новую веб-страницу, отображающую ваше изображение!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Некоторые общие правила о путях к файлам:
 
@@ -87,7 +88,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 К настоящему моменту структура вашей папки должна выглядеть примерно так:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 

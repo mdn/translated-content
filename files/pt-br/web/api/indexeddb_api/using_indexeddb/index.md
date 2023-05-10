@@ -1,11 +1,9 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - API IndexedDB Tutorial Avançado
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
+
 IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline.
 
 ## Sobre esse documento
@@ -88,7 +86,7 @@ request.onsuccess = function(event) {
 
 Qual das duas funções, `onsuccess()` ou `onerror()`, será chamada? Se tudo correr bem, o evento de sucesso (que é um evento DOM event com propriedade `type` setada `"success"`) é chamado com `request` como seu `target`. Uma vez chamado, a função `onsuccess()` no `request` é chamada com o evento de sucesso em seu contexto. Por outro lado, se acontecer algum problema, um evento de erro (que é um evento DOM com a propriedade `type` setada para `"error"`) é chamado no `request`. Então a função `onerror()` com o evento erro em seu contexto.
 
-A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/en/IndexedDB#Storage_limits)).
+A API IndexedDB é feita para minimizar a necessidade de manipular erros, então você não fará muitos eventos de erro (ao menos, se você usar a API!) No caso de abrir um banco, portanto, existe algumas condições comuns para eventos de erro. O problema mais comum é o usuário não dar permissão para criar o banco. Um dos principais objetivos do IndexedDB é permitir muitos dados serem armazenados para uso offline. (Para aprender mais sobre o quanto cada navegador pode armazenar, veja [Storage limits](/pt-BR/IndexedDB#Storage_limits)).
 
 Obviamente, navegadores não querem armazenar dados que poluem seu computador, então o navegador mostra uma mensagem ao usuário na primeira vez que um aplicativo tenta abrir o IndexedDB. O usuário pode escolher permitir ou negar acesso. O IndexedDB também é desabilitado no modo privado dos navegadores (ctrl+shift+N no Chrome e ctrl+shift+P no Firefox). Isso acontece porque o intuito do modo privado é não deixar rastros na navegação.
 
@@ -138,7 +136,7 @@ Blink/Webkit suporta a versão atual da especificação, nas versões do Chrome 
 
 ### Estruturando o banco
 
-Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/en/IndexedDB#gloss_key_path) ou [key generator](/en/IndexedDB#gloss_key_generator).
+Agora a estrutura do banco. IndexedDB usa "armazens de objetos" em vez de tabelas, e um único banco de dados pode conter qualquer número de "armazem de objetos". Sempre que um valor é armazenado num objectStore, ele é associado a uma chave. Existe várias maneiras diferentes de uma chave ser mostrada, dependendo do que o objectStore usa, um [key path](/pt-BR/IndexedDB#gloss_key_path) ou [key generator](/pt-BR/IndexedDB#gloss_key_generator).
 
 A tabela abaixo mostra as direfentes chaves suportadas:
 
@@ -237,7 +235,7 @@ request.onupgradeneeded = function (event) {
 }
 ```
 
-Para mais detalhes veja ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept).
+Para mais detalhes veja ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
 
 ## Adicionando, obtendo e removendo dados
 
@@ -1033,7 +1031,7 @@ input {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     // Setting the wanted responseType to "blob"
-    // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
+    // https://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
     xhr.responseType = 'blob';
     xhr.onload = function (evt) {
                            if (xhr.status == 200) {
@@ -1130,7 +1128,7 @@ input {
     if (typeof store == 'undefined')
       store = getObjectStore(DB_STORE_NAME, 'readwrite');
 
-    // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
+    // As per spec https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
     // the result of the Object Store Deletion Operation algorithm is
     // undefined, so it's not possible to know if some records were actually
     // deleted by looking at the request result.
@@ -1265,8 +1263,8 @@ Uma leitura adicional para você encontrar mais informações.
 
 ### Refências
 
-- [IndexedDB API Reference](/en/IndexedDB)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [IndexedDB API Reference](/pt-BR/IndexedDB)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/pt-BR/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/pt-BR/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
 - IndexedDB [interface files](https://mxr.mozilla.org/mozilla-central/find?text=&string=dom%2FindexedDB%2F.*%5C.idl&regexp=1) in the Firefox source code

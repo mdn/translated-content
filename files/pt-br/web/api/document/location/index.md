@@ -1,8 +1,8 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-translation_of: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade, de apenas leitura, **`Document.location`** retorna um objeto {{domxref("Location")}}, que contém informações sobre a URL do documento e provém métodos para mudar a URL e carregar outra URL.

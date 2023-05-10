@@ -1,6 +1,6 @@
 ---
 title: API リファレンスの書き方
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 original_slug: MDN/Writing_guidelines/Howto/Write_an_API_reference
 ---
 
@@ -63,7 +63,7 @@ API リファレンスには、一般的に次のようなページが含まれ�
 7. 概念/ガイドページ
 8. 例
 
-> **メモ:** この記事では。例として[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)を参照します。
+> **メモ:** この記事では。例として[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)を参照します。
 
 #### 概要ページ
 
@@ -72,7 +72,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 
 例:
 
-- Title: _ウェブ音声 API_
+- Title: _ウェブオーディオ API_
 - Slug: _Web_Audio_API_
 - URL: [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API](/ja/docs/Web/API/Web_Audio_API)
 
@@ -160,7 +160,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 
 必要であれば、「_API 名_ の概念」という概念記事も含めることができます。この記事では、 API を効果的に使うために開発者が理解しておくべき、 API に関連する概念の背後にある理論を説明します。
 
-これらの記事はすべて、 API 概要ページのサブページとして作成する必要があります。例えば、ウェブ音声には 4 つのガイドと 1 つの概念の記事があります。
+これらの記事はすべて、 API 概要ページのサブページとして作成する必要があります。例えば、ウェブオーディオには 4 つのガイドと 1 つの概念の記事があります。
 
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)

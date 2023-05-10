@@ -1,14 +1,8 @@
 ---
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
-tags:
-  - CSS
-  - Presentación
-  - Pseudo-Clase CSS
-  - Referencia CSS
-  - Web
-translation_of: Web/CSS/:out-of-range
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.
@@ -80,14 +74,11 @@ input:out-of-range + label::after {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentarios                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-out-of-range', ':out-of-range')}} | {{Spec2('HTML WHATWG')}}     | Define cuándo `:out-of-range` coincide con los elementos en HTML. |
-| {{SpecName('CSS4 Selectors', '#out-of-range-pseudo', ':out-of-range')}}                 | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.out-of-range")}}
+{{Compat}}
 
 ## Ver también
 

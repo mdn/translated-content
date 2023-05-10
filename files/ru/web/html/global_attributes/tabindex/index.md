@@ -3,6 +3,7 @@ title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
 translation_of: Web/HTML/Global_attributes/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **Примечание:** Максимальное значение для tabindex не должно превышать 32767 (W3C 17.11.1)

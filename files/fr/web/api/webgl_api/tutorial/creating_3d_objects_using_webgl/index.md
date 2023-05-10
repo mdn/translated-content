@@ -8,7 +8,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Creer_des_objets_3D_avec_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 Transformons notre carré en trois dimensions en lui ajoutant cinq faces supplémentaires pour créer un cube. Pour faire cela efficacement, nous allons passer du dessin de sommets par l'appel direct de la méthode {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}, à l'utilisation du tableau des sommets comme une table, et à référencer les sommets individuels dans cette table pour définir les positions des sommets de chaque face, en appelant directement {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
@@ -172,8 +172,8 @@ mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
 
 À ce stade, nous avons un cube animé en rotation, ses six faces ayant des couleurs assez vives.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample5) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

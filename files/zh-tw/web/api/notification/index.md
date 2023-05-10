@@ -1,6 +1,6 @@
 ---
 title: Notification
-slug: Web/API/notification
+slug: Web/API/Notification
 ---
 
 {{APIRef("Web Notifications")}}
@@ -75,7 +75,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 底下這些列在 [瀏覽器支援度](#瀏覽器支援度) 中的 event handlers 雖然還有支援，但已經從近期的 spec 中移除了。因為瀏覽器會在未來的版本逐漸停止支援，最好還是不要使用它們。
 
 - {{domxref("Notification.onclose")}}
-  - : A handler for the {{event("close")}} event. It is triggered when the user closes the notification.
+  - : A handler for the [`close`](/zh-TW/docs/Web/API/Notification/close) event. It is triggered when the user closes the notification.
 - {{domxref("Notification.onshow")}}
   - : A handler for the [`show`](/zh-TW/docs/Web/API/Element/show_event) event. It is triggered when the notification is displayed.
 

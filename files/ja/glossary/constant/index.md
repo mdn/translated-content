@@ -1,5 +1,5 @@
 ---
-title: Constant
+title: Constant (定数)
 slug: Glossary/Constant
 original_slug: Glossary/Constant(定数)
 ---

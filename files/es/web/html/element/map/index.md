@@ -1,23 +1,19 @@
 ---
 title: map
 slug: Web/HTML/Element/map
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/map
 original_slug: Web/HTML/Elemento/map
 ---
+
 ### Definición
 
 - descripción de uno o dos párrafos
   - : **Sus etiquetas son**: \<map> y \</map> (ambas obligatorias).
-  
-    **Crea una caja**: [En bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento especial](es/HTML/Elemento/Tipos_de_elementos#especial).
+    **Crea una caja**: [En bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Puede contener**: Uno o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](es/HTML/Elemento/area)
+    **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#especial).
+
+    **Puede contener**: Uno o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/HTML/Elemento/area)
 
 #### Atributos
 

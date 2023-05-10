@@ -3,6 +3,7 @@ title: Изменение направления текста
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 Многие свойства и значения, с которыми мы столкнулись до сих пор при изучении CSS, были привязаны к физическим размерам нашего экрана. Мы создаём границы, например, сверху, справа, снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, который просматривается по горизонтали, и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, английский или французский) лучше, чем языки с письмом справа налево (например, арабский).
@@ -39,11 +40,11 @@ If we look at an example this will become clearer. In this next example I have t
 
 When we switch the writing mode, we are changing which direction is block and which is inline. In a `horizontal-tb` writing mode the block direction runs from top to bottom; in a `vertical-rl` writing mode the block direction runs right-to-left horizontally. So the **block dimension** is always the direction blocks are displayed on the page in the writing mode in use. The **inline dimension** is always the direction a sentence flows.
 
-This figure shows the two dimensions when in a horizontal writing mode.![Showing the block and inline axis for a horizontal writing mode.](https://mdn.mozillademos.org/files/16574/horizontal-tb.png)
+This figure shows the two dimensions when in a horizontal writing mode.![Showing the block and inline axis for a horizontal writing mode.](horizontal-tb.png)
 
 This figure shows the two dimensions in a vertical writing mode.
 
-![Showing the block and inline axis for a vertical writing mode.](https://mdn.mozillademos.org/files/16575/vertical.png)
+![Showing the block and inline axis for a vertical writing mode.](vertical.png)
 
 Once you start to look at CSS layout, and in particular the newer layout methods, this idea of block and inline becomes very important. We will revisit it later on.
 

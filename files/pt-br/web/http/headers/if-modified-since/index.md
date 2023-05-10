@@ -1,8 +1,8 @@
 ---
 title: If-Modified-Since
 slug: Web/HTTP/Headers/If-Modified-Since
-translation_of: Web/HTTP/Headers/If-Modified-Since
 ---
+
 {{HTTPSidebar}}
 
 A requisição do cabeçalho HTTP **`If-Modified-Since`** torna a requisição condicional: o servidor enviará de volta o recurso solicitado, com um status {{HTTPStatus("200")}}, apenas se foi modificado pela ultima vez após a data fornecida. Se a requisição não foi modificada, a resposta será um {{HTTPStatus("304")}} sem qualquer corpo; o cabeçalho {{HTTPHeader("Last-Modified")}} irá conter a data da ultima modificação. Ao contrário {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` pode ser apenas utilizado com um {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}.

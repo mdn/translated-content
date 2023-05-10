@@ -112,9 +112,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| Specification                                                                                            | Status                   | Comment                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | ----------------------------------- |
-| {{SpecName("SVG2", "shapes.html#PolygonElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Definition for `<polygon>`          |
-| {{SpecName("SVG2", "shapes.html#PolylineElementPointsAttribute", "points")}}     | {{Spec2("SVG2")}} | Definition for `<polyline>`         |
-| {{SpecName("SVG1.1", "shapes.html#PolygonElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Initial definition for `<polygon>`  |
-| {{SpecName("SVG1.1", "shapes.html#PolylineElementPointsAttribute", "points")}} | {{Spec2("SVG1.1")}} | Initial definition for `<polyline>` |
+{{Specifications}}

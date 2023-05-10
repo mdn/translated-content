@@ -1,9 +1,9 @@
 ---
 title: Character encoding
-slug: Glossary/character_encoding
-translation_of: Glossary/character_encoding
+slug: Glossary/Character_encoding
 original_slug: Glossario/character_encoding
 ---
+
 Uma codificação define um mapeamento entre bytes e texto. Uma sequência de bytes permite diferentes interpretações textuais. Ao especificar uma codificação específica (como [UTF-8](/pt-BR/docs/Glossario/UTF-8)), especificamos como a sequência de bytes deve ser interpretada.
 
 Por exemplo, em HTML, normalmente declaramos uma codificação de caracteres UTF-8, usando a seguinte linha:

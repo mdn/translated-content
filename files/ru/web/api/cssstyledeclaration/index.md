@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 Интерфейс **`CSSStyleDeclaration`** представляет объект, являющийся блоком объявления CSS, и предоставляет информацию о стиле и различные связанные со стилем методы и свойства.
@@ -43,7 +44,7 @@ translation_of: Web/API/CSSStyleDeclaration
   - : Удаляет свойство из блока объявления CSS.
 - {{domxref("CSSStyleDeclaration.setProperty()")}}
   - : Изменяет существующее свойство CSS или создаёт новое свойство CSS в блоке объявления.
-- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} {{obsolete_inline}}
+- {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}}
   - : Поддерживается только через getComputedStyle в Firefox. Возвращает значение свойства в виде {{ domxref ("CSSPrimitiveValue")}} или `null` [для сокращённых свойств.](/ru/docs/Web/CSS/Shorthand_properties)
 
 ## Пример

@@ -1,8 +1,8 @@
 ---
 title: Symbol.iterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 ---
+
 {{JSRef}}
 
 O símbolo conhecido **`Symbol.iterator`** especifíca o iterador padrão para um objeto. Usado por [`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of).
@@ -27,7 +27,7 @@ Veja também [Iteration protocols](/pt-BR/docs/Web/JavaScript/Reference/Iteratio
 
 ## Exemplos
 
-### Iteráveis ​​definidos pelo usuário
+### Iteráveis definidos pelo usuário
 
 Podemos fazer nosso próprio iterável dessa forma:
 
@@ -63,7 +63,7 @@ const someObj = {
 [...someObj] // [ 'a', 'b' ]
 ```
 
-### Iteráveis ​​não bem formados
+### Iteráveis não bem formados
 
 Se um método `@@iterator` não retornar um objeto iterador, então é um iterável não bem formado. Usando dessa forma é resultará em uma excessão de tempo ou comportamentos com erros:
 

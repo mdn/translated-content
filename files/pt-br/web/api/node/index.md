@@ -1,8 +1,8 @@
 ---
 title: Node
 slug: Web/API/Node
-translation_of: Web/API/Node
 ---
+
 {{Apiref("DOM")}}
 
 **`Node`** é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
@@ -67,19 +67,19 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
 ### Propriedades obsoletas
 
-- {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.localName")}}{{readonlyInline}}
 
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML. {{gecko_minversion_inline("1.9.2")}}
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
 
-- {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.namespaceURI")}}{{readonlyInline}}
 
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
 
-- {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
+- {{domxref("Node.prefix")}}{{readonlyInline}}
   - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
 
 ## Métodos
@@ -88,21 +88,21 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.cloneNode")}}
 - {{domxref("Node.compareDocumentPosition")}}
 - {{domxref("Node.contains")}}
-- {{domxref("Node.getFeature")}} {{obsolete_inline("7.0")}}
-- {{domxref("Node.getUserData")}} {{obsolete_inline("22.0")}}
-- {{domxref("Node.hasAttributes")}} {{obsolete_inline("22.0")}}
+- {{domxref("Node.getFeature")}}
+- {{domxref("Node.getUserData")}}
+- {{domxref("Node.hasAttributes")}}
 - {{domxref("Node.hasChildNodes")}}
 - {{domxref("Node.insertBefore")}}
 - {{domxref("Node.isDefaultNamespace")}}
 - {{domxref("Node.isEqualNode")}}
-- {{domxref("Node.isSameNode")}} {{deprecated_inline("9.0")}} {{obsolete_inline("10.0")}}
-- {{domxref("Node.isSupported")}} {{obsolete_inline("22.0")}}
+- {{domxref("Node.isSameNode")}} {{deprecated_inline}}
+- {{domxref("Node.isSupported")}}
 - {{domxref("Node.lookupPrefix")}}
 - {{domxref("Node.lookupNamespaceURI")}}
 - {{domxref("Node.normalize")}}
 - {{domxref("Node.removeChild")}}
 - {{domxref("Node.replaceChild")}}
-- {{domxref("Node.setUserData")}} {{obsolete_inline("22.0")}}
+- {{domxref("Node.setUserData")}}
 
 ## Constantes
 
@@ -179,7 +179,7 @@ onload = function () {
 
 ## Especificações
 
-- [DOM Level 1 Core: Node interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
-- [DOM Level 2 Core: Node interface](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
-- [DOM Level 3 Core: Node interface](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
+- [DOM Level 1 Core: Node interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
+- [DOM Level 2 Core: Node interface](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
+- [DOM Level 3 Core: Node interface](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
 - [DOM Standard: Node Interface](http://dom.spec.whatwg.org/#interface-node)

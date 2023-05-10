@@ -1,15 +1,9 @@
 ---
 title: '-webkit-mask-image'
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/mask-image
-translation_of_original: Web/CSS/-webkit-mask-image
 original_slug: Web/CSS/-webkit-mask-image
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -57,9 +51,9 @@ p {
 
 Si se especifican varias imágenes, la región visible que sale como resultado es la combinación de las regiones visibles de cada máscara individual.
 
-## Compatibilidad con los distintos navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-image")}}
+{{Compat}}
 
 ## Ver además
 

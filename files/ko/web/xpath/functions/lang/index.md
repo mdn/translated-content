@@ -1,10 +1,8 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/lang
 ---
+
 {{ XsltRef() }}
 
 `lang` 함수는 문맥 노드가 인수로 준 언어와 일치하는 지를 결정하고 true나 false를 반환합니다.

@@ -1,14 +1,9 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Método(2)
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 ---
+
 {{JSRef}}
 
 El método **`sort()`** ordena los elementos de un arreglo (array) _localmente_ y devuelve el arreglo ordenado. La ordenación no es necesariamente [estable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability). El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor [Unicode](https://es.wikipedia.org/wiki/Unicode).
@@ -223,19 +218,11 @@ var result = mapped.map(function(el){
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                   | Comentario          |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| ECMAScript 1st Edition                                                                           | Standard                 | Definicióñ inicial. |
-| {{SpecName('ES5.1', '#sec-15.4.4.11', 'Array.prototype.sort')}}             | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-array.prototype.sort', 'Array.prototype.sort')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.sort")}}
-
-## Compatibilidad en navegadores
-
-La tabla de compatibilidad en esta página es generada por una data estructurada. Si deseas contribuir a la data, por favor entra a <https://github.com/mdn/browser-compat-data> y envíanos un pull request.
+{{Compat}}
 
 ## Ver también
 

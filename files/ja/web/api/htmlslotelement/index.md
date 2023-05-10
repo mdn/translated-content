@@ -32,7 +32,7 @@ l10n:
 
 ## 例
 
-以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)からとりました  ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
+以下のスニペットは、 [slotchange の例](https://github.com/mdn/web-components-examples/tree/main/slotchange)からとりました ([ライブでも確認](https://mdn.github.io/web-components-examples/slotchange/))。
 
 ```js
 let slots = this.shadowRoot.querySelectorAll('slot');

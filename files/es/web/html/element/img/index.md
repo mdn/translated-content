@@ -1,10 +1,9 @@
 ---
 title: "<img>: El elemento incrustado de imagen"
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 original_slug: Web/HTML/Elemento/img
-browser-compat: html.elements.img
 ---
+
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 > **Nota:**
@@ -72,7 +71,7 @@ Este elemento incluye atributos globales.
 
   - : Anchura del borde alrededor de la imagen.
 
-- {{htmlattrdef("crossorigin")}} 
+- {{htmlattrdef("crossorigin")}}
 
   - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 

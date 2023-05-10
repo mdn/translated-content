@@ -1,14 +1,6 @@
 ---
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Deprecated
-  - Functions
-  - JavaScript
-  - Property
-  - arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments/callee
-browser-compat: javascript.functions.arguments.callee
 ---
 {{jsSidebar("Functions")}}
 
@@ -113,7 +105,7 @@ var result = create()(5); // 반환값 120 (5 * 4 * 3 * 2 * 1)
 
 ### 좋은 대안 없는 `arguments.callee`의 사용
 
-그러나, 다음과 같은 경우에는 `arguments.callee`에 대안이 없습니다. 그래서 그 사라짐(deprecation)은 버그가 될 수 있습니다 ({{Bug("725398")}} 참조):
+그러나, 다음과 같은 경우에는 `arguments.callee`에 대안이 없습니다. 그래서 그 사라짐(deprecation)은 버그가 될 수 있습니다 ([Firefox bug 725398](https://bugzil.la/725398) 참조):
 
 ```js
 function createPerson (sIdentity) {

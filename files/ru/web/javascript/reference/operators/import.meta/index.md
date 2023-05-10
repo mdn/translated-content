@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import.meta
 original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
+
 {{JSSidebar("Statements")}}
 
 `Объект import.meta` это мета-свойство, указывающее мета-данные JavaScript модуля в зависимости от контекста. Он содержит информацию о модуле, например, URL модуля.

@@ -1,16 +1,9 @@
 ---
 title: Operador new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - Expresiones del lado izquierdo
-  - JavaScript
-  - Left-hand-side expressions
-  - Operador
-  - Operator
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 El **operador `new`** permite a los desarrolladores crear una instancia de un tipo de objeto definido por el usuario o de uno de los tipos de objeto integrados que tiene un función constructora.
@@ -151,13 +144,11 @@ car2.owner.name
 
 ## Especificaciones
 
-| Especificación                                                                       |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-new-operator', 'El operador new')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.new")}}
+{{Compat}}
 
 ## Ve también
 

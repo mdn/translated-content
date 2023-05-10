@@ -1,16 +1,10 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - Cadena
-  - JavaScript
-  - No estandar
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
+browser-compat: javascript.builtins.String.toString
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve una cadena que representa el código fuente del objeto.
@@ -44,11 +38,11 @@ Este método usualmente es llamado internamente por JavaScript y no explícitame
 
 ## Especificaciones
 
-No es parte de ningún estándar. Implementado en JavaScript 1.3.
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toSource")}}
+{{Compat}}
 
 ## Véase también
 

@@ -104,7 +104,7 @@ renderPlanetInfoButton.addEventListener('click', event => {
 });
 ```
 
-{{EmbedLiveSample('Dropdown_box_updates_useful_onscreen_information', '', 350)}}
+{{EmbedLiveSample('让下拉框更新有用的屏幕信息', '', 350)}}
 
 当用户选择一个新的行星时，活动区域的信息会被播报。因为这个活动区域有 `aria-live="polite"` 属性，屏幕阅读器将会等待用户暂停后再播报更新。这样的话，在列表中向下滑动并选择其他星球将不会在实时区域中播报更新。仅会针对最终选择的星球播报实时区域的更新。
 

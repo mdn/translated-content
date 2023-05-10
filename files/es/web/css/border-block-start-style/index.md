@@ -1,8 +1,8 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/border-block-start-style
-translation_of: Web/CSS/border-block-start-style
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-start-style`** define el estilo del borde lógico de bloque inicial de un elemento, que se asigna al estilo de borde físicodependen del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, o {{cssxref("border-left-style")}} dependiendo de los valores definidos por{{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -59,15 +59,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                                           | Comentario         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-start-style", "border-block-start-style")}} | {{Spec2("CSS Logical Properties")}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-start-style")}}
+{{Compat}}
 
 ## Mira también
 

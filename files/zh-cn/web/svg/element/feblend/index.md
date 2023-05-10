@@ -11,8 +11,6 @@ slug: Web/SVG/Element/feBlend
 
 {{svginfo}}
 
-## 示例
-
 ## 属性
 
 ### 全局属性
@@ -37,7 +35,7 @@ slug: Web/SVG/Element/feBlend
 
 ### SVG
 
-```plain
+```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -54,9 +52,9 @@ slug: Web/SVG/Element/feBlend
 </svg>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 200, 200)}}
+{{EmbedLiveSample("示例", 200, 200)}}
 
 ## 参见
 

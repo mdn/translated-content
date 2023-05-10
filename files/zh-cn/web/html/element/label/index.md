@@ -3,9 +3,9 @@ title: <label>
 slug: Web/HTML/Element/label
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**HTML `<label>` 元素（标签）**表示用户界面中某个元素的说明。
+**HTML `<label>` 元素**（标签）表示用户界面中某个元素的说明。
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
@@ -33,11 +33,11 @@ slug: Web/HTML/Element/label
 
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("for")}}
-  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](zh-CN/docs/Web/Guide/HTML/Content_categories#Form_labelable) 的 {{htmlattrxref("id")}}。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
+- `for`
+  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
 
     > **备注：** `<label>` 元素可同时有一个 `for` 属性和一个子代控件元素，只是 `for` 属性需要指向这个控件元素。
-- {{htmlattrdef("form")}}
+- `form`
   - : 表示与 label 元素关联的 {{htmlelement("form")}} 元素（即它的表单拥有者）。如果声明了该属性，其值应是同一文档中 {{HTMLElement("form")}} 元素的 `id`。因此你可以将 label 元素放在文档的任何位置，而不仅作为 {{HTMLElement("form")}} 元素的后代。
 
 ## 使用 CSS 样式

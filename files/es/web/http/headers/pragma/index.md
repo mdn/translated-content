@@ -1,8 +1,8 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-translation_of: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
 El **`Pragma`** encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el `Cache-Control` encabezado HTTP / 1.1 aún no está presente.
@@ -49,19 +49,15 @@ Pragma: no-cache
 Pragma: no-cache
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                               | Título                                                          |
-| -------------------------------------------- | --------------------------------------------------------------- |
-| {{RFC("7234", "Pragma", "5.4")}} | Hypertext Transfer Protocol (HTTP/1.1): almacenamiento en caché |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Pragma")}}
+{{Compat}}
 
 ## Véase también
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Expires")}}
-
-Traducción realizada por Ervin A. Santos R.

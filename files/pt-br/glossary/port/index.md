@@ -1,13 +1,9 @@
 ---
 title: Port
 slug: Glossary/Port
-tags:
-  - porta
-  - porta segura
-  - portas de comunicação
-translation_of: Glossary/Port
 original_slug: Glossario/Port
 ---
+
 Porta
 
 Para um computador se conectar à rede mundial de computadores com um endereço de IP(Protocolo de internet - Internet Protocol),

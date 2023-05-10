@@ -8,6 +8,7 @@ tags:
   - Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Сводка

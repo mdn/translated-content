@@ -1,11 +1,9 @@
 ---
 title: Set.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
-tags:
-  - Iteradores
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/@@iterator
 ---
+
 {{JSRef}}
 
 El valor inicial de la propiedad **`@@iterator`**, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.
@@ -56,14 +54,11 @@ for (const v of mySet) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.@@iterator")}}
+{{Compat}}
 
 ## Vea también
 

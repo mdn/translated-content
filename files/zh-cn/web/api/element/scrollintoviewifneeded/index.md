@@ -38,10 +38,10 @@ element.scrollIntoViewIfNeeded(false);
 
 不属于任何规范，是一种 WebKit 专有的方法。
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [W3C CSSOM bug 17152: Support centering an element when scrolling into view.](https://www.w3.org/Bugs/Public/show_bug.cgi?id=17152) (一个等同于 scrollIntoViewIfNeeded 的标准功能特性)

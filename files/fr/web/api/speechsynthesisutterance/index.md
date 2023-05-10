@@ -49,7 +49,7 @@ _`SpeechSynthesisUtterance` hérite également des propriétés de son interface
 
 ## Examples
 
-Dans notre exemple basique de [démonstration de synthèse vocale](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nous commençons par récupérer une référence du controller SpeechSynthesis en utilisant `window.speechSynthesis`.
+Dans notre exemple basique de [démonstration de synthèse vocale](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), nous commençons par récupérer une référence du controller SpeechSynthesis en utilisant `window.speechSynthesis`.
 Après avoir définit les variables nécessaires, nous récupérons une liste des voix disponibles en utilisant {{domxref("SpeechSynthesis.getVoices()")}} puis nous alimentons un menu avec celle-ci.
 L'utilisateur pourra ensuite choisir la voix qu'il souhaite.
 

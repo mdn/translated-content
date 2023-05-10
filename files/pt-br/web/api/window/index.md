@@ -1,13 +1,13 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 O objeto `window` representa uma janela que contém um elemento DOM; a propriedade `document` aponta para o [documento DOM document](/pt-BR/docs/DOM/document) carregado naquela janela. Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.
 
-Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/DOM/DOM_Reference).
+Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/DOM/DOM_Reference).
 
 Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto `window` (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code#Content_windows) para mais informação). Isto é, o objeto `window` não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente {{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto `window` pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..
 
@@ -17,7 +17,7 @@ _Esta interface herda propriedades da interface {{domxref("EventTarget")}} e imp
 
 Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de elementos built-in) são listados em uma sessão separada abaixo.
 
-- {{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.applicationCache")}} {{readOnlyInline}}
   - : Um objeto {{domxref("OfflineResourceList")}} fornece acesso aos recursos offline para o window.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Esta propriedade indica quando a window atual está fechada ou não.
@@ -25,19 +25,19 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : O ponto de entrada para muitas características XPCOM. Algumas propriedades, por exemplo, classes, estão apenas disponíveis para código suficientemente privilegiado. Código de Web não deve usar essa propriedade.
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna uma referência para o objeto console fornecendo acesso ao console debugging do navegador.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna uma referência para o elemento de conteúdo na janela atual. A variante obsoleta com sublinhado não está disponível a partir do conteúdo da Web.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Retorna os objetos de controlador XUL para a janela atual do crome.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Retorna o objeto de criptografia do navegador.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}}
   - : Obtém/define o texto da barra de status para determinada janela.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Gets the arguments passed to the window (if it's a dialog box) at the time {{domxref("window.showModalDialog()")}} was called. This is an `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}}
   - : Synonym of {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Retorna a referência à propriedade `document` que a janela contém.
@@ -45,9 +45,9 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : Returns an array of the subframes in the current window.
-- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.fullScreen")}}
   - : This property indicates whether the window is displayed in full screen or not.
-- {{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}}{{Non-standard_inline}}
   - : Unsupported since Gecko 13 (Firefox 13). Use {{domxref("Window.localStorage")}} instead.
     Was: Multiple storage objects that are used for storing data across multiple pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -62,19 +62,19 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Gets/sets the location, or current URL, of the window object.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Returns the locationbar object, whose visibility can be toggled in the window.
-- {{domxref("WindowStorage.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+- {{domxref("WindowStorage.localStorage")}} {{readOnlyInline}}
   - : Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Returns the menubar object, whose visibility can be toggled in the window.
-- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.messageManager")}}
   - : Returns the [message manager](/pt-BR/docs/The_message_manager) object for this window.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}
   - : The time in milliseconds since epoch at which the current animation cycle began.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
   - : Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` in `nsIDOMWindowUtils` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.
 - {{domxref("Window.name")}}
   - : Pega/attribui o nome ao objeto `window`.
@@ -100,7 +100,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
   - : Provides a hosting area for [performance related](/pt-BR/docs/Navigation_timing) attributes.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Returns the personalbar object, whose visibility can be toggled in the window.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}}
   - : Formerly provided access to install and remove PKCS11 modules.
 - {{domxref("Window.returnValue")}}
   - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
@@ -149,7 +149,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Displays an alert dialog.
 - {{domxref("WindowBase64.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}}
   - : Moves back one in the window history.
 - {{domxref("Window.blur()")}}
   - : Sets focus away from the window.
@@ -167,19 +167,19 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Used to trigger an event.
 - {{domxref("Window.dump()")}}
   - : Writes a message to the console.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
   - : Sets focus on the current window.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}}
   - : Moves the window one document forward in the history.
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
@@ -191,9 +191,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Gets default computed style for the specified element, ignoring author stylesheets.
 - {{domxref("Window.getSelection()")}}
   - : Returns the selection object representing the selected item(s).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}}
   - : Returns the browser to the home page.
-- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
   - : {{todo("NeedsContents")}}
@@ -203,7 +203,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Moves the current window by a specified amount.
 - {{domxref("Window.moveTo()")}}
   - : Moves the window to the specified coordinates.
-- {{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozRequestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame. This will cause a `MozBeforePaint` event to fire before that repaint occurs.
 - {{domxref("Window.open()")}}
   - : Opens a new window.
@@ -225,7 +225,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
@@ -262,7 +262,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
-> **Nota:** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
+> **Nota:** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.
@@ -280,9 +280,9 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for right-click events on the window.
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
-- {{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondevicemotion")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
@@ -290,7 +290,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for {{event("error")}} events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : An event handler property for {{event("focus")}} events on the window.
-- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
   - : An event handler property for {{event("keydown")}} events on the window.
@@ -312,7 +312,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for mouseover events on the window.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : An event handler property for mouseup events on the window.
-- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.onmozbeforepaint")}}
   - : An event handler property for the `MozBeforePaint` event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.
 - {{domxref("WindowEventHandlers.onpageshow")}}
   - : An event handler property for pageshow events on the window.
@@ -320,7 +320,7 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler property for pagehide events on the window.
 - {{domxref("Window.onpaint")}}
   - : An event handler property for paint events on the window.
-- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("WindowEventHandlers.onpopstate")}}
   - : An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.
 - {{domxref("GlobalEventHandlers.onreset")}}
   - : An event handler property for reset events on the window.

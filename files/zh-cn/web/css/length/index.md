@@ -19,7 +19,7 @@ slug: Web/CSS/length
 
 #### 相对长度单位
 
-相对长度代表着以其它距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
+相对长度代表着以其他距离为单位的一种尺寸。这个单位可以是指定字符的大小，[行高](/zh-CN/docs/Web/CSS/line-height)，或者是 {{glossary("viewport")}} 的大小。
 
 ##### 字体相对长度
 
@@ -45,7 +45,7 @@ slug: Web/CSS/length
 - `rlh` {{experimental_inline}}
   - : 等于根元素行高 {{Cssxref("line-height")}} 的计算值。当用于设置根元素的行高 {{Cssxref("line-height")}} 或是字体大小 {{Cssxref("font-size")}} 时，该 rlh 指的是根元素行高 {{Cssxref("line-height")}} 或字体大小 {{Cssxref("font-size")}} 的初始值。
 
-##### 视口 (Viewport) 比例的长度
+##### 视口比例的长度
 
 视口百分比长度定义相对于 {{glossary("viewport")}} 的大小的 `<length>` 值，即文档的可见部分。视口长度在 {{cssxref("@page")}} 声明块中无效。
 
@@ -197,9 +197,9 @@ inputElem.addEventListener('change', () => {
 })
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Length_unit_comparison','100%', 700)}}
+{{EmbedLiveSample('长度单位的比较','100%', 700)}}
 
 ## 规范
 

@@ -1,12 +1,8 @@
 ---
 title: new operator
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - Expressões Left-hand-side
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 O **operador `new`** cria uma instancia de um tipo de objeto definido pelo usuário ou de um dos tipos nativos (_built-in_) que possuem uma função construtora.

@@ -1,8 +1,8 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-translation_of: Web/API/Animation/cancel
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 O método **`Animation.cancel()`** da interface {{domxref("Animation")}} , limpa todas as {{domxref("KeyframeEffect", "keyframeEffects")}} geradas pela animação e aborta esta execução.

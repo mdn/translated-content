@@ -62,7 +62,7 @@ Méthode :
 write(byte[] b, int off, int len)
 ```
 
-En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'octets fourni.
+En débutant à partir de la position `off`, écrit `len` octets du tableau d'octets fourni.
 
 ### InputStream
 

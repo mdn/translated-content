@@ -1,8 +1,9 @@
 ---
 title: Управление памятью
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 translation_of: Web/JavaScript/Memory_Management
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Введение

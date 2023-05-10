@@ -14,6 +14,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 Позволяет WebExtensions получить и установить куки ,а также сообщить об их изменении.

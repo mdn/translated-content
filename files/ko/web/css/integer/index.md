@@ -1,13 +1,8 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - Web
-translation_of: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 **`<integer>`** [CSS](/ko/docs/Web/API/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;number&gt;")}}의 종류 중 하나로 소수점이 없는 완전한 수, 즉 정수를 표현합니다. 정수는 {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} 등 다양한 속성에서 사용할 수 있습니다.

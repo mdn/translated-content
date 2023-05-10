@@ -1,17 +1,8 @@
 ---
 title: Intl.DateTimeFormat() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-tags:
-  - Constructor
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat`** 생성자는 언어에 맞는 날짜 및 시간 서식을 적용하기 위한 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} 객체를 생성합니다.

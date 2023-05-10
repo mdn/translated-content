@@ -1,14 +1,8 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Access-Control-Expose-Headers`** indica quais cabeçalhos podem ser expostos como parte da resposta listando os seus nomes.

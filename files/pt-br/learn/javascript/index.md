@@ -1,18 +1,9 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - Iniciante Javascript
-  - JavaScript
-  - NeedsContent
-  - Principiante
-  - Tópico
-  - modulo
-translation_of: Learn/JavaScript
 original_slug: Aprender/JavaScript
 ---
+
 {{LearnSidebar}}
 
 {{glossary('JavaScript')}} é uma linguagem de programação que permite implementar funcionalidades mais complexas em páginas web. Sempre que uma página web faz mais do que apenas mostrar informações estáticas para você - ela mostra em tempo real conteúdos atualizados, mapas interativos, animações gráficas em 2D/3D, vídeos, etc. - você pode apostar que o Javascript provavelmente está envolvido.

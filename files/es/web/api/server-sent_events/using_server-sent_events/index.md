@@ -1,9 +1,9 @@
 ---
 title: Utilizando eventos enviados por el servidor (server-sent event)
 slug: Web/API/Server-sent_events/Using_server-sent_events
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
+
 Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
 
 Puedes ver un ejemplo [aqui](/samples/sse/) (actualmente no funciona).
@@ -189,4 +189,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.EventSource")}}
+{{Compat}}

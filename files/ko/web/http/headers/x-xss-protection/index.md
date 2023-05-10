@@ -1,8 +1,8 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-translation_of: Web/HTTP/Headers/X-XSS-Protection
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`X-XSS-Protection`**헤더는 Internet Explorer, Chrome 및 Safari에서 제공하는 기능으로서, ({{Glossary("XSS")}}) 공격을 감지 할 때 페이지 로드를 중지시킬 수 있습니다. 최신 브라우저에서는 Inline Javascript(`'unsafe-inline')`사용을 못하게 하는 CSP(Content-Security-Policy) 보호기능이 있으나, 해당 기능을 지원하지 않는 구형 웹브라우저에서 사용자를 보호 할수 있는 기능을 제공할 수 있습니다.
@@ -66,13 +66,13 @@ Nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 
-## Specifications
+## 명세서
 
-Not part of any specifications or drafts.
+{{Specifications}}
 
 ## 지원 브라우저
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## See also
 

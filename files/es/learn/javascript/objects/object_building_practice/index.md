@@ -1,9 +1,9 @@
 ---
 title: Ejercicio práctico de construcción de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 En los artículos anteriores se explicó lo fundamental de la teoría de los objetos en JavaScript asi como su sintaxis, para que Usted tenga un punto de partida sólido. En éste artículo, desarrollaremos un ejercicio práctico para ganar experiencia en la programación de objetos en JavaScript, con un resultado divertido y colorido.
@@ -16,7 +16,7 @@ En los artículos anteriores se explicó lo fundamental de la teoría de los obj
 
 Es éste artículo escribiremos un programa demo del juego clásico de pelotas que rebotan para mostrar la gran útilidad de los objetos en JavaScript. En éste demo las pelotas rebotaran en la pantalla y cambiaran de color cuando choquen unas con otras. Así, al final del ejemplo tendremos algo como esto:
 
-![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
+![](bouncing-balls.png)
 
 En este ejemplo se utilizará [Canvas API](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) para dibujar las pelotas en la pantalla y la API [requestAnimationFrame](/es/docs/Web/API/window/requestAnimationFrame) para animar todo el contenido de la pantalla. No es necesario que conozca estas funciones previamente. Esperamos que al final de este artículo, quizás pueda estar interesado en explorar su uso y capacidades más en detalle. Durante este desarrollo usaremos objetos y algunas técnicas para hacer que las pelotas puedan rebotar en los bordes y comprobar cuando choquen entre ellas (ésto se conoce como **detección de colisiones**).
 
@@ -39,7 +39,7 @@ var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight;
 ```
 
-Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
+Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/es/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
 
 A continuación se da valor a las variables `width` and `height` que corresponden al ancho y alto del elemento _canvas_ (representado por las propiedades `canvas.width` y `canvas.height`), de manera que el alto y ancho coincidan con el alto y ancho del navegador (_viewport_) cuyos valores se obtienen directamente de las propiedades _window\.innerWidth_ y _window\.innerHeight_.
 
@@ -95,15 +95,15 @@ Ball.prototype.draw = function() {
 
 Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (`ctx`)
 
-- Primero usamos [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
-- A continuación usamos el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
-- A continuación con el método [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
+- Primero usamos [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
+- A continuación usamos el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
+- A continuación con el método [`arc()`](/es/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
 
   - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
   - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
   - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
 
-- Por último con el método [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+- Por último con el método [`fill()`](/es/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 Ya se puede empezar a testear el objeto.
 
@@ -280,13 +280,3 @@ Esperamos que se haya divertido escribiendo su propio mundo de pelotas que choca
 - [2D juego de ruptura usando Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica los conceptos fundamentales para construir un juego 2D usando una librería de juegos de JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## En este módulo
-
-- [Conceptos básicos de los objetos JavaScript](/es/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orientado a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototipos de objetos](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herencia en JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Trabajando con datos JSON](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Ejercicio práctico de construcción de objetos](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Añadiendo características a nuestra demo de bouncing balls](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

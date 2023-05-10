@@ -1,14 +1,8 @@
 ---
 title: Document.createElement()
 slug: Web/API/Document/createElement
-tags:
-  - API
-  - DOM
-  - Documento
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 En un documento [HTML](/es/docs/Web/HTML), el método **`Document.createElement()`** crea un elemento HTML especificado por su `tagName`, o un {{domxref("HTMLUnknownElement")}} si su `tagName` no se reconoce. En un documento [XUL](/es/docs/Mozilla/Tech/XUL), crea el elemento XUL especificado. En otros documentos, crea un elemento con un namespace URI `null`.

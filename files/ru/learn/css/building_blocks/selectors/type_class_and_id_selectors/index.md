@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 original_slug: Learn/CSS/Building_blocks/Селекторы/Type_Class_and_ID_Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим некоторые из базисных селекторов, которые вы, вероятно, будете чаще всего использовать в вашей работе.

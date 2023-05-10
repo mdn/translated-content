@@ -30,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - 開啟右方網頁： [grab the HTML file](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) ，將 HTML 範本儲存到您的本地電腦的新資料夾中，並命名為`index.html` 。範本也包含相應的 CSS 檔案。
 - 開啟右方網頁： [page containing the raw text](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) ，並保持網頁開啟在瀏覽器的另一分頁上，以便稍後使用。
 
-> **備註：** 除了將檔案下載到自己的電腦中，您也能使用線上編輯程式的網頁，像是： [JSBin](http://jsbin.com/) 或者[Thimble](https://thimble.mozilla.org/) 來完成評估測驗。您可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果您使用的線上編輯器沒有獨立給 JavaScript 的編輯區，您也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
+> **備註：** 除了將檔案下載到自己的電腦中，您也能使用線上編輯程式的網頁，像是：[JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/) 來完成評估測驗。您可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果您使用的線上編輯器沒有獨立給 JavaScript 的編輯區，您也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
 
 ## 任務簡介
 
@@ -54,7 +54,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 基本設定：
 
 1. 在有`index.html`的資料夾中建立一個新檔案稱之為 `main.js`
-2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"​​​​​​`
+2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"`
 
 初始化變數與函數：
 
@@ -106,15 +106,3 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 如果您將這個測驗視為正規課程的一部分，建議將成果提供您的老師或指導者以利幫助您達到最好的學習效益。如果您是自學者，您可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒您：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 相關學習模組
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods) [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays) [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [傻故事產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

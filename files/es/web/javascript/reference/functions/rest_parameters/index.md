@@ -1,13 +1,9 @@
 ---
 title: Parámetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - Funciones
-  - JavaScript
-  - Parametros Rest
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
+
 {{jsSidebar("Functions")}}
 
 La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.
@@ -191,14 +187,11 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}     | {{Spec2('ES6')}}         | definción inicial. |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,9 +1,9 @@
 ---
 title: window.navigator.geolocation
 slug: Web/API/Navigator/geolocation
-translation_of: Web/API/Navigator/geolocation
 original_slug: Web/API/NavigatorGeolocation/geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 La propiedad de sólo lectura **`Navigator.geolocation`** devuelve un objeto [`Geolocation`](/es/docs/Web/API/Geolocation) que proporciona acceso web a la ubicación de un dispositivo. Esto permite ofrecer al sitio web o aplicación resultados personalizados basados en la ubicación del usuario.
 
@@ -26,13 +26,11 @@ geo = navigator.geolocation
 
 ## Especificaciones
 
-| Especificación                       | Estado                           | Comentario             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## Ver también
 

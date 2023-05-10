@@ -1,8 +1,8 @@
 ---
 title: Stylesheet.media
 slug: Web/API/StyleSheet/media
-translation_of: Web/API/StyleSheet/media
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

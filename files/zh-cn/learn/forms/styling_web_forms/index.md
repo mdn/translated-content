@@ -37,7 +37,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 一些元素难以被美化，并且可能需要一些复杂的技巧，偶尔需要高级的 CSS3 知识。
 
-这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。{{htmlattrxref("placeholder", "input")}} 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
+这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
 
 我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)一文中讲述如何处理更多特定的问题。
 
@@ -378,7 +378,7 @@ button:focus {
 
 瞧！
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看 [在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/) (也可以查看[源代码](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example))。
+> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 总结
 
@@ -387,19 +387,6 @@ button:focus {
 [下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单组件。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

@@ -3,9 +3,10 @@ title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
+
 {{JSRef}}
 
-Метод **`flatMap()`** сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив. Это идентично [map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) функции, с последующим применением функции [flat](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth ( глубина ) равным 1, но `flatMap` часто бывает полезным, так как работает немного более эффективно.
+Метод **`flatMap()`** сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив. Это идентично [map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) функции, с последующим применением функции [flat](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) с параметром depth ( глубина ) равным 1, но `flatMap` часто бывает полезным, так как работает немного более эффективно.
 
 ## Синтаксис
 
@@ -46,7 +47,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### `map` и `flatMap`
 
 ```js
-let arr1 = 1, 2, 3, 4];
+let arr1 = [1, 2, 3, 4];
 
 arr1.map(x => [x * 2]);
 // [[2], [4], [6], [8]]

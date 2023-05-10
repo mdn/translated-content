@@ -1,17 +1,9 @@
 ---
 title: Introdução ao lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Desenvolvimento Web
-  - Iniciante
-  - Introdução
-  - Programação
-  - Programação do lado do servidor
-  - Servidor
-  - programação do lado do cliente
-translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Bem-vindo ao curso de programação do lado do servidor para iniciantes do MDN! Neste primeiro artigo, examinamos a programação do lado do servidor de um alto nível, respondendo a perguntas como "o que é?", "Como ela difere da programação do lado do cliente?" E "por que é tão útil?" . Depois de ler este artigo, você entenderá o poder adicional disponível para sites por meio da codificação do lado do servidor.
@@ -59,7 +51,7 @@ O diagrama abaixo mostra uma arquitetura básica de servidor da web para um site
 
 O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#Successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#Client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#Server_error_responses)).
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### Sites dinâmicos
 
@@ -73,7 +65,7 @@ O diagrama abaixo mostra uma arquitetura simples para um site dinâmico. Como no
 
 As solicitações de recursos estáticos são tratadas da mesma maneira que para sites estáticos (recursos estáticos são quaisquer arquivos que não mudam - normalmente: CSS, JavaScript, imagens, arquivos PDF pré-criados etc.).
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
 As solicitações de recursos dinâmicos são encaminhadas (2) para o código do lado do servidor (mostrado no diagrama como uma web application). Para "solicitações dinâmicas", o servidor interpreta a solicitação, lê as informações necessárias do banco de dados (3), combina os dados recuperados com modelos HTML (4) e envia de volta uma resposta contendo o HTML gerado (5,6).
 
@@ -135,7 +127,7 @@ Os servidores podem armazenar e usar informações sobre clientes para fornecer 
 
 Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipar seus interesses e personalizar ainda mais as respostas e notificações, por exemplo, fornecendo uma lista de locais visitados anteriormente ou que você pode querer ver em um mapa.
 
-> **Nota:**[Google Maps](https://maps.google.com/) salva sua pesquisa e histórico de visitas. Locais visitados ou pesquisados ​​com frequência são destacados mais do que outros.
+> **Nota:**[Google Maps](https://maps.google.com/) salva sua pesquisa e histórico de visitas. Locais visitados ou pesquisados com frequência são destacados mais do que outros.
 >
 > Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.
 >

@@ -1,12 +1,8 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - Gráfico
-  - Imagen CSS
-  - Tipo de Dato CSS
-translation_of: Web/CSS/image
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -69,13 +65,11 @@ element(#fakeid)                       /* Si 'fakeid' no es un identificador CSS
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentarios                                                                                                                                                        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Images', '#typedef-image', '&lt;image&gt;')}} | {{Spec2('CSS3 Images')}} | Antes de [CSS3](/es/docs/Web/CSS/CSS3), no había un tipo de dato `<image>` definido. Las imágenes solo podían ser definidas usando notaciones funcionales `url()`. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.image")}}
+{{Compat}}
 
 ## Véase también
 

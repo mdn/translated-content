@@ -3,7 +3,7 @@ title: '<base>: 文書の基底 URL 要素'
 slug: Web/HTML/Element/base
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<base>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内におけるすべての*相対* URL の基点となる URL を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。
 

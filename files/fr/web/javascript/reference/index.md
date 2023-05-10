@@ -143,7 +143,7 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [Instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty)
 - [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break)
 - [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
-- [`if…else`](fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
 - [`switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch)
 - [`throw`](/fr/docs/Web/JavaScript/Reference/Statements/throw)
 - [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch)

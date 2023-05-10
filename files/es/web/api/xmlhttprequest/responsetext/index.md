@@ -1,8 +1,8 @@
 ---
 title: XMLHttpRequest.responseText
 slug: Web/API/XMLHttpRequest/responseText
-translation_of: Web/API/XMLHttpRequest/responseText
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propiedad **`XMLHttpRequest.responseText`** devuelve un **`DOMString`** que contiene la respuesta a la consulta como un texto o null si la consulta no tuvo exito o aun no ha sido completada. la propiedad **`responseText`** tendra una respuesta parcial como retorno aunque la consulta no haya sido completada. si **responseType** contiene algo que no sea un string vacio o un "text", el acceso a **responseText** sera **`throw InvalidStateError exception`**.
@@ -30,10 +30,8 @@ xhr.send(null);
 
 ## Especificaciones
 
-| Especificaciones                                                                 | estado                               | Comentarios            |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest', '#the-responsetext-attribute')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.XMLHttpRequest.responseText")}}
+{{Compat}}

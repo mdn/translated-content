@@ -1,14 +1,9 @@
 ---
 title: Plantillas literales (plantillas de cadenas)
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Referencia/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.
@@ -261,13 +256,11 @@ let bad = `bad escape sequence: \unicode`;
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                | Status               | Comentarios         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-template-literals', 'Template Literals')}} {{SpecName('ES6', '#sec-tagged-templates', 'Tagged Templates')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## Ver también
 

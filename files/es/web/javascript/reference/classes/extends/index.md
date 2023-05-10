@@ -1,9 +1,9 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 original_slug: Web/JavaScript/Referencia/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 La palabra clave **extends** es usada en la [declaración](/es/docs/Web/JavaScript/Reference/Statements/class) o [expresión](/es/docs/Web/JavaScript/Reference/Operators/class) de clases, para crear una clase hija de otra.
@@ -79,14 +79,11 @@ Object.getPrototypeOf(nullExtends.prototype) // null
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'extends')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## Ver también
 

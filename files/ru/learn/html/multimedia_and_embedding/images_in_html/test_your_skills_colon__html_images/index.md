@@ -7,6 +7,7 @@ translation_of: >-
 original_slug: >-
   Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML/Проверьте_свои_знания:_Изображения_в_HTML
 ---
+
 {{learnsidebar}}
 
 Цель этого теста навыков - оценить, поняли ли вы нашу статью [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML).

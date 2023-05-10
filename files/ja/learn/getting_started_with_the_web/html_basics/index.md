@@ -147,7 +147,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 
 それでは、あなたの HTML の {{htmlelement("img")}} 要素の上に適切なタイトルを付けてみましょう。
 
-> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#text_content)や  [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
+> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#text_content)や [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
 
 ### 段落
 
@@ -230,14 +230,3 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 この記事では HTML の表面的な部分だけを勉強しました。もっと知りたい場合は [HTML を学ぶ](/ja/docs/Learn/HTML)を読んでみてくだい。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

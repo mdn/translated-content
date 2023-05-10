@@ -1,22 +1,10 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - Elementos
-  - Formulários HTML
-  - HTML etiqueta input
-  - Input
-  - Range
-  - Rango
-  - Referencia
-  - Web
-  - deslizador
-  - formulários
-  - slider
-translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Elemento/input/range
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuario especifique un valor numérico comprendido entre un valor mínimo y máximo. El valor exacto, sin embargo, no se considera importante. Se repesenta típicamente como un "tirador" o un control deslizante en lugar de un campo de texto como otros tipos de {{HTMLElement("input")}}. Como este tipo de widget es bastante inmpreciso, no debe utilizarse normalmente a menos que el valor exacto del control no sea importante.
 
@@ -28,7 +16,7 @@ El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuar
 
 {{EmbedLiveSample("summary_sample1", 600, 40)}}
 
-Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un input de tipo [`"text"`](/en-US/docs/Web/HTML/Element/input/text).
+Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un input de tipo [`"text"`](/es/docs/Web/HTML/Element/input/text).
 
 <table class="properties">
   <tbody>
@@ -45,7 +33,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)</td>
     </tr>
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
@@ -150,7 +138,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14989/macslider-plain.png)
+![Screenshot of a plain slider control on macOS](macslider-plain.png)
 
 ##### Un control rango con marcas
 
@@ -177,7 +165,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14991/macslider-ticks.png)
+![Screenshot of a plain slider control on macOS](macslider-ticks.png)
 
 ##### Un control rango con marcas y etiquetas
 
@@ -204,7 +192,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14993/macslider-labels.png)
+![Screenshot of a plain slider control on macOS](macslider-labels.png)
 
 > **Nota:** Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
 
@@ -212,7 +200,7 @@ Captura de pantalla
 
 Por defecto, si un navegador renderiza un input range, lo mostrará como un "slider" (deslizador) que se desliza hacia la izquierda y hacia la derecha. By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. Sin embargo puedes cambiar esto fácilmente para que se deslice hacia arriba y hacia abajo simplemente usando CSS
 
-> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox {{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
 
 Si tenemos el siguiente control range:
 
@@ -220,7 +208,7 @@ Si tenemos el siguiente control range:
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}
+{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
 
 Dicho control se muestra en horizontal (al menos en los principales navegadores, o otros puede variar). Presentarlo en vertical es tan simple como añadir CSS para cambiar las dimensiones del control, de la siguiente manera:
 
@@ -241,7 +229,7 @@ Dicho control se muestra en horizontal (al menos en los principales navegadores,
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}
+{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
 
 **En la actualidad, ninguno de los navegadores principales soporta la creación de inputs range usando este CSS, incluso a perar de que la especificación recomienda que lo hagan.**
 
@@ -286,7 +274,7 @@ El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
+{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
 
 ## Validación
 
@@ -305,17 +293,14 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estatus                          | Comentario         |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#range-state-(type=range)', '&lt;input type="range"&gt;')}} | {{Spec2('HTML WHATWG')}} | Definición inicial |
-| {{SpecName('HTML5.1', 'sec-forms.html#range-state-typerange', '&lt;input type="range"&gt;')}}     | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 
-{{Compat("html.elements.input.input-range")}}
+{{Compat}}
 
 ## Ver también
 
 - [HTML Forms](/es/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)

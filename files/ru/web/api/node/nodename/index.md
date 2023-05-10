@@ -3,6 +3,7 @@ title: Node.nodeName
 slug: Web/API/Node/nodeName
 translation_of: Web/API/Node/nodeName
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.nodeName`** только для чтения, возвращающие имя текущего узла в виде строки.

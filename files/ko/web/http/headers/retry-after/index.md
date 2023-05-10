@@ -1,8 +1,8 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-translation_of: Web/HTTP/Headers/Retry-After
 ---
+
 {{HTTPSidebar}}
 
 **`Retry-After`** 응답 HTTP 헤더는 다음에 올 요청이 이루어지기 전에 사용자 에이전트가 대기해야 하는 시간을 가르킵니다. 이 헤더가 사용되는 주요한 두 가지 경우가 있습니다:

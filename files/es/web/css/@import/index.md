@@ -1,8 +1,8 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-translation_of: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -41,12 +41,8 @@ Dónde :
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                       | Comentario                                                                                                                                                                                  |
-| -------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Media Queries', '#media0', '@import') }}     | {{ Spec2('CSS3 Media Queries') }} | Extiende la sintaxis para soportar cualquier [consultas de medios (media query)](/en/CSS/Media_queries) y no sólo los [tipos de medios](/en/CSS/@media#Media_types) simples.                |
-| {{ SpecName('CSS2.1', 'cascade.html#at-import', '@import') }} | {{ Spec2('CSS2.1') }}                 | Añade soporte para {{cssxref("&lt;string&gt;")}} para denotar la _url_ de una hoja de estilo, y es requerida para insertar la regla `@import` en el principio del documento CSS. |
-| {{ SpecName('CSS1', '#the-cascade', '@import') }}                 | {{ Spec2('CSS1') }}                     |                                                                                                                                                                                             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

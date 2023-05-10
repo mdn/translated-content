@@ -13,15 +13,15 @@ Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` �
 
 就像其他 HTML 元素一样，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{ htmlattrdef("type") }}
+- `type`
   - : 这个属性指定间隔的类型，可用的值为 `horizontal`, `vertical` 和 `block`。
-- {{ htmlattrdef("size") }}
+- `size`
   - : 当类型为 `horizontal` 或 `vertical` 时，这个属性可以用于定义间隔大小，以像素为单位。
-- {{ htmlattrdef("width") }}
+- `width`
   - : 当类型为 `block` 时，这个属性可以用于定义间隔的宽度，以像素为单位。
-- {{ htmlattrdef("height") }}
+- `height`
   - : 当类型为 `block` 时，这个属性可以用于定义间隔的高度，以像素为单位。
-- {{ htmlattrdef("align") }}
+- `align`
   - : 这个属性定义了间隔的对齐，可用的值为 `left`, `right` 和 `center`。
 
 ## 示例
@@ -37,4 +37,4 @@ Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` �
 
 并不是任何规范的一部分。
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

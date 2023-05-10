@@ -1,15 +1,9 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Web
-translation_of: Web/HTML/Element/textarea
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<textarea>` 요소**는 멀티라인 일반 텍스트 편집 컨트롤을 나타냅니다.
 
@@ -122,7 +116,7 @@ _Textarea_ 는 래스터 이미지 처럼 고유한 넓이를 가지고 있습�
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## 같이 보기
 

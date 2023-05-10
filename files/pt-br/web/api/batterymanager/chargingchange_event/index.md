@@ -1,15 +1,9 @@
 ---
 title: BatteryManager.onchargingchange
 slug: Web/API/BatteryManager/chargingchange_event
-tags:
-  - API
-  - Battery API
-  - Event Handler
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/onchargingchange
 original_slug: Web/API/BatteryManager/onchargingchange
 ---
+
 {{APIRef("Battery API")}}
 
 Especifica um _event listener_ para receber eventos {{event("chargingchange")}}. Esses eventos ocorrem quando o estado {{domxref("BatteryManager.charging", "charging")}} (carregando) da bateria é atualizado.

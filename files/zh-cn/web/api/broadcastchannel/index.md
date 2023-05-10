@@ -5,7 +5,7 @@ slug: Web/API/BroadcastChannel
 
 {{APIRef("Broadcast Channel API")}}
 
-**`BroadcastChannel`** 接口代理了一个命名频道，可以让指定 {{glossary("origin")}} 下的任意 {{glossary("browsing context")}} 来订阅它。它允许同源的不同浏览器窗口，Tab 页，frame 或者 iframe 下的不同文档之间相互通信。通过触发一个 {{event("message")}} 事件，消息可以广播到所有监听了该频道的 `BroadcastChannel` 对象。
+**`BroadcastChannel`** 接口代理了一个命名频道，可以让指定 {{glossary("origin")}} 下的任意 {{glossary("browsing context")}} 来订阅它。它允许同源的不同浏览器窗口，Tab 页，frame 或者 iframe 下的不同文档之间相互通信。通过触发一个 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件，消息可以广播到所有监听了该频道的 `BroadcastChannel` 对象。
 
 {{AvailableInWorkers}}
 
@@ -25,10 +25,10 @@ _该接口会从它的父级 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("BroadcastChannel.onmessage")}}
 
-  - : {{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了 {{event("message")}} 事件时要执行的函数。
+  - : 事件处理器，用于定义当该对象上触发了 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件时要执行的函数。
 
 - {{domxref("BroadcastChannel.onmessageerror")}}
-  - : {{event("Event_handlers", "event handler")}} ，用于定义当该对象上触发了类型为 {{domxref("MessageError")}} 的 {{domxref("MessageEvent")}} 事件时要执行的函数。当接收到一条无法反序列化的消息时会触发此事件。
+  - : 事件处理器，用于定义当该对象上触发了类型为 {{domxref("MessageError")}} 的 {{domxref("MessageEvent")}} 事件时要执行的函数。当接收到一条无法反序列化的消息时会触发此事件。
 
 ## 方法
 

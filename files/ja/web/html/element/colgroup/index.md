@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb5e443fad3be7d126732a85155d5776ad977cad
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<colgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内の列のグループを定義します。
 

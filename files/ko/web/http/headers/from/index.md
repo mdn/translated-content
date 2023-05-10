@@ -1,8 +1,8 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
-translation_of: Web/HTTP/Headers/From
 ---
+
 {{HTTPSidebar}}
 
 **`From`** 요청 헤더는 요청한 사용자 에이전트를 제어하는 인간 사용자의 인터넷 이메일을 포함합니다.

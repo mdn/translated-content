@@ -3,7 +3,7 @@ title: Canvas
 slug: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **Canvas API** 提供了一个通过[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [HTML](/zh-CN/docs/Web/HTML)的{{HtmlElement("canvas")}}元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
 
@@ -89,12 +89,12 @@ Canvas API 是非常强大的，但不总是很容易使用。以下列出的库
 
 ## 标准
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
 Mozilla 程序从 Gecko 1.8 ([Firefox 1.5](/zh-CN/docs/Firefox_1.5_for_developers)) 开始支持 `<canvas>`。它首先是由 Apple 引入的，用于 OS X Dashboard 和 Safari。Internet Explorer 从 IE9 开始支持`<canvas>` ，更旧版本的 IE 中，页面可以通过引入 Google 的 [Explorer Canvas](https://github.com/arv/explorercanvas) 项目中的脚本来获得`<canvas>`支持。Google Chrome 和 Opera 9+ 也支持 `<canvas>`。
 
-## 其它相关
+## 其他相关
 
 - [WebGL](/zh-CN/docs/Web/WebGL)

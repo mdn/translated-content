@@ -3,6 +3,7 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 ---
+
 {{JSRef}}
 
 Вид **`DataView`** предоставляет низко-уровневый интерфейс для чтения и записи многочисленных числовых типов в бинарном {{jsxref("ArrayBuffer")}}, независимо от порядка байтов платформы.

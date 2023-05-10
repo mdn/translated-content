@@ -1,29 +1,15 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - Conteúdo externo
-  - Elemento
-  - HTML
-  - HTML5
-  - Incorporação de conteúdo
-  - Incorporação de conteúdo HTML
-  - Internet
-  - Plugins
-  - Rede
-  - Referencia
-  - Web
-  - embutir
-  - incorporar
-translation_of: Web/HTML/Element/embed
 ---
+
 ## Sumário
 
 O **elemento HTML `<embed>` **incorpora conteúdo externo no ponto especificado no documento. Este conteúdo é fornecido por um aplicativo externo ou outra fonte de conteúdo interativo, como um plug-in de navegador.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note:** **Nota**: Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
+> **Nota:** Este tópico documenta apenas o elemento definido como parte do HTML5. Ele não trata da implementação anterior e não padronizada do elemento.
 
 Lembre-se de que a maioria dos navegadores modernos descontinuou e removeu o suporte para plug-ins de navegador. Portanto, confiar no `<embed>` geralmente não é aconselhável se você deseja que seu site funcione no navegador do usuário comum.
 
@@ -61,7 +47,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Compatibilidade com navegadores
 
-> **Note:** **Nota**: Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o {{Bug("730768")}}). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
+> **Nota:** Atualmente existe uma diferença na implementação pelos navegadores. Enquanto carrega, no Chrome e no Opera, aparece o conteúdo do recurso em HTML, no Firefox, mostra uma mensagem genérica falando que o conteúdo precisa de um _plug-in_ (veja o {{Bug("730768")}}). É recomendado que se use os elementos {{HTMLElement("object")}} ou {{HTMLElement("iframe")}}.
 
 {{Compat("html.elements.embed")}}
 
@@ -70,4 +56,4 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - Outros elementos usados para incorporar conteúdo de vários tipos, incluem: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Posicionamento e dimensionamento de conteúdos incorporados dentro da janela de exibição: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

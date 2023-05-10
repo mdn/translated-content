@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.lineTo()`** da API Canvas 2D conecta o último ponto do sub-caminho (_sub-path_) para as coordenadas `x, y`, através de uma linha (mas na realidade não a desenha).

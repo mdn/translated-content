@@ -3,7 +3,7 @@ title: <area>
 slug: Web/HTML/Element/area
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<area>` 要素**は、イメージマップの中でクリック可能な領域をあらかじめ定義します。*イメージマップ*では、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。
 
@@ -49,7 +49,7 @@ slug: Web/HTML/Element/area
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         {{htmlattrxref("href", "area")}} 属性がある場合は
-        {{ARIARole("link")}}、そうでなければ<a
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>、そうでなければ<a
           href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >対応するロールなし</a
         >

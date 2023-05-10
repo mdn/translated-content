@@ -1,10 +1,8 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - Regla-at
-translation_of: Web/CSS/@charset
 ---
+
 {{ CSSRef }}
 
 ## Resumen
@@ -49,10 +47,8 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentarios        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }} | {{ Spec2('CSS2.1') }} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

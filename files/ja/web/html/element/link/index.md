@@ -3,7 +3,7 @@ title: '<link>: 外部リソースへのリンク要素'
 slug: Web/HTML/Element/link
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
@@ -362,7 +362,7 @@ myStylesheet.onerror = function() {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの {{ARIARole("link")}}</td>
+      <td><code>href</code> 属性つきの <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

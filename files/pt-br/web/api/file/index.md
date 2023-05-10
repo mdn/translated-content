@@ -1,15 +1,9 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - Arquivos
-  - DOM
-  - Files
-  - Referencia
-translation_of: Web/API/File
 ---
-{{gecko_minversion_header("1.9")}}{{APIRef("File API")}}
+
+{{APIRef("File API")}}
 
 ## Sumário
 
@@ -25,13 +19,13 @@ A referência ao arquivo pode ser salva quando o formulário é submetido enquan
 
 **Propriedades**
 
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
   - : A Data da última modificação do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.name")}} {{readonlyinline}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("File.name")}} {{readonlyinline}}
   - : O nome do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}
+- {{domxref("File.fileName")}} {{non-standard_inline}} {{readonlyinline}}
   - : O nome do arquivo referenciado pelo objeto `File`.
-- {{domxref("File.fileSize")}} {{non-standard_inline}} {{readonlyinline}} {{obsolete_inline("7.0")}}
+- {{domxref("File.fileSize")}} {{non-standard_inline}} {{readonlyinline}}
   - : O tamanho do arquivo referenciado, em bytes.
 
 A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
@@ -40,11 +34,11 @@ A interface `File` herda as propriedades da interface {{domxref("Blob")}}.
 
 ## Métodos
 
-- {{domxref("File.getAsBinary()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+- {{domxref("File.getAsBinary()")}} {{non-standard_inline}}
   - : Retorna uma string contendo os dados do arquivo em formato binário.
-- {{domxref("File.getAsDataURL()")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+- {{domxref("File.getAsDataURL()")}} {{non-standard_inline}}
   - : Uma string contendo os dados do arquivo codificados como `data:` URL.
-- {{domxref("File.getAsText()","File.getAsText(string encoding)")}} {{non-standard_inline}} {{obsolete_inline("7.0")}}
+- {{domxref("File.getAsText()","File.getAsText(string encoding)")}} {{non-standard_inline}}
   - : Retorna o conteúdo do arquivo como uma string em que os dados do arquivo são interpretados como texto, usando a codificação passada por parâmetro.
 
 ## Especificações

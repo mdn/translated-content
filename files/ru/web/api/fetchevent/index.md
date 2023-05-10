@@ -3,6 +3,7 @@ title: FetchEvent
 slug: Web/API/FetchEvent
 translation_of: Web/API/FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 Это тип событий `fetch`, обрабатываемых в {{domxref("ServiceWorkerGlobalScope", "глобальном контексте service worker", "", 1)}}. Данное событие содержит данные о запросе, включая его цель. Оно предоставляет метод {{domxref("FetchEvent.respondWith", "event.respondWith()")}}, с помощью которого service worker может ответить на запрос.

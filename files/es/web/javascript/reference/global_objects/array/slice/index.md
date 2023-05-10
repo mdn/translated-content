@@ -1,11 +1,9 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Arreglo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/slice
 ---
+
 {{JSRef}}
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
@@ -209,17 +207,11 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Observaciones                                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3ª edición                                                                                    | Estandar                 | Definición inicial Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES2015', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ES2015')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
-
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Ver también
 

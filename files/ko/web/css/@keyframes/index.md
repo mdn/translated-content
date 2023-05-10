@@ -1,12 +1,6 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-tags:
-  - Animations
-  - At-rule
-  - CSS
-  - Reference
-translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 
@@ -116,17 +110,17 @@ translation_of: Web/CSS/@keyframes
 
 See [CSS animations](/en/CSS/CSS_animations) for examples.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## Notes
 
-1. @keyframes not supported in an inline or scoped stylesheet in Firefox ({{bug(830056)}}).
+1. @keyframes not supported in an inline or scoped stylesheet in Firefox ([Firefox bug 830056](https://bugzil.la/830056)).
 
 ## See also
 

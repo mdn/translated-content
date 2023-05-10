@@ -32,12 +32,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## 仕様書
 
-| 仕様書                                | 状態                     | 備考     |
-| ------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSS4 Colors')}}           | {{Spec2('CSS4 Colors')}} |          |
-| {{SpecName('CSS3 Colors')}}           | {{Spec2('CSS3 Colors')}} |          |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}      |          |
-| {{SpecName('CSS1')}}                  | {{Spec2('CSS1')}}        | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,23 +1,19 @@
 ---
 title: code
 slug: Web/HTML/Element/code
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/code
 original_slug: Web/HTML/Elemento/code
 ---
+
 ### Definición
 
 - Es el apropiado para marcar el código de un programa.
   - : **Sus etiquetas son**: \<code> y \</code> (ambas obligatorias)
-  
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+
+    **Puede contener**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

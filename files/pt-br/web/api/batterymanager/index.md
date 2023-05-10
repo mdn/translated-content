@@ -1,12 +1,8 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
-tags:
-  - API
-  - Battery API
-  - Referencia
-translation_of: Web/API/BatteryManager
 ---
+
 {{APIRef("Battery API")}}
 
 ## Resumo

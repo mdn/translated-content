@@ -1,22 +1,15 @@
 ---
 title: Negociação de conteúdo
 slug: Web/HTTP/Content_negotiation
-tags:
-  - Content Negotiation Reference
-  - HTTP
-  - NeedsTranslation
-  - Negociação de conteúdo
-  - Referência em Negociação de Conteúdo
-  - TopicStub
-translation_of: Web/HTTP/Content_negotiation
 ---
+
 {{HTTPSidebar}}No [HTTP](/pt-BR/docs/Glossary/HTTP), **_negociação de conteúdo_** é o mecanismo que é usado para servir diferentesrepresentações de um recurso no mesmo URI, de forma que o agente do usuáriopossa especificar qual é a melhor representação adequada ao usuário(por exemplo, qual idioma de um documento, qual formato de imagem ouqual codificação de conteúdo)
 
 ## Princípios da negociação do conteúdo
 
 Um documento específico é denominado _recurso_. Quando um cliente quer obtê-lo, ele o requisita usando sua URL. O servidor usa esta URL para escolherum das variantes que ele provê - cada variante sendo chamada de _representação_ - e retorna essa representação específica para o cliente. O recurso de forma geral, bem como suas representações, têm uma URL específica. Como uma representação específica é escolhida quando um recurso é chamado é determinado pela _negociação de conteúdo_ e existem algumas maneiras de negociar entre entre o cliente e o servidor.
 
-![](https://mdn.mozillademos.org/files/13789/HTTPNego.png)
+![](httpnego.png)
 
 A determinação da representação mais adequada é feita através de um dos dois mecanismos:
 
@@ -29,7 +22,7 @@ Ao longo dos anos, outras propostas de negociação de conteúdo, como _negocia�
 
 Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou outro tipo de agente do usuário) envia diversos cabeçalhos HTTP junto com a URL. Estes cabeçalhos descrevem a escolha preferida do usuário. O servidor usa-os como sugestões e um algoritmo intero escolhe o melhor conteúdo para ser servido ao usuário. O algoritmo é específico para cada servidor e não é definido no padrão. Veja, por-exemplo, o [algoritmo de negociação do Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
 
-![](https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png)
+![](httpnegoserver.png)
 
 O padrão HTTP/1.1 define uma lista de cabeçalhos-padrão que iniciam a negociação baseada no servidor ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Apesar do {{HTTPHeader("User-Agent")}} não estar formalmente na lista, ele é, às vezes, também usado para enviar uma representação específica do recurso requisitado, apesar disso não ser considerado uma boa prática. O servidor usa o cabeçalho {{HTTPHeader("Vary")}} para indicar quais cebeçalhos de fato foram usados na negociação do conteúdo (ou, mais precisamente, nos cabeçahos de resposta associados), de forma que [caches](/pt-BR/docs/Web/HTTP/Caching) possam funcionar de forma otimizada.
 
@@ -109,6 +102,6 @@ Server-driven negotiation suffers from a few downsides: it doesn't scale well. T
 
 From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
 
-![](https://mdn.mozillademos.org/files/13795/HTTPNego3.png)
+![](httpnego3.png)
 
 Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.

@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/ins
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajouté dans un document.
 

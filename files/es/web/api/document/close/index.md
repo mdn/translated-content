@@ -1,8 +1,8 @@
 ---
 title: Document.close()
 slug: Web/API/Document/close
-translation_of: Web/API/Document/close
 ---
+
 {{APIRef("DOM")}}
 
 El método `document.close()` finaliza la escritura de un documento abierta con [document.open()](/en/DOM/document.open).

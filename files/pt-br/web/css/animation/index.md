@@ -1,17 +1,8 @@
 ---
 title: animation
 slug: Web/CSS/animation
-tags:
-  - Animações
-  - Animações CSS
-  - CSS
-  - CSS Animations
-  - CSS3
-  - Propriedade CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 A propriedade CSS abreviada **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.

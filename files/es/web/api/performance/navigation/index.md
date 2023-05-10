@@ -1,17 +1,8 @@
 ---
 title: Performance.navigation
 slug: Web/API/Performance/navigation
-tags:
-  - API
-  - Deprecado
-  - HTTP
-  - Legado
-  - Propiedad
-  - Rendimiento
-  - Solo lectura
-  - Tiempo de navegación
-translation_of: Web/API/Performance/navigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Advertencia:** Esta propiedad está deprecada en [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
@@ -28,13 +19,11 @@ navObject = performance.navigation;
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                                   | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.navigation')}} | {{Spec2('Navigation Timing')}} | Definición inicial. |
+Esta característica ya no está en camino de convertirse en un estándar, ya que la especificación [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) la ha marcado como obsoleta. Utilice la interfaz {{domxref("PerformanceNavigationTiming")}} en su lugar.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.navigation")}}
+{{Compat}}
 
 ## Ver también
 

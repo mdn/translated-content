@@ -36,7 +36,7 @@ Les événements ont trois fonctions:
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - :  Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -61,9 +61,9 @@ Les événements ont trois fonctions:
 - `windowId`
   - : `integer`. L'ID de la fenêtre dans laquelle l'onglet sélectionné a changé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onSelectionChanged")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,21 +1,8 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-tags:
-  - Aprender
-  - Artigo
-  - CSS
-  - Caixas Flexíveis
-  - Flex
-  - Guía
-  - Iniciante
-  - Layout
-  - flexbox
-  - grid css
-  - laioutes css
-  - ordenação
-translation_of: Learn/CSS/CSS_layout/Flexbox
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 
 Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Flexbox está se tornando apto para uso geral. Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS. Este artigo explica todos os seus fundamentos.
@@ -349,12 +336,3 @@ Isso conclui nosso tour sobre o básico de _flexbox_. Esperamos que você tenha 
 No próximo tópico, veremos outro aspecto importante dos Esquemas em CSS: os sistemas de _grid,_ como você pode ver nesse artigo sobre [CSS grid layout](https://blog.alura.com.br/criando-layouts-com-css-grid-layout/).
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## Neste módulo
-
-- [Introdução a Esquemas CSS](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flutuando Elementos com "float"](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamento de elementos](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
-- [Exemplos práticos de posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)

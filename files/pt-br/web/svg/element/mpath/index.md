@@ -1,16 +1,8 @@
 ---
 title: mpath
 slug: Web/SVG/Element/mpath
-tags:
-  - Animação
-  - Caminho
-  - Contorno
-  - Elemento
-  - Movimento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/mpath
 ---
+
 {{SVGRef}}
 
 O sub elemento `mpath` do elemento {{ SVGElement("animateMotion") }} fornece a habilidade de referenciar um elemento externo {{ SVGElement("path") }} como uma definição de um caminho de movimento.
@@ -23,8 +15,8 @@ O sub elemento `mpath` do elemento {{ SVGElement("animateMotion") }} fornece a h
 
 ```html
 <svg width="100%" height="100%"  viewBox="0 0 500 300"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
+     xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink" >
 
   <rect x="1" y="1" width="498" height="298"
         fill="none" stroke="blue" stroke-width="2" />

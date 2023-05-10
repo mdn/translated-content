@@ -1,10 +1,8 @@
 ---
 title: '-webkit-mask-composite'
 slug: Web/CSS/-webkit-mask-composite
-tags:
-  - CSS
-translation_of: Web/CSS/-webkit-mask-composite
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
@@ -62,9 +60,13 @@ Donde:
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-composite")}}
+No forma parte de ningún estándar. Esta propiedad se especifica como {{CSSxRef("mask-composite")}} utilizando diferentes valores.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

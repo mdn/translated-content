@@ -1,15 +1,8 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 ---
+
 {{JSRef}} {{deprecated_header}}O método **`anchor()`** cria uma string começando com uma tag inicial `<a name="...">`, um texto e uma tag final `</a>`.
 
 > **Aviso:** Não use este método. Ao invés, use [DOM APIs](/pt-BR/docs/Web/API/Document_Object_Model). Além disso, a especificação HTML não permite mais que o elemento \<a> tenha um atributo **"name"**, portanto, esse método nem mesmo cria uma tag válida.

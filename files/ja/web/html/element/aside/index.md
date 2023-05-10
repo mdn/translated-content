@@ -3,7 +3,7 @@ title: '<aside>: 余談要素'
 slug: Web/HTML/Element/aside
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<aside>` 要素**は、文書のメインコンテンツと間接的な関係しか持っていない文書の部分を表現します。サイドバーやコールアウトボックスなどを表現するためによく使われます。
 
@@ -63,9 +63,9 @@ slug: Web/HTML/Element/aside
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("feed")}}, {{ARIARole("none")}},
-        {{ARIARole("note")}}, {{ARIARole("presentation")}},
-        {{ARIARole("region")}}, {{ARIARole("search")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role">feed</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/note_role">note</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role">region</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>
       </td>
     </tr>
     <tr>
@@ -110,10 +110,7 @@ slug: Web/HTML/Element/aside
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-aside-element', '&lt;aside&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-aside-element', '&lt;aside&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

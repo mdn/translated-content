@@ -1,11 +1,6 @@
 ---
 title: ':-moz-handler-blocked'
 slug: Web/CSS/:-moz-handler-blocked
-tags:
-  - CSS
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-handler-blocked
 ---
 
 {{Non-standard_header}}{{ CSSRef() }}

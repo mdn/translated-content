@@ -1,18 +1,8 @@
 ---
 title: Prototipos de objetos
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - Aprender
-  - Artículo
-  - Cadena de Prototipos
-  - Constructor
-  - JavaScript
-  - Objetos
-  - Principiante
-  - Prototipo
-  - create()
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. En este artículo, explicaremos como funcionan los prototipos y también cómo se pueden usar las propiedades de estos para añadir métodos a los contructores existentes.
@@ -31,7 +21,7 @@ Bien, para ser exactos, los métodos y propiedades son definidos en la propiedad
 
 En JavaScript, se establece un enlace entre la instancia del objeto y su prototipo (su propiedad `__proto__`, la cual es derivada de la propiedad `prototype` sobre el constructor), y las propiedades y metodos son encontrados recorriendo la cadena de prototipos.
 
-**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
+**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
 
 Vamos a echar un vistazo a algunos ejemplos para intentar aclarar estos conceptos.
 
@@ -59,11 +49,11 @@ var person1 = new Persona('Bob', 'Smith', 32, 'hombre', ['music', 'skiing']);
 
 Si escribe "person1." en su consola JavaScript, debería ver que el navegador intenta completarlo automáticamente con los nombres de miembro disponibles en este objeto:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 En esta lista, podra ver los miembros definidos en el objeto prototipo de person1, que es la Persona() (Persona() es el constructor) - nombre, edad, género, intereses, biografía y saludos. Sin embargo, también verá algunos otros miembros - watch, valueOf, etc - que están definidos en el objeto prototipo de Persona() 's, que es un Objeto (Object). Esto demuestra que el prototipo cadena funciona.
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 Entonces, ¿qué sucede si llama a un método en `person1`, que está definido en `Object`? Por ejemplo:
 
@@ -117,13 +107,13 @@ Verá otros ejemplos de herencia de cadena de prototipos en todo JavaScript - in
 var myString = 'Esto es mi String.';
 ```
 
-`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
+`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
 > **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 
-Anteriormente mostramos cómo [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
+Anteriormente mostramos cómo [`Object.create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
 
 1. Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
 
@@ -172,7 +162,7 @@ Como verá en la siguiente sección, las propiedades definidas en la propiedad P
 
 Esto funciona. No se necesita usarlo con frecuencia, pero puede ser realmente útil cuando se quiera crear una instancia nueva y por alguna razón no se tenga disponible fácilmente una referencia al constructor original.
 
-La propiedad [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
+La propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
 
 ```js
 instanceName.constructor.name
@@ -184,7 +174,7 @@ Intente esto, por ejemplo:
 person1.constructor.name
 ```
 
-> **Nota:** El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
+> **Nota:** El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
 
 ## Modificando prototipos
 
@@ -269,13 +259,3 @@ Este articulo ha cubierto prototipos de objeto JavaScript, incluyendo como las c
 En el proximos articulo vamos a ver como puedes implementar la herencia de funcionalidades entre dos de tus propios objetos personalizados.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/es/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/es/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/es/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/es/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/es/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/es/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

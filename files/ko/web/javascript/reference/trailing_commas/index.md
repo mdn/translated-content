@@ -1,21 +1,8 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
-  - 구문
-  - 자바스크립트
-  - 콤마
-  - 트레일링 콤마
-translation_of: Web/JavaScript/Reference/Trailing_commas
 ---
+
 {{JsSidebar("More")}}
 
 **Trailing commas** ("final commas"라고도 불립니다)는 새로운 엘리먼트나 매개변수, 속성을 JavaScript 코드에 추가할 때 유용합니다. 새로운 속성을 추가할 때, 마지막 줄에 trailing comma가 있다면 그 줄을 수정 없이 그대로 복사해 쓸 수 있습니다. 이외에도 버전 관리 이력이 간단해지고 코드 편집이 더 편해진다는 장점이 있습니다.

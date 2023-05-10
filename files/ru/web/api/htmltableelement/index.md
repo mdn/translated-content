@@ -9,6 +9,7 @@ tags:
   - Интерфейсы
 translation_of: Web/API/HTMLTableElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 Объекты `table` описывают интерфейс [`HTMLTableElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425), который содержит дополнительные свойства и методы (по сравнению с обычным объектным интерфейсом [`element`](/ru/docs/DOM/element) которые также доступны вследствие наследования) для управления внешним видом таблиц HTML.

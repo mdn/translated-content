@@ -5,7 +5,7 @@ slug: Web/API/Element/pointermove_event
 
 {{ApiRef("HTML DOM")}}
 
-一个{{domxref("GlobalEventHandlers","global event handler")}}(全局事件) {{event("pointermove")}} 事件。
+一个{{domxref("GlobalEventHandlers","global event handler")}}(全局事件) `pointermove` 事件。
 
 ## 语法
 
@@ -48,6 +48,16 @@ function init() {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{event("pointermove")}}
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

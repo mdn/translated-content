@@ -1,14 +1,9 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-tags:
-  - Atributos
-  - Crear Atributo
-  - JavaScript
-  - Métodos
-translation_of: Web/API/Document/createAttribute
 original_slug: Web/API/Document/crearAtributo
 ---
+
 {{ ApiRef("DOM") }}
 
 El método **`Document.createAttribute()`** crea un nuevo nodo de tipo atributo (attr), y lo retorna. El objeto crea un nodo implementando la interfaz {{domxref("Attr")}}. El DOM no impone que tipo de atributos pueden ser agregados a un particular elemento de esta forma.

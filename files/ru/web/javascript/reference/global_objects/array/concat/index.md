@@ -8,6 +8,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 Метод **`concat()`** возвращает новый массив, состоящий из массива, на котором он был вызван, соединённого с другими массивами и/или значениями, переданными в качестве аргументов.

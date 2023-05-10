@@ -3,6 +3,7 @@ title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 translation_of: Web/API/HTMLSelectElement/setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`HTMLSelectElement.setCustomValidity()`** устанавливает специальное сообщение для выбранного элемента. Если элемент не имеет пользовательской ошибки в параметре укажите пустую строку.

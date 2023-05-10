@@ -7,6 +7,7 @@ tags:
   - Справка
 translation_of: Web/API/Storage/removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 Если методу `removeItem()` интерфейса {{domxref("Storage")}} передать ключ, то из хранилища будет удалён элемент с указанным ключом.

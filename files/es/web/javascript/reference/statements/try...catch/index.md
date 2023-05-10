@@ -1,14 +1,9 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - Error
-  - Excepción
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Referencia/Sentencias/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración **`try...catch`** señala un bloque de instrucciones a intentar (**`try`**), y especifica una respuesta si se produce una excepción (**`catch`**).

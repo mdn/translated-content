@@ -3,7 +3,7 @@ title: WebGL でのデータ
 slug: Web/API/WebGL_API/Data
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 シェーダープログラムは 3 種類のデータストレージにアクセスでき、それぞれに特定のユースケースがあります。それぞれの種類の変数はデータストアの種類に応じて 1 つまたは両方の種類のシェーダープログラムからアクセスでき、特定の変数の種類に応じてサイトの JavaScript コードからもアクセスできます。
 

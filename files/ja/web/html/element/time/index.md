@@ -3,7 +3,7 @@ title: <time>
 slug: Web/HTML/Element/time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。
 
@@ -156,11 +156,7 @@ _datetime 値_ (機械可読な日時の値) は要素の `datetime` 属性の�
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5.1')}} から変更なし |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

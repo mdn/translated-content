@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` предоставляет возможность получать уведомления об изменении определённых [DOM](/ru/docs/DOM)-элементов. `MutationObserver` является заменой [Mutation Events](/ru/docs/DOM/Mutation_events), определённой в спецификации DOM3 Events.

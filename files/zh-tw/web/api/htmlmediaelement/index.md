@@ -16,7 +16,7 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{domxref("AudioTrackList")}} 會列出包含在該媒體元素內部的{{domxref("AudioTrack")}}物件。
 - {{domxref("HTMLMediaElement.autoplay")}}
-  - : 是一個布林值，表達了 HTML 中是否有{{htmlattrxref("autoplay", "video")}}屬性；意即；表明是否只要在媒體可以播放且不中斷的時候，能夠自動播放。
+  - : 是一個布林值，表達了 HTML 中是否有[`autoplay`](/zh-TW/docs/Web/HTML/Element/video#autoplay)屬性；意即；表明是否只要在媒體可以播放且不中斷的時候，能夠自動播放。
 
     > **備註：** 在網站上自動播放音訊（或是有音訊的影片），可能是惱人的使用者體驗；因此，應該盡可能地避免。如果你必須要有自動播放的功能，你應該讓它是可選擇的（讓使用者特地去啟動）。 However, this can be useful when creating media elements whose source will be set at a later time, under user control.
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
@@ -24,7 +24,7 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.controller")}}
   - : Is a {{domxref("MediaController")}} object that represents the media controller assigned to the element, or `null` if none is assigned.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : Is a {{jsxref('Boolean')}} that reflects the {{htmlattrxref("controls", "video")}} HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
+  - : Is a {{jsxref('Boolean')}} that reflects the [`controls`](/zh-TW/docs/Web/HTML/Element/video#controls) HTML attribute, indicating whether user interface items for controlling the resource should be displayed.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : Returns a {{domxref("DOMTokenList")}} that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The `DOMTokenList` takes one or more of three possible values: `nodownload`, `nofullscreen`, and `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -34,7 +34,7 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : Is a `double` indicating the current playback time in seconds. Setting this value seeks the media to the new time.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : Is a {{jsxref('Boolean')}} that reflects the {{htmlattrxref("muted", "video")}} HTML attribute, which indicates whether the media element's audio output should be muted by default.
+  - : Is a {{jsxref('Boolean')}} that reflects the [`muted`](/zh-TW/docs/Web/HTML/Element/video#muted) HTML attribute, which indicates whether the media element's audio output should be muted by default.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : Is a `double` indicating the default playback rate for the media.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -46,9 +46,9 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : Is a {{jsxref('Boolean')}} that reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which indicates whether the media element should start over when it reaches the end.
+  - : Is a {{jsxref('Boolean')}} that reflects the [`loop`](/zh-TW/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("mediagroup", "video")}} HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
+  - : Is a {{domxref("DOMString")}} that reflects the [`mediagroup`](/zh-TW/docs/Web/HTML/Element/video#mediagroup) HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}
@@ -70,7 +70,7 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("preload", "video")}} HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
+  - : Is a {{domxref("DOMString")}} that reflects the [`preload`](/zh-TW/docs/Web/HTML/Element/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : Is a {{jsxref('Boolean')}} that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio. This is implemented with prefixes in Firefox (`mozPreservesPitch`) and WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
@@ -82,7 +82,7 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("DOMString")}} that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "video")}} HTML attribute, which contains the URL of a media resource to use.
+  - : Is a {{domxref("DOMString")}} that reflects the [`src`](/zh-TW/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
@@ -115,7 +115,7 @@ These attributes are obsolete and should not be used, even if a browser still su
 ### Obsolete event handlers
 
 - {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Sets the {{event("Event_handlers", "event handler")}} called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
+  - : Sets the event handler called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 - {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{Deprecated_Inline}}
   - : Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 

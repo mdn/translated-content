@@ -56,9 +56,9 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 
 Notez que "launcher" n'est pas supporté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ContextType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

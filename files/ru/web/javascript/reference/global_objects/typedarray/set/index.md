@@ -8,6 +8,7 @@ tags:
   - прототип
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
+
 {{JSRef}}
 
 Метод **`set()`** сохраняет значения в типизированном массиве, читая значения из предоставленного массива.

@@ -1,12 +1,9 @@
 ---
 title: Funções assíncronas
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Função
-  - assíncrono
-translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Reference/Statements/funcoes_assincronas
 ---
+
 {{jsSidebar("Statements")}}
 
 A declaração **`async function`** define uma _função assíncrona_, que retorna um objeto {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}}.

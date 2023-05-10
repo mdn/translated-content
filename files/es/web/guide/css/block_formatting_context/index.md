@@ -1,14 +1,8 @@
 ---
 title: Contexto de formato de bloque
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guía
-  - Necesita ejemplos
-  - Referencia
-  - Web
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

@@ -1,13 +1,8 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
-tags:
-  - API
-  - CSSOM View
-  - Referencia
-  - metodo
-translation_of: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 El método **`Window.scroll()`** desplaza la ventana a un lugar particular en el documento.
@@ -52,15 +47,13 @@ window.scroll({
 
 Para desplazarse sobre elementos, mira {{domxref("Element.scrollTop")}} y {{domxref("Element.scrollLeft")}}.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.scroll")}}
+{{Compat}}
 
 ## Ver también
 

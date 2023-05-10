@@ -1,7 +1,6 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
 {{APIRef("WebRTC")}}
 
@@ -59,7 +58,7 @@ audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCI
 audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

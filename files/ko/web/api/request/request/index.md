@@ -1,8 +1,8 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-translation_of: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}
 
 **`Request()`** 생성자는 새로운 {{domxref("Request")}} 객체를 생성하도록 도와줍니다.
@@ -86,13 +86,11 @@ Request 객체ㅡ이 클론을 생성하기 위해서 `Request()` 생성자에 {
 var copy = new Request(myRequest);
 ```
 
-**노트**：마지막의 예시는 [ServiceWorkers](/ko/docs/Web/API/ServiceWorker_API)안에서만 사용 가능합니다。
+> **참고**：마지막의 예시는 [ServiceWorkers](/ko/docs/Web/API/ServiceWorker_API)안에서만 사용 가능합니다。
 
-## 사용
+## 명세서
 
-| 사용                                                             | 상태                     | 꼬릿말 |
-| ---------------------------------------------------------------- | ------------------------ | ------ |
-| {{SpecName('Fetch','#dom-request','Request()')}} | {{Spec2('Fetch')}} |        |
+{{Specifications}}
 
 ## 브라우저 지원현황
 

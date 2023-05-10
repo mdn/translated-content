@@ -22,7 +22,6 @@ HTML 拖放操作基於 {{domxref("Event","DOM 事件模型")}}並且使用繼�
 | [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                       |
 | [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragend)。）           |
 | [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-TW/docs/DragDrop/Drag_Operations#droptargets)。） |
-| {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | 當一個元素不再是被選取中的拖曳元素時觸發。                                                                                                   |
 | [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                             |
 | [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                       |
 | [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-TW/docs/DragDrop/Drag_Operations#dragstart)。）                         |
@@ -54,7 +53,7 @@ This section provides a summary of the basic steps to add drag and drop function
 
 ### Identify what is _draggable_
 
-To make an element _draggable_ requires adding the {{htmlattrxref("draggable")}} attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
+To make an element _draggable_ requires adding the [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
 
 ```js
 function dragstart_handler(ev) {

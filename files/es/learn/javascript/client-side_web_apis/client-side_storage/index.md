@@ -1,17 +1,6 @@
 ---
 title: Almacenamiento del lado cliente
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Almacenaje
-  - Article
-  - CodingScripting
-  - Guía
-  - IndexedDB
-  - JavaScript
-  - Principiante
-  - aprende
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}
@@ -134,7 +123,7 @@ Apliquemos este conocimiento recién descubierto escribiendo un sencillo ejemplo
 
 Puede encontrar el HTML de ejemplo en [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html): contiene un sitio web simple con un encabezado, contenido y pie de página, y un formulario para ingresar tu nombre.
 
-![Ejemplo de almacenamiento](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![Ejemplo de almacenamiento](web-storage-demo.png)
 
 Construyamos el ejemplo para que puedas entender cómo funciona.
 
@@ -243,7 +232,7 @@ Aquí, mostraremos un ejemplo que te permite almacenar notas en tu navegador y v
 
 La aplicación se parece a esta:
 
-![IDB en acción](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![IDB en acción](idb-demo.png)
 
 Cada nota tiene un título y un cuerpo de texto, cada uno editable individualmente. El código JavaScript que veremos a continuación tiene comentarios detallados para ayudarte a comprender lo que está sucediendo.
 
@@ -272,7 +261,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
    window.onload = function () {};
    ```
 
-   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento {{event("load")}} de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
+   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento [`load`](/es/docs/Web/Reference/Events/load) de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
 
 3. Dentro del controlador `window.onload`, agrega lo siguiente:
 
@@ -580,7 +569,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
    }
    ```
 
-3. El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
+3. El siguiente fragmento se tomó del interior de `fetchVideoFromNetwork()` — aquí obtenemos las versiones MP4 y WebM del video usando dos peticiones {{domxref("fetch()", "fetch()")}}. Luego usamos el método {{domxref("blob()", "Body.blob()")}} para extraer el cuerpo de cada respuesta como un blob, dándonos una representación de objeto de los videos que se pueden almacenar y mostrar más adelante.
 
    Sin embargo, tenemos un problema aquí: estas dos solicitudes son asíncronas, pero solo queremos intentar mostrar o almacenar el video cuando ambas promesas se hayan cumplido. Afortunadamente, hay un método incorporado que maneja este problema: {{jsxref("Promise.all()")}}. Este toma un argumento, referencias a todas las promesas individuales que deseas verificar para su cumplimiento colocadas en un arreglo, y en sí mismo se basa en promesas.
 
@@ -651,7 +640,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
 
 El ejemplo anterior ya muestra cómo crear una aplicación que almacenará grandes activos en una base de datos `IndexedDB`, evitando la necesidad de descargarlos más de una vez. Esto ya es una gran mejora para la experiencia del usuario, pero todavía falta una cosa: los archivos HTML, CSS y JavaScript principales aún se deben descargar cada vez que se accede al sitio, lo cual significa que no funcionará cuando no haya conexión de red.
 
-![Fuera de línea](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![Fuera de línea](ff-offline.png)
 
 Aquí es donde entran el [servicio workers](/es/docs/Web/API/Service_Worker_API) y la [API de caché](/es/docs/Web/API/Cache).
 
@@ -726,7 +715,7 @@ Dentro del controlador, primero registramos la URL del activo solicitado. Luego 
 
 Dentro de este bloque usamos {{domxref("CacheStorage.match()")}} para verificar si una solicitud coincidente (es decir, coincide con la URL) se puede encontrar en cualquier caché. Esta promesa se cumple con la respuesta coincidente si se encuentra una coincidencia, o `undefined` si no lo es.
 
-Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/WindowOrWorkerGlobalScope/fetch) la respuesta de la red y la devolvemos en su lugar.
+Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/fetch) la respuesta de la red y la devolvemos en su lugar.
 
 ```js
 self.addEventListener("fetch", function (e) {
@@ -763,13 +752,3 @@ Eso es todo por ahora. Esperamos que hayas encontrado útil nuestro resumen de l
 - [API del servicio worker](/es/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## En este módulo
-
-- [Introducción a las APIs web](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulación de documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Obtener datos del servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [API de terceros](/es/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dibujar gráficos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs de video y audio](/es/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Almacenamiento de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

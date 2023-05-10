@@ -1,9 +1,9 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-translation_of: Web/API/Window/beforeunload_event
 original_slug: Web/Events/beforeunload
 ---
+
 O evento **`beforeunload`** é disparado quando o _window_, o _document_ e seus recursos estão prestes a ser descarregados.
 
 Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma caixa de díalogo aparecerá solicitando ao usuário uma confirmação para sair da página (veja exemplo abaixo). Quando nenhum valor é fornecido, o evento é processado silenciosamente.
@@ -67,7 +67,7 @@ window.addEventListener("beforeunload", function (e) {
 
 Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja {{bug("588292")}}.
 
-Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a [especificação HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) (em inglês).
+Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a [especificação HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) (em inglês).
 
 Note também que vários navegadores para celular ignoram o resultado deste evento (isso que dizer que eles não solicitam a confirmação do usuário). O Firefox possui uma configuração escondida em _about:config_ que faz o mesmo. Em essência, isto significa que o usuário estará sempre confirmando que o documento pode ser descarregado.
 

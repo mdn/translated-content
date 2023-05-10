@@ -1,16 +1,9 @@
 ---
 title: Cuantificadores
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - cuantificadores
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Los cuantificadores indican el número de caracteres o expresiones que deben coincidir.
@@ -152,9 +145,7 @@ console.log(texto.match(regexpNoCodiciosa));
 
 ## Especificaciones
 
-| Especificación                                                                           |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

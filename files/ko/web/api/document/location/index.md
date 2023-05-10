@@ -1,15 +1,8 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.location`** read-only property returns a {{domxref("Location")}} object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
@@ -35,11 +28,11 @@ dump(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

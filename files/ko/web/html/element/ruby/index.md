@@ -1,15 +1,9 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ruby
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<ruby>` 요소**는 루비 주석을 나타냅니다. 루비 주석은 동아시아 문자의 발음을 표기할 때 사용합니다.
 
@@ -97,7 +91,7 @@ translation_of: Web/HTML/Element/ruby
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -4,7 +4,7 @@
 
 同样地，如果你对本文的指南有任何改进的建议，请提出问题（issue）或发起 PR。我们对此表示欢迎。下面进入简体中文翻译指南的正文部分。
 
-> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅 [MDN 的 Markdown](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN)。
+> 若你对 MDN 上使用的 Markdown 格式不熟悉，请参阅[如何使用 markdown 来撰写文档][]。
 
 ## 元数据
 
@@ -15,14 +15,6 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 page-type: web-api-overview
-tags:
-  - API
-  - Fetch
-  - Landing
-  - Reference
-  - Response
-  - XMLHttpRequest
-  - request
 browser-compat: api.fetch
 ---
 ```
@@ -32,10 +24,9 @@ browser-compat: api.fetch
 - `title` 为文档的大标题
 - `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
 - `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
-- `tags` 为[文章标签](https://developer.mozilla.org/zh-CN/docs/MDN/Contribute/Howto/Tag)，被用于站点管理和自动化数据处理
-- `browser-compat` 为[**浏览器兼容性表**](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)对应的宏所使用的元数据。
+- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据。
 
-在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`tags`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
 
 最终在简体中文文档中呈现的元数据如下所示：
 
@@ -64,7 +55,7 @@ slug: Web/API/Fetch_API
 
 对于英文的示例代码块，可以选择翻译其中的注释、字符串、输出结果等等，但不建议对变量、函数、方法等名称进行翻译。
 
-一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏来实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例](https://developer.mozilla.org/zh-CN/docs/MDN/Structures/Live_samples)）。
+一些示例代码块会有与之对应的“实例”（即对示例代码运行效果的实时展示）。这些实例是通过 `{{EmbedLiveSample}}` 等宏来实现的，因为在本地化文档中会翻译英文标题，请**注意一并修改运行实例宏的第一个参数为相对应的中文标题**（参见：[运行实例][]）。
 
 ## 站内链接翻译
 
@@ -202,7 +193,15 @@ Like this.
 
 | 英文 | 简体中文翻译 |
 | --- | ---------- |
+| Accessibility concerns | 无障碍考虑 |
+| Active learning | 动手练习 |
 | Browser compatibility | 浏览器兼容性 |
 | Examples | 示例 |
 | See also | 参见 |
 | Specifications | 规范 |
+| Technical summary | 技术概要 |
+| Usage notes | 使用说明 |
+
+[如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
+[**浏览器兼容性表**]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
+[运行实例]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples

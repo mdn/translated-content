@@ -1,8 +1,8 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-translation_of: Web/CSS/border-block-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-color`** define el color del borde de bloque de un elemento, que se asigna al color del borde físico dependiendo de los elementos de modo de escrituro, direccionalidad y la orientación del texto. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-right-color")}} y {{cssxref("border-left-color")}} dependiendo de los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -55,15 +55,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-color", "border-block-color")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-color")}}
+{{Compat}}
 
 ## Mira también
 

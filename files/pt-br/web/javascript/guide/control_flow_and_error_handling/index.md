@@ -1,15 +1,9 @@
 ---
 title: Controle de Fluxo e Manipulação de Erro
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-  - declarações
-  - declarações de controle
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Declarações
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 O JavaScript suporta um conjunto compacto de declarações, especificamente de fluxo de controle, que você pode utilizar para atribuir uma grande interatividade a páginas web. Este capítulo fornece uma visão geral destas declarações.
@@ -418,7 +412,7 @@ Uma Promise assume um destes estados:
 - _rejected_: operação falha.
 - _settled_: A Promise é fulfilled ou rejected, mas não pending.
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 ### Carregando uma imagem com XHR
 

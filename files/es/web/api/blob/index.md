@@ -1,8 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
-translation_of: Web/API/Blob
 ---
+
 {{ APIRef("File API") }}
 
 ## Resumen
@@ -80,23 +80,11 @@ Al utilizar otros métodos de {{domxref("FileReader")}}, es posible leer los con
 
 ## Especificaciones
 
-| Especificación                                       | Estado                       | Comentario          |
-| ---------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API','#blob','Blob')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob")}}
-
-## Disponilidad del alcance del código en Chrome
-
-El alcance JSM del `Blob`se encuentra disponible sin la necesidad de hacer nada en especial.
-
-En el alcance de arranque, este debe importarse de igual modo:
-
-```js
-const {Blob, Services} = Cu.import('resource://gre/modules/Services.jsm', {});
-```
+{{Compat}}
 
 ## Ver también
 

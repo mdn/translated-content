@@ -1,6 +1,8 @@
 ---
 title: Notification
 slug: Web/API/Notification
+l10n:
+  sourceCommit: 571287e7fe2a51f8790c1dc717e5fb55ca60339d
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -16,13 +18,11 @@ slug: Web/API/Notification
 - {{domxref("Notification.Notification", "Notification()")}}
   - : `Notification` オブジェクトの新しいインスタンスを生成します。
 
-## プロパティ
-
-### 静的プロパティ
+## 静的プロパティ
 
 これらのプロパティは `Notification` オブジェクト自身のみで利用することができます。
 
-- {{domxref("Notification.permission")}} {{readonlyinline}}
+- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
 
   - : 文字列で、通知の表示についての現在の権限を表します。取りうる値は次の通りです。
 
@@ -30,54 +30,52 @@ slug: Web/API/Notification
     - `granted` —通知が表示されることをユーザーが受け入れた。
     - `default` — ユーザーの選択が不明であるため、ブラウザーは値が denied であるかのように動作します。
 
-- {{domxref("Notification.maxActions")}} {{readonlyinline}}
+- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 端末とユーザーエージェントが対応しているアクションの最大数。
 
-### インスタンスプロパティ
+## インスタンスプロパティ
 
 これらのプロパティは `Notification` オブジェクトのインスタンスでのみ使用可能です。
 
-- {{domxref("Notification.actions")}} {{readonlyinline}}
+- {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : コンストラクターの `options` 引数で指定された、通知のアクションの配列です。
-- {{domxref("Notification.badge")}} {{readonlyinline}}
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 通知自体を表示する空間が充分にない場合に通知を表す画像の URL です。
-- {{domxref("Notification.body")}} {{readonlyinline}}
+- {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の本文の文字列です。
-- {{domxref("Notification.data")}} {{readonlyinline}}
+- {{domxref("Notification.data")}} {{ReadOnlyInline}}
   - : 通知のデータの構造化されたクローンを返します。
-- {{domxref("Notification.dir")}} {{readonlyinline}}
+- {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の書字方向です。
-- {{domxref("Notification.lang")}} {{readonlyinline}}
+- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の言語コードです。
-- {{domxref("Notification.tag")}} {{readonlyinline}}
+- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知の ID です。
-- {{domxref("Notification.icon")}} {{readonlyinline}}
+- {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : コンストラクターの `options` 引数で指定された、通知のアイコンの画像 URL です。
-- {{domxref("Notification.image")}} {{readonlyinline}}
+- {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : コンストラクターの `options` 引数で指定された、通知の一部として表示される画像の URL です。
-- {{domxref("Notification.renotify")}} {{readonlyinline}}
+- {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 古い通知が新しい通知に置き換えられた後、ユーザーに通知するかどうかを指定します。
-- {{domxref("Notification.requireInteraction")}} {{readonlyinline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 論理値で、ユーザーがクリックするか閉じるかするまで、通知が自動的に閉じずに残るべきであることを示します。
-- {{domxref("Notification.silent")}} {{readonlyinline}}
+- {{domxref("Notification.silent")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 静かに通知をするかどうかを明示します。つまり、端末の設定に関係なく、通知の際に無音やバイブレーションさせない状態を設定できます。
-- {{domxref("Notification.timestamp")}} {{readonlyinline}}
+- {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 通知が生成されたとき、または適用されるとき (過去、現在、未来) の時刻を示します。
-- {{domxref("Notification.title")}} {{readonlyinline}}
+- {{domxref("Notification.title")}} {{ReadOnlyInline}}
   - : コンストラクターの第 1 引数で指定された通知のタイトルです。
-- {{domxref("Notification.vibrate")}} {{readonlyinline}}
+- {{domxref("Notification.vibrate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : バイブレーションハードウェアを持つ端末のためのバイブレーションパターンを指定します。
 
-## メソッド
-
-### 静的メソッド
+## 静的メソッド
 
 これらのメソッドは `Notification` オブジェクト自体に対してのみ使用できます。
 
 - {{domxref("Notification.requestPermission()")}}
   - : ユーザーに通知を表示する許可をリクエストします。
 
-### インスタンスメソッド
+## インスタンスメソッド
 
 これらのメソッドは `Notification` オブジェクトのインスタンス、または [`prototype`](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) からのみ使用できます。 `Notification` オブジェクトは {{domxref("EventTarget")}} インターフェイスも継承しています。
 
@@ -107,23 +105,21 @@ slug: Web/API/Notification
 
 ```js
 function notifyMe() {
-  // ブラウザーが通知に対応しているかどうかをチェックしましょう
   if (!("Notification" in window)) {
+    // ブラウザーが通知に対応しているか調べる
     alert("このブラウザーはデスクトップ通知に対応していません。");
-  }
-
-  // 通知の許可が既に得られているかどうかをチェックしましょう
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    let notification = new Notification("こんにちは！");
-  }
-
-  // そうでなければ、ユーザーに許可を求める必要があります
-  else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function (permission) {
-      // ユーザーが許可したら、通知を作成しましょう
+  } else if (Notification.permission === "granted") {
+    // 通知権限が既に付与されているかどうかを調べる。
+    // そうであれば、通知を作成
+    const notification = new Notification("こんにちは！");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // ユーザーにその権限を要求する必要がある
+    Notification.requestPermission().then((permission) => {
+      // ユーザーが許可したら、通知を作成
       if (permission === "granted") {
-        let notification = new Notification("こんにちは！");
+        const notification = new Notification("こんにちは！");
+        // …
       }
     });
   }
@@ -133,9 +129,9 @@ function notifyMe() {
 }
 ```
 
-このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/to-do-notifications/tree/gh-pages) (また、[ライブで動作するアプリ](https://mdn.github.io/to-do-notifications/)) を参照してください。
+このページでライブ例を公開するのはやめました。 Chrome や Firefox が別オリジンの {{htmlelement("iframe")}} から要求された通知の許可をしないようになり、その他のブラウザーも従っているからです。動作する例を見る場合は、 [To-do リストの例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（また、[ライブで動作するアプリ](https://mdn.github.io/dom-examples/to-do-notifications/)）を参照してください。
 
-> **メモ:** 上記の例では、通知をユーザーの操作 (ボタンのクリック) から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
+> **メモ:** 上記の例では、通知をユーザーの操作（ボタンのクリック）から起動しました。ユーザーが同意していない通知でユーザーに迷惑をかけるべきではないので、これはベストプラクティスであるだけでなく、今後ブラウザーはユーザーの操作によって起動されたものではない通知の許可の要求を明示的に拒否するようになるでしょう。例えば、 Firefox はバージョン72からすでにこれを行っています。
 
 ## 仕様書
 

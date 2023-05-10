@@ -1,16 +1,8 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Interface
-  - Precisa de Tradução
-  - Referencia
-  - TopicStub
-translation_of: Web/API/MouseEvent
 ---
+
 A interface **`MouseEvent`** representa eventos que ocorrem devido à interação do usuário com um dispositivo apontador (como um mouse). Eventos comuns usando esta interface incluem [`click`](/pt-BR/docs/Web/API/Element/click_event), [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event), [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event), [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event).
 
 **`MouseEvent`** deriva de [`UIEvent`](/pt-BR/docs/Web/API/UIEvent), que por sua vez deriva de [`Event`](/pt-BR/docs/Web/API/Event). Embora o método [`MouseEvent.initMouseEvent()`](/pt-BR/docs/Web/API/MouseEvent/initMouseEvent) seja mantido para compatibilidade com versões anteriores, a criação de um objeto **`MouseEvent`** deve ser feita usando o construtor `MouseEvent()`.
@@ -99,9 +91,9 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 - [`MouseEvent.webkitForce`](/pt-BR/docs/Web/API/MouseEvent/webkitForce) Read only
   - : A quantidade de pressão aplicada ao clicar
 - [MouseEvent.x](/pt-BR/docs/Web/API/MouseEvent/clientX)Read only
-  - : Alias ​​para [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX).
+  - : Alias para [`MouseEvent.clientX`](/pt-BR/docs/Web/API/MouseEvent/clientX).
 - [`MouseEvent.y`](/pt-BR/docs/Web/API/MouseEvent/clientY) Read only
-  - : Alias ​​para [MouseEvent.clientY](/pt-BR/docs/Web/API/MouseEvent/clientY)
+  - : Alias para [MouseEvent.clientY](/pt-BR/docs/Web/API/MouseEvent/clientY)
 
 ## Constantes
 

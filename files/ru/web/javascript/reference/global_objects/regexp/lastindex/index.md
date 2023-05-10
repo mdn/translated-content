@@ -9,6 +9,7 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## Сводка

@@ -1,15 +1,10 @@
 ---
 title: Controlando a verificação ortográfica em formulários HTML
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Gerenciamento de configuração
-  - HTML
-  - Intermediário
-translation_of: Web/HTML/Global_attributes/spellcheck
-translation_of_original: Web/HTML/Controlling_spell_checking_in_HTML_forms
 original_slug: Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML
 ---
-{{ gecko_minversion_header("1.8.1") }} Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.
+
+Firefox 2 introduz suporte à verificação ortográfica para áreas de texto e campos de texto em formulários web. O usuário pode especificar usando a interface about:config se a verificação ortográfica é ou não habilitada e se checará áreas de texto e campos de texto ou somente áreas de texto.
 
 Por padrão, áreas de texto e documentos [`designMode`](/pt-BR/docs/Web/API/Document/designMode) tem ortografia verificada e caixas de texto de uma única linha não tem. Isto é assim porque os usuários do Firefox podem se distrair ou se incomodar se o Firefox marcar coisas como IDs de usuários ou endereços de e-mail como erros de ortografia.
 
@@ -49,7 +44,7 @@ Por exemplo:
 
 Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.
 
-Iniciando no Gecko 9.0 {{ geckoRelease("9.0") }}, a verificação ortográfica usa o atributo {{ htmlattrxref("lang", "input") }} do elemento {{ HTMLElement("input") }} para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo `lang` setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.
+Iniciando no Gecko 9.0, a verificação ortográfica usa o atributo {{ htmlattrxref("lang", "input") }} do elemento {{ HTMLElement("input") }} para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo `lang` setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.
 
 Fazendo assim, se o usuário tem os dicionários de Português e Inglês instalados, e um elemento editável tiver o atributo `lang="en"`, o dicionário inglês será automaticamente usado para este elemento.
 

@@ -11,6 +11,7 @@ tags:
   - регулярные выражения
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка

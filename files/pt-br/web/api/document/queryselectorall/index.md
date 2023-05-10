@@ -1,12 +1,8 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - CSS
-  - JavaScript
-  - querySelector
-translation_of: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Introdução
@@ -50,7 +46,7 @@ Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` cont
 
 ## Especificação
 
-- [API Selectors](http://www.w3.org/TR/selectors-api/)
+- [API Selectors](https://www.w3.org/TR/selectors-api/)
 
 ## Veja também
 

@@ -3,7 +3,7 @@ title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
@@ -468,7 +468,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

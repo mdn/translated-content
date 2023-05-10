@@ -1,11 +1,8 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-tags:
-  - Propiedad CSS
-  - Texto CSS
-translation_of: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -83,10 +80,8 @@ text-decoration-style: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                                           | Comentarios                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style') }} | {{ Spec2('CSS3 Text Decoration') }} | Definición inicial. La propiedad {{cssxref("text-decoration")}} no era una forma reducida anteriormente. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.text-decoration-style")}}
+{{Compat}}

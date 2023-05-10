@@ -3,6 +3,8 @@ title: 行内元素
 slug: Web/HTML/Inline_elements
 ---
 
+{{HTMLSidebar}}
+
 ## 摘要
 
 HTML (超文本标记语言) 元素大多数都是行内元素或[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。一个行内元素只占据它对应标签的边框所包含的空间。下面这个例子说明了行内元素的作用范围：
@@ -21,7 +23,7 @@ HTML (超文本标记语言) 元素大多数都是行内元素或[块级元素](
 span { background-color: #8ABB55; }
 ```
 
-{{ EmbedLiveSample('Inline_example') }}
+{{ EmbedLiveSample('行内元素示例') }}
 
 ## 行内元素与块级元素对比
 
@@ -40,6 +42,6 @@ span { background-color: #8ABB55; }
 - [a](/zh-CN/docs/Web/HTML/Element/a), [bdo](/zh-CN/docs/Web/HTML/Element/bdo), [br](/zh-CN/docs/Web/HTML/Element/br), [img](/zh-CN/docs/Web/HTML/Element/Img), [map](/zh-CN/docs/Web/HTML/Element/map), [object](/zh-CN/docs/Web/HTML/Element/object), [q](/zh-CN/docs/Web/HTML/Element/q), [script](/zh-CN/docs/Web/HTML/Element/Script), [span](/zh-CN/docs/Web/HTML/Element/span), [sub](/zh-CN/docs/Web/HTML/Element/sub), [sup](/zh-CN/docs/Web/HTML/Element/sup)
 - [button](/zh-CN/docs/Web/HTML/Element/button), [input](/zh-CN/docs/Web/HTML/Element/Input), [label](/zh-CN/docs/Web/HTML/Element/label), [select](/zh-CN/docs/Web/HTML/Element/select), [textarea](/zh-CN/docs/Web/HTML/Element/textarea)
 
-## 另请参阅
+## 参见
 
 - [块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)

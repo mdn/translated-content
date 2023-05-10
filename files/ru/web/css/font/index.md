@@ -3,6 +3,7 @@ title: font
 slug: Web/CSS/font
 translation_of: Web/CSS/font
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`font`** является сокращением для {{ Cssxref("font-style") }}, {{ Cssxref("font-variant") }}, {{ Cssxref("font-weight") }}, {{ cssxref("font-stretch") }}, {{ Cssxref("font-size") }}, {{ Cssxref("line-height") }}, и {{ Cssxref("font-family") }}. Кроме того, он позволяет установить системный шрифт для элементов интерфейса.

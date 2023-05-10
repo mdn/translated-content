@@ -1,14 +1,8 @@
 ---
 title: 블록 서식 맥락
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Web
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **블록 서식 맥락**(block format context)은 웹 페이지를 렌더링하는 시각적 CSS의 일부로서, 블록 박스의 레이아웃이 발생하는 지점과 플로팅 요소의 상호작용 범위를 결정하는 범위입니다.

@@ -1,8 +1,8 @@
 ---
 title: Firefox Quantum 57 for developers
 slug: Mozilla/Firefox/Releases/57
-translation_of: Mozilla/Firefox/Releases/57
 ---
+
 {{FirefoxSidebar}}This article provides information about the changes in Firefox 57 (a.k.a. Firefox Quantum) that will affect developers. Firefox 57 was released on November 14, 2017.
 
 ## Firefox 57 === Firefox Quantum
@@ -108,7 +108,7 @@ Sem mudanças.
 
 ### HTML
 
-- `<link rel=”preload”>` (see [Preloading content with rel="preload"](/pt-BR/docs/Web/HTML/Preloading_content)) foi desabilitado no Firefox 57 por causa de vários problemas de compatibilidade da web (por exemplo {{bug(1405761)}}). Espera-se que uma versão melhorada que funcione para recursos não armazenáveis ​​em cache chegue ao Firefox 58.
+- `<link rel=”preload”>` (see [Preloading content with rel="preload"](/pt-BR/docs/Web/HTML/Preloading_content)) foi desabilitado no Firefox 57 por causa de vários problemas de compatibilidade da web (por exemplo {{bug(1405761)}}). Espera-se que uma versão melhorada que funcione para recursos não armazenáveis em cache chegue ao Firefox 58.
 
 ### APIs
 

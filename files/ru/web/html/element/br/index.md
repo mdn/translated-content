@@ -1,12 +1,13 @@
 ---
-title: <br>
+title: <br> - элемент переноса строки
 slug: Web/HTML/Element/br
 tags:
   - HTML
   - Элемент
 translation_of: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<br>`** устанавливает перевод строки в тексте (возврат каретки). Он полезен при написании поэмы или адреса, где важно деление на строки.
 
@@ -18,7 +19,7 @@ translation_of: Web/HTML/Element/br
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](ru/docs/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
 ### Устаревшие атрибуты
 

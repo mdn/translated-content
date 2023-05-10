@@ -54,9 +54,7 @@ console.log(leftFillNum(num, 5));
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.padstart', 'String.prototype.padStart')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

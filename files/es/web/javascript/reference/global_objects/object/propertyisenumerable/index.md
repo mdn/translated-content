@@ -1,14 +1,9 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - Objecto
-  - Property
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 El método **`propertyIsEnumerable()`** regresa un Boleano indicando si la propiedad especificada es enumerable.
@@ -98,15 +93,11 @@ o.propertyIsEnumerable('firstMethod'); // regresa false
 
 ## Especificaciones
 
-| Especificación                                                                                                                               | Estatus                  | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}     | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                     | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
+{{Compat}}
 
 ## Notas específicas para Gecko
 

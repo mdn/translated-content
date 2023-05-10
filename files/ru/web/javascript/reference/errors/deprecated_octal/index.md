@@ -3,6 +3,7 @@ title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are depre
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

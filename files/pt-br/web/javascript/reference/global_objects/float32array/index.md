@@ -1,8 +1,8 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
+
 {{JSRef}}
 
 A array tipada **`Float32Array`** representa uma array de 32-bits contendo floats (correspondendo ao tipo de dados `float` em C) na ordem dos bytes da plataforma. Se o controle sobre a ordem dos bytes for precisa, use {{jsxref("DataView")}}. Os conteúdos iniciam em `0`. Uma vez estabelecido, você pode referenciar os elementos na array usando os métodos do objeto ou usando a síntaxe padrão das arrays (Isto é, usando colchetes)

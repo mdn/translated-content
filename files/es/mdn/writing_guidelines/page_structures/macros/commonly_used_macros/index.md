@@ -1,12 +1,6 @@
 ---
 title: Macros usadas comunmente
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-tags:
-  - CSS
-  - Estructuras
-  - Macros
-  - Referencia
-translation_of: MDN/Structures/Macros/Commonly-used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
 
@@ -41,7 +35,6 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`cssxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs) links to a page in the [CSS Reference](/es/docs/Web/CSS/Reference).
   Ejemplo: `\{{CSSxRef("cursor")}}`, da como resultado: {{CSSxRef("cursor")}}.
 - [`DOMxRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs) enlaces a páginas en la referencia DOM; si incluyes paréntesis al final, la plantilla sabe que debe mostrar el enlace para que aparezca el nombre de una función. Por ejemplo, `\{{DOMxRef("document.getElementsByName()")}}` da como resultado: {{DOMxRef("document.getElementsByName()")}} mientras que `\{{DOMxRef("Node")}}` da como resultado: {{DOMxRef("Node")}}.
-- [`event`](https://github.com/mdn/yari/tree/main/kumascript/macros/event.ejs) enlaces a páginas en la referencia de Evento del DOM, por ejemplo: `\{{Event("change")}}` da como resultado {{Event("change")}}.
 - [`HTMLElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs) enlaza a un elemento HTML en la Referencia HTML.
 - [`htmlattrxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs) enlaza a un atributo HTML, ya sea una descripción de atributo global si solo especificas el nombre del atributo o un atributo asociado con un elemento específico si especificas un nombre de atributo y un nombre de elemento. Por ejemplo, `\{{HTMLAttrxRef("lang")}}` creará este enlace: {{HTMLAttrxRef("lang")}}. `\{{HTMLAttrxRef("type", "input")}}` creará este enlace: {{HTMLAttrxRef("type", "input")}}.
 - [`jsxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs) enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
@@ -50,13 +43,6 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 - [`httpheader`](https://github.com/mdn/yari/tree/main/kumascript/macros/httpheader.ejs) enlaza a un [header de HTTP](/es/docs/Web/HTTP/Headers).
 - [`HTTPMethod`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs) enlaza a un [método de solicitud HTTP](/es/docs/Web/HTTP/Methods).
 - [`HTTPStatus`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs) enlaces a un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status).
-
-### Enlazar a errores
-
-- `Bugs`
-
-  - [`bug`](https://github.com/mdn/yari/tree/main/kumascript/macros/bug.ejs) te permite enlazar a un error en bugzilla.mozilla.org fácilmente usando esta sintaxis: `\{{Bug(123456)}}`. Esto te da: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/tree/main/kumascript/macros/WebkitBug.ejs) inserta un enlace a un error en la base de datos de errores de `WebKit`. For example, `\{{WebkitBug(31277)}}` inserta {{WebkitBug(31277)}}.
 
 ### Ayuda a la navegación para guías multipágina
 
@@ -74,7 +60,7 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 Hay plantillas para casi todas las grandes colecciones de páginas. Por lo general, enlazan a la página principal de `reference/guide/tutorial` (esto, a menudo es necesario porque nuestras rutas de navegación a veces no lo pueden hacer) y colocan el artículo en la categoría apropiada.
 
 - [`CSSRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/CSSRef.ejs) genera la barra lateral para las páginas de referencia CSS.
-- [`HTMLRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLRef.ejs) genera la barra lateral para las páginas de referencia HTML.
+- [`HTMLSidebar`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLSidebar.ejs) genera la barra lateral para las páginas de referencia HTML.
 - [`APIRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/APIRef.ejs) genera la barra lateral para las páginas de referencia de la API web.
 
 ## Formato de propósito general
@@ -130,27 +116,11 @@ No utilices el parámetro en ningún área independiente del navegador (HTML, AP
 
 ##### Sintaxis
 
-`\{{Deprecated_Inline}}` o `\{{Deprecated_Inline("gecko5")}}`
+`\{{Deprecated_Inline}}`
 
-##### Ejemplos
+##### Ejemplo
 
 - Icon: {{Deprecated_Inline}}
-- Insignia: {{Deprecated_Inline("gecko5")}}
-
-#### Obsoleto
-
-[`Obsolete_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Obsolete_Inline.ejs) inserta una marca de obsoleto en línea (`Deprecated_Inline`) para evitar el uso de, por ejemplo, una función, método o propiedad que oficialmente es obsoleto.
-
-No utilices el parámetro en ningún área independiente del navegador (HTML, API, JS, CSS, …).
-
-##### Sintaxis
-
-`\{{Obsolete_Inline}}` u `\{{Obsolete_Inline("js1.8.5")}}`
-
-##### Ejemplos
-
-- Icon: {{Obsolete_Inline}}
-- Badge: {{Obsolete_Inline("js1.8.5")}}
 
 ### Plantilla de insignias
 

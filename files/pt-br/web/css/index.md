@@ -1,15 +1,8 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Estilos
-  - Landing
-  - Layout
-  - Referencia
-translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
 **CSS** (**_Cascading Style Sheets_ ou Folhas de Estilo em Cascata)** é uma linguagem de [estilo](/pt-BR/docs/Web/API/StyleSheet) usada para descrever a apresentação de um documento escrito em [HTML](/pt-BR/HTML) ou em [XML](/pt-BR/docs/Glossary/XML) (incluindo várias linguagens em XML como [SVG](/pt-BR/SVG), [MathML](/pt-BR/docs/Web/MathML) ou [XHTML](/pt-BR/XHTML)). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.

@@ -1,11 +1,9 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
 ---
+
 {{JSRef}}
 
 The **`Number.parseInt()`** method parses a string argument and returns an integer of the specified radix or base.
@@ -51,15 +49,13 @@ if (Number.parseInt === undefined) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## See also
 

@@ -1,17 +1,9 @@
 ---
 title: Trabalhando com objetos
-slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Comparando Objetos
-  - Contrutor
-  - Documento
-  - ECMAScript6
-  - Guia(2)
-  - Iniciante
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 original_slug: Web/JavaScript/Guide/Trabalhando_com_Objetos
 ---
+
 **A linguagem JavaScript é projetada com base em um simples paradigma orientado a objeto. Um objeto é uma coleção de propriedades, e uma propriedade é uma associação entre um nome (ou _chave_) e um valor. Um valor de propriedade pode ser uma função, que é então considerada um _método_ do objeto. Além dos objetos que são pré-definidos no browser, você pode definir seus próprios objetos.**
 
 **Este capítulo descreve como usar objetos, propriedades, funções, e métodos, e como criar seus próprios objetos.**

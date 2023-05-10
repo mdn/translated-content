@@ -1,20 +1,8 @@
 ---
 title: History.pushState()
 slug: Web/API/History/pushState
-tags:
-  - API
-  - DOM HTML
-  - Historial de navegación
-  - History
-  - History API
-  - Navegador
-  - Sesion
-  - URL
-  - Web
-  - historial
-  - pushState
-translation_of: Web/API/History/pushState
 ---
+
 {{APIRef("History API")}}
 
 En un documento [HTML](/es/docs/Web/HTML), el método **`history.pushState()`** anexa un registro en la sesión de historial del navegador.
@@ -29,7 +17,7 @@ history.pushState(state, title, [url])
 
 - `state`
 
-  - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento {{event("popstate")}} es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
+  - : El objeto `state` es un objeto de JavaScript asociado al nuevo registro en el historial creado por `pushState()`. Cuando el usuario navega al nuevo registro, un evento [`popstate`](/es/docs/Web/Reference/Events/popstate) es accionado, y la propiedad `state` del evento contiene una copia del objeto `state` del registro en el historial.
 
     El objeto `state` puede ser cualquier cosa que pueda ser serializada. Porque Firefox guarda los objetos `state` en el disco del usuario para que así puedan ser restaurados luego de que el usuario reinicia el navegador, se impone un límite de 640k caracteres en la representación serializada de un objeto `state`. Si pasas un objeto `state` con una representación serializada más grande que lo mencionado, a `pushState()`, el método arrojará una excepción. Si necesitas más espacio que el mencionado, es recomendable que uses {{domxref("Window.sessionStorage", "sessionStorage")}} y/o {{domxref("Window.localStorage", "localStorage")}}.
 
@@ -46,7 +34,7 @@ En cierto sentido, llamar a `pushState()` es similar a `window.location = "#foo"
 - No tienes que cambiar la URL si no quieres. En contraste, usar `window.location = "#foo";` sólo crea un nuevo registro en el historial si el _hash_ actual no es `#foo`.
 - Puedes asociar datos arbitrarios a tu nuevo registro en el historial. Con el truco del _hash_, necesitas codificar todos los datos relevantes en una corta cadena de texto.
 
-Cabe destacar que `pushState()` nunca hace que el evento {{event("hashchange")}} sea accionado, incluso si la nueva URL difiere de la URL antigua sólo en su _hash_.
+Cabe destacar que `pushState()` nunca hace que el evento [`hashchange`](/es/docs/Web/Reference/Events/hashchange) sea accionado, incluso si la nueva URL difiere de la URL antigua sólo en su _hash_.
 
 En otros documentos, crea u nelemento con una URI `null`.
 
@@ -66,14 +54,11 @@ history.pushState(state, title, url)
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario                                            |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-history-pushstate", "History.pushState()")}} | {{Spec2('HTML WHATWG')}} | Ningún cambio desde {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "history.html#dom-history-pushstate", "History.pushState()")}} | {{Spec2('HTML5 W3C')}}     | Definición Inicial.                                   |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History.pushState")}}
+{{Compat}}
 
 ## Mira también
 

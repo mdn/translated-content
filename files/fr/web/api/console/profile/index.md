@@ -1,6 +1,6 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
+slug: Web/API/console/profile
 tags:
   - API
   - DOM
@@ -33,7 +33,7 @@ console.profile(profileName);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.profile")}}
+{{Compat}}
 
 ## Voir aussi
 

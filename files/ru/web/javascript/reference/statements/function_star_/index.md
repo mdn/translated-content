@@ -9,6 +9,7 @@ tags:
   - Экспериментальный
 translation_of: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Сводка

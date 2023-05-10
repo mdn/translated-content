@@ -1,15 +1,9 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - Cadena
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/lastIndexOf
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

@@ -1,12 +1,8 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-tags:
-  - DOM
-  - Window
-  - print
-translation_of: Web/API/Window/print
 ---
+
 {{ ApiRef() }}
 
 ## Sumário
@@ -15,13 +11,17 @@ Abre a janela de impressão para imprimir o documento atual.
 
 ## Sintaxe
 
-```
-window.print()
+```js-nolint
+print()
 ```
 
-## Notas
+### Parameters
 
-Começando com o Chrome {{CompatChrome(46.0)}} este método é bloqueado dentro de um {{htmlelement("iframe")}} a menos que seu atributo sandbox tem o valor allow-modal .
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Especificação
 
@@ -31,10 +31,10 @@ Começando com o Chrome {{CompatChrome(46.0)}} este método é bloqueado dentro 
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Window.print")}}
+{{Compat}}
 
 ## Veja também
 
-- [Printing](/en/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+- [Printing](/en-US/docs/Web/Guide/Printing)
+- {{ domxref("window.beforeprint_event", "beforeprint") }} event
+- {{ domxref("window.afterprint_event", "afterprint") }} event

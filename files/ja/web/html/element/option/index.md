@@ -3,7 +3,7 @@ title: '<option>: HTML 選択肢要素'
 slug: Web/HTML/Element/option
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<option>` 要素**は、 {{HTMLElement("select")}} 要素、{{HTMLElement("optgroup")}} 要素、{{HTMLElement("datalist")}} 要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。
 
@@ -41,7 +41,7 @@ slug: Web/HTML/Element/option
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("option")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
@@ -73,11 +73,7 @@ slug: Web/HTML/Element/option
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'form-elements.html#the-option-element', '&lt;option&gt;')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-option-element', '&lt;option&gt;')}}         | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;option&gt;')}}                     | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

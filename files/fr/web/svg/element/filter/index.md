@@ -9,7 +9,7 @@ translation_of: Web/SVG/Element/filter
 
 {{SVGRef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour définir des opérations de filtre. Il n'est jamais affiché par lui-même, il est référencé en utilisant l'attribut {{SVGAttr("filter")}} sur un élément SVG ou via la propriété  {{Glossary("CSS")}} {{cssxref("filter")}}.
+L'élément [SVG](/fr/docs/Web/SVG) **`<filter>`** sert de conteneur pour définir des opérations de filtre. Il n'est jamais affiché par lui-même, il est référencé en utilisant l'attribut {{SVGAttr("filter")}} sur un élément SVG ou via la propriété {{Glossary("CSS")}} {{cssxref("filter")}}.
 
 ## Contexte d'utilisation
 

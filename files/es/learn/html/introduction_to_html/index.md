@@ -1,15 +1,6 @@
 ---
 title: Introducción a HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - CodingScripting
-  - Enlaces
-  - Estructura
-  - HTML
-  - Introducción a HTML
-  - Texto
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML
 ---
 

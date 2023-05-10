@@ -11,6 +11,7 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
+
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
 ## Сводка

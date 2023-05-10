@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: navigation ロール'
-slug: Web/Accessibility/ARIA/Roles/Navigation_Role
+slug: Web/Accessibility/ARIA/Roles/navigation_role
 ---
 
 ナビゲーション (`navigation`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、ウェブサイトやページコンテンツをナビゲートするために使用される主要なリンクのグループを識別するために使用します。
@@ -109,10 +109,7 @@ slug: Web/Accessibility/ARIA/Roles/Navigation_Role
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#navigation","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_navigation","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

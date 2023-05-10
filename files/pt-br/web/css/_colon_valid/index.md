@@ -1,15 +1,8 @@
 ---
 title: ':valid'
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Layout
-  - Pseudo-classes
-  - Referencia
-  - Validação
-  - Web
-translation_of: Web/CSS/:valid
 ---
+
 {{CSSRef}}
 
 A pseudo-classe CSS **`:valid`** representa qualquer {{HTMLElement("input")}} ou outro elemento do {{HTMLElement("form")}} cujo conteúdo foi validado com sucesso. Isso permite, facilmente, adicionar uma aparência que ajude o usuário a identificar os campos validados.

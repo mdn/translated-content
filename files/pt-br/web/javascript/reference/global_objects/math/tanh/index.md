@@ -1,8 +1,8 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 A função **`Math.tanh()`** retorna a tangente hiperbólica de um número, que é:

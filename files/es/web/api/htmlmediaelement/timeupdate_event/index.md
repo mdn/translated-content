@@ -1,7 +1,6 @@
 ---
 title: 'HTMLMediaElement: timeupdate'
 slug: Web/API/HTMLMediaElement/timeupdate_event
-translation_of: Web/API/HTMLMediaElement/timeupdate_event
 ---
 
 El evento `timeupdate` es llamado cuando el tiempo indicado por el atributo `currentTime` es actualizado.
@@ -34,21 +33,21 @@ La frecuencia del evento depende de la carga del sistema, pero se encuentra en u
 
 ## Eventos Relacionados
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/es/docs/Web/Reference/Events/playing)
+- [`waiting`](/es/docs/Web/Reference/Events/waiting)
+- [`seeking`](/es/docs/Web/Reference/Events/seeking)
+- [`seeked`](/es/docs/Web/Reference/Events/seeked)
+- [`ended`](/es/docs/Web/Reference/Events/ended)
+- [`loadedmetadata`](/es/docs/Web/Reference/Events/loadedmetadata)
+- [`loadeddata`](/es/docs/Web/Reference/Events/loadeddata)
+- [`canplay`](/es/docs/Web/Reference/Events/canplay)
+- [`canplaythrough`](/es/docs/Web/Reference/Events/canplaythrough)
+- [`durationchange`](/es/docs/Web/Reference/Events/durationchange)
+- [`timeupdate`](/es/docs/Web/Reference/Events/timeupdate)
+- [`play`](/es/docs/Web/Reference/Events/play)
+- [`pause`](/es/docs/Web/Reference/Events/pause)
+- [`ratechange`](/es/docs/Web/Reference/Events/ratechange)
+- [`volumechange`](/es/docs/Web/Reference/Events/volumechange)
+- [`suspend`](/es/docs/Web/Reference/Events/suspend)
+- [`emptied`](/es/docs/Web/Reference/Events/emptied)
+- [`stalled`](/es/docs/Web/Reference/Events/stalled)

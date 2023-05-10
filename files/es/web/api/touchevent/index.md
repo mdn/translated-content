@@ -1,8 +1,8 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-translation_of: Web/API/TouchEvent
 ---
+
 {{ APIRef("Touch Events") }}
 
 La interfaz **`TouchEvent`** representa un evento enviado cuando cambia el estado de los contactos con una superficie sensible al tacto. Esta superficie puede ser una pantalla táctil o un trackpad, por ejemplo. El evento puede describir uno o mas puntos de contacto con la pantalla e incluye soporte para detectar el movimiento, adición y remoción de puntos de contacto, etc.
@@ -39,11 +39,11 @@ Hay varios tipos de eventos que pueden ser disparados (activados) para indicar q
 
 > **Nota:** Es importante observar que en muchos casos, Los eventos táctiles y de mouse se envían (para permitir que el código no táctil específico aún interactúe con el usuario). Si usa eventos táctiles, debe llamar a {{domxref ("event.preventDefault ()")}} para evitar que también se envíe el evento del mouse.
 
-### {{event("touchstart")}}
+### [`touchstart`](/es/docs/Web/Reference/Events/touchstart)
 
 Sent when the user places a touch point on the touch surface. The event's target will be the {{ domxref("element") }} in which the touch occurred.
 
-### {{event("touchend")}}
+### [`touchend`](/es/docs/Web/Reference/Events/touchend)
 
 Sent when the user removes a touch point from the surface (that is, when they lift a finger or stylus from the surface). This is also sent if the touch point moves off the edge of the surface; for example, if the user's finger slides off the edge of the screen.
 
@@ -51,7 +51,7 @@ The event's target is the same {{ domxref("element") }} that received the `touch
 
 The touch point (or points) that were removed from the surface can be found in the {{ domxref("TouchList") }} specified by the `changedTouches` attribute.
 
-### {{event("touchmove")}}
+### [`touchmove`](/es/docs/Web/Reference/Events/touchmove)
 
 Sent when the user moves a touch point along the surface. The event's target is the same {{ domxref("element") }} that received the `touchstart` event corresponding to the touch point, even if the touch point has moved outside that element.
 
@@ -59,7 +59,7 @@ This event is also sent if the values of the radius, rotation angle, or force at
 
 > **Nota:** The rate at which `touchmove` events is sent is browser-specific, and may also vary depending on the capability of the user's hardware. You must not rely on a specific granularity of these events.
 
-### {{event("touchcancel")}}
+### [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel)
 
 Sent when a touch point has been disrupted in some way. There are several possible reasons why this might happen (and the exact reasons will vary from device to device, as well as browser to browser):
 
@@ -72,13 +72,13 @@ Sent when a touch point has been disrupted in some way. There are several possib
 {{SeeCompatTable}}
 
 - {{ domxref("GlobalEventHandlers.ontouchstart") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchstart")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
 - {{ domxref("GlobalEventHandlers.ontouchend") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchend")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchend`](/es/docs/Web/Reference/Events/touchend) event.
 - {{ domxref("GlobalEventHandlers.ontouchmove") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchmove`](/es/docs/Web/Reference/Events/touchmove) event.
 - {{ domxref("GlobalEventHandlers.ontouchcancel") }} {{experimental_inline}}
-  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchcancel")}} event.
+  - : A {{domxref("GlobalEventHandlers","global event handler")}} for the [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel) event.
 
 ## Ejemplo
 
@@ -86,14 +86,11 @@ See the [example on the main Touch events article](/en/DOM/Touch_events#Example)
 
 ## Especificaciones
 
-| Specification                                                                                | Status                               | Comment                                                                                   |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------- |
-| {{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}} | {{Spec2('Touch Events 2')}} | Added `ontouchstart`, `ontouchend`, `ontouchmove`, `ontouchend` global attribute handlers |
-| {{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}     | {{Spec2('Touch Events')}}     | Definición inicial.                                                                       |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## See also
 

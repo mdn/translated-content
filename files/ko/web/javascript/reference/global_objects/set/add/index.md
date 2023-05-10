@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 **`add()`** 메서드는 `Set` 개체의 맨 뒤에 주어진 `value`의 새 요소를 추가합니다.

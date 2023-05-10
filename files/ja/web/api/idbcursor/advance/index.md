@@ -11,16 +11,16 @@ slug: Web/API/IDBCursor/advance
 
 ## 構文
 
-```
+```js-nolint
 cursor.advance(count);
 ```
 
-### パラメータ
+### 引数
 
-- count
+- `count`
   - : カーソルが前進する回数
 
-### 戻り値
+### 返値
 
 {{jsxref('undefined')}}
 
@@ -30,7 +30,7 @@ cursor.advance(count);
 
 | 例外                       | 説明                                                    |
 | -------------------------- | ------------------------------------------------------- |
-| `TransactionInactiveError` | この IDBCursor のトランザクションは活性化していません。 |
+| `TransactionInactiveError` | この `IDBCursor` のトランザクションは活性化していません。 |
 | `TypeError`                | `count` パラメーターに渡された値がゼロや負の数です。    |
 | `InvalidStateError`        | カーソルは現在繰り返し中か、最後を過ぎています。        |
 
@@ -54,29 +54,26 @@ function advanceResult() {
       list.appendChild(listItem);
       cursor.advance(2);
     } else {
-      console.log('Every other entry displayed.');
+      console.log('全エントリーを 1 つおきに表示しました。');
     }
   };
 };
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                                   | 策定状況                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-advance-void-unsigned-long-count', 'advance()')}} | {{Spec2('IndexedDB')}}     |          |
-| {{SpecName("IndexedDB 2", "#dom-idbcursor-advance", "advance()")}}                                 | {{Spec2("IndexedDB 2")}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.IDBCursor.advance")}}
 
 ## 関連情報
 
 - [IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションを開始する: {{domxref("IDBDatabase")}}
-- トランザクションを使用する: {{domxref("IDBTransaction")}}
-- キーレンジを設定する: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルを使用する: {{domxref("IDBCursor")}}
-- リファレンスの例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([ライブ例を見る](http://mdn.github.io/to-do-notifications/)。)
+- トランザクションを開始する : {{domxref("IDBDatabase")}}
+- トランザクションを使用する : {{domxref("IDBTransaction")}}
+- キーレンジを設定する : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルを使用する : {{domxref("IDBCursor")}}
+- リファレンスの例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([ライブ例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

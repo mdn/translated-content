@@ -1,15 +1,8 @@
 ---
 title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
-tags:
-  - Access-Control-Allow-Credencials
-  - CORS
-  - HTTP
-  - Referencia
-  - credenciales
-  - encabezado
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 El encabezado de respuesta **`Access-Control-Allow-Credentials`** le dice al navegador si exponer la respuesta al código JavaScript (del frontend) cuando el modo credenciales en la petición es incluído.
@@ -64,13 +57,11 @@ fetch(url, {
 
 ## Especificaciones
 
-| Especifiación                                                                                                                        | Estado                   | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#http-access-control-allow-credentials', 'Access-Control-Allow-Credentials')}} | {{Spec2("Fetch")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Access-Control-Allow-Credentials")}}
+{{Compat}}
 
 ## Ver también
 

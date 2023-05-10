@@ -1,8 +1,8 @@
 ---
 title: www와 비-www URL 중에서 선택하기
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트 소유자들이 반복해서 하게 되는 질문은 비-www 혹은 www URL 중 무엇을 선택해야 하는가입니다. 이 페이지는 그에 대해 최선의 결론을 내기 위한 조언을 제공합니다.
@@ -36,7 +36,7 @@ _표준_ 웹 사이트를 선택하기 위한 서로 다른 방법들이 있습�
 
 [HTML5 보일러플레이트 프로젝트](https://github.com/h5bp/html5-boilerplate)는 [하나의 도메인을 다른 도메인으로 리다이렉티시키도록 Apache 서버 구성하는 방법](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258)에 대한 예제를 가지고 있습니다.
 
-### *`<link rel="canonical">` *사용하기
+### \<link rel="canonical"> 사용하기
 
 페이지의 정규 주소가 무엇인지를 가리키기 위해 페이지에 특별한 HTML {{HTMLElement("link")}} 엘리먼트를 추가하는 것이 가능합니다. 이것은 페이지를 보는 사람에게는 별 다른 영향이 없지만 검색 엔진 크롤러에게 페이지가 실제로 위치한 곳을 알려줍니다. 그렇게 하면 검색 엔진이 동일한 페이지를 여러 번 색인하지 않으므로, 중복 컨텐츠 혹은 어떤 종류의 스팸으로 간주하게 될 수도 있고 심지어 검색 엔진 결과 페이지에서 당신의 페이지를 제거하거나 우선순위가 낮아질 수도 있습니다.
 

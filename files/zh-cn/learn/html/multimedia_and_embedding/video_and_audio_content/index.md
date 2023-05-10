@@ -41,7 +41,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 传统的解决方案能够解决许多这样的问题，前提是它能够正确的工作。幸运的是，几年之后 {{glossary("HTML5")}} 标准提出，其中有许多的新特性，包括 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 标签，以及一些 {{Glossary("JavaScript")}} 和 {{Glossary("API","APIs")}} 用于对其进行控制。在这里，我们不讨论有关 JavaScript 的问题，仅仅讲解有关 HTML 的基础。
 
-我们不会教你如何制作音频和视频，因为那需要完全不同的技术。我们已经为你的试验提供了一些视频和音频的文件（ [sample audio and video files and example code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) ），以防止你自己没有。
+我们不会教你如何制作音频和视频，因为那需要完全不同的技术。我们已经为你的试验提供了一些视频和音频的文件（[示例音频和视频文件以及示例代码的链接](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)），以防止你自己没有。
 
 > **备注：** 在你开始之前，你应当了解一些 {{glossary("OVP","OVPs")}} (在线视频提供商) 例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/)、[Bilibili](https://www.bilibili.com)等，以及在线音频提供商例如 [Soundcloud](https://soundcloud.com/)。这些公司提供方便、简单的方式来支持视频，所以你不必担心庞大的带宽消耗。OVPS 甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们将讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
@@ -57,9 +57,9 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 当中的一些属性如下：
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
   - : 同 {{htmlelement("img")}} 标签使用方式相同，`src` 属性指向你想要嵌入网页当中的视频资源，他们的使用方式完全相同。
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)
   - : 用户必须能够控制视频和音频的回放功能。你可以使用 `controls` 来包含浏览器提供的控件界面，同时你也可以使用合适的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 创建自己的界面。界面中至少要包含开始、停止以及调整音量的功能。
 - `<video>` 标签内的内容
   - : 这个叫做**后备内容** — 当浏览器不支持 `<video>` 标签的时候，就会显示这段内容，这使得我们能够对旧的浏览器提供回退内容。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
@@ -104,11 +104,9 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 浏览器并不全支持相同的 codecs，所以你得使用几个不同格式的文件来兼容不同的浏览器。如果你使用的格式都得不到浏览器的支持，那么媒体文件将不会播放。
 
-要使你的媒体文件在不同平台，不同设备的浏览器上都可观看，这需要多种编码器组合使用，但是这是一种非常麻烦的事，所以可以参考{{SectionOnPage("/en-US/docs/Web/Media/Formats/Containers", "Choosing the right container")}}来选择最适合的容器格式，同样的，参考{{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_codecs", "Choosing a video codec")}}和{{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing an audio codec")}}选择编码格式
+要使你的媒体文件在不同平台，不同设备的浏览器上都可观看，这需要多种编码器组合使用，但是这是一种非常麻烦的事，所以可以参考[选择合适的容器](/zh-CN/docs/Web/Media/Formats/Containers#choosing_the_right_container)来选择最适合的容器格式，同样地，参考[选择视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs#选择视频编解码器)和[选择音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs#选择音频编解码器)选择编码格式
 
 需要记住的另一件事：同一款浏览器，移动版与桌面版支持的格式可能会有不同。最重要的是，它们都可以减轻媒体播放的处理负担（对于所有媒体或仅针对其内部无法处理的特定类型）。这意味着设备的媒体支持还部分取决于用户安装了什么软件。
-
-\<!-- 注：这并没有那么简单，你可以从这里看到 [音视频编码兼容表](/zh-CN/docs/Web/HTML/Supported_media_formats#浏览器兼容情况)。此外，许多移动平台的浏览器能够播放一些不支持的格式，但是它们用的却是底层系统的媒体播放器。但这也仅是现在支持。-->
 
 我们该怎么做呢？请看如下例子（你可以点击这里[查看](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)网页，或者点击这里[查看](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)源代码）：
 
@@ -146,17 +144,17 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 新的特性：
 
-- {{htmlattrxref("width","video")}} 和 {{htmlattrxref("height","video")}}
+- [`width`](/zh-CN/docs/Web/HTML/Element/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/video#height)
   - : 你可以用属性控制视频的尺寸，也可以用 {{Glossary("CSS")}} 来控制视频尺寸。无论使用哪种方式，视频都会保持它原始的长宽比 — 也叫做**纵横比**。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)
   - : 这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要应用这个属性在你的网站上，因为用户们会比较反感自动播放的媒体文件。
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop)
   - : 这个属性可以让音频或者视频文件循环播放。同样不建议使用，除非有必要。
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
   - : 这个属性会导致媒体播放时，默认关闭声音。
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/zh-CN/docs/Web/HTML/Element/video#poster)
   - : 这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload)
 
   - : 这个属性被用来缓冲较大的文件，有 3 个值可选：
 
@@ -253,7 +251,7 @@ WEBVTT
 让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 以 .vtt 后缀名保存文件。
-2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
+2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。
 
 如下：
 
@@ -277,7 +275,7 @@ WEBVTT
 
 在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频或者音频 — 如今，大多数手机都能够非常方便的记录视频或者音频，并且你可以将他们上传到你的电脑上面，你可以使用这些功能来记录你的视频或音频。在这时候，你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你解决这些问题，例如 [Miro Video Converter](http://www.mirovideoconverter.com/) 和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手实现它。
 
-如果你无法取得任意的音频或者视频，你可以使用我们已经为你提供的样本（[sample audio and video files](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)）。同时你也可以使用我们的代码来作为参考。
+如果你无法取得任意的音频或者视频，你可以使用我们已经为你提供的样本（[示例音频和视频文件](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)）。同时你也可以使用我们的代码来作为参考。
 
 我们希望你能够：
 
@@ -309,12 +307,3 @@ WEBVTT
 - Automated options to [translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 本章目录
-
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [从 `<object>` 到 `<iframe>`：其它嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [为网页添加矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla 宣传页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -1,8 +1,8 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 O método **`propertyIsEnumerable()`** retorna um booleano indicando quando a propriedade especificada é enumerável e é a propriedade do próprio objeto

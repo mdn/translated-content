@@ -1,11 +1,11 @@
 ---
 title: Geolocalización
 slug: Web/API/Geolocation
-translation_of: Web/API/Geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
-La interfaz **Geolocalización** representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados ​​en la ubicación del usuario.
+La interfaz **Geolocalización** representa un objeto capaz de obtener mediante programación la posición del dispositivo. Se da acceso Web de la ubicación del dispositivo. Esto permite a un sitio Web o aplicación ofrecer resultados personalizados basados en la ubicación del usuario.
 
 Se obtiene un objeto con esta interfaz mediante la propiedad {{domxref("NavigatorGeolocation.geolocation")}} implementado por el objeto {{domxref("Navigator")}}.
 
@@ -31,13 +31,11 @@ Devuelve un valor de largo(`long`) que representa la función de devolución de 
 
 ## Especificaciones
 
-| Especificación                       | Estado                           | Comentario             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificación inicial |
+{{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## Ver también
 

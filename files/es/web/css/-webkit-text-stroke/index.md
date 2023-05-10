@@ -1,13 +1,8 @@
 ---
 title: '-webkit-text-stroke'
 slug: Web/CSS/-webkit-text-stroke
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad
-  - Referencia
-translation_of: Web/CSS/-webkit-text-stroke
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -61,14 +56,11 @@ La propiedad [CSS](/es/docs/Web/CSS) **`-webkit-text-stroke`** especifica la [an
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                                                            | Estado                                 | Comentario              |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ----------------------- |
-| {{SpecName('Compat', '#the-webkit-text-stroke', '-webkit-text-stroke')}}                                                                                                                                                          | {{Spec2('Compat')}}               | Estandarización Inicial |
-| [Referencia CSS Safari '-webkit-text-stroke' en ese documento.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_text_stroke) | Documentación no oficial y no estándar | Documentación Inicial   |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-text-stroke")}}
+{{Compat}}
 
 ## Ver además
 

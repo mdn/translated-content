@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/article
 browser-compat: html.elements.article
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément **`<article>`** représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante (par exemple, dans le cadre d'une syndication). Exemples : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit, un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.
 
@@ -110,7 +110,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 - Des informations à propos de l'auteur d'un élément `<article>` peuvent être fournies au travers de l'élément [`<address>`](/fr/docs/Web/HTML/Element/address), mais cela ne s'applique pas aux éléments `<article>` imbriqués.
 - La date et l'heure de publication d'un élément `<article>` peuvent être donnés en utilisant l'attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) d'un élément [`<time>`](/fr/docs/Web/HTML/Element/time). _Notez que l'attribut [`pubdate`](/fr/docs/Web/HTML/Element/time#attr-pubdate) de [`<time>`](/fr/docs/Web/HTML/Element/time) ne fait plus partie de la norme W3C HTML 5._
 
-## Exemple
+## Exemples
 
 ```html
 <article class="film_review">
@@ -151,6 +151,10 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
   </footer>
 </article>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Spécifications
 

@@ -1,8 +1,8 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
-translation_of: Web/CSS/border-inline-end-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end-color`** [CSS](/es/docs/Web/CSS) property defines the color of the logical inline-end border of an element, que se asigna al estilo de borde físico dependiendo del modo de escritura, la direccionalidad y la orientación del texto del elemento. Esto corresponde a las propiedades {{cssxref("border-top-color")}} y {{cssxref("border-bottom-color")}}, o {{cssxref("border-left-color")}}, y {{cssxref("border-right-color")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -57,15 +57,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                           | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-end-color", "border-inline-end-color")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-inline-end-color")}}
+{{Compat}}
 
 ## Mira también
 

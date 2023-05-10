@@ -1,13 +1,9 @@
 ---
 title: Passo-a-Passo
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - Extensões Web
-  - extensões firefox
-  - passo-a-passo
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Passo-a-Passo
 ---
+
 Neste artigo iremos criar uma Extensão para Firefox do início ao fim.
 
 A extensão adicionará um novo botão na barra de ferramentas do Firefox. Quando clicar no botão se exibirá um popup habilitando a escolha de um animal. Uma vez que o usuário escolher um animal, a página atual do navegador será substituida por uma imagem do animal escolhido.
@@ -27,7 +23,7 @@ Para implementar esse extensão, será necessário:
 
 Você pode visualizar toda a estrutura da extensão da seguinte forma:
 
-![](https://mdn.mozillademos.org/files/11467/beastify-anatomy.svg)
+![](beastify-anatomy.svg)
 
 É uma extensão extremamente simples, mas mostra muitos conceitos básicos da API de Extensões:
 
@@ -252,7 +248,7 @@ Finalmente, nós precisamos incluir as imagens dos animais.
 
 Crie um novo diretório chamado "beasts", e adicione as três imagens nos diretório, com os nomes apropriados. Você pode obter as imagens aqui no [GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou aqui:
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## Empacotando e instalando
 

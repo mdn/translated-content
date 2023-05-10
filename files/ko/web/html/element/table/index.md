@@ -1,16 +1,9 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-  - 표
-translation_of: Web/HTML/Element/table
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<table>` 요소**는 행과 열로 이루어진 표를 나타냅니다.
 
@@ -275,7 +268,7 @@ border: 1px solid black;
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 같이 보기
 

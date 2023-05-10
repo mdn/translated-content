@@ -1,8 +1,8 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
-translation_of: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`node.parentNode`** devuelve el padre del nodo especificado en el árbol.
@@ -31,14 +31,13 @@ Los nodos del tipo `Document` y `DocumentFragment` nunca van a tener un elemento
 
 También devuelve `null` si el nodo acaba de ser creado y no está atado/incorporado al árbol.
 
-## Compatiblidad de navegador
+## Especificaciones
 
-{{Compat("api.Node.parentNode")}}
+{{Specifications}}
 
-## Especificación
+## Compatibilidad con navegadores
 
-- [DOM Level 2 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM Level 3 Core: Node.parentNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+{{Compat}}
 
 ## Ver también
 

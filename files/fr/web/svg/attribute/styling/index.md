@@ -20,4 +20,4 @@ Les _attributs SVG de style_ sont tous les attributs qui peuvent être spécifi�
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.style")}}
+{{Compat}}

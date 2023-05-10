@@ -3,6 +3,7 @@ title: AnimationEvent
 slug: Web/API/AnimationEvent
 translation_of: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 AnimationEvent - это интерфейс представляющий события, содержащие информацию, связанную с анимацией.

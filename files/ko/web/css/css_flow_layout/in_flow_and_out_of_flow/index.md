@@ -1,17 +1,9 @@
 ---
 title: 대열과 탈대열
 slug: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
-tags:
-  - 대열
-  - 대열 레이아웃
-  - CSS
-  - CSS 대열 레이아웃
-  - 안내서
-  - 레이아웃
-  - 중급
-translation_of: Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/대열과_탈대열
 ---
+
 {{CSSRef}}
 
 [이전 안내서](/ko/docs/Web/CSS/CSS_Flow_Layout/%EC%9D%BC%EB%B0%98_%ED%9D%90%EB%A6%84_%EC%86%8D_%EB%B8%94%EB%A1%9D_%EB%B0%8F_%EC%9D%B8%EB%9D%BC%EC%9D%B8_%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83)에서 제가 일반 대열 속 블록 및 인라인 레이아웃에 대해 설명하였습니다. 대열에 속한 모든 요소는 이 메서드를 사용하여 배치됩니다.

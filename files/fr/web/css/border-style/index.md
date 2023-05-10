@@ -51,7 +51,7 @@ border-style: revert;
 border-style: unset;
 ```
 
-> **Note :** La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie  [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
+> **Note :** La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/border-width) et [`border-color`](/fr/docs/Web/CSS/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
 
 La propriété `border-style` peut être définie avec une, deux, trois ou quatre valeurs&nbsp;:
 
@@ -71,7 +71,7 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
     - `none`
       - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus *basse*&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
     - `hidden`
-      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie  (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a *la plus haute priorité* et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
+      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a *la plus haute priorité* et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
     - `dotted`
       - : Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de [`border-width`](/fr/docs/Web/CSS/border-width).
     - `dashed`

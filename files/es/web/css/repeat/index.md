@@ -1,17 +1,9 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS
-  - CSS Grid
-  - Función CSS
-  - Layout
-  - Maquetado
-  - Referencia
-  - Web
-translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
 ---
+
 {{cssref}}
 
 La función [CSS](/es/docs/Web/CSS) **`repeat()`** representa un fragmento repetido de la lista de la pista, permitiendo un gran número de columnas o renglones que exhiben un patrón recurrente para ser escrito de una forma más compacta.
@@ -125,10 +117,8 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Especificaciones
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("CSS Grid", "#funcdef-repeat", "repeat()")}} | {{Spec2("CSS Grid")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: ExtendableEvent.waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 translation_of: Web/API/ExtendableEvent/waitUntil
 ---
+
 {{APIRef("Service Workers API")}}
 
 Метод **`ExtendableEvent.waitUntil()`** сообщает диспетчеру событий, что выполняется действие. Также этот метод может быть использован, для того чтобы определить было ли то действие успешным. В рамках service workers, `waitUntil()` сообщает браузеру, что действие продолжается пока промис не завершится (_promise settles_) и браузер не должен прерывать service worker если он хочет, чтобы это действие завершилось.

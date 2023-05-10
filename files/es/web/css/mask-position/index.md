@@ -1,15 +1,9 @@
 ---
 title: '-webkit-mask-position'
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia CSS
-translation_of: Web/CSS/mask-position
-translation_of_original: Web/CSS/-webkit-mask-position
 original_slug: Web/CSS/-webkit-mask-position
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Sumario
@@ -64,9 +58,9 @@ Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;perc
 
 No forma parte de ninguna especificación.
 
-## Compatibilidad con los distintos nevegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-position")}}
+{{Compat}}
 
 ## Ver tambien
 

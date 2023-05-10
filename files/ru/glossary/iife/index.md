@@ -50,7 +50,3 @@ result; // "Barry"
 
 - [Ben Alman's blog post defining IIFEs](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 - [Quick example](/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (в конце абзаца "Functions", сразу после "Custom objects")
-
-### Основные понятия
-
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} на Wikipedia

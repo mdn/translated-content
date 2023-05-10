@@ -1,9 +1,9 @@
 ---
 title: Introducción al diseño en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 Este artículo resumirá algunas de las características de diseño de páginas web con CSS que ya hemos mencionado en módulos anteriores, como los diferentes valores de {{cssxref ("display")}}, e introducirá algunos de los conceptos que vamos a tratar en este módulo.
@@ -680,18 +680,3 @@ body { max-width: 800px; margin: 0 auto; }
 Este artículo ha proporcionado un breve resumen de todas las tecnologías de diseño que debes conocer. ¡Sigue leyendo para obtener más información sobre cada tecnología individual!
 
 {{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
-
-## En este módulo
-
-- [Introducción al diseño CSS](/es/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flujo normal](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Cuadrícula](/es/docs/Learn/CSS/CSS_layout/Grids)
-- [Flotación](/es/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
-- [Diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Diseño adaptativo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guía para principiantes sobre consultas a medios](/es/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Compatibilidad en navegadores antiguos](/es/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Evaluación del conjunto de elementos básicos de compaginación](/es/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

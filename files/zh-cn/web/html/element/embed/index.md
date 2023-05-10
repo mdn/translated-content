@@ -29,7 +29,7 @@ slug: Web/HTML/Element/embed
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -42,13 +42,13 @@ slug: Web/HTML/Element/embed
 
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
-- {{htmlattrdef("src")}}
+- `src`
   - : 被嵌套的资源的 URL。
-- {{htmlattrdef("type")}}
+- `type`
   - : 用于选择插件实例化的 MIME 类型。
-- {{htmlattrdef("width")}}
+- `width`
   - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子
@@ -71,4 +71,4 @@ slug: Web/HTML/Element/embed
 
 - 其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

@@ -45,7 +45,7 @@ l10n:
 - {{cssxref(':required')}} と {{cssxref(':optional')}}: 必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
 - {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 有効または無効なフォームコントロール（例: HTML の `disabled` 属性が設定されている）、および読み書き可能または読み取り専用のフォームコントロール（例: HTML の `readonly` 属性が設定されている）を対象としています。
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option)  要素などが対象です。）
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option) 要素などが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。他のいくつかは、非常に特殊なニッチな問題を解決することを目的としていたり、まだブラウザーがあまり対応していないものもあります。上に挙げたものはすべて、ブラウザーの対応がかなり進んでいますが、もちろん、フォームの実装を慎重にテストして、対象となるユーザーに動作することを確認する必要があります。
 
@@ -599,22 +599,3 @@ input[type="radio"]:indeterminate {
 これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn/Forms/Form_validation)に移動しましょう。
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

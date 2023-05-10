@@ -1,12 +1,8 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - Arquitectura
-  - HTTP
-  - Rest
-translation_of: Glossary/REST
 ---
+
 El término "Transferencia de Estado Representacional" (**REST**) representa un conjunto de características de diseño de arquitecturas software que aportan confiabilidad, eficiencia y escalibilidad a los sistemas distribuidos. Un sistema es llamado RESTful cuando se ajusta a estas características.
 
 La idea básica de REST es que un recurso, e.j. un documento, es transferido con su estado y su relaciones (hipertexto) mediante formatos y operaciones estandarizadas bien definidas.

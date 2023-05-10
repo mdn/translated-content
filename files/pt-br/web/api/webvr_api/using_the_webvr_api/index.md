@@ -1,8 +1,8 @@
 ---
 title: Using the WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
 > **Nota:** WebVR API is replaced by [WebXR API](/pt-BR/docs/Web/API/WebXR_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
@@ -31,7 +31,7 @@ Once you have everything assembled, you can test to see whether your setup works
 
 To illustrate how the WebVR API works, we'll study our raw-webgl-example, which looks a bit like this:
 
-![](https://mdn.mozillademos.org/files/15121/Capture1.png)
+![](capture1.png)
 
 > **Nota:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/raw-webgl-example/) also.
 
@@ -228,7 +228,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
 
-![](https://mdn.mozillademos.org/files/15123/Capture2.png)
+![](capture2.png)
 
 You'll learn below how the stereoscopic view is actually produced.
 

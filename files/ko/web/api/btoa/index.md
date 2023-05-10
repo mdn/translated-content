@@ -1,17 +1,8 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
-browser-compat: api.btoa
-translation_of: Web/API/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`btoa()`** 함수는 [이진 문자열](/ko/docs/Web/API/DOMString/Binary)({{jsxref("String")}} 객체 내 모든 문자가 이진 데이터의 바이트 한 개)로부터 {{glossary("Base64")}} 인코딩된 ASCII 문자열을 생성해 반환합니다.
@@ -59,7 +50,7 @@ const notOK = "✓"
 console.log(notOK.codePointAt(0).toString(16)); // 2713: 1바이트 초과
 
 console.log(btoa(ok));    // YQ==
-console.log(btoa(notOK)); // 오휴
+console.log(btoa(notOK)); // 오류
 ```
 
 `btoa()`를 사용해서 유니코드 텍스트를 ASCII로 인코딩해야 할 때 사용할 수 있는 방법 한 가지는, 문자열의 각 16비트 단위가 한 바이트씩 차지하도록 먼저 변환하는 것입니다.

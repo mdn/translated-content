@@ -14,9 +14,10 @@ tags:
 translation_of: Learn/JavaScript/Objects/Object_prototypes
 original_slug: Learn/JavaScript/Объекты/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. В этой статье мы объясним, как работают цепочки прототипов, и рассмотрим, как свойство prototype можно использовать для добавления методов к существующим конструкторам.
 
-| Необходимые знания: | Базовая компьютерная грамотность, базовое понимание HTML и CSS, знакомство с основами JavaScript (см. [Первые шаги](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8) и [Строительные блоки](ru/docs/Learn/JavaScript/Building_blocks)) и основы OOJS (см. [Введение в объекты](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)). |
+| Необходимые знания: | Базовая компьютерная грамотность, базовое понимание HTML и CSS, знакомство с основами JavaScript (см. [Первые шаги](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8) и [Строительные блоки](/ru/docs/Learn/JavaScript/Building_blocks)) и основы OOJS (см. [Введение в объекты](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)). |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:               | Понять прототипы объектов JavaScript, как работают прототипные цепочки и как добавить новые методы в `prototype` свойство.                                                                                                                                                                                                                                                                     |
 
@@ -60,11 +61,11 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 Если вы наберёте «`person1.`» в вашей консоли JavaScript, вы должны увидеть, что браузер пытается автоматически заполнить это с именами участников, доступных на этом объекте:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 В этом списке вы увидите элементы, определённые в конструкторе person 1 — Person() — `name`, `age`, `gender`, `interests`, `bio`, и `greeting`. Однако вы также увидите некоторые другие элементы — `watch`, `valueOf` и т. д. — они определены в объекте прототипа Person (), который является [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 Итак, что произойдёт, если вы вызываете метод в `person1`, который фактически определён в `Object`? Например:
 

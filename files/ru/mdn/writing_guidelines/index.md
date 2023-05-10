@@ -11,7 +11,8 @@ tags:
 translation_of: MDN/About
 original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/ru/docs/MDN")}}
+
+{{MDNSidebar}}
 
 Сайт веб-документации MDN - это развивающаяся платформа для обучения Веб-технологиям и программному обеспечению, на которых основан Веб, включая:
 

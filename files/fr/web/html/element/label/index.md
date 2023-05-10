@@ -1,6 +1,6 @@
 ---
 title: <label>
-slug: Web/HTML/Element/Label
+slug: Web/HTML/Element/label
 tags:
   - Element
   - Formulaires
@@ -10,7 +10,7 @@ tags:
 translation_of: Web/HTML/Element/label
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
 

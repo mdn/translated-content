@@ -1,15 +1,8 @@
 ---
 title: HTML 컨텐츠에 SVG 효과 적용하기
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - HTML
-  - SVG
-  - SVG 효과
-  - 가이드
-  - 필터
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
+
 모던 브라우저들은 HTML 콘텐트에 그래픽 효과를 적용하기 위해 [CSS](/ko/docs/web/CSS) 스타일 내에 [SVG](/ko/docs/Web/SVG)를 사용하는 것을 지원합니다.
 
 스타일에서의 SVG는, 동일 문서 또는 외부 스타일 시트 어느 쪽에서도 지정할 수 있습니다. 다음 3가지 속성이 사용 가능합니다: [`mask`](/ko/docs/Web/CSS/mask), [`clip-path`](/ko/docs/Web/CSS/clip-path), and [`filter`](/ko/docs/Web/CSS/filter).

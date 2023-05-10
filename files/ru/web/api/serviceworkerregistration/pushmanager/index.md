@@ -3,6 +3,7 @@ title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Свойство **`pushManager`** интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к статусу разрешений на push-уведомления.

@@ -1,8 +1,8 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-translation_of: Web/CSS/margin-bottom
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`margin-bottom`** define a [margin area](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) na parte inferior de um elemento. Um valor positivo coloca o valor mais longe de outros elementos vizinhos, enquanto um valor negativo, aproxima.

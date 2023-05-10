@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
+
 {{JSRef}}
 
 A propriedade **`sticky`** indica se a busca é "pegajosa" (percorre a string somente a partir do índice indicado pela propriedade {{jsxref("RegExp.lastIndex", "lastIndex")}} desta expressão regular). A propriedade `sticky` em um objeto de expressão regular é somente para leitura.

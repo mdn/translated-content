@@ -677,7 +677,7 @@ Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL
 
 1. Pour commencer, faites une copie locale du fichier [`threejs-cube/index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) dans un nouveau répertoire, ensuite enregistrez une copie de [`metal003.png`](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) dans le même répertoire. Il s'agit de l'image que nous utiliserons comme texture pour la surface du cube.
 2. Ensuite, créez un fichier intitulé `script.js`, dans le même répertoire.
-3. Ensuite, vous devrez [télécharger la bibliothèque three.min.js](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js)  et l'enregistrer dans le même répertoire.
+3. Ensuite, vous devrez [télécharger la bibliothèque three.min.js](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) et l'enregistrer dans le même répertoire.
 4. Maintenant que `three.js` est attaché à notre page, on peut écrire du code JavaScript qui l'utilise dans `script.js`. Commençons par créer une nouvelle scène, ajoutez ce qui suit au fichier `script.js`&nbsp;:
 
     ```js
@@ -805,13 +805,3 @@ Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de c
   - : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données depuis le server](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Les API tierces](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- **Dessiner des graphismes**
-- [Les API vidéo et audio](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

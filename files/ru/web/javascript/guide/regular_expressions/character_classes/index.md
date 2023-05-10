@@ -1,6 +1,6 @@
 ---
 title: Классы символов
-slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 tags:
   - Guide
   - JavaScript
@@ -10,6 +10,7 @@ tags:
   - character classes
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 Классы символов позволяют различать виды символов, к примеру, как различия между буквами и цифрами.

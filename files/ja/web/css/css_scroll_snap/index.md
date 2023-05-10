@@ -47,9 +47,7 @@ slug: Web/CSS/CSS_Scroll_Snap
 
 ## 仕様書
 
-| 仕様書                                 | 状態                                | 備考     |
-| -------------------------------------- | ----------------------------------- | -------- |
-| {{SpecName("CSS Scroll Snap Points")}} | {{Spec2("CSS Scroll Snap Points")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

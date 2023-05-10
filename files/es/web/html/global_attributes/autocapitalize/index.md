@@ -1,13 +1,6 @@
 ---
 title: autocapitalización
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Atributos globales
-  - HTML
-  - Reference
-  - Referencia
-  - autocapitalización
-translation_of: Web/HTML/Global_attributes/autocapitalize
 original_slug: Web/HTML/Atributos_Globales/autocapitalize
 ---
 
@@ -26,10 +19,8 @@ El atributo {{HTMLAttrDef("autocapitalize")}} nunca hace que se habilite la auto
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                     | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{ Spec2('HTML WHATWG') }} |            |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.autocapitalize")}}
+{{Compat}}

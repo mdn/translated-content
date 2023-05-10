@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.RuntimeError()`** permet de créer un nouvel objet WebAssembly `RuntimeError`. C'est ce type d'exception qui est déclenchée lorsque WebAssembly définit [une trappe](http://webassembly.org/docs/semantics/#traps).
 

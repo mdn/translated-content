@@ -1,17 +1,8 @@
 ---
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-tags:
-  - API
-  - Cabeçalho HTTP
-  - HTTP
-  - XHR
-  - XMLHttpRequest
-  - header
-  - metodo
-  - setRequestHeader
-translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 O método **`setRequestHeader()`** de {{domxref("XMLHttpRequest")}} define o valor do cabeçalho de uma requisição HTTP. Ao usar `setRequestHeader()`, você deve chamá-lo depois de chamar o método {{domxref("XMLHttpRequest.open", "open()")}}, mas antes de chamar o método {{domxref("XMLHttpRequest.send", "send()")}}. Se esse método é chamado muitas vezes com o mesmo cabeçalho, os valores são somados em um único cabeçalho de requisição HTTP.

@@ -3,6 +3,7 @@ title: CSSRule
 slug: Web/API/CSSRule
 translation_of: Web/API/CSSRule
 ---
+
 {{APIRef("CSSOM")}}
 
 Интерфейс **CSSRule** представляет собой одно правило CSS. Есть несколько типов правил, перечисленных в разделе [Type constants](#type_constants) ниже.
@@ -45,8 +46,8 @@ The `CSSRule` interface specifies integer constants that can be used in conjunct
 | `CSSRule.FONT_FEATURE_VALUES_RULE` | `14`  | {{domxref("CSSFontFeatureValuesRule")}}                          |                                                                                                                                                                                                                                                           |
 | `CSSRule.VIEWPORT_RULE`            | `15`  | {{domxref("CSSViewportRule")}} {{experimental_inline}}     |                                                                                                                                                                                                                                                           |
 | `CSSRule.REGION_STYLE_RULE`        | `16`  | {{domxref("CSSRegionStyleRule")}} {{experimental_inline}} |                                                                                                                                                                                                                                                           |
-| `CSSRule.UNKNOWN_RULE`             | `0`   | {{domxref("CSSUnknownRule")}} {{obsolete_inline}}             |                                                                                                                                                                                                                                                           |
-| `CSSRule.CHARSET_RULE`             | `2`   | `CSSCharsetRule` {{obsolete_inline}}                                     | (Removed in most browsers.)                                                                                                                                                                                                                               |
+| `CSSRule.UNKNOWN_RULE`             | `0`   | {{domxref("CSSUnknownRule")}}             |                                                                                                                                                                                                                                                           |
+| `CSSRule.CHARSET_RULE`             | `2`   | `CSSCharsetRule`                                     | (Removed in most browsers.)                                                                                                                                                                                                                               |
 
 An up-to-date informal list of constants can be found on the [CSSWG Wiki](http://wiki.csswg.org/spec/cssom-constants).
 

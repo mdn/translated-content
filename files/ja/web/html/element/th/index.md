@@ -3,7 +3,7 @@ title: '<th>: 表見出し要素'
 slug: Web/HTML/Element/th
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、{{htmlattrxref("scope", "th")}} 属性と {{htmlattrxref("headers", "th")}} 属性で定義します。
 
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/th
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        {{ARIARole("columnheader")}} または {{ARIARole("rowheader")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role">columnheader</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role">rowheader</a></code>
       </td>
     </tr>
     <tr>

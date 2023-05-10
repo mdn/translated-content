@@ -123,9 +123,7 @@ console.log(nonenum_only);
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,8 +1,8 @@
 ---
 title: <center>
 slug: Web/HTML/Element/center
-translation_of: Web/HTML/Element/center
 ---
+
 {{deprecated_header()}}
 
 ## 개요
@@ -47,4 +47,4 @@ Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTM
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

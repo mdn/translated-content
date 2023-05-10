@@ -1,13 +1,9 @@
 ---
 title: '-webkit-mask-origin'
 slug: Web/CSS/mask-origin
-tags:
-  - CSS
-  - Referencia
-translation_of: Web/CSS/mask-origin
-translation_of_original: Web/CSS/-webkit-mask-origin
 original_slug: Web/CSS/-webkit-mask-origin
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propiedad [CSS](/es/docs/Web/CSS) `-webkit-mask-origin` determina el origen de una imagen de máscara. El valor de la propiedad {{cssxref("-webkit-mask-position")}} se interpreta en relación al valor de esta propiedad. No se aplica cuando `-webkit-mask-attachment` es `fixed`.
@@ -47,9 +43,9 @@ div {
 }
 ```
 
-## Compatibilidad con los distintos navegadores.
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-origin")}}
+{{Compat}}
 
 ## Ver además
 

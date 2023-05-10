@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Inst
 browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Le constructeur **`WebAssembly.Instance()`** crée un nouvel objet `Instance` qui représente une instance sans état et exécutable d'un [`WebAssembly.Module`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module).
 
@@ -74,6 +74,6 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 ## Voir aussi
 
-- La page  [WebAssembly](/fr/docs/WebAssembly)
+- La page [WebAssembly](/fr/docs/WebAssembly)
 - [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
 - [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

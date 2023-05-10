@@ -1,10 +1,6 @@
 ---
 title: a
 slug: Web/SVG/Element/a
-tags:
-  - Elemento
-  - SVG
-translation_of: Web/SVG/Element/a
 ---
 {{SVGRef}}
 
@@ -13,12 +9,12 @@ O elemento **\<a>** do SVG cria um hiperlink para outras páginas da web, arquiv
 O elemento `<a>` do SVG é um contêiner, o que significa que você pode criar um link em torno do texto (como em HTML), mas também em torno de qualquer elemento.
 
 ```css hidden
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url(https://www.w3.org/2000/svg);
 html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <!-- A link around a shape -->
   <a href="/docs/Web/SVG/Element/circle">
     <circle cx="50" cy="40" r="35"/>
@@ -37,7 +33,7 @@ html,body,svg { height:100% }
 /* As SVG does not provide a default visual style for links,
    it's considered best practice to add some */
 
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace svg url(https://www.w3.org/2000/svg);
 /* Necessary to select only SVG <a> elements, and not also HTML’s.
    See warning below */
 
@@ -86,7 +82,7 @@ svg|a:hover, svg|a:active {
 - {{htmlattrxref("type", "a")}}
   - : A {{Glossary("MIME type")}} for the linked URL.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
 

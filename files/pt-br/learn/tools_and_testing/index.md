@@ -1,23 +1,9 @@
 ---
 title: Ferramentas e teste
 slug: Learn/Tools_and_testing
-tags:
-  - Acessibilidade
-  - Aprendizagem
-  - Automação
-  - CSS
-  - Código
-  - Ferramentas
-  - HTML
-  - Iniciante
-  - JavaScript
-  - Navegadores
-  - Testes
-  - Testes do usuário
-  - Tópico
-translation_of: Learn/Tools_and_testing
 original_slug: Aprender/Ferramentas_e_teste
 ---
+
 {{LearnSidebar}}
 
 Assim que você se sentir mais confortável programando nas tecnologias web básicas (como HTML, CSS e JavaScript), e pegar mais experiência, ler mais recursos, e souber mais dicas e truques, você começará a se deparar com todos os tipos de ferramentas, de CSS e JavaScript precompilados, a automação e testes de aplicações, além de outros assuntos mais avançados. Quando seus projetos começam a crescer e a ficarem mais complexos, você irá querer começar a aproveitar mais dessas ferramentas, e a elaborar planos de testes mais confiáveis para seu código. Esta parte do aprendizado está focada em te dar o que você precisa para iniciar e tomar decisões com melhores informações.

@@ -98,10 +98,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#htmlinputelement", "HTMLInputElement")}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.1')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

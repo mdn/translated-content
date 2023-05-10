@@ -1,9 +1,9 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/pow
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumen
@@ -55,15 +55,11 @@ Math.pow(-7, 1/3); // NaN
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                   | Comentarios                                        |
-| -------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                              | Estándar                 | Definición inicial implementada en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.13', 'Math.pow')}} | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-math.pow', 'Math.pow')}}     | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.pow")}}
+{{Compat}}
 
 ## Ver también
 

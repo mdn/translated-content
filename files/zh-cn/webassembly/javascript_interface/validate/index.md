@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/validate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`**  définit une [opération composite](/fr/docs/Glossary/Composite_operation) à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-composition`** définit une [opération composite](/fr/docs/Glossary/Composite_operation) à utiliser lorsque plusieurs animations touchent simultanément la même propriété.
 
 ## Syntaxe
 

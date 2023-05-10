@@ -5,7 +5,7 @@ slug: Web/API/Storage
 
 {{APIRef("Web Storage API")}}
 
-作为 Web Storage API 的接口，**`Storage` **提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。
+作为 Web Storage API 的接口，**`Storage`** 提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。
 
 如果你想要操作一个域名的会话存储，可以使用 {{domxref("Window.sessionStorage")}}；如果想要操作一个域名的本地存储，可以使用 {{domxref("Window.localStorage")}}。
 

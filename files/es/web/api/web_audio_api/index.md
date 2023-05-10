@@ -1,9 +1,9 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 original_slug: Web_Audio_API
 ---
+
 {{apiref("Web Audio API")}}
 
 La API de Audio Web provee un sistema poderoso y versatil para controlar audio en la Web, permitiendo a los desarrolladores escoger fuentes de audio, agregar efectos al audio, crear visualizaciones de audios, aplicar efectos espaciales (como paneo) y mucho más.
@@ -24,7 +24,7 @@ Un diagrama de flujo simple y típico para el audio web se vería algo como esto
 4. Escoge el destino final del audio, por ejemplo tu sistema de altavoces
 5. Conecta las fuentes a los efectos, y los efectos al destino.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](audio-context_.png)
 
 El tiempo es controlado con alta precisión baja latencia, permitiendo a los desarrolladores escribir código que responda con precisión a los eventos y sea capaz de apuntar a muestras específicas, incluso en una alta frecuencia de muestreo. Por lo tanto, las aplicaciones como las cajas de ritmos y los secuenciadores están a su alcance.
 
@@ -50,7 +50,7 @@ Contenedores y definiciones generales que dan forma a los gráficos de audio en 
   - : Provee una interfaz como para mapear a un grupo de interfaces {{domxref("AudioParam")}}, lo que significa que proporciona los métodos `forEach()`, `get()`, `has()`, `keys()`, y `values()`, como también una propiedad `size`.
 - {{domxref("BaseAudioContext")}}
   - : La interfaz **`BaseAudioContext`** actúa como una definición base para procesamiento de gráficos de audio en y fuera de línea, como lo representa {{domxref("AudioContext")}} y {{domxref("OfflineAudioContext")}} resepectivamente. No tendrás que usar `BaseAudioContext` directamente — tendrás que usar sus características a través de una de éstas dos interfaces heredadas.
-- El evento {{event("ended")}}
+- El evento [`ended`](/es/docs/Web/Reference/Events/ended)
   - : El evento `ended` es lanzado cuando la reproducción se detiene porque se alcanzó el fin del archivo de medio.
 
 ### Definiendo fuentes de audio
@@ -147,7 +147,7 @@ Antes de que se definieran los worklets de audio, la API de Web Audio usó `Scri
 
 - {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
   - : La interfaz **`ScriptProcessorNode`** permite la generación, procesamiento, o análisis de audio usando JavaScript. Es un módulo de procesamiento de audio {{domxref("AudioNode")}} que está enlazado a dos buffers, uno conteniendo la actual entrada, uno conteniendo la salida. Un evento, implementando la interfaz {{domxref("AudioProcessingEvent")}}, es enviado al objeto cada vez que el buffer de entrada contiene nuevos datos, y el manejador del evento termina cuando ha llenado el buffer de salida con datos.
-- {{event("audioprocess")}} (event) {{deprecated_inline}}
+- [`audioprocess`](/es/docs/Web/Reference/Events/audioprocess) (event) {{deprecated_inline}}
   - : El evento `audioprocess` es lanzado cuando un buffer de entrada de un {{domxref("ScriptProcessorNode")}} del API del Audio Web está listo para ser procesado.
 - {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
   - : El evento `AudioProcessingEvent` del [API de Audio Web](/es/docs/Web_Audio_API) representa los eventos que ocurren cuando un buffer de entrada {{domxref("ScriptProcessorNode")}} está listo para ser procesado.
@@ -158,10 +158,10 @@ Es posible procesar/renderizar un gráfico de muy rápidamente en segundo plano 
 
 - {{domxref("OfflineAudioContext")}}
   - : La interfaz **`OfflineAudioContext`** es una interfaz {{domxref("AudioContext")}} representando un gráfico de procesamiento de audio construido a partir de varios {{domxref("AudioNode")}} enlazados juntos. En contraste con un `AudioContext` estándar, un `OfflineAudioContext` realmente no procesa el audio sino que lo genera, _lo más rápido que puede_, en un buffer.
-- {{event("complete")}} (event)
+- [`complete`](/es/docs/Web/Reference/Events/complete) (event)
   - : El evento `complete` es lanzado cuando el renderizado de un {{domxref("OfflineAudioContext")}} está terminado.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : La interfaz `OfflineAudioCompletionEvent` representa los eventos que ocurren cuando procesamiento de un {{domxref("OfflineAudioContext")}} is terminado. El evento {{event("complete")}} implementa esta interfaz.
+  - : La interfaz `OfflineAudioCompletionEvent` representa los eventos que ocurren cuando procesamiento de un {{domxref("OfflineAudioContext")}} is terminado. El evento [`complete`](/es/docs/Web/Reference/Events/complete) implementa esta interfaz.
 
 ## Interfaces obsoletas
 
@@ -338,13 +338,11 @@ function voiceMute() { // alternar para silenciar y activar el sonido
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario |
-| ---------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## También ver
 

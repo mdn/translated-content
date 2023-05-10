@@ -1,12 +1,9 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 original_slug: Web/JavaScript/Referencia/Sentencias/return
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen
@@ -52,7 +49,7 @@ a + b;
 
 La consola le advertirá "código inalcanzable después de la declaración de retorno".
 
-> **Nota:** A partir de Gecko 40 {{geckoRelease(40)}}, una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
+> **Nota:** A partir de Gecko 40 (Firefox 40 / Thunderbird 40 / SeaMonkey 2.37), una advertencia es mostrada en la consola si se encuentra código inalcanzable despues de una instrucción return.
 
 ## Ejemplos
 

@@ -1,13 +1,8 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Global_attributes/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`id`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 문서 전체에서 유일한 고유식별자(ID)를 정의합니다. 고유식별자의 목적은 [프래그먼트 식별자](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#프래그먼트)를 사용해 요소를 가리킬 때와 스크립트 및 스타일 적용 시 특정 요소를 식별하기 위함입니다.
@@ -28,7 +23,7 @@ translation_of: Web/HTML/Global_attributes/id
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## 같이 보기
 

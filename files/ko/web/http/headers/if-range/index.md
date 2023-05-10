@@ -1,15 +1,8 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 범위 요청
-  - 요청 헤더
-  - 조건 요청
-  - 참고자료
-translation_of: Web/HTTP/Headers/If-Range
 ---
+
 {{HTTPSidebar}}
 
 **`If-Range`** HTTP 요청 헤더는 범위 요청을 조건적으로 만듭니다: 만약 조건이 만족된다면, 범위 요청은 처리되어 서버에서 {{HTTPStatus("206")}} `Partial Content` 응답을 적절한 바디를 포함하여 보낼 것입니다. 만약 조건을 만족하지 못한다면, {{HTTPStatus("200")}} `OK` 상태 코드가 전체 리소스와 함께 돌아올 것입니다.
@@ -76,7 +69,7 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.If-Range")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

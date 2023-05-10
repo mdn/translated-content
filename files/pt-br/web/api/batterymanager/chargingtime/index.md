@@ -1,13 +1,8 @@
 ---
 title: BatteryManager.chargingTime
 slug: Web/API/BatteryManager/chargingTime
-tags:
-  - API
-  - Battery API
-  - Propriedade
-  - Referencia
-translation_of: Web/API/BatteryManager/chargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 Indica a quantidade de tempo, em segundos, que resta até que a bateria esteja totalmente carregada.

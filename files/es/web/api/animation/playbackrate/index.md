@@ -1,16 +1,8 @@
 ---
 title: Animation.playbackRate
 slug: Web/API/Animation/playbackRate
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - playbackRate
-translation_of: Web/API/Animation/playbackRate
 ---
+
 {{APIRef("Web Animations")}}
 
 La propiedad `Animation.playbackRate` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.

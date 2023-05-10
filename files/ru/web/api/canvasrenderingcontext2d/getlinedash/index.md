@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.getLineDash()
 slug: Web/API/CanvasRenderingContext2D/getLineDash
 translation_of: Web/API/CanvasRenderingContext2D/getLineDash
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContect2D.getLineDash()`**, предоставляемый Canvas 2D API который возвращает текущий паттерн штриховки линии.

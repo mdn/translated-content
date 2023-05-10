@@ -3,7 +3,7 @@ title: 402 Payment Required
 slug: Web/HTTP/Status/402
 ---
 
-{{SeeCompatTable}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 **`402 Payment Required`** 是一个被保留使用的非标准客户端错误状态响应码。
 

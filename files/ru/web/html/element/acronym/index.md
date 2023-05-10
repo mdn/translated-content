@@ -5,7 +5,6 @@ tags:
   - Obsolete
 translation_of: Web/HTML/Element/acronym
 ---
-{{obsolete_header}}
 
 ## Аннотация
 
@@ -53,4 +52,4 @@ translation_of: Web/HTML/Element/acronym
 
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

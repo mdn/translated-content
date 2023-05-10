@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
+
 {{JSRef}}
 
 Метод **`Promise.resolve(value)`** возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемый промис будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемый промис будет выполнен с переданным значением.

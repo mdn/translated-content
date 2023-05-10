@@ -1,15 +1,9 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Fecha
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toDateString
 ---
+
 {{JSRef}}
 
 El método **`toDateString()`** devuelve la porción de la fecha de un objeto {{jsxref("Date")}} en formato humano legible en Inglés Americano.
@@ -45,16 +39,11 @@ console.log(d.toDateString()); // logs Wed Jun 28 1993
 
 ## Especificaciones
 
-| Epecificación                                                                                                            | Estatus                      | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES3')}}                                                                                                 | {{Spec2('ES3')}}         | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.9.5.3', 'Date.prototype.toDateString')}}                             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES6', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ESDraft', '#sec-date.prototype.todatestring', 'Date.prototype.toDateString')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.toDateString")}}
+{{Compat}}
 
 ## Vea también
 

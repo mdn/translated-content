@@ -80,7 +80,7 @@ display: unset;
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个块或者内联格式上下文，那么它将生成一个内联盒子。否则它将生成一个块容器盒。
 
-        根据其它属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
+        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
       - : 该元素生成一个块级元素盒，其会建立一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，定义格式化上下文的根元素。
@@ -242,7 +242,7 @@ display: unset;
 ### display: grid
 
 - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [网格布局和其它布局方法的联系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+- [网格布局和其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 - [基于线的定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
 - [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [使用命名线布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
@@ -289,7 +289,7 @@ display: unset;
 
 ### 比较 display 的值
 
-在这个示例中，我们有两个块级的容器元素，每个元素有三个内联子元素。在下面，我们有一个选择菜单，允许你将不同的 `display` 值应用于容器，允许你去比较和对比不同的值如何影响元素及其它们子元素的布局。
+在这个示例中，我们有两个块级的容器元素，每个元素有三个内联子元素。在下面，我们有一个选择菜单，允许你将不同的 `display` 值应用于容器，允许你去比较和对比不同的值如何影响元素及其他们子元素的布局。
 
 我们在容器上以及它们的子元素中使用了 {{cssxref("padding")}} 和 {{cssxref("background-color")}}，以便更容易看到 display 值的影响。
 

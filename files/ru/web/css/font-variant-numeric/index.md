@@ -7,6 +7,7 @@ tags:
   - Шрифты CSS
 translation_of: Web/CSS/font-variant-numeric
 ---
+
 {{CSSRef}}
 
 ## Summary

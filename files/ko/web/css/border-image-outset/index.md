@@ -1,13 +1,8 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 **`border-image-outset`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 테두리 상자와 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 거리를 설정합니다.

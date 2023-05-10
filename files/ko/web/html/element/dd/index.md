@@ -1,16 +1,9 @@
 ---
 title: <dd>
 slug: Web/HTML/Element/dd
-tags:
-  - Element
-  - HTML
-  - HTML grouping element
-  - Reference
-  - Web
-  - 요소
-translation_of: Web/HTML/Element/dd
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dd>` 요소**는 정의 목록 요소({{HTMLElement("dl")}})에서 앞선 용어({{htmlelement("dt")}})에 대한 설명, 정의, 또는 값을 제공합니다.
 
@@ -58,7 +51,7 @@ translation_of: Web/HTML/Element/dd
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td>{{ARIARole("definition")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/definition_role'><code>definition</code></a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
@@ -88,7 +81,7 @@ translation_of: Web/HTML/Element/dd
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dd")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -9,8 +9,8 @@ slug: Web/API/FileReader/readAsDataURL
 
 ## 语法
 
-```
-instanceOfFileReader.readAsDataURL(blob);
+```js-nolint
+readAsDataURL(blob)
 ```
 
 ### 参数
@@ -92,7 +92,7 @@ function previewFiles() {
 }
 ```
 
-> **备注：** Internet Explorer 10 之前的版本并不支持 [`FileReader()`](/zh-CN/docs/Web/API/FileReader) 。关于图片文件预览的兼容性解决方案，可以查看 [crossbrowser possible solution for image preview](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) 或者 [this more powerful example](https://mdn.mozillademos.org/files/3698/image_upload_preview.html) 。
+> **备注：** Internet Explorer 10 之前的版本并不支持 [`FileReader()`](/zh-CN/docs/Web/API/FileReader)。关于图片文件预览的兼容性解决方案，可以查看[一种可能的跨浏览器图像预览解决方案](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html)或者[这个更加完善的示例](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html)。
 
 ## 规范
 
@@ -106,5 +106,3 @@ function previewFiles() {
 
 - {{domxref("FileReader")}}
 - {{domxref("URL.createObjectURL()")}}
-
-{{APIRef("File API")}}

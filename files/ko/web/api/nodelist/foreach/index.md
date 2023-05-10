@@ -1,8 +1,8 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}} 인터페이스의 **`forEach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.
@@ -88,11 +88,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 The above behavior is how many browsers actually implement NodeList.prototype.forEach (Chrome, for example).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

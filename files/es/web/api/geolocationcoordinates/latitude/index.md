@@ -1,8 +1,8 @@
 ---
 title: Coordinates.latitude
 slug: Web/API/GeolocationCoordinates/latitude
-translation_of: Web/API/GeolocationCoordinates/latitude
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates.latitude`** es una propiedad de sólo lectura que devuelve un `double` representando la latitud de la posición en grados decimales.
@@ -15,13 +15,11 @@ lat = coordinates.latitude
 
 ## Especificaciones
 
-| Especificación                                                                   | Estatus                          | Comentario              |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation', '#lat', 'Coordinates.latitude')}} | {{Spec2('Geolocation')}} | Especificación Inicial. |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GeolocationCoordinates.latitude")}}
+{{Compat}}
 
 ## Mirar también
 

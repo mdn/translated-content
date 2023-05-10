@@ -1,8 +1,8 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
-translation_of: Web/API/Console/trace
+slug: Web/API/console/trace
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Outputs a stack trace to the [Web Console](/es/docs/Tools/Web_Console).
@@ -40,13 +40,11 @@ foo
 
 ## Especificaciones
 
-| Specification                                                                                            | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoletraceobject--object-", "console.trace()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad con el navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.console.trace")}}
+{{Compat}}
 
 ## Ver tambien
 

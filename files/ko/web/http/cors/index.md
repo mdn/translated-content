@@ -1,16 +1,8 @@
 ---
 title: 교차 출처 리소스 공유 (CORS)
 slug: Web/HTTP/CORS
-tags:
-  - CORS
-  - HTTP
-  - Same-origin policy
-  - Security
-  - l10n:priority
-  - 교차 출처
-  - 동일 출처
-translation_of: Web/HTTP/CORS
 ---
+
 **교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 추가 {{Glossary("HTTP")}} 헤더를 사용하여, 한 {{glossary("origin", "출처")}}에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제입니다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행합니다.
 
 교차 출처 요청의 예시: `https://domain-a.com`의 프론트 엔드 JavaScript 코드가 {{domxref("XMLHttpRequest")}}를 사용하여 `https://domain-b.com/data.json`을 요청하는 경우.
@@ -53,7 +45,7 @@ CORS 실패는 오류의 원인이지만, 보안상의 이유로 JavaScript에�
 
 ### 단순 요청(Simple requests)
 
-일부요청은 [CORS preflight](/ko/docs/Glossary/Preflight_request) 를 트리거하지 않습니다. {{SpecName ( 'Fetch')}} 명세(CORS를 정의한)는 이 용어를 사용하지 않지만, 이 기사에서는 "simple requests"라고 하겠습니다. "simple requests"는 **다음 조건을 모두 충족하는 요청입니다:**
+일부요청은 [CORS preflight](/ko/docs/Glossary/Preflight_request) 를 트리거하지 않습니다. `Fetch` 명세(CORS를 정의한)는 이 용어를 사용하지 않지만, 이 기사에서는 "simple requests"라고 하겠습니다. "simple requests"는 **다음 조건을 모두 충족하는 요청입니다:**
 
 - 다음 중 하나의 메서드
 
@@ -258,11 +250,11 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 브라우저가 명세를 따라잡을 때 까지 다음 중 하나 혹은 둘 다를 수행하여 이 제한을 해결할 수 있습니다.
 
 - preflight 리다이렉트를 방지하기 위해 서버측 동작을 변경
-- preflight를 발생시키지 않는 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 가 되도록 요청을 변경
+- preflight를 발생시키지 않는 [simple request](#simple_requests) 가 되도록 요청을 변경
 
 이것이 가능하지 않은 경우 다른 방법도 있습니다.
 
-1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
+1. Fetch API를 통해 {{domxref("Response.url")}} 이나 {{domxref("XMLHttpRequest.responseURL")}}를 사용하여 [simple request](#simple_requests) 를 작성합니다. 이 simple request를 이용하여 실제 preflighted request가 끝나는 URL을 판별하세요.
 2. 첫 번째 단계에서 `Response.url` 혹은 `XMLHttpRequest.responseURL` 로부터 얻은 URL을 사용하여 또 다른 요청(실제 요청)을 만듭니다.
 
 그러나 요청에 `Authorization` 헤더가 있기 때문에 preflight를 트리거하는 요청일 경우에, 위의 단계를 사용하여 제한을 제거할 수 없습니다. 또한 요청이 있는 서버를 제어하지 않으면 문제를 해결할 수 없습니다.
@@ -331,7 +323,7 @@ Content-Type: text/plain
 
 CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 *응답*은 `Access-Control-Allow-Credentials: true`를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.
 
-> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ({{bug(1511151)}}). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
+> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
 
 #### 자격증명 요청 및 와일드카드(Credentialed requests and wildcards)
 
@@ -401,7 +393,7 @@ Access-Control-Max-Age: <delta-seconds>
 Access-Control-Allow-Credentials: true
 ```
 
-[Credentialed requests](/ko/docs/Web/HTTP/Access_control_CORS$edit#Requests_with_credentials) 은 위에 설명되어 있습니다.
+[Credentialed requests](#requests_with_credentials) 은 위에 설명되어 있습니다.
 
 ### Access-Control-Allow-Methods
 
@@ -411,11 +403,11 @@ Access-Control-Allow-Credentials: true
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-이 헤더를 브라우저로 전송하는 예제를 포함하여 [preflight request 의 예제는](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests), 위에 나와 있습니다.
+이 헤더를 브라우저로 전송하는 예제를 포함하여 [preflight request 의 예제는](#preflighted_requests), 위에 나와 있습니다.
 
 ### Access-Control-Allow-Headers
 
-[preflight request](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더가 사용됩니다. 실제 요청시 사용할 수 있는 HTTP 헤더를 나타냅니다.
+[preflight request](#preflighted_requests) 에 대한 응답으로 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더가 사용됩니다. 실제 요청시 사용할 수 있는 HTTP 헤더를 나타냅니다.
 
 ```
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
@@ -447,7 +439,7 @@ origin 은 요청이 시작된 서버를 나타내는 URI 입니다. 경로 정�
 Access-Control-Request-Method: <method>
 ```
 
-이 사용법의 예제는 [위에서](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
 
 ### Access-Control-Request-Headers
 
@@ -457,7 +449,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-이 사용법의 예제는 [위에서](/ko/docs/Web/HTTP/Access_control_CORS$edit#Preflighted_requests) 찾을 수 있습니다.
+이 사용법의 예제는 [위에서](#preflighted_requests) 찾을 수 있습니다.
 
 ## 명세
 
@@ -465,7 +457,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## 같이 보기
 

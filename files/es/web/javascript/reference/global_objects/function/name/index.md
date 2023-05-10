@@ -1,9 +1,9 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
+
 {{JSRef}}
 
 La propiedad **`function.name`** retorna el nombre de la función o retorna `"anonymous"` por funciones creadas anónimamente.
@@ -91,7 +91,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Nombres de funciones getters y setters
 
-Cuando se usan [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
+Cuando se usan [`get`](/es/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
 
 ```js
 var o = {
@@ -116,17 +116,10 @@ var b = new a();
 console.log(b.constructor.name); // imprime "a"
 ```
 
-## Polyfill
-
-Para versiones de IE < 9, se puede usar `fn._name()` en su lugar. Para IE9 o posteriores se puede usar el siguiente [polyfill](https://github.com/JamesMGreene/Function.name).
-
 ## Especificaciones
 
-| Especificación                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-name', 'name')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-name', 'name')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Function.name")}}
+{{Compat}}

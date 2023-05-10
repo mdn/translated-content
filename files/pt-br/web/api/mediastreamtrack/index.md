@@ -1,8 +1,8 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-translation_of: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 ## Resumo

@@ -51,7 +51,7 @@ Au sens large, les agents utilisateurs envoient l'en-tête `Origin` avec les req
 - [D'origines multiples](/fr/docs/Glossary/CORS) (<i lang="en">cross origin</i> en anglais).
 - [De même origine](/fr/docs/Web/Security/Same-origin_policy), sauf pour les requêtes utilisant les méthodes [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) (autrement dit, cet en-tête est utilisé pour les requêtes avec la méthode [`POST`](/fr/docs/Web/HTTP/Methods/POST), [`OPTIONS`](/fr/docs/Web/HTTP/Methods/OPTIONS), [`PUT`](/fr/docs/Web/HTTP/Methods/PUT), [`PATCH`](/fr/docs/Web/HTTP/Methods/PATCH), et [`DELETE`](/fr/docs/Web/HTTP/Methods/DELETE)).
 
-Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) est effectuée en mode [`no-cors`](/en-US/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
+Il existe certaines exceptions aux règles précédentes. Par exemple, lorsqu'une requête [`GET`](/fr/docs/Web/HTTP/Methods/GET) ou [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) est effectuée en mode [`no-cors`](/fr/docs/Web/API/Request/mode#value), l'en-tête `Origin` ne sera pas ajouté.
 
 L'en-tête `Origin` peut valoir `null` dans certains cas (la liste qui suit n'est pas exhaustive)&nbsp;:
 

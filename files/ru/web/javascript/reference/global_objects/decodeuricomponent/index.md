@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 Метод **`decodeURIComponent()`** декодирует управляющие последовательности символов в компоненте Uniform Resource Identifier (URI), созданные с помощью метода {{jsxref("encodeURIComponent")}} или другой подобной процедуры.

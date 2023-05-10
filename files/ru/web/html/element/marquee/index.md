@@ -3,7 +3,7 @@ title: <marquee>
 slug: Web/HTML/Element/marquee
 translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLRef}}{{obsolete_header}}
+{{HTMLSidebar}}
 
 ## Определение
 

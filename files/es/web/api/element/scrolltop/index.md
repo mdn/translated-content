@@ -1,8 +1,8 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.scrollTop` obtiene o establece el número de pixels que el contenido de un elemento ha sido desplazado (enrollado) hacia arriba. El `scrollTop` de un elemento es una medida de la distancia desde el límite superior de un elemento al límite superior de su contenido visible. Cuando un elemento no genera una barra de scroll vertical, el valor de su `scrollTop` es establecido por defecto a `0`.
@@ -45,7 +45,7 @@ element.scrollTop = intValue;
 
 {{EmbedLiveSample("",400,350)}}
 
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
+![Image:scrollTop.png](scrolltop.png)
 
 ## Especificaciones
 

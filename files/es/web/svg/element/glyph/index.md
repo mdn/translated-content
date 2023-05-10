@@ -1,17 +1,9 @@
 ---
 title: glyph
 slug: Web/SVG/Element/glyph
-tags:
-  - Contenido de texto SVG
-  - Elemento
-  - Fuentes SVG
-  - Glifos
-  - NeedsCompatTable
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/glyph
 original_slug: Web/SVG/Element/glifo
 ---
+
 {{SVGRef}}
 
 Un glifo define a un glifo en particular en una fuente SVG.

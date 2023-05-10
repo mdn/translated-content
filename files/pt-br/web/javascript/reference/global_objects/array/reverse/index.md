@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Resumo

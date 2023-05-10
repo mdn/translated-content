@@ -44,7 +44,7 @@ void gl.uniform4iv(location, value);
 
     - 浮動小数点の {{jsxref("Number")}}: 浮動小数点値（"f" の付いたメソッド）に使用します。
     - 一連の浮動小数点値（例えば {{jsxref("Float32Array")}} または数値の {{jsxref("Array")}}）: 浮動小数点のベクターメソッド（"fv" の付いたメソッド）に使用します。
-    - 整数の {{jsxref("Number")}}:  整数値（"i" の付いたメソッド）に使用します。
+    - 整数の {{jsxref("Number")}}: 整数値（"i" の付いたメソッド）に使用します。
     - {{jsxref("Int32Array")}}: 整数のベクターメソッド（"iv" の付いたメソッド）。
 
 ### 返値

@@ -3,6 +3,7 @@ title: Element.clientLeft
 slug: Web/API/Element/clientLeft
 translation_of: Web/API/Element/clientLeft
 ---
+
 {{ APIRef("DOM") }}Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.
 
 `clientLeft` не включает в себя ни левый padding ни margin с той же стороны. `clientLeft` только для чтения.
@@ -11,7 +12,7 @@ translation_of: Web/API/Element/clientLeft
 
 Когда [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
 
-> **Примечание:** **Внимание:** Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
+> **Примечание:** Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Syntax
 

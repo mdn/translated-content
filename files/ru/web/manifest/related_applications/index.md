@@ -7,6 +7,7 @@ tags:
   - related_applications
 translation_of: Web/Manifest/related_applications
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">

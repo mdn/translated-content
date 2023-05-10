@@ -21,9 +21,7 @@ slug: Web/API/DOMStringList
 
 ## 仕様
 
-| 仕様                                                                                                                                     | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "common-dom-interfaces.html#the-domstringlist-interface", "DOMStringList")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

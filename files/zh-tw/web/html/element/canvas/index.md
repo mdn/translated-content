@@ -18,11 +18,11 @@ slug: Web/HTML/Element/canvas
 
 這個元素的屬性包含全域屬性
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 在 CSS 中以 pixels 表示 座標的空間**高度**（預設是 150）
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+- `moz-opaque` {{non-standard_inline}}
   - : 讓 canvas 知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能
-- {{htmlattrdef("width")}}
+- `width`
   - : 在 CSS 中以 pixels 表示 座標的空間**寬度**（預設是 300）
 
 ## 描述
@@ -69,4 +69,4 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 - [Canvas-related demos](/zh-TW/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

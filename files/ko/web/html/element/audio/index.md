@@ -1,20 +1,9 @@
 ---
 title: <audio>
 slug: Web/HTML/Element/audio
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - 소리
-  - 오디오
-translation_of: Web/HTML/Element/audio
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<audio>` 요소**는 문서에 소리 콘텐츠를 포함할 때 사용합니다. `src` 특성 또는 {{htmlelement("source")}} 요소를 사용해 한 개 이상의 오디오 소스를 지정할 수 있으며, 다수를 지정한 경우 가장 적절한 소스를 브라우저가 고릅니다. {{domxref("MediaStream")}}을 사용하면 미디어 스트림을 바라볼 수도 있습니다.
 
@@ -324,7 +313,7 @@ Also it's a good practice to provide some content (such as the direct download l
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/application_role'><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -339,7 +328,7 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.audio")}}
+{{Compat}}
 
 ## 같이 보기
 

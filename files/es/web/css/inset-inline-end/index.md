@@ -1,8 +1,8 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
-translation_of: Web/CSS/inset-inline-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`inset-inline-end`** define la inserción final lógica en línea de un elemento, que se asigna a una inserción física en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref ("top")}}, {{cssxref ("right")}}, {{cssxref ("bottom")}}, o {{cssxref ("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
@@ -65,15 +65,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                       | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-inline-end", "inset-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inset-inline-end")}}
+{{Compat}}
 
 ## Mira también
 

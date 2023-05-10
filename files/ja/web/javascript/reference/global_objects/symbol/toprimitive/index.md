@@ -47,9 +47,7 @@ console.log(obj2 + ''); // "true"    -- hint は "default"
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.toprimitive', 'Symbol.toPrimitive')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

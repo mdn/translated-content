@@ -53,9 +53,7 @@ console.log(iterator.next().value); // 20
 
 ## 仕様書
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

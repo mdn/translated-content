@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Сводка
@@ -54,7 +55,7 @@ function toLocaleDateStringSupportsLocales() {
   try {
     new Date().toLocaleDateString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }

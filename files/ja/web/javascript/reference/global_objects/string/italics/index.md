@@ -37,9 +37,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

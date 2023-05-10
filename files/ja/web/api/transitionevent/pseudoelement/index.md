@@ -15,9 +15,7 @@ name = TransitionEvent.pseudoElement
 
 ## 仕様
 
-| 仕様                                                                                                                                             | ステータス                               | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Transitions', '#Events-TransitionEvent-pseudoElement', 'TransitionEvent.pseudoElement') }} | {{ Spec2('CSS3 Transitions')}} | 初回定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

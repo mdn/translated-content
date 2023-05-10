@@ -73,9 +73,7 @@ console.log(result); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

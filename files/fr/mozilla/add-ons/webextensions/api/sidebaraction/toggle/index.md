@@ -35,9 +35,9 @@ Aucune.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue sans discussion.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction.toggle", 10)}}
+{{Compat}}
 
 ## Exemples
 

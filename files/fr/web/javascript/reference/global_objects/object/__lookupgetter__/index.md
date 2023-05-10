@@ -67,9 +67,9 @@ Object.getOwnPropertyDescriptor(obj, "toto").get;
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.lookupSetter","Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - L'opérateur {{jsxref("Fonctions/get", "get")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.defineGetter","Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.prototype.defineSetter","Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Guide JavaScript : Définir des _getters_ et _setters_](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters)

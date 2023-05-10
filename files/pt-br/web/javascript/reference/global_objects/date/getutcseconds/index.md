@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 ---
+
 {{JSRef}}
 
 O método **`getUTCSeconds()`** retorna os segundos na data informada de acordo com a hora universal.

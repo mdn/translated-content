@@ -1,14 +1,6 @@
 ---
 title: 전개 구문
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Reference
-  - Spread
-  - 전개 연산자
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 {{jsSidebar("Operators")}}
 

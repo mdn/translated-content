@@ -38,7 +38,7 @@ Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement as
 
 > **Note :** Les blocs _DIV #1_ et _DIV #3_ ne sont pas translucides. Il est important de se souvenir que d'assigner une valeur d'opacité inférieure à 1 à un élément positionné, crée implicitement un contexte d'empilement, de la même façon que l'ajout de propriétés `z-index`. Et cet exemple montre ce qui arrive lorsqu'un élément parent ne crée pas de contexte d'empilement.
 
-## **Exemple**
+## Exemple
 
 ### CSS
 
@@ -84,7 +84,7 @@ Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement as
 }
 ```
 
-### **HTML**
+### HTML
 
 ```html
 <div id="div1">

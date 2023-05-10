@@ -3,6 +3,7 @@ title: 'SyntaxError: missing formal parameter( отсутствует форма
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

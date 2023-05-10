@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.fill()
 slug: Web/API/CanvasRenderingContext2D/fill
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.fill()`** da API Canvas 2D preenche um dado _path_ ou o _path_ atual com o estilo atual de preenchimento usando uma regra de controle diferente de zero, ou uma regra par-ímpar.
@@ -28,8 +22,10 @@ void ctx.fill(path, fillRule);
   - : O algoritmo que determina se um ponto está do lado de dentro do path ou do lado fora do path.
     Possíveis valores:
 
-    - **`"nonzero`**": A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
-    - **`"evenodd"`**: A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : A [regra de controle não-zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `evenodd`
+      - : A [regra de controle par-ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Um _path_ de [`Path2D`](/pt-BR/docs/Web/API/Path2D) para preenchimento.

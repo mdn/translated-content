@@ -1,14 +1,8 @@
 ---
 title: StorageManager.persisted()
 slug: Web/API/StorageManager/persisted
-tags:
-  - Contexto seguro
-  - Referencia
-  - Storage API
-  - metodo
-  - persisted()
-translation_of: Web/API/StorageManager/persisted
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 La propiedad **`persisted`** de la interfaz {{domxref("StorageManager")}} devuelve una {{jsxref('Promise')}} que se resuelve como `true` si _box mode_ es persistente para el alamacenamiento de su sitio.
@@ -41,10 +35,8 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.StorageManager.persisted")}}
+{{Compat}}

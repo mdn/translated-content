@@ -1,7 +1,6 @@
 ---
 title: Gerador de histórias bobas
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 original_slug: Learn/JavaScript/First_steps/Gerador_de_historias_bobas
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
@@ -46,7 +45,7 @@ Você recebeu algum HTML/CSS em bruto e algumas strings de texto e funções de 
 
 A seguinte captura de tela mostra um exemplo do que o programa concluído deve produzir:
 
-![](https://mdn.mozillademos.org/files/13667/assessment-1.png)
+![](assessment-1.png)
 
 Para dar-lhe mais uma ideia, [dê uma olhada no exemplo concluído](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (sem espreitar o código fonte!)
 

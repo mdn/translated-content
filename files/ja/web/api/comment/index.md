@@ -1,40 +1,39 @@
 ---
 title: Comment
 slug: Web/API/Comment
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{ApiRef("DOM")}}
+{{ ApiRef("DOM") }}
 
-**`Comment`** インターフェイスは、マークアップ内にある注意書きのテキストを表します。これらは通常の閲覧時には表示されず、このようなコメントはブラウザのソースビュー表示時に閲覧可能です。HTML や XML でコメントは、「`<!--`」と「`-->`」で囲んだコンテンツとして記述します。XML 構文においては、「`--`」をコメント内に記述することはできません。
+**`Comment`** インターフェイスは、マークアップ内にある注意書きのテキストを表します。これらは通常の閲覧時には表示されず、このようなコメントはブラウザーのソースビュー表示時に閲覧可能です。
+
+HTML や XML でコメントは、'`<!--`' と '`-->`' で囲んだコンテンツとして記述します。XML 構文においては、'`--`' をコメント内に記述することはできません。
 
 {{InheritanceDiagram}}
 
 ## プロパティ
 
-_このインターフェイスに固有のプロパティはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のプロパティを継承します。_
+_このインターフェイスに固有のプロパティはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のプロパティを継承しています。_
 
 ## コンストラクター
 
-- {{domxref("Comment.Comment()", "Comment()")}} {{experimental_inline}}
-  - : 引数をテキストコンテンツとして持つ、`Comment` オブジェクトを返します。
+- {{ domxref("Comment.Comment()", "Comment()") }}
+  - : 引数をテキストコンテンツとして持つ、新しい `Comment` オブジェクトを返します。存在しない場合の既定値は、空文字列 `''` です。
 
 ## メソッド
 
-_このインターフェイスに固有のメソッドはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のメソッドを継承します。_
+_このインターフェイスに固有のメソッドはありませんが、親インターフェイスである {{domxref("CharacterData")}}、および間接的に {{domxref("Node")}} のメソッドを継承しています。_
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                       | 策定状況                         | コメント                                        |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#comment', 'Comment')}}                             | {{Spec2('DOM WHATWG')}} | コンストラクタを追加。                          |
-| {{SpecName('DOM3 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM3 Core')}}     | {{SpecName('DOM2 Core')}} から変更なし。 |
-| {{SpecName('DOM2 Core', 'core.html#ID-1728279322', 'Comment')}}         | {{Spec2('DOM2 Core')}}     | {{SpecName('DOM1')}} から変更なし。     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-1728279322', 'Comment')}} | {{Spec2('DOM1')}}         | 最初期の定義                                    |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Comment")}}
+{{Compat}}
 
 ## 関連情報
 
-- [DOM インターフェイスの索引](/ja/docs/DOM/DOM_Reference)
+- [DOM インターフェイスの索引](/ja/docs/Web/API/Document_Object_Model)

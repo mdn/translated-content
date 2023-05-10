@@ -1,28 +1,15 @@
 ---
 title: Números y fechas
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Coma flotante
-  - Cálculo
-  - Enteros
-  - Fechas
-  - Guía
-  - JavaScript
-  - Math
-  - Numeros
-  - Numérico
-  - PF
-  - Punto flotante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 Este capítulo presenta los conceptos, objetos y funciones que se utilizan para trabajar y realizar cálculos utilizando números y fechas en JavaScript. Esto incluye el uso de números escritos en varias bases, incluyendo decimal, binario y hexadecimal, así como el uso del objeto global {{JSxRef("Math")}} para realizar una amplia variedad de operaciones matemáticas con números.
 
 ## Números
 
-En JavaScript, los números se implementan en {{interwiki("wikipedia", "Formato en coma flotante de doble precisión")}} de 64 bits IEEE 754 (es decir, un número entre ±2−1022 y ±2+1023, o aproximadamente ±10−308 a ±10+308, con una precisión numérica de 53 bits). Los valores enteros hasta ±253 - 1 se pueden representar con exactitud.
+En JavaScript, los números se implementan en [Formato en coma flotante de doble precisión](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_doble_precisión) de 64 bits IEEE 754 (es decir, un número entre ±2−1022 y ±2+1023, o aproximadamente ±10−308 a ±10+308, con una precisión numérica de 53 bits). Los valores enteros hasta ±253 - 1 se pueden representar con exactitud.
 
 Además de poder representar números de punto flotante, el tipo `number` tiene tres valores simbólicos: `+`{{JSxRef("Infinity")}}, `-`{{JSxRef("Infinity")}} y {{JSxRef("NaN")}} (_Not-a-Number_, no es un número).
 

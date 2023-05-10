@@ -337,20 +337,7 @@ The `<use>` element can reference an entire SVG document by specifying an `href`
 
 ## Specifications
 
-| Specification                                                                                                                                                                                    | Status                                   | Comment                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName("SVG2", "linking.html#AElementHrefAttribute", "href for &lt;a&gt;")}}                                                                                     | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("a")}} element.                     |
-| {{SpecName("SVG Animations 2", "#HrefAttribute", "href for &lt;animate&gt;, &lt;animateMotion&gt;, &lt;animateTransform&gt;, and &lt;set&gt;")}} | {{Spec2("SVG Animations 2")}} | Defines `href` for animation elements.                                       |
-| {{SpecName("SVG Animations 2", "#DiscardElementHrefAttribute", "href for &lt;discard&gt;")}}                                                                     | {{Spec2("SVG Animations 2")}} | Defines `href` for the {{SVGElement("discard")}} element.             |
-| {{SpecName("Filters 1.0", "#element-attrdef-feimage-href", "href for &lt;feImage&gt;")}}                                                                             | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("feImage")}} element.             |
-| {{SpecName("SVG2", "embedded.html#ImageElementHrefAttribute", "href for &lt;image&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("image")}} element.             |
-| {{SpecName("SVG2", "pservers.html#LinearGradientElementHrefAttribute", "href for &lt;linearGradient&gt;")}}                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("linearGradient")}} element. |
-| {{SpecName("SVG Animations 2", "#MPathElementHrefAttribute", "href for &lt;mpath&gt;")}}                                                                             | {{Spec2("SVG Animations 2")}} | Defines `href` for the {{SVGElement("mpath")}} element.             |
-| {{SpecName("SVG2", "pservers.html#PatternElementHrefAttribute", "href for &lt;pattern&gt;")}}                                                                     | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("pattern")}} element.             |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementHrefAttribute", "href for &lt;radialGradient&gt;")}}                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("radialGradient")}} element. |
-| {{SpecName("SVG2", "interact.html#ScriptElementHrefAttribute", "href for &lt;script&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("script")}} element.             |
-| {{SpecName("SVG2", "text.html#TextPathElementHrefAttribute", "href for &lt;textPath&gt;")}}                                                                         | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("textPath")}} element.         |
-| {{SpecName("SVG2", "struct.html#UseElementHrefAttribute", "href for &lt;use&gt;")}}                                                                                 | {{Spec2("SVG2")}}                 | Defines `href` for the {{SVGElement("use")}} element.                 |
+{{Specifications}}
 
 ## Browser compatibility
 

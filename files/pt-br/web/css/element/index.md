@@ -1,16 +1,9 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - Background
-  - CSS
-  - CSS4-images
-  - Função CSS
-  - Layout
-  - Web
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A função [CSS](/pt-BR/docs/CSS) **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.

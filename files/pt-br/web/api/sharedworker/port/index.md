@@ -1,8 +1,8 @@
 ---
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
-translation_of: Web/API/SharedWorker/port
 ---
+
 {{APIRef("Web Workers API")}}
 
 A propriedade **`port`** do {{domxref ("SharedWorker")}} retorna um objeto {{domxref ("MessagePort")}} usado para comunicar e controlar o shared worker.

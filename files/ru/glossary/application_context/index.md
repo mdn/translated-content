@@ -1,6 +1,6 @@
 ---
 title: Контекст приложения
-slug: Glossary/application_context
+slug: Glossary/Application_context
 tags:
   - CodingScripting
   - Glossary
@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/application_context
 original_slug: Глоссарий/application_context
 ---
+
 Контекст приложения - это {{glossary("browsing context","контекст просмотра")}} верхнего уровня, к которому применяется [манифест](/ru/docs/Web/Manifest).
 
 Если контекст приложения создаётся в результате запроса агента пользователя на переход к глубинному связыванию, {{glossary("user agent","агент пользователя")}} должен немедленно перейти к глубинному связыванию с включённой заменой. Иначе говоря, при создании контекста приложения, агент пользователя должен немедленно перейти к начальному URL-адресу с включённой заменой.

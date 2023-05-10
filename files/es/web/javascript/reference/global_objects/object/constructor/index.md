@@ -1,14 +1,9 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - JavaScript
-  - Object
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/constructor
 ---
+
 {{JSRef("Objetos_globales", "Object")}}
 
 ## Resumen
@@ -90,12 +85,8 @@ console.log( types.join( "\n" ) );
 
 ## Especificaciones
 
-| Especificaciones                                                                                                     | Estatus                  | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| ECMAScript 1ra. Edición. Implementado en JavaScript 1.1                                                              | Estandar.                | Definición inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Objectprototype.constructor')}}                         | {{Spec2('ES5.1')}} |                     |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ES6')}}     |                     |
+{{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.constructor")}}
+{{Compat}}

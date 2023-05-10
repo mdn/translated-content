@@ -1,5 +1,5 @@
 ---
-title: style
+title: <style> - элемент для указания стилей
 slug: Web/HTML/Element/style
 tags:
   - HTML
@@ -10,6 +10,7 @@ tags:
   - элементы
 translation_of: Web/HTML/Element/style
 ---
+
 ## Краткое описание
 
 _HTML-элемент **\<style>**_ содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS).
@@ -79,4 +80,4 @@ body {
 
 - Элемент {{HTMLElement("link")}}, позволяющий использовать внешние таблицы стилей.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

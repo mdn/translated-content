@@ -1,14 +1,9 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/acosh
 ---
+
 {{JSRef}}
 
 La función **`Math.acosh()`** retorna el arco coseno hiperbólico de un número que es:
@@ -60,14 +55,11 @@ Math.acosh = Math.acosh || function(x) {
 
 ## Especificaciones
 
-| Especificación                                                               | Status                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Definición inicial. |
-| {{ SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## Ver también
 

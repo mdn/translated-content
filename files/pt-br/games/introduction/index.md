@@ -1,8 +1,8 @@
 ---
 title: Introdução ao desenvolvimento de jogos para a Web
 slug: Games/Introduction
-translation_of: Games/Introduction
 ---
+
 {{GamesSidebar}}
 
 A web moderna rapidamente tem se tornado uma plataforma não só para criar jogos esplêndidos de alta qualidade, mas também para a distribuição desses mesmos jogos.
@@ -15,8 +15,8 @@ Você pode realmente pensar na Web como uma melhor plataforma de destino para o 
 
 | Função              | Tecnologia                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Audio**           | [Web Audio API](/pt-BR/docs/Web/API/API_Web_Audio)                                                                                                                                                                                                                                                                                                              |
-| **Gráficos**        | [WebGL](/pt-BR/docs/Web/API/WebGL_API) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                              |
+| **Audio**           | [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                                                                                              |
+| **Gráficos**        | [WebGL](/pt-BR/docs/Web/API/WebGL_API) ([OpenGL ES](https://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                              |
 | **Entrada (Input)** | [Touch events](/pt-BR/docs/Web/Guide/Events/Touch_events), [Gamepad API](/pt-BR/docs/API/Gamepad/Using_Gamepad_API), device sensors, [WebRTC](/pt-BR/docs/WebRTC), [Full Screen API](/pt-BR/docs/Web/API/Fullscreen_API), [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API) |
 | **Linguagem**       | [JavaScript](/pt-BR/docs/Web/JavaScript) (ou C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar para JavaScript)                                                                                                                                                                                                                  |
 | **Rede**            | [WebRTC](/pt-BR/docs/WebRTC) e/ou [WebSockets](/pt-BR/docs/WebSockets)                                                                                                                                                                                                                                                                                             |
@@ -50,7 +50,7 @@ Para as pessoas de tecnologia, vamos cavar as APIs que a Web traz à mesa que at
 - [IndexedDB](/pt-BR/docs/IndexedDB)
   - : Uma poderosa API de armazenamento de dados para manter os dados do usuário em seu próprio computador ou dispositivo. Uma ótima maneira de salvar o estado do jogo e outras informações localmente, portanto não precisa ser baixado sempre que for necessário. Também é útil para ajudar a tornar o seu jogo jogável mesmo quando o usuário não está conectado à Web (como quando estão presos em um avião por horas a fio).
 - [JavaScript](/pt-BR/docs/Web/JavaScript)
-  - : JavaScript, a linguagem de programação usada na Web, está sendo lançada rapidamente em navegadores modernos e cada vez mais rápido. Use seu poder para escrever o código do seu jogo, ou olhe para usar tecnologias como [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](http://asmjs.org/spec/latest/) para facilmente acessar seus jogos existentes.
+  - : JavaScript, a linguagem de programação usada na Web, está sendo lançada rapidamente em navegadores modernos e cada vez mais rápido. Use seu poder para escrever o código do seu jogo, ou olhe para usar tecnologias como [Emscripten](https://github.com/kripken/emscripten/wiki) ou [Asm.js](https://asmjs.org/spec/latest/) para facilmente acessar seus jogos existentes.
 - [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API)
   - : O Pointer Lock API permite bloquear o mouse ou outro dispositivo apontador na interface do seu jogo, de modo que, em vez do posicionamento absoluto do cursor, você receba deltas de coordenadas que lhe dê medidas mais precisas sobre o que o usuário está fazendo e evite que o usuário envie acidentalmente sua entrada para outro lugar. Falta de uma ação importante.
 - [SVG](/pt-BR/docs/Web/SVG) (Scalable Vector Graphics)

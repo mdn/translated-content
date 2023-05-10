@@ -1,14 +1,8 @@
 ---
 title: File
 slug: Web/API/File
-tags:
-  - API
-  - File API
-  - Interfaz
-  - Referencia
-  - Web
-translation_of: Web/API/File
 ---
+
 {{APIRef }}
 
 La interfaz **`File`** provee información acerca de los archivos y permite que el código JavaScript en una página web tenga acceso a su contenido.
@@ -30,7 +24,7 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 
 - {{DOMxRef("File.lastModified")}}{{ReadOnlyInline}}
   - : Retorna el último tiempo que el archivo se modifico, en milisegundos desde la época de UNIX (1 de enero de 1970 a medianoche).
-- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}}{{ReadOnlyInline}} 
+- {{DOMxRef("File.lastModifiedDate")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : Retorna la última fecha (en un objeto {{JSxRef("Date")}}[`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)) de modificación del archivo referenciada por el objeto `File`.
 - {{DOMxRef("File.name")}}{{ReadOnlyInline}}
   - : Retorna el nombre del archivo referenciada por el objeto `File`.
@@ -60,29 +54,11 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 
 ## Especificaciones
 
-| Especificación                   | Estado                       | Comentario          |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.File")}}
-
-### Notas de Implementación
-
-- En Gecko, puedes hacer uso de esta API desde código chrome. Vea [Utilizando la API DOM File en código chrome (Using the DOM File API in chrome code)](/es/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) para más detalles.
-- Empezando desde Gecko 6.0 {{geckoRelease("6.0")}}, código privilegiado (como las extensiones por ejemplo) puede pasar un objeto `nsIFile` al constructor DOM `File` para especificar el archivo a referenciar.
-- Empezando desde Gecko 8.0 {{geckoRelease("8.0")}}, usted puede usar `new File` para la creación de objetos `File` a partir de código de componentes XPCOM en lugar de tener que instanciar el objeto `nsIDOMFile` directamente. El constructor toma, en contraste a Blob, un segundo argumento como nombre de archivo. El nombre de archivo puede ser cualquier String.
-
-  ```
-  File File(
-    Array parts,
-    String filename,
-    BlobPropertyBag properties
-  );
-  ```
-
-- Las siguientes propiedades y métodos no estándar fueron removidos en Gecko 7 {{GeckoRelease("7.0")}}: {{DOMxRef("File.fileName")}}, {{DOMxRef("File.fileSize")}}, {{DOMxRef("File.getAsBinary()")}}, {{DOMxRef("File.getAsDataURL()")}}, {{DOMxRef("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Propiedades estándar {{DOMxRef("File.name")}}, {{DOMxRef("Blob.size")}}, y métodos en {{DOMxRef("FileReader")}} deberían ser usados en su lugar.
+{{Compat}}
 
 ## Ver también
 

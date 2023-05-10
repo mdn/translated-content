@@ -1,11 +1,8 @@
 ---
 title: Digest
 slug: Web/HTTP/Headers/Digest
-tags:
-  - Cabeçalho HTTP
-  - HTTP
-translation_of: Web/HTTP/Headers/Digest
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.

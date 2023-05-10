@@ -134,12 +134,10 @@ slug: Web/API/Node
 
 - {{DOMxRef("Node.hasAttributes()")}} {{Deprecated_Inline}}
   - : 返回一个 {{jsxref("Boolean")}} 指定该元素是否存在某一属性。
-- {{DOMxRef("Node.isSupported()")}} {{Deprecated_Inline}}
-  - : 返回一个 {{jsxref("Boolean")}} 类型值，指定了当前 DOM 实现是否实现了某个规范所规定功能和该功能是否被规范所规定的的节点所支持。
 - {{DOMxRef("Node.setUserData()")}} {{Deprecated_Inline}}
   - : 允许用户在一个节点上设置或移除 {{DOMxRef("DOMUserData")}} 。
 
-## 例子
+## 示例
 
 ### 移除某个节点的所有子节点
 

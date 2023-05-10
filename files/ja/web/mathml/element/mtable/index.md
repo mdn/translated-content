@@ -1,115 +1,88 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
+l10n:
+  sourceCommit: 802049f9c94f21038426fa10c91209a442d164cb
 ---
 
-{{MathMLRef()}}
+{{MathMLRef}}
 
-MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtable>` の中には {{ MathMLElement("mtr") }} と {{ MathMLElement("mtd") }} のみが書けます。これらの要素の関係は，[HTML](/ja/docs/HTML) の{{ HTMLElement("table") }}，{{ HTMLElement("tr") }} と {{ HTMLElement("td") }} の関係に似ています。
+MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtable>` の中には {{ MathMLElement("mtr") }} と {{ MathMLElement("mtd") }} のみが書けます。これらの要素の関係は，[HTML](/ja/docs/Web/HTML) の{{ HTMLElement("table") }}，{{ HTMLElement("tr") }} と {{ HTMLElement("td") }} の関係に似ています。
 
 ## 属性
 
-- align
+この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)があります。一部のブラウザーは以下の属性にも対応していることがあります。
 
-  - : Specifies the **vertical** alignment of the table with respect to its environment.
-    Possible values are:
+- `align` {{Non-standard_Inline}}
 
-    - `axis` (default): The vertical center of the table aligns on the environment's axis (typically the minus sign).
-    - `baseline`: The vertical center of the table aligns on the environment's baseline.
-    - `bottom`: The bottom of the table aligns on the environments baseline.
-    - `center`: See baseline.
-    - `top`: The top of the table aligns on the environments baseline.
+  - : 環境に対する表の**垂直**の配置を指定します。
+    使用可能な値は以下の通りです。
 
-    In addition, values of the `align` attribute can end with a _rownumber_ (e.g. `align="center 3"`). This allows you to align the specified row of the table rather than the whole table. A negative Integer value counts rows from the bottom of the table. Starting with Gecko 8.0 {{ geckoRelease("8.0") }} the interpretation of _negative_ values has been corrected ({{ bug(601436) }}). In Gecko 17.0 {{geckoRelease("17.0")}} the parsing has been updated to treat whitespace correctly.
+    - `axis` （既定値）: 表の垂直方向の中心が環境の軸（通常はマイナス記号）に配置される。
+    - `baseline`: 表の垂直方向の中心が、環境のベースライン上に配置されます。
+    - `bottom`: 表の下端が、環境のベースライン上に配置されます。
+    - `center`: baseline を参照。
+    - `top`: 表の上端が、環境のベースライン上に配置されます。
 
-- alignmentscope
+    さらに、 `align` 属性の値は*行番号*で終えることができます（例: `align="center 3"`）。 これにより、表全体ではなく、指定した行の位置を揃えることができます。負の整数値にすると、表の下端から行数を数えます。
 
-  class, id, style
+- `columnalign` {{Non-standard_Inline}}
+  - : セル内の水平方向の揃えを指定します。スペース区切りで複数の値を書くこともでき，その場合，対応する列に適用されます（例: `columnalign="left right center"`）。使用可能な値は `left`、`center`（既定値）、`right` です。
+- `columnlines` {{Non-standard_Inline}}
+  - : 列間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合、対応する列の間に適用されます（例: `columnlines="none none solid"`）。使用可能な値は `none`（既定値）、`solid`、`dashed` です。
+- `columnspacing` {{Non-standard_Inline}}
+  - : 表の列の間の空間を指定します。スペースで区切られた複数の値を指定することができ、対応する列に適用されます（例: `columnspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+- `frame` {{Non-standard_Inline}}
+  - : 表全体の枠線を指定します。使用可能な値は、 `none`（既定値）、`solid`、`dashed` です。
+- `framespacing` {{Non-standard_Inline}}
+  - : 表とフレームの間に追加される空間を指定します。 1 つ目の値は、右と左の空間を指定し、 2 つ目の値は、上と下の空間を指定します。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+- `rowalign` {{Non-standard_Inline}}
+  - : セルの垂直方向の揃えを指定します。スペース区切りで複数の値を書くこともでき、その場合、対応する行に適用されます（例: `rowalign="top bottom axis"`）。使用可能な値は `axis`、`baseline`（既定値）、`bottom，center`、`top` です。
+- `rowlines` {{Non-standard_Inline}}
+  - : 行間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合、対応する列の間に適用されます。（例: `rowlines="none none solid"`）。使用可能な値は `none`（既定値）、`solid`、`dashed` です。
+- `rowspacing` {{Non-standard_Inline}}
+  - : 表の行間の空間を指定します。スペースで区切られた複数の値を指定でき、対応する行に適用されます（例: `rowspacing="1em 2em"`）。使用可能な値は [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
+- `width` {{Non-standard_Inline}}
+  - : 表全体の幅を示す [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) を指定します。
 
-  - : Provided for use with [stylesheets](/ja/docs/CSS).
-
-- columnalign
-  - : セル内の水平方向の揃えを指定します。スペース区切りで複数の値を書くこともでき，その場合，対応する列に適用されます（例：`columnalign="left right center"`）取り得る値は `left，center`（既定値）と `right` です。
-- columnlines
-  - : 列間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合，対応する列の間に適用されます（例：`columnlines="none none solid"`）。取り得る値は `none`（既定値），`solid` と `dashed` です。
-- columnspacing
-  - : 列間スペースを指定します。
-- columnwidth
-  - : 列幅を指定します。
-- displaystyle
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`.
-- equalcolumns
-  - : 全列の幅（訳注：原文は total height とあるが total width の誤りだろう）を強制的に同じにするか否かを示す真偽値。既定値は `false`。
-- equalrows
-  - : 全行の高さを強制的に同じにするか否かを示す真偽値。既定値は `false。`
-- frame
-  - : Specifies borders of the entire table. Possible values are: `none` (default), `solid` and `dashed`.
-- framespacing
-  - : Specifies additional space added between the table and frame.
-- groupalign
-
-  href
-
-  - : Used to set a hyperlink to a specified URI.
-
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/ja/docs/CSS/color_value#Color_Keywords).
-- minlabelspacing
-  - : A length value specifing the minimum space between a [label](/ja/docs/MathML/Element/mlabeledtr) and the adjacent cell in the row.
-- rowalign
-  - : セルの垂直方向の揃えを指定します。スペース区切りで複数の値を書くこともでき，その場合，対応する行に適用されます（例：`rowalign="top bottom axis"`）。取り得る値は `axis，baseline`（既定値），`bottom，center` と `top` です。
-- rowlines
-  - : 行間罫線を指定します。スペース区切りで複数の値を書くこともでき，その場合，対応する列の間に適用されます。（例：`rowlines="none none solid"`）。取り得る値は `none`（既定値），`solid` と `dashed` です。
-- rowspacing
-  - : 行間スペースを指定します。
-- side
-  - : {{ MathMLElement("mlabeledtr") }} ラベル要素を置く場所を指定します。 取り得る値は `left`，`right`（既定値），`leftoverlap` と `rightoverlap` です。
-- width
-  - : Specifies the width of the entire table. Accepts [length values](/ja/docs/MathML/Attributes/Values#Lengths).
+> **メモ:** `width` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Attribute/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 
-#### Example 1: 揃える位置を行番号で指定する
-
-Rendering: ![](mtable-1.png)
+### 行番号で揃える
 
 ```html
-<math>
-
-    <mi>X</mi>
-    <mo>=</mo>
-    <mtable frame="solid" rowlines="solid" align="axis 3">
-        <mtr>
-             <mtd><mi>A</mi></mtd>
-             <mtd><mi>B</mi></mtd>
-        </mtr>
-        <mtr>
-             <mtd><mi>C</mi></mtd>
-             <mtd><mi>D</mi></mtd>
-        </mtr>
-        <mtr>
-             <mtd><mi>E</mi></mtd>
-             <mtd><mi>F</mi></mtd>
-        </mtr>
-    </mtable>
-
+<math display="block">
+  <mi>X</mi>
+  <mo>=</mo>
+  <mtable frame="solid" rowlines="solid" align="axis 3">
+    <mtr>
+      <mtd><mi>A</mi></mtd>
+      <mtd><mi>B</mi></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mi>C</mi></mtd>
+      <mtd><mi>D</mi></mtd>
+    </mtr>
+    <mtr>
+      <mtd><mi>E</mi></mtd>
+      <mtd><mi>F</mi></mtd>
+    </mtr>
+  </mtable>
 </math>
 ```
 
-## 仕様
+{{ EmbedLiveSample('mtable_example', 700, 200, "", "") }}
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mtable', 'mtable') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mtable', 'mtable') }} | {{ Spec2('MathML2') }} | Initial specification |
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.mtable")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- {{ MathMLElement("mtd") }} (Table cell)
-- {{ MathMLElement("mtr") }} (Table row)
+- {{ MathMLElement("mtd") }} （表のセル）
+- {{ MathMLElement("mtr") }} （表の行）

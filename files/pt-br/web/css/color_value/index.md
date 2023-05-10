@@ -1,14 +1,8 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Referencia
-  - Tipo de dado CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Sumário
@@ -25,7 +19,7 @@ Associado à cor no espaço sRGB, um valor \<color> também pode consistir de um
 
 Embora os valores de cores CSS sejam definidos com precisão, eles podem aparecer de forma diferente em dispositivos de saída diferentes. A maioria deles não está calibrada e alguns navegadores não suportam o [perfil de cores](https://pt.wikipedia.org/wiki/Perfil_de_cores_ICC) dos dispositivos de saída. Sem estes, a renderização de cores pode variar muito.
 
-> **Note:** **Nota:** A recomendação [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) do W3C aconselha fortemente aos autores web não usarem cor como o único meio para transmitir uma mensagem específica, ação ou resultado. Alguns usuários têm problemas em distinguir cores e as informações transmitidas podem não ser compreendidas. Claro, isso não impede o uso da cor, mas o seu uso apenas como o único meio para descrever certas coisas (veja [Cor e contraste de cor](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) para mais informações).
+> **Nota:** A recomendação [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) do W3C aconselha fortemente aos autores web não usarem cor como o único meio para transmitir uma mensagem específica, ação ou resultado. Alguns usuários têm problemas em distinguir cores e as informações transmitidas podem não ser compreendidas. Claro, isso não impede o uso da cor, mas o seu uso apenas como o único meio para descrever certas coisas (veja [Cor e contraste de cor](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast) para mais informações).
 
 ## Interpolação
 
@@ -966,7 +960,7 @@ A cor `rebeccapurple` é equivalente à cor `#639`, e mais informações sobre p
 
 A palavra-chave `transparent` representa uma cor totalmente transparente, isto é, a cor vista será a cor de fundo. Tecnicamente, é um preto com canal alfa no seu valor mínimo e é um atalho para `rgba(0,0,0,0)`.
 
-> **Note:** **Nota histórica**
+> **Nota:** **Nota histórica**
 > A palavra-chave `transparent` não era uma cor verdadeira no CSS nível 2 (Revisão 1). Era uma palavra-chave específica que poderia ser usada no lugar de um valor `<color>` regular em duas propriedades CSS: {{Cssxref("background")}} e {{Cssxref("border")}}. Ela foi adicionada essencialmente para permitir a substituição de cores sólidas herdadas.
 >
 > Com o apoio da opacidade através de [canais alfal](https://en.wikipedia.org/wiki/Alpha_compositing), `transparent` foi redefinida como uma cor verdadeira no Cores CSS nível 3 permitindo seu uso em qualquer lugar onde for exigido um valor para `<color>`, como a propriedade {{Cssxref("color")}}.
@@ -1005,7 +999,7 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 ### `rgb()`
 
-> **Note:** **Nota**: Na especificação Módulo de cor CSS Color nível 4, a rgba() foi definida como uma função herdada com gramática e comportamento idênticos à rgb(); na verdade, um apelido. Mais para frente, ambas podem aceitar exatamente os mesmos parâmetros.
+> **Nota:** Na especificação Módulo de cor CSS Color nível 4, a rgba() foi definida como uma função herdada com gramática e comportamento idênticos à rgb(); na verdade, um apelido. Mais para frente, ambas podem aceitar exatamente os mesmos parâmetros.
 
 RGB colors can be expressed through both hexadecimal (prefixed with `#`) and functional (`rgb()`, `rgba()`) notations.
 
@@ -1040,7 +1034,7 @@ rgb(255 0 0 / 40%)  /* 40% opaque red with percentage value for alpha */
 
 ### `hsl()`
 
-> **Note:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 Colors can also be defined via hue, saturation, and lightness, or HSL, by using the `hsl()` functional notation. The advantage of HSL over RGB is that it is far more intuitive: you can guess at the colors you want, and then tweak. It is also easier to create sets of matching colors (by keeping the hue the same and varying the lightness/darkness, and saturation).
 
@@ -1115,7 +1109,7 @@ rgba(255 0 0 / 0.4)  /* 40% opaque red */
 rgba(255 0 0 / 40%)  /* 40% opaque red */
 ```
 
-> **Note:** In the CSS Color Module Level 4 spec, `rgba()` has been defined as a legacy function with identical grammar and behaviour to `rgb()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `rgba()` has been defined as a legacy function with identical grammar and behaviour to `rgb()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 ### `hsla()`
 
@@ -1139,7 +1133,7 @@ hsla(240deg 100% 50% / 5%) /* 5% opaque blue */
 hsla(240deg,100%,50%, 0.4)  /* 40% opaque blue */
 ```
 
-> **Note:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
+> **Nota:** In the CSS Color Module Level 4 spec, `hsla()` has been defined as a legacy function with identical grammar and behaviour to `hsl()`; in effect, an alias. Going forward, both can accept exactly the same parameters.
 
 ### System Colors
 
@@ -1217,9 +1211,9 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-CellHighlightText
   - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - \-moz-ComboboxText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
 - \-moz-Dialog
   - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
 - \-moz-DialogText
@@ -1228,16 +1222,16 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
+  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1254,10 +1248,7 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
-
 - \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
 - \-moz-mac-focusring
 
   \-moz-mac-menuselect
@@ -1273,26 +1264,26 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
 - \-moz-MenuBarHoverText
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.
+  - : Default platform hyperlink color.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
 
 ### Mozilla Color Preference Extensions
 
 - \-moz-activehyperlinktext
   - : User's preference for text color of active links. Should be used with the default document background color.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the document background color.
+  - : User's preference for the document background color.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the text color.
+  - : User's preference for the text color.
 - \-moz-hyperlinktext
   - : User's preference for the text color of unvisited links. Should be used with the default document background color.
 - \-moz-visitedhyperlinktext

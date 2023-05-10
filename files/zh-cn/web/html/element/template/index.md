@@ -3,7 +3,7 @@ title: <template>：内容模板元素
 slug: Web/HTML/Element/template
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **内容模板**（`<template>`）元素是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以 (原文为 may be) 在运行时使用 JavaScript 实例化。
 
@@ -126,4 +126,4 @@ table td {
 ## 参见
 
 - Web components: {{HTMLElement("slot")}} (and historical: {{HTMLElement("shadow")}})
-- [Using templates and slots](/zh-CN/docs/Web/Web_Components/Using_templates_and_slots)
+- [Using templates and slots](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)

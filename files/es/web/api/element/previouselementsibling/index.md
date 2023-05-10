@@ -1,9 +1,9 @@
 ---
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
-translation_of: Web/API/NonDocumentTypeChildNode/previousElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/previousElementSibling
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura `NonDocumentTypeChildNode.previousElementSibling` retorna el {{domxref("Element")}} predecesor inmediato al especificado dentro de la lista de hijos de su padre, o bien `null` si el elemento especificado es el primero de dicha lista.

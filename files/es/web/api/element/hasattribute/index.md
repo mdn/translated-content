@@ -1,8 +1,8 @@
 ---
 title: Element.hasAttribute()
 slug: Web/API/Element/hasAttribute
-translation_of: Web/API/Element/hasAttribute
 ---
+
 {{APIRef}}
 
 El método `Elemento.hasAttribute()` devuelve un valor **Booleano** indicando si el elemento tiene el atributo especificado o no.

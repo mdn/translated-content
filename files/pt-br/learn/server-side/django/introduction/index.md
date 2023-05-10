@@ -1,17 +1,9 @@
 ---
 title: Introdução ao Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprender
-  - Codificação
-  - Iniciante
-  - Introdução
-  - Programação do lado do servidor
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e daremos uma visão geral do que torna este framework web especial. Vamos descrever os principais recursos, incluindo algumas das funcionalidades avançadas que não teremos tempo para abordar detalhadamente neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
@@ -320,21 +312,3 @@ Parabéns, você completou o primeiro passo em sua jornada no Django! Agora voc�
 Você já viu algum código real do Django acima, mas, diferentemente do código do lado do cliente, você precisa configurar um ambiente de desenvolvimento para executá-lo. Esse é o nosso próximo passo.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introdução)
-- [Configurando um ambiente de desenvolvimento](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [Criando um mini blog Django](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

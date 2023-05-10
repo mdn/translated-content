@@ -1,13 +1,9 @@
 ---
 title: Envie sugestões sobre o MDN
 slug: MDN/Community
-tags:
-  - Documentação
-  - Guía
-  - MDN Meta
-translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
+
 {{MDNSidebar}}
 
 Bem-vindo ao Mozilla Developer Network! Se você tem sugestões, ou está tendo problemas usando MDN, este é o lugar certo para estar. O fato de que você está interessado em oferecer um feedback, faz de você mais uma parte da comunidade Mozilla e agradecemos antecipadamente por seu interesse.
@@ -29,18 +25,6 @@ Para mais informações sobre contribuir com a documentação da MDN, veja:
 - [Começando](/pt-BR/docs/Project:en/Project:Getting_started)
 - [Contribuindo para o MDN](/pt-BR/docs/MDN/Contribute)
 - [Guia do Editor MDN](/pt-BR/docs/MDN/Contribute/Editor)
-
-## Junte-se à conversação
-
-Fale conosco! Existem algumas maneiras de entrar em contato com outras pessoas que trabalham no conteúdo do MDN.
-
-### Chat
-
-### Email
-
-Discussões de longo-prazo acontecem em nossa mailing list, [dev-mdc@lists.mozilla.org](https://lists.mozilla.org/listinfo/dev-mdc). você postar na lista sem se inscrever nela, mas neste caso, sua postagem deve ser aprovada por um moderador, o que significa que levará mais tempo para que outros possam vê-lo. Você pode visualizar e postar em dev-mdc através de sua escolha de formatos:
-
-{{ DiscussionList("dev-mdc", "mozilla.dev.mdc") }}
 
 ## Relatar um problema
 

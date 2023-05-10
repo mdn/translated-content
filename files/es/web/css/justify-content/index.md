@@ -1,8 +1,8 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-translation_of: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -144,13 +144,11 @@ Resultados en:
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#justify-content', 'justify-content')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## Ver también
 

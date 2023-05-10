@@ -18,7 +18,7 @@ function FindProxyForURL(url, host) {
 ret = FindProxyForURL(url, host)
 ```
 
-Voir [fichier Proxy Auto-Configuration (PAC)](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>)  pour plus de détails sur la façon de les utiliser et d'en créer de nouveaux.
+Voir [fichier Proxy Auto-Configuration (PAC)](</fr/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) pour plus de détails sur la façon de les utiliser et d'en créer de nouveaux.
 
 ## Voir aussi
 

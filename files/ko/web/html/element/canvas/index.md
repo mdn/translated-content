@@ -1,16 +1,9 @@
 ---
 title: '<canvas>: 그래픽 캔버스 요소'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 
@@ -156,7 +149,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 같이 보기
 

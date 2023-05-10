@@ -1,15 +1,9 @@
 ---
 title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Promise
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
+
 {{JSRef}}
 
 El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
@@ -281,14 +275,11 @@ const nextTick = (() => {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Definición inicial en el estándar ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
-## Compatibilidad en navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
+{{Compat}}
 
 ## Ver también
 

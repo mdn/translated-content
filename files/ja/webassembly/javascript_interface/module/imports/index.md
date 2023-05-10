@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module/imports
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.imports()`** 関数は、指定された `Module` の全てのインポート宣言の定義を配列として返します。
 

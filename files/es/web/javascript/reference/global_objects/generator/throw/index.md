@@ -1,9 +1,9 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/throw
 ---
+
 {{JSRef}}
 
 El método **`throw()`** reanuda la ejecución de un generador al lanzar un error en éste y regresar un objeto con las dos propiedades `done` y `value`.
@@ -34,7 +34,7 @@ Un {{jsxref("Object")}} con dos propiedades:
 
 ### Using `throw()`
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block as usual.
+The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch) block as usual.
 
 ```js
 function* gen() {
@@ -55,17 +55,14 @@ g.throw(new Error('Something went wrong'));
 // { value: 42, done: false }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                        | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## See also
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)

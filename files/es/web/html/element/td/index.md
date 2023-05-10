@@ -1,12 +1,10 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
 original_slug: Web/HTML/Elemento/td
-browser-compat: html.elements.td
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## Resumen
 
@@ -48,7 +46,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     > - Para lograr el mismo efecto de los valores `left`, `center`, `right`, o `justify` , usa la propiedad CSS {{cssxref("text-align")}} en el.
     > - Para lograr el mismo efecto que el valor `char` , en CSS3,puedes usar el valor de la {{htmlattrxref("char", "td")}} como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
 
-- {{htmlattrdef("axis")}} {{obsolete_inline}}
+- {{htmlattrdef("axis")}} {{deprecated_inline}}
 
   - : Este atributo contiene una lista de cadenas separadas por espacios . Cada cadena es el ID de un grupo de celdas a las que esta cabecera se aplica.
 
@@ -71,13 +69,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     > **Nota:** Nota: No usar este atributo ya que esta obsoleto en la ultima version del estandar y solo implementado en algunas versiones de Microsoft Internet Explorer: El elemento {{HTMLElement("td")}} debe ser estilizado en CSS.
     > Para crear un efecto similar en CSS en su lugar use la propiedad {{cssxref("background-color")}}.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}} in HTML4.01 {{obsolete_inline}} in HTML5
+- {{htmlattrdef("char")}} {{Deprecated_inline}} in HTML4.01 {{deprecated_inline}} in HTML5
 
   - : Este atributo se utiliza para establecer el carácter para alinear las celdas de una columna . Los valores típicos de esto incluyen un punto (. ) al intentar alinear los números o valores monetarios . Si {{ htmlattrxref ( "align" , "td" ) }} no está ajustado a char, este atributo se ignora.
 
     > **Nota:** No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el {{htmlattrxref("char", "thead")}}, en CSS3, puedes usar el character set usando el atributo {{htmlattrxref("char", "th")}} como el valor de la propiedad {{cssxref("text-align")}} {{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}} in HTML4.01 {{obsolete_inline}} in HTML5
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}} in HTML4.01 {{deprecated_inline}} in HTML5
 
   - : Este atributo se utiliza para indicar el número de caracteres para compensar los datos de la columna de los personajes de alineación especificado por el atributo de carbón .
 
@@ -85,7 +83,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - {{htmlattrdef("colspan")}}
 
-  - :  Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la {{ HTMLElement ( "colgroup" ) }} , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
+  - : Este atributo contiene un valor entero no negativo que indica por el número de columnas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la {{ HTMLElement ( "colgroup" ) }} , aunque implícitamente definido , que la célula pertenece. Los valores superiores a 1000 serán consideradas como incorrectas y se establecen en el valor predeterminado ( 1 ) .
 
     > **Nota:** En HTML5 este atributo solo acepta valores mayores que 0 this attribute only accepts values greater than zero since it [must not be used to overlap cells](http://dev.w3.org/html5/spec/single-page.html#attr-tdth-colspan). Además, Firefox is the only browser to support the 0 value as defined in the HTML4.01 specification.
 
@@ -93,9 +91,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
   - : Este atributo contiene una lista de cadenas separadas por espacios , cada uno correspondiente al atributo ID de la {{ HTMLElement ( "th" ) }} elementos que se aplican a este elemento.
 - {{htmlattrdef("rowspan")}}
   - : Este atributo contiene un valor entero no negativo que indica a cuántas filas se extiende la célula. Su valor por defecto es 1 ; si su valor se establece en 0 , se extiende hasta el final de la sección de la tabla ( {{ HTMLElement ( "thead" ) }} , {{ HTMLElement ( "tbody" ) }} , {{ HTMLElement ( "tfoot" ) }} , incluso si define implícitamente , que la célula pertenece. los valores superiores a 65534 se recortan hasta 65534 .
-- {{htmlattrdef("scope")}} {{obsolete_inline}} in HTML5
+- {{htmlattrdef("scope")}} {{deprecated_inline}} in HTML5
   - : Empty
-- {{htmlattrdef("valign")}} {{Deprecated_inline}} in HTML4.01, {{obsolete_inline}} in HTML5
+- {{htmlattrdef("valign")}} {{Deprecated_inline}} in HTML4.01, {{deprecated_inline}} in HTML5
 
   - : Este atributo especifica la alineación vertical del texto dentro de cada fila de células de la cabecera de la tabla . Los valores posibles para este atributo son :
 

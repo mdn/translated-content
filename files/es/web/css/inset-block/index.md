@@ -1,8 +1,8 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
-translation_of: Web/CSS/inset-block
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`inset-block`** define los bloques lógicos de inicio y fin de las compensaciones de un elemento, que se asignan a las compensaciones físicas en función del modo de escritura del elemento, la direccionalidad y la orientación del texto. Corresponde a las propiedades {{cssxref ("top")}} y {{cssxref ("bottom")}}, o {{cssxref ("right")}} y {{cssxref ("left")}} dependiendo de las propiedades en los valores definidos para {{cssxref ("modo de escritura")}}, {{cssxref ("dirección")}} y {{cssxref ("orientación de texto")}}.
@@ -68,15 +68,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                           | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-block", "inset-block")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inset-block")}}
+{{Compat}}
 
 ## Mira también
 

@@ -1,18 +1,8 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS 속성
-  - Cascade
-  - Style
-  - all:revert
-  - revert
-  - revert style 속성
-  - revert 속성
-  - 스타일
-translation_of: Web/CSS/revert
 ---
+
 {{CSSRef}}
 
 **`revert`** 는 현재 엘리먼트에 선언 된 캐스캐이딩된 속성으로부터 **{{Glossary("style origin")}}** 으로 되돌립니다. 부모 속성 또는 user agent에 따라 default로 선언 된 속성으로 되돌리는 것입니다. 이 속성은 css 단축속성{{cssxref("all")}}을 포함한 어떤 프로퍼티에도 적용할 수 있습니다.
@@ -103,11 +93,9 @@ section 요소가 돌아갔음에도 paragraph는 여전히 빨강인 것에 주
 
 {{EmbedLiveSample('Revert_on_a_parent')}}
 
-## 특성
+## 명세서
 
-| 특성                                                                 | 상태                             | 비고                |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Initial definition. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

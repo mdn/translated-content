@@ -1,15 +1,8 @@
 ---
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
-tags:
-  - API
-  - DOM
-  - Documento
-  - Referencia
-  - createTextNode
-  - metodo
-translation_of: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 Crea un nuevo nodo de texto. Este método puede ser usado para escapar caracteres HTML.

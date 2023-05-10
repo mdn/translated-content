@@ -1,16 +1,8 @@
 ---
 title: DOMImplementation
 slug: Web/API/DOMImplementation
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/DOMImplementation
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`DOMImplementation`** interface represent an object providing methods which are not dependent on any particular document. Such an object is returned by the {{domxref("Document.implementation")}} property.

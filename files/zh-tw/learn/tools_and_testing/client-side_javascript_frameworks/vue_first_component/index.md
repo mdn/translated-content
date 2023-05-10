@@ -124,37 +124,37 @@ export default {
 
 ![目前應用程式的渲染狀態——包含一個標題（ To-Do List ），一個 checkbox 和 label](rendered-todoitem.png)
 
-## Making components dynamic with props
+## 使用 prop 讓元件變得更彈性
 
-Our `ToDoItem` component is still not very useful because we can only really include this once on a page (IDs need to be unique), and we have no way to set the label text. Nothing about this is dynamic.
+到目前爲止我們的 `ToDoItem` 元件還不是很實用，因為這個元件一個頁面只能使用一次（元件內 label 的 id 是唯一值），而且我們也沒有辦法設定 label 的文字內容。
 
-What we need is some component state. This can be achieved by adding props to our component. You can think of props as being similar to inputs in a function. The value of a prop gives components an initial state that affects their display.
+所以我們可以透過 prop 新增一些狀態到我們的元件，你可以將 prop 想像成是傳入函式的參數，它會讓元件有一些初始狀態可以用來渲染到畫面上。
 
-### Registering props
+### 宣告 prop
 
-In Vue, there are two ways to register props:
+在 Vue 中，宣告 prop 的方法有兩種：
 
-- The first way is to just list props out as an array of strings. Each entry in the array corresponds to the name of a prop.
-- The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.
+- 第一種方法是將 prop 寫成字串存進陣列中，陣列中的每個元素都對應到一個 prop 的名稱。
+- 第二種方法是寫一個物件，將 prop 作為物件的 key，這種寫法可以設定 prop 的初始值、型別、是否為必要值以及簡單的驗證。
 
-> **備註：** Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).
+> **備註：** Prop 驗證只有在開發環境下有效，所以在正式上線的環境中無法使用。此外，作為 prop 驗證的函式在元件被創建之前就會被呼叫，因此該函式無法取得元件中的任何狀態或是其他 prop。
 
-For this component, we’ll use the object registration method.
+對於 `ToDoItem` 這個元件，我們會透過第二種方法宣告 prop，也就是物件的形式。
 
-1. Go back to your `ToDoItem.vue` file.
-2. Add a `props` property inside the export `default {}` object, which contains an empty object.
-3. Inside this object, add two properties with the keys `label` and `done`.
-4. The `label` key's value should be an object with 2 properties (or **props**, as they are called in the context of being available to the components).
+1. 回到 `ToDoItem.vue` 檔
+2. 在 `export default {}` 的物件中加入一個 `props` 屬性，值為一個空物件
+3. 在 `props` 物件中加入兩個屬性，分別是 `label` 和 `done`
+4. `label` 的值是一個物件帶有兩個屬性
 
-    1. The first is a `required` property, which will have a value of `true`. This will tell Vue that we expect every instance of this component to have a label field. Vue will warn us if a `ToDoItem` component does not have a label field.
-    2. The second property we'll add is a `type` property. Set the value for this property as the JavaScript `String` type (note the capital "S"). This tells Vue that we expect the value of this property to be a string.
+    1. 第一個屬性是 `required`，它的值為 `true`。這會告訴 Vue 我們預期元件必須要接收到一個名為 `label` 的 prop。如果元件沒有接受到的話，Vue 會發出警告通知我們。
+    2. 第二個屬性是 `type`，它的值為 `String`。這會告訴 Vue 我們預期 prop 的型別是一個字串。
 
-5. Now on to the `done` prop.
+5. 接著是 `done` 這個 prop
 
-    1. First add a `default` field, with a value of `false`. This means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will have a value of false (bear in mind that this is not required — we only need `default` on non-required props).
-    2. Next add a `type` field with a value of `Boolean`. This tells Vue we expect the value prop to be a JavaScript boolean type.
+    1. 首先設定 `default` 屬性為 `false`，意思是當元件沒有接收到 `done` 的時候，`done` 的初始值為 false（要注意只有在 prop 不是必需的時候才會設定初始值）
+    2. 接著設定 `type` 這個屬性為 `Boolean`，這會告訴 Vue 我們預期 `done` 是一個布林值
 
-Your component object should now look like this:
+你的物件現在看起來應該要像是這樣：
 
 ```js
 <script>
@@ -167,15 +167,15 @@ Your component object should now look like this:
 </script>
 ```
 
-### Using registered props
+### 使用完成宣告的 prop
 
-With these props defined inside the component object, we can now use these variable values inside our template. Let's start by adding the `label` prop to the component template.
+有了這些宣告好的 prop 後，我們現在可以在樣板內使用這些 prop，讓我們先從在樣板內加入一個 `label` 的 prop 開始。
 
-In your `<template>`, replace the contents of the `<label>` element with `\{{label}}`.
+在你的 `<template>` 中，把 `<label>` 的內容換成 `\{{label}}`
 
-`\{{}}` is a special template syntax in Vue, which lets us print the result of JavaScript expressions defined in our class, inside our template, including values and methods. It’s important to know that content inside `\{{}}` is displayed as text and not HTML. In this case, we’re printing the value of the `label` prop.
+`\{{}}` 是一個 Vue 的樣板語法，它讓我們可以在樣板印出 JavaScript 表達式的結果。當我們在 Vue 的樣板中看到 `\{{}}` 時，必須要知道它是拿來顯示文字的而不是 HTML。以現在這個案例來說，我們會印出 `label` 這個 prop 的值。
 
-Your component’s template section should now look like this:
+現在你的樣板看起來應該會是像這樣：
 
 ```html
 <template>
@@ -186,7 +186,7 @@ Your component’s template section should now look like this:
 </template>
 ```
 
-Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you’ll see a warning along these lines in the console:
+回到瀏覽器後你會看到之前渲染的 todo item，但是沒有看到 label。接著打開你的開發者工具，你會發現在主控台中出現了下列的警告：
 
 ```plain
 [Vue warn]: Missing required prop: "label"
@@ -198,17 +198,17 @@ found in
          <Root>
 ```
 
-This is because we marked the `label` as a required prop, but we never gave the component that prop — we've defined where inside the template we want it used, but we haven't passed it into the component when calling it. Let’s fix that.
+這是因為我們設定 `label` 為 required，但是我們在元件中沒有接收到，而且又在元件的樣板中使用了 `label`，也就是說我們在父元件中沒有傳入 `label` 這個 prop，讓我們來修正這個問題。
 
-Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
+在你的 `App.vue` 檔中，將 `label` 這個屬性加到 `<to-do-item></to-do-item>` 上，就像一般的 HTML 屬性寫法一樣：
 
 ```html
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
-Now you'll see the label in your app, and the warning won't be spat out in the console again.
+現在再回到瀏覽器的畫面，你會看到 label 出現了，而且主控台也沒有出現警告。
 
-So that's props in a nutshell. Next we'll move on to how Vue persists data state.
+這就是一個簡單的 prop 例子，接下來我們會說說 Vue 如何維持資料的狀態。
 
 ## Vue's data object
 
@@ -330,7 +330,7 @@ export default {
 
 Next, bind the `id` to both our checkbox’s `id` attribute and the label’s `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```js
+```html
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />
@@ -346,58 +346,3 @@ And that will do for this article. At this point we have a nicely-working `ToDoI
 Now we're ready to add multiple `ToDoItem` components to our App. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 在本模組
-
-- [前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [元件化我們的 React 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 互動性：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 互動性：編輯、過濾、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Ember 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 應用程式結構及元件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 互動性：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 互動性： Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 資源及偵錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [新增待辦表單： Vue 事件、方法、模型](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 條件式渲染：編輯已存在的待辦表單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [開始寫我們的 Svelte 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的動態行為：變數及屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [元件化我們的 Svelte 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [進階 Svelte ：反應性、生命週期、可存取性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [和 Svelte stores 共舞](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [開始我們的 Angular 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [樣式化我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component 建立（待辦清單）項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [過濾我們的待辦項目](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [建置 Angular 應用程式及更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

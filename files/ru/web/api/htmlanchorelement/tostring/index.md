@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
+
 {{ApiRef("URL API")}}
 
 Метод **`HTMLHyperlinkElementUtils.toString()`** возвращает {{domxref("USVString")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.

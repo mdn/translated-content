@@ -1,13 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Variable declaration
-  - Variables
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 Declara uma variável local no escopo do bloco atual, opcionalmente iniciando-a com um valor.
@@ -113,7 +108,7 @@ console.log(a); // 5
 console.log(b); // 1
 ```
 
-É possível usar a keyword _let_ para vincular variáveis ​​localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
+É possível usar a keyword _let_ para vincular variáveis localmente no escopo de loops em vez de usar uma variável global (definida usando _var_) para isso.
 
 ```js
 for (let i = 0; i<10; i++) {

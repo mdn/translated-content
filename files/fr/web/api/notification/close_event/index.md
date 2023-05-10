@@ -26,7 +26,7 @@ Notification.onclose = (event) => { ... }
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Notification.onclose")}}
+{{Compat}}
 
 ## Voir aussi
 

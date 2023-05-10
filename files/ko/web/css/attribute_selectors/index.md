@@ -1,12 +1,8 @@
 ---
 title: 특성 선택자
 slug: Web/CSS/Attribute_selectors
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Attribute_selectors
 ---
+
 {{CSSRef("Selectors")}}
 
 [CSS](/ko/docs/Web/CSS) **특성 선택자**는 주어진 특성의 존재 여부나 그 값에 따라 요소를 선택합니다.

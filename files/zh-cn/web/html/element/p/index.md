@@ -3,7 +3,7 @@ title: <p>
 slug: Web/HTML/Element/p
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML \<p>**元素（或者说 HTML 段落元素）表示文本的一个段落。该元素通常表现为一整块与相邻文本分离的文本，或以垂直的空白隔离或以首行缩进。另外，\<p> 是[块级元素](/zh-CN/docs/HTML/Block-level_elements)。
 
@@ -44,7 +44,7 @@ slug: Web/HTML/Element/p
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTMLElement("hr")}}
 - {{HTMLElement("br")}}

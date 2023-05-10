@@ -1,14 +1,8 @@
 ---
 title: ':only-child'
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:only-child`** de [CSS](/es/docs/Web/CSS) representa un elemento sin hermanos. Esto es lo mismo que `:first-child:last-child` o `:nth-child(1):nth-last-child(1)`, pero con una especificidad menor.
@@ -98,14 +92,11 @@ li:only-child {
 
 ## Especificaciones
 
-| Specification                                                                            | Status                               | Comment                                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.only-child")}}
+{{Compat}}
 
 ## Ver también
 

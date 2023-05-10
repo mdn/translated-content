@@ -1,8 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 La interfaz **`DocumentFragment`** representa un objeto de documento mínimo que no tiene padre. Se utiliza como una versión ligera de {{domxref("Document")}} que almacena un segmento de una estructura de documento compuesta de nodos como un documento estándar. La gran diferencia se debe al hecho de que el fragmento de documento no forma parte de la estructura de árbol del documento activo. Los cambios realizados en el fragmento no afectan el documento (incluso en {{Glossary("reflow")}}) ni inciden en el rendimiento cuando se realizan cambios. {{InheritanceDiagram}}
@@ -73,19 +73,13 @@ list.appendChild(fragment)
 
 {{EmbedLiveSample('Example')}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                            | Status                                       | Comment                                                                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}} | {{Spec2('DOM WHATWG')}}             | Added the constructor and the implementation of {{domxref("ParentNode")}}. |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}             | {{Spec2('Selectors API Level 1')}} | Added the `querySelector()` and `querySelectorAll()` methods.                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM3 Core')}}                 | No change from {{SpecName('DOM2 Core')}}                                   |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM2 Core')}}                 | No change from {{SpecName('DOM1')}}                                       |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}     | {{Spec2('DOM1')}}                     | Initial definition                                                                |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.DocumentFragment")}}
+{{Compat}}
 
 ## See also
 

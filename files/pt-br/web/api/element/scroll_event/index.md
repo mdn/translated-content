@@ -1,9 +1,9 @@
 ---
 title: GlobalEventHandlers.onscroll
 slug: Web/API/Element/scroll_event
-translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A propriedade **`onscroll`** do {{domxref("GlobalEventHandlers")}} é uma mistura de eventos {{event("Event_handlers", "event handler")}} que processam eventos `scroll`.
@@ -71,7 +71,7 @@ function logScroll(e) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onscroll")}}
+{{Compat}}
 
 ## Veja também
 

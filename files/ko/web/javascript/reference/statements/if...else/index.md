@@ -1,12 +1,8 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 **`if` 문**은 지정한 조건이 {{glossary("truthy", "참")}}인 경우 명령문(statement)을 실행합니다. 조건이 {{glossary("falsy", "거짓")}}인 경우 또 다른 명령문이 실행 될 수 있습니다.

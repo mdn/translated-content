@@ -1,9 +1,9 @@
 ---
 title: Introdução ao DOM
 slug: Web/API/Document_Object_Model/Introduction
-translation_of: Web/API/Document_Object_Model/Introduction
 original_slug: DOM/Referencia_do_DOM/Introdução
 ---
+
 O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Neste guia, apresentaremos brevemente o DOM. Veremos como o DOM representa um documento {{Glossary ("HTML")}} ou {{Glossary ("XML")}} na memória e como você usa APIs para criar aplicativos e conteúdo da Web.
 
 ## O que é o DOM?
@@ -12,7 +12,7 @@ O Document Object Model (**DOM**) é uma interface de programação para os docu
 
 Uma página da Web é um documento. Este documento pode ser exibido na janela do navegador ou como a fonte HTML. Mas é o mesmo documento nos dois casos. O DOM (Document Object Model) representa o mesmo documento para que possa ser manipulado. O DOM é uma representação orientada a objetos da página da web, que pode ser modificada com uma linguagem de script como JavaScript.
 
-Os padrões [W3C DOM](http://www.w3.org/DOM/) e [WHATWG DOM](https://dom.spec.whatwg.org) são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.
+Os padrões [W3C DOM](https://www.w3.org/DOM/) e [WHATWG DOM](https://dom.spec.whatwg.org) são implementados na maioria dos navegadores modernos. Muitos navegadores estendem o padrão; portanto, é necessário ter cuidado ao usá-los na Web, onde os documentos podem ser acessados por vários navegadores com diferentes DOMs.
 
 Por exemplo, o DOM padrão especifica que o método `getElementsByTagName` no código abaixo deve retornar uma lista de todos os elementos `<p>` no documento:
 

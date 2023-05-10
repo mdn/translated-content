@@ -13,6 +13,7 @@ tags:
   - TopicStub
 translation_of: Web/API/File_and_Directory_Entries_API
 ---
+
 {{DefaultAPISidebar("File System API")}}
 
 {{Non-standard_Header}}

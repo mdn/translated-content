@@ -7,6 +7,7 @@ tags:
   - scope
 translation_of: Web/Manifest/scope
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">

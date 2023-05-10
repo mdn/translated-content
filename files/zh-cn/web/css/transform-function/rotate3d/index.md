@@ -43,9 +43,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
       <td colspan="1">
-        <a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"
+        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
           ><img
-            src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview"
+            src="transform-functions-rotate3d_cart.png"
             style="height: 47px; width: 510px" /></a
         ><math>
           <mfenced
@@ -88,9 +88,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
       <td colspan="1">
-        <a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"
+        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
           ><img
-            src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview"
+            src="transform-functions-rotate3d_hom4.png"
             style="height: 61px; width: 522px"
         /></a>
       </td>

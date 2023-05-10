@@ -1,6 +1,6 @@
 ---
 title: Strict mode (厳格モード)
-slug: Glossary/strict_mode
+slug: Glossary/Strict_mode
 ---
 
 JavaScript の**厳格モード**は、 JavaScript の制限された変化形を*利用する*方法であり、それによって暗黙的に "{{Glossary("Sloppy_mode", "sloppy mode")}}" をやめることができます。厳格モードは単なるサブセットではありません。通常のコードとは*意図的に*異なる意味を持っています。

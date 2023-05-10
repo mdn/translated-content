@@ -1,14 +1,8 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - JavaScript
-  - Laço de repetição
-  - Loop
-  - Statement
-  - for...in
-translation_of: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 O laço **`for...in`** interage sobre propriedades enumeradas de um objeto, na ordem original de inserção. O laço pode ser executado para cada propriedade distinta do objeto.
@@ -102,7 +96,7 @@ for (var prop in obj) {
 
 ## Compatibilidade: Initializer expressions
 
-Anterior ao SpiderMonkey 40 {{geckoRelease(40)}}, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
+Anterior ao SpiderMonkey 40, era possível usar uma expressão inicial com o laço for...in, conforme exemplo que se segue:
 
 ```js example-bad
 var obj = {a:1, b:2, c:3};

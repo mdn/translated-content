@@ -138,5 +138,4 @@ window.addEventListener('DOMContentLoaded', function () {
 - [Drag and drop](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Recommended Drag Types](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [Dragging and Dropping Multiple Items](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

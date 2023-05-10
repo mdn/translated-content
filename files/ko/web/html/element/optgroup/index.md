@@ -1,16 +1,9 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<optgroup>` 요소**는 {{HTMLElement("select")}} 요소의 옵션을 묶을 수 있습니다.
 
@@ -93,4 +86,4 @@ translation_of: Web/HTML/Element/optgroup
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.optgroup")}}
+{{Compat}}

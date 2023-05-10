@@ -274,9 +274,12 @@ Pour créer un attribut, il faut :
 
 Un autre exemple d'un élément est {{htmlelement("a")}}. Il représente une ancre et permet de transformer en lien l'élément qu'il enveloppe. Il peut recevoir un certain nombre d'attributs, mais voici les deux principaux :
 
-- **`href`** : cet attribut spécifie l'adresse web vers laquelle vous souhaitez que le lien pointe, c'est-à-dire l'adresse vers laquelle le navigateur redirigera lorsqu'on cliquera sur le lien. Par exemple, `href="https://www.mozilla.org/"`.
-- **`title`** : l'attribut `title` apporte des informations supplémentaires sur le lien, comme le nom de la page vers laquelle le lien pointe. Par exemple, `title="Page d'Accueil Mozilla"`, qui apparaîtra comme une info-bulle lorsque le curseur passera sur le lien.
-- **`target`** : l'attribut `target` définit le contexte de navigation utilisé pour afficher le lien. Par exemple, `target="_blank"` affichera le lien dans un nouvel onglet. Si vous voulez afficher le lien dans l'onglet courant, il suffit de ne pas mettre cet attribut.
+- `href`
+  - : cet attribut spécifie l'adresse web vers laquelle vous souhaitez que le lien pointe, c'est-à-dire l'adresse vers laquelle le navigateur redirigera lorsqu'on cliquera sur le lien. Par exemple, `href="https://www.mozilla.org/"`.
+- `title`
+  - : l'attribut `title` apporte des informations supplémentaires sur le lien, comme le nom de la page vers laquelle le lien pointe. Par exemple, `title="Page d'Accueil Mozilla"`, qui apparaîtra comme une info-bulle lorsque le curseur passera sur le lien.
+- `target`
+  - : l'attribut `target` définit le contexte de navigation utilisé pour afficher le lien. Par exemple, `target="_blank"` affichera le lien dans un nouvel onglet. Si vous voulez afficher le lien dans l'onglet courant, il suffit de ne pas mettre cet attribut.
 
 Modifiez la ligne ci-dessous dans la _Zone de saisie_ pour la transformer en lien vers votre site web préféré.
 
@@ -745,15 +748,3 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 - [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

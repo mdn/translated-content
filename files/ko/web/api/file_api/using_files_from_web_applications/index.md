@@ -1,7 +1,6 @@
 ---
 title: 웹 어플리케이션에서 파일 사용하기
 slug: Web/API/File_API/Using_files_from_web_applications
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
 {{APIRef("File API")}}
@@ -129,7 +128,7 @@ function updateSize() {
 
 ## click() 메소드를 사용하여 숨겨진 파일 input 엘리먼트 사용하기
 
-Gecko 2.0 {{geckoRelease("2.0")}}의 시작과 함께, 확실히 세련되지 않은 파일 {{HTMLElement("input")}} 엘리먼트를 숨기고 파일 선택기를 열고 사용자에 의해 선택된 파일 또는 파일들을 보여주는 여러분만의 인터페이스를 제공할 수 있습니다. input 엘리먼트를 `display:none` 으로 스타일링하고 {{HTMLElement("input")}} 엘리먼트에 {{DOMxRef("element.click","click()")}} 메소드를 호출하는 것으로 이를 수행할 수 있습니다.
+세련되지 않은 파일 {{HTMLElement("input")}} 엘리먼트를 숨기고 파일 선택기를 열고 사용자에 의해 선택된 파일 또는 파일들을 보여주는 여러분만의 인터페이스를 제공할 수 있습니다. input 엘리먼트를 `display:none` 으로 스타일링하고 {{HTMLElement("input")}} 엘리먼트에 {{DOMxRef("element.click","click()")}} 메소드를 호출하는 것으로 이를 수행할 수 있습니다.
 
 다음 HTML을 생각해봅시다.
 
@@ -260,7 +259,7 @@ H여기에서 사용자가 선택한 파일을 다루는 반복문은 각 파일
 
 ## 객체 URL 사용하기
 
-Gecko 2.0 {{geckoRelease("2.0")}}은 DOM {{DOMxRef("window.URL.createObjectURL()")}} 및 {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드에 대한 지원을 소개했습니다. 이 메소드들은 사용자의 컴퓨터에 있는 로컬 파일을 포함해, DOM {{DOMxRef("File")}} 객체를 사용해 참조된 데이터에 대한 참조로 사용할 수 있는 간단한 URL 문자열을 생성할 수 있게 해줍니다.
+DOM {{DOMxRef("window.URL.createObjectURL()")}} 및 {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드에 대한 지원을 소개했습니다. 이 메소드들은 사용자의 컴퓨터에 있는 로컬 파일을 포함해, DOM {{DOMxRef("File")}} 객체를 사용해 참조된 데이터에 대한 참조로 사용할 수 있는 간단한 URL 문자열을 생성할 수 있게 해줍니다.
 
 HTML에 URL로 참조하길 원하는 {{DOMxRef("File")}} 객체가 있다면, 다음과 같이 객체 URL을 생성할 수 있습니다.
 
@@ -415,8 +414,6 @@ Before actually transferring the data, several preparatory steps are taken:
 5. The `FileReader` object is used to convert the file to a binary string.
 6. Finally, when the content is loaded the `XMLHttpRequest` function `send()` is called to upload the file's content.
 
-> **참고:** The non-standard `sendAsBinary` method which was previously used in the example above is considered deprecated as of Gecko 31 {{geckoRelease(31)}}; use the standard `send(Blob data)` method instead.
-
 ### Asynchronously handling the file upload process
 
 This example, which uses PHP on the server side and JavaScript on the client side, demonstrates asynchronous uploading of a file.
@@ -508,7 +505,7 @@ video.play()
 window.URL.revokeObjectURL(obj_url);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

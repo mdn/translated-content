@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/paint-order
 browser-compat: css.properties.paint-order
 ---
+
 {{CSSRef}}
 
 [CSS-свойство](/ru/docs/Web/CSS) **`paint-order`** позволяет вам контролировать порядок, в котором отрисовываются заливка и обводка (и нарисованные маркеры) текстового содержимого и фигур.

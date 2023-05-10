@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 
 Метод **`big()`** создаёт HTML-элемент {{HTMLElement("big")}}, заставляющий строку отображаться большим шрифтом.
 
-> **Примечание:** **Примечание по использованию:** элемент \<big> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> **Примечание:** элемент \<big> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
 
 ## Синтаксис
 
@@ -40,7 +40,7 @@ var worldString = 'Привет, мир';
 
 console.log(worldString.small());     // <small>Привет, мир</small>
 console.log(worldString.big());       // <big>Привет, мир</big>
-console.log(worldString.fontsize(7)); // <fontsize=7>Привет, мир</fontsize>
+console.log(worldString.fontsize(7)); // <font size=7>Привет, мир</font>
 ```
 
 При помощи объекта {{domxref("HTMLElement.style", "element.style")}} вы можете получить значение атрибута `style` элемента и управлять им более обобщённым способом, например:

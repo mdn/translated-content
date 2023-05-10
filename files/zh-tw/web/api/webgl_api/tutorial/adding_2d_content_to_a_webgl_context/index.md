@@ -3,7 +3,7 @@ title: 增加一個 2D 物件到 WebGL 環境
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 當你[建立了 WebGL 的 context](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)後，便可開始渲染。最簡單的例子就是加入一個普通的正方形。接下來，我們會介紹如何畫一個正方形。
 

@@ -159,7 +159,7 @@ Cet exemple est assez simple mais permet d'illustrer comme utiliser une grille a
 
 ## Une disposition flexible avec 12 colonnes
 
-Si vous travaillez avec un _framework_ ou avec un système de grille, vous êtes peut-être habitué-e à travailler sur une grille avec 12 ou 16 colonnes. On peut recréer ce genre de système avec une grille CSS. Pour commencer, on crée une grille avec 12 colonnes dont chaque piste mesure `1fr`-unit et commence par une ligne intitulée `col-start`. Autrement dit, on aura 12 colonnes intitulées `col-start`.
+Si vous travaillez avec un _framework_ ou avec un système de grille, vous êtes peut-être habitué-e à travailler sur une grille avec 12 ou 16 colonnes. On peut recréer ce genre de système avec une grille CSS. Pour commencer, on crée une grille avec 12 colonnes dont chaque piste mesure `1fr` - unit et commence par une ligne intitulée `col-start`. Autrement dit, on aura 12 colonnes intitulées `col-start`.
 
 ```css hidden
 .wrapper {

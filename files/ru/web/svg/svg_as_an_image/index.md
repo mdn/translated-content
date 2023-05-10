@@ -3,6 +3,7 @@ title: SVG как изображение
 slug: Web/SVG/SVG_as_an_Image
 translation_of: Web/SVG/SVG_as_an_Image
 ---
+
 Изображения SVG могут использоваться как формат изображения в ряде контекстов. Многие браузеры поддерживают изображения SVG:
 
 - Элементы HTML {{HTMLElement("img")}} или {{SVGElement("svg")}}
@@ -10,7 +11,7 @@ translation_of: Web/SVG/SVG_as_an_Image
 
 ## Гекко-специфические контексты
 
-Кроме того, Gecko 2.0 {{geckoRelease("2.0")}} представил поддержку использования [SVG](/ru/docs/SVG) в следующих контекстах:
+Кроме того, Gecko 2.0 представил поддержку использования [SVG](/ru/docs/SVG) в следующих контекстах:
 
 - CSS {{cssxref("list-style-image")}}
 - CSS {{cssxref("content")}}

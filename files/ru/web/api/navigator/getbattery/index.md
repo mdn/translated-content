@@ -4,6 +4,7 @@ slug: Web/API/Navigator/getBattery
 translation_of: Web/API/Navigator/battery
 original_slug: Web/API/Navigator/battery
 ---
+
 {{ ApiRef("Battery API") }}{{deprecated_header}}
 
 Свойство `battery` только для чтения возвращающее {{DOMxRef("BatteryManager")}} которое даёт информацию об уровне заряда системной батареи; предоставляет также некоторые новые события, которые вы можете обрабатывать и контролируя состояние батареи.Оно реализует [API состояния батареи](/ru/docs/WebAPI/Battery_Status); смотрите документацию для получения дополнительной информации, руководство по использованию API и примеры кода.

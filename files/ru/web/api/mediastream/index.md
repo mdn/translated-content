@@ -30,7 +30,7 @@ _Этот интерфейс наследует свойства своего р
 
 - {{domxref("MediaStream.active")}} {{readonlyinline}}
   - : Возвращает `true`, если `MediaStream` активен, иначе `false`.
-- {{domxref("MediaStream.ended")}} {{readonlyInline}} {{obsolete_inline()}}
+- {{domxref("MediaStream.ended")}} {{readonlyInline}}
   - : Возвращает `true`, если достигнут конец потока. Это свойство удалено из спецификации; следует проверять свойство {{domxref("MediaStreamTrack.readyState")}}, которое имеет значение `"ended"` у завершённых треков.
 
 <!---->

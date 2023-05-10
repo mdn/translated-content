@@ -1,14 +1,9 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - Glossário
-  - HTML
-  - Web
-  - scripts
-translation_of: Glossary/HTML
 original_slug: Glossario/HTML
 ---
+
 HTML (HyperText Markup Language) é uma linguagem descritiva que especifica a estrutura de uma página web.
 
 ## Breve história
@@ -23,7 +18,7 @@ Um documento HTML é um documento de texto simples estruturado com {{glossary("e
 
 Você pode estender tags HTML com {{Glossary("attribute","atributos")}}, os quais fornecem informações adicionais que afetam como o navegador interpreta o elemento:
 
-![Detalhes da estrutura de um elemento HTML](https://mdn.mozillademos.org/files/14717/mdn_Anatomia_de_um_elemento_HTML.png)
+![Detalhes da estrutura de um elemento HTML](mdn_anatomia_de_um_elemento_html.png)
 
 Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponibilizado por um {{Glossary("Server","servidor web")}}, e pode ser renderizado por qualquer {{Glossary("Browser","navegador")}}.
 
@@ -41,4 +36,4 @@ Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponi
 ### Referência Técnica
 
 - [A documentação HTML no MDN](/pt-BR/docs/Web/HTML)
-- [A especificação HTML (W3C)](http://www.w3.org/TR/html5/)
+- [A especificação HTML (W3C)](https://www.w3.org/TR/html5/)

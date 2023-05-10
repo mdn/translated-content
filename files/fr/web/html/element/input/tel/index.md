@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/tel
 browser-compat: html.elements.input.input-tel
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
 
@@ -68,7 +68,7 @@ La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)
 
 ### `maxlength`
 
-Le nombre maximum de caractères (exprimé en nombre de points de code UTF-16) qu'il est possible de saisir dans le champ. Cette valeur doit  un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
+Le nombre maximum de caractères (exprimé en nombre de points de code UTF-16) qu'il est possible de saisir dans le champ. Cette valeur doit un entier positif ou nul. Si aucune valeur n'est fournie pour `maxlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille maximale. La valeur indiquée par cet attribut doit être supérieure à `minlength`.
 
 Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si la longueur du numéro de téléphone dépasse `maxlength` en nombre de points de code UTF-16.
 

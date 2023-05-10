@@ -33,7 +33,7 @@ L'objet {{jsxref("String")}} surcharge la méthode `toString()` de l'objet {{jsx
 
 ## Exemples
 
-L'exemple suivant affiche la valeur textuelle d'un objet  {{jsxref("String")}} :
+L'exemple suivant affiche la valeur textuelle d'un objet {{jsxref("String")}} :
 
 ```js
 var x = new String("coucou monde");

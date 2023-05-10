@@ -1,8 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-translation_of: Web/API/Navigator
 ---
+
 {{ apiref() }}
 
 The **`Navigator`** interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
@@ -64,7 +64,7 @@ _Doesn't inherit any property, but implements those defined in {{domxref("Naviga
   - : Returns an {{domxref("window.navigator.mozApps", "Apps")}} object you can use to install, manage, and control [Open Web apps](/Open_Web_Apps).
 - {{domxref("Navigator.mozAudioChannelManager", "navigator.mozAudioChannelManager")}} {{non-standard_inline}}
   - : The `navigator.mozAudioChannelManager` object provides access to the {{domxref("mozAudioChannelManager")}} interface, which is used to manage your Firefox OS device's audio channels, including setting what channel's volume to affect when the volume buttons are pressed inside a particular app.
-- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline("22")}} {{non-standard_inline}}
+- {{domxref("window.navigator.mozNotification","navigator.mozNotification")}} {{deprecated_inline}} {{non-standard_inline}}
   {{domxref("window.navigator.webkitNotification","navigator.webkitNotification")}}
   - : Returns a {{domxref("navigator.mozNotification", "notification")}} object you can use to deliver notifications to the user from your web application.
 - {{domxref("navigator.mozSocial")}} {{non-standard_inline}}
@@ -94,9 +94,9 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
   - : Allows web sites to register themselves as a possible handler for a given MIME type.
 - {{domxref("navigator.registerProtocolHandler", "navigator.registerProtocolHandler")}}
   - : Allows web sites to register themselves as a possible handler for a given protocol.
-- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}
+- {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline}} {{experimental_inline}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
-- {{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}
+- {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
 ### Non standard
@@ -105,7 +105,7 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
   - : Lets code check to see if the document at a given URI is available without using the network.
 - {{domxref("window.navigator.mozPay", "navigator.mozPay")}} {{non-standard_inline}}
   - : Allows in-app payment.
-- {{domxref("window.navigator.preference", "navigator.preference")}} {{obsolete_inline("2.0")}} {{non-standard_inline}}
+- {{domxref("window.navigator.preference", "navigator.preference")}} {{non-standard_inline}}
   - : Sets a user preference. This method is [only available to privileged code](http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en) and is obsolete; you should use the XPCOM [Preferences API](/pt-BR/docs/Preferences_API) instead.
 - {{domxref("window.navigator.requestWakeLock", "navigator.requestWakeLock")}} {{non-standard_inline}}
   - : Request a wake lock for a resource. A wake lock prevents a specific part of a device from being turned off automatically.

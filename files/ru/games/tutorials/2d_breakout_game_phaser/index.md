@@ -13,9 +13,8 @@ tags:
 translation_of: Games/Tutorials/2D_breakout_game_Phaser
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 ---
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
 
-{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
 
 В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
 
@@ -23,7 +22,7 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 Чтобы получить наибольшую пользу от этого руководства, вам необходимо иметь базовые знания [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics). После прочтения вы научитесь создавать собственные простые веб-игры с помощью Phaser.
 
-![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](https://mdn.mozillademos.org/files/11323/mdn-breakout-phaser.png)
+![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
 ## Дополнительно
 
@@ -32,7 +31,7 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 1. [Инициализация фреймворка](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework)
 2. [Масштабирование](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling)
 3. [Загрузка ресурсов и их вывод](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [Движение мяча](ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball)
+4. [Движение мяча](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball)
 5. [Физика](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics)
 6. [Отскакивание от стен](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls)
 7. [Управление](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление)

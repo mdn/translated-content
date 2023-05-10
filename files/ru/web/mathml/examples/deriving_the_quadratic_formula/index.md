@@ -12,6 +12,7 @@ tags:
 translation_of: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 original_slug: Web/MathML/Примеры/Deriving_the_Quadratic_Formula
 ---
+
 На этой странице описывается вывод Квадратичной Формулы.
 
 <math><mtable columnalign="left"><mtr><mtd><mrow><mrow><mrow><mrow>Мы берём квадратное уравнение в его общем виде и решаем для х:<mspace depth="1ex" height="0.5ex" width="2.5ex"></mspace></mrow></mrow></mrow></mrow></mtd></mtr></mtable></math>

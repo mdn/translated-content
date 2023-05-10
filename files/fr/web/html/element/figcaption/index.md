@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/figcaption
 browser-compat: html.elements.figcaption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<figcaption>`** représente une légende décrivant le reste du contenu de son élément parent [`<figure>`](/fr/docs/Web/HTML/Element/figure).
 

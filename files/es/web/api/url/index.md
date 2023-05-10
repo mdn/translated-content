@@ -1,15 +1,8 @@
 ---
 title: URL
 slug: Web/API/URL
-tags:
-  - API
-  - Experimental
-  - Expérimental(2)
-  - NeedsTranslation
-  - TopicStub
-  - URL API
-translation_of: Web/API/URL
 ---
+
 {{ApiRef("URL API")}} {{SeeCompatTable}}
 
 La interfaz **`URL`** representa a un objeto que provee métodos estáticos para crear objetos URL.
@@ -67,16 +60,13 @@ _The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 - {{domxref("URL.revokeObjectURL()")}}
   - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                            | Status                       | Comment                                                                           |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------------------------------------- |
-| {{SpecName('File API', '#creating-revoking', 'URL')}} | {{Spec2('File API')}} | Added the static methods `URL.createObjectURL()` and ` URL.revokeObjectURL``() `. |
-| {{SpecName('URL', '#api', 'Node')}}                         | {{Spec2('URL')}}         | Initial definition (implements `URLUtils`).                                       |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## See also
 

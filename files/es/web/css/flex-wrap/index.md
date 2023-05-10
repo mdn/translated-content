@@ -1,8 +1,8 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-translation_of: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef("CSS Flexible Boxes") }}
 
 ## Resumen
@@ -48,13 +48,11 @@ element {
 
 ## Especificaciones
 
-| Especificacion                                                               | Estado                               | Comentario |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{ SpecName('CSS3 Flexbox', '#flex-wrap', 'flex-wrap') }} | {{ Spec2('CSS3 Flexbox') }} |            |
+{{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 ## Ver también
 

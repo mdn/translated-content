@@ -1,15 +1,9 @@
 ---
 title: '<br>: 줄바꿈 요소'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<br>` 요소**는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성합니다. 주소나 시조 등 줄의 구분이 중요한 내용을 작성할 때 유용합니다.
 
@@ -114,7 +108,7 @@ USA
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 같이 보기
 

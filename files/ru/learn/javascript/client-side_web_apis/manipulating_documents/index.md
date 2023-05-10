@@ -10,6 +10,7 @@ tags:
   - Окно
 translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 При написании веб-страниц и приложений вам придётся часто каким-либо образом управлять структурой документа. Обычно это делается с помощью Document Object Model (DOM), набора API для управления разметкой HTML и стилями, которая сильно использует объект {{domxref ("Document")}}. В этой статье мы подробно рассмотрим, как использовать DOM и некоторые другие интересные API, которые могут изменить вашу среду интересными способами.
@@ -24,7 +25,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 Несмотря на ограничения, Web API по-прежнему дают нам доступ к множеству функциональных возможностей, которые позволяют нам многое делать с веб-страницами. Есть несколько действительно очевидных моментов, на которые вы будете регулярно ссылаться в своём коде. Рассмотрим следующую диаграмму, которая представляет основные части браузера, непосредственно участвующие в просмотре веб-страниц:
 
-![](https://mdn.mozillademos.org/files/14557/document-window-navigator.png)
+![](document-window-navigator.png)
 
 - Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events)) к текущему окну и многое другое.
 - Навигатор представляет состояние и идентификатор браузера (т. е. пользовательский агент), как он существует в Интернете. В JavaScript это представлено объектом {{domxref("Navigator")}}. Вы можете использовать этот объект для извлечения таких вещей, как геолокационная информация, предпочтительный язык пользователя, медиапоток с веб-камеры пользователя и т. д.
@@ -56,7 +57,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 DOM, с другой стороны, выглядит так:
 
-![](https://mdn.mozillademos.org/files/14559/dom-screenshot.png)
+![](dom-screenshot.png)
 
 > **Примечание:** . Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
 
@@ -81,7 +82,7 @@ DOM, с другой стороны, выглядит так:
 3. Чтобы управлять элементом внутри DOM, вам сначала нужно выбрать его и сохранить ссылку на него внутри переменной. Внутри вашего скриптового элемента добавьте следующую строку:
 
     ```js
-    var link = document.querySelector('a');
+    let link = document.querySelector('a');
     ```
 
 4. Теперь у нас есть ссылка на элемент, хранящаяся в переменной, мы можем начать её манипулировать с использованием доступных ему свойств и методов (они определены на таких интерфейсах, как {{domxref("HTMLAnchorElement")}} в случае {{htmlelement ("a")}}, его более общий родительский интерфейс {{domxref ("HTMLElement")}} и {{domxref("Node")}} - который представляет все узлы в DOM). Прежде всего, давайте изменим текст внутри ссылки, обновив значение свойства {{domxref("Node.textContent")}}. Добавьте следующую строку ниже предыдущей:
@@ -100,8 +101,8 @@ DOM, с другой стороны, выглядит так:
 
 Существуют более старые методы для захвата ссылок на элементы, например:
 
-- {{domxref("Document.getElementById()")}}, который выбирает элемент с заданным значением атрибута `id`, например `<p id="myId">Мой абзац</p>`. Идентификатор передаётся функции как параметр, т.е. `var elementRef = document.getElementById('myId')`.
-- {{domxref("Document.getElementsByTagName()")}}, который возвращает массив, содержащий все элементы на странице данного типа, например `<p>`, `<a>` и т.д. Тип элемента передаётся к функции в качестве параметра, то есть `var elementRefArray = document.getElementsByTagName('p')`.
+- {{domxref("Document.getElementById()")}}, который выбирает элемент с заданным значением атрибута `id`, например `<p id="myId">Мой абзац</p>`. Идентификатор передаётся функции как параметр, т.е. `let elementRef = document.getElementById('myId')`.
+- {{domxref("Document.getElementsByTagName()")}}, который возвращает массив, содержащий все элементы на странице данного типа, например `<p>`, `<a>` и т.д. Тип элемента передаётся к функции в качестве параметра, то есть `let elementRefArray = document.getElementsByTagName('p')`.
 
 Эти два работают в более старых браузерах, чем современные методы, такие как `querySelector()`, но не так удобны. Осмотритесь и вы увидите, что ещё можно найти!
 
@@ -112,13 +113,13 @@ DOM, с другой стороны, выглядит так:
 1. Возвращаясь к текущему примеру, давайте начнём с захвата ссылки на наш элемент {{htmlelement("section")}} - добавьте следующий код внизу существующего скрипта (сделайте то же самое с другими строками):
 
     ```js
-    var sect = document.querySelector('section');
+    let sect = document.querySelector('section');
     ```
 
 2. Теперь давайте создадим новый абзац, используя {{domxref("Document.createElement()")}} и передадим ему текстовое содержимое так же, как и раньше:
 
     ```js
-    var para = document.createElement('p');
+    let para = document.createElement('p');
     para.textContent = 'We hope you enjoyed the ride.';
     ```
 
@@ -131,13 +132,13 @@ DOM, с другой стороны, выглядит так:
 4. Наконец, для этой части, давайте добавим текстовый узел в абзац, где находится ссылка, чтобы оформить предложение красиво. Сначала мы создадим текстовый узел, используя {{domxref("Document.createTextNode()")}}:
 
     ```js
-    var text = document.createTextNode(' — the premier source for web development knowledge.');
+    let text = document.createTextNode(' — the premier source for web development knowledge.');
     ```
 
 5. Теперь мы возьмём ссылку на абзац, в котором находится ссылка, и добавим к нему текстовый узел:
 
     ```js
-    var linkPara = document.querySelector('p');
+    let linkPara = document.querySelector('p');
     linkPara.appendChild(text);
     ```
 
@@ -239,9 +240,9 @@ linkPara.parentNode.removeChild(linkPara);
 1. Прежде всего, давайте возьмём ссылку на div, а затем возьмём ширину и высоту окна просмотра (внутреннее окно, где отображается ваш документ) и сохраните их в переменных - эти два значения удобно содержатся в {{domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}. Добавьте следующие строки внутри существующего элемента {{htmlelement("script")}}:
 
     ```js
-    var div = document.querySelector('div');
-    var WIDTH = window.innerWidth;
-    var HEIGHT = window.innerHeight;
+    let div = document.querySelector('div');
+    let WIDTH = window.innerWidth;
+    let HEIGHT = window.innerHeight;
     ```
 
 2. Затем мы динамически изменяем ширину и высоту div, равную ширине окна просмотра. Добавьте следующие две строки ниже своих первых:
@@ -275,7 +276,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 Готовое демо будет выглядеть примерно так:
 
-![](https://mdn.mozillademos.org/files/14563/shopping-list.png)
+![](shopping-list.png)
 
 Чтобы завершить упражнение, выполните следующие действия и убедитесь, что список ведёт себя так, как описано выше.
 

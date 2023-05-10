@@ -1,9 +1,9 @@
 ---
 title: Igualdad Estricta (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 original_slug: Web/JavaScript/Referencia/Operadores/Strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de estricta igualdad (`===`) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.
@@ -76,13 +76,11 @@ console.log(object1 === object1);  // true
 
 ## Especificaciones
 
-| Specification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
-## Compatibilidad entre exploradores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.strict_equality")}}
+{{Compat}}
 
 ## También revisa
 

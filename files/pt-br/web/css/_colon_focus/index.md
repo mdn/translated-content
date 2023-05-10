@@ -1,17 +1,8 @@
 ---
 title: ':focus'
 slug: Web/CSS/:focus
-tags:
-  - Acessibilidade
-  - CSS
-  - Foco
-  - Focus
-  - Pseudo classe
-  - Pseudo classe CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/:focus
 ---
+
 {{CSSRef}}
 
 ## Resumo

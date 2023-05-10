@@ -1,8 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
 l10n:
   sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---

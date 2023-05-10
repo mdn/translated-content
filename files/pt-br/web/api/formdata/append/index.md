@@ -1,8 +1,8 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-translation_of: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`append()`** da Interface {{domxref("FormData")}} adiciona um novo valor dentro de uma chave existente dentro do objeto `FormData` ou adiciona a chave caso ainda não exista.

@@ -3,6 +3,7 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 translation_of: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание

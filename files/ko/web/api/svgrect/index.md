@@ -1,15 +1,8 @@
 ---
 title: SVGRect
 slug: Web/API/SVGRect
-page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-browser-compat: api.SVGRect
-translation_of: Web/API/SVGRect
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGRect`** 인터페이스는 직사각형을 나타냅니다. 직사각형은 최소 `x` 값과 최소 `y` 값을 가리키는 좌표쌍, 그리고 양수인 `width`와 `height` 값으로 구성됩니다.

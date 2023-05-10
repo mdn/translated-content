@@ -78,7 +78,7 @@ mkdir django_projects
 cd django_projects
 ```
 
-Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande  `django-admin startproject`. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :
+Pour créer un nouveau projet avec le quadriciel Django, il suffit d'utiliser la commande `django-admin startproject`. Le résultat de cette commande sera un sous-dossier du nom du projet dans lequel il suffit de s'y déplacer comme indiqué ci-dessous :
 
 ```bash
 django-admin startproject locallibrary
@@ -124,7 +124,7 @@ python3 manage.py startapp catalog
 >
 > Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes `python3` par `py -3`.
 >
-> Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être  `py manage.py startapp catalog`
+> Si vous utilisez une version postérieure à la version 3.7.0, la commande devrait désormais être `py manage.py startapp catalog`
 
 Cet outil crée un nouveau dossier, du nom de l'application, et le peuple de fichiers essentiels. La plupart des fichiers ont des noms caractéristiques de leur fonction dans le fonctionnement de Django (par exemple, les vues sont traitées dans **views.py**, le modèle de données dans **models.py**, etc.). Ces fichiers contiennent les éléments minimaux nécessaires à leur utilisation dans le projet.
 
@@ -205,7 +205,7 @@ Il y a deux paramètres à connaître, même s'il ne seront pas modifiés pour l
 
 La création du site web s'appuie sur un routage d'URL et une gestion de la cartographie des URLs dans le fichier **urls.py**) présent dans le dossier du projet. Même si vous pouvez directement utiliser ce fichier pour gérer le routage des URLs, il est recommandé d'utiliser un mécanisme de subsidiarité avec une gestion d'URLs par application. En outre cette méthode de délégation permet une meilleure poratbilité de vos développements dans vos différents projets.
 
-A l'ouverture du fichier **locallibrary/locallibrary/urls.py**,  vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.
+A l'ouverture du fichier **locallibrary/locallibrary/urls.py**, vous pouvez remarquer les premières instructions sur la manière de gérer la cartographie des URLs.
 
 ```python
 """locallibrary URL Configuration
@@ -376,25 +376,7 @@ Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-
 
 ## Voir aussi
 
-- [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/)  (Django docs)
+- [Écriture de votre première application Django, 1ère partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial01/) (Django docs)
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accuei](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

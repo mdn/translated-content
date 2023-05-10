@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/If-Match
 translation_of: Web/HTTP/Headers/If-Match
 original_slug: Web/HTTP/Заголовки/If-Match
 ---
+
 {{HTTPSidebar}}
 
 Заголовок HTTP-запроса **`If-Match`** делает запрос условным. Для методов {{HTTPMethod("GET")}} и {{HTTPMethod("HEAD")}} сервер отправляет запрошенный ресурс только в том случае, если он соответствует одному из перечисленных **ETags**. Для {{HTTPMethod("PUT")}} и других небезопасных методов он будет загружать только ресурс в этом случае.

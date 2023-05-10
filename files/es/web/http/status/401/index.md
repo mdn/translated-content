@@ -1,8 +1,8 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-translation_of: Web/HTTP/Status/401
 ---
+
 {{HTTPSidebar}}
 
 El código de error HTTP 401 indica que la petición (request) no ha sido ejecutada porque carece de credenciales válidas de autenticación para el recurso solicitado.
@@ -27,13 +27,11 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## Especificaciones
 
-| Specification                                            | Title                    |
-| -------------------------------------------------------- | ------------------------ |
-| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("http.status.401")}}
+{{Compat}}
 
 ## Vea también
 

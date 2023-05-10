@@ -1,18 +1,8 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - request
-translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch")}}
 
 La interfaz **`Request`** de la [API Fetch](/es/docs/Web/API/Fetch_API) representa una solicitud de respuesta.
@@ -132,13 +122,11 @@ fetch(myRequest)
 
 ## Especificaciones
 
-| Especificación                                                   | Estado                   | Comentario         |
-| ---------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('Fetch','#request-class','Request')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Request")}}
+{{Compat}}
 
 ## Ver también
 

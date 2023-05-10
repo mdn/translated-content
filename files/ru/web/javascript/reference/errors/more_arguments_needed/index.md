@@ -7,6 +7,7 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

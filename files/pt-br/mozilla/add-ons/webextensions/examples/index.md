@@ -1,10 +1,8 @@
 ---
 title: Exemplos de Extensões
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - WebExntesoes
-translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}Para ajudar a ilustrar como desenvolver extensões, nós mantemos um repositório com simples exemplos de extensões em <https://github.com/mdn/webextensions-examples>. Este artigo descreve a WebExtension APIs utilizadas neste respositório.Estes exemplos funcionam no Firefox Nightly: A maioria funciona em versões anteriores do Firefox, porém verifique a chave [strict_min_version](/pt-BR/Add-ons/WebExtensions/manifest.json/applications) no manifest.json da extensão por certificação.Se você quiser experimentar estes exemplos, você tem três opções principais:
 
 1. Clonar o repositório, então carregue a extensão diretamente de seu diretório de origem, usando o recurso ["Load Temporary Add-on"](/pt-BR/Add-ons/WebExtensions/Temporary_Installation_in_Firefox). A extensão permanecerá carregada até você reiniciar o Firefox.

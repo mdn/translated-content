@@ -1,8 +1,8 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-translation_of: Web/API/Node/previousSibling
 ---
+
 {{ApiRef("DOM")}}
 
 ## Resumo
@@ -31,13 +31,13 @@ Portanto um nó obtido, por exemplo, usando [`Node.firstChild`](/pt-BR/docs/Web/
 espaço em banco ao invés do elemento que o autor pretendia obter.
 
 Veja [Whitespace in the DOM](/pt-BR/docs/Web/Guide/DOM/Whitespace_in_the_DOM) e
-[W3C DOM 3 FAQ: Why are some Text nodes empty?](http://www.w3.org/DOM/faq.html#emptytext)
+[W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
 Para mais informações.
 
 Para navegar no sentido contrário da lista de nós filhos use [Node.nextSibling](/pt-BR/docs/Web/API/Node.nextSibling).
 
 ## Especificação
 
-- [DOM Level 1 Core: previousSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
-- [DOM Level 2 Core: previousSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
-- [DOM Level 3 Core: previousSibling](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)
+- [DOM Level 1 Core: previousSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling)
+- [DOM Level 2 Core: previousSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8)
+- [DOM Level 3 Core: previousSibling](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8)

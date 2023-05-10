@@ -1,14 +1,8 @@
 ---
 title: 'HTML: Hypertext Markup Language'
 slug: Web/HTML
-tags:
-  - HTML
-  - HTML5
-  - Landing
-  - Web
-  - l10n:priority
-translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML**(HyperText Markup Language)은 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를

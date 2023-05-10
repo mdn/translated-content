@@ -1,16 +1,9 @@
 ---
 title: Marcando una Carta
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-tags:
-  - Cabecera
-  - Codificación
-  - Enlaces
-  - Evaluación
-  - Principiante
-  - Texto
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Learn/HTML/Introduccion_a_HTML/Marking_up_a_letter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
 Todos aprendemos a escribir una carta más tarde o más temprano; es también práctico practicar con nuestras habilidades para dar forma a los textos. En esta prueba deberás demostrar tus habilidades para dar forma a textos, incluyendo enlaces, además pondremos a prueba tu familiaridad con algunos contenidos de encabezamiento `<head>` en HTML.
@@ -54,7 +47,7 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
 
 ## Punto de partida
 
-Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer nuestra prueba).
+Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer nuestra prueba).
 
 ## Resumen del proyecto a desarrollar
 
@@ -90,11 +83,11 @@ El encabezamiento del documento:
 - Utiliza el [Validador de HTML W3C HTML](https://validator.w3.org/) para validar tu HTML; recibirás puntos de bonificación si se valida.
 - No necesitas conocer CSS para hacer este ejercicio; solo debes poner el CSS proporcionado en el elemento HTML adecuado.
 
-## Example
+## Ejemplo
 
-The following screenshot shows an example of what the letter might look like after being marked up.
+La siguiente captura de pantalla muestra un ejemplo de cómo se vería la carta después de marcarla.
 
-![](https://mdn.mozillademos.org/files/12291/letter-screengrab.png)
+![](letter-update.png)
 
 ## Evaluación
 

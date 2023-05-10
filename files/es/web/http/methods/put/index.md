@@ -1,12 +1,8 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - Método HTTP
-  - Petición
-translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 La **petición HTTP PUT** crea un nuevo elemento o reemplaza una representación del elemento de destino con los datos de la petición.
@@ -81,13 +77,11 @@ Content-Location: /existente.html
 
 ## Especificaciones
 
-| Specification                            | Title                                                         |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "PUT", "4.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Navegadores compatibles
+## Compatibilidad con navegadores
 
-{{Compat("http.methods.PUT")}}
+{{Compat}}
 
 ## Ver también
 

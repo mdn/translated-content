@@ -1,14 +1,9 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/sign
 ---
+
 {{JSRef}}
 
 La función **`Math.sign()`** retorna el signo de un número, indicando si el número es positivo, negativo o cero.
@@ -72,14 +67,11 @@ if (!Math.sign) {
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sign")}}
+{{Compat}}
 
 ## Ver También
 

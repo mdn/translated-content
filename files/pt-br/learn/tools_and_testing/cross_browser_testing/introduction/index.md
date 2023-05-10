@@ -1,8 +1,8 @@
 ---
 title: Introduction to cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 This article starts the module off by providing an overview of the topic of (cross) browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"
@@ -169,14 +169,3 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 This article should have given you a high-level understanding of the most important concepts you need to know about cross browser testing. Armed with this knowledge, you are now ready to move on and start learning about Cross browser testing strategies.
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

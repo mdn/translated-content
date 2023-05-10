@@ -1,14 +1,9 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/values
 ---
+
 {{JSRef}}
 
 El método **`Object.values()`** devuelve un array con los valores correspondientes a las propiedades **enumerables** de un objeto. Las propiedades son devueltas en el mismo orden a como lo haría un bucle {{jsxref("Statements/for...in", "for...in")}} (la única diferencia es que un bucle `for-in` también enumera las propiedades en la cadena de prototipo de un objeto).
@@ -63,14 +58,11 @@ Para dar soporte compatible con `Object.values()` a entornos antiguos que no la 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} | Definición inicial. |
-| {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         |                     |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.values")}}
+{{Compat}}
 
 ## Ver también
 

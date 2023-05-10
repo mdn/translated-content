@@ -1,15 +1,9 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/abbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<abbr>` 요소**는 준말 또는 머리글자를 나타냅니다. 선택 속성인 {{htmlattrxref("title")}}을 사용하면 준말의 전체 뜻이나 설명을 제공할 수 있습니다. `title` 속성은 전체 설명만을 가져야 하며 다른건 포함할 수 없습니다.
 
@@ -198,4 +192,4 @@ accessed.</p>
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}

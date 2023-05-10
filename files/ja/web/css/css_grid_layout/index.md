@@ -155,8 +155,4 @@ slug: Web/CSS/CSS_Grid_Layout
 
 ## 仕様書
 
-| 仕様書                        | 状態                           | Comment備考                                                                                      |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 3")}} | {{Spec2("CSS Grid 3")}} | [組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)の追加                          |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | [サブグリッド](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid)の追加 |
-| {{SpecName("CSS3 Grid")}}     | {{Spec2("CSS3 Grid")}}     | 初回定義                                                                          |
+{{Specifications}}

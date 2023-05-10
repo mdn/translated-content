@@ -1,10 +1,8 @@
 ---
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
-tags:
-  - Erros
-translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem
@@ -49,7 +47,7 @@ function f(arg) {
 
 ## Notas de compatibilidade
 
-- Antes do Firefox 49 {{geckoRelease(49)}}, isto foi lançado como um {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
 ## Veja também
 

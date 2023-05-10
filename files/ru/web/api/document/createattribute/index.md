@@ -3,6 +3,7 @@ title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
 translation_of: Web/API/Document/createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 Метод **`Document.createAttribute()`** создаёт новый атрибут узла и возвращает его. Созданный объект узла реализует {{domxref("Attr")}} интерфейс . DOM не указывает, какие атрибуты могут быть добавлены к определённому элементу таким способом.

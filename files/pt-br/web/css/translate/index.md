@@ -1,13 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
-translation_of: Web/CSS/translate
 ---
 
 {{CSSRef}}
@@ -120,4 +113,4 @@ div:hover .translate {
 - {{cssxref('rotate')}}
 - {{cssxref('transform')}}
 
-Note: `skew` não é um valor independente de `transform`
+Nota: `skew` não é um valor independente de `transform`

@@ -37,9 +37,7 @@ console.log(speechRecognitionList[0].weight); // 4 行目で設定された weig
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-speechgrammar', 'SpeechGrammar')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

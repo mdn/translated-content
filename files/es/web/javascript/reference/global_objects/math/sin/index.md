@@ -1,9 +1,9 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumen
@@ -39,15 +39,11 @@ Math.sin(Math.PI / 2); // 1
 
 ## Especificaciones
 
-| Especificaciones                                                     | Estatus                  | Comentarios                                         |
-| -------------------------------------------------------------------- | ------------------------ | --------------------------------------------------- |
-| ECMAScript 1ª Edición.                                               | {{Spec2('ES1')}}     | Definición inicial. Implementado en JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.16', 'Math.sin')}} | {{Spec2('ES5.1')}} |                                                     |
-| {{SpecName('ES6', '#sec-math.sin', 'Math.sin')}}     | {{Spec2('ES6')}}     |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.sin")}}
+{{Compat}}
 
 ## Ver también
 

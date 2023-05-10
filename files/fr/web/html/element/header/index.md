@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/header
 browser-compat: html.elements.header
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<header>`** représente du contenu introductif, généralement un groupe de contenu introductif ou de contenu aidant à la navigation. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo, un formulaire de recherche, le nom d'auteur, etc.
 
@@ -92,6 +92,10 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
 </header>
 ```
 
+#### Résultat
+
+{{EmbedLiveSample('','100%', '430')}}
+
 ### En-tête d'un article
 
 ```html
@@ -104,6 +108,10 @@ Cet élément ne possède que les [attributs universels](/fr/docs/Web/HTML/Globa
   <p><a href="https://example.com/the-planet-earth/">Poursuivre la lecture…</a></p>
 </article>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('','100%','270')}}
 
 ## Accessibilité
 

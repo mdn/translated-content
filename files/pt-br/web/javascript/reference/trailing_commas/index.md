@@ -1,15 +1,6 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
-browser-compat: javascript.grammar.trailing_commas
 ---
 
 {{JsSidebar("More")}}
@@ -111,7 +102,7 @@ Math.max(10, 20);
 #### Trailing commas inválidas
 
 Definições de parâmetros de funções ou invocações de funções que contenham apenas uma vírgula
-lançam um {{{Jsxref("SyntaxError")}}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
+lançam um {{jsxref("SyntaxError")}}. Além disso, ao utilizar um [parâmetros rest](/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters), não são permitidas trailling commas:
 
 ```js example-bad
 function f(,) {} // SyntaxError: parâmetro formal em falta

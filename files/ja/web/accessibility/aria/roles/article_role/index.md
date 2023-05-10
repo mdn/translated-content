@@ -1,6 +1,6 @@
 ---
 title: 'ARIA: article ロール'
-slug: Web/Accessibility/ARIA/Roles/Article_Role
+slug: Web/Accessibility/ARIA/Roles/article_role
 ---
 
 記事 (`article`) ロールは、ページ、文書、またはウェブサイト上で容易に自立することができるページのセクションを示します。 これは、通常、コメント、フォーラム投稿、新聞記事、または 1 ページにまとめられたその他項目などの関連コンテンツの項目に設定します。
@@ -71,10 +71,7 @@ slug: Web/Accessibility/ARIA/Roles/Article_Role
 
 ## 仕様
 
-| 仕様                                                                     | 状態                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#article","article")}}                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#feed","feed")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 優先順位
 

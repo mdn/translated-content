@@ -57,10 +57,6 @@ browser.browserAction.setPopup(
 - Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, la fenêtre contextuelle globale est définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setPopup",2)}}
-
 ## Exemples
 
 Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.
@@ -98,6 +94,10 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
   }
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

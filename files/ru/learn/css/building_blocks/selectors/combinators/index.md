@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
 original_slug: Learn/CSS/Building_blocks/Селекторы/Combinators
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 Наконец мы рассмотрим селекторы, которые называются комбинаторами, поскольку они соединяют другие селекторы, создавая полезную связь селекторов друг с другом и расположением содержимого в документе.

@@ -1,9 +1,9 @@
 ---
 title: <menu>
 slug: Web/HTML/Element/menu
-translation_of: Web/HTML/Element/menu
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 **HTML `<menu>` 요소**는 사용자가 수행하거나 하는 명령 묶음을 말합니다. 이것은 스크린 위에 나오는 목록 메뉴와 눌려진 버튼 아래에 나오는 것과 같은 맥락 메뉴를 포함합니다.
 
@@ -125,7 +125,7 @@ translation_of: Web/HTML/Element/menu
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 같이 보기
 

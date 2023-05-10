@@ -1,13 +1,8 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - 헤더
-translation_of: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Headers`** 는 {{HTTPHeader("Access-Control-Request-Headers")}}를 포함하는 {{glossary("preflight request")}}의 응답에 사용되는 헤더로, 실제 요청때 사용할 수 있는 HTTP 헤더의 목록을 나열합니다.
@@ -95,7 +90,7 @@ Access-Control-Max-Age: 86400
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## 함께 보기
 

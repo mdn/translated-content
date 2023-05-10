@@ -1,8 +1,8 @@
 ---
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
-translation_of: Web/API/BatteryManager/charging
 ---
+
 {{APIRef("Battery API")}}
 
 현재 배터리가 충전중인지를 나타내는 Boolean 값 입니다.

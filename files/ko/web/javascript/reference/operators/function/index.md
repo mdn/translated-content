@@ -1,13 +1,8 @@
 ---
 title: 함수 표현식
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - Operator
-  - Primary Expressions
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function`** 키워드는 어떤 표현식(expression) 내에서 함수를 정의하는 데 사용될 수 있습니다.

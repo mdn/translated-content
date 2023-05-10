@@ -24,13 +24,13 @@ Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"document
 
 - `"document_start"`: corresponds au `chargement`. Le DOM est toujours en cours de chargement.
 - `"document_end"`: corresponds à l'`interactif`. Le DOM a fini de charger, mais des ressources telles que des scripts et des images peuvent toujours être en cours de chargement.
-- `"document_idle"`: corresponds à  `complete`. Le document et toutes ses ressources ont terminé le changement.
+- `"document_idle"`: corresponds à `complete`. Le document et toutes ses ressources ont terminé le changement.
 
 La valeur par défaut est `"document_idle"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes.RunAt")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

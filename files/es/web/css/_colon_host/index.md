@@ -1,15 +1,8 @@
 ---
 title: ':host'
 slug: Web/CSS/:host
-tags:
-  - ':host'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:host
 ---
+
 {{ CSSRef }}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:host`** selecciona la sombra host de [sombra DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene el CSS que se usa en el interior — es decir, esto le permite seleccionar un elemento personalizado desde su sombra DOM.
@@ -60,15 +53,11 @@ La regla `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` estiliza tod
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                           | Comentarios         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSS Scope', '#host-selector', ':host') }} | {{ Spec2('CSS Scope') }} | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-Compatible con Chrome y Safari.
-
-{{Compat("css.selectors.host")}}
+{{Compat}}
 
 ## Ver también
 

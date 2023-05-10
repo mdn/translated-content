@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ca8d6889ade7fc6121aaf4d59158fa6a795f1a1b
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<sub>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte en indice (sous la ligne de base et généralement plus petit) par rapport au bloc de texte environnant.
 

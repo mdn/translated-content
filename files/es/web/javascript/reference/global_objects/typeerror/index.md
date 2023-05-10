@@ -1,8 +1,8 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-browser-compat: javascript.builtins.TypeError
 ---
+
 {{JSRef}}
 
 El objeto **`TypeError`** representa un error cuando una operación no puede ser completada, típicamente (pero no exclusivamente) cuando un valor no es del tipo esperado.

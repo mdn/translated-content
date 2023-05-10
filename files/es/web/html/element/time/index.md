@@ -1,17 +1,9 @@
 ---
 title: time
 slug: Web/HTML/Element/time
-tags:
-  - Elemento
-  - Fecha
-  - HTML
-  - HTML5
-  - Hora
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/time
 original_slug: Web/HTML/Elemento/time
 ---
+
 El **elemento HTML `<time>`** representa un periodo específico en el tiempo. Puede incluir el atributo `datetime` para convertir las fechas en un formato interno legible por un ordenador, permitiendo mejores resultados en los motores de búsqueda o características personalizadas como recordatorios.
 
 Puede representar uno de los contenidos siguientes:
@@ -94,7 +86,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 - una cadena válida de año
   - : `2011`
-  
+
     `0001`
 - una cadena válida de mes
   - : `2011-11`
@@ -106,17 +98,17 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
   - : `2011-W47`
 - una cadena de hora válida
   - : `14:54`
-  
+
     `14:54:39`
 
     `14:54:39.929`
 - una cadena de fecha y hora local válida
   - : `2011-11-18T14:54:39.929`
-  
+
     `2011-11-18 14:54:39.929`
 - una cadena de fecha y hora global válida
   - : `2011-11-18T14:54:39.929Z`
-  
+
     `2011-11-18T14:54:39.929-0400`
 
     `2011-11-18T14:54:39.929-04:00`
@@ -158,15 +150,11 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                           | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-time-element', '&lt;time&gt;')}}             | {{Spec2('HTML WHATWG')}} | Sin cambios desde {{SpecName('HTML5.1')}} |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | Sin cambios desde {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML5 W3C')}}     | Definición inicial                                 |
+{{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## Ver también
 

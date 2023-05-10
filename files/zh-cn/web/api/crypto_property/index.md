@@ -1,56 +1,58 @@
 ---
-title: Window.crypto
+title: self.crypto
 slug: Web/API/crypto_property
 ---
 
 {{APIRef}}
 
-Window\.crypto 只读属性返回与全局对象关联的 {{domxref("Crypto")}}对象。此对象允许网页访问某些加密相关服务。
+**`crypto`** 全局只读属性返回与全局对象关联的 {{domxref("Crypto")}} 对象。此对象允许网页访问某些加密相关的服务。
 
-## 语法
+虽然该属性自身的只读的，但它的所有方法（以及其子对象的方法——{{domxref("SubtleCrypto")}}）不仅是只读的，因此容易受到 {{glossary("polyfill")}} 的攻击。
 
-```plain
-var cryptoObj = window.crypto || window.msCrypto; // for IE 11
-```
+虽然 `crypto` 在所有窗口上均可用，但其返回的 `Crypto` 对象在不安全的上下文中仅有一个可用的特性：{{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法。通常，你应该仅在安全上下文中使用此 API。
 
-## 范例
+## 值
 
-#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/zh-CN/docs/Web/API/RandomSource/getRandomValues) 方法。
+{{domxref("Crypto")}} 接口的实例，提供对通用的密码学功能和强随机数生成器的访问。
+
+## 示例
+
+使用 `crypto` 属性来访问 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法。
 
 ### JavaScript
 
 ```js
-genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
-  window.crypto.getRandomValues(array);
+globalThis.genRandomNumbers = () => {
+  const array = new Uint32Array(10);
+  crypto.getRandomValues(array);
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i < array.length; i++) {
-    randText.innerHTML += array[i] + " ";
-  }
-}
+  const randText = document.getElementById("myRandText");
+  randText.textContent = `随机数为：${array.join(" ")}`;
+};
 ```
 
 ### HTML
 
 ```html
-<p id="myRandText">随机数字：</p>
-<button type="button" onClick='genRandomNumbers()'>生成 10 个随机数字</button>
+<p id="myRandText">随机数为：</p>
+<button type="button" onClick="genRandomNumbers()">
+  生成 10 个随机数
+</button>
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- The {{domxref("Window")}} global object
+- {{domxref("Window")}} 全局对象
+- {{domxref("Crypto")}} 接口

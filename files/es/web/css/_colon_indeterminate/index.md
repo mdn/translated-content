@@ -1,14 +1,8 @@
 ---
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
@@ -99,13 +93,8 @@ progress:indeterminate {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-indeterminate', ':indeterminate')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-indeterminate', ':indeterminate')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                |
-| {{SpecName('CSS3 Basic UI', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS3 Basic UI')}} | Define la pseudo-clase, pero no la semántica asociada.        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.indeterminate")}}
+{{Compat}}

@@ -1,8 +1,8 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-translation_of: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:target`** representa um único elemento (o elemento alvo) com uma {{htmlattrxref("id")}} correspondente ao fragmento da URL.
@@ -83,7 +83,7 @@ p:target i {
 
 Você pode usar a pseudo-classe `:target` para criar uma lightbox sem usar JavaScript. Essa técnica requer que os links apontem para os elementos que inicialmente estavam escondidas na página. Uma vez designado, o CSS muda o `display` então, assim o conteúdo pode ser mostrado.
 
-> **Note:** **Nota:** Uma lightbox com CSS puro mais completo usando a pseudo-classe `:target` [está disponível no GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> **Nota:** Uma lightbox com CSS puro mais completo usando a pseudo-classe `:target` [está disponível no GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
 
 #### HTML
 

@@ -1,14 +1,8 @@
 ---
 title: 'HTMLMediaElement: loadeddata event'
 slug: Web/API/HTMLMediaElement/loadeddata_event
-tags:
-  - Audio
-  - HTMLMediaElement
-  - Referências
-  - Video
-  - eventos
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 El evento **`loadeddata`** se arroja cuando el cuadro en la posición de reproducción actual del medio ha terminado de cargarse; a menudo el primer marco
@@ -82,14 +76,11 @@ video.onloadeddata = (event) => {
 
 ## Especificaciones
 
-| Especificaciones                                                                                                                         | Estado                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "media.html#event-media-loadeddata", "loadeddata media event")}}                 | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#event-media-loadeddata", "loadeddata media event")}} | {{Spec2('HTML5 W3C')}}     |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.loadeddata_event")}}
+{{Compat}}
 
 ## Eventos Relacionados
 

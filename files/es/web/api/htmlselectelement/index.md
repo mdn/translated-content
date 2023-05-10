@@ -1,15 +1,8 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTML Element. These elements also share all of the properties and methods of other HTML elements via the {{domxref("HTMLElement")}} interface.
@@ -61,11 +54,11 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Adds an element to the collection of `option` elements for this `select` element.
-- {{domxref("HTMLSelectElement.blur()")}}{{obsolete_inline}}
+- {{domxref("HTMLSelectElement.blur()")}}{{deprecated_inline}}
   - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
-  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns `false`).
-- {{domxref("HTMLSelectElement.focus()")}}{{obsolete_inline}}
+  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable [`invalid`](/es/docs/Web/Reference/Events/invalid) event at the element (and returns `false`).
+- {{domxref("HTMLSelectElement.focus()")}}{{deprecated_inline}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.
@@ -98,20 +91,15 @@ console.log(select.selectedIndex); // 1
 console.log(select.options[select.selectedIndex].value) // Second
 ```
 
-A better way to track changes to the user's selection is to watch for the {{event("change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/es/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
+A better way to track changes to the user's selection is to watch for the [`change`](/es/docs/Web/Reference/Events/change) event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/es/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                            | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#htmlselectelement', 'HTMLSelectElement')}}             | {{Spec2('HTML WHATWG')}} | Since the latest snapshot, {{SpecName('HTML5 W3C')}}, it adds the `autocomplete` property and the `reportValidity()` method.                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML5 W3C', 'forms.html#htmlselectelement', 'HTMLSelectElement')}} | {{Spec2('HTML5 W3C')}}     | Is a snapshot of {{SpecName("HTML WHATWG")}}. It adds the `autofocus`, `form`, `required`, `labels`, `selectedOptions`, `willValidate`, `validity` and `validationMessage` properties. The `tabindex` property and the `blur()` and `focus()` methods have been moved to {{domxref("HTMLElement")}}. The methods `item()`, `namedItem()`, `checkValidity()` and `setCustomValidity()`. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94282980', 'HTMLSelectElement')}}         | {{Spec2('DOM2 HTML')}}     | `options` now returns an {{domxref("HTMLOptionsCollection")}}. `length` now returns an `unsigned long`.                                                                                                                                                                                                                                                                                       |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94282980', 'HTMLSelectElement')}}     | {{Spec2('DOM1')}}         | Initial definition                                                                                                                                                                                                                                                                                                                                                                                        |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## See also
 

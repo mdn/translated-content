@@ -1,14 +1,9 @@
 ---
 title: Expresión de función asíncrona
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - Expresión Primaria
-  - JavaScript
-  - Operador
-  - función
-translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Referencia/Operadores/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 La palabra clave **`async function`** puede ser utilizada para definir funciones `async` dentro de expresiones.
@@ -74,13 +69,11 @@ agregar(10).then(v => {
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 
-{{Compat("javascript.operators.async_function_expression")}}
+{{Compat}}
 
 ## Ver también
 

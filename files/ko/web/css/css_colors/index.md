@@ -1,13 +1,6 @@
 ---
 title: CSS Color
 slug: Web/CSS/CSS_Colors
-tags:
-  - CSS
-  - CSS Colors
-  - HTML Colors
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Color
 original_slug: Web/CSS/CSS_Color
 ---
 {{CSSRef}}
@@ -29,7 +22,7 @@ original_slug: Web/CSS/CSS_Color
 ## 안내서
 
 - [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/HTML/Applying_color)
-  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.​
+  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.
 
 ## 도구
 

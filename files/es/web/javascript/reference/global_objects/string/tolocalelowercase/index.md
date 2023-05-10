@@ -1,15 +1,9 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-tags:
-  - Cadena
-  - Internacionalizacion
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCase
 ---
+
 {{JSRef}}El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
 
 Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona `https://github.com/mdn/interactive-examples` y envíanos un pull request.
@@ -56,17 +50,11 @@ let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estatus                          | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.17', 'String.prototype.toLocaleLowerCase')}}                                         | {{Spec2('ES5.1')}}         |                                                    |
-| {{SpecName('ES6', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}             | {{Spec2('ES6')}}             |                                                    |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     | {{Spec2('ESDraft')}}     |                                                    |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} | {{Spec2('ES Int Draft')}} | ES Intl 2017 added the `locale` parameter.         |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toLocaleLowerCase")}}
+{{Compat}}
 
 ## Vea también
 

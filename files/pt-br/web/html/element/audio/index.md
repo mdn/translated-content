@@ -1,8 +1,8 @@
 ---
 title: audio
-slug: Web/HTML/Element/Audio
-translation_of: Web/HTML/Element/audio
+slug: Web/HTML/Element/audio
 ---
+
 ## Sumário
 
 O elemento `audio` é utilizado para embutir conteúdo de som em um documento HTML ou XHTML.O elemento `audio` foi adicionado como parte do HTML5.
@@ -15,7 +15,7 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                                 |
-| Documento normativo      | [HTML5, section 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Documento normativo      | [HTML5, section 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Atributos
 
@@ -23,15 +23,15 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado (mesmo se o valor for "false"!), o áudio iniciará automaticamente assim que possível sem parar de carregar os dados.
-- {{ htmlattrdef("autobuffer") }} {{ obsolete_inline("2.0") }}
-  - : Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir". Este atributo foi removido no Gecko 2.0 {{ geckoRelease("2.0") }} em razão do atributo `preload`.
+- {{ htmlattrdef("autobuffer") }}
+  - : Um atributo Booleano; se especificado, o audio será baixado automaticamente, mesmo se não está configurado para reprodução automática. Isto continua até que o cache de mídia esteja cheio, ou até que o o arquivo de áudio completo tenha sido baixado, o que vier primeiro. Isto deve ser utilizado apenas quando é esperado que o usuário escolherá tocar o áudio; por exemplo, se o usuário navegou para a página utilizando um link "Reproduzir". Este atributo foi removido no Gecko 2.0 em razão do atributo `preload`.
 - {{ htmlattrdef("buffered") }}
   - : Um atributo que pode ser lido para determinar os intervalos do áudio que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.
 - {{ htmlattrdef("controls") }}
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir ao usuário controlar a reprodução do áudio, incluindo volume, navegação, e pausa/continuação da reprodução.
 - {{ htmlattrdef("loop") }}
   - : Um atributo Booleano; se especificado, ao chegar no fim do áudio, ele voltará automaticamente para o começo.
-- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ gecko_minversion_inline("2.0") }} {{ non-standard_inline() }}
+- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ non-standard_inline() }}
   - : The offset, specified as the number of samples since the beginning of the audio stream, at which the audio is currently playing.
 - {{ htmlattrdef("muted") }}
   - : Um atributo Booleano que indica se o áudio será inicializado silenciado.
@@ -57,7 +57,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
-> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+> **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
 
 ## Examples
 

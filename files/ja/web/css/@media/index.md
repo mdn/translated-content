@@ -72,7 +72,7 @@ slug: Web/CSS/@media
     Media Queries Level 4 で追加。
 - {{cssxref("@media/color-index", "color-index")}}
   - : 出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}  {{deprecated_inline}}
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
   - : 出力機器の幅対高さのアスペクト比。
     Media Queries Level 4 で非推奨。
 - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
@@ -122,7 +122,7 @@ slug: Web/CSS/@media
   - : 出力機器のピクセル密度。
 - {{cssxref("@media/scripting", "scripting")}}
   - : 出力機器のスキャン処理方式。
-    Media Queries Level 5.  で追加。
+    Media Queries Level 5. で追加。
 - {{cssxref("@media/update-frequency", "update")}}
   - : どれだけの頻度で出力機器がコンテンツの表示を変更できるか。
     Media Queries Level 4 で追加。

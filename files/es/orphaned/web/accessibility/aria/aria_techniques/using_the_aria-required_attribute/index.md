@@ -1,12 +1,9 @@
 ---
 title: Usando el atributo aria-required
-slug: >-
-  orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-tags:
-  - Accesibilidad
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 ---
+
 ### Descripción
 
 El atributo [`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) es usado para indicar al usuario que un input es requerido en un elemento antes de que un form pueda ser enviado. Este atributo puede ser usado en un form con cualquier elemento HTML típico; no se limita a elementosque tengan un `role` ARIA asignado.

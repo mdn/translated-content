@@ -2,7 +2,7 @@
 title: グローバル属性
 slug: Web/HTML/Global_attributes
 l10n:
-  sourceCommit: f9712ac543c93c58e74508106568391ef3cb3931
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -14,7 +14,7 @@ l10n:
 基本的な HTML グローバル属性に加えて、以下のグローバル属性も存在します。
 
 - {{HTMLAttrDef("xml:lang")}} と {{HTMLAttrDef("xml:base")}}。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
-- アクセシビリティを確保するために使用される、 ARIA の [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 状態およびプロパティ。
+- アクセシビリティを確保するために使用される、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 状態およびプロパティ。
 - [イベントハンドラー](/ja/docs/Web/HTML/Attributes#イベントハンドラー)属性: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`
 
 ## グローバル属性の一覧
@@ -36,7 +36,7 @@ l10n:
   - : 要素のクラスの空白区切りリストです。 CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を使えば、特定の要素を選択したりアクセスしたりすることができます。
 - [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable)
 
-  - : ユーザーによる要素の編集が可能かどうかを示す列挙型属性です。編集可能な場合、ブラウザーはその要素を編集可能なものに変更します。この属性の値は、以下のどちらかでなければなりません。
+  - : ユーザーによる要素の編集が可能かどうかを示す[列挙型](/ja/docs/Glossary/Enumerated)属性です。編集可能な場合、ブラウザーはその要素を編集可能なものに変更します。この属性の値は、以下のどちらかでなければなりません。
 
     - `true` または _空文字列_: 要素が編集可能であることを示す
     - `false`: 要素は編集不可であることを示す
@@ -65,9 +65,11 @@ l10n:
 - [`exportparts`](/ja/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
   - : シャドウ部品を入れ子になったシャドウツリーから軽いツリーへ変換しながらエクスポートするために使用します。
 - [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden)
-  - : 要素はまだ、あるいはもはや関連性がないことを示す、論理属性です。例えば、ログイン処理が完了するまで使えない要素を隠すために使用できます。ブラウザーはこの要素を表示しません。この属性は、表示することが正当なコンテンツを隠すために使用してはいけません。
+  - : 列挙型の属性で、要素がまだ、あるいはもはや関連性がないことを示します。例えば、ログイン処理が完了するまで使えない要素を隠すために使用できます。ブラウザーはこの要素を表示しません。この属性は、表示することが正当なコンテンツを隠すために使用してはいけません。
 - [`id`](/ja/docs/Web/HTML/Global_attributes/id)
   - : 文書全体で一意でなければならない識別子 (ID) を定義します。(フラグメント識別子を使った) リンク、スクリプト、 (CSS での) スタイルづけなど要素を特定するために使用されます。
+- [`inert`](/ja/docs/Web/HTML/Global_attributes/inert)
+  - : ブラウザーがその要素に対するユーザー入力イベントを無視するようにする論理値です。クリックイベントが存在している場合に有用です。
 - [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode)
   - : この要素やその内容を編集する時に使用する仮想キーボードの種類の構成に関するヒントをブラウザーに与えます。主に {{HTMLElement("input")}} 要素で使用されますが、 {{HTMLAttrxRef("contenteditable")}} モードにあるすべての要素で使用することができます。
 - [`is`](/ja/docs/Web/HTML/Global_attributes/is)
@@ -120,6 +122,12 @@ l10n:
 
     - 空文字列または `yes`: 要素が翻訳対象になることを示します。
     - `no`: 要素が翻訳対象にならないことを示します。
+- [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
+
+  - : [列挙型](/ja/docs/Glossary/Enumerated)属性で、{{htmlattrxref("contenteditable")}} 属性を使用している要素について、タブレットや携帯電話など、ハードウェアキーボードが利用できない可能性のある機器上で画面の内側への仮想キーボード動作を制御するために使用されます。
+
+    - `auto` または空文字列: 要素がフォーカスまたはタップされたときに、自動的に仮想キーボードを示します。
+    - `manual`: 要素へのフォーカスやタップを仮想キーボードの状態から切り離します。
 
 ## 仕様書
 

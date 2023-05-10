@@ -1,12 +1,8 @@
 ---
 title: Layout mode
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - Layout
-  - Referencia
-translation_of: Web/CSS/Layout_mode
 ---
+
 {{cssref}}
 
 Un **modo de diseño** [CSS](/es/docs/Web/CSS)(CSS layout mode), a veces simplemente llamado "_layout_", es un algoritmo que determina la posición y tamaño de cajas basado en la forma en la que interactúan con sus (elementos) hermanos y padres. Hay varios de ellos:

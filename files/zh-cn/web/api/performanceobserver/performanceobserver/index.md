@@ -15,7 +15,7 @@ var observer = new PerformanceObserver(callback);
 
 ### 参数
 
-- _`callback`_
+- `callback`
   - : 观察的性能事件被记录时将调用 `PerformanceObserverCallback` 回调。调用回调时，其第一个参数是 {{domxref("PerformanceObserverEntryList","性能观察条目列表", '', 'true')}}，第二个参数是 {{domxref("PerformanceObserver","观察者")}} 对象。
 
 ### 返回值

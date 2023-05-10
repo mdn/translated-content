@@ -20,7 +20,7 @@ _親インターフェイスである {{domxref("EventTarget")}} のメソッド
 - {{ domxref("MediaDevices.enumerateDevices", "enumerateDevices()") }}
   - : システム上で使用できる入出力メディア機器についての情報を持つ配列を取得します。
 - {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : {{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、 {{SectionOnPage("/ja/docs/Web/API/Media_Streams_API", "Capabilities and constraints")}}を参照してください。
+  - : {{domxref("MediaTrackSupportedConstraints")}} に適合するオブジェクトを返します。このオブジェクトは {{domxref("MediaStreamTrack")}} インターフェイスで対応している制約可能なプロパティを表します。制約に関する詳細や使い方については、 [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)を参照してください。
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
   - : 共有または録画の目的で {{domxref("MediaStream")}} としてキャプチャする、画面または画面の一部 (ウィンドウなど) をユーザーに選択させます。 `MediaStream` で解決する Promise を返します。
 - {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}

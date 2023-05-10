@@ -19,7 +19,7 @@ event.dataTransfer.setData("text/plain", "This is text to drag")
 
 拖动文本框中的文字和页面选中部分的文字是自动完成的，所以你不需要手动处理这些拖动。
 
-如果应用和拖动目标不支持其它类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
+如果应用和拖动目标不支持其他类型，推荐你使用 `text/plain` 类型的数据进行填充，否则将没有默认的替代文字。建议总是在最后添加原始文字类型的数据做为备选项（译者 plter 注：如果拖动开始时没有设置数据，则在有些浏览器中后续拖动相关事件可能不会触发）。
 
 注：在旧代码中，可能会使用 `text/unicode` 或者 `Text` 类型，这两个与 `text/plain` 是一样的，并且应该被替换用于存储和提取数据。
 
@@ -87,8 +87,6 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 ```
 
 If possible, you may also include the file URL of the file using both the `text/uri-list` and/or `text/plain` types. These types should be added last so that the more specific `application/x-moz-file` type has higher priority.
-
-Multiple files will be received during a drop as multiple items in the data transfer. See [Dragging and Dropping Multiple Items](/En/DragDrop/Dragging_and_Dropping_Multiple_Items) for more details about this.
 
 The following example shows how to create an area for receiving dropped files:
 
@@ -217,9 +215,8 @@ dataProvider.prototype = {
 }
 ```
 
-## 也可以看看
+## 参见
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/zh-CN/docs/Web/Guide/HTML/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

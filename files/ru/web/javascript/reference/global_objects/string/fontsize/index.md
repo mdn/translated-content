@@ -11,13 +11,14 @@ tags:
   - Методы оборачивания в HTML
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontsize
 ---
+
 {{JSRef("Global_Objects", "String")}} {{deprecated_header}}
 
 ## Сводка
 
 Метод **`fontsize()`** создаёт HTML-элемент {{HTMLElement("font")}}, заставляющий строку отображаться шрифтом указанного размера.
 
-> **Примечание:** **Примечание по использованию:** элемент \<font> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
+> **Примечание:** элемент \<font> был удалён из [HTML5](/ru/docs/Web/Guide/HTML/HTML5) и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства [CSS](/ru/docs/Web/CSS).
 
 ## Синтаксис
 

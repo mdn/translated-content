@@ -1,16 +1,9 @@
 ---
 title: ValidityState
 slug: Web/API/ValidityState
-tags:
-  - API
-  - Forms
-  - HTML DOM
-  - HTML5
-  - Interface
-  - Validation
-translation_of: Web/API/ValidityState
 ---
-{{APIRef("HTML DOM")}} {{gecko_minversion_header("2.0")}}
+
+{{APIRef("HTML DOM")}}
 
 A interface **`ValidityState`** representa os estados de validação que um elemento
 pode conter de acordo com as propriedades de validação abaixo. Juntas, elas podem explicar porque um elemento é inválido (caso seja) ao ser validado.

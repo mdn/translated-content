@@ -1,10 +1,9 @@
 ---
 title: 'Element: wheel event'
 slug: Web/API/Element/wheel_event
-translation_of: Web/API/Element/wheel_event
 original_slug: Web/API/Element/wheel_event
-browser-compat: api.Element.wheel_event
 ---
+
 {{APIRef}}
 
 El evento `wheel` se activa cuando el usuario gira un botón de rueda en un dispositivo señalador (normalmente un ratón).

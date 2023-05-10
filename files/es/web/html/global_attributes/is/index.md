@@ -1,14 +1,9 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-  - is
-translation_of: Web/HTML/Global_attributes/is
 original_slug: Web/HTML/Atributos_Globales/is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 La construcción is [global attribute](/es/docs/Web/HTML/Atributos_Globales) permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea [Utilizando elementos personalizados](/es/docs/Web/Web_Components/Using_custom_elements)).
@@ -42,13 +37,11 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## Vea también
 

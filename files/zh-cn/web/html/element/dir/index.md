@@ -15,21 +15,21 @@ slug: Web/HTML/Element/dir
 
 ## 属性
 
-就像其它 HTML 元素，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+就像其他 HTML 元素，这个元素支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("compact")}}
+- `compact`
   - : 这个布尔属性表明，列表应该以紧凑样式显示。这个属性的实现取决于浏览器，并且不在所有浏览器中工作。
 
     > **备注：** 用法注解：不要使用这个属性，因为它已经废除了： {{HTMLElement("dir")}} 元素应该使用 CSS 来设计。为了提供 `compact` 属性的相似效果，可以使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("line-height")}}，值为 `80%`。
 
 ## 另见
 
-- 其它和列表相关的 HTML 元素： {{HTMLElement("ol")}}，{{HTMLElement("ul")}}，{{HTMLElement("li")}}，{{HTMLElement("menu")}}；
+- 其他和列表相关的 HTML 元素： {{HTMLElement("ol")}}，{{HTMLElement("ul")}}，{{HTMLElement("li")}}，{{HTMLElement("menu")}}；
 - 特定用于 `<dir>` 元素的 CSS 属性：
 
   - {{cssxref('list-style')}} 属性，用于选择序号展示的方式。
   - [CSS 计数器](/zh-CN/docs/CSS_Counters)，用于处理复杂的嵌套列表。
-  - {{Cssxref('line-height')}} 属性，用于模拟废除的 {{htmlattrxref("compact", "dir")}} 属性。.
+  - {{Cssxref('line-height')}} 属性，用于模拟废除的 [`compact`](/zh-CN/docs/Web/HTML/Element/dir#compact) 属性。
   - {{cssxref('margin')}} 属性，用于控制列表的缩进。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

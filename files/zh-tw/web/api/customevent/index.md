@@ -13,7 +13,7 @@ slug: Web/API/CustomEvent
 
 ## 建構式
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}  
+- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : 建立一個 `CustomEvent`。
 
 ## 屬性

@@ -55,7 +55,7 @@ MDN はページへのクイックリンクの追加に対応しています。�
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
   - : CSS リファレンスページの標準クイックリンクを構築します。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs)
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
   - : HTML リファレンスページの標準クイックリンクを構築します。
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
   - : 現在のページ（または指定したページ）の子を宛先として使用して、クイックリンクのセットを作成します。

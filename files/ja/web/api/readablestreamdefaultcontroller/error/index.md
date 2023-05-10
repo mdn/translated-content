@@ -35,9 +35,7 @@ readableStreamDefaultController.error(e);
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-default-controller-error","error()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

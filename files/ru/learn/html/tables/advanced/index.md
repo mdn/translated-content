@@ -3,6 +3,7 @@ title: HTML таблицы продвинутые возможности и до
 slug: Learn/HTML/Tables/Advanced
 translation_of: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 Во второй статье этого модуля мы рассматриваем ещё несколько продвинутых возможностей в HTML таблицах — такие как заголовок/описание и группировка строк внутри head, body и footer секциях таблицы, а также доступность таблиц для пользователей с ограниченными возможностями.

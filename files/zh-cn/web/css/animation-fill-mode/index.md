@@ -99,7 +99,7 @@ animation-fill-mode: both, forwards, none;
 }
 ```
 
-{{EmbedLiveSample('Example',700,300)}}
+{{EmbedLiveSample('示例',700,300)}}
 
 更多示例请查看 [CSS 动画](/zh-CN/CSS/CSS_animations) 。
 
@@ -113,7 +113,7 @@ animation-fill-mode: both, forwards, none;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Using CSS animations](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

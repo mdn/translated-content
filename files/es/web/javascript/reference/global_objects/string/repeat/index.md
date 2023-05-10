@@ -1,16 +1,9 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - ECMAScript2015
-  - JavaScript
-  - Prototype
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
 ---
+
 {{JSRef}}
 
 El método **`repeat()`** construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.
@@ -99,11 +92,8 @@ if (!String.prototype.repeat) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

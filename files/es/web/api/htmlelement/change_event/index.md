@@ -1,18 +1,11 @@
 ---
 title: 'HTMLElement: Evento change'
 slug: Web/API/HTMLElement/change_event
-tags:
-  - Change
-  - DOM
-  - Evento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/API/HTMLElement/change_event
 ---
+
 {{APIRef}}
 
-El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}} cuando una alteración al valor de un elemento es confirmada por el usuario. A diferencia del evento {{event("input")}}, el evento `change` no es disparado necesariamente por cada alteración al valor `value` del elemento
+El evento `change` se dispara para elementos {{HTMLElement("input")}}, {{HTMLElement("select")}}, y {{HTMLElement("textarea")}} cuando una alteración al valor de un elemento es confirmada por el usuario. A diferencia del evento [`input`](/es/docs/Web/Reference/Events/input), el evento `change` no es disparado necesariamente por cada alteración al valor `value` del elemento
 
 <table class="properties">
   <tbody>
@@ -128,12 +121,10 @@ function updateValue(e) {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', "indices.html#event-change", "change")}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLElement.change_event")}}
+{{Compat}}
 
-Diferentes navegadores no siempre concuerdan cuando un evento `change` debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento `change` en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del `<select>` (ver {{bug("126379")}}). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.
+Diferentes navegadores no siempre concuerdan cuando un evento `change` debería ser disparado para ciertos tipo de interacciones. Por ejemplo, navegación por teclado en en elementos {{HTMLElement("select")}} nunca disparan el evento `change` en Gecko hasta que el usuario presiona Enter o cambia el foco fuera del `<select>` (ver [Error 126379 en Firefox](https://bugzil.la/126379)). A partir de Firefox 63 (Quantum), sin embargo, este comportamiento es consistente entre los mayores navegadores.

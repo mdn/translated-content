@@ -1,12 +1,6 @@
 ---
 title: JavaScript 안내서
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
-  - l10n:priority
-  - 자바스크립트
-translation_of: Web/JavaScript/Guide
 ---
 {{jsSidebar("JavaScript Guide")}}
 

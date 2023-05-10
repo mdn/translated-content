@@ -1,14 +1,8 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Método(2)
-  - Referencia
-translation_of: Web/API/Element/setCapture
 ---
+
 {{ APIRef }}
 
 Llame a este método durante el manejo de un evento mousedown para redirigir todos los eventos de mouse a este elemento hasta que se suelte el botón del mouse o se llame {{domxref ( "document.releaseCapture ()")}}.

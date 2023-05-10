@@ -1,15 +1,10 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-tags:
-  - Elemento
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/base
 original_slug: Web/HTML/Elemento/base
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 ## Resumen
 
@@ -17,7 +12,7 @@ El **elemento HTML `<base>`** especifica la dirección URL base que se utilizar�
 
 La dirección URL base de un documento puede ser consultado a partir de una secuencia de comandos con {{domxref('document.baseURI')}}.
 
-> **Nota:** **Nota de uso:** Si se especifican varios elementos \<base>, se utilizá sólo la primera sección **href** y el primer valor **target**; los demás son ignorados.
+> **Nota:** Si se especifican varios elementos \<base>, se utilizá sólo la primera sección **href** y el primer valor **target**; los demás son ignorados.
 
 <table class="properties">
   <tbody>
@@ -94,12 +89,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML WHATWG')}} | Sin cambios desde la última instantánea. |
-| {{SpecName('HTML5 W3C', 'document-metadata#the-base-element', '&lt;base&gt;')}} | {{Spec2('HTML5 W3C')}}     | Especifica el comportamiento de `target` |
-| {{SpecName('HTML4.01', 'struct/links.html#h-12.4', '&lt;base&gt;')}}             | {{Spec2('HTML4.01')}}     | Añadido el atributo `target`             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.base")}}
+{{Compat}}

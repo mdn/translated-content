@@ -1,8 +1,8 @@
 ---
 title: Console.time()
-slug: Web/API/Console/time
-translation_of: Web/API/Console/time
+slug: Web/API/console/time
 ---
+
 {{APIRef("Console API")}}
 
 Inicia un temporizador que puede usar para realizar un seguimiento de la duración de una operación. Le da a cada temporizador un nombre único y puede tener hasta 10.000 temporizadores ejecutándose en una página determinada. Cuando llame a {{domxref ("console.timeEnd()")}} con el mismo nombre, el navegador generará el tiempo, en milisegundos, transcurrido desde que se inició el temporizador.
@@ -24,13 +24,11 @@ console.time(label);
 
 ## Especificaciones
 
-| Especificacion                                                           | Status                           | Comment            |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Initial definition |
+{{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.time")}}
+{{Compat}}
 
 ## See also
 

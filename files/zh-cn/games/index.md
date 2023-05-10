@@ -13,7 +13,7 @@ slug: Games
 
 欢迎来到 MDN 游戏开发中心！在网站的这个模块我们为想要开发游戏的 web 开发者提供了资源。你可以在主菜单的左边找到很多有用的教程和技术文档，放轻松去探索吧。
 
-我们同样包含了参考书库，因此你可以轻易的找到有关游戏开发所有常用的 API 以及有用的[引擎和工具](/zh-CN/docs/Games/Tools/Engines_and_tools)清单和[游戏案例](/zh-CN/docs/Games/Examples).
+我们同样包含了参考书库，因此你可以轻易的找到有关游戏开发所有常用的 API 以及有用的[引擎和工具](/zh-CN/docs/Games/Tools/Engines_and_tools)清单。
 
 > **备注：** 在你开始尝试创建一个网页游戏之前你至少要掌握基础的核心 web 技术 —— 例如 HTML、CSS 和 Javascript。如果你是一个完全的初学者， [这里](/zh-CN/docs/Learn) 将会是一个很好的学习领域。
 
@@ -29,7 +29,7 @@ slug: Games
 
 ## 示例
 
-有关网页游戏示例的列表，请参阅我们的[示例页](/zh-CN/docs/Games/Examples)。也可以查看 [openwebgames.com](http://www.openwebgames.com/) 以获得更多有用的资源和示例！
+有关网页游戏示例的列表，可以查看 [openwebgames.com](http://www.openwebgames.com/) 以获得更多有用的资源和示例！
 
 ## 参见
 

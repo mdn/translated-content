@@ -1,13 +1,9 @@
 ---
 title: Uint8Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
-tags:
-  - Arreglo
-  - JavaScript
-  - array de enteros
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Uint8Array
 ---
+
 {{JSRef}}
 
 Los **`Uint8Array`** representan un array de enteros sin signo de 8 bits. El contenido se inicializa a 0. Una vez establecido, puedes hacer referencia a un elemento usando los métodos del objeto o usando la sintaxis de array estándar (esto es, usando la notación de corchetes).
@@ -141,29 +137,11 @@ var z = new Uint8Array(buffer, 1, 4);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentario                                                                      |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Sustituida por ECMAScript 6.                                                    |
-| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Definición inicial en un ECMA standard. Se especificó que `new` es requirerido. |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     |                                                                                 |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Uint8Array")}}
-
-## Notas de compatibilidad
-
-A partir de ECMAScript 2015 (ES6), los constructors de `Uint8Array` requiren ser construidos con un operador {{jsxref("Operators/new", "new")}}. Llamar a un contructor de `Uint8Array` como una función sin `new`, lanzará un {{jsxref("TypeError")}} de ahora en adelante.
-
-```js example-bad
-var dv = Uint8Array([1, 2, 3]);
-// TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new Uint8Array([1, 2, 3]);
-```
+{{Compat}}
 
 ## Véase también
 

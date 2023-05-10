@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 translation_of: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/Styling_text/Стилизация_списков
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [Списки](/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.
@@ -75,7 +76,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.</p>
 CSS, используемый для оформления текста и интервалов, выглядит следующим образом:
 
 ```css
-/* General styles */
+/* Базовые стили */
 
 html {
   font-family: Helvetica, Arial, sans-serif;
@@ -94,7 +95,7 @@ li, p {
   line-height: 1.5;
 }
 
-/* Description list styles */
+/* Задаём стили для списка описаний */
 
 
 dd, dt {
@@ -258,7 +259,7 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Примечание:** **Обратите внимание**: Если пунктов в списке в обратном списке больше, чем значение атрибута `start`, счёт продолжится до нуля и далее отрицательные значения.
+> **Примечание:** Если пунктов в списке в обратном списке больше, чем значение атрибута `start`, счёт продолжится до нуля и далее отрицательные значения.
 
 ### value
 
@@ -277,7 +278,7 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Примечание:** **Обратите внимание**: Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте `value`.
+> **Примечание:** Даже если вы используете нечисловой {{cssxref("list-style-type")}}, вам всё равно надо использовать эквивалентное цифровое значение в атрибуте `value`.
 
 ## Активное изучение: Стилизация вложенного списка
 

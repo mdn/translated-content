@@ -1,16 +1,9 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen
@@ -56,23 +49,11 @@ function testinput(re, str) {
 
 ## Especificaciones
 
-| Especificaciones                                                                                             | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Definición inicial. Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.12', 'String.prototype.search')}}                     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-string.prototype.search', 'String.prototype.search')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-string.prototype.search', 'String.prototype.search')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.search")}}
-
-## Notas específicas de Gecko
-
-- Antes de {{Gecko("8.0")}}, `search()` estaba mal implementado; cuando se invocaba sin parámetros o con {{jsxref("undefined")}}, buscaría coincidencias con la cadena 'undefined' en lugar de la cadena vacía. Esto está corregido; ahora `'a'.search()` y `'a'.search(undefined)` devuelven correctamente un 0.
-- Desde Gecko 39 {{geckoRelease(39)}}, el argumento no estándar `flags` está obsoleto y muestra un aviso en la consola ({{bug(1142351)}}).
-- Desde Gecko 47 {{geckoRelease(47)}}, el argumento no estándar `flags` no es soportado en compilaciones que no sean lanzamientos y pronto serán eliminadas por completo ({{bug(1245801)}}).
-- Desde Gecko 49 {{geckoRelease(49)}}, el argumento no estándar `flags` no es soportado ({{bug(1108382)}}).
+{{Compat}}
 
 ## Vea también
 

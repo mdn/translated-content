@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
@@ -71,13 +71,13 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onHistoryStateUpdated")}}
+{{Compat}}
 
 ## Examples
 
-Logs les URL cibles et les informations de transition supplémentaires pour  `onHistoryStateUpdated`, si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
+Logs les URL cibles et les informations de transition supplémentaires pour `onHistoryStateUpdated`, si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
 
 ```js
 var filter = {

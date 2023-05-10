@@ -3,6 +3,7 @@ title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как `<canvas>`, WebGL, `<audio>`, и `<video>`, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы. Gamepad API - это способ получения данных с геймпада и других игровых контроллеров.

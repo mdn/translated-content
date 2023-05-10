@@ -1,16 +1,9 @@
 ---
 title: Elementos títulos
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - HTML
-  - HTML:Elemento
-  - Referencia
-  - Secciones HTML
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/Heading_Elements
 original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
+
 Los elementos de **encabezado** implementan seis niveles de encabezado del documento, `<h1>` es el más importante, y `<h6>`, el menos importante. Un elemento de encabezado describe brevemente el tema de la sección que presenta. La información de encabezado puede ser usada por los agentes usuarios, por ejemplo, para construir una tabla de contenidos para un documento automáticamente.
 
 > **Nota:**
@@ -127,15 +120,11 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                                                           | Estatus                          | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}} | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5 W3C', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}     | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}                                         | {{Spec2('HTML4.01')}}     |             |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## Véase también
 
@@ -143,4 +132,4 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
 - {{HTMLElement("div")}}
 - {{HTMLElement("section")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -3,7 +3,7 @@ title: <dd>
 slug: Web/HTML/Element/dd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<dd>` 元素**（_HTML 描述元素_）用来指明一个描述列表 ({{HTMLElement("dl")}}) 元素中一个术语的描述。这个元素只能作为描述列表元素的子元素出现，并且必须跟着一个 {{HTMLElement("dt")}} 元素。
 
@@ -36,7 +36,7 @@ slug: Web/HTML/Element/dd
 
 该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : 如果这个属性的值为 yes，那么定义的描述文字将不会包裹。默认值为 no。
 
 ## 示例

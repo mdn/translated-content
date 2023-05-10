@@ -1,13 +1,6 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTML element
-  - Property
-  - Reference
-translation_of: Web/API/HTMLElement/contentEditable
 ---
 {{APIRef("HTML DOM")}}
 

@@ -1,17 +1,10 @@
 ---
 title: '<body>: El elemento body del documento'
 slug: Web/HTML/Element/body
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Seleccionar el elemento raíz
-  - Web
-  - secciones
-translation_of: Web/HTML/Element/body
 original_slug: Web/HTML/Elemento/body
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento `<body>` de HTML** representa el contenido de un documento HTML. Solo puede haber un elemento `<body>` en un documento.
 
@@ -91,17 +84,17 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("alink")}} {{obsolete_inline}}
+- {{HTMLAttrDef("alink")}} {{deprecated_inline}}
   - : Color del texto de los hipervínculos cuando se selecciona. _Este método no es conforme a la especificación, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":active")}} en su lugar._
-- {{HTMLAttrDef("background")}} {{obsolete_inline}}
+- {{HTMLAttrDef("background")}} {{deprecated_inline}}
   - : URI de una imagen para usar como fondo. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("background")}} en el elemento_.
-- {{HTMLAttrDef("bgcolor")}} {{obsolete_inline}}
+- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
   - : Color de fondo del documento. _Este método no es conforme, utiliza la propiedad CSS {{CSSxRef("background-color")}} en el elemento_.
-- {{HTMLAttrDef("bottommargin")}} {{obsolete_inline}}
+- {{HTMLAttrDef("bottommargin")}} {{deprecated_inline}}
   - : El margen de la parte inferior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-bottom")}} en el elemento_.
-- {{HTMLAttrDef("leftmargin")}} {{obsolete_inline}}
+- {{HTMLAttrDef("leftmargin")}} {{deprecated_inline}}
   - : El margen de la izquierda del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-left")}} en el elemento en su lugar_.
-- {{HTMLAttrDef("link")}} {{obsolete_inline}}
+- {{HTMLAttrDef("link")}} {{deprecated_inline}}
   - : Color del texto de los enlaces de hipertexto no visitados. _Este método no es conforme, usa la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":link")}} en su lugar_.
 - {{HTMLAttrDef("onafterprint")}}
   - : Función para llamar después de que el usuario haya impreso el documento.
@@ -139,13 +132,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Función para llamar cuando el usuario ha retrocedido en el historial de deshacer transacciones.
 - {{HTMLAttrDef("onunload")}}
   - : Función para llamar cuando el documento se vaya.
-- {{HTMLAttrDef("rightmargin")}} {{obsolete_inline}}
+- {{HTMLAttrDef("rightmargin")}} {{deprecated_inline}}
   - : El margen de la derecha del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-right")}} en el elemento_.
-- {{HTMLAttrDef("text")}} {{obsolete_inline}}
+- {{HTMLAttrDef("text")}} {{deprecated_inline}}
   - : Color de primer plano del texto. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("color")}} en el elemento_.
-- {{HTMLAttrDef("topmargin")}} {{obsolete_inline}}
+- {{HTMLAttrDef("topmargin")}} {{deprecated_inline}}
   - : El margen de la parte superior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-top")}} en el elemento_.
-- {{HTMLAttrDef("vlink")}} {{obsolete_inline}}
+- {{HTMLAttrDef("vlink")}} {{deprecated_inline}}
   - : Color del texto de los enlaces de hipertexto visitados. _Este método no es conforme, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":visited")}} en su lugar_.
 
 ## Ejemplo
@@ -163,15 +156,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               | Comentario                                                                                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-body-element', '&lt;body&gt;')}} | {{ Spec2('HTML WHATWG') }} | Cambió la lista de características no conformes.                                                                                                                                                      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}     | {{ Spec2('HTML5 W3C') }}     | Los atributos anteriormente obsoletos. Definieron el comportamiento de `topmargin`, `leftmargin`, `rightmargin` y `bottommargin` no conforme y nunca estandarizado. Se agregaron los atributos `on*`. |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}             | {{ Spec2('HTML4.01') }}     | En desuso el `alink`, `background`, `bgcolor`, `link`, `text` y atributos `vlink`.                                                                                                                    |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## Ve también
 

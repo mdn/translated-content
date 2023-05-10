@@ -1,25 +1,9 @@
 ---
 title: O que é JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - API
-  - Aprender
-  - Artigo
-  - Código Script
-  - Iniciante
-  - JavaScript
-  - Navegador
-  - Núcleo
-  - O que
-  - Script
-  - comentários
-  - externo
-  - inline
-  - l10n:prioridade
-  - terceiros
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/O_que_e_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 Sejam bem-vindos ao curso de JavaScript para iniciantes do MDN! Neste primeiro artigo vamos fazer uma análise profunda da linguagem, respondendo questões como "O que é JavaScript?", e "O que ele faz?", para você se sentir confortável com a proposta da linguagem.
@@ -422,15 +406,3 @@ Então, esse foi o seu primeiro passo no mundo do JavaScript. Nós iniciamos ape
 O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos [mergulhar direto para a prática](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash), levando você a construir seu próprio código JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo:
-
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [O primeiro contato com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [O que deu errado? Resolvendo problemas com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Armazenando a informação que você precisa - Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemática básica em JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-- [Trabalhando com texto — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos úteis para strings](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Avaliação: Gerador de histórias bobas](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

@@ -1,14 +1,8 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:disabled
 ---
+
 {{CSSRef}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:disabled` de [CSS](/es/docs/Web/CSS) representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene además un estado habilitado en el cual puede ser activado o recibir foco.
@@ -26,7 +20,7 @@ input:disabled {
 
 ## Ejemplo
 
-Este ejemplo muestra un formulario de envío básico. Utiliza el evento [JavaScript](/es/docs/Web/JavaScript) {{event("change")}} para permitir al usuario habilitar / deshabilitar los campos de facturación.
+Este ejemplo muestra un formulario de envío básico. Utiliza el evento [JavaScript](/es/docs/Web/JavaScript) [`change`](/es/docs/Web/Reference/Events/change) para permitir al usuario habilitar / deshabilitar los campos de facturación.
 
 ### HTML
 
@@ -85,17 +79,11 @@ function toggleBilling() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario                                              |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                          |
-| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica referente a HTML y los formularios. |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                          |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}     | {{Spec2('CSS3 Basic UI')}} | Referencia a los selectores de Nivel 3.                 |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Define la pseudo clase pero no la semántica asociada..  |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.disabled")}}
+{{Compat}}
 
 ## Ver también
 

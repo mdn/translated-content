@@ -1,19 +1,9 @@
 ---
 title: Iniciando com HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Codificação de Scripts
-  - Comentário
-  - Elemento
-  - Guía
-  - HTML
-  - Iniciante
-  - atributo
-  - espaço em branco
-  - referência de entidade
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Aprender/HTML/Introducao_ao_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 Neste artigo nós abordamos os princípios básicos do HTML, para você começar. Definimos os elementos, atributos e todos os outros termos importantes que você possa ter ouvido e onde eles se encaixam na linguagem. Também mostramos como um elemento HTML é estruturado, como uma página HTML típica é estruturada e explicamos outras importantes características básicas da linguagem. Ao longo do caminho, nós brincaremos com um pouco de HTML, para despertar seu interesse!
@@ -63,7 +53,7 @@ Se nós quisermos que a linha permaneça, nós podemos especificar que é um par
 
 Vamos explorar nosso elemento parágrafo um pouco mais:
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](grumpy-cat-small.png)
 
 As partes principais do elemento são:
 
@@ -259,9 +249,9 @@ Isto exibirá em sua página:
 
 Elementos também podem conter atributos, que se apresentam da seguinte forma:
 
-![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](grumpy-cat-attribute-small.png)
 
-Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Nete caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
+Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Neste caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
 
 Um atributo deve conter:
 
@@ -508,7 +498,7 @@ Neste código nós temos:
 
     ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     ```
 
     No entanto, atualmente, ninguém se importa com eles, e eles são realmente apenas um artefato histórico que precisa ser incluído para que tudo funcione corretamente. \<! DOCTYPE html> é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você realmente precisa saber.
@@ -532,7 +522,7 @@ Se você quiser experimentar como funciona um documento HTML no seu computador, 
 
 Você pode abrir este arquivo no navegador para ver como o código renderizado se apresenta, e então, editar o código e atualizar a página no navegador para ver o resultado com as mudanças. Inicialmente será exibido assim:
 
-![A simple HTML page that says This is my page](https://mdn.mozillademos.org/files/12279/template-screenshot.png)Neste exercício, você pode editar o código localmente em seu computador, com descrito acima, ou você pode editá-lo na janela de exemplo editável abaixo (esta janela editável representa apenas o conteúdo do elemento `<body>` , neste caso). Nós gostaríamos que você seguisse as seguintes etapas:
+![A simple HTML page that says This is my page](template-screenshot.png)Neste exercício, você pode editar o código localmente em seu computador, com descrito acima, ou você pode editá-lo na janela de exemplo editável abaixo (esta janela editável representa apenas o conteúdo do elemento `<body>` , neste caso). Nós gostaríamos que você seguisse as seguintes etapas:
 
 - Logo abaixo da tag de abertura [`<body>`](/pt-BR/docs/Web/HTML/Element/body), adicione um título principal para o documento. Isso deve estar dentro da tag de abertura `<h1>`e da tag de fechamento `</h1>` .
 - Edite o conteúdo do parágrafo para incluir algum texto sobre algo de seu interesse.
@@ -741,15 +731,3 @@ Você chegou ao final do artigo — esperamos que tenha gostado do seu tour pelo
 - [Aplicando cores a elementos HTML usando CSS](/pt-BR/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)
-- [Criando links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto)
-- [Estrutura do documento e site](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites)
-- [Depurando HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Debugging_HTML)
-- [Marcando uma carta](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Marking_up_a_letter)
-- [Estruturando o conteudo de uma página](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Structuring_a_page_of_content)

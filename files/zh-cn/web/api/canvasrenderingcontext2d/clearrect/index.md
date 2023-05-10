@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/clearRect
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.clearRect()`**是 Canvas 2D API 的方法，这个方法通过把像素设置为透明以达到擦除一个矩形区域的目的。
+**`CanvasRenderingContext2D.clearRect()`** 是 Canvas 2D API 的方法，这个方法通过把像素设置为透明以达到擦除一个矩形区域的目的。
 
 > **备注：** 如果没有依照 [绘制路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84) 的步骤，使用 `clearRect()` 会导致意想之外的结果。请确保在调用 `clearRect()`之后绘制新内容前调用{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
 
@@ -78,9 +78,9 @@ ctx.clearRect(10, 10, 120, 100);
 
 #### 结果
 
-{{EmbedLiveSample('Erasing_part_of_a_canvas', 700, 180)}}
+{{EmbedLiveSample('清除一部分画布', 700, 180)}}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

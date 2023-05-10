@@ -1,8 +1,8 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
-translation_of: Web/CSS/margin-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`margin-inline-start`** define el margen de inicio en línea lógico de un elemento, que se asigna a un margen físico según el modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la las propiedades {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, o {{cssxref("margin-left")}} dependiendo de los valores definidos por {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
@@ -64,15 +64,13 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                               | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-start", "margin-inline-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.margin-inline-start")}}
+{{Compat}}
 
 ## Mira también
 

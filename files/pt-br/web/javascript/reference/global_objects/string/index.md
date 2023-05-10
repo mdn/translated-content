@@ -1,11 +1,6 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - JavaScript
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 ---
 {{JSRef("Global_Objects", "String")}}
 
@@ -127,16 +122,12 @@ console.log(eval(s2.valueOf())); // retorna o número 4
 - {{jsxref("String.prototype")}}
   - : Permite a adição de propriedades a um objeto String.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Métodos
 
 - {{jsxref("String.fromCharCode()")}}
   - : Retorna uma string criada usando a sequência especificada de valores Unicode.
 - {{jsxref("String.fromCodePoint()")}} {{experimental_inline}}
   - : Retorna uma string criada usando a sequência especificada de posições de código.
-
-{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint")}}
 
 ## `Métodos genéricos de Strings`
 

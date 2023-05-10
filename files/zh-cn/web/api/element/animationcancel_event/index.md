@@ -15,13 +15,9 @@ var animCancelHandler = target.onanimationcancel;
 target.onanimationcancel = {{jsxref("Function")}}
 ```
 
-### Value
+## 示例
 
-A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event occurs indicating that a CSS animation has begun on the _`target`_, where the target object is an HTML element ({{domxref("HTMLElement")}}), document ({{domxref("Document")}}), or window ({{domxref("Window")}}). The function receives as input a single parameter: an {{domxref("AnimationEvent")}} object describing the event which occurred.
-
-## Example
-
-### HTML content
+### HTML
 
 ```html
 <div class="main">
@@ -37,7 +33,7 @@ A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event
 <pre id="log"></pre>
 ```
 
-### CSS content
+### CSS
 
 ```css hidden
 :root {
@@ -73,8 +69,6 @@ A {{jsxref("Function")}} to be called when an {{event("animationcancel")}} event
   color: white;
   font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
 }
-
-
 ```
 
 Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself, with all its properties, including {{cssxref("animation")}}, defined. We go ahead and describe the animation in-place here because the animation is intended to begin as soon as the page loads, rather than based on an event.
@@ -112,7 +106,7 @@ The animation's keyframes are described next, plotting a course from the top-lef
 
 Since the animation is described as taking place an infinite number of times, alternating direction each time, the box will glide back and forth between the two corners until stopped or the page is closed.
 
-### JavaScript content
+### JavaScript
 
 Before we get to the animation code, we define a function which logs information to a box on the user's screen. We'll use this to show information about the events we receive. Note the use of {{domxref("AnimationEvent.animationName")}} and {{domxref("AnimationEvent.elapsedTime")}} to get information about the event which occurred.
 
@@ -132,7 +126,7 @@ function log(msg, event) {
 };
 ```
 
-Then we set up the `handleCancelEvent()` function, which is called in response to the {{event("animationcancel")}} event, as set up in the HTML above. All we do here is log information to the console, but you might find other use cases, such as starting a new animation or effect, or terminating some dependent operation.
+Then we set up the `handleCancelEvent()` function, which is called in response to the `animationcancel` event, as set up in the HTML above. All we do here is log information to the console, but you might find other use cases, such as starting a new animation or effect, or terminating some dependent operation.
 
 ```js
 function handleCancelEvent(event) {
@@ -140,7 +134,7 @@ function handleCancelEvent(event) {
 };
 ```
 
-Then we add a method to handle toggle {{cssxref("display")}} between `"flex"` and  `"none"` and establish it as the handler for a [`click`](/zh-CN/docs/Web/API/Element/click_event) event on the "Hide/Show" the Box button:
+Then we add a method to handle toggle {{cssxref("display")}} between `"flex"` and `"none"` and establish it as the handler for a [`click`](/zh-CN/docs/Web/API/Element/click_event) event on the "Hide/Show" the Box button:
 
 ```js
 function toggleBox() {
@@ -154,27 +148,26 @@ function toggleBox() {
 }
 ```
 
-Toggling the box to `display: none` has the effect of aborting its animation. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.
+Toggling the box to `display: none` has the effect of aborting its animation. In browsers that support `animationcancel`, the event is fired and this handler is called.
 
 > **备注：** At this time, no major browser supports `animationcancel`.
 
-### Result
+### 结果
 
 Assembled together, you get this:
 
-{{ EmbedLiveSample('Example', 500, 400) }}
+{{ EmbedLiveSample('示例', 500, 400) }}
 
 If your browser supports `animationcancel`, hiding the box using the button will cause a message to be displayed about the event.
 
-## Specification
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{event("animationcancel")}} event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

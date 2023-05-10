@@ -1,13 +1,8 @@
 ---
 title: Ferramentas para o desenvolvimento de jogos
 slug: Games/Tools
-tags:
-  - Gecko
-  - Guia(2)
-  - JavaScript
-  - Jogos
-translation_of: Games/Tools
 ---
+
 {{GamesSidebar}}
 
 Nesta página você pode encontrar links para a nossa ferramenta de desenvolvimento de jogos, artigos, os quais eventualmente abrangem frameworks, compiladores, e ferramentas de debug.

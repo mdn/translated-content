@@ -1,20 +1,8 @@
 ---
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Interface
-  - Media
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Video
-  - Web
-  - WebRTC
-translation_of: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
@@ -73,11 +61,11 @@ signalingChannel.onmessage = function (evt) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

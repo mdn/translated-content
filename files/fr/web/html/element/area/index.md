@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/area
 browser-compat: html.elements.area
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
 
@@ -161,7 +161,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`type`** {{deprecated_inline}}
   - : Sans effet car ignoré par les navigateurs.
 
-## Exemple
+## Exemples
 
 Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
 

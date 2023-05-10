@@ -1,13 +1,8 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
-tags:
-  - API
-  - DOM
-  - Nodo
-  - metodo
-translation_of: Web/API/Node/hasChildNodes
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.hasChildNodes()`** devuelve un valor **Boolean** indicando si el {{domxref("Node")}} (nodo) actual tiene [nodos hijos](/es/docs/Web/API/Node/childNodes) o no.
@@ -50,14 +45,13 @@ Hay varias maneras de determinar si el nodo tiene nodos hijos.
 - node.firstChild != null (o sólo node.firstChild)
 - node.childNodes && node.childNodes.length (o node.childNodes.length > 0)
 
-## Especificación
+## Especificaciones
 
-- [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
-- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.Node.hasChildNodes")}}
+{{Compat}}
 
 ## Ver también
 

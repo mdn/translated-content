@@ -1,9 +1,8 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-translation_of: Web/API/Element/clientHeight
 ---
-{{ APIRef() }}
+{{ APIRef('DOM') }}
 
 `읽기 전용 속성인 Element.clientHeight은` 엘리먼트의 내부 높이를 픽셀로 반환합니다. 이 내부 높이라는 것은 내부 여백(padding)을 포함하지만, 수평 스크롤바의 높이, 경계선, 또는 외부 여백(margin)은 포함하지 않습니다.
 
@@ -21,7 +20,7 @@ var h = element.clientHeight;
 
 ## 예
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## 명세서
 
@@ -33,7 +32,7 @@ var h = element.clientHeight;
 
 ## 같이 보기
 
-- {{domxref("Element.offsetHeight")}}
+- {{domxref("HTMLElement.offsetHeight")}}
 - {{domxref("Element.scrollHeight")}}
-- [Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)
-- [MSDN Determining the dimensions of elements](/ko/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [MSDN Determining the dimensions of elements](/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

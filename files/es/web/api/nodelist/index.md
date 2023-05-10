@@ -1,13 +1,8 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interfaz
-  - NodeList
-translation_of: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 Los objetos **`NodeList`** son colecciones de nodos como los devueltos por propiedades como {{domxref ("Node.childNodes")}} y el método {{domxref ("document.querySelectorAll ()")}}..
@@ -58,9 +53,9 @@ for (var i = 0; i < myNodeList.length; i++) {
 }
 ```
 
-No se sienta tentado a [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
+No se sienta tentado a [`for...in`](/es/docs/JavaScript/Reference/Statements/for...in) or [`for each...in`](/es/docs/JavaScript/Reference/Statements/for_each...in) para enumerar los elementos en la lista, ya que eso también enumerará la longitud y las propiedades del elemento de `NodeList` y causará errores si su secuencia de comandos asume que solo tiene que tratar con objetos {{domxref ("element")}}. Además, `for..in` no garantiza visitar las propiedades en ningún orden en particular.
 
-Los bucles [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
+Los bucles [`for...of`](/es/docs/JavaScript/Reference/Statements/for...of) harán un bucle sobre los objetos `NodeList` correctamente:
 
 ```js
 var list = document.querySelectorAll( 'input[type=checkbox]' );
@@ -82,13 +77,8 @@ Array.prototype.forEach.call(list, function (item) {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                     |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Definición inicial. |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.NodeList")}}
+{{Compat}}

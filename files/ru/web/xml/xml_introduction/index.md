@@ -7,6 +7,7 @@ tags:
   - XML
 translation_of: Web/XML/XML_introduction
 ---
+
 XML - это язык разметки подобный HTML. Расшифровывается как (англ. Extensible Markup Language - Расширяемый Язык Разметки) и является рекомендацией сообщества [W3C](https://www.w3.org) в качестве языка разметки общего назначения ([W3C recommended](https://www.w3.org/TR/xml/)). В отличии от остальных языков разметки, XML сам по себе не определён (это означает, что вы должны сами определять используемые теги). Основной целью XML является передача данных между разными системами (даже концептуально разными), такими как интернет.
 
 Много языков базируются на XML; Некоторые примеры: [XHTML](/ru/docs/Glossary/XHTML), [MathML](/ru/docs/Web/MathML), [SVG](/ru/docs/Web/SVG), [XUL](/ru/docs/Mozilla/Tech/XUL), [XBL](/ru/docs/Mozilla/Tech/XBL), [RSS](/ru/docs/Web/RSS), и [RDF](/ru/docs/RDF). Вы можете создать свой.

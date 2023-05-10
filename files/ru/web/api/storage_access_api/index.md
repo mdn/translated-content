@@ -8,6 +8,7 @@ tags:
   - Storage Access API
 translation_of: Web/API/Storage_Access_API
 ---
+
 {{DefaultAPISidebar("Storage Access API")}}{{seecompattable}}
 
 The Storage Access API provides a way for embedded, cross-origin content to gain unrestricted access to storage that it would normally only have access to in a first-party context (we refer to this as an origin’s _first-party_ storage). The API provides methods that allow embedded resources to check whether they currently have access to their first-party storage, and to request access to their first-party storage from the user agent.

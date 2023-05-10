@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 HTTP-заголовок ответа **`X-Content-Type-Options`** является маркером, используемым сервером для указания того, что типы MIME, объявленные в заголовках {{HTTPHeader ("Content-Type")}}, должны соблюдаться и не изменяться. Это позволяет отказаться от [перехвата MIME](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing), или, другими словами, это способ сказать, что веб-мастера знали, что они делают.

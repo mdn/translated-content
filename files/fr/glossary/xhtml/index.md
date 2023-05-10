@@ -78,7 +78,7 @@ Voir [Utilisation correcte de CSS et JavaScript dans les documents XHTML](/fr/do
 
 ## Outils
 
-- [Outils de création conformes aux normes](fr/Outils_d'%c3%a9dition_respectueux_des_standards)
+- [Outils de création conformes aux normes](/fr/Outils_d'%c3%a9dition_respectueux_des_standards)
 
 ## Voir aussi
 

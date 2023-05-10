@@ -11,6 +11,7 @@ tags:
   - карты кода
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

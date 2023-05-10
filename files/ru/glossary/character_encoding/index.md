@@ -1,6 +1,6 @@
 ---
 title: Кодировка символов
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 tags:
   - Composing
   - Glossary
@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/character_encoding
 original_slug: Глоссарий/character_encoding
 ---
+
 Кодировка определяет связность между байтами и текстом. Последовательность байтов допускает различные текстовые интерпретации. Указывая конкретную кодировку (например, UTF-8), мы указываем, как следует интерпретировать последовательность байтов.
 
 Например, в HTML мы обычно указываем кодировку символов UTF-8, используя следующую строку:
@@ -23,4 +24,3 @@ original_slug: Глоссарий/character_encoding
 ### Общие сведения
 
 - [Кодировка символов на W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Кодировка символов")}} на Википедия

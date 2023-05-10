@@ -1,13 +1,13 @@
 ---
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
-translation_of: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## Resumen
 
-Desplaza el visor a un conjunto específico de coodenadas en el documento.
+Desplaza el visor a un conjunto específico de coordenadas en el documento.
 
 ## Sintaxis
 
@@ -34,6 +34,4 @@ Para desplazar el visor dentro de elementos, ver [Element.scrollTop](/es/docs/We
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scroll', 'window.scroll()') }} | {{ Spec2('CSSOM View') }} | Definición inicial. |
+{{Specifications}}

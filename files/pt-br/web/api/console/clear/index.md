@@ -1,8 +1,8 @@
 ---
 title: console.clear()
-slug: Web/API/Console/clear
-translation_of: Web/API/Console/clear
+slug: Web/API/console/clear
 ---
+
 {{APIRef("Console API")}}
 
 O método **`console.clear()`** limpa o console, se o ambiente permitir.
@@ -21,4 +21,4 @@ console.clear();
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console.clear")}}
+{{Compat}}

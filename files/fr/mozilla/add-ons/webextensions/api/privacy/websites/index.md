@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 
 {{AddonSidebar}}
 
-La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.
+La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 Les valeurs par défaut de ces propriétés ont tendance à varier selon les navigateurs.
 
@@ -71,9 +71,9 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
     - `"never"`: La protection de suivi est désactivée.
     - `"private_browsing"`: La protection de suivi est activée uniquement dans les fenêtres de navigation privée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.websites")}}
+{{Compat}}
 
 ## Exemples
 

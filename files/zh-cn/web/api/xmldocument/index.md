@@ -13,15 +13,9 @@ The **XMLDocument** interface represents an XML document. It inherits from the g
 
 _Also inherits properties from: {{DOMxRef("Document")}}_
 
-- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Used with {{DOMxRef("XMLDocument.load()")}} to indicate an asynchronous request.
-
 ## 方法
 
 _Also inherits methods from: {{DOMxRef("Document")}}_
-
-- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Loads an XML document.
 
 ## 规范
 
@@ -31,6 +25,6 @@ _Also inherits methods from: {{DOMxRef("Document")}}_
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - [DOM 接口索引](/zh-CN/docs/Web/API/Document_Object_Model)

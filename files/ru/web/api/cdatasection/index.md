@@ -3,6 +3,7 @@ title: CDATASection
 slug: Web/API/CDATASection
 translation_of: Web/API/CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 Интерфейс **`CDATASection`** представляет собой раздел CDATA, который может быть использован внутри XML для добавления extended групп "незакавыченного" текста. Символы `<` and `&` не нуждаются в кавычках, как внутри раздела CDATA.

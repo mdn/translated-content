@@ -1,12 +1,13 @@
 ---
 title: Console.table()
-slug: Web/API/Console/table
+slug: Web/API/console/table
 tags:
   - API
   - Дебаг
   - консоль
 translation_of: Web/API/Console/table
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Отображает наборы данных в виде таблицы.
@@ -29,7 +30,7 @@ translation_of: Web/API/Console/table
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![](https://mdn.mozillademos.org/files/8567/console-table-array.png)
+![](console-table-array.png)
 
 ```js
 // объект, чьи свойства содержат строки
@@ -44,7 +45,7 @@ var me = new Person("John", "Smith");
 console.table(me);
 ```
 
-![](https://mdn.mozillademos.org/files/8559/console-table-simple-object.png)
+![](console-table-simple-object.png)
 
 ### Наборы смешанных типов
 
@@ -57,7 +58,7 @@ var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
 console.table(people);
 ```
 
-![Table displaying array of arrays](https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png)
+![Table displaying array of arrays](console-table-array-of-array.png)
 
 ```js
 // массив объектов
@@ -76,7 +77,7 @@ console.table([john, jane, emily]);
 
 Обратите внимание, что если массив состоит из объектов, колонки таблицы будут озаглавлены названиями свойств объекта.
 
-![Table displaying array of objects](https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png)
+![Table displaying array of objects](console-table-array-of-objects.png)
 
 ```js
 // объект, свойства которого являются объектами
@@ -90,7 +91,7 @@ family.daughter = new Person("Emily", "Smith");
 console.table(family);
 ```
 
-![Table displaying object of objects](https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png)
+![Table displaying object of objects](console-table-object-of-objects.png)
 
 ### Ограничение видимости колонок
 
@@ -111,7 +112,7 @@ var emily = new Person("Emily", "Jones");
 console.table([john, jane, emily], ["firstName"]);
 ```
 
-![Table displaying array of objects with filtered output](https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png)
+![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
 
 ### Сортировка колонок
 

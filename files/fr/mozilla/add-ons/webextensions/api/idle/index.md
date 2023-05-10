@@ -29,16 +29,16 @@ Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("idle.queryState()")}}
   - : Renvoie `"locked"` si le système est verrouillé, `"idle"` si l'utilisateur n'a généré aucune entrée pendant un nombre de secondes spécifié, ou sinon `"active"`
 - {{WebExtAPIRef("idle.setDetectionInterval()")}}
-  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements  {{WebExtAPIRef("idle.onStateChanged")}}.
+  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}}.
 
 ## Evénements
 
 - {{WebExtAPIRef("idle.onStateChanged")}}
   - : Définit quand le système change d'état.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -1,16 +1,9 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterador
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/values
 ---
+
 {{JSRef}}
 
 El método **`values()`** devuelve un nuevo objeto **`Array Iterator`** que contiene los valores para cada índice del array.
@@ -51,14 +44,11 @@ for (let letra of iterador) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Vea también
 

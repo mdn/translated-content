@@ -13,6 +13,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBIndex
 ---
+
 {{APIRef("IndexedDB")}}
 
 `IDBIndex` interface of the [IndexedDB API](/en/IndexedDB) provides asynchronous access to an [index](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
@@ -115,4 +116,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

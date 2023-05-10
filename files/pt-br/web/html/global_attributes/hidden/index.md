@@ -1,12 +1,8 @@
 ---
 title: hidden
 slug: Web/HTML/Global_attributes/hidden
-tags:
-  - Atributos globais
-  - HTML
-  - Referência(2)
-translation_of: Web/HTML/Global_attributes/hidden
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`hidden`** é um atributo booleano que indica se um elemento é ou não _relevante_. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo. Os navegadores não renderizarão elementos com o atributo `hidden` setado.
@@ -21,7 +17,7 @@ Pode ser correto, entretanto, usar o atributo ARIA `aria-describedby`para refere
 
 Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como buffer por um script de gráficos, e um controle de formulário, usando seu atributo form, poderia referir-se a um elemento `form` com atributo `hidden`.
 
-> **Note:** **Nota:** Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo `hidden` sobrescreve o comportamento. Por exemplo, elementos com o estilo `display: flex;` serão mostrados independente da presença do atributo `hidden`.
+> **Nota:** Mudar o valor da propriedade {{cssxref("display")}} no CSS de um elemento com o atributo `hidden` sobrescreve o comportamento. Por exemplo, elementos com o estilo `display: flex;` serão mostrados independente da presença do atributo `hidden`.
 
 ## Especificações
 

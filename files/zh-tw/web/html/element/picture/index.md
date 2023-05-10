@@ -3,7 +3,7 @@ title: '<picture>: The Picture element'
 slug: Web/HTML/Element/picture
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<picture>` 元素** 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。
 
@@ -11,7 +11,7 @@ slug: Web/HTML/Element/picture
 
 {{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
 
-為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 {{htmlattrxref("srcset", "source")}}、{{htmlattrxref("media", "source")}} 以及 {{htmlattrxref("type", "source")}} 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
+為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 [`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-TW/docs/Web/HTML/Element/source#media) 以及 [`type`](/zh-TW/docs/Web/HTML/Element/source#type) 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
 
 `<img>` 有兩個作用：
 
@@ -24,7 +24,7 @@ slug: Web/HTML/Element/picture
 - **提供替代的圖片格式：**以應對某些特定格式不被支援的情況
 - **節省頻寬並加速頁面載入速度：**透過針對觀看者的裝置載入最適當的圖片做到這點
 
-如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 {{htmlattrxref("srcset", "img")}} 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
+如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 [`srcset`](/zh-TW/docs/Web/HTML/Element/img#srcset) 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
 
 | [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                             |
 | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ slug: Web/HTML/Element/picture
 
 ### srcset 屬性
 
-The [{{htmlattrdef("srcset")}}](/zh-TW/docs/Web/HTML/Element/source#attr-srcset) 屬性用來提供根據大小區分的可能圖片清單。
+[`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset) 屬性用來提供根據大小區分的可能圖片清單。
 
 它是由逗號分隔的圖片描述句清單組成的。每一個圖片描述句是由該圖片的 URL 以及以下描述組成（擇一）：
 

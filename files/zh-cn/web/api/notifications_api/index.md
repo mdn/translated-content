@@ -13,7 +13,7 @@ slug: Web/API/Notifications_API
 
 这将产生一个请求对话框，沿着以下几行：
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](notification-bubble.png)
 
 从这里，用户可以选择允许来自此来源的通知，阻止来自此来源的通知，或不选择此点。一旦做出选择，该设置通常将持续用于当前会话。
 

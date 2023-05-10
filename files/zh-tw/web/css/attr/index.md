@@ -77,7 +77,7 @@ p::before {
 
 ### 結果
 
-{{EmbedLiveSample("Examples", '100%', '80')}}
+{{EmbedLiveSample("範例", '100%', '80')}}
 
 ## 規範
 

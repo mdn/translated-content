@@ -1,15 +1,8 @@
 ---
 title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - WeakMap
-browser-compat: javascript.builtins.WeakMap.get
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
+
 {{JSRef}}
 
 **`get()`** 메서드는 `WeakMap` 객체에서 특정 요소를 반환합니다.

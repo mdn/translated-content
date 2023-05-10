@@ -36,9 +36,7 @@ slug: Web/API/Element/touchmove_event
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchmove')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

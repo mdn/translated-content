@@ -1,15 +1,8 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - Cache
-  - ETag
-  - HTTP
-  - Response
-  - Trafego
-  - header
-translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 O HTTP provê no cabeçalho (header) da resposta (response), a **`ETag`** que é um identificador para uma versão específica de um recurso. A ETag permite que o cache torne-se mais eficiente e preserve o tráfego de dados (largura de banda), assim um web server não precisa reenviar uma resposta com todos os dados que não tiveram nenhuma mudança em seu conteúdo. Além disso, as ETags ajudam a impedir que atualizações simultâneas de um recurso sejam feitas por outros. Veja sobre (["mid-air collisions"](#Caching_of_unchanged_resources)).

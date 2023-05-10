@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Макет_с_несколькими_столбцами
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
 
 Спецификация макет с несколькими столбцами даёт вам метод вёрстки контента по столбцам, точно также как вы можете видеть в газете. Эта статья объясняет, как использовать эту функцию.

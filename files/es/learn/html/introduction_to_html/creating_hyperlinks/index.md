@@ -1,25 +1,6 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Aprender
-  - CodingScripting
-  - Guía
-  - HTML
-  - HTTP
-  - Novato
-  - Principiante
-  - Title
-  - URL
-  - enlace
-  - hiperenlaces
-  - hipervínculos
-  - href
-  - referencia absoluta
-  - referencia relativa
-  - título
-  - urls
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
 
@@ -57,7 +38,7 @@ Los hipervínculos son una de las innovaciones más interesantes que ofrece la W
 
 El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que apuntan a multitud de noticias en diferentes zonas de el sitio (funcionalidad de navegación), zonas de acceso/registro (herramientas de usuario) y otras.
 
-![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](updated-bbc-website.png)
 
 ## Anatomía de un enlace
 
@@ -127,7 +108,7 @@ Una localizadora uniforme de recursos (URL, de las iniciales en inglés de «_Un
 
 Las URLs utilizan rutas para encontrar los archivos. Las rutas especifican dónde se encuentra el archivo que buscas dentro del sistema de archivos. Veamos un ejemplo de una estructura de directorios (ve el directorio [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
 
-![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](simple-directory.png)
 
 Al directorio **raíz** de esta estructura de directorios lo hemos llamado `creating-hyperlinks`. Al trabajar en modo local en una web, habrá un directorio que contendrá toda la información. En nuestro ejemplo, dentro de la raíz, encontramos el archivo `index.html` y el archivo `contacts.html`. En una web real, `index.html` es el punto de entrada a la web, lo que se conoce como _página de inicio_.
 
@@ -305,7 +286,7 @@ A continuación:
 
 El ejercicio terminado debería crear una página como la siguiente:
 
-![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](navigation-example.png)
 
 > **Nota:** Si ahora encallas, o no estás seguro de haberlo conseguido, revisa el directorio [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver la respuesta correcta.
 
@@ -339,7 +320,7 @@ Veamos un ejemplo que incluye estos campos:
 </a>
 ```
 
-> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) {{Interwiki("wikipedia", "Código porciento")}}. También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
+> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
 
 A continuación otros ejemplos de utilización de enlaces `mailto`:
 
@@ -358,15 +339,3 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 Eso es todo en cuanto a enlaces, ¡por ahora! Volveremos a ellos más tarde en este curso cuando comencemos a usar estilos. Lo siguiente en HTML, será aprender la semántica de texto para usar algunas características avanzadas/inusuales que nos serán utilidad — Formato de texto avanzado será la próxima parada.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

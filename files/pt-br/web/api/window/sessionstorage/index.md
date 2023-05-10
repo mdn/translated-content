@@ -1,13 +1,8 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - Armazenamento
-  - Propriedade
-  - Referencia
-  - Sessão
-translation_of: Web/API/Window/sessionStorage
 ---
+
 {{APIRef()}}
 
 A propriedade `sessionStorage` permite acessar um objeto tipo session {{domxref("Storage")}}. A sessionStorage é similar ao [`localStorage`](/pt-BR/docs/Web/API/Window.localStorage), a única diferença é que enquanto os dados armazenados no `localStorage` não expiram, os dados no sessionstorage tem os seus dados limpos ao expirar a sessão da página. A sessão da página dura enquanto o browser está aberto e se mantém no recarregamento da página. **Abrir a página em uma nova aba ou nova janela irá gerar uma nova sessão,** o que diferencia de como os cookies trabalham**.**

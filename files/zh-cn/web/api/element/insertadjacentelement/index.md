@@ -5,7 +5,7 @@ slug: Web/API/Element/insertAdjacentElement
 
 {{APIRef("DOM")}}
 
-**`insertAdjacentElement()` **方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
+**`insertAdjacentElement()`** 方法将一个给定的元素节点插入到相对于被调用的元素的给定的一个位置。
 
 ## 语法
 
@@ -76,7 +76,7 @@ afterBtn.addEventListener('click', function() {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

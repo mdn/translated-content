@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
 
-> **备注：** 通过触发一个{{event("negotiationneeded")}}事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
+> **备注：** 通过触发一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件，向连接添加一个跟踪将触发重新协商。详情请参见[开始协商](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling#开始协商)。
 
 ## 语法
 
@@ -59,7 +59,7 @@ async openCall(pc) {
 }
 ```
 
-结果是一组没有流关联的跟踪被发送到远程对等点。远程对等点上的{{event("track")}}事件的处理程序将负责决定将每个跟踪添加到哪个流中，即使这意味着只是将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.ontrack", "ontrack")}}方法如下：
+结果是一组没有流关联的跟踪被发送到远程对等点。远程对等点上的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件的处理程序将负责决定将每个跟踪添加到哪个流中，即使这意味着只是将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.ontrack", "ontrack")}} 方法如下：
 
 ```js
 let inboundStream = null;
@@ -108,10 +108,10 @@ async openCall(pc) {
 }
 ```
 
-远程对等点然后可以使用一个看起来像这样的{{event("track")}}事件处理程序：
+远程对等点然后可以使用一个看起来像这样的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理程序：
 
 ```js
-pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
+pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream);
 ```
 
 这将把视频元素的当前流设置为包含已添加到连接中的音轨的流。
@@ -173,13 +173,12 @@ pc.setRemoteDescription(desc).then(function () {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
-- [Introduction to the Real-time Transport Protocol (RTP)](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{domxref("RTCPeerConnection.ontrack")}}
-- {{event("track")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- [实时传输协议（RTP）简介](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- {{DOMxRef("RTCPeerConnection/track_event", "track")}}

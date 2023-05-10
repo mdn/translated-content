@@ -1,67 +1,79 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
+l10n:
+  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`domainLookupEnd`** 読み取り専用プロパティは、ブラウザーがリソースのドメイン名検索を終了した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
+**`domainLookupEnd`** は読み取り専用プロパティで、ブラウザーがリソースのドメイン名検索を終了した直後の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
 
-ユーザエージェントのキャッシュにドメイン情報がある場合、{{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} と {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} はユーザエージェントがキャッシュからのドメインデータの取得を開始および終了した時刻を表します。
+ユーザーエージェントのキャッシュにドメイン情報があった場合、{{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} と {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}} はユーザーエージェントがキャッシュからのドメインデータの取得を開始および終了した時刻を表します。
 
-{{AvailableInWorkers}}
+## 値
 
-## 構文
+`domainLookupEnd` プロパティは、以下の値を取ります。
 
-```
-resource.domainLookupEnd;
-```
-
-### 返値
-
-ブラウザーがリソースのドメイン名検索を終了した直後の時間を表す {{domxref("DOMHighResTimeStamp")}}。
+- ブラウザーがリソースのドメイン名検索を完了した直後の時刻を表す {{domxref("DOMHighResTimeStamp")}}。
+- リソースがキャッシュから即座に取得された場合は `0` です。
+- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+### DNS ルックアップ時間の計測
+
+`domainLookupEnd` と {{domxref("PerformanceResourceTiming.domainLookupStart", "domainLookupStart")}} プロパティを使用すると、 DNS ルックアップの発生に対してどれだけ時間がかかるかを計測することができます。
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const dns = entry.domainLookupEnd - entry.domainLookupStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const dns = entry.domainLookupEnd - entry.domainLookupStart;
+    if (dns > 0) {
+      console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const dns = entry.domainLookupEnd - entry.domainLookupStart;
+  if (dns > 0) {
+    console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
   }
-}
+});
+```
+
+### オリジン間のタイミング情報
+
+`domainLookupEnd` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+
+例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースで次のものを送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-domainLookupEnd', 'domainLookupEnd')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceResourceTiming.domainLookupEnd")}}
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

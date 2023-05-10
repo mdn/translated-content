@@ -1,16 +1,8 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - CSS
-  - Layout
-  - NeedsContent
-  - Pantalla completa
-  - Pseudo Elemento CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/::backdrop
 ---
+
 {{CSSRef}} {{SeeCompatTable}}
 
 Cada uno de los elementos en la pila de la [capa superior](https://fullscreen.spec.whatwg.org/#top-layer) posee un _`::backdrop`_ {{Cssxref("pseudo-elements", "pseudo-element")}}. Este pseudo-elemento es una caja que se muestra inmediatamente debajo del elemento (y sobre el elemento inmediatamente inferior de la pila, si es que hay), dentro de dicha capa superior.
@@ -21,13 +13,11 @@ No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones 
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Definición Inicial |
+{{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Ver además
 

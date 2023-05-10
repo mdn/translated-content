@@ -1,14 +1,8 @@
 ---
 title: HTTP 헤더
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 개요
-  - 네트워킹
-  - 레퍼런스
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 HTTP 헤더는 클라이언트와 서버가 요청 또는 응답으로 부가적인 정보를 전송할 수 있도록 해줍니다. HTTP 헤더는 대소문자를 구분하지 않는 이름과 콜론 '`:`' 다음에 오는 값(줄 바꿈 없이)으로 이루어져있습니다. 값 앞에 붙은 빈 문자열은 무시됩니다.
@@ -73,7 +67,7 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
   - : `DPR` 요청 헤더 필드는 레이아웃 뷰포트(Section 9.1.1 of [\[CSS2\]](https://httpwg.org/http-extensions/client-hints.html#CSS2))의 CSS px(Section 5.2 of [\[CSSVAL\]](https://httpwg.org/http-extensions/client-hints.html#CSSVAL))를 통한 물리적 픽셀 비율인 클라이언트의 현재 기기 픽셀 비율(DPR)을 나타내는 숫자입니다.
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a>
 

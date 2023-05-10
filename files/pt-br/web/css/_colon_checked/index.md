@@ -1,15 +1,8 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - CSS Pseudo-classe
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
@@ -140,7 +133,7 @@ ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por um
 
 Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](/@api/deki/files/6268/=css-checked-gallery.zip) como uma dica.
 
-> **Note:** **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
+> **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
 
 ## Especificações
 

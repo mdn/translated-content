@@ -20,7 +20,7 @@ L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a f
 
 Les sessions sont représentées comme des objets {{WebExtAPIRef("tabs.Tab", "Tab")}} si l'onglet a été fermé mais sa fenêtre n'a pas été fermée : par exemple, parce que l'utilisateur a cliqué sur le bouton "fermer l'onglet", et cet onglet n'était pas le seul onglet de sa fenêtre.
 
-Les sessions sont représentées par des objets  {{WebExtAPIRef("windows.Window", "Window")}} si la fenêtre est fermée :  parce que l'utilisateur a cliqué sur le bouton "Fermer la fenêtre", ou a fermé le seul onglet ouvert dans une fenêtre.
+Les sessions sont représentées par des objets {{WebExtAPIRef("windows.Window", "Window")}} si la fenêtre est fermée : parce que l'utilisateur a cliqué sur le bouton "Fermer la fenêtre", ou a fermé le seul onglet ouvert dans une fenêtre.
 
 Notez que les différents navigateurs peuvent avoir une idée différente quand une session est un onglet et quand il s'agit d'une fenêtre. Par exemple :
 
@@ -38,9 +38,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `window`{{optional_inline}}
   - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Session")}}
+{{Compat}}
 
 > **Note :**
 >

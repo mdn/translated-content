@@ -37,7 +37,7 @@ _En plus des propriétés listées ci-dessous, celles provenant de l'interface p
 - [`lastEventId`](/fr/docs/Web/API/MessageEvent/lastEventId) {{readonlyInline}}
   - : Une chaîne représentant l'identifiant unique pour l'évènement.
 - [`source`](/fr/docs/Web/API/MessageEvent/source) {{readonlyInline}}
-- : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
+  - : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
 - [`ports`](/fr/docs/Web/API/MessageEvent/ports) {{readonlyInline}}
   - : Un tableau d'objets [`MessagePort`](/fr/docs/Web/API/MessagePort) représentant les ports associés au canal par lequel le message est envoyé (lorsque c'est approprié, par exemple, dans le canal de communication ou lorsqu'un message est envoyé à un <i lang="en">worker</i> partagé).
 

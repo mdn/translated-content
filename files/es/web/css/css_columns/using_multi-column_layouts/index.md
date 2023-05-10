@@ -1,10 +1,6 @@
 ---
 title: Columnas con CSS-3
 slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-tags:
-  - CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
 original_slug: Columnas_con_CSS-3
 ---
 ### Introducción

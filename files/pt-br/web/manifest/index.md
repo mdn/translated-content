@@ -1,13 +1,8 @@
 ---
 title: Web App Manifest
 slug: Web/Manifest
-tags:
-  - App
-  - Manifest
-  - Reference
-  - Web
-translation_of: Web/Manifest
 ---
+
 O manifesto do aplicativo web fornece informações sobre uma aplicação (como nome, autor, icone, e descrição) em um arquivo de texto. O propósito do manifesto é instalar aplicações web na tela inicial de um aparelho, propiciando aos usuários um acesso mais rápido e uma experiência enriquecida.
 
 Os manifestos dos aplicativos web fazem parte de um acervo de tecnologias de rede chamadas [aplicativos web progressivos](/pt-BR/docs/Web/Progressive_web_apps), sendo estes aplicativos web que podem ser instalados na tela inicial de um aparelho sem obrigar um usuário a passar por uma loja de aplicativos, dispondo também de outros superpoderes como estar disponíveis offline e apresentando aos usuários notificações push quando houverem mudanças de conteúdo do aplicativo.
@@ -243,7 +238,7 @@ Provides a human-readable name for the application as it is intended to be displ
 Defines the default orientation for all the web application's top level {{Glossary("Browsing context", "browsing contexts")}}.
 
 ```json
-​​"orientation": "portrait-primary"
+"orientation": "portrait-primary"
 ```
 
 Orientation pode ser um dos seguintes valores:

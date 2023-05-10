@@ -1,22 +1,8 @@
 ---
 title: Accessibility
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibility
-  - Articles
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - NeedsTranslation
-  - TopicStub
-translation_of: Learn/Accessibility
 ---
+
 {{LearnSidebar}}
 
 Aprender HTML, CSS e Javascript é útil se você quer se tornar um desenvolvedor web, mas seu conhecimento precisa ir além. Você deve usá-las de forma a maximizar a audiencia dos seus sites, e permitir que todos possam acessar o conteúdo. Para conseguir isso, será necessário seguir boas práticas, realizar testes em vários navegadores ([cross browser testing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing)) e pensar em acessibilidade desde o início do desenvolvimento. Este módulo abordará a acessibilidade em detalhes.

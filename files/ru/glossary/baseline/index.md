@@ -1,6 +1,6 @@
 ---
 title: Baseline
-slug: Glossary/baseline
+slug: Glossary/Baseline
 tags:
   - CSS
   - SVG
@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/baseline
 original_slug: Глоссарий/baseline
 ---
+
 **Базовая линия** - это термин, используемый в европейской и западно-азиатской типографии, означающий воображаемую линию, на которую опираются символы шрифта.
 
 Потомки символов типа g и p простираются ниже этой строки. {{Glossary("glyph", "Глифы")}} с закруглёнными нижними и верхними окончаниями типа C или 3 слегка простираются под ним.
@@ -24,4 +25,4 @@ original_slug: Глоссарий/baseline
 
 ### Техническая документация
 
-- [CSS Box Alignment](ru/Web/CSS/CSS_Box_Alignment#Типы_выравнивания) на MDN
+- [CSS Box Alignment](/ru/Web/CSS/CSS_Box_Alignment#Типы_выравнивания) на MDN

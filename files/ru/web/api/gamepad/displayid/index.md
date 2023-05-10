@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/Gamepad/displayId
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 Свойство **displayId** только для чтения {{domxref("Gamepad")}} возвращаемый интерфейс* {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} — `VRDisplay` (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.*

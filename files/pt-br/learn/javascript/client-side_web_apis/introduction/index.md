@@ -1,9 +1,9 @@
 ---
 title: Introdução às Web APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Aprender/JavaScript/Client-side_web_APIs/Introdução
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como funcionam, como usá-las em seu código e como são estruturadas? Ainda, vamos entender quais são as principais classes de APIs e quais usos elas possuem.
@@ -45,7 +45,7 @@ As APIs (Application Programming Interfaces) são construções disponíveis nas
 
 Pense no seguinte exemplo: o uso de energia elétrica em sua casa ou apartamento. Quando você deseja utilizar um eletrodoméstico, você precisa somente ligar o aparelho na tomada. Não é preciso conectar diretamente o fio do aparelho diretamente na caixa de luz. Isso seria, além de muito ineficiente, difícil e perigoso de ser feito (caso você não seja eletricista).
 
-![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
+![](plug-socket.png)
 
 _Fonte da imagem: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) por [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), retirado do Flickr._
 
@@ -60,7 +60,7 @@ A linguagem JavaScript, especialmente client-side, possui diversas APIs disponí
 - **APIs de navegadores:** fazem parte do seu navegador web, sendo capazes de expor dados do navegador e do ambiente ao redor do computador circundante, além de fazer coisas úteis com esses dados. Por exemplo, a [API Web Áudio](/pt-BR/docs/Web/API/API_Web_Audio) fornece construções JavaScript simples para manipular áudio em seu navegador - pegar uma faixa de áudio, alterar o volume dela, aplicar efeitos, etc. Por trás dos panos, o navegador utiliza códigos complexos de baixo nível (ex: C++) para realizar o processamento de áudio de fato. Como foi dito anteriormente, essa complexidade toda é abstraída de você pela API.
 - **APIs de terceiros:** geralmente, não fazem parte do navegador e você precisa recuperar seu código e suas informações de outro local da web. A [API do Twitter](https://developer.twitter.com/en/docs), por exemplo, permite mostrar os seus últimos tweets no seu site. Ela fornece um conjunto de construções especiais para ser usado de maneira a consultar o serviço do Twitter e retornar informações específicas.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 ### Relacionamento entre JavaScript, APIs, e outras ferramentas JavaScript
 
@@ -83,7 +83,7 @@ As categorias mais comuns de APIs de navegadores que você irá utilizar (e que 
 - **APIs para manipular documentos** carregados no navegador. O exemplo mais óbvio é a [API DOM (Document Object Model)](/pt-BR/docs/DOM/Referencia_do_DOM), que permite manipular HTML e CSS — criando, removendo a alterando o HTML, aplicando dinamicamente novos estilos a sua página, etc. Toda vez que você vê uma janela pop-up em uma página, ou um novo conteúdo é mostrado, o DOM está em ação. Para saber mais sobre estes tipos de API, leia [Manipulando documentos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 - **APIs** **que buscam dados no servidor** para atualizar pequenas seções da página, por conta própria, são bastante usadas. Isso, a princípio, parece ser um detalhe pequeno, mas tem um impacto enorme na performance e no comportamento dos sites. Se você precisa atualizar a cotação de uma ação ou listar novas histórias disponíveis, a possibilidade de fazer isso instantaneamente sem precisar atualizar a página dá a impressão de um site muito mais responsivo. Entre as APIs que tornam isso possível, podemos destacar o [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) e a [API Fetch](/pt-BR/docs/Web/API/Fetch_API). Você pode também encontrar o termo **Ajax**, que descreve essa técnica. Para saber mais sobre essas APIs, leia [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 - **APIs para desenhar e manipular elementos gráficos** são completamente suportados nos browsers — os mais comuns são [Canvas](/pt-BR/docs/Web/API/Canvas_API) e [WebGL](/pt-BR/docs/Web/API/WebGL_API), que possibilitam que você atualize os dados dos pixels em um elemento HTML de maneira programática. {{htmlelement("canvas")}} elemento para criar cenas 2d e 3d. Por exemplo, você poderia dezenhar formas como retangulos e circulos, importar uma imagem para o canvas, e aplicar um filtro para sepia ou grayscale usando o Canvas API, ou criar uma complexa cena 3d com brilho e texturas usando WebGL. Essas APIs são frequentemente combinar com APIs para criar loops de animações(como {{domxref("window.requestAnimationFrame()")}}) e outros para constantemente lançar cenas like como cartoons e jogos.
-- **[Audio and Video APIs](https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, a [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permiten a você fazer coisas realmente interessantes com multimedia como a criação personalizada controles de UI para executar audio e video, exibindo faixas de texto como legendas e legendas ocultas junto com seus vídeos, capturando vídeo de sua câmera da web para ser manipulado por meio de uma tela (veja acima) ou exibido no computador de outra pessoa em uma webconferência,ou adicionar efeitos às trilhas de áudio (como ganho, distorção, panorâmica, etc.).
+- **[Audio and Video APIs](/pt-BR/Apps/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, a [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permiten a você fazer coisas realmente interessantes com multimedia como a criação personalizada controles de UI para executar audio e video, exibindo faixas de texto como legendas e legendas ocultas junto com seus vídeos, capturando vídeo de sua câmera da web para ser manipulado por meio de uma tela (veja acima) ou exibido no computador de outra pessoa em uma webconferência,ou adicionar efeitos às trilhas de áudio (como ganho, distorção, panorâmica, etc.).
 - **Device APIs** São basicamente APIs para manipulação e recuperação de dados de hardware de dispositivo moderno de uma forma que seja útil para aplicativos da web.Já falamos sobre a Geolocation API acessando o dispositivo dados de localização para que você possa marcar sua posição em um mapa.Outros exemplos incluem informar ao usuário que uma atualização útil está disponível em um aplicativo da web por meio de notificações do sistema(Veja em [Notifications API](/pt-BR/docs/Web/API/Notifications_API))ou hardware de vibração(Veja em [Vibration API](/pt-BR/docs/Web/API/Vibration_API)).
 - **Client-side storage APIs** estão se tornando muito mais difundidos em navegadores da web - a capacidade de armazenar dados no lado do cliente é muito útil se você quer criar um app que vai salvar seu estado entre carregamentos de página, e talvez até funcione quando o dispositivo estiver offline. Existem várias opções disponíveis, por exemplo, armazenamento simples de nome / valor com o [Web Storage API](/pt-BR/docs/Web/API/Web_Storage_API), e armazenamento de dados tabulares mais complexos com o [IndexedDB API](/pt-BR/docs/Web/API/IndexedDB_API).
 
@@ -258,11 +258,11 @@ WebAPI features are subject to the same security considerations as JavaScript an
 
 In addition, some WebAPIs request permission to be enabled from the user once calls to them are made in your code. As an example, you may have noticed a dialog like the following when loading up our earlier [Geolocation](/pt-BR/docs/Web/API/Geolocation) example:
 
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
+![](location-permission.png)
 
 The [Notifications API](/pt-BR/docs/Web/API/Notifications_API) asks for permission in a similar fashion:
 
-![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
+![](notification-permission.png)
 
 These permission prompts are given to users for security — if they weren't in place, then sites could start secretly tracking your location without you knowing it, or spamming you with a lot of annoying notifications.
 
@@ -271,13 +271,3 @@ These permission prompts are given to users for security — if they weren't in 
 Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Neste módulo
-
-- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

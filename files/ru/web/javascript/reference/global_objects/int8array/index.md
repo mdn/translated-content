@@ -3,6 +3,7 @@ title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
+
 {{JSRef}}
 
 Объект **`Int8Array`** представляет типизированный массив 8-разрядных целых значений. Содержимое инициализируется значением 0. Создав экземпляр **`Int8Array`**, возможно получить доступ к элементам массива, используя методы объекта или стандартный синтаксис доступа к элементу массива по его индексу (с помощью скобочной нотации).

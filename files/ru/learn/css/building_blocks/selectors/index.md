@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/Селекторы
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 В {{Glossary("CSS")}}-селекторы используются для стилизации {{glossary("HTML")}} элементов на веб-странице. Существует широкий выбор CSS-селекторов, позволяющий максимально точно отбирать элементы для стилизации. В этой статье и её подстатьях мы в мельчайших подробностях рассмотрим разные их типы и увидим, как они работают.

@@ -1,9 +1,9 @@
 ---
 title: Cabeçalho de entidade
 slug: Glossary/Entity_header
-translation_of: Glossary/Entity_header
 original_slug: Glossario/Entity_header
 ---
+
 Um cabeçalho de entidade é um {{glossary("header", "HTTP header")}} descrevendo o conteúdo do corpo da mensagem. Cabeçalhos da entidade são usados em ambos, respostas e requerimentos HTTP. Cabeçalhos como {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}} são cabeçalhos de entidade.
 
 Mesmo se cabeçalhos de entidade não sejam requerimentos ou cabeçalhos de resposta, eles são muitas vezes incluídos nestes termos.

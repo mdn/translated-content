@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/BaseAudioContext/decodeAudioData
 original_slug: Web/API/AudioContext/decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `decodeAudioData()` method of the {{ domxref("AudioContext") }} Interface is used to asynchronously decode audio file data contained in an {{domxref("ArrayBuffer")}}. In this case the `ArrayBuffer` is usually loaded from an {{domxref("XMLHttpRequest")}}'s `response` attribute after setting the `responseType` to `arraybuffer`. The decoded AudioBuffer is resampled to the AudioContext's sampling rate, then passed to a callback or promise.
@@ -18,7 +19,7 @@ Older callback syntax:
 
 ```
 audioCtx.decodeAudioData(audioData, function(decodedData) {
-  // use the dec​oded data here
+  // use the decoded data here
 });
 ```
 

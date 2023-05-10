@@ -19,7 +19,7 @@ _Интерфейс `File` также наследует свойства от {
 
 - {{domxref("File.lastModified")}} {{readonlyinline}}
   - : Возвращает время последнего изменения файла в миллисекунде с эпохи UNIX (1 января 1970 года в 00:00:00 в часовом поясе UTC).
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}}
   - : Возвращает [дату](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) последнего изменения файла, на который ссылается объект File.
 - {{domxref("File.name")}} {{readonlyinline}}
   - : Возвращает имя файла, на который ссылается объект File.
@@ -47,8 +47,8 @@ _Интерфейс `File` также наследует свойства от {
 ## Реализационные заметки
 
 - В Gecko, вы можете использовать этот API изнутри chrome code. Смотрите [Использование DOM File API в chrome code](/ru/docs/Extensions/Using_the_DOM_File_API_in_chrome_code), чтобы узнать больше. Чтобы использовать API в chrome code, JSM и Bootstrap, вы должны импортировать его используя `Cu.importGlobalProperties(['File']);`
-- Начиная с Gecko 6.0 {{geckoRelease("6.0")}}, привелигированный код (такой как расширение) может передавать объект `nsIFile` в DOM `File` конструктор для указания файла в справку.
-- Начиная с Gecko 8.0 {{geckoRelease("8.0")}}, вы можете использовать `new File` чтобы создать `объект File` из XPCOM компонентного кода вместо создания экземпляра `nsIDOMFile` объекта напрямую. Конструктор принимает {{domxref("Blob")}}, второй аргумент - имя файла. Имя файла может быть любой строкой.
+- Начиная с Gecko 6.0, привелигированный код (такой как расширение) может передавать объект `nsIFile` в DOM `File` конструктор для указания файла в справку.
+- Начиная с Gecko 8.0, вы можете использовать `new File` чтобы создать `объект File` из XPCOM компонентного кода вместо создания экземпляра `nsIDOMFile` объекта напрямую. Конструктор принимает {{domxref("Blob")}}, второй аргумент - имя файла. Имя файла может быть любой строкой.
 
   ```
   File File(
@@ -58,7 +58,7 @@ _Интерфейс `File` также наследует свойства от {
   );
   ```
 
-- Следующие нестандартные методы и свойства были убраны в Gecko 7 {{geckoRelease("7.0")}}: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Стандартные свойства {{domxref("File.name")}}, {{domxref("Blob.size")}}, и методы {{domxref("FileReader")}} должны быть использованы вместо них.
+- Следующие нестандартные методы и свойства были убраны в Gecko 7: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Стандартные свойства {{domxref("File.name")}}, {{domxref("Blob.size")}}, и методы {{domxref("FileReader")}} должны быть использованы вместо них.
 
 ## Смотрите также
 

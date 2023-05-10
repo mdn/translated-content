@@ -1,17 +1,9 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/slot
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<slot>` 요소**는 웹 컴포넌트 사용자가 자신만의 마크업으로 채워 별도의 DOM 트리를 생성하고, 컴포넌트와 함께 표현할 수 있는 웹 컴포넌트 내부의 플레이스홀더입니다.
 
@@ -112,4 +104,4 @@ translation_of: Web/HTML/Element/slot
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

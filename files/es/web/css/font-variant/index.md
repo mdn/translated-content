@@ -1,12 +1,8 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/font-variant
 ---
+
 {{CSSRef}}
 
 ## Resumen

@@ -1,8 +1,8 @@
 ---
 title: resize
 slug: Web/CSS/resize
-translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -49,7 +49,7 @@ resize: unset;
 
 #### CSS
 
-Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en {{gecko("2.0")}} (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:
+Por defecto, los elementos {{HTMLElement("textarea")}} permiten cambiar el tamaño en Gecko 2.0 (Firefox 4). Se puede anular este comportamiento con el CSS mostrado abajo:
 
 ```css
 textarea.example {
@@ -108,13 +108,11 @@ p {
 
 ## Especificaciones
 
-| Espacificación                                                       | Estado                               | Comentario |
-| -------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}} | {{Spec2('CSS3 Basic UI')}} |            |
+{{Specifications}}
 
-## Compatibilidad de Navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.resize")}}
+{{Compat}}
 
 ## Ver también
 

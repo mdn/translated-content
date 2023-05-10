@@ -1,9 +1,9 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/values
 ---
+
 {{JSRef}}
 
 El método **`values()`** retorna un objeto de tipo `Iterator` que contiene los valores para cada elemento en el objecto `Set` en orden de inserción.
@@ -39,17 +39,14 @@ console.log(setIter.next().value); // "bar"
 console.log(setIter.next().value); // "baz"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                        | Status                       | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-set.prototype.values', 'Set.prototype.values')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Set.values")}}
+{{Compat}}
 
-## See also
+## Ver también
 
 - {{jsxref("Set.prototype.entries()")}}

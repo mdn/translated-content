@@ -3,17 +3,18 @@ title: '<em>: Элемент акцентирования'
 slug: Web/HTML/Element/em
 translation_of: Web/HTML/Element/em
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<em>` элемент** отмечает акцентируемый текст. Элемент `<em>` может быть вложенным, причём каждый уровень вложенности указывает на большую степень акцента.
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), явный контент.     |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                            |
-| Пропуск тегов                                              | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                               |
-| Разрешённые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                           |
-| Разрешённые роли ARIA                                      | Любые                                                                                                                                                                 |
-| Интерфейс DOM                                              | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента. |
+| Допустимый контент                                        | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                                                             |
+| Пропуск тегов                                             | {{no_tag_omission}}                                                                                                                                                    |
+| Допустимые родители                                       | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                            |
+| Допустимые ARIA-роли                                      | Любые                                                                                                                                                                  |
+| DOM-интерфейс                                             | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента. |
 
 ## Атрибуты
 
@@ -51,7 +52,7 @@ translation_of: Web/HTML/Element/em
 
 ### Результат
 
-{{ EmbedLiveSample('Пример', '', '', '', 'Web/HTML/Element/em') }}
+{{ EmbedLiveSample('Пример') }}
 
 ## Спецификации
 

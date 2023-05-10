@@ -1,17 +1,8 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-tags:
-  - ECMAScript5
-  - Prototipo
-  - Referencia
-  - Remover espaços
-  - String
-  - Texto
-  - metodo
-  - trim()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
+
 {{JSRef}}O método **`trim()`** remove os espaços em branco ([whitespaces](/pt-BR/docs/DOM/Referencia_do_DOM/Whitespace_in_the_DOM)) do início e/ou fim de um texto. É considerado espaço em branco (espaço, tabulação, espaço fixo/rígido, etc.) e todo sinal de fim de linha de texto (LF, CR, etc.).
 
 ## Sintaxe
@@ -23,6 +14,8 @@ str.trim()
 ## Descrição
 
 O método `trim()` retorna o texto sem espaços em branco no início e/ou fim da string. O `trim()` não altera o valor da string original.
+
+{{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
 ## Exemplos
 

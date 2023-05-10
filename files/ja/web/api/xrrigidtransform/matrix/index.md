@@ -60,9 +60,7 @@ drawGLObject("magic-lamp", transform.matrix);
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-matrix","XRRigidTransform.matrix")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

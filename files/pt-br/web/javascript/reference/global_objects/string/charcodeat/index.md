@@ -1,14 +1,8 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Referencia
-  - String
-  - Unicode
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
+
 {{JSRef}}
 
 O método **`charCodeAt()`** retorna um número inteiro entre `0` e `65535` que representa a unidade de código UTF-16 no índice fornecido. A unidade de código UTF-16 corresponde ao ponto de código Unicode para pontos de códigos representáveis em uma única unidade de código UTF-16, mas também pode ser a primeira unidade de código de um par substituto não representável em uma única unidade de código UTF-16. Po exemplo: pontos de código Unicode > (0x10000). Se você quer o valor do ponto de código inteiro, use **`codePointAt`**().

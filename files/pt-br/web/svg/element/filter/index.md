@@ -1,12 +1,8 @@
 ---
 title: filter
 slug: Web/SVG/Element/filter
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/filter
 ---
+
 {{SVGRef}}
 
 O elemento `filter` fornece um recipiente para operações de um filtro atômico . Isso nunca será renderizado diretamente. Um filtro é referenciado pela utilização do atributo {{ SVGAttr("filter") }} com destino de um elemento SVG.

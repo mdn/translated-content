@@ -1,8 +1,8 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 ## Resumen

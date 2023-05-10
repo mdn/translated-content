@@ -1,13 +1,8 @@
 ---
 title: altGlyphItem
 slug: Web/SVG/Element/altGlyphItem
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/altGlyphItem
 ---
+
 {{SVGRef}}
 
 O elemento `altGlyphItem` fornece uma série de candidados para a substituição de símbolos através do elemento {{ SVGElement("altGlyph") }}.

@@ -9,13 +9,14 @@ tags:
   - XMLHttpRequest
 translation_of: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 XMLHttpRequest 2 добавляет поддержку для нового интерфейса FormData. Объекты FormData позволяют вам легко конструировать наборы пар ключ-значение, представляющие поля формы и их значения, которые в дальнейшем можно отправить с помощью метода [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()").
 
 FormData использует такой же формат на выходе, как если бы мы отправляли обыкновенную форму с encoding установленным в "multipart/form-data".
 
-> **Примечание:** **Важно**: О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects).
+> **Примечание:** О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects).
 
 ## Конструктор
 
@@ -43,7 +44,7 @@ FormData использует такой же формат на выходе, к
 - {{domxref("FormData.values()")}}
   - : Возвращает {{jsxref("Iteration_protocols", "iterator")}} , который позволяет пройтись по всем значениям , содержащимся в объекте `FormData`
 
-> **Примечание:** **Важно**: Разница между {{domxref("FormData.set()")}} и {{domxref("FormData.append()")}} заключается в том, что если указанный ключ найден в объекте, {{domxref("FormData.set()")}} перезапишет его новым значением, тогда как {{domxref("FormData.append()")}} добавит новое значение в конец существующего. Смотрите дополнительные материалы с примерами.
+> **Примечание:** Разница между {{domxref("FormData.set()")}} и {{domxref("FormData.append()")}} заключается в том, что если указанный ключ найден в объекте, {{domxref("FormData.set()")}} перезапишет его новым значением, тогда как {{domxref("FormData.append()")}} добавит новое значение в конец существующего. Смотрите дополнительные материалы с примерами.
 
 ## Спецификация
 

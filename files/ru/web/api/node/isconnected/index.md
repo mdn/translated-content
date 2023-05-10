@@ -3,6 +3,7 @@ title: Node.isConnected
 slug: Web/API/Node/isConnected
 translation_of: Web/API/Node/isConnected
 ---
+
 {{APIRef("DOM")}}
 
 The **`isConnected`** read-only property of the {{domxref("Node")}} interface returns a boolean indicating whether the Node is connected (directly or indirectly) to the context object, for example the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.

@@ -122,7 +122,7 @@ La propriété `calendar` renvoie la partie de la locale qui indique le calendri
       <td>
         <div class="warning">
           <p>
-            <strong>Attention :</strong> La clé  <code>islamicc</code> est
+            <strong>Attention :</strong> La clé <code>islamicc</code> est
             désormais dépréciée et il faut utiliser <code>islamic-civil</code> à
             la place.
           </p>
@@ -156,13 +156,11 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.calendar`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.calendar) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.calendar")}}
+{{Compat}}
 
 ## Voir aussi
 

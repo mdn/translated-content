@@ -4,6 +4,7 @@ slug: Web/API/BaseAudioContext/createPanner
 translation_of: Web/API/BaseAudioContext/createPanner
 original_slug: Web/API/AudioContext/createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 Метод `createPanner()` интерфейса {{ domxref("AudioContext") }} применяется для создания нового {{domxref("PannerNode")}}, который используется для размещения аудиопотока в виртуальном 3D пространстве.

@@ -1,8 +1,8 @@
 ---
 title: window.requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 O método **`window.requestIdleCallback()`** enfileira uma função para ser executado durante períodos onde o navegador está ocioso. Isso permite que desenvolvedores realizem tarefas de baixa prioridade em relação a o event loop em segundo plano. As funções são geralmente chamadas na ordem first-in-first-out (primeiro-a-entrar-primeiro-a-sair); Contudo, callbacks nos quais tem um timeout especificado, podem ser chamados na ordem out-of-order (fora-de-ordem) se necessário, afim de executar antes do tempo limite.

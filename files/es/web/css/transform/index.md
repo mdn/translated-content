@@ -1,15 +1,8 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - Compatibilidad con los navegadores
-  - Experimental
-  - Propiedad CSS
-  - Referencia
-  - Transformación
-translation_of: Web/CSS/transform
 ---
+
 {{CSSRef}}
 
 La propiedad CSS `transform` te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
@@ -205,9 +198,9 @@ Sesga un elemento a lo largo del eje Y por el ángulo dado.
 transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
 ```
 
-Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty` **no es específicada, se asumirá que su valor es cero.
+Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty`** no es específicada, se asumirá que su valor es cero.
 
-Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length) o un valor de [`porcentaje`](/en-US/docs/CSS/percentage).
+Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/es/docs/CSS/length) o un valor de [`porcentaje`](/es/docs/CSS/percentage).
 
 ### translateX
 
@@ -227,14 +220,11 @@ Translada un elemento a lo largo del eje Y.
 
 ## Especificaciones
 
-| Specification                                                                                | Status                                   | Comment                      |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Adds 3D transform functions. |
-| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Initial definition.          |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## Véase También
 

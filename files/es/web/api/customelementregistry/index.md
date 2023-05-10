@@ -1,18 +1,8 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-tags:
-  - API
-  - CustomElementRegistry
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Components
-  - custom elements
-translation_of: Web/API/CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 The **`CustomElementRegistry`** interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the {{domxref("window.customElements")}} property.
@@ -75,12 +65,10 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 > **Nota:** The `CustomElementRegistry` is available through the {{domxref("Window.customElements")}} property.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                        | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("HTML WHATWG", "custom-elements.html#customelementregistry", "CustomElementRegistry")}} | {{Spec2("HTML WHATWG")}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.CustomElementRegistry")}}
+{{Compat}}

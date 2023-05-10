@@ -1,10 +1,8 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-tags:
-  - Animação
-translation_of: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`animation-delay`** especifíca quando uma animação deve começar. Você pode começar a animação no futuro, imediatamente ou desde o início, ou imediatamente e parcialmente através do ciclo de animação.
@@ -35,7 +33,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
     Um valor negativo faz com que a animação comece imediatamente, mas parcialmente através do seu ciclo. Por exemplo, se você específicar `-1s` como tempo da animation-delay , a animação vai começar imediatamente, mas começará 1 segundo na sequência de animação. Se você específicar um valor negativo para a animation-delay, mas o valor inicial é implícito, o valor inicial é retirado do momento em que a animação é aplicada ao elemento.
 
-> **Note:** Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
+> **Nota:** Quando você especifica vários valores separados por vírgula em uma propriedade `animation-*` , eles serão atribuídos às animações especificadas na propriedade {{cssxref("animation-name")}} em diferentes modos, dependendo de quantos existam. Para mais informações veja [Setting multiple animation property values](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values).
 
 ### Sintaxe formal
 

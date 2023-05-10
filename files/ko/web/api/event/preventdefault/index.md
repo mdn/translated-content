@@ -1,11 +1,6 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-tags:
-  - Method
-  - Reference
-translation_of: Web/API/Event/preventDefault
-browser-compat: api.Event.preventDefault
 ---
 {{apiref("DOM")}}
 

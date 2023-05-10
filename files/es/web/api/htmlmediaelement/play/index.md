@@ -1,8 +1,8 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
-translation_of: Web/API/HTMLMediaElement/play
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método `play()` de {{domxref("HTMLMediaElement")}} intenta comenzar la reproducción de los medios. Devuelve una promesa ({{jsxref("Promise")}}) que se resuelve cuando la reproducción se ha iniciado con éxito. Si no se inicia la reproducción por cualquier motivo, como problemas de permisos, la promesa será rechazada.
@@ -74,24 +74,19 @@ function handlePlayButton() {
 }
 ```
 
-En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
+En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/es/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
 
-Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento {{event("click")}} en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
+Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento [`click`](/es/docs/Web/Reference/Events/click) en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
 
 Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-play-promise.glitch.me/).
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#dom-media-play', 'play()')}} | {{Spec2('HTML WHATWG')}} | Initial definition; living specification. |
-| {{SpecName('HTML5 W3C','embedded-content-0.html#dom-media-play','play()')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                       |
-
-> **Nota:** Las versiones WHATWG y W3C de la especificación difieren (a partir de agosto de 2018) en cuanto a si este método devuelve una {{jsxref("Promise")}} o nada en absoluto, respectivamente.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.play")}}
+{{Compat}}
 
 ## Ver también
 

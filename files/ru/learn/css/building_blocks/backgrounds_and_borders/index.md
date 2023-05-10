@@ -13,6 +13,7 @@ tags:
   - Цвет
 translation_of: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим некоторые интересные возможности, которые вы можете сделать с помощью CSS-свойств фона и границ . Благодаря добавлению градиентов, фоновых изображений и закруглённых углов свойства фона и границ ответят на многие вопросы стилизации в CSS.

@@ -1,13 +1,13 @@
 ---
 title: grid
 slug: Web/CSS/grid
-translation_of: Web/CSS/grid
 ---
+
 A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **Note:** **Nota:** Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
+> **Nota:** Você pode especificar apenas as propriedades explícitas _ou_ implícitas da grade em uma única declaração `grid`. As subpropriedades que você não especifica são definidas como seu valor inicial, como é normal para abreviações. Além disso, as propriedades da medianiz NÃO são redefinidas por essa abreviação.
 
 ## Sintaxe
 

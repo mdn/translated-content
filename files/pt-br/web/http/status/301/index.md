@@ -1,15 +1,8 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - Código de status
-  - HTTP
-  - Redirecionamento
-  - Redirect
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/301
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta de status de redirecionamento **`301 Moved Permanently`** do protocolo HTTP indica que o recurso requisitado foi movido permanentemente para a URL dada pelo cabeçalho {{HTTPHeader("Localização")}} headers. Um navegador redireciona para essa página e o motor de busca atualiza os links para o recurso (na linguagem 'SEO', é dito que o "suco do link" ('link-juice') é enviado à nova URL).

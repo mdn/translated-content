@@ -3,6 +3,7 @@ title: Организация CSS-кода
 slug: Learn/CSS/Building_blocks/Organizing
 translation_of: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.

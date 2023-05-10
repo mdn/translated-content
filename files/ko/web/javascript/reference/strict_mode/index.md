@@ -1,12 +1,8 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - 엄격모드
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 > **Callout:** 가끔 엄격하지 않은 기본값을 " **[느슨한 모드](/ko/docs/Glossary/Sloppy_mode)**(sloppy mode)"라고 부르기도 합니다. 공식적인 용어는 아니지만 혹시 모르니 알아두세요.
@@ -114,7 +110,7 @@ delete Object.prototype; // TypeError 발생
 
 넷째로, Gecko 34 이전의 엄격모드는 객체 리터럴의 모든 프로퍼티의 이름이 유니크해도록 요구합니다. 일반 코드는 프로퍼티의 값이 나중에 정해진 프로퍼티 이름으로 중복할 것입니다. 하지만 마지막 인스턴스 만 변경했기 때문에 코드를 수정하여 마지막 인스턴스를 변경하는 것 이외의 속성 값을 변경하면 복제는 버그의 벡터가됩니다. 엄격모드에서는 프로퍼티 이름을 중복하는 것은 구문 에러입니다.
 
-> **Note:** ECMAScript 2015부터는 에러가 아닙니다. ({{bug(1041128)}}).
+> **Note:** ECMAScript 2015부터는 에러가 아닙니다. ([Firefox bug 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";

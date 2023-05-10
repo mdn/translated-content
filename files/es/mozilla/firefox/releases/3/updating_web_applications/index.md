@@ -1,11 +1,9 @@
 ---
 title: Actualizar aplicaciones web para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 ---
+
 {{FirefoxSidebar}}
 
 Existen varios cambios en el próximo Firefox 3 que pueden afectar tu sitio web o aplicación web, así como nuevas características que se pueden aprovechar. Este artículo servirá como punto de partida para actualizar el contenido web de modo que se pueda aprovechar Firefox 3 al máximo.
@@ -50,7 +48,7 @@ Los valores de fuente en unidades em y ex solían ser afectadas por el tamaño m
 
 Los valores del tamaño de fuente en unidades em y ex ahora están basadas en un "tamaño de fuente intencionado" que no se ve afectado por el tamaño mínimo de fuente del usuario. En otras palabras, los tamaños de la fuente se calculan de acuerdo a las intenciones del diseñador y se ajustan al tamaño mínimo de fuente después de ello.
 
-Ver {{ Bug(322943) }} para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.
+Ver [Error 322943 en Firefox](https://bugzil.la/322943) para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.
 
 ### Cambios de seguridad
 

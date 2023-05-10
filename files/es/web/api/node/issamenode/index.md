@@ -1,13 +1,12 @@
 ---
 title: Node.isSameNode()
 slug: Web/API/Node/isSameNode
-translation_of: Web/API/Node/isSameNode
 ---
-{{APIRef("DOM")}} {{Obsolete_header}}
 
+{{APIRef("DOM")}} {{Deprecated_Header}}
 **`Node.isSameNode()`** comprueba si dos nodos son iguales, es decir si hacen referencia al mismo objecto.
 
-> **Nota:** **Warning:** This method is no longer implemented in recent browsers.
+> **Advertencia:** This method is no longer implemented in recent browsers.
 >
 > ```js
 > // Instead of using
@@ -28,14 +27,11 @@ var isSameNode = node.isSameNode(other);
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment                         |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-node', 'Node')}}                             | {{Spec2('DOM WHATWG')}} | Eliminado de la especificación. |
-| {{SpecName('DOM3 Core', 'core.html#Node3-isSameNode', 'Node.isSameNode()')}} | {{Spec2('DOM3 Core')}}     | Definición inicial              |
+{{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Node.isSameNode")}}
+{{Compat}}
 
 ## Ver además
 

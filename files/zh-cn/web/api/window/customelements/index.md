@@ -5,7 +5,7 @@ slug: Web/API/Window/customElements
 
 {{APIRef}}
 
-**`customElements`** 是{{domxref("Window")}}对象上的一个只读属性，接口返回一个{{domxref("CustomElementRegistry")}} 对象的引用，可用于注册新的 [custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements)，或者获取之前定义过的自定义元素的信息。
+**`customElements`** 是 {{domxref("Window")}} 对象上的一个只读属性，接口返回一个 {{domxref("CustomElementRegistry")}} 对象的引用，可用于注册新的 [custom element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)，或者获取之前定义过的自定义元素的信息。
 
 ## 例子
 

@@ -103,7 +103,7 @@ body {
 
 {{ EmbedLiveSample('', '100%', 400) }}
 
-### Trames adaptables avec l'unité **fr**
+### Trames adaptables avec l'unité fr
 
 En plus de créer des fils de chaîne en unités de longueur ou de pourcentage, nous pouvons utiliser l'unité `fr` pour moduler la taille des lignes et colonnes du quadrillage. Cette unité représente une fraction de l'espace disponible du conteneur de trame.
 
@@ -683,16 +683,3 @@ Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mi
 - [Inspecteur de grille CSS&nbsp;: examiner les grilles](/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grilles](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

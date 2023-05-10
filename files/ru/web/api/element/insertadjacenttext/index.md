@@ -3,6 +3,7 @@ title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 translation_of: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertAdjacentText()`** метод помещает заданный текстовый узел в указанную позицию относительно элемента, который передан в вызове метода.

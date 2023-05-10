@@ -1,15 +1,9 @@
 ---
 title: <colgroup>
 slug: Web/HTML/Element/colgroup
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/colgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<colgroup>` 요소**는 표의 열을 묶는 그룹을 정의합니다.
 
@@ -134,4 +128,4 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.colgroup")}}
+{{Compat}}

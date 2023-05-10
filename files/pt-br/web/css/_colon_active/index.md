@@ -1,13 +1,13 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-translation_of: Web/CSS/:active
 ---
+
 {{CSSRef}}A pseudo-classe css \<strong> :active \</strong>
 
 Esse estilo pode ser substituído por qualquer outra pseudo-classe relacionada ao link, ou seja, {{cssxref(":link")}}, {{cssxref(":hover")}} e {{cssxref(":visited")}}, aparecendo nas regras subseqüentes. Para estilizar apropriadamente os links, você precisa colocar a regra `:active` depois de todas as outras regras relacionadas ao link, conforme definido pela ordem LVHA. `:link` — `:visited` — `:hover` — `:active`.
 
-> **Note:** **Nota:** Em sistemas com mouses com vários botões, o CSS 3 especifica que a pseudo-classe :active só deve ser aplicada ao botão principal em mouses destros, este é tipicamente o botão mais à esquerda.
+> **Nota:** Em sistemas com mouses com vários botões, o CSS 3 especifica que a pseudo-classe :active só deve ser aplicada ao botão principal em mouses destros, este é tipicamente o botão mais à esquerda.
 
 ## Exemplo
 

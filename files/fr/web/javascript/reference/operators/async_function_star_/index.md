@@ -50,7 +50,7 @@ Une expression `async function*` est très proche et possède quasiment la même
 
 ## Exemples
 
-### Utiliser `async function*`
+### Utiliser async function\*
 
 L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'affecte à `x`. Cette fonction génère le carré de son argument&nbsp;:
 

@@ -3,6 +3,7 @@ title: HTML таблицы основы
 slug: Learn/HTML/Tables/Basics
 translation_of: Learn/HTML/Tables/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 Этот раздел познакомит вас с таблицами HTML, представив самые базовые понятия - строки и ячейки, заголовки, слияние строк и столбцов, а также объединение всех ячеек в столбце в целях стилизации.

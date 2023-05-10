@@ -33,9 +33,7 @@ if (window.matchMedia( "(min-width: 400px)" ).matches) {
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("CSSOM View", "#dom-window-matchmedia", "Window.matchMedia()")}} | {{Spec2("CSSOM View")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザ互換性
 

@@ -11,6 +11,7 @@ tags:
   - Référence(2)
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 Метод **`Object.getOwnPropertyNames()`** возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.

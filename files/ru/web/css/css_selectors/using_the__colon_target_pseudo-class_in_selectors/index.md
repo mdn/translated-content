@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 translation_of: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
 original_slug: Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors
 ---
+
 {{CSSRef}}
 
 Иногда пользователям трудно заметить, что URL указывает на определённую часть документа. Узнайте, как можно использовать простое CSS-правило, чтобы привлечь внимание пользователей к цели указания URL и улучшить их впечатления.

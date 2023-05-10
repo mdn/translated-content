@@ -1,9 +1,9 @@
 ---
 title: Números e datas
 slug: Web/JavaScript/Guide/Numbers_and_dates
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 original_slug: Web/JavaScript/Guide/Numeros_e_datas
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 Este capítulo apresenta como utilizar números e datas em JavaScript.

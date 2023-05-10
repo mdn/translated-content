@@ -1,13 +1,9 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Número
-  - Propiedad
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/NaN
 ---
+
 {{JSRef}}
 
 La propiedad **`Number.NaN`** representa Not-A-Number (No es numero). Equivalente de {{jsxref("NaN")}}.
@@ -37,13 +33,11 @@ See [Testing against NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN#T
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}} |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.NaN")}}
+{{Compat}}
 
 ## Tambien mira
 

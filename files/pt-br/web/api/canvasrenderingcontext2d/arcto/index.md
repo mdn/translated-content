@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
-translation_of: Web/API/CanvasRenderingContext2D/arcTo
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.arcTo()`** da API 2D do Canvas adiciona um arco ao caminho quando fornecemos seus pontos de controle e raio.

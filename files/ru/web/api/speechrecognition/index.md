@@ -3,6 +3,7 @@ title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 translation_of: Web/API/SpeechRecognition
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 Интерфейс **Распознавание голоса** [Web Speech API](/ru/docs/Web/API/Web_Speech_API) является интерфейсом контроллера для сервиса распознавания; который так же перехватывает событие {{domxref("SpeechRecognitionEvent")}}, отправленное сервисом распознавания.
@@ -67,7 +68,7 @@ _Распознавание речи также наследует методы 
 
 ## Примеры
 
-В нашем простом примере [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) , мы создаём новый объект экземпляра `SpeechRecognition` используя этот конструктор {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} , создание нового {{domxref("SpeechGrammarList")}}, И установить его в качестве грамматики, которая будет распознаваться экземпляром распознавание речи с использованием свойства {{domxref("SpeechRecognition.grammars")}}.
+В нашем простом примере [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) , мы создаём новый объект экземпляра `SpeechRecognition` используя этот конструктор {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} , создание нового {{domxref("SpeechGrammarList")}}, И установить его в качестве грамматики, которая будет распознаваться экземпляром распознавание речи с использованием свойства {{domxref("SpeechRecognition.grammars")}}.
 
 После определения некоторых других значений мы затем устанавливаем их так, чтобы служба распознавания началась когда произошло событие по клику ( {{domxref("SpeechRecognition.start()")}}.) Когда результат был успешно распознан, the {{domxref("SpeechRecognition.onresult")}} обработчик извлекаем цвет, который был произнесён из события, а затем меняем цвет фона на данный цвет {{htmlelement("html")}}.
 

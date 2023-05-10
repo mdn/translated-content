@@ -1,15 +1,8 @@
 ---
 title: String.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - indexOf()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/indexOf
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Sumário

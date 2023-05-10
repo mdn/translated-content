@@ -1,14 +1,8 @@
 ---
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 요청 헤더
-  - 참고자료
-  - 헤더
-translation_of: Web/HTTP/Headers/Forwarded
 ---
+
 {{HTTPSidebar}}
 
 **`Forwarded`** 헤더는 클라이언트에서 접하고 있는 프록시 서버들이 요청에 대한 연결에 연관되어 있는 상황에서 해당 연결이 변경되거나 잃어버리게 되었을 때, 해당되는 정보를 가지고 있습니다.

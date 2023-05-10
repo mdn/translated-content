@@ -3,7 +3,8 @@ title: Расширенные анимации
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 В предыдущей главе мы сделали несколько [базовых анимаций](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations) и узнали, как можно двигать вещи. В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, чтобы сделать наши анимации более продвинутыми.
 
@@ -296,7 +297,7 @@ ball.draw();
 
 ## Добавление управления мышью
 
-<p>Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> .  Событие <code><a href="/en-US/docs/Web/Events/click">click</a></code> отпускает мяч и позволяет ему снова прыгать</p>
+Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove). Событие [`click`](/en-US/docs/Web/Events/click) отпускает мяч и позволяет ему снова прыгать.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

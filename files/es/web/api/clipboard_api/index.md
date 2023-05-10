@@ -1,9 +1,9 @@
 ---
 title: API del portapapeles
 slug: Web/API/Clipboard_API
-translation_of: Web/API/Clipboard_API
 original_slug: Web/API/API_del_portapapeles
 ---
+
 {{DefaultAPISidebar("Clipboard API")}}
 
 La **API del portapapeles** permite acceder los comandos del portapapeles (cortar, copiar y pegar), así como leer y escribir de manera asíncrona el portapapeles del sistema. Acceder al contenido del portapapeles está sujeta a la [API de permisos](/es/docs/Web/API/Permissions_API): El permiso `clipboard-write` es concedido automáticamente a las páginas cuando están en la pestaña activa. El permiso `clipboard-read` debe ser solicitado, lo que se puede hacer intentando leer directamente el portapapeles.
@@ -32,23 +32,11 @@ Esta pieza de código lee el texto que hay en el portapapeles y lo añade al pri
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Observaciones         |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('Clipboard API')}} | {{Spec2('Clipboard API')}} | Definición primitiva. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## Véase también
 

@@ -1,13 +1,8 @@
 ---
 title: Herança
-slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - Guide
-  - Guía
-  - Web
-translation_of: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
 ## Resumo
 
 O resumo de cada [definição de propriedade do CSS](/pt-BR/docs/Web/CSS/Reference) diz se tal propriedade é herdada por padrão ("Inherited": sim) ou é não herdada por padrão ("Inherited": não). Isso controla o que ocorre quando nenhum valor é especificado para uma propriedade em um elemento.

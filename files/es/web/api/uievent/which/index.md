@@ -1,14 +1,9 @@
 ---
 title: event.which
 slug: Web/API/UIEvent/which
-tags:
-  - DOM
-  - events
-  - metodo
-  - which
-translation_of: Web/API/KeyboardEvent/which
 original_slug: Web/API/KeyboardEvent/which
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

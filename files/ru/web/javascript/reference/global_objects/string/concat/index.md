@@ -9,6 +9,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка

@@ -1,14 +1,8 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - Window
-translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 `Window.prompt()`는 사용자가 텍스트를 입력할 수 있도록 안내하는 선택적 메세지를 갖고 있는 대화 상자를 띄웁니다.
@@ -50,7 +44,7 @@ sign = window.prompt("님 지금 기분 좋아요?", "네."); // 안내 문구 "
 
 상기의 대화 상자는 OS X 상의 Chrome에서 다음과 같이 보입니다.
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## 비고
 

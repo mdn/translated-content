@@ -1,10 +1,8 @@
 ---
 title: collapse
 slug: Web/API/Selection/collapse
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/collapse
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

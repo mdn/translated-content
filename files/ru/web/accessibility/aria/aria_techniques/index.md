@@ -8,6 +8,7 @@ tags:
   - TopicStub
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
+
 ## Роли
 
 ### [Роли виджета](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_switch_role)

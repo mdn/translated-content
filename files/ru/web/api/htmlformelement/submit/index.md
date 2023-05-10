@@ -5,6 +5,7 @@ tags:
   - HTMLFormElement
 translation_of: Web/API/HTMLFormElement/submit
 ---
+
 {{APIRef("HTML DOM")}}
 
 Метод **`HTMLFormElement.submit()`** позволяет отправить форму {{HtmlElement("form")}}.

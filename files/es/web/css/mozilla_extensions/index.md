@@ -1,8 +1,8 @@
 ---
 title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-translation_of: Web/CSS/Mozilla_Extensions
 ---
+
 {{CSSRef}}
 
 Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS) con el prefijo`-moz-`.
@@ -257,7 +257,7 @@ W—Z
 
 ### {{cssxref("background-image")}}
 
-- Gradientes 
+- Gradientes
 
   - {{cssxref("-moz-linear-gradient")}}
   - {{cssxref("-moz-radial-gradient")}}
@@ -276,7 +276,7 @@ W—Z
 
 ### {{Cssxref("border-style")}} y {{Cssxref("outline-style")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{obsolete_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{deprecated_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
 
 ### Palabras clave de {{cssxref("&lt;color&gt;")}}
 
@@ -286,8 +286,8 @@ W—Z
 - `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
-- `-moz-default-background-color` 
-- `-moz-default-color` 
+- `-moz-default-background-color`
+- `-moz-default-color`
 - `-moz-cellhighlight`
 - `-moz-cellhighlighttext`
 - `-moz-field`
@@ -302,8 +302,8 @@ W—Z
 - `-moz-mac-accentlightshadow`
 - `-moz-mac-accentregularhighlight`
 - `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active` 
-- `-moz-mac-chrome-inactive` 
+- `-moz-mac-chrome-active`
+- `-moz-mac-chrome-inactive`
 - `-moz-mac-focusring`
 - `-moz-mac-menuselect`
 - `-moz-mac-menushadow`
@@ -311,17 +311,17 @@ W—Z
 - `-moz-menuhover`
 - `-moz-menuhovertext`
 - `-moz-win-communicationstext`
-- `-moz-win-mediatext` 
-- `-moz-nativehyperlinktext` 
+- `-moz-win-mediatext`
+- `-moz-nativehyperlinktext`
 
 ### {{Cssxref("display")}}
 
 - `-moz-box`
-- `-moz-inline-block` {{obsolete_inline}}
+- `-moz-inline-block` {{deprecated_inline}}
 - `-moz-inline-box`
 - `-moz-inline-grid`
 - `-moz-inline-stack`
-- `-moz-inline-table` {{obsolete_inline}}
+- `-moz-inline-table` {{deprecated_inline}}
 - `-moz-grid`
 - `-moz-grid-group`
 - `-moz-grid-line`
@@ -354,7 +354,7 @@ W—Z
 
 ### {{Cssxref("image-rendering")}}
 
-- {{Cssxref("image-rendering","-moz-crisp-edges")}} 
+- {{Cssxref("image-rendering","-moz-crisp-edges")}}
 
 ### {{cssxref("&lt;length&gt;")}}
 
@@ -396,7 +396,7 @@ W—Z
 
 ### {{Cssxref("overflow")}}
 
-- {{Cssxref("-moz-scrollbars-none")}} {{obsolete_inline}}
+- {{Cssxref("-moz-scrollbars-none")}} {{deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-hidden-unscrollable")}}
@@ -589,4 +589,4 @@ W—Z
 
 ## Otros
 
-- {{Cssxref("-moz-alt-content")}} ({{Bug("11011")}})
+- {{Cssxref("-moz-alt-content")}} ([Error 11011 en Firefox](https://bugzil.la/11011))

@@ -1,9 +1,9 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/reject
 ---
+
 {{JSRef}}
 
 El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es rechazado por la razón específicada.
@@ -43,14 +43,11 @@ Promise.reject(new Error('fail')).then(function() {
 
 ## Especificaciones
 
-| Specification                                                                        | Status                       | Comment                                 |
-| ------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ES2015')}}     | Initial definition in an ECMA standard. |
-| {{SpecName('ESDraft', '#sec-promise.reject', 'Promise.reject')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Promise.reject")}}
+{{Compat}}
 
 ## Ver también
 

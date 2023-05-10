@@ -10,6 +10,7 @@ tags:
   - Буфер обмена
 translation_of: Web/API/ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 Интерфейс **`ClipboardEvent`** представляет события, предоставляющие информацию, связанную с изменением буфера обмена, этими события являются {{event("cut")}}, {{event("copy")}} и {{event("paste")}}.

@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
+
 {{JSRef}}
 
 El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
@@ -117,16 +111,11 @@ var removed = myFish.splice(2);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.splice")}}
+{{Compat}}
 
 ## Ver también
 

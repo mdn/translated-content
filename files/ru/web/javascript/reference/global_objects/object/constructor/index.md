@@ -8,6 +8,7 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Сводка

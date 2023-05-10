@@ -1,9 +1,8 @@
 ---
 title: 'Notification: evento show'
 slug: Web/API/Notification/show_event
-page-type: web-api-event
-browser-compat: api.Notification.show_event
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 El evento **`show`** de la interfaz de {{domxref("Notification")}} se activa cuando se muestra una {{domxref("Notification")}}.

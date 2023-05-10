@@ -7,6 +7,7 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -50,7 +51,7 @@ function f(arg) {
 
 ## Примечания о совместимости
 
-- В версиях Firefox до Firefox 49 {{geckoRelease(49)}}, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- В версиях Firefox до Firefox 49, у данной ошибки был тип {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
 ## Смотрите также
 

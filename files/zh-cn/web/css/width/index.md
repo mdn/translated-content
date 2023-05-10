@@ -59,7 +59,7 @@ width: unset;
 
     可表示为：`min(max-content, max(min-content, <length-percentage>))`
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -77,7 +77,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-{{EmbedLiveSample('Default_width', '500px', '64px')}}
+{{EmbedLiveSample('默认宽度', '500px', '64px')}}
 
 ### 像素 px 和字高 em
 
@@ -102,7 +102,7 @@ p.goldie {
 <div class="em_length">以 em 度量的宽度</div>
 ```
 
-{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}
+{{EmbedLiveSample('像素 px 和字高 em', '500px', '64px')}}
 
 ### 百分比
 

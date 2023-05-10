@@ -1,12 +1,8 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`tabindex`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소가 포커스 가능함을 나타내며, 이름에서도 알 수 있듯, 주로 <kbd>Tab</kbd> 키를 사용하는 연속적인 키보드 탐색에서 어느 순서에 위치할지 지정합니다.
@@ -42,7 +38,7 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}
 
 ## 같이 보기
 

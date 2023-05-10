@@ -8,6 +8,7 @@ tags:
   - Tutorial
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
+
 {{GamesSidebar}}
 
 В 3D сцене любой игры, даже самой простой, есть стандартные сущности, такие как поверхности, расположенные в координатной системе, камера, для того, чтобы их видеть, света и материалы, для того, чтобы они лучше выглядели, анимации, чтобы их оживить и тд. **Three.js**, как и любая другая 3D библиотека, предоставляет встроенные функции, которые помогут вам в реализации 3D. В этой статье мы покажем вам основы использования Three, включая настройку среды, структуру необходимого HTML, фундаментальные объекты Three и как создать простейшую сцену.
@@ -98,7 +99,7 @@ scene.add(camera);
 
 Стоит поэкспериментировать с этими значениями, чтобы лучше разобраться в том, как они влияют на отрисовку сцены.
 
-> **Примечание:** **На заметку**: значения позиции (например координата z) безразмерны, устанавливайте их так, чтобы вам было удобно с ними работать.
+> **Примечание:** значения позиции (например координата z) безразмерны, устанавливайте их так, чтобы вам было удобно с ними работать.
 
 ## Отрисовка сцены
 
@@ -164,7 +165,7 @@ cube.rotation.set(0.4, 0.2, 0);
 
 Поздравляю, вы создали объект в 3D-среде! This might have proven easier than you first thought? Here's how it should look:
 
-![Blue cube on a gray background rendered with Three.js.](https://mdn.mozillademos.org/files/11849/cube.png)
+![Blue cube on a gray background rendered with Three.js.](cube.png)
 
 Весь код который мы создали:
 
@@ -217,7 +218,7 @@ scene.add(light);
 
 We define a white point of light, set its position a little away from the center of the scene, so it can light up some parts of the shapes, finally adding it to the scene. Now everything works as it should, all three shapes are visible. You should check the documentation for other types of lights, like Ambient, Directional, Hemisphere, or Spot. Experiment placing them on our scene, to see how they affect it.
 
-![Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js.](https://mdn.mozillademos.org/files/11851/shapes.png)
+![Shapes: blue cube, dark yellow torus and dark gray dodecahedron on a gray background rendered with Three.js.](shapes.png)
 
 This looks a little boring though. In a game, something is usually happening. We might see animations and such. So let's try breathing a little life into these shapes, by animating them!
 

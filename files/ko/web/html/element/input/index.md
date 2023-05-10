@@ -1,17 +1,9 @@
 ---
 title: '<input>: 입력 요소'
-slug: Web/HTML/Element/Input
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - HTML input tag
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input
+slug: Web/HTML/Element/input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<input>` 요소**는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다. {{glossary("user agent", "사용자 에이전트")}}에 따라서 다양한 종류의 입력 데이터 유형과 컨트롤 위젯이 존재합니다. 입력 유형과 특성의 다양한 조합 가능성으로 인해, `<input>` 요소는 HTML에서 제일 강력하고 복잡한 요소 중 하나입니다.
 
@@ -45,7 +37,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="button" name="button" /></pre
+&#x3C;input type="button" name="button" /></pre
         >
         {{EmbedLiveSample("examplebutton",200,55,"","", "nobutton")}}
       </td>
@@ -55,7 +47,7 @@ translation_of: Web/HTML/Element/input
       <td>단일 값을 선택하거나 선택 해제할 수 있는 체크박스.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="checkbox" name="checkbox"/></pre
+&#x3C;input type="checkbox" name="checkbox"/></pre
         >
         {{EmbedLiveSample("examplecheckbox",200,55,"","", "nobutton")}}
       </td>
@@ -68,7 +60,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplecolor">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="color" name="color"/></pre
+&#x3C;input type="color" name="color"/></pre
         >
         {{EmbedLiveSample("examplecolor",200,55,"","", "nobutton")}}
       </td>
@@ -81,7 +73,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledate">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="date" name="date"/></pre
+&#x3C;input type="date" name="date"/></pre
         >
         {{EmbedLiveSample("exampledate",200,55,"","", "nobutton")}}
       </td>
@@ -97,7 +89,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampledtl">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="datetime-local" name="datetime-local"/></pre
+&#x3C;input type="datetime-local" name="datetime-local"/></pre
         >
         {{EmbedLiveSample("exampledtl",200,55,"","", "nobutton")}}
       </td>
@@ -172,7 +164,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="number" name="number"/></pre
+&#x3C;input type="number" name="number"/></pre
         >
         {{EmbedLiveSample("examplenumber",200,55,"","", "nobutton")}}
       </td>
@@ -187,7 +179,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplepassword">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="password" name="password"/></pre
+&#x3C;input type="password" name="password"/></pre
         >
         {{EmbedLiveSample("examplepassword",200,55,"","", "nobutton")}}
       </td>
@@ -231,7 +223,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="reset" name="reset"/></pre
+&#x3C;input type="reset" name="reset"/></pre
         >
         {{EmbedLiveSample("examplereset",200,55,"","", "nobutton")}}
       </td>
@@ -248,7 +240,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="examplesearch">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="search" name="search"/></pre
+&#x3C;input type="search" name="search"/></pre
         >
         {{EmbedLiveSample("examplesearch",200,55,"","", "nobutton")}}
       </td>
@@ -271,7 +263,7 @@ translation_of: Web/HTML/Element/input
       </td>
       <td id="exampletel">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="tel" name="tel"/></pre
+&#x3C;input type="tel" name="tel"/></pre
         >
         {{EmbedLiveSample("exampletel",200,55,"","", "nobutton")}}
       </td>
@@ -296,7 +288,7 @@ translation_of: Web/HTML/Element/input
       <td>시간대가 없는 시간값을 입력하는 콘트롤</td>
       <td id="exampletime">
         <pre class="brush: html hidden notranslate">
-&#x3C;input  type="time" name="time"/></pre
+&#x3C;input type="time" name="time"/></pre
         >
         {{EmbedLiveSample("exampletime",200,55,"","", "nobutton")}}
       </td>
@@ -381,7 +373,7 @@ A few additional non-standard attributes are listed following the descriptions o
   - : Valid for the `image` button only, the alt attribute provides alternative text for the image, displaying the value of the attribute if the image [src](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
 - {{htmlattrdef("autocomplete")}}
 
-  - : **Not** a Boolean attribute, the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See {{SectionOnPage("/en-US/docs/Web/HTML/Attributes/autocomplete", "Values")}} for permitted values.
+  - : **Not** a Boolean attribute, the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute takes as its value a space separated string that describes what, if any, type of autocomplete functionality the input should provide. A typical implementation of autocomplete simply recalls previous values entered in the same input field, but more complex forms of autocomplete can exist. For instance, a browser could integrate with a device's contacts list to autocomplete email addresses in an email input field. See [Values](/ko/docs/Web/HTML/Attributes/autocomplete#값) for permitted values.
 
     The `autocomplete` attribute is valid on `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color` and `password`. This attribute has no effect on input types that do not return numeric or text data, being valid for all input types except `checkbox`, `radio`, `file`, or any of the button types. See [The HTML autocomplete attribute](/ko/docs/Web/HTML/Attributes/autocomplete) for additional information, including information on password security and how `autocomplete` is slightly different for `hidden` than for other input types.
 
@@ -425,7 +417,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A Boolean attribute which, if present, indicates that the user should not be able to interact with the input. Disabled inputs are typically rendered with a dimmer color or using some other form of indication that the field is not available for use.
 
-    Specifically, disabled inputs do not receive the {{event("click")}} event, and disabled inputs are not submitted with the form.
+    Specifically, disabled inputs do not receive the [`click`](/ko/docs/Web/API/Element/click_event) event, and disabled inputs are not submitted with the form.
 
     > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
@@ -579,7 +571,7 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
   - : The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text _must not_ include carriage returns or line feeds.
 
-    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for more information.
+    > **참고:** The `placeholder` attribute is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [Labels and placeholders](/ko/docs/Web/HTML/Element/input#labels) for more information.
 
 - {{htmlattrdef("readonly")}}
 
@@ -653,4 +645,4 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input")}}
+{{Compat}}

@@ -5,40 +5,66 @@ slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 
 {{HTTPSidebar}}
 
-HTTP 协议中 {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-elem`** 指示符明指定了合法的 js 要素来源 {{HTMLElement("script")}} ，但是不包括类似 onclick 这样的事件处理器中包含的内联脚本。
+HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP 内容安全性策略）中的 **`script-src-elem`** 指令指定了 JavaScript {{HTMLElement("script")}} 元素的有效来源。
 
-| CSP 版本                              | 3                                                                                                                                                                               |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Directive type                        | {{Glossary("Fetch directive")}}                                                                                                                                        |
-| {{CSP("default-src")}} fallback | Yes. If this directive is absent, the user agent will look for the {{CSP("script-src")}} directive, and if both of them are absent, fallback to `default-src` directive. |
+这个指令仅在 `<script>` 元素（脚本请求和块）指定有效的来源。它不适用于触发脚本执行的的其他 JavaScript 源，例如内联脚本事件处理程序（`onclick`）、[在“unsafe-eval”（不安全地执行字符串表达式）检查下的](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)脚本执行方法和 [XSLT 样式表](/zh-CN/docs/Web/XSLT)（可以使用 {{CSP("script-src")}} 为所有 JavaScript 脚本源指定有效来源，也可以使用 {{CSP("script-src-attr")}} 仅为内联样式脚本处理程序指定有效源）。
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">CSP 版本</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">指令类型</th>
+      <td>{{Glossary("Fetch directive","fetch 指令")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} 回落</th>
+      <td>
+      是。如果这个指令不存在，则用户代理将查找 {{CSP("script-src")}} 指令，如果两个都不存在，则回落到 <code>default-src</code> 指令。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-`script-src-elem` 可以允许多个来源：
+`script-src-elem` 策略可以允许一个或者多个源：
 
-```plain
+```http
 Content-Security-Policy: script-src-elem <source>;
 Content-Security-Policy: script-src-elem <source> <source>;
 ```
 
-`script-src-elem` 可以跟 {{CSP("script-src")}}一起用：
+`script-src-elem` 可以与 {{CSP("script-src")}} 一起使用：
 
-```plain
+```http
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-elem <source>;
 ```
 
-### Sources
+### 源
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` 可以是 [CSP 源值](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)中的任意一个。
 
-## 范例
+请注意，这套相同的值可以用于所有 {{Glossary("fetch directive", "fetch 指令")}}（以及[许多其他的指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)）。
 
-### 回退到 script-src
+## 示例
 
-如果没有 `script-src-elem` 存在，客户端会回退到 {{CSP("script-src")}} 指示符，如果那个也还是没有那就回退到 {{CSP("default-src")}}。
+### 违规的案例
 
-TODO: Add comprehensive examples.
+给定此 CSP 标头：
+
+```http
+Content-Security-Policy: script-src-elem https://example.com/
+```
+
+…以下脚本被阻止，不会加载和执行：
+
+```html
+<script src="https://not-example.com/js/library.js"></script>
+```
 
 ## 规范
 
@@ -48,9 +74,9 @@ TODO: Add comprehensive examples.
 
 {{Compat}}
 
-## 其他的链接
+## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）
 - {{HTMLElement("script")}}
 - {{CSP("script-src")}}
 - {{CSP("script-src-attr")}}

@@ -1,9 +1,9 @@
 ---
 title: Regra At
 slug: Web/CSS/At-rule
-translation_of: Web/CSS/At-rule
 ---
-Uma **regra at (at-rule)** é uma [CSS statement](/en/CSS/Syntax#CSS_statements) iniciando com um caractere arroba, '`@`' (`U+0040 ARROBA COMERCIAL`), seguido por um indetificador e terminando no primeiro ponto e vírgula', `;`' (`U+003B SEMICOLON`), fora de um [bloco](/en/CSS/Syntax#CSS_declarations), ou no fim do primeiro [Bloco CSS](/en/CSS/Syntax#CSS_declarations).
+
+Uma **regra at (at-rule)** é uma [CSS statement](/pt-BR/CSS/Syntax#CSS_statements) iniciando com um caractere arroba, '`@`' (`U+0040 ARROBA COMERCIAL`), seguido por um indetificador e terminando no primeiro ponto e vírgula', `;`' (`U+003B SEMICOLON`), fora de um [bloco](/pt-BR/CSS/Syntax#CSS_declarations), ou no fim do primeiro [Bloco CSS](/pt-BR/CSS/Syntax#CSS_declarations).
 
 Existem muitas regras at, criadas por seu identificador, cada um com uma sintaxe diferente:
 

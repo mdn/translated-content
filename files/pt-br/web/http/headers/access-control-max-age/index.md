@@ -1,16 +1,8 @@
 ---
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
-tags:
-  - CORS
-  - Cabeçalho de Resposta
-  - Cache
-  - HTTP
-  - Reference
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Access-Control-Max-Age
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Access-Control-Max-Age`** indica por quanto tempo os resultados de uma {{glossary("preflight request")}} (que é a informação contida nos cabeçalhos {{HTTPHeader("Access-Control-Allow-Methods")}} e {{HTTPHeader("Access-Control-Allow-Headers")}}) pode ser cacheada (mantida).

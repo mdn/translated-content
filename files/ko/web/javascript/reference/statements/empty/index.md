@@ -1,8 +1,8 @@
 ---
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
-translation_of: Web/JavaScript/Reference/Statements/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 **empty** 문은 JavaScript 아무것도 동작하지 않습니다.

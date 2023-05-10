@@ -1,10 +1,10 @@
 ---
 title: <dialog>
 slug: Web/HTML/Element/dialog
-translation_of: Web/HTML/Element/dialog
 original_slug: Web/HTML/Elemento/dialog
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
 
@@ -122,20 +122,15 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5.1', 'semantics.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.1')}}     | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
-{{Compat("html.elements.dialog")}}
+{{Compat}}
 
 ## Ver también
 
 - [Formularios HTML](/es/docs/Web/Guide/HTML/Forms).
-- El evento {{event("close")}}
-- El evento {{event("cancel")}}
+- El evento [`close`](/es/docs/Web/Reference/Events/close)
+- El evento [`cancel`](/es/docs/Web/Reference/Events/cancel)
 - El pseudo-elemento {{cssxref("::backdrop")}}

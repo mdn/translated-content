@@ -1,14 +1,8 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
-browser-compat: javascript.builtins.Array.sort
 ---
+
 {{JSRef}}
 
 **`sort()`** 메서드는 배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환합니다. 정렬은 [stable sort](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability)가 아닐 수 있습니다. 기본 정렬 순서는 문자열의 유니코드 코드 포인트를 따릅니다.

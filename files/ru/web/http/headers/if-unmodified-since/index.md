@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTTP/Headers/If-Unmodified-Since
 original_slug: Web/HTTP/Заголовки/If-Unmodified-Since
 ---
+
 {{HTTPSidebar}}
 
 HTTP-заголовок запроса **`If-Unmodified-Since`** делает запрос условным: сервер отправит обратно запрошенный ресурс или примет его в случае {{HTTPMethod("POST")}} или другого {{Glossary("safe", "небезопасного")}} метода, только если он не был последним изменён после указанной даты. Если запрос был изменён после указанной даты, то ответ будет {{HTTPStatus("412")}} (Precondition Failed) ошибка.

@@ -83,9 +83,7 @@ console.log(newstr); // ###34567
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@replace', 'RegExp.prototype[@@replace]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

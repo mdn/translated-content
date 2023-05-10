@@ -1,19 +1,9 @@
 ---
 title: Making content editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-tags:
-  - Avanzado
-  - Ejemplo
-  - Entrada de texto
-  - Guía
-  - HTML
-  - HTML5
-  - Texto
-  - Web
-  - contentediatable
-translation_of: Web/Guide/HTML/Editable_content
 original_slug: Web/Guide/HTML/Editable_content
 ---
+
 En HTML, cualquier elemento puede ser editable. Con el uso de algunos manejadores de eventos de JavaScript, puedes transformar tu página web en un completo y rápido editor de texto. Este artículo brinda información sobre esta funcionalidad.
 
 ## ¿Cómo funciona?
@@ -218,7 +208,7 @@ img.intLink { border: 0; }
 </html>
 ```
 
-> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](/@api/deki/files/6243/=rich-text-editor.zip).
+> **Nota:** si quieres ver cómo estandarizar la creación y la inserción de tu editor en tu página, puedes ver nuestro [más completo ejemplo de editor de texto enriquecido](rich-text-editor.zip).
 
 ## Véase también
 

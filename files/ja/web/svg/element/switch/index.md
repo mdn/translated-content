@@ -60,10 +60,7 @@ slug: Web/SVG/Element/switch
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                     | 備考                                                                  |
-| -------------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'struct.html#SwitchElement', '&lt;switch&gt;')}}     | {{Spec2('SVG2')}} | {{SVGAttr("systemLanguage")}} 属性の評価を明確にしました。 |
-| {{SpecName('SVG1.1', 'struct.html#SwitchElement', '&lt;switch&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義                                                              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

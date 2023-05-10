@@ -34,13 +34,13 @@ Aucun
 
 `object`. [Window](/fr/docs/Web/API/Window) de la page d'arrière plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 
-Supposons un  [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
+Supposons un [script d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) définisse une fonction `foo()`:
 
 ```js
 // background.js

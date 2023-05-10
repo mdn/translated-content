@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
+
 {{APIRef("Fetch API")}}
 
 Метод **`fetch()`** , относящийся к миксину {{domxref("WindowOrWorkerGlobalScope")}}, запускает процесс извлечения ресурса из сети. Возвращает promise, содержащий {{domxref("Response")}} объект (ответ на запрос).
@@ -18,7 +19,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 Метод `fetch()` контролируется директивой `connect-src` directive of [Content Security Policy](/ru/docs/Security/CSP/CSP_policy_directives) (политика безопасности контента), а не директивой ресурсов, которые извлекает.
 
-> **Примечание:** **На Заметку**: Аргументы метода `fetch()` идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.
+> **Примечание:** Аргументы метода `fetch()` идентичны аргументам {{domxref("Request.Request","Request()")}} конструктора.
 
 ## Синтаксис
 

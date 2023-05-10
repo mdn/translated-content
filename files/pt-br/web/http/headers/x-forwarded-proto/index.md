@@ -1,15 +1,8 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Não padronizado
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/X-Forwarded-Proto
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`X-Forwarded-Proto`** (XFP) é um cabeçalho padrão de fato para identificar o protocolo (HTTP ou HTTPS) que o cliente usava para conectar ao seu proxy ou balanceador de carga. Seus _logs_ de acesso do servidor contém o protocolo usado entre o servidor e o balanceador de carga, não o protocolo usado entre o cliente e o balanceador de carga. Para determinar o protocolo utilizado entre o cliente e o balanceador de carga, o cabeçalho de requisição `X-Forwarded-Proto` pode ser utilizado.

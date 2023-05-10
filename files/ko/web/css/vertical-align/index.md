@@ -1,13 +1,8 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/vertical-align
 ---
+
 {{CSSRef}}
 
 **`vertical-align`** [CSS](/ko/docs/Web/CSS) 속성은 inline 또는 table-cell box에서의 수직 정렬을 지정합니다.

@@ -9,7 +9,7 @@ slug: Web/Guide/User_input_methods
 
 次の図式は、ユーザー入力の仕組みを実装するための典型的なワークフローを説明しています。
 
-![](https://mdn.mozillademos.org/files/8085/user-input-and-controls.png)
+![](user-input-and-controls.png)
 
 最初に、マウス、キーボード、指でのタッチなどから、アプリケーションで対象としたい入力の仕組みをどれにするかを決める必要があります。入力の仕組みを決めたのであれば、ウェブプラットフォームや JavaScript ライブラリーによって提供されているツールを使い、制御することができます。
 

@@ -1,8 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 A propriedade CSS de visibilidade pode mostrar ou ocultar um elemento sem afetar o layout de um documento (ou seja, o espaço é criado para elementos independentemente de serem visíveis ou não). A propriedade também pode ocultar linhas ou colunas em um {{HTMLElement("table")}}.
@@ -19,7 +19,7 @@ visibility: initial;
 visibility: unset;
 ```
 
-> **Note:** **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
+> **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
 
 {{cssinfo}}
 

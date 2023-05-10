@@ -27,7 +27,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 除了颜色属性，还有其他一些属性用来控制绘制边框的方式。
 
-![](/@api/deki/files/355/=SVG_Stroke_Linecap_Example.png)
+![](svg_stroke_linecap_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -49,7 +49,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 还有一个`stroke-linejoin`属性，用来控制两条边框线段之间，用什么方式连接。
 
-![](/@api/deki/files/356/=SVG_Stroke_Linejoin_Example.png)
+![](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -79,7 +79,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 最后，你可以使用`stroke-dasharray`属性，将边框定义成虚线。
 
-![](/@api/deki/files/354/=SVG_Stroke_Dasharray_Example.png)
+![](svg_stroke_dasharray_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>

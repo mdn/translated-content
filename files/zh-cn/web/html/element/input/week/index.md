@@ -1,9 +1,9 @@
 ---
 title: <input type="week">
-slug: Web/HTML/Element/Input/week
+slug: Web/HTML/Element/input/week
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 {{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法) 周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
 
@@ -31,7 +31,7 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}、{{htmlattrxref("list", "input")}}、{{htmlattrxref("readonly", "input")}} 和 {{htmlattrxref("step", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -50,9 +50,9 @@ Edge 的 `week` 控制更加精细，使用滚动的滚轮打开星期和年的�
 
 ## 值
 
-一个字符串代表所输入的星期/年的值。{{SectionOnPage("/zh-CN/docs/Web/HTML/Date_and_time_formats", "合法的星期字符串")}}中描述了此输入类型使用的日期和时间值的格式。
+一个字符串代表所输入的星期/年的值。[星期字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#星期字符串)中描述了此输入类型使用的日期和时间值的格式。
 
-你可以通过在 {{htmlattrxref("value", "input")}} 属性中包含一个值来为输入设置默认值，如下所示：
+你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中包含一个值来为输入设置默认值，如下所示：
 
 ```html
 <label for="week">What week would you like to start?</label>
@@ -76,13 +76,13 @@ weekControl.value = '2017-W45';
 
 ### max
 
-接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
+接受以上[值](#值)部分中讨论的字符串格式的按时间最新年份和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过此值，则元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `max` 属性的值不是有效的星期字符串，则该元素没有最大值。
 
 此值必须大于或等于 `min` 属性指定的年和星期。
 
 ### min
 
-最早接受的年和星期数。如果输入到该元素中的 {{htmlattrxref("value", "input")}} 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
+最早接受的年和星期数。如果输入到该元素中的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。如果 `min` 属性的值不是有效的星期字符串，则输入没有最小值。
 
 该值必须小于或等于 `max` 属性的值。
 
@@ -94,7 +94,7 @@ weekControl.value = '2017-W45';
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 {{htmlattrxref("value", "input")}} 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -125,11 +125,11 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 控制输入框大小
 
-`<input type="week">` 不支持诸如 {{htmlattrxref("size", "input")}} 的表单大小属性。您必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="week">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性。您必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
-你应该能够使用 {{htmlattrxref("step", "input")}} 属性来更改每次递增或递减的跳转周数，但是这似乎对支持浏览器没有任何影响。
+你应该能够使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的跳转周数，但是这似乎对支持浏览器没有任何影响。
 
 ## 验证方式
 
@@ -137,7 +137,7 @@ _目前，尚不清楚当与 `week` 输入一起使用时，`"any"` 的值对 `s
 
 ### 设置最大和最小星期
 
-您可以使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
+您可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效周数。在以下示例中，我们设置了可供选择的最小值 `Week 01, 2017` 和最大值 `Week 52, 2017`：
 
 ```html
 <form>
@@ -182,7 +182,7 @@ input:valid + span::after {
 
 ### 使星期值成为必需值
 
-另外，您可以使用 {{htmlattrxref("required", "input")}} 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
+另外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写星期。因此，如果您尝试提交空白的星期字段，则支持的浏览器将显示错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大星期，并令该字段必填：
 

@@ -1,13 +1,9 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
+
 {{JSRef}}
 
 El método **`toString()`** devuelve una cadena que representa el objeto {{JSxRef("Error")}} especificado.
@@ -75,13 +71,11 @@ console.log(e.toString()); // 'hola'
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.tostring', 'Error.prototype.toString')}} |
+{{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Error.toString")}}
+{{Compat}}
 
 ## Ve también
 

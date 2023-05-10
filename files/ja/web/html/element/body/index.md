@@ -3,7 +3,7 @@ title: '<body>: 文書の本文要素'
 slug: Web/HTML/Element/body
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<body>`** は [HTML](/ja/docs/Web/HTML) の要素で、 HTML 文書のコンテンツを示す要素です。 `<body>` 要素は文書中に一つだけ配置できます。
 

@@ -1,18 +1,14 @@
 ---
 title: footer
 slug: Web/HTML/Element/footer
-tags:
-  - HTML5
-  - footer
-  - para_revisar
-translation_of: Web/HTML/Element/footer
 original_slug: Web/HTML/Elemento/footer
 ---
+
 El _Elemento_ _HTML Footer_ (`<footer>`) representa un pie de página para el contenido de sección más cercano o el elemento [raíz de sección](/en/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) (p.e, su ancestro mas cercano [`<article>`](/es/HTML/Element/article), [`<aside>`](/es/HTML/Element/aside), [`<nav>`](/es/HTML/Element/nav), [`<section>`](/es/HTML/Element/section),[`<blockquote>`](/es/HTML/Element/blockquote), [`<body>`](/es/HTML/Element/body), [`<details>`](/es/HTML/Element/details), [`<fieldset>`](/es/HTML/Element/fieldset), [`<figure>`](/es/HTML/Element/figure), [`<td>`](/es/HTML/Element/td)). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.
 
 \<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-> **Nota:** **Notas de uso:**
+> **Nota:**
 >
 > - Encierra la información acerca del autor en un elemento [`<address>`](/es/HTML/Element/address) que puede ser incluido dentro del elemento \<footer>.
 > - El elemento \<footer> no es contenido de sección y en consecuencia no introduce una nueva sección en el [esquema](/en/Sections_and_Outlines_of_an_HTML5_document).

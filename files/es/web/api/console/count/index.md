@@ -1,8 +1,8 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
-translation_of: Web/API/Console/count
+slug: Web/API/console/count
 ---
+
 {{APIRef("Console API")}}
 
 Registra el número de veces que se llama a `count()`. Esta función toma como argumento opcional una `etiqueta`.
@@ -84,10 +84,8 @@ console.count([label]);
 
 ## Especificaciones
 
-| Specification                                                                | Status                           | Comment            |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#count", "console.count()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.console.count")}}
+{{Compat}}

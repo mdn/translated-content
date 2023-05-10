@@ -3,6 +3,7 @@ title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 translation_of: Web/API/HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAudioElement`** позволяет получить доступ к элементу {{HTMLElement("audio")}} и имеет DOM-элемент {{domxref("HTMLMediaElement")}}.

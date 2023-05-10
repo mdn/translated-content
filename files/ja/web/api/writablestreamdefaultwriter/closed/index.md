@@ -1,21 +1,17 @@
 ---
 title: WritableStreamDefaultWriter.closed
 slug: Web/API/WritableStreamDefaultWriter/closed
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("WritableStreamDefaultWriter")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはライターのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。
+**`closed`** は {{domxref("WritableStreamDefaultWriter")}} インターフェイスの読み取り専用プロパティで、ストリームが閉じられた場合、またはライターのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する {{jsxref("Promise")}} を返します。
 
-## 構文
+## 値
 
-```
-var closed = writableStreamDefaultWriter.closed;
-```
-
-### 値
-
-{{jsxref("Promise")}}。
+{{jsxref("Promise")}} です。
 
 ## 例
 
@@ -24,21 +20,21 @@ const writableStream = new WritableStream({
   start(controller) {
   },
   write(chunk, controller) {
-    ...
+    // ...
   },
   close(controller) {
-    ...
+    // ...
   },
   abort(err) {
-    ...
+    // ...
   }
 }, queuingStrategy);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-..
+// ..
 
 // ストリームが閉じているかどうかを確認します
 writer.closed.then(() => {
@@ -46,12 +42,10 @@ writer.closed.then(() => {
 })
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-writer-closed","closed")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStreamDefaultWriter.closed")}}
+{{Compat}}

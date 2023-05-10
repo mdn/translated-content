@@ -1,16 +1,8 @@
 ---
 title: Cabeçalhos HTTP
 slug: Web/HTTP/Headers
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Internet
-  - Networking
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
 
 Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](http://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](http://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](http://www.iana.org/assignments/message-headers/prov-headers.html).
@@ -129,9 +121,9 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
   - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
-- {{HTTPHeader("Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Cookie2")}}
   - : Contém um cookie HTTP enviado anteriormente pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie2")}}, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Cookie")}} em vez disso.
-- {{HTTPHeader("Set-Cookie2")}} {{obsolete_inline}}
+- {{HTTPHeader("Set-Cookie2")}}
   - : Envia cookies do servidor para o agente-usuário, mas se tornou obsoleto pela especificação. Use {{HTTPHeader("Set-Cookie")}} em vez disso.
 
 ## CORS

@@ -10,6 +10,7 @@ tags:
   - Событие
 translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/DOM/DOM_Reference); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
@@ -99,7 +100,7 @@ translation_of: Web/API/Event
   - : Первоначальный целевой объект события до перенаправлений (Mozilla-специфичный). Может быть из [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
 - {{domxref("Event.returnValue")}} {{non-standard_inline}}
   - : Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.
-- {{domxref("Event.scoped")}} {{readonlyinline}} {{obsolete_inline}}
+- {{domxref("Event.scoped")}} {{readonlyinline}}
   - : {{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в {{domxref("Event.composed", "composed")}}.
 - {{domxref("Event.srcElement")}} {{non-standard_inline}}
   - : Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.
@@ -120,9 +121,9 @@ translation_of: Web/API/Event
 
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent) события. Если событие уже отправлено, то эта функция ничего не делает.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
   - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}} {{Obsolete_inline(24)}}
+- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
   - : Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
 - {{domxref("Event.preventDefault()")}}
   - : Отменяет событие (если его возможно отменить).

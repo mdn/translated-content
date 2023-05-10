@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: Reduce of empty array with no initial value'
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
-translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

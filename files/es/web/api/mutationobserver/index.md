@@ -1,8 +1,8 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` establece un mecanismo para reaccionar ante cambios en el [DOM](/es/docs/DOM). Ha sido diseñado como un sustituto de los [Mutation Events](/es/docs/DOM/Mutation_events) definidos en las especificaciones de _DOM3 Events_.
@@ -154,6 +154,14 @@ observer.observe(target, config);
 observer.disconnect();
 ```
 
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
 ## Lectura adicional
 
 - [A brief overview](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
@@ -161,7 +169,3 @@ observer.disconnect();
 - [A screencast by Chromium developer Rafael Weinstein](http://www.youtube.com/watch?v=eRZ4pO0gVWw)
 - [The mutation summary library](http://code.google.com/p/mutation-summary/)
 - [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) which defines the `MutationObserver` interface
-
-## Compatibilidad en navegadores
-
-{{Compat("api.MutationObserver")}}

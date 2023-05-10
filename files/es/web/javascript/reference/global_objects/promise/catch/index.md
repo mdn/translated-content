@@ -1,9 +1,9 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/catch
 ---
+
 {{JSRef}}
 
 El método **catch()** retorna una `Promise` y solo se ejecuta en los casos en los que la promesa se marca como `Reject`. Se comporta igual que al llamar {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} (de hecho, al llamar `obj.catch(onRejected)` internamente llama a `obj.then(undefined, onRejected)`).
@@ -148,16 +148,13 @@ p2.then(function (value) {
 });
 ```
 
-## Especificación
+## Especificaciones
 
-| Specification                                                                                                | Status                       | Comment                                |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ES2015')}}     | Definición inicial en el standar ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                        |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
-{{Compat("javascript.builtins.promise.catch")}}
+{{Compat}}
 
 ## Vea también
 

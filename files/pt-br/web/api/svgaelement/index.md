@@ -1,11 +1,8 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-tags:
-  - Imagem vetorial
-  - Vetores
-translation_of: Web/API/SVGAElement
 ---
+
 {{APIRef("SVG")}}O **`SVGAElement`** interface fornece acesso as propriedades do elemento {{SVGElement("a")}}, bem como metodos para manipula-los.
 
 ## Propriedades

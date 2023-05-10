@@ -10,8 +10,6 @@ original_slug: Mozilla/Firefox/Versions/2
 
 {{FirefoxSidebar}}
 
-''Une grande partie du contenu de cette page est juste là pour boucher les trous. Voyez la [version anglaise de cette page](/en/Firefox_2_for_developers) pour savoir comment la compléter.''
-
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 2
 
 Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles possibilités. Cet article fournit des liens vers des articles couvrant les nouvelles fonctionnalités.

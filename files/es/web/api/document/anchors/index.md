@@ -1,15 +1,8 @@
 ---
 title: document.anchors
 slug: Web/API/Document/anchors
-tags:
-  - API
-  - Desaprobado
-  - Documento
-  - HTML DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Document/anchors
 ---
+
 {{APIRef("DOM")}}{{deprecated_header()}}La propiedad de solo lectura **`anchors`** de la interfaz {{domxref("Document")}} devuelve una lista de todas las anclas (anchors) del documento.
 
 ## Sintaxis

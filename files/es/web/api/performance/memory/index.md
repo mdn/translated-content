@@ -1,8 +1,8 @@
 ---
 title: Performance.memory
 slug: Web/API/Performance/memory
-translation_of: Web/API/Performance/memory
 ---
+
 {{APIRef}}
 
 ## Sintaxis
@@ -27,9 +27,9 @@ timingInfo = performance.memory
 
 Ninguna.
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Performance.memory")}}
+{{Compat}}
 
 ## Ver también
 

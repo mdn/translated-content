@@ -93,9 +93,9 @@ input {
 
 > **Note :** Mieux vaut utiliser les deux déclarations (celle avec le préfixe et celle sans) lorsqu'on utilise une propriété préfixée. En effet, la version préfixée signifie généralement que du travail de standardisation est en cours et qu'il pourrait y avoir plus tard un consensus pour abandonner la version préfixée. Dans l'exemple qui précède, on se prémunit ainsi contre une telle situation.
 
-L'aperçu qui suit montre&nbsp;: le rendu avec les styles système à gauche et le rendu avec `appearance: none` à droite ([vous pouvez également voir cet exemple sur cette page](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html) si vous voulez le tester sur d'autres systèmes).
+L'aperçu qui suit montre&nbsp;: le rendu avec les styles système à gauche et le rendu avec `appearance: none` à droite ([vous pouvez également voir cet exemple sur cette page](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html) si vous voulez le tester sur d'autres systèmes).
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
 Dans la plupart des cas, l'effet correspond au retrait de la mise en forme de la bordure, ce qui rend l'application de CSS plus simple, mais ce n'est pas réellement essentiel. Pour d'autres en revanche, comme les champs de recherche, les boutons radio et les cases à cocher, cela s'avère beaucoup plus utile. Voyons de quoi il en retourne.
 
@@ -114,7 +114,7 @@ input[type="search"] {
 
 Dans l'exemple qui suit, on peut voir deux champs de recherche identiques. Celui de droite est mis en forme avec `appearance: none;` et celui de gauche n'utilise pas cette propriété. Si vous consultez cet exemple sur Chrome sur macOS, vous verrez que l'exemplaire à gauche n'est pas dimensionné correctement.
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
 
 De façon intéressante, définir la boardule ou l'arrière-plan du champ de recherche permet aussi de résoudre ce problème, car cela [désactive](https://webkit.org/blog/28/buttons/) ou «&nbsp;casse&nbsp;» l'apparence Aqua. L'exemple qui suit n'utilise pas du tout `appearance: none;`, mais, sur Chrome pour macOS, on peut voir qu'il ne souffre pas du même problème que l'exemple précédent.
 
@@ -409,7 +409,7 @@ Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Elemen
 
 Toutefois, les parties internes du contrôle (le calendrier qui s'affiche pour sélectionner la date, le sélecteur pour incrémenter/décrémenter les valeurs) ne sont pas du tout personnalisables et on ne peut pas s'en débarrasser avec `appearance: none;`. Si vous devez maîtriser la forme de 1 à Z, vous devrez utiliser une bibliothèque tierce ou construire votre propre contrôle.
 
-> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number)  peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
+> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
 
 ### Les champs d'intervalle
 
@@ -501,22 +501,3 @@ Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires
 Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles natifs de formulaires basiques](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de champs HTML](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mettre en forme les formulaires](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée pour les formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Les pseudo-classes pour l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Valider les données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer les données de formulaires](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujet avancés
-
-- [Comment construire des contrôles de formulaire personnalisés](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer les données de formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
