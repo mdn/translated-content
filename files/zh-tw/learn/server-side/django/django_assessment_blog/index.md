@@ -1,5 +1,5 @@
 ---
-title: 'Assessment: DIY Django mini blog'
+title: "Assessment: DIY Django mini blog"
 slug: Learn/Server-side/Django/django_assessment_blog
 ---
 
@@ -215,10 +215,10 @@ The following screenshot provide an example of what the finished program should 
 1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))。你也許會用'diyblog'作為專案名稱，‘blog'作為 app 的名稱。
 2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
 
-    - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
-    - 部落格文章必須要依照發布時間排序(新至舊)，評論要依照發布排序(舊至新)。
-    - 不是每位使用者都是部落客，但是每一位使用者都可以留下評論。
-    - 部落客必須有介紹資訊。
+   - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
+   - 部落格文章必須要依照發布時間排序(新至舊)，評論要依照發布排序(舊至新)。
+   - 不是每位使用者都是部落客，但是每一位使用者都可以留下評論。
+   - 部落客必須有介紹資訊。
 
 3. 跑 migrations 以及創建一個新的超級使用者(superuser)。
 4. 透過 admin 網站新稱一些部落格文章和評論。
@@ -236,28 +236,28 @@ Some general hints:
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic list Blog list view and filtering for blog object that match the specified author.
 
-    - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
-    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
+   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
+   - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
 
-    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
-    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
+   - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
+   - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 
-      ```python
-          def form_valid(self, form):
-              """
-              Add author and associated blog to form data before setting it as valid (so it is saved to model)
-              """
-              #Add logged-in user as author of comment
-              form.instance.author = self.request.user
-              #Associate comment with blog based on passed id
-              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
-              # Call super-class form validation behaviour
-              return super(BlogCommentCreate, self).form_valid(form)
-      ```
+     ```python
+         def form_valid(self, form):
+             """
+             Add author and associated blog to form data before setting it as valid (so it is saved to model)
+             """
+             #Add logged-in user as author of comment
+             form.instance.author = self.request.user
+             #Associate comment with blog based on passed id
+             form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
+             # Call super-class form validation behaviour
+             return super(BlogCommentCreate, self).form_valid(form)
+     ```
 
-    - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
+   - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
 
 We briefly talked about passing a context to the template in a class-based view in the [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views) topic. To do this you need to override `get_context_data()` (first getting the existing context, updating it with whatever additional variables you want to pass to the template, and then returning the updated context). For example, the code fragment below shows how you can add a blogger object to the context based on their `BlogAuthor` id.
 
