@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/map
 
 {{JSRef}}
 
-**`map()`** 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
+**`map()`** 方法**创建一个新数组**，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
 
 {{EmbedInteractiveExample("pages/js/array-map.html")}}
 
@@ -169,9 +169,9 @@ console.log(
 
 ```js
 // parseInt(string, radix) -> map(parseInt(value, index))
-/* first iteration  (index is 0): */ parseInt("1", 0); // 1
-/* second iteration (index is 1): */ parseInt("2", 1); // NaN
-/* third iteration  (index is 2): */ parseInt("3", 2); // NaN
+/* 第一次迭代 (index 是 0): */ parseInt("1", 0); // 1
+/* 第二次迭代 (index 是 1): */ parseInt("2", 1); // NaN
+/* 第三次迭代 (index 是 2): */ parseInt("3", 2); // NaN
 ```
 
 下面让我们来讨论解决方案：

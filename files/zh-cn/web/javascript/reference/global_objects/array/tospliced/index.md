@@ -28,7 +28,7 @@ toSpliced(start, deleteCount, item1, item2, itemN)
 
   - : 一个整数，指示数组中要从 `start` 删除的元素数量。
 
-    如果 `deleteCount` 被省略了，或者如果它的值大于或等于由 `start` 指定的位置后面的元素数，将会删除从 `start` 到数组末尾的所有元素。然而，如果你想传递任何 `itemN` 参数，你应该传递 `Infinity` 作为 `deleteCount` 来删除 `start` 之后的所有元素，因为一个显式的 `undefined` 会[被转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
+    如果 `deleteCount` 被省略了，或者如果它的值大于或等于由 `start` 指定的位置到数组末尾的元素数量，将会删除从 `start` 到数组末尾的所有元素。但是，如果你想要传递任何 `itemN` 参数，则应向 `deleteCount` 传递 `Infinity` 值，以删除 `start` 之后的所有元素，因为显式的 `undefined` 会[转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)为 `0`。
 
     如果 `deleteCount` 是 `0` 或者负数，则不会删除元素。在这种情况下，你应该指定至少一个新元素（见下文）。
 
