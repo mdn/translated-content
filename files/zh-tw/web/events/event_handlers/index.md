@@ -12,8 +12,7 @@ _**on-event**_ 處理器為一群由 DOM 元素提供的屬性（{{Glossary("pro
 
 你可以使用兩種不同的方式來為一個物件的特定事件（例如：[`click`](/zh-TW/docs/Web/API/Element/click_event)）指定一個 `on<...>` 事件處理器：
 
-- 在元素上使用一個名稱為 `on{eventtype}` 的 HTML 標籤屬性（{{Glossary("attribute")}}），例如：
-`<button onclick="return handleClick(event);">`,
+- 在元素上使用一個名稱為 `on{eventtype}` 的 HTML 標籤屬性（{{Glossary("attribute")}}），例如：`<button onclick="return handleClick(event);">`，
 - 或藉由設定相對應的 JavaScript 屬性（{{Glossary("property/JavaScript", "property")}}），例如：`document.getElementById("mybutton").onclick = function(event) { ... }`.
 
 Note that each object can have **only one** _on-event_ handler for a given event (though that handler could call multiple sub-handlers). This is why {{domxref("EventTarget.addEventListener", "addEventListener()")}} is often the better way to get notified of events, especially when wishing to apply various event handlers independently from each other, even for the same event and/or to the same element.
@@ -35,19 +34,23 @@ xhr.onprogress = function() { ... }
 A handler registered via an `on<...>` attribute will be available via the corresponding `on<...>` property, but not the other way around:
 
 ```html
-<div id="a" onclick="alert('old')">Open the Developer Tools Console to see the output.</div>
+<div id="a" onclick="alert('old')">
+  Open the Developer Tools Console to see the output.
+</div>
 
 <script>
-window.onload = function () {
-  var div = document.getElementById("a");
-  console.log("Attribute reflected as a property: ", div.onclick.toString());
-  // Prints: function onclick(event) { alert('old') }
-  div.onclick = function() { alert('new') };
-  console.log("Changed property to: ", div.onclick.toString());
-  // Prints: function () { alert('new') }
-  console.log("Attribute value is unchanged: ", div.getAttribute("onclick"));
-  // Prints: alert('old')
-}
+  window.onload = function () {
+    var div = document.getElementById("a");
+    console.log("Attribute reflected as a property: ", div.onclick.toString());
+    // Prints: function onclick(event) { alert('old') }
+    div.onclick = function () {
+      alert("new");
+    };
+    console.log("Changed property to: ", div.onclick.toString());
+    // Prints: function () { alert('new') }
+    console.log("Attribute value is unchanged: ", div.getAttribute("onclick"));
+    // Prints: alert('old')
+  };
 </script>
 ```
 

@@ -66,7 +66,7 @@ l10n:
 
 > **メモ:** `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
 
-`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における {{htmlattrdef("alt", "img")}} 属性と同様に動作します。
+`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性と同様に動作します。
 
 ### formaction
 
@@ -184,7 +184,7 @@ l10n:
 
     この属性が指定された場合、要素のフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : ブラウザーがフォームを送信するために使用する HTTP メソッドを指定します。指定可能な値は以下のとおりです。
 

@@ -97,9 +97,9 @@ slug: Web/HTML/Element/menu
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("label")}} {{Deprecated_inline}}
+- `label` {{Deprecated_inline}}
   - : ユーザーに対して表示されるメニューの名称です。入れ子のメニューの中で、サブメニューへアクセスするためのラベルを提供するために使用されます。親要素が {{HTMLElement("menu")}} で*コンテキストメニュー*状態である場合に限り、指定する必要があります。
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : この属性は定義済みのメニューの種類を示すものであり、以下 2 つの値のいずれかを指定します。
 

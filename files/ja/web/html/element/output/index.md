@@ -76,7 +76,7 @@ slug: Web/HTML/Element/output
 
     この属性は `<output>` 要素を、包含する `<form>` に限らず文書中のどこにある `<form>` にも結び付けることができます。これは祖先の `<form>` 要素を上書きもします。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 要素の名前です。 {{domxref("HTMLFormElement.elements", "form.elements")}} API で使用されます。
 
 `<output>` の値、名前、内容はフォーム送信の過程で送信されません。

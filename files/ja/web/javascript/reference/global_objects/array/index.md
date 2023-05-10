@@ -282,7 +282,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.copyWithin()")}}
   - : 配列内で配列内の連続した要素を複写します。
 - {{jsxref("Array.prototype.entries()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中のそれぞれの位置に対するキー/値の組を保持しています。
 - {{jsxref("Array.prototype.every()")}}
   - : 指定したテスト関数を配列中のすべての要素が満たした場合に `true` を返します。
 - {{jsxref("Array.prototype.fill()")}}
@@ -314,7 +314,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.join()")}}
   - : 配列のすべての要素を結合した文字列を返します。
 - {{jsxref("Array.prototype.keys()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)を返します。このオブジェクトは配列中の各添字のキーを保持します。
 - {{jsxref("Array.prototype.lastIndexOf()")}}
   - : 指定された値と等しい値を持つ最後の (添字の一番大きい) 要素の添字を返します。見つからない場合、`-1` を返します。
 - {{jsxref("Array.prototype.map()")}}
@@ -346,7 +346,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.unshift()")}}
   - : 配列の最初に 1 個以上の要素を追加し、配列の変更後の `length` を返します。
 - {{jsxref("Array.prototype.values()")}}
-  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
+  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
 - [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : 既定では [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 関数を返します。
 

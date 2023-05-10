@@ -70,7 +70,7 @@ slug: Web/HTML/Element/pre
   - : 1 行あたりの*望ましい*文字数を示します。これは [`width`](/ja/docs/Web/HTML/Element/pre#width) の標準外の別名です。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。
 - `width` {{deprecated_inline}}
   - : 1 行あたりの*望ましい*文字数を示します。この属性は技術的には実装されていますが、視覚上の効果はありません。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。
-- {{htmlattrdef("wrap")}} {{non-standard_inline}}
+- `wrap` {{non-standard_inline}}
   - : テキストがはみ出た場合の処理に関する*ヒント*を示します。現行のブラウザーはこのヒントを無視して、視覚上の効果をもたらしません。同様の効果を得るには、CSS の {{Cssxref("white-space")}} を使用してください。
 
 ## 例

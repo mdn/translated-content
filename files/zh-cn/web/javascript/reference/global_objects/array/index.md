@@ -11,10 +11,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Array
 
 在 JavaScript 中，数组不是[基本类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)。）
+- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。）
 - **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
-- **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（*所有* JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
+- **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（_所有_ JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
 
 ### 数组下标
 
@@ -46,7 +46,7 @@ JavaScript 数组的 {{jsxref("Array/length", "length")}} 属性和数值属性�
 
 ```js
 const fruits = [];
-fruits.push('banana', 'apple', 'peach');
+fruits.push("banana", "apple", "peach");
 console.log(fruits.length); // 3
 ```
 
@@ -233,7 +233,7 @@ console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'
 
 #### 长度属性的规范化
 
-`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或 `undefined`，它也会表现得好像它的值是 `0`。
+`length` 属性被[转换为一个数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，被截断为一个整数，然后固定为 0 到 2<sup>53</sup> - 1 之间的范围。`NaN` 变成 `0`，所以即使 `length` 没有出现或是 `undefined`，它也会表现得好像它的值是 `0`。
 
 JavaScript 避免将 `length` 设置为[不安全的整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)。如果 `length` 将被设置为大于 2<sup>53</sup> - 1 的数字，则所有内置方法都将抛出 {{jsxref("TypeError")}}。但是，由于数组的 {{jsxref("Array/length", "length")}} 属性在设置为大于 2<sup>32</sup> 时会抛出错误，因此通常不会达到安全整数阈值，除非该方法在非数组对象上调用。
 
@@ -325,9 +325,9 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.flat()")}}
   - : 返回一个新数组，所有子数组元素递归地连接到其中，直到指定的深度。
 - {{jsxref("Array.prototype.flatMap()")}}
-  - : 对调用数组的每个元素调用给定的回调函数，然后将结果平展一层，返回一个新数组。
+  - : 对调用数组的每个元素调用给定的回调函数，然后将结果展平一层，返回一个新数组。
 - {{jsxref("Array.prototype.forEach()")}}
-  - : 对调用数组中的每个元素调用函数。
+  - : 对调用数组中的每个元素调用给定的函数。
 - {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
   - : 根据测试函数返回的字符串，将数组的元素分组到一个对象中。
 - {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
@@ -349,11 +349,11 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.push()")}}
   - : 在数组末尾添加一个或多个元素，并返回数组新的 `length`。
 - {{jsxref("Array.prototype.reduce()")}}
-  - : 对数组的每个元素（从左到右）执行用户提供的 “reducer” 回调函数，将其简化为单个值。
+  - : 对数组的每个元素（从左到右）执行用户提供的“reducer”回调函数，将其简化为单个值。
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : 对数组的每个元素（从右到左）执行用户提供的 “reducer” 回调函数，将其简化为单个值。
+  - : 对数组的每个元素（从右到左）执行用户提供的“reducer”回调函数，将其简化为单个值。
 - {{jsxref("Array.prototype.reverse()")}}
-  - : 反转数组中元素的顺序。（前面变成后面，后面变成前面。）
+  - : *就地*反转数组中元素的顺序。（前面变成后面，后面变成前面。）
 - {{jsxref("Array.prototype.shift()")}}
   - : 从数组中移除第一个元素并返回该元素。
 - {{jsxref("Array.prototype.slice()")}}
@@ -395,17 +395,17 @@ f("a", "b"); // 'a+b'
 
 ```js
 // 使用数组字面量创建的 'fruits' 数组。
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 console.log(fruits.length);
 // 2
 
 // 使用 Array() 构建函数创建的 'fruits2' 数组。
-const fruits2 = new Array('Apple', 'Banana');
+const fruits2 = new Array("Apple", "Banana");
 console.log(fruits2.length);
 // 2
 
 // 使用 String.prototype.split() 方法创建的 'fruits3' 数组。
-const fruits3 = 'Apple, Banana'.split(', ');
+const fruits3 = "Apple, Banana".split(", ");
 console.log(fruits3.length);
 // 2
 ```
@@ -415,8 +415,8 @@ console.log(fruits3.length);
 下面的例子使用 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法从 `fruits` 数组中创建一个字符串。
 
 ```js
-const fruits = ['Apple', 'Banana'];
-const fruitsString = fruits.join(', ');
+const fruits = ["Apple", "Banana"];
+const fruitsString = fruits.join(", ");
 console.log(fruitsString);
 // "Apple, Banana"
 ```
@@ -426,7 +426,7 @@ console.log(fruitsString);
 下面的例子展示了如何通过指定它们在数组中的位置的索引号来访问 `fruits` 数组中的元素。
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 
 // 数组第一个元素的索引始终为 0。
 fruits[0]; // Apple
@@ -446,7 +446,7 @@ fruits[99]; // undefined
 下面的例子使用 [`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法查找字符串 `"Banana"` 在 `fruits` 数组中的位置（索引）。
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 console.log(fruits.indexOf('Banana'));
 // 1
 ```
@@ -456,14 +456,14 @@ console.log(fruits.indexOf('Banana'));
 下面的例子展示了两种检查 `fruits` 数组是否包含 `"Banana"` 和 `"Cherry"` 的方法：首先使用 [`includes()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) 方法，然后使用 [`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 方法来测试索引值不是 `-1`。
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 
-fruits.includes('Banana'); // true
-fruits.includes('Cherry'); // false
+fruits.includes("Banana"); // true
+fruits.includes("Cherry"); // false
 
 // 如果 indexOf() 不返回 -1，则数组包含给定的元素。
-fruits.indexOf('Banana') !== -1; // true
-fruits.indexOf('Cherry') !== -1; // false
+fruits.indexOf("Banana") !== -1; // true
+fruits.indexOf("Cherry") !== -1; // false
 ```
 
 ### 将元素添加到数组中
@@ -471,8 +471,8 @@ fruits.indexOf('Cherry') !== -1; // false
 下面的例子使用 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 方法向 `fruits` 数组追加一个新字符串。
 
 ```js
-const fruits = ['Apple', 'Banana'];
-const newLength = fruits.push('Orange');
+const fruits = ["Apple", "Banana"];
+const newLength = fruits.push("Orange");
 console.log(fruits);
 // ["Apple", "Banana", "Orange"]
 console.log(newLength);
@@ -484,7 +484,7 @@ console.log(newLength);
 下面的例子使用 [`pop()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) 方法从 `fruits` 数组中移除最后一个元素。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Orange'];
+const fruits = ["Apple", "Banana", "Orange"];
 const removedItem = fruits.pop();
 console.log(fruits);
 // ["Apple", "Banana"]
@@ -499,7 +499,7 @@ console.log(removedItem);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中移除最后 3 个元素。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
 const start = -3;
 const removedItems = fruits.splice(start);
 console.log(fruits);
@@ -513,7 +513,7 @@ console.log(removedItems);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法将 `fruits` 数组截断到只剩下前 2 个元素。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango', 'Cherry'];
+const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
 const start = 2;
 const removedItems = fruits.splice(start);
 console.log(fruits);
@@ -527,7 +527,7 @@ console.log(removedItems);
 下面的例子使用 [`shift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 方法从 `fruits` 数组中移除第一个元素。
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 const removedItem = fruits.shift();
 console.log(fruits);
 // ["Banana"]
@@ -542,7 +542,7 @@ console.log(removedItem);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中移除前 3 个元素。
 
 ```js
-const fruits = ['Apple', 'Strawberry', 'Cherry', 'Banana', 'Mango'];
+const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
 const start = 0;
 const deleteCount = 3;
 const removedItems = fruits.splice(start, deleteCount);
@@ -557,8 +557,8 @@ console.log(removedItems);
 下面的例子使用 [`unshift()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) 方法在索引 `0` 处向 `fruits` 数组中添加一个新元素——使其成为数组中新的第一元素。
 
 ```js
-const fruits = ['Banana', 'Mango'];
-const newLength = fruits.unshift('Strawberry');
+const fruits = ["Banana", "Mango"];
+const newLength = fruits.unshift("Strawberry");
 console.log(fruits);
 // ["Strawberry", "Banana", "Mango"]
 console.log(newLength);
@@ -570,8 +570,8 @@ console.log(newLength);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中删除字符串 `"Banana"`——通过指定 `"Banana"` 的索引位置。
 
 ```js
-const fruits = ['Strawberry', 'Banana', 'Mango'];
-const start = fruits.indexOf('Banana');
+const fruits = ["Strawberry", "Banana", "Mango"];
+const start = fruits.indexOf("Banana");
 const deleteCount = 1;
 const removedItems = fruits.splice(start, deleteCount);
 console.log(fruits);
@@ -585,7 +585,7 @@ console.log(removedItems);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法从 `fruits` 数组中删除字符串 `"Banana"` 和 `"Strawberry"`——通过指定 `"Banana"` 的索引位置，以及要移除的元素总数。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Strawberry', 'Mango'];
+const fruits = ["Apple", "Banana", "Strawberry", "Mango"];
 const start = 1;
 const deleteCount = 2;
 const removedItems = fruits.splice(start, deleteCount);
@@ -600,7 +600,7 @@ console.log(removedItems);
 下面的例子使用 [`splice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 方法将 `fruits` 数组中的最后两个元素替换为新元素。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Strawberry'];
+const fruits = ["Apple", "Banana", "Strawberry"];
 const start = -2;
 const deleteCount = 2;
 const removedItems = fruits.splice(start, deleteCount, 'Mango', 'Cherry');
@@ -631,7 +631,7 @@ for (const fruit of fruits) {
 下面的例子使用 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 方法在 `fruits` 数组中的每个元素上调用一个函数；该函数将每个元素以及元素的索引号打印到控制台。
 
 ```js
-const fruits = ['Apple', 'Mango', 'Cherry'];
+const fruits = ["Apple", "Mango", "Cherry"];
 fruits.forEach((item, index, array) => {
   console.log(item, index);
 });
@@ -645,8 +645,8 @@ fruits.forEach((item, index, array) => {
 下面的例子使用 [`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 方法将 `fruits` 数组与 `moreFruits` 数组合并，生成一个新的 `combinedFruits` 数组。注意，`fruits` 和 `moreFruits` 保持不变。
 
 ```js
-const fruits = ['Apple', 'Banana', 'Strawberry'];
-const moreFruits = ['Mango', 'Cherry'];
+const fruits = ["Apple", "Banana", "Strawberry"];
+const moreFruits = ["Mango", "Cherry"];
 const combinedFruits = fruits.concat(moreFruits);
 console.log(combinedFruits);
 // ["Apple", "Banana", "Strawberry", "Mango", "Cherry"]
@@ -665,7 +665,7 @@ console.log(moreFruits);
 下面的例子展示了从现有的 `fruits` 数组创建新数组的三种方法：首先使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)，然后使用 [`from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 方法，然后使用 [`slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) 方法。
 
 ```js
-const fruits = ['Strawberry', 'Mango'];
+const fruits = ["Strawberry", "Mango"];
 
 // Create a copy using spread syntax.
 const fruitsCopy = [...fruits];
@@ -691,12 +691,12 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 
 ```js
-const fruits = ['Strawberry', 'Mango'];
+const fruits = ["Strawberry", "Mango"];
 const fruitsAlias = fruits;
 // 'fruits' 和 'fruitsAlias' 是同一个对象，严格相等。
 fruits === fruitsAlias // true
 // 对 'fruits' 数组的任何更改也会更改 'fruitsAlias'。
-fruits.unshift('Apple', 'Banana');
+fruits.unshift("Apple", "Banana");
 console.log(fruits);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 console.log(fruitsAlias);
@@ -817,7 +817,7 @@ console.table(values);
 // 忽略大小写
 
 const myRe = /d(b+)(d)/i;
-const execResult = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec("cdbBdbsbz");
 
 console.log(execResult.input); // 'cdbBdbsbz'
 console.log(execResult.index); // 1
@@ -836,10 +836,6 @@ console.log(execResult); // [ "dbBd", "bB", "d" ]
 
 ## 参见
 
-- JavaScript 指南：
-
-  - [对象属性索引](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象属性索引)
-  - [索引集合类：数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-
-- [类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
-- [RangeError: invalid array length](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}

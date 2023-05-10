@@ -79,7 +79,7 @@ slug: Web/HTML/Element/table
 
 ### 非推奨の属性
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
 
   - : この列挙属性は、表がそれを包含する文書の中でどのように整列されなければならないかを示します。以下の値を取ります。
 
@@ -89,37 +89,37 @@ slug: Web/HTML/Element/table
 
     {{cssxref("margin-left")}} および {{cssxref("margin-right")}} に `auto` を指定したり、 {{cssxref("margin")}} に `0 auto` を指定したりすると、 `align` 属性と同様の効果を得ることができます。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。値は[6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/color_value#RGB_colors)で、その前に「`#`」が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)のうちの 1 つを使用することもできます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{htmlattrdef("border")}} {{Deprecated_inline}}
+- `border` {{Deprecated_inline}}
 
   - : この整数値属性は、ピクセル値で、表を囲む枠の大きさを定義します。もし 0 が設定された場合、それは [`frame`](/ja/docs/Web/HTML/Element/table#frame) 属性が void に設定されることを意味します。
 
     同様の効果を得るには、 {{cssxref("border")}} 一括指定プロパティを使用してください。
 
-- {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
+- `cellpadding` {{Deprecated_inline}}
 
   - : この属性は、セルの内容と境界線の間の空間を、表示・非表示を問わず定義します。 cellpadding の長さがピクセル数で定義されたのであれば、このピクセルの大きさの余白が、4 方向全てに適用されるでしょう。長さがパーセント値を用いて定義された場合は、内容は中央に配置され、垂直方向 (上下) の余白の合計値がこの値で表されます。水平方向 (左右) の余白の合計も同じことが言えます。
 
     同様の効果を得るには、 {{cssxref("border-collapse")}} プロパティを `<table>` 要素に適用し、値を collapse に設定した上で、 {{cssxref("padding")}} プロパティを {{HTMLElement("td")}} 要素に使用してください。
 
-- {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
+- `cellspacing` {{Deprecated_inline}}
 
   - : この属性は、2 つのセルの間の空間の寸法を、パーセント値またはピクセル値で定義します。この属性は水平方向と垂直方向の両方に適用され、表の上端と最初の行におけるセルの間、表の左端と最初の列の間、表の右端と最後の列の間、表の下端と最後の行の間に適用されます。
 
     同様の効果を得るには、 {{cssxref("border-spacing")}} プロパティを `<table>` 要素に適用してください。 `border-spacing` は、 {{cssxref("border-collapse")}} が collapse に設定されていると何の効果もありません。
 
-- {{htmlattrdef("frame")}} {{Deprecated_inline}}
+- `frame` {{Deprecated_inline}}
 
   - : これは列挙型の属性で、表を囲む枠線のどの方向が表示されなければならないかを定義します。
 
     同様の効果を得るには、 {{cssxref("border-style")}} および {{cssxref("border-width")}} プロパティを使用してください。
 
-- {{htmlattrdef("rules")}} {{Deprecated_inline}}
+- `rules` {{Deprecated_inline}}
 
   - : これは列挙型の属性で、表内のどこに罫線が引かれるべきかを定義します。以下の値を持つことができます。
 
@@ -131,9 +131,9 @@ slug: Web/HTML/Element/table
 
     同様の効果を得るには、 {{cssxref("border")}} プロパティを {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}} のうち適切な要素に適用してください。
 
-- {{htmlattrdef("summary")}} {{Deprecated_inline}}
+- `summary` {{Deprecated_inline}}
   - : この属性は、表の内容の概要を示す代替テキストを定義します。代わりに {{HTMLElement("caption")}} 要素を使用してください。
-- {{htmlattrdef("width")}} {{Deprecated_inline}}
+- `width` {{Deprecated_inline}}
   - : この属性は表の幅を定義します。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
 ## 例

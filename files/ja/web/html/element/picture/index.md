@@ -101,7 +101,7 @@ DPI の高い (高解像度の) ディスプレイのために高解像度版の
 
 ### srcset 属性
 
-[{{htmlattrdef("srcset")}}](/ja/docs/Web/HTML/Element/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
+[`srcset`](/ja/docs/Web/HTML/Element/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
 
 これは画像記述子のカンマ区切りのリストで構成されます。それぞれの画像記述子は画像の URL と、次の*いずれか*で構成されます。
 

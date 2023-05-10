@@ -21,7 +21,7 @@ slug: Web/HTML/Element/tr
 
 以下の属性はまだブラウザーが実装していますが、すでに HTML 仕様に含まれていませんのでまったく動作しない、あるいは期待どおりに動作しない可能性があります。使用は避けてください。
 
-- {{HTMLAttrDef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 文字列で、行の各セルの中身について、水平方向の配置方法を指定します。これは行内の全セルで個別に `align` を使用することに対する一括指定です。以下の値を指定可能です。
 
@@ -40,25 +40,25 @@ slug: Web/HTML/Element/tr
 
     > **メモ:** 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
 
-- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
 
   - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
     > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、[CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-color")}} プロパティを使用してください。
 
-- {{HTMLAttrDef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
 
   - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性が `char` ではない場合は、この属性は無視されます。
 
     > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。 [`char`](/ja/docs/Web/HTML/Element/tr#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
-- {{HTMLAttrDef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
 
   - : 文字列で、 `char` 属性で指定した揃え文字から行のデータをオフセットする文字数を示します。例えば通貨単位の 100 分の 1 の値を使用する通貨 (例えばドルであり、100 セントに分割されます) の金額を表示するときは、一般的に値 2 を指定するでしょう。 `char` に `"."` を設定することと組み合わせると、列内の値が小数点できれいに揃い、セントの数値が小数点の右側へ適切に表示されます。
 
     > **メモ:** この属性は廃止されただけでなく、ほとんど実装されていませんでした。
 
-- {{HTMLAttrDef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 

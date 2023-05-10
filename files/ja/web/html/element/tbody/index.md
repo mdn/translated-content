@@ -68,7 +68,7 @@ slug: Web/HTML/Element/tbody
 
 ### 非推奨の属性
 
-- {{ htmlattrdef("align") }} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は各セルの中身について、水平方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -84,17 +84,17 @@ slug: Web/HTML/Element/tbody
 
     > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/color_value#RGB_colors)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)のうちの一つを利用することもできます。
 
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{ htmlattrdef("char") }} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](/ja/docs/Web/HTML/Element/tbody#align) 属性を `char` に設定していない場合は、この属性は無視されます。
-- {{ htmlattrdef("charoff") }} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{ htmlattrdef("valign") }} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 

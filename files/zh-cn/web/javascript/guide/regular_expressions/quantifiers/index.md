@@ -187,7 +187,7 @@ console.log(text.match(nonGreedyRegexp));
 
   - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
 
 - [The `RegExp()` constructor](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

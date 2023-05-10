@@ -75,7 +75,7 @@ slug: Web/HTML/Element/area
 
 <!---->
 
-- {{htmlattrdef("coords")}}
+- `coords`
 
   - : code>coords 属性は `<area>` の寸法、形状、配置における [`shape`](#attr-shape) 属性の座標を詳述します。
 
@@ -96,7 +96,7 @@ slug: Web/HTML/Element/area
   - : リンク先のリソースの言語を示します。許容される値は [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) で定めています。この属性は、 [`href`](/ja/docs/Web/HTML/Element/area#href) 属性を与える場合にのみ使用してください。
 - `ping`
   - : ハイパーリンクがフォローされたときに、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として (バックグラウンドで) 送信する URL を空白で区切ったリストで記述します。ふつうはトラッキング用に使用します。
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
 
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です:
 
@@ -114,7 +114,7 @@ slug: Web/HTML/Element/area
 
     多くのブラウザー、特に Internet Explorer 4 以降では `circ`, `polygon`, `rectangle` を [`shape`](/ja/docs/Web/HTML/Element/area#shape) の有効な値として対応していますが、これらの値は標準外です。
 
-- {{htmlattrdef("target")}}
+- `target`
 
   - : キーワードまたは作成者が定義した名前で、リンクされたリソースを表示する{{Glossary("browsing context", "閲覧コンテキスト")}}です。
 
@@ -131,17 +131,17 @@ slug: Web/HTML/Element/area
 
 ### 非推奨の属性
 
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `name` {{deprecated_inline}}
   - : 古いブラウザーでスクリプトから使用できるようにするため、クリッカブル領域に名前を定義します。
-- {{htmlattrdef("nohref")}} {{deprecated_inline}}
+- `nohref` {{deprecated_inline}}
 
   - : 関連づけた領域にハイパーリンクがないことを示します。
 
     > **メモ:** HTML5 では `href` 属性を省略すれば十分です。
 
-- {{htmlattrdef("tabindex")}} {{deprecated_inline}}
+- `tabindex` {{deprecated_inline}}
   - : ブラウザーのタブオーダーにおける、定義した領域の位置を示す数値です。この属性は HTML5 のグローバル属性です。
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : この属性は使用しないでください。ブラウザーは無視します (HTML 仕様書の W3C 5.3 では有効なものとして定義していますが、[正規の HTML 仕様書](https://html.spec.whatwg.org/multipage/#the-area-element)では定義していておらず、どのユーザーエージェントでも効果がありません。)
 
 ## 例

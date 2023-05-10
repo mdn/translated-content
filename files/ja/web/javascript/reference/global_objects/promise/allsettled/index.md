@@ -20,7 +20,7 @@ Promise.allSettled(iterable)
 ### 引数
 
 - `iterable`
-  - : プロミスの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)（{{jsxref("Array")}} など）です。
+  - : プロミスの[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（{{jsxref("Array")}} など）です。
 
 ### 返値
 

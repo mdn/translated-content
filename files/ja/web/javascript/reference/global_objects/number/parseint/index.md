@@ -1,17 +1,19 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-**`Number.parseInt()`** は、文字列の引数を解釈し、指定された基数の整数値を返します。
+**`Number.parseInt()`** は静的メソッドで、文字列の引数を解釈し、指定された基数の整数値を返します。
 
 {{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
 
 ## 構文
 
-```js
+```js-nolint
 Number.parseInt(string)
 Number.parseInt(string, radix)
 ```
@@ -19,10 +21,10 @@ Number.parseInt(string, radix)
 ### 引数
 
 - `string`
-  - : 解釈する値。この引数が文字列でない場合、抽象操作 [`ToString`](https://tc39.es/ecma262/#sec-tostring) を用いて文字列に変換されます。この引数では先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
-- `radix` _{{optional_inline}}_
+  - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+- `radix` {{optional_inline}}
 
-  - : `2` から `36` までの整数で、 `string` の*基数* (数学的記数法の底) を表します。
+  - : `2` から `36` までの整数で、 `string` の*基数*（数学的記数法の底）を表します。
 
     `radix` が未定義または `0` であった場合、通常は `10` と見なされますが、数値が `0x` または `0X` のコードの組み合わせであった場合は `16` と見なされます。
 
@@ -39,10 +41,10 @@ Number.parseInt(string, radix)
 このメソッドはグローバル関数の {{jsxref("parseInt", "parseInt()")}} と同じです。
 
 ```js
-Number.parseInt === parseInt // true
+Number.parseInt === parseInt; // true
 ```
 
-また、 ECMAScript 2015 で定められているものです (グローバル値のモジュール化のため)。詳細や例は {{jsxref("parseInt", "parseInt()")}} を参照してください。
+この目的は、グローバル値のモジュール化のためです。詳細や例は {{jsxref("parseInt", "parseInt()")}} を参照してください。
 
 ## 仕様書
 
@@ -54,6 +56,6 @@ Number.parseInt === parseInt // true
 
 ## 関連情報
 
-- `Number.parseInt` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-number) で利用できます
+- [`Number.parseInt` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-number)
 - 所属先の {{jsxref("Number")}} オブジェクト
 - グローバルメソッドの {{jsxref("parseInt", "parseInt()")}}

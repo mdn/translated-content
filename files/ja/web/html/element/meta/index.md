@@ -93,7 +93,7 @@ l10n:
 
 > **メモ:** [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに [`name`](/ja/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv), [`charset`](/ja/docs/Web/HTML/Element/meta#charset) のいずれかがある場合は設定してはいけません。
 
-- {{htmlattrdef("charset")}}
+- `charset`
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
 - `content`
   - : この属性は状況に応じて、[`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性または [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性に関連付けられた値を持ちます。
@@ -132,7 +132,7 @@ l10n:
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
 

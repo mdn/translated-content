@@ -36,7 +36,7 @@ l10n:
 - 非推奨の [for each...in](/ja/docs/Web/JavaScript/Reference/Statements/for_each...in) ループは、[コンソールで警告が発生する](/ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) ようになりました ([Firefox バグ 1293205](https://bugzil.la/1293205))。標準化された [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用するように、コードを移行してください。
 - [ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*) は [label](/ja/docs/Web/JavaScript/Reference/Statements/label) を持つことができなくなりました。また、ラベル名として "`let`" が許可されなくなりました ([Firefox バグ 1288459](https://bugzil.la/1288459))。
 - 非推奨の [古いジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) を [メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) 内で使用すると、エラーが発生するようになりました ([Firefox バグ 1199296](https://bugzil.la/1199296))。
-- [反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル) の `next()` メソッドは、返値がオブジェクトではない場合に {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1016936](https://bugzil.la/1016936))。
+- [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) の `next()` メソッドは、返値がオブジェクトではない場合に {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1016936](https://bugzil.la/1016936))。
 
 ### 開発者ツール
 

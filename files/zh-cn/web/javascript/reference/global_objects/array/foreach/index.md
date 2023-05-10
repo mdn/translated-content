@@ -35,7 +35,7 @@ forEach(callbackFn, thisArg)
 
 ## 描述
 
-`forEach()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按索引升序地为数组中的每个元素调用一次提供的 `callbackFn` 函数。与 {{jsxref("Array.prototype.map()", "map()")}} 不同，`forEach()` 总是返回 {{jsxref("undefined")}}，而且不能链式调用。典型的用法是在链的末尾执行某些操作。
+`forEach()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按索引升序地为数组中的每个元素调用一次提供的 `callbackFn` 函数。与 {{jsxref("Array.prototype.map()", "map()")}} 不同，`forEach()` 总是返回 {{jsxref("undefined")}}，而且不能继续链式调用。其典型的用法是在链式调用的末尾执行某些操作。
 
 `callbackFn` 仅对已赋值的数组索引调用。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽，它不会被调用。
 
@@ -43,17 +43,17 @@ forEach(callbackFn, thisArg)
 
 - 当调用 `forEach()` 时，`callbackFn` 不会访问超出数组初始长度的任何元素。
 - 已经访问过的索引的更改不会导致 `callbackFn` 再次调用它们。
-- 如果 `callbackFn` 更改了数组中已经存在但尚未访问的元素，则传递给 `callbackFn` 的值将是在访问该元素时的值。已经被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 的元素不会被访问。
+- 如果 `callbackFn` 更改了数组中已经存在但尚未访问的元素，则传递给 `callbackFn` 的值将是在访问该元素时的值。已经被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素不会被访问。
 
 > **警告：** 上述类型的并发修改经常导致难以理解的代码，通常应避免（特殊情况除外）。
 
 `forEach()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
-除非抛出异常，否则没有办法停止或中断 `forEach()` 循环。如果需要这样的行为，则 `forEach()` 方法是错误的工具。
+除非抛出异常，否则没有办法停止或中断 `forEach()` 循环。如果有这样的需求，则不应该使用 `forEach()` 方法。
 
 可以通过像 [`for`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 和 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 这样的循环语句来实现提前终止。当不需要进一步迭代时，诸如 {{jsxref("Array/every", "every()")}}、{{jsxref("Array/some", "some()")}}、{{jsxref("Array/find", "find()")}} 和 {{jsxref("Array/findIndex", "findIndex()")}} 等数组方法也会立即停止迭代。
 
-`forEach()` 期望的是一个同步函数，它不会等待 Promise。在使用 Promise（或异步函数）作为 `forEach` 回调时，请确保你意识到这一点可能带来的影响。
+`forEach()` 期望的是一个同步函数，它不会等待 Promise 兑现。在使用 Promise（或异步函数）作为 `forEach` 回调时，请确保你意识到这一点可能带来的影响。
 
 ```js
 const ratings = [5, 4, 5];
