@@ -85,7 +85,7 @@ if (x === undefined) { // lanza un ReferenceError
 }
 ```
 
-Sin embargo, este tipo de técnica debe evitarse. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en un contexto de inclusión. 
+Sin embargo, este tipo de técnica debe evitarse. JavaScript es un lenguaje de ámbito estático, por lo que determinar si una variable se encuentra declarada puede ser definido al ver si está declarada en un contexto de inclusión.
 
 La única excepción es el ámbito global, pero el ámbito global está vinculado al objeto global, por lo que comprobar la existencia de una variable en el contexto global puede realizarse comprobando la existencia de una propiedad del _objeto global_ (utilizando el operador {{jsxref("Operators/in", "in")}}, por ejemplo:
 
