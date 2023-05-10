@@ -182,37 +182,41 @@ TEMPLATES = [
 創建一個名為/**locallibrary/templates/registration/login.html**的新 HTML 文件。 為其提供以下內容：
 
 ```django
-{% extends "base_generic.html" %} {% block content %} {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %} {% if next %} {% if user.is_authenticated %}
-<p>
-  Your account doesn't have access to this page. To proceed, please login with
-  an account that has access.
-</p>
-{% else %}
-<p>Please login to see this page.</p>
-{% endif %} {% endif %}
+{% extends "base_generic.html" %}
 
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %}
+{% block content %}
 
-  <div>
-    <td>\{{ form.username.label_tag }}</td>
-    <td>\{{ form.username }}</td>
-  </div>
-  <div>
-    <td>\{{ form.password.label_tag }}</td>
-    <td>\{{ form.password }}</td>
-  </div>
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
 
-  <div>
-    <input type="submit" value="login" />
-    <input type="hidden" name="next" value="\{{ next }}" />
-  </div>
-</form>
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
 
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>{{ form.username.label_tag }}</td>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>{{ form.password.label_tag }}</td>
+        <td>{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
 ```
@@ -239,9 +243,11 @@ LOGIN_REDIRECT_URL = '/'
 創建並打開 /**locallibrary/templates/registration/logged_out.html**。複製以下文本：
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<p>Logged out!</p>
-<a href="{% url 'login'%}">Click here to login again.</a>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>Logged out!</p>
+  <a href="{% url 'login'%}">Click here to login again.</a>
 {% endblock %}
 ```
 
@@ -260,13 +266,17 @@ LOGIN_REDIRECT_URL = '/'
 這是用於獲取用戶電子郵件地址（用於發送密碼重置電子郵件）的表格。 創建**/locallibrary/templates/registration/password_reset_form.html**，並為其提供以下內容：
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<form action="" method="post">
-  {% csrf_token %} {% if form.email.errors %} {{ form.email.errors }} {% endif
-  %}
-  <p>\{{ form.email }}</p>
-  <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <form action="" method="post">
+  {% csrf_token %}
+  {% if form.email.errors %}
+    {{ form.email.errors }}
+  {% endif %}
+      <p>{{ form.email }}</p>
+    <input type="submit" class="btn btn-default btn-lg" value="Reset password">
+  </form>
 {% endblock %}
 ```
 
@@ -275,11 +285,10 @@ LOGIN_REDIRECT_URL = '/'
 收集您的電子郵件地址後，將顯示此表單。創建 **/locallibrary/templates/registration/password_reset_done.html**，並為其提供以下內容：
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<p>
-  We've emailed you instructions for setting your password. If they haven't
-  arrived in a few minutes, check your spam folder.
-</p>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
 {% endblock %}
 ```
 
@@ -288,9 +297,8 @@ LOGIN_REDIRECT_URL = '/'
 該模板提供了 HTML 電子郵件的文本，其中包含我們將發送給用戶的重置鏈接。 創建**/locallibrary/templates/registration/password_reset_email.html**，並為其提供以下內容：
 
 ```django
-Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid
-token=token %}
+Someone asked for password reset for email {{ email }}. Follow the link below:
+{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### 密碼重置確認
@@ -298,40 +306,35 @@ token=token %}
 單擊密碼重置電子郵件中的鏈接後，即可在此頁面輸入新密碼。 創建 **/locallibrary/templates/registration/password_reset_confirm.html**，並為其提供以下內容：
 
 ```django
-{% extends "base_generic.html" %} {% block content %} {% if validlink %}
-<p>Please enter (and confirm) your new password.</p>
-<form action="" method="post">
-  <div style="display:none">
-    <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken" />
-  </div>
-  <table>
-    <tr>
-      <td>
-        \{{ form.new_password1.errors }}
-        <label for="id_new_password1">New password:</label>
-      </td>
-      <td>\{{ form.new_password1 }}</td>
-    </tr>
-    <tr>
-      <td>
-        \{{ form.new_password2.errors }}
-        <label for="id_new_password2">Confirm password:</label>
-      </td>
-      <td>\{{ form.new_password2 }}</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td><input type="submit" value="Change my password" /></td>
-    </tr>
-  </table>
-</form>
-{% else %}
-<h1>Password reset failed</h1>
-<p>
-  The password reset link was invalid, possibly because it has already been
-  used. Please request a new password reset.
-</p>
-{% endif %} {% endblock %}
+{% extends "base_generic.html" %}
+
+{% block content %}
+    {% if validlink %}
+        <p>Please enter (and confirm) your new password.</p>
+        <form action="" method="post">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.new_password1.errors }}
+                        <label for="id_new_password1">New password:</label></td>
+                    <td>{{ form.new_password1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.new_password2.errors }}
+                        <label for="id_new_password2">Confirm password:</label></td>
+                    <td>{{ form.new_password2 }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Change my password"></td>
+                </tr>
+            </table>
+        </form>
+    {% else %}
+        <h1>Password reset failed</h1>
+        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
+    {% endif %}
+{% endblock %}
 ```
 
 #### 密碼重置完成
@@ -339,9 +342,11 @@ token=token %}
 這是最後一個密碼重設模板，密碼重設成功後將顯示此模板以通知您。 創建**/locallibrary/templates/registration/password_reset_complete.html**，並為其提供以下內容：
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<h1>The password has been changed!</h1>
-<p><a href="{% url 'login' %}">log in again?</a></p>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>The password has been changed!</h1>
+  <p><a href="{% url 'login' %}">log in again?</a></p>
 {% endblock %}
 ```
 
@@ -377,14 +382,17 @@ token=token %}
 打開基礎模板。 (**/locallibrary/catalog/templates/base_generic.html**) ，然後將以下文本複製到`sidebar` 塊中，緊接在`endblock` 模板標籤之前。
 
 ```django
-<ul class="sidebar-nav">
-  ... {% if user.is_authenticated %}
-  <li>User: \{{ user.get_username }}</li>
-  <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
-  {% else %}
-  <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
-  {% endif %}
-</ul>
+  <ul class="sidebar-nav">
+
+    …
+
+   {% if user.is_authenticated %}
+     <li>User: {{ user.get_username }}</li>
+     <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
+   {% else %}
+     <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
+   {% endif %}
+  </ul>
 ```
 
 如您所見，我們使用 `if`-`else`-`endif` 模板標籤根據 `\{{ user.is_authenticated }}` \ {{user.is_authenticated}}是否為真來有條件地顯示文本。 如果用戶通過了身份驗證，那麼我們知道我們有一個有效的用戶，因此我們調用 **\\{{ user.get_username }}** 來顯示其名稱。
@@ -536,7 +544,7 @@ urlpatterns += [
 
 現在，我們需要為此頁面添加模板。 首先，創建模板文件 **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** 並為其提供以下內容：
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -547,7 +555,7 @@ urlpatterns += [
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">{{ bookinst.book.title }}</a> ({{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -568,14 +576,16 @@ urlpatterns += [
 
 打開基本模板 (**/locallibrary/catalog/templates/base_generic.html**) 並將粗體顯示的行添加到側邊欄中，如圖所示。
 
-```python
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
-   <li>User: \{{ user.get_username }}</li>
+   <li>User: {{ user.get_username }}</li>
+
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+
+   <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```
@@ -612,7 +622,7 @@ class BookInstance(models.Model):
 
 當前用戶的權限存儲在名為 `\{{ perms }}`. 的模板變量中。 您可以使用關聯的 Django "app"“應用”中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 `\{{ perms.catalog.can_mark_returned }}` 將為 `True` ，否則為`False`。 我們通常使用模板 `{% if %}` 標籤測試權限，如下所示：
 
-```python
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->
@@ -655,7 +665,7 @@ class MyView(PermissionRequiredMixin, View):
 
 在本文的前面，我們向您展示瞭如何為當前用戶創建一個頁面，列出他們所借用的書。 現在的挑戰是創建一個僅對圖書館員可見的相似頁面，該頁面顯示所有已借書的書，其中包括每個借書人的名字。
 
-您應該能夠遵循與其他視圖相同的模式。 主要區別在於您只需要將視圖限制為圖書館員即可。 您可以根據用戶是否是工作人員來執行此操作（函數裝飾器：`staff_member_required`，模板變量： `user.is_staff`），但是我們建議您改用`can_mark_returned` 權限和`PermissionRequiredMixin`，如上一節所述。
+您應該能夠遵循與其他視圖相同的模式。 主要區別在於您只需要將視圖限制為圖書館員即可。 您可以根據用戶是否是工作人員來執行此操作（函數裝飾器：`staff_member_required`，模板變量：`user.is_staff`），但是我們建議您改用`can_mark_returned` 權限和`PermissionRequiredMixin`，如上一節所述。
 
 > **警告：** 請記住不要將您的超級用戶用於基於權限的測試（即使尚未定義權限，權限檢查也始終對超級用戶返回 true！）。 而是創建一個圖書管理員用戶，並添加所需的功能。
 
