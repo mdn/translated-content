@@ -121,4 +121,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [换行和折行文本的指引](/zh-cn/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [换行和折行文本的指引](/zh-CN/docs/Web/CSS/CSS_Text/Wrapping_Text)
