@@ -90,7 +90,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
 #### HTML
 
-```
+```html
 <ul id="test">
   <li>item 1</li>
   <li>item 2</li>
@@ -101,29 +101,37 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 #### JavaScript
 
 ```js
-let test = document.getElementById("test");
+const test = document.getElementById("test");
 
 // 当鼠标移出 <ul> 元素时，短暂地将列表变成紫色
-test.addEventListener("mouseleave", function( event ) {
-  // 高亮 mouseleave 的目标
-  event.target.style.color = "purple";
+test.addEventListener(
+  "mouseleave",
+  (event) => {
+    // 高亮 mouseleave 的目标
+    event.target.style.color = "purple";
 
-  // 延迟一秒后重置颜色
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 1000);
-}, false);
+    // 延迟一秒后重置颜色
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 1000);
+  },
+  false
+);
 
 // 当鼠标离开 <li> 元素时，短暂地将其变成橙色
-test.addEventListener("mouseout", function( event ) {
-  // 高亮 mouseout 的目标
-  event.target.style.color = "orange";
+test.addEventListener(
+  "mouseout",
+  (event) => {
+    // 高亮 mouseout 的目标
+    event.target.style.color = "orange";
 
-  // 延迟 500ms 后重置颜色
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // 延迟 500ms 后重置颜色
+    setTimeout(() => {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false
+);
 ```
 
 #### 结果
