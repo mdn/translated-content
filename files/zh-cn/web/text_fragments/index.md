@@ -53,7 +53,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 - 用于 `textStart`、`textEnd`、`prefix-` 和 `suffix` 值的文本字符串需要作[百分比编码](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)。
 - 匹配是大小写不敏感的。
-- 单独的 `textStart`、`textEnd`、`prefix-` 和 `suffix` 字符串需要完全位于同一个[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements#元素)中，但完整的匹配可以跨越多个元素的边界。
+- 单独的 `textStart`、`textEnd`、`prefix-` 和 `suffix` 字符串需要完全位于同一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)中，但完整的匹配可以跨越多个元素的边界。
 - 出于安全考虑，该功能要求在 noopener 上下文中打开链接——使用该特性时，你需要在你的 {{htmlelement("a")}} 元素中添加 `rel="noopener"`，并在你的 {{domxref("window.open()")}} 调用中添加 `noopener`。
 - 文本片段只在完整的（非同一页面）、用户发起的导航中被调用。
 - 文本片段只适用于主框架；文本不会在 {{htmlelement("iframe")}} 内被搜索到，并且 `iframe` 导航不会调用文本片段。

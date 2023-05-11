@@ -2327,15 +2327,15 @@
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
-/zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
-/zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
+/zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
+/zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/Glossary/Inline-level_content
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Link_types	/zh-CN/docs/Web/HTML/Attributes/rel
 /zh-CN/docs/Web/HTML/Link_types/prefetch	/zh-CN/docs/Web/HTML/Attributes/rel/prefetch
 /zh-CN/docs/Web/HTML/Link_types/preload	/zh-CN/docs/Web/HTML/Attributes/rel/preload
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
-/zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
+/zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Glossary/Inline-level_content
 /zh-CN/docs/Web/HTML/动作	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/属性	/zh-CN/docs/Web/HTML/Attributes
 /zh-CN/docs/Web/HTTP/Access_control_CORS	/zh-CN/docs/Web/HTTP/CORS
@@ -2718,7 +2718,6 @@
 /zh-CN/docs/learn/常见问题/What_is_accessibility	/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 /zh-CN/docs/learn/常见问题/网页，网站，网页服务器和搜索引擎的区别是什么？	/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /zh-CN/docs/learn/探索浏览器开发者工具	/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-/zh-CN/docs/orphaned/Web/HTTP/Headers/Set-Cookie/SameSite	/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /zh-CN/docs/为Firefox_3升级扩展	/zh-CN/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /zh-CN/docs/使用Javascript和DOM_Interfaces来处理HTML	/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 /zh-CN/docs/安全	/zh-CN/docs/Web/Security

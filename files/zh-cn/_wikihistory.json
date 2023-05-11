@@ -1062,6 +1062,17 @@
     "modified": "2019-03-18T21:36:43.305Z",
     "contributors": ["maoyumaoxun"]
   },
+  "Glossary/Inline-level_content": {
+    "modified": "2020-08-05T19:04:54.777Z",
+    "contributors": [
+      "mitaosi",
+      "chrisdavidmills",
+      "Raine_Huang",
+      "FredWe",
+      "ziyunfei",
+      "pmtao"
+    ]
+  },
   "Glossary/Input_method_editor": {
     "modified": "2020-11-05T12:12:12.471Z",
     "contributors": ["xgqfrms"]
@@ -33558,17 +33569,6 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
-    ]
-  },
-  "orphaned/Web/HTML/Inline_elements": {
-    "modified": "2020-08-05T19:04:54.777Z",
-    "contributors": [
-      "mitaosi",
-      "chrisdavidmills",
-      "Raine_Huang",
-      "FredWe",
-      "ziyunfei",
-      "pmtao"
     ]
   }
 }

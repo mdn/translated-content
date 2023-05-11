@@ -1,12 +1,9 @@
 ---
 title: 块级元素
 slug: Glossary/Block-level_content
-original_slug: Web/HTML/Block-level_elements
 ---
 
-{{HTMLSidebar}}
-
-HTML（超文本标记语言）中元素大多数都是“块级”元素或[行内元素](/zh-CN/docs/Web/HTML/Inline_elements)。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。
+HTML（超文本标记语言）中元素大多数都是“块级”元素或[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。
 
 通常浏览器会在块级元素前后另起一个新行。下面的例子表明了块级元素的作用：
 
@@ -92,4 +89,4 @@ HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中
 
 ### 参见
 
-- [行内元素](/zh-CN/docs/Web/HTML/Inline_elements)
+- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)
