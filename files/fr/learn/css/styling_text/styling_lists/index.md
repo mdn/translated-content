@@ -84,6 +84,10 @@ paragraphe de référence, paragraphe de référence, paragraphe de référence.
 </dl>
 ```
 
+### Résultat
+
+{{EmbedLiveSample('','100%',770)}}
+
 Si vous allez à l'exemple réel maintenant, et examinez les éléments de la liste en utilisant [les outils de développement des navigateurs](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools), vous noterez quelques valeurs de style par défaut&nbsp;:
 
 - Les éléments [`<ul>`](/fr/docs/Web/HTML/Element/ul) et [`<ol>`](/fr/docs/Web/HTML/Element/ol) ont une propriété [`margin`](/fr/docs/Web/CSS/margin) de `16px` (`1em`) en haut et en bas et une propriété [`padding-left`](/fr/docs/Web/CSS/padding-left) de `40px` (`2.5em`).
@@ -255,7 +259,7 @@ L'attribut [`start`](/fr/docs/Web/HTML/Element/ol#attr-start) vous permet de com
 </ol>
 ```
 
-vous donne cette sortie&nbsp;:
+#### Résultat
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
@@ -272,7 +276,7 @@ L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#attr-reversed) inverse la n
 </ol>
 ```
 
-donne cette sortie&nbsp;:
+#### Résultat
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
@@ -291,7 +295,7 @@ L'attribut [`value`](/fr/docs/Web/HTML/Element/ol#attr-value) vous permet de num
 </ol>
 ```
 
-vous donne cette sortie&nbsp;:
+#### Résultat
 
 {{ EmbedLiveSample('', '100%', 150) }}
 
