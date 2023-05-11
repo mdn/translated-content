@@ -102,5 +102,5 @@ h2 {
 
 ## 参见
 
-- [行级元素](/zh-CN/docs/Web/HTML/Inline_elements)
+- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}
