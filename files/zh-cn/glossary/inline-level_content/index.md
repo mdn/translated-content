@@ -1,5 +1,5 @@
 ---
-title: 行级内容（inline-level content）
+title: 行级内容
 slug: Glossary/Inline-level_content
 ---
 
@@ -9,7 +9,7 @@ slug: Glossary/Inline-level_content
 
 ![行内布局](inline_layout.png)
 
-> **备注：** HTML（*超文本标记语言*）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
+> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
 
 ## 示例
 
@@ -22,7 +22,7 @@ slug: Glossary/Inline-level_content
 </p>
 ```
 
-在该示例中，{{HTMLElement("p")}} 元素包含一些文本。在该文本中有一个 {{HTMLElement("span")}} 元素和两个 {{HTMLElement("input")}} 元素，它们都是行级元素。如果，`<span>` 分布在两条线上，则会生成两个线盒。因为这些元素是行内的，该段落只会渲染为不间断文本留的单个段落：
+在该示例中，{{HTMLElement("p")}} 元素包含一些文本。在该文本中有一个 {{HTMLElement("span")}} 元素和两个 {{HTMLElement("input")}} 元素，它们都是行级元素。如果，`<span>` 分布在两条线上，则会生成两个线盒。因为这些元素是行内的，该段落只会渲染为不间断文本流的单个段落：
 
 ```css hidden
 body {
