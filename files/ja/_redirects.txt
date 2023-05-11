@@ -2067,7 +2067,6 @@
 /ja/docs/HTML/HTML_Elements/strong	/ja/docs/Web/HTML/Element/strong
 /ja/docs/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
-/ja/docs/HTML/Inline_elements	/ja/docs/orphaned/Web/HTML/Inline_elements
 /ja/docs/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
@@ -2077,7 +2076,6 @@
 /ja/docs/HTML:Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/HTML:Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML:Element:a	/ja/docs/Web/HTML/Element/a
-/ja/docs/HTML:Inline_elements	/ja/docs/orphaned/Web/HTML/Inline_elements
 /ja/docs/HTMLSpanElement	/ja/docs/Web/API/HTMLSpanElement
 /ja/docs/HTMLSpanElement_interface	/ja/docs/Web/API/HTMLSpanElement
 /ja/docs/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
@@ -4544,7 +4542,6 @@
 /ja/docs/Web/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/Web/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
 /ja/docs/Web/HTML/Index	/ja/docs/Web/HTML
-/ja/docs/Web/HTML/Inline_elements	/ja/docs/orphaned/Web/HTML/Inline_elements
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/HTML/Link_types	/ja/docs/Web/HTML/Attributes/rel
 /ja/docs/Web/HTML/Link_types/dns-prefetch	/ja/docs/Web/HTML/Attributes/rel/dns-prefetch
