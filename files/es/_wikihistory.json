@@ -285,6 +285,19 @@
     "modified": "2019-03-18T21:41:49.707Z",
     "contributors": ["Esteban"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2019-03-18T20:44:10.775Z",
+    "contributors": [
+      "ManuelPalominochirote",
+      "raecillacastellana",
+      "dinael",
+      "pekechis",
+      "erdavo",
+      "vltamara",
+      "teoli",
+      "MILTON.AGUILAR"
+    ]
+  },
   "Glossary/Block/CSS": {
     "modified": "2020-06-24T23:38:45.496Z",
     "contributors": ["LinkStrifer", "BubuAnabelas", "Esteban"]
@@ -8897,19 +8910,6 @@
       "vltamara"
     ]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2019-03-18T20:44:10.775Z",
-    "contributors": [
-      "ManuelPalominochirote",
-      "raecillacastellana",
-      "dinael",
-      "pekechis",
-      "erdavo",
-      "vltamara",
-      "teoli",
-      "MILTON.AGUILAR"
-    ]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-03-23T22:46:06.691Z",
     "contributors": ["MrCesar107", "antoiba86", "vltamara"]
@@ -9750,10 +9750,6 @@
   "Web/HTML/Global_attributes/translate": {
     "modified": "2019-03-23T22:40:27.406Z",
     "contributors": ["jcr4"]
-  },
-  "Web/HTML/Inline_elements": {
-    "modified": "2019-03-23T22:46:15.359Z",
-    "contributors": ["juanbrujo", "raecillacastellana", "vltamara"]
   },
   "Web/HTML/Microdata": {
     "modified": "2019-03-23T22:12:50.480Z",
@@ -15823,6 +15819,10 @@
   "orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey": {
     "modified": "2019-03-18T21:20:44.665Z",
     "contributors": ["WriestTavo"]
+  },
+  "orphaned/Web/HTML/Inline_elements": {
+    "modified": "2019-03-23T22:46:15.359Z",
+    "contributors": ["juanbrujo", "raecillacastellana", "vltamara"]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
     "modified": "2020-10-15T21:35:31.913Z",
