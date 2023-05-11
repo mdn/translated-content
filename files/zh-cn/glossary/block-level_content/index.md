@@ -13,7 +13,7 @@ slug: Glossary/Block-level_content
 
 ## 示例
 
-在这个示例中，两个段度（{{HTMLElement("p")}}）元素被放置在 {{HTMLElement("div")}} 中。
+在这个示例中，两个段落（{{HTMLElement("p")}}）元素被放置在 {{HTMLElement("div")}} 中。
 
 ```html
 <div>
