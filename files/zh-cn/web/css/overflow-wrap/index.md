@@ -48,7 +48,7 @@ overflow-wrap: unset;
 
 ### 比较 overflow-wrap、word-break 和 hyphens
 
-本示例比较分解长单词时，`overflow-wrap`, `word-break`, `hyphens` 的结果。
+本示例比较分解长单词时，`overflow-wrap`、`word-break`、`hyphens` 的结果。
 
 #### HTML
 
@@ -109,8 +109,6 @@ p {
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 
