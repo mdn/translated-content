@@ -222,11 +222,11 @@ textarea.onkeyup = function(){
 
 > **備註：** HTML5 重新定義了元素類別：請見 [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
 
-> **備註：** 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
+> **備註：** 在本主題所使用的區塊級（block）與行內級（inline）這兩個名詞，不應與 CSS 的 box 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
-> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
+> **備註：** 你可以查看區塊級元素與行內級元素分別有哪些元素——請見[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)和[行內級元素](/zh-TW/docs/Glossary/Inline-level_content)。
 
-### 空元素（Empty element）
+### 空元素
 
 不是所有元素都符合起始標籤、內容、結束標籤的格式。有些元素只有一個標籤，這些標籤通常用來在文件中插入/嵌入物件。例如 {{htmlelement("img")}} 元素便是用來在當前位置嵌入圖片檔：
 
@@ -236,9 +236,9 @@ textarea.onkeyup = function(){
 
 這將會產生下面的結果:
 
-{{ EmbedLiveSample('空元素Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('空元素', 700, 300) }}
 
-> **備註：** 空元素有時也被稱作 _void elements_。
+> **備註：** 空元素（empty element）有時也被稱作 _void element_。
 
 ## 屬性（Attribute）
 
