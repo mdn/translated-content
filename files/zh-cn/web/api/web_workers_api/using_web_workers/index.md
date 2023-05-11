@@ -429,7 +429,7 @@ worker.onmessage = function(event) {
         event.data.hasOwnProperty('queryMethodArguments')) {
         listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
     } else {
-        this.defaultListener.call(instance, event.data);
+        instance.defaultListener.call(instance, event.data);
     }
 }
 ```
@@ -508,7 +508,7 @@ onmessage = function(event) {
       if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("vo42t30") && oEvent.data.hasOwnProperty("rnb93qh")) {
         oListeners[oEvent.data.vo42t30].apply(oInstance, oEvent.data.rnb93qh);
       } else {
-        this.defaultListener.call(oInstance, oEvent.data);
+        instance.defaultListener.call(oInstance, oEvent.data);
       }
     };
     if (fOnError) { oWorker.onerror = fOnError; }
