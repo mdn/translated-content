@@ -109,7 +109,7 @@ slug: Web/CSS/system-color
 
 ### 使用系统颜色
 
-在此示例中有一个按钮使用 {{CSSXref("box-shadow")}} 属性正常地形成对比。在强制颜色模式中，`box-shadow` 被强制变为 `none`，故此示例使用 `forced-colors` 媒体特性确保有颜色合适（此例为 `ButtonBorder`）的边框。
+在此示例中有一个按钮使用 {{CSSXref("box-shadow")}} 属性在正常情况下形成对比。在强制颜色模式中，`box-shadow` 被强制变为 `none`，故此示例使用 `forced-colors` 媒体特性确保有颜色合适（此例为 `ButtonBorder`）的边框。
 
 #### HTML
 
