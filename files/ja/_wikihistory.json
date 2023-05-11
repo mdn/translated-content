@@ -306,6 +306,18 @@
     "modified": "2020-02-22T11:07:37.995Z",
     "contributors": ["Uemmra3", "Wind1808", "Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2020-11-09T07:01:45.000Z",
+    "contributors": [
+      "mfuji09",
+      "FumiyaShibusawa",
+      "himrock922",
+      "iwamot",
+      "yyss",
+      "ethertank",
+      "Marsf"
+    ]
+  },
   "Glossary/Block/CSS": {
     "modified": "2019-03-18T21:28:49.620Z",
     "contributors": ["mfuji09", "Wind1808"]
@@ -20715,18 +20727,6 @@
     "modified": "2020-09-28T04:18:49.266Z",
     "contributors": ["mfuji09"]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2020-11-09T07:01:45.000Z",
-    "contributors": [
-      "mfuji09",
-      "FumiyaShibusawa",
-      "himrock922",
-      "iwamot",
-      "yyss",
-      "ethertank",
-      "Marsf"
-    ]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-12-04T05:50:44.102Z",
     "contributors": [
@@ -21671,10 +21671,6 @@
   "Web/HTML/Global_attributes/translate": {
     "modified": "2020-11-09T08:36:24.343Z",
     "contributors": ["mfuji09", "yyss", "hamasaki"]
-  },
-  "Web/HTML/Inline_elements": {
-    "modified": "2019-04-15T20:58:44.936Z",
-    "contributors": ["hSakura", "mfuji09", "yyss", "ethertank", "Marsf"]
   },
   "Web/HTML/Microdata": {
     "modified": "2020-09-06T05:56:41.358Z",
