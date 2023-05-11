@@ -657,7 +657,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 また、 [`structuredClone()`](/ja/docs/Web/API/structuredClone) メソッドを使用してディープコピーを作成することもできます。これは、ソース内の{{Glossary("transferable objects", "移譲可能オブジェクト")}}を、コピーするのではなく、新しいコピーに移譲できる利点があります。
 
-最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
+最後に、既存の配列を新しい変数に代入しても、配列やその要素のコピーは作成されないことを理解することが重要です。つまり、元の配列の名前と新しい変数の名前は、まったく同じオブジェクトの名前に過ぎません（したがって、常に[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#_による厳密な等価性)であると評価されます）。したがって、元の配列の値や新しい変数の値に何らかの変更を加えると、もう片方も変更されます。
 
 ```js
 const fruits = ['いちご', 'マンゴー'];

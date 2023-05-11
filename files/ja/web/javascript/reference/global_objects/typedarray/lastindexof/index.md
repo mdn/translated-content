@@ -31,7 +31,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ## 解説
 
-`lastIndexOf` は `searchElement` と型付き配列の要素を、[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#_による厳格な等価性) (===、イコール 3 つの演算子と同じ方法) を使用して比較します。
+`lastIndexOf` は `searchElement` と型付き配列の要素を、[厳密等価](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#_による厳密な等価性) (===、イコール 3 つの演算子と同じ方法) を使用して比較します。
 
 ## 例
 

@@ -19,7 +19,7 @@ l10n:
 
 ### キーの等価性
 
-キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
+キー値の等価性は [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいて評価されます。（以前は [SameValue](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) が使われており、 `0` と `-0` が異なるものとして扱われていました。[ブラウザーの互換性](#ブラウザーの互換性)をチェックしてください）。これは {{jsxref("NaN")}} を `NaN` と等価と見なすもので（`NaN !== NaN` ですが）、他の値はすべて `===` 演算子の意味に従って等価性が考慮されます。
 
 ### Object と Map の比較
 

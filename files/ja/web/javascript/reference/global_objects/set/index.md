@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 
 ### 値の等価性
 
-値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
+値の等値性は、[Same-value-zero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムに基づいています。(以前は [Same-value](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性) を使用しており、0 と -0 は異なるものとして扱われていました。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の "Key equality for -0 and 0" を参照してください。) つまり、 `NaN` は `NaN` と同じとみなされ (例え `NaN !== NaN` であっても)、それ以外の値は `===` 演算子の挙動に従って等しいとみなされます。
 
 ### 性能
 
