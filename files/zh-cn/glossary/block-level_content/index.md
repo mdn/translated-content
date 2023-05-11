@@ -1,92 +1,43 @@
 ---
-title: 块级元素
+title: 块级内容
 slug: Glossary/Block-level_content
 ---
 
-HTML（超文本标记语言）中元素大多数都是“块级”元素或[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。块级元素占据其父元素（容器）的整个水平空间，垂直空间等于其内容高度，因此创建了一个“块”。这篇文章帮助解释这个概念。
+在 CSS 中，参与行内布局的内容被称为**块级内容**（block-level content）。
 
-通常浏览器会在块级元素前后另起一个新行。下面的例子表明了块级元素的作用：
+在块级布局中，从包含块的顶部开始，盒子总是一个接着一个地垂直放置。每个盒子的左外边缘触及包含块的左边缘。块级元素总是开始在新的行/列上。在水平书写模式中，像英语或者阿拉伯语，它占用它父母元素（容器）的整个水平空间以及垂直空间等同于它的内容的高度，从而创建一个“区块”。
 
-## 块级元素示例
+> **备注：** 如果包含块的 [`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode) 被设置为[默认值](/zh-CN/docs/Web/CSS/writing-mode#形式定义)之外的值，上述的块布局行为将发生改变。
 
-### HTML
+> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
+
+## 示例
+
+在这个示例中，两个段度（{{HTMLElement("p")}}）元素被放置在 {{HTMLElement("div")}} 中。
 
 ```html
-<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+<div>
+  <p>
+    This the first paragraph. The background color of these paragraphs have been
+    colored to distinguish them from their parent element.
+  </p>
+  <p>This is the second paragraph.</p>
+</div>
 ```
 
-### CSS
+段度（{{HTMLElement("p")}}）元素默认是块级的。这是为什么它们显示在块布局中：
 
-```css
-p { background-color: #8ABB55; }
+```css hidden
+p {
+  background-color: #8abb55;
+}
 ```
 
-{{ EmbedLiveSample('块级元素示例') }}
+{{EmbedLiveSample("示例")}}
 
-## 用法
+## 参见
 
-- 块级元素只能出现在 {{ HTMLElement("body") }} 元素内。
-
-## 块级元素与行内元素
-
-块级元素与行内元素有几个关键区别：
-
-- 格式
-  - : 默认情况下，块级元素会新起一行。
-- 内容模型
-  - : 一般块级元素可以包含行内元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行内元素更”大型“的结构。
-
-HTML 标准中块级元素和行内元素的区别至高出现在 4.01 标准中。在 HTML5，这种区别被一个更复杂的[内容类别](/zh-CN/docs/HTML/Content_categories)代替。”块级“类别大致相当于 HTML5 中的[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)类别，而”行内“类别相当于 HTML5 中的[措辞内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)类别，不过除了这两个还有其他类别。
-
-## 元素列表
-
-以下是 HTML 中所有的块级元素列表（虽然”块级“在新的 HTML5 元素中没有明确定义）
-
-- {{ HTMLElement("address") }}
-  - : 联系方式信息。
-- {{ HTMLElement("article") }}
-  - : 文章内容。
-- {{ HTMLElement("aside") }}
-  - : 伴随内容。
-- {{ HTMLElement("blockquote") }}
-  - : 块引用。
-- {{ HTMLElement("dd") }}
-  - : 定义列表中定义条目描述。
-- {{ HTMLElement("div") }}
-  - : 文档分区。
-- {{ HTMLElement("dl") }}
-  - : 定义列表。
-- {{ HTMLElement("fieldset") }}
-  - : 表单元素分组。
-- {{ HTMLElement("figcaption") }}
-  - : 图文信息组标题
-- {{ HTMLElement("figure") }}
-  - : 图文信息组 (参照 {{ HTMLElement("figcaption") }})。
-- {{ HTMLElement("footer") }}
-  - : 区段尾或页尾。
-- {{ HTMLElement("form") }}
-  - : 表单。
-- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
-  - : 标题级别 1-6.
-- {{ HTMLElement("header") }}
-  - : 区段头或页头。
-- {{ HTMLElement("hgroup") }}
-  - : 标题组。
-- {{ HTMLElement("hr") }}
-  - : 水平分割线。
-- {{ HTMLElement("ol") }}
-  - : 有序列表。
-- {{ HTMLElement("p") }}
-  - : 行。
-- {{ HTMLElement("pre") }}
-  - : 预格式化文本。
-- {{ HTMLElement("section") }}
-  - : 一个页面区段。
-- {{ HTMLElement("table") }}
-  - : 表格。
-- {{ HTMLElement("ul") }}
-  - : 无序列表。
-
-### 参见
-
-- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)
+- [行级内容](/zh-CN/docs/Glossary/Inline-level_content)
+- [块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- {{cssxref("display")}}
+- [`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode)
