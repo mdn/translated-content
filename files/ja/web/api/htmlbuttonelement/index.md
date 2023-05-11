@@ -23,15 +23,15 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
   - : {{domxref("HTMLFormElement")}} で、このボタンが関連付けられているフォームを反映します。ボタンがフォームの子孫要素である場合は、この属性はフォーム要素の ID になります。
     ボタンがフォーム要素の子孫でない場合は、属性は同じ文書内の任意のフォーム要素の ID になる可能性があり、また一致するものがなければ `null` 値になります。
 - {{domxref("HTMLButtonElement.formAction")}}
-  - : 文字列で、ボタンによって送信された情報を処理するリソースの URI を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の {{htmlattrxref("action", "form")}} 属性を上書きします。
+  - : 文字列で、ボタンによって送信された情報を処理するリソースの URI を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formEnctype")}}
-  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の {{htmlattrxref("enctype", "form")}} 属性を上書きします。
+  - : 文字列で、サーバーにフォームを送信するために使用されるコンテンツの型を反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formMethod")}}
-  - : 文字列で、ブラウザーがフォームを送信するために使用する HTTP メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の {{htmlattrxref("method", "form")}} 属性を上書きします。
+  - : 文字列で、ブラウザーがフォームを送信するために使用する HTTP メソッドを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`method`](/ja/docs/Web/HTML/Element/form#method) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formNoValidate")}}
-  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の {{htmlattrxref("novalidate", "form")}} 属性を上書きします。
+  - : 論理値で、フォームの送信時に値の検証が行われないことを示します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性を上書きします。
 - {{domxref("HTMLButtonElement.formTarget")}}
-  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の {{htmlattrxref("target", "form")}} 属性を上書きします。
+  - : 文字列で、フォームに送信した後で受信するレスポンスを表示する場所を示す名前またはキーワードを反映します。指定された場合は、この属性はこの要素のオーナーである {{HTMLElement("form")}} 要素の [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。
 - {{domxref("HTMLButtonElement.labels")}} {{readonlyInline}}
   - : {{domxref("NodeList")}} で、このボタンのラベルとなる {{HTMLElement("label")}} 要素を表します。
 - {{domxref("HTMLButtonElement.menu")}} {{experimental_inline}}

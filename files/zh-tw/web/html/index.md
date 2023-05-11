@@ -65,7 +65,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : HTML 元素都有**屬性**。這些額外屬性能透過數種方法設定元素、調整行為。
 - [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)
   - : [HTML 元素](/zh-TW/docs/Web/HTML/Element)能指定全域屬性，_就算它不是標準元素_。也就是說，即使是與 HTML5 標準不相容的非標準元素，依舊允許全域屬性。
-- [行內元素](/zh-TW/docs/Web/HTML/Inline_elements)與[塊級元素](/zh-TW/docs/Web/HTML/Block-level_elements)
+- [行內元素](/zh-TW/docs/Glossary/Inline-level_content)與[塊級元素](/zh-TW/docs/Glossary/Block-level_content)
   - : HTML 元素通常為**行內**或**區塊**。行內元素佔據由標籤所定義的其餘空白位置，區塊元素則占據母元素的所有空白位置。
 - [超連結類型](/zh-TW/docs/Web/HTML/Link_types)
   - : 在 HTML 中有多種超連結類型能夠使用，並解定義兩個頁面間的關係，超連結元素包含了[`<a>`](/zh-TW/docs/Web/HTML/Element/a), [`<area>`](/zh-TW/docs/Web/HTML/Element/area), [`<link>`](/zh-TW/docs/Web/HTML/Element/link)

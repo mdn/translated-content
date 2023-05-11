@@ -28,13 +28,13 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLLinkElement.media")}}
   - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : 文字列で、使用するリファラーを示す HTML の {{htmlattrxref("referrerpolicy", "link")}} 属性を反映します。
+  - : 文字列で、使用するリファラーを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Element/link#referrerpolicy) 属性を反映します。
 - {{domxref("HTMLLinkElement.rel")}}
   - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : {{domxref("DOMTokenList")}} で、 HTML の {{htmlattrxref("rel", "link")}} 属性をトークンのリストとして反映します。
+  - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性をトークンのリストとして反映します。
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の {{htmlattrxref("sizes", "link")}} 属性を反映します。
+  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を反映します。
 - {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
   - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
 - {{domxref("HTMLLinkElement.type")}}

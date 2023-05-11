@@ -1,17 +1,15 @@
 ---
 title: 區塊級元素
-slug: Web/HTML/Block-level_elements
+slug: Glossary/Block-level_content
 ---
 
-{{HTMLSidebar}}
+HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/HTML/Inline_elements)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為您說明其意涵.
 
-HTML (超文字標記語言, **Hypertext Markup Language**) 元素通常為 "區塊級" 元素或是 ["行內" 元素](/zh-TW/docs/HTML/Inline_elements)。 一個區塊級元素會藉由建立"區塊"的動作, 完全佔滿其父元素(容器)的空間。本文將為您說明其意涵.
+瀏覽器預設以在元素前後換行的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。
 
-瀏覽器預設以在元素前後換行的方式, 表現區塊級元素. 視覺上會呈現為一排縱向堆疊的方塊。
+> **備註：** 區塊級元素必定以換行方式，取得完整寬度的空間（向左右兩側儘可能地延伸出去）。
 
-> **備註：** 區塊級元素必定以換行方式, 取得完整寬度的空間(向左右兩側儘可能地延伸出去)。
-
-以下範例將展示區塊級元素的影響:
+以下範例將展示區塊級元素的影響：
 
 ## 區塊級元素
 
@@ -36,7 +34,7 @@ p {
 
 ## 用法
 
-- 區塊級元素只能出現於 {{ HTMLElement("body") }} 元素之內.
+- 區塊級元素只能出現於 {{ HTMLElement("body") }} 元素之內。
 
 ## 區塊級 vs. 行內元素
 
@@ -110,4 +108,7 @@ The following is a complete list of all HTML block level elements (although "blo
 
 ### 參閱
 
-- [行內元素](/zh-TW/docs/Web/HTML/Inline_elements)
+- [行內級元素](/zh-TW/docs/Glossary/Inline-level_content)
+- [Block formatting context](/zh-TW/docs/Web/Guide/CSS/Block_formatting_context)
+- {{cssxref("display")}}
+- [`writing-mode`](/zh-TW/docs/Web/CSS/writing-mode)
