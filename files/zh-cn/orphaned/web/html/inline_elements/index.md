@@ -1,6 +1,7 @@
 ---
 title: 行内元素
-slug: Web/HTML/Inline_elements
+slug: orphaned/Web/HTML/Inline_elements
+original_slug: Web/HTML/Inline_elements
 ---
 
 {{HTMLSidebar}}

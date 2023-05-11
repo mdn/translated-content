@@ -572,7 +572,7 @@
 /zh-CN/docs/Glossary/通用首部	/zh-CN/docs/Glossary/General_header
 /zh-CN/docs/Glossary/面向对象编程	/zh-CN/docs/Glossary/OOP
 /zh-CN/docs/HTML	/zh-CN/docs/Web/HTML
-/zh-CN/docs/HTML/Block-level_elements	/zh-CN/docs/Web/HTML/Block-level_elements
+/zh-CN/docs/HTML/Block-level_elements	/zh-CN/docs/Glossary/Block-level_content
 /zh-CN/docs/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
@@ -599,7 +599,7 @@
 /zh-CN/docs/HTML/HTML_Elements	/zh-CN/docs/Web/HTML/Element/Heading_Elements
 /zh-CN/docs/HTML/HTML_Elements/time	/zh-CN/docs/Web/HTML/Element/time
 /zh-CN/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
-/zh-CN/docs/HTML/块级元素	/zh-CN/docs/Web/HTML/Block-level_elements
+/zh-CN/docs/HTML/块级元素	/zh-CN/docs/Glossary/Block-level_content
 /zh-CN/docs/HTML\Canvas\Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/HTTP	/zh-CN/docs/Web/HTTP
 /zh-CN/docs/IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API
@@ -2300,6 +2300,7 @@
 /zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
 /zh-CN/docs/Web/HTML/Applying_color	/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color
 /zh-CN/docs/Web/HTML/Attributes/自动完成属性	/zh-CN/docs/Web/HTML/Attributes/autocomplete
+/zh-CN/docs/Web/HTML/Block-level_elements	/zh-CN/docs/Glossary/Block-level_content
 /zh-CN/docs/Web/HTML/CORS_settings_attributes	/zh-CN/docs/Web/HTML/Attributes/crossorigin
 /zh-CN/docs/Web/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/Web/HTML/Canvas/Canvas教程	/zh-CN/docs/Web/API/Canvas_API/Tutorial
@@ -2326,14 +2327,15 @@
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
-/zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
+/zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
+/zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Link_types	/zh-CN/docs/Web/HTML/Attributes/rel
 /zh-CN/docs/Web/HTML/Link_types/prefetch	/zh-CN/docs/Web/HTML/Attributes/rel/prefetch
 /zh-CN/docs/Web/HTML/Link_types/preload	/zh-CN/docs/Web/HTML/Attributes/rel/preload
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
-/zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Web/HTML/Inline_elements
+/zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/orphaned/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/动作	/zh-CN/docs/Glossary/Speculative_parsing
 /zh-CN/docs/Web/HTML/属性	/zh-CN/docs/Web/HTML/Attributes
 /zh-CN/docs/Web/HTTP/Access_control_CORS	/zh-CN/docs/Web/HTTP/CORS
