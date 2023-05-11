@@ -7,7 +7,7 @@ slug: Web/CSS/overflow-wrap
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 应用于内联的元素，用来设置当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词在中间换行（break）。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 应用于行级元素，用来设置浏览器是否应该在一个本来不能断开的字符串中插入换行符，以防止文本溢出其行向盒。
 
 > **备注：** 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
 
