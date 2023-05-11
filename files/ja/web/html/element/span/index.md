@@ -5,7 +5,7 @@ slug: Web/HTML/Element/span
 
 {{HTMLSidebar}}
 
-**HTML の `<span>` 要素**は、記述コンテンツの汎用的な行内コンテナーであり、何かを表すものではありません。スタイル付けのため ({{htmlattrxref("class")}} または {{htmlattrxref("id")}} 属性を使用して)、または {{htmlattrxref("lang")}} のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。
+**HTML の `<span>` 要素**は、記述コンテンツの汎用的な行内コンテナーであり、何かを表すものではありません。スタイル付けのため ([`class`](/ja/docs/Web/HTML/Global_attributes#class) または [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用して)、または [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 

@@ -35,7 +35,7 @@ slug: Mozilla/Firefox/Releases/76
 
 ### HTML
 
-- {{HTMLElement("input")}} 要素の {{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性が、値が周期的な (すなわち、ある時点で値が最小値に戻る) コントロールで `min` の値が `max` の値より大きい場合に、正しく動作するようになりました。これは、例えば日付や時刻の入力で午後 11 時から午前 2 時の範囲を指定するようなときに、特に役に立ちます ([Firefox バグ 1608010](https://bugzil.la/1608010))。
+- {{HTMLElement("input")}} 要素の [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性が、値が周期的な (すなわち、ある時点で値が最小値に戻る) コントロールで `min` の値が `max` の値より大きい場合に、正しく動作するようになりました。これは、例えば日付や時刻の入力で午後 11 時から午前 2 時の範囲を指定するようなときに、特に役に立ちます ([Firefox バグ 1608010](https://bugzil.la/1608010))。
 
 ### CSS
 

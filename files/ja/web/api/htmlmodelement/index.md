@@ -14,9 +14,9 @@ slug: Web/API/HTMLModElement
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLModElement.cite")}}
-  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("cite", "del")}} 属性の値を反映します。変更点についての説明を含むリソースの URI が入ります。
+  - : {{domxref("DOMString")}} で、 HTML の [`cite`](/ja/docs/Web/HTML/Element/del#cite) 属性の値を反映します。変更点についての説明を含むリソースの URI が入ります。
 - {{domxref("HTMLModElement.dateTime")}}
-  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("datetime", "del")}} 属性の値を反映します。変更されたタイムスタンプを示す日時文字列が入ります。
+  - : {{domxref("DOMString")}} で、 HTML の [`datetime`](/ja/docs/Web/HTML/Element/del#datetime) 属性の値を反映します。変更されたタイムスタンプを示す日時文字列が入ります。
 
 ## 仕様書
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}{{SeeCompatTable}}
 
-**`manifest`** キーワードを {{HTMLElement("link")}} 要素の {{HTMLAttrxRef("rel", "link")}} 属性に指定すると、ターゲットリソースが[ウェブアプリマニフェスト](/ja/docs/Web/Manifest)であることを示します。
+**`manifest`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性に指定すると、ターゲットリソースが[ウェブアプリマニフェスト](/ja/docs/Web/Manifest)であることを示します。
 
 ## 仕様書
 

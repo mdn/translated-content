@@ -129,7 +129,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 既定では、画像は**熱心に**読み込まれます。つまり、 HTML で処理されると同時に画像が読み込まれ、表示されます。熱心に読み込まれた画像は、文書の {{domxref("Document.load_event", "load")}} イベントが送られる前に表示されます。画像の遅延読み込みに切り替えるとブラウザーは、{{Glossary("visual viewport", "視覚的ビューポート")}}の描画に必要になるまで、画像の読み込みを保留します。
 
-画像に遅延読み込みのマークを付けるには、 {{htmlattrxref("loading", "img")}} 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
+画像に遅延読み込みのマークを付けるには、 [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
 
 ```html
 <img href="./images/footerlogo.jpg" loading="lazy">

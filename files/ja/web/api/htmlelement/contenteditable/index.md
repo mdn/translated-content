@@ -33,4 +33,4 @@ Internet Explorer では、`contenteditable` を {{htmlelement("table")}}、{{ht
 
 - [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
-- {{htmlattrxref("contenteditable")}} グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性

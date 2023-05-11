@@ -18,13 +18,13 @@ JavaScript ファイルは `application/javascript` の [MIME タイプ](/ja/doc
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLScriptElement.type")}}
-  - : 文字列で、スクリプトの MIME タイプを表します。これは {{htmlattrxref("type","script")}} 属性を反映します。
+  - : 文字列で、スクリプトの MIME タイプを表します。これは [`type`](/ja/docs/Web/HTML/Element/script#type) 属性を反映します。
 - {{domxref("HTMLScriptElement.src")}}
-  - : 文字列で、外部スクリプトの URL を表します。これは {{htmlattrxref("src","script")}} 属性を反映します。
+  - : 文字列で、外部スクリプトの URL を表します。これは [`src`](/ja/docs/Web/HTML/Element/script#src) 属性を反映します。
 - {{domxref("HTMLScriptElement.event")}} {{deprecated_inline}}
   - : 文字列です。 HTML 文書で要素にイベントハンドラーを設定するための廃止された方法です。
 - {{domxref("HTMLScriptElement.charset")}} {{deprecated_inline}}
-  - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは {{htmlattrxref("charset","script")}} 属性を反映します。
+  - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは [`charset`](/ja/docs/Web/HTML/Element/script#charset) 属性を反映します。
 - {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
   - : `async` および `defer` 属性は論理属性で、スクリプトの実行方法を制御します。 **`defer` および `async` 属性は `src` 属性がないときには指定しないでください。**
@@ -52,7 +52,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLScriptElement.noModule")}}
   - : 論理値で、 true ならば [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応したブラウザーにおいてスクリプトの実行を停止します。 — JavaScript モジュールに対応して*いない*古いブラウザーで代替スクリプトを実行するために使用します。
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : 文字列で、 HTML 属性 {{htmlattrxref("referrerPolicy", "script")}} を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
+  - : 文字列で、 HTML 属性 [`referrerPolicy`](/ja/docs/Web/HTML/Element/script#referrerPolicy) を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
 
 ## 静的メソッド
 

@@ -9,7 +9,7 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
 
 ### HTML
 
-- {{HTMLElement("style")}} 要素に {{htmlattrxref("scoped", "style")}} 属性を追加しました。これは、ドキュメントの他の部分から隔離されたスタイルを含めることを可能にします。このようなスタイルは、Firefox 20 で導入した {{cssxref(":scope")}} CSS 擬似要素を使用して選択できます ([Firefox バグ 508725](https://bugzil.la/508725))。
+- {{HTMLElement("style")}} 要素に [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) 属性を追加しました。これは、ドキュメントの他の部分から隔離されたスタイルを含めることを可能にします。このようなスタイルは、Firefox 20 で導入した {{cssxref(":scope")}} CSS 擬似要素を使用して選択できます ([Firefox バグ 508725](https://bugzil.la/508725))。
 - 新たな HTML 要素 {{HTMLElement("main")}} を実装しました ([Firefox バグ 820508](https://bugzil.la/820508))。
 
 ### JavaScript

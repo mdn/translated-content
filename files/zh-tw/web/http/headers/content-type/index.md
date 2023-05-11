@@ -11,15 +11,15 @@ slug: Web/HTTP/Headers/Content-Type
 
 在 HTTP 請求中（比如 {{HTTPMethod("POST")}} 或 {{HTTPMethod("PUT")}}），則是客戶端用來告訴伺服器自己傳的資料是什麼內容類型。
 
-| Header type                                                      | {{Glossary("Entity header")}}                                                                                                                                                                                                                                                                                              |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}                 | no                                                                                                                                                                                                                                                                                                                                    |
+| Header type                                     | {{Glossary("Entity header")}}                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}           | no                                                                                                                                                                                                                                                                                                                                    |
 | {{Glossary("CORS-safelisted response header")}} | yes                                                                                                                                                                                                                                                                                                                                   |
-| {{Glossary("CORS-safelisted request header")}}     | yes, with the additional restriction that values can't contain a _CORS-unsafe request header byte_: 0x00-0x1F (except 0x09 (HT)), `"():<>?@[\]{}`, and 0x7F (DEL). It also needs to have a MIME type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`. |
+| {{Glossary("CORS-safelisted request header")}}  | yes, with the additional restriction that values can't contain a _CORS-unsafe request header byte_: 0x00-0x1F (except 0x09 (HT)), `"():<>?@[\]{}`, and 0x7F (DEL). It also needs to have a MIME type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`. |
 
 ## 語法
 
-```html
+```http
 Content-Type: text/html; charset=UTF-8
 Content-Type: multipart/form-data; boundary=something
 ```
@@ -41,8 +41,8 @@ Content-Type: multipart/form-data; boundary=something
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```

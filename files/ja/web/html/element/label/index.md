@@ -40,9 +40,9 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("for")}}
+- `for`
 
-  - : `for` 属性の値は単一の {{htmlattrxref("id")}} でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
+  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes#id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
     > **メモ:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 

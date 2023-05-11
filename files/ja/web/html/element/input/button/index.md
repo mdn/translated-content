@@ -201,7 +201,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **メモ:** Firefox は他のブラウザーとは異なり、既定でページの読み込み中に {{HTMLElement("button")}} に[動的に無効にされた状態を維持](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには {{htmlattrxref("autocomplete","button")}} 属性を使用してください。
+> **メモ:** Firefox は他のブラウザーとは異なり、既定でページの読み込み中に {{HTMLElement("button")}} に[動的に無効にされた状態を維持](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/button#autocomplete) 属性を使用してください。
 
 ## 検証
 

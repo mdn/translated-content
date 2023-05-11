@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
+**`for...of`** 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)をソースとした一連の値を処理するループを実行します。反復可能オブジェクトには、
 たとえば組み込みの {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}}（およびその他の DOM コレクション）、同様に {{jsxref("Functions/arguments", "arguments")}} オブジェクトや、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から生成される[ジェネレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Generator)、ユーザー定義の反復可能オブジェクトなどがあります。
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
@@ -30,11 +30,11 @@ for (variable of iterable)
 
 `for...of` ループは、反復可能オブジェクトから取り出した値を 1 つずつ順次処理します。ループが値に対して行う各処理は反復処理と呼ばれ、ループは反復可能オブジェクトを反復処理すると言います。それぞれの反復処理では、現在のシーケンス値を参照する可能性のある文が実行されます。
 
-`for...of` ループが反復可能オブジェクトを反復処理する場合、最初にその反復可能オブジェクトの [`[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドが呼び出されます。これは[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)を返すので、その返されたイテレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル) メソッドを呼び出すことで、`variable` に代入される一連の値を生成することができます。
+`for...of` ループが反復可能オブジェクトを反復処理する場合、最初にその反復可能オブジェクトの [`[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドが呼び出されます。これは[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)を返すので、その返されたイテレーターの [`next()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) メソッドを呼び出すことで、`variable` に代入される一連の値を生成することができます。
 
 `for...of` ループは、イテレーターが完全に処理したときに終了します（イテレーターの `next()` メソッドは `done: true` を含むオブジェクトを返します）。また、通常の制御フローを変更するために制御フロー文を使用することもできます。[`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) はループを抜けてループ本体の後の最初のステートメントに進み、[`continue`](/ja/docs/Web/JavaScript/Reference/Statements/continue) は現在の反復処理の残りの文をスキップして次の反復処理に進みます。
 
-`for...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが発生した場合）、[`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル) のメソッドが呼び出されクリーンアップ処理が行われます。
+`for...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが発生した場合）、[`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル) のメソッドが呼び出されクリーンアップ処理が行われます。
 
 `for...of` の `variable` 部分は、`=` 演算子の前に来ることができるものなら何でも受け入れることができます。{{jsxref("Statements/const", "const")}} を使用して、ループ本体の中で再代入されない変数を宣言することができます（反復処理間では変更できます。2 つの別個の変数として扱われるからです）。そうでない場合は、{{jsxref("Statements/let", "let")}} を使用してください。
 
@@ -326,7 +326,7 @@ for (const value of generator) {
 
 `for...in` および `for...of` 文は、両方とも何かに対する繰り返しです。これらの主な違いは、何に対する繰り返しなのかというところです。
 
-{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)に対して、順序不定で繰り返し処理を行います。`for...of` 文は、[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)が定義した順序で値を反復処理します。
+{{jsxref("Statements/for...in", "for...in")}} 文は、オブジェクトのすべての[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)に対して、順序不定で繰り返し処理を行います。`for...of` 文は、[反復可能なオブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)が定義した順序で値を反復処理します。
 
 次の例では、{{jsxref("Array")}} に対して `for...of` ループと `for...in` ループを使用した場合の違いを示しています。
 

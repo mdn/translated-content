@@ -39,6 +39,7 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
 - InputEncoding
   - : 搜尋引擎資料輸入時的編碼方式，例如說：`<InputEncoding>UTF-8</InputEncoding>`。
 - Image
+
   - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](http://software.hixie.ch/utilities/cgi/data/data).
 
     ```xml
@@ -52,7 +53,9 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
     > **備註：** For icons loaded remotely (i.e. from `https://` URIs as opposed to `data:` URIs), Firefox will reject icons larger than 10 kilobytes in size.
 
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
+
 - **Url**
+
   - : 描述搜尋用的 URL。以 `template` 屬性指定其搜尋 URL。Firefox 支援以下型態的 URL：
 
     - `type="text/html"`，即是搜尋用的 URL。
@@ -62,9 +65,11 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
     這些型態的 URL 都可以使用 `{searchTerms}` 字串來決定要關鍵字於 URL 中的位置，其他可用的參數請參考 [OpenSearch 1.1 參數規格](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)。
 
     在支援「搜尋建議」的模組中，搜尋的 URL 應可取回一組以 JSON 格式編寫的數據，提供這類服務的詳細方法請見[讓搜尋模組支援搜尋建議](/zh-tw/%e8%ae%93%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84%e6%94%af%e6%8f%b4%e6%90%9c%e5%b0%8b%e5%bb%ba%e8%ad%b0)。
+
 - Param
   - : 隨搜尋要求一併送出的參數，每組皆有參數名稱及其值。指定參數時可放入 `{searchTerms}` 字串來取得使用者輸入的搜尋關鍵字。
 - moz:SearchForm
+
   - : 搜尋網站的網址，提供 Firefox 使用者不搜尋、直接連到搜尋網站的方法。
 
     > **備註：** 由於此元素非 OpenSearch 標準規格而是 Firefox 獨有，故加上「`moz:`」名稱空間，已確保不支援的用戶端能直接跳過此元素。
@@ -76,10 +81,11 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
 只要在網頁的 `<head>` 區段內加上下一行就可以支援自動測知功能：
 
 ```html
-<link rel="search"
-      type="application/opensearchdescription+xml"
-      title="searchTitle"
-      href="pluginURL">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="searchTitle"
+  href="pluginURL" />
 ```
 
 如上所示地修改上面的**粗體字** :
@@ -92,11 +98,17 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
 如果網站擁有多種搜尋模組，也可以讓它們全部支援自動測知。例如：
 
 ```html
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Author" href="http://example.com/mysiteauthor.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Author"
+  href="http://example.com/mysiteauthor.xml" />
 
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: By Title" href="http://example.com/mysitetitle.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: By Title"
+  href="http://example.com/mysitetitle.xml" />
 ```
 
 這樣，網站就能提供以作者或以標題，作為搜尋獨立實體的模組。

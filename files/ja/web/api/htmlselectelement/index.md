@@ -14,9 +14,9 @@ slug: Web/API/HTMLSelectElement
 _このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : 論理値で、 HTML の {{htmlattrxref("autofocus", "select")}} 属性を反映し、ページが読み込みの際に、ユーザーが異なるコントロールに入力するなどで上書きをしない限り、コントロールが入力フォーカスを持つべきかどうかを示します。文書中のフォーム関連要素の中で、この属性を指定できるのは 1 つだけです。
+  - : 論理値で、 HTML の [`autofocus`](/ja/docs/Web/HTML/Element/select#autofocus) 属性を反映し、ページが読み込みの際に、ユーザーが異なるコントロールに入力するなどで上書きをしない限り、コントロールが入力フォーカスを持つべきかどうかを示します。文書中のフォーム関連要素の中で、この属性を指定できるのは 1 つだけです。
 - {{domxref("HTMLSelectElement.disabled")}}
-  - : 論理値で、 HTML の {{htmlattrxref("disabled", "select")}} 属性を反映し、コントロールが無効か否か、つまりクリックを受け付けるかどうかを示します。
+  - : 論理値で、 HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#disabled) 属性を反映し、コントロールが無効か否か、つまりクリックを受け付けるかどうかを示します。
 - {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
   - : {{domxref("HTMLFormElement")}} で、この要素が関連付けられているフォームを反映します。この要素が {{HTMLElement("form")}} 要素に関連付けられていなければ、 `null` を返します。
 - {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
@@ -24,19 +24,19 @@ _このインターフェイスは {{domxref("HTMLElement")}}、{{domxref("Eleme
 - {{domxref("HTMLSelectElement.length")}}
   - : `unsigned long` で、 {{HTMLElement("option")}} 要素がこの `select` 要素に含まれる数です。
 - {{domxref("HTMLSelectElement.multiple")}}
-  - : 論理値で、 HTML の {{htmlattrxref("multiple", "select")}} 要素を反映し、複数の項目を選択することができるかどうかを示します。
+  - : 論理値で、 HTML の [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 要素を反映し、複数の項目を選択することができるかどうかを示します。
 - {{domxref("HTMLSelectElement.name")}}
-  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("name", "select")}} 属性を反映し、サーバーおよび DOM 検索機能で使用されるこのコントロールの名前が入ります。
+  - : {{domxref("DOMString")}} で、 HTML の [`name`](/ja/docs/Web/HTML/Element/select#name) 属性を反映し、サーバーおよび DOM 検索機能で使用されるこのコントロールの名前が入ります。
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
   - : {{domxref("HTMLOptionsCollection")}} で、この要素に含まれる一連の {{HTMLElement("option")}} 要素を表します。
 - {{domxref("HTMLSelectElement.required")}}
-  - : 論理値で、 HTML の {{htmlattrxref("required", "select")}} 属性を反映し、ユーザーがフォームを送信する前に値を選択する必要があることを示します。
+  - : 論理値で、 HTML の [`required`](/ja/docs/Web/HTML/Element/select#required) 属性を反映し、ユーザーがフォームを送信する前に値を選択する必要があることを示します。
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : `long` で、最初に選択された {{HTMLElement("option")}} 要素の序数を反映します。 `-1` の値は要素が選択されていないことを示します。
 - {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
   - : {{domxref("HTMLCollection")}} で、選択されているすべての {{HTMLElement("option")}} 要素を反映します。
 - {{domxref("HTMLSelectElement.size")}}
-  - : `long` で、 HTML の {{htmlattrxref("size", "select")}} 属性を反映し、コントロール内で見える項目の数が入ります。既定値は、 `multiple` が `true` でなければ 1 で、そうでなければ 4 です。
+  - : `long` で、 HTML の [`size`](/ja/docs/Web/HTML/Element/select#size) 属性を反映し、コントロール内で見える項目の数が入ります。既定値は、 `multiple` が `true` でなければ 1 で、そうでなければ 4 です。
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
   - : {{domxref("DOMString")}} で、フォームコントロールの型を表します。 `multiple` が `true` である場合は `"select-multiple"` を返し、そうでなければ `"select-one"` を返します。
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}

@@ -47,35 +47,35 @@ slug: Web/HTML/Element/applet
 
 ## 属性
 
-- {{HTMLAttrDef("align")}}
+- `align`
   - : この属性は、周囲にあるコンテンツとの関係として、ページ上でアプレットを配置するために使用します。 HTML 4.01 仕様では `bottom`, `left`, `middle`, `right`, and `top` という値を定義していましたが、 Microsoft および Netscape は `absbottom`, `absmiddle`, `baseline`, `center`, `texttop` にも対応していました。
-- {{HTMLAttrDef("alt")}}
+- `alt`
   - : この属性は、 Java に対応していないブラウザーが代わりに表示する説明文を与えます。ページ作者は、 `<applet>` 要素に囲まれた内容物も代替テキストとして表示される可能性があることにも留意すべきです。
-- {{HTMLAttrDef("archive")}}
+- `archive`
   - : この属性は、アーカイブ化あるいは圧縮されたバージョンのアプレットとアプレットに関連づけられた class ファイルを参照するもので、これらはダウンロード時間の削減に役立ちます。
-- {{HTMLAttrDef("code")}}
+- `code`
   - : この属性は、読み込んで実行するアプレットの class ファイルの URL を指定します。アプレットのファイル名は .class 拡張子で識別します。code で指定した URL は、`codebase` 属性に相対的となるでしょう。
-- {{HTMLAttrDef("codebase")}}
+- `codebase`
   - : この属性は、code 属性で参照するアプレットの .class ファイルを保存しているディレクトリの絶対または相対 URL を与えます。
-- {{HTMLAttrDef("datafld")}}
+- `datafld`
   - : この属性は Internet Explorer 4 以上が対応しており、バインドされたデータを提供するデータソースオブジェクトの列名を指定します。この属性は、Java アプレットに渡すさまざまな {{HTMLElement("param")}} 要素を指定するために使用できました。
-- {{HTMLAttrDef("datasrc")}}
+- `datasrc`
   - : `datafld` と同様に、この属性は Internet Explorer 4 のデータバインディングで使用します。これは、アプレットに関連づけられた {{HTMLElement("param")}} 要素にバインドしたデータを提供するデータソースオブジェクトの ID を示します。
-- {{HTMLAttrDef("height")}}
+- `height`
   - : この属性は、アプレットが必要とする高さをピクセル数で指定します。
-- {{HTMLAttrDef("hspace")}}
+- `hspace`
   - : この属性は、アプレットの両側に確保する水平方向の追加スペースを指定します。
-- {{HTMLAttrDef("mayscript")}}
+- `mayscript`
   - : Netscape の実装ではこの属性で、ドキュメント内に埋め込んだスクリプト言語のプログラムでアプレットにアクセスできます。
-- {{HTMLAttrDef("name")}}
+- `name`
   - : この属性はアプレットを他のリソース、特にスクリプトから識別できるようにするため、アプレットに名前をつけます。
-- {{HTMLAttrDef("object")}}
+- `object`
   - : この属性は、アプレットのシリアライズ表現の URL を指定します。
-- {{HTMLAttrDef("src")}}
+- `src`
   - : この属性は Internet Explorer 4 以上向けに定義されたもので、アプレットに関係するファイルの URL を指定します。意味や使用法は不明瞭であり、また HTML 標準に含まれていません。
-- {{HTMLAttrDef("vspace")}}
+- `vspace`
   - : この属性は、アプレットの上下に確保する垂直方向の追加スペースを指定します。
-- {{HTMLAttrDef("width")}}
+- `width`
   - : この属性は、アプレットが必要とする幅をピクセル数で指定します。
 
 ## 例

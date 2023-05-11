@@ -62,16 +62,16 @@ slug: Web/HTML/Element/param
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 引数の名称。
-- {{htmlattrdef("value")}}
+- `value`
   - : 引数の値
 
 ### 非推奨の属性
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
 

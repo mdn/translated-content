@@ -11800,10 +11800,6 @@
     "modified": "2020-10-15T22:15:57.077Z",
     "contributors": ["mfuji09"]
   },
-  "Web/API/PublicKeyCredentialRequestOptions": {
-    "modified": "2020-10-15T22:26:52.032Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/API/PushEvent": {
     "modified": "2020-10-15T21:45:21.780Z",
     "contributors": ["Potappo", "dskmori", "YuichiNukiyama"]

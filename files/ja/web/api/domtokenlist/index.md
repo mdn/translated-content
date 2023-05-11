@@ -33,13 +33,13 @@ slug: Web/API/DOMTokenList
 - {{domxref("DOMTokenList.toggle()")}}
   - : もしそのトークンが存在すればリストから削除し、存在しなければそのトークンをリストに追加します。操作後にリスト内にそのトークンが存在するかどうかを論理値で返します。
 - {{domxref("DOMTokenList.entries()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアを反復処理することができる{{jsxref("Iteration_protocols", "反復子", "", 1)}}を返します。
+  - : このオブジェクト内に含まれるすべてのキーと値のペアを反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 - {{domxref("DOMTokenList.forEach()")}}
   - : `DOMTokenList` オブジェクトの各要素に対して 1 回ずつ、指定したコールバック関数を実行します。
 - {{domxref("DOMTokenList.keys()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、キーを反復処理することができる{{jsxref("Iteration_protocols", "反復子", "", 1)}}を返します。
+  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、キーを反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 - {{domxref("DOMTokenList.values()")}}
-  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、値を反復処理することができる{{jsxref("Iteration_protocols", "反復子", "", 1)}}を返します。
+  - : このオブジェクト内に含まれるすべてのキーと値のペアのうち、値を反復処理することができる{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 
 ## 例
 

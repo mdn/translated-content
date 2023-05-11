@@ -163,7 +163,7 @@ l10n:
 
 読み上げソフト利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Element#content_sectioning)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) および {{htmlattrxref("id")}} 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。
+区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。
 
 #### Example
 

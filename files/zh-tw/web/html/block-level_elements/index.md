@@ -18,13 +18,18 @@ HTML (超文字標記語言, **Hypertext Markup Language**) 元素通常為 "區
 ### HTML
 
 ```html
-<p>This paragraph is a block-level element; its background has been colored to display the paragraph's parent element.</p>
+<p>
+  This paragraph is a block-level element; its background has been colored to
+  display the paragraph's parent element.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('區塊級元素') }}
