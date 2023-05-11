@@ -15,7 +15,7 @@ slug: Web/CSS/overflow-wrap
 
 ## 语法
 
-```
+```css
 /* 关键词值 */
 overflow-wrap: normal;
 overflow-wrap: break-word;
