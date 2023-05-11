@@ -44,7 +44,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : 返回窗口被嵌入的元素，如果窗口没有被嵌入，则返回空。
 - {{domxref("Window.frames")}} {{ReadOnlyInline}}
-  - : 返回当前窗口中的子帧形成的数组。
+  - : 返回当前窗口中的子框架（subframe）形成的数组。
 - {{domxref("Window.fullScreen")}} {{Non-standard_Inline}}
   - : 此属性指示窗口是否以全屏显示。
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -58,7 +58,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 当一个[渐进式网络应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
+  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : 返回窗口中的帧数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}
@@ -136,8 +136,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 ### 已废弃属性
 
-- {{domxref("Window.content")}} 和 `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : 返回对当前窗口中的内容元素的引用。从 Firefox 57 开始（最初是 Nightly-only），这两个版本都只能从 chrome（的特权）代码中获得，而不再对 web 提供。
 - {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
   - : 获取/设置给定窗口的状态栏文本。
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -158,11 +156,11 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 - {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
-  - : 为 window 上的特定事件类型注册一个事件处理程序。
+  - : 为 window 上的特定事件类型注册一个事件处理器。
 - {{domxref("atob", "Window.atob()")}}
   - : 解码一个使用 base-64 编码的数据字符串。
 - {{domxref("Window.alert()")}}
-  - : 显示一个警报对话框。
+  - : 显示一个警告对话框。
 - {{domxref("Window.blur()")}}
   - : 将焦点从窗口上移开。
 - {{domxref("btoa", "Window.btoa()")}}
@@ -172,7 +170,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window.cancelIdleCallback()")}}
   - : 取消之前使用 {{domxref("Window.requestIdleCallback")}} 安排的回调。
 - {{domxref("Window.clearImmediate()")}}
-  - : 取消使用 `setImmediate` 设置的重复执行任务。
+  - : 取消使用 `setImmediate()` 设置的重复执行任务。
 - {{domxref("clearInterval", "Window.clearInterval()")}}
   - : 取消使用 {{domxref("setInterval()")}} 设置的重复执行任务。
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
@@ -180,7 +178,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window.close()")}}
   - : 关闭当前窗口。
 - {{domxref("Window.confirm()")}}
-  - : 显示一个带有用户需要回应的信息的对话框。
+  - : 显示一个带有用户需要回应的信息对话框。
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : 接受各种不同的图像源，并返回一个 {{jsxref("Promise")}}，经兑现可得到 {{domxref("ImageBitmap")}}。可以选择将图片源裁剪成以 _(sx, sy)_ 为起点的像素矩形，宽度为 sw，高度为 sh。
 - {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
@@ -224,7 +222,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window.requestIdleCallback()")}}
   - : 启用浏览器空闲期间的任务调度。
 - {{domxref("Window.resizeBy()")}}
-  - : 将当前窗口的大小调整到一定程度。
+  - : 按一定的变化量调整当前窗口的大小。
 - {{domxref("Window.resizeTo()")}}
   - : 动态地调整窗口的大小。
 - {{domxref("Window.scroll()")}}
@@ -408,6 +406,10 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 ## 接口
 
 参见 [DOM 参考文档](/zh-CN/docs/Web/API/Document_Object_Model)。
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
