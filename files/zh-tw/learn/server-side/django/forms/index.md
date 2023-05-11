@@ -437,8 +437,7 @@ For more examples of how to manually render forms in templates and dynamically l
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
 ```django
-{% if perms.catalog.can_mark_returned %}-
-<a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a> {% endif %}
+{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
 > **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
@@ -563,8 +562,9 @@ The "create" and "update" views use the same template by default, which will be 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
+{% extends "base_generic.html" %}
 
+{% block content %}
 <form action="" method="post">
   {% csrf_token %}
   <table>
@@ -580,7 +580,9 @@ This is similar to our previous forms, and renders the fields using a table. Not
 The "delete" view expects to find a template named with the **format model_name_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
+{% extends "base_generic.html" %}
+
+{% block content %}
 
 <h1>Delete Author</h1>
 
@@ -588,7 +590,7 @@ The "delete" view expects to find a template named with the **format model_name_
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}
