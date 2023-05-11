@@ -303,7 +303,7 @@ Some time ago in a place rather distant....
 
 キューのタイミングは、キューがいつ表示されるかを示します。タイムスタンプで表される開始時刻と終了時刻があります。終了時刻は開始時刻より後でなければならず、開始時刻は前のすべての開始時刻より後でなければなりません。キューは、タイミングが重複するかもしれません。
 
-WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の {{htmlattrxref("kind")}} は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
+WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の [`kind`](/ja/docs/Web/HTML/Element/track#kind) は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
 
 各キューのタイミングには次の 5 つの要素があります。
 
@@ -443,7 +443,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 
 ### キュー本体のテキストタグ
 
-使用できるタグは `<b>` など多数あります。ただし、WebVTT ファイルが {{HTMLElement("track")}} 要素の中で使われていて、その属性 {{htmlattrxref("kind")}} が `chapters` である場合は、タグを使うことができません。
+使用できるタグは `<b>` など多数あります。ただし、WebVTT ファイルが {{HTMLElement("track")}} 要素の中で使われていて、その属性 [`kind`](/ja/docs/Web/HTML/Element/track#kind) が `chapters` である場合は、タグを使うことができません。
 
 - タイムスタンプタグ
 

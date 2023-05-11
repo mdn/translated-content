@@ -19,7 +19,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
        fill-opacity="0.5" stroke-opacity="0.8"/>
 ```
 
-此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由` fill-opacity `和` stroke-opacity `两个属性控制。
+此外，在 SVG 中你可以分别定义填充色和边框色的透明度，它们分别由 `fill-opacity` 和 `stroke-opacity` 两个属性控制。
 
 > **備註：** FireFox 3+支持 rgba 值，并且能够提供同样的效果，但是为了在其他浏览器中保持兼容，最好将它和边框/填充的透明度分开使用。如果同时定义了 rgba 值和透明度，它们将被一起调用。
 

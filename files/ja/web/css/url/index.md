@@ -2,11 +2,13 @@
 title: url()
 slug: Web/CSS/url
 original_slug: Web/CSS/url()
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
-**`url()`** は [CSS](/ja/docs/Web/CSS) 関数で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、 データ URI の何れかです **`url()`** 関数は {{cssxref('attr()')}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートの何れかになります。`url()` 関数表記は `<url>` データ型の値になります。
+**`url()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ファイルを含めるために使用します。引数は絶対 URL、相対 URL、Blob URL、データ URL の何れかです。 **`url()`** 関数は {{cssxref("attr")}} 関数のように、他の CSS 関数に引数として渡すことができます。値を使用するプロパティに応じて、求められるリソースは画像、フォント、スタイルシートの何れかになります。`url()` 関数表記は `<url>` データ型の値になります。
 
 > **メモ:** {{Glossary("URI")}} と {{Glossary("URL")}} との間には違いがあります。 URI は単純にリソースを識別します。 URL は URI の一種で、リソースの*場所*を記述します。 URI はリソースの URL または名前 ({{Glossary("URN")}}) であることがあります。
 >
@@ -44,7 +46,7 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), tr
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 /* アットルール */
-@document url("https://www.example.com/") { ... } {{Experimental_Inline}}
+@document url("https://www.example.com/") { /* … */ } {{Experimental_Inline}}
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
@@ -78,7 +80,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
       - : [SVG 図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)の ID への参照 -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` -- パスとして図形の形状を使用します。
 
 - `<url-modifier>` {{Experimental_Inline}}
-  - : 将来的に `url()` 関数は、 URL 文字列の意味を変更する修飾子、識別子、関数記法の指定に対応するかもしれません。これはまだ対応されておらず、仕様書では完全には定義されていません。
+  - : 将来的に `url()` 関数は、URL 文字列の意味を変更する修飾子、識別子、関数記法の指定に対応するかもしれません。これはまだ対応されておらず、仕様書では完全には定義されていません。
 
 ## 形式文法
 
@@ -86,17 +88,17 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 url( <string> <url-modifier>* )
 ```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3 id="A_url_used_in_the_background_property">background プロパティで使用される URL</h3>
+### background プロパティで使用される URL
 
 ```css
 .topbanner {
-  background: url("topbanner.png") #00D no-repeat fixed;
+  background: url("topbanner.png") #00d no-repeat fixed;
 }
 ```
 
-<h3 id="A_url_loading_an_image_as_a_list_bullet">リストの先頭記号として使用される画像を読み込む URL</h3>
+### リストの先頭記号として使用される画像を読み込む URL
 
 ```css
 ul {
@@ -104,7 +106,7 @@ ul {
 }
 ```
 
-<h3 id="Usage_in_the_content_property">content プロパティの使用</h3>
+### content プロパティの使用
 
 #### HTML
 
@@ -120,7 +122,7 @@ ul {
 
 ```css
 li::after {
-  content: ' - ' url(star.gif);
+  content: " - " url(star.gif);
 }
 ```
 
@@ -128,7 +130,7 @@ li::after {
 
 {{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}
 
-<h3 id="Using_a_data-uri">data-uri の使用</h3>
+### データ URL の使用
 
 #### HTML
 
@@ -151,24 +153,26 @@ li::after {
 }
 ```
 
-{{EmbedLiveSample("Using_a_data-uri", "100%", 50)}}
+#### 結果
 
-<h3 id="Usage_in_filters">フィルターでの使用</h3>
+{{EmbedLiveSample("Using_a_data_URL", "100%", 50)}}
+
+### フィルターでの使用
 
 URL がフィルターへのパスとして使用される場合、 URL は以下のどちらかでなければなりません。
 
 1. SVG ファイルへのパスに、追加されるフィルターの ID が付いたもの。
 2. SVG がページ内にある場合は、フィルターの ID。
 
-    ```css
-    .blur {
-      filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
-    }
+```css
+.blur {
+  filter: url(my-file.svg#svg-blur); /* フィルターとして使用する SVG ファイルの URL */
+}
 
-    .inline-blur {
-      filter: url(#svg-blur); /* HTML ページに埋め込まれた SVG の ID */
-    }
-    ```
+.inline-blur {
+  filter: url(#svg-blur); /* HTML ページに埋め込まれた SVG の ID */
+}
+```
 
 ## 仕様書
 
@@ -181,7 +185,7 @@ URL がフィルターへのパスとして使用される場合、 URL は以�
 ## 関連情報
 
 - {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("element()")}}
-- {{cssxref("image/image()", "image()")}}
-- {{cssxref("image/image-set()", "image-set()")}}
-- {{cssxref("cross-fade()")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("image/image", "image()")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

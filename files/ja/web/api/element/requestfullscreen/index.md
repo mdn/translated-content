@@ -63,7 +63,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
 - 標準の HTML 要素または {{SVGElement("svg")}} または {{MathMLElement("math")}} のいずれかであること。
 - {{HTMLElement("dialog")}} 要素ではないこと。
-- 最上位の文書内か、 {{htmlattrxref("allowfullscreen","iframe")}} 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
+- 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
 
 さらに、もちろん、機能ポリシー `"fullscreen"` の権限も付与されていなければなりません。
 
@@ -130,4 +130,4 @@ elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- {{HTMLAttrxRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)

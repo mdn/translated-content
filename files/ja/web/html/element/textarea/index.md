@@ -24,16 +24,16 @@ l10n:
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : この属性は、コントロールの値をブラウザーが自動的に補完してよいかを示します。以下の値を指定できます。
 
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動補完を提供します。ブラウザーは入力内容の自動補完を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動補完を行うことができます。
 
-     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の {{htmlattrxref("autocomplete", "form")}} 属性をご覧ください。
+     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
 
-- {{ htmlattrdef("autocorrect") }} {{non-standard_inline}}
+- `autocorrect` {{non-standard_inline}}
 
   - : 文字列で、ユーザーがこの `textarea` を編集しているときに、自動スペルチェックとテキスト置換（設定されている場合）の処理を有効にするかどうかを指定します。許可されている値は以下の通りです。
 
@@ -42,33 +42,33 @@ l10n:
     - `off`
       - : 自動スペルチェックと文字列置換を無効にする。
 
-- {{ htmlattrdef("autofocus") }}
+- `autofocus`
   - : この論理属性で、ページ読み込み時にフォームコントロールがフォーカスを持つべきであることを指定できます。文書内でこの属性を指定することができる要素は、フォーム関連要素のうちのひとつだけです。
-- {{ htmlattrdef("cols") }}
+- `cols`
   - : 平均的な文字幅による、テキストコントロールの外見上の幅です。この属性を指定する場合は、正の整数を与えなければなりません。指定されなかった場合の既定値は `20` です。
-- {{ htmlattrdef("disabled") }}
+- `disabled`
   - : この真偽値属性は、ユーザーがそのコントロールを利用できないことを示します。(もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{ HTMLElement("fieldset") }} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。)
-- {{ htmlattrdef("form") }}
+- `form`
   - : `<textarea>` 要素が関連づけられた form 要素 (フォームオーナー) です。属性値は、同じドキュメント内の form 要素の id としなければなりません。この属性を指定しない場合は、`<textarea>` 要素を form 要素の子要素として配置しなければなりません。この属性により、`<textarea>` 要素を form 要素の子孫としてだけではなく、同一文書のどこにでも配置できるようになりました。
-- {{ htmlattrdef("maxlength") }}
+- `maxlength`
   - : ユーザーが入力可能な文字 (UTF-16 コード単位) の最大数です。この属性を指定しない場合、ユーザーは無制限に文字を入力可能です。
-- {{ htmlattrdef("minlength") }}
+- `minlength`
   - : ユーザーが入力しなければならない最小文字数 (UTF-16 コード単位) です。
-- {{ htmlattrdef("name") }}
+- `name`
   - : コントロールの名前です。
-- {{ htmlattrdef("placeholder") }}
+- `placeholder`
 
   - : コントロールに何を入力できるかに関する、ユーザーへの助言です。プレイスホルダーのテキスト内にあるキャリッジリターンやラインフィードは、ヒントを表示する際に改行として扱わなければなりません。
 
     > **メモ:** プレイスホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[`<input>` ラベル](/ja/docs/Web/HTML/Element/input#%E3%83%A9%E3%83%99%E3%83%AB)を参照してください。
 
-- {{ htmlattrdef("readonly") }}
+- `readonly`
   - : これは論理属性で、ユーザーがコントロールの値を変更できないことを示します。`disabled` 属性とは異なり、`readonly` 属性はユーザーがコントロールをクリックしたり選択することを妨げません。読み取り専用のコントロールの値は、フォームとともに送信可能です。
-- {{ htmlattrdef("required") }}
+- `required`
   - : この属性は、フォームを送信する前に値を入力しなければならないことを示します。
-- {{ htmlattrdef("rows") }}
+- `rows`
   - : コントロールで見ることが可能なテキストの行数です。指定する場合は、正の整数でなければなりません。指定されなかった場合、既定値は 2 になります。
-- {{ htmlattrdef("spellcheck") }}
+- `spellcheck`
 
   - : `<textarea>` がブラウザーや OS に依存したスペルチェックを行うかどうかを指定します。以下の値が使用できます。
 
@@ -76,7 +76,7 @@ l10n:
     - `default` : 要素は既定の動作、おそらく親要素の `spellcheck` 値によって動作することを示します。
     - `false` : 要素でスペルチェックを行うべきではないことを示します。
 
-- {{ htmlattrdef("wrap") }}
+- `wrap`
 
   - : テキストの折り返しの制御法を示します。以下の値を指定可能です。
 

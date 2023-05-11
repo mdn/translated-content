@@ -684,6 +684,7 @@
 /zh-TW/docs/Web/Guide/Performance/Using_web_workers	/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-TW/docs/Web/Guide/圖像	/zh-TW/docs/Web/Guide/Graphics
 /zh-TW/docs/Web/HTML/Applying_color	/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color
+/zh-TW/docs/Web/HTML/Block-level_elements	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/HTML/Element/HTML_元素	/zh-TW/docs/Web/HTML/Element
@@ -694,7 +695,7 @@
 /zh-TW/docs/Web/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/Web/Media/Formats
-/zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Web/HTML/Block-level_elements
+/zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
