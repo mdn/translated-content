@@ -1,6 +1,7 @@
 ---
 title: 區塊級元素
-slug: Web/HTML/Block-level_elements
+slug: Glossary/Block-level_content
+original_slug: Web/HTML/Block-level_elements
 ---
 
 {{HTMLSidebar}}
