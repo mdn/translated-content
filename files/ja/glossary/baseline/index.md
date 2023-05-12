@@ -1,13 +1,14 @@
 ---
 title: Baseline
 slug: Glossary/Baseline
-page-type: glossary-disambiguation
+l10n:
+  sourceCommit: ea3a289af7cd97f1b5952ddc7fe2704feab105c9
 ---
 
-The term **baseline** can have several meanings depending on the context. It may refer to:
+**ベースライン**という用語は文脈によっていくつかの意味を持つことがあります。
 
 {{GlossaryDisambiguation}}
 
-## See also
+## 関連項目
 
-- [Baseline](https://en.wikipedia.org/wiki/Baseline) on Wikipedia
+- [Baseline](https://en.wikipedia.org/wiki/Baseline) (Wikipedia)
