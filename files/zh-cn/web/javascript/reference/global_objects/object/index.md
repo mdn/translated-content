@@ -9,13 +9,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ## 描述
 
-在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)都是 {{jsxref("Object")}} 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些具有 [`null` 原型](#null-prototype_objects)的对象，或者是从其他 `null` 原型对象继承而来的对象。
+在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)都是 {{jsxref("Object")}} 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些 [`null` 原型对象](#null-prototype_objects)，或者是从其他 `null` 原型对象继承而来的对象。
 
-通过原型链，所有的对象都能观察到 `Object.prototype` 对象的改变，除非这些改变所涉及的属性和方法沿着原型链被进一步重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。为了使其更加安全，`Object.prototype` 是核心 JavaScript 语言中唯一具有[不可变原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#description)的对象——`Object.prototype` 的原型始终为 `null` 且不可更改。
+通过原型链，所有的对象都能观察到 `Object.prototype` 对象的改变，除非这些改变所涉及的属性和方法沿着原型链被进一步重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。为了使其更加安全，`Object.prototype` 是核心 JavaScript 语言中唯一具有[不可变原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#描述)的对象——`Object.prototype` 的原型始终为 `null` 且不可更改。
 
 ### 对象原型属性
 
-你应该避免调用任何 `Object.prototype` 方法，特别是那些不打算多态化的方法（即只有其初始行为是合理的，且无法被任何继承的对象以合理的方式重写）。所有从 `Object.prototype` 继承的对象都可以自定义一个具有相同名称但语义完全不同的自有属性，这可能与你的预期不符。此外，这些属性不会被 [`null` 原型对象](#null-prototype_objects) 继承。现代 JavaScript 中用于操作对象的工具都是[静态的](#static_methods)。更具体地说：
+你应该避免调用任何 `Object.prototype` 方法，特别是那些不打算多态化的方法（即只有其初始行为是合理的，且无法被任何继承的对象以合理的方式重写）。所有从 `Object.prototype` 继承的对象都可以自定义一个具有相同名称但语义可能与你的预期完全不同的自有属性。此外，这些属性不会被 [`null` 原型对象](#null-prototype_objects)继承。现代 JavaScript 中用于操作对象的工具方法都是[静态的](#static_methods)。更具体地说：
 
 - [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 和 [`toLocaleString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) 存在的目的是为了多态化，你应该期望对象会定义自己的实现并具有合理的行为，因此你可以将它们作为实例方法调用。但是，`valueOf()` 和 `toString()` 通常是通过[强制类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)隐式调用的，因此你不需要在代码中自己调用它们。
 - [`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) 和 [`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 已被弃用，不应该再使用。请使用静态方法 {{jsxref("Object.defineProperty()")}} 和 {{jsxref("Object.getOwnPropertyDescriptor()")}} 作为替代。
@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 - [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) 和 [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法可以分别用静态方法 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.hasOwn()")}} 替换。
 - 如果你正在检查一个构造函数的 `prototype` 属性，通常可以用 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 代替 [`isPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) 方法。
 
-如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止目标对象具有覆盖属性，从而产生意外的结果。
+如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止目标对象上原有方法被覆盖，从而产生意外的结果。
 
 ```js
 const obj = {
@@ -45,22 +45,20 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true；预期的结�
 
 ### null 原型对象
 
-Almost all objects in JavaScript ultimately inherit from `Object.prototype` (see [inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)). However, you may create `null`-prototype objects using [`Object.create(null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or the [object initializer syntax](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) with `__proto__: null` (note: the `__proto__` key in object literals is different from the deprecated [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) property). You can also change the prototype of an existing object to `null` by calling [`Object.setPrototypeOf(obj, null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
-
-几乎所有的 JavaScript 对象最终都继承自 `Object.prototype`（参见[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。然而，你可以使用 [`Object.create(null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 或具有 `__proto__: null` 的 [对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)（注意：对象字面量中的 `__proto__` 键不同于已弃用的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 属性）来创建 `null` 原型对象。你还可以通过调用 [`Object.setPrototypeOf(obj, null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 将现有对象的原型更改为 `null`。
+几乎所有的 JavaScript 对象最终都继承自 `Object.prototype`（参见[继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。然而，你可以使用 [`Object.create(null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 或定义了 `__proto__: null` 的[对象字面量语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)（注意：对象字面量中的 `__proto__` 键不同于已弃用的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 属性）来创建 `null` 原型对象。你还可以通过调用 [`Object.setPrototypeOf(obj, null)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 将现有对象的原型更改为 `null`。
 
 ```js
 const obj = Object.create(null);
 const obj2 = { __proto__: null };
 ```
 
-`null` 原型的对象可能会有一些预期外的行为表现，因为它不会从 `Object.prototype` 继承任何对象方法。这在调试时尤其需要注意，因为常见的对象属性转换/检测实用方法可能会生成错误或丢失信息（特别是在使用了忽略错误的静默错误捕获机制的情况下）。
+`null` 原型对象可能会有一些预期外的行为表现，因为它不会从 `Object.prototype` 继承任何对象方法。这在调试时尤其需要注意，因为常见的对象属性转换/检测实用方法可能会生成错误或丢失信息（特别是在使用了忽略错误的静默错误捕获机制的情况下）。
 
 例如，[`Object.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法的缺失通常会使得调试变得困难：
 
 ```js
 const normalObj = {}; // 创建一个普通对象
-const nullProtoObj = Object.create(null); // 创建一个原型为 "null" 的对象
+const nullProtoObj = Object.create(null); // 创建一个 "null" 原型对象
 
 console.log(`normalObj 是：${normalObj}`); // 显示 "normalObj 是：[object Object]"
 console.log(`nullProtoObj 是：${nullProtoObj}`); // 抛出错误：Cannot convert object to primitive value
@@ -93,7 +91,7 @@ console.log(`nullProtoObj 是：${nullProtoObj}`); // 显示 "nullProtoObj 是�
 
 普通对象的 `toString()` 方法是在对象的原型上的，而与普通对象不同的是，这里的 `toString()` 方法是 `nullProtoObj` 自己的属性。这是因为 `nullProtoObj` 没有原型（即为 `null`）。
 
-在实践中，`null` 原型的对象通常被用作 [map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 的简单替代品。由于存在 `Object.prototype` 属性，会导致一些错误：
+在实践中，`null` 原型对象通常被用作 [map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 的简单替代品。由于存在 `Object.prototype` 属性，会导致一些错误：
 
 ```js
 const ages = { alice: 18, bob: 27 };
@@ -110,7 +108,7 @@ hasPerson("hasOwnProperty"); // true
 getAge("toString"); // [Function: toString]
 ```
 
-使用一个 `null` 原型的对象可以消除这种危险，同时不会给 `hasPerson` 和 `getAge` 函数带来太多复杂性：
+使用一个 `null` 原型对象可以消除这种风险，同时不会令 `hasPerson` 和 `getAge` 函数变得复杂：
 
 ```js
 const ages = Object.create(null, {
@@ -138,27 +136,23 @@ if (user.authenticated) {
 }
 ```
 
-JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是那些将对象用作临时键值对集合的 API。例如：：
+JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是那些将对象用作临时键值对集合的 API。例如：
 
 - {{jsxref("Array.prototype.group()")}} 方法的返回值
 - {{jsxref("RegExp.prototype.exec()")}} 方法返回结果中的 `groups` 和 `indices.groups` 属性
-- [`Array.prototype[@@unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) 属性（所有`@@unscopables` 对象原型都应该为 `null`）
+- [`Array.prototype[@@unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) 属性（所有 `@@unscopables` 对象原型都应该为 `null`）
 - [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta) 对象
-- 通过 [`import * as ns from "module"`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#namespace_import) 或 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 获取的模块命名空间对象
+- 通过 [`import * as ns from "module"`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入命名空间) 或 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 获取的模块命名空间对象
 
 “`null` 原型对象”这个术语通常也包括其原型链中没有 `Object.prototype` 的任何对象。当使用类时，可以通过 [`extends null`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#扩展_null) 来创建这样的对象。
 
 ### 对象强制转换
 
-许多内置操作首先将它们的参数强制转换为对象。[该操作](https://tc39.es/ecma262/#sec-toobject)可以概括如下：
+许多内置操作首先将它们的参数强制转换为对象。[该过程](https://tc39.es/ecma262/#sec-toobject)可以概括如下：
 
-- Objects are returned as-is.
-- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
-- {{jsxref("Number")}}, {{jsxref("String")}}, {{jsxref("Boolean")}}, {{jsxref("Symbol")}}, {{jsxref("BigInt")}} primitives are wrapped into their corresponding object wrappers.
-
-- 对象按原样返回。
-- [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 抛出 {{jsxref("TypeError")}}。
-- {{jsxref("Number")}}、{{jsxref("String")}}、{{jsxref("Boolean")}}、{{jsxref("Symbol")}}、{{jsxref("BigInt")}} 等基本类型被包装成其对应的对象包装器。
+- 对象则按原样返回。
+- [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 和 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 则抛出 {{jsxref("TypeError")}}。
+- {{jsxref("Number")}}、{{jsxref("String")}}、{{jsxref("Boolean")}}、{{jsxref("Symbol")}}、{{jsxref("BigInt")}} 等基本类型被封装成其对应的基本类型对象。
 
 在 JavaScript 中实现相同效果的最佳方式是使用 [`Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) 构造函数。`Object(x)` 可以将 `x` 转换为对象，对于 `undefined` 或 `null`，它会返回一个普通对象而不是抛出 {{jsxref("TypeError")}} 异常。
 
@@ -170,7 +164,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - 当访问基本类型的属性时进行自动转换，因为基本类型没有属性。
 - 在调用非严格函数时的 `this` 值。基本类型值被封装为对象，而 `null` 和 `undefined` 被替换为[全局对象](/zh-CN/docs/Glossary/Global_object)。
 
-与[转换为基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制基本类型转换)不同，对象强制转换过程本身无法以任何方式被观察到，因为它不会调用像 `toString` 或 `valueOf` 方法这样的自定义代码。
+与[转换为基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)不同，对象强制转换过程本身无法以任何方式被观察到，因为它不会调用像 `toString` 或 `valueOf` 方法这样的自定义代码。
 
 ## 构造函数
 
@@ -248,7 +242,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : 返回一个布尔值，用于表示该方法所调用的对象是否在指定对象的原型链中。
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : 返回一个布尔值，指示指定属性是否是对象的[可枚举自有属性](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+  - : 返回一个布尔值，指示指定属性是否是对象的[可枚举自有属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : 调用 {{jsxref("Object/toString", "toString()")}} 方法。
 - {{jsxref("Object.prototype.toString()")}}
@@ -291,20 +285,15 @@ const o = new Object(Boolean());
 ```js
 const current = Object.prototype.valueOf;
 
-// Since my property "-prop-value" is cross-cutting and isn't always
-// on the same prototype chain, I want to modify Object.prototype:
-// 由于我的属性“-prop-value”是横跨多个原型链的，并且不总是在同一个原型链上，因此我想修改 Object.prototype：
+// 由于我的属性“-prop-value”是横跨多个原型链的，并且不总是在同一个原型链上，
+// 因此我想修改 Object.prototype：
 Object.prototype.valueOf = function (...args) {
   if (Object.hasOwn(this, "-prop-value")) {
     return this["-prop-value"];
   } else {
-    // It doesn't look like one of my objects, so let's fall back on
-    // the default behavior by reproducing the current behavior as best we can.
-    // The apply behaves like "super" in some other languages.
-    // Even though valueOf() doesn't take arguments, some other hook may.
-    // 这似乎不是我的对象，因此让我们尽可能地重现当前的行为，以回到默认行为。
+    // 这似乎不是我的对象，因此让我们尽可能实现默认行为。
     // 在某些其他语言中，apply 的行为类似于 "super"。
-    // 即使 valueOf() 不需要参数，但其他钩子可能需要参数。
+    // 即使 valueOf() 不需要参数，但其他的方法可能需要参数。
     return current.apply(this, args);
   }
 };
