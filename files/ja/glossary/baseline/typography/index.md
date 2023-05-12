@@ -7,8 +7,6 @@ l10n:
 
 **ベースライン**とは、ヨーロッパおよび西アジアの書体で使用される用語で、フォントの文字がその上に載る概念上の線を意味します。
 
-{{GlossaryDisambiguation}}
-
 ## 関連項目
 
 - [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) (Wikipedia)
