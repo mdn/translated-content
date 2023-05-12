@@ -1,14 +1,15 @@
 ---
 title: Baseline (typography)
 slug: Glossary/Baseline/Typography
-page-type: glossary-definition
+l10n:
+  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
 ---
 
-The **baseline** is a term used in European and West Asian typography meaning an imaginary line upon which the characters of a font rest.
+**ベースライン**とは、ヨーロッパおよび西アジアの書体で使用される用語で、フォントの文字がその上に載る概念上の線を意味します。
 
 {{GlossaryDisambiguation}}
 
-## See also
+## 関連項目
 
-- [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) on Wikipedia
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment) on MDN
+- [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) (Wikipedia)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment) (MDN)
