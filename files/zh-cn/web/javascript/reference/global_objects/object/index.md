@@ -310,9 +310,9 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.
+> **警告**：修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
 
-You can read more about prototypes in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+你可以阅读更多关于原型的内容，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
 ## 规范
 
