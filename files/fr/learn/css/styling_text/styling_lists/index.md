@@ -374,7 +374,7 @@ solution.addEventListener("click", function() {
 htmlInput.addEventListener("input", drawOutput);
 cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
-```         
+```
 
 {{ EmbedLiveSample('', 700, 800) }}
 
