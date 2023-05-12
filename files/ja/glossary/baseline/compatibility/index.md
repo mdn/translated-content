@@ -1,37 +1,35 @@
 ---
 title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
+l10n:
+  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
 ---
 
-**Baseline** identifies widely-supported web platform features.
-Web developers can expect Baseline features to work in contemporary browsers.
+**ベースライン**は、広くサポートされているウェブプラットフォームの機能を確認します。ウェブ開発者は、ベースラインの機能が最新のブラウザーで動作することを期待できます。
 
-A Baseline feature - such as an API, a set of CSS properties, or a JavaScript syntax - is known to work consistently in the current and previous major versions of several well-known browsers (Chrome, Edge, Firefox, and Safari).
+ベースラインの機能（API、CSS プロパティ、JavaScript 構文など）は、有名なブラウザ（Chrome, Edge, Firefox, Safari）の現在および以前のメジャーバージョンで安定して動作することが知られています。
 
-## Badges
+## バッジ
 
 <!-- TODO: Show Baseline indicator itself, once it has been merged -->
 
-🟢 If you see the green Baseline badge, then you can trust that the feature will work in the browsers' latest and previous major releases.
+🟢 緑色のベースラインバッジが表示されていれば、その機能がブラウザの最新および以前のメジャーリリースで動作することが信頼できます。
 
 <!-- TODO: Show the non-Baseline indicator itself, once it has been merged -->
 
-🟡 If you see a yellow badge showing that a feature is not yet Baseline, then do more research and testing with your site's users before relying on that feature, or wait for it to become Baseline.
+🟡 もし、ある機能がまだベースラインでないことを示す黄色いバッジが表示されている場合は、その機能に依存する前に、サイトのユーザーに対してより多くの調査とテストを行うか、ベースラインになるのを待つ必要があります。
 
-## Extra considerations
+## その他の注意事項
 
-Baseline is a summary guide to support and doesn't cover every situation.
-If your site needs to work with a browser's long-term support release, an older device or browser release, or a browser not covered by the Baseline report, then you may need to do your own research or testing.
-If Baseline doesn't cover your situation, then consider reading browser compatibility tables on MDN or visiting [caniuse.com](https://caniuse.com/) before committing to a feature.
+ベースラインはサポートに関する要約ガイドであり、すべての状況をカバーしているわけではありません。もしあなたのサイトが、ブラウザの長期サポートリリース、古いデバイスやブラウザのリリース、またはベースラインレポートがカバーしていないブラウザで動作する必要がある場合、あなた自身で調査やテストを行う必要があるかもしれません。ベースラインでカバーできない場合は、その機能を採用する前に MDN にあるブラウザの互換性テーブルを読んだり [caniuse.com](https://caniuse.com/) にアクセスすることをお勧めします。
 
-## Contributing
+## 貢献するには
 
-Baseline is a community effort of the W3C WebDX Community Group and relies on MDN's open source browser compatibility data.
-If you have questions, feedback, or want to help update and expand the features covered by Baseline status reports, then go to [web-platform-dx/feature-set](https://github.com/web-platform-dx/feature-set) to participate.
+ベースラインは W3C WebDX Community Group のコミュニティ活動であり、MDN のオープンソースのブラウザー互換性データに依存しています。質問、フィードバックがある場合、またはベースラインのステータスレポートがカバーする機能の更新や拡張に協力したい場合は、[web-platform-dx/feature-set](https://github.com/web-platform-dx/feature-set) にアクセスして参加することができます。
 
-## See also
+## 関連項目
 
-- [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)
 - [web-platform-dx/feature-set repository](https://github.com/web-platform-dx/feature-set)
 - [W3C WebDX Community Group](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data repository](https://github.com/mdn/browser-compat-data)
