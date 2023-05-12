@@ -1,6 +1,7 @@
 ---
 title: ブロックレベル要素
-slug: Web/HTML/Block-level_elements
+slug: Glossary/Block-level_content
+original_slug: Web/HTML/Block-level_elements
 ---
 
 HTML (**Hypertext Markup Language**) の要素は従来、 「ブロックレベル」要素または「インライン要素」の何れかに分類されてきました。これは表示特性であることから、現在は CSS において[フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)の中で定義されています。ブロックレベル要素は親要素 (コンテナー) の水平空間全体と、内容物の高さに等しい垂直空間を占有し、「ブロック」を生成します。この記事では、 HTML のブロックレベル要素とは何か、[インラインレベル要素](/ja/docs/Web/HTML/Inline-level_elements)とどのように異なるかを説明します。
