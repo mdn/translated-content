@@ -1,20 +1,13 @@
 ---
-title: Baseline (ベースライン)
+title: Baseline
 slug: Glossary/Baseline
+page-type: glossary-disambiguation
 ---
 
-**ベースライン**とは、ヨーロッパおよび西アジアの書体で使用される用語で、フォントの文字がその上に載る概念上の線を意味します。
+The term **baseline** can have several meanings depending on the context. It may refer to:
 
-g や p のような文字のディセンダーはベースラインより下に伸びています。C または 3 のような丸みのある下部または上部をもつ {{Glossary("glyph", "Glyphs")}} は、ベースラインより下にわずかに伸びます。
+{{GlossaryDisambiguation}}
 
-東アジアの文字にはベースラインはありません。それらのグリフは、アセンダーまたはディセンダーのない正方形のボックスに配置されます。
+## See also
 
-## 詳細情報
-
-### 一般知識
-
-- [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) (Wikipedia)
-
-### 技術リファレンス
-
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment#Types_of_alignment) (MDN)
+- [Baseline](https://en.wikipedia.org/wiki/Baseline) on Wikipedia
