@@ -152,8 +152,7 @@ def index(request):
 </ul>
 
 <p>
-  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
-  else %} times{% endif %}.
+  You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.
 </p>
 ```
 

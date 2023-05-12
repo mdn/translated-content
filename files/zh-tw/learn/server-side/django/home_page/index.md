@@ -168,19 +168,21 @@ def index(request):
 
 > **備註：** 模板*tags* 類似於可以在模板中使用的功能，可以在模板中循環使用列表，基於變量的值執行條件操作等。除了模板標記之外，模板語法還允許您引用模板變量（傳遞給 模板），並使用*template filters*，該過濾器可重新格式化變量（例如，將字符串設置為小寫）。
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
   <head>
     {% block title %}
-    <title>Local Library</title>
+      <title>Local Library</title>
     {% endblock %}
   </head>
-
   <body>
-    {% block sidebar %}<!-- insert default navigation text for every page -->{%
-    endblock %} {% block content %}<!-- default content text (typically empty) -->{%
-    endblock %}
+    {% block sidebar %}
+      <!-- insert default navigation text for every page -->
+    {% endblock %}
+    {% block content %}
+      <!-- default content text (typically empty) -->
+    {% endblock %}
   </body>
 </html>
 ```
@@ -190,22 +192,24 @@ def index(request):
 例如，下面的代碼片段顯示了我們如何使用`extends` 模板標籤並覆蓋`content` 區塊。 生成的最終 HTML 將具有基本模板中定義的所有 HTML 和結構（包括您在`title` 區塊中定義的默認內容），但是將新的`content` 區塊插入到默認模板中。
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<h1>Local Library Home</h1>
-<p>
-  Welcome to LocalLibrary, a website developed by
-  <em>Mozilla Developer Network</em>!
-</p>
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
 {% endblock %}
 ```
 
 #### The LocalLibrary base template
 
-下面列出了我們計劃用於*LocalLibrary* 網站的基本模板。 如您所見，其中包含一些 HTML 以及 `title`, `sidebar`, 和 `content`。 我們有一個默認標題（我們可能想要更改）和一個默認側邊欄，其中帶有指向所有書籍和作者列表的鏈接（我們可能不想更改，但是如果需要的話，我們允許範圍通過將其放在 在一個區塊中）。
+下面列出了我們計劃用於 _LocalLibrary_ 網站的基本模板。 如您所見，其中包含一些 HTML 以及 `title`、`sidebar` 和 `content`。 我們有一個默認標題（我們可能想要更改）和一個默認側邊欄，其中帶有指向所有書籍和作者列表的鏈接（我們可能不想更改，但是如果需要的話，我們允許範圍通過將其放在一個區塊中）。
 
-> **備註：** 我們還引入了兩個附加的模板標籤：`url` 和`load static`。 這些將在以下各節中討論。
+> **備註：** 我們還引入了兩個附加的模板標籤：`url` 和`load static`。這些將在以下各節中討論。
 
-創建一個新文件**/locallibrary/catalog/templates/_base_generic.html_** ，並為其提供以下內容：
+創建一個新文件 **/locallibrary/catalog/templates/_base_generic.html_**，並為其提供以下內容：
 
 ```django
 <!DOCTYPE html>
@@ -245,7 +249,7 @@ def index(request):
 </html>
 ```
 
-該模板包括來自[Bootstrap](http://getbootstrap.com/)的 CSS，以改進 HTML 頁面的佈局和表示方式。 使用 Bootstrap 或其他客戶端 Web 框架是創建吸引人的頁面的快速方法，該頁面可以在不同的瀏覽器大小上很好地擴展。
+該模板包括來自 [Bootstrap](https://getbootstrap.com/) 的 CSS，以改進 HTML 頁面的佈局和表示方式。 使用 Bootstrap 或其他客戶端 Web 框架是創建吸引人的頁面的快速方法，該頁面可以在不同的瀏覽器大小上很好地擴展。
 
 基本模板還引用了本地 CSS 文件 (**styles.css**) ，該文件提供了一些其他樣式。 創建 **/locallibrary/catalog/static/css/styles.css**並為其提供以下內容：
 
@@ -262,21 +266,22 @@ def index(request):
 創建 HTML 文件 **/locallibrary/catalog/templates/_index.html_** 並為其提供以下內容。 如您所見，我們在第一行中擴展了基本模板，然後使用該模板的新內容塊替換默認`content` 區塊。
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<h1>Local Library Home</h1>
-<p>
-  Welcome to LocalLibrary, a website developed by
-  <em>Mozilla Developer Network</em>!
-</p>
+{% extends "base_generic.html" %}
 
-<h2>Dynamic content</h2>
-<p>The library has the following record counts:</p>
-<ul>
-  <li><strong>Books:</strong> \{{ num_books }}</li>
-  <li><strong>Copies:</strong> \{{ num_instances }}</li>
-  <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
-  <li><strong>Authors:</strong> \{{ num_authors }}</li>
-</ul>
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> \{{ num_books }}</li>
+    <li><strong>Copies:</strong> \{{ num_instances }}</li>
+    <li><strong>Copies available:</strong> \{{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> \{{ num_authors }}</li>
+  </ul>
 {% endblock %}
 ```
 

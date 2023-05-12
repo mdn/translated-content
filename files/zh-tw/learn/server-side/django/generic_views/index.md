@@ -125,20 +125,23 @@ class BookListView(generic.ListView):
 通用的 views 模板跟其他的模板沒有不同 (儘管傳遞給模板的內文/訊息當然可以不同). 與 index 模板一樣，我們在第一行中擴展了基本模板，然後更替名為 `content`的區塊。
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<h1>Book List</h1>
-{% if book_list %}
-<ul>
-  {% for book in book_list %}
-  <li>
-    <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
-    (\{{book.author}})
-  </li>
-  {% endfor %}
-</ul>
-{% else %}
-<p>There are no books in the library.</p>
-{% endif %} {% endblock %}
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Book List</h1>
+  {% if book_list %}
+    <ul>
+      {% for book in book_list %}
+      <li>
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+        (\{{book.author}})
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}
 ```
 
 該視圖默認將上下文（書籍列表）作為`object_list` 和 `book_list` 別名傳遞;兩者都會起作用.
@@ -149,9 +152,9 @@ class BookListView(generic.ListView):
 
 ```django
 {% if book_list %}
-<!-- code here to list the books -->
+  <!-- code here to list the books -->
 {% else %}
-<p>There are no books in the library.</p>
+  <p>There are no books in the library.</p>
 {% endif %}
 ```
 
@@ -163,7 +166,7 @@ The template uses the [for](https://docs.djangoproject.com/en/2.0/ref/templates/
 
 ```django
 {% for book in book_list %}
-<li><!-- code here get information from each book item --></li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -368,35 +371,34 @@ The view first tries to get the specific book record from the model. If this fai
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
 ```django
-{% extends "base_generic.html" %} {% block content %}
-<h1>Title: \{{ book.title }}</h1>
+{% extends "base_generic.html" %}
 
-<p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
-<!-- author detail link not yet defined -->
-<p><strong>Summary:</strong> \{{ book.summary }}</p>
-<p><strong>ISBN:</strong> \{{ book.isbn }}</p>
-<p><strong>Language:</strong> \{{ book.language }}</p>
-<p>
-  <strong>Genre:</strong> {% for genre in book.genre.all %} \{{ genre }}{% if
-  not forloop.last %}, {% endif %}{% endfor %}
-</p>
+{% block content %}
+  <h1>Title: \{{ book.title }}</h1>
 
-<div style="margin-left:20px;margin-top:20px">
-  <h4>Copies</h4>
+  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+  <!-- author detail link not yet defined -->
+  <p><strong>Summary:</strong> \{{ book.summary }}</p>
+  <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
+  <p><strong>Language:</strong> \{{ book.language }}</p>
+  <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
-  {% for copy in book.bookinstance_set.all %}
-  <hr />
-  <p
-    class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
-    \{{ copy.get_status_display }}
-  </p>
-  {% if copy.status != 'a' %}
-  <p><strong>Due to be returned:</strong> \{{copy.due_back}}</p>
-  {% endif %}
-  <p><strong>Imprint:</strong> \{{copy.imprint}}</p>
-  <p class="text-muted"><strong>Id:</strong> \{{copy.id}}</p>
-  {% endfor %}
-</div>
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Copies</h4>
+
+    {% for copy in book.bookinstance_set.all %}
+      <hr />
+      <p
+        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        \{{ copy.get_status_display }}
+      </p>
+      {% if copy.status != 'a' %}
+        <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
+      {% endif %}
+      <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
+      <p class="text-muted"><strong>Id:</strong> \{{ copy.id }}</p>
+    {% endfor %}
+  </div>
 {% endblock %}
 ```
 
