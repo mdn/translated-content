@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 - [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) 和 [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法可以分别用静态方法 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.hasOwn()")}} 替换。
 - 如果你正在检查一个构造函数的 `prototype` 属性，通常可以用 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 代替 [`isPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) 方法。
 
-如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止目标对象上原有方法被覆盖，从而产生意外的结果。
+如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止因目标对象上原有方法被覆盖而产生意外的结果。
 
 ```js
 const obj = {
