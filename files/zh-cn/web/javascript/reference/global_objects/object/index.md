@@ -9,13 +9,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 ## 描述
 
-在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)都是 {{jsxref("Object")}} 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些 [`null` 原型对象](#null-prototype_objects)，或者是从其他 `null` 原型对象继承而来的对象。
+在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)都是 {{jsxref("Object")}} 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些 [`null` 原型对象](#null_原型对象)，或者是从其他 `null` 原型对象继承而来的对象。
 
 通过原型链，所有的对象都能观察到 `Object.prototype` 对象的改变，除非这些改变所涉及的属性和方法沿着原型链被进一步重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。为了使其更加安全，`Object.prototype` 是核心 JavaScript 语言中唯一具有[不可变原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#描述)的对象——`Object.prototype` 的原型始终为 `null` 且不可更改。
 
 ### 对象原型属性
 
-你应该避免调用任何 `Object.prototype` 方法，特别是那些不打算多态化的方法（即只有其初始行为是合理的，且无法被任何继承的对象以合理的方式重写）。所有从 `Object.prototype` 继承的对象都可以自定义一个具有相同名称但语义可能与你的预期完全不同的自有属性。此外，这些属性不会被 [`null` 原型对象](#null-prototype_objects)继承。现代 JavaScript 中用于操作对象的工具方法都是[静态的](#static_methods)。更具体地说：
+你应该避免调用任何 `Object.prototype` 方法，特别是那些不打算多态化的方法（即只有其初始行为是合理的，且无法被任何继承的对象以合理的方式重写）。所有从 `Object.prototype` 继承的对象都可以自定义一个具有相同名称但语义可能与你的预期完全不同的自有属性。此外，这些属性不会被 [`null` 原型对象](#null_原型对象)继承。现代 JavaScript 中用于操作对象的工具方法都是[静态的](#静态方法)。更具体地说：
 
 - [`valueOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)、[`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 和 [`toLocaleString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) 存在的目的是为了多态化，你应该期望对象会定义自己的实现并具有合理的行为，因此你可以将它们作为实例方法调用。但是，`valueOf()` 和 `toString()` 通常是通过[强制类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)隐式调用的，因此你不需要在代码中自己调用它们。
 - [`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)、[`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__) 和 [`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 已被弃用，不应该再使用。请使用静态方法 {{jsxref("Object.defineProperty()")}} 和 {{jsxref("Object.getOwnPropertyDescriptor()")}} 作为替代。
