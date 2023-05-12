@@ -220,7 +220,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
+[`start`](/ja/docs/Web/HTML/Element/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
 
 ```html
 <ol start="4">
@@ -237,7 +237,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
+[`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
 
 ```html
 <ol start="4" reversed>
@@ -256,7 +256,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
+[`value`](/ja/docs/Web/HTML/Element/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
 
 ```html
 <ol>

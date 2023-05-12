@@ -42,6 +42,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`hidden`](/zh-TW/docs/Web/HTML/Global_attributes/hidden)
   - : Is a Boolean attribute indicates that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
 - [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id)
+
   - : Defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
 
     > **備註：** The following 5 attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
@@ -57,6 +58,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/zh-TW/docs/Web/HTML/Global_attributes/itemtype) {{experimental_inline}}
   - : Specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure. [Itemscope](/zh-TW/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
 - [`lang`](/zh-TW/docs/Web/HTML/Global_attributes/lang)
+
   - : Participates in defining the language of the element, the language that non-editable elements are written in or the language that editable elements should be written in. The tag contains one single entry value in the format defines in the [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) IETF document. **xml:lang** has priority over it.
 
 - [`slot`](/zh-TW/docs/Web/HTML/Global_attributes/slot) {{experimental_inline}}

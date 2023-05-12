@@ -23,7 +23,7 @@ l10n:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、{{htmlattrxref("crossorigin", "link")}} 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
+- [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
 
 ### CSS
 
@@ -130,7 +130,7 @@ l10n:
 #### サービスワーカー
 
 - `ServiceWorkerMessageEvent` および {{domxref("ExtendableMessageEvent")}} インターフェイスを実装しました ([Firefox バグ 1143717](https://bugzil.la/1143717) および [Firefox バグ 1207068](https://bugzil.la/1207068))。
-- {{domxref("Headers")}} オブジェクトがペア反復子に対応しました。すなわち、 {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, {{domxref("Headers.values()")}} の各メソッドが利用できるようになりました。 {{jsxref("Symbol.iterator")}} も既定の反復子を返すようになりました ([Firefox バグ 1108181](https://bugzil.la/1108181))。
+- {{domxref("Headers")}} オブジェクトが組イテレーターに対応しました。すなわち、 {{domxref("Headers.entries()")}}, {{domxref("Headers.keys()")}}, {{domxref("Headers.values()")}} の各メソッドが利用できるようになりました。 {{jsxref("Symbol.iterator")}} も既定のイテレーターを返すようになりました ([Firefox バグ 1108181](https://bugzil.la/1108181))。
 - {{domxref('XMLHttpRequest')}} API がサービスワーカーで無効化されました ([Firefox バグ 931243](https://bugzil.la/931243))。
 - {{domxref("FetchEvent")}} インターフェイスが {{domxref("ExtendableEvent")}} を継承するようになり、 {{domxref("ExtendableEvent.waitUntil()")}} メソッドにアクセスできるようになりました ([Firefox バグ 1214772](https://bugzil.la/1214772))。
 - 仕様書の最新の変更に従い、 `FetchEvent.client` が削除されました ([Firefox バグ 1218135](https://bugzil.la/1218135))。
@@ -162,8 +162,8 @@ l10n:
 
 #### その他
 
-- {{domxref("URLSearchParams")}} オブジェクトでペア反復子に対応しました。{{domxref("URLSearchParams.entries()")}}、{{domxref("URLSearchParams.keys()")}}、{{domxref("URLSearchParams.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定の反復子を返すようになりました ([Firefox バグ 1085284](https://bugzil.la/1085284))。
-- {{domxref("FormData")}} オブジェクトでペア反復子に対応しました。{{domxref("FormData.entries()")}}、{{domxref("FormData.keys")}}、{{domxref("FormData.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定の反復子を返すようになりました ([Firefox バグ 1127703](https://bugzil.la/1127703))。
+- {{domxref("URLSearchParams")}} オブジェクトで組イテレーターに対応しました。{{domxref("URLSearchParams.entries()")}}、{{domxref("URLSearchParams.keys()")}}、{{domxref("URLSearchParams.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定のイテレーターを返すようになりました ([Firefox バグ 1085284](https://bugzil.la/1085284))。
+- {{domxref("FormData")}} オブジェクトで組イテレーターに対応しました。{{domxref("FormData.entries()")}}、{{domxref("FormData.keys")}}、{{domxref("FormData.values()")}} の各メソッドを使用できます。また {{jsxref("Symbol.iterator")}} は、既定のイテレーターを返すようになりました ([Firefox バグ 1127703](https://bugzil.la/1127703))。
 - {{domxref("XMLHttpRequest.send()")}} を HTML 文書で使用したとき、`application/xml` に代わり `text/html` を使用するようになりました ([Firefox バグ 918771](https://bugzil.la/918771))。
 - 音声合成 (text-to-speech) を Mac および Linux 向けのデスクトップ版 Firefox に実装しました。ただし、`about:config` の `media.webspeech.synth.enabled` フラグで無効化しています ([Firefox バグ 1003452](https://bugzil.la/1003452)、[Firefox バグ 1003464](https://bugzil.la/1003464))。詳しくは [Web Speech API](/ja/docs/Web/API/Web_Speech_API) をご覧ください。
 - {{HTMLElement("frame")}} または {{HTMLElement('object')}} の内部にある要素は、全画面表示できないようになりました ([Firefox バグ 1212299](https://bugzil.la/1212299))。

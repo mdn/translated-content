@@ -52,7 +52,7 @@ textarea:read-write {
 
 ### フォーム以外の読み書き用コントロールのスタイル付け
 
-このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に {{htmlattrxref("readonly", "input")}} が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に {{htmlattrxref("contenteditable")}} が設定されたものを選択します。
+このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) が設定されたものを選択します。
 
 ```html
 <p contenteditable>この段落は編集可能です。読み書き可です。</p>
@@ -90,4 +90,4 @@ p:read-write {
 ## 関連情報
 
 - {{cssxref(":read-only")}}
-- HTML の {{htmlattrxref("contenteditable")}} 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性

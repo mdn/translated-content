@@ -44,11 +44,11 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/function", "function")}}
   - : 指定された仮引数を持つ関数を宣言します。
 - {{jsxref("Statements/function*", "function*")}}
-  - : [反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)をより簡単に書けるジェネレーター関数です。
+  - : [イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)をより簡単に書けるジェネレーター関数です。
 - {{jsxref("Statements/async_function", "async function")}}
   - : 指定した引数を持つの非同期関数を宣言します。
 - {{jsxref("Statements/async_function*", "async function*")}}
-  - : 非同期ジェネレータ関数により、非同期の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)をより簡単に書くことができます。
+  - : 非同期ジェネレータ関数により、非同期の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)をより簡単に書くことができます。
 - {{jsxref("Statements/class", "class")}}
   - : クラスを宣言します。
 
@@ -61,9 +61,9 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/for...in", "for...in")}}
   - : オブジェクトの列挙可能なプロパティに対し任意の順番で反復処理を行います。それぞれ個別のプロパティに対し、文を実行できます。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","","true")}}、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
+  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","","true")}}、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
-  - : 非同期反復オブジェクト、配列風オブジェクト、[反復子とジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
+  - : 非同期反復オブジェクト、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
 - {{jsxref("Statements/while", "while")}}
   - : テスト条件が真と評価される間、指定した文を実行するループを作成します。この条件は文が実行される前に評価されます。
 

@@ -7,8 +7,14 @@ slug: Web/HTML/Element/marquee
 
 HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過屬性，控制文字在到達邊緣後的應對動作。
 
-| DOM 介面 | {{DOMxRef("HTMLMarqueeElement")}} |
-| -------- | -------------------------------------------- |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 屬性
 
@@ -58,10 +64,13 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 
 <marquee direction="up">This text will scroll from bottom to top</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    This text will bounce
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate"> This text will bounce </marquee>
 </marquee>
 ```
 

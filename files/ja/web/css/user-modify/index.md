@@ -20,7 +20,7 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-> **警告:** このプロパティは {{HTMLAttrxRef("contenteditable")}} 属性に置き換えられました。
+> **警告:** このプロパティは [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性に置き換えられました。
 
 ## 構文
 

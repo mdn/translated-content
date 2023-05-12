@@ -14,7 +14,7 @@ l10n:
 ### HTML
 
 - {{HTMLElement("bdo")}} の既定のスタイルで、{{cssxref("unicode-bidi")}} の値が `isolate-override` になりました ([Firefox バグ 1249497](https://bugzil.la/1249497))。
-- {{HTMLElement("track")}} 要素の {{htmlattrxref("src", "track")}} 属性の設定が正しく動作するようになりました ([Firefox バグ 1281418](https://bugzil.la/1281418))。
+- {{HTMLElement("track")}} 要素の [`src`](/ja/docs/Web/HTML/Element/track#src) 属性の設定が正しく動作するようになりました ([Firefox バグ 1281418](https://bugzil.la/1281418))。
 - {{HTMLElement("area")}}、{{HTMLElement("a")}}、{{HTMLElement("img")}}、{{HTMLElement("iframe")}}、{{HTMLElement("link")}} 要素の `referrerpolicy` 属性を、デフォルトで有効化しました ([Firefox バグ 1223838](https://bugzil.la/1223838)、[Firefox バグ 1264165](https://bugzil.la/1264165))。
 
 ### CSS
@@ -53,7 +53,7 @@ l10n:
 
 ### セキュリティ
 
-- {{htmlelement("a")}} 要素の {{htmlattrxref("ping", "a")}} 属性が、[`connect-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
+- {{htmlelement("a")}} 要素の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性が、[`connect-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
 - [`sandbox`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#sandbox) [CSP](/ja/docs/Web/HTTP/CSP) ディレクティブをサポートしました ([Firefox バグ 671389](https://bugzil.la/671389))。
 - [workers に content security policy を設定する](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ことが可能になりました ([Firefox バグ 959388](https://bugzil.la/959388))。
 - [Content Security Policy](/ja/docs/Web/HTTP/CSP) の制限によりビーコンデータを送信できなかったとき、{{domxref("Navigator.sendBeacon()")}} メソッドで例外が発生しないようになりました。代わりに、想定どおり `false` を返します ([Firefox バグ 1234813](https://bugzil.la/1234813))。
@@ -138,7 +138,7 @@ l10n:
     - {{domxref("FileSystemDirectoryEntry")}} ({{domxref("FileSystemDirectoryEntry.removeRecursively", "removeRecursively()")}} を除く)
     - {{domxref("FileSystemDirectoryReader")}}
 
-  - {{HTMLElement("input")}} 要素の {{HTMLattrxref("webkitdirectory", "input")}} 属性および {{domxref("HTMLInputElement.webkitdirectory")}} を実装しました。ファイルではなくディレクトリーを受け入れるように、file 型の input を設定できます ([Firefox バグ 1258489](https://bugzil.la/1258489))。
+  - {{HTMLElement("input")}} 要素の [`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性および {{domxref("HTMLInputElement.webkitdirectory")}} を実装しました。ファイルではなくディレクトリーを受け入れるように、file 型の input を設定できます ([Firefox バグ 1258489](https://bugzil.la/1258489))。
   - {{domxref("HTMLInputElement.webkitEntries")}} を実装しました。これは、選択されたアイテムを表す {{domxref("FileSystemEntry")}} ベースのオブジェクトの配列を返します。
   - {{domxref("File.webkitRelativePath")}} を実装しました。これは、{{domxref("HTMLInputElement.webkitGetEntries()")}} が返すリスト内のアイテムのひとつである {{domxref("FileSystemDirectoryEntry")}} に含まれているルートに対して相対的な、ファイルのパスを持ちます。
   - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) をご覧ください。

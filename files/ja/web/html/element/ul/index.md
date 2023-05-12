@@ -79,13 +79,13 @@ slug: Web/HTML/Element/ul
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{ htmlattrdef("compact") }} {{Deprecated_inline}}
+- `compact` {{Deprecated_inline}}
 
   - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
     > **警告:** この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
 
-- {{ htmlattrdef("type") }} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
 
@@ -188,5 +188,5 @@ slug: Web/HTML/Element/ul
 
   - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
-  - {{CSSxRef("line-height")}} プロパティ: 非推奨の {{htmlattrxref("compact", "ul")}} 属性のシミュレート
+  - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](/ja/docs/Web/HTML/Element/ul#compact)ment/ul#compact)ment/ul#compact) 属性のシミュレート
   - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御

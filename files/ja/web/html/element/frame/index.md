@@ -13,19 +13,19 @@ slug: Web/HTML/Element/frame
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : この属性は、フレームに表示する文書を指定します。
-- {{htmlattrdef("name")}}
-  - : この属性は、フレームに名前をつけます。名前がなければ、すべてのリンクは自身が存在するフレーム – 直近の親フレームで開きます。詳しくは {{htmlattrxref("target","a")}} 属性を参照してください。
-- {{htmlattrdef("noresize")}}
+- `name`
+  - : この属性は、フレームに名前をつけます。名前がなければ、すべてのリンクは自身が存在するフレーム – 直近の親フレームで開きます。詳しくは [`target`](/ja/docs/Web/HTML/Element/a#target) 属性を参照してください。
+- `noresize`
   - : この属性は、ユーザによるフレームのリサイズを抑止します。
-- {{htmlattrdef("scrolling")}}
+- `scrolling`
   - : この属性は、スクロールバーの存在の有無を定義します。この属性を指定しない場合、ブラウザは必要なときにスクロールバーを表示します。設定できる値は二つです。 "yes" は不要なときでもスクロールバーを表示します。 "no" は必要なとき*でも*スクロールバーを表示しません。
-- {{htmlattrdef("marginheight")}}
+- `marginheight`
   - : この属性は、フレーム間のマージンの高さを定義します。
-- {{htmlattrdef("marginwidth")}}
+- `marginwidth`
   - : この属性は、フレーム間のマージンの幅を定義します。
-- {{htmlattrdef("frameborder")}}
+- `frameborder`
   - : この属性で、フレームにボーダーを設定できます。
 
 ## 例
