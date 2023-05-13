@@ -5,7 +5,7 @@ slug: Web/HTTP/Methods
 
 {{HTTPSidebar}}
 
-HTTP 定义了一组**请求方法**，以表明要对给定资源执行的操作。指示针对给定资源要执行的期望动作。虽然它们也可以是名词，但这些请求方法有时被称为 *HTTP 动词*。每一个请求方法都实现了不同的语义，但一些共同的特征由一组共享：例如一个请求方法可以是 {{glossary("safe","安全的")}}, {{glossary("idempotent","幂等的")}} 或 {{glossary("cacheable","可缓存的")}}。
+HTTP 定义了一组**请求方法**，以表明要对给定资源执行的操作。指示针对给定资源要执行的期望动作。虽然它们也可以是名词，但这些请求方法有时被称为 _HTTP 动词_。每一个请求方法都实现了不同的语义，但一些共同的特征由一组共享：例如一个请求方法可以是{{glossary("safe","安全的")}}、{{glossary("idempotent","幂等的")}}或{{glossary("cacheable","可缓存的")}}。
 
 - [`GET`](/zh-CN/docs/Web/HTTP/Methods/GET)
   - : `GET` 方法请求一个指定资源的表示形式，使用 `GET` 的请求应该只被用于获取数据。

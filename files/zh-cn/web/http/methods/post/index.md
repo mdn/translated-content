@@ -5,13 +5,13 @@ slug: Web/HTTP/Methods/POST
 
 {{HTTPSidebar}}
 
-**HTTP `POST` 方法**发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 首部指定。
+**HTTP `POST` 方法**发送数据给服务器。请求主体的类型由 {{HTTPHeader("Content-Type")}} 标头指定。
 
 {{HTTPMethod("PUT")}} 和 `POST` 方法的区别是，`PUT` 方法是幂等的：调用一次与连续调用多次效果是相同的（即没有*副*作用），而连续调用多次相同的 `POST` 方法可能会有副作用，比如多次提交同一订单。
 
 一个 `POST` 请求通常是通过 [HTML 表单](/zh-CN/docs/Learn/Forms)发送的，并导致服务器的相应修改。在这种情况下，内容类型（content type）是通过在 {{HTMLElement("form")}} 元素中设置正确的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性，或是在 {{HTMLElement("input") }} 和 {{HTMLElement("button")}} 元素中设置 [`formenctype`](/zh-CN/docs/Web/HTML/Element/input#formenctype) 属性来选择的：
 
-- `application/x-www-form-urlencoded`：数据被编码成以 `'&'` 分隔的键——值对，同时以 `'='` 分隔键和值。键和值中非字母或数字的字符会被 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)，这也是这种类型不支持二进制数据的原因（应使用 `multipart/form-data` 代替）。
+- `application/x-www-form-urlencoded`：数据被编码成以 `'&'` 分隔的键值对，同时以 `'='` 分隔键和值。键和值中非字母或数字的字符会被 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)，这也是这种类型不支持二进制数据的原因（应使用 `multipart/form-data` 代替）。
 - `multipart/form-data`：每个值是在一块数据（“主体部分”）中发送的，由用户代理指定的分隔符（“boundary”）将每个部分分离开。键值在每个部分的 `Content-Disposition` 标头中给出。
 - `text/plain`
 

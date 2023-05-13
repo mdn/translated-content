@@ -17,7 +17,7 @@ slug: Web/HTTP/Methods/PATCH
 
 要知道一个服务器是否支持 `PATCH`，服务器可以通过将其加入 {{HTTPHeader("Allow")}} 或 {{HTTPHeader("Access-Control-Allow-Methods")}}（用于 [CORS](/zh-CN/docs/Web/HTTP/CORS)）响应标头中的列表来宣告其支持。
 
-另外一个支持 `PATCH` 方法的隐含迹象是 {{HTTPHeader("Accept-Patch")}} 标头的出现，这个首部明确了服务器端可以接受的补丁文件的格式。
+另外一个（隐式）表明允许 `PATCH` 方法的指示为 {{HTTPHeader("Accept-Patch")}} 标头的存在，这个标头明确了服务器端可以接受补丁文档的格式。
 
 <table class="properties">
   <tbody>
@@ -90,4 +90,4 @@ ETag: "e0023aa4f"
 
 - {{HTTPStatus("204")}}
 - {{HTTPHeader("Allow")}}、{{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}}——指定了可以接受的补丁文件的格式。
+- {{HTTPHeader("Accept-Patch")}}——指定了可以接受的补丁文档的格式。
