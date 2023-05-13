@@ -1,5 +1,5 @@
 ---
-title: ブロックレベルコンテンツ
+title: Block-level content (ブロックレベルコンテンツ)
 slug: Glossary/Block-level_content
 original_slug: Web/HTML/Block-level_elements
 l10n:
