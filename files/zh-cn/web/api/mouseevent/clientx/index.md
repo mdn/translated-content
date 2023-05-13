@@ -53,4 +53,4 @@ var x = instanceOfMouseEvent.clientX
 
 - {{ domxref("MouseEvent") }}
 - {{domxref("event.clientY","clientY")}}
-- `{{domxref("event.screenX","screenX")}} / {{domxref("event.screenY","screenY")}}`
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
