@@ -13,6 +13,7 @@ Acessiblidade no desenvolvimento Web significa permitir que o máximo possível 
 ## Tutoriais fundamentais
 
 A [área de aprendizado de acessibilidade](/pt-BR/docs/Learn/Accessibility) da MDN contém tutoriais modernos e atualizados que abordam os seguintes aspectos essenciais de acessibilidade:
+
 - [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
   - : Este artigo fornece uma visão geral do que é a acessibilidade - isso inclui quais grupos de pessoas devemos considerar e o motivo, quais ferramentas de acessibilidade são utilizadas para interagir com a web e como podemos fazer da acessibilidade web parte do nosso fluxo de desenvolvimento.
 - [HTML: A base para a acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML)
