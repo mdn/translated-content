@@ -1,19 +1,22 @@
 ---
-title: DocumentOrShadowRoot.elementsFromPoint()
+title: "Document: elementsFromPoint() メソッド"
 slug: Web/API/Document/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-**`elementsFromPoint()`** は {{domxref("DocumentOrShadowRoot")}} インターフェイスのメソッドで、指定された座標 (ビューポートからの相対) にあるすべての要素の配列を返します。
+**`elementsFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された（ビューポートからの相対位置の）座標にあるすべての要素の配列を返します。
+要素はビューポートの最上位のボックスから最下位のボックスに向けて並べられます。
 
-これは {{domxref("DocumentOrShadowRoot.elementFromPoint", "elementFromPoint()")}} メソッドと同じような方法で動作します。
+これは {{domxref("Document.elementFromPoint", "elementFromPoint()")}} メソッドと同じような方法で動作します。
 
 ## 構文
 
-```
-const elements = document.elementsFromPoint(x, y);
+```js-nolint
+elementsFromPoint(x, y)
 ```
 
 ### 引数
@@ -25,7 +28,7 @@ const elements = document.elementsFromPoint(x, y);
 
 ### 返値
 
-{{domxref("Element")}} オブジェクトの配列です。
+{{domxref('Element')}} オブジェクトの配列で、ビューポートの最上位のボックスから最下位のボックスに向けて並べられます。
 
 ## 例
 
@@ -45,20 +48,23 @@ const elements = document.elementsFromPoint(x, y);
 let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i < elements.length; i++) {
-    output.textContent += elements[i].localName;
+  elements.forEach((elt, i) => {
+    output.textContent += elt.localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }
-  }
+  });
 } else {
-  output.innerHTML = "<span style=\"color: red;\">" +
-     "Browser does not support <code>document.elementsFromPoint()</code>" +
-     "</span>";
+  output.innerHTML =
+    '<span style="color: red;">' +
+    "Browser does not support <code>document.elementsFromPoint()</code>" +
+    "</span>";
 }
 ```
 
-{{EmbedLiveSample('Example', '420', '120')}}
+### 結果
+
+{{EmbedLiveSample('Examples', '420', '160')}}
 
 ## 仕様書
 
@@ -70,5 +76,4 @@ if (document.elementsFromPoint) {
 
 ## 関連情報
 
-- {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.elementFromPoint()")}}
