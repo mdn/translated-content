@@ -14,14 +14,14 @@ slug: Web/API/HTMLFieldSetElement
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLFieldSetElement.disabled")}}
-  - : {{jsxref("Boolean")}} で、 HTML の {{htmlattrxref("disabled", "fieldset")}} 属性を反映し、ユーザーがこのコントロールと対話できるかどうかを示します。
+  - : {{jsxref("Boolean")}} で、 HTML の [`disabled`](/ja/docs/Web/HTML/Element/fieldset#disabled) 属性を反映し、ユーザーがこのコントロールと対話できるかどうかを示します。
 - {{domxref("HTMLFieldSetElement.elements")}}{{ReadOnlyInline}}
   - : このフィールドセットに所属する要素です。このプロパティの型は、ブラウザーが実装している仕様書のバージョンによって異なります。
 - {{domxref("HTMLFieldSetElement.form")}}{{ReadOnlyInline}}
   - : {{domxref("HTMLFormControlsCollection")}} または {{domxref("HTMLCollection")}} で、この要素がフォーム内にあった場合、含んでいるフォーム要素を参照します。
     このフィールドセットがフォーム要素の子孫でなかった場合は、この属性は関連付けられた同じ文書内の何れかのフォームになるか、一致するものがなければ `null` になります。
 - {{domxref("HTMLFieldSetElement.name")}}
-  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("name", "fieldset")}} 属性を反映し、フォームを送信するときに使われるフィールドセットの名前が入ります。
+  - : {{domxref("DOMString")}} で、 HTML の [`name`](/ja/docs/Web/HTML/Element/fieldset#name) 属性を反映し、フォームを送信するときに使われるフィールドセットの名前が入ります。
 - {{domxref("HTMLFieldSetElement.type")}}{{ReadOnlyInline}}
   - : {{domxref("DOMString")}} で "`fieldset`" です。
 - {{domxref("HTMLFieldSetElement.validationMessage")}}

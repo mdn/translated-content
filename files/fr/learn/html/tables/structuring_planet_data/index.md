@@ -46,7 +46,7 @@ Vous pouvez aussi [regarder l'exemple ici](https://mdn.github.io/learning-area/h
 
 ## Étapes à suivre
 
-Les étapes suivantes décrivent ce que vous devez faire pour compléter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier `planets-data.txt`. Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
+Les étapes suivantes décrivent ce que vous devez faire pour compléter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier [`planets-data.txt`](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt). Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
 
 1. Ouvrez votre copie de `blank-template.html`, et commencez le tableau en lui donnant un conteneur extérieur, un en-tête et un corps de tableau. Vous n'avez pas besoin d'un pied de tableau dans cet exemple.
 2. Ajoutez la légende fournie à votre tableau.

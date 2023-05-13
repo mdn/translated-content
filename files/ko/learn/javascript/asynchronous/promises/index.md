@@ -152,7 +152,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 모던 웹 API는 잠재적으로 긴 작업을 수행하는 함수에 Promise를 사용하므로 Promise가 무엇인지 이해하는것은 매우 중요합니다. 현대적인 웹 기술을 사용하려면 Promise를 사용해야합니다. 챕터의 후반부에서 직접 Promise를 만들어보겠지만, 지금은 일단 웹 API에서 접할 수 있는 몇 가지 예제를 살펴보겠습니다.
 
-첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
+첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
 > **참고:** The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Using_Github_pages).
 
@@ -443,7 +443,7 @@ function fetchAndDecode(url, type) {
 
 [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
 
-간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
+간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
 
 ```js
 let timeoutPromise = new Promise((resolve, reject) => {

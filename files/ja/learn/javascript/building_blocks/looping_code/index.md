@@ -440,7 +440,7 @@ const input = document.querySelector('input');
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
-  para.textContent = 'Output: ';
+  para.textContent = '出力: ';
   const num = input.value;
   input.value = '';
   input.focus();
@@ -824,7 +824,7 @@ reset.addEventListener('click', function() {
 solution.addEventListener('click', function() {
   if(solution.value === "解答を表示") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = '解答を隠す';
   } else {
     textarea.value = userEntry;
     solution.value = "解答を表示";

@@ -66,7 +66,7 @@ l10n:
 
 ### さらなる情報リンクにレスポンシブ画像を追加する
 
-`further-info` クラスを持つ {{htmlelement("div")}} の中には、それぞれが興味深い Mozilla 関連のページにリンクする 4 つの {{htmlelement("a")}} 要素があります。 この節を完成させるには、適切な {{htmlattrxref("src", "img")}}、{{htmlattrxref("alt", "img")}}、{{htmlattrxref("srcset", "img")}}、{{htmlattrxref("sizes", "img")}} の各属性を含む {{htmlelement("img")}} 要素をそれぞれの内部に挿入する必要があります。
+`further-info` クラスを持つ {{htmlelement("div")}} の中には、それぞれが興味深い Mozilla 関連のページにリンクする 4 つの {{htmlelement("a")}} 要素があります。 この節を完成させるには、適切な [`src`](/ja/docs/Web/HTML/Element/img#src)、[`alt`](/ja/docs/Web/HTML/Element/img#alt)、[`srcset`](/ja/docs/Web/HTML/Element/img#srcset)、[`sizes`](/ja/docs/Web/HTML/Element/img#sizes) の各属性を含む {{htmlelement("img")}} 要素をそれぞれの内部に挿入する必要があります。
 
 いずれの場合でも（1 つを除く — どれが本質的にレスポンシブでしょうか？）、ブラウザーにビューポートの幅が 500px 以下の場合は 120px 幅のバージョン、それ以外の場合は 400px 幅のバージョンを提供したい。
 

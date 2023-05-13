@@ -213,15 +213,15 @@ textarea.onkeyup = function(){
 
 - [`border: none`](/ja/docs/Web/CSS/border)
   - : 使用した場合、`<iframe>` は周囲の境界線なしで表示されます。そうでない場合、既定では、ブラウザーは `<iframe>` を境界線付きで表示します（これは一般的に望ましくありません）。
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : 設定されている場合、`<iframe>` は、[全画面 API](/ja/docs/Web/API/Fullscreen_API) を使用して全画面モードにすることができます（この記事の範囲外です）。
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/ja/docs/Web/HTML/Element/iframe#src)
   - : この属性は、 {{htmlelement("video")}} や {{htmlelement("img")}} と同様に、埋め込む文書の URL を指すパスを含んでいます。
-- {{htmlattrxref('width','iframe')}} と {{htmlattrxref('height','iframe')}}
+- [`width`](/ja/docs/Web/HTML/Element/iframe#width) と [`height`](/ja/docs/Web/HTML/Element/iframe#height)
   - : これらの属性は、 iframe の幅と高さを指定します。
 - 代替コンテンツ
   - : {{htmlelement("video")}} のような他の要素と同じように、 `<iframe>` と `</iframe>` のタグの間に、ブラウザーが `<iframe>` に対応していない場合に表示される代替コンテンツを含めることができます。この場合、代わりにページへのリンクが含まれています。最近では、`<iframe>` に対応していないブラウザーを見かけることはまずありません。
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox)
   - : この属性は、他の `<iframe>` の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。
 
 > **メモ:** 速度を向上させるためには、メインコンテンツの読み込みが完了した後に iframe の `src` 属性を JavaScript で設定することをお勧めします。これにより、ページがより早く使用できるようになり、公式ページの読み込み時間が短縮されます（重要な {{glossary("SEO")}} の測定基準）。
@@ -261,7 +261,7 @@ textarea.onkeyup = function(){
 
 サンドボックス化されていないコンテンツは、あまりにも多くのことを行うことができます（JavaScriptの実行、フォームの送信、ポップアップウィンドウなど）。既定では、前の例で示したように、引数なしの `sandbox` 属性を使用して、利用可能なすべての制限を課す必要があります。
 
-絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 {{htmlattrxref('sandbox','iframe')}} のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
+絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
 
 > **メモ:** 攻撃者が欺いて悪意のあるコンテンツ（iframe 外にある）を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ（ユーザー生成コンテンツなど）である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。
 
@@ -292,25 +292,25 @@ textarea.onkeyup = function(){
   <tbody>
     <tr>
       <td>埋め込みコンテンツの {{glossary("URL")}}</td>
-      <td>{{htmlattrxref('src','embed')}}</td>
-      <td>{{htmlattrxref('data','object')}}</td>
+      <td><a href="/ja/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         埋め込みコンテンツの<em>正確な</em>{{glossary("MIME type", 'メディア種別')}}
       </td>
-      <td>{{htmlattrxref('type','embed')}}</td>
-      <td>{{htmlattrxref('type','object')}}</td>
+      <td><a href="/ja/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         プラグインで制御されるボックスの幅と高さ（CSS ピクセル数）
       </td>
       <td>
-        {{htmlattrxref('height','embed')}}<br />{{htmlattrxref('width','embed')}}
+        <a href="/ja/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-        {{htmlattrxref('height','object')}}<br />{{htmlattrxref('width','object')}}
+        <a href="/ja/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

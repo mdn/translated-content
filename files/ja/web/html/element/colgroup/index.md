@@ -22,7 +22,7 @@ l10n:
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        {{htmlattrxref("span", "colgroup")}} 属性が存在する場合:
+        <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性が存在する場合:
         なし。<br />
         この属性がない場合: 0 個以上の {{HTMLElement("col")}} 要素。
       </td>
@@ -70,7 +70,7 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("span")}}
+- `span`
 
   - : この属性は正の整数で、 `<colgroup>` 要素がまたがる列の数を示します。存在しない場合の既定値は `1` です。
 
@@ -80,7 +80,7 @@ l10n:
 
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は、各列の内容物の水平方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -88,27 +88,27 @@ l10n:
     - `center` : 内容物をセル内で中央揃えにします。
     - `right` : 内容物をセルの右側に揃えます。
     - `justify`: 内容物がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char` : テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "col")}} 属性および {{htmlattrxref("charoff", "col")}} 属性で定義します。
+    - `char` : テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/col#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/col#charoff) 属性で定義します。
 
-    この属性が設定されていない場合は、`left` 値であるものとします。子孫の {{HTMLElement("col")}} 要素は自身の {{htmlattrxref("align", "col")}} 属性を使用して、この値を上書きできます。
+    この属性が設定されていない場合は、`left` 値であるものとします。子孫の {{HTMLElement("col")}} 要素は自身の [`align`](/ja/docs/Web/HTML/Element/col#align) 属性を使用して、この値を上書きできます。
 
     > **メモ:** {{cssxref("text-align")}} プロパティを、 {{HTMLElement("colgroup")}} 要素を与えたセレクターに設定しようとしてはいけません。 {{HTMLElement("td")}} 要素は {{HTMLElement("colgroup")}} 要素の子孫ではないため、プロパティを継承しません。
     >
-    > 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、列ごとに 1 つずつ `td:nth-child(an+b)` CSS セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `text-align` プロパティが使用できます。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、列ごとに 1 つずつ `td:nth-child(an+b)` CSS セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `text-align` プロパティが使用できます。
     >
-    > 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/color_value#rgb_色)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#色キーワード)の一つも使用できます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : この属性は、列グループ内の内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 {{htmlattrxref("align", "colgroup")}} が `char` に設定されていない場合、この属性は無視されますが、この列グループのメンバーである {{HTMLElement("col")}} の {{htmlattrxref("align", "col")}} の既定値として使用されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列グループ内の内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/colgroup#align) が `char` に設定されていない場合、この属性は無視されますが、この列グループのメンバーである {{HTMLElement("col")}} の [`align`](/ja/docs/Web/HTML/Element/col#align) の既定値として使用されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、`char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、各列の内容物の垂直方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -119,9 +119,9 @@ l10n:
 
     > **メモ:** {{cssxref("vertical-align")}} プロパティを、 `<colgroup>` 要素を与えたセレクターに設定しようとしてはいけません。{{HTMLElement("td")}} 要素は `<colgroup>` 要素の子孫ではないため、プロパティを継承しません。
     >
-    > 表で {{htmlattrxref("colspan", "td")}} 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 a は表の列数、 b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用できます。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、`td:nth-child(an+b)` CSS セレクターを使用してください。 a は表の列数、 b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用できます。
     >
-    > 表で {{htmlattrxref("colspan", "td")}} 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 ## 例
 

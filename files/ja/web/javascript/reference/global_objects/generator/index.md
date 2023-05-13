@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 {{JSRef}}
 
-**`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)と[反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)の両方に準拠しています。
+**`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)の両方に準拠しています。
 
 ## コンストラクター
 

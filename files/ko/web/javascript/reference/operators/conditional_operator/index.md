@@ -1,6 +1,6 @@
 ---
 title: 조건 (삼항) 연산자
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}

@@ -3,7 +3,7 @@ title: touch-action
 slug: Web/CSS/touch-action
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 CSS 属性 **`touch-action`** 用于设置触摸屏用户如何操纵元素的区域 (例如，浏览器内置的缩放功能)。
 

@@ -60,11 +60,11 @@ l10n:
 
 ### ラジオグループの定義
 
-ラジオグループは、グループ内のそれぞれのラジオボタンに同じ {{htmlattrxref("name", "input")}} を設定することで定義します。ラジオグループが確立されると、グループ内のラジオボタンを選択すると、同じグループの現在選択されているラジオボタンが自動的に選択解除されます。
+ラジオグループは、グループ内のそれぞれのラジオボタンに同じ [`name`](/ja/docs/Web/HTML/Element/input#name) を設定することで定義します。ラジオグループが確立されると、グループ内のラジオボタンを選択すると、同じグループの現在選択されているラジオボタンが自動的に選択解除されます。
 
 ページ内には、固有の `name` を持っている限り、好きなだけの数のラジオグループを作成することができます。
 
-例えば、フォームでユーザーに希望する問い合わせ方法を尋ねる必要がある場合、3 つのラジオボタンを作成し、それぞれの `name` プロパティに `contact` を設定しますが、1 つは {{htmlattrxref("value", "input")}} を `email` に、1 つは value を `phone` に、1 つは value を `mail` に設定します。ユーザーは `value` または `name` を見ることはありません (表示させるコードを追加しない限り)。
+例えば、フォームでユーザーに希望する問い合わせ方法を尋ねる必要がある場合、3 つのラジオボタンを作成し、それぞれの `name` プロパティに `contact` を設定しますが、1 つは [`value`](/ja/docs/Web/HTML/Element/input#value) を `email` に、1 つは value を `phone` に、1 つは value を `mail` に設定します。ユーザーは `value` または `name` を見ることはありません (表示させるコードを追加しない限り)。
 
 最終的な HTML はこのようになります。
 
@@ -89,7 +89,7 @@ l10n:
 </form>
 ```
 
-ここでは三つのラジオボタンがあり、それぞれの `name` が `contact` に設定されており、それぞれのラジオボタンを個別に識別するための固有の `value` を持っています。それぞれは固有の {{domxref("Element.id", "id")}} も持っており、 {{HTMLElement("label")}} 要素の {{htmlattrxref("for", "label")}} 属性でラジオボタンにラベルを結びつけるために使われます。
+ここでは三つのラジオボタンがあり、それぞれの `name` が `contact` に設定されており、それぞれのラジオボタンを個別に識別するための固有の `value` を持っています。それぞれは固有の {{domxref("Element.id", "id")}} も持っており、 {{HTMLElement("label")}} 要素の [`for`](/ja/docs/Web/HTML/Element/label#for) 属性でラジオボタンにラベルを結びつけるために使われます。
 
 この例をこちらで試すことができます。
 
@@ -156,17 +156,17 @@ form.addEventListener(
 
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 `radio` 型の入力は次の属性にも対応しています。
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : 論理属性で、もしあれば、このラジオボタンがラジオグループ内で現在選択されているものであることを示します。
 
-    他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
+    他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を使用してください。
 
-- {{htmlattrdef("value")}}
+- `value`
 
 `value` はすべての {{HTMLElement("input")}} で共通のものの一つです。しかし、 `radio` 型の入力欄では特別な目的になります。フォームが送信されるとき、現在チェックされているラジオボタンのみがサーバーに送信され、報告される値は `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` という文字列になります。これは前述の[値](#value)の節で説明しています。
 
-- {{htmlattrdef("required")}}
+- `required`
   - : `required` 属性は、ほとんどの {{HTMLElement("input")}} に共通する属性です。同じ名前のラジオボタンのグループに `required` 属性がある場合、そのグループのラジオボタンはチェックされなければなりませんが、その属性が適用されているラジオボタンである必要はありません。
 
 ## ラジオボタンの使用

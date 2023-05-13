@@ -5,34 +5,31 @@ slug: Web/CSS/:enabled
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/CSS/Pseudo-classes) **`:enabled`** 表示任何被启用的（enabled）元素。如果一个元素能够被激活（如选择、点击或接受文本输入），或者能够获取焦点，则该元素是启用的。元素也有一个禁用的状态（disabled state），在被禁用时，元素不能被激活或获取焦点。
+**`:enabled`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何已启用的元素。如果元素可以被激活（例如被选择、单击、输入文本等），或者能够获得焦点，那么它就是启用的。该元素还有一个被禁用的状态，在此状态下它无法被激活或接受焦点。
 
-```css
-/* 选择任何启用状态的 <input> */
-input:enabled {
-  color: blue;
-}
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
+
+## 语法
+
+```plain
+:enabled
 ```
-
-## 形式语法
-
-{{csssyntax}}
 
 ## 示例
 
-下面的代码，当文本输入框处于启用状态时，输入框 {{htmlElement("input")}} 的文本是绿色的，处于禁用状态时，输入框的文本则是灰色的。这样可以把元素是否可用反馈给用户。
+以下示例将在启用状态下把类型为文本输入框和按钮的 {{htmlElement("input")}} 颜色设置为绿色，禁用时设置为灰色。这有助于用户理解哪些元素可以进行交互操作。
 
 ### HTML
 
 ```html
 <form action="url_of_form">
-  <label for="FirstField">First field (enabled):</label>
-  <input type="text" id="FirstField" value="Lorem"><br>
+  <label for="FirstField">第一个字段（已启用）:</label>
+  <input type="text" id="FirstField" value="Lorem" /><br />
 
-  <label for="SecondField">Second field (disabled):</label>
-  <input type="text" id="SecondField" value="Ipsum" disabled="disabled"><br>
+  <label for="SecondField">第一个字段（已禁用）:</label>
+  <input type="text" id="SecondField" value="Ipsum" disabled="disabled" /><br />
 
-  <input type="button" value="Submit">
+  <input type="button" value="Submit" />
 </form>
 ```
 

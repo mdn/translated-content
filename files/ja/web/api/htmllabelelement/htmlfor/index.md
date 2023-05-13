@@ -5,7 +5,7 @@ slug: Web/API/HTMLLabelElement/htmlFor
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLLabelElement.htmlFor`** プロパティは {{htmlattrxref("for", "label")}} コンテンツプロパティの値を反映します。つまり、このスクリプトでアクセス可能なプロパティは、ラベルに関連付けられたコントロール要素の ID である `for` コンテンツプロパティの値を設定したり読み取ったりするために使用されます。
+**`HTMLLabelElement.htmlFor`** プロパティは [`for`](/ja/docs/Web/HTML/Element/label#for) コンテンツプロパティの値を反映します。つまり、このスクリプトでアクセス可能なプロパティは、ラベルに関連付けられたコントロール要素の ID である `for` コンテンツプロパティの値を設定したり読み取ったりするために使用されます。
 
 ## 構文
 
