@@ -22,7 +22,7 @@ l10n:
   ([Firefox bug 1352753](https://bugzil.la/1352753)、[Firefox bug 1813497](https://bugzil.la/1813497)、[Firefox bug 1818819](https://bugzil.la/1818819)、[Firefox bug 1824526](https://bugzil.la/1824526))
 - [`:nth-child of <selector>` 構文](/ja/docs/Web/CSS/:nth-child#the_of_selector_syntax) で、定義したセレクターにも一致する、`An+B` 規則に基づく子要素のグループを対象にできるようになりました。
   詳しくは ([Firefox bug 1808229](https://bugzil.la/1808229)) をご覧ください。
-- The [`scripting`](/en-US/docs/Web/CSS/@media/scripting) media feature is now supported. See ([Firefox bug 1166581](https://bugzil.la/1166581)) for more details.
+- [`scripting`](/ja/docs/Web/CSS/@media/scripting) メディア特性をサポートしました。詳しくは ([Firefox bug 1166581](https://bugzil.la/1166581)) をご覧ください。
 
 ### JavaScript
 
