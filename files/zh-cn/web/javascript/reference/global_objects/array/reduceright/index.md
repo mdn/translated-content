@@ -23,7 +23,7 @@ reduceRight(callbackFn, initialValue)
 - `callbackFn`
   - : 为数组中的每个元素执行的函数。其返回值将作为下一次调用 `callbackFn` 时的 `accumulator` 参数。对于最后一次调用，返回值将成为 `reduceRight()` 的返回值。该函数被调用时将传入以下参数：
     - `accumulator`
-      - : 上一次调用回调函数时返回的值，如果指定了 `initialValue` 则为指定的值。（见下文）
+      - : 上一次调用 `callbackFn` 的结果。在第一次调用时，如果指定了 `initialValue` 则为指定的值，否则为数组最后一个元素的值。
     - `currentValue`
       - : 数组中当前正在处理的元素。
     - `index`
