@@ -254,7 +254,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 
 ### 构造空对象
 
-下面的例子将一个空的 `Object` 对象存到 `o` 中：
+以下示例使用带有不同参数的 `new` 关键字创建空对象：
 
 ```js
 const o1 = new Object();
@@ -276,7 +276,7 @@ const o = new Object(true);
 const o = new Object(Boolean());
 ```
 
-### Object prototypes
+### Object prototype
 
 当我们要修改现有的 `Object.prototype` 方法时，请你考虑一下在现有逻辑之前或者之后通过包装扩展代码的方式来注入代码。例如，以下（未经测试的）代码将会在执行内部逻辑或者是其他扩展之前，有条件地执行一段自定义的逻辑。
 
