@@ -1,16 +1,20 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
 
-**`Object.is()`** メソッドは 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)であるかどうかを判定します。
+**`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
+
+{{EmbedInteractiveExample("pages/js/object-is.html")}}
 
 ## 構文
 
-```
-Object.is(value1, value2);
+```js-nolint
+Object.is(value1, value2)
 ```
 
 ### 引数
@@ -22,17 +26,19 @@ Object.is(value1, value2);
 
 ### 返値
 
-{{jsxref("Boolean")}} で、 2 つの引数が同一値であるかどうかを表します。
+論理値で、 2 つの引数が同一値であるかどうかを表します。
 
 ## 解説
 
-`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
+`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
 
 - どちらも {{jsxref("undefined")}}
-- どちらも {{jsxref("null")}}
+- どちらも [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - どちらも `true` かどちらも `false`
-- どちらも同じ文字からなる同じ長さの文字列
-- どちらも同じオブジェクト
+- どちらも同じ文字群が同じ順で並ぶ同じ長さの文字列
+- どちらも同じオブジェクト（すなわち両方の値がメモリー内の同じオブジェクトを参照）
+- どちらも同じ数値の[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- どちらも同じシンボル値の[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - どちらも数で、
 
   - どちらも `+0`
@@ -40,51 +46,38 @@ Object.is(value1, value2);
   - どちらも {{jsxref("NaN")}}
   - あるいはどちらもゼロ以外で {{jsxref("NaN")}} でなく、同じ数値を持つ
 
-このメソッドは {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} 演算子による等値比較と同じものでは**ありません**。 `==` 演算子は等値性比較の前に (同じ型でなければ) 両辺に対して様々な型変換を適用します (結果、例えば `"" == false` は `true` に評価されます) が、`Object.is` は両辺どちらの値にも型変換を行いません。
+`Object.is()` は [`==`](/ja/docs/Web/JavaScript/Reference/Operators/Equality) 演算子と等価ではありません。`==` 演算子は等価性比較の前に（同じ型でなければ）両辺に対して様々な型変換を適用します（結果、例えば `"" == false` は `true` と評価されます）が、`Object.is()` は両辺どちらの値にも型変換を行いません。
 
-また {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}} 演算子による同値比較とも同じものでも**ありません**。 `===` 演算子は (そして `==` 演算子も) 数値 `-0` と `+0` は同じものとして扱い、 {{jsxref("Number.NaN")}} と {{jsxref("NaN")}} は異なるものとして扱います。
+また、`Object.is()` は [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) 演算子とも同じでも*ありません*。`Object.is()` と `===` の唯一の違いは、符号付きのゼロと `NaN` の扱です。`===` 演算子は（そして `==` 演算子も）数値 `-0` と `+0` は同じものとして扱う一方、{{jsxref("NaN")}} は異なるものとして扱います。
 
 ## 例
 
-### Object.is の使用
+### Object.is() の使用
 
 ```js
-Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
+// ケース 1: === を用いるのと同じ結果になる評価式
+Object.is(25, 25); // true
+Object.is("foo", "foo"); // true
+Object.is("foo", "bar"); // false
+Object.is(null, null); // true
+Object.is(undefined, undefined); // true
+Object.is(window, window); // true
+Object.is([], []); // false
+const foo = { a: 1 };
+const bar = { a: 1 };
+const sameFoo = foo;
+Object.is(foo, foo); // true
+Object.is(foo, bar); // false
+Object.is(foo, sameFoo); // true
 
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
+// ケース 2: 符号付きのゼロ
+Object.is(0, -0); // false
+Object.is(+0, -0); // false
+Object.is(-0, -0); // true
 
-var foo = { a: 1 };
-var bar = { a: 1 };
-Object.is(foo, foo);         // true
-Object.is(foo, bar);         // false
-
-Object.is(null, null);       // true
-
-// 特殊なケース
-Object.is(0, -0);            // false
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
-```
-
-## ポリフィル
-
-```js
-if (!Object.is) {
-  Object.defineProperty(Object, "is", {
-    value: function (x, y) {
-      // 同値アルゴリズム
-      if (x === y) { // ステップ 1 から 5、および 7 から 10
-        // ステップ 6.b から 6.e までの場合: +0 != -0
-        return x !== 0 || 1 / x === 1 / y;
-      } else {
-        // ステップ 6.a の場合: NaN == NaN
-        return x !== x && y !== y;
-      }
-    }
-  });
-}
+// ケース 3: NaN
+Object.is(NaN, 0 / 0); // true
+Object.is(NaN, Number.NaN); // true
 ```
 
 ## 仕様書
@@ -93,8 +86,9 @@ if (!Object.is) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.is")}}
+{{Compat}}
 
 ## 関連情報
 
-- [等値比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 標準搭載されている 3 つの同一性比較支援機能の比較
+- [`Object.is` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
+- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 標準搭載されている 3 つの同一性比較支援機能の比較
