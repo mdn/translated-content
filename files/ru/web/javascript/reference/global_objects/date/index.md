@@ -68,8 +68,6 @@ new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
 - `Date.length`
   - : Значение свойства `Date.length` равно 7. Это количество аргументов, обрабатываемых конструктором.
 
-{{jsOverrides("Function", "properties", "prototype")}}
-
 ## Методы
 
 - {{jsxref("Date.now()")}}
@@ -78,8 +76,6 @@ new Date(year, month[, day[, hour[, minute[, second[, millisecond]]]]]);
   - : Разбирает строковое представление даты и возвращает количество миллисекунд с 1 января 1970 года 00:00:00 по местному времени.
 - {{jsxref("Date.UTC()")}}
   - : Принимает те же самые параметры, что и самый длинный вариант конструктора (то есть, от 2 до 7) и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
-
-{{jsOverrides("Function", "Methods", "now", "parse", "UTC")}}
 
 ## Экземпляры объекта `Date`
 
