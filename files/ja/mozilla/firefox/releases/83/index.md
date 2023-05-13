@@ -13,7 +13,7 @@ slug: Mozilla/Firefox/Releases/83
 
 ### 開発者ツール
 
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) で `:screenshot` [ヘルパーコマンド](/ja/docs/Tools/Web_Console/Helpers) を使用するとき、`--fullpage` を使用して全画面のスクリーンショットを撮影する場合も `--dpr` 引数を無視しないようになりました ([Firefox バグ 1645284](https://bugzil.la/1645284))。
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) を使用するとき、`--fullpage` を使用して全画面のスクリーンショットを撮影する場合も `--dpr` 引数を無視しないようになりました ([Firefox バグ 1645284](https://bugzil.la/1645284))。
 - 開発者が [スクロール可能なオーバーフローをデバッグする](/ja/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow) ために、[インスペクター](/ja/docs/Tools/Page_Inspector) で `スクロール` バッジを使用できるようになりました。バッジを選択すると、オーバーフローを*発生させている*要素を強調して、`オーバーフロー` バッジをつけます ([Firefox バグ 1669129](https://bugzil.la/1669129))。
 
 ### HTML/XML

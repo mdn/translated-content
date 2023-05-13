@@ -11,7 +11,7 @@ slug: Mozilla/Firefox/Releases/80
 
 ### 開発者ツール
 
-- ウェブコンソールの [ヘルパーコマンド](/ja/docs/Tools/Web_Console/Helpers) `:block` および `:unblock` を使用して、ネットワーク要求をブロックおよびブロック解除できるようになりました ([Firefox バグ 1546394](https://bugzil.la/1546394))。
+- ウェブコンソールの [ヘルパーコマンド](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) `:block` および `:unblock` を使用して、ネットワーク要求をブロックおよびブロック解除できるようになりました ([Firefox バグ 1546394](https://bugzil.la/1546394))。
 - ページインスペクターのルールペインで要素に [クラスを追加](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Viewing_and_changing_classes_on_an_element) するとき、既存のクラスをオートコンプリートで提案するようになりました ([Firefox バグ 1492797](https://bugzil.la/1492797))。
 - デバッガーが [例外でブレークするとき](/ja/docs/Tools/Debugger/How_to/Breaking_on_exceptions)、ソースペインのツールチップでスタックトレースを展開するための三角印を表示するようになりました ([Firefox バグ 1643633](https://bugzil.la/1643633))。
 - [ネットワークモニターの要求リスト](/ja/docs/Tools/Network_Monitor/request_list#Network_request_columns) で、待ち時間のしきい値 (設定可能) を超える "遅い" 要求に亀のアイコンを表示するようになりました ([Firefox バグ 1648373](https://bugzil.la/1648373))。
