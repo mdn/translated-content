@@ -1,5 +1,5 @@
 ---
-title: Object() constructor
+title: Object() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
 
@@ -14,12 +14,12 @@ new Object(value)
 Object(value)
 ```
 
-> **注意：** `Object()` 可以在带有或者不带有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用，但有时会产生不同的效果。参见[返回值](#返回值)。
+> **备注：** `Object()` 可以在带有或者不带有 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用，但有时会产生不同的效果。参见[返回值](#返回值)。
 
 ### 参数
 
 - `value`
-  - : 任何值。
+  - : 任意值。
 
 ### 返回值
 
@@ -43,9 +43,9 @@ console.log(o);
 // { foo: 42 }
 ```
 
-### 使用给定 undefined 和 null 类型的对象
+### 使用 undefined 和 null 类型调用 Object
 
-以下示例在 `o` 中存储一个空 `Object`：
+以下示例在 `o` 中存储一个空 `Object` 对象：
 
 ```js
 const o = new Object();
