@@ -12,18 +12,18 @@ Acessiblidade no desenvolvimento Web significa permitir que o máximo possível 
 
 ## Tutoriais fundamentais
 
-A [área de aprendizado de acessibilidade](/pt-BR/docs/Learn/Accessibility) da MDN contém tutoriais modernos e atualizados que abordam os seguintes aspectos essenciais de acessibilidade: 
-- [O que é acessibilidade? (en-US)](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+A [área de aprendizado de acessibilidade](/pt-BR/docs/Learn/Accessibility) da MDN contém tutoriais modernos e atualizados que abordam os seguintes aspectos essenciais de acessibilidade:
+- [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
   - : Este artigo fornece uma visão geral do que é a acessibilidade - isso inclui quais grupos de pessoas devemos considerar e o motivo, quais ferramentas de acessibilidade são utilizadas para interagir com a web e como podemos fazer da acessibilidade web parte do nosso fluxo de desenvolvimento.
 - [HTML: A base para a acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML)
   - : Boa parte do conteúdo da Web pode ser 'acessível' apenas garantindo que as tags HTML sejam sempre usadas para a finalidade correta. Este artigo analisa detalhadamente como utilizar o HTML garantindo a máxima acessibilidade.
 - [CSS e JavaScript: accessibilidade e boas práticas](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : CSS e JavaScript, usados corretamente, também podem proporcionar experiências acessíveis na web, mas se mal utilizadas, podem prejudicar a navegação. Este artigo descreve como utilizar o CSS e JS de forma a garantir que mesmo conteúdos complexos sejam acessíveis.
-- [Básico de WAI-ARIA (en-US)](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Básico de WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : Continuando to tópico anterior, não é facil fazer interfaces web com HTML e conteúdo dinâmico atualizado por JavaScript. O WAI-ARIA é uma tecnologia que pode ajudar com esses problemas, adicionando mais propriedades semanticas que navegadores e tecnologias assistivas podem reconhecer e usar para permitir que os usuários saibam o que está acontecendo na tela. Aqui mostraremos o básico destas técnicas para melhorar a acessibilidade.
-- [Multimedia acessível (en-US)](/en-US/docs/Learn/Accessibility/Multimedia)
+- [Multimedia acessível](/pt-BR/docs/Learn/Accessibility/Multimedia)
   - : Outra categoria de conteúdo que pode criar problemas de acessibilidade é a multimédia - Audio, vídeo e imagens precisam de alternativas textuais, assim poderão ser compreendidas por tecnologias assistivas de seus usuários. Este artigo detalha como.
-- [Accessibilidade Mobile (en-US)](/en-US/docs/Learn/Accessibility/Mobile)
+- [Accessibilidade Mobile](/pt-BR/docs/Learn/Accessibility/Mobile)
   - : O acesso por dispositivos móveis e smartphones é muito popular, e plataformas como iOS e Android já possuem ferramentas bastante consolidadas, assim é importante considerar a acessibilidade do seu conteúdo também nestas plataformas. Este artigo faz considerações sobre acessibilidade mobile.
 
 ## Documentação
