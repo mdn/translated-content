@@ -22,11 +22,11 @@ Object.keys(obj)
 
 ### 返回值
 
-一个由给定对象自身的可枚举的字符串键属性键组成的数组。
+一个由给定对象自身可枚举的字符串键属性键组成的数组。
 
 ## 描述
 
-`Object.keys()` 返回一个数组，该数组的元素是与直接在 `object` 上找到的可枚举字符串键属性名相对应的字符串。这与使用 {{jsxref("Statements/for...in", "for...in")}} 循环迭代相同，只是 `for...in` 循环还枚举原型链中的属性。`Object.keys()` 返回的数组顺序和与 {{jsxref("Statements/for...in", "for...in")}} 循环提供的顺序相同。
+`Object.keys()` 返回一个数组，其元素是字符串，对应于直接在对象上找到的可枚举的字符串键属性名。这与使用 {{jsxref("Statements/for...in", "for...in")}} 循环迭代相同，只是 `for...in` 循环还会枚举原型链中的属性。`Object.keys()` 返回的数组顺序和与 {{jsxref("Statements/for...in", "for...in")}} 循环提供的顺序相同。
 
 如果你需要属性的值，请使用 {{jsxref("Object.values()")}}。如果你同时需要属性的键和值，请使用 {{jsxref("Object.entries()")}}。
 
@@ -43,7 +43,7 @@ console.log(Object.keys(arr)); // ['0', '1', '2']
 const obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // ['0', '1', '2']
 
-// 具有随机键排序的类数组对象
+// 键的顺序随机的类数组对象
 const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(anObj)); // ['2', '7', '100']
 
@@ -62,17 +62,17 @@ myObj.foo = 1;
 console.log(Object.keys(myObj)); // ['foo']
 ```
 
-如果你想要 _所有_ 字符串键自身的属性，包括不可枚举的属性，参见 {{jsxref("Object.getOwnPropertyNames()")}}。
+如果你想要*所有*以字符串为键的自有属性，包括不可枚举的属性，参见 {{jsxref("Object.getOwnPropertyNames()")}}。
 
 ### 在基本类型中使用 Object.keys()
 
-非对象参数会[强制为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#强制对象)。只有字符串可以有自己的可枚举属性，而所有其他基本类型都返回一个空数组。
+非对象参数会[强制转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。只有字符串可以有自己的可枚举属性，而其他所有基本类型都返回一个空数组。
 
 ```js
-// 字符串具有索引作为可枚举的自身属性
+// 字符串具有索引作为可枚举的自有属性
 console.log(Object.keys("foo")); // ['0', '1', '2']
 
-// 其他基本类型没有自己的属性
+// 其他基本类型没有自有属性
 console.log(Object.keys(100)); // []
 ```
 
