@@ -44,7 +44,7 @@ var selectedFile = $('#input')[0].files[0];
 <input type="file" id="input" onchange="handleFiles(this.files)">
 ```
 
-當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 `{{domxref("File")}}` 的物件，裡面的東西就是使用者選取的檔案。
+當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 {{domxref("File")}} 的物件，裡面的東西就是使用者選取的檔案。
 
 如果你想要讓使用者一次選擇多個檔案，可以在 `input` 元素中使用 `multiple` 的屬性：
 
@@ -73,7 +73,7 @@ function handleFiles() {
 
 ## 獲得選取檔案的資訊
 
-由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 `{{domxref("File")}}` 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
+由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 {{domxref("File")}} 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
 
 ```js
 var numFiles = files.length;
@@ -402,9 +402,9 @@ _使用二進制數據時，這些程式碼還需要修改。_
 
 ## 你也可以參考這些文章
 
-- `{{domxref("File")}}`
+- {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileReader") }}
 - [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using the DOM File API in chrome code](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- `{{domxref("XMLHttpRequest")}}`
+- {{domxref("XMLHttpRequest")}}

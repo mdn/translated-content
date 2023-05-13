@@ -467,10 +467,10 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
   - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
   - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
-- `{{domxref("Document/defaultView/resize_event", "resize")}}`
+- {{domxref("Document/defaultView/resize_event", "resize")}}
   - : Fired when the window has been resized.
     Also available via the [`onresize`](/zh-CN/docs/Web/API/GlobalEventHandlers/onresize) 属性。
-- `{{domxref("Document/defaultView/storage_event", "storage")}}`
+- {{domxref("Document/defaultView/storage_event", "storage")}}
   - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
     Also available via the [`onstorage`](/zh-CN/docs/Web/API/Window/storage_event) 属性。
 
@@ -541,7 +541,7 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
 - [`pageshow`](/zh-CN/docs/Web/API/Window/pageshow_event)
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
     Also available using the [`onpageshow`](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/onpageshow) event handler 属性。
-- `{{domxref("Document/defaultView/popstate_event", "popstate")}}`
+- {{domxref("Document/defaultView/popstate_event", "popstate")}}
   - : Fired when the active history entry changes.
     Also available using the [`onpopstate`](/zh-CN/docs/Web/API/Window/popstate_event) event handler 属性。
 

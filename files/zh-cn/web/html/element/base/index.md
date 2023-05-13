@@ -7,7 +7,7 @@ slug: Web/HTML/Element/base
 
 **HTML \<base> 元素** 指定用于一个文档中包含的所有相对 URL 的根 URL。一份中只能有一个 \<base> 元素。
 
-一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 `<base>` 元素，`baseURI` 默认为 `{{domxref("document.location.href")}}`。
+一个文档的基本 URL，可以通过使用 {{domxref('document.baseURI')}} 的 JS 脚本查询。如果文档不包含 `<base>` 元素，`baseURI` 默认为 {{domxref("document.location.href")}}。
 
 <table class="properties">
  <tbody>

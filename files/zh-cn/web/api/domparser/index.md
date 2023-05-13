@@ -45,11 +45,11 @@ let doc = domparser.parseFromString(string, mimeType)
 
 | `mimeType`              | doc.constructor                        |
 | ----------------------- | -------------------------------------- |
-| `text/html`             | `{{domxref("Document")}}`     |
-| `text/xml`              | `{{domxref("XMLDocument")}}` |
-| `application/xml`       | `{{domxref("XMLDocument")}}` |
-| `application/xhtml+xml` | `{{domxref("XMLDocument")}}` |
-| `image/svg+xml`         | `{{domxref("XMLDocument")}}` |
+| `text/html`             | {{domxref("Document")}}     |
+| `text/xml`              | {{domxref("XMLDocument")}} |
+| `application/xml`       | {{domxref("XMLDocument")}} |
+| `application/xhtml+xml` | {{domxref("XMLDocument")}} |
+| `image/svg+xml`         | {{domxref("XMLDocument")}} |
 
 ## 解析 XML
 
