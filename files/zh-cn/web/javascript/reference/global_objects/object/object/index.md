@@ -29,7 +29,7 @@ Object(value)
 - 如果该值已经是一个对象，则返回该值。
 - 否则，它将返回与给定值对应的类型的对象。例如，传递 {{jsxref("BigInt")}} 基本类型会返回一个 `BigInt` 封装对象。
 
-当通过[扩展 `Object`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#扩展对象) 的类的构造函数中的 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 隐式调用 `Object()` 时，它以 `new.target.prototype` 为原型初始化一个新对象。传递给 `super()` 的任意值都将被忽略——例如，即使你传递一个数字，构造函数中的 `this` 值也不会成为 {{jsxref("Number")}} 实例。
+当通过[继承 `Object`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#扩展对象) 的类的构造函数中的 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 隐式调用 `Object()` 时，它以 `new.target.prototype` 为原型初始化一个新对象。传递给 `super()` 的任意值都将被忽略——例如，即使你传递一个数字，构造函数中的 `this` 值也不会变成 {{jsxref("Number")}} 实例。
 
 ## 示例
 
