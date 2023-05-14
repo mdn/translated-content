@@ -23,7 +23,7 @@ event = new Event(typeArg, eventInit);
 
     | 參數           | 可選 | 默認值  | 類型                           | 說明                              |
     | -------------- | ---- | ------- | ------------------------------ | --------------------------------- |
-    | `"bubbles"`    | ●    | `false` | `{{jsxref("Boolean")}}` | 表示該事件是否懸浮（bubble up）。 |
+    | `"bubbles"`    | ●    | `false` | {{jsxref("Boolean")}} | 表示該事件是否懸浮（bubble up）。 |
     | `"cancelable"` | ●    | `false` | {{jsxref("Boolean")}}   | 表示該事件是否已取消（canale）。  |
 
 ## 範例

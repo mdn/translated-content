@@ -142,6 +142,10 @@
     "modified": "2019-03-18T21:44:30.568Z",
     "contributors": ["Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2019-03-23T22:04:44.255Z",
+    "contributors": ["jackblackevo", "yimingxym"]
+  },
   "Glossary/Block/CSS": {
     "modified": "2019-03-18T21:44:30.419Z",
     "contributors": ["Rocker"]
@@ -3372,10 +3376,6 @@
   "Web/HTML/Attributes": {
     "modified": "2019-03-23T22:49:22.885Z",
     "contributors": ["jackblackevo", "stingyong"]
-  },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2019-03-23T22:04:44.255Z",
-    "contributors": ["jackblackevo", "yimingxym"]
   },
   "Web/HTML/Content_categories": {
     "modified": "2019-03-23T22:28:17.896Z",

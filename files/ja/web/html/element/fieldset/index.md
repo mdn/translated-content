@@ -15,11 +15,11 @@ slug: Web/HTML/Element/fieldset
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : この論理型属性が設定されている場合、 \<fieldset> の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素の中のフォーム要素は無効になりません。
-- {{htmlattrdef("form")}}
-  - : {{HTMLElement("form")}} 要素の {{htmlattrxref("id")}} 属性を指定し、 `<fieldset>` 要素はたとえその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
-- {{htmlattrdef("name")}}
+- `form`
+  - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を指定し、 `<fieldset>` 要素はたとえその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
+- `name`
 
   - : グループに関連付けられた名前です。
 

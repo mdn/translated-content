@@ -49,7 +49,7 @@ copyWithin(target, start, end)
 
 `copyWithin()` 方法保留空槽。如果要复制的区域是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则原来的空槽会被[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)并被替换为拷贝的空槽。
 
-`copyWithin()` 方法是[通用方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这种方法不适合应用于它们，因为字符串是不可变的。
+`copyWithin()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。虽然字符串也是类似数组的，但这种方法不适用于它们，因为字符串是不可变的。
 
 ## 示例
 
@@ -74,7 +74,7 @@ console.log([1, 2, 3, 4, 5].copyWithin(-2, -3, -1));
 `copyWithin()` 将保留空插槽。
 
 ```js
-console.log([1, , 3].copyWithin(2, 1, 2)); // [ 1, <2 empty items> ]
+console.log([1, , 3].copyWithin(2, 1, 2)); // [1, empty, empty]
 ```
 
 ### 在非数组对象上调用 copyWithin()
@@ -104,4 +104,6 @@ console.log(Array.prototype.copyWithin.call(arrayLike, 3, 1));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.copyWithin` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.copyWithin()")}}

@@ -20,23 +20,23 @@ _このインターフェイスは親である {{domxref("HTMLElement")}} から
 - {{domxref("HTMLFormElement.length")}} {{ReadOnlyInline}}
   - : `long` で、フォーム内のコントロールの数を反映します。
 - {{domxref("HTMLFormElement.name")}}
-  - : 文字列で、フォームの {{ htmlattrxref("name", "form") }} 属性の値を反映し、フォームの名前を表します。
+  - : 文字列で、フォームの [`name`](/ja/docs/Web/HTML/Element/form#name) 属性の値を反映し、フォームの名前を表します。
 - {{domxref("HTMLFormElement.method")}}
-  - : 文字列で、フォームの {{ htmlattrxref("method", "form") }} 属性の値を反映し、フォームを送信するために使用する HTTP メソッドを示します。指定された値のみが設定できます。
+  - : 文字列で、フォームの [`method`](/ja/docs/Web/HTML/Element/form#method) 属性の値を反映し、フォームを送信するために使用する HTTP メソッドを示します。指定された値のみが設定できます。
 - {{domxref("HTMLFormElement.target")}}
-  - : 文字列で、フォームの {{ htmlattrxref("target", "form") }} 属性の値を反映し、フォームを送信して受け取った結果を表示する場所を示します。
+  - : 文字列で、フォームの [`target`](/ja/docs/Web/HTML/Element/form#target) 属性の値を反映し、フォームを送信して受け取った結果を表示する場所を示します。
 - {{domxref("HTMLFormElement.action")}}
-  - : 文字列で、フォームの {{ htmlattrxref("action", "form") }} 属性の値を反映し、フォームによって送信された情報を処理するプログラムの URI を示します。
+  - : 文字列で、フォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性の値を反映し、フォームによって送信された情報を処理するプログラムの URI を示します。
 - {{domxref("HTMLFormElement.encoding")}} または {{domxref("HTMLFormElement.enctype")}}
-  - : 文字列で、フォームの {{ htmlattrxref("enctype", "form") }} 属性の値を反映し、フォームをサーバーへ送信するのに使用するコンテンツの型を示します。指定された方のみが設定できます。二つのプロパティは別名です。
+  - : 文字列で、フォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性の値を反映し、フォームをサーバーへ送信するのに使用するコンテンツの型を示します。指定された方のみが設定できます。二つのプロパティは別名です。
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : 文字列で、フォームの {{ htmlattrxref("accept-charset", "form") }} 属性の値を反映し、サーバーが受け付ける文字エンコーディングを表します。
+  - : 文字列で、フォームの [`accept-charset`](/ja/docs/Web/HTML/Element/form#accept-charset) 属性の値を反映し、サーバーが受け付ける文字エンコーディングを表します。
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : 文字列で、フォームの {{ htmlattrxref("autocomplete", "form") }} 属性の値を反映し、ブラウザーが自動的にこのフォーム内のコントロールの値を生み出すことができるかどうかを示します。
+  - : 文字列で、フォームの [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性の値を反映し、ブラウザーが自動的にこのフォーム内のコントロールの値を生み出すことができるかどうかを示します。
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : {{jsxref("Boolean")}} で、フォームの {{ htmlattrxref("novalidate", "form") }} 属性の値を反映し、フォームの検証を行わないかどうかを示します。
+  - : {{jsxref("Boolean")}} で、フォームの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性の値を反映し、フォームの検証を行わないかどうかを示します。
 
-名前の付いた入力欄がプロパティとしてオーナーのフォームのインスタンスに追加され、同じ名前のネイティブのプロパティがあると上書きしてしまいます（例えば、フォームに `action` という名前の入力欄がある場合、 `action` プロパティはフォームの {{ htmlattrxref("action", "form") }} 属性ではなくその入力欄を返します）。
+名前の付いた入力欄がプロパティとしてオーナーのフォームのインスタンスに追加され、同じ名前のネイティブのプロパティがあると上書きしてしまいます（例えば、フォームに `action` という名前の入力欄がある場合、 `action` プロパティはフォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性ではなくその入力欄を返します）。
 
 ## メソッド
 
@@ -112,7 +112,7 @@ JavaScript を使っていなければ、これは問題になりません。
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} （{{htmlattrxref("type", "input")}} が `"image"` のものは歴史的な理由により除外されます）
+- {{HTMLElement("input")}} （[`type`](/ja/docs/Web/HTML/Element/input#type) が `"image"` のものは歴史的な理由により除外されます）
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}

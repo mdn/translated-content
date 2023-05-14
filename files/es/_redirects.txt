@@ -677,7 +677,7 @@
 /es/docs/Guía_JavaScript_1.5:Variables	/es/docs/Web/JavaScript/Guide/Grammar_and_types
 /es/docs/Guía_de_referencia_de_CSS	/es/docs/Web/CSS/Reference
 /es/docs/HTML	/es/docs/Web/HTML
-/es/docs/HTML/Block-level_elements	/es/docs/Web/HTML/Block-level_elements
+/es/docs/HTML/Block-level_elements	/es/docs/Glossary/Block-level_content
 /es/docs/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /es/docs/HTML/Element	/es/docs/Web/HTML/Element
@@ -1970,6 +1970,7 @@
 /es/docs/Web/HTML/Atributos_Globales/translate	/es/docs/Web/HTML/Global_attributes/translate
 /es/docs/Web/HTML/Atributos_Globales/x-ms-acceleratorkey	/es/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Atributos_de_configuracion_CORS	/es/docs/Web/HTML/Attributes/crossorigin
+/es/docs/Web/HTML/Block-level_elements	/es/docs/Glossary/Block-level_content
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -2116,11 +2117,12 @@
 /es/docs/Web/HTML/Elemento/video/timeupdate_event	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
 /es/docs/Web/HTML/Elemento/wbr	/es/docs/Web/HTML/Element/wbr
 /es/docs/Web/HTML/Elemento/xmp	/es/docs/Web/HTML/Element/xmp
-/es/docs/Web/HTML/Elementos_en_línea	/es/docs/Web/HTML/Inline_elements
+/es/docs/Web/HTML/Elementos_en_línea	/es/docs/orphaned/Web/HTML/Inline_elements
 /es/docs/Web/HTML/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
 /es/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey	/es/docs/orphaned/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /es/docs/Web/HTML/Imagen_con_CORS_habilitado	/es/docs/Web/HTML/CORS_enabled_image
 /es/docs/Web/HTML/Index	/es/docs/Web/HTML
+/es/docs/Web/HTML/Inline_elements	/es/docs/orphaned/Web/HTML/Inline_elements
 /es/docs/Web/HTML/Link_types	/es/docs/Web/HTML/Attributes/rel
 /es/docs/Web/HTML/Microdatos	/es/docs/Web/HTML/Microdata
 /es/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/es/docs/Glossary/Speculative_parsing
@@ -2239,10 +2241,11 @@
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Aserciones	/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres	/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Cuantificadores	/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers
-/es/docs/Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode	/es/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
+/es/docs/Web/JavaScript/Guide/Regular_Expressions/Escapes_de_propiedades_Unicode	/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Grupos_y_rangos	/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia	/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet
+/es/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /es/docs/Web/JavaScript/Guide/Trabajando_con_objectos	/es/docs/Web/JavaScript/Guide/Working_with_objects
 /es/docs/Web/JavaScript/Guide/Usar_promesas	/es/docs/Web/JavaScript/Guide/Using_promises
 /es/docs/Web/JavaScript/Guide/Valores,_variables_y_literales	/es/docs/Web/JavaScript/Guide/Grammar_and_types

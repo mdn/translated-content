@@ -28,9 +28,9 @@ _このインターフェイスは {{domxref("EventTarget")}} からプロパテ
 - {{domxref("TextTrack.label")}} {{ReadOnlyInline}}
   - : テキストトラックのラベルがあれば、それを含む人間が読める文字列です。 それ以外の場合、これは空文字列 (`""`) になります。 空文字列の場合、トラックのラベルをユーザーに公開する必要がある場合は、トラックの他の属性を使用してコードでカスタムラベルを生成する必要があります。
 - {{domxref("TextTrack.language")}} {{ReadOnlyInline}}
-  - : 文字列で、テキストトラックの内容が書かれているテキスト言語を指定します。 値は、HTML の {{htmlattrxref("lang")}} 属性と同じように、 {{RFC(5646, "Tags for Identifying Languages (BCP 47 とも)")}} で指定されている形式に準拠する必要があります。 例えば、米国英語の場合は `"en-US"`、ブラジルポルトガル語の場合は `"pt-BR"` になります。
+  - : 文字列で、テキストトラックの内容が書かれているテキスト言語を指定します。 値は、HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性と同じように、 {{RFC(5646, "Tags for Identifying Languages (BCP 47 とも)")}} で指定されている形式に準拠する必要があります。 例えば、米国英語の場合は `"en-US"`、ブラジルポルトガル語の場合は `"pt-BR"` になります。
 - {{domxref("TextTrack.mode")}}
-  - : 文字列で、トラックの現在のモードを指定します。 このプロパティの値を変更すると、トラックの現在のモードが一致するように変更されます。 許容値は[テキストトラックモード定数](/ja/docs/Web/API/TextTrack/mode#テキストトラックモード定数)にリストされています。既定値は `disabled` ですが、 {{HTMLElement("track")}} 要素の {{htmlattrxref("default", "track")}} 論理属性が指定されていた場合は、既定のモードは `started` になります。
+  - : 文字列で、トラックの現在のモードを指定します。 このプロパティの値を変更すると、トラックの現在のモードが一致するように変更されます。 許容値は[テキストトラックモード定数](/ja/docs/Web/API/TextTrack/mode#テキストトラックモード定数)にリストされています。既定値は `disabled` ですが、 {{HTMLElement("track")}} 要素の [`default`](/ja/docs/Web/HTML/Element/track#default) 論理属性が指定されていた場合は、既定のモードは `started` になります。
 
 ## インスタンスメソッド
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 {{JSRef}}
 
-**`pop()`** 方法从数组中删除最后一个元素，并返回该元素的值。此方法会更改数组的长度。
+**`pop()`** 方法从数组中删除**最后一个**元素，并返回该元素的值。此方法会更改数组的长度。
 
 {{EmbedInteractiveExample("pages/js/array-pop.html")}}
 
@@ -17,7 +17,7 @@ pop()
 
 ### 返回值
 
-从数组中删除的元素（当数组为空时返回{{jsxref("undefined")}}）。
+从数组中删除的元素（当数组为空时返回 {{jsxref("undefined")}}）。
 
 ## 描述
 
@@ -36,18 +36,18 @@ pop()
 下面的代码首先创建了一个拥有四个元素的数组 `myFish`，然后删除掉它的最后一个元素。
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
-console.log(myFish); // ['angel', 'clown', 'mandarin']
+console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 
 console.log(popped); // 'sturgeon'
 ```
 
 ### 在非数组对象上调用 pop()
 
-`pop()` 方法会读取 `this` 上的 `length` 属性。如果[规范化的 length 属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)为 0，`length` 会被再次设置为 0（鉴于之前可能是负数或者 `undefined`）。否则，返回并[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)位于 `length-1` 处的属性。
+`pop()` 方法会读取 `this` 上的 `length` 属性。如果[规范化的 length 属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#长度属性的规范化)为 0，`length` 会被再次设置为 0（鉴于之前可能是负数或者 `undefined`）。否则，返回并[删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)位于 `length - 1` 处的属性。
 
 ```js
 const arrayLike = {

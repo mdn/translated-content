@@ -413,6 +413,18 @@
     "modified": "2019-04-26T07:01:02.583Z",
     "contributors": ["心斩心鬼", "Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2019-03-18T20:38:24.578Z",
+    "contributors": [
+      "kmc947373",
+      "CraigZeng",
+      "FredWe",
+      "Breezewish",
+      "teoli",
+      "ziyunfei",
+      "wdlth"
+    ]
+  },
   "Glossary/Block/CSS": {
     "modified": "2020-02-12T10:46:35.036Z",
     "contributors": ["RainSlide", "XdCareWy"]
@@ -1049,6 +1061,17 @@
   "Glossary/Information_architecture": {
     "modified": "2019-03-18T21:36:43.305Z",
     "contributors": ["maoyumaoxun"]
+  },
+  "Glossary/Inline-level_content": {
+    "modified": "2020-08-05T19:04:54.777Z",
+    "contributors": [
+      "mitaosi",
+      "chrisdavidmills",
+      "Raine_Huang",
+      "FredWe",
+      "ziyunfei",
+      "pmtao"
+    ]
   },
   "Glossary/Input_method_editor": {
     "modified": "2020-11-05T12:12:12.471Z",
@@ -21784,18 +21807,6 @@
     "modified": "2020-10-15T22:29:06.417Z",
     "contributors": ["chanvin"]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2019-03-18T20:38:24.578Z",
-    "contributors": [
-      "kmc947373",
-      "CraigZeng",
-      "FredWe",
-      "Breezewish",
-      "teoli",
-      "ziyunfei",
-      "wdlth"
-    ]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-05-06T06:27:48.960Z",
     "contributors": [
@@ -23192,17 +23203,6 @@
   "Web/HTML/Global_attributes/translate": {
     "modified": "2019-06-05T06:41:04.292Z",
     "contributors": ["Martin.Chow"]
-  },
-  "Web/HTML/Inline_elements": {
-    "modified": "2020-08-05T19:04:54.777Z",
-    "contributors": [
-      "mitaosi",
-      "chrisdavidmills",
-      "Raine_Huang",
-      "FredWe",
-      "ziyunfei",
-      "pmtao"
-    ]
   },
   "Web/HTML/Microdata": {
     "modified": "2019-07-13T06:56:53.858Z",
@@ -25418,10 +25418,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-06-28T13:50:25.946Z",
     "contributors": ["srq18211"]
-  },
-  "Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes": {
-    "modified": "2020-07-11T06:10:35.787Z",
-    "contributors": ["zkmbdbbdd"]
   },
   "Web/JavaScript/Guide/Text_formatting": {
     "modified": "2020-07-13T05:48:34.741Z",
@@ -31531,6 +31527,10 @@
       "ziyunfei",
       "Liyunsheng"
     ]
+  },
+  "Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape": {
+    "modified": "2020-07-11T06:10:35.787Z",
+    "contributors": ["zkmbdbbdd"]
   },
   "Web/JavaScript/Reference/Statements": {
     "modified": "2020-11-19T11:54:21.852Z",

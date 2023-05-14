@@ -7,19 +7,19 @@ slug: Web/HTML/Element/input/submit
 
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。
 
-| **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                           |
-| ------------------ | -------------------------------------------------------------------------------------------- |
-| **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                                     |
+| **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------------- |
+| **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                       |
 | **常見的支援屬性** | [`type`](/zh-TW/docs/Web/HTML/Element/input#type) 與 [`value`](/zh-TW/docs/Web/HTML/Element/input#value) |
-| **IDL 屬性**       | `value`                                                                                      |
-| **方法**           | 無                                                                                           |
+| **IDL 屬性**       | `value`                                                                                                  |
+| **方法**           | 無                                                                                                       |
 
 ## 值
 
 `<input type="submit">` 元素的 [`value`](/zh-TW/docs/Web/HTML/Element/input#value) 屬性會包含用作按鈕 label 的 {{domxref("DOMString")}}。
 
 ```html hidden
-<input type="submit" value="Submit to me">
+<input type="submit" value="Submit to me" />
 ```
 
 {{EmbedLiveSample("值", 650, 30)}}
@@ -29,7 +29,7 @@ slug: Web/HTML/Element/input/submit
 如果不指定 `value`，視瀏覽器不同，按鈕會是 _Submit_/_Submit Query_/_提交_ 之類的預設值：
 
 ```html hidden
-<input type="submit">
+<input type="submit" />
 ```
 
 {{EmbedLiveSample("不指定 value 屬性", 650, 30)}}
@@ -48,10 +48,10 @@ slug: Web/HTML/Element/input/submit
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Submit to me">
+    <input type="submit" value="Submit to me" />
   </div>
 </form>
 ```
@@ -74,11 +74,10 @@ slug: Web/HTML/Element/input/submit
 <form>
   <div>
     <label for="example">Let's submit some text</label>
-    <input id="example" type="text" name="text">
+    <input id="example" type="text" name="text" />
   </div>
   <div>
-    <input type="submit" value="Submit to me"
-     accesskey="s">
+    <input type="submit" value="Submit to me" accesskey="s" />
   </div>
 </form>
 ```
@@ -92,7 +91,7 @@ slug: Web/HTML/Element/input/submit
 要禁用提交按鈕，就如同下例般指定全域屬性 [`disabled`](/zh-TW/docs/Web/HTML/Global_attributes#disabled)：
 
 ```html hidden
-<input type="submit" value="Disabled" disabled>
+<input type="submit" value="Disabled" disabled />
 ```
 
 你可以在 run time 時藉由設定 `disabled` 的 `true` or `false` 來禁用或啟用提交按鈕。在 JavaScript 就看起來像 `btn.disabled = true`。

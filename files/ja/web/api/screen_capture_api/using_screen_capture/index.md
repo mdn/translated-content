@@ -305,7 +305,7 @@ HTML の主要な部分は以下の通りです。
 
 ## セキュリティ
 
-[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)が有効なときに機能させるためには、 `display-capture` 権限が必要です。これは {{HTTPHeader("Feature-Policy")}} を用いて行うことができます。または、画面キャプチャ API を {{HTMLElement("iframe")}} 内で使用している場合は、 `<iframe>` 要素の {{htmlattrxref("allow", "iframe")}} 属性を使用します。
+[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)が有効なときに機能させるためには、 `display-capture` 権限が必要です。これは {{HTTPHeader("Feature-Policy")}} を用いて行うことができます。または、画面キャプチャ API を {{HTMLElement("iframe")}} 内で使用している場合は、 `<iframe>` 要素の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を使用します。
 
 例えば、 HTTP ヘッダーのこの行は、文書と同じオリジンから読み込まれる埋め込み {{HTMLElement("iframe")}} 要素の画面キャプチャ API を有効にします。
 

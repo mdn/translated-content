@@ -64,7 +64,7 @@ slug: Web/HTML/Element/blockquote
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 引用元の文書の URL、または引用元の情報に関するメッセージを示します。この属性は、引用文の背景や出典についての説明を指し示そうとするものです。
 
 ## 使用上の注意

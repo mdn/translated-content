@@ -5,13 +5,13 @@ slug: Web/HTML/Element/a
 
 **HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
 
-| [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                           |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 內容省略                                        | [Transparent](/zh-TW/docs/HTML/Content_categories#Transparent_content_model), containing either [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) (excluding [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content)) or [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                            |
-| 標籤省略                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                      |
-| 允許的父元素                                    | 任何允許 [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content) 或 [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) 的內容，但 <a> 永遠例外（according to the logical principle of symmetry, if <a> tag, as a parent, can not have [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), then the same <a> content can not have <a> tag as its parent） |
-| Permitted ARIA roles                            | [`button`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role), [`checkbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [`menuitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [`menuitemradio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [`option`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role), [`radio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role), [`switch`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role), [`tab`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role), [`treeitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/treeitem_role)                                                                                |
-| DOM 介面                                        | {{domxref("HTMLAnchorElement")}}                                                                                                                                                                                                                                                                                                                                                                                  |
+| [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 內容省略                                        | [Transparent](/zh-TW/docs/HTML/Content_categories#Transparent_content_model), containing either [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) (excluding [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content)) or [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                                                                                                                                                       |
+| 標籤省略                                        | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 允許的父元素                                    | 任何允許 [phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content) 或 [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content) 的內容，但 <a> 永遠例外（according to the logical principle of symmetry, if <a> tag, as a parent, can not have [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), then the same <a> content can not have <a> tag as its parent）                                                                                                                                                                                                                                                                                            |
+| Permitted ARIA roles                            | [`button`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role), [`checkbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/checkbox_role), [`menuitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), [`menuitemradio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), [`option`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/option_role), [`radio`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/radio_role), [`switch`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/switch_role), [`tab`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role), [`treeitem`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/treeitem_role) |
+| DOM 介面                                        | {{domxref("HTMLAnchorElement")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ## 屬性
 
@@ -84,18 +84,23 @@ slug: Web/HTML/Element/a
 ### Obsolete
 
 - `charset` {{Deprecated_inline}}
+
   - : This attribute defined the [character encoding](/zh-TW/docs/Glossary/character_encoding) of the linked URL. The value should be a space- and/or comma-delimited list of character sets defined in [RFC 2045](https://tools.ietf.org/html/rfc2045). The default value is `ISO-8859-1`.
 
     > **備註：** This attribute is obsolete in HTML5 and **should not be used by authors**. To achieve its effect, use the HTTP [`Content-Type:`](/zh-TW/docs/Web/HTTP/Headers/Content-Type) header on the linked URL.
+
 - `coords` {{Deprecated_Inline}}
   - : For use with the below `shape` attribute, this attribute used a comma-separated list of numbers to define the coordinates of the link on the page.
 - `name` {{Deprecated_Inline}}
+
   - : This attribute was required for anchors defining a possible target location within a page. In HTML 4.01, `id` and `name` could be used simultaneously on a `<a>` element as long as they have identical values.
 
     > **備註：** This attribute is obsolete in HTML5, use the [global attribute `id`](/zh-TW/docs/HTML/Global_attributes#id) instead.
+
 - `rev` {{Deprecated_Inline}}
   - : This attribute specified a reverse link, the inverse relationship of the **rel** attribute. It was deprecated for being very confusing.
 - `shape` {{Deprecated_Inline}}
+
   - : This attribute was used to define a region for hyperlinks to create an image map. The values are `circle`, `default`, `polygon`, and `rect`. The format of the **coords** attribute depends on the value of shape. For `circle`, the value is `x,y,r` where `x` and `y` are the pixel coordinates for the center of the circle and `r` is the radius value in pixels. For `rect`, the **coords** attribute should be `x,y,w,h`. The `x,y` values define the upper-left-hand corner of the rectangle, while `w` and `h` define the width and height respectively. A value of `polygon` for **shape** requires `x1,y1,x2,y2,...` values for **coords**. Each of the `x,y` pairs defines a point in the polygon, with successive points being joined by straight lines and the last point joined to the first. The value `default` for shape requires that the entire enclosed area, typically an image, be used.
 
     > **備註：** Use the [`usemap` attribute](/zh-TW/docs/Web/HTML/Element/img#usemap) for the {{HTMLElement("img")}} element and the associated {{HTMLElement("map")}} element to define hotspots instead of the `shape` attribute.
@@ -106,9 +111,7 @@ slug: Web/HTML/Element/a
 
 ```html
 <!-- anchor linking to external file -->
-<a href="https://www.mozilla.com/">
-External Link
-</a>
+<a href="https://www.mozilla.com/"> External Link </a>
 ```
 
 #### Result
@@ -119,9 +122,7 @@ External Link
 
 ```html
 <!-- links to element on this page with id="attr-href" -->
-<a href="#attr-href">
-Description of Same-Page Links
-</a>
+<a href="#attr-href"> Description of Same-Page Links </a>
 ```
 
 #### Result
@@ -134,8 +135,7 @@ This example uses an image to link to the MDN home page. The home page will open
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png"
-       alt="MDN logo" />
+  <img src="mdn_logo.png" alt="MDN logo" />
 </a>
 ```
 
@@ -172,13 +172,17 @@ For additional details about the `tel` URL scheme, see {{RFC(3966)}}.
 If you want to let users download an HTML {{HTMLElement("canvas")}} element as an image, you can create a link with a `download` attribute and the canvas data as a file URL:
 
 ```js
-var link = document.createElement('a');
-link.textContent = 'download image';
+var link = document.createElement("a");
+link.textContent = "download image";
 
-link.addEventListener('click', function(ev) {
+link.addEventListener(
+  "click",
+  function (ev) {
     link.href = canvas.toDataURL();
     link.download = "mypainting.png";
-}, false);
+  },
+  false
+);
 
 document.body.appendChild(link);
 ```

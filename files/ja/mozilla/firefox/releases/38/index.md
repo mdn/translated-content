@@ -106,7 +106,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- Firefox では、ログインフォームを扱う際に {{htmlattrxref("autocomplete", "input")}}`=false` 属性を無視するようになりました ([Firefox バグ 1025703](https://bugzil.la/1025703))。これはパスワードマネージャーがより確実に動作できるようにすることで、より安全なパスワードの使用を促進しようとするものです。
+- Firefox では、ログインフォームを扱う際に [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete)`=false` 属性を無視するようになりました ([Firefox バグ 1025703](https://bugzil.la/1025703))。これはパスワードマネージャーがより確実に動作できるようにすることで、より安全なパスワードの使用を促進しようとするものです。
 - ホワイトリストで明示されたウェブサイトを除き、TLS を使用する際は RC4 が無効になりました。このホワイトリストは、ウェブサイトが修正されるまでの経過措置です ([Firefox バグ 1124039](https://bugzil.la/1124039))。このフォールバック機能は設定項目 `security.tls.unrestricted_rc4_fallback` で制御されており、現在の既定値は `true` です ([Firefox バグ 1138882](https://bugzil.la/1138882))。
 - 安全でないバージョンの TLS へのフォールバックが必要なウェブサイトを、ハードコードされたホワイトリストに記載します。これは次第に削減する予定です ([Firefox バグ 1114816](https://bugzil.la/1114816))。 `security.tls.insecure_fallback_hosts.use_static_list` を `false` に設定すると、ホワイトリストを無効化できます。
 

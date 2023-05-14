@@ -5,7 +5,7 @@ slug: Web/CSS/caret-color
 
 {{CSSRef}}
 
-**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または {{htmlattrxref("contenteditable")}} 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
+**`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
@@ -97,7 +97,7 @@ p.custom {
 ## 関連情報
 
 - {{HTMLElement("input")}} 要素
-- 要素のテキストを編集可能にする HTML の {{htmlattrxref("contenteditable")}} 属性
+- 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
 - [内容を編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
 - [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)
 - {{cssxref("&lt;color&gt;")}} データ型

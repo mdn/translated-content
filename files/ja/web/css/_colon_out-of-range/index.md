@@ -5,7 +5,7 @@ slug: Web/CSS/:out-of-range
 
 {{CSSRef}}
 
-**`:out-of-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{htmlelement("input")}} 要素のうち、現在の値が {{htmlattrxref("min", "input")}} および {{htmlattrxref("max","input")}} 属性で指定された範囲を外れているものを表します。
+**`:out-of-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{htmlelement("input")}} 要素のうち、現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定された範囲を外れているものを表します。
 
 ```css
 /* 入力範囲が設定されていて、値がその範囲外である
