@@ -200,7 +200,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 **不好的**連結文字：[點這裡](https://firefox.com/)來下載 Firefox
 
 ```html
-<p><a href="https://firefox.com/">點這裡 </a> 來下載 Firefox</p>
+<p><a href="https://firefox.com/">點這裡</a>來下載 Firefox</p>
 ```
 
 其它小訣竅：

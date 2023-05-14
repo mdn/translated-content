@@ -274,7 +274,9 @@ If done correctly, when you save your HTML and refresh your browser you'll see t
 Finally, it's worth mentioning that you can (and really should) set the language of your page. This can be done by adding the [lang attribute](/zh-TW/docs/Web/HTML/Global_attributes/lang) to the opening HTML tag (as seen in the [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) and shown below.)
 
 ```html
-<html lang="en-US"></html>
+<html lang="en-US">
+  …
+</html>
 ```
 
 This is useful in many ways. Your HTML document will be indexed more effectively by search engines if its language is set (allowing it to appear correctly in language-specific results, for example), and it is useful to people with visual impairments using screen readers (for example, the word "six" exists in both French and English, but is pronounced differently.)
