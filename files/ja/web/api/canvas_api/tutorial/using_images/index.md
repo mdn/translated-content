@@ -42,7 +42,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 
 ### ほかのドメインにある画像の使用
 
-{{htmlattrxref("crossorigin", "img")}} 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
 
 ### ほかの canvas 要素の使用
 

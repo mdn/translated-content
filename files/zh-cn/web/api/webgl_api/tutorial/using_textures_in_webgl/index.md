@@ -1,5 +1,5 @@
 ---
-title: Using textures in WebGL
+title: 在 WebGL 中使用纹理
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
@@ -89,19 +89,7 @@ function isPowerOf2(value) {
 
 要从图片文件加载纹理，接下来创建一个 `Image` 对象，并为 `src` 设置我们想要用作纹理的图片的 URL。我们为 `image.onload` 设置的函数会在图片下载完成时被调用。那时我们再次调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}，这次我们将图片作为纹理的数据源。之后，我们根据下载的图像在两个维度上是否为 2 的幂来设置纹理的过滤（filter）和平铺（wrap）。
 
-接下来为了真正地形成纹理，我们通过把新创建的纹理对象绑定到 `gl.TEXTURE_2D` 来让它成为当前操作纹理。然后通过调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 把已经加载的图片图形数据写到纹理。
-
-> **备注：** 在多数情况下，纹理的宽和高都必须是 2 的幂（如：1，2，4，8，16 等等）。如果有什么特殊情况请参考下面的“[非 2 的幂纹理](#非_2_的幂纹理)”小节。
-
-代码的接下来两行设置了纹理过滤器，过滤器用来控制当图片缩放时像素如何生成如何插值。在这个例子里，我们对图片放大使用的是线性过滤，而对图片缩小使用的是多级渐进纹理过滤。接下来我们通过调用 {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}} 来生成多级渐进纹理，接着通过给 `gl.TEXTURE_2D` 绑定值 `null` 来告诉 WebGL 我们对当前纹理的操作已经结束了。
-
-### 非 2 的幂纹理
-
-一般来说，宽和高都是 2 的幂的纹理使用是最理想的。2 的幂纹理在渲染内存里的存储更高效，而且对它们的使用限制也更少。由美术工作人员生成的纹理最终在用来渲染前都应该使用放大或缩小的方式把它生成为 2 的幂纹理，其实事实上来说，在创作纹理之初就应该直接使用大小是 2 的幂的宽和高。纹理的每一边都应该是像 1，2，4，8，16，32，64，128，256，512，1024 或 2048 这样的值。当然也要注意尺寸的大小，因为虽说现在的大部分设置都已经可以支持 4096 像素的图片，但也不是全部；而有一些设备甚至可以支持 8192 或更高像素呢。
-
-有的时候从你的特定情况出发，使用 2 的幂纹理会比较困难。当使用到第三方的资源时，一般来说最好的方式就是先使用 HTML5 的画布把图片修正成 2 的幂然后再放到 WebGL 中进行渲染使用，这样一来，如果图片拉伸比较明显的话纹理坐标的值可需要适当地进行修正。
-
-但是，如果你一定要使用非 2 的幂纹理的话，WebGL 也有原生支持，不过这些支持是受限的。当然在某些情况下使用非 2 的幂纹理也是很有用的，比如这张纹理刚好与你的显示器的分辨率相匹配，或者使用画布重新生成纹理的方式并不值得时。但是要特别注意的是：这种非 2 的幂纹理不能用来生成多级渐进纹理，而且不能使用纹理重复（重复纹理寻址等）。
+WebGL1 中，对于非 2 的幂纹理只能使用 `NEAREST` 和 `LINEAR` 过滤，且不会生成贴图。此外，平铺模式也必须设置为 `CLAMP_TO_EDGE`。另一方面，如果纹理在两个维度上都是 2 的幂，那么 WebGL 就可以使用更高质量的过滤，可以使用贴图，还能够将平铺模式设置为 `REPEAT` 或 `MIRRORED_REPEAT`。
 
 使用重复纹理寻址的一个例子就是使用一张砖块的纹理来平铺满一面墙壁。
 
@@ -118,11 +106,28 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 现在，当使用以上参数时，兼容 WebGL 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。
 
+为了加载图像，在我们的 `main()` 函数中添加对 `loadTexture()` 函数的调用。这可以在 `initBuffers(gl)` 调用之后添加。
+
+但需要注意的是：浏览器会从加载的图像中按从左上角开始的自上而下顺序复制像素，而 WebGL 需要按自下而上的顺序——从左下角开始的像素顺序。（参见[为什么我的 WebGL 纹理是颠倒的？](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/)以了解详情。）
+
+所以为了防止渲染时图像纹理方向错误，我们还需要调用 `pixelStorei()` 并将 `gl.UNPACK_FLIP_Y_WEBGL` 参数设置为 `true`，以调整像素顺序，使其翻转成 WebGL 需要的自下而上顺序。
+
+> **备注：** 添加下面的代码到 `main()` 函数，紧跟在 `initBuffers()` 调用之后：
+
+```js
+// Load texture
+const texture = loadTexture(gl, "cubetexture.png");
+// Flip image pixels into the bottom-to-top order that WebGL expects.
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+```
+
+> **备注：** 最后，将 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) 下载到与 JavaScript 文件相同的本地目录。
+
 ## 映射纹理到面
 
-现在，纹理已经加载好了，而且已经可以使用了。但是在使用之前我们还要创建好纹理坐标到立方体各个面的顶点的映射关系。下面的代码通过替换之前的设置每个面颜色的代码，当然还是在 `initBuffers()` 函数里。
+现在，纹理已加载并准备就绪。但在我们使用它之前，我们需要建立纹理坐标到立方体上的面的顶点的映射。这将取代 `initBuffers()` 中为设置每个立方体面颜色而存在的所有先前的代码。
 
-> **备注：** 将下面函数添加到“init-buffer.js”模块中：
+> **备注：** 添加这个函数到“init-buffer.js”模块：
 
 ```js
 function initTextureBuffer(gl) {
@@ -154,21 +159,23 @@ function initTextureBuffer(gl) {
 }
 ```
 
-首先，代码创建了一个 GL 缓存区，用来保存每个面的纹理坐标信息，然后把这个缓存区绑定到 GL 以方便我们写入数据。
+首先，这段代码创建了一个 WebGL 缓冲区，我们将在其中存储每个面的纹理坐标，然后将该缓冲区绑定为将要写入的数组。
 
-数组变量 `textureCoordinates` 中定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
+`textureCoordinates` 数组定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
 
-纹理坐标信息给定了之后，把这个数组里的数据都写到 GL 缓存区，这样 GL 就能使用这个坐标数据了。
+一旦我们建立了纹理映射数组，我们将数组传递到缓冲区中，这样 WebGL 就可以使用该数据了。
 
-接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区而不是颜色缓冲区。
+然后我们返回新的缓冲区。
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，用下面一行替换 `initColorBuffer()` 的调用：
+接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区代替颜色缓冲区。
+
+> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
 
 ```js
 const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，用以下内容替换 `return` 语句：
+> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
 
 ```js
 return {
@@ -184,7 +191,7 @@ return {
 
 ### 顶点着色器
 
-接下来我们会修改顶点着色器代码，现在不再需要获取顶点颜色数据，而是获取纹理坐标数据。
+我们需要更改顶点着色器，使其不再获取颜色数据，而是获取纹理坐标数据。
 
 > **备注：** 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
 
@@ -209,7 +216,7 @@ const vsSource = `
 
 ### 片段着色器
 
-那么片段着色器也要相应地进行更改：
+那么片段着色器也要相应地进行更改，像这样更新 `main()` 函数中的 `fsSource` 声明：
 
 ```js
 const fsSource = `
@@ -253,13 +260,13 @@ const programInfo = {
 > **备注：** 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
 
 ```js
-// tell webgl how to pull out the texture coordinates from buffer
+// 告诉 WebGL 如何从缓冲区中提取纹理坐标
 function setTextureAttribute(gl, buffers, programInfo) {
-  const num = 2; // every coordinate composed of 2 values
-  const type = gl.FLOAT; // the data in the buffer is 32-bit float
-  const normalize = false; // don't normalize
-  const stride = 0; // how many bytes to get from one set to the next
-  const offset = 0; // how many bytes inside the buffer to start from
+  const num = 2; // 每个坐标由 2 个值组成
+  const type = gl.FLOAT; // 缓冲区中的数据为 32 位浮点数
+  const normalize = false; // 不做标准化处理
+  const stride = 0; // 从一个坐标到下一个坐标要获取多少字节
+  const offset = 0; // 从缓冲区内的第几个字节开始获取数据
   gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
   gl.vertexAttribPointer(
     programInfo.attribLocations.textureCoord,

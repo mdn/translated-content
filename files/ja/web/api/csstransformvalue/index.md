@@ -47,9 +47,9 @@ _祖先である {{domxref('CSSStyleValue')}} からメソッドを継承して�
 - {{domxref('CSSUnparsedValue.forEach()')}} {{Experimental_Inline}}
   - : 指定された関数を `CSSTransformValue` オブジェクトの各要素に対して一度だけ実行します。
 - {{domxref('CSSUnparsedValue.keys()')}} {{Experimental_Inline}}
-  - : CSSTransformValue` オブジェクトの各インデックスに対応するキーを格納した新しい _配列反復子_ オブジェクトを返します。
+  - : CSSTransformValue` オブジェクトの各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
 - {{domxref('CSSUnparsedValue.values()')}} {{Experimental_Inline}}
-  - : `CSSTransformValue` オブジェクトの個々の位置に対応する値を格納した新しい _配列反復子_ オブジェクトを返します。
+  - : `CSSTransformValue` オブジェクトの個々の位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
 
 ## 例
 

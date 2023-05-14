@@ -28,7 +28,7 @@ l10n:
     </tr>
     <tr>
       <td><strong>対応する共通属性</strong></td>
-      <td>{{htmlattrxref("required", "input")}}</td>
+      <td><a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>追加の属性</strong></td>
@@ -57,7 +57,7 @@ l10n:
 
 ## 値
 
-ファイル入力欄の {{htmlattrxref("value", "input")}} 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
+ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、 `value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
 
 > **メモ:** 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
 
@@ -144,7 +144,7 @@ div {
 
 ユーザーの端末やオペレーティングシステムに関わらず、ファイル入力欄にはユーザーがファイルを選択することができるファイル選択ダイアログを開くボタンがあります。
 
-上記のように、 {{htmlattrxref("multiple", "input/file")}} 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法 (例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック) によって、複数のファイルを選択できます。ユーザーに `<input>` あたり 1 つのファイルを選択させたい場合は、 `multiple` 属性を省略してください。
+上記のように、 [`multiple`](/ja/docs/Web/HTML/Element/input/file#multiple) 属性を含めると、複数のファイルを一度に選択することができることを指定します。ユーザーはファイル選択ダイアログから、プラットフォームが許す方法 (例えば、 <kbd>Shift</kbd> または <kbd>Control</kbd> を押しながらクリック) によって、複数のファイルを選択できます。ユーザーに `<input>` あたり 1 つのファイルを選択させたい場合は、 `multiple` 属性を省略してください。
 
 ### 選択されたファイルの情報の取得
 
@@ -163,7 +163,7 @@ div {
 - `type`
   - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : ディレクトリ選択ダイアログ (つまり、 {{htmlattrxref("webkitdirectory", "input/file")}} 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
+  - : ディレクトリ選択ダイアログ (つまり、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
 > **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
@@ -171,7 +171,7 @@ div {
 
 ふつう、ユーザーが自由な形式のファイルを選択できるようにはしたくないでしょう。代わりに、特定の形式のファイルを選択させたいでしょう。例えば、ファイル入力欄でユーザーにプロフィールファイルをアップロードさせるのであれば、おそらく {{Glossary("JPEG")}} または {{Glossary("PNG")}} のようなウェブに互換性がある画像形式を選択させたいでしょう。
 
-受付可能なファイル形式は {{htmlattrxref("accept","input/file")}} 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
+受付可能なファイル形式は [`accept`](/ja/docs/Web/HTML/Element/input/file#accept) 属性で、受け付けるファイルの拡張子または MIME タイプいくつか例を示します。
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付けます。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付けます。
@@ -344,7 +344,7 @@ input.addEventListener('change', updateImageDisplay);
 - そうであるなら、次のことを行います。
 
   - ファイルの名前とファイルの長さを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルの長さを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
-  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その {{htmlattrxref("src", "img")}} をサムネイルに設定することで、リスト項目にも画像を挿入します。
+  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 
 - ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
 

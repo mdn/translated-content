@@ -5,13 +5,13 @@ slug: Web/API/ReadableStreamDefaultReader
 
 {{APIRef("Streams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认读取器。
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **ReadableStreamDefaultReader** 接口表示一个用于读取来自网络提供的流数据（例如 fetch 请求）的默认 reader。
 
 `ReadableStreamDefaultReader` 可以用于读取底层为任意类型源的 {{domxref("ReadableStream")}}（这与 {{domxref("ReadableStreamBYOBReader")}} 不同，后者仅可以和*底层为字节源*的可读流一起使用）。
 
 然而，请注意，零拷贝传输仅支持自动分配缓冲区的底层字节源这一种底层源。换句话说，流必须同时指定[构造函数](/zh-CN/docs/Web/API/ReadableStream/ReadableStream)中的 [`type="bytes"`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#type) 和 [`autoAllocateChunkSize`](/zh-CN/docs/Web/API/ReadableStream/ReadableStream#autoallocatechunksize)。对于任何其他底层源，流将始终使用来自内置队列的数据满足读取请求。
 
-## 构造方法
+## 构造函数
 
 - [`ReadableStreamDefaultReader()`](/zh-CN/docs/Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader)
   - : 创建和返回一个 `ReadableStreamDefaultReader()` 对象实例。

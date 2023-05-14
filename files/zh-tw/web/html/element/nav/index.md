@@ -10,10 +10,10 @@ slug: Web/HTML/Element/nav
 | [Content categories](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[sectioning content](/zh-TW/docs/HTML/Content_categories#Sectioning_content)、palpable content. |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許內容                                                  | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)。                                                                                                |
-| 省略標籤                                                  | {{no_tag_omission}}                                                                                                                                    |
+| 省略標籤                                                  | {{no_tag_omission}}                                                                                                                                         |
 | Permitted parents                                         | Any element that accepts [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content).                                                                  |
 | Permitted ARIA roles                                      | None                                                                                                                                                        |
-| DOM interface                                             | {{domxref("HTMLElement")}}                                                                                                                        |
+| DOM interface                                             | {{domxref("HTMLElement")}}                                                                                                                                  |
 
 ## 屬性
 

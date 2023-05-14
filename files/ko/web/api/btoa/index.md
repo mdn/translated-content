@@ -50,7 +50,7 @@ const notOK = "✓"
 console.log(notOK.codePointAt(0).toString(16)); // 2713: 1바이트 초과
 
 console.log(btoa(ok));    // YQ==
-console.log(btoa(notOK)); // 오휴
+console.log(btoa(notOK)); // 오류
 ```
 
 `btoa()`를 사용해서 유니코드 텍스트를 ASCII로 인코딩해야 할 때 사용할 수 있는 방법 한 가지는, 문자열의 각 16비트 단위가 한 바이트씩 차지하도록 먼저 변환하는 것입니다.

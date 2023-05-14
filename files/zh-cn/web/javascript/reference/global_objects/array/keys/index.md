@@ -21,7 +21,7 @@ keys()
 
 ## 描述
 
-当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`keys()` 方法迭代空槽，就像它们的值 `undefined` 一样。
+当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`keys()` 方法迭代空槽，就像它们的值为 `undefined` 一样。
 
 `keys()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 

@@ -3,7 +3,7 @@ title: 隐私与:visited 选择器
 slug: Web/CSS/Privacy_and_the_:visited_selector
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 在大概 2010 年时，[CSS](/zh-CN/docs/Web/CSS) 选择器 {{ cssxref(":visited") }} 被网站用来检测用户的浏览记录，并找出用户都访问过哪些网站。这些可以通过 {{domxref("window.getComputedStyle")}} 和其他技术实现。这个过程可以很迅速的执行，不仅能够判断用户是否曾经访问过这个页面，还能借此猜测出大量的用户身份信息。
 

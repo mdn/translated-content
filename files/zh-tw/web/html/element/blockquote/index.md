@@ -10,9 +10,9 @@ slug: Web/HTML/Element/blockquote
 | [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、sectioning root、捫及內容。 |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
 | 允許內容                                        | [內容流](/zh-TW/docs/HTML/Content_categories#Flow_content).                             |
-| Tag 省略                                        | {{no_tag_omission}}                                                                |
+| Tag 省略                                        | {{no_tag_omission}}                                                                     |
 | 允許父元素                                      | 任何允許[內容流](/zh-TW/docs/HTML/Content_categories#Flow_content)的元素                |
-| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                |
+| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                         |
 
 ## 屬性
 

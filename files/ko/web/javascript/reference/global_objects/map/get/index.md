@@ -1,6 +1,8 @@
 ---
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
@@ -31,10 +33,10 @@ get(key)
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'foo');
+myMap.set("bar", "foo");
 
-console.log(myMap.get('bar')); // Returns "foo"
-console.log(myMap.get('baz')); // Returns undefined
+console.log(myMap.get("bar")); // "foo" 를 반환합니다.
+console.log(myMap.get("baz")); // undefined 을 반환합니다.
 ```
 
 ### get()을 사용하여 객체에 대한 참조 검색
@@ -42,10 +44,9 @@ console.log(myMap.get('baz')); // Returns undefined
 ```js
 const arr = [];
 const myMap = new Map();
+myMap.set("bar", arr);
 
-myMap.set('bar', arr);
-
-myMap.get('bar').push('foo');
+myMap.get("bar").push("foo");
 
 console.log(arr); // ["foo"]
 console.log(myMap.get('bar')); // ["foo"]

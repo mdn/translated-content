@@ -8,7 +8,7 @@ slug: Glossary/Character_encoding
 例如在 HTML 中，我們通常使用以下程式碼來宣告一個 UTF-8 的字元編碼:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 這使我們可以在 HTML 檔案中使用幾乎所有人類使用的語言，並且會正常顯示。
