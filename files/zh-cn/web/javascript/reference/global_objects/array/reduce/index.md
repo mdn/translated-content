@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-**reducer** 逐个遍历数组元素，每一步都将当前元素的值添加到前一步的结果中（该结果是之前所有步骤结果的总和）——直到没有更多的元素被添加。
+reducer 逐个遍历数组元素，每一步都将当前元素的值与前一步的结果相加（该结果是之前所有步骤结果的总和）——直到没有更多需要相加的元素。
 
 ## 语法
 
@@ -52,11 +52,11 @@ reduce(callbackFn, initialValue)
 
 `callbackFn` 仅对已分配值的数组索引进行调用。不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽进行调用。
 
-与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
+与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduce()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 未处于严格模式，则该值将被替换为 `globalThis`。
 
 `reduce()` 是[函数式编程](https://zh.wikipedia.org/wiki/函数式编程)中的一个核心概念，在函数式编程中，不可能改变任何值，因此为了累积数组中的所有值，必须在每次迭代中返回一个新的累加器。这种约定也适用于 JavaScript 的 `reduce()`：应该在可能的情况下使用[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或其他复制方法来创建新的数组和对象作为累加器，而不是改变现有的累加器。如果你决定改变累加器而不是复制它，请记得仍然在回调中返回修改后的对象，否则下一次迭代将收到 `undefined`。
 
-`reduce()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
+`reduce()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当开始调用 `reduce()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -272,7 +272,7 @@ console.log(myArrayWithNoDuplicates);
 
 ### 使用 reduce() 来替代 .filter().map()
 
-使用 {{jsxref("Array/filter", "filter()")}} 和 {{jsxref("Array/map", "map()")}} 会遍历数组两次，但是你可以使用 {{jsxref("Array/reduce", "reduce()")}} 只遍历一次并实现相同的效果，从而更高效。（如果你喜欢使用 `for` 循环，你可以在遍历一次时使用 {{jsxref("Array/forEach", "forEach()")}} 进行过滤和映射。）
+使用 {{jsxref("Array/filter", "filter()")}} 和 {{jsxref("Array/map", "map()")}} 会遍历数组两次，但是你可以使用 `reduce()` 只遍历一次并实现相同的效果，从而更高效。（如果你喜欢使用 `for` 循环，你可以在遍历一次时使用 {{jsxref("Array/forEach", "forEach()")}} 进行过滤和映射。）
 
 ```js
 const numbers = [-5, 6, 2, 0];

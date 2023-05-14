@@ -43,9 +43,9 @@ reduceRight(callbackFn, initialValue)
 
 `callbackFn` 仅为已分配值的数组索引调用。它不会为[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 
-与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 是非严格模式，则该值将被替换为 `globalThis`。
+与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 未处于严格模式，则该值将被替换为 `globalThis`。
 
-`reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` *之前*，数组的长度会被保存。因此：
+`reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当开始调用 `reduceRight()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。
@@ -118,7 +118,7 @@ const sum = [0, 1, 2, 3].reduceRight((a, b) => a + b);
 // sum 的值是 6
 ```
 
-### 扁平化一个二维数组
+### 展平一个二维数组
 
 ```js
 const arrays = [
@@ -194,7 +194,7 @@ console.log(right); // "54321"
 
 函数组合是一种将函数组合在一起的机制，其中每个函数的输出都作为下一个函数的输入，最后一个函数的输出是最终的结果。在这个例子中，我们使用 `reduceRight()` 来实现函数组合。
 
-也可以参见维基百科上的[函数组合](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>)。
+参见维基百科上的[函数组合](<https://en.wikipedia.org/wiki/Function_composition_(computer_science)>)。
 
 ```js
 const compose =
