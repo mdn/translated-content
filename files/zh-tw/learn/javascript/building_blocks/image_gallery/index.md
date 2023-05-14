@@ -34,14 +34,12 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 完成後看起來像下圖：
@@ -93,7 +91,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

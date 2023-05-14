@@ -45,111 +45,116 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 ```html hidden
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Number guessing game</title>
     <style>
-        html {
-            font-family: sans-serif;
-        }
+      html {
+        font-family: sans-serif;
+      }
 
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
 
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Number guessing game</h1>
-    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
-    <div class="form"> <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Submit guess" class="guessSubmit"> </div>
+    <p>
+      We have selected a random number between 1 and 100. See if you can guess
+      it in 10 turns or fewer. We'll tell you if your guess was too high or too
+      low.
+    </p>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label
+      ><input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Submit guess" class="guessSubmit" />
+    </div>
     <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
     </div>
 
-<script>
-    // Your JavaScript goes here
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    const guesses = document.querySelector('.guesses');
-    const lastResult = document.querySelector('.lastResult');
-    const lowOrHi = document.querySelector('.lowOrHi');
-    const guessSubmit = document.querySelector('.guessSubmit');
-    const guessField = document.querySelector('.guessField');
-    let guessCount = 1;
-    let resetButton;
+    <script>
+      // Your JavaScript goes here
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      const guesses = document.querySelector(".guesses");
+      const lastResult = document.querySelector(".lastResult");
+      const lowOrHi = document.querySelector(".lowOrHi");
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const guessField = document.querySelector(".guessField");
+      let guessCount = 1;
+      let resetButton;
 
-    function checkGuess() {
-      let userGuess = Number(guessField.value);
-      if (guessCount === 1) {
-        guesses.textContent = 'Previous guesses: ';
-      }
-
-      guesses.textContent += userGuess + ' ';
-
-      if (userGuess === randomNumber) {
-        lastResult.textContent = 'Congratulations! You got it right!';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else if (guessCount === 10) {
-        lastResult.textContent = '!!!GAME OVER!!!';
-        lowOrHi.textContent = '';
-        setGameOver();
-      } else {
-        lastResult.textContent = 'Wrong!';
-        lastResult.style.backgroundColor = 'red';
-        if(userGuess < randomNumber) {
-          lowOrHi.textContent='Last guess was too low!' ;
-        } else if(userGuess > randomNumber) {
-          lowOrHi.textContent = 'Last guess was too high!';
+      function checkGuess() {
+        let userGuess = Number(guessField.value);
+        if (guessCount === 1) {
+          guesses.textContent = "Previous guesses: ";
         }
+
+        guesses.textContent += userGuess + " ";
+
+        if (userGuess === randomNumber) {
+          lastResult.textContent = "Congratulations! You got it right!";
+          lastResult.style.backgroundColor = "green";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else if (guessCount === 10) {
+          lastResult.textContent = "!!!GAME OVER!!!";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else {
+          lastResult.textContent = "Wrong!";
+          lastResult.style.backgroundColor = "red";
+          if (userGuess < randomNumber) {
+            lowOrHi.textContent = "Last guess was too low!";
+          } else if (userGuess > randomNumber) {
+            lowOrHi.textContent = "Last guess was too high!";
+          }
+        }
+
+        guessCount++;
+        guessField.value = "";
       }
 
-      guessCount++;
-      guessField.value = '';
-    }
+      guessSubmit.addEventListener("click", checkGuess);
 
-    guessSubmit.addEventListener('click', checkGuess);
-
-    function setGameOver() {
-      guessField.disabled = true;
-      guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Start new game';
-      document.body.appendChild(resetButton);
-      resetButton.addEventListener('click', resetGame);
-    }
-
-    function resetGame() {
-      guessCount = 1;
-      const resetParas = document.querySelectorAll('.resultParas p');
-      for(let i = 0 ; i < resetParas.length ; i++) {
-        resetParas[i].textContent='';
+      function setGameOver() {
+        guessField.disabled = true;
+        guessSubmit.disabled = true;
+        resetButton = document.createElement("button");
+        resetButton.textContent = "Start new game";
+        document.body.appendChild(resetButton);
+        resetButton.addEventListener("click", resetGame);
       }
 
-      resetButton.parentNode.removeChild(resetButton);
-      guessField.disabled = false;
-      guessSubmit.disabled = false;
-      guessField.value='';
-      guessField.focus();
-      lastResult.style.backgroundColor='white';
-      randomNumber=Math.floor(Math.random() * 100) + 1;
-    }
-</script>
+      function resetGame() {
+        guessCount = 1;
+        const resetParas = document.querySelectorAll(".resultParas p");
+        for (let i = 0; i < resetParas.length; i++) {
+          resetParas[i].textContent = "";
+        }
 
-</body>
+        resetButton.parentNode.removeChild(resetButton);
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = "";
+        guessField.focus();
+        lastResult.style.backgroundColor = "white";
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+      }
+    </script>
+  </body>
 </html>
 ```
 
@@ -175,21 +180,21 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 5. 接著檢查數字是否猜中。
 6. 如果數字猜對：
 
-    1. 顯示恭喜訊息。
-    2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
-    3. 顯示控制鈕讓玩家可以重新開始遊戲。
+   1. 顯示恭喜訊息。
+   2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
+   3. 顯示控制鈕讓玩家可以重新開始遊戲。
 
 7. 如果數字猜錯而且玩家有剩餘回合數：
 
-    1. 告訴玩家他猜錯了。
-    2. 讓玩家輸入其他的猜測
-    3. 回合數增加 1。
+   1. 告訴玩家他猜錯了。
+   2. 讓玩家輸入其他的猜測
+   3. 回合數增加 1。
 
 8. 如果數字猜錯而且玩家沒有剩餘回合數：
 
-    1. 告訴玩家遊戲結束。
-    2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
-    3. 顯示控制鈕讓玩家可以重新開始遊戲。
+   1. 告訴玩家遊戲結束。
+   2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
+   3. 顯示控制鈕讓玩家可以重新開始遊戲。
 
 9. 當遊戲重新開始，確保遊戲邏輯和畫面(UI，使用這介面)全面重設，然後回到第一步。
 
@@ -203,9 +208,7 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 ```html
 <script>
-
   // Your JavaScript goes here
-
 </script>
 ```
 
@@ -216,12 +219,12 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-const guesses = document.querySelector('.guesses');
-const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('.lowOrHi');
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
 
-const guessSubmit = document.querySelector('.guessSubmit');
-const guessField = document.querySelector('.guessField');
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -247,8 +250,9 @@ let resetButton;
 - 接著的兩個常數，分別儲存表單中的文字輸入和送出按鈕，之後會用來控制送出玩家猜測的數字。
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+  <label for="guessField">Enter a guess: </label
+  ><input type="text" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
 - 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
@@ -261,7 +265,7 @@ let resetButton;
 
 ```js
 function checkGuess() {
-  alert('I am a placeholder');
+  alert("I am a placeholder");
 }
 ```
 
@@ -291,7 +295,7 @@ JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -299,7 +303,7 @@ JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -333,66 +337,61 @@ JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
 
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
       inputDiv.focus();
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -411,9 +410,9 @@ JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串
 你也可以使用 `+` 來連接字串 (在程式設計中，這稱爲**連接**)。試著輸入以下幾行程式，每次一行：
 
 ```js
-var name = 'Bingo';
+var name = "Bingo";
 name;
-var hello = ' says hello!';
+var hello = " says hello!";
 hello;
 var greeting = name + hello;
 greeting;
@@ -422,13 +421,13 @@ greeting;
 你也可以使用一些捷徑，這些被稱爲增量賦值運算子。如果你只是簡單想將兩個字串加在一起，你可以這樣做：
 
 ```js
-name += ' says hello!';
+name += " says hello!";
 ```
 
 相當於
 
 ```js
-name = name + ' says hello!';
+name = name + " says hello!";
 ```
 
 當我們進行真假值測試時 (例如[下面](#條件))，我們可以使用比較運算子，如：
@@ -450,30 +449,30 @@ name = name + ' says hello!';
 function checkGuess() {
   var userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Previous guesses: ';
+    guesses.textContent = "Previous guesses: ";
   }
-  guesses.textContent += userGuess + ' ';
+  guesses.textContent += userGuess + " ";
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Congratulations! You got it right!';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "Congratulations! You got it right!";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!GAME OVER!!!';
+    lastResult.textContent = "!!!GAME OVER!!!";
     setGameOver();
   } else {
-    lastResult.textContent = 'Wrong!';
-    lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
-      lowOrHi.textContent = 'Last guess was too low!';
-    } else if(userGuess > randomNumber) {
-      lowOrHi.textContent = 'Last guess was too high!';
+    lastResult.textContent = "Wrong!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "Last guess was too low!";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "Last guess was too high!";
     }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -505,7 +504,7 @@ function checkGuess() {
 在 `checkGuess()` 函式下面添加下行（不是指函式內部的後面，而是函式外）：
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
 這裡我們為 `guessSubmit` 按鈕添加一個事件偵聽器。這是一個函式，它接受兩個輸入值（稱為*參數*） - 我們正在監聽的事件類型字串（本例中的 `click`），以及我們想要在事件發生時運行的程式碼（在這種情況下是`checkGuess()`函式） — 請注意，在編寫 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 內部時我們不需要為函式加上括號。
@@ -520,10 +519,10 @@ guessSubmit.addEventListener('click', checkGuess);
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start new game";
   document.body.appendChild(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -537,19 +536,19 @@ function setGameOver() {
 function resetGame() {
   guessCount = 1;
 
-  var resetParas = document.querySelectorAll('.resultParas p');
-  for (var i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+  var resetParas = document.querySelectorAll(".resultParas p");
+  for (var i = 0; i < resetParas.length; i++) {
+    resetParas[i].textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -575,7 +574,9 @@ function resetGame() {
 開始吧，打開你的 [開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)，然後輸入下面這行：
 
 ```js
-for (var i = 1 ; i < 21 ; i++) { console.log(i) }
+for (var i = 1; i < 21; i++) {
+  console.log(i);
+}
 ```
 
 看見了嗎？在你的主控台內印出了數字 1 到 20。這就是迴圈的效果。一個 for 迴圈需要三個參數：
@@ -587,9 +588,9 @@ for (var i = 1 ; i < 21 ; i++) { console.log(i) }
 現在我們來看看在猜謎遊戲中的迴圈 — 這可以在 `resetGame()` 函式中找到：
 
 ```js
-var resetParas = document.querySelectorAll('.resultParas p');
-for (var i = 0 ; i < resetParas.length ; i++) {
-  resetParas[i].textContent = '';
+var resetParas = document.querySelectorAll(".resultParas p");
+for (var i = 0; i < resetParas.length; i++) {
+  resetParas[i].textContent = "";
 }
 ```
 
@@ -612,7 +613,7 @@ guessField.focus();
 在這個例子中，我們首先創建了一個 `guessField` 變數，儲存著一個指向 HTML 表單中文字輸入欄的參照 — 這可以在我們定義變數的區塊中找到：
 
 ```js
-var guessField = document.querySelector('.guessField');
+var guessField = document.querySelector(".guessField");
 ```
 
 我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數 — 一個 [CSS 選擇器](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Selectors)， 會回傳你想要的元素參照。
@@ -635,50 +636,50 @@ guessField.focus();
 3. 輸入 `guessField`，可以看到主控台顯示這個變數儲存著一個 {{htmlelement("input")}} 元素。你還可以發現主控台會自動幫你完成已存在的物件名稱！
 4. 接下來輸入：
 
-    ```js
-    guessField.value = 'Hello';
-    ```
+   ```js
+   guessField.value = "Hello";
+   ```
 
-    `value` 屬性儲存著現在文字輸入欄內的內容參照。現在按下
+   `value` 屬性儲存著現在文字輸入欄內的內容參照。現在按下
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    ，看看文字欄內的內容是不是變了？
+   ，看看文字欄內的內容是不是變了？
 
 5. 試著輸入 `guesses` 然後按下
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    ，主控台會顯示這個變數儲存著一個 {{htmlelement("p")}} 元素。
+   ，主控台會顯示這個變數儲存著一個 {{htmlelement("p")}} 元素。
 
 6. 現在輸入：
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value;
+   ```
 
-    瀏覽器會回傳 `undefined`，因為 `value` 不存在在段落元素裡面。
+   瀏覽器會回傳 `undefined`，因為 `value` 不存在在段落元素裡面。
 
 7. 要更改段落元素中的文字，你需要的是 {{domxref("Node.textContent", "textContent")}} 屬性。試試這個：
 
-    ```js
-    guesses.textContent = 'Where is my paragraph?';
-    ```
+   ```js
+   guesses.textContent = "Where is my paragraph?";
+   ```
 
 8. 現在來做些好玩的事。一行一行輸入並
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    ：
+   ：
 
-    ```js
-    guesses.style.backgroundColor = 'yellow';
-    guesses.style.fontSize = '200%';
-    guesses.style.padding = '10px';
-    guesses.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   guesses.style.backgroundColor = "yellow";
+   guesses.style.fontSize = "200%";
+   guesses.style.padding = "10px";
+   guesses.style.boxShadow = "3px 3px 6px black";
+   ```
 
-    每個在頁面上的元素都有一個 `style` 屬性，其本身又是另一個物件，包含著許多該元素的行內 CSS 屬性。這讓我們能透過 JavaScript 來動態的為元素設置 CSS 屬性。
+   每個在頁面上的元素都有一個 `style` 屬性，其本身又是另一個物件，包含著許多該元素的行內 CSS 屬性。這讓我們能透過 JavaScript 來動態的為元素設置 CSS 屬性。
 
 ## 差不多就到這了
 

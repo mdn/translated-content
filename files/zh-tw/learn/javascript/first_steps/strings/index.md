@@ -36,7 +36,7 @@ slug: Learn/JavaScript/First_steps/Strings
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -44,7 +44,7 @@ slug: Learn/JavaScript/First_steps/Strings
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -78,64 +78,59 @@ slug: Learn/JavaScript/First_steps/Strings
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -146,72 +141,72 @@ slug: Learn/JavaScript/First_steps/Strings
 
 1. 首先，先輸入下面幾行程式碼：
 
-    ```js
-    let string = 'The revolution will not be televised.';
-    string;
-    ```
+   ```js
+   let string = "The revolution will not be televised.";
+   string;
+   ```
 
-    就像我們對數字的操作，我們聲明一個變數，並用一個值（字串）來初始化它，而後傳回這個值。唯一的差異在於，你需要用引號包住你的值。
+   就像我們對數字的操作，我們聲明一個變數，並用一個值（字串）來初始化它，而後傳回這個值。唯一的差異在於，你需要用引號包住你的值。
 
 2. 如果你沒有使用引號包住值，或缺少單一邊的引號，都會導致錯誤產生。試著輸入下面幾行程式碼：
 
-    ```js example-bad
-    let badString = This is a test;
-    let badString = 'This is a test;
-    let badString = This is a test';
-    ```
+   ```js example-bad
+   let badString = This is a test;
+   let badString = 'This is a test;
+   let badString = This is a test';
+   ```
 
-    上述的程式無法運作，因為未使用引號包圍的文字都將被視為變數名稱、屬性名稱和保留字等。如果瀏覽器無法辨識它，便會產生錯誤（例如：「missing ; before statement」）。如果瀏覽器可以識別字段從哪裡開始，但無法找到字段的終點，意即缺少第二個引號，則會產生「unterminated string literal」的錯誤。如果你的程式出現了這樣的錯誤，檢查並確認自己的字串是否遺漏了任何引號。
+   上述的程式無法運作，因為未使用引號包圍的文字都將被視為變數名稱、屬性名稱和保留字等。如果瀏覽器無法辨識它，便會產生錯誤（例如：「missing ; before statement」）。如果瀏覽器可以識別字段從哪裡開始，但無法找到字段的終點，意即缺少第二個引號，則會產生「unterminated string literal」的錯誤。如果你的程式出現了這樣的錯誤，檢查並確認自己的字串是否遺漏了任何引號。
 
 3. 如果你先定義了變數 `string` ，則以下程式碼可以正常運作。馬上來試試看：
 
-    ```js
-    let badString = string;
-    badString;
-    ```
+   ```js
+   let badString = string;
+   badString;
+   ```
 
-    `badString` 會被設定跟 `string` 具有一樣的值。
+   `badString` 會被設定跟 `string` 具有一樣的值。
 
 ### 單引號與雙引號
 
 1. 在 JavaScript 中，你可以選擇用單引號或雙引號來包住字串。兩種方式都可行：
 
-    ```js
-    let sgl = 'Single quotes.';
-    let dbl = "Double quotes";
-    sgl;
-    dbl;
-    ```
+   ```js
+   let sgl = "Single quotes.";
+   let dbl = "Double quotes";
+   sgl;
+   dbl;
+   ```
 
 2. 兩種之間的差異非常小，取決於你個人的習慣與喜好。你可以選擇一種，並且固定使用它。交互使用兩種方式，容易造成混亂。特別是當你使用兩種不同的引號包住一個字串！這會導致錯誤回傳：
 
-    ```js example-bad
-    let badQuotes = 'What on earth?";
-    ```
+   ```js example-bad
+   let badQuotes = 'What on earth?";
+   ```
 
 3. 瀏覽器會認為字串並沒有結束，沒有作為包住字串的引號，是可以出現在字串裡面的。看看下面的例子，兩種都是可行的：
 
-    ```js
-    let sglDbl = 'Would you eat a "fish supper"?';
-    let dblSgl = "I'm feeling blue.";
-    sglDbl;
-    dblSgl;
-    ```
+   ```js
+   let sglDbl = 'Would you eat a "fish supper"?';
+   let dblSgl = "I'm feeling blue.";
+   sglDbl;
+   dblSgl;
+   ```
 
 4. 但是，字串中不可以再使用那個作為包住字串的引號。以下的程式行會出錯，因為瀏覽器無法判斷字串的結尾：
 
-    ```js example-bad
-    let bigmouth = 'I've got no right to take my place...';
-    ```
+   ```js example-bad
+   let bigmouth = 'I've got no right to take my place...';
+   ```
 
-    This leads us very nicely into our next subject.
+   This leads us very nicely into our next subject.
 
 ### 字串中的跳脫字元（Escaping characters）
 
 要修復先前出錯的那一行程式碼，我們需要解決引號的問題。跳脫字元（Escaping characters）的意思是我們需要確保它們被辨識為文字，而非程式碼本身。在 JavaScript 中，我們在字元的前面放一個反斜線解決這個問題。試試看這個：
 
 ```js
-let bigmouth = 'I\'ve got no right to take my place...';
+let bigmouth = "I've got no right to take my place...";
 bigmouth;
 ```
 
@@ -221,28 +216,28 @@ bigmouth;
 
 1. 連接（Concatenate）是一個新潮的程式用語。在 JavaScript 中，使用加號（+）將字串連接；這也是我們做數字相加的方式。但在這個狀況下，它有不同的作用。讓我們在 console 中示範：
 
-    ```js
-    let one = 'Hello, ';
-    let two = 'how are you?';
-    let joined = one + two;
-    joined;
-    ```
+   ```js
+   let one = "Hello, ";
+   let two = "how are you?";
+   let joined = one + two;
+   joined;
+   ```
 
-    這邊的結果是 `joined` 這個變數中，有了 「Hello, how are you?」這個值。
+   這邊的結果是 `joined` 這個變數中，有了 「Hello, how are you?」這個值。
 
 2. 在上一個範例中，我們只連接了兩個字串。但只要你在兩個字串之間加上 `+` ，那你要連接幾個都可以。試試看這個：
 
-    ```js
-    let multiple = one + one + one + one + two;
-    multiple;
-    ```
+   ```js
+   let multiple = one + one + one + one + two;
+   multiple;
+   ```
 
 3. 你也可以結合變數和字串。試試看這個：
 
-    ```js
-    let response = one + 'I am fine — ' + two;
-    response;
-    ```
+   ```js
+   let response = one + "I am fine — " + two;
+   response;
+   ```
 
 > **備註：** 當你輸入一個字串在你的程式碼中，並用單引號或雙引號將它括起來，它稱為**字串文字**（**string literal**）。
 
@@ -255,12 +250,12 @@ bigmouth;
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
-}
+button.onclick = function () {
+  let name = prompt("What is your name?");
+  alert("Hello " + name + ", nice to see you!");
+};
 ```
 
 {{ EmbedLiveSample('Concatenation_in_context', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
@@ -271,38 +266,38 @@ button.onclick = function() {
 
 1. 那麼我們將字串和數字連接會發生什麼事呢？讓我們在 console 中試試看：
 
-    ```js
-    'Front ' + 242;
-    ```
+   ```js
+   "Front " + 242;
+   ```
 
-    或許你預期會跑出錯誤訊息，但看來依然正常運作。若將字串表示成數字似乎不太合理，但將數字表示成字串看來是可行的，所以瀏覽器便會巧妙地將數字轉換成字串，並將這兩個字串連接在一起。
+   或許你預期會跑出錯誤訊息，但看來依然正常運作。若將字串表示成數字似乎不太合理，但將數字表示成字串看來是可行的，所以瀏覽器便會巧妙地將數字轉換成字串，並將這兩個字串連接在一起。
 
 2. 你也可以用兩個數字做這個例子 — 將這兩個數字包在引號中強制將它們轉換成字串。試試看（並使用 typeof 這個運算子去檢查變數是數字或字串）：
 
-    ```js
-    let myDate = '19' + '67';
-    typeof myDate;
-    ```
+   ```js
+   let myDate = "19" + "67";
+   typeof myDate;
+   ```
 
 3. 如果你想轉換數字變數成字串，但不要更動到原本的變數；或是想轉換字串變數成數字，也不要更動到原本的變數，你可以使用以下兩種方式：
 
-    - 物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
+   - 物件 {{jsxref("Number")}} 會將欲處理的變數轉換成數字（如果可行的話）。試試以下例子：
 
-      ```js
-      let myString = '123';
-      let myNum = Number(myString);
-      typeof myNum;
-      ```
+     ```js
+     let myString = "123";
+     let myNum = Number(myString);
+     typeof myNum;
+     ```
 
-    - 另一方面，也有 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
+   - 另一方面，也有 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法能夠讓數字轉換為相等的字串。試試看：
 
-      ```js
-      let myNum = 123;
-      let myString = myNum.toString();
-      typeof myString;
-      ```
+     ```js
+     let myNum = 123;
+     let myString = myNum.toString();
+     typeof myString;
+     ```
 
-    這些結構在某些情況相當好用。舉例來說：如果使用者在文字表單中輸入了一個數字，這個數字將會是字串格式。而若想要把這個數字加上另一個數字，那你會希望它是數字格式（才能做數字相加），所以可以使用 `Number()` 來處理這個情況。可以看看實際案例：[猜數字遊戲, 第 61 行](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61)。
+   這些結構在某些情況相當好用。舉例來說：如果使用者在文字表單中輸入了一個數字，這個數字將會是字串格式。而若想要把這個數字加上另一個數字，那你會希望它是數字格式（才能做數字相加），所以可以使用 `Number()` 來處理這個情況。可以看看實際案例：[猜數字遊戲, 第 61 行](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L61)。
 
 ## 模版字符串(Template literals)
 
@@ -313,7 +308,7 @@ button.onclick = function() {
 將標準字串轉變為模版字符串，你需要將引號 (`' '`, or `" "`) 換為重音符 (backtick characters (`` ` ` ``) )，接著來看一個簡單的例子:
 
 ```js
-let song = 'Fight the Youth';
+let song = "Fight the Youth";
 ```
 
 轉換成模版字符串會像這樣子:
@@ -327,13 +322,20 @@ song = `Fight the Youth`;
 ```js
 let score = 9;
 let highestScore = 10;
-let output = 'I like the song "' + song + '". I gave it a score of ' + (score/highestScore * 100) + '%.';
+let output =
+  'I like the song "' +
+  song +
+  '". I gave it a score of ' +
+  (score / highestScore) * 100 +
+  "%.";
 ```
 
 模版字符串能大量簡化這串程式碼:
 
 ```js
-output = `I like the song "${ song }". I gave it a score of ${ score/highestScore * 100 }%.`;
+output = `I like the song "${song}". I gave it a score of ${
+  (score / highestScore) * 100
+}%.`;
 ```
 
 全部一串都只需要包含在一對重音符號裡，不再需要切開、合起一堆字串碎片。
@@ -344,7 +346,13 @@ output = `I like the song "${ song }". I gave it a score of ${ score/highestScor
 ```js
 let examScore = 45;
 let examHighestScore = 70;
-examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((examScore/examHighestScore*100)) }%). ${ examScore >= 49 ? 'Well done, you passed!' : 'Bad luck, you didn\'t pass this time.' }`;
+examReport = `You scored ${examScore}/${examHighestScore} (${Math.round(
+  (examScore / examHighestScore) * 100
+)}%). ${
+  examScore >= 49
+    ? "Well done, you passed!"
+    : "Bad luck, you didn't pass this time."
+}`;
 ```
 
 - 前兩個佔位符非常好理解，字串裡只包含了單一值。
@@ -354,15 +362,20 @@ examReport = `You scored ${ examScore }/${ examHighestScore } (${ Math.round((ex
 另一個可以注意的點是，如果你想要將傳統字串拆分成多行，你需要加上一個斷行字母, `\n`
 
 ```js
-output = 'I like the song "' + song + '".\nI gave it a score of ' + (score/highestScore * 100) + '%.';
+output =
+  'I like the song "' +
+  song +
+  '".\nI gave it a score of ' +
+  (score / highestScore) * 100 +
+  "%.";
 ```
 
 模版字符串保留了程式碼中的斷行方式，所以不再需要使用斷行字母。
 這樣也能達到相同的結果:
 
 ```js
-output = `I like the song "${ song }".
-I gave it a score of ${ score/highestScore * 100 }%.`;
+output = `I like the song "${song}".
+I gave it a score of ${(score / highestScore) * 100}%.`;
 ```
 
 我們建議你盡可能習慣使用模版字符串。現今流行的瀏覽器都能完好的支援它，只有一個地方你能發現它並不支援外: Internet Explorer。

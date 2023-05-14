@@ -53,27 +53,38 @@ var person = {};
 
 ```js
 var person = {
-  name : ['Bob', 'Smith'],
-  age : 32,
-  gender : 'male',
-  interests : ['music', 'skiing'],
-  bio : function() {
-    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  name: ["Bob", "Smith"],
+  age: 32,
+  gender: "male",
+  interests: ["music", "skiing"],
+  bio: function () {
+    alert(
+      this.name[0] +
+        " " +
+        this.name[1] +
+        " is " +
+        this.age +
+        " years old. He likes " +
+        this.interests[0] +
+        " and " +
+        this.interests[1] +
+        "."
+    );
   },
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name[0] + '.');
-  }
+  greeting: function () {
+    alert("Hi! I'm " + this.name[0] + ".");
+  },
 };
 ```
 
 改完後同樣儲存 oojs.html、重新整理瀏覽器之後，再到控制台輸入 person, 將會看到新的結果：
 
 ```js
-person.name[0]
-person.age
-person.interests[1]
-person.bio()
-person.greeting()
+person.name[0];
+person.age;
+person.interests[1];
+person.bio();
+person.greeting();
 ```
 
 現在你的物件裡面已經有了某些資料與功能，而且能透過某些簡易語法存取之。
@@ -84,10 +95,10 @@ person.greeting()
 
 ```js
 var objectName = {
-  member1Name : member1Value,
-  member2Name : member2Value,
-  member3Name : member3Value
-}
+  member1Name: member1Value,
+  member2Name: member2Value,
+  member3Name: member3Value,
+};
 ```
 
 物件成員的數值可能是任何東西，像上述的範例物件就有 1 組字串、1 組數字、2 個陣列、2 組函式。前 4 組項目均為資料項目，可說是該物件的**屬性**。最後 2 組項目的功能則是用以指定物件對該筆資料所應進行的作業，可說是物件的**函式 (Method)**。
@@ -101,9 +112,9 @@ var objectName = {
 你可透過點記法 (Dot notation) 存取物件的屬性與函式。物件名稱 (這裡是 person) 作為**命名空間 (Namespace)** —為了能存取物件所**封裝**的所有東西，這也是必須首先輸入的項目。接著你寫一個「點」以及你所想存取的項目，可能是簡單屬性的名稱、陣列屬性的項目，又或是針對物件函式之一的呼叫。舉例來說：
 
 ```js
-person.age
-person.interests[1]
-person.bio()
+person.age;
+person.interests[1];
+person.bio();
 ```
 
 ### 子命名空間
@@ -126,22 +137,22 @@ name : {
 我們這裡以極高效率建立了子命名空間。看起來複雜但其實不然。若要存取這些項目，你只要透過另一個點，將 onto the end 的額外步驟串連起來即可。如下所示：
 
 ```js
-person.name.first
-person.name.last
+person.name.first;
+person.name.last;
 ```
 
 **重要：**現在你必須看過自己的函式碼，將實例
 
 ```js
-name[0]
-name[1]
+name[0];
+name[1];
 ```
 
 改變為
 
 ```js
-name.first
-name.last
+name.first;
+name.last;
 ```
 
 否則你的函式就不能運作了。
@@ -151,15 +162,15 @@ name.last
 括弧記法 (Bracket notation) 是另個存取物件屬性的方法。之前的：
 
 ```js
-person.age
-person.name.first
+person.age;
+person.name.first;
 ```
 
 可寫成
 
 ```js
-person['age']
-person['name']['first']
+person["age"];
+person["name"]["first"];
 ```
 
 這很像在陣列中存取項目的方法。其實基本上是一樣的東西 ─ 但前者是透過指數 (index number) 選擇項目；括弧記法則是透過各成員數值相關的名稱來選擇項目。因此物件有時亦稱作**「相聯陣列 (Associative array)」**；也就是說，其「將字串對應到數值」的方式，與陣列「將數字對應到數值」的方式相同。
@@ -169,56 +180,58 @@ person['name']['first']
 到目前為止，我們只說明了檢索 (或**取得**) 物件成員。你也可以簡單宣告你所要設定的成員 (用點或括弧記法均可)，設定 (**更新**) 物件成員的數值，如下：
 
 ```js
-person.age = 45
-person['name']['last'] = 'Cratchit'
+person.age = 45;
+person["name"]["last"] = "Cratchit";
 ```
 
 試著輸入下列程式碼，再次取得成員之後看看變更的結果：
 
 ```js
-person.age
-person['name']['last']
+person.age;
+person["name"]["last"];
 ```
 
 設定成員不只是更新現有屬性與函式的數值，也可以建立全新的成員，如下：
 
 ```js
-person['eyes'] = 'hazel'
-person.farewell = function() { alert("Bye everybody!") }
+person["eyes"] = "hazel";
+person.farewell = function () {
+  alert("Bye everybody!");
+};
 ```
 
 現在可以測試自己的新成員了：
 
 ```js
-person['eyes']
-person.farewell()
+person["eyes"];
+person.farewell();
 ```
 
 此外，括弧記法不僅可動態設定成員數值，亦可設定成員名稱。假設使用者可在自己的人事資料中儲存自訂的數值類型，例如鍵入成員名稱與數值為 2 組文字輸入項，就會類似：
 
 ```js
-var myDataName = nameInput.value
-var myDataValue = nameValue.value
+var myDataName = nameInput.value;
+var myDataValue = nameValue.value;
 ```
 
 接著可將此新的成員名稱與數值加進 `person` 這個物件：
 
 ```js
-person[myDataName] = myDataValue
+person[myDataName] = myDataValue;
 ```
 
 若要測試，可將下列程式碼加進自己的程式碼，加在宣告完 `person` 物件的大括號後：
 
 ```js
-var myDataName = 'height'
-var myDataValue = '1.75m'
-person[myDataName] = myDataValue
+var myDataName = "height";
+var myDataValue = "1.75m";
+person[myDataName] = myDataValue;
 ```
 
 現在儲存並重新整理，將下列輸入你的文字輸入項中：
 
 ```js
-person.height
+person.height;
 ```
 
 因為點記法只接受字母表示的成員名稱，不能是指向名稱的變數值，所以並無法使用。
@@ -239,18 +252,18 @@ greeting: function() {
 
 ```js
 var person1 = {
-  name : 'Chris',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Chris",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 
 var person2 = {
-  name : 'Brian',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Brian",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 ```
 
 此範例中的函式碼雖然完全一樣，但 `person1.greeting()` 將輸出「Hi! I'm Chris.」；`person2.greeting()` 則會呈現「Hi! I'm Brian.」。如我們剛剛說過的，「`this」等於「已於內部放置程式碼」的物件`。如果你是依字面意義寫出物件，那可能沒什麼感覺，但如果你是用動態方式產生物件 (例如使用建構子) 的話，就能明顯感覺到方便之處了。再看下去你更清楚原因。
@@ -262,7 +275,7 @@ var person2 = {
 所以當你使用字串函式如下：
 
 ```js
-myString.split(',');
+myString.split(",");
 ```
 
 你就是在使用 [`String`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String) 類別實例可用的方法。每次只要你在程式碼中建立字串，該字串就會自動建立成為 `String` 的實例，並具備有多個常見的方法與屬性。
@@ -270,8 +283,8 @@ myString.split(',');
 若你透過下列程式碼存取文件物件模型 (DOM)：
 
 ```js
-var myDiv = document.createElement('div');
-var myVideo = document.querySelector('video');
+var myDiv = document.createElement("div");
+var myVideo = document.querySelector("video");
 ```
 
 你也就在使用 [`Document`](/zh-TW/docs/Web/API/Document) 類別實例上的函式。當載入網頁時，就會建立 `Document` 的實例，亦所謂的 `document`，將呈現整個網頁的架構、內容，以及其他功能 (如網址)。同樣的，這代表其上已有多個常見的函式＼屬性。
@@ -281,7 +294,7 @@ var myVideo = document.querySelector('video');
 另該注意的是，內建的物件＼API 不見得會自動建立物件實例。像以 [Notifications API](/zh-TW/docs/Web/API/Notifications_API) (它可以幫助你使用現代瀏覽器向使用者發送通知 ) 為例，就需要你針對想要觸發的通知，使用建構子逐一建立新的物件實例。試著將下列程式碼丟進你的 JavaScript 主控台：
 
 ```js
-var myNotification = new Notification('Hello!');
+var myNotification = new Notification("Hello!");
 ```
 
 我們會在後續文章中說明建構子 (Constructor)。

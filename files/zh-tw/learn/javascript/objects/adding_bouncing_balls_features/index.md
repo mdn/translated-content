@@ -93,17 +93,17 @@ This method will add an `onkeydown` event listener to the `window` object so tha
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if(e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if(e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if(e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if(e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
@@ -133,22 +133,22 @@ To implement the score counter, follow the following steps:
 1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. In your JavaScript, make the following updates:
 
-    - Create a variable that stores a reference to the paragraph.
-    - Keep a count of the number of balls on screen in some way.
-    - Increment the count and display the updated number of balls each time a ball is added to the scene.
-    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - Create a variable that stores a reference to the paragraph.
+   - Keep a count of the number of balls on screen in some way.
+   - Increment the count and display the updated number of balls each time a ball is added to the scene.
+   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
 ## Hints and tips
 

@@ -47,19 +47,19 @@ original_slug: Learn/JavaScript/Objects/Inheritance
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
   this.interests = interests;
-};
+}
 ```
 
 這些函式均已定義於建構子的原型之上，例如：
 
 ```js
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
+Person.prototype.greeting = function () {
+  alert("Hi! I'm " + this.name.first + ".");
 };
 ```
 
@@ -94,7 +94,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
@@ -111,23 +111,23 @@ function Teacher(first, last, age, gender, interests, subject) {
 
 1. 繼續在現有程式碼下方加入：
 
-    ```js
-    Teacher.prototype = Object.create(Person.prototype);
-    ```
+   ```js
+   Teacher.prototype = Object.create(Person.prototype);
+   ```
 
-    這裡再次用好朋友 [`create()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 解救。我們透過 `create()` 並搭配等同於 `Person.prototype` 的原型，建立新的 `prototype` 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 `Teacher.prototype` `的值。也就是說` `Teacher.prototype` 現在會繼承 `Person.prototype` 上的所有可用函式。
+   這裡再次用好朋友 [`create()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 解救。我們透過 `create()` 並搭配等同於 `Person.prototype` 的原型，建立新的 `prototype` 屬性值 (它本身就是物件，包含屬性與函式) ，並將之設定為 `Teacher.prototype` `的值。也就是說` `Teacher.prototype` 現在會繼承 `Person.prototype` 上的所有可用函式。
 
 2. 此外，基於我們的繼承方式，`Teacher()` `prototype` 的建構子屬性目前設定為 `Person()。可參閱` [Stack Overflow post](https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor) 進一步了解原因。可先儲存自己的程式碼、在瀏覽器中載入頁面，再將下列程式碼輸入至 JavaScript 主控台以驗證：
 
-    ```js
-    Teacher.prototype.constructor
-    ```
+   ```js
+   Teacher.prototype.constructor;
+   ```
 
 3. 這樣可能會產生問題，所以要設定正確。你可回到自己的原始碼並在最下方加入下列程式碼：
 
-    ```js
-    Teacher.prototype.constructor = Teacher;
-    ```
+   ```js
+   Teacher.prototype.constructor = Teacher;
+   ```
 
 4. 如果儲存並重新整理之後，只要輸入 `Teacher.prototype.constructor` 應該就會回傳 `Teacher()`。
 
@@ -138,18 +138,36 @@ function Teacher(first, last, age, gender, interests, subject) {
 最簡單的方法就是在 `Teacher()` 的原型上定義此函式。將下列加入程式碼最底部：
 
 ```js
-Teacher.prototype.greeting = function() {
+Teacher.prototype.greeting = function () {
   var prefix;
 
-  if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-    prefix = 'Mr.';
-  } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
-    prefix = 'Mrs.';
+  if (
+    this.gender === "male" ||
+    this.gender === "Male" ||
+    this.gender === "m" ||
+    this.gender === "M"
+  ) {
+    prefix = "Mr.";
+  } else if (
+    this.gender === "female" ||
+    this.gender === "Female" ||
+    this.gender === "f" ||
+    this.gender === "F"
+  ) {
+    prefix = "Mrs.";
   } else {
-    prefix = 'Mx.';
+    prefix = "Mx.";
   }
 
-  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+  alert(
+    "Hello. My name is " +
+      prefix +
+      " " +
+      this.name.last +
+      ", and I teach " +
+      this.subject +
+      "."
+  );
 };
 ```
 
@@ -160,7 +178,14 @@ Teacher.prototype.greeting = function() {
 現在你已經輸入所有程式碼了，可以試著用`Teacher()` 建立物件實例。將下列 (或是你想用的類似程式碼) 加入現有程式碼的底部：
 
 ```js
-var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var teacher1 = new Teacher(
+  "Dave",
+  "Griffiths",
+  31,
+  "male",
+  ["football", "cookery"],
+  "mathematics"
+);
 ```
 
 儲存並重新整理之後，試著存取新 `teacher1` 物件的屬性語函式，例如：
