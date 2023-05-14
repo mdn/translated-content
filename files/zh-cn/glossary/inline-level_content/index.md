@@ -1,48 +1,45 @@
 ---
-title: 行级元素
+title: 行级内容
 slug: Glossary/Inline-level_content
-original_slug: Web/HTML/Inline_elements
 ---
 
-{{HTMLSidebar}}
+在 CSS 中，参与行内布局的内容被称为**行级内容**（inline-level content）。默认情况下，大多数文本、替换元素以及生成的内容都是行级的。
 
-## 摘要
+在行内布局中，通常将文本、[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)以及其它的行级盒分段为一堆按顺序排列的盒子来进行布局。在每个行盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。
 
-HTML（超文本标记语言）元素大多数都是行级元素或[块级元素](/zh-CN/docs/Glossary/Block-level_content)。一个行级元素只占据它对应标签的边框所包含的空间。下面这个例子说明了行级元素的作用范围：
+![行内布局](inline_layout.png)
 
-## 行级元素示例
+> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种呈现的特性，现在这将由 CSS 来提供。
 
-### HTML
+## 示例
 
 ```html
-<p>This <span>span</span> is an inline element; its background has been colored to display both the beginning and end of the inline element's influence</p>
+<p>
+  This span is an <span class="highlight">inline-level element</span>; its
+  background has been colored to display both the beginning and end of the
+  element's influence. Input elements, like <input type="radio" /> and
+  <input type="checkbox" />, are also inline-level content.
+</p>
 ```
 
-### CSS
+在该示例中，{{HTMLElement("p")}} 元素包含一些文本。在该文本中有一个 {{HTMLElement("span")}} 元素和两个 {{HTMLElement("input")}} 元素，它们都是行级元素。如果，`<span>` 分布在不同的行上，则会生成两个行盒。因为这些元素是行内的，该段落只会渲染为不间断文本流的单个段落：
 
-```css
-span { background-color: #8ABB55; }
+```css hidden
+body {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #333;
+}
+
+.highlight {
+  background-color: #ee3;
+}
 ```
 
-{{ EmbedLiveSample('行级元素示例') }}
-
-## 行级元素与块级元素对比
-
-- 内容
-  - : 一般情况下，行级元素只能包含数据和其他行级元素。
-    而块级元素可以包含行级元素和其他块级元素。这种结构上的包含继承区别可以使块级元素创建比行级元素更”大型“的结构。
-- 格式
-  - : 默认情况下，行级元素不会以新行开始，而块级元素会新起一行。
-
-## 行级元素列表
-
-下面的元素都是行级元素：
-
-- [b](/zh-CN/docs/Web/HTML/Element/b)、[big](/zh-CN/docs/Web/HTML/Element/big)、[i](/zh-CN/docs/Web/HTML/Element/i)、[small](/zh-CN/docs/Web/HTML/Element/small)、[tt](/zh-CN/docs/Web/HTML/Element/tt)
-- [abbr](/zh-CN/docs/Web/HTML/Element/abbr)、[acronym](/zh-CN/docs/Web/HTML/Element/acronym)、[cite](/zh-CN/docs/Web/HTML/Element/cite)、[code](/zh-CN/docs/Web/HTML/Element/code)、[dfn](/zh-CN/docs/Web/HTML/Element/dfn)、[em](/zh-CN/docs/Web/HTML/Element/em)、[kbd](/zh-CN/docs/Web/HTML/Element/kbd)、[strong](/zh-CN/docs/Web/HTML/Element/strong)、[samp](/zh-CN/docs/Web/HTML/Element/samp)、[var](/zh-CN/docs/Web/HTML/Element/var)
-- [a](/zh-CN/docs/Web/HTML/Element/a)、[bdo](/zh-CN/docs/Web/HTML/Element/bdo)、[br](/zh-CN/docs/Web/HTML/Element/br)、[img](/zh-CN/docs/Web/HTML/Element/Img)、[map](/zh-CN/docs/Web/HTML/Element/map)、[object](/zh-CN/docs/Web/HTML/Element/object)、[q](/zh-CN/docs/Web/HTML/Element/q)、[script](/zh-CN/docs/Web/HTML/Element/Script)、[span](/zh-CN/docs/Web/HTML/Element/span)、[sub](/zh-CN/docs/Web/HTML/Element/sub)、[sup](/zh-CN/docs/Web/HTML/Element/sup)
-- [button](/zh-CN/docs/Web/HTML/Element/button)、[input](/zh-CN/docs/Web/HTML/Element/Input)、[label](/zh-CN/docs/Web/HTML/Element/label)、[select](/zh-CN/docs/Web/HTML/Element/select)、[textarea](/zh-CN/docs/Web/HTML/Element/textarea)
+{{EmbedLiveSample("示例")}}
 
 ## 参见
 
-- [块级元素](/zh-CN/docs/Glossary/Block-level_content)
+- [块级内容](/zh-CN/docs/Glossary/Block-level_content)
+- [行内格式上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)
+- {{cssxref("display")}}

@@ -30,17 +30,17 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 1. 首先，進入您測試網頁的資料夾中，並建立一個名為 `main.js` 的檔案，再將她存放於 `scripts` 資料夾內。
 2. 接著，開啟 `index.html` 檔案，並在 `</body>` 這個結束標籤之前的位置，使用一行新的空間來輸入以下的元素：
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. 我們做的事情，基本上跟新增一個 CSS 的 {{htmlelement("link")}} 元素是相同的概念 — 我們將 JavaScript 給導入這個頁面中，讓她來影響 HTML（以及 CSS、還有任何頁面上的東西）。
 4. 再來我們把以下的程式碼新增到 `main.js` 檔案內：
 
-    ```js
-    var myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   var myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
+   ```
 
 5. 現在請您將修改過的 HTML 和 JavaScript 給存檔，再用瀏覽器讀取 `index.html`。您應該會看到以下的內容：![](hello-world.png)
 
@@ -77,7 +77,7 @@ let myVariable;
 宣告了一個變數之後，您可以為她指定一個數值：
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 您可以呼叫這個變數的名字來取得這個值：
@@ -89,7 +89,7 @@ myVariable;
 如果您有需要，您也可以在一行之內同時做完這兩件事情：
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 當您把一個數值指定給一個變數之後，您也可以再次改變它：
@@ -265,11 +265,11 @@ Everything in between is a comment.
 條件是種程式碼結構，可以讓您測試某個陳述式會不會回傳真值，並根據不同的結果執行不同程式碼。最常見的形式是 `if ... else` 。以下是一個範例：
 
 ```js
-let iceCream = 'chocolate';
-if (iceCream === 'chocolate') {
-  alert('Yay, I love chocolate ice cream!');
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("Yay, I love chocolate ice cream!");
 } else {
-  alert('Awwww, but chocolate is my favorite...');
+  alert("Awwww, but chocolate is my favorite...");
 }
 ```
 
@@ -280,11 +280,11 @@ if (iceCream === 'chocolate') {
 函式（{{Glossary("Function", "Functions")}}）是一種將需要重複使用的功能打包裝起來的方法，所以當要再次執行這些功能的時候，就可以呼叫這個函式來達成，而不是一再的重新撰寫程式碼。您在先前的篇幅中其實已經看過一些函式了，例如：
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 這些函式是瀏覽器為您內建的，您可以自由地使用。
@@ -296,7 +296,7 @@ alert('hello!');
 好消息是：您可以定義您自己的函式 — 底下的這個範例中，我們將會為您帶來一個簡單的函式，她會接收兩個數字當作參數，並將其相乘：
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -305,9 +305,9 @@ function multiply(num1,num2) {
 您可以試著在主控台中執行上述的函式，然後再用不同的參數來測試這個函式幾次，例如：
 
 ```js
-multiply(4,7);
-multiply(20,20);
-multiply(0.5,3);
+multiply(4, 7);
+multiply(20, 20);
+multiply(0.5, 3);
 ```
 
 > **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope)）
@@ -317,9 +317,9 @@ multiply(0.5,3);
 如果要在網頁上創造真正的互動功能，您將會需要事件（Events） — 這是一種可以監聽瀏覽器發生了什麼事情的程式碼結構，接著她會允許您執行其他程式碼以回應這些事件。最明顯的事件就是 [click event](/zh-TW/docs/Web/Events/click) 了，當瀏覽器裡的某個東西被滑鼠點選時，這個事件就會被觸發。如果要測試一下這個事件，請您把底下的程式碼輸入到主控台內，接著用滑鼠點選目前的網頁：
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('Ouch! Stop poking me!');
-}
+document.querySelector("html").onclick = function () {
+  alert("Ouch! Stop poking me!");
+};
 ```
 
 有許多的方法可以把事件跟網頁元素結合在一起。在底下的程式碼中，我們先選擇了 HTML 元素，並把這個元素的 [`onclick`](/zh-TW/docs/Web/API/GlobalEventHandlers.onclick) 處理器設定為一個匿名函式，裡面裝著在滑鼠點選事件發生時，要執行的程式碼：
@@ -327,14 +327,14 @@ document.querySelector('html').onclick = function() {
 請特別注意到以下這段程式碼：
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector("html").onclick = function () {};
 ```
 
 產生的結果將會與下面這段程式碼相同
 
 ```js
-var myHTML = document.querySelector('html');
-myHTML.onclick = function() {};
+var myHTML = document.querySelector("html");
+myHTML.onclick = function () {};
 ```
 
 只是上面那段寫起來比較簡短罷了。
@@ -351,18 +351,18 @@ myHTML.onclick = function() {};
 2. 將圖片存放到 `images` 資料夾內。
 3. 編輯您的 `main.js` 檔案，並且將以下的 JavaScript 輸入到檔案內（如果您還有看見那段 hello world 的 JavaScript，請把她們給刪除）：
 
-    ```js
-    var myImage = document.querySelector('img');
+   ```js
+   var myImage = document.querySelector("img");
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute ('src','images/firefox2.png');
-        } else {
-          myImage.setAttribute ('src','images/firefox-icon.png');
-        }
-    }
-    ```
+   myImage.onclick = function () {
+     let mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
 4. 請將全部檔案儲存，並用瀏覽器開啟 `index.html`。現在請您點選圖片，她應該會切換成另外一張！
 
@@ -371,8 +371,8 @@ myHTML.onclick = function() {};
 1. 我們會去取得圖片中 `src` 屬性的數值
 2. 我們用一個條件判斷式，來檢查 `src` 的數值是否跟原始圖片的位址相同：
 
-    1. 如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
-    2. 如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
+   1. 如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
+   2. 如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
 
 ### 添加個客製化的歡迎訊息
 
@@ -380,49 +380,49 @@ myHTML.onclick = function() {};
 
 1. 編輯 `index.html` 檔案，並將下列程式碼置於 {{htmlelement("script")}} 元素之前：
 
-    ```html
-    <button>Change user</button>
-    ```
+   ```html
+   <button>Change user</button>
+   ```
 
 2. 編輯 `main.js` 檔案，並將下列程式碼一字不漏地置於檔案的最末端 — 這些程式碼將會取得新按鈕、標題的參考，並把它們存在變數裡：
 
-    ```js
-    var myButton = document.querySelector('button');
-    var myHeading = document.querySelector('h1');
-    ```
+   ```js
+   var myButton = document.querySelector("button");
+   var myHeading = document.querySelector("h1");
+   ```
 
 3. 現在，將以下的函式加進去以設定客製化的歡迎訊息 — 這些函式目前還不會產生作用，但我們等一下會用到她們：
 
-    ```js
-    function setUserName() {
-      let myName = prompt('Please enter your name.');
-      localStorage.setItem('name', myName);
-      myHeading.innerHTML = 'Mozilla is cool, ' + myName;
-    }
-    ```
+   ```js
+   function setUserName() {
+     let myName = prompt("Please enter your name.");
+     localStorage.setItem("name", myName);
+     myHeading.innerHTML = "Mozilla is cool, " + myName;
+   }
+   ```
 
-    這個函式包含了一個會產生一個對話視窗的 [`prompt()`](/zh-TW/docs/Web/API/Window.prompt) 函式，有點像 `alert()`，只是 `prompt()` 會要求使用者輸入一些資料，並在使用者點選`確認`之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 `localStorage` 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 `setItem()` 函式來建立並且把資料儲存到一個名稱為 `'name'` 的變數裡，再把包含者用者名字的 `myName` 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 `innerHTML` 特性：
+   這個函式包含了一個會產生一個對話視窗的 [`prompt()`](/zh-TW/docs/Web/API/Window.prompt) 函式，有點像 `alert()`，只是 `prompt()` 會要求使用者輸入一些資料，並在使用者點選`確認`之後，將內容儲存在一個變數裡面。接著，我們呼叫一個名稱為 `localStorage` 的 API，這個 API 可以讓使用者先將一些資料儲存在瀏覽器裡面，之後有需要的話再取出來使用。我們使用 localStorage 的 `setItem()` 函式來建立並且把資料儲存到一個名稱為 `'name'` 的變數裡，再把包含者用者名字的 `myName` 的值指定給她。最後，我們將一個字串跟使用者的名字指定給標題的 `innerHTML` 特性：
 
 4. 接著，加入這個 `if ... else` 區塊 — 因為她會在程式一開始被讀取的時候就被啟用，我們稱她為初始化程式碼：
 
-    ```js
-    if(!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("name")) {
+     setUserName();
+   } else {
+     let storedName = localStorage.getItem("name");
+     myHeading.innerHTML = "Mozilla is cool, " + storedName;
+   }
+   ```
 
-    這個區塊一開始使用了邏輯負運算子（邏輯非）來檢查 `name` 這個物件是否存在。如果沒有，那就執行 `setUserName()` 這個函式並且創造她。如果有了（例如：使用者已經在上一次造訪網頁時就設定過了），我們就使用 `getItem()` 函式來取得儲存的名字，並且將標題的 `innerHTML` 特性設定為一個字串加上使用者的名字，也就是我們在 `setUserName()` 函式裡做的事情。
+   這個區塊一開始使用了邏輯負運算子（邏輯非）來檢查 `name` 這個物件是否存在。如果沒有，那就執行 `setUserName()` 這個函式並且創造她。如果有了（例如：使用者已經在上一次造訪網頁時就設定過了），我們就使用 `getItem()` 函式來取得儲存的名字，並且將標題的 `innerHTML` 特性設定為一個字串加上使用者的名字，也就是我們在 `setUserName()` 函式裡做的事情。
 
 5. 最後，把以下的 `onclick` 事件處理器跟按鈕綁定，如此一來，每次點選按鈕時就會執行 `setUserName()`。這將允許使用者透過點選那個按鈕來重新設定一個新的名字：
 
-    ```js
-    myButton.onclick = function() {
-      setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = function () {
+     setUserName();
+   };
+   ```
 
 現在當您造訪這個網頁時，她會詢問您的名字，並且給您一個客製化過的歡迎訊息。在這之後，您也可以隨時透過點選那個按鈕來更改名字。順帶一提，因為這組客製化過的訊息是存在 localStorage 裡的，所以即使您將網頁關起來，她還是會保留著，所以當您下次開啟這個網頁時，這段客製化的訊息依然會出現！
 
