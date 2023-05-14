@@ -408,18 +408,18 @@ function addData(e) {
 }
 ```
 
-这很复杂; 打破它，我们：
+这很复杂；要打破它，我们：
 
-- [`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)在事件对象上运行以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。
-- 创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。请注意，我们不必明确包含一个`id`值 - 正如我们提前详细说明的那样，这是自动填充的。
-- 使用该方法打开对象存储的`readwrite`事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。`notes`[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)
-- 使用该[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)方法访问对象库，将结果保存在 `objectStore` 变量中。
-- 使用添加新记录到数据库[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。这创建了一个请求对象，与我们之前看到的方式相同。
-- 在生命周期的关键点添加一堆事件处理程序`request`以及`transaction`运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们`displayData()`再次运行该功能以更新页面上的注释显示。
+- 在事件对象上运行 {{domxref("Event.preventDefault()")}} 以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。
+- 创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。请注意，我们不必明确包含一个 `id` 值——正如我们提前详细说明的那样，这是自动填充的。
+- 使用 {{domxref("IDBDatabase.transaction()")}} 方法打开 `notes` 对象存储的 `readwrite` 事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。
+- 使用 {{domxref("IDBTransaction.objectStore()")}} 方法访问对象库，将结果保存在 `objectStore` 变量中。
+- 使用 {{domxref("IDBObjectStore.add()")}} 添加新记录到数据库。这创建了一个请求对象，与我们之前看到的方式相同。
+- 在生命周期的关键点为 `request` 以及 `transaction` 对象添加事件处理程序以运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们 `displayData()` 再次运行该功能以更新页面上的注释显示。
 
 ### 显示数据
 
-我们已经`displayData()`在代码中引用了两次，所以我们可能更好地定义它。将其添加到您的代码中，位于上一个函数定义之下：
+我们已经在代码中引用了 `displayData()` 两次，所以我们可能更好地定义它。将其添加到你的代码中，位于上一个函数定义之下：
 
 ```js
 // Define the displayData() function
