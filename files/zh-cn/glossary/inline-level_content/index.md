@@ -5,7 +5,7 @@ slug: Glossary/Inline-level_content
 
 在 CSS 中，参与行内布局的内容被称为**行级内容**（inline-level content）。默认情况下，大多数文本、替换元素以及生成的内容都是行级的。
 
-在行内布局中，通常将文本、[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)以及其它的行盒分段为一堆按顺序排列的盒子来进行布局。在每个线盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。
+在行内布局中，通常将文本、[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)以及其它的行级盒分段为一堆按顺序排列的盒子来进行布局。在每个行盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。
 
 ![行内布局](inline_layout.png)
 
@@ -22,7 +22,7 @@ slug: Glossary/Inline-level_content
 </p>
 ```
 
-在该示例中，{{HTMLElement("p")}} 元素包含一些文本。在该文本中有一个 {{HTMLElement("span")}} 元素和两个 {{HTMLElement("input")}} 元素，它们都是行级元素。如果，`<span>` 分布在两条线上，则会生成两个线盒。因为这些元素是行内的，该段落只会渲染为不间断文本流的单个段落：
+在该示例中，{{HTMLElement("p")}} 元素包含一些文本。在该文本中有一个 {{HTMLElement("span")}} 元素和两个 {{HTMLElement("input")}} 元素，它们都是行级元素。如果，`<span>` 分布在不同的行上，则会生成两个行盒。因为这些元素是行内的，该段落只会渲染为不间断文本流的单个段落：
 
 ```css hidden
 body {
