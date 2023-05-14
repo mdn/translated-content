@@ -221,8 +221,7 @@ class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading"></ul>
 ```
 
 `role` 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設`<ul>` 為清單，但是由於樣式表會破壞這個功能，因此需要使用`role` 屬性保留 "list" 清單這個意思。如果您想了解更多`role` 屬性的重要性，請參照[Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)。
@@ -232,10 +231,8 @@ class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加
 最後，我們清單中的 labels 與 inputs 對 JSX 而言將會有些特別的屬性：
 
 ```html
-<input id="todo-0" type="checkbox" defaultChecked={true} />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<input id="todo-0" type="checkbox" defaultChecked="{true}" />
+<label className="todo-label" htmlFor="todo-0"> Eat </label>
 ```
 
 `<input/ >`中的 `defaultChecked` 屬性會讓 React 預設勾選某項目。假如我們同一般寫 HTML 一樣使用 `checked`，React 會紀錄一些：handling events on the checkbox 警告到瀏覽器 console 中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。
