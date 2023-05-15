@@ -96,7 +96,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
   - : 以上权限可以缓存 86400 秒（1 天）。
 
 ```http
-HTTP/1.1 200 No Content
+HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
 Access-Control-Allow-Origin: https://foo.example
@@ -110,7 +110,7 @@ Connection: Keep-Alive
 
 ## 状态码
 
-{{HTTPStatus("200")}} OK 和 {{HTTPStatus("204")}} No Content 都是[允许的状态码](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但是部分浏览器错误地认为 `204 No Content` 对该资源足够合适，且不发送后续请求来获取它。
+{{HTTPStatus("200")}} OK 和 {{HTTPStatus("204")}} No Content 都是[允许的状态码](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但是部分浏览器错误地认为 `204 No Content` 也适用于该资源，且不发送后续请求来获取资源内容。
 
 ## 规范
 
