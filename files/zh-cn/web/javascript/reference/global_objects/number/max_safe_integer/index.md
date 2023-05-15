@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 {{JSRef}}
 
-**`Number.MAX_SAFE_INTEGER`** 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（`2^53 - 1`）。
+**`Number.MAX_SAFE_INTEGER`** 静态数据属性表示在 JavaScript 中最大的安全整数（2<sup>53</sup> – 1）。
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 
 这里安全存储的意思是指能够准确区分两个不相同的值，例如 `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` 将得到 true 的结果，而这在数学上是错误的，参考{{jsxref("Number.isSafeInteger()")}}获取更多信息。
 
-由于 `MAX_SAFE_INTEGER 是`{{jsxref("Number")}}的一个`静态属性，所以你不用自己动手为`{{jsxref("Number")}}对象创建`Number.MAX_SAFE_INTEGER`这一属性，就可以直接使用它。
+由于 `MAX_SAFE_INTEGER` 是 {{jsxref("Number")}} 的一个静态属性，所以你可以直接以 `Number.MAX_SAFE_INTEGER` 的形式使用这一属性，而无需作为数值属性来使用。
 
 ## 示例
 
