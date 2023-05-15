@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 {{JSRef}}
 
-**`Object`** 是 JavaScript 的一种[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures) 。它用于存储各种键值集合和更复杂的实体。可以通过 `{{jsxref("Object.prototype.Object", "Object()")}}` 构造函数或者使用[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的方式创建对象。
+**`Object`** 是 JavaScript 的一种[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)。它用于存储各种键值集合和更复杂的实体。可以通过 {{jsxref("Object.prototype.Object", "Object()")}} 构造函数或者使用[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)的方式创建对象。
 
 ## 描述
 
-在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)都是 {{jsxref("Object")}} 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些 [`null` 原型对象](#null_原型对象)，或者是从其他 `null` 原型对象继承而来的对象。
+在 JavaScript 中，几乎所有的[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)都是 `Object` 的实例；一个典型的对象从 `Object.prototype` 继承属性（包括方法），尽管这些属性可能被覆盖（或者说重写）。唯一不从 `Object.prototype` 继承的对象是那些 [`null` 原型对象](#null_原型对象)，或者是从其他 `null` 原型对象继承而来的对象。
 
-通过原型链，所有的对象都能观察到 `Object.prototype` 对象的改变，除非这些改变所涉及的属性和方法沿着原型链被进一步重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。为了使其更加安全，`Object.prototype` 是核心 JavaScript 语言中唯一具有[不可变原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#描述)的对象——`Object.prototype` 的原型始终为 `null` 且不可更改。
+通过原型链，**所有**对象都能观察到 `Object.prototype` 对象的改变，除非这些改变所涉及的属性和方法沿着原型链被进一步重写。尽管有潜在的危险，但这为覆盖或扩展对象的行为提供了一个非常强大的机制。为了使其更加安全，`Object.prototype` 是核心 JavaScript 语言中唯一具有[不可变原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf#描述)的对象——`Object.prototype` 的原型始终为 `null` 且不可更改。
 
 ### 对象原型属性
 
@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 const obj = {
   foo: 1,
   // 如果可能的话，你不应该在自己的对象上定义这样的方法，
-  // 但是如果你接受外部输入，可能无法防止这种情况发生接收的对象上
+  // 但是如果你从外部输入接收对象，可能无法防止这种情况的发生
   propertyIsEnumerable() {
     return false;
   },
@@ -41,7 +41,7 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true；预期的结�
 
 ### 从对象中删除属性
 
-一个对象本身没有任何方法可以（像 {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}} 一样）删除自己的属性。要删除一个对象的属性，必须使用 [delete 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)。
+一个对象本身没有任何方法可以（像 {{jsxref("Map.prototype.delete", "Map.prototype.delete()")}} 一样）删除自己的属性。要删除一个对象的属性，必须使用 [delete 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)。
 
 ### null 原型对象
 
@@ -52,7 +52,7 @@ const obj = Object.create(null);
 const obj2 = { __proto__: null };
 ```
 
-`null` 原型对象可能会有一些预期外的行为表现，因为它不会从 `Object.prototype` 继承任何对象方法。这在调试时尤其需要注意，因为常见的对象属性转换/检测实用方法可能会生成错误或丢失信息（特别是在使用了忽略错误的静默错误捕获机制的情况下）。
+`null` 原型对象可能会有一些预期外的行为表现，因为它不会从 `Object.prototype` 继承任何对象方法。这在调试时尤其需要注意，因为常见的对象属性转换/检测实用方法可能会产生错误或丢失信息（特别是在使用了忽略错误的静默错误捕获机制的情况下）。
 
 例如，[`Object.prototype.toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法的缺失通常会使得调试变得困难：
 
@@ -80,7 +80,7 @@ normalObj.constructor; // 显示 "Object() { [native code] }"
 nullProtoObj.constructor; // 显示 "undefined"
 ```
 
-我们可以通过为 `null` 原型对象分配属性的方式将原来的 `toString` 方法添加回去：
+我们可以通过为 null 原型对象分配属性的方式将 `toString` 方法添加回去：
 
 ```js
 nullProtoObj.toString = Object.prototype.toString; // 由于新对象缺少 `toString` 方法，因此需要将原始的通用 `toString` 方法添加回来。
@@ -299,7 +299,7 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **警告**：修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
+> **警告：** 修改任何内置构造函数的 `prototype` 属性被认为是一种不好的做法，可能会影响向前兼容性。
 
 你可以阅读更多关于原型的内容，参见[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
