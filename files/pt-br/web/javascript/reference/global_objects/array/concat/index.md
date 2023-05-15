@@ -24,7 +24,7 @@ concat(valor1, valor2, /*...,*/ valorN)
 - `valorN` {{optional_inline}}
   - : Arrays e/ou valores para concatenar em um novo array. Se todos
     os parâmetros `valorN` forem omitidos, `concat` retorna uma
-    [shallow copy](/en-US/docs/Glossary/Shallow_copy) de todos os arrays existentes do qual é chamado. Veja a descrição abaixo
+    [shallow copy](/pt-BR/docs/Glossary/Shallow_copy) de todos os arrays existentes do qual é chamado. Veja a descrição abaixo
     para mais detalhes.
 
 ### Valor de retorno
@@ -35,9 +35,9 @@ Uma nova instância {{jsxref("Array")}}.
 
 O método `concat` cria um novo array. O array irá primeiro ser preenchido pelos elementos no objeto no qual é chamado. Então, para cada argumento, seu valor será concatenado no array — para objetos normais ou primitivos, o próprio argumento se tornará um elemento do array final; para arrays ou objetos tipo array com a propriedade [`Symbol.isConcatSpreadable`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) definida como um valor verdadeiro, cada elemento do argumento será adicionado independentemente ao array final. O método `concat` não recursa em argumentos de array aninhados.
 
-O método `concat()` é um [copying method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). Ele não altera `this` ou quaquer um dos arrays fornecidos como argumentos, mas, em vez disso retorna uma [shallow copy](/en-US/docs/Glossary/Shallow_copy) que contém os mesmos elementos dos arrays originais.
+O método `concat()` é um [copying method](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). Ele não altera `this` ou quaquer um dos arrays fornecidos como argumentos, mas, em vez disso retorna uma [shallow copy](/pt-BR/docs/Glossary/Shallow_copy) que contém os mesmos elementos dos arrays originais.
 
-O método `concat()` preserva slots vazios se qualquer um dos arrays de origem for [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+O método `concat()` preserva slots vazios se qualquer um dos arrays de origem for [sparse](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
 O método `concat()` é [genérico](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos_gen%C3%A9ricos_de_array). O valor `this` é tratado da mesma forma como os outros argumentos (exceto que será convertido em um objeto primeiro), o que significa que objetos simples serão anexados diretamente ao array resultante, enquanto objetos do tipo array com verdadeiro `@@isConcatSpreadable` serão propagados no array resultante.
 
@@ -146,7 +146,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## Veja também
 
 - [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.unshift()")}}
