@@ -287,7 +287,6 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 在这个例子中，一个 {{HTMLElement("input")}} 元素的 {{domxref("HTMLInputElement.input_event", "input")}} 事件被监视，以便根据给定字段当前是否有值，来更新表单的 “提交” 按钮状态。
 
-
 #### JavaScript
 
 ```js
