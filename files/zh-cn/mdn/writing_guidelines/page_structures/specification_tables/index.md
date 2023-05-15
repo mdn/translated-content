@@ -46,5 +46,5 @@ spec-urls: https://w3c.github.io/aria/#aria-atomic
 相反，尽量提供有关标准化状况和可能的替代方案的信息。举例说明：
 
 - 这个方法已经不再由任何标准追踪。保留它是为了兼容的目的。请使用*这个其他方法*代替。
-- 这个方法最初属于 [DOM Level 2 Traversal and Range](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/) 规范，但器不属于目前的 DOM 规范。此特性不再有望成为标准。
+- 这个方法最初属于 [DOM Level 2 Traversal and Range](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/) 规范，但其不属于目前的 DOM 规范。此特性不再有望成为标准。
 - 这个事件处理器属于旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) 规范（已经被 [WebXR Device API](https://immersive-web.github.io/webxr/) 所取代）。它已不再有望成为标准。
