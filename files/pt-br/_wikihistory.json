@@ -161,6 +161,17 @@
     "modified": "2019-03-18T21:20:53.271Z",
     "contributors": ["Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2020-02-07T04:59:22.048Z",
+    "contributors": [
+      "SphinxKnight",
+      "rcsilvadev",
+      "klisostom",
+      "jorgeclesio",
+      "MarcoBrunoBR",
+      "jaimemaretoli"
+    ]
+  },
   "Glossary/Block/CSS": {
     "modified": "2019-03-18T21:20:51.476Z",
     "contributors": ["hlays"]
@@ -392,6 +403,10 @@
   "Glossary/IndexedDB": {
     "modified": "2019-03-23T22:30:14.736Z",
     "contributors": ["GoToLoop"]
+  },
+  "Glossary/Inline-level_content": {
+    "modified": "2019-03-23T23:13:50.417Z",
+    "contributors": ["rennan.martini"]
   },
   "Glossary/Internet": {
     "modified": "2019-03-18T21:45:04.739Z",
@@ -3953,7 +3968,7 @@
     "modified": "2020-10-15T21:23:35.850Z",
     "contributors": ["fscholz", "teoli", "srsaude"]
   },
-  "Web/API/URL/revokeObjectURL": {
+  "Web/API/URL/revokeObjectURL_static": {
     "modified": "2019-03-23T22:23:24.178Z",
     "contributors": ["emmanueldaher"]
   },
@@ -5840,17 +5855,6 @@
     "modified": "2019-03-23T23:39:13.093Z",
     "contributors": ["MatCAlv", "LeonardoPacheco", "FelipeFonseca"]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2020-02-07T04:59:22.048Z",
-    "contributors": [
-      "SphinxKnight",
-      "rcsilvadev",
-      "klisostom",
-      "jorgeclesio",
-      "MarcoBrunoBR",
-      "jaimemaretoli"
-    ]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-03-23T22:20:56.821Z",
     "contributors": ["mak213k"]
@@ -6559,10 +6563,6 @@
   "Web/HTML/Global_attributes/title": {
     "modified": "2019-03-23T22:08:26.903Z",
     "contributors": ["alisson-suzigan"]
-  },
-  "Web/HTML/Inline_elements": {
-    "modified": "2019-03-23T23:13:50.417Z",
-    "contributors": ["rennan.martini"]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-23T23:05:38.681Z",
@@ -7737,6 +7737,10 @@
     "modified": "2020-03-12T19:42:35.835Z",
     "contributors": ["Franck_Moreira", "odisseumau", "reuel.jonathan"]
   },
+  "Web/JavaScript/Guide/Typed_arrays": {
+    "modified": "2020-03-12T19:45:33.922Z",
+    "contributors": ["pauloantonelli", "andrevargas"]
+  },
   "Web/JavaScript/Guide/Using_promises": {
     "modified": "2020-04-19T11:41:18.110Z",
     "contributors": [
@@ -7960,10 +7964,6 @@
     "modified": "2020-03-12T19:47:33.508Z",
     "contributors": ["danemmanuel"]
   },
-  "Web/JavaScript/Reference/Errors/Not_a_codepoint": {
-    "modified": "2020-03-12T19:49:24.646Z",
-    "contributors": ["ViniciusMatias"]
-  },
   "Web/JavaScript/Reference/Errors/Not_a_function": {
     "modified": "2020-03-12T19:46:51.395Z",
     "contributors": [
@@ -7973,6 +7973,10 @@
       "lucianoac",
       "rubenfaria"
     ]
+  },
+  "Web/JavaScript/Reference/Errors/Not_a_valid_code_point": {
+    "modified": "2020-03-12T19:49:24.646Z",
+    "contributors": ["ViniciusMatias"]
   },
   "Web/JavaScript/Reference/Errors/Not_defined": {
     "modified": "2020-03-12T19:45:05.709Z",
@@ -10414,10 +10418,6 @@
       "trestini",
       "lucasmedeiros"
     ]
-  },
-  "Web/JavaScript/Typed_arrays": {
-    "modified": "2020-03-12T19:45:33.922Z",
-    "contributors": ["pauloantonelli", "andrevargas"]
   },
   "Web/Manifest": {
     "modified": "2019-06-02T15:51:05.029Z",

@@ -1,7 +1,7 @@
 ---
 title: Elementos inline
-slug: Web/HTML/Inline_elements
-original_slug: Web/HTML/Inline_elemente
+slug: Glossary/Inline-level_content
+original_slug: Web/HTML/Inline_elements
 ---
 
 ### Sumário
