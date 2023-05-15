@@ -7,7 +7,7 @@ l10n:
 
 **ベースライン**とは、ヨーロッパおよび西アジアの書体で使用される用語で、フォントの文字がその上に載る概念上の線を意味します。
 
-## 関連項目
+## 関連情報
 
 - [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>) (Wikipedia)
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment#types_of_alignment) (MDN)

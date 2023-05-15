@@ -9,6 +9,6 @@ l10n:
 
 {{GlossaryDisambiguation}}
 
-## 関連項目
+## 関連情報
 
 - [Baseline](https://en.wikipedia.org/wiki/Baseline) (Wikipedia)

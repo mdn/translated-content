@@ -27,7 +27,7 @@ l10n:
 
 ベースラインは W3C WebDX Community Group のコミュニティ活動であり、MDN のオープンソースのブラウザー互換性データに依存しています。質問、フィードバックがある場合、またはベースラインのステータスレポートがカバーする機能の更新や拡張に協力したい場合は、[web-platform-dx/feature-set](https://github.com/web-platform-dx/feature-set) にアクセスして参加することができます。
 
-## 関連項目
+## 関連情報
 
 - [クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)
 - [web-platform-dx/feature-set repository](https://github.com/web-platform-dx/feature-set)
