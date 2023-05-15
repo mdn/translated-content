@@ -123,7 +123,7 @@ Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%",120)}}
+{{EmbedLiveSample("","100%")}}
 
 ## Notes
 

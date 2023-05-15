@@ -5,7 +5,7 @@ slug: Web/API/Window/offline_event
 
 {{APIRef}}
 
-El evento **`offline`** se activa cuando el navegador ha pierdido acceso a la red y el valor de `navigator.onLine` cambia a `false`.
+El evento **`offline`** se activa cuando el navegador ha perdido acceso a la red y el valor de `navigator.onLine` cambia a `false`.
 
 ## Información General
 

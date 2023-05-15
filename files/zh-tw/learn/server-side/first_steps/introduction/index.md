@@ -125,7 +125,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 >
 > Google search results are optimized based on previous searches.
 >
-> 1. Go to [Google search](https:\\google.com).
+> 1. Go to [Google search](https://www.google.com/).
 > 2. Search for "football".
 > 3. Now try typing "favourite" in the search box and observe the autocomplete search predictions.
 >

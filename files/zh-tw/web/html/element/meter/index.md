@@ -39,7 +39,9 @@ This element includes the [global attributes](/zh-TW/docs/HTML/Global_attributes
 ### Simple example
 
 ```html
-<p>Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.</p>
+<p>
+  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
+</p>
 ```
 
 On Google Chrome, the resulting meter looks like this:
@@ -51,7 +53,9 @@ On Google Chrome, the resulting meter looks like this:
 Note that in this example the **min** attribute is omitted; this is allowed, as it will default to 0.
 
 ```html
-<p>He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.</p>
+<p>
+  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+</p>
 ```
 
 On Google Chrome, the resulting meter looks like this:

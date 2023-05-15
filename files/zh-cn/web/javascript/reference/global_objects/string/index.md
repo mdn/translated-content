@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ## 描述
 
-字符串对于保存以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度")}}，使用 [+ 和 += 字符串操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators)构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
+字符串对于保存以文本形式表示的数据很有用。一些最常用的字符串操作是检查他们的{{jsxref("String/length","长度")}}，使用 [+ 和 += 字符串操作符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#字符串运算符)构建和连接它们，使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 方法检查子字符串的存在或者位置，或使用 {{jsxref("String.prototype.substring()", "substring()")}} 方法提取子字符串。
 
 ### 创建字符串
 

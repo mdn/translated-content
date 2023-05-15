@@ -73,7 +73,7 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 ### 資料表示方式
 
-- 如何用 HTML 表示數值──參見[上標與下標](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript)及[顯示電腦程式碼](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
+- 如何用 HTML 表示數值——參見[上標與下標](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#superscript_and_subscript)及[顯示電腦程式碼](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
 - [如何使用資料屬性](/zh-TW/docs/Learn/HTML/Howto/Use_data_attributes)
 
 ### 進階文字語法

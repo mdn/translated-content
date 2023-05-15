@@ -18,13 +18,18 @@ selector1 selector2 { style properties }
 ## 範例
 
 ```css
-span { background-color: white; }
-div span { background-color: DodgerBlue; }
+span {
+  background-color: white;
+}
+div span {
+  background-color: DodgerBlue;
+}
 ```
 
 ```html
 <div>
-  <span>Span 1.
+  <span
+    >Span 1.
     <span>Span 2.</span>
   </span>
 </div>

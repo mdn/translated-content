@@ -62,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <!DOCTYPE html>
 <html lang="zh-tw">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script type="module" src="background-script.js"></script>
   </head>
 </html>

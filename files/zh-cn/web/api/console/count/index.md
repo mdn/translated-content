@@ -1,26 +1,40 @@
 ---
-title: Console.count()
+title: console：count() 方法
 slug: Web/API/console/count
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}
 
-输出 count() 被调用的次数。此函数接受一个可选参数 `label`。
+**`console.count()`** 方法会记录调用 `count()` 的次数。
 
 {{AvailableInWorkers}}
 
-如果有 `label`，此函数输出为那个指定的 `label` 和 count() 被调用的次数。
+## 语法
 
-如果 `label` 被忽略，此函数输出 count() 在其所处位置上被调用的次数。
+```js-nolint
+count()
+count(label)
+```
 
-例如，下面的代码：
+### 参数
+
+- `label` {{Optional_Inline}}
+  - : 一个字符串。如果给定，`count()` 会输出带有该标签的调用次数。如果未提供，调用 `count()` 的行为就像是带有“default”标签一样。
+
+### 返回值
+
+无 ({{jsxref("undefined")}})。
+
+## 示例
+
+例如，给定这样的代码：
 
 ```js
-var user = "";
+let user = "";
 
 function greet() {
   console.count();
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -31,25 +45,25 @@ greet();
 console.count();
 ```
 
-Console 的输出如下：
+控制台输出看起来像这样：
 
 ```
-"<no label>: 1"
-"<no label>: 2"
-"<no label>: 3"
-"<no label>: 1"
+"default: 1"
+"default: 2"
+"default: 3"
+"default: 4"
 ```
 
-注意最后一行的日志输出：在 11 行对 count() 的单独调用是被当作一个独立事件来处理的。
+标签显示为 `default`，因为没有提供明确的标签。
 
-如果把变量 `user` 当作 `label` 参数传给前面调用的 `count()`，把字符串 "alice" 传给后面调用的 `count()`：
+如果我们将 `user` 变量作为第一次调用 `count()` 函数时的 `label` 参数传入，并将字符串”alice“作为第二次调用的参数：
 
 ```js
-var user = "";
+let user = "";
 
 function greet() {
   console.count(user);
-  return "hi " + user;
+  return `hi ${user}`;
 }
 
 user = "bob";
@@ -60,7 +74,7 @@ greet();
 console.count("alice");
 ```
 
-可以看到输出如下：
+我们会看到如下的输出：
 
 ```
 "bob: 1"
@@ -69,18 +83,7 @@ console.count("alice");
 "alice: 3"
 ```
 
-现在可以基于不同的 `label` 值维护不同的数值。由于 11 行的 `label` 匹配了两次 `user` 的值，因此它不会被当作独立的事件。
-
-## 语法
-
-```
-console.count([label]);
-```
-
-## 参数
-
-- `label`
-  - : 字符串，如果有，count() 输出此给定的 `label` 及其被调用的次数。
+我们现在仅根据 `label` 的值维护单独的计数。
 
 ## 规范
 

@@ -43,9 +43,9 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 ### HTML
 
 - {{htmlelement("picture")}} 要素を実験的にサポートしました ([Firefox バグ 870022](https://bugzil.la/870022))。設定項目 `dom.image.picture.enabled` で制御されます (デフォルトは無効)。
-- {{HTMLElement("label")}} 要素、特に {{htmlattrxref("for", "label")}} 属性を持たない label 要素が `<input type=hidden>` フィールドに適用されないようになりました ([Firefox バグ 597650](https://bugzil.la/597650))。以前は仕様に準拠していない動作でした。
+- {{HTMLElement("label")}} 要素、特に [`for`](/ja/docs/Web/HTML/Element/label#for) 属性を持たない label 要素が `<input type=hidden>` フィールドに適用されないようになりました ([Firefox バグ 597650](https://bugzil.la/597650))。以前は仕様に準拠していない動作でした。
 - {{HTMLElement("a")}} 要素で、リンクの注釈 `noreferrer` を実装しました。`<a rel="noreferrer">` で、リンクをたどる際の HTTP リクエストにリファラの URL が含まれないようになります ([Firefox バグ 530396](https://bugzil.la/530396))。これはページ内でのリンクでのみ動作するものであり、コンテキストメニューによるリンクなど UI を通してクリックされたリンクでは動作しません。
-- Android において、{{HTMLElement("meta")}} の {{htmlattrxref("name", "meta")}} 属性で新たに 2 つの値をサポートしました。 `msapplication-TileImage` と `msapplication-TileColor` です ([Firefox バグ 1014712](https://bugzil.la/1014712))。 例:
+- Android において、{{HTMLElement("meta")}} の [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性で新たに 2 つの値をサポートしました。 `msapplication-TileImage` と `msapplication-TileColor` です ([Firefox バグ 1014712](https://bugzil.la/1014712))。 例:
 
   ```html
   <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />

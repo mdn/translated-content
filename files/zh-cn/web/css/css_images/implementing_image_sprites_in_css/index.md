@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 original_slug: Web/Guide/CSS/CSS_Image_Sprites
 ---
 
-{{cssRef}}
+{{CSSRef}}
 
 CSS **图像合并**（**Image sprites**）技术，亦作 CSS 贴图定位、图像精灵（sprite，意为精灵），被运用于众多使用大量小图标的网页应用之上。它可取图像的一部分来使用，使得使用一个图像文件替代多个小文件成为可能。相较于一个小图标一个图像文件，单独一张图片所需的 HTTP 请求更少，对内存和带宽更加友好。
 

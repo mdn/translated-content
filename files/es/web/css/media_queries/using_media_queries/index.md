@@ -1,709 +1,301 @@
 ---
-title: CSS media queries
+title: Uso de media queries
 slug: Web/CSS/Media_Queries/Using_media_queries
-original_slug: CSS/Media_queries
+l10n:
+  sourceCommit: 42c3c10873c07bd7b49f2d779cb5f286d5219364
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-Las **media queries** (en español "consultas de medios") son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del {{glossary("viewport")}} del navegador).
+Las **_Media queries_** le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del _{{glossary("viewport")}}_ del navegador.
+Las _media queries_ se utilizan para lo siguiente:
 
-Se utilizan para:
+- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
+- Para segmentar medios específicos para {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros [HTML](/es/docs/Web/HTML) con el atributo `media=`.
+- Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/Media_Queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
 
-- Aplicar estilos condicionales con las [reglas-at](/es/docs/Web/CSS/At-rule) {{cssxref("@media")}} e {{cssxref("@import")}} de [CSS](/es/docs/Web/CSS).
-- Indicar medios específicos en los elementos {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros elementos [HTML](/es/docs/Web/HTML).
-- [Testear y monitorizar los estados de los medios](/es/docs/Web/Guide/CSS/probando_media_queries) usando los métodos de javascript {{domxref("Window.matchMedia()")}} y {{domxref("MediaQueryList.addListener()")}}.
+> **Nota:** Los ejemplos en esta página usan `@media` de CSS con fines ilustrativos, pero la sintaxis básica sigue siendo la misma para todos los tipos de consultas de medios.
 
 ## Sintaxis
 
-Las _media queries_ consisten de un tipo de medio opcional y una o más expresiones de _características de medios_. Varias consultas se pueden combinar utilizando operadores lógicos. No distinguen entre mayúsculas y minúsculas.
+Una _media query_ se compone de un _tipo de medio_ opcional y cualquier cantidad de expresiones de _características de medios_, que pueden combinarse opcionalmente de varias maneras usando _operadores lógicos_.
+Las consultas de medios no distinguen entre mayúsculas y minúsculas.
 
-El resultado de la consulta es "verdadero" cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se está mostrando el documento y todas las expresiones en el _media query_ son "verdaderas". En este caso, se aplica los estilos correspondientes, siguiendo las reglas usuales de cascada.
+- Los [tipos de medios](/es/docs/Web/CSS/@media#media_types) definen la amplia categoría de dispositivos para los que se aplica la consulta de medios: `all`, `print`, `screen`.
 
-Las consultas sobre tipos de medios desconocidos son siempre falsas.
+  El tipo es opcional (se asume que es `all`) excepto cuando se usan los operadores lógicos `not` o `only`.
 
-```html
-<!-- CSS media query on a link element -->
-<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+- Las [características multimedia](/es/docs/Web/CSS/@media#media_features) describen una característica específica del {{glossary("user agent")}}, dispositivo de salida o entorno:
 
-<!-- CSS media query within a style sheet -->
-<style>
-@media (max-width: 600px) {
-  .facet_sidebar {
-    display: none;
-  }
-}
-</style>
-```
+  - {{cssxref("@media/any-hover", "any-hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+  - {{cssxref("@media/display-mode", "display-mode")}}
+  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - {{cssxref("@media/forced-colors", "forced-colors")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scripting", "scripting")}}
+  - {{cssxref("@media/update-frequency", "update")}}
+  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - {{cssxref("@media/width", "width")}}.
 
-### Media Types
+  Por ejemplo, la característica {{cssxref("@media/hover", "hover")}} permite que una consulta pruebe si el dispositivo admite el desplazamiento sobre los elementos.
+  Las expresiones de características de medios comprueban su presencia o valor y son completamente opcionales.
+  Cada expresión de característica de medios debe estar entre paréntesis.
 
-Los _Media Types_ (tipos de medios) describen la categoría general de un dispositivo. Excepto cuando se utilizan los operadores lógicos `not` o `only`, el tipo de medio es opcional y será interpretada como `all`.
+- Se pueden utilizar [operadores lógicos](/es/docs/Web/CSS/@media#logical_operators) para componer una _media query_ compleja: `not`, `and` y `only`.
+  También puede combinar múltiples _media queries_ en una sola regla separándolas con comas.
 
-- `all`
-  - : Apto para todos los dispositivos.
-- `print`
-  - : Destinado a material impreso y visualización de documentos en una pantalla en el modo de vista previa de impresión.
-- `screen`
-  - : Destinado principalmente a las pantallas.
-- `speech`
-  - : Destinado a sintetizadores de voz.
+Una _media query_ se calcula como `true` cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se muestra un documento y todas las expresiones de características de medios se computan como verdaderas.
+Las consultas que involucran tipos de medios desconocidos siempre son falsas.
 
-> **Advertencia:** CSS2.1 y [Media Queries 3](/es/docs/) definieron varios tipos de medios adicionales (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed` y `aural`), pero fueron desaprobados en [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) y no deberían ser usados. El tipo `aural` ha sido reemplazado por `speech`, que es similar.
+> **Nota:** Una hoja de estilo con una _media query_ adjunta a su etiqueta {{HTMLElement("link")}} [se descargará](https://scottjehl.github.io/CSS-Download-Tests/) incluso si la consulta devuelve `false`, la descarga se realizará pero la prioridad de la descarga será mucho menor.
+> No obstante, su contenido no se aplicará a menos que y hasta que el resultado de la consulta cambie a `true`.
+> Puede leer por qué sucede esto en el blog de Tomayac [Por qué el navegador descarga hojas de estilo con consultas de medios que no coinciden](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-consultas-eb61b91b85a2).
 
-### Operadores Lógicos
+## Destinos de tipos de medios
 
-Se pueden redactar queries utilizando operadores lógicos, incluyendo `not`, `and`, y `only`.
-
-Además se puede combinar múltiples queries en una lista separada por comas múltiples; si cualquiera de las queries en la lista es verdadera, la hoja de estilo asociada es aplicada. Esto es equivalente a una operación lógica "or".
-
-#### and
-
-El operador `and` es usado para colocar juntas múltiples funciones multimedia. Un query básico con el tipo de medio especificado como `all` puede lucir así:
-
-```css
-@media (min-width: 700px) { ... }
-```
-
-Si usted quiere aplicar ese query solo si la pantalla esta en formato horizontal, usted puede utilizar el operador `and` y colocar la siguiente cadena:
-
-```css
-@media (min-width: 700px) and (orientation: landscape) { ... }
-```
-
-La siguiente query solo retornara verdadero si la ventana tiene un ancho de 700px o mas y la pantalla esta en formato horizontal. Ahora si usted quiere aplicar esta opción solo si tipo de medio es TV, usted puede utilizar la siguiente cadena:
-
-```css
-@media tv and (min-width: 700px) and (orientation: landscape) { ... }
-```
-
-Esta query solo se aplica si el tipo de medio es TV, la ventana tiene 700px de ancho o mas y la pantalla esta en formato horizontal.
-
-#### lista separada por comas
-
-Las listas separadas por comas se comportan como el operador `or` cuando es usado en media queries. Cuando utilice una lista separada por comas y alguno de los queries retorna verdadero, el estilo o la hoja de estilos sera aplicada. Cada query en una lista separada por comas es tratado como una query individual y cualquier operador aplicado a un medio no afectara a los demás. Esto significa que cada query en una lista separada por comas puede tener como objetivo diferentes medios, tipos y estados.
-
-Si usted quiere aplicar una serie de estilos para un equipo con un ancho mínimo de 700px o si el dispositivo esta colocado en horizontal, usted puede escribir lo siguiente:
+Los tipos de medios describen la categoría general de un dispositivo determinado.
+Aunque los sitios web suelen diseñarse teniendo en cuenta las pantallas, es posible que desee crear estilos destinados a dispositivos especiales, como impresoras o lectores de pantalla basados en audio.
+Por ejemplo, este CSS es para las impresoras:
 
 ```css
-@media (min-width: 700px), handheld and (orientation: landscape) { ... }
-```
-
-Por lo tanto, si esta en una `screen` con una ventana de 800px de ancho, la declaración del medio retornara verdadero debido a la primera parte de la lista, si aplicamos esto a un dispositivo `@media all and (min-width: 700px)` podría retornar verdadero a pesar del hecho de que la pantalla falle la verificación tipo de medio del `handheld` en la segunda query. Por otra parte si estuviese en un `handheld` con un ancho de ventana de 500px, la primera parte de la lista fallaría pero la segunda parte retornara verdadero debido a la declaración de medio.
-
-#### not
-
-El operador `not` aplica a todo el query y retorna verdadero si es posible y sino retorna falso (como por ejemplo `monochrome` en un monitor a color o una ventana con un ancho mínimo de `min-width: 700px` en un monitor de 600px). Un `not` negara un query si es posible pero no a todos los query posibles si están ubicados en una lista separada por comas. El operador `not` no puede ser usado para negar un query individual, solo para un query completo. Por ejemplo, el `not` en el siguiente query es evaluado al final:
-
-```css
-@media not all and (monochrome) { ... }
-```
-
-Esto significa que el query es evaluado de la siguiente forma:
-
-```css
-@media not (all and (monochrome)) { ... }
-```
-
-... y no de esta forma:
-
-```css
-@media (not all) and (monochrome) { ... }
-```
-
-Otro Ejemplo:
-
-```css
-@media not screen and (color), print and (color)
-```
-
-Es evaluado de la siguiente forma:
-
-```css
-@media (not (screen and (color))), print and (color)
-```
-
-#### only
-
-El operador `only` previene que navegadores antiguos que no soportan queries con funciones apliquen los estilos asignados:
-
-```html
-<link rel="stylesheet" media="only screen and (color)" href="Ejemplo.css" />
-```
-
-### Pseudo-BNF
-
-```
-media_query_list: <media_query> [, <media_query> ]*
-media_query: [[only | not]? <media_type> [ and <expression> ]*]
-  | <expression> [ and <expression> ]*
-expression: ( <media_feature> [: <value>]? )
-media_type: all | aural | braille | handheld | print |
-  projection | screen | tty | tv | embossed
-media_feature: width | min-width | max-width
-  | height | min-height | max-height
-  | device-width | min-device-width | max-device-width
-  | device-height | min-device-height | max-device-height
-  | aspect-ratio | min-aspect-ratio | max-aspect-ratio
-  | device-aspect-ratio | min-device-aspect-ratio | max-device-aspect-ratio
-  | color | min-color | max-color
-  | color-index | min-color-index | max-color-index
-  | monochrome | min-monochrome | max-monochrome
-  | resolution | min-resolution | max-resolution
-  | scan | grid
-```
-
-Los queries son insensibles a las mayúsculas o minúsculas. Media queries que contengan tipos de medios desconocidos siempre retornaran falso.
-
-> **Nota:** Los paréntesis son requeridos alrededor de las expresiones, no utilizarlos es un error.
-
-## Funciones Multimedia
-
-La mayoría de las funciones multimedia pueden ser precedidas por "min-" o "max-" para expresar "greater or equal to" o "less than or equal to". Esto elimina la necesidad de usar los símbolos "<" y ">" los cuales podrían causar conflictos con HTML y XML. Si usted usa una función multimedia sin especificarle un valor, la expresión retornara verdadero si el valor es diferente de cero.
-
-> **Nota:** Si una función multimedia no aplica al dispositivo donde el navegador esta corriendo, la expresión que contiene esa función siempre retornara falso. Por Ejemplo, cambiar la relación de aspecto en un dispositivo aural siempre resultara falso.
-
-### color
-
-**Valor:** {{cssxref("&lt;color&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** si
-
-Indica el numero de bits por componente de color del dispositivo de salida. Si el dispositivo no soporta colores, este valor es 0.
-
-> **Nota:** Si el componente de color tiene diferente numero de bits por color, entonces el valor mas pequeño es utilizado. Por Ejemplo, si una pantalla utiliza 5 bits para azul y rojo y 6 bits para el verde, entonces se utilizan 5 bits por componente de color. Si el dispositivo utiliza índices de color se usara el mínimo valor de bits por color en la tabla.
-
-#### Ejemplos
-
-Para aplicar una hoja de estilo a todos los dispositivos que soporten colores:
-
-```css
-@media all and (color) { ... }
-```
-
-Para aplicar una hoja de estilo a dispositivos con al menos 4 bits por componente de color:
-
-```css
-@media all and (min-color: 4) { ... }
-```
-
-### color-index
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** sí
-
-Indica el numero de entradas en la tabla de colores para el dispositivo de salida.
-
-#### Ejemplos
-
-Para indicar que una hoja de estilo debe aplicarse a todos los dispositivos utilizando índices de color, usted puede hacer esto:
-
-```css
-@media all and (color-index) { ... }
-```
-
-Para aplicar una hoja de estilo a un dispositivo con un índice de al menos 256 colores:
-
-```html
-<link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" />
-```
-
-### aspect-ratio
-
-**Valor:** {{cssxref("&lt;ratio&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-Describe el aspecto de una zona a mostrar en el dispositivo de salida. Este valor consiste en enteros positivos separados por una barra ("/"). Esto representa la razón de aspecto de los pixeles horizontales (primer termino) a los pixeles verticales (segundo termino).
-
-#### Ejemplo
-
-Lo siguiente selecciona una hoja de estilo especial para ser aplicada donde la proporción del tamaño de la pantalla del dispositivo de salida es al menos la misma de ancho que de alto.
-
-```css
-@media screen and (min-aspect-ratio: 1/1) { ... }
-```
-
-Este selecciona el estilo cuando la proporción de aspecto sea 1:1 o superior. En otras palabras este estilo solo sera aplicado cuando el área de visualización sea cuadrada u horizontal.
-
-### device-aspect-ratio
-
-**Valor:** {{cssxref("&lt;ratio&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-Describe la proporción de aspecto del dispositivo de salida. Este valor consiste de dos enteros positivos separados por una barra ("/"). Este representa la proporción de aspecto de los pixeles horizontales (primer termino) a los pixeles verticales (segundo termino).
-
-#### Ejemplo
-
-El siguiente código selecciona una hoja de estilo especial para ser aplicada en pantallas panorámicas ("widescreen").
-
-```css
-@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }
-```
-
-Este selecciona el estilo cuando la proporción de aspecto sea 16:9 o 16:10.
-
-### device-height
-
-**Valor:** {{cssxref("&lt;length&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-Describe la altura del dispositivo de salida (ya sea la totalidad de la pantalla o página y no el área del documento a renderizar).
-
-### device-width
-
-**Valor:** {{cssxref("&lt;length&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-Describe la anchura del dispositivo de salida (ya sea la totalidad de la pantalla o página y no el área del documento a renderizar).
-
-#### Ejemplo
-
-Para aplicar una hoja de estilo a un documento cuando este sea mostrado en una pantalla de menos de 800px de ancho, usted puede usar esto:
-
-```html
-<link rel="stylesheet" media="screen and (max-device-width: 799px)" />
-```
-
-### grid
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** all
-
-**Acepta prefijos min/max:** no
-
-Determina cuando el dispositivo de salida es un dispositivo de cuadrícula o de mapa de bits. Si el dispositivo esta basado en una cuadrícula (como una terminal TTY o una pantalla de teléfono de solo texto), el valor sera 1, de lo contrario sera 0.
-
-#### Ejemplo
-
-Para aplicar una hoja de estilo a un dispositivo portátil con una pantalla de 15 caracteres o mas estrecha:
-
-```css
-@media handheld and (grid) and (max-width: 15em) { ... }
-```
-
-> **Nota:** La unidad "em" tiene un significado especial para los dispositivos de cuadrícula; ya que la anchura exacta de una "em" no puede ser determinada, se asume un "em" como el ancho de una celda en la cuadrícula y el alto de una celda en la cuadrícula.
-
-### height
-
-**Valor:** {{cssxref("&lt;length&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-La función `height` describe la altura de la superficie a renderizar en el dispositivo de salida (como la altura de una ventana o la bandeja de papel en una impresora).
-
-> **Nota:** Cuando el usuario cambia el tamaño de una ventana Firefox también cambia las hojas de estilo para utilizar la mas adecuada basándose en los valores de `width` y `height` del query.
-
-### monochrome
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** sí
-
-Indica el número de bits por pixel en un dispositivo monocromático (escala de grises). Si el dispositivo no es monocromático el valor sera 0.
-
-#### Ejemplos
-
-Para aplicar una hoja de estilo a todos los dispositivos monocromáticos:
-
-```css
-@media all and (monochrome) { ... }
-```
-
-Para aplicar una hoja de estilo a un dispositivo monocromático con al menos 8 bits por pixel:
-
-```css
-@media all and (min-monochrome: 8) { ... }
-```
-
-### orientation
-
-**Valor:** `landscape` | `portrait`
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Indica cuando el dispositivo esta en modo landscape (el ancho de la pantalla es mayor al alto) o modo portrait (el alto de la pantalla es mayor al ancho).
-
-#### Ejemplo
-
-Para aplicar una hoja de estilo solo en orientación vertical (portrait):
-
-```css
-@media all and (orientation: portrait) { ... }
-```
-
-### resolution
-
-**Valor:** {{cssxref("&lt;resolution&gt;")}}
-
-**Medio:** {{cssxref("Media/Bitmap", "bitmap")}}
-
-**Acepta prefijos min/max:** sí
-
-Indica la resolución (densidad de pixeles) del dispositivo de salida. La resolución puede ser especificada en puntos por pulgada (dpi) o en puntos por centímetros (dpcm).
-
-#### Ejemplo
-
-Para aplicar una hoja de estilo a dispositivos con al menos 300 dpi de resolución:
-
-```css
-@media print and (min-resolution: 300dpi) { ... }
-```
-
-Para reemplazar la vieja sintaxis (min-device-pixel-ratio: 2):
-
-```css
-@media screen and (min-resolution: 2dppx) { ... }
-```
-
-### scan
-
-**Valor:** `progressive` | `interlace`
-
-**Medio:** {{cssxref("Media/TV")}}
-
-**Acepta prefijos min/max:** no
-
-Describe el proceso de exploración de televisión de los dispositivos de salida.
-
-#### Ejemplo
-
-Para aplicar una hoja de estilo solo a televisores de exploración progresiva:
-
-```css
-@media tv and (scan: progressive) { ... }
-```
-
-### width
-
-**Valor:** {{cssxref("&lt;length&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
-
-**Acepta prefijos min/max:** sí
-
-La función `width` describe el ancho de la superficie a renderizar en el dispositivo de salida (como el ancho de una ventana de un documento o el ancho de la bandeja de papel en una impresora).
-
-> **Nota:** Cuando el usuario cambia el tamaño de una ventana Firefox también cambia las hojas de estilo para utilizar la mas adecuada basándose en los valores de `width` y `height` del query.
-
-#### Ejemplos
-
-Si usted quiere especificar una hoja de estilo para dispositivos portátiles o pantallas con un ancho de al menos 20em, usted puede usar esta query:
-
-```css
-@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }
-```
-
-Esta query especifica una hoja de estilo para ser aplicada a un medio impreso con un ancho mayor a 8.5 pulgadas:
-
-```html
-<link rel="stylesheet" media="print and (min-width: 8.5in)"
-    href="http://foo.com/mystyle.css" />
-```
-
-Esta query especifica una hoja de estilo para ser utilizada cuando la ventana tiene un ancho entre 500 y 800 pixeles:
-
-```css
-@media screen and (min-width: 500px) and (max-width: 800px) { ... }
-```
-
-## Específico de Mozilla
-
-Mozilla ofrece varias funciones especificas de Gecko. Algunas de estas pueden ser propuestas como funcines oficiales.
-
-### -moz-images-in-menus
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Si el dispositivo acepta que haya imágenes en menús, el valor es 1; de otro modo sera 0. Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(images-in-menus)") }}.
-
-### -moz-mac-graphite-theme
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Si el usuario ha configurado su dispositivo para usar la apariencia "Grafito" en Mac OS X, esto sera 1. Si el usuario esta usando la apariencia azul por defecto, o si no usa Mac OS X, esto sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(mac-graphite-theme)") }}.
-
-### -moz-maemo-classic
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Si el usuario esta usando Maemo con el tema original, esto sera 1; Si esta usando el nuevo tema Fremantle, sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(maemo-classic)") }}
-
-### -moz-device-pixel-ratio
-
-**Valor:** {{cssxref("&lt;number&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** sí
-
-Da el numero de pixeles del dispositivo por pixeles de CSS.
-
-**No use esta función.**
-
-En cambio use la función `resolution` con la unidad `dppx`.
-
-`-moz-device-pixel-ratio` puede ser usada para compatibilidad con Firefox 16 o anterior; y `-webkit-device-pixel-ratio` con navegadores basados en WebKit que no soporten `dppx`.
-
-Ejemplo:
-
-```css
-@media (-webkit-min-device-pixel-ratio: 2), /* Navegadores basados en WebKit */
-       (min--moz-device-pixel-ratio: 2),    /* Navegadores anteriores a Firefox 16 */
-       (min-resolution: 2dppx),             /* La forma estandar */
-       (min-resolution: 192dpi)             /* compatibilidad con dppx */
-```
-
-Vea este [articulo CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)sobre buenas practicas para compatibilidad en relación a `resolution` y `dppx`.
-
-> **Nota:** Nota: Esta funcion multimedia tambien esta implementada en Webkit como `-webkit-device-pixel-ratio`. Los prefijos minimos y maximos de esta funcion implementados por Gecko se llaman asi: `min--moz-device-pixel-ratio` y `max--moz-device-pixel-ratio`; y los mismos prefijos implementados por Webkit se llaman asi: `-webkit-min-device-pixel-ratio` y `-webkit-max-device-pixel-ratio`.
-
-### -moz-os-version
-
-**Valor:** `windows-xp` | `windows-vista` | `windows-win7` | `windows-win8`
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Indica que sistema operativo esta en uso actualmente. Actualmente solo es implementado en Windows. Sus posibles valores son:
-
-- `windows-xp`
-- `windows-vista`
-- `windows-win7`
-- `windows-win8`
-- `windows-win10`
-
-Esto se hace para permitir a los skins y a algunos códigos funcionen mejor con el sistema operativo en el que se ejecutan.
-
-### -moz-scrollbar-end-backward
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si la interfaz de usuario muestra una fecha inversa al final de la barra de desplazamiento, de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-end-backward)") }}.
-
-### -moz-scrollbar-end-forward
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si la interfaz de usuario muestra una fecha apuntando hacia la derecha al final de la barra de desplazamiento. de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-end-forward)") }}.
-
-### -moz-scrollbar-start-backward
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si la interfaz de usuario muestra una fecha inversa al principio de la barra de desplazamiento, de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-start-backward)") }}.
-
-### -moz-scrollbar-start-forward
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si la interfaz de usuario muestra una fecha apuntando hacia la derecha al principio de la barra de desplazamiento, de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-start-forward)") }}.
-
-### -moz-scrollbar-thumb-proportional
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si la interfaz de usuario muestra la miniatura de la barra de desplazamiento de forma proporcional (basado en el porcentaje del documento que es visible), de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(scrollbar-thumb-proportional)") }}.
-
-### -moz-touch-enabled
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si el dispositivo soporta eventos táctiles (una pantalla táctil), de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(touch-enabled)") }}.
-
-#### Ejemplo
-
-Usted puede usar esto para renderizar sus botones un poco mas grandes, Por Ejemplo, si el usuario se encuentra en una pantalla táctil, esto hará los botones mas fáciles de usar con los dedos.
-
-### -moz-windows-classic
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si el usuario utiliza un windows sin temas visuales (modo clasico); de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-classic)") }}.
-
-### -moz-windows-compositor
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si el usuario utiliza windows con el compositor de ventanas DWM; de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-compositor)") }}.
-
-### -moz-windows-default-theme
-
-**Valor:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-El valor sera 1 si el usuario actualmente esta utilizando algunos de los temas por defecto de Windows (Luna, Royale, Zune, or Aero), de lo contrario el valor sera 0.
-
-Esto corresponde a la [pseudoclase](/es/docs/Web/CSS/Pseudo-classes): {{ cssxref(":-moz-system-metric(windows-default-theme)") }}.
-
-### -moz-windows-theme
-
-**Valor:** `aero` | `luna-blue` | `luna-olive` | `luna-silver` | `royale` | `generic` | `zune`
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-Indica cual tema de Windows esta en uso actualmente. Solo disponible para Windows. Sus posibles valores son:
-
-- `aero`
-- `luna-blue`
-- `luna-olive`
-- `luna-silver`
-- `royale`
-- `generic`
-- `zune`
-
-Esto se hace para permitir a los skins y a algunos códigos funcionen mejor con el tema utilizado por el sistema operativo en el que se ejecutan.
-
-## Específico de WebKit
-
-### -webkit-transform-3d
-
-**Vakir:** {{cssxref("&lt;integer&gt;")}}
-
-**Medio:** {{cssxref("Media/Visual")}}
-
-**Acepta prefijos min/max:** no
-
-- [Especificación](https://compat.spec.whatwg.org/#css-media-queries-webkit-transform-3d)
-- [Documentación](/es/docs/Web/CSS/@media/-webkit-transform-3d)
-
-Si está soportado, el valor es 1, si no, el valor es 0.
-
-Ejemplo
-
-```css
-@media (-webkit-transform-3d) {
-  .foo {
-    transform-style: preserve-3d;
-  }
-}
-
-@media (-webkit-transform-3d: 1) {
-  .foo {
-    transform-style: preserve-3d;
-  }
+@media print {
+  /* … */
 }
 ```
 
-### -webkit-transform-2d
+También puedes considerar múltiples dispositivos.
+Por ejemplo, esta regla `@media` usa dos consultas de medios tanto para dispositivos de pantalla como de impresión:
 
-**Valor:** {{cssxref("&lt;integer&gt;")}}
+```css
+@media screen, print {
+  /* … */
+}
+```
 
-**Medio:** {{cssxref("Media/Visual")}}
+Consulte [tipos de medios](/es/docs/Web/CSS/@media#media_types) para obtener una lista de todos los tipos de medios.
+Debido a que describen dispositivos solo en términos muy amplios, solo algunos están disponibles; para atributos más específicos, use _características de medios_ en su lugar.
 
-**Acepta prefijos min/max:** no
+## Destinos de características de los medios
 
-- [Documentación](/es/docs/Web/CSS/@media/-webkit-transform-2d)
+Las características multimedia describen las características específicas de un {{glossary("user agent")}}, dispositivo de salida o entorno determinado.
+Por ejemplo, puede aplicar estilos específicos a monitores de pantalla ancha, computadoras que usan ratón o dispositivos que se usan en condiciones de poca luz.
+Este ejemplo aplica estilos cuando el mecanismo de entrada _principal_ del usuario (como un ratón) puede pasar sobre los elementos:
 
-Si está soportado, el valor es 1, si no, el valor es 0.
+```css
+@media (hover: hover) {
+  /* … */
+}
+```
 
-### -webkit-transition
+Muchas características de medios son _características de rango_, lo que significa que pueden tener el prefijo "min-" o "max-" para expresar restricciones de "condición mínima" o "condición máxima".
+Por ejemplo, este CSS aplicará estilos solo si el ancho del {{glossary("viewport")}} de su navegador es igual o menor que 1250px:
 
-**Value:** {{cssxref("&lt;integer&gt;")}}
+```css
+@media (max-width: 1250px) {
+  /* … */
+}
+```
 
-**Medio:** {{cssxref("Media/Visual")}}
+Si crea una consulta de características multimedia sin especificar un valor, los estilos anidados se utilizarán siempre que el valor de la función no sea cero (o `none`, en [Nivel 4](https://drafts.csswg.org/mediaqueries-4/)).
+Por ejemplo, este CSS se aplicará a cualquier dispositivo con una pantalla a color:
 
-**Acepta prefijos min/max:** no
+```css
+@media (color) {
+  /* … */
+}
+```
 
-- [Documentación](/es/docs/Web/CSS/@media/-webkit-transition)
+Si una característica no se aplica al dispositivo en el que se ejecuta el navegador, las expresiones relacionadas con esa característica multimedia siempre son falsas.
 
-Si está soportado, el valor es 1, si no, el valor es 0.
+Para obtener más ejemplos de [Características multimedia](/es/docs/Web/CSS/@media#media_features), consulte la página de referencia de cada característica específica.
 
-## Vea también
+## Creación de _media queries_ complejas
 
-- [Especificación CSS 3 media query](http://www.w3.org/TR/css3-mediaqueries/)
-- [Tipos de Medios](/es/docs/Web/CSS/@media)
-- [Usando media queries desde código](/es/docs/Web/Guide/CSS/probando_media_queries)
+En ocasiones, es posible que desee crear una _media query_ que dependa de varias condiciones. Aquí es donde entran los _operadores lógicos_: `not`, `and` y `only`.
+Además, puede combinar múltiples _media queries_ en una _lista separada por comas_; esto le permite aplicar los mismos estilos en diferentes situaciones.
+
+En el ejemplo anterior, ya vimos el operador `and` usado para agrupar un _tipo_ de medios con una _característica_ de medios.
+El operador `and` también puede combinar múltiples características de medios en una sola _media query_. Mientras tanto, el operador `not` niega una _media query_, básicamente invirtiendo su significado normal.
+El operador `only` evita que los navegadores antiguos apliquen los estilos.
+
+> **Nota:** En la mayoría de los casos, el tipo de medios `all` se usa de forma predeterminada cuando no se especifica ningún otro tipo.
+> Sin embargo, si usa los operadores `not` u `only`, debe especificar explícitamente un tipo de medio.
+
+### Combinación de múltiples tipos o características
+
+La palabra clave `and` combina una característica de medios con un tipo de medio _u_ otras características de medios.
+Este ejemplo combina dos características de medios para restringir los estilos a dispositivos orientados al paisaje con un ancho de al menos 30 ems:
+
+```css
+@media (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
+```
+
+Para limitar los estilos a los dispositivos con una pantalla, puede encadenar las características de medios al tipo de medios `screen`:
+
+```css
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
+```
+
+### Pruebas para múltiples consultas
+
+Puede usar una lista separada por comas para aplicar estilos cuando el dispositivo del usuario coincida con cualquiera de los diversos tipos de medios, características o estados.
+Por ejemplo, la siguiente regla aplicará sus estilos si el dispositivo del usuario tiene una altura mínima de 680px _o_ es un dispositivo de pantalla en modo vertical:
+
+```css
+@media (min-height: 680px), screen and (orientation: portrait) {
+  /* … */
+}
+```
+
+Tomando el ejemplo anterior, si el usuario tuviera una impresora con una altura de página de 800px, la declaración de medios devolvería verdadero porque se aplicaría la primera consulta.
+Del mismo modo, si el usuario estuviera en un teléfono inteligente en modo vertical con una altura de ventana gráfica de 480px, se aplicaría la segunda consulta y la declaración de medios seguiría siendo verdadera.
+
+### Invertir el significado de una consulta
+
+La palabra clave `not` invierte el significado de una _media query_ completa. Solo negará la _media query_ específica a la que se aplica.
+(Por lo tanto, no se aplicará a todas las _media queries_ en una lista de _media queries_ separadas por comas).
+La palabra clave `not` no se puede usar para negar una consulta de característica individual, solo una _media query_ completa.
+El `not` se evalúa en último lugar en la siguiente consulta:
+
+```css
+@media not all and (monochrome) {
+  /* … */
+}
+```
+
+Esto significa que la consulta anterior se evalúa así:
+
+```css
+@media not (all and (monochrome)) {
+  /* … */
+}
+```
+
+No se evaluaría así:
+
+```css example-bad
+@media (not all) and (monochrome) {
+  /* … */
+}
+```
+
+Otro ejemplo es la siguiente _media query_:
+
+```css
+@media not screen and (color), print and (color) {
+  /* … */
+}
+```
+
+Esto significa que la consulta anterior se evalúa así:
+
+```css
+@media (not (screen and (color))), print and (color) {
+  /* … */
+}
+```
+
+### Mejora de la compatibilidad con navegadores más antiguos
+
+La palabra clave `only` evita que los navegadores antiguos que no admiten _media queries_ con caracterñisticas de medios apliquen los estilos dados.
+_No tiene efecto en los navegadores modernos._
+
+```css
+@media only screen and (color) {
+  /* … */
+}
+```
+
+## Mejoras de sintaxis en el nivel 4
+
+La especificación Media Queries Level 4 incluye algunas mejoras de sintaxis para hacer que las _media queries_ utilicen características que tienen un tipo de "rango", por ejemplo, ancho o alto, menos detallado.
+El nivel 4 agrega un _contexto de rango_ para escribir tales consultas. Por ejemplo, usando la funcionalidad `max-` para el ancho, podríamos escribir lo siguiente:
+
+> **Nota:** La especificación Media Queries Level 4 tiene un soporte razonable en los navegadores modernos, pero algunas características multimedia no son compatibles.
+> Consulte la [tabla de compatibilidad del navegador de `@media`](/es/docs/Web/CSS/@media#browser_compatibility) para obtener más detalles.
+
+```css
+@media (max-width: 30em) {
+  /* … */
+}
+```
+
+En Media Queries Level 4 esto se puede escribir como:
+
+```css
+@media (width <= 30em) {
+  /* … */
+}
+```
+
+Usando `min-` y `max-` podríamos probar un ancho entre dos valores como este:
+
+```css
+@media (min-width: 30em) and (max-width: 50em) {
+  /* … */
+}
+```
+
+Esto se convertiría a la sintaxis de nivel 4 como:
+
+```css
+@media (30em <= width <= 50em) {
+  /* … */
+}
+```
+
+La _media queries_ de Nivel 4 también agregan formas de combinar _media queries_ usando álgebra booleana completa con **`and`**, **`not`**, y **`or`**.
+
+### Negar una característica con `not`
+
+El uso de `not()` alrededor de una característica de medios niega esa característica en la consulta. Por ejemplo, `not(hover)` coincidiría si el dispositivo no tuviera capacidad de desplazamiento:
+
+```css
+@media (not(hover)) {
+  /* … */
+}
+```
+
+### Prueba de múltiples características con `or`
+
+Puede usar `or` para probar una coincidencia entre más de una característica, resolviendo como `true` si alguna de las características es verdadera.
+Por ejemplo, las siguientes consultas de prueba para dispositivos que tienen una pantalla monocromática o capacidad de desplazamiento:
+
+```css
+@media (not (color)) or (hover) {
+  /* … */
+}
+```
+
+## Véase también
+
+- [@media](/es/docs/Web/CSS/@media)
+- [_Container queries_](/es/docs/Web/CSS/CSS_Container_Queries)
+- [Prueba de _media queries_ programáticamente](/es/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Animaciones CSS entre _media queries_](https://davidwalsh.name/animate-media-queries)
+- [Características multimedia extendidas de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions#media_features)
+- [Características multimedia extendidas de WebKit](/es/docs/Web/CSS/WebKit_Extensions#media_features)

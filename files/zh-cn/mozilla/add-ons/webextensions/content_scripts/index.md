@@ -224,7 +224,7 @@ function notify(message) {
 }
 ```
 
-这个示范代码从 Github 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 例子 修改而来。
+这个示范代码从 Github 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例修改而来。
 
 ### Connection-based messaging
 
@@ -293,8 +293,6 @@ browser.browserAction.onClicked.addListener(function() {
   portFromCS.postMessage({greeting: "they clicked the button!"});
 });
 ```
-
-[inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui) 例子使用了 connection-based messaging.
 
 ## 网页通信
 

@@ -9,7 +9,7 @@ slug: Web/CSS/flex-direction
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 {{HTMLAttrxRef("dir")}} 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
+なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
 
 ## 構文
 

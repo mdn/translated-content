@@ -19,7 +19,7 @@ slug: Web/API/HTMLImageElement
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLImageElement.alt")}}
-  - : 文字列で、 HTML の {{htmlattrxref("alt", "img")}} 属性を反映します。画像が読み込まれなかった場合に表示される代替フォールバックコンテンツを表します。
+  - : 文字列で、 HTML の [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性を反映します。画像が読み込まれなかった場合に表示される代替フォールバックコンテンツを表します。
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : 論理値で、ブラウザーが画像の取得を完了した場合、成功したかどうかに関わらず `true` を返します。つまり、読み込むべき画像を示す {{domxref("HTMLImageElement.src", "src")}} の値が存在しない場合も、この値は `true` となります。
 - {{domxref("HTMLImageElement.crossOrigin")}}
@@ -31,9 +31,9 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLImageElement.fetchPriority")}}
   - : オプションの文字列で、他の画像との比較において画像の取得を優先させるためのブラウザーへのヒントを表します。この値を指定する場合、許可されている値のいずれかでなければなりません。高い優先度で取得する場合は `high`、低い優先度で取得する場合は `low`、優先度を設定しない場合は `auto` （これが既定値）です。
 - {{domxref("HTMLImageElement.height")}}
-  - : HTML の {{htmlattrxref("height", "img")}} 属性を反映した整数値です。画像のレンダリング時の高さを CSS ピクセル数で表します。
+  - : HTML の [`height`](/ja/docs/Web/HTML/Element/img#height) 属性を反映した整数値です。画像のレンダリング時の高さを CSS ピクセル数で表します。
 - {{domxref("HTMLImageElement.isMap")}}
-  - : HTML の {{htmlattrxref("ismap", "img")}} 属性を反映した論理値で、画像がサーバーサイドイメージマップの一部であることを示します。これは、 `<img>` 要素とそれに対応する {{HTMLElement("map")}} を用いて指定され、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素を含むクライアントサイドイメージマップと異なるものです。画像は {{HTMLElement("a")}} 要素の中に含まれていなければなりません。詳細は `ismap` のページを参照してください。
+  - : HTML の [`ismap`](/ja/docs/Web/HTML/Element/img#ismap) 属性を反映した論理値で、画像がサーバーサイドイメージマップの一部であることを示します。これは、 `<img>` 要素とそれに対応する {{HTMLElement("map")}} を用いて指定され、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素を含むクライアントサイドイメージマップと異なるものです。画像は {{HTMLElement("a")}} 要素の中に含まれていなければなりません。詳細は `ismap` のページを参照してください。
 - {{domxref("HTMLImageElement.loading")}}
   - : 文書の読み込みを最適化するために使用するブラウザーへのヒントを提供する文字列で、画像をすぐに読み込むか (`eager`) それとも必要に応じて読み込むか (`lazy`) を決定します。
 - {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
@@ -41,17 +41,17 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
   - : 利用できる場合は、画像の本来の幅を CSS ピクセル数で表した整数値を返します。そうでない場合は `0` を示します。これは、画像が自然な大きさでレンダリングされた場合の幅です。
 - {{domxref("HTMLImageElement.referrerPolicy")}}
-  - : HTML の {{htmlattrxref("referrerpolicy", "img")}} 属性を反映した文字列です。画像を取得するためにどのリファラーを使用するかを決定する方法を{{Glossary("user agent", "ユーザーエージェント")}}に伝えます。この文字列が取り得る値の詳細については、この記事をお読みください。
+  - : HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Element/img#referrerpolicy) 属性を反映した文字列です。画像を取得するためにどのリファラーを使用するかを決定する方法を{{Glossary("user agent", "ユーザーエージェント")}}に伝えます。この文字列が取り得る値の詳細については、この記事をお読みください。
 - {{domxref("HTMLImageElement.sizes")}}
-  - : HTML の {{htmlattrxref("sizes", "img")}} 属性を反映した文字列です。この文字列は、画像の条件付きサイズのリストをカンマ区切りで指定します。すなわち、与えられたビューポートの大きさに対して、特定の画像サイズが使用されることになります。この文字列の形式の詳細については、 {{domxref("HTMLImageElement.sizes", "sizes")}} ページにあるドキュメントを参照してください。
+  - : HTML の [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を反映した文字列です。この文字列は、画像の条件付きサイズのリストをカンマ区切りで指定します。すなわち、与えられたビューポートの大きさに対して、特定の画像サイズが使用されることになります。この文字列の形式の詳細については、 {{domxref("HTMLImageElement.sizes", "sizes")}} ページにあるドキュメントを参照してください。
 - {{domxref("HTMLImageElement.src")}}
-  - : HTML の {{htmlattrxref("src", "img")}} 属性を反映した文字列です。これには、ベース URI を含む画像の完全な URL を指定します。 `src` 属性の URL を変更することで、要素に別の画像を読み込むことができます。
+  - : HTML の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性を反映した文字列です。これには、ベース URI を含む画像の完全な URL を指定します。 `src` 属性の URL を変更することで、要素に別の画像を読み込むことができます。
 - {{domxref("HTMLImageElement.srcset")}}
-  - : HTML の {{htmlattrxref("srcset", "img")}} 属性を反映した文字列です。これは、画像候補のリストをカンマ (`',', U+002C COMMA`) 区切りで指定します。それぞれの候補画像は、 URL の後にスペースが続き、その後に画像のサイズを示す特別な形式の文字列が続きます。サイズは、幅またはサイズの倍数で指定することができます。サイズの部分文字列の形式については、 {{domxref("HTMLImageElement.srcset", "srcset")}} ページをお読みください。
+  - : HTML の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性を反映した文字列です。これは、画像候補のリストをカンマ (`',', U+002C COMMA`) 区切りで指定します。それぞれの候補画像は、 URL の後にスペースが続き、その後に画像のサイズを示す特別な形式の文字列が続きます。サイズは、幅またはサイズの倍数で指定することができます。サイズの部分文字列の形式については、 {{domxref("HTMLImageElement.srcset", "srcset")}} ページをお読みください。
 - {{domxref("HTMLImageElement.useMap")}}
-  - : HTML の {{htmlattrxref("usemap", "img")}} 属性を反映した文字列です。これは、使用するイメージマップを記述した {{HTMLElement("map")}} 要素のページローカルな URL を含みます。ページローカルの URL は、ポンド (ハッシュ) 記号 (`#`) の後に `<map>` 要素の ID を続けたもの、例えば `#my-map-element` のようになります。 `<map>` には、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素が順番に入ります。
+  - : HTML の [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性を反映した文字列です。これは、使用するイメージマップを記述した {{HTMLElement("map")}} 要素のページローカルな URL を含みます。ページローカルの URL は、ポンド (ハッシュ) 記号 (`#`) の後に `<map>` 要素の ID を続けたもの、例えば `#my-map-element` のようになります。 `<map>` には、画像内のクリック可能な領域を示す {{HTMLElement("area")}} 要素が順番に入ります。
 - {{domxref("HTMLImageElement.width")}}
-  - : HTML の {{htmlattrxref("width", "img")}} 属性を反映した整数値で、画像のレンダリング幅を CSS ピクセルで表します。
+  - : HTML の [`width`](/ja/docs/Web/HTML/Element/img#width) 属性を反映した整数値で、画像のレンダリング幅を CSS ピクセルで表します。
 - {{domxref("HTMLImageElement.x")}} {{ReadOnlyInline}}
   - : HTMLElement("html")}} 要素を含むブロックの原点に対する、画像の CSS レイアウトボックスの左境界線の水平オフセットを示す整数です。
 - {{domxref("HTMLImageElement.y")}} {{readonlyInline}}
@@ -81,9 +81,9 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 
 ## エラー
 
-画像の読み込みやレンダリング中にエラーが発生し、 {{htmlattrxref("onerror")}} イベントハンドラーが {{domxref("Element/error_event", "error")}} イベントを処理するために設定されていた場合、そのイベントハンドラーが呼ばれることになります。これは、以下のような様々な状況で起こり得ます。
+画像の読み込みやレンダリング中にエラーが発生し、`onerror` イベントハンドラーが {{domxref("Element/error_event", "error")}} イベントを処理するために設定されていた場合、そのイベントハンドラーが呼ばれることになります。これは、以下のような様々な状況で起こり得ます。
 
-- {{htmlattrxref("src", "img")}} 属性がないか `null` である。
+- [`src`](/ja/docs/Web/HTML/Element/img#src) 属性がないか `null` である。
 - 指定された `src` の URL が、ユーザーが現在いるページの URL と同じである。
 - 指定された画像が何らかの原因で破損しており、読み込むことができない。
 - 指定された画像のメタデータが寸法を取得できない状態に破損しており、 `<img>` 要素の属性に寸法が指定されていない。

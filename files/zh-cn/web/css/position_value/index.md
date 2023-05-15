@@ -3,7 +3,7 @@ title: <position>
 slug: Web/CSS/position_value
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概要
 

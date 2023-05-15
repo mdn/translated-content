@@ -13,15 +13,15 @@ Netscape のブラウザーの子孫である Firefox は、バージョン 4 �
 
 すべての要素が持つ [グローバル属性](/ja/docs/Web/HTML/Global_attributes) と、以下の属性に対応していました。
 
-- {{ htmlattrdef("type") }}
+- `type`
   - : この属性は、スペーサーの種類を設定します。 `horizontal`, `vertical`, `block` の内のいずれかのキーワードを指定可能です。
-- {{ htmlattrdef("size") }}
+- `size`
   - : この属性は、 `type` 属性の値が `horizontal` または `vertical` である場合の、スペーサーのピクセルサイズを定義するために使用します。
-- {{ htmlattrdef("width") }}
+- `width`
   - : この属性は、 `type` 属性の値が `block` である場合、スペーサーのピクセル幅を設定します。
-- {{ htmlattrdef("height") }}
+- `height`
   - : この属性は、 `type` 属性の値が `block` である場合、スペーサーのピクセル高を設定します。
-- {{ htmlattrdef("align") }}
+- `align`
   - : この属性は、スペーサーの配置を設定します。`left`、 `right`、 `center` の内のいずれかのキーワードを指定可能です。
 
 ## 例

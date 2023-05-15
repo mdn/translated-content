@@ -76,7 +76,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 ### pattern
 
-如果指定了 `pattern` 属性，则该 input 的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 将必须要满足其所指定的正则表达式，以通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个合法的 {{jsxref("RegExp")}} 类型 JavaScript 正则表达式，其具体使用方法记载到了我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中。在编译正则表达式时，使用了 `'u'` 标志，故所指定模式将视为 Unicode 码点，而非 ASCII。在模式文本中，不可以指定正斜杠符号。
+如果指定了 `pattern` 属性，则该 input 的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 将必须要满足其所指定的正则表达式，以通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个合法的 {{jsxref("RegExp")}} 类型 JavaScript 正则表达式，其具体使用方法记载到了我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中。在编译正则表达式时，使用了 `'u'` 标志，故所指定模式将视为 Unicode 码点，而非 ASCII。在模式文本中，不可以指定正斜杠符号。
 
 具体介绍和示例请参阅[模式验证](#模式验证)部分。
 
@@ -501,7 +501,6 @@ input:valid + span::after {
 ## 参见
 
 - [HTML 表单指南](/zh-CN/docs/Learn/Forms)
-- [表单无障碍性](/zh-CN/docs/Web/Accessibility/ARIA/forms)
 - 相关的 {{HTMLElement("input")}} 元素
 
   - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)

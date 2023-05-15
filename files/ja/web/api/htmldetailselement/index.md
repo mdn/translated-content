@@ -16,7 +16,7 @@ The **`HTMLDetailsElement`** interface provides special properties (beyond the r
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : Is a {{domxref("boolean")}} reflecting the {{htmlattrxref("open", "details")}} HTML attribute, indicating whether or not the element’s contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
+  - : Is a {{domxref("boolean")}} reflecting the [`open`](/ja/docs/Web/HTML/Element/details#open) HTML attribute, indicating whether or not the element’s contents (not counting the {{HTMLElement("summary")}}) is to be shown to the user.
 
 ## Methods
 

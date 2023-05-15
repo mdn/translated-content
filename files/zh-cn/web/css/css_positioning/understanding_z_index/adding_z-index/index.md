@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
 
+{{CSSRef}}
+
 « [CSS](/zh-CN/CSS) «[理解 z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 使用 {{ cssxref("z-index") }}

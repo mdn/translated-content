@@ -21,7 +21,7 @@ Place le nœud spécifié et tout son sous-arbre dans une forme «&nbsp;normale&
 ```js
 var conteneur = document.createElement("div");
 conteneur.appendChild( document.createTextNode("Partie 1 ") );
-conteneu.appendChild( document.createTextNode("Partie 2 ") );
+conteneur.appendChild( document.createTextNode("Partie 2 ") );
 
 // Ici, conteneur.childNodes.length === 2
 // conteneur.childNodes[0].textContent === "Partie 1 "

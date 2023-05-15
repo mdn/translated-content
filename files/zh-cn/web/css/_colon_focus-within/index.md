@@ -5,22 +5,21 @@ slug: Web/CSS/:focus-within
 
 {{CSSRef}}
 
-**`:focus-within`** 是一个[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) ，表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配 {{CSSxRef(":focus")}} 伪类。（[shadow DOM 树](/zh-CN/docs/Web/Web_Components/Shadow_DOM)中的后代也包括在内）
+**`:focus-within`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示当元素或其任意后代元素被聚焦时，将匹配该元素。换言之，它表示 {{CSSxRef(":focus")}} 伪类匹配到该元素自身或它的后代时，该伪类生效。（这也包括 [shadow 树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)中的后代元素。）
 
-```css
-/* 当 <div> 的某个后代获得焦点时，匹配 <div> */
-div:focus-within {
-  background: cyan;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-within.html", "tabbed-shorter")}}
 
-该选择器非常实用。举个通俗的例子：表单中的某个 {{htmlElement("input")}} 字段获得焦点时，整个表单的 {{HTMLElement("form")}} 元素都可被高亮。
+这个选择器非常有用，举个常见的例子，当用户聚焦于一个 {{htmlElement("input")}} 字段时，可以用它来突出显示整个 {{HTMLElement("form")}} 容器。
 
 ## 语法
 
-{{csssyntax}}
+```css
+:focus-within {
+  /* ... */
+}
+```
 
-## Example
+## 示例
 
 此例子中，当表单某个文本输入框获得焦点后，表单会被设置颜色样式。
 
@@ -30,10 +29,10 @@ div:focus-within {
 <p>试试在这个表单中输入点什么。</p>
 
 <form>
-  <label for="given_name">Given Name:</label>
+  <label for="given_name">给定名称：</label>
   <input id="given_name" type="text">
   <br>
-  <label for="family_name">Family Name:</label>
+  <label for="family_name">家庭名称：</label>
   <input id="family_name" type="text">
 </form>
 ```
@@ -59,7 +58,7 @@ input {
 
 ### 结果
 
-{{EmbedLiveSample("Example", 500, 150)}}
+{{EmbedLiveSample("示例", 500, 150)}}
 
 ## 规范
 
@@ -72,4 +71,5 @@ input {
 ## 参见
 
 - {{CSSxRef(":focus")}}
-- {{CSSxRef(":focus-visible")}} {{Experimental_Inline}}
+- {{CSSxRef(":focus-visible")}}
+- [使用 focus-within 选择器吸引用户的注意力](https://dev.to/vtrpldn/grab-your-user-s-attention-with-the-focus-within-css-selector-4d4)

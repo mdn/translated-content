@@ -39,7 +39,7 @@ O **`<tfoot>`** é um **elemento HTML** que define um conjunto de linhas as quai
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, ou elementos
-        {{HTMLElement("tr")}}. Note que isso é requerido no HTML5.<br />{{HTMLVersionInline("4")}}
+        {{HTMLElement("tr")}}. Note que isso é requerido no HTML5.<br />
         O elemento {{HTMLElement("tfoot")}} não pode ser colocado depois
         de qualquer {{HTMLElement("tbody")}} e o elemento
         {{HTMLElement("tr")}}. Note que isso contradiz diretamento com as
@@ -61,7 +61,7 @@ O **`<tfoot>`** é um **elemento HTML** que define um conjunto de linhas as quai
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
+- {{htmlattrdef("align")}} {{Deprecated_inline}}
 
   - : Estes atributos especificam como será o alinhamento horizontal de cada conteúdo da célula. Os possíveis valores são:
 
@@ -93,19 +93,19 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:** Não use este atributo, como não é mais padrão ele não foi implementado em algumas versões do Microsoft Internet Explorer: o elemento {{HTMLElement("tfoot")}} pode ser estilizando com [CSS](/pt-BR/docs/Web/CSS). Para conseguir simular efeitos do atributo **bgcolor** use a propriedade {{cssxref("background-color")}} do [CSS](/pt-BR/docs/Web/CSS) , nos elementos {{HTMLElement("td")}} ou {{HTMLElement("th")}}.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
+- {{htmlattrdef("char")}} {{Deprecated_inline}}
 
   - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se {{htmlattrxref("align", "tfoot")}} não é definido para `char`, este atributo é ignorado
 
     > **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}}
 
   - : O atributo é usado para indicar um número de caracteres para compensar os dados da coluna dos caracteres de alinhamento especificados pelo atributo **char**.
 
     > **Nota:** Não use esse atributo o mesmo está obsoleto (e não é mais suportado) na última versão padrão.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline}} no {{HTMLVersionInline("4")}}, no {{HTMLVersionInline("5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}}
 
   - : O atributo específico para o alinhamento do texto dentro de cada linha da célula do cabeçalho de uma tabela. Possíveis valores para esse atributo são:
 

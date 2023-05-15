@@ -1,5 +1,5 @@
 ---
-title: 作者清单面页、分类清单页面、与自我挑战
+title: 作者清单面页、分类清单页面挑战
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 
@@ -9,7 +9,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 
 作者列表控制器函数，需要获取所有作者实例的列表，然后将这些实例传递给模板进行渲染。
 
-打开**/controllers/authorController.js**。在文件顶部附近，找到导出的`author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
+打开 **/controllers/authorController.js**。在文件顶部附近，找到导出的 `author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
 
 ```js
 // Display list of all Authors.

@@ -160,4 +160,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
-- [Web component](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)

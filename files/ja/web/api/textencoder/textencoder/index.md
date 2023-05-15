@@ -1,6 +1,8 @@
 ---
-title: TextEncoder()
+title: "TextEncoder: TextEncoder() コンストラクター"
 slug: Web/API/TextEncoder/TextEncoder
+l10n:
+  sourceCommit: d414c502f3cc1c08d2fb043e98cda4a65621ff08
 ---
 
 {{APIRef("Encoding API")}}
@@ -9,7 +11,7 @@ slug: Web/API/TextEncoder/TextEncoder
 
 ## 構文
 
-```js
+```js-nolint
 new TextEncoder()
 ```
 

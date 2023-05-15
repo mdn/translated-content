@@ -1,6 +1,6 @@
 ---
 title: 'SyntaxError: "use strict" no permitida en función con parámetros complejos'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 original_slug: Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos
 ---
 

@@ -78,9 +78,11 @@ const header = (
 > **備註：** 前面程式碼中的括號`(`、`)`不是 JSX 獨有的，這對你的應用程式沒有任何影響。它們會向你（和你的電腦）發出訊號，表示括號其中的多行程式碼是同個表達式的一部分。你也可以像這樣編寫表達式：
 >
 > ```js
-> const header = <header>
+> const header = (
+>   <header>
 >     <h1>Mozilla Developer Network</h1>
-> </header>
+>   </header>
+> );
 > ```
 >
 > 然而，這樣寫看起來有點不對勁，因為這段表達式[`<header>`](/zh-TW/docs/Web/HTML/Element/header)的開始標籤沒有縮排到與其對應結束標籤相同的位置。
@@ -88,7 +90,9 @@ const header = (
 當然，若沒有其他的幫助，你的瀏覽器是無法直接讀取解析 JSX 的，當編譯完成（藉由使用像[Babel](https://babeljs.io/)或[Parcel](https://parceljs.org/)之類的工具），我們的 header 表達式看起來像這樣：
 
 ```js
-const header = React.createElement("header", null,
+const header = React.createElement(
+  "header",
+  null,
   React.createElement("h1", null, "Mozilla Developer Network")
 );
 ```
@@ -188,9 +192,9 @@ In React, a **component** is a reusable module that renders a part of our app. T
 Let's open `src/App.js`, since our browser is prompting us to edit it. This file contains our first component, `App`, and a few other lines of code:
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -204,8 +208,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -222,9 +225,9 @@ The `App.js` file consists of three main parts: some [`import`](/zh-TW/docs/Web/
 The `import` statements at the top of the file allow `App.js` to use code that has been defined elsewhere. Let's look at these statements more closely.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 The first statement imports the React library itself. Because React turns the JSX we write into `React.createElement()`, all React components must import the `React` module. If you skip this step, your application will produce an error.
@@ -254,8 +257,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -278,9 +280,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -296,17 +296,17 @@ function App() {
 Let’s open `src/index.js`, because that's where the `App` component is being used. This file is the entry point for our app, and it initially looks like this:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -331,12 +331,12 @@ All of this tells React that we want to render our React application with the `A
 Your final `index.js` file should look like this:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables and props
@@ -362,9 +362,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, World!
-        </p>
+        <p>Hello, World!</p>
       </header>
     </div>
   );
@@ -380,9 +378,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, {subject}!
-        </p>
+        <p>Hello, {subject}!</p>
       </header>
     </div>
   );
@@ -402,7 +398,7 @@ Let’s open `index.js` and give our `<App/>` call its first prop.
 Add a prop of `subject` to the `<App/>` component call, with a value of `Clarice`. When you are done, your code should look something like this:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 Back in `App.js`, let's revisit the App function itself, which reads like this (with the `return` statement shortened for brevity):

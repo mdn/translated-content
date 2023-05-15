@@ -63,4 +63,4 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS Guide: Defining Getters and Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)

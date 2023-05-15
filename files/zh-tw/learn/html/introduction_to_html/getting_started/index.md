@@ -52,8 +52,8 @@ My cat is very grumpy
 
 元素中主要的內容有:
 
-1. **起始標籤**（opening tag）：它包含了元素的名字（在這裡是 p），夾在一對打開和關閉尖括號之間。它指明元素從何開始生效──在上例中則代表段落的開始。
-2. **結束標籤**（closing tag）：結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線（forward slash）。它表示元素結束的地方──在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
+1. **起始標籤**（opening tag）：它包含了元素的名字（在這裡是 p），夾在一對打開和關閉尖括號之間。它指明元素從何開始生效——在上例中則代表段落的開始。
+2. **結束標籤**（closing tag）：結束標籤和起始標籤長得差不多，只不過它在名字前面還多加了一條斜線（forward slash）。它表示元素結束的地方——在上例中表示該段落的結束。忘記加上結束標籤是初學者常犯的錯誤，這將導致奇怪的結果。
 3. **內容**（content）：元素的內容。在上例中就是一段文字。
 4. **元素**（element）：以上三者加起來就是元素。
 
@@ -65,11 +65,12 @@ My cat is very grumpy
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
   This is my text.
@@ -83,7 +84,7 @@ My cat is very grumpy
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -104,10 +105,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -115,38 +116,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<em>This is my text.</em>';
+var htmlSolution = "<em>This is my text.</em>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -158,8 +159,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -170,10 +174,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -187,7 +191,7 @@ textarea.onkeyup = function(){
 
 ### 巢狀元素（Nesting element）
 
-你可以把元素放進另一個元素裡面──這叫做**巢狀元素**（nesting element）。比如說，我們想要強調我們的貓咪**非常**兇，我們可以用{{htmlelement("strong")}}元素來包住「very」這個字，這樣就可以標註我們想要強調的字:
+你可以把元素放進另一個元素裡面——這叫做**巢狀元素**（nesting element）。比如說，我們想要強調我們的貓咪**非常**兇，我們可以用 {{htmlelement("strong")}} 元素來包住「very」這個字，這樣就可以標註我們想要強調的字:
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -203,9 +207,9 @@ textarea.onkeyup = function(){
 
 ### 區塊級元素 vs. 行內元素（Block versus inline element）
 
-在 HTML 中有兩種你應該要知道的重要元素類別──區塊級元素（block-level element）和行內元素（inline element）。
+在 HTML 中有兩種你應該要知道的重要元素類別——區塊級元素（block-level element）和行內元素（inline element）。
 
-- 區塊級元素在頁面中組成一個可見區塊──它在頁面中單獨佔據一行，在它前後的內容都將以一個換行分隔。區塊級元素傾向於作為頁面上的結構化元素（structural element），舉凡段落、列表、導航選單（navigation menu）、頁尾（footer）等等皆是。區塊級元素不會巢套在行內元素中，但有可能會巢套其他區塊級元素中。
+- 區塊級元素在頁面中組成一個可見區塊——它在頁面中單獨佔據一行，在它前後的內容都將以一個換行分隔。區塊級元素傾向於作為頁面上的結構化元素（structural element），舉凡段落、列表、導航選單（navigation menu）、頁尾（footer）等等皆是。區塊級元素不會巢套在行內元素中，但有可能會巢套其他區塊級元素中。
 - 行內元素指的是放在區塊級元素之中的內容，這些元素只由文件內容的一小部分組成，而非由完整段落或群組式內容組成。一個行內元素不會在文件中產生新的一行，它們通常只會出現在一段文字中，舉例來說，{{htmlelement("a")}} 元素（超連結），或者強調元素如 {{htmlelement("em")}} 和 {{htmlelement("strong")}}。
 
 以下面這個例子來說：
@@ -213,7 +217,9 @@ textarea.onkeyup = function(){
 ```html
 <em>first</em><em>second</em><em>third</em>
 
-<p>fourth</p><p>fifth</p><p>sixth</p>
+<p>fourth</p>
+<p>fifth</p>
+<p>sixth</p>
 ```
 
 {{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間（這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故）。
@@ -222,23 +228,24 @@ textarea.onkeyup = function(){
 
 > **備註：** HTML5 重新定義了元素類別：請見 [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
 
-> **備註：** 在本主題所使用的 block 與 inline 這兩個名詞，不應與 CSS 的 boxes 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
+> **備註：** 在本主題所使用的區塊級（block）與行內級（inline）這兩個名詞，不應與 CSS 的 box 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
-> **備註：** 你可以查看 block element 與 inline element 分別有哪些元素 — 請見 [Block-l](/zh-TW/docs/Web/HTML/Block-level_elements)[evel elements](/zh-TW/docs/Web/HTML/Block-level_elements) 和 [Inline elements](/zh-TW/docs/Web/HTML/Inline_elements)。
+> **備註：** 你可以查看區塊級元素與行內級元素分別有哪些元素——請見[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)和[行內級元素](/zh-TW/docs/Glossary/Inline-level_content)。
 
-### 空元素（Empty element）
+### 空元素
 
 不是所有元素都符合起始標籤、內容、結束標籤的格式。有些元素只有一個標籤，這些標籤通常用來在文件中插入/嵌入物件。例如 {{htmlelement("img")}} 元素便是用來在當前位置嵌入圖片檔：
 
 ```html
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 這將會產生下面的結果:
 
-{{ EmbedLiveSample('空元素Empty_elements', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('空元素', 700, 300) }}
 
-> **備註：** 空元素有時也被稱作 _void elements_。
+> **備註：** 空元素（empty element）有時也被稱作 _void element_。
 
 ## 屬性（Attribute）
 
@@ -277,7 +284,9 @@ textarea.onkeyup = function(){
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea>
+<textarea id="code" class="input">
+&lt;p&gt;A link to my favourite website.&lt;/p&gt;</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -288,10 +297,11 @@ textarea.onkeyup = function(){
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 2em;
   padding: 10px;
@@ -314,13 +324,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-  textarea.value = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favourite website</a>.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favourite website</a>.</p>';
   drawOutput();
 });
 
@@ -335,15 +346,15 @@ window.addEventListener("load", drawOutput);
 你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 [`disabled`](/zh-TW/docs/Web/HTML/Element/input#disabled) 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
 
 ```html
-<input type="text" disabled="disabled">
+<input type="text" disabled="disabled" />
 ```
 
 你可以把它寫得更簡短（在下面的例子中，我們也寫出了沒有 disabled 屬性的 input 元素供你參考，讓你更了解兩者的差別）：
 
 ```html
-<input type="text" disabled>
+<input type="text" disabled />
 
-<input type="text">
+<input type="text" />
 ```
 
 結果 :
@@ -377,7 +388,7 @@ window.addEventListener("load", drawOutput);
 ```html
 <a href="http://www.example.com">A link to my example.</a>
 
-<a href='http://www.example.com'>A link to my example.</a>
+<a href="http://www.example.com">A link to my example.</a>
 ```
 
 但是，你應該確認你沒有混著使用它們。下面這行則會造成錯誤！
@@ -389,7 +400,9 @@ window.addEventListener("load", drawOutput);
 如果你在你的 HTML 中使用其中一種引號，你就可以包裹另外一種引號：
 
 ```html
-<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="http://www.example.com" title="Isn't this fun?"
+  >A link to my example.</a
+>
 ```
 
 不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
@@ -401,7 +414,9 @@ window.addEventListener("load", drawOutput);
 你應該要這樣寫：
 
 ```html
-<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+<a href="http://www.example.com" title="Isn&#39;t this fun?"
+  >A link to my example.</a
+>
 ```
 
 ## 解析 HTML 文件
@@ -412,7 +427,7 @@ window.addEventListener("load", drawOutput);
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -425,12 +440,11 @@ window.addEventListener("load", drawOutput);
 
 1. `<!DOCTYPE html>`：文件類型（doctype）。 在很久很久以前，當 HTML 還年輕的時候（大約西元 1991 年），文件類型是要作為一系列規範的連結，HTML 網頁必須要遵守這些規範才會被當作是好的 HTML，比如說具備自動錯誤檢查和其他有用的東西等。在那個時候，它們看起來像這樣：
 
-    ```html
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    不過，現在已經沒有人在乎它們了，它們只是個歷史痕跡，需要形式上地被引入，以確保一切正常。`<!DOCTYPE html>` 是字數最短的有效 doctype。你只需要知道這些就夠了。
+   不過，現在已經沒有人在乎它們了，它們只是個歷史痕跡，需要形式上地被引入，以確保一切正常。`<!DOCTYPE html>` 是字數最短的有效 doctype。你只需要知道這些就夠了。
 
 2. `<html></html>`：{{htmlelement("html")}} 元素。該元素包裹住頁面的所有內容，有時也被稱作根元素（root element）。
 3. `<head></head>`：{{htmlelement("head")}} 元素。這個元素放著你想含括的所有重要資訊，這些資訊不會呈現在網頁瀏覽者眼前。這些東西包括，顯示於搜尋結果的關鍵字、頁面說明、CSS 等等。你將會在這個系列的下個章節中學到更多有關這部分的知識。
@@ -463,8 +477,7 @@ window.addEventListener("load", drawOutput);
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-&lt;p&gt;This is my page&lt;/p&gt;</textarea>
+<textarea id="code" class="input">&lt;p&gt;This is my page&lt;/p&gt;</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -475,10 +488,11 @@ window.addEventListener("load", drawOutput);
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -509,13 +523,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-  textarea.value = '<p>I really enjoy <strong>playing the drums</strong>. One of my favourite drummers is Neal Peart, who\
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p>I really enjoy <strong>playing the drums</strong>. One of my favourite drummers is Neal Peart, who\
  plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\
  My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\
 <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
@@ -535,11 +550,10 @@ window.addEventListener("load", drawOutput);
 ```html
 <p>Dogs are silly.</p>
 
-<p>Dogs        are
-         silly.</p>
+<p>Dogs are silly.</p>
 ```
 
-不管你用多少空格（whitespace，包括空白字元與換行字元），HTML 的語法分析器都只會留下一個空格。所以說，為什麼要用這麼多空格呢？答案是為了增加可讀性──適當的排版會讓人更明白你的原始碼，所以千萬不要把你的原始碼擠成一團，讓它們變得雜亂無章。在我們的 HTML 中，我們將每個巢狀的元素都以兩個空格縮排。原始碼的排版風格（如要用多少空格進行縮排），可依照個人喜好使用，但你的排版方式應該要一致。
+不管你用多少空格（whitespace，包括空白字元與換行字元），HTML 的語法分析器都只會留下一個空格。所以說，為什麼要用這麼多空格呢？答案是為了增加可讀性——適當的排版會讓人更明白你的原始碼，所以千萬不要把你的原始碼擠成一團，讓它們變得雜亂無章。在我們的 HTML 中，我們將每個巢狀的元素都以兩個空格縮排。原始碼的排版風格（如要用多少空格進行縮排），可依照個人喜好使用，但你的排版方式應該要一致。
 
 ## 實體參照（Entity reference）：引用 HTML 中的特殊字元
 
@@ -558,7 +572,8 @@ window.addEventListener("load", drawOutput);
 如果你英文不錯的話，應該不難發現字元參照其實就是這些字元的英文縮寫，也就是說，「\&lt;」為 less than （小於）；「\&gt;」為 great than（大於）；「\&quot;」為 quotation（引號）；「\&apos;」為 apostrophe （單引號）；「\&amp;」為 ampersand（和號）。你可以透過下面的維基連結來查看 HTML 的字元實體參照。在下面的範例中，你可以看到兩段敘述網頁技術的段落：
 
 ```html
-<p>In HTML, you define a paragraph using the <p> element.</p>
+<p>In HTML, you define a paragraph using the</p>
+<p>element.</p>
 
 <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
 ```
@@ -571,7 +586,7 @@ window.addEventListener("load", drawOutput);
 
 ## HTML 註解
 
-HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始碼中加入註解的方式──註解是會被瀏覽器忽略，並且不會被使用者看到的，它們存在的目的是要讓你得以在原始碼中說明你的原始碼是如何運作的、每段原始碼的作用等等。當你已經六個月沒有察看某個網頁的原始碼，而你完全想不起來你做了什麼的時候、或是當你把你的原始碼交給別人一同協作時，註解將會是你的好朋友！
+HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始碼中加入註解的方式——註解是會被瀏覽器忽略，並且不會被使用者看到的，它們存在的目的是要讓你得以在原始碼中說明你的原始碼是如何運作的、每段原始碼的作用等等。當你已經六個月沒有察看某個網頁的原始碼，而你完全想不起來你做了什麼的時候、或是當你把你的原始碼交給別人一同協作時，註解將會是你的好朋友！
 
 試著將你 HTML 檔案中的一部份內容變成註解，你需要將內容包裹在特殊的符號 `<!--` 和 `-->` 之中，例如：
 

@@ -102,7 +102,7 @@ HTML インラインテキスト意味づけ要素は、単語、行、あるい
 | {{HTMLElement("s")}}      | 取り消し線を引いた文字列を表示します。 `<s>` 要素はすでに適切または正確ではなくなった事柄を表現します。しかし、文書の修正を示す場合、 `<s>` 要素は適切ではありません。この場合は del と ins の方が適しているので、こちらを使用してください。 |
 | {{HTMLElement("samp")}}   | コンピュータープログラムからのサンプル出力を表すインライン文字列を含めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](https://ja.wikipedia.org/wiki/Courier_(書体)) や Lucida Console など）を使用して表示されます。 |
 | {{HTMLElement("small")}}  | 表示上のスタイルとは関係なく、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。 |
-| {{HTMLElement("span")}}   | 記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため ({{htmlattrxref("class")}} または {{htmlattrxref("id")}} 属性を使用して)、または {{htmlattrxref("lang")}} のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。 |
+| {{HTMLElement("span")}}   | 記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため ([`class`](/ja/docs/Web/HTML/Global_attributes#class) または [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用して)、または [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)であるのに対し、 `<span>` は[インライン要素](/ja/docs/Web/HTML/Inline_elements)です。 |
 | {{HTMLElement("strong")}} | 内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。 |
 | {{HTMLElement("sub")}}    | 表記上の理由で下付き文字として表示するべきインライン文字列を指定します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。 |
 | {{HTMLElement("sup")}}    | 表記上の理由で上付き文字として表示するべきインライン文字列を指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。 |

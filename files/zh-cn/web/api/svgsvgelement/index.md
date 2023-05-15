@@ -143,6 +143,6 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{SVGElement("circle")}}

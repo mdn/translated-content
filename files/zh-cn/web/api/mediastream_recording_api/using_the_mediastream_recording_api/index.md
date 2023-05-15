@@ -260,5 +260,5 @@ mediaRecorder.onstop = function(e) {
 ## See also
 
 - [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
+- {{domxref("Navigator.getUserMedia()")}}
 - [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

@@ -5,31 +5,28 @@ slug: Web/CSS/display-outside
 
 {{CSSRef}}
 
-The `<display-outside>` keywords specify the element's outer {{CSSxRef("display")}} type, which is essentially its role in flow layout. These keywords are used as values of the `display` property, and can be used for legacy purposes as a single keyword, or as defined in the Level 3 specification alongside a value from the {{CSSxRef("&lt;display-inside&gt;")}} keywords.
+`<display-outside>` 关键字指定了元素的外侧显示（{{CSSXref("display")}}）类型，即元素在流式布局中的角色。这些关键字用作 `display` 属性的值，且有作为单个关键字的旧式用法，或按第 3 级规范的定义与 {{CSSXref("&lt;display-inside&gt;")}} 关键字中的值一同使用。
 
 ## 语法
 
-`<display-outside>` 的可用值：
+有效的 `<display-outside>` 值：
 
 - `block`
-  - : 这个值会生成一个块级元素盒子，同时在该元素之前和之后打断（换行）。简单来说就是，这个值会将该元素变成[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。
+  - : 元素生成块级元素盒，且在正常流中时，在元素前后均生成断行。
 - `inline`
-  - : 这个值会生成一个行内元素盒子，该元素之前和之后不会打断（换行）。如果空间充足，该元素后的元素将会在同一行显示。简单来说就是，这个值会将该元素变成[行内元素](/zh-CN/docs/Web/HTML/Inline_elements)。
-- `run-in` {{Experimental_Inline}}
-  - : 这个值生成一个 run-in 盒子。如果其后的兄弟元素是块级盒子，那么这个 run-in 盒子就会以兄弟元素的第一个行内元素盒子的形式存在；如果其后的兄弟元素是行内元素，那么这个 run-in 盒子会变成块级元素。
-    run-in 元素的存在形式取决于相邻的元素，如果它的内部存在 block box，那么它会变成块级元素盒子。
+  - : 元素生成至少一个行级元素盒，这些盒子不在自身前后生成断行。在正常流中，若有空格则下一元素将在同一行上。
 
-> **备注：** Browsers that support the two value syntax, on finding the outer value only, such as when `display: block` or `display: inline` is specified, will set the inner value to `flow`. This will result in expected behavior; for example if you specify an element to be block, you would expect that the children of that element would participate in block and inline normal flow layout.
+> **备注：** 支持二值语法的浏览器在仅找到外侧值时（如指定 `display: block` 或 `display: inline` 时）会将内侧值设置为 `flow`，由此产生预期行为。例如若将元素指定为 block，你会期望此元素的子元素会参与块向和行向的正常流布局。
 
 ## 示例
 
-In the following example, span elements (normally displayed as inline elements) are set to `display: block` and so break onto new lines and expand to fill their container in the inline dimension.
+在下列示例中，片段元素（通常显示为行级元素）设置为 `display: block`，故元素断入新行且在行向上扩张填充其容器。
 
 ### HTML
 
 ```html
-<span>span 1</span>
-<span>span 2</span>
+<span>片段 1</span>
+<span>片段 2</span>
 ```
 
 ### CSS
@@ -63,5 +60,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [Block and Inline layout in Normal Flow](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting Contexts explained](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
