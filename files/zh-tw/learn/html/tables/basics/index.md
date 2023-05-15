@@ -215,19 +215,19 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 2. 每一個表格裡的內容都是由這兩個標籤所組成:**[`<table></table>`](/zh-TW/docs/Web/HTML/Element/table)** 將這些放入你的 HTML 中的 body。
 3. 表格裡最小的容器是表格儲存格，由**[`<td>`](/zh-TW/docs/Web/HTML/Element/td)**元素所組成('td' 代表 'table data')。將下列的程式碼加入你的表格標籤之中:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   ```
 
 4. 如果我們想要一個四格儲存格寬的列(row), 我們需要複製這些標籤三次。
-    將你的表格內容更新成這樣:
+   將你的表格內容更新成這樣:
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    <td>I'm your second cell.</td>
-    <td>I'm your third cell.</td>
-    <td>I'm your fourth cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   <td>I'm your second cell.</td>
+   <td>I'm your third cell.</td>
+   <td>I'm your fourth cell.</td>
+   ```
 
 就像你看到的，儲存格不會在各自的下方，它們彼此自動排列在同一列上。每個 `<td>` 元素會創造單個儲存格並且使它們據在同一行，我們新增的每一個儲存格都會使列更長。
 
@@ -235,14 +235,14 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 
 1. 放置四個你已新增在 `<tr>` 標籤裡的儲存格, 像這樣:
 
-    ```html
-    <tr>
-      <td>Hi, I'm your first cell.</td>
-      <td>I'm your second cell.</td>
-      <td>I'm your third cell.</td>
-      <td>I'm your fourth cell.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hi, I'm your first cell.</td>
+     <td>I'm your second cell.</td>
+     <td>I'm your third cell.</td>
+     <td>I'm your fourth cell.</td>
+   </tr>
+   ```
 
 2. 現在你已經製作了一列了，可以再繼續做一、二列 — 每個列都需要被額外的 `<tr>` 元素包裹住, 並且每個儲存格都須包含在一個 `<td>` 內
 
@@ -269,13 +269,14 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("結果")}}
@@ -328,13 +329,14 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 這是實際渲染出的表格:
@@ -348,9 +350,9 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 讓我們來繼續改善這個表格吧!
 
 1. 首先, 複製 [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) and [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) 檔案到你的電腦。
-    這份 HTML 裡包含跟底下你看到的一樣的狗狗範例。
+   這份 HTML 裡包含跟底下你看到的一樣的狗狗範例。
 2. 為了在語意上和視覺上辨識表格的標頭，你可以使用 **[`<th>`](/zh-TW/docs/Web/HTML/Element/th)** 元素 ('th' 代表 'table header')。它的運作方式跟 `<td>` 完全相同，除了它表示的是標頭而非一般儲存格外。
-    繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
+   繼續修改你的 HTML 將所有外圍的 `<td>` 元素變成 `<th>` 元素。
 3. 儲存你的 HTML 並在瀏覽器上執行，現在你應該可以看到標頭應有的樣子。
 
 > **備註：** 你可以在 GitHub 上的[dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html)找到我們寫好的完整的範例([直接看看長怎樣](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
@@ -398,13 +400,14 @@ HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它�
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 但輸出的不如我們想要的樣子:
@@ -450,13 +453,14 @@ Take the following simple example:
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Which gives us the following result:
@@ -472,8 +476,8 @@ Instead of doing this, we can specify the information once, on a `<col>` element
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -496,7 +500,7 @@ If we wanted to apply the styling information to both columns, we could just inc
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 
