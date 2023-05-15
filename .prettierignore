@@ -37,8 +37,6 @@ build/
 
 # zh-tw
 /docs/zh-tw/**/*.md
-/files/zh-tw/learn/css/**/*.md
-/files/zh-tw/learn/html/**/*.md
 /files/zh-tw/learn/javascript/**/*.md
 /files/zh-tw/web/api/**/*.md
 /files/zh-tw/web/javascript/**/*.md
