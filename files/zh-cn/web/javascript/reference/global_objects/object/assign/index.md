@@ -36,8 +36,6 @@ Object.assign(target, ...sources)
 
 {{jsxref("String", "字符串")}}和 {{jsxref("Symbol")}} 类型属性都会被复制。
 
-如果出现错误，比如某个属性是不可写的，会抛出 `TypeError` 异常。如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而目标对象也会被修改。
-
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而 `target` 对象也会被修改。
 
 > **备注：** `Object.assign()` 不会在 `source` 对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
@@ -75,7 +73,7 @@ obj2.b.c = 3;
 console.log(obj1); // { a: 1, b: { c: 3 } }
 console.log(obj2); // { a: 2, b: { c: 3 } }
 
-// Deep Clone
+// 深拷贝
 const obj3 = { a: 0, b: { c: 0 } };
 const obj4 = JSON.parse(JSON.stringify(obj3));
 obj3.a = 4;
