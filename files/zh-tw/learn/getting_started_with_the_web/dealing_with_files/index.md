@@ -41,18 +41,18 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 1. 複製你選的圖片並放到 `images` 資料夾中。
 2. 打開你的 `index.html`，並複製貼上下面這段 code。先別擔心這些 code 代表什麼意思，我們會在後面的時候講解它們代表的意義。
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>My test page</title>
-      </head>
-      <body>
-        <img src="" alt="My test image">
-      </body>
-    </html>
-    ```
+   ```html
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>My test page</title>
+     </head>
+     <body>
+       <img src="" alt="My test image" />
+     </body>
+   </html>
+   ```
 
 3. `<img src="" alt="My test image">` 這行是一段將圖片插入到頁面中的 HTML code，我們必須告訴 HTML 圖片在哪。我們知道圖片在 _images_ 資料夾中，而 _images_ 資料夾就跟 `index.html`在同一目錄下。為了要在檔案系統結構中從 `index.html` 走到我們的圖片，我們需要將檔案路徑設為`images/your-image-filename`. 舉例來說，我們的圖片命名為 `firefox-icon.png`，所以這裡的檔案路徑即為 `images/firefox-icon.png`.
 4. 將檔案路徑貼到你的 HTML code 中的 `src=""` 的雙引號之間。

@@ -16,7 +16,7 @@ slug: Web/HTML/Element/object
         <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が {{htmlattrxref("usemap","object")}} 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#埋め込みコンテンツ">埋め込みコンテンツ</a>、知覚可能コンテンツ、要素が <a href="/ja/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> 属性を持つ場合は <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ">対話型コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>/<a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能">送信可能</a> な <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ">フォーム関連要素</a>
       </td>
     </tr>
     <tr>
@@ -55,33 +55,33 @@ slug: Web/HTML/Element/object
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持っています。
 
-- {{HTMLAttrDef("archive")}} {{deprecated_inline}}
+- `archive` {{deprecated_inline}}
   - : オブジェクトのリソースの URI 群を、半角スペースで区切って指定。
-- {{HTMLAttrDef("border")}} {{deprecated_inline}}
+- `border` {{deprecated_inline}}
   - : コントロールの境界線のピクセル幅。※指定時に px などの単位は不要。
-- {{HTMLAttrDef("classid")}} {{deprecated_inline}}
+- `classid` {{deprecated_inline}}
   - : オブジェクトの実装の URI。 **data** 属性とともに、または **data** 属性の代替として用いることができます。
-- {{HTMLAttrDef("codebase")}} {{deprecated_inline}}
+- `codebase` {{deprecated_inline}}
   - : **classid** 属性、**data** 属性、**archive** 属性で指定された相対 URI を解決するための基準パス。指定しない場合、既定値は現在の文書のベース URI となります。
-- {{HTMLAttrDef("codetype")}} {{deprecated_inline}}
+- `codetype` {{deprecated_inline}}
   - : **classid** によって指定されたデータのコンテンツ型。
-- {{HTMLAttrDef("data")}}
+- `data`
   - : リソースのアドレスを有効な URL で指定。**data** 属性と **type** 属性のうち、少なくとも1つは定義しておく必要があります。
-- {{HTMLAttrDef("declare")}} {{deprecated_inline}}
+- `declare` {{deprecated_inline}}
   - : この論理属性は属性名を指定するだけで有効になります。オブジェクトは、後続する `<object>` 要素でインスタンス化しなければなりません。HTML5 ではリソースを再利用するごとに、完全な形の \<object> 要素を繰り返し配置します。
-- {{HTMLAttrDef("form")}}
+- `form`
   - : このオブジェクト要素がフォームに関連付けられていれば、そのフォーム要素 (_フォームオーナー_)。属性値は、同一文書内の {{HTMLElement("form")}} 要素の ID でなければなりません。
-- {{HTMLAttrDef("height")}}
+- `height`
   - : 表示されるリソースの高さを [CSS ピクセル数](https://drafts.csswg.org/css-values/#px) で指定。(絶対値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
-- {{HTMLAttrDef("name")}}
+- `name`
   - : 有効な閲覧コンテキストの名前 (HTML5) またはコントロールの名前 (HTML 4)。
-- {{HTMLAttrDef("standby")}} {{deprecated_inline}}
+- `standby` {{deprecated_inline}}
   - : オブジェクトの実装とデータの読み込み中にブラウザーに表示することができるメッセージ。
-- {{HTMLAttrDef("type")}}
+- `type`
   - : **data** 属性によって指定されたリソースの [content type](/ja/docs/Glossary/MIME_type)。**data** 属性と **type** 属性のうち、少なくとも 1 つは定義しておく必要があります。
-- {{HTMLAttrDef("usemap")}}
-  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の {{htmlattrxref("name", "map")}} 属性を繋げた文字列を属性値として記述します。
-- {{HTMLAttrDef("width")}}
+- `usemap`
+  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性を繋げた文字列を属性値として記述します。
+- `width`
   - : 表示されるリソースの幅を [CSS ピクセル数](https://drafts.csswg.org/css-values/#px) で指定。(絶対値に限ります。[パーセンテージは不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例

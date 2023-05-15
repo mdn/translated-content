@@ -78,7 +78,7 @@ slug: Web/HTML/Element/bdo
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
 

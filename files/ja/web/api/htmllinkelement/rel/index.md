@@ -5,9 +5,9 @@ slug: Web/API/HTMLLinkElement/rel
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLLinkElement.rel`** プロパティは {{htmlattrxref("rel", "link")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("link")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLLinkElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("link")}} 要素で表されるリソースと現在の文書との関係を示します。
 
-この属性の最も一般的な使用法は、外部のスタイルシートへのリンクを指定する場合です。プロパティに `stylesheet` を設定し、 {{htmlattrxref("href", "link")}} 属性にページをフォーマットする外部スタイルシートの URL を設定します。
+この属性の最も一般的な使用法は、外部のスタイルシートへのリンクを指定する場合です。プロパティに `stylesheet` を設定し、 [`href`](/ja/docs/Web/HTML/Element/link#href) 属性にページをフォーマットする外部スタイルシートの URL を設定します。
 
 ## 値
 

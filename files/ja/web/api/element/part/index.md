@@ -50,4 +50,4 @@ tabs.forEach((tab) => {
 ## 関連情報
 
 - {{cssxref("::part")}}
-- {{htmlattrxref("part")}}
+- [`part`](/ja/docs/Web/HTML/Global_attributes#part)

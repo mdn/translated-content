@@ -49,14 +49,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Set
 - {{jsxref("Set.has", "Set.prototype.has(<var>value</var>)")}}
   - : `Set` オブジェクト内に引数で与えられた値をもつ要素が存在するかどうかを示す論理値を返します。
 - {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 - {{jsxref("Set.prototype.values()")}}
-  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素の**値**を挿入順に返す、新しいイテレーターオブジェクトを返します。
 - {{jsxref("Set.prototype.keys()")}}
   - : {{jsxref("Set.prototype.values()")}} の別名です。
 - {{jsxref("Set.prototype.entries()")}}
 
-  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しい反復子オブジェクトを返します。
+  - : `Set` オブジェクト内の各要素を **`[value, value]` の配列**の形で挿入順で返す、新しいイテレーターオブジェクトを返します。
 
     これは {{jsxref("Map")}} オブジェクトと似ていますが、それぞれの項目の _key_ が `set` では _value_ と同じになります。
 
@@ -245,7 +245,7 @@ new Set("Firefox")  // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
 new Set("firefox")  // Set(6) { "f", "i", "r", "e", "o", "x" }
 ```
 
-### Set を使用して、リスト中の値の一意姓を保証
+### Set を使用して、リスト中の値の一意性を保証
 
 ```js
 const array = Array

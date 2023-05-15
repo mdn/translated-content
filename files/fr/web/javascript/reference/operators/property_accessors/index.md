@@ -1,6 +1,6 @@
 ---
 title: Accesseurs de propriétés
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 tags:
   - JavaScript
   - Opérateur

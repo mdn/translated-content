@@ -130,13 +130,11 @@ var range  = selObj.getRangeAt(0);
 
 选择和输入焦点（由 {{domxref("Document.activeElement")}} 表示）有一个复杂的关系，该关系因浏览器而异。在跨浏览器兼容的代码中，最好分别处理它们。
 
-Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 {{WebKitBug("3869")}}）。
-
-（目前在 WebKit 中，按钮等元素被直接点击不会修改选区，但会将焦点传递，译者注）
+Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 3869](https://webkit.org/b/3869)）。
 
 ### Selection API 在可编辑元素焦点更改方面的行为
 
-Selection API 有一个共同的行为（即在浏览器之间共通），该行为控制在调用某些方法后[可编辑元素](#Glossary)（原文 Editing Hosts，可编辑宿主）的焦点行为如何更改。
+Selection API 有一个共同的行为（即在浏览器之间共通），该行为控制在调用某些方法后*可编辑元素*（Editing Host，可编辑宿主）的焦点行为如何更改。
 
 其行为如下：
 
@@ -144,7 +142,7 @@ Selection API 有一个共同的行为（即在浏览器之间共通），该行
 2. 调用一个 Selection API 方法，从而在可编辑元素内产生一个新选区，来创造一个新的 `Selection` 区域（{{domxref("Range")}}）。
 3. 然后焦点（此处应指显示的，译者注）移到可编辑元素。
 
-**注意：Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如{{HTMLElement("a")}}）。**
+> **备注：** Selection API 方法只能将焦点移动到可编辑元素，而不能移动到其他可焦点元素（例如 {{HTMLElement("a")}}）。
 
 上述行为适用于使用以下方法产生的选区：
 

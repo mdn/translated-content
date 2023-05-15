@@ -98,11 +98,11 @@ While the `ArrayBuffer` can be filled with both integers and floats, the attribu
 
 ### Default attribute values
 
-The vertex shader code may include a number of attributes, but we don't need to specify the values for each attribute. Instead, we can supply a default value that will be identical for all vertices. We can call `{{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}}` to tell WebGL to use the default value, while calling {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}} will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
+The vertex shader code may include a number of attributes, but we don't need to specify the values for each attribute. Instead, we can supply a default value that will be identical for all vertices. We can call {{domxref("WebGLRenderingContext.disableVertexAttribArray()", "gl.disableVertexAttribArray()")}} to tell WebGL to use the default value, while calling {{domxref("WebGLRenderingContext.enableVertexAttribArray()", "gl.enableVertexAttribArray()")}} will read the values from the array buffer as specified with `gl.vertexAttribPointer()`.
 
 Similarily, if our vertex shader expects e.g. a 4-component attribute with `vec4` but in our `gl.vertexAttribPointer()` call we set the `size` to `2`, then WebGL will set the first two components based on the array buffer, while the third and fourth components are taken from the default value.
 
-The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can specify a different default value with `{{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}`.
+The default value is `vec4(0.0, 0.0, 0.0, 1.0)` by default but we can specify a different default value with {{domxref("WebGLRenderingContext.vertexAttrib()", "gl.vertexAttrib[1234]f[v]()")}}.
 
 For example, your vertex shader may be using a position and a color attribute. Most meshes have the color specified at a per-vertex level, but some meshes are of a uniform shade. For those meshes, it is not necessary to place the same color for each vertex into the array buffer, so you use `gl.vertexAttrib4fv()` to set a constant color.
 

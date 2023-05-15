@@ -23,7 +23,7 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 });
 ```
 
-不同的窗口使用不同的侧边栏是非常有用的，这是一个实例，见["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+不同的窗口使用不同的侧边栏是非常有用的，这是一个实例，见["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 侧边栏俱有和后台程序以及弹出窗口相同的 API 权限，在非隐藏模式下，侧边栏使用 API {{WebExtAPIRef("runtime.getBackgroundPage()")}} 可以直接访问后台页面，使用 API 如{{WebExtAPIRef("tabs.sendMessage()")}} 与 content scripts 交互，使用 API 如 {{WebExtAPIRef("runtime.sendNativeMessage()")}} 与原生应用交互。
 
@@ -51,6 +51,6 @@ browser.windows.getCurrent({populate: true}).then((windowInfo) => {
 
 For details on how to design your sidebar's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
 
-## Example
+## 示例
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) example which implements a sidebar.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) example which implements a sidebar.

@@ -20,9 +20,7 @@ slug: Web/HTML/Element/video
 - `autoplay`
   - : 布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
-    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
-- `autopictureinpicture` {{experimental_inline}}
-  - : 一个布尔属性，如果为 true，那么当用户在当前页面和另一个页面或应用程序之间来回切换时，会自动切换画中画（picture-in-picture）模式。
+    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
 - `controls`
   - : 加上这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。
 - `controlslist` {{experimental_inline}}
@@ -157,7 +155,7 @@ AddType video/webm .webm
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
 

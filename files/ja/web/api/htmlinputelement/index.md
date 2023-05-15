@@ -25,29 +25,29 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.formAction", "formAction")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("formaction", "input") }} 属性を<strong>返却または設定</strong>します。ここには要素によって送信された情報を処理するプログラムの URI が入ります。これは親フォームの {{ htmlattrxref("action", "form") }} 属性を上書きします。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#formaction"><code>formaction</code> 属性を<strong>返却または設定</strong>します。ここには要素によって送信された情報を処理するプログラムの URI が入ります。これは親フォームの <a href="/ja/docs/Web/HTML/Element/form#action"><code>action</code></a> 属性を上書きします。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.formEnctype", "formEnctype")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("formenctype", "input") }} 属性を<strong>返却または設定</strong>します。ここにはフォームをサーバーに送信する際のコンテンツの型が入ります。これは親フォームの {{ htmlattrxref("enctype", "form") }} 属性を上書きします。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code> 属性を<strong>返却または設定</strong>します。ここにはフォームをサーバーに送信する際のコンテンツの型が入ります。これは親フォームの <a href="/ja/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> 属性を上書きします。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.formMethod", "formMethod")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("formmethod", "input") }} 属性を<strong>返却または設定</strong>します。ここにはブラウザーがフォームを送信する際に用いる HTTP メソッドが入ります。これは親フォームの {{ htmlattrxref("method", "form") }} 属性を上書きします。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code> 属性を<strong>返却または設定</strong>します。ここにはブラウザーがフォームを送信する際に用いる HTTP メソッドが入ります。これは親フォームの <a href="/ja/docs/Web/HTML/Element/form#method"><code>method</code></a> 属性を上書きします。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}</td>
-      <td><em>論理値:</em> その要素の {{ htmlattrxref("formnovalidate", "input") }} 属性を<strong>返却または設定</strong>します。これは送信時にそのフォームが検証されないかどうかを示します。これは親フォームの {{ htmlattrxref("novalidate", "form") }} 属性を上書きします。</td>
+      <td><em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a> 属性を<strong>返却または設定</strong>します。これは送信時にそのフォームが検証されないかどうかを示します。これは親フォームの <a href="/ja/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> 属性を上書きします。</td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.formTarget", "formTarget")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("formtarget", "input") }} 属性を<strong>返却または設定</strong>します。ここにはフォームを送信した後で受け取ったレスポンスを表示する場所を示す名前またはキーワードが入ります。これは親フォームの {{ htmlattrxref("target", "form") }} 属性を上書きします。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a> 属性を<strong>返却または設定</strong>します。ここにはフォームを送信した後で受け取ったレスポンスを表示する場所を示す名前またはキーワードが入ります。これは親フォームの <a href="/ja/docs/Web/HTML/Element/form#target"><code>target</code></a> 属性を上書きします。
       </td>
     </tr>
   </tbody>
@@ -61,31 +61,31 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.name", "name")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("name", "input") }} 属性を<strong>返却または設定</strong>します。ここにはフォーム送信時にその要素を識別する名前が入ります。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#name"><code>name</code></a> 属性を<strong>返却または設定</strong>します。ここにはフォーム送信時にその要素を識別する名前が入ります。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.type", "type")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("type", "input") }} 属性を<strong>返却または設定</strong>します。これは表示するコントロールの型を示します。利用可能な値については {{ HTMLElement("input") }} の {{ htmlattrxref("type", "input") }} 属性を参照してください。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性を<strong>返却または設定</strong>します。これは表示するコントロールの型を示します。利用可能な値については {{ HTMLElement("input") }} の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性を参照してください。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.disabled", "disabled")}}</td>
       <td>
-        <em>論理値:</em> その要素の {{ htmlattrxref("disabled", "input") }} 属性を<strong>返却または設定</strong>します。これはそのコントロールが対話を受け付けないかどうかを示します。その入力値はフォームとともに送信されません。 {{ htmlattrxref("readOnly", "input") }} もご覧ください。
+        <em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#disabled"><code>disabled</code></a> 属性を<strong>返却または設定</strong>します。これはそのコントロールが対話を受け付けないかどうかを示します。その入力値はフォームとともに送信されません。 <a href="/ja/docs/Web/HTML/Element/input#readOnly"><code>readOnly</code></a> もご覧ください。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.autofocus", "autofocus")}}</td>
       <td>
-        <em>論理値:</em> その要素の {{ htmlattrxref("autofocus", "input") }} 属性を<strong>返却または設定</strong>します。ページが読み込まれたときに、ユーザーが別のコントロールに入力するなどしてそれを上書きしない限り、そのフォームコントロールが入力フォーカスを持つべきであることを指定します。文書内の一つの form 要素だけが {{htmlattrxref("autofocus","input")}} 属性を持つことができます。 {{htmlattrxref("type","input")}} 属性が <code>hidden</code> に設定されている場合には適用できません (つまり、非表示のコントロールにフォーカスを自動的に設定することはできません)。
+        <em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#autofocus"><code>autofocus</code></a> 属性を<strong>返却または設定</strong>します。ページが読み込まれたときに、ユーザーが別のコントロールに入力するなどしてそれを上書きしない限り、そのフォームコントロールが入力フォーカスを持つべきであることを指定します。文書内の一つの form 要素だけが <a href="/ja/docs/Web/HTML/Element/input#autofocus"><code>autofocus</code></a> 属性を持つことができます。 <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性が <code>hidden</code> に設定されている場合には適用できません (つまり、非表示のコントロールにフォーカスを自動的に設定することはできません)。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.required", "required")}}</td>
       <td>
-        <em>論理値:</em> その要素の {{ htmlattrxref("required", "input") }} 属性を<strong>返却または設定</strong>します。これは、フォームを送信する前にユーザーが値を入力しなければならないかどうかを示します。
+        <em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a> 属性を<strong>返却または設定</strong>します。これは、フォームを送信する前にユーザーが値を入力しなければならないかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ slug: Web/API/HTMLInputElement
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{readonlyInline}}</td>
-      <td><em>文字列:</em> 制約検証をそのコントロールが満たさなかった場合、それを記述したローカライズされたメッセージを<strong>返します</strong> (もしあれば)。これは、コントロールが制約検証の候補ではない場合 ({{htmlattrxref("willValidate","input")}} が <code>false</code> の場合)、または制約を満たしている場合は空の文字列です。この値は、 <code>setCustomValidity</code> メソッドで設定できます。
+      <td><em>文字列:</em> 制約検証をそのコントロールが満たさなかった場合、それを記述したローカライズされたメッセージを<strong>返します</strong> (もしあれば)。これは、コントロールが制約検証の候補ではない場合 (<a href="/ja/docs/Web/HTML/Element/input#willValidate"><code>willValidate</code></a> が <code>false</code> の場合)、または制約を満たしている場合は空の文字列です。この値は、 <code>setCustomValidity</code> メソッドで設定できます。
       </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.checked", "checked")}}</td>
       <td>
-        <em>論理値:</em> {{htmlattrxref("type","input")}} が <code>checkbox</code> または <code>radio</code> の場合、要素の現在の状態を<strong>返却または設定</strong>します。
+        <em>論理値:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> が <code>checkbox</code> または <code>radio</code> の場合、要素の現在の状態を<strong>返却または設定</strong>します。
       </td>
     </tr>
     <tr>
@@ -147,25 +147,25 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.alt", "alt")}}</td>
       <td>
-        <em>文字列:</em> {{htmlattrxref("type","input")}} が <code>image</code> である場合、その要素の代替テキストが設定された {{ htmlattrxref("alt", "input") }} 属性を<strong>返却または設定</strong>します。
+        <em>文字列:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> が <code>image</code> である場合、その要素の代替テキストが設定された <a href="/ja/docs/Web/HTML/Element/input#alt"><code>alt</code></a> 属性を<strong>返却または設定</strong>します。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.height", "height")}}</td>
       <td>
-        <em>文字列:</em> {{htmlattrxref("type","input")}} の値が <code>image</code> である場合、ボタンに表示される画像の高さを定義するその要素の {{ htmlattrxref("height", "input") }} 属性を<strong>返却または設定</strong>します。
+        <em>文字列:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> の値が <code>image</code> である場合、ボタンに表示される画像の高さを定義するその要素の <a href="/ja/docs/Web/HTML/Element/input#height"><code>height</code></a> 属性を<strong>返却または設定</strong>します。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.src", "src")}}</td>
       <td>
-        <em>文字列:</em> {{htmlattrxref("type","input")}} の値が <code>image</code> である場合、グラフィックの送信ボタンを表示する画像の場所を示す URI を指定する、その要素の {{ htmlattrxref("src", "input") }} 属性を<strong>返却または設定</strong>します。それ以外の場合は無視されます。
+        <em>文字列:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> の値が <code>image</code> である場合、グラフィックの送信ボタンを表示する画像の場所を示す URI を指定する、その要素の <a href="/ja/docs/Web/HTML/Element/input#src"><code>src</code></a> 属性を<strong>返却または設定</strong>します。それ以外の場合は無視されます。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.width", "width")}}</td>
       <td>
-        <em>文字列:</em> {{htmlattrxref("type","input")}} の値が <code>image</code> である場合、ボタンに表示される画像の幅を定義する、文書の {{ htmlattrxref("width", "input") }} 属性を<strong>返却または設定</strong>します。
+        <em>文字列:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> の値が <code>image</code> である場合、ボタンに表示される画像の幅を定義する、文書の <a href="/ja/docs/Web/HTML/Element/input#width"><code>width</code></a> 属性を<strong>返却または設定</strong>します。
       </td>
     </tr>
   </tbody>
@@ -179,7 +179,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.accept", "accept")}}</td>
       <td>
-        <em>文字列:</em> {{htmlattrxref("type","input")}} が <code>file</code> である場合、サーバーが受け入れるファイル形式をカンマ区切りのリストで表すその要素の {{ htmlattrxref("accept", "input") }} 属性を<strong>返却または設定</strong>します。
+        <em>文字列:</em> <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> が <code>file</code> である場合、サーバーが受け入れるファイル形式をカンマ区切りのリストで表すその要素の <a href="/ja/docs/Web/HTML/Element/input#accept"><code>accept</code></a> 属性を<strong>返却または設定</strong>します。
       </td>
     </tr>
     <tr>
@@ -200,7 +200,7 @@ slug: Web/API/HTMLInputElement
         {{Non-standard_inline}}
       </td>
       <td>
-        <em>論理値:</em> {{htmlattrxref("webkitdirectory", "input")}} 属性を<strong>返します</strong>。 true の場合、ファイルシステム選択インターフェイスはファイルではなくディレクトリーのみが選択できるようになります。
+        <em>論理値:</em> <a href="/ja/docs/Web/HTML/Element/input#webkitdirectory"><code>webkitdirectory</code></a> 属性を<strong>返します</strong>。 true の場合、ファイルシステム選択インターフェイスはファイルではなくディレクトリーのみが選択できるようになります。
       </td>
     </tr>
     <tr>
@@ -223,7 +223,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.autocomplete", "autocomplete")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{htmlattrxref("autocomplete", "input")}} 属性を<strong>返却または設定</strong>します。これはコントロールの値をブラウザーで自動的に補完できるかどうかを示します。 {{htmlattrxref("type","input")}} 属性の値が <code>hidden</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型 (<code>button</code>、<code>submit</code>、<code>reset</code>、<code>image</code>) の場合は無視されます。可能な値は次の通りです。<br>
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> 属性を<strong>返却または設定</strong>します。これはコントロールの値をブラウザーで自動的に補完できるかどうかを示します。 <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性の値が <code>hidden</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型 (<code>button</code>、<code>submit</code>、<code>reset</code>、<code>image</code>) の場合は無視されます。可能な値は次の通りです。<br>
         <code>on</code>: ブラウザーが以前入力された値を使用して値を自動補完することができる<br>
         <code>off</code>: ユーザーは明示的に値を入力しなければならない
       </td>
@@ -231,44 +231,44 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.max", "max")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("max", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最大値が含まれ、最小値 ({{htmlattrxref("min","input")}} 属性) より小さくすることはできません。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#max"><code>max</code></a> 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最大値が含まれ、最小値 (<a href="/ja/docs/Web/HTML/Element/input#min"><code>min</code></a> 属性) より小さくすることはできません。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.maxLength", "maxLength")}}</td>
       <td>
-        <em><code>long</code>:</em> その要素の {{ htmlattrxref("maxlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最大文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
+        <em><code>long</code>:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a> 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最大文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.min", "min")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("min", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最小値が含まれ、最大値 ({{htmlattrxref("max","input")}} 属性) より大きくすることはできません。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#min"><code>min</code></a> 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最小値が含まれ、最大値 (<a href="/ja/docs/Web/HTML/Element/input#max"><code>max</code></a> 属性) より大きくすることはできません。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.minLength", "minLength")}}</td>
       <td>
-        <em><code>long</code>:</em> その要素の {{ htmlattrxref("minlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最小文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
+        <em><code>long</code>:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a> 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <strong>最小文字数</strong>が含まれます。 (これを負の数に設定した場合、例外が発生します。)
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.pattern", "pattern")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("pattern", "input") }} 属性を<strong>返却または設定</strong>します。ここにはコントロールの値をチェックするための<strong>正規表現</strong>を含みます。 {{htmlattrxref("title","input")}} 属性を使用してユーザーにパターンを説明してください。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a> 属性を<strong>返却または設定</strong>します。ここにはコントロールの値をチェックするための<strong>正規表現</strong>を含みます。 <a href="/ja/docs/Web/HTML/Element/input#title"><code>title</code></a> 属性を使用してユーザーにパターンを説明してください。この属性は、 <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.placeholder", "placeholder")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("placeholder", "input") }} 属性を<strong>返却または設定</strong>します。ここには、ユーザーがコントロールに何を入力できるかのヒントが設定されます。プレイスホルダーのテキストには、キャリッジリターンやラインフィードを含むことはできません。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a> 属性を<strong>返却または設定</strong>します。ここには、ユーザーがコントロールに何を入力できるかのヒントが設定されます。プレイスホルダーのテキストには、キャリッジリターンやラインフィードを含むことはできません。この属性は、 <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.readOnly", "readOnly")}}</td>
       <td>
-        <em>論理値:</em> その要素の {{ htmlattrxref("readonly", "input") }} 属性を<strong>返却または設定</strong>します。これは、ユーザーがコントロールの値を変更できないことを示します。<br>
-        {{htmlattrxref("type","input")}} 属性の値が <code>hidden</code>、<code>range</code>、<code>color</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型の場合は無視されます。
+        <em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 属性を<strong>返却または設定</strong>します。これは、ユーザーがコントロールの値を変更できないことを示します。<br>
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性の値が <code>hidden</code>、<code>range</code>、<code>color</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型の場合は無視されます。
       </td>
     </tr>
     <tr>
@@ -294,7 +294,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.size", "size")}}</td>
       <td>
-        <em><code>unsigned long</code>:</em> その要素の {{ htmlattrxref("size", "input") }} 属性を<strong>返却または設定</strong>します。これは<strong>コントロールの外見の大きさ</strong>が入ります。この値は {{htmlattrxref("type","input")}} の値が <code>text</code> または <code>password</code> の場合は整数で文字数であり、それ以外の場合はピクセル単位です。 {{htmlattrxref("type","input")}} が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code>、<code>password</code> のいずれかに設定されている場合のみ適用され、それ以外の場合は無視されます。
+        <em><code>unsigned long</code>:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a> 属性を<strong>返却または設定</strong>します。これは<strong>コントロールの外見の大きさ</strong>が入ります。この値は <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> の値が <code>text</code> または <code>password</code> の場合は整数で文字数であり、それ以外の場合はピクセル単位です。 <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code>、<code>password</code> のいずれかに設定されている場合のみ適用され、それ以外の場合は無視されます。
       </td>
     </tr>
   </tbody>
@@ -326,13 +326,13 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.list", "list")}} {{readonlyInline}}</td>
       <td>
-        <em>{{domxref("HTMLElement")}} オブジェクト:</em> {{ htmlattrxref("list", "input") }} 属性が指す要素を<strong>返します</strong>。同じツリーに HTML 要素がない場合、プロパティは <code>null</code> になることがあります。
+        <em>{{domxref("HTMLElement")}} オブジェクト:</em> <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a> 属性が指す要素を<strong>返します</strong>。同じツリーに HTML 要素がない場合、プロパティは <code>null</code> になることがあります。
       </td>
     </tr>
     <tr>
       <td>{{domxref("HTMLInputElement.multiple", "multiple")}}</td>
       <td>
-        <em>論理値:</em> その要素の {{ htmlattrxref("multiple", "input") }} 属性を<strong>返却または設定</strong>します。これは複数の値 (例えば複数のファイル) を持つことが可能であるかどうかを示します。
+        <em>論理値:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a> 属性を<strong>返却または設定</strong>します。これは複数の値 (例えば複数のファイル) を持つことが可能であるかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -350,7 +350,7 @@ slug: Web/API/HTMLInputElement
     <tr>
       <td>{{domxref("HTMLInputElement.step", "step")}}</td>
       <td>
-        <em>文字列:</em> その要素の {{ htmlattrxref("step", "input") }} 属性を<strong>返却または設定</strong>します。これは、 {{htmlattrxref("min","input")}} や {{htmlattrxref("max","input")}} と共に、数値や日時の値を設定する際の増分を制限します。文字列 <code>any</code> または正の浮動小数点数を設定することができます。 <code>any</code> が設定されていない場合、コントロールは最小値よりも大きい step 値の倍数のみを受け入れます。
+        <em>文字列:</em> その要素の <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a> 属性を<strong>返却または設定</strong>します。これは、 <a href="/ja/docs/Web/HTML/Element/input#min"><code>min</code></a> や <a href="/ja/docs/Web/HTML/Element/input#max"><code>max</code></a> と共に、数値や日時の値を設定する際の増分を制限します。文字列 <code>any</code> または正の浮動小数点数を設定することができます。 <code>any</code> が設定されていない場合、コントロールは最小値よりも大きい step 値の倍数のみを受け入れます。
       </td>
     </tr>
     <tr>
@@ -457,21 +457,21 @@ slug: Web/API/HTMLInputElement
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
-  - : {{htmlattrxref("value","input")}} を ({{htmlattrxref("step","input")}} * n) だけ減少させます。 n が指定されなかった場合の既定値は 1 です。次の場合は `InvalidStateError` 例外が発生します。
+  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) * n) だけ減少させます。 n が指定されなかった場合の既定値は 1 です。次の場合は `InvalidStateError` 例外が発生します。
 
-    - 現在の {{htmlattrxref("type","input")}} の値にこのメソッドが適用できない場合
-    - 要素に {{htmlattrxref("step","input")}} 値が設定されていない場合
-    - {{htmlattrxref("value","input")}} が数値に変換できない場合
-    - 結果の値が {{htmlattrxref("max","input")}} を超えたり、 {{htmlattrxref("min","input")}} を下回ったりする場合
+    - 現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値にこのメソッドが適用できない場合
+    - 要素に [`step`](/ja/docs/Web/HTML/Element/input#step) 値が設定されていない場合
+    - [`value`](/ja/docs/Web/HTML/Element/input#value) が数値に変換できない場合
+    - 結果の値が [`max`](/ja/docs/Web/HTML/Element/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Element/input#min) を下回ったりする場合
 
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
 
-  - : {{htmlattrxref("value","input")}} を ({{htmlattrxref("step","input")}} * n) だけ増加させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
+  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を ([`step`](/ja/docs/Web/HTML/Element/input#step) * n) だけ増加させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
 
-    - 現在の {{htmlattrxref("type","input")}} の値にこのメソッドが適用できない場合
-    - 要素に {{htmlattrxref("step","input")}} 値が設定されていない場合
-    - {{htmlattrxref("value","input")}} が数値に変換できない場合
-    - 結果の値が {{htmlattrxref("max","input")}} を超えたり、 {{htmlattrxref("min","input")}} を下回ったりする場合
+    - 現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値にこのメソッドが適用できない場合
+    - 要素に [`step`](/ja/docs/Web/HTML/Element/input#step) 値が設定されていない場合
+    - [`value`](/ja/docs/Web/HTML/Element/input#value) が数値に変換できない場合
+    - 結果の値が [`max`](/ja/docs/Web/HTML/Element/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Element/input#min) を下回ったりする場合
 
 - {{domxref("HTMLInputElement.mozSetFileArray()", "mozSetFileArray()")}} {{non-standard_inline}}
   - : 入力欄で選択されたファイルを、与えられた {{domxref("File")}} オブジェクトの配列に設定します。これは、フレームスクリプトで使用可能な `mozSetFileNameArray()` の代替となるものです。クロームスクリプトは[ファイルを File オブジェクトとして開き](/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)、[メッセージマネージャー](/ja/docs/Mozilla/Firefox/Multiprocess_Firefox/The_message_manager)を介してそれらを送信することができます。

@@ -150,7 +150,7 @@ var propName = getPropName(); // 返回 "a" 或 "b"
 eval( 'var result = obj.' + propsName )
 ```
 
-但是，这里并不是必须得使用 `eval()`。事实上，这里并不建议这样使用。可以使用 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 进行代替，它更快、更安全：
+但是，这里并不是必须得使用 `eval()`。事实上，这里并不建议这样使用。可以使用 [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 进行代替，它更快、更安全：
 
 ```js
 var obj = { a: 20, b: 30 }
@@ -301,6 +301,5 @@ var fct2 = eval(fctStr2)  // 返回一个函数
 
 ## 参见
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [WebExtensions: Using eval in content scripts](</zh-CN/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)
+- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [WebExtension：在 content script 中使用 eval](/zh-CN/Add-ons/WebExtensions/Content_scripts#在_content_script_中使用_eval)

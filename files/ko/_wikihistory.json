@@ -1906,10 +1906,6 @@
     "modified": "2020-02-05T05:41:56.954Z",
     "contributors": ["SphinxKnight", "junthus", "gs.won"]
   },
-  "Mozilla/Add-ons/WebExtensions/Content_scripts": {
-    "modified": "2020-02-05T05:41:58.739Z",
-    "contributors": ["SphinxKnight", "grizlupo"]
-  },
   "Mozilla/Add-ons/WebExtensions/Examples": {
     "modified": "2020-02-05T05:41:58.537Z",
     "contributors": ["SphinxKnight", "gs.won"]
@@ -2157,10 +2153,6 @@
   "Web/API/Cache": {
     "modified": "2020-10-15T21:39:42.857Z",
     "contributors": ["alattalatta", "LeeJunyeol", "oinochoe", "jpmedley"]
-  },
-  "Web/API/Cache/put": {
-    "modified": "2020-10-15T21:39:41.309Z",
-    "contributors": ["alattalatta", "minias"]
   },
   "Web/API/CanvasCaptureMediaStreamTrack": {
     "modified": "2020-12-04T10:32:28.199Z"
@@ -3488,10 +3480,6 @@
     "modified": "2020-04-14T08:38:25.816Z",
     "contributors": ["2ssue", "voidnoble"]
   },
-  "Web/API/Navigation_timing_API": {
-    "modified": "2019-03-23T23:19:34.117Z",
-    "contributors": ["sbnet21"]
-  },
   "Web/API/Navigator": {
     "modified": "2020-10-15T21:33:07.782Z",
     "contributors": ["alattalatta", "nmsohn", "wbamberg", "fscholz"]
@@ -3688,6 +3676,10 @@
   "Web/API/PerformanceEntry": {
     "modified": "2020-10-15T22:23:11.078Z",
     "contributors": ["ESnark"]
+  },
+  "Web/API/Performance_API/Navigation_timing": {
+    "modified": "2019-03-23T23:19:34.117Z",
+    "contributors": ["sbnet21"]
   },
   "Web/API/Plugin": {
     "modified": "2019-03-23T22:11:26.376Z",
@@ -4368,6 +4360,25 @@
     "modified": "2020-04-03T02:58:31.932Z",
     "contributors": ["dh", "roupkk", "andrewsohn", "NFM", "epicsaga"]
   },
+  "Web/API/Web_components": {
+    "modified": "2019-03-18T21:01:19.898Z",
+    "contributors": ["adrenalinee", "cs09g", "ByeongGi", "namkwon", "maybe"]
+  },
+  "Web/API/Web_components/Using_custom_elements": {
+    "modified": "2020-10-15T22:25:18.797Z",
+    "contributors": [
+      "cutelee",
+      "chdaud1995",
+      "alattalatta",
+      "atomDevelop",
+      "nerdrun",
+      "ByeongGi"
+    ]
+  },
+  "Web/API/Web_components/Using_shadow_DOM": {
+    "modified": "2020-07-07T00:49:27.609Z",
+    "contributors": ["ne2030", "ByeongGi"]
+  },
   "Web/API/Window": {
     "modified": "2020-10-15T21:17:36.416Z",
     "contributors": [
@@ -4686,10 +4697,6 @@
   "Web/Accessibility/ARIA/Roles/dialog_role": {
     "modified": "2019-03-18T21:24:31.941Z",
     "contributors": ["seokju-na"]
-  },
-  "Web/Accessibility/ARIA/forms": {
-    "modified": "2020-12-05T03:35:00.756Z",
-    "contributors": ["movegun1027", "dasom0801"]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T23:21:28.496Z",
@@ -5233,6 +5240,10 @@
     "modified": "2020-10-15T22:16:17.946Z",
     "contributors": ["alattalatta"]
   },
+  "Web/CSS/Inheritance": {
+    "modified": "2019-03-18T21:13:04.690Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
   "Web/CSS/Layout_mode": {
     "modified": "2020-08-05T01:05:50.434Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -5765,10 +5776,6 @@
   },
   "Web/CSS/inherit": {
     "modified": "2020-10-15T21:44:46.933Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/inheritance": {
-    "modified": "2019-03-18T21:13:04.690Z",
     "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/initial": {
@@ -6325,10 +6332,6 @@
   "Web/HTML/Element/colgroup": {
     "modified": "2020-10-15T21:35:24.996Z",
     "contributors": ["alattalatta", "azunyan3"]
-  },
-  "Web/HTML/Element/content": {
-    "modified": "2020-10-15T21:35:22.751Z",
-    "contributors": ["alattalatta", "lovefield", "azunyan3"]
   },
   "Web/HTML/Element/data": {
     "modified": "2020-10-15T21:35:04.541Z",
@@ -7586,7 +7589,7 @@
     "modified": "2020-03-12T19:43:42.580Z",
     "contributors": ["limkukhyun", "sshplendid", "Netaras", "joshua1988"]
   },
-  "Web/JavaScript/EventLoop": {
+  "Web/JavaScript/Event_loop": {
     "modified": "2020-03-12T19:43:30.561Z",
     "contributors": [
       "cs09g",
@@ -7625,7 +7628,7 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Expressions_and_Operators": {
+  "Web/JavaScript/Guide/Expressions_and_operators": {
     "modified": "2020-04-30T03:43:48.082Z",
     "contributors": [
       "HubCodes",
@@ -7715,7 +7718,7 @@
       "stephenjang"
     ]
   },
-  "Web/JavaScript/Guide/Iterators_and_Generators": {
+  "Web/JavaScript/Guide/Iterators_and_generators": {
     "modified": "2020-07-15T01:15:38.167Z",
     "contributors": [
       "Oizys18",
@@ -7772,7 +7775,7 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions": {
+  "Web/JavaScript/Guide/Regular_expressions": {
     "modified": "2020-04-29T02:51:44.998Z",
     "contributors": [
       "yami03",
@@ -7794,11 +7797,11 @@
       "SooYeonKim"
     ]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Assertions": {
+  "Web/JavaScript/Guide/Regular_expressions/Assertions": {
     "modified": "2020-09-14T21:47:15.957Z",
     "contributors": ["limkukhyun"]
   },
-  "Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences": {
+  "Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences": {
     "modified": "2020-03-12T19:49:33.624Z",
     "contributors": ["limkukhyun"]
   },
@@ -7827,7 +7830,7 @@
       "jadestern"
     ]
   },
-  "Web/JavaScript/Guide/Working_with_Objects": {
+  "Web/JavaScript/Guide/Working_with_objects": {
     "modified": "2019-03-23T23:06:06.143Z",
     "contributors": [
       "fscholz",
@@ -7868,7 +7871,7 @@
     "modified": "2020-03-12T19:37:59.087Z",
     "contributors": ["alattalatta", "teoli", "ethertank", "jaemin_jo"]
   },
-  "Web/JavaScript/Language_Overview": {
+  "Web/JavaScript/Language_overview": {
     "modified": "2020-11-30T14:43:16.912Z",
     "contributors": [
       "woochul2",
@@ -7901,7 +7904,7 @@
       "Dyhan81"
     ]
   },
-  "Web/JavaScript/Memory_Management": {
+  "Web/JavaScript/Memory_management": {
     "modified": "2020-03-12T19:37:54.884Z",
     "contributors": [
       "presentY1897",
@@ -8121,7 +8124,7 @@
     "modified": "2020-03-12T19:44:36.352Z",
     "contributors": ["magnoliaa"]
   },
-  "Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params": {
+  "Web/JavaScript/Reference/Errors/Strict_non_simple_params": {
     "modified": "2020-03-12T19:47:43.886Z",
     "contributors": ["SSJ-unclear"]
   },
@@ -9725,10 +9728,6 @@
     "modified": "2020-10-15T21:47:35.796Z",
     "contributors": ["alattalatta", "Netaras"]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/name": {
-    "modified": "2020-10-15T21:47:34.390Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/of": {
     "modified": "2020-10-15T22:03:56.631Z",
     "contributors": ["limkukhyun"]
@@ -9851,11 +9850,11 @@
     "modified": "2020-10-15T22:34:18.983Z",
     "contributors": ["limkukhyun"]
   },
-  "Web/JavaScript/Reference/Operators/Comma_Operator": {
+  "Web/JavaScript/Reference/Operators/Comma_operator": {
     "modified": "2020-10-15T21:48:31.441Z",
     "contributors": ["alattalatta", "hoony"]
   },
-  "Web/JavaScript/Reference/Operators/Conditional_Operator": {
+  "Web/JavaScript/Reference/Operators/Conditional_operator": {
     "modified": "2020-10-15T21:39:25.018Z",
     "contributors": [
       "pyjun01",
@@ -9894,7 +9893,7 @@
     "modified": "2020-10-15T21:47:08.402Z",
     "contributors": ["honggaruy", "callin2", "Netaras"]
   },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+  "Web/JavaScript/Reference/Operators/Operator_precedence": {
     "modified": "2020-04-10T08:53:04.223Z",
     "contributors": ["EatChangmyeong", "alattalatta", "."]
   },
@@ -9902,7 +9901,7 @@
     "modified": "2020-10-15T22:25:42.843Z",
     "contributors": ["Jung.Kyu-Hyun"]
   },
-  "Web/JavaScript/Reference/Operators/Property_Accessors": {
+  "Web/JavaScript/Reference/Operators/Property_accessors": {
     "modified": "2020-10-15T21:46:18.602Z",
     "contributors": ["alattalatta", "Violet-Bora-Lee", "Netaras"]
   },
@@ -10238,27 +10237,27 @@
     "modified": "2019-03-23T22:00:19.382Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Add_to_home_screen": {
+  "Web/Progressive_web_apps/Guides/Making_PWAs_installable": {
     "modified": "2020-01-26T15:58:32.379Z",
     "contributors": ["alattalatta", "chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/App_structure": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:37:47.885Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-05-31T18:37:46.514Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
     "modified": "2019-03-18T20:52:13.104Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Offline_Service_workers": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers": {
     "modified": "2020-05-31T18:37:49.321Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
-  "Web/Progressive_web_apps/Re-engageable_Notifications_Push": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push": {
     "modified": "2019-03-18T20:52:11.625Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
@@ -10416,25 +10415,6 @@
   "Web/Tutorials": {
     "modified": "2019-03-23T23:28:14.827Z",
     "contributors": ["featherlikeg", "nacyot", "pjc0247", "tamnajio", "KyunH"]
-  },
-  "Web/Web_Components": {
-    "modified": "2019-03-18T21:01:19.898Z",
-    "contributors": ["adrenalinee", "cs09g", "ByeongGi", "namkwon", "maybe"]
-  },
-  "Web/Web_Components/Using_custom_elements": {
-    "modified": "2020-10-15T22:25:18.797Z",
-    "contributors": [
-      "cutelee",
-      "chdaud1995",
-      "alattalatta",
-      "atomDevelop",
-      "nerdrun",
-      "ByeongGi"
-    ]
-  },
-  "Web/Web_Components/Using_shadow_DOM": {
-    "modified": "2020-07-07T00:49:27.609Z",
-    "contributors": ["ne2030", "ByeongGi"]
   },
   "Web/XML": {
     "modified": "2019-08-24T00:48:34.627Z",
@@ -10886,1089 +10866,5 @@
   "WebAssembly/existing_C_to_wasm": {
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": ["limkukhyun"]
-  },
-  "conflicting/Games": {
-    "modified": "2020-12-05T03:39:50.081Z",
-    "contributors": ["movegun1027"]
-  },
-  "conflicting/Glossary": {
-    "modified": "2019-05-26T04:17:19.834Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Glossary/TCP": {
-    "modified": "2020-01-12T14:32:05.700Z",
-    "contributors": ["doong-jo"]
-  },
-  "conflicting/Learn": {
-    "modified": "2020-07-16T22:33:40.026Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Learn/CSS/Building_blocks": {
-    "modified": "2019-03-23T23:33:01.323Z",
-    "contributors": ["yooonmi", "teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance": {
-    "modified": "2019-03-23T23:33:16.790Z",
-    "contributors": ["ElleXD", "teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/CSS/Building_blocks/Styling_tables": {
-    "modified": "2019-03-23T23:33:00.475Z",
-    "contributors": ["teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/CSS/CSS_layout": {
-    "modified": "2019-03-23T23:33:01.592Z",
-    "contributors": ["yooonmi", "teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/CSS/CSS_layout/Introduction": {
-    "modified": "2020-07-16T22:25:40.836Z",
-    "contributors": ["yooonmi"]
-  },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2019-03-23T23:33:09.659Z",
-    "contributors": ["yooonmi", "teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/CSS/Styling_text/Styling_lists": {
-    "modified": "2019-03-23T23:33:11.239Z",
-    "contributors": ["teoli", "SpikeYou"]
-  },
-  "conflicting/Learn/Common_questions": {
-    "modified": "2020-07-16T22:22:13.682Z",
-    "contributors": ["KwanHong_Lee66"]
-  },
-  "conflicting/Learn/Common_questions_139278709439023a85d849385412271e": {
-    "modified": "2020-07-16T22:22:13.488Z",
-    "contributors": ["zziuni", "Netaras", "teoli", "cs09g"]
-  },
-  "conflicting/Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2019-03-23T23:14:43.699Z",
-    "contributors": ["eunsuklee", "teoli"]
-  },
-  "conflicting/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
-    "modified": "2020-07-16T22:22:37.951Z",
-    "contributors": ["Kaben"]
-  },
-  "conflicting/Learn/JavaScript/Asynchronous": {
-    "modified": "2020-07-16T22:33:21.049Z",
-    "contributors": ["cjkcc69"]
-  },
-  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
-    "modified": "2020-11-17T21:41:39.368Z",
-    "contributors": ["mochapoke", "Plut0", "chupark", "eunjungleecub"]
-  },
-  "conflicting/Learn/JavaScript/Asynchronous/Promises": {
-    "modified": "2020-11-28T09:53:12.946Z",
-    "contributors": ["HerbertLim", "chupark"]
-  },
-  "conflicting/Learn/JavaScript/Objects": {
-    "modified": "2019-03-23T23:29:46.029Z",
-    "contributors": ["Parcovia", "JayK95", "rinuel", "teoli", "JaehaAhn"]
-  },
-  "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-07-16T22:32:06.697Z",
-    "contributors": ["alattalatta", "beowolf9", "lunarlit", "dsma73"]
-  },
-  "conflicting/MDN/Contribute": {
-    "modified": "2019-01-16T19:13:26.954Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Junbong",
-      "KwanHong_Lee66",
-      "Sheppy"
-    ]
-  },
-  "conflicting/MDN/Tools": {
-    "modified": "2019-01-16T20:50:22.654Z",
-    "contributors": ["wbamberg", "andrewJYjang"]
-  },
-  "conflicting/MDN/Writing_guidelines": {
-    "modified": "2020-09-30T15:30:34.264Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Sheppy"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures": {
-    "modified": "2020-09-30T12:56:35.534Z",
-    "contributors": [
-      "chrisdavidmills",
-      "zziuni",
-      "wbamberg",
-      "Netaras",
-      "hoony"
-    ]
-  },
-  "conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7": {
-    "modified": "2020-09-30T12:56:35.761Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
-  },
-  "conflicting/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:30:34.683Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "conflicting/Mozilla/Add-ons": {
-    "modified": "2019-03-24T00:04:35.955Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "Gilchris",
-      "fscholz",
-      "Matthew,Lee",
-      "Amujung",
-      "Idodream",
-      "Jeongsw",
-      "Netaras"
-    ]
-  },
-  "conflicting/Web/API": {
-    "modified": "2019-03-06T12:18:21.576Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-03-23T23:26:56.400Z",
-    "contributors": ["Sheppy"]
-  },
-  "conflicting/Web/API/Element/click_event": {
-    "modified": "2020-10-15T22:10:25.598Z",
-    "contributors": ["alattalatta", "Parcovia"]
-  },
-  "conflicting/Web/API/Element/keydown_event": {
-    "modified": "2020-10-15T22:05:49.061Z",
-    "contributors": ["alattalatta", "chocojoa"]
-  },
-  "conflicting/Web/API/Element/keyup_event": {
-    "modified": "2019-03-23T22:48:40.096Z",
-    "contributors": ["teoli", "wizardbear"]
-  },
-  "conflicting/Web/API/Geolocation/getCurrentPosition": {
-    "modified": "2020-10-15T22:02:42.878Z",
-    "contributors": ["alattalatta", "Saem"]
-  },
-  "conflicting/Web/API/ImageCapture/getPhotoCapabilities": {
-    "modified": "2020-10-15T22:27:09.730Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Web/API/RTCPeerConnection/RTCPeerConnection": {
-    "modified": "2020-10-15T22:21:34.262Z",
-    "contributors": ["chansbro"]
-  },
-  "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
-    "modified": "2019-03-23T22:54:05.275Z",
-    "contributors": ["fscholz", "hanmomhanda"]
-  },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-04-06T02:12:01.060Z",
-    "contributors": ["dasom0801"]
-  },
-  "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
-    "modified": "2019-05-20T01:53:49.386Z",
-    "contributors": ["dasom0801"]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2020-10-15T21:46:25.224Z",
-    "contributors": ["alattalatta", "cvrebert"]
-  },
-  "conflicting/Web/CSS/@viewport": {
-    "modified": "2020-10-15T21:46:24.032Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "conflicting/Web/CSS/@viewport_a33ee59ffd8336ffb3336900dea02e9f": {
-    "modified": "2020-10-15T22:22:51.969Z",
-    "contributors": ["chayeoi", "SphinxKnight"]
-  },
-  "conflicting/Web/CSS/@viewport_e065ce90bde08c9679692adbe64f6518": {
-    "modified": "2020-10-15T21:46:22.320Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-23T23:37:37.611Z",
-    "contributors": ["teoli", "Inyoung", "jaemin_jo"]
-  },
-  "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2019-03-23T23:33:02.082Z",
-    "contributors": ["teoli", "SpikeYou"]
-  },
-  "conflicting/Web/CSS/cursor": {
-    "modified": "2019-03-23T23:41:42.325Z",
-    "contributors": ["hjunshin", "teoli", "jaemin_jo", "Ioseph"]
-  },
-  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
-    "modified": "2019-04-26T08:58:25.376Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "conflicting/Web/Guide": {
-    "modified": "2020-12-07T13:40:57.143Z",
-    "contributors": ["peterbe", "alattalatta"]
-  },
-  "conflicting/Web/HTML": {
-    "modified": "2020-01-19T02:45:39.384Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Web/HTML/Global_attributes/contenteditable": {
-    "modified": "2019-03-23T22:40:12.545Z",
-    "contributors": ["gblue1223"]
-  },
-  "conflicting/Web/HTTP": {
-    "modified": "2020-02-05T12:28:02.372Z",
-    "contributors": ["alattalatta"]
-  },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:36:55.143Z",
-    "contributors": [
-      "JinKang",
-      "Parcovia",
-      "cs09g",
-      "imjang57",
-      "wayne-kim",
-      "desty",
-      "stephenjang",
-      "Luzi.kr",
-      "teoli",
-      "Zer0th",
-      "99corps"
-    ]
-  },
-  "conflicting/Web/JavaScript/Guide": {
-    "modified": "2019-01-16T16:10:38.273Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators": {
-    "modified": "2019-01-16T16:11:11.253Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_2285d0ecb7e20b6a4ac3cb462794e916": {
-    "modified": "2019-01-16T16:11:11.411Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_337b8dbe817777e70cc8002308284a74": {
-    "modified": "2019-01-16T16:11:17.176Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_d9fc22e5ddd08ea82ea5cf8ddb1d9915": {
-    "modified": "2019-01-16T16:11:17.876Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_da1ab2546bd5e84ac81f952de51d5d40": {
-    "modified": "2019-01-16T16:11:13.405Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Grammar_and_types": {
-    "modified": "2019-01-16T16:11:22.319Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Grammar_and_types_3f037ba1fa5775d153289787ec51042f": {
-    "modified": "2019-01-16T16:11:22.455Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Grammar_and_types_62e2c9dce87eab65e4f9dd2c3158468f": {
-    "modified": "2019-01-16T16:11:27.423Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Grammar_and_types_94e75d7a4d8a473f1a4b19f9fb46fece": {
-    "modified": "2019-03-23T23:43:37.505Z",
-    "contributors": ["teoli", "panda", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Guide/Grammar_and_types_ac4b5424077ceacccdb5f069bd2192f3": {
-    "modified": "2019-01-16T16:11:23.067Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-03-12T19:42:17.394Z",
-    "contributors": [
-      "doong-jo",
-      "nmsohn",
-      "DoublSB",
-      "limkukhyun",
-      "wbamberg",
-      "cmygray",
-      "khseok1060",
-      "ryukato"
-    ]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:39:22.531Z",
-    "contributors": ["ahnzaz", "KSH-code", "Netaras", "teoli", "NFM"]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
-    "modified": "2020-03-12T19:44:13.687Z",
-    "contributors": ["limkukhyun", "hoony"]
-  },
-  "conflicting/Web/JavaScript/Reference": {
-    "modified": "2020-03-12T19:37:02.761Z",
-    "contributors": [
-      "limkukhyun",
-      "teoli",
-      "Dyhan81",
-      "Netaras",
-      "taggon",
-      "Goldmund"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects": {
-    "modified": "2020-10-15T21:52:46.647Z",
-    "contributors": ["alattalatta", "teoli", "Perlmint"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
-    "modified": "2020-10-15T22:00:47.617Z",
-    "contributors": ["alattalatta", "teoli", "KisukPark", "sonjh02"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
-    "modified": "2020-10-15T21:43:28.882Z",
-    "contributors": ["alattalatta", "noritersand"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Date": {
-    "modified": "2020-10-15T21:34:44.080Z",
-    "contributors": ["alattalatta", "Cho.Eun", "ByungChangCha", "teoli"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/InternalError": {
-    "modified": "2019-03-23T22:28:33.047Z",
-    "contributors": ["teoli", "magnoliaa"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat": {
-    "modified": "2020-10-15T22:22:06.369Z",
-    "contributors": ["fscholz", "alattalatta"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat": {
-    "modified": "2020-10-15T22:21:51.361Z",
-    "contributors": ["fscholz", "alattalatta"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:55:20.178Z",
-    "contributors": ["alattalatta", "echo304"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Number": {
-    "modified": "2020-10-15T22:10:14.861Z",
-    "contributors": ["alattalatta", "DeadIntegral"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
-    "modified": "2020-10-15T21:34:43.084Z",
-    "contributors": [
-      "zero0yes",
-      "noritersand",
-      "alattalatta",
-      "Parcovia",
-      "Netaras",
-      "DavidSunny",
-      "teoli"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
-    "modified": "2020-10-15T21:47:20.685Z",
-    "contributors": ["alattalatta", "fscholz", "Netaras"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Set": {
-    "modified": "2020-10-15T21:48:56.464Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer": {
-    "modified": "2020-10-15T22:15:02.439Z",
-    "contributors": ["cs09g"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/toString": {
-    "modified": "2020-10-15T22:02:06.022Z",
-    "contributors": ["teoli", "ejay0811"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
-    "modified": "2019-03-23T22:28:47.337Z",
-    "contributors": ["magnoliaa"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/TypedArray": {
-    "modified": "2019-03-23T22:30:03.771Z",
-    "contributors": ["Netaras"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap": {
-    "modified": "2019-03-23T22:27:54.259Z",
-    "contributors": ["Netaras"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet": {
-    "modified": "2019-03-23T22:28:07.290Z",
-    "contributors": ["Netaras"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-10-15T22:08:10.181Z",
-    "contributors": ["limkukhyun"]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators": {
-    "modified": "2020-10-15T21:50:08.581Z",
-    "contributors": [
-      "alattalatta",
-      "chimimode",
-      "fscholz",
-      "wbamberg",
-      "KSH-code",
-      "siwoolee",
-      "ChanghwaLee",
-      "imskojs"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_13aeb53e31f9cec454ca631cb162449f": {
-    "modified": "2020-10-15T21:47:31.347Z",
-    "contributors": [
-      "alattalatta",
-      "atomDevelop",
-      "r2fresh",
-      "Parcovia",
-      "gnujoow",
-      "helloheesu",
-      "imskojs"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23": {
-    "modified": "2020-10-15T21:46:03.880Z",
-    "contributors": ["alattalatta", "Parcovia", "ohsory1324", "LEGOLLAS"]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560": {
-    "modified": "2020-10-15T21:25:50.021Z",
-    "contributors": [
-      "alattalatta",
-      "jghg2724",
-      "epicsaga",
-      "daewon",
-      "teoli",
-      "Cho.Eun"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_8d54701de06af40a7c984517cbe87b3e": {
-    "modified": "2020-10-15T21:50:31.036Z",
-    "contributors": ["alattalatta", "wbamberg", "NessunKim", "daehyoung"]
-  },
-  "conflicting/Web/JavaScript/Reference/Statements/switch": {
-    "modified": "2020-10-15T22:07:33.273Z",
-    "contributors": ["alattalatta", "SSJ-unclear"]
-  },
-  "conflicting/Web/JavaScript/Reference/Strict_mode": {
-    "modified": "2020-03-12T19:48:28.686Z",
-    "contributors": ["SeonHyungJo"]
-  },
-  "conflicting/Web/Progressive_web_apps": {
-    "modified": "2019-03-18T21:20:46.007Z",
-    "contributors": ["jinah1000"]
-  },
-  "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
-    "modified": "2019-01-16T14:19:09.939Z",
-    "contributors": ["kmaglione", "Gilchris"]
-  },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2019-03-18T21:23:35.310Z",
-    "contributors": ["flat81"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2019-10-06T09:53:54.369Z",
-    "contributors": ["Eumhongin", "jisooeulee"]
-  },
-  "orphaned/How_to_Build_an_XPCOM_Component_in_Javascript": {
-    "modified": "2019-03-23T23:49:04.482Z",
-    "contributors": ["Channy", "Yookh80"]
-  },
-  "orphaned/JavaScript_C_Engine_Embedder's_Guide": {
-    "modified": "2019-03-23T23:51:52.110Z",
-    "contributors": ["teoli", "Comayjlee", "Joone"]
-  },
-  "orphaned/Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:45.510Z",
-    "contributors": ["SphinxKnight", "2oosoo", "JinSeungHo"]
-  },
-  "orphaned/MDN/About/MDN_services": {
-    "modified": "2020-12-05T03:06:45.428Z",
-    "contributors": ["movegun1027"]
-  },
-  "orphaned/MDN/Community": {
-    "modified": "2020-03-03T01:53:44.470Z",
-    "contributors": [
-      "SphinxKnight",
-      "alattalatta",
-      "wbamberg",
-      "gaucho1218",
-      "zziuni",
-      "unixforever",
-      "woojin.jo",
-      "cs09g"
-    ]
-  },
-  "orphaned/MDN/Community/Conversations": {
-    "modified": "2020-02-05T05:27:57.215Z",
-    "contributors": [
-      "SphinxKnight",
-      "alattalatta",
-      "wbamberg",
-      "jswisher",
-      "woojin.jo"
-    ]
-  },
-  "orphaned/MDN/Community/Working_in_community": {
-    "modified": "2020-09-01T05:37:50.669Z",
-    "contributors": ["junnapark"]
-  },
-  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-16T19:16:28.756Z",
-    "contributors": ["wbamberg", "chiyodad", "Junbong", "KwanHong_Lee66"]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-01-16T19:23:36.745Z",
-    "contributors": ["wbamberg", "KwanHong_Lee66"]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-03-23T22:50:43.806Z",
-    "contributors": [
-      "wbamberg",
-      "Saru",
-      "peacekimjapan",
-      "sominlee",
-      "novelview9",
-      "woojin.jo",
-      "Epikem",
-      "misol"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Document_a_CSS_property/Property_template": {
-    "modified": "2020-10-15T21:16:53.027Z",
-    "contributors": [
-      "alattalatta",
-      "wbamberg",
-      "chrisdavidmills",
-      "teoli",
-      "Pastelgrim"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2019-03-23T23:14:13.204Z",
-    "contributors": ["zziuni", "wbamberg", "KwanHong_Lee66"]
-  },
-  "orphaned/MDN/Contribute/Howto/Tag_JavaScript_pages": {
-    "modified": "2019-01-17T00:11:42.268Z",
-    "contributors": ["wbamberg", "woojin.jo"]
-  },
-  "orphaned/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web": {
-    "modified": "2020-02-28T22:23:49.633Z",
-    "contributors": ["wbamberg", "Saru", "2oosoo"]
-  },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:42:29.661Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ehgus",
-      "wbamberg",
-      "zziuni",
-      "821065887131",
-      "sominlee",
-      "Netaras",
-      "Kaben",
-      "misol"
-    ]
-  },
-  "orphaned/MDN/Editor/Links": {
-    "modified": "2020-09-30T15:42:30.015Z",
-    "contributors": ["chrisdavidmills", "honggaruy"]
-  },
-  "orphaned/MDN/Structures/API_references": {
-    "modified": "2020-09-30T12:56:35.705Z",
-    "contributors": ["chrisdavidmills", "zziuni"]
-  },
-  "orphaned/MDN/Tools/Page_regeneration": {
-    "modified": "2020-09-30T16:51:25.059Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
-  },
-  "orphaned/MDN/Yari": {
-    "modified": "2019-09-06T03:29:26.311Z",
-    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
-  },
-  "orphaned/Places/Custom_Containers": {
-    "modified": "2020-01-12T05:08:34.067Z",
-    "contributors": ["alattalatta", "wbamberg", "Jeongkyu"]
-  },
-  "orphaned/Places/Instantiating_Views": {
-    "modified": "2020-01-12T05:08:39.519Z",
-    "contributors": ["alattalatta", "wbamberg", "Jeongkyu"]
-  },
-  "orphaned/Places/Query_System": {
-    "modified": "2019-04-20T03:50:18.185Z",
-    "contributors": ["wbamberg", "teoli", "Jeongkyu"]
-  },
-  "orphaned/Places/Views": {
-    "modified": "2020-01-12T05:08:46.290Z",
-    "contributors": ["alattalatta", "wbamberg", "Jeongkyu"]
-  },
-  "orphaned/Theme_Packaging": {
-    "modified": "2019-03-23T23:42:36.273Z",
-    "contributors": ["teoli", "애들아빠"]
-  },
-  "orphaned/Tools/Add-ons": {
-    "modified": "2020-07-16T22:36:23.557Z",
-    "contributors": ["SphinxKnight", "wbamberg", "mfluehr"]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector": {
-    "modified": "2020-07-16T22:36:24.511Z",
-    "contributors": ["SphinxKnight", "wbamberg", "Sebuls"]
-  },
-  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.793Z",
-    "contributors": ["SphinxKnight", "wbamberg", "toyuq"]
-  },
-  "orphaned/Using_Mozilla_in_Testing_and_Debugging_Web_Sites": {
-    "modified": "2019-03-23T23:13:10.960Z",
-    "contributors": ["cap3618"]
-  },
-  "orphaned/Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:25:37.012Z",
-    "contributors": ["alattalatta", "Cho.Eun"]
-  },
-  "orphaned/Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:24:18.175Z",
-    "contributors": ["alattalatta", "hyeonseok"]
-  },
-  "orphaned/Web/API/Body": {
-    "modified": "2020-10-15T22:07:57.321Z",
-    "contributors": ["alattalatta", "RickBrown"]
-  },
-  "orphaned/Web/API/Body/json": {
-    "modified": "2020-10-15T22:07:55.949Z",
-    "contributors": ["ldss3sang"]
-  },
-  "orphaned/Web/API/Canvas_API/A_basic_ray-caster": {
-    "modified": "2019-05-26T05:55:24.371Z",
-    "contributors": ["alattalatta", "taggon"]
-  },
-  "orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
-    "modified": "2019-03-18T21:18:34.778Z",
-    "contributors": ["kbsbroad"]
-  },
-  "orphaned/Web/API/ChildNode": {
-    "modified": "2020-10-15T22:04:53.961Z",
-    "contributors": ["cs09g"]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2020-10-15T22:10:12.463Z",
-    "contributors": ["cs09g"]
-  },
-  "orphaned/Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:10:05.225Z",
-    "contributors": ["cs09g"]
-  },
-  "orphaned/Web/API/DOMObject": {
-    "modified": "2019-03-18T21:34:55.307Z",
-    "contributors": ["cs09g"]
-  },
-  "orphaned/Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:27:06.270Z",
-    "contributors": ["ingpdw", "PillarLee", "junho85"]
-  },
-  "orphaned/Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:11:35.284Z",
-    "contributors": ["DeadIntegral", "Sheppy"]
-  },
-  "orphaned/Web/API/Document_Object_Model/Events": {
-    "modified": "2020-12-01T12:09:06.517Z",
-    "contributors": ["dink95"]
-  },
-  "orphaned/Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:28:24.891Z",
-    "contributors": ["nugurejeil"]
-  },
-  "orphaned/Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:18:22.703Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "AshfaqHossain",
-      "teoli",
-      "Netaras"
-    ]
-  },
-  "orphaned/Web/API/GlobalEventHandlers": {
-    "modified": "2020-10-15T21:38:25.913Z",
-    "contributors": ["alattalatta", "cs09g", "jwhitlock"]
-  },
-  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-10-15T22:15:23.043Z",
-    "contributors": ["connorshea"]
-  },
-  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:56:46.705Z",
-    "contributors": ["Kaben", "alattalatta", "jyhwng", "KimSejune"]
-  },
-  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-23T23:42:52.929Z",
-    "contributors": ["fscholz", "jsx", "teoli", "Netaras"]
-  },
-  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-12-08T00:45:03.205Z",
-    "contributors": [
-      "dsma73",
-      "chrisdavidmills",
-      "alattalatta",
-      "LostCatLee",
-      "daesD",
-      "naduhy2",
-      "bingl2",
-      "nacyot",
-      "fscholz",
-      "JoonghunPark"
-    ]
-  },
-  "orphaned/Web/API/NavigatorID": {
-    "modified": "2020-10-15T22:04:17.452Z",
-    "contributors": ["fscholz", "SSJ-unclear"]
-  },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:59:32.837Z",
-    "contributors": ["alattalatta", "teoli"]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-18T21:46:11.388Z",
-    "contributors": ["yuj25"]
-  },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:59:06.261Z",
-    "contributors": ["alattalatta", "chrisdavidmills"]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:10.400Z",
-    "contributors": ["chrisdavidmills", "teoli", "Jeongkyu", "조경빈"]
-  },
-  "orphaned/Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T22:14:42.795Z",
-    "contributors": ["moonformeli"]
-  },
-  "orphaned/Web/API/ParentNode": {
-    "modified": "2020-10-15T22:08:08.618Z",
-    "contributors": ["alattalatta", "ExE-Boss"]
-  },
-  "orphaned/Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:23:54.799Z",
-    "contributors": ["ChanMyeong"]
-  },
-  "orphaned/Web/API/ParentNode/children": {
-    "modified": "2020-10-15T22:08:09.823Z",
-    "contributors": ["whdckszxxx"]
-  },
-  "orphaned/Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:19:18.906Z",
-    "contributors": ["JungSWon"]
-  },
-  "orphaned/Web/API/RTCPeerConnection/onidentityresult": {
-    "modified": "2020-10-15T22:22:07.358Z",
-    "contributors": ["chansbro"]
-  },
-  "orphaned/Web/API/WebRTC_API/adapter.js": {
-    "modified": "2020-08-14T03:48:29.087Z",
-    "contributors": ["breadfit"]
-  },
-  "orphaned/Web/API/WindowEventHandlers": {
-    "modified": "2020-10-15T21:46:21.497Z",
-    "contributors": ["alattalatta", "fscholz"]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2019-05-20T02:23:29.902Z",
-    "contributors": ["dasom0801"]
-  },
-  "orphaned/Web/CSS/Index": {
-    "modified": "2019-05-26T05:51:14.395Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:57:34.736Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta",
-      "KadirTopal",
-      "jh.Park",
-      "Sebastianz",
-      "Simplexible",
-      "wizAmit",
-      "slayslot",
-      "prayash",
-      "tamnajio",
-      "teoli",
-      "mirinae312"
-    ]
-  },
-  "orphaned/Web/Guide/Events": {
-    "modified": "2019-03-23T23:03:35.888Z",
-    "contributors": ["moolow"]
-  },
-  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-18T21:13:18.844Z",
-    "contributors": ["cs09g"]
-  },
-  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-03-23T22:48:26.046Z",
-    "contributors": ["PineMt"]
-  },
-  "orphaned/Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-24T00:11:07.419Z",
-    "contributors": [
-      "teoli",
-      "Channy",
-      "Dwchiang",
-      "vigia122",
-      "jisung",
-      "Joone"
-    ]
-  },
-  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:38:47.847Z",
-    "contributors": ["kybin", "kuil09", "juyoungbang", "teoli", "Channy"]
-  },
-  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-01-10T12:08:26.959Z",
-    "contributors": [
-      "alattalatta",
-      "sudo0272",
-      "Kaben",
-      "bombinari",
-      "naduhy2",
-      "miname"
-    ]
-  },
-  "orphaned/Web/HTML/Element/command": {
-    "modified": "2020-10-15T21:44:01.823Z",
-    "contributors": ["alattalatta", "Rich_Village"]
-  },
-  "orphaned/Web/HTML/Element/element": {
-    "modified": "2020-10-15T21:35:22.163Z",
-    "contributors": ["alattalatta", "azunyan3"]
-  },
-  "orphaned/Web/HTML/Global_attributes/dropzone": {
-    "modified": "2020-10-15T22:06:26.786Z",
-    "contributors": ["alattalatta", "dolmoon"]
-  },
-  "orphaned/Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:35:17.448Z",
-    "contributors": ["sukyology"]
-  },
-  "orphaned/Web/JavaScript/Differential_inheritance_in_JavaScript": {
-    "modified": "2020-09-14T22:22:46.677Z",
-    "contributors": ["limkukhyun"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/About": {
-    "modified": "2019-01-16T16:11:14.324Z",
-    "contributors": ["teoli", "Wafe", "taggon"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages": {
-    "modified": "2019-01-16T14:15:11.129Z",
-    "contributors": ["teoli", "99corps"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects": {
-    "modified": "2019-01-16T15:05:32.812Z",
-    "contributors": ["teoli", "Anonymous"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters": {
-    "modified": "2019-03-23T23:43:54.514Z",
-    "contributors": ["jigs12", "teoli", "ethertank", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Methods": {
-    "modified": "2019-03-23T23:43:58.661Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Properties_for_an_Object_Type": {
-    "modified": "2019-03-23T23:43:46.816Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Deleting_Properties": {
-    "modified": "2019-03-23T23:43:53.828Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Indexing_Object_Properties": {
-    "modified": "2019-03-23T23:43:44.923Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_a_Constructor_Function": {
-    "modified": "2019-03-23T23:43:44.078Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_New_Objects/Using_this_for_Object_References": {
-    "modified": "2019-03-23T23:43:58.264Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Creating_a_Regular_Expression": {
-    "modified": "2019-03-23T23:43:48.309Z",
-    "contributors": ["teoli", "디토"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Expressions": {
-    "modified": "2019-01-16T16:16:32.143Z",
-    "contributors": ["teoli", "taggon"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/JavaScript_Overview": {
-    "modified": "2019-01-16T14:15:11.648Z",
-    "contributors": [
-      "teoli",
-      "S. Kang",
-      "jsnapz",
-      "Ape1126",
-      "Wafe",
-      "Huick",
-      "Gilchris"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Objects_and_Properties": {
-    "modified": "2019-01-16T15:50:20.671Z",
-    "contributors": ["teoli", "Gilchris"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Operators": {
-    "modified": "2019-03-23T23:41:51.754Z",
-    "contributors": ["teoli", "taggon"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Operators/Assignment_Operators": {
-    "modified": "2019-03-23T23:41:53.669Z",
-    "contributors": ["teoli", "taggon"]
-  },
-  "orphaned/Web/JavaScript/Guide/Obsolete_Pages/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Array_Object": {
-    "modified": "2019-03-23T23:43:56.661Z",
-    "contributors": ["teoli", "Wafe"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
-    "modified": "2020-10-15T22:12:31.982Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:50:09.238Z",
-    "contributors": [
-      "Chloe-HyunJoo",
-      "alattalatta",
-      "younghoh",
-      "KaironMoon",
-      "echo304",
-      "dragmove"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T22:04:19.848Z",
-    "contributors": ["Seok.Heo"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map": {
-    "modified": "2020-10-15T22:26:33.491Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:09:01.449Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:09:03.155Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T22:09:02.936Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T22:20:31.940Z",
-    "contributors": ["JaeWorld"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:15:40.628Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:15:44.379Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:15:44.384Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:04:26.274Z",
-    "contributors": ["Gren", "Seok.Heo"]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:15:31.566Z",
-    "contributors": ["alattalatta"]
-  },
-  "orphaned/Web/Reference": {
-    "modified": "2019-03-23T23:28:22.951Z",
-    "contributors": [
-      "DeadIntegral",
-      "jarangseo",
-      "eyekorea",
-      "LimeClover",
-      "Channy",
-      "hyeonseok",
-      "narae_lee"
-    ]
-  },
-  "orphaned/Web/Reference/API": {
-    "modified": "2019-03-23T23:23:26.342Z",
-    "contributors": ["Netaras", "tamnajio", "Channy"]
-  },
-  "orphaned/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-23T23:41:45.344Z",
-    "contributors": ["teoli", "Cliffet", "taggon"]
-  },
-  "orphaned/Web/Security/Information_Security_Basics": {
-    "modified": "2019-03-23T22:05:46.762Z",
-    "contributors": ["daebum-lee"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor": {
-    "modified": "2019-03-23T23:41:51.868Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-03-23T23:41:53.193Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:16:10.374Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:16:18.107Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:16:11.286Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:16:11.121Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:16:17.035Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:16:13.970Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/namespace": {
-    "modified": "2019-03-23T23:41:52.884Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:16:10.076Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:16:13.085Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:16:15.097Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/Web/XPath/Axes/self": {
-    "modified": "2019-01-16T16:16:15.156Z",
-    "contributors": ["ExE-Boss", "teoli", "Netaras"]
-  },
-  "orphaned/WebAssembly/Caching_modules": {
-    "modified": "2019-03-18T21:26:57.835Z",
-    "contributors": ["limkukhyun"]
-  },
-  "orphaned/Windows_and_menus_in_XULRunner": {
-    "modified": "2019-01-16T15:50:48.799Z",
-    "contributors": ["Channy"]
-  },
-  "orphaned/지역의_코드를_씁니다.": {
-    "modified": "2019-01-16T14:36:32.523Z",
-    "contributors": ["wkdqudso"]
-  },
-  "orphaned/확장기능_개발_환경_구축": {
-    "modified": "2019-03-24T00:02:16.151Z",
-    "contributors": ["teoli", "kladess"]
   }
 }

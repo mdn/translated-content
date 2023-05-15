@@ -28,7 +28,7 @@ slug: Web/API/Page_Visibility_API
 
 ### 制定有助于后台页面性能的策略
 
-在页面可见性 API 之外，用户代理会采取许多策略来减轻背景或隐藏选项卡对性能的影响。这些可能包括：
+在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏选项卡对性能的影响。这些可能包括：
 
 - 大多数浏览器不会调用被隐藏的标签页或{{ HTMLElement("iframe") }}框架当中{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}定义的回调函数，这会提升性能并且延长电池的使用寿命。
 - 在后台标签页或不活跃的标签页中 {{domxref("setTimeout()")}} 等定时器会受到一定的限制以提升性能。参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。

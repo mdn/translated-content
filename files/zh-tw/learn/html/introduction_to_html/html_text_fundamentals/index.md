@@ -62,15 +62,22 @@ HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...
+</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
-<p>Our protagonist could not so much as a whisper out of the shadowy figure ...</p>
+<p>
+  Our protagonist could not so much as a whisper out of the shadowy figure ...
+</p>
 
 <h3>The specter speaks</h3>
 
-<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
 ```
 
 只要層次結構有意義，要一個元件顯示什麼取決於你。當你在建立類似的文字結構時，只要記得以下幾點：
@@ -105,19 +112,22 @@ If you make a mistake, you can always reset it using the _Reset_ button. 如果�
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">My short story I am a policewoman and my name is Trish.
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+My short story I am a policewoman and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea>
+My legs are made of cardboard and I am married to a fish.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -144,10 +154,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -155,38 +165,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>My short story</h1>\n<p>I am a policewoman and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
+var htmlSolution =
+  "<h1>My short story</h1>\n<p>I am a policewoman and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -198,8 +209,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -210,10 +224,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -240,7 +254,9 @@ By default, the browser will give it a large font size to make it look like a he
 On the other hand, you could make any element _look_ like a top level heading. Consider the following:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0; display: block;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0; display: block;"
+  >Is this a top level heading?</span
+>
 ```
 
 This is a {{htmlelement("span")}} element. It has no semantics. You use it to wrap content when you want to apply CSS to it (or do something to it with JavaScript) without giving it any extra meaning (you'll find out more about these later on in the course). We've applied some CSS to it to make it look like a top level heading, but since it has no semantic value, it will not get any of the extra benefits described above. It is a good idea to use the relevant HTML element for the job.
@@ -264,10 +280,7 @@ Every unordered list starts off with a {{htmlelement("ul")}} element — this wr
 
 ```html
 <ul>
-milk
-eggs
-bread
-hummus
+  milk eggs bread hummus
 </ul>
 ```
 
@@ -289,20 +302,23 @@ Try editing the live sample below to create your very own HTML unordered list.
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">milk
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+milk
 eggs
 bread
-hummus</textarea>
+hummus</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -329,10 +345,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -340,38 +356,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
+var htmlSolution =
+  "<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -383,8 +400,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -395,10 +415,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -441,21 +461,24 @@ Try editing the live sample below to create your very own HTML ordered list.
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Drive to the end of the road
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea>
+The school is on your right, 300 meters up the road</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -482,10 +505,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -493,38 +516,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
+var htmlSolution =
+  "<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -536,8 +560,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -548,10 +575,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -570,13 +597,15 @@ So at this point in the article, you have all the information you need to mark u
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Quick hummus recipe
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Quick hummus recipe
 
   This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
 
@@ -607,11 +636,12 @@ So at this point in the article, you have all the information you need to mark u
 
   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
+  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -638,10 +668,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -649,38 +679,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
+var htmlSolution =
+  '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -692,8 +723,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -704,10 +738,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -743,9 +777,12 @@ Since the last two bullets are very closely related to the one before them (they
   <li>Remove the skin from the garlic, and chop coarsely.</li>
   <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
   <li>Add all the ingredients into a food processor.</li>
-  <li>Process all the ingredients into a paste.
+  <li>
+    Process all the ingredients into a paste.
     <ul>
-      <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+      <li>
+        If you want a coarse "chunky" hummus, process it for a short time.
+      </li>
       <li>If you want a smooth hummus, process it for a longer time.</li>
     </ul>
   </li>
@@ -793,8 +830,11 @@ In HTML we use the {{htmlelement("strong")}} (strong importance) element to mark
 You can nest strong and emphasis inside one another if desired:
 
 ```html
-<p>This liquid is <strong>highly toxic</strong> —
-if you drink it, <strong>you may <em>die</em></strong>.</p>
+<p>
+  This liquid is <strong>highly toxic</strong> — if you drink it,
+  <strong>you may <em>die</em></strong
+  >.
+</p>
 ```
 
 ### Active learning: Let's be important
@@ -804,24 +844,27 @@ In this active learning section, we have provided an editable example. Inside it
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Important notice</h1>
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>Important notice</h1>
 <p>On Sunday January 9th 2010, a gang of goths were
   spotted stealing several garden gnomes from a
   shopping center in downtown Milwaukee. They were
   all wearing green jumpsuits and silly hats, and
   seemed to be having a whale of a time. If anyone
    has any information about this incident, please
-    contact the police now.</p></textarea>
+    contact the police now.</p></textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -848,10 +891,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -859,38 +902,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
+var htmlSolution =
+  "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -902,8 +946,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -914,10 +961,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -946,8 +993,8 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 ```html
 <!-- scientific names -->
 <p>
-  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>)
-  is the most common hummingbird in Eastern North America.
+  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+  hummingbird in Eastern North America.
 </p>
 
 <!-- foreign words -->
@@ -958,17 +1005,19 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 
 <!-- a known misspelling -->
 <p>
-  Someday I'll learn how to <u style="text-decoration-line: underline; text-decoration-style: wavy;">spel</u> better.
+  Someday I'll learn how to
+  <u style="text-decoration-line: underline; text-decoration-style: wavy;"
+    >spel</u
+  >
+  better.
 </p>
 
 <!-- Highlight keywords in a set of instructions -->
 <ol>
+  <li><b>Slice</b> two pieces of bread off the loaf.</li>
   <li>
-    <b>Slice</b> two pieces of bread off the loaf.
-  </li>
-  <li>
-    <b>Insert</b> a tomato slice and a leaf of
-    lettuce between the slices of bread.
+    <b>Insert</b> a tomato slice and a leaf of lettuce between the slices of
+    bread.
   </li>
 </ol>
 ```

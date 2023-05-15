@@ -91,46 +91,18 @@ yarn global add @vue/cli
 
 為了探索 Vue 各式各樣的功能，我們將會製作一個待辦事項應用程式。我們將使用 Vue CLI 來創造一個新專案框架來建構我們的應用程式。請跟著以下步驟：
 
-1. 在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue` 。
-2. 使用方向鍵以及
+1. 在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue`。
+2. 使用方向鍵以及 <kbd>Enter</kbd> 鍵，選擇「Manually select features」
 
-    <kbd>Enter</kbd>
+3. 第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「Babel」和「Linter / Formatter」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下 <kbd>Enter</kbd> 鍵進行下一步。
 
-    鍵，選擇「 Manually select features 」
+4. 接下來，你要選擇 linter / formatter 的設定。切換到「Eslint with error prevention only」然後按下 <kbd>Enter</kbd>。這個設定會進行報錯提醒，但不會強制你修改。
 
-3. 第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「 Babel 」和「 Linter / Formatter 」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下
+5. 然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「Lint on save」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下 <kbd>Enter</kbd> 鍵進行下一步。
 
-    <kbd>Enter</kbd>
+6. 現在，你將要選擇如何管理你的組態檔案。「In dedicated config files」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「In package.json」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「In dedicated config files」然後按下 <kbd>Enter</kbd>。
 
-    鍵進行下一步。
-
-4. 接下來，你要選擇 linter / formatter 的設定。切換到「 Eslint with error prevention only 」然後按下
-
-    <kbd>Enter</kbd>
-
-    。這個設定會進行報錯提醒，但不會強制你修改。
-
-5. 然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「 Lint on save 」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下
-
-    <kbd>Enter</kbd>
-
-    鍵進行下一步。
-
-6. 現在，你將要選擇如何管理你的組態檔案。「 In dedicated config files 」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「 In package.json 」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「 In dedicated config files 」然後按下
-
-    <kbd>Enter</kbd>
-
-    。
-
-7. 最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下
-
-    <kbd>y</kbd>
-
-    ， 否則按
-
-    <kbd>n</kbd>
-
-    。
+7. 最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下 <kbd>y</kbd>，否則按 <kbd>n</kbd> 。
 
 CLI 會開始建構你的專案，並且安裝所需的相依套件。
 
@@ -184,14 +156,14 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 以 `App.vue` 為例，我們設定元件的名稱為 `App` ，並且在 `components` 屬性中加入 `HelloWorld` 來註冊這個元件。以這種方式來註冊元件是本地註冊。本地註冊的元件只能在註冊它們的元件裡面使用，所以你需要在每個使用它們的元件檔案裡匯入並且註冊它們。這對於 bundle splitting/tree shaking 很有用，因為在應用程式裡不是每一頁都需要所有的元件。
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // 你可以在這裡註冊元件
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -230,7 +202,7 @@ INFO  Starting development server...
 現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Element/img) 元素：
 
 ```html
-<img alt="Vue logo" src="./assets/logo.png">
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
 如果你的伺服器仍在正常運行，你應該可以看到 logo 幾乎即時地從渲染頁面裡移除。接下來，我們再把 `HelloWorld` 從模板裡移除。
@@ -238,7 +210,7 @@ INFO  Starting development server...
 首先刪除以下這行：
 
 ```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
 這時如果你儲存 `App.vue` 檔案，渲染的應用程式會拋出一個錯誤，因為我們註冊了元件但是沒有使用它。所以我們必須移除在 `<script>` 元素裡面用來匯入及註冊元件的程式碼：
@@ -246,12 +218,12 @@ INFO  Starting development server...
 現在刪除以下這幾行：
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

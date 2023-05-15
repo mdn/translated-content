@@ -73,7 +73,11 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
 </table>
 ```
 
-Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Element/th#attr-scope), [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), etc. Malheureusement, son apparence n'est pas terrible à l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
+### Résultat
+
+{{EmbedLiveSample('','100%','330')}}
+
+Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Element/th#attr-scope), [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), etc. Malheureusement, son apparence n'est pas assez bonne sur l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
 
 ![](table-unstyled.png)
 
@@ -298,25 +302,3 @@ Nous voici à la fin de cet article, mais avez-vous mémorisé les informations 
 Maintenant que le sujet de la mise en forme des tableaux est réglé, voyons ce qui peut nous occuper ensuite. Dans le prochain article, nous verrons [le débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS) et comment résoudre des problèmes comme des dispositions qui n'ont pas l'aspect voulu ou des propriétés qui ne s'appliquent pas comme on le voudrait. Ce prochain guide contient des informations sur l'utilisation des outils de développement des navigateurs pour trouver des solutions à ces problèmes.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-- [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-  - [Sélecteurs de type, de classe et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinateur](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-- [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Gérer les différentes directions du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Dimensionner les objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Éléments pour les images, les médias, et les formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- Mettre en forme les tableaux
-- [Déboguer le CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organiser son CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)
-- [Compréhension des notions fondamentales de CSS](/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Créer une lettre à en-tête classe](/fr/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [Une boîte qui en impose](/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

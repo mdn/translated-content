@@ -764,17 +764,3 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

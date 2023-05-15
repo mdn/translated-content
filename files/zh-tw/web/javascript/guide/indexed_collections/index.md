@@ -462,7 +462,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 ## Typed Arrays
 
-[JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/zh-TW/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
+[JavaScript typed arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays) are array-like objects and provide a mechanism for accessing raw binary data. As you already know, {{jsxref("Array")}} objects grow and shrink dynamically and can have any JavaScript value. JavaScript engines perform optimizations so that these arrays are fast. However, as web applications become more and more powerful, adding features such as audio and video manipulation, access to raw data using [WebSockets](/zh-TW/docs/WebSockets), and so forth, it has become clear that there are times when it would be helpful for JavaScript code to be able to quickly and easily manipulate raw binary data in typed arrays.
 
 ### Buffers and views: typed array architecture
 

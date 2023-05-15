@@ -31,7 +31,7 @@ _AbortSignal 인터페이스는 부모인 {{domxref("EventTarget")}}로부터 �
 
 먼저 {{domxref("AbortController.AbortController","AbortController()")}} 생성자를 사용해 컨트롤러를 {{domxref("AbortController.signal")}} 프로퍼티를 사용해 {{domxref("AbortSignal")}} 객체와 관계된 참조를 얻습니다.
 
-[Fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달합니다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게 합니다.
+[Fetch 요청](/ko/docs/Web/API/fetch)을 시작할 때, 요청의 옵션 객체 내부에 `AbortSignal` 옵션을 전달합니다(아래의 `{signal}` 참고). 이것은 신호와 컨트롤러를 fetch 요청과 관계짓고, 아래의 두 번째 이벤트 리스너에서 보여주듯이 {{domxref("AbortController.abort()")}}를 호출하여 이를 취소할 수 있게 합니다.
 
 ```js
 var controller = new AbortController();

@@ -362,13 +362,3 @@ Vous pouvez toutefois vous assurer qu'une telle application présente un contras
 Ce chapitre présente un résumé des problèmes d’accessibilité des contenus multimédias, ainsi que des solutions pratiques.
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## Dans ce module
-
-- [Qu'est ce que l'accessibilité?](/fr/docs/Apprendre/a11y/What_is_accessibility)
-- [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)
-- [CSS and JavaScript accessibility best practices](/fr/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/fr/docs/Apprendre/a11y/Multimedia)
-- [Mobile accessibility](/fr/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/fr/docs/Learn/Accessibility/Accessibility_troubleshooting)

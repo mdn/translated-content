@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 5: Creating our home page'
+title: "Django Tutorial Part 5: Creating our home page"
 slug: Learn/Server-side/Django/Home_page
 ---
 
@@ -168,17 +168,22 @@ def index(request):
 
 > **備註：** 模板*tags* 類似於可以在模板中使用的功能，可以在模板中循環使用列表，基於變量的值執行條件操作等。除了模板標記之外，模板語法還允許您引用模板變量（傳遞給 模板），並使用*template filters*，該過濾器可重新格式化變量（例如，將字符串設置為小寫）。
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
-
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <head>
+    {% block title %}
+      <title>Local Library</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block sidebar %}
+      <!-- insert default navigation text for every page -->
+    {% endblock %}
+    {% block content %}
+      <!-- default content text (typically empty) -->
+    {% endblock %}
+  </body>
 </html>
 ```
 
@@ -186,66 +191,73 @@ def index(request):
 
 例如，下面的代碼片段顯示了我們如何使用`extends` 模板標籤並覆蓋`content` 區塊。 生成的最終 HTML 將具有基本模板中定義的所有 HTML 和結構（包括您在`title` 區塊中定義的默認內容），但是將新的`content` 區塊插入到默認模板中。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
 {% endblock %}
 ```
 
 #### The LocalLibrary base template
 
-下面列出了我們計劃用於*LocalLibrary* 網站的基本模板。 如您所見，其中包含一些 HTML 以及 `title`, `sidebar`, 和 `content`。 我們有一個默認標題（我們可能想要更改）和一個默認側邊欄，其中帶有指向所有書籍和作者列表的鏈接（我們可能不想更改，但是如果需要的話，我們允許範圍通過將其放在 在一個區塊中）。
+下面列出了我們計劃用於 _LocalLibrary_ 網站的基本模板。 如您所見，其中包含一些 HTML 以及 `title`、`sidebar` 和 `content`。 我們有一個默認標題（我們可能想要更改）和一個默認側邊欄，其中帶有指向所有書籍和作者列表的鏈接（我們可能不想更改，但是如果需要的話，我們允許範圍通過將其放在一個區塊中）。
 
-> **備註：** 我們還引入了兩個附加的模板標籤：`url` 和`load static`。 這些將在以下各節中討論。
+> **備註：** 我們還引入了兩個附加的模板標籤：`url` 和`load static`。這些將在以下各節中討論。
 
-創建一個新文件**/locallibrary/catalog/templates/_base_generic.html_** ，並為其提供以下內容：
+創建一個新文件 **/locallibrary/catalog/templates/_base_generic.html_**，並為其提供以下內容：
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <head>
+    {% block title %}
+    <title>Local Library</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
 
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-      <ul class="sidebar-nav">
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="">All books</a></li>
-        <li><a href="">All authors</a></li>
-      </ul>
-     {% endblock %}
-      </div>
-      <div class="col-sm-10 ">
-      {% block content %}{% endblock %}
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+          <ul class="sidebar-nav">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="">All books</a></li>
+            <li><a href="">All authors</a></li>
+          </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
-該模板包括來自[Bootstrap](http://getbootstrap.com/)的 CSS，以改進 HTML 頁面的佈局和表示方式。 使用 Bootstrap 或其他客戶端 Web 框架是創建吸引人的頁面的快速方法，該頁面可以在不同的瀏覽器大小上很好地擴展。
+該模板包括來自 [Bootstrap](https://getbootstrap.com/) 的 CSS，以改進 HTML 頁面的佈局和表示方式。 使用 Bootstrap 或其他客戶端 Web 框架是創建吸引人的頁面的快速方法，該頁面可以在不同的瀏覽器大小上很好地擴展。
 
 基本模板還引用了本地 CSS 文件 (**styles.css**) ，該文件提供了一些其他樣式。 創建 **/locallibrary/catalog/static/css/styles.css**並為其提供以下內容：
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -253,13 +265,15 @@ def index(request):
 
 創建 HTML 文件 **/locallibrary/catalog/templates/_index.html_** 並為其提供以下內容。 如您所見，我們在第一行中擴展了基本模板，然後使用該模板的新內容塊替換默認`content` 區塊。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
-
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
   <ul>
@@ -294,17 +308,20 @@ return render(request, 'index.html', context=context)
 
 在模板中，您首先調用指定為“ static”的`load` 模板標籤以添加此模板庫（如下所示）。 加載靜態文件後，您可以使用`static` 模板標籤，指定感興趣文件的相對 URL。
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 如果需要，您可以以相同的方式將圖像添加到頁面中。 例如：
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
 > **備註：** 上面的更改指定了文件的位置，但是 Django 默認不提供文件。創建網站框架時 ([created the website skeleton](/zh-TW/docs/Learn/Server-side/Django/skeleton_website))，雖然我們在全局 URL 映射器(**/locallibrary/locallibrary/urls.py**)中啟用了由開發 Web 服務器提供的服務，但您仍需要安排它們在生產中提供。 我們待會再看。
@@ -335,7 +352,7 @@ return render(request, 'index.html', context=context)
 
 1. LocalLibrary [base template](#The_LocalLibrary_base_template) 已定義`title` 欄。 在 [index template](#The_index_template)中覆蓋此塊並為頁面創建一些新標題。
 
-    > **備註：** [Extending templates](#Extending_templates) 部分介紹瞭如何創建塊並將其擴展到另一個模板中。
+   > **備註：** [Extending templates](#Extending_templates) 部分介紹瞭如何創建塊並將其擴展到另一個模板中。
 
 2. 修改 [view](<#View_(function-based)>)以生成包含特定單詞（不區分大小寫）的流派計數和書籍計數，並將其傳遞給`context` （這與我們創建並使用`num_books` 和`num_instances_available`的方式大致相同）。 然後更新 [index template](#The_index_template) 以使用這些變量。
 

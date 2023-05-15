@@ -32,7 +32,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `type` {{optional_inline}}
       - : 该属性控制正在处理的可读类型的流。如果它包含一个设置为 `bytes` 的值，则传递的控制器对象将是一个 {{domxref("ReadableByteStreamController")}}，能够处理 BYOB（带你自己的缓冲区）/字节流。如果未包含，则传递的控制器将为 {{domxref("ReadableStreamDefaultController")}}。
     - `autoAllocateChunkSize` {{optional_inline}}
-      - : 对于字节流，开发人员可以使用正整数值设置 `autoAllocateChunkSize` 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的 {{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用 BYOB 阅读器一样。
+      - : 对于字节流，开发人员可以使用正整数值设置 `autoAllocateChunkSize` 以打开流的自动分配功能。启用此功能后，流实现将自动分配一个具有给定整数大小的 {{domxref("ArrayBuffer")}}，并调用底层源代码，就好像消费者正在使用 BYOB reader 一样。
 
 - `queuingStrategy` {{optional_inline}}
 
@@ -41,7 +41,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
     - `highWaterMark`
       - : 非负整数 - 这定义了在应用背压之前可以包含在内部队列中的块的总数。
     - `size(chunk)`
-      - : 包含参数 `chunk` 的方法 - 这表示每个分块使用的大小（以字节为单位）。
+      - : 包含参数 `chunk` 的方法——这表示每个分块使用的大小（以字节为单位）。
 
     > **备注：** 你可以自定义 `queuingStrategy`，或者使用 {{domxref("ByteLengthQueueingStrategy")}} 或 {{domxref("CountQueueingStrategy")}} 的示例作为对象的值。如果 没有提供 `queuingStrategy`，则默认值与 highWaterMark 为 1 的 `CountQueuingStrategy` 相同。
 

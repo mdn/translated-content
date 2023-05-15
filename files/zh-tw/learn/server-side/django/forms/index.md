@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 9: Working with forms'
+title: "Django Tutorial Part 9: Working with forms"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -53,9 +53,13 @@ slug: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -84,17 +88,17 @@ Django 的表單處理使用了我們在以前的教程中學到的所有相同�
 
 1. 在用戶第一次請求時顯示默認表單。
 
-    - 該表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能會預先填充有初始值（例如，如果您正在更改記錄或具有有用的默認初始值）。
-    - 由於此表單與任何用戶輸入的數據均不相關（儘管它可能具有初始值），因此在這一點上被稱為未綁定。
+   - 該表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能會預先填充有初始值（例如，如果您正在更改記錄或具有有用的默認初始值）。
+   - 由於此表單與任何用戶輸入的數據均不相關（儘管它可能具有初始值），因此在這一點上被稱為未綁定。
 
 2. 從提交請求中接收數據並將其綁定到表單。
 
-    - 將數據綁定到表單意味著當我們需要重新顯示表單時，用戶輸入的數據和任何錯誤均可用。
+   - 將數據綁定到表單意味著當我們需要重新顯示表單時，用戶輸入的數據和任何錯誤均可用。
 
 3. 清理並驗證數據。
 
-    - 清理數據會對輸入執行清理操作（例如，刪除可能用於向服務器發送惡意內容的無效字符），並將其轉換為一致的 Python 類型。
-    - 驗證會檢查該值是否適合該字段（例如，日期範圍正確，時間不要太短或太長等）
+   - 清理數據會對輸入執行清理操作（例如，刪除可能用於向服務器發送惡意內容的無效字符），並將其轉換為一致的 Python 類型。
+   - 驗證會檢查該值是否適合該字段（例如，日期範圍正確，時間不要太短或太長等）
 
 4. 如果任何數據無效，則這次重新顯示該表單，其中包含用戶填充的所有值和問題字段的錯誤消息。
 5. 如果所有數據均有效，請執行所需的操作（例如，保存數據，發送和發送電子郵件，返回搜索結果，上傳文件等）
@@ -344,7 +348,7 @@ def renew_book_librarian(request, pk):
 
 Create the template referenced in the view (**/catalog/templates/catalog/book_renew_librarian.html**) and copy the code below into it:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
@@ -375,9 +379,16 @@ All that's left is the `\{{form}}` template variable, which we passed to the tem
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -389,14 +400,21 @@ If you were to enter an invalid date, you'd additionally get a list of the error
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -418,8 +436,8 @@ For more examples of how to manually render forms in templates and dynamically l
 
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>{% endif %}
 ```
 
 > **備註：** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
@@ -539,31 +557,29 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 
 ### Templates
 
-The "create" and "update" views use the same template by default, which will be named after your model: **model_name\_form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, e.g. `template_name_suffix = '_other_suffix'`)
+The "create" and "update" views use the same template by default, which will be named after your model: **model_name_form.html** (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, e.g. `template_name_suffix = '_other_suffix'`)
 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
 <form action="" method="post">
-    {% csrf_token %}
-    <table>
+  {% csrf_token %}
+  <table>
     \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit" />
-
+  </table>
+  <input type="submit" value="Submit" />
 </form>
 {% endblock %}
 ```
 
 This is similar to our previous forms, and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the **format model_name\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
+The "delete" view expects to find a template named with the **format model_name_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -574,7 +590,7 @@ The "delete" view expects to find a template named with the **format model_name\
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
+  <input type="submit" value="Yes, delete." />
 </form>
 
 {% endblock %}

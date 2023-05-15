@@ -9,7 +9,7 @@ l10n:
 
 **`language`** は {{domxref("TextTrack")}} インターフェイスの読み取り専用プロパティで、このテキストトラックの言語を返します。
 
-これは HTML の {{htmlattrxref("lang")}} 属性と同じ値を使用します。これらの値は {{RFC(5646, "Tags for Identifying Languages (BCP 47 とも)")}} で文書化されています。
+これは HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性と同じ値を使用します。これらの値は {{RFC(5646, "Tags for Identifying Languages (BCP 47 とも)")}} で文書化されています。
 
 ## 値
 

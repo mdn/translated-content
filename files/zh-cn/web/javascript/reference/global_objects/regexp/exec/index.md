@@ -31,7 +31,7 @@ exec(str)
 - `input`
   - : 匹配的原始字符串。
 - `groups`
-  - : 一个命名捕获组对象，其键是名称，值是捕获组。若没有定义命名捕获组，则 `groups` 的值为 {{jsxref("undefined")}}。参阅[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences)以了解更多信息。
+  - : 一个命名捕获组对象，其键是名称，值是捕获组。若没有定义命名捕获组，则 `groups` 的值为 {{jsxref("undefined")}}。参阅[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)以了解更多信息。
 - `indices` {{optional_inline}}
   - : 此属性仅在设置了 [`d`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) 标志位时存在。它是一个数组，其中每一个元素表示一个子字符串的边界。每个子字符串匹配本身就是一个数组，其中第一个元素表示起始索引，第二个元素表示结束索引。
 
@@ -77,7 +77,7 @@ const result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 
 ### 查找所有匹配
 
-当正则表达式设置 [`g`](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#通过标志进行高级搜索) 标志位时，可以多次执行 `exec` 方法来查找同一个字符串中的成功匹配。当你这样做时，查找将从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性指定的位置开始。（{{jsxref("RegExp.test", "test()")}} 也会更新 `lastIndex` 属性）。注意，即使再次查找的字符串不是原查找字符串时，{{jsxref("RegExp.lastIndex", "lastIndex")}} 也不会被重置，它依旧会从记录的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 开始。
+当正则表达式设置 [`g`](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索) 标志位时，可以多次执行 `exec` 方法来查找同一个字符串中的成功匹配。当你这样做时，查找将从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性指定的位置开始。（{{jsxref("RegExp.test", "test()")}} 也会更新 `lastIndex` 属性）。注意，即使再次查找的字符串不是原查找字符串时，{{jsxref("RegExp.lastIndex", "lastIndex")}} 也不会被重置，它依旧会从记录的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 开始。
 
 例如，你使用下面的脚本：
 
@@ -102,7 +102,7 @@ Found ab. Next match starts at 9
 > **警告：** 以下情况会导致匹配变成一个无限循环！
 >
 > - 不要把正则表达式字面量（或者 {{jsxref("RegExp")}} 构造函数）放在 `while` 条件表达式里。由于每次迭代时 {{jsxref("RegExp.lastIndex", "lastIndex")}} 的属性都被重置。
-> - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)，否则 `lastIndex` 不会被更新。
+> - 请确保设置了[全局（`g`）标志位](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)，否则 `lastIndex` 不会被更新。
 > - 如果正则表达式可以匹配长度为零的字符（例如：`/^/gm`），请手动递增 {{jsxref("RegExp.lastIndex", "lastIndex")}}，以避免其始终卡在相同的位置。
 
 你也可以将这类的代码替换为 {{jsxref("String.prototype.matchAll()")}} 以降低出错的可能性。
@@ -128,5 +128,5 @@ console.log(matches[1]);
 
 ## 参见
 
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)章节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)章节
 - {{jsxref("RegExp")}}

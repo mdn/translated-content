@@ -15,9 +15,9 @@ slug: Web/CSS/Media_Queries
 
 [HTML](/ja/docs/Web/HTML) でも、メディアクエリーは様々な要素に適用することができます。
 
-- {{HTMLElement("link")}} 要素の {{htmlattrxref("media", "link")}} 属性では、リンクされたリソース (ふつうは CSS) が適用されるメディアを定義します。
-- {{HTMLElement("source")}} 要素の {{htmlattrxref("media", "source")}} 属性では、ソースが適用されるメディアを定義します。 (これは {{HTMLElement("picture")}} 要素内でのみ有効です。)
-- {{HTMLElement("style")}} 要素の {{htmlattrxref("media", "style")}} 属性では、スタイルが適用されるメディアを定義します。
+- {{HTMLElement("link")}} 要素の [`media`](/ja/docs/Web/HTML/Element/link#media) 属性では、リンクされたリソース (ふつうは CSS) が適用されるメディアを定義します。
+- {{HTMLElement("source")}} 要素の [`media`](/ja/docs/Web/HTML/Element/source#media) 属性では、ソースが適用されるメディアを定義します。 (これは {{HTMLElement("picture")}} 要素内でのみ有効です。)
+- {{HTMLElement("style")}} 要素の [`media`](/ja/docs/Web/HTML/Element/style#media) 属性では、スタイルが適用されるメディアを定義します。
 
 ### JavaScript でのメディアクエリー
 

@@ -48,7 +48,7 @@ slug: Web/HTML/Element/div
 
 > **备注：** `align` 属性已废弃；不要再使用它了。你应当使用 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [CSS Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来对齐、定位页面上的 `<div>` 元素。
 
-## 使用备注
+## 使用说明
 
 - `<div>` 元素应当仅在没有任何其他语义元素（比如 {{HTMLElement("article")}} 或 {{HTMLElement("nav")}}）可用时使用。
 

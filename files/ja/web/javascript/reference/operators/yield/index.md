@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 ```
 
 - `expression` {{optional_inline}}
-  - : [反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
+  - : [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
 - `rv` {{optional_inline}}
   - : ジェネレーターの実行を再開する `next()` メソッドに渡したオプションの値を受け取ります。
 
@@ -56,7 +56,7 @@ function* countAppleSales () {
 }
 ```
 
-ジェネレーター関数が定義されると、ご覧のように反復子を構築するために使用されます。
+ジェネレーター関数が定義されると、ご覧のようにイテレーターを構築するために使用されます。
 
 ```js
 let appleStore = countAppleSales()  // Generator { }

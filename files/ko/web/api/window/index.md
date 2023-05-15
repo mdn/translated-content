@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 6e1fe83cb73ee673d811225df496e5795d112d0c
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{APIRef("DOM")}}
@@ -23,6 +23,8 @@ l10n:
 
 {{domxref("EventTarget")}} 인터페이스의 속성을 상속합니다.
 
+- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+  - : 현재 컨텍스트와 연관된 {{domxref("CacheStorage")}} 객체를 반환합니다. `CacheStorage`는 오프라인에서의 사용을 위한 자산 저장과, 요청에 대한 사용자 정의 응답을 생성할 때 사용할 수 있습니다.
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : {{domxref("Window.navigator")}}의 별칭입니다.
 - {{domxref("Window.closed")}} {{readOnlyInline}}
@@ -31,10 +33,10 @@ l10n:
   - : 브라우저 디버깅 콘솔에 접근할 수 있는 콘솔 객체를 반환합니다.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 현재 문서가 자격 증명 없는 {{htmlelement("iframe")}} 내에서 불러와졌는지 나타내는 불리언입니다. [IFrame credentialless](/ko/docs/Web/Security/IFrame_credentialless)에서 자세한 정보를 확인하세요.
-- {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 등록하거나, 이전에 등록한 요소에 대한 정보를 얻을 수 있는 {{domxref("CustomElementRegistry")}} 객체를 반환합니다.
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : 브라우저 암호화 객체를 반환합니다.
+- {{domxref("Window.customElements")}} {{ReadOnlyInline}}
+  - : 새로운 [사용자 정의 요소](/ko/docs/Web/Web_Components/Using_custom_elements)를 등록하거나 이전에 등록한 요소에 대한 정보를 얻을 수 있는, {{domxref("CustomElementRegistry")}} 객체의 참조를 반환합니다.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
   - : 현재 화면에서의 물리적 픽셀과 CSS 픽셀의 비율을 반환합니다.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
@@ -47,11 +49,13 @@ l10n:
   - : 현재 창을 전체 화면으로 보여주고 있는지 나타냅니다.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : {{domxref("History")}} 객체 참조를 반환합니다.
+- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+  - : 인덱싱된 데이터베이스로의 비동기적 접근 기능을 제공하는 {{domxref("IDBFactory")}} 객체를 반환합니다.
 - {{domxref("Window.innerHeight")}} {{readOnlyInline}}
   - : 브라우저 창의 콘텐츠 영역 높이를 반환합니다. 수평 스크롤바가 존재하면 그 높이도 포함합니다.
 - {{domxref("Window.innerWidth")}} {{readOnlyInline}}
   - : 브라우저 창의 콘텐츠 영역 너비를 반환합니다. 수직 스크롤바가 존재하면 그 높이도 포함합니다.
-- {{domxref("isSecureContext")}} {{experimental_inline}} {{readOnlyInline}}
+- {{domxref("isSecureContext", "Window.isSecureContext")}} {{readOnlyInline}}
   - : 현재 컨텍스트가 안전한지 (`true`) 안전하지 않은지 (`false`) 나타내는 불리언을 반환합니다.
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : [PWA](/ko/docs/Web/Progressive_web_apps)에서, [`launch_handler`](/ko/docs/Web/Manifest/launch_handler) `client_mode`의 값이 `focus-existing`, `navigate-new`, `navigate-existing` 중 하나라면, `launchQueue`는 {{domxref("LaunchQueue")}} 클래스로의 접근을 제공합니다. `LaunchQueue`를 활용하면 PWA의 실행 탐색 처리를 직접 구현할 수 있습니다.
@@ -77,6 +81,8 @@ l10n:
   - : {{domxref("Navigator")}} 객체의 참조를 반환합니다.
 - {{domxref("Window.opener")}}
   - : 현재 창을 연 창의 참조를 반환합니다.
+- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+  - : 전역 객체의 출처를 문자열로 직렬화해 반환합니다.
 - {{domxref("Window.outerHeight")}} {{readOnlyInline}}
   - : 브라우저 창 외곽 높이를 반환합니다.
 - {{domxref("Window.outerWidth")}} {{readOnlyInline}}
@@ -91,6 +97,8 @@ l10n:
   - : {{domxref("Performance")}} 객체를 반환합니다. 이 객체의 {{domxref("Performance.timing", "timing")}}, {{domxref("Performance.navigation", "navigation")}} 특성 등은 각각 [성능 관련 데이터](/ko/docs/Web/API/Navigation_timing_API)를 제공하는 객체입니다. [탐색 타이밍 사용하기](/ko/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)에서 추가 정보와 예제를 확인하세요.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : `personalbar` 객체를 반환합니다.
+- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
+  - : 현재 컨텍스트와 연관된 {{domxref("Scheduler")}} 객체를 반환합니다. [Prioritized Task Scheduling API](/ko/docs/Web/API/Prioritized_Task_Scheduling_API)의 진입점입니다.
 - {{domxref("Window.screen")}} {{readOnlyInline}}
   - : 이 창에 연관된 화면 객체를 반환합니다.
 - {{domxref("Window.screenX")}}, {{domxref("Window.screenLeft")}} {{readOnlyInline}}
@@ -126,18 +134,6 @@ l10n:
 - `window[0]`, `window[1]`, ...
   - : 프레임의 `window` 객체 참조를 반환합니다. 자세한 내용은 {{domxref("Window.frames")}}에서 확인하세요.
 
-### Properties implemented from elsewhere
-
-- {{domxref("caches")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
-- {{domxref("indexedDB")}} {{ReadOnlyInline}}
-  - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
-- {{domxref("origin")}} {{ReadOnlyInline}}
-  - : Returns the global object's origin, serialized as a string.
-- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("Scheduler")}} object associated with the current context.
-    This is the entry point for using the [Prioritized Task Scheduling API](/ko/docs/Web/API/Prioritized_Task_Scheduling_API).
-
 ### Deprecated properties
 
 - {{domxref("Window.content")}} and `Window._content` {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -161,109 +157,106 @@ l10n:
 
 {{domxref("EventTarget")}}의 메서드를 상속합니다.
 
+- {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}}
+  - : 창의 특정 이벤트에 대한 처리기를 등록합니다.
+- {{domxref("atob", "Window.atob()")}}
+  - : Base64로 인코딩된 문자열 데이터를 디코딩합니다.
 - {{domxref("Window.alert()")}}
   - : 경고 대화 상자를 표시합니다.
 - {{domxref("Window.blur()")}}
-  - : Sets focus away from the window.
+  - : 창의 포커스를 해제합니다.
+- {{domxref("btoa", "Window.btoa()")}}
+  - : 이진 데이터 문자열을 Base64로 인코딩한 ASCII 문자열을 생성합니다.
 - {{domxref("Window.cancelAnimationFrame()")}}
-  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
+  - : {{domxref("Window.requestAnimationFrame")}}으로 예약한 콜백을 취소합니다.
 - {{domxref("Window.cancelIdleCallback()")}}
-  - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
+  - : {{domxref("Window.requestIdleCallback")}}으로 예약한 콜백을 취소합니다.
 - {{domxref("Window.clearImmediate()")}}
-  - : Cancels the repeated execution set using `setImmediate`.
+  - : `setImmediate`로 등록한 반복 실행을 해제합니다.
+- {{domxref("clearInterval", "Window.clearInterval()")}}
+  - : {{domxref("setInterval()")}}로 등록한 반복 실행을 해제합니다.
+- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
+  - : {{domxref("setTimeout()")}}으로 등록한 지연 실행을 해제합니다.
 - {{domxref("Window.close()")}}
-  - : Closes the current window.
+  - : 현재 창을 닫습니다.
 - {{domxref("Window.confirm()")}}
-  - : Displays a dialog with a message that the user needs to respond to.
+  - : 사용자가 응답해야 하는 대화 상자를 표시합니다.
+- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+  - : 다양한 종류의 이미지를 받고, {{domxref("ImageBitmap")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다. 선택 사항으로, 원본 이미지를 *(sx, sy)* 의 원점에서 너비 sw, 높이 sh만큼 자를 수 있습니다.
+- {{domxref("EventTarget.dispatchEvent", "Window.dispatchEvent()")}}
+  - : 이벤트를 발동합니다.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
-  - : Writes a message to the console.
+  - : 콘솔에 메시지를 기록합니다.
+- {{domxref("fetch", "Window.fetch()")}}
+  - : 네트워크에서 리소스를 가져오는 절차를 시작합니다.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
-  - : Searches for a given string in a window.
+  - : 주어진 문자열을 창 내에서 탐색합니다.
 - {{domxref("Window.focus()")}}
-  - : Sets focus on the current window.
+  - : 현재 창으로 포커스를 이동합니다.
 - {{domxref("Window.getComputedStyle()")}}
-  - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
+  - : 지정한 요소의 계산된 스타일, 즉 해당 요소에 적용된 모든 CSS 속성 계산 값들을 반환합니다.
 - {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
-  - : Gets default computed style for the specified element, ignoring author stylesheets.
+  - : 지정한 요소의 계산된 기본 스타일을 가져옵니다. 저작자 스타일시트는 무시합니다.
 - {{domxref("Window.getSelection()")}}
-  - : Returns the selection object representing the selected item(s).
+  - : 선택된 항목(들)을 나타내는 객체를 반환합니다.
 - {{domxref("Window.matchMedia()")}}
-  - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
+  - : 지정한 미디어 쿼리 문자열을 나타내는 {{domxref("MediaQueryList")}} 객체를 반환합니다.
 - {{domxref("Window.moveBy()")}}
-  - : Moves the current window by a specified amount.
+  - : 현재 창을 지정한 거리만큼 이동합니다.
 - {{domxref("Window.moveTo()")}}
-  - : Moves the window to the specified coordinates.
+  - : 현재 창을 지정된 좌표로 이동합니다.
 - {{domxref("Window.open()")}}
-  - : Opens a new window.
+  - : 새 창을 엽니다.
 - {{domxref("Window.postMessage()")}}
-  - : Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.
+  - : 창에서 다른 창으로 문자열 데이터를 전송할 수 있는 안전한 방법을 제공합니다. 두 창의 도메인이 같지 않아도 됩니다.
 - {{domxref("Window.print()")}}
-  - : Opens the Print Dialog to print the current document.
+  - : 현재 문서를 출력하는 인쇄 대화 상자를 엽니다.
 - {{domxref("Window.prompt()")}}
-  - : Returns the text entered by the user in a prompt dialog.
+  - : 사용자가 명령 대화상자에 입력하는 텍스트를 반환합니다.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
+  - : {{domxref("FontData")}} 객체의 배열로 이행하는 {{jsxref("Promise")}}를 반환합니다. 기기에서 사용 가능한 로컬 글꼴들을 나타냅니다.
+- {{domxref("EventTarget.removeEventListener", "Window.removeEventListener()")}}
+  - : 창의 이벤트 수신기를 제거합니다.
+- {{domxref("reportError", "Window.reportError()")}}
+  - : 처리되지 않은 예외를 흉내낸 오류를 보고합니다.
 - {{domxref("Window.requestAnimationFrame()")}}
-  - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
+  - : 브라우저에게 애니메이션이 재생 중임을 알려, 다음 애니메이션 프레임을 위한 리페인트의 예약을 요청합니다.
 - {{domxref("Window.requestIdleCallback()")}}
-  - : Enables the scheduling of tasks during a browser's idle periods.
+  - : 브라우저 대기 시간에 수행할 작업을 예약합니다.
 - {{domxref("Window.resizeBy()")}}
-  - : Resizes the current window by a certain amount.
+  - : 현재 창을 지정한 크기만큼 조절합니다.
 - {{domxref("Window.resizeTo()")}}
-  - : Dynamically resizes window.
+  - : 현재 창을 지정한 크기로 조절합니다.
 - {{domxref("Window.scroll()")}}
-  - : Scrolls the window to a particular place in the document.
+  - : 창을 문서 내의 특정 지점으로 스크롤합니다.
 - {{domxref("Window.scrollBy()")}}
-  - : Scrolls the document in the window by the given amount.
+  - : 창의 문서를 주어진 거리만큼 스크롤합니다.
 - {{domxref("Window.scrollByLines()")}} {{Non-standard_Inline}}
-  - : Scrolls the document by the given number of lines.
+  - : 창의 문서를 주어진 줄 수만큼 스크롤합니다.
 - {{domxref("Window.scrollByPages()")}} {{Non-standard_Inline}}
-  - : Scrolls the current document by the specified number of pages.
+  - : 창의 문서를 주어진 장 수만큼 스크롤합니다.
 - {{domxref("Window.scrollTo()")}}
-  - : Scrolls to a particular set of coordinates in the document.
+  - : 창을 문서 내의 좌표로 스크롤합니다.
 - {{domxref("Window.setImmediate()")}}
-  - : Executes a function after the browser has finished other heavy tasks.
+  - : 브라우저가 무거운 작업들을 마친 후에 함수를 실행하도록 예약합니다.
+- {{domxref("setInterval", "Window.setInterval()")}}
+  - : 주어진 밀리초가 지날 때마다 실행할 함수를 예약합니다.
 - {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
-  - : Toggles a user's ability to resize a window.
+  - : 사용자의 창 크기 조절을 허용하거나 막습니다.
+- {{domxref("setTimeout", "Window.setTimeout()")}}
+  - : 주어진 시간이 지난 후 실행할 함수를 예약합니다.
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_Inline}}
-  - : Sizes the window according to its content.
+  - : 창의 크기를 현재 내용에 맞춰 조절합니다.
 - {{domxref("Window.showOpenFilePicker()")}} {{Experimental_Inline}}
-  - : Shows a file picker that allows a user to select a file or multiple files.
+  - : 사용자가 파일 또는 파일들을 선택할 수 있는 파일 선택창을 엽니다.
 - {{domxref("Window.showSaveFilePicker()")}} {{Experimental_Inline}}
-  - : Shows a file picker that allows a user to save a file.
+  - : 사용자가 파일 저장 위치를 선택할 수 있는 파일 선택창을 엽니다.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}}
-  - : Displays a directory picker which allows the user to select a directory.
+  - : 사용자가 디렉토리를 선택할 수 있는 디렉토리 선택창을 엽니다.
 - {{domxref("Window.stop()")}}
-  - : This method stops window loading.
+  - : 창의 불러오기를 중단합니다.
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
-  - : Updates the state of commands of the current chrome window (UI).
-
-### Methods implemented from elsewhere
-
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Register an event handler to a specific event type on the window.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Used to trigger an event.
-- {{domxref("atob", "atob()")}}
-  - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa", "btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
-- {{domxref("createImageBitmap()")}}
-  - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("fetch()")}}
-  - : Starts the process of fetching a resource from the network.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the window.
-- {{domxref("setInterval()")}}
-  - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()")}}
-  - : Schedules a function to execute in a given amount of time.
-- {{domxref("reportError()")}}
-  - : Reports an error in a script, emulating an unhandled exception.
+  - : 현재 창 크롬(UI)의 명령 상태를 업데이트합니다.
 
 ### Deprecated methods
 
@@ -280,125 +273,122 @@ l10n:
 
 ## 이벤트
 
-Listen to these events using [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+[`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나, `Window` 인터페이스의 `oneventname` 속성을 사용해 이벤트를 수신하세요.
 
 - {{domxref("Window/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+  - : 찾을 수 없거나 유효하지 않은 이미지, 실행 오류가 발생하는 스크립트 등, 리소스를 불러오지 못했거나 사용할 수 없을 때 발생합니다.
 - {{domxref("Window/languagechange_event", "languagechange")}}
-  - : Fired at the global scope object when the user's preferred language changes.
+  - : 사용자의 선호 언어가 바뀌면 발생합니다.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
-  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+  - : 일정 주기로 발생하여 장치가 받고 있는 물리적 가속력의 양을 나타냅니다. 가능한 경우 각속도도 포함합니다.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+  - : 자기계 방향 센서가 제공하는, 지구 좌표계 기준 장치 방향 데이터를 새로 사용할 수 있으면 발생합니다.
 - {{domxref("Window/resize_event", "resize")}}
-  - : Fired when the window has been resized.
+  - : 창 크기가 바뀌면 발생합니다.
 - {{domxref("Window/storage_event", "storage")}}
-  - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+  - : 다른 문서에서 저장소(`localStorage` 또는 `sessionStorage`)를 수정하면 발생합니다.
 
-### Animation events
+### 애니메이션 이벤트
 
 - {{domxref("Window/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
+  - : 애니메이션이 예상치 못하게 중단되면 발생합니다.
 - {{domxref("Window/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
+  - : 애니메이션이 정상적으로 끝나면 발생합니다.
 - {{domxref("Window/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
+  - : 애니메이션의 1회 반복이 끝나면 발생합니다.
 - {{domxref("Window/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
+  - : 애니메이션이 시작하면 발생합니다.
 
-### Clipboard events
+### 클립보드 이벤트
 
 - {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 복사 액션을 실행하면 발생합니다. {{domxref("HTMLElement/oncopy", "oncopy")}} 속성으로도 사용할 수 있습니다.
 - {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 잘라내기 액션을 실행하면 발생합니다. {{domxref("HTMLElement/oncut", "oncut")}} 속성으로도 사용할 수 있습니다.
 - {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 붙여넣기 액션을 실행하면 발생합니다. {{domxref("HTMLElement/onpaste", "onpaste")}} 속성으로도 사용할 수 있습니다.
 
-### Connection events
+### 네트워크 연결 이벤트
 
 - {{domxref("Window/offline_event", "offline")}}
-  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
+  - : 브라우저가 네트워크 연결을 상실해 `navigator.onLine`이 `false`로 바뀌면 발생합니다.
 - {{domxref("Window/online_event", "online")}}
-  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+  - : 브라우저가 네트워크 연결을 획득해 `navigator.onLine`이 `true`로 바뀌면 발생합니다.
 
-### Focus events
+### 포커스 이벤트
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : 요소가 포커스를 잃으면 발생합니다.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : 요소가 포커스를 얻으면 발생합니다.
 
-### Gamepad events
+### 게임패드 이벤트
 
 - {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
-  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+  - : 브라우저가 게임패드 연결을 감지하거나, 게임패드의 버튼/축 입력을 처음 감지했을 때 발생합니다.
 - {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
-  - : Fired when the browser detects that a gamepad has been disconnected.
+  - : 브라우저가 게임패드 연결 해제를 감지하면 발생합니다.
 
-### History events
+### 방문 기록 이벤트
 
 - {{domxref("Window/hashchange_event", "hashchange")}}
-  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+  - : URL의 프래그먼트 식별자(`#` 기호로 시작하는 부분)가 바뀌면 발생합니다.
 - {{domxref("Window/pagehide_event", "pagehide")}}
-  - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
+  - : 뒤로 가기나 앞으로 가기 버튼으로 방문 기록을 탐색할 때 등, 브라우저가 현재 문서를 숨기고 방문 기록 내의 다른 문서를 보여주려고 할 때 발생합니다.
 - {{domxref("Window/pageshow_event", "pageshow")}}
-  - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
+  - : 브라우저 탐색으로 이 페이지가 보여질 때 발생합니다. 페이지 첫 방문이나, 다른 페이지에서 뒤로 가기나 앞으로 가기 버튼으로 다시 돌아올 때 발생합니다.
 - {{domxref("Window/popstate_event", "popstate")}}
-  - : Fired when the active history entry changes.
+  - : 활성화된 방문 기록 항목이 바뀌면 발생합니다.
 
-### Load & unload events
+### 로드 & 언로드 이벤트
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
-  - : Fired when the window, the document and its resources are about to be unloaded.
+  - : 창과 문서, 리소스들을 언로드하기 직전에 발생합니다.
 - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+  - : 문서 파싱이 끝나면 발생합니다. 스타일시트, 이미지, 하위 프레임의 로딩이 끝날 때까지 기다리지 않습니다.
 - {{domxref("Window/load_event", "load")}}
-  - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+  - : 스타일시트, 이미지 등 리소스까지 포함해서 페이지 로딩이 모두 끝나면 발생합니다.
 - {{domxref("Window/unload_event", "unload")}}
-  - : Fired when the document or a child resource is being unloaded.
+  - : 문서나 하위 리소스가 언로딩 중일 때 발생합니다.
 
-### Manifest events
+### 매니페스트 이벤트
 
 - {{domxref("Window/appinstalled_event", "appinstalled")}}
-  - : Fired when the browser has successfully installed a page as an application.
+  - : 브라우저가 성공적으로 페이지를 애플리케이션으로서 설치했을 때 발생합니다.
 - {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
-  - : Fired when a user is about to be prompted to install a web application.
+  - : 사용자에게 웹 애플리케이션 설치를 권유하기 직전에 발생합니다.
 
-### Messaging events
+### 메시지 이벤트
 
 - {{domxref("Window/message_event", "message")}}
-  - : Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.
+  - : 다른 탐색 맥락에서의 {{domxref("Window/postMessage", "Window.postMessage()")}} 등으로 이 창이 메시지를 수신했을 때 발생합니다.
 - {{domxref("Window/messageerror_event", "messageerror")}}
-  - : Fired when a `Window` object receives a message that can't be deserialized.
+  - : `Window` 객체가 역직렬화 할 수 없는 메시지를 수신하면 발생합니다.
 
-### Print events
+### 출력 이벤트
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
-  - : Fired after the associated document has started printing or the print preview has been closed.
+  - : 연관된 문서의 출력이 시작됐거나, 출력 미리보기 창이 닫히면 발생합니다.
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
-  - : Fired when the associated document is about to be printed or previewed for printing.
+  - : 연관된 문서의 출력이 시작되기 직전이나, 출력 미리보기 창이 열리기 직전에 발생합니다.
 
-### Promise rejection events
+### 프로미스 거부 이벤트
 
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-  - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
+  - : JavaScript {{jsxref("Promise")}}가 거부될 때마다 발생합니다. 잡아낸 거부로 인해서도 발생합니다.
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
-  - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
+  - : JavaScript {{jsxref("Promise")}}가 거부됐지만, 거부를 잡아낼 처리기가 없을 때 발생합니다.
 
-### Transition events
+### 트랜지션 이벤트
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 취소되면 발생합니다.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 끝나면 발생합니다.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 시작하면 발생합니다.
 
 ### Deprecated events
 

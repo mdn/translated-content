@@ -3,6 +3,8 @@ title: 渐变
 slug: Web/SVG/Tutorial/Gradients
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 并非只能简单填充颜色和描边，更令人兴奋的是，你还可以创建和并在填充和描边上应用渐变色。
@@ -179,8 +181,15 @@ slug: Web/SVG/Tutorial/Gradients
 
 两种渐变都有一个叫做 `gradientUnits（渐变单元）`的属性，它描述了用来描述渐变的大小和方向的单元系统。该属性有两个值：`userSpaceOnUse` 、`objectBoundingBox。默认值为 objectBoundingBox，我们目前看到的效果都是在这种系统下的，它大体上定义了对象的渐变大小范围，所以你只要指定从 0 到 1 的坐标值，渐变就会自动的缩放到对象相同大小。`userSpaceOnUse 使用绝对单元，所以你必须知道对象的位置，并将渐变放在同样地位置上。上例中的 radialGradient 需要被重写成：
 
-```plain
- <radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse">
+```html
+<radialGradient
+  id="Gradient"
+  cx="60"
+  cy="60"
+  r="50"
+  fx="35"
+  fy="35"
+  gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
 你也可以利用属性 `gradientTransform` 给渐变添加额外的变化，但是因为我们还没有介绍 [`transforms`](/zh-CN/Web/SVG/Tutorial/Basic_Transformations)，所以我们将在后续的章节中介绍它。

@@ -105,7 +105,7 @@ l10n:
       <td><a href="/ja/docs/Web/HTTP/Permissions_Policy">権限ポリシー</a></td>
       <td>
         ウェブサーバーが {{HTMLElement("iframe")}} で読み込んだ文書とサブ文書の両方で、{{HTTPHeader("Permissions-Policy")}} を介して機能や API を選択的に有効または無効にできるようにします。
-        {{htmlattrxref("allow", "iframe")}} 属性は、個々の {{HTMLElement("iframe")}} に権限ポリシーを設定するために使用できます。
+        <a href="/ja/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> 属性は、個々の {{HTMLElement("iframe")}} に権限ポリシーを設定するために使用できます。
       </td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ l10n:
 
 <!-- allow attribute, feature policy, and permissions api stuff -->
 
-リソースへのアクセスを許可して読み込んだ文書が、{{HTMLElement("iframe")}} の中に {{htmlattrxref("allow", "iframe")}} 属性を含んでいて、その許可をフレームのコンテンツに委任している場合、使い勝手の問題が生じることがあります。この場合、ユーザーは同じリソースを繰り返しリクエストされることになり、最初はメインページ、次にフレーム内の文書でリクエストされる可能性があります。
+リソースへのアクセスを許可して読み込んだ文書が、{{HTMLElement("iframe")}} の中に [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を含んでいて、その許可をフレームのコンテンツに委任している場合、使い勝手の問題が生じることがあります。この場合、ユーザーは同じリソースを繰り返しリクエストされることになり、最初はメインページ、次にフレーム内の文書でリクエストされる可能性があります。
 
 ブラウザーは、これを回避する方法を提供することができます。例えば、Firefox 73 では、ユーザー権限リクエストが修正され、`<iframe>` が `allow` キーワードを使用して埋め込み文書に権限を委譲する場合、ブラウザーは親文書にリソースを使用する権限を与えるようユーザーに要求し、その権限はリソースをリクエストした埋め込みコンテンツと共有され、始めに使用します。
 

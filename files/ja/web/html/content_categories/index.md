@@ -35,7 +35,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}: {{HTMLElement("map")}} 要素の子孫の場合
 - {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
 - {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
-- {{HTMLElement("style")}}: {{htmlattrxref("scoped","style")}} {{deprecated_inline}} 属性がある場合
+- {{HTMLElement("style")}}: [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) {{deprecated_inline}} 属性がある場合
 
 ### 区分コンテンツ
 
@@ -80,12 +80,12 @@ original_slug: Web/Guide/HTML/Content_categories
 対話型コンテンツ (interactive content) にはユーザとのやり取りのために固有にデザインされた要素が含まれます。このカテゴリーに属する要素は、 {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("keygen")}} {{deprecated_inline}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} です。
 要素によっては、特定の条件下にある場合にのみこのカテゴリーに所属します。
 
-- {{HTMLElement("audio")}}: {{htmlattrxref("controls", "audio")}} 属性がある場合
-- {{HTMLElement("img")}}: {{htmlattrxref("usemap", "img")}} 属性がある場合
-- {{HTMLElement("input")}}: {{htmlattrxref("type", "input")}} 属性が hidden 状態ではない場合
-- {{HTMLElement("menu")}}: {{htmlattrxref("type", "menu")}} 属性が toolbar 状態ではない場合
-- {{HTMLElement("object")}}: {{htmlattrxref("usemap", "object")}} 属性がある場合
-- {{HTMLElement("video")}}: {{htmlattrxref("controls", "video")}} 属性がある場合
+- {{HTMLElement("audio")}}: [`controls`](/ja/docs/Web/HTML/Element/audio#controls) 属性がある場合
+- {{HTMLElement("img")}}: [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性がある場合
+- {{HTMLElement("input")}}: [`type`](/ja/docs/Web/HTML/Element/input#type) 属性が hidden 状態ではない場合
+- {{HTMLElement("menu")}}: [`type`](/ja/docs/Web/HTML/Element/menu#type) 属性が toolbar 状態ではない場合
+- {{HTMLElement("object")}}: [`usemap`](/ja/docs/Web/HTML/Element/object#usemap) 属性がある場合
+- {{HTMLElement("video")}}: [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性がある場合
 
 ### 知覚可能コンテンツ
 
