@@ -1,7 +1,9 @@
 ---
 title: RTCPeerConnection.generateCertificate()
-slug: Web/API/RTCPeerConnection/generateCertificate
+slug: Web/API/RTCPeerConnection/generateCertificate_static
+original_slug: Web/API/RTCPeerConnection/generateCertificate
 ---
+
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}} 인터페이스의 **`generateCertificate()`** 메소드는 X.509 인증서와 해당하는 개인 키를 생성하고 저장합니다. 그리고 접근이 가능한 {{domxref("RTCCertificate")}}를 반환합니다.

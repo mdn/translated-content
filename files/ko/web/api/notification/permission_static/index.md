@@ -1,7 +1,9 @@
 ---
 title: Notification.permission
-slug: Web/API/Notification/permission
+slug: Web/API/Notification/permission_static
+original_slug: Web/API/Notification/permission
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `permission` 속성은 웹 알림에 있어서 사용자에 의해 현재 앱에 허가된 현재 권한을 가리킵니다.

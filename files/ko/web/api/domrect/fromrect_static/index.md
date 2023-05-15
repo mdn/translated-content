@@ -1,6 +1,7 @@
 ---
 title: DOMRect.fromRect()
-slug: Web/API/DOMRect/fromRect
+slug: Web/API/DOMRect/fromRect_static
+original_slug: Web/API/DOMRect/fromRect
 ---
 
 {{APIRef("Geometry Interfaces")}}
