@@ -19,7 +19,7 @@ let doneLoading = htmlImageElement.complete;
 
 以下任意一条为 true 则认为图片完全加载完成：
 
-- Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}} attribute is specified.
+- Neither the [`src`](/zh-CN/docs/Web/HTML/Element/img#src) nor the [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) attribute is specified.
 - The `srcset` attribute is absent and the `src` attribute, while specified, is the empty string (`""`).
 - The image resource has been fully fetched and has been queued for rendering/compositing.
 - The image element has previously determined that the image is fully available and ready for use.

@@ -12,22 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ## 语法
 
 ```js-nolint
-// 箭头函数
-forEach(() => { /* ... */ } )
-forEach((value) => { /* ... */ } )
-forEach((value, key) => { /* ... */ } )
-forEach((value, key, set) => { /* ... */ } )
-
-// 回调函数
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// 内联回调函数
-forEach(function() { /* ... */ })
-forEach(function(value) { /* ... */ })
-forEach(function(value, key) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ })
-forEach(function(value, key, set) { /* ... */ }, thisArg)
 ```
 
 ### 参数

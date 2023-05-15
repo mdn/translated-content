@@ -3,6 +3,8 @@ title: grid-column
 slug: Web/CSS/grid-column
 ---
 
+{{CSSRef}}
+
 `grid-column` CSS 属性是 {{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 的简写属性，用于指定网格项目的大小和位置{ 通过为它的网格位置贡献线条，跨度或不添加任何内容（自动），从而指定其 {{glossary("grid area","grid area","网格区域")}}。
 
 {{EmbedInteractiveExample("pages/css/grid-column.html")}}

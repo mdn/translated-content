@@ -84,7 +84,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
     - {{htmlelement("p","段落（Paragraph）")}} 和 {{htmlelement("li","列表项（list item）")}} 元素没有结束标签。但是由于元素的结束和另一个的开始很容易推断出来，因此上图中并没有太严重的渲染错误。
     - 第一个 {{htmlelement("strong")}} 元素没有结束标签。这就严重了，因为该元素结束的位置难以确定。事实上所有剩余文本都加粗了。
     - 一下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
-    - {{htmlattrxref("href","a")}} 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
+    - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
 6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了“什么使得 HTML 出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)

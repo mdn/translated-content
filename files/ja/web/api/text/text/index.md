@@ -1,6 +1,8 @@
 ---
-title: Text()
+title: "Text: Text() コンストラクター"
 slug: Web/API/Text/Text
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{ APIRef("DOM")}}
@@ -9,18 +11,18 @@ slug: Web/API/Text/Text
 
 ## 構文
 
-```js
-new Text();
-new Text(aString);
+```js-nolint
+new Text()
+new Text(string)
 ```
 
 ### 引数
 
-- `aString` {{optional_inline}}
+- `string` {{optional_inline}}
 
 ### 返値
 
-新しい {{domxref("Text")}} オブジェクトで、 `aString` または引数が省略された場合は空文字列が入ったものです。
+新しい {{domxref("Text")}} オブジェクトで、`string` 引数の内容、引数が与えられなかった場合は空文字列を持ったものです。
 
 ## 例
 

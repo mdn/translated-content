@@ -1,6 +1,6 @@
 ---
 title: 正規表現構文早見表
-slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
 l10n:
   sourceCommit: effd5de5e42bfe045c3bf44b2d7b14f4d6146785
 ---

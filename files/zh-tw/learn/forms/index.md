@@ -15,16 +15,16 @@ original_slug: Learn/HTML/Forms
 3. [本機表單控件](/zh-TW/docs/HTML/Forms/The_native_form_widgets)
 4. CSS 和 HTML 表單
 
-    1. [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
-    2. [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
-    3. [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
+   1. [造型 HTML 表單](/zh-TW/docs/HTML/Forms/Styling_HTML_forms)
+   2. [HTML 表單高級造型](/zh-TW/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
+   3. [表單控件屬性兼容表](/zh-TW/docs/Property_compatibility_table_for_form_widgets)
 
 5. [發送和檢索表單數據](/zh-TW/docs/HTML/Forms/Sending_and_retrieving_form_data)
 6. [數據表單驗證](/zh-TW/docs/HTML/Forms/Data_form_validation)
 7. [如何創建自定義表單控件](/zh-TW/docs/HTML/Forms/How_to_build_custom_form_widgets)
 8. [通過 JavaScript 發送形式](/zh-TW/docs/HTML/Forms/Sending_forms_through_JavaScript)
 
-    1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+   1. [使用 FORMDATA 對象](/zh-TW/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 
 9. [在傳統的瀏覽器的 HTML 表單](/zh-TW/docs/HTML/Forms/HTML_forms_in_legacy_browsers)
 
@@ -32,23 +32,23 @@ original_slug: Learn/HTML/Forms
 
 ### HTML 元素
 
-| HTML 元素                            | 元素的 DOM interface                         | 說明                                                                                                                                                                                       |
-| ------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{HTMLElement("button")}}     | {{domxref("HTMLButtonElement")}} | 該`按鈕`元素表示一個可點擊的按鈕。                                                                                                                                                         |
-| {{HTMLElement("datalist")}} | {{domxref("HTMLDataListElement")}} | 該數據列表元素包含了一組 {{ HTMLElement("option") }} 表示對其他表單元素的值可能的選擇要素。                                                                                       |
-| {{HTMLElement("fieldset")}} | {{domxref("HTMLFieldSetElement")}} | 該字段集是用來在表單中的組數表單元素。                                                                                                                                                     |
-| {{HTMLElement("form")}}     | {{domxref("HTMLFormElement")}}     | 的`形式`元素表示的文件的一部分，它包含使用戶能夠提交信息給 web 服務器的交互元件。                                                                                                          |
-| {{HTMLElement("input")}}     | {{domxref("HTMLInputElement")}}     | 該 `輸入`元素用於創建表格的交互式控制。                                                                                                                                                    |
-| {{HTMLElement("keygen")}}     | {{domxref("HTMLKeygenElement")}} | 所述`凱基`元素存在，以促進生成的密鑰材料，並提交了公開密鑰的作為 HTML 形式的一部分                                                                                                         |
-| {{HTMLElement("label")}}     | {{domxref("HTMLLabelElement")}}     | 該`標籤`元素代表一個項目在用戶界面的標題                                                                                                                                                   |
-| {{HTMLElement("legend")}}     | {{domxref("HTMLLegendElement")}} | 在`傳說`元素代表一個標題為其父 {{ HTMLElement("fieldset") }} 的內容。                                                                                                           |
-| {{HTMLElement("meter")}}     | {{domxref("HTMLMeterElement")}}     | 所述`米`元素表示一個已知的範圍內的任一標量值或分數值。                                                                                                                                     |
-| {{HTMLElement("optgroup")}} | {{domxref("HTMLOptGroupElement")}} | 在`OPTGROUP`元素創建一個 {{ HTMLElement("select") }} 元素中的一組選項。                                                                                                           |
-| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | 在 HTML `選項`元素用於創建表示 {{ HTMLElement("select") }} ，一個 {{ HTMLElement("optgroup") }} 或 {{ HTMLElement("datalist") }} 元素中的項目的控制。 |
-| {{HTMLElement("output")}}     | {{domxref("HTMLOutputElement")}} | 的`輸出`元素表示一個計算的結果。                                                                                                                                                           |
-| {{HTMLElement("progress")}} | {{domxref("HTMLProgressElement")}} | 的`進展`元素用於查看任務的完成進度。                                                                                                                                                       |
-| {{HTMLElement("select")}}     | {{domxref("HTMLSelectElement")}} | 在`選擇`元素代表呈現一個選項菜單的控制。                                                                                                                                                   |
-| {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | 該`textarea的`元素代表多行純文本編輯控制。                                                                                                                                                 |
+| HTML 元素                   | 元素的 DOM interface               | 說明                                                                                                                                                  |
+| --------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{HTMLElement("button")}}   | {{domxref("HTMLButtonElement")}}   | 該`按鈕`元素表示一個可點擊的按鈕。                                                                                                                    |
+| {{HTMLElement("datalist")}} | {{domxref("HTMLDataListElement")}} | 該數據列表元素包含了一組 {{ HTMLElement("option") }} 表示對其他表單元素的值可能的選擇要素。                                                           |
+| {{HTMLElement("fieldset")}} | {{domxref("HTMLFieldSetElement")}} | 該字段集是用來在表單中的組數表單元素。                                                                                                                |
+| {{HTMLElement("form")}}     | {{domxref("HTMLFormElement")}}     | 的`形式`元素表示的文件的一部分，它包含使用戶能夠提交信息給 web 服務器的交互元件。                                                                     |
+| {{HTMLElement("input")}}    | {{domxref("HTMLInputElement")}}    | 該 `輸入`元素用於創建表格的交互式控制。                                                                                                               |
+| {{HTMLElement("keygen")}}   | {{domxref("HTMLKeygenElement")}}   | 所述`凱基`元素存在，以促進生成的密鑰材料，並提交了公開密鑰的作為 HTML 形式的一部分                                                                    |
+| {{HTMLElement("label")}}    | {{domxref("HTMLLabelElement")}}    | 該`標籤`元素代表一個項目在用戶界面的標題                                                                                                              |
+| {{HTMLElement("legend")}}   | {{domxref("HTMLLegendElement")}}   | 在`傳說`元素代表一個標題為其父 {{ HTMLElement("fieldset") }} 的內容。                                                                                 |
+| {{HTMLElement("meter")}}    | {{domxref("HTMLMeterElement")}}    | 所述`米`元素表示一個已知的範圍內的任一標量值或分數值。                                                                                                |
+| {{HTMLElement("optgroup")}} | {{domxref("HTMLOptGroupElement")}} | 在 `OPTGROUP` 元素創建一個 {{ HTMLElement("select") }} 元素中的一組選項。                                                                             |
+| {{HTMLElement("option")}}   | {{domxref("HTMLOptionElement")}}   | 在 HTML `選項`元素用於創建表示 {{ HTMLElement("select") }} ，一個 {{ HTMLElement("optgroup") }} 或 {{ HTMLElement("datalist") }} 元素中的項目的控制。 |
+| {{HTMLElement("output")}}   | {{domxref("HTMLOutputElement")}}   | 的`輸出`元素表示一個計算的結果。                                                                                                                      |
+| {{HTMLElement("progress")}} | {{domxref("HTMLProgressElement")}} | 的`進展`元素用於查看任務的完成進度。                                                                                                                  |
+| {{HTMLElement("select")}}   | {{domxref("HTMLSelectElement")}}   | 在`選擇`元素代表呈現一個選項菜單的控制。                                                                                                              |
+| {{HTMLElement("textarea")}} | {{domxref("HTMLTextAreaElement")}} | 該 `textarea` 的元素代表多行純文本編輯控制。                                                                                                          |
 
 > **備註：** 所有的表單元素，因為所有的 HTML 元素，支持 {{domxref("HTMLElement")}} DOM 接口。
 

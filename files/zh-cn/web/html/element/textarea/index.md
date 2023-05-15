@@ -22,7 +22,7 @@ slug: Web/HTML/Element/textarea
 
 这个元素包含了[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
   - : iOS 的非标准属性（运行在 iOS 上的 Safari、Firefox、Chrome 都支持），文本是否自动首字母大写。在 iOS5 和之后的版本上有效。可能的值为：
 
     - `none`: 禁用首字母大写。
@@ -31,38 +31,38 @@ slug: Web/HTML/Element/textarea
     - `characters`: 全部字母大写。
     - `on`: {{deprecated_inline()}} 自 iOS 5 废弃。
     - `off`: {{deprecated_inline()}} 自 iOS 5 废弃。
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
   - : 是否使用浏览器的记忆功能自动填充文本。可能的值有：
 
     - `off`: 不使用浏览器的记忆自动填充，使用者必须输入他们想要输入的所有内容。或者网页提供了自己的自动填充方法。
-    - `on`: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。如果不指明**autocomplete**属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是 `textarea` 元素的父级{{HTMLElement("form")}}或者 `textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的{{htmlattrxref("autocomplete", "form")}} 属性。
-- {{ htmlattrdef("autofocus") }}
+    - `on`: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。如果不指明**autocomplete**属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是 `textarea` 元素的父级{{HTMLElement("form")}}或者 `textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的[`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) 属性。
+- `autofocus`
   - : 页面加载完毕之后是否自动给本元素添加焦点。只有跟表格关联的才能使本属性生效。
-- {{ htmlattrdef("cols") }}
+- `cols`
   - : 文本域的可视宽度。必须为正数，默认为 20 (HTML5)。
-- {{ htmlattrdef("disabled") }}
+- `disabled`
   - : 禁用文本域。默认为 false。如果未指定，也可以从父级上如{{ HTMLElement("fieldset") }}继承而来。
-- {{ htmlattrdef("form") }}
+- `form`
   - : 指定跟自身相关联的表单。值必须为本文档内的表单的 ID，如果未指定，就是跟当前所在的表单元素相关联。这就允许你在文档的任意地方放置文本域元素。
-- {{ htmlattrdef("maxlength") }}
+- `maxlength`
   - : 允许用户输入的最大字符长度 (Unicode) 。未指定表示无限长度。
-- {{ htmlattrdef("minlength") }}
+- `minlength`
   - : 允许用户输入的最小字符长度 (Unicode)
-- {{ htmlattrdef("name") }}
+- `name`
   - : 元素的名称。
-- {{ htmlattrdef("placeholder") }}
+- `placeholder`
   - : 向用户提示可以在控件中输入的内容。在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。
 
     > **备注：** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/zh-CN/docs/Web/HTML/Element/input#标签) for a full explanation.
-- {{ htmlattrdef("readonly") }}
+- `readonly`
   - : 不允许用户修改元素内文本。和 `disabled` 属性不同的是，这个能让用户点击和选择元素内的文本。如果在表单里，这个元素的值还是会跟随表单一起提交。
-- {{ htmlattrdef("required") }}
+- `required`
   - : 提示用户这个元素的内容必填。
-- {{ htmlattrdef("rows") }}
+- `rows`
   - : 元素的输入文本的行数（显示的高度）。
-- {{ htmlattrdef("spellcheck") }}
+- `spellcheck`
   - : 该属性设为 true 时，表明该元素会做拼写和语法检查。属性值为 default 时，表明元素有默认行为，可能会基于父元素的 spellcheck 值。属性值为 false 时，表明元素不做拼写和语法检查。
-- {{ htmlattrdef("wrap") }}
+- `wrap`
   - : 指定文本换行的方式。默认为 soft。可能的值为：
 
     - hard: 在文本到达元素最大宽度的时候，浏览器自动插入换行符 (CR+LF) 。比如指定 `cols`值。

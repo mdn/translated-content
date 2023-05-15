@@ -128,7 +128,7 @@ console.log(i); // 2
 
 ```js
 for (let i = 0; i < 2; i++) {
-  const button = document.createClement("button");
+  const button = document.createElement("button");
   button.innerText = `Button ${i}`;
   button.onclick = function () {
     console.log(i);

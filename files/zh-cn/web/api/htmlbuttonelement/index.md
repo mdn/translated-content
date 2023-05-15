@@ -50,7 +50,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         一个处理提交信息的 URI 资源地址。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的{{htmlattrxref("action", "form")}} 属性。
+        元素的[`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
       </td>
     </tr>
     <tr>
@@ -58,7 +58,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         表单要提交给服务器处理的内容的类型。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的{{htmlattrxref("enctype", "form")}} 属性。
+        元素的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
       </td>
     </tr>
     <tr>
@@ -66,7 +66,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         浏览器提交表单内容的 HTTP 方法。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("method", "form")}}属性。
+        元素的.[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性。
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("Boolean")}}</td>
       <td>
         表明这个表单提交时是否需要验证。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("novalidate", "form")}}属性。
+        元素的.[`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate)属性。
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         一个名字或关键字，用于表明显示服务器响应的页面。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("target", "form")}}属性。
+        元素的.[`target`](/zh-CN/docs/Web/HTML/Element/form#target)属性。
       </td>
     </tr>
     <tr>

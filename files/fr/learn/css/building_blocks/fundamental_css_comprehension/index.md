@@ -103,18 +103,3 @@ La capture d'écran suivante montre un exemple de ce à quoi devrait ressembler 
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
-
-## Dans ce module
-
-- [Comment fonctionnent les CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS)
-- [Syntaxe CSS](/fr/Apprendre/CSS/Introduction_à_CSS/La_syntaxe)
-- [Sélecteurs](/fr/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs)
-- [Sélecteurs simples](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinaisons et sélecteurs multiples](/fr/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [Unités et valeurs pour les CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
-- [Cascade et héritage](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage)
-- [Le modèle de boîte](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte)
-- [Débogage des CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Compréhension des fondements des CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

@@ -280,13 +280,3 @@ btn.onclick = displayMessage();
 最後までたどり着きました。おめでとうございます！この記事では、実用的なカスタム関数を構築するプロセス全体を紹介しました。もう少し動けば、実際のプロジェクトに移植することができます。次の記事では、別の重要な関連概念である戻り値を説明して関数をまとめます。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

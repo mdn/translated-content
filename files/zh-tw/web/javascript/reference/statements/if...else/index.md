@@ -19,7 +19,7 @@ if (條件式)
 ```
 
 - `條件式`
-  - : 一個成立或不成立的[運算式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)。
+  - : 一個成立或不成立的[運算式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#運算式)。
 - `第一個陳述式(statement1)`
   - : 如果 if 中的條件(conditions)為真時執行陳述式(statements)。陳述式可以為任何內容，包含巢狀式(nested)的 if 陳述。當要執行多行的陳述式(statements)時，使用區塊(block)將所要執行的陳述式包覆。如果不需要執行任何動作時，則不撰寫任何陳述式(empty statement)。
 - `第二個陳述式(statement2)`

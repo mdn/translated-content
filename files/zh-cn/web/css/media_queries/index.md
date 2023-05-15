@@ -16,9 +16,9 @@ original_slug: Web/CSS/媒体查询
 
 在 [HTML](/zh-CN/docs/Web/HTML) 中，媒体查询可以应用于各种元素：
 
-- 在{{HTMLElement("link")}}元素的{{htmlattrxref("media", "link")}}属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。
-- 在{{HTMLElement("source")}}元素的{{htmlattrxref("media", "source")}}属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）
-- 在{{HTMLElement("style")}}元素的{{htmlattrxref("media", "style")}}属性中，它们定义待应用样式的媒体。
+- 在{{HTMLElement("link")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/link#media)属性中，它们定义了待应用链接资源（通常是 CSS）的媒体。
+- 在{{HTMLElement("source")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/source#media)属性中，它们定义待应用源的媒体。 （这仅在{{HTMLElement("picture")}}元素内有效。）
+- 在{{HTMLElement("style")}}元素的[`media`](/zh-CN/docs/Web/HTML/Element/style#media)属性中，它们定义待应用样式的媒体。
 
 ### 在 JavaScript 中使用媒体查询
 

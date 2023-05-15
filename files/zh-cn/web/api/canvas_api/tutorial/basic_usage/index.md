@@ -13,7 +13,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，`<canvas>` 标签只有两个属性**——** {{htmlattrxref("width", "canvas")}}和{{htmlattrxref("height", "canvas")}}。这些都是可选的，并且同样利用 {{Glossary("DOM")}} [properties](/zh-CN/docs/Web/API/HTMLCanvasElement) 来设置。当没有设置宽度和高度的时候，canvas 会初始化宽度为 300 像素和高度为 150 像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：如果 CSS 的尺寸与初始画布的比例不一致，它会出现扭曲。
+{{HTMLElement("canvas")}} 看起来和 {{HTMLElement("img")}} 元素很相像，唯一的不同就是它并没有 src 和 alt 属性。实际上，`<canvas>` 标签只有两个属性**——** [`width`](/zh-CN/docs/Web/HTML/Element/canvas#width)和[`height`](/zh-CN/docs/Web/HTML/Element/canvas#height)。这些都是可选的，并且同样利用 {{Glossary("DOM")}} [properties](/zh-CN/docs/Web/API/HTMLCanvasElement) 来设置。当没有设置宽度和高度的时候，canvas 会初始化宽度为 300 像素和高度为 150 像素。该元素可以使用{{Glossary("CSS")}}来定义大小，但在绘制时图像会伸缩以适应它的框架尺寸：如果 CSS 的尺寸与初始画布的比例不一致，它会出现扭曲。
 
 > **备注：** 如果你绘制出来的图像是扭曲的，尝试用 width 和 height 属性为\<canvas>明确规定宽高，而不是使用 CSS。
 

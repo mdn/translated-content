@@ -355,7 +355,7 @@ ctx.fillText('Canvas text', 50, 150);
    image.src = 'firefox.png';
    ```
 
-   ここでは {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その {{htmlattrxref("src", "img")}} 属性を、Firefox ロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
+   ここでは {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その [`src`](/ja/docs/Web/HTML/Element/img#src) 属性を、Firefox ロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
 
 3. ここで、`drawImage()` を使用して画像を埋め込むことができますが、最初に画像ファイルが読み込まれたことを確認する必要があり、そうでなければコードは失敗してしまいます。これは `load` イベントを使用して実現することができます。このイベントは画像の読み込みが完了したときにのみ発行されます。前のブロックの下に、以下のブロックを追加してください。
 
@@ -519,7 +519,7 @@ loop();
    ctx.translate(width/2, height/2);
    ```
 
-3. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その {{htmlattrxref("src", "img")}} に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
+3. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
 
    ```js
    const image = new Image();
@@ -802,13 +802,3 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — ウェブオーディオ API からのリアルタイムの音声データを視覚化するためにキャンバスを使用します。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- **グラフィックの描画**
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

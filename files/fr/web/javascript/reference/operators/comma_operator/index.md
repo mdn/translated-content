@@ -1,6 +1,6 @@
 ---
 title: L'opérateur virgule
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 tags:
   - JavaScript
   - Opérateur

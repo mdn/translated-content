@@ -52,11 +52,11 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 ## 高级主题
 
 - [CORS 处理跨域图片](/zh-CN/docs/Web/HTML/CORS_enabled_image)
-  - : 通过搭配 {{htmlattrxref("crossorigin", "img")}} 属性和适当的 {{glossary("CORS")}} 标头，在 {{HTMLElement("img")}} 元素中定义的图片可以从外部来源加载并在 {{HTMLElement("canvas")}} 元素中使用，就像是从本地源加载一样。
+  - : 通过搭配 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 属性和适当的 {{glossary("CORS")}} 标头，在 {{HTMLElement("img")}} 元素中定义的图片可以从外部来源加载并在 {{HTMLElement("canvas")}} 元素中使用，就像是从本地源加载一样。
 - [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
   - : 一些提供了对 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的支持的 HTML 元素，比如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 元素属性／attribute（`crossOrigin` 对象属性／property），该属性能使你配置其跨域获取资源的请求。
 - [使用 rel="preload" 预加载页面内容](/zh-CN/docs/Web/HTML/Link_types/preload)
-  - : {{htmlelement("link")}} 元素的 {{htmlattrxref("rel", "link")}} 属性的值 `preload` 允许你在 HTML 的 {{htmlelement("head")}} 部分声明一些（资源）获取请求，以指定那些在页面加载后即刻需要的资源。因此在浏览器的主渲染机制介入前，这些资源会在页面加载生命周期的早期阶段进行预加载。这样可以保证这些资源可被更早使用并减少阻塞页面初次渲染的可能性，从而提升性能。这篇文章提供了关于 `preload` 作用机制的基本指导。
+  - : {{htmlelement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性的值 `preload` 允许你在 HTML 的 {{htmlelement("head")}} 部分声明一些（资源）获取请求，以指定那些在页面加载后即刻需要的资源。因此在浏览器的主渲染机制介入前，这些资源会在页面加载生命周期的早期阶段进行预加载。这样可以保证这些资源可被更早使用并减少阻塞页面初次渲染的可能性，从而提升性能。这篇文章提供了关于 `preload` 作用机制的基本指导。
 
 ## 参考
 
@@ -68,8 +68,8 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
   - : HTML 元素都含有**属性**。这些额外的属性值可以通过各种途径对元素进行配置或调整其行为。
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
   - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，*包括那些没有在相关标准中出现的元素*。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
-- [内联元素](/zh-CN/docs/Web/HTML/Inline_elements)和[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)
-  - : HTML 元素通常是"内联"或"块级"元素。一个内联元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
+- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)和[块级元素](/zh-CN/docs/Glossary/Block-level_content)
+  - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Link_types)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)

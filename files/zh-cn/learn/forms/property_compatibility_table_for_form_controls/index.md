@@ -53,7 +53,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 - {{cssxref("line-height")}}
   - : 不同浏览器支持情况不同，避免使用。
 - {{cssxref("text-decoration")}}
-  - : This property is not supported by Opera on form widgets.
+  - : Opera 的表单组件不支持这个属性。
 - {{cssxref("text-overflow")}}
   - : Opera、Safari 和 IE9 的表单组件不支持这个属性。
 - {{cssxref("text-shadow")}}
@@ -871,7 +871,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
   </tbody>
 </table>
 
-### Check boxes and radio buttons
+### 复选框和单选按钮
 
 参见 `{{htmlelement("input/checkbox", "checkbox")}}` 和 `{{htmlelement("input/radio", "radio")}}` input 类型。
 
@@ -1686,9 +1686,9 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
   </tbody>
 </table>
 
-### Datalist
+### 数据列表
 
-参见 `{{htmlelement("datalist")}}` 华人 `{{htmlelement("input")}}` 元素，以及 [`list` 属性](/zh-CN/docs/Web/HTML/Attributes/list)。
+参见 `{{htmlelement("datalist")}}` 和 `{{htmlelement("input")}}` 元素，以及 [`list` 属性](/zh-CN/docs/Web/HTML/Attributes/list)。
 
 <table>
   <thead>
@@ -2085,7 +2085,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
       <td>
         <ol>
           <li>
-            它表现的或多或少的像一个组件左侧的边缘。
+            它表现的或多或少的像一个组件额外的左边距。
           </li>
         </ol>
       </td>
@@ -3267,7 +3267,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 - [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
 - [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其他表单空间](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
 - [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
 - [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
 - [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)

@@ -41,7 +41,7 @@ Highlights:
 
 - {{HTMLElement("a")}} 没有 `href` 属性，并且不再被分类为交互内容。点击 {{HTMLElement("label")}} 将会激活标签内容 ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG 图标现在支持站点图标 (偏爱图标和快捷方式图标)([Firefox bug 366324](https://bugzil.la/366324)).
-- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/zh-CN/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
+- The [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/zh-CN/docs/Web/HTML/Element/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
 
 ### JavaScript

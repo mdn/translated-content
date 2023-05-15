@@ -81,14 +81,3 @@ l10n:
 道路の写真: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [kevin digga](https://www.pinterest.com/kevindigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

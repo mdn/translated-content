@@ -5,85 +5,151 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 
 {{JSRef("Global_Objects", "Array")}}
 
-## Sumário
-
-O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro.
+O método **`concat()`** é utilizado para mesclar dois ou mais arrays.
+Esse método não altera os arrays existentes, mas, em vez disso, retorna um novo array.
 
 {{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
 
 ## Sintaxe
 
-```
-arr.concat(valor1, valor2, ..., valorN)
+```js-nolint
+concat()
+concat(valor0)
+concat(valor0, valor1)
+concat(valor1, valor2, /*...,*/ valorN)
 ```
 
 ### Parâmetros
 
-- valorN
-  - : Arrays ou valores para concatenar (unir) ao array retornado.
+- `valorN` {{optional_inline}}
+  - : Arrays e/ou valores para concatenar em um novo array. Se todos
+    os parâmetros `valorN` forem omitidos, `concat` retorna uma
+    [shallow copy](/pt-BR/docs/Glossary/Shallow_copy) de todos os arrays existentes do qual é chamado. Veja a descrição abaixo
+    para mais detalhes.
+
+### Valor de retorno
+
+Uma nova instância {{jsxref("Array")}}.
 
 ## Descrição
 
-**concat** cria um novo array unindo todos os elementos que foram passados como parâmetro, na ordem dada, para cada argumento e seus elementos (se o elemento passado for um array).
+O método `concat` cria um novo array. O array irá primeiro ser preenchido pelos elementos no objeto no qual é chamado. Então, para cada argumento, seu valor será concatenado no array — para objetos normais ou primitivos, o próprio argumento se tornará um elemento do array final; para arrays ou objetos tipo array com a propriedade [`Symbol.isConcatSpreadable`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable) definida como um valor verdadeiro, cada elemento do argumento será adicionado independentemente ao array final. O método `concat` não recursa em argumentos de array aninhados.
 
-**concat** não altera a si mesmo ou a qualquer um dos argumentos passados, apenas providencia um novo array contendo uma cópia de si mesmo e dos argumentos passados. Os elementos copiados são:
+O método `concat()` é um [copying method](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods). Ele não altera `this` ou quaquer um dos arrays fornecidos como argumentos, mas, em vez disso retorna uma [shallow copy](/pt-BR/docs/Glossary/Shallow_copy) que contém os mesmos elementos dos arrays originais.
 
-- Referência aos objetos (e não o objeto): concat copia a referência aos objetos para o novo array. Tanto o original quanto a cópia apontam para o mesmo objeto. Ou seja, se o objeto foi modificado, tais mudanças serão visíveis no objeto original e no array.
-- Strings e numbers (diferente dos objetos {{jsxref("Global_Objects/String", "String")}} e {{jsxref("Global_Objects/Number", "Number")}}): `concat` copia os valores de strings e numbers para o novo array. Qualquer alteração no novo array não refletirá no original, e vice versa.
+O método `concat()` preserva slots vazios se qualquer um dos arrays de origem for [sparse](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
+
+O método `concat()` é [genérico](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#m%C3%A9todos_gen%C3%A9ricos_de_array). O valor `this` é tratado da mesma forma como os outros argumentos (exceto que será convertido em um objeto primeiro), o que significa que objetos simples serão anexados diretamente ao array resultante, enquanto objetos do tipo array com verdadeiro `@@isConcatSpreadable` serão propagados no array resultante.
 
 ## Exemplos
 
-### Exemplo: Concatenando dois arrays
+### Concatenando dois arrays
 
-O código a seguir une dois arrays:
+O código a seguir concatena dois arrays:
 
 ```js
-var alpha = ["a", "b", "c"];
-var numeric = [1, 2, 3];
+const letras = ["a", "b", "c"];
+const numeros = [1, 2, 3];
 
-// creates array ["a", "b", "c", 1, 2, 3]; alpha and numeric are unchanged
-var alphaNumeric = alpha.concat(numeric);
+const alfaNumerico = letras.concat(numeros);
+console.log(alfaNumerico);
+// resulta em ['a', 'b', 'c', 1, 2, 3]
 ```
 
-### Exemplo: Concatenando três arrays
+### Concatenando três arrays
 
-O código a seguir une três arrays:
+O código a seguir concatena três arrays:
 
 ```js
-var num1 = [1, 2, 3];
-var num2 = [4, 5, 6];
-var num3 = [7, 8, 9];
+const num1 = [1, 2, 3];
+const num2 = [4, 5, 6];
+const num3 = [7, 8, 9];
 
-// creates array [1, 2, 3, 4, 5, 6, 7, 8, 9]; num1, num2, num3 are unchanged
-var nums = num1.concat(num2, num3);
+const numeros = num1.concat(num2, num3);
+
+console.log(numeros);
+// resulta em [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Exemplo: Concatenando valores ao array
+### Concatenando valores em um array
 
-O código a seguir une três valores ao array:
+O código a seguir concatena três valores em um array:
 
 ```js
-var alpha = ['a', 'b', 'c'];
+const letras = ["a", "b", "c"];
 
-// creates array ["a", "b", "c", 1, 2, 3], leaving alpha unchanged
-var alphaNumeric = alpha.concat(1, [2, 3]);
+const alfaNumerico = letras.concat(1, [2, 3]);
+
+console.log(alfaNumerico);
+// resulta em ['a', 'b', 'c' , 1, 2, 3] 
+```
+
+### Concatenando arrays aninhados
+
+O código a seguir concatena arrays aninhados e demonstra a retenção de referência:
+
+```js
+const num1 = [[1]];
+const num2 = [2, [3]];
+
+const numeros = num1.concat(num2);
+
+console.log(numeros);
+// resulta em [[1], 2, [3]]
+
+//modifica o primeiro elemento do num1
+num1[0].push(4);
+
+console.log(numeros);
+// resulta em [[1, 4], 2, [3]]
+```
+
+### Concatenanto objetos tipo array com Symbol.isConcatSpreadable
+
+`concat` não trata todos os objetos tipo array como arrays por padrão — somente se `Symbol.isConcatSpreadable` estiver definido como um valor verdadeiro (P.ex. `true`)
+
+```js
+const obj1 = { 0: 1, 1: 2, 2: 3, length: 3 };
+const obj2 = { 0: 1, 1: 2, 2: 3, length: 3, [Symbol.isConcatSpreadable]: true };
+console.log([0].concat(obj1, obj2));
+// resulta em [ 0, { '0': 1, '1': 2, '2': 3, length: 3 }, 1, 2, 3 ]
+```
+
+### Usando concat() em arrays sparse
+
+Se qualquer uma das arrays é sparse, a array resultante será também sparse:
+
+```js
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
+```
+
+### Chamando concat() em objetos não array
+
+Se o valor `this` não for um array, ele será convertido em um objeto e então tratado da mesma forma que os argumentos para `concat()`. Nesse caso o valor de retorno é sempre um novo array simples.
+
+```js
+console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
+console.log(Array.prototype.concat.call(1, 2, 3)); // [ [Number: 1], 2, 3 ]
+const arrayLike = { [Symbol.isConcatSpreadable]: true, length: 2, 0: 1, 1: 2 };
+console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ```
 
 ## Especificação
 
-| Specification                                                                                        | Status                   | Comment                                           |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------- |
-| ECMAScript 3rd Edition                                                                               | Standard                 | Initial definition. Implemented in JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.4.4.4', 'Array.prototype.concat')}}                 | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-array.prototype.concat', 'Array.prototype.concat')}} | {{Spec2('ES6')}}     |                                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.concat")}}
+{{Compat}}
 
 ## Veja também
 
-- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} - add/remove elements from the end of the array;
-- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} - add/remove elements from the beginning of the array;
-- {{jsxref("Array.splice", "splice")}} - add/remove elements from the specified location of the array.
-- {{jsxref("String.prototype.concat")}}
+- [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
+- {{jsxref("String.prototype.concat()")}}
+- {{jsxref("Symbol.isConcatSpreadable")}}

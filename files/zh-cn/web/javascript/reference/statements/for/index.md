@@ -117,7 +117,7 @@ showOffsetPos('content');
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Statements/empty", "empty statement", "", 0)}}
 - {{jsxref("Statements/break", "break")}}

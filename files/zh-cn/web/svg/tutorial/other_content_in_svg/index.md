@@ -3,6 +3,8 @@ title: 其他 SVG 内容
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 除了图形化原件，如矩形和圆形之外，SVG 还提供了一些元素用来在图片中嵌入别的类型的内容。
@@ -14,11 +16,19 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 嵌入的图像变成一个普通的 SVG 元素。这意味着，你可以在其内容上用剪切、遮罩、滤镜、旋转以及其他 SVG 工具：
 
 ```html
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="200" height="200">
-  <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-     xlink:href="https://developer.mozilla.org/static/img/favicon144.png"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
+  <image
+    x="90"
+    y="-65"
+    width="128"
+    height="146"
+    transform="rotate(45)"
+    xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 

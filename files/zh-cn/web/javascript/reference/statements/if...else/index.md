@@ -19,7 +19,7 @@ if (condition)
 ```
 
 - `condition`
-  - : 值为真或假的[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions)
+  - : 值为真或假的[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)
 - `statement1`
   - : 当`condition`为真时执行的语句。可为任意语句，包括更深层的内部`if`语句。要执行多条语句，使用[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)语句（{ ... }）将这些语句分组；若不想执行语句，则使用[空](/zh-CN/docs/Web/JavaScript/Reference/Statements/Empty)语句。
 - `statement2`

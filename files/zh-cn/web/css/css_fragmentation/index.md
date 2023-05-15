@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Fragmentation
 original_slug: Web/CSS/CSS_分片
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **CSS Fragmentation**是**CSS**的模块，它定义了内容在跨多个[页面](/zh-CN/docs/Web/CSS/Paged_Media)，区域或[列中](/zh-CN/docs/Web/CSS/CSS_Columns)被分割（分段）时如何显示。
 

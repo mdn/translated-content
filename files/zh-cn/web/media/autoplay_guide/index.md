@@ -52,7 +52,7 @@ audioElement.play();
 
 ### autoplay 属性
 
-想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
+想让内容自动播放的最简单方法是将[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
 
 - 页面允许使用自动播放功能
 - 媒体元素已在页面加载期间创建
@@ -70,7 +70,7 @@ audioElement.play();
 
 #### 例子 2：检测自动播放失败
 
-如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
+如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
 如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的[`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event)事件来轻松实现此目的。
 
@@ -82,7 +82,7 @@ Consider this HTML for a media element:
 <video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
@@ -159,9 +159,9 @@ In addition to the browser-side management and control over autoplay functionali
 
 You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
-> **备注：** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new feature policy for that frame and all frames nested within it.
+> **备注：** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow), which sets a new feature policy for that frame and all frames nested within it.
 
-When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
+When using the [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) attribute.
 
 ### Example: Allowing autoplay only from the document's domain
 
@@ -240,7 +240,7 @@ A common use case for autoplay is to automatically begin to play a video clip th
 <video src="/videos/awesomevid.webm" controls autoplay muted>
 ```
 
-This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
+This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
 
 ## Browser configuration options
 

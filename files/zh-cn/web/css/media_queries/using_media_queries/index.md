@@ -4,7 +4,7 @@ slug: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/Media_queries
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **媒体查询**（**Media queries**）非常实用，尤其是当你想要根据设备的大致类型（如打印设备与带屏幕的设备）或者特定的特征和设备参数（例如屏幕分辨率和浏览器{{glossary("viewport", "视窗")}}宽度）来修改网站或应用程序时。
 

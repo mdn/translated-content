@@ -11,7 +11,7 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ### HTML
 
-- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的{{htmlattrxref("download", "a") }}属性 ({{bug("676619")}}).
+- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Element/a#download)属性 ({{bug("676619")}}).
 - [全局属性](/zh-CN/docs/HTML/Global_attributes) [`dir`](/zh-CN/docs/HTML/Global_attributes#attr-dir) 的值开始支持 `auto` ({{bug("548206")}}).
 
 ### JavaScript

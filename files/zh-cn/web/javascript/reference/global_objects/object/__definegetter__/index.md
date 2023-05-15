@@ -66,5 +66,5 @@ console.log(o.gimmeFive); // 5
 - {{jsxref("Operators/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)
 - [\[个人博文\] defineGetter\_\_ 和 \_\_defineSetter\_\_ 已被废弃](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)

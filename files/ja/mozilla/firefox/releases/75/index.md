@@ -19,7 +19,7 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の {{htmlattrxref("loading", "img")}} 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
+- {{HTMLElement("img")}} 要素の [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
 - [`<style>`](/ja/docs/Web/HTML/Element/style) 要素の `type` 属性の値を、仕様書に従って `text/css` のみに限定しました ([Firefox バグ 1614329](https://bugzil.la/1614329))。
 
 ### CSS

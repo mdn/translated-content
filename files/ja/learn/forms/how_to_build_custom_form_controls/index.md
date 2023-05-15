@@ -842,25 +842,3 @@ JavaScript なしで少しの CSS にて、ラジオボタンのリストをス�
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
 ラジオボタン、独自 JavaScript 、またはサードパーティライブラリーで代替コントロールを作る場合、アクセシブルかつ機能への耐性を高めましょう。すなわち Web 標準の実装状況がまちまちである、多様なブラウザーで良好に動作できるようにすることが必要です。楽しんでください!
-
-## このモジュール
-
-### 学習コース
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

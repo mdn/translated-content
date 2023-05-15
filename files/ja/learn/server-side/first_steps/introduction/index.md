@@ -175,10 +175,3 @@ Web サーバーはクライアントからの要求を待ちうけ、受信し�
 次からの記事では、どのフレームワークを選べばよいか考えます。それから、クライアント・サーバー間の相互作用について、もう少し詳しく説明します。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## このモジュールの記事一覧
-
-- [サーバサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
-- [クライアント - サーバの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)

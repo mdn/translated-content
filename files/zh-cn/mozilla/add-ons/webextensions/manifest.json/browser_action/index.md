@@ -76,7 +76,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         </p>
         <p>
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           中的示例扩展的弹窗使用了 <code>browser_style</code>。

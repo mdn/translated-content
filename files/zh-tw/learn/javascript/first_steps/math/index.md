@@ -192,7 +192,7 @@ If you want to override operator precedence, you can put parentheses round the p
 
 Try it and see.
 
-> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operator_precedence).
+> **備註：** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](Learn/JavaScript/First_steps/Math).
 
 ## 遞增和遞減運算符
 
@@ -262,7 +262,7 @@ var y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **備註：** There are lots of [other assignment operators available](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), but these are the basic ones you should learn now.
+> **備註：** There are lots of [other assignment operators available](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators#賦值運算子), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -343,6 +343,6 @@ In this article we have covered the fundamental information you need to know abo
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **備註：** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

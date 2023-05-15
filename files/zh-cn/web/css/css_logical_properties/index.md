@@ -1,117 +1,122 @@
 ---
-title: CSS 逻辑属性与值
+title: CSS 逻辑属性与逻辑值
 slug: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}
 
-**CSS 逻辑属性与值**是 [CSS](/zh-CN/docs/Web/CSS) 的一个模块，其引入的属性与值能做从逻辑角度控制布局，而不是从物理、方向或维度来控制。
+**CSS 逻辑属性与逻辑值**这一 [CSS](/zh-CN/docs/Web/CSS) 模块引入了逻辑属性和逻辑值，由此得以通过逻辑的——而不是实体的——方向与尺度映射控制布局。
 
-The module also defines logical properties and values for properties previously defined in CSS 2.1. Logical properties define direction‐relative equivalents of their corresponding physical properties.
+此模块也为之前在 CSS 2.1 中定义的属性定义了逻辑属性和逻辑值。逻辑属性定义了在相对方向下与对应的实体属性相等价的属性。
 
-### block 与 inline
+### 块向与行向
 
-Logical properties and values use the abstract terms _block_ and _inline_ to describe the direction in which they flow. The physical meaning of these terms depends on the [writing mode](/zh-CN/docs/Web/CSS/CSS_Writing_Modes).
+逻辑属性和逻辑值用抽象术语*块向*和*行向*描述其流向。这些术语的实体含义取决于[书写模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)。
 
-- Block dimension
-  - : The dimension perpendicular to the flow of text within a line, i.e., the vertical dimension in horizontal writing modes, and the horizontal dimension in vertical writing modes. For standard English text, it is the vertical dimension.
-- Inline dimension
-  - : The dimension parallel to the flow of text within a line, i.e., the horizontal dimension in horizontal writing modes, and the vertical dimension in vertical writing modes. For standard English text, it is the horizontal dimension.
+- 块向尺度
+  - : 与行内文本流向垂直的方向上的尺度，如横排书写模式中的竖直尺度，以及竖排书写模式中的水平尺度。对于标准的英文文本，此尺度指竖直尺度。
+- 行向尺度
+  - : 与行内文本流向平行的方向上的尺度，如横排书写模式中的水平尺度，以及横排书写模式中的竖直尺度。对于标准的英文文本，此尺度指水平尺度。
 
 ## 参考
 
-### 大小属性
+### 尺寸属性
 
-- {{CSSxRef("block-size")}}
-- {{CSSxRef("inline-size")}}
-- {{CSSxRef("max-block-size")}}
-- {{CSSxRef("max-inline-size")}}
-- {{CSSxRef("min-block-size")}}
-- {{CSSxRef("min-inline-size")}}
+- {{CSSXref("block-size")}}
+- {{CSSXref("inline-size")}}
+- {{CSSXref("max-block-size")}}
+- {{CSSXref("max-inline-size")}}
+- {{CSSXref("min-block-size")}}
+- {{CSSXref("min-inline-size")}}
 
-### 外边距、边框与内边距属性
+### 用于外边距、边框和内边距的属性
 
-- {{CSSxRef("border-block")}}
-- {{CSSxRef("border-block-color")}}
-- {{CSSxRef("border-block-end")}}
-- {{CSSxRef("border-block-end-color")}}
-- {{CSSxRef("border-block-end-style")}}
-- {{CSSxRef("border-block-end-width")}}
-- {{CSSxRef("border-block-start")}}
-- {{CSSxRef("border-block-start-color")}}
-- {{CSSxRef("border-block-start-style")}}
-- {{CSSxRef("border-block-start-width")}}
-- {{CSSxRef("border-block-style")}}
-- {{CSSxRef("border-block-width")}}
-- {{CSSxRef("border-color")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("border-inline")}}
-- {{CSSxRef("border-inline-color")}}
-- {{CSSxRef("border-inline-end")}}
-- {{CSSxRef("border-inline-end-color")}}
-- {{CSSxRef("border-inline-end-style")}}
-- {{CSSxRef("border-inline-end-width")}}
-- {{CSSxRef("border-inline-start")}}
-- {{CSSxRef("border-inline-start-color")}}
-- {{CSSxRef("border-inline-start-style")}}
-- {{CSSxRef("border-inline-start-width")}}
-- {{CSSxRef("border-inline-style")}}
-- {{CSSxRef("border-inline-width")}}
-- {{CSSxRef("border-start-start-radius")}}
-- {{CSSxRef("border-start-end-radius")}}
-- {{CSSxRef("border-end-start-radius")}}
-- {{CSSxRef("border-end-end-radius")}}
-- {{CSSxRef("border-style")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("border-width")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("margin")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("margin-block")}}
-- {{CSSxRef("margin-block-end")}}
-- {{CSSxRef("margin-block-start")}}
-- {{CSSxRef("margin-inline")}}
-- {{CSSxRef("margin-inline-end")}}
-- {{CSSxRef("margin-inline-start")}}
-- {{CSSxRef("padding")}} (`logical` {{Experimental_Inline}} keyword)
-- {{CSSxRef("padding-block")}}
-- {{CSSxRef("padding-block-end")}}
-- {{CSSxRef("padding-block-start")}}
-- {{CSSxRef("padding-inline")}}
-- {{CSSxRef("padding-inline-end")}}
-- {{CSSxRef("padding-inline-start")}}
+- {{CSSXref("border-block")}}
+- {{CSSXref("border-block-color")}}
+- {{CSSXref("border-block-end")}}
+- {{CSSXref("border-block-end-color")}}
+- {{CSSXref("border-block-end-style")}}
+- {{CSSXref("border-block-end-width")}}
+- {{CSSXref("border-block-start")}}
+- {{CSSXref("border-block-start-color")}}
+- {{CSSXref("border-block-start-style")}}
+- {{CSSXref("border-block-start-width")}}
+- {{CSSXref("border-block-style")}}
+- {{CSSXref("border-block-width")}}
+- {{CSSXref("border-color")}}
+- {{CSSXref("border-inline")}}
+- {{CSSXref("border-inline-color")}}
+- {{CSSXref("border-inline-end")}}
+- {{CSSXref("border-inline-end-color")}}
+- {{CSSXref("border-inline-end-style")}}
+- {{CSSXref("border-inline-end-width")}}
+- {{CSSXref("border-inline-start")}}
+- {{CSSXref("border-inline-start-color")}}
+- {{CSSXref("border-inline-start-style")}}
+- {{CSSXref("border-inline-start-width")}}
+- {{CSSXref("border-inline-style")}}
+- {{CSSXref("border-inline-width")}}
+- {{CSSXref("border-start-start-radius")}}
+- {{CSSXref("border-start-end-radius")}}
+- {{CSSXref("border-end-start-radius")}}
+- {{CSSXref("border-end-end-radius")}}
+- {{CSSXref("border-style")}}
+- {{CSSXref("border-width")}}
+- {{CSSXref("margin")}}（`logical` {{Experimental_Inline}} 关键词）
+- {{CSSXref("margin-block")}}
+- {{CSSXref("margin-block-end")}}
+- {{CSSXref("margin-block-start")}}
+- {{CSSXref("margin-inline")}}
+- {{CSSXref("margin-inline-end")}}
+- {{CSSXref("margin-inline-start")}}
+- {{CSSXref("padding")}}（`logical` {{Experimental_Inline}} 关键词）
+- {{CSSXref("padding-block")}}
+- {{CSSXref("padding-block-end")}}
+- {{CSSXref("padding-block-start")}}
+- {{CSSXref("padding-inline")}}
+- {{CSSXref("padding-inline-end")}}
+- {{CSSXref("padding-inline-start")}}
 
-### 浮动与定位属性
+### 用于浮动和定位的属性
 
-- {{CSSxRef("clear")}} (`inline-end` and `inline-start` keywords)
-- {{CSSxRef("float")}} (`inline-end` and `inline-start` keywords)
-- {{CSSxRef("inset")}}
-- {{CSSxRef("inset-block")}}
-- {{CSSxRef("inset-block-end")}}
-- {{CSSxRef("inset-block-start")}}
-- {{CSSxRef("inset-inline")}}
-- {{CSSxRef("inset-inline-end")}}
-- {{CSSxRef("inset-inline-start")}}
+- {{CSSXref("clear")}}（`inline-end` 和 `inline-start` 关键词）
+- {{CSSXref("float")}}（`inline-end` 和 `inline-start` 关键词）
+- {{CSSXref("inset")}}
+- {{CSSXref("inset-block")}}
+- {{CSSXref("inset-block-end")}}
+- {{CSSXref("inset-block-start")}}
+- {{CSSXref("inset-inline")}}
+- {{CSSXref("inset-inline-end")}}
+- {{CSSXref("inset-inline-start")}}
+
+### 用于尺寸屏蔽的属性
+
+- {{CSSXref("contain-intrinsic-block-size")}}
+- {{CSSXref("contain-intrinsic-inline-size")}}
 
 ### 其他属性
 
-- {{CSSxRef("caption-side")}} (`inline-end` and `inline-start` keywords)
-- {{CSSxRef("overflow-block")}}
-- {{CSSxRef("overflow-inline")}}
-- {{CSSxRef("overscroll-behavior-block")}}
-- {{CSSxRef("overscroll-behavior-inline")}}
-- {{CSSxRef("resize")}} (`block` and `inline` keywords)
-- {{CSSxRef("text-align")}} (`end` and `start` keywords)
+- {{CSSXref("caption-side")}}（`inline-end` 和 `inline-start` 关键词）
+- {{CSSXref("overflow-block")}}
+- {{CSSXref("overflow-inline")}}
+- {{CSSXref("overscroll-behavior-block")}}
+- {{CSSXref("overscroll-behavior-inline")}}
+- {{CSSXref("resize")}}（`block` 和 `inline` 关键词）
+- {{CSSXref("text-align")}}（`end` 和 `start` 关键词）
 
-### 已弃用属性
+### 弃用属性
 
-- {{CSSxRef("offset-block-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-block-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-block-start")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-end")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-end")}} {{Experimental_Inline}})
-- {{CSSxRef("offset-inline-start")}} {{Non-standard_Inline}} {{Deprecated_Inline}} (now {{CSSxRef("inset-inline-start")}} {{Experimental_Inline}})
+- `offset-block-end` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-block-end")}}）
+- `offset-block-start` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-block-start")}}）
+- `offset-inline-end` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-inline-end")}}）
+- `offset-inline-start` {{Non-standard_Inline}} {{Deprecated_Inline}}（现为 {{CSSXref("inset-inline-start")}}）
 
 ## 指南
 
-- [Basic concepts of logical properties and values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [Logical Properties for sizing](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [Logical Properties for margins, borders and padding](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [Logical Properties for floating and positioning](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
+- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Sizing)
+- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
+- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
 
 ## 规范
 
@@ -119,12 +124,4 @@ Logical properties and values use the abstract terms _block_ and _inline_ to des
 
 ## 浏览器兼容性
 
-In general:
-
-- Firefox has support for the mapped properties — where there is a direct mapping from the physical to the logical version.
-- Chrome, from version 69, has support for the mapped properties.
-- Edge, from version 79, has the same support as Chrome.
-- Firefox 66 introduces support for two value shorthands, also behind a flag in Chrome.
-- Internet Explorer has no support.
-
-See the individual property pages for full compatibility information.
+完整的兼容性信息见各属性的页面。

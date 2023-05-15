@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 {{JSRef}}
 
-**`Object.entries()`**方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。
+**`Object.entries()`** 方法返回一个给定对象自身可枚举属性的键值对数组，其排列与使用 {{jsxref("Statements/for...in", "for...in")}} 循环遍历该对象时返回的顺序一致（区别在于 for-in 循环还会枚举原型链中的属性）。
 
 {{EmbedInteractiveExample("pages/js/object-entries.html", "taller")}}
 

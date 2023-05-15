@@ -410,7 +410,7 @@ textarea.onkeyup = () => {
 
 ### 論理属性
 
-沢山の HTML ソースを見ていくうちに、属性値のない属性を見かけることがあるでしょう。これは文法的に許されています。これらは「論理属性」と呼ばれています。論理属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、 {{htmlattrxref("disabled", "input")}} 属性は `input` 要素に指定することができる論理属性と考えてください。（これを使用して、ユーザーが入力できないようにフォームの入力要素を「無効」にします。無効にされた要素は、通常グレーアウトした外見になります。）
+沢山の HTML ソースを見ていくうちに、属性値のない属性を見かけることがあるでしょう。これは文法的に許されています。これらは「論理属性」と呼ばれています。論理属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、 [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) 属性は `input` 要素に指定することができる論理属性と考えてください。（これを使用して、ユーザーが入力できないようにフォームの入力要素を「無効」にします。無効にされた要素は、通常グレーアウトした外見になります。）
 
 ```html
 <input type="text" disabled="disabled">
@@ -514,7 +514,7 @@ textarea.onkeyup = () => {
 
 2. `<html></html>`: {{htmlelement("html")}} 要素。ページ上のすべての内容を囲む要素です。ルート要素と呼ばれることもあります。
 3. `<head></head>`: {{htmlelement("head")}} 要素。この要素は、 HTML ページに記載する、ページが閲覧者に見せる**コンテンツではないもの**すべてを入れるコンテナーとして機能します。これには、検索結果に現れるキーワードやページの説明文、内容をスタイル設定するための CSS、文字セットの宣言などが記載されます。これについては、次の記事で詳しく説明します。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} この要素は、 {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} または {{htmlelement("title")}} など、他の HTML メタ関連の要素では表現できないメタデータを表現します。htmlattrxref("charset", "meta")}} 属性は、文書の文字セットを UTF-8 に設定します。これは、人間の書いた言語の大半の文字を含むものです。この設定により、ページは、それが含むかもしれないあらゆるテキスト内容を扱うことができます。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} この要素は、 {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} または {{htmlelement("title")}} など、他の HTML メタ関連の要素では表現できないメタデータを表現します。[`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性は、文書の文字セットを UTF-8 に設定します。これは、人間の書いた言語の大半の文字を含むものです。この設定により、ページは、それが含むかもしれないあらゆるテキスト内容を扱うことができます。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
 5. `<title></title>`: {{htmlelement("title")}} 要素。ページのタイトルを設定します。このタイトルは、ページが読み込まれたブラウザータブに表示されるタイトルです。また、ページタイトルは、そのページがブックマークされたときの説明にも使用されます。
 6. `<body></body>`: {{htmlelement("body")}} 要素。テキスト、画像、動画、ゲーム、再生可能な音声トラックなど、ページに表示される**すべての**コンテンツがこの中に記載されます。
 
@@ -747,15 +747,3 @@ HTML のコメントを書くには、特別なマーカーの `<!--` と `-->` 
 - [CSS を使って HTML 要素に色をつける](/ja/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

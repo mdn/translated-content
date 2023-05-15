@@ -20,7 +20,7 @@ l10n:
 - オーナーノード
   - : この CSS 宣言ブロックが関連付けられている{{domxref("element", "要素", "", 1)}}。それ以外は null。
 - 更新フラグ
-  - : この CSS 宣言ブロックがオーナーノードの {{htmlattrxref("style")}} 属性を更新している場合に設定されます。
+  - : この CSS 宣言ブロックがオーナーノードの [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性を更新している場合に設定されます。
 
 {{domxref("CSSStyleDeclaration")}} が [CSS Object Model (CSSOM)](/ja/docs/Web/API/CSS_Object_Model) インターフェイスによって返されると、これらのプロパティは、仕様によって定義された適切な値に設定されます。
 

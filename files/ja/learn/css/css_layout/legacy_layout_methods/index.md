@@ -584,18 +584,3 @@ Skeleton（または他のグリッドフレームワーク）が行っている
 これで、さまざまなグリッドシステムの作成方法が理解できました。 これは、古いサイトでの作業や、CSS グリッドレイアウトのネイティブグリッドとこれらの古いシステムとの違いの理解に役立ちます。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

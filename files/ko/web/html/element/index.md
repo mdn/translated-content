@@ -1,6 +1,8 @@
 ---
 title: HTML 요소 참고서
 slug: Web/HTML/Element
+l10n:
+ sourceCommit: 65e5a105aa794caa7d339b49951cbaa4a0b83dd3
 ---
 
 {{HTMLSidebar("Elements")}}

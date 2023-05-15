@@ -297,14 +297,3 @@ This article covered feature detection in a reasonable amount of detail, going t
 Next up, we'll start looking at automated testing.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

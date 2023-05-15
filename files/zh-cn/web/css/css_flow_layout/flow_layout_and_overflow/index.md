@@ -3,6 +3,8 @@ title: Flow Layout and Overflow 流布局和溢出
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 ---
 
+{{CSSRef}}
+
 When there is more content than can fit into a container, an overflow situation occurs. Understanding how overflow behaves is important in dealing with any element with a constrained size in CSS. This guide explains how overflow works when working with normal flow.
 当容器中的内容超过可容纳的范围时，就会发生溢出情况。了解溢出的行为对于处理 CSS 中大小受限的任何元素都很重要。本指南解释了使用正常流时溢出是如何工作的。
 

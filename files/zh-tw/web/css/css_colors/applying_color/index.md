@@ -35,7 +35,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
 - {{cssxref("caret-color")}}
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/zh-TW/docs/Web/HTML/Global_attributes#contenteditable) attribute is set.
 
 ### Boxes
 
@@ -152,9 +152,10 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -165,38 +166,38 @@ th {
 
 ```html hidden
 <table>
- <thead>
-  <tr>
-   <th scope="col">Color in HSL notation</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(90deg, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(270deg, 90%, 50%)</code></td>
-   <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Color in HSL notation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(90deg, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(270deg, 90%, 50%)</code></td>
+      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -223,14 +224,10 @@ The HTML responsible for creating the above example is shown here:
 ```html
 <div class="wrapper">
   <div class="box boxLeft">
-    <p>
-      This is the first box.
-    </p>
+    <p>This is the first box.</p>
   </div>
   <div class="box boxRight">
-    <p>
-      This is the second box.
-    </p>
+    <p>This is the second box.</p>
   </div>
 </div>
 ```
@@ -309,7 +306,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## Letting the user pick a color
 
-There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/zh-TW/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -328,7 +325,7 @@ The HTML here creates a box that contains a color picker control (with a label c
 ```html
 <div id="box">
   <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -343,7 +340,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
 }
 ```
 
@@ -358,13 +355,21 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Color set to " + colorPicker.value + ".";
+  },
+  false
+);
 ```
 
 The [`input`](/zh-TW/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.

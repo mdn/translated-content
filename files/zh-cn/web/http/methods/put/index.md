@@ -9,13 +9,13 @@ slug: Web/HTTP/Methods/PUT
 
 `PUT` 与 {{HTTPMethod("POST")}} 方法的区别在于，PUT 方法是幂等的：调用一次与连续调用多次是等价的（即没有副作用），而连续调用多次 POST 方法可能会有副作用，比如将一个订单重复提交多次。
 
-| Request has body                                          | Yes |
-| --------------------------------------------------------- | --- |
-| Successful response has body                              | No  |
-| {{Glossary("Safe")}}                              | No  |
-| {{Glossary("Idempotent")}}                      | Yes |
-| {{Glossary("Cacheable")}}                          | No  |
-| Allowed in [HTML forms](/zh-CN/docs/Web/Guide/HTML/Forms) | No  |
+| 请求是否有主体                   | 是                                        |
+| -------------------------------- | ----------------------------------------- |
+| 成功的响应是否有主体             | 否                                        |
+| {{Glossary("Safe/HTTP", "安全")}}     | 否                                        |
+| {{Glossary("Idempotent", "幂等")}}     | 是                                        |
+| {{Glossary("Cacheable", "可缓存")}} | 否                                        |
+| HTML 表单是否支持                | 否                                        |
 
 ## 语法
 

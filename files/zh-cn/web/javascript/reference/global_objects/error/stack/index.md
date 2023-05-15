@@ -1,6 +1,6 @@
 ---
 title: Error.prototype.stack
-slug: Web/JavaScript/Reference/Global_Objects/Error/Stack
+slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -111,7 +111,7 @@ try {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Components.stack](/zh-CN/docs/Components.stack)
 - 外部项目：[TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)

@@ -157,7 +157,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Element#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and {{htmlattrxref("id")}} attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### 示例
 

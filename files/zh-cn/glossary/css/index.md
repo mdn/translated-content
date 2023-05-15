@@ -22,14 +22,9 @@ p {
 
 CSS 中的“C”表示“层叠的”，意为多个选择符之间具有特定的优先级。这一点非常重要，因为复杂网站可能会有非常多的 CSS 规则，因此必须规定好这些规则的优先级，以免乱套。
 
-## 了解更多
+## 参见
 
-### 基础知识
-
-- [CSS 教程](/zh-CN/Learn/CSS)
+- [CSS 教程](/zh-CN/docs/Learn/CSS)
 - 维基百科 [CSS](https://zh.wikipedia.org/wiki/CSS) 词条
-
-### 技术资料
-
 - [MDN CSS 文档](/zh-CN/docs/Web/CSS)
-- [W3 CSS 工作组的当前工作](https://www.w3.org/Style/CSS/current-work)
+- [CSS 工作组的当前工作](https://www.w3.org/Style/CSS/current-work)

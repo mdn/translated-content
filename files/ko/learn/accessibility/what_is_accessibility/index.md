@@ -15,7 +15,7 @@ l10n:
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선행지식:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>기본적인 컴퓨터 사용 능력, HTML과 CSS에 대한 기본적인 이해.</td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@ l10n:
 
 장애가 있는 사람들은 그렇지 않은 사람들만큼 다양하고 그들의 장애 역시 그렇습니다. 여기서 중요한 교훈은 당신의 컴퓨터, 그리고 당신이 웹을 사용하는 방식을 넘어서 생각하는 방법에 대해 배우는 것입니다. 당신이 아닌 유저, 다른 사람들이 그것을 어떻게 사용하는지에 대해서 말이죠.
 
-아래에는 생각해보아야 하는 장애의 주요 유형들이 설명되어 있습니다. 웹 컨텐츠에 접근하기 위해 사용하는 특별한 도구가 있다면 함께 살펴보겠습니다. 이런 도구들은 보조 기술(**assistive technologies**, 또는 **ATs**)이라고 불립니다.
+아래에는 생각해보아야 하는 장애의 주요 유형들이 설명되어 있습니다. 웹 콘텐츠에 접근하기 위해 사용하는 특별한 도구가 있다면 함께 살펴보겠습니다. 이런 도구들은 보조 기술(**assistive technologies**, 또는 **ATs**)이라고 불립니다.
 
 > **참고:** 세계 보건 기구(WHO)의 [장애 및 보건 현황 보고서](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)에 따르면 전 세계 인구의 약 15%에 해당하는 10억명 이상의 사람들이 장애를 갖고 있으며 1억 1천만명에서 1억 9천만명 사이의 성인들이 심각한 장애를 갖고 있습니다.
 
@@ -68,7 +68,7 @@ l10n:
 
 [청각 장애 및 난청 (Deaf and hard-of-hearing, DHH)](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) 사람들은 경도에서 심도까지 다양한 수준의 난청을 가지고 있습니다. 이들 중 일부는 보조 기술(AT, [청각, 음성, 언어 장애가 있는 사람들을 위한 보조 장치](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders) 참고)을 사용하지만 보편적이지는 않습니다.
 
-따라서 접근성을 위해서는 대체 텍스트가 제공되어야 합니다. 영상에는 수동으로 자막을 달고 오디오 컨텐츠에 대해서도 대본을 제공해야 합니다. 또, DHH 인구의 높은 [언어 박탈 (language deprivation)](https://www.notion.so/6673cd1146724a14aa4f009c6b05af9c))을 고려해 [텍스트 단순화](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/)가 필요할 수 있습니다.
+따라서 접근성을 위해서는 대체 텍스트가 제공되어야 합니다. 영상에는 수동으로 자막을 달고 오디오 콘텐츠에 대해서도 대본을 제공해야 합니다. 또, DHH 인구의 높은 [언어 박탈 (language deprivation)](https://www.notion.so/6673cd1146724a14aa4f009c6b05af9c))을 고려해 [텍스트 단순화](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/)가 필요할 수 있습니다.
 
 청각 장애 및 난청 인구도 의미있는 비중을 차지하는 유저입니다. 세계 보건 기구(WHO)의 [Deafness and hearing loss](https://www.who.int/en/news-room/fact-sheets/detail/deafness-and-hearing-loss) fact sheet에 따르면 전 세계 4억 6,600만 명의 사람들이 난청을 겪고 있습니다.
 
@@ -78,19 +78,19 @@ l10n:
 
 이런 장애의 원인은 특정한 트라우마나 질병이 아닐 수도 있습니다. 노화가 될 수도 있고, 마우스가 없는 사용자처럼 하드웨어의 제약이 될 수도 있습니다.
 
-운동 장애를 고려한 웹 개발의 보편적인 요구 사항은 키보드를 통해 컨트롤(이 가능한 요소들)에 접근할 수 있도록 해야 한다는 것입니다. 이 모듈의 다른 아티클에서 키보드 접근성에 대해 이야기하겠지만, 웹 사이트를 키보드만으로 사용하는 일을 한번 해보세요. 어떻게 될까요? Tab 키를 사용해 웹 form의 컨트롤 요소들을 왔다갔다 할 수 있나요? 키보드 컨트롤에 관련된 더 많은 이야기는 [Cross browser testing Using native keyboard accessibility](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) 섹션에서 다루어집니다.
+운동 장애를 고려한 웹 개발의 보편적인 요구 사항은 키보드를 통해 컨트롤(이 가능한 요소들)에 접근할 수 있도록 해야 한다는 것입니다. 이 과정의 다른 아티클에서 키보드 접근성에 대해 이야기하겠지만, 웹 사이트를 키보드만으로 사용하는 일을 한번 해보세요. 어떻게 될까요? Tab 키를 사용해 웹 form의 컨트롤 요소들을 왔다갔다 할 수 있나요? 키보드 컨트롤에 관련된 더 많은 이야기는 [Cross browser testing Using native keyboard accessibility](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility) 섹션에서 다루어집니다.
 
 통계적으로도 많은 수의 사람들이 운동 장애를 가지고 있습니다. US Centers for Disease Control and Prevention의 [Disability and Functioning (Non-institutionalized Adults 18 Years and Over)](https://www.cdc.gov/nchs/fastats/disability.htm)에 따르면 미국에서 신체 기능 장애가 있는 성인 비율은 16.1%입니다.
 
 ### 인지 장애가 있는 사람
 
-인지 장애의 정의는 광범위합니다. 가장 제한된 인지 능력을 가지는 지적 장애부터 시작해, 나이가 들며 생각하고 기억하는 데 어려움을 느끼는 우리 모두를 가리키기도 합니다. [우울증](https://www.nimh.nih.gov/health/topics/depression)이나 [정신분열증](https://www.nimh.nih.gov/health/topics/schizophrenia) 같은 정신 질환 그리고 [난독증](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities), [ADHD](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd) 같은 학습 장애도 포함합니다. 인지 장애에 대한 임상적인 정의는 다양하지만, 중요한 것은 모두가 공통적으로 겪는 기능 문제가 있다는 것입니다. 예를 들어 컨텐츠를 제대로 이해하거나 작업을 완료하는 방법을 기억하는 과정에서 발생하는 어려움과 일관성 없는 웹 페이지의 레이아웃으로 발생하는 혼란이 있습니다.
+인지 장애의 정의는 광범위합니다. 가장 제한된 인지 능력을 가지는 지적 장애부터 시작해, 나이가 들며 생각하고 기억하는 데 어려움을 느끼는 우리 모두를 가리키기도 합니다. [우울증](https://www.nimh.nih.gov/health/topics/depression)이나 [정신분열증](https://www.nimh.nih.gov/health/topics/schizophrenia) 같은 정신 질환 그리고 [난독증](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities), [ADHD](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd) 같은 학습 장애도 포함합니다. 인지 장애에 대한 임상적인 정의는 다양하지만, 중요한 것은 모두가 공통적으로 겪는 기능 문제가 있다는 것입니다. 예를 들어 콘텐츠를 제대로 이해하거나 작업을 완료하는 방법을 기억하는 과정에서 발생하는 어려움과 일관성 없는 웹 페이지의 레이아웃으로 발생하는 혼란이 있습니다.
 
 인지 장애를 고려한 접근성의 좋은 기반은 다음과 같습니다.
 
-- 컨텐츠를 하나 이상의 방식으로 제공합니다. 텍스트-음성 변환 또는 비디오 등의 방법을 사용할 수 있습니다.
-- 표준 문법을 지켜 작성된 텍스트처럼 쉽게 이해할 수 있는 컨텐츠를 제공합니다.
-- 중요한 컨텐츠에는 주의가 집중될 수 있도록 합니다.
+- 콘텐츠를 하나 이상의 방식으로 제공합니다. 텍스트-음성 변환 또는 비디오 등의 방법을 사용할 수 있습니다.
+- 표준 문법을 지켜 작성된 텍스트처럼 쉽게 이해할 수 있는 콘텐츠를 제공합니다.
+- 중요한 콘텐츠에는 주의가 집중될 수 있도록 합니다.
 - 불필요한 내용이나 광고처럼 산만한 요소들을 최소화합니다.
 - 일관된 웹 페이지 레이아웃과 네비게이션을 사용합니다.
 - 방문하지 않은 경우 파란색, 방문한 경우는 보라색 밑줄이 그어지는 링크처럼 친숙한 요소를 사용합니다.
@@ -115,17 +115,17 @@ l10n:
 - 심각한 접근성 이슈가 있는 기존의 웹 사이트에 접근성을 추가하며 개조하려고 하는 경우
 - 프로젝트가 한참 진행된 뒤에야 접근성을 고려하며 관련된 이슈들을 발견한 경우
 
-하지만, 프로젝트를 시작할 때부터 접근성을 고려한다면 대부분의 컨텐츠를 접근성있게 만드는 데에 드는 비용은 꽤 적습니다.
+하지만, 프로젝트를 시작할 때부터 접근성을 고려한다면 대부분의 콘텐츠를 접근성있게 만드는 데에 드는 비용은 꽤 적습니다.
 
 프로젝트 계획을 세울 때, 대상 데스크탑이나 모바일 브라우저와 같은 중요한 타겟 오디언스 세그먼트를 위한 테스팅과 함께 접근성 테스팅을 고려하세요. 빠르게, 자주 테스트하세요. 이상적인 방식은 자동화된 테스트를 통해 누락되어 있는 접근성 관련 기능들(예를 들어 이미지의 [대체 텍스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)나 잘못된 링크 텍스트. [Element relationships and context](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)를 참고하세요)을 잡아내는 것입니다. 또, 장애가 있는 유저 그룹을 대상으로 일부 테스팅을 진행하며 그들이 복잡한 사이트 기능을 얼마나 잘 활용할 수 있는지 확인할 수 있습니다. 다음과 같은 기준을 사용할 수 있습니다.
 
 - 날짜 선택 위젯은 스크린 리더에서 사용성이 있나요?
-- 동적으로 업데이트되는 컨텐츠를 시각 장애인도 인지할 수 있나요?
+- 동적으로 업데이트되는 콘텐츠를 시각 장애인도 인지할 수 있나요?
 - UI 버튼들이 키보드와 터치 인터페이스 유저들 모두에게 접근성을 제공하나요?
 
-접근성을 위한 작업이 필요한 잠재적 문제 영역에 대해 기록하고, 철저하게 테스팅 될 수 있도록 하며 해결 방안과 대안을 생각해야 합니다. 텍스트 컨텐츠는 (다음 아티클에서 살펴볼 것처럼) 쉬운 편이지만, 멀티미디어 컨텐츠나 최신 3D 기술로 만들어진 그래픽들은 어떻게 해야할까요? 프로젝트 예산을 고려해 이런 컨텐츠들을 접근성 있게 만들기 위해서 어떤 일을 할 수 있는지 생각해보세요. 비용은 많이 들겠지만 모든 멀티미디어에 대해 다른 형태의 기록, 음성 등을 제공하는 것도 가능합니다.
+접근성을 위한 작업이 필요한 잠재적 문제 영역에 대해 기록하고, 철저하게 테스팅 될 수 있도록 하며 해결 방안과 대안을 생각해야 합니다. 텍스트 콘텐츠는 (다음 아티클에서 살펴볼 것처럼) 쉬운 편이지만, 멀티미디어 콘텐츠나 최신 3D 기술로 만들어진 그래픽들은 어떻게 해야할까요? 프로젝트 예산을 고려해 이런 콘텐츠들을 접근성 있게 만들기 위해서 어떤 일을 할 수 있는지 생각해보세요. 비용은 많이 들겠지만 모든 멀티미디어에 대해 다른 형태의 기록, 음성 등을 제공하는 것도 가능합니다.
 
-동시에 현실적으로 생각하세요. “100% 접근성"은 실현 불가능한 이상입니다. 언제나 예외가 존재하고 어떤 사용자는 어떤 컨텐츠를 사용하기 어렵다고 느낄 것입니다. 하지만 할 수 있는 만큼 노력해야 합니다. 만약 WebGL을 사용해 멋진 3D 파이 차트 그래픽을 만들 계획이라면, 같은 데이터에 대한 데이터 테이블을 접근성 있는 형태로 포함할 수 있습니다. 또는 3D 파이 차트를 테이블로 대체할 수도 있겠습니다. 테이블은 모두에게 접근성 있으며, 더 빠르게 개발 가능하고, CPU 집약적이지도 않으며 유지보수도 더 쉽습니다.
+동시에 현실적으로 생각하세요. “100% 접근성"은 실현 불가능한 이상입니다. 언제나 예외가 존재하고 어떤 사용자는 어떤 콘텐츠를 사용하기 어렵다고 느낄 것입니다. 하지만 할 수 있는 만큼 노력해야 합니다. 만약 WebGL을 사용해 멋진 3D 파이 차트 그래픽을 만들 계획이라면, 같은 데이터에 대한 데이터 테이블을 접근성 있는 형태로 포함할 수 있습니다. 또는 3D 파이 차트를 테이블로 대체할 수도 있겠습니다. 테이블은 모두에게 접근성 있으며, 더 빠르게 개발 가능하고, CPU 집약적이지도 않으며 유지보수도 더 쉽습니다.
 
 반면에 흥미로운 3D 아트를 전시하는 갤러리 웹사이트를 작업하고 있다면, 모든 작품이 전적으로 시각적인 매체이므로 시각 장애인에게 완벽한 접근성을 제공하기는 어려울 것입니다.
 
@@ -162,10 +162,10 @@ WCAG는 가이드라인일 뿐이지만 당신의 국가에 웹 접근성, 또�
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-웹 앱의 HTML 요소들이 제공하는 네이티브 시맨틱 정보가 부족한 경우는 접근성 트리에 시맨틱 정보를 추가해 접근성을 개선하는 [WAI-ARIA 명세서](https://www.w3.org/TR/wai-aria/)의 기능들로 보완이 가능합니다. 이 모듈의 [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)에서 더 많은 내용을 설명합니다.
+웹 앱의 HTML 요소들이 제공하는 네이티브 시맨틱 정보가 부족한 경우는 접근성 트리에 시맨틱 정보를 추가해 접근성을 개선하는 [WAI-ARIA 명세서](https://www.w3.org/TR/wai-aria/)의 기능들로 보완이 가능합니다. 이 과정의 [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)에서 더 많은 내용을 설명합니다.
 
 ## 요약
 
-이 문서에서는 접근성에 대한 고차원적인 개요를 제공했습니다. 이것이 왜 중요한지, 워크플로우에 어떻게 적용할 수 있을지 살펴봤습니다. 이제 접근성있는 사이트를 만들기 위해서 어떤 구현 디테일이 필요한지 궁금할텐데요. 이 모듈을 통해 배울 수 있을 것입니다. 다음 섹션에서는 왜 HTML이 접근성을 위한 좋은 토대가 되는지 살펴보며 그 과정을 시작하겠습니다.
+이 문서에서는 접근성에 대한 고차원적인 개요를 제공했습니다. 이것이 왜 중요한지, 워크플로우에 어떻게 적용할 수 있을지 살펴봤습니다. 이제 접근성있는 사이트를 만들기 위해서 어떤 구현 디테일이 필요한지 궁금할텐데요. 이 과정을 통해 배울 수 있을 것입니다. 다음 섹션에서는 왜 HTML이 접근성을 위한 좋은 토대가 되는지 살펴보며 그 과정을 시작하겠습니다.
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

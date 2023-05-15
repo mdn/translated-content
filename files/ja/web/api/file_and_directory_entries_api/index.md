@@ -1,6 +1,8 @@
 ---
 title: ファイルとディレクトリー項目 API
 slug: Web/API/File_and_Directory_Entries_API
+l10n:
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{DefaultAPISidebar("File and Directory Entries API")}}

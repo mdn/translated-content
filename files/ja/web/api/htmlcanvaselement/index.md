@@ -12,11 +12,11 @@ slug: Web/API/HTMLCanvasElement
 _{{domxref("HTMLElement")}}から継承する属性の他に以下の属性を持ちます。_
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : 正の`integer` で {{htmlattrxref("height", "canvas")}} という HTML の{{HTMLElement("canvas")}}要素の属性で指定された CSS ピクセルの値です。もしこの属性が指定されていないか、無効な値であるならば、デフォルト値として`150`を用います。
+  - : 正の`integer` で [`height`](/ja/docs/Web/HTML/Element/canvas#height) という HTML の{{HTMLElement("canvas")}}要素の属性で指定された CSS ピクセルの値です。もしこの属性が指定されていないか、無効な値であるならば、デフォルト値として`150`を用います。
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : {{jsxref("Boolean")}}で{{htmlattrxref("moz-opaque", "canvas")}}という{{HTMLElement("canvas")}}要素で指定されたものを反映したものです。この属性は canvas が半透明であることが重要か否かを指定します。もし半透明がないならば、描画を最適化できます。
+  - : {{jsxref("Boolean")}}で[`moz-opaque`](/ja/docs/Web/HTML/Element/canvas#moz-opaque)という{{HTMLElement("canvas")}}要素で指定されたものを反映したものです。この属性は canvas が半透明であることが重要か否かを指定します。もし半透明がないならば、描画を最適化できます。
 - {{domxref("HTMLCanvasElement.width")}}
-  - : 正の`integer` で{{htmlattrxref("width", "canvas")}} という HTML の{{HTMLElement("canvas")}}要素の属性で指定された CSS ピクセルの値です。もしこの属性が指定されていないか、無効な値であるならば、デフォルト値として`300`を用います。
+  - : 正の`integer` で[`width`](/ja/docs/Web/HTML/Element/canvas#width) という HTML の{{HTMLElement("canvas")}}要素の属性で指定された CSS ピクセルの値です。もしこの属性が指定されていないか、無効な値であるならば、デフォルト値として`300`を用います。
 
 ## メソッド
 

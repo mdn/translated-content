@@ -23,11 +23,11 @@ slug: Web/HTML/Element/input/image
 
 例如，如果你有一个按钮，显示一个带有图标和/或图像文本“现在登录”的图片，你也应该设置 `alt` 属性为类似于 `现在登录` 的东西。
 
-> **备注：** 虽然 `alt` 属性在技术上是可选的，但是你总应该包含它，以最大限度地提高你的内容的可用性。在功能上，`<input type="image">` 元素的 `alt` 属性与 {{HTMLElement("img")}} 元素的 {{htmlattrxref("alt", "img")}} 属性相类似。
+> **备注：** 虽然 `alt` 属性在技术上是可选的，但是你总应该包含它，以最大限度地提高你的内容的可用性。在功能上，`<input type="image">` 元素的 `alt` 属性与 {{HTMLElement("img")}} 元素的 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 属性相类似。
 
 ### formaction
 
-一个字符串，指示要将数据提交到的 URL。这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。
+一个字符串，指示要将数据提交到的 URL。这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
 
 该属性也在 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 和 {{HTMLElement("button")}} 元素上可用。
 
@@ -42,18 +42,18 @@ slug: Web/HTML/Element/input/image
 - `text/plain`
   - : 纯文本；通常只在调试时有作用，你可以很容易看到要被提交的数据。
 
-如果该属性被指定，`formenctype` 属性的值将会覆盖表单的 {{htmlattrxref("action", "form")}} 属性。
+如果该属性被指定，`formenctype` 属性的值将会覆盖表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
 
 该属性也在 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 和 {{HTMLElement("button")}} 元素上可用。
 
 ### formmethod
 
-一个字符串，指定提交表单数据时使用的 HTTP 方法；该值将会覆盖所属表单上的任何 {{htmlattrxref("method", "form")}} 属性。允许的值如下：
+一个字符串，指定提交表单数据时使用的 HTTP 方法；该值将会覆盖所属表单上的任何 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。允许的值如下：
 
 - `get`
-  - : 以 `formaction` 或 {{htmlattrxref("action", "form")}} 属性给定的 URL 为前缀构造的一个 URL，在前缀后会附加一个问号（`?`）字符，然后附加表单数据，表单数据按照 `formenctype` 或表单的 {{htmlattrxref("enctype", "form")}} 属性的描述进行编码。构造的 URL 会通过 HTTP {{HTTPMethod("get")}} 请求发送到服务器。此方法适用于仅包含 ASCII 字符，且没有副作用的简单表单。这是该属性的默认值。
+  - : 以 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性给定的 URL 为前缀构造的一个 URL，在前缀后会附加一个问号（`?`）字符，然后附加表单数据，表单数据按照 `formenctype` 或表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性的描述进行编码。构造的 URL 会通过 HTTP {{HTTPMethod("get")}} 请求发送到服务器。此方法适用于仅包含 ASCII 字符，且没有副作用的简单表单。这是该属性的默认值。
 - `post`
-  - : 表单数据包含在请求的主体（body）中，并使用 HTTP {{HTTPMethod("post")}} 请求发送到 `formaction` 或 {{htmlattrxref("action", "form")}} 属性指定的 URL。此方法支持复杂数据和文件附件。
+  - : 表单数据包含在请求的主体（body）中，并使用 HTTP {{HTTPMethod("post")}} 请求发送到 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性指定的 URL。此方法支持复杂数据和文件附件。
 - `dialog`
   - : 此方法用于指示关闭与该输入元素关联的对话框的一个按钮，其不会传输表单数据。
 
@@ -61,13 +61,13 @@ slug: Web/HTML/Element/input/image
 
 ### formnovalidate
 
-一个布尔值，如果存在，则指定在提交给服务器之前不应对表单进行验证。这将会覆盖元素所属表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。
+一个布尔值，如果存在，则指定在提交给服务器之前不应对表单进行验证。这将会覆盖元素所属表单上的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性的值。
 
 该属性也在 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 和 {{HTMLElement("button")}} 元素上可用。
 
 ### formtarget
 
-一个字符串，指定一个名字或关键词来表示在提交表单后在何处显示响应数据。该字符串必须是一个**浏览上下文**的名字（即一个标签页、窗口，或 {{HTMLElement("iframe")}}）。在此处指定的值将会覆盖 {{HTMLElement("form")}} 上拥有该输入的 {{htmlattrxref("target", "form")}} 属性所给出的任何目标。
+一个字符串，指定一个名字或关键词来表示在提交表单后在何处显示响应数据。该字符串必须是一个**浏览上下文**的名字（即一个标签页、窗口，或 {{HTMLElement("iframe")}}）。在此处指定的值将会覆盖 {{HTMLElement("form")}} 上拥有该输入的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性所给出的任何目标。
 
 除了标签页、窗口或内联框架的实际名字，还有部分特殊关键词可用：
 

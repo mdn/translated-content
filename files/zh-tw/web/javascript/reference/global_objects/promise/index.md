@@ -35,7 +35,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 一個處於擱置狀態的 promise 能以一個值被實現（fulfilled），或是以一個原因或錯誤而被拒絕（rejected）。當上述任一狀態轉換發生時，那些透過 `then` 方法所繫結（associated）的處理函式列隊就會依序被調用。（若一個 promise 已被實現或拒絕，繫結（attached）於它的處理函式將立即被呼叫，因此完成非同步操作與繫結處理函式之間不存在競爭條件（race condition）。）
 
-由於 `{{jsxref("Promise.then", "Promise.prototype.then()")}}` 以及 `{{jsxref("Promise.catch", "Promise.prototype.catch()")}}` 方法都回傳 promise，它們可以被串接。
+由於 {{jsxref("Promise.then", "Promise.prototype.then()")}} 以及 {{jsxref("Promise.catch", "Promise.prototype.catch()")}} 方法都回傳 promise，它們可以被串接。
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 

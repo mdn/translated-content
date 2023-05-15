@@ -3,7 +3,7 @@ title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}
 
 本章介绍在 Javascript 中如何使用字符串与文本内容。
 
@@ -219,4 +219,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 关于{{jsxref("Intl")}} API 的更多信息，请参考 [Introducing the JavaScript Internationalization API](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/)。
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_expressions")}}

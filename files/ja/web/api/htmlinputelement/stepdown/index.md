@@ -8,7 +8,7 @@ slug: Web/API/HTMLInputElement/stepDown
 **`HTMLInputElement.stepDown([n])`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または引数として数値が渡された場合は step 属性の最大 `n` 倍の値だけ減少させるものです。
 
-このメソッドを呼び出すと、 {{htmlattrxref("value","input")}} は ({{htmlattrxref("step","input")}} \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Element/input#value) は ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で 1 となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
 
 step 属性に対応しているすべての数値、日付、時刻の入力タイプ（{{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}},
 {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}},{{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}}）で有効です。
@@ -58,12 +58,12 @@ console.log(input2.value); // "16:45"
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
-  - : {{htmlattrxref("value","input")}} を（{{htmlattrxref("step","input")}} \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
+  - : [`value`](/ja/docs/Web/HTML/Element/input#value) を（[`step`](/ja/docs/Web/HTML/Element/input#step) \* n だけ）減少させます。ここで n が指定されなかった場合は、既定で 1 になります。次の場合は例外 `InvalidStateError` が発生します。
 
-    - このメソッドが現在の {{htmlattrxref("type","input")}} の値に適切ではない場合
-    - この要素に {{htmlattrxref("step","input")}} の値がなかった場合
-    - {{htmlattrxref("value","input")}} が数値に変換できなかった場合
-    - 結果の値が {{htmlattrxref("max","input")}} を超えたり、 {{htmlattrxref("min","input")}} を下回ったりした場合
+    - このメソッドが現在の [`type`](/ja/docs/Web/HTML/Element/input#type) の値に適切ではない場合
+    - この要素に [`step`](/ja/docs/Web/HTML/Element/input#step) の値がなかった場合
+    - [`value`](/ja/docs/Web/HTML/Element/input#value) が数値に変換できなかった場合
+    - 結果の値が [`max`](/ja/docs/Web/HTML/Element/input#max) を超えたり、 [`min`](/ja/docs/Web/HTML/Element/input#min) を下回ったりした場合
 
 ## 構文
 

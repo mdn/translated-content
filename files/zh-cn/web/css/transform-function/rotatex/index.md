@@ -112,7 +112,7 @@ div {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

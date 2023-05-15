@@ -5,7 +5,7 @@ slug: Web/CSS/::part
 
 {{CSSRef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する {{HTMLAttrxRef("part")}} 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つ[シャドウツリー](/ja/docs/Web/Web_Components/Using_shadow_DOM)内の要素を表します。
 
 ```css
 custom-element::part(foo) {
@@ -97,6 +97,6 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## 関連情報
 
-- {{HTMLAttrxRef("part")}} 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
-- {{HTMLAttrxRef("exportparts")}} 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
+- [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性 - `::part()` セレクタで選択できるパーツを定義するために使用されます
+- [`exportparts`](/ja/docs/Web/HTML/Global_attributes#exportparts) 属性 - ネストされたシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
 - [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

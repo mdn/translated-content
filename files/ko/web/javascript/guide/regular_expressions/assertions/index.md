@@ -1,6 +1,6 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 original_slug: Web/JavaScript/Guide/정규식/Assertions
 ---
 

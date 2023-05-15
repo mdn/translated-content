@@ -36,7 +36,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 - content scripts 与扩展的其他部分之间的通信
 - 打包你的扩展的资源，使其可被网页所用
 
-你可以在 GitHub 找到[该扩展的完整的源代码](https://github.com/mdn/webextensions-examples/tree/master/beastify)。
+你可以在 GitHub 找到[该扩展的完整的源代码](https://github.com/mdn/webextensions-examples/tree/main/beastify)。
 
 写这个扩展，你需要 45 或更高版本的 firefox。
 
@@ -400,7 +400,7 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 最后，我们要加入包含动物们的图像。
 
-创建"beasts"文件夹，之后将图片放入并命名。你可以从 [the GitHub repository](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts),或这里下载图片：
+创建"beasts"文件夹，之后将图片放入并命名。你可以从 [GitHub 仓库](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)或这里下载图片：
 
 ![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 

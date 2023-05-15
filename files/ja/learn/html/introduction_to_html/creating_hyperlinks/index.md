@@ -49,7 +49,7 @@ l10n:
 
 ## リンクの解剖
 
-基本的なリンクは、リンクにしたいテキスト（またはその他のコンテンツ、[ブロックレベルリンク](#ブロックレベルリンク)を参照）を {{htmlelement("a")}} 要素の中に囲むことで作成し、{{htmlattrxref("href", "a")}} （**ハイパーテキスト参照**または**ターゲット**とも）にリンク先にしたいウェブアドレスを入れます。
+基本的なリンクは、リンクにしたいテキスト（またはその他のコンテンツ、[ブロックレベルリンク](#ブロックレベルリンク)を参照）を {{htmlelement("a")}} 要素の中に囲むことで作成し、[`href`](/ja/docs/Web/HTML/Element/a#href) （**ハイパーテキスト参照**または**ターゲット**とも）にリンク先にしたいウェブアドレスを入れます。
 
 ```html
 <p>I'm creating a link to
@@ -140,7 +140,7 @@ URL はファイルを見つけるためにパスを使います。パスはフ�
 ### 文書フラグメント
 
 HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書フラグメント**と呼ばれる）にリンクすることもできます。
-これを行うには、まずリンク先の要素に {{htmlattrxref("id")}} 属性を割り当てる必要があります。
+これを行うには、まずリンク先の要素に [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を割り当てる必要があります。
 通常は特定の見出しにリンクするのが理にかなっているので、次のようになります。
 
 ```html
@@ -287,7 +287,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 この結果、次のようなリンクが表示されます。 [メールをどこにも送信しません](mailto:nowhere@mozilla.org)
 
-実際、メールアドレスはオプションです。省略して {{htmlattrxref("href", "a")}} が "mailto:" であった場合、ユーザーのメールクライアントによって新しい送信メールのウィンドウが、宛先なしで開かれます。
+実際、メールアドレスはオプションです。省略して [`href`](/ja/docs/Web/HTML/Element/a#href) が "mailto:" であった場合、ユーザーのメールクライアントによって新しい送信メールのウィンドウが、宛先なしで開かれます。
 これは、ユーザーがクリックして自分が選択したアドレスにメールを送信できる「共有」リンクとして役立つことがよくあります。
 
 ### 詳細の指定
@@ -323,15 +323,3 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 リンクについては、今のところこれで終わりです。このコースの後半で、スタイル設定を始める際にリンクに戻ります。 HTML についての次は、テキストの意味づけに戻り、有用と思われるより高度で珍しい機能を見ていきます - [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)が次のステップです。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内の文書
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

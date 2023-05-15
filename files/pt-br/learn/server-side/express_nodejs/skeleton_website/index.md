@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) , mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
+Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -31,15 +31,15 @@ Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
 
 ## Visão Geral
 
-Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), tpara o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
+Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), para o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
 
 As seguintes sessões mostrará como chamar o "Application Generator", e prover uma pequena explicação sobre as diferentes opções de CSS. Também aprenderemos como a estrutura do site é definida. No final, será mostrado como podemos rodar o site para ver se funciona.
 
-> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem um estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
+> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem uma estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
 
 ## Usando o "Application Generator"
 
-Você já deve ter instalado o gerador como requisito.Como um lembrete rápido, você instala a ferramenta de gerador em todo o site usando o Gerenciador de pacotes NPM, como mostrado:
+Você já deve ter instalado o gerador como requisito. Como um lembrete rápido, você instala a ferramenta de gerador em todo o site usando o Gerenciador de pacotes NPM, como mostrado:
 
 ```bash
 npm install express-generator -g
@@ -80,17 +80,17 @@ Também pode ser escolhido um "view" (_template)_ usando`--view` e/ou um gerador
 
 ### Qual _engine_ de "view" devo usar?
 
-The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
+O _Express Application Generator_ permite que você configure vários mecanismos populares de exibição/modelagem, incluindo [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), e [Vash](https://www.npmjs.com/package/vash), embora escolha Jade por padrão se você não especificar uma opção de visualização. O próprio Express também pode suportar um grande número de outras linguagens de modelagem [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
-> **Nota:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
+> **Nota:** Se você deseja usar um mecanismo de modelo que não é suportado pelo gerador, consulte [Usando mecanismos de modelo com o Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) e a documentação para seu mecanismo de exibição de destino.
 
-Generally speaking, you should select a templating engine that delivers all the functionality you need and allows you to be productive sooner — or in other words, in the same way that you choose any other component! Some of the things to consider when comparing template engines:
+De um modo geral, você deve selecionar um mecanismo de modelagem que forneça todas as funcionalidades de que você precisa e permita que você seja mais produtivo - ou em outras palavras, da mesma forma que você escolhe qualquer outro componente! Algumas das coisas a considerar ao comparar mecanismos de modelo:
 
-- Time to productivity — If your team already has experience with a templating language then it is likely they will be productive faster using that language. If not, then you should consider the relative learning curve for candidate templating engines.
-- Popularity and activity — Review the popularity of the engine and whether it has an active community. It is important to be able to get support for the engine when you have problems over the lifetime of the website.
-- Style — Some template engines use specific markup to indicate inserted content within "ordinary" HTML, while others construct the HTML using a different syntax (for example, using indentation and block names).
+- Tempo para produtividade — Se sua equipe já tiver experiência com uma linguagem de modelagem, é provável que eles sejam produtivos mais rapidamente usando essa linguagem. Caso contrário, você deve considerar a curva de aprendizado relativa para mecanismos de modelagem candidatos.
+- Popularidade e atividade — Revise a popularidade do mecanismo e se ele possui uma comunidade ativa. É importante poder obter suporte para o mecanismo quando você tiver problemas durante a vida útil do site.
+- Style — Alguns mecanismos de modelo usam marcação específica para indicar o conteúdo inserido no HTML "comum", enquanto outros constroem o HTML usando uma sintaxe diferente (por exemplo, usando recuo e nomes de bloco).
 - Performance/rendering time.
-- Features — you should consider whether the engines you look at have the following features available:
+- Features — você deve considerar se os mecanismos que você procura têm os seguintes recursos disponíveis:
 
   - Layout inheritance: Allows you to define a base template and then "inherit" just the parts of it that you want to be different for a particular page. This is typically a better approach than building templates by including a number of required components or building a template from scratch each time.
   - "Include" support: Allows you to build up templates by including other templates.
@@ -100,9 +100,9 @@ Generally speaking, you should select a templating engine that delivers all the 
   - Support for asynchronous operations and streaming.
   - Can be used on the client as well as the server. If a templating engine can be used on the client this allows the possibility of serving data and having all or most of the rendering done client-side.
 
-> **Nota:** **Tip:** There are many resources on the Internet to help you compare the different options!
+> **Nota:** **Tip:** Existem muitos recursos na Internet para ajudá-lo a comparar as diferentes opções!
 
-For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
+Para este projeto, usaremos o [Pug](https://pugjs.org/api/getting-started.html) mecanismo de modelagem (este é o mecanismo Jade que foi renomeado recentemente), pois esta é uma das linguagens de modelagem Express/JavaScript mais populares e é suportada imediatamente pelo gerador.
 
 ### What CSS stylesheet engine should I use?
 
@@ -110,7 +110,7 @@ The _Express Application Generator_ allows you to create a project that is confi
 
 > **Nota:**CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
-As with templating engines, you should use the stylesheet engine that will allow your team to be most productive. For this project, we'll use the ordinary CSS (the default) as our CSS requirements are not sufficiently complicated to justify using anything else.
+Assim como nos mecanismos de modelagem, você deve usar o mecanismo de folha de estilo que permitirá que sua equipe seja mais produtiva. Para este projeto, usaremos o CSS comum (o padrão), pois nossos requisitos de CSS não são suficientemente complicados para justificar o uso de qualquer outra coisa.
 
 ### What database should I use?
 
@@ -122,7 +122,7 @@ We'll discuss how to integrate with a database in a later article.
 
 For the sample _Local Library_ app we're going to build, we'll create a project named _express-locallibrary-tutorial_ using the _Pug_ template library and no CSS stylesheet engine.
 
-First, navigate to where you want to create the project and then run the _Express Application Generator_ in the command prompt as shown:
+Primeiro, navegue até onde deseja criar o projeto e, em seguida, execute o Express Application Generator no prompt de comando, conforme mostrado:
 
 ```bash
 express express-locallibrary-tutorial --view=pug

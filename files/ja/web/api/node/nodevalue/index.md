@@ -1,6 +1,8 @@
 ---
-title: Node.nodeValue
+title: "Node: nodeValue プロパティ"
 slug: Web/API/Node/nodeValue
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -41,11 +43,11 @@ slug: Web/API/Node/nodeValue
 また、以下のスクリプトを参照してください。
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
+let node = document.querySelector("body").firstChild;
 let result = "<br/>ノード名:<br/>";
 while (node) {
-  result += node.nodeName + "の値: " + node.nodeValue + "<br/>";
-  node = node.nextSibling
+  result += `${node.nodeName} の値: ${node.nodeValue}<br/>`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");

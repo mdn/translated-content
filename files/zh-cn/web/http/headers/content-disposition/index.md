@@ -53,7 +53,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### 指令
 
 - `name`
-  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 {{htmlattrxref("multiple", "input")}} 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
+  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
 
     如果 `name` 参数的值为 `'_charset_'`，意味着这个子部分表示的不是一个 HTML 字段，而是在未明确指定字符集信息的情况下各部分使用的默认字符集。
 - `filename`

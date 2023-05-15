@@ -215,11 +215,3 @@ button.addEventListener('click', async () => {
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## このモジュール
-
-- [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-- **プロミスベースの API の実装**
-- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [評価課題: アニメーションを順番に再生する](/ja/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

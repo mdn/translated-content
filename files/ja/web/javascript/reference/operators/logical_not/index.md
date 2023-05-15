@@ -29,7 +29,7 @@ false に変換することができる式の例を示します。
 - 空文字列 (`""` または `''` または ` `` `)
 - `undefined`
 
-`!` 演算子は論理値以外のオペランドに対して使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
+`!` 演算子は論理値以外のオペランドに対して使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することが可能であるため、論理演算子と見なすことができます。返値 (または一般的な式) を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ## 例
 
@@ -46,7 +46,7 @@ n4 = !'Cat'              // !t は false を返す
 
 ### 二重否定 (`!!`)
 
-複数の否定演算子を連続して使用することで、明示的にあらゆる値を対応する[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型_boolean)に変換することができます。変換は値の「真値性」または「偽値性」に基づいて行われます ({{Glossary("truthy")}} および {{Glossary("falsy")}} を参照)。
+複数の否定演算子を連続して使用することで、明示的にあらゆる値を対応する[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#論理型)に変換することができます。変換は値の「真値性」または「偽値性」に基づいて行われます ({{Glossary("truthy")}} および {{Glossary("falsy")}} を参照)。
 
 同じ変換は {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 関数を通じて行うこともできます。
 

@@ -18,7 +18,7 @@ Object.fromEntries(iterable);
 ### 引数
 
 - `iterable`
-  - : [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装している {{jsxref("Array")}} や {{jsxref("Map")}} やその他の反復処理可能なオブジェクトです。
+  - : [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装している {{jsxref("Array")}} や {{jsxref("Map")}} やその他の反復処理可能なオブジェクトです。
 
 ### 返値
 

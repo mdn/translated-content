@@ -397,18 +397,3 @@ Et voilà votre premier pas dans le monde du JavaScript. Nous avons commencé pa
 Le JavaScript peut sembler un peu impressionnant pour l'instant, mais pas d'inquiétude, ce cours progressera pas à pas. Dans le prochain article [Notre premier code JavaScript,](/fr/docs/Learn/JavaScript/First_steps/A_first_splash) nous entrons au cœur du sujet et vous réaliserez vos propres exemples de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
-
-## Dans ce module
-
-- [Qu'est-ce que JavaScript&nbsp;?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un premier code JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [Quel est le souci&nbsp;? Analyser un problème avec JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Stocker les informations nécessaires&nbsp;: les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-- [Opérations mathématiques de base en JavaScript&nbsp;: les nombres et les opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math)
-- [Gérer le texte&nbsp;: les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-- [Les méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Les tableaux <i lang="en">(arrays)</i>](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-
-  <i lang="en">(arrays)</i>
-
-- [Évaluation&nbsp;: Générateur d'histoires aléatoires](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)

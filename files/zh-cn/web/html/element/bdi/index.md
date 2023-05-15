@@ -38,8 +38,6 @@ slug: Web/HTML/Element/bdi
 
 ## 属性
 
-{{htmlattrdef("dir")}}
-
 如同其他 HTML 元素一样，它包含[全局属性](/zh-CN/docs/HTML/Global_attributes)，但是有一些语义上的细微差别：**dir**属性不继承父元素。如果没有设置，默认值即为 auto，以便浏览器根据元素内容决定元素内容的方向。
 
 ## 示例
@@ -56,7 +54,7 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

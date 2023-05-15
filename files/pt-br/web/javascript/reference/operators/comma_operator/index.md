@@ -1,6 +1,6 @@
 ---
 title: Operador Vírgula
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 original_slug: Web/JavaScript/Reference/Operators/Operador_Virgula
 ---
 

@@ -5,7 +5,7 @@ slug: Web/API/HTMLAreaElement/rel
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.rel`** プロパティは {{htmlattrxref("rel", "area")}} 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
+**`HTMLAreaElement.rel`** プロパティは [`rel`](/ja/docs/Web/HTML/Element/area#rel) 属性を反映しています。これは、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストの入った文字列であり、{{HTMLElement("area")}} 要素で表されるリソースと現在の文書との関係を示します。
 
 ## 値
 

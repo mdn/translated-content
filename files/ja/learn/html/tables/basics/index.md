@@ -466,9 +466,3 @@ HTML では、データの列全体のスタイル情報を 1 か所にまとめ
 HTML テーブルの基本はこれで終わりです。次の記事では、もう少し高度なテーブルの機能を見て、視覚障害者にとってそれらがどれほどアクセシブルであるかを考えます。
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## このモジュール
-
-- [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
-- [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
-- [評価: 太陽系の惑星のデータを構造化する](/ja/docs/Learn/HTML/Tables/Structuring_planet_data)

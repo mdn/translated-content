@@ -15,7 +15,7 @@ slug: Mozilla/Firefox/Releases/25
 
 ### HTML
 
-- 实现了 {{HTMLElement("iframe")}} 元素的 {{htmlattrxref("srcdoc", "iframe")}} 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).
+- 实现了 {{HTMLElement("iframe")}} 元素的 [`srcdoc`](/zh-CN/docs/Web/HTML/Element/iframe#srcdoc) 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ({{bug("802895")}}).
 - `HTMLCanvasElement.toBlob` 方法，当第二个参数指定为 `"image/jpeg"` 时，会接受第三个参数，用来指定 jpeg 图片质量。({{bug("891884")}}).
 
 ### JavaScript

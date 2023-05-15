@@ -25,9 +25,9 @@ slug: Web/API/StylePropertyMapReadOnly
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : 指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列イテレーター*を返します。
 - {{domxref('StylePropertyMapReadOnly.values()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列イテレーター*を返します。
 
 ## 例
 

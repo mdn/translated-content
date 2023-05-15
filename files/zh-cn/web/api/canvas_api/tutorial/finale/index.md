@@ -3,6 +3,8 @@ title: 终曲
 slug: Web/API/Canvas_API/Tutorial/Finale
 ---
 
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+
 恭喜你！你已经结束了 Canvas 的教程！这些知识将帮助你在 web 中创建优秀的 2D 图形。
 
 ## 更多的例子以及教程
@@ -37,3 +39,5 @@ slug: Web/API/Canvas_API/Tutorial/Finale
   - : 到"canvas"标签来提问
 - [Comments about this tutorial – the MDN documentation community](/zh-CN/docs/MDN)
   - : 如果你对本教程有任何意见，或是想感谢我们，在此畅所欲言吧！
+
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

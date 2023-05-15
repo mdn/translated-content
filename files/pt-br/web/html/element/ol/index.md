@@ -26,9 +26,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     > **Nota:** Não utilize este atributo, pois ele se tornou obsoleto. O elemento {{HTMLElement("ol")}} deve ser estilizado usando [CSS](/pt-BR/docs/CSS). Para dar um efeito semelhante ao do atributo compacto, a propriedade [CSS](/pt-BR/docs/CSS) {{cssxref("line-height")}} pode ser utilizada com o valor de 80%.
 
-- {{htmlattrdef("reversed")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("reversed")}}
   - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
-- {{htmlattrdef("start")}}{{HTMLVersionInline(5)}}
+- {{htmlattrdef("start")}}
   - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize \<ol start="3">.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.

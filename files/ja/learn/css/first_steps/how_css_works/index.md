@@ -144,11 +144,3 @@ p {
 このモジュールはほぼ完了です。ただしもうひとつだけやっておいてほしいことがあります。次の記事の[新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)にて実際のスタイリングをとおして CSS の腕試しをおこないます。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-1. [CSS とは何か？](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS の構造化](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS はどう働くか？](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

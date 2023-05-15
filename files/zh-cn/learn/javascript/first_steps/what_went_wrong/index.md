@@ -249,7 +249,7 @@ function checkGuess( {
 
 我们有了能够在简单的 JavaScript 程序中除错的基础知识。解决代码中的错误并不总是那么简单，但至少本节内容可以为刚刚踏上学习之路的你节省出几个小时来补觉，同时让问题更快速得到解决。
 
-## 另请参阅
+## 参见
 
 - 许多错误不能一一的在这里列出来，我们正在编写一个参考文档来详细说明它们的含义。请参阅 [JavaScript 出错信息参考](/zh-CN/docs/Web/JavaScript/Reference/Errors).
 - 如果你在阅读了本文之后遇到了一些错误但不知如何解决，你能够得到别人的帮助！可以到 [学习区](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) 或者 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 聊天室来提问。告诉我们你遇到的错误是什么，我们会尽量帮助你。附加一段你的代码也是很有用的。

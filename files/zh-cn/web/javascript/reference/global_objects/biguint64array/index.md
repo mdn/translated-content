@@ -25,8 +25,6 @@ new BigUint64Array(buffer [, byteOffset [, length]]);
   - : 返回一个元素容量的数字值。`8` in the case of a `BigUint64Array`.
 - BigUint64Array.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "BigUint64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
-  - : Returns the string value of the constructor name. In the case of the `BigUint64Array` type: "BigUint64Array".
 - {{jsxref("TypedArray.prototype", "BigUint64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 

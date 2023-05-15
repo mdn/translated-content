@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 ## 说明
 
-圆括号运算符由一对圆括号组成，包裹表达式和子表达式用来覆盖常规的[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，达到低优先级的表达式比高优先级的表达式更早运算。
+圆括号运算符由一对圆括号组成，包裹表达式和子表达式用来覆盖常规的[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，达到低优先级的表达式比高优先级的表达式更早运算。
 
 ## 示例
 
@@ -53,6 +53,6 @@ a * c + b * c // 9
 
 ## 相关链接
 
-- [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

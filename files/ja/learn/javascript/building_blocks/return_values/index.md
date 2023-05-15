@@ -171,13 +171,3 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一般的な JavaScript のパターンは、ある関数を別の関数に*引数として*渡すことです。それは受け取った関数の中で呼び出されます。これについては、このコースの範疇を少し超えていますが、すぐにでも勉強する価値はあります。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

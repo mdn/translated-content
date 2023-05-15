@@ -108,11 +108,3 @@ alice1.animate(aliceTumbling, aliceTiming);
    - 実際の課題または評価ページへのリンクで、助けを求めている問題を探すことができます。
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## このモジュール
-
-- [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
-- [プロミスベースの API の実装](/ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [ワーカー入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **評価課題: アニメーションを順番に再生する**

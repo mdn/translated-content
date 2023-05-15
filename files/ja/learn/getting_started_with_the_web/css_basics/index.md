@@ -291,14 +291,3 @@ img {
 ここでは、CSS の表面に少し触れただけです。詳細については、[CSS の学習トピック](/ja/docs/Learn/CSS)をご覧ください。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

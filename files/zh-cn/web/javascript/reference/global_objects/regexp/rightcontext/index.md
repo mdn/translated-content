@@ -20,7 +20,7 @@ RegExp["$'"]
 
 `rightContext` 属性的值是只读的，并且会在匹配成功时修改。
 
-你不能使用属性访问器 (`RegExp.$'`) 来使用简写的别名，因为解析器在这里会将其看做字符串的开始，并抛出 {{jsxref("SyntaxError")}}。使用 [方括号符号](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)来访问属性。
+你不能使用属性访问器 (`RegExp.$'`) 来使用简写的别名，因为解析器在这里会将其看做字符串的开始，并抛出 {{jsxref("SyntaxError")}}。使用 [方括号符号](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)来访问属性。
 
 ## 示例
 

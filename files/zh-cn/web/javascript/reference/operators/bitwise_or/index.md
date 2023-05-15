@@ -68,5 +68,5 @@ After:              10100000000000000110000000000001
 
 ## 参见
 
-- [JS 指南中的位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#位运算符)
+- [JS 指南中的位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#位运算符)
 - [按位或赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)

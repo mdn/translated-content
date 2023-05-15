@@ -44,7 +44,7 @@ slug: Web/HTML/Element/p
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTMLElement("hr")}}
 - {{HTMLElement("br")}}

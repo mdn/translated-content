@@ -125,11 +125,3 @@ CSS の機能が制定された後、1 つ以上のブラウザーがその機�
 この記事の最後までたどり着きました。これで CSS とは何かということがある程度理解できたと思いますので、次は自分で CSS を書き始めるための [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)に移動しましょう。
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-- [CSS とは何か](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-- [CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)
-- [CSS の全体像](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-- [CSS はどう働くか](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-- [経歴ページのスタイル設定](/ja/docs/Learn/CSS/First_steps/Styling_a_biography_page)

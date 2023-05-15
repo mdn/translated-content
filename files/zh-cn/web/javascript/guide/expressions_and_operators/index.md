@@ -1,13 +1,13 @@
 ---
 title: 表达式与运算符
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
-本章描述了 JavaScript 的表达式和运算符，包括了赋值，比较，算数，位运算，逻辑，字符串，三元等等。
+本章描述了 JavaScript 的表达式和运算符，包括了赋值、比较、算数、位运算、逻辑、字符串、三元，等等。
 
-一个完整详细的运算符列表和表达式可以参见 [reference](/zh-CN/docs/Web/JavaScript/Reference/Operators).
+一个完整详细的运算符列表和表达式可以参见[参考](/zh-CN/docs/Web/JavaScript/Reference/Operators)。
 
 ## 运算符
 
@@ -19,12 +19,12 @@ JavaScript 拥有如下类型的运算符。本节描述了运算符和运算符
 - [位运算符（Bitwise operators）](#位运算符)
 - [逻辑运算符（Logical operators）](#逻辑运算符)
 - [字符串运算符（String operators）](#字符串运算符)
-- [条件（三元）运算符（Conditional operator）](#conditional_operator)
-- [逗号运算符（Comma operator）](#comma_operator)
-- [一元运算符（Unary operators）](#delete)
+- [条件（三元）运算符（Conditional operator）](#条件（三元）运算符)
+- [逗号运算符（Comma operator）](#逗号操作符)
+- [一元运算符（Unary operators）](#一元操作符)
 - [关系运算符（Relational operator）](#关系运算符)
 
-JavaScript 拥有二元和一元运算符，和一个特殊的三元运算符（条件运算符）。一个二元运算符需要两个操作数，分别在运算符的前面和后面：
+JavaScript 拥有二元和一元运算符和一个特殊的三元运算符（条件运算符）。一个二元运算符需要两个操作数，分别在运算符的前面和后面：
 
 ```plain
 操作数 1 运算符 操作数 2
@@ -257,7 +257,7 @@ myString += "bet"; // 返回 "alphabet"
 
 ### 条件（三元）运算符
 
-[条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)是 JavaScript 中唯一需要三个操作数的运算符。运算的结果根据给定条件在两个值中取其一。语法为：
+[条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)是 JavaScript 中唯一需要三个操作数的运算符。运算的结果根据给定条件在两个值中取其一。语法为：
 
 ```plain
 条件 ? 值 1 : 值 2
@@ -275,7 +275,7 @@ var status = (age >= 18) ? "adult" : "minor";
 
 ### 逗号操作符
 
-[逗号操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_Operator)（`,`）对两个操作数进行求值并返回最终操作数的值。它常常用在 `for` 循环中，在每次循环时对多个变量进行更新。
+[逗号操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)（`,`）对两个操作数进行求值并返回最终操作数的值。它常常用在 `for` 循环中，在每次循环时对多个变量进行更新。
 
 例如，假如 `a` 是一个二维数组，每个维度各有 10 个元素，以下代码利用逗号操作符来同时改变两个变量的值。这段代码的功能是打印出该二维数组的对角线元素的值：
 
@@ -527,7 +527,7 @@ if (theDay instanceof Date) {
 | assignment             | `= += -= *= /= %= <<= >>= >>>= &= ^= \|=` |
 | comma                  | `,`                                       |
 
-上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 [JavaScript 参考手册](/zh-CN/docs/JavaScript/Reference/Operators/Operator_Precedence#Table)中找到。
+上表有一个更详细的版本，它包含了各操作符更详细的说明，可在 [JavaScript 参考手册](/zh-CN/docs/JavaScript/Reference/Operators/Operator_precedence)中找到。
 
 ## 表达式
 

@@ -3,6 +3,8 @@ title: Namespaces Crash Course
 slug: Web/SVG/Namespaces_Crash_Course
 ---
 
+{{SVGRef}}
+
 作为 [XML](/zh-CN/docs/Glossary/XML) 的一个方言，[SVG](/zh-CN/docs/Web/SVG) 需要在一个命名空间内（is namespaced）。理解命名空间的概念，以及在你打算编辑 SVG 内容时，命名空间如何使用，是很重要的。SVG 查看器的版本早于 Firefox 1.5 的发布的，都几乎没有注意命名空间的问题，but they are essential to multi-XML dialect supporting user agents such as [Gecko](/zh-CN/docs/Mozilla/Gecko)-based browsers which must be very strict. 现在，花一点时间来理解命名空间，这会让你以后避免各种麻烦。
 
 ### 背景

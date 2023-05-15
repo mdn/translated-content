@@ -333,13 +333,3 @@ imgThumb.onblur = hideImg;
 次は WAI-ARIA の番です!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは?](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

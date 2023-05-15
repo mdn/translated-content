@@ -190,7 +190,7 @@ background-position: 10px 20px,  top right;
 - `fixed`: 使元素的背景固定在视图端口上，这样当页面或元素内容滚动时，它就不会滚动。它将始终保持在屏幕上相同的位置。
 - `local`: 这个值是后来添加的 (它只在 Internet Explorer 9+中受支持，而其他的在 IE4+中受支持)，因为滚动值相当混乱，在很多情况下并不能真正实现您想要的功能。局部值将背景固定在设置的元素上，因此当您滚动元素时，背景也随之滚动。
 
-{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (或者看看这儿的 [源代码](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds)))。
+{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)（或者看看这儿的[源代码](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)）。
 
 ### 使用 background 的简写
 

@@ -27,7 +27,7 @@ l10n:
 
 - イベントが無効な HTML 要素に配信されるようになりました。例えば、 {{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("select")}}、{{htmlelement("textarea")}} 要素に `disabled` 属性が設定されていた場合です ([Firefox バグ 329509](https://bugzil.la/329509))。
 - Chrome や Safari に合わせて、{{htmlelement("iframe")}} 要素で `src` 属性を削除すると `about:blank` を読み込むようにしました ([Firefox バグ 1507842](https://bugzil.la/1507842))。以前は、`src` を削除しても `iframe` の内容に影響はありませんでした。
-- {{htmlelement("script")}} 要素で {{htmlattrxref("referrerpolicy", "script")}} 属性をサポートしました ([Firefox バグ 1460920](https://bugzil.la/1460920))。
+- {{htmlelement("script")}} 要素で [`referrerpolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) 属性をサポートしました ([Firefox バグ 1460920](https://bugzil.la/1460920))。
 
 ### CSS
 

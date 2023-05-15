@@ -48,5 +48,5 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 在 Github 上的扩展范例库 [webextensions-examples](https://github.com/mdn/webextensions-examples) 中有两个实现浏览器动作的例子：
 
-- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/) uses a browser action without a popup.
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) uses a browser action with a popup.
+- [bookmark-it](https://github.com/mdn/webextensions-examples/blob/main/bookmark-it/)没有使用 popup 实现了浏览器动作。
+- [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)使用 popup 实现了浏览器动作。

@@ -294,10 +294,3 @@ Une fois que la fonction junior () a obtenu la liste des équipes juniors, elle 
 Dans un module suivant, nous vous aiderons à choisir le meilleur framework Web pour votre premier site.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/fr/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/fr/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/fr/docs/Learn/Server-side/First_steps/Website_security)

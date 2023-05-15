@@ -25,7 +25,7 @@ const evtSource = new EventSource("ssedemo.php");
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-一旦你成功初始化了一个事件源，就可以对 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件添加一个处理函数开始监听从服务器发出的消息了：
+一旦你成功初始化了一个事件源，就可以对 {{domxref("EventSource.message_event", "message")}} 事件添加一个处理函数开始监听从服务器发出的消息了：
 
 ```js
 evtSource.onmessage = function(event) {

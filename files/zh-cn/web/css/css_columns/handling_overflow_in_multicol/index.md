@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 
 ## column boxes 内部溢出
 
-当子项的大小大于列框时，就会发生溢出。例如，当列中的图像宽度大于 `column-width` 值或 `column-count` 声明的列数禅城的列宽度时，就可能会发生这种情况。
+当子项的大小大于列框时，就会发生溢出。例如，当列中的图像宽度大于 `column-width` 值或基于 `column-count` 声明的列数生成的列宽度时，就可能会发生这种情况。
 
 在这种情况下，内容溢出（并且是可见的）到下一列，而不是被列框裁切。你可以在下面的示例中看到，在编写本文时，浏览器以不同的方式处理预期的呈现图像。
 

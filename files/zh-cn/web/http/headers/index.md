@@ -198,7 +198,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("Origin")}}
   - : 指示获取资源的请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : 指定特定的源，以允许其访问 [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API) 功能提供的属性值，否则由于跨源限制，这些值将被报告为零。
+  - : 指定特定的源，以允许其访问 [Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing) 功能提供的属性值，否则由于跨源限制，这些值将被报告为零。
 
 ## 下载
 

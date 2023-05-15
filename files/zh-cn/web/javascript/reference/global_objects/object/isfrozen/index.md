@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 
 {{JSRef}}
 
-**`Object.isFrozen()`**方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。
+**`Object.isFrozen()`** 方法判断一个对象是否被{{jsxref("Object.freeze()", "冻结", "", 1)}}。
 
 ## 语法
 

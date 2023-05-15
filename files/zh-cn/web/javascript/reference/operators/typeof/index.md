@@ -129,7 +129,7 @@ typeof func; // "function"
 
 ### 语法中需要圆括号
 
-`typeof` 操作符的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)高于加法（`+`）等二进制操作符。因此，需要用括号来计算加法结果的类型。
+`typeof` 操作符的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)高于加法（`+`）等二进制操作符。因此，需要用括号来计算加法结果的类型。
 
 ```js
 // 括号有无将决定表达式的类型。

@@ -11,8 +11,8 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ### HTML
 
-- 实现了{{HTMLElement("ol")}}元素上的{{htmlattrxref("reversed","ol")}}属性 ({{bug("601912")}}).
-- 实现了{{HTMLElement("link")}}元素上的{{htmlattrxref("crossorigin","link")}}属性 ({{bug("786564")}}).
+- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed)属性 ({{bug("601912")}}).
+- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin)属性 ({{bug("786564")}}).
 
 ### CSS
 

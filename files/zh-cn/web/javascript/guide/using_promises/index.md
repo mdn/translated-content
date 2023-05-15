@@ -3,7 +3,7 @@ title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
 {{jsxref("Promise")}} 是一个对象，它代表了一个异步操作的最终完成或者失败。因为大多数人仅仅是使用已创建的 Promise 实例对象，所以本教程将首先说明怎样使用 Promise，再说明如何创建 Promise。
 
@@ -48,7 +48,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 不同于“老式”的传入回调，在使用 Promise 时，会有以下约定：
 
-- 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/EventLoop#执行至完成) 运行完成之前，回调函数是不会被调用的。
+- 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/Event_loop#执行至完成) 运行完成之前，回调函数是不会被调用的。
 - 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。
 - 通过多次调用 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 可以添加多个回调函数，它们会按照插入顺序进行执行。
 
@@ -380,4 +380,4 @@ doSomething()
 - [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
 - [Nolan Lawson: We have a problem with promises — Common mistakes with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
-{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
+{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_generators")}}

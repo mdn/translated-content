@@ -69,7 +69,7 @@ let obj = {
 
 ### 属性访问
 
-创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参考[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 获取更多信息。
+创建对象后，可以读取或者修改它。对象属性可以用下标小圆点标记或者方括号标记访问。参考[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 获取更多信息。
 
 ```js
 object.foo; // "bar"
@@ -182,7 +182,7 @@ var o = {
 
 ### 计算属性名
 
-从 ECMAScript 2015 开始，对象初始化语法开始支持计算属性名。其允许在 \[] 中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问[属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：
+从 ECMAScript 2015 开始，对象初始化语法开始支持计算属性名。其允许在 \[] 中放入表达式，计算结果可以当做属性名。这种用法和用方括号访问[属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)非常类似，也许你已经用来读取和设置属性了。现在同样的语法也可以用于对象字面值了：
 
 ```js
 // Computed property names (ES6)
@@ -284,7 +284,7 @@ assert(obj3.__proto__ === 17);
 
 ## 相关链接
 
-- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [Property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

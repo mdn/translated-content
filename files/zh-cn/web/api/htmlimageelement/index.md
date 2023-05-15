@@ -19,7 +19,7 @@ slug: Web/API/HTMLImageElement
 _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
 
 - {{domxref("HTMLImageElement.alt")}}
-  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("alt", "img")}}，表明图像的后备描述内容，会在图像无法加载时显示。
+  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt)，表明图像的后备描述内容，会在图像无法加载时显示。
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是[受支持的图片类型](/zh-CN/docs/HTML/Element/Img#Image_Format)、解码的过程中没有发生错误，则返回 `true`。That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}
@@ -30,25 +30,25 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
 - {{domxref("HTMLImageElement.height")}}
-  - : 一个整数，表示 HTML 属性 {{htmlattrxref("height", "img")}}，说明了图像在 CSS 像素中渲染的高度。
+  - : 一个整数，表示 HTML 属性 [`height`](/zh-CN/docs/Web/HTML/Element/img#height)，说明了图像在 CSS 像素中渲染的高度。
 - {{domxref("HTMLImageElement.isMap")}}
-  - : 一个 {{domxref("Boolean")}} 表示 HTML 属性 {{htmlattrxref("ismap", "img")}}，说明了图像是某个服务器端图像映射的一部分。This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
+  - : 一个 {{domxref("Boolean")}} 表示 HTML 属性 [`ismap`](/zh-CN/docs/Web/HTML/Element/img#ismap)，说明了图像是某个服务器端图像映射的一部分。This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
 - {{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}
   - : 返回一个整数，如果可用的话，表明图像在 CSS 中固有的高度，单位为像素；否则返回 `0`。如果图片是以其原来的大小渲染，则此值等于图片的高度。
 - {{domxref("HTMLImageElement.naturalWidth")}} {{readonlyInline}}
   - : 返回一个整数，如果可用的话，表明图像在 CSS 中固有的宽度，单位为像素；否则返回 `0`。如果图片是以其原来的大小渲染，则此值等于图片的宽度。
 - {{domxref("HTMLImageElement.referrerPolicy")}}
-  - : A {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "img")}} HTML attribute, which tells the {{Glossary("user agent")}} how to decide which referrer to use in order to fetch the image. Read this article for details on the possible values of this string.
+  - : A {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) HTML attribute, which tells the {{Glossary("user agent")}} how to decide which referrer to use in order to fetch the image. Read this article for details on the possible values of this string.
 - {{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("sizes", "img")}} HTML attribute. This string specifies a list of comma-separated conditional sizes for the image; that is, for a given viewport size, a particular image size is to be used. Read the documentation on the {{domxref("HTMLImageElement.sizes", "sizes")}} page for details on the format of this string.
+  - : A {{domxref("DOMString")}} reflecting the [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) HTML attribute. This string specifies a list of comma-separated conditional sizes for the image; that is, for a given viewport size, a particular image size is to be used. Read the documentation on the {{domxref("HTMLImageElement.sizes", "sizes")}} page for details on the format of this string.
 - {{domxref("HTMLImageElement.src")}}
-  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("src", "img")}}，包含图像的完整的 URL，包含图像的基础 URL。
+  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 [`src`](/zh-CN/docs/Web/HTML/Element/img#src)，包含图像的完整的 URL，包含图像的基础 URL。
 - {{domxref("HTMLImageElement.srcset")}} {{experimental_inline}}
-  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("srcset", "img")}}，包含了候选图像列表，用逗号分隔（`',', U+002C COMMA`）。一个候选的图像是一个 URL 跟着一个 `'w'` 表示图像的宽度，或者一个 `'x'` 表示像素密度。
+  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)，包含了候选图像列表，用逗号分隔（`',', U+002C COMMA`）。一个候选的图像是一个 URL 跟着一个 `'w'` 表示图像的宽度，或者一个 `'x'` 表示像素密度。
 - {{domxref("HTMLImageElement.useMap")}}
-  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 {{htmlattrxref("usemap", "img")}}，包含一个 {{HTMLElement("map")}} 元素的页面本地 URL。The page-local URL is a pound (hash) symbol (`#`) followed by the ID of the `<map>` element, such as `#my-map-element`. The `<map>` in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.
+  - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap)，包含一个 {{HTMLElement("map")}} 元素的页面本地 URL。The page-local URL is a pound (hash) symbol (`#`) followed by the ID of the `<map>` element, such as `#my-map-element`. The `<map>` in turn contains {{HTMLElement("area")}} elements indicating the clickable areas in the image.
 - {{domxref("HTMLImageElement.width")}}
-  - : 一个整数，表示 HTML 属性 {{htmlattrxref("width", "img")}}，说明图像在 CSS 像素中渲染的宽度。
+  - : 一个整数，表示 HTML 属性 [`width`](/zh-CN/docs/Web/HTML/Element/img#width)，说明图像在 CSS 像素中渲染的宽度。
 - {{domxref("HTMLImageElement.x")}} {{readonlyInline}}{{experimental_inline}}
   - : An integer indicating the horizontal offset of the left border edge of the image's CSS layout box relative to the origin of the {{HTMLElement("html")}} element's containing block.
 - {{domxref("HTMLImageElement.y")}} {{readonlyInline}} {{experimental_inline}}
@@ -80,13 +80,13 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的方法。_
 
 ## 错误
 
-- The {{htmlattrxref("src", "img")}} attribute is empty or `null`.
+- The [`src`](/zh-CN/docs/Web/HTML/Element/img#src) attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.
 - The specified image is corrupted in some way that prevents it from being loaded.
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
 - The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-If an error occurs while trying to load or render the image, and an {{htmlattrxref("onerror")}} event handler has been configured to handle the [`error`](/zh-CN/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an [`onerror`](/zh-CN/docs/Web/HTML/Global_attributes#onerror) event handler has been configured to handle the [`error`](/zh-CN/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
 
 ## 例子
 

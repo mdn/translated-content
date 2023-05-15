@@ -399,13 +399,3 @@ function displayResults(json) {
 この記事では、サードパーティ API を使用してウェブサイトに機能を追加するための便利な方法を紹介しました。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- **サードパーティ API**
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

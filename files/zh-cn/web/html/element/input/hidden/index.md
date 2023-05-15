@@ -19,7 +19,7 @@ slug: Web/HTML/Element/input/hidden
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td>{{htmlattrxref("autocomplete", "input")}}</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -40,7 +40,7 @@ slug: Web/HTML/Element/input/hidden
 
 ## 值
 
-`{{HTMLElement("input")}}` 元素的 `{{htmlattrxref("value", "input")}}` 属性包含要提交到服务器的隐藏数据。尽管可以通过浏览器开发者工具编辑该值，但明确要求用户不能通过用户界面看到或编辑这个值。
+{{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含要提交到服务器的隐藏数据。尽管可以通过浏览器开发者工具编辑该值，但明确要求用户不能通过用户界面看到或编辑这个值。
 
 > **警告：** 尽管该值并未作为页面内容中显示给用户，但仍然可以使用任何浏览器的开发者工具或“查看源代码”功能来查看并进行编辑。请不要将表单的安全性依赖于使用 `hidden` 输入上。
 
@@ -50,7 +50,7 @@ slug: Web/HTML/Element/input/hidden
 
 ### name
 
-这实际上是常见属性之一，但它对于隐藏的 `{{HTMLElement("input")}}` 具有一个特殊含义。一般来说，`{{htmlattrxref("name", "input")}}` 属性在隐藏的 input 输入中与在非隐藏的 input 输入的表现是一样的；但是，在提交表单时，会自动包含一个 `name` 属性被设置为 `_charset_` 的隐藏 `input`，其值会被自动设置为被提交表单的字符编码。
+这实际上是常见属性之一，但它对于隐藏的 `{{HTMLElement("input")}}` 具有一个特殊含义。一般来说，[`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性在隐藏的 input 输入中与在非隐藏的 input 输入的表现是一样的；但是，在提交表单时，会自动包含一个 `name` 属性被设置为 `_charset_` 的隐藏 `input`，其值会被自动设置为被提交表单的字符编码。
 
 ## 使用隐藏 input
 
