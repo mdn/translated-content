@@ -23,13 +23,13 @@ scroll(options)
 
 \- ou -
 
-- `opções`
+- `options`
   - : Um dicionário contendo os seguintes parâmetros:
-    - `topo`
+    - `top`
       - : Especifica o número de pixels ao longo do eixo Y para rolar a janela ou elemento.
-    - `esquerda`
+    - `left`
       - : Especifica o número de pixels ao longo do eixo X para rolar a janela ou elemento.
-    - `comportamento`
+    - `behavior`
       - : Determina se a rolagem é instantânea ou animada suavemente. Esta opção é uma string que deve assumir um dos seguintes valores:
         - `smooth`: a rolagem deve ser animada suavemente
         - `instant`: a rolagem deve acontecer instantaneamente em um único salto
