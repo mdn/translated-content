@@ -4,7 +4,7 @@ slug: Web/CSS/url
 original_slug: Web/CSS/url()
 ---
 
-{{ CssRef() }}
+{{CSSRef}}
 
 ## 概述
 

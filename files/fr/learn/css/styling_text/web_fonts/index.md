@@ -178,11 +178,3 @@ Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;�
 Maintenant que vous avez travaillé nos articles sur les principes fondamentaux pour composer du texte, il est temps de tester votre compréhension de la chose avec notre évaluation pour le module&nbsp;: composition d'une page d'accueil d'une école communale.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
-- Polices de caractères web
-- [Composition d'une page d'accueil d'une école de communauté](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -6,7 +6,7 @@ slug: Glossary/CSRF
 **跨站請求偽造**（Cross-Site Request Forgery, CSRF）是一種冒充信任用戶，來傳送非預期指令的攻擊。比方說，可以在 {{glossary("URL")}} 連結背後添加惡意參數來攻擊：
 
 ```html
-<img src="https://www.example.com/index.php?action=delete&id=123">
+<img src="https://www.example.com/index.php?action=delete&id=123" />
 ```
 
 對擁有 `https://www.example.com` 權限的用戶來說，`<img>` 元素會在用戶沒注意到的情況下執行 `https://www.example.com` 的操作。就算這個元素的域名不在 `https://www.example.com` 亦然。

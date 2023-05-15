@@ -48,13 +48,13 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 - 开发环境版本，包含了有帮助的命令行警告
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.45/index.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   ```
 
 - 生产环境版本，优化了尺寸和速度，建议你在站点上包含 Vue 时指定版本号，这样任何框架更新都不会影响你的网站。
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   ```
 
 然而，这种方法有一些局限性。要构建更复杂的应用程序，你需要使用 [Vue NPM package](https://www.npmjs.com/package/vue)。这将允许你使用 Vue 的高级功能并利用 WebPack 等捆绑包。为了使使用 Vue 构建应用程序更容易，有一个 CLI 来简化开发过程。要使用 npm 软件包和 CLI，你需要：

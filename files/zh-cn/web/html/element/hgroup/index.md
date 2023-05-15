@@ -13,7 +13,7 @@ slug: Web/HTML/Element/hgroup
 
 这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 使用备注
+## 使用说明
 
 `<hgroup>` 元素允许将一个标题与任意次要内容（例如子标题、副标题或口号）组合在一起。在 `<hgroup>` 中，这些类型的内容也表示为 `<p>` 元素。
 

@@ -113,6 +113,6 @@ mask-border-slice: 30 fill;
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [1 到 4 值语法的图解说明](/zh-CN/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases)

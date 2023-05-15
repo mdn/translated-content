@@ -33,7 +33,7 @@ requestSubmit(submitter)
 - {{jsxref("TypeError")}}
   - : 指定された `submitter` が送信ボタンでない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する {{htmlattrxref("form", "input")}} 属性を持たなければなりません。
+  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を持たなければなりません。
 
 ## 使用上の注意
 

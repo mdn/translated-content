@@ -19,18 +19,19 @@ slug: Web/CSS/padding-block
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 padding-block: 10px 20px; /* 绝对长度 */
 padding-block: 1em 2em; /* 相对于文本尺寸 */
 padding-block: 10px; /* 同时设置块首和块末值 */
 
-/* 百分比值 */
-padding-block: 5% 2%; /* 相对于最近包含块的宽度 */
+/* <percentage> 值 */
+padding-block: 5% 2%; /* 相对于最近包含区块的宽度 */
 
 /* 全局值 */
 padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
+padding-block: revert-layer;
 padding-block: unset;
 ```
 

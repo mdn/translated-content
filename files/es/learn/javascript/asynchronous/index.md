@@ -30,6 +30,6 @@ Si no está familiarizado con el concepto de programación asincrónica, definit
 - [Elegir el enfoque correcto](/es/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
   - : Para finalizar este módulo, consideraremos las diferentes técnicas y características de codificación que hemos discutido a lo largo de todo, y veremos cuáles deberias usar cuando, con recomendaciones y recordatorios de dificultades comunes, sea lo más apropiado.
 
-## Ver también
+## Véase tambien
 
-- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) from the fantastic [Eloquent JavaScript](https://eloquentjavascript.net/) online book by Marijn Haverbeke.
+- [Programación asincrónica](https://eloquentjavascript.net/11_async.html) del fantástico libro en línea [Eloquent JavaScript](https://eloquentjavascript.net/) de Marijn Haverbeke.

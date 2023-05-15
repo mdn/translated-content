@@ -37,7 +37,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 ## 开始拖拽操作
 
-这个例子使用 `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` 属性为 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件添加监听程序。
+这个例子使用 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性为 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件添加监听程序。
 
 ```
 <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
@@ -243,7 +243,7 @@ function doDragOver(event) {
 
 在 `[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)` 事件中，你应该取回放置的数据并将其插入到放置的位置。你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来确定需要哪种拖拽操作。
 
-在所有拖拽操作相关的事件中，事件的 `{{domxref("DragEvent.dataTransfer","dataTransfer")}}` 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
+在所有拖拽操作相关的事件中，事件的 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
 
 ```
 function onDrop(event) {

@@ -45,7 +45,7 @@ slug: Web/HTML/Element/blockquote
 - `cite`
   - : 是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。
 
-## 使用备注
+## 使用说明
 
 若要修改被引用内容的缩进距离，可以使用 {{Glossary("CSS")}} {{cssxref("margin-left")}} 和/或 {{cssxref("margin-right")}} 属性，或使用 {{cssxref("margin")}} 缩写属性。
 

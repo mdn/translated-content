@@ -444,9 +444,3 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## Dans ce module
-
-- [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics)
-- [Tableaux HTML : dispositions avancées et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced)
-- [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)

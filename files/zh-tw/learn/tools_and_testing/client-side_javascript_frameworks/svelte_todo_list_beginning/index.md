@@ -93,41 +93,41 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
 1. 建立新資料夾—— `src/components`。
 
-    > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
+   > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
 
 2. 建立 `src/components/Todos.svelte` 檔案並包含以下內容：
 
-    ```html
-    <h1>Svelte To-Do list</h1>
-    ```
+   ```html
+   <h1>Svelte To-Do list</h1>
+   ```
 
-3. 改變 `public/index.html` 中的 `title` 元素內容為 *Svelte To-do list*：
+3. 改變 `public/index.html` 中的 `title` 元素內容為 _Svelte To-do list_：
 
-    ```html
-    <title>Svelte To-Do list</title>
-    ```
+   ```html
+   <title>Svelte To-Do list</title>
+   ```
 
 4. 打開 `src/App.svelte` 並替換為以下內容：
 
-    ```html
-    <script>
-      import Todos from './components/Todos.svelte'
-    </script>
+   ```html
+   <script>
+     import Todos from "./components/Todos.svelte";
+   </script>
 
-    <Todos />
-    ```
+   <Todos />
+   ```
 
 5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台發出警告；以此例來看，當我們於 `src/main.js` 實例化 `App` 元件時，由於我們已經明確定義出 `name` 屬性，但並無實際在 `App` 中使用到。所以主控台現在應該會給你一個警告訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從 `src/main.js` 中移除 `name` 屬性；看起來應該要像是如下這樣：
 
-    ```js
-    import App from './App.svelte'
+   ```js
+   import App from "./App.svelte";
 
-    const app = new App({
-      target: document.body
-    })
+   const app = new App({
+     target: document.body,
+   });
 
-    export default app
-    ```
+   export default app;
+   ```
 
 假如你現在檢查你的測試伺服器 URL，應該會看到 `Todos.svelte` 元件已經被渲染出如下畫面：
 
@@ -140,16 +140,12 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 ```html
 <!-- Todos.svelte -->
 <div class="todoapp stack-large">
-
   <!-- NewTodo -->
   <form>
     <h2 class="label-wrapper">
-      <label for="todo-0" class="label__lg">
-        What needs to be done?
-      </label>
+      <label for="todo-0" class="label__lg"> What needs to be done? </label>
     </h2>
-    <input type="text" id="todo-0" autocomplete="off"
-      class="input input__lg" />
+    <input type="text" id="todo-0" autocomplete="off" class="input input__lg" />
     <button type="submit" disabled="" class="btn btn__primary btn__lg">
       Add
     </button>
@@ -179,7 +175,6 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
   <!-- Todos -->
   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-
     <!-- todo-1 (editing mode) -->
     <li class="todo">
       <div class="stack-small">
@@ -188,16 +183,24 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
             <label for="todo-1" class="todo-label">
               New name for 'Create a Svelte starter app'
             </label>
-            <input type="text" id="todo-1" autocomplete="off" class="todo-text" />
+            <input
+              type="text"
+              id="todo-1"
+              autocomplete="off"
+              class="todo-text" />
           </div>
           <div class="btn-group">
             <button class="btn todo-cancel" type="button">
               Cancel
-              <span class="visually-hidden">renaming Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >renaming Create a Svelte starter app</span
+              >
             </button>
             <button class="btn btn__primary todo-edit" type="submit">
               Save
-              <span class="visually-hidden">new name for Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >new name for Create a Svelte starter app</span
+              >
             </button>
           </div>
         </form>
@@ -208,7 +211,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <li class="todo">
       <div class="stack-small">
         <div class="c-cb">
-          <input type="checkbox" id="todo-2" checked/>
+          <input type="checkbox" id="todo-2" checked />
           <label for="todo-2" class="todo-label">
             Create your first component
           </label>
@@ -238,11 +241,15 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
         <div class="btn-group">
           <button type="button" class="btn">
             Edit
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
           <button type="button" class="btn btn__danger">
             Delete
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
         </div>
       </div>
@@ -256,7 +263,6 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <button type="button" class="btn btn__primary">Check all</button>
     <button type="button" class="btn btn__primary">Remove completed</button>
   </div>
-
 </div>
 ```
 
@@ -295,7 +301,10 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 在往下看一點，你可以找到如下 `<ul>` 元素：
 
 ```html
-<ul role="list" className="todo-list stack-large" aria-labelledby="list-heading">
+<ul
+  role="list"
+  className="todo-list stack-large"
+  aria-labelledby="list-heading"></ul>
 ```
 
 `role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara’s 的「Fixing Lists」文章。
@@ -315,7 +324,7 @@ Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地�
 ```html
 <h1>Svelte To-Do list</h1>
 
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
 編譯器將會報出下列警告：
@@ -340,10 +349,10 @@ created public/build/bundle.js in 220ms
 
 ```html
 <!-- svelte-ignore a11y-missing-attribute -->
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **備註：** 透過 VSCode 你可以點擊 *Quick fix...* 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
+> **備註：** 透過 VSCode 你可以點擊 _Quick fix..._ 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
 
 假如你想要全域地關閉這個警告，可以在你的 `rollup.config.js` 檔案中調整 `Svelte` 外掛組態並補上這個 `onwarn` 處理器即可，像是如下：
 
@@ -485,7 +494,7 @@ body {
 }
 .btn__primary:disabled {
   color: darkgrey;
-  background-color:#565656;
+  background-color: #565656;
 }
 .btn-group {
   display: flex;

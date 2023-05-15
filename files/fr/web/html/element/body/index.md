@@ -158,7 +158,7 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
 - **`vlink`** {{deprecated_inline}}
   - : La couleur de texte pour les liens hypertextes visités. Cette méthode n'est pas conforme, on devra utiliser la propriété CSS [`color`](/fr/docs/Web/CSS/color) avec la pseudo-classe [`:visited`](/fr/docs/Web/CSS/:visited).
 
-## Exemple
+## Exemples
 
 ```html
 <html>
@@ -166,10 +166,14 @@ Comme pour tous les autres éléments, on peut utiliser [les attributs universel
     <title>Titre du document</title>
   </head>
   <body>
-    <p>Et là un paragraphe…</p>
+    <p>L'élément HTML <code>&lt;body&gt;</code> représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément <body> par document.</p>
   </body>
 </html>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Spécifications
 

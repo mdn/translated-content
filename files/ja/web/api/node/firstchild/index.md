@@ -1,6 +1,8 @@
 ---
-title: Node.firstChild
+title: "Node: firstChild プロパティ"
 slug: Web/API/Node/firstChild
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -27,7 +29,7 @@ slug: Web/API/Node/firstChild
 </p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -42,7 +44,7 @@ slug: Web/API/Node/firstChild
 <p id="para-01"><span>最初の span</span></p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```

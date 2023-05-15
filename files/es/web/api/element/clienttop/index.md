@@ -26,7 +26,7 @@ vartop = element.clientTop;
 
 <p>Suave, individualista y muy leal, los gatos de Birmania tienen un carácter entre los persas y los siameses. Si le gustan los gatos que no son agresivos, disfrutan estar entre los humanos y son generalmente tranquilos, esta es la raza para usted.</p>
 
-<p><span style="float: right;"><img alt="Image:BirmanCat.jpg"></span>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
+<p>Todos los Birmanos tienen pintas y coloración obscura en la cara, orejas, patas y cola.</p>
 
 <p>La imagen del gato y el texto vienen de <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
 
@@ -36,8 +36,6 @@ vartop = element.clientTop;
 ```
 
 {{EmbedLiveSample("",400,300)}}
-
-<img alt="Image:clientTop.png">
 
 ## Especificaciones
 

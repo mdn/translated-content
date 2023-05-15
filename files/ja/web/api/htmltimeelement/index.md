@@ -14,7 +14,7 @@ slug: Web/API/HTMLTimeElement
 _また、親である {{domxref("HTMLElement")}} からプロパティを継承します。_
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : {{ htmlattrxref("datetime", "time") }} HTML 属性を反映する {{domxref("DOMString")}} であり、機械で読み取り可能な形式の日付と時刻の値を含みます。
+  - : [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) HTML 属性を反映する {{domxref("DOMString")}} であり、機械で読み取り可能な形式の日付と時刻の値を含みます。
 
 ## 関数
 

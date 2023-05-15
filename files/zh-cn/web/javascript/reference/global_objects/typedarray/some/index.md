@@ -85,7 +85,7 @@ if (!Uint8Array.prototype.some) {
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

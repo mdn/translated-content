@@ -19,7 +19,7 @@ La estructuración de una página de contenido lista para su uso mediante CSS es
             en el resto del curso, con un énfasis particular en la
           </span></span
         ><a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
           >Estructura del Documento y del Sitio Web.</a
         ><a
           href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura"
@@ -84,7 +84,7 @@ También debería:
 
 La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la letra después de haber sido marcada.
 
-![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
+![El ejemplo terminado para la evaluación; una página web simple sobre la observación de aves, que incluye un encabezado de "Observación de aves", fotos de aves y un mensaje de bienvenida](example-page.png)
 
 ## Evaluación
 

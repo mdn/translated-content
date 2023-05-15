@@ -190,8 +190,8 @@ request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   // 顧客の情報を保存する objectStore を作成します。
-  // "ssn" は一意であることが保証されていますので、キーパスとして使用します。
-  // あるいは少なくとも、キックオフミーティングで言われたことです。
+  // "ssn" は一意であることが保証されています - 少なくとも、キックオフミーティングで
+  // そのように言われました。なので、キーパスとして使用します。
   const objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
 
   // 顧客を名前で検索するためのインデックスを作成します。

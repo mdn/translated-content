@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 **`RegExp`** 用于创建正则表达式对象，该对象用于将文本与一个模式匹配
 
-阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节以了解正则表达式。
+阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
 
 {{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
@@ -24,7 +24,7 @@ RegExp(pattern[, flags])
 ### 参数
 
 - `pattern`
-  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个`RegExp`对象或文字 (仅用于两个 RegExp 构造函数符号)。模式可以包含特殊字符[special characters](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters)来匹配比字面值字符串更广泛的值范围。
+  - : 正则表达式的文本。从 ES5 开始，这也可以是另一个 `RegExp` 对象或文字（仅用于两个 RegExp 构造函数符号）。模式可以包含[特殊字符](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#使用特殊字符)来匹配比字面值字符串更广泛的值范围。
 - `flags`
 
   - : 如果指定，`flags` 是包含要添加的标志的字符串。
@@ -80,6 +80,6 @@ new RegExp('ab+c', 'i') // 构造函数
 ## 参见
 
 - [JavaScript 指南中的](/zh-CN/docs/Web/JavaScript/Guide)
-- [正则表达式一节](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正则表达式一节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

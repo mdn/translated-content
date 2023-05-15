@@ -32,6 +32,6 @@ window.scrollTo(maxX, 0);
 
 不属于任何规范。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}

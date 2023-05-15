@@ -57,9 +57,9 @@ Se o contexto for inicializado com sucesso, a variável `gl` é nossa referênci
 
 Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado com sucesso, e você deve visualizar uma grande caixa preta vazia, pronta e esperando para receber conteúdo.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[Veja o código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Abra a demo em uma nova página](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[Veja o código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Abra a demo em uma nova página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## Veja também
 

@@ -98,7 +98,7 @@ console.log(ctx); // CanvasRenderingContext2D { ... }
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("HTMLCanvasElement")}}.
 - {{domxref("OffscreenCanvas.getContext()")}}

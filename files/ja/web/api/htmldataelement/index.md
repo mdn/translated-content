@@ -14,7 +14,7 @@ slug: Web/API/HTMLDataElement
 _親である{{domxref("HTMLElement")}}から属性を継承しています。_
 
 - {{domxref("HTMLDataElement.value")}}
-  - : は{{domxref("DOMString")}}であり，{{htmlattrxref("value", "data")}} HTML 属性に含まれる機械可読な要素の値を示しています。
+  - : は{{domxref("DOMString")}}であり，[`value`](/ja/docs/Web/HTML/Element/data#value) HTML 属性に含まれる機械可読な要素の値を示しています。
 
 ## メソッド
 

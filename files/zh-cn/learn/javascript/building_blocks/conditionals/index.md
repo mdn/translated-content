@@ -351,7 +351,7 @@ function setWeather() {
 
 ## 三元运算符
 
-在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else` 块占用的代码要少很多。伪代码看起来像这样：
+在我们举一些例子之前，我们要介绍一下最后一句语法。[三元或条件运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)是一个语法的小点，用于测试一个条件，并返回一个值/表达式，如果它是 `true` 则返回其中一个，否则（`false`）返回另外一个——这在某些情况下是很有用的，如果你通过 `true`/`false` 条件来选择，这比 `if...else` 块占用的代码要少很多。伪代码看起来像这样：
 
 ```
 condition ? 运行这段代码 : 否则，运行这段代码
@@ -829,6 +829,6 @@ textarea.onkeyup = function(){
 - [比较运算符](/zh-CN/docs/Learn/JavaScript/First_steps/Math#比较运算符)
 - [条件声明详细](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#条件语句)
 - [if...else 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
-- [条件（三元）运算符参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [条件（三元）运算符参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

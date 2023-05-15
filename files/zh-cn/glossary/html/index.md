@@ -21,18 +21,10 @@ HTML 文档是包含多个 {{glossary("element","HTML 元素")}} 的文本文档
 
 HTML 文件通常会以 `.htm` 或 `.html` 为扩展名。用户可以从 {{Glossary("Server","Web 服务器")}} 中下载，并使用任一 {{Glossary("Browser","Web 浏览器")}} 来解析和显示。
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - 维基百科 [HTML](https://zh.wikipedia.org/wiki/HTML) 词条
-
-### 学习 HTML
-
-- [HTML 教程](/zh-CN/Learn/HTML)
+- [HTML 教程](/zh-CN/docs/Learn/HTML)
 - [codecademy.com 上的在线教程](https://www.codecademy.com/en/tracks/web)
-
-### 技术资料
-
 - [MDN HTML 文档](/zh-CN/docs/Web/HTML)
 - [HTML 规范](https://www.w3.org/TR/html5/)

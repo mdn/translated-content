@@ -95,18 +95,3 @@ Vous pouvez aussi utiliser le [moniteur de performances](/fr/docs/Tools/Performa
 Cet article était destiné à proposer une vue d'ensemble rapide des indicateurs de performance web que vous pouvez mesurer sur un site ou une application web. Dans le prochain article, nous verrons comment travailler sur la performance perçue et nous découvrirons des techniques permettant de rendre les éléments les plus longs à charger un peu moins lents pour le visiteur, voire pour les masquer complètement.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
-
-## Dans ce module
-
-- [Le «&nbsp;pourquoi&nbsp;» des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Qu'est-ce que sont les performances web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les visiteurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia&nbsp;: images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia&nbsp;: vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques de performances pour JavaScript](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalités de HTML liées aux performances](/fr/docs/Learn/Performance/HTML)
-- [Fonctionnalités de CSS liées aux performances](/fr/docs/Learn/Performance/CSS)
-- [Performances et polices d'écriture](/fr/docs/Learn/Performance/Fonts)
-- [Performances sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)

@@ -5,7 +5,7 @@ slug: Web/CSS/::part
 
 {{CSSRef}}
 
-该 **`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 表示在 [阴影树](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 中任何匹配 [`part`](/zh-CN/docs/Web/HTML/Global_attributes#part) 属性的元素。
+**`::part`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示在[阴影树](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)中任何匹配 [`part`](/zh-CN/docs/Web/HTML/Global_attributes#part) 属性的元素。
 
 ```css
 custom-element::part(foo) {

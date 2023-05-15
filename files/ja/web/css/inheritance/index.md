@@ -1,6 +1,6 @@
 ---
 title: 継承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}

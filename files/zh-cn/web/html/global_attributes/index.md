@@ -82,7 +82,7 @@ slug: Web/HTML/Global_attributes
 - [`part`](/zh-CN/docs/Web/HTML/Global_attributes/part) {{Experimental_Inline}}
   - : 元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过{{CSSxRef("::part()")}} 伪元素选择和设置阴影关联树中的特定元素。
 - [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot)
-  - : 将[shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM)阴影关联树中的一个沟槽分配给一个元素：具有`slot`属性的元素被分配给由{{HTMLElement("slot")}}元素创建的沟槽，其[`name`](/zh-CN/docs/Web/HTML/Element/slot#name)属性的值与`slot`属性的值匹配。
+  - : 将 [shadow DOM](/zh-CN/docs/Web/API/Web_components/Shadow_DOM) 阴影关联树中的一个沟槽分配给一个元素：具有`slot`属性的元素被分配给由 {{HTMLElement("slot")}} 元素创建的沟槽，其 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性的值与 `slot` 属性的值匹配。
 - [`spellcheck`](/zh-CN/docs/Web/HTML/Global_attributes/spellcheck) {{experimental_inline}}
   - : 枚举属性定义是否可以检查元素是否存在拼写错误。它可能具有以下值：
 

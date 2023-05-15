@@ -35,13 +35,13 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## メールアドレスフィールド
 
-このフィールド型は {{htmlattrxref("type","input")}}属性の `email` の値でセットされます:
+このフィールド型は [`type`](/ja/docs/Web/HTML/Element/input#type)属性の `email` の値でセットされます:
 
 ```html
 <input type="email" id="email" name="email">
 ```
 
-この {{htmlattrxref("type","input")}} が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
+この [`type`](/ja/docs/Web/HTML/Element/input#type) が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
 
 !["Please enter an email address." というメッセージを表示している無効なメール入力欄](email_address_invalid.png)
 
@@ -71,7 +71,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## 検索フィールド
 
-検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を {{htmlattrxref("type","input")}} 属性のに使用することで設定されます。
+検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性のに使用することで設定されます。
 
 ```html
 <input type="search" id="search" name="search">
@@ -87,7 +87,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## 電話番号フィールド
 
-電話番号を入力するための特殊なフィールドは、 `tel` の値を {{htmlattrxref("type","input")}} 属性に使うと作成することができます。
+電話番号を入力するための特殊なフィールドは、 `tel` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
 
 ```html
 <input type="tel" id="tel" name="tel">
@@ -105,7 +105,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## URL フィールド
 
-URL を入力するための特殊な型のフィールドは、 `url` の値を{{htmlattrxref("type","input")}} 属性に使うと作成することができます。
+URL を入力するための特殊な型のフィールドは、 `url` の値を[`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
 
 ```html
 <input type="url" id="url" name="url">
@@ -121,13 +121,13 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ## 数値フィールド
 
-数値入力用のコントロールは、 {{HTMLElement("input")}} {{htmlattrxref("type","input")}} に `number` を指定して作成することができます。このコントロールはテキストフィールドのような見た目ですが、浮動小数値のみを許可し、通常は数値を増減するためのスピナー形式のボタンがあります。動的キーボードつきの端末では、一般的に数値キーボードが表示されます。
+数値入力用のコントロールは、 {{HTMLElement("input")}} [`type`](/ja/docs/Web/HTML/Element/input#type) に `number` を指定して作成することができます。このコントロールはテキストフィールドのような見た目ですが、浮動小数値のみを許可し、通常は数値を増減するためのスピナー形式のボタンがあります。動的キーボードつきの端末では、一般的に数値キーボードが表示されます。
 
 下記のスクリーンショット (Android 用 Firefox より) に例があります。
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-`number` の入力型では、{{htmlattrxref("min","input")}} と {{htmlattrxref("max","input")}} 属性をセットすることで最小値と最大値の制約をつけることができます。
+`number` の入力型では、[`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性をセットすることで最小値と最大値の制約をつけることができます。
 
 スピナーボタンを押すことで増減させる増分を接とするのに `step` 属性を使うこともできます。既定では、 number 入力型は数値が整数値の場合のみ検証します。浮動小数を許可するには、 [`step="any"`](/ja/docs/Web/HTML/Attributes/step) を指定します。省略された場合、`step` 値は既定で `1` となり、つまりすべての数値が有効です。
 
@@ -153,7 +153,7 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 使用からすると、スライダーはテキストフィールドより不正確です。このため、*正確な*値が必ずしも重要でない数値の選択に使われます。
 
-スライダーは {{HTMLElement("input")}} に {{htmlattrxref("type","input")}} 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
+スライダーは {{HTMLElement("input")}} に [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
 
 スライダーを適切に設定するのは重要です。そのためには、それぞれ最小、最大、増分値を設定する [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max), [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を設定するのを強くお奨めします。
 
@@ -192,7 +192,7 @@ price.addEventListener('input', () => {
 
 HTML の日付コントロールは、カレンダーウィジェットを提供して統一されたデータを作成し、この種類のデータを扱うことができます。
 
-日付と時刻コントロールは {{HTMLElement("input")}} 要素と、日付か時間かその両方かを集めたいのかにあわせて適当な {{htmlattrxref("type","input")}} 属性を使って作成できます。対応していないブラウザーにおいて、 {{htmlelement("select")}} 要素で代替する場合の実行例は次の通りです。
+日付と時刻コントロールは {{HTMLElement("input")}} 要素と、日付か時間かその両方かを集めたいのかにあわせて適当な [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を使って作成できます。対応していないブラウザーにおいて、 {{htmlelement("select")}} 要素で代替する場合の実行例は次の通りです。
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -245,7 +245,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 
 色も扱いが難しいです。色の表現がたくさんあります。 RGB 値（10 進数や 16 進数）、HSL 値、キーワードなどです。
 
-`color` コントロールは {{HTMLElement("input")}} 要素を、 {{htmlattrxref("type","input")}} 属性に `color`をつけて作成できます。
+`color` コントロールは {{HTMLElement("input")}} 要素を、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `color`をつけて作成できます。
 
 ```html
 <input type="color" name="color" id="color">

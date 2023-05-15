@@ -1,6 +1,6 @@
 ---
 title: メモリー管理
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 l10n:
   sourceCommit: 0d4a751b6265b81a6564dde51318b2e391639713
 ---

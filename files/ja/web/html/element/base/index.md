@@ -54,9 +54,9 @@ slug: Web/HTML/Element/base
 
 > **警告:** 以下の属性のいずれかが指定されている場合、この要素は URL の属性値を持つ他の要素、例えば {{HTMLElement("link")}} の `href` 属性などの前に置く**必要があります**。
 
-- {{htmlattrdef("href")}}
+- `href`
   - : 文書全体を通して相対 URL に使用される基底 URL です。絶対 URL と相対 URL が使用できます。
-- {{htmlattrdef("target")}}
+- `target`
 
   - : **キーワード**または**作者が定義した名前**で、既定の{{Glossary("browsing context", "閲覧コンテキスト")}}を表し、 {{HTMLElement("a")}} または {{HTMLElement("form")}} 要素が明示的に `target` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
 

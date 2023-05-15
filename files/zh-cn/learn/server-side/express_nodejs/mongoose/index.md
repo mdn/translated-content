@@ -760,7 +760,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 本文最后（使用独立运行的脚本）创建了一些测试实例。下一节将关注如何创建页面以显示这些对象。
 
-## 另请参阅
+## 参见
 
 - [数据库集成](http://expressjs.com.cn/guide/database-integration.html) (Express 文档)
 - [Mongoose 站点](http://mongoosejs.com/) (Mongoose 文档)

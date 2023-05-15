@@ -11,13 +11,13 @@ slug: Web/HTML/Element/bgsound
 
 ## 属性
 
-- {{ htmlattrdef("balance") }}
+- `balance`
   - : この属性は -10,000 から +10,000 の値で、ステレオスピーカーの左右の音量バランスを指定します。
-- {{ htmlattrdef("loop") }}
+- `loop`
   - : この属性は音声が再生される回数を示します。もしくは無限回のループを示す infinite キーワードが指定可能です。
-- {{ htmlattrdef("src") }}
+- `src`
   - : 再生する音声ファイルの URL を指定します。「.wav」、「.au」、「.mid」の何れかの拡張子を持つものでなくてはなりません。
-- {{ htmlattrdef("volume") }}
+- `volume`
   - : -10,000 から 0 の範囲の数値で、背景音の音量を指定します。
 
 ## 例

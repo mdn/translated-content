@@ -26,8 +26,8 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} および
-        {{htmlattrxref("value", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ l10n:
 
 ## 値
 
-`<input type="reset">` 要素の {{htmlattrxref("value", "input")}} 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。
+`<input type="reset">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。 `reset` などのボタンは他の値を持ちません。
 
 ### value 属性の設定
 
@@ -93,9 +93,9 @@ l10n:
 
 ### リセットのショートカットキーの追加
 
-リセットボタンにショートカットキーを追加するには — あらゆる {{HTMLElement("input")}} で通用する方法としてと — グローバル属性の {{htmlattrxref("accesskey")}} を使用します。
+リセットボタンにショートカットキーを追加するには — あらゆる {{HTMLElement("input")}} で通用する方法としてと — グローバル属性の [`accesskey`](/ja/docs/Web/HTML/Global_attributes#accesskey) を使用します。
 
-この例では、 <kbd>r</kbd> がアクセスキーとして指定されます (<kbd>r</kbd> はブラウザーや OS の組み合わせによる特定の修飾キーを押しながら押す必要があります {{htmlattrxref("accesskey")}} に有益なリストがあります)。
+この例では、 <kbd>r</kbd> がアクセスキーとして指定されます (<kbd>r</kbd> はブラウザーや OS の組み合わせによる特定の修飾キーを押しながら押す必要があります [`accesskey`](/ja/docs/Web/HTML/Global_attributes#accesskey) に有益なリストがあります)。
 
 ```html
 <form>
@@ -111,11 +111,11 @@ l10n:
 
 {{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください (例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど)。ボタンにツールチップを追加する ({{htmlattrxref("title")}} 属性を使う) ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
+上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください (例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど)。ボタンにツールチップを追加する ([`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を使う) ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
 
 ### リセットボタンの無効化と有効化
 
-リセットボタンを無効化するには、以下のようにグローバル属性の {{htmlattrxref("disabled")}} を指定するだけです。
+リセットボタンを無効化するには、以下のようにグローバル属性の [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) を指定するだけです。
 
 ```html
 <input type="reset" value="Disabled" disabled />

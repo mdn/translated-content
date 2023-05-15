@@ -481,11 +481,3 @@ Notez que certains de ces outils nécessitent l'installation préalable de npm, 
 Nous voilà parvenus au terme de cette brève revue du terminal ou ligne de commande. Dans la suite, nous allons nous pencher plus en détail sur les package managers, et sur les possibilités qu'ils nous offrent.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## Dans ce module
-
-- [Client-side tooling overview](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Cours express sur la ligne de commande](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande)
-- [Package management basics](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

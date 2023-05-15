@@ -5,37 +5,59 @@ slug: Web/API/Blob/type
 
 {{APIRef("File API")}}
 
-[`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)。如果类型无法确定，则返回空字符串。
+[`Blob`](/zh-CN/docs/Web/API/Blob) 对象的 **`type`** 属性给出文件的 {{Glossary("MIME type", "MIME 类型")}}。
 
-### 语法
+## 值
 
-```plain
-var mimetype = instanceOfFile.type
+一个包含文件 MIME 类型的字符串，如果无法确定类型则返回空字符串。
+
+## 示例
+
+这个示例要求用户选择一些文件，然后检查每个文件以确保其是指定的图片文件类型之一。
+
+### HTML
+
+```html
+<input type="file" id="input" multiple />
+<output id="output">选择图片文件……</output>
 ```
 
-### 值
-
-字符串
-
-### 例子
-
-```js
-// fileInput 是一个 HTMLInputElement，HTML Input 元素：<input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
-
-// files 是一个 FileList 对象（与 NodeList 相似，是多个 File 对象的集合）
-var files = fileInput.files;
-
-// 仅允许 *.png, *.jpeg *.gif 类型的图片文件
-var allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
-
-for (var i = 0; i < files.length; i++) {
-    // 检查文件的文件类型是否属于 allowFileTypes 中的一种
-    if (allowedFileTypes.indexOf(files[i].type) > -1) {
-        // 对符合条件的文件进行处理
-    }
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
 }
 ```
+
+### JavaScript
+
+```js
+// 我们的程序只允许 GIF、PNG 和 JPEG 类型的图片
+const allowedFileTypes = ["image/png", "image/jpeg", "image/gif"];
+
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+
+input.addEventListener("change", (event) => {
+  const files = event.target.files;
+
+  if (files.length === 0) {
+    output.innerText = "选择图片文件…";
+    return;
+  }
+
+  const allAllowed = Array.from(files).every((file) =>
+    allowedFileTypes.includes(file.type)
+  );
+  output.innerText = allAllowed
+    ? "所有文件都符合！"
+    : "请只选择图片文件。";
+});
+```
+
+### 结果
+
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -48,3 +70,4 @@ for (var i = 0; i < files.length; i++) {
 ## 参见
 
 - {{domxref("Blob")}}
+- [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)

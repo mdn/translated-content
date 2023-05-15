@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -140,7 +140,7 @@ def index(request):
 
 將以下區塊底部看到的行添加到\`\`動態內容''部分底部的主 HTML 模板(**/locallibrary/catalog/templates/index.html**)中以顯示上下文變量：
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -151,7 +151,9 @@ def index(request):
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.
+</p>
 ```
 
 保存更改，然後重新啟動測試服務器。 每次刷新頁面時，數字都會更新。

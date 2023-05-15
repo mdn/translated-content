@@ -3,7 +3,7 @@ title: device-height
 slug: Web/CSS/@media/device-height
 ---
 
-{{cssref}} {{deprecated_header}}
+{{CSSRef}} {{deprecated_header}}
 
 **`device-height`** [CSS](/zh-CN/docs/CSS) [media feature](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) 可以用来测试设备的渲染高度。注意，该条媒体查询将会在 媒体查询 level4（目前处于候选草案）中废弃
 

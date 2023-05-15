@@ -11,4 +11,4 @@ slug: Glossary/Firewall
 
 ### 基礎知識
 
-- 維基百科上的 [Firewall (computing)](https://zh.wikipedia.org/wiki/Firewall_(computing))
+- 維基百科上的 [Firewall (computing)](<https://zh.wikipedia.org/wiki/Firewall_(computing)>)

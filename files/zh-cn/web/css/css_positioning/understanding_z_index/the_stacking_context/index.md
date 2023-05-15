@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 我们假定用户正面向（浏览器）视窗或网页，而 HTML 元素沿着其相对于用户的一条虚构的 z 轴排开，**层叠上下文**就是对这些 HTML 元素的一个三维构想。众 HTML 元素基于其元素属性按照优先级顺序占据这个空间。
 

@@ -24,7 +24,7 @@ SyntaxError: Delete of an unqualified identifier in strict mode. (Chrome)
 
 delete 操作符只能用于删除对象中的属性。只有可配置的对象属性才“符合”被删除的条件。
 
-与一般流行的观点相反的是，delete 操作符与直接释放内存**无关**。内存管理是通过切断引用来间接实现的。可以参考[内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)页面与 [delete](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 操作符页面来获取更多的细节信息。
+与一般流行的观点相反的是，delete 操作符与直接释放内存**无关**。内存管理是通过切断引用来间接实现的。可以参考[内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)页面与 [delete](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 操作符页面来获取更多的细节信息。
 
 这个错误提示只出现于[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)。在非严格模式下，该操作返回 false。
 
@@ -62,5 +62,5 @@ x = null;
 ## 相关内容
 
 - [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
-- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_Management)
+- [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
 - [TypeError: property "x" is non-configurable and can't be deleted](/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_delete)

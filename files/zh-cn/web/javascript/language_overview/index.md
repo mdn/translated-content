@@ -1,6 +1,6 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 

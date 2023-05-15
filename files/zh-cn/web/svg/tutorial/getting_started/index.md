@@ -3,6 +3,8 @@ title: 入门
 slug: Web/SVG/Tutorial/Getting_Started
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### 一个简单的示例

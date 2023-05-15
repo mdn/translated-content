@@ -538,7 +538,7 @@ function deleteItem(e) {
 
 如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。您可以存储任何您想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
-为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
+为了演示如何操作，我们编写了另一个名为[IndexedDB 视频存储的](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)示例（请参阅[此处也可以在此处运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们 - 这使得后续加载更快，占用空间更少。
 
 让我们来看看这个例子中最有趣的部分。我们不会全部看 - 它的很多内容与上一个示例类似，代码注释得很好。
 
@@ -668,7 +668,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 让我们看一个例子，让你对这可能是什么样子有所了解。我们已经创建了另一个版本的视频存储示例，我们在上一节中看到了 - 这个功能完全相同，只是它还通过服务工作者将 Cache，CSS 和 JavaScript 保存在 Cache API 中，允许示例脱机运行！
 
-请参阅[IndexedDB 视频存储，其中服务工作者正在运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)，并且还可以[查看源代码](https://github.com/mdn/learning-area/tree/master/javascript/apis/client-side-storage/cache-sw/video-store-offline)。
+请参阅 [IndexedDB 视频存储，其中 service worker 在运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/)，并且还可以[查看源代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/cache-sw/video-store-offline)。
 
 #### 注册服务工作者
 

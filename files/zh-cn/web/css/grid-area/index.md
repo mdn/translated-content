@@ -3,6 +3,8 @@ title: grid-area
 slug: Web/CSS/grid-area
 ---
 
+{{CSSRef}}
+
 CSS 属性 **`grid-area`** 是一种对于 {{cssxref("grid-row-start")}}、{{cssxref("grid-column-start")}}、{{cssxref("grid-row-end")}} 和 {{cssxref("grid-column-end")}} 的简写，通过基线（line），跨度（span）或没有（自动）的网格放置在 {{glossary("grid rows", "grid row")}} 中指定一个网格项的大小和位置，继而确定 {{glossary("grid areas", "grid area")}} 的边界。
 
 ```css

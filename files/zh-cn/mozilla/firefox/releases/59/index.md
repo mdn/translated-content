@@ -37,7 +37,7 @@ _无变化。_
 
 #### 新增 API
 
-- 在 nightly 中默认启用 [Custom elements](/zh-CN/docs/Web/Web_Components/Custom_Elements) v1 ([Firefox bug 1406825](https://bugzil.la/1406825)).
+- 在 nightly 中默认启用 [Custom element](/zh-CN/docs/Web/API/Web_components/Custom_Elements) v1（[Firefox bug 1406825](https://bugzil.la/1406825)）。
 
 #### DOM
 

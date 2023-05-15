@@ -17,10 +17,10 @@ expr1 &&= expr2
 
 ## 描述
 
-逻辑与的[*短路运算*](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#短路运算)意味着 `x &&= y` 与下式等价：
+逻辑与的[*短路运算*](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence#短路运算)意味着 `x &&= y` 与下式等价：
 
 ```js
-x || (x = y);
+x && (x = y);
 ```
 
 如果左操作数不为真值，则由于[逻辑与](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND)运算符的短路运算，不进行赋值操作。例如，由于 `x` 为 `const`（常量），以下式子不会抛出错误：

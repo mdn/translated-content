@@ -347,7 +347,7 @@ return render(
 
 在我们的下一篇文章中，我们将基于我们的知识来创建其他四个页面。
 
-## 也可以看看
+## 参见
 
 - [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/1.10/intro/tutorial03/) (Django docs)
 - [URL 调度程序](https://docs.djangoproject.com/en/1.10/topics/http/urls/) (Django docs)

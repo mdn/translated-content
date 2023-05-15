@@ -67,28 +67,28 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Expires=<date>` {{optional_inline}}
   - : cookie 的最长有效时间，形式为符合 HTTP-date 规范的时间戳。参见 {{HTTPHeader("Date")}} 可以获取详细信息。
 
-  如果没有设置这个属性，那么表示这是一个**会话期 cookie**。一个会话结束于客户端被关闭时，这意味着会话期 cookie 在彼时会被移除。
+    如果没有设置这个属性，那么表示这是一个**会话期 cookie**。一个会话结束于客户端被关闭时，这意味着会话期 cookie 在彼时会被移除。
 
-  > **警告：** 然而，很多 Web 浏览器支持会话恢复功能，这个功能可以使浏览器保留所有的 tab 标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。
+    > **警告：** 然而，很多 Web 浏览器支持会话恢复功能，这个功能可以使浏览器保留所有的 tab 标签，然后在重新打开浏览器的时候将其还原。与此同时，cookie 也会恢复，就跟从来没有关闭浏览器一样。
 
-  如果设置了 `Expires` 属性，其截止时间与*客户端*相关，而非服务器的时间。
+    如果设置了 `Expires` 属性，其截止时间与*客户端*相关，而非服务器的时间。
 
 - `Max-Age=<number>` {{optional_inline}}
   - : 在 cookie 失效之前需要经过的秒数。秒数为 0 或 -1 将会使 cookie 直接过期。假如 `Expires` 和 `Max-Age` 属性均存在，那么 `Max-Age` 的优先级更高。
 - `Domain=<domain-value>` {{optional_inline}}
   - : 指定 cookie 可以送达的主机名。
 
-  假如没有指定，那么默认值为当前文档访问地址中的主机部分（但是不包含子域名）。
+    假如没有指定，那么默认值为当前文档访问地址中的主机部分（但是不包含子域名）。
 
-  与之前的规范不同的是，域名（`.example.com`）之前的点号会被忽略。
+    与之前的规范不同的是，域名（`.example.com`）之前的点号会被忽略。
 
-  多个主机/域名的值是*不*被允许的，但如果指定了一个域，则其子域也会被包含。
+    多个主机/域名的值是*不*被允许的，但如果指定了一个域，则其子域也会被包含。
 - `Path=<path-value>` {{optional_inline}}
   - : 指定一个 URL 路径，这个路径*必须*出现在要请求的资源的路径中才可以发送 `Cookie` 标头。
 
-  字符 `/` 可以解释为文件目录分隔符，此目录的下级目录也满足匹配的条件（例如，如果 `path=/docs`，那么
-  - `/docs`、`/docs/`、`/docs/Web/` 和 `/docs/Web/HTTP` 都满足匹配条件。
-  - `/`、`/docsets` 或者 `/fr/docs` 则不满足匹配条件。
+    字符 `/` 可以解释为文件目录分隔符，此目录的下级目录也满足匹配的条件（例如，如果 `path=/docs`，那么
+    - `/docs`、`/docs/`、`/docs/Web/` 和 `/docs/Web/HTTP` 都满足匹配条件。
+    - `/`、`/docsets` 或者 `/fr/docs` 则不满足匹配条件。
 - `Secure` {{optional_inline}}
 
   - : 一个带有安全属性的 cookie 只有在请求使用 `https:` 协议（localhost 不受此限制）的时候才会被发送到服务器。以阻止[中间人](/zh-CN/docs/Glossary/MitM)攻击。
@@ -102,24 +102,24 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `SameSite=<samesite-value>` {{optional_inline}}
   - : 允许服务器设定一则 cookie 不随着跨站请求一起发送，这样可以在一定程度上防范跨站请求伪造攻击（{{Glossary("CSRF")}}）。
 
-  可选的属性值有：
+    可选的属性值有：
 
-  - `Strict`
-    - : 这意味浏览器仅对同一站点的请求发送 `cookie`，即请求来自设置 cookie 的站点。如果请求来自不同的域或协议（即使是相同域），则携带有 `SameSite=Strict` 属性的 cookie 将不会被发送。
+    - `Strict`
+      - : 这意味浏览器仅对同一站点的请求发送 `cookie`，即请求来自设置 cookie 的站点。如果请求来自不同的域或协议（即使是相同域），则携带有 `SameSite=Strict` 属性的 cookie 将不会被发送。
 
-  - `Lax`
-    - : 这意味着 cookie 不会在跨站请求中被发送，如：加载图像或 frame 的请求。但 cookie 在用户从外部站点导航到源站时，cookie 也将被发送（例如，跟随一个链接）。这是 `SameSite` 属性未被设置时的默认行为。
+    - `Lax`
+      - : 这意味着 cookie 不会在跨站请求中被发送，如：加载图像或 frame 的请求。但 cookie 在用户从外部站点导航到源站时，cookie 也将被发送（例如，跟随一个链接）。这是 `SameSite` 属性未被设置时的默认行为。
 
-  - `None`
-    - : 这意味着浏览器会在跨站和同站请求中均发送 cookie。在设置这一属性值时，必须同时设置 `Secure` 属性，就像这样：`SameSite=None; Secure`。
+    - `None`
+      - : 这意味着浏览器会在跨站和同站请求中均发送 cookie。在设置这一属性值时，必须同时设置 `Secure` 属性，就像这样：`SameSite=None; Secure`。
 
-    > **备注：** 与 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 相关的标准作了如下变动：
-    >
-    > 1. `SameSite` 属性未被指定时，其默认行为是 `SameSite=Lax`。在过去，若未指定，所有的 cookie 均会被发送。
-    > 2. 现在，携带 `SameSite=None` 属性的 cookie 必须同时设置 `Secure` 属性（换句话说，其仅能用于安全上下文）
-    > 3. 来自同一域的 cookie 若使用了不同的协议（`http:` 或 `HTTPS:`），将不再被视为来自同一站点。
-    >
-    > 参见[浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility)表以了解不同浏览器的实线情况（行：“`SameSite`: Defaults to `Lax`”、“`SameSite`: Secure context required”和“`SameSite`: URL scheme-aware ("schemeful")”）。
+      > **备注：** 与 [SameSite Cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 相关的标准作了如下变动：
+      >
+      > 1. `SameSite` 属性未被指定时，其默认行为是 `SameSite=Lax`。在过去，若未指定，所有的 cookie 均会被发送。
+      > 2. 现在，携带 `SameSite=None` 属性的 cookie 必须同时设置 `Secure` 属性（换句话说，其仅能用于安全上下文）
+      > 3. 来自同一域的 cookie 若使用了不同的协议（`http:` 或 `HTTPS:`），将不再被视为来自同一站点。
+      >
+      > 参见[浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#浏览器兼容性)表以了解不同浏览器的实线情况（行：“`SameSite`: Defaults to `Lax`”、“`SameSite`: Secure context required”和“`SameSite`: URL scheme-aware ("schemeful")”）。
 
 ## 示例
 
@@ -201,4 +201,4 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 - [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [SameSite cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [SameSite cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)

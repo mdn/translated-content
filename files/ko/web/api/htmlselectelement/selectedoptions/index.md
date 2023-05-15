@@ -104,4 +104,4 @@ The resulting content looks like this in action:
 
 ## See also
 
-- [Drop-down content](/en-US/docs/Learn/HTML/Forms/The_native_form_widgets)
+- [Drop-down content](/ko/docs/Learn/HTML/Forms/Other_form_controls#drop-down_controls)

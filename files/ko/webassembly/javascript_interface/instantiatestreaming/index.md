@@ -35,7 +35,7 @@ Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
 
 ## Examples
 
-다음 예제 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모보기 및 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html))에서는 원본 소스에서 .wasm 모듈을 직접 스트리밍 한 다음 컴파일하고 인스턴스화합니다. 약속은 `ResultObject`로 충족됩니다.`instantiateStreaming()` 함수는 {{domxref("Response")}} 객체에 대한 promise를 받아들이므로 직접 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 호출을 전달할 수 있으며 응답을 수행하면 함수에 응답을 전달합니다.
+다음 예제 (GitHub의 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) 데모보기 및 [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html))에서는 원본 소스에서 .wasm 모듈을 직접 스트리밍 한 다음 컴파일하고 인스턴스화합니다. 약속은 `ResultObject`로 충족됩니다.`instantiateStreaming()` 함수는 {{domxref("Response")}} 객체에 대한 promise를 받아들이므로 직접 {{domxref("fetch()")}} 호출을 전달할 수 있으며 응답을 수행하면 함수에 응답을 전달합니다.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

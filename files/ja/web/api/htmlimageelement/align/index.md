@@ -9,7 +9,7 @@ slug: Web/API/HTMLImageElement/align
 
 代わりに CSS プロパティ {{cssxref("vertical-align")}} を使用する必要があり、その名前にもかかわらず実際に画像に対しても機能します。また、 {{cssxref("float")}} プロパティを使って、画像を左または右マージンに浮動させることができます。
 
-`align` プロパティは、HTML の {{htmlattrxref("align", "img")}} コンテンツ属性を反映します。
+`align` プロパティは、HTML の [`align`](/ja/docs/Web/HTML/Element/img#align) コンテンツ属性を反映します。
 
 ## 値
 

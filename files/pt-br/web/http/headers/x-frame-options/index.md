@@ -46,7 +46,7 @@ Se você especifica `DENY`, não somente tentativas em carregar a página em um 
 
 ## Exemplos
 
-> **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somenete colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
+> **Nota:** Colocar X-Frame-Options dentro de um elemento {{HTMLElement("meta")}} é inútil! Por enquanto, `<meta http-equiv="X-Frame-Options" content="deny">` não tem nenhum efeito. Não o utilize! `X-Frame-Options` funciona somente colocando a configuração através do cabeçalho HTTP, como nos exemplos abaixo.
 
 ### Configurando o Apache
 

@@ -1,7 +1,9 @@
 ---
-title: Content type
+title: 内容类型
 slug: Web/SVG/Content_type
 ---
+
+{{SVGRef}}
 
 SVG 中使用了许多数据类型。本文列出了这些数据类型以及它们的语法和用途的描述。
 

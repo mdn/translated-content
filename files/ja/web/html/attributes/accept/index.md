@@ -103,7 +103,7 @@ div {
 
 多くの場合は、ユーザーが任意の種別のファイルを選択できるようにするのではなく、特定の種別のファイルを選択できるようにしたいものです。例えば、ファイル入力でユーザーがプロフィール画像をアップロードできる場合、 {{Glossary("JPEG")}} や {{Glossary("PNG")}} などのウェブ互換の画像形式を選択させたいと思うでしょう。/p>
 
-許容されるファイル種別は、 {{htmlattrxref("accept","input/file")}} 属性で許容されるファイル拡張子や MIME タイプのカンマ区切りのリストを取ることで指定することができます。いくつかの例を示します。
+許容されるファイル種別は、 [`accept`](/ja/docs/Web/HTML/Element/input/file#accept) 属性で許容されるファイル拡張子や MIME タイプのカンマ区切りのリストを取ることで指定することができます。いくつかの例を示します。
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付ける。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付ける。

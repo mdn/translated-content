@@ -78,9 +78,9 @@
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Compatibility notes | 호환성 참고 사항 | [링크][target] |
-| Directives | 지시어 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
-| Guide | 안내서 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
-| Instruction | 지침 | [링크][https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106] |
+| Directives | 지시어 | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
+| Guide | 안내서 | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
+| Instruction | 지침 | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Naming | 이름 지정 | |
 | Parameters | 매개변수 | [링크][AudioWorkletNode] |
 | Requirements | 요구 사항 | |
@@ -99,8 +99,10 @@
 | Class | 클래스 | |
 | Content(s) | 콘텐츠 | |
 | Context | 맥락 | |
+| Decoding | 디코딩 | [링크](https://github.com/mdn/translated-content/issues/12452) |
 | Document | 문서 | |
 | Element | 요소 | |
+| Encoding | 인코딩 | [링크](https://github.com/mdn/translated-content/issues/12452) |
 | Entity | 개체 | |
 | Enumerated | 열거형 | |
 | Expression | 표현식 또는 식 | |

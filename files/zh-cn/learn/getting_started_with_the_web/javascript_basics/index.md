@@ -54,7 +54,7 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 ### 发生了什么？
 
-JavaScript 把页面的标题改成了“Hello world!” 。首先用 `{{domxref("Document.querySelector", "querySelector()")}}` 函数获取标题的引用，并把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。
+JavaScript 把页面的标题改成了“Hello world!” 。首先用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，并把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。
 
 之后，把 `myHeading` 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为“Hello world!” 。
 
@@ -121,7 +121,7 @@ myVariable = '韩梅梅';
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
-        字符串（一串文本）：字符串的值必须用引号（单双均可，必须成对）扩起来。
+        字符串（一串文本）：字符串的值必须用引号（单双均可，必须成对）括起来。
       </td>
       <td><code>let myVariable = '李雷';</code></td>
     </tr>

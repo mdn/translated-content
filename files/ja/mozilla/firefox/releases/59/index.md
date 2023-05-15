@@ -21,7 +21,7 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 
 ### HTML
 
-- {{HTMLElement("textarea")}} 要素の {{htmlattrxref("autocomplete", "textarea")}} 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
+- {{HTMLElement("textarea")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
 
 ### CSS
 
@@ -108,7 +108,7 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("script")}} 要素の {{htmlattrxref("type","script")}} 属性の非標準パラメーターである `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
+- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script#type) 属性の非標準パラメーターである `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
 
 ### CSS
 

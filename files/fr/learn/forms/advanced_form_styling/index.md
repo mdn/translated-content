@@ -501,22 +501,3 @@ Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires
 Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
-
-## Dans ce module
-
-- [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les contrôles natifs de formulaires basiques](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Les types de champs HTML](/fr/docs/Learn/Forms/HTML5_input_types)
-- [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
-- [Mettre en forme les formulaires](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée pour les formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Les pseudo-classes pour l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
-- [Valider les données de formulaires côté client](/fr/docs/Learn/Forms/Form_validation)
-- [Envoyer les données de formulaires](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Sujet avancés
-
-- [Comment construire des contrôles de formulaire personnalisés](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoyer les données de formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tableau de compatibilité pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

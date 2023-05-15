@@ -524,13 +524,11 @@ slug: Web/Events
           与
           <a href="/zh-CN/docs/Web/API/Performance_API"
             >High Resolution Time API</a
-          >、<a href="/zh-CN/docs/Web/API/Performance_Timeline"
-            >Performance Timeline API</a
-          >、<a href="/zh-CN/docs/Web/API/Navigation_timing_API"
+          >、<a href="/zh-CN/docs/Web/API/Performance_API/Navigation_timing"
             >Navigation Timing API</a
-          >、<a href="/zh-CN/docs/Web/API/User_Timing_API">User Timing API</a>
+          >、<a href="/zh-CN/docs/Web/API/Performance_API/User_timing">User Timing API</a>
           和
-          <a href="/zh-CN/docs/Web/API/Resource_Timing_API"
+          <a href="/zh-CN/docs/Web/API/Performance_API/Resource_timing"
             >Resource Timing API</a
           > 相关的事件。
         </p>

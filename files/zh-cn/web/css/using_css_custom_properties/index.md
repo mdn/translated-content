@@ -3,6 +3,8 @@ title: 使用 CSS 自定义属性（变量）
 slug: Web/CSS/Using_CSS_custom_properties
 ---
 
+{{CSSRef}}
+
 **自定义属性**（有时候也被称作**CSS 变量**或者**级联变量**）是由 CSS 作者定义的，它包含的值可以在整个文档中重复使用。由自定义属性标记设定值（比如： **`--main-color: black;`**），由 [var()](/zh-CN/docs/Web/CSS/var) 函数来获取值（比如： `color: var(--main-color);`）复杂的网站都会有大量的 CSS 代码，通常也会有许多重复的值。举个例子，同样一个颜色值可能在成千上百个地方被使用到，如果这个值发生了变化，需要全局搜索并且一个一个替换（很麻烦哎～）。自定义属性在某个地方存储一个值，然后在其他许多地方引用它。另一个好处是语义化的标识。比如，`--main-text-color` 会比 `#00ff00` 更易理解，尤其是这个颜色值在其他上下文中也被使用到。自定义属性受级联的约束，并从其父级继承其值。
 
 ## 基本用法
@@ -170,7 +172,7 @@ element {
 
 ## 自定义属性备用值
 
-用 {{cssxref("var()")}} 函数可以定义多个**备用值**(fallback value)，当给定值未定义时将会用备用值替换。这对于 [Custom Elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 都很有用。
+用 {{cssxref("var()")}} 函数可以定义多个**备用值**（fallback value），当给定值未定义时将会用备用值替换。这对于 [Custom Element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements) 和 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 都很有用。
 
 > **备注：** 备用值并不是用于实现浏览器兼容性的。如果浏览器不支持 CSS 自定义属性，备用值也没什么用。它仅对支持 CSS 自定义属性的浏览器提供了一个备份机制，该机制仅当给定值未定义或是无效值的时候生效。
 

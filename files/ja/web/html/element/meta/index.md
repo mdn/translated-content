@@ -42,7 +42,7 @@ l10n:
       <td>
         <ul>
           <li>
-            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。{{htmlattrxref("http-equiv", "meta")}} がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
+            <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>: {{HTMLElement("head")}} 要素。<a href="/ja/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> がエンコーディング宣言ではない場合は、 <code>&#x3C;head></code> 要素内にある {{HTMLElement("noscript")}} 要素の内部にも配置できます。
           </li>
           <li>
             <code>&#x3C;meta name></code>: <a
@@ -82,22 +82,22 @@ l10n:
 
 `<meta>` 要素で提供されるメタデータの型は、以下のいずれかになります。
 
-- {{htmlattrxref("name", "meta")}} 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
-- {{htmlattrxref("http-equiv", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
-- {{htmlattrxref("charset", "meta")}} 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
+- [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
+- [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
+- [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
 - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **メモ:** {{htmlattrxref("name", "meta")}} 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}}, {{htmlattrxref("charset", "meta")}} のいずれかがある場合は設定してはいけません。
+> **メモ:** [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、 [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに [`name`](/ja/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv), [`charset`](/ja/docs/Web/HTML/Element/meta#charset) のいずれかがある場合は設定してはいけません。
 
-- {{htmlattrdef("charset")}}
+- `charset`
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。 UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
-- {{htmlattrdef("content")}}
-  - : この属性は状況に応じて、{{htmlattrxref("http-equiv", "meta")}} 属性または {{htmlattrxref("name", "meta")}} 属性に関連付けられた値を持ちます。
-- {{htmlattrdef("http-equiv")}}
+- `content`
+  - : この属性は状況に応じて、[`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性または [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性に関連付けられた値を持ちます。
+- `http-equiv`
 
   - : プラグマディレクティブを定義します。属性名が `http-equiv(alent)` なのは、利用できる値のすべてが特定の HTTP ヘッダーの名前だからです。
 
@@ -107,7 +107,7 @@ l10n:
 
     - `content-type`
 
-      文書の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に {{htmlattrxref("charset", "meta")}} 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
+      文書の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
 
     - `default-style`
 
@@ -119,8 +119,8 @@ l10n:
 
     - `refresh` これは以下のことを指定する指示です。
 
-      - {{htmlattrxref("content", "meta")}} 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
-      - {{htmlattrxref("content", "meta")}} 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
+      - [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性に正の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
+      - [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性に正の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
       > **警告:**
       >
@@ -132,7 +132,7 @@ l10n:
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
 

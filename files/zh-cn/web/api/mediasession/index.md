@@ -40,7 +40,7 @@ if ('mediaSession' in navigator){
 }
 ```
 
-下面例子为暂停和播放设置了时间句柄：
+下面例子为暂停和播放设置了事件句柄：
 
 ```js
 var audio = document.querySelector("#player");

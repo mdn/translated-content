@@ -168,7 +168,7 @@ getUserMedia(constraints)
 
 プライバシーに関わる重要な API として、 `getUserMedia()` の仕様は、ブラウザーが満たすべきプライバシーとセキュリティに関する広範な要件を規定しています。
 
-`getUserMedia()` は強力な機能ですが、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。安全なコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。安全なコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
+`getUserMedia()` は強力な機能ですが、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。安全でないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。安全なコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
 
 さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
 
@@ -191,7 +191,7 @@ getUserMedia(constraints)
 #### 機能ポリシー
 
 [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は {{Glossary("HTTP")}} のセキュリティ管理機能で、ブラウザーへの導入が進んでおり、多くのブラウザーがある程度対応しています（Firefox のように、既定で有効のものばかりとは限りませんが）。 `getUserMedia()` は、機能ポリシーの使用を必要とするメソッドの一つであり、コードはこれに対処するために準備される必要があります。
-例えば、`getUserMedia()` を利用する {{HTMLElement("iframe")}} には {{htmlattrxref("allow", "iframe")}} 属性が必要になるかもしれませんし、 `getUserMedia()` を利用するページでは最終的に {{HTTPHeader("Feature-Policy")}} ヘッダーの提供が必要になるはずです。
+例えば、`getUserMedia()` を利用する {{HTMLElement("iframe")}} には [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性が必要になるかもしれませんし、 `getUserMedia()` を利用するページでは最終的に {{HTTPHeader("Feature-Policy")}} ヘッダーの提供が必要になるはずです。
 
 `getUserMedia()` に適用される権限は `camera` と `microphone` の 2 つです。
 
@@ -226,9 +226,9 @@ Feature-Policy: microphone 'self' https://developer.mozilla.org
 
 `getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、安全なコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
 
-- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の {{htmlattrxref("sandbox", "iframe")}} 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
+- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
 - オリジンを持たない `data://` や `blob://` の URL を使って読み込まれた文書（例えば、これらの URL のいずれかがユーザーによってアドレスバー入力された場合）は、 `getUserMedia()` を呼び出すことができません。 JavaScript のコードから読み込まれたこれらの種類の URL は、スクリプトの権限を継承します。
-- その他、 {{htmlattrxref("srcdoc", "iframe")}} 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
+- その他、 [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
 
 ## 例
 

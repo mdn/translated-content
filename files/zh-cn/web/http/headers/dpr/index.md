@@ -34,7 +34,7 @@ Then on subsequent requests the client might send `DPR` header back:
 DPR: 1.0
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

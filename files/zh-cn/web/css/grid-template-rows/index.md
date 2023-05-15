@@ -4,6 +4,8 @@ slug: Web/CSS/grid-template-rows
 original_slug: Web/CSS/网格-模板-列
 ---
 
+{{CSSRef}}
+
 `grid-template-rows` 该属性是基于 {{glossary("grid rows", "网格行")}} 的维度，去定义网格线的名称和网格轨道的尺寸大小。
 
 {{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}

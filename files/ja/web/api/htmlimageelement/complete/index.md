@@ -14,7 +14,7 @@ slug: Web/API/HTMLImageElement/complete
 
 以下のいずれかを満たす場合、画像の読み込みが完了したと見なされます。
 
-- {{htmlattrxref("src", "img")}} 属性も {{htmlattrxref("srcset", "img")}} 属性も指定されていない場合
+- [`src`](/ja/docs/Web/HTML/Element/img#src) 属性も [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性も指定されていない場合
 - `srcset` 属性が存在せず、`src` 属性は指定されていても空文字列 (`""`) である場合
 - 画像リソースが完全に取得され、レンダリング/合成のためにキューに入れられた場合
 - 画像要素が事前に、画像が完全に利用可能であり、使用可能であると判断している場合

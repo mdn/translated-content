@@ -76,6 +76,6 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}_。
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 实现了这个接口的 HTML 元素：{{HTMLElement("table")}}。

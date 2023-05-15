@@ -32,7 +32,7 @@ CSS 宣言ブロックは以下の図のように表すことができます。
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **メモ:** 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の {{htmlattrxref("style")}} 属性の中に置くことができます。
+> **メモ:** 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の中に置くことができます。
 
 ## CSS のルールセット
 

@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 1. 克隆代码库，通过 ["临时载入附加组件"](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 功能直接从源文件夹中载入扩展组件。再重启浏览器前该扩展将一直存在。
 2. 克隆代码库，使用 [web-ext](/zh-CN/Add-ons/WebExtensions/Getting_started_with_web-ext) 命令行工具运行安装了扩展的 Firefox。
-3. 克隆代码库，进入 [build](https://github.com/mdn/webextensions-examples/tree/master/build) 文件夹。该文件夹包含所有示例的已构建、带签名版本。你可以在 Firefox 中打开（菜单栏->文件->打开文件）并且永久安装这些扩展。这些扩展和直接从 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 安装的扩展别无二致。
+3. 克隆代码库，进入 [build](https://github.com/mdn/webextensions-examples/tree/main/build) 文件夹。该文件夹包含所有示例的已构建、带签名版本。你可以在 Firefox 中打开（菜单栏->文件->打开文件）并且永久安装这些扩展。这些扩展和直接从 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 安装的扩展别无二致。
 
 > **警告：** 不要提交这些关于 WebExtension 例子的示例到 AMO (addons.mozilla.org) 上去，你无需为附加组件签名就能运行 WebExtension 的示例。只要按照上面的步骤来就可以了。
 

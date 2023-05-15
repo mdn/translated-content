@@ -16,7 +16,7 @@ p {
   color: yellow;
 
   /* "background-color" 屬性定義了背景的顏色，本例為黑色。 */
-  background-color: black
+  background-color: black;
 }
 ```
 

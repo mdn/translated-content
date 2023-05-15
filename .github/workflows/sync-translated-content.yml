@@ -57,7 +57,7 @@ jobs:
         run: yarn content sync-translated-content ${{ matrix.lang }}
 
       - name: Create PR with sync for ${{ matrix.lang }}
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "${{ matrix.lang }}: sync translated content"
           branch: content-sync-${{ matrix.lang }}

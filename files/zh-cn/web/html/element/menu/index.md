@@ -49,7 +49,7 @@ slug: Web/HTML/Element/menu
     - `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a [`menu`](/zh-CN/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/zh-CN/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
     - `toolbar`: Indicates the _toolbar_ state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no `<li>` element children, flow content describing available commands. This value is the default if the attribute is missing.
 
-## 使用备注
+## 使用说明
 
 {{HTMLElement("menu")}} 和 {{HTMLElement("ul")}} 元素都呈现了无序列表元素。最主要的区别是，{{HTMLElement("ul")}} 主要是为了展示选项，而 {{HTMLElement("menu")}} 则是为了交互。
 

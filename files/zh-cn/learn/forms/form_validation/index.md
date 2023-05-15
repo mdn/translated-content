@@ -136,7 +136,7 @@ input:valid {
 
 ### 使用正则表达式校验
 
-另一个常用的校验功能是 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
+另一个常用的校验功能是 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
 
 正则表达式相当复杂，我们不打算在本文中详尽地教你。
 
