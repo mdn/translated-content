@@ -94,7 +94,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 設定拖曳圖片
 
-當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/zh-TW/docs/DragDrop/DataTransfer#setDragImage.28.29)
+當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 來指定我們自己的拖曳使用圖片。
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
