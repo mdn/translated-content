@@ -31,9 +31,9 @@ A [área de aprendizado de acessibilidade](/pt-BR/docs/Learn/Accessibility) da M
 
 - [Desenvolvimento Web](/pt-BR/docs/Accessibility/Web_Development)
   - : Uma coleção de artigos destinados a mostrar as principais questões de desenvolvimento web no mundo da acessibilidade.
-- [Introdução à cor e acessibilidade (en-US)](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [Introdução à cor e acessibilidade](/pt-BR/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Este artigo discute nossa percepção de luz e cor, oferecendo a base para o uso de cores em designs acessíveis, e demonstra as melhores práticas para conteúdo visual e legível.
-- [Widgets JavaScript navegáveis pelo teclado (en-US)](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Widgets JavaScript navegáveis pelo teclado](/pt-BR/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Até agora, os desenvolvedores web que desejavam tornar seus widgets baseados em `<div>` e `<span>` acessíveis têm enfrentado a falta de técnicas adequadas. A **acessibilidade por teclado** faz parte dos requisitos mínimos de acessibilidade, dos quais um desenvolvedor deve estar ciente.
 - [ARIA](/pt-BR/docs/Accessibility/ARIA)
   - : Uma coleção de artigos para aprender como usar ARIA e tornar seus documentos HTML mais acessíveis.
