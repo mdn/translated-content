@@ -118,4 +118,4 @@ location.assign(url); // "stop.html"
 
 ## Смотрите также
 
-- [if...else statement](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Инструкция if...else](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
