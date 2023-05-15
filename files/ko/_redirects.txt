@@ -122,7 +122,7 @@
 /ko/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:this_Operator	/ko/docs/Web/JavaScript/Reference/Operators/this
 /ko/docs/Core_JavaScript_1.5_Reference:Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/DOM	/ko/docs/Web/API/Document_Object_Model
-/ko/docs/DOM/Notification.permission	/ko/docs/Web/API/Notification/permission
+/ko/docs/DOM/Notification.permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/DOM/document	/ko/docs/Web/API/Document
 /ko/docs/DOM/document.activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/DOM/document.anchors	/ko/docs/Web/API/Document/anchors
@@ -207,7 +207,7 @@
 /ko/docs/Glossary/전송_제어_프로토콜_(TCP)	/ko/docs/Glossary/TCP
 /ko/docs/Glossary/캐시	/ko/docs/Glossary/Cache
 /ko/docs/HTML	/ko/docs/Web/HTML
-/ko/docs/HTML/Block-level_elements	/ko/docs/Web/HTML/Block-level_elements
+/ko/docs/HTML/Block-level_elements	/ko/docs/Glossary/Block-level_content
 /ko/docs/HTML/Canvas	/ko/docs/Web/API/Canvas_API
 /ko/docs/HTML/Element	/ko/docs/Web/HTML/Element
 /ko/docs/HTML/Element/Video	/ko/docs/Web/HTML/Element/video
@@ -215,12 +215,12 @@
 /ko/docs/HTML/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
 /ko/docs/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/HTML/HTML에서_폼	/ko/docs/Learn/Forms
-/ko/docs/HTML/Inline_elements	/ko/docs/Web/HTML/Inline_elements
+/ko/docs/HTML/Inline_elements	/ko/docs/Glossary/Inline-level_content
 /ko/docs/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/HTML:Canvas	/ko/docs/Web/API/Canvas_API
 /ko/docs/HTML:Element	/ko/docs/Web/HTML/Element
 /ko/docs/HTML:Element:a	/ko/docs/Web/HTML/Element/a
-/ko/docs/HTML:Inline_elements	/ko/docs/Web/HTML/Inline_elements
+/ko/docs/HTML:Inline_elements	/ko/docs/Glossary/Inline-level_content
 /ko/docs/IndexedDB	/ko/docs/Web/API/IndexedDB_API
 /ko/docs/IndexedDB/Using_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ko/docs/Introduction_to_using_XPath_in_JavaScript	/ko/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
@@ -455,6 +455,7 @@
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/DOMRect/fromRect	/ko/docs/Web/API/DOMRect/fromRect_static
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
@@ -510,12 +511,14 @@
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
 /ko/docs/Web/API/NodeFilter	/ko/docs/Web/API/Document/createNodeIterator
-/ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
+/ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission_static
+/ko/docs/Web/API/Notification/permission	/ko/docs/Web/API/Notification/permission_static
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
 /ko/docs/Web/API/PhotoCapabilities	/ko/docs/Web/API/ImageCapture/getPhotoCapabilities
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
 /ko/docs/Web/API/PositionOptions	/ko/docs/Web/API/Geolocation/getCurrentPosition
 /ko/docs/Web/API/RTCConfiguration	/ko/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/ko/docs/Web/API/RTCPeerConnection/generateCertificate	/ko/docs/Web/API/RTCPeerConnection/generateCertificate_static
 /ko/docs/Web/API/RTCPeerConnection/onconnectionstatechange	/ko/docs/Web/API/RTCPeerConnection/connectionstatechange_event
 /ko/docs/Web/API/RTCPeerConnection/ondatachannel	/ko/docs/Web/API/RTCPeerConnection/datachannel_event
 /ko/docs/Web/API/RTCPeerConnection/onicecandidate	/ko/docs/Web/API/RTCPeerConnection/icecandidate_event
@@ -532,6 +535,8 @@
 /ko/docs/Web/API/Screen/onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/ServiceWorker/onstatechange	/ko/docs/Web/API/ServiceWorker/statechange_event
 /ko/docs/Web/API/Streams_API/컨셉	/ko/docs/Web/API/Streams_API/Concepts
+/ko/docs/Web/API/URL/createObjectURL	/ko/docs/Web/API/URL/createObjectURL_static
+/ko/docs/Web/API/URL/revokeObjectURL	/ko/docs/Web/API/URL/revokeObjectURL_static
 /ko/docs/Web/API/USVString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ko/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -584,6 +589,7 @@
 /ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ko/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ko/docs/Web/CSS/CSS_Masks	/ko/docs/Web/CSS/CSS_Masking
 /ko/docs/Web/CSS/CSS_Reference	/ko/docs/Web/CSS/Reference
+/ko/docs/Web/CSS/CSS_Scroll_Snap_Points	/ko/docs/Web/CSS/CSS_Scroll_Snap
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_Basic_User_Interface
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
 /ko/docs/Web/CSS/Common_CSS_Questions	/ko/docs/Learn/CSS/Howto/CSS_FAQ
@@ -663,6 +669,7 @@
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
 /ko/docs/Web/HTML/Applying_color	/ko/docs/Web/CSS/CSS_Colors/Applying_color
+/ko/docs/Web/HTML/Block-level_elements	/ko/docs/Glossary/Block-level_content
 /ko/docs/Web/HTML/Canvas	/ko/docs/Web/API/Canvas_API
 /ko/docs/Web/HTML/Canvas/Manipulating_video_using_canvas	/ko/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /ko/docs/Web/HTML/Canvas/Tutorial	/ko/docs/Web/API/Canvas_API/Tutorial
@@ -692,6 +699,7 @@
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Index	/ko/docs/Web/HTML
+/ko/docs/Web/HTML/Inline_elements	/ko/docs/Glossary/Inline-level_content
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTML/Link_types	/ko/docs/Web/HTML/Attributes/rel
 /ko/docs/Web/HTML/Link_types/preload	/ko/docs/Web/HTML/Attributes/rel/preload
@@ -725,6 +733,10 @@
 /ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
+/ko/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ko/docs/conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal
+/ko/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ko/docs/Web/JavaScript/Reference/Errors/Bad_return
+/ko/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/ko/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
+/ko/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/ko/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ko/docs/Web/JavaScript/Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Array/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -770,6 +782,7 @@
 /ko/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ko/docs/Web/JavaScript/Reference/Strict_mode
 /ko/docs/Web/JavaScript/Shells	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/JavaScript/Tutorials	/ko/docs/Web/JavaScript
+/ko/docs/Web/JavaScript/Typed_arrays	/ko/docs/Web/JavaScript/Guide/Typed_arrays
 /ko/docs/Web/JavaScript/쉘	/ko/docs/Web/JavaScript/JavaScript_technologies_overview
 /ko/docs/Web/Media/Formats/비디오코덱	/ko/docs/Web/Media/Formats/Video_codecs
 /ko/docs/Web/Media/Formats/컨테이너	/ko/docs/Web/Media/Formats/Containers
