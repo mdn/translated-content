@@ -54,7 +54,7 @@ console.log(copy); // { a: 1 }
 
 ### 深拷贝问题
 
-针对[深拷贝](/zh-CN/docs/Glossary/Deep_copy), 需要使用其他办法，因为 `Object.assign()` 只复制属性值。
+针对[深拷贝](/zh-CN/docs/Glossary/Deep_copy)，需要使用其他办法，因为 `Object.assign()` 只复制属性值。
 
 假如源对象是一个对象的引用，它仅仅会复制其引用值。
 
