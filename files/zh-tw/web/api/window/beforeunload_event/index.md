@@ -31,7 +31,7 @@ window.onbeforeunload = function(e) {
 
 ## 注意
 
-当事件返回了一个非空值时，将需要用户确认是否 unload 页面。在大部分浏览器中，事件的返回值将在对话框中显示。在 Firefox 4 及以后，返回值将不会显示给用户。作为替代，Firefox 将会显示"This page is asking you to confirm that you want to leave - data you have entered may not be saved." 请查看{{bug("588292")}}.
+当事件返回了一个非空值时，将需要用户确认是否 unload 页面。在大部分浏览器中，事件的返回值将在对话框中显示。在 Firefox 4 及以后，返回值将不会显示给用户。作为替代，Firefox 将会显示"This page is asking you to confirm that you want to leave - data you have entered may not be saved." 请查看[Firefox bug 588292](https://bugzil.la/588292).
 
 Since 25 May 2011, the HTML5 specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the [HTML5 specification](http://www.w3.org/TR/html5/webappapis.html#user-prompts) for more details.
 

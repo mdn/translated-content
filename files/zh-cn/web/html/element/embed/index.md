@@ -63,7 +63,7 @@ slug: Web/HTML/Element/embed
 
 ## 浏览器兼容性
 
-> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 \<object> 或 \<iframe> 元素。
+> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 [Firefox bug 730768](https://bugzil.la/730768)）。建议使用 \<object> 或 \<iframe> 元素。
 
 {{Compat}}
 

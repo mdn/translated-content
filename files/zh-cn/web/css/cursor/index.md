@@ -147,7 +147,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>no-drop</code></td>
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
-            当前位置不能扔下<br />{{ bug("275173") }}Windows 或 Mac OS X 中
+            当前位置不能扔下<br /><a href="https://bugzil.la/275173">Firefox bug 275173</a>Windows 或 Mac OS X 中
             "no-drop 与 not-allowed 相同".
           </td>
         </tr>
@@ -174,7 +174,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            元素可任意方向滚动（平移）.<br />{{ bug("275174") }}Windows
+            元素可任意方向滚动（平移）.<br /><a href="https://bugzil.la/275174">Firefox bug 275174</a>Windows
             中，"<em>all-scroll</em> 与 <em>move 相同</em>".
           </td>
         </tr>
