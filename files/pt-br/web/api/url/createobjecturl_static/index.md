@@ -1,6 +1,7 @@
 ---
 title: URL.createObjectURL()
-slug: Web/API/URL/createObjectURL
+slug: Web/API/URL/createObjectURL_static
+original_slug: Web/API/URL/createObjectURL
 ---
 
 ---
