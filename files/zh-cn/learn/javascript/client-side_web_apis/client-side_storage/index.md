@@ -320,7 +320,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
         如果系统返回：请求失败，[`request.onerror`](/zh-CN/docs/Web/API/IDBRequest/onerror)将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到 JavaScript 控制台。
 
-        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行一个名为`displayData()`的自定义函数，它把数据库中的数据显示在 [元素 ( 或 HTML 无序列表元素）代表多项的无序列表，即无数值排序项的集合，且它们在列表中的顺序是没有意义的。通常情况下，无序列表项的头部可以是几种形式，如一个点，一个圆形或方形。头部的风格并不是在页面的 HTML 描述定义，但在其相关的 CSS 可以用 list-style-type 属性。">`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)。我们现在运行它，以便在页面加载时显示数据库中已有的注释。您将在稍后看到此定义。
+        如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行了一个名为 `displayData()` 的函数，它在 {{HTMLElement("ul")}} 内显示数据库中的数据。我们现在运行它，以便在页面加载时立即显示已经在数据库中的笔记。你将在后面看到 `displayData()` 的定义。
 
 4. 最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：[`request.onupgradeneeded`](/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：
 
@@ -362,7 +362,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
 现在让我们看一下如何将记录添加到数据库中。这将使用我们页面上的表单完成。
 
-在您之前的事件处理程序下面（但仍在`window.onload`处理程序中），添加以下行，该行设置一个`onsubmit`处理程序，该处理程序运行`addData()`在提交表单时调用的函数（当 [元素表示一个可点击的按钮，可以用在表单或文档其他需要使用简单标准按钮的地方。">`<button>`](/zh-CN/docs/Web/HTML/Element/button)按下提交时导致成功提交表单）：
+在你之前的事件处理程序下面，添加以下一行，它设置了一个 `submit` 事件处理程序，当表单被提交时（当提交 {{htmlelement("button")}} 元素被按下导致表单成功提交），运行一个叫做 `addData()` 的函数：
 
 ```js
 // Create an onsubmit handler so that when the form is submitted the addData() function is run
@@ -408,18 +408,18 @@ function addData(e) {
 }
 ```
 
-这很复杂; 打破它，我们：
+这很复杂；要打破它，我们：
 
-- [`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)在事件对象上运行以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。
-- 创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。请注意，我们不必明确包含一个`id`值 - 正如我们提前详细说明的那样，这是自动填充的。
-- 使用该方法打开对象存储的`readwrite`事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。`notes`[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)
-- 使用该[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)方法访问对象库，将结果保存在 `objectStore` 变量中。
-- 使用添加新记录到数据库[`IDBObjectStore.add()`](/zh-CN/docs/Web/API/IDBObjectStore/add)。这创建了一个请求对象，与我们之前看到的方式相同。
-- 在生命周期的关键点添加一堆事件处理程序`request`以及`transaction`运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们`displayData()`再次运行该功能以更新页面上的注释显示。
+- 在事件对象上运行 {{domxref("Event.preventDefault()")}} 以停止以传统方式实际提交的表单（这将导致页面刷新并破坏体验）。
+- 创建一个表示要输入数据库的记录的对象，并使用表单输入中的值填充它。请注意，我们不必明确包含一个 `id` 值——正如我们提前详细说明的那样，这是自动填充的。
+- 使用 {{domxref("IDBDatabase.transaction()")}} 方法打开 `notes` 对象存储的 `readwrite` 事务。此事务对象允许我们访问对象存储，以便我们可以对其执行某些操作，例如添加新记录。
+- 使用 {{domxref("IDBTransaction.objectStore()")}} 方法访问对象库，将结果保存在 `objectStore` 变量中。
+- 使用 {{domxref("IDBObjectStore.add()")}} 添加新记录到数据库。这创建了一个请求对象，与我们之前看到的方式相同。
+- 在生命周期的关键点为 `request` 以及 `transaction` 对象添加事件处理程序以运行代码。请求成功后，我们会清除表单输入，以便输入下一个注释。交易完成后，我们 `displayData()` 再次运行该功能以更新页面上的注释显示。
 
 ### 显示数据
 
-我们已经`displayData()`在代码中引用了两次，所以我们可能更好地定义它。将其添加到您的代码中，位于上一个函数定义之下：
+我们已经在代码中引用了 `displayData()` 两次，所以我们可能更好地定义它。将其添加到你的代码中，位于上一个函数定义之下：
 
 ```js
 // Define the displayData() function
