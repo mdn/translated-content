@@ -53,7 +53,7 @@ Permissions-Policy: <directive> <allowlist>
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
   - : 控制是否允许当前文档使用 {{domxref('Element.requestFullScreen()')}}。当这种规则被禁用时，返回的 {{jsxref('Promise')}} 会拒绝并抛出 {{jsxref('TypeError')}}。
 - {{httpheader('Permissions-Policy/geolocation','geolocation')}}
-  - : 控制是否允许当前文档使用 {{domxref('Geolocation')}} 接口。当这种规则被禁用时，调用 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} 和 {{domxref('Geolocation.watchPosition','watchPosition()')}} 会返回包含 `PERMISSION_DENIED` 的  {{domxref('PositionError')}}。
+  - : 控制是否允许当前文档使用 {{domxref('Geolocation')}} 接口。当这种规则被禁用时，调用 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} 和 {{domxref('Geolocation.watchPosition','watchPosition()')}} 会返回包含 `PERMISSION_DENIED` 的 {{domxref('PositionError')}}。
 - {{httpheader('Permissions-Policy/microphone','microphone')}}
   - : 控制是否允许当前文档使用音频输入设备。当这种规则被禁用时，{{domxref("MediaDevices.getUserMedia()")}} 返回的 {{jsxref("Promise")}} 会拒绝并抛出错误 `NotAllowedError`。
 - {{httpheader('Permissions-Policy/midi', 'midi')}}
