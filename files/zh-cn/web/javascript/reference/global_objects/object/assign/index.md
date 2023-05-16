@@ -18,19 +18,19 @@ Object.assign(target, ...sources)
 ### 参数
 
 - `target`
-  - : 目标对象，接收源对象属性的对象，也是修改后的返回值。
+  - : 需要应用源对象属性的目标对象，修改后将作为返回值。
 - `sources`
-  - : 源对象，包含将被合并的属性。
+  - : 一个或多个包含要应用的属性的源对象。
 
 ### 返回值
 
-目标对象。
+修改后的目标对象。
 
 ## 描述
 
 如果目标对象与源对象具有相同的{{jsxref("Object/keys", "键（属性名）", "", 1)}}，则目标对象中的属性将被源对象中的属性覆盖，后面的源对象的属性将类似地覆盖前面的源对象的同名属性。
 
-`Object.assign` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不仅仅是复制或定义新的属性。如果要合并的源对象包含 getter，这可能使其不适合将新属性合并到原型中。
+`Object.assign()` 方法只会拷贝源对象*可枚举的*的*自有属性*到目标对象。该方法在源对象上使用 `[[Get]]`，在目标对象上使用 `[[Set]]`，因此它会调用 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。故它对属性进行*赋值*，而不仅仅是复制或定义新的属性。如果要合并的源对象包含 getter，这可能使其不适合将新属性合并到原型中。
 
 如果要将属性定义（包括它们的可枚举性）复制到原型中，则应改用 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}} 方法。
 
@@ -38,7 +38,7 @@ Object.assign(target, ...sources)
 
 如果赋值期间出错，例如如果属性不可写，则会抛出 {{jsxref("TypeError")}}；如果在抛出异常之前已经添加了一些属性，则这些属性会被保留，而 `target` 对象也会被修改。
 
-> **备注：** `Object.assign()` 不会在 `source` 对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
+> **备注：** `Object.assign()` 不会在源对象值为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时抛出错误。
 
 ## 示例
 
