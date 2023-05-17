@@ -502,7 +502,6 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
   > 3. After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
 
   下面是为上述清单写结尾解释的例子：
-  
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
   请注意编号列表中的项目如何像简短的段落一样阅读。因为编号列表通常用于教学目的或引导人们完成一个有序的程序，所以要确保每个项目都有重点：每个步骤有一个编号项目。
@@ -575,7 +574,6 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
   - **错误**: "A New Method for Creating JavaScript Rollovers"
 
   我们还有很多旧的页面是在这条规范确立之前就已经发布了的。所以只要你愿意，你随时可以更新它们的标题。我们也正在逐步完善它们。
-  
 - **通用原则：** 决定你要记录什么，以及你将如何组织这些内容，是写作的第一步。写一个目录可以帮助你决定如何安排信息。先介绍简单的概念，然后再介绍更复杂和高级的概念。先讲概念性的信息，然后再讲面向行动的主题。
 
   在为页面和章节或分节撰写标题时，请牢记以下准则：
