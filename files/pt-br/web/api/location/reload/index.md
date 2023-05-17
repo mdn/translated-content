@@ -1,42 +1,46 @@
 ---
-title: Location.reload()
+title: "location: reload() method"
+short-title: reload()
 slug: Web/API/Location/reload
+page-type: web-api-instance-method
+browser-compat: api.Location.reload
 ---
 
 {{ APIRef("HTML DOM") }}
 
-O método **`Location.reload()`** recarrega a URL atual. Seu unico parâmetro opcional é um {{domxref("Boolean")}}, que, quando `true`, faz com que a página sempre seja recarregada do servidor. Se ele é `false` ou não estiver especificado, o navegador pode carregar ela do cache.
+O método **`location.reload()`** recarrega a URL atual, como o botão Atualizar.
 
-Caso não seja possível recarregar por questões de violação de segurança, uma {{domxref("DOMException")}} do tipo `SECURITY_ERROR` é jogada. Isso acontece se a origem do script que chama o método é diferente da origem da página originalmente descrita pelo objeto {{domxref("Location")}}, usualmente quando o script é hosteado em um domínio diferente.
+O recarregamento pode ser bloqueado e um `SECURITY_ERROR` {{domxref("DOMException")}} lançado. Isso acontece se a {{Glossary("origin")}} do chamado do script `location.reload()` diferir da origem da página que possui o objeto {{domxref("Location")}}. Veja [Política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) para mais informações.
 
 ## Sintaxe
 
+```js-nolint
+reload()
 ```
-object.reload(forcedReload);
-```
 
-### Parametros
+### Parâmetros
 
-- _forcedReload_ {{optional_inline}}
-  - : É uma flag {{domxref("Boolean")}}, que quando `true`, faz com que a página sempre seja recarregada do servidor, se é `false` ou não for definido, o navegador pode recarregar a página do cache.
+Nenhum.
 
-## Exemplos
+> **Nota:** O Firefox suporta [o parâmetro boleano `forceGet`](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#544) fora do padrão para `location.reload()`, para dizer ao Firefox para contornar seu cache e forçar o recarregamento do documento atual. No entanto, em todos os outros navegadores, qualquer parâmetro que você especificar em uma chamada `location.reload()` será ignorado e não terá efeito algum.
 
-```js
-// Recarrega a página atual sem usar o cache
-document.location.reload(true);
-```
+Você pode, no entanto, encontrar instâncias de `location.reload(true)` em código existente que foi escrito com suposição de que o recarregamento forçado ocorre em todos os navegadores. A busca no GitHub por "`location.reload(true)`" retorna [várias centenas de milhares de resultados](https://github.com/search?q=%22location.reload%28true%29%22&type=code). Portando, há muito código existente que o possui.
+
+A história disso é: alguma versão do Netscape Navigator adicionou suporte para ele, que aparentemente acabou sendo escolhido no Firefox. E, a certa altura, o W3C Web APIs Working Group [abordou um problema](https://www.w3.org/2005/06/tracker/webapi/issues/69) para considerar adicioná-lo à especificação para `location.reload()`. No entanto, nunca foi realmente adicionado.
+
+Portanto o parâmetro boleano não faz parte da especificação atual para `location.reload()` — e de fato _nunca_ fez parte de nenhuma especificação para `location.reload()` já publicada.
+
+### Valor de retorno
+
+Nenhum ({{jsxref("undefined")}}).
 
 ## Especificações
 
-| Specification                                                                                                    | Status                           | Comment                                              |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML WHATWG')}} | Nenhuma mudança do {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}} | {{Spec2('HTML5 W3C')}}     | Definição inicial.                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Location.reload")}}
+{{Compat}}
 
 ## Veja também
 
