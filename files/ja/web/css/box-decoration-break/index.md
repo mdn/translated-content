@@ -92,13 +92,13 @@ box-decoration-break: clone;
 
 ![box-decoration-break:clone と例で与えられたスタイルでスタイル付けされたインライン要素のレンダリングの画面ショット](box-decoration-break-inline-clone.png)
 
-ブラウザーで[上記の 2 つのインラインの例を試してみる](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)ことができます。
+ブラウザーで[上記の 2 つのインラインの例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)ことができます。
 
 これはインライン要素に大きな `border-radius` の値を使用した例です。二番目の `"iM"` には、 `"i"` と `"M"` の間に改行があります。それに対して、最初の `"iM"` には改行がありません。なお、２つの断片の描画結果を水平に並べると、断片化されていない描画結果と同じになります。
 
 ![2 つ目のインライン要素の例のレンダリングのスクリーンショット。](box-decoration-break-slice-inline-2.png)
 
-ブラウザーで[上の例を試してみる](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)ことができます。
+ブラウザーで[上の例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)ことができます。
 
 ### ブロックボックスの断片化
 
@@ -118,7 +118,7 @@ box-decoration-break: clone;
 
 それぞれの断片に同じ境界線、ボックスの影、背景が複製されることに注意してください。
 
-ブラウザーで[上の例を試してみる](https://media.prod.mdn.mozit.cloud/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)ことができます。
+ブラウザーで[上の例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)ことができます。
 
 ## 仕様書
 

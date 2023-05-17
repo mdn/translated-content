@@ -25,7 +25,7 @@ element(id)
 
 ## 例
 
-この例を[ライブで見る](https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html)には、`-moz-element()` に対応している Firefox が必要です。
+この例を[ライブで見る](https://mdn.dev/archives/media/samples/cssref/moz-element.html)には、`-moz-element()` に対応している Firefox が必要です。
 
 <h3 id="A_somewhat_realistic_example">いくらか現実的な例</h3>
 
