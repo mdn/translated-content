@@ -350,6 +350,10 @@
     "modified": "2019-03-23T22:56:58.228Z",
     "contributors": ["loella16", "vanz", "Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2019-06-18T12:22:20.386Z",
+    "contributors": ["SphinxKnight", "KhalilSnaake", "Bat41", "wakka27"]
+  },
   "Glossary/Block/CSS": {
     "modified": "2019-03-23T22:56:52.690Z",
     "contributors": ["loella16", "Goofy", "Toumitoun"]
@@ -1101,6 +1105,10 @@
   "Glossary/Inheritance": {
     "modified": "2019-03-18T21:15:48.792Z",
     "contributors": ["loella16", "xdelatour"]
+  },
+  "Glossary/Inline-level_content": {
+    "modified": "2019-04-06T13:04:18.081Z",
+    "contributors": ["SphinxKnight", "KhalilSnaake", "numahell", "wakka27"]
   },
   "Glossary/Input_method_editor": {
     "modified": "2020-07-20T14:35:12.540Z",
@@ -19664,10 +19672,6 @@
     "modified": "2020-12-02T04:01:31.109Z",
     "contributors": ["SphinxKnight", "roxaneprovost"]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2019-06-18T12:22:20.386Z",
-    "contributors": ["SphinxKnight", "KhalilSnaake", "Bat41", "wakka27"]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-04-04T15:03:02.054Z",
     "contributors": ["SphinxKnight", "Lotfire", "tregagnon"]
@@ -20934,10 +20938,6 @@
     "modified": "2020-10-15T21:33:34.133Z",
     "contributors": ["SphinxKnight", "Goofy", "guillaumev"]
   },
-  "Web/HTML/Inline_elements": {
-    "modified": "2019-04-06T13:04:18.081Z",
-    "contributors": ["SphinxKnight", "KhalilSnaake", "numahell", "wakka27"]
-  },
   "Web/HTML/Microdata": {
     "modified": "2019-07-30T02:49:00.444Z",
     "contributors": ["SphinxKnight", "Emmanuel.KWENE"]
@@ -22091,10 +22091,6 @@
     "modified": "2020-03-12T19:49:05.025Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes": {
-    "modified": "2020-03-12T19:49:07.596Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Guide/Text_formatting": {
     "modified": "2020-03-12T19:40:53.485Z",
     "contributors": [
@@ -22458,10 +22454,6 @@
     "modified": "2020-03-12T19:46:18.632Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/JavaScript/Reference/Errors/Not_a_codepoint": {
-    "modified": "2020-03-12T19:43:19.797Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/JavaScript/Reference/Errors/Not_a_constructor": {
     "modified": "2020-03-12T19:44:02.243Z",
     "contributors": ["SphinxKnight"]
@@ -22469,6 +22461,10 @@
   "Web/JavaScript/Reference/Errors/Not_a_function": {
     "modified": "2020-03-12T19:43:45.379Z",
     "contributors": ["SphinxKnight", "JNa0"]
+  },
+  "Web/JavaScript/Reference/Errors/Not_a_valid_code_point": {
+    "modified": "2020-03-12T19:43:19.797Z",
+    "contributors": ["SphinxKnight"]
   },
   "Web/JavaScript/Reference/Errors/Not_defined": {
     "modified": "2020-03-12T19:43:40.640Z",
@@ -25954,6 +25950,10 @@
   },
   "Web/JavaScript/Reference/Operators/yield*": {
     "modified": "2020-10-15T21:32:04.935Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape": {
+    "modified": "2020-03-12T19:49:07.596Z",
     "contributors": ["SphinxKnight"]
   },
   "Web/JavaScript/Reference/Statements": {

@@ -1,6 +1,6 @@
 ---
 title: Éléments de bloc
-slug: Web/HTML/Block-level_elements
+slug: Glossary/Block-level_content
 tags:
   - Beginner
   - Development
@@ -9,7 +9,7 @@ tags:
   - HTML5
   - Web
 translation_of: Web/HTML/Block-level_elements
-original_slug: Web/HTML/Éléments_en_bloc
+original_slug: Web/HTML/Block-level_elements
 ---
 
 Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type "block" ou de type "inline". Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans la [disposition en flux](/fr/docs/Web/CSS/CSS_Flow_Layout). Un élément de type bloc occupe tout l'espace horizontal de son élément parent (conteneur), et un espace vertical égal à la hauteur de son contenu, créant ainsi un bloc. Dans cet article, nous examinerons les éléments HTML de type bloc et comment ils diffèrent des [éléments en ligne](/fr/docs/Web/HTML/Inline_elements).
