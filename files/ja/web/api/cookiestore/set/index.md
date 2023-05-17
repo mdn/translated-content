@@ -1,17 +1,19 @@
 ---
-title: CookieStore.set()
+title: "CookieStore: set() メソッド"
 slug: Web/API/CookieStore/set
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-{{domxref("CookieStore")}} インターフェイスの **`getAll()`** メソッドは、渡された名前またはオプションに一致する Cookie のリストを返します。引数を何も渡さなければ、現在のコンテキストのすべての Cookie を返します。
+**`set()`** は {{domxref("CookieStore")}} インターフェイスのメソッドで、渡された名前またはオプションオブジェクトに一致する Cookie のリストを返します。
 
 ## 構文
 
-```js
-var promise = cookieStore.set(name,value);
-var promise = cookieStore.set(options);
+```js-nolint
+set(name, value)
+set(options)
 ```
 
 ### 引数
@@ -19,35 +21,39 @@ var promise = cookieStore.set(options);
 このメソッドは、以下のいずれかが必要です。
 
 - `name`
-  - : Cookie の名前が入っている {{domxref("USVString")}} です。
+  - : Cookie の名前の文字列です。
 - `value`
-  - : Cookie の値が入っている {{domxref("USVString")}} です。
-- オプション
+  - : Cookie の値の文字列です。
+
+または
+
+- `options`
 
   - : オブジェクトは次のものを含みます。
 
+    - `domain` {{Optional_Inline}}
+      - : Cookie のドメインが入った文字列です。
+    - `expires` {{Optional_Inline}}
+      - : ミリ秒単位の [Unix 時間](/ja/docs/Glossary/Unix_time)によるタイムスタンプで、Cookie の有効期限が入ります。
     - `name`
-      - : Cookie の名前が入っている {{domxref("USVString")}} です。
-    - `value`
-      - : Cookie の値が入っている {{domxref("USVString")}} です。
-    - `expires`{{Optional_Inline}}
-      - : Cookie の有効期限を含む {{domxref("DOMTimeStamp")}} です。
-    - `domain`{{Optional_Inline}}
-      - : Cookie のドメインを含む {{domxref("USVString")}} です。
-    - `path`{{Optional_Inline}}
-      - : Cookie のパスを含む {{domxref("USVString")}} です。
-    - `sameSite`{{Optional_Inline}}
+      - : Cookie の名前が入った文字列です。
+    - `partitioned` {{Optional_Inline}}
+      - : 論理値で、既定値は `false` です。`true` に設定すると、設定された Cookie はパーティション化された Cookie になります。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Partitioned_cookies) を参照してください。
+    - `path` {{Optional_Inline}}
+      - : Cookie のパスの入った文字列です。
+    - `sameSite` {{Optional_Inline}}
 
-      - : 以下の [SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) のいずれかの値です。
+      - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) のいずれかの値です。
 
         - `"strict"`
           - : Cookie は、ファーストパーティのコンテキストでのみ送信され、サードパーティのウェブサイトによるリクエストと一緒に送信されることはありません
         - `"lax"`
-          - : Cookie は、通常のクロスサイト・サブクエスト（例えば、画像やフレームをサードパーティのサイトにロードするため）には送信されません。しかし、ユーザーが元のサイト内を移動しているとき（すなわち、リンクをたどっているとき）には送信されます。
+          - : Cookie は、通常のクロスサイトサブクエスト（例えば、画像やフレームをサードパーティのサイトにロードするため）には送信されません。しかし、ユーザーが元のサイト内を移動しているとき（すなわち、リンクをたどっているとき）には送信されます。
         - `"none"`
           - : Cookie は、すべてのコンテキストで送信されます。
 
-        > **メモ:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
+    - `value`
+      - : Cookie の値が入った文字列です。
 
 ### 返値
 
@@ -56,9 +62,9 @@ Cookie の設定が完了すると {{jsxref("Undefined")}} に解決される {{
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : 与えられた値での Cookie の設定に失敗した場合にスローされます。
-- {{domxref("DOMException")}} `SecurityError`
-  - : オリジンが URL に {{glossary("serialize")}} されない場合にスローされます。
+  - : 与えられた値での Cookie の設定に失敗した場合に発生します。
+- `SecurityError` の {{domxref("DOMException")}}
+  - : オリジンが URL に {{glossary("serialize")}} されない場合に発生します。
 
 ## 例
 
@@ -70,7 +76,7 @@ cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
-  domain: "example.com"
+  domain: "example.com",
 });
 ```
 
