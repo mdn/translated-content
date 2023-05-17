@@ -19,8 +19,7 @@ html,body,svg { height:100% }
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- 同じ多角形で線を持ち塗りつぶされない例 -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 
