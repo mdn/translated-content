@@ -40,8 +40,6 @@ const n = 3;
 n.constructor === Number; // true
 ```
 
-Note that `constructor` usually comes from the constructor's [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property. If you have a longer prototype chain, you can usually expect every object in the chain to have a `constructor` property.
-
 请注意，`constructor` 属性通常来自构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。如果你有一个更长的原型链，通常可以期望链中的每个对象都有一个 `constructor` 属性。
 
 ```js
