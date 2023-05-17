@@ -10,9 +10,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ## 语法
 
 ```js-nolint
+new Array()
+new Array(element0)
+new Array(element0, element1)
 new Array(element0, element1, /* … ,*/ elementN)
 new Array(arrayLength)
 
+Array()
+Array(element0)
+Array(element0, element1)
 Array(element0, element1, /* … ,*/ elementN)
 Array(arrayLength)
 ```
@@ -38,10 +44,10 @@ Array(arrayLength)
 可以通过使用[数组字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数组字面量)创建数组：
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ### 单个参数的 Array 构造函数
@@ -49,21 +55,30 @@ console.log(fruits[0]);     // "Apple"
 可以通过单个数字参数的构造函数创建数组，数组的长度为传入的参数，该数组不包含任何实际的元素。
 
 ```js
-const fruits = new Array(2);
+const arrayEmpty = new Array(2);
 
-console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(arrayEmpty.length); // 2
+console.log(arrayEmpty[0]); // undefined；实际上是一个空槽
+console.log(0 in arrayEmpty); // false
+console.log(1 in arrayEmpty); // false
+```
+
+```js
+const arrayOfOne = new Array("2"); // 这里是字符串 "2" 而不是数字 2
+
+console.log(arrayOfOne.length); // 1
+console.log(arrayOfOne[0]); // "2"
 ```
 
 ### 多个参数的 Array 构造函数
 
-如果向构造函数传入多个参数，则会创建一个包含所有传入参数的新数组
+如果向构造函数传入多个参数，则会创建一个包含给定元素的新 {{jsxref("Array")}}。
 
 ```js
-let fruits = new Array('Apple', 'Banana');
+const fruits = new Array("Apple", "Banana");
 
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ## 规范
@@ -76,4 +91,5 @@ console.log(fruits[0]);     // "Apple"
 
 ## 参见
 
-- {{jsxref("Array")}} 类
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}

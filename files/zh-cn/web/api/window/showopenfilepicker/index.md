@@ -1,5 +1,5 @@
 ---
-title: Window.showOpenFilePicker()
+title: Window：showOpenFilePicker() 方法
 slug: Web/API/Window/showOpenFilePicker
 ---
 
@@ -22,7 +22,7 @@ showOpenFilePicker()
     - `multiple`
       - : 布尔值，默认为 `false`。设为 `true` 时允许用户选择多个文件。
     - `excludeAcceptAllOption`
-      - : 布尔值，默认为 `false`。默认情况下，文件选择界面带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 `true` 以使该过滤选项不可用。
+      - : 布尔值，默认为 `false`。默认情况下，文件选择器带有一个允许用户选择所有类型文件的过滤选项（展开于文件类型选项中）。设置此选项为 `true` 以使该过滤选项不可用。
     - `types`
 
       - : 表示允许选择的文件类型的 {{jsxref('Array')}} 数组，其中的元素为包含以下选项的对象：
@@ -39,11 +39,11 @@ showOpenFilePicker()
 ### 异常
 
 - `AbortError`
-  - : 当用户直接关闭了选择界面或选择的文件是不宜暴露给网站的敏感文件时将会抛出 AbortError。
+  - : 当用户直接关闭了文件选择器或选择的文件是不宜暴露给网站的敏感文件时将会抛出 AbortError。
 
 ## 安全性
 
-要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该功能正常运行。
+要求发生[临时性用户活动](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素进行交互才能使该特性正常运行。
 
 ## 示例
 
@@ -64,17 +64,17 @@ const pickerOpts = {
 };
 ```
 
-接下来我们创建一个异步函数来显示文件选择界面并返回选择的文件。
+接下来我们创建一个异步函数来显示文件选择器并返回选择的文件。
 
 ```js
 // 创建用于存放文件句柄的变量。
 let fileHandle;
 
 async function getFile() {
-  // 打开文件选择界面，解构返回的数组中的第一个元素
+  // 打开文件选择器，解构返回的数组中的第一个元素
   [fileHandle] = await window.showOpenFilePicker(pickerOpts);
 
-  // 操作文件句柄的后续代码
+  // 操作 fileHandle 的后续代码
 }
 ```
 

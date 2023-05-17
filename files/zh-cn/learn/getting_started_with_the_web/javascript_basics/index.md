@@ -121,7 +121,7 @@ myVariable = '韩梅梅';
     <tr>
       <th scope="row">{{Glossary("String")}}</th>
       <td>
-        字符串（一串文本）：字符串的值必须用引号（单双均可，必须成对）扩起来。
+        字符串（一串文本）：字符串的值必须用引号（单双均可，必须成对）括起来。
       </td>
       <td><code>let myVariable = '李雷';</code></td>
     </tr>
