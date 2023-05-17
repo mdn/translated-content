@@ -66,7 +66,7 @@ var module = {
 module.getX(); // 81
 
 var getX = module.getX;
-getX(); // 9, поскольку в этом случае this ссылается на глобальный объект
+getX(); // undefined, поскольку в этом случае this ссылается на глобальный объект
 
 // создаём новую функцию с this, привязанным к module
 var boundGetX = getX.bind(module);
