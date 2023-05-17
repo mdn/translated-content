@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 
 쉐이더 프로그래밍과 유저 인터페이스를 정점 속성을 이용하여 합치기.
 
-{{EmbedLiveSample("hello-vertex-attributes-source",660,425)}}
+{{EmbedLiveSample("hello_world_program_in_glsl",660,425)}}
 
 ### Hello World program in GLSL
 
@@ -166,6 +166,6 @@ function getRenderingContext() {
 })();
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-vertex-attributes)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}

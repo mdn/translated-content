@@ -17,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

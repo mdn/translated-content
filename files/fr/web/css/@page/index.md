@@ -10,7 +10,7 @@ translation_of: Web/CSS/@page
 
 {{CSSRef}}
 
-La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CSS lorsqu'on imprime un document. La règle `@page` ne permet par de modifier toutes les propriétés mais uniquement celles qui portent sur les marges, les lignes orphelines et veuves ainsi que les sauts de page du document. Si on utilise cette règle @ pour modifier une autre propriété, ce changement sera ignoré.
+La règle @ **`@page`** est utilisée afin de modifier certaines propriétés CSS lorsqu'on imprime un document. La règle `@page` ne permet pas de modifier toutes les propriétés mais uniquement celles qui portent sur les marges, les lignes orphelines et veuves ainsi que les sauts de page du document. Si on utilise cette règle @ pour modifier une autre propriété, ce changement sera ignoré.
 
 ```css
 @page {

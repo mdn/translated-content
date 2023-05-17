@@ -104,9 +104,12 @@ logIterable(123);
 ## 参见
 
 - [`core-js` 中 `Array.prototype[@@iterator]` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.values()")}}
+- [`TypedArray.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`String.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- {{jsxref("Symbol.iterator")}}
+- [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

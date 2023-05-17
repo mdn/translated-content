@@ -45,8 +45,8 @@ original_slug: Learn/Forms/The_native_form_widgets
 
 すべてのテキストフィールドに共通する動作があります。
 
-- {{htmlattrxref("readonly","input")}} （ユーザーは入力値が変更できないが、他のフォームデータとともに送信される）あるいは {{htmlattrxref("disabled","input")}} （入力値が変更できず、他のフォームデータとともに送られない）とすることができます。
-- {{htmlattrxref("placeholder","input")}} を設定することができます。これは、ボックスの目的を簡単に説明する、ボックス内に表示されるテキストです。
+- [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) （ユーザーは入力値が変更できないが、他のフォームデータとともに送信される）あるいは [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) （入力値が変更できず、他のフォームデータとともに送られない）とすることができます。
+- [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) を設定することができます。これは、ボックスの目的を簡単に説明する、ボックス内に表示されるテキストです。
 - [`size`](/ja/docs/Web/HTML/Attributes/size) （ボックスの物理的な大きさ）や [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) （ボックスに入力できる最大文字数）による制限が可能です。
 - ブラウザーが対応していれば、スペルチェックの便宜を図ることができます ([`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)属性を用いて)。
 
@@ -54,7 +54,7 @@ original_slug: Learn/Forms/The_native_form_widgets
 
 ### 単一行のテキストフィールド
 
-単一行のテキストフィールドを生成するには、 {{HTMLElement("input")}} 要素で {{htmlattrxref("type","input")}} 属性値を `text` に設定するか、 {{htmlattrxref("type","input")}} 属性を省略するかします (`text` が既定値です)。この属性の `text` の値は、 {{htmlattrxref("type","input")}} 属性に指定した値をブラウザーに認識できない場合 (たとえば `type="color"` を指定した場合で、ブラウザーがネイティブの色ピッカーに対応していない場合) の代替値になります。
+単一行のテキストフィールドを生成するには、 {{HTMLElement("input")}} 要素で [`type`](/ja/docs/Web/HTML/Element/input#type) 属性値を `text` に設定するか、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を省略するかします (`text` が既定値です)。この属性の `text` の値は、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に指定した値をブラウザーに認識できない場合 (たとえば `type="color"` を指定した場合で、ブラウザーがネイティブの色ピッカーに対応していない場合) の代替値になります。
 
 > **メモ:** GitHub の [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) に、すべての単一行テキストフィールド型の例があります ([ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html))。
 
@@ -70,7 +70,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ![Firefox、Safari、Chrome、Edge における、テキスト入力の disabled 属性と既定の :focus スタイルを表示したスクリーンショットです。](disabled.png)
 
-> **メモ:** 特定の検証制約を強制する {{htmlattrxref("type","input")}} 属性の値、例えば color、email、url 入力型については、次の記事の [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で説明します。
+> **メモ:** 特定の検証制約を強制する [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値、例えば color、email、url 入力型については、次の記事の [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で説明します。
 
 #### パスワードフィールド
 
@@ -148,13 +148,13 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 ### ラジオボタン
 
-ラジオボタンは、 {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性を `radio` に設定して生成します。
+ラジオボタンは、 {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `radio` に設定して生成します。
 
 ```html
 <input type="radio" id="soup" name="meal" checked>
 ```
 
-複数のラジオボタンを結びつけることができます。 {{htmlattrxref("name","input")}} 属性の値が同じであれば、同じグループのボタンであるとみなされます。グループ内のボタンは同時に一つしかチェックできません。つまり、あるボタンがチェックされると、他のボタンは自動的にチェックが外されます。フォームが送信される際には、チェックされたラジオボタンの値のみが送信されます。一つもチェックされていない場合、ラジオボタンのグループ全体が未知の状態であるとみなされ、値はフォームと共に送信されません。同じ名前のグループのラジオボタンの一つがチェックされると、ユーザーはフォームをリセットせずに、すべてのボタンのチェックを外すことはできません。
+複数のラジオボタンを結びつけることができます。 [`name`](/ja/docs/Web/HTML/Element/input#name) 属性の値が同じであれば、同じグループのボタンであるとみなされます。グループ内のボタンは同時に一つしかチェックできません。つまり、あるボタンがチェックされると、他のボタンは自動的にチェックが外されます。フォームが送信される際には、チェックされたラジオボタンの値のみが送信されます。一つもチェックされていない場合、ラジオボタンのグループ全体が未知の状態であるとみなされ、値はフォームと共に送信されません。同じ名前のグループのラジオボタンの一つがチェックされると、ユーザーはフォームをリセットせずに、すべてのボタンのチェックを外すことはできません。
 
 ```html
 <fieldset>
@@ -239,7 +239,7 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 **画像ボタン**コントロールは {{HTMLElement("img")}} 要素とまったく同じように表示されますが、ユーザーがクリックすると送信ボタン（前述）のように動作します。
 
-画像ボタンは、 {{HTMLElement("input")}} 要素の{{htmlattrxref("type","input")}} 属性を `image` に設定することで作成します。この要素は {{HTMLElement("img")}} 要素とまったく同じ属性に対応しており、さらに他のフォームボタンが対応している属性にもすべて対応しています。
+画像ボタンは、 {{HTMLElement("input")}} 要素の[`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `image` に設定することで作成します。この要素は {{HTMLElement("img")}} 要素とまったく同じ属性に対応しており、さらに他のフォームボタンが対応している属性にもすべて対応しています。
 
 ```html
 <input type="image" alt="Click me!" src="my-img.png" width="80" height="30">
@@ -247,8 +247,8 @@ _下記のスクリーンショットは macOS での Firefox 71 と Safari、�
 
 画像ボタンをフォームの送信に使用する場合、このウィジェットは自身の値を送信しませんが、代わりに画像上でクリックした位置の X 座標と Y 座標を送信します (座標は画像に対して相対的、つまり画像の左上隅が座標 (0, 0) になります)。座標は 2 つのキーと値の組として送信されます。
 
-- X 値のキーは {{htmlattrxref("name","input")}} 属性の値の後ろに文字列 "_.x_" をつけたもの、
-- Y 値のキーは {{htmlattrxref("name","input")}} 属性の値の後ろに文字列 "_.y_" をつけたものです。
+- X 値のキーは [`name`](/ja/docs/Web/HTML/Element/input#name) 属性の値の後ろに文字列 "_.x_" をつけたもの、
+- Y 値のキーは [`name`](/ja/docs/Web/HTML/Element/input#name) 属性の値の後ろに文字列 "_.y_" をつけたものです。
 
 サンプルをご覧ください。フォームの画像上の座標 (123, 456) でクリックすると、 `get` メソッド経由で送信されて、以下のような値の追加された URL が送信されます。
 
@@ -262,7 +262,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 初期の HTML にあった `<input>` 型がもう一つあります。ファイル入力型です。フォームで、ファイルをサーバーに送信することができます (この具体的な操作については、[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)の記事でも詳しく触れます)。ファイルピッカーウィジェットで、ユーザーは送信するファイルを 1 つ以上選択することができます。
 
-[ファイルピッカーウィジェット](/ja/docs/Web/HTML/Element/input/file)を作成するには、 {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性を `file` に設定します。 {{htmlattrxref("accept","input")}} 属性を使用して、受け入れるファイルの種類を制限することができます。加えて、ユーザーが複数のファイルを選択できるようにしたい場合は、 {{htmlattrxref("multiple","input")}} 属性を付加します。
+[ファイルピッカーウィジェット](/ja/docs/Web/HTML/Element/input/file)を作成するには、 {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `file` に設定します。 [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を使用して、受け入れるファイルの種類を制限することができます。加えて、ユーザーが複数のファイルを選択できるようにしたい場合は、 [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性を付加します。
 
 #### 例
 

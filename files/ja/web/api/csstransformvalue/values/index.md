@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-**`CSSTransformValue.values()`** は、 CSSTransformValue オブジェクトの各位置に対応する値を格納した新しい _配列反復子_ オブジェクトを返します。
+**`CSSTransformValue.values()`** は、 CSSTransformValue オブジェクトの各位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
 
 ## 構文
 

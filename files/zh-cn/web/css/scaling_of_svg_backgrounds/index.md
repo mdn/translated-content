@@ -3,7 +3,9 @@ title: SVG 背景缩放
 slug: Web/CSS/Scaling_of_SVG_backgrounds
 ---
 
-{{cssref}}SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
+{{CSSRef}}
+
+SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
 
 ## 规则概要
 

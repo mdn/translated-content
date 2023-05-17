@@ -1,6 +1,6 @@
 ---
 title: Une réintroduction à JavaScript
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 tags:
   - CodingScripting
   - Guide

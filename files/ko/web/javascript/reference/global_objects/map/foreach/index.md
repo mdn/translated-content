@@ -2,7 +2,7 @@
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
@@ -14,36 +14,22 @@ l10n:
 ## 구문
 
 ```js-nolint
-// Arrow function
-forEach(() => { /* … */ } )
-forEach((value) => { /* … */ } )
-forEach((value, key) => { /* … */ } )
-forEach((value, key, map) => { /* … */ } )
-
-// Callback function
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function() { /* … */ })
-forEach(function(value) { /* … */ })
-forEach(function(value, key) { /* … */ })
-forEach(function(value, key, map) { /* … */ })
-forEach(function(value, key, map) { /* … */ }, thisArg)
 ```
 
 ### 매개변수
 
 - `callbackFn`
-  - : 맵의 각 항목에 대해 실행할 함수입니다. 다음 인자가 필요합니다.
-    - `value` {{Optional_Inline}}
+  - : 맵의 각 항목에 대해 실행할 함수입니다. 이 함수는 다음 인수를 사용하여 호출됩니다:
+    - `value`
       - : 각 반복의 값입니다.
-    - `key` {{Optional_Inline}}
+    - `key`
       - : 각 반복의 키입니다.
-    - `map` {{Optional_Inline}}
+    - `map`
       - : 반복되는 map입니다.
-- `thisArg` {{Optional_Inline}}
-  - : `callback`을 실행하고 있을 때 `this`로 사용하는 값
+- `thisArg` {{optional_inline}}
+  - : `callbackFn`을 실행하고 있을 때 `this`로 사용하는 값.
 
 ### 반환 값
 
@@ -77,7 +63,11 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
 // Logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"

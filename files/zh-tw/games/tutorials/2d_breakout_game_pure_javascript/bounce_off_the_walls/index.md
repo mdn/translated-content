@@ -24,7 +24,7 @@ var ballRadius = 10;
 接著更新繪製球的 `drawBall()` 函數，加入以下內容:
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
 ```
 
 ## 從頂部和底部反彈
@@ -32,8 +32,8 @@ ctx.arc(x, y, ballRadius, 0, Math.PI*2);
 總共有四面牆壁會與球發生碰撞 — 首先處理上方的牆壁，我們在每個影格檢查球是否有接觸到 Canvas 上方壁面 —如果是的話，我們將扭轉球的運動，所以它將開始在相反的方向移動，並保持在可見邊界。記住坐標係從左上角開始，我們可以得到這樣的東西：
 
 ```js
-if(y + dy < 0) {
-    dy = -dy;
+if (y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -42,8 +42,8 @@ if(y + dy < 0) {
 上面的代碼將處理球反彈的頂部邊緣，所以現在讓我們想想下邊緣：
 
 ```js
-if(y + dy > canvas.height) {
-    dy = -dy;
+if (y + dy > canvas.height) {
+  dy = -dy;
 }
 ```
 
@@ -51,8 +51,8 @@ if(y + dy > canvas.height) {
 我們可以將這兩個語句為一個節省代碼冗長：
 
 ```js
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -63,12 +63,12 @@ if(y + dy > canvas.height || y + dy < 0) {
 我們有頂部和底部邊緣覆蓋，所以讓我們想想左，右的。它實際上是非常相似的，你所要做的就是重複 X 而不是 Y 的陳述：
 
 ```js
-if(x + dx > canvas.width || x + dx < 0) {
-    dx = -dx;
+if (x + dx > canvas.width || x + dx < 0) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height || y + dy < 0) {
-    dy = -dy;
+if (y + dy > canvas.height || y + dy < 0) {
+  dy = -dy;
 }
 ```
 
@@ -83,11 +83,11 @@ if(y + dy > canvas.height || y + dy < 0) {
 這是因為我們計算的牆壁和球的中心的碰撞點，而我們應該做它的圓周。球應該反彈後，如果接觸牆，而不是當它已經在牆上的一半，所以讓我們調整我們的陳述有點包括。更新您添加到的最後一個代碼：
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 

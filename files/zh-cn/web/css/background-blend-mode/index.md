@@ -3,7 +3,7 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## 概述
 

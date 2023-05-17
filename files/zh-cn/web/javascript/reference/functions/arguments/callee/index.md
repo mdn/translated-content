@@ -106,7 +106,7 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 
 ### 没有替代方案的 arguments.callee
 
-当你必须要使用 Function 构造函数时，下面的例子是没有可以替代 `arguments.callee` 的方案的，因此弃用它时会产生一个 BUG (参看 {{Bug("725398")}}):
+当你必须要使用 Function 构造函数时，下面的例子是没有可以替代 `arguments.callee` 的方案的，因此弃用它时会产生一个 BUG (参看 [Firefox bug 725398](https://bugzil.la/725398)):
 
 ```js
 function createPerson (sIdentity) {

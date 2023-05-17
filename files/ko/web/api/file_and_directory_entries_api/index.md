@@ -16,7 +16,7 @@ The File and Directory Entries API는 탐색 및 파일 접근이 가능한 로�
 
 현재로서 정의된 파일 시스템에 대한 접근 방법은 두 가지입니다:
 
-- 드래그 앤 드롭({{event("drop")}}) 이벤트를 제어함으로써, 당신은 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 를 통해{{domxref("FileSystemEntry")}}에 드롭한 파일을 전달할 수 있습니다. 만일 결과가 `null`이 아니라면, 드롭한 파일 혹은 디렉토리를 파일 시스템에서 사용할 수 있을 것입니다.
+- 드래그 앤 드롭({{domxref("HTMLElement/drop_event", "drop")}}) 이벤트를 제어함으로써, 당신은 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 를 통해{{domxref("FileSystemEntry")}}에 드롭한 파일을 전달할 수 있습니다. 만일 결과가 `null`이 아니라면, 드롭한 파일 혹은 디렉토리를 파일 시스템에서 사용할 수 있을 것입니다.
 - {{domxref("HTMLInputElement.webkitEntries")}} 속성은 당신이 {{domxref("FileSystemFileEntry")}} 객체에 현재 선택된 파일을 접근시킬 수 있게 하지만, 파일 선택기(File chooser)로 직접 드래그 앤 드롭한 경우에만 가능합니다. ([Firefox bug 1326031](https://bugzil.la/1326031)). 만일 {{domxref("HTMLInputElement.webkitdirectory")}}의 값을 `true`로 두었다면, 디렉토리 선택자(Directory picker) 대신 {{HTMLElement("input")}} 를 사용할 수 있고, 선택된 각 디렉토리에 대해 {{domxref("FileSystemDirectoryEntry")}} 객체로 만들 수 있습니다.
 
 ## 비동기식 API

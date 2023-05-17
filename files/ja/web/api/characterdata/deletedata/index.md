@@ -1,6 +1,8 @@
 ---
-title: CharacterData.deleteData()
+title: "CharacterData: deleteData() メソッド"
 slug: Web/API/CharacterData/deleteData
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +11,7 @@ slug: Web/API/CharacterData/deleteData
 
 ## 構文
 
-```js
+```js-nolint
 characterData.deleteData(offset, count)
 ```
 
@@ -37,8 +39,8 @@ characterData.deleteData(offset, count)
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.deleteData(1, 5);
 ```

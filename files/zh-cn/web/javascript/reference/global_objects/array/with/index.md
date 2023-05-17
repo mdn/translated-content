@@ -20,7 +20,7 @@ array.with(index, value)
     - 负数索引会从数组末尾开始计数——即当 `index < 0` 时，会使用 `index + array.length`。
     - 如果规范化后的索引超出数组边界，会抛出 {{jsxref("RangeError")}}。
 - `value`
-  - : 赋给 index 的任何值。
+  - : 要分配给指定索引的任何值。
 
 ### 返回值
 

@@ -13,7 +13,7 @@ l10n:
 
 基本的な HTML グローバル属性に加えて、以下のグローバル属性も存在します。
 
-- {{HTMLAttrDef("xml:lang")}} と {{HTMLAttrDef("xml:base")}}。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
+- `xml:lang` と `xml:base`。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
 - アクセシビリティを確保するために使用される、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 状態およびプロパティ。
 - [イベントハンドラー](/ja/docs/Web/HTML/Attributes#イベントハンドラー)属性: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`
 
@@ -71,7 +71,7 @@ l10n:
 - [`inert`](/ja/docs/Web/HTML/Global_attributes/inert)
   - : ブラウザーがその要素に対するユーザー入力イベントを無視するようにする論理値です。クリックイベントが存在している場合に有用です。
 - [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode)
-  - : この要素やその内容を編集する時に使用する仮想キーボードの種類の構成に関するヒントをブラウザーに与えます。主に {{HTMLElement("input")}} 要素で使用されますが、 {{HTMLAttrxRef("contenteditable")}} モードにあるすべての要素で使用することができます。
+  - : この要素やその内容を編集する時に使用する仮想キーボードの種類の構成に関するヒントをブラウザーに与えます。主に {{HTMLElement("input")}} 要素で使用されますが、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) モードにあるすべての要素で使用することができます。
 - [`is`](/ja/docs/Web/HTML/Global_attributes/is)
   - : 標準の HTML 要素が、登録したカスタム組み込み要素のようにふるまうように指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements)を参照）。
 
@@ -96,7 +96,7 @@ l10n:
 - [`role`](/ja/docs/Web/Accessibility/ARIA/Roles)
   - : ロールはコンテンツの意味づけを定義し、スクリーンリーダーや他のツールが、その種類のオブジェクトに対するユーザーの期待に沿った方法でオブジェクトを表示し、対話を支援することを可能にします。ロールは `role="role_type"` を使って HTML 要素に追加します。ここで `role_type` は ARIA 仕様書でのロールの名前です。
 - [`slot`](/ja/docs/Web/HTML/Global_attributes/slot)
-  - : [シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウツリー内のスロットを、要素に割り当てます。`slot` 属性を持つ要素は、`slot` 属性の値と一致する {{htmlattrxref("name", "slot")}} 属性の値を持つ {{HTMLElement("slot")}} 要素が生成したスロットに割り当てられます。
+  - : [シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウツリー内のスロットを、要素に割り当てます。`slot` 属性を持つ要素は、`slot` 属性の値と一致する [`name`](/ja/docs/Web/HTML/Element/slot#name) 属性の値を持つ {{HTMLElement("slot")}} 要素が生成したスロットに割り当てられます。
 - [`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : 列挙型属性で、要素でスペルチェックを行うかどうかを定義します。以下の値が利用できます。
@@ -124,7 +124,7 @@ l10n:
     - `no`: 要素が翻訳対象にならないことを示します。
 - [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
 
-  - : [列挙型](/ja/docs/Glossary/Enumerated)属性で、{{htmlattrxref("contenteditable")}} 属性を使用している要素について、タブレットや携帯電話など、ハードウェアキーボードが利用できない可能性のある機器上で画面の内側への仮想キーボード動作を制御するために使用されます。
+  - : [列挙型](/ja/docs/Glossary/Enumerated)属性で、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性を使用している要素について、タブレットや携帯電話など、ハードウェアキーボードが利用できない可能性のある機器上で画面の内側への仮想キーボード動作を制御するために使用されます。
 
     - `auto` または空文字列: 要素がフォーカスまたはタップされたときに、自動的に仮想キーボードを示します。
     - `manual`: 要素へのフォーカスやタップを仮想キーボードの状態から切り離します。

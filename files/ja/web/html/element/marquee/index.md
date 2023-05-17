@@ -18,36 +18,36 @@ slug: Web/HTML/Element/marquee
 
 ## 属性
 
-- {{htmlattrdef("behavior")}}
+- `behavior`
   - : marquee 要素内でのテキストのスクロール方法を `scroll`、 `slide`、`alternate` の内の何れかのキーワードで指定します。指定を省略した場合は、初期値の `scroll` が適用されます。
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : 背景色を、色名もしくは HEX カラーコードで指定します。
-- {{htmlattrdef("direction")}}
+- `direction`
   - : marquee 要素内でのテキストのスクロール方向を `left`、 `right`、 `up`、 `down` の内の何れかのキーワードで指定します。初期値は `left` です。
-- {{htmlattrdef("height")}}
+- `height`
   - : スクロール範囲の高さを、ピクセル値かパーセント値で指定します。
-- {{htmlattrdef("hspace")}}
+- `hspace`
   - : 水平方向のマージンを指定します。
-- {{htmlattrdef("loop")}}
+- `loop`
   - : テキストのスクロール回数を指定します。初期値は −1 であり、これはスクロール回数を制限せず、恒久的にスクロールを続ける指定です。
-- {{htmlattrdef("scrollamount")}}
+- `scrollamount`
   - : インターバル内での、テキストの移動ピクセル数を指定します。初期値は 6 です。
-- {{htmlattrdef("scrolldelay")}}
+- `scrolldelay`
   - : スクロール動作のインターバルをミリ秒で指定します。初期値は 85 です。`truespeed` 属性が指定されていない場合は 60 が最下限であり、これ以下の値は 60 として解釈されます。
-- {{htmlattrdef("truespeed")}}
+- `truespeed`
   - : 既定では、`scrolldelay` で 60 を下回る値は無視します。`truespeed` を指定すると、それらの値が無視されません。
-- {{htmlattrdef("vspace")}}
+- `vspace`
   - : 垂直方向のマージンをピクセル値かパーセント値で指定します。
-- {{htmlattrdef("width")}}
+- `width`
   - : スクロール範囲の幅をピクセル値かパーセント値で指定します。
 
 ## イベントハンドラー
 
-- {{htmlattrdef("onbounce")}}
+- `onbounce`
   - : マーキーがスクロール位置の末端に達したときに発行されます。 behavior 属性の値に `alternate` が指定されている場合のみ発行されます。
-- {{htmlattrdef("onfinish")}}
+- `onfinish`
   - : loop 属性で指定された回数のループが終了した時に発行されます。 loop 属性に 1 以上の値が指定されている場合にのみ発行されます。
-- {{htmlattrdef("onstart")}}
+- `onstart`
   - : marquee がスクロールを開始した時に発行されます。
 
 ## メソッド

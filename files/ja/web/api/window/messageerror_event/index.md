@@ -44,7 +44,7 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-`messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待待ち受けします。
+`messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待ち受けします。
 
 ```js
 window.addEventListener('messageerror', (event) => {

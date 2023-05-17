@@ -35,7 +35,7 @@ for (var i = 0; i < items.length; i++) {
 
 参照内のこのページの場所に関わらず、 `length` は [Element](/ja/docs/Web/API/element) ではなく、 `NodeList` のプロパティです。 NodeList オブジェクトは [document.getElementsByTagName](/ja/docs/Web/API/document/getElementsByTagName) を始めとして、いくつもの DOM メソッドから返されます。
 
-`length` は DOM プログラミングでとても有名なプロパティです。リストの長さを検査したり (存在するかどうかを確認)、上記の例に見られるように、ループの反復子して使用するのが普通です。
+`length` は DOM プログラミングでとても有名なプロパティです。リストの長さを検査したり (存在するかどうかを確認)、上記の例に見られるように、ループのイテレーターとして使用するのが普通です。
 
 ## 仕様書
 

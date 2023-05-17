@@ -5,7 +5,7 @@ slug: Web/API/HTMLImageElement/useMap
 
 {{APIRef("HTML DOM")}}
 
-**`useMap`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{Glossary("HTML")}} の {{htmlattrxref("usemap", "img")}} 属性を反映し、この画像に適用されるクライアントサイドイメージマップの名前を提供する文字列です。
+**`useMap`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、 {{Glossary("HTML")}} の [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性を反映し、この画像に適用されるクライアントサイドイメージマップの名前を提供する文字列です。
 
 ## 値
 
@@ -15,7 +15,7 @@ slug: Web/API/HTMLImageElement/useMap
 
 ## 使用上の注意
 
-`useMap` の文字列値は {{HTMLElement("map")}} 要素の有効なアンカーでなければなりません。言い換えると、この文字列は適切な `<map>` の {{htmlattrxref("name", "map")}} 属性の値の前に、ポンド記号またはハッシュ記号を付加したものでなければなりません。
+`useMap` の文字列値は {{HTMLElement("map")}} 要素の有効なアンカーでなければなりません。言い換えると、この文字列は適切な `<map>` の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性の値の前に、ポンド記号またはハッシュ記号を付加したものでなければなりません。
 
 次のような `<map>` を考えてみましょう。
 

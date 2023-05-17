@@ -82,7 +82,7 @@ On utilise ici tous les niveaux de titre.
 
 #### Résultat
 
-{{EmbedLiveSample('', '280', '300', '')}}
+{{EmbedLiveSample('', '280', '370')}}
 
 ### Une page d'exemple
 
@@ -108,7 +108,7 @@ Ici, on utilise des titres avec du contenu intercalaire.
 
 #### Résultat
 
-{{EmbedLiveSample('', '280', '480', '')}}
+{{EmbedLiveSample('', '280', '630')}}
 
 ## Accessibilité
 
@@ -178,7 +178,7 @@ Une autre technique de navigation employée par celles et ceux qui utilisent les
 
 Le contenu sectionnant peut être libellé en utilisant une combinaison des attributs [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) et [`id`](/fr/docs/Web/HTML/Global_attributes#id), où le libellé décrit de façon concise l'objet de la section. Cette technique s'avère utile lorsqu'il y a plus d'un élément sectionnant sur la même page.
 
-#### Exemple
+#### Exemples
 
 ```html
 <header>
@@ -197,6 +197,10 @@ Le contenu sectionnant peut être libellé en utilisant une combinaison des attr
   </nav>
 </footer>
 ```
+
+##### Résultat
+
+{{EmbedLiveSample('','100%','190')}}
 
 Avec cet exemple, un lecteur d'écran annoncera la présence de deux sections [`<nav>`](/fr/docs/Web/HTML/Element/nav), la première appelée «&nbsp;Navigation primaire&nbsp;» et l'autre appelée «&nbsp;Navigation du pied de page&nbsp;». Si les libellés n'avaient pas été fournis, la personne aurait dû consulter le contenu de chaque élément `<nav>` afin de déterminer leur utilité.
 

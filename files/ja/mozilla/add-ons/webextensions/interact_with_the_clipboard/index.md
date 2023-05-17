@@ -170,4 +170,4 @@ Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/
 - [Clipboard API](/ja/docs/Web/API/Clipboard_API)
 - [Permissions API](/ja/docs/Web/API/Permissions_API)
 - [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
-- {{htmlattrxref("contenteditable")}}
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)

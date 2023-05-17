@@ -2,12 +2,12 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 l10n:
-  sourceCommit: 9efcce87c70bbd73bac35677480930d6a7c14c72
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{jsSidebar("Statements")}}
 
-**`switch`** 文は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を評価して、一連の `case` 節に対してその式の値を照合し、最初に値が一致した `case` 節の後の[文](/ja/docs/Web/JavaScript/Reference/Statements)を、`break` 文に出会うまで実行します。一致した `case` の後にある文も同様に実行します。`switch` 文の `default` 節には、 `case` が式の値と一致しない場合にジャンプします。
+**`switch`** 文は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)を評価して、一連の `case` 節に対してその式の値を照合し、最初に値が一致した `case` 節の後の[文](/ja/docs/Web/JavaScript/Reference/Statements)を、`break` 文に出会うまで実行します。一致した `case` の後にある文も同様に実行します。`switch` 文の `default` 節には、 `case` が式の値と一致しない場合にジャンプします。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
@@ -16,18 +16,14 @@ l10n:
 ```js-nolint
 switch (expression) {
   case value1:
-    // 式の結果が value1 に一致する場合に実行する文
-    [break;]
+    文
   case value2:
-    // 式の結果が value2 に一致する場合に実行する文
-    [break;]
-  ...
+    文
+  // …
   case valueN:
-    // 式の結果が valueN に一致する場合に実行する文
-    [break;]
-  [default:
-    // 式の値に一致するものが存在しない場合に実行する文
-    [break;]]
+    文
+  default:
+    文
 }
 ```
 
@@ -81,7 +77,7 @@ switch (foo) {
 // 0 と 1 が出力される
 ```
 
-他のフロー制御文で `break` を置き換えることもできます。例えば [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文です。
+適切なコンテキストにおいて、その他の制御フロー文は `switch` 文から抜け出す効果があります。例えば、`switch`文が関数の中に含まれている場合、[`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は関数本体の実行を終了し、したがって `switch` 文の実行を終了させます。もし `switch` 文がループに含まれている場合、[`continue`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文は `switch` 文を中断し、ループの次の反復処理にジャンプさせます。
 
 ### 字句スコープ
 

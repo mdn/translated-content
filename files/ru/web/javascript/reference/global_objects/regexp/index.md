@@ -718,13 +718,9 @@ var re = new RegExp('\\w+');
 - `RegExp.length`
   - : Значение `RegExp.length` равно 2.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Методы
 
 Глобальный объект `RegExp` не имеет собственных методов, однако, он наследует некоторые методы через цепочку прототипов.
-
-{{jsOverrides("Function", "Methods", "prototype")}}
 
 ## Экземпляры регулярного выражения
 

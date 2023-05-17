@@ -10,9 +10,9 @@ slug: Glossary/First-class_Function
 ### JavaScript
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
+const foo = function () {
+  console.log("foobar");
+};
 // Invoke it using the variable
 foo();
 ```
@@ -27,7 +27,7 @@ foo();
 
 ```js
 function sayHello() {
-   return "Hello, ";
+  return "Hello, ";
 }
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
@@ -38,7 +38,7 @@ greeting(sayHello, "JavaScript!");
 
 我們將 `sayHello()` 函式當成是變數傳遞到 `greeting()` 函式，這說明了我們將函式視為是一個值來使用它。
 
-> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/zh-TW/docs/Glossary/Callback_function)。** *`sayHello` 就是一個回調函式。*
+> **備註：** 將函式作為參數傳遞到另一個函式時，被當作參數傳遞的那個函式我們稱之為回調函式 **[Callback function](/zh-TW/docs/Glossary/Callback_function)**。_`sayHello` 就是一個回調函式。_
 
 ## 範例 | 回傳一個函式
 
@@ -46,9 +46,9 @@ greeting(sayHello, "JavaScript!");
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 ```
 
@@ -61,11 +61,11 @@ function sayHello() {
 ### 1- 使用變數
 
 ```js
-const sayHello = function() {
-   return function() {
-      console.log("Hello!");
-   }
-}
+const sayHello = function () {
+  return function () {
+    console.log("Hello!");
+  };
+};
 const myFunc = sayHello();
 myFunc();
 ```
@@ -78,9 +78,9 @@ myFunc();
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 sayHello()();
 ```

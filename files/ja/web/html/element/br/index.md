@@ -19,7 +19,7 @@ slug: Web/HTML/Element/br
 
 ### 非推奨の属性
 
-- {{htmlattrdef("clear")}}
+- `clear`
   - : 改行後の次の行を開始する場所を示します。
 
 ## CSS でのスタイル付け

@@ -45,7 +45,7 @@ Cependant, `translate` est à l'heure actuelle la fonction la plus proche d'une 
 #### Exemple
 
 ```xml
-<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'") />
+<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
 ```
 
 #### Sortie

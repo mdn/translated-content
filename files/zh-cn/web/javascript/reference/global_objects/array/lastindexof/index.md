@@ -3,11 +3,11 @@ title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## 概述
 
-**`lastIndexOf()`** 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 `fromIndex` 处开始。
+**`lastIndexOf()`** 方法返回数组中给定元素最后一次出现的索引，如果不存在则返回 -1。该方法从 `fromIndex` 开始向前搜索数组。
 
 {{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
 
@@ -23,107 +23,90 @@ lastIndexOf(searchElement, fromIndex)
 - `searchElement`
   - : 被查找的元素。
 - `fromIndex` {{optional_inline}}
-  - : 从此位置开始逆向查找。默认为数组的长度减 1(`arr.length - 1`)，即整个数组都被查找。如果该值大于或等于数组的长度，则整个数组会被查找。如果为负值，将其视为从数组末尾向前的偏移。即使该值为负，数组仍然会被从后向前查找。如果该值为负时，其绝对值大于数组长度，则方法返回 -1，即数组不会被查找。
+  - : 以 0 起始的索引，表明反向搜索的起始位置，[会被转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+    - 如果 `fromIndex < 0`，则从数组末尾开始倒数计数——即使用 `fromIndex + array.length` 的值。
+    - 如果 `fromIndex < -array.length`，则不搜索数组并返回 `-1`。从概念上讲，你可以把它想象成从数组开始之前不存在的位置开始反向搜索，这条路径上没有任何数组元素，因此 `searchElement` 永远不会被找到。
+    - 如果 `fromIndex >= array.length` 或者省略了 `fromIndex`，则使用 `array.length - 1`，这会导致搜索整个数组。可以将其理解为从数组尾部之后不存在的位置开始向前搜索。最终会访问到数组最后一个元素，并继续向前开始实际搜索数组元素。
 
 ### 返回值
 
-数组中该元素最后一次出现的索引，如未找到返回 -1。
+数组中该元素最后一次出现的索引，如未找到返回 **-1**。
 
 ## 描述
 
-`lastIndexOf` 使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)（strict equality，即 ===）比较 `searchElement` 和数组中的元素。
+`lastIndexOf` 使用[严格相等](zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（与 `===` 运算符使用的算法相同）比较 `searchElement` 和数组中的元素。[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值永远不会被比较为相等，因此当 `searchElement` 为 `NaN` 时 `lastIndexOf()` 总是返回 `-1`。
+
+`lastIndexOf()` 方法会跳过[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽。
+
+`lastIndexOf()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 
-### 示例：使用 lastIndexOf
+### 使用 lastIndexOf()
 
-下例使用 `lastIndexOf` 定位数组中的值。
+下例使用 `lastIndexOf()` 定位数组中的值。
 
 ```js
-var array = [2, 5, 9, 2];
-var index = array.lastIndexOf(2);
-// index is 3
-index = array.lastIndexOf(7);
-// index is -1
-index = array.lastIndexOf(2, 3);
-// index is 3
-index = array.lastIndexOf(2, 2);
-// index is 0
-index = array.lastIndexOf(2, -2);
-// index is 0
-index = array.lastIndexOf(2, -1);
-// index is 3
+const numbers = [2, 5, 9, 2];
+numbers.lastIndexOf(2); // 3
+numbers.lastIndexOf(7); // -1
+numbers.lastIndexOf(2, 3); // 3
+numbers.lastIndexOf(2, 2); // 0
+numbers.lastIndexOf(2, -2); // 0
+numbers.lastIndexOf(2, -1); // 3
 ```
 
-### 示例：查找所有元素
-
-下例使用 `lastIndexOf` 查找到一个元素在数组中所有的索引（下标），并使用 {{jsxref("Array.push", "push")}} 将所有添加到另一个数组中。
+你不能用 `lastIndexOf()` 来搜索 `NaN`。
 
 ```js
-var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
-var idx = array.lastIndexOf(element);
+const array = [NaN];
+array.lastIndexOf(NaN); // -1
+```
 
-while (idx != -1) {
+### 查找元素出现的所有索引
+
+下例使用 `lastIndexOf` 查找到一个元素在数组中所有的索引（下标），并在找到它们时用 {{jsxref("Array.push", "push")}} 将它们添加到另一个数组中。
+
+```js
+const indices = [];
+const array = ["a", "b", "a", "c", "a", "d"];
+const element = "a";
+let idx = array.lastIndexOf(element);
+while (idx !== -1) {
   indices.push(idx);
-  idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);
+  idx = idx > 0 ? array.lastIndexOf(element, idx - 1) : -1;
 }
 
 console.log(indices);
-// [4, 2, 0];
+// [4, 2, 0]
 ```
 
-注意，我们要单独处理`idx==0`时的情况，因为如果是第一个元素，忽略了`fromIndex`参数则第一个元素总会被查找。这不同于{{jsxref("Array.prototype.indexOf", "indexOf")}}方法
+需要注意的是，这里必须单独处理 `idx === 0` 的情况，因为如果该元素是数组的第一个元素，则无论 `fromIndex` 参数的值为何，它总是会被找到。这与 {{jsxref("Array.prototype.indexOf", "indexOf")}} 方法不同。
 
-注：原英文是针对使用三元操作符语句的作用进行说明的：
-`idx = (idx > 0 ? array.lastIndexOf(element, idx - 1) : -1);`
-`idx > 0`时，才进入 lastIndexOf 由后往前移一位进行倒查找；如果`idx == 0`则直接设置`idx = -1`，循环`while (idx != -1)`就结束了。
+### 在稀疏数组上使用 lastIndexOf()
 
-## 兼容旧环境（Polyfill）
-
-`lastIndexOf` 在 ECMA-262 标准第 5 版被添加。因此它在不兼容该标准的浏览器中可能不被支持。你可以把下面代码添加到脚本中来使那些没有实现该方法的实现环境支持该方法。该算法是被 ECMA-262 第 5 版指定的。假定 {{jsxref("Global_Objects/Object", "Object")}}、{{jsxref("Global_Objects/TypeError", "TypeError")}}、{{jsxref("Global_Objects/Number", "Number")}}、{{jsxref("Math.floor")}}、{{jsxref("Math.abs")}}，以及 {{jsxref("Math.min")}} 拥有其初始值。
+你不能使用 `lastIndexOf()` 来搜索稀疏数组中的空槽。
 
 ```js
-if (!Array.prototype.lastIndexOf) {
-  Array.prototype.lastIndexOf = function(searchElement /*, fromIndex*/) {
-    'use strict';
-
-    if (this === void 0 || this === null) {
-      throw new TypeError();
-    }
-
-    var n, k,
-        t = Object(this),
-        len = t.length >>> 0;
-    if (len === 0) {
-      return -1;
-    }
-
-    n = len - 1;
-    if (arguments.length > 1) {
-      n = Number(arguments[1]);
-      if (n != n) {
-        n = 0;
-      }
-      else if (n != 0 && n != (1 / 0) && n != -(1 / 0)) {
-        n = (n > 0 || -1) * Math.floor(Math.abs(n));
-      }
-    }
-
-    for (k = n >= 0
-          ? Math.min(n, len - 1)
-          : len - Math.abs(n); k >= 0; k--) {
-      if (k in t && t[k] === searchElement) {
-        return k;
-      }
-    }
-    return -1;
-  };
-}
+console.log([1, , 3].lastIndexOf(undefined)); // -1
 ```
 
-另外，该实现是为了绝对兼容 Firefox 和 the SpiderMonkey JavaScript 引擎中的 `lastIndexOf`，包括了几种临界情况。如果你要在实际应用中使用该实现，可以忽略这些临界情况，从而简化 `fromIndex` 的计算。
+### 在非数组对象上调用 lastIndexOf()
+
+`lastIndexOf()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 2,
+};
+console.log(Array.prototype.lastIndexOf.call(arrayLike, 2));
+// 2
+console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
+// -1
+```
 
 ## 规范
 
@@ -135,6 +118,11 @@ if (!Array.prototype.lastIndexOf) {
 
 ## 参见
 
-- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.lastIndexOf` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}

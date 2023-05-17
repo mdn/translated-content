@@ -5,7 +5,7 @@ slug: Web/API/MessagePort/start
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。これは、{{domxref("MessageChannel.onmessage")}} を使用する場合は包含されています。
+{{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。{{domxref("MessagePort.onmessage")}} を使用する場合は暗黙に実行されます。
 
 {{AvailableInWorkers}}
 
