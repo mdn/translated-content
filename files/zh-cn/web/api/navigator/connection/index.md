@@ -5,7 +5,7 @@ slug: Web/API/Navigator/connection
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-**`Navigator.connection`** 只读属性返回一个包含有关系统网络连接的信息的 {{domxref("NetworkInformation")}} 对象，例如用户设备的当前带宽或连接是否按流量计费。
+**`Navigator.connection`** 只读属性返回一个包含有关系统网络连接信息的 {{domxref("NetworkInformation")}} 对象，例如用户设备的当前带宽或连接是否按流量计费。
 
 这可以用于基于用户的连接状态来选择高清晰度内容或低清晰度内容。
 
@@ -23,4 +23,4 @@ slug: Web/API/Navigator/connection
 
 ## 参见
 
-- [Online and offline events](/zh-CN/docs/Web/API/Navigator/onLine)
+- [online 和 offline 事件](/zh-CN/docs/Web/API/Navigator/onLine)
