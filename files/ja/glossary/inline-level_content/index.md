@@ -1,29 +1,30 @@
 ---
-title: Inline-level content
+title: Inline-level content (インラインレベルコンテンツ)
 slug: Glossary/Inline-level_content
-page-type: glossary-definition
+l10n:
+  sourceCommit: a46d4d15ea85b4bbb83df145228bc40f658868be
 ---
 
-In CSS, content that participates in inline layout is called **inline-level content**. Most text sequences, replaced elements, and generated content are inline-level by default.
+CSS において、インラインレイアウトに関係するコンテンツは**インラインレベルコンテンツ**と呼ばれます。ほとんどのテキストシーケンス、置換要素、および生成されたコンテンツは、デフォルトでインラインレベルです。
 
-In inline layout, a mixed stream of text, [replaced elements](/en-US/docs/Web/CSS/Replaced_element), and other inline boxes are laid out by fragmenting them into a stack of line boxes. Within each line box, inline-level boxes are aligned to each other vertically or horizontally, depending on the writing mode. Typically, they are aligned by the baselines of their text. This can be changed with CSS.
+インラインレイアウトでは、テキスト、[置換要素](/ja/docs/Web/CSS/Replaced_element)、その他のインラインボックスが混在したストリームを、行ボックスのスタックに断片化することでレイアウトされます。各行ボックスの中でインラインレベルのボックスは、書字方向に応じて互いに垂直または水平に整列されます。一般的には、テキストのベースラインによって整列されます。これは、CSSで変更することができます。
 
 ![inline layout](inline_layout.png)
 
-> **Note:** HTML (_HyperText Markup Language_) elements historically were categorized as either "block-level" elements or "inline" elements. As a presentational characteristic, this is now specified by CSS.
+> **メモ:** HTML (_HyperText Markup Language_) の要素は従来、「ブロックレベル」要素または「インライン要素」の何れかに分類されてきました。これは表示特性であることから、現在は CSS において定義されています。
 
-## Examples
+## 例
 
 ```html
 <p>
-  This span is an <span class="highlight">inline-level element</span>; its
-  background has been colored to display both the beginning and end of the
-  element's influence. Input elements, like <input type="radio" /> and
-  <input type="checkbox" />, are also inline-level content.
+  この span は<span class="highlight">インラインレベル要素</span>です。
+  背景は、この要素の影響の始まりと終わりの両方を表示するように色付けされています。
+  <input type="radio" /> や <input type="checkbox" /> のような
+  input 要素もインラインレベルコンテンツです。
 </p>
 ```
 
-In this example, the {{HTMLElement("p")}} element contains some text. Within that text is a {{HTMLElement("span")}} element and two {{HTMLElement("input")}} elements, which are inline-level elements. If the `<span>` is spread across two lines, two line boxes are generated. Because these elements are inline, the paragraph correctly renders as a single paragraph of unbroken text flow:
+この例では、{{HTMLElement("p")}} 要素にいくつかのテキストが含まれています。そのテキストの中に、インラインレベルの要素である {{HTMLElement("span")}} 要素と 2 つの {{HTMLElement("input")}} 要素があります。`<span>` が2行にまたがっている場合、2 つの行ボックスが生成されます。これらの要素はインラインであるため、段落は途切れることのないテキストフローの 1 つの段落として正しく表示されます：
 
 ```css hidden
 body {
@@ -39,8 +40,8 @@ body {
 
 {{EmbedLiveSample("Examples")}}
 
-## See also
+## 関連情報
 
-- [Block-level content](/en-US/docs/Glossary/Block-level_content)
-- [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
+- [ブロックレベルコンテンツ](/ja/docs/Glossary/Block-level_content)
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
 - {{cssxref("display")}}
