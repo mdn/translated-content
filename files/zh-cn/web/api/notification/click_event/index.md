@@ -45,4 +45,4 @@ notification.onclick = (event) => {
 ## 参见
 
 - {{domxref("Notification")}}
-- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
