@@ -1,5 +1,5 @@
 ---
-title: 'Window: beforeunload event'
+title: "Window: beforeunload event"
 slug: Web/API/Window/beforeunload_event
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
 ---
@@ -22,8 +22,8 @@ window.onbeforeunload = funcRef
 ## 示例
 
 ```js
-window.onbeforeunload = function(e) {
-  var dialogText = 'Dialog text here';
+window.onbeforeunload = function (e) {
+  var dialogText = "Dialog text here";
   e.returnValue = dialogText;
   return dialogText;
 };
