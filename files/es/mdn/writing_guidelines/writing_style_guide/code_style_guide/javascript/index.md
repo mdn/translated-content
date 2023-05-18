@@ -676,7 +676,7 @@ Esta sección enumera nuestras recomendaciones sobre qué operadores usar y cuá
 
 ### Operadores condicionales
 
-Cuando desee almacenar en una variable un valor literal dependiendo de una condición, use un [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) en lugar de una sentencia `if...else`.
+Cuando desee almacenar en una variable un valor literal dependiendo de una condición, use un [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator) en lugar de una sentencia `if...else`.
 Esta regla también se aplica cuando se devuelve un valor. Escriba:
 
 ```js example-good
