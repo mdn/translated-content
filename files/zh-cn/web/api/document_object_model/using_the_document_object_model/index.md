@@ -37,7 +37,7 @@ slug: Web/API/Document_object_model/Using_the_Document_Object_Model
 
 ## 一个简单的示例
 
-假设作者改变上面文档的头部内容，并且使用两段段落取代一段段落。实现代码如下：
+假设作者改变上面文档的头部内容，并且使用两个段落取代一个段落。实现代码如下：
 
 ### HTML
 
