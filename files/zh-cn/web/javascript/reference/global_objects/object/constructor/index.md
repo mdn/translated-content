@@ -19,9 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 
 ## 描述
 
-所有对象（使用 `Object.create(null)` 创建的对象除外）都将具有 `constructor` 属性。在没有显式使用构造函数的情况下，创建的对象（例如对象和数组文本）将具有 `constructor` 属性，这个属性指向该对象的基本对象构造函数类型。
-
-除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外，任何对象都会在其 `[[Prototype]]` 上有一个 `constructor` 属性。使用字面量创建的对象也会有一个指向该对象构造函数类型的 `constructor` 属性，例如，数组字面量创建的 {{jsxref("Array")}} 对象和[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)创建普通对象。
+除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外，任何对象都会在其 `[[Prototype]]` 上有一个 `constructor` 属性。使用字面量创建的对象也会有一个指向该对象构造函数类型的 `constructor` 属性，例如，数组字面量创建的 {{jsxref("Array")}} 对象和[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)创建的普通对象。
 
 ```js
 const o1 = {};
@@ -75,7 +73,7 @@ theTree.constructor is function Tree(name) {
 
 ### 为对象的 constructor 属性赋值
 
-可以为非原型对象的 constructor 属性赋值。
+可以为非基本类型对象的 constructor 属性赋值。
 
 ```js
 const arr = [];
@@ -115,7 +113,7 @@ arr instanceof Array; // true
 
 ### 更改构造函数原型对象的 constructor 属性
 
-每个构造函数都有一个 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，当通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符调用时，该属性将成为实例的 `[[Prototype]]`。因此，`ConstructorFunction.prototype.constructor` 将成为实例的 `[[Prototype]]` 上的属性，如上述所示。
+每个构造函数都有一个 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性，当通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符调用时，该属性将成为实例的 `[[Prototype]]`。因此，`ConstructorFunction.prototype.constructor` 将成为实例的 `[[Prototype]]` 上的属性，如前面所述。
 
 然而，如果对 `ConstructorFunction.prototype` 重新赋值，`constructor` 属性将丢失。例如，以下是创建继承模式的常见方式：
 
@@ -152,10 +150,10 @@ CreatedConstructor.prototype.create = function () {
   return new this.constructor();
 };
 
-new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create is undefined, since constructor === Parent
+new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create is undefined，因为 constructor === Parent
 ```
 
-在上面的示例中，会抛出一个异常，因为 `constructor` 链接到 `Parent`。为了避免这种情况，只需分配你将要使用的必要构造函数即可。
+在上面的示例中，会抛出一个异常，因为 `constructor` 链接到 `Parent`。为了避免这种情况，只需分配你将要使用的必需构造函数即可。
 
 ```js
 function Parent() {
@@ -231,7 +229,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype, {
 
 Child.prototype.getOffsetByInitialPosition = function () {
   const position = this.position;
-  // 使用 `this.constructor`，希望 `getStartPosition` 存在于一个静态方法中。
+  // 使用 `this.constructor`，以期 `getStartPosition` 存在于一个静态方法中。
   const startPosition = this.constructor.getStartPosition();
 
   return {
@@ -241,8 +239,8 @@ Child.prototype.getOffsetByInitialPosition = function () {
 };
 
 new Child(1, 1).getOffsetByInitialPosition();
-// Error: this.constructor.getStartPosition is undefined, since the
-// constructor is Child, which doesn't have the getStartPosition static method
+// Error: this.constructor.getStartPosition is undefined，
+// 因为构造函数是 Child，它没有 getStartPosition 静态方法
 ```
 
 如果想要保证示例正常运行，我们需要让 `Parent` 作为构造函数，或给 `Child` 的构造分配静态属性：
