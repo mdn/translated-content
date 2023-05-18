@@ -43,7 +43,7 @@ original_slug: Web/CSS/clamp()
 
 ### min, max, and clamp comparison
 
-这个示例中，我们用 `min()、`[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
+这个示例中，我们用 `min()`、[`max()`](/zh-CN/docs/Web/CSS/max) 和 `clamp()` 实现一个简单的响应式效果。
 
 [`<body>`](/zh-CN/docs/Web/HTML/Element/body) 元素的 [`width`](/zh-CN/docs/Web/CSS/width) 设置为 `min(1000px, calc(70% + 100px))`。其含义是宽度设置为 `1000px`，当 `calc(70% + 100px)` 比 `1000px` 小时，宽度为 `calc(70% + 100px)` 。 `min()` 允许你设置一个上限值。
 

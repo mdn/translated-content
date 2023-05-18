@@ -346,6 +346,21 @@
     "modified": "2019-03-23T22:09:54.924Z",
     "contributors": ["DashPisareva", "Sheppy"]
   },
+  "Glossary/Block-level_content": {
+    "modified": "2019-03-23T23:03:37.270Z",
+    "contributors": [
+      "idoru",
+      "SelenIT",
+      "Filofei",
+      "Selenia_6",
+      "SnejUgal",
+      "Anton.Yurovskykh",
+      "bracket",
+      "alexander-lis",
+      "Mishman",
+      "artcygn"
+    ]
+  },
   "Glossary/Block/CSS": {
     "modified": "2019-03-23T22:09:55.008Z",
     "contributors": ["DashPisareva"]
@@ -10216,21 +10231,6 @@
     "modified": "2019-03-23T22:35:07.110Z",
     "contributors": ["BychekRU"]
   },
-  "Web/HTML/Block-level_elements": {
-    "modified": "2019-03-23T23:03:37.270Z",
-    "contributors": [
-      "idoru",
-      "SelenIT",
-      "Filofei",
-      "Selenia_6",
-      "SnejUgal",
-      "Anton.Yurovskykh",
-      "bracket",
-      "alexander-lis",
-      "Mishman",
-      "artcygn"
-    ]
-  },
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-05-24T11:41:53.618Z",
     "contributors": ["sve-kai-itmo"]
@@ -10896,17 +10896,6 @@
       "GalGrigoryeva",
       "maddev",
       "ViktorKonsta"
-    ]
-  },
-  "Web/HTML/Inline_elements": {
-    "modified": "2020-03-08T06:35:47.964Z",
-    "contributors": [
-      "Radragon",
-      "AliaksandrZahorski",
-      "Inqanter",
-      "superpuper32",
-      "Filofei",
-      "Chronosms"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -17822,6 +17811,17 @@
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-10-15T22:18:29.870Z",
     "contributors": ["chrisdavidmills", "Akh-rman"]
+  },
+  "orphaned/Web/HTML/Inline_elements": {
+    "modified": "2020-03-08T06:35:47.964Z",
+    "contributors": [
+      "Radragon",
+      "AliaksandrZahorski",
+      "Inqanter",
+      "superpuper32",
+      "Filofei",
+      "Chronosms"
+    ]
   },
   "orphaned/Web/HTML/Preloading_content": {
     "modified": "2020-10-15T22:11:40.984Z",

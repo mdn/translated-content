@@ -25,7 +25,7 @@ locale.maximize()
 
 ### Valeur de retour
 
-Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'algorithme de [vraisemblance des composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags) lancé sur `{{jsxref("Locale/baseName", "locale.baseName")}}`.
+Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'algorithme de [vraisemblance des composantes](https://www.unicode.org/reports/tr35/#Likely_Subtags) lancé sur {{jsxref("Locale/baseName", "locale.baseName")}}.
 
 ## Description
 

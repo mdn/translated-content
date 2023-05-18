@@ -49,7 +49,7 @@ flex-basis: unset;
     >
     > - 最初，"flex-basis:auto" 的含义是 "参照我的`width`和`height`属性".
     > - 在此之后，"flex-basis:auto" 的含义变成了自动尺寸，而 "main-size" 变成了 "参照我的`width`和`height`属性"。实际执行于 [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - 然后呢，这个更改又在 [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).
+    > - 然后呢，这个更改又在 [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ([Firefox bug 1105111](https://bugzil.la/1105111) 包括了增加这个关键字).
 
 ### 规范
 

@@ -9,7 +9,7 @@ slug: Web/API/Event/defaultPrevented
 
 返回一个布尔值，表明当前事件是否调用了 {{ domxref("event.preventDefault()") }}方法。
 
-> **备注：** 你应该使用该属性来代替以前的非标准的已经被废弃的`getPreventDefault()`方法 (查看{{ bug("691151") }}).
+> **备注：** 你应该使用该属性来代替以前的非标准的已经被废弃的`getPreventDefault()`方法 (查看[Firefox bug 691151](https://bugzil.la/691151)).
 
 ## 语法
 

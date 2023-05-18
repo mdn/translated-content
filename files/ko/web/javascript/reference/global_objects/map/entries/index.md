@@ -2,7 +2,7 @@
 title: Map.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 l10n:
-  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
+  sourceCommit: ab97df6ce8865569507bcfc884206a1ed297a690
 ---
 
 {{JSRef}}
@@ -12,7 +12,6 @@ l10n:
 이 특별한 경우, 이 반복자 객체도 반복이 가능하므로 for-of 루프를 사용할 수 있습니다. `[Symbol.iterator]` 프로토콜이
 사용될 경우, 호출될 때 반복자 자체를 반환하는 함수를 반환합니다.
 
-**`entries()`**
 {{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
 ## 구문
@@ -23,7 +22,7 @@ entries()
 
 ### 반환 값
 
-새로운 {{jsxref("Map")}} 반복자 객체.
+새로운 [순회 가능한 반복자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## 예제
 
