@@ -39,7 +39,7 @@ slug: Web/API/Document_object_model/Using_the_Document_Object_Model
 
 假设作者改变上面文档的头部内容，并且使用两段段落取代一段段落。实现代码如下：
 
-### HTML 内容
+### HTML
 
 ```html
 <html lang="zh-CN">
@@ -54,7 +54,7 @@ slug: Web/API/Document_object_model/Using_the_Document_Object_Model
 </html>
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 function change() {
