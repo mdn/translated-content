@@ -1,6 +1,6 @@
 ---
 title: Échappement des propriétés Unicode
-slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
+slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 tags:
   - Expressions rationnelles
   - Expressions régulières
@@ -8,7 +8,7 @@ tags:
   - JavaScript
   - regex
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
-original_slug: Web/JavaScript/Guide/Expressions_régulières/Échappement_propriétés_Unicode
+original_slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 ---
 
 {{jsSidebar("JavaScript Guide")}}
