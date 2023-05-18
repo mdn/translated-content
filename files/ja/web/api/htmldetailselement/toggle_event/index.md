@@ -1,39 +1,31 @@
 ---
-title: 'HTMLDetailsElement: toggle イベント'
+title: "HTMLDetailsElement: toggle イベント"
 slug: Web/API/HTMLDetailsElement/toggle_event
+l10n:
+  sourceCommit: 559c464755abf4ca999a21ce7f3cb1027143f68f
 ---
 
 {{APIRef}}
 
 **`toggle`** イベントは、 {{HtmlElement("details")}} 要素の `open`/`closed` の状態がトグル切り替えされたときに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th>既定のアクション</th>
-      <td>
-        {{HtmlElement("details")}} 要素の
-        <code>open</code> の状態をトグル切り替えする。
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+> **メモ:** `toggle` イベントは {{domxref("HTMLElement")}} においても別な形で利用できます。こちらは、[ポップオーバー要素](/ja/docs/Web/API/Popover_API)が表示または非表示にされた直後に発行されます。詳しくは、`HTMLElement` の {{domxref("HTMLElement.toggle_event", "toggle")}} イベントのページをご覧ください。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("toggle", (event) => {});
+
+ontoggle = (event) => {};
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -43,24 +35,27 @@ slug: Web/API/HTMLDetailsElement/toggle_event
 
 ```html
 <aside id="log">
-  <b>Open chapters:</b>
+  <p>Open chapters:</p>
   <div data-id="ch1" hidden>I</div>
   <div data-id="ch2" hidden>II</div>
   <div data-id="ch3" hidden>III</div>
 </aside>
 <section id="summaries">
-  <b>Chapter summaries:</b>
+  <p>Chapter summaries:</p>
   <details id="ch1">
     <summary>Chapter I</summary>
-    Philosophy reproves Boethius for the foolishness of his complaints against Fortune. Her very nature is caprice.
+    Philosophy reproves Boethius for the foolishness of his complaints against
+    Fortune. Her very nature is caprice.
   </details>
   <details id="ch2">
     <summary>Chapter II</summary>
-    Philosophy in Fortune's name replies to Boethius' reproaches, and proves that the gifts of Fortune are hers to give and to take away.
+    Philosophy in Fortune's name replies to Boethius' reproaches, and proves
+    that the gifts of Fortune are hers to give and to take away.
   </details>
   <details id="ch3">
     <summary>Chapter III</summary>
-    Boethius falls back upon his present sense of misery. Philosophy reminds him of the brilliancy of his former fortunes.
+    Boethius falls back upon his present sense of misery. Philosophy reminds him
+    of the brilliancy of his former fortunes.
   </details>
 </section>
 ```
@@ -88,12 +83,12 @@ body {
 ```js
 function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
-  item.toggleAttribute('hidden');
+  item.toggleAttribute("hidden");
 }
 
-const chapters = document.querySelectorAll('details');
+const chapters = document.querySelectorAll("details");
 chapters.forEach((chapter) => {
-  chapter.addEventListener('toggle', logItem);
+  chapter.addEventListener("toggle", logItem);
 });
 ```
 
@@ -107,4 +102,4 @@ chapters.forEach((chapter) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLDetailsElement.toggle_event")}}
+{{Compat}}

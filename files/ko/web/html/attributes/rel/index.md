@@ -242,7 +242,7 @@ original_slug: Web/HTML/Link_types
           또는 시작 화면 플레이스 홀더에 사용할 아이콘을 고를 때, 다른 모바일
           브라우저와는 달리 <code>icon</code> 링크 유형은 물론
           {{htmlattrxref("sizes","link")}} 특성을 사용하지 않습니다.
-          대신, 각각에 대응ㅇ하는 비표준
+          대신, 각각에 대응하는 비표준
           <a
             class="external external-icon"
             href="https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"

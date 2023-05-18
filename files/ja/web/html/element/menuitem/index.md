@@ -54,21 +54,21 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。特に `title` 属性はコマンドの説明やヒントを出すのに使われます。
 
-- {{HTMLAttrDef("checked")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `checked` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : コマンドが選択されているか否かを示す論理属性。`type` 属性が `checkbox` または `radio` のときのみ使われます。
-- {{HTMLAttrDef("command")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `command` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 別の要素の ID を指定して、間接的に実行するコマンドを示します。 `checked`, `disabled`, `icon`, `label`, `radiogroup`, `type` 属性も含むメニューアイテムで使用してはいけません。
-- {{HTMLAttrDef("default")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `default` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : この論理属性は、メニューのサブジェクト要素 (`button` や `input` など) と同じコマンドを使用することを示します。
-- {{HTMLAttrDef("disabled")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `disabled` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の状態ではコマンドを使用できないことを示す論理属性です。`disabled` は `hidden` とは異なりますので注意してください。`disabled` 属性は、状態の変化によってコマンドが妥当になる状況で適切です。
-- {{HTMLAttrDef("icon")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `icon` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : コマンドを表す画像を提供するために、画像の URL を指定します。
-- {{HTMLAttrDef("label")}}
+- `label`
   - : ユーザーに表示する、コマンドの名前です。`command` 属性を提供しない場合は必須です。
-- {{HTMLAttrDef("radiogroup")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `radiogroup` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : この属性は、選択されたときにラジオボタンを切り替えるコマンドのグループの名前を指定します。`type` 属性が `radio` である場合に限り使用できます。
-- {{HTMLAttrDef("type")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- `type` {{Deprecated_Inline}} {{Non-standard_Inline}}
 
   - : この属性は、コマンドの種類を以下の 3 つの値のいずれかで示すことができます。
 

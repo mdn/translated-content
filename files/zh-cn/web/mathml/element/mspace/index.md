@@ -47,7 +47,7 @@ MathML\<mspace>元素用来表示一段空白，空白的大小由它自身的�
 
 ## Gecko 说明
 
-- [Indentation attributes](http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) 暂时没有实现 (for Gecko see {{ bug("534962") }}).
+- [Indentation attributes](http://www.w3.org/TR/MathML3/chapter3.html#presm.lbindent.attrs) 暂时没有实现 (for Gecko see [Firefox bug 534962](https://bugzil.la/534962)).
 - 从 Gecko 23.0 开始实现了对`width`属性负值的支持。
 
 ## 相关链接

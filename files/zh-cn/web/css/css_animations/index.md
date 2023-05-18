@@ -75,10 +75,6 @@ CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{Experimental_Inline}} CSS 滚动时间线 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性，以及 {{cssxref('scroll-timeline')}} 简写属性，创建与滚动容器的滚动偏移相关的动画。

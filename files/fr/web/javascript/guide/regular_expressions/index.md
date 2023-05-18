@@ -1,6 +1,6 @@
 ---
 title: Expressions rationnelles
-slug: Web/JavaScript/Guide/Regular_Expressions
+slug: Web/JavaScript/Guide/Regular_expressions
 tags:
   - Guide
   - Intermédiaire

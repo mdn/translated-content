@@ -24,13 +24,13 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - The CSS {{ cssxref("word-break") }} property has been implemented.
 - The {{ cssxref("border-image") }} property has been updated to match the latest Specification and properties have been unprefixed. ([bug 713643](https://bugzilla.mozilla.org/show_bug.cgi?id=713643))
 - The `skew()` {{cssxref("transform")}} function dropped in Firefox 14 has been restored due to existing site compatibility. Authors are however, advised to use `skewX()` and `skewY(`) functions instead.
-- The value `plaintext` of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ({{bug("746987")}}).
+- The value `plaintext` of CSS {{cssxref("unicode-bidi")}} property now applies to inline elements too. ([Firefox bug 746987](https://bugzil.la/746987)).
 
 ### DOM
 
-- The DOM Events Level 3 methods [`KeyboardEvent.getModifierState()`](/zh-CN/DOM/KeyboardEvent#getModifierState%28%29) and [`MouseEvent.getModifierState()`](/zh-CN/DOM/MouseEvent#getModifierState%28%29), which let you query the state of modifier keys, like `Ctrl` or `Shift`, have been implemented (bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) and [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ({{ bug("769190") }}).
+- The DOM Events Level 3 methods [`KeyboardEvent.getModifierState()`](/zh-CN/DOM/KeyboardEvent#getModifierState%28%29) and [`MouseEvent.getModifierState()`](/zh-CN/DOM/MouseEvent#getModifierState%28%29), which let you query the state of modifier keys, like `Ctrl` or `Shift`, have been implemented (bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) and [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)). But the behavior conforms to the latest D3E draft. So, some modifier key names are different from IE ([Firefox bug 769190](https://bugzil.la/769190)).
 - On mouse events, support for querying the state of the mouse buttons using the [`MouseEvent.buttons`](/zh-CN/DOM/MouseEvent) attribute, has been implemented.
-- On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/zh-CN/DOM/KeyboardEvent#Attributes_location) attribute, has been implemented ({{ bug("166240") }}).
+- On keyboard events, support for querying the key location (standard, left or right of modifier key, in the Numpad) using the [KeyboardEvent.location](/zh-CN/DOM/KeyboardEvent#Attributes_location) attribute, has been implemented ([Firefox bug 166240](https://bugzil.la/166240)).
 - KeyboardEvent.keycode result has been computed from better rules which were almost same on Windows/Linux/Mac. And now they are available on some keyboard layouts which are not ASCII capable layouts on Linux and Mac, such as Arabic, Cyrillic, Thai and so on. See [the document for virtual key codes](/zh-CN/DOM/KeyboardEvent#Virtual_key_codes).
 - The [`range.detach()`](/zh-CN/DOM/range.detach) method has been transformed in a no-op and will probably be removed in the future.
 - The method `HTMLVideoElement.mozHasAudio()` has been implemented. It indicates if there is an audio track associated to a given video element. ([bug 480376](https://bugzilla.mozilla.org/show_bug.cgi?id=480376))
@@ -41,7 +41,7 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - The [`Blob`](/zh-CN/DOM/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
 - The {{domxref("DeviceLightEvent")}} specified in the [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) has been implemented.
 - The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} [Proximity Events](http://www.w3.org/TR/proximity/) have been implemented.
-- The {{domxref("File")}} `lastModifiedDate` property has been implemented. ({{bug("673586")}})
+- The {{domxref("File")}} `lastModifiedDate` property has been implemented. ([Firefox bug 673586](https://bugzil.la/673586))
 
 ### JavaScript
 
@@ -58,12 +58,12 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 
 - Mathematical operators can now use downloadable fonts specified with {{ cssxref("@font-face") }}. This makes the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) work with stretchy operators too.
 - The `selection` attribute of the {{ MathMLElement("maction") }} is now only taken into account with the `toggle` actiontype.
-- [Deprecated namedspace binding](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ({{ bug("673759") }}).
+- [Deprecated namedspace binding](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) has been removed ([Firefox bug 673759](https://bugzil.la/673759)).
 - Supported syntax for [Length](/zh-CN/MathML/Attributes/Values) and {{ MathMLElement("mpadded") }} values have been made closer to the one specified in MathML3 spec.
 
 ### SVG
 
-- Added support for the {{SVGElement("view")}} element ({{bug("512525")}}).
+- Added support for the {{SVGElement("view")}} element ([Firefox bug 512525](https://bugzil.la/512525)).
 
 ### Network
 

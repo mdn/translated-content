@@ -50,17 +50,17 @@ slug: Web/HTML/Element/keygen
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("autofocus")}}
+- `autofocus`
   - : この論理属性で、ユーザーが別のコントロールに入力するなどして変更しない限り、ページ読み込み時にこのコントロールがフォーカスを持つべきであることを指定できます。文書内のフォーム要素でひとつだけが `autofocus` 属性を持つことができ、これは真偽値です。
-- {{HTMLAttrDef("challenge")}}
+- `challenge`
   - : 公開鍵とともに送信するチャレンジ文字列です。指定しない場合の既定値は空文字列です。
-- {{HTMLAttrDef("disabled")}}
+- `disabled`
   - : この論理属性は、フォームコントロールと対話できないことを示します。
-- {{HTMLAttrDef("form")}}
+- `form`
   - : この要素が関連づけられた form 要素 (*フォームオーナー*)。属性の値は同一文書内の {{HTMLElement("form")}} 要素の `id` 属性の値でなければなりません。この属性を指定しない場合、この要素は {{HTMLElement("form")}} 要素の子孫要素として配置しなければなりません。この属性は `<keygen>` 要素を form 要素の子孫としてだけでなく、文書内のどこにでも配置することを可能にします。
-- {{HTMLAttrDef("keytype")}}
+- `keytype`
   - : 生成する鍵の種類。既定値は `RSA` です。
-- {{HTMLAttrDef("name")}}
+- `name`
   - : コントロールの名前であり、フォームデータとともに送信されます。
 
 この要素は以下のように記述します。

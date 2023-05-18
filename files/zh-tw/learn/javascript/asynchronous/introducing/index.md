@@ -30,12 +30,12 @@ slug: Learn/JavaScript/Asynchronous/Introducing
 我們在前一個學習單元所看到的大部分功能都是同步的——當跑一段程式碼，瀏覽器會將執行結果盡快的回傳。我們來看看一則簡單的範例（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html)，[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html)）：
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  alert('你點擊了我！');
+const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+  alert("你點擊了我！");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = '這是一段新加的文字。';
+  let pElem = document.createElement("p");
+  pElem.textContent = "這是一段新加的文字。";
   document.body.appendChild(pElem);
 });
 ```
@@ -45,10 +45,10 @@ btn.addEventListener('click', () => {
 1. 我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
 2. 我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
 
-    1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
-    2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
-    3. 給予一段文字內容。
-    4. 最後，我們將文字段落嵌在文件本體（ document body ）上。
+   1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
+   2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
+   3. 給予一段文字內容。
+   4. 最後，我們將文字段落嵌在文件本體（ document body ）上。
 
 當正在執行每一個操作時，什麼事情都不會發生——渲染暫時停止。我們在[上一篇文章](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)有提到，這是因為 [Javascript 是跑在一條單執行緒](/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded)。主執行緒在同一時間只能做一件事情，直到目前操作完成為止其他的操作都會暫停。
 
@@ -69,7 +69,7 @@ btn.addEventListener('click', () => {
 為什麼同步的程式碼很難做到這些事？我們快速地看個例子。當你想要從伺服器抓取一張影像，你是沒有辦法馬上獲得結果的。這個意思是下面的程式碼（虛擬碼）是行不通的：
 
 ```js
-let response = fetch('myImage.png'); // fetch is asynchronous
+let response = fetch("myImage.png"); // fetch is asynchronous
 let blob = response.blob();
 // display your image blob in the UI somehow
 ```
@@ -85,11 +85,11 @@ let blob = response.blob();
 一個非同步回呼的例子就是作為在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的第二個參數（正如我們在之前的例子看到的）：
 
 ```js
-btn.addEventListener('click', () => {
-  alert('你點擊了我！');
+btn.addEventListener("click", () => {
+  alert("你點擊了我！");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = '這是一段新加的文字。';
+  let pElem = document.createElement("p");
+  pElem.textContent = "這是一段新加的文字。";
   document.body.appendChild(pElem);
 });
 ```
@@ -103,10 +103,10 @@ btn.addEventListener('click', () => {
 ```js
 function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
+  xhr.open("GET", url);
   xhr.responseType = type;
 
-  xhr.onload = function() {
+  xhr.onload = function () {
     callback(xhr.response);
   };
 
@@ -116,12 +116,12 @@ function loadAsset(url, type, callback) {
 function displayImage(blob) {
   let objectURL = URL.createObjectURL(blob);
 
-  let image = document.createElement('img');
+  let image = document.createElement("img");
   image.src = objectURL;
   document.body.appendChild(image);
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);
+loadAsset("coffee.jpg", "blob", displayImage);
 ```
 
 在這裡我們新增一個 `displayImage()` 函式，將 blob 做為一個參數傳進去函式來產生物件網址，然後建立一個可以用網址來顯示的影像，並將這個網址附加在 document 的 `<body>` 標籤內。然而，我們再新增一個 `loadAsset()` 函式，將回呼作為參數並伴隨抓取資源的網址以及內容型式傳進去函式。它使用 `XMLHttpRequest` （通常縮寫成「 XHR 」）根據網址去抓取資源，並將回傳結果傳送到回呼去做一些事情。在這個例子回呼正在等待 XHR 完成下載資源（使用 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/onload) 事件處理器）後，再將資源傳遞給回呼。
@@ -131,10 +131,10 @@ loadAsset('coffee.jpg', 'blob', displayImage);
 注意不是所有的回呼都是非同步的——有些是跑在同步上。有個例子是當我們使用 {{jsxref("Array.prototype.forEach()")}} 在陣列裡面用迴圈來遍歷每一個項目（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html)，[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html)）：
 
 ```js
-const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+const gods = ["Apollo", "Artemis", "Ares", "Zeus"];
 
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
+gods.forEach(function (eachName, index) {
+  console.log(index + ". " + eachName);
 });
 ```
 
@@ -145,14 +145,17 @@ gods.forEach(function (eachName, index){
 Promise 是作為非同步程式碼的一種新風格樣式，你將會在現代 Web API 看到這種用法。一個好例子是 [`fetch()`](/zh-TW/docs/Web/API/fetch) API ，它基本上就像更新穎、更有效率版本的 {{domxref("XMLHttpRequest")}} 。我們藉由[從伺服器提取資料](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)這一篇文章快速地來看一個例子吧：
 
 ```js
-fetch('products.json').then(function(response) {
-  return response.json();
-}).then(function(json) {
-  let products = json;
-  initialize(products);
-}).catch(function(err) {
-  console.log('Fetch problem: ' + err.message);
-});
+fetch("products.json")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (json) {
+    let products = json;
+    initialize(products);
+  })
+  .catch(function (err) {
+    console.log("Fetch problem: " + err.message);
+  });
 ```
 
 > **備註：** 你可以在 GitHub （[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js)，[線上範例](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)）找到最終版本。
@@ -186,22 +189,27 @@ Promise 和舊式的回呼有一些相似點。他們本質上都是回傳一個
 我們來探索一個可以更進一步說明非同步程式碼天性的範例，並說明當我們無法充分了解程式碼的執行順序以及嘗試將非同步程式碼當作同步程式碼會發生什麼事。底下的範例和我們之前看到的相當相似（ [線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync.html)，[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html)）。區別在於我們加入一些 {{domxref("console.log()")}} 來說明程式碼是否會依照你以為的順序來執行。
 
 ```js
-console.log ('Starting');
+console.log("Starting");
 let image;
 
-fetch('coffee.jpg').then((response) => {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) => {
-  let objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) => {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
+fetch("coffee.jpg")
+  .then((response) => {
+    console.log("It worked :)");
+    return response.blob();
+  })
+  .then((myBlob) => {
+    let objectURL = URL.createObjectURL(myBlob);
+    image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((error) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + error.message
+    );
+  });
 
-console.log ('All done!');
+console.log("All done!");
 ```
 
 瀏覽器將開始執行程式碼，看到第一行顯示 `Starting` 的 `console.log()` 並執行它，接著新增一個 `image` 變數。
@@ -219,7 +227,7 @@ console.log ('All done!');
 ```js
 console.log("registering click handler");
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   console.log("get click");
 });
 
@@ -233,7 +241,7 @@ console.log("all done");
 為了看這個動作，試著在本地複製我們的[程式碼](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html)，並將最後的 `console.log()` 的呼叫改成底下的方式：
 
 ```js
-console.log ('All done! ' + image.src + 'displayed.');
+console.log("All done! " + image.src + "displayed.");
 ```
 
 你應該會在控制台收到一個錯誤的訊息：

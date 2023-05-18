@@ -3,7 +3,7 @@ title: max-width
 slug: Web/CSS/max-width
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 摘要
 

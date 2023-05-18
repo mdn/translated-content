@@ -15,7 +15,7 @@ border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以�
 
 ## Constituent properties 屬性組成
 
-border-color簡寫的屬性值內容由以下CSS的屬性值構成。
+border-color 簡寫的屬性值內容由以下 CSS 的屬性值構成。
 
 - [`border-bottom-color`](/zh-TW/docs/Web/CSS/border-bottom-color)
 - [`border-left-color`](/zh-TW/docs/Web/CSS/border-left-color)
@@ -32,7 +32,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* top | left and right | bottom */
-border-color: red rgb(240,30,50,.7) green;
+border-color: red rgb(240, 30, 50, 0.7) green;
 
 /* top | right | bottom | left */
 border-color: red yellow green blue;
@@ -67,14 +67,15 @@ border-color: unset;
 
 ## 範例
 
-### 完整的border-color簡寫使用
+### 完整的 border-color 簡寫使用
 
 #### HTML
 
 ```html
 <div id="justone">
   <p><code>border-color: red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: red;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -82,7 +83,8 @@ border-color: unset;
 </div>
 <div id="horzvert">
   <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: gold;</code></li>
+  <ul>
+    <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: red;</code></li>
@@ -90,7 +92,8 @@ border-color: unset;
 </div>
 <div id="topvertbott">
   <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: gold;</code></li>
     <li><code>border-left-color: cyan;</code></li>
@@ -98,7 +101,8 @@ border-color: unset;
 </div>
 <div id="trbl">
   <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul><li><code>border-top-color: red;</code></li>
+  <ul>
+    <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
     <li><code>border-bottom-color: black;</code></li>
     <li><code>border-left-color: gold;</code></li>
@@ -154,8 +158,8 @@ ul {
 
 ## 參見
 
-- 與border-color相關的CSS屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}。
+- 與 border-color 相關的 CSS 屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}。
 - 其他框線屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
 - 資料型態 {{CSSxRef("&lt;color&gt;")}}
 - 其他顏色相關屬性：{{CSSxRef("color")}}、{{CSSxRef("background-color")}}、{{CSSxRef("outline-color")}}、{{CSSxRef("text-decoration-color")}}、{{CSSxRef("text-emphasis-color")}}、{{CSSxRef("text-shadow")}}、{{CSSxRef("caret-color")}}、{{CSSxRef("column-rule-color")}}
-- [以CSS指定HTML元件的顏色](/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color)
+- [以 CSS 指定 HTML 元件的顏色](/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color)

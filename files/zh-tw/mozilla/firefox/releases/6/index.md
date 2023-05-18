@@ -53,9 +53,11 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - [Server-sent events](/zh-TW/Server-sent_events)
   - : Server-sent events make it possible for a web application to ask a server to send events just like any locally-created DOM event.
 
+<!---->
+
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
 - [`BlobBuilder`](/zh-TW/docs/Web/API/BlobBuilder) is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The [`document.height`](/zh-TW/docs/Web/API/Document/height) and [元素的寬度有多少像素。">`document.width`](/zh-TW/docs/Web/API/Document/width) have been removed. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
+- The [`document.height`](/zh-TW/docs/Web/API/Document/height) and [`document.width`](/zh-TW/docs/Web/API/Document/width) have been removed. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - The [`DocumentType`](/zh-TW/docs/Web/API/DocumentType) object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/zh-TW/DOM/window.onhashchange#The_hashchange_event).
@@ -96,6 +98,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 - [WebSockets](/zh-TW/WebSockets)
   - : WebSockets was updated to protocol version 07 for Firefox 6. In addition, the global `WebSocket` object has been renamed to `MozWebSocket` to prevent it from incorrectly being used to detect the availability of unprefixed WebSockets.
+
+<!---->
 
 - Parsing of the `Content-Disposition` header has been fixed to properly interpret backslash-escaped ASCII characters as just that character itself. Previously it was incorrectly replacing that character with an underscore ("\_").
 - The value of the path field on `Set-Cookie` headers is now interpreted correctly when quotes are used; previously, they were being treated as part of the path string instead of as delimiters. **This change may affect compatibility with some web sites**, so authors should check their code.

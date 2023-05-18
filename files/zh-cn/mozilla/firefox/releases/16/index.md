@@ -13,8 +13,8 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 
 - The {{HTMLElement("meter")}} element is now supported.
 - Support for the HTML Microdata API has been added. ([bug 591467](https://bugzilla.mozilla.org/show_bug.cgi?id=591467))
-- {{HTMLElement("canvas")}} now supports the CSS `currentColor` in all case. ({{bug("629882")}})
-- {{HTMLElement("input")}} now allows filtering based on arbitrary mimetypes in `accept` ({{bug("565274")}}).
+- {{HTMLElement("canvas")}} now supports the CSS `currentColor` in all case. ([Firefox bug 629882](https://bugzil.la/629882))
+- {{HTMLElement("input")}} now allows filtering based on arbitrary mimetypes in `accept` ([Firefox bug 565274](https://bugzil.la/565274)).
 - Two new attributes, `width` and `height` have been added to the {{HTMLElement("input")}} element ([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855)).
 
 ### CSS
@@ -31,7 +31,7 @@ Firefox 16 shipped on October 9, 2012. This article lists key changes that are u
 - On screen, for [media queries](/zh-CN/docs/CSS/Media_queries), `dppx`, `dpi`, and `dpcm` are now representing values based on CSS pixels and no more with the physical units ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390)).
 - Three new pseudo-classes `:-moz-meter-optimum`, `:-moz-meter-sub-optimum`, and `:-moz-meter-sub-sub-optimum` have been added for accessing/styling a {{HTMLElement("meter")}} element in a paraticular state ([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238)).
 - The {{cssxref("-moz-appearance")}} property gains two new values: `meterbar` and `meterchunk`. They represent components inside the {{HTMLElement("meter")}} element ([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999)).
-- The {{cssxref("min-width")}} and {{cssxref("min-height")}} now supports the `auto`keyword for flex items (and resolves to `0` for other items) ({{bug("763689")}}).
+- The {{cssxref("min-width")}} and {{cssxref("min-height")}} now supports the `auto`keyword for flex items (and resolves to `0` for other items) ([Firefox bug 763689](https://bugzil.la/763689)).
 
 ### API/DOM
 
@@ -80,7 +80,7 @@ _No change_
 
 ### 修改接口
 
-`nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ({{bug("761613")}})
+`nsIPrivateDOMEvent` has been merged into `nsIDOMEvent`. ([Firefox bug 761613](https://bugzil.la/761613))
 
 #### 新增接口
 

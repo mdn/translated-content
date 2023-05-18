@@ -5,7 +5,7 @@ slug: Web/CSS/:optional
 
 {{ CSSRef }}
 
-**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{ htmlattrxref("required", "input") }} 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
+**`:optional`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性が設定されていない {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素を表します。
 
 ```css
 /* 任意の <input> をすべて選択 */
@@ -70,7 +70,7 @@ input:optional {
 
 ## アクセシビリティの考慮
 
-[フォーム](/ja/docs/Web/HTML/Element/form)に必須ではない {{htmlelement("input")}} が含まれている場合、必須の入力欄には {{ htmlattrxref("required", "input") }} 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
+[フォーム](/ja/docs/Web/HTML/Element/form)に必須ではない {{htmlelement("input")}} が含まれている場合、必須の入力欄には [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
 
 必須の入力欄を視覚的に示すのに、色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
 

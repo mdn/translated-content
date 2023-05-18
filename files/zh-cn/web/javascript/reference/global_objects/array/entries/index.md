@@ -17,7 +17,7 @@ entries()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CNs/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
+一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
 ## 描述
 
@@ -98,10 +98,10 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.entries()")}}
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

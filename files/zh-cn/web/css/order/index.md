@@ -3,7 +3,7 @@ title: order
 slug: Web/CSS/order
 ---
 
-{{ CSSRef("CSS Flexible Boxes") }}
+{{CSSRef("CSS Flexible Boxes")}}
 
 ## 概述
 

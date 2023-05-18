@@ -28,7 +28,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な[\<color>](/ja/docs/Web/CSS/color_value)値を受け入れます。`background-color`は、要素の [**Content box**, **Padding box**](/ja/docs/Learn/CSS/Building_blocks/The_box_model#Parts_of_a_box) の範囲でコンテンツの下に広がります。
 
-次の例では、さまざまな色の値値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
+次の例では、さまざまな色の値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
 
 **利用可能な [\<color>](/ja/docs/Web/CSS/color_value) を使ってみましょう。**
 

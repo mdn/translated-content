@@ -3,7 +3,7 @@ title: CSS 层叠
 slug: Web/CSS/Cascade
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 层叠是 CSS 的一个基本特征，它是一个定义了如何合并来自多个源的属性值的算法。它在 CSS 处于核心地位，CSS 的全称层叠样式表正是强调了这一点。
 

@@ -5,7 +5,7 @@ slug: Web/API/HTMLAreaElement/referrerPolicy
 
 {{APIRef}}
 
-**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML {{htmlattrxref("referrerpolicy","area")}} 属性を反映します。
+**`HTMLAreaElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("area")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Element/area#referrerpolicy) 属性を反映します。
 
 ## 値
 

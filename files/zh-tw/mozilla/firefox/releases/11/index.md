@@ -47,8 +47,8 @@ _No change._
 
 ### WebSocket
 
-- [WebSocket](/zh-TW/docs/WebSockets) API now supports binary messages (see {{bug("676439")}}).
-- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see {{bug("666349")}} and {{bug("695635")}}).
+- [WebSocket](/zh-TW/docs/WebSockets) API now supports binary messages (see [Firefox bug 676439](https://bugzil.la/676439)).
+- Both the protocol and the API has been updated to the latest draft of the specification and the API has been unprefixed (see [Firefox bug 666349](https://bugzil.la/666349) and [Firefox bug 695635](https://bugzil.la/695635)).
 - Previously, messages sent and received using WebSockets in Firefox were limited to 16 MB in size; they may now be up to 2 GB (although memory capacity limitations may prevent them from being that large, Firefox supports it).
 
 ### IndexedDB

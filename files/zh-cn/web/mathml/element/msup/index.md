@@ -50,7 +50,7 @@ MathML **`<msup>`** 元素用于为表达式加上标。
 
 ### Gecko 说明
 
-- 从 Gecko 26.0 开始，不再支持使用 \<none /> 作为子元素。并且渲染结果和 {{MathMLElement("msub")}} 和 {{MathMLElement("mmultiscripts")}} 这些等价配置更加接近，同时修复了一个关于 superscriptshift 属性错误使用的问题 (参阅 {{bug("827713")}}).
+- 从 Gecko 26.0 开始，不再支持使用 \<none /> 作为子元素。并且渲染结果和 {{MathMLElement("msub")}} 和 {{MathMLElement("mmultiscripts")}} 这些等价配置更加接近，同时修复了一个关于 superscriptshift 属性错误使用的问题 (参阅 [Firefox bug 827713](https://bugzil.la/827713)).
 
 ## 参见
 

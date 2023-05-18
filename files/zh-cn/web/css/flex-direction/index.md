@@ -3,7 +3,7 @@ title: flex-direction
 slug: Web/CSS/flex-direction
 ---
 
-{{ CSSRef("CSS Flexible Boxes") }}
+{{CSSRef("CSS Flexible Boxes")}}
 
 [CSS](/zh-CN/docs/CSS) **`flex-direction`** 属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向 (正方向或反方向)。
 

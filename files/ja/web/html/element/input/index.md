@@ -398,7 +398,7 @@ l10n:
 
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
 
-    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は {{htmlattrxref("autocomplete","input")}} 属性で制御することができます。
+    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性で制御することができます。
 
 - `form`
 
@@ -450,7 +450,7 @@ l10n:
 
 - `min`
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された {{htmlattrxref("value", "input")}} がこれを下回った場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `min` 属性の値が数値でない場合は、要素に最小値は設定されません。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
     この値は `max` 属性の値以下である必要があります。 `min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、 `min` の値は適用されません。 `min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 

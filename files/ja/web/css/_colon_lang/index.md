@@ -14,7 +14,7 @@ p:lang(en) {
 }
 ```
 
-> **メモ:** HTML では、言語は {{htmlattrxref("lang")}} 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
+> **メモ:** HTML では、言語は [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
 
 ## 構文
 
@@ -64,6 +64,6 @@ p:lang(en) {
 ## 関連情報
 
 - 言語に関する擬似クラス: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML の {{htmlattrxref("lang")}} 属性
-- HTML の {{htmlattrxref("translate")}} 属性
+- HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性
+- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes#translate) 属性
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

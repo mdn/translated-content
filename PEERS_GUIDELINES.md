@@ -47,7 +47,7 @@ The review teams for each locale are:
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
   - [armanpwnz](https://github.com/armanpwnz)
-  - [captainspring](https://github.com/captainspring)
+  - [yanaklose](https://github.com/yanaklose)
   - [myshov](https://github.com/myshov)
   - [Saionaro](https://github.com/Saionaro)
   - [sashasushko](https://github.com/sashasushko)

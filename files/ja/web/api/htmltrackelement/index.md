@@ -14,15 +14,15 @@ slug: Web/API/HTMLTrackElement
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : HTML の {{htmlattrxref("kind", "track")}} 属性を反映した文字列で、使用する予定のテキストトラックを示します。可能な値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。
+  - : HTML の [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を反映した文字列で、使用する予定のテキストトラックを示します。可能な値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。
 - {{domxref("HTMLTrackElement.src")}}
-  - : HTML の {{htmlattrxref("src", "track")}} 属性を反映した文字列で、テキストトラックデータの在りかを示します。
+  - : HTML の [`src`](/ja/docs/Web/HTML/Element/track#src) 属性を反映した文字列で、テキストトラックデータの在りかを示します。
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : HTML の {{htmlattrxref("srclang", "track")}} 属性を反映した文字列で、テキストのトラックデータの言語を示します。
+  - : HTML の [`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を反映した文字列で、テキストのトラックデータの言語を示します。
 - {{domxref("HTMLTrackElement.label")}}
-  - : HTML の {{htmlattrxref("label", "track")}} 属性を反映した文字列で、トラックのユーザーが読めるタイトルを示します。
+  - : HTML の [`label`](/ja/docs/Web/HTML/Element/track#label) 属性を反映した文字列で、トラックのユーザーが読めるタイトルを示します。
 - {{domxref("HTMLTrackElement.default")}}
-  - : {{htmlattrxref("default", "track")}} 属性を反映した論理値で、ユーザーの環境設定で他のトラックがより適切であることが示されていない場合、そのトラックを有効にすることを示します。
+  - : [`default`](/ja/docs/Web/HTML/Element/track#default) 属性を反映した論理値で、ユーザーの環境設定で他のトラックがより適切であることが示されていない場合、そのトラックを有効にすることを示します。
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
   - : トラックの準備状態を示す `unsigned short` を返します。

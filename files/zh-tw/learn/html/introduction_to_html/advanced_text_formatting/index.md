@@ -50,11 +50,22 @@ Description lists use a different wrapper than the other list types — {{htmlel
 ```html
 <dl>
   <dt>soliloquy</dt>
-  <dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd>
+  <dd>
+    In drama, where a character speaks to themselves, representing their inner
+    thoughts or feelings and in the process relaying them to the audience (but
+    not to other characters.)
+  </dd>
   <dt>monologue</dt>
-  <dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd>
+  <dd>
+    In drama, where a character speaks their thoughts out loud to share them
+    with the audience and any other characters present.
+  </dd>
   <dt>aside</dt>
-  <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought or piece of additional background information.</dd>
+  <dd>
+    In drama, where a character shares a comment only with the audience for
+    humorous or dramatic effect. This is usually a feeling, thought or piece of
+    additional background information.
+  </dd>
 </dl>
 ```
 
@@ -81,13 +92,15 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">Bacon
+<textarea id="code" class="input">
+Bacon
 The glue that binds the world together.
 Eggs
 The glue that binds the cake together.
 Coffee
 The drink that gets the world running in the morning.
-A light brown color.</textarea>
+A light brown color.
+</textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -98,10 +111,11 @@ A light brown color.</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -125,13 +139,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<dl>\n  <dt>Bacon</dt>\n  <dd>The glue that binds the world together.</dd>\n  <dt>Eggs</dt>\n  <dd>The glue that binds the cake together.</dd>\n  <dt>Coffee</dt>\n  <dd>The drink that gets the world running in the morning.</dd>\n  <dd>A light brown color.</dd>\n</dl>";
   drawOutput();
 });
 
@@ -150,16 +165,23 @@ HTML also has features available for marking up quotations; which element you us
 If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) is quoted from somewhere else, you should wrap it inside a {{htmlelement("blockquote")}} element to signify this, and include a URL pointing to the source of the quote inside a [`cite`](/zh-TW/docs/Web/HTML/Element/blockquote#cite) attribute. For example, the following markup is taken from the MDN `<blockquote>` element page:
 
 ```html
-<p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<p>
+  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
+  extended quotation.
+</p>
 ```
 
 To turn this into a block quote, we would just do this:
 
 ```html
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 ```
 
@@ -172,8 +194,12 @@ Browser default styling will render this as an indented paragraph, as an indicat
 Inline quotations work in exactly the same way, except that they use the {{htmlelement("q")}} element. For example, the below bit of markup contains a quotation from the MDN `<q>` page:
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q></p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+</p>
 ```
 
 Browser default styling will render this as normal text put in quotes to indicate a quotation, like so:
@@ -185,18 +211,33 @@ Browser default styling will render this as normal text put in quotes to indicat
 The content of the [`cite`](/zh-TW/docs/Web/HTML/Element/blockquote#cite) attribute sounds useful, but unfortunately browsers, screenreaders, etc. don't really do much with it. There is no way to get the browser to display the contents of `cite`, without writing your own solution using JavaScript or CSS. If you want to make the source of the quotation available on the page, a better way to mark it up is put the {{htmlelement("cite")}} element next to the quote element. This is really meant to contain the name of the quote source — i.e. the name of the book, or name of the person that said the quote — but there is no reason why you couldn't link the text inside `<cite>` to the quote source in some way:
 
 ```html
-<p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-<cite>MDN blockquote page</cite></a>:
+<p>
+  According to the
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a
+  >:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
-  <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
-  Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+<blockquote
+  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  <p>
+    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+    an extended quotation.
+  </p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
-<cite>MDN q page</cite></a>.</p>
+<p>
+  The quote element — <code>&lt;q&gt;</code> — is
+  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+    >intended for short quotations that don't require paragraph breaks.</q
+  >
+  --
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+    <cite>MDN q page</cite></a
+  >.
+</p>
 ```
 
 Citations are styled in italic font by default. You can see this code at work in our [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html) example.
@@ -215,12 +256,14 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input"><p>Hello and welcome to my motivation page. As Confucius once said:</p>
+<textarea id="code" class="input">
+<p>Hello and welcome to my motivation page. As Confucius once said:</p>
 
 <p>It does not matter how slowly you go as long as you do not stop.</p>
 
 <p>I also love the concept of positive thinking, and The Need To Eliminate Negative Self Talk
-(as mentioned in Affirmations for Positive Thinking.)</p></textarea>
+(as mentioned in Affirmations for Positive Thinking.)</p></textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -231,10 +274,11 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -258,13 +302,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n  <p>It does not matter how slowly you go as long as you do not stop.</p>\n</blockquote>\n\n<p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>';
   drawOutput();
 });
 
@@ -279,9 +324,15 @@ window.addEventListener("load", drawOutput);
 Another fairly common element you'll meet when looking around the Web is {{htmlelement("abbr")}} — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term (included inside a [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) attribute.) Let's look at a couple of examples:
 
 ```html
-<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+<p>
+  We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our
+  web documents.
+</p>
 
-<p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+<p>
+  I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with
+  the chainsaw.
+</p>
 ```
 
 These will come out looking something like this (the expansion will appear in a tooltip when the term is hovered over):
@@ -298,7 +349,9 @@ For this simple active learning assignment, we'd like you to simply mark up an a
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input"><p>NASA sure does some exciting work.</p></textarea>
+<textarea id="code" class="input">
+<p>NASA sure does some exciting work.</p></textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -309,10 +362,11 @@ For this simple active learning assignment, we'd like you to simply mark up an a
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 5em;
   padding: 10px;
@@ -336,13 +390,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>';
   drawOutput();
 });
 
@@ -376,7 +431,10 @@ You will occasionally need to use superscript and subscript when marking up item
 
 ```html
 <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
-<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>
+  Caffeine's chemical formula is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.
+</p>
 <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 ```
 
@@ -407,10 +465,15 @@ para.onclick = function() {
   alert('Owww, stop poking me!');
 }</code></pre>
 
-<p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+<p>
+  You shouldn't use presentational elements like <code>&lt;font&gt;</code> and
+  <code>&lt;center&gt;</code>.
+</p>
 
-<p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
-
+<p>
+  In the above JavaScript example, <var>para</var> represents a paragraph
+  element.
+</p>
 
 <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
 
@@ -461,7 +524,9 @@ The basic example above just provides a simple machine readable date, but there 
 <!-- Date and time -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- Date and time with timezone offset-->
-<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<time datetime="2016-01-20T19:30+01:00"
+  >7.30pm, 20 January 2016 is 8.30pm in France</time
+>
 <!-- Calling out a specific week number-->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```

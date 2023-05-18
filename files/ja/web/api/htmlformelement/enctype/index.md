@@ -13,7 +13,7 @@ l10n:
 - `multipart/form-data`: {{HTMLElement("input")}} 要素にファイルデータをアップロードできるようにする型。
 - `text/plain`: 形式があいまいで、人間が読み取り可能なコンテンツであり、コンピューターで確実に解釈できるとは限りません。
 
-この値は {{htmlattrxref("formenctype", "button")}} 属性を {{HTMLElement("button")}} または {{HTMLElement("input")}} 要素に指定することで上書きすることができます。
+この値は [`formenctype`](/ja/docs/Web/HTML/Element/button#formenctype) 属性を {{HTMLElement("button")}} または {{HTMLElement("input")}} 要素に指定することで上書きすることができます。
 
 ## 値
 
