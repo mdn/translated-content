@@ -7,7 +7,7 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 对于使用过基于类的语言（如 Java 或 C++）的开发者来说，JavaScript 实在是有些令人困惑——JavaScript 是动态的且没有静态类型。
 
-当谈到继承时，JavaScript 只有一种结构：对象。每个对象（object）都有一个私有属性指向另一个名为原型（**prototype**）的对象。原型对象也有一个自己的原型，层层向上直到一个对象的原型为 `null`。根据定义，`null` 没有原型，并作为这个**原型链**（prototype chain）中的最后一个环节。可以改变原型链中的任何成员，甚至可以在运行时换出原型，因此 JavaScript 中不存在[静态分派](https://en.wikipedia.org/wiki/Static_dispatch)的概念。
+当谈到继承时，JavaScript 只有一种结构：对象。每个对象（object）都有一个私有属性指向另一个名为**原型**（prototype）的对象。原型对象也有一个自己的原型，层层向上直到一个对象的原型为 `null`。根据定义，`null` 没有原型，并作为这个**原型链**（prototype chain）中的最后一个环节。可以改变原型链中的任何成员，甚至可以在运行时换出原型，因此 JavaScript 中不存在[静态分派](https://en.wikipedia.org/wiki/Static_dispatch)的概念。
 
 尽管这种混杂通常被认为是 JavaScript 的弱点之一，但是原型继承模型本身实际上比经典模型更强大。例如，在原型模型的基础上构建经典模型（即[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的实现方式）相当简单。
 
