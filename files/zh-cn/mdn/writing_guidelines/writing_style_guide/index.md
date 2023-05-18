@@ -96,23 +96,23 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 让我们再看几个例子：
 
-- **错误：** A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.
-- **错误：** A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.
+- **错误**：A confirmation dialog appears, asking the user if he allows the Web page to make use of his Web cam.
+- **错误**：A confirmation dialog appears, asking the user if she allows the Web page to make use of her Web cam.
 
 这两句话使用的都是特定性别的表述方式，我们可以将其修改为性别中立的代词：
 
-- **正确：** A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.
+- **正确**：A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.
 
 > **备注：** MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用“they”、“them”、“their”、“theirs”）是可以接受的，也就是通常所说的“[单数形式的‘they’](https://en.wikipedia.org/wiki/Singular_they)”。
 
 或者使用复数形式的“users”：
 
-- **正确：** A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.
+- **正确**：A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.
 
 当然，最好的方法还是重写句子，去掉其中的代词：
 
-- **正确：** A confirmation dialog appears, requesting the user's permission for web cam access.
-- **正确：** A confirmation dialog box appears, which asks the user for permission to use the web cam.
+- **正确**：A confirmation dialog appears, requesting the user's permission for web cam access.
+- **正确**：A confirmation dialog box appears, which asks the user for permission to use the web cam.
 
 最后一种方法可能更好一些，因为它不但语法上更加正确，而且还能消除不同语言处理性别问题时所带来的复杂性，因为不同语言对性别的处理可能有不同的规则。因此这种方法无论是对读者（译注：意为阅读英语原文的非英语读者）还是翻译者来说都可以让翻译更简单。
 
@@ -168,30 +168,30 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 缩写是一个较长单词的缩短版本，而首字母缩写是使用短语中每个单词的第一个字母创造的新单词。本节介绍了缩写和首字母缩写的准则。
 
-- **扩展形式：** 在页面中第一次提到一个术语时，要展开用户可能不熟悉的缩略语。如果有疑问，就展开它——或者更好的是，把它链接到描述该技术的文章或[术语表](/zh-CN/docs/Glossary)条目。
+- **扩展形式**：在页面中第一次提到一个术语时，要展开用户可能不熟悉的缩略语。如果有疑问，就展开它——或者更好的是，把它链接到描述该技术的文章或[术语表](/zh-CN/docs/Glossary)条目。
 
-  - **正确：** "XUL (XML User Interface Language) is Mozilla's XML-based language..."
-  - **错误：** "XUL is Mozilla's XML-based language..."
+  - **正确**："XUL (XML User Interface Language) is Mozilla's XML-based language..."
+  - **错误**："XUL is Mozilla's XML-based language..."
 
 - **大写形式及句点：** 在这两种缩写中（包括国家和组织的缩写，如“US”、“UN”），请使用全大写且不要添加句号。
 
-  - **正确：** XUL
-  - **错误：** X.U.L.; Xul
+  - **正确**：XUL
+  - **错误**：X.U.L.; Xul
 
-- **拉丁文缩写：** 你可以在括号内的表达和注释中使用常见的拉丁文缩写（如 etc.、i.e.、e.g.）。在这些缩写中使用句号，后面是逗号或其他适当的标点符号。
+- **拉丁文缩写**：你可以在括号内的表达和注释中使用常见的拉丁文缩写（如 etc.、i.e.、e.g.）。在这些缩写中使用句号，后面是逗号或其他适当的标点符号。
 
-  - **正确：** Web browsers (e.g., Firefox) can be used ...
-  - **错误：** Web browsers e.g. Firefox can be used ...
-  - **错误：** Web browsers, e.g. Firefox, can be used ...
-  - **错误：** Web browsers, (eg: Firefox) can be used ...
+  - **正确**：Web browsers (e.g., Firefox) can be used ...
+  - **错误**：Web browsers e.g. Firefox can be used ...
+  - **错误**：Web browsers, e.g. Firefox, can be used ...
+  - **错误**：Web browsers, (eg: Firefox) can be used ...
 
   在普通的句子中（也就是注记文字或括号的外面），请使用与拉丁文缩写等价的英文单词或短语。
 
-  - **正确：** ... web browsers, and so on.
-  - **错误：** ... web browsers, etc.
+  - **正确**：... web browsers, and so on.
+  - **错误**：... web browsers, etc.
 
-  - **正确：** Web browsers such as Firefox can be used ...
-  - **错误：** Web browsers e.g. Firefox can be used ...
+  - **正确**：Web browsers such as Firefox can be used ...
+  - **错误**：Web browsers e.g. Firefox can be used ...
 
   以下表格总结了拉丁文缩写的含义和英文对应关系：
 
@@ -209,16 +209,16 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   >
   > 另外，如果你决定使用缩写，那么请确保*你*的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。
 
-- **缩写和缩略语的复数形式：** 当需要使用复数形式的缩写或缩略语时，直接在后面加上 _s_ 即可，请务必不要加撇号。
+- **缩写和缩略语的复数形式**：当需要使用复数形式的缩写或缩略语时，直接在后面加上 _s_ 即可，请务必不要加撇号。
 
-  - **正确：** CD-ROMs
-  - **错误：** CD-ROM's
+  - **正确**：CD-ROMs
+  - **错误**：CD-ROM's
 
 - **“Versus”、“vs.”和“v.”**：如果使用缩略语，“vs.”比“v.”更好，可以在标题中使用。在文本的其他地方，使用全拼形式“versus”。
 
-  - **正确：** this vs. that
-  - **错误：** this v. that
-  - **错误：** this versus that
+  - **正确**：this vs. that
+  - **错误**：this v. that
+  - **错误**：this versus that
 
 ### 大写
 
@@ -240,44 +240,44 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 ### 数字和数词
 
-- **逗号：** 应该仅在数字的位数大于等于 5 位时才使用逗号分隔符：
+- **逗号**：应该仅在数字的位数大于等于 5 位时才使用逗号分隔符：
 
-  - **正确：** 4000、54,000
-  - **错误：** 4,000、54000
+  - **正确**：4000、54,000
+  - **错误**：4,000、54000
 
-- **日期：** 请用“January 1, 1990”这样的形式来表达日期（不包括代码示例中的日期）。
+- **日期**：请用“January 1, 1990”这样的形式来表达日期（不包括代码示例中的日期）。
 
-  - **正确：** February 24, 1906
-  - **错误：** February 24th, 1906、24 February, 1906、24/02/1906
+  - **正确**：February 24, 1906
+  - **错误**：February 24th, 1906、24 February, 1906、24/02/1906
 
   或者你也可以使用“YYYY/MM/DD”的形式：
 
-  - **正确：** 1906/02/24
-  - **错误：** 02/24/1906、24/02/1906、02/24/06
+  - **正确**：1906/02/24
+  - **错误**：02/24/1906、24/02/1906、02/24/06
 
-- **年代：** 请使用“1990s”这种形式来表示年代，但不要使用撇号：
+- **年代**：请使用“1990s”这种形式来表示年代，但不要使用撇号：
 
-  - **正确**: 1920s
-  - **错误**: 1920's
+  - **正确**：1920s
+  - **错误**：1920's
 
-- **数词的复数：** 数词的复数直接在后面加“s”，同样不要使用撇号：
+- **数词的复数**：数词的复数直接在后面加“s”，同样不要使用撇号：
 
-  - **正确：** 486s
-  - **错误：** 486's
+  - **正确**：486s
+  - **错误**：486's
 
 ### 复数形式
 
 请使用英语风格的复数形式，不要使用拉丁文或希腊文的形式。
 
-- **正确：** syllabuses、octopuses
-- **错误：** syllabi、octopi
+- **正确**：syllabuses、octopuses
+- **错误**：syllabi、octopi
 
 ### 撇号和引号
 
 不要使用弯引号。在 MDN Web 文档中，我们只使用直角引号和直角撇号。这是因为我们需要选择一个或另一个来保证一致性。如果大括号或撇号进入代码片段，甚至是内联的代码片段，读者可能会复制和粘贴它们，期望它们能发挥作用（其实不会）。
 
-- **正确：** Please don't use "curly quotes."
-- **错误：** Please don’t use “curly quotes.”
+- **正确**：Please don't use "curly quotes."
+- **错误**：Please don’t use “curly quotes.”
 
 > **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
 
@@ -285,65 +285,65 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 下面的列表描述了一些我们需要注意逗号使用规则的常见情况：
 
-- **介绍性从句后：** 引导句是一个从属句，通常出现在一个句子的开头。在引导句后使用逗号，将其与后面的独立句分开。
+- **介绍性从句后**：引导句是一个从属句，通常出现在一个句子的开头。在引导句后使用逗号，将其与后面的独立句分开。
 
   - 示例 1：
-    - **正确：** "In this example, you will see how to use a comma."
-    - **错误：** "In this example you will see how to use a comma."
+    - **正确**："In this example, you will see how to use a comma."
+    - **错误**："In this example you will see how to use a comma."
   - 示例 2:
-    - **正确：** "If you are looking for guidelines, you have come to the right place."
-    - **错误：** "If you are looking for guidelines you have come to the right place."
+    - **正确**："If you are looking for guidelines, you have come to the right place."
+    - **错误**："If you are looking for guidelines you have come to the right place."
   - 示例 3：
-    - **正确：** "On mobile platforms, you tend to get a numeric keypad for entering data."
-    - **错误：** "On mobile platforms you tend to get a numeric keypad for entering data."
+    - **正确**："On mobile platforms, you tend to get a numeric keypad for entering data."
+    - **错误**："On mobile platforms you tend to get a numeric keypad for entering data."
 
-- **在连接词之前：** 串行逗号（也称为“牛津逗号”）是指在三个或更多项目的系列中出现在连词前的逗号。在 MDN Web 文档上，我们使用串行逗号。逗号还可以分隔列表中的每个项目。
+- **在连接词之前**：串行逗号（也称为“牛津逗号”）是指在三个或更多项目的系列中出现在连词前的逗号。在 MDN Web 文档上，我们使用串行逗号。逗号还可以分隔列表中的每个项目。
 
-  - **正确：** I will travel on trains, planes, and automobiles.
-  - **错误：** I will travel on trains, planes and automobiles.
+  - **正确**：I will travel on trains, planes, and automobiles.
+  - **错误**：I will travel on trains, planes and automobiles.
 
   在包含两个项目的列表中，不要在“and”或“or”之前使用逗号。
 
-  - **正确：** "My dog is cute and smart."
-  - **错误：** "My dog is cute, and smart."
+  - **正确**："My dog is cute and smart."
+  - **错误**："My dog is cute, and smart."
 
   如果连词“and”、“but”和“or”连接两个独立分句，则在其前面使用逗号。但是，如果句子在连词的作用下变得很长或很复杂，可以考虑将其改写成两个句子。
 
   - 示例 1：
-    - **正确：** "You can perform this step, but you need to pay attention to the file setting."
-    - **错误：** "You can perform this step but you need to pay attention to the file setting."
+    - **正确**："You can perform this step, but you need to pay attention to the file setting."
+    - **错误**："You can perform this step but you need to pay attention to the file setting."
   - 示例 2：
-    - **正确：** "My father is strict but loving."
-    - **错误：** "My father is strict, but loving."
+    - **正确**："My father is strict but loving."
+    - **错误**："My father is strict, but loving."
 
   > **备注：** 这种情况在翻译成简体中文时应将逗号翻译为顿号。“简体中文翻译指南”一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)”一节中也提到了这个问题。
 
 - **在“that”和“which”之前：** 限制性从句对句子的意义至关重要，不需要用逗号将其与其余句子隔开。限制性从句通常由“that”引入，**不应**在其前面加逗号。
 
-  - **正确：** "We have put together a course that includes all the essential information you need to work towards your goal."
-  - **错误：** "We have put together a course, that includes all the essential information you need to work towards your goal."
+  - **正确**："We have put together a course that includes all the essential information you need to work towards your goal."
+  - **错误**："We have put together a course, that includes all the essential information you need to work towards your goal."
 
   非限制性从句提供额外的信息，对句子的意思不是至关重要的。非限制性从句通常由“which”引入，前面应加一个逗号。
 
-  - **正确：** "You write a policy, which is an allowed list of origins for each feature."
-  - **错误：** "You write a policy which is an allowed list of origins for each feature."
+  - **正确**："You write a policy, which is an allowed list of origins for each feature."
+  - **错误**："You write a policy which is an allowed list of origins for each feature."
 
-- **在“such as”之前：** 如果“such as”是一个非限制性从句的一部分，而剩下的句子是一个独立的从句，在“such as”前使用逗号。
+- **在“such as”之前**：如果“such as”是一个非限制性从句的一部分，而剩下的句子是一个独立的从句，在“such as”前使用逗号。
 
   - **正确：** "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
   - **错误：** "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
 
   下面的例子显示了什么时候不能用逗号与“such as”搭配。在这里，包含“such as”的句子对句子的意义至关重要。
 
-  - **正确：** "Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
-  - **错误：** "Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
+  - **正确**："Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
+  - **错误**："Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
 
 ### 连字符
 
 当两个单词连起来组成另一个单词时，如果前一个单词的最后一个字母是元音字母，并且与后一个单词的第一个字母相同时，应使用连字符。
 
-- **正确：** re-elect、co-op、email
-- **错误：** reelect、coop、e&#45;mail
+- **正确**：re-elect、co-op、email
+- **错误**：reelect、coop、e&#45;mail
 
 ### 拼写形式
 
@@ -351,8 +351,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 一般来说，使用 [Dictionary.com](https://www.dictionary.com/) 中的第一个条目，除非该条目被列为变体拼写或主要用于非美国形式的英语中。例如，如果你[查找“behaviour”一词](https://www.dictionary.com/browse/behaviour)（在美式英语基础上增加了一个字母 _u_），你会发现“Chiefly British”（通常是英式英语）这个短语，后面还有一个链接到美式英语标准形式，[“behavior”](https://www.dictionary.com/browse/behavior)的链接。不要使用变体拼写。
 
-- **正确：** localize、behavior、color
-- **错误：** localise、behaviour、colour
+- **正确**：localize、behavior、color
+- **错误**：localise、behaviour、colour
 
 ### 术语
 
@@ -360,15 +360,15 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
   当文章中第一次出现某个元素的时候，应该用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
 
-  - **正确：** {{HTMLElement("span")}} element
-  - **错误：** span tag
+  - **正确**：{{HTMLElement("span")}} element
+  - **错误**：span tag
 
-- **Parameters 和 arguments：** MDN Web 文档上推荐使用 **parameters** 术语，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
+- **Parameters 和 arguments**：MDN Web 文档上推荐使用 **parameters** 术语，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
 
-- **用户界面操作：** 在说明一系列操作步骤时，应使用祈使语气来描述用户的操作，并用 UI 组件的名称和其元素类型来标识操作对象。
+- **用户界面操作**：在说明一系列操作步骤时，应使用祈使语气来描述用户的操作，并用 UI 组件的名称和其元素类型来标识操作对象。
 
-  - **正确：** "Click the Edit button."
-  - **错误：** "Click Edit."
+  - **正确**："Click the Edit button."
+  - **错误**："Click Edit."
 
 ### 语态
 
@@ -416,14 +416,14 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 
 > **备注：** 在添加外部链接之前，考虑在 MDN Web 文档内交叉引用内容。内部链接更容易维护，并使整个 MDN Web 文档对读者更有价值。
 
-- **良好的外部链接**： 好的外部链接能把读者带到相关的、持久的、被广泛信任的资源。你应该更倾向于添加链接到以下的外部内容：
+- **良好的外部链接**：好的外部链接能把读者带到相关的、持久的、被广泛信任的资源。你应该更倾向于添加链接到以下的外部内容：
 
   - 独特或不可缺少的（例如，IETF RFC）。
   - 对归属、引用或鸣谢是必要的（例如，作为知识共享署名的一部分）
   - 比起将这些内容纳入 MDN Web 文档本身，更有可能对该主题进行维护（例如，供应商的发布说明）。
   - 开源或社区驱动，就像 MDN Web 文档本身一样
 
-- **糟糕的外部链接**： 糟糕的外部链接缺乏相关性、可维护性、无障碍性，或者给读者带来障碍。避免添加指向外部内容的链接：
+- **糟糕的外部链接**：糟糕的外部链接缺乏相关性、可维护性、无障碍性，或者给读者带来障碍。避免添加指向外部内容的链接：
 
   - 通用的或不具体的（例如，一个供应商的主页，而不是相关的文档）。
   - 短暂的或未维护的（例如，一次性的公告）
@@ -471,7 +471,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 列表的格式应该在所有文章中保持一致，并且应在列表中恰当使用标点和结构合理的句子。不管是哪种类型的列表，都需要对格式进行适当的调整。下面的内容说明了每种列表之间的不同。
 
-- **无序列表：** 应使用无序列表来分组相关的简明信息。列表中的每个项目都应遵循类似的句子结构。列举式清单中的句子和短语（即缺少动词或主语或两者的句子片段）应包括标准的标点符号——句子以句号结束，短语则没有。
+- **无序列表**：应使用无序列表来分组相关的简明信息。列表中的每个项目都应遵循类似的句子结构。列举式清单中的句子和短语（即缺少动词或主语或两者的句子片段）应包括标准的标点符号——句子以句号结束，短语则没有。
 
   如果一个列表项中有多个句子，则每个句子的末尾必须有一个句号，包括该项目最后一个句子，就像段落中所期望的那样。这是一个结构正确的项目列表的例子：
 
@@ -492,7 +492,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
   如果一个或多个列表项是完整的句子，在每个列表项后都使用句号，即使一个列表项包含三个或更少的单词。然而，尽可能对一个列表中的所有项目采用相同的结构；确保所有列表项目都是完整的句子或短语。
 
-- **有序列表：** 编号列表主要用于列举一套指令中的步骤。因为指示可能很复杂，所以清晰是首要任务，特别是当每个列表中的文字很冗长时。与无序列表一样，要遵循标准的标点符号用法。这是一个结构正确的编号列表的例子：
+- **有序列表**：编号列表主要用于列举一套指令中的步骤。因为指示可能很复杂，所以清晰是首要任务，特别是当每个列表中的文字很冗长时。与无序列表一样，要遵循标准的标点符号用法。这是一个结构正确的编号列表的例子：
 
   > In order to correctly structure a numbered list, you should:
   >
@@ -568,25 +568,25 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 
 在撰写标题时，请牢记以下准则：
 
-- **大写风格：** 在 MDN Web 文档中，页面标题和章节标题应使用分句式大写（仅大写第一个单词和专有名词），而不是标题式大写：
+- **大写风格**：在 MDN Web 文档中，页面标题和章节标题应使用分句式大写（仅大写第一个单词和专有名词），而不是标题式大写：
 
-  - **正确**: "A new method for creating JavaScript rollovers"
-  - **错误**: "A New Method for Creating JavaScript Rollovers"
+  - **正确**："A new method for creating JavaScript rollovers"
+  - **错误**："A New Method for Creating JavaScript Rollovers"
 
   我们还有很多旧的页面是在这条规范确立之前就已经发布了的。所以只要你愿意，你随时可以更新它们的标题。我们也正在逐步完善它们。
-- **通用原则：** 决定你要记录什么，以及你将如何组织这些内容，是写作的第一步。写一个目录可以帮助你决定如何安排信息。先介绍简单的概念，然后再介绍更复杂和高级的概念。先讲概念性的信息，然后再讲面向行动的主题。
+- **通用原则**：决定你要记录什么，以及你将如何组织这些内容，是写作的第一步。写一个目录可以帮助你决定如何安排信息。先介绍简单的概念，然后再介绍更复杂和高级的概念。先讲概念性的信息，然后再讲面向行动的主题。
 
   在为页面和章节或分节撰写标题时，请牢记以下准则：
 
-  - **由上至下：** 如[标题级别](#标题级别)部分所述，从较高的 `##` 到较低的 `####`，不要跳级。使用较高层次的标题作为较广泛的介绍性标题，并在进入较低层次的标题时使用更具体的标题。
-  - **按逻辑分组：** 确保所有相关的小节都在一个较高层次的标题下有逻辑地组合在一起。命名各部分的标题可以帮助你完成这项工作。
-  - **保持标题简短：** 较短的标题更容易在文本和目录中粗读。
-  - **保持标题具体：** 使用标题来表达本节将涉及的具体信息。例如，对于介绍 HTML 元素的章节，使用标题“HTML 元素”，而不是“介绍”或“概述”。
-  - **保持标题的重点：** 使用标题来表达一个目标——该部分将涉及的一个想法或概念。为此，尽可能不要在标题中使用连词“and”。
-  - **使用平行结构：** 在同一标题层次上，使用类似的语言作为标题。例如，如果一个 `###` 标题级别的标题使用动名词，即以“-ing”结尾的词，如“Installing”，那么尽量将该标题级别的所有标题都使用动名词。如果一个标题以祈使动词开头，如“Use”、“Configure”，那么该标题层的所有标题都以祈使动词开头。
-  - **避免在较低层次的标题中使用普通术语：** 不要在下级标题中重复上级标题中的文字。例如，在一个标题为“Commas”的章节中，将一个小节的标题命名为“After introductory clauses”，而不是“Commas after introductory clauses”。
-  - **不要以冠词开头：** 避免以冠词“a”、“an”或“the”开始标题。
-  - **添加引导性信息：** 在标题之后，添加一些介绍性的文字，解释该部分将涉及的内容。
+  - **由上至下**：如[标题级别](#标题级别)部分所述，从较高的 `##` 到较低的 `####`，不要跳级。使用较高层次的标题作为较广泛的介绍性标题，并在进入较低层次的标题时使用更具体的标题。
+  - **按逻辑分组**：确保所有相关的小节都在一个较高层次的标题下有逻辑地组合在一起。命名各部分的标题可以帮助你完成这项工作。
+  - **保持标题简短**：较短的标题更容易在文本和目录中粗读。
+  - **保持标题具体**：使用标题来表达本节将涉及的具体信息。例如，对于介绍 HTML 元素的章节，使用标题“HTML 元素”，而不是“介绍”或“概述”。
+  - **保持标题的重点**：使用标题来表达一个目标——该部分将涉及的一个想法或概念。为此，尽可能不要在标题中使用连词“and”。
+  - **使用平行结构**：在同一标题层次上，使用类似的语言作为标题。例如，如果一个 `###` 标题级别的标题使用动名词，即以“-ing”结尾的词，如“Installing”，那么尽量将该标题级别的所有标题都使用动名词。如果一个标题以祈使动词开头，如“Use”、“Configure”，那么该标题层的所有标题都以祈使动词开头。
+  - **避免在较低层次的标题中使用普通术语**：不要在下级标题中重复上级标题中的文字。例如，在一个标题为“Commas”的章节中，将一个小节的标题命名为“After introductory clauses”，而不是“Commas after introductory clauses”。
+  - **不要以冠词开头**：避免以冠词“a”、“an”或“the”开始标题。
+  - **添加引导性信息**：在标题之后，添加一些介绍性的文字，解释该部分将涉及的内容。
 
 ## 其他参考资料
 
