@@ -94,7 +94,7 @@ console.log(o.d); // 5
 
 ### 继承“方法”
 
-JavaScript 并没有其他基于类的语言所定义的“[方法](/en-US/docs/Glossary/Method)”。在 JavaScript 中，任何函数都被可以添加到对象上作为对象的属性。函数的继承与其他的属性继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的*方法重写*）。
+JavaScript 并没有其他基于类的语言所定义的“[方法](/en-US/docs/Glossary/Method)”。在 JavaScript 中，任何函数都被可以添加到对象上作为其属性。函数的继承与其他属性的继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的*方法重写*）。
 
 当继承的函数被调用时，[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) 值指向的是当前继承的对象，而不是拥有该函数属性的原型对象。
 
@@ -131,7 +131,7 @@ console.log(child.method()); // 5
 
 ## 构造函数
 
-原型的强大之处在于，如果一组属性应该出现在每一个实例上，我们可以重用它们——尤其是对于方法。假设我们要创建多个盒子，其中每一个盒子都是一个对象，包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
+原型的强大之处在于，如果一组属性应该出现在每一个实例上，那我们就可以重用它们——尤其是对于方法。假设我们要创建多个盒子，其中每一个盒子都是一个对象，包含一个可以通过 `getValue` 函数访问的值。一个简单的实现可能是：
 
 ```js-nolint
 const boxes = [
@@ -141,7 +141,7 @@ const boxes = [
 ];
 ```
 
-这是次优的，因为每一个实例都有自己的，做相同事情的函数属性，这是冗余且不必要的。相反，我们可以将 `getValue` 移动到所有盒子的 `[[Prototype]]` 上：
+这是不够好的，因为每一个实例都有自己的，做相同事情的函数属性，这是冗余且不必要的。相反，我们可以将 `getValue` 移动到所有盒子的 `[[Prototype]]` 上：
 
 ```js
 const boxPrototype = {
@@ -157,7 +157,7 @@ const boxes = [
 ];
 ```
 
-这样，所有盒子的 `getValue` 方法都会引用相同的函数，降低了内存使用率。但是，手动绑定每个对象创建的 `__proto__` 仍旧非常不方便。这时，我们就可以使用*构造函数*，它会自动为每个构造的对象设置 `[[Prototype]]`。构造函数是使用 [[`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) 调用的函数。
+这样，所有盒子的 `getValue` 方法都会引用相同的函数，降低了内存使用率。但是，手动绑定每个对象创建的 `__proto__` 仍旧非常不方便。这时，我们就可以使用*构造函数*，它会自动为每个构造的对象设置 `[[Prototype]]`。构造函数是使用 [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) 调用的函数。
 
 ```js
 // 一个构造函数
@@ -173,7 +173,7 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自由属性：[`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们从任何实例中访问原始构造函数。
+我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自由属性：[`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
 
 > **备注：** 如果构造函数返回非原始值，则该值将成为 `new` 表达式的结果。在这种情况下，`[[Prototype]]` 可能无法正确绑定——但在实践中应该很少发生。
 
@@ -318,8 +318,6 @@ Derived.prototype = Object.create(Base.prototype);
 ## 检查原型：更深入的研究
 
 让我们来仔细看看幕后发生了什么。
-
-In JavaScript, as mentioned above, functions are able to have properties. All functions have a special property named `prototype`. Please note that the code below is free-standing (it is safe to assume there is no other JavaScript on the webpage other than the below code). For the best learning experience, it is highly recommended that you open a console, navigate to the "console" tab, copy-and-paste in the below JavaScript code, and run it by pressing the Enter/Return key. (The console is included in most web browser's Developer Tools. More information is available for [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome DevTools](https://developer.chrome.com/docs/devtools/), and [Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/).)
 
 如上所属，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
 
