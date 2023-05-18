@@ -44,9 +44,9 @@ Object.is(value1, value2)
   - 都是 {{jsxref("NaN")}}
   - 都有相同的值，非零且都不是 {{jsxref("NaN")}}
 
-`Object.is()` 不等同于 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符。在测试相等性之前，`==` 运算符会对两边的变量（如果它们不是一个类型）应用各种强制转换（导致诸如 `"" == false` 的行为为 `true`），但是 `Object.is()` 不会强制转换任何一个值。
+`Object.is()` 与 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality) 运算符并不等价。`==` 运算符在测试相等性之前，会对两个操作数进行类型转换（如果它们不是相同的类型），这可能会导致一些非预期的行为，例如 `"" == false` 的结果是 `true`，但是 `Object.is()` 不会对其操作数进行类型转换。
 
-`Object.is()` 也是*不*等价于 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 运算符。`Object.is()` 和 `===` 之间的唯一区别在于它们处理有符号的 0 和 `NaN` 值的时候。`===` 运算符（和 `==` 运算符）将数值 `-0` 和 `+0` 视为相等，但是会将 {{jsxref("NaN")}} 视为不相等。
+`Object.is()` 也*不*等价于 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 运算符。`Object.is()` 和 `===` 之间的唯一区别在于它们处理带符号的 0 和 `NaN` 值的时候。`===` 运算符（和 `==` 运算符）将数值 `-0` 和 `+0` 视为相等，但是会将 {{jsxref("NaN")}} 视为彼此不相等。
 
 ## 示例
 
