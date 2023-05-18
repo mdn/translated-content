@@ -1,3 +1,5 @@
+test_B
+
 # 针对 MDN 文档的本地化指南
 
 本文是针对简体中文（zh-CN）文档的翻译指南。如果你所使用的语言尚未有翻译指南，而你又希望新建的话，欢迎你联系[我们负责该语言的翻译团队](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams)。
