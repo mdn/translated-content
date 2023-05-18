@@ -38,7 +38,7 @@ const n = 3;
 n.constructor === Number; // true
 ```
 
-请注意，`constructor` 属性通常来自构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。如果你有一个更长的原型链，通常可以期望链中的每个对象都有一个 `constructor` 属性。
+请注意，`constructor` 属性通常来自构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性。如果你有一个更长的原型链，通常可以假定链中的每个对象都有一个 `constructor` 属性。
 
 ```js
 const o = new TypeError(); // 继承关系：TypeError -> Error -> Object
@@ -100,7 +100,7 @@ arr.constructor = String;
 Object.hasOwn(arr, "constructor"); // true——实例属性会覆盖原型链上的同名属性
 ```
 
-但是，即使重新分配 `Object.getPrototypeOf(a).constructor`，它也不会改变对象的其他行为。例如，`instanceof` 的行为由 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 控制，而不是由 `constructor` 控制：
+但是，即使对 `Object.getPrototypeOf(a).constructor` 重新赋值，它也不会改变对象的其他行为。例如，`instanceof` 的行为由 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 控制，而不是由 `constructor` 控制：
 
 ```js
 const arr = [];
@@ -153,7 +153,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // TypeError: new CreatedConstructor().create().create is undefined，因为 constructor === Parent
 ```
 
-在上面的示例中，会抛出一个异常，因为 `constructor` 链接到 `Parent`。为了避免这种情况，只需分配你将要使用的必需构造函数即可。
+在上面的示例中，会抛出一个异常，因为 `constructor` 链接到 `Parent`。为了避免这种情况，只需将其赋值为你将要使用的必要构造函数即可。
 
 ```js
 function Parent() {
@@ -293,7 +293,7 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 使用 `Object.setPrototypeOf()` 可能会对性能产生不利影响，因此请确保它仅在必要时使用，并在构造函数声明后立即使用，并在创建任何实例之前使用，以避免对象被“污染”。
 
-> **备注：** 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新定义。
+> **备注：** 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新对其赋值。
 
 ## 规范
 
