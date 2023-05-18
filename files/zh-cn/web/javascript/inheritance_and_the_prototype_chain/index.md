@@ -23,7 +23,7 @@ JavaScript 对象是动态的属性（指**其自己的属性**）“包”。Ja
 >
 > 它不应与函数的 `func.prototype` 属性混淆，后者指定在给定函数被用作构造函数时分配给所有对象*实例*的 `[[Prototype]]`。我们将在[后面的小节](#构造函数)中讨论构造函数的原型属性。
 
-有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#创建和改变原型链的不同方式)中列出。现在，我们将使用 [`__proto__` 语法](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被弃用的。
+有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#创建和改变原型链的不同方式)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被弃用的。
 
 在像 `{ a: 1, b: 2, __proto__: c }` 这样的对象字面量中，`c` 值（必须为 `null` 或另一个对象）将变成字面量所表示的对象的 `[[Prototype]]`，而其他键（如 `a` 和 `b`）将变成对象的*自有属性*。这种语法读起来非常自然，因为 `[[Prototype]]` 只是对象的“内部属性”。
 
@@ -94,9 +94,9 @@ console.log(o.d); // 5
 
 ### 继承“方法”
 
-JavaScript 并没有其他基于类的语言所定义的“[方法](/en-US/docs/Glossary/Method)”。在 JavaScript 中，任何函数都被可以添加到对象上作为其属性。函数的继承与其他属性的继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的*方法重写*）。
+JavaScript 并没有其他基于类的语言所定义的“[方法](/zh-CN/docs/Glossary/Method)”。在 JavaScript 中，任何函数都被可以添加到对象上作为其属性。函数的继承与其他属性的继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的*方法重写*）。
 
-当继承的函数被调用时，[`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) 值指向的是当前继承的对象，而不是拥有该函数属性的原型对象。
+当继承的函数被调用时，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值指向的是当前继承的对象，而不是拥有该函数属性的原型对象。
 
 ```js
 const parent = {
@@ -157,7 +157,7 @@ const boxes = [
 ];
 ```
 
-这样，所有盒子的 `getValue` 方法都会引用相同的函数，降低了内存使用率。但是，手动绑定每个对象创建的 `__proto__` 仍旧非常不方便。这时，我们就可以使用*构造函数*，它会自动为每个构造的对象设置 `[[Prototype]]`。构造函数是使用 [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) 调用的函数。
+这样，所有盒子的 `getValue` 方法都会引用相同的函数，降低了内存使用率。但是，手动绑定每个对象创建的 `__proto__` 仍旧非常不方便。这时，我们就可以使用*构造函数*，它会自动为每个构造的对象设置 `[[Prototype]]`。构造函数是使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用的函数。
 
 ```js
 // 一个构造函数
@@ -173,11 +173,11 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自由属性：[`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
+我们说 `new Box(1)` 是通过 `Box` 构造函数创建的一个*实例*。`Box.prototype` 与我们之前创建的 `boxPrototype` 并无太大区别——它只是一个普通的对象。通过构造函数创建的每一个实例都会自动将构造函数的 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性作为其 `[[Prototype]]`。即，`Object.getPrototypeOf(new Box()) === Box.prototype`。`Constructor.prototype` 默认具有一个自由属性：[`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)，它引用了构造函数本身。即，`Box.prototype.constructor === Box`。这允许我们在任何实例中访问原始构造函数。
 
 > **备注：** 如果构造函数返回非原始值，则该值将成为 `new` 表达式的结果。在这种情况下，`[[Prototype]]` 可能无法正确绑定——但在实践中应该很少发生。
 
-上面的构造函数可以重写为[类](/en-US/docs/Web/JavaScript/Reference/Classes)：
+上面的构造函数可以重写为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)：
 
 ```js
 class Box {
@@ -245,7 +245,7 @@ const array = new Array(1, 2, 3);
 const regexp = new RegExp("abc");
 ```
 
-例如，像 [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 这样的“数组方法”只是在 `Array.prototype` 上定义的方法，而它们又自动在所有数组实例上可用，就是因为这个原因。
+例如，像 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 这样的“数组方法”只是在 `Array.prototype` 上定义的方法，而它们又自动在所有数组实例上可用，就是因为这个原因。
 
 > **警告：** 有一个常见的错误实践（misfeature）：扩展 `Object.prototype` 或其它内置原型。这种不良特性例子是，定义 `Array.prototype.myMethod = function () {...}`，然后在所有数组实例上使用 `myMethod`。
 >
@@ -281,7 +281,7 @@ const obj = new Constructor();
 // obj ---> Constructor.prototype ---> Object.prototype ---> null
 ```
 
-要构建更长的原型链，我们可用通过 [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 函数设置 `Constructor.prototype` 的 `[[Prototype]]`。
+要构建更长的原型链，我们可用通过 [`Object.setPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 函数设置 `Constructor.prototype` 的 `[[Prototype]]`。
 
 ```js
 function Base() {}
@@ -476,7 +476,8 @@ const p = { b: 2, __proto__: o };
 
 <table class="standard-table">
   <caption>
-    在 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">对象初始化器</a>中使用 <code>__proto__</code> 键的优缺点
+    在<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer"
+      >对象初始化器</a>中使用 <code>__proto__</code> 键的优缺点
   </caption>
   <tbody>
     <tr>
@@ -622,7 +623,7 @@ const square = new Square(2);
       <th scope="row">优点</th>
       <td>
         被所有现代引擎所支持。非常高的可读性和可维护性。<a
-          href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields">私有属性</a>是原型继承中没有简单替代方案的特性。
+          href="/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields">私有属性</a>是原型继承中没有简单替代方案的特性。
       </td>
     </tr>
     <tr>
@@ -636,7 +637,7 @@ const square = new Square(2);
 
 ### 使用 Object.setPrototypeOf()
 
-虽然上面的所有方法都会在对象创建时设置原型链，但是 [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 允许修改现有对象的 `[[Prototype]]` 内部属性。
+虽然上面的所有方法都会在对象创建时设置原型链，但是 [`Object.setPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 允许修改现有对象的 `[[Prototype]]` 内部属性。
 
 ```js
 const obj = { a: 1 };
@@ -668,7 +669,7 @@ Object.setPrototypeOf(obj, anotherObj);
 
 ### 使用 \_\_proto\_\_ 访问器
 
-所有对象都继承了 [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器，它可以用来设置现有对象的 `[[Prototype]]`（如果对象没有覆盖 `__proto__` 属性）。
+所有对象都继承了 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器，它可以用来设置现有对象的 `[[Prototype]]`（如果对象没有覆盖 `__proto__` 属性）。
 
 > **警告：** `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你几乎总是应该使用 `Object.setPrototypeOf` 来代替。
 
@@ -706,7 +707,7 @@ console.log(obj.barProp);
 
 原型链上较深层的属性的查找时间可能会对性能产生负面影响，这在性能至关重要的代码中可能会非常明显。此外，尝试访问不存在的属性始终会遍历整个原型链。
 
-此外，在遍历对象的属性时，原型链中的**每个**可枚举属性都将被枚举。要检查对象是否具有在其*自身*上定义的属性，而不是在其原型链上的某个地方，则有必要使用 [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 或 [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) 方法。除 `[[Prototype]]` 为 `null` 的对象外，所有对象都从 `Object.prototype` 继承 [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)——除非它已经在原型链的更深处被覆盖。我们将使用上面的图示例代码来说明它，具体如下：
+此外，在遍历对象的属性时，原型链中的**每个**可枚举属性都将被枚举。要检查对象是否具有在其*自身*上定义的属性，而不是在其原型链上的某个地方，则有必要使用 [`hasOwnProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 或 [`Object.hasOwn`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) 方法。除 `[[Prototype]]` 为 `null` 的对象外，所有对象都从 `Object.prototype` 继承 [`hasOwnProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)——除非它已经在原型链的更深处被覆盖。我们将使用上面的图示例代码来说明它，具体如下：
 
 ```js
 function Graph() {
@@ -733,7 +734,7 @@ Object.hasOwn(g, "addVertex"); // false
 Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 ```
 
-注意：仅检查属性是否为 [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) 是**不够的**。该属性很可能存在，但其值恰好设置为 `undefined`。
+注意：仅检查属性是否为 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 是**不够的**。该属性很可能存在，但其值恰好设置为 `undefined`。
 
 ## 结论
 
