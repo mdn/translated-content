@@ -5,7 +5,7 @@ slug: Web/CSS/hypot
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`hypot()`** 为指数型函数，返回其参数平方和的[平方根](https://en.wikipedia.org/wiki/Square_root)。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`hypot()`** 为指数型函数，返回其参数平方和的[平方根](https://zh.wikipedia.org/wiki/平方根)。
 
 尽管 {{CSSXref("pow")}} 和 {{CSSXref("sqrt")}} 仅作用于无单位数值，然而 `hypot()` 可接受带单位的值，但是这些值须全部具有相同[类型](/zh-CN/docs/Web/CSS/CSS_Types)。
 
@@ -57,11 +57,11 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 
 #### CSS
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties) 定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `--size-0`（100px）的斜边长。将此值平方后——由于无其他值——返回此值的平方根，结果为 100px。
 - `--size-2` 所计算的为两个 `--size-0`（100px）的斜边长。将此值平方后（100px \* 100px = 10000px<sup>2</sup>）再加上 `--size-0` 的平方（10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>），返回和的平方根（√(20000px<sup>2</sup>)），结果为 141.42px。
-- `--size-3` 所计算的为 `--size-0` \* 1.5（150px）和 `--size-0` \* 2（200px）的斜边长。其结果为这些值的平方和的平方根——将这些值平方（22500px<sup>2</sup> 和 40000px<sup>2</sup>）后相加（62500px<sup>2</sup>），和再开平方根得 250px。
+- `--size-3` 所计算的为 `--size-0` \* 1.5（150px）和 `--size-0` \* 2（200px）的斜边长。其结果为这些值的平方和的平方根——将这些值平方（22500px<sup>2</sup> 和 40000px<sup>2</sup>）后相加（62500px<sup>2</sup>），用所得到的和再开平方根，结果为 250px。
 
 ```css
 :root {
