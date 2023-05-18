@@ -50,7 +50,7 @@ GitHub 사용법을 잘 모르겠으면 [호환성 테이블 가이드](/ko/docs
                     "FetchObserver",
                     "FetchSignal",
                     "ObserverCallback" ],
-    "methods":    [ "WindowOrWorkerGlobalScope.fetch()" ],
+    "methods":    [ "fetch()" ],
     "properties": [],
     "events":     []
 },
@@ -74,7 +74,7 @@ GroupData 엔트리에 추가할 수 있는 하위 멤버 목록입니다.
 
 1. `"overview"` — 값은 배열이고, API 오버뷰 문서의 슬러그입니다. 하나인 경우 "Fetch API"이면 다음 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](/ko/docs/Web/API/Fetch_API).
 2. `"interfaces"` — 해당 API의 인터페이스 전체 목록을 담은 배열 입니다. 값이 "Body"이면 다음 과 같은 링크를 만듭니다. [https://developer.mozilla.org/en-US/docs/Web/API/Body](/ko/docs/Web/API/Body).
-3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "WindowOrWorkerGlobalScope.fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}. If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list. "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/ko/docs/Web/API/fetch).
 4. `"properties"` — the value is an array that should contain all of the properties associated with the API. This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces. If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list. "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/ko/docs/Web/API/Headers/append).
 5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere. If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list. "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/ko/docs/Web/Events/animationstart).
 6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API. Each object contains two submembers — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link. As an example, the following object:

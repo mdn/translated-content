@@ -53,7 +53,7 @@ Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car 
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple","100%","160")}}
+{{EmbedLiveSample("","100%","160")}}
 
 ### Utilisation de titres
 
@@ -74,7 +74,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_titres", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ### Utiliser avec divers éléments HTML
 
@@ -93,7 +93,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_avec_divers_éléments_HTML", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ## Résumé technique
 

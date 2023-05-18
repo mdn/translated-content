@@ -1,31 +1,45 @@
 ---
-title: 'HTMLElement: input event'
+title: 'HTMLElement: input 이벤트'
+short-title: input
 slug: Web/API/HTMLElement/input_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef}}
 
-**`input`** 이벤트는 {{HTMLElement("input")}}, {{HTMLElement("select")}} 및 {{HTMLElement("textarea")}} 요소의 `value` 속성이 바뀔 때마다 발생한다.
+**`input`** 이벤트는 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소의 `value`가 바뀔 때 발생합니다.
 
-| 전파 가능          | 가능                                                     |
-| ------------------ | -------------------------------------------------------- |
-| 취소 가능          | 불가                                                     |
-| 인터페이스         | {{DOMxRef("InputEvent")}}                         |
-| 이벤트 핸들러 속성 | {{domxref("GlobalEventHandlers.oninput")}} |
+`input`은 또한 {{domxref("HTMLElement.contentEditable", "contenteditable")}}이나 {{domxref("Document.designMode", "designMode")}}가 활성화된 요소에서도 발생합니다. `contenteditable`과 `designMode`에서의 이벤트 대상은 '편집 호스트'가 됩니다. 이 두 특성이 여러 특성에 적용된 경우, 편집할 수 없는 부모를 둔 가장 가까운 조상 요소이 편집 호스트입니다.
 
-또한, 이 이벤트는 아무 요소의 {{domxref("HTMLElement.contentEditable", "contenteditable")}} 속성 및 {{domxref("Document.designMode", "designMode")}} 속성이 활성화 되어도 발생할 수 있다. 이런 경우, `contenteditable` 및 `designMode`, 속성이 활성화된 자식을 가진 편집 불가능한 최초 부모 요소에서 발생한다. 예를 들어 특정 요소에서 부모자식관계 중 자식 관계 여러개가 해당 속성이 활성화되어 내용 변경 시 이벤트가 발생해야 할 때, 해당 속성이 활성화되지 않은 최초의 부모 요소를 기준으로 발생하게 된다.
+`type=checkbox` 또는 `type=radio`인 `<input>` 요소에서는 [HTML Living Standard 명세](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2)에 따라 사용자가 컨트롤을 토글할 때마다 `input` 이벤트가 발생해야 합니다. 하지만 역사적으로 이 명세가 항상 맞는 것은 아니었습니다. 호환성을 먼저 확인하세요. 이 요소들에서는 {{domxref("HTMLElement/change_event", "change")}} 이벤트로 대체하는 방법도 있습니다.
 
-`type=checkbox` 및 `type=radio`, 속성을 가진 `<input>` 요소의 경우, [HTML5 규격](https://html.spec.whatwg.org/multipage/input.html#the-input-element:event-input-2)에 의하면, `input` 이벤트는 반드시 사용자가 작동시킬 때마다 발생된다. 하지만 애초부터 그렇게 설계되어 있지 않은 경우가 있으므로, 반드시 아래 호환성 문단을 참고하거나, 호환되지 않을 경우, {{domxref("HTMLElement/change_event", "change")}} 이벤트를 대신해서 사용하도록 한다.
+{{htmlelement("textarea")}}와 텍스트 입력을 허용하는 {{htmlelement("input")}}(`type=text`, `type=tel`, ...)에서의 이벤트 인터페이스는 {{domxref("InputEvent")}}고, 나머지 요소에서는 {{domxref("Event")}}입니다.
 
-> **참고:** The `input` 이벤트는 {{domxref("HTMLElement/change_event", "change")}} 이벤트와는 달리 `value` 속성이 바뀔 시마다 반드시 일어난다. 값을 선택하거나 옵션 선택하자마자 일어나지만, 특정 글자를 입력 시에는 입력이 끝나고 value 속성에 적용되어야 발생하는데, 예를 들면, 한글 입력의 경우 한글자가 완성된 뒤 다른 키를 입력(예: 엔터 키)이 일어나야 발생된다. 이 또한 브라우저마다 다르므로 호환성을 확인하여 대응해야 한다. (역자 주)
+> **참고:** `input` 이벤트는 요소의 `value`가 변할 때마다 발생합니다. {{domxref("HTMLElement/change_event", "change")}} 이벤트는 엔터 키를 누르거나 리스트에서 옵션을 선택하는 등 변경점을 '반영'해야 발생한다는 점에서 다릅니다.
 
-## 예시
+## 구문
 
-이 예시는 {{HtmlElement("input")}} 요소에 값을 입력하자마자 로그에 기록한다.
+이벤트 이름을 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 등의 메서드에 제공하거나, 이벤트 처리기 속성을 사용하세요.
+
+```js
+addEventListener("input", (event) => {});
+
+oninput = (event) => {};
+```
+
+## 이벤트 유형
+
+일반 {{domxref("Event")}}.
+
+## 예제
+
+이 예제에서는 {{htmlelement("input")}} 요소의 값을 바꿀 때마다 기록을 남깁니다.
 
 ### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="텍스트 입력" name="name"/>
 <p id="values"></p>
 ```
 
@@ -42,9 +56,9 @@ function updateValue(e) {
 }
 ```
 
-### Result
+### 결과
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("예제")}}
 
 ## 명세서
 
@@ -54,7 +68,7 @@ function updateValue(e) {
 
 {{Compat}}
 
-## 같이보기
+## 같이 보기
 
 - 관련 이벤트
 

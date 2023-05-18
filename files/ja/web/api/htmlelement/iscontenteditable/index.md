@@ -45,4 +45,4 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 ## 関連情報
 
 - {{domxref("HTMLElement/contentEditable")}}
-- {{htmlattrxref("contenteditable")}} グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性

@@ -33,7 +33,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の {{HTMLattrxref("srcset", "img")}} プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
+- {{HTMLElement("img")}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) プロパティを試験的に実装しました。`dom.image.srcset.enable` を `true` に設定すると有効になります ([Firefox バグ 870021](https://bugzil.la/870021))。
 - [**id**](/ja/docs/Web/HTML/Global_attributes/id) および [**class**](/ja/docs/Web/HTML/Global_attributes/class) が真の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)となり、名前空間の有無にかかわらず XML 要素にも適用されるようになりました ([Firefox バグ 741295](https://bugzil.la/741295))。
 
 ### JavaScript

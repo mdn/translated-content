@@ -6,13 +6,13 @@ slug: Web/API/WebGL_API/By_example/Simple_color_animation
 
 {{Glossary("WebGL")}} 를 청소함으로써 매 초 마다 랜덤 색이 버퍼에 그려지는 매우 기본적인 색깔 애니메이션.
 
-{{EmbedLiveSample("simple-color-animation-source",660,425)}}
+{{EmbedLiveSample("초기화가_있는_컬러_애니메이션",660,425)}}
 
-### 청소 & 컬러 애니메이션
+### 초기화가 있는 컬러 애니메이션
 
 이 예시는 유저 인터페이스 뿐만 아니라, {{Glossary("WebGL")}}와 함께 간단한 컬러 애니메이션 설명을 제공합니다. 유저는 버튼을 클릭함으로써, 애니메이션을 시작하고, 종료하고, 다시시작할 수 있습니다.
 
-이번에 우리는 이벤트 핸들로 내부에서 {{Glossary("WebGL")}} 함수 콜을 넣을 것입니다. 클릭 이벤트 핸들러는 추가적으로 시작하고 멈추는 기본적인 유저 상호작용을 가능하게 합니다. 타이머와 타이머 핸들러 기능은 애니메이션 반복을 구축합니다. 애니메이션 반복은 일정한 주기로 실행되는 그리기 명령의 집합입니다.(일반적으로 모든 프레임; 이 경우 초당 1번)
+이번에 우리는 이벤트 핸들러 내부에서 {{Glossary("WebGL")}} 함수 콜을 넣을 것입니다. 클릭 이벤트 핸들러는 추가적으로 시작하고 멈추는 기본적인 유저 상호작용을 가능하게 합니다. 타이머와 타이머 핸들러 기능은 애니메이션 반복을 구축합니다. 애니메이션 반복은 일정한 주기로 실행되는 그리기 명령의 집합입니다.(일반적으로 모든 프레임; 이 경우 초당 1번)
 
 ```html
 <p>A simple WebGL program that shows color animation.</p>
@@ -112,6 +112,6 @@ window.addEventListener("load", function setupAnimation (evt) {
 }, false);
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}

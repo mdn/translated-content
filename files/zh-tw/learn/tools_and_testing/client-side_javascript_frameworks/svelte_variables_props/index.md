@@ -81,7 +81,7 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
      let todos = [
        { id: 1, name: "Create a Svelte starter app", completed: true },
        { id: 2, name: "Create your first component", completed: true },
-       { id: 3, name: "Complete the rest of the tutorial", completed: false }
+       { id: 3, name: "Complete the rest of the tutorial", completed: false },
      ];
      let totalTodos = todos.length;
      let completedTodos = todos.filter((todo) => todo.completed).length;
@@ -92,7 +92,7 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 
 2. 讓我們從顯示狀態訊息開始。找到 `id` 為 `list-heading` 的 `<h2>` 標頭並用動態表達式替換已經寫死的現行任務及已完成任務數量：
 
-   ```html
+   ```svelte
    <h2 id="list-heading">{completedTodos} out of {totalTodos} items completed</h2>
    ```
 
@@ -109,7 +109,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 1. 將現有的 `<ul>` 元素替換為以下的簡化版本，以了解其工作原理：
 
-   ```html
+   ```svelte
    <ul>
    {#each todos as todo, index (todo.id)}
      <li>
@@ -127,7 +127,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 3. 現在我們已經看到這是有效的，接著讓我們使用 `{#each}` 指令的每個循環產生一個完整的待辦事項並在其中嵌入來自 `todos` 陣列中的資訊：`id`、`name` 和 `completed`。將現有的 `<ul>` 區塊替換為以下內容：
 
-   ```html
+   ```svelte
    <!-- To-dos -->
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each todos as todo (todo.id)}
@@ -167,7 +167,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 1. 在 `Todos.svelte` 中，將現有的 `let todos = …` 區塊替換為 `export let todos = []`。
 
    ```js
-   export let todos = []
+   export let todos = [];
    ```
 
    起初這可能會讓你覺得有點奇怪。這不像在 JavaScript 模組中使用 `export` 的常見方式！但這就是 Svelte 透過採用有效語法並賦予其新用途藉此來「擴展」JavaScript 的作法。在這種情況下，Svelte 使用 `export` 關鍵字將變數宣告標記為屬性，這意味著元件的消費者可以存取它。
@@ -179,7 +179,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 2. 回頭看看應用程式，你將會看到「Nothing to do here!」訊息。這是因為我們目前沒有從 `App.svelte` 向它傳遞任何數值，所以它使用預設值。
 3. 現在讓我們將待辦事項移動到 `App.svelte` 並將它們作為屬性傳遞給 `Todos.svelte` 元件。更新 `src/App.svelte` 如下：
 
-   ```html
+   ```svelte
    <script>
      import Todos from "./components/Todos.svelte";
 
@@ -195,7 +195,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 4. 當屬性和變數具有相同名稱時，Svelte 允許你僅指定變數作為便利的捷徑，因此我們可以像這樣重寫最後一行。現在試試吧。
 
-   ```html
+   ```svelte
    <Todos {todos} />
    ```
 
@@ -207,7 +207,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 1. 更新 `src/components/Todos.svelte` 中的 `<input type="checkbox">` 元素，如下：
 
-   ```html
+   ```svelte
    <input type="checkbox" id="todo-{todo.id}"
      on:click={() => todo.completed = !todo.completed}
      checked={todo.completed}
@@ -218,13 +218,13 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
    ```js
    function removeTodo(todo) {
-     todos = todos.filter((t) => t.id !== todo.id)
+     todos = todos.filter((t) => t.id !== todo.id);
    }
    ```
 
 3. 我們將透過 _Delete_ 按鈕呼叫它。更新 `click` 事件，如下：
 
-   ```html
+   ```svelte
    <button type="button" class="btn btn__danger"
      on:click={() => removeTodo(todo)}
    >
@@ -247,8 +247,8 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 然而，對於 `totalTodos` 和 `completedTodos` 來說情況並非如此。在下面的程式碼中，當元件被實例化且腳本被執行時，它們會被指定一個數值，但是在那之後，它們的數值不會被改變：
 
 ```js
-let totalTodos = todos.length
-let completedTodos = todos.filter((todo) => todo.completed).length
+let totalTodos = todos.length;
+let completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 我們可以在切換和刪除待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
@@ -260,8 +260,8 @@ let completedTodos = todos.filter((todo) => todo.completed).length
 更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 變數定義，如下：
 
 ```js
-$: totalTodos = todos.length
-$: completedTodos = todos.filter((todo) => todo.completed).length
+$: totalTodos = todos.length;
+$: completedTodos = todos.filter((todo) => todo.completed).length;
 ```
 
 如果你現在檢查你的應用程式，當待辦事項完成或被刪除時，你將會看到標頭的數字被更新。做得好！
@@ -275,12 +275,12 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 1. 首先，我們將建立一個變數來保存新待辦事項的文字。將此宣告新增到 `Todos.svelte` 檔案的 `<script>` 區塊中：
 
    ```js
-   let newTodoName = ''
+   let newTodoName = "";
    ```
 
 2. 我們將使用 `<input>` 中的數值來加入新任務。為此我們需要將 `newTodoName` 變數綁定到 `todo-0` 輸入框，以便 `newTodoName` 變數數值與輸入框的 `value` 屬性保持同步。我們可以這樣做：
 
-   ```html
+   ```svelte
    <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
    ```
 
@@ -288,13 +288,13 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    這是對輸入框雙向資料綁定的手動實作。但是我們不需要這樣做—— Svelte 提供了一種更簡單的方式來將任何屬性綁定到變數，使用 [`bind:property`](https://svelte.dev/docs#bind_element_property) 指令：
 
-   ```html
+   ```svelte
    <input bind:value={newTodoName} />
    ```
 
    所以，讓我們來實作它。更新 `todo-0` 輸入框如下：
 
-   ```html
+   ```svelte
    <input
      bind:value={newTodoName}
      type="text"
@@ -306,7 +306,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 3. 測試是否有效的一個簡單方式是新增一個反應性陳述來記錄 `newTodoName` 的內容。在 `<script>` 區塊的末端新增此程式碼片段：
 
    ```js
-   $: console.log('newTodoName: ', newTodoName)
+   $: console.log("newTodoName: ", newTodoName);
    ```
 
    > **備註：** 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
@@ -316,8 +316,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    ```js
    function addTodo() {
-     todos.push({ id: 999, name: newTodoName, completed: false })
-     newTodoName = ''
+     todos.push({ id: 999, name: newTodoName, completed: false });
+     newTodoName = "";
    }
    ```
 
@@ -325,7 +325,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
 6. 現在我們要更新我們的 HTML，以便每當表單被提交時來呼叫 `addTodo()`。更新新增待辦事項（NewTodo）表單的起始標籤如下：
 
-   ```html
+   ```svelte
    <form on:submit|preventDefault={addTodo}>
    ```
 
@@ -341,8 +341,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: 999, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: 999, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -353,14 +353,14 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 1. 讓我們宣告一個由待辦事項數量加 1 計算得出的 `newTodoId` 變數並使其具有反應性。將以下程式碼片段新增到 `<script>` 區塊：
 
    ```js
-   let newTodoId
-     $: {
-       if (totalTodos === 0) {
-         newTodoId = 1;
-       } else {
-         newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
-       }
+   let newTodoId;
+   $: {
+     if (totalTodos === 0) {
+       newTodoId = 1;
+     } else {
+       newTodoId = Math.max(...todos.map((t) => t.id)) + 1;
      }
+   }
    ```
 
    > **備註：** 如你所見，反應性陳述不僅限於單行。以下程式碼也有作用，但可讀性較差：`$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
@@ -371,8 +371,8 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
    ```js
    function addTodo() {
-     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }]
-     newTodoName = ''
+     todos = [...todos, { id: newTodoId, name: newTodoName, completed: false }];
+     newTodoName = "";
    }
    ```
 
@@ -383,11 +383,13 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 1. 在我們的 `<script>` 區塊的底部新增以下內容：
 
    ```js
-   let filter = 'all'
+   let filter = "all";
    const filterTodos = (filter, todos) =>
-     filter === 'active' ? todos.filter((t) => !t.completed) :
-     filter === 'completed' ? todos.filter((t) => t.completed) :
-     todos
+     filter === "active"
+       ? todos.filter((t) => !t.completed)
+       : filter === "completed"
+       ? todos.filter((t) => t.completed)
+       : todos;
    ```
 
    我們使用 `filter` 變數來控制目前的過濾器：_all_、_active_、_completed_。只要將這些數值中其中一個指定給過濾器變數即可使用該過濾器並更新待辦事項清單。讓我們看看它如何做到這一點。
@@ -396,7 +398,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
 2. 讓我們更新過濾器按鈕標記以使其動態化，當使用者按下其中一個過濾器按鈕時，更新目前的過濾器。像這樣更新它：
 
-   ```html
+   ```svelte
    <div class="filters btn-group stack-exception">
      <button class="btn toggle-btn" class:btn__primary={filter === 'all'} aria-pressed={filter === 'all'} on:click={() => filter = 'all'} >
        <span class="visually-hidden">Show</span>
@@ -428,7 +430,7 @@ Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹�
 
 3. 現在我們只需要在 `{#each}` 迴圈中使用輔助函式；像這樣更新它：
 
-   ```html
+   ```svelte
    …
      <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
      {#each filterTodos(filter, todos) as todo (todo.id)}

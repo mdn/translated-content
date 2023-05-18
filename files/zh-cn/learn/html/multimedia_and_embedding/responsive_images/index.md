@@ -19,7 +19,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
     <tr>
       <th scope="row">学习目标：</th>
       <td>
-        学习使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
+        学习使用 <a href="zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
       </td>
     </tr>
   </tbody>

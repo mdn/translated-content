@@ -5,22 +5,40 @@ slug: Web/CSS/object-position
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`）**，在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景（{{cssxref("background")}}）。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`object-position`** 规定了[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容，在这里我们称其为对象（即 **`object-position`** 中的 **`object`**）在其内容框中的位置。可替换元素的内容框中未被对象所覆盖的部分，则会显示该元素的背景。
 
-你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在（原文：intrinsic）大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
+你还可以使用 {{cssxref("object-fit")}} 属性来改变可替换元素的对象的内在的大小（即它看上去的大小）的调整方式，借助拉伸与缩放等使对象更好地适应元素的内容框。
 
 {{EmbedInteractiveExample("pages/css/object-position.html")}}
 
 ## 语法
 
 ```css
-/* <position> values */
-object-position: center top;
-object-position: 100px 50px;
+/* 关键字值 */
+object-position: top;
+object-position: bottom;
+object-position: left;
+object-position: right;
+object-position: center;
 
-/* Global values */
+/* <percentage> 值 */
+object-position: 25% 75%;
+
+/* <length> 值 */
+object-position: 0 0;
+object-position: 1cm 2cm;
+object-position: 10ch 8em;
+
+/* 边缘偏移值 */
+object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+object-position: top 0 right 10px;
+
+/* 全局关键字 */
 object-position: inherit;
 object-position: initial;
+object-position: revert;
+object-position: revert-layer;
 object-position: unset;
 ```
 
@@ -31,26 +49,30 @@ object-position: unset;
 
 > **备注：** 这些定位方式允许被替换元素的对象被定位到内容框外部。
 
-### 形式语法
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML
+### 定位图像内容
 
-Here we see HTML that includes two {{HTMLElement("img")}} elements, each displaying the MDN logo.
+#### HTML
 
-这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
+HTML 包含两个 {{HTMLElement("img")}} 元素，分别展示了 MDN 的 logo。
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
-### CSS
+#### CSS
 
-CSS 包括\<img>元素本身的默认样式，以及两个图像各自的样式。
+CSS 包括 `<img>` 元素本身的默认样式，以及两个图像各自的样式。
 
 ```css
 img {
@@ -71,17 +93,15 @@ img {
 }
 ```
 
-第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10％处。
+第一个图像的左边缘距元素框左边缘 10 个像素。第二个图像的右边缘与元素框的右边缘齐平，并位于元素框高度下方 10% 处。
 
-### 结果
+#### 结果
 
-{{ EmbedLiveSample('示例', '100%','300px') }}
+{{ EmbedLiveSample('定位图像内容', '100%','300px') }}
 
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 

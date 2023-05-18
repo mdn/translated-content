@@ -12,12 +12,11 @@ slug: Learn/CSS/Building_blocks/Selectors/Combinators
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        基础电脑知识，<a
+        基础电脑知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了基本的软件</a
-        >，<a href="/和CN/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >处理文件</a
-        >的基本知识，HTML 基础（学习<a
+        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >文件处理</a>基本知识、HTML 基础（学习 <a
           href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >），以及对 CSS 工作原理的了解（学习<a

@@ -5,7 +5,7 @@ slug: Web/API/HTMLLinkElement/relList
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLAnchorElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "link")}} 属性を反映しています。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("link")}} 要素で表されるリソースと現在のドキュメントの間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。
+**`HTMLAnchorElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を反映しています。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("link")}} 要素で表されるリソースと現在のドキュメントの間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 

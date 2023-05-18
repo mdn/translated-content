@@ -123,7 +123,8 @@ console.log(eval(s2.valueOf())); // выведет число 4
 
 ## Свойства
 
-{{jsOverrides("Function", "Properties", "prototype")}}
+- {{jsxref("String.length")}}
+  - : Хранит длину строки. Только для чтения.
 
 ## Методы
 
@@ -133,8 +134,6 @@ console.log(eval(s2.valueOf())); // выведет число 4
   - : Возвращает строку, созданную из указанной последовательности кодовых точек Юникода.
 - {{jsxref("String.raw()")}} {{experimental_inline}}
   - : Возвращает строку, созданную из сырой шаблонной строки.
-
-{{jsOverrides("Function", "Methods", "fromCharCode", "fromCodePoint", "raw")}}
 
 ## Общие методы объекта `String`
 

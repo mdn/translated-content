@@ -52,7 +52,7 @@ Dans l'exemple ci-dessus; essayez d'ajouter du texte à l'intérieur de l'élém
 
 ## Spécifier une taille
 
-Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci est plus important que l'espace alloué par son conteneur.
+Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 

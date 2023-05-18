@@ -9,7 +9,7 @@ slug: Web/HTML/Element/div
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-`<div>` 要素は「純粋」なコンテナーとして、本質的には何も表しません。その代わり、 {{htmlattrxref("class")}} や {{htmlattrxref("id")}} を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を ({{htmlattrxref("lang")}} 属性を使用して) 示したりするために使用します。
+`<div>` 要素は「純粋」なコンテナーとして、本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Global_attributes#class) や [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を ([`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を使用して) 示したりするために使用します。
 
 <table class="properties">
   <tbody>
@@ -102,7 +102,7 @@ slug: Web/HTML/Element/div
 
 ### スタイル付けを行う例
 
-この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に {{htmlattrxref("class")}} 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
+この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
 
 #### HTML
 

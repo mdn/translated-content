@@ -92,4 +92,4 @@ span.textContent = `span classList is "${classes}"`;
 ## 参见
 
 - {{ domxref("DOMSettableTokenList") }} (object that extends DOMTokenList with settable _.value_ property)
-- {{ bug("501257") }} - Implement HTML 5's HTMLElement.classList property
+- [Firefox bug 501257](https://bugzil.la/501257) - Implement HTML 5's HTMLElement.classList property

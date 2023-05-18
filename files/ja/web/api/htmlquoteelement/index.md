@@ -14,7 +14,7 @@ slug: Web/API/HTMLQuoteElement
 _親である{{domxref("HTMLElement")}}からメソッドを継承します。_
 
 - {{domxref("HTMLQuoteElement.cite")}}
-  - : は{{domxref("DOMString")}}であり，HTML 属性{{htmlattrxref("cite", "blockquote")}}に格納している引用元 URL を表します。
+  - : は{{domxref("DOMString")}}であり，HTML 属性[`cite`](/ja/docs/Web/HTML/Element/blockquote#cite)に格納している引用元 URL を表します。
 
 ## メソッド
 

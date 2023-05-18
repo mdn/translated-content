@@ -16,7 +16,7 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 ## 如何使用？
 
-我们已经编写了一个非常简单的示例网站（[观看我们的在线演示](https://mdn.github.io/pwa-examples/a2hs/)，并[查看源代码](https://github.com/mdn/pwa-examples/tree/master/a2hs)），该网站虽然功能不多，但是实现 A2HS 所必须的代码都有包含，Service Worker 也使其可以脱机使用。这个示例展示了一系列的狐狸图片。
+我们已经编写了一个非常简单的示例网站（[观看我们的在线演示](https://mdn.github.io/pwa-examples/a2hs/)，并[查看源代码](https://github.com/mdn/pwa-examples/tree/main/a2hs)），该网站虽然功能不多，但是实现 A2HS 所必须的代码都有包含，Service Worker 也使其可以脱机使用。这个示例展示了一系列的狐狸图片。
 
 如果您有适用于 Android 的 Firefox，使用它打开我们的示例：`https://mdn.github.io/pwa-examples/a2hs/`。你将会看到狐狸图片，但更重要的是，你将会看到一个带有加号（+）的“主页”图标——这是为具有必要功能的任何站点显示的“添加到主屏幕”图标。
 

@@ -52,7 +52,7 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
   - : 對於原型繼承的常見的迷思和誤解。
 - [嚴謹模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
   - : 嚴謹模式會禁止您使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
-- [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
 - [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_Management)
   - : JavaScript 的記憶體生命週期和垃圾回收機制。

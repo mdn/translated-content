@@ -24,11 +24,11 @@ HTML5 は [HTML](/ja/docs/HTML) で定義されている最新の標準仕様の
 - [HTML5 の audio 要素と video 要素の利用](/ja/docs/Using_HTML5_audio_and_video)
   - : {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素はマルチメディアコンテンツの埋め込みや操作を可能にします。
 - [フォームの改善](/ja/docs/Learn/HTML/Forms)
-  - : HTML5 ではウェブフォームに様々な改善が施されています。制約バリデーション API、多数の新しい属性、 {{HTMLElement("input")}} 要素の属性の新しい {{htmlattrxref("type", "input")}} の値の追加。そして新要素として {{HTMLElement("output")}} が追加されています。
+  - : HTML5 ではウェブフォームに様々な改善が施されています。制約バリデーション API、多数の新しい属性、 {{HTMLElement("input")}} 要素の属性の新しい [`type`](/ja/docs/Web/HTML/Element/input#type) の値の追加。そして新要素として {{HTMLElement("output")}} が追加されています。
 - 新しいセマンティック要素
   - : セクション、メディア、フォーム要素のほかに、 {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, {{HTMLElement("figcaption")}}, {{HTMLElement("data")}}, {{HTMLElement("time")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} あるいは {{HTMLElement("meter")}} のような多くの新しい要素、[妥当な HTML5 の要素](/ja/docs/Web/HTML/HTML5/HTML5_element_list)はますます増えています。
 - {{HTMLElement("iframe")}} の改善
-  - : {{htmlattrxref("sandbox", "iframe")}}, {{htmlattrxref("srcdoc", "iframe")}} 属性を使用することで、著者は今やセキュリティレベルを明確にし、望まれた {{HTMLElement("iframe")}} 要素の描画が可能となりました。
+  - : [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox), [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性を使用することで、著者は今やセキュリティレベルを明確にし、望まれた {{HTMLElement("iframe")}} 要素の描画が可能となりました。
 - [MathML](/ja/docs/MathML)
   - : HTML 文書に数式を直接埋め込むことができます。
 - [HTML5 の紹介](/ja/docs/HTML/HTML5/Introduction_to_HTML5)

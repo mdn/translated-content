@@ -19,7 +19,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -28,7 +28,7 @@ setInterval(draw, 10);
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -43,19 +43,19 @@ ctx.closePath();
 首先將下面兩行程式碼加到你的 `draw()` 函數用以定義 `x` 和 `y`:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 接著修改 `draw()` 函數，在 {{domxref("CanvasRenderingContext2D.arc()","arc()")}} 方法裡使用了變數 x 和 y，就像下面被強調的那行程式碼：
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -70,13 +70,13 @@ var dy = -2;
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -92,14 +92,14 @@ function draw() {
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -113,18 +113,18 @@ function draw() {
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 

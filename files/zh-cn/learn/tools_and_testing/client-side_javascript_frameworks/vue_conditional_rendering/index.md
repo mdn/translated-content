@@ -128,7 +128,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_
 - 当“Save”按钮被点击时，组件通过 `item-edited` 事件创建一个新标签。
 - 当“Cancel”按钮被点击时，组件通过 `edit-cancelled` 事件发出信号。
 
-## 修改 ToDoTtem 组件
+## 修改 ToDoItem 组件
 
 在给我们的应用程序添加 `ToDoItemEditForm` 之前，我们需要对 `ToDoItem` 组件做出一些修改。具体来说，我们需要一个变量来监控是否有事项正在被编辑，以及一个按钮来切换那个变量。由于删除和编辑是密切相关的，我们也将添加一个“Delete”按钮。
 

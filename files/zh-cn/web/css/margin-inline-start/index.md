@@ -5,7 +5,7 @@ slug: Web/CSS/margin-inline-start
 
 {{CSSRef}}
 
-**`margin-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行首外边距，根据元素的书写模式、方向性和文本方向映射为实体的外边距。它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。
+**`margin-inline-start`** [CSS](/zh-CN/docs/Web/CSS) 属性定义元素的逻辑行首外边距，根据元素的书写模式、行内方向和文本朝向映射为实体的外边距。它根据 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性的值对应于 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 或 {{cssxref("margin-left")}} 属性。
 
 {{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}
 
@@ -15,9 +15,9 @@ slug: Web/CSS/margin-inline-start
 /* <length> 值 */
 margin-inline-start: 10px;  /* 绝对长度 */
 margin-inline-start: 1em;   /* 相对于文字大小 */
-margin-inline-start: 5%;    /* 相对于最近的块容器的宽度 */
+margin-inline-start: 5%;    /* 相对于最近区块容器的宽度 */
 
-/* 关键字值 */
+/* 关键词值 */
 margin-inline-start: auto;
 
 /* 全局值 */
@@ -49,7 +49,7 @@ margin-inline-start: unset;
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">示例文本</p>
 </div>
 ```
 
@@ -83,7 +83,7 @@ div {
 
 ## 参见
 
-- [CSS 逻辑属性与值](zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性与逻辑值](zh-CN/docs/Web/CSS/CSS_Logical_Properties)
 - {{cssxref("margin-inline-end")}}
-- 映射的物理属性: {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
+- 对应的实体属性：{{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

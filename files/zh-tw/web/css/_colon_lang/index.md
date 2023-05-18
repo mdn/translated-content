@@ -1,26 +1,23 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
 ---
 
 {{CSSRef}}
 
-**`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類 ( pseudo-class )](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
-
-```css
-/* 選取任何語言屬性為英文 (en) 的 <p> */
-p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
-}
-```
+**`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
 
 > **備註：** 在 HTML 中，語言是通過 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。
 
-## 語法 Syntax
+## 語法
 
 ### 語法格式
 
-{{csssyntax}}
+```css-nolint
+:lang(<language-code>) {
+  /* ... */
+}
+```
 
 ### 參數
 
@@ -34,17 +31,29 @@ p:lang(en) {
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="de"><q>This German quote has a <q>nested</q> quote inside.</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="de">
+  <q>This German quote has a <q>nested</q> quote inside.</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
 ```
 
 ### 結果

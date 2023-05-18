@@ -20,7 +20,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
   - : 文字列で、整列文字のオフセットを表します。
 - {{domxref("HTMLTableColElement.span")}}
-  - : `unsigned long` で、 HTML の {{htmlattrxref("span", "col")}} 属性を反映し、このオブジェクトの属性を適用する列の数を示します。正の整数でなければなりません。
+  - : `unsigned long` で、 HTML の [`span`](/ja/docs/Web/HTML/Element/col#span) 属性を反映し、このオブジェクトの属性を適用する列の数を示します。正の整数でなければなりません。
 - {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
   - : 文字列で、列内のセルデータの垂直方向の配置を示します。
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}

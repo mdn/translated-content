@@ -42,8 +42,8 @@ Array.fromAsync(arrayLike, mapFn, thisArg)
 
 `Array.fromAsync()` 迭代异步可迭代对象的方式与 {{jsxref("Statements/for-await...of", "for await...of")}} 很相似。`Array.fromAsync()` 在行为上与 {{jsxref("Array.from()")}} 几乎等价，除了以下几点：
 
-- `Array.fromAsync()` 处理异步可迭代对象。
-- `Array.fromAsync()` 返回一个 {{jsxref("Promise")}}，会兑现数组实例。
+- `Array.fromAsync()` 可以处理异步可迭代对象。
+- `Array.fromAsync()` 返回一个会兑现为数组实例的 {{jsxref("Promise")}}。
 - 如果使用非异步可迭代对象调用 `Array.fromAsync()`，则要添加到数组中的每个元素（无论是否为 Promise）都会先[等待其兑现](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)。
 - 如果提供了 `mapFn`，则其输入和输出会在内部等待兑现。
 
@@ -84,11 +84,7 @@ Array.fromAsync(
 
 ```js
 Array.fromAsync(
-  new Set([
-    Promise.resolve(1),
-    Promise.resolve(2),
-    Promise.resolve(3),
-  ]),
+  new Set([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]),
 ).then((array) => console.log(array));
 // [1, 2, 3]
 ```
@@ -115,11 +111,7 @@ function delayedValue(v) {
 }
 
 Array.fromAsync(
-  [
-    delayedValue(1),
-    delayedValue(2),
-    delayedValue(3),
-  ],
+  [delayedValue(1), delayedValue(2), delayedValue(3)],
   (element) => delayedValue(element * 2),
 ).then((array) => console.log(array));
 // [2, 4, 6]
@@ -202,7 +194,9 @@ function* generatorWithRejectedPromises() {
 ## 参见
 
 - [`core-js` 中 `Array.fromAsync` 的 polyfill](https://github.com/zloirock/core-js#arrayfromasync)
-- {{jsxref("Statements/for-await...of", "for await...of")}}
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
+- {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}
 - {{jsxref("Array.from()")}}
+- {{jsxref("Statements/for-await...of", "for await...of")}}

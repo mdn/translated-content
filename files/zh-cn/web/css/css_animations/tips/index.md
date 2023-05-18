@@ -3,7 +3,7 @@ title: CSS Animations tips and tricks
 slug: Web/CSS/CSS_Animations/Tips
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或者应用程序。然而，有些您想实现的东西表现的并不浅显易懂，或者没法使您立马想到一种聪明的解决办法。这篇文章集合一个一些温馨贴士和技巧，从而帮助您更轻松地工作，这其中包括了如何使一个已经停止的动画重新开始播放。
 

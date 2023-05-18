@@ -6,11 +6,11 @@ slug: Web/API/WebGL_API/By_example/Textures_from_code
 
 단편화된 쉐이더들과 함께 순차적으로 보여주는 간단한 데모
 
-{{EmbedLiveSample("textures-from-code-source",660,425)}}
+{{EmbedLiveSample("코드로_텍스쳐_그리기",660,425)}}
 
-### 코드를 이용해 텍스쳐를 그리기
+### 코드로 텍스쳐 그리기
 
-Texturing a point sprite with calculations done per-pixel in the fragment shader.
+fragment shader에서 픽셀 단위로 계산된 스프라이트 텍스쳐를 그립니다.
 
 ```html hidden
 <p>Texture from code. Simple demonstration
@@ -159,6 +159,6 @@ function getRenderingContext() {
 })();
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/textures-from-code)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}

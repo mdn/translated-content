@@ -1,6 +1,9 @@
 ---
-title: Navigator.geolocation
+title: "Navigator: geolocation 속성"
+short-title: geolocation
 slug: Web/API/Navigator/geolocation
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
@@ -18,4 +21,4 @@ slug: Web/API/Navigator/geolocation
 
 ## 같이 보기
 
-- [위치정보 사용하기](/ko/docs/WebAPI/Using_geolocation)
+- [Geolocation API 사용하기](/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)

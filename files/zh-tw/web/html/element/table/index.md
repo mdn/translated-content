@@ -66,6 +66,7 @@ slug: Web/HTML/Element/table
 ### 棄用屬性
 
 - `align` {{Deprecated_inline}}
+
   - : 這個枚舉屬性會指示表格中的文字要如何對齊。可用值如下：left：意思是表格應該顯示在文件的左方。
 
     - center：意思是表格應該顯示在文件的中間。
@@ -82,6 +83,7 @@ slug: Web/HTML/Element/table
 - `frame` {{Deprecated_inline}}
   - : 這個枚舉屬性定義圍繞在表格邊框的哪一邊要顯示。在 CSS 要得出類似效果，應該使用 {{cssxref("border-style")}} 與 {{cssxref("border-width")}} 屬性。
 - `rules` {{Deprecated_inline}}
+
   - : 這個枚舉屬性定義諸如線條之類的規則，要如何出現在表格。它擁有以下數值：`none`，代表沒有任何規則上的指示。這是預設值。
 
     - `groups`，只標示行群組和列群組（行群組由 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、和 {{HTMLElement("tfoot")}} 定義；列群組由 {{HTMLElement("col")}} 與 {{HTMLElement("colgroup")}} 定義）；
@@ -180,8 +182,8 @@ slug: Web/HTML/Element/table
 <p>Table with colgroup and col</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -197,7 +199,9 @@ slug: Web/HTML/Element/table
 
 <p>Simple table with caption</p>
 <table>
-  <caption>Awesome caption</caption>
+  <caption>
+    Awesome caption
+  </caption>
   <tr>
     <td>Awesome data</td>
   </tr>
@@ -205,15 +209,15 @@ slug: Web/HTML/Element/table
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
 
@@ -238,7 +242,9 @@ border: 1px solid black;
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>

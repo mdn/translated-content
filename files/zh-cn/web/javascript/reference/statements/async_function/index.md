@@ -243,11 +243,11 @@ async function getProcessedData(url) {
 }
 ```
 
-注意，在上述示例中，`return` 语句中没有 `await` 操作符，因为 `async function` 的返回值将被隐式地传递给 `{{jsxref("Promise.resolve")}}`。
+注意，在上述示例中，`return` 语句中没有 `await` 运算符，因为 `async function` 的返回值将被隐式地传递给 {{jsxref("Promise.resolve")}}。
 
-返回值`隐式的传递给`{{jsxref("Promise.resolve")}}，并不意味着`return await promiseValue;和 return promiseValue;`在功能上相同。
+返回值隐式地传递给 {{jsxref("Promise.resolve")}}，并不意味着 `return await promiseValue;` 和 `return promiseValue;` 在功能上相同。
 
-看下下面重写的上面代码，在`processDataInWorker`抛出异常时返回了 null：
+看下下面重写的上面代码，在 `processDataInWorker` 抛出异常时返回了 null：
 
 ```js
 async function getProcessedData(url) {

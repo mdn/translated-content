@@ -61,8 +61,8 @@ CSS 是一種基於規則的語言，您對網頁裡特定或一群元素指定�
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -76,12 +76,12 @@ h1 {
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

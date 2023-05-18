@@ -25,7 +25,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Nota:** Este atributo é obsoleto em HTML5 e **não deve ser usada por autores**. Para atingir seu efeito, use o cabeçalho HTTP Content-Type sobre o recurso vinculado.
 
-- {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("crossorigin")}}
 
   - : Este atributo enumerado indica se a busca da imagem relacionada deve ser feita usando CORS ou não. I-magens de CORS habilitado podem ser reutilizadas no elemento {{HTMLElement("canvas")}} sem ser conta-minado. Os valores permitidos são:
 
@@ -55,7 +55,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : This attribute specifies the media which the linked resource applies to. Its value must be a [media query](/pt-BR/docs/CSS/Media_queries). This attribute is mainly useful when linking to external stylesheets by allowing the user agent to pick the best adapted one for the device it runs on.
 
-    > **Note:** **Usage note:**- In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/CSS/Media_queries), which are a superset of the allowed values of HTML 4.
+    > **Nota:** In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/pt-BR/docs/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`. HTML5 extended this to any kind of [media queries](/pt-BR/docs/CSS/Media_queries), which are a superset of the allowed values of HTML 4.
     >
     > - Browsers not supporting the [CSS3 Media Queries](/pt-BR/docs/CSS/Media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
 
@@ -67,16 +67,16 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the {{htmlattrxref("href", "link")}} attribute. The attribute thus defines the reverse relationship compared to the value of the **rel** attribute. [Link types values](/pt-BR/docs/Web/HTML/Link_types) for the attribute are similar to the possible values for {{htmlattrxref("rel", "link")}}.
 
-    > **Note:** **Usage note:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the {{htmlattrxref("rel", "link")}} attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
+    > **Nota:** This attribute is obsolete in HTML5. **Do not use it**. To achieve its effect, use the {{htmlattrxref("rel", "link")}} attribute with the opposite [link types values](/pt-BR/docs/Web/HTML/Link_types), e.g. made should be replaced by author. Also this attribute doesn't mean _revision_ and must not be used with a version number, which is unfortunately the case on numerous sites.
 
-- {{htmlattrdef("sizes")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("sizes")}}
 
   - : This attribute defines the sizes of the icons for visual media contained in the resource. It must be present only if the {{htmlattrxref("rel","link")}} contains the icon [link types value](/pt-BR/docs/Web/HTML/Link_types). It may have the following values:
 
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Note:** Most icon formats are only able to store one single icon; therefore most of the time the {{HTMLAttrxRef("sizes")}} attribute contains only one entry.
+    > **Nota:** Most icon formats are only able to store one single icon; therefore most of the time the {{HTMLAttrxRef("sizes")}} attribute contains only one entry.
     > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
 
 - {{htmlattrdef("target")}}{{Non-standard_inline}}

@@ -1,11 +1,13 @@
 ---
-title: 非同期関数
+title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
+l10n:
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{jsSidebar("Statements")}}
 
-非同期関数は `async` キーワードで宣言され、その中で `await` キーワードを使うことができます。 `async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
+**`async function`** 宣言は非同期関数を宣言し、その中で `await` キーワードを使うことができます。`async` および `await` キーワードを使用することで、プロミスベースの非同期の動作を、プロミスチェーンを明示的に構成する必要なく、よりすっきりとした方法で書くことができます。
 
 非同期関数は{{jsxref("Operators/async_function", "式として", "", 1)}}も定義することができます。
 
@@ -13,20 +15,26 @@ slug: Web/JavaScript/Reference/Statements/async_function
 
 ## 構文
 
-```js
-async function name([param[, param[, ...param]]]) {
-   statements
+```js-nolint
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
+  statements
 }
 ```
 
 ### 引数
 
 - `name`
-  - : 関数の名前。
-- `param`
-  - : 関数に渡す引数名。
-- `statements`
-  - : 関数の本体を構成する文。
+  - : 関数の名前です。
+- `param` {{optional_inline}}
+  - : 関数に渡す引数の名前です。
+- `statements` {{optional_inline}}
+  - : 関数の本体を構成する文です。`await` の仕組みを使用することができます。
 
 ### 返値
 
@@ -40,15 +48,15 @@ async function name([param[, param[, ...param]]]) {
 >
 > `await` は [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)では単独で使用することができます。
 
-> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)とプロミスの組み合わせに似ています。
+> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
 
 非同期関数は常にプロミスを返します。非同期関数の返値が明示的にプロミスでない場合は、暗黙的にプロミスでラップされます。
 
-例:
+例えば、以下のコードを考えてください。
 
 ```js
 async function foo() {
-   return 1
+  return 1;
 }
 ```
 
@@ -56,7 +64,7 @@ async function foo() {
 
 ```js
 function foo() {
-   return Promise.resolve(1)
+  return Promise.resolve(1);
 }
 ```
 
@@ -71,7 +79,7 @@ function foo() {
 > ```js
 > const p = new Promise((res, rej) => {
 >   res(1);
-> })
+> });
 >
 > async function asyncReturn() {
 >   return p;
@@ -91,7 +99,7 @@ function foo() {
 
 ```js
 async function foo() {
-   await 1
+  await 1;
 }
 ```
 
@@ -99,7 +107,7 @@ async function foo() {
 
 ```js
 function foo() {
-   return Promise.resolve(1).then(() => undefined)
+  return Promise.resolve(1).then(() => undefined);
 }
 ```
 
@@ -108,29 +116,35 @@ function foo() {
 次の例では、 2 つのプロミスを連続して待ち受けます。関数 `foo` の処理は 3 段階に分かれています。
 
 1. 関数 foo の本体の最初の行は、保留中のプロミスで await 式が構成された状態で、同期的に実行されます。その後、`foo` の処理は中断され、`foo` を呼び出した関数に制御が返されます。
-2. しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。 (拒否されなかった場合は) 最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `result1` に代入されます。処理は続き、2 つ目の await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
-3. しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `result2` に代入されます。制御は (もしあれば) return 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
+2. しばらくして、最初のプロミスが履行されるか拒否されると、制御は `foo` に戻ります。（拒否されなかった場合は）最初のプロミスが履行された結果が await 式から返されます。ここでは `1` が `result1` に代入されます。処理は続き、2 つ目の await 式が評価されます。このときも `foo` の処理が中断され、制御が移譲されます。
+3. しばらくして、2 つ目のプロミスが履行されたか拒否されたとき、制御は `foo` に再び入ります。2 つ目のプロミスが解決した結果が 2 番目の await 式から返されます。ここでは `2` が `result2` に代入されます。制御は（もしあれば）return 式に移ります。既定の返値である `undefined` が、現在のプロミスの解決値として返されます。
 
 ```js
 async function foo() {
-   const result1 = await new Promise((resolve) => setTimeout(() => resolve('1')))
-   const result2 = await new Promise((resolve) => setTimeout(() => resolve('2')))
+  const result1 = await new Promise((resolve) =>
+    setTimeout(() => resolve("1")),
+  );
+  const result2 = await new Promise((resolve) =>
+    setTimeout(() => resolve("2")),
+  );
 }
-foo()
+foo();
 ```
 
- プロミスチェーンが一度に構築されないことに注意してください。プロミスチェーンは、非同期関数に制御を渡したり戻したりしながら、段階的に構築されていきます。そのため、同時並行の非同期処理を行う際には、エラー処理の動作に注意しなければなりません。
+プロミスチェーンが一度に構築されないことに注意してください。プロミスチェーンは、非同期関数に制御を渡したり戻したりしながら、段階的に構築されていきます。そのため、同時並行の非同期処理を行う際には、エラー処理の動作に注意しなければなりません。
 
 例えば、以下のコードでは、プロミスチェーンの先に `.catch` ハンドラーが設定されていたとしても、未処理のプロミス拒否エラーが発生します。これは、`p1` から制御が戻るまで、`p2` がプロミスチェーンに「配線」されないためです。
 
 ```js
 async function foo() {
-   const p1 = new Promise((resolve) => setTimeout(() => resolve('1'), 1000))
-   const p2 = new Promise((_,reject) => setTimeout(() => reject('2'), 500))
-   const results = [await p1, await p2] // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
+  const p1 = new Promise((resolve) => setTimeout(() => resolve("1"), 1000));
+  const p2 = new Promise((_, reject) => setTimeout(() => reject("2"), 500));
+  const results = [await p1, await p2]; // こうしないでください。 Promise.all または Promise.allSettled を使用してください。
 }
-foo().catch(() => {}) // すべてのエラーを浅くしようとする...
+foo().catch(() => {}); // すべてのエラーを浅くしようとする...
 ```
+
+`async function` 宣言はスコープの上端まで[巻き上げられ](/ja/docs/Glossary/Hoisting)、スコープのどこからでも呼び出すことができます。
 
 ## 例
 
@@ -138,77 +152,79 @@ foo().catch(() => {}) // すべてのエラーを浅くしようとする...
 
 ```js
 function resolveAfter2Seconds() {
-  console.log("starting slow promise")
-  return new Promise(resolve => {
-    setTimeout(function() {
-      resolve("slow")
-      console.log("slow promise is done")
-    }, 2000)
-  })
+  console.log("starting slow promise");
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("slow");
+      console.log("slow promise is done");
+    }, 2000);
+  });
 }
 
 function resolveAfter1Second() {
-  console.log("starting fast promise")
-  return new Promise(resolve => {
-    setTimeout(function() {
-      resolve("fast")
-      console.log("fast promise is done")
-    }, 1000)
-  })
+  console.log("starting fast promise");
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("fast");
+      console.log("fast promise is done");
+    }, 1000);
+  });
 }
 
 async function sequentialStart() {
-  console.log('==SEQUENTIAL START==')
+  console.log("==SEQUENTIAL START==");
 
   // 1. これは即時実行される
-  const slow = await resolveAfter2Seconds()
-  console.log(slow) // 2. これは 1. の 2 秒後に実行される
+  const slow = await resolveAfter2Seconds();
+  console.log(slow); // 2. これは 1. の 2 秒後に実行される
 
-  const fast = await resolveAfter1Second()
-  console.log(fast) // 3. これは 1. の 3 秒後に実行される
+  const fast = await resolveAfter1Second();
+  console.log(fast); // 3. これは 1. の 3 秒後に実行される
 }
 
 async function concurrentStart() {
-  console.log('==CONCURRENT START with await==');
-  const slow = resolveAfter2Seconds() // ただちにタイマーを起動
-  const fast = resolveAfter1Second() // ただちにタイマーを起動
+  console.log("==CONCURRENT START with await==");
+  const slow = resolveAfter2Seconds(); // ただちにタイマーを起動
+  const fast = resolveAfter1Second(); // ただちにタイマーを起動
 
   // 1. これは即時実行される
-  console.log(await slow) // 2. これは 1. の 2 秒後に実行される
-  console.log(await fast) // 3. fast はすでに解決しているので、これは 1. の 2 秒後 (2.の直後) に実行される
+  console.log(await slow); // 2. これは 1. の 2 秒後に実行される
+  console.log(await fast); // 3. fast はすでに解決しているので、これは 1. の 2 秒後 (2.の直後) に実行される
 }
 
 function concurrentPromise() {
-  console.log('==CONCURRENT START with Promise.all==')
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) => {
-    console.log(messages[0]) // slow
-    console.log(messages[1]) // fast
-  })
+  console.log("==CONCURRENT START with Promise.all==");
+  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then(
+    (messages) => {
+      console.log(messages[0]); // slow
+      console.log(messages[1]); // fast
+    },
+  );
 }
 
 async function parallel() {
-  console.log('==PARALLEL with await Promise.all==')
+  console.log("==PARALLEL with await Promise.all==");
 
   // 2 つの jobs を並列に実行し両方が完了するのを待つ
   await Promise.all([
-      (async()=>console.log(await resolveAfter2Seconds()))(),
-      (async()=>console.log(await resolveAfter1Second()))()
-  ])
+    (async () => console.log(await resolveAfter2Seconds()))(),
+    (async () => console.log(await resolveAfter1Second()))(),
+  ]);
 }
 
-sequentialStart() // 2 秒後に "slow" をログ出力し、その 1 秒後に "fast" をログ出力する
+sequentialStart(); // 2 秒後に "slow" をログ出力し、その 1 秒後に "fast" をログ出力する
 
 // 直前の処理を待つ
-setTimeout(concurrentStart, 4000) // 2 秒後に "slow" と "fast" をログ出力する
+setTimeout(concurrentStart, 4000); // 2 秒後に "slow" と "fast" をログ出力する
 
 // 直前の処理を待つ
-setTimeout(concurrentPromise, 7000) // concurrentStart と同様
+setTimeout(concurrentPromise, 7000); // concurrentStart と同様
 
 // 直前の処理を待つ
-setTimeout(parallel, 10000) // 本当に並列処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "slow" とログ出力する
+setTimeout(parallel, 10000); // 本当に並列処理となるため 1 秒後に "fast" とログ出力し、その 1 秒後に "slow" とログ出力する
 ```
 
-### await と並列性
+#### await と並列性
 
 `sequentialStart` では、最初の `await` のために実行が 2 秒間待機し、 2 つ目の `await` のためにさらに 1 秒間待機します。 2 つ目のタイマーは最初のタイマーが起動している間は作成されません。コードは 3 秒後に終了します。
 
@@ -224,19 +240,15 @@ setTimeout(parallel, 10000) // 本当に並列処理となるため 1 秒後に 
 >
 > `concurrentPromise` では、`Promise.all` がプロミスチェーンを一括して配線します。つまり、操作はプロミスの拒否の順番に関係なくすばやく失敗し、エラーは構成されたプロミスチェーン内で常に発生するため、通常の方法で捕捉することができます。
 
-### promise チェーンを非同期関数で書き換える
+### プロミスチェーンを非同期関数で書き換える
 
 {{jsxref("Promise")}} を返す API はプロミスチェーンを返し、関数を複数の部品に分割できます。次のコードを想定してください。
 
 ```js
 function getProcessedData(url) {
   return downloadData(url) // プロミスを返す
-    .catch(e => {
-      return downloadFallbackData(url)  // プロミスを返す
-    })
-    .then(v => {
-      return processDataInWorker(v)  // プロミスを返す
-    })
+    .catch((e) => downloadFallbackData(url)) // プロミスを返す
+    .then((v) => processDataInWorker(v)); // プロミスを返す
 }
 ```
 
@@ -244,17 +256,26 @@ function getProcessedData(url) {
 
 ```js
 async function getProcessedData(url) {
-  let v
+  let v;
   try {
-    v = await downloadData(url)
-  } catch(e) {
-    v = await downloadFallbackData(url)
+    v = await downloadData(url);
+  } catch (e) {
+    v = await downloadFallbackData(url);
   }
-  return processDataInWorker(v)
+  return processDataInWorker(v);
 }
 ```
 
-二番目の例では、有効であるにもかかわらず、 `await` 文が `return` キーワードの後にないことに注意してください。非同期関数の返値は、 (この例のように) 既にプロミスでない限り、暗黙的に {{jsxref("Promise.resolve")}} でラップされるからです。
+他にも、 `catch()` によってプロミスを連鎖させることができます。
+
+```js
+async function getProcessedData(url) {
+  const v = await downloadData(url).catch((e) => downloadFallbackData(url));
+  return processDataInWorker(v);
+}
+```
+
+二番目の例では、有効であるにもかかわらず、 `await` 文が `return` キーワードの後にないことに注意してください。非同期関数の返値は、（この例のように）既にプロミスでない限り、暗黙的に {{jsxref("Promise.resolve")}} でラップされるからです。
 
 ## 仕様書
 
@@ -269,5 +290,4 @@ async function getProcessedData(url) {
 - {{jsxref("Operators/async_function", "非同期関数式", "", 1)}}
 - {{jsxref("AsyncFunction")}} オブジェクト
 - {{jsxref("Operators/await", "await")}}
-- ["Decorating
-  Async Javascript Functions" on "innolitics.com"](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Decorating Async JavaScript Functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (_innolitics.com_)

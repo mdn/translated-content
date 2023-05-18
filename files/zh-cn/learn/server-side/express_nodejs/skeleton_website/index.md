@@ -69,7 +69,7 @@ $ express --help
         --pug            添加 pug 引擎支持
         --hbs            添加 handlebars 引擎支持
     -H, --hogan          添加 hogan.js 引擎支持
-    -v, --view <engine>  添加 <engine> 试图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
+    -v, --view <engine>  添加 <engine> 视图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
     -c, --css <engine>   添加 <engine> 样式表引擎支持 (less|stylus|compass|sass) (默认为纯 css)
         --git            添加 .gitignore
     -f, --force          对非空文件夹强制执行

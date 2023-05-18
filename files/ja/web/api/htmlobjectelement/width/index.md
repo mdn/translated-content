@@ -5,7 +5,7 @@ slug: Web/API/HTMLObjectElement/width
 
 {{APIRef("HTML DOM")}}
 
-**`width`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の {{htmlattrxref("width", "object")}} 属性を反映した文字列で、リソースが表示される幅を CSS ピクセル単位で指定する値を返します。
+**`width`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の [`width`](/ja/docs/Web/HTML/Element/object#width) 属性を反映した文字列で、リソースが表示される幅を CSS ピクセル単位で指定する値を返します。
 
 ## 値
 

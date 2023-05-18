@@ -29,7 +29,7 @@ HTML 5 より前のバージョンでは、返されるオブジェクトは {{d
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} （ただし、 {{htmlattrxref("type", "input")}} が `"image"` であるものは、過去の経緯から除外されています）。
+- {{HTMLElement("input")}} （ただし、 [`type`](/ja/docs/Web/HTML/Element/input#type) が `"image"` であるものは、過去の経緯から除外されています）。
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}

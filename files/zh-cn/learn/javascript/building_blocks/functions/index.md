@@ -39,9 +39,9 @@ slug: Learn/JavaScript/Building_blocks/Functions
 var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');
 console.log(newString);
-// the replace() string function takes a string,
-// replaces one substring with another, and returns
-// a new string with the replacement made
+// replace() 字符串函数接受一个字符串，
+// 用另一个子字符串替换一个子字符串，并返回
+// 替换后的新字符串
 ```
 
 或者当我们操作一个数组的时候：
@@ -50,18 +50,18 @@ console.log(newString);
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
 console.log(madeAString);
-// the join() function takes an array, joins
-// all the array items together into a single
-// string, and returns this new string
+// join() 函数接受一个数组，将
+// 所有数组元素连接成一个单一的
+// 字符串，并返回这个新字符串
 ```
 
 或者当我们生成一个随机数时：
 
 ```js
 var myNumber = Math.random()
-// the random() function generates a random
-// number between 0 and 1, and returns that
-// number
+// random() 函数生成一个随机
+// 数字在 0 和 1 之间，并返回该
+// 数字
 ```
 
 ...我们已经使用过函数了！
@@ -124,7 +124,7 @@ function myFunction() {
 }
 
 myFunction()
-// calls the function once
+// 调用一次该函数
 ```
 
 ## 匿名函数
@@ -199,8 +199,8 @@ function myGreeting() {
 ```js
 myButton.onclick = function() {
   alert('hello');
-  // I can put as much code
-  // inside here as I want
+  // 我可以在这里放入
+  // 尽可能多的代码
 }
 ```
 
@@ -230,11 +230,11 @@ var newString = myText.replace('string', 'sausage');
 还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
+var myArray = ['我', '爱', '巧克力', '青蛙'];
 var madeAString = myArray.join(' ');
-// returns 'I love chocolate frogs'
+// 返回 '我 爱 巧克力 青蛙'
 var madeAString = myArray.join();
-// returns 'I,love,chocolate,frogs'
+// 返回 '我,爱,巧克力,青蛙'
 ```
 
 如果没有包含参数来指定加入/分隔符，默认情况下会使用逗号
@@ -276,7 +276,7 @@ function greeting() {
 
 这两个函数都使用 `greeting()` 形式调用，但是你只能访问到 first.js 文件的`greeting()`函数（第二个文件被忽视了）。另外，第二次尝试使用 `let` 关键字定义 `name` 变量导致了一个错误。
 
-> **备注：** 您可以参考这个例子 [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (查看完整 [源代码](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> **备注：** 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
 将代码锁定在函数中的部分避免了这样的问题，并被认为是最佳实践。
 

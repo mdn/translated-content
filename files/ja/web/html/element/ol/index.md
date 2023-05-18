@@ -63,11 +63,11 @@ slug: Web/HTML/Element/ol
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)も受け付けます。
 
-- {{HTMLAttrDef("reversed")}}
+- `reversed`
   - : 論理属性で、リストの項目が逆順で指定されていることを指定します。項目は大きい方から小さい方へ番号付けされます。
-- {{HTMLAttrDef("start")}}
+- `start`
   - : 整数値を持つ属性で、リスト項目の序数の開始値を指定します。この値は、番号付けの種類が文字やローマ数字であっても、常にアラビア数字 (1, 2, 3, など) で指定します。例えば、 "d" の文字や "iv" のローマ数字から始める場合は、 `start="4"` を使用してください。
-- {{HTMLAttrDef("type")}}
+- `type`
 
   - : 番号付けの種類を設定します。
 
@@ -77,7 +77,7 @@ slug: Web/HTML/Element/ol
     - `I` は、大文字のローマ数字を示します
     - `1` は、数字を示します (既定値)
 
-    指定された種類は、異なる {{HTMLAttrxRef("type", "li")}} 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
+    指定された種類は、異なる [`type`](/ja/docs/Web/HTML/Element/li#type) 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
 
     > **メモ:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
 
@@ -197,5 +197,5 @@ slug: Web/HTML/Element/ol
 
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
-  - {{CSSxRef("line-height")}} プロパティは、非推奨の {{HTMLAttrxRef("compact", "ol")}} 属性をシミュレートするのに役立ちます。
+  - {{CSSxRef("line-height")}} プロパティは、非推奨の [`compact`](/ja/docs/Web/HTML/Element/ol#compact)ment/ol#compact) 属性をシミュレートするのに役立ちます。
   - {{CSSxRef("margin")}} プロパティは、リストの字下げを制御するのに役立ちます。

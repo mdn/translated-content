@@ -30,7 +30,7 @@ String.raw`templateString`
 
 ### 异常
 
-- `{{jsxref("TypeError")}}`
+- {{jsxref("TypeError")}}
   - : 如果第一个参数没有传入一个格式正确的对象，则会抛出 `TypeError` 异常。
 
 ## 描述

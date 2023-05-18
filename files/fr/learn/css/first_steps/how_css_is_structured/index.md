@@ -61,8 +61,6 @@ Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans u
 </html>
 ```
 
-e
-
 Le fichier CSS devrait ressembler à cela :
 
 ```css

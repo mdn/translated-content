@@ -13,9 +13,9 @@ slug: Web/HTML/Element/frameset
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-- {{htmlattrdef("cols")}}
+- `cols`
   - : この属性は、フレームセット内の水平方向の領域の数と寸法を指定します。
-- {{htmlattrdef("rows")}}
+- `rows`
   - : この属性は、フレームセット内の垂直方向の領域の数と寸法を指定します。
 
 ## 例

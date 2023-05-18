@@ -87,7 +87,9 @@ P
 {{EmbedLiveSample('一個活生生的_DOM_例子', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## 將 CSS 套用至 DOM
@@ -133,7 +135,7 @@ span {
 下面的例子使用英式英語來拼寫 color (也就是 colour)，進而導致該屬性失效，因為現在瀏覽器看不懂它了。也因此下面的段落無法以藍字顯示，不過其他的 CSS 還是成功地套用上去了，只有無效的會被忽略掉。
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css

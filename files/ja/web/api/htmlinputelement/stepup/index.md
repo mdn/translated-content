@@ -6,7 +6,7 @@ slug: Web/API/HTMLInputElement/stepUp
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
-[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 {{htmlattrxref("value","input")}} は ({{htmlattrxref("step","input")}} \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Element/input#value) は ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
 
 <table class="no-markdown">
   <thead>

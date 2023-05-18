@@ -15,20 +15,20 @@ slug: Mozilla/Firefox/Releases/78
 
 #### 调试器
 
-- 现在，您可以从[关于：调试](/zh-CN/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。({{bug("1617237")}})
-- 现在，[调试器](/zh-CN/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。({{bug("1640318")}})
-- 如果在[作用域](/zh-CN/docs/Tools/Debugger/UI_Tour#Scopes)中启用**映射**，则[日志点](/zh-CN/docs/Tools/Debugger/Set_a_logpoint)可以将源映射代码中的变量名称映射回其原始名称。({{bug("1536857")}})
+- 现在，您可以从[关于：调试](/zh-CN/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。([Firefox bug 1617237](https://bugzil.la/1617237))
+- 现在，[调试器](/zh-CN/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。([Firefox bug 1640318](https://bugzil.la/1640318))
+- 如果在[作用域](/zh-CN/docs/Tools/Debugger/UI_Tour#Scopes)中启用**映射**，则[日志点](/zh-CN/docs/Tools/Debugger/Set_a_logpoint)可以将源映射代码中的变量名称映射回其原始名称。([Firefox bug 1536857](https://bugzil.la/1536857))
 
 #### 网络监控器
 
-- In the [Network Monitor](/zh-CN/docs/Tools/Network_Monitor/request_list#Network_request_columns), you can now resize the columns of the request list by dragging the column borders anywhere in the table. ({{bug("1618409")}})
-- The [request details panel](/zh-CN/docs/Tools/Network_Monitor/request_details) in the Network Monitor has some UX improvements. ({{bug("1631302")}}, {{bug("1631295")}})
-- If a request was blocked, the [request list](/zh-CN/docs/Tools/Network_Monitor/request_list) now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ({{bug("1555057")}}, {{bug("1445637")}}, {{bug("1556451")}})
+- In the [Network Monitor](/zh-CN/docs/Tools/Network_Monitor/request_list#Network_request_columns), you can now resize the columns of the request list by dragging the column borders anywhere in the table. ([Firefox bug 1618409](https://bugzil.la/1618409))
+- The [request details panel](/zh-CN/docs/Tools/Network_Monitor/request_details) in the Network Monitor has some UX improvements. ([Firefox bug 1631302](https://bugzil.la/1631302), [Firefox bug 1631295](https://bugzil.la/1631295))
+- If a request was blocked, the [request list](/zh-CN/docs/Tools/Network_Monitor/request_list) now shows the reason, such as an add-on, CSP, CORS, or Enhanced Tracking Protection. ([Firefox bug 1555057](https://bugzil.la/1555057), [Firefox bug 1445637](https://bugzil.la/1445637), [Firefox bug 1556451](https://bugzil.la/1556451))
 
 #### 其他工具
 
-- The [Accessibility](/zh-CN/docs/Tools/Accessibility_inspector) inspector is out of beta. You can use it to check for various accessibility issues on your site. ({{bug("1602075")}})
-- Uncaught promise errors now provide all details in the Console, including their name and stack. ({{bug("1636590")}})
+- The [Accessibility](/zh-CN/docs/Tools/Accessibility_inspector) inspector is out of beta. You can use it to check for various accessibility issues on your site. ([Firefox bug 1602075](https://bugzil.la/1602075))
+- Uncaught promise errors now provide all details in the Console, including their name and stack. ([Firefox bug 1636590](https://bugzil.la/1636590))
 
 ### CSS
 
@@ -49,7 +49,7 @@ slug: Mozilla/Firefox/Releases/78
 
   - [Lookbehind assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) ([Firefox bug 1225665](https://bugzil.la/1225665))
   - {{JSxRef("RegExp.prototype.dotAll")}} ([Firefox bug 1361856](https://bugzil.la/1361856))
-  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes) ([Firefox bug 1361876](https://bugzil.la/1361876))
+  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape) ([Firefox bug 1361876](https://bugzil.la/1361876))
   - [Named capture groups](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges) ([Firefox bug 1362154](https://bugzil.la/1362154))
 
 - Due to a [WebIDL spec change](https://github.com/heycam/webidl/pull/357) in mid-2020, we've [added a `Symbol.toStringTag` property to all DOM prototype objects](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag#toStringTag_available_on_all_DOM_prototype_objects) ([Firefox bug 1277799](https://bugzil.la/1277799)).

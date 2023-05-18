@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Detect_WebGL
 
 이 예시는 어떻게 {{Glossary("WebGL")}} 랜더링 컨텐츠를 찾고, 유저에게 결과를 보고할지를 보여줍니다.
 
-{{EmbedLiveSample("detect-webgl-source",660,150)}}
+{{EmbedLiveSample("webgl_기능_검색",660,150)}}
 
-### 기능-검색 WebGl
+### WebGL 기능 검색
 
 이 첫 예시에서, 우리는 브라우저가 {{Glossary("WebGL")}}를 지원하는지 아닌 지를 확인합니다. 우리는 {{domxref("HTMLCanvasElement","canvas")}} element로 부터 {{domxref("WebGLRenderingContext","WebGL rendering context","",1)}}을 얻기 위하여 노력합니다. {{domxref("WebGLRenderingContext","WebGL rendering context", "", 1)}}는 당신이 설정하고 그래픽 기계의 상태를 쿼리하고, WebGl에 데이터를 전송하고, 그리기 명령어들을 실행할 수 있는 인터페이스입니다.
 
@@ -60,6 +60,6 @@ window.addEventListener("load", function() {
 }, false);
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
