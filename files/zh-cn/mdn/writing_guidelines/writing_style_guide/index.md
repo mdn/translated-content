@@ -75,7 +75,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
   >
   > You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
-- **合适的介绍简介示例** 在这里，我们看到一个更好的 `strokeText()` 方法的概述。
+- **合适的介绍简介示例**在这里，我们看到一个更好的 `strokeText()` 方法的概述。
 
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
