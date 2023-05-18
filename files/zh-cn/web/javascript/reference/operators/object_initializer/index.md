@@ -211,7 +211,7 @@ console.log(config); // {size: 12, mobileSize: 4}
 
 ### 扩展属性
 
-对象字面量支持[扩展语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator)。它将自己提供的对象的枚举属性复制到一个新的对象上。
+对象字面量支持[扩展语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)。它将自己提供的对象的枚举属性复制到一个新的对象上。
 
 现在可以使用比 {{jsxref("Object.assign()")}} 更短的语法来实现浅层克隆（不包括 `prototype`）或合并对象。
 
