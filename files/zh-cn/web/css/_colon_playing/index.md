@@ -5,9 +5,9 @@ slug: Web/CSS/:playing
 
 {{CSSRef}}
 
-**`:playing`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器是一种资源状态伪类，它将匹配可以进行“播放”或“暂停”的音频、视频或类似资源，当该元素处于“播放”状态时。
+**`:playing`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择器表示一个可播放的元素，例如 {{htmlelement("audio")}} 或 {{htmlelement("video")}}，当该元素处于“播放”状态时。
 
-即使资源处于缓冲状态或由于除用户交互以外的任何原因而暂停，该资源仍被视为正在播放。
+如果用户明确地启动了播放，那么资源就被认为是正在播放。如果元素的确处于播放状态，但由于与用户意图无关的原因而被暂停，也被认为是正在播放。在这种情况下，一旦底层原因（如“缓冲”或“停滞”状态）得到解决，播放将自动恢复。
 
 ## 语法
 
