@@ -1,5 +1,5 @@
 ---
-title: Introducing workers
+title: Introdução aos workers
 slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
 
