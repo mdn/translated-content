@@ -9,7 +9,7 @@ l10n:
 
 **`CookieStore`** は[クッキーストア API](/ja/docs/Web/API/Cookie_Store_API) のインターフェイスで、ページまたはサービスワーカーから非同期に Cookie を取得、設定するためのメソッドを提供します。
 
-`CookieStore` は {{domxref("Window")}} or {{domxref("ServiceWorkerGlobalScope")}} コンテキスト内のグローバスコープの属性を介してアクセスされます。そのため、コンストラクタはありません。
+`CookieStore` は {{domxref("Window")}} または {{domxref("ServiceWorkerGlobalScope")}} コンテキスト内のグローバスコープの属性を介してアクセスされます。そのため、コンストラクターはありません。
 
 {{InheritanceDiagram}}
 
