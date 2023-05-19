@@ -317,7 +317,7 @@ nameField.addEventListener("input", event => {
 
 有了这个设置，只要用户名输入框中有值，“发送”按钮就会一直处于启用状态，当为空时则禁用。
 
-#### HTML
+### HTML
 
 表单的 HTML 如下：
 
