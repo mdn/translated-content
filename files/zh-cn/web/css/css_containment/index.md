@@ -131,18 +131,18 @@ contain: strict;
 
 ### 与用户相关
 
-此规范提及了[与用户相关](https://w3c.github.io/csswg-drafts/css-contain/#relevant-to-the-user)这一概念。与用户相关的元素因为可见或用户正在交互所以应被渲染。
+此规范提及了[与用户相关](https://drafts.csswg.org/css-contain/#relevant-to-the-user)这一概念。与用户相关的元素因为可见或用户正在交互所以应被渲染。
 
 确切而言，若下列任意条件为真则元素与用户相关：
 
 - 元素出现于视口或视口周围由用户代理所定义的外边距（视口尺度的 50%，给予应用在元素可见性改变时做准备的时间）内。
 - 元素或其内容获得焦点。
 - 元素或其内容被选中，例如用鼠标光标在文本上拖拽或进行其他突显操作。
-- 元素或其内容被置于[顶层](https://w3c.github.io/csswg-drafts/css-position-4/#top-layer)。
+- 元素或其内容被置于[顶层](https://drafts.csswg.org/css-position-4/#top-layer)。
 
 ### 跳过其内容
 
-此规范提及了[跳过其内容](https://w3c.github.io/csswg-drafts/css-contain/#skips-its-contents)这一概念。此概念意味着所指元素与用户无关，且为改善性能将不被渲染。
+此规范提及了[跳过其内容](https://drafts.csswg.org/css-contain/#skips-its-contents)这一概念。此概念意味着所指元素与用户无关，且为改善性能将不被渲染。
 
 确切而言，在元素跳过其内容时：
 
