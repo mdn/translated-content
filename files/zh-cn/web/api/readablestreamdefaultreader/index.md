@@ -74,3 +74,11 @@ fetch("https://www.example.org/").then((response) => {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [Stream API 概念](/zh-CN/docs/Web/API/Streams_API)
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStream")}}
+- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) 或 [sd-streams](https://github.com/stardazed/sd-streams)——polyfill
