@@ -191,7 +191,7 @@ HTML DOM API 中的大多数接口，几乎一对一地映射到单个 HTML 元�
 
 ### 媒体接口
 
-媒体接口提供HTML访问媒体元素：{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的内容。
+媒体接口提供 HTML 访问媒体元素：{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的内容。
 
 - [`AudioTrack`](/zh-CN/docs/Web/API/AudioTrack)
 - [`AudioTrackList`](/zh-CN/docs/Web/API/AudioTrackList)
