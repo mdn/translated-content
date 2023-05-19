@@ -1,25 +1,22 @@
 ---
-title: Notification.requestPermission()
+title: Notification：requestPermission() 静态方法
 slug: Web/API/Notification/requestPermission_static
-original_slug: Web/API/Notification/requestPermission
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`requestPermission()`** 方法请求用户当前来源的权限以显示通知。
+> **注意：** Safari 仍然使用回调语法来获取权限。阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的一个很好的例子，说明如何检测这个并合适地运行代码。
+
+{{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法从用户当前来源请求权限以显示通知。
 
 ## 语法
 
-最新的规范已将此方法更新为基于 promise 的语法，工作原理如下：
+```js-nolint
+// The latest spec has updated this method to a promise-based syntax that works like this:
+Notification.requestPermission()
 
-```js
-Notification.requestPermission().then(function(permission) { ... });
-```
-
-以前，语法是基于一个简单的回调；此版本现~~已弃用~~：
-
-```js
-Notification.requestPermission(callback);
+// Previously, the syntax was based on a simple callback; this version is now deprecated:
+Notification.requestPermission(callback)
 ```
 
 ### 参数
@@ -29,25 +26,52 @@ Notification.requestPermission(callback);
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} ，将解析为一个 {{domxref("DOMString")}} ，它是用户对权限请求的选择。这个字符串可以是 `granted`（被授予）， `denied`（被拒绝）或者 `default`（默认）。
+{{jsxref("Promise")}} 解析为一个表示用户选择的权限的字符串。该字符串的可能值为：
 
-## 实例
+- `granted`
+- `denied`
+- `default`
 
-下面这个代码片段将向用户请求权限，然后根据用户的不同选择，输出不同的日志。
+## 示例
+
+Assume this basic HTML:
+
+```html
+<button onclick="notifyMe()">Notify me!</button>
+```
+
+It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.
 
 ```js
-Notification.requestPermission().then(function(result) {
-  if (result === 'denied') {
-    console.log('Permission wasn\'t granted. Allow a retry.');
-    return;
+function notifyMe() {
+  if (!("Notification" in window)) {
+    // Check if the browser supports notifications
+    alert("This browser does not support desktop notification");
+  } else if (Notification.permission === "granted") {
+    // Check whether notification permissions have already been granted;
+    // if so, create a notification
+    const notification = new Notification("Hi there!");
+    // …
+  } else if (Notification.permission !== "denied") {
+    // We need to ask the user for permission
+    Notification.requestPermission().then((permission) => {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        const notification = new Notification("Hi there!");
+        // …
+      }
+    });
   }
-  if (result === 'default') {
-    console.log('The permission request was dismissed.');
-    return;
-  }
-  // Do something with the granted permission.
-});
+
+  // At last, if the user has denied notifications, and you
+  // want to be respectful there is no need to bother them anymore.
+}
 ```
+
+We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see an example in action, check out our [To-do list example](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (also see [the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+
+> **Note:** In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
+
 
 ## 规范
 
@@ -59,4 +83,4 @@ Notification.requestPermission().then(function(result) {
 
 ## 参见
 
-- [使用 Web Notifications](/zh-CN/docs/Web/API/notification/Using_Web_Notifications)
+- [使用 Notifications API](/zh-CN/docs/Web/API/notification/Using_Web_Notifications)
