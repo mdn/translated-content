@@ -45,7 +45,7 @@ HTML 标准添加到 `Document` 中的内容包括：
 
 ### HTML 元素接口
 
-通过引入 {{domxref("HTMLElement")}} 接口，`Element` 接口被进一步调整为专门表示 HTML 元素，所有更具体的 HTML 元素类都继承自它。这扩展了 `Element` 类，向元素节点添加了特定于 HTML 的通用功能。 `HTMLElement` 添加的属性包括 {{domxref("HTMLElement.hidden", "hidden")}} 和 {{domxref("HTMLElement.innerText", "innerText")}} 等。`HTMLElement` 还添加了所有 [全局事件处理程序](/zh-CN/docs/Web/API/GlobalEventHandlers) 。
+通过引入 {{domxref("HTMLElement")}} 接口，`Element` 接口被进一步调整为专门表示 HTML 元素，所有更具体的 HTML 元素类都继承自它。这扩展了 `Element` 类，向元素节点添加了特定于 HTML 的通用功能。`HTMLElement` 添加的属性包括 {{domxref("HTMLElement.hidden", "hidden")}} 和 {{domxref("HTMLElement.innerText", "innerText")}} 等。`HTMLElement` 还添加了所有[全局事件处理程序](/zh-CN/docs/Web/API/GlobalEventHandlers)。
 
 一个 {{Glossary("HTML")}} 文档是一个 DOM 树，其中每个节点都是一个 HTML 元素，由 {{domxref("HTMLElement")}} 接口表示。 `HTMLElement` 类实现了 `Node`，因此每个元素也是一个节点（但反过来不成立）。这样，由 {{domxref("Node")}} 接口实现的结构特性也可用于 HTML 元素中，允许它们相互嵌套、创建和删除、移动等。
 
