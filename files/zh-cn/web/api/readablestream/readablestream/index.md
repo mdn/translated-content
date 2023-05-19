@@ -99,3 +99,10 @@ const stream = new ReadableStream({
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableByteStreamController")}}
+- {{domxref("ReadableStreamDefaultController")}}
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

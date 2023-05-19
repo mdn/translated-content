@@ -49,3 +49,7 @@ const size = queuingStrategy.size();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} 构造函数

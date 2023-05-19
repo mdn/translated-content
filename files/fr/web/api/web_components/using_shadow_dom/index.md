@@ -45,7 +45,7 @@ Le DOM fantôme permet à des arbres DOM cachés d'être associés à des élém
 
 ![Version SVG du diagramme montrant l'interaction entre le document, la racine fantôme et l'hôte fantôme.](shadowdom.svg)
 
-Il y a quelques termes de la terminologie du DOM fantôme que vous devez connaitre :
+Il y a quelques termes de la terminologie du DOM fantôme que vous devez connaître :
 
 - **Hôte fantôme** : le nœud du DOM principal auquel le DOM fantôme est associé.
 - **Arbre fantôme** : l'arbre DOM au sein du DOM fantôme.
@@ -75,7 +75,7 @@ Si vous associez une racine fantôme à un élément personnalisé avec la propr
 
 > **Note :** Comme montre [cet article de blog](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af) (en anglais), il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.
 
-Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser quelque instruction comme :
+Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser une instruction comme :
 
 ```js
 let shadow = this.attachShadow({mode: 'open'});

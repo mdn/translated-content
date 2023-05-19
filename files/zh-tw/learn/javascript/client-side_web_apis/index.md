@@ -18,7 +18,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 ## 概觀
 
 - [Web API 簡介](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-  - : 首先，我們將從 API 的宏觀視角開始看起──它是什麼、如何運作、如何在程式碼裡運用，以及它是如何建構起來的？我們還將探討不同 API 主要類別分別是什麼，以及它們有什麼功能。
+  - : 首先，我們將從 API 的宏觀視角開始看起——它是什麼、如何運作、如何在程式碼裡運用，以及它是如何建構起來的？我們還將探討不同 API 主要類別分別是什麼，以及它們有什麼功能。
 - [文件操作](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
   - : 在撰寫網頁或應用程式時，你會想做的其中一件最常見的事情，是透過某個辦法操控網頁文件。這通常藉由使用文件物件模型（Document Object Model，簡稱 DOM）達成，這是一組 API，用來控制 HTML 與修飾大量使用 {{domxref("Document")}} 物件的訊息。這篇文章中，我們將深入探索如何使用 DOM，以及其它一些能把你的環境變得很有趣的好玩 API。
 - [從伺服器獲取資料](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
@@ -28,6 +28,6 @@ slug: Learn/JavaScript/Client-side_web_APIs
 - [繪製圖形](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
   - : 瀏覽器含有一些非常強大的圖形程式設計工具，從可縮放向量圖形（[SVG](/zh-TW/docs/Web/SVG)）語言，到用來在 HTML {{htmlelement("canvas")}} 元素與 [WebGL](/zh-TW/docs/Web/API/WebGL_API)) 上繪圖的 API。這篇文章介紹 Canvas API，並提供讓你能深入學習的資源。
 - [視訊及音訊 API](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-  - : HTML5 擁有將多媒體嵌入到文件中的元素──{{htmlelement("video")}} 及 {{htmlelement("audio")}}──並衍生出用來控制播放、查詢等等的它們自己的 API。這篇文章向你展示如何做到諸如創造自訂播放器等常見任務。
+  - : HTML5 擁有將多媒體嵌入到文件中的元素——{{htmlelement("video")}} 及 {{htmlelement("audio")}}——並衍生出用來控制播放、查詢等等的它們自己的 API。這篇文章向你展示如何做到諸如創造自訂播放器等常見任務。
 - [用戶端儲存](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
   - : 當今網路瀏覽器提供很多不同技術，讓你能儲存網站相關的資料並在需要時取出，使你能長期保存資料、離線儲存網站，以及更多。這篇文章用最簡單的方式解釋這些如何運作。

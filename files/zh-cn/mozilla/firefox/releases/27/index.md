@@ -18,7 +18,7 @@ slug: Mozilla/Firefox/Releases/27
 
 ### CSS
 
-- `CSS {{cssxref("cursor")}} 属性值中 -moz-grab` 和 `-moz-grabbing` 关键字脱前缀，成为 `grab` 和 `grabbing` ({{bug("880672")}}).
+- `CSS {{cssxref("cursor")}} 属性值中 -moz-grab` 和 `-moz-grabbing` 关键字脱前缀，成为 `grab` 和 `grabbing` ([Firefox bug 880672](https://bugzil.la/880672)).
 
 ### HTML
 
@@ -28,8 +28,8 @@ slug: Mozilla/Firefox/Releases/27
 
 [EcmaScript 6](/zh-CN/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) 实现了：
 
-- [展开运算符](http://wiki.ecmascript.org/doku.php?id=harmony:spread)支持在函数调用时的实参左边位置使用 ({{bug("762363")}}).
-- 实现了多个数学函数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} ({{bug("896264")}}).
+- [展开运算符](http://wiki.ecmascript.org/doku.php?id=harmony:spread)支持在函数调用时的实参左边位置使用 ([Firefox bug 762363](https://bugzil.la/762363)).
+- 实现了多个数学函数 {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} ([Firefox bug 896264](https://bugzil.la/896264)).
 
 ### Interfaces/APIs/DOM
 

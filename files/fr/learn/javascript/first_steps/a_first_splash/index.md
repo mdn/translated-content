@@ -160,7 +160,7 @@ Dans cet article, nous allons vous montrer comment construire le jeu simple que 
 </html>
 ```
 
-{{ EmbedLiveSample('Exemple_—_Jeu_Guess_the_number', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
 
 Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.
 
