@@ -25,7 +25,7 @@ Object.create(proto, propertiesObject)
 
 ### 返回值
 
-一个新对象，带着指定的原型对象及其属性。
+根据指定的原型对象和属性创建的新对象。
 
 ### 异常
 
