@@ -70,7 +70,7 @@ function fetchStream() {
 
 ## 参见
 
-- [Streams API 概念](/zh-CN/docs/Web/API/Streams_API)
+- [Stream API 概念](/zh-CN/docs/Web/API/Streams_API)
 - [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
 - {{domxref("ReadableStream")}}
 - {{domxref("ReadableStreamDefaultController")}}

@@ -82,4 +82,4 @@ function fetchStream(stream, list) {
 ## 参见
 
 - {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
-- [拷贝流](/en-US/docs/Web/API/Streams_API/Using_readable_streams#拷贝流)
+- [拷贝流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#拷贝流)

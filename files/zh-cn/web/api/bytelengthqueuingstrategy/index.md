@@ -52,6 +52,6 @@ const size = queueingStrategy.size(chunk);
 
 ## 参见
 
-- {{domxref("Streams API", "Streams API", "", 1)}}
+- {{domxref("Streams API", "Stream API", "", 1)}}
 - [内置队列和队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)
 - {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} 构造函数
