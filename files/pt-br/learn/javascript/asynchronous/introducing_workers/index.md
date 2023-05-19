@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-In this final article in our "Asynchronous JavaScript" module, we'll introduce _workers_, which enable you to run some tasks in a separate {{Glossary("Thread", "thread")}} of execution.
+Neste último artigo de nosso módulo "JavaScript assíncrono", apresentaremos os _workers_, que permitem executar algumas tarefas em um {{Glossary("Thread", "thread")}} separado.
 
 <!-- 
 <table>
