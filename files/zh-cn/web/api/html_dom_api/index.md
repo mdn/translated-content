@@ -256,7 +256,7 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 #### Web Workers 接口
 
-这些接口被 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 用于建立 Worker 与应用及其内容交互的能力，同时也支持窗口或应用之间的消息传递。
+这些接口被 {{DOMxRef("Web_Workers_API", "Web Workers API", "", "1")}} 用于建立 Worker 与应用及其内容交互的能力，同时也支持窗口或应用之间的消息传递。
 
 - [`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)
 - [`DedicatedWorkerGlobalScope`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)
