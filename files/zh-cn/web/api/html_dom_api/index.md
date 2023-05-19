@@ -5,7 +5,7 @@ slug: Web/API/HTML_DOM_API
 
 {{DefaultAPISidebar("HTML DOM")}}
 
-**HTML DOM API** 由一系列接口组成，它们定义了 HTML 中每个元素的功能，以及它们所依赖、所支持的任何类型和接口。
+**HTML DOM API** 由一系列接口组成，它们定义了 {{Glossary("HTML")}} 中每个{{Glossary("element", "元素")}}的功能，以及它们所依赖的任何支持类型和接口。
 
 HTML DOM API 的功能包括：
 
