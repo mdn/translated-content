@@ -5,17 +5,16 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 
 {{HTTPSidebar}}
 
-The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
+当客户端通过代理服务器连接到 web 服务器时，**`X-Forwarded-For`** (XFF) 请求头可用于标识客户端的原始 IP 地址。
+XFF 是事实上的标准。
 
-> **Warning:** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅 [Security and privacy concerns](#security_and_privacy_concerns).
-
-When a client connects directly to a server, the
-client's IP address is sent to the server (and is often written to server
-access logs). But if a client connection passes through any [forward or reverse](https://en.wikipedia.org/wiki/Proxy_server) proxies, the server only
-sees the final proxy's IP address, which is often of little use. That's especially true if
-the final proxy is a load balancer which is part of the same installation
-as the server. So, to provide a more-useful client IP address to the server, the `X-Forwarded-For` request header is
-used.
+> **警告：** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅 [Security and privacy concerns](#security_and_privacy_concerns).
+ 
+当客户端直接连接到服务器时，其 IP 地址被发送给服务器（并且经常被记录在服务器的访问日志中）。
+但是如果客户端通过 [正向代理或者反向代理](https://en.wikipedia.org/wiki/Proxy_server) 进行连接，
+服务器就只能看到最后一个代理的 IP 地址，这个 IP 通常没什么用。
+如果最后一个代理是与服务器安装在同一台主机上的负载均衡，则更是如此。
+`X-Forwarded-For` 的出现，就是为了向服务器提供更有用的客户端 IP 地址。
 
 For detailed guidance on using this header, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
 
