@@ -279,7 +279,7 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 #### Server-sent 事件接口
 
-{{domxref("EventSource")}} 接口表示发送或正在发送 [server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events) 的源。
+{{domxref("EventSource")}} 接口表示发送或正在发送 {{DOMxRef("Server-sent_events", "server-sent events", "", "1")}} 的源。
 
 - [`EventSource`](/zh-CN/docs/Web/API/EventSource)
 
