@@ -44,11 +44,11 @@ o = {
 
 对象字面的语法与 **J**ava**S**cript **O**bject **N**otation（[JSON](/zh-CN/docs/Glossary/JSON)）不一样。虽然它们看起来很相似，但它们之间还是有区别的：
 
-- JSON *只*允许使用 `"property": value"` 的语法进行属性定义。属性名必须是双引号，而且定义不能是速记法。计算属性名也是不允许的。
+- JSON *只*允许使用 `"property": value` 的语法进行属性定义。属性名必须是双引号，而且定义不能简写。计算属性名也是不允许的。
 - JSON 对象的属性值只能是字符串、数字、`true`、`false`、`null`、数组或其他 JSON 对象。这意味着 JSON 不能表达方法或非普通对象，如 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 或 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。
 - 在 JSON 中，`"__proto__"` 是一个普通的属性键。在对象字面中，它[设置对象的原型](#原型_setter)。
 
-JSON 是对象字面语法的一个*严格*子集，意味着每一个有效的 JSON 文本都可以被解析为对象字面，并且不会引起语法错误。唯一的例外是，对象字面语法禁止重复的 `__proto__` 键，这不适用于 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)。后者将 `__proto__` 像普通的属性一样对待，并将最后一次出现的对象作为该属性的值。它们所代表的对象值（也就是它们的语义）唯一不同的时候，也就是当源码包含 `__proto__` 键的时候——对于对象字面，它设置对象的原型；对于 JSON，它是一个普通的属性。
+JSON 是对象字面语法的一个*真*子集，意味着每一个有效的 JSON 文本都可以被解析为对象字面，并且不会引起语法错误。唯一的例外是，对象字面语法禁止重复的 `__proto__` 键，这不适用于 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)。后者将 `__proto__` 像普通的属性一样对待，并将最后一次出现的对象作为该属性的值。它们所代表的对象值（也就是它们的语义）唯一不同的时候，也就是当源码包含 `__proto__` 键的时候——对于对象字面，它设置对象的原型；对于 JSON，它是一个普通的属性。
 
 ```js
 console.log(JSON.parse('{ "__proto__": 0, "__proto__": 1 }')); // {__proto__: 1}
@@ -213,7 +213,7 @@ console.log(config); // {size: 12, mobileSize: 4}
 
 对象字面量支持[扩展语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)。它将自己提供的对象的枚举属性复制到一个新的对象上。
 
-现在可以使用比 {{jsxref("Object.assign()")}} 更短的语法来实现浅层克隆（不包括 `prototype`）或合并对象。
+现在可以使用比 {{jsxref("Object.assign()")}} 更短的语法来实现浅拷贝（不包括 `prototype`）或合并对象。
 
 ```js
 const obj1 = { foo: "bar", x: 42 };
@@ -226,13 +226,13 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告：** 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开操作符则不会！
+> **警告：** 请注意，{{jsxref("Object.assign()")}} 会触发 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)，而展开语法不会！
 
 ### 原型 setter
 
 一个形式为 `__proto__: value` 或 `"__proto__": value` 的属性定义并没有创建一个名称为 `__proto__` 的属性。相反，如果提供的值是一个对象或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值，它将创建对象的 `[[Prototype]]` 指向该值（如果该值不是一个对象或 `null`，该对象不会被改变）。
 
-请注意，`__proto__` 键是标准化的语法，与非标准和非执行的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器不同。它在创建对象时设置了 `[[Prototype]]`，类似于 {{jsxref("Object.create")}}——而不是变更原型链。
+请注意，`__proto__` 键是标准化的语法，与非标准且性能不佳的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器不同。它在创建对象时设置了 `[[Prototype]]`，类似于 {{jsxref("Object.create")}}——而不是变更原型链。
 
 ```js
 const obj1 = {};
@@ -250,7 +250,7 @@ console.log(Object.getPrototypeOf(obj4) === Object.prototype); // true
 console.log(Object.hasOwn(obj4, "__proto__")); // false
 ```
 
-在对象字面值中，仅有一次变更原型的机会；多次变更原型，会被视为语法错误。
+在对象字面值中，仅允许有一个原型 setter；多个原型 setter 会被视为语法错误。
 
 不使用“冒号”标记法的属性定义不是原型 setter。它们是属性定义，其行为与使用任何其他名称的类似定义相同。
 
@@ -268,7 +268,7 @@ console.log(obj2.__proto__()); // "hello"
 const obj3 = { ["__proto__"]: 17 };
 console.log(obj3.__proto__); // 17
 
-// 用"__proto__" 键将原型 setter 与正常的自身属性混合在一起
+// 将原型 setter 与正常的使用“__proto__”键的自有属性混合在一起
 const obj4 = { ["__proto__"]: 17, __proto__: {} }; // {__proto__: 17} （原型为 {}）
 const obj5 = {
   ["__proto__"]: 17,
