@@ -37,7 +37,7 @@ HTML DOM API 的功能包括：
 
 HTML 标准添加到 `Document` 中的内容包括：
 
-- 在加载页面时，支持访问 {{Glossary("HTTP")}} 头部提供的各种信息，例如文档加载的 [位置](/zh-CN/docs/Web/API/Document/location)、[cookies](/zh-CN/docs/Web/API/Document/cookie)、[修改日期](/zh-CN/docs/Web/API/Document/lastModified)、[引用站点](/zh-CN/docs/Web/API/Document/referrer) 等。
+- 在加载页面时，支持访问 {{Glossary("HTTP")}} 头部提供的各种信息，例如文档加载的[位置](/zh-CN/docs/Web/API/Document/location)、[cookies](/zh-CN/docs/Web/API/Document/cookie)、[修改日期](/zh-CN/docs/Web/API/Document/lastModified)、[引用站点](/zh-CN/docs/Web/API/Document/referrer)等。
 - 可以访问文档 {{HTMLElement("head")}} 块和 [body](/zh-CN/docs/Web/API/Document/body) 中元素的列表，以及包含在文档中的 [图像](/zh-CN/docs/Web/API/Document/images)、[链接](/zh-CN/docs/Web/API/Document/links)、[脚本](/zh-CN/docs/Web/API/Document/scripts) 等列表。
 - 支持通过检查 [焦点](/zh-CN/docs/Web/API/Document/hasFocus) 和对 [可编辑内容](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 执行命令来与用户交互。
 - [HTML 标准定义事件](/zh-CN/docs/Web/API/GlobalEventHandlers) 的文档事件处理程序，允许访问 [鼠标](/zh-CN/docs/Web/API/MouseEvent) 和 [键盘](/zh-CN/docs/Web/API/KeyboardEvent) 事件、[拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)、[媒体控制](/zh-CN/docs/Web/API/HTMLMediaElement) 等。
