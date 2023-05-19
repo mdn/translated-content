@@ -52,11 +52,11 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 在指南或教程中，介绍性段落应该告诉读者将涵盖的主题，以及读者应该具备的先决知识（如果有的话）。开头一段应该提到正在记录或讨论的技术和/或 API，并提供相关信息的链接，还应该对文章内容可能有用的情况提供提示。
 
-- **过于简短的简介示例** 下面这个例子中的简介太过于简短，很多信息都没有包含进来，比如“stroke”文本意味着什么，文本会在哪里等。
+- **过于简短的简介示例**：下面这个例子中的简介太过于简短，很多信息都没有包含进来，比如“stroke”文本意味着什么，文本会在哪里等。
 
   > **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
-- **过于冗长的简介示例** 下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 `strokeText()` 方法上，然后给出详细介绍它的文章的链接即可。
+- **过于冗长的简介示例**：下面是上面那个简介的修改版，但是这次它又太过冗长了。其中包含了过多的细节，并且还包含了很多其他方法和属性，但实际上它应该将重点聚焦在 `strokeText()` 方法上，然后给出详细介绍它的文章的链接即可。
 
   > When called, the Canvas 2D API method **`CanvasRenderingContext2D.strokeText()`** strokes the characters in the specified string beginning at the coordinates specified, using the current pen color.
   > In the terminology of computer graphics, "stroking" text means to draw the outlines of the glyphs in the string without filling in the contents of each character with color.
@@ -75,7 +75,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
   >
   > You can call the **`fillText()`** method to draw a string's characters as filled with color instead of only drawing the outlines of the characters.
 
-- **合适的介绍简介示例**在这里，我们看到一个更好的 `strokeText()` 方法的概述。
+- **合适的介绍简介示例**：在这里，我们看到一个更好的 `strokeText()` 方法的概述。
 
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
@@ -103,7 +103,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 - **正确**：A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.
 
-> **备注：** MDN 允许使用这种通用性的语法（尽管在正式用法中这一点还存在争议）来弥补英语在表达中立性别时的不足。将第三人称复数的代词用来表示性别中立代词（即使用“they”、“them”、“their”、“theirs”）是可以接受的，也就是通常所说的“[单数形式的‘they’](https://en.wikipedia.org/wiki/Singular_they)”。
+> **备注：** MDN 允许在这里使用第三人称复数，也就是通常所说的“[单数形式的‘they’](https://zh.wikipedia.org/wiki/单数they)”。中性代名词包括：“they”、“them”、“their”和“theirs”。
 
 或者使用复数形式的“users”：
 
@@ -114,13 +114,13 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - **正确**：A confirmation dialog appears, requesting the user's permission for web cam access.
 - **正确**：A confirmation dialog box appears, which asks the user for permission to use the web cam.
 
-最后一种方法可能更好一些，因为它不但语法上更加正确，而且还能消除不同语言处理性别问题时所带来的复杂性，因为不同语言对性别的处理可能有不同的规则。因此这种方法无论是对读者（译注：意为阅读英语原文的非英语读者）还是翻译者来说都可以让翻译更简单。
+最后一种方法可能更好一些，因为它不但语法上更加正确，而且还能消除不同语言处理性别问题时所带来的复杂性，因为不同语言对性别的处理可能有不同的规则。因此这种方法无论是对读者（译注：意为阅读英语原文的非英语读者）还是翻译人员来说都可以让翻译更简单。
 
 ### 写作时要带有 SEO 意识
 
-虽然 MDN Web 文档上的任何写作的主要目标应该始终是解释和告知开放的网络技术，以便开发人员能够迅速学会做他们想做的事情，或者找到他们需要知道的小细节，以完善他们的代码，但重要的是，他们能够*找到*我们写的材料。我们可以通过在写作时牢记搜索引擎优化（{{Glossary("SEO")}}）来实现这一点。
+虽然 MDN Web 文档上的任何写作的主要目标应该始终是解释和告知开放的 web 技术，以便开发人员能够迅速学会做他们想做的事情，或者找到他们需要知道的小细节，以完善他们的代码，但重要的是，他们能够*找到*我们写的材料。我们可以通过在写作时牢记搜索引擎优化（{{Glossary("SEO")}}）来实现这一点。
 
-本节涵盖了内容的标准做法、建议和要求，以帮助确保搜索引擎能够轻松地对我们的材料进行分类和索引，以确保用户能够轻松地达到他们所需要的内容。搜索引擎优化指南包括确保作家和编辑工作的每一个页面都有合理的设计、编写和标记，以便给搜索引擎提供他们所需的背景和线索，从而正确地对文章进行索引。
+本节涵盖了内容的标准做法、建议和要求，以帮助确保搜索引擎能够轻松地对我们的材料进行分类和索引，以确保用户能够轻松地达到他们所需要的内容。搜索引擎优化指南包括确保作家和编辑工作的每一个页面都有合理的设计、编写和标记，以便给搜索引擎提供它们所需的背景和线索，从而正确地对文章进行索引。
 
 在编写和审查内容时，以下的检查表是很好的选择，以帮助确保页面及其相邻的内容能被搜索引擎正确索引：
 
@@ -128,17 +128,17 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
   那么，确保每一个页面都有自己的内容是很重要的。这里有一些建议可以帮助你实现这一目标：
 
-  - **解释更多独特的概念**：考虑那些可能比人们想象的有更多差异的使用案例。例如，在记录 `width` 和 `height` 属性的情况下，也许可以写出水平空间和垂直空间的不同使用方式，并提供关于适当概念的讨论。也许你可以提到在为侧边栏腾出空间方面使用 `width`，而使用 `height` 来处理垂直滚动或页脚。包括关于无障碍问题的信息也是一个有用的、重要的想法。
+  - **解释更多独特的概念**：考虑那些可能比人们想象的有更多差异的使用案例。例如，在编写 `width` 和 `height` 属性的文档时，也许可以写出水平空间和垂直空间的不同使用方式，并提供关于适当概念的讨论。也许你可以提到在为侧边栏腾出空间方面使用 `width`，而使用 `height` 来处理垂直滚动或页脚。包括关于无障碍问题的信息也是一个有用的、重要的想法。
   - **使用不同的例子**：这些情况下的例子往往比正文更相似，因为例子可能一开始就使用了两个（或全部）相似的方法或属性，因此在重复使用时不需要真正的改变。所以扔掉这个例子，写一个新的，或者至少提供多个例子，其中至少有一些是不同的。
   - **为例子增加描述**：既要概述例子的作用，又要涵盖它是如何工作的，考虑到主题的复杂性和目标受众，要有适当的详细程度。
 
   如果时间允许，避免过于相似的最简单方法当然是从头开始写每一篇文章。
 
-- **确保页面不会太短**：如果一个页面上的内容太少（在 SEO 术语中称为“薄页（thin pages）”），搜索引擎将不会对这种页面进行准确的分类。内容过短的页面很难找到。作为一个指导原则，确保 MDN Web 文档上的页面不短于 300 字左右。不要人为地撑满一个页面，但在可能的情况下，将这一准则作为一个最小的目标长度。
+- **确保页面不会太短**：如果一个页面上的内容太少（在 SEO 术语中称为“薄页（thin page）”），搜索引擎将不会对这种页面进行准确的分类。内容过短的页面很难找到。作为一个指导原则，确保 MDN Web 文档上的页面内容不少于 300 字左右。不要人为地撑满一个页面，但在可能的情况下，将这一准则作为一个最小的目标长度。
 
   这里有一些基本准则，可以帮助你创建有足够内容的页面，使其可以正常搜索，而不至于用不必要的文字把它们弄得很乱：
 
-  - **避免占位符**：很明显，如果文章存在占位符或缺少内容，请补充上相应的内容。我们尽量避免在 MDN 网络文档上出现直接的“占位符”页面，尽管它们确实存在，但有很多页面缺少大量的内容。
+  - **避免占位符**：很明显，如果文章存在占位符或缺少内容，请补充上相应的内容。我们尽量避免在 MDN Web 文档上出现直接的“占位符”页面，尽管它们确实存在，但有很多页面缺少大量的内容。
   - **审查页面结构**：审查页面以确保它的结构对于[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)来说是正确的。要确保它应该有的每一节都存在，并有适当的内容。
   - **确保完整性**：审查各节以确保没有遗漏任何信息。确保所有的参数都被列出并解释。确保涵盖任何例外情况——这是一个特别常见的内容缺失的地方。
   - **确保所有的概念都得到充实**：对某件事进行快速解释很容易，但要确保涵盖所有的细微差别。是否有特殊情况？是否有读者可能需要了解的任何已知限制？
@@ -439,11 +439,11 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 
 ### 短链接
 
-URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小的、更容易记住的 URL（也称为“短链接”）。然而，它们也混淆了 URL 的目的地。此外，在某些缩短器中，目的地可以在创建后被改变，这一功能可能被用于恶意目的。
+URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小的、更容易记住的 URL（也称为“短链接”）。然而，它们也混淆了 URL 的目的地址。此外，在某些缩短器中，目的地址可以在创建后被改变，这一功能可能被用于恶意目的。
 
 不要使用通过第三方（用户生成的）URL 缩短器创建的链接。例如，如果 `https://myshort.link/foobar` 是一个由随机用户生成的短网址，并重定向到 `https://example.com/somelongURL/details/show?page_id=foobar`，则使用较长的 `example.com` 网址。
 
-另一方面，鼓励使用由同时维护目的地URL的组织所维护的第一方缩短器。`https://bugzil.la` 是由 Mozilla 拥有和运营的，是一个重定向到 `https://bugzilla.mozilla.org/` 的 URL 缩短器，这也是 Mozilla 拥有的一个域名。在这种情况下，使用较短的 URL。例如，使用 `https://bugzil.la/1682349` 而不是 `https://bugzilla.mozilla.org/show_bug.cgi?id=1682349`。
+另一方面，鼓励使用由同时维护目标 URL 的组织所维护的第一方缩短器。`https://bugzil.la` 是由 Mozilla 拥有和运营的，是一个重定向到 `https://bugzilla.mozilla.org/` 的 URL 缩短器，这也是 Mozilla 拥有的一个域名。在这种情况下，使用较短的 URL。例如，使用 `https://bugzil.la/1682349` 而不是 `https://bugzilla.mozilla.org/show_bug.cgi?id=1682349`。
 
 ### 标题级别
 
@@ -451,7 +451,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 在不跳级的情况下，按照递减的顺序使用这些 markdown 标记级别：`##`，然后是 `###`，然后是 `####`；这些分别翻译成 [HTML 标题标签](/zh-CN/docs/Web/HTML/Element/Heading_Elements)的 `<h2>`、`<h3>` 和 `<h4>` 标签。
 
-`##` 是允许的最高级别，因为 `#` 是保留给页面标题的。我们建议不要添加超过三层的标题。如果你觉得有必要添加第四层标题，可以考虑将文章分成几个小的文章，并设置一个落地页。或者，看看你是否可以用无序列表的方式来呈现信息，以避免添加第四级标题。
+`##` 是允许的最高级别，因为 `#` 是保留给页面标题的。我们建议不要添加超过三层的标题。如果你觉得有必要添加第四层标题，可以考虑将文章分成几个小的文章，并设置一个着陆页。或者，看看你是否可以用无序列表的方式来呈现信息，以避免添加第四级标题。
 
 在创建分节的标题时，请记住以下注意事项：
 
