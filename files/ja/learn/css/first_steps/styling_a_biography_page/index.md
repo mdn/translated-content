@@ -41,7 +41,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 完成したら次の画像のようになるはずです。
 
-![](https://media.prod.mdn.mozit.cloud/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
+![](https://mdn.dev/archives/media/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
 
 それから、このページに書かれていない属性をみてみましょう。[MDN の CSS リファレンス](/ja/docs/Web/CSS/Reference) には冒険が待っています!
 

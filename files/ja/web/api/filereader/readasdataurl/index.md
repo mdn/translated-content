@@ -97,7 +97,7 @@ function previewFiles() {
 }
 ```
 
-> **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは、[画像プレビューのクロスブラウザー対応ソリューション](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html)または[もっと強力な例](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html)を参照してください。
+> **メモ:** Internet Explorer 10 以前では [`FileReader()`](/ja/docs/Web/API/FileReader) コンストラクターに対応していません。十分な互換性が必要とされるときは、[画像プレビューのクロスブラウザー対応ソリューション](https://mdn.dev/archives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html)または[もっと強力な例](https://mdn.dev/archives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html)を参照してください。
 
 ## 仕様書
 
