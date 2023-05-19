@@ -5,7 +5,7 @@ slug: Web/API/Notification/error_event
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`error`** 事件在 {{domxref("Notification")}} 调用出错时候触发（在许多情况下，错误阻止通知被显示）。
+{{domxref("Notification")}} 接口的 **`error`** 事件在 {{domxref("Notification")}} 调用出错时候触发（在许多情况下，错误会阻止通知的显示）。
 
 ## 语法
 
@@ -19,7 +19,7 @@ onerror = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("Event")}}。
+一个通用 {{domxref("Event")}}。
 
 ## 规范
 

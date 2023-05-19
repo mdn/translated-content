@@ -19,7 +19,7 @@ onclose = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("Event")}}。
+一个通用 {{domxref("Event")}}。
 
 ## 浏览器兼容性
 

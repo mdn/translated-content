@@ -7,7 +7,7 @@ slug: Web/API/Notification/click_event
 
 {{domxref("Notification")}} 接口的 **`click`** 事件在用户点击显示的 {{domxref("Notification")}} 时候触发。
 
-默认的事件行为是将焦点移动到与通知相关的视窗的[浏览器上下文](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context)。如果你不想要默认行为，在事件对象上调用 {{domxref("Event/preventDefault", "preventDefault()")}}。
+默认的事件行为是将焦点移动到与通知相关[浏览上下文](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context)的视口上。如果你不想要默认行为，请在事件对象上调用 {{domxref("Event/preventDefault", "preventDefault()")}}。
 
 ## 语法
 
@@ -21,15 +21,15 @@ onclick = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("Event")}}。
+一个通用 {{domxref("Event")}}。
 
 ## 示例
 
-在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件，并在新窗口（通过包含一个参数 `'_blank'`）打开一个页面：
+在下面这个例子中，我们使用 onclick 处理器来监听点击通知的事件，并在新窗口（通过包含一个参数 `'_blank'`）打开一个页面：
 
 ```js
 notification.onclick = (event) => {
-  event.preventDefault(); // 阻止浏览器在 Notification 的
+  event.preventDefault(); // 阻止浏览器聚焦于 Notification 的标签页
   window.open("http://www.mozilla.org", "_blank");
 };
 ```
