@@ -227,7 +227,7 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 ### Web 组件接口
 
-这些接口被 [Web Components API](/zh-CN/docs/Web/API/Web_components) 用于创建和管理可用的 [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
+这些接口被 [Web Components API](/zh-CN/docs/Web/API/Web_components) 用于创建和管理可用的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
 
 - [`CustomElementRegistry`](/zh-CN/docs/Web/API/CustomElementRegistry)
 
