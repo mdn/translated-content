@@ -10,7 +10,7 @@ slug: Web/API/HTML_DOM_API
 HTML DOM API 的功能包括：
 
 - 通过 {{Glossary("DOM")}} 访问和控制 HTML 元素。
-- 访问和操作表单数据
+- 访问和操作表单数据。
 - 与 2D 图像的内容，以及 HTML {{HTMLElement("canvas")}} 元素的上下文进行交互，例如在其上绘制。
 - 管理连接到 HTML 媒体元素的媒体 ({{HTMLElement("audio")}} 和 {{HTMLElement("video")}})。
 - 在网页上拖放内容。
