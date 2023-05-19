@@ -7,6 +7,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 
 In this final article in our "Asynchronous JavaScript" module, we'll introduce _workers_, which enable you to run some tasks in a separate {{Glossary("Thread", "thread")}} of execution.
 
+<!-- 
 <table>
   <tbody>
     <tr>
@@ -251,3 +252,5 @@ Workers can be an effective way to keep the main application responsive, althoug
 - [Web workers API](/en-US/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+
+-->
