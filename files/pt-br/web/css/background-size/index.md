@@ -61,7 +61,7 @@ Para especificar o tamanho de várias imagens de fundo, separe o valor de cada u
 
 - `contain`
   - : Dimensiona a imagem o máximo possível dentro do seu contêiner sem cortar ou estender a imagem.
-    Se o contêiner for maior do que a imagem, resultará em uma imagem lado a lado, a menos que a propriedade {{cssxref("background-repeat")}} esteja definida como `no-repeat`. 
+    Se o contêiner for maior do que a imagem, resultará em uma imagem lado a lado, a menos que a propriedade {{cssxref("background-repeat")}} esteja definida como `no-repeat`.
 - `cover`
   - : Dimensiona a imagem (enquanto preserva sua proporção) para o menor tamanho possível para caber no contêiner (ou seja: tanto a altura quanto o comprimento _cobrem_ completamente o contêiner), sem deixar espaço vazio.
     Se as proporções do plano de fundo diferirem do elemento, a imagem será cortada verticalmente ou horizontalmente.
