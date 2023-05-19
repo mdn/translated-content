@@ -338,7 +338,7 @@ nameField.addEventListener("input", event => {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", 640, 300)}}
+{{EmbedLiveSample("示例", 640, 300)}}
 
 ## 规范
 
