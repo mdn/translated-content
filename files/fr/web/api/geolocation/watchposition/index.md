@@ -19,8 +19,10 @@ Cette méthode retourne une valeur ID de veille qui permet de libérer les fonct
 
 ## Syntaxe
 
-```js
-id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Paramètres

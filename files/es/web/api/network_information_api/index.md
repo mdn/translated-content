@@ -14,15 +14,15 @@ La Network Information (Información de red) API provee información sobre el si
 ### Detectar cambios de conexiónThis example watches for changes to the user's connection.
 
 ```js
-var conexion = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var tipo = connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + tipo + " to " + conexion.effectiveType);
-  tipo = conexion.effectiveType;
+  console.log("Connection type changed from " + tipo + " to " + connection.effectiveType);
+  tipo = connection.effectiveType;
 }
 
-conexion.addEventListener('change', updateConnectionStatus);
+connection.addEventListener('change', updateConnectionStatus);
 ```
 
 ### Precargar recursos grandes
@@ -33,11 +33,11 @@ en caso usaría una declaración de switch o algún otro método para verificar 
 use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Independientemente del valor de tipo, puede obtener una estimación de la velocidad de conexión a través de la propiedad {{domxref("NetworkInformation.effectiveType")}}.
 
 ```js
-let precargarVideo = true;
+let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'slow-2g') {
-    precargarVideo = false;
+    preloadVideo = false;
   }
 }
 ```

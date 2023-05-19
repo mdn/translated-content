@@ -196,7 +196,7 @@ console.log(regex.lastIndex);  // prints "15"
 // and so on
 ```
 
-[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
+[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
 
 ### 从 URL 中提取子域名
 

@@ -97,7 +97,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 マークアップに要素が含まれるときにスロットの内容が定義されていない場合、またはブラウザーがスロットに対応していない場合、 `<my-paragraph>` はに単に代替内容である「既定のテキスト」が入ります。
 
-スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 {{htmlattrxref("slot")}} 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
+スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
 
 ```html
 <my-paragraph>
@@ -118,7 +118,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 > **メモ:** スロットに挿入できるのは _Slotable_ な要素に限られます; 要素がスロットに挿入されたとき、_slotted_ と呼ばれます。
 
-> **メモ:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち {{htmlattrxref("slot")}} 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
+> **メモ:** 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/master/simple-template) ([ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります)。
@@ -174,7 +174,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 この {{HTMLElement("template")}} 要素にはいくつかの特徴があります。
 
 - {{HTMLElement("template")}} には {{HTMLElement("style")}} 要素があり、 {{HTMLElement("template")}} が生成する文書の断片だけを対象とした CSS スタイルの集合を持ちます。
-- {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその {{htmlattrxref("name", "slot")}} 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を生成しています。
+- {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその [`name`](/ja/docs/Web/HTML/Element/slot#name) 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を生成しています。
 
   - `<slot name="element-name">`
   - `<slot name="description">`
@@ -230,7 +230,7 @@ customElements.define('element-details',
 
 このコードについて以下の点に注意してください。
 
-- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも {{htmlattrxref("slot")}} 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)の `"element-name"` と `"description"` を参照しています。
+- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot)の `"element-name"` と `"description"` を参照しています。
 - これら 2 つの **`<element-details>`** 要素のうち最初のものだけが `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を参照しています。 2 番目の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) への参照を欠いています。
 - 最初の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#named-slot) を {{HTMLElement("dt")}} と {{HTMLElement("dd")}} 子要素を使って参照しています。
 

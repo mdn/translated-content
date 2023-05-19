@@ -9,7 +9,7 @@ slug: Web/HTML/Element/main
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-文書には {{htmlattrxref("hidden")}} 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
+文書には [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
 
 <table class="properties">
   <tbody>
@@ -119,7 +119,7 @@ slug: Web/HTML/Element/main
 
 スキップナビゲーションは、 "skipnav" とも呼ばれますが、支援技術のユーザーが繰り返されるコンテンツ (メインナビゲーション、情報バナー、等) の大きなセクションをすばやく飛ばすことができる技法です。これによって、ユーザーがページのメインコンテンツをより早くアクセスすることができます。
 
-{{htmlattrxref("id")}} 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
+[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
 
 ```html
 <body>

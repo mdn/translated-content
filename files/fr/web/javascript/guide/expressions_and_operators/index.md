@@ -1,8 +1,6 @@
 ---
 title: Expressions et opérateurs
-slug: Web/JavaScript/Guide/Expressions_and_Operators
-l10n:
-  sourceCommit: 1c355a0ba137e025b8b9039cdddd5225b4c72d9b
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}

@@ -86,7 +86,7 @@ _无变化。_
 
 - 不标准的方法 `Event.getPreventDefault()` 已经被移除了。请使用 {{domxref("Event.defaultPrevented")}} 来决定在{{domxref("Event")}}中是否要调用{{domxref("Event.preventDefault", "preventDefault()")}} 。
 - 专用属性 [`Navigator.mozNotification`](/zh-CN/docs/Archive/API/Navigator/mozNotification) 和 `DesktopNotification` 接口已被移除 , 推荐使用标准的 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
-- 专用方法 `window.external.addSearchEngine()`已被移除 ({{bug("862147")}})。欲了解更多细节，参见 {{domxref("Window.sidebar")}} 。
+- 专用方法 `window.external.addSearchEngine()`已被移除 ([Firefox bug 862147](https://bugzil.la/862147))。欲了解更多细节，参见 {{domxref("Window.sidebar")}} 。
 
 ### SVG
 

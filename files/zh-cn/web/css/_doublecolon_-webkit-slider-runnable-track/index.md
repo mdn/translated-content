@@ -3,6 +3,8 @@ title: '::-webkit-slider-runnable-track'
 slug: Web/CSS/::-webkit-slider-runnable-track
 ---
 
+{{CSSRef}}
+
 **`::-webkit-slider-runnable-track`**表示其在 type 为 range 的 input 标签内中的滑块凹槽，也就是滑块可滑动的区域
 
 ### 使用方法

@@ -61,7 +61,7 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : スロットの名前です。
 

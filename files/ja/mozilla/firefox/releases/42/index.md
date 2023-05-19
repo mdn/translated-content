@@ -31,7 +31,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素の {{htmlattrxref("referrer", "input")}} 属性を実験的にサポートしました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
+- {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素の [`referrer`](/ja/docs/Web/HTML/Element/input#referrer) 属性を実験的にサポートしました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
 
 ### JavaScript
 
@@ -43,7 +43,7 @@ l10n:
 
 #### DOM & HTML DOM
 
-- {{HTMLattrxref('id', 'img')}} を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
+- [`id`](/ja/docs/Web/HTML/Element/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
 - {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
 

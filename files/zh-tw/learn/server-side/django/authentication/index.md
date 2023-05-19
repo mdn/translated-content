@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 8: User authentication and permissions'
+title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -87,18 +87,18 @@ MIDDLEWARE = [
 首先，讓我們為圖書館成員創建一個新組。
 
 1. 單擊**Add**按鈕（在組旁邊）以創建一個新組； 輸入該組的名稱“Library Members”。
-    ![Admin site - add group](admin_authentication_add_group.png)
+   ![Admin site - add group](admin_authentication_add_group.png)
 2. 我們不需要該組的任何權限，因此只需按**SAVE** （您將被帶到組列表）。
 
 現在讓我們創建一個用戶：
 
 1. 導航回到管理站點的主頁
 2. 單擊“用戶”旁邊的“添加”按鈕以打開“添加用戶”對話框。
-    ![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+   ![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. 輸入適合您的測試用戶的用戶名和密碼/密碼確認
 4. 按**SAVE**創建用戶。
-    管理站點將創建新用戶，並立即將您帶到“更改用戶”視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置“活動”標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。
-    ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   管理站點將創建新用戶，並立即將您帶到“更改用戶”視窗，您可以在其中更改用戶名並為用戶模型的可選字段添加信息。 這些字段包括名字，姓氏，電子郵件地址，用戶狀態和權限（僅應設置“活動”標誌）。 在更下方的位置，您可以指定用戶的組和權限，並查看與該用戶相關的重要日期（例如，他們的加入日期和上次登錄日期）。
+   ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 5. 在“組”部分中，從“可用組”列表中選擇“**Library Member**”組，然後按框之間的右箭頭將其移至“選擇的組”框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 我們在這裡不需要執行任何其他操作，因此只需再次選擇**SAVE** 即可進入用戶列表。
 
@@ -181,44 +181,42 @@ TEMPLATES = [
 
 創建一個名為/**locallibrary/templates/registration/login.html**的新 HTML 文件。 為其提供以下內容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
 
-{% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-  {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-  {% else %}
-    <p>Please login to see this page.</p>
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
-{% endif %}
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
 
-<div>
-  <td>\{{ form.username.label_tag }}</td>
-  <td>\{{ form.username }}</td>
-</div>
-<div>
-  <td>\{{ form.password.label_tag }}</td>
-  <td>\{{ form.password }}</td>
-</div>
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>\{{ form.username.label_tag }}</td>
+        <td>\{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>\{{ form.password.label_tag }}</td>
+        <td>\{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login">
+    <input type="hidden" name="next" value="\{{ next }}">
+  </form>
 
-<div>
-  <input type="submit" value="login" />
-  <input type="hidden" name="next" value="\{{ next }}" />
-</div>
-</form>
-
-{# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
 ```
@@ -242,9 +240,9 @@ LOGIN_REDIRECT_URL = '/'
 
 如果您導航到登出 URL (<http://127.0.0.1:8000/accounts/logout/>) ，則會看到一些奇怪的行為-您的用戶將被確定地註銷，但是您將被帶到**Admin** 註銷頁面。 那不是您想要的，僅僅是因為該頁面上的登錄鏈接將您帶到**Admin** 登錄屏幕（並且僅對具有`is_staff` 權限的用戶可用）。
 
-創建並打開 /**locallibrary/templates/registration/logged_out.html**。 複製以下文本：
+創建並打開 /**locallibrary/templates/registration/logged_out.html**。複製以下文本：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -267,14 +265,14 @@ LOGIN_REDIRECT_URL = '/'
 
 這是用於獲取用戶電子郵件地址（用於發送密碼重置電子郵件）的表格。 創建**/locallibrary/templates/registration/password_reset_form.html**，並為其提供以下內容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <form action="" method="post">
   {% csrf_token %}
   {% if form.email.errors %}
-    {{ form.email.errors }}
+    \{{ form.email.errors }}
   {% endif %}
       <p>\{{ form.email }}</p>
     <input type="submit" class="btn btn-default btn-lg" value="Reset password">
@@ -286,7 +284,7 @@ LOGIN_REDIRECT_URL = '/'
 
 收集您的電子郵件地址後，將顯示此表單。創建 **/locallibrary/templates/registration/password_reset_done.html**，並為其提供以下內容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -298,25 +296,23 @@ LOGIN_REDIRECT_URL = '/'
 
 該模板提供了 HTML 電子郵件的文本，其中包含我們將發送給用戶的重置鏈接。 創建**/locallibrary/templates/registration/password_reset_email.html**，並為其提供以下內容：
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
-\{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+\{{ protocol }}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
 
 #### 密碼重置確認
 
 單擊密碼重置電子郵件中的鏈接後，即可在此頁面輸入新密碼。 創建 **/locallibrary/templates/registration/password_reset_confirm.html**，並為其提供以下內容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
     {% if validlink %}
         <p>Please enter (and confirm) your new password.</p>
         <form action="" method="post">
-            <div style="display:none">
-                <input type="hidden" value="\{{ csrf_token }}" name="csrfmiddlewaretoken">
-            </div>
+        {% csrf_token %}
             <table>
                 <tr>
                     <td>\{{ form.new_password1.errors }}
@@ -330,7 +326,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
+                    <td><input type="submit" value="Change my password"></td>
                 </tr>
             </table>
         </form>
@@ -345,7 +341,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 這是最後一個密碼重設模板，密碼重設成功後將顯示此模板以通知您。 創建**/locallibrary/templates/registration/password_reset_complete.html**，並為其提供以下內容：
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -385,16 +381,16 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 打開基礎模板。 (**/locallibrary/catalog/templates/base_generic.html**) ，然後將以下文本複製到`sidebar` 塊中，緊接在`endblock` 模板標籤之前。
 
-```html
+```django
   <ul class="sidebar-nav">
 
-    ...
+    …
 
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+     <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+     <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
   </ul>
 ```
@@ -548,7 +544,7 @@ urlpatterns += [
 
 現在，我們需要為此頁面添加模板。 首先，創建模板文件 **/catalog/templates/catalog/bookinstance_list_borrowed_user.html** 並為其提供以下內容：
 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -559,7 +555,7 @@ urlpatterns += [
 
       {% for bookinst in bookinstance_list %}
       <li class="{% if bookinst.is_overdue %}text-danger{% endif %}">
-        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{bookinst.book.title}}</a> (\{{ bookinst.due_back }})
+        <a href="{% url 'book-detail' bookinst.book.pk %}">\{{ bookinst.book.title }}</a> (\{{ bookinst.due_back }})
       </li>
       {% endfor %}
     </ul>
@@ -580,14 +576,16 @@ urlpatterns += [
 
 打開基本模板 (**/locallibrary/catalog/templates/base_generic.html**) 並將粗體顯示的行添加到側邊欄中，如圖所示。
 
-```python
+```django
  <ul class="sidebar-nav">
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
+
    <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
-   <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+
+   <li><a href="{% url 'logout' %}?next=\{{ request.path }}">Logout</a></li>
    {% else %}
-   <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+   <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
  </ul>
 ```
@@ -624,7 +622,7 @@ class BookInstance(models.Model):
 
 當前用戶的權限存儲在名為 `\{{ perms }}`. 的模板變量中。 您可以使用關聯的 Django "app"“應用”中的特定變量名稱來檢查當前用戶是否具有特定權限，例如 如果用戶具有此權限，則 `\{{ perms.catalog.can_mark_returned }}` 將為 `True` ，否則為`False`。 我們通常使用模板 `{% if %}` 標籤測試權限，如下所示：
 
-```python
+```django
 {% if perms.catalog.can_mark_returned %}
     <!-- We can mark a BookInstance as returned. -->
     <!-- Perhaps add code to link to a "book return" view here. -->
@@ -667,7 +665,7 @@ class MyView(PermissionRequiredMixin, View):
 
 在本文的前面，我們向您展示瞭如何為當前用戶創建一個頁面，列出他們所借用的書。 現在的挑戰是創建一個僅對圖書館員可見的相似頁面，該頁面顯示所有已借書的書，其中包括每個借書人的名字。
 
-您應該能夠遵循與其他視圖相同的模式。 主要區別在於您只需要將視圖限制為圖書館員即可。 您可以根據用戶是否是工作人員來執行此操作（函數裝飾器：`staff_member_required`，模板變量： `user.is_staff`），但是我們建議您改用`can_mark_returned` 權限和`PermissionRequiredMixin`，如上一節所述。
+您應該能夠遵循與其他視圖相同的模式。 主要區別在於您只需要將視圖限制為圖書館員即可。 您可以根據用戶是否是工作人員來執行此操作（函數裝飾器：`staff_member_required`，模板變量：`user.is_staff`），但是我們建議您改用`can_mark_returned` 權限和`PermissionRequiredMixin`，如上一節所述。
 
 > **警告：** 請記住不要將您的超級用戶用於基於權限的測試（即使尚未定義權限，權限檢查也始終對超級用戶返回 true！）。 而是創建一個圖書管理員用戶，並添加所需的功能。
 

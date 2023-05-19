@@ -5,12 +5,14 @@ slug: Web/CSS/:picture-in-picture
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:picture-in-picture`** 匹配当前处于画中画模式的元素。
+**`:picture-in-picture`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配当前处于画中画模式的元素。
 
 ## 语法
 
-```
-:picture-in-picture
+```css
+:picture-in-picture {
+  /* ... */
+}
 ```
 
 ## 用法说明
@@ -28,8 +30,10 @@ slug: Web/CSS/:picture-in-picture
 ```html
 <h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  This demo uses the <code>:picture-in-picture</code> pseudo-class to
+  automatically change the style of a video entirely using CSS.
+</p>
 
 <video id="pip-video"></video>
 ```

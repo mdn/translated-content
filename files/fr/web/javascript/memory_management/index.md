@@ -1,6 +1,6 @@
 ---
 title: Gestion de la mémoire
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 tags:
   - JavaScript
   - Mémoire

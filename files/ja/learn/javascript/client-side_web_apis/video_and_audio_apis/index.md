@@ -51,7 +51,7 @@ HTML にはリッチメディアを文書内に埋め込むための要素、 {{
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-すべての HTML 機能が何を行うかは、上記のリンク先の記事で確認できます。この記事の目的にとって、最も興味深い属性は {{htmlattrxref("controls", "video")}} で、既定の再生コントロールセットを有効にするものです。これを指定しない場合、再生コントロールは利用できません。
+すべての HTML 機能が何を行うかは、上記のリンク先の記事で確認できます。この記事の目的にとって、最も興味深い属性は [`controls`](/ja/docs/Web/HTML/Element/video#controls) で、既定の再生コントロールセットを有効にするものです。これを指定しない場合、再生コントロールは利用できません。
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 

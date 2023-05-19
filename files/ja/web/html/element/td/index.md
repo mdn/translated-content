@@ -60,22 +60,22 @@ slug: Web/HTML/Element/td
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("colspan")}}
+- `colspan`
   - : この属性はセルをいくつの列に広げるかを示す、負でない整数を持ちます。既定値は `1` です。1000 を超える値は正しくないとみなされ、既定値 (1) が設定されるでしょう。
-- {{htmlattrdef("headers")}}
+- `headers`
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各々の文字列は、この要素に当てはめる {{HTMLElement("th")}} 要素の **id** 属性と対応します。
-- {{htmlattrdef("rowspan")}}
+- `rowspan`
   - : この属性はセルをいくつの行に広げるかを示す、負でない整数を持ちます。既定値は `1` です。`0` を設定した場合は、セルが属する表セクション ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}) の終端 (暗黙的に定義されるものであっても) まで拡張します。65534 より大きな値は、65534 に切り詰めます。
 
 ### 非推奨の属性
 
-- {{htmlattrdef("abbr")}} {{deprecated_inline}}
+- `abbr` {{deprecated_inline}}
 
   - : この属性は、セルの内容の簡潔な説明を持ちます。読み上げソフトなど一部のユーザーエージェントは、内容自体の前にこの説明を提供することがあります。
 
     > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。あるいは、省略した説明をセル内に置き、長い内容を **title** 属性に置くこともできます。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は各セルの中身について、水平方向の配置方法を制御します。以下の値を指定可能です。
 
@@ -83,32 +83,32 @@ slug: Web/HTML/Element/td
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify` (テキストのみ): 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "td")}} 属性および {{htmlattrxref("charoff", "td")}} 属性で定義します。{{unimplemented_inline(2212)}}
+    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/td#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/td#charoff) 属性で定義します。{{unimplemented_inline(2212)}}
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 {{htmlattrxref("char", "td")}} を使用できます。 CSS3 では {{unimplemented_inline}} です。
+    > - 同様の効果を得るには、 {{cssxref("text-align")}} プロパティの値 [`char`](/ja/docs/Web/HTML/Element/td#char) を使用できます。 CSS3 では {{unimplemented_inline}} です。
 
-- {{htmlattrdef("axis")}} {{deprecated_inline}}
+- `axis` {{deprecated_inline}}
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
-- {{htmlattrdef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
 
   - : この属性は、列の各セルの背景色を定義します。値は [sRGB](https://www.w3.org/Graphics/Color/sRGB) で定義された 6桁の 16 進数値のいずれかで、先頭に '`#`' が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)の一つを使うこともできます。
 
     同様の効果を与えるには、 CSS の {{ cssxref("background-color") }} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 {{htmlattrxref("align", "td")}} 属性が `char` に設定されていない場合、この属性は無視されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/td#align) 属性が `char` に設定されていない場合、この属性は無視されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、 **char** 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{htmlattrdef("height")}} {{deprecated_inline}}
+- `height` {{deprecated_inline}}
   - : この属性はセルの高さの推奨値を定義するために使用されます。代わりの CSS の {{cssxref("height")}} プロパティを使用してください。
-- {{htmlattrdef("scope")}} {{deprecated_inline}}
+- `scope` {{deprecated_inline}}
   - : これは列挙型の属性で、この ({{HTMLElement("th")}} で定義されている) 見出し要素が関連するセルを定義します。この属性は `<th>` 要素のみに、行と列のどちらの見出しであるかを定義するために使用してください。
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
@@ -119,7 +119,7 @@ slug: Web/HTML/Element/td
 
     同様の効果を実現するには、代わりに CSS の {{cssxref("vertical-align")}} プロパティを使用してください。
 
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : この属性は、セルの推奨する幅を定義します。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
 ## 例

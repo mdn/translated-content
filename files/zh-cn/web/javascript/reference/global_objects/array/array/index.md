@@ -30,7 +30,7 @@ Array(arrayLength)
 - `elementN`
   - : `Array` 构造函数会根据给定的元素创建一个 JavaScript 数组，但是当仅有一个参数且为数字时除外（详见下面的 `arrayLength` 参数）。注意，后者仅适用于用 Array 构造函数创建数组，而不适用于用方括号创建的数组字面量。
 - `arrayLength`
-  - : 如果传递给 `Array` 构造函数的唯一参数是 0 到 2<sup>32</sup> - 1（包括）之间的整数，这将返回一个新的 JavaScript 数组，其 `length` 属性设置为该数字（注意：这意味着一个 `arrayLength` 空槽数组，而不是具有实际 `undefined` 值的槽——参见[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)）。
+  - : 如果传递给 `Array` 构造函数的唯一参数是介于 0 到 2<sup>32</sup> - 1（含）之间的整数，这将返回一个新的 JavaScript 数组，其 `length` 属性设置为该数字（**注意**：这意味着一个由 `arrayLength` 个空槽组成的数组，而不是具有实际 `undefined` 值的槽——参见[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)）。
 
 ### 异常
 

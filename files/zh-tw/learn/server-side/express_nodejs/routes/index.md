@@ -1,5 +1,5 @@
 ---
-title: 'Express 教學 4: 路由與控制器'
+title: "Express 教學 4: 路由與控制器"
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
 
@@ -65,18 +65,18 @@ slug: Learn/Server-side/Express_Nodejs/routes
 ```js
 // wiki.js - Wiki route module.
 
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Home page route.
-router.get('/', function (req, res) {
-  res.send('Wiki home page');
-})
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
+});
 
 // About page route.
-router.get('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
 
 module.exports = router;
 ```
@@ -86,9 +86,9 @@ module.exports = router;
 要在主應用程序文件中使用路由器模塊，我們首先`require()`路由模塊（**wiki.js**）。然後，我們在 Express 應用程序上調用`use()`，將路由器添加到中間件處理路徑，並指定一個'wiki'的 URL 路徑。
 
 ```js
-var wiki = require('./wiki.js');
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 然後可以從`/wiki/`和`/wiki/about/`，訪問我們的 wiki 路由模塊中定義的兩個路由。
@@ -98,9 +98,9 @@ app.use('/wiki', wiki);
 我們上面的模塊，定義了幾個典型的路由功能。使用`Router.get()`方法定義“about”路由（在下面），該方法僅響應 HTTP GET 請求。此方法的第一個參數是 URL 路徑，而第二個參數是一個回調函數，如果收到帶有路徑的 HTTP GET 請求，將會調用該函數。
 
 ```js
-router.get('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
+});
 ```
 
 回調函數接受三個參數（通常如下所示命名：`req`, `res`, `next`），它將包含 HTTP 請求對象，HTTP 響應，以及中間件鏈中的下一個函數。
@@ -118,9 +118,9 @@ router.get('/about', function (req, res) {
 例如，下面的代碼就像上一個`/about`路由一樣，但只響應 HTTP POST 請求。
 
 ```js
-router.post('/about', function (req, res) {
-  res.send('About this wiki');
-})
+router.post("/about", function (req, res) {
+  res.send("About this wiki");
+});
 ```
 
 ### 路由路徑
@@ -203,46 +203,46 @@ app.get('/users/:userId/books/:bookId', function (req, res) {
 打開**/controllers/authorController.js**文件，並複制以下代碼：
 
 ```js
-var Author = require('../models/author');
+var Author = require("../models/author");
 
 // Display list of all Authors.
-exports.author_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author list');
+exports.author_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author list");
 };
 
 // Display detail page for a specific Author.
-exports.author_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author detail: ' + req.params.id);
+exports.author_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author detail: " + req.params.id);
 };
 
 // Display Author create form on GET.
-exports.author_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author create GET');
+exports.author_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author create GET");
 };
 
 // Handle Author create on POST.
-exports.author_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author create POST');
+exports.author_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author create POST");
 };
 
 // Display Author delete form on GET.
-exports.author_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author delete GET');
+exports.author_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author delete GET");
 };
 
 // Handle Author delete on POST.
-exports.author_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author delete POST');
+exports.author_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author delete POST");
 };
 
 // Display Author update form on GET.
-exports.author_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author update GET');
+exports.author_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author update GET");
 };
 
 // Handle Author update on POST.
-exports.author_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Author update POST');
+exports.author_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Author update POST");
 };
 ```
 
@@ -255,46 +255,46 @@ exports.author_update_post = function(req, res) {
 打開**/controllers/bookinstanceController.js**文件，並將其複製到以下代碼中（它遵循與`Author`控制器模塊相同的模式）：
 
 ```js
-var BookInstance = require('../models/bookinstance');
+var BookInstance = require("../models/bookinstance");
 
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance list');
+exports.bookinstance_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance list");
 };
 
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance detail: ' + req.params.id);
+exports.bookinstance_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance detail: " + req.params.id);
 };
 
 // Display BookInstance create form on GET.
-exports.bookinstance_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance create GET');
+exports.bookinstance_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance create GET");
 };
 
 // Handle BookInstance create on POST.
-exports.bookinstance_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance create POST');
+exports.bookinstance_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance create POST");
 };
 
 // Display BookInstance delete form on GET.
-exports.bookinstance_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance delete GET');
+exports.bookinstance_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance delete GET");
 };
 
 // Handle BookInstance delete on POST.
-exports.bookinstance_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance delete POST');
+exports.bookinstance_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance delete POST");
 };
 
 // Display BookInstance update form on GET.
-exports.bookinstance_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance update GET');
+exports.bookinstance_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance update GET");
 };
 
 // Handle bookinstance update on POST.
-exports.bookinstance_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: BookInstance update POST');
+exports.bookinstance_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: BookInstance update POST");
 };
 ```
 
@@ -303,46 +303,46 @@ exports.bookinstance_update_post = function(req, res) {
 打開**/controllers/genreController.js**文件，並複制以下文本（這與`Author`和`BookInstance`文件的模式相同）：
 
 ```js
-var Genre = require('../models/genre');
+var Genre = require("../models/genre");
 
 // Display list of all Genre.
-exports.genre_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre list');
+exports.genre_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre list");
 };
 
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre detail: ' + req.params.id);
+exports.genre_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre detail: " + req.params.id);
 };
 
 // Display Genre create form on GET.
-exports.genre_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre create GET');
+exports.genre_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create GET");
 };
 
 // Handle Genre create on POST.
-exports.genre_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre create POST');
+exports.genre_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create POST");
 };
 
 // Display Genre delete form on GET.
-exports.genre_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre delete GET');
+exports.genre_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete GET");
 };
 
 // Handle Genre delete on POST.
-exports.genre_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre delete POST');
+exports.genre_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete POST");
 };
 
 // Display Genre update form on GET.
-exports.genre_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre update GET');
+exports.genre_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update GET");
 };
 
 // Handle Genre update on POST.
-exports.genre_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Genre update POST');
+exports.genre_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update POST");
 };
 ```
 
@@ -351,50 +351,50 @@ exports.genre_update_post = function(req, res) {
 打開**/controllers/bookController.js**文件，並複制以下代碼。它遵循與其他控制器模塊相同的模式，但另外還有一個`index()`函數，用於顯示站點歡迎頁面：
 
 ```js
-var Book = require('../models/book');
+var Book = require("../models/book");
 
-exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
+exports.index = function (req, res) {
+  res.send("NOT IMPLEMENTED: Site Home Page");
 };
 
 // Display list of all books.
-exports.book_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book list');
+exports.book_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book list");
 };
 
 // Display detail page for a specific book.
-exports.book_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book detail: ' + req.params.id);
+exports.book_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book detail: " + req.params.id);
 };
 
 // Display book create form on GET.
-exports.book_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book create GET');
+exports.book_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book create GET");
 };
 
 // Handle book create on POST.
-exports.book_create_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book create POST');
+exports.book_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book create POST");
 };
 
 // Display book delete form on GET.
-exports.book_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book delete GET');
+exports.book_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book delete GET");
 };
 
 // Handle book delete on POST.
-exports.book_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book delete POST');
+exports.book_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book delete POST");
 };
 
 // Display book update form on GET.
-exports.book_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book update GET');
+exports.book_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book update GET");
 };
 
 // Handle book update on POST.
-exports.book_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: Book update POST');
+exports.book_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Book update POST");
 };
 ```
 
@@ -415,121 +415,139 @@ exports.book_update_post = function(req, res) {
 打開**/routes/** **catalog.js**，複製下面的代碼：
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Require controller modules.
-var book_controller = require('../controllers/bookController');
-var author_controller = require('../controllers/authorController');
-var genre_controller = require('../controllers/genreController');
-var book_instance_controller = require('../controllers/bookinstanceController');
+var book_controller = require("../controllers/bookController");
+var author_controller = require("../controllers/authorController");
+var genre_controller = require("../controllers/genreController");
+var book_instance_controller = require("../controllers/bookinstanceController");
 
 /// BOOK ROUTES ///
 
 // GET catalog home page.
-router.get('/', book_controller.index);
+router.get("/", book_controller.index);
 
 // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
-router.get('/book/create', book_controller.book_create_get);
+router.get("/book/create", book_controller.book_create_get);
 
 // POST request for creating Book.
-router.post('/book/create', book_controller.book_create_post);
+router.post("/book/create", book_controller.book_create_post);
 
 // GET request to delete Book.
-router.get('/book/:id/delete', book_controller.book_delete_get);
+router.get("/book/:id/delete", book_controller.book_delete_get);
 
 // POST request to delete Book.
-router.post('/book/:id/delete', book_controller.book_delete_post);
+router.post("/book/:id/delete", book_controller.book_delete_post);
 
 // GET request to update Book.
-router.get('/book/:id/update', book_controller.book_update_get);
+router.get("/book/:id/update", book_controller.book_update_get);
 
 // POST request to update Book.
-router.post('/book/:id/update', book_controller.book_update_post);
+router.post("/book/:id/update", book_controller.book_update_post);
 
 // GET request for one Book.
-router.get('/book/:id', book_controller.book_detail);
+router.get("/book/:id", book_controller.book_detail);
 
 // GET request for list of all Book items.
-router.get('/books', book_controller.book_list);
+router.get("/books", book_controller.book_list);
 
 /// AUTHOR ROUTES ///
 
 // GET request for creating Author. NOTE This must come before route for id (i.e. display author).
-router.get('/author/create', author_controller.author_create_get);
+router.get("/author/create", author_controller.author_create_get);
 
 // POST request for creating Author.
-router.post('/author/create', author_controller.author_create_post);
+router.post("/author/create", author_controller.author_create_post);
 
 // GET request to delete Author.
-router.get('/author/:id/delete', author_controller.author_delete_get);
+router.get("/author/:id/delete", author_controller.author_delete_get);
 
 // POST request to delete Author.
-router.post('/author/:id/delete', author_controller.author_delete_post);
+router.post("/author/:id/delete", author_controller.author_delete_post);
 
 // GET request to update Author.
-router.get('/author/:id/update', author_controller.author_update_get);
+router.get("/author/:id/update", author_controller.author_update_get);
 
 // POST request to update Author.
-router.post('/author/:id/update', author_controller.author_update_post);
+router.post("/author/:id/update", author_controller.author_update_post);
 
 // GET request for one Author.
-router.get('/author/:id', author_controller.author_detail);
+router.get("/author/:id", author_controller.author_detail);
 
 // GET request for list of all Authors.
-router.get('/authors', author_controller.author_list);
+router.get("/authors", author_controller.author_list);
 
 /// GENRE ROUTES ///
 
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 //POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 
 // GET request to delete Genre.
-router.get('/genre/:id/delete', genre_controller.genre_delete_get);
+router.get("/genre/:id/delete", genre_controller.genre_delete_get);
 
 // POST request to delete Genre.
-router.post('/genre/:id/delete', genre_controller.genre_delete_post);
+router.post("/genre/:id/delete", genre_controller.genre_delete_post);
 
 // GET request to update Genre.
-router.get('/genre/:id/update', genre_controller.genre_update_get);
+router.get("/genre/:id/update", genre_controller.genre_update_get);
 
 // POST request to update Genre.
-router.post('/genre/:id/update', genre_controller.genre_update_post);
+router.post("/genre/:id/update", genre_controller.genre_update_post);
 
 // GET request for one Genre.
-router.get('/genre/:id', genre_controller.genre_detail);
+router.get("/genre/:id", genre_controller.genre_detail);
 
 // GET request for list of all Genre.
-router.get('/genres', genre_controller.genre_list);
+router.get("/genres", genre_controller.genre_list);
 
 /// BOOKINSTANCE ROUTES ///
 
 // GET request for creating a BookInstance. NOTE This must come before route that displays BookInstance (uses id).
-router.get('/bookinstance/create', book_instance_controller.bookinstance_create_get);
+router.get(
+  "/bookinstance/create",
+  book_instance_controller.bookinstance_create_get
+);
 
 // POST request for creating BookInstance.
-router.post('/bookinstance/create', book_instance_controller.bookinstance_create_post);
+router.post(
+  "/bookinstance/create",
+  book_instance_controller.bookinstance_create_post
+);
 
 // GET request to delete BookInstance.
-router.get('/bookinstance/:id/delete', book_instance_controller.bookinstance_delete_get);
+router.get(
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_get
+);
 
 // POST request to delete BookInstance.
-router.post('/bookinstance/:id/delete', book_instance_controller.bookinstance_delete_post);
+router.post(
+  "/bookinstance/:id/delete",
+  book_instance_controller.bookinstance_delete_post
+);
 
 // GET request to update BookInstance.
-router.get('/bookinstance/:id/update', book_instance_controller.bookinstance_update_get);
+router.get(
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_get
+);
 
 // POST request to update BookInstance.
-router.post('/bookinstance/:id/update', book_instance_controller.bookinstance_update_post);
+router.post(
+  "/bookinstance/:id/update",
+  book_instance_controller.bookinstance_update_post
+);
 
 // GET request for one BookInstance.
-router.get('/bookinstance/:id', book_instance_controller.bookinstance_detail);
+router.get("/bookinstance/:id", book_instance_controller.bookinstance_detail);
 
 // GET request for list of all BookInstance.
-router.get('/bookinstances', book_instance_controller.bookinstance_list);
+router.get("/bookinstances", book_instance_controller.bookinstance_list);
 
 module.exports = router;
 ```
@@ -548,8 +566,8 @@ module.exports = router;
 
 ```js
 // GET home page.
-router.get('/', function(req, res) {
-  res.redirect('/catalog');
+router.get("/", function (req, res) {
+  res.redirect("/catalog");
 });
 ```
 
@@ -562,17 +580,17 @@ router.get('/', function(req, res) {
 打開**app.js**，並要求其他路由下方的目錄路由（添加下面顯示的第三行，在其他兩個路由下面）：
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
+var catalogRouter = require("./routes/catalog"); //Import routes for "catalog" area of site
 ```
 
 接下來，將目錄路由，添加到其他路由下面的中間件堆棧（添加下面顯示的第三行，在其他兩行下面）：
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 ```
 
 > **備註：** 我們已在路徑`'/catalog'`中添加了目錄模塊。它預先添加到目錄模塊中定義的所有路徑。例如，要訪問書本列表，URL 將為：`/catalog/books/`。

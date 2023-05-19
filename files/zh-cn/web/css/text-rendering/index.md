@@ -3,7 +3,7 @@ title: 文本渲染
 slug: Web/CSS/text-rendering
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 

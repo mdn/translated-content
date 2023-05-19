@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 {{jsSidebar("Functions")}}
 
-**函数默认参数**允许在没有值或`undefined`被传入时使用默认形参。
+**函数默认参数**允许在没有值或 `undefined` 被传入时使用默认形参。
 
 {{EmbedInteractiveExample("pages/js/functions-default.html")}}
 
@@ -19,11 +19,11 @@ function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
 
 ## 描述
 
-JavaScript 中函数的参数默认是`{{jsxref("undefined")}}`。然而，在某些情况下可能需要设置一个不同的默认值。这是默认参数可以帮助的地方。
+JavaScript 中函数的参数默认是 {{jsxref("undefined")}}。然而，在某些情况下可能需要设置一个不同的默认值。这是默认参数可以帮助的地方。
 
-以前，一般设置默认参数的方法是在函数体测试参数是否为`undefined`，如果是的话就设置为默认的值。
+以前，一般设置默认参数的方法是在函数体测试参数是否为 `undefined`，如果是的话就设置为默认的值。
 
-下面的例子中，如果在调用`multiply`时，参数`b`的值没有提供，那么它的值就为`undefined`。如果直接执行`a * b`，函数会返回 `NaN`。
+下面的例子中，如果在调用 `multiply` 时，参数 `b` 的值没有提供，那么它的值就为 `undefined`。如果直接执行 `a * b`，函数会返回 `NaN`。
 
 ```js
 function multiply(a, b) {

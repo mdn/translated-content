@@ -8,14 +8,15 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 有三個標準情況會形成邊界重疊：
 
 - 同一層的相鄰
-  - : 兩個相鄰的元素邊界就會發生重疊，除非後者有加上clear-fix。例如
+
+  - : 兩個相鄰的元素邊界就會發生重疊，除非後者有加上 clear-fix。例如
 
     ```html
     <style>
-      p:nth-child(1){
+      p:nth-child(1) {
         margin-bottom: 13px;
       }
-      p:nth-child(2){
+      p:nth-child(2) {
         margin-top: 87px;
       }
     </style>
@@ -29,45 +30,46 @@ slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
     但其實會發生重疊，而且只會留下最大的邊界範圍，以此例子來說，邊界範圍就是 87px。
 
 - 父元素與第一個/最後一個子元素
+
   - : 如果第一個子元素跟父元素的上邊界範圍 ( margin-top ) 貼在一起，也會發生邊界重疊的情況。除非父元素有設定邊框 ( border ) 、 內距 ( padding )、內容設定為 inline 或是有加上 clear-fix，這些都會隔開子元素和父元素的屬性。
 
     最後一個子元素也是，但是與父元素的下邊界範圍 ( margin-bottom ) 更容易被隔開，因為父元素可以設定這些屬性。例如：
 
     ```html
     <style type="text/css">
-        section    {
-          margin-top: 13px;
-          margin-bottom: 87px;
-        }
+      section {
+        margin-top: 13px;
+        margin-bottom: 87px;
+      }
 
-        header {
-          margin-top: 87px;
-        }
+      header {
+        margin-top: 87px;
+      }
 
-        footer {
-          margin-bottom: 13px;
-        }
-
+      footer {
+        margin-bottom: 13px;
+      }
     </style>
 
     <section>
-    <header>上邊界重疊是 87</header>
-    <footer>下邊界重疊還是 87 不能再高了</footer>
+      <header>上邊界重疊是 87</header>
+      <footer>下邊界重疊還是 87 不能再高了</footer>
     </section>
     ```
 
 - 空的元素
+
   - : 當同一個元素上邊界範圍可以直接貼到下邊界範圍時，也會發生邊界重疊。這種情況會發生在一個元素完全沒有設定邊框 ( border ) 、 內距 ( padding )、高度 ( height ) 、最小高度 ( min-height ) 、最大高度 ( max-height ) 、內容設定為 inline 或是加上 clear-fix 的時候。例如：
 
     ```html
     <style>
-    p {
-      margin: 0px;
-    }
-    div {
-      margin-top: 13px;
-      margin-bottom: 87px;
-    }
+      p {
+        margin: 0px;
+      }
+      div {
+        margin-top: 13px;
+        margin-bottom: 87px;
+      }
     </style>
 
     <p>下邊界範圍是 87</p>
