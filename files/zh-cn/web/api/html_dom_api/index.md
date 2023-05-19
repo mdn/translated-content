@@ -315,7 +315,7 @@ nameField.addEventListener("input", event => {
 
 然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理程序。这段代码查看当前输入值的长度；如果它是零，则禁用“发送”按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
-有了这个设置，只要用户名输入框中有值，“发送” 按钮就会一直处于启用状态，当为空时则禁用。
+有了这个设置，只要用户名输入框中有值，“发送”按钮就会一直处于启用状态，当为空时则禁用。
 
 #### HTML
 
