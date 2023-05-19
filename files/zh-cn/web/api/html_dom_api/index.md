@@ -272,7 +272,7 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 #### WebSocket 接口
 
-这些接口由 HTML 规范定义，被 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) 使用。
+这些接口由 HTML 规范定义，被 {{DOMxRef("WebSockets_API", "WebSockets API", "", "1")}} 使用。
 
 - [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
 - [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
