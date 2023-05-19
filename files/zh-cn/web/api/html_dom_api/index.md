@@ -12,7 +12,7 @@ HTML DOM API 的功能包括：
 - 通过 {{Glossary("DOM")}} 访问和控制 HTML 元素。
 - 访问和操作表单数据。
 - 与 2D 图像的内容，以及 HTML {{HTMLElement("canvas")}} 元素的上下文进行交互，例如在其上绘制。
-- 管理连接到 HTML 媒体元素的媒体 ({{HTMLElement("audio")}} 和 {{HTMLElement("video")}})。
+- 管理连接到 HTML 媒体元素的媒体（{{HTMLElement("audio")}} 和 {{HTMLElement("video")}}）。
 - 在网页上拖放内容。
 - 访问浏览器导航历史记录。
 - 支持并连接其他 API 的接口，例如 [Web Components](/zh-CN/docs/Web/API/Web_components)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API)、[Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)、[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 和 [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events)。
