@@ -77,171 +77,181 @@ HTML DOM API 中的大多数接口，几乎一对一地映射到单个 HTML 元�
 
 这些接口代表特定的 HTML 元素（或者属性、方法与它们相关、相同的元素）。
 
-- [`HTMLAnchorElement`](/zh-CN/docs/Web/API/HTMLAnchorElement)
-- [`HTMLAreaElement`](/zh-CN/docs/Web/API/HTMLAreaElement)
-- [`HTMLAudioElement`](/zh-CN/docs/Web/API/HTMLAudioElement)
-- [`HTMLBRElement`](/zh-CN/docs/Web/API/HTMLBRElement)
-- [`HTMLBaseElement`](/zh-CN/docs/Web/API/HTMLBaseElement)
-- [`HTMLBaseFontElement`](/zh-CN/docs/Web/API/HTMLBaseFontElement) {{Deprecated_Inline}}
-- [`HTMLBodyElement`](/zh-CN/docs/Web/API/HTMLBodyElement)
-- [`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement)
-- [`HTMLCanvasElement`](/zh-CN/docs/Web/API/HTMLCanvasElement)
-- [`HTMLDListElement`](/zh-CN/docs/Web/API/HTMLDListElement)
-- [`HTMLDataElement`](/zh-CN/docs/Web/API/HTMLDataElement)
-- [`HTMLDataListElement`](/zh-CN/docs/Web/API/HTMLDataListElement)
-- [`HTMLDetailsElement`](/zh-CN/docs/Web/API/HTMLDetailsElement)
-- [`HTMLDialogElement`](/zh-CN/docs/Web/API/HTMLDialogElement)
-- [`HTMLDirectoryElement`](/zh-CN/docs/Web/API/HTMLDirectoryElement)
-- [`HTMLDivElement`](/zh-CN/docs/Web/API/HTMLDivElement)
-- [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement)
-- [`HTMLEmbedElement`](/zh-CN/docs/Web/API/HTMLEmbedElement)
-- [`HTMLFieldSetElement`](/zh-CN/docs/Web/API/HTMLFieldSetElement)
-- [`HTMLFontElement`](/zh-CN/docs/Web/API/HTMLFontElement) {{Deprecated_Inline}}
-- [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement)
-- [`HTMLFrameElement`](/zh-CN/docs/Web/API/HTMLFrameElement) {{Deprecated_Inline}}
-- [`HTMLFrameSetElement`](/zh-CN/docs/Web/API/HTMLFrameSetElement) {{Deprecated_Inline}}
-- [`HTMLHRElement`](/zh-CN/docs/Web/API/HTMLHRElement)
-- [`HTMLHeadElement`](/zh-CN/docs/Web/API/HTMLHeadElement)
-- [`HTMLHeadingElement`](/zh-CN/docs/Web/API/HTMLHeadingElement)
-- [`HTMLHtmlElement`](/zh-CN/docs/Web/API/HTMLHtmlElement)
-- [`HTMLIFrameElement`](/zh-CN/docs/Web/API/HTMLIFrameElement)
-- [`HTMLImageElement`](/zh-CN/docs/Web/API/HTMLImageElement)
-- [`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement)
-- [`HTMLIsIndexElement`](/zh-CN/docs/Web/API/HTMLIsIndexElement) {{Deprecated_Inline}}
-- [`HTMLLIElement`](/zh-CN/docs/Web/API/HTMLLIElement)
-- [`HTMLLabelElement`](/zh-CN/docs/Web/API/HTMLLabelElement)
-- [`HTMLLegendElement`](/zh-CN/docs/Web/API/HTMLLegendElement)
-- [`HTMLLinkElement`](/zh-CN/docs/Web/API/HTMLLinkElement)
-- [`HTMLMapElement`](/zh-CN/docs/Web/API/HTMLMapElement)
-- [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) {{deprecated_inline}}
-- [`HTMLMediaElement`](/zh-CN/docs/Web/API/HTMLMediaElement)
-- [`HTMLMenuElement`](/zh-CN/docs/Web/API/HTMLMenuElement)
-- [`HTMLMenuItemElement`](/zh-CN/docs/Web/API/HTMLMenuItemElement) {{Deprecated_Inline}}
-- [`HTMLMetaElement`](/zh-CN/docs/Web/API/HTMLMetaElement)
-- [`HTMLMeterElement`](/zh-CN/docs/Web/API/HTMLMeterElement)
-- [`HTMLModElement`](/zh-CN/docs/Web/API/HTMLModElement)
-- [`HTMLOListElement`](/zh-CN/docs/Web/API/HTMLOListElement)
-- [`HTMLObjectElement`](/zh-CN/docs/Web/API/HTMLObjectElement)
-- [`HTMLOptGroupElement`](/zh-CN/docs/Web/API/HTMLOptGroupElement)
-- [`HTMLOptionElement`](/zh-CN/docs/Web/API/HTMLOptionElement)
-- [`HTMLOutputElement`](/zh-CN/docs/Web/API/HTMLOutputElement)
-- [`HTMLParagraphElement`](/zh-CN/docs/Web/API/HTMLParagraphElement)
-- [`HTMLParamElement`](/zh-CN/docs/Web/API/HTMLParamElement)
-- [`HTMLPictureElement`](/zh-CN/docs/Web/API/HTMLPictureElement)
-- [`HTMLPreElement`](/zh-CN/docs/Web/API/HTMLPreElement)
-- [`HTMLProgressElement`](/zh-CN/docs/Web/API/HTMLProgressElement)
-- [`HTMLQuoteElement`](/zh-CN/docs/Web/API/HTMLQuoteElement)
-- [`HTMLScriptElement`](/zh-CN/docs/Web/API/HTMLScriptElement)
-- [`HTMLSelectElement`](/zh-CN/docs/Web/API/HTMLSelectElement)
-- [`HTMLSlotElement`](/zh-CN/docs/Web/API/HTMLSlotElement)
-- [`HTMLSourceElement`](/zh-CN/docs/Web/API/HTMLSourceElement)
-- [`HTMLSpanElement`](/zh-CN/docs/Web/API/HTMLSpanElement)
-- [`HTMLStyleElement`](/zh-CN/docs/Web/API/HTMLStyleElement)
-- [`HTMLTableCaptionElement`](/zh-CN/docs/Web/API/HTMLTableCaptionElement)
-- [`HTMLTableCellElement`](/zh-CN/docs/Web/API/HTMLTableCellElement)
-- [`HTMLTableColElement`](/zh-CN/docs/Web/API/HTMLTableColElement)
-- [`HTMLTableElement`](/zh-CN/docs/Web/API/HTMLTableElement)
-- [`HTMLTableRowElement`](/zh-CN/docs/Web/API/HTMLTableRowElement)
-- [`HTMLTableSectionElement`](/zh-CN/docs/Web/API/HTMLTableSectionElement)
-- [`HTMLTemplateElement`](/zh-CN/docs/Web/API/HTMLTemplateElement)
-- [`HTMLTextAreaElement`](/zh-CN/docs/Web/API/HTMLTextAreaElement)
-- [`HTMLTimeElement`](/zh-CN/docs/Web/API/HTMLTimeElement)
-- [`HTMLTitleElement`](/zh-CN/docs/Web/API/HTMLTitleElement)
-- [`HTMLTrackElement`](/zh-CN/docs/Web/API/HTMLTrackElement)
-- [`HTMLUListElement`](/zh-CN/docs/Web/API/HTMLUListElement)
-- [`HTMLUnknownElement`](/zh-CN/docs/Web/API/HTMLUnknownElement)
-- [`HTMLVideoElement`](/zh-CN/docs/Web/API/HTMLVideoElement)
+- {{DOMxRef("HTMLAnchorElement")}}
+- {{DOMxRef("HTMLAreaElement")}}
+- {{DOMxRef("HTMLAudioElement")}}
+- {{DOMxRef("HTMLBaseElement")}}
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLBRElement")}}
+- {{DOMxRef("HTMLButtonElement")}}
+- {{DOMxRef("HTMLCanvasElement")}}
+- {{DOMxRef("HTMLDataElement")}}
+- {{DOMxRef("HTMLDataListElement")}}
+- {{DOMxRef("HTMLDetailsElement")}}
+- {{DOMxRef("HTMLDialogElement")}}
+- {{DOMxRef("HTMLDirectoryElement")}}
+- {{DOMxRef("HTMLDivElement")}}
+- {{DOMxRef("HTMLDListElement")}}
+- {{DOMxRef("HTMLElement")}}
+- {{DOMxRef("HTMLEmbedElement")}}
+- {{DOMxRef("HTMLFieldSetElement")}}
+- {{DOMxRef("HTMLFormElement")}}
+- {{DOMxRef("HTMLHRElement")}}
+- {{DOMxRef("HTMLHeadElement")}}
+- {{DOMxRef("HTMLHeadingElement")}}
+- {{DOMxRef("HTMLHtmlElement")}}
+- {{DOMxRef("HTMLIFrameElement")}}
+- {{DOMxRef("HTMLImageElement")}}
+- {{DOMxRef("HTMLInputElement")}}
+- {{DOMxRef("HTMLLabelElement")}}
+- {{DOMxRef("HTMLLegendElement")}}
+- {{DOMxRef("HTMLLIElement")}}
+- {{DOMxRef("HTMLLinkElement")}}
+- {{DOMxRef("HTMLMapElement")}}
+- {{DOMxRef("HTMLMediaElement")}}
+- {{DOMxRef("HTMLMenuElement")}}
+- {{DOMxRef("HTMLMetaElement")}}
+- {{DOMxRef("HTMLMeterElement")}}
+- {{DOMxRef("HTMLModElement")}}
+- {{DOMxRef("HTMLObjectElement")}}
+- {{DOMxRef("HTMLOListElement")}}
+- {{DOMxRef("HTMLOptGroupElement")}}
+- {{DOMxRef("HTMLOptionElement")}}
+- {{DOMxRef("HTMLOutputElement")}}
+- {{DOMxRef("HTMLParagraphElement")}}
+- {{DOMxRef("HTMLPictureElement")}}
+- {{DOMxRef("HTMLPreElement")}}
+- {{DOMxRef("HTMLProgressElement")}}
+- {{DOMxRef("HTMLQuoteElement")}}
+- {{DOMxRef("HTMLScriptElement")}}
+- {{DOMxRef("HTMLSelectElement")}}
+- {{DOMxRef("HTMLSlotElement")}}
+- {{DOMxRef("HTMLSourceElement")}}
+- {{DOMxRef("HTMLSpanElement")}}
+- {{DOMxRef("HTMLStyleElement")}}
+- {{DOMxRef("HTMLTableCaptionElement")}}
+- {{DOMxRef("HTMLTableCellElement")}}
+- {{DOMxRef("HTMLTableColElement")}}
+- {{DOMxRef("HTMLTableElement")}}
+- {{DOMxRef("HTMLTableRowElement")}}
+- {{DOMxRef("HTMLTableSectionElement")}}
+- {{DOMxRef("HTMLTemplateElement")}}
+- {{DOMxRef("HTMLTextAreaElement")}}
+- {{DOMxRef("HTMLTimeElement")}}
+- {{DOMxRef("HTMLTitleElement")}}
+- {{DOMxRef("HTMLTrackElement")}}
+- {{DOMxRef("HTMLUListElement")}}
+- {{DOMxRef("HTMLUnknownElement")}}
+- {{DOMxRef("HTMLVideoElement")}}
+
+#### 废弃的 HTML 元素接口
+
+- {{DOMxRef("HTMLMarqueeElement")}} {{deprecated_inline}}
+
+#### 弃用的 HTML 元素接口
+
+- {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
+- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web 应用程序和浏览器集成接口
 
 这些接口提供了访问包含 HTML 的浏览器窗口和文档的方式，以及访问浏览器状态、可用插件（如果有）和各种配置选项的方式。
 
-- [`ApplicationCache`](/zh-CN/docs/Web/API/ApplicationCache) {{Deprecated_Inline}}
-- [`BarProp`](/zh-CN/docs/Web/API/BarProp)
-- [`External`](/zh-CN/docs/Web/API/External) {{deprecated_inline}}
-- [`Navigator`](/zh-CN/docs/Web/API/Navigator)
-- [`Plugin`](/zh-CN/docs/Web/API/Plugin) {{Deprecated_Inline}}
-- [`PluginArray`](/zh-CN/docs/Web/API/PluginArray) {{Deprecated_Inline}}
-- [`Window`](/zh-CN/docs/Web/API/Window)
+- {{DOMxRef("BarProp")}}
+- {{DOMxRef("Navigator")}}
+- {{DOMxRef("Window")}}
+
+#### 废弃的 Web 应用程序和浏览器集成接口
+
+- {{DOMxRef("External")}} {{deprecated_inline}}
+
+#### 弃用的 Web 应用程序和浏览器集成接口
+
+- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
+- {{DOMxRef("Plugin")}} {{deprecated_inline}}
+- {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
 ### 表单支持接口
 
 这些接口提供了创建和管理表单所需的结构和功能，包括 {{HTMLElement("form")}} 和 {{HTMLElement("input")}} 元素。
 
-- [`FormDataEvent`](/zh-CN/docs/Web/API/FormDataEvent)
-- [`HTMLFormControlsCollection`](/zh-CN/docs/Web/API/HTMLFormControlsCollection)
-- [`HTMLOptionsCollection`](/zh-CN/docs/Web/API/HTMLOptionsCollection)
-- [`RadioNodeList`](/zh-CN/docs/Web/API/RadioNodeList)
-- [`ValidityState`](/zh-CN/docs/Web/API/ValidityState)
+- {{DOMxRef("FormDataEvent")}}
+- {{DOMxRef("HTMLFormControlsCollection")}}
+- {{DOMxRef("HTMLOptionsCollection")}}
+- {{DOMxRef("RadioNodeList")}}
+- {{DOMxRef("ValidityState")}}
 
 ### Canvas 和图像接口
 
 这些接口代表了 Canvas API 使用的对象，以及 {{HTMLElement("img")}} 元素和 {{HTMLElement("picture")}} 元素。
 
-- [`CanvasGradient`](/zh-CN/docs/Web/API/CanvasGradient)
-- [`CanvasPattern`](/zh-CN/docs/Web/API/CanvasPattern)
-- [`CanvasRenderingContext2D`](/zh-CN/docs/Web/API/CanvasRenderingContext2D)
-- [`ImageBitmap`](/zh-CN/docs/Web/API/ImageBitmap)
-- [`ImageBitmapRenderingContext`](/zh-CN/docs/Web/API/ImageBitmapRenderingContext)
-- [`ImageData`](/zh-CN/docs/Web/API/ImageData)
-- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas)
-- [`OffscreenCanvasRenderingContext2D`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D)
-- [`Path2D`](/zh-CN/docs/Web/API/Path2D)
-- [`TextMetrics`](/zh-CN/docs/Web/API/TextMetrics)
+- {{DOMxRef("CanvasGradient")}}
+- {{DOMxRef("CanvasPattern")}}
+- {{DOMxRef("CanvasRenderingContext2D")}}
+- {{DOMxRef("ImageBitmap")}}
+- {{DOMxRef("ImageBitmapRenderingContext")}}
+- {{DOMxRef("ImageData")}}
+- {{DOMxRef("OffscreenCanvas")}}
+- {{DOMxRef("OffscreenCanvasRenderingContext2D")}}
+- {{DOMxRef("Path2D")}}
+- {{DOMxRef("TextMetrics")}}
 
 ### 媒体接口
 
 媒体接口提供 HTML 访问媒体元素：{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 的内容。
 
-- [`AudioTrack`](/zh-CN/docs/Web/API/AudioTrack)
-- [`AudioTrackList`](/zh-CN/docs/Web/API/AudioTrackList)
-- [`MediaError`](/zh-CN/docs/Web/API/MediaError)
-- [`TextTrack`](/zh-CN/docs/Web/API/TextTrack)
-- [`TextTrackCue`](/zh-CN/docs/Web/API/TextTrackCue)
-- [`TextTrackCueList`](/zh-CN/docs/Web/API/TextTrackCueList)
-- [`TextTrackList`](/zh-CN/docs/Web/API/TextTrackList)
-- [`TimeRanges`](/zh-CN/docs/Web/API/TimeRanges)
-- [`TrackEvent`](/zh-CN/docs/Web/API/TrackEvent)
-- [`VideoTrack`](/zh-CN/docs/Web/API/VideoTrack)
-- [`VideoTrackList`](/zh-CN/docs/Web/API/VideoTrackList)
+- {{DOMxRef("AudioTrack")}}
+- {{DOMxRef("AudioTrackList")}}
+- {{DOMxRef("MediaError")}}
+- {{DOMxRef("TextTrack")}}
+- {{DOMxRef("TextTrackCue")}}
+- {{DOMxRef("TextTrackCueList")}}
+- {{DOMxRef("TextTrackList")}}
+- {{DOMxRef("TimeRanges")}}
+- {{DOMxRef("TrackEvent")}}
+- {{DOMxRef("VideoTrack")}}
+- {{DOMxRef("VideoTrackList")}}
 
 ### 拖放接口
 
 这些接口被 [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 用于表示单个可拖动（或已拖动）项目、一组已拖动或可拖动的项目，并处理拖放过程。
 
-- [`DataTransfer`](/zh-CN/docs/Web/API/DataTransfer)
-- [`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)
-- [`DataTransferItemList`](/zh-CN/docs/Web/API/DataTransferItemList)
-- [`DragEvent`](/zh-CN/docs/Web/API/DragEvent)
+- {{DOMxRef("DataTransfer")}}
+- {{DOMxRef("DataTransferItem")}}
+- {{DOMxRef("DataTransferItemList")}}
+- {{DOMxRef("DragEvent")}}
 
 ### 页面历史接口
 
 History API 接口允许您访问有关浏览器历史记录的信息，并通过该历史记录向前和向后移动浏览器的当前选项卡。
 
-- [`BeforeUnloadEvent`](/zh-CN/docs/Web/API/BeforeUnloadEvent)
-- [`HashChangeEvent`](/zh-CN/docs/Web/API/HashChangeEvent)
-- [`History`](/zh-CN/docs/Web/API/History)
-- [`Location`](/zh-CN/docs/Web/API/Location)
-- [`PageTransitionEvent`](/zh-CN/docs/Web/API/PageTransitionEvent)
-- [`PopStateEvent`](/zh-CN/docs/Web/API/PopStateEvent)
+- {{DOMxRef("BeforeUnloadEvent")}}
+- {{DOMxRef("HashChangeEvent")}}
+- {{DOMxRef("History")}}
+- {{DOMxRef("Location")}}
+- {{DOMxRef("PageTransitionEvent")}}
+- {{DOMxRef("PopStateEvent")}}
 
 ### Web 组件接口
 
 这些接口被 [Web Components API](/zh-CN/docs/Web/API/Web_components) 用于创建和管理可用的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
 
-- [`CustomElementRegistry`](/zh-CN/docs/Web/API/CustomElementRegistry)
+- {{DOMxRef("CustomElementRegistry")}}
 
 ### 杂项和支持接口
 
 这些支持对象类型在 HTML DOM API 中以各种方式使用；此外，{{domxref("PromiseRejectionEvent")}} 表示当 {{Glossary("JavaScript")}} {{jsxref("Promise")}} 被拒绝时传递的事件。
 
-- [`DOMStringList`](/zh-CN/docs/Web/API/DOMStringList)
-- [`DOMStringMap`](/zh-CN/docs/Web/API/DOMStringMap)
-- [`ErrorEvent`](/zh-CN/docs/Web/API/ErrorEvent)
-- [`HTMLAllCollection`](/zh-CN/docs/Web/API/HTMLAllCollection)
-- [`MimeType`](/zh-CN/docs/Web/API/MimeType)
-- [`MimeTypeArray`](/zh-CN/docs/Web/API/MimeTypeArray)
-- [`PromiseRejectionEvent`](/zh-CN/docs/Web/API/PromiseRejectionEvent)
+- {{DOMxRef("DOMStringList")}}
+- {{DOMxRef("DOMStringMap")}}
+- {{DOMxRef("ErrorEvent")}}
+- {{DOMxRef("HTMLAllCollection")}}
+- {{DOMxRef("MimeType")}}
+- {{DOMxRef("MimeTypeArray")}}
+- {{DOMxRef("PromiseRejectionEvent")}}
 
 ### 属于其他 API 的接口
 
@@ -251,37 +261,37 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 {{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} 提供了网站在用户设备上临时或永久存储数据以便后续复用的能力。
 
-- [`Storage`](/zh-CN/docs/Web/API/Storage)
-- [`StorageEvent`](/zh-CN/docs/Web/API/StorageEvent)
+- {{DOMxRef("Storage")}}
+- {{DOMxRef("StorageEvent")}}
 
 #### Web Workers 接口
 
 这些接口被 {{DOMxRef("Web_Workers_API", "Web Workers API", "", "1")}} 用于建立 Worker 与应用及其内容交互的能力，同时也支持窗口或应用之间的消息传递。
 
-- [`BroadcastChannel`](/zh-CN/docs/Web/API/BroadcastChannel)
-- [`DedicatedWorkerGlobalScope`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope)
-- [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)
-- [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
-- [`MessagePort`](/zh-CN/docs/Web/API/MessagePort)
-- [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker)
-- [`SharedWorkerGlobalScope`](/zh-CN/docs/Web/API/SharedWorkerGlobalScope)
-- [`Worker`](/zh-CN/docs/Web/API/Worker)
-- [`WorkerGlobalScope`](/zh-CN/docs/Web/API/WorkerGlobalScope)
-- [`WorkerLocation`](/zh-CN/docs/Web/API/WorkerLocation)
-- [`WorkerNavigator`](</zh-CN/docs/Web/API/WorkerNavigator >)
+- {{DOMxRef("BroadcastChannel")}}
+- {{DOMxRef("DedicatedWorkerGlobalScope")}}
+- {{DOMxRef("MessageChannel")}}
+- {{DOMxRef("MessageEvent")}}
+- {{DOMxRef("MessagePort")}}
+- {{DOMxRef("SharedWorker")}}
+- {{DOMxRef("SharedWorkerGlobalScope")}}
+- {{DOMxRef("Worker")}}
+- {{DOMxRef("WorkerGlobalScope")}}
+- {{DOMxRef("WorkerLocation")}}
+- {{DOMxRef("WorkerNavigator")}}
 
 #### WebSocket 接口
 
 这些接口由 HTML 规范定义，被 {{DOMxRef("WebSockets_API", "WebSockets API", "", "1")}} 使用。
 
-- [`CloseEvent`](/zh-CN/docs/Web/API/CloseEvent)
-- [`WebSocket`](/zh-CN/docs/Web/API/WebSocket)
+- {{DOMxRef("CloseEvent")}}
+- {{DOMxRef("WebSocket")}}
 
 #### Server-sent 事件接口
 
 {{domxref("EventSource")}} 接口表示发送或正在发送 {{DOMxRef("Server-sent_events", "server-sent events", "", "1")}} 的源。
 
-- [`EventSource`](/zh-CN/docs/Web/API/EventSource)
+- {{DOMxRef("EventSource")}}
 
 ## 示例
 
