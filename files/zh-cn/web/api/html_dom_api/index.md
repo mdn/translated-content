@@ -311,7 +311,7 @@ nameField.addEventListener("input", event => {
 
 这段代码使用 {{domxref("Document")}} 接口的 {{domxref("Document.getElementById", "getElementById()")}} 方法，获取 ID 为 `userName` 和 `sendButton` 的 {{HTMLElement("input")}} 元素的 DOM 对象。通过这些对象，我们可以访问控制元素和获取它们信息的属性和方法。
 
-“发送” 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 “发送” 按钮，使其无法点击。此外，通过调用 {{domxref("HTMLElement")}} 继承的 {{domxref("HTMLElement.focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
+“发送” 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 “发送” 按钮，使其无法点击。此外，通过调用 {{domxref("HTMLElement")}} 继承的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
 
 然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理程序。这段代码查看当前输入值的长度；如果它是零，则禁用 “发送” 按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
