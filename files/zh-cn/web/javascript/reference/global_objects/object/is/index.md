@@ -35,8 +35,8 @@ Object.is(value1, value2)
 - 都是 `true` 或者都是 `false`
 - 都是长度相同、字符相同、顺序相同的字符串
 - 都是相同的对象（意味着两个值都引用了内存中的同一对象）
-- 都是 [BigInts](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 且具有相同的数值
-- 都是 [symbols](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 且引用相同的 symbol 值
+- 都是 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 且具有相同的数值
+- 都是 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 且引用相同的 symbol 值
 - 都是数字且
 
   - 都是 `+0`
