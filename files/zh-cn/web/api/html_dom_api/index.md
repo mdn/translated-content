@@ -249,7 +249,7 @@ History API 接口允许您访问有关浏览器历史记录的信息，并通�
 
 #### Web Storage 接口
 
-[Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 提供了网站在用户设备上临时或永久存储数据以便后续复用的能力。
+{{DOMxRef("Web_Storage_API", "Web Storage API", "", "1")}} 提供了网站在用户设备上临时或永久存储数据以便后续复用的能力。
 
 - [`Storage`](/zh-CN/docs/Web/API/Storage)
 - [`StorageEvent`](/zh-CN/docs/Web/API/StorageEvent)
