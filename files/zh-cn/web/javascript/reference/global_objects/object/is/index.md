@@ -89,4 +89,4 @@ Object.is(NaN, Number.NaN); // true
 ## 参见
 
 - [`core-js` 中 `Object.is` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)——三种内置相同功能的比较
+- [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)——三种内置相等性工具的比较
