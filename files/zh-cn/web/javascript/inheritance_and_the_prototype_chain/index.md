@@ -9,7 +9,7 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 当谈到继承时，JavaScript 只有一种结构：对象。每个对象（object）都有一个私有属性指向另一个名为**原型**（prototype）的对象。原型对象也有一个自己的原型，层层向上直到一个对象的原型为 `null`。根据定义，`null` 没有原型，并作为这个**原型链**（prototype chain）中的最后一个环节。可以改变原型链中的任何成员，甚至可以在运行时换出原型，因此 JavaScript 中不存在[静态分派](https://en.wikipedia.org/wiki/Static_dispatch)的概念。
 
-尽管这种混杂通常被认为是 JavaScript 的弱点之一，但是原型继承模型本身实际上比经典模型更强大。例如，在原型模型的基础上构建经典模型（即[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的实现方式）相当简单。
+尽管这种混杂通常被认为是 JavaScript 的弱点之一，但是原型继承模型本身实际上比类式模型更强大。例如，在原型模型的基础上构建类式模型（即[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的实现方式）相当简单。
 
 尽管类现在被广泛采用并成为 JavaScript 中新的范式，但类并没有带来新的继承模式。虽然类为大部分原型的机制提供了抽象，但了解原型在底层是如何工作的仍然十分有用。
 
