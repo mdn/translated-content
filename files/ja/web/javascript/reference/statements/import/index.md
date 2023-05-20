@@ -120,33 +120,23 @@ import myDefault, { foo, bar } from "/modules/my-module.js";
 import { default as myDefault } from "/modules/my-module.js";
 ```
 
-また、デフォルトの構文とともに上記のエイリアス（名前空間または名前つきのインポート）を用いることもできます。その場合は下記のように、デフォルトのインポートを先に宣言しなければなりません。
+### 名前空間のインポート
+
+次のコードは、`/modules/my-module.js` という場所にあるモジュールがエクスポートするすべての値を含んだ `myModule` を現在のスコープに追加します。
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
-// myModule は名前空間として使う
+import * as myModule from "/modules/my-module.js";
 ```
 
-あるいは、次のような書き方もできます。
+この場合、`myModule` は*名前空間*オブジェクトを表しています。名前空間オブジェクトはエクスポートされているすべての値をプロパティとして保持しています。例えば、上記のコードでインポートされたモジュールが `doAllTheAmazingThings()` をエクスポートしていた場合、次のように呼ぶことができます:
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
-// 特定の名前つきのインポート
+myModule.doAllTheAmazingThings();
 ```
 
-[動的インポート](#dynamic_imports)を使用してデフォルトのエクスポートをインポートする場合、動作が少し異なります。返されたオブジェクトから "default" キーを破棄して名前を変更する必要があります。
+`myModule` は [`null` prototype](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) とする[封印された](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)オブジェクトです。 デフォルトのエクスポートは `default` という名前のキーで利用できるようになっています。詳細は[モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)をご覧ください。
 
-```js
-(async () => {
-  if (somethingIsTrue) {
-    const { default: myDefault, foo, bar } = await import('/modules/my-module.js');
-  }
-})();
-```
-
-### 動的インポート
-
-標準のインポート構文は静的で、インポートされたモジュールのすべてのコードは、ロード時に常に評価されます。条件付きまたはオンデマンドでモジュールをロードしたい状況では、代わりに動的インポートを使用できます。以下に、動的インポートの使用を検討する必要がある理由をいくつか述べます。
+> **注意**: JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
 
 - 静的にインポートすると、コードの読み込みが大幅に遅くなり、インポートするコードが必要になる可能性が低くなるか、後で必要になる可能性が低くなります。
 - 静的にインポートすると、プログラムのメモリー使用量が大幅に増加し、インポートするコードが必要になる可能性が低くなります。
