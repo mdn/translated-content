@@ -1,50 +1,57 @@
 ---
-title: Notification.close()
+title: Notification：close() 方法
 slug: Web/API/Notification/close
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 `close()` 的方法用于关闭一个以前显示的通知。
+{{domxref("Notification")}} 接口的 `close()` 的方法用于关闭或移除一个先前显示的通知。
 
-## Syntax
+> **备注：** 此 API 不应仅用于在固定延迟后从屏幕上移除通知，因为此方法还将从任何通知托盘中删除该通知，阻止用户在最初显示后与其交互。此 API 的有效用途是移除不再相关的通知（例如，如果是消息应用程序，则用户已经阅读了网页上的通知；或者音乐应用程序中已经在播放下一首歌曲）。
 
-```plain
-Notification.close();
+## 语法
+
+```js-nolint
+close()
 ```
 
-### Parameters
+### 参数
 
-None.
+无（{{jsxref("undefined")}}）。
 
-### Returns
+### 返回值
 
-Void.
+无。
 
-## Examples
+## 示例
 
-以下是 [Emogotchi 示例](https://github.com/mdn/emogotchi)（[在线演示](http://mdn.github.io/emogotchi/)）中的一段代码，定义了一个简单的函数 spawnNotification，当 spawnNotification 被调用时会创建一个对象并生成一个新的 Notification。在函数的最后，它在{{domxref("WindowTimers.setTimeout","setTimeout()")}} 中调用了 close() 函数来实现在 4s 后关闭 Notification（有些浏览器会自动关闭弹出的 Notification，但有些不是，例如 Chrome,Opera）。还要注意 bind() 的使用，来确保 close() 方法绑定到 Notification 的实例上。
+在下面的代码片段中，我们有一个简单的函数，当调用时创建一个 `options` 对象，然后是一个新的通知。在函数的最后，它在 {{domxref("EventTarget.addEventListener","addEventListener()")}} 函数中调用 `close()` 以在网页上阅读相关内容后移除该通知。
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
-  var options = {
-      body: theBody,
-      icon: theIcon
-  }
+function spawnNotification(theBody, theIcon, theTitle) {
+  const options = {
+    body: theBody,
+    icon: theIcon,
+  };
 
-  var n = new Notification(theTitle,options);
-  setTimeout(n.close.bind(n), 4000);
+  const n = new Notification(theTitle, options);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      // 该选项卡已变得可见，因此清除了现在过时的通知。
+      n.close();
+    }
+  });
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
