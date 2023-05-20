@@ -1,6 +1,7 @@
 ---
 title: <discard>
-slug: Web/SVG/Element/discard
+slug: orphaned/Web/SVG/Element/discard
+original_slug: Web/SVG/Element/discard
 ---
 
 {{SVGRef}}
