@@ -5,18 +5,15 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 
 {{HTTPSidebar}}
 
-当客户端通过代理服务器连接到 web 服务器时，**`X-Forwarded-For`** (XFF) 请求头可用于标识客户端的原始 IP 地址。
-XFF 是事实上的标准。
+当客户端通过代理服务器连接到 web 服务器时，**`X-Forwarded-For`**（XFF）请求头可用于标识客户端的原始 IP 地址。XFF 是事实上的标准。
 
 > **警告：** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅 [安全和隐私考虑](#安全和隐私考虑).
  
-当客户端直接连接到服务器时，其 IP 地址被发送给服务器（并且经常被记录在服务器的访问日志中）。
-但是如果客户端通过 [正向代理或者反向代理](https://en.wikipedia.org/wiki/Proxy_server) 进行连接，
-服务器就只能看到最后一个代理的 IP 地址，这个 IP 通常没什么用。
-如果最后一个代理是与服务器安装在同一台主机上的负载均衡，则更是如此。
-`X-Forwarded-For` 的出现，就是为了向服务器提供更有用的客户端 IP 地址。
+当客户端直接连接到服务器时，其 IP
+地址被发送给服务器（并且经常被记录在服务器的访问日志中）。但是如果客户端通过[正向代理或者反向代理](https://en.wikipedia.org/wiki/Proxy_server)进行连接，服务器就只能看到最后一个代理的 IP
+地址，这个 IP 通常没什么用。如果最后一个代理是与服务器安装在同一台主机上的负载均衡，则更是如此。`X-Forwarded-For` 的出现，就是为了向服务器提供更有用的客户端 IP 地址。
 
-有关使用此标头的详细指引，请参阅 [Parsing](#parsing) 和 [Selecting an IP address](#selecting_an_ip_address) 部分.
+有关使用此标头的详细指引，请参阅[解析](#解析)和[选择一个 IP 地址](#选择一个_ip_地址)部分。
 
 <table class="properties">
   <tbody>
@@ -35,24 +32,17 @@ XFF 是事实上的标准。
 
 ## 安全和隐私考虑
 
-从设计上说，此标头暴露隐私信息，比如客户端的 IP 地址。因此，在使用此标头时，请务必将用户的隐私放在心上。
+从设计目的上说，此标头暴露隐私信息，比如客户端的 IP 地址。因此，在使用此标头时，请务必将用户的隐私放在心上。
 
-当在客户端和服务器之间没有可信的反向代理（比如一个负载均衡）时，`X-Forwarded-For` 标头是不可信的。
-如果客户端和所有的代理都没有恶意且行为良好，
-那么此标头中的 IP 地址列表具有 [Directives](#directives) 部分所描述的意义。
-但是如果客户端或任意代理存有恶意或配置错误，
-那么此标头的任意部分（或整体）可能是错误的（并且有可能不是一个列表或者甚至不包含 IP 地址）。
+当在客户端和服务器之间没有可信的反向代理（比如一个负载均衡）时，`X-Forwarded-For` 标头是不可信的。如果客户端和所有的代理都没有恶意且行为良好，那么此标头中的 IP 地址列表具有[指令](#指令)部分所描述的意义。但是如果客户端或任意代理存有恶意或配置错误，那么此标头的任意部分（或整体）可能是错误的（并且有可能不是一个列表或者甚至不包含 IP 地址）。
 
-如果客户端和服务器之间存在任意可信的反向代理，最终 `X-Forwarded-For` 中的 IP 地址列表是可信的，
-因为这些 IP 是由可信的代理添加的（只要服务器只能通过这些代理进行访问而不是可以被直接访问）。
+如果客户端和服务器之间存在任意可信的反向代理，最终 `X-Forwarded-For` 中的 IP 地址列表是可信的，因为这些 IP 是由可信的代理添加的（只要服务器只能通过这些代理进行访问而不是可以被直接访问）。
 
-使用 `X-Forwarded-For` 进行安全相关的操作时（比如速率限制或基于 IP 的访问控制），
-必须仅使用由可信代理添加的 IP 地址。使用不可信的 IP，可能导致速率限制被规避、访问控制被绕过、
-内存耗尽、或其他与安全性或可用性相关的负面后果。
+使用 `X-Forwarded-For` 进行安全相关的操作时（比如速率限制或基于 IP 的访问控制），必须仅使用由可信代理添加的 IP 地址。使用不可信的 IP，可能导致速率限制被规避、访问控制被绕过、内存耗尽、或其他与安全性或可用性相关的负面后果。
 
-反过来，只有当使用错误 IP 不会导致负面影响时，最左边的（不可信的） IP 才能被使用。
+反过来，只有当使用错误 IP 不会导致负面影响时，最左边的（不可信的）IP 才能被使用。
 
-## Syntax
+## 语法
 
 ```http
 X-Forwarded-For: <client>, <proxy1>, <proxy2>
@@ -60,15 +50,14 @@ X-Forwarded-For: <client>, <proxy1>, <proxy2>
 
 元素用逗号分隔，逗号两边可以加上空格。
 
-## Directives
+## 指令
 
 - \<client>
-  - : 客户端 IP 地址
+  - : 客户端 IP 地址。
 - \<proxy1>, \<proxy2>
-  - : 如果请求通过多个代理，每个代理的 IP 地址会按顺序出现在列表中。这意味着，如果客户端和代理行为良好，
-    最右边的 IP 地址会是最近的代理的 IP 地址，最左边的 IP 地址会是原始客户端的 IP 地址。
+  - : 如果请求通过多个代理，每个代理的 IP 地址会按顺序出现在列表中。这意味着，如果客户端和代理行为良好，最右边的 IP 地址会是最近的代理的 IP 地址，最左边的 IP 地址会是原始客户端的 IP 地址。
 
-## Examples
+## 示例
 
 ```http
 X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
@@ -80,7 +69,7 @@ X-Forwarded-For: 203.0.113.195, 2001:db8:85a3:8d3:1319:8a2e:370:7348
 X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.178
 ```
 
-## Parsing
+## 解析
 
 Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
 for security-related purposes, resulting in the negative consequences mentioned above.
@@ -98,7 +87,7 @@ It is insufficient to use only one of multiple `X-Forwarded-For` headers.
 (Some reverse proxies will automatically join multiple `X-Forwarded-For` headers into one,
 but it is safest to not assume that this is the case.)
 
-## Selecting an IP address
+## 选择一个 IP 地址
 
 When selecting an address, the full list of IPs — from all `X-Forwarded-For` headers — must be used.
 
@@ -129,11 +118,11 @@ Note that if the server is directly connectable from the internet — even if it
 behind a trusted reverse proxy — _no part_ of the `X-Forwarded-For` IP list can be
 considered trustworthy or safe for security-related uses.
 
-## Specifications
+## 规范
 
 不属于任何当前规范。标准版本是 {{HTTPHeader("Forwarded")}}。
 
-## See also
+## 参见
 
 - {{HTTPHeader("Forwarded")}}
 - {{HTTPHeader("X-Forwarded-Host")}}
