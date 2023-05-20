@@ -22,7 +22,7 @@ element:after  { style properties }  /* CSS2 语法 */
 element::after { style properties }  /* CSS3 语法 */
 ```
 
-`::after` 表示法是在`CSS 3 中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
+`::after` 表示法是在`CSS 3`中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
 
 > **备注：** IE8 仅支持 `:after`。
 
