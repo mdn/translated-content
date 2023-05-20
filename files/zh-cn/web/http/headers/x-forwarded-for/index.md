@@ -43,24 +43,14 @@ XFF 是事实上的标准。
 但是如果客户端或任意代理存有恶意或配置错误，
 那么此标头的任意部分（或整体）可能是错误的（并且有可能不是一个列表或者甚至不包含 IP 地址）。
 
-The `X-Forwarded-For` header is untrustworthy when no trusted reverse proxy (e.g., a load balancer) is between the client and
-server. If the client and all proxies are benign and well-behaved, then the list of IP addresses in the header
-has the meaning described in the [Directives](#directives) section. But if there's a risk the client or any proxy
-is malicious or misconfigured, then it's possible any part (or the entirety) of the header may have been
-spoofed (and may not be a list or contain IP addresses at all).
+如果客户端和服务器之间存在任意可信的反向代理，最终 `X-Forwarded-For` 中的 IP 地址列表是可信的，
+因为这些 IP 是由可信的代理添加的（只要服务器只能通过这些代理进行访问而不是可以被直接访问）。
 
-If any trusted reverse proxies are between the client and
-server, the final `X-Forwarded-For` IP addresses (one for each trusted proxy) are trustworthy, as they
-were added by trusted proxies. (That's true as long as the server is _only_
-accessible through those proxies and not also directly).
+使用 `X-Forwarded-For` 进行安全相关的操作时（比如速率限制或基于 IP 的访问控制），
+必须仅使用由可信代理添加的 IP 地址。使用不可信的 IP，可能导致速率限制被规避、访问控制被绕过、
+内存耗尽、或其他与安全性或可用性相关的负面后果。
 
-Any security-related use of `X-Forwarded-For` (such as for rate limiting or IP-based
-access control) _must only_ use IP addresses added by a trusted proxy. Using untrustworthy
-values can result in rate-limiter avoidance, access-control bypass, memory exhaustion, or
-other negative security or availability consequences.
-
-Conversely, leftmost (untrusted) values must only be used where there will be no negative
-impact from the possibility of using spoofed values.
+反过来，只有当使用错误 IP 不会导致负面影响时，最左边的（不可信的） IP 才能被使用。
 
 ## Syntax
 
