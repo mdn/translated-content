@@ -17,7 +17,7 @@ close()
 
 ### 参数
 
-无。
+无（{{jsxref("undefined")}}）。
 
 ### 返回值
 
