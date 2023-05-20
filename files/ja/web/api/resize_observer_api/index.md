@@ -1,8 +1,8 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-page-type: web-api-overview
-browser-compat: api.ResizeObserver
+l10n:
+  sourceCommit: 2937558d5ed1e03d7f60b2de71dd9c17f490166e
 ---
 
 {{DefaultAPISidebar("Resize Observer API")}}
