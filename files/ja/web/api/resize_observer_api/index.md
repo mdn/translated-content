@@ -11,17 +11,17 @@ Resize Observer API は要素のサイズ変化を監視し、変化するたび
 
 ## 概念と使い方
 
-There are a whole raft of use cases for responsive design techniques (and others besides) that respond to changes in an element's size, but previously their implementations have often been hacky and/or brittle.
+要素のサイズの変化を検出する方法 (やそのほかの手法) はたくさんありますが、これまでの実装はハック的で脆弱なことがよくありました。
 
-For example, [media queries](/en-US/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} are great for updating layouts at specific points when the viewport changes sizes, but what if you want to change layout in response to a specific element's size changing, which isn't the outer container?
+例えば、 [メディアクエリー](/en-US/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} はビューポートのサイズの変化を検出したときに特定の箇所に対してレイアウト更新を行う場合に最適ですが、これが特定の要素のサイズの変更を検出したい場合はどうすればよいでしょうか？
 
-To achieve this, a limited solution would be to listen to changes to a suitable event that hints at the element you are interested in changing size (e.g. the window [resize event](/en-US/docs/Web/API/Window/resize_event)), then figure out what the new dimensions or other features of the element after a resize using {{domxref("Element.getBoundingClientRect")}} or {{domxref("Window.getComputedStyle")}}, for example.
+この問題を解決するために、サイズの変化を検出させたい要素を示唆する適切なイベント ( [Window: resize イベント](/ja-JP/docs/Web/API/Window/resize_event) など) で監視し、 {{domxref("Element.getBoundingClientRect")}} や {{domxref("Window.getComputedStyle")}} などを使用して要素の新しいサイズやその他の特徴を探し出す方法が考えられます。
 
-Such a solution tends to only work for limited use cases, be bad for performance (continually calling the above methods would result in a big performance hit), and often won't work when the browser window size is not changed.
+そのような方法では、限られたユースケースでしか機能せず、パフォーマンス面でも悪影響があり (上記のメソッドを連続的に呼び出すと大きなパフォーマンス低下につながる) 、ブラウザーのウインドウサイズが変わらないと機能しないことが多い傾向があります。
 
-The Resize Observer API provides a solution to exactly these kinds of problems, and more besides, allowing you to easily observe and respond to changes in the size of an element's content or border box in a performant way. It provides a JavaScript solution to the often-discussed lack of [element queries](https://www.xanthir.com/b4PR0) in the web platform.
+Resize Observer API では、このような問題に対する解決策を提供する他、要素の内容やボーダーボックスのサイズの変化までも簡単に監視し、実行できるようにします。これは Web プラットフォームでしばしば議論されている [要素クエリ](https://www.xanthir.com/b4PR0) の欠如に対する解決策として提供します。
 
-Usage is simple, and pretty much the same as other observers, such as [Performance Observer](/en-US/docs/Web/API/PerformanceObserver) or [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) — you create a new {{domxref("ResizeObserver")}} object using the [`ResizeObserver()`](/en-US/docs/Web/API/ResizeObserver/ResizeObserver) constructor, then use {{domxref("ResizeObserver.observe()")}} to make it look for changes to a specific element's size. A callback function set up inside the constructor then runs every time the size changes, providing access to the new dimensions and allowing you to do anything you like in response to those changes.
+使い方は簡単で、 [Performance Observer](/ja-JP/docs/Web/API/PerformanceObserver) や [Intersection Observer](/ja-JP/docs/Web/API/Intersection_Observer_API) の他のオブザーバーとほとんど同じです。[`ResizeObserver()`](/ja-JP/docs/Web/API/ResizeObserver/ResizeObserver) コンストラクターで新しい {{domxref("ResizeObserver")}} オブジェクトを作成できます。 {{domxref("ResizeObserver.observe()")}} で特定の要素のサイズの変更を検出するようにします。コールバック関数はコンストラクターの中で設定し、要素のサイズが変わるたびに毎回実行され、変化後のサイズを通して自由に実行できるようになります。
 
 ## インターフェイス
 
