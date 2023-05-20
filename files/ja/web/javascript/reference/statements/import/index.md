@@ -152,32 +152,34 @@ import "/modules/my-module.js";
 
 ### 標準的なインポート
 
-以下のコードは AJAX JSON リクエストの処理を支援する補助モジュールからインポートする方法を示しています。
-
-#### モジュール: file.js
+こちらの例では、指定した範囲内におけるすべての素数を取得する関数をエクスポートする、再利用可能なモジュールを作ります。
 
 ```js
-function getJSON(url, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText)
-  };
-  xhr.open('GET', url, true);
-  xhr.send();
-}
-
-export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+// getPrimes.js
+/**
+ * `max` より小さな素数のリストを返す。
+ */
+export function getPrimes(max) {
+  const isPrime = Array.from({ length: max }, () => true);
+  isPrime[0] = isPrime[1] = false;
+  isPrime[2] = true;
+  for (let i = 2; i * i < max; i++) {
+    if (isPrime[i]) {
+      for (let j = i ** 2; j < max; j += i) {
+        isPrime[j] = false;
+      }
+    }
+  }
+  return [...isPrime.entries()]
+    .filter(([, isPrime]) => isPrime)
+    .map(([number]) => number);
 }
 ```
 
-#### メインプログラム: main.js
-
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getPrimes } from "/modules/getPrimes.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+console.log(getPrimes(10)); // [2, 3, 5, 7]
 ```
 
 ### 動的インポート
