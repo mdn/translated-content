@@ -11,7 +11,7 @@ CSS（Cascading Style Sheets，层叠样式表）是为 web 内容添加样式�
 
 ## 什么是 CSS？
 
-和 HTML 类似，CSS 也不是真正的编程语言，甚至不是标记语言。**CSS 是一门样式表语言**，这也就是说人们可以用它来选择性地为 HTML 元素添加样式。举例来说，这个 CSS 代码选择了所有的段落文字，并将它们设置为红色。
+和 HTML 类似，CSS 也不是真正的编程语言，甚至不是标记语言。**CSS 是一门样式表语言**，这也就是说人们可以用它来选择性地为 HTML 元素添加样式。举例来说，以下 CSS 代码选择了所有的段落文字，并将它们设置为红色。
 
 ```css
 p {
@@ -21,7 +21,7 @@ p {
 
 让我们来试一试！在文本编辑器中，将上述的三行 CSS 代码粘贴到一个新的文件中，将文件命名为 `style.css` 并保存到 `styles` 文件夹下。
 
-为了使代码发挥作用，我们仍然需要将上述 CSS 样式应用到你的 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
+为了使代码发挥作用，我们仍然需要将上述 CSS 样式应用到你的 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
 
 1. 打开 `index.html` 文件，然后将下面一行粘贴到文档头部（也就是 {{HTMLElement("head")}} 和 `</head>` 标签之间）。
 
@@ -39,7 +39,7 @@ p {
 
 ![CSS p 声明，其中 color 为 red](css-declaration-small.png)
 
-整个结构称为 **规则集**（*规则集*通常简称*规则*），注意各个部分的名称：
+整个结构称为**规则集**（*规则集*通常简称*规则*），注意各个部分的名称：
 
 - 选择器（Selector）
   - : HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素（在这个例子中就是 {{HTMLElement("p")}} 元素）。要给不同元素添加样式，只需要更改选择器。
@@ -144,7 +144,7 @@ h1 {
 
 在探索了一些 CSS 基础后，我们来把更多规则和信息添加至 `style.css` 中，从而让示例更美观。
 
-1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like) 中保存的 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头部（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
+1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)中保存的 [Google Font 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。并以 {{htmlelement("link")}} 元素的形式添加进 `index.html` 文档头部（ {{HTMLElement("head")}} 和 `</head>` 之间的任意位置）。代码如下：
 
    ```html
    <link
@@ -159,7 +159,7 @@ h1 {
 
    ```css
    html {
-     font-size: 10px; /* px 表示“像素（pixels）”: 基础字号为 10 像素 */
+     font-size: 10px; /* px 表示“像素（pixel）”: 基础字号为 10 像素 */
      font-family: "Open Sans", sans-serif; /* 这应该是你从 Google Fonts 得到的其余输出。 */
    }
    ```
@@ -220,7 +220,7 @@ html {
 }
 ```
 
-这条规则为整个页面设置了背景颜色。将颜色代码修改为设置为[在“我的网站将会是什么样子？”中所计划的颜色](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主题颜色)。
+这条规则为整个页面设置了背景颜色。将颜色代码修改为设置为[在“我的网站将会是什么样子？”中所选择的颜色](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主题颜色)。
 
 ### 文档体样式
 
@@ -282,10 +282,10 @@ img {
 {{htmlelement("body")}} 元素是**块级**元素，意味着它占据了页面的空间并且能够赋予外边距和其他改变间距的值。而图片是**行级**元素，不具备块级元素的一些功能。所以为了使图像有外边距，我们必须使用 `display: block` 给予其块级行为。
 
 > **备注：** 以上说明假定所选图片小于页面宽度（600 像素）。更大的图片会溢出 body 并占据页面的其他位置。要解决这个问题，可以：
-> 1）使用 [图片编辑器](https://en.wikipedia.org/wiki/Raster_graphics_editor) 来减小图片宽度；
+> 1）使用[图片编辑器](https://en.wikipedia.org/wiki/Raster_graphics_editor) 来减小图片宽度；
 > 2）用 CSS 限制图片大小，即减小 `<img>` 元素 {{cssxref("width")}} 属性的值。
 
-> **备注：** 如果你暂时不能理解 `display: block` 和块级元素与行级元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。`display` 属性的更多信息请查看 [display 属性参考页面](/zh-CN/docs/Web/CSS/display) 。
+> **备注：** 如果你暂时不能理解 `display: block` 和块级元素与行级元素的差别也没关系；随着你对 CSS 学习的深入，你将明白这个问题。`display` 属性的更多信息请查看 [display 属性参考页面](/zh-CN/docs/Web/CSS/display)。
 
 ## 小结
 
