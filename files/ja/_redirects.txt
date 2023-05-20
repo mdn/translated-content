@@ -4473,7 +4473,6 @@
 /ja/docs/Web/HTML/Element/Input1/week	/ja/docs/Web/HTML/Element/input/week
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
-/ja/docs/Web/HTML/Element/applet	/ja/docs/orphaned/Web/HTML/Element/applet
 /ja/docs/Web/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
 /ja/docs/Web/HTML/Element/content	/ja/docs/Web/HTML/Element/slot
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
