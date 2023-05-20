@@ -25,7 +25,7 @@ close()
 
 ## 示例
 
-在下面的代码片段中，我们有一个简单的函数，当调用时创建一个 `options` 对象，然后是一个新的通知。在函数的最后，它在 {{domxref("EventTarget.addEventListener","addEventListener()")}} 函数中调用 `close()` 来移除在网页上已经阅读相关内容时的通知。
+在下面的代码片段中，我们有一个简单的函数，当调用时创建一个 `options` 对象，然后是一个新的通知。在函数的最后，它在 {{domxref("EventTarget.addEventListener","addEventListener()")}} 函数中调用 `close()` 以在网页上阅读相关内容后移除该通知。
 
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
