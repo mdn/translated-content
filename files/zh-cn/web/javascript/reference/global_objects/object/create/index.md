@@ -21,7 +21,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : 新创建对象的原型对象。
 - `propertiesObject` {{Optional_inline}}
-  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)将为新创建的对象添加指定的属性值和对应的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
+  - : 如果该参数被指定且不为 {{jsxref("undefined")}}，则该传入对象[可枚举的自有属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)将为新创建的对象添加具有对应属性名称的属性描述符。这些属性对应于 {{jsxref("Object.defineProperties()")}} 的第二个参数。
 
 ### 返回值
 
@@ -77,7 +77,7 @@ console.log("rect 是 Shape 类的实例吗？", rect instanceof Shape); // true
 rect.move(1, 1); // 打印 'Shape moved.'
 ```
 
-需要注意的是，使用 `create()` 也有一些要注意的地方，比如重新添加 [`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性以确保正确的语义。虽然 `Object.create()` 被认为比使用 {{jsxref("Object.setPrototypeOf()")}} 修改原型更具有性能优势，但如果没有创建实例并且属性访问还没有被优化，它们之间的差异实际上是可以忽略不计的。在最佳实践中，无论如何都应该优先使用[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
+需要注意的是，使用 `create()` 也有一些要注意的地方，比如重新添加 [`constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 属性以确保正确的语义。虽然 `Object.create()` 被认为比使用 {{jsxref("Object.setPrototypeOf()")}} 修改原型更具有性能优势，但如果没有创建实例并且属性访问还没有被优化，它们之间的差异实际上是可以忽略不计的。在现代代码中，无论如何都应该优先使用[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)语法。
 
 ### 使用 Object.create() 的 propertyObject 参数
 
