@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 
 {{JSRef}}
 
-**`Object.values()`** 静态方法返回一个给定对象自身的可枚举字符串键属性值组成的数组。
+**`Object.values()`** 静态方法返回一个给定对象的自有可枚举字符串键属性值组成的数组。
 
 {{EmbedInteractiveExample("pages/js/object-values.html")}}
 
@@ -22,7 +22,7 @@ Object.values(obj)
 
 ### 返回值
 
-一个包含了给定对象自身的可枚举字符串键属性值的数组。
+一个包含了给定对象的自有可枚举字符串键属性值的数组。
 
 ## 描述
 
