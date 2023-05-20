@@ -58,17 +58,15 @@ XFF 是事实上的标准。
 X-Forwarded-For: <client>, <proxy1>, <proxy2>
 ```
 
-Elements are comma-separated, with optional whitespace surrounding the commas.
+元素用逗号分隔，逗号两边可以加上空格。
 
 ## Directives
 
 - \<client>
-  - : The client IP address
+  - : 客户端 IP 地址
 - \<proxy1>, \<proxy2>
-  - : If a request goes through multiple proxies, the IP addresses of each successive
-    proxy is listed. This means that, given well-behaved client and proxies, the rightmost
-    IP address is the IP address of the most recent proxy and the leftmost IP address is
-    the IP address of the originating client.
+  - : 如果请求通过多个代理，每个代理的 IP 地址会按顺序出现在列表中。这意味着，如果客户端和代理行为良好，
+    最右边的 IP 地址会是最近的代理的 IP 地址，最左边的 IP 地址会是原始客户端的 IP 地址。
 
 ## Examples
 
