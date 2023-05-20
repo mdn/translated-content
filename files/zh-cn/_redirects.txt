@@ -2315,7 +2315,6 @@
 /zh-CN/docs/Web/HTML/Element/Video/canplaythrough_event	/zh-CN/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
-/zh-CN/docs/Web/HTML/Element/applet	/zh-CN/docs/orphaned/Web/HTML/Element/applet
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event

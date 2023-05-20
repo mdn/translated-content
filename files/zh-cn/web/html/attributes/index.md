@@ -49,7 +49,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/align">align</a></td>
       <td>
-        {{ HTMLElement("applet") }},
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
         {{ HTMLElement("colgroup") }},
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
@@ -69,7 +68,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/alt">alt</a></td>
       <td>
         <p>
-          {{ HTMLElement("applet") }},
           {{ HTMLElement("area") }}, {{ HTMLElement("img") }},
           {{ HTMLElement("input") }}
         </p>
@@ -224,19 +222,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td><a href="/zh-CN/docs/Web/HTML/Global_attributes/class">class</a></td>
       <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
       <td>经常和 CSS 一起配合使用来修饰元素。</td>
-    </tr>
-    <tr>
-      <td><a href="/zh-CN/docs/Web/HTML/Attributes/code">code</a></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>标明被加载和执行的 applet 类文件的 URL。</td>
-    </tr>
-    <tr>
-      <td><a href="/zh-CN/docs/Web/HTML/Attributes/codebase">codebase</a></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        指出存放 applet 类文件基本 URL 地址 (绝对或相对)，这些文件由 code
-        属性标明。
-      </td>
     </tr>
     <tr>
       <td>color</td>
