@@ -30,7 +30,7 @@ Object.create(proto, propertiesObject)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `proto` 既不是 {{jsxref("null")}}，也不是一个 {{jsxref("Object")}}，则抛出此错误。
+  - : 如果 `proto` 既不是 {{jsxref("null")}}，也不是 {{jsxref("Object")}}，则抛出此错误。
 
 ## 示例
 
@@ -54,7 +54,7 @@ Shape.prototype.move = function (x, y) {
 
 // Rectangle——子类
 function Rectangle() {
-  Shape.call(this); // call super constructor.
+  Shape.call(this); // 调用父类构造函数。
 }
 
 // 子类继承父类
