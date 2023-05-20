@@ -57,46 +57,41 @@ import "module-name";
 
 構文の意味を明らかにするため、下記に例を示します。
 
-### モジュールのコンテンツすべてをインポートする
+### 名前付き import
 
-下記のコードは、`myModule` を現在のスコープに加え、`/modules/my-module.js` のファイルのモジュールからのエクスポートすべてを含めます。
-
-```js
-import * as myModule from '/modules/my-module.js';
-```
-
-エクスポートにアクセスするには、モジュール名（ここでは「myModule」）を名前空間として用いることになります。たとえば、上記でインポートされたモジュールがエクスポートに `doAllTheAmazingThings()` を含む場合は、下記のように呼び出します。
+例えば `my-module` から `myExport` という名前の値が（`export * from "another.js"` などで暗黙的にせよ、 {{jsxref("Statements/export", "export")}} 文で明示的にせよ）エクスポートされている場合、次の例では `myExport` を現在のスコープに追加します。
 
 ```js
-myModule.doAllTheAmazingThings();
+import { myExport } from "/modules/my-module.js";
 ```
 
-### モジュールからエクスポートをひとつインポートする
-
-`myExport` という名前のオブジェクトまたは値が、`my-module` から暗黙的 (モジュール全体がエクスポートされた場合) あるいは {{jsxref("Statements/export", "export")}} 文を用いて明示的にエクスポートされると、`myExport` が現在のスコープに加えられます。
+一つのモジュールから複数の名前をインポートすることもできます。
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { foo, bar } from "/modules/my-module.js";
 ```
 
-### モジュールから複数のエクスポートをインポートする
-
-下記のコードは、`foo` と `bar` を現在のスコープに加えます。
+インポートする際、エクスポートされている名前を変更することもできます。例えば次のように書くと、`shortName` を現在のスコープに追加します。
 
 ```js
-import {foo, bar} from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
-### エクスポートを扱いやすいエイリアスにしてインポートする
-
-インポートするときエクスポートの名前を変えることができます。例えば下記のコードは、エクスポートを `shortName` として現在のスコープに加えます。
+モジュールからエクスポートされている名前が、識別子としては無効な文字列リテラルになっていることがあります。その場合対象の名前を現在のスコープで使用するには、別名を付けなければなりません。
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+// /modules/my-module.js
+const a = 1;
+export { a as "a-b" };
 ```
 
-### インポートする際に複数のエクスポートの名前を変える
+```js
+import { "a-b" as a } from "/modules/my-module.js";
+```
+
+> **注意:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
+
+### Default import
 
 下記のコードは、複数のエクスポートを扱いやすいエイリアスにしてモジュールからインポートします。
 
