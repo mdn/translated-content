@@ -182,25 +182,33 @@ import { getPrimes } from "/modules/getPrimes.js";
 console.log(getPrimes(10)); // [2, 3, 5, 7]
 ```
 
-### 動的インポート
+### インポートした値はエクスポートしたモジュールだけが変更できる
 
-この例は、ユーザーのアクション（この場合はボタンクリック）に基づいて機能をページにロードし、そのモジュール内で関数を呼び出す方法を示しています。この機能を実装する方法はこれだけではありません。`import()` 関数は `await` もサポートしています。
+インポートした識別子は「ライブバインディング」と呼ばれます。エクスポートしているモジュールが再代入するとインポートしている値も変わるからです。しかしながら、当の変数をインポートしているモジュールは再代入できません。それでも、エクスポートしたオブジェクトを保持しているモジュールは、インポートしたオブジェクトを書き換えることができますし、変更した値は同じ値をインポートしているすべてのモジュールが観測できるようになっています。
+
+値の変更は [モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)を通じて観測することもできます。
 
 ```js
-const main = document.querySelector("main");
-for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", e => {
-    e.preventDefault();
+// my-module.js
+export let myValue = 1;
+setTimeout(() => {
+  myValue = 2;
+}, 500);
+```
 
-    import('/modules/my-module.js')
-      .then(module => {
-        module.loadPageInto(main);
-      })
-      .catch(err => {
-        main.textContent = err.message;
-      });
-  });
-}
+```js
+// main.js
+import { myValue } from "/modules/my-module.js";
+import * as myModule from "/modules/my-module.js";
+
+console.log(myValue); // 1
+console.log(myModule.myValue); // 1
+setTimeout(() => {
+  console.log(myValue); // 2; my-module has updated its value
+  console.log(myModule.myValue); // 2
+  myValue = 3; // TypeError: Assignment to constant variable.
+  // インポートしているモジュールができるのは値を読むことだけで、再代入はできません。
+}, 1000);
 ```
 
 ## 仕様
