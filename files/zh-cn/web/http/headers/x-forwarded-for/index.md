@@ -71,21 +71,16 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 
 ## 解析
 
-Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used
-for security-related purposes, resulting in the negative consequences mentioned above.
+对 `X-Forwarded-For` 首部的不当解析可能导致错误的值被用于安全相关的目地，造成本文之前提及过的负面后果。
 
-There may be multiple `X-Forwarded-For` headers present in a request. The IP addresses in
-these headers must be treated as a single list, starting with the first IP address of the
-first header and continuing to the last IP address of the last header. There are two ways
-of making this single list:
+在一个请求中可能出现多个 `X-Forwarded-For` 首部。这些首部中的 IP 地址必须被当作一个列表处理，从第一个首部中的第一个 IP 地址开始，直到最后一个首部中的最后一个 IP 地址结束。有两种方法生成这个列表：
 
-- join the `X-Forwarded-For` full header values with commas and then split by comma into a list, or
-- split each `X-Forwarded-For` header by comma into lists and then join the lists
+- 用逗号拼接所有 `X-Forwarded-For` 首部的值，然后用逗号将其分割成一个列表
+- 用逗号将每一个 `X-Forwarded-For` 首部的值都分割成一个列表，然后将这些列表合并成一个列表
 
-It is insufficient to use only one of multiple `X-Forwarded-For` headers.
+只使用多个 `X-Forwarded-For` 首部中的一个是不够的。
 
-(Some reverse proxies will automatically join multiple `X-Forwarded-For` headers into one,
-but it is safest to not assume that this is the case.)
+（一些反向代理会自动将多个 `X-Forwarded-For` 首部合并成一个，但是最安全的做法是不要假设就是这种情况。）
 
 ## 选择一个 IP 地址
 
