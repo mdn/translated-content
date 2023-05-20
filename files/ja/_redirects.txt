@@ -3503,7 +3503,7 @@
 /ja/docs/Web/API/MessagePort/onmessageerror	/ja/docs/Web/API/MessagePort/messageerror_event
 /ja/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN	/ja/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static
 /ja/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN	/ja/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_MOUSE_DOWN_static
-/ja/docs/Web/API/MouseEvent/region	/ja/docs/conflicting/Web/API/MouseEvent
+/ja/docs/Web/API/MouseEvent/region	/ja/docs/Web/API/MouseEvent
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigation_timing_API	/ja/docs/Web/API/Performance_API/Navigation_timing
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
