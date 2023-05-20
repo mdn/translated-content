@@ -131,8 +131,7 @@ considered trustworthy or safe for security-related uses.
 
 ## Specifications
 
-Not part of any current specification. The standardized version of this header is
-{{HTTPHeader("Forwarded")}}.
+不属于任何当前规范。标准版本是 {{HTTPHeader("Forwarded")}}。
 
 ## See also
 
