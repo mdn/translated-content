@@ -71,7 +71,7 @@ function makeDocument() {
 
 16 行目はフレームの `contentDocument` を取り出しています。これは新しいコンテンツを注入する文書内のものです。次の 2 行は、新しい文書のコンテンツを新しい文書のコンテキストにインポートする処理です。最後に、20 行目で実際にフレームのコンテンツを新しい文書のコンテンツに置き換えます。
 
-[ライブサンプルを見る](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
+[ライブサンプルを見る](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 返される文書は、以下の HTML であらかじめ構成されたものになります。
 

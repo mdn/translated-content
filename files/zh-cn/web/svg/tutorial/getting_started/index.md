@@ -26,7 +26,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 </svg>
 ```
 
-复制并粘贴代码到文件 demo1.svg。然后用 Firefox 打开该文件。它将会呈现为下面的截图。(Firefox 用户点击[这里](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+复制并粘贴代码到文件 demo1.svg。然后用 Firefox 打开该文件。它将会呈现为下面的截图。(Firefox 用户点击[这里](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![svgdemo1.png](svgdemo1.png)
 

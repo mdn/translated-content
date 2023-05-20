@@ -103,7 +103,7 @@ function previewFiles() {
 }
 ```
 
-> **Note :** Le constructeur [`FileReader()`](/fr/docs/Web/API/FileReader) n'était pas pris en charge pour les versions d'Internet Explorer antérieures à IE 10. Vous pouvez voir [notre exemple de solution compatible entre les navigateurs pour la prévisualisation d'image](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html), ainsi que [cet autre exemple encore plus puissant](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
+> **Note :** Le constructeur [`FileReader()`](/fr/docs/Web/API/FileReader) n'était pas pris en charge pour les versions d'Internet Explorer antérieures à IE 10. Vous pouvez voir [notre exemple de solution compatible entre les navigateurs pour la prévisualisation d'image](https://mdn.dev/archives/media/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html), ainsi que [cet autre exemple encore plus puissant](https://mdn.dev/archives/media/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
 
 ## Spécifications
 

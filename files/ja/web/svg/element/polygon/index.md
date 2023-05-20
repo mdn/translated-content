@@ -9,6 +9,8 @@ slug: Web/SVG/Element/polygon
 
 開いた図形については {{SVGElement("polyline")}} 要素をご覧ください。
 
+## 例
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -19,12 +21,11 @@ html,body,svg { height:100% }
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- 同じ多角形で線を持ち塗りつぶされない例 -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample('例', 100, 100)}}
 
 ## 属性
 
