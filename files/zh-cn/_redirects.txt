@@ -2626,7 +2626,6 @@
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
 /zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
 /zh-CN/docs/Web/SVG/Element/animateColor	/zh-CN/docs/Web/SVG/Element/animate
-/zh-CN/docs/Web/SVG/Element/discard	/zh-CN/docs/orphaned/Web/SVG/Element/discard
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient
