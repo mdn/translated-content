@@ -3489,7 +3489,7 @@
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MediaSource/isTypeSupported	/ja/docs/Web/API/MediaSource/isTypeSupported_static
 /ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
-/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
+/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MediaStreamTrack/onended	/ja/docs/Web/API/MediaStreamTrack/ended_event
 /ja/docs/Web/API/MediaStreamTrack/onmute	/ja/docs/Web/API/MediaStreamTrack/mute_event
 /ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/Web/API/MediaStreamTrack/overconstrained_event
