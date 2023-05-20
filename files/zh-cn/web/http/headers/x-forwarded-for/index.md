@@ -84,34 +84,18 @@ X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.
 
 ## 选择一个 IP 地址
 
-When selecting an address, the full list of IPs — from all `X-Forwarded-For` headers — must be used.
+选择地址时，必须使用从所有 `X-Forwarded-For` 首部生成的完整 IP 列表。
 
-When choosing the `X-Forwarded-For` client IP address closest to the client (untrustworthy
-and _not_ for security-related purposes), the first IP from the leftmost that is _a valid
-address_ and _not private/internal_ should be selected. ("Valid" because spoofed values
-may not be IP addresses at all; "not internal/private" because clients may have used
-proxies on their internal network, which may have added addresses from the [private IP space](https://en.wikipedia.org/wiki/Private_network).)
+当选择离客户端最近的 `X-Forwarded-For` IP 地址时（不可信并且不用于安全相关的目地），应该选择最左边的、第一个有效且不是私有/内部地址的 IP 地址。（要求”有效“是因为错误的值可能根本就不是 IP 地址；要求“不是私有/内部地址”是因为客户端使用的代理可能在他们的内部网络中，在这种情况下代理可能添加了[私有 IP 地址空间](https://en.wikipedia.org/wiki/Private_network)中的地址。）
 
-When choosing the first _trustworthy_ `X-Forwarded-For` client IP address, additional
-configuration is required. There are two common methods:
+当选择第一个可信的 `X-Forwarded-For` 客户端 IP 地址时，需要进行额外的配置。有两种常用的方法：
 
-- **Trusted proxy count**: The count of reverse proxies between the internet and the
-  server is configured. The `X-Forwarded-For` IP list is searched from the rightmost by
-  that count minus one. (For example, if there is only one reverse proxy, that proxy will
-  add the client's IP address, so the rightmost address should be used. If there are
-  three reverse proxies, the last two IP addresses will be internal.)
-- **Trusted proxy list**: The IPs or IP ranges of the trusted reverse proxies are
-  configured. The `X-Forwarded-For` IP list is searched from the rightmost, skipping all
-  addresses that are on the trusted proxy list. The first non-matching address is the
-  target address.
+- **可信代理数量**：配置了互联网和服务器之间的反向代理数量。从 `X-Forwarded-For` IP 列表的最右边开始搜索，第（可信代理数量 - 1）个地址就是目标地址。（例如，如果只有一个反向代理，这个代理会添加客户端的 IP 地址，因此应该使用最右边的地址。如果有三个反向代理，最后两个 IP 地址将是内部地址。）
+- **可信代理列表**：配置了可信反向代理的 IP 或 IP 范围。从 `X-Forwarded-For` IP 列表的最右边开始搜索，跳过可信代理列表中的所有地址。第一个不匹配的地址就是目标地址。
 
-The first trustworthy `X-Forwarded-For` IP address may belong to an untrusted intermediate
-proxy rather than the actual client computer, but it is the only IP suitable for security
-uses.
+第一个可信的 `X-Forwarded-For` IP 地址可能属于一个不可信的中间代理，而不是实际的客户计算机，但这是唯一一个适合安全用途的 IP 了。
 
-Note that if the server is directly connectable from the internet — even if it is also
-behind a trusted reverse proxy — _no part_ of the `X-Forwarded-For` IP list can be
-considered trustworthy or safe for security-related uses.
+注意如果从互联网可直接连接到服务器——即使服务器也位于一个受信任的反向代理之后——`X-Forwarded-For` IP 列表中的任何部分都不能被认为是可信赖的，或者可安全地用于安全相关的用途。
 
 ## 规范
 
