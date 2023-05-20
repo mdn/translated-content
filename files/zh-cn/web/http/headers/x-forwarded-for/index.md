@@ -8,7 +8,7 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 当客户端通过代理服务器连接到 web 服务器时，**`X-Forwarded-For`** (XFF) 请求头可用于标识客户端的原始 IP 地址。
 XFF 是事实上的标准。
 
-> **警告：** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅 [Security and privacy concerns](#security_and_privacy_concerns).
+> **警告：** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅 [安全和隐私考虑](#安全和隐私考虑).
  
 当客户端直接连接到服务器时，其 IP 地址被发送给服务器（并且经常被记录在服务器的访问日志中）。
 但是如果客户端通过 [正向代理或者反向代理](https://en.wikipedia.org/wiki/Proxy_server) 进行连接，
@@ -16,7 +16,7 @@ XFF 是事实上的标准。
 如果最后一个代理是与服务器安装在同一台主机上的负载均衡，则更是如此。
 `X-Forwarded-For` 的出现，就是为了向服务器提供更有用的客户端 IP 地址。
 
-For detailed guidance on using this header, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
+有关使用此标头的详细指引，请参阅 [Parsing](#parsing) 和 [Selecting an IP address](#selecting_an_ip_address) 部分.
 
 <table class="properties">
   <tbody>
@@ -31,13 +31,17 @@ For detailed guidance on using this header, see the [Parsing](#parsing) and [Sel
   </tbody>
 </table>
 
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
+此标头的标准化版本是 HTTP {{HTTPHeader("Forwarded")}} 标头。
 
-## Security and privacy concerns
+## 安全和隐私考虑
 
-This header, by design, exposes privacy-sensitive information, such as the IP address
-of the client. Therefore the user's privacy must be kept in mind when deploying this
-header.
+从设计上说，此标头暴露隐私信息，比如客户端的 IP 地址。因此，在使用此标头时，请务必将用户的隐私放在心上。
+
+当在客户端和服务器之间没有可信的反向代理（比如一个负载均衡）时，`X-Forwarded-For` 标头是不可信的。
+如果客户端和所有的代理都没有恶意且行为良好，
+那么此标头中的 IP 地址列表具有 [Directives](#directives) 部分所描述的意义。
+但是如果客户端或任意代理存有恶意或配置错误，
+那么此标头的任意部分（或整体）可能是错误的（并且有可能不是一个列表或者甚至不包含 IP 地址）。
 
 The `X-Forwarded-For` header is untrustworthy when no trusted reverse proxy (e.g., a load balancer) is between the client and
 server. If the client and all proxies are benign and well-behaved, then the list of IP addresses in the header
