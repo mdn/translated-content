@@ -91,46 +91,33 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 > **注意:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
-### Default import
+### デフォルトのインポート
 
-下記のコードは、複数のエクスポートを扱いやすいエイリアスにしてモジュールからインポートします。
+デフォルトエクスポートでエクスポートされた値は、対応するデフォルトのインポート構文を用いてインポートする必要があります。最も単純なバージョンでは、デフォルトの値を直接インポートします:
 
 ```js
-import {
-  reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
-### 副作用のためだけにモジュールをインポートする
+デフォルトのエクスポートは名前を明示していませんので、好きな名前を与えることができます。
 
-副作用だけのためにモジュール全体をインポートしたときは、何もインポートされません。モジュールのグローバルコードが実行されるだけで、実際の値はインポートされないのです。
+デフォルトのインポートと名前空間のインポート、または名前付きインポートを一緒に使用することもできます。そのような場合、デフォルトのインポートを最初に宣言してください。例えば次のとおり:
 
 ```js
-import '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
+// myModule.default と myDefault は同じ値
 ```
 
-これは[動的インポート](#dynamic_imports)にも対応しています。
+あるいは:
 
 ```js
-(async () => {
-  if (somethingIsTrue) {
-    // 副作用のためのインポートモジュール
-    await import('/modules/my-module.js');
-  }
-})();
+import myDefault, { foo, bar } from "/modules/my-module.js";
 ```
 
-プロジェクトで ESM をエクスポートするパッケージを使用している場合は、副作用のためだけにインポートすることもできます。これにより、パッケージエントリーポイントファイル（およびインポートするすべてのファイル）のコードのみが実行されます。
-
-### デフォルトをインポートする
-
-デフォルトの {{jsxref("Statements/export", "export")}}（オブジェクト、関数、クラスなど）にも対応できます。`import` 文を用いて、そのようなデフォルトをインポートします。
-
-もっとも単純なやり方は、デフォルトを直接インポートすることです。
+`default` という名前のインポートとデフォルトのインポートは、同じ結果をもたらします。ただし `default` は予約語なので、別名を付けなければなりません。
 
 ```js
-import myDefault from '/modules/my-module.js';
+import { default as myDefault } from "/modules/my-module.js";
 ```
 
 また、デフォルトの構文とともに上記のエイリアス（名前空間または名前つきのインポート）を用いることもできます。その場合は下記のように、デフォルトのインポートを先に宣言しなければなりません。
