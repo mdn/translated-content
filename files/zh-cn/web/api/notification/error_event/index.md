@@ -1,23 +1,25 @@
 ---
-title: Notification.onerror
+title: Notification：error 事件
 slug: Web/API/Notification/error_event
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 onerror 属性指定一个事件侦听器来接收 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件。
+{{domxref("Notification")}} 接口的 **`error`** 事件在 {{domxref("Notification")}} 调用出错时候触发（在许多情况下，错误会阻止通知的显示）。
 
-当一个 {{domxref("Notification")}} 发生错误时，会发生这些事件（在许多情况下，一个错误阻止显示通知）。
+## 语法
 
-## Syntax
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
-```plain
-Notification.onerror = EventListener;
+```js
+addEventListener("error", (event) => {});
+
+onerror = (event) => {};
 ```
 
-### Value
+## 事件类型
 
-A {{jsxref("function")}} which serves as the event handler for the [`error`](/zh-CN/docs/Web/API/Element/error_event) event. When an error occurs, the specified function will be called. If `null`, no error handler is in effect.
+一个通用 {{domxref("Event")}}。
 
 ## 规范
 
@@ -27,7 +29,7 @@ A {{jsxref("function")}} which serves as the event handler for the [`error`](/zh
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("Notification")}}
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

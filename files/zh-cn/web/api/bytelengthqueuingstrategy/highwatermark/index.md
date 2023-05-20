@@ -46,3 +46,7 @@ console.log(`highWaterMark value: ${queuingStrategy.highWaterMark}$`);
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ByteLengthQueuingStrategy.ByteLengthQueuingStrategy", "ByteLengthQueuingStrategy()")}} 构造函数
