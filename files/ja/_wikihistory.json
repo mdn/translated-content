@@ -31049,10 +31049,6 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
-  "orphaned/Web/HTML/Element/applet": {
-    "modified": "2020-10-15T21:25:53.285Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",
     "contributors": ["ethertank", "happysadman", "Yuichirou", "electrolysis"]
