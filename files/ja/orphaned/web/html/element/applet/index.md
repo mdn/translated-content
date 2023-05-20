@@ -1,6 +1,7 @@
 ---
-title: '<applet>: 埋め込み Java アプレット要素'
-slug: Web/HTML/Element/applet
+title: "<applet>: 埋め込み Java アプレット要素"
+slug: orphaned/Web/HTML/Element/applet
+original_slug: Web/HTML/Element/applet
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
