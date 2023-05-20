@@ -9,6 +9,8 @@ slug: Web/SVG/Element/polygon
 
 開いた図形については {{SVGElement("polyline")}} 要素をご覧ください。
 
+## 例
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -23,7 +25,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample('例', 100, 100)}}
 
 ## 属性
 
