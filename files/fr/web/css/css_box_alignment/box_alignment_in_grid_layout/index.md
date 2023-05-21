@@ -70,7 +70,7 @@ Les propriétés sans préfixe `grid-` ont été implémentées plus tard par le
 
 - [`justify-content`](/fr/docs/Web/CSS/justify-content)
 - [`align-content`](/fr/docs/Web/CSS/align-content)
-- [`place-content`](/fr/docs/Web/CSS/place-content)t
+- [`place-content`](/fr/docs/Web/CSS/place-content)
 - [`justify-items`](/fr/docs/Web/CSS/justify-items)
 - [`align-items`](/fr/docs/Web/CSS/align-items)
 - [`place-items`](/fr/docs/Web/CSS/place-items)
