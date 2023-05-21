@@ -16,8 +16,8 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
