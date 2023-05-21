@@ -5,7 +5,7 @@ slug: Web/CSS/:valid
 
 {{CSSRef}}
 
-**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、内容物の[検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に成功した {{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素を表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
+**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、内容物の[検証](/ja/docs/Web/HTML/Constraint_validation)に成功した {{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素を表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
 
 ```css
 /* 有効な <input> をすべて選択 */

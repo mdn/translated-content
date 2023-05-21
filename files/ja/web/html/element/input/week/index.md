@@ -95,13 +95,13 @@ weekControl.value = '2017-W45';
 
 ### max
 
-受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
+受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年と週を指定する必要があります。
 
 ### min
 
-受け付ける最も早い年と週です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さいと、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
+受け付ける最も早い年と週です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さいと、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年と週を指定する必要があります。
 

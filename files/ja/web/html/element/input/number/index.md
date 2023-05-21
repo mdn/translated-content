@@ -76,13 +76,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `max`
 
-この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が数値でない場合、要素は最大値を持ちません。
+この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が数値でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性の値より大きいか、等しくしなければなりません。
 
 ### `min`
 
-この入力欄が受け付ける最小値です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
+この入力欄が受け付ける最小値です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性の値より小さいか、等しくしなければなりません。
 
