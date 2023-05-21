@@ -20,8 +20,8 @@ slug: Web/HTTP/Headers/X-Forwarded-For
       <td>{{Glossary("Request header", "请求标头")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
