@@ -2,7 +2,7 @@
 title: 資格情報管理 API
 slug: Web/API/Credential_Management_API
 l10n:
-  sourceCommit: Web/API/Credential
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
 {{DefaultAPISidebar("Credential Management API")}}
