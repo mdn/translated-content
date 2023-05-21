@@ -35,7 +35,7 @@ Le plus grand des nombres passés en arguments. S'il existe un des arguments qui
 
 [`Math.max.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) vaut 2, un signal faible indiquant qu'elle est conçue pour au moins deux paramètres.
 
-## Exemple
+## Exemples
 
 ### Utiliser `Math.max()`
 
