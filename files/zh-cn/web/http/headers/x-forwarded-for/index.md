@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/X-Forwarded-For
 
 {{HTTPSidebar}}
 
-**`X-Forwarded-For`**（XFF）请求标头是一个事实上的标准请求头，用于识别通过代理服务器连接到 Web 服务器的客户端的原始 IP 地址。
+**`X-Forwarded-For`**（XFF）请求标头是一个事实上的用于标识通过代理服务器连接到 web 服务器的客户端的原始 IP 地址的标头。
 
 > **警告：** 对此标头的不恰当使用可能带来安全风险。有关详细信息，请参阅[安全和隐私考虑](#安全和隐私考虑)。
 
