@@ -42,7 +42,7 @@ Les éléments peuvent aussi avoir des attributs comme ceci&nbsp;:
 
 Les attributs contiennent des informations supplémentaires à propos de l'élément et qui ne sont pas affichées avec le contenu. Ici, `class` correspond au _nom_ de l'attribut et `editor-note` correspond à la _valeur_ de l'attribut. L'attribut `class` permet de donner un identifiant non unique qui peut être utilisé pour cibler l'élément (et tous les autres éléments qui partagent la même valeur d'attribut pour `class`), notamment pour la mise en forme ou la manipulation avec des scripts.
 
-Certains attributs n'ont pas de valeur, comme [`required`](/fr/docs/Web/HTML/Attributes/required)
+Certains attributs n'ont pas de valeur, comme [`required`](/fr/docs/Web/HTML/Attributes/required).
 
 Les attributs qui ont une valeur observent ces règles&nbsp;:
 
@@ -70,7 +70,7 @@ Les éléments doivent être ouverts et fermés correctement pour contenir ou ê
 
 ### Éléments vides
 
-Certains éléments n'ont pas de contenu, on les qualifie d'[éléments vide](/fr/docs/Glossary/Void_element). Prenons l'exemple de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) que nous avons sur notre page HTML&nbsp;:
+Certains éléments n'ont pas de contenu, on les qualifie d'[éléments vides](/fr/docs/Glossary/Void_element). Prenons l'exemple de l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) que nous avons sur notre page HTML&nbsp;:
 
 ```html
 <img src="images/firefox-icon.png" alt="Mon image de test" />
