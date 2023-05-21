@@ -1,13 +1,13 @@
 ---
-title: 'CSP: frame-ancestors'
+title: CSP：frame-ancestors
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
 
 {{HTTPSidebar}}
 
-HTTP 头部 {{HTTPHeader("Content-Security-Policy")}}（CSP）中的 `frame-ancestors` 指令指定了一个可以包含 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}} 等元素的有效父级。
+HTTP 标头 {{HTTPHeader("Content-Security-Policy")}}（CSP）中的 `frame-ancestors` 指令指定了一个可以包含 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 等元素的有效父级。
 
-当该指令设置为`'none'时，其作用类似于`{{HTTPHeader("X-Frame-Options")}}`: DENY` （该头部被一些老版本浏览器所支持）。
+当该指令设置为 `'none'` 时，其作用类似于 {{HTTPHeader("X-Frame-Options")}}`: DENY`（该标头被一些老版本浏览器所支持）。
 
 <table class="properties">
   <tbody>

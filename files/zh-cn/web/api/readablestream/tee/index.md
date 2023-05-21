@@ -78,3 +78,8 @@ function fetchStream(stream, list) {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [拷贝流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#拷贝流)

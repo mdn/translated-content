@@ -98,7 +98,7 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 
 ### 为匹配的文本片段添加样式
 
-浏览器可以自由地以它们选择的任何默认方式对突出显示的文本进行样式处理。[CSS 伪元素模块等级 4](https://w3c.github.io/csswg-drafts/css-pseudo/#selectordef-target-text) 定义了 {{cssxref("::target-text")}} 伪元素，它允许你指定自定义样式。
+浏览器可以自由地以它们选择的任何默认方式对突出显示的文本进行样式处理。[CSS 伪元素模块等级 4](https://drafts.csswg.org/css-pseudo/#selectordef-target-text) 定义了 {{cssxref("::target-text")}} 伪元素，它允许你指定自定义样式。
 
 例如，在我们的 [scroll-to-text 示例](https://mdn.github.io/css-examples/target-text/index.html#:~:text=From%20the%20foregoing%20remarks%20we%20may%20gather%20an%20idea%20of%20the%20importance)中我们有如下的 CSS 样式：
 

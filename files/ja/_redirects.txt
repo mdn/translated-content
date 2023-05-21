@@ -3578,7 +3578,7 @@
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/Web/API/Geolocation/getCurrentPosition
-/ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/conflicting/Web/API/ProgressEvent
+/ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/Web/API/ProgressEvent
 /ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create

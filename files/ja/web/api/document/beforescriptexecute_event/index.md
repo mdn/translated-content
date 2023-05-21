@@ -34,7 +34,7 @@ document.addEventListener('beforescriptexecute', starting, true);
 document.onbeforescriptexecute = starting;
 ```
 
-[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[ライブ例を表示](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 

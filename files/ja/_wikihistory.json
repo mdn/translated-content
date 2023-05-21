@@ -20827,10 +20827,6 @@
     "modified": "2020-11-09T09:46:47.038Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
   },
-  "Web/HTML/Element/applet": {
-    "modified": "2020-10-15T21:25:53.285Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
   "Web/HTML/Element/area": {
     "modified": "2020-11-09T11:30:55.877Z",
     "contributors": ["mfuji09", "taka-sho", "yyss"]
