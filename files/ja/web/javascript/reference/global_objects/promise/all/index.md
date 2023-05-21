@@ -204,7 +204,7 @@ async function getPrice() {
 }
 ```
 
-`Promise.all` はエラー処理が直感的であるため、ここでの[並行処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#並行処理メソッド)には最適な選択です。もしいずれかのプロミスが拒否されたら、結果がもう利用できなくなり、 await 式全体が例外を発生します。
+`Promise.all` はエラー処理が直感的であるため、ここでの[並行処理メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)には最適な選択です。もしいずれかのプロミスが拒否されたら、結果がもう利用できなくなり、 await 式全体が例外を発生します。
 
 `Promise.all` はプロミスの反復可能オブジェクトを受け入れるので、いくつかの非同期関数の実行を並列化するために使用するには、非同期関数を呼び出して返されたプロミスを使用する必要があります。関数はプロミスではないので、 `Promise.all` に直接渡しても動作しません。
 
