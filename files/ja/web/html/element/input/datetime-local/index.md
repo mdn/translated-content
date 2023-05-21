@@ -99,13 +99,13 @@ JavaScript の {{jsxref("Date")}} では、数値の日付情報を適切な書�
 
 ### max
 
-受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ日付を指定する必要があります。
 
 ### min
 
-受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
+受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ日付を指定する必要があります。
 
