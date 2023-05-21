@@ -11,7 +11,7 @@ l10n:
 
 静的な **`import`** 宣言は、他のモジュールによって[エクスポート](/ja/docs/Web/JavaScript/Reference/Statements/export)された読み込み専用のライブバインディングをインポートするために使用します。インポートしたバインディングは、バインディングをエクスポートしたモジュールによって更新される一方、インポートしているモジュールによって再代入することができないために、「*ライブバインディング*」と呼ばれています。
 
-ソースファイルの中で`import`宣言を使用するためには、ランタイムがそのファイルを[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)と見なす必要があります。HTMLでは、{{HTMLElement("script")}}タグに `type="module"` を加えることがこれに相当します。モジュールは、宣言するかどうかにかかわらず、{{JSxRef("Strict_mode","Strict モード")}}になります。
+ソースファイルの中で `import` 宣言を使用するためには、ランタイムがそのファイルを[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)と見なす必要があります。HTML では、{{HTMLElement("script")}} タグに `type="module"` を加えることがこれに相当します。モジュールは、宣言するかどうかにかかわらず、 {{JSxRef("Strict_mode","Strict モード")}}になります。
 
 また、`type="module"` のスクリプトを必要としない動的な [**`import()`**](/ja/docs/Web/JavaScript/Reference/Operators/import) という関数のようなものもあります。
 
@@ -32,23 +32,23 @@ import "module-name";
 ```
 
 - `defaultExport`
-  - : モジュールからのデフォルトのエクスポートを参照する名前。JavaScriptの識別子として有効な文字列でなければなりません。
+  - : モジュールからのデフォルトのエクスポートを参照する名前。JavaScript の識別子として有効な文字列でなければなりません。
 - `module-name`
   - : インポートするモジュール。この指定子はホストが示した方法で評価されます。こちらはしばしばモジュールを含む `.js` ファイルへの相対または絶対 URL となっています。Node では、拡張子なしのインポートは `node_modules` におけるパッケージへの参照であることが多いです。バンドラーによっては、拡張子を省略してもよいことにしています。環境を確認してください。シングルクォートやダブルクォートで囲った文字列だけが使えます。
 - `name`
-  - : インポートを参照するとき名前空間のように用いられるモジュールオブジェクトの名前。JavaScriptの識別子として有効な文字列でなければなりません。
+  - : インポートを参照するとき名前空間のように用いられるモジュールオブジェクトの名前。JavaScript の識別子として有効な文字列でなければなりません。
 - `exportN`
-  - : インポートするエクスポートの名前。`module-name`のモジュールがエクスポートしている内容によって、識別子にも文字列リテラルにもどちらにもなりえます。文字列リテラルの場合、有効な識別子を用いて別名を割り当てなければなりません。
+  - : インポートするエクスポートの名前。`module-name` のモジュールがエクスポートしている内容によって、識別子にも文字列リテラルにもどちらにもなりえます。文字列リテラルの場合、有効な識別子を用いて別名を割り当てなければなりません。
 - `aliasN`
-  - : 指定されたインポートを参照する名前。JavaScriptの識別子として有効な文字列でなければなりません。
+  - : 指定されたインポートを参照する名前。JavaScript の識別子として有効な文字列でなければなりません。
 
 ## 説明
 
-`import` 宣言はモジュールのトップレベル（要するにブロックや関数などの中以外）にのみ書くことができます。パーサーが `import` 宣言をモジュール以外の文脈（例えば `type="module"` のない `<script>` タグ、`eval`、`new Function` など、「スクリプト」や「関数の本体」をパース時の目標として持つもの） で検出すると、`SyntaxError`を発生させます。モジュール以外の文脈でモジュールをロードするには、[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)という構文を代わりに使用してください。
+`import` 宣言はモジュールのトップレベル（要するにブロックや関数などの中以外）にのみ書くことができます。パーサーが `import` 宣言をモジュール以外の文脈（例えば `type="module"` のない `<script>` タグ、 `eval`、 `new Function` など、「スクリプト」や「関数の本体」をパース時の目標として持つもの） で検出すると、`SyntaxError` を発生させます。モジュール以外の文脈でモジュールをロードするには、[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)という構文を代わりに使用してください。
 
-`import`宣言は構文的に硬直したものとなっています。例えば、文字列リテラルしか指定子に使えなかったり、トップレベルでしか使用できなかったり、すべてのバインディングが識別子でなければならない、といった制限があります。この制限により、モジュールは評価する前に静的に解析してリンクさせることができます。これはモジュールを非同期にロードする上で鍵となる性質で、[トップレベル await](/ja/docs/Web/JavaScript/Guide/Modules#top_level_await) といった機能を実現させてくれています。
+`import` 宣言は構文的に硬直したものとなっています。例えば、文字列リテラルしか指定子に使えなかったり、トップレベルでしか使用できなかったり、すべてのバインディングが識別子でなければならない、といった制限があります。この制限により、モジュールは評価する前に静的に解析してリンクさせることができます。これはモジュールを非同期にロードする上で鍵となる性質で、[トップレベル await](/ja/docs/Web/JavaScript/Guide/Modules#top_level_await) といった機能を実現させてくれています。
 
-`import`宣言には4つの形式があります:
+`import` 宣言には4つの形式があります:
 
 - [名前付き import](#名前付き_import): `import { export1, export2 } from "module-name";`
 - [デフォルトの import](#デフォルトの_import): `import defaultExport from "module-name";`
@@ -71,7 +71,7 @@ import { myExport } from "/modules/my-module.js";
 import { foo, bar } from "/modules/my-module.js";
 ```
 
-インポートする際、エクスポートされている名前を変更することもできます。例えば次のように書くと、`shortName` を現在のスコープに追加します。
+インポートする際、エクスポートされている名前を変更することもできます。例えば次のように書くと、 `shortName` を現在のスコープに追加します。
 
 ```js
 import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
@@ -89,7 +89,7 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **注意:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
+> **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
 ### デフォルトのインポート
 
@@ -122,13 +122,13 @@ import { default as myDefault } from "/modules/my-module.js";
 
 ### 名前空間のインポート
 
-次のコードは、`/modules/my-module.js` という場所にあるモジュールがエクスポートするすべての値を含んだ `myModule` を現在のスコープに追加します。
+次のコードは、 `/modules/my-module.js` という場所にあるモジュールがエクスポートするすべての値を含んだ `myModule` を現在のスコープに追加します。
 
 ```js
 import * as myModule from "/modules/my-module.js";
 ```
 
-この場合、`myModule` は*名前空間*オブジェクトを表しています。名前空間オブジェクトはエクスポートされているすべての値をプロパティとして保持しています。例えば、上記のコードでインポートされたモジュールが `doAllTheAmazingThings()` をエクスポートしていた場合、次のように呼ぶことができます:
+この場合、 `myModule` は*名前空間*オブジェクトを表しています。名前空間オブジェクトはエクスポートされているすべての値をプロパティとして保持しています。例えば、上記のコードでインポートされたモジュールが `doAllTheAmazingThings()` をエクスポートしていた場合、次のように呼ぶことができます:
 
 ```js
 myModule.doAllTheAmazingThings();
@@ -136,7 +136,7 @@ myModule.doAllTheAmazingThings();
 
 `myModule` は [`null` prototype](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) とする[封印された](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)オブジェクトです。 デフォルトのエクスポートは `default` という名前のキーで利用できるようになっています。詳細は[モジュール名前空間オブジェクト](/ja/docs/Web/JavaScript/Reference/Operators/import#モジュール名前空間オブジェクト)をご覧ください。
 
-> **注意**: JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
+> **メモ**: JavaScript は `import * from "module-name"` のような、ワイルカードインポートを提供していません。名前の衝突が高確率で発生するためです。
 
 ### 副作用のためだけにモジュールをインポートする
 
