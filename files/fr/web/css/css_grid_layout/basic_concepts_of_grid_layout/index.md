@@ -33,7 +33,7 @@ On peut contrôler l'alignement des éléments dans une zone de la grille, ainsi
 
 Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété [`z-index`](/fr/docs/Web/CSS/z-index).
 
-La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
+La grille est un module de spécification puissant qui peut être combinée avec d'autres modules CSS tels que [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout). Pour concevoir une disposition en grille, on commencera par créer **le conteneur de la grille**.
 
 ## Conteneur
 
@@ -315,9 +315,9 @@ Dans ces exemples, nous avons défini nos colonnes à l'aide de la propriété [
 
 Si un élément est placé en dehors de la grille ainsi définie, ou que la quantité de contenu nécessite d'étendre la grille, alors la grille ajoute implicitement des colonnes et rangées. Les dimensions de ces pistes auront par défaut la valeur `auto`, c'est-à dire qu'elles s'ajusteront à leur contenu.
 
-On peut définir une taille pour les pistes de la grille implicite grâce aux propriéts [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns).
+On peut définir une taille pour les pistes de la grille implicite grâce aux propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns).
 
-Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées de la grille implicite aient une hauteur de 200.
+Dans l'exemple ci-après nous utilisons `grid-auto-rows` pour que les rangées de la grille implicite aient une hauteur de 200 pixels.
 
 ```html
 <div class="wrapper">
@@ -511,7 +511,7 @@ Une _cellule_ est la plus petite unité sur une grille, conceptuellement similai
 
 ## Les zones
 
-Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colonne, et cela crée une _zone_. Les zones doivent être rectangulaires - on ne peut pas créer de forme en L par exemple. La zone colorée ci-dessous s'étend sur deux rangées et deux colonnes.
+Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colonne, et cela crée une _zone_. Les zones doivent être rectangulaires — on ne peut pas créer de forme en L par exemple. La zone colorée ci-dessous s'étend sur deux rangées et deux colonnes.
 
 ![Une zone de grille](1_grid_area.png)
 
