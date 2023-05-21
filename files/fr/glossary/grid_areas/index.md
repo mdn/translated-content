@@ -74,6 +74,6 @@ Dans l'exemple qui suit, on a un conteneur de grille avec deux éléments de gri
 
 ### Approfondir
 
-- Guide sur la disposition avec les grilles CSS&nbsp;: [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guide sur la disposition avec les grilles CSS&nbsp;: [Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 - Guide sur la disposition avec les grilles CSS&nbsp; [Définir des zones sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [La définition des zones de grille dans le module de spécification sur les grilles CSS](https://drafts.csswg.org/css-grid/#grid-area-concept)
