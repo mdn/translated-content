@@ -464,7 +464,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 ## 대체 텍스트
 
-텍스트 기반 컨텐츠는 내재적으로 접근성을 제공하는 반면 멀티미디어 컨텐츠는 그렇지 않습니다. 시각장애인은 이미지나 영상 컨텐츠를 볼 수 없고, 청각장애인은 음성 컨텐츠를 들을 수 없습니다. 이런 영상과 음성 컨텐츠는 [접근성을 갖춘 멀티미디어](/ko/docs/Learn/Accessibility/Multimedia)에서 더 자세하게 다룰 예정이고, 이번 아티클에서는 소박하게 {{htmlelement("img")}} 요소의 접근성을 살펴보겠습니다.
+텍스트 기반 콘텐츠는 내재적으로 접근성을 제공하는 반면 멀티미디어 콘텐츠는 그렇지 않습니다. 시각장애인은 이미지나 영상 콘텐츠를 볼 수 없고, 청각장애인은 음성 콘텐츠를 들을 수 없습니다. 이런 영상과 음성 콘텐츠는 [접근성을 갖춘 멀티미디어](/ko/docs/Learn/Accessibility/Multimedia)에서 더 자세하게 다룰 예정이고, 이번 아티클에서는 소박하게 {{htmlelement("img")}} 요소의 접근성을 살펴보겠습니다.
 
 동일한 이미지 네 개의 복제본들을 표시하는 간단한 예시 [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html)이 준비되어 있습니다.
 
