@@ -414,7 +414,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 이 코드로는 라벨이 인풋과 명확하게 연관지어집니다. 스크린 리더 설명은 “Fill in your name: edit text”와 같을 것입니다.
 
-!['Fill in your name'으로 읽히는 좋은 양식 라벨이 주어진 텍스트 인풋 양식 컨트롤.](voiceover-good-form-label.png)
+!['Fill in your name'으로 읽히는 좋은 폼 라벨이 주어진 텍스트 인풋 폼 컨트롤.](voiceover-good-form-label.png)
 
 추가로 대부분의 브라우저에서 양식의 라벨과 인풋을 연결하는 것은 라벨을 클릭해 양식 요소를 선택하거나 활성화시킬 수 있음을 의미합니다. 즉, 라벨까지 포함하는 더 큰 영역을 통해 인풋을 쉽게 선택할 수 있습니다.
 
