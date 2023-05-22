@@ -416,7 +416,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 !['Fill in your name'으로 읽히는 좋은 폼 라벨이 주어진 텍스트 인풋 폼 컨트롤.](voiceover-good-form-label.png)
 
-추가로 대부분의 브라우저에서 양식의 라벨과 인풋을 연결하는 것은 라벨을 클릭해 양식 요소를 선택하거나 활성화시킬 수 있음을 의미합니다. 즉, 라벨까지 포함하는 더 큰 영역을 통해 인풋을 쉽게 선택할 수 있습니다.
+추가로 대부분의 브라우저에서 폼의 라벨과 인풋을 연결하는 것은 라벨을 클릭해 폼 요소를 선택하거나 활성화시킬 수 있음을 의미합니다. 즉, 라벨까지 포함하는 더 큰 영역을 통해 인풋을 쉽게 선택할 수 있습니다.
 
 > **참고:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)과 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)에서 양식의 좋은 예시와 나쁜 예시들을 볼 수 있습니다.
 
