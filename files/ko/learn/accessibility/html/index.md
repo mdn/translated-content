@@ -564,7 +564,7 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 
 색상과 [text-decoration](/ko/docs/Web/CSS/text-decoration) 면에서 링크는 다른 텍스트 요소들과 시각적으로 다릅니다. 기본 링크는 파란색에 밑줄이 그어져있고, 방문한 경우 보라색 밑줄, 키보드 포커스가 되어있을 때는 [focus-ring](/ko/docs/Web/CSS/:focus)이 생깁니다.
 
-색상만으로 링크가 아닌 컨텐츠와 링크를 구분해서는 안됩니다. 다른 모든 텍스트와 마찬가지로 링크 텍스트의 색은 배경 색상과 시각적인 차이를 가져야 합니다 ([4.5:1 contrast](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). 또, 링크는 링크가 아닌 텍스트와도 시각적으로 달라야 합니다. 링크 텍스트와 주위 텍스트, 그리고 기본, 방문된, 포커스/활성화된 상태 사이에는 각각 적어도 3:1의 대비가 요구됩니다. 모든 상태 색상 값과 배경 색상 사이에는 4.5:1의 대비가 요구됩니다.
+색상만으로 링크가 아닌 콘텐츠와 링크를 구분해서는 안됩니다. 다른 모든 텍스트와 마찬가지로 링크 텍스트의 색은 배경 색상과 시각적인 차이를 가져야 합니다 ([4.5:1 contrast](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). 또, 링크는 링크가 아닌 텍스트와도 시각적으로 달라야 합니다. 링크 텍스트와 주위 텍스트, 그리고 기본 상태, 방문된 상태, 포커스/활성화된 상태 사이에는 각각 적어도 3:1의 대비가 요구됩니다. 모든 상태 색상 값과 배경 색상 사이에는 4.5:1의 대비가 요구됩니다.
 
 ### `onclick` 이벤트
 
