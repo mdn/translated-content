@@ -158,4 +158,4 @@ foo.hasOwnProperty("prop"); // Uncaught TypeError: foo.hasOwnProperty is not a f
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript 指南：重新审视继承](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
