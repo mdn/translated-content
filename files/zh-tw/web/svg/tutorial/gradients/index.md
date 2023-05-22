@@ -3,11 +3,13 @@ title: 漸層
 slug: Web/SVG/Tutorial/Gradients
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 除了基本的 fill 和 stroke 之外，我們還有一個更令人興奮的功能：給邊框和填充設置漸層。
 
-漸層的類型有兩種，線形漸層和放射形漸層。線形漸層沿直線變化，在 defs 元素裡創建一個 {{SVGElement('linearGradient')}} 元素，就創建了一個線形漸層。漸變**必須**有一個`id`屬性，否則它不能被其他元素引用，等於白做了。
+漸層的類型有兩種，線形漸層和放射形漸層。線形漸層沿直線變化，在 defs 元素裡創建一個 {{SVGElement('linearGradient')}} 元素，就創建了一個線形漸層。漸變**必須**有一個 `id` 屬性，否則它不能被其他元素引用，等於白做了。
 
 ## 線形漸層
 
