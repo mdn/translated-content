@@ -193,7 +193,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 文本内容元素
 
-{{SVGElement("altGlyphItem")}}、{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
 
 ### 文本子内容元素
 
