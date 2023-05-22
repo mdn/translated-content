@@ -150,7 +150,7 @@ I think is more interesting than the last one.
 
 HTML 테이블을 사용해 페이지 레이아웃을 만들던 시절이 있습니다. 헤더, 푸터, 사이드바, 메인 콘텐츠 열 등을 각각 테이블 셀 내부에 작성한 것이죠. 이것은 좋은 생각이 아닙니다. 스크린 리더가 읽는 내용이 혼란스러워질 가능성이 높기 때문입니다. 특히 레이아웃이 복잡하고 테이블이 중첩되어 있을 경우 그렇습니다.
 
-저희의 예시 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)을 한번 시도해보세요. 이런 식으로 생겼습니다.
+저희의 예시 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)를 한번 시도해보세요. 이런 식으로 생겼습니다.
 
 ```html
 <table width="1200">
