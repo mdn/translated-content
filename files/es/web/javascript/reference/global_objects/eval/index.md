@@ -195,7 +195,7 @@ var str = "if (x == 5) {alert('z is 42'); z = 42;} else z = 0; ";
 document.write("<P>z es ", eval(str));
 ```
 
-### La última espresión es evaluada
+### La última expresión es evaluada
 
 `eval()` devuelve el valor de la última expresión evaluada
 
