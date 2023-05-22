@@ -453,7 +453,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 </table>
 ```
 
-하지만 여기에는 문제가 있습니다. 스크린 리더 사용자가 테이블의 행과 열을 데이터 그룹으로 연결지을 수 있는 방법이 없다는 점입니다. 이를 위해서는 헤더 행이 무엇인지, 그리고 그들이 행과 열 등에 제목을 제공하는지 알아야 합니다. 위의 예시에서는 시각적으로만 이루어집니다. ([bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) 예시를 직접 살펴보세요.)
+하지만 여기에는 문제가 있습니다. 스크린 리더 사용자가 테이블의 행과 열을 데이터 그룹으로 연결지을 수 있는 방법이 없다는 점입니다. 이를 위해서는 헤더 행이 무엇인지, 그리고 이들이 행이나 열 등을 어떻게 표시하고 있는지 알아야 합니다. 위의 예시에서는 시각적으로만 이루어집니다. ([bad-table.html](https://mdn.github.io/learning-area/accessibility/html/bad-table.html) 예시를 직접 살펴보세요.)
 
 이제 [punk bands table 예시](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)를 보면, 몇몇 접근성 지원이 효과적으로 작동하는 것을 볼 수 있습니다.
 
