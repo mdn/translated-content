@@ -101,7 +101,7 @@ HTML `<button>`은 적절한 스타일(아마 덮어쓰고 싶을지 모르지�
 </p>
 ```
 
-우리는 당신이 스크린 리더를 사용해볼 수 있도록 더 긴 내용이 포함된 버전을 준비했습니다 ([good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)을 살펴보세요). 한번 해보면 이 문서가 스크린 리더로 탐색하기에 꽤 쉽다는 것을 알 수 있을 것입니다.
+우리는 당신이 스크린 리더를 사용해볼 수 있도록 더 긴 내용이 포함된 버전을 준비했습니다 ([good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)을 살펴보세요). 한번 시도해 보면 이 문서가 스크린 리더로 탐색하기에 꽤 쉽다는 것을 알 수 있을 것입니다.
 
 1. 콘텐츠를 읽어나가는 동안 스크린 리더가 어떤 것이 헤딩이고, 어떤 것이 문단인지를 알려주면서 각각의 헤더를 읽어줍니다.
 2. 당신이 편안한 속도로 탐색을 진행할 수 있도록 하나의 요소가 끝나면 멈춥니다.
