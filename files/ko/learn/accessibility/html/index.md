@@ -134,7 +134,7 @@ This is the second subsection of my content.
 I think is more interesting than the last one.
 ```
 
-이것의 긴 버전을 스크린 리더로 읽어본다면 ([bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)을 살펴보세요) 좋지 못한 경험을 하게 될 것입니다. 스크린 리더가 표지판으로 사용할 수 있는 요소가 아무것도 없기 때문에 당신은 유용한 목차를 찾을 수 없고, 페이지 전체가 하나의 커다란 블럭으로 여겨져 한번에 전부 읽어집니다.
+이것의 긴 버전을 스크린 리더로 읽어본다면 ([bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)을 살펴보세요) 좋지 못한 경험을 하게 될 것입니다. 스크린 리더가 표지판으로 사용할 수 있는 요소가 아무것도 없기 때문에 당신은 유용한 목차를 찾을 수 없고, 페이지 전체가 하나의 커다란 블록으로 여겨져 한번에 전부 읽어집니다.
 
 접근성 외에도 다른 이슈들이 발생합니다. 예를 들어, 선택자로 사용할 수 있는 요소가 없기 때문에 CSS를 사용해 콘텐츠를 스타일링하거나 JavaScript를 사용해 조작하기 어렵습니다.
 
