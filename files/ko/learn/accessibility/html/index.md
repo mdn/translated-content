@@ -17,7 +17,7 @@ HTML 요소를 늘 올바른 목적에 따라 사용하는 것 만으로 수많�
       <td>
         기본적인 컴퓨터 활용 능력, HTML에 대한 기본적인 이해 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
-        > 참고) 그리고 <a href="/ko/docs/Learn/Accessibility/What_is_accessibility"
+        > 참고), 그리고 <a href="/ko/docs/Learn/Accessibility/What_is_accessibility"
           >접근성이 무엇인지</a
         >에 대한 이해.
       </td>
