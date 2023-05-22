@@ -144,7 +144,7 @@ I think is more interesting than the last one.
 
 - 가능하다면 대시를 사용하지 마세요. 5-7로 쓰는 대신에 5에서 7로 작성하세요.
 - 약어는 실제 표현으로 대체하세요. Jan 대신 January를 사용하세요.
-- 두문자어는 적어도 한번에서 두번은 본 표현으로 사용하고, 설명을 위해 [`<abbr>`](/ko/docs/Web/HTML/Element/abbr) 태그를 사용하세요.
+- 두문자어는 적어도 한 번에서 두 번은 본 표현으로 사용하고, 설명을 위해 [`<abbr>`](/ko/docs/Web/HTML/Element/abbr) 태그를 사용하세요.
 
 ### 페이지 레이아웃
 
