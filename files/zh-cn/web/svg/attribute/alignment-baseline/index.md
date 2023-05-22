@@ -56,11 +56,10 @@ text{
 
 ## 元素
 
-下列元素使用`alignment-baseline 属性：`
+下列元素使用 `alignment-baseline` 属性：
 
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("textPath") }}
 
 如果对象要在别的元素中对齐（比如在{{ SVGElement("text") }}元素中），请阅读{{ SVGAttr("dominant-baseline") }}。

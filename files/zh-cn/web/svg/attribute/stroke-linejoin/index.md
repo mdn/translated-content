@@ -7,9 +7,18 @@ slug: Web/SVG/Attribute/stroke-linejoin
 
 **`stroke-linejoin`** 属性指明路径的转角处使用的形状或者绘制的基础形状。
 
-> **备注：** 作为显示属性， `stroke-linejoin` 能被用做 CSS 属性。
+> **备注：** 作为表现属性，`stroke-linejoin` 能被用做 CSS 属性。
 
-作为显示属性，该属性能被应用到任何元素，但只对这 9 种元素有效： {{SVGElement('altGlyph')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, {{SVGElement('tspan')}}
+作为表现属性，该属性能被应用到任何元素，但只对以下元素有效：
+
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## 示例
 
