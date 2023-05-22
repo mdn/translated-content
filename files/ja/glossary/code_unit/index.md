@@ -1,14 +1,14 @@
 ---
-title: Code unit()
+title: Code unit(コードユニット)
 slug: Glossary/Code_unit
-page-type: glossary-definition
 ---
 
-A **code unit** is the basic component used by a character encoding system (such as UTF-8 or UTF-16). A character encoding system uses one or more code units to encode a Unicode {{Glossary("code point")}}.
+**コードユニット** とは、文字エンコーディングシステムで用いられるUTF-8やUTF-16といった基本的構成要素です。文字エンコーディングシステムはUnicode {{Glossary("code point","コードポイント")}} をエンコードするためにひとつもしくは複数のコードユニットを用います。
 
-In UTF-16 (the encoding system used for JavaScript strings) code units are 16-bit values. This means that operations such as indexing into a string or getting the length of a string operate on these 16-bit units. These units do not always map 1-1 onto what we might consider characters.
 
-For example, characters with diacritics such as accents can sometimes be represented using two Unicode code points:
+UTF-16（JavaScript文字列で用いられるエンコーディングシステム）では、コードユニットは16ビットの値です。このことはつまり、文字列にインデックスを付けたり、文字列の長さを取得するためのオペレーションは、これらの16ビットユニット上で操作されることを意味します。これらのユニットは我々が文字列と考えるものと常に1対1で関連付けるわけではありません。
+
+例えば、強調表示のような発音記号を含む文字列は時々、ふたつのUnicodeコードポイントを用いて表されます：
 
 ```js
 const myString = "\u006E\u0303";
@@ -16,7 +16,7 @@ console.log(myString); // ñ
 console.log(myString.length); // 2
 ```
 
-Also, since not all of the code points defined by Unicode fit into 16 bits, many Unicode code points are encoded as a pair of UTF-16 code units, which is called a _surrogate pair_:
+また、Unicodeで定義されている全てのコードポイントが16ビットに収まるわけではないため、多くのUnicodeコードポイントは _サロゲートペア_ と呼ばれるUTF-16コードユニットのペアでエンコードされています：
 
 ```js
 const face = "🥵";
