@@ -28,12 +28,12 @@ Object.defineProperties(obj, props)
     - `configurable`
       - : 如果此属性描述符的类型可以更改并且属性可以从相应的对象中删除，则为 `true`。**默认为 `false`。**
     - `enumerable`
-      - : 如果此属性在枚举相应对象的属性时显示出来，则为 `true`。**默认为 `false`。**
+      - : 如果此属性在枚举相应对象的属性时应显示出来，则为 `true`。**默认为 `false`。**
 
     数据描述符还具有以下可选键：
 
     - `value`
-      - : 与属性关联的值。可以是任何有效的 JavaScript 值（数字，对象，函数等）。**默认为 {{jsxref("undefined")}}。**
+      - : 与属性关联的值。可以是任何有效的 JavaScript 值（数字、对象、函数等）。**默认为 {{jsxref("undefined")}}。**
     - `writable`
       - : 如果与属性关联的值可以使用{{jsxref("Operators#赋值运算符", "赋值运算符", "", 1)}}更改，则为 `true`。**默认为 `false`。**
 
