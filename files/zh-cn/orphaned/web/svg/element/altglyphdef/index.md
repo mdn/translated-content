@@ -1,6 +1,7 @@
 ---
 title: altGlyphDef
-slug: Web/SVG/Element/altGlyphDef
+slug: orphaned/Web/SVG/Element/altGlyphDef
+original_slug: Web/SVG/Element/altGlyphDef
 ---
 
 {{SVGRef}}
