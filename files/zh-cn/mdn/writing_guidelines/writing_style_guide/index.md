@@ -504,7 +504,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
   下面是为上述清单写结尾解释的例子：
   > We have created a short numbered list that provides instructive steps to produce a numbered list with the correct formatting.
 
-  请注意编号列表中的项目如何像简短的段落一样阅读。因为编号列表通常用于教学目的或引导人们完成一个有序的程序，所以要确保每个项目都有重点：每个步骤有一个编号项目。
+  请注意有序列表中的项目如何像简短的段落一样阅读。因为有序列表通常用于教学目的或引导人们完成一个有序的程序，所以要确保每个项目都有重点：每个步骤有一个编号的项目。
 
 ### “参见”部分
 
