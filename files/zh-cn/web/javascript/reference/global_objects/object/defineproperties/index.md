@@ -36,19 +36,19 @@ Object.defineProperties(obj, props)
 
     - `value`
       - : 与属性关联的值。可以是任何有效的 JavaScript 值（数字，对象，函数等）。
-        **默认为 {{jsxref("undefined")}}.**
+        **默认为 {{jsxref("undefined")}}。**
     - `writable`
       - : 如果与属性关联的值可以使用{{jsxref("Operators#赋值运算符", "赋值运算符", "", 1)}}更改，则为 `true`。
-        **默认为 `false`**
+        **默认为 `false`。**
 
     访问器描述符还具有以下可选键：
 
     - `get`
       - : 作为该属性的 getter 函数，如果没有 getter 则为 {{jsxref("undefined")}}。函数返回值将被用作属性的值。
-        **默认为 {{jsxref("undefined")}}**
+        **默认为 {{jsxref("undefined")}}。**
     - `set`
       - : 作为属性的 setter 函数，如果没有 setter 则为 {{jsxref("undefined")}}。函数将仅接受参数赋值给该属性的新值。
-        **默认为 {{jsxref("undefined")}}**
+        **默认为 {{jsxref("undefined")}}。**
 
     如果一个属性描述符没有 `value`、`writable`、`get`、`set` 键中的任何一个，那么它被视为一个数据描述符。如果一个属性描述符同时具有 `value` 或 `writable` 和 `get` 或 `set` 键中的任意一个组合，就会抛出异常。
 
