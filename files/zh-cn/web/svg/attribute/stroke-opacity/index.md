@@ -3,9 +3,9 @@ title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`stroke-opacity`属性指定了当前对象的轮廓的不透明度。它的默认值是**1**。
+`stroke-opacity` 属性指定了当前对象的轮廓的不透明度。它的默认值是 **1**。
 
 作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 
