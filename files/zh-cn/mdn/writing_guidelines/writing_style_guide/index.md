@@ -545,7 +545,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 
 当你需要添加一些关于某个主题或专题领域的文章时，你通常会通过创建一个着陆页，然后为每篇单独的文章添加子页面来实现。着陆页应该用一两段话来描述该主题或技术，然后提供一个子页面的列表，并对每个页面进行描述。你可以使用我们创建的一些宏来自动将页面插入列表中。
 
-例如，[JavaScript](/zh-CN/docs/Web/JavaScript) 指南其结构如下：
+例如，[JavaScript](/zh-CN/docs/Web/JavaScript) 指南的结构如下：
 
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
