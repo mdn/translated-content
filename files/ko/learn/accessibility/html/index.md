@@ -262,11 +262,9 @@ HTML 테이블을 사용해 페이지 레이아웃을 만들던 시절이 있습
 
 ### UI 컨트롤
 
-UI 컨트롤이란, 웹 문서에서 사용자와 상호작용하는 주요 영역들을 의미합니다. 일반적으로 버튼, 링크, 양식 컨트롤 요소들을 포함합니다. 이번 섹션에서는 이런 컨트롤 요소를 생성할 때 알고 있어야 하는 기본적인 접근성 이슈들을 살펴보겠습니다. 나중에 나오게 될 WAI-ARIA와 멀티미디어에 관한 아티클에서 UI 접근성에 대한 또 다른 관점들을 보게 될 것입니다.
+UI 컨트롤이란, 웹 문서에서 사용자와 상호작용하는 주요 영역들을 의미합니다. 일반적으로 버튼, 링크, 폼 컨트롤 요소들을 포함합니다. 이번 섹션에서는 이런 컨트롤 요소를 생성할 때 알고 있어야 하는 기본적인 접근성 이슈들을 살펴보겠습니다. 나중에 나오게 될 WAI-ARIA와 멀티미디어에 관한 아티클에서 UI 접근성에 대한 또 다른 관점들을 보게 될 것입니다.
 
 UI 컨트롤 접근성에 대한 핵심적인 측면 중 하나는 브라우저가 기본적으로 키보드로 이들을 조작할 수 있도록 한다는 것입니다. [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 예시에서 시험해 볼 수 있습니다. ([소스 코드](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 참고). 이 예시를 새 탭에서 열고 탭 키를 눌러보세요. 몇 번 누르면 탭 포커스가 다른 포커스 가능 요소로 이동하는 것을 볼 수 있습니다. 모든 브라우저에서 포커스 된 요소는 기본적으로 강조 스타일링 되기 때문에 (브라우저마다 조금씩 다르기는 합니다) 어떤 요소에 포커스가 있는지 구분할 수 있을 것입니다.
-
-![Three buttons with the text "Click me!", "Click me too!", and "And me!" inside them respectively. The third button has a blue outline around it to indicate current tab focus.](button-focused-unfocused.png)
 
 !["Click me!", "Click me too!", 그리고 "And me!"라고 쓰여있는 세 개의 버튼. 세번째 버튼은 현재 탭 포커스를 드러내기 위해 둘레에 파란색 테두리가 있습니다.](button-focused-unfocused.png)
 
@@ -371,9 +369,9 @@ document.onkeydown = (e) => {
 
 UI 컨트롤에서 텍스트 라벨은 모든 사용자에게 유용하지만, 이들의 올바른 사용은 장애가 있는 사용자들에게 특히 중요합니다.
 
-버튼과 링크의 텍스트 라벨이 이해하기 좋고 구별 가능하도록 해야합니다. 라벨에 “여기를 클릭하세요” 같은 문구만 사용하지 마세요. 스크린 리더 사용자들은 때때로 버튼과 양식 컨트롤 리스트를 만나기도 합니다. 다음 스크린샷은 Mac VoiceOver에서 우리의 컨트롤이 열거되는 방식을 보여줍니다.
+버튼과 링크의 텍스트 라벨이 이해하기 좋고 구별 가능하도록 해야합니다. 라벨에 “여기를 클릭하세요” 같은 문구만 사용하지 마세요. 스크린 리더 사용자들은 때때로 버튼과 폼 컨트롤 리스트를 만나기도 합니다. 다음 스크린샷은 Mac VoiceOver에서 우리의 컨트롤이 열거되는 방식을 보여줍니다.
 
-![Mac VoiceOver 소프트웨어에서 열거하는 양식 인풋 라벨 목록. 이 목록에는 버튼, 텍스트 필드, 링크 등의 다양한 양식 컨트롤 요소에 적용된 'happy menu button` 같은 의미없는 라벨이 포함되어 있습니다.](voiceover-formcontrols.png)
+![Mac VoiceOver 소프트웨어에서 열거하는 폼 인풋 라벨 목록. 이 목록에는 버튼, 텍스트 필드, 링크 등의 다양한 폼 컨트롤 요소에 적용된 'happy menu button` 같은 의미없는 라벨이 포함되어 있습니다.](voiceover-formcontrols.png)
 
 맥락 밖에서도 이해 가능한 라벨을 사용하세요. 혼자 읽혀졌을 때에도 속해있는 문단 맥락 안에서 읽힐 때만큼 의미를 드러내야 합니다. 다음 예시는 좋은 링크 텍스트를 보여줍니다.
 
@@ -395,13 +393,13 @@ UI 컨트롤에서 텍스트 라벨은 모든 사용자에게 유용하지만, �
 
 > **참고:** [하이퍼링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 아티클에서 링크 구현과 모범 사례에 대한 더 많은 정보를 찾아볼 수 있습니다. 또한 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)와 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)에서도 좋은 예시와 나쁜 예시들을 살펴볼 수 있습니다.
 
-양식 라벨은 또한 각각의 인풋에 어떤 내용을 입력해야 하는지에 대한 단서를 주기 때문에 중요합니다. 다음 예시는 충분히 합리적인 것처럼 보입니다.
+폼 라벨은 또한 각각의 인풋에 어떤 내용을 입력해야 하는지에 대한 단서를 주기 때문에 중요합니다. 다음 예시는 충분히 합리적인 것처럼 보입니다.
 
 ```html example-bad
 Fill in your name: <input type="text" id="name" name="name" />
 ```
 
-하지만 장애가 있는 사용자들에게는 그리 유용하지 않습니다. 위 예시는 볼 수 없는 사용자에게 양식의 인풋과 라벨을 명확하게 연관짓고 입력 영역을 어떻게 채워야 하는지 알려주는 어떤 것도 제공하지 않습니다. 스크린 리더로 이것을 읽는다면 “edit text”라는 설명 한 줄만 주어질 것입니다.
+하지만 장애가 있는 사용자들에게는 그리 유용하지 않습니다. 위 예시는 볼 수 없는 사용자에게 폼의 인풋과 라벨을 명확하게 연관짓고 입력 영역을 어떻게 채워야 하는지 알려주는 어떤 것도 제공하지 않습니다. 스크린 리더로 이것을 읽는다면 “edit text”라는 설명 한 줄만 주어질 것입니다.
 
 다음 예시가 훨씬 낫습니다.
 
@@ -418,7 +416,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 추가로 대부분의 브라우저에서 폼의 라벨과 인풋을 연결하는 것은 라벨을 클릭해 폼 요소를 선택하거나 활성화시킬 수 있음을 의미합니다. 즉, 라벨까지 포함하는 더 큰 영역을 통해 인풋을 쉽게 선택할 수 있습니다.
 
-> **참고:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)과 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)에서 양식의 좋은 예시와 나쁜 예시들을 볼 수 있습니다.
+> **참고:** [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)과 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)에서 폼의 좋은 예시와 나쁜 예시들을 볼 수 있습니다.
 
 다음의 영상에서는 제대로 된 텍스트 라벨의 중요성에 대한 좋은 설명과 [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)를 사용해 텍스트 라벨 이슈를 조사하는 방법을 배울 수 있습니다.
 
