@@ -365,7 +365,7 @@ document.onkeydown = (e) => {
 
 여기에서 우리는 키보드 버튼이 눌렸을 때 `document` 객체가 감지하도록 리스너를 추가했습니다. 이벤트 객체의 [`key`](/ko/docs/Web/API/KeyboardEvent/key) 프로퍼티를 통해 어떤 키가 눌렸는지 확인하고, <kbd>Enter</kbd>/<kbd>Return</kbd>이라면 `document.activeElement.click()` 스크립트를 통해 버튼의 `onclick` 핸들러를 작동시킵니다. [`activeElement`](/ko/docs/Web/API/Document/activeElement)는 페이지에서 현재 포커스 되어있는 요소를 반환합니다.
 
-이렇게 기능을 다시 구현하는 작업은 꽤 번거로울 뿐 아니라 다른 문제들을 야기할 수 밖에 없습니다. **처음부터 알맞은 작업에 알맞은 요소를 사용하는 편이 낫습니다.**
+이렇게 기능을 다시 구현하는 작업은 꽤 번거로울 뿐 아니라 다른 문제들을 야기할 수밖에 없습니다. **처음부터 알맞은 작업에 알맞은 요소를 사용하는 편이 낫습니다.**
 
 #### 의미있는 텍스트 라벨
 
