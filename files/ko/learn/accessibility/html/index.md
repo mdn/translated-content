@@ -262,7 +262,7 @@ HTML 테이블을 사용해 페이지 레이아웃을 만들던 시절이 있습
 
 ### UI 컨트롤
 
-UI 컨트롤이란, 웹 문서에서 사용자와 상호작용하는 주요 영역들을 의미합니다. 일반적으로 버튼, 링크, 양식 컨트롤 요소들을 포함합니다. 이번 섹션에서는 이런 컨트롤 요소를 생성할 때 알고있어야 하는 기본적인 접근성 이슈들을 살펴보겠습니다. 나중에 나오게 될 WAI-ARIA와 멀티미디어에 관한 아티클에서 UI 접근성에 대한 또 다른 관점들을 보게될 것입니다.
+UI 컨트롤이란, 웹 문서에서 사용자와 상호작용하는 주요 영역들을 의미합니다. 일반적으로 버튼, 링크, 양식 컨트롤 요소들을 포함합니다. 이번 섹션에서는 이런 컨트롤 요소를 생성할 때 알고 있어야 하는 기본적인 접근성 이슈들을 살펴보겠습니다. 나중에 나오게 될 WAI-ARIA와 멀티미디어에 관한 아티클에서 UI 접근성에 대한 또 다른 관점들을 보게 될 것입니다.
 
 UI 컨트롤 접근성에 대한 핵심적인 측면 중 하나는 브라우저가 기본적으로 키보드로 그들을 조작할 수 있도록 한다는 것입니다. [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 예시에서 시험해 볼 수 있습니다. [소스 코드](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)는 여기에서 확인하세요. 이 예시를 새 탭에서 열고 <kbd>Tab</kbd> 키를 눌러보세요. 몇 번 누르면 탭 포커스가 다른 포커스 가능 요소로 이동하는 것을 볼 수 있습니다. 모든 브라우저에서 포커스 된 요소는 기본적으로 강조 스타일링 되기 때문에 (브라우저마다 조금씩 다르기는 합니다) 어떤 요소에 포커스가 있는지 구분할 수 있을 것입니다.
 
