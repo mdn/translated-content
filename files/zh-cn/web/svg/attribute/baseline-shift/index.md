@@ -32,11 +32,10 @@ slug: Web/SVG/Attribute/baseline-shift
 
 ## 元素
 
-`下列这些元素可以使用 baseline-shift`属性。
+下列这些元素可以使用 `baseline-shift` 属性。
 
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("textPath") }}
 
 ## 规范

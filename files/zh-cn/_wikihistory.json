@@ -32715,18 +32715,6 @@
       "techird"
     ]
   },
-  "Web/SVG/Element/altGlyph": {
-    "modified": "2019-06-15T03:14:19.322Z",
-    "contributors": ["Sebastianz", "fanxiaojie"]
-  },
-  "Web/SVG/Element/altGlyphDef": {
-    "modified": "2019-03-23T22:46:38.701Z",
-    "contributors": ["Sebastianz", "fanxiaojie"]
-  },
-  "Web/SVG/Element/altGlyphItem": {
-    "modified": "2019-03-23T22:46:33.665Z",
-    "contributors": ["Sebastianz", "fanxiaojie"]
-  },
   "Web/SVG/Element/animate": {
     "modified": "2020-05-04T23:05:51.292Z",
     "contributors": [
