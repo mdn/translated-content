@@ -77,7 +77,7 @@ if (elem.requestFullscreen) {
 
 在这个例子中，网页中显示了一个视频。按下 <kbd>Return</kbd> 或 <kbd>Enter</kbd> 键让用户在视频的窗口显示和全屏显示之间切换。
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### 监听 <kbd>Enter</kbd> 键
 

@@ -1,14 +1,13 @@
 ---
 title: text-anchor
 slug: Web/SVG/Attribute/text-anchor
-original_slug: Web/SVG/Attribute/文本锚点
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-文本锚点属性被用来描述该文本与所给点的对齐方式 (开头、中间、末尾对齐) 。
+文本锚点属性被用来描述该文本与所给点的对齐方式（开头、中间、末尾对齐）。
 
-文本锚点属性被运用到每个 {{ SVGElement("text") }} 元素的独立文本块上。每个文本块有一个初始的当前文本位置，一个来源于 {{ SVGElement("text") }} 元素的{{ SVGAttr("x") }}和{{ SVGAttr("y") }}属性在当前上下文的用户坐标系中所对应的点，任何 一个{{ SVGElement("tspan") }}、{{SVGElement("tref") }}、{{ SVGElement("altGlyph") }} 元素的 {{ SVGAttr("x") }} 或者 {{ SVGAttr("y") }} 属性值都明确指向了文本块里第一个被呈现的字符，或者是决定了{{ SVGElement("textPath") }}元素的当前文本位置的初始值。
+文本锚点属性被运用到每个 {{ SVGElement("text") }} 元素的独立文本块上。每个文本块有一个初始的当前文本位置，一个来源于 {{ SVGElement("text") }} 元素的 {{ SVGAttr("x") }} 和 {{ SVGAttr("y") }} 属性在当前上下文的用户坐标系中所对应的点，任何一个 {{ SVGElement("tspan") }}、{{SVGElement("tref") }} 元素的 {{ SVGAttr("x") }} 或者 {{ SVGAttr("y") }} 属性值都明确指向了文本块里第一个被呈现的字符，或者是决定了 {{ SVGElement("textPath") }} 元素的当前文本位置的初始值。
 
 作为一个描述性的属性，它也可以直接用作 CSS 样式的性质（style 属性的值）。
 

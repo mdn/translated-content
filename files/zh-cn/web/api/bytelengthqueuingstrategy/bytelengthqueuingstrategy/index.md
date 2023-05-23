@@ -53,3 +53,7 @@ const size = queuingStrategy.size(chunk);
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ByteLengthQueuingStrategy")}} 接口

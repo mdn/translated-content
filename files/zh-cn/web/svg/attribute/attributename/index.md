@@ -3,7 +3,7 @@ title: attributeName
 slug: Web/SVG/Attribute/attributeName
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 该属性标识了在一个动画动作环节中，父元素的需要被改变的属性名。
 

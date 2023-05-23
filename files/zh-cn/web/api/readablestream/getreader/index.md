@@ -75,3 +75,11 @@ function fetchStream() {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- {{domxref("ReadableStreamDefaultReader")}}
+- {{domxref("ReadableStreamBYOBReader")}}
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)
