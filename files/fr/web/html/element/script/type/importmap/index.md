@@ -36,7 +36,7 @@ Seule la première carte d'import d'un document avec une définition en incise e
 - `TypeError`
   - : La définition de la carte d'import n'est pas un objet JSON ou la clé `importmap` est définie mais n'est pas un objet JSON, ou la clé `scopes` est définie mais n'est pas un objet JSON.
 
-Les navigateurs génèrent des avertissements dans la console au cas où la carte d'import JSON ne respecte pas [le schéma de représentation des cartes d'import](#représentation_json_des_cartes_d_import) schema.
+Les navigateurs génèrent des avertissements dans la console au cas où la carte d'import JSON ne respecte pas [le schéma de représentation des cartes d'import](#représentation_json_des_cartes_d_import).
 
 Un évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) est déclenché sur les éléments de script ayant `type="importmap"` et qui ne sont pas traités. Cela peut notamment se produire si le chargement d'un module a déjà commencé alors que la carte d'import est toujours en cours de traitement, ou si plusieurs cartes d'import sont définies sur la page.
 
@@ -47,7 +47,7 @@ Lorsqu'on importe [un module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules),
 Par exemple, si on prend les instructions suivantes, on a un spécificateur de module `"./modules/formes/carre.js"`, qui est un chemin relatif à l'URL du document et un second spécificateur de module `"https://example.com/formes/cercle.js"`, qui est une URL absolue.
 
 ```js
-import { nom as nomCarre , dessiner } from "./modules/formes/carre.js";
+import { nom as nomCarre, dessiner } from "./modules/formes/carre.js";
 import { nom as nomCercle } from "https://example.com/formes/cercle.js";
 ```
 
@@ -71,7 +71,7 @@ La carte d'import qui suit définit une clé `imports` doté d'une carte de corr
 Grâce à cette carte d'import, on peut réaliser le même import que précédemment, mais en utilisant des noms simples comme spécificateurs de modules&nbsp;:
 
 ```js
-import { nom as nomCarre , dessiner } from "carre";
+import { nom as nomCarre, dessiner } from "carre";
 import { nom as nomCercle } from "cercle";
 ```
 
@@ -119,7 +119,7 @@ Un spécificateur de module `./toto/../js/app.js` sera converti en `./js/app.js`
 
 La clé `scopes` permet de fournir des correspondances qui seront uniquement utilisées si le module qui importe contient un chemin donné. Si l'URL du script qui charge le module correspond au chemin indiqué, c'est la correspondance associée à cette portée qui sera utilisée. Cela permet d'avoir différentes versions du module qui peuvent être utilisées selon le code qui réalise l'import.
 
-Dans l'exemple qui suit, la carte utilisera uniquement la correspondance de la portée si l'URL du module qui fait le chargement contient le chemin&nbsp;: "/modules/formesspecifiques/".
+Dans l'exemple qui suit, la carte utilisera uniquement la correspondance de la portée si l'URL du module qui fait le chargement contient le chemin&nbsp;: `"/modules/formesspecifiques/"`.
 
 ```html
 <script type="importmap">
