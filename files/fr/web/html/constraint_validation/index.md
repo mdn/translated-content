@@ -11,7 +11,7 @@ La création de formulaires web a toujours été une tâche complexe. Bien que l
 
 Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur la validation des formulaires](/fr/docs/Learn/Forms/Form_validation).
 
-> **Note :** La validtation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
+> **Note :** La validation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez-vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
 
 ## Contraintes intrinsèques et contraintes de base
 
@@ -171,7 +171,7 @@ En complément de l'attribut `type` mentionné ci-avant, les attributs suivants 
       </td>
       <td>Une longueur entière</td>
       <td>
-        Le nombre de caractères, exprimé en points de code, ne doit pas être dépasser la valeur de l'attribut.
+        Le nombre de caractères, exprimé en points de code, ne doit pas dépasser la valeur de l'attribut.
       </td>
       <td>
         <code><a href="/fr/docs/Web/API/ValidityState/tooLong">tooLong</a></code>
@@ -240,11 +240,11 @@ function checkZIP() {
     ],
     fr: [
       "^(F-)?\\d{5}$",
-      "Les codes postaux français ont 5 chiffres : par exemple F-75012 or 75012",
+      "Les codes postaux français ont 5 chiffres : par exemple F-75012 ou 75012",
     ],
     de: [
       "^(D-)?\\d{5}$",
-      "Les codes postaux allemands ont 5 chiffres : par exemple D-12345 or 12345",
+      "Les codes postaux allemands ont 5 chiffres : par exemple D-12345 ou 12345",
     ],
     nl: [
       "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
@@ -300,7 +300,7 @@ Cela donnera le formulaire suivant&nbsp;:
 
 {{EmbedLiveSample("")}}
 
-Pour le code JavaScript, on lit le fichier sélectionné avec la méthode `File.size()` pour obtenir sa taille et on compare cette valeur avec la limité (ici codée en dur), puis on appelle l'API de vlidation pour indiquer au navigateur si la contrainte est respectée&nbsp;:
+Pour le code JavaScript, on lit le fichier sélectionné avec la méthode `File.size()` pour obtenir sa taille et on compare cette valeur avec la limite (ici codée en dur), puis on appelle l'API de validation pour indiquer au navigateur si la contrainte est respectée&nbsp;:
 
 ```js
 function checkFileSize() {
@@ -320,7 +320,7 @@ function checkFileSize() {
 }
 ```
 
-Pour finir, on attache cette méthode au gestionnaire d'évènement correspondant:
+Pour finir, on attache cette méthode au gestionnaire d'évènement correspondant&nbsp;:
 
 ```js
 window.onload = () => {
@@ -359,7 +359,7 @@ Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indique
   - [`<input>`](/fr/docs/Web/HTML/Element/input)
   - [`<output>`](/fr/docs/Web/HTML/Element/output)
   - [`<select>`](/fr/docs/Web/HTML/Element/select)
-  - Les boutons d'envoi (créés avec un élément [`<button>`](/fr/docs/Web/HTML/Element/button) de type `submit` ou avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input/submit) de type `submit`. Les autres types de bouton ne contribuent pas à la validation des contraintes.
+  - Les boutons d'envoi (créés avec un élément [`<button>`](/fr/docs/Web/HTML/Element/button) de type `submit` ou avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input/submit) de type `submit`. Les autres types de bouton ne contribuent pas à la validation des contraintes.)
   - [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
 
-- L'interface [`ValidityState`](/fr/docs/Web/API/ValidityState) décrit l'objet renvoyé par la propriété `validity` des types d'éléments listés ci-avant. Elle représente différentes façons selon lesquelles une valeur saisie peut être invalide. Avec la méthode précedent, elle permet d'expliquer la raison pour laquelle la valeur d'un champ est invalide.
+- L'interface [`ValidityState`](/fr/docs/Web/API/ValidityState) décrit l'objet renvoyé par la propriété `validity` des types d'éléments listés ci-avant. Elle représente différentes façons selon lesquelles une valeur saisie peut être invalide. Avec la méthode précédente, elle permet d'expliquer la raison pour laquelle la valeur d'un champ est invalide.
