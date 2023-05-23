@@ -21,7 +21,7 @@ slug: Learn/Common_questions/Tools_and_setup
   - : 在本文中，我们将解释如何在本地搭建一个测试服务器，以及基本的使用方法。
 - [怎么将文件上传到服务器？](/zh-CN/docs/Learn/Common_questions/Upload_files_to_a_web_server)
   - : 本文介绍如何使用 {{Glossary("FTP")}} 工具在线发布你的网站——这是一种常见的网站发布方法，以便其他人可以通过计算机访问网站。
-- [怎么使用 GitHub Pages?](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)
+- [怎么使用 GitHub Pages?](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)
   - : 本文提供了使用 GitHub 的 gh-pages 功能发布内容的基本指南。
 - [如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : 寻找一个托管网站的地方？以下是在 Google App Engine 上托管网站的分步指南。

@@ -224,7 +224,6 @@ This example shows two `<textarea>`s — one of which is `disabled`, and one of 
 - {{ HTMLElement("optgroup") }}
 - {{ HTMLElement("option") }}
 - {{ HTMLElement("input") }}
-- {{ HTMLElement("keygen") }}
 - {{ HTMLElement("fieldset") }}
 - {{ HTMLElement("output") }}
 - {{ HTMLElement("progress") }}

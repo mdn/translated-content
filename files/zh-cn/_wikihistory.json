@@ -2394,7 +2394,7 @@
       "ArcherGrey"
     ]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
     "modified": "2020-07-16T22:35:52.151Z",
     "contributors": [
       "WoodCube",
@@ -22021,17 +22021,9 @@
     "modified": "2020-10-15T22:29:52.953Z",
     "contributors": ["JerryYoung"]
   },
-  "Web/HTML/Element/bgsound": {
-    "modified": "2019-03-23T22:20:25.683Z",
-    "contributors": ["hoyt"]
-  },
   "Web/HTML/Element/big": {
     "modified": "2019-03-23T22:20:25.885Z",
     "contributors": ["hoyt"]
-  },
-  "Web/HTML/Element/blink": {
-    "modified": "2019-03-23T22:20:26.966Z",
-    "contributors": ["teoli", "hoyt"]
   },
   "Web/HTML/Element/blockquote": {
     "modified": "2020-10-15T21:31:05.486Z",
@@ -22503,10 +22495,6 @@
     "modified": "2019-08-13T06:01:57.840Z",
     "contributors": ["kenneth55555", "hoyt", "perillasy"]
   },
-  "Web/HTML/Element/keygen": {
-    "modified": "2019-04-05T05:50:18.178Z",
-    "contributors": ["Ende93"]
-  },
   "Web/HTML/Element/label": {
     "modified": "2020-10-15T21:34:28.099Z",
     "contributors": [
@@ -22869,10 +22857,6 @@
       "ziyunfei",
       "x-false"
     ]
-  },
-  "Web/HTML/Element/spacer": {
-    "modified": "2019-03-23T22:10:12.608Z",
-    "contributors": ["wizardforcel"]
   },
   "Web/HTML/Element/span": {
     "modified": "2020-11-23T03:27:28.387Z",
