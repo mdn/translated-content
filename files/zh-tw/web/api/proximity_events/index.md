@@ -25,7 +25,7 @@ slug: Web/API/Proximity_Events
 ## 範例
 
 ```js
-window.addEventListener('userproximity', function(event) {
+window.addEventListener("userproximity", function (event) {
   if (event.near) {
     // let's power off the screen
     navigator.mozPower.screenEnabled = false;
