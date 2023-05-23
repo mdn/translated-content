@@ -32,7 +32,6 @@ build/
 /files/ru/**/*.md
 
 # zh-cn
-/docs/zh-cn/**/*.md
 /files/zh-cn/**/*.md
 
 # zh-tw
