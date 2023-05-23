@@ -12,10 +12,10 @@ slug: Web/API/Notification/requestPermission_static
 ## 语法
 
 ```js-nolint
-// The latest spec has updated this method to a promise-based syntax that works like this:
+// 最新规范已将此方法更新为基于 promise 的语法，其工作方式如下：
 Notification.requestPermission()
 
-// Previously, the syntax was based on a simple callback; this version is now deprecated:
+// 以前，语法是基于一个简单的回调函数； 此版本现已弃用：
 Notification.requestPermission(callback)
 ```
 
@@ -34,43 +34,41 @@ Notification.requestPermission(callback)
 
 ## 示例
 
-Assume this basic HTML:
+假设如下基本的 HTML：
 
 ```html
-<button onclick="notifyMe()">Notify me!</button>
+<button onclick="notifyMe()">通知我！</button>
 ```
 
-It's possible to send a notification as follows — here we present a fairly verbose and complete set of code you could use if you wanted to first check whether notifications are supported, then check if permission has been granted for the current origin to send notifications, then request permission if required, before then sending a notification.
+可以按如下方式发送通知——这里我们提供了一组相当详细和完整的代码，如果您想首先检查是否支持通知，然后检查是否已授予当前域名发送通知的权限，然后，如果必需的话，在发送通知前请求权限。
 
 ```js
 function notifyMe() {
   if (!("Notification" in window)) {
-    // Check if the browser supports notifications
-    alert("This browser does not support desktop notification");
+    // 检查浏览器是否支持 Notification API
+    alert("此浏览器不支持桌面通知");
   } else if (Notification.permission === "granted") {
-    // Check whether notification permissions have already been granted;
-    // if so, create a notification
-    const notification = new Notification("Hi there!");
+    // 检查通知权限是否已经被授予；如果是的话，创建一条通知
+    const notification = new Notification("你好呀！");
     // …
   } else if (Notification.permission !== "denied") {
-    // We need to ask the user for permission
+    // 我们需要征求用户的许可
     Notification.requestPermission().then((permission) => {
-      // If the user accepts, let's create a notification
+      // 如果用户接受，让我们创建一个通知
       if (permission === "granted") {
-        const notification = new Notification("Hi there!");
+        const notification = new Notification("你好呀！");
         // …
       }
     });
   }
 
-  // At last, if the user has denied notifications, and you
-  // want to be respectful there is no need to bother them anymore.
+  // 最后，如果用户拒绝了通知，而你想要尊重他们，就没有必要再打扰他们了。
 }
 ```
 
-We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see an example in action, check out our [To-do list example](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (also see [the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的 [待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（同时参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-> **Note:** In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
+> **备注：** 在上面的示例中，我们生成通知以响应用户手势（单击按钮）。 这不仅仅是最佳实践——你不应该向用户滥发他们不同意的通知——而且未来的浏览器将明确禁止未响应用户手势而触发的通知。例如，Firefox 已经从版本 72 开始这样做了。
 
 ## 规范
 
