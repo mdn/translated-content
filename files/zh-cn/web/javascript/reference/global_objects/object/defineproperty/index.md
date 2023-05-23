@@ -194,7 +194,7 @@ console.log(o.a); // 37；赋值不会成功
 
 #### Enumerable 属性
 
-`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或 [扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
