@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 **`hasOwnProperty()`** 方法返回一个布尔值，表示对象自有属性（而不是继承来的属性）中是否具有指定的属性。
 
-> **备注：** 在支持 {{}jsxref("Object.hasOwn")} 的浏览器中，建议使用 {{jsxref("Object.hasOwn()")}}，而非 `hasOwnProperty()`。
+> **备注：** 在支持 {{jsxref("Object.hasOwn")}} 的浏览器中，建议使用 {{jsxref("Object.hasOwn()")}}，而非 `hasOwnProperty()`。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
