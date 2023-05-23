@@ -35,6 +35,5 @@ build/
 /files/zh-cn/**/*.md
 
 # zh-tw
-/docs/zh-tw/**/*.md
 /files/zh-tw/web/api/[a-o]*/**/*.md
 /files/zh-tw/web/javascript/**/*.md
