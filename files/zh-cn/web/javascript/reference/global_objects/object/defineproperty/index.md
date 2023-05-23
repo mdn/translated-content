@@ -20,9 +20,9 @@ Object.defineProperty(obj, prop, descriptor)
 - `obj`
   - : 要定义属性的对象。
 - `prop`
-  - : 一个指定要定义或修改属性键的字符串或 {{jsxref("Symbol")}}。
+  - : 一个字符串或 {{jsxref("Symbol")}}，指定了要定义或修改的属性键名。
 - `descriptor`
-  - : 要定义或修改的属性描述符。
+  - : 要定义或修改的属性的描述符。
 
 ### 返回值
 
@@ -30,9 +30,9 @@ Object.defineProperty(obj, prop, descriptor)
 
 ## 描述
 
-`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值（=）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment) 添加的普通属性会在属性枚举（例如 ({{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）时出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
+`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值（=）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)添加的普通属性会在属性枚举（例如 ({{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）时出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
 
-对象中存在的属性描述符有两种主要类型：数据描述符和访问器描述符。**数据描述符**是一个具有可写或不可写值的属性。**访问器描述符**是由 getter/setter 函数对描述的属性。描述符必须是这两种类型之一，不能同时存在。
+对象中存在的属性描述符有两种主要类型：数据描述符和访问器描述符。**数据描述符**是一个具有可写或不可写值的属性。**访问器描述符**是由 getter/setter 函数对描述的属性。描述符只能是这两种类型之一，不能同时为两者。
 
 数据描述符和访问器描述符都是对象。它们共享以下可选键（请注意：在使用 `Object.defineProperty()` 定义属性的情况下，下述所有键都是**默认值**）：
 
@@ -59,13 +59,13 @@ Object.defineProperty(obj, prop, descriptor)
 **访问器描述符**还具有以下可选键值：
 
 - `get`
-  - : 用作属性 getter 的函数，如果没有 getter 则为 {{jsxref("undefined")}}。当访问该属性时，将不带参地调用此函数，并将 `this` 设置为通过其访问该属性的对象（这可能不是由于继承而定义该属性的对象）。返回值将被用作该属性的值。**默认值为 {{jsxref("undefined")}}。**
+  - : 用作属性 getter 的函数，如果没有 getter 则为 {{jsxref("undefined")}}。当访问该属性时，将不带参地调用此函数，并将 `this` 设置为通过该属性访问的对象（因为可能存在继承关系，这可能不是定义该属性的对象）。返回值将被用作该属性的值。**默认值为 {{jsxref("undefined")}}。**
 - `set`
-  - : 用作属性 setter 的函数，如果没有 setter 则为 {{jsxref("undefined")}}。当该属性被赋值时，将调用此函数，并带有一个参数（赋给该属性的值），并将 `this` 设置为通过其分配该属性的对象。**默认值为 {{jsxref("undefined")}}。**
+  - : 用作属性 setter 的函数，如果没有 setter 则为 {{jsxref("undefined")}}。当该属性被赋值时，将调用此函数，并带有一个参数（要赋给该属性的值），并将 `this` 设置为通过该属性分配的对象。**默认值为 {{jsxref("undefined")}}。**
 
 如果描述符没有 `value`、`writable`、`get` 和 `set` 键中的任何一个，它将被视为数据描述符。如果描述符同时具有 [`value` 或 `writable`] 和 [`get` 或 `set`] 键，则会抛出异常。
 
-这些属性不一定是描述符本身的属性。继承的属性也会被考虑在内。为了确保这些默认值得到保留，您可以预先冻结描述符对象原型链中的现有对象、明确指定所有选项，或使用 {{jsxref("Object.create", "Object.create(null)")}} 指向 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+这些属性不一定是描述符本身的属性。继承的属性也会被考虑在内。为了确保这些默认值得到保留，你可以预先冻结描述符对象原型链中的现有对象，明确指定所有选项，或使用 {{jsxref("Object.create", "Object.create(null)")}} 指向 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 
 ```js
 const obj = {};
@@ -84,8 +84,7 @@ Object.defineProperty(obj, "key2", {
   value: "static",
 });
 
-// 3. Recycling same object
-// 3. 回收利用相同的对象
+// 3. 重复利用同一对象
 function withValue(value) {
   const d =
     withValue.d ||
@@ -96,14 +95,12 @@ function withValue(value) {
       value,
     });
 
-  // avoiding duplicate operation for assigning value
-  // 避免重复为赋值而进行操作
+  // 避免重复赋值
   if (d.value !== value) d.value = value;
 
   return d;
 }
-// and
-// 并且/然后
+// 然后
 Object.defineProperty(obj, "key", withValue("static"));
 
 // 如果 freeze 可用，防止添加或删除对象原型属性
@@ -111,17 +108,11 @@ Object.defineProperty(obj, "key", withValue("static"));
 (Object.freeze || Object)(Object.prototype);
 ```
 
-When the property already exists, `Object.defineProperty()` attempts to modify the property according to the values in the descriptor and the property's current configuration.
-
 当属性已经存在时，`Object.defineProperty()` 尝试根据描述符和属性的当前配置修改属性。
 
-If the old descriptor had its `configurable` attribute set to `false`, the property is said to be _non-configurable_. It is not possible to change any attribute of a non-configurable accessor property, and it is not possible to switch between data and accessor property types. For data properties with `writable: true`, it is possible to modify the value and change the `writable` attribute from `true` to `false`. A {{jsxref("TypeError")}} is thrown when attempts are made to change non-configurable property attributes (except `value` and `writable`, if permitted), except when defining a value same as the original value on a data property.
+如果旧描述符的 `configurable` 被设置为 `false`，则该属性被称为 _不可配置的_。不可能更改不可配置的访问器属性的任何特性，并且不可能在数据描述符和访问器描述符类型之间切换。对于具有 `writable: true` 的数据描述符，可以修改其值并将 `writable` 属性从 `true` 改为 `false`。当试图更改不可配置的属性（除非允许更改 `value` 和 `writable`）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
 
-如果旧描述符的 `configurable` 属性被设置为 `false`，则该属性被称为 _不可配置的_。不可能更改不可配置的访问器属性的任何属性，并且不可能在数据属性和访问器属性类型之间切换。对于具有 `writable: true` 的数据属性，可以修改值并将 `writable` 属性从 `true` 改为 `false`。尝试更改不可配置的属性属性（除了 `value` 和 `writable`，如果允许）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
-
-When the current property is configurable, defining an attribute to `undefined` effectively deletes it. For example, if `o.k` is an accessor property, `Object.defineProperty(o, "k", { set: undefined })` will remove the setter, making `k` only have a getter and become readonly. If an attribute is absent from the new descriptor, the old descriptor attribute's value is kept (it won't be implicitly re-defined to `undefined`). It is possible to toggle between data and accessor property by giving a descriptor of a different "flavor". For example, if the new descriptor is a data descriptor (with `value` or `writable`), the original descriptor's `get` and `set` attributes will both be dropped.
-
-当当前属性是可配置的时，将属性定义为 `undefined` 会有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个属性，则保留旧描述符属性的值（不会被隐式重新定义为 `undefined`）。通过提供不同 "flavor" 的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（具有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
+当当前属性是可配置的时，将属性定义为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个属性，则会保留旧描述符属性的值（不会被隐式重新定义为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
 
 ## 示例
 
@@ -132,7 +123,7 @@ When the current property is configurable, defining an attribute to `undefined` 
 ```js
 const o = {}; // 创建一个新对象
 
-// 通过 defineProperty 使用数据属性描述符添加对象属性的示例
+// 通过 defineProperty 使用数据描述符添加对象属性的示例
 Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
@@ -157,7 +148,7 @@ o.b; // 38
 // 'b' 属性存在于对象 o 中，其值为 38。
 // o.b 的值现在始终与 bValue 相同，除非重新定义了 o.b。
 
-// 数据描述符和存取描述符不能混合使用
+// 数据描述符和访问器描述符不能混合使用
 Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
   get() {
@@ -173,7 +164,7 @@ Object.defineProperty(o, "conflict", {
 
 #### Writable 属性
 
-当 `writable` 属性设置为 `false` 时，该属性被称为“不可写的”。它不能被重新赋值。尝试写入一个不可写的属性不会改变它，并在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下会导致错误。
+当 `writable` 属性设置为 `false` 时，该属性被称为“不可写的”。它不能被重新赋值。尝试写入一个不可写的属性不会改变它，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下还会导致错误。
 
 ```js
 const o = {}; // 创建一个新对象
@@ -203,7 +194,7 @@ console.log(o.a); // 37；赋值不会成功
 
 #### Enumerable 属性
 
-`enumerable` 属性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或 [扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见 [属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或 [扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见 [属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
