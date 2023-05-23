@@ -3,7 +3,7 @@ title: dx
 slug: Web/SVG/Attribute/dx
 ---
 
-« [SVG 属性参考汇总](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 `dx` 属性表示一个元素或其内容在 `x` 轴方向上的偏移，偏移量取决于设置该属性的元素。
 

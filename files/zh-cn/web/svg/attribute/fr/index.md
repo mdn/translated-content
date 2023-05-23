@@ -3,7 +3,7 @@ title: fr
 slug: Web/SVG/Attribute/fr
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。
 

@@ -106,7 +106,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -188,11 +187,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
           ></a
         >spec, specifies a new file can be captured.
       </td>
-    </tr>
-    <tr>
-      <td>challenge</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>与公钥一起提交的挑战字符。</td>
     </tr>
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/charset">charset</a></td>
@@ -386,7 +380,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -463,7 +456,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -579,11 +571,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td></td>
     </tr>
     <tr>
-      <td>keytype</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
       <td>kind</td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -612,7 +599,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td>loop</td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>
@@ -694,7 +680,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

@@ -3,7 +3,7 @@ title: color
 slug: Web/SVG/Attribute/color
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 `color` 属性用来为 {{ SVGAttr("fill") }} 属性、{{ SVGAttr("stroke") }} 属性、{{ SvgAttr("stop-color") }} 属性、{{ SVGAttr("flood-color") }} 属性和 {{ SVGAttr("lighting-color") }} 属性提供一个潜在的间接值（`currentColor`）。
 
