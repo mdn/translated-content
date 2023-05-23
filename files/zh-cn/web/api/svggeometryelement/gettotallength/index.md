@@ -11,7 +11,7 @@ slug: Web/API/SVGGeometryElement/getTotalLength
 
 ## 语法
 
-```js
+```js-nolint
 getTotalLength();
 ```
 
