@@ -261,7 +261,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 Using HTTPS requires a security certificate, which can be expensive (although [Let's Encrypt](https://letsencrypt.org/) makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, _no matter what the cost, you must never embed third-party content with HTTP._ (In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an `<iframe>` will make it available via HTTPS — look at the URLs inside the `<iframe>` `src` attribute when you are embedding content from Google Maps or Youtube, for example.
 
-> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Using_Github_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
+> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
 
 #### Always use the `sandbox` attribute
 
