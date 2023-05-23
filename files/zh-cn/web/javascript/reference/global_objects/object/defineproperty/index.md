@@ -339,7 +339,7 @@ Object.defineProperty(o, "b", {
 
 ### 添加多个属性和默认值
 
-考虑属性的默认值应用方式是非常重要的。通常，在使用[属性访问器](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)分配一个值和使用 `Object.defineProperty()` 之间存在差异，如下面的示例所示。
+考虑属性的默认值应用方式是非常重要的。通常，在使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)分配一个值和使用 `Object.defineProperty()` 之间存在差异，如下面的示例所示。
 
 ```js
 const o = {};
