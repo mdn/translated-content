@@ -5047,9 +5047,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "orphaned/Web/HTML/Element/blink": {
-    "modified": "2020-10-15T21:53:26.779Z",
-    "contributors": ["teoli", "iigmir"]
   }
 }

@@ -688,7 +688,6 @@
 /zh-TW/docs/Web/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/HTML/Element/HTML_元素	/zh-TW/docs/Web/HTML/Element
-/zh-TW/docs/Web/HTML/Element/blink	/zh-TW/docs/orphaned/Web/HTML/Element/blink
 /zh-TW/docs/Web/HTML/Element/導航欄	/zh-TW/docs/Web/HTML/Element/nav
 /zh-TW/docs/Web/HTML/Forms_in_HTML	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/HTML5	/zh-TW/docs/Glossary/HTML5
