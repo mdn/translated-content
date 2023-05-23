@@ -1,6 +1,7 @@
 ---
 title: <bgsound>
-slug: Web/HTML/Element/bgsound
+slug: conflicting/Web/HTML/Element/audio
+original_slug: Web/HTML/Element/bgsound
 ---
 
 {{non-standard_header}}
