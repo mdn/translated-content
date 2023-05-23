@@ -11,8 +11,8 @@ slug: Web/API/SVGGeometryElement/getTotalLength
 
 ## 语法
 
-```
-float someElement.getTotalLength();
+```js
+getTotalLength();
 ```
 
 ### 返回值
