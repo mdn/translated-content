@@ -39,7 +39,7 @@ Let's say we want to render a gradient in which each corner of the square is a d
 為了使用這些顏色，我們需要修改 vertex shader，讓他可以從 buffer 中取得正確的顏色。
 
 ```js
-  const vsSource = `
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
 

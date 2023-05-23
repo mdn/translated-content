@@ -19,10 +19,19 @@ WebGL Shader 使用 [OpenGL ES Shading Language](https://www.khronos.org/files/o
 
 Vertex shader 是用來定義一個變數 gl_Position 的值來控制畫布空間的值(-1 到+1)，下面的範例，我們設了一個變數`aVertexPosition`用來記錄 vertex 的位置。接下來我們將該位置乘上兩個 4x4 的矩陣(`uProjectionMatrix`和`uModelMatrix`)，並將結果設定為 gl_Position 的值。如果想要了解更多關於 Projection 和其他矩陣可以參閱這篇[文件](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
 
-```html
-// Vertex shader program const vsSource = ` attribute vec4 aVertexPosition;
-uniform mat4 uModelViewMatrix; uniform mat4 uProjectionMatrix; void main() {
-gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition; } `;
+```js
+// Vertex shader program
+
+const vsSource = `
+    attribute vec4 aVertexPosition;
+
+    uniform mat4 uModelViewMatrix;
+    uniform mat4 uProjectionMatrix;
+
+    void main() {
+      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
+    }
+  `;
 ```
 
 #### Fragment shader
@@ -31,8 +40,12 @@ gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition; } `;
 
 `gl_FragColor` 是 GL 預設的變數用來定義每個 fragment 的顏色，透過設定該變數的值來定義每個 pixel 的顏色，如下：
 
-```html
-const fsSource = ` void main() { gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0); } `;
+```js
+const fsSource = `
+    void main() {
+      gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+    }
+  `;
 ```
 
 ### 初始化 shader
