@@ -612,7 +612,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td>loop</td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>

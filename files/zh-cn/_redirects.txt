@@ -2316,7 +2316,7 @@
 /zh-CN/docs/Web/HTML/Element/Video/ended_event	/zh-CN/docs/Web/API/HTMLMediaElement/ended_event
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_Fonts
-/zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/conflicting/Web/HTML/Element/audio
+/zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/blink	/zh-CN/docs/orphaned/Web/HTML/Element/blink
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
 /zh-CN/docs/Web/HTML/Element/keygen	/zh-CN/docs/orphaned/Web/HTML/Element/keygen
