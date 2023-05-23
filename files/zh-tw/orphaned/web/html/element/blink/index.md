@@ -1,6 +1,7 @@
 ---
 title: <blink>：文字閃爍元素（已過時）
-slug: Web/HTML/Element/blink
+slug: orphaned/Web/HTML/Element/blink
+original_slug: Web/HTML/Element/blink
 ---
 
 {{Deprecated_header}}

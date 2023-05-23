@@ -3404,10 +3404,6 @@
       "ethertank"
     ]
   },
-  "Web/HTML/Element/blink": {
-    "modified": "2020-10-15T21:53:26.779Z",
-    "contributors": ["teoli", "iigmir"]
-  },
   "Web/HTML/Element/blockquote": {
     "modified": "2019-03-23T22:32:36.058Z",
     "contributors": ["iigmir", "Shiyou"]
@@ -5051,5 +5047,9 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
+  },
+  "orphaned/Web/HTML/Element/blink": {
+    "modified": "2020-10-15T21:53:26.779Z",
+    "contributors": ["teoli", "iigmir"]
   }
 }
