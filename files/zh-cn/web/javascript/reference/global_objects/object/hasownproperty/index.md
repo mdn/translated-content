@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 {{JSRef}}
 
-**`hasOwnProperty()`** 方法返回一个布尔值，表示对象具有指定的属性作为自有属性（而不是继承它）。
+**`hasOwnProperty()`** 方法返回一个布尔值，表示对象自有属性（而不是继承来的属性）中是否具有指定的属性。
 
-> **备注：** 建议在支持它的浏览器中使用 {{jsxref("Object.hasOwn()")}}，而不是 `hasOwnProperty()`。
+> **备注：** 在支持 {{}jsxref("Object.hasOwn")} 的浏览器中，建议使用 {{jsxref("Object.hasOwn()")}}，而非 `hasOwnProperty()`。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
@@ -20,7 +20,7 @@ hasOwnProperty(prop)
 ### 参数
 
 - `prop`
-  - : 要测试的属性的 {{jsxref("String")}} 名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+  - : 要测试的属性的{{jsxref("String","字符串")}}名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返回值
 
@@ -28,7 +28,7 @@ hasOwnProperty(prop)
 
 ## 描述
 
-如果指定的属性是对象的直接属性——即使值为 `null` 或者 `undefined`，**`hasOwnProperty()`** 方法也会返回 `true`。如果属性是继承的，或者根本没有声明，则该方法返回 `false`。与 {{jsxref("Operators/in", "in")}} 运算符不同的是，该方法不检查对象原型链中的指定属性。
+如果指定的属性是对象的直接属性——即使值为 `null` 或者 `undefined`，**`hasOwnProperty()`** 方法也会返回 `true`。如果属性是继承的，或者根本没有声明该属性，则该方法返回 `false`。与 {{jsxref("Operators/in", "in")}} 运算符不同的是，该方法不会在对象原型链中检查指定的属性。
 
 该方法可以在*大多数* JavaScript 对象中使用，因为大多数对象都是从 {{jsxref("Object")}} 派生而来，因此会继承该方法。例如 {{jsxref("Array")}} 是一个 {{jsxref("Object")}}，所以你可以使用 `hasOwnProperty()` 方法来检查索引是否存在：
 
@@ -38,7 +38,7 @@ fruits.hasOwnProperty(3); // 返回 true ('Orange')
 fruits.hasOwnProperty(4); // 返回 false——未定义
 ```
 
-该方法在重新实现的对象或者使用 `Object.create(null)` 创建的对象（因为这些对象不是从 `Object.prototype` 继承的）中不可使用。下面给出了这些情况的示例。
+如果在对象中重新实现了该方法，或者使用 `Object.create(null)` 创建了对象（这些对象不继承自 `Object.prototype`），则该方法将不可用。下面给出了这些情况的示例。
 
 ## 示例
 
@@ -81,7 +81,7 @@ example.hasOwnProperty("hasOwnProperty"); // 返回 false
 
 ### 遍历对象的属性
 
-以下示例展示了如何在不执行继承属性的情况下迭代对象的可枚举属性。
+以下示例展示了如何在忽略继承属性的情况下迭代一个对象的可枚举属性。
 
 ```js
 const buz = {
@@ -97,7 +97,7 @@ for (const name in buz) {
 }
 ```
 
-请注意，{{jsxref("Statements/for...in", "for...in")}} 循环只迭代可枚举项：不存在从循环发出的不可枚举属性并不意味着 `hasOwnProperty` 本身被严格限制在可枚举项中（如 {{jsxref("Object.getOwnPropertyNames()")}}）。
+请注意，{{jsxref("Statements/for...in", "for...in")}} 循环只迭代可枚举项：循环中没有发出非可枚举属性并不意味着 `hasOwnProperty` 本身被严格限制在可枚举项中（和 {{jsxref("Object.getOwnPropertyNames()")}} 一样）。
 
 ### 使用 hasOwnProperty 作为属性名称
 
@@ -111,10 +111,10 @@ const foo = {
   bar: "Here be dragons",
 };
 
-foo.hasOwnProperty("bar"); // 重复实现经常返回 false
+foo.hasOwnProperty("bar"); // 该重新实现始终返回 false
 ```
 
-克服这个问题的推荐方法是使用 {{jsxref("Object.hasOwn()")}}（在支持它的浏览器中）。其他选项包括使用*外部的* `hasOwnProperty`：
+克服这个问题的推荐方法是，在支持的浏览器中使用 {{jsxref("Object.hasOwn()")}}。其他替代方案包括使用*外部的* `hasOwnProperty`：
 
 ```js
 const foo = { bar: "Here be dragons" };
