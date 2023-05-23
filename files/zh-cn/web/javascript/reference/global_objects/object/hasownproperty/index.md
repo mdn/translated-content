@@ -20,7 +20,7 @@ hasOwnProperty(prop)
 ### 参数
 
 - `prop`
-  - : 要测试的属性的{{jsxref("String","字符串")}}名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+  - : 要测试的属性的{{jsxref("String","字符串", "", 1)}}名称或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 ### 返回值
 
@@ -97,7 +97,7 @@ for (const name in buz) {
 }
 ```
 
-请注意，{{jsxref("Statements/for...in", "for...in")}} 循环只迭代可枚举项：循环中没有发出非可枚举属性并不意味着 `hasOwnProperty` 本身被严格限制在可枚举项中（和 {{jsxref("Object.getOwnPropertyNames()")}} 一样）。
+请注意，{{jsxref("Statements/for...in", "for...in")}} 循环只迭代可枚举属性：循环中没有发出非可枚举属性并不意味着 `hasOwnProperty` 本身被严格限制在可枚举属性中（和 {{jsxref("Object.getOwnPropertyNames()")}} 一样）。
 
 ### 使用 hasOwnProperty 作为属性名称
 
