@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 {{JSRef}}
 
-**`Object.entries()`** 静态方法返回一个数组，由给定对象自身可枚举字符串键属性的键值对组成。
+**`Object.entries()`** 静态方法返回一个数组，包含给定对象自有的可枚举字符串键属性的键值对。
 
 {{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
@@ -22,7 +22,7 @@ Object.entries(obj)
 
 ### 返回值
 
-一个由给定对象自身可枚举字符串键属性的键值对组成的数组。每个键值对都是一个包含两个元素的数组：第一个元素是属性的键（始终是字符串），第二个元素是属性值。
+一个由给定对象自有的可枚举字符串键属性的键值对组成的数组。每个键值对都是一个包含两个元素的数组：第一个元素是属性的键（始终是字符串），第二个元素是属性值。
 
 ## 描述
 
@@ -75,7 +75,7 @@ console.log(Object.entries(100)); // []
 
 ### 将 Object 转换成 Map
 
-{{jsxref("Map/Map", "Map()")}} 构造函数接受 `entries` 的可迭代项。使用 `Object.entries`，你可以很容易地从 {{jsxref("Object")}} 转换成 {{jsxref("Map")}}：
+{{jsxref("Map/Map", "Map()")}} 构造函数接受一个`entries` 可迭代对象。使用 `Object.entries`，你可以很容易地将 {{jsxref("Object")}} 转换成 {{jsxref("Map")}}：
 
 ```js
 const obj = { foo: "bar", baz: 42 };
@@ -85,7 +85,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### 遍历对象
 
-使用[解构数组](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构数组)，你可以很容易地遍历对象。
+使用[数组解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构数组)，你可以很容易地遍历对象。
 
 ```js
 // 使用 for...of 循环
