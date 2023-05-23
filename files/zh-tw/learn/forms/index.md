@@ -39,7 +39,6 @@ original_slug: Learn/HTML/Forms
 | {{HTMLElement("fieldset")}} | {{domxref("HTMLFieldSetElement")}} | 該字段集是用來在表單中的組數表單元素。                                                                                                                |
 | {{HTMLElement("form")}}     | {{domxref("HTMLFormElement")}}     | 的`形式`元素表示的文件的一部分，它包含使用戶能夠提交信息給 web 服務器的交互元件。                                                                     |
 | {{HTMLElement("input")}}    | {{domxref("HTMLInputElement")}}    | 該 `輸入`元素用於創建表格的交互式控制。                                                                                                               |
-| {{HTMLElement("keygen")}}   | {{domxref("HTMLKeygenElement")}}   | 所述`凱基`元素存在，以促進生成的密鑰材料，並提交了公開密鑰的作為 HTML 形式的一部分                                                                    |
 | {{HTMLElement("label")}}    | {{domxref("HTMLLabelElement")}}    | 該`標籤`元素代表一個項目在用戶界面的標題                                                                                                              |
 | {{HTMLElement("legend")}}   | {{domxref("HTMLLegendElement")}}   | 在`傳說`元素代表一個標題為其父 {{ HTMLElement("fieldset") }} 的內容。                                                                                 |
 | {{HTMLElement("meter")}}    | {{domxref("HTMLMeterElement")}}    | 所述`米`元素表示一個已知的範圍內的任一標量值或分數值。                                                                                                |
@@ -92,16 +91,10 @@ original_slug: Learn/HTML/Forms
       <td>
         {{ HTMLElement("button") }}、
         {{ HTMLElement("input") }}、
-        {{ HTMLElement("keygen") }}、
         {{ HTMLElement("select") }}、
         {{ HTMLElement("textarea") }}
       </td>
       <td>該元素應該在頁面加載後自動聚焦。</td>
-    </tr>
-    <tr>
-      <td>challenge</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>即隨著公共密鑰提交的挑戰字符串。</td>
     </tr>
     <tr>
       <td>checked</td>
@@ -129,14 +122,7 @@ original_slug: Learn/HTML/Forms
     <tr>
       <td>disabled</td>
       <td>
-        {{ HTMLElement("button") }}
-        、{{ HTMLElement("fieldset") }} 、
-        {{ HTMLElement("input") }} 、
-        {{ HTMLElement("keygen") }} 、
-        {{ HTMLElement("optgroup") }} 、
-        {{ HTMLElement("option") }} 、
-        {{ HTMLElement("select") }} 、
-        {{ HTMLElement("textarea")}}
+        {{ HTMLElement("button") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("input") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea")}}
       </td>
       <td>表明用戶是否可以與元件進行交互。</td>
     </tr>
@@ -148,25 +134,14 @@ original_slug: Learn/HTML/Forms
     <tr>
       <td>for</td>
       <td>
-        {{ HTMLElement("label") }}、
-        {{ HTMLElement("output") }}
+        {{ HTMLElement("label") }}、{{ HTMLElement("output") }}
       </td>
       <td>描述了屬於這一種元素。</td>
     </tr>
     <tr>
       <td>form</td>
       <td>
-        {{ HTMLElement("button") }} 、
-        {{ HTMLElement("fieldset") }} 、
-        {{ HTMLElement("input") }} 、
-        {{ HTMLElement("keygen") }} 、
-        {{ HTMLElement("label") }} 、
-        {{ HTMLElement("meter") }} 、
-        {{ HTMLElement("object") }} 、
-        {{ HTMLElement("output") }} 、
-        {{ HTMLElement("progress") }} 、
-        {{ HTMLElement("select") }} 、
-        {{ HTMLElement("textarea")}}
+        {{ HTMLElement("button") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("input") }}、{{ HTMLElement("label") }}、{{ HTMLElement("meter") }}、{{ HTMLElement("object") }}、{{ HTMLElement("output") }}、{{ HTMLElement("progress") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea")}}
       </td>
       <td>表明是元件的所有者的形式。</td>
     </tr>
@@ -174,11 +149,6 @@ original_slug: Learn/HTML/Forms
       <td>high</td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>表示下界的上限範圍。</td>
-    </tr>
-    <tr>
-      <td>keytype</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>指定鍵所產生的類型。</td>
     </tr>
     <tr>
       <td>list</td>
@@ -193,9 +163,7 @@ original_slug: Learn/HTML/Forms
     <tr>
       <td>max</td>
       <td>
-        {{ HTMLElement("input") }} 、
-        {{ HTMLElement("meter") }} 、
-        {{ HTMLElement("progress") }}
+        {{ HTMLElement("input") }}、{{ HTMLElement("meter") }}、{{ HTMLElement("progress") }}
       </td>
       <td>指示所允許的最大值。</td>
     </tr>
@@ -233,13 +201,7 @@ original_slug: Learn/HTML/Forms
     <tr>
       <td>name</td>
       <td>
-        {{ HTMLElement("button") }} 、 {{ HTMLElement("form") }}
-        、 {{ HTMLElement("fieldset") }} 、
-        {{ HTMLElement("input") }} 、
-        {{ HTMLElement("keygen") }} 、
-        {{ HTMLElement("output") }} 、
-        {{ HTMLElement("select") }} 、
-        {{ HTMLElement("textarea") }}
+        {{ HTMLElement("button") }}、{{ HTMLElement("form") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("input") }}、{{ HTMLElement("output") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }}
       </td>
       <td>該元素的名稱。例如所使用的服務器，以確定在表單提交的字段。</td>
     </tr>
