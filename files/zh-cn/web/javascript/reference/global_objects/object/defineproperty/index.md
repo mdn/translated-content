@@ -20,7 +20,7 @@ Object.defineProperty(obj, prop, descriptor)
 - `obj`
   - : 要定义属性的对象。
 - `prop`
-  - : 一个字符串或 {{jsxref("Symbol")}}，指定了要定义或修改的属性键名。
+  - : 一个字符串或 {{jsxref("Symbol")}}，指定了要定义或修改的属性键。
 - `descriptor`
   - : 要定义或修改的属性的描述符。
 
@@ -30,7 +30,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 ## 描述
 
-`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值（=）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)添加的普通属性会在枚举属性（例如 {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）时出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
+`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)添加的普通属性会在枚举属性（例如 {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）时出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
 
 对象中存在的属性描述符有两种主要类型：数据描述符和访问器描述符。**数据描述符**是一个具有可写或不可写值的属性。**访问器描述符**是由 getter/setter 函数对描述的属性。描述符只能是这两种类型之一，不能同时为两者。
 
@@ -38,7 +38,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 - `configurable`
 
-  - 当设置为 `false` 时，
+  - : 当设置为 `false` 时，
 
     - 该属性的类型不能在数据属性和访问器属性之间更改，且
     - 该属性不可被删除，且
@@ -47,7 +47,7 @@ Object.defineProperty(obj, prop, descriptor)
     **默认值为 `false`。**
 
 - `enumerable`
-  - 当且仅当该属性在对应对象的属性枚举中出现时，值为 `true`。**默认值为 `false`。**
+  - : 当且仅当该属性在对应对象的属性枚举中出现时，值为 `true`。**默认值为 `false`。**
 
 **数据描述符**还具有以下可选键值：
 
@@ -104,7 +104,7 @@ function withValue(value) {
 Object.defineProperty(obj, "key", withValue("static"));
 
 // 如果 freeze 可用，防止添加或删除对象原型属性
-// (value, get, set, enumerable, writable, configurable)
+// （value、get、set、enumerable、writable、configurable）
 (Object.freeze || Object)(Object.prototype);
 ```
 
@@ -194,7 +194,7 @@ console.log(o.a); // 37；赋值不会成功
 
 #### Enumerable 属性
 
-`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[扩展运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
@@ -324,7 +324,7 @@ console.log(o.b); // 1
 o.b = 2; // 在严格模式下抛出 TypeError：cannot change a non-writable property's value with assignment
 ```
 
-这个示例演示了一个不可配置和不可写的数据属性。无法更新该属性的任何特性，包括它的 `value` 值。
+这个示例演示了一个不可配置且不可写的数据属性。无法更新该属性的任何特性，包括它的 `value` 值。
 
 ```js
 const o = {};
@@ -364,7 +364,7 @@ Object.defineProperty(o, "a", {
 });
 ```
 
-### 自定义 Setter 和 Getter
+### 自定义 setter 和 getter
 
 下面的例子展示了如何实现一个自存档对象。当设置 `temperature` 属性时，`archive` 数组会收到日志条目。
 
