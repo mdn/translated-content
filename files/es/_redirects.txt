@@ -697,7 +697,7 @@
 /es/docs/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML/Elemento/applet	/es/docs/Web/HTML/Element/applet
+/es/docs/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
@@ -748,7 +748,7 @@
 /es/docs/HTML/Elemento/input	/es/docs/Web/HTML/Element/input
 /es/docs/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/HTML/Elemento/keygen	/es/docs/Web/HTML/Element/keygen
+/es/docs/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
@@ -793,7 +793,7 @@
 /es/docs/HTML:Elemento:abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/HTML:Elemento:acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/HTML:Elemento:address	/es/docs/Web/HTML/Element/address
-/es/docs/HTML:Elemento:applet	/es/docs/Web/HTML/Element/applet
+/es/docs/HTML:Elemento:applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/HTML:Elemento:area	/es/docs/Web/HTML/Element/area
 /es/docs/HTML:Elemento:b	/es/docs/Web/HTML/Element/b
 /es/docs/HTML:Elemento:base	/es/docs/Web/HTML/Element/base
@@ -1150,7 +1150,7 @@
 /es/docs/Learn/Common_questions/Que_software_necesito	/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /es/docs/Learn/Common_questions/Qué_es_una_URL	/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
 /es/docs/Learn/Common_questions/Thinking_before_coding	/es/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-/es/docs/Learn/Common_questions/Using_Github_pages	/es/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/es/docs/Learn/Common_questions/Using_Github_pages	/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /es/docs/Learn/Common_questions/What_are_browser_developer_tools	/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /es/docs/Learn/Common_questions/What_are_hyperlinks	/es/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /es/docs/Learn/Common_questions/What_is_a_URL	/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
@@ -1217,7 +1217,7 @@
 /es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor	/es/docs/Learn/Server-side/First_steps/Client-Server_overview
 /es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks	/es/docs/Learn/Server-side/First_steps/Web_frameworks
 /es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web	/es/docs/Learn/Server-side/First_steps/Website_security
-/es/docs/Learn/Using_Github_pages	/es/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/es/docs/Learn/Using_Github_pages	/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /es/docs/MDN/About	/es/docs/MDN/Writing_guidelines
 /es/docs/MDN/Comenzando	/es/docs/MDN/Community/Contributing/Getting_started
 /es/docs/MDN/Contribute/Content	/es/docs/conflicting/MDN/Writing_guidelines
@@ -1974,9 +1974,13 @@
 /es/docs/Web/HTML/Canvas	/es/docs/Web/API/Canvas_API
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
+/es/docs/Web/HTML/Element/bgsound	/es/docs/conflicting/Web/HTML/Element/audio
+/es/docs/Web/HTML/Element/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Element/content	/es/docs/conflicting/Web/HTML/Element/slot
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
+/es/docs/Web/HTML/Element/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -1985,7 +1989,7 @@
 /es/docs/Web/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/Web/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
 /es/docs/Web/HTML/Elemento/address	/es/docs/Web/HTML/Element/address
-/es/docs/Web/HTML/Elemento/applet	/es/docs/Web/HTML/Element/applet
+/es/docs/Web/HTML/Elemento/applet	/es/docs/orphaned/Web/HTML/Element/applet
 /es/docs/Web/HTML/Elemento/area	/es/docs/Web/HTML/Element/area
 /es/docs/Web/HTML/Elemento/article	/es/docs/Web/HTML/Element/article
 /es/docs/Web/HTML/Elemento/aside	/es/docs/Web/HTML/Element/aside
@@ -1995,9 +1999,9 @@
 /es/docs/Web/HTML/Elemento/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Elemento/bdi	/es/docs/Web/HTML/Element/bdi
 /es/docs/Web/HTML/Elemento/bdo	/es/docs/Web/HTML/Element/bdo
-/es/docs/Web/HTML/Elemento/bgsound	/es/docs/Web/HTML/Element/bgsound
+/es/docs/Web/HTML/Elemento/bgsound	/es/docs/conflicting/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/big	/es/docs/Web/HTML/Element/big
-/es/docs/Web/HTML/Elemento/blink	/es/docs/Web/HTML/Element/blink
+/es/docs/Web/HTML/Elemento/blink	/es/docs/orphaned/Web/HTML/Element/blink
 /es/docs/Web/HTML/Elemento/blockquote	/es/docs/Web/HTML/Element/blockquote
 /es/docs/Web/HTML/Elemento/body	/es/docs/Web/HTML/Element/body
 /es/docs/Web/HTML/Elemento/br	/es/docs/Web/HTML/Element/br
@@ -2060,7 +2064,7 @@
 /es/docs/Web/HTML/Elemento/input/text	/es/docs/Web/HTML/Element/input/text
 /es/docs/Web/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
 /es/docs/Web/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
-/es/docs/Web/HTML/Elemento/keygen	/es/docs/Web/HTML/Element/keygen
+/es/docs/Web/HTML/Elemento/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
 /es/docs/Web/HTML/Elemento/legend	/es/docs/Web/HTML/Element/legend
 /es/docs/Web/HTML/Elemento/li	/es/docs/Web/HTML/Element/li
