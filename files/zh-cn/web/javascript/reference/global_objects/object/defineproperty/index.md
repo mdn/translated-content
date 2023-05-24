@@ -30,7 +30,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 ## 描述
 
-`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)添加的普通属性会在枚举属性（例如 {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）时出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
+`Object.defineProperty()` 允许精确地添加或修改对象上的属性。通过[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)添加的普通属性会在枚举属性时（例如 {{jsxref("Statements/for...in", "for...in")}}、{{jsxref("Object.keys()")}} 等）出现，它们的值可以被更改，也可以被{{jsxref("Operators/delete", "删除", "", 1)}}。此方法允许更改这些额外细节，以使其不同于默认值。默认情况下，使用 `Object.defineProperty()` 添加的属性是不可写、不可枚举和不可配置的。此外，`Object.defineProperty()` 使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 内部方法，而不是 [`[[Set]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)，因此即使属性已经存在，它也不会调用 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
 
 对象中存在的属性描述符有两种主要类型：数据描述符和访问器描述符。**数据描述符**是一个具有可写或不可写值的属性。**访问器描述符**是由 getter/setter 函数对描述的属性。描述符只能是这两种类型之一，不能同时为两者。
 
@@ -110,9 +110,9 @@ Object.defineProperty(obj, "key", withValue("static"));
 
 当属性已经存在时，`Object.defineProperty()` 会尝试根据描述符和属性的当前配置修改属性。
 
-如果旧描述符的 `configurable` 被设置为 `false`，则该属性被称为*不可配置的*。不能更改不可配置的访问器属性的任何特性，并且也不能在数据描述符和访问器描述符类型之间切换。对于具有 `writable: true` 的数据描述符，可以修改其值并将 `writable` 属性从 `true` 改为 `false`。当试图更改不可配置的属性（除非允许更改 `value` 和 `writable`）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
+如果旧描述符的 `configurable` 特性被设置为 `false`，则该属性被称为*不可配置的*。无法更改不可配置的访问器属性的任何特性，也不能将其在数据类型和访问器类型之间切换。对于具有 `writable: true` 的数据属性，可以修改其值并将 `writable` 特性从 `true` 改为 `false`。当试图更改不可配置的属性（除非允许更改 `value` 和 `writable`）时，会抛出 {{jsxref("TypeError")}}，除非在数据属性上定义一个与原始值相同的值。
 
-当当前属性是可配置的时，将属性定义为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个属性，则会保留旧描述符属性的值（不会被隐式重新定义为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
+当当前属性是可配置的时，将特性设置为 `undefined` 可以有效地删除它。例如，如果 `o.k` 是一个访问器属性，`Object.defineProperty(o, "k", { set: undefined })` 将删除 setter，使 `k` 只有 getter 并变成只读的。如果新描述符中缺少一个特性，则会保留旧描述符该特性的值（不会被隐式重新设置为 `undefined`）。通过提供不同类型的描述符，可以在数据属性和访问器属性之间切换。例如，如果新描述符是数据描述符（带有 `value` 或 `writable`），则原始描述符的 `get` 和 `set` 属性都将被删除。
 
 ## 示例
 
@@ -162,9 +162,9 @@ Object.defineProperty(o, "conflict", {
 
 当修改已存在的属性时，操作的结果取决于当前属性的配置，可能会成功、不执行任何操作，或抛出一个 {{jsxref("TypeError")}} 异常。
 
-#### Writable 属性
+#### Writable 特性
 
-当 `writable` 属性设置为 `false` 时，该属性被称为“不可写的”。它不能被重新赋值。尝试写入一个不可写的属性不会改变它，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下还会导致错误。
+当 `writable` 特性设置为 `false` 时，该属性被称为“不可写的”。它不能被重新赋值。尝试对一个不可写的属性进行写入不会改变它，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下还会导致错误。
 
 ```js
 const o = {}; // 创建一个新对象
@@ -192,7 +192,7 @@ console.log(o.a); // 37；赋值不会成功
 })();
 ```
 
-#### Enumerable 属性
+#### Enumerable 特性
 
 `enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
@@ -242,9 +242,9 @@ p[Symbol.for("e")]; // 5
 p[Symbol.for("f")]; // undefined
 ```
 
-#### Configurable 属性
+#### Configurable 特性
 
-`configurable` 属性控制属性是否可以从对象中删除以及其属性（除了 `value` 和 `writable`）是否可以更改。
+`configurable` 特性控制属性是否可以从对象中删除以及其特性（除了 `value` 和 `writable`）是否可以更改。
 
 以下示例演示了一个不可配置的访问器属性。
 
@@ -265,7 +265,7 @@ Object.defineProperty(o, "a", {
 }); // 抛出 TypeError
 Object.defineProperty(o, "a", {
   set() {},
-}); // 抛出 TypeError（set 之前为定义）
+}); // 抛出 TypeError（set 在之前未定义）
 Object.defineProperty(o, "a", {
   get() {
     return 1;
@@ -284,7 +284,7 @@ console.log(o.a); // 1
 
 如果 `o.a` 的 `configurable` 特性为 `true`，则不会抛出任何错误，并且该属性会在最后被删除。
 
-该示例说明了一个不可配置但可写的数据属性。该属性的 `value` 仍然可以被更改，`writable` 也仍然可以从 `true` 切换到 `false`。
+以下示例说明了一个不可配置但可写的数据属性。该属性的 `value` 仍然可以被更改，`writable` 也仍然可以从 `true` 切换到 `false`。
 
 ```js
 const o = {};
@@ -306,7 +306,7 @@ Object.defineProperty(o, "b", {
 Object.defineProperty(o, "b", {
   value: 1,
 }); // TypeError: because the property is neither writable nor configurable, it cannot be modified
-// 此时，没有办法进一步修改属性 'b' 或者恢复它的可写性。
+// 此时，无法再次修改属性 'b' 或者恢复它的可写性。
 ```
 
 这个示例演示了一个可配置但不可写的数据属性。该属性的 `value` 仍然可以使用 `defineProperty` 进行替换（但不能使用赋值运算符），并且 `writable` 特性仍然可以切换。
@@ -339,7 +339,7 @@ Object.defineProperty(o, "b", {
 
 ### 添加多个属性和默认值
 
-考虑属性的默认值应用方式是非常重要的。通常，在使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)分配一个值和使用 `Object.defineProperty()` 之间存在差异，如下面的示例所示。
+考虑属性默认值应用的方式是非常重要的。通常，在使用[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)分配一个值和使用 `Object.defineProperty()` 之间存在差异，如下面的示例所示。
 
 ```js
 const o = {};
@@ -420,7 +420,7 @@ console.log(instance.myname); // 这是我名称的字符串
 
 ### 继承属性
 
-如果访问者的属性是被继承的，它的 `get` 和 `set` 方法会在子对象的属性被访问或者修改时被调用。如果这些方法用一个变量存值，该值会被所有对象共享。
+如果访问者的属性被继承，它的 `get` 和 `set` 方法会在派生对象的属性被访问或者修改时被调用。如果这些方法用一个变量存值，该值会被所有对象共享。
 
 ```js
 function MyClass() {}
@@ -461,7 +461,7 @@ a.x = 1;
 console.log(b.x); // undefined
 ```
 
-不像访问者属性，值属性始终在对象自身上设置，而不是一个原型。然而，如果一个不可写的属性被继承，它仍然可以防止修改对象的属性。
+与访问器属性不同，数据属性始终在对象自身上设置，而不是一个原型。然而，如果一个不可写的属性被继承，它仍然可以防止修改对象的属性。
 
 ```js
 function MyClass() {}
