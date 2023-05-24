@@ -26,7 +26,7 @@ Notification.requestPermission(callback)
 
 ### 返回值
 
-{{jsxref("Promise")}} 解析为一个表示用户选择的权限的字符串。该字符串的可能值为：
+一个 {{jsxref("Promise")}}，可解析为一个表示用户选择的权限的字符串。该字符串的可能值为：
 
 - `granted`
 - `denied`
@@ -45,7 +45,7 @@ Notification.requestPermission(callback)
 ```js
 function notifyMe() {
   if (!("Notification" in window)) {
-    // 检查浏览器是否支持 Notification API
+    // 检查浏览器是否支持桌面通知
     alert("此浏览器不支持桌面通知");
   } else if (Notification.permission === "granted") {
     // 检查通知权限是否已经被授予；如果是的话，创建一条通知
