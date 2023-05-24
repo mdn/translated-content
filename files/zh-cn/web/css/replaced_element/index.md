@@ -26,9 +26,8 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("applet")}}
 
-HTML 规范也说了 {{HTMLElement("input")}} 元素可替换，因为 `"image"` 类型的 {{HTMLElement("input")}} 元素就像{{HTMLElement("img")}}一样被替换。但是其他形式的控制元素，包括其他类型的 {{HTMLElement("input")}} 元素，被明确地列为非可替换元素（non-replaced elements）。该规范用术语小挂件（Widgets）来描述它们默认的限定平台的渲染行为。
+HTML 规范也说了 {{HTMLElement("input")}} 元素可替换，因为 `"image"` 类型的 {{HTMLElement("input")}} 元素就像 {{HTMLElement("img")}} 一样被替换。但是其他形式的控制元素，包括其他类型的 {{HTMLElement("input")}} 元素，被明确地列为非可替换元素（non-replaced element）。该规范用术语小挂件（Widget）来描述它们默认的限定平台的渲染行为。
 
 用 CSS {{cssxref("content")}} 属性插入的对象是匿名的可替换元素。它们并不存在于 HTML 标记中，因此是“匿名的”。
 

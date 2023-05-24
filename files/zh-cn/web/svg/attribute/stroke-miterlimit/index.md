@@ -3,11 +3,11 @@ title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-如果两条线交汇在一起形成一个尖角，而且属性{{ SVGAttr("stroke-linejoin") }}指定了 `miter`，斜接有可能扩展到远远超过出路径轮廓线的线宽。属性 `stroke-miterlimit` 对斜接长度和`{{ SVGAttr("stroke-width") }}的比率`强加了一个极限。当极限到达时，交汇处由斜接变成倒角。
+如果两条线交汇在一起形成一个尖角，而且属性 {{ SVGAttr("stroke-linejoin") }} 指定了 `miter`，斜接有可能扩展到远远超过出路径轮廓线的线宽。属性 `stroke-miterlimit` 对斜接长度和 {{ SVGAttr("stroke-width") }} 的比率强加了一个极限。当极限到达时，交汇处由斜接变成倒角。
 
-斜接长度（斜接的外尖角和内夹角之间的距离）与{{ SVGAttr("stroke-width") }}的比率，直接跟两条线之间的角度（θ）有关，用如下方程表示：
+斜接长度（斜接的外尖角和内夹角之间的距离）与 {{ SVGAttr("stroke-width") }} 的比率，直接跟两条线之间的角度（θ）有关，用如下方程表示：
 
 ```plain
 miterLength / stroke-width = 1 / sin ( theta / 2 )

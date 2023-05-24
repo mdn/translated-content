@@ -124,49 +124,82 @@ renderPlanetInfoButton.addEventListener('click', event => {
 | marquee     | 株式相場表示機のようなスクロールするテキストのためのものです。                                                                                                                         |                                                                                                                                                                                                                                               |
 | timer       | カウントダウンタイマーやストップウォッチなどの、ある種のタイマーや時計の読み上げ。                                                                                                               |                                                                                                                                                                                                                                               |
 
-## 高度なライブリージョン
+## ライブリージョン属性についてのさらなる説明
 
-(TBD: OS/Browser/AT の組み合わせによる個々の属性についてのサポートに関するより詳しい情報)。
-
-一般的なライブリージョンへのサポートはバージョン 10.0 の JAWS へ追加されました。Windows Eyes ではバージョン 8.0 以降から「Microsoft Internet Explorer と Mozilla Firefox でブラウザーモード外での使用で」ライブリージョンをサポートしています。 NVDA は 2008 年 に Mozilla Firefox に対するいくつかの基本的なライブリージョンのサポートを追加し、2010 年から 2014 年までに改善されました。2015 年には Internet Explorer (MSHTML) 向けにも基本的なライブリージョンのサポートが追加されました。
-
-The Paciello Group は、[ライブリージョンのサポート状況についての情報](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/) (2014) をいくつかもっています。Paul Jadam は特に [aira-atomic と aria-relevant のサポート](http://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
+ライブリージョンはとてもよくサポートされています。The Paciello Group は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014) を投稿しました。Paul Jadam は特に [`aira-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、デフォルトは `false` です。
-2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` で、 `additions text` がデフォルトです。
-3. **`aria-labelledby`**: `aria-labelledby=[IDLIST]` は領域とラベルを関連付けるために使われます。`aria-controls` と似ていますが、複数のラベルを領域へ関連付けられ、複数のラベル識別子は空白によって区切られます。
-4. **`aria-describedby`**: `aria-describedby=[IDLIST]` は領域と説明の関連付けを行います。`aria-controls` と似ていますが、複数の説明を領域を関連付けられ、説明の識別子は空白によって区切られます。
+2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant): `aria-relevant=[LIST_OF_CHANGES]` はどういったタイプの変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` から一つ以上で、 `additions text` がデフォルトです。
 
-### 高度なユースケース: Clock
+### 基本的な例: `aria-atomic`
 
-`aria-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は単に現在のコンテンツを上書きする、新しい残り時間により毎分更新されます。
+`aria-atomic` についての説明のために、時間と分を表するシンプルな時計を表示するサイトを考えます。時計は毎分更新され、新しい残り時間でそのときのコンテンツを上書きします。
 
 ```html
-<div id="clock" role="timer" aria-live="polite"></div>
+<div id="clock" role="timer" aria-live="polite">
+  <span id="clock-hours"></span>
+  <span id="clock-mins"></span>
+</div>
 ```
 
 ```js
 /* basic JavaScript to update the clock */
-
-setInterval(function() {
-  var now = new Date();
-  document.getElementById('clock').innerHTML = "Time: " + now.getHours() + ":" + ("0"+now.getMinutes()).substr(-2);
-}, 60000);
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
+    `0${now.getMinutes()}`.substr(-2);
+}
+/* first run */
+updateClock();
+/* update every minute */
+setInterval(updateClock, 60000);
 ```
 
-最初の関数が実行されると、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。
+関数が初めて実行されるとき、追加された文字列のすべてが通知されます。 その後の呼び出しでは、過去のコンテンツと比較して変更されたコンテンツの一部が通知されます。例えば、時計が "17:33" から "17:34" へ変更されたとき、支援技術は "4" のみを通知します。これはユーザーにとってほとんど役に立たないでしょう。
 
-一つの回避策は最初にライブリージョンのコンテンツをクリアしてから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら二更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
+一つの回避策は最初にライブリージョンのコンテンツをクリア（この場合、`<span id="clock-hours">` と `<span id="clock-mins">` の `innerHTML` を空にセット）してから、新しいコンテンツを挿入することです。しかしながら、この方法はこれら2つの更新の正確なタイミングに依存するため、しばしば信頼性にかけることがあります。
 
-`aria-atomic="true"` はライブリージョンが更新されるたびに、コンテンツの更新がすべて (例 "Time: 17:34") 通知されることを保証します。
+`aria-atomic="true"` はライブリージョンが更新されるたびに、コンテンツの全体 (例 "17:34") が通知されることを保証します。
 
 ```html
 <div id="clock" role="timer" aria-live="polite" aria-atomic="true"></div>
 ```
 
-### 高度なユースケース: Roster
+`aria-atomic` のもう一つの例 - ユーザーのアクションによる結果の更新/通知
 
-チャットサイトでは、現在ログインしているユーザーを表示したいと思うでしょう。ページをリロードすることなく、ユーザーのログインおよびログアウトステータスが動的に反映されるユーザーの一覧を表示します。
+```html
+<div id="date-input">
+  <label for="year">Year:</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
+</div>
+
+<div id="date-output" aria-atomic="true" aria-live="polite">
+  設定された年:
+  <span id="year-output">1990</span>
+</div>
+```
+
+```js
+function change(event) {
+  const yearOut = document.getElementById("year-output");
+  switch (event.target.id) {
+    case "year":
+      yearOut.innerHTML = event.target.value;
+      break;
+    default:
+      return;
+  }
+}
+```
+
+`aria-atomic="true"` がないと、スクリーンリーダーは変更された年の値のみを読み上げます。`aria-atomic="true"` があると、スクリーンリーダーは 「設定された年: _変更された値_」 と発音します。
+
+### 基本的な例: `aria-relevant`
+
+`aria-relevant` があると、ライブリージョンに対するどのタイプの変更/更新を通知するのかを指定できます。
+
+一例として、チャットサイトで、現在ログインしているユーザーの一覧を表示することを考えましょう。単に現在ログインしているユーザーを通知するだけではなく、ユーザーがリストから _削除_ されたときにも通知を発行したいです。 `aria-relevant="additions removals"` を指定することで、これを実現できます。
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
@@ -176,9 +209,9 @@ setInterval(function() {
 
 ARIA ライブプロパティの内訳:
 
-- `aria-live="polite"` はスクリーンリーダーが更新をユーザーへ通知する前に、ユーザーがアイドル状態になるまで待つべきであることを示しています。"assertive" でユーザーを中断すると、ユーザーのフローを妨げるかもしれないためこれが最も一般的に使用される値です。
-- 追加または削除されたユーザーのみが読み上げられるべきで、全体の roster は都度読み上げられるべきではありません。そのため `aria-atomic` は設定されていません (デフォルトの `false` が入ります)。
-- `aria-relevant="additions removals"` により追加もしくは削除されたユーザーが読み上げられることを確かにします。
+- `aria-live="polite"` はスクリーンリーダーが更新をユーザーへ通知する前に、ユーザーがアイドル状態になるまで待つべきであることを示しています。"assertive" による中断では、ユーザーのフローを妨げるかもしれないため、これが最も一般的に使用される値です。
+- `aria-atomic` は設定されていません (デフォルトの `false` が入ります) ので、追加または削除されたユーザーのみが読み上げられ、名簿全体が都度読み上げられることはないはずです。
+- `aria-relevant="additions removals"` により名簿に追加もしくは削除されたユーザーが読み上げられることを確かにします。
 
 ## 関連情報
 

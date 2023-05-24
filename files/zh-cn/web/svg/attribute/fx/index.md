@@ -3,7 +3,7 @@ title: fx
 slug: Web/SVG/Attribute/fx
 ---
 
-« [SVG 属性参考主页](/zh-CN/docs/web/SVG/Attribute)
+{{SVGRef}}
 
 对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的 x 轴坐标。如果该属性没有被定义，就假定它与中心点是同一位置。
 
