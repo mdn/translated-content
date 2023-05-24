@@ -1389,7 +1389,7 @@
     "modified": "2020-07-16T22:35:45.385Z",
     "contributors": ["Beatriz_Ortega_Valdes"]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
     "modified": "2020-07-16T22:35:51.571Z",
     "contributors": ["DaniNz", "LuyisiMiger", "TAXIS"]
   },
@@ -8986,10 +8986,6 @@
     "modified": "2019-03-23T23:41:48.972Z",
     "contributors": ["abaracedo", "jigs12", "teoli", "Jorolo"]
   },
-  "Web/HTML/Element/applet": {
-    "modified": "2019-03-23T23:42:26.076Z",
-    "contributors": ["Sebastianz", "teoli", "Jorolo"]
-  },
   "Web/HTML/Element/area": {
     "modified": "2019-03-23T23:41:50.345Z",
     "contributors": ["Sebastianz", "jigs12", "teoli", "Jorolo"]
@@ -9035,17 +9031,9 @@
     "modified": "2019-03-23T23:41:59.174Z",
     "contributors": ["Sebastianz", "jigs12", "teoli", "Jorolo"]
   },
-  "Web/HTML/Element/bgsound": {
-    "modified": "2019-10-10T16:35:21.119Z",
-    "contributors": ["jcr4"]
-  },
   "Web/HTML/Element/big": {
     "modified": "2019-03-23T23:42:00.157Z",
     "contributors": ["Sebastianz", "jigs12", "welm", "teoli", "Jorolo"]
-  },
-  "Web/HTML/Element/blink": {
-    "modified": "2019-10-10T16:37:40.291Z",
-    "contributors": ["teoli", "jcr4"]
   },
   "Web/HTML/Element/blockquote": {
     "modified": "2019-03-23T23:42:29.095Z",
@@ -9367,10 +9355,6 @@
   "Web/HTML/Element/kbd": {
     "modified": "2019-03-18T21:11:05.093Z",
     "contributors": ["duduindo", "welm", "teoli", "Jorolo"]
-  },
-  "Web/HTML/Element/keygen": {
-    "modified": "2019-03-24T00:06:20.618Z",
-    "contributors": ["wbamberg", "teoli", "deimidis"]
   },
   "Web/HTML/Element/label": {
     "modified": "2019-03-23T23:22:26.460Z",
@@ -14729,6 +14713,10 @@
       "on3_g"
     ]
   },
+  "conflicting/Web/HTML/Element/audio": {
+    "modified": "2019-10-10T16:35:21.119Z",
+    "contributors": ["jcr4"]
+  },
   "conflicting/Web/HTML/Element/slot": {
     "modified": "2019-03-23T22:36:12.624Z",
     "contributors": ["jcr4"]
@@ -15781,6 +15769,14 @@
       "jesanchez"
     ]
   },
+  "orphaned/Web/HTML/Element/applet": {
+    "modified": "2019-03-23T23:42:26.076Z",
+    "contributors": ["Sebastianz", "teoli", "Jorolo"]
+  },
+  "orphaned/Web/HTML/Element/blink": {
+    "modified": "2019-10-10T16:37:40.291Z",
+    "contributors": ["teoli", "jcr4"]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-10-05T04:48:52.506Z",
     "contributors": ["titox", "jcr4"]
@@ -15792,6 +15788,10 @@
   "orphaned/Web/HTML/Element/isindex": {
     "modified": "2019-03-23T22:36:13.994Z",
     "contributors": ["jcr4"]
+  },
+  "orphaned/Web/HTML/Element/keygen": {
+    "modified": "2019-03-24T00:06:20.618Z",
+    "contributors": ["wbamberg", "teoli", "deimidis"]
   },
   "orphaned/Web/HTML/Element/multicol": {
     "modified": "2019-03-23T22:36:14.458Z",
