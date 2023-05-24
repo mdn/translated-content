@@ -1,6 +1,6 @@
 ---
 title: GitHub Pages を使うには？
-slug: Learn/Common_questions/Tools_and_setup/Using_Github_pages
+slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 original_slug: Learn/Common_questions/Using_Github_pages
 ---
 
