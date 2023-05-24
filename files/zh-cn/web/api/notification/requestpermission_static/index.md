@@ -5,7 +5,7 @@ slug: Web/API/Notification/requestPermission_static
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
-> **备注：** Safari 仍然使用回调语法来获取权限。阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的一个很好的例子，说明如何检测这个并合适地运行代码。
+> **备注：** Safari 仍然使用回调语法来获取权限。阅读[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的一个很好的例子，说明如何检测这个并合适地运行代码。
 
 {{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法从用户当前来源请求权限以显示通知。
 
@@ -52,9 +52,9 @@ function notifyMe() {
     const notification = new Notification("你好呀！");
     // …
   } else if (Notification.permission !== "denied") {
-    // 我们需要征求用户的许可
+    // 我们需要请求用户的许可
     Notification.requestPermission().then((permission) => {
-      // 如果用户接受，让我们创建一个通知
+      // 如果用户同意，让我们创建一个通知
       if (permission === "granted") {
         const notification = new Notification("你好呀！");
         // …
@@ -66,9 +66,9 @@ function notifyMe() {
 }
 ```
 
-我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的 [待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（同时参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
+我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的[待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（同时参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
-> **备注：** 在上面的示例中，我们生成通知以响应用户手势（单击按钮）。 这不仅仅是最佳实践——你不应该向用户滥发他们不同意的通知——而且未来的浏览器将明确禁止未响应用户手势而触发的通知。例如，Firefox 已经从版本 72 开始这样做了。
+> **备注：** 在上面的示例中，我们生成通知以响应用户手势（单击按钮）。这不仅仅是最佳实践——你不应该向用户滥发他们不同意的通知——而且未来的浏览器将明确禁止未响应用户手势而触发的通知。例如，Firefox 已经从版本 72 开始这样做了。
 
 ## 规范
 
