@@ -75,7 +75,7 @@ console.log(Object.entries(100)); // []
 
 ### 将 Object 转换成 Map
 
-{{jsxref("Map/Map", "Map()")}} 构造函数接受一个`entries` 可迭代对象。使用 `Object.entries`，你可以很容易地将 {{jsxref("Object")}} 转换成 {{jsxref("Map")}}：
+{{jsxref("Map/Map", "Map()")}} 构造函数接受一个 `entries` 可迭代对象。使用 `Object.entries`，你可以很容易地将 {{jsxref("Object")}} 转换成 {{jsxref("Map")}}：
 
 ```js
 const obj = { foo: "bar", baz: 42 };
