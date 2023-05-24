@@ -1,45 +1,34 @@
 ---
-title: "Notification: maxActions static property"
-short-title: maxActions
+title: Notification：maxActions 静态属性
 slug: Web/API/Notification/maxActions_static
-page-type: web-api-static-property
-status:
-  - experimental
-browser-compat: api.Notification.maxActions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`maxActions`** attribute of the
-{{domxref("Notification")}} interface returns the maximum number of actions supported by
-the device and the User Agent. Effectively, this is the maximum number of elements in
-{{domxref("Notification.actions")}} array which will be respected by the User Agent.
+{{domxref("Notification")}} 接口的 **`maxActions`** 属性返回设备和用户代理支持的最大动作数。实际上，这是会被用户代理尊重的 {{domxref("Notification.actions")}} 中的元素的最大数量。
 
-## Value
+## 值
 
-An integer number which indicates the largest number of notification
-actions that can be presented to the user by the User Agent and the device.
+一个表示用户代理和设备可以向用户呈现的通知的最大数量的整数。
 
-## Examples
+## 示例
 
-The following snippet logs the maximum number of supported actions.
+以下代码段记录了支持的操作的最大数量。
 
 ```js
 const maxActions = Notification.maxActions;
-console.log(
-  `This device can display at most ${maxActions} actions on each notification.`
-);
+console.log(`此设备最多可以对每个通知显示 ${maxActions} 个操作。`);
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{domxref("Notification.actions")}}
