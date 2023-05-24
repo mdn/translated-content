@@ -5,7 +5,7 @@ slug: Web/API/DOMStringMap
 
 {{ APIRef("HTML DOM") }}
 
-**`DOMStringMap`** 接口使用于 {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}} 属性，表示添加到元素的自定义属性的数据。
+**`DOMStringMap`** 接口用于 {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}} 属性，表示添加到元素的自定义属性的数据。
 
 ## 规范
 
