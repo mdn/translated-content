@@ -1,7 +1,8 @@
 ---
 title: <applet>
-slug: Web/HTML/Element/applet
+slug: orphaned/Web/HTML/Element/applet
 translation_of: Web/HTML/Element/applet
+original_slug: Web/HTML/Element/applet
 ---
 
 Элемент HTML апплет (\<applet>) определяет включение апплета java.
