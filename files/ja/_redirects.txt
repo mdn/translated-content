@@ -1917,9 +1917,8 @@
 /ja/docs/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
 /ja/docs/HTML/Element/bdi	/ja/docs/Web/HTML/Element/bdi
 /ja/docs/HTML/Element/bdo	/ja/docs/Web/HTML/Element/bdo
-/ja/docs/HTML/Element/bgsound	/ja/docs/conflicting/Web/HTML/Element/audio
+/ja/docs/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/big	/ja/docs/Web/HTML/Element/big
-/ja/docs/HTML/Element/blink	/ja/docs/orphaned/Web/HTML/Element/blink
 /ja/docs/HTML/Element/blockquote	/ja/docs/Web/HTML/Element/blockquote
 /ja/docs/HTML/Element/body	/ja/docs/Web/HTML/Element/body
 /ja/docs/HTML/Element/body_要素	/ja/docs/Web/HTML/Element/body
@@ -1993,7 +1992,6 @@
 /ja/docs/HTML/Element/section	/ja/docs/Web/HTML/Element/section
 /ja/docs/HTML/Element/select	/ja/docs/Web/HTML/Element/select
 /ja/docs/HTML/Element/small	/ja/docs/Web/HTML/Element/small
-/ja/docs/HTML/Element/spacer	/ja/docs/orphaned/Web/HTML/Element/spacer
 /ja/docs/HTML/Element/span	/ja/docs/Web/HTML/Element/span
 /ja/docs/HTML/Element/strike	/ja/docs/Web/HTML/Element/strike
 /ja/docs/HTML/Element/strong	/ja/docs/Web/HTML/Element/strong
@@ -4474,8 +4472,7 @@
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
-/ja/docs/Web/HTML/Element/bgsound	/ja/docs/conflicting/Web/HTML/Element/audio
-/ja/docs/Web/HTML/Element/blink	/ja/docs/orphaned/Web/HTML/Element/blink
+/ja/docs/Web/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/audio
 /ja/docs/Web/HTML/Element/content	/ja/docs/Web/HTML/Element/slot
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h2	/ja/docs/Web/HTML/Element/Heading_Elements
@@ -4484,8 +4481,6 @@
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
-/ja/docs/Web/HTML/Element/keygen	/ja/docs/orphaned/Web/HTML/Element/keygen
-/ja/docs/Web/HTML/Element/spacer	/ja/docs/orphaned/Web/HTML/Element/spacer
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn/Forms
