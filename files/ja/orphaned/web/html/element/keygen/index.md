@@ -1,6 +1,7 @@
 ---
 title: <keygen>
-slug: Web/HTML/Element/keygen
+slug: orphaned/Web/HTML/Element/keygen
+original_slug: Web/HTML/Element/keygen
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

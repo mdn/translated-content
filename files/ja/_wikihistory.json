@@ -2496,7 +2496,7 @@
     "modified": "2020-07-16T22:35:41.700Z",
     "contributors": ["Chuji-volunteer", "silverskyvicto"]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
     "modified": "2020-07-16T22:35:51.844Z",
     "contributors": [
       "hamasaki",
@@ -20867,17 +20867,9 @@
     "modified": "2020-10-15T21:19:20.403Z",
     "contributors": ["mfuji09", "yuheiy", "yyss", "ethertank"]
   },
-  "Web/HTML/Element/bgsound": {
-    "modified": "2020-10-15T21:05:41.126Z",
-    "contributors": ["mfuji09", "yyss", "ethertank"]
-  },
   "Web/HTML/Element/big": {
     "modified": "2020-10-15T21:02:53.862Z",
     "contributors": ["mfuji09", "yyss", "ethertank"]
-  },
-  "Web/HTML/Element/blink": {
-    "modified": "2020-10-15T21:02:35.295Z",
-    "contributors": ["mfuji09", "teoli", "yyss", "ethertank"]
   },
   "Web/HTML/Element/blockquote": {
     "modified": "2020-10-15T21:02:32.809Z",
@@ -21217,10 +21209,6 @@
     "modified": "2020-10-15T21:18:52.497Z",
     "contributors": ["mfuji09", "yuheiy", "dlwe", "yyss", "ethertank"]
   },
-  "Web/HTML/Element/keygen": {
-    "modified": "2020-11-08T10:51:32.322Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
   "Web/HTML/Element/label": {
     "modified": "2020-11-08T13:41:30.150Z",
     "contributors": ["mfuji09", "yyss", "sii", "teoli", "hrysd", "ethertank"]
@@ -21420,10 +21408,6 @@
   "Web/HTML/Element/source": {
     "modified": "2020-10-15T21:05:40.605Z",
     "contributors": ["mfuji09", "yyss", "ethertank", "RobinEgg"]
-  },
-  "Web/HTML/Element/spacer": {
-    "modified": "2020-10-15T21:20:20.456Z",
-    "contributors": ["mfuji09", "yyss", "ethertank"]
   },
   "Web/HTML/Element/span": {
     "modified": "2020-10-30T10:27:07.078Z",
@@ -30778,6 +30762,10 @@
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
   },
+  "conflicting/Web/HTML/Element/audio": {
+    "modified": "2020-10-15T21:05:41.126Z",
+    "contributors": ["mfuji09", "yyss", "ethertank"]
+  },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
@@ -31048,6 +31036,18 @@
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
+  },
+  "orphaned/Web/HTML/Element/blink": {
+    "modified": "2020-10-15T21:02:35.295Z",
+    "contributors": ["mfuji09", "teoli", "yyss", "ethertank"]
+  },
+  "orphaned/Web/HTML/Element/keygen": {
+    "modified": "2020-11-08T10:51:32.322Z",
+    "contributors": ["mfuji09", "yyss"]
+  },
+  "orphaned/Web/HTML/Element/spacer": {
+    "modified": "2020-10-15T21:20:20.456Z",
+    "contributors": ["mfuji09", "yyss", "ethertank"]
   },
   "orphaned/Web/JavaScript/Guide/Expressions": {
     "modified": "2019-03-24T00:01:13.077Z",

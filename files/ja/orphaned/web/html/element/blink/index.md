@@ -1,6 +1,7 @@
 ---
-title: '<blink>: 点滅文字列要素'
-slug: Web/HTML/Element/blink
+title: "<blink>: 点滅文字列要素"
+slug: orphaned/Web/HTML/Element/blink
+original_slug: Web/HTML/Element/blink
 ---
 
 {{HTMLSidebar}}{{Deprecated_header}}

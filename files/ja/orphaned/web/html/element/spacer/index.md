@@ -1,6 +1,7 @@
 ---
 title: <spacer>
-slug: Web/HTML/Element/spacer
+slug: orphaned/Web/HTML/Element/spacer
+original_slug: Web/HTML/Element/spacer
 ---
 
 {{non-standard_header}}{{deprecated_header}}

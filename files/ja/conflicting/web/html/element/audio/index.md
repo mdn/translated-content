@@ -1,6 +1,7 @@
 ---
-title: '<bgsound>: 背景音要素'
-slug: Web/HTML/Element/bgsound
+title: "<bgsound>: 背景音要素"
+slug: conflicting/Web/HTML/Element/audio
+original_slug: Web/HTML/Element/bgsound
 ---
 
 {{deprecated_header}}{{non-standard_header}}
