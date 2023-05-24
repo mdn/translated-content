@@ -28,7 +28,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 流式内容（Flow content）是一个广泛的类别，包括大多数可以包含在 {{HTMLElement("body")}} 元素之内的元素，包括标题元素、分段元素、措辞元素、嵌入元素、互动元素和表单相关元素。它还包括文本节点（但不包括那些只由空白字符组成的节点）。
 
-流式元素有：{{HTMLElement("a")}}、{{HTMLElement("abbr")}}、{{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("bdi")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{deprecated_inline}}、{{HTMLElement("data")}}、{{HTMLElement("datalist")}}、{{HTMLElement("del")}}、{{HTMLElement("details")}}、{{HTMLElement("dfn")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("figure")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("hr")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("ins")}}、{{HTMLElement("kbd")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("label")}}、{{HTMLElement("main")}}、{{HTMLElement("map")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("menu")}}、{{HTMLElement("meter")}}、{{HTMLElement("nav")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("ol")}}、{{HTMLElement("output")}}、{{HTMLElement("p")}}、{{HTMLElement("picture")}}、{{HTMLElement("pre")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("s")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("section")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("table")}}、{{HTMLElement("template")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("u")}}、{{HTMLElement("ul")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、和 {{HTMLElement("wbr")}}。
+流式元素有：{{HTMLElement("a")}}、{{HTMLElement("abbr")}}、{{HTMLElement("address")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("bdi")}}、{{HTMLElement("blockquote")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{deprecated_inline}}、{{HTMLElement("data")}}、{{HTMLElement("datalist")}}、{{HTMLElement("del")}}、{{HTMLElement("details")}}、{{HTMLElement("dfn")}}、{{HTMLElement("div")}}、{{HTMLElement("dl")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("figure")}}、{{HTMLElement("footer")}}、{{HTMLElement("form")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("header")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("hr")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("ins")}}、{{HTMLElement("kbd")}}、{{HTMLElement("label")}}、{{HTMLElement("main")}}、{{HTMLElement("map")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("menu")}}、{{HTMLElement("meter")}}、{{HTMLElement("nav")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("ol")}}、{{HTMLElement("output")}}、{{HTMLElement("p")}}、{{HTMLElement("picture")}}、{{HTMLElement("pre")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("s")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("section")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("table")}}、{{HTMLElement("template")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("u")}}、{{HTMLElement("ul")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、和 {{HTMLElement("wbr")}}。
 
 属于此类的少数其他元素（仅限于某种特殊情形，这些元素才会属于此类）：
 
@@ -57,7 +57,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 短语内容（Phrasing content）是流式内容的一个子集，定义了文本和它包含的标记，且可以在任何可以使用流式内容的地方出现。一些短语内容就构成了段落。
 
-属于此类的元素有：{{HTMLElement("abbr")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{Deprecated_Inline}}、{{HTMLElement("datalist")}}、{{HTMLElement("dfn")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("kbd")}}、{{HTMLElement("keygen")}} {{deprecated_inline()}}、{{HTMLElement("label")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("meter")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、{{HTMLElement("wbr")}} 和纯文本（仅当所包含的内容不完全为空字符）。
+属于此类的元素有：{{HTMLElement("abbr")}}、{{HTMLElement("audio")}}、{{HTMLElement("b")}}、{{HTMLElement("bdo")}}、{{HTMLElement("br")}}、{{HTMLElement("button")}}、{{HTMLElement("canvas")}}、{{HTMLElement("cite")}}、{{HTMLElement("code")}}、{{HTMLElement("command")}} {{Deprecated_Inline}}、{{HTMLElement("datalist")}}、{{HTMLElement("dfn")}}、{{HTMLElement("em")}}、{{HTMLElement("embed")}}、{{HTMLElement("i")}}、{{HTMLElement("iframe")}}、{{HTMLElement("img")}}、{{HTMLElement("input")}}、{{HTMLElement("kbd")}}、{{HTMLElement("label")}}、{{HTMLElement("mark")}}、{{MathMLElement("math")}}、{{HTMLElement("meter")}}、{{HTMLElement("noscript")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("q")}}、{{HTMLElement("ruby")}}、{{HTMLElement("samp")}}、{{HTMLElement("script")}}、{{HTMLElement("select")}}、{{HTMLElement("small")}}、{{HTMLElement("span")}}、{{HTMLElement("strong")}}、{{HTMLElement("sub")}}、{{HTMLElement("sup")}}、{{SVGElement("svg")}}、{{HTMLElement("textarea")}}、{{HTMLElement("time")}}、{{HTMLElement("var")}}、{{HTMLElement("video")}}、{{HTMLElement("wbr")}} 和纯文本（仅当所包含的内容不完全为空字符）。
 
 一些其他的元素也属于这个分类，但是只有当如下特殊情况时才会实现：
 
@@ -75,7 +75,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 ### 交互内容
 
-交互式内容（Interactive content）是流式内容的一个子集，包含为用户交互而特别设计的元素，且可以在任何可以使用流式内容的地方出现。属于此类的元素有：{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("details")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}，{{HTMLElement("label")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+交互式内容（Interactive content）是流式内容的一个子集，包含为用户交互而特别设计的元素，且可以在任何可以使用流式内容的地方出现。属于此类的元素有：{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("details")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}}、{{HTMLElement("label")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
 
 仅在特殊情形下才会属于此类的元素有：
 
@@ -96,7 +96,6 @@ original_slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("object")}}
@@ -108,13 +107,13 @@ original_slug: Web/Guide/HTML/Content_categories
 此类包含了几个子类：
 
 - 可列举的元素（listed）
-  - : 在 {{domxref("HTMLFormElement.elements", "form.elements")}} 和 fieldset.elements IDL collections 中列举出的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+  - : 在 {{domxref("HTMLFormElement.elements", "form.elements")}} 和 fieldset.elements IDL collection 中列举出的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
 - 可标记的元素（labelable）
-  - : 和 {{HTMLElement("label")}} 相关联的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("meter")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+  - : 和 {{HTMLElement("label")}} 相关联的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("meter")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
 - 可提交的元素（submittable）
-  - : 包括当表单提交时可以用来组成表单数据的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("object")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+  - : 包括当表单提交时可以用来组成表单数据的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
 - 可重置的元素（resettable）
-  - : 当表单重置时会被重置的元素。包括 {{HTMLElement("input")}}、{{HTMLElement("keygen")}} {{deprecated_inline}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+  - : 当表单重置时会被重置的元素。包括 {{HTMLElement("input")}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
 
 ## 二级分类
 

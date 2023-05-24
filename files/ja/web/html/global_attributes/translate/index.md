@@ -39,4 +39,4 @@ l10n:
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
 - {{domxref("HTMLElement.translate")}} プロパティは、この属性を反映します。
 - [Using HTML's translate attribute](https://www.w3.org/International/questions/qa-translate-flag).
-- HTML の {{htmlattrxref("lang")}} 属性
+- HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性

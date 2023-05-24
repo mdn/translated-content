@@ -67,7 +67,7 @@ My cat is very grumpy
 有些元素沒有內容，我們稱為「**空元素（empty elements）**」。 以這個圖片元素 {{htmlelement("img")}} 為例：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 它有兩個屬性，但是沒有結束標籤，也沒有裡面的內容。因為圖片元素是直接把圖檔嵌在 HTML 網頁上。
@@ -80,11 +80,11 @@ My cat is very grumpy
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
@@ -103,7 +103,7 @@ My cat is very grumpy
 再讓我們複習一下圖片元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 如同我們前面提到，圖片元素是直接把圖檔嵌在 HTML 網頁上，它是透過圖片來源（`src` ，source）這個屬性，提供了連到圖片檔案的路徑。
@@ -158,7 +158,10 @@ My cat is very grumpy
 例如，我們想把以下這段文字變成清單：
 
 ```html
-<p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+<p>
+  At Mozilla, we’re a global community of technologists, thinkers, and builders
+  working together ...
+</p>
 ```
 
 寫法如下：
@@ -172,7 +175,7 @@ My cat is very grumpy
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together ...</p>
 ```
 
 **請試試在練習網頁，加上一個清單。**
@@ -184,21 +187,23 @@ My cat is very grumpy
 1. 選擇一些文字，例如「Mozilla Manifesto」。
 2. 把他們包在這個\<a> 元素裡：
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. 在\<a> element 中加上 href attribute 這個屬性：
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. 屬性質就是你要連結網址：
 
-    ```html
-    <a href="https://www.mozilla.org/zh-TW/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/zh-TW/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
+   ```
 
 網址的開頭使用`https://` 或 `http://` （網路文字傳送標準的不同）可能會給你不一樣的結果。因此，在寫連結時，請自己先點擊過，確認無誤。
 

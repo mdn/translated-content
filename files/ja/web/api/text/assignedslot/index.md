@@ -1,6 +1,8 @@
 ---
-title: Text.assignedSlot
+title: "Text: assignedSlot プロパティ"
 slug: Web/API/Text/assignedSlot
+l10n:
+  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
 {{APIRef("DOM")}}

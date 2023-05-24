@@ -3,7 +3,7 @@ title: begin
 slug: Web/SVG/Attribute/begin
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 这个属性定义了动画何时开始。
 

@@ -113,7 +113,7 @@ textarea.addEventListener('input', function() {
 
 ### 組み込みイベントの起動
 
-この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)。
+この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
 
 ```js
 function simulateClick() {

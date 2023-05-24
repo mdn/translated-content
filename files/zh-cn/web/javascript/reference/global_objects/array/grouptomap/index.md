@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/groupToMap
 
 {{JSRef}} {{SeeCompatTable}}
 
-**`groupToMap()`** 方法根据提供的测试函数返回的值对调用数组的元素进行分组。最终返回的 {{jsxref("Map")}} 使用测试函数的唯一值作为键，可以用于获取每个组中的元素数组。
+**`groupToMap()`** 方法根据提供的测试函数返回的值对调用数组的元素进行分组。最终返回的 {{jsxref("Map")}} 使用测试函数返回的唯一值作为键，可以用于获取每个组中的元素数组。
 
 <!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
 
@@ -21,7 +21,7 @@ groupToMap(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 为数组中的每个元素执行的函数。它应该返回一个值（{{Glossary("object")}} 或 {{Glossary("primitive")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
+  - : 为数组中的每个元素执行的函数。它应该返回一个值（{{Glossary("object", "对象")}}或{{Glossary("primitive", "基本类型")}}）来指示当前元素的组。该函数被调用时将传入以下参数：
     - `element`
       - : 数组中当前正在处理的元素。
     - `index`
@@ -34,11 +34,6 @@ groupToMap(callbackFn, thisArg)
 ### 返回值
 
 一个为每个组分配了键的 {{jsxref("Map")}} 对象，每个键都分配了一个包含相关组元素的数组。
-
-### 异常
-
-- `TypeError`
-  - : 指定的回调函数不可调用。
 
 ## 描述
 
@@ -139,5 +134,9 @@ console.log(Array.prototype.groupToMap.call(arrayLike, (x) => x % 2));
 
 ## 参见
 
-- {{jsxref("Array.prototype.group()")}}
 - [`core-js` 中 `Array.prototype.group` 的 polyfill](https://github.com/zloirock/core-js#array-grouping)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.group()")}}
+- {{jsxref("Array.prototype.reduce()")}}
+- {{jsxref("Map/Map", "Map()")}}

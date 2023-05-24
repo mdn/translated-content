@@ -61,3 +61,8 @@ fetch('png-logo.png')
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [链式管道传输](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#链式管道传输)

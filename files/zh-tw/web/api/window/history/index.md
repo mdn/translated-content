@@ -21,8 +21,8 @@ var historyObj = window.history;
 ## 範例
 
 ```js
-history.back();     // 相當於按下上一頁按鈕
-history.go(-1);     // 相當於 history.back();
+history.back(); // 相當於按下上一頁按鈕
+history.go(-1); // 相當於 history.back();
 ```
 
 ## 備註

@@ -52,7 +52,7 @@ slug: Web/API/Window/popstate_event
 2. **現在の項目**のタイトルが履歴 API のメソッド、 ({{domxref("History.pushState", "pushState()")}} または {{domxref("History.replaceState", "replaceState()")}} の何れかで設定されなかった場合は、その項目のタイトルが {{domxref("document.title")}} 属性が返す文字列に設定されます。
 3. もし、ブラウザーが**現在の項目**から離れる前に保存したい状態情報を持っている場合は、保存します。このとき、その項目は「ユーザーの状態を保持した」とみなされます。ブラウザーが履歴セッションの項目に追加する可能性のあるこの情報には、たとえば、文書のスクロール位置、フォーム入力の値、および他のそのようなデータが含まれる場合があります。
 4. もし、**新しい項目**が**現在の項目**と異なる `Document` オブジェクトを持っている場合は、その閲覧コンテキストは、その {{domxref("Window.document", "document")}} プロパティが**新しい項目**によって参照される文書を参照するように更新され、コンテキストの名前は現在の文書のコンテキスト名と一致するように更新されます。
-5. **新しい項目**の {{domxref("Document")}} 内の各フォームコントロールで、自動入力フィールド名が `off` に設定された {{htmlattrxref("autocomplete", "input")}} が設定されているものは、リセットされます。自動補完されるフィールド名や自動補完の仕組みについては [HTML の自動補完](/ja/docs/Web/HTML/Attributes/autocomplete)を参照してください。
+5. **新しい項目**の {{domxref("Document")}} 内の各フォームコントロールで、自動入力フィールド名が `off` に設定された [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) が設定されているものは、リセットされます。自動補完されるフィールド名や自動補完の仕組みについては [HTML の自動補完](/ja/docs/Web/HTML/Attributes/autocomplete)を参照してください。
 6. **新しい項目**の文書が既に完全に読み込まれ準備されている場合、つまり、その {{domxref("Document.readyState", "readyState")}} が `complete` で、文書がまだ表示されていない場合、文書が表示され、 {{domxref("Window.pageshow_event", "pageshow")}} イベントは {{domxref("PageTransitionEvent")}} の {{domxref("PageTransitionEvent.persisted", "persisted")}} 属性が `true` に設定された状態でその文書で発行されます。
 7. この文書の {{domxref("Document.URL", "URL")}} が**新しい項目**のものに設定されます。
 8. 履歴の走査が置換を有効にして行われている場合、（{{domxref("History.go", "go()") }} などのメソッドの `delta` パラメータを考慮して）目的の項目の直前の項目が履歴スタックから削除されます。

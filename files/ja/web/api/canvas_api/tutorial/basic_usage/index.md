@@ -14,7 +14,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-一見すると、 {{HTMLElement("canvas")}} は {{HTMLElement("img")}} 要素と似ていますが、 `src` 属性と `alt` 属性がない点が明確に異なります。一方、 `<canvas>` には {{htmlattrxref("width", "canvas")}} と {{htmlattrxref("height", "canvas")}} の 2 つの属性のみがあります。これらはどちらもオプションで、 {{Glossary("DOM")}} [プロパティ](/ja/docs/Web/API/HTMLCanvasElement)を用いて設定することもできます。を利用できます。 `width` 属性と `height` 属性が指定されていない場合、キャンバスは幅 **300 ピクセル**、高さ **150 ピクセル**で初期化されます。要素の大きさは {{Glossary("CSS")}} で変更できますが、画像を描画される際にはそのレイアウト上の大きさに合わせて拡縮されます。 CSS での大きさは初期のキャンバスの比率を考慮しないため、歪んで表示されることになります。
+一見すると、 {{HTMLElement("canvas")}} は {{HTMLElement("img")}} 要素と似ていますが、 `src` 属性と `alt` 属性がない点が明確に異なります。一方、 `<canvas>` には [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) の 2 つの属性のみがあります。これらはどちらもオプションで、 {{Glossary("DOM")}} [プロパティ](/ja/docs/Web/API/HTMLCanvasElement)を用いて設定することもできます。を利用できます。 `width` 属性と `height` 属性が指定されていない場合、キャンバスは幅 **300 ピクセル**、高さ **150 ピクセル**で初期化されます。要素の大きさは {{Glossary("CSS")}} で変更できますが、画像を描画される際にはそのレイアウト上の大きさに合わせて拡縮されます。 CSS での大きさは初期のキャンバスの比率を考慮しないため、歪んで表示されることになります。
 
 > **メモ:** 画像が歪んでいると感じた時は、 CSS を使用するのではなく、 `width` および `height` 属性を `<canvas>` の属性に明示的に指定してください。
 

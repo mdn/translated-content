@@ -73,13 +73,13 @@ slug: Web/HTML/Element/embed
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : このリソースを表示する高さを [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で示します。絶対的な値でなければなりません。パーセント値は使用*できません*。
-- {{htmlattrdef("src")}}
+- `src`
   - : 埋め込むリソースの URL を示します。
-- {{htmlattrdef("type")}}
+- `type`
   - : インスタンス化するプラグインを選択するために使用する {{glossary("MIME type", "MIME タイプ")}}。
-- {{htmlattrdef("width")}}
+- `width`
   - : このリソースを表示する幅を [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で示します。絶対的な値でなければなりません。パーセント値は使用*できません*。
 
 ## 使用上のメモ

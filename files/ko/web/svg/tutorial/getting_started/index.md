@@ -24,7 +24,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 </svg>
 ```
 
-코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(Firefox 사용자 : [링크](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(Firefox 사용자 : [링크](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![빨간색 배경 중앙에 녹색 원이 있습니다. 원 가운데에 있는 흰색 텍스트는 SVG입니다.](svgdemo1.png)
 

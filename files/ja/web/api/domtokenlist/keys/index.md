@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/keys
 
 {{APIRef("DOM")}}
 
-**`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。キーの型は符号なし整数です。
+**`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。キーの型は符号なし整数です。
 
 ## 構文
 
@@ -19,11 +19,11 @@ keys();
 
 ### 返値
 
-{{jsxref("Iteration_protocols","反復子","",1)}}を返します。
+{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。
 
 ## 例
 
-次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るために、 {{domxref("Element.classList")}} を使用しています。 `keys()` を使用してキーを含む反復子を取得してから、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用してそれぞれを反復処理し、それを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
+次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るために、 {{domxref("Element.classList")}} を使用しています。 `keys()` を使用してキーを含むイテレーターを取得してから、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用してそれぞれを反復処理し、それを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
 
 最初に HTML です。
 

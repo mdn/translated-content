@@ -8,17 +8,17 @@ slug: Glossary/CSS_Selector
 ## 範例
 
 ```html
-<div> I am inside of a div element. </div>
-<p> I am inside of a paragraph element. </p>
+<div>I am inside of a div element.</div>
+<p>I am inside of a paragraph element.</p>
 ```
 
 ```css
 div {
- color: green;
+  color: green;
 }
 
 p {
- color: red;
+  color: red;
 }
 ```
 

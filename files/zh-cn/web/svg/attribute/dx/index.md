@@ -3,7 +3,7 @@ title: dx
 slug: Web/SVG/Attribute/dx
 ---
 
-« [SVG 属性参考汇总](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 `dx` 属性表示一个元素或其内容在 `x` 轴方向上的偏移，偏移量取决于设置该属性的元素。
 
@@ -11,7 +11,7 @@ slug: Web/SVG/Attribute/dx
 
 对于{{SVGElement("glyphRef")}}元素，它的值代表该符号在字体坐标系中 x 轴上的相对坐标。
 
-对于{{SVGElement("text")}}、{{SVGElement("tspan")}}、{{SVGElement("tref")}}和{{SVGElement("altGlyph")}}元素，由于这些元素允许设置[\<list-of-length>](/zh-CN/SVG/Content_type#List-of-Ts)，所以更复杂。
+对于 {{SVGElement("text")}}、{{SVGElement("tspan")}} 和 {{SVGElement("tref")}} 元素，由于这些元素允许设置 [\<list-of-length>](/zh-CN/SVG/Content_type#List-of-Ts)，所以更复杂。
 
 如果只提供了一个[\<length>](/zh-CN/SVG/Content_type#Length)，当前文本位置会沿着坐标系内 x 轴方向偏移[\<length>](/zh-CN/SVG/Content_type#Length) 。
 
@@ -28,13 +28,11 @@ slug: Web/SVG/Attribute/dx
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 数值类型 | [\<number>](/zh-CN/SVG/Content_type#Number) \| [T<.2Fvar>s">\<list-of-length>](/zh-CN/SVG/Content_type#List-of-<var>T<.2Fvar>s)                                                                                                                                                                                                                                                                                                                                                                                                              |
 | 可变     | 是                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 规范文档 | [SVG 1.1 (2nd Edition): altGlyph element](http://www.w3.org/TR/SVG11/text.html#AltGlyphElementDXAttribute) [SVG 1.1 (2nd Edition): feOffset element](http://www.w3.org/TR/SVG11/filters.html#feOffsetDxAttribute) [SVG 1.1 (2nd Edition): glyphRef element](http://www.w3.org/TR/SVG11/text.html#GlyphRefElementDXAttribute) [SVG 1.1 (2nd Edition): text element](http://www.w3.org/TR/SVG11/text.html#TextElementDXAttribute) [SVG 1.1 (2nd Edition): tspan element](http://www.w3.org/TR/SVG11/text.html#TSpanElementDXAttribute) |
 
 ## 元素
 
 这些元素可以使用 dx 属性
 
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("feOffset") }}
 - {{ SVGElement("glyphRef") }}
 - {{ SVGElement("text") }}

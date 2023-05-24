@@ -32,7 +32,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{deprecated_inline}}
   - : 文字列で、フレーム間に境界線を生成するかどうかを示します。
 - {{domxref("HTMLIFrameElement.height")}}
-  - : 文字列で HTML 属性の {{htmlattrxref("height", "iframe")}} を反映し、フレームの高さを表します。
+  - : 文字列で HTML 属性の [`height`](/ja/docs/Web/HTML/Element/iframe#height) を反映し、フレームの高さを表します。
 - {{domxref("HTMLIFrameElement.longDesc")}} {{deprecated_inline}}
   - : フレームの長い説明文の URI をが入った文字列です。
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{deprecated_inline}}
@@ -40,21 +40,21 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{deprecated_inline}}
   - : フレームのマージンの幅である文字列です。
 - {{domxref("HTMLIFrameElement.name")}}
-  - : 文字列で HTML 属性の {{htmlattrxref("name", "iframe")}} を反映し、フレームを参照するための名前を表します。
+  - : 文字列で HTML 属性の [`name`](/ja/docs/Web/HTML/Element/iframe#name) を反映し、フレームを参照するための名前を表します。
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
   - : 特定の文書に適用される機能ポリシーを簡単にイントロスペクトするための API を提供する {{domxref("FeaturePolicy")}} インターフェイスを返します。
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
-  - : 文字列で、 HTML の {{htmlattrxref("referrerPolicy", "iframe")}} 属性を反映し、リンク先のリソースを取得する際にどのリファラーを使用するかを示します。
+  - : 文字列で、 HTML の [`referrerPolicy`](/ja/docs/Web/HTML/Element/iframe#referrerPolicy) 属性を反映し、リンク先のリソースを取得する際にどのリファラーを使用するかを示します。
 - {{domxref("HTMLIFrameElement.sandbox")}}
-  - : {{domxref("DOMTokenList")}} で HTML の {{htmlattrxref("sandbox", "iframe")}} 属性を反映し、ネストされたコンテンツの動作に特別な制限を加えることを示します。
+  - : {{domxref("DOMTokenList")}} で HTML の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性を反映し、ネストされたコンテンツの動作に特別な制限を加えることを示します。
 - {{domxref("HTMLIFrameElement.scrolling")}} {{deprecated_inline}}
   - : 文字列で、ブラウザーがフレームにスクロールバーを提供すべきかどうかを示します。
 - {{domxref("HTMLIFrameElement.src")}}
-  - : 文字列で HTML の {{htmlattrxref("src", "iframe")}} 属性を反映し、埋め込むコンテンツのアドレスが入ります。プログラムから `<iframe>` の src 属性を削除すると（例えば {{domxref("Element.removeAttribute()")}} によって）、 Firefox （バージョン65以降）、 Chromium ベースのブラウザー、および Safari/iOS ではフレーム内に `about:blank` が読み込まれることに注意してください。
+  - : 文字列で HTML の [`src`](/ja/docs/Web/HTML/Element/iframe#src) 属性を反映し、埋め込むコンテンツのアドレスが入ります。プログラムから `<iframe>` の src 属性を削除すると（例えば {{domxref("Element.removeAttribute()")}} によって）、 Firefox （バージョン65以降）、 Chromium ベースのブラウザー、および Safari/iOS ではフレーム内に `about:blank` が読み込まれることに注意してください。
 - {{domxref("HTMLIFrameElement.srcdoc")}}
   - : 文字列で、フレームに表示する内容を表します。
 - {{domxref("HTMLIFrameElement.width")}}
-  - : 文字列で、 HTML の {{htmlattrxref("width", "iframe")}} 属性を反映し、フレームの幅を表します。
+  - : 文字列で、 HTML の [`width`](/ja/docs/Web/HTML/Element/iframe#width) 属性を反映し、フレームの幅を表します。
 
 ## メソッド
 

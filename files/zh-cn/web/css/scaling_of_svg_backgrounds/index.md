@@ -3,7 +3,9 @@ title: SVG 背景缩放
 slug: Web/CSS/Scaling_of_SVG_backgrounds
 ---
 
-{{cssref}}SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
+{{CSSRef}}
+
+SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我们把它用作背景图形 {{ cssxref("background-image") }} 时有更多需要我们注意的东西，尤其是在我们使用 {{ cssxref("background-size") }} 属性时。本文描述了在使用这些属性时如何处理 SVG 图像的缩放。
 
 ## 规则概要
 
@@ -28,7 +30,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ![no-dimensions-or-ratio.png](no-dimensions-or-ratio.png)
 
-[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
+[SVG 源码](https://mdn.dev/archives/media/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
 
 ### 指定一个维度的尺寸，但无固定比例
 
@@ -36,7 +38,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ![100px-wide-no-height-or-ratio.png](100px-wide-no-height-or-ratio.png)
 
-[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
+[SVG 源码](https://mdn.dev/archives/media/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
 
 ### 指定一个维度的尺寸，有固定比例
 
@@ -44,7 +46,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ![100px-height-3x4-ratio.png](100px-height-3x4-ratio.png)
 
-[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
+[SVG 源码](https://mdn.dev/archives/media/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
 
 ### 无宽高，有固定比例
 
@@ -52,7 +54,7 @@ slug: Web/CSS/Scaling_of_SVG_backgrounds
 
 ![no-dimensions-1x1-ratio.png](no-dimensions-1x1-ratio.png)
 
-[SVG 源码](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
+[SVG 源码](https://mdn.dev/archives/media/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
 
 ## 缩放示例
 

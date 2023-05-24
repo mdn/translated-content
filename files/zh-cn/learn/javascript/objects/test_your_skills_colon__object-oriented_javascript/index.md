@@ -26,7 +26,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
 
 ## OOJS 2
 
@@ -38,7 +38,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
 
 ## OOJS 3
 
@@ -52,7 +52,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs3.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs3-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

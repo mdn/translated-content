@@ -5,13 +5,13 @@ slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 {{APIRef("WebGL")}}
 
-在[WebGL API](/zh-CN/docs/Web/API/WebGL_API)中，使用 {{domxref("WebGLRenderingContext")}} 中的**`enableVertexAttribArray()`** 方法，可以打开属性数组列表中指定索引处的通用顶点属性数组。
+在 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 中，使用 {{domxref("WebGLRenderingContext")}} 中的 **`enableVertexAttribArray()`** 方法，可以打开属性数组列表中指定索引处的通用顶点属性数组。
 
 > **备注：** 你可以通过以下方法关闭顶点属性数组 {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 在 WebGL 中，作用于顶点的数据会先储存在[attributes](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)。这些数据仅对 JavaScript 代码和顶点着色器可用。属性由索引号引用到 GPU 维护的属性列表中。在不同的平台或 GPU 上，某些顶点属性索引可能具有预定义的值。创建属性时，WebGL 层会分配其他属性。
 
-无论怎样，都需要你使用`enableVertexAttribArray()`方法，来激活每一个属性以便使用，不被激活的属性是不会被使用的。一旦激活，以下其他方法就可以获取到属性的值了，包括{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}，{{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}，和 {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}。
+无论怎样，都需要你使用 `enableVertexAttribArray()` 方法，来激活每一个属性以便使用，不被激活的属性是不会被使用的。一旦激活，以下其他方法就可以获取到属性的值了，包括{{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}、{{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}} 和 {{domxref("WebGLRenderingContext.getVertexAttrib", "getVertexAttrib()")}}。
 
 ## 语法
 
@@ -26,7 +26,7 @@ void gl.enableVertexAttribArray(index);
 
 ### 返回值
 
-`undefined`.
+无（{{jsxref("undefined")}}）。
 
 ### 错误
 

@@ -36,8 +36,8 @@ slug: Learn/JavaScript/Building_blocks/Functions
 到目前為止，我們已在課程中大量使用了瀏覽器內建的函數。例如，每當我們操控一個字串時：
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // 字串的 replace() 函數會先替換一段子字串，
 // 再回傳替換過後的新字串
@@ -46,8 +46,8 @@ console.log(newString);
 或是每當我們操控一個陣列時：
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // 陣列的 join() 函數會先將所有陣列元素合併，
 // 形成一個新字串，再回傳該新字串
@@ -65,17 +65,17 @@ var myNumber = Math.random();
 
 > **備註：** 若有需要，你可以瀏覽器的 JavaScript 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
 
-JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫──很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
+JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫——很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
 
-麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份──有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
+麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份——有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
 
 ## 函數（function） vs 方法（method）
 
-在我們繼續前，有件事需要先釐清──技術上來說，瀏覽器內建函數並不是函數（function）──它們是**方法（method）**。這聽起來有點令人疑惑，不過別擔心──在你目前的學習階段，「函數」與「方法」這兩個詞彙大多時候是可以互換的，至少對我們的目標而言。
+在我們繼續前，有件事需要先釐清——技術上來說，瀏覽器內建函數並不是函數（function）——它們是**方法**（method）。這聽起來有點令人疑惑，不過別擔心——在你目前的學習階段，「函數」與「方法」這兩個詞彙大多時候是可以互換的，至少對我們的目標而言。
 
-這兩個詞的區別在方法（method）是定義在物件裡的函數（function）。瀏覽器內建函數（方法）和變數（此處被稱作**屬性（property）**）被儲存在建構好的物件裡，令程式碼控制起來更有效率也更簡單。
+這兩個詞的區別在方法（method）是定義在物件裡的函數（function）。瀏覽器內建函數（方法）和變數（此處被稱作**屬性**（property））被儲存在建構好的物件裡，令程式碼控制起來更有效率也更簡單。
 
-你還不需要了解 JavaScript 物件的內部運作──在之後的模組我們會學到物件內部的所有運作方式，以及如何創建你自己的物件。此時，我們只需要釐清方法與函數之間任何可能搞混的地方──在你上網查相關教學資源時很可能兩個詞彙都會碰到。
+你還不需要了解 JavaScript 物件的內部運作——在之後的模組我們會學到物件內部的所有運作方式，以及如何創建你自己的物件。此時，我們只需要釐清方法與函數之間任何可能搞混的地方——在你上網查相關教學資源時很可能兩個詞彙都會碰到。
 
 ## 自訂函數
 
@@ -83,10 +83,10 @@ You've also seen a lot of **custom functions** in the course so far — function
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -103,7 +103,7 @@ rather than having to write all that code out again every time we want to repeat
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -115,10 +115,10 @@ You are probably clear on this by now, but just in case ... to actually use a fu
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
-myFunction()
+myFunction();
 // 呼叫一次函數
 ```
 
@@ -128,7 +128,7 @@ You may see functions defined and invoked in slightly different ways. So far we 
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -143,11 +143,11 @@ function() {
 This is called an **anonymous function** — it has no name! It also won't do anything on its own. You generally use an anonymous function along with an event handler, for example the following would run the code inside the function whenever the associated button is clicked:
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 The above example would require there to be a {{htmlelement("button")}} element available on the page to select and click. You've already seen this structure a few times throughout the course, and you'll learn more about and see it in use in the next article.
@@ -155,9 +155,9 @@ The above example would require there to be a {{htmlelement("button")}} element 
 You can also assign an anonymous function to be the value of a variable, for example:
 
 ```js
-var myGreeting = function() {
-  alert('hello');
-}
+var myGreeting = function () {
+  alert("hello");
+};
 ```
 
 This function could now be invoked using:
@@ -169,9 +169,9 @@ myGreeting();
 This effectively gives the function a name; you can also assign the function to be the value of multiple variables, for example:
 
 ```js
-var anotherGreeting = function() {
-  alert('hello');
-}
+var anotherGreeting = function () {
+  alert("hello");
+};
 ```
 
 This function could now be invoked using either of
@@ -185,17 +185,17 @@ But this would just be confusing, so don't do it! When creating functions, it is
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 You will mainly use anonymous functions to just run a load of code in response to an event firing — like a button being clicked — using an event handler. Again, this looks something like this:
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // 這邊你的程式碼想寫多長就寫多長
-}
+};
 ```
 
 ## 函數參數
@@ -213,8 +213,8 @@ var myNumber = Math.random();
 The browser's built-in string [replace()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 ```
 
 > **備註：** When you need to specify multiple parameters, they are separated by commas.
@@ -222,8 +222,8 @@ var newString = myText.replace('string', 'sausage');
 It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 // 回傳 'I love chocolate frogs'
 var madeAString = myArray.join();
 // 回傳 'I,love,chocolate,frogs'
@@ -252,17 +252,17 @@ For example, say you have an HTML file that is calling in two external JavaScrip
 
 ```js
 // first.js
-var name = 'Chris';
+var name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-var name = 'Zaptec';
+var name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
@@ -286,89 +286,89 @@ Let's look at a real example to demonstrate scoping.
 2. Open the example up in a browser and in your text editor.
 3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    You should see the value of variable `x` output to the screen.
+   You should see the value of variable `x` output to the screen.
 
 4. Now try entering the following in your console
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    Both of these should return an error along the lines of "[ReferenceError: y is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
+   Both of these should return an error along the lines of "[ReferenceError: y is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
 
 5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    Save the code and reload it in your browser, then try calling the `a()` and `b()` functions from the JavaScript console:
+   Save the code and reload it in your browser, then try calling the `a()` and `b()` functions from the JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    You should see the `y` and `z` values output in the page. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
+   You should see the `y` and `z` values output in the page. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
 
 6. Now try updating your code like this:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
-    Save and reload again, and try this again in your JavaScript console:
+   Save and reload again, and try this again in your JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    Both the `a()` and `b()` call should output the value of x — 1. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
+   Both the `a()` and `b()` call should output the value of x — 1. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
 
 7. Finally, try updating your code like this:
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
-    Save and reload again, and try this again in your JavaScript console:
+   Save and reload again, and try this again in your JavaScript console:
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
+   This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
 
 > **備註：** The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 

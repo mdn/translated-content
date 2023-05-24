@@ -348,16 +348,6 @@ This results in:
 
 {{Bug(322603)}}
 
-For WebKit bugs, you can use this template:
-
-```
-\{{Webkitbug("322603")}}
-```
-
-This results in:
-
-{{Webkitbug("322603")}}
-
 ### Page tags
 
 Tags provide meta information about a page and/or indicate that a page has specific improvements needed to its content. Every page in the wiki should have tags. You can find details on tagging in our [How to properly tag pages](/pt-BR/docs/MDN/Contribute/Howto/Tag) guide.

@@ -37,7 +37,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 ## 开始拖拽操作
 
-这个例子使用 `{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}` 属性为 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件添加监听程序。
+这个例子使用 {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} 属性为 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件添加监听程序。
 
 ```
 <p draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
@@ -45,21 +45,21 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 </p>
 ```
 
-当用户开始拖拽时，会触发 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件。
+当用户开始拖拽时，会触发 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件。
 
-在这个例子中，[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件监听程序被添加到可拖拽元素本身；然而，你可以监听一个祖先元素，因为就像大多数其他事件一样，拖拽事件会冒泡。
+在这个例子中，{{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件监听程序被添加到可拖拽元素本身；然而，你可以监听一个祖先元素，因为就像大多数其他事件一样，拖拽事件会冒泡。
 
-在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件中，你可以指定拖拽数据、反馈图像和拖拽效果，所有这些都将在下面描述。不过，我们只需要设置拖拽数据，因为在大多数情况下默认的图像和拖拽效果都是适用的。
+在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件中，你可以指定拖拽数据、反馈图像和拖拽效果，所有这些都将在下面描述。不过，我们只需要设置拖拽数据，因为在大多数情况下默认的图像和拖拽效果都是适用的。
 
 ## 拖拽数据
 
-所有 {{domxref("DragEvent","拖拽事件")}} 都有一个名为 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 的属性，它持有拖拽数据（`dataTransfer` 是一个 {{domxref("DataTransfer")}} 对象）。
+所有{{domxref("DragEvent","拖拽事件")}}都有一个名为 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 的属性，它持有拖拽数据（`dataTransfer` 是一个 {{domxref("DataTransfer")}} 对象）。
 
 当拖拽发生时，数据必须与被拖拽的项目相关联。例如，当在文本框中拖拽选定的文本时，与拖拽数据项相关联的数据就是文本本身。类似地，当在 Web 页面上拖拽链接时，拖拽数据项就是链接的 URL。
 
-{{domxref("DataTransfer","拖拽数据")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 和 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
+{{domxref("DataTransfer")}} 包含两个信息，数据的类型（或格式）和数据值。格式是一个类型字符串（例如文本数据的格式是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text)），值是一个文本字符串。拖拽开始时，你提供数据类型和数据值。在拖拽过程中，在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件监听程序中，你使用拖拽数据的类型来检查是否允许放置（drop）。例如，接受链接的放置目标将检查链接类型 [`text/uri-list`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#link)。在放置事件中，监听程序将取回拖拽数据，并将其插入到放置位置。
 
-{{domxref("DataTransfer","拖拽数据")}} 的 {{domxref("DataTransfer.types","类型")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 或 [`image/jpeg`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 中。
+{{domxref("DataTransfer")}} 的 {{domxref("DataTransfer.types","types")}} 属性返回一个类似 {{domxref("DOMString")}} 的 MIME-type 的列表，如 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 或 [`image/jpeg`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#image)。你还可以创建自己的类型。最常用的类型列在文章 [推荐拖拽类型](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) 中。
 
 一次拖拽可能包括几个不同类型的数据项。这使得数据可以更具体的类型提供，通常是自定义类型，但若放置目标不支持这些具体类型，则会提供回退（fallback）数据。通常情况下，最不具体的类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 类型的普通文本数据，即一些简单的文本表示。
 
@@ -96,7 +96,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 设置拖拽反馈图像
 
-当拖拽发生时，会生成拖拽目标的一个半透明图像（触发"[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)" 事件的元素），并在拖拽过程中跟踪鼠标指针。这个图像是自动创建的，所以你不需要自己创建它。但是，你可以使用 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 方法来自定义拖拽反馈图像。
+当拖拽发生时，会生成拖拽目标的一个半透明图像（触发"{{domxref("HTMLElement/dragstart_event", "dragstart")}}" 事件的元素），并在拖拽过程中跟踪鼠标指针。这个图像是自动创建的，所以你不需要自己创建它。但是，你可以使用 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 方法来自定义拖拽反馈图像。
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -129,9 +129,9 @@ function dragWithCustomImage(event) {
 
 ## 拖拽效果
 
-拖拽过程中可能会执行一些操作。 `copy` 操作用来指示被拖拽的数据将从当前位置复制到放置位置。 `move` 操作指示被拖拽的数据会被移动，`link` 操作表示在源和放置位置之间将会创建某种形式的关系或连接。
+拖拽过程中可能会执行一些操作。`copy` 操作用来指示被拖拽的数据将从当前位置复制到放置位置。`move` 操作指示被拖拽的数据会被移动，`link` 操作表示在源和放置位置之间将会创建某种形式的关系或连接。
 
-你可以在 `[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)` 事件监听程序中设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性以指定允许拖拽源头执行三种操作中的哪几种。
+你可以在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件监听程序中设置 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性以指定允许拖拽源头执行三种操作中的哪几种。
 
 ```js
 event.dataTransfer.effectAllowed = "copy";
@@ -158,13 +158,13 @@ event.dataTransfer.effectAllowed = "copy";
 - `all`
   - : 复制、移动或链接
 
-注意，这些值必须像上面列出的那样使用。例如，将 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性设置为`copyMove` 允许复制或移动操作，但阻止用户执行链接操作。属性默认允许以上所有的操作（all），所以你不需要调整这个属性，除非你想要排除某个特定操作。
+注意，这些值必须像上面列出的那样使用。例如，将 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性设置为 `copyMove` 允许复制或移动操作，但阻止用户执行链接操作。属性默认允许以上所有的操作（all），所以你不需要调整这个属性，除非你想要排除某个特定操作。
 
-在拖拽操作期间，`[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 或 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件的监听程序可以检查 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性，以查看哪些操作是允许的。相关的 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性应该在其中的一个事件中设置，来指定应该执行哪一个单项操作。{{domxref("DataTransfer.dropEffect","dropEffect")}} 是 `none`, `copy`, `move`, 或 `link`。这个属性不使用上述的组合值。
+在拖拽操作期间，{{domxref("HTMLElement/dragenter_event", "dragenter")}} 或 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件的监听程序可以检查 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性，以查看哪些操作是允许的。相关的 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性应该在其中的一个事件中设置，来指定应该执行哪一个单项操作。{{domxref("DataTransfer.dropEffect","dropEffect")}} 是 `none`、`copy`、`move` 或 `link`。这个属性不使用上述的组合值。
 
-在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 和 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性被初始化为用户请求的效果。用户可以通过按下修饰键来修改为所需的效果。尽管使用什么修饰键取决于不同的平台，但典型情况下，<kbd>Shift</kbd> 和 <kbd>Ctrl</kbd> 键用于在复制、移动和链接之间切换。鼠标指针会改变样式以指示需要的操作；例如，对于"复制"操作，光标可能会在旁边出现加号。
+在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性被初始化为用户请求的效果。用户可以通过按下修饰键来修改为所需的效果。尽管使用什么修饰键取决于不同的平台，但典型情况下，<kbd>Shift</kbd> 和 <kbd>Ctrl</kbd> 键用于在复制、移动和链接之间切换。鼠标指针会改变样式以指示需要的操作；例如，对于"复制"操作，光标可能会在旁边出现加号。
 
-你可以在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 或 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件期间修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，例如将某个放置目标设置为只支持某些操作。你可以修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来覆盖用户指定的效果，并强制修改为一个特定的放置操作。注意，这个效果必须是 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性中的一个。否则，它将被设置为允许的替代值。
+你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 或 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件期间修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，例如将某个放置目标设置为只支持某些操作。你可以修改 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来覆盖用户指定的效果，并强制修改为一个特定的放置操作。注意，这个效果必须是 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} 属性中的一个。否则，它将被设置为允许的替代值。
 
 ```js
 event.dataTransfer.dropEffect = "copy";
@@ -174,11 +174,11 @@ event.dataTransfer.dropEffect = "copy";
 
 你可以使用 `none` 表示在这个位置不允许任何放置，尽管在这种情况下，最好不要取消事件。
 
-在 `[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)` 和 `[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件中，你可以检查 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，以确定最终选择了哪种效果。如果所选的效果是 "move"，那么应该在 `[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件中从拖拽源头删除拖拽数据。
+在 {{domxref("HTMLElement/drop_event", "drop")}} 和 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件中，你可以检查 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性，以确定最终选择了哪种效果。如果所选的效果是 `"move"`，那么应该在 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件中从拖拽源头删除拖拽数据。
 
 ## 指定放置目标
 
-`[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 或 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件的监听程序用于表示有效的放置目标，也就是被拖拽项目可能放置的地方。网页或应用程序的大多数区域都不是放置数据的有效位置。因此，这些事件的默认处理是不允许放置。
+{{domxref("HTMLElement/dragenter_event", "dragenter")}} 或 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件的监听程序用于表示有效的放置目标，也就是被拖拽项目可能放置的地方。网页或应用程序的大多数区域都不是放置数据的有效位置。因此，这些事件的默认处理是不允许放置。
 
 如果你想要允许放置，你必须取消 `dragenter` 和 `dragover` 事件来阻止默认的处理。你可以在属性定义的事件监听程序返回 `false`，或者调用事件的 {{domxref("Event.preventDefault","preventDefault()")}} 方法来实现这一点。在一个独立脚本中的定义的函数里，可能后者更可行。
 
@@ -187,11 +187,11 @@ event.dataTransfer.dropEffect = "copy";
 <div ondragover="event.preventDefault()">
 ```
 
-在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 和 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法将表明在该位置允许放置。但是，你通常希望只在某些情况下调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法（如只当拖拽的是链接时）。
+在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法将表明在该位置允许放置。但是，你通常希望只在某些情况下调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法（如只当拖拽的是链接时）。
 
 要做到这一点，调用一个函数以检查条件，并且只在满足条件时取消事件。如果条件未满足，则不取消事件，此时用户释放鼠标按钮不会执行放置。
 
-最常见的是根据数据传输中拖拽数据的类型来接受或拒绝放置——例如，允许放置图像或链接，或者都允许。你可以检查{{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性的{{domxref("DataTransfer.types","types")}} 属性来查看哪些类型允许放置。{{domxref("DataTransfer.types","types")}} 属性返回一个字符串类型的数组，这些字符串类型是在拖拽开始时添加的，顺序是从最重要到最不重要。
+最常见的是根据数据传输中拖拽数据的类型来接受或拒绝放置——例如，允许放置图像或链接，或者都允许。你可以检查 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性的 {{domxref("DataTransfer.types","types")}} 属性来查看哪些类型允许放置。{{domxref("DataTransfer.types","types")}} 属性返回一个字符串类型的数组，这些字符串类型是在拖拽开始时添加的，顺序是从最重要到最不重要。
 
 ```js
 function contains(list, value) {
@@ -225,25 +225,25 @@ function doDragOver(event) {
 }
 ```
 
-在这个例子中，当带有 `droparea` 类的元素是一个有效的放置目标时，即在该元素的 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法时，元素会出现一个 1 像素的黑色轮廓。
+在这个例子中，当带有 `droparea` 类的元素是一个有效的放置目标时，即在该元素的 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法时，元素会出现一个 1 像素的黑色轮廓。
 
-> **备注：** 要使这个伪类生效，你必须在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件（译者注：即在 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做“-moz-drag-over”）。
+> **备注：** 要使这个伪类生效，你必须在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件（译者注：即在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做“-moz-drag-over”）。
 
-对于更复杂的视觉效果，你可以在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 事件中执行其他操作。例如在放置位置插入一个元素，这样的元素可以表示一个插入标记，或表示被拖拽的元素移动到了新位置。为此你可以在 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 事件中创建一个新元素，然后将其插入到文档中。
+对于更复杂的视觉效果，你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中执行其他操作。例如在放置位置插入一个元素，这样的元素可以表示一个插入标记，或表示被拖拽的元素移动到了新位置。为此你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中创建一个新元素，然后将其插入到文档中。
 
-`[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件在鼠标指向的元素上触发。自然，你可能需要将插入标记移动到事件发生的位置附近。你可以使用事件的 {{domxref("MouseEvent.clientX","clientX")}} 和 {{domxref("MouseEvent.clientY","clientY")}} 属性，还有其他鼠标事件的属性来确定鼠标的位置。
+{{domxref("HTMLElement/dragover_event", "dragover")}} 事件在鼠标指向的元素上触发。自然，你可能需要将插入标记移动到事件发生的位置附近。你可以使用事件的 {{domxref("MouseEvent.clientX","clientX")}} 和 {{domxref("MouseEvent.clientY","clientY")}} 属性，还有其他鼠标事件的属性来确定鼠标的位置。
 
-最后，`[`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)` 事件会在拖拽离开元素时在该元素上触发。这是移除插入标记或高亮的好时机。你不需要取消这个事件（译者注：即不需要使用 {{domxref("Event.preventDefault","preventDefault()")}} ）。使用 `-moz-drag-over` 伪类设置的高亮或其他视觉效果会被自动移除。即使拖拽被取消了，`[`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)` 事件也会照常触发，所以你可以确保在这个事件中对任何插入标记的清除操作都一定可以完成。
+最后，{{domxref("HTMLElement/dragleave_event", "dragleave")}} 事件会在拖拽离开元素时在该元素上触发。这是移除插入标记或高亮的好时机。你不需要取消这个事件（译者注：即不需要使用 {{domxref("Event.preventDefault","preventDefault()")}}）。使用 `-moz-drag-over` 伪类设置的高亮或其他视觉效果会被自动移除。即使拖拽被取消了，{{domxref("HTMLElement/dragleave_event", "dragleave")}} 事件也会照常触发，所以你可以确保在这个事件中对任何插入标记的清除操作都一定可以完成。
 
 ## 执行放置
 
 当用户放开鼠标，拖放操作就会结束。
 
-如果在有效的放置目标元素（即取消了 `[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)` 或 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 的元素）上放开鼠标，放置会成功实现，`[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)` 事件在目标元素上被触发。否则，拖拽会被取消，不会触发 `[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)` 事件。
+如果在有效的放置目标元素（即取消了 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 或 {{domxref("HTMLElement/dragover_event", "dragover")}} 的元素）上放开鼠标，放置会成功实现，{{domxref("HTMLElement/drop_event", "drop")}} 事件在目标元素上被触发。否则，拖拽会被取消，不会触发 {{domxref("HTMLElement/drop_event", "drop")}} 事件。
 
-在 `[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)` 事件中，你应该取回放置的数据并将其插入到放置的位置。你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来确定需要哪种拖拽操作。
+在 {{domxref("HTMLElement/drop_event", "drop")}} 事件中，你应该取回放置的数据并将其插入到放置的位置。你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来确定需要哪种拖拽操作。
 
-在所有拖拽操作相关的事件中，事件的 `{{domxref("DragEvent.dataTransfer","dataTransfer")}}` 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
+在所有拖拽操作相关的事件中，事件的 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性会一直保存着拖拽数据。可使用 {{domxref("DataTransfer.getData","getData()")}} 方法来取回数据。
 
 ```
 function onDrop(event) {
@@ -253,7 +253,7 @@ function onDrop(event) {
 }
 ```
 
-{{domxref("DataTransfer.getData","getData()")}} 方法接收一个参数，取回数据的类型。这个方法会返回拖拽操作开始时调用 {{domxref("DataTransfer.setData","setData()")}} 方法设置的字符串值。如果不存在传入类型的数据，则会返回空字符串。自然，你应该知道哪种类型的数据可用，因为之前你应该已经在 `[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)` 事件中检查过数据类型了。
+{{domxref("DataTransfer.getData","getData()")}} 方法接收一个参数，取回数据的类型。这个方法会返回拖拽操作开始时调用 {{domxref("DataTransfer.setData","setData()")}} 方法设置的字符串值。如果不存在传入类型的数据，则会返回空字符串。自然，你应该知道哪种类型的数据可用，因为之前你应该已经在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中检查过数据类型了。
 
 在上面的例子中，我们一取回数据就把它作为文本内容插入到目标中。实际效果就是拖拽文本被插入到放置位置，假设放置目标是文本区域，例如 `p` 或 `div` 元素。
 
@@ -304,15 +304,15 @@ function doDrop(event) {
 
 ## 完成拖拽
 
-一旦拖拽完成，`[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件会在拖拽源头（即触发 `[`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)` 的元素）上发生。无论拖拽是成功还是被取消，这个事件都会被触发。然而，你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来决定执行什么放置操作。
+一旦拖拽完成，{{domxref("HTMLElement/dragend_event", "dragend")}} 事件会在拖拽源头（即触发 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 的元素）上发生。无论拖拽是成功还是被取消，这个事件都会被触发。然而，你可以使用 {{domxref("DataTransfer.dropEffect","dropEffect")}} 属性来决定执行什么放置操作。
 
-如果在`[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性值为 `none`，则拖拽会被取消。否则，这个属性会规定需要执行什么操作。源头元素可使用这个信息以在拖拽操作完成后从原来的位置移除被拖拽的项目。{{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} 属性会在用户取消拖拽（按下 Esc 键）时设置为 true，在拖拽因为其他原因如无效放置目标等被取消时，或拖拽成功时，则设置为 false。
+如果在 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件中，{{domxref("DataTransfer.dropEffect","dropEffect")}} 属性值为 `none`，则拖拽会被取消。否则，这个属性会规定需要执行什么操作。源头元素可使用这个信息以在拖拽操作完成后从原来的位置移除被拖拽的项目。{{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} 属性会在用户取消拖拽（按下 Esc 键）时设置为 true，在拖拽因为其他原因如无效放置目标等被取消时，或拖拽成功时，则设置为 false。
 
-放置可发生在同一窗口或另一个应用程序中。两种情况都会触发 `[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件。事件的 {{domxref("MouseEvent.screenX","screenX")}} 和 {{domxref("MouseEvent.screenY","screenY")}} 属性会被设置为放置发生时鼠标在屏幕上的坐标。
+放置可发生在同一窗口或另一个应用程序中。两种情况都会触发 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件。事件的 {{domxref("MouseEvent.screenX","screenX")}} 和 {{domxref("MouseEvent.screenY","screenY")}} 属性会被设置为放置发生时鼠标在屏幕上的坐标。
 
-`[`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)` 事件结束后，整个拖放操作就完成了。
+{{domxref("HTMLElement/dragend_event", "dragend")}} 事件结束后，整个拖放操作就完成了。
 
-\[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 中）被移动或移除了，则不会触发 [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event) 事件。参见 [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)。
+\[1] 在 Gecko 内核中，如果源头节点在拖拽过程中（如放置或 {{domxref("HTMLElement/dragover_event", "dragover")}} 中）被移动或移除了，则不会触发 {{domxref("HTMLElement/dragend_event", "dragend")}} 事件。参见 [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)。
 
 ## 参见
 

@@ -5,13 +5,13 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
 
 <div>{{JSRef}}</div>
 
-**`Symbol.iterator`** はウェルノウンシンボルで、オブジェクトの既定の反復子を指定します。 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) で使用されます。
+**`Symbol.iterator`** はウェルノウンシンボルで、オブジェクトの既定のイテレーターを指定します。 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) で使用されます。
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
 ## 解説
 
-オブジェクトを反復処理する必要がある場合（`for..of` ループの開始時など）は常に、その `@@iterator` メソッドが引数なしで呼び出され、返された**反復子**を使用して反復処理される値が取得されます。
+オブジェクトを反復処理する必要がある場合（`for..of` ループの開始時など）は常に、その `@@iterator` メソッドが引数なしで呼び出され、返された**イテレーター**を使用して反復処理される値が取得されます。
 
 一部の組み込み型には既定の反復動作がありますが、他の型（{{jsxref("Object")}} など）にはありません。`@@iterator` メソッドの組み込み型は次のとおりです。
 
@@ -65,7 +65,7 @@ console.log(...someObj); // 'a', 'b'
 
 ### 非整形反復処理
 
-もし反復可能項目の `@@iterator` メソッドが反復子オブジェクトを返さない場合、それは非整形反復可能項目です。それを使用すると、実行時に例外が発生したり、バグが発生したりする可能性があります。
+もし反復可能項目の `@@iterator` メソッドがイテレーターオブジェクトを返さない場合、それは非整形反復可能項目です。それを使用すると、実行時に例外が発生したり、バグが発生したりする可能性があります。
 
 ```js example-bad
 const nonWellFormedIterable = {}

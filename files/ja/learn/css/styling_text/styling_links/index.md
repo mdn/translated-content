@@ -333,7 +333,7 @@ a[href*="http"] {
 
 最後に、背景画像を表示するスペースを確保するためにリンクに {{cssxref("padding-right")}} を設定しているので、テキストと重なっていません。
 
-最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが[HTML リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト "http" は（2 番目と 3 番目のリンクのように）外部リンクにのみ現れ、これを[属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)で選択できます。 `a[href*="http"]` は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ {{htmlattrxref("href","a")}} 属性がある場合に限ります。
+最後の一言 — どのように外部リンクだけを選択したのでしょうか？ あなたが[HTML リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、外部リンクには絶対 URL のみを使用しているはずです — 自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用するほうが効率的です。 したがって、テキスト "http" は（2 番目と 3 番目のリンクのように）外部リンクにのみ現れ、これを[属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)で選択できます。 `a[href*="http"]` は {{htmlelement("a")}} 要素を選択しますが、"http" を含む値を持つ [`href`](/ja/docs/Web/HTML/Element/a#href) 属性がある場合に限ります。
 
 それでは、これで全部です — 上の能動的学習セクションを再検討して、この新しいテクニックを試してみてください！
 

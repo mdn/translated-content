@@ -58,13 +58,13 @@ slug: Web/HTML/Element/option
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : この論理属性を設定すると、選択肢が選択不能になります。多くのブラウザーはそのようなコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。この属性を設定していなくても、祖先のいずれかが無効状態の {{HTMLElement("optgroup")}} 要素である場合は無効化されます。
-- {{htmlattrdef("label")}}
+- `label`
   - : この属性は、選択肢の意味を示すラベル文字列です。 `label` 属性を定義していない場合は、要素の文字列コンテンツが要素の値になります。
-- {{htmlattrdef("selected")}}
-  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。`<option>` 要素が {{htmlattrxref("multiple", "select")}} を設定していない {{HTMLElement("select")}} 要素の子孫である場合、{{HTMLElement("select")}} 要素内で 1 個の `<option>` だけが `selected` 属性を持てます。
-- {{htmlattrdef("value")}}
+- `selected`
+  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。`<option>` 要素が [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) を設定していない {{HTMLElement("select")}} 要素の子孫である場合、{{HTMLElement("select")}} 要素内で 1 個の `<option>` だけが `selected` 属性を持てます。
+- `value`
   - : この属性の内容は、フォームで送信する値を表します。値を送信するには、選択肢を選択しなければなりません。この属性を省略すると、 option 要素の中の文字列が値になります。
 
 ## 例

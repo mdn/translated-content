@@ -344,7 +344,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### 設定の表示の更新
 
-各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、 {{htmlattrxref("value", "textarea")}} を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
+各制約セットエディターの右側には、トラックの構成可能なプロパティの現在の構成を表示するために使用する 2 番目のテキストボックスがあります。 この表示を関数 `getCurrentSettings()` で更新します。 この関数は、音声トラックと映像トラックの現在の設定を取得し、 [`value`](/ja/docs/Web/HTML/Element/textarea#value) を設定することで対応するコードをトラックの設定表示ボックスに挿入します。
 
 ```js
 function getCurrentSettings() {

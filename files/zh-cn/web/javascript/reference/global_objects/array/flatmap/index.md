@@ -19,7 +19,7 @@ flatMap(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-  - : 一个在数组的每个元素上执行的函数。它应该返回一个包含新数组元素的数组，或者一个单一的非数组值以添加到新数组中。该函数将被传入以下参数:
+  - : 一个在数组的每个元素上执行的函数。它应该返回一个包含新数组元素的数组，或是要添加到新数组中的单个非数组值。该函数将被传入以下参数：
     - `element`
       - : 数组中正在处理的当前元素。
     - `index`
@@ -157,7 +157,9 @@ console.log(
 ## 参见
 
 - [`core-js` 中 `Array.prototype.flatMap` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}

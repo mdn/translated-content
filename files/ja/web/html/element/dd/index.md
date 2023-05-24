@@ -54,7 +54,7 @@ slug: Web/HTML/Element/dd
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : この属性の値が `yes` とされた場合、定義部分のテキストは改行されません。既定値は `no` です。
 
 ## 例

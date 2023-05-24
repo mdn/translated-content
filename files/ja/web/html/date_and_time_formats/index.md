@@ -5,9 +5,9 @@ slug: Web/HTML/Date_and_time_formats
 
 {{HTMLSidebar}}
 
-一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 {{htmlattrxref("datetime", "ins")}} 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
+一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 [`datetime`](/ja/docs/Web/HTML/Element/ins#datetime) 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
 
-`<input>` については、 {{htmlattrxref("type", "input")}} の値で日付や時刻を表す文字列を含む {{htmlattrxref("value")}} を返すものは次の通りです。
+`<input>` については、 [`type`](/ja/docs/Web/HTML/Element/input#type) の値で日付や時刻を表す文字列を含む [`value`](/ja/docs/Web/HTML/Element/input#value) を返すものは次の通りです。
 
 - [`date`](/ja/docs/Web/HTML/Element/input/date)
 - [`datetime`](/ja/docs/Web/HTML/Element/input/datetime) {{deprecated_inline}}
@@ -224,7 +224,7 @@ There are some additional basic rules:
 
 A valid [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter "`T`" or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/ja/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 | Date/time string          | Normalized date/time string                            | Actual date and time               |
 | ------------------------- | ------------------------------------------------------ | ---------------------------------- |

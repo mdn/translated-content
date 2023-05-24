@@ -3,7 +3,7 @@ title: baseProfile
 slug: Web/SVG/Attribute/baseProfile
 ---
 
-« 返回 SVG 特性参考
+{{SVGRef}}
 
 `baseProfile` 特性描述了作者认为正确渲染内容所需要的最小的 SVG 语言概述。这个特性不会说明任何处理限制，可以把它看作是元数据。比如，这个特性的值可以被编辑工具用来在用户的修改超出所指定的基准概述范围时发出警告。
 

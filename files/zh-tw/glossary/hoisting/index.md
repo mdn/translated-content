@@ -53,13 +53,13 @@ JavaScript 僅提升宣告的部分，而不是初始化。如果在使用該變
 
 ```js
 var x = 1; // 初始化 x
-console.log(x + " " + y);  // '1 undefined'
+console.log(x + " " + y); // '1 undefined'
 var y = 2;
 //上下的程式結果都一樣
 
 var x = 1; // 初始化 x
 var y; // 宣告 y
-console.log(x + " " + y);  // '1 undefined'
+console.log(x + " " + y); // '1 undefined'
 y = 2; // 初始化 y
 ```
 

@@ -32,7 +32,7 @@ read()
 
 ## 示例
 
-### 示例 1 - 简单的例子
+### 示例 1——简单的例子
 
 这个例子展示了基本的 API 使用方法，但是其不会尝试处理一些复杂的问题，如流中的分块不在行的末尾结束。
 
@@ -65,7 +65,7 @@ function fetchStream() {
 }
 ```
 
-### 示例 2 - 逐行处理文本
+### 示例 2——逐行处理文本
 
 这个示例向你展示如何获取一个文本文件并以流的形式处理文本中的每一行。它能够处理分块不在行的末尾结束的情况，并将 Uint8Array 转换为字符串。
 
@@ -110,3 +110,8 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

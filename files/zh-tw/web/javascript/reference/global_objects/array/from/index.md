@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 - 類陣列（array-like）物件（物件具有 `length` 屬性以及索引化（indexed）的元素）或
 - [可迭代物件](/zh-TW/docs/Web/JavaScript/Guide/iterable)（物件具有可以讓你利用迭代的方式取得它自己本身的元素，像是 {{jsxref("Map")}} 和 {{jsxref("Set")}}）。
 
-`Array.from()` 有個可選用的參數 `mapFn`，它允許你在建立出新的陣列實體之後，可以接著對陣列（或是其子類別物件）中的每一個元素執行 {{jsxref("Array.prototype.map", "map")}} 函式。更清楚地說，`Array.from(obj, mapFn, thisArg)` 跟 `Array.from(obj).map(mapFn, thisArg)` 的結果是一樣的，除非所建立的不是一個可用的中介陣列（intermediate array）。這對於某些陣列的子類別來說就很重要，例如[型別陣列](/zh-TW/docs/Web/JavaScript/Typed_arrays)，因為中介陣列必須要把內容值做一番截頭去尾的操作來讓它們變成適合的物件型態。
+`Array.from()` 有個可選用的參數 `mapFn`，它允許你在建立出新的陣列實體之後，可以接著對陣列（或是其子類別物件）中的每一個元素執行 {{jsxref("Array.prototype.map", "map")}} 函式。更清楚地說，`Array.from(obj, mapFn, thisArg)` 跟 `Array.from(obj).map(mapFn, thisArg)` 的結果是一樣的，除非所建立的不是一個可用的中介陣列（intermediate array）。這對於某些陣列的子類別來說就很重要，例如[型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)，因為中介陣列必須要把內容值做一番截頭去尾的操作來讓它們變成適合的物件型態。
 
 `from()` 方法的 `length` 屬性值為 1。
 

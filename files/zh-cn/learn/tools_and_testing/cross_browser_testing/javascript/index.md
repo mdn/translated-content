@@ -435,7 +435,7 @@ if (ua.includes('Firefox')) {
 - Chrome/Opera/Safari 会使用 `webkitObject`
 - Microsoft 会使用 `msObject`
 
-这里有一个例子，取自我们的 [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/)（见[源代码](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)），它使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 的组合来创建一个有趣（和嘈杂）的绘画工具：
+这里有一个例子，取自我们的 [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/)（见[源代码](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)），它使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 的组合来创建一个有趣（和嘈杂）的绘画工具：
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

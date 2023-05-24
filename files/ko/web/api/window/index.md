@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: 6a98e87740582429a4fde711bfcfc016e4eccbdb
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{APIRef("DOM")}}
@@ -273,125 +273,122 @@ l10n:
 
 ## 이벤트
 
-Listen to these events using [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+[`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나, `Window` 인터페이스의 `oneventname` 속성을 사용해 이벤트를 수신하세요.
 
 - {{domxref("Window/error_event", "error")}}
-  - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
+  - : 찾을 수 없거나 유효하지 않은 이미지, 실행 오류가 발생하는 스크립트 등, 리소스를 불러오지 못했거나 사용할 수 없을 때 발생합니다.
 - {{domxref("Window/languagechange_event", "languagechange")}}
-  - : Fired at the global scope object when the user's preferred language changes.
+  - : 사용자의 선호 언어가 바뀌면 발생합니다.
 - {{domxref("Window.devicemotion_event", "devicemotion")}}
-  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+  - : 일정 주기로 발생하여 장치가 받고 있는 물리적 가속력의 양을 나타냅니다. 가능한 경우 각속도도 포함합니다.
 - {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+  - : 자기계 방향 센서가 제공하는, 지구 좌표계 기준 장치 방향 데이터를 새로 사용할 수 있으면 발생합니다.
 - {{domxref("Window/resize_event", "resize")}}
-  - : Fired when the window has been resized.
+  - : 창 크기가 바뀌면 발생합니다.
 - {{domxref("Window/storage_event", "storage")}}
-  - : Fired when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+  - : 다른 문서에서 저장소(`localStorage` 또는 `sessionStorage`)를 수정하면 발생합니다.
 
-### Animation events
+### 애니메이션 이벤트
 
 - {{domxref("Window/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
+  - : 애니메이션이 예상치 못하게 중단되면 발생합니다.
 - {{domxref("Window/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
+  - : 애니메이션이 정상적으로 끝나면 발생합니다.
 - {{domxref("Window/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
+  - : 애니메이션의 1회 반복이 끝나면 발생합니다.
 - {{domxref("Window/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
+  - : 애니메이션이 시작하면 발생합니다.
 
-### Clipboard events
+### 클립보드 이벤트
 
 - {{domxref("Window/copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncopy", "oncopy")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 복사 액션을 실행하면 발생합니다. {{domxref("HTMLElement/oncopy", "oncopy")}} 속성으로도 사용할 수 있습니다.
 - {{domxref("Window/cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/oncut", "oncut")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 잘라내기 액션을 실행하면 발생합니다. {{domxref("HTMLElement/oncut", "oncut")}} 속성으로도 사용할 수 있습니다.
 - {{domxref("Window/paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-    Also available via the {{domxref("HTMLElement/onpaste", "onpaste")}} property.
+  - : 사용자가 브라우저 사용자 인터페이스를 통해 붙여넣기 액션을 실행하면 발생합니다. {{domxref("HTMLElement/onpaste", "onpaste")}} 속성으로도 사용할 수 있습니다.
 
-### Connection events
+### 네트워크 연결 이벤트
 
 - {{domxref("Window/offline_event", "offline")}}
-  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
+  - : 브라우저가 네트워크 연결을 상실해 `navigator.onLine`이 `false`로 바뀌면 발생합니다.
 - {{domxref("Window/online_event", "online")}}
-  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+  - : 브라우저가 네트워크 연결을 획득해 `navigator.onLine`이 `true`로 바뀌면 발생합니다.
 
-### Focus events
+### 포커스 이벤트
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : 요소가 포커스를 잃으면 발생합니다.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : 요소가 포커스를 얻으면 발생합니다.
 
-### Gamepad events
+### 게임패드 이벤트
 
 - {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}
-  - : Fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.
+  - : 브라우저가 게임패드 연결을 감지하거나, 게임패드의 버튼/축 입력을 처음 감지했을 때 발생합니다.
 - {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
-  - : Fired when the browser detects that a gamepad has been disconnected.
+  - : 브라우저가 게임패드 연결 해제를 감지하면 발생합니다.
 
-### History events
+### 방문 기록 이벤트
 
 - {{domxref("Window/hashchange_event", "hashchange")}}
-  - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
+  - : URL의 프래그먼트 식별자(`#` 기호로 시작하는 부분)가 바뀌면 발생합니다.
 - {{domxref("Window/pagehide_event", "pagehide")}}
-  - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
+  - : 뒤로 가기나 앞으로 가기 버튼으로 방문 기록을 탐색할 때 등, 브라우저가 현재 문서를 숨기고 방문 기록 내의 다른 문서를 보여주려고 할 때 발생합니다.
 - {{domxref("Window/pageshow_event", "pageshow")}}
-  - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
+  - : 브라우저 탐색으로 이 페이지가 보여질 때 발생합니다. 페이지 첫 방문이나, 다른 페이지에서 뒤로 가기나 앞으로 가기 버튼으로 다시 돌아올 때 발생합니다.
 - {{domxref("Window/popstate_event", "popstate")}}
-  - : Fired when the active history entry changes.
+  - : 활성화된 방문 기록 항목이 바뀌면 발생합니다.
 
-### Load & unload events
+### 로드 & 언로드 이벤트
 
 - {{domxref("Window/beforeunload_event", "beforeunload")}}
-  - : Fired when the window, the document and its resources are about to be unloaded.
+  - : 창과 문서, 리소스들을 언로드하기 직전에 발생합니다.
 - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+  - : 문서 파싱이 끝나면 발생합니다. 스타일시트, 이미지, 하위 프레임의 로딩이 끝날 때까지 기다리지 않습니다.
 - {{domxref("Window/load_event", "load")}}
-  - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+  - : 스타일시트, 이미지 등 리소스까지 포함해서 페이지 로딩이 모두 끝나면 발생합니다.
 - {{domxref("Window/unload_event", "unload")}}
-  - : Fired when the document or a child resource is being unloaded.
+  - : 문서나 하위 리소스가 언로딩 중일 때 발생합니다.
 
-### Manifest events
+### 매니페스트 이벤트
 
 - {{domxref("Window/appinstalled_event", "appinstalled")}}
-  - : Fired when the browser has successfully installed a page as an application.
+  - : 브라우저가 성공적으로 페이지를 애플리케이션으로서 설치했을 때 발생합니다.
 - {{domxref("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
-  - : Fired when a user is about to be prompted to install a web application.
+  - : 사용자에게 웹 애플리케이션 설치를 권유하기 직전에 발생합니다.
 
-### Messaging events
+### 메시지 이벤트
 
 - {{domxref("Window/message_event", "message")}}
-  - : Fired when the window receives a message, for example from a call to {{domxref("Window/postMessage", "Window.postMessage()")}} from another browsing context.
+  - : 다른 탐색 맥락에서의 {{domxref("Window/postMessage", "Window.postMessage()")}} 등으로 이 창이 메시지를 수신했을 때 발생합니다.
 - {{domxref("Window/messageerror_event", "messageerror")}}
-  - : Fired when a `Window` object receives a message that can't be deserialized.
+  - : `Window` 객체가 역직렬화 할 수 없는 메시지를 수신하면 발생합니다.
 
-### Print events
+### 출력 이벤트
 
 - {{domxref("Window/afterprint_event", "afterprint")}}
-  - : Fired after the associated document has started printing or the print preview has been closed.
+  - : 연관된 문서의 출력이 시작됐거나, 출력 미리보기 창이 닫히면 발생합니다.
 - {{domxref("Window/beforeprint_event", "beforeprint")}}
-  - : Fired when the associated document is about to be printed or previewed for printing.
+  - : 연관된 문서의 출력이 시작되기 직전이나, 출력 미리보기 창이 열리기 직전에 발생합니다.
 
-### Promise rejection events
+### 프로미스 거부 이벤트
 
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}
-  - : Sent every time a JavaScript {{jsxref("Promise")}} is rejected, regardless of whether or not there is a handler in place to catch the rejection.
+  - : JavaScript {{jsxref("Promise")}}가 거부될 때마다 발생합니다. 잡아낸 거부로 인해서도 발생합니다.
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
-  - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
+  - : JavaScript {{jsxref("Promise")}}가 거부됐지만, 거부를 잡아낼 처리기가 없을 때 발생합니다.
 
-### Transition events
+### 트랜지션 이벤트
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is canceled.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 취소되면 발생합니다.
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has completed.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 끝나면 발생합니다.
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) is first created.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 처음으로 생성되면 시작합니다.
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) has actually started.
+  - : [CSS 트랜지션](/ko/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)이 시작하면 발생합니다.
 
 ### Deprecated events
 

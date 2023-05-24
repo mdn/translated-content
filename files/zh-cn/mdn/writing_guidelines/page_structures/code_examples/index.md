@@ -184,5 +184,5 @@ p.fancy {
 
 ### GitHub 在线实例指引
 
-- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
+- 显然，你需要先把一个合适的代码示例放置到 [MDN GitHub 组织](https://github.com/mdn/)上，这需要使用 Git 来完成。如果你不熟悉 Git，请查看[如何使用 GitHub Pages？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)文章，以及[准备添加数据](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#为添加数据做好准备)以了解更进一步的用途。
 - 你的代码样本需要适合展示你所要展示的内容——它应该包含一个简单的例子，能很好地完成一件事，里面不应该有攻击性的内容，并且应该遵循 MDN [代码示例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
