@@ -5,24 +5,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 {{JSRef}}
 
-**`isPrototypeOf()`** 方法用于测试一个对象是否存在于另一个对象的原型链上。
+**`isPrototypeOf()`** 方法用于检查一个对象是否存在于另一个对象的原型链中。
 
-> **备注：** `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "`object instanceof AFunction`"中，`object` 的原型链是针对 `AFunction.prototype` 进行检查的，而不是针对 `AFunction` 本身。
+> **备注：** `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 "`object instanceof AFunction`"中，会检查`object` 的原型链是否与`AFunction.prototype`匹配，而不是与`AFunction`本身匹配。
+
+{{EmbedInteractiveExample("pages/js/object-isprototypeof.html", "taller")}}
 
 ## 语法
 
 ```plain
-prototypeObj.isPrototypeOf(object)
+isPrototypeOf(object)
 ```
 
 ### 参数
 
 - `object`
-  - : 在该对象的原型链上搜寻
+  - : 要搜索其原型链的对象
 
 ### 返回值
 
-{{jsxref("Boolean")}}，表示调用对象是否在另一个对象的原型链上。
+{{jsxref("Boolean")}}，表示调用对象(`this`)是否位于`object`的原型链中。当`object`不是对象时，直接返回`false`。
 
 ### 报错
 
@@ -31,35 +33,82 @@ prototypeObj.isPrototypeOf(object)
 
 ## 描述
 
-`isPrototypeOf()` 方法允许你检查一个对象是否存在于另一个对象的原型链上。
+所有继承自`Object.prototype`的对象（除了null原型的对象）都继承了`isPrototypeOf()`方法。该方法允许您检查对象是否存在于另一个对象的原型链中。如果参数`object`不是对象，该方法直接返回false。否则，在`object`的原型链中搜索`this`值，直到达到链的末尾或找到`this`值为止。
 
 ## 示例
 
-本示例展示了 `Baz.prototype`, `Bar.prototype`, `Foo.prototype` 和 `Object.prototype` 在 `baz` 对象的原型链上：
+### 使用isPrototypeOf()
+
+本示例展示了 `Baz.prototype`, `Bar.prototype`, `Foo.prototype` 和 `Object.prototype` 存在于对象 `baz` 的原型链中：
 
 ```js
-function Foo() {}
-function Bar() {}
-function Baz() {}
+class Foo {}
+class Bar extends Foo {}
+class Baz extends Bar {}
 
-Bar.prototype = Object.create(Foo.prototype);
-Baz.prototype = Object.create(Bar.prototype);
+const foo = new Foo();
+const bar = new Bar();
+const baz = new Baz();
 
-var baz = new Baz();
-
+// 原型链:
+// foo: Foo --> Object
+// bar: Bar --> Foo --> Object
+// baz: Baz --> Bar --> Foo --> Object
 console.log(Baz.prototype.isPrototypeOf(baz)); // true
+console.log(Baz.prototype.isPrototypeOf(bar)); // false
+console.log(Baz.prototype.isPrototypeOf(foo)); // false
 console.log(Bar.prototype.isPrototypeOf(baz)); // true
+console.log(Bar.prototype.isPrototypeOf(foo)); // false
 console.log(Foo.prototype.isPrototypeOf(baz)); // true
+console.log(Foo.prototype.isPrototypeOf(bar)); // true
 console.log(Object.prototype.isPrototypeOf(baz)); // true
 ```
 
-如果你有段代码只在需要操作继承自一个特定的原型链的对象的情况下执行，同 {{jsxref("Operators/instanceof", "instanceof")}} 操作符一样 `isPrototypeOf()` 方法就会派上用场，例如，为了确保某些方法或属性将位于对象上。
+isPrototypeOf()方法同instanceof运算符一样，在处理从特定原型链继承的对象的代码时非常方便。例如可以确保某些方法或属性将存在于该对象上。
 
 例如，检查 `baz` 对象是否继承自 `Foo.prototype`：
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {
-  // do something safe
+  // 执行安全操作
+}
+```
+
+然而，`Foo.prototype`存在于`baz`的原型链中并不意味着`baz`是使用`Foo`作为其构造函数创建的。例如，`baz`可以直接将`Foo.prototype`作为其原型。在这种情况下，如果您的代码从`baz`中读取`Foo`的私有属性，仍然会失败：
+
+```js
+class Foo {
+  #value = "foo";
+  static getValue(x) {
+    return x.#value;
+  }
+}
+
+const baz = { __proto__: Foo.prototype };
+
+if (Foo.prototype.isPrototypeOf(baz)) {
+  console.log(Foo.getValue(baz)); // 类型错误：无法从未声明的对象中读取私有属性#value
+}
+```
+
+对于{{jsxref("Operators/instanceof", "instanceof")}}也是同样的情况。如果您需要以安全的方式读取私有属性，可以使用{{jsxref("Operators/in", "in")}}操作符进行检查。
+
+```js
+class Foo {
+  #value = "foo";
+  static getValue(x) {
+    return x.#value;
+  }
+  static isFoo(x) {
+    return #value in x;
+  }
+}
+
+const baz = { __proto__: Foo.prototype };
+
+if (Foo.isFoo(baz)) {
+  // 不会运行，因为baz不是Foo
+  console.log(Foo.getValue(baz));
 }
 ```
 
@@ -76,4 +125,4 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
+- [`Inheritance and the prototype chain`](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
