@@ -1553,7 +1553,7 @@
     "modified": "2020-09-08T06:46:28.361Z",
     "contributors": ["mykhailo.pradosh", "Sireler", "zumgluck", "Sturmtiger"]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_Github_pages": {
+  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
     "modified": "2020-07-16T22:35:52.047Z",
     "contributors": ["slychai85"]
   },
@@ -10318,10 +10318,6 @@
       "icokie"
     ]
   },
-  "Web/HTML/Element/applet": {
-    "modified": "2019-03-23T22:06:37.540Z",
-    "contributors": ["mars485"]
-  },
   "Web/HTML/Element/area": {
     "modified": "2020-10-15T22:07:14.955Z",
     "contributors": ["SedovDP", "A-Ostrovny", "AnatoliyVolkov"]
@@ -17803,6 +17799,10 @@
   "orphaned/Web/Guide/Unicode_Bidrectional_Text_Algorithm": {
     "modified": "2020-09-02T08:30:27.156Z",
     "contributors": ["bogpok"]
+  },
+  "orphaned/Web/HTML/Element/applet": {
+    "modified": "2019-03-23T22:06:37.540Z",
+    "contributors": ["mars485"]
   },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",

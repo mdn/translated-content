@@ -1,6 +1,6 @@
 ---
 title: Как использовать GitHub Pages?
-slug: Learn/Common_questions/Tools_and_setup/Using_Github_pages
+slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 tags:
   - Beginner
   - GitHub
