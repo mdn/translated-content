@@ -58,7 +58,7 @@ Si se provee `compareFunction`, los elementos del array son ordenados de acuerdo
 Entonces, la función de comparación tiene la siguiente forma:
 
 ```js
-const compare = (a, b) => {
+function compare(a, b) {
   if (a es menor que b según criterio de ordenamiento) {
     return -1;
   }
@@ -67,7 +67,7 @@ const compare = (a, b) => {
   }
   // a debe ser igual b
   return 0;
-};
+}
 ```
 
 Para comparar números en lugar de strings, la función de comparación puede simplemente restar `b` de `a`. La siguiente función ordena el array de modo ascendente:
@@ -131,7 +131,7 @@ Un array de elementos numéricos, usando una función de comparación:
 
 ```js
 const arr = [40, 1, 5, 200];
-const comparar = (a, b) => a - b;
+function comparar ( a, b ){ return a - b; }
 arr.sort(comparar);  // [1, 5, 40, 200]
 ```
 
@@ -155,7 +155,9 @@ El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparac
 
 ```js
 const arr = ['80', '9', '700', 40, 1, 5, 200];
-const comparar = (a, b) => a - b;
+function comparar(a, b) {
+  return a - b;
+}
 
 console.log('original:', arr.join());
 console.log('ordenado sin función:', arr.sort());
