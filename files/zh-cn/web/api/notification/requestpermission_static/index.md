@@ -5,7 +5,7 @@ slug: Web/API/Notification/requestPermission_static
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
-> **注意：** Safari 仍然使用回调语法来获取权限。阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的一个很好的例子，说明如何检测这个并合适地运行代码。
+> **备注：** Safari 仍然使用回调语法来获取权限。阅读 [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的一个很好的例子，说明如何检测这个并合适地运行代码。
 
 {{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法从用户当前来源请求权限以显示通知。
 
