@@ -28,7 +28,7 @@ input:indeterminate {
 
 ## 示例
 
-### Checkbox & radio button
+### 复选框和单选按钮
 
 这个示例将特殊样式应用于与不确定表单字段关联的标签。
 
@@ -90,7 +90,7 @@ for (let i = 0; i < inputs.length; i++) {
 
 #### 结果
 
-{{EmbedLiveSample('Checkbox_radio_button', 'auto', 230)}}
+{{EmbedLiveSample('复选框和单选按钮', 'auto', 230)}}
 
 ### 进度条
 
