@@ -65,7 +65,7 @@ window.addEventListener("message", (event) => {
 
 ### 安全な共有メモリーによるメッセージ
 
-`postMessage()` が {{jsxref("SharedArrayBuffer")}} オブジェクトを扱った際ににエラーが発生した場合は、サイトのサイト間分離を適切に行う必要があります。共有メモリーは、 2 つの HTTP ヘッダーの後ろにゲートされています。
+`postMessage()` が {{jsxref("SharedArrayBuffer")}} オブジェクトを扱った際にエラーが発生した場合は、サイトのサイト間分離を適切に行う必要があります。共有メモリーは、 2 つの HTTP ヘッダーの後ろにゲートされています。
 
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} で `same-origin` を値に指定する（オリジンを攻撃者から保護する）
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} で `require-corp` を値に指定する（このオリジンから被害者を守る）
