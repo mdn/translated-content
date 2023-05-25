@@ -20,7 +20,7 @@ isPrototypeOf(object)
 ### 参数
 
 - `object`
-  - : 要搜索其原型链的对象
+  - : 要搜索其原型链的对象。
 
 ### 返回值
 
