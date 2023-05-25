@@ -63,7 +63,7 @@ Object.isFrozen(nonWritable); // false
 // 把这个属性改为不可配置，会让这个对象成为冻结对象。
 Object.defineProperty(nonWritable, "e", {
   configurable: false,
-}); // make non-configurable
+}); // 令其不可配置
 Object.isFrozen(nonWritable); // true
 
 // 一个不可扩展的对象，拥有一个不可配置但可写的属性，则它也是非冻结的。
@@ -114,10 +114,10 @@ Object.isSealed(frozen); // true
 
 ```js
 Object.isFrozen(1);
-// TypeError: 1 is not an object (ES5 代码)
+// TypeError: 1 is not an object（ES5 代码）
 
 Object.isFrozen(1);
-// true                          (ES2015 代码)
+// true                         （ES2015 代码）
 ```
 
 ## 规范
