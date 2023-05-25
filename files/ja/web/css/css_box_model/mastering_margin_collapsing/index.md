@@ -1,6 +1,6 @@
 ---
 title: マージンの相殺の習得
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
 {{CSSRef}}

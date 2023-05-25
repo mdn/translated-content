@@ -1,6 +1,6 @@
 ---
 title: フレックスアイテムの並べ替え
-slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 ---
 
 {{CSSRef}}

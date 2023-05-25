@@ -1,6 +1,6 @@
 ---
 title: CSS 条件付き規則
-slug: Web/CSS/CSS_Conditional_Rules
+slug: Web/CSS/CSS_conditional_rules
 ---
 
 {{CSSRef}}

@@ -16435,117 +16435,6 @@
     "modified": "2020-10-15T22:00:40.104Z",
     "contributors": ["mfuji09"]
   },
-  "Web/CSS/CSS_Animations": {
-    "modified": "2020-10-15T21:40:14.685Z",
-    "contributors": ["mfuji09", "teoli"]
-  },
-  "Web/CSS/CSS_Animations/Tips": {
-    "modified": "2019-10-26T02:04:52.443Z",
-    "contributors": ["Wind1808", "tositeru"]
-  },
-  "Web/CSS/CSS_Animations/Using_CSS_animations": {
-    "modified": "2020-09-25T12:38:38.849Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "SphinxKnight",
-      "takahashim",
-      "kubosho_",
-      "teoli",
-      "Marsf",
-      "FumioNonaka",
-      "ethertank",
-      "yyss"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-04-17T14:34:56.933Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
-    "modified": "2019-03-18T21:41:18.820Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
-    "modified": "2020-02-13T14:54:34.325Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
-    "modified": "2020-09-05T23:29:58.757Z",
-    "contributors": ["mfuji09", "mrstork", "ethertank", "sii"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-18T21:28:58.186Z",
-    "contributors": [
-      "sutara79",
-      "tacamula",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Piro"
-    ]
-  },
-  "Web/CSS/CSS_Basic_User_Interface": {
-    "modified": "2019-04-18T11:39:34.177Z",
-    "contributors": ["mfuji09", "ExE-Boss"]
-  },
-  "Web/CSS/CSS_Box_Alignment": {
-    "modified": "2020-05-22T07:14:00.686Z",
-    "contributors": ["mfuji09", "applejam9029", "irenesmith"]
-  },
-  "Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables": {
-    "modified": "2019-03-18T21:27:16.419Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox": {
-    "modified": "2020-02-09T02:51:25.132Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout": {
-    "modified": "2019-03-18T21:27:23.606Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Box_Model": {
-    "modified": "2019-03-23T22:44:01.435Z",
-    "contributors": ["mfuji09", "sii", "teoli"]
-  },
-  "Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model": {
-    "modified": "2020-08-30T02:11:15.284Z",
-    "contributors": ["mfuji09", "SphinxKnight", "yyss", "ethertank", "Marsf"]
-  },
-  "Web/CSS/CSS_Box_Model/Mastering_margin_collapsing": {
-    "modified": "2020-08-13T11:15:28.485Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "teoli",
-      "fscholz",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
-  "Web/CSS/CSS_Charsets": {
-    "modified": "2020-10-15T22:04:01.150Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Colors": {
-    "modified": "2020-10-15T22:04:14.476Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Colors/Applying_color": {
-    "modified": "2020-12-08T11:01:26.496Z",
-    "contributors": [
-      "MikuroXina",
-      "mizukichandayo",
-      "mfuji09",
-      "piza_suki",
-      "karaage-kun"
-    ]
-  },
-  "Web/CSS/CSS_Colors/Color_picker_tool": {
-    "modified": "2019-03-18T21:32:04.433Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/CSS_Columns": {
     "modified": "2020-02-08T14:37:48.481Z",
     "contributors": ["mfuji09", "Sebastianz"]
@@ -16584,76 +16473,6 @@
       "Foximer"
     ]
   },
-  "Web/CSS/CSS_Conditional_Rules": {
-    "modified": "2020-10-15T22:04:05.407Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Containment": {
-    "modified": "2020-08-09T12:00:22.203Z",
-    "contributors": ["isudzumi"]
-  },
-  "Web/CSS/CSS_Counter_Styles": {
-    "modified": "2020-10-15T22:04:14.575Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
-    "modified": "2020-08-18T01:07:42.151Z",
-    "contributors": ["mfuji09", "LuckyWind_sck", "ethertank", "sosleepy", "sii"]
-  },
-  "Web/CSS/CSS_Display": {
-    "modified": "2020-10-15T22:01:55.406Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout": {
-    "modified": "2020-08-14T12:35:50.485Z",
-    "contributors": [
-      "mfuji09",
-      "dynamis",
-      "reppets",
-      "sii",
-      "hashedhyphen",
-      "fscholz"
-    ]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container": {
-    "modified": "2019-12-09T15:33:55.799Z",
-    "contributors": ["mfuji09", "harupiyo", "dynamis", "reppets"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
-    "modified": "2020-08-14T09:23:43.070Z",
-    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
-    "modified": "2020-08-14T10:39:21.091Z",
-    "contributors": [
-      "mfuji09",
-      "zerkshohei",
-      "sohopro",
-      "dynamis",
-      "reppets",
-      "dskmori"
-    ]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax": {
-    "modified": "2019-03-18T21:35:12.667Z",
-    "contributors": ["mfuji09", "Uemmra3"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items": {
-    "modified": "2019-05-06T02:22:31.639Z",
-    "contributors": ["iakio", "mfuji09"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items": {
-    "modified": "2020-10-16T12:48:01.513Z",
-    "contributors": ["mfuji09", "reppets"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods": {
-    "modified": "2019-11-15T10:39:22.790Z",
-    "contributors": ["mfuji09", "dynamis", "reppets"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
-    "modified": "2019-03-18T21:27:50.748Z",
-    "contributors": ["sutara79"]
-  },
   "Web/CSS/CSS_Flow_Layout": {
     "modified": "2019-03-18T21:32:57.417Z",
     "contributors": ["mfuji09"]
@@ -16676,22 +16495,6 @@
   },
   "Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts": {
     "modified": "2020-08-09T11:07:11.560Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Fonts": {
-    "modified": "2019-09-29T01:14:39.323Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/CSS_Fonts/OpenType_fonts_guide": {
-    "modified": "2019-09-26T04:09:32.053Z",
-    "contributors": ["cmplstofB"]
-  },
-  "Web/CSS/CSS_Fonts/Variable_Fonts_Guide": {
-    "modified": "2020-09-25T11:49:11.515Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
-  "Web/CSS/CSS_Fragmentation": {
-    "modified": "2019-03-18T21:34:51.102Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/CSS_Functions": {
@@ -16983,6 +16786,207 @@
       "ethertank"
     ]
   },
+  "Web/CSS/CSS_animations": {
+    "modified": "2020-10-15T21:40:14.685Z",
+    "contributors": ["mfuji09", "teoli"]
+  },
+  "Web/CSS/CSS_animations/Tips": {
+    "modified": "2019-10-26T02:04:52.443Z",
+    "contributors": ["Wind1808", "tositeru"]
+  },
+  "Web/CSS/CSS_animations/Using_CSS_animations": {
+    "modified": "2020-09-25T12:38:38.849Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "SphinxKnight",
+      "takahashim",
+      "kubosho_",
+      "teoli",
+      "Marsf",
+      "FumioNonaka",
+      "ethertank",
+      "yyss"
+    ]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders": {
+    "modified": "2020-04-17T14:34:56.933Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Border-image_generator": {
+    "modified": "2019-03-18T21:41:18.820Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator": {
+    "modified": "2020-02-13T14:54:34.325Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images": {
+    "modified": "2020-09-05T23:29:58.757Z",
+    "contributors": ["mfuji09", "mrstork", "ethertank", "sii"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+    "modified": "2019-03-18T21:28:58.186Z",
+    "contributors": [
+      "sutara79",
+      "tacamula",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Piro"
+    ]
+  },
+  "Web/CSS/CSS_basic_user_interface": {
+    "modified": "2019-04-18T11:39:34.177Z",
+    "contributors": ["mfuji09", "ExE-Boss"]
+  },
+  "Web/CSS/CSS_box_alignment": {
+    "modified": "2020-05-22T07:14:00.686Z",
+    "contributors": ["mfuji09", "applejam9029", "irenesmith"]
+  },
+  "Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables": {
+    "modified": "2019-03-18T21:27:16.419Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox": {
+    "modified": "2020-02-09T02:51:25.132Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout": {
+    "modified": "2019-03-18T21:27:23.606Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_box_model": {
+    "modified": "2019-03-23T22:44:01.435Z",
+    "contributors": ["mfuji09", "sii", "teoli"]
+  },
+  "Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model": {
+    "modified": "2020-08-30T02:11:15.284Z",
+    "contributors": ["mfuji09", "SphinxKnight", "yyss", "ethertank", "Marsf"]
+  },
+  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+    "modified": "2020-08-13T11:15:28.485Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "teoli",
+      "fscholz",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
+  "Web/CSS/CSS_charsets": {
+    "modified": "2020-10-15T22:04:01.150Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_colors": {
+    "modified": "2020-10-15T22:04:14.476Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_colors/Applying_color": {
+    "modified": "2020-12-08T11:01:26.496Z",
+    "contributors": [
+      "MikuroXina",
+      "mizukichandayo",
+      "mfuji09",
+      "piza_suki",
+      "karaage-kun"
+    ]
+  },
+  "Web/CSS/CSS_colors/Color_picker_tool": {
+    "modified": "2019-03-18T21:32:04.433Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_compositing_and_blending": {
+    "modified": "2020-10-15T22:06:15.985Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_conditional_rules": {
+    "modified": "2020-10-15T22:04:05.407Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_containment": {
+    "modified": "2020-08-09T12:00:22.203Z",
+    "contributors": ["isudzumi"]
+  },
+  "Web/CSS/CSS_counter_styles": {
+    "modified": "2020-10-15T22:04:14.575Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_counter_styles/Using_CSS_counters": {
+    "modified": "2020-08-18T01:07:42.151Z",
+    "contributors": ["mfuji09", "LuckyWind_sck", "ethertank", "sosleepy", "sii"]
+  },
+  "Web/CSS/CSS_display": {
+    "modified": "2020-10-15T22:01:55.406Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_flexible_box_layout": {
+    "modified": "2020-08-14T12:35:50.485Z",
+    "contributors": [
+      "mfuji09",
+      "dynamis",
+      "reppets",
+      "sii",
+      "hashedhyphen",
+      "fscholz"
+    ]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
+    "modified": "2019-12-09T15:33:55.799Z",
+    "contributors": ["mfuji09", "harupiyo", "dynamis", "reppets"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
+    "modified": "2020-08-14T09:23:43.070Z",
+    "contributors": ["mfuji09", "Uemmra3", "sutara79"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+    "modified": "2020-08-14T10:39:21.091Z",
+    "contributors": [
+      "mfuji09",
+      "zerkshohei",
+      "sohopro",
+      "dynamis",
+      "reppets",
+      "dskmori"
+    ]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis": {
+    "modified": "2019-03-18T21:35:12.667Z",
+    "contributors": ["mfuji09", "Uemmra3"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items": {
+    "modified": "2019-05-06T02:22:31.639Z",
+    "contributors": ["iakio", "mfuji09"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Ordering_flex_items": {
+    "modified": "2020-10-16T12:48:01.513Z",
+    "contributors": ["mfuji09", "reppets"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods": {
+    "modified": "2019-11-15T10:39:22.790Z",
+    "contributors": ["mfuji09", "dynamis", "reppets"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox": {
+    "modified": "2019-03-18T21:27:50.748Z",
+    "contributors": ["sutara79"]
+  },
+  "Web/CSS/CSS_fonts": {
+    "modified": "2019-09-29T01:14:39.323Z",
+    "contributors": ["mfuji09"]
+  },
+  "Web/CSS/CSS_fonts/OpenType_fonts_guide": {
+    "modified": "2019-09-26T04:09:32.053Z",
+    "contributors": ["cmplstofB"]
+  },
+  "Web/CSS/CSS_fonts/Variable_fonts_guide": {
+    "modified": "2020-09-25T11:49:11.515Z",
+    "contributors": ["mfuji09", "silverskyvicto"]
+  },
+  "Web/CSS/CSS_fragmentation": {
+    "modified": "2019-03-18T21:34:51.102Z",
+    "contributors": ["mfuji09"]
+  },
   "Web/CSS/Cascade": {
     "modified": "2020-04-19T05:24:20.123Z",
     "contributors": ["mfuji09", "isdh"]
@@ -17002,10 +17006,6 @@
   "Web/CSS/Comments": {
     "modified": "2019-03-23T23:33:39.632Z",
     "contributors": ["mfuji09", "ethertank"]
-  },
-  "Web/CSS/Compositing_and_Blending": {
-    "modified": "2020-10-15T22:06:15.985Z",
-    "contributors": ["mfuji09"]
   },
   "Web/CSS/Containing_block": {
     "modified": "2020-10-17T13:41:06.755Z",

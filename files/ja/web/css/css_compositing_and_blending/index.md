@@ -1,6 +1,7 @@
 ---
 title: 合成と混合
-slug: Web/CSS/Compositing_and_Blending
+slug: Web/CSS/CSS_compositing_and_blending
+original_slug: Web/CSS/Compositing_and_Blending
 ---
 
 {{CSSRef}}
