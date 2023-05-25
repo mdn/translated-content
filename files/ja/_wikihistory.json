@@ -30718,10 +30718,6 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": ["Wind1808"]
   },
-  "conflicting/Web/API/MediaDevices/getUserMedia": {
-    "modified": "2019-03-18T21:40:37.855Z",
-    "contributors": ["e53e04ac"]
-  },
   "conflicting/Web/API/SyncEvent": {
     "modified": "2020-10-15T22:32:47.070Z",
     "contributors": ["eltociear"]

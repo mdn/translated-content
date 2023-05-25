@@ -5,7 +5,7 @@ slug: Web/CSS/font-variation-settings
 
 {{CSSRef}}
 
-**`font-variation-settings`** CSS 属性提供了对 [variable font](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) 特征的低级控制，通过指定要更改的特征的四个字母轴名称及其值。
+**`font-variation-settings`** CSS 属性提供了对 [variable font](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) 特征的低级控制，通过指定要更改的特征的四个字母轴名称及其值。
 
 {{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
 
@@ -63,7 +63,7 @@ Custom axes can be anything the font designer wants to vary in their font, for e
 
 ## Examples
 
-See below for interactive examples demonstrating the registered axes. You can find a number of other variable fonts examples at our [Variable fonts guide](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide), [v-fonts.com](https://v-fonts.com/), and [axis-praxis.org](https://www.axis-praxis.org/).
+See below for interactive examples demonstrating the registered axes. You can find a number of other variable fonts examples at our [Variable fonts guide](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), [v-fonts.com](https://v-fonts.com/), and [axis-praxis.org](https://www.axis-praxis.org/).
 
 > **警告：** In order to use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS prior to 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
@@ -91,6 +91,6 @@ The following live example's CSS can be edited to allow you to play with font sl
 
 ## See also
 
-- [Variable fonts guide](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [Variable fonts guide](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [OpenType Font Variations Overview](https://www.microsoft.com/typography/otspec180/otvaroverview.htm)
 - [OpenType Design-Variation Axis Tag Registry](https://www.microsoft.com/typography/otspec/dvaraxisreg.htm)

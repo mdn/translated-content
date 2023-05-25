@@ -33,6 +33,6 @@ slug: Glossary/Main_Axis
 
 ### 拓展阅读
 
-- CSS 弹性盒指南：*[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)*
-- CSS 弹性盒指南：*[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)*
-- CSS 弹性盒指南：*[控制弹性元素在主轴上的占比](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)*
+- CSS 弹性盒指南：*[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)*
+- CSS 弹性盒指南：*[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)*
+- CSS 弹性盒指南：*[控制弹性元素在主轴上的占比](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)*

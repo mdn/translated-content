@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 數個單位也能被放進 grid cell、或是區域的一部分相互重疊。我們可以透過 {{cssxref("z-index")}} 控制該分層。
 
-格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
+格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
 
 ## 格線容器
 

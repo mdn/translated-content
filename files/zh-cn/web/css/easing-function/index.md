@@ -211,6 +211,6 @@ steps(0, jump-none)
 
 ## See also
 
-- [CSS Animations](/zh-CN/docs/Web/CSS/CSS_Animations)
+- [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations)
 - [CSS Transitions](/zh-CN/docs/Web/CSS/CSS_Transitions)
 - [cubic-bezier](http://cubic-bezier.com/)
