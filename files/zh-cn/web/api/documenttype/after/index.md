@@ -1,5 +1,5 @@
 ---
-title: 文档类型：after() 方法
+title: DocumentType：after() 方法
 slug: Web/API/DocumentType/after
 ---
 
@@ -49,6 +49,6 @@ myDoc.childNodes;
 
 {{Compat}}
 
-## 参见 
+## 参见
 
 - {{domxref("DocumentType.before()")}}
