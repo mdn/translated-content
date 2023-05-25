@@ -28,4 +28,4 @@ slug: Web/CSS/CSS_Transitions
 
 ## 参见
 
-- 与 CSS 过渡相关的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)为动画性属性提供了更精细的控制
+- 与 CSS 过渡相关的 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为动画性属性提供了更精细的控制

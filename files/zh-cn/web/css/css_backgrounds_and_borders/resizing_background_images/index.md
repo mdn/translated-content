@@ -1,6 +1,6 @@
 ---
 title: Scaling background images
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
 

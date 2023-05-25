@@ -5,11 +5,11 @@ slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 
 {{APIRef("CSS Containment")}}
 
-若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_Containment#跳过其内容)，则 {{DOMXref("ContentVisibilityAutoStateChangeEvent")}} 接口的只读属性 `skipped` 返回 `true`，否则返回 `false`。
+若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)，则 {{DOMXref("ContentVisibilityAutoStateChangeEvent")}} 接口的只读属性 `skipped` 返回 `true`，否则返回 `false`。
 
 ## 值
 
-布尔值。若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_Containment#跳过其内容)则返回 `true`，否则返回 `false`。
+布尔值。若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)则返回 `true`，否则返回 `false`。
 
 ## 示例
 
@@ -49,6 +49,6 @@ function stopCanvasUpdates(canvas) {
 ## 参见
 
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件
-- [CSS 局限](/en-US/docs/Web/CSS/CSS_Containment)
+- [CSS 局限](/en-US/docs/Web/CSS/CSS_containment)
 - {{CSSXref("content-visibility")}} 属性
 - {{CSSXref("contain")}} 属性

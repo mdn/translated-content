@@ -342,7 +342,7 @@ if (input.validity.valid && input.type === 'time') {
 - `午後 3 時`
 - etc.
 
-これを回避する方法の一つとして、 `time` 入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けるという方法があります。 `time` 入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときにに使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
+これを回避する方法の一つとして、 `time` 入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けるという方法があります。 `time` 入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときに使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
 
 ```html
 <form>
