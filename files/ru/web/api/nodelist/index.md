@@ -23,13 +23,13 @@ translation_of: Web/API/NodeList
 
 ## Методы
 
-- `item ( idx )`
-  - : Возвращает элемент из списка по его индексу или `null`, если индекс выходит за границы допустимого диапазона. Может быть использован как альтернатива `nodeList[idx]`, возвращающему `undefined` при недопустимом `idx.`
+- `item (index)`
+  - : Возвращает элемент из списка по его индексу или `null`, если индекс выходит за границы допустимого диапазона. В качестве альтернативы этого метода может быть использован `nodeList[index]`, возвращающий `undefined` при недопустимом `index.`
 - `entries()`
   - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все пары ключ/значение, содержащиеся в объекте.
 - `forEach()`
   - : Выполняет указанную функцию один раз для каждого элемента `NodeList`
-- keys()
+- `keys()`
   - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все ключи каждой пары ключ/значение, содержащейся в объекте.
 - `values()`
   - : Возвращает {{jsxref("Iteration_protocols","iterator")}}, позволяя перебрать все значения каждой пары ключ/значение, содержащейся в объекте.
@@ -41,11 +41,11 @@ translation_of: Web/API/NodeList
 В определённых случаях `NodeList` может являться _динамической коллекцией_. Это означает, что любые изменения в DOM тут же отражаются на коллекции. Примером подобной коллекции является {{domxref("Node.childNodes")}}:
 
 ```js
-var parent = document.getElementById('parent');
-var child_nodes = parent.childNodes;
-console.log(child_nodes.length); // пусть равно "2"
-parent.appendChild(document.createElement('div'));
-console.log(child_nodes.length); // выведет "3"
+const parent = document.getElementById('parent');
+const childNodes = parent.childNodes;
+console.log(childNodes.length); // пусть равно "2"
+parent.appendChild(document.createElement('div')); // добавляем новый div
+console.log(childNodes.length); // выведет "3"
 ```
 
 В других случаях `NodeList` является _статической коллекцией_. Это означает, что любые изменения в DOM не отражаются на его содержании. К примеру, {{domxref("document.querySelectorAll")}} возвращает статический `NodeList`.
@@ -66,75 +66,37 @@ console.log(child_nodes.length); // выведет "3"
 
 `myNodeList --> NodeList.prototype --> Object.prototype --> null`
 
-`NodeList.prototype` содержит метод `item`, но никак не остальные методы `Array.prototype`, поэтому они и не могут быть использованы с `NodeLists`.
-
-#### Обходные пути
-
-Один из способов решения данной проблемы — это копирование методов из `Array.prototype` в `NodeList.prototype`. Однако необходимо отдавать себе отчёт в том, что [расширение объектов DOM опасно, особенно в старых версиях Internet Explorer (6, 7, 8)](http://perfectionkills.com/whats-wrong-with-extending-the-dom/).
-
-```js
-var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
-
-arrayMethods.forEach( attachArrayMethodsToNodeList );
-
-function attachArrayMethodsToNodeList(methodName)
-{
-  if(methodName !== "length") {
-    NodeList.prototype[methodName] = Array.prototype[methodName];
-  }
-};
-
-var divs = document.getElementsByTagName( 'div' );
-var firstDiv = divs[ 0 ];
-
-firstDiv.childNodes.forEach(function( divChild ){
-  divChild.parentNode.style.color = '#0F0';
-});
-```
-
-Другой подход — расширение непосредственно объектов DOM:
-
-```js
-var forEach = Array.prototype.forEach;
-
-var divs = document.getElementsByTagName( 'div' );
-var firstDiv = divs[ 0 ];
-
-forEach.call(firstDiv.childNodes, function( divChild ){
-  divChild.parentNode.style.color = '#0F0';
-});
-```
-
-> **Примечание:** Стоит отметить, что передача объектов среды (такого как `NodeList`) через `this` native-методу (такому как `forEach`) гарантированно работает не во всех браузерах и точно не работает в некоторых.
+`NodeList.prototype` содержит методы `forEach`, `item`, но никак не остальные методы `Array.prototype`, поэтому они и не могут быть использованы с `NodeLists`.
 
 ## Пример
 
 Элементы в `NodeList`, можно обработать следующим образом:
 
 ```js
-for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // Вызов myNodeList.item(i) необязателен в JavaScript
+for (let i = 0; i < myNodeList.length; i++) {
+  const item = myNodeList[i];
 }
 ```
 
-Не следует использовать конструкции [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in) или [`for each...in`](/en-US/docs/JavaScript/Reference/Statements/for_each...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
+Не следует использовать конструкции [`for...in`](/en-US/docs/JavaScript/Reference/Statements/for...in) для перечисления элементов списка. Эти способы также перечислят и свойства `length` и `item`, что приведёт к логическим ошибкам в случае, если скрипт ожидает только объекты {{domxref("node")}}. Также `for..in` может перечислять свойства в любом порядке.
 
-Циклы [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` в браузерах, в которых поддерживается `for...of` (например, Firefox 13 или выше):
+Циклы [`for...of`](/en-US/docs/JavaScript/Reference/Statements/for...of) корректно перечисляют все объекты внутри `NodeList` :
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
-for (var item of list) {
+const list = document.querySelectorAll('input[type=checkbox]');
+for (const item of list) {
   item.checked = true;
 }
 ```
 
 ## Конвертирование `NodeList` в `Array`
 
-Иногда удобнее работать с содержимым `NodeList`, используя методы `Array`. Ниже приведена техника преобразования `NodeList` к `Array`:
+Иногда удобнее работать с содержимым `NodeList`, используя методы `Array`. Ниже приведены способы преобразования `NodeList` к `Array`:
 
 ```js
-var div_list = document.querySelectorAll('div'); // returns NodeList
-var div_array = Array.prototype.slice.call(div_list); // преобразует NodeList в Array
+const list = document.querySelectorAll('div'); // возвращает NodeList
+const array1 = Array.from(list); // преобразует NodeList в Array
+const array2 = [...list]; // преобразует NodeList в Array
 ```
 
 ## Спецификация

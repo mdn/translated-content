@@ -1,6 +1,6 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -28,9 +28,9 @@ slug: Web/CSS/CSS_Animations
 
 ## Guides
 
-- [Detecting CSS animation support](/zh-TW/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/docs/Web/CSS/CSS_animations/Detecting_CSS_animation_support)
   - : Describes a technique for detecting if the browser supports CSS animations.
-- [Using CSS animations](/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.
 
 ## Specifications

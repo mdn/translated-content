@@ -213,4 +213,4 @@ inputElem.addEventListener('change', () => {
 
 - [CSS 属性值与单位教程](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
 - [CSS 属性值与单位参考](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

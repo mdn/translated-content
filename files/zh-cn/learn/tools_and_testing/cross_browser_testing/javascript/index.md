@@ -208,7 +208,7 @@ request.onload = function() {
 - 为了避免加载超过你需要的 JavaScript，请使用 [Browserify](https://browserify.org/) 这样的解决方案将你的脚本捆绑成一个文件。一般来说，减少 HTTP 请求的数量对性能非常有利。
 - 在你将文件加载到你的生产服务器之前，通过最小化使你的文件变得更小。最小化将所有的代码压缩到一个巨大的单行中，使其占用的文件大小大大减少。这很难看，但当它完成后，你不需要阅读它！这最好使用像 [Uglify](https://github.com/mishoo/UglifyJS) 这样的最小化工具来完成（也有一个在线版本，见[JSCompress.com](https://jscompress.com/)）。
 - 当使用 API 时，确保在不使用 API 特性时将其关闭；一些 API 调用可能非常耗费处理能力。例如，当显示一个视频流时，确保在你看不到它时将其关闭。当使用重复的地理定位调用跟踪设备的位置时，确保在用户停止使用时将其关闭。
-- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)这样的本地浏览器功能（或新生的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
+- 对于性能来说，动画的成本确实很高。很多 JavaScript 库提供了由 JavaScript 编程的动画功能，但通过像 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)这样的本地浏览器功能（或新生的 [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)）做动画要比 JavaScript 更具成本效益。阅读 Brian Birtles 的 [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/)，了解一些关于动画为何开销大的真正有用的理论，关于如何提高动画性能的提示，以及关于 Web 动画 API 的信息。
 
 > **备注：** Addy Osmani 的 [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) 包含了大量的细节和一些提升 JavaScript 性能的优秀技巧。
 

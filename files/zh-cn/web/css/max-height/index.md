@@ -80,5 +80,5 @@ Ensure that elements set with a `max-height` are not truncated and/or do not obs
 
 ## See also
 
-- [The box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{Cssxref("height")}}, {{Cssxref("min-height")}}

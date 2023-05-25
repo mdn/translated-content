@@ -1,6 +1,6 @@
 ---
 title: CSS 计数器样式
-slug: Web/API/CSS_Counter_Styles
+slug: Web/API/CSS_counter_styles
 ---
 
 {{DefaultAPISidebar("CSS Counter Styles")}}
@@ -22,4 +22,4 @@ CSS 计数器样式模块允许自定义计数器样式，可以用于 CSS 列�
 
 ## 参见
 
-- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)

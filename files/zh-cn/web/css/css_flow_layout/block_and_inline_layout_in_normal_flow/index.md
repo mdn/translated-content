@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-你可以在我们的文章《[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)》中阅读更多关于这一部分的内容。
+你可以在我们的文章《[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)》中阅读更多关于这一部分的内容。
 
 > **备注：** 如果不确定是否发生了外边距折叠，你可以使用浏览器的开发人员工具查看盒模型。准确的外边距值可以帮助你判断是否有外边距折叠发生。
 >
@@ -101,7 +101,7 @@ slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 
 ## 参见
 
-- [CSS Basic Box Model](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [CSS Basic Box Model](/zh-CN/docs/Web/CSS/CSS_box_model)
 - _[Normal Flow](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
 - [Inline elements](/zh-CN/docs/Glossary/Inline-level_content)
 - [Block-level elements](/zh-CN/docs/Glossary/Block-level_content)

@@ -5,7 +5,7 @@ slug: Web/API/Element/animationend_event
 
 {{APIRef}}
 
-**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
+**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
 
 ## 语法
 
@@ -154,8 +154,8 @@ applyAnimation.addEventListener('click', () => {
 
 ## 参见
 
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 相关事件：{{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - 以 {{domxref("Document")}} 为目标的此事件：{{domxref("Document/animationend_event", "animationend")}}

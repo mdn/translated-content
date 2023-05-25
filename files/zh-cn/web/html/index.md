@@ -81,5 +81,5 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 
 ## 相关主题
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
   - : 这篇文章涵盖了大多数使用 CSS 为 HTML 内容增加颜色的方式，并列举了 HTML 文档里哪些部分可以进行上色以及这一操作需要使用哪些 CSS 属性。它包含了一些示例，配色建构工具的链接，以及其他内容。
