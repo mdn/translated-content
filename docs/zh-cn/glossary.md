@@ -17,6 +17,7 @@
 | 英文词汇          | 翻译         | 备注                                                         | 引用来源                                                                      |
 | ----------------- | ------------ | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | bare module       | 裸模块       | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。 | <https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277> |
+| brand check       | 特定类型检查 | 通过一段代码来对特定的数据类型进行检查。                     | <https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483> |
 | interface         | 接口         |                                                              | <https://zh.wikipedia.org/wiki/介面_(資訊科技)>                               |
 | well-known symbol | 内置通用符号 |                                                              | <https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921> |
 
