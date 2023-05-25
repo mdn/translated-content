@@ -66,7 +66,7 @@ console.log(Object.prototype.isPrototypeOf(baz)); // true
 
 isPrototypeOf()方法同instanceof运算符一样，在处理从特定原型链继承的对象的代码时非常方便。例如可以确保某些方法或属性将存在于该对象上。
 
-例如，检查 `baz` 对象是否继承自 `Foo.prototype`：
+例如，如果只有当 `baz` 对象的原型链中包含 `Foo.prototype` 时才能执行某些代码，可以这样实现：
 
 ```js
 if (Foo.prototype.isPrototypeOf(baz)) {
