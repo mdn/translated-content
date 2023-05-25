@@ -5,22 +5,22 @@ slug: Web/API/Notification/permission_static
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 的只读属性 `permission` 表明当前用户是否授予当前 origin 显示 web 通知的权限。
+{{domxref("Notification")}} 的只读属性 `permission` 表明当前用户是否授予当前来源显示 web 通知的权限。
 
 ## 值
 
 一个表示当前权限的字符串，值可以是：
 
 - `granted`
-  - : 用户已经明确地授予了当前 origin 显示系统通知的权限。
+  - : 用户已经明确地授予了当前来源显示系统通知的权限。
 - `denied`
-  - : 用户已经明确地拒绝了当前 origin 显示系统通知的权限。
+  - : 用户已经明确地拒绝了当前来源显示系统通知的权限。
 - `default`
   - : 用户的决定是未知的；在这种情况下，应用将表现得好像权限被“拒绝”一样
 
 ## 示例
 
-如果您想首先检查是否支持通知，然后检查是否已授予当前来源发送通知的权限，然后在发送通知之前请求权限（如果需要），则可以使用以下代码段。
+如果你想首先检查是否支持通知，然后检查是否已授予当前来源发送通知的权限，然后在发送通知之前请求权限（如果需要），则可以使用以下代码段。
 
 ```js
 function notifyMe() {
@@ -41,7 +41,7 @@ function notifyMe() {
       }
     });
   }
-  // 最后，如果用户拒绝了通知，而你想要尊重他们，就没有必要再打扰他们了。
+  // 最后，如果用户拒绝了通知，而你想要尊重他们，就没有必要再打扰他们了
 }
 ```
 
