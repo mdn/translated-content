@@ -48,6 +48,6 @@ slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ## 参见
 
 - [网格布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Understanding Logical Properties and Values](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
 - [书写模式](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)

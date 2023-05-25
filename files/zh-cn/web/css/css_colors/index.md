@@ -29,7 +29,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## 工具
 
-- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : 该工具能让你创建、调整和试验自定义颜色变得简单。
 
 ## 规范

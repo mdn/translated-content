@@ -190,6 +190,6 @@ Box Alignment 模块还包含其他创建子项之间间隙的方法，比如在
 
 ## 更多
 
-- [Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
-- [Box Alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
+- [Box Alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box Alignment in Grid Layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
