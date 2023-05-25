@@ -87,7 +87,7 @@ class Foo {
 const baz = { __proto__: Foo.prototype };
 
 if (Foo.prototype.isPrototypeOf(baz)) {
-  console.log(Foo.getValue(baz)); // 类型错误：无法从未声明的对象中读取私有属性#value
+  console.log(Foo.getValue(baz)); // TypeError: Cannot read private member #value from an object whose class did not declare it
 }
 ```
 
