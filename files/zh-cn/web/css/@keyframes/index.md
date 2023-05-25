@@ -107,7 +107,7 @@ Firefox 14 开始支持层叠 keyframes。
 
 ## 示例
 
-参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)。
+参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
 ## 规范
 
@@ -119,5 +119,5 @@ Firefox 14 开始支持层叠 keyframes。
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{ domxref("AnimationEvent") }}

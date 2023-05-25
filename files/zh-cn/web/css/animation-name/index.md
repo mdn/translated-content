@@ -39,7 +39,7 @@ animation-name: unset;
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : 一个标识动画的名称。该标识符由区分大小写的字母 `a` 到 `z`、数字 `0` 到 `9`、下划线（`_`）和/或破折号（`-`）组成。第一个非破折号字符必须是一个字母。此外，在标识符开头不能有两个破折号。此外，标识符不能为 `none`、`unset`、`initial` 或 `inherit`。
 
-> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## 形式定义
 
@@ -93,7 +93,7 @@ animation-name: unset;
 
 {{EmbedLiveSample("为动画命名","100%","250")}}
 
-参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)以获取示例。
+参见 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)以获取示例。
 
 ## 规范
 

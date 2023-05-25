@@ -1,6 +1,6 @@
 ---
 title: CSS 分片
-slug: Web/CSS/CSS_Fragmentation
+slug: Web/CSS/CSS_fragmentation
 original_slug: Web/CSS/CSS_分片
 ---
 

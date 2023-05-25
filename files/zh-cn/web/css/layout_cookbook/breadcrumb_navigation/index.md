@@ -33,6 +33,6 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## 参见
 
-- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
 - [提供面包屑路径](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [使用 aria-current 属性](https://tink.uk/using-the-aria-current-attribute/)
