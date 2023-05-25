@@ -30,7 +30,7 @@ Object.isFrozen(obj)
 
 ## 示例
 
-### 使用 Obje.isFrozen
+### 使用 Object.isFrozen
 
 ```js
 // 一个新对象是默认是可扩展的，所以它也是非冻结的。
