@@ -24,7 +24,7 @@ isPrototypeOf(object)
 
 ### 返回值
 
-{{jsxref("Boolean")}}，表示调用对象(`this`)是否位于`object`的原型链中。当`object`不是对象时，直接返回`false`。
+一个布尔值，指示调用 `isPrototypeOf()` 方法的对象（即 `this`）是否位于 `object` 的原型链中。当 `object` 不是一个对象（即基本类型）时，直接返回 `false`。
 
 ### 报错
 
