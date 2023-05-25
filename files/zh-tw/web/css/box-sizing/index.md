@@ -7,7 +7,7 @@ slug: Web/CSS/box-sizing
 
 ## 概要
 
-The **`box-sizing`** property is used to alter the default [CSS box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) used to calculate width and height of the elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+The **`box-sizing`** property is used to alter the default [CSS box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) used to calculate width and height of the elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
 
 **`box-sizing`** 屬性用於更改預設 [CSS 盒子模型](/zh-TW/docs/CSS/Box_model)中所計算的寬度和高度。可以使用此屬性來模擬不正確支持 CSS 盒子模型規範的瀏覽器的行為。
 
@@ -67,4 +67,4 @@ box-sizing: unset;
 
 ## See also
 
-- [CSS box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
