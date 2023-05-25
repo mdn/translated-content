@@ -102,7 +102,6 @@ p {
         background-color: yellow;
         border: 1px solid black;
       }
-      
       p {
         color: red;
       }
