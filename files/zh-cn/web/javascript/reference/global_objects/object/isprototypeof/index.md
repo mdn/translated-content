@@ -39,7 +39,7 @@ isPrototypeOf(object)
 
 ### 使用 isPrototypeOf()
 
-本示例展示了 `Baz.prototype`, `Bar.prototype`, `Foo.prototype` 和 `Object.prototype` 存在于对象 `baz` 的原型链中：
+本示例展示了 `Baz.prototype`、`Bar.prototype`、`Foo.prototype` 和 `Object.prototype` 存在于对象 `baz` 的原型链中：
 
 ```js
 class Foo {}
