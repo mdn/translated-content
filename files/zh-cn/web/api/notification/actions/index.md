@@ -11,11 +11,7 @@ The actions are set using the `actions` option of the second argument for the [`
 
 > **Note:** Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxRef("Notification.maxActions")}} property to determine the limit.
 
-{{domxref("Notification")}}接口的只读属性 **`actions`** 返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。
-
 ## 值
-
-{{domxref("NotificationAction")}}对象的只读数组。用户在通知中选择每项的单一的功能。
 
 A read-only array of actions. Each element in the array is an object with the following members:
 
