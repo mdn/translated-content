@@ -841,7 +841,7 @@ input.custom {
 
 关于在 HTML 中为元素添加颜色的更多信息，参见：
 
-- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)。
+- [使用 CSS 为 HTML 元素添加颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
 
 还可以参考：
 

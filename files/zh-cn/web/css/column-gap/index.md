@@ -9,7 +9,7 @@ slug: Web/CSS/column-gap
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
-`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_Columns) 下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layouts（网格布局）中使用。
+`column-gap` 一开始是 [Multi-column 布局](/zh-CN/docs/Web/CSS/CSS_Columns) 下的特有属性，后来在其他布局中也使用这个属性。如 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)中的表述，该属性已经可以在 Multi-column（多列布局）、Flexible Box（弹性盒子）以及 Grid layouts（网格布局）中使用。
 
 ## 语法
 

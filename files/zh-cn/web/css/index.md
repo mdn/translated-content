@@ -59,7 +59,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
   - [堆叠](/zh-CN/docs/Web/CSS/Understanding_z-index/The_stacking_context)和[块格式化](/zh-CN/docs/Web/CSS/Block_formatting_context)上下文
   - [初始值](/zh-CN/docs/Web/CSS/initial_value)、[计算值](/zh-CN/docs/Web/CSS/computed_value)、[应用值](/zh-CN/docs/Web/CSS/used_value)和[实际值](/zh-CN/docs/Web/CSS/actual_value)
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
-  - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+  - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
   - [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)
   - [动画](/zh-CN/docs/Web/CSS/animation)

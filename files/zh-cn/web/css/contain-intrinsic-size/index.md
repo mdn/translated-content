@@ -5,7 +5,7 @@ slug: Web/CSS/contain-intrinsic-size
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`contain-intrinsic-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_Containment#尺寸局限)时浏览器用于布局的元素尺寸。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`contain-intrinsic-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素尺寸。
 
 ## 属性构成
 

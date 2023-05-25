@@ -90,7 +90,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 ## 弹性盒子
 
-Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用`display: flex` ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。
+Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用`display: flex` ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。
 
 ### 设置 display:flex
 

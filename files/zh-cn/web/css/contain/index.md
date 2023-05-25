@@ -175,7 +175,7 @@ div {
 
 ### 样式局限
 
-样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
+样式局限将[计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)和[引号](/zh-CN/docs/Web/CSS/quotes)的作用域限制为被局限元素。对于 CSS 计数器，{{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性的作用域被限制为此元素，且将元素视为在文档根部。
 
 #### 局限与计数器
 
@@ -249,7 +249,7 @@ body {
 
 ## 参见
 
-- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_Containment)
+- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_Container_Queries)
 - CSS 属性 {{CSSXref("content-visibility")}}
 - CSS 属性 {{CSSXref("position")}}

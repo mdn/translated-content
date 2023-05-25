@@ -1917,9 +1917,8 @@
 /ja/docs/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
 /ja/docs/HTML/Element/bdi	/ja/docs/Web/HTML/Element/bdi
 /ja/docs/HTML/Element/bdo	/ja/docs/Web/HTML/Element/bdo
-/ja/docs/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/bgsound
+/ja/docs/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/big	/ja/docs/Web/HTML/Element/big
-/ja/docs/HTML/Element/blink	/ja/docs/Web/HTML/Element/blink
 /ja/docs/HTML/Element/blockquote	/ja/docs/Web/HTML/Element/blockquote
 /ja/docs/HTML/Element/body	/ja/docs/Web/HTML/Element/body
 /ja/docs/HTML/Element/body_要素	/ja/docs/Web/HTML/Element/body
@@ -1993,7 +1992,6 @@
 /ja/docs/HTML/Element/section	/ja/docs/Web/HTML/Element/section
 /ja/docs/HTML/Element/select	/ja/docs/Web/HTML/Element/select
 /ja/docs/HTML/Element/small	/ja/docs/Web/HTML/Element/small
-/ja/docs/HTML/Element/spacer	/ja/docs/Web/HTML/Element/spacer
 /ja/docs/HTML/Element/span	/ja/docs/Web/HTML/Element/span
 /ja/docs/HTML/Element/strike	/ja/docs/Web/HTML/Element/strike
 /ja/docs/HTML/Element/strong	/ja/docs/Web/HTML/Element/strong
@@ -2639,7 +2637,7 @@
 /ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines	/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 /ja/docs/Learn/Common_questions/Thinking_before_coding	/ja/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /ja/docs/Learn/Common_questions/Upload_files_to_a_web_server	/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/ja/docs/Learn/Common_questions/Using_Github_pages	/ja/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages
+/ja/docs/Learn/Common_questions/Using_Github_pages	/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /ja/docs/Learn/Common_questions/What_are_browser_developer_tools	/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /ja/docs/Learn/Common_questions/What_are_hyperlinks	/ja/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /ja/docs/Learn/Common_questions/What_is_a_URL	/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
@@ -3491,7 +3489,7 @@
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MediaSource/isTypeSupported	/ja/docs/Web/API/MediaSource/isTypeSupported_static
 /ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
-/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
+/ja/docs/Web/API/MediaStreamConstraints	/ja/docs/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MediaStreamTrack/onended	/ja/docs/Web/API/MediaStreamTrack/ended_event
 /ja/docs/Web/API/MediaStreamTrack/onmute	/ja/docs/Web/API/MediaStreamTrack/mute_event
 /ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/Web/API/MediaStreamTrack/overconstrained_event
@@ -4474,6 +4472,7 @@
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/HTML/Element/basefont	/ja/docs/Web/CSS/CSS_Fonts
+/ja/docs/Web/HTML/Element/bgsound	/ja/docs/Web/HTML/Element/audio
 /ja/docs/Web/HTML/Element/content	/ja/docs/Web/HTML/Element/slot
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h2	/ja/docs/Web/HTML/Element/Heading_Elements
