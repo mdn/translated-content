@@ -1,6 +1,6 @@
 ---
 title: CSS 盒子对齐
-slug: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
 
 {{CSSRef}}
