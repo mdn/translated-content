@@ -15,7 +15,7 @@ slug: Web/API/Notification/requestPermission_static
 // 最新规范已将此方法更新为基于 promise 的语法，其工作方式如下：
 Notification.requestPermission()
 
-// 以前，语法是基于一个简单的回调函数； 此版本现已弃用：
+// 以前，语法是基于一个简单的回调函数；此版本现已弃用：
 Notification.requestPermission(callback)
 ```
 
@@ -26,7 +26,7 @@ Notification.requestPermission(callback)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，可解析为一个表示用户选择的权限的字符串。该字符串的可能值为：
+一个 {{jsxref("Promise")}}，会兑现为一个表示用户选择的权限的字符串。该字符串的可能值为：
 
 - `granted`
 - `denied`
@@ -40,7 +40,7 @@ Notification.requestPermission(callback)
 <button onclick="notifyMe()">通知我！</button>
 ```
 
-可以按如下方式发送通知——这里我们提供了一组相当详细和完整的代码，如果您想首先检查是否支持通知，然后检查是否已授予当前域名发送通知的权限，然后，如果必需的话，在发送通知前请求权限。
+可以按如下方式发送通知——这里我们提供了一组相当详细和完整的代码，如果你想首先检查是否支持通知，然后检查是否已授予当前域名发送通知的权限，然后，如果必需的话，在发送通知前请求权限。
 
 ```js
 function notifyMe() {
@@ -66,7 +66,7 @@ function notifyMe() {
 }
 ```
 
-我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的[待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（同时参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
+我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的[待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
 > **备注：** 在上面的示例中，我们生成通知以响应用户手势（单击按钮）。这不仅仅是最佳实践——你不应该向用户滥发他们不同意的通知——而且未来的浏览器将明确禁止未响应用户手势而触发的通知。例如，Firefox 已经从版本 72 开始这样做了。
 
