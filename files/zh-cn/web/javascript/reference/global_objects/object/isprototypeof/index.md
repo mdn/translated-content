@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 > **备注：** `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 `object instanceof AFunction` 中，会检查 `object` 的原型链是否与 `AFunction.prototype` 匹配，而不是与 `AFunction`本身匹配。
 
-{{EmbedInteractiveExample("pages/js/object-isprototypeof.html", "taller")}}
+{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
 ## 语法
 
