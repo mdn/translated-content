@@ -5,22 +5,22 @@ slug: Web/API/Notification/actions
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`actions`** read-only property of the {{domxref("Notification")}} interface provides the actions available for users to choose from for interacting with the notification.
+{{domxref("Notification")}} 接口的 **`actions`** 只读属性提供了可供用户选择的以与通知交互的操作。
 
-The actions are set using the `actions` option of the second argument for the [`showNotification()`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification) method and [`Notification()`](/en-US/docs/Web/API/Notification/Notification) constructor.
+设置操作使用 [`showNotification()`](/zh-CN/docs/Web/API/ServiceWorkerRegistration/showNotification) 方法和 [`Notification()`](/zh-CN/docs/Web/API/Notification/Notification) 构造函数的第二个参数的 `actions` 选项。
 
-> **Note:** Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxRef("Notification.maxActions")}} property to determine the limit.
+> **备注：** 浏览器通常会限制它们为特定通知显示的最大操作数。检测 {{DOMxRef("Notification.maxActions")}} 静态属性以确定限制的数量。
 
 ## 值
 
-A read-only array of actions. Each element in the array is an object with the following members:
+一个只读的操作数组。 数组中的每个元素都是一个具有以下成员的对象：
 
 - `action`
-  - : A string identifying a user action to be displayed on the notification.
+  - : 一个标识要在通知上显示的用户操作的字符串。
 - `title`
-  - : A string containing action text to be shown to the user.
+  - : 一个包含要向用户显示的操作文本的字符串。
 - `icon`
-  - : A string containing the URL of an icon to display with the action.
+  - : 一个包含与操作一起显示的图标 URL 的字符串。
 
 ## 规范
 
