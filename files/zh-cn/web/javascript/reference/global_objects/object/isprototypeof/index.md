@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 ## 语法
 
-```plain
+```js-nolint
 isPrototypeOf(object)
 ```
 
