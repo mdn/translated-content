@@ -28,9 +28,9 @@ Object.freeze(obj)
 
 ## 描述
 
-冻结一个对象相当于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) 然后将所有现有属性的描述符的 `configurable` 特性更改为 `false`——对于数据属性，将同时把 `writable` 特性更改为 `false`。无法向被冻结的对象的属性中添加或删除任何内容。任何尝试这样做的操作都将失败，可能是静默失败，也可能抛出一个 {{jsxref("TypeError")}} 异常（通常情况下，在{{jsxref("Strict_mode", "严格模式", "", 1)}}中抛出）。
+冻结一个对象相当于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)然后将所有现有属性的描述符的 `configurable` 特性更改为 `false`——对于数据属性，将同时把 `writable` 特性更改为 `false`。无法向被冻结的对象的属性中添加或删除任何内容。任何这样的尝试都将失败，可能是静默失败，也可能抛出一个 {{jsxref("TypeError")}} 异常（通常情况下，在{{jsxref("Strict_mode", "严格模式", "", 1)}}中抛出）。
 
-对于被冻结对象的数据属性，它们的值不能被更改，因为它们的 `writable` 和 `configurable` 属性被设置为 `false`。访问器属性（getter 和 setter）也相同——getter 返回的属性值仍然可以更改，setter 可以在设置属性时调用而不抛出错误。请注意，值为对象的值仍然可以修改，除非它们也被冻结。作为一个对象，数组可以被冻结；在这样做之后，既不能更改它的元素，也不能向数组中添加或删除元素。
+对于被冻结对象的数据属性，它们的值不能被更改，因为它们的 `writable` 和 `configurable` 特性被设置为 `false`。访问器属性（getter 和 setter）也相同——getter 返回的属性值仍然可以更改，setter 可以在设置属性时调用而不抛出错误。请注意，值为对象的值仍然可以修改，除非它们也被冻结。作为一个对象，数组可以被冻结；数组被冻结后，既不能更改它的元素，也不能向数组中添加或删除元素。
 
 `freeze()` 返回传递给函数的同一对象。它*不会*创建一个被冻结的副本。
 
@@ -52,11 +52,6 @@ Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)); // 没有元素
 Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // 有元素
 // TypeError: Cannot freeze array buffer views with elements
 ```
-
-Note that as the standard three properties (`buf.byteLength`,
-`buf.byteOffset` and `buf.buffer`) are read-only (as are those of
-an {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}), there is no reason for
-attempting to freeze these properties.
 
 请注意，由于标准中的三个属性（`buf.byteLength`、`buf.byteOffset` 和 `buf.buffer`）是只读的（就像 {{jsxref("ArrayBuffer")}} 或 {{jsxref("SharedArrayBuffer")}} 的属性一样），因此没有理由尝试冻结这些属性。
 
