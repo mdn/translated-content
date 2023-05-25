@@ -5,7 +5,7 @@ slug: Web/API/Notification/permission_static
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 的只读属性 `permission` 表明当前用户是否授予当前来源显示 web 通知的权限。
+{{domxref("Notification")}} 的只读属性 `permission` 表明当前用户是否授予当前来源显示系统通知的权限。
 
 ## 值
 
