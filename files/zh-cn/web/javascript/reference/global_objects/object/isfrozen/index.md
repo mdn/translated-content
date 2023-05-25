@@ -128,7 +128,7 @@ Object.isFrozen(1);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.freeze()")}}
 - {{jsxref("Object.preventExtensions()")}}
