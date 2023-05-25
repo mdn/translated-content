@@ -127,7 +127,7 @@ progress:indeterminate {
 
 ## 参见
 
-- [Web 表单 — 处理用户数据](/zh-CN/docs/Learn/Forms)
+- [Web 表单——处理用户数据](/zh-CN/docs/Learn/Forms)
 - [样式化 Web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
 - [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 元素的 [`indeterminate`](/zh-CN/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口
