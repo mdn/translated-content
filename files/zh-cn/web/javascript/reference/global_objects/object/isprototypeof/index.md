@@ -107,7 +107,7 @@ class Foo {
 const baz = { __proto__: Foo.prototype };
 
 if (Foo.isFoo(baz)) {
-  // 不会运行，因为baz不是Foo
+  // 不会运行，因为 baz 不是 Foo
   console.log(Foo.getValue(baz));
 }
 ```
