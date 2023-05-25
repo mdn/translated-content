@@ -74,7 +74,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-然而，`Foo.prototype`存在于`baz`的原型链中并不意味着`baz`是使用`Foo`作为其构造函数创建的。例如，`baz`可以直接将`Foo.prototype`作为其原型。在这种情况下，如果您的代码从`baz`中读取`Foo`的私有属性，仍然会失败：
+然而，`Foo.prototype` 存在于 `baz` 的原型链中并不意味着 `baz` 是使用 `Foo` 作为其构造函数创建的。例如，`baz` 可以直接将 `Foo.prototype` 作为其原型。在这种情况下，如果你的代码从 `baz` 中读取 `Foo` 的[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)，它仍然会失败：
 
 ```js
 class Foo {
