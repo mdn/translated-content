@@ -5,11 +5,25 @@ slug: Web/API/Document/pointerLockElement
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 接口的 `pointerLockElement` 属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中、指针没有被锁定，或者目标在另外一个文档中，返回的值是 `null`。
+{{domxref("Document")}} 接口的 `pointerLockElement` 属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中，指针没有被锁定，或者目标元素在另外一个文档中，返回 `null`。
 
 ## 值
 
 一个 {{domxref("Element")}} 或 `null`。
+
+## 示例
+
+确定一个 canvas 元素当前是否被指针锁定。
+
+```js
+if (document.pointerLockElement === canvasElement) {
+  console.log("指针当前已锁定");
+  // 做一些有用的回应
+} else {
+  console.log("指针当前已解锁");
+  // 做一些有用的回应
+}
+```
 
 ## 规范
 
