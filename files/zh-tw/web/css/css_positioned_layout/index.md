@@ -1,6 +1,6 @@
 ---
 title: CSS Positioning
-slug: Web/CSS/CSS_Positioning
+slug: Web/CSS/CSS_positioned_layout
 ---
 
 {{CSSRef}}
@@ -24,7 +24,7 @@ slug: Web/CSS/CSS_Positioning
 
 ## 指南
 
-- [Understanding CSS z-index](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Understanding CSS z-index](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Presents the notion of stacking context and explain how z-ordering works, with several examples.
 
 ## 規範

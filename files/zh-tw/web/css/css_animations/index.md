@@ -43,4 +43,4 @@ slug: Web/CSS/CSS_animations
 
 ## See also
 
-- Related to CSS Animations, [CSS Transitions](/zh-TW/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.
+- Related to CSS Animations, [CSS Transitions](/zh-TW/docs/Web/CSS/CSS_transitions) can trigger animations on user actions.
