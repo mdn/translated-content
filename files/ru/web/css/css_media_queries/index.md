@@ -1,6 +1,6 @@
 ---
 title: Media queries
-slug: Web/CSS/Media_Queries
+slug: Web/CSS/CSS_media_queries
 tags:
   - CSS
   - CSS3 Media Queries
@@ -11,7 +11,9 @@ tags:
   - Responsive Design
   - TopicStub
 translation_of: Web/CSS/Media_Queries
+original_slug: Web/CSS/Media_Queries
 ---
+
 {{CSSRef("CSS3 Media Queries")}}
 
 **Медиавыражения (media queries)** являются ключевым компонентом [отзывчивого дизайна](/ru/docs/Web/Apps/Progressive/Responsive), который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} at-правило используется чтобы задать условия применения стилей к документу.

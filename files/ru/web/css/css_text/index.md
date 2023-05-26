@@ -1,15 +1,12 @@
 ---
 title: CSS Text
-slug: Web/CSS/CSS_Text
+slug: Web/CSS/CSS_text
 page-type: css-module
 tags:
   - CSS
   - CSS Text
   - Guide
   - Overview
-spec-urls:
-  - https://drafts.csswg.org/css-logical/
-  - https://drafts.csswg.org/css-text/
 translation_of: Web/CSS/CSS_Text
 ---
 

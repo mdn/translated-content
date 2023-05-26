@@ -1,11 +1,11 @@
 ---
 title: Управление соотношением элементов вдоль главной оси
 slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+  Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 translation_of: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 original_slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси
+  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
 
 {{CSSRef}}В данном руководстве, мы исследуем три свойства применяемые к flex элементам, которые позволяют нам контролировать размер и гибкость flex элементов по основной(main) оси. Полное понимание, как эти свойства работают, при увеличение и уменьшение элементов, есть ключ к мастерству flexbox.
