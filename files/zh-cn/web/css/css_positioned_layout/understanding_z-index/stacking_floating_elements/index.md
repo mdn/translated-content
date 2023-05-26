@@ -1,12 +1,9 @@
 ---
 title: 层叠与浮动
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
 
 {{CSSRef}}
-
-« [CSS](/zh-CN/CSS) « [理解 CSS 中的 z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 层叠与浮动
 
@@ -137,11 +134,11 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ### 相关链接
 
 - [未使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
-- [使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Adding_z-index)：使用 z-index 来改变默认层叠顺序
-- [层叠上下文](/zh-CN/CSS/Understanding_z-index/The_stacking_context)：关于层叠上下文的注意事项
-- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1)：两层嵌套标签的 HTML 中，z-index 作用在内层标签上
-- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2)：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上
-- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3)：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上
+- [使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Using_z-index)：使用 z-index 来改变默认层叠顺序
+- [层叠上下文](/zh-CN/CSS/Understanding_z-index/Stacking_context)：关于层叠上下文的注意事项
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：两层嵌套标签的 HTML 中，z-index 作用在内层标签上
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上
 
 ### 原始文档信息
 

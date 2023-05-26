@@ -1,12 +1,9 @@
 ---
 title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 
 {{CSSRef}}
-
-« [CSS](/zh-CN/CSS) « [Understanding CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### Stacking context 层叠上下文 例子 1
 
@@ -114,9 +111,9 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_ex
 ### See also
 
 - [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
+- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
 - [Stacking context example 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
 - [Stacking context example 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 

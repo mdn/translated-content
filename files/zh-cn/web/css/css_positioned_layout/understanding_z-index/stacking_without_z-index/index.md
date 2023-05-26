@@ -1,12 +1,9 @@
 ---
 title: Stacking without z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
 
 {{CSSRef}}
-
-« [CSS](/zh-CN/CSS) « [理解 CSS z-index](/zh-CN/CSS/Understanding_z-index)
 
 ### 不含 z-index 的堆叠
 
@@ -128,9 +125,9 @@ span.bold { font-weight: bold; }
 
 ### See also
 
-- [堆叠与浮动](/zh-CN/CSS/Understanding_z-index/Stacking_and_float) : 浮动元素的处理方式
-- [增加 z-index](/zh-CN/CSS/Understanding_z-index/Adding_z-index) : 使用 z-index 来改变堆放顺序
-- [堆叠上下文](/zh-CN/CSS/Understanding_z-index/The_stacking_context) : 堆叠上下文的注意事项
+- [堆叠与浮动](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : 浮动元素的处理方式
+- [增加 z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : 使用 z-index 来改变堆放顺序
+- [堆叠上下文](/zh-CN/CSS/Understanding_z-index/Stacking_context) : 堆叠上下文的注意事项
 - [堆叠上下文示例 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 在两层元素的第二层上使用 z-index
 - [堆叠上下文示例 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 在两层元素的所有层上使用 z-index
 - [堆叠上下文示例 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 在三层元素的第二层上使用 z-index

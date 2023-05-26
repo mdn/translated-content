@@ -1,7 +1,6 @@
 ---
 title: CSS 的图形（Shape）概览
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
-original_slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 
 {{CSSRef}}
@@ -43,7 +42,7 @@ Specification 定义了三种新的权限：
 
 我们已经看到了 `circle()` 如何创建圆形形状。 `ellipse()` 则用来创建椭圆形形状。如果还有特殊要求，使用 `polygon()` 可以创建任意难度的形状。
 
-在我们的 [Guide to Basic Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes) 中，我们探索每一种形状，并且学会如何创建它们。
+在我们的 [Guide to Basic Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_Shapes) 中，我们探索每一种形状，并且学会如何创建它们。
 
 ### 含有 Box 参数的形状
 
@@ -60,7 +59,7 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)。
+详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_From_Box_Values)。
 
 ### 由 Image 创建的形状
 
@@ -80,7 +79,7 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)学习。
+下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)学习。
 
 ## `shape-margin` 属性
 

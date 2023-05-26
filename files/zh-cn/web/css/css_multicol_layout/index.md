@@ -1,7 +1,6 @@
 ---
 title: CSS 多列布局
 slug: Web/CSS/CSS_multicol_layout
-original_slug: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef("CSS3 Multicol")}}
@@ -43,15 +42,15 @@ original_slug: Web/CSS/CSS_Columns
 
 ## 指南
 
-- [多列的基本概念](/zh-CN/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [多列的基本概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
   - : 多列布局的概述
-- [设置列的样式](/zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns)
+- [设置列的样式](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : 如何使用列的分隔线，以及设置列间距。
-- [跨列与平衡](/zh-CN/docs/Web/CSS/CSS_Columns/Spanning_Columns)
+- [跨列与平衡](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Spanning_Columns)
   - : 如何使元素跨越所有的列并控制列的填充方式。
-- [在多列中控制溢出](/zh-CN/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol)
+- [在多列中控制溢出](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout)
   - : 当一个项目溢出它所在的列时或有太多的列内容无法容纳一个容器时，会发生什么。
-- [多列中断开内容](/zh-CN/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)
+- [多列中断开内容](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol)
   - : 介绍碎片化规范以及如何控制列内容的断开位置。
 
 ## 规范

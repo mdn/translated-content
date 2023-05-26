@@ -89,6 +89,6 @@ Use Grid:
 
 ## Resources on MDN
 
-- [Guide to Multi-column Layout](/zh-CN/docs/Web/CSS/CSS_Columns)
+- [Guide to Multi-column Layout](/zh-CN/docs/Web/CSS/CSS_multicol_layout)
 - [Guide to Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/)
 - [Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)

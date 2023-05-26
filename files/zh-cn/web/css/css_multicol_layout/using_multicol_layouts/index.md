@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 的多列布局
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-original_slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: 处理 Multicol 中的溢出
 slug: Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout
-original_slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
 
 {{CSSRef}}
@@ -42,4 +41,4 @@ multicol 在 web 上的一个问题：如果你的列比 viewport 高，读者�
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
 
-在本系列的最后一篇指南中，我们将看到[片段化下的 Muticol 如何使用](/zh-CN/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol)的规范，去控制列内容的溢出。
+在本系列的最后一篇指南中，我们将看到[片段化下的 Muticol 如何使用](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol)的规范，去控制列内容的溢出。

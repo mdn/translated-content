@@ -1,7 +1,6 @@
 ---
 title: CSS Positioning
 slug: Web/CSS/CSS_positioned_layout
-original_slug: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}
@@ -25,7 +24,7 @@ original_slug: Web/CSS/CSS_Positioning
 
 ## 向导
 
-- [理解 CSS z-index](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [理解 CSS z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : 通过几个例子来展现上下文叠加的概念以及解释 z-ordering 是如何工作的。
 
 ## 规范

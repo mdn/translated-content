@@ -26,7 +26,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
   - : 一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes)。This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
   - : 返回一个 {{domxref("DOMString")}} 表示加载当前显示的图像的 URL。
-    这可能会改变，因为图像是调整，由于不断变化的条件，由任何 [media queries](/zh-CN/docs/Web/CSS/Media_Queries) 的地方。
+    这可能会改变，因为图像是调整，由于不断变化的条件，由任何 [media queries](/zh-CN/docs/Web/CSS/CSS_media_queries) 的地方。
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
 - {{domxref("HTMLImageElement.height")}}

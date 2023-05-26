@@ -571,4 +571,4 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 ## 参见
 
 - [弹性盒子指南](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [多列布局指南](/zh-CN/docs/Web/CSS/CSS_Columns)
+- [多列布局指南](/zh-CN/docs/Web/CSS/CSS_multicol_layout)

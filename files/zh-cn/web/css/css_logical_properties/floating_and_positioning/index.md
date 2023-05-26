@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 
 {{CSSRef}}
 
-[逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)包含了 {{CSSXref("float")}} 和 {{CSSXref("clear")}} 的实体值的逻辑对应关系，以及用于[定位布局](/zh-CN/docs/Web/CSS/CSS_Positioning)的定位属性的逻辑对应关系。本指南介绍如何使用这些对应关系。
+[逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)包含了 {{CSSXref("float")}} 和 {{CSSXref("clear")}} 的实体值的逻辑对应关系，以及用于[定位布局](/zh-CN/docs/Web/CSS/CSS_positioned_layout)的定位属性的逻辑对应关系。本指南介绍如何使用这些对应关系。
 
 ## 属性的和值的对应关系
 

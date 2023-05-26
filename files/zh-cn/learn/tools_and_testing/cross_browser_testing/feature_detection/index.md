@@ -85,7 +85,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 特性来选择性地应用 CSS，类似于 `CSS.supports()`。
+CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 特性来选择性地应用 CSS，类似于 `CSS.supports()`。
 
 例如，我们可以使用 `@supports` 重写我们之前的例子：
 

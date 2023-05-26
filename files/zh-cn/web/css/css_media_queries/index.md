@@ -1,7 +1,6 @@
 ---
 title: 媒体查询
 slug: Web/CSS/CSS_media_queries
-original_slug: Web/CSS/Media_Queries
 ---
 
 {{CSSRef}}
@@ -24,7 +23,7 @@ original_slug: Web/CSS/Media_Queries
 
 在[JavaScript](/zh-CN/docs/Web/JavaScript)中，您可以使用 {{domxref("Window.matchMedia()")}} 方法根据媒体查询测试窗口。您还可以使用{{domxref("MediaQueryList.addListener()")}}在查询状态发生变化时收到通知。借助此功能，您的站点或应用可以响应设备配置，方向或状态的更改。
 
-您可以学习更多以编程方式使用媒体查询在[测试媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)中。
+你可以学习更多以编程方式使用媒体查询在[测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)中。
 
 ## 参考
 
@@ -35,11 +34,11 @@ original_slug: Web/CSS/Media_Queries
 
 ## 指南
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : 介绍媒体查询和媒体查询的的语法以及用于构造媒体查询表达式的运算符和媒体功能。
-- [编程方式使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [编程方式使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : 描述如何在 JavaScript 代码中使用媒体查询来确定设备的状态，以及设置在媒体查询结果发生更改时（例如，当用户旋转屏幕或调整浏览器大小时）通知代码的监听器。
-- [使用媒体查询增强网站的无障碍](/zh-CN/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility)
+- [使用媒体查询增强网站的无障碍](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_CSS_media_queries_for_Accessibility)
   - : 了解媒体查询如何帮助用户更好地了解您的网站。
 
 ## 规范

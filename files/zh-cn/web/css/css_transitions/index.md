@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_transitions
 
 ## 指南
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : 关于如何使用 CSS 创建过渡的分步教程。此文描述了各相关 CSS 属性并解释了这些属性如何互相作用。
 
 ## 规范

@@ -1,7 +1,6 @@
 ---
 title: 多列布局的样式
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
-original_slug: Web/CSS/CSS_Columns/Styling_Columns
 ---
 
 {{CSSRef}}
@@ -42,4 +41,4 @@ original_slug: Web/CSS/CSS_Columns/Styling_Columns
 
 ## 下一步
 
-本文详细介绍了目前可以为列盒子设置样式的所有方法。在下一篇指南中，我们将讨论如何让容器内的元素[跨越所有列](/zh-CN/docs/Web/CSS/CSS_Columns/Spanning_Columns)。
+本文详细介绍了目前可以为列盒子设置样式的所有方法。在下一篇指南中，我们将讨论如何让容器内的元素[跨越所有列](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Spanning_Columns)。

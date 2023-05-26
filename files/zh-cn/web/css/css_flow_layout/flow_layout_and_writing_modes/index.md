@@ -91,7 +91,7 @@ In most cases, flow layout works as you would expect it to when changing the wri
 
 ## See Also 另请参见
 
-- [Writing Modes](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
+- [Writing Modes](/zh-CN/docs/Web/CSS/CSS_writing_modes)
 
 ## External Resources 外部资源
 

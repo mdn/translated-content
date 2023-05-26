@@ -1,7 +1,6 @@
 ---
 title: 使用媒体查询
 slug: Web/CSS/CSS_media_queries/Using_media_queries
-original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{CSSRef}}
@@ -18,7 +17,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 <link rel="stylesheet" src="styles.css" media="print" />
 ```
 
-- 使用{{domxref("Window.matchMedia()")}} 和{{domxref("MediaQueryList.addListener()")}} 方法来[测试和监控媒体状态](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)。
+- 使用{{domxref("Window.matchMedia()")}} 和{{domxref("MediaQueryList.addListener()")}} 方法来[测试和监控媒体状态](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)。
 
 > **备注：** 本页的例子使用 CSS `@media` 的方式来说明目的，但是对于所有类型的媒体查询，基本语法均相同。
 
@@ -194,7 +193,7 @@ original_slug: Web/CSS/Media_Queries/Using_media_queries
 
 ## 参见
 
-- [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries)
 - [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [Extended WebKit media features](/zh-CN/docs/Web/CSS/Webkit_Extensions#Media_features)
