@@ -91,7 +91,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-对于 {{jsxref("Operators/instanceof", "instanceof")}} 也是同样的情况。如果你需要以安全的方式读取私有属性，可以提供一个使用 {{jsxref("Operators/in", "in")}} 运算符的品牌检查（branded check）方法。
+对于 {{jsxref("Operators/instanceof", "instanceof")}} 也是同样的情况。如果你需要以安全的方式读取私有属性，可以提供一个使用 {{jsxref("Operators/in", "in")}} 运算符的特定类型检查（branded check）方法。
 
 ```js
 class Foo {
