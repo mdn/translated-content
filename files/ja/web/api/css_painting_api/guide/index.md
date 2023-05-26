@@ -93,7 +93,7 @@ CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intr
 <h1 class="fancy">My Cool Header</h1>
 ```
 
-以下の例は、[CSS Painting API をサポートしているブラウザー](/ja/docs//Web/API/PaintWorklet#Browser_compatibility)では上の画像のようになります。
+以下の例は、[CSS Painting API をサポートしているブラウザー](/ja/docs/Web/API/CSS/paintWorklet_static#ブラウザーの互換性)では上の画像のようになります。
 
 {{EmbedLiveSample("paintapi", 120, 120)}}
 
