@@ -1,7 +1,9 @@
 ---
 title: CSS Positioning
-slug: Web/CSS/CSS_Positioning
+slug: Web/CSS/CSS_positioned_layout
+original_slug: Web/CSS/CSS_Positioning
 ---
+
 {{CSSRef}}
 
 **CSS Positioning** é um módulo do CSS que define como ficam a posição dos elementos relativos e absolutos da página.

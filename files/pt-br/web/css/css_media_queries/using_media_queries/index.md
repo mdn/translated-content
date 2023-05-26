@@ -1,7 +1,7 @@
 ---
 title: Usando Media Queries
-slug: Web/CSS/Media_Queries/Using_media_queries
-original_slug: Web/Guide/CSS/CSS_Media_queries
+slug: Web/CSS/CSS_media_queries/Using_media_queries
+original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 Uma **media query** consiste de um _media type_ e pelo menos uma expressão que limita o escopo das folhas de estilo usando _media features_, tal como largura, altura e cor. _Media queries_, adicionadas no [CSS3](/pt-BR/docs/CSS/CSS3), deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.

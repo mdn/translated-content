@@ -1,6 +1,7 @@
 ---
 title: <blink>
-slug: Web/HTML/Element/blink
+slug: orphaned/Web/HTML/Element/blink
+original_slug: Web/HTML/Element/blink
 ---
 
 {{Deprecated_header}} {{Non-standard_header}}
