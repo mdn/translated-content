@@ -30,7 +30,7 @@ Object.freeze(obj)
 
 冻结一个对象相当于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)然后将所有现有属性的描述符的 `configurable` 特性更改为 `false`——对于数据属性，将同时把 `writable` 特性更改为 `false`。无法向被冻结的对象的属性中添加或删除任何内容。任何这样的尝试都将失败，可能是静默失败，也可能抛出一个 {{jsxref("TypeError")}} 异常（通常情况下，在{{jsxref("Strict_mode", "严格模式", "", 1)}}中抛出）。
 
-对于被冻结对象的数据属性，它们的值不能被更改，因为它们的 `writable` 和 `configurable` 特性被设置为 `false`。访问器属性（getter 和 setter）也相同——getter 返回的属性值仍然可以更改，setter 可以在设置属性时调用而不抛出错误。请注意，值为对象的值仍然可以修改，除非它们也被冻结。作为一个对象，数组可以被冻结；数组被冻结后，既不能更改它的元素，也不能向数组中添加或删除元素。
+对于被冻结对象的数据属性，它们的值不能被更改，因为它们的 `writable` 和 `configurable` 特性被设置为 `false`。访问器属性（getter 和 setter）也相同——getter 返回的属性值仍然可以更改，setter 可以在设置属性时调用而不抛出错误。请注意，对象类型的值仍然可以修改，除非它们也被冻结。数组作为一种对象也可以被冻结；数组被冻结后，既不能更改它的元素，也不能向数组中添加或删除元素。
 
 `freeze()` 返回传递给函数的同一对象。它*不会*创建一个被冻结的副本。
 
@@ -86,7 +86,7 @@ obj.foo = "quux"; // 静默但什么都没做
 // 静默且没有添加属性
 obj.quaxxor = "the friendly duck";
 
-// 严格模式下，这样的尝试会抛出 TypeErrors
+// 严格模式下，这样的尝试会抛出 TypeError
 function fail() {
   "use strict";
   obj.foo = "sparky"; // 抛出 TypeError
@@ -97,7 +97,7 @@ function fail() {
 
 fail();
 
-// 通过 Object.defineProperty 尝试更改；
+// 尝试通过 Object.defineProperty 更改；
 // 下面的两个语句都会抛出 TypeError。
 Object.defineProperty(obj, "ohai", { value: 17 });
 Object.defineProperty(obj, "foo", { value: "eit" });
@@ -141,11 +141,11 @@ obj1.internal.a = "aValue";
 obj1.internal.a; // 'aValue'
 ```
 
-对于一个常量对象，整个引用图（直接和间接引用其他对象）只能引用不可变的冻结对象。冻结的对象被认为是不可变的，因为整个对象中的整个对象*状态*（对其他对象的值和引用）是固定的。注意，字符串，数字和布尔值总是不可变的，而函数和数组是对象。
+对于一个常量对象，整个引用图（直接和间接引用其他对象）只能引用不可变的冻结对象。冻结的对象被认为是不可变的，因为整个对象中的整个对象*状态*（对其他对象的值和引用）是固定的。注意，字符串、数字和布尔值总是不可变的，而函数和数组是对象。
 
 #### 什么是“浅冻结”？
 
-调用 `Object.freeze(object)` 的结果仅适用于 `object` 本身的直接属性，并且只会在 `object` 上防止未来的属性添加、删除或值重新分配操作。如果这些属性的值本身是对象，这些对象不会被冻结，并且可能成为属性添加、删除或值重新分配操作的目标。
+调用 `Object.freeze(object)` 的结果仅适用于 `object` 本身的直接属性，并且只会在 `object` 上防止未来的属性添加、删除，或重新赋值的操作。如果这些属性的值本身是对象，这些对象不会被冻结，并且可能成为属性添加、删除，或重新赋值操作的目标。
 
 ```js
 const employee = {
@@ -165,7 +165,7 @@ employee.address.city = "Noida"; // 可以修改子对象的属性
 console.log(employee.address.city); // "Noida"
 ```
 
-为了使对象不可变，需要递归地冻结每个对象类型的属性（深冻结）。当且仅当你知道对象在引用图中不包含[循环引用](https://zh.wikipedia.org/wiki/%E7%92%B0_(%E5%9C%96%E8%AB%96))时，可以根据你的设计逐个案例地使用该模式，否则会导致无限循环。`deepFreeze()` 的一个增强功能是添加一个内部函数，该函数接收一个路径（例如一个数组）参数，这样可以在调用 `deepFreeze()` 递归地冻结对象时，避免冻结正在被处理的对象。但仍有可能会冻结不应该被冻结的对象，例如 \[window]。
+为了使对象不可变，需要递归地冻结每个对象类型的属性（深冻结）。当且仅当你知道对象在引用图中不包含[循环引用](<https://zh.wikipedia.org/wiki/環_(圖論)>)时，可以根据你的设计逐个案例地使用该模式，否则会导致无限循环。`deepFreeze()` 的一个增强功能是添加一个内部函数，该函数接收一个路径（例如一个数组）参数，这样可以在调用 `deepFreeze()` 递归地冻结对象时，避免冻结正在被处理的对象。但仍有可能会冻结不应该被冻结的对象，例如 \[window]。
 
 ```js
 function deepFreeze(object) {
