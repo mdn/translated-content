@@ -23,13 +23,13 @@ const face = "🥵";
 console.log(face.length); // 2
 ```
 
-The {{jsxref("String/codePointAt", "codePointAt()")}} method of the JavaScript {{jsxref("String")}} object enables you to retrieve the Unicode code point from its encoded form:
+JavaScript {{jsxref("String")}} オブジェクトの {{jsxref("String/codePointAt", "codePointAt()")}} メソッドは、そのエンコードされたフォームからUnicodeコードポイントを取得することを可能にさせます：
 
 ```js
 const face = "🥵";
 console.log(face.codePointAt(0)); // 129397
 ```
 
-## See also
+## 関連項目
 
 - [Unicode encoding FAQ](https://www.unicode.org/faq/utf_bom.html)
