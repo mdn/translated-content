@@ -37,7 +37,7 @@ connection.addEventListener('change', updateConnectionStatus);
 
 ### 预加载大型资源
 
-连接对象对于决定是否预装占用大量带宽或内存的资源很有用。这个示例将在页面加载后不久被调用，以检查预加载视频可能不可取的连接类型。如果发现有蜂窝网络连接，那么 `preloadVideo ` 标志被设置为 `false`。为了简单明了，这个例子只测试了一种连接类型。真实世界的用例可能会使用 switch 语句或其他方法来检查 {{domxref("NetworkInformation.type")}} 的所有可能值。无论 `type` 值如何，你都可以通过 {{domxref("NetworkInformation.effectiveType")}} 属性获得对连接速度的估计。
+连接对象对于决定是否预装占用大量带宽或内存的资源很有用。这个示例将在页面加载后不久被调用，以检查预加载视频可能不可取的连接类型。如果发现有蜂窝网络连接，那么 `preloadVideo` 标志被设置为 `false`。为了简单明了，这个例子只测试了一种连接类型。真实世界的用例可能会使用 switch 语句或其他方法来检查 {{domxref("NetworkInformation.type")}} 的所有可能值。无论 `type` 值如何，你都可以通过 {{domxref("NetworkInformation.effectiveType")}} 属性获得对连接速度的估计。
 
 ```js
 let preloadVideo = true;
