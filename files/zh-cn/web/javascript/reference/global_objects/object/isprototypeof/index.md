@@ -33,7 +33,7 @@ isPrototypeOf(object)
 
 ## 描述
 
-所有继承自 `Object.prototype` 的对象（即除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象) 之外的所有对象）都继承了 `isPrototypeOf()` 方法。该方法允许你检查对象是否存在于另一个对象的原型链中。如果作为参数的 `object` 不是对象（即基本类型），则该方法直接返回 `false`。否则，`this` 值被[转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)，并且在 `object` 的原型链中搜索 `this` 值，直到到达链的末端或找到 `this` 值为止。
+所有继承自 `Object.prototype` 的对象（即除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `isPrototypeOf()` 方法。该方法允许你检查对象是否存在于另一个对象的原型链中。如果作为参数的 `object` 不是对象（即基本类型），则该方法直接返回 `false`。否则，`this` 值被[转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)，并且在 `object` 的原型链中搜索 `this` 值，直到到达链的末端或找到 `this` 值为止。
 
 ## 示例
 
