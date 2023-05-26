@@ -1,6 +1,6 @@
 ---
 title: CSS 过渡
-slug: Web/CSS/CSS_Transitions
+slug: Web/CSS/CSS_transitions
 ---
 
 {{CSSRef}}

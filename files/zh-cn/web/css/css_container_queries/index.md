@@ -1,6 +1,6 @@
 ---
 title: CSS 容器查询
-slug: Web/CSS/CSS_Container_Queries
+slug: Web/CSS/CSS_container_queries
 ---
 
 {{CSSRef}}
