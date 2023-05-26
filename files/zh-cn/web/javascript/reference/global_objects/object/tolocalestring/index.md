@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 方法返回一个表示对象的字符串。该方法旨在由派生对象重载使用，以达到特定于语言环境的目的。
+**`toLocaleString()`** 方法返回一个表示对象的字符串。该方法旨在由派生对象重写，以达到其特定于语言环境的目的。
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
 
@@ -17,7 +17,7 @@ toLocaleString()
 
 ### 参数
 
-没有参数。但是，重载此方法的所有对象最多只能接受两个参数，分别对应于 `locales` 和 `options`，例如 {{jsxref("Date.prototype.toLocaleString")}}。参数位置不用于任何其他目的。
+没有参数。但是，重写此方法的所有对象最多只能接受两个参数，分别对应于 `locales` 和 `options`，例如 {{jsxref("Date.prototype.toLocaleString")}}。这些参数位置不应该用于任何其他目的。
 
 ### 返回值
 
@@ -25,9 +25,9 @@ toLocaleString()
 
 ## 描述
 
-所有继承 `Object.prototype`（也就是说，除了 [`null`——原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)）的对象都继承了 `toLocaleString()` 方法。{{jsxref("Object")}} 的 `toLocaleString` 返回调用 {{jsxref("Object/toString", "this.toString()")}} 的结果。
+所有继承 `Object.prototype`（也就是说，除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)）的对象都继承了 `toLocaleString()` 方法。{{jsxref("Object")}} 的 `toLocaleString` 返回调用 {{jsxref("Object/toString", "this.toString()")}} 的结果。
 
-提供此方法是为了给对象一个通用的 `toLocaleString` 方法，即使不是所有对象都可以使用它。在核心语言中，这些内置对象重载 `toLocaleString` 以提供特定于语言环境的格式：
+提供此方法是为了给对象一个通用的 `toLocaleString` 方法，即使不是所有对象都可以使用它。在核心语言中，这些内置对象重写了 `toLocaleString` 以提供特定于语言环境的格式：
 
 - {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
 - {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
@@ -50,7 +50,7 @@ const obj = {
 console.log(obj.toLocaleString()); // "My Object"
 ```
 
-### 数组 toLocaleString() 的重载
+### 数组重写的 toLocaleString()
 
 {{jsxref("Array.prototype.toLocaleString()")}} 用于将数组值打印成字符串，通过调用每个元素的 `toLocaleString()` 方法，并使用特定于语言环境的分隔符拼接。例如：
 
@@ -64,7 +64,7 @@ const euroPrices = testArray.toLocaleString("fr", {
 // "4,00 €,7,00 €,10,00 €"
 ```
 
-### 日期对象 toLocaleString() 的重载
+### 日期对象重写的 toLocaleString()
 
 {{jsxref("Date.prototype.toLocaleString()")}} 用于打印成更适合特定语言环境的日期显示。例如：
 
@@ -79,7 +79,7 @@ const frDate = testDate.toLocaleString("fr");
 // "29/05/2020, 18:04:24"
 ```
 
-### 数字 toLocaleString() 的重载
+### 数字重写的 toLocaleString()
 
 {{jsxref("Number.prototype.toLocaleString()")}} 用于打印成更适合特定语言环境的数字显示，例如使用正确的分隔符。例如：
 
