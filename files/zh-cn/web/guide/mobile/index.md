@@ -30,7 +30,7 @@ slug: Web/Guide/Mobile
 [响应式网页设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是一项让你的网站在手持设备上通过不同的使用环境进行自动适应的技术，通常来说体现在尺寸和屏幕的排列方向上。它包含下面的技术：
 
 - 流动的 CSS 布局设计，保证当浏览器窗口的尺寸变化时网页也能流畅地适应
-- 根据设备屏幕的[宽](/zh-CN/docs/Web/CSS/@media/width)[高](/zh-CN/docs/Web/CSS/@media/height)，合理使用 CSS [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)规则
+- 根据设备屏幕的[宽](/zh-CN/docs/Web/CSS/@media/width)[高](/zh-CN/docs/Web/CSS/@media/height)，合理使用 CSS [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)规则
 
 [viewport meta 标签](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design#viewport_meta_标签)指示浏览器以适合用户设备的比例显示你的网站。
 

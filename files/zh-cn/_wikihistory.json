@@ -17807,35 +17807,13 @@
       "alimon"
     ]
   },
-  "Web/CSS/CSSOM_View": {
+  "Web/CSS/CSSOM_view": {
     "modified": "2019-03-23T22:13:17.107Z",
     "contributors": ["Pada"]
   },
-  "Web/CSS/CSSOM_View/Coordinate_systems": {
+  "Web/CSS/CSSOM_view/Coordinate_systems": {
     "modified": "2019-03-18T21:28:19.895Z",
     "contributors": ["1Cr18Ni9"]
-  },
-  "Web/CSS/CSS_Columns": {
-    "modified": "2020-09-13T09:14:37.310Z",
-    "contributors": [
-      "SolidBlock",
-      "vampire624",
-      "maicss",
-      "DaiZhiTao",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol": {
-    "modified": "2019-03-18T21:22:33.531Z",
-    "contributors": ["userkang"]
-  },
-  "Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol": {
-    "modified": "2019-12-09T22:59:53.171Z",
-    "contributors": ["maicss"]
-  },
-  "Web/CSS/CSS_Columns/Using_multi-column_layouts": {
-    "modified": "2019-03-23T23:28:24.667Z",
-    "contributors": ["Bayes", "xgqfrms-GitHub", "fscholz", "Nightingale"]
   },
   "Web/CSS/CSS_Flow_Layout": {
     "modified": "2019-03-18T20:48:13.355Z",
@@ -18007,73 +17985,6 @@
     "modified": "2019-03-18T21:28:40.615Z",
     "contributors": ["xgqfrms"]
   },
-  "Web/CSS/CSS_Positioning": {
-    "modified": "2019-03-23T22:16:58.595Z",
-    "contributors": ["ZZES_REN"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index": {
-    "modified": "2019-03-23T23:33:08.995Z",
-    "contributors": [
-      "zhangchen",
-      "ZQH",
-      "Go7hic",
-      "ziyunfei",
-      "teoli",
-      "ArthasTree"
-    ]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index": {
-    "modified": "2019-03-23T23:21:48.784Z",
-    "contributors": ["ziyunfei", "teoli", "ArthasTree"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float": {
-    "modified": "2019-03-23T23:29:39.696Z",
-    "contributors": ["lixuguang", "Marcia_gm", "ziyunfei", "teoli", "sunnylost"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1": {
-    "modified": "2020-04-09T03:35:06.982Z",
-    "contributors": ["liuyibo", "VickyJin"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2": {
-    "modified": "2019-03-23T22:25:59.868Z",
-    "contributors": ["Skyrelu"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3": {
-    "modified": "2020-01-19T10:58:58.576Z",
-    "contributors": ["zenHeart", "Skyrelu"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index": {
-    "modified": "2019-08-23T06:42:17.114Z",
-    "contributors": [
-      "allan_simon",
-      "ziyunfei",
-      "teoli",
-      "sunnylost",
-      "endlesswind"
-    ]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context": {
-    "modified": "2020-01-02T04:20:32.161Z",
-    "contributors": [
-      "Sl0v3C",
-      "realstephenzhao",
-      "hayahayao",
-      "SakuraSnow",
-      "zjffun",
-      "gzponline",
-      "kevinfszu",
-      "Ende93",
-      "huangcheng",
-      "yisibl",
-      "ziyunfei",
-      "Dolphin_Wood",
-      "davin107",
-      "fake",
-      "teoli",
-      "ethertank",
-      "tzyeah"
-    ]
-  },
   "Web/CSS/CSS_Scroll_Snap": {
     "modified": "2020-11-30T06:24:22.073Z",
     "contributors": ["SphinxKnight", "y-z-ui"]
@@ -18102,72 +18013,6 @@
     "modified": "2019-03-23T22:52:16.056Z",
     "contributors": ["Ende93", "huangcheng", "FredWe"]
   },
-  "Web/CSS/CSS_Shapes": {
-    "modified": "2019-07-30T22:05:51.456Z",
-    "contributors": ["xgqfrms-GitHub"]
-  },
-  "Web/CSS/CSS_Shapes/From_box_values": {
-    "modified": "2019-08-22T06:52:09.530Z",
-    "contributors": ["xunzhonglee"]
-  },
-  "Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes": {
-    "modified": "2020-03-21T05:15:07.734Z",
-    "contributors": ["linuxbckp"]
-  },
-  "Web/CSS/CSS_Table": {
-    "modified": "2020-12-01T03:09:38.045Z",
-    "contributors": ["suvyme"]
-  },
-  "Web/CSS/CSS_Text": {
-    "modified": "2020-09-16T00:45:53.626Z",
-    "contributors": ["namklaw", "RainSlide", "zjffun", "LuXuanqing"]
-  },
-  "Web/CSS/CSS_Text_Decoration": {
-    "modified": "2019-04-19T11:09:51.086Z",
-    "contributors": ["zjffun"]
-  },
-  "Web/CSS/CSS_Transforms": {
-    "modified": "2019-09-28T03:26:55.908Z",
-    "contributors": ["CharCat", "zhuangyin", "Sebastianz", "fscholz"]
-  },
-  "Web/CSS/CSS_Transforms/Using_CSS_transforms": {
-    "modified": "2019-12-12T06:29:17.372Z",
-    "contributors": [
-      "WangYiCong",
-      "RainSlide",
-      "zsxeee",
-      "kyriejoshua",
-      "funnyChinese",
-      "fscholz",
-      "troywith77",
-      "FredWe",
-      "ziyunfei",
-      "teoli",
-      "TimZhao",
-      "xcffl"
-    ]
-  },
-  "Web/CSS/CSS_Transitions": {
-    "modified": "2019-03-23T22:44:13.456Z",
-    "contributors": ["MingxunBai", "teoli"]
-  },
-  "Web/CSS/CSS_Transitions/Using_CSS_transitions": {
-    "modified": "2019-09-29T00:37:10.013Z",
-    "contributors": [
-      "SingularityXD",
-      "Venus14",
-      "tiansh",
-      "zhuangyin",
-      "ucev",
-      "xgqfrms-GitHub",
-      "brave-for-you",
-      "Ende93",
-      "SphinxKnight",
-      "fscholz",
-      "ziyunfei",
-      "yan"
-    ]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-23T22:08:42.415Z",
     "contributors": ["Ende93", "h2x"]
@@ -18175,10 +18020,6 @@
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-07-17T05:52:14.158Z",
     "contributors": ["bdawn", "Owen-Tsai"]
-  },
-  "Web/CSS/CSS_Writing_Modes": {
-    "modified": "2019-08-24T07:12:47.677Z",
-    "contributors": ["xunzhonglee"]
   },
   "Web/CSS/CSS_animated_properties": {
     "modified": "2019-04-01T03:31:52.769Z",
@@ -18449,6 +18290,203 @@
     "modified": "2019-12-03T13:06:14.108Z",
     "contributors": ["pans9"]
   },
+  "Web/CSS/CSS_media_queries": {
+    "modified": "2020-10-15T21:56:18.732Z",
+    "contributors": ["RainSlide", "zjffun", "Charley-Hsu"]
+  },
+  "Web/CSS/CSS_media_queries/Testing_media_queries": {
+    "modified": "2020-10-15T21:25:42.378Z",
+    "contributors": ["RainSlide", "Chajn", "reygreen1", "Wenbin"]
+  },
+  "Web/CSS/CSS_media_queries/Using_media_queries": {
+    "modified": "2020-05-17T23:15:16.911Z",
+    "contributors": [
+      "wallena3",
+      "Swordword",
+      "RainSlide",
+      "wuguichiroumeiyou",
+      "LemonTency",
+      "AielloChan",
+      "lllvantis",
+      "chaiyu2002",
+      "ziyunfei",
+      "xgqfrms-GitHub",
+      "Junetea",
+      "jggnice",
+      "fidejade",
+      "liyongleihf2006",
+      "AozakiOrenji",
+      "lokyoung",
+      "Sebastianz",
+      "mrstork",
+      "malayaleecoder",
+      "pantao",
+      "Ende93",
+      "Wenbin",
+      "anjianshi",
+      "ZhaoMing",
+      "Nightingale"
+    ]
+  },
+  "Web/CSS/CSS_multicol_layout": {
+    "modified": "2020-09-13T09:14:37.310Z",
+    "contributors": [
+      "SolidBlock",
+      "vampire624",
+      "maicss",
+      "DaiZhiTao",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/CSS_multicol_layout/Basic_concepts": {
+    "modified": "2019-03-18T21:22:33.531Z",
+    "contributors": ["userkang"]
+  },
+  "Web/CSS/CSS_multicol_layout/Handling_overflow_in_multicol_layout": {
+    "modified": "2019-12-09T22:59:53.171Z",
+    "contributors": ["maicss"]
+  },
+  "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
+    "modified": "2019-03-23T23:28:24.667Z",
+    "contributors": ["Bayes", "xgqfrms-GitHub", "fscholz", "Nightingale"]
+  },
+  "Web/CSS/CSS_positioned_layout": {
+    "modified": "2019-03-23T22:16:58.595Z",
+    "contributors": ["ZZES_REN"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2019-03-23T23:33:08.995Z",
+    "contributors": [
+      "zhangchen",
+      "ZQH",
+      "Go7hic",
+      "ziyunfei",
+      "teoli",
+      "ArthasTree"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
+    "modified": "2020-01-02T04:20:32.161Z",
+    "contributors": [
+      "Sl0v3C",
+      "realstephenzhao",
+      "hayahayao",
+      "SakuraSnow",
+      "zjffun",
+      "gzponline",
+      "kevinfszu",
+      "Ende93",
+      "huangcheng",
+      "yisibl",
+      "ziyunfei",
+      "Dolphin_Wood",
+      "davin107",
+      "fake",
+      "teoli",
+      "ethertank",
+      "tzyeah"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+    "modified": "2020-04-09T03:35:06.982Z",
+    "contributors": ["liuyibo", "VickyJin"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2": {
+    "modified": "2019-03-23T22:25:59.868Z",
+    "contributors": ["Skyrelu"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3": {
+    "modified": "2020-01-19T10:58:58.576Z",
+    "contributors": ["zenHeart", "Skyrelu"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements": {
+    "modified": "2019-03-23T23:29:39.696Z",
+    "contributors": ["lixuguang", "Marcia_gm", "ziyunfei", "teoli", "sunnylost"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
+    "modified": "2019-08-23T06:42:17.114Z",
+    "contributors": [
+      "allan_simon",
+      "ziyunfei",
+      "teoli",
+      "sunnylost",
+      "endlesswind"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+    "modified": "2019-03-23T23:21:48.784Z",
+    "contributors": ["ziyunfei", "teoli", "ArthasTree"]
+  },
+  "Web/CSS/CSS_shapes": {
+    "modified": "2019-07-30T22:05:51.456Z",
+    "contributors": ["xgqfrms-GitHub"]
+  },
+  "Web/CSS/CSS_shapes/From_box_values": {
+    "modified": "2019-08-22T06:52:09.530Z",
+    "contributors": ["xunzhonglee"]
+  },
+  "Web/CSS/CSS_shapes/Overview_of_shapes": {
+    "modified": "2020-03-21T05:15:07.734Z",
+    "contributors": ["linuxbckp"]
+  },
+  "Web/CSS/CSS_table": {
+    "modified": "2020-12-01T03:09:38.045Z",
+    "contributors": ["suvyme"]
+  },
+  "Web/CSS/CSS_text": {
+    "modified": "2020-09-16T00:45:53.626Z",
+    "contributors": ["namklaw", "RainSlide", "zjffun", "LuXuanqing"]
+  },
+  "Web/CSS/CSS_text_decoration": {
+    "modified": "2019-04-19T11:09:51.086Z",
+    "contributors": ["zjffun"]
+  },
+  "Web/CSS/CSS_transforms": {
+    "modified": "2019-09-28T03:26:55.908Z",
+    "contributors": ["CharCat", "zhuangyin", "Sebastianz", "fscholz"]
+  },
+  "Web/CSS/CSS_transforms/Using_CSS_transforms": {
+    "modified": "2019-12-12T06:29:17.372Z",
+    "contributors": [
+      "WangYiCong",
+      "RainSlide",
+      "zsxeee",
+      "kyriejoshua",
+      "funnyChinese",
+      "fscholz",
+      "troywith77",
+      "FredWe",
+      "ziyunfei",
+      "teoli",
+      "TimZhao",
+      "xcffl"
+    ]
+  },
+  "Web/CSS/CSS_transitions": {
+    "modified": "2019-03-23T22:44:13.456Z",
+    "contributors": ["MingxunBai", "teoli"]
+  },
+  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
+    "modified": "2019-09-29T00:37:10.013Z",
+    "contributors": [
+      "SingularityXD",
+      "Venus14",
+      "tiansh",
+      "zhuangyin",
+      "ucev",
+      "xgqfrms-GitHub",
+      "brave-for-you",
+      "Ende93",
+      "SphinxKnight",
+      "fscholz",
+      "ziyunfei",
+      "yan"
+    ]
+  },
+  "Web/CSS/CSS_writing_modes": {
+    "modified": "2019-08-24T07:12:47.677Z",
+    "contributors": ["xunzhonglee"]
+  },
   "Web/CSS/Cascade": {
     "modified": "2020-04-12T01:15:48.713Z",
     "contributors": ["laizenan", "zjffun", "Seize-cf", "distums"]
@@ -18573,44 +18611,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T22:27:53.945Z",
     "contributors": ["wh1msy", "xgqfrms-GitHub", "xgqfrms"]
-  },
-  "Web/CSS/Media_Queries": {
-    "modified": "2020-10-15T21:56:18.732Z",
-    "contributors": ["RainSlide", "zjffun", "Charley-Hsu"]
-  },
-  "Web/CSS/Media_Queries/Testing_media_queries": {
-    "modified": "2020-10-15T21:25:42.378Z",
-    "contributors": ["RainSlide", "Chajn", "reygreen1", "Wenbin"]
-  },
-  "Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2020-05-17T23:15:16.911Z",
-    "contributors": [
-      "wallena3",
-      "Swordword",
-      "RainSlide",
-      "wuguichiroumeiyou",
-      "LemonTency",
-      "AielloChan",
-      "lllvantis",
-      "chaiyu2002",
-      "ziyunfei",
-      "xgqfrms-GitHub",
-      "Junetea",
-      "jggnice",
-      "fidejade",
-      "liyongleihf2006",
-      "AozakiOrenji",
-      "lokyoung",
-      "Sebastianz",
-      "mrstork",
-      "malayaleecoder",
-      "pantao",
-      "Ende93",
-      "Wenbin",
-      "anjianshi",
-      "ZhaoMing",
-      "Nightingale"
-    ]
   },
   "Web/CSS/Paged_Media": {
     "modified": "2020-03-18T05:04:22.843Z",

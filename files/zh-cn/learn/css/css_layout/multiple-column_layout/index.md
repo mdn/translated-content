@@ -362,6 +362,6 @@ body {
 ## 参考
 
 - [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_fragmentation)
-- [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

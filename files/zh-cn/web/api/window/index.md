@@ -380,13 +380,13 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 ### 渐变事件
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)被取消时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)被取消时，触发该事件。
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)完成时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成时，触发该事件。
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)首次创建时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)首次创建时，触发该事件。
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)真正开始时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)真正开始时，触发该事件。
 
 ### 已废弃事件
 
