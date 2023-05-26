@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_mode
 
 [CSS](/zh-CN/docs/Web/CSS) **布局模式**，有时简称为布局，是一种基于盒子与其兄弟和祖辈盒子的交互方式来确定盒子的位置和大小的算法。有以下几种形式：
 
-- **块布局**：用来布置文件。块布局包含以文档为中心的功能，例如 [浮动](/zh-CN/docs/Web/CSS/float)元素或将其放置在[多列](/zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)上的功能。
+- **块布局**：用来布置文件。块布局包含以文档为中心的功能，例如 [浮动](/zh-CN/docs/Web/CSS/float)元素或将其放置在[多列](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)上的功能。
 - **行内布局**：用来布置文本。
 - **表格布局**：用来布置表格。
 - **定位布局**：用来对那些与其他元素无交互的定位元素进行布置。

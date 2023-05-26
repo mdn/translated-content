@@ -48,7 +48,7 @@ slug: Glossary/Grid_Lines
 
 {{ EmbedLiveSample('示例', '500', '250') }}
 
-网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
+网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
