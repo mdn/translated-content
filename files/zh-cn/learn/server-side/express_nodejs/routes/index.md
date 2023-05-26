@@ -395,7 +395,7 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
 
 下一节将使用视图 (模板) 和模型里的信息创建一个欢迎页面。
 
-## 另请参阅
+## 参见
 
 - [路由基础](http://www.expressjs.com.cn/starter/basic-routing.html) (Express 官方文档)
 - [路由简介](http://expressjs.com/en/guide/routing.html) (Express 官方文档)

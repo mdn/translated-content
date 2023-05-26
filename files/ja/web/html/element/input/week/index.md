@@ -39,10 +39,10 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
 
 文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats#week_strings)で説明しています。
 
-次のように {{htmlattrxref("value", "input")}} 属性に値を入れることで、既定値を設定することができます。
+次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に値を入れることで、既定値を設定することができます。
 
 ```html
 <label for="week">どの週に始めたいですか。</label>
@@ -95,13 +95,13 @@ weekControl.value = '2017-W45';
 
 ### max
 
-受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された {{htmlattrxref("value", "input")}} がこれを超えた場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
+受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年と週を指定する必要があります。
 
 ### min
 
-受け付ける最も早い年と週です。要素の {{htmlattrxref("value", "input")}} がこれより小さいと、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
+受け付ける最も早い年と週です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さいと、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年と週を指定する必要があります。
 
@@ -113,7 +113,7 @@ weekControl.value = '2017-W45';
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -144,11 +144,11 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ### 入力欄の寸法の制御
 
-`<input type="week">` は {{htmlattrxref("size", "input")}} のような寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="week">` は [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### step 属性の使用
 
-{{htmlattrxref("step", "input")}} 属性を使用して、週の番号が増加または減少するときに飛ばす番号を変更することができるはずですが、対応しているブラウザーでも何も動作していないようです。
+[`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して、週の番号が増加または減少するときに飛ばす番号を変更することができるはずですが、対応しているブラウザーでも何も動作していないようです。
 
 ## 検証
 
@@ -156,7 +156,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ### 週の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択することができる有効な週を制限することができます。以下の例では、最小値を `2017 年第 1 週` に、最大値を `2017 年第 52 週` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択することができる有効な週を制限することができます。以下の例では、最小値を `2017 年第 1 週` に、最大値を `2017 年第 52 週` に設定しています。
 
 ```html
 <form>
@@ -201,7 +201,7 @@ input:valid + span::after {
 
 ### 週の値を必須にする
 
-加えて、 {{htmlattrxref("required", "input")}} 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
+加えて、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
 
 例を見てみましょう。週の最小値と最大値を設定し、かつフィールドを必須に設定しています。
 

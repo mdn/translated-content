@@ -69,18 +69,21 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -107,10 +110,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -118,38 +121,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-const htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+const htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -161,8 +165,11 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   const caretPos = textarea.selectionStart;
 
-  const front = (textarea.value).substring(0, caretPos);
-  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -173,10 +180,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -195,12 +202,16 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 There are some serious [Security concerns](#security_concerns) to consider with `<iframe>`s, as we'll discuss below, but this doesn't mean that you shouldn't use them in your websites — it just requires some knowledge and careful thinking. Let's explore the code in a bit more detail. Say you wanted to include the MDN glossary on one of your web pages — you could try something like this:
 
 ```html
-<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-        width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox>
+<iframe
+  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  width="100%"
+  height="500"
+  frameborder="0"
+  allowfullscreen
+  sandbox>
   <p>
     <a href="https://developer.mozilla.org/en-US/docs/Glossary">
-        Fallback link for browsers that don't support iframes
+      Fallback link for browsers that don't support iframes
     </a>
   </p>
 </iframe>
@@ -250,7 +261,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 Using HTTPS requires a security certificate, which can be expensive (although [Let's Encrypt](https://letsencrypt.org/) makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, _no matter what the cost, you must never embed third-party content with HTTP._ (In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an `<iframe>` will make it available via HTTPS — look at the URLs inside the `<iframe>` `src` attribute when you are embedding content from Google Maps or Youtube, for example.
 
-> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Using_Github_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
+> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
 
 #### Always use the `sandbox` attribute
 
@@ -278,24 +289,31 @@ However, you are unlikely to use these elements very much — Applets haven't be
 
 If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
 
-|                                                                                         | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                        | [`src`](/zh-TW/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/zh-TW/docs/Web/HTML/Element/object#data)                                                  |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/zh-TW/docs/Web/HTML/Element/embed#type)                                              | [`type`](/zh-TW/docs/Web/HTML/Element/object#type)                                                  |
-| height and width (in CSS pixels) of the box controlled by the plugin                    | [`height`](/zh-TW/docs/Web/HTML/Element/embed#height) [`width`](/zh-TW/docs/Web/HTML/Element/embed#width) | [`height`](/zh-TW/docs/Web/HTML/Element/object#height) [`width`](/zh-TW/docs/Web/HTML/Element/object#width) |
-| names and values, to feed the plugin as parameters                                      | ad hoc attributes with those names and values                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`             |
-| independent HTML content as fallback for an unavailable resource                        | not supported (`<noembed>` is obsolete)                                                   | contained within `<object>`, after `<param>` elements                                         |
+|                                                                            | {{htmlelement("embed")}}                                                                                  | {{htmlelement("object")}}                                                                                   |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} of the embedded content                                | [`src`](/zh-TW/docs/Web/HTML/Element/embed#src)                                                           | [`data`](/zh-TW/docs/Web/HTML/Element/object#data)                                                          |
+| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/zh-TW/docs/Web/HTML/Element/embed#type)                                                         | [`type`](/zh-TW/docs/Web/HTML/Element/object#type)                                                          |
+| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/zh-TW/docs/Web/HTML/Element/embed#height) [`width`](/zh-TW/docs/Web/HTML/Element/embed#width) | [`height`](/zh-TW/docs/Web/HTML/Element/object#height) [`width`](/zh-TW/docs/Web/HTML/Element/object#width) |
+| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                   |
+| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                   | contained within `<object>`, after `<param>` elements                                                       |
 
 > **備註：** `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/zh-TW/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox and Chrome, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 
 Here's an example that uses the {{htmlelement("embed")}} element to embed a Flash movie:
 
 ```html
-<embed src="whoosh.swf" quality="medium"
-       bgcolor="#ffffff" width="550" height="400"
-       name="whoosh" align="middle" allowScriptAccess="sameDomain"
-       allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer">
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
 ```
 
 Pretty horrible, isn't it? The HTML generated by the Adobe Flash tool tended to be even worse, using an `<object>` element with an `<embed>` element embedded in it, to cover all bases (check out an example.) Flash was even used successfully as fallback content for HTML5 video, for a time, but this is increasingly being seen as not necessary.
@@ -303,11 +321,15 @@ Pretty horrible, isn't it? The HTML generated by the Adobe Flash tool tended to 
 Now let's look at an `<object>` example that embeds a PDF into a page (see the [live example](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch>
-  <p>You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file.
-    </a>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="mypdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```

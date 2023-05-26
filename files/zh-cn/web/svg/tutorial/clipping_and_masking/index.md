@@ -3,15 +3,17 @@ title: 剪切和遮罩
 slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
 擦除已经创建的元素的部分内容，最初看起来有点矛盾。但是如果你打算在 SVG 中创建一个半圆形，你将很快发现下面的属性的作用了。
 
-**Clipping**用来移除在别处定义的元素的部分内容。在这里，任何半透明效果都是不行的。它只能要么显示要么不显示。
+- **Clipping** 用来移除在别处定义的元素的部分内容。在这里，任何半透明效果都是不行的。它只能要么显示要么不显示。
 
-**Masking**允许使用透明度和灰度值遮罩计算得的软边缘。
+- **Masking** 允许使用透明度和灰度值遮罩计算得的软边缘。
 
-### 创建剪切
+## 创建剪切
 
 我们在一个圆形的基础上创建上面提到的半圆形：
 
@@ -35,7 +37,7 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 现在我们已经有了一个半圆形，不用处理弧形路径元素。对于这个剪切，`clipPath`内部的每个路径都会被检查到、与它的描边属性一起被估值、变形。然后目标的位于 clipPath 内容的结果的透明度区域的每一块都不会呈现。颜色、不透明度都没有这种效果，因为它们不能让一部分彻底消失。
 
-### 遮罩
+## 遮罩
 
 遮罩的效果最令人印象深刻的是表现为一个渐变。如果你想要让一个元素淡出，你可以利用遮罩效果实现这一点。
 
@@ -60,7 +62,7 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 
 {{ EmbedLiveSample('遮罩','240','240') }}
 
-### 用 `opacity` 定义透明度
+## 用 `opacity` 定义透明度
 
 有一个简单方法可以用来为整个元素设置透明度。它就是`opacity`属性：
 

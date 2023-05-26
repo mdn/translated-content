@@ -1,6 +1,6 @@
 ---
 title: CSS Box Model
-slug: Web/CSS/CSS_Box_Model
+slug: Web/CSS/CSS_box_model
 ---
 
 {{CSSRef}}
@@ -51,11 +51,11 @@ slug: Web/CSS/CSS_Box_Model
 
 ## Guides and tools
 
-- [Introduction to the CSS box model](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : Explains one of the fundamental concept of CSS, the box model: describes the meaning of the margin, padding, as well as the different areas of a box.
-- [Mastering margin collapsing](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Mastering margin collapsing](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : In several cases, two adjacent margins are collapsed into one. This article describes when this is happening and how to control it.
-- [Box-shadow generator](/zh-TW/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+- [Box-shadow generator](/zh-TW/docs/Web/CSS/CSS_box_model/Box-shadow_generator)
   - : An interactive tool that allows to visually create shadows and to generate the needed syntax for the {{cssxref("box-shadow")}} property.
 
 ## Specifications

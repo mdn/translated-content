@@ -14,20 +14,22 @@ It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS 
 | [Content categories](/zh-TW/docs/Web/Guide/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content), [palpable content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Palpable_content)                                                                                           |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                                   | [Flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content), but not containing `<form>` elements                                                                                                                                         |
-| Tag omission                                                        | {{no_tag_omission}}                                                                                                                                                                                                                                 |
+| Tag omission                                                        | {{no_tag_omission}}                                                                                                                                                                                                                                      |
 | Permitted parents                                                   | Any element that accepts [flow content](/zh-TW/docs/Web/Guide/HTML/Content_categories#Flow_content)                                                                                                                                                      |
 | Implicit ARIA role                                                  | [`form`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Form_Role) if the form has an [accessible name](https://www.w3.org/TR/accname-1.1/#dfn-accessible-name), otherwise [no corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role) |
-| Permitted ARIA roles                                                | [`search`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Search_role), [`none`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role) or [`presentation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role)                                                                                                                   |
-| DOM interface                                                       | {{domxref("HTMLFormElement")}}                                                                                                                                                                                                                 |
+| Permitted ARIA roles                                                | [`search`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Search_role), [`none`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role) or [`presentation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role)                                           |
+| DOM interface                                                       | {{domxref("HTMLFormElement")}}                                                                                                                                                                                                                           |
 
 ## Attributes
 
 This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attributes).
 
 - `accept` {{Deprecated_Inline}}
+
   - : Comma-separated [content types](/zh-TW/docs/Web/SVG/Content_type) the server accepts.
 
     > **備註：** **This attribute was removed in HTML5 and should not be used.** Instead, use the [`accept`](/zh-TW/docs/Web/HTML/Element/input#accept) attribute on `<input type=file>` elements.
+
 - `accept-charset`
   - : Space-separated [character encodings](/zh-TW/docs/Web/Guide/Localizations_and_character_encodings) the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
@@ -68,16 +70,18 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form>
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
-    <input name="submitted-name" autocomplete="name">
+  <label
+    >Name:
+    <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
 </form>
@@ -86,7 +90,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 <form method="post">
   <fieldset>
     <legend>Title</legend>
-    <label><input type="radio" name="radio"> Select me</label>
+    <label><input type="radio" name="radio" /> Select me</label>
   </fieldset>
 </form>
 ```
@@ -104,7 +108,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 ## See also
 
 - [HTML forms guide](/zh-TW/docs/Web/Guide/HTML/Forms)
-- Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+- Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 - Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
 - [ARIA: Form role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Form_Role)
 - [ARIA: Search role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Search_role)

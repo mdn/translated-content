@@ -67,7 +67,7 @@ slug: Web/HTML/Element/data
 
 この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を含みます。
 
-- {{htmlattrdef("value")}}
+- `value`
   - : この属性は要素の内容を機械可読な形式で指定します。
 
 ## 例

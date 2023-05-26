@@ -56,6 +56,6 @@ document.getElementById('yourElemId').style.color ='red';
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{jsxref("String.prototype.fontsize()")}}

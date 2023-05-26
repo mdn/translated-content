@@ -20,7 +20,7 @@ extension 必须在 manifest.json 中获得"nativeMessaging" [权限](/zh-CN/doc
 - 在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组
 - 原生应用清单的存储位置不一样
 
-Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)，文章中的大部分代码片段均出于此。
+Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/main/native-messaging)，文章中的大部分代码片段均出于此。
 
 ## 安装
 

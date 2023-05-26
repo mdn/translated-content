@@ -501,7 +501,6 @@ input:valid + span::after {
 ## 参见
 
 - [HTML 表单指南](/zh-CN/docs/Learn/Forms)
-- [表单无障碍性](/zh-CN/docs/Web/Accessibility/ARIA/forms)
 - 相关的 {{HTMLElement("input")}} 元素
 
   - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)

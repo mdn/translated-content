@@ -47,7 +47,7 @@ The review teams for each locale are:
   - [hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
   - [armanpwnz](https://github.com/armanpwnz)
-  - [captainspring](https://github.com/captainspring)
+  - [yanaklose](https://github.com/yanaklose)
   - [myshov](https://github.com/myshov)
   - [Saionaro](https://github.com/Saionaro)
   - [sashasushko](https://github.com/sashasushko)
@@ -56,6 +56,7 @@ The review teams for each locale are:
   - [t7yang](https://github.com/t7yang)
   - [irvin](https://github.com/irvin)
   - [yin1999](https://github.com/yin1999)
+  - [jasonren0403](https://github.com/jasonren0403)
 - Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)

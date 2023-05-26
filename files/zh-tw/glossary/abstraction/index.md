@@ -9,4 +9,4 @@ slug: Glossary/Abstraction
 
 ### 一般知識
 
-- 維基百科上的[Abstraction](https://zh.wikipedia.org/wiki/Abstraction_(computer_science))
+- 維基百科上的 [Abstraction](<https://zh.wikipedia.org/wiki/Abstraction_(computer_science)>)

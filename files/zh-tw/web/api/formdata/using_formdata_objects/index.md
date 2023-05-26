@@ -139,4 +139,4 @@ If you want to know how to serialize and submit a form via [AJAX](/zh-TW/docs/AJ
 - [Using XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("HTMLFormElement")}}
 - {{domxref("Blob")}}
-- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)

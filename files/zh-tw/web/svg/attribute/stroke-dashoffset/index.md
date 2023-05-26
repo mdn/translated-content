@@ -53,22 +53,63 @@ slug: Web/SVG/Attribute/stroke-dashoffset
 ### HTML 內容
 
 ```html
-<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <line stroke-dashoffset="0" stroke-dasharray="20" x1="0" y1="10" x2="200" y2="10"/>
-    <line stroke-dashoffset="10" stroke-dasharray="20" x1="0" y1="20" x2="200" y2="20"/>
-    <line stroke-dashoffset="20" stroke-dasharray="20" x1="0" y1="30" x2="200" y2="30"/>
-    <line stroke-dashoffset="50%" stroke-dasharray="20" x1="0" y1="40" x2="200" y2="40"/>
-    <line stroke-dashoffset="25%" stroke-dasharray="20" x1="0" y1="50" x2="200" y2="50"/>
-    <line stroke-dashoffset="0%" stroke-dasharray="20" x1="0" y1="60" x2="200" y2="60"/>
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg">
+  <line
+    stroke-dashoffset="0"
+    stroke-dasharray="20"
+    x1="0"
+    y1="10"
+    x2="200"
+    y2="10" />
+  <line
+    stroke-dashoffset="10"
+    stroke-dasharray="20"
+    x1="0"
+    y1="20"
+    x2="200"
+    y2="20" />
+  <line
+    stroke-dashoffset="20"
+    stroke-dasharray="20"
+    x1="0"
+    y1="30"
+    x2="200"
+    y2="30" />
+  <line
+    stroke-dashoffset="50%"
+    stroke-dasharray="20"
+    x1="0"
+    y1="40"
+    x2="200"
+    y2="40" />
+  <line
+    stroke-dashoffset="25%"
+    stroke-dasharray="20"
+    x1="0"
+    y1="50"
+    x2="200"
+    y2="50" />
+  <line
+    stroke-dashoffset="0%"
+    stroke-dasharray="20"
+    x1="0"
+    y1="60"
+    x2="200"
+    y2="60" />
 </svg>
 ```
 
 ### CSS 內容
 
 ```css
-line{
-    stroke: #51BBA7;
-    stroke-width: 2;
+line {
+  stroke: #51bba7;
+  stroke-width: 2;
 }
 ```
 

@@ -96,7 +96,7 @@ var myObject = {
 - [関数とは](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
 - [イベントとは](/ja/docs/Learn/JavaScript/Building_blocks/Events)
 - [オブジェクトとは](/ja/docs/Learn/JavaScript/Objects/Basics#オブジェクトの基本)
-- [JSON とは](/ja/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON)
+- [JSON とは](/ja/docs/Learn/JavaScript/Objects/JSON#json_とは何か)
 - [Web API とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs)
 - [DOM とは](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)
 
@@ -199,9 +199,9 @@ JavaScript のデバッグに関する詳細については、[JavaScript のよ
 
 ### JSON
 
-- [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn/JavaScript/Objects/JSON#JSON_structure)
+- [JSON の構造とは、JavaScript から JSON を読み取るには](/ja/docs/Learn/JavaScript/Objects/JSON#json_の構造)
 - [JSON ファイルをページに読み込むには](/ja/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON)
-- [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text)
+- [JSON からテキストに変換するには、テキストから JSON に変換するには](/ja/docs/Learn/JavaScript/Objects/JSON#オブジェクトとテキスト間の変換)
 
 ### イベント
 

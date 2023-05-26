@@ -69,6 +69,6 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web component](/zh-CN/docs/Web/API/Web_components)
 - {{cssxref(":host")}}
 - {{cssxref(":host()")}}

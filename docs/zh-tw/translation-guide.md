@@ -75,26 +75,26 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 在翻譯文章時，應使用全形中文標點符號（除非在引述外文的文字中），例如：
 
-- 正確：雖然「Java」和「JavaScript」都是 Oracle 公司
-- 不正確：雖然 "Java" 和 "JavaScript" 都是Oracle公司
-- 正確：請前往 JavaScript——動態的用戶端指令。
-- 不正確：請前往 JavaScript -動態的用戶端指令。
+- 正確：`雖然「Java」和「JavaScript」都是 Oracle 公司`
+- 不正確：`雖然 "Java" 和 "JavaScript" 都是Oracle公司`
+- 正確：`請前往 JavaScript——動態的用戶端指令。`
+- 不正確：`請前往 JavaScript -動態的用戶端指令。`
 
 當引述的內容為外文時，應保留其原有的標點符號：
 
-- 正確：我們將變數 myHeading 中 innerHTML 特性的值設為「Hello, world!」。
-- 不正確：我們將變數 myHeading 中 innerHTML 特性的值設為「Hello，world！」。
+- 正確：`我們將變數 myHeading 中 innerHTML 特性的值設為「Hello, world!」。`
+- 不正確：`我們將變數 myHeading 中 innerHTML 特性的值設為「Hello，world！」。`
 
 #### 常見錯誤
 
 常見錯誤使用的標點符號（包含但不限於下列的例子）：
 
-| 名稱 | 正確 | 錯誤 |
-| --- | --- | ---- |
-| 夾注號 | （） | () |
-| 冒號 | ： | :  |
-| 引號 | 「『』」 | “” 、 "" |
-| 破折號 | —— | -- 、 — |
+| 名稱   | 正確     | 錯誤     |
+| ------ | -------- | -------- |
+| 夾注號 | （）     | ()       |
+| 冒號   | ：       | :        |
+| 引號   | 「『』」 | “” 、 "" |
+| 破折號 | ——       | -- 、 —  |
 
 #### 如何輸入全形標點符號
 
@@ -109,17 +109,17 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如 [W3C 中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/%e4%b8%ad%e8%8b%b1%e6%96%87%e4%b9%8b%e9%96%93%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e6%9c%89%e7%a9%ba%e6%a0%bc%e6%88%91%e5%95%8f/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C/%E5%AD%98%E6%A1%A35#%E6%8F%90%E8%AD%B0%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8A%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AB%A0%E7%AF%80)之討論）。
 
-~~經 MDN 在地化團隊[討論](https://t.me/c/1099275693/2056)，著眼於簡化格式規範，並考量作業系統與瀏覽器層級中英文混排的 kerning 實作將越來越良好（如 iOS 13 、 macOS 10.15 ）， MDN上 「不」在中英文間手動插入空白字元。~~
+~~經 MDN 在地化團隊[討論](https://t.me/c/1099275693/2056)，著眼於簡化格式規範，並考量作業系統與瀏覽器層級中英文混排的 kerning 實作將越來越良好（如 iOS 13、macOS 10.15 ），MDN 上「不」在中英文間手動插入空白字元。~~
 
 基於多數應用程式都並未很對中西文混排進行最佳化處理、不手動修飾仍對閱讀上造成一定的障礙、`zh-CN` 也偏向於手動修正等理由，重新採取須手動修飾的原則。請貢獻者盡可能確保格式的正確，審核人員也會協助你找出遺漏的部分。以下手動增加修飾空白的範例：
 
-- 正確：使用 Git 作為版本控制。
-- 不正確：使用Git作為版本控制。
+- 正確：`使用 Git 作為版本控制。`
+- 不正確：`使用Git作為版本控制。`
 
 全形標點符號與拉丁字符間也要加空白
 
-- 正確：JavaScript 是一個成熟的動態程式語言，應用於 HTML 文件（document）上時
-- 不正確：JavaScript是一個成熟的動態程式語言，應用於HTML文件（document）上時
+- 正確：`JavaScript 是一個成熟的動態程式語言，應用於 HTML 文件（document）上時`
+- 不正確：`JavaScript是一個成熟的動態程式語言，應用於HTML文件（document）上時`
 
 我們也展望 MDN 未來能透過技術上的處理（如[漢字標準格式](https://hanzi.pro/manual/)或 [pangu.js](https://github.com/vinta/pangu.js)），讓中英文混排的文件，在尚未最佳化的系統上也能美觀顯示。
 
@@ -127,12 +127,12 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 原文中經常出現某些常見的標題或用詞，為了避免因未翻譯上的差異導致讀者產生疑惑，請參考下表進行翻譯：
 
-| 原文 | 翻譯 |
-| --- | --- |
+| 原文                  | 翻譯         |
+| --------------------- | ------------ |
 | Browser compatibility | 瀏覽器相容性 |
-| Examples | 範例 |
-| See also | 參見 |
-| Specifications | 規範 |
+| Examples              | 範例         |
+| See also              | 參見         |
+| Specifications        | 規範         |
 
 ### 慣用語及術語
 
@@ -140,23 +140,23 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 以下列舉部分常見的原文、台灣慣用翻譯、中國慣用翻譯做為參考：
 
-| 英文 | 台灣慣用翻譯 | 中國慣用翻譯 |
-| --- | ---------- | ---------- |
-| video | 視訊 | 視頻 |
-| audio | 音訊 | 音頻 |
-| component | 元件 | 組件 |
-| custom | 自訂 | 自定義 |
-| support | 支援（實際行動的，意圖或精神上的則為支持） | 支持 |
-| network | 網路 | 網絡 |
-| code | 程式碼 | 代碼 |
-| source code | 原始碼 | 源代碼 |
-| programming | 程式設計／程設 | 編程 |
-| config/configuration | 組態 | 配置 |
-| (browser) extension | 套件／擴充功能 | 插件 |
-| plugin | 外掛 | 插件 |
-| (file) extension | 副檔名 | 擴展名 |
-| array | 陣列 | 數組 |
-| object | 物件 | 對象 |
+| 英文                 | 台灣慣用翻譯                               | 中國慣用翻譯 |
+| -------------------- | ------------------------------------------ | ------------ |
+| video                | 視訊                                       | 視頻         |
+| audio                | 音訊                                       | 音頻         |
+| component            | 元件                                       | 組件         |
+| custom               | 自訂                                       | 自定義       |
+| support              | 支援（實際行動的，意圖或精神上的則為支持） | 支持         |
+| network              | 網路                                       | 網絡         |
+| code                 | 程式碼                                     | 代碼         |
+| source code          | 原始碼                                     | 源代碼       |
+| programming          | 程式設計／程設                             | 編程         |
+| config/configuration | 組態                                       | 配置         |
+| (browser) extension  | 套件／擴充功能                             | 插件         |
+| plugin               | 外掛                                       | 插件         |
+| (file) extension     | 副檔名                                     | 擴展名       |
+| array                | 陣列                                       | 數組         |
+| object               | 物件                                       | 對象         |
 
 當台灣譯者在翻譯時，應盡可能地使用台灣的慣用翻譯或詞彙。若碰到不確定的情況，可以參考下列的資源。由於機器翻譯多未考慮在地語彙，請不要仰賴線上翻譯服務（譬如 Google 翻譯）。
 
@@ -189,34 +189,34 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 英文有主動語態（active voice）及被動語態（passive voice）。中文雖然也具有主被動語態的觀念，但以主動語態為主。因此在翻譯時，應盡可能的使用主動語態，以避免造成閱讀與理解上的困難，最典型的就是「被」的濫用以及照搬英文的倒裝句。
 
-- 原文：Publishing a website is a complex topic because there are many ways to go about it.
-- 宜：因為有太多方法能夠發佈網站，所以這不是一個幾句話就能說完的課題。
-- 不宜：發佈網站並不是一個幾句話就能說得完的課題，主要是因為有太多方法能夠發佈網站。
+- 原文：`Publishing a website is a complex topic because there are many ways to go about it.`
+- 宜：`因為有太多方法能夠發佈網站，所以這不是一個幾句話就能說完的課題。`
+- 不宜：`發佈網站並不是一個幾句話就能說得完的課題，主要是因為有太多方法能夠發佈網站。`
 
 #### 敬語
 
 英文的代名詞並無敬語的觀念，然而某些中文譯者，往往習慣性地在翻譯時把代名詞譯為敬語，這是不需要的。文件敘述的語氣，毋須刻意展現謙卑的態度，使用貼近口語的說法即可，不需要太過正式（嚴肅）。
 
-- 原文：generally, you have to connect to your web server using details provided by your hosting company
-- 宜：一般來說，你可以用你的公司提供的資訊登入網頁伺服器。
-- 不宜：一般來說，您可以用您的公司提供的資訊登入網頁伺服器。
+- 原文：`generally, you have to connect to your web server using details provided by your hosting company`
+- 宜：`一般來說，你可以用你的公司提供的資訊登入網頁伺服器。`
+- 不宜：`一般來說，您可以用您的公司提供的資訊登入網頁伺服器。`
 
 #### 代名詞
 
 英文文章的敘述中，常會充斥大量的第二或第三人代名詞。但在翻譯為中文時，這種過度出現的代名詞，實際上會使得閱讀變得不通順。適度地減少代名詞的使用，能讓中文的閱讀更加順暢。
 
-- 原文：After you have finished your instructions, follow the numbered list with a brief closing summary.
-- 宜：在完成操作指南後，接續著有序清單給予簡略結語。
-- 不宜：在你完成你的操作指南之後，接續著有序清單給予簡略結語。
+- 原文：`After you have finished your instructions, follow the numbered list with a brief closing summary.`
+- 宜：`在完成操作指南後，接續著有序清單給予簡略結語。`
+- 不宜：`在你完成你的操作指南之後，接續著有序清單給予簡略結語。`
 
 #### 複數形式
 
 相對英文而言，中文並沒有複數（名詞）的概念，因此在翻譯文章時也請去除原文中複數的形式。
 
-- 原文：Browser Application Programming Interfaces (APIs)
-- 宜：瀏覽器應用程式介面（API）
-- 不宜：瀏覽器應用程式介面（APIs）
-- 不宜：瀏覽器應用程式介面們（APIs）
+- 原文：`Browser Application Programming Interfaces (APIs)`
+- 宜：`瀏覽器應用程式介面（API）`
+- 不宜：`瀏覽器應用程式介面（APIs）`
+- 不宜：`瀏覽器應用程式介面們（APIs）`
 
 ## Mozilla 正體中文在地化規範
 

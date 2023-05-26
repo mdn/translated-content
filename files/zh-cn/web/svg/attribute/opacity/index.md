@@ -3,11 +3,11 @@ title: opacity
 slug: Web/SVG/Attribute/opacity
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 opacity 属性指定了一个对象或一组对象的透明度，也就是说，元素后面的背景的透过率。
 
-作为一个外观属性，它可以直接用作 CSS 样式表内部的属性，请阅读 {{ cssxref("opacity","CSS opacity") }}以了解更多信息。
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性，请阅读 {{ cssxref("opacity","CSS opacity") }} 以了解更多信息。
 
 ## 用法
 

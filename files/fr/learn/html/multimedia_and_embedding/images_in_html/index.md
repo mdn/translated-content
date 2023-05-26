@@ -504,12 +504,3 @@ En résumé : si une image a du sens, en terme de contenu, vous devriez utiliser
 C'est tout pour l'instant. Nous avons découvert en détails les images et légendes. Dans le prochain article, nous monterons en régime pour aborder la manière d'utiliser HTML pour intégrer des vidéos et de l'audio dans une page web.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module :
-
-- [Images in HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

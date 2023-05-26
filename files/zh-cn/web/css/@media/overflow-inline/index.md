@@ -5,7 +5,7 @@ slug: Web/CSS/@media/overflow-inline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-inline`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)的内容。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-inline`** 可用于测试输出设备如何处理沿行向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的内容。
 
 ## 语法
 

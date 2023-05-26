@@ -31,10 +31,10 @@ slug: Web/HTML/Element/br
 ## 示例
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 
@@ -52,11 +52,11 @@ USA
 
 | [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[段落型內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)。 |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 允許內容                                        | 無，這是個{{Glossary("空元素")}}.                                                                                        |
+| 允許內容                                        | 無，這是個{{Glossary("空元素")}}.                                                                                                  |
 | 標籤省略                                        | 絕對要有開啟標籤，也絕不能關閉標籤。在 XHTML 文件內，要把這個元素寫成 `<br />`.                                                    |
 | 允許父元素                                      | 任何接受[段落型內容](/zh-TW/docs/HTML/Content_categories#Phrasing_content)的元素                                                   |
 | 允許的 ARIA roles                               | 所有                                                                                                                               |
-| DOM 介面                                        | {{domxref("HTMLBRElement")}}                                                                                               |
+| DOM 介面                                        | {{domxref("HTMLBRElement")}}                                                                                                       |
 
 ## 規範
 

@@ -34,7 +34,7 @@ var buffer = gl.createBuffer();
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindBuffer()")}}
 - {{domxref("WebGLRenderingContext.createBuffer()")}}

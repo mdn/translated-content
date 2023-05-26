@@ -1,9 +1,9 @@
 ---
 title: CSS Counter Styles
-slug: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 **CSS 计数器样式** is 是一个让你自定义计数器样式的 CSS 模块。
 

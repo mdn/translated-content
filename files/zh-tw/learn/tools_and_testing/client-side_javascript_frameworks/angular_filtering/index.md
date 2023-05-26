@@ -46,31 +46,31 @@ filter 屬性的預設值為 `all`，但是它也可以被設置為 `active` 或
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
  -->
 
-  <!-- Buttons that show all, still to do, or done items on click -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
-      All
-    </button>
+<!-- Buttons that show all, still to do, or done items on click -->
+<div class="btn-wrapper">
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'all'"
+    (click)="filter = 'all'">
+    All
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
-      To Do
-    </button>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'active'"
+    (click)="filter = 'active'">
+    To Do
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
-      Done
-    </button>
-  </div>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'done'"
+    (click)="filter = 'done'">
+    Done
+  </button>
+</div>
 
-  <!-- <h2>\{{items.length}} item(s)</h2>
+<!-- <h2>\{{items.length}} item(s)</h2>
         <ul>... -->
 ```
 

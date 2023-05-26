@@ -78,7 +78,7 @@ PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker
 
 在本系列文章中，我们将研究一个超级简单网站的源代码，该网站列出了 [js13kGames 2017](http://2017.js13kgames.com/) 竞赛中提交给 [A-Frame category](http://js13kgames.com/aframe) 的游戏的相关信息。您不必考虑网站上的实际内容，这里主要是学习如何在您自己的项目中使用 PWA 功能。
 
-您可以在 [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) 找到在线版本（另请[参阅源代码](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)），我们将在接下来的几篇文章中对其进行详细解释。
+你可以在 [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) 找到在线版本（另请[参阅源代码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa)），我们将在接下来的几篇文章中对其进行详细解释。
 
 现在，让我们转到本系列的第二部分，我们来看看这个示例应用程序的结构。
 

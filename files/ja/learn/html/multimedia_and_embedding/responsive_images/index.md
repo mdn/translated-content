@@ -23,7 +23,7 @@ l10n:
     <tr>
       <th scope="row">目的:</th>
       <td>
-        {{htmlattrxref("srcset", "img")}} や
+        <a href="/ja/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> や
         {{htmlelement("picture")}}
         要素のような機能を使って、ウェブサイトにレスポンシブ画像を実装する方法を学ぶこと。
       </td>
@@ -59,7 +59,7 @@ l10n:
 
 この種の問題は、ウェブが最初に登場したとき、90 年代前半から中期の頃には存在しませんでした。 — ウェブをブラウズする唯一の端末はデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。 *レスポンシブ画像技術*は上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像（解像度の切り替え）、異なる領域の取り方が異なる様々な画像(アートディレクション)を含めることができます。
 
-> **メモ:** この記事で説明している新機能 — {{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}} — は、最近のデスクトップ及びモバイルのブラウザーのすべてが対応しています(Microsoft Edge ブラウザーも含みますが Internet Explorer は含みません)。
+> **メモ:** この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — は、最近のデスクトップ及びモバイルのブラウザーのすべてが対応しています(Microsoft Edge ブラウザーも含みますが Internet Explorer は含みません)。
 
 ## レスポンシブ画像の作り方
 
@@ -73,7 +73,7 @@ l10n:
 <img src="elva-fairy-800w.jpg" alt="妖精の衣装を着たエルバ">
 ```
 
-しかし、複数の追加のソース画像と、ブラウザーが正しいものを選択する助けになるヒントを提供することができる、 2 つの属性 — {{htmlattrxref("srcset", "img")}} 及び {{htmlattrxref("sizes", "img")}} — を使用することができます。 この例は、 GitHub の [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) で見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)も参照してください)。
+しかし、複数の追加のソース画像と、ブラウザーが正しいものを選択する助けになるヒントを提供することができる、 2 つの属性 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 及び [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) — を使用することができます。 この例は、 GitHub の [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) で見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)も参照してください)。
 
 ```html
 <img srcset="elva-fairy-480w.jpg 480w,
@@ -120,7 +120,7 @@ l10n:
 >
 > どの画像が読み込まれたかを確認するには、 Firefox の開発者ツールの[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)タブを使用することができます。
 
-これらの機能をサポートしていない古いブラウザーはそれを無視し、 {{htmlattrxref("src", "img")}} 属性で参照されている画像を通常の方法で読み込みます。
+これらの機能をサポートしていない古いブラウザーはそれを無視し、 [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で参照されている画像を通常の方法で読み込みます。
 
 > **メモ:** ドキュメントの {{htmlelement("head")}} には、 `<meta name="viewport" content="width=device-width">` という行があります。 これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。 (一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。 これについては、今後のモジュールで詳しく説明します。)
 
@@ -212,7 +212,7 @@ img {
 それはレスポンシブ画像のラップです — あなたはこれらの新しいテクニックで遊ぶことを楽しんでください。 要約すると、私たちがここで議論してきた 2 つの明確な問題があります。
 
 - **アートディレクション**: 異なるレイアウトのためにトリミングされた画像を提供したいという問題 — 例えば、デスクトップレイアウトのフルシーンを示すランドスケープ画像や、モバイルレイアウトのためにズームインした主な被写体を示すポートレート画像などがあります。 これは、 {{htmlelement("picture")}} 要素を使用して解決できます。
-- **解像度切り替え**: デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを狭い画面の端末に配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)(SVG 画像)と {{htmlattrxref("srcset", "img")}} と {{htmlattrxref("sizes", "img")}} 属性を使用して解決できます。
+- **解像度切り替え**: デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを狭い画面の端末に配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)(SVG 画像)と [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) と [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を使用して解決できます。
 
 これはまた、[マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding)のモジュール全体を閉じます！ 先に進む前に行うべき唯一のことは、[マルチメディアと埋め込みの評価課題](/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)に挑戦して、結果を見てみることです。楽しんでください。
 

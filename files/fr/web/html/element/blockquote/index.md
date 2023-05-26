@@ -103,7 +103,7 @@ Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](
 
 Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Element/q).
 
-## Exemple
+## Exemples
 
 Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un passage de [RFC 1149 <i lang="en">A Standard for the Transmission of IP Datagrams on Avian Carriers</i>](https://datatracker.ietf.org/doc/html/rfc1149).
 
@@ -123,9 +123,9 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 </blockquote>
 ```
 
-Le résultat de cet extrait HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample("Exemple", 640, 200)}}
+{{EmbedLiveSample("", 640, 200)}}
 
 ## Spécifications
 

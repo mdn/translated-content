@@ -105,7 +105,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to
-          <a href="/zh-TW/docs/Web/CSS/CSS_Transitions">CSS Transitions</a>.
+          <a href="/zh-TW/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are

@@ -35,7 +35,7 @@ overflow-block: unset;
 - `hidden`
   - : 若内边距盒在块向尺度上无法容纳内容则裁剪内容。不提供滚动条。
 - `scroll`
-  - : 若内边距盒在块向尺度上无法容纳内容则裁剪内容。无论内容是否被裁剪，浏览器均显示滚动条。（。）打印机仍可能打印溢出内容。
+  - : 若内边距盒在块向尺度上无法容纳内容则裁剪内容。无论内容是否被裁剪，浏览器均显示滚动条。（由此可阻止滚动条在内容变化时显示或消失。）打印机仍可能打印溢出内容。
 - `auto`
   - : 取决于用户代理。若内边距盒可以容纳内容，则与 `visible` 表现相同，但仍建立新的块格式化上下文。若内容溢出则桌面浏览器提供滚动条。
 
@@ -145,4 +145,4 @@ overflow-block: unset;
 
 - 相关 CSS 属性：{{CSSXref("text-overflow")}}、{{CSSXref("white-space")}}、{{CSSXref("overflow")}}、{{CSSXref("overflow-inline")}}、{{CSSXref("overflow-x")}}、{{CSSXref("overflow-y")}}、{{CSSXref("clip")}}、{{CSSXref("display")}}
 - [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)

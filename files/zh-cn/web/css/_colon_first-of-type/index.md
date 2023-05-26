@@ -5,22 +5,19 @@ slug: Web/CSS/:first-of-type
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`**表示一组兄弟元素中其类型的第一个元素。
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** 表示一组兄弟元素中其类型的第一个元素。
 
-```
-/* 选择在父元素中第一个出现的<p>，而不管其在兄弟内的位置如何 */
-p:first-of-type {
-  color: red;
-}
-```
-
-> **备注：** 按原来定义，所选元素必须有一个父元素。从 Selectors Level 4 开始，就不需要这样了。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-of-type.html", "tabbed-shorter")}}
 
 ## 语法
 
-{{csssyntax}}
+```css
+:first-of-type {
+  /* ... */
+}
+```
 
-## 例子
+## 示例
 
 ### 装饰第一个段落
 
@@ -43,11 +40,11 @@ p:first-of-type {
 
 #### 结果
 
-{{EmbedLiveSample("装饰第一个段落")}}
+{{EmbedLiveSample('装饰第一个段落')}}
 
 ### 嵌套元素
 
-下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Universal_selectors)(`*`) 是默认应用的。
+下面这个例子展示了如何选中多层嵌套元素。注意当不存在简单选择器时，[通配符](/zh-CN/docs/Web/CSS/Universal_selectors)（`*`）是默认应用的。
 
 #### HTML
 
@@ -55,9 +52,11 @@ p:first-of-type {
 <article>
   <div>This `div` is first!</div>
   <div>This <span>nested `span` is first</span>!</div>
-  <div>This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!</div>
+  <div>
+    This <em>nested `em` is first</em>, but this <em>nested `em` is last</em>!
+  </div>
   <div>This <span>nested `span` gets styled</span>!</div>
-  <b>This `b` qualifies!</b>
+  <p>This `p` qualifies!</p>
   <div>This is the final `div`.</div>
 </article>
 ```
@@ -72,7 +71,7 @@ article :first-of-type {
 
 #### 结果
 
-{{EmbedLiveSample("嵌套元素")}}
+{{EmbedLiveSample('嵌套元素', 500)}}
 
 ## 规范
 

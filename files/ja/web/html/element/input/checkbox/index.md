@@ -78,13 +78,13 @@ l10n:
 
 すべての {{HTMLElement("input")}} 型で共通する属性に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
-- {{htmlattrdef("checked")}}
+- `checked`
 
   - : 論理属性で、チェックボックスが既定で (ページが読み込まれたときに) チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。 ({{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。)
     > **メモ:** 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値が入力欄の値として報告されます。
-    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには {{htmlattrxref("autocomplete","input")}} 属性を使用してください。
+    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を使用してください。
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : `value` 属性はすべての {{HTMLElement("input")}} 要素で共通のものです。しかし、 `checkbox` 型の入力欄では特殊な用途を提供します。フォームが送信されると、現在チェックされているチェックボックスのみがサーバーに送信され、報告される値が `value` 属性の値になります。 `value` が指定されていない場合は、既定で `on` の文字列になります。これは前述の[値](#値)の節で紹介されています。
 
@@ -201,7 +201,7 @@ function updateDisplay() {
 
 ## 検証
 
-チェックボックスは[検証](/ja/docs/Web/Guide/HTML/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに {{htmlattrxref("required", "input")}} 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
+チェックボックスは[検証](/ja/docs/Web/HTML/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
 
 ## 例
 

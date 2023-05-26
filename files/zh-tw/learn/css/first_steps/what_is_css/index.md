@@ -51,7 +51,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 > **備註：** 瀏覽器有時候被稱為 {{Glossary("User agent","user agent")}}（用戶終端），它基本上泛指電腦裡安裝的應用軟體。雖然並不是唯一，當我們在討論 CSS 的時候，用戶終端主要指的是瀏覽器。至於其它的用戶終端，有些能夠將 HTML 和 CSS 轉換為 PDF 再列印出來。
 
-CSS 可以用在很基本文字樣式上頭，像是改變標題和連結的[顏色](/zh-TW/docs/Web/CSS/color_value)及[尺寸](/zh-TW/docs/Web/CSS/font-size)。它可以用在建立布局，像是[將原本單欄的文字內容加入布局](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts)，劃分出主要的內容以及包含相關資訊的側邊欄。它甚至可以用在建立[動畫](/zh-TW/docs/Web/CSS/CSS_Animations)效果。點進上面的連結，看看相關的例子。
+CSS 可以用在很基本文字樣式上頭，像是改變標題和連結的[顏色](/zh-TW/docs/Web/CSS/color_value)及[尺寸](/zh-TW/docs/Web/CSS/font-size)。它可以用在建立布局，像是[將原本單欄的文字內容加入布局](/zh-TW/docs/Web/CSS/Layout_cookbook/Column_layouts)，劃分出主要的內容以及包含相關資訊的側邊欄。它甚至可以用在建立[動畫](/zh-TW/docs/Web/CSS/CSS_animations)效果。點進上面的連結，看看相關的例子。
 
 ## CSS 語法
 
@@ -61,8 +61,8 @@ CSS 是一種基於規則的語言，您對網頁裡特定或一群元素指定�
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -76,12 +76,12 @@ h1 {
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 
@@ -91,7 +91,7 @@ p {
 
 ## CSS 的各個主題（單元）
 
-由於 CSS 有太多的項目可以進行設定，因此將這個語言依不同主題切分出單元。您將會在探索 MDN 的時候看到這些單元，並發現許多文章是圍繞著特定單元所組織的。舉例來說，您可以在 MDN 關於[背景與邊框](/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders)的單元裡，看到它的目的，以及其包含了哪些不同的屬性及特性。 您也將在文末發現到相關 *CSS 規範*的連結。
+由於 CSS 有太多的項目可以進行設定，因此將這個語言依不同主題切分出單元。您將會在探索 MDN 的時候看到這些單元，並發現許多文章是圍繞著特定單元所組織的。舉例來說，您可以在 MDN 關於[背景與邊框](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders)的單元裡，看到它的目的，以及其包含了哪些不同的屬性及特性。 您也將在文末發現到相關 *CSS 規範*的連結。
 
 在這裡不用太煩惱 CSS 的架構，可以讓尋找資訊變得簡單一些。例如說，當你知道某個屬性可能用在其它類似的東西上，因此它們可能被放在同一個規範（單元）裡。
 

@@ -398,7 +398,7 @@ l10n:
 
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
 
-    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は {{htmlattrxref("autocomplete","input")}} 属性で制御することができます。
+    > **メモ:** 仕様書で要件とはされていませんが、 Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性で制御することができます。
 
 - `form`
 
@@ -438,7 +438,7 @@ l10n:
 
 - `max`
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `max` 属性の値が数値でない場合は、要素に最大値は設定されません。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。 `max` 属性の値が数値でない場合は、要素に最大値は設定されません。
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、 `max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
@@ -446,11 +446,11 @@ l10n:
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる文字数（UTF-16 コード単位）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - `min`
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された {{htmlattrxref("value", "input")}} がこれを下回った場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。 `min` 属性の値が数値でない場合は、要素に最小値は設定されません。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。 `min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
     この値は `max` 属性の値以下である必要があります。 `min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、 `min` の値は適用されません。 `min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
@@ -460,7 +460,7 @@ l10n:
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字数 (UTF-16 コード単位) を定義します。これは負数ではなく、 `maxlength` で指定された値以下の整数値でなければなりません。 `minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に不合格になります。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - `multiple`
 
@@ -500,7 +500,7 @@ l10n:
 
 - `pattern`
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが ASCII ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが ASCII ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
 
     `pattern` 属性が存在するが、指定されていないか無効な場合、正規表現は適用されず、この属性は完全に無視されます。 `pattern` 属性が有効で、空でない値がパターンと一致しない場合、制約の検証によりフォームの送信ができなくなります。
 
@@ -1323,7 +1323,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 
 ## 関連情報
 
-- [フォーム制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
+- [フォーム制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - [初めての HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)
 - [HTML フォームを構成する方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
 - [ネイティブのフォームウィジェット](/ja/docs/Learn/Forms/Basic_native_form_controls)

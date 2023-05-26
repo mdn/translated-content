@@ -53,17 +53,18 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
 var http = require("http");
 
 // 創建 HTTP 伺服器並監聽8000 port
-http.createServer(function(request, response) {
+http
+  .createServer(function (request, response) {
+    // Set the response HTTP header with HTTP status and Content type
+    response.writeHead(200, { "Content-Type": "text/plain" });
 
-   // Set the response HTTP header with HTTP status and Content type
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Send the response body "Hello World"
-   response.end('Hello World\n');
-}).listen(8000);
+    // Send the response body "Hello World"
+    response.end("Hello World\n");
+  })
+  .listen(8000);
 
 // Print URL for accessing server
-console.log('Server running at http://127.0.0.1:8000/');
+console.log("Server running at http://127.0.0.1:8000/");
 ```
 
 Node 並不原生支持其他常見的 web 開發任務，如果你想為不同的 HTTP 方法(例如：`GET`, `POST`, `DELETE`等)增加特定的處理、替不同的 URL 路徑提供靜態檔案、使用樣板或動態性的產生 response，你需要自己完成相關的程式**或者是**避免重新造輪子 - 使用 web 框架！
@@ -120,15 +121,15 @@ First lets consider the standard Express [Hello World](https://expressjs.com/en/
 > **`./node ./app.js`**
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 
-app.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+app.listen(3000, function () {
+  console.log("Example app listening on port 3000!");
 });
 ```
 
@@ -145,7 +146,7 @@ A module is a JavaScript library/file that you can import into other code using 
 The code below shows how we import a module by name, using the _Express_ framework as an example. First we invoke the `require()` function, specifying the name of the module as a string (`'express'`), and calling the returned object to create an [Express application](https://expressjs.com/en/4x/api.html#app). We can then access the properties and functions of the application object.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 ```
 
@@ -156,15 +157,19 @@ You can also create your own modules that can be imported in the same way.
 To make objects available outside of a module you just need to assign them to the `exports` object. For example, the **square.js** module below is a file that exports `area()` and `perimeter()` methods:
 
 ```js
-exports.area = function(width) { return width * width; };
-exports.perimeter = function(width) { return 4 * width; };
+exports.area = function (width) {
+  return width * width;
+};
+exports.perimeter = function (width) {
+  return 4 * width;
+};
 ```
 
 We can import this module using `require()`, and then call the exported method(s) as shown:
 
 ```js
-var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square with a width of 4 is ' + square.area(4));
+var square = require("./square"); // Here we require() the name of the file without the (optional) .js file extension
+console.log("The area of a square with a width of 4 is " + square.area(4));
 ```
 
 > **備註：** You can also specify an absolute path to the module (or a name, as we did initially).
@@ -173,13 +178,13 @@ If you want to export a complete object in one assignment instead of building it
 
 ```js
 module.exports = {
-  area: function(width) {
+  area: function (width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter: function (width) {
     return 4 * width;
-  }
+  },
 };
 ```
 
@@ -190,17 +195,17 @@ For a lot more information about modules see [Modules](https://nodejs.org/api/mo
 JavaScript code frequently uses asynchronous rather than synchronous APIs for operations that may take some time to complete. A synchronous API is one in which each operation must complete before the next operation can start. For example, the following log functions are synchronous, and will print the text to the console in order (First, Second).
 
 ```js
-console.log('First');
-console.log('Second');
+console.log("First");
+console.log("Second");
 ```
 
 By contrast, an asynchronous API is one in which the API will start an operation and immediately return (before the operation is complete). Once the operation finishes, the API will use some mechanism to perform additional operations. For example, the code below will print out "Second, First" because even though `setTimeout()` method is called first, and returns immediately, the operation doesn't complete for several seconds.
 
 ```js
-setTimeout(function() {
-   console.log('First');
-   }, 3000);
-console.log('Second');
+setTimeout(function () {
+  console.log("First");
+}, 3000);
+console.log("Second");
 ```
 
 Using non-blocking asynchronous APIs is even more important on Node than in the browser, because _Node_ is a single threaded event-driven execution environment. "single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
@@ -216,8 +221,8 @@ There are a number of ways for an asynchronous API to notify your application th
 In our _Hello World_ Express example (see above), we defined a (callback) route handler function for HTTP `GET` requests to the site root (`'/'`).
 
 ```js
-app.get('/', function(req, res) {
-  res.send('Hello World!');
+app.get("/", function (req, res) {
+  res.send("Hello World!");
 });
 ```
 
@@ -230,8 +235,8 @@ The _Express application_ object also provides methods to define route handlers 
 There is a special routing method, `app.all()`, which will be called in response to any HTTP method. This is used for loading middleware functions at a particular path for all request methods. The following example (from the Express documentation) shows a handler that will be executed for requests to `/secret` irrespective of the HTTP verb used (provided it is supported by the [http module](https://nodejs.org/api/http.html#http_http_methods)).
 
 ```js
-app.all('/secret', function(req, res, next) {
-  console.log('Accessing the secret section ...');
+app.all("/secret", function (req, res, next) {
+  console.log("Accessing the secret section ...");
   next(); // pass control to the next handler
 });
 ```
@@ -243,17 +248,17 @@ Often it is useful to group route handlers for a particular part of a site toget
 ```js
 // wiki.js - Wiki route module
 
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Home page route
-router.get('/', function(req, res) {
-  res.send('Wiki home page');
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
 });
 
 // About page route
-router.get('/about', function(req, res) {
-  res.send('About this wiki');
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
 });
 
 module.exports = router;
@@ -264,9 +269,9 @@ module.exports = router;
 To use the router in our main app file we would then `require()` the route module (**wiki.js**), then call `use()` on the _Express_ application to add the Router to the middleware handling path. The two routes will then be accessible from `/wiki/` and `/wiki/about/`.
 
 ```js
-var wiki = require('./wiki.js');
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes).
@@ -304,23 +309,23 @@ You can add a middleware function to the processing chain with either `app.use()
 The example below shows how you can add the middleware function using both methods, and with/without a route.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // An example middleware function
-var a_middleware_function = function(req, res, next) {
+var a_middleware_function = function (req, res, next) {
   // ... perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
-}
+};
 
 // Function added with use() for all routes and verbs
 app.use(a_middleware_function);
 
 // Function added with use() for a specific route
-app.use('/someroute', a_middleware_function);
+app.use("/someroute", a_middleware_function);
 
 // A middleware function added for a specific HTTP verb and route
-app.get('/', a_middleware_function);
+app.get("/", a_middleware_function);
 
 app.listen(3000);
 ```
@@ -334,7 +339,7 @@ The Express documentation has a lot more excellent documentation about [using](h
 You can use the [express.static](http://expressjs.com/en/4x/api.html#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
 
 ```js
-app.use(express.static('public'));
+app.use(express.static("public"));
 ```
 
 Any files in the public directory are served by adding their filename (_relative_ to the base "public" directory) to the base URL. So for example:
@@ -349,14 +354,14 @@ http://localhost:3000/about.html
 You can call `static()` multiple times to serve multiple directories. If a file cannot be found by one middleware function then it will simply be passed on to the subsequent middleware (the order that middleware is called is based on your declaration order).
 
 ```js
-app.use(express.static('public'));
-app.use(express.static('media'));
+app.use(express.static("public"));
+app.use(express.static("media"));
 ```
 
 You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](http://expressjs.com/en/4x/api.html#app.use) so that the files are loaded with the prefix "/media":
 
 ```js
-app.use('/media', express.static('public'));
+app.use("/media", express.static("public"));
 ```
 
 Now, you can load the files that are in the `public` directory from the `/media` path prefix.
@@ -374,9 +379,9 @@ For more information, see [Serving static files in Express](<Serving static file
 Errors are handled by one or more special middleware functions that have four arguments, instead of the usual three: `(err, req, res, next)`. For example:
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send("Something broke!");
 });
 ```
 
@@ -442,21 +447,21 @@ Template engines (referred to as "view engines" by _Express_) allow you to speci
 In your application settings code you set the template engine to use and the location where Express should look for templates using the 'views' and 'view engines' settings, as shown below (you will also have to install the package containing your template library too!)
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // Set directory to contain the templates ('views')
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 
 // Set view engine to use, in this case 'some_template_engine_name'
-app.set('view engine', 'some_template_engine_name');
+app.set("view engine", "some_template_engine_name");
 ```
 
 The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) in a route handler function to create and send the HTML response:
 
 ```js
-app.get('/', function(req, res) {
-  res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
+app.get("/", function (req, res) {
+  res.render("index", { title: "About dogs", message: "Dogs rock!" });
 });
 ```
 

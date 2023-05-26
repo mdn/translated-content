@@ -197,7 +197,7 @@ input:required + span::after {
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
-フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/Guide/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
+フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
 
 ### :valid と :invalid
 
@@ -206,7 +206,7 @@ input:required + span::after {
 - 制約検証を行わないコントロールは常に有効であり、したがって `:valid` と一致します。
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
-- 現在の値が {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
+- 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
@@ -261,7 +261,7 @@ input:valid + span::before {
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
 > **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 

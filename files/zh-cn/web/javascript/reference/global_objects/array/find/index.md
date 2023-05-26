@@ -7,12 +7,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 **`find()`** 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
-
 - 如果需要在数组中找到对应元素的**索引**，请使用 {{jsxref("Array.findIndex", "findIndex()")}}。
 - 如果需要查找**某个值的索引**，请使用 {{jsxref("Array.prototype.indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但只是检查每个元素是否与值相等，而不是使用测试函数。）
 - 如果需要查找数组中是否**存在某个值**，请使用 {{jsxref("Array.prototype.includes()")}}。同样，它检查每个元素是否与值相等，而不是使用测试函数。
 - 如果需要查找是否有元素满足所提供的测试函数，请使用 {{jsxref("Array.prototype.some()")}}。
+
+{{EmbedInteractiveExample("pages/js/array-find.html","shorter")}}
 
 ## 语法
 
@@ -128,12 +128,12 @@ array.find((value, index) => {
 
 // 打印所有索引，包括已删除的
 array.find((value, index) => {
-  // 在第一次迭代时删除元素5
+  // 在第一次迭代时删除元素 5
   if (index === 0) {
     console.log(`删除 array[5] 的值 ${array[5]}`);
     delete array[5];
   }
-  // 即使删除了，元素5仍然被访问
+  // 即使删除了，元素 5 仍然被访问
   console.log(`访问索引 ${index}，值为 ${value}`);
 });
 // 删除值为 5 的 array[5]
@@ -172,8 +172,13 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.find` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.findIndex()")}}——查找并返回索引
-- {{jsxref("Array.prototype.includes()")}}——测试数组中是否存在一个值
-- {{jsxref("Array.prototype.filter()")}}——删除所有不匹配的元素
-- {{jsxref("Array.prototype.every()")}}——测试数组中所有元素
-- {{jsxref("Array.prototype.some()")}}——测试直到一个元素匹配
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.findIndex()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("Array.prototype.filter()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- {{jsxref("TypedArray.prototype.find()")}}

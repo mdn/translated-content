@@ -69,13 +69,13 @@ clip-path: unset;
   - : 如果同 `<basic-shape>` 一起声明，它将为基本形状提供相应的参考框盒。通过自定义，它将利用确定的盒子边缘包括任何形状边角（比如说，被 {{cssxref("border-radius")}} 定义的剪切路径）。几何框盒可以有以下的值中的一个：
 
     - `margin-box`
-      - : 使用 [margin box](/zh-CN/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box) 作为引用框。
+      - : 使用 [margin box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) 作为引用框。
     - `border-box`
-      - : 使用 [border box](/zh-CN/docs/Web/CSS/CSS_Shapes/From_box_values#border-box) 作为引用框。
+      - : 使用 [border box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#border-box) 作为引用框。
     - `padding-box`
-      - : 使用 [padding box](/zh-CN/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box) 作为引用框。
+      - : 使用 [padding box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) 作为引用框。
     - `content-box`
-      - : 使用 [content box](/zh-CN/docs/Web/CSS/CSS_Shapes/From_box_values#content-box) 作为引用框。
+      - : 使用 [content box](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values#content-box) 作为引用框。
     - `fill-box`
       - : 利用对象边界框（object bounding box）作为引用框。
     - `stroke-box`
@@ -86,7 +86,7 @@ clip-path: unset;
 - `none`
   - : 不创建剪切路径。
 
-> **备注：** CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
+> **备注：** CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
 
 ## 形式定义
 

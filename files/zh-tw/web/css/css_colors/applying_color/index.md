@@ -1,6 +1,6 @@
 ---
 title: Applying color to HTML elements using CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
@@ -152,9 +152,10 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -165,38 +166,38 @@ th {
 
 ```html hidden
 <table>
- <thead>
-  <tr>
-   <th scope="col">Color in HSL notation</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(90deg, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(270deg, 90%, 50%)</code></td>
-   <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Color in HSL notation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(90deg, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(270deg, 90%, 50%)</code></td>
+      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -223,14 +224,10 @@ The HTML responsible for creating the above example is shown here:
 ```html
 <div class="wrapper">
   <div class="box boxLeft">
-    <p>
-      This is the first box.
-    </p>
+    <p>This is the first box.</p>
   </div>
   <div class="box boxRight">
-    <p>
-      This is the second box.
-    </p>
+    <p>This is the second box.</p>
   </div>
 </div>
 ```
@@ -272,7 +269,7 @@ Our two colored boxes share a number of properties in common, so next we establi
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the propeties that differ between the two.
+In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the propeties that differ between the two.
 
 ```css
 .boxLeft {
@@ -328,7 +325,7 @@ The HTML here creates a box that contains a color picker control (with a label c
 ```html
 <div id="box">
   <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -343,7 +340,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
 }
 ```
 
@@ -358,13 +355,21 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Color set to " + colorPicker.value + ".";
+  },
+  false
+);
 ```
 
 The [`input`](/zh-TW/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
@@ -397,7 +402,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/zh-TW/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/zh-TW/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](http://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 

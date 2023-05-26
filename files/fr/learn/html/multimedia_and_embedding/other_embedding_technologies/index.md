@@ -342,12 +342,3 @@ Le problème de l'intégration de contenus tiers dans des documents web peut rap
 D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module
-
-- [Images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenus audio et Vidéo](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> à \<iframe> — autres techniques d'intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Ajout de graphiques vectoriels dans le Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Écrans d'accueil Mozilla](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

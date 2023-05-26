@@ -3,11 +3,13 @@ title: Patterns
 slug: Web/SVG/Tutorial/Patterns
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
 ## 图案
 
-在我看来 patterns（图案）是 SVG 中用到的最让人混淆的填充类型之一。它的功能非常强大，所以我认为他们值得讨论一下并且我们应至少对他们有最基本的了解。跟渐变一样，{{SVGElement('pattern')}}需要放在 SVG 文档的 \<defs> 内部。
+在我看来 patterns（图案）是 SVG 中用到的最让人混淆的填充类型之一。它的功能非常强大，所以我认为他们值得讨论一下并且我们应至少对他们有最基本的了解。跟渐变一样，{{SVGElement('pattern')}} 需要放在 SVG 文档的 {{SVGElement("defs")}} 内部。
 
 ```html
 <?xml version="1.0" standalone="no"?>

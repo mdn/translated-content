@@ -67,7 +67,7 @@ slug: Web/Tutorials
 
 ### 高級
 
-- **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)**
+- **[Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)**
   - : Apply rotation, skewing, scaling, and translation using CSS.
 - **[CSS transitions](/zh-TW/docs/CSS/CSS_transitions)**
   - : CSS transitions, part of the draft CSS3 specification, provide a way to animate changes to CSS properties, instead of having the changes take effect instantly.
@@ -87,6 +87,7 @@ slug: Web/Tutorials
 - [JavaScript first steps](/zh-TW/docs/Learn/JavaScript/First_steps)
 
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
+
 - [JavaScript building blocks](/zh-TW/docs/Learn/JavaScript/Building_blocks)
   - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
 - [Getting started with JavaScript](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

@@ -27,7 +27,7 @@ slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 - 元素属性为 {{cssxref("contain", "contain: layout", "#layout")}}, `content`, 或 `strict`
 - {{Glossary("flex item", "flex items")}}
 - 网格布局元素
-- [multicol containers](/zh-CN/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [multicol containers](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
 - 元素属性 {{cssxref("column-span")}} 设置为 `all`
 
 这很有用，因为新的 BFC 的行为与最外层的文档非常相似，它在主布局中创造了一个小布局。BFC 包含其内部的所有内容，{{cssxref("float")}} 和 {{cssxref("clear")}} 仅适用于同一格式上下文中的项目，而页边距仅在同一格式上下文中的元素之间折叠。
@@ -77,4 +77,4 @@ box model 不完全适用于参与内联格式上下文。在水平书写模式�
 
 - [Block formatting context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
 - [Visual Formatting Model](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-- [CSS Box Model](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [CSS Box Model](/zh-CN/docs/Web/CSS/CSS_box_model)

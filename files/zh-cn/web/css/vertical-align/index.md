@@ -14,7 +14,7 @@ vertical-align 属性可被用于两种环境：
 - 使行内元素盒模型与其行内元素容器垂直对齐。例如，用于垂直对齐一行文本内的图片{{HTMLElement("img")}}：
 - 垂直对齐表格单元内容。
 
-注意 `vertical-align` 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)。
+注意 `vertical-align` 只对行内元素、行内块元素和表格单元格元素生效：不能用它垂直对齐[块级元素](/zh-CN/docs/Glossary/Block-level_content)。
 
 ## 语法
 
@@ -130,7 +130,7 @@ img.middle { vertical-align: middle; }
 
 ## 参见
 
-- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#Center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

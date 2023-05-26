@@ -55,10 +55,10 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
     <tr>
       <td><strong>対応する共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ Edge の `time` コントロールはいくらかもっと精巧で、時と分�
 
 ### value 属性の設定
 
-`<input>` 要素が作成されたときに、次のように {{htmlattrxref("value", "input")}} 属性に時刻を指定することで、既定値を設定することができます。
+`<input>` 要素が作成されたときに、次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に時刻を指定することで、既定値を設定することができます。
 
 ```html
 <label for="appt-time">予約時刻を選んでください。</label>
@@ -149,7 +149,7 @@ startTime.addEventListener("input", () => {
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### max
 
@@ -167,7 +167,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -194,11 +194,11 @@ _現時点で、 `time` 入力欄で `step` に `any` の値が何を意味す�
 
 ### 入力欄の寸法の制御
 
-`<input type="time">` は、 {{htmlattrxref("size", "input")}} のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="time">` は、 [`size`](/ja/docs/Web/HTML/Element/input#size) のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### step 属性の使用
 
-{{htmlattrxref("step", "input")}} 属性を使用して、時刻を上下させるときに加減する時間の大きさを変更することができます（例えば、小さな矢印ウィジェットをクリックしたときに 10 分単位で時刻が動くように）。
+[`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して、時刻を上下させるときに加減する時間の大きさを変更することができます（例えば、小さな矢印ウィジェットをクリックしたときに 10 分単位で時刻が動くように）。
 
 > **メモ:** このプロパティはブラウザー間で異なる結果になることがあり、完全に信頼できるものではありません。
 
@@ -227,7 +227,7 @@ step の値は Edge には効果がないようです。
 
 ### 時刻の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる時刻を制限することができます。次の例では、時刻の最小値を `12:00` に、時刻の最大値を `18:00` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる時刻を制限することができます。次の例では、時刻の最小値を `12:00` に、時刻の最大値を `18:00` に設定しています。
 
 ```html
 <form>
@@ -277,7 +277,7 @@ input:valid + span::after {
 
 #### 最小値と最大値が真夜中をまたぐようにする
 
-{{htmlattrxref("min", "input")}} 属性に {{htmlattrxref("max", "input")}} 属性よりも大きな値を設定することで、有効な時間帯が真夜中をまたぐようにするために、有効な時間帯を真夜中で折り返させることができます。この機能は他の入力型では対応していません。この機能は[仕様書内](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)に存在するものの、まだ全体では対応されていません。 Chrome ベースのブラウザーでは 82 版から対応しており、 Firefox は 76 版から対応しています。 Safari は 14.1 版の時点でまだ対応していません。そうなることを見越して、準備しておきましょう。
+[`min`](/ja/docs/Web/HTML/Element/input#min) 属性に [`max`](/ja/docs/Web/HTML/Element/input#max) 属性よりも大きな値を設定することで、有効な時間帯が真夜中をまたぐようにするために、有効な時間帯を真夜中で折り返させることができます。この機能は他の入力型では対応していません。この機能は[仕様書内](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)に存在するものの、まだ全体では対応されていません。 Chrome ベースのブラウザーでは 82 版から対応しており、 Firefox は 76 版から対応しています。 Safari は 14.1 版の時点でまだ対応していません。そうなることを見越して、準備しておきましょう。
 
 ```js
 const input = document.createElement('input');
@@ -295,7 +295,7 @@ if (input.validity.valid && input.type === 'time') {
 
 ### 時刻を必須にする
 
-加えて、 {{htmlattrxref("required", "input")}} 属性を使用して、時刻の入力を必須にすることができます。結果として、対応するブラウザーでは設定範囲外または空欄の time 入力欄を送信しようとすると、エラーを表示します。
+加えて、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、時刻の入力を必須にすることができます。結果として、対応するブラウザーでは設定範囲外または空欄の time 入力欄を送信しようとすると、エラーを表示します。
 
 例を見てみましょう。時刻の最小値と最大値を設定し、かつ入力欄を必須に設定しています。
 
@@ -342,7 +342,7 @@ if (input.validity.valid && input.type === 'time') {
 - `午後 3 時`
 - etc.
 
-これを回避する方法の一つとして、 `time` 入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けるという方法があります。 `time` 入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときにに使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
+これを回避する方法の一つとして、 `time` 入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けるという方法があります。 `time` 入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときに使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
 
 ```html
 <form>

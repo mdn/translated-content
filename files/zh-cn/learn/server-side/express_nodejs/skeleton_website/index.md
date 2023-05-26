@@ -69,7 +69,7 @@ $ express --help
         --pug            添加 pug 引擎支持
         --hbs            添加 handlebars 引擎支持
     -H, --hogan          添加 hogan.js 引擎支持
-    -v, --view <engine>  添加 <engine> 试图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
+    -v, --view <engine>  添加 <engine> 视图引擎支持 (ejs|hbs|hjs|jade|pug|twig|vash) (默认为 jade)
     -c, --css <engine>   添加 <engine> 样式表引擎支持 (less|stylus|compass|sass) (默认为纯 css)
         --git            添加 .gitignore
     -f, --force          对非空文件夹强制执行
@@ -442,7 +442,7 @@ block content
 
 下一节我们开始修改骨架，让它具备一些图书馆网站的功能。
 
-## 另请参阅
+## 参见
 
 - [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) （Express 中文镜像文档）
 - [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）

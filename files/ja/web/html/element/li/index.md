@@ -75,13 +75,13 @@ slug: Web/HTML/Element/li
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : これは整数値の属性で、 {{HTMLElement("ol")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では **value** 属性は意味がありません。
 
     > **メモ:** この属性は HTML4 で非推奨とされましたが、 HTML5 で再導入されました。
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : 文字の属性で、表示するリストマーカーの種類を指定します。
 

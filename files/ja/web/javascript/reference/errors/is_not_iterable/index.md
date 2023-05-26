@@ -20,13 +20,13 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
 ## エラーの原因
 
-[for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺、 {{jsxref("Promise.all")}} や {{jsxref("TypedArray.from")}} などの引数として指定された値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではありません。反復可能なものは、{{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("Map")}} 等のような組み込み反復可能型や、ジェネレーターの結果、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装しているオブジェクトが成ることができます。</p>
+[for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) の右辺、 {{jsxref("Promise.all")}} や {{jsxref("TypedArray.from")}} などの引数として指定された値が[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)ではありません。反復可能なものは、{{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("Map")}} 等のような組み込み反復可能型や、ジェネレーターの結果、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装しているオブジェクトが成ることができます。</p>
 
 ## 例
 
 ### オブジェクトのプロパティの反復処理
 
-JavaScript では、 {{jsxref("Object")}} は[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装していない限り反復処理できません。したがって、オブジェクトのプロパティを反復処理するために [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) を使用することはできません。</p>
+JavaScript では、 {{jsxref("Object")}} は[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装していない限り反復処理できません。したがって、オブジェクトのプロパティを反復処理するために [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) を使用することはできません。</p>
 
 ```js example-bad
 var obj = { 'France': 'Paris', 'England': 'London' };
@@ -122,7 +122,7 @@ Array.from(myEmptyIterable);  // []
 
 ## 関連情報
 
-- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)
+- [反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}

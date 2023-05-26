@@ -46,7 +46,7 @@ importScripts('foo.js');
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("WorkerGlobalScope")}}
 - [Using Web workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

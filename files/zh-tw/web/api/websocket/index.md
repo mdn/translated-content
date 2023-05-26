@@ -16,18 +16,18 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
 
 ## 屬性
 
-| 屬性             | 形態                                     | 描述                                                                                                                                                                               |
-| ---------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `binaryType`     | {{ DOMXref("DOMString") }}     | 表示連線傳輸的二進制資料形態的字串，若使用 {{ domxref("Blob") }} 物件則為 "blob"，使用 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) 物件則為 "arraybuffer"。 |
-| `bufferedAmount` | [`unsigned long`](/zh-TW/unsigned_long)     | 呼叫 [`send()`](#send) 隊列但尚未傳輸至網路上資料的位元數。連線關閉時此值不會重設為零。連續呼叫 [`send()`](#send) 會讓此值不斷上升。**唯讀**                                       |
-| `extensions`     | {{ DOMXref("DOMString") }}     | 伺服器選擇的擴展。目前僅有空字串或表示資料經過壓縮的 "deflate-stream"。**唯讀**                                                                                                    |
-| `onclose`        | {{ domxref("EventListener") }} | 當 WebSocket 連線的 `readyState` 切換至 `CLOSED` 時呼叫的事件監聽器。監聽器接收命名為 "close" 的 [`CloseEvent`](/zh_tw/WebSockets/WebSockets_reference/CloseEvent)。               |
-| `onerror`        | {{ domxref("EventListener") }} | 當錯誤發生時呼叫的事件監聽器。事件為命名 "error" 的簡單事件。                                                                                                                      |
-| `onmessage`      | {{ domxref("EventListener") }} | 當瀏覽器接收伺服器的訊息時呼叫的事件監聽器。監聽器接收命名為 "message" 的 [`MessageEvent`](/zh_tw/WebSockets/WebSockets_reference/MessageEvent)。                                  |
-| `onopen`         | {{ domxref("EventListener") }} | 當 WebSocket 連線的 `readyState` 切換至 `OPEN` 時呼叫的事件監聽器，表示連線已準備傳送、接收資料。事件為命名 "open" 的簡單事件。                                                    |
-| `protocol`       | {{ DOMXref("DOMString") }}     | 伺服器選擇的子協定，這是建立 WebSocket 物件時 `protocols` 參數裡的其中一個字串。                                                                                                   |
-| `readyState`     | [`unsigned short`](/zh-TW/unsigned_short)   | 連線的目前狀態，是就緒狀態常數的其中一個。**唯讀**                                                                                                                                 |
-| `url`            | {{ DOMXref("DOMString") }}     | 建構方法解析出來的 URL，總是絕對 URL。**唯讀**                                                                                                                                     |
+| 屬性             | 形態                                      | 描述                                                                                                                                                                        |
+| ---------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `binaryType`     | {{ DOMXref("DOMString") }}                | 表示連線傳輸的二進制資料形態的字串，若使用 {{ domxref("Blob") }} 物件則為 "blob"，使用 [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) 物件則為 "arraybuffer"。 |
+| `bufferedAmount` | [`unsigned long`](/zh-TW/unsigned_long)   | 呼叫 [`send()`](#send) 隊列但尚未傳輸至網路上資料的位元數。連線關閉時此值不會重設為零。連續呼叫 [`send()`](#send) 會讓此值不斷上升。**唯讀**                                |
+| `extensions`     | {{ DOMXref("DOMString") }}                | 伺服器選擇的擴展。目前僅有空字串或表示資料經過壓縮的 "deflate-stream"。**唯讀**                                                                                             |
+| `onclose`        | {{ domxref("EventListener") }}            | 當 WebSocket 連線的 `readyState` 切換至 `CLOSED` 時呼叫的事件監聽器。監聽器接收命名為 "close" 的 [`CloseEvent`](/zh_tw/WebSockets/WebSockets_reference/CloseEvent)。        |
+| `onerror`        | {{ domxref("EventListener") }}            | 當錯誤發生時呼叫的事件監聽器。事件為命名 "error" 的簡單事件。                                                                                                               |
+| `onmessage`      | {{ domxref("EventListener") }}            | 當瀏覽器接收伺服器的訊息時呼叫的事件監聽器。監聽器接收命名為 "message" 的 [`MessageEvent`](/zh_tw/WebSockets/WebSockets_reference/MessageEvent)。                           |
+| `onopen`         | {{ domxref("EventListener") }}            | 當 WebSocket 連線的 `readyState` 切換至 `OPEN` 時呼叫的事件監聽器，表示連線已準備傳送、接收資料。事件為命名 "open" 的簡單事件。                                             |
+| `protocol`       | {{ DOMXref("DOMString") }}                | 伺服器選擇的子協定，這是建立 WebSocket 物件時 `protocols` 參數裡的其中一個字串。                                                                                            |
+| `readyState`     | [`unsigned short`](/zh-TW/unsigned_short) | 連線的目前狀態，是就緒狀態常數的其中一個。**唯讀**                                                                                                                          |
+| `url`            | {{ DOMXref("DOMString") }}                | 建構方法解析出來的 URL，總是絕對 URL。**唯讀**                                                                                                                              |
 
 ## 常數
 

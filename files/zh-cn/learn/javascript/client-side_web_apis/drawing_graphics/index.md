@@ -483,7 +483,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 浏览器自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
 
-我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
+我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
 
 ```js
 function loop() {
@@ -797,15 +797,15 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube)。
+你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
-> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 小结
 
 此刻你以经了解了一些 Canvas 和 WebGL 图形编程的基本理念和简单应用，你一定产生了不少创作灵感，玩得开心！
 
-## 另请参阅
+## 参见
 
 本文我们只涉及到画布最为基本的内容，以下内容帮你探索更多：
 

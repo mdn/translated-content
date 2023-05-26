@@ -3,11 +3,13 @@ title: 座標定位
 slug: Web/SVG/Tutorial/Positions
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
 ## 網格
 
-![](canvas_default_grid.png) 對於所有元素，SVG 使用的座標系统或者說網格系統，和[Canvas](/zh-CN/HTML/Canvas)用的差不多（所有電腦繪圖绘图都差不多）。這種座標系统是：以頁面的左上角為(0,0)坐標點，坐標以像素為單位，x 軸正方向是向右，y 軸正方向是向下。注意，這和你小時候所教的繪圖方式是相反的。但是在 HTML 文檔中，元素都是用這種方式定位的。
+![](canvas_default_grid.png) 對於所有元素，SVG 使用的座標系统或者說網格系統，和 [Canvas](/zh-TW/docs/Web/API/Canvas_API) 用的差不多（所有電腦繪圖绘图都差不多）。這種座標系统是：以頁面的左上角為 (0,0) 坐標點，坐標以像素為單位，x 軸正方向是向右，y 軸正方向是向下。注意，這和你小時候所教的繪圖方式是相反的。但是在 HTML 文檔中，元素都是用這種方式定位的。
 
 #### 範例：
 
@@ -26,13 +28,13 @@ slug: Web/SVG/Tutorial/Positions
 在没有进一步规范说明的情况下，1 个用户单位等同于 1 个屏幕单位。要明确改变这种设定，SVG 里有多种方法。我们从`svg`根元素开始：
 
 ```html
-<svg width="100" height="100">
+<svg width="100" height="100"></svg>
 ```
 
 上面的元素定義了一個 100\*100px 的 SVG 畫布，這裡 1 用戶單位等同於 1 螢幕單位。
 
 ```html
-<svg width="200" height="200" viewBox="0 0 100 100">
+<svg width="200" height="200" viewBox="0 0 100 100"></svg>
 ```
 
 這裡定義的畫布尺寸是 200\*200px。但是，viewBox 屬性定義了畫布上可以顯示的區域：從(0,0)點開始，100 寬\*100 高的區域。這個 100\*100 的區域，會放到 200\*200 的畫布上顯示。於是就形成了放大兩倍的效果。

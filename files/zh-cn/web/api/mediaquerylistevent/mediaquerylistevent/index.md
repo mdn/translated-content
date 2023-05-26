@@ -48,8 +48,8 @@ var myMediaQueryListEvent = new MediaQueryListEvent("change", {media, matches});
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

@@ -26,9 +26,9 @@ When the `POST` request is sent via a method other than an HTML form — like vi
 | Request has body                                          | Yes                                       |
 | --------------------------------------------------------- | ----------------------------------------- |
 | Successful response has body                              | Yes                                       |
-| {{Glossary("Safe")}}                              | No                                        |
-| {{Glossary("Idempotent")}}                      | No                                        |
-| {{Glossary("Cacheable")}}                          | Only if freshness information is included |
+| {{Glossary("Safe")}}                                      | No                                        |
+| {{Glossary("Idempotent")}}                                | No                                        |
+| {{Glossary("Cacheable")}}                                 | Only if freshness information is included |
 | Allowed in [HTML forms](/zh-TW/docs/Web/Guide/HTML/Forms) | Yes                                       |
 
 ## 格式

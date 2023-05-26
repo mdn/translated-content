@@ -225,7 +225,7 @@ textarea.onkeyup = () => {
 
 > **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)和[内联元素](/zh-CN/docs/Web/HTML/Inline_elements)页面。
+> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
 
 ### 空元素
 
@@ -738,6 +738,6 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 ## 参见
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

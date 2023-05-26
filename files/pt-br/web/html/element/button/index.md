@@ -19,7 +19,7 @@ O **Elemento HTML _`<button>`_** representa um botão clicável.
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("autofocus")}}
   - : Esse atributo booleano permite-o especificar que o botão possuirá o foco de entrada assim que a página carrega, a menos que o usuário sobrecreva esse comportamento digitanto um controle diferente. Apenas um elemento de um documento associado a um formulário pode ter esse atributo específico.
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
   - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja {{bug(654072)}}.
@@ -29,11 +29,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo {{htmlattrxref("autocomplete","button")}} para controlar esse recurso.
 
-- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("form")}}
   - : O elemento de formulário que o botão está associado (é o _formulário proprietário_). O valor do atributo deve ser o atributo **id** de um elemento {{HTMLElement("form")}} no mesmo documento. Se esse atributo não for especificado, o elemento `<button>` deve ser descendente de um elemento de formulário. Esse atributo permite que você coloque elementos `<button>` em qualquer lugar do documento, não apenas como descendente de seus elementos {{HTMLElement("form")}}.
-- {{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formaction")}}
   - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo {{htmlattrxref("action","form")}} do formulário proprietário do botão.
-- {{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formenctype")}}
 
   - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
 
@@ -43,7 +43,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Se esse atributo fro especificado, ele sobrescreve o atributo {{htmlattrxref("enctype","form")}} do formulário proprietário do botão.
 
-- {{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formmethod")}}
 
   - : Se o botão for um botão de envio, esse atributo especifica o método HTTP que o navegador usará para enviar o formulário. Possíveis valores são:
 
@@ -52,9 +52,9 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Se especificado, esse atributo sobrescreve o atributo {{htmlattrxref("method","form")}} do formulário proprietário do botão.
 
-- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formnovalidate")}}
   - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo {{htmlattrxref("novalidate","form")}} do formulário proprietário do botão.
-- {{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formtarget")}}
 
   - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo {{htmlattrxref("target", "form")}} do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
 

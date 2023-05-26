@@ -702,7 +702,7 @@ gl.getParameter(gl.VIEWPORT);
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.enable()")}}
 - {{domxref("WebGLRenderingContext.disable()")}}

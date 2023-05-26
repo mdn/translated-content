@@ -43,8 +43,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 如同另一個例子，應用程式開始具有複雜的控制措施如日期選取器提供選擇日期，內容滑塊提供選取內容值等。HTML5 提供特定的輸入型態來呈現這些控制措施：
 
 ```html
-<input type="date">
-<input type="range">
+<input type="date" /> <input type="range" />
 ```
 
 這些在跨瀏覽器之間沒有全面性支援，而且也非常困難去為他們指定樣式，而使他們與網站設計整合時不是很好用。因此，開發者時常依賴 JavaScript 資源庫來產生這些一系列內嵌的控制措施 {{htmlelement("div")}}或具有 classnames 的表格元素，透過 CSS 指定樣式與使用 JavaScript 控制。
@@ -112,7 +111,9 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 <header>
   <h1>...</h1>
   <nav>
-    <ul>...</ul>
+    <ul>
+      ...
+    </ul>
     <form>
       <!-- search form  -->
     </form>
@@ -148,7 +149,9 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 <header>
   <h1>...</h1>
   <nav role="navigation">
-    <ul>...</ul>
+    <ul>
+      ...
+    </ul>
     <form role="search">
       <!-- search form  -->
     </form>
@@ -166,7 +169,11 @@ WAI-ARIA 添加[角色屬性](https://www.w3.org/TR/wai-aria-1.1/#role_definitio
 在本範例中我們也將給你一個額外的特徵—{{htmlelement("input")}} 元素賦予 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label)屬性，藉由給予描述性的標籤讓螢幕報讀器可以報讀出來，即使我們沒有包含{{htmlelement("label")}}元素。像這種情況就非常有用—搜尋表單是一個非常常見、容易辨識的特徵，而添加視覺的標籤可能破壞頁面的設計。
 
 ```html
-<input type="search" name="q" placeholder="Search query" aria-label="Search through site content">
+<input
+  type="search"
+  name="q"
+  placeholder="Search query"
+  aria-label="Search through site content" />
 ```
 
 現在如果我們使用 VoiceOver 來看這個範例，我們可以獲得一些改善：
@@ -215,17 +222,17 @@ var intervalID = window.setInterval(showQuote, 10000);
 我們希望你複製 [aria-no-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-no-live.html) 與 [quotes.json](https://github.com/mdn/learning-area/blob/master/accessibility/aria/quotes.json)，並更新 `<section>` 標籤如下所示：
 
 ```html
-<section aria-live="assertive">
+<section aria-live="assertive"></section>
 ```
 
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
-> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新您的 `<section>` 標籤如下所示：
 
 ```html
-<section aria-live="assertive" aria-atomic="true">
+<section aria-live="assertive" aria-atomic="true"></section>
 ```
 
 `aria-atomic="true"`屬性告訴螢幕報讀器以一個原子單位方式讀出完整的元素內容，而不僅只讀出更新的部分。
@@ -257,8 +264,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -271,24 +277,29 @@ var intervalID = window.setInterval(showQuote, 10000);
 2. 在文字編輯器開啟他們並且看一下該程式碼如何運作。
 3. 首先，在開始的 `<form>` 標籤之上增加一個段落，如下所示，並且用星號標記兩個表單的 `<label>`。這是一般我們對有視力的使用者標記必要區塊的方法。
 
-    ```html
-    <p>Fields marked with an asterisk (*) are required.</p>
-    ```
+   ```html
+   <p>Fields marked with an asterisk (*) are required.</p>
+   ```
 
 4. 這讓視覺有意義，但這對螢幕報讀器使用者不能輕易理解。很幸運地，WAI-ARIA 提供 [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) 屬性以提示螢幕報讀器應告訴使用者需要填寫的表單輸入欄位。更新`<input>` 元素如下：
 
-    ```html
-    <input type="text" name="name" id="name" aria-required="true">
+   ```html
+   <input type="text" name="name" id="name" aria-required="true" />
 
-    <input type="number" name="age" id="age" aria-required="true">
-    ```
+   <input type="number" name="age" id="age" aria-required="true" />
+   ```
 
 5. 如果你現在儲存本範例並使用螢幕報讀器測試，你應該聽到這個內容 "Enter your name star, required, edit text"。
 6. 如果我們給予螢幕報讀器使用者與視覺的使用者有關年齡的值應該是甚麼的概念，這樣也將會很有用。這個或許常以提示或在表單輸入區內預設文本的方式呈現。WAI-ARIA 用包含 [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) 與 [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) 屬性來指定最小與最大值，但這些目前未受到很好的支持；比較受支持的特徵是 HTML5 `placeholder` 屬性，它在沒有輸入值的時間將含有的訊息顯示在輸入框，並能由許多螢幕報讀器讀出。更新你的數值輸入如下所示：
 
-    ```html
-    <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">
-    ```
+   ```html
+   <input
+     type="number"
+     name="age"
+     id="age"
+     placeholder="Enter 1 to 150"
+     aria-required="true" />
+   ```
 
 > **備註：** 你可以查看完成的範例 [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html)。
 
@@ -306,18 +317,19 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ```js
 function toggleMusician(bool) {
-  var instruItem = formItems[formItems.length-1];
-  if(bool) {
+  var instruItem = formItems[formItems.length - 1];
+  if (bool) {
     instruItem.input.disabled = false;
-    instruItem.label.style.color = '#000';
-    instruItem.input.setAttribute('aria-disabled', 'false');
-    hiddenAlert.textContent = 'Instruments played field now enabled; use it to tell us what you play.';
+    instruItem.label.style.color = "#000";
+    instruItem.input.setAttribute("aria-disabled", "false");
+    hiddenAlert.textContent =
+      "Instruments played field now enabled; use it to tell us what you play.";
   } else {
     instruItem.input.disabled = true;
-    instruItem.label.style.color = '#999';
-    instruItem.input.setAttribute('aria-disabled', 'true');
-    instruItem.input.removeAttribute('aria-label');
-    hiddenAlert.textContent = 'Instruments played field now disabled.';
+    instruItem.label.style.color = "#999";
+    instruItem.input.setAttribute("aria-disabled", "true");
+    instruItem.input.removeAttribute("aria-label");
+    hiddenAlert.textContent = "Instruments played field now disabled.";
   }
 }
 ```
@@ -331,7 +343,9 @@ function toggleMusician(bool) {
 我們可以使用 WAI-ARIA 角色來修正它。請複製 [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)在本機，並且對每個按鈕`<div>`增加 [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) ，範例如下：
 
 ```html
-<div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+<div data-message="This is from the first button" tabindex="0" role="button">
+  Click me!
+</div>
 ```
 
 現在當你使用螢幕報讀器測試它時，按鈕將會用句子如"Click me!, button" 讀出—這樣好多了。
@@ -350,20 +364,38 @@ function toggleMusician(bool) {
 
 ```html
 <ul role="tablist">
-  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
+  <li
+    class="active"
+    role="tab"
+    aria-selected="true"
+    aria-setsize="3"
+    aria-posinset="1"
+    tabindex="0">
+    Tab 1
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="2"
+    tabindex="0">
+    Tab 2
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="3"
+    tabindex="0">
+    Tab 3
+  </li>
 </ul>
 <div class="panels">
   <article class="active-panel" role="tabpanel" aria-hidden="false">
     ...
   </article>
-  <article role="tabpanel" aria-hidden="true">
-    ...
-  </article>
-  <article role="tabpanel" aria-hidden="true">
-    ...
-  </article>
+  <article role="tabpanel" aria-hidden="true">...</article>
+  <article role="tabpanel" aria-hidden="true">...</article>
 </div>
 ```
 

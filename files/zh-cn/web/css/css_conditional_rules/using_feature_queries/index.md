@@ -1,6 +1,6 @@
 ---
 title: 使用特性查询
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
 {{CSSRef}}

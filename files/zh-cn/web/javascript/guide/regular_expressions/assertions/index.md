@@ -294,13 +294,13 @@ let ripe_oranges = oranges.filter( fruit => fruit.match(/(?<=ripe )orange/));
 console.log(ripe_oranges); // [ 'ripe orange A ', 'ripe orange C' ]
 ```
 
-## 另请参阅
+## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 
   - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [组和范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
 
-- [RegExp() 构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [RegExp() 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

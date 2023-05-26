@@ -456,7 +456,7 @@ clearInterval(intervalFwd);
     }
     ```
 
-## 另请参阅
+## 参见
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)— \<video>和\<audio>的简单指南。
