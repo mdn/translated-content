@@ -120,7 +120,7 @@ if (Foo.isFoo(baz)) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
