@@ -1,8 +1,9 @@
 ---
 title: Использование CSS переходов
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}{{SeeCompatTable}}
 
 **CSS transitions** предоставляют способ контролировать скорость анимации, при изменении CSS-свойств. Вместо того, чтобы свойство применилось сразу, вы можете сделать это действие происходящим в течение какого-то момента времени. Например, если вы смените цвет элемента с белого на чёрный, изменение произойдёт моментально, а вот с CSS transitions, изменения произойдут за временные интервалы, следующих кривой ускорения, все из которых могут быть настроены.

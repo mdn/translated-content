@@ -1,6 +1,6 @@
 ---
 title: Понимание CSS z-index
-slug: Web/CSS/CSS_Positioning/Understanding_z_index
+slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 tags:
   - Advanced
   - CSS
@@ -11,8 +11,9 @@ tags:
   - Web
   - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
-original_slug: Web/Guide/CSS/Understanding_z_index
+original_slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
+
 Обычно HTML страницы можно считать двухмерными, потому что текст, картинки и другие элементы расположены на странице без перекрытия. Существует единый нормальный поток отрисовки (rendering flow) и элементы избегают пространства, занятого другими.{{cssxref("z-index")}} атрибут позволяет регулировать порядок наложения объектов друг на друга в процессе отрисовки контента (rendering content).
 
 > _В CSS 2.1, позиция каждого блока была в трёх измерениях. В дополнении к их горизонтальной и вертикальной позиции блоки лежали вдоль оси "z" и располагались один поверх другого. Позиция относительно оси "z" особенно актуальна, когда блоки визуально накладываются друг на друга._

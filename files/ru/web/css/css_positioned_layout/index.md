@@ -1,6 +1,6 @@
 ---
 title: CSS Positioning
-slug: Web/CSS/CSS_Positioning
+slug: Web/CSS/CSS_positioned_layout
 tags:
   - CSS
   - CSS Positioning
@@ -9,6 +9,7 @@ tags:
   - Overview
   - TopicStub
 translation_of: Web/CSS/CSS_Positioning
+original_slug: Web/CSS/CSS_Positioning
 ---
 
 {{CSSRef}}
