@@ -1,7 +1,6 @@
 ---
 title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 
 {{CSSRef}}
@@ -35,90 +34,85 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_ex
 
 > **備註：** DIV＃1 和＃DIV 3 不適透亮。重要的是要記住，分配的不透明度小於 1 到定位的元素隱式創建一個疊加的背景下，就像一個加入的 z-index 值是非常重要的。這個例子顯示，當父元素不會創建一個堆疊環境會發生什麼。
 
-### 示例源代碼
+## 範例
+
+### HTML
 
 ```html
-<！DOCTYPE HTML PUBLIC“ -  // W3C // DTD XHTML 1.0過渡// EN”
-“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
-<HTML>
-<HEAD> <風格類型=“文本/ CSS”>
-
-DIV {字體：12px的宋體; }
-
-span.bold {字體重量：大膽的; }
-
-＃DIV1，＃{DIV3
-   高度：80px;
-   位置：親屬;
-   邊界：1px的虛線＃669966;
-   背景色：#ccffcc;
-   填充左：5px的;
-}
-
-＃{DIV2
-   不透明度：0.8;
-   的z-index：1;
-   位置：絕對的;
-   寬度：150像素;
-   高度：200像素;
-   頂：20像素;
-   左：170px;
-   邊界：1px的虛線＃990000;
-   背景色：#ffdddd;
-   文本對齊：中心;
-}
-
-＃{DIV4
-   不透明度：0.8;
-   的z-index：2;
-   位置：絕對的;
-   寬度：200像素;
-   高度：70px;
-   頂部：65px;
-   左：50像素;
-   邊界：1px的虛線＃000099;
-   背景色：#ddddff;
-   文本對齊：左;
-   填充左：10px的;
-}
-
-
-</風格> </ HEAD>
-
-<BODY>
+<div id="div1">
+  <br /><span class="bold">DIV #1</span> <br />position: relative;
+  <div id="div2">
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
+  </div>
+</div>
 
 <br />
 
-<DIV ID =“DIV1”>
-<br />的<span class =“黑體”> DIV＃1 </ SPAN>
-<br />位置：親屬;
-   <DIV ID =“DIV2”>
-   <br />的<span class =“黑體”> DIV＃2 </ SPAN>
-   <br />位置：絕對的;
-   <br />的z-index：1;
-   </ DIV>
-</ DIV>
-
-<br />
-
-<DIV ID =“DIV3”>
-<br />的<span class =“黑體”> DIV＃3 </ SPAN>
-<br />位置：親屬;
-   <DIV ID =“DIV4”>
-   <br />的<span class =“黑體”> DIV＃4 </ SPAN>
-   <br />位置：絕對的;
-   <br />的z-index：2;
-   </ DIV>
-</ DIV>
-
-</ BODY> </ HTML>
+<div id="div3">
+  <br /><span class="bold">DIV #3</span> <br />position: relative;
+  <div id="div4">
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
+  </div>
+</div>
 ```
 
-### 另請參見
+### CSS
 
-- [無堆疊的 z-index](/zh-TW/CSS/Understanding_z-index/Stacking_without_z-index) ：默認規則疊加
-- [堆疊和浮動](/zh-TW/CSS/Understanding_z-index/Stacking_and_float) ：如何浮動元素的處理方式
-- [添加的 z-index](/zh-TW/CSS/Understanding_z-index/Adding_z-index) ：使用的 z-index 來改變默認的堆疊
-- [堆疊背景](/zh-TW/CSS/Understanding_z-index/The_stacking_context) ：在堆疊環境票據
-- [堆疊環境例子 2](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_2) ：在所有層面上 2 級 HTML 層次，Z 指數
-- [堆疊上下文例 3](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_3) ：3 級的 HTML 等級，在第二級上的 z 索引
+```css
+.bold {
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#div1,
+#div3 {
+  height: 80px;
+  position: relative;
+  border: 1px dashed #669966;
+  background-color: #ccffcc;
+  padding-left: 5px;
+}
+
+#div2 {
+  opacity: 0.8;
+  z-index: 1;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 20px;
+  left: 170px;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
+  text-align: center;
+}
+
+#div4 {
+  opacity: 0.8;
+  z-index: 2;
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  top: 65px;
+  left: 50px;
+  border: 1px dashed #000099;
+  background-color: #ddddff;
+  text-align: left;
+  padding-left: 10px;
+}
+```
+
+## 結果
+
+{{ EmbedLiveSample('範例', '', '300') }}
+
+### 參見
+
+- [無堆疊的 z-index](/zh-TW/CSS/Understanding_z-index/Stacking_without_z-index)：默認規則疊加
+- [堆疊和浮動](/zh-TW/CSS/Understanding_z-index/Stacking_floating_elements)：如何浮動元素的處理方式
+- [添加 z-index](/zh-TW/CSS/Understanding_z-index/Using_z-index)：使用的 z-index 來改變默認的堆疊
+- [堆疊背景](/zh-TW/CSS/Understanding_z-index/Stacking_context)：在堆疊環境票據
+- [堆疊環境例子 2](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_2)：在所有層面上 2 級 HTML 層次，Z 指數
+- [堆疊上下文例 3](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_3)：3 級的 HTML 等級，在第二級上的 z 索引

@@ -1,7 +1,6 @@
 ---
-title: 測試 media queries
+title: 測試媒體查詢
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
-original_slug: Web/CSS/Media_Queries/Testing_media_queries
 ---
 
 {{SeeCompatTable}}

@@ -1,7 +1,6 @@
 ---
-title: Media queries
+title: 媒體查詢
 slug: Web/CSS/CSS_media_queries
-original_slug: Web/CSS/Media_Queries
 ---
 
 {{CSSRef}}
@@ -17,9 +16,9 @@ original_slug: Web/CSS/Media_Queries
 
 ## 指南
 
-- [Using media queries](/zh-TW/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
   - : Presents what media queries are doing and explains the possible expressions.
-- [Testing media queries](/zh-TW/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Testing media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : Explains how to test a media query programmatically, from JavaScript.
 
 ## 規範
