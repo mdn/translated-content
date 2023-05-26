@@ -1,21 +1,15 @@
 ---
-title: Document.pointerLockElement
+title: Document：pointerLockElement 属性
 slug: Web/API/Document/pointerLockElement
 ---
 
 {{APIRef("DOM")}}
 
-`pointerLockElement` 特性规定了如在鼠标事件中当目标被锁定时的元素集和。如果指针处于锁定等待中、指针没有被锁定，或者目标在另外一个文档中这几种情况，返回的值 `null`。
+{{domxref("Document")}} 接口的 `pointerLockElement` 属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中、指针没有被锁定，或者目标在另外一个文档中，返回的值是 `null`。
 
-## 语法
+## 值
 
-```plain
-var element = document.pointerLockElement;
-```
-
-### 返回值
-
-An {{domxref("Element")}} or `null`.
+一个 {{domxref("Element")}} 或 `null`。
 
 ## 规范
 
@@ -25,8 +19,8 @@ An {{domxref("Element")}} or `null`.
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{ domxref("Document.exitPointerLock()") }}
 - {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/zh-CN/docs/WebAPI/Pointer_Lock)
+- [Pointer Lock](/zh-CN/docs/Web/API/Pointer_Lock_API)
