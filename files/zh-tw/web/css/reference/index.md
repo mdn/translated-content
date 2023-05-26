@@ -159,7 +159,7 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 - [Layout mode](/zh-TW/docs/Web/CSS/Layout_mode)
 - [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/zh-TW/docs/Web/CSS/Replaced_element)
-- [Stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/zh-TW/docs/Web/Guide/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

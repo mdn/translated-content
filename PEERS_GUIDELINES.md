@@ -56,6 +56,7 @@ The review teams for each locale are:
   - [t7yang](https://github.com/t7yang)
   - [irvin](https://github.com/irvin)
   - [yin1999](https://github.com/yin1999)
+  - [jasonren0403](https://github.com/jasonren0403)
 - Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)

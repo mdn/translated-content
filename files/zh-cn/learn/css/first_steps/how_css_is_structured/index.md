@@ -344,7 +344,7 @@ CSS 的 [`@rules`](/zh-CN/docs/Web/CSS/At-rule)（读作“at-rules”）是一�
 @import 'styles2.css';
 ```
 
-你可能遇到的一个常见的@规则是 `@media`，它被用来创建[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)。媒体查询使用条件逻辑来应用 CSS 样式。
+你可能遇到的一个常见的@规则是 `@media`，它被用来创建[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。媒体查询使用条件逻辑来应用 CSS 样式。
 
 在下面的例子中，样式表为 `<body>` 元素定义了一个默认的粉红色背景。然而，如果浏览器的视口宽于 30em，接下来的媒体查询则定义了蓝色背景。
 
