@@ -29,11 +29,11 @@ toLocaleString()
 
 提供此方法是为了给对象一个通用的 `toLocaleString` 方法，即使不是所有对象都可以使用它。在核心语言中，这些内置对象重写了 `toLocaleString` 以提供特定于语言环境的格式：
 
-- {{jsxref("Array")}}: {{jsxref("Array.prototype.toLocaleString()")}}
-- {{jsxref("Number")}}: {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date")}}: {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("TypedArray")}}: {{jsxref("TypedArray.prototype.toLocaleString()")}}
-- {{jsxref("BigInt")}}: {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxref("Array")}}：{{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number")}}：{{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date")}}：{{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("TypedArray")}}：{{jsxref("TypedArray.prototype.toLocaleString()")}}
+- {{jsxref("BigInt")}}：{{jsxref("BigInt.prototype.toLocaleString()")}}
 
 ## 示例
 
