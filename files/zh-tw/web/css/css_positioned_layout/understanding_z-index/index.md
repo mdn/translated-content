@@ -1,6 +1,7 @@
 ---
 title: Understanding CSS z-index
-slug: Web/CSS/CSS_Positioning/Understanding_z_index
+slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
+original_slug: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 
 {{CSSRef}}
