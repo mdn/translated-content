@@ -5,7 +5,7 @@ slug: Web/API/Document/pointerLockElement
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 接口的 `pointerLockElement` 属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中，指针没有被锁定，或者目标元素在另外一个文档中，返回 `null`。
+{{domxref("Document")}} 接口的 `pointerLockElement` 属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中、指针没有被锁定或目标元素在另外一个文档中，返回 `null`。
 
 ## 值
 
