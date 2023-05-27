@@ -53,7 +53,7 @@ p {
 </h1>
 ```
 
-在自定义元素的构造器函数中，我们创建 `style` 和 `span` 元素。让 `span` 里呈现的是自定义元素的文字内容，并且给`style` 元素一些 CSS 规则。
+在自定义元素的构造器函数中，我们创建 `style` 和 `span` 元素。让 `span` 里呈现的是自定义元素的文字内容，并且给 `style` 元素一些 CSS 规则。
 
 ```js
 const style = document.createElement("style");
