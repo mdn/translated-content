@@ -19,7 +19,7 @@ Resize Observer API は要素のサイズ変化を監視し、変化するたび
 
 そのような方法では、限られたユースケースでしか機能せず、パフォーマンス面でも悪影響があり (上記のメソッドを連続的に呼び出すと大きなパフォーマンス低下につながる) 、ブラウザーのウインドウサイズが変わらないと機能しないことが多い傾向があります。
 
-Resize Observer API では、このような問題に対する解決策を提供する他、要素の内容やボーダーボックスのサイズの変化までも簡単に監視し、実行できるようにします。これは Web プラットフォームでしばしば議論されている [要素クエリ](https://www.xanthir.com/b4PR0) の欠如に対する解決策として提供します。
+Resize Observer API では、このような問題に対する解決策を提供する他、要素の内容やボーダーボックスのサイズの変化までも簡単に監視し、実行できるようにします。これはウェブプラットフォームでしばしば議論されている [要素クエリー](https://www.xanthir.com/b4PR0) の欠如に対する解決策として提供します。
 
 使い方は簡単で、 [Performance Observer](/ja/docs/Web/API/PerformanceObserver) や [Intersection Observer](/ja/docs/Web/API/Intersection_Observer_API) の他のオブザーバーとほとんど同じです。[`ResizeObserver()`](/ja/docs/Web/API/ResizeObserver/ResizeObserver) コンストラクターで新しい {{domxref("ResizeObserver")}} オブジェクトを作成できます。 {{domxref("ResizeObserver.observe()")}} で特定の要素のサイズの変更を検出するようにします。コールバック関数はコンストラクターの中で設定し、要素のサイズが変わるたびに毎回実行され、変化後のサイズを通して自由に実行できるようになります。
 
