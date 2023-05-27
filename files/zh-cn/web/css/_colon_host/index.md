@@ -30,7 +30,7 @@ slug: Web/CSS/:host
 
 下面的片段摘自我们的 [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) 示例（[也可以在线查看](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
-在此示例中，我们有一个简单的自定义元素 - `<context-span>` - 可以将其包装在文本周围：
+在此示例中，我们有一个简单的自定义元素 - `<context-span>` - 你可以将其包装在文本周围：
 
 ```html
 <h1>
@@ -58,7 +58,7 @@ style.textContent =
   ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
-`:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` 规则样式文档中所有 `<context-span>` 元素（在文档中为 shadow host）。
+`:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` 规则为文档中 `<context-span>` 元素（在文档中为 shadow host）的所有实例设置样式。
 
 ## 规范
 
