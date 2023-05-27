@@ -32,7 +32,7 @@ Resize Observer API では、このような問題に対する解決策を提供
 
 ## 例
 
-GitHub リポジトリでは、いくつか簡単な実装例があります。
+GitHub リポジトリーでは、いくつか簡単な実装例があります。
 
 - [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html) ([ソース](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-border-radius.html)): ビューポートサイズに応じてパーセント割合のサイズで表示する、緑色のボックスの簡単な実装例。ビューポートサイズが変化すると、ボックスの角丸もボックスのサイズに応じて変化します。これを {{cssxref("border-radius")}} を使用してパーセント割合で実装することもできますが、見苦しいような楕円形の角丸ができてしまいます。上記の解決策では、ボックスのサイズに応じてサイズが変わるきれいな角丸を表示できます。
 - [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソース](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)): ここでは、スライダーで調整すると内部の `div` 要素のサイズが変化し、 Resize Observer を通してヘッダーと文章の {{cssxref("font-size")}} を変更します。これはビューポートとは関係なくても、要素のサイズ変更を検出して実行できることを示しています。
