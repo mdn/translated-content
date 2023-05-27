@@ -43,7 +43,7 @@ p {
 
 ## 示例
 
-下边的代码片段来自 [host-selectors](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([这里查看样式效果](https://mdn.github.io/web-components-examples/host-selectors/))。
+下边的代码片段来自 [host-selectors](https://github.com/mdn/web-components-examples/tree/master/host-selectors)（[这里查看样式效果](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
 在本例中，我们有一个简单的自定义元素 — `<context-span>` — 你可以把文字包裹在该自定义标签中：
 
