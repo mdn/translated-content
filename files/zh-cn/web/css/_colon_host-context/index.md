@@ -35,7 +35,11 @@ p {
 
 ## 语法
 
-{{CSSSyntax}}
+```css-nolint
+:host-context(<compound-selector>) {
+  /* ... */
+}
+```
 
 ## 示例
 
