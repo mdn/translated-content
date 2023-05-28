@@ -13,7 +13,7 @@ slug: Web/API/Server-sent_events/Using_server-sent_events
 
 ### 创建一个 `EventSource` 实例
 
-使用生成事件的脚本 URL 创建一个 `EventSource` 对象，用来开启与服务器的连接并从中接收事件。
+使用生成事件的脚本 URL 创建一个 `EventSource` 对象，用来开启与服务器的连接并从中接收事件。例如：
 
 ```js
 const evtSource = new EventSource("ssedemo.php");
@@ -24,7 +24,7 @@ const evtSource = new EventSource("ssedemo.php");
 ```js
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { 
   withCredentials: true 
-} );
+});
 ```
 
 ### 监听 `message` 事件
@@ -45,8 +45,7 @@ evtSource.onmessage = function(event) {
 
 ### 监听自定义事件
 
-你也可以使用 `addEventListener()` 方法来监听其他类型的事件：
-如果服务器发送的消息中定义了 `event` 字段，则这些消息会被视为 `event` 字段的值的事件。例如：
+如果服务器发送的消息中定义了 `event` 字段，就会以 `event` 中给定的名称作为事件接收。例如：
 
 ```js
 evtSource.addEventListener("ping", (event) => {
@@ -58,9 +57,9 @@ evtSource.addEventListener("ping", (event) => {
 });
 ```
 
-这段代码也类似，只是只有在服务器发送的消息中包含一个值为 `ping` 的 `event` 字段的时候才会触发对应的处理函数，也就是将 `data` 字段的字段值解析为 JSON 数据，然后在页面上显示出所需要的内容。
+每当服务器发送一个 `event` 字段设置为 `ping` 的消息时，就会调用这段代码；这段代码接着解析 `data` 字段中的 JSON，并输出这些信息。
 
-> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。
+> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开多个选项卡时特别麻烦，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
 
 ## 从服务器端发送事件
 
@@ -76,35 +75,34 @@ header("Content-Type: text/event-stream");
 $counter = rand(1, 10);
 while (true) {
   // Every second, send a "ping" event.
-
+  
   echo "event: ping\n";
   $curDate = date(DATE_ISO8601);
   echo 'data: {"time": "' . $curDate . '"}';
   echo "\n\n";
-
+  
   // Send a simple message at random intervals.
-
   $counter--;
-
+  
   if (!$counter) {
     echo 'data: This is a message at time ' . $curDate . "\n\n";
     $counter = rand(1, 10);
   }
-
+  
   ob_end_flush();
   flush();
-
+  
   // Break the loop if the client aborted the connection (closed the page)
-
+  
   if (connection_aborted()) break;
-
+  
   sleep(1);
 }
 ```
 
-这段代码每秒钟会生成一个名为 "ping" 的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。注意，这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
+这段代码每秒钟会生成一个类型为“ping”的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
 
-> **备注：** 您可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
+> **备注：** 你可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
 ## 错误处理
 
@@ -126,11 +124,11 @@ evtSource.close();
 
 ## 事件流格式
 
-事件流仅仅是一个简单的文本数据流，文本应该使用 [UTF-8](/zh-CN/docs/Glossary/UTF-8) 格式的编码。每条消息后面都由一个空行作为分隔符。以冒号开头的行为注释行，会被忽略。
+事件流是一个简单的文本数据流，文本应该使用 [UTF-8](/zh-CN/docs/Glossary/UTF-8) 格式的编码。事件流中的消息由一对换行符分开。以冒号开头的行为注释行，会被忽略。
 
 > **备注：** 注释行可以用来防止连接超时，服务器可以定期发送一条消息注释行，以保持连接不断。
 
-每条消息是由多个字段组成的，每个字段由字段名，一个冒号，以及字段值组成。
+每条消息由一行或多行文字组成，列出该消息的字段。每个字段由字段名表示，后面是冒号，然后是该字段值的文本数据。
 
 ### 字段
 
@@ -141,21 +139,21 @@ evtSource.close();
 - `data`
   - : 消息的数据字段。当 `EventSource` 接收到多个以 `data:` 开头的连续行时，[会将它们连接起来](https://html.spec.whatwg.org/multipage/#dispatchMessage)，在它们之间插入一个换行符。末尾的换行符会被删除。
 - `id`
-  - : 事件 ID，会成为当前 [`EventSource`](/zh-CN/docs/Web/API/EventSource) 对象的内部属性"最后一个事件 ID"的属性值。
+  - : 事件 ID，会成为当前 [`EventSource`](/zh-CN/docs/Web/API/EventSource) 对象的内部属性“最后一个事件 ID”的属性值。
 - `retry`
-  - : 一个整数值，指定了重新连接的时间（单位为毫秒），如果该字段值不是整数，则会被忽略。
+  - : 重新连接的时间。如果与服务器的连接丢失，浏览器将等待指定的时间，然后尝试重新连接。这必须是一个整数，以毫秒为单位指定重新连接的时间。如果指定了一个非整数值，该字段将被忽略。
 
-除了上面规定的字段名，其他所有的字段名都会被忽略。
+所有其他的字段名都会被忽略。
 
 > **备注：** 如果一行文本中不包含冒号，则整行文本会被解析成为字段名，其字段值为空。
 
-### 例子
+### 示例
 
 #### 纯数据 message
 
 下面的例子中发送了三条消息，第一条仅仅是个注释，因为它以冒号开头。正如之前提到的，如果消息可能不会定期发送，这可以作为保持连接的机制，非常有用。
 
-第二条消息只包含了一个 data 字段，值为 "some text"。第三条消息包含的两个 data 字段会被解析成为一个字段，值为 "another message\nwith two lines"。注意值中的换行字符。
+第二条消息只包含了一个 data 字段，值为“some text”。第三条消息包含的两个 data 字段会被解析成为一个字段，值为“another message\nwith two lines”。注意值中的换行字符。
 
 ```bash
 : this is a test stream
@@ -168,7 +166,7 @@ data: with two lines
 
 #### 命名事件
 
-下面的事件流中包含了一些命名事件。每个事件的类型都是由 `event` 字段指定的，另外每个 `data` 字段的值可以使用 JSON 格式，当然也可以不是。
+下面的事件流中包含了一些命名事件。每个事件都有一个由 `event` 字段指定的事件名称和一个 `data` 字段，其值是一个适当的 JSON 字符串，包含客户端对该事件采取行动所需的数据。当然，`data` 字段可以包含任何字符串数据，它不一定是 JSON。
 
 ```bash
 event: userconnect
