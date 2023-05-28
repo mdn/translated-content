@@ -1,7 +1,9 @@
 ---
-title: CSS.supports()
+title: "CSS: supports() 静的メソッド"
 slug: Web/API/CSS/supports_static
 original_slug: Web/API/CSS/supports
+l10n:
+  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
 ---
 
 {{APIRef("CSSOM")}}
@@ -10,24 +12,24 @@ original_slug: Web/API/CSS/supports
 
 ## 構文
 
-```js
-CSS.supports(propertyName, value);
-CSS.supports(supportCondition);
+```js-nolint
+CSS.supports(propertyName, value)
+CSS.supports(supportCondition)
 ```
 
 ### 引数
 
-引数の組み合わせが二種類あります。一つ目は、対応しているかどうかをテストする*プロパティと値*を指定することができます。
+引数の組み合わせが 2 種類あります。1 つ目は、対応しているかどうかをテストする*プロパティと値*を指定することができます。
 
 - `propertyName`
-  - : {{domxref("DOMString")}} で、チェックする CSS プロパティの名前が入ります。
+  - : 文字列で、チェックする CSS プロパティの名前が入ります。
 - `value`
-  - : {{domxref("DOMString")}} で、チェックする CSS プロパティの値が入ります。
+  - : 文字列で、チェックする CSS プロパティの値が入ります。
 
-2 つ目の構文は 1 つの引数を取り、 {{cssxref("@supports")}} の条件に一致させます。
+2 つ目の構文は 1 つの引数を取り、{{cssxref("@supports")}} の条件と照合します。
 
 - `supportCondition`
-  - : {{domxref("DOMString")}} で、チェックする条件が入ります。
+  - : 文字列で、チェックする条件が入ります。
 
 ### 返値
 
@@ -35,15 +37,14 @@ CSS.supports(supportCondition);
 
 ## 例
 
-## Examples
-
 ```js
 result = CSS.supports("text-decoration-style", "blink");
 result = CSS.supports("display: flex");
 result = CSS.supports("(--foo: red)");
 
-result = CSS.supports(`(transform-style: preserve) or (-moz-transform-style: preserve) or
-                       (-o-transform-style: preserve) or (-webkit-transform-style: preserve)`);
+result = CSS.supports(
+  "(transform-style: preserve) or (-moz-transform-style: preserve) or (-webkit-transform-style: preserve)"
+);
 
 // 結果は true または false
 ```

@@ -11,7 +11,7 @@ opacity 属性指定了一个元素的**不透明度**。换言之，opacity 属
 
 当 opacity 属性的值应用于某个元素上时，是把这个元素（包括它的内容）当成一个整体看待，即使这个值没有被子元素继承。因此，一个元素和它包含的子元素都会具有和元素背景相同的透明度，哪怕这个元素和它的子元素有不同的 opacity 属性值。
 
-使用 opacity 属性，当属性值不为 1 时，会把元素放置在一个新的[层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context)中。
+使用 opacity 属性，当属性值不为 1 时，会把元素放置在一个新的[层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context)中。
 
 {{cssinfo}}
 

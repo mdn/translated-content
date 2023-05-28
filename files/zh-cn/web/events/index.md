@@ -99,7 +99,7 @@ slug: Web/Events
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/CSS/CSS_Transitions">CSS 变换</a>相关的事件。
+          <a href="/zh-CN/docs/Web/CSS/CSS_transitions">CSS 变换</a>相关的事件。
         </p>
         <p>
           当 CSS 变换开始、停止或取消等事件发生时发出通知。

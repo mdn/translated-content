@@ -117,7 +117,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### max
 
 最新の年月で、上記の[値](#値)で説明した文字列の書式です。
-要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 `max` 属性の値が "`yyyy-MM`" の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年月を指定する必要があります。
@@ -125,7 +125,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### min
 
 受け付ける最古の年月で、前述と同じ `yyyy-MM` の書式です。
-要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより前の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより前の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 `min` 属性の値が "`yyyy-MM-dd`" の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年月を指定する必要があります。

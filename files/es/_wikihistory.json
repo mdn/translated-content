@@ -6806,67 +6806,6 @@
       "jota1410"
     ]
   },
-  "Web/CSS/CSS_Animations": {
-    "modified": "2019-03-23T22:43:48.247Z",
-    "contributors": ["teoli"]
-  },
-  "Web/CSS/CSS_Animations/Tips": {
-    "modified": "2020-08-16T13:05:40.057Z",
-    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
-  },
-  "Web/CSS/CSS_Animations/Using_CSS_animations": {
-    "modified": "2020-07-06T16:16:21.887Z",
-    "contributors": [
-      "Jazperist",
-      "miguelgilmartinez",
-      "fermelli",
-      "GasGen",
-      "KattyaCuevas",
-      "rod232",
-      "Jvalenz1982",
-      "SphinxKnight",
-      "teoli",
-      "onerbs",
-      "Luis_Calvo",
-      "ulisescab"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:41:48.399Z",
-    "contributors": ["teoli"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
-    "modified": "2019-03-23T22:41:48.777Z",
-    "contributors": ["teoli", "mcclone2001"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
-    "modified": "2019-03-18T21:15:42.476Z",
-    "contributors": ["israel-munoz"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-23T22:17:03.740Z",
-    "contributors": ["israel-munoz"]
-  },
-  "Web/CSS/CSS_Box_Model": {
-    "modified": "2019-03-23T22:37:33.458Z",
-    "contributors": ["tipoqueno", "pekechis"]
-  },
-  "Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model": {
-    "modified": "2019-08-28T10:35:24.055Z",
-    "contributors": ["tipoqueno"]
-  },
-  "Web/CSS/CSS_Box_Model/Mastering_margin_collapsing": {
-    "modified": "2019-03-23T22:32:15.462Z",
-    "contributors": ["amaiafilo", "Ralexhx", "javichito"]
-  },
-  "Web/CSS/CSS_Colors": {
-    "modified": "2019-03-23T22:23:30.277Z",
-    "contributors": ["betelleclerc", "Krenair"]
-  },
-  "Web/CSS/CSS_Colors/Color_picker_tool": {
-    "modified": "2019-03-23T22:23:27.596Z",
-    "contributors": ["elihro"]
-  },
   "Web/CSS/CSS_Columns": {
     "modified": "2019-03-23T22:28:10.699Z",
     "contributors": ["Anonymous"]
@@ -6875,48 +6814,9 @@
     "modified": "2019-03-23T23:43:23.940Z",
     "contributors": ["Mgjbot", "Jorolo", "Nukeador"]
   },
-  "Web/CSS/CSS_Conditional_Rules": {
-    "modified": "2019-03-23T22:05:34.864Z",
-    "contributors": ["arnulfolg"]
-  },
-  "Web/CSS/CSS_Containment": {
-    "modified": "2020-10-21T02:39:25.867Z",
-    "contributors": ["SphinxKnight", "RoqueAlonso"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout": {
-    "modified": "2019-03-23T22:43:42.897Z",
-    "contributors": ["danpaltor", "tipoqueno", "pepe2016", "fscholz"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container": {
-    "modified": "2020-09-12T08:36:23.473Z",
-    "contributors": [
-      "x-N0",
-      "FrankGalanB",
-      "JulianCGG",
-      "PauloColorado",
-      "Irvandoval",
-      "turuto"
-    ]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
-    "modified": "2019-11-06T19:10:32.985Z",
-    "contributors": ["tonyrodz"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
-    "modified": "2020-03-25T21:15:58.856Z",
-    "contributors": ["amazing79", "otello1971", "cwalternicolas"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
-    "modified": "2019-03-18T21:18:33.523Z",
-    "contributors": ["danpaltor"]
-  },
   "Web/CSS/CSS_Flow_Layout": {
     "modified": "2019-03-18T21:21:28.417Z",
     "contributors": ["ariasfernando"]
-  },
-  "Web/CSS/CSS_Fonts": {
-    "modified": "2019-03-23T22:18:19.285Z",
-    "contributors": ["Squirrel18"]
   },
   "Web/CSS/CSS_Grid_Layout": {
     "modified": "2020-08-21T18:16:34.348Z",
@@ -7080,6 +6980,106 @@
   "Web/CSS/CSS_Writing_Modes": {
     "modified": "2019-04-10T10:27:10.380Z",
     "contributors": ["cristianmartinez"]
+  },
+  "Web/CSS/CSS_animations": {
+    "modified": "2019-03-23T22:43:48.247Z",
+    "contributors": ["teoli"]
+  },
+  "Web/CSS/CSS_animations/Tips": {
+    "modified": "2020-08-16T13:05:40.057Z",
+    "contributors": ["CamilaAchury", "SphinxKnight", "AlbertoVargasMoreno"]
+  },
+  "Web/CSS/CSS_animations/Using_CSS_animations": {
+    "modified": "2020-07-06T16:16:21.887Z",
+    "contributors": [
+      "Jazperist",
+      "miguelgilmartinez",
+      "fermelli",
+      "GasGen",
+      "KattyaCuevas",
+      "rod232",
+      "Jvalenz1982",
+      "SphinxKnight",
+      "teoli",
+      "onerbs",
+      "Luis_Calvo",
+      "ulisescab"
+    ]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders": {
+    "modified": "2019-03-23T22:41:48.399Z",
+    "contributors": ["teoli"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Border-image_generator": {
+    "modified": "2019-03-23T22:41:48.777Z",
+    "contributors": ["teoli", "mcclone2001"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator": {
+    "modified": "2019-03-18T21:15:42.476Z",
+    "contributors": ["israel-munoz"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+    "modified": "2019-03-23T22:17:03.740Z",
+    "contributors": ["israel-munoz"]
+  },
+  "Web/CSS/CSS_box_model": {
+    "modified": "2019-03-23T22:37:33.458Z",
+    "contributors": ["tipoqueno", "pekechis"]
+  },
+  "Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model": {
+    "modified": "2019-08-28T10:35:24.055Z",
+    "contributors": ["tipoqueno"]
+  },
+  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+    "modified": "2019-03-23T22:32:15.462Z",
+    "contributors": ["amaiafilo", "Ralexhx", "javichito"]
+  },
+  "Web/CSS/CSS_colors": {
+    "modified": "2019-03-23T22:23:30.277Z",
+    "contributors": ["betelleclerc", "Krenair"]
+  },
+  "Web/CSS/CSS_colors/Color_picker_tool": {
+    "modified": "2019-03-23T22:23:27.596Z",
+    "contributors": ["elihro"]
+  },
+  "Web/CSS/CSS_conditional_rules": {
+    "modified": "2019-03-23T22:05:34.864Z",
+    "contributors": ["arnulfolg"]
+  },
+  "Web/CSS/CSS_containment": {
+    "modified": "2020-10-21T02:39:25.867Z",
+    "contributors": ["SphinxKnight", "RoqueAlonso"]
+  },
+  "Web/CSS/CSS_flexible_box_layout": {
+    "modified": "2019-03-23T22:43:42.897Z",
+    "contributors": ["danpaltor", "tipoqueno", "pepe2016", "fscholz"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container": {
+    "modified": "2020-09-12T08:36:23.473Z",
+    "contributors": [
+      "x-N0",
+      "FrankGalanB",
+      "JulianCGG",
+      "PauloColorado",
+      "Irvandoval",
+      "turuto"
+    ]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
+    "modified": "2019-11-06T19:10:32.985Z",
+    "contributors": ["tonyrodz"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+    "modified": "2020-03-25T21:15:58.856Z",
+    "contributors": ["amazing79", "otello1971", "cwalternicolas"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox": {
+    "modified": "2019-03-18T21:18:33.523Z",
+    "contributors": ["danpaltor"]
+  },
+  "Web/CSS/CSS_fonts": {
+    "modified": "2019-03-23T22:18:19.285Z",
+    "contributors": ["Squirrel18"]
   },
   "Web/CSS/Child_combinator": {
     "modified": "2019-03-23T22:17:17.663Z",

@@ -5,7 +5,7 @@ slug: Web/CSS/@media/orientation
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) [媒体属性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)**屏幕方向**（**`orientation`**）可用于测试视口 {{glossary("viewport")}}（或者对于[分页媒体](/zh-CN/docs/Web/CSS/Paged_media)而言的页面框盒）的横纵方向。
+[CSS](/zh-CN/docs/CSS) [媒体属性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)**屏幕方向**（**`orientation`**）可用于测试视口 {{glossary("viewport")}}（或者对于[分页媒体](/zh-CN/docs/Web/CSS/Paged_media)而言的页面框盒）的横纵方向。
 
 > **备注：** 此属性不等价于*设备*的屏幕旋转方向。在许多设备上，当屏幕方向为纵向时，打开软键盘将导致视口 viewport 的宽度大于高度，从而导致浏览器突然改用横向样式，而不是保持纵向。
 
