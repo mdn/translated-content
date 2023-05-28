@@ -20,7 +20,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
+- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
 - 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[jasonren0403](https://github.com/jasonren0403)
 
 ### 法语（fr）
