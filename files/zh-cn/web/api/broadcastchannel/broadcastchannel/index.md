@@ -5,25 +5,25 @@ slug: Web/API/BroadcastChannel/BroadcastChannel
 
 {{APIRef("BroadCastChannel API")}}
 
-**`BroadcastChannel()`** 构建函数用于创建一个 {{domxref("BroadcastChannel")}} 对象，并与对应的频道相关联。
+**`BroadcastChannel()`** 构造函数用于创建一个 {{domxref("BroadcastChannel")}} 对象，并与对应的频道相关联。
 
 {{AvailableInWorkers}}
 
 ## 语法
 
-```plain
- channel = new BroadcastChannel(channel);
+```js
+new BroadcastChannel(channelName)
 ```
 
-### 值
+### 参数
 
-- _channel_
+- `channelName`
   - : 频道名称，类型为 {{domxref("DOMString")}}；在相同的 {{glossary("origin", "源")}} 下，一个名称只对应一个频道，所有 {{glossary("browsing context", "浏览器上下文")}} 共用。
 
 ## 示例
 
 ```js
-// create a new channel listening to the "internal_notification" channel.
+// 创建一个监听 "internal_notification" 频道的新频道。
 
 var bc = new BroadcastChannel('internal_notification');
 bc.postMessage('New listening connected!');
