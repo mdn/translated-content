@@ -44,7 +44,7 @@ function handleMessage(e) {
 }
 ```
 
-一个完整的运行示例，可以在 GitHub 上查看 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
+一个完整的运行示例，可以在 GitHub 上查看 [基本的 channel messaging 示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) （[在线运行基本的 channel messaging](https://mdn.github.io/dom-examples/channel-messaging-basic/)）。
 
 ## 规范
 
