@@ -22,7 +22,7 @@ slug: Web/API/Server-sent_events
 
 ## 示例
 
-- [使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+- [使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
 
 ## 规范
 
