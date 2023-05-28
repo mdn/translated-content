@@ -1,6 +1,6 @@
 ---
 title: "<table>: O elemento Table"
-slug: Web/HTML/Elemento/tabela
+slug: Web/HTML/Element/table
 ---
 
 {{HTMLSidebar}}
