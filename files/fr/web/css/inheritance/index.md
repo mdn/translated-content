@@ -1,8 +1,6 @@
 ---
 title: Héritage
-slug: Web/CSS/inheritance
-l10n:
-  sourceCommit: e7a4b5d88a8cd280bb56132aa386990154aa1beb
+slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}

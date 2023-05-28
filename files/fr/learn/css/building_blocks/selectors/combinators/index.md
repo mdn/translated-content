@@ -119,24 +119,3 @@ Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des i
 Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Apprendre/CSS/Building_blocks/Cascade_et_heritage)
-2. [Sélecteurs CSS](/fr/docs/Apprendre/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe, d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut)
-    - [Pseudo-classes and pseudo-élements](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-%C3%A9l%C3%A9ments)
-    - [Combinateurs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Combinateurs)
-
-3. [Le modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite)
-4. [Arrières-plans et bordures](/fr/docs/Apprendre/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gestion de différentes directions de texte](/fr/docs/Apprendre/CSS/Building_blocks/Handling_different_text_directions)
-6. [Débordement de contenu](/fr/docs/Apprendre/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
-8. [Taille des élements](/fr/docs/Apprendre/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, média, et élements de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables)
-11. [Débogage CSS](/fr/docs/Apprendre/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

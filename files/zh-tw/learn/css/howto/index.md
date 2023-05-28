@@ -48,8 +48,8 @@ slug: Learn/CSS/Howto
 
 ### 布局指南
 
-- [使用 CSS 彈性盒子](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [使用 CSS 多行布局](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [使用 CSS 彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [使用 CSS 多行布局](/zh-TW/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 - [使用 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 - [使用 CSS 生成內容](/zh-TW/docs/Learn/CSS/Howto/Generated_content)
 

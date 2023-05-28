@@ -304,18 +304,3 @@ Le responsive design fait référence à la conception d'un site ou d'une applic
 Il est également devenu beaucoup plus facile de réaliser des responsives designs à l'aide des méthodes de mise en page que vous avez apprises dans ces leçons. Si vous êtes novice en matière de développement web, vous disposez aujourd'hui de beaucoup plus d'outils qu'aux premiers jours du responsive design. Il est donc utile de vérifier l'âge des documents que vous référencez. Si les articles historiques sont toujours utiles, l'utilisation moderne des CSS et du HTML facilite grandement la création de designs élégants et utiles, quel que soit le dispositif avec lequel votre visiteur consulte le site.
 
 {{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Apprendre/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Apprendre/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Apprendre/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Apprendre/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement)
-- [Disposition sur plusieurs colonnes](/fr/docs/Apprendre/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design)
-- [Guide du débutant pour les Medias Queries](/fr/docs/Apprendre/CSS/CSS_layout/Media_queries)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Apprendre/CSS/CSS_layout/Prise_en_charge_des_anciens_navigateurs)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Apprendre/CSS/CSS_layout/Fundamental_Layout_Comprehension)

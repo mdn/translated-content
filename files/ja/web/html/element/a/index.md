@@ -15,7 +15,7 @@ slug: Web/HTML/Element/a
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("download")}}
+- `download`
 
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。値があってもなくても構いません。
 
@@ -35,7 +35,7 @@ slug: Web/HTML/Element/a
     >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
     >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
 
-- {{HTMLAttrDef("href")}}
+- `href`
 
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
 
@@ -45,11 +45,11 @@ slug: Web/HTML/Element/a
     - メールアドレスを示す `mailto:` URL
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Global_attributes/lang)と同じです。
-- {{HTMLAttrDef("ping")}}
+- `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
-- {{HTMLAttrDef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)を送信するかです。
 
@@ -62,9 +62,9 @@ slug: Web/HTML/Element/a
     - `strict-origin-when-cross-origin` (default): 同一オリジンへのリクエストを行う際には URL 全体が送信され、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) はオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信されません。
     - `unsafe-url`: リファラーにはオリジン*および*パスが含まれます（ただし[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含まれません）。**この値は安全ではありません**。オリジンとパスを TLS で保護されたリソースから安全ではないオリジンに漏洩させるからです。
 
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : リンク先の URL との関係を示す、空白で区切られた[リンク種別](/ja/docs/Web/HTML/Link_types)のリストです。
-- {{HTMLAttrDef("target")}}
+- `target`
 
   - : リンク先の URL を表示する場所、*閲覧コンテキスト*（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
 
@@ -75,28 +75,28 @@ slug: Web/HTML/Element/a
 
     > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Link_types/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。対応状況については[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
-- {{HTMLAttrDef("type")}}
+- `type`
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
 
 ### 廃止された属性
 
-- {{HTMLAttrDef("charset")}}{{Deprecated_Inline}}
+- `charset`{{Deprecated_Inline}}
 
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
     > **メモ:** この属性は廃止されており、**ページ作者が使用すべきではありません**。リンク先の URL で HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
-- {{HTMLAttrDef("coords")}}{{Deprecated_Inline}}
+- `coords`{{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
-- {{HTMLAttrDef("name")}}{{Deprecated_Inline}}
+- `name`{{Deprecated_Inline}}
 
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
-    > **メモ:** 代わりにグローバル属性の {{HTMLAttrxRef("id")}} を使用してください。
+    > **メモ:** 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
 
-- {{HTMLAttrDef("rev")}}{{Deprecated_Inline}}
+- `rev`{{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
-- {{HTMLAttrDef("shape")}}{{Deprecated_Inline}}
+- `shape`{{Deprecated_Inline}}
 
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
@@ -380,7 +380,7 @@ document.querySelector('a').addEventListener('click', event =>
 </a>
 ```
 
-リンクの動作を示すためにアイコンを使用する場合は、 {{HTMLAttrxRef("alt", "img", "alt テキスト", "true") }}を確実に入れてください。
+リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
 
 ```html
 <a  target="_blank" href="https://www.wikipedia.org">

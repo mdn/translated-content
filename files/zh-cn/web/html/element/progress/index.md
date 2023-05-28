@@ -70,9 +70,9 @@ slug: Web/HTML/Element/progress
 
 和其他的 HTML 元素一样，该元素具有[全局属性](/zh-CN/HTML/Global_attributes).
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
-- {{ htmlattrdef("value") }}
+- `value`
   - : 该属性用来指定该进度条已完成的工作量。如果没有`value 属性`,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).
 
 > **备注：** 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。

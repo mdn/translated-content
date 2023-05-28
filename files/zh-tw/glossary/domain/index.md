@@ -7,4 +7,4 @@ slug: Glossary/Domain
 
 ## 了解更多
 
-- 維基百科上的 [域在 IT 領域](https://zh.wikipedia.org/wiki/Domain_(software_engineering))
+- 維基百科上的[域在 IT 領域](<https://zh.wikipedia.org/wiki/Domain_(software_engineering)>)

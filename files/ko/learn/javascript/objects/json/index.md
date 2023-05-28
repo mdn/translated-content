@@ -40,7 +40,7 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
 
 {{glossary("JSON")}} 는 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford)가 널리 퍼뜨린 Javascript 객체 문법을 따르는 문자 기반의 데이터 포맷입니다. JSON이 Javascript 객체 문법과 매우 유사하지만 딱히 Javascript가 아니더라도 JSON을 읽고 쓸 수 있는 기능이 다수의 프로그래밍 환경에서 제공됩니다.
 
-JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할 때 아주 유용하죠. 데이터에 억세스하기 위해서는 네이티브 JSON 객체로 변환될 필요가 있습니다. 별로 큰 문제는 아닌 것이 Javascript는 [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) 전역 객체를 통해 문자열과 JSON 객체의 상호변환을 지원합니다.
+JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할 때 아주 유용하죠. 데이터에 접근하기 위해서는 네이티브 JSON 객체로 변환될 필요가 있습니다. 별로 큰 문제는 아닌 것이 Javascript는 [JSON](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON) 전역 객체를 통해 문자열과 JSON 객체의 상호변환을 지원합니다.
 
 > **참고:** 문자열에서 네이티브 객체로 변환하는 것은 파싱(Parsing)이라고 합니다. 네트워크를 통해 전달할 수 있게 객체를 문자열로 변환하는 과정은 문자열화(Stringification)이라고 합니다.
 

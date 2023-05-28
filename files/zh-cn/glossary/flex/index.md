@@ -29,10 +29,10 @@ slug: Glossary/Flex
 ### 延伸阅读
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)（CSS 盒布局模型一级规范）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)（伸缩）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Relationship of flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)（伸缩盒子与其他布局方法的关系）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)（伸缩容器中项的对齐）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)（伸缩项的顺序）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)（控制主轴上伸缩项的比率）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)（掌握如何包装伸缩项）_
-- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)（伸缩盒子的典型用例）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)（伸缩）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Relationship of flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)（伸缩盒子与其他布局方法的关系）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)（伸缩容器中项的对齐）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)（伸缩项的顺序）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)（控制主轴上伸缩项的比率）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)（掌握如何包装伸缩项）_
+- CSS Flexbox Guide（CSS 伸缩盒子指南）: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)（伸缩盒子的典型用例）_

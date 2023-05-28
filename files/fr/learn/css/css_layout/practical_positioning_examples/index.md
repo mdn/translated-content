@@ -405,28 +405,3 @@ Et voilà, une astuce sans JavaScript pour créer un interrupteur. Cela fonction
 ## Résumé
 
 Et voici pour notre étude sur le positionnement. Vous devriez désormais avoir une idée des mécanismes de base et une compréhension nécessaire pour appliquer ces notions afin de construire des interfaces utilisateurs. Pas d'inquiétude si vous n'avez pas tout compris immédiatement, le positionnement est un sujet plutôt avancé et il est toujours possible de revenir sur ces articles afin d'aider à la compréhension par la suite. Le prochain sujet que nous aborderons portera sur les boîtes flexibles, aussi appelées <i lang="en">flexbox</i>.
-
-## Dans ce module
-
-- [Introduction aux dispositions CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Boîtes flexibles (flexbox)](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Flottements](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition à plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-
-  <i lang="en">responsive design</i>
-
-  [Conception adaptative (<i lang="en">responsive design</i>)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-
-- [Guide sur les requêtes de média (<i lang="en">media queries</i>)](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-
-  <i lang="en">media queries</i>
-
-  [Guide sur les requêtes de média (<i lang="en">media queries</i>)](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-
-- [Méthodes de disposition historiques](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prendre en charge les anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Évaluation pour la compréhension des fondamentaux des dispositions CSS](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -58,11 +58,11 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("manifest")}} {{deprecated_inline}} {{Non-standard_Inline}}
+- `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
   - : ローカルにキャッシュされるべきリソースを示すリソースマニフェストの {{glossary("URI")}} を指定します。
-- {{htmlattrdef("version")}} {{deprecated_inline}}
+- `version` {{deprecated_inline}}
   - : 現在の文書を管理する HTML の{{glossary("Doctype", "文書型定義")}}のバージョンを指定します。文書型宣言のバージョン情報と重複しているため、この属性は必須ではありません。
-- {{htmlattrdef("xmlns")}}
+- `xmlns`
   - : 文書の {{glossary("XML")}} {{glossary("Namespace", "名前空間")}}を指定します。既定値は `"http://www.w3.org/1999/xhtml"` です。これは XML {{glossary("parser", "パーサー")}}で解釈される文書では必須、 text/html の文書では任意です。
 
 ## 例
@@ -81,7 +81,7 @@ l10n:
 
 ## アクセシビリティの考慮
 
-HTML では `<html>` 要素の開始タグと終了タグを指定する必要はありませんが、ウェブページの {{htmlattrxref("lang")}} を指定できるようにするために、作者はこれを指定することが重要です。 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} に従った有効な言語タグを持つ `lang` 属性を `<html>` 要素に提供すれば、画面の内側へアナウンスするための適切な言語を決定するのに役立ちます。識別言語タグは、ページのコンテンツの大部分で使用されている言語を記述する必要があります。これがないと、画面の内側へ、通常、オペレーティングシステムの設定された言語が既定値として適用され、誤読が発生する可能性があります。
+HTML では `<html>` 要素の開始タグと終了タグを指定する必要はありませんが、ウェブページの [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) を指定できるようにするために、作者はこれを指定することが重要です。 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} に従った有効な言語タグを持つ `lang` 属性を `<html>` 要素に提供すれば、画面の内側へアナウンスするための適切な言語を決定するのに役立ちます。識別言語タグは、ページのコンテンツの大部分で使用されている言語を記述する必要があります。これがないと、画面の内側へ、通常、オペレーティングシステムの設定された言語が既定値として適用され、誤読が発生する可能性があります。
 
 `<html>` 要素に妥当な `lang` を設定することで、ページで {{HTMLElement("head")}} に含まれる {{HTMLElement("title")}} などの重要なメタデータについても、正しくアナウンスすることができます。
 

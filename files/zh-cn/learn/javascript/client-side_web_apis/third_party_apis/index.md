@@ -426,7 +426,7 @@ function displayResults(json) {
 
 ![](youtube-example.png)
 
-本文不会对该示例做过多的叙述 — [源码](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) 中有详细的注释。
+本文不会对该示例做过多的叙述，[源码](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube)中有详细的注释。
 
 运行源码需要：
 

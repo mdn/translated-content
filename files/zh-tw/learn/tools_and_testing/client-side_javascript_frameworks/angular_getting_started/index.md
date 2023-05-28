@@ -170,17 +170,16 @@ Angular 基本上是用 TypeScript 作為主要開發的語言。
 一個基本的元件寫法如下：
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-item',
+  selector: "app-item",
   // 接下來的檔案路徑會指出其它檔案在什麼位置
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  templateUrl: "./item.component.html",
+  styleUrls: ["./item.component.css"],
 })
-
 export class ItemComponent {
-// 程式碼寫在這裡
+  // 程式碼寫在這裡
 }
 ```
 
@@ -200,24 +199,20 @@ Angular 的元件模組具備高度封裝性，讓專案結構看起來更直覺
 
 ```js
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 當你把 HTML 內嵌寫在類別（Class）的檔案內時，要使用`template`這個屬性，並用反引號把 HTML 包起來，範例如下：
 
 ```js
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 Angular 還擴充了 HTML 的語法，讓你可以在元件中使用動態插值。
@@ -232,16 +227,15 @@ Angular 還擴充了 HTML 的語法，讓你可以在元件中使用動態插值
 `title`的值就是從元件的類別來的：
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component ({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-    title = 'To do application';
+  title = "To do application";
 }
 ```
 

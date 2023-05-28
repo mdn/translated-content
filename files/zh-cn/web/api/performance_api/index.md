@@ -59,10 +59,9 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 教程和指南
 
 - [使用 Performance API](/zh-CN/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [使用性能时间线](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-- [使用 User Timing API](/zh-CN/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [使用 Navigation Timing](/zh-CN/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
-- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [User Timing（概览）](/zh-CN/docs/Web/API/Performance_API/User_timing)
+- [Navigation Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)
+- [Resource Timing（概览）](/zh-CN/docs/Web/API/Performance_API/Resource_timing)
 
 ## 规范
 

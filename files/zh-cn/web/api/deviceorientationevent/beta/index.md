@@ -21,7 +21,7 @@ var beta = instanceOfDeviceOrientationEvent.beta;
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{ domxref("DeviceOrientationEvent") }}
 - [Detecting device orientation](/zh-CN/Detecting_device_orientation)

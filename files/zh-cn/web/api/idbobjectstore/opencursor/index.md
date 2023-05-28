@@ -66,7 +66,7 @@ request.onsuccess = function(event) {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}

@@ -65,5 +65,5 @@ $id = $_GET['id']
 
 ### 基本知識
 
-- 維基百科的 [SQL資料隱碼攻擊](https://zh.wikipedia.org/wiki/SQL資料隱碼攻擊)
+- 維基百科的 [SQL 資料隱碼攻擊](https://zh.wikipedia.org/wiki/SQL資料隱碼攻擊)
 - OWASP (Open Web Application Security Project) [解釋 SQL 注入](https://www.owasp.org/index.php/SQL_Injection)

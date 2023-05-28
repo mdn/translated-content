@@ -534,7 +534,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-此代码从`"received_video"` {{HTMLElement("video")}}元素的 {{htmlattrxref("srcObject", "video")}} 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
+此代码从`"received_video"` {{HTMLElement("video")}}元素的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject) 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。
 
 如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 `closeVideoCall()`结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 [结束通话](#结束通话) 了解 `closeVideoCall()` 的工作原理。
 
@@ -607,7 +607,7 @@ function closeVideoCall() {
 3. 通过调用{{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.关闭 {{domxref("RTCPeerConnection")}} 。
 4. 设置 `myPeerConnection` 为 `null`，确保我们的代码知道没有正在进行的调用；当用户单击用户列表中的名称时，这很有用。
 
-然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 {{htmlattrxref("srcObject", "video")}}和{{htmlattrxref("src", "video")}} 属性。这就完成了流与视频元素的分离。
+然后，对于传入和传出的{{HTMLElement("video")}}元素，我们使用它们的{{domxref("Element.removeAttribute", "removeAttribute()")}} 方法删除它们的 [`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject)和[`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性。这就完成了流与视频元素的分离。
 
 最后，我们在"Hang Up"按钮上将{{domxref("HTMLElement.disabled", "disabled")}}属性设置为 `true`，使其在没有调用的情况下不可点击；然后我们将`targetUsername` 设置为 `null` ，因为我们不再与任何人交谈。这允许用户呼叫另一个用户，或接收来电。
 

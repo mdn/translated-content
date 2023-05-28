@@ -29,7 +29,7 @@ z-index 속성은 하나의 정수 값을 가질 수 있다(양수, 음수 모�
 
 다음 예제에서는 레이어들의 쌓임 순서가 z-index를 이용하여 바뀌어있다. DIV#5는 position 속성이 지정되지 않았으므로 z-index 속성 값은 쌓임 순서를 결정하는데에 아무 영향을 미치지 않는다.
 
-### Example source code
+### 예제
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -141,7 +141,7 @@ span.bold { font-weight: bold; }
 
 ## 결과
 
-{{EmbedLiveSample("Example", 600, 400)}}
+{{EmbedLiveSample("예제", 600, 400)}}
 
 ### See also
 

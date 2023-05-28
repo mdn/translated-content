@@ -38,7 +38,7 @@ browser.search.search(
 
 无。
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

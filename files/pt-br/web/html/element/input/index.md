@@ -22,19 +22,19 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     - `button`: Um botão sem comportamento padrão.
     - `checkbox`: Uma caixa de marcação. Você deve usar o atributo **value** para definir o valor enviado por este item. Use o atributo **checked** para indicar se o item está selecionado por padrão. Você também pode usar o atributo **indeterminate** para indicar que a caixa de marcação está em um estado indeterminado (na maioria das plataformas, isso desenha uma linha horizontal cortando a caixa).
-    - `color`: {{HTMLVersionInline("5")}} Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-    - `date`: {{HTMLVersionInline("5")}} Um controle para inserir uma data (ano, mês e dia, sem horário).
-    - `datetime`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário (hora, minuto, segundo e fração de segundo) baseado no fuso horário UTC.
-    - `datetime-local`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário, sem fuso horário.
-    - `email`: {{HTMLVersionInline("5")}} Um campo para editar um endereço de e-mail. O valor do campo é validado para estar vazio ou ter um único endereço de e-mail válido antes de ser enviado. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
+    - `color`: Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `date`: Um controle para inserir uma data (ano, mês e dia, sem horário).
+    - `datetime`: Um controle para inserir data e horário (hora, minuto, segundo e fração de segundo) baseado no fuso horário UTC.
+    - `datetime-local`: Um controle para inserir data e horário, sem fuso horário.
+    - `email`: Um campo para editar um endereço de e-mail. O valor do campo é validado para estar vazio ou ter um único endereço de e-mail válido antes de ser enviado. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
     - `file`: Um controle que permite ao usuário selecionar um arquivo. Use o atributo**accept** para definir os tipos de arquivo que o controle pode selecionar.
     - `hidden`: Um controle que não é exibido mas cujo valor é enviado ao servidor.
     - `image`: Um botão gráfico para enviar o formulário. Você deve usar o atributo **src** para definir a fonte da imagem e o atributo **alt** para definir um texto alternativo. Você pode usar os atributos **height** e **width** para definir o tamanho da imagem em pixels.
-    - `month`: {{HTMLVersionInline("5")}} Um controle para inserir mês e ano, sem fuso horário.
-    - `number`: {{HTMLVersionInline("5")}} Um controle para inserir um número de ponto flutuante.
+    - `month`: Um controle para inserir mês e ano, sem fuso horário.
+    - `number`: Um controle para inserir um número de ponto flutuante.
     - `password`: Um campo de texto com uma só linha cujo valor é obscurecido. Use o atributo **maxlength** para especificar o comprimento máximo do valor que pode ser inserido.
     - `radio`: Um botão de escolha. Você deve usar o atributo **value** para definir o valor a ser enviado por este item. Use o atributo **checked** para indicar se este item deve estar selecionado por padrão. Botões de escolha que têm o mesmo valor para o atributo **name** estão no mesmo "grupo de botões de escolha"; apenas um botão de escolha no grupo pode estar selecionado de cada vez..
-    - `range`: {{HTMLVersionInline("5")}} Um controle para inserir um número cujo valor exato não é importante. Este tipo de controle usa os seguintes valores padrão se os atributos correspondentes não forem especificados:
+    - `range`: Um controle para inserir um número cujo valor exato não é importante. Este tipo de controle usa os seguintes valores padrão se os atributos correspondentes não forem especificados:
 
       - `min`: 0
       - `max`: 100
@@ -42,13 +42,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
       - `step`: 1
 
     - `reset`: Um botão que faz o conteúdo do formulário voltar a ter seus valores padrão.
-    - `search`: {{HTMLVersionInline("5")}} Um campo de texto com uma só linha para digitar termos de busca; quebras de linha são automaticamente removidas do valor entrado.
+    - `search`: Um campo de texto com uma só linha para digitar termos de busca; quebras de linha são automaticamente removidas do valor entrado.
     - `submit`: Um botão que envia o formulário.
-    - `tel`: {{HTMLVersionInline("5")}} Um controle para inserir um número de telefone; quebras de linha são automaticamente removidas do valor entrado, mas nenhuma outra sintaxe é imposta. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
+    - `tel`: Um controle para inserir um número de telefone; quebras de linha são automaticamente removidas do valor entrado, mas nenhuma outra sintaxe é imposta. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
     - `text`: Um campo de texto com uma só linha; quebras de linha são automaticamente removidas do valor entrado.
-    - `time`: {{HTMLVersionInline("5")}} Um controle para inserir um horário sem fuso horário.
-    - `url`: {{HTMLVersionInline("5")}} Um campo para editar uma URL. O valor inserido é validado para ser vazio ou uma URL absoluta válida antes de ser enviado. Quebras de linha e espaços em branco antes e após o valor inserido são automaticamente removidos. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
-    - `week`: {{HTMLVersionInline("5")}} Um controle para inserir uma data consistindo de ano da semana e número da semana sem fuso horário.
+    - `time`: Um controle para inserir um horário sem fuso horário.
+    - `url`: Um campo para editar uma URL. O valor inserido é validado para ser vazio ou uma URL absoluta válida antes de ser enviado. Quebras de linha e espaços em branco antes e após o valor inserido são automaticamente removidos. Você pode usar atributos como **pattern** e **maxlength** para restringir os valores inseridos no controle. As pseudoclasses CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} são aplicadas apropriadamente.
+    - `week`: Um controle para inserir uma data consistindo de ano da semana e número da semana sem fuso horário.
 
 - {{htmlattrdef("accept")}}
 
@@ -56,9 +56,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     - Uma extensão de arquivo começando com o caractere STOP (U+002E). (Exemplo: ".jpg,.png,.doc")
     - Um tipo MIME válido sem extensões
-    - `audio/*` representando arquivos de som {{HTMLVersionInline("5")}}
-    - `video/*` representando arquivos de vídeo {{HTMLVersionInline("5")}}
-    - `image/*` representando arquivos de imagem {{HTMLVersionInline("5")}}
+    - `audio/*` representando arquivos de som
+    - `video/*` representando arquivos de vídeo
+    - `image/*` representando arquivos de imagem
 
 - {{htmlattrdef("mozactionhint")}} {{non-standard_inline}}
   - : Especifica uma "dica de ação" usada para determinar como rotular a tecla Enter em dispositivos móveis com teclados virtuais. Os valores suportados são `go`, `done`, `next`, `search` e `send`; estes valores são automaticamente mapeados para o texto apropriado (maiúsculas e minúsculas não são diferenciadas).
@@ -73,7 +73,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
     - `on`: {{deprecated_inline()}} Obsoleto desde o iOS 5.
     - `off`: {{deprecated_inline()}} Obsoleto desde o iOS 5.
 
-- {{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("autocomplete")}}
 
   - : Este atributo indica se o valor do controle pode ser completado automaticamente pelo navegador. Este atributo é ignorado se o valor do atributo **type** é `hidden`, `password`, `checkbox`, `radio`, `file` ou um tipo de botão (`button`, `submit`, `reset`, `image`). Os valores possíveis são:
 
@@ -91,9 +91,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
     - `on`: Habilita correção automática
     - `off`: Desabilita correção automática
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("autofocus")}}
   - : Este atributo booleano permite que você especifique que um controle de formulário deve ter o foco de entrada de dados assim que a página carrega, a não ser que o usuário sobrescreva este comportamento digitando em um controle diferente, por exemplo. Apenas um elemento de formulário em um documento pode ter o atributo **autofocus**, que é booleano. Este atributo não pode ser aplicado se o atributo **type** estiver definido como `hidden` (isto é, você não pode colocar automaticamente o foco em um controle escondido).
-- {{htmlattrdef("autosave")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("autosave")}}
   - : Este atributo deve ser definido com um valor único. Se o valor do atributo **type** for `search`, termos de busca anteriores serão persistidos no menu entre carregamentos de página.
 - {{htmlattrdef("checked")}}
 
@@ -107,11 +107,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     O Firefox vai, por padrão, ao contrário de outros navegadores, [persistir o estado dinâmico de desabilitado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("input")}} entre carregamentos de página. Use o atributo {{htmlattrxref("autocomplete","input")}} para controlar esta funcionalidade.
 
-- {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("form")}}
   - : O elemento `<form>` ao qual o elemento `<input>` está associado (seu _formulário dono_). O valor do atributo deve ser um **id** de um elemento {{HTMLElement("form")}}. Este atributo permite que você coloque elementos `<input>` em qualquer lugar num documento, não apenas como descendentes de seus elementos `<form>`. Um `<input>` só pode estar associado a um único formulário.
-- {{htmlattrdef("formaction")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("formaction")}}
   - : A URI de um programa que processa a informação enviada pelo elemento, se ele for um botão ou uma imagem de envio de formulário. Se especificado, ele sobrescreve o atributo {{htmlattrxref("action","form")}} do formulário dono do elemento.
-- {{htmlattrdef("formenctype")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("formenctype")}}
 
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo especifica o tipo de conteúdo que deve ser usado para enviar o formulário para o servidor. Os valores possíveis são:
 
@@ -121,7 +121,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     Se este atributo for especificado, ele sobrescreve o atributo {{htmlattrxref("enctype","form")}} do formulário dono do elemento.
 
-- {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("formmethod")}}
 
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo especifica o método HTTP que o navegador deve usar para enviar o formulário. Os valores possíveis são:
 
@@ -130,9 +130,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     Se especificado, este atributo sobrescreve o atributo {{htmlattrxref("method","form")}} do formulário dono do elemento.
 
-- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("formnovalidate")}}
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo booleano especifica que o formulário não deve ser validado quando enviado. Se especificado, este atributo sobrescreve o atributo {{htmlattrxref("novalidate","form")}} do formulário dono do elemento.
-- {{htmlattrdef("formtarget")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("formtarget")}}
 
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo é um nome ou palavra-chave indicando onde mostrar a resposta recebida após a submissão do formulário. Este é o nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo aba, janela ou frame inline). Se especificado, este atributo sobrescreve o atributo {{htmlattrxref("target", "form")}} do formulário dono do elemento. As seguintes palavras-chave têm significado especial:
 
@@ -141,11 +141,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
     - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
     - `_top`: Carrega a resposta no contexto de navegação raiz (isto é, o contexto de navegação que é ancestral do atual e não tem pai). Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
 
-- {{htmlattrdef("height")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("height")}}
   - : Se o valor do atributo **type** for `image`, este atributo define a altura da imagem mostrada para o botão.
 - {{htmlattrdef("incremental")}} {{non-standard_inline}}
   - : Este é um atributo não padronizado suportado pelo Safari que é aplicado somente quando o **type** é `search`. Se o atributo estiver presente, independentemente do valor que ele tiver, o {{HTMLElement("input")}} dispara eventos [`search`](/pt-BR/docs/Web/Events/search) conforme o usuário edita o texto do campo. Este evento somente é disparado um tempo após a última tecla ter sido pressionada; este tempo é definido pela implementação e novas digitações zeram o contador de tempo. Em outras palavras, o disparo do evento é filtrado (_debounced_). Se o atributo não estiver presente, o evento [`search`](/pt-BR/docs/Web/Events/search) só é disparado quando o usuário iniciar explicitamente uma busca (por exemplo, pressionando a tecla Enter enquanto estiver no campo).
-- {{htmlattrdef("inputmode")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("inputmode")}}
 
   - : Uma dica para o navegador de qual teclado deve ser mostrado. Este atributo se aplica quando o valor do atributo **type** é `text`, `password`, `email` ou `url`. Os valores possíveis são:
 
@@ -161,23 +161,23 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
     - `email`: Entrada de email. Use `<input type="email">` se possível em vez disso.
     - `url`: Entrada de URLs. Use `<input type="url">` se possível em vez disso.
 
-- {{htmlattrdef("list")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("list")}}
   - : Identifica uma lista de opções pré-definidas de sugestões para o usuário. O valor deve ser o **id** de um elemento {{HTMLElement("datalist")}} no mesmo documento. O navegador mostrará apenas opções que são valores válidos para este elemento. Este atributo é ignorado quando o valor do atributo **type** é `hidden`, `checkbox`, `radio`, `file` ou um tipo de botão.
-- {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("max")}}
   - : O valor máximo (numérico ou data) para este item, que não deve ser menor que seu valor mínimo (atributo **min**).
 - {{htmlattrdef("maxlength")}}
   - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
-- {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("min")}}
   - : O valor mínimo (númerico ou data) para este item, que não deve ser maior do que seu máximo (atributo **max**).
-- {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("minlength")}}
   - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
-- {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("multiple")}}
   - : Este atributo booleano indica se o usuário pode inserir mais de um valor. Ele é aplicado quando o atributo **type** está definido como `email` ou `file`; em outros casos, é ignorado.
 - {{htmlattrdef("name")}}
   - : O nome do controle, que é enviado junto com os dados do formulário.
-- {{htmlattrdef("pattern")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("pattern")}}
   - : Uma expressão regular usada para validar o valor do controle. O padrão deve casar com o valor completo da entrada, não apenas uma parte. Use o atributo **title** para descrever o padrão para ajudar o usuário. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário ele é ignorado. A linguagem da expressão regular é a mesma do JavaScript. O padrão não deve estar entre barras.
-- {{htmlattrdef("placeholder")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("placeholder")}}
 
   - : Uma dica para o usuário do que ele pode inserir no controle. O texto do atributo não deve conter quebras de linha. Este atributo é aplicado quando o valor do atributo **type** é `text`, `search`, `tel`, `url` ou `email`; caso contrário, ele é ignorado.
 
@@ -187,26 +187,26 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Este atributo booleano indica que o usuário não pode modificar o valor do controle.
 
-    {{HTMLVersionInline("5")}} Este atributo é ignorado se o valor do atributo **type** for `hidden`, `range`, `color`, `checkbox`, `radio`, `file` ou um tipo de botão.
+    Este atributo é ignorado se o valor do atributo **type** for `hidden`, `range`, `color`, `checkbox`, `radio`, `file` ou um tipo de botão.
 
-- {{htmlattrdef("required")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("required")}}
   - : Este atributo especifica que o usuário deve preencher o campo com um valor antes de enviar o formulário. Ele não pode ser usado quando o atributo **type** está definido como `hidden`, `image` ou um tipo de botão (`submit`, `reset` ou `button`). As pseudoclasses CSS {{cssxref(":optional")}} e {{cssxref(":required")}} serão aplicadas ao campo como for apropriado.
-- {{htmlattrdef("selectionDirection")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("selectionDirection")}}
   - : A direção na qual a seleção ocorreu. Vale `forward` se a seleção foi feita no mesmo sentido da escrita do idioma usado ou `backward` se a seleção foi feita na direção oposta. Pode ainda ser `none` se a direção da seleção não for conhecida.
 - {{htmlattrdef("size")}}
   - : O tamanho inicial do controle. Este valor é em pixels a não ser que o valor do atributo **type** seja `text` ou `password`. Neste caso, este valor é um número inteiro de caracteres. A partir do HTML5, este atributo é aplicado apenas quando o atributo **type** está definido como `text`, `search`, `tel`, `url`, `email` ou `password`; caso contrário, ele é ignorado. Além disso, o tamanho deve ser maior que zero. Se você não especificar um tamanho, o valor padrão 20 é usado.
-- {{htmlattrdef("spellcheck")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("spellcheck")}}
   - : Definir o valor deste atributo como `true` indica que o elemento deve passar por um corretor ortográfico e gramatical. O valor `default` indica que o elemento deve agir de acordo com seu comportamento padrão, possivelmente baseado no valor do atributo `spellcheck` de seu elemento pai. O valor `false` indica que o elemento não deve ser verificado.
 - {{htmlattrdef("src")}}
   - : Se o valor do atributo **type** for `image`, este atributo especifica uma URI para a localização de uma imagem a ser exibida no botão gráfico; caso contrário, este atributo é ignorado.
-- {{htmlattrdef("step")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("step")}}
   - : Trabalha junto com os atributos **min** e **max** para limitar os incrementos em que valores numéricos ou datas podem ser alterados. Seu valor pode ser `any` ou um número de ponto flutuante positivo. Se o valor não for `any`, o controle aceita somente valores múltiplos valor do incremento maiores que o mínimo.
-- {{htmlattrdef("tabindex")}} element-specific in {{HTMLVersionInline(4)}}, global in {{HTMLVersionInline("5")}}
+- {{htmlattrdef("tabindex")}}
   - : A posição do elemento na ordem de navegação pela tecla Tab no documento atual.
 - {{htmlattrdef("value")}}
   - : O valor inicial do controle. Este atributo é opcional exceto quando o valor do atributo **type** for `radio` ou `checkbox`.
     Note que, quando a página é recarregada, Gecko and IE [ignorarão o valor especificado no código HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186) se o valor tiver sido alterado antes do recarregamento.
-- {{htmlattrdef("width")}} {{HTMLVersionInline("5")}}
+- {{htmlattrdef("width")}}
   - : Se o valor do atributo **type** for `image`, este atributo define a largura da imagem exibida para o botão.
 - {{htmlattrdef("x-moz-errormessage")}} {{non-standard_inline}}
   - : Essa extensão da Mozilla permite que você especifique a mensagem de erro a ser exibida quando um campo não valida com sucesso.

@@ -66,7 +66,7 @@ Example
 
 ## 拖动 HTML 和 XML
 
-HTML content may use the `text/html` type. The data for this type should be the serialized HTML to drag. For instance, it would be suitable to set the data value for this type to the value of the `{{domxref("Element.innerHTML","innerHTML")}}` property of an element.
+HTML content may use the `text/html` type. The data for this type should be the serialized HTML to drag. For instance, it would be suitable to set the data value for this type to the value of the {{domxref("Element.innerHTML","innerHTML")}} property of an element.
 
 XML content may use the `text/xml` type, but you should ensure that the data value is well-formed XML.
 

@@ -32,10 +32,10 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -64,7 +64,7 @@ l10n:
 
 入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
 
-次のように、日付の入力欄の既定値を {{htmlattrxref("value", "input")}} 属性に設定することができます。
+次のように、日付の入力欄の既定値を [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に設定することができます。
 
 ```html
 <input type="date" value="2017-06-01" />
@@ -91,19 +91,19 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### max
 
-受け付ける最も遅い日付です。要素に入力された {{htmlattrxref("value", "input")}} がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
+受け付ける最も遅い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `min` 属性にあるもの**より遅いか、同じ**日付文字列でなければなりません。
 
 ### min
 
-受け付ける最も早い日付です。要素に入力された {{htmlattrxref("value", "input")}} がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
+受け付ける最も早い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `max` 属性で指定されたもの**より早いか、同じ**日付である必要があります。
 
 ### step
 
-`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}} 、どちらも提供されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値を吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value) 、どちらも提供されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約に制限されます）。
 
@@ -140,7 +140,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### 日付の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる日付を制限することができます。次の例では、日付の最小値を `2017-04-01` に、日付の最大値を `2017-04-30` に設定しています。
 
 ```html
 <form>
@@ -154,19 +154,19 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 この結果は、 2017 年の 4 月の日付のみが選択できるようになります。 — テキストボックスの年と月の部分が編集できなくなり、日付選択ウィジェットで 4 月以外にスクロールすることができなくなります。
 
-> **メモ:** {{htmlattrxref("step", "input")}} 属性を使用すると、日付が加算するたびに飛ばす日数を設定できるはずです（例えば、土曜日のみを選択できるようにしたい場合など）。しかし、執筆時点でどの実装も正しく動作していないようです。
+> **メモ:** [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用すると、日付が加算するたびに飛ばす日数を設定できるはずです（例えば、土曜日のみを選択できるようにしたい場合など）。しかし、執筆時点でどの実装も正しく動作していないようです。
 
 ### 入力欄の寸法の制御
 
-`<input type="date">` は {{htmlattrxref("size", "input")}} のような寸法に関する属性には対応していません。寸法を変更するには [CSS](/ja/docs/Web/CSS) を推奨します。
+`<input type="date">` は [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法に関する属性には対応していません。寸法を変更するには [CSS](/ja/docs/Web/CSS) を推奨します。
 
 ## 検証
 
 既定で、 `<input type="date">` は入力された値をその書式を超えて検証しません。インターフェイスは一般的に、日付でないものの入力をさせないからです。 — これは便利です。 — しかし、入力欄を空のままにしたり、 `text` 型に代替されるするブラウザーにおいて、無効な日付を入力したりすることが可能です（例えば 4 月 32 日など）。
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限すると（[日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照）、対応しているブラウザーは、範囲を外れたの日付を送信しようとしたときにエラーを表示するでしょう。しかし、ユーザーの端末が日付選択に完全に対応していない場合、値がこれらの日付の中にあることを保証するためには、送信された結果を再度チェックしなければならないでしょう。
 
-{{htmlattrxref("required", "input")}} 属性を使用して、日付の入力を必須にすることもできます。 — 空の日付欄を送信しようとするとエラーが表示されるでしょう。これは、テキスト入力欄で代替されたとしても、ほとんどのブラウザーで動作するはずです。
+[`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、日付の入力を必須にすることもできます。 — 空の日付欄を送信しようとするとエラーが表示されるでしょう。これは、テキスト入力欄で代替されたとしても、ほとんどのブラウザーで動作するはずです。
 
 日付の最小値と最大値の例と、入力欄を必須にする例を見てみましょう。
 
@@ -229,7 +229,7 @@ input:valid + span::after {
 - `mm-dd-yyyy`
 - `Month dd, yyyy`
 
-これを回避する方法の一つは、日付入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けることです。日付選択ではこれを使用しませんが、文字列入力に代替されたときには使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
+これを回避する方法の一つは、日付入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けることです。日付選択ではこれを使用しませんが、文字列入力に代替されたときには使用されます。例えば、次の例を未対応のブラウザーで見てみてください。
 
 ```html
 <form>

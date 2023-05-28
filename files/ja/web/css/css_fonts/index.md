@@ -1,6 +1,6 @@
 ---
 title: CSS フォント
-slug: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
 
 {{CSSRef}}

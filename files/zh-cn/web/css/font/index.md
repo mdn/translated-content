@@ -3,7 +3,7 @@ title: font
 slug: Web/CSS/font
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 

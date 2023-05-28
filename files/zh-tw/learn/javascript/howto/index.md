@@ -35,8 +35,8 @@ slug: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('這是我的功能。');
-};
+  alert("這是我的功能。");
+}
 ```
 
 這段程式碼不會做任何事，直到它被呼叫，例如：
@@ -47,11 +47,11 @@ myFunction();
 
 #### 函數作用域
 
-記得[函數有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)──你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
+記得[函數有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)——你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
 
 #### 在 return 敘述後執行語法
 
-同樣記得當你把一個值從函數回傳出去後，JavaScript 編譯器便離開該函數──在 return 敘述之後的程式碼皆不會執行。
+同樣記得當你把一個值從函數回傳出去後，JavaScript 編譯器便離開該函數——在 return 敘述之後的程式碼皆不會執行。
 
 其實，當有程式碼出現在 return 敘述後時，某些瀏覽器會在開發人員工具的主控台中顯示 error 訊息，像是 Firefox 瀏覽器會顯示「unreachable code after return statement」。
 
@@ -63,16 +63,16 @@ myFunction();
 const myNumber = 0;
 ```
 
-然而，這在[物件](/zh-TW/docs/Learn/JavaScript/Objects)裡是行不通的──此時你需要用冒號區隔物件成員的名稱與值，再用逗號區隔每個成員，例如：
+然而，這在[物件](/zh-TW/docs/Learn/JavaScript/Objects)裡是行不通的——此時你需要用冒號區隔物件成員的名稱與值，再用逗號區隔每個成員，例如：
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
-## **基本定義**
+## 基本定義
 
 - [什麼是 JavaScript？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition)
 - [什麼是變數？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)

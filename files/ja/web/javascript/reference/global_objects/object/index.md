@@ -99,7 +99,7 @@ JavaScript のほぼすべてのオブジェクトが {{jsxref("Object")}} の�
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : このメソッドが呼び出されたオブジェクトが、指定されたオブジェクトのプロトタイプチェーンにあるかどうかを示す論理値を返します。
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : 内部の [ECMAScript \[\[Enumerable\]\] 属性](/ja/docs/Web/JavaScript/Data_structures#properties)が設定されているかどうかを表す論理値を返します。
+  - : 内部の [ECMAScript \[\[Enumerable\]\] 属性](/ja/docs/Web/JavaScript/Data_structures#プロパティ)が設定されているかどうかを表す論理値を返します。
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : {{jsxref("Object.toString", "toString()")}} を呼び出します。
 - {{jsxref("Object.prototype.toString()")}}

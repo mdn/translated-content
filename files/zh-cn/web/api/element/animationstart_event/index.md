@@ -41,6 +41,6 @@ slug: Web/API/Element/animationstart_event
 - [`animationend`](/zh-CN/docs/Web/API/Element/animationend_event)
 - [`animationiteration`](/zh-CN/docs/Web/API/Element/animationiteration_event)
 
-## 另请参阅
+## 参见
 
 - [Using CSS Animations](/zh-CN/docs/CSS/Using_CSS_animations)

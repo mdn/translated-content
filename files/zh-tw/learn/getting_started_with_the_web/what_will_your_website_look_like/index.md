@@ -39,7 +39,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ### 主題色彩
 
-可透過[選色工具](/zh-TW/docs/Web/CSS/CSS_Colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
+可透過[選色工具](/zh-TW/docs/Web/CSS/CSS_colors/Color_picker_tool)找到你喜歡的顏色。當你點擊其中一種顏色，就會看到如下圖「`#660066`」的 6 位數字，此即代表該顏色的十六進位 (Hexadecimal) 色碼。請另外找個地方記錄此色碼。
 
 ![](color-picker.png)
 

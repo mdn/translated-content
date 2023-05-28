@@ -218,7 +218,7 @@ player.ontimeupdate = () => {
 - [Video player styling basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
 
-我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅[custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)([see the source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS))。
+我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅 [custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)（[查看其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)）。
 
 ## 音频脚本
 
@@ -238,7 +238,7 @@ player.ontimeupdate = () => {
 
 如果使用自动服务，则可能需要使用该工具提供的用户界面。例如，查看[Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8)并选择" _More > Transcript_"。
 
-如果要创建自己的用户界面来显示音频和相关脚本，您可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的[audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例 (另请参阅[source code](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui))。
+如果要创建自己的用户界面来显示音频和相关脚本，您可以随心所欲地执行此操作，但将其包含在可显示/可隐藏面板中可能有意义;请参阅我们的[audio-transcript-ui](http://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) 示例（另请参阅[其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)）。
 
 ### 音频描述
 
@@ -294,7 +294,7 @@ This is the second.
 要将此信息与 HTML 媒体播放一起显示，您需要：
 
 - 将其保存为 .vtt 文件，放在一个合理的地方。
-- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 {{htmlattrxref("kind","track")}} 属性指定提示是字幕、标题还是说明。此外，使用 {{htmlattrxref("srclang","track")}} 告诉浏览器编写字幕所用的语言。
+- 使用 {{htmlelement("track")}} 元素链接到 .vtt 文件。`<track>` 应放在 `<audio>` 或 `<video>` 内，但在 `<source>` 元素之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性指定提示是字幕、标题还是说明。此外，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 告诉浏览器编写字幕所用的语言。
 
 下面是一个示例：
 

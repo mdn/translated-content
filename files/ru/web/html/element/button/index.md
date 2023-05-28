@@ -27,28 +27,28 @@ original_slug: Web/HTML/Element/кнопка
 
 Элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("autofocus")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("autofocus")}}
   - : Данный булевый атрибут позволяет указать, будет ли кнопка автоматически сфокусирована после загрузки страницы, до тех пор, пока пользователь не изменит фокус в ручную, например выбрав другой элемент. Только один связанный с формой элемент в документе может иметь данный атрибут.
 - {{htmlattrdef("autocomplete")}} {{non-standard_inline}}
   - : Использование данного атрибута на элементе `<button>` не описано в стандарте и используется только в Firefox браузере. По умолчанию, в отличие от прочих браузеров, [Firefox сохраняет назначенное динамически отключённое состояние](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) для элемента `<button>` при последующих загрузках страницы. Установка для данного атрибута значения `off` отключает подобное поведение. Смотрите {{bug(654072)}}.
 - {{htmlattrdef("disabled")}}
   - : Булевый атрибут, указывающий, что пользователь не может взаимодействовать с кнопкой. Если атрибут не установлен, то кнопка наследует его от элемента-контейнера, в котором она расположена, например от {{HTMLElement("fieldset")}}; если отсутствует элемент-контейнер, с установленным атрибутом **disabled**, то кнопка доступна для взаимодействия.Firefox по умолчанию, в отличие от прочих браузеров, [сохраняет назначенное динамически отключённое состояние](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) для элемента `<button>`, даже при обновлении страницы. Чтобы изменить поведение браузера в этом случае, используйте атрибут {{htmlattrxref("autocomplete","button")}}.
-- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("form")}}
   - : Атрибут **form** позволяет указать элемент {{HTMLElement("form")}}, с которым связана кнопка. Данный атрибут должен хранить значение **id** элемента {{HTMLElement("form")}}. Если данный атрибут не установлен, то элемент `<button>` будет связан с родительским элементом {{HTMLElement("form")}}, если последний существует.Атрибут работает независимо от расположения элементов в документе, поэтому он позволяет связать элемент `<button>` с формой, даже в случае, если `<button>` не является наследником элемента {{HTMLElement("form")}}.
-- {{htmlattrdef("formaction")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formaction")}}
   - : Ссылка на обработчик формы. Если атрибут определён — он переопределит атрибут {{htmlattrxref("action","form")}} у формы-родителя.
-- {{htmlattrdef("formenctype")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formenctype")}}
   - : Если `button` имеет тип `submit`, то этот атрибут определяет тип контента, отправляемого на сервер. Возможные значения данного атрибута:
     - `application/x-www-form-urlencoded`: значение по умолчанию, если атрибут не указан.
     - `multipart/form-data`: следует использовать это значение, если форма содержит элемент {{HTMLElement("input")}} со значением атрибута {{htmlattrxref("type","input")}} `file`.
     - `text/plain` Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("enctype","form")}} у формы-родителя.
-- {{htmlattrdef("formmethod")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formmethod")}}
   - : Если `button` имеет тип `submit`, то этот атрибут определяет метод HTTP-запроса для отправки данных на сервер. Возможные варианты:
     - `post`: данные формы включаются в тело сообщения и отправляются на сервер.
     - `get`: данные формы отправляются на сервер в виде ссылки, состоящей из URI атрибута {{htmlattrxref("action","form")}} и непосредственно данных, отделённых знаком '?'. Данные формы будут иметь вид ключ/значение и разделены амперсандом, например name=Name\&id=35. Следует использовать этот метод только если нет побочных эффектов и данные формы содержат лишь ASCII-символы.Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("method","form")}} у формы-родителя.
-- {{htmlattrdef("formnovalidate")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formnovalidate")}}
   - : Булевый атрибут. Указывает, что данные формы не будут валидироваться при отправке.Если этот атрибут определён, он переопределяет атрибут {{htmlattrxref("novalidate","form")}} у формы-родителя.
-- {{htmlattrdef("formtarget")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("formtarget")}}
   - : Если `button` имеет тип `submit`, этот атрибут является именем или ключевым словом,указывающим, где отображать ответ, полученный после отправки формы. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the button's form owner. The following keywords have special meanings:
     - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.

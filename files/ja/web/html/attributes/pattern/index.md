@@ -9,11 +9,11 @@ slug: Web/HTML/Attributes/pattern
 
 `pattern`属性は {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} の入力型の属性です。
 
-`pattern`属性は、[制約検証](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)を通過させるために、入力の {{htmlattrxref("value")}} が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、 [正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。通り正規表現をコンパイルする際に `'u'` フラグを指定することで、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
+`pattern`属性は、[制約検証](/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Element/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、 [正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で説明されているものと同じものです。通り正規表現をコンパイルする際に `'u'` フラグを指定することで、パターンが ASCII ではなく Unicode コードポイントの並びとして扱われるようになります。パターンテキストの周りには、スラッシュを指定してはいけません。
 
 パターンが指定されていないか無効な場合、正規表現は適用されず、この属性は無視されます。
 
-> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用すると、ほとんどのブラウザーがパターンに一致するための要件を説明するためにツールチップとして表示するテキストを指定することができます。説明をツールチップだけに頼っては**いけません**。ユーザービリティについての詳細は以下を参照してください。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用すると、ほとんどのブラウザーがパターンに一致するための要件を説明するためにツールチップとして表示するテキストを指定することができます。説明をツールチップだけに頼っては**いけません**。ユーザービリティについての詳細は以下を参照してください。
 
 pattern 属性に対応している入力型の中には、特に {{HTMLElement("input/email", "email")}} および {{HTMLElement("input/url", "url")}} 入力型のように、一致しなければならない期待値の構文を持っているものがあります。 pattern 属性が存在せず、値がその値型の期待される構文と一致しない場合、 {{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.typeMismatch','typeMismatch')}} プロパティが真になります。
 
@@ -56,7 +56,7 @@ input:invalid {
 
 ### パターンの指定
 
-{{htmlattrxref("pattern", "input")}} 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます (正規表現を使用して入力を検証する簡単な集中講座は、[正規表現に対する検証](/ja/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression)を参照してください)。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)を参照してください）。
 
 以下の例では、値を 4-8 文字に制限し、小文字のみを含むことを要求しています。
 

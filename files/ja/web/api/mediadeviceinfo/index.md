@@ -22,7 +22,8 @@ slug: Web/API/MediaDeviceInfo
 
 ## メソッド
 
-なし。
+- {{domxref("MediaDeviceInfo.toJSON()")}}
+  - : この `MediaDeviceInfo` オブジェクトの JSON 表現を返します。
 
 ## 例
 

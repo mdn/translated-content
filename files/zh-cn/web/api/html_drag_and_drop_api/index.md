@@ -59,7 +59,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 
 ### 确定什么是可拖拽的
 
-让一个元素被拖拽需要添加 {{htmlattrxref("draggable")}} 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
+让一个元素被拖拽需要添加 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
 
 ```html
 <script>

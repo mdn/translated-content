@@ -33,14 +33,14 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("size", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -68,7 +68,7 @@ l10n:
 
 ## 値
 
-{{HTMLElement("input")}} 要素の {{htmlattrxref("value", "input")}} 属性には、電話番号を表す文字列、または空文字列 (`""`) の文字列が入ります。
+{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、電話番号を表す文字列、または空文字列 (`""`) の文字列が入ります。
 
 ## 追加の属性
 
@@ -76,27 +76,27 @@ l10n:
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### maxlength
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小文字数が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の {{htmlattrxref("value")}} が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細と例については後述の[パターン検証](#パターン検証)を参照してください。
 
@@ -137,7 +137,7 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。代わりに {{htmlattrxref("enterkeyhint")}} グローバル属性を使用してください。
+この属性は非推奨です。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) グローバル属性を使用してください。
 
 ## tel 入力欄の使用
 
@@ -184,7 +184,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 #### 物理的な入力欄の寸法
 
-入力ボックスの物理的な大きさは、 {{htmlattrxref("size", "input")}} 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `tel` のエディットボックスの幅は 20 文字です。
+入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `tel` のエディットボックスの幅は 20 文字です。
 
 ```html
 <input id="telNo" name="telNo" type="tel" size="20" />
@@ -194,7 +194,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 #### 要素の値の長さ
 
-`size` は、入力される電話番号の長さの制限とは別のものです。入力される電話番号の長さの最小値は {{htmlattrxref("minlength", "input")}} 属性で指定でき、同様に、入力される電話番号の長さの最大値は {{htmlattrxref("maxlength", "input")}} 属性で設定することができます。
+`size` は、入力される電話番号の長さの制限とは別のものです。入力される電話番号の長さの最小値は [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性で指定でき、同様に、入力される電話番号の長さの最大値は [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) 属性で設定することができます。
 
 以下の例では、幅 20 文字の電話番号入力ボックスを生成し、入力内容は 9 文字以上、 14 文字以下であることを要求しています。
 
@@ -216,7 +216,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 #### value 属性を言使用した単一の既定値の提供
 
-他と同様に、 `tel` 入力欄に {{htmlattrxref("value", "input")}} 属性を設定することで既定値を指定することができます。
+他と同様に、 `tel` 入力欄に [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を設定することで既定値を指定することができます。
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -226,7 +226,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 #### 提案値の提供
 
-さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには {{htmlattrxref("list", "input")}} 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは {{htmlattrxref("autocomplete", "input")}} へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
+さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
 
 ```html
 <label for="telNo">電話番号: </label>
@@ -256,7 +256,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 ### 電話番号を必須にする
 
-空の入力を無効として、サーバーに送信されないようにするには、 {{htmlattrxref("required", "input")}} 属性を使用します。例えば、このような HTML を使ってみましょう。
+空の入力を無効として、サーバーに送信されないようにするには、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用します。例えば、このような HTML を使ってみましょう。
 
 ```html
 <form>
@@ -308,7 +308,7 @@ input:valid + span::after {
 
 ### パターンによる値検証
 
-入力された数値をさらに制限し、特定のパターンに適合させたい場合は、{{htmlattrxref("pattern","input")}}属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("regular expression", "正規表現")}}を値として取ります。
+入力された数値をさらに制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern)属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("regular expression", "正規表現")}}を値として取ります。
 
 この例では、前と同じ CSS を使用しますが、 HTML は次のように変更します。
 
@@ -369,7 +369,7 @@ input:valid + span::after {
 
 この例では、ユーザーにどの国にいるかを選択させる {{htmlelement("select")}} 要素と、電話番号の各部分を入力させる一連の `<input type="tel">` 要素でシンプルなインターフェイスを表します。複数の `tel` 入力欄を使ってはいけないという理由はありません。
 
-それぞれの入力欄には {{htmlattrxref("placeholder","input")}} 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また {{htmlattrxref("pattern","input")}} で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性があり、画面リーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
+それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性があり、画面リーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
 
 ```html
 <form>

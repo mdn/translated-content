@@ -9,7 +9,7 @@ JavaScript 擁有許多陳述式，特別是流程控制的陳述式，你可以
 
 [JavaScript 參考](/zh-TW/docs/Web/JavaScript/Reference/Statements)中有比本章更多關於陳述式的細節。 在 Javascript 程式碼中，分號（;）被用來隔開陳述式。
 
-任何 JavaScript 運算式也是一個陳述式。 有關運算式的完整資訊，請參閱[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)。
+任何 JavaScript 運算式也是一個陳述式。 有關運算式的完整資訊，請參閱[運算式與運算子](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)。
 
 ## 區塊陳述式
 

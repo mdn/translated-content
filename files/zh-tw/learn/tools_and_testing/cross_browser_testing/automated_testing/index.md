@@ -56,16 +56,16 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 2. 如同安裝其他程式般地安裝它。注意 Node 還會安裝 [Node Package Manager](https://www.npmjs.com/)（npm），它能讓你輕易安裝套件(package)、分享你自己寫的套件、還有在你的專案運行腳本。
 3. 安裝完成後，請輸入以下指令以測試 node 是否已安裝到電腦裡面，它會回傳 Node 與 npm 的版本：
 
-    ```bash
-    node -v
-    npm -v
-    ```
+   ```bash
+   node -v
+   npm -v
+   ```
 
 4. 如果已經安裝過 Node/npm，你應該更新它們到最新版本。要更新 Node 的最可行方法，是從上述網站下載並安裝更新的軟體包。要更新 npm，請在文字介面輸入以下指令：
 
-    ```bash
-    npm install npm@latest -g
-    ```
+   ```bash
+   npm install npm@latest -g
+   ```
 
 > **備註：** 如果因為權限問題而失敗，[Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) 應該對你有所幫助。
 
@@ -75,23 +75,19 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 1. 選個合適的地方建立目錄。可以在檔案管理員的 UI 完成，或是輸入以下指令：
 
-    ```bash
-    mkdir node-test
-    ```
+   ```bash
+   mkdir node-test
+   ```
 
 2. 要把這目錄變成 npm 專案，就要到 test 把此目錄初始化。請輸入：
 
-    ```bash
-    cd node-test
-    npm init
-    ```
+   ```bash
+   cd node-test
+   npm init
+   ```
 
 3. 第二個指令（`npm init`）會問你幾個問題，以便取得專案所需的資訊。你可以把一切都以預設帶過。
-4. 問完所有問題後，它會問你是否對設定滿意。輸入 `yes` 並按下
-
-    <kbd>Enter</kbd>
-
-    鍵，npm 就會在目錄產生一個稱為 `package.json` 的檔案。
+4. 問完所有問題後，它會問你是否對設定滿意。輸入 `yes` 並按下 <kbd>Enter</kbd> 鍵，npm 就會在目錄產生一個稱為 `package.json` 的檔案。
 
 這個檔案基本上就是個專案的設定檔。你可以之後再來設定，但目前它大概長成這個樣子：
 
@@ -119,33 +115,33 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 2. 接著，你需要有些簡單的 HTML、CSS、JavaScript 來測試系統：你可以複製我們的 [index.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/index.html)、[main.js](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/main.js)、[style.css](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/automation/style.css) 到專案裡面，一個稱為 `src` 的目錄。現在你可以隨意嘗試測試內容，不過請注意這些工具不會直接在 JS/CSS 裡面運作：你需要外部的檔案。
 3. 首先，你要下這個指令，以全域（意思是說，它能在所有專案使用）的形式安裝 gulp：
 
-    ```bash
-    npm install --global gulp-cli
-    ```
+   ```bash
+   npm install --global gulp-cli
+   ```
 
 4. 接著在 npm 專案輸入以下指令，以便專案將 gulp 認定為安裝所須：
 
-    ```bash
-    npm install --save-dev gulp
-    ```
+   ```bash
+   npm install --save-dev gulp
+   ```
 
 5. 在專案裡面建立一個叫 `gulpfile.js` 的檔案。這個檔案能運行所有我們需要做的任務。在檔案裡面加這個指令：
 
-    ```js
-    var gulp = require('gulp');
+   ```js
+   var gulp = require("gulp");
 
-    gulp.task('default', function() {
-      console.log('Gulp running');
-    });
-    ```
+   gulp.task("default", function () {
+     console.log("Gulp running");
+   });
+   ```
 
-    這檔案需要我們之前安裝過的 `gulp` 模組，接著會跑些只顯示訊息的基本任務：它至少讓我們知道 Gulp 可以動。每個 gulp task 的基本格式都一樣——`gulp` 會執行 `task()` 方法，並給出兩個參數——任務的名稱、還有指示如何完成任務的回傳函式。
+   這檔案需要我們之前安裝過的 `gulp` 模組，接著會跑些只顯示訊息的基本任務：它至少讓我們知道 Gulp 可以動。每個 gulp task 的基本格式都一樣——`gulp` 會執行 `task()` 方法，並給出兩個參數——任務的名稱、還有指示如何完成任務的回傳函式。
 
 6. 現在你可以跑 gulp task 了——輸入這個指令吧：
 
-    ```bash
-    gulp
-    ```
+   ```bash
+   gulp
+   ```
 
 ### 讓 Gulp 做些實際的工作
 
@@ -162,7 +158,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 在往下一步開始進發以前，把 default task 改成：
 
 ```js
-gulp.task('default', [ ]);
+gulp.task("default", []);
 ```
 
 在陣列裡面寫下所有想在命令列輸入 `gulp` 後，希望 Gulp 運作的命令。
@@ -171,27 +167,28 @@ gulp.task('default', [ ]);
 
 1. 輸入以下指令安裝：
 
-    ```bash
-    npm install --save-dev gulp-htmltidy
-    ```
+   ```bash
+   npm install --save-dev gulp-htmltidy
+   ```
 
-    > **備註：** `--save-dev` 會把此套件加到開發相依設定中。如果去看專案的 `package.json` 檔，你會在 `devDependencies` 屬性看到它被放在裡面。
+   > **備註：** `--save-dev` 會把此套件加到開發相依設定中。如果去看專案的 `package.json` 檔，你會在 `devDependencies` 屬性看到它被放在裡面。
 
 2. 在 `gulpfile.js` 增加這個相依：
 
-    ```js
-    var htmltidy = require('gulp-htmltidy');
-    ```
+   ```js
+   var htmltidy = require("gulp-htmltidy");
+   ```
 
 3. 在 `gulpfile.js` 的底部加入以下測試：
 
-    ```js
-    gulp.task('html', function() {
-      return gulp.src('src/index.html')
-            .pipe(htmltidy())
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("html", function () {
+     return gulp
+       .src("src/index.html")
+       .pipe(htmltidy())
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. 在 `default` 任務的陣列裡面加入 `'html'` 項目。
 
@@ -205,32 +202,35 @@ gulp.task('default', [ ]);
 
 1. 輸入以下指令安裝：
 
-    ```bash
-    npm install --save-dev gulp-autoprefixer
-    npm install --save-dev gulp-csslint
-    ```
+   ```bash
+   npm install --save-dev gulp-autoprefixer
+   npm install --save-dev gulp-csslint
+   ```
 
 2. 在 `gulpfile.js` 增加這個相依：
 
-    ```js
-    var autoprefixer = require('gulp-autoprefixer');
-    var csslint = require('gulp-csslint');
-    ```
+   ```js
+   var autoprefixer = require("gulp-autoprefixer");
+   var csslint = require("gulp-csslint");
+   ```
 
 3. 在 `gulpfile.js` 的底部加入以下測試：
 
-    ```js
-    gulp.task('css', function() {
-        return gulp.src('src/style.css')
-            .pipe(csslint())
-            .pipe(csslint.formatter('compact'))
-            .pipe(autoprefixer({
-                browsers: ['last 5 versions'],
-                cascade: false
-            }))
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("css", function () {
+     return gulp
+       .src("src/style.css")
+       .pipe(csslint())
+       .pipe(csslint.formatter("compact"))
+       .pipe(
+         autoprefixer({
+           browsers: ["last 5 versions"],
+           cascade: false,
+         })
+       )
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. 在 `default` 任務的陣列裡面加入 `'css'` 項目。
 
@@ -240,31 +240,34 @@ gulp.task('default', [ ]);
 
 1. 輸入以下指令安裝：
 
-    ```bash
-    npm install --save-dev gulp-babel babel-preset-es2015
-    npm install jshint gulp-jshint --save-dev
-    ```
+   ```bash
+   npm install --save-dev gulp-babel babel-preset-es2015
+   npm install jshint gulp-jshint --save-dev
+   ```
 
 2. 在 `gulpfile.js` 增加這個相依：
 
-    ```js
-    var babel = require('gulp-babel');
-    var jshint = require('gulp-jshint');
-    ```
+   ```js
+   var babel = require("gulp-babel");
+   var jshint = require("gulp-jshint");
+   ```
 
 3. 在 `gulpfile.js` 的底部加入以下測試：
 
-    ```js
-    gulp.task('js', function() {
-        return gulp.src('src/main.js')
-            .pipe(jshint())
-            .pipe(jshint.reporter('default'))
-            .pipe(babel({
-                presets: ['es2015']
-            }))
-            .pipe(gulp.dest('build'));
-    });
-    ```
+   ```js
+   gulp.task("js", function () {
+     return gulp
+       .src("src/main.js")
+       .pipe(jshint())
+       .pipe(jshint.reporter("default"))
+       .pipe(
+         babel({
+           presets: ["es2015"],
+         })
+       )
+       .pipe(gulp.dest("build"));
+   });
+   ```
 
 4. 在 `default` 任務的陣列裡面加入 `'js'` 項目。
 
@@ -283,10 +286,10 @@ gulp.task('default', [ ]);
 Gulp 還有個 `watch()` 函式能監視，並在每次存檔完就跑測試。例如，你可以試著在 `gulpfile.js` 底下增加以下程式碼：
 
 ```js
-gulp.task('watch', function(){
-  gulp.watch('src/*.html', ['html']);
-  gulp.watch('src/*.css', ['css']);
-  gulp.watch('src/*.js', ['js']);
+gulp.task("watch", function () {
+  gulp.watch("src/*.html", ["html"]);
+  gulp.watch("src/*.css", ["css"]);
+  gulp.watch("src/*.js", ["js"]);
 });
 ```
 
@@ -330,11 +333,11 @@ You can then step up a gear, using an API to access functionality programmatical
 4. When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
 
-    - Stop the session
-    - Give someone else a URL so they can observe the test remotely.
-    - Copy text/notes to a remote clipboard.
-    - Take a screenshot.
-    - Test in full screen mode.
+   - Stop the session
+   - Give someone else a URL so they can observe the test remotely.
+   - Copy text/notes to a remote clipboard.
+   - Take a screenshot.
+   - Test in full screen mode.
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can for example download any screenshots you took, watch a video of the session, and view data logs for the session.
 
@@ -351,49 +354,49 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#設定_node_與_npm). Use a different directory name than before, like `sauce-test` for example.
 2. 使用以下指令安裝 Node Sauce Labs wrapper：
 
-    ```bash
-    npm install saucelabs
-    ```
+   ```bash
+   npm install saucelabs
+   ```
 
 3. 在專案根目錄下建立個稱作 `call-sauce.js` 的新檔案。寫入以下內容：
 
-    ```js
-    var SauceLabs = require('saucelabs');
+   ```js
+   var SauceLabs = require("saucelabs");
 
-    var myAccount = new SauceLabs({
-      username: "your-sauce-username",
-      password: "your-sauce-api-key"
-    });
+   var myAccount = new SauceLabs({
+     username: "your-sauce-username",
+     password: "your-sauce-api-key",
+   });
 
-    myAccount.getAccountDetails(function (err, res) {
-      console.log(res);
-      myAccount.getServiceStatus(function (err, res) {
-        // Status of the Sauce Labs services
-        console.log(res);
-        myAccount.getJobs(function (err, jobs) {
-          // Get a list of all your jobs
-          for (var k in jobs) {
-            if ( jobs.hasOwnProperty( k )) {
-              myAccount.showJob(jobs[k].id, function (err, res) {
-                var str = res.id + ": Status: " + res.status;
-                if (res.error) {
-                  str += "\033[31m Error: " + res.error + " \033[0m";
-                }
-                console.log(str);
-              });
-            }
-          }
-        });
-      });
-    });
-    ```
+   myAccount.getAccountDetails(function (err, res) {
+     console.log(res);
+     myAccount.getServiceStatus(function (err, res) {
+       // Status of the Sauce Labs services
+       console.log(res);
+       myAccount.getJobs(function (err, jobs) {
+         // Get a list of all your jobs
+         for (var k in jobs) {
+           if (jobs.hasOwnProperty(k)) {
+             myAccount.showJob(jobs[k].id, function (err, res) {
+               var str = res.id + ": Status: " + res.status;
+               if (res.error) {
+                 str += "\033[31m Error: " + res.error + " \033[0m";
+               }
+               console.log(str);
+             });
+           }
+         }
+       });
+     });
+   });
+   ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://saucelabs.com/beta/user-settings) page. Fill these in now.
 5. Make sure everything is saved, and run your file like so:
 
-    ```bash
-    node call-sauce
-    ```
+   ```bash
+   node call-sauce
+   ```
 
 ### 進階：自動化測試
 

@@ -485,7 +485,7 @@ Express 不对文件结构和组件的选用做任何约定。路由、视图、
 
 诚然，Express 是一个非常轻量的 web 应用框架，这是有意为之的，它巨大的裨益和无尽的潜能都来自第三方的库和功能。今后的章节会详细讨论。下一节会讲如何设置 Node 开发环境，之后就能开始 Express 的实战了。
 
-## 另请参阅
+## 参见
 
 - [Venkat.R - 管理多版本 Node](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)（英文页面）
 - [模块](https://nodejs.cn/api/modules.html) (Node API 中文文档)

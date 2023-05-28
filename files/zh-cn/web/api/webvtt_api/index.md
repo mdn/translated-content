@@ -301,7 +301,7 @@ Some time ago in a place rather distant....
 
 cue 时间线指示 cue 何时显示。它用时间戳表示开始和结束的时间。结束的时间一定大于开始的时间，并且开始时间必须大于或者等于所有之前开始的时间。cue 可能具有重叠的时间。
 
-如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 {{htmlattrxref("kind")}} 是 `chapters`），那么文件中不能有重叠的时间。
+如果 webVTT 文件用于 chapters（{{HTMLElement("track")}} 的 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 是 `chapters`），那么文件中不能有重叠的时间。
 
 每个 cue 的时间线都包含五个部分：
 
@@ -441,7 +441,7 @@ cue 文本的有效内容不能包含 `-->` 字符串、和号字符（`&`）或
 
 ### cue 有效内容的文本标签
 
-这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 {{htmlattrxref("kind")}} 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
+这里有一些标签，例如 `<b>`。然而，如果 WebVTT 文件在 [`kind`](/zh-CN/docs/Web/HTML/Global_attributes#kind) 属性是 `chapters` 的 {{HTMLElement("track")}} 元素中使用，那么你无法使用这些标签。
 
 - 时间戳标签
 

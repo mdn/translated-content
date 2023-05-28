@@ -411,13 +411,3 @@ This article has by no means covered all that's available in WAI-ARIA, but it sh
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
 
 {{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
-
-## In this module
-
-- [Qu'est ce que l'accessibilité?](/fr/docs/Apprendre/a11y/What_is_accessibility)
-- [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)
-- [Meilleures pratiques d'accessibilité CSS et JavaScript](/fr/docs/Apprendre/a11y/CSS_and_JavaScript)
-- [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/fr/docs/Apprendre/a11y/Multimedia)
-- [Accessibilité mobile](/fr/docs/Apprendre/a11y/Mobile)
-- [Évaluation: dépannage d'accessibilité](/fr/docs/Apprendre/a11y/Accessibility_troubleshooting)

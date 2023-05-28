@@ -1,6 +1,6 @@
 ---
 title: 逗号运算符（,）
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
 
 {{jsSidebar("Operators")}}
@@ -38,7 +38,7 @@ for (let i = 0, j = 9; i <= 9; i++, j--) {
 }
 ```
 
-请注意，赋值中的逗号运算符可能看起来没有逗号运算符的正常效果，因为它们并不存在于表达式中。在以下示例中，`a` 被设置为 `b=3` 的值（它是 3），但是表达式 `c=4` 仍然会经过评估，且它的值（也就是 4）会返回至控制台。这是由于[运算符的优先级和结合性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)。
+请注意，赋值中的逗号运算符可能看起来没有逗号运算符的正常效果，因为它们并不存在于表达式中。在以下示例中，`a` 被设置为 `b=3` 的值（它是 3），但是表达式 `c=4` 仍然会经过评估，且它的值（也就是 4）会返回至控制台。这是由于[运算符的优先级和结合性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)。
 
 ```js-nolint
 let a, b, c;

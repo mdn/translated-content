@@ -140,11 +140,31 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
 ## Exemples
 
 ```html
-<footer>
-  Quelques informations de copyright ou bien quelques informations
-  sur l'auteur de l'article.
-</footer>
+<body>
+  <h3>Les écrivains français du XIX<sup>ème</sup> siècle</h3>
+  <ul>
+    <li>Hugo</li>
+    <li>Flaubert</li>
+    <li>Zola</li>
+    <li>Maupassant</li>
+  </ul>
+
+  <footer><small>Copyright © 2023 Littérature.com. Tous droits réservés.</small></footer>
+</body>
 ```
+
+```css
+footer {
+  text-align:center;
+  padding: 5px;
+  background-color: #abbaba;
+  color: #000;
+}
+```
+
+### Résultat
+
+{{EmbedLiveSample('')}}
 
 ## Accessibilité
 

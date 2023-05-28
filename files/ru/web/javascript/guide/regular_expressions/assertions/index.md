@@ -1,8 +1,9 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Проверка (assertion) задаёт возможность совпадения одним из указанных способов. Проверка может содержать условные выражения, опережающие (look-ahead) и ретроспективные (look-behind) проверки.

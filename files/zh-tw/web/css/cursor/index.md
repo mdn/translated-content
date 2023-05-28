@@ -46,6 +46,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
 - `<x>` `<y>` {{experimental_inline}}
   - : Optional x- and y-coordinates. Two unitless nonnegative numbers less than 32.
 - 關鍵字值
+
   - : _Move your mouse over values to see their live appearance in your browser:_
 
     <table>
@@ -157,7 +158,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>no-drop</code></td>
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
-            An item may not be dropped at the current location.<br />{{bug("275173")}}:
+            An item may not be dropped at the current location.<br /><a href="https://bugzil.la/275173">Firefox bug 275173</a>:
             On Windows and Mac OS X, <code>no-drop</code> is the same as
             <code>not-allowed</code>.
           </td>
@@ -182,7 +183,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            Something can be scrolled in any direction (panned).<br />{{bug("275174")}}:
+            Something can be scrolled in any direction (panned).<br /><a href="https://bugzil.la/275174">Firefox bug 275174</a>:
             On Windows, <code>all-scroll</code> is the same as <code>move</code>.
           </td>
         </tr>

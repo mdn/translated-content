@@ -62,7 +62,7 @@ Este elemento inclui os atributos globais.
 
   - : Uma dica para o usuário sobre o que pode ser inserido no controle. Retornos de carro ou feeds de linha no texto do espaço reservado devem ser tratados como quebras de linha ao renderizar a dica.
 
-    > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/pt-BR/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.
+    > **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada** {{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
 
 - {{ htmlattrdef("readonly") }}
   - : Esse atributo booleano indica que o usuário não pode modificar o valor do controle. Ao contrário do `disabled` atributo, o`readonly` O atributo não impede o usuário de clicar ou selecionar no controle. O valor de um controle somente leitura ainda é enviado com o formulário.
@@ -161,7 +161,7 @@ Este exemplo tem um espaço reservado definido. Observe como ele desaparece quan
 
 {{ EmbedLiveSample('Placeholder','600','80') }}
 
-> **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada**{{HTMLElement("label")}} elemento vinculado à entrada. Veja {{SectionOnPage("/pt-BR/docs/Web/HTML/Element/input", "Labels and placeholders")}} para uma explicação completa.
+> **Note:** **Nota: Os espaços reservados devem ser usados apenas para mostrar um exemplo do tipo de dados que deve ser inserido em um formulário; eles não substituem uma adequada**{{HTMLElement("label")}} elemento vinculado à entrada. Veja [Labels e placeholders](/pt-BR/docs/Web/HTML/Element/input#labels_and_placeholders) para uma explicação completa.
 
 ### Desativado e somente leitura
 

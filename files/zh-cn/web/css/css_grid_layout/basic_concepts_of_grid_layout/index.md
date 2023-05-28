@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以 CSS 中的**z-index**属性来控制重叠区域显示的优先级。
 
-Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
+Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
 
 ## 网格容器
 

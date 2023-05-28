@@ -15,18 +15,18 @@ Function 轉換為 expression 形式，並且馬上執行，function scope 內�
 
 ```js
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // Variable name is not accessible from the outside scope
-aName // throws "Uncaught ReferenceError: aName is not defined"
+aName; // throws "Uncaught ReferenceError: aName is not defined"
 ```
 
 把 IIFE 只配給變數會儲存它的結果，而非 function 本身
 
 ```js
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // Immediately creates the output:
 result; // "Barry"
@@ -38,15 +38,15 @@ result; // "Barry"
 
 ```js
 (function () {
-    var aName = "Barry";
-}());
+  var aName = "Barry";
+})();
 ```
 
 Arrow function 版本，程式碼更為精簡，行為一致：
 
 ```js
 (() => {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 ```
 
@@ -54,11 +54,11 @@ Async function 版本，目前主要為了 top level await 而使用：
 
 ```js
 (async function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 
 (async () => {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 ```
 

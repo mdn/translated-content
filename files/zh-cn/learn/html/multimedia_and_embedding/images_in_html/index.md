@@ -307,7 +307,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 这个 {{htmlelement("figcaption")}} 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
-> **备注：** 从无障碍的角度来说，说明文字和 {{htmlattrxref('alt','img')}} 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 {{htmlattrxref('alt','img')}} 文字只有在图片无法显示时才这样。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。
+> **备注：** 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才这样。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。
 
 注意 {{htmlelement("figure")}} 里不一定要是一张图片，只要是一个这样的独立内容单元：
 

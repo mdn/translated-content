@@ -3,13 +3,15 @@ title: 路径
 slug: Web/SVG/Tutorial/Paths
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
-如上一章所说，[`<path>`](/zh-CN/docs/Web/SVG/Element/path)元素是 SVG[基本形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)中最强大的一个。你可以用它创建线条，曲线，弧形等等。
+如上一章所说，[`<path>`](/zh-CN/docs/Web/SVG/Element/path)元素是 SVG [基本形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)中最强大的一个。你可以用它创建线条，曲线，弧形等等。
 
 另外，path 只需要设定很少的点，就可以创建平滑流畅的线条（比如曲线）。虽然`polyline`元素也能实现类似的效果，但是必须设置大量的点（点越密集，越接近连续，看起来越平滑流畅），并且这种做法不能够放大（放大后，点的离散更明显）。所以在绘制 SVG 时，对路径的良好理解很重要。虽然不建议使用 XML 编辑器或文本编辑器创建复杂的路径，但了解它们的工作方式将有助于识别和修复 SVG 中的显示问题。
 
-[上一章](/ㄣ/SVG/Tutorial/Basic_Shapes)提到过，path 元素的形状是通过属性`{{ SVGAttr("d") }}`定义的，属性`d`的值是一个“命令 + 参数”的序列，我们将讲解这些可用的命令，并且展示一些示例。
+[上一章](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)提到过，path 元素的形状是通过属性 {{ SVGAttr("d") }} 定义的，属性`d`的值是一个“命令 + 参数”的序列，我们将讲解这些可用的命令，并且展示一些示例。
 
 每一个命令都用一个关键字母来表示，比如，字母“M”表示的是“Move to”命令，当解析器读到这个命令时，它就知道你是打算移动到某个点。跟在命令字母后面的，是你需要移动到的那个点的 x 和 y 轴坐标。比如移动到 (10,10) 这个点的命令，应该写成“M 10 10”。这一段字符结束后，解析器就会去读下一段命令。每一个命令都有两种表示方式，一种是用**大写字母**，表示采用绝对定位。另一种是用**小写字母**，表示采用相对定位（例如：_从上一个点开始，向上移动 10px，向左移动 7px_）。
 
@@ -21,20 +23,14 @@ slug: Web/SVG/Tutorial/Paths
 
 ```plain
 M x y
-```
-
-或
-
-```plain
+(or)
 m dx dy
 ```
 
 这有一个比较好的例子，不过我们没画任何东西，只是将画笔移动到路径的起点，所以我们不会看到任何图案。但是，我把我们移动到的点标注出来了，所以在下面的例子里会看到 (10,10) 坐标上有一个点。注意，如果只画 path，这里什么都不会显示。（这段不太好理解，说明一下：为了更好地展示路径，下面的所有例子里，在用 path 绘制路径的同时，也会用 circle 标注路径上的点。）![](blank_path_area.png)
 
-```plain
-<?xml version="1.0" standalone="no"?>
-
-<svg width="200px" height="200px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+```xml
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
 
   <path d="M10 10"/>
 
@@ -47,24 +43,28 @@ m dx dy
 能够真正画出线的命令有三个（M 命令是移动画笔位置，但是不画线），最常用的是“Line to”命令，`L`，`L`需要两个参数，分别是一个点的 x 轴和 y 轴坐标，L 命令将会在当前位置和新位置（L 前面画笔所在的点）之间画一条线段。
 
 ```plain
- L x y (or l dx dy)
+L x y
+(or)
+l dx dy
 ```
 
 另外还有两个简写命令，用来绘制水平线和垂直线。`H`，绘制水平线。`V`，绘制垂直线。这两个命令都只带一个参数，标明在 x 轴或 y 轴移动到的位置，因为它们都只在坐标轴的一个方向上移动。
 
 ```plain
- H x (or h dx)
- V y (or v dy)
+H x
+(or)
+h dx
+V y
+(or)
+v dy
 ```
 
 现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。![](path_line_commands.png)
 
 ```plain
-<?xml version="1.0" standalone="no"?>
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 
-<svg width="100px" height="100px" version="1.1" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M10 10 H 90 V 90 H 10 L 10 10"/>
+  <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
 
   <!-- Points -->
   <circle cx="10" cy="10" r="2" fill="red"/>
@@ -78,19 +78,21 @@ m dx dy
 最后，我们可以通过一个“闭合路径命令”Z 来简化上面的 path，`Z`命令会从当前点画一条直线到路径的起点，尽管我们不总是需要闭合路径，但是它还是经常被放到路径的最后。另外，Z 命令不用区分大小写。
 
 ```plain
- Z (or z)
+Z
+(or)
+z
 ```
 
 所以上面例子里用到的路径，可以简化成这样：
 
-```plain
- <path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
+```xml
+ <path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
 ```
 
 你也可以使用这些命令的相对坐标形式来绘制相同的图形，如之前所述，相对命令使用的是小写字母，它们的参数不是指定一个明确的坐标，而是表示相对于它前面的点需要移动多少距离。例如前面的示例，画的是一个 80\*80 的正方形，用相对命令可以这样描述：
 
-```plain
- <path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
+```xml
+ <path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
 ```
 
 上述路径是：画笔移动到 (10,10) 点，由此开始，向右移动 80 像素构成一条水平线，然后向下移动 80 像素，然后向左移动 80 像素，然后再回到起点。
@@ -255,6 +257,6 @@ t dx dy
 
 你应该已经猜到了，最后两个参数是指定弧形的终点，弧形可以简单地创建圆形或椭圆形图标，比如你可以创建若干片弧形，组成一个*饼图*。
 
-如果你是从[Canvas](/zh-CN/HTML/Canvas)过渡到 SVG，那么弧形会比较难以掌握，但它也是非常强大的。用路径来绘制完整的圆或者椭圆是比较困难的，因为圆上的任意点都可以是起点同时也是终点，无数种方案可以选择，真正的路径无法定义。通过绘制连续的路径段落，也可以达到近似的效果，但使用真正的 circle 或者 ellipse 元素会更容易一些。
+如果你是从 {{HTMLElement("canvas")}} 过渡到 SVG，那么弧形会比较难以掌握，但它也是非常强大的。用路径来绘制完整的圆或者椭圆是比较困难的，因为圆上的任意点都可以是起点同时也是终点，无数种方案可以选择，真正的路径无法定义。通过绘制连续的路径段落，也可以达到近似的效果，但使用真正的 circle 或者 ellipse 元素会更容易一些。
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}

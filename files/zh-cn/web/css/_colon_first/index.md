@@ -5,24 +5,34 @@ slug: Web/CSS/:first
 
 {{CSSRef}}
 
-## 简介
+**`:first`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)与 {{cssxref("@page")}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)一起使用。表示打印文档的第一页。（有关节点的第一个元素，请参阅 {{cssxref(":first-child")}}。）
 
-`:first` {{cssxref("@page")}} [CSS](/zh-CN/docs/Web/CSS) [伪类选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) 描述的是：打印文档的时候，第一页的样式。
+```css
+/* 打印时选择第一页 */
+@page :first {
+  margin-left: 50%;
+  margin-top: 50%;
+}
+```
 
-> **备注：** 你不能改变所有的 css 属性。你只能改变 margins、orphans、widows、文档什么时候换页。别的所有 css 样式都会被忽略。
+> **备注：** 你不能使用此伪类更改所有的 CSS 属性。你只能更改文档的边距、{{cssxref("orphans")}}、{{cssxref("widows")}} 和分页符。此外，在定义边距时，你只能使用[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位)单位。所有其他属性都将被忽略。
 
-## 形式语法
+## 语法
 
-{{csssyntax}}
+```css
+:first {
+  /* ... */
+}
+```
 
 ## 示例
 
 ### HTML
 
 ```html
-<p>First Page.</p>
-<p>Second Page.</p>
-<button>Print!</button>
+<p>第一页。</p>
+<p>第二页。</p>
+<button>打印！</button>
 ```
 
 ### CSS
@@ -41,16 +51,16 @@ p {
 ### JavaScript
 
 ```js
-document.querySelector("button").onclick = function(){ window.print() }
+document.querySelector("button").addEventListener("click", () => {
+  window.print();
+});
 ```
 
 ### 结果
 
-点击下面的 print 按钮来打印这个例子。第一页的文字会在中间显示，其他页的内容在默认位置显示。
+按下“打印！”按钮以打印此示例。第一页的文字应该大致位于中心位置，而其他页的内容将位于默认位置。
 
 {{ EmbedLiveSample('示例', '80%', '150px') }}
-
-> **备注：** 在定义 margin 的时候，你可以只用绝对长度单位，点击 [length](/zh-CN/docs/Web/CSS/length#绝对长度单位) 查看更多内容。
 
 ## 规范
 
@@ -63,5 +73,4 @@ document.querySelector("button").onclick = function(){ window.print() }
 ## 参见
 
 - {{Cssxref("@page")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
+- 其他页面相关的伪类：{{Cssxref(":left")}}、{{Cssxref(":right")}}

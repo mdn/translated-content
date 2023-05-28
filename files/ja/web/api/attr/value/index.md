@@ -1,13 +1,15 @@
 ---
-title: Attr.value
+title: "Attr: value プロパティ"
 slug: Web/API/Attr/value
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{APIRef("DOM")}}
 
 **`value`** は {{domxref("Attr")}} インターフェイスのプロパティで、この属性の値が入ります。
 
-### 値
+## 値
 
 文字列で、この属性の値を表します。
 
@@ -18,29 +20,33 @@ slug: Web/API/Attr/value
 ### HTML コンテンツ
 
 ```html
-<label test="initial value"></label>
+<label test="初期値"></label>
 
-<button>Click me to set test to <code>"a new value"</code>…</button>
-<br><br>
-Current value of the <code>test</code> attribute: <output id="result"><i>None.</i></output>
+<button>クリックすると、test に <code>"新しい値"</code> を設定します。…</button>
+
+<p>
+  現在の <code>test</code> 属性の値:
+  <output id="result">なし。</output>
+</p>
 ```
 
 ### JavaScript コンテンツ
 
 ```js
-const elements = document.getElementsByTagName("label");
-const buttons = document.getElementsByTagName("button");
-const result  = document.querySelector("#result");
+const element = document.querySelector("label");
+const button = document.querySelector("button");
+const result = document.querySelector("#result");
 
-const attribute = elements[0].attributes[0];
+const attribute = element.attributes[0];
 result.value = attribute.value;
 
-buttons[0].addEventListener('click',function(e) {
-    attribute.value = "a new value";
-    result.value = attribute.value;
-  }
-);
+button.addEventListener("click", () => {
+  attribute.value = "新しい値";
+  result.value = attribute.value;
+});
 ```
+
+### 結果
 
 {{ EmbedLiveSample('Example','100%',100) }}
 

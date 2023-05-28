@@ -31,7 +31,7 @@ Un {{domxref("USVString")}}.
 
 ## Exemples
 
-```html
+```js
 var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
 url.hash // Returns '#Examples'
 ```

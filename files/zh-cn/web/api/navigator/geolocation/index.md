@@ -23,6 +23,6 @@ geo = navigator.geolocation
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)

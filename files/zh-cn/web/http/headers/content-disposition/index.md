@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Content-Disposition
 
 在常规的 HTTP 应答中，**`Content-Disposition`** 响应标头指示回复的内容该以何种形式展示，是以*内联*的形式（即网页或者页面的一部分），还是以*附件*的形式下载并保存到本地。
 
-在 `multipart/form-data` 类型的应答消息体中，**`Content-Disposition`** 通用标头可以被用在 multipart 消息体的子部分中，用来给出其对应字段的相关信息。各个子部分由在 {{HTTPHeader("Content-Type")}} 中定义的*分隔符*分隔。用在消息体自身则无实际意义。
+在 `multipart/form-data` 类型的应答消息体中，**`Content-Disposition`** 通用标头可以被用在 multipart 消息体的子部分中，用来给出其对应字段的相关信息。各个子部分由在 {{HTTPHeader("Content-Type")}} 中定义的*边界*（boundary）分隔。用在消息体自身则无实际意义。
 
 `Content-Disposition` 标头最初是在 MIME 标准中定义的，HTTP 表单及 {{HTTPMethod("POST")}} 请求只用到了其所有参数的一个子集。只有 `form-data` 以及可选的 `name` 和 `filename` 三个参数可以应用在 HTTP 上下文中。
 
@@ -53,7 +53,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### 指令
 
 - `name`
-  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 {{htmlattrxref("multiple", "input")}} 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
+  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
 
     如果 `name` 参数的值为 `'_charset_'`，意味着这个子部分表示的不是一个 HTML 字段，而是在未明确指定字符集信息的情况下各部分使用的默认字符集。
 - `filename`

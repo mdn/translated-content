@@ -13,7 +13,7 @@ O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`hre
 
 Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("download")}}{{HTMLVersionInline(5)}}
+- {{HTMLAttrDef("download")}}
 
   - : Leva o usuário a salvar a URL em vez de navegar até ela. Pode ser usado com ou sem um valor:
 

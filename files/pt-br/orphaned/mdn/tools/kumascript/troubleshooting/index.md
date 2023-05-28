@@ -32,7 +32,7 @@ Verifique:
 - Nomes com erro ortográfico ou macros renomeadas.
   - : Você pode ver a lista de macros conhecidas no [Repositório do Github](https://github.com/mdn/kumascript/tree/master/macros).
 
-> **Nota:** **Dica:** Você pode tornar mais rápido e fácil avançar para uma macro específica adicionando uma [busca por palavras-chave](http://kb.mozillazine.org/Using_keyword_searches) no Firefox. Veja {{SectionOnPage("/pt-BR/docs/MDN/Contribute/Tools/KumaScript", "Using search keywords to open template pages")}} para um guia passo-a-passo de criar uma busca para isso.
+> **Nota:** **Dica:** Você pode tornar mais rápido e fácil avançar para uma macro específica adicionando uma [busca por palavras-chave](http://kb.mozillazine.org/Using_keyword_searches) no Firefox. Veja [Using search keywords to open template pages](/pt-BR/docs/MDN/Contribute/Tools/KumaScript#using_search_keywords_to_open_template pages) para um guia passo-a-passo de criar uma busca para isso.
 
 ## Erro tipo _TemplateExecutionError_
 

@@ -42,10 +42,10 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ### 既定値の設定
 
-入力コントロールの既定値は、次のように {{htmlattrxref("value", "input")}} 属性に年と月を入れることで設定することができます。
+入力コントロールの既定値は、次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に年と月を入れることで設定することができます。
 
 ```html
 <label for="bday-month">生まれた月は？</label>
@@ -111,13 +111,13 @@ monthControl.value = '2001-06';
 
 list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。
 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。
-リストの中の値のうち、この {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。
+リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。
 提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### max
 
 最新の年月で、上記の[値](#値)で説明した文字列の書式です。
-要素に入力された {{htmlattrxref("value", "input")}} がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこの日付よりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 `max` 属性の値が "`yyyy-MM`" の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年月を指定する必要があります。
@@ -125,7 +125,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### min
 
 受け付ける最古の年月で、前述と同じ `yyyy-MM` の書式です。
-要素の {{htmlattrxref("value", "input")}} がこれより前の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより前の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 `min` 属性の値が "`yyyy-MM-dd`" の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年月を指定する必要があります。
@@ -140,7 +140,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### step
 
 `step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。
-刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -171,7 +171,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 日付の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日付の範囲を制限することができます。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる日付の範囲を制限することができます。
 次の例では、日付の最小値を `1900-01` に、日付の最大値を `2013-12` に指定しています。
 
 ```html
@@ -195,7 +195,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 入力欄の寸法の制御
 
-`<input type="month">` は {{htmlattrxref("size", "input")}} のような寸法に関する属性には対応していません。
+`<input type="month">` は [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法に関する属性には対応していません。
 寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ## 検証
@@ -203,7 +203,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 既定で、 `<input type="month">` は入力された値の検証を行いません。
 ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも `month` 入力欄を空のまま、または無効な日付 (例えば 4 月 32 日など) を入力してフォームを送信することが可能です。
 
-これを防ぐために、 {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} を用いて利用可能な日を制限することができ ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定) を参照)、加えて {{htmlattrxref("required", "input")}} 属性を用いて、日付を入力することを必須にすることができます。
+これを防ぐために、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) を用いて利用可能な日を制限することができ ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定) を参照)、加えて [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を用いて、日付を入力することを必須にすることができます。
 結果として、対応しているブラウザーは、範囲外の日付や空の日付フィールドを送信しようとするとエラーを表示します。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
@@ -291,7 +291,7 @@ input:valid + span::after {
 - `Month yyyy` (July 2022)
 - ... などなど。
 
-これを回避する方法の一つは、 `month` 入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けることです。
+これを回避する方法の一つは、 `month` 入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けることです。
 `month` 入力欄はこれを使用しないので、 `text` 入力欄などとして扱うようフォールバックされたときに、このパターンを使用します。
 例えば、次の例を `month` 入力欄に未対応のブラウザーで見てみてください。
 

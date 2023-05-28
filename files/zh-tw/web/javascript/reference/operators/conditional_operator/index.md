@@ -1,6 +1,6 @@
 ---
 title: 條件運算子
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}
@@ -84,4 +84,4 @@ function example(…) {
 - [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)

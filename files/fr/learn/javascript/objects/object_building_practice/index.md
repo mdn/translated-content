@@ -316,13 +316,3 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 - [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Les bases de l'objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orienté objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototypes d'objets](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Héritage en JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Travailler avec des données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Pratique de construction d'objets](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajout de fonctionnalités à notre démo de balles bondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

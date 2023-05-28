@@ -190,7 +190,7 @@ num2 + num1 / 8 + 2;
 
 尝试看看。
 
-> **备注：** 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
+> **备注：** 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
 
 ## 自增和自减运算符
 
@@ -260,11 +260,11 @@ let y = 4; // y 包含值 4
 x *= y; // x 现在包含值 12
 ```
 
-> **备注：** 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), 但是这些是你现在应该学习的基本的一类。
+> **备注：** 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)，但是这些是你现在应该学习的基本的一类。
 
 ## 主动学习：调整画布框的大小
 
-在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。该框使用称为{{domxref("Canvas API", "", "", "true")}}的浏览器 API 绘制。没有必要担心这是如何工作的 - 现在只关注数学。盒子的宽度和高度（以像素为单位）由变量 `x` 和 `y` 定义，变量 `x` 和 `y` 最初都被赋值为 50。
+在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。该框使用称为 {{domxref("Canvas API", "", "", 1)}} 的浏览器 API 绘制。没有必要担心这是如何工作的——现在只关注数学。盒子的宽度和高度（以像素为单位）由变量 `x` 和 `y` 定义，变量 `x` 和 `y` 最初都被赋值为 50。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}
 
@@ -341,6 +341,6 @@ function updateBtn() {
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
 
-> **备注：** 如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 和 [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级) 来说，那是一个不错的地方。
+> **备注：** 如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

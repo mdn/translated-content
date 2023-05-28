@@ -18,23 +18,21 @@ You can use Presentation MathML inside HTML5 documents:
 ```html
 <!DOCTYPE html>
 <html>
-<head>
- <title>MathML in HTML5</title>
-</head>
-<body>
+  <head>
+    <title>MathML in HTML5</title>
+  </head>
+  <body>
+    <h1>MathML in HTML5</h1>
 
-  <h1>MathML in HTML5</h1>
-
-  <p>
-    Square root of two:
-    <math>
-      <msqrt>
-        <mn>2</mn>
-      </msqrt>
-    </math>
-  </p>
-
-</body>
+    <p>
+      Square root of two:
+      <math>
+        <msqrt>
+          <mn>2</mn>
+        </msqrt>
+      </math>
+    </p>
+  </body>
 </html>
 ```
 
@@ -57,13 +55,14 @@ If you need more complex constructions, you might instead consider using the hea
 Note that these two scripts perform feature detection of the [mspace](/zh-TW/docs/Web/MathML/Element/mspace) or [mpadded](/zh-TW/docs/Web/MathML/Element/mpadded) elements (see the browser compatibility table on these pages). If you don't want to use this link to GitHub but instead to integrate these polyfills or others in your own project, you might need the detection scripts to verify the level of MathML support. For example the following function verifies the MathML support by testing the mspace element (you may replace `mspace` with `mpadded`):
 
 ```js
- function hasMathMLSupport() {
-  var div = document.createElement("div"), box;
+function hasMathMLSupport() {
+  var div = document.createElement("div"),
+    box;
   div.innerHTML = "<math><mspace height='23px' width='77px'/></math>";
   document.body.appendChild(div);
   box = div.firstChild.firstChild.getBoundingClientRect();
   document.body.removeChild(div);
-  return Math.abs(box.height - 23) <= 1  && Math.abs(box.width - 77) <= 1;
+  return Math.abs(box.height - 23) <= 1 && Math.abs(box.width - 77) <= 1;
 }
 ```
 
@@ -71,8 +70,11 @@ Alternatively, the following UA string sniffing will allow to detect the renderi
 
 ```js
 var ua = navigator.userAgent;
-var isGecko = ua.indexOf("Gecko") > -1 && ua.indexOf("KHTML") === -1 && ua.indexOf('Trident') === -1;
-var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
+var isGecko =
+  ua.indexOf("Gecko") > -1 &&
+  ua.indexOf("KHTML") === -1 &&
+  ua.indexOf("Trident") === -1;
+var isWebKit = ua.indexOf("AppleWebKit") > -1 && ua.indexOf("Chrome") === -1;
 ```
 
 #### Mathematical fonts
@@ -89,7 +91,7 @@ unzip mathml-fonts.zip -d mathml-fonts
 Then copy the `mathml-fonts/resource/` directory somewhere on your Web site and ensure that the woff files are served with the correct MIME type. Finally, include the `mathml-fonts/resource/mathml.css` style sheet in your Web pages, for example by adding the following rule to the default style sheet of your Web site:
 
 ```css
-@import url('/path/to/resource/mathml.css');
+@import url("/path/to/resource/mathml.css");
 ```
 
 You then need to modify the font-family on the \<math> elements and, for Gecko, the on ::-moz-math-stretchy pseudo element too. For example to use STIX fonts:
@@ -187,49 +189,42 @@ One simple client-side conversion tools is [ASCIIMathML](http://www1.chapman.edu
 
 ```html
 <html>
-<head>
-...
-<script type="text/javascript" src="ASCIIMathML.js"></script>
-...
-</head>
-<body>
-...
-<p>blah blah `x^2 + y^2 = r^2` blah ...
-...
+  <head>
+    ...
+    <script type="text/javascript" src="ASCIIMathML.js"></script>
+    ...
+  </head>
+  <body>
+    ...
+    <p>blah blah `x^2 + y^2 = r^2` blah ... ...</p>
+  </body>
+</html>
 ```
 
 [LaTeXMathML](https://math.etsu.edu/LaTeXMathML/) is a similar script that allows to parse more LaTeX commands. The installation is similar: copy [LaTeXMathML.js](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js) and [LaTeXMathML.standardarticle.css](https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css), add links in the header of your document and the LaTeX content of your Web page marked by the "LaTeX" class will be automatically parsed and converted to HTML+MathML:
 
 ```html
 <head>
-...
-<script type="text/javascript" src="LaTeXMathML.js"></script>
-<link rel="stylesheet" type="text/css" href="LaTeXMathML.standardarticle.css" />
-...
+  ...
+  <script type="text/javascript" src="LaTeXMathML.js"></script>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="LaTeXMathML.standardarticle.css" />
+  ...
 </head>
 
 <body>
-...
+  ...
 
-<div class="LaTeX">
-\documentclass[12pt]{article}
-
-\begin{document}
-
-\title{LaTeXML Example}
-\maketitle
-
-\begin{abstract}
-This is a sample LaTeXML document.
-\end{abstract}
-
-\section{First Section}
-
-  $ \sum_{n=1}^{+\infty} \frac{1}{n^2} = \frac{\pi^2}{6} $
-
-\end{document}
-</div>
-...
+  <div class="LaTeX">
+    \documentclass[12pt]{article} \begin{document} \title{LaTeXML Example}
+    \maketitle \begin{abstract} This is a sample LaTeXML document.
+    \end{abstract} \section{First Section} $ \sum_{n=1}^{+\infty} \frac{1}{n^2}
+    = \frac{\pi^2}{6} $ \end{document}
+  </div>
+  ...
+</body>
 ```
 
 [jqMath](https://mathscribe.com/author/jqmath.html) is another script to parse a simple LaTeX-like syntax but which also accepts non-ASCII characters like `√{∑↙{n=1}↖{+∞} 6/n^2} = π` to write <math><mrow><msqrt><mrow><munderover><mo>∑</mo> <mrow><mi>n</mi> <mo>=</mo> <mn>1</mn> </mrow><mrow><mo>+</mo> <mi>∞</mi> </mrow></munderover><mfrac><mn>6</mn> <msup><mi>n</mi> <mn>2</mn> </msup></mfrac></mrow></msqrt><mo>=</mo> <mi>π</mi> </mrow></math>. The installation is similar: download and copy the relevant [Javascript and CSS files](https://mathscribe.com/downloads/mathscribe-unix-0.4.0.zip) on your Web site and reference them in your page header (see the `COPY-ME.html` file from the zip archive for an example). One of the advantage of jqMath over the previous scripts is that it will automatically add some simple CSS rules to do the mathematical layout and make the formulas readable on browsers with limited MathML support.

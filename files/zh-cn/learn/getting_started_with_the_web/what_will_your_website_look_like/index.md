@@ -39,7 +39,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 
 ### 主题颜色
 
-使用[色彩选择器](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于`#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
+使用[色彩选择器](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)挑选心仪的颜色。当选中某种颜色时，会显示一个六位神秘代码，类似于`#660066`。它是一个*十六进制数*，用于表示颜色。将其复制并暂存。
 
 ![](color-picker.png)
 

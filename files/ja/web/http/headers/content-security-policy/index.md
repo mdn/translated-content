@@ -88,7 +88,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と {{htmlattrxref("sandbox", "iframe")}} 属性に類似した要求リソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性に類似した要求リソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 

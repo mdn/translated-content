@@ -5,39 +5,38 @@ slug: Web/CSS/-webkit-text-stroke
 
 {{CSSRef}}
 
-**`-webkit-text-stroke`** [CSS](/zh-CN/docs/Web/CSS) 属性为文本字符指定了[宽](/zh-CN/docs/Web/CSS/length)和[颜色](/zh-CN/docs/Web/CSS/color_value)。它是 {{cssxref("-webkit-text-stroke-width")}} 和 {{cssxref("-webkit-text-stroke-color")}} 属性的缩写。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`-webkit-text-stroke`** 指定了文本字符的笔触[宽度](/zh-CN/docs/Web/CSS/length)和笔触[颜色](/zh-CN/docs/Web/CSS/color_value)。此属性为全称属性 {{CSSXref("-webkit-text-stroke-width")}} 和 {{CSSXref("-webkit-text-stroke-color")}} 的简写属性。
 
 ## 语法
 
 ```css
-/* 宽度和颜色属性 */
+/* 宽度和颜色值 */
 -webkit-text-stroke: 4px navy;
 text-stroke: 4px navy;
 
-/* 全局属性 */
+/* 全局值 */
 -webkit-text-stroke: inherit;
 -webkit-text-stroke: initial;
+-webkit-text-stroke: revert;
+-webkit-text-stroke: revert-layer;
 -webkit-text-stroke: unset;
-text-stroke: inherit;
-text-stroke: initial;
-text-stroke: unset;
 ```
 
-## 复合属性
+## 属性构成
 
-该属性是以下 CSS 属性的简写：
+此属性为下列 CSS 属性的简写属性：
 
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}
 
 ## 语法
 
-### 值
+### 取值
 
 - {{cssxref("&lt;length&gt;")}}
-  - : 文本宽。
+  - : 笔触宽度。
 - {{cssxref("&lt;color&gt;")}}
-  - : 文本颜色。
+  - : 笔触颜色。
 
 ## 形式定义
 
@@ -49,12 +48,12 @@ text-stroke: unset;
 
 ## 示例
 
-### 添加红色文字描边
+### 添加红色文本笔触
 
 #### HTML
 
 ```html
-<p id="example">The stroke of this text is red.</p>
+<p id="example">此文本的笔触为红色的。</p>
 ```
 
 #### CSS
@@ -69,7 +68,7 @@ text-stroke: unset;
 
 #### 结果
 
-{{EmbedLiveSample("添加红色文字描边", 600, 60)}}
+{{EmbedLiveSample("添加红色文本笔触", 600, 60)}}
 
 ## 规范
 

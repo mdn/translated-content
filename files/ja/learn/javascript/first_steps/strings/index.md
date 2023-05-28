@@ -39,7 +39,7 @@ l10n:
 1. 初めに、次の行を入力してみましょう。
 
    ```js
-   constt string = '革命はテレビでは放送されない。';
+   const string = '革命はテレビでは放送されない。';
    console.log(string);
    ```
 

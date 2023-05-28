@@ -54,7 +54,7 @@ l10n:
 
 この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。
 
-- {{htmlattrdef("async")}}
+- `async`
 
   - : クラシックスクリプトでは、 `async` 属性があった場合、クラシックスクリプトが利用可能になるとすぐに並行して読み込み、解析と評価を行います。
 
@@ -66,9 +66,9 @@ l10n:
 
     ブラウザーの対応状況については[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)をご覧ください。
-- {{htmlattrdef("defer")}}
+- `defer`
 
   - : この論理属性は、スクリプトを文書の解析完了後かつ {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が発生する前に実行することをブラウザーに示します。
 
@@ -82,7 +82,7 @@ l10n:
 
     この属性により、ブラウザーが解析を一時停止してスクリプトを読み込んで評価しなければならないような、**パーサーブロッキング JavaScript** を排除することができるようになります。 `async` はこの場合と似た効果があります。
 
-- {{htmlattrdef("fetchpriority")}} {{Experimental_Inline}}
+- `fetchpriority` {{Experimental_Inline}}
 
   - : 外部スクリプトをフェッチするときに使用する相対的な優先度のヒントを提供されます。取りうる値は次の通りです。
 
@@ -93,13 +93,13 @@ l10n:
     - `auto`
       - : 既定値です。他の外部スクリプトとの相対的なフェッチ優先順位を自動的に決定することを指示します。
 
-- {{htmlattrdef("integrity")}}
+- `integrity`
   - : この属性は、取得したリソースが予期せぬ改ざんを受けずに提供されたかを、ユーザーエージェントが検証するために使用できるメタデータを含みます。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
-- {{htmlattrdef("nomodule")}}
+- `nomodule`
   - : この論理属性は、 [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているブラウザーでは、スクリプトを実行するべきではないことを示します。要するに、モジュール式の JavaScript コードに対応していない古いブラウザー向けの代替スクリプトを提供するために使用できます。
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)内のスクリプトをホワイトリストに入れるための暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : スクリプトを読み込んだり、スクリプトがリソースを読み込んだりする際に、どの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
 
@@ -114,7 +114,7 @@ l10n:
 
     > **メモ:** 既定値および `referrerpolicy` に対応していない場合の代替値は空文字列 (`""`) です。 `referrerpolicy` が `<script>` 要素で明示的に指定されていない場合はより高次元、つまり文書全体やドメイン全体のリファラーポリシーに合わせられます。より高次元のポリシーが利用できない場合は、空文字列は `strict-origin-when-cross-origin` と同等のものとして扱われます。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : この属性は外部スクリプトの URI を指定します。文書に直接スクリプトを埋め込む代わりに使用することができます。
 - [**`type`**](/ja/docs/Web/HTML/Element/script/type)
 
@@ -138,20 +138,20 @@ l10n:
         開発者はデータブロックを記述するために、 JavaScript の MIME タイプではない有効な MIME タイプを使用しなければなりません。
         他の属性は、`src` 属性も含めてすべて無視されます。
 
-- {{htmlattrdef("blocking")}}
+- `blocking`
   - : この属性は、スクリプトのフェッチ時に特定の処理をブロックすることを明示的に示します。ブロックされる操作は、下記のブロッキング属性をスペースで区切って列挙したものでなければなりません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
 
-- {{htmlattrdef("charset")}} {{Deprecated_inline}}
+- `charset` {{Deprecated_inline}}
   - : 存在する場合、値は ASCII で大文字小文字を区別せずに "`utf-8`" と一致する文字列でなければなりません。 `charset` 属性は、文書が UTF-8 でなければならないこと、および `script` 要素が文書から文字エンコーディングを継承することから、指定する必要はありません。
-- {{htmlattrdef("language")}} {{Deprecated_inline}} {{Non-standard_Inline}}
+- `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : `type` 属性と同じように、この属性は使われているスクリプト言語を指定する際に用いられます。しかし、 `type` 属性とは異なり、この属性に指定可能な値が標準化されませんでした。代わりに `type` 属性を使用してください。
 
 ## メモ
 
-{{HTMLAttrxRef("async", "script")}}, {{HTMLAttrxRef("defer", "script")}}, `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
+[`async`](/ja/docs/Web/HTML/Element/script#async), [`defer`](/ja/docs/Web/HTML/Element/script#defer), `type="module"` のいずれの属性もないスクリプトは、 `type="module"` のないインラインスクリプト同様に、ブラウザーがページの解析を続けるより先に、ただちに読み込みおよび実行されます。
 
 スクリプトは `text/javascript` の MIME タイプで提供するべきですが、ブラウザーは寛大であり、画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、`text/csv` のタイプで提供されたスクリプトに限りブロックします。スクリプトがブロックされると、 {{domxref("Element/error_event", "error")}} イベントがその要素に送られ、そうではない場合は {{domxref("Element/load_event", "load")}} イベントが送られます。
 
@@ -175,7 +175,7 @@ l10n:
 
 ### モジュールの代替
 
- `module` の値を持つ {{htmlattrxref("type", "script")}} 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
+ `module` の値を持つ [`type`](/ja/docs/Web/HTML/Element/script#type) 属性に対応しているブラウザーは、 `nomodule` 属性の付いたスクリプトを無視します。これによって、モジュールスクリプトを提供しつつ、非対応のブラウザーの場合は `nomodule` でマークされた代替スクリプトを提供することもできます。
 
 ```html
 <script type="module" src="main.js"></script>

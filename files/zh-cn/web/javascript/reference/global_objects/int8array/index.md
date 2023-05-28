@@ -24,8 +24,6 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中每个元素的大小。在 `Int8Array` 中这个值为 1。
 - Int8Array.length
   - : 此属性为固定值属性，值为 3。查看 {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}} 获得获取数组内元素个数方法。
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : 返回构造器方法名称。在 Int8Array 类型中此值为 "Int8Array"。
 - {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
   - : _TypedArray_ 对象的构造原型。
 

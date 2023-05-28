@@ -138,7 +138,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ### 无语义元素
 
-有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML 提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 {{htmlattrxref('class')}} 属性提供一些标签，使这些元素能易于查询。
+有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML 提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 属性提供一些标签，使这些元素能易于查询。
 
 {{HTMLElement("span")}} 是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：
 

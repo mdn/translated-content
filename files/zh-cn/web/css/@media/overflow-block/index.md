@@ -5,7 +5,7 @@ slug: Web/CSS/@media/overflow-block
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-block`** 可用于测试输出设备如何处理沿块向轴溢出初始[包含块](/zh-CN/docs/Web/CSS/Containing_block)的内容。
+[CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/@media#media_features#媒体特性) **`overflow-block`** 可用于测试输出设备如何处理沿块向轴溢出初始[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的内容。
 
 ## 语法
 
@@ -61,5 +61,5 @@ slug: Web/CSS/@media/overflow-block
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/zh-CN/docs/Web/CSS/@media)

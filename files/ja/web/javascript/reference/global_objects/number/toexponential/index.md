@@ -1,6 +1,8 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 ## 構文
 
-```js
+```js-nolint
 toExponential()
 toExponential(fractionDigits)
 ```
@@ -28,9 +30,9 @@ toExponential(fractionDigits)
 ### 例外
 
 - {{jsxref("RangeError")}}
-  - : `fractionDigits` が小さすぎたり大きすぎたりした場合。 `0` 以上 `20` 以下の値では {{jsxref("RangeError")}} が発生しません。実装によっては、より大きな値や小さな値に対応しているかもしれません。
+  - : `fractionDigits` が `1` 以上 `100` 以下ではない場合に発生します。
 - {{jsxref("TypeError")}}
-  - : このメソッドが {{jsxref("Number")}} ではないオブジェクトに対して呼び出された場合。
+  - : このメソッドが {{jsxref("Number")}} ではないオブジェクトに対して呼び出された場合に発生します。
 
 ## 解説
 
@@ -45,13 +47,13 @@ toExponential(fractionDigits)
 ### toExponential の使用
 
 ```js
-var numObj = 77.1234;
+const numObj = 77.1234;
 
-console.log(numObj.toExponential());  // 7.71234e+1 を表示
-console.log(numObj.toExponential(4)); // 7.7123e+1 を表示
-console.log(numObj.toExponential(2)); // 7.71e+1 を表示
-console.log(77.1234.toExponential()); // 7.71234e+1 を表示
-console.log(77 .toExponential());     // 7.7e+1 を表示
+console.log(numObj.toExponential()); // 7.71234e+1 と表示
+console.log(numObj.toExponential(4)); // 7.7123e+1 と表示
+console.log(numObj.toExponential(2)); // 7.71e+1 と表示
+console.log((77.1234).toExponential()); // 7.71234e+1 と表示
+console.log((77).toExponential()); // 7.7e+1 と表示
 ```
 
 ## 仕様書
@@ -64,7 +66,7 @@ console.log(77 .toExponential());     // 7.7e+1 を表示
 
 ## 関連情報
 
-- [`Number.prototype.toExponential`](https://github.com/zloirock/core-js) のポリフィルが [`core-js`](https://github.com/zloirock/core-js) で利用できます
+- 多くのバグ修正を含んだ [`Number.prototype.toExponential` のポリフィル](https://github.com/zloirock/core-js#ecmascript-number) が [`core-js`](https://github.com/zloirock/core-js) で利用できます
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

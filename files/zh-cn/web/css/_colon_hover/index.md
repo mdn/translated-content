@@ -3,21 +3,23 @@ title: ':hover'
 slug: Web/CSS/:hover
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
-## 概要
+ **`:hover`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)在用户使用指针设备与元素进行交互时匹配，但不一定激活它。通常情况下，用户将光标（鼠标指针）悬停在元素上时触发。
 
-`:hover` CSS 伪类适用于用户使用指示设备虚指一个元素（没有激活它）的情况。这个样式会被任何与链接相关的伪类重写，像{{ cssxref(":link") }}、{{ cssxref(":visited") }} 和 {{ cssxref(":active") }} 等。为了确保生效，:hover 规则需要放在 :link 和 :visited 规则之后，但是在:active 规则之前，按照 LVHA 的顺序声明 :link－:visited－:hover－:active。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-hover.html", "tabbed-shorter")}}
 
-:hover 伪类可以在任何伪元素上使用。{{experimental_inline}}
+`:hover` 伪类定义的样式将被任何后续的链接相关伪类（{{ cssxref(":link") }}、{{ cssxref(":visited") }} 或 {{ cssxref(":active") }}）覆盖，这些伪类的特殊性至少相等。为了适当地为链接设置样式，应该在 `:link`和 `:visited` 规则之后，`:active` 规则之前放置 `:hover` 规则，即按照 _LVHA 定义的顺序_：`link` — `:visited` — `:hover` — `:active`。
 
-用户的可视客户端比如 Firefox, Internet Explorer, Safari, Opera or Chrome，会在光标（鼠标指针）悬停在元素上时提供关联的样式。
-
-> **备注：** 在触摸屏上 `:hover` 有问题，基本不可用。不同的浏览器上`:hover` 伪类表现不同。可能从不会触发；或者在触摸某元素后触发了一小会儿；或者总是触发即使用户不在触摸了，直到用户触摸别的元素。触摸屏非常普遍，所以网页开发人员不要让任何内容只能通过悬停才能展示出来，不然这些内容对于触摸屏使用者来说是很难或者说不可能看到。
+> **备注：** 在触摸屏上，`:hover` 伪类可能存在问题。根据不同的浏览器，`:hover` 伪类可能永远不会匹配，只会在触摸一个元素后短暂匹配，或者即使用户停止触摸并且直到用户触摸另一个元素之前仍然匹配。Web 开发人员应确保内容可以在具有有限或不存在悬停功能的设备上访问。
 
 ## 语法
 
-{{csssyntax}}
+```css
+:hover {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -26,7 +28,7 @@ slug: Web/CSS/:hover
 #### HTML
 
 ```html
-<a href="#">Try hovering over this link.</a>
+<a href="#">尝试将鼠标悬停到该元素上。</a>
 ```
 
 #### CSS
@@ -53,3 +55,8 @@ a:hover {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [Chromium bug #370155：在设置移动端视口的网站上，不要使 `:hover` 在触摸时保持悬停状态。](https://crbug.com/370155)
+- [Chromium bug #306581：当页面无法滚动时，在触摸时立即显示 `:hover` 和 `:active` 状态。](https://crbug.com/306581)

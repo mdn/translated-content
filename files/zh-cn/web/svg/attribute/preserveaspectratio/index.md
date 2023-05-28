@@ -3,13 +3,13 @@ title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 有时候，通常我们使用 {{ SVGAttr("viewBox") }} 属性时，希望图形拉伸占据整个视口。在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例。
 
-`preserveAspectRatio`属性表示是否强制进行统一缩放。
+`preserveAspectRatio` 属性表示是否强制进行统一缩放。
 
-对于支持该属性的所有元素 (如上所示)，除了 {{ SVGElement("image") }} 元素之外，preserveAspectRatio 只适用于在同一元素上为 {{ SVGAttr("viewBox") }} 提供的值。对于这些元素，如果没有提供属性 {{ SVGAttr("viewBox") }} ，则忽略了 preserveAspectRatio。
+对于支持该属性的所有元素（如上所示），除了 {{ SVGElement("image") }} 元素之外，preserveAspectRatio 只适用于在同一元素上为 {{ SVGAttr("viewBox") }} 提供的值。对于这些元素，如果没有提供属性 {{ SVGAttr("viewBox") }}，则忽略了 preserveAspectRatio。
 
 对于 {{ SVGElement("image") }} 元素，preserveAspectRatio 指示引用的图像应该如何与参考矩形进行匹配，以及是否应该相对于当前用户坐标系保留参考图像的长宽比
 

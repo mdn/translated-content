@@ -114,15 +114,3 @@ Compléter la fonction `result()` :
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir soumettre votre travail à votre enseignant/encadrant pour être évalué. Si vous êtes autodidacte, vous pouvez facilement obtenir le guide de notation en vous adressant à la mailing list [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc) ou au canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — vous ne gagnez rien à tricher !
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## Dans ce module
-
-- [What is JavaScript?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/fr/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)
