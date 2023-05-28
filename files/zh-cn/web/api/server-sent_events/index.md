@@ -46,6 +46,6 @@ slug: Web/API/Server-sent_events
 
 ### 其他资源
 
-- 一个使用 server-sent events 的、类似 [Twitter](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) 的应用程序，代码存放在这里：[Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline)。
-- [HTML5 和 Server-sent events](http://dsheiko.com/weblog/html5-and-server-sent-events)
+- 一个使用服务器发送事件的、类似 [Twitter](http://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) 的应用程序，代码存放在这里：[Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline)。
+- [HTML5 和服务器发送事件](http://dsheiko.com/weblog/html5-and-server-sent-events)
 - 使用 [Asp.Net](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html) 的 [Server-sent events](http://rajudasa.blogspot.in/2012/05/html5-server-sent-events-using-aspnet.html) 的指南
