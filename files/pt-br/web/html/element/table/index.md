@@ -680,7 +680,7 @@ Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/
 
 {{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
 {{Compat}}
 
