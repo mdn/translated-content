@@ -30840,10 +30840,6 @@
     "modified": "2020-09-30T09:07:30.169Z",
     "contributors": ["chrisdavidmills", "mfuji09", "silverskyvicto"]
   },
-  "orphaned/Microsummary_XML_grammar_reference": {
-    "modified": "2019-03-23T23:42:58.294Z",
-    "contributors": ["teoli", "electrolysis"]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": ["ethertank", "Potappo"]
@@ -31029,107 +31025,9 @@
     "modified": "2020-09-18T02:40:01.125Z",
     "contributors": ["morinokami", "silverskyvicto"]
   },
-  "orphaned/Web/JavaScript/Guide/Expressions": {
-    "modified": "2019-03-24T00:01:13.077Z",
-    "contributors": ["ethertank", "happysadman", "Yuichirou", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements": {
-    "modified": "2019-03-24T00:01:13.372Z",
-    "contributors": ["ethertank", "happysadman", "Mgjbot", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/break_Statement": {
-    "modified": "2019-03-24T00:01:10.972Z",
-    "contributors": ["ethertank", "happysadman", "Makkurokiiro", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/continue_Statement": {
-    "modified": "2019-03-24T00:01:13.735Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/do...while_Statement": {
-    "modified": "2019-03-24T00:01:13.819Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/for_Statement": {
-    "modified": "2019-03-24T00:01:12.086Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/label_Statement": {
-    "modified": "2019-03-24T00:01:08.670Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Loop_Statements/while_Statement": {
-    "modified": "2019-03-24T00:01:10.321Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements": {
-    "modified": "2019-03-24T00:01:11.752Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
   "orphaned/Web/JavaScript/Guide/Objects_and_Properties": {
     "modified": "2019-03-24T00:01:07.858Z",
     "contributors": ["ethertank", "happysadman", "electrolysis", "Mgjbot"]
-  },
-  "orphaned/Web/JavaScript/Guide/Predefined_Functions": {
-    "modified": "2019-03-24T00:01:08.392Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions": {
-    "modified": "2019-03-24T00:01:08.049Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis", "Mgjbot"]
-  },
-  "orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function": {
-    "modified": "2019-03-24T00:01:07.580Z",
-    "contributors": ["ethertank", "happysadman", "electrolysis"]
-  },
-  "orphaned/Web/JavaScript/Guide/The_Employee_Example": {
-    "modified": "2019-03-24T00:01:14.356Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/The_Employee_Example/Creating_the_Hierarchy": {
-    "modified": "2019-03-24T00:01:17.987Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties": {
-    "modified": "2019-03-24T00:01:19.656Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties": {
-    "modified": "2019-03-24T00:01:19.547Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties": {
-    "modified": "2019-03-24T00:01:17.474Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
   },
   "orphaned/Web/JavaScript/Guide/Variables": {
     "modified": "2019-03-24T00:01:09.887Z",
@@ -31138,24 +31036,6 @@
       "happysadman",
       "Mgjbot",
       "Yuichirou",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern": {
-    "modified": "2020-09-29T20:21:15.704Z",
-    "contributors": [
-      "Zuishin",
-      "udyest",
-      "s-hiiragi",
-      "tamyam",
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "Potappo",
-      "Makkurokiiro",
-      "九郎",
-      "Harpy",
-      "Mgjbot",
       "electrolysis"
     ]
   },
