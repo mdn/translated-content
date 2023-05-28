@@ -30,7 +30,7 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-Примеры можно посмотреть по ссылке: {{SectionOnPage("/ru/docs/Web/API/Console", "Usage")}}
+Примеры можно посмотреть по ссылке: [Usage](/ru/docs/Web/API/console#использование)
 
 ## Specifications
 

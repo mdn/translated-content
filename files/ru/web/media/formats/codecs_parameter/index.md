@@ -144,7 +144,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         The one-digit monochrome flag; if this is 0, the video includes the U
         and V planes in addition to the Y plane. Otherwise, the video data is
         entirely in the Y plane and is therefore monochromatic. See
-        {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "YUV")}}
+        <a href="/ru/docs/Web/Media/Formats/Video_concepts#yuv">YUV</a>
         for details on how the YUV color system works. The default value is 0
         (not monochrome).
       </td>
@@ -538,7 +538,7 @@ The first five components are required; everything from `cp` (color primaries) o
         <p>
           A two-digit value indicating which chroma subsampling format to use.
           The following table lists permitted values; see
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          <a href="/ru/docs/Web/Media/Formats/Video_concepts#chroma_subsampling">Chroma subsampling</a>
           for additional information about this topic and others.
         </p>
         <table class="standard-table">

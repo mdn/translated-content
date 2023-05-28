@@ -232,5 +232,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- [Использование изображений](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

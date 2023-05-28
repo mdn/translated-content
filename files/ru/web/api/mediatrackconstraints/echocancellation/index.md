@@ -40,7 +40,7 @@ constraintsObject.echoCancellation = constraint;
 
 ## Пример
 
-Смотрите {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example: Constraint exerciser")}} для примера.
+Смотрите [Example: Constraint exerciser](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) для примера.
 
 ## Спецификации
 
