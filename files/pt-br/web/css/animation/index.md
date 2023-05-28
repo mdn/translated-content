@@ -40,7 +40,7 @@ A propriedade `animation` é especificada como uma ou mais animações separadas
 
 Cada animação individual é especificada como:
 
-- zero, uma ou tudas ocorrências do valor {{cssxref("&lt;time&gt;")}}
+- zero, uma ou duas ocorrências do valor {{cssxref("&lt;time&gt;")}}
 
 - zero ou uma ocorrência dos seguintes valores:
 
