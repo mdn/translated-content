@@ -1,15 +1,15 @@
 ---
-title: 使用服务器事件
+title: 使用服务器发送事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
 
-开发一个使用[服务器事件](/zh-CN/docs/Web/API/Server-sent_events)的 Web 应用程序是很容易的。你只需要在服务器上编写一些代码将事件流传输到前端，而客户端的代码在处理传入事件部分几乎与 [websockets](/zh-CN/docs/Web/API/WebSockets_API) 相同。需要注意这是一个单向的连接，所以你不能从客户端发送事件到服务器。
+开发一个使用[服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)的 Web 应用程序是很容易的。你只需要在服务器上编写一些代码将事件流传输到前端，而客户端的代码在处理传入事件部分几乎与 [websocket](/zh-CN/docs/Web/API/WebSockets_API) 相同。这是一个单向的连接，所以你不能从客户端发送事件到服务器。
 
 ## 从服务端接收事件
 
-服务器事件 API 包含在 {{domxref("EventSource")}} 接口中
+服务器发送事件 API 包含在 {{domxref("EventSource")}} 接口中。
 
 ### 创建一个 `EventSource` 实例
 
@@ -45,7 +45,7 @@ evtSource.onmessage = function(event) {
 
 ### 监听自定义事件
 
-你也可以使用`addEventListener()`方法来监听其他类型的事件：
+你也可以使用 `addEventListener()` 方法来监听其他类型的事件：
 如果服务器发送的消息中定义了 `event` 字段，则这些消息会被视为 `event` 字段的值的事件。例如：
 
 ```js
@@ -60,11 +60,11 @@ evtSource.addEventListener("ping", (event) => {
 
 这段代码也类似，只是只有在服务器发送的消息中包含一个值为 `ping` 的 `event` 字段的时候才会触发对应的处理函数，也就是将 `data` 字段的字段值解析为 JSON 数据，然后在页面上显示出所需要的内容。
 
-> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着您可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。
+> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开各种选项卡时特别麻烦，因为该限制是针对每个浏览器的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“无法解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，HTTP 同一时间内的最大连接数由服务器和客户端之间协商（默认为 100）。
 
 ## 从服务器端发送事件
 
-服务器端发送事件的脚本需要响应的内容应该使用值为 `text/event-stream` 的 MIME 类型。每个通知以文本块形式发送，并以一对换行符结尾。有关事件流的格式的详细信息，请参见[事件流格式](#事件流格式)。
+发送事件的服务器端脚本需要使用 `text/event-stream` MIME 类型响应内容。每个通知以文本块形式发送，并以一对换行符结尾。有关事件流的格式的详细信息，请参见[事件流格式](#事件流格式)。
 
 演示的 {{Glossary("PHP")}} 代码如下：
 
@@ -104,11 +104,11 @@ while (true) {
 
 这段代码每秒钟会生成一个名为 "ping" 的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。注意，这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
 
-> **备注：** 您可以在 github 上找到以上代码的完整示例 —— 参见 [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
+> **备注：** 您可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
 ## 错误处理
 
-当发生错误（例如请求超时或与[访问控制](/zh-CN/docs/Web/HTTP/CORS)有关的问题），会生成一个错误事件。您可以通过在 `EventSource` 对象上使用 `onerror` 回调来对此采取措施：
+当发生错误时（例如网络超时或与[访问控制](/zh-CN/docs/Web/HTTP/CORS)有关的问题），会生成一个错误事件。可以通过在 `EventSource` 对象上实现 `onerror` 回调来编程地处理它：
 
 ```js
 evtSource.onerror = (err) => {
@@ -151,7 +151,7 @@ evtSource.close();
 
 ### 例子
 
-#### 纯数据 messages
+#### 纯数据 message
 
 下面的例子中发送了三条消息，第一条仅仅是个注释，因为它以冒号开头。正如之前提到的，如果消息可能不会定期发送，这可以作为保持连接的机制，非常有用。
 
