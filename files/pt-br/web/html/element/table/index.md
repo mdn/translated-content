@@ -7,7 +7,9 @@ slug: Web/HTML/Element/table
 
 O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares — isto é, informações apresentadas em uma tabela bidimensional composta por linhas e colunas de células contendo dados .
 
-{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}## Contexto de uso
+{{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
+
+## Contexto de uso
 
 <table class="properties">
   <tbody>
@@ -134,7 +136,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `width` {{Deprecated_inline}}
   - : Este atributo define a largura da tabela. Em vez disso, use a propriedade CSS {{cssxref("width")}}.
 
-## Eeemplos
+## Exemplos
 
 ### Table simples
 
@@ -313,7 +315,9 @@ document
 
 O exemplo a seguir adiciona um manipulador de eventos a cada elemento `<th>` de cada `<table>` no `document`; ele ordena todas as linhas do `<tbody>`, baseando a ordenação nas células `td` contidas nas linhas.
 
-> **Nota:** Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.##### HTML
+> **Nota:** Esta solução assume que os elementos `<td>` são preenchidos por texto bruto sem elementos descendentes.
+
+##### HTML
 
 ```html
 <table>
