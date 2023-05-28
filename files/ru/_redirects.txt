@@ -319,10 +319,10 @@
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Guidelines	/ru/docs/conflicting/MDN/Writing_guidelines
 /ru/docs/MDN/Kuma	/ru/docs/orphaned/MDN/Yari
-/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
 /ru/docs/MDN/Tools	/ru/docs/orphaned/MDN/Tools
-/ru/docs/MDN/Tools/KumaScript/Troubleshooting	/ru/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ru/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
