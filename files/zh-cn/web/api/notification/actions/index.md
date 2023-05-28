@@ -5,7 +5,7 @@ slug: Web/API/Notification/actions
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 **`actions`** 只读属性提供了可供用户选择的以与通知交互的操作。
+{{domxref("Notification")}} 接口的只读属性 **`actions`** 提供了可供用户选择的以与通知交互的操作。
 
 设置操作使用 [`showNotification()`](/zh-CN/docs/Web/API/ServiceWorkerRegistration/showNotification) 方法和 [`Notification()`](/zh-CN/docs/Web/API/Notification/Notification) 构造函数的第二个参数的 `actions` 选项。
 
