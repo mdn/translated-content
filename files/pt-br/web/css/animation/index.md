@@ -50,7 +50,7 @@ Cada animação individual é especificada como:
   - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
   - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
 
-- um nome opcional para a animação que pode ser `none`, um {{cssxref("&lt;custom-ident&gt;")} ou uma {{cssxref("&lt;string&gt;")}}
+- um nome opcional para a animação que pode ser `none`, um {{cssxref("&lt;custom-ident&gt;")}} ou uma {{cssxref("&lt;string&gt;")}}
 
 ### Valores
 
