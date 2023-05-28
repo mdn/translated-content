@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} の **`querySelectorAll()`** メソッドは、指定sれ田 CSS セレクターに一致する文書中の要素のリストを示す静的な（生きていない）{{domxref("NodeList")}} を返します。
+{{domxref("Document")}} の **`querySelectorAll()`** メソッドは、指定された CSS セレクターに一致する文書中の要素のリストを示す静的な（生きていない）{{domxref("NodeList")}} を返します。
 
 ## 構文
 
