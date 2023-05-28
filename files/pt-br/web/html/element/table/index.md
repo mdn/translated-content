@@ -9,7 +9,6 @@ O elemento **`<table>`** [HTML](/pt-BR/docs/Web/HTML) representa dados tabulares
 
 {{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}## Contexto de uso
 
-
 <table class="properties">
   <tbody>
     <tr>
@@ -270,7 +269,7 @@ td {
 
 #### Ordenando as linhas da tabela
 
-Não há métodos nativos para classificar as linhas (elementos [`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)) de uma tabela HTML. Mas usando [`Array.prototype.slice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.sort()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`Node.removeChild()`](/pt-BR/docs/Web/API/Node/removeChild) e [`Node.appendChild() `](/pt-BR/docs/Web/API/Node/appendChild), você pode implementar sua própria função `sort()` para classificar uma [`HTMLCollection`](/pt-BR/docs/Web/API/HTMLCollection) de elementos `<tr>`.
+Não há métodos nativos para classificar as linhas (elementos [`<tr>`](/pt-BR/docs/Web/HTML/Element/tr)) de uma tabela HTML. Mas usando [`Array.prototype.slice()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.sort()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`Node.removeChild()`](/pt-BR/docs/Web/API/Node/removeChild) e [`Node.appendChild()`](/pt-BR/docs/Web/API/Node/appendChild), você pode implementar sua própria função `sort()` para classificar uma [`HTMLCollection`](/pt-BR/docs/Web/API/HTMLCollection) de elementos `<tr>`.
 
 No exemplo abaixo, você pode ver tal exemplo. Estamos anexando-o ao elemento \<tbody> para que ele classifique as células da tabela em ordem crescente de valor e atualize a exibição para se adequar.
 
@@ -686,7 +685,7 @@ Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/
 - [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn/HTML/Tables)
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<table>`:
 
-   - {{cssxref("width")}} para controlar a largura da tabela;
-   - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} , {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} para controlar o aspecto das bordas das células, réguas e moldura;
-   - {{cssxref("margin")}} e {{cssxref("padding")}} para estilizar o conteúdo da célula individual;
-   - {{cssxref("text-align")}} e {{cssxref("vertical-align")}} para definir o alinhamento do texto e do conteúdo da célula.
+  - {{cssxref("width")}} para controlar a largura da tabela;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} , {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} para controlar o aspecto das bordas das células, réguas e moldura;
+  - {{cssxref("margin")}} e {{cssxref("padding")}} para estilizar o conteúdo da célula individual;
+  - {{cssxref("text-align")}} e {{cssxref("vertical-align")}} para definir o alinhamento do texto e do conteúdo da célula.
