@@ -1,6 +1,6 @@
 ---
 title: Usando animações CSS
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
 
