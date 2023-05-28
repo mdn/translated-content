@@ -38,7 +38,7 @@ slug: Web/CSS/:host
 </h1>
 ```
 
-在 element's 的构造函数中，我们创建了 `style` 和 `span` 元素，用自定义元素的内容填充 `span`，并用一些 CSS 规则填充 `style` 元素。
+在元素的构造函数中，我们创建了 `style` 和 `span` 元素，用自定义元素的内容填充 `span`，并用一些 CSS 规则填充 `style` 元素。
 
 ```js
 const style = document.createElement("style");
