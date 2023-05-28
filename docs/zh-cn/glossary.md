@@ -6,6 +6,10 @@
 
 ### HTML
 
+| 英文词汇        | 翻译     | 备注 | 引用来源                                                                      |
+| --------------- | -------- | ---- | ----------------------------------------------------------------------------- |
+| Living Standard | 动态标准 |      | <https://github.com/mdn/translated-content/pull/13406#discussion_r1206197135> |
+
 ### HTTP
 
 | 英文词汇 | 翻译 | 备注                    | 引用来源                  |
@@ -28,7 +32,7 @@
 | Accessibility concerns | 无障碍考虑   |                    | <https://github.com/mdn/translated-content/issues/11456>                      |
 | Active learning        | 动手练习     |                    | <https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935> |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                               |
-| Conclusion             | 总结         |                    | <https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894>
+| Conclusion             | 总结         |                    | <https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894> |
 | Examples               | 示例         |                    |                                                                               |
 | Formal Definition      | 形式定义     |                    | <https://zh.wikipedia.org/zh-cn/形式文法>                                     |
 | Formal syntax          | 形式语法     |                    | <https://zh.wikipedia.org/zh-cn/形式文法>                                     |
