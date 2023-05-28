@@ -3,7 +3,7 @@ title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 属性 `stroke-dasharray` 可控制用来描边的点划线的图案范式。
 

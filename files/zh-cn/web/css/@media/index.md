@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > **备注：** 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
@@ -33,7 +33,7 @@ slug: Web/CSS/@media
 }
 ```
 
-有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。
+有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。
 
 ## 描述
 
@@ -133,7 +133,7 @@ _逻辑操作符_（_logical operator_）`not`、`and`、`only` 和 `or` 可用�
 
 ## 无障碍考虑
 
-为了最好地调整网站文本大小，当你需要 {{cssxref("&lt;length&gt;")}} 进行[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度)。
+为了最好地调整网站文本大小，当你需要 {{cssxref("&lt;length&gt;")}} 进行[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度)。
 
 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 的效果会更好。
 
@@ -195,7 +195,7 @@ Media Queries Level 4 引入了一种新的范围语法，在测试接受范围�
 }
 ```
 
-更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。
+更多示例，请查看[使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。
 
 ## 规范
 
@@ -207,7 +207,7 @@ Media Queries Level 4 引入了一种新的范围语法，在测试接受范围�
 
 ## 参见
 
-- [使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - 在 JavaScript 中，`@media` 可以通过 CSS 对象模型接口 {{domxref("CSSMediaRule")}} 被调用。
 - [扩展的 Mozilla 媒体特性](/zh-CN/docs/Web/CSS/Mozilla_Extensions#媒体特性)
 - [扩展的 WebKit 媒体特性](/zh-CN/docs/Web/CSS/WebKit_Extensions#媒体特性)

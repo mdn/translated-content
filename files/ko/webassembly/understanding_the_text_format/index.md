@@ -15,7 +15,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 우선, S- expressions이 어떻게 보이는지 봅시다. 트리의 각 노드는 한 쌍의 괄호`( ... )` 안에 있습니다. 괄호 안의 첫 번째 레이블은 노드의 유형을 알려주고, 그 후에 속성 또는 하위 노드의 공백으로 구분 된 목록이 있습니다. 즉, WebAssembly S-expression을 의미합니다.
 
-```rs
+```rust
     (module (memory 1) (func))
 ```
 
@@ -25,7 +25,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 가장 간단하고, 작동 가능한 wasm 모듈 작성을 시작합니다.
 
-```rs
+```rust
     (module)
 ```
 
@@ -33,7 +33,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 만약 이 모듈을 바이너리로 전환하면,([웹어셈블리 텍스트 형식을 wasm으로 변환](/ko/docs/WebAssembly/Text_format_to_wasm) 참조), 우리는 8바이트짜리 모듈 헤더를 [이진 형식](http://webassembly.org/docs/binary-encoding/#high-level-structure)으로 보게 될 것입니다.
 
-```rs
+```rust
     0000000: 0061 736d              ; WASM_BINARY_MAGIC
     0000004: 0d00 0000              ; WASM_BINARY_VERSION
 ```
@@ -44,7 +44,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 webassembly 모듈의 모든 코드는 다음과 같은 의사 코드 구조를 갖는 함수로 구성되어있습니다.
 
-```rs
+```rust
     ( func <signature> <locals> <body> )
 ```
 
@@ -70,7 +70,7 @@ Signatures는 반환 형식 선언 목록 뒤에 오는 매개 변수 형식 선
 
 하나의 인자를 받기 위해 `(param i32)`라고 작성하고, 반환 값을 받기 위해 `(result i32)`라고 작성합니다. 아래에 2개의 32비트 정수를 받고 64비트 부동소수를 반환하는 바이너리 함수를 작성하였습니다.
 
-```rs
+```rust
     (func (param i32) (param i32) (result f64) ... )
 ```
 
@@ -82,7 +82,7 @@ signature 뒤에는 형식을 가진 locals를 나열합니다. `(local i32)`와
 
 The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져오거나 설정합니다. parameter가 선언 순서상 먼저 위치하며, 그다음 locals 순으로 되어 있습니다.
 
-```rs
+```rust
     (func (param i32) (param f32) (local f64)
       get_local 0
       get_local 1
@@ -95,7 +95,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 따라서 위에 작성한 함수 명칭을 아래와 같이 재구성할 수 있습니다.
 
-```rs
+```rust
     (func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
 ```
 
@@ -109,7 +109,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 함수가 호출되면, 이 함수는 빈 스택으로 시작하여 함수가 실행되는 동안 스택이 서서히 채우고 끝나면 다시 비워 버립니다. 아래 함수를 실행해 봅시다.
 
-```rs
+```rust
     (func (param $p i32)
       get_local $p
       get_local $p
@@ -124,7 +124,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 전에 언급했듯이, 함수의 본문은 단순히 함수가 호출됐을 때 실행할 작업의 리스트입니다. 이전에 다루었던 것을 종합하면 아래와 같이 간단한 함수를 포함하는 모듈을 선언할 수 있습니다.
 
-```rs
+```rust
     (module
       (func (param $lhs i32) (param $rhs i32) (result i32)
         get_local $lhs
@@ -144,13 +144,13 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만 편의상 이름을 지정할 수 있습니다. 먼저 `func` 키워드 바로 뒤에 달러 기호가 붙은 이름을 추가합니다.
 
-```rs
+```rust
     (func $add … )
 ```
 
 이제 내보내기 선언을 추가해야합니다. 다음과 같습니다.
 
-```rs
+```rust
     (export "add" (func $add))
 ```
 
@@ -158,7 +158,7 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
 
 그래서 우리의 마지막 모듈은 (지금은) 다음과 같습니다.
 
-```rs
+```rust
     (module
       (func $add (param $lhs i32) (param $rhs i32) (result i32)
         get_local $lhs
@@ -316,7 +316,7 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 
 간단히하기 위해 JavaScript로 작성한 다음 WebAssembly로 가져와 봅시다. 우리의 `import`statement는 다음과 같이 작성됩니다 :
 
-```rs
+```rust
     (import "js" "mem" (memory 1))
 ```
 
@@ -326,7 +326,7 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 
 최종 wasm 모듈을 확인하겠습니다.
 
-```rs
+```rust
     (module
       (import "console" "log" (func $log (param i32 i32)))
       (import "js" "mem" (memory 1))
@@ -374,7 +374,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 그러면 우리 테이블에 함수를 어떻게 배치할까요? `data` 섹션을 사용하여 선형 메모리 영역을 바이트로 초기화하는 것처럼 `elem` 섹션을 사용하여 함수가있는 테이블 영역을 초기화 할 수 있습니다.
 
-```rs
+```rust
     (module
       (table 2 anyfunc)
       (elem (i32.const 0) $f1 $f2)
@@ -414,7 +414,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 우리가 사용 할 테이블을 정의했습니다. 다음 코드 섹션을 통해 테이블을 사용 할 수 있습니다.
 
-```rs
+```rust
     (type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
     (func (export "callByIndex") (param $i i32) (result i32)
       get_local $i
@@ -428,7 +428,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 다음과 같이 `call_indirect` 매개 변수를 명령 호출 중에 명시 적으로 선언 할 수도 있습니다.
 
-```rs
+```rust
     (call_indirect (type $return_i32) (get_local $i))
 ```
 
@@ -438,13 +438,13 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 `call_indirect`와 호출하는 테이블을 연결하는 것은 무엇입니까? 대답은 모듈 인스턴스 당 하나의 테이블 만 허용된다는 것입니다. `call_indirect`가 암시 적으로 호출하는 것입니다. 향후, 여러 테이블이 허용 될 때, 우리는 또한 어떤 종류의 테이블 식별자를 지정할 필요가있습니다
 
-```rs
+```rust
     call_indirect $my_spicy_table (type $i32_to_void)
 ```
 
 전체 모듈은 모두 이와 같이 보이며 [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat) 예제 파일에서 찾을 수 있습니다.
 
-```rs
+```rust
     (module
       (table 2 anyfunc)
       (func $f1 (result i32)
@@ -486,7 +486,7 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 
 `shared0.wat`:
 
-```rs
+```rust
     (module
       (import "js" "memory" (memory 1))
       (import "js" "table" (table 1 anyfunc))

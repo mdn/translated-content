@@ -2985,50 +2985,6 @@
     "modified": "2019-03-23T22:21:21.278Z",
     "contributors": ["MashKao", "yvonne6344"]
   },
-  "Web/CSS/CSS_Animations": {
-    "modified": "2019-03-23T22:43:48.571Z",
-    "contributors": ["teoli"]
-  },
-  "Web/CSS/CSS_Animations/Using_CSS_animations": {
-    "modified": "2019-03-24T00:13:58.706Z",
-    "contributors": ["SphinxKnight", "teoli", "ethertank", "sailplaneTW"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:17.591Z",
-    "contributors": ["teoli"]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-23T22:48:53.708Z",
-    "contributors": ["sss63232", "Shiyou", "teoli", "alk03073135"]
-  },
-  "Web/CSS/CSS_Box_Model": {
-    "modified": "2019-03-23T22:24:07.076Z",
-    "contributors": ["Sebastianz"]
-  },
-  "Web/CSS/CSS_Box_Model/Mastering_margin_collapsing": {
-    "modified": "2020-08-17T06:43:18.638Z",
-    "contributors": ["osk2", "lilychen1388", "jackblackevo", "MOSapeizer"]
-  },
-  "Web/CSS/CSS_Colors": {
-    "modified": "2019-03-23T22:44:44.114Z",
-    "contributors": ["Sebastianz", "teoli"]
-  },
-  "Web/CSS/CSS_Colors/Applying_color": {
-    "modified": "2019-03-18T21:29:53.605Z",
-    "contributors": ["WuBingHsuan"]
-  },
-  "Web/CSS/CSS_Colors/Color_picker_tool": {
-    "modified": "2019-03-23T22:44:42.147Z",
-    "contributors": ["Shiyou", "alk03073135"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout": {
-    "modified": "2020-07-30T05:18:51.473Z",
-    "contributors": ["klareh", "iigmir", "1986slayer", "WynnChen"]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
-    "modified": "2020-05-11T23:59:37.780Z",
-    "contributors": ["wildsky", "iigmir", "1986slayer"]
-  },
   "Web/CSS/CSS_Grid_Layout": {
     "modified": "2020-02-01T05:41:13.615Z",
     "contributors": ["SvampK", "iigmir", "1986slayer", "jackblackevo"]
@@ -3045,18 +3001,6 @@
     "modified": "2019-03-24T00:14:02.326Z",
     "contributors": ["jackblackevo", "ethertank", "sailplaneTW"]
   },
-  "Web/CSS/CSS_Positioning": {
-    "modified": "2019-03-23T22:18:48.097Z",
-    "contributors": ["jackblackevo"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index": {
-    "modified": "2019-03-23T22:55:06.815Z",
-    "contributors": ["jackblackevo", "Jeremie"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1": {
-    "modified": "2019-03-23T22:55:03.379Z",
-    "contributors": ["jackblackevo", "h140100"]
-  },
   "Web/CSS/CSS_Selectors": {
     "modified": "2020-10-24T16:00:38.628Z",
     "contributors": [
@@ -3072,11 +3016,75 @@
     "modified": "2019-03-23T22:49:42.209Z",
     "contributors": ["jackblackevo", "alk03073135"]
   },
-  "Web/CSS/CSS_Transitions": {
+  "Web/CSS/CSS_animations": {
+    "modified": "2019-03-23T22:43:48.571Z",
+    "contributors": ["teoli"]
+  },
+  "Web/CSS/CSS_animations/Using_CSS_animations": {
+    "modified": "2019-03-24T00:13:58.706Z",
+    "contributors": ["SphinxKnight", "teoli", "ethertank", "sailplaneTW"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders": {
+    "modified": "2019-03-23T22:44:17.591Z",
+    "contributors": ["teoli"]
+  },
+  "Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds": {
+    "modified": "2019-03-23T22:48:53.708Z",
+    "contributors": ["sss63232", "Shiyou", "teoli", "alk03073135"]
+  },
+  "Web/CSS/CSS_box_model": {
+    "modified": "2019-03-23T22:24:07.076Z",
+    "contributors": ["Sebastianz"]
+  },
+  "Web/CSS/CSS_box_model/Mastering_margin_collapsing": {
+    "modified": "2020-08-17T06:43:18.638Z",
+    "contributors": ["osk2", "lilychen1388", "jackblackevo", "MOSapeizer"]
+  },
+  "Web/CSS/CSS_colors": {
+    "modified": "2019-03-23T22:44:44.114Z",
+    "contributors": ["Sebastianz", "teoli"]
+  },
+  "Web/CSS/CSS_colors/Applying_color": {
+    "modified": "2019-03-18T21:29:53.605Z",
+    "contributors": ["WuBingHsuan"]
+  },
+  "Web/CSS/CSS_colors/Color_picker_tool": {
+    "modified": "2019-03-23T22:44:42.147Z",
+    "contributors": ["Shiyou", "alk03073135"]
+  },
+  "Web/CSS/CSS_flexible_box_layout": {
+    "modified": "2020-07-30T05:18:51.473Z",
+    "contributors": ["klareh", "iigmir", "1986slayer", "WynnChen"]
+  },
+  "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
+    "modified": "2020-05-11T23:59:37.780Z",
+    "contributors": ["wildsky", "iigmir", "1986slayer"]
+  },
+  "Web/CSS/CSS_media_queries": {
+    "modified": "2019-03-23T22:18:53.365Z",
+    "contributors": ["jackblackevo"]
+  },
+  "Web/CSS/CSS_media_queries/Testing_media_queries": {
+    "modified": "2019-03-23T22:55:57.771Z",
+    "contributors": ["jackblackevo", "foxbrush"]
+  },
+  "Web/CSS/CSS_positioned_layout": {
+    "modified": "2019-03-23T22:18:48.097Z",
+    "contributors": ["jackblackevo"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2019-03-23T22:55:06.815Z",
+    "contributors": ["jackblackevo", "Jeremie"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+    "modified": "2019-03-23T22:55:03.379Z",
+    "contributors": ["jackblackevo", "h140100"]
+  },
+  "Web/CSS/CSS_transitions": {
     "modified": "2019-03-23T22:18:48.267Z",
     "contributors": ["jackblackevo"]
   },
-  "Web/CSS/CSS_Transitions/Using_CSS_transitions": {
+  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
     "modified": "2019-03-24T00:14:17.322Z",
     "contributors": ["jackblackevo", "elin", "ethertank", "sailplaneTW"]
   },
@@ -3087,14 +3095,6 @@
   "Web/CSS/Inheritance": {
     "modified": "2019-03-23T22:48:52.230Z",
     "contributors": ["jackblackevo", "alk03073135"]
-  },
-  "Web/CSS/Media_Queries": {
-    "modified": "2019-03-23T22:18:53.365Z",
-    "contributors": ["jackblackevo"]
-  },
-  "Web/CSS/Media_Queries/Testing_media_queries": {
-    "modified": "2019-03-23T22:55:57.771Z",
-    "contributors": ["jackblackevo", "foxbrush"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2019-03-23T22:25:22.712Z",
@@ -3403,10 +3403,6 @@
       "BobChao",
       "ethertank"
     ]
-  },
-  "Web/HTML/Element/blink": {
-    "modified": "2020-10-15T21:53:26.779Z",
-    "contributors": ["teoli", "iigmir"]
   },
   "Web/HTML/Element/blockquote": {
     "modified": "2019-03-23T22:32:36.058Z",

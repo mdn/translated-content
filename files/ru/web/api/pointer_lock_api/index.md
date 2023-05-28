@@ -109,7 +109,7 @@ function lockError(e) {
 
 The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes.
 
-```idl
+```webidl
 partial interface MouseEvent {
     readonly attribute long movementX;
     readonly attribute long movementY;

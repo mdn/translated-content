@@ -209,10 +209,10 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 
 你现在有了自信地使用例如网格和弹性盒技术、建立面向旧浏览器的回滚以及利用任何可能会在未来出现的 新技术所需的知识。
 
-## 另见
+## 参见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)

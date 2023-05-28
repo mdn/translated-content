@@ -1,6 +1,6 @@
 ---
 title: CSS Containment
-slug: Web/CSS/CSS_Containment
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -9,7 +9,7 @@ CSS 局限规范的目标在于通过允许浏览器从页面的其余部分中�
 
 此外，此规范允许开发者标示元素究竟是否应当渲染其内容，以及在屏外时是否应当渲染其内容。由此允许用户代理在恰当的时候在元素上应用局限，并有望将布局和渲染推迟至需要时再进行。
 
-此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_Container_Queries)。
+此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_container_queries)。
 
 ## 基本示例
 
@@ -100,7 +100,7 @@ article {
 }
 ```
 
-尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限（scoped）样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
+尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限（scoped）样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
 
 使用 `contain: style` 将确保由 {{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性所创建的新计数器的作用域被限制为此子树。
 
