@@ -161,7 +161,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 ### 絶対 URL vs 相対 URL
 
-ウェブ上では、**絶対 URL** と**関連 URL** という 2 つの用語があります。
+ウェブ上では、**絶対 URL** と**相対 URL** という 2 つの用語があります。
 
 **絶対 URL**: {{glossary("protocol", "プロトコル")}}と{{glossary("domain name", "ドメイン名")}}を含む、ウェブ上の絶対位置で定義された位置を指します。
 たとえば、`index.html` ページがウェブサーバーのルート内にある `projects` というディレクトリーにアップロードされており、そのウェブサイトのドメインが `http://www.example.com` である場合、そのページは `http://www.example.com/projects/index.html` （あるいは `http://www.example.com/projects/` だけでも、URL で指定されていない場合、ウェブサーバーは `index.html` のようなランディングページを探して読み込みます）で取得することができます。
