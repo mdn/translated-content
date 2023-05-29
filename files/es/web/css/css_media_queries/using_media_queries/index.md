@@ -1,8 +1,7 @@
 ---
 title: Uso de media queries
-slug: Web/CSS/Media_Queries/Using_media_queries
-l10n:
-  sourceCommit: 42c3c10873c07bd7b49f2d779cb5f286d5219364
+slug: Web/CSS/CSS_media_queries/Using_media_queries
+original_slug: Web/CSS/Media_Queries/Using_media_queries
 ---
 
 {{CSSRef}}
