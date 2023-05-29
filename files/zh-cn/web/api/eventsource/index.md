@@ -20,16 +20,16 @@ slug: Web/API/EventSource
 ## 构造函数
 
 - {{domxref("EventSource.EventSource", "EventSource()")}}
-  - : 以指定的 {{domxref("USVString")}} 创建一个新的 `EventSource`。
+  - : 创建一个新的 `EventSource`，用于从指定的 URL 接收服务器发送事件，可以选择开启凭据模式。
 
 ## 实例属性
 
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : 一个 `unsigned short` 值，代表连接状态。可能值是 `CONNECTING` (`0`), `OPEN` (`1`), 或者 `CLOSED` (`2`)。
+  - : 一个代表连接状态的数字。可能值是 `CONNECTING`（`0`），`OPEN`（`1`），或者 `CLOSED`（`2`）。
 - {{domxref("EventSource.url")}} {{readonlyinline}}
-  - : 一个{{domxref("DOMString")}}，代表事件源的 URL。
+  - : 一个表示事件源的 URL 字符串。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : 一个布尔值，表示 `EventSource` 对象是否使用跨域资源共享（[CORS](/zh-CN/docs/Web/HTTP/CORS)）凭据来实例化（`true`），或者不使用（`false`，即默认值）。
 
