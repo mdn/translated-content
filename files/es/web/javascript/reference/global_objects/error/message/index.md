@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.message
+title: "Error: message"
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ln10:
   sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
