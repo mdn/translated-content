@@ -58,7 +58,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ### 背景图像
 
-{{cssxref("background-image")}}属性可以在一个元素的背景中显示一个图像。在下面的例子中，我们有两个盒子，其中一个盒子具有比盒子大的背景图像（[balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)），另一个盒子具有较小的单个星星的图像（[star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)）。
+{{cssxref("background-image")}} 属性可以在一个元素的背景中显示一个图像。在下面的例子中，我们有两个盒子，其中一个盒子具有比盒子大的背景图像（[balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)），另一个盒子具有较小的单个星星的图像（[star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)）。
 
 这个示例演示了关于背景图像的两种情形。默认情况下，大图不会缩小以适应盒子，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。在
 
@@ -81,7 +81,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 #### 调整背景图像的大小
 
-在上面的例子中，我们有一个很大的图像（*ballons.jpg*），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}}属性，它可以设置[长度](/zh-CN/docs/Web/CSS/length)或[百分比](/zh-CN/docs/Web/CSS/percentage)值，来调整图像的大小以适应背景。
+在上面的例子中，我们有一个很大的图像（*ballons.jpg*），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}} 属性，它可以设置[长度](/zh-CN/docs/Web/CSS/length)或[百分比](/zh-CN/docs/Web/CSS/percentage)值，来调整图像的大小以适应背景。
 
 你也可以使用关键字：
 
@@ -136,7 +136,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 }
 ```
 
-最后，您还可以使用四值语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的 CSS 中，我们将背景定位在距顶部 20px 和右侧 10px 处:
+最后，你还可以使用四值语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的 CSS 中，我们将背景定位在距顶部 20px 和右侧 10px 处:
 
 ```css
 .box {
@@ -193,7 +193,7 @@ background-position: 10px 20px, top right;
 - `fixed`：使元素的背景固定在视口上，这样当页面或元素内容滚动时，它就不会滚动。它将始终保持在屏幕上相同的位置。
 - `local`：将背景固定在它所设置的元素上，所以当你滚动该元素时，背景也随之滚动。
 
-{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)（或者看看这里的[源代码](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)）。
+{{cssxref("background-attachment")}} 属性只有在有内容要滚动时才会有效果，所以我们做了一个示例来演示这三个值之间的区别——看看 [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)（或者看看这里的[源代码](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds)）。
 
 ### 使用 background 简写属性
 
