@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 {{JSRef}}
 
-**`Object.fromEntries()`** 静态方法将键值对列表转换成对象。
+**`Object.fromEntries()`** 静态方法将键值对列表转换为一个对象。
 
 {{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
 
@@ -19,7 +19,7 @@ Object.fromEntries(iterable)
 
 - `iterable`
 
-  - : 一个[可迭代的](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，例如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，包含对象列表。每个对象都要有两个属性：
+  - : 一个[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，例如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}，包含了对象列表。每个对象都要有两个属性：
 
     - `0`
       - : 表示属性键的字符串或者 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
@@ -34,7 +34,7 @@ Object.fromEntries(iterable)
 
 ## 描述
 
-`Object.fromEntries()` 方法获取一个键值对列表，并返回一个新对象，该对象的属性由这些条目给定。`iterable` 参数应是实现 `@@iterator` 方法的对象。该方法返回一个可迭代对象，该对象生成类似于两个元素数组的对象。第一个元素是将用作属性键的值，第二个元素是要与该属性键关联的值。
+`Object.fromEntries()` 方法接收一个键值对列表，并返回一个新对象，该对象的属性由这些条目给定。`iterable` 参数应该是实现了 `@@iterator` 方法的可迭代对象。该方法返回一个可迭代对象，产生包含两个元素的类数组对象。第一个元素是将用作属性键的值，第二个元素是要与该属性键关联的值。
 
 `Object.fromEntries()` 执行 {{jsxref("Object.entries()")}} 的相反操作，只是 `Object.entries()` 只返回字符串键属性，而 `Object.fromEntries()` 还可以创建符号键属性。
 
@@ -55,7 +55,7 @@ const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 ```
 
-### 数组转换成对象
+### Array 转换成对象
 
 通过 `Object.fromEntries`，你可以将 {{jsxref("Array")}} 转换成 {{jsxref("Object")}}：
 
@@ -71,7 +71,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### 对象转换
 
-通过 `Object.fromEntries`, 其反向方法 {{jsxref("Object.entries()")}}，和[数组操作方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)，你可以像这样转换对象：
+你可以通过 `Object.fromEntries`、其逆操作 {{jsxref("Object.entries()")}} 和[数组操作方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)，像这样转换对象：
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };
