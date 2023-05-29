@@ -30,5 +30,5 @@ console.log(`此设备最多可以对每个通知显示 ${maxActions} 个操作�
 
 ## 参见
 
-- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{domxref("Notification.actions")}}
