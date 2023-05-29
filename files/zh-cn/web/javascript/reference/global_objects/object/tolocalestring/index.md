@@ -27,7 +27,7 @@ toLocaleString()
 
 所有继承 `Object.prototype`（也就是说，除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)）的对象都继承了 `toLocaleString()` 方法。{{jsxref("Object")}} 的 `toLocaleString` 返回调用 {{jsxref("Object/toString", "this.toString()")}} 的结果。
 
-提供此方法是为了给对象一个通用的 `toLocaleString` 方法，即使不是所有对象都可以使用它。在核心语言中，这些内置对象重写了 `toLocaleString` 以提供特定于语言环境的格式：
+提供此方法是为了给对象一个通用的 `toLocaleString` 方法，即使不是所有对象都会使用它。在核心语言中，这些内置对象重写了 `toLocaleString` 以提供特定于语言环境的格式：
 
 - {{jsxref("Array")}}：{{jsxref("Array.prototype.toLocaleString()")}}
 - {{jsxref("Number")}}：{{jsxref("Number.prototype.toLocaleString()")}}
@@ -39,7 +39,7 @@ toLocaleString()
 
 ### 使用基本的 toLocaleString() 方法
 
-基本的 `toLocaleString()` 方法只调用 `toString()`。
+基本的 `toLocaleString()` 方法只是简单地调用 `toString()`。
 
 ```js
 const obj = {
