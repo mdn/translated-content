@@ -1,28 +1,27 @@
 ---
-title: MDN 的本地化
+title: MDN Web 文档的本地化
 slug: MDN/Community/Contributing/Translated_content
-original_slug: MDN/Contribute/Localize
 ---
 
 {{MDNSidebar}}
 
-2020 年 12 月 14 日开始，MDN 将运行在基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。新的平台也使 MDN 在许多方面发生了改变，这些变化基本上都对我们的工作有不同程度的改进，不过，在内容本地化的工作方面，变化可能看起来会更激进一些。许多的英语区域外的内容本地化工作被中止了，其中的内容长久未更新或活跃人数太少都是可能的原因。在将来，我们希望有更好的机制，来管理这些内容的本地化工作。
+自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。因为我们有许多不再维护且过时的本地化内容，我们希望在未来能够更好地管理这些内容。
 
-除了下面列出的地区，所有区域的内容本地化工作都被冻结了，也就意味着这些内容暂时不会开放编辑。所有可接受本地化编辑的内容，都由各自对应的志愿者小组负责管理。
+除了以下语言（这些语言有专门的团队负责维护），其他所有的本地化内容都被冻结了。也就意味着，我们不再接受对这些内容的任何更新，它们是只读的。
 
 ## 活跃语言
 
-> **备注：** 如果你有意向加入某语言的内容本地化工作，请联系下面这些小组中的成员，也可 [尝试寻求帮助](/zh-CN/docs/MDN/Contribute/Getting_started#step_4_ask_for_help)。语言名称后的标识与 [Translated-content Repo](https://github.com/mdn/translated-content) 目录是对应的。
+> **备注：** 如果你有意向为某个活跃语言做出贡献，请联系下面这些小组中的成员，或[联系我们以寻求帮助](/zh-CN/docs/MDN/Community/Communication_channels)。
 
 ### 巴西葡萄牙语（pt-BR）
 
 - 讨论组：[Telegram (MDN localization in Brazilian Portuguese)](https://t.me/mdn_l10n_pt_br)
-- 目前的志愿者：[Luisa Migueres](https://github.com/lumigueres)、[Julio Sampaio](https://github.com/juliosampaio)、[Josiel Rocha](https://github.com/josielrocha)、[Clóvis Lima Júnior](https://github.com/clovislima)
+- 目前的志愿者：[Nathália Pissuti](https://github.com/nathipg)、[Josiel Rocha](https://github.com/josielrocha)、[Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
-- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)
+- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/)、[Telegram (Mozilla China channel)](https://t.me/mozilla_china)
+- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[jasonren0403](https://github.com/jasonren0403)
 
 ### 法语（fr）
 
@@ -36,8 +35,8 @@ original_slug: MDN/Contribute/Localize
 
 ### 韩语（ko）
 
-- 讨论组：[Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[GwangYeol-Im](https://github.com/GwangYeol-Im)、[pje1740](https://github.com/pje1740)、[yujo11](https://github.com/yujo11)
+- 讨论组：[Discord (#korean channel)](https://discord.gg/apa6Rn7uEj)、[Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- 目前的志愿者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[GwangYeol-Im](https://github.com/GwangYeol-Im)、[pje1740](https://github.com/pje1740)、[yujo11](https://github.com/yujo11)、[wisedog](https://github.com/wisedog)、[swimjiy](https://github.com/swimjiy)、[jho2301](https://github.com/jho2301)、[sunhpark42](https://github.com/sunhpark42)
 
 ### 俄语（ru）
 
@@ -49,10 +48,11 @@ original_slug: MDN/Contribute/Localize
 - 讨论组：[Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
 - 目前的志愿者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
 
-> **备注：** 如果你想解冻某个语言的内容本地化工作，请先了解 [解冻所需要的准备工作](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
+> **备注：** 如果你想讨论关于解冻某个语言的内容，请先了解[所需要的准备工作指南](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
 
 ## 参见
 
 - [MDN localization update, February 2021](https://hacks.mozilla.org/mdn-localization-update-february-2021/)——MDN 内容本地化工作的最新进展
-- [An update on MDN Web Docs’ localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/)——基于社群反馈的更新模式
+- [An update on MDN Web Docs' localization strategy](https://hacks.mozilla.org/an-update-on-mdn-web-docs-localization-strategy/)——基于社区反馈的更新策略
 - [MDN Web Docs evolves! Lowdown on the upcoming new platform](https://hacks.mozilla.org/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)——新平台的优势，以及为何本地化工作有所改变。
+- [MDN 沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)
