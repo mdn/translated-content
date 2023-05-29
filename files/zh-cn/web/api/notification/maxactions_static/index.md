@@ -13,7 +13,7 @@ slug: Web/API/Notification/maxActions_static
 
 ## 示例
 
-以下代码段记录了支持的操作的最大数量。
+以下代码片段打印了支持的操作的最大数量。
 
 ```js
 const maxActions = Notification.maxActions;
