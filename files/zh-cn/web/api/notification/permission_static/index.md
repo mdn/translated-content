@@ -5,11 +5,11 @@ slug: Web/API/Notification/permission_static
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的只读属性 `permission` 表明当前用户是否授予当前源显示 Web 通知的权限。
+{{domxref("Notification")}} 接口的只读属性 `permission` 表明当前用户是否授予当前来源（origin）显示 web 通知的权限。
 
 ## 值
 
-一个表示当前权限的字符串，值可以是：
+一个表示当前权限的字符串。其值可以是：
 
 - `granted`
   - : 用户已经明确地授予了当前来源显示系统通知的权限。
@@ -55,7 +55,7 @@ function notifyMe() {
 
 ## 参见
 
-- [Notifications API](/zh-CN/docs/Web/API/Notifications_API)
-- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
-- [Permissions API](/zh-CN/docs/Web/API/Permissions_API)
-- [使用 Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Notification API](/zh-CN/docs/Web/API/Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Permission API](/zh-CN/docs/Web/API/Permissions_API)
+- [使用 Permission API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)
