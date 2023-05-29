@@ -25,8 +25,8 @@ new BroadcastChannel(channelName)
 ```js
 // 创建一个监听“internal_notification”通道的新通道。
 
-var bc = new BroadcastChannel('internal_notification');
-bc.postMessage('New listening connected!');
+const bc = new BroadcastChannel("internal_notification");
+bc.postMessage("New listening connected!");
 ```
 
 ## 规范
