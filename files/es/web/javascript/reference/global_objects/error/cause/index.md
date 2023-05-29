@@ -1,5 +1,5 @@
 ---
-title: Error.prototype.cause
+title: "Error: cause"
 slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 ln10:
   sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
@@ -19,7 +19,7 @@ El valor que se pasó al constructor del [`Error()`](/es/docs/Web/JavaScript/Ref
 
 ## Descripción
 
-El valor de `cause` puede ser de cualquiér tipo. No debe suponer que el error que capturó tiene un `Error` como su `cause`, de la misma manera que no puede estar seguro que la variable enlazada en la instrucción `catch` sea un error tampoco. El siguiente ejemplo "Proporcionar datos estructurados como la causa del error" muestra un caso donde se proporciona deliberadamente un error como causa
+El valor de `cause` puede ser de cualquiér tipo. No debe suponer que el error que capturó tiene un `Error` como su `cause`, de la misma manera que no puede estar seguro que la variable enlazada en la instrucción `catch` sea un error tampoco. El siguiente ejemplo "Proporcionar datos estructurados como la causa del error" muestra un caso donde se proporciona deliberadamente un error como causa.
 
 ## Ejemplos
 
@@ -45,12 +45,12 @@ Los mensajes de error escritos para consumo humano pueden ser inapropiados para 
 ```js
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
-    throw new Error('RSA key generation requires integer inputs.', {
+    throw new Error('La generación de claves RSA requiere entradas de tipo entero.', {
       cause: { code: 'NonInteger', values: [p, q] },
     });
   }
   if (!areCoprime(p, q)) {
-    throw new Error('RSA key generation requires two co-prime integers.', {
+    throw new Error('La generación de claves RSA requiere dos enteros coprimos.', {
       cause: { code: 'NonCoprime', values: [p, q] },
     })
   }
