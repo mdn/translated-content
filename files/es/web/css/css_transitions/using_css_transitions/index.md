@@ -1,6 +1,6 @@
 ---
 title: Transiciones de CSS
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 original_slug: Web/CSS/Transiciones_de_CSS
 ---
 

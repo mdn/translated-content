@@ -1,8 +1,9 @@
 ---
 title: Columnas con CSS-3
-slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
-original_slug: Columnas_con_CSS-3
+slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
+original_slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 ---
+
 ### Introducción
 
 Cuando leemos un texto, las líneas muy largas resultan incómodas. Si son demasiado largas, al cambiar de línea nuestros ojos pueden perder la pista de la línea en la que estabas (al ir de un extremo al otro de la página). Por ello, pensando en los usuarios con monitores grandes, los autores deben limitar la anchura del texto dividiéndolo en columnas, más o menos, como hacen los periódicos. Por desgracia esto no es posible con HTML y CSS-2, a no ser que fuerces la ruptura de las columnas en puntos fijos, limites en gran medida el código a utilizar, o uses scripts complejos.

@@ -6806,14 +6806,6 @@
       "jota1410"
     ]
   },
-  "Web/CSS/CSS_Columns": {
-    "modified": "2019-03-23T22:28:10.699Z",
-    "contributors": ["Anonymous"]
-  },
-  "Web/CSS/CSS_Columns/Using_multi-column_layouts": {
-    "modified": "2019-03-23T23:43:23.940Z",
-    "contributors": ["Mgjbot", "Jorolo", "Nukeador"]
-  },
   "Web/CSS/CSS_Flow_Layout": {
     "modified": "2019-03-18T21:21:28.417Z",
     "contributors": ["ariasfernando"]
@@ -6889,42 +6881,6 @@
     "modified": "2020-10-15T22:26:49.512Z",
     "contributors": ["josegarciamanez"]
   },
-  "Web/CSS/CSS_Positioning": {
-    "modified": "2019-03-23T22:32:36.509Z",
-    "contributors": ["javichito", "davidhbrown"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index": {
-    "modified": "2019-03-18T20:42:17.583Z",
-    "contributors": ["ChipTime", "javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index": {
-    "modified": "2019-03-23T22:32:38.884Z",
-    "contributors": ["javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float": {
-    "modified": "2019-04-26T07:22:46.044Z",
-    "contributors": ["SphinxKnight", "LaGallinaTuruleta", "javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1": {
-    "modified": "2019-03-23T22:32:36.821Z",
-    "contributors": ["javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2": {
-    "modified": "2019-03-23T22:32:34.821Z",
-    "contributors": ["javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3": {
-    "modified": "2019-03-23T22:32:30.208Z",
-    "contributors": ["javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index": {
-    "modified": "2019-03-23T22:32:47.571Z",
-    "contributors": ["javichito"]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context": {
-    "modified": "2019-03-23T22:32:44.958Z",
-    "contributors": ["javichito"]
-  },
   "Web/CSS/CSS_Selectors": {
     "modified": "2019-07-09T01:16:13.123Z",
     "contributors": [
@@ -6939,47 +6895,9 @@
     "modified": "2020-07-31T07:57:08.167Z",
     "contributors": ["blanchart", "israel-munoz"]
   },
-  "Web/CSS/CSS_Text": {
-    "modified": "2019-03-23T22:36:23.444Z",
-    "contributors": ["pekechis"]
-  },
-  "Web/CSS/CSS_Transforms": {
-    "modified": "2019-03-23T22:43:47.978Z",
-    "contributors": ["Sebastianz", "fscholz"]
-  },
-  "Web/CSS/CSS_Transforms/Using_CSS_transforms": {
-    "modified": "2019-03-24T00:05:10.570Z",
-    "contributors": [
-      "recortes",
-      "fscholz",
-      "teoli",
-      "cristianjav",
-      "ajimix",
-      "another_sam"
-    ]
-  },
-  "Web/CSS/CSS_Transitions": {
-    "modified": "2019-07-24T08:01:48.708Z",
-    "contributors": ["SphinxKnight", "FedericoMarmo", "crojasf", "pekechis"]
-  },
-  "Web/CSS/CSS_Transitions/Using_CSS_transitions": {
-    "modified": "2019-08-01T05:58:17.579Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mrstork",
-      "alberdigital",
-      "teoli",
-      "inma_610",
-      "deimidis"
-    ]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:35:39.343Z",
     "contributors": ["lajaso"]
-  },
-  "Web/CSS/CSS_Writing_Modes": {
-    "modified": "2019-04-10T10:27:10.380Z",
-    "contributors": ["cristianmartinez"]
   },
   "Web/CSS/CSS_animations": {
     "modified": "2019-03-23T22:43:48.247Z",
@@ -7081,6 +6999,109 @@
     "modified": "2019-03-23T22:18:19.285Z",
     "contributors": ["Squirrel18"]
   },
+  "Web/CSS/CSS_media_queries": {
+    "modified": "2020-10-15T22:13:20.096Z",
+    "contributors": ["mikelmg"]
+  },
+  "Web/CSS/CSS_media_queries/Using_media_queries": {
+    "modified": "2019-10-03T11:52:26.928Z",
+    "contributors": [
+      "danielblazquez",
+      "brunonra-dev",
+      "kitab15",
+      "Sebastianz",
+      "jsx",
+      "carlossuarez",
+      "mrstork",
+      "malayaleecoder",
+      "seeker8",
+      "Xaviju",
+      "sinfallas",
+      "maedca"
+    ]
+  },
+  "Web/CSS/CSS_multicol_layout": {
+    "modified": "2019-03-23T22:28:10.699Z",
+    "contributors": ["Anonymous"]
+  },
+  "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
+    "modified": "2019-03-23T23:43:23.940Z",
+    "contributors": ["Mgjbot", "Jorolo", "Nukeador"]
+  },
+  "Web/CSS/CSS_positioned_layout": {
+    "modified": "2019-03-23T22:32:36.509Z",
+    "contributors": ["javichito", "davidhbrown"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2019-03-18T20:42:17.583Z",
+    "contributors": ["ChipTime", "javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
+    "modified": "2019-03-23T22:32:44.958Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+    "modified": "2019-03-23T22:32:36.821Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2": {
+    "modified": "2019-03-23T22:32:34.821Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3": {
+    "modified": "2019-03-23T22:32:30.208Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements": {
+    "modified": "2019-04-26T07:22:46.044Z",
+    "contributors": ["SphinxKnight", "LaGallinaTuruleta", "javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
+    "modified": "2019-03-23T22:32:47.571Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+    "modified": "2019-03-23T22:32:38.884Z",
+    "contributors": ["javichito"]
+  },
+  "Web/CSS/CSS_text": {
+    "modified": "2019-03-23T22:36:23.444Z",
+    "contributors": ["pekechis"]
+  },
+  "Web/CSS/CSS_transforms": {
+    "modified": "2019-03-23T22:43:47.978Z",
+    "contributors": ["Sebastianz", "fscholz"]
+  },
+  "Web/CSS/CSS_transforms/Using_CSS_transforms": {
+    "modified": "2019-03-24T00:05:10.570Z",
+    "contributors": [
+      "recortes",
+      "fscholz",
+      "teoli",
+      "cristianjav",
+      "ajimix",
+      "another_sam"
+    ]
+  },
+  "Web/CSS/CSS_transitions": {
+    "modified": "2019-07-24T08:01:48.708Z",
+    "contributors": ["SphinxKnight", "FedericoMarmo", "crojasf", "pekechis"]
+  },
+  "Web/CSS/CSS_transitions/Using_CSS_transitions": {
+    "modified": "2019-08-01T05:58:17.579Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mrstork",
+      "alberdigital",
+      "teoli",
+      "inma_610",
+      "deimidis"
+    ]
+  },
+  "Web/CSS/CSS_writing_modes": {
+    "modified": "2019-04-10T10:27:10.380Z",
+    "contributors": ["cristianmartinez"]
+  },
   "Web/CSS/Child_combinator": {
     "modified": "2019-03-23T22:17:17.663Z",
     "contributors": ["ExE-Boss", "maguz727", "israel-munoz"]
@@ -7116,27 +7137,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-18T21:44:15.658Z",
     "contributors": ["NeXuZZ-SCM"]
-  },
-  "Web/CSS/Media_Queries": {
-    "modified": "2020-10-15T22:13:20.096Z",
-    "contributors": ["mikelmg"]
-  },
-  "Web/CSS/Media_Queries/Using_media_queries": {
-    "modified": "2019-10-03T11:52:26.928Z",
-    "contributors": [
-      "danielblazquez",
-      "brunonra-dev",
-      "kitab15",
-      "Sebastianz",
-      "jsx",
-      "carlossuarez",
-      "mrstork",
-      "malayaleecoder",
-      "seeker8",
-      "Xaviju",
-      "sinfallas",
-      "maedca"
-    ]
   },
   "Web/CSS/Mozilla_Extensions": {
     "modified": "2019-03-23T23:21:23.902Z",
