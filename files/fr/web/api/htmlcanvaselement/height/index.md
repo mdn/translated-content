@@ -8,6 +8,7 @@ tags:
   - Propriété
 translation_of: Web/API/HTMLCanvasElement/height
 ---
+
 {{APIRef("Canvas API")}}
 
 La propriété **`HTMLCanvasElement.height`** est un entier positif reflétant l'attribut HTML {{htmlattrxref("height", "canvas")}} de l'élément {{HTMLElement("canvas")}} mesuré en pixels CSS. Quand cet attribut n'est pas spécifié, ou si on lui affecte une valeur invalide, telle que négative, la valeur par défaut de `150` is utilisée.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/description
 ---
+
 {{JSRef}}
 
 La propriété en lecture seule **`description`** est une chaîne de caractères qui renvoie la description optionnelle de l'objet {{jsxref("Symbol")}}.
@@ -47,13 +48,11 @@ Symbol.for('toto').description; // "toto"
 
 ## Spécifications
 
-| Spécification                                                                                                                           | État                    |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `Symbol.prototype.description`](https://tc39.github.io/proposal-Symbol-description/#sec-symbol.prototype.description) | Proposition de niveau 4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.description")}}
+{{Compat}}
 
 ## Voir aussi
 

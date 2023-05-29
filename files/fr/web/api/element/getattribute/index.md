@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 `getAttribute` renvoie la valeur d'un attribut donné de l'élément spécifié. Si l'attribut n'existe pas, la valeur renvoyée sera soit `null` soit `""` (une chaine vide)&nbsp;; voir la section [Attributs inexistants](#attributs_inexistants) pour plus de détails.
@@ -29,8 +30,9 @@ où
 
 Soit l'HTML :
 
-```js
-const div1 = document.getElementById("div1");
+```html
+<!-- exemple de div en HTML -->
+<div id="div1">Hi Champ!</div>
 ```
 
 Exemple de JavaScript :

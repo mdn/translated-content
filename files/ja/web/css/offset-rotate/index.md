@@ -2,13 +2,14 @@
 title: offset-rotate
 slug: Web/CSS/offset-rotate
 ---
+
 {{CSSRef}}
 
 **`offset-rotate`** は CSS のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
 
 {{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-> **Note:** 初期のころの仕様書では、このプロパティを `motion-rotation` と呼んでいました。
+> **メモ:** 初期のころの仕様書では、このプロパティを `motion-rotation` と呼んでいました。
 
 ## 構文
 

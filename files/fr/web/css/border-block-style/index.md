@@ -4,6 +4,7 @@ slug: Web/CSS/border-block-style
 translation_of: Web/CSS/border-block-style
 browser-compat: css.properties.border-block-style
 ---
+
 {{CSSRef}}
 
 La propriété **`border-block-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe de bloc. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/writing-mode), [`direction`](/fr/docs/Web/CSS/direction) et [`text-orientation`](/fr/docs/Web/CSS/text-orientation).

@@ -2,6 +2,7 @@
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 ### 概述

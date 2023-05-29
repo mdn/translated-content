@@ -2,6 +2,7 @@
 title: 'Window: devicemotion イベント'
 slug: Web/API/Window/devicemotion_event
 ---
+
 {{APIRef}}
 
 `devicemotion` イベントは、一定の間隔で発行され、その時点で端末が受けている加速度の物理的な力の量を示します。また、利用可能であれば、回転率に関する情報も提供します。
@@ -44,9 +45,7 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#devicemotion", "DeviceMotion event")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

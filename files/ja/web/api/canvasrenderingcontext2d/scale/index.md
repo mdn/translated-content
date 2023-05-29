@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.scale()
 slug: Web/API/CanvasRenderingContext2D/scale
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.scale()`** はキャンバス 2D API のメソッドで、キャンバス上の長さを縦方向および横方向に拡縮する変形を適用させます。

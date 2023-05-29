@@ -2,7 +2,8 @@
 title: '<cite>: 引用元要素'
 slug: Web/HTML/Element/cite
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
@@ -104,7 +105,7 @@ slug: Web/HTML/Element/cite
 
 注目すべきこととして、 W3C の仕様書では、 `<cite>` 要素に含められる創作物の参照には、作者名を含めてよいとしています。しかし、 WHATWG における `<cite>` の仕様では逆に、どのような場合でも人名を含めてはならないとしています。
 
-{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の {{htmlattrxref("cite", "blockquote")}} 属性を使用してください。
+{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を使用してください。
 
 通常、ブラウザーは既定で `<cite>` に斜体を適用します。これを防ぐには、要素で既定のイタリックスタイルが使用されるのを避けるには、 `<cite>` 要素に CSS の {{cssxref("font-style")}} プロパティを適用してください。
 
@@ -120,11 +121,7 @@ slug: Web/HTML/Element/cite
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-cite-element', '&lt;cite&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-cite-element', '&lt;cite&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;cite&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-coordinate`** définit les coordonnées horizontale et verticale, au sein de l'élément, qui s'aligneront avec les points définis par {{cssxref("scroll-snap-destination")}} dans le conteneur le plus proche en termes de parenté.
@@ -39,9 +40,13 @@ scroll-snap-coordinate: unset;
 - `<position>`
   - : Définit le décalage du point d'accrochage par rapport à la boîte de bordure le l'élément. Pour chaque paire, la première valeur indique l'abscisse et la seconde, l'ordonnée. Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;position&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -133,12 +138,8 @@ scroll-snap-coordinate: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                                           | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-coordinate")}}
+{{Compat}}

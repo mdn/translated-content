@@ -2,6 +2,7 @@
 title: ':root'
 slug: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 **`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/Specificity)が高いことを除けば `html` セレクターと同等です。
@@ -15,7 +16,9 @@ slug: Web/CSS/:root
 
 ## 構文
 
-{{csssyntax}}
+```
+:root
+```
 
 ## 例
 

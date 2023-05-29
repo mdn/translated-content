@@ -14,6 +14,7 @@ tags:
   - Web Crypto API
 translation_of: Web/API/SubtleCrypto
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`SubtleCrypto`** interface of the [Web Crypto API](/fr/docs/Web/API/Web_Crypto_API) provides a number of low-level cryptographic functions. Access to the features of `SubtleCrypto` is obtained through the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} object you get from {{domxref("Window.crypto")}}.

@@ -2,6 +2,7 @@
 title: How CSS works
 slug: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -86,7 +87,9 @@ P
 {{EmbedLiveSample('一個活生生的_DOM_例子', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## 將 CSS 套用至 DOM
@@ -132,7 +135,7 @@ span {
 下面的例子使用英式英語來拼寫 color (也就是 colour)，進而導致該屬性失效，因為現在瀏覽器看不懂它了。也因此下面的段落無法以藍字顯示，不過其他的 CSS 還是成功地套用上去了，只有無效的會被忽略掉。
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css
@@ -147,7 +150,7 @@ p {
 
 這樣做有個很大的好處，就是你可以放心地利用新 CSS 做出很炫炮的效果，而不用擔心瀏覽器不支援時會出錯 — 反正差別只在於那個新特性有或沒有而已。再加上 CSS 層疊 (cascade) 的天性，只要你提供兩條具有相同具體程度(specificity)的規則，就能讓不支援的瀏覽器套用另一條規則。
 
-這在想要使用某個剛推出的值，但它還未普及時非常有用。舉個例子，一些老舊的瀏覽器不支援以 `calc()` 來當作值，所以當我想要用它來決定寬的時候，可能會先寫一個備用的寬(以像素為單位的值)，然後再寫一個值為 ` calc``(100% - 50px) ` 的寬。這樣一來，老舊的瀏覽器會使用像素版本 ，並忽略 `calc()` 版本，因為它們看不懂這個；而新的瀏覽器則會先解析像素版本，然後再將 `calc()` 版本覆寫上去，因為它比較晚出現。
+這在想要使用某個剛推出的值，但它還未普及時非常有用。舉個例子，一些老舊的瀏覽器不支援以 `calc()` 來當作值，所以當我想要用它來決定寬的時候，可能會先寫一個備用的寬(以像素為單位的值)，然後再寫一個值為 `calc(100% - 50px)` 的寬。這樣一來，老舊的瀏覽器會使用像素版本 ，並忽略 `calc()` 版本，因為它們看不懂這個；而新的瀏覽器則會先解析像素版本，然後再將 `calc()` 版本覆寫上去，因為它比較晚出現。
 
 ```css
 .box {
@@ -163,11 +166,3 @@ p {
 你已經快完成這個主題了，但是還差臨門一腳，在下篇文章裡，你將會[利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)來重新美化一個範例，並在過程中重溫你所學到的 CSS 技巧。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## 在這個主題中
-
-1. [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入門](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 是如何組織的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何運作的](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [利用你學到的新知識](/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

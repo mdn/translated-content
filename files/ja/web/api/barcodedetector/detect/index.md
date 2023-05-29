@@ -2,6 +2,7 @@
 title: BarcodeDetector.detect()
 slug: Web/API/BarcodeDetector/detect
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`detect()`** は {{domxref("BarcodeDetector")}} インターフェイスのメソッドで、画像内に検出されたバーコードの配列 ({{jsxref('Array')}}) で履行されるプロミス ({{jsxref('Promise')}}) を返します。

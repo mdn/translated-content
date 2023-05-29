@@ -2,6 +2,7 @@
 title: StylePropertyMapReadOnly.has()
 slug: Web/API/StylePropertyMapReadOnly/has
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`has()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。

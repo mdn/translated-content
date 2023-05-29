@@ -1,18 +1,9 @@
 ---
 title: attr
 slug: Web/CSS/attr
-tags:
-  - CSS
-  - Esquema
-  - Função CSS
-  - Internet
-  - Laioute
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 A função **`attr()`** do [CSS](/pt-BR/docs/Web/CSS) é utilizada para se obter o valor de um determinado atributo do elemento selecionado e usá-lo na folha de estilo. Também pode ser utilizado em [pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements), nesse caso o valor do atributo no pseudo-elemento do elemento original é retornado.
@@ -34,7 +25,7 @@ attr(data-width px, inherit);
 attr(data-something, 'default');
 ```
 
-> **Note:** **Nota:** A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
+> **Nota:** A função `attr()` pode ser utilizada com qualquer propriedade CSS, mas o suporte para propriedades que não sejam {{cssxref("content")}} é experimental.
 
 ## Sintaxe
 

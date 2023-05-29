@@ -2,6 +2,7 @@
 title: MouseEvent.x
 slug: Web/API/MouseEvent/x
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`MouseEvent.x`** 是 {{domxref("MouseEvent.clientX")}} 属性的别名。
@@ -12,4 +13,4 @@ slug: Web/API/MouseEvent/x
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.x")}}
+{{Compat}}

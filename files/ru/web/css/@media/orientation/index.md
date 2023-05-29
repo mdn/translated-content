@@ -3,6 +3,7 @@ title: Ориентация
 slug: Web/CSS/@media/orientation
 translation_of: Web/CSS/@media/orientation
 ---
+
 {{cssref}}
 
 [CSS](/ru/docs/CSS) [медиа-функции](/ru/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`orientation`** может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для [медийных страниц](/ru/docs/Web/CSS/Paged_media)).

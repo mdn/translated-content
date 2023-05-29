@@ -10,6 +10,7 @@ tags:
   - dblclick
 translation_of: Web/API/Element/dblclick_event
 ---
+
 {{APIRef}}
 
 L'évènement **`dblclick`** se déclenche à partir d'un élément lorsqu'un bouton d'un dispositif de pointage est double-cliqué (c'est-à-dire qu'on clique deux fois sur le même élément dans un laps de temps très court).

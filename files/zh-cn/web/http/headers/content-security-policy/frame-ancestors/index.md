@@ -1,12 +1,13 @@
 ---
-title: 'CSP: frame-ancestors'
+title: CSP：frame-ancestors
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
-HTTP 头部 {{HTTPHeader("Content-Security-Policy")}} (CSP) `中的frame-ancestors` 指令指定了一个可以包含{{HTMLElement("frame")}}，{{HTMLElement("iframe")}}，{{HTMLElement("object")}}，{{HTMLElement("embed")}}，or {{HTMLElement("applet")}}等元素的有效父级。
+HTTP 标头 {{HTTPHeader("Content-Security-Policy")}}（CSP）中的 `frame-ancestors` 指令指定了一个可以包含 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 等元素的有效父级。
 
-当该指令设置为`'none'时，其作用类似于`{{HTTPHeader("X-Frame-Options")}}`: DENY` （该头部被一些老版本浏览器所支持）。
+当该指令设置为 `'none'` 时，其作用类似于 {{HTTPHeader("X-Frame-Options")}}`: DENY`（该标头被一些老版本浏览器所支持）。
 
 <table class="properties">
   <tbody>
@@ -55,7 +56,7 @@ Content-Security-Policy: frame-ancestors <source> <source>;
 - \<scheme-source>
   - : 一个 schema 配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个 data schema（但并不推荐）。
 
-    - '`data:`' 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容源。 _这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。_
+    - '`data:`' 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容源。_这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。_
     - `'mediastream:'` 允许 [`mediastream:` URIs](/zh-CN/docs/Web/API/MediaStream_API) 作为内容源。
     - `'blob:'` 允许 [`blob:` URIs](/zh-CN/docs/Web/API/Blob) 作为内容源。
     - `'filesystem:'` 允许 [`filesystem:` URIs](/zh-CN/docs/Web/API/FileSystem) 作为内容源。

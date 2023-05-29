@@ -1,13 +1,8 @@
 ---
 title: 웹어셈블리의 자바스크립트 API 사용하기
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - 웹어셈블리
-  - 자바스크립트
-  - 컴파일
-translation_of: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 [Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
@@ -26,7 +21,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
 3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
-    ```rs
+    ```rust
     (module
       (func $i (import "imports" "imported_func") (param i32))
       (func (export "exported_func")
@@ -82,7 +77,7 @@ fetch('simple.wasm').then(response =>
 
 Firefox 54+에서 Developer Tool Debugger Panel에는 웹 페이지에 포함된 모든 wasm 코드의 텍스트 표현을 표시하는 기능이 있습니다. Debugger 패널로 이동하여 "wasm://" 항목을 클릭할 수 있습니다.
 
-![wasm-debug](https://mdn.mozillademos.org/files/15823/wasm-debug.png)
+![wasm-debug](wasm-debug.png)
 
 Firefox에서 WebAssembly를 텍스트로 보는 것 외에도 텍스트 형식을 사용하여 개발자는 WebAssembly를 디버깅할 수 있습니다(breakpoint, callstack 검사, 단일 단계 검사 등). 비디오 미리 보기는 [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds)을 참조하십시오.
 

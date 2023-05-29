@@ -2,6 +2,7 @@
 title: Window.scrollY
 slug: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 ## 概述

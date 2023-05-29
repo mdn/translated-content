@@ -2,6 +2,7 @@
 title: Node.lookupPrefix
 slug: Web/API/Node/lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 返回一个和指定命名空间 URI 绑定的命名空间前缀。如果没有，返回 `null`。如果有多个绑定的前缀，返回的结果根据浏览器实现而定。

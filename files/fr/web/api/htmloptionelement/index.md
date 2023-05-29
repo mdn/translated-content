@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface `HTMLOptionElement` représente l'élément {{HTMLElement("option")}} et hérite de toutes les classes et méthodes de l'intreface {{domxref("HTMLElement")}} .

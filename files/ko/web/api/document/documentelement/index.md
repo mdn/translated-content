@@ -1,14 +1,6 @@
 ---
 title: Document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - ㅈ
-translation_of: Web/API/Document/documentElement
 ---
 {{ApiRef("DOM")}}
 

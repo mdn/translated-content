@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 translation_of: Learn/CSS/CSS_layout/Media_queries
 original_slug: Apprendre/CSS/CSS_layout/Media_queries
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
 The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of responsive web design, as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse. In this lesson you will first learn about the syntax used in media queries, and then move on to use them in a worked example showing how a simple design might be made responsive.
@@ -433,18 +434,3 @@ You could use the starting point that we have created to test out more media que
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## In this module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

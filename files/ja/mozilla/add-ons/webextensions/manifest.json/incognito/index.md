@@ -2,6 +2,7 @@
 title: incognito
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

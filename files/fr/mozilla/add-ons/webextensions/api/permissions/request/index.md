@@ -11,11 +11,12 @@ tags:
   - request
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
+
 {{AddonSidebar()}}
 
 Demandez l'ensemble des permissions répertoriées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 
-L'argument `Permissions` peut contenir soit une propriété  `origins` , qui est un tableau de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), soit une propriété `permissions` , qui est un tableau de [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé  [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json. La propriété `origins` qui correspondent à un sous-ensemble des hôtes correspondant à une permission facultative : par exemple, si optional_permissions inclut "\*://mozilla.org/", alors  `permissions.origins` peut inclure  "https\://developer.mozilla.org/".
+L'argument `Permissions` peut contenir soit une propriété `origins` , qui est un tableau de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), soit une propriété `permissions` , qui est un tableau de [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json. La propriété `origins` qui correspondent à un sous-ensemble des hôtes correspondant à une permission facultative : par exemple, si optional_permissions inclut "\*://mozilla.org/", alors `permissions.origins` peut inclure "https\://developer.mozilla.org/".
 
 La demande ne peut être faite qu'à l'intérieur du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).
 
@@ -42,9 +43,9 @@ var requesting = browser.permissions.request(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'extension a reçu toutes les permissions répertoriées dans l'argument des `permissions` , ou `false` dans le cas contraire.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.request")}}
+{{Compat}}
 
 ## Exemples
 

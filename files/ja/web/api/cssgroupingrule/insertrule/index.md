@@ -2,6 +2,7 @@
 title: CSSGroupingRule.insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`insertRule()`** は {{domxref("CSSGroupingRule")}} インターフェイスのメソッドで、新しい CSS ルールを CSS ルールのリストへ追加します。

@@ -13,6 +13,7 @@ tags:
   - getLastFocused
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
+
 {{AddonSidebar()}}
 
 Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
@@ -36,7 +37,7 @@ var gettingWindow = browser.windows.getLastFocused(
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets d'onglets ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
-      - : Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le  {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec le type de fenêtre `'panel'` qui sont limités aux propres fenêtres de l'extension.
+      - : Un ensemble d'objets {{WebExtAPIRef('windows.WindowType')}}. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec le type de fenêtre `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
 > **Note :**
 >
@@ -46,9 +47,9 @@ var gettingWindow = browser.windows.getLastFocused(
 
 `Une Promise` qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getLastFocused",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -79,7 +80,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -106,4 +108,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

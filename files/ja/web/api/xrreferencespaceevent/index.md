@@ -2,6 +2,7 @@
 title: XRReferenceSpaceEvent
 slug: Web/API/XRReferenceSpaceEvent
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRReferenceSpaceEvent`** インターフェイスは、{{domxref("XRReferenceSpace")}} に送信されるイベントを表します。 現在、この型を使用するイベントは {{domxref("XRReferenceSpace.reset_event", "reset")}} イベントのみです。
@@ -31,9 +32,7 @@ _`XRReferenceSpaceEvent` はメソッドを定義しませんが、親インタ�
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#xrreferencespaceevent','XRReferenceSpaceEvent')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

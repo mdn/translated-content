@@ -7,6 +7,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/altGlyphDef
 ---
+
 {{SVGRef}}{{deprecated_header}}
 
 L'élément `altGlyphDef` défini une représentation de substitution pour les glyphes.

@@ -2,6 +2,7 @@
 title: DocumentOrShadowRoot.getSelection()
 slug: Web/API/Document/getSelection
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`getSelection()`** property of the {{DOMxRef("DocumentOrShadowRoot")}} interface returns a {{DOMxRef("Selection")}} object representing the range of text selected by the user, or the current position of the caret.

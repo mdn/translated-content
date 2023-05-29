@@ -7,6 +7,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Element/mfrac
 ---
+
 L'élément MathML `<mfrac>` est utilisé pour afficher des fractions.
 
 La syntaxe est la suivante : `<mfrac>numérateur dénominateur</mfrac>`.
@@ -53,11 +54,8 @@ Affichage dans votre navigateur: <math><mfrac bevelled="true"><mfrac><mi>a </mi>
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaires           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.mfrac")}}
+{{Compat}}

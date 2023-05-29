@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/apply-templates
 original_slug: Web/XSLT/apply-templates
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:apply-templates>` sélectionne un ensemble de nœuds dans l'arbre d'entrée et demande au processeur de leur appliquer les modèles appropriés.

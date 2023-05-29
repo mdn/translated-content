@@ -3,6 +3,7 @@ title: StyleSheet.type
 slug: Web/API/StyleSheet/type
 translation_of: Web/API/StyleSheet/type
 ---
+
 {{APIRef ("CSSOM")}}
 
 Type spécifie la langue de la feuille de style pour cette feuille de style.

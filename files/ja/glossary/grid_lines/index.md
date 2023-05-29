@@ -4,6 +4,7 @@ slug: Glossary/Grid_Lines
 l10n:
   sourceCommit: d2a9f2e26a8139d4bb270d7dc3cddd8b848719fe
 ---
+
 **Grid 線**は [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を用いて明示的グリッドとして {{glossary("Grid tracks", "トラック")}} を定義すると作成されます。
 
 ## 例

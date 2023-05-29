@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/map
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<map>`** est utilisé avec des éléments {{HTMLElement("area")}} afin de définir une image cliquable divisée en régions.
 

@@ -2,6 +2,7 @@
 title: 使用 moment 做日期格式化
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
+
 我們模型的日期預設呈現很難看: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_。在本節中，我們將展示如何更新上一節中的 _書本實例 BookInstance 列表頁面_，以更友好的格式顯示`due_date`欄位字段：December 6th, 2016。
 
 我們將使用的方法，是在我們的`BookInstance`模型中，創建一個返回格式化日期的虛擬屬性。我們將使用 [moment](https://www.npmjs.com/package/moment) 來做實際的格式化，這是一個輕量級 JavaScript 日期庫，用於解析，驗證，操作和格式化日期。
@@ -18,20 +19,18 @@ npm install moment
 
 ## 創建虛擬屬性
 
-1. 打開 **./models/bookinstance.js**.
-2. 在此頁面最上方，引入 _moment_.
+1. 打開 **./models/bookinstance.js**。
+2. 在此頁面最上方，引入 _moment_。
 
-    ```js
-    var moment = require('moment');
-    ```
+   ```js
+   var moment = require("moment");
+   ```
 
-在 url 屬性後面，加入虛擬屬性 `due_back_formatted` 。
+在 url 屬性後面，加入虛擬屬性 `due_back_formatted`。
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
-  return moment(this.due_back).format('MMMM Do, YYYY');
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
+  return moment(this.due_back).format("MMMM Do, YYYY");
 });
 ```
 

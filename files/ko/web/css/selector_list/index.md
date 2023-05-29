@@ -1,12 +1,6 @@
 ---
 title: 선택자 목록
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/Selector_list
 ---
 {{CSSRef}}
 

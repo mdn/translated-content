@@ -1,43 +1,85 @@
 ---
-title: EventSource.onmessage
+title: 'EventSource: message イベント'
 slug: Web/API/EventSource/message_event
 original_slug: Web/API/EventSource/onmessage
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
-{{APIRef('WebSockets API')}}
 
-{{domxref("EventSource")}} インターフェースの **`onmessage`** プロパティは、メッセージイベントが受信されたとき、つまりソースからメッセージが送信されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
+{{APIRef}}
 
-`onmessage` イベントハンドラのイベントオブジェクトの型は {{domxref("MessageEvent")}} です。
+`message` は {{domxref("EventSource")}} API のイベントで、イベントソースからデータを受け取ったときに発生します。
+
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('message', (event) => { });
+
+onmessage = (event) => { };
 ```
-eventSource.onmessage = function
-```
+
+## イベント型
+
+{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : メッセージ送信元によって送信されたデータです。
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : 文字列で、メッセージ送信元のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : 文字列で、このイベントの一意の ID を表します。
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : `MessageEventSource` （{{domxref("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-```js
-evtSource.onmessage = function(e) {
-  var newElement = document.createElement("li");
+この基本的な例では、サーバーからイベントを受け取るために `EventSource` を作成し、 `sse.php` という名前のページがイベントを作成する役割を担っています。
 
-  newElement.textContent = "message: " + e.data;
+```js
+const evtSource = new EventSource('sse.php');
+const eventList = document.querySelector('ul');
+
+evtSource.addEventListener('message', (e) => {
+  const newElement = document.createElement("li");
+
+  newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
-}
+});
 ```
 
-> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+### onmessage による同等品
 
-## 仕様
+```js
+evtSource.onmessage = (e) => {
+  const newElement = document.createElement("li");
 
-| 仕様                                                                                                             | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onmessage", "onmessage")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+  newElement.textContent = `message: ${e.data}`;
+  eventList.appendChild(newElement);
+};
+```
 
-## ブラウザ互換性
+## 仕様書
 
-{{Compat("api.EventSource.onmessage")}}
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("EventSource")}}
+- [サーバー送信イベントの使用](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/ja/docs/Web/API/EventSource/open_event)
+- [`error`](/ja/docs/Web/API/EventSource/error_event)

@@ -2,6 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 **`background-attachment`** 這個 [CSS](/zh-TW/docs/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
@@ -45,10 +46,9 @@ background-attachment: unset;
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
 </p>
 ```
 
@@ -56,7 +56,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -73,19 +73,17 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when
-  Alice had been all the way down one side and up the other, trying every
-  door, she walked sadly down the middle, wondering how she was ever to
-  get out again.
-
-  Suddenly she came upon a little three-legged table, all made of solid
-  glass; there was nothing on it except a tiny golden key, and Alice's
-  first thought was that it might belong to one of the doors of the hall;
-  but, alas! either the locks were too large, or the key was too small,
-  but at any rate it would not open any of them. However, on the second
-  time round, she came upon a low curtain she had not noticed before, and
-  behind it was a little door about fifteen inches high: she tried the
-  little golden key in the lock, and to her great delight it fitted!
+  There were doors all round the hall, but they were all locked; and when Alice
+  had been all the way down one side and up the other, trying every door, she
+  walked sadly down the middle, wondering how she was ever to get out again.
+  Suddenly she came upon a little three-legged table, all made of solid glass;
+  there was nothing on it except a tiny golden key, and Alice's first thought
+  was that it might belong to one of the doors of the hall; but, alas! either
+  the locks were too large, or the key was too small, but at any rate it would
+  not open any of them. However, on the second time round, she came upon a low
+  curtain she had not noticed before, and behind it was a little door about
+  fifteen inches high: she tried the little golden key in the lock, and to her
+  great delight it fitted!
 </p>
 ```
 
@@ -93,8 +91,7 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
-      url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -112,8 +109,8 @@ p {
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## See also
 
-- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

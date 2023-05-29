@@ -2,6 +2,7 @@
 title: MediaRecorder.pause()
 slug: Web/API/MediaRecorder/pause
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`Media.pause()`** method (part of the [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API)) is used to pause recording of media streams.
@@ -11,7 +12,7 @@ When a `MediaRecorder` object’s `pause()`method is called, the browser queues 
 1. If {{domxref("MediaRecorder.state")}} is "inactive", raise a DOM `InvalidState` error and terminate these steps. If not, continue to the next step.
 2. Set {{domxref("MediaRecorder.state")}} to "paused".
 3. Stop gathering data into the current {{domxref("Blob")}}, but keep it available so that recording can be resumed later on.
-4. Raise a {{event("pause")}} event.
+4. Raise a [`pause`](/zh-CN/docs/Web/API/HTMLMediaElement/pause_event) event.
 
 ## Syntax
 
@@ -47,7 +48,7 @@ MediaRecorder.pause()
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder.pause")}}
+{{Compat}}
 
 ## See also
 

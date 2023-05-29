@@ -1,15 +1,6 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-tags:
-  - API
-  - Console API
-  - Overview
-  - console
-  - 로그
-  - 로깅
-  - 콘솔
-translation_of: Web/API/Console_API
 ---
 {{DefaultAPISidebar("Console API")}}
 

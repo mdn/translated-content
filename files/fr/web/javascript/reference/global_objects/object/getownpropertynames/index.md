@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).
@@ -134,19 +135,11 @@ Object.getOwnPropertyNames('toto')
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.2.3.4', 'Object.getOwnPropertyNames')}}                         | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES6', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}}     | {{Spec2('ES6')}}         |                                                        |
-| {{SpecName('ESDraft', '#sec-object.getownpropertynames', 'Object.getOwnPropertyNames')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.getOwnPropertyNames")}}
-
-## Notes spécifiques à Firefox
-
-Pour les versions antérieures à Firefox 28 {{geckoRelease("28")}}, `Object.getOwnPropertyNames` ne listait pas les propriétés non-résolues des objets {{jsxref("Error")}}. Cela a été résolu dans les versions suivantes ({{bug("724768")}}).
+{{Compat}}
 
 ## Voir aussi
 

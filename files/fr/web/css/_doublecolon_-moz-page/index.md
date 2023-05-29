@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-moz-page
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) CSS `::-moz-page`, spécifique à Mozilla, est appliqué aux pages individuelles dans les impressions ou les aperçus avant impression.
@@ -22,7 +23,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-page")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,6 +4,7 @@ slug: Web/CSS/background
 browser-compat: css.properties.background
 translation_of: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différentes valeurs des propriétés liées à la gestion des arrière-plans d'un élément (couleur, image, origine, taille, répétition, etc.).

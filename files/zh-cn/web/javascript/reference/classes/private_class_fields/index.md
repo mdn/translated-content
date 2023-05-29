@@ -2,6 +2,7 @@
 title: 类私有域
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 类属性在默认情况下是{{jsxref('Classes/Public_class_fields','公有')}}的，但可以使用增加哈希前缀 `#` 的方法来定义私有类字段，这一隐秘封装的类特性由 JavaScript 自身强制执行。
@@ -226,11 +227,11 @@ console.log(Derived.publicStaticMethod2());
 
 ## 规范
 
-{{Specifications("javascript.classes")}}
+{{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 参见
 

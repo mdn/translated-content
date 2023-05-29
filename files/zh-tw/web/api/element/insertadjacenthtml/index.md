@@ -2,6 +2,7 @@
 title: Element.insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 `insertAdjacentHTML()` 把傳入的字串解析成 HTML 或 XML，並把該節點插入到 DOM 樹指定的位置。它不會重新解析被使用的元素，因此他不會破壞該元素裡面原有的元素。這避免了序列化的複雜步驟，使得它比直接操作 `innerHTML` 快上許多。
@@ -61,7 +62,7 @@ It is not recommended you use `insertAdjacentHTML` when inserting plain text; in
 
 ## Browser compatibility
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## See also
 

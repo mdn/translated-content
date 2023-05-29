@@ -2,6 +2,7 @@
 title: document.fgColor
 slug: Web/API/Document/fgColor
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -36,4 +37,4 @@ document.bgColor = "darkblue";
 
 ### 规范
 
-{{Compat("api.Document.fgColor")}}
+{{Compat}}

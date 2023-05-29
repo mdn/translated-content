@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/starts-with
 original_slug: Web/XPath/Fonctions/starts-with
 ---
+
 {{ XsltRef() }}
 
 La fonction `starts-with` vérifie si la première chaîne débute par la seconde, et retourne `true` ou `false`.

@@ -3,9 +3,10 @@ title: デバッグ (Firefox 50 より前)
 slug: orphaned/Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 original_slug: Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)
 ---
+
 {{AddonSidebar}}
 
-> **Note:** この記事では Firefox バージョン 50 よりも前で WebExtension API を使った拡張機能のデバッグする方法を説明しています。
+> **メモ:** この記事では Firefox バージョン 50 よりも前で WebExtension API を使った拡張機能のデバッグする方法を説明しています。
 >
 > Firefox 50 以降をお使いの場合、[メイン記事の拡張機能をデバッグする](https://extensionworkshop.com/documentation/develop/debugging/)を見てください。
 
@@ -157,9 +158,9 @@ JavaScript デバッガーを使用するには、まずはブラウザーツー
 
 コンテンツスクリプトは、ロードされるまでソースリストに表示されないことに注意してください。読み込み後すぐにアクセスする必要がある場合は、スクリプトの先頭に [`debugger;`](/ja/docs/Web/JavaScript/Reference/Statements/debugger) 文を追加してみてください。
 
-> **Note:** この Browser Content Toolbox は、マルチプロセス Firefox で開発している場合にのみ必要なものであり、またその場合のみ利用可能です。
+> **メモ:** この Browser Content Toolbox は、マルチプロセス Firefox で開発している場合にのみ必要なものであり、またその場合のみ利用可能です。
 
-> **Warning:** ツールボックスのオプションでワーカーのデバッグを有効にすると、 Browser Content Toolbox でのデバッグができなくなります ([Bug 1236892](https://bugzilla.mozilla.org/show_bug.cgi?id=1236892))。
+> **警告:** ツールボックスのオプションでワーカーのデバッグを有効にすると、 Browser Content Toolbox でのデバッグができなくなります ([Bug 1236892](https://bugzilla.mozilla.org/show_bug.cgi?id=1236892))。
 
 {{EmbedYouTube("xAt3Q0PgJP4")}}
 
@@ -181,7 +182,7 @@ Firefox 47 から、ブラウザーツールボックスでポップアップの
 
 ![](disable-autohide.png)すると、 Esc キーを押した場合でもパネルが前面に表示されたままになるはずです。
 
-> **Note:** ここで設定した authohide の無効化は、拡張機能のポップアップだけでなく、 [ブラウザー本体のポップアップ](/ja/docs/Tools/Browser_Toolbox#debugging_popups) (ハンバーガーメニュー ![](hamburger.png) など) にも適用されます。
+> **メモ:** ここで設定した authohide の無効化は、拡張機能のポップアップだけでなく、 [ブラウザー本体のポップアップ](/ja/docs/Tools/Browser_Toolbox#debugging_popups) (ハンバーガーメニュー ![](hamburger.png) など) にも適用されます。
 >
 > また、この設定はブラウザーを再起動した後も引き継がれます。この件に関しては [bug 1251658](https://bugzilla.mozilla.org/show_bug.cgi?id=1251658) で修正中ですが、現時点ではブラウザーツールボックスを閉じる前に autohide を再び有効にしておくと良いでしょう。
 >

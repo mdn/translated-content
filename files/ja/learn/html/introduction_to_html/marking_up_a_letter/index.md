@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 l10n:
   sourceCommit: 358158b18ad8c2b90b83fe4dc03bdd7fd2e423da
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
 
 私たちはみんな遅かれ早かれ手紙を書くことを学びます。テキストの書式設定のスキルを試すのも便利な例です。この課題では手紙をマークアップして、ハイパーリンクや HTML の `<head>` 要素の適切な使用と同様に、 HTML テキスト整形のスキルをテストしてみます。
@@ -48,7 +49,7 @@ l10n:
 
 この課題を開始するには、[マークアップする必要がある生のテキスト](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)と、HTML に[含める必要がある CSS](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt) を入手します。テキストエディターを使用して新しい `.html` ファイルを作成し、作業を行います（または、 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) などのサイトを使用して課題を行います）。
 
-> **Note:** もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> **メモ:** もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
 
 ## 簡単なプロジェクト
 
@@ -69,7 +70,7 @@ l10n:
 - 文字の本文中の 5 つの頭字語/略語は、それぞれの頭字語/略語を拡張するためにマークアップする必要があります。
 - 6 つの下付き/上付き文字は適切にマークアップする必要があります — 化学式、および 103 と 104 の数字 (それぞれ 10 のべき乗または 3 と 4 にする必要があります)。
 - テキストの中で少なくとも 2 つの適切な単語に強い重要性と強調を設定するようにしてください。
-- ハイパーリンクを追加する場所は 2 か所あります。タイトル付きの適切なリンクを追加してください。リンクが指す場所には http\://example.com を使用してください。
+- ハイパーリンクを追加する場所は 2 か所あります。タイトル付きの適切なリンクを追加してください。リンクが指す場所には `http://example.com` を使用してください。
 - 大学のモットーのクォートと引用は適切な要素でマークアップするべきです。
 
 ### 文書のヘッド部
@@ -102,15 +103,3 @@ l10n:
     - 実際の課題または評価ページへのリンク。あなたが助けを求めている問題を探すことができます。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

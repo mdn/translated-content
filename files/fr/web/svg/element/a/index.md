@@ -7,6 +7,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 L'élément SVG **`<a>`** crée un hyperlien vers d'autres pages web, fichiers, emplacements dans la page en cours, adresses email, ou toute autre URL.
@@ -84,7 +85,7 @@ svgns|a:hover, svgns|a:active {
 - {{htmlattrxref("rel", "a")}} {{experimental_inline}}
 - {{SVGAttr("target")}}
 - {{htmlattrxref("type", "a")}}
-- {{SVGAttr("xlink:href")}} {{deprecated_inline("SVG2")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## Contexte d'utilisation
 

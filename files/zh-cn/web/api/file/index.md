@@ -2,6 +2,7 @@
 title: File
 slug: Web/API/File
 ---
+
 {{APIRef}}
 
 文件（**`File`**）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。
@@ -47,19 +48,19 @@ _`File` 接口没有定义任何方法，但是它从 {{domxref("Blob")}} 接口
 
 ## 浏览器兼容性
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### 注意事项
 
 - 在 Gecko 中，你可以从 Chrome 代码中使用这个 API。详细内容参见 [Using the DOM File API in chrome code](/zh-CN/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)。若要从 chrome 代码，JSM 和引导范围中使用它，你必须使用 `Cu.importGlobalProperties(['File']);` 来导入它。
-- 从 Gecko 6.0 {{geckoRelease("6.0")}} 开始，在特权代码（比如扩展中的代码）中，可以将一个 `nsIFile` 对象传入 `File` 构造函数，从而生成一个 File 对象。
-- 从 Gecko 8.0 {{geckoRelease("8.0")}} 开始，在 XPCOM 组件代码中，你可以直接使用 `new File` 来创建一个 `File` 对象，而不需要像以前那样必须实例化一个 `nsIDOMFile` 对象。`File` 对象和 {{domxref("Blob")}} 相反，使用第二个参数作为文件名。文件名可以是任意的字符串。
+- 从 Gecko 6.0 开始，在特权代码（比如扩展中的代码）中，可以将一个 `nsIFile` 对象传入 `File` 构造函数，从而生成一个 File 对象。
+- 从 Gecko 8.0 开始，在 XPCOM 组件代码中，你可以直接使用 `new File` 来创建一个 `File` 对象，而不需要像以前那样必须实例化一个 `nsIDOMFile` 对象。`File` 对象和 {{domxref("Blob")}} 相反，使用第二个参数作为文件名。文件名可以是任意的字符串。
 
   ```plain
   new File( Array parts, String filename, BlobPropertyBag properties);
   ```
 
-- 下列非标准属性及方法在 Gecko 7 {{geckoRelease("7.0")}} 中就被移除了： {{domxref("File.fileName")}}、{{domxref("File.fileSize")}}、{{domxref("File.getAsBinary()")}}、{{domxref("File.getAsDataURL()")}}、{{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}})。应当使用 {{domxref("File.name")}}、{{domxref("Blob.size")}}，和 {{domxref("FileReader")}} 的方法来代替。
+- 下列非标准属性及方法在 Gecko 7 中就被移除了：{{domxref("File.fileName")}}、{{domxref("File.fileSize")}}、{{domxref("File.getAsBinary()")}}、{{domxref("File.getAsDataURL()")}}、{{domxref("File.getAsText()","File.getAsText(string encoding)")}} ([Firefox bug 661876](https://bugzil.la/661876))。应当使用 {{domxref("File.name")}}、{{domxref("Blob.size")}}，和 {{domxref("FileReader")}} 的方法来代替。
 
 ## 参见
 

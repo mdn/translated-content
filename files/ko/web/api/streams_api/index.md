@@ -1,14 +1,6 @@
 ---
 title: Streams API
 slug: Web/API/Streams_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Reference
-  - Streams
-  - TopicStub
-translation_of: Web/API/Streams_API
 ---
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
@@ -22,11 +14,11 @@ Streaming은 네트워크를 통해 받은 리소스를 작은 조각으로 나�
 
 With Javascript에 Stream이 도입된 후에는 모든 것이 바뀌었는데, 이제 Buffer, String 또는 blob 없이도 Javascript를 통해 Raw Data를 비트 단위로 처리할 수 있습니다.
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+![](concept.png)
 
 장점은 또 있습니다 — Stream의 시작 또는 종료를 감지할 수 있으며, 여러 stream을 엮어서 에러를 처리하거나 필요한 경우 stream을 취소할 수도 있습니다. 또한 stream이 읽어들이는 속도에 따라 반응할 수도 있지요.
 
-Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드는 것입니다. [fetch request](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch)를 통해 정상적으로 전송된 응답 {{domxref("Body")}}는 {{domxref("ReadableStream")}}로 표현 가능합니다. 또한 {{domxref("ReadableStream.getReader()")}}를 통해 Reader 객체를 얻어 데이터를 읽을 수도 있으며, {{domxref("ReadableStream.cancel()")}}로 Stream을 취소하는 것 등이 가능합니다.
+Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드는 것입니다. {{domxref("fetch()")}}를 통해 정상적으로 전송된 응답 {{domxref("Body")}}는 {{domxref("ReadableStream")}}로 표현 가능합니다. 또한 {{domxref("ReadableStream.getReader()")}}를 통해 Reader 객체를 얻어 데이터를 읽을 수도 있으며, {{domxref("ReadableStream.cancel()")}}로 Stream을 취소하는 것 등이 가능합니다.
 
 조금 더 복잡한 사용법은 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 생성자를 통해 사용자가 직접 Stream을 생성하는 것입니다. 예를 들자면 [service worker](/ko/docs/Web/API/Service_Worker_API)에 전달할 데이터를 Stream으로 만들 수도 있습니다.
 
@@ -64,9 +56,9 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 ### 외부 API 확장
 
 - {{domxref("Request")}}
-  - : 새 `Request` 객체가 생성될 때 `RequestInit` 딕셔너리의 `body`에 {{domxref("ReadableStream")}} 를 전달할 수 있습니다. 이 `Request`는 {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 에 전달되에서 스트림을 fetch하는데 사용됩니다.
+  - : 새 `Request` 객체가 생성될 때 `RequestInit` 딕셔너리의 `body`에 {{domxref("ReadableStream")}} 를 전달할 수 있습니다. 이 `Request`는 {{domxref("fetch()")}} 에 전달되에서 스트림을 fetch하는데 사용됩니다.
 - {{domxref("Body")}}
-  - : [fetch request](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch) 성공 시 기본적으로 {{domxref("Body")}} {{domxref("ReadableStream")}}로 제공되며, reader를 붙여 데이터를 읽어들일 수 있습니다.
+  - : {{domxref("fetch()")}} 성공 시 기본적으로 {{domxref("Body")}} {{domxref("ReadableStream")}}로 제공되며, reader를 붙여 데이터를 읽어들일 수 있습니다.
 
 ### ByteStream 관련 인터페이스
 
@@ -94,7 +86,7 @@ Streams API 문서와 참조할 만한 예제를 함께 작성하였습니다 �
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

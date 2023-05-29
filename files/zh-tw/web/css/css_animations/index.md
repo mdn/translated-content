@@ -1,7 +1,8 @@
 ---
 title: CSS Animations
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Animations** is a module of CSS that defines how to animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their duration, their number of repetitions, and how they repeat.
@@ -27,9 +28,9 @@ slug: Web/CSS/CSS_Animations
 
 ## Guides
 
-- [Detecting CSS animation support](/zh-TW/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/docs/Web/CSS/CSS_animations/Detecting_CSS_animation_support)
   - : Describes a technique for detecting if the browser supports CSS animations.
-- [Using CSS animations](/zh-TW/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Using CSS animations](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.
 
 ## Specifications
@@ -38,8 +39,8 @@ slug: Web/CSS/CSS_Animations
 
 ## Browser compatibility
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 
-- Related to CSS Animations, [CSS Transitions](/zh-TW/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.
+- Related to CSS Animations, [CSS Transitions](/zh-TW/docs/Web/CSS/CSS_transitions) can trigger animations on user actions.

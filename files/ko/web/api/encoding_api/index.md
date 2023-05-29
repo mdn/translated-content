@@ -1,13 +1,8 @@
 ---
 title: 인코딩 API
 slug: Web/API/Encoding_API
-tags:
-  - API
-  - 개요
-  - 레퍼런스
-  - 인코딩
-translation_of: Web/API/Encoding_API
 ---
+
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
 **인코딩 API**는 {{Glossary("문자 인코딩", "character encodings")}}, {{Glossary("UTF-8")}}이 아닌 레거시 인코딩을 포함한 다양한 문자열을 제어할 수 있는 매커니즘을 제공한다.
@@ -23,7 +18,7 @@ translation_of: Web/API/Encoding_API
 - A [shim](http://code.google.com/p/stringencoding/) allowing to use this interface in browsers that don't support it.
 - [`StringView`](/en-US/Add-ons/Code_snippets/StringView) – a C-like representation of strings based on typed arrays.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -31,7 +26,7 @@ translation_of: Web/API/Encoding_API
 
 ### `TextDecoder`
 
-{{Compat("api.TextDecoder")}}
+{{Compat}}
 
 ### `TextEncoder`
 

@@ -4,6 +4,7 @@ slug: Web/API/Element/before
 translation_of: Web/API/Element/before
 browser-compat: api.Element.before
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.before()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste avant ce dernier.

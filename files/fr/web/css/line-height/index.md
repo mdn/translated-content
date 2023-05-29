@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/line-height
 ---
+
 {{CSSRef}}
 
 La propriété **`line-height`** définit la hauteur de la boîte d'une ligne.
@@ -62,9 +63,13 @@ La propriété `line-height` peut être définie grâce :
 - `-moz-block-height` {{non-standard_inline}}
   - : La hauteur de la ligne correspond à la hauteur du contenu pour le bloc courant.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -139,17 +144,11 @@ Il est nécessaire d'utiliser une valeur minimale de `1.5` pour la propriété `
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'line-height')}}         | {{Spec2('CSS3 Transitions')}} | `line-height` peut désormais être animée. |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-line-height', 'line-height')}} | {{Spec2('CSS2.1')}}                 | Aucun changement.                         |
-| {{SpecName('CSS1', '#line-height', 'line-height')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                      |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.line-height")}}
+{{Compat}}
 
 ## Voir aussi
 

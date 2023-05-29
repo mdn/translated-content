@@ -1,10 +1,6 @@
 ---
 title: WebGLRenderbuffer
 slug: Web/API/WebGLRenderbuffer
-tags:
-  - 레퍼런스
-  - 웹지엘
-translation_of: Web/API/WebGLRenderbuffer
 ---
 {{APIRef("WebGL")}}
 
@@ -35,7 +31,7 @@ var buffer = gl.createRenderbuffer();
 
 ## 브라우저 호환성
 
-{{Compat("api.WebGLRenderbuffer")}}
+{{Compat}}
 
 ## 함께 보기
 

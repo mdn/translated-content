@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 La propriété **`user-select`** permet de contrôler l'opération de [sélection](/fr/docs/Web/API/Selection). Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.
@@ -50,8 +51,8 @@ user-select: unset;
 
     - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
     - Si l'élément est un élément éditable, la valeur calculée est `contain`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
+    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
+    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
     - Sinon, la valeur calculée est `text`
 
 - `text`
@@ -104,13 +105,11 @@ user-select: unset;
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                                                                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Définition initiale. `-webkit-user-select` est indiqué comme étant un alias déprécié de `user-select`. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## Voir aussi
 

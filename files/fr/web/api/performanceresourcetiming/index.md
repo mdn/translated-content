@@ -10,6 +10,7 @@ tags:
   - Resource Timing API
 translation_of: Web/API/PerformanceResourceTiming
 ---
+
 {{APIRef("Resource Timing API")}}
 
 L'interface **`PerformanceResourceTiming`** permet de récupérer et d'analyser des données de synchronisation réseau détaillées concernant le chargement des _ressources_ d'une application. Une application peut utiliser les mesures temporelles pour déterminer, par exemple, la durée nécessaire à l'extraction d'une ressource spécifique, telle qu'une [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), un élément [`<svg>`](/fr/docs/Web/SVG/Element/svg), une image ou un script.

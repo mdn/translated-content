@@ -13,6 +13,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.
@@ -43,21 +44,17 @@ var getting = browser.windows.get(
 
 > **Note :**
 >
-> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de  `windowTypes` a été dépréciée à partir de Firefox 62.
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
 ### Valeur de retour
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.windows.get",2)}}
-
 ## Exemples
 
 Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URL des onglets.
 
-> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement  {{WebExtAPIRef("windows.getCurrent()")}}.
+> **Note :** Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement {{WebExtAPIRef("windows.getCurrent()")}}.
 
 ```js
 function logTabs(windowInfo) {
@@ -76,6 +73,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
 
 > **Note :**
@@ -84,7 +85,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -111,4 +113,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

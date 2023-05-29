@@ -13,6 +13,7 @@ tags:
   - alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
 ---
+
 {{AddonSidebar}}
 
 Cette interface fournit des informations sur une alarme donnée. Cet objet est retourné à partir de {{WebExtAPIRef('alarms.get()')}} et {{WebExtAPIRef('alarms.getAll()')}} et est passé au gestionnaire d'évènement {{WebExtAPIRef('alarms.onAlarm')}}.
@@ -28,9 +29,9 @@ Les valeurs de ce type sont des objets contenant les propriétés suivantes :
 - `periodInMinutes`{{optional_inline}}
   - : `double` Un nombre qui, s'il n'est pas `null`, indique que l'alarme est périodique et fournit la période.
 
-## Compatibilité des navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.Alarm")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

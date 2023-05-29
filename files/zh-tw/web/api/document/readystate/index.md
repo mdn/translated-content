@@ -2,6 +2,7 @@
 title: Document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 ## 總覽
@@ -15,11 +16,11 @@ slug: Web/API/Document/readyState
 - loading
   - : {{ domxref("document") }} 正在讀取中。
 - interactive
-  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 {{event("DOMContentLoaded")}} 事件已經被觸發。
+  - : 文件已經完成讀取和解析，但是其他的子資源，如「圖片樣式層次表」，仍然在讀取。這個狀態表示 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) 事件已經被觸發。
 - complete
-  - : 文件及子資源都完成讀取。這個狀態表示 {{event("load")}} 事件即將被觸發。
+  - : 文件及子資源都完成讀取。這個狀態表示 [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件即將被觸發。
 
-當這個屬性的數值改變時， {{event("readystatechange")}} 事件在 {{ domxref("document") }} 上觸發。
+當這個屬性的數值改變時， [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) 事件在 {{ domxref("document") }} 上觸發。
 
 ## 表達式
 
@@ -77,6 +78,6 @@ document.onreadystatechange = function () {
 
 ## 參見
 
-- {{event("readystatechange")}} event
-- {{event("DOMContentLoaded")}} event
-- {{event("load")}} event
+- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event) event
+- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) event
+- [`load`](/zh-TW/docs/Web/API/Window/load_event) event

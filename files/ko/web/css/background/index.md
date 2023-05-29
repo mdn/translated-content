@@ -1,14 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef("CSS Background")}}
 
 [CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
@@ -115,7 +109,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
+  background: url("starsolid.gif") #99f repeat-y fixed;
 }
 ```
 

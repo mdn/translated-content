@@ -1,7 +1,8 @@
 ---
 title: Iterators and generators
-slug: Web/JavaScript/Guide/Iterators_and_Generators
+slug: Web/JavaScript/Guide/Iterators_and_generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 處理集合中的每個項目是很常見的操作，JavaScript 提供了許多迭代集合的方法，從簡單的 {{jsxref("Statements/for","for")}} 循環到 {{jsxref("Global_Objects/Array/map","map()")}} 和 {{jsxref("Global_Objects/Array/filter","filter()")}}。

@@ -2,6 +2,7 @@
 title: <tt>
 slug: Web/HTML/Element/tt
 ---
+
 {{deprecated_header}}
 
 ## 概述
@@ -12,13 +13,13 @@ HTML 电报文本元素 (`<tt>`) 产生一个内联元素，使用浏览器内�
 
 ## 属性
 
-这个元素除了[全局属性](/zh-CN/docs/Web/HTML/global_attributes)之外，没有其它属性，所有元素都一样。
+这个元素除了[全局属性](/zh-CN/docs/Web/HTML/global_attributes)之外，没有其他属性，所有元素都一样。
 
 ## DOM 接口
 
 这个元素实现了 {{domxref('HTMLElement')}} 接口。
 
-> **备注：** Gecko 1.9.2（包含）之前， Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
+> **备注：** Gecko 1.9.2（包含）之前，Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
 
 ## 示例
 
@@ -43,4 +44,4 @@ The telnet client should display: `Local Echo is on`
 - {{ HTMLElement("code") }}
 - HTML 4.01 规范：[字体样式](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

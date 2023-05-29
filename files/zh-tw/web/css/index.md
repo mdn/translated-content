@@ -2,6 +2,9 @@
 title: CSS
 slug: Web/CSS
 ---
+
+{{CSSRef}}
+
 **層疊樣式表（Cascading Style Sheets, CSS）**是用來描述 [HTML](/zh-TW/docs/HTML) 或 [XML](/zh-TW/docs/XML)（包含 [SVG](/zh-TW/docs/SVG) 或 [XHTML](/zh-TW/docs/XHTML) 等各種 XML 變形）文件外觀的[樣式表](/zh-TW/docs/DOM/stylesheet)語言。CSS 會描述文件裡的結構化元素，該如何呈現在螢幕、紙、語音報讀、或其他媒介上。
 
 **CSS** 是**開放網路**的核心語言之一，具有標準化的 [W3C 規範](http://w3.org/Style/CSS/#specs)。歷經不同層級的開發，CSS1 目前已被棄用、CSS2.1 是建議規範，而 [CSS3](/zh-TW/docs/CSS/CSS3) 目前被分作數個較小的模組，持續在標準化的路上行進。
@@ -39,12 +42,12 @@ slug: Web/CSS
   - [語法](/zh-TW/docs/CSS/Syntax)
   - [權重](/zh-TW/docs/CSS/Specificity)和[繼承](/zh-TW/docs/CSS/inheritance)
   - [盒子模型](/zh-TW/docs/CSS/box_model)和[邊框的崩潰](/zh-TW/docs/CSS/margin_collapsing)
-  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/The_stacking_context)和[格式化區塊](/zh-TW/docs/CSS/block_formatting_context)
+  - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/CSS/block_formatting_context)
   - [初始值](/zh-TW/docs/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/CSS/used_value)和[運作值](/zh-TW/docs/CSS/actual_value)
   - [CSS 簡寫屬性](/zh-TW/docs/CSS/Shorthand_properties)
-  - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout)
+  - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout)
-  - [媒體查詢](/zh-TW/docs/Web/CSS/Media_Queries)
+  - [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)
 
 ## CSS 開發工具
 
@@ -56,7 +59,7 @@ slug: Web/CSS
 
 ## Meta 錯誤
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox bug 1323667](https://bugzil.la/1323667)
 
 ## 參見
 

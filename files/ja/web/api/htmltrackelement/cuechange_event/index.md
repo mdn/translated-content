@@ -2,6 +2,7 @@
 title: 'HTMLTrackElement: cuechange event'
 slug: Web/API/HTMLTrackElement/cuechange_event
 ---
+
 {{APIRef("WebVTT")}}
 
 **`cuechange`** イベントは {{domxref("TextTrack")}} が現在表示しているキューを変更した際に発生します。このイベントは `TextTrack` と、それが表示されている {{domxref("HTMLTrackElement")}} があれば、その両方で発生します。

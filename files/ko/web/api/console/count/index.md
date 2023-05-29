@@ -1,17 +1,8 @@
 ---
 title: console.count()
 slug: Web/API/console/count
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
-  - web console
-browser-compat: api.console.count
-translation_of: Web/API/Console/count
 ---
+
 {{APIRef("Console API")}}
 
 **`console.count()`** 메서드는 특정 `count()` 호출의 횟수를 세어 출력합니다.

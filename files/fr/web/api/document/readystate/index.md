@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
 La valeur **Document.readyState** est une propriété de {{ domxref("document") }} qui décrit l'état de chargement du document.

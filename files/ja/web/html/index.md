@@ -2,6 +2,7 @@
 title: 'HTML: HyperText Markup Language'
 slug: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** (HyperText Markup Language) はウェブのもっとも基本的な構成要素です。 HTML はウェブページの基本レイアウトに従ってウェブページの*コンテンツ*を記述し定義するものです。 HTML に隣接する他の技術としては、ウェブページの表示や表現を記述するもの ([CSS](/ja/docs/Web/CSS)) または機能や振る舞いを記述するもの ([JavaScript](/ja/docs/Web/JavaScript)) があります。
@@ -23,7 +24,13 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 - HTML リファレンス
   - : 広範な [HTML リファレンス](/ja/docs/Web/HTML/Reference)の章で、 HTML のすべての要素と属性についての詳細が分かります。
 
-> **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者を目指している方へ
+>
+> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## 初心者向けチュートリアル
 
@@ -43,11 +50,11 @@ HTML 要素は文書中で、 "`<`" および "`>`" で囲まれた要素名で�
 ## 高度なトピック
 
 - [CORS を利用した画像](/ja/docs/Web/HTML/CORS_enabled_image)
-  - : {{htmlattrxref("crossorigin", "img")}} 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
+  - : [`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
 - [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)
   - : [CORS](/ja/docs/Web/HTTP/CORS) をサポートするいくつかの HTML 要素（{{HTMLElement("img")}} や {{HTMLElement("video")}} など）は `crossorigin` 属性（`crossOrigin` プロパティ）を持っており、要素が取得したデータに関する CORS リクエストを設定することができます。
 - [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Preloading_content)
-  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で {{htmlattrxref("rel", "link")}} 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
+  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
 
 ## リファレンス
 

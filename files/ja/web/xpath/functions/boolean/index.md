@@ -1,11 +1,8 @@
 ---
 title: boolean
 slug: Web/XPath/Functions/boolean
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/boolean
 ---
+
 {{ XsltRef() }}
 
 `boolean` 関数は式を評価し、 true または false を返します。

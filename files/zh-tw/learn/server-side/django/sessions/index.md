@@ -1,7 +1,8 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
 本教程擴展了我們的[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為主頁添加了一個基於會話的訪問計數器。這是一個相對簡單的例子，但它確實顯示了，如何使用會話框架，為匿名用戶提供持久的行為。
@@ -139,7 +140,7 @@ def index(request):
 
 將以下區塊底部看到的行添加到\`\`動態內容''部分底部的主 HTML 模板(**/locallibrary/catalog/templates/index.html**)中以顯示上下文變量：
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -150,7 +151,9 @@ def index(request):
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }} time\{{ num_visits|pluralize }}.
+</p>
 ```
 
 保存更改，然後重新啟動測試服務器。 每次刷新頁面時，數字都會更新。
@@ -166,21 +169,3 @@ def index(request):
 - [How to use sessions](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

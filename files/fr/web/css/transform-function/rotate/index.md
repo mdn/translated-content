@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 browser-compat: css.types.transform-function.rotate
 ---
+
 {{CSSRef}}
 
 La fonction **`rotate()`** définit une transformation qui déplace un élément autour d'un point fixe (défini par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin)) sans le déformer (autrement dit, qui applique une rotation plane). C'est une rotation autour de ce point. Par défaut, cette origine correspond au centre de l'élément.

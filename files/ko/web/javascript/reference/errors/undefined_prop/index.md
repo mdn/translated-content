@@ -1,8 +1,8 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지
@@ -17,9 +17,9 @@ translation_of: Web/JavaScript/Reference/Errors/Undefined_prop
 
 ## 무엇이 잘못되었을까?
 
-이 스크립트는 존재하지 않는 객체의 속성에 접근을 시도했습니다. 요소에 접근하는 방법에는 두 가지가 있습니다.; 더 자세히 알고 싶으시다면, 속성 접근자([property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)) 참조 문서를 봐주세요.
+이 스크립트는 존재하지 않는 객체의 속성에 접근을 시도했습니다. 요소에 접근하는 방법에는 두 가지가 있습니다.; 더 자세히 알고 싶으시다면, 속성 접근자([property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)) 참조 문서를 봐주세요.
 
-정의되지 않은 속성 참조에 대한 에러는 엄격 모드 코드([strict mode code](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode))에서만 발생합니다. 비-엄격모드의 코드에서는 존재하지 않는 속성에 대한 접근은 조용히 무시됩니다.
+정의되지 않은 속성 참조에 대한 에러는 엄격 모드 코드([strict mode code](/en-US/docs/Web/JavaScript/Reference/Strict_mode))에서만 발생합니다. 비-엄격모드의 코드에서는 존재하지 않는 속성에 대한 접근은 조용히 무시됩니다.
 
 ## 예
 

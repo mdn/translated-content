@@ -6,6 +6,7 @@ browser-compat: css.selectors.host-context
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
+
 {{CSSRef}}
 
 La fonction [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host-context()`** sélectionne l'hôte sombre (<i lang="en">shadow host</i>) du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS dans lequel il est utilisé (afin de pouvoir sélectionner un élément personnalisé depuis l'intérieur de son DOM sombre), uniquement si le sélecteur fourni comme paramètre de la fonction correspond à un ancêtre de l'hôte sombre à l'emplacement qu'il occupe dans la hiérarchie du DOM.

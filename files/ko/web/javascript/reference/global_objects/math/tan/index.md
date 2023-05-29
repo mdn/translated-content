@@ -1,14 +1,8 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
-browser-compat: javascript.builtins.Math.tan
 ---
+
 {{JSRef}}
 
 **`Math.tan()`** 함수는 탄젠트 값을 반환합니다

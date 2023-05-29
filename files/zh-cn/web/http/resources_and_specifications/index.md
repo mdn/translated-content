@@ -2,6 +2,7 @@
 title: HTTP 资源与规范
 slug: Web/HTTP/Resources_and_specifications
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议于 20 世纪 90 年代初期被规范化。得益于其扩展性，该规范至今又添加了大量的补充内容。这些增补规范文档散落在网络的不同位置。本文列出了与 HTTP 协议相关的规范文档。

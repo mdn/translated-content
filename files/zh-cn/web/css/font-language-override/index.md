@@ -2,6 +2,7 @@
 title: font-language-override
 slug: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 **font-language-override** CSS 属性控制在指定的语言中使用特定的字形。
@@ -74,8 +75,8 @@ p.para2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-kerning")}}.

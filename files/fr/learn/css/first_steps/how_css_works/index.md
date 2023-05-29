@@ -3,6 +3,7 @@ title: CSS, comment ça marche ?
 slug: Learn/CSS/First_steps/How_CSS_works
 translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
 Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire des feuilles de style élémentaires. Dans cette leçon, nous allons voir comment un navigateur prend du HTML et du CSS pour les transformer en une page web.
@@ -169,11 +170,3 @@ Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le
 Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## Dans ce module
-
-1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

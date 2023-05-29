@@ -8,6 +8,7 @@ tags:
   - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
+
 {{APIRef("HTML DOM")}}
 
 Le constructeur **`Option()`** permet de créer un nouvel objet {{domxref("HTMLOptionElement")}}.
@@ -85,6 +86,8 @@ options.forEach(function(element, key) {
 
 ## Spécifications
 
-| Spécification                                                                                                                             | État           | Commentaires |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------ |
-| [HTML5 La définition de Option dans cette spécification.](http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option) | Recommendation |              |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

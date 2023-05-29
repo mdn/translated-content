@@ -1,10 +1,9 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/at
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 El método **`at()`** recibe un valor numérico entero y devuelve el elemento en esa posición, permitiendo valores positivos y negativos. Los valores negativos contarán desde el último elemento del array.

@@ -3,6 +3,7 @@ title: element()
 slug: Web/CSS/element
 original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`element()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、任意の HTML 要素から生成された {{cssxref("&lt;image&gt;")}} 値を定義します。この画像は動的で、HTML 要素が変更されると、この関数の結果を使う CSS プロパティが自動的に更新されます。
@@ -24,7 +25,7 @@ element(id)
 
 ## 例
 
-この例を[ライブで見る](https://media.prod.mdn.mozit.cloud/samples/cssref/moz-element.html)には、`-moz-element()` に対応している Firefox が必要です。
+この例を[ライブで見る](https://mdn.dev/archives/media/samples/cssref/moz-element.html)には、`-moz-element()` に対応している Firefox が必要です。
 
 <h3 id="A_somewhat_realistic_example">いくらか現実的な例</h3>
 

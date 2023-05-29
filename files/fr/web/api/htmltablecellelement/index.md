@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLTableCellElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 L'interface **`HTMLTableCellElement`** expose des méthodes et des propriétés spécifiques (s'ajoutant à celles fournies par l'interface générique {{domxref("HTMLElement")}}, également disponibles par héritage) pour l'agencement et la gestion de l'apparence des cellules de tableau dans un document HTML, qu'il s'agisse de cellules d'entête ou de données.
@@ -23,7 +24,7 @@ _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableCellElement.headers")}} {{readonlyInline}}
   - : Renvoie un objet {{domxref("DOMSettableTokenList")}} décrivant la liste des `id` des éléments {{HTMLElement("th")}} représentant les entêtes associés à la cellule. C'est une représentation de l'attribut {{htmlattrxref("headers", "td")}}.
 - {{domxref("HTMLTableCellElement.cellIndex")}} {{readonlyInline}}
-  - : Renvoie un entier long (`long`) représentant la position de la cellule dans la collection de cellules de l'élement {{HTMLElement("tr")}} auquel elle appartient. Cette propriété renvoie`-1` si la cellule n'appartient à aucun élément `<tr>.`
+  - : Renvoie un entier long (`long`) représentant la position de la cellule dans la collection de cellules de l'élement {{HTMLElement("tr")}} auquel elle appartient. Cette propriété renvoie `-1` si la cellule n'appartient à aucun élément `<tr>.`
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
   - : Renvoie un chaîne {{domxref("DOMString")}} contenant la valeur énumérée de l'attribut {{htmlattrxref("align", "td")}}. Cette propriété décrit l'alignement du contenu de la cellule compte tenu du contexte ; ses valeurs possibles sont `"left"`, `"right"`, et `"center"`.
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}

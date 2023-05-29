@@ -3,6 +3,7 @@ title: element.getAttributeNodeNS
 slug: Web/API/Element/getAttributeNodeNS
 translation_of: Web/API/Element/getAttributeNodeNS
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

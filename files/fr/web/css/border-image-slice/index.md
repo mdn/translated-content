@@ -4,6 +4,7 @@ slug: Web/CSS/border-image-slice
 translation_of: Web/CSS/border-image-slice
 browser-compat: css.properties.border-image-slice
 ---
+
 {{CSSRef}}
 
 La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété [`border-image-source`](/fr/docs/Web/CSS/border-image-source) en régions. Ces régions sont alors utilisées pour composer [l'image de bordure](/fr/docs/Web/CSS/border-image) d'un élément.

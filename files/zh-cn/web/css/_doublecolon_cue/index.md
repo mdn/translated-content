@@ -2,6 +2,7 @@
 title: '::cue (:cue)'
 slug: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 ::cue CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)匹配所选元素中的[WebVTT](en-US/docs/Web/API/WebVTT_API)提示。这可以用于在 VTT 轨道的媒体中使用字幕和其他线索。
@@ -25,8 +26,8 @@ slug: Web/CSS/::cue
 
 ## 语法
 
-```plain
-{{csssyntax}}
+```
+::cue | ::cue( <selector> )
 ```
 
 ## 示例
@@ -46,7 +47,7 @@ slug: Web/CSS/::cue
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.cue")}}
+{{Compat}}
 
 ## 参考
 

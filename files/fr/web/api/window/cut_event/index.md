@@ -11,6 +11,7 @@ tags:
   - Window
 translation_of: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 L'événement **`cut`** est déclenché lorsque l'utilisateur a lancé une action de "cut" via l'interface utilisateur du navigateur.

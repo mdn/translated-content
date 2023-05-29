@@ -1,13 +1,8 @@
 ---
 title: 대체 요소
 slug: Web/CSS/Replaced_element
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-translation_of: Web/CSS/Replaced_element
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS)의 **대체 요소**(replaced element)란 자신의 표현 결과가 CSS의 범위를 벗어나는 요소로서, CSS 서식 모델과는 분리된 외부 객체인 요소입니다.
@@ -42,14 +37,9 @@ CSS는 바깥 여백이나 일부 `auto` 값 계산 등 특정 상황에서 대�
 
 일부 대체 요소는 고유 크기 또는 정의된 기준선을 가질 수 있으며, {{cssxref("vertical-align")}} 등의 CSS 속성이 사용할 수 있습니다. 오직 대체 요소만이 고유 크기를 가질 수 있습니다.
 
-### 콘텐츠 박스 내부의 객체 위치 제어
+## 명세서
 
-특정 CSS 속성을 사용하면 대체 요소 내의 객체가 요소의 박스 영역 어디에 배치되어야 하는지 지정할 수 있으며, {{SpecName("CSS3 Images")}}와 {{SpecName("CSS4 Images")}} 명세가 정의하고 있습니다.
-
-- {{cssxref("object-fit")}}
-  - : 대체 요소의 콘텐츠 객체를 대체 요소의 박스에 어떻게 맞출지 지정합니다.
-- {{cssxref("object-position")}}
-  - : 대체 요소의 콘텐츠 객체를 정렬하는 방법을 지정합니다.
+{{Specifications}}
 
 ## 같이 보기
 

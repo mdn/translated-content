@@ -11,6 +11,7 @@ tags:
 translation_of: Web/CSS/transform-function
 browser-compat: css.types.transform-function
 ---
+
 {{CSSRef}}
 
 The **`<transform-function>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Types) represents a transformation that affects an element's appearance. Transformation [functions](/ru/docs/Web/CSS/CSS_Functions) can rotate, resize, distort, or move an element in 2D or 3D space. It is used in the {{cssxref("transform")}} property.

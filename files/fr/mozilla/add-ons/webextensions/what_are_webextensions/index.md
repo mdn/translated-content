@@ -1,57 +1,92 @@
 ---
 title: Qu'est-ce que les WebExtensions ?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+l10n:
+  source: 5d88855e1d963ca0b0c3c14aeaa6414f8386c64e
 ---
+
 {{AddonSidebar}}
 
-Une extension ajoute des fonctionnalités et des fonctions à un navigateur. Elle est créée en utilisant des technologies Web familière: HTML, CSS et JavaScript. Elle peut bénéficier des mêmes API Web que ce d'une page web où JavaScript est utilisée. Cependant, une extension a également accès à son propre ensemble d'API JavaScript. Cela signifie que vous pouvez faire beaucoup plus dans une extension que ce que vous pouvez faire dans une page Web. Voici quelques exemples de fonctionnalités d'extension possibles :
+> **Note :** Si vous connaissez déjà les concepts de base pour les extensions de navigateur, vous pouvez passer cette section et voir directement [comment s'organisent les fichiers d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension). Ensuite, utilisez [la documentation de référence](/fr/docs/Mozilla/Add-ons/WebExtensions#référence) pour commencer à construire votre extension. [L'atelier des extensions Firefox (en anglais)](https://extensionworkshop.com) vous permettra d'en savoir plus à propos des outils et méthodes de tests et de publication des extensions pour Firefox.
 
-**Améliorer ou compléter un site web** : Utiliser une extension pour ajouter de nouvelles fonctionnalités ou informations supplémentaires dans votre navigateur sur votre site Web. Permettre aux utilisateurs de collecter de l'information sur les pages qu'ils visitent pour améliorer le service que vous offrez.
+Une extension permet d'ajouter des fonctionnalités à un navigateur. Elles sont fabriquées à l'aide des technologies web usuelles&nbsp;: HTML, CSS, et JavaScript. Une extension peut utiliser les mêmes API JavaScript qu'une page web et dispose d'API JavaScript supplémentaires. Cela signifie qu'il est possible de faire plus avec une extension que ce qu'on peut faire avec une page web. Voici quelques exemples de ce qu'on peut construire.
+
+## Améliorer ou compléter un site web
+
+Une extension pourra être utilisée pour afficher des informations supplémentaires sur un site web et permettre aux personnes de collecter des informations sur les pages qu'elles visitent afin d'améliorer le service offert.
 
 ![](amazon_add_on.png)
 
-Exemples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
+Quelques exemples dans cette catégorie&nbsp;:
 
-**Laissez les utilisateurs montrer leur personnalité** : Les extensions navigateur peuvent manipuler le contenu des pages web, par exemple en permettant aux utilisateurs d'ajouter leur logo ou leur image préférée en arrière-plan à chaque page qu'ils visitent.  Les extensions peuvent également permettre aux utilisateurs de mettre à jour l'apparence de l'interface utilisatrice Firefox, de la même manière que les [add-ons de thème](/fr/Add-ons/Themes/Theme_concepts).
+- [Assistant Amazon pour Firefox](https://addons.mozilla.org/fr/firefox/addon/amazon-browser-bar/),
+- [OneNote Web Clipper](https://addons.mozilla.org/fr/firefox/addon/onenote-clipper/),
+- [Grammarly pour Firefox](https://addons.mozilla.org/fr/firefox/addon/grammarly-1/).
+
+## Permettre d'exprimer sa personnalité
+
+Les extensions permettent de manipuler le contenu des pages web. On peut ainsi imaginer une extension qui permet aux utilisatrices et utilisateurs d'afficher leur logo et arrière-plan préférés sur chaque page visitée. Les extensions permettent également de modifier l'interface utilisateur du navigateur, pour le cas de Firefox, à [la façon des thèmes](https://extensionworkshop.com/documentation/themes/).
 
 ![](myweb_new_tab_add_on.png)
 
-Exemples: [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), et [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
+Quelques exemples dans cette catégorie&nbsp;:
 
-**Ajouter ou supprimer du contenu de pages web** : vous pouvez aider les utilisateurs à bloquer les publicités intrusives sur les pages Web, à accéder à un guide de voyage chaque fois qu'un pays ou une ville est mentionné sur une page Web ou à reformater le contenu de la page. Avec la possibilité d'accéder et de mettre à jour le code HTML et CSS d'une page, vous pouvez aider les utilisateurs à voir le web comme ils le souhaitent.
+- [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-tab/cnbiadnhebmicjcbpgajglfemclnlagh),
+- [Tabliss](https://addons.mozilla.org/fr/firefox/addon/tabliss/),
+- [VivaldiFox](https://addons.mozilla.org/fr/firefox/addon/vivaldifox/).
+
+## Ajouter ou retirer du contenu aux pages web
+
+Une extension peut aider les personnes à bloquer les publicités indésirables sur les pages web, fournir un guide de voyage lorsqu'un pays ou une ville est mentionné sur une page, ou encore reformater la page afin de permettre une lecture cohérente. Grâce à leur accès en lecture et en écriture sur le HTML et le CSS d'une page, les extensions permettent de voir le Web comme on le veut.
 
 ![](ublock_origin_add_on.png)
 
-Exemples : [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/en-US/firefox/addon/reader/), et [Toolbox for Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
+Quelques exemples dans cette catégorie&nbsp;:
 
-**Ajout d'outils et de nouvelles fonctionnalités de navigation**: Ajout de nouvelles fonctionnalités à un babillard ou générez des images de code QR à partir d'URLs, de liens hypertexte ou texte de page. Grâce aux options d'interface utilisatrice flexibles et à la puissance des [APIs WebExtensions](/fr/Add-ons/WebExtensions), vous pouvez facilement ajouter de nouvelles fonctionnalités à un navigateur. Vous pouvez aussi améliorer presque toutes les fonctionnalités d'un site web ou comment celles-ci sont utilisées même si ce n'est pas votre site Web.
+- [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/),
+- [Reader](https://addons.mozilla.org/fr/firefox/addon/reader/),
+- [Toolbox for Google Play Store™](https://addons.mozilla.org/fr/firefox/addon/toolbox-google-play-store/).
+
+## Ajouter des outils et de nouvelles fonctionnalités de navigation
+
+Avec une extension, on peut ajouter de nouvelles fonctionnalités à un tableau de tâches, générer des codes QR à partir de liens ou de texte. Grâce aux différentes options d'interface et aux [API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), on peut facilement étendre les fonctionnalités du navigateur. Vous pouvez ainsi améliorer les fonctionnalités de n'importe quel site web, il n'est même pas nécessaire que ce soit le vôtre.
 
 ![](qr_code_image_generator_add_on.png)
 
-Exemples: [QR Code Image Generator](https://addons.mozilla.org/en-US/firefox/addon/qr-code-image-generator/), [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/), et [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)
+Quelques exemples dans cette catégorie&nbsp;:
 
-**Jeux** : Offrir des jeux-vidéo traditionnels, avec des fonctionnalités de jeu hors ligne ou explorer de nouvelles possibilités de jeu. (Par exemple, en intégrant le jeu dans la navigation quotidienne.)
+- [Swimlanes for Trello](https://addons.mozilla.org/fr/firefox/addon/swimlanes-for-trello/)
+- [Tomato Clock](https://addons.mozilla.org/fr/firefox/addon/tomato-clock/).
 
-![](asteroids_in_popup_add_on_.png)
+## Créer des jeux
 
-Exemples: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), et [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+On pourra créer des jeux classiques avec des fonctionnalités hors-ligne, ou encore explorer de nouvelles possibilités comme l'ajout de composantes ludiques dans la navigation de tous les jours.
 
-**Ajouter des outils de développement** : Il se peut que vous fournissez des outils de développement pour le Web dans le cadre de votre business. Il se pourrait que vous ayez développer des techniques efficaces de développement Web que vous désirez partager. Quelque soit votre situation, vous pouvez améliorer les outils de développement intégrés de Firefox en ajoutant un nouvel onglet à la barre d'outils du développeur.
+Quelques exemples dans cette catégorie&nbsp;:
+
+- [Solitaire Card Game](https://addons.mozilla.org/fr/firefox/addon/solitaire-spider-freecell/),
+- [2048 Prime](https://addons.mozilla.org/fr/firefox/addon/2048-prime/).
+
+## Ajouter des outils de développement
+
+Que vous soyez éditeur d'outils de développement web ou que vous ayez développé une technique ou une approche utile au développement web et que vous voulez partager, vous pouvez étendre les outils de développement natifs de Firefox en ajoutant un nouvel onglet à la barre d'outils des outils de développement.
 
 ![](axe_developer_tools_add_on.png)
 
-Exemples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), et [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
+Quelques exemples dans cette catégorie&nbsp;:
 
-Les Extensions pour Firefox sont construites à l'aide d'[APIs WebExtensions](/fr/Add-ons/WebExtensions), un système multi-navigateur pour développer des extensions. De manière générale, L'API est compatible avec l' [API d'extension](https://developer.chrome.com/extensions) de Google Chrome et Opera. Les extensions écrites pour ces navigateurs fonctionneraient dans la plupart des cas dans Firefox ou Microsoft Edge avec seulement quelques [changements](/fr/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). L'API est également entièrement compatible avec [Firefox multi-processus](/fr/Firefox/Multiprocess_Firefox).
+- [Web Developer](https://addons.mozilla.org/fr/firefox/addon/web-developer/),
+- [Web React Developer Tools](https://addons.mozilla.org/fr/firefox/addon/react-devtools/),
+- [aXe Developer Tools](https://addons.mozilla.org/fr/firefox/addon/axe-devtools/).
 
-Si vous avez des idées ou des questions, ou si vous avez besoin d'aide pour [migrer un module complémentaire hérité vers les API WebExtensions](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), vous pouvez nous contacter via la  [la mailing-liste dev-addons](https://mail.mozilla.org/listinfo/dev-addons) ou dans le [room des add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix).
+## Résumé
 
-## Pour aller plus loin?
+Les extensions sont construites à l'aide [de l'API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions), qui fonctionnent sur les différents navigateurs. Dans une large mesure, cette API est compatible avec [l'API extension](https://developer.chrome.com/docs/extensions/reference/) prise en charge par Google Chrome et Opera. Dans la plupart des cas, les extensions développées pour ces navigateurs pourront fonctionner dans Firefox ou Microsoft Edge avec [quelques changements mineurs](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
 
-- Parcourez le développement d'une extension simple dans [votre première extension](/fr/Add-ons/WebExtensions/Your_first_WebExtension).
-- En savoir plus sur la structure d'une extensions en consultant [Architecture d'une extension](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
-- Essayez quelques exemples d'extensions dans les [extensions exemples](/fr/Add-ons/WebExtensions/Examples).
+Si vous avez des idées ou des questions, ou que vous avez besoin d'aide pour [migrer une extension historique afin qu'elle utilise l'API WebExtensions](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), vous pouvez nous contacter [sur le forum Discourse Add-ons (en anglais)](https://discourse.mozilla.org/c/add-ons/35) ou dans [le salon Add-ons (en anglais)](https://chat.mozilla.org/#/room/#addons:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix).
+
+## Voir aussi
+
+- Développer une extension simple, étape par étape avec le guide [Votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
+- En savoir plus sur la structure d'une extension avec l'article [Anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- Tester quelques extensions de démonstration sur la page [Exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)

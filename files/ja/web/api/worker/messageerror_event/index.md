@@ -5,6 +5,7 @@ original_slug: Web/API/Worker/onmessageerror
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef}}
 
 `messageerror` イベントは、 {{domxref('Worker')}} オブジェクトに、解読 (deserialize) できないメッセージを受け取ったときに発生します。

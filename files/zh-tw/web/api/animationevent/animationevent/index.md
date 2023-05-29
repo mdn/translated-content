@@ -3,9 +3,8 @@ title: AnimationEvent.initAnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
-{{ apiref("Web Animations API") }}
 
-## Summary
+{{ apiref("Web Animations API") }}
 
 The **`AnimationEvent.initAnimationEvent()`** method Initializes an animation event created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} method.
 
@@ -46,7 +45,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## See also
 

@@ -12,6 +12,7 @@ tags:
   - zoomFullPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
@@ -23,9 +24,9 @@ Valeurs du paramètre:
 - `true`: le zoom s'applique à la page web en entier (par défaut).
 - `false`: le zoom s'applique au texte de la page web seulement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.zoomFullPage")}}
+{{Compat}}
 
 ## Exemples
 

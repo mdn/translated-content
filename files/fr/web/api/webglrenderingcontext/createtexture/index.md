@@ -10,6 +10,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createTexture
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.createTexture()`** de l'API WebGL crée et initialise un objet {{domxref("WebGLTexture")}}.

@@ -1,7 +1,8 @@
 ---
-title: 'Django 教學 2: 創建一個骨架網站'
+title: "Django 教學 2: 創建一個骨架網站"
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"，在這個框架的基礎上，你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates )。
@@ -28,7 +29,7 @@ Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"�
 1. 使用 `django-admin`工具創建工程的文件夾，基本的文件模板和工程管理腳本（**manage.py**）。
 2. 用 **manage.py** 創建一個或多個*應用*。
 
-    > **備註：** 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django 鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。
+   > **備註：** 一個網站可能由多個部分組成，比如，主要頁面，博客，wiki，下載區域等。Django 鼓勵將這些部分作為分開的應用開發。如果這樣的話，在需要可以在不同的工程中復用這些應用。
 
 3. 工程裡註冊新的應用。
 4. 為每個應用分配 url。
@@ -170,7 +171,7 @@ TIME_ZONE = 'Asia/Taipei'
 有兩個設置你現在不會用到，不過你應該留意：
 
 - `SECRET_KEY`. 這個密匙值，是 Django 網站安全策略的一部分。如果在開發環境中，沒有保護好這個密匙，把代碼投入生產環境時，最好用不同的密匙代替。（可能從環境變量或文件中讀取）。
-- `DEBUG`. 這個會在 debug 日誌裡輸出錯誤信息，而不是輸入 H​​TTP 的返回碼。在生產環境中，它應設置為 false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。
+- `DEBUG`. 這個會在 debug 日誌裡輸出錯誤信息，而不是輸入 HTTP 的返回碼。在生產環境中，它應設置為 false，因為輸出的錯誤信息，會幫助想要攻擊網站的人。
 
 ## 鏈接 URL 映射器
 
@@ -352,21 +353,3 @@ python3 manage.py runserver
 - [Applications](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## 本教程連結
-
-- [Django 介紹](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [設定 Django 開發環境](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django 教學: 本地圖書館網站](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django 教學 第 2 部分: 建立網站骨架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django 教學 第 3 部分: 使用模型](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django 教學 第 4 部分: Django 的管理員頁面](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django 教學 第 5 部分: 創建我們的首頁](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django 教學 第 6 部分: 通用列表與詳細視圖](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django 教學 第 7 部分: 會話 (Sessions) 框架](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django 教學 第 8 部分: 使用者的身分驗證與權限](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django 教學 第 9 部分: 使用表單](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django 教學 第 10 部分: 測試 Django 網頁應用](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django 教學 第 11 部分: 部署 Django 到生產環境(production)](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django 網頁應用安全](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django 迷你部落格](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -2,6 +2,7 @@
 title: Position
 slug: Web/API/GeolocationPosition
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Position`** 介面表示在給定時間相關裝置的位置。這個位置用一個 {{domxref("Coordinates")}} 物件表示，包括裝置在地球上的二維位置，以及裝置的海拔高度和速度。
@@ -25,7 +26,7 @@ _`Position` 介面沒有繼承任何屬性_
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPosition")}}
+{{Compat}}
 
 ## 請參考
 

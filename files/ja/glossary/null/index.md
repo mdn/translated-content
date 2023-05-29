@@ -2,6 +2,7 @@
 title: 'Null'
 slug: Glossary/Null
 ---
+
 コンピュータサイエンス分野において、一般的に **`null`** という値は、存在しないまたは無効な{{glossary("object","オブジェクト")}}やアドレスへのポインター参照を表します。 null による参照が持つ意味は、言語実装によって様々です。
 
 {{Glossary("JavaScript")}} では、 `null` は動作がプリミティブらしく見えるので、{{Glossary("Primitive", "プリミティブ値")}}の一つであるとされています。
@@ -25,4 +26,4 @@ typeof null === 'object' // true
 
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
 - JavaScript のグローバルオブジェクト: {{jsxref("null")}}
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Null")}}」
+- Wikipedia 上の記事「[Null](https://ja.wikipedia.org/wiki/Null)」

@@ -1,7 +1,8 @@
 ---
 title: Notification.renotify
-slug: Web/API/notification/renotify
+slug: Web/API/Notification/renotify
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 `renotify` 是 {{domxref("Notification")}} 接口的只读属性，如果有新的通知替换了一个旧的通知，这个属性指明用户是否应该重新收到通知。它也可以通过{{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` option 来指定。
@@ -32,7 +33,7 @@ var n = new Notification('Test notification',options);
 n.renotify // should return true
 ```
 
-## 使用注意
+## 使用说明
 
 renotify 覆盖通知选项必须搭配 tag 标签选项进行使用，否则会收到错误通知。
 

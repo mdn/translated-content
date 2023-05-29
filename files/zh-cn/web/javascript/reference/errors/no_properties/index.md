@@ -2,6 +2,7 @@
 title: 'TypeError: "x" has no properties'
 slug: Web/JavaScript/Reference/Errors/No_properties
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息
@@ -19,14 +20,14 @@ TypeError: undefined has no properties
 
 {{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
 
-## 例子
+## 示例
 
 ```js example-bad
 null.foo;
-// 错误类型: null 没有这个属性
+// 错误类型：null 没有这个属性
 
 undefined.bar;
-// 错误类型: undefined 没有这个属性
+// 错误类型：undefined 没有这个属性
 ```
 
 ## 参考

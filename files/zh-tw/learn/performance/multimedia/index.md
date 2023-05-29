@@ -1,8 +1,9 @@
 ---
-title: '多媒體: 圖像跟影片'
+title: 多媒體：圖像跟影片
 slug: Learn/Performance/Multimedia
 original_slug: Learn/Performance/多媒體
 ---
+
 媒體，換句話說就是圖像跟影片，平均占了網站超過 70%的下載流量。以下載的效能來考慮的話，減少媒體數量和檔案大小是一個簡單可以實現的目標。 這篇文章聚焦在優化圖像跟影片來改善網站的效能。
 
 > **備註：** 這是一篇進階的在 web 上優化多媒體的介紹，包含基本的原則還有技巧，想了更多的話，可以看 <https://images.guide>。
@@ -88,7 +89,12 @@ original_slug: Learn/Performance/多媒體
 為了確保循環播放背景影像，你需要向影像標籤裡添加多個屬性： `autoplay`, `muted`, 以及 `playsinline.`
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" src="backgroundvideo.mp4">
+<video
+  autoplay=""
+  loop=""
+  muted="true"
+  playsinline=""
+  src="backgroundvideo.mp4"></video>
 ```
 
 雖然屬性 `loop` 和 `autoplay` 在對於影像的循環跟自動播放很合理，可是 `muted` 屬性在行動裝置的瀏覽器裡是必須添加的。
@@ -101,9 +107,8 @@ original_slug: Learn/Performance/多媒體
 
 ```html
 <video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
-  <source src="banner_video.webm"
-          type='video/webm; codecs="vp8, vorbis"'>
-  <source src="web_banner.mp4" type="video/mp4">
+  <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
+  <source src="web_banner.mp4" type="video/mp4" />
 </video>
 ```
 

@@ -1,12 +1,8 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/min-height
 ---
+
 {{CSSRef}}
 
 **`max-height`** [CSS](/ko/docs/CSS) 속성은 요소의 최소 높이를 설정합니다. `min-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 작아지는걸 방지합니다.

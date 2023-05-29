@@ -2,6 +2,7 @@
 title: Parse (解析)
 slug: Glossary/Parse
 ---
+
 解析(Parsing)とは、プログラムを解析し、例えばブラウザー内の {{glossary("JavaScript")}} エンジンといった実行環境で、実際に実行できる内部形式に変換することを意味します。
 
 [ブラウザーは HTML を解析](/ja/docs/Web/Guide/HTML/HTML5/HTML5_Parser)して {{glossary("DOM")}} ツリーに変換します。HTML の解析処理は[トークン化](/ja/docs/Web/API/DOMTokenList)とツリーの構築を含みます。HTML トークンは、属性の名前や値と同じように、開始タグと終了タグを含みます。文書が適切に構造化されていれば、その解析処理は単純で速くなります。パーサーはトークン化された入力内容を解析してドキュメントに変換し、ドキュメントツリーを作り上げます。

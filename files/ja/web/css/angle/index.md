@@ -2,6 +2,7 @@
 title: <angle>
 slug: Web/CSS/angle
 ---
+
 {{ CSSRef() }}
 
 **`<angle>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、度、グラード、ラジアン、周の値で表される角度の値を表します。例えば、 {{cssxref("&lt;gradient&gt;")}} 関数や一部の {{cssxref("transform")}} 関数などで使われています。

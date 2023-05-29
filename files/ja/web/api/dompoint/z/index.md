@@ -2,6 +2,7 @@
 title: DOMPoint.z
 slug: Web/API/DOMPoint/z
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェースの **`z`** プロパティは、空間内の点の奥行き座標を指定します。

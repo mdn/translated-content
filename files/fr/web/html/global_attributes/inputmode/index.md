@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/inputmode
 original_slug: Web/HTML/Attributs_universels/inputmode
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`inputmode`** est un attribut à valeur contrainte qui fournit une indication au navigateur quant au type de donnée qui peut être saisi par l'utilisateur lors de l'édition de l'élément ou de son contenu. Les valeurs autorisées sont les suivantes :

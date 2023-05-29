@@ -3,6 +3,7 @@ title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
 original_slug: Web/API/Window.requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame()`**方法通知瀏覽器我們想要產生動畫，並且要求瀏覽器在下次重繪畫面前呼叫特定函數更新動畫。這個方法接受一個引數作為下次重繪前調用的回呼函數。
@@ -32,12 +33,13 @@ window.requestAnimationFrame(callback);
 
 ```js
 var start = null;
-var element = document.getElementById('SomeElementYouWantToAnimate');
+var element = document.getElementById("SomeElementYouWantToAnimate");
 
 function step(timestamp) {
   if (!start) start = timestamp;
   var progress = timestamp - start;
-  element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
+  element.style.transform =
+    "translateX(" + Math.min(progress / 10, 200) + "px)";
   if (progress < 2000) {
     window.requestAnimationFrame(step);
   }
@@ -56,13 +58,13 @@ Edge 低於 17 的版本和 Internet Explorer 無法保證在繪製循環前觸�
 
 ## 瀏覽器相容性
 
-{{Compat("api.Window.requestAnimationFrame")}}
+{{Compat}}
 
 ## 其他參考
 
 - {{domxref("Window.mozAnimationStartTime")}}
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html) - Blog post
+- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) - Blog post
 - [requestAnimationFrame for smart animating](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with javascript: from setInterval to requestAnimationFrame](http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1](http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx) - Blog post

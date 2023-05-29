@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean
 browser-compat: javascript.builtins.Boolean
 ---
+
 {{JSRef}}
 
 L'objet **`Boolean`** est une enveloppe objet pour représenter une valeur booléenne.

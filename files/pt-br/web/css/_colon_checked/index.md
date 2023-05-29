@@ -1,18 +1,11 @@
 ---
 title: ':checked'
 slug: Web/CSS/:checked
-tags:
-  - ':checked'
-  - CSS
-  - CSS Pseudo-classe
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
-A [pseudo-classe ](/pt-BR/docs/Web/CSS/Pseudo-classes)**`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
 
 ## Sintaxe
 
@@ -58,9 +51,6 @@ option:checked {
 
 - `input[type="radio"]:checked`
   - : Representa todos os botões de rádio na página que estão ativos
-
-<!---->
-
 - `input[type="checkbox"]:checked`
   - : Representa todos os checkboxes na página que estão ativos
 - `option:checked`
@@ -68,8 +58,8 @@ option:checked {
 
 ### Usando checkboxes escodindos para amarzenar algum valor booleano.
 
-A pseudo-classe `:checked `aplicada em checkboxes escondidos, adicionado ao início de sua página pode
-ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html "Expandable elements through the :checked pseudoclass")).
+A pseudo-classe `:checked` aplicada em checkboxes escondidos, adicionado ao início de sua página pode
+ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por uma regra CSS. O exemplo a seguir mostra como exibir/esconder um elemento expansível com um simples clique em um botão ([download esse demo](/@api/deki/files/6246/=expandable-elements.html)).
 
 ```css
 #expand-btn {
@@ -141,9 +131,9 @@ ser aplicada de forma a armazenar algum booleano dinâmico para ser usado por um
 
 ### Usando radioboxes escondidos para armazenar algum valor CSS booleano
 
-Você também pode usar a pseudo-classe `:checked `aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](/@api/deki/files/6268/=css-checked-gallery.zip) como uma dica.
+Você também pode usar a pseudo-classe `:checked`aplicada a um radioboxe escondido afim de construir, por exemplo, uma **galeria de imagem onde as imagens apenas sejam exibidas no tamanho cheio com o clique do mouse em visualizar.** Veja [essa demonstração](/@api/deki/files/6268/=css-checked-gallery.zip) como uma dica.
 
-> **Note:** **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover "CSS/:hover")` `sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover "CSS/:hover")`.`
+> **Nota:** Para um efeito análogo, mas baseada na pseudo-classe [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover) sem radioboxes escondidos, veja [essa demostração](/@api/deki/files/6247/=css-gallery.zip), tomadas a partir de uma página [`:hover`](/pt-BR/docs/Web/CSS/%3Ahover).
 
 ## Especificações
 

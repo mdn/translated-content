@@ -2,9 +2,10 @@
 title: unhandledrejection
 slug: Web/API/Window/unhandledrejection_event
 ---
+
 {{APIRef("HTML DOM")}}
 
-当 {{jsxref("Promise")}} 被 reject 且没有 reject 处理器的时候，会触发 **`unhandledrejection`** 事件；这可能发生在 {{domxref("window")}} 下，但也可能发生在 {{domxref("Worker")}} 中。 这对于调试和为意外情况提供后备错误处理非常有用。
+当 {{jsxref("Promise")}} 被 reject 且没有 reject 处理器的时候，会触发 **`unhandledrejection`** 事件；这可能发生在 {{domxref("window")}} 下，但也可能发生在 {{domxref("Worker")}} 中。这对于调试和为意外情况提供后备错误处理非常有用。
 
 <table class="properties">
   <tbody>
@@ -38,7 +39,7 @@ slug: Web/API/Window/unhandledrejection_event
 - `reason`
   - : 将会传入异常处理方法中的错误原因（如果存在），查看 {{jsxref("Promise.catch", "catch()")}} 相关以获取更多细节。
 
-## 使用备注
+## 使用说明
 
 允许 `unhandlejection` 事件冒泡将最终导致向控制台输出错误消息。可以通过调用 {{domxref("PromiseRejectionEvent")}} 上的 {{domxref("Event.preventDefault", "preventDefault()")}} 来阻止这种情况；请参阅下面的[阻止默认处理](#阻止默认处理)示例。
 
@@ -88,6 +89,6 @@ window.addEventListener('unhandledrejection', function (event) {
 
 ## 参见
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [Promise 拒绝事件](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#promise_拒绝事件)
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}} 事件
 - {{domxref("Promise")}}

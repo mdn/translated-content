@@ -1,15 +1,8 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS 데이터 타입
-  - CSS 디스플레이
-  - display-internal
-  - 자료형
-  - 참조
-translation_of: Web/CSS/display-internal
 ---
+
 {{CSSRef}}
 
 `table`과 `ruby` 같은 몇몇 레이아웃 모델은 복잡한 내부 구조를 가지고 있으며, 자식이나 자손들로 채울 수 있는 다양한 역할을 가지고 있습니다. 이 페이지는 이러한 "내재적인" 디스플레이 값을 정의하며, 이들은 특정 레이아웃 모드 안에서만 의미를 가집니다.
@@ -85,11 +78,9 @@ label, input {
 
 {{EmbedLiveSample('CSS_tables_example', '100%', 100)}}
 
-## 사양
+## 명세서
 
-| 사양                                                                                                     | 상태                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## 브라우저 호환성
 

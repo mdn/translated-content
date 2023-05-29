@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。

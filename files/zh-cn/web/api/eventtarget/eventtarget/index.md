@@ -2,6 +2,7 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 ---
+
 {{APIRef("DOM")}}
 
 **`EventTarget()`** 构造方法将会创建一个新的 {{domxref("EventTarget")}} 对象实例。

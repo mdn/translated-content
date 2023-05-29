@@ -2,6 +2,7 @@
 title: Window.scroll()
 slug: Web/API/Window/scroll
 ---
+
 {{APIRef}}
 
 ## 概述

@@ -2,9 +2,10 @@
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 ---
+
 {{JSRef}}
 
-**`Object.getOwnPropertyNames()`**方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
+**`Object.getOwnPropertyNames()`** 方法返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
 
 ## 语法
 
@@ -23,7 +24,7 @@ Object.getOwnPropertyNames(obj)
 
 ## 描述
 
-`Object.getOwnPropertyNames()` 返回一个数组，该数组对元素是 `obj`自身拥有的枚举或不可枚举属性名称字符串。 数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。
+`Object.getOwnPropertyNames()` 返回一个数组，该数组对元素是 `obj`自身拥有的枚举或不可枚举属性名称字符串。数组中枚举属性的顺序与通过 {{jsxref("Statements/for...in", "for...in")}} 循环（或 {{jsxref("Object.keys")}}）迭代该对象属性时一致。数组中不可枚举属性的顺序未定义。
 
 ## 示例
 
@@ -129,7 +130,7 @@ Object.getOwnPropertyNames('foo');
 
 ## Firefox-specific notes
 
-Firefox 28 {{geckoRelease("28")}}之前，`Object.getOwnPropertyNames` 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ({{bug("724768")}})。
+Firefox 28 之前，`Object.getOwnPropertyNames` 不会获取到 {{jsxref("Error")}} 对象的属性。该 bug 在后面的版本修复了 ([Firefox bug 724768](https://bugzil.la/724768))。
 
 ## 相关链接
 

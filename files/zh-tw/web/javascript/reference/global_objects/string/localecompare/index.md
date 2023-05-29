@@ -2,6 +2,7 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** 回傳一個數字，用來表示其與被比較的字串的先後順序。
@@ -67,9 +68,9 @@ localeCompare(compareString, locales, options)
 
 ```js
 // "a" 在 "c" 之前，所以會回傳負數
-'a'.localeCompare('c'); // -2 、 -1 或是其他負數值
+'a'.localeCompare('c'); // -2、-1 或是其他負數值
 // 按字母順序，“check”的順序在“against”之後，所以回傳正數
-'check'.localeCompare('against'); // 2 、 1 或其他證數值
+'check'.localeCompare('against'); // 2、1 或其他正數值
 // "a" 和 "a" 相同，所以回傳 0
 'a'.localeCompare('a'); // 0
 ```

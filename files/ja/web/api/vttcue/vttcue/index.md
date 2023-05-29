@@ -2,6 +2,7 @@
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 **`VTTCue()`** コンストラクタは新しい {{domxref("VTTCue")}} オブジェクトを返します。
@@ -30,9 +31,7 @@ var cue = new VTTCue(2, 3, 'かっこいい文章を表示する');
 
 ## 仕様
 
-| 仕様                                                                         | 状態                     | コメント |
-| ---------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT", "#dom-vttcue-vttcue", "VTTCue()")}} | {{Spec2("WebVTT")}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

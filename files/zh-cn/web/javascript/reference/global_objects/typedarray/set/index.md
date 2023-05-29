@@ -2,15 +2,19 @@
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
+
 {{JSRef}}
 
 **`set()`** 方法用于从指定数组中读取值，并将其存储在类型化数组中。
 
 ## 语法
 
-```plain
-typedarray.set(array[, offset])
-typedarray.set(typedarray[, offset])
+```js-nolint
+set(array)
+set(array, targetOffset)
+
+set(typedarray)
+set(typedarray, targetOffset)
 ```
 
 ### 参数
@@ -50,6 +54,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## 另见
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

@@ -2,9 +2,10 @@
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
 ---
-{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-{{domxref("URLSearchParams")}}接口的 getAll() 方法，以数组的形式返回与指定搜索参数对应的所有值。
+{{ApiRef("URL API")}}
+
+{{domxref("URLSearchParams")}}接口的 **`getAll()`** 方法以数组的形式返回与指定搜索参数对应的所有值。
 
 ## 语法
 
@@ -39,4 +40,4 @@ console.log(params.getAll('foo')) //输出 ["1","4"].
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.getAll")}}
+{{Compat}}

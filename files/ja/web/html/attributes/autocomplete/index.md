@@ -11,11 +11,11 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
 提案値の情報源は、一般にブラウザーに依存します。ふつうは、ユーザーが入力した過去の値からとりますが、あらかじめ構成された値から取得することもあります。例えば、ブラウザーはユーザーに名前、住所、電話番号、メールアドレスを自動補完するために保存させることができます。おそらく、ブラウザーは以降の認証手続で自動補完を行うために、クレジットカード情報を暗号化して保存する機能を提供しています。
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または `<form>` 要素で `id` がその要素の {{htmlattrxref("form", "input")}} 属性で指定されているものの `autocomplete` 属性の値を使用します。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または `<form>` 要素で `id` がその要素の [`form`](/ja/docs/Web/HTML/Element/input#form) 属性で指定されているものの `autocomplete` 属性の値を使用します。
 
-詳しくは、 {{HTMLElement("form")}} 要素の {{htmlattrxref("autocomplete", "form")}} 属性をご覧ください。
+詳しくは、 {{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
 
-> **Note:** 自動補完を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
+> **メモ:** 自動補完を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
 >
 > 1. `name` や `id` 属性を持つこと
 > 2. `<form>` 要素の子孫であること
@@ -27,7 +27,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
   - : ブラウザーはこのフィールドの値を自動的に入力または選択することが許可されていません。文書やアプリケーションが独自の自動補完機能を提供していたり、セキュリティ上の理由でフィールドの値を自動的に入力しないよう要求していたりする可能性はあります。
 
-    > **Note:** ほとんどの現行ブラウザーでは `autocomplete` 属性を "`off`" に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。 [autocomplete 属性とログインフィールド](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)をご覧ください。
+    > **メモ:** ほとんどの現行ブラウザーでは `autocomplete` 属性を "`off`" に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。 [autocomplete 属性とログインフィールド](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)をご覧ください。
 
 - "`on`"
   - : ブラウザーが自動的に入力を補完することが許可されています。フィールドに求められているデータ型としてのガイダンスが提供されていないので、ブラウザーは独自の判断を行うかもしれません。
@@ -139,7 +139,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
 詳しくは [WHATWG 仕様書](https://html.spec.whatwg.org/multipage/forms.html#autofill) をご覧ください。
 
-> **Note:** Firefox は他のブラウザーとは異なり、 `autocomplete` 属性で、ページを再読み込みしても `<input>` を [動的に無効化した状態や (該当する場合は) 動的に変更したチェック状態を維持するか](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) を制御します。この維持機能は、既定で有効です。 `autocomplete` 属性の値に `off` を設定すると、この機能を無効化できます。またこの設定は、`type` 属性が通常 `autocomplete` を適用しない値である `<input>` 要素でも有効です。 {{bug(654072)}} をご覧ください。
+> **メモ:** Firefox は他のブラウザーとは異なり、 `autocomplete` 属性で、ページを再読み込みしても `<input>` を [動的に無効化した状態や (該当する場合は) 動的に変更したチェック状態を維持するか](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) を制御します。この維持機能は、既定で有効です。 `autocomplete` 属性の値に `off` を設定すると、この機能を無効化できます。またこの設定は、`type` 属性が通常 `autocomplete` を適用しない値である `<input>` 要素でも有効です。 [Firefox バグ 654072](https://bugzil.la/654072) をご覧ください。
 
 ## 例
 

@@ -3,9 +3,10 @@ title: Doc sprints
 slug: orphaned/MDN/Community/Doc_sprints
 original_slug: MDN/Community/Doc_sprints
 ---
+
 {{MDNSidebar}}
 
-> **Note:**The MDN community often held doc sprints during 2010-2013. Starting in 2014, these events were broadened in scope to "[Hack on MDN](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/)" events that include code hacking as well as documentation projects. Most of the advice below applies equally well to "Hack" sprints and documentation sprints.
+> **メモ:**The MDN community often held doc sprints during 2010-2013. Starting in 2014, these events were broadened in scope to "[Hack on MDN](https://blog.mozilla.org/community/2015/04/17/a-highly-productive-hack-on-mdn-weekend-in-berlin/)" events that include code hacking as well as documentation projects. Most of the advice below applies equally well to "Hack" sprints and documentation sprints.
 
 これは、Doc sprint（集中的な文書関連イベントを実施する短い期間）を組織化するためのガイドです。Doc sprint を組織化した経験者からのアドバイス、コツを含み、あなたが同じことがをする助けとなるものです。このガイドはまた、[FLOSS Manuals Book Sprints](http://en.flossmanuals.net/book-sprints/book-sprints/_draft/_v/1.0/introduction/) という書籍からのアイディアを引用しています。
 

@@ -10,6 +10,7 @@ translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Reference/Instructions/bloc
 browser-compat: javascript.statements.block
 ---
+
 {{jsSidebar("Statements")}}
 
 Une **instruction de bloc** est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un [label](/fr/docs/Web/JavaScript/Reference/Statements/label).

@@ -2,6 +2,7 @@
 title: 'Location: toString()'
 slug: Web/API/Location/toString
 ---
+
 {{ApiRef("Location")}}
 
 **`toString()`**{{domxref("Location")}}接口的 stringifier 方法返回包含整个 URL 的{{domxref("USVString")}}}。它是{{domxref("Location.href")}}的只读版本。
@@ -26,4 +27,4 @@ var result = anchor.toString(); // Returns: 'https://developer.mozilla.org/en-US
 
 ## 浏览器兼容性
 
-{{Compat("api.Location.toString")}}
+{{Compat}}

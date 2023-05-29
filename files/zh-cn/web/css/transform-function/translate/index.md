@@ -3,11 +3,12 @@ title: translate()
 slug: Web/CSS/transform-function/translate
 original_slug: Web/CSS/transform-function/translate()
 ---
+
 {{CSSRef}}
 
 **`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。
 
-![](https://mdn.mozillademos.org/files/12121/translate.png)
+![](translate.png)
 
 该变换由二维向量构成。它的坐标定义了元素在每个方向上移动了多少。
 
@@ -91,11 +92,11 @@ transform: translate(30%, 50%);
 
 ### 形式语法
 
-```
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+```css
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
-## 例子
+## 示例
 
 ### 使用单个轴平移
 
@@ -124,7 +125,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}
+{{EmbedLiveSample("使用单个轴平移", 250, 250)}}
 
 ### y 轴和 x 轴都平移
 
@@ -153,7 +154,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}
+{{EmbedLiveSample("y 轴和 x 轴都平移", 250, 250)}}
 
 ## 规范
 
@@ -163,7 +164,7 @@ div {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

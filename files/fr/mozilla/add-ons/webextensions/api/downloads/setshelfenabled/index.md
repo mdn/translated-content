@@ -13,9 +13,10 @@ tags:
   - setShelfEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
+
 {{AddonSidebar()}}
 
-La fonction  **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
+La fonction **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.
 
 Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a déjà désactivé, l'appel échouera et {{WebExtAPIRef("runtime.lastError")}} sera défini avec un message d'erreur approprié.
 
@@ -27,16 +28,16 @@ Si vous essayez d'activer l'étagère lorsqu'au moins une autre extension l'a d�
 chrome.downloads.setShelfEnabled(enabled);
 ```
 
-Cette API est également disponible en tant que  `browser.downloads.setShelfEnabled()`.
+Cette API est également disponible en tant que `browser.downloads.setShelfEnabled()`.
 
 ### Paramètres
 
 - `enabled`
   - : Un `boolean` l'état que vous souhaitez définir `setShelfEnabled()` à — `true` pour activer et `false` pour désactiver.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.setShelfEnabled")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -46,7 +47,8 @@ Cette API est également disponible en tant que  `browser.downloads.setShelfEnab
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,4 +75,4 @@ Cette API est également disponible en tant que  `browser.downloads.setShelfEnab
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

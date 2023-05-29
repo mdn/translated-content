@@ -9,6 +9,7 @@ tags:
   - évènements
 translation_of: Web/API/EventTarget/EventTarget
 ---
+
 {{APIRef("DOM Events")}}
 
 Le constructeur **`EventTarget()`** crée une nouvelle instance d'objet {{domxref("EventTarget")}}.

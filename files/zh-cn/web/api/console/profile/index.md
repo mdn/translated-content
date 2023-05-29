@@ -1,7 +1,8 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
+slug: Web/API/console/profile
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 开始记录性能描述信息 (例如， [Firefox performance tool](/zh-CN/docs/Tools/Performance))。
@@ -25,7 +26,7 @@ console.profile(profileName);
 
 ## 浏览器兼容性
 
-{{Compat("api.console.profile")}}
+{{Compat}}
 
 ## 参见
 

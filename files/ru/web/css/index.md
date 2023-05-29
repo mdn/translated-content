@@ -15,23 +15,24 @@ tags:
   - Стиль
 translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
-**Cascading Style Sheets** (**CSS**) — это язык иерархических правил ([таблиц стилей](/ru/docs/DOM/stylesheet)), используемый для представления внешнего вида документа, написанного на [HTML](/ru/docs/HTML "The HyperText Mark-up Language") или [XML](/ru/docs/XML "ru/docs/XML") (включая различные языки XML, такие как [SVG](/ru/docs/SVG) и [XHTML](/ru/docs/XHTML)). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.
+**Cascading Style Sheets** (**CSS**) — это язык иерархических правил ([таблиц стилей](/ru/docs/DOM/stylesheet)), используемый для представления внешнего вида документа, написанного на [HTML](/ru/docs/HTML) или [XML](/ru/docs/XML) (включая различные языки XML, такие как [SVG](/ru/docs/SVG) и [XHTML](/ru/docs/XHTML)). CSS описывает, каким образом элемент должен отображаться на экране, на бумаге, голосом или с использованием других медиа средств.
 
-**CSS** является одним из основных языков _свободной веб-разработки,_ который стандартизован [спецификацией W3C](http://w3.org/Style/CSS/#specs). Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а [CSS3](/ru/docs/CSS/CSS3 "CSS3"), разбитый на более мелкие модули, развивается на пути стандартизации.
+**CSS** является одним из основных языков _свободной веб-разработки,_ который стандартизован [спецификацией W3C](http://w3.org/Style/CSS/#specs). Стандарт CSS делится на уровни: CSS1 в настоящее время устарел, CSS2.1 — рекомендован для применения, а [CSS3](/ru/docs/CSS/CSS3), разбитый на более мелкие модули, развивается на пути стандартизации.
 
 - Справочник по CSS
 
-  [Исчерпывающий справочник](/ru/docs/Web/CSS/Reference "ru/docs/CSS/CSS_Reference") для опытных веб-разработчиков, описывающий каждое свойство и понятие CSS.
+  [Исчерпывающий справочник](/ru/docs/Web/CSS/Reference) для опытных веб-разработчиков, описывающий каждое свойство и понятие CSS.
 
 - Самоучитель по CSS
 
-  [Пошаговое руководство](/Learn/CSS/Introduction_to_CSS "ru/docs/CSS/Getting_Started") для помощи начинающим программистам CSS. Содержит все необходимые основы.
+  [Пошаговое руководство](/Learn/CSS/Introduction_to_CSS) для помощи начинающим программистам CSS. Содержит все необходимые основы.
 
 - Примеры CSS3
 
-  [Набор примеров](/ru/demos/tag/tech:css3 "https://developer.mozilla.org/ru/demos/tag/tech:css3") представляющий новейшие технологии CSS в действии: толчок к креативности.
+  [Набор примеров](/ru/demos/tag/tech:css3) представляющий новейшие технологии CSS в действии: толчок к креативности.
 
 ## Документация и самоучители
 
@@ -53,5 +54,5 @@ translation_of: Web/CSS
 ## Смотрите также
 
 - Изучение [CSS](/ru/docs/Learn/CSS) от Mozilla.
-- Веб-языки для которых часто применяется CSS: [HTML](/ru/docs/HTML "ru/docs/HTML"), [SVG](/ru/docs/Web/SVG "SVG"), [XHTML](/ru/docs/XHTML "ru/docs/XHTML"), [XML](/ru/docs/XML "ru/docs/XML").
+- Веб-языки для которых часто применяется CSS: [HTML](/ru/docs/HTML), [SVG](/ru/docs/Web/SVG), [XHTML](/ru/docs/XHTML), [XML](/ru/docs/XML).
 - Технологии Mozilla, широко использующие CSS: [XUL](/ru/docs/Mozilla/Tech/XUL), [Firefox](/ru/Firefox), а также [Thunderbird](/ru/docs/Mozilla/Thunderbird) [расширения](/ru/docs/Extensions) и [темы](/ru/Add-ons/Themes).

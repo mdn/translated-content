@@ -2,7 +2,8 @@
 title: '<canvas>: グラフィックキャンバス要素'
 slug: Web/HTML/Element/canvas
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
 
@@ -32,7 +33,7 @@ slug: Web/HTML/Element/canvas
           >対話型コンテンツ</a
         >のうち {{HTMLElement("a")}} 要素,
         {{HTMLElement("button")}} 要素, {{HTMLElement("input")}}
-        要素の {{htmlattrxref("type", "input")}} 属性が
+        要素の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性が
         <code>checkbox</code>, <code>radio</code>,
         <code>button</code> のいずれか以外を含まないもの
       </td>
@@ -72,11 +73,11 @@ slug: Web/HTML/Element/canvas
 
 他のすべての HTML 要素と同様に、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : CSS ピクセルで示した座標空間の高さ。既定では 150 ピクセルに設定されています。
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : canvas に半透明性がファクターになるかを知らせます。キャンバスは半透明性がないことがわかっていれば、描画パフォーマンスを最適化できます。これは Mozilla ベースのブラウザーしか対応していません。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。
-- {{htmlattrdef("width")}}
+- `width`
   - : CSS ピクセルで示した座標空間の幅。既定では 300 ピクセルに設定されています。
 
 ## 使用上の注意
@@ -106,7 +107,7 @@ slug: Web/HTML/Element/canvas
 | Safari     | 32,767 pixels | 32,767 pixels | 268,435,456 pixels (つまり 16,384 x 16,384) |
 | IE         | 8,192 pixels  | 8,192 pixels  | ?                                           |
 
-> **Note:** 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
+> **メモ:** 寸法や面積の最大値を超えると、キャンバスが使用できなくなります。 — 描画コマンドが動作しなくなります。
 
 ## 例
 
@@ -149,10 +150,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

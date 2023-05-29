@@ -1,13 +1,12 @@
 ---
 title: OffscreenCanvas.getContext()
 slug: Web/API/OffscreenCanvas/getContext
-translation_of: Web/API/OffscreenCanvas/getContext
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas.getContext()`** 메소드는 offscreen 캔버스를 위한 드로잉 컨텍스트 반환합니다. 컨텍스트 식별자가 지원되는 상황이 아닐 경우 {{jsxref("null")}}를 반환합니다.
 
-> **참고:** 이 API는 현재 [WebGL1](/ko/docs/Web/API/WebGLRenderingContext)과 [WebGL2](/ko/docs/Web/API/WebGL2RenderingContext) 컨텍스트에서만 실행됩니다. [Canvas 2D API](/ko/docs/Web/API/Canvas_API) 관련 {{bug(801176)}}를 참조하세요.
+> **참고:** 이 API는 현재 [WebGL1](/ko/docs/Web/API/WebGLRenderingContext)과 [WebGL2](/ko/docs/Web/API/WebGL2RenderingContext) 컨텍스트에서만 실행됩니다. [Canvas 2D API](/ko/docs/Web/API/Canvas_API) 관련 [Firefox bug 801176](https://bugzil.la/801176)를 참조하세요.
 
 ## 구문
 
@@ -18,10 +17,15 @@ offscreen.getContext(contextType, contextAttributes);
 ### 매개 변수
 
 - `contextType`
-  - : 캔버스의 드로잉 컨텍스트를 정의하는 컨텍스트 식별자가 포함된 {{domxref("DOMString")}}입니다:\* **`"2d"`**는 2차원 렌더링 컨텍스트를 표현하는 {{domxref("CanvasRenderingContext2D")}} 객체를 생성합니다.
-    - **`"webgl"`**는 3차원 렌더링 컨텍스트를 표현하는 {{domxref("WebGLRenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 1(OpenGL ES 2.0)을 지원하는 브라우저에서만 사용 가능합니다.
-    - **`"webgl2"`**는 3차원 렌더링 컨텍스트를 표현하는 {{domxref("WebGL2RenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 2 (OpenGL ES 3.0)를 지원하는 브라우저에서만 사용 가능합니다. {{experimental_inline}}
-    - **`"bitmaprenderer"`**는 주어진 {{domxref("ImageBitmap")}}을 캔버스의 내용 대신 전환하는 함수를 제공하는 {{domxref("ImageBitmapRenderingContext")}}를 생성합니다.Note:**`"experimental-webgl"`**과 **`"experimental-webgl2"`** 식별자는 WebGL에서도 사용됩니다. 그러나 아직 테스트 적합성을 통과하지 못했거나 플랫폼별 그래픽 드라이버 지원이 안정적이진 않습니다. [Khronos Group](https://www.khronos.org/)은 특정한 [정합성 규칙](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)에 WebGL 구현을 인증하고 있습니다.
+  - : 캔버스의 드로잉 컨텍스트를 정의하는 컨텍스트 식별자가 포함된 {{domxref("DOMString")}}입니다:\* **`"2d"`** 는 2차원 렌더링 컨텍스트를 표현하는 {{domxref("CanvasRenderingContext2D")}} 객체를 생성합니다.
+    - **`"webgl"`** 는 3차원 렌더링 컨텍스트를 표현하는 {{domxref("WebGLRenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 1(OpenGL ES 2.0)을 지원하는 브라우저에서만 사용 가능합니다.
+    - **`"webgl2"`** 는 3차원 렌더링 컨텍스트를 표현하는 {{domxref("WebGL2RenderingContext")}} 객체를 생성합니다. 이 컨텍스트는 [WebGL](/ko/docs/Web/WebGL) 버전 2 (OpenGL ES 3.0)를 지원하는 브라우저에서만 사용 가능합니다. {{experimental_inline}}
+    - **`"bitmaprenderer"`** 는 주어진 {{domxref("ImageBitmap")}}을 캔버스의 내용 대신 전환하는 함수를 제공하는 {{domxref("ImageBitmapRenderingContext")}}를 생성합니다
+
+    > **참고:** `"experimental-webgl"`**과 **`"experimental-webgl2"`** 식별자는 WebGL에서도 사용됩니다.
+    >
+    > 그러나 아직 테스트 적합성을 통과하지 못했거나 플랫폼별 그래픽 드라이버 지원이 안정적이진 않습니다.
+    > [Khronos Group](https://www.khronos.org/)은 특정한 [정합성 규칙](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)에 WebGL 구현을 인증하고 있습니다.
 - `contextAttributes`
 
   - : You can use several context attributes when creating your rendering context, for
@@ -90,11 +94,11 @@ gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

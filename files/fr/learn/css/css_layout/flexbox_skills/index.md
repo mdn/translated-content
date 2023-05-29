@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Flexbox_skills
 translation_of: Learn/CSS/CSS_layout/Flexbox_skills
 original_slug: Apprendre/CSS/CSS_layout/Flexbox_skills
 ---
+
 {{LearnSidebar}}
 
 Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.

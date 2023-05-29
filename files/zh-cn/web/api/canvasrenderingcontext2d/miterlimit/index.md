@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.miterLimit
 slug: Web/API/CanvasRenderingContext2D/miterLimit
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.miterLimit`** 是 Canvas 2D API 设置斜接面限制比例的属性。当获取属性值时，会返回当前的值（默认值是`10.0` ）。当给属性赋值时，0、负数、 {{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略；除此之外都会被赋予一个新值。
@@ -48,40 +49,40 @@ ctx.stroke();</textarea>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const edit = document.getElementById("edit");
+const code = textarea.value;
 
 function drawCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", () => {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", () => {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{EmbedLiveSample("使用 miterLimit 属性", "400", "180", "canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.miterLimit")}}
+{{Compat}}
 
 ## 参见
 

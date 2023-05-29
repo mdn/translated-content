@@ -2,6 +2,7 @@
 title: 'MediaQueryList: change event'
 slug: Web/API/MediaQueryList/change_event
 ---
+
 {{APIRef("CSSOM")}}
 
 当媒体查询的支持状况改变时，{{DOMxRef("MediaQueryList")}} 接口的 **`change`** 事件触发。
@@ -18,7 +19,7 @@ onchange = event => { };
 
 ## 事件类型
 
-{{domxref("MediaQueryListEvent")}} 类型。 继承自 {{domxref("Event")}}。
+{{domxref("MediaQueryListEvent")}} 类型。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 
@@ -58,8 +59,8 @@ mql.onchange = (e) => {
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

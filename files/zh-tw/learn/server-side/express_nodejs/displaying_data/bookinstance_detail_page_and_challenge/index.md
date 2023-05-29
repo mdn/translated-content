@@ -3,6 +3,7 @@ title: 書本實例詳情頁面與自我挑戰
 slug: >-
   Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
 ---
+
 ## 書本實例詳情頁面
 
 `BookInstance` 詳情頁面，需要呈現每一個 `BookInstance` 的信息，用 `_id` 欄位字段值（自動產生）做識別。它包含了 `Book` 名稱 (也是一個連結，連到 *書本細節*頁面)，接著是紀錄中的其它的信息。
@@ -13,21 +14,25 @@ slug: >-
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = function(req, res, next) {
-
-    BookInstance.findById(req.params.id)
-    .populate('book')
+exports.bookinstance_detail = function (req, res, next) {
+  BookInstance.findById(req.params.id)
+    .populate("book")
     .exec(function (err, bookinstance) {
-      if (err) { return next(err); }
-      if (bookinstance==null) { // No results.
-          var err = new Error('Book copy not found');
-          err.status = 404;
-          return next(err);
-        }
+      if (err) {
+        return next(err);
+      }
+      if (bookinstance == null) {
+        // No results.
+        var err = new Error("Book copy not found");
+        err.status = 404;
+        return next(err);
+      }
       // Successful, so render.
-      res.render('bookinstance_detail', { title: 'Book:', bookinstance:  bookinstance});
-    })
-
+      res.render("bookinstance_detail", {
+        title: "Book:",
+        bookinstance: bookinstance,
+      });
+    });
 };
 ```
 

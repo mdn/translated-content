@@ -1,11 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Class
-  - JavaScript
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
 {{JSRef}}
@@ -64,7 +59,7 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 - {{jsxref("Object.getPrototypeOf","Object.getPrototypeOf()")}}
   - : 지정한 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 반환합니다.
 - {{jsxref("Object.is","Object.is()")}}
-  - : 두 값이 같은지를 비교합니다. 모든 `NaN` 값을 같다고 처리합니다. (추상 동등 비교 및 ​​엄격한 동등 비교와 다른 점입니다.)
+  - : 두 값이 같은지를 비교합니다. 모든 `NaN` 값을 같다고 처리합니다. (추상 동등 비교 및 엄격한 동등 비교와 다른 점입니다.)
 - {{jsxref("Object.isExtensible","Object.isExtensible()")}}
   - : 객체의 확장이 가능한지 여부를 확인합니다.
 - {{jsxref("Object.isFrozen","Object.isFrozen()")}}
@@ -86,19 +81,19 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 
 - {{jsxref("Object.prototype.constructor")}}
   - : 객체의 프로토타입을 생성하는 함수를 지정합니다.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
   - : 객체가 인스턴스화될 때 프로토타입으로 사용된 객체를 가리킵니다.
 
 ## 인스턴스 메서드
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : 액세스(get)할 때 실행되어 값을 반환하는 함수와 지정한 속성을 연결합니다.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : 설정(set)할 때 실행되어 해당 속성을 수정하는 함수와 지정한 속성을 연결합니다.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} 메서드에 의해 지정된 속성과 연결된 함수를 반환합니다.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} 메서드에 의해 지정된 속성과 연결된 함수를 반환합니다.
+- [`Object.prototype.__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : [`Object.prototype.__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 메서드에 의해 지정된 속성과 연결된 함수를 반환합니다.
+- [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메서드에 의해 지정된 속성과 연결된 함수를 반환합니다.
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : 객체에 지정한 속성이 해당 객체에 직접 포함되어 있고 프로토타입 체인을 통해 상속되지 않는지 여부를 나타내는 불리언 값을 반환합니다.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

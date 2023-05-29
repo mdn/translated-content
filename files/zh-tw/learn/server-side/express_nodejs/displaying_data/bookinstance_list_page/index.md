@@ -2,6 +2,7 @@
 title: 書本實例清單頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
+
 接下來，我們將實作圖書館中所有書本實例 (`BookInstance`) 的列表頁面。這個頁面需要包含與每個 `BookInstance` (鏈接到其詳細信息頁面) 關聯的書本 `Book` 標題，以及 `BookInstance`模型中的其他信息，包含每個副本的狀態，印記和唯一 ID。唯一 ID 的文字，應該鏈接到 `BookInstance` 詳細信息頁面。
 
 ## Controller 控制器
@@ -12,16 +13,19 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
-
+exports.bookinstance_list = function (req, res, next) {
   BookInstance.find()
-    .populate('book')
+    .populate("book")
     .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+      res.render("bookinstance_list", {
+        title: "Book Instance List",
+        bookinstance_list: list_bookinstances,
+      });
     });
-
 };
 ```
 

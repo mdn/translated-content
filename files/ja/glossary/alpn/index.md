@@ -4,6 +4,7 @@ slug: Glossary/ALPN
 l10n:
   sourceCommit: 5525ac4f1e28d94beedee7196981eac0377f7bc3
 ---
+
 **Application-Layer {{Glossary("Protocol")}} Negotiation** (**ALPN**) は、 {{Glossary("TLS")}} 拡張であり、追加のラウンドトリップを必要とせずに、暗号化された接続をネゴシエートするアプリケーションレイヤープロトコルを示します。
 
 | プロトコル                                     | 識別シーケンス                                         |

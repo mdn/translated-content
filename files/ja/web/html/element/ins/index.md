@@ -2,7 +2,8 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<ins>` 要素**は、文書に追加されたテキストの範囲を表します。同様に、 {{HTMLElement("del")}} 要素を使用して文書から削除されたテキストの範囲を表すことができます。
 
@@ -67,9 +68,9 @@ slug: Web/HTML/Element/ins
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持っています。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 会議の議事録やトラブルシューティングシステムのチケットといった、追加についての説明を記したリソースへの URI を示します。
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : この属性は変更が行われた日時を示し、有効な日付または日時の文字列でなければなりません。値が日付または日時の文字列として解釈できなかった場合は、要素にタイムスタンプが関連付けられなくなります。時刻がない日付の書式については、[妥当な日付文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#Date_strings)を参照してください。日付と時刻の両方を含む場合の文字列の書式については、[妥当な日時文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#Local_date_and_time_strings)を参照してください。
 
 ## 例
@@ -114,11 +115,7 @@ ins::after {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'edits.html#the-ins-element', '&lt;ins&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'edits.html#the-ins-element', '&lt;ins&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;ins&gt;')}}         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

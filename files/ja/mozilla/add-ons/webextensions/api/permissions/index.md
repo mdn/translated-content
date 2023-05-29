@@ -2,6 +2,7 @@
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
+
 {{AddonSidebar}}拡張機能のインストール後、実行時に特別なパーミッションの要求を可能にする。
 
 拡張機能は強力な WebExtension API の多くにアクセスするパーミッション(アクセス権)を必要とします。manifest.json の [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) に必要なパーミッション記述することで、インストール時にユーザーに対しパーミッションを要求できます。インストール時にパーミッションを要求する主なメリットは次の通りです:
@@ -53,4 +54,4 @@ To use the permissions API, decide which permissions your extension can request 
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

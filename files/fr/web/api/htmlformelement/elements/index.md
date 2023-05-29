@@ -5,13 +5,14 @@ translation_of: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.elements
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement), renvoie un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) qui liste l'ensemble des contrôles de formulaire contenu dans l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form).
 
 Si besoin d'obtenir uniquement le nombre de contrôles du formulaire, on pourra utiliser la propriété [`length`](/fr/docs/Web/API/HTMLFormElement/length).
 
-On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut  `name` ou `id` de l'élément.
+On peut accéder à un contrôle particulier du formulaire via la collection renvoyée en utilisant l'indice ou l'attribut `name` ou `id` de l'élément.
 
 Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
 

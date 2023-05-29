@@ -2,6 +2,7 @@
 title: column-count
 slug: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 **`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された段数で要素の内容物を分割します。

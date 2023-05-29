@@ -12,6 +12,7 @@ tags:
 translation_of: Games/Publishing_games
 original_slug: Jeux/Publier_jeux
 ---
+
 {{GamesSidebar}}
 
 Les jeux en HTML5 ont un avantage certain face à ceux écrits dans un langage natif en terme de publication et de distribution — vous avez en effet la liberté de distribuer, promouvoir et monétiser votre jeu sur Internet au lieu de voir chaque version de votre jeu emprisonnée au sein d'un store propriétaire. En étant sur le web, vous bénéficiez automatiquement d'un jeu multi plate-formes. Cette série d'articles vous présente les options dont vous disposez afin de publier et de distribuer votre jeu et de gagner quelque chose en attendant de faire de votre jeu un incontournable.

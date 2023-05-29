@@ -1,16 +1,8 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-tags:
-  - API
-  - AnimationEvent
-  - CSSOM
-  - Constructor
-  - Reference
-  - Web Animations
-browser-compat: api.AnimationEvent.AnimationEvent
-translation_of: Web/API/AnimationEvent/AnimationEvent
 ---
+
 {{APIRef("Web Animations API")}}
 
 **`AnimationEvent()`** 생성자는 애니메이션에 관련된 이벤트를 나타내는 {{domxref("AnimationEvent")}} 객체를 새로 생성하고 반환합니다.

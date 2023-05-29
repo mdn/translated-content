@@ -2,11 +2,12 @@
 title: ConvolverNode
 slug: Web/API/ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `ConvolverNode` は {{domxref("AudioNode")}} の一種で、与えられた {{domxref("AudioBuffer")}} を用いて線形畳み込みを行います。リバーブの実装によく用いられます。 `ConvolverNode` は常に 1 つの入力と、1 つの出力を持ちます。
 
-> **Note:** 線形畳み込みの理論的な側面については、[Wikipedia の「畳み込み」](https://ja.wikipedia.org/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF)を参照してください。
+> **メモ:** 線形畳み込みの理論的な側面については、[Wikipedia の「畳み込み」](https://ja.wikipedia.org/wiki/%E7%95%B3%E3%81%BF%E8%BE%BC%E3%81%BF)を参照してください。
 
 {{InheritanceDiagram}}
 
@@ -57,7 +58,7 @@ _固有のメソッドはありません。親である {{domxref("AudioNode")}}
 
 次の例は、コンボルバーノードを作成するための AudioContext の基本的な使い方を示しています。
 
-> **Note:** 以下の例を完成させるために、インパルス応答を求める必要があります。応用例はこちらの [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) をご覧ください。
+> **メモ:** 以下の例を完成させるために、インパルス応答を求める必要があります。応用例はこちらの [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) をご覧ください。
 
 ```js
 let audioCtx = new window.AudioContext();
@@ -92,4 +93,4 @@ reverb.connect(audioCtx.destination);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

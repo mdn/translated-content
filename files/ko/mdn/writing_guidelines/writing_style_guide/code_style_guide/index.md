@@ -1,19 +1,9 @@
 ---
 title: 모든 코드에 대한 일반 가이드라인
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-tags:
-  - Code
-  - General
-  - Guide
-  - MDN Meta
-  - 가이드
-  - 가이드라인
-  - 코드 블럭
-  - 코드 블록
-  - 코드 스타일
-translation_of: MDN/Guidelines/Code_guidelines/General
 original_slug: MDN/Guidelines/Code_guidelines/General
 ---
+
 {{MDNSidebar}}
 
 아래 코드 예제 가이드라인에서 HTML, CSS, JavaScript 나 다른 어느 코드로 예로 들건 , 모든 코드 타입에 적용됩니다.

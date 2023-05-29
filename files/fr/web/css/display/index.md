@@ -8,6 +8,7 @@ tags:
   - display
 translation_of: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_Flow_Layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
@@ -113,9 +114,13 @@ On pourra obtenir un comportement équivalent en écrivant cela avec une seule v
 }
 ```
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -174,20 +179,11 @@ Modifier la valeur de `display` pour un élément de [tableau](/fr/docs/Web/HTML
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                                                         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Display', '#the-display-properties', 'display')}} | {{Spec2('CSS3 Display')}} | Ajout des valeurs `run-in`, `contents`, `flow`, `flow-root` et des valeurs avec plusieurs mots-clés. |
-| {{SpecName('CSS3 Ruby', '#ruby-display', 'display')}}                 | {{Spec2('CSS3 Ruby')}}     | Ajout des valeurs `ruby`, `ruby-base`, `ruby-text`, `ruby-base-container` et `ruby-text-container`.  |
-| {{SpecName('CSS3 Grid', '#grid-containers', 'display')}}             | {{Spec2('CSS3 Grid')}}     | Ajout des valeurs pour le modèle de boîtes en grille.                                                |
-| {{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}         | {{Spec2('CSS3 Flexbox')}} | Ajout des valeurs pour le modèle de boîtes flexibles.                                                |
-| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}     | {{Spec2('CSS2.1')}}         | Ajout des valeurs pour le modèle de boîte pour les tableaux et de la valeur `inline-block.`          |
-| {{SpecName('CSS1', '#display', 'display')}}                                 | {{Spec2('CSS1')}}         | Définition initiale. Définitions des valeurs basiques : `none`, `block`, `inline`, et `list-item`.   |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.display",10)}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 **`visibility`** CSS 속성은 문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다. `visibility`로 {{htmlelement("table")}}의 행이나 열을 숨길 수도 있습니다.

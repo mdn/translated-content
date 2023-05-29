@@ -4,6 +4,7 @@ slug: Web/CSS/list-style-type
 translation_of: Web/CSS/list-style-type
 browser-compat: css.properties.list-style-type
 ---
+
 {{CSSRef}}
 
 La propriété **`list-style-type`** permet de définir l'apparence de la puce d'un élément de liste (un cercle, un caractère, un compteur spécifique, etc.).

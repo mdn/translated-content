@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
@@ -56,7 +57,7 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
 
 ## Examples
 
-In our basic [Speech synthesiser demo](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) ([source](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis)), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
+In our basic [Speech synthesiser demo](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) ([source](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis)), we first grab a reference to the SpeechSynthesis controller using `window.speechSynthesis`. After defining some necessary variables, we retrieve a list of the voices available using {{domxref("SpeechSynthesis.getVoices()")}} and populate a select menu with them so the user can choose what voice they want.
 
 Inside the `inputForm.onsubmit` handler, we stop the form submitting with {{domxref("Event.preventDefault","preventDefault()")}}, use the {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} to create a new utterance instance containing the text from the text {{htmlelement("input")}}, set the utterance's {{domxref("SpeechSynthesisUtterance.voice","voice")}} to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
 
@@ -91,7 +92,7 @@ inputForm.onsubmit = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechSynthesisUtterance")}}
+{{Compat}}
 
 ## See also
 

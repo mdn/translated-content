@@ -1,13 +1,8 @@
 ---
 title: DocumentType
 slug: Web/API/DocumentType
-tags:
-  - API
-  - DOM
-  - DocumentType
-  - 인터페이스
-translation_of: Web/API/DocumentType
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType`** 인터페이스는 doctype을 포함하는 {{domxref("Node")}} 를 나타냅니다.

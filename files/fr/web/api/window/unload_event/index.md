@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/Window/unload_event
 original_slug: Web/Events/unload
 ---
+
 L'événement `unload` est appelé lorsque le document ou une ressource enfant est en train d'être déchargé.
 
 Il est lancé après :

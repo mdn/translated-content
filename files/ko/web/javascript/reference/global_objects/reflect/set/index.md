@@ -1,17 +1,11 @@
 ---
 title: Reflect.set()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ---
+
 {{JSRef}}
 
-**`Reflect`\*\***`.set()`\*\* 정적 메서드는 객체 속성의 값을 설정합니다.
+**`Reflect.set()`** 정적 메서드는 객체 속성의 값을 설정합니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-set.html")}}
 

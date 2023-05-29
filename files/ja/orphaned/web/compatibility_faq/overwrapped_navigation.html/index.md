@@ -3,12 +3,13 @@ title: ナビゲーションメニューが他のアイコンと重なって表�
 slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 original_slug: Web/Compatibility_FAQ/Overwrapped_Navigation.html
 ---
+
 ## 概要
 
 他のブラウザで正しく表示されているナビゲーションメニューが、Firefox で表示すると大幅に崩れてしまう場合があります。
 一列に並ぶべきアイコンが画面横幅に収まっておらず、他のアイコンと重なって表示されてしまい、周辺のアイコンが全体的に配置崩れを起こしてしまいます。
 
-![](https://mdn.mozillademos.org/files/9995/0102.jpg)
+![](0102.jpg)
 
 ## 要因
 

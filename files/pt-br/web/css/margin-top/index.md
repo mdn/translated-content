@@ -1,8 +1,8 @@
 ---
 title: margin-top
 slug: Web/CSS/margin-top
-translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
 ## Sumário

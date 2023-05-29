@@ -2,6 +2,7 @@
 title: text-align-last
 slug: Web/CSS/text-align-last
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`text-align-last`** 描述的是一段文本中最后一行在被强制换行之前的对齐规则。
@@ -68,7 +69,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example','100%')}}
+{{EmbedLiveSample('示例','100%')}}
 
 ## 规范
 
@@ -76,7 +77,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-align-last")}}
+{{Compat}}
 
 ## 参见
 

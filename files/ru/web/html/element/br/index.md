@@ -1,12 +1,13 @@
 ---
-title: <br>
+title: <br> - элемент переноса строки
 slug: Web/HTML/Element/br
 tags:
   - HTML
   - Элемент
 translation_of: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<br>`** устанавливает перевод строки в тексте (возврат каретки). Он полезен при написании поэмы или адреса, где важно деление на строки.
 
@@ -14,15 +15,15 @@ translation_of: Web/HTML/Element/br
 
 Как мы видим из примера выше, элемент `<br>` поставлен в том месте, где мы хотим перенести строку. Текст после `<br>` начинается со следующей строки текстового блока.
 
-> **Примечание:** Не используйте **`<br>`** для увеличения разрыва между строками в тексте; используйте [CSS](/ru/docs/Web/CSS "CSS")-свойство {{cssxref('margin')}} элемента {{HTMLElement("p")}}.
+> **Примечание:** Не используйте **`<br>`** для увеличения разрыва между строками в тексте; используйте [CSS](/ru/docs/Web/CSS)-свойство {{cssxref('margin')}} элемента {{HTMLElement("p")}}.
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](ru/docs/HTML/Global_attributes "HTML/Global attributes").
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
 
-- ### Устаревшие атрибуты
+### Устаревшие атрибуты
 
-  {{htmlattrdef("clear")}}
+- {{htmlattrdef("clear")}}
 
   - : Определяет, где начинается следующая строка после перевода строки.
 
@@ -59,7 +60,7 @@ USA<br>
 - _[Категории контента](/ru/docs/Web/Guide/HTML/Content_categories)_ [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
 - _Разрешённое содержимое_ Отсутствует, это {{Glossary("пустой элемент")}}.
 - *Пропуск тегов*Должен иметь открывающий тег, но не закрывающий тег. В XHTML документах элемент пишется как `<br />`.
-- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _Допустимые родительские элементы_ Любой элемент, который поддерживает [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).
 - _Интерфейс DOM_ {{domxref("HTMLBRElement")}}
 
 ## Спецификации

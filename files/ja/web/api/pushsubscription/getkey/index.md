@@ -2,38 +2,37 @@
 title: PushSubscription.getKey()
 slug: Web/API/PushSubscription/getKey
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェースの `getKey()` メソッドは、サーバに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{domxref("ArrayBuffer")}} を返します。
-
-> **Note:** **ノート**： 現在、Firefox のみの実装であり、まだ　 Push API 仕様には含まれていません。
+{{domxref("PushSubscription")}} インターフェイスの **`getKey()`** メソッドは、サーバーに送信されてプッシュメッセージデータを暗号化するために使用される、クライアントパブリックキーを表す {{jsxref("ArrayBuffer")}} を返します。
 
 ## 構文
 
+```js-nolint
+var key = subscription.getKey(method);
 ```
-​var key = subscription.getKey(method);
-```
 
-### パラメーター
+### 引数
 
-- method
+- `method`
 
-  - : クライアントパブリックキーの生成に使用される暗号化メソッドです。現在、`p256dh`のみがオプションです。メソッドには次の値がが選べます：
+  - : クライアントパブリックキーの生成に使用される暗号化メソッドです。現在、`p256dh` のみがオプションです。メソッドには次の値が選べます：
 
-    - `p256dh`： P-256 曲線の [楕円曲線ディフィー・ヘルマン鍵共有](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89)（つまり、NIST secp256r1 楕円曲線）。結果としてられるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。
+    - `p256dh`： P-256 曲線の [楕円曲線ディフィー・ヘルマン鍵共有](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9A%E3%83%87%E3%82%A3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%BB%E3%83%98%E3%83%AB%E3%83%9E%E3%83%B3%E9%8D%B5%E5%85%B1%E6%9C%89)（つまり、NIST secp256r1 楕円曲線）。結果として得られるキーは、ANSI X9.62 フォーマットで非圧縮ポイントとなります。
 
-### 戻り値
+### 返値
 
-{{domxref("ArrayBuffer")}}。
+{{jsxref("ArrayBuffer")}}。
 
 ## 例
 
-[Push API デモ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/main.js#L51-L116)では、プッシュメッセージデータの暗号化と[サーバ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js)から特定のサブスクライバにプッシュメッセージを送信するために必要な認証を得るために、getKey('p256dh') と {{domxref("PushSubscription.endpoint")}} を呼び出しています。
+[Push API デモ](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/main.js#L51-L116)では、プッシュメッセージデータの暗号化と[サーバー](https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js)から特定のサブスクライバーにプッシュメッセージを送信するために必要な認証を得るために、getKey('p256dh') と {{domxref("PushSubscription.endpoint")}} を呼び出しています。
 
 ```
 reg.pushManager.getSubscription()
   .then(function(subscription) {
-  // プッシュメッセージからサブスクライブ ／ アンサブスクライブ
+  // プッシュメッセージからサブスクライブ / アンサブスクライブ
   // する任意の UI を有効にする
 
   subBtn.disabled = false;
@@ -58,13 +57,11 @@ reg.pushManager.getSubscription()
     ...
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                             | 状態                         | コメント                                                                                                                  |
-| -------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Push API')}} | {{Spec2('Push API')}} | これは Push API 仕様ですが、`getKey()` はここに含まれていないことに注意してください。現在は、Firefox だけの実験実装です。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushSubscription.getKey")}}
 

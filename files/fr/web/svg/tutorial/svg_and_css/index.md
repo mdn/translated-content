@@ -13,6 +13,7 @@ tags:
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: CSS/Premiers_pas/Graphiques_SVG
 ---
+
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.
 
 Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).

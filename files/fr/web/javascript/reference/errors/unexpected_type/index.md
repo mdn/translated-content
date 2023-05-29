@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -2,6 +2,7 @@
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getBoundingClientRect()`** メソッドは、要素の寸法と、その[ビューポート](/ja/docs/Glossary/Viewport)に対する相対位置に関する情報を返します。

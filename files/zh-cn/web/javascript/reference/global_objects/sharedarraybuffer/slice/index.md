@@ -2,6 +2,7 @@
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 ---
+
 {{JSRef}}
 
 **`SharedArrayBuffer.prototype.slice()`** 方法返回一个新的{{jsxref("SharedArrayBuffer")}} 副本，其内容是`该 SharedArrayBuffer`的字节从`begin`开始 (包含`begin`)，直到`end`结束 (不包含`end`)。如果`begin`或`end`是负的，它指的是从数组末尾开始的索引。此方法与 {{jsxref("Array.prototype.slice()")}} 具有相同的算法。
@@ -27,7 +28,7 @@ sab.slice(begin, end)
 
 一个包含被提取出的元素的新 {{jsxref("SharedArrayBuffer")}} 。
 
-## 例子
+## 示例
 
 ```js
 var sab = new SharedArrayBuffer(1024);

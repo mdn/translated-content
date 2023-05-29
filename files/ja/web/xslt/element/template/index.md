@@ -2,6 +2,7 @@
 title: <xsl:template>
 slug: Web/XSLT/Element/template
 ---
+
 {{ XsltRef() }}
 
 `<xsl:template>` 要素は出力生成テンプレートを定義します。この要素は、match 属性または name 属性のいずれかを持つ必要があります。

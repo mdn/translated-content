@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/d
 ---
+
 {{SVGRef}}
 
 L'attribut **`d`** définit un tracé à dessiner.

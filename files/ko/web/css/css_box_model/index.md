@@ -1,13 +1,8 @@
 ---
 title: CSS Basic Box Model
 slug: Web/CSS/CSS_Box_Model
-tags:
-  - CSS
-  - CSS Box Model
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model
 ---
+
 {{CSSRef}}
 
 **CSS Basic Box Model**은 각 요소에 대해 [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)에 따라 생성하고 배치하는 사각형 박스(안팎 여백 포함)를 위한 CSS 모듈입니다.

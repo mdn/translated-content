@@ -2,6 +2,7 @@
 title: all
 slug: Web/CSS/all
 ---
+
 {{CSSRef}}
 
 **`all`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素のすべてのプロパティを ({{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)を除いて) 初期化します。プロパティは初期値または継承値、または他のスタイルシートに由来して指定した値に設定される可能性があります。

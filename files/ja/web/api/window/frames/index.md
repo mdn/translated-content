@@ -2,6 +2,7 @@
 title: Window.frames
 slug: Web/API/Window/frames
 ---
+
 {{APIRef("DOM")}}
 
 ウィンドウ自体を、現在のウィンドウの直接のサブフレームを列挙した配列風オブジェクトとして返します。
@@ -29,10 +30,7 @@ for (var i = 0; i < frames.length; i++) {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "browsers.html#dom-frames", "Window.frames")}} | {{Spec2("HTML WHATWG")}} |      |
-| {{SpecName("HTML5 W3C", "browsers.html#dom-frames", "Window.frames")}}     | {{Spec2("HTML5 W3C")}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

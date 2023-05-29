@@ -3,6 +3,7 @@ title: repeat()
 slug: Web/CSS/repeat
 original_slug: Web/CSS/repeat()
 ---
+
 {{CSSRef}}
 
 **`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、トラックリスト内での部分的な繰り返しを表し、列や行の繰り返しをよりコンパクトに書くことができます。

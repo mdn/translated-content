@@ -1,20 +1,8 @@
 ---
 title: 'Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’'
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
-tags:
-  - CORS
-  - CORSMethodNotFound
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSMethodNotFound
 ---
+
 {{HTTPSidebar}}
 
 ## 理由

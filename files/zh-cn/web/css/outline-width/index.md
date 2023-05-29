@@ -2,6 +2,7 @@
 title: outline-width
 slug: Web/CSS/outline-width
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`outline-width`** 用于设置一个元素的轮廓的厚度。元素轮廓是绘制于元素周围的一条线，位于 {{cssxref("border")}} 的外围。
@@ -100,4 +101,4 @@ span {
 
 ## Browser compatibility
 
-{{Compat("css.properties.outline-width")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 
 ## 示例
 
-### 例子：使用 `Math.LN2`
+### 示例：使用 `Math.LN2`
 
 下面的函数返回 2 的自然对数：
 

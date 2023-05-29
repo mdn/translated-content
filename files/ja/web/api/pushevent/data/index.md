@@ -1,63 +1,49 @@
 ---
 title: PushEvent.data
 slug: Web/API/PushEvent/data
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
-{{APIRef("Push API")}}{{SeeCompatTable()}}
 
-**`PushEvent`** インターフェースの `data` 読み取り専用プロパティは、{{domxref("PushSubscription")}} に送信されてたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
+{{APIRef("Push API")}}
 
-## 構文
+`data` は **`PushEvent`** インターフェイスの読み取り専用プロパティで、{{domxref("PushSubscription")}} に送信されたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
 
-```js
-var myPushData = PushEvent.data;
-```
+## 値
 
-### 値
+{{domxref("PushMessageData")}} オブジェクトです。
 
-{{domxref("PushMessageData")}} オブジェクト
+## 例
 
-**例**
-
-次の例は、 `PushEvent` からデータを取得して、すべての service worker クライアントで表示しています。
+次の例は、 `PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
-self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.notification.permission === 'granted')) {
+self.addEventListener('push', (event) => {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
     return;
   }
 
-  var data = {};
-  if (event.data) {
-    data = event.data.json();
-  }
-  var title = data.title || "Something Has Happened";
-  var message = data.message || "Here's something you might want to check out.";
-  var icon = "images/new-notification.png";
+  const data = event.data?.json() ?? {}
+  const title = data.title || "Something Has Happened";
+  const message = data.message || "Here's something you might want to check out.";
+  const icon = "images/new-notification.png";
 
-  var notification = new Notification(title, {
+  const notification = new Notification(title, {
     body: message,
     tag: 'simple-push-demo-notification',
-    icon: icon
+    icon,
   });
 
-  notification.addEventListener('click', function() {
-    if (clients.openWindow) {
-      clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-    }
-  };
+  notification.addEventListener('click', () => {
+    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+  });
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                         | コメント |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Push API','#widl-PushEvent-data','data')}} | {{Spec2('Push API')}} | 初期定義 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
-{{Compat("api.PushEvent.data")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

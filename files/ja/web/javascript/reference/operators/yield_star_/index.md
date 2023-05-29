@@ -2,6 +2,7 @@
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
 ---
+
 {{jsSidebar("Operators")}}
 
 **`yield*` 式**は別の{{jsxref("Statements/function*", "ジェネレーター", "", 1)}}や反復可能なオブジェクトに委任するために使用されます。

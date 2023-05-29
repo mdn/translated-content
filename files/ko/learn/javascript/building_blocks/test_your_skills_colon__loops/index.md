@@ -2,6 +2,7 @@
 title: '실력을 평가해 보세요: 반복문'
 slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 ---
+
 {{learnsidebar}}
 
 이 실력 테스트의 목적은 여러분이 우리의 [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code) 문서를 이해했는지를 평가하기 위함입니다.

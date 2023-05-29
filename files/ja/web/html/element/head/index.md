@@ -2,11 +2,12 @@
 title: '<head>: 文書メタデータ (ヘッダー) 要素'
 slug: Web/HTML/Element/head
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<head>` 要素**は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。
 
-> **Note:** **メモ:** `<head>` は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+> **メモ:** `<head>` は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。
 
 <table class="properties">
   <tbody>
@@ -23,7 +24,7 @@ slug: Web/HTML/Element/head
       <td>
         <p>
           文書が {{HTMLElement("iframe")}} の
-          {{htmlattrxref("srcdoc", "iframe")}}
+          <a href="/ja/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>
           文書である場合、または題名情報がより上位のプロトコル (HTML
           メールの件名の行など)
           で使用される場合は、0個以上のメタデータコンテンツ。
@@ -73,7 +74,7 @@ slug: Web/HTML/Element/head
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("profile")}} {{deprecated_inline}}
+- `profile` {{deprecated_inline}}
   - : 1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。
 
 ## 例
@@ -93,11 +94,7 @@ HTML5 互換のブラウザーでは、タグが省略されていても `<head>
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | `profile` を廃止                   |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

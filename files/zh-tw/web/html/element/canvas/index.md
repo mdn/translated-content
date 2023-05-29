@@ -2,6 +2,7 @@
 title: <canvas>
 slug: Web/HTML/Element/canvas
 ---
+
 這個 **HTML `<canvas>` 元素** 可以被使用於對腳本程式(JaveScript) 繪圖 .舉例來說, 它能用來畫圖,組合照片,甚至作動畫. 你也許(應該) 在\<canvas>區段內提供替代方案的內容 .這內容將能被一些不支援\<canvas>以及無法使用 Javescript 功能的瀏覽器所渲染 .
 
 更多文章關於 canvas, 請參考 [canvas 主題](/zh-TW/docs/Web/API/Canvas_API)
@@ -17,11 +18,11 @@ slug: Web/HTML/Element/canvas
 
 這個元素的屬性包含全域屬性
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 在 CSS 中以 pixels 表示 座標的空間**高度**（預設是 150）
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}}
+- `moz-opaque` {{non-standard_inline}}
   - : 讓 canvas 知道這個因素是否為半透明的。如果 canvas 知道不是半透明，則提高繪畫的效能
-- {{htmlattrdef("width")}}
+- `width`
   - : 在 CSS 中以 pixels 表示 座標的空間**寬度**（預設是 300）
 
 ## 描述
@@ -42,8 +43,8 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 
 ```html
 <canvas id="canvas" width="300" height="300">
-  抱歉，你的瀏覽器並不支援<canvas>元素
-</canvas>
+  抱歉，你的瀏覽器並不支援 canvas 元素</canvas
+>
 ```
 
 如果你的 canvas 沒有使用透明度，可在\<canvas>標籤設立`moz-opaque`屬性，提升它的繪圖效果。`moz-opaque` 尚未標準化，所以只適用在 Mozilla 的 效能引擎。
@@ -58,7 +59,7 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 延伸閱讀
 
@@ -68,4 +69,4 @@ canvas 的大小設置可透過樣式表（stylesheet）被改變。可經由樣
 - [Canvas-related demos](/zh-TW/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

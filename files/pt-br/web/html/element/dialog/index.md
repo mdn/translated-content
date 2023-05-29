@@ -1,16 +1,8 @@
 ---
-title: '<dialog>: O elemento Dialog'
+title: "<dialog>: O elemento Dialog"
 slug: Web/HTML/Element/dialog
-tags:
-  - Diálogo
-  - Elemento
-  - Elemento Interativos HTML
-  - Experimental
-  - HTML
-  - Referências
-  - Web
-translation_of: Web/HTML/Element/dialog
 ---
+
 O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro componente interativo, tal como um inspetor ou janela.
 
 <table class="properties">
@@ -18,11 +10,11 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     <tr>
       <th scope="row">Categorias de conteúdo</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="/pt-BR/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >sectioning root</a
         >
       </td>
@@ -30,7 +22,7 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >
       </td>
@@ -43,14 +35,14 @@ O **elemento HTML `<dialog>`** representa uma caixa de diálogo ou outro compone
       <th scope="row">Permitted parents</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><code><a href="/pt-br/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM interface</th>
@@ -92,13 +84,15 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 <dialog open id="favDialog">
   <form method="dialog">
     <section>
-      <p><label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select></p>
+      <p>
+        <label for="favAnimal">Favorite animal:</label>
+        <select id="favAnimal">
+          <option></option>
+          <option>Brine shrimp</option>
+          <option>Red panda</option>
+          <option>Spider monkey</option>
+        </select>
+      </p>
     </section>
     <menu>
       <button id="cancel" type="reset">Cancel</button>
@@ -115,18 +109,18 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 #### JavaScript
 
 ```js
-(function() {
-  var updateButton = document.getElementById('updateDetails');
-  var cancelButton = document.getElementById('cancel');
-  var favDialog = document.getElementById('favDialog');
+(function () {
+  var updateButton = document.getElementById("updateDetails");
+  var cancelButton = document.getElementById("cancel");
+  var favDialog = document.getElementById("favDialog");
 
   // O botão Update abre uma Dialog
-  updateButton.addEventListener('click', function() {
+  updateButton.addEventListener("click", function () {
     favDialog.showModal();
   });
 
   // O botão cancelButtom fecha uma Dialog
-  cancelButton.addEventListener('click', function() {
+  cancelButton.addEventListener("click", function () {
     favDialog.close();
   });
 })();
@@ -138,9 +132,9 @@ Este exemplo abre uma caixa de diálogo contendo um formulário quando o botão 
 
 ## Especificações
 
-| Especificação                                                                                                            | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}                 | {{Spec2('HTML WHATWG')}} |                   |
+| Especificação                                                                             | Status                   | Comentário        |
+| ----------------------------------------------------------------------------------------- | ------------------------ | ----------------- |
+| {{SpecName('HTML WHATWG', 'forms.html#the-dialog-element', '&lt;dialog&gt;')}}            | {{Spec2('HTML WHATWG')}} |                   |
 | {{SpecName('HTML5.2', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.2')}}     | Difinição inicial |
 
 ## Compatibilidade com navegadores
@@ -159,4 +153,4 @@ Inclua este polyfill para suportar browsers antigos.
 - O {{event("cancel")}} evento
 - Guia de formulários HTML.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

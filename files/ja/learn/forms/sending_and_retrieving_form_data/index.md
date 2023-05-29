@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 l10n:
   sourceCommit: 994af9536bab4117b160cf29d61acf2489f27eb0
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}
 
 フォームがクライアント側での検証が終わったら、次はフォームの送信です。前の記事では検証を扱ったので、送信する準備はできています。この記事では、ユーザーがフォームを送信したときに何が起こるか、つまりデータがどこへ行くのか、そこに来たときにどう扱うのかを見ます。また、フォームデータの送信に関連するセキュリティの考慮事項のいくつかも見てみます。
@@ -42,17 +43,17 @@ l10n:
 
 クライアント側において、HTML フォームはサーバーへデータを送信する HTTP リクエストを組み立てるのための、便利でユーザーに使いやすい手段でしかありません。フォームによって、ユーザーが HTTP リクエストで渡す情報を提供することができるようになります。
 
-> **Note:** どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)モジュールをお読みください。
+> **メモ:** どのようにクライアント/サーバー構成が動作するかについてもっと知りたい場合は、[サーバーサイドウェブサイトプログラミング入門](/ja/docs/Learn/Server-side/First_steps)モジュールをお読みください。
 
 ## クライアント側: データ送信方法の定義
 
-{{HTMLElement("form")}} 要素で、データを送信する方法を定義します。その属性すべてが、ユーザーが送信ボタンを押すと送信されるリクエストを調整できるように設計されています。もっとも重要な属性は {{htmlattrxref("action","form")}} と {{htmlattrxref("method","form")}} の 2 つです。
+{{HTMLElement("form")}} 要素で、データを送信する方法を定義します。その属性すべてが、ユーザーが送信ボタンを押すと送信されるリクエストを調整できるように設計されています。もっとも重要な属性は [`action`](/ja/docs/Web/HTML/Element/form#action) と [`method`](/ja/docs/Web/HTML/Element/form#method) の 2 つです。
 
 ### action 属性
 
-{{htmlattrxref("action","form")}} 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
+[`action`](/ja/docs/Web/HTML/Element/form#action) 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。
 
-この例では、データを絶対 URL の ` http://``example.com ` に送信します。
+この例では、データを絶対 URL の `http://example.com` に送信します。
 
 ```html
 <form action="https://example.com">
@@ -70,7 +71,7 @@ l10n:
 <form>
 ```
 
-> **Note:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、{{htmlattrxref("action","form")}} 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
+> **メモ:** HTTPS (secure HTTP) プロトコルを使用して URL を指定することができます。このようにすると、フォーム自体が HTTP でアクセスされる安全ではないページで提供される場合でも、データはリクエストの残りの部分とともに暗号化されます。一方、フォームが安全なページ提供されていても、[`action`](/ja/docs/Web/HTML/Element/form#action) 属性で安全ではない HTTP の URL を指定すると、どのブラウザーでもデータを送信する際にユーザーに対してセキュリティの警告を表示します。これは、データが暗号化されないためです。
 
 非ファイル型のフォームコントロールの名前/値は&記号で結合された `name=value` ペアでサーバーに送られます。`action` の値は、サーバー側の検証を含め入力データを扱うサーバーのファイルです。サーバーは応答して、一般的にはデータを処理して `action` 属性で定義された URL を読み込み、新しいページの読み込み (または `action` が同じページを指している場合は既存ページのリフレッシュ)を引き起こします。
 
@@ -78,7 +79,7 @@ l10n:
 
 ### method 属性
 
-{{htmlattrxref("method","form")}} 属性は、どのようにデータを送信するかを定義します。[HTTP プロトコル](/ja/docs/Web/HTTP)はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは `GET` メソッドと `POST` メソッドです。
+[`method`](/ja/docs/Web/HTML/Element/form#method) 属性は、どのようにデータを送信するかを定義します。[HTTP プロトコル](/ja/docs/Web/HTTP)はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは `GET` メソッドと `POST` メソッドです。
 
 これら 2 つのメソッドの違いを理解するために、一歩戻って [HTTP の動作](/ja/docs/Web/HTTP/Overview)についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。
 
@@ -120,13 +121,13 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **Note:** この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) を参照してください （[ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)）.
+> **メモ:** この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) を参照してください （[ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)）.
 
 #### POST メソッド
 
 [`POST` メソッド](/ja/docs/Web/HTTP/Methods/POST)は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。
 
-例を見てみましょう。— これは前述の `GET` の節で見たものと同じフォームですが、{{htmlattrxref("method","form")}} 属性が `post` に設定されています。
+例を見てみましょう。— これは前述の `GET` の節で見たものと同じフォームですが、[`method`](/ja/docs/Web/HTML/Element/form#method) 属性が `post` に設定されています。
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -157,7 +158,7 @@ say=Hi&to=Mom
 
 `Content-Length` ヘッダーは本文の長さを、また `Content-Type` ヘッダーはサーバーに送信するリソースの種類を表します。これらのヘッダーについて少し説明しましょう。
 
-> **Note:** この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
+> **メモ:** この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
 
 ### HTTP リクエストの表示
 
@@ -201,7 +202,7 @@ say=Hi&to=Mom
 
 ![それ以外の空白のウェブページに "hi mom" と表示された場合、 POST メソッドでフォームデータを PHP ファイルに送信した後のレスポンスとして受け取ったデータ](php-result.png)
 
-> **Note:** この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、[MAMP](https://www.mamp.info/en/downloads/) (Mac および Windows) や [AMPPS](https://ampps.com/download) (Mac, Windows, Linux) がいいでしょう。
+> **メモ:** この例はブラウザーにローカルに読み込んだ時には動作しません。— ブラウザーは PHP コードを解釈できないので、フォームがブラウザーに送信されると、PHP ファイルをダウンロードしようとするでしょう。動作させるためには、この例を何らかの PHP サーバー経由で実行する必要があります。ローカルの PHP のテストには、[MAMP](https://www.mamp.info/en/downloads/) (Mac および Windows) や [AMPPS](https://ampps.com/download) (Mac, Windows, Linux) がいいでしょう。
 >
 > なお、MAMP を使って MAMP Pro がない (または MAMP Pro デモトライアルの有効期限が切れた) 場合、動作させるのにトラブルが起こるかもしれません。再び動作させるには MAMP アプリを閉じて、_MAMP_ > _Preferences_ > *PHP*メニューから "Standard Version:" を "7.2.x" (x はあなたがどのバージョンをインストールしたかによります)にするといいことがわかっています。
 
@@ -231,7 +232,7 @@ if __name__ == "__main__":
 - [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 以前に [POST メソッド](#post_メソッド)の節で見たフォームと同じですが、`action` が `\{{ url_for('hello') }}` に設定されています (これは [Jinja](https://jinja.palletsprojects.com) テンプレートで、基本的に HTML ですが、波括弧の中にウェブサーバーで実行されている Python のコードの呼び出しを含めることができます。`url_for('hello')` は基本的に、「フォームが送信されたら `/hello` にリダイレクトしてください」と言っています。)
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): このテンプレートは、表示時に渡された 2 つの小さいデータを表示する行だけを含みます。`/hello` の URL が呼び出されるときに実行される、前述の `hello()` 関数によって行われます。
 
-> **Note:** 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5000` に移動することで実行することができるでしょう。
+> **メモ:** 繰り返しますが、このコードはブラウザーに直接読み込もうとしても動作しません。Python は PHP とは若干異なる動作をします。— ローカルでこのコードを実行するには、[Python/PIP をインストール](/ja/docs/Learn/Server-side/Django/development_environment#installing_python_3)する必要があり、それから `pip3 install flask` を使用して Flask をインストールしてください。この時点で `python3 python-example.py` を実行し、ブラウザーで `localhost:5000` に移動することで実行することができるでしょう。
 
 ### その他の言語やフレームワーク
 
@@ -245,7 +246,7 @@ if __name__ == "__main__":
 
 言うまでもなく、これらのフレームワークを使用したとしても、フォームでの作業が必ずしも*簡単に*なるとは限りません。しかし、すべての機能を自分で 1 から書こうとするよりずっと簡単で、また多くの時間を節約できるでしょう。
 
-> **Note:** サーバー側言語やフレームワークまで説明することはこの記事の範囲を超えます。上記のリンクが参考になりますので、学習してみてください。
+> **メモ:** サーバー側言語やフレームワークまで説明することはこの記事の範囲を超えます。上記のリンクが参考になりますので、学習してみてください。
 
 ## 特別な場合: ファイル送信
 
@@ -257,8 +258,8 @@ if __name__ == "__main__":
 
 しかしファイルを送信したい場合は、さらに 2 つのステップを踏む必要があります。
 
-- ファイルの内容は URL 引数に収めることができないので、{{htmlattrxref("method","form")}} 属性を `POST` に設定してください。
-- データは複数の部分に分かれ、それぞれのファイルや文字列データがフォーム本体に含められているので、{{htmlattrxref("enctype","form")}} の値を `multipart/form-data` に設定ください。
+- ファイルの内容は URL 引数に収めることができないので、[`method`](/ja/docs/Web/HTML/Element/form#method) 属性を `POST` に設定してください。
+- データは複数の部分に分かれ、それぞれのファイルや文字列データがフォーム本体に含められているので、[`enctype`](/ja/docs/Web/HTML/Element/form#enctype) の値を `multipart/form-data` に設定ください。
 - ユーザーがアップロードするファイルを選択できるように、1 つ以上の [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) コントロールを含めてください。
 
 例:
@@ -275,7 +276,7 @@ if __name__ == "__main__":
 </form>
 ```
 
-> **Note:** 多くのサーバーは悪用を防ぐために、ファイルや HTTP リクエストの長さを制限しています。
+> **メモ:** 多くのサーバーは悪用を防ぐために、ファイルや HTTP リクエストの長さを制限しています。
 
 ## 一般的なセキュリティへの配慮
 

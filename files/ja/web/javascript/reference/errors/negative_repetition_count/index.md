@@ -2,6 +2,7 @@
 title: 'RangeError: repeat count must be non-negative'
 slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "repeat count must be non-negative" は、 {{jsxref("String.prototype.repeat()")}} メソッドに `count` 引数が指定され、その値が負の数であった場合に発生します。

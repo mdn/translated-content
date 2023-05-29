@@ -2,6 +2,7 @@
 title: 获取当前操作系统 - runtime.PlatformOs
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
+
 {{AddonSidebar()}}
 
 获取当前浏览器运行所在的操作系统。
@@ -25,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.runtime.PlatformOs")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

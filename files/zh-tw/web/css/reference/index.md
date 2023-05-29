@@ -2,6 +2,9 @@
 title: CSS 參考文件
 slug: Web/CSS/Reference
 ---
+
+{{CSSRef}}
+
 Use this **CSS reference** to browse an [alphabetical index](#index) of all the standard [CSS](/zh-TW/docs/Web/CSS) properties, [pseudo-classes](/zh-TW/docs/Web/CSS/Pseudo-classes), [pseudo-elements](/zh-TW/docs/Web/CSS/Pseudo-elements), [data types](/zh-TW/docs/Web/CSS/CSS_Types), and [at-rules](/zh-TW/docs/Web/CSS/At-rule). You can also browse a list of all the CSS [selectors organized by type](#Selectors) and a list of [key CSS concepts](#Concepts). Also included is a brief [DOM-CSS / CSSOM reference](#DOM-CSS_CSSOM).
 
 ## 基本語法規則
@@ -154,9 +157,9 @@ As the structure of at-rules varies widely, please see [At-rule](/zh-TW/docs/Web
 - [Box model](/zh-TW/docs/Web/CSS/box_model)
 - [Containing block](/zh-TW/docs/Web/CSS/All_About_The_Containing_Block)
 - [Layout mode](/zh-TW/docs/Web/CSS/Layout_mode)
-- [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Margin collapsing](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Replaced elements](/zh-TW/docs/Web/CSS/Replaced_element)
-- [Stacking context](/zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Visual formatting model](/zh-TW/docs/Web/Guide/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

@@ -2,6 +2,7 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
@@ -37,19 +38,19 @@ image-rendering: unset;
 - `pixelated`
   - : 放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 `auto` 相同。
 
-> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自SVG的对应值）分别被定义为 `smooth` 和 `pixelated`。
+> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
 </div>
 ```
 
@@ -75,7 +76,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -87,7 +88,7 @@ img {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.image-rendering")}}
+{{Compat}}
 
 ### 备注
 

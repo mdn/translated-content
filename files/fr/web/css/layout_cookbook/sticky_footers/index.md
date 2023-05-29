@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 original_slug: Web/CSS/Layout_cookbook/Bas_de_page_adhérant
 ---
+
 {{CSSRef}}
 
 Un bas de page adhérant est un motif où le bas de page reste en bas de la zone d'affichage (_viewport_) lorsque le contenu est moins haut que la zone d'affichage. Dans cet article, nous verrons quelques techniques pour parvenir à ce résultat.
@@ -45,21 +46,7 @@ On commence de la même façon mais on utilise `display:flex` plutôt que `displ
 
 ## Compatibilité des navigateurs
 
-#### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-#### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-#### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-#### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: AudioNode.channelCountMode
 slug: Web/API/AudioNode/channelCountMode
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelCountMode
-browser-compat: api.AudioNode.channelCountMode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioNode") }} 인터페이스의 `channelCountMode` 프로퍼티는 노드의 입력과 출력 사이에서 채널들이 반드시 일치되어야만 하는 방법을 기술하는 열거형 값을 나타냅니다.

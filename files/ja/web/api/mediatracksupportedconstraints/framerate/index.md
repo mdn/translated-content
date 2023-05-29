@@ -2,6 +2,7 @@
 title: MediaTrackSupportedConstraints.frameRate
 slug: Web/API/MediaTrackSupportedConstraints/frameRate
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`frameRate`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が {{domxref("MediaTrackConstraints.frameRate", "frameRate")}} 制約に対応しています。
@@ -14,7 +15,7 @@ slug: Web/API/MediaTrackSupportedConstraints/frameRate
 
 このプロパティは、ユーザーエージェントが `frameRate` 制約に対応している場合に、辞書に現れます。このプロパティが現れない場合、ユーザーエージェントはビデオトラックのフレームレートの制限を指定することを許可していません。
 
-> **Note:** このプロパティが存在する場合は、常に `true` になります。
+> **メモ:** このプロパティが存在する場合は、常に `true` になります。
 
 ## 例
 

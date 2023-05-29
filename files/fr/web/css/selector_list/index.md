@@ -6,6 +6,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/Selector_list
 ---
+
 {{CSSRef}}
 
 **Une liste de sélecteurs** (`,`) permet de cibler tous les nœuds correspondants à l'une des conditions.
@@ -78,14 +79,11 @@ h3 { font-family: sans-serif }
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                        |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------- |
-| {{SpecName("CSS4 Selectors", "#grouping", "Selector Lists")}} | {{Spec2("CSS4 Selectors")}} | Renommage en « liste de sélecteur » |
-| {{SpecName('CSS1', '#grouping', 'grouping')}}                     | {{Spec2('CSS1')}}             | Définition initiale.                |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.list")}}
+{{Compat}}
 
 ## Voir aussi
 

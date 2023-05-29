@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onkeyup
 original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

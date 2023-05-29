@@ -2,6 +2,7 @@
 title: Audio()
 slug: Web/API/HTMLAudioElement/Audio
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Audio()`** 构造器创建并返回一个 {{domxref("HTMLAudioElement")}}，可以将它附加到文档中以供用户交互，也可以用于管理和播放背景音乐。
@@ -21,7 +22,7 @@ audioObj = new Audio(url);
 
 新创建的 {{domxref("HTMLAudioElement")}} 对象，被设置为播放指定 `url`的音频文件。新对象的 {{domxref("HTMLMediaElement.preload", "preload")}} 属性被设置为 `auto` 且它的 `src` 属性被设置为具体的 URL 或 `null` （当没有提供 URL 时）。如果提供了 URL，浏览器在返回新对象之前开始异步加载媒体资源。
 
-## 使用备注
+## 使用说明
 
 你也可以使用其他元素创建方法，例如 {{domxref("document")}} 对象的 {{domxref("Document.createElement", "createElement()")}} 方法，去构建一个新的 {{domxref("HTMLAudioElement")}}.
 
@@ -29,7 +30,7 @@ audioObj = new Audio(url);
 
 提供三种方法给开发者，判断音频文件是否已经加载，允许开始回放：
 
-- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值. 如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是 `HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
+- 检测 {{domxref("HTMLMediaElement.readyState", "readyState")}} 属性的值。如果值是 `HTMLMediaElement.HAVE_FUTURE_DATA`，说明有足够的数据开始回放并能至少播放一小段时间。如果值是 `HTMLMediaElement.HAVE_ENOUGH_DATA`，根据当前的下载速率，说明有足够的数据，你可以无干扰地播放至结束。
 - 监听 {{domxref("HTMLMediaElement.canplay_event", "canplay")}} 事件。当足够的音频数据被发送至 `<audio>` 元素，能开始回放，即使可能出现中断时，会触发该事件。
 - 监听 {{domxref("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} 事件。当音频应该没有干扰能够顺利播放时将会触发该事件。
 
@@ -54,7 +55,7 @@ myAudioElement.addEventListener("canplaythrough", event => {
 
 The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("api.HTMLAudioElement.Audio")}}
+{{Compat}}
 
 ## 参见
 

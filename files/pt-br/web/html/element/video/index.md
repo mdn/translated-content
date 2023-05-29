@@ -1,36 +1,36 @@
 ---
 title: video
-slug: Web/HTML/Element/Video
-translation_of: Web/HTML/Element/video
+slug: Web/HTML/Element/video
 ---
+
 ## Sumário
 
 O elemento HTML `<video>` é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.
 
-Para uma lista de formatos suportados veja [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements "En/Media formats supported by the audio and video elements").
+Para uma lista de formatos suportados veja [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements).
 
 ## Contexto de uso
 
-| Conteúdo permitido          | [Transparent content](/en/HTML/Content_categories#transparent_content "en/HTML/Content categories#transparent content"), contendo ou um atributo **src** ou um ou mais elementos {{ HTMLElement("source") }}, seguido por [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content") ou [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content") , sem `<video>` ou elementos {{ HTMLElement("audio") }}. |
+| Conteúdo permitido          | [Transparent content](/pt-BR/HTML/Content_categories#transparent_content), contendo ou um atributo **src** ou um ou mais elementos {{ HTMLElement("source") }}, seguido por [flow content](/pt-BR/HTML/Content_categories#flow_content) ou [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content) , sem `<video>` ou elementos {{ HTMLElement("audio") }}. |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag              | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"), ou qualquer outro elemento que aceite [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content").                                                                                                                                                                                                                                     |
-| Documento normativo         | [HTML 5, section 4.8.6](http://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Permissão de elementos pais | Qualquer elemento que aceite [flow content](/pt-BR/HTML/Content_categories#flow_content), ou qualquer outro elemento que aceite [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                     |
+| Documento normativo         | [HTML 5, section 4.8.6](https://www.w3.org/TR/html5/video.html#video)                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Atributos
 
-Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
+Como qualquer elemento HTML, este elemento suporta os [global attributes](/pt-BR/HTML/Global_attributes).
 
 - {{ htmlattrdef("autoplay") }}
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
-> **Note:** Nota: Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
+> **Nota:** Algumas versões do Chrome aceitam somente o `autostart` e não o autoplay
 
-- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }} {{ obsolete_inline() }}
+- {{ htmlattrdef("autobuffer") }} {{ Non-standard_inline() }}
 
   - : Um atributo Booleano; se especificado, o video vai começar a carregar automaticamente mesmo que não especificado para tocar automaticamente. Isso deve ser usado em casos que é esperado que o vídeo seja reproduzido (por exemplo, se o usuário acessa a página para assistir o vídeo, mas não se o vídeo estiver incorporado à pagina junto a outro conteúdo). O vídeo é carregado até que o cache de mídia.
 
-    > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo` autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. {{ bug(548523) }}
+    > **Note:** **Nota de implementação:** embora parte dos primeiros rascunhos das especificações do HTML5, o atributo `autobuffer` foi removido das últimas versões. Ele foi removido do Gecko 2.0 e outros navegadores, e nunca implementado em outros. A especificação define um novo atributo enumerado, `preload`, para substituir o atributo `autobuffer`, com sintaxe diferente. {{ bug(548523) }}
 
 - {{ htmlattrdef("buffered") }}
   - : Um atributo que pode ser lido para determinar os intervalos do vídeo que já foram carregados. Este atributo contém um objeto {{ domxref("TimeRanges") }}.
@@ -55,7 +55,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HT
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o metadata.
 
-    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload,`pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
+    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o vídeo automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
@@ -68,7 +68,7 @@ Como qualquer elemento HTML, este elemento suporta os [global attributes](/en/HT
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 
-> **Note:** **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
+> **Nota:** A definição de valor de tempo de compensação ainda não foi completada na especificação do HTML 5 e está sujeita a mudança.
 
 ## Exemplos
 
@@ -113,7 +113,7 @@ Seu serviço de hospedagem talvez forneça uma interface simples para mudar a co
 
 ## Interface do DOM
 
-Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoElement "en/DOM/HTMLVideoElementInterface").
+Esse elemento implementa a interface [`HTMLVideoElement`](/pt-BR/DOM/HTMLVideoElement).
 
 ## Compatibilidade com navegadores
 
@@ -121,13 +121,11 @@ Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoEleme
 
 ## Veja também
 
-- [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements "En/Media formats supported by the audio and video elements")
-- [`audio`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio "pt-BR/HTML/Element/Audio")
-- [Using HTML5 audio and video](/en/Using_HTML5_audio_and_video "En/Using audio and video in Firefox")
-- [Manipulating video using canvas](/En/Manipulating_video_using_canvas "En/Manipulating video using canvas")
-- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "En/NsIDOMHTMLMediaElement")
+- [Media formats supported by the audio and video elements](/En/Media_formats_supported_by_the_audio_and_video_elements)
+- [`audio`](http://developer-new.mozilla.org/pt-BR/docs/HTML/Element/audio)
+- [Using HTML5 audio and video](/pt-BR/Using_HTML5_audio_and_video)
+- [Manipulating video using canvas](/En/Manipulating_video_using_canvas)
+- [`nsIDOMHTMLMediaElement`](/En/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [TinyVid](http://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
 - [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
-- [Configuring servers for Ogg media](/en/Configuring_servers_for_Ogg_media "en/Configuring servers for Ogg media")
-
-{{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}
+- [Configuring servers for Ogg media](/pt-BR/Configuring_servers_for_Ogg_media)

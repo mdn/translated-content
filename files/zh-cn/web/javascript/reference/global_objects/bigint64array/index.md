@@ -2,6 +2,7 @@
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 ---
+
 {{JSRef}}
 
 **`BigInt64Array`** 类型的数组代表由 64 位有符号整数组成的数组。如果需要控制字节顺序的话，请使用 {{jsxref("DataView")}} 代替。内容初始化为 `0n`。一旦建立，就可以使用对象的方法或使用标准数组索引语法（即使用中括号表示法）引用数组中的元素。
@@ -15,8 +16,6 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}
   - : 返回一个元素大小的数字值。`BigInt64Array` 返回 `8` 。
-- {{jsxref("TypedArray.name", "BigInt64Array.name")}}
-  - : 返回构造函数名字的字符串值，如果是 `BigInt64Array` 类型的话，就是“`BigInt64Array`“。
 
 ## 静态方法
 
@@ -91,7 +90,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 - {{jsxref("TypedArray.@@iterator", "BigInt64Array.prototype[@@iterator]()")}}
   - : 返回一个新的 _array iterator_ 对象，该对象包含数组中每个索引的值。
 
-## 例子
+## 示例
 
 ### 不同的方法去创建一个 `BigInt64Array`
 

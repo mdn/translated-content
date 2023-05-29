@@ -2,6 +2,7 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.
 
 ARIA is a set of special accessibility attributes which can be added to any markup, but is especially suited to HTML. The `role` attribute defines what the general type of object is (such as an article, alert, or slider). Additional ARIA attributes provide other useful properties, such as a description for a form or the current value of a progressbar.
@@ -25,8 +26,6 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 
 - [Enhancing Page Navigation with ARIA Landmarks](http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/)
   - : A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. [See also, ARIA landmark implementation notes](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) and examples on real sites (updated as of July '11).
-- [Improving Form Accessibility](/zh-TW/docs/ARIA/forms)
-  - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
 - [Live regions (work-in-progress)](/zh-TW/docs/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 - [Using ARIA Live Regions to Announce Content Changes](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)

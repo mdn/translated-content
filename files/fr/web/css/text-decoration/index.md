@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
@@ -40,9 +41,13 @@ text-decoration: unset;
 - {{cssxref("text-decoration-style")}}
   - : Cette valeur indique le style à utiliser pour la décoration.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -94,17 +99,11 @@ text-decoration: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformée comme une propriété raccourcie. Ajout du support pour la valeur de {{cssxref('text-decoration-style')}}. |
-| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}             | {{Spec2('CSS2.1')}}                     | Pas de changement significatif.                                                                                                  |
-| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                                 | {{Spec2('CSS1')}}                     | Définition initiale.                                                                                                             |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration")}}
+{{Compat}}
 
 ## Voir aussi
 

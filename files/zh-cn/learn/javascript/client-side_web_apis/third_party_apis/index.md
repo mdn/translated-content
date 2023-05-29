@@ -2,6 +2,7 @@
 title: 第三方 API
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 到目前为止我们已经介绍的 API 是内置在浏览器中的，但并不是所有的 API 都是。许多大型网站和服务（例如 Google 地图，Twitter，Facebook，PayPal 等）提供的 API 允许开发者使用他们的数据（例如在博客上显示您的 Twitter 流）或服务（例如在您的网站上显示自定义 Google 地图，或者使用 Facebook 登录来登录你的用户）。本文着眼于浏览器 API 和第三方 API 的区别，并展示了后者的一些典型用途。
@@ -12,13 +13,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
       <th scope="row">先决条件：</th>
       <td>
         JavaScript 基础知识 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">first steps</a>,
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
         the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >basics of Client-side APIs</a
         >
       </td>
@@ -40,7 +41,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 ### 它们植根于第三方服务器
 
-浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/zh-CN/docs/Web/API/Geolocation) 的对象。 这个例子使用了这个对象的方法 [`getCurrentPosition()`](/zh-CN/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
+浏览器 API 在浏览器构建之初就存在 — 用 JavaScript 就可以立即访问它们。例如，例子中所使用的 [Geolocation API](/zh-CN/docs/Web/API/Geolocation/Using_geolocation) 就是通过使用 [`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象的属性 geolocation 来访问的，它返回一个名为 [`Geolocation`](/zh-CN/docs/Web/API/Geolocation) 的对象。这个例子使用了这个对象的方法 [`getCurrentPosition()`](/zh-CN/docs/Web/API/Geolocation/getCurrentPosition) 来请求当前设备所处的地点：
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -86,13 +87,13 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 其他 API 的包含方式稍微不同，但是大多数 API 的模式都非常相似。
 
-需要密钥的原因是：所用使用 API 功能的人都需要承担责任。当开发者注册一个密钥之后，如果他们开始恶意使用 API（例如跟踪位置，试图用大量的垃圾邮件干扰用户正常工作），此时 API 的提供者可以采取措施。最简单的措施是撤销开发者的 API 的使用权。
+需要密钥的原因是：所有使用 API 功能的人都需要承担责任。当开发者注册一个密钥之后，如果他们开始恶意使用 API（例如跟踪位置，试图用大量的垃圾邮件干扰用户正常工作），此时 API 的提供者可以采取措施。最简单的措施是撤销开发者的 API 的使用权。
 
 ## 扩展 the Google Maps 示例
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。 如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
 2. 接下来，用以下步骤获取你自己的开发者密钥：
 
     1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
@@ -218,7 +219,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### 将 API 连接到应用
 
@@ -425,7 +426,7 @@ function displayResults(json) {
 
 ![](youtube-example.png)
 
-本文不会对该示例做过多的叙述 — [源码](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) 中有详细的注释。
+本文不会对该示例做过多的叙述，[源码](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube)中有详细的注释。
 
 运行源码需要：
 
@@ -438,13 +439,3 @@ function displayResults(json) {
 本文介绍了如何使用第三方 API 给网页添加功能。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [Introduction to web APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

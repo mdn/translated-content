@@ -2,6 +2,7 @@
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** メソッドは、 `Set` オブジェクトからすべての要素を取り除きます。

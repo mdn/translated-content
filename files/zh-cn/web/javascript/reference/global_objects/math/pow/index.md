@@ -2,6 +2,7 @@
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
 ---
+
 {{JSRef}}
 
 **`Math.pow()`** 函数返回基数（`base`）的指数（`exponent`）次幂，即 `base^exponent`。
@@ -35,7 +36,7 @@ function raisePower(x,y) {
 }
 ```
 
-如果 `x` 是 2 ，且 `y` 是 7，则 raisePower 函数返回 128（2 的 7 次幂）。
+如果 `x` 是 2，且 `y` 是 7，则 raisePower 函数返回 128（2 的 7 次幂）。
 
 ## 规范
 

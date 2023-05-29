@@ -2,6 +2,7 @@
 title: 用戶介面
 slug: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 套件 APIs 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。

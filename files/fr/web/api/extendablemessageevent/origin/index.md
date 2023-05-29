@@ -11,6 +11,7 @@ tags:
   - origin
 translation_of: Web/API/ExtendableMessageEvent/origin
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **origin** de l'interface {{domxref("ExtendableMessageEvent")}} retourne l'origine du {{domxref("ServiceWorkerClient")}} qui a envoyé le message.

@@ -9,6 +9,7 @@ tags:
   - URL API
 translation_of: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 Le constructeur **`URL()`** renvoie un nouvel objet {{domxref("URL")}} représentant l'URL définie par les paramètres.

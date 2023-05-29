@@ -12,6 +12,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
 Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.
@@ -55,7 +56,7 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Ouvre une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet,  sérialisé en tant qu'objet.
+  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet, sérialisé en tant qu'objet.
 - {{WebExtAPIRef("runtime.getURL()")}}
   - : Etant donné un chemin relatif de [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
@@ -69,7 +70,7 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.connectNative()")}}
   - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à  {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
+  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
   - : Envoie un seul message d'une extension à une application native.
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
@@ -104,9 +105,9 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Lancé lorsque le périphérique doit être redémarré.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -116,7 +117,8 @@ Il fournit également des API de messagerie vous permettant de:
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -143,4 +145,4 @@ Il fournit également des API de messagerie vous permettant de:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

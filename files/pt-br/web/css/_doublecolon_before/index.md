@@ -1,8 +1,8 @@
 ---
 title: '::before (:before)'
 slug: Web/CSS/::before
-translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 ## Sumário
@@ -19,7 +19,7 @@ A notação `::before` (com dois dois-pontos) foi introduzida no CSS3 afim de di
 
 ### Adicionando aspas
 
-Um exemplo simples do uso de pseudo-elementos `::before` pseudo-elementos é a exibição de aspas. Aqui usamos ` ::before e ``{{Cssxref("::after")}} ` para inserir caracteres de aspas.
+Um exemplo simples do uso de pseudo-elementos `::before` pseudo-elementos é a exibição de aspas. Aqui usamos `::before` e `{{Cssxref("::after")}}` para inserir caracteres de aspas.
 
 #### Conteúdo HTML
 

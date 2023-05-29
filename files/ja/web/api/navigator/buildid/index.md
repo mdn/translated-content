@@ -2,6 +2,7 @@
 title: Navigator.buildID
 slug: Web/API/Navigator/buildID
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 ブラウザーのビルド識別子を返します。最近のブラウザーでは、このプロパティはプライバシーの目的で、固定のタイムスタンプを返すようになり、例えば Firefox 64 系列では `20181001000000` となります。

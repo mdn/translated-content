@@ -2,6 +2,7 @@
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 实体头部用于指示资源的 MIME 类型 {{Glossary("MIME type","media type")}} 。
@@ -72,7 +73,7 @@ Content-Type: text/plain
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{HTTPHeader("Accept")}} and {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Content-Disposition")}}

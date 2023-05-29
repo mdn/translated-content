@@ -4,6 +4,7 @@ slug: Web/API/console/info
 l10n:
   sourceCommit: d19d68bf6078c23d527b6e1355925795e745d124
 ---
+
 {{APIRef("Console API")}}
 
 **`console.info()`** メソッドは、ウェブコンソールに情報メッセージを出力します。Firefox では、ウェブコンソールでこれらの項目の隣に小さな "i" のアイコンを表示します。

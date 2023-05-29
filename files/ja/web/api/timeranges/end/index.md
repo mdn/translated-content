@@ -2,6 +2,7 @@
 title: TimeRanges.end()
 slug: Web/API/TimeRanges/end
 ---
+
 {{APIRef("DOM")}}
 
 指定された時間範囲が終わる時間オフセットを返します。
@@ -45,9 +46,7 @@ if (buf.length == 1) {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#dom-timeranges-end", "TimeRanges.end()")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

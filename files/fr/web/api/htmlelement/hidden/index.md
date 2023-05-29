@@ -3,6 +3,7 @@ title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 translation_of: Web/API/HTMLElement/hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propriété **`hidden`** de l'{{domxref("HTMLElement")}} est un {{jsxref("Boolean")}} qui vaut `true` si l'élément est caché, sinon sa valeur est `false`. Cela est très différent de l'utilisation de la propriété CSS {{cssxref("display")}} pour contrôler la visibilité d'un élément.

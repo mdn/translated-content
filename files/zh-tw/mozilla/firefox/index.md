@@ -2,6 +2,7 @@
 title: Firefox
 slug: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) 是 Mozilla 基金會最受歡迎的網頁瀏覽程式，在眾多平台包含 Windows、Mac OS X、桌面版 Linux 及 Android 行動裝置上發行。 具有廣大相容性，整合最新的 Web 技術和強大的[開發工具](/zh-TW/docs/Tools)。不管你是一般使用者還是開發者，Firefox 都是您的最佳選擇。
@@ -13,9 +14,9 @@ Firefox 是一項開源專案；大多數的程式碼都是由我們廣大的社
 - 開發者技術文件
   - : [以開發者為主的技術文件](/zh-TW/Firefox/Releases)；知道各個 Firefox 版本針對網站及擴充套件新增了哪些功能。
 - 專案文件
-  - : 獲得關於 [Firefox內部](/zh-TW/docs/Mozilla) 及它的系統版本號更詳細的資訊，以便你可以找到一個方式來處理你的程式碼。
+  - : 獲得關於 [Firefox 內部](/zh-TW/docs/Mozilla)及它的系統版本號更詳細的資訊，以便你可以找到一個方式來處理你的程式碼。
 - 開發者指南
-  - : 我們的 [開發者教學](/zh-TW/docs/Developer_Guide) 提供了一些資訊來解說如何獲得及編譯 Firefox 原始碼，如何處理你的程式碼，以及如何替專案奉獻心力。
+  - : 我們的[開發者教學](/zh-TW/docs/Developer_Guide)提供了一些資訊來解說如何獲得及編譯 Firefox 原始碼，如何處理你的程式碼，以及如何替專案奉獻心力。
 
 ## Firefox 更新頻道
 

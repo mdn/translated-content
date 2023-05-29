@@ -2,6 +2,7 @@
 title: Document.designMode
 slug: Web/API/Document/designMode
 ---
+
 {{ApiRef()}}
 
 **`document.designMode`** は、文書全体を編集可能にするかどうかを制御します。妥当な値は `"on"` および `"off"` です。仕様書では、このプロパティの既定値は `"off"` です。 Firefox はこの標準仕様に従っています。初期のバージョンの Chrome や IE は既定で `"inherit"` です。 Chrome 43 以降では、既定値は `"off"` であり、 `"inherit"` には対応しなくなりました。 IE6 ～ 10 では、値が大文字です。
@@ -27,9 +28,7 @@ iframeNode.contentDocument.designMode = "on";
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#making-entire-documents-editable:-the-designmode-idl-attribute', 'designMode')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

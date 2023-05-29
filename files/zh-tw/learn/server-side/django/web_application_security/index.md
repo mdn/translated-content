@@ -2,6 +2,7 @@
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
 保護用戶數據是任何網站設計的重要部分。我們之前在文章 web 安全中，解釋了一些更常見的安全威脅 -- 本文提供了 Django 的內置保護如何處理這些威脅的實際演示。
@@ -53,10 +54,10 @@ Django's template system protects you against the majority of XSS attacks by [es
 2. Open the site in your local browser and login to your superuser account.
 3. Navigate to the author-creation page (which should be at URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Enter names and date details for a new user, and then append the following text to the Last Name field:
-    `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](author_create_form_alert_xss.png)
+   `<script>alert('Test alert');</script>`.
+   ![Author Form XSS test](author_create_form_alert_xss.png)
 
-    > **備註：** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
+   > **備註：** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
 5. Press **Submit** to save the record.
 6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.![Author detail view XSS test](author_detail_alert_xss.png)
@@ -64,7 +65,10 @@ Django's template system protects you against the majority of XSS attacks by [es
 If you view the page HTML source code, you can see that the dangerous characters for the script tags have been turned into their harmless escape code equivalents (e.g. `>` is now `&gt;`)
 
 ```html
-<h1>Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David (Boonie) </h1>
+<h1>
+  Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David
+  (Boonie)
+</h1>
 ```
 
 Using Django templates protects you against the majority of XSS attacks. However it is possible to turn off this protection, and the protection isn't automatically applied to all tags that wouldn't normally be populated by user input (for example, the `help_text` in a form field is usually not user-supplied, so Django doesn't escape those values).
@@ -81,19 +85,56 @@ In order to do this, they might create an HTML file like the one below, which co
 
 ```html
 <html>
-<body onload='document.EvilForm.submit()'>
-
-<form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
-  <table>
-    <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required /></td></tr>
-    <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required /></td></tr>
-    <tr><th><label for="id_date_of_birth">Date of birth:</label></th><td><input id="id_date_of_birth" name="date_of_birth" type="text" /></td></tr>
-    <tr><th><label for="id_date_of_death">Died:</label></th><td><input id="id_date_of_death" name="date_of_death" type="text" value="12/10/2016" /></td></tr>
-  </table>
-  <input type="submit" value="Submit" />
-</form>
-
-</body>
+  <body onload="document.EvilForm.submit()">
+    <form
+      action="http://127.0.0.1:8000/catalog/author/create/"
+      method="post"
+      name="EvilForm">
+      <table>
+        <tr>
+          <th><label for="id_first_name">First name:</label></th>
+          <td>
+            <input
+              id="id_first_name"
+              maxlength="100"
+              name="first_name"
+              type="text"
+              value="Mad"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_last_name">Last name:</label></th>
+          <td>
+            <input
+              id="id_last_name"
+              maxlength="100"
+              name="last_name"
+              type="text"
+              value="Man"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_birth">Date of birth:</label></th>
+          <td>
+            <input id="id_date_of_birth" name="date_of_birth" type="text" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_death">Died:</label></th>
+          <td>
+            <input
+              id="id_date_of_death"
+              name="date_of_death"
+              type="text"
+              value="12/10/2016" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -102,7 +143,10 @@ Run the development web server, and log in with your superuser account. Copy the
 The way the protection is enabled is that you include the `{% csrf_token %}` template tag in your form definition. This token is then rendered in your HTML as shown below, with a value that is specific to the user on the current browser.
 
 ```html
-<input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' />
+<input
+  type="hidden"
+  name="csrfmiddlewaretoken"
+  value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW" />
 ```
 
 Django generates a user/browser specific key and will reject forms that do not contain the field, or that contain an incorrect field value for the user/browser.
@@ -120,6 +164,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - Clickjacking protection
   - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frameset, but not both a body and a frameset. However, an \<iframe> can be used within a normal document body. Each browsing context has its own session history and active document. The browsing context that contains the embedded content is called the parent browsing context. The top-level browsing context (which has no parent) is typically the browser window.">`<iframe>`](/zh-TW/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking protection](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing SSL/HTTPS
+
   - : SSL/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
 
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
@@ -148,21 +193,3 @@ The next and final step in this module about Django is to complete the [assessme
 - [Securing your site](/zh-TW/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

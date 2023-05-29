@@ -3,6 +3,7 @@ title: Créer et déclencher des évènements
 slug: Web/Events/Creating_and_triggering_events
 translation_of: Web/Events/Creating_and_triggering_events
 ---
+
 Dans cet article, nous allons voir comment créer et diffuser des évènements dans le DOM. Ce type d'évènements ainsi créés sont appelés des **évènements synthétiques**, en opposition aux évènements déclenchés par le navigateur.
 
 ## Créer des évènements spécifiques
@@ -119,7 +120,7 @@ textarea.addEventListener('input', function() {
 
 ## Déclencher des évènements natifs
 
-Cet exemple illustre la simulation d'un clic (ce qui revient à générer l'évènement d'un clic depuis le programme) sur une case à cocher grâce aux méthodes du DOM. [Voir l'exemple en action.](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)
+Cet exemple illustre la simulation d'un clic (ce qui revient à générer l'évènement d'un clic depuis le programme) sur une case à cocher grâce aux méthodes du DOM. [Voir l'exemple en action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
 
 ```js
 function simulateClick() {

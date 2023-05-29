@@ -2,6 +2,7 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef}}
 
 **`Object.isSealed()`** 方法判断一个对象是否被密封。
@@ -25,7 +26,7 @@ Object.isSealed(obj)
 
 如果这个对象是密封的，则返回 `true`，否则返回 `false`。密封对象是指那些不可 {{jsxref("Object.isExtensible", "扩展")}} 的，且所有自身属性都不可配置且因此不可删除（但不一定是不可写）的对象。
 
-## 例子
+## 示例
 
 ```js
 // 新建的对象默认不是密封的。
@@ -56,12 +57,12 @@ Object.isSealed(sealed); // === true
 Object.isExtensible(sealed); // === false
 
 // 一个密封对象也可以是一个冻结对象，但不是必须的。
-Object.isFrozen(sealed); // === true ，所有的属性都是不可写的
+Object.isFrozen(sealed); // === true，所有的属性都是不可写的
 var s2 = Object.seal({ p: 3 });
-Object.isFrozen(s2); // === false， 属性"p"可写
+Object.isFrozen(s2); // === false，属性"p"可写
 
 var s3 = Object.seal({ get p() { return 0; } });
-Object.isFrozen(s3); // === true ，访问器属性不考虑可写不可写，只考虑是否可配置
+Object.isFrozen(s3); // === true，访问器属性不考虑可写不可写，只考虑是否可配置
 ```
 
 ## 注意

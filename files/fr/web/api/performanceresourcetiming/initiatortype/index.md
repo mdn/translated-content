@@ -11,6 +11,7 @@ tags:
   - initiatorType
 translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété **`initiatorType`** en lecture seule est une [chaîne de caractères](/fr/docs/Web/API/DOMString) qui représente le _type_ de ressource qui a initié l'événement de performance.

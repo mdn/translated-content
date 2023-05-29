@@ -51,4 +51,4 @@ And so will this line.</p>
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

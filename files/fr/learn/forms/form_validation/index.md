@@ -4,6 +4,7 @@ slug: Learn/Forms/Form_validation
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
@@ -38,7 +39,7 @@ Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vou
 - «&nbsp;Veuillez entrer une adresse e-mail valide&nbsp;» (ce que vous avez saisi ne ressemble pas à une adresse e-mail valide).
 - «&nbsp;Votre mot de passe doit comporter entre 8 et 30 caractères et contenir une majuscule, un symbole et un chiffre&nbsp;» (sérieusement ?).
 
-C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
+C'est ce qu'on appelle la validation de formulaire — lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
 La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
 
@@ -402,11 +403,11 @@ Propriétés de l'API de validation des contraintes
 | `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
 | `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
 | `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                               |
-| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
+| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`, `false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
 | `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |
 | `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                 |
 | `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
-| `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon`false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                  |
+| `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                  |
 | `willValidate`             | Retourne `true` si l'élément est validé lorsque le formulaire est soumis, `false` dans le cas contraire.                                                                                                                                                                                     |
 
 #### Méthodes de l'API de validation des contraintes
@@ -763,17 +764,3 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Form_validation)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_form_styling)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

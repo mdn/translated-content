@@ -4,6 +4,7 @@ slug: Web/CSS/clamp
 translation_of: Web/CSS/clamp()
 original_slug: Web/CSS/clamp()
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-функция **`clamp()`** задаёт значение в диапазоне между указанными нижней и верхней границами. Функция принимает три аргумента: минимальное значение, предпочитаемое значение и максимально допустимое. Может использоваться везде, где допускается применение {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, или {{CSSxRef("&lt;integer&gt;")}}.

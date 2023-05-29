@@ -2,6 +2,7 @@
 title: '@supports'
 slug: Web/CSS/@supports
 ---
+
 {{CSSRef}}
 
 **`@supports`** [CSS](/zh-CN/docs/Web/CSS) [at-rule](/zh-CN/docs/Web/CSS/At-rule) 您可以指定依赖于浏览器中的一个或多个特定的 CSS 功能的支持声明。这被称为*特性查询*。该规则可以放在代码的顶层，也可以嵌套在任何其他[条件组规则中](/zh-CN/docs/Web/CSS/At-rule#Conditional_group_rules)。
@@ -180,9 +181,9 @@ slug: Web/CSS/@supports
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## 参见
 
-- [Using feature queries](/zh-CN/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.

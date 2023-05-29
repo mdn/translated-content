@@ -3,6 +3,7 @@ title: background-size
 slug: Web/CSS/background-size
 translation_of: Web/CSS/background-size
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.

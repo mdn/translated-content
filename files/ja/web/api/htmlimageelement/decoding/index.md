@@ -2,6 +2,7 @@
 title: HTMLImageElement.decoding
 slug: Web/API/HTMLImageElement/decoding
 ---
+
 {{APIRef}}
 
 **`decoding`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、ブラウザーが画像をどのようにデコードすべきかというヒントを表します。

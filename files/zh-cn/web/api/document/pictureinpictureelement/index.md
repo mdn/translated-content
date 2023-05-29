@@ -2,6 +2,7 @@
 title: Document.pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 只读属性 **`Document.pictureInPictureElement`** 返回当前文档中以画中画模式呈现的 {{ domxref("Element") }}，如果没有使用画中画模式，则返回 `null`。
@@ -35,7 +36,6 @@ function exitPictureInPicture() {
 ## 参见
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

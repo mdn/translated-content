@@ -12,6 +12,7 @@ tags:
   - Angular
   - Стилизация
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Теперь, когда мы создали базовую структуру приложения и начали отображать что-то полезное, давайте переключимся и рассмотрим статью, посвященную тому, как Angular работает со стилями.

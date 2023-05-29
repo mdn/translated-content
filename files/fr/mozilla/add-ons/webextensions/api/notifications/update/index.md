@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
+
 {{AddonSidebar()}}
 
 Met à jour une notification, compte tenu de son identifiant
@@ -39,13 +40,13 @@ var updating = browser.notifications.update(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` si la notification a été mise à jour, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.update")}}
+{{Compat}}
 
 ## Exemples
 
-Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
+Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
 
 Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de `progress`.
 

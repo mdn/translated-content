@@ -1,7 +1,10 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
+l10n:
+  sourceCommit: 31a11c2af1ecf81524971f85424b0462334be3c4
 ---
+
 {{CSSRef}}
 
 **`<blend-mode>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、要素が重なったときにどのように色が現れるかを記述します。 {{cssxref("background-blend-mode")}} または {{cssxref("mix-blend-mode")}} プロパティで使用されます。
@@ -70,9 +73,13 @@ slug: Web/CSS/blend-mode
 
 混合モード同士の変化は補完されません。すべての変更が直接反映されます。
 
+## 形式文法
+
+{{csssyntax}}
+
 ## 例
 
-### normal
+### "normal" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -82,15 +89,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('normal', "300", "350") }}
+{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
 
-### multiply
+### "multiply" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -100,15 +106,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
 
-{{ EmbedLiveSample('multiply', "300", "350") }}
+{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
 
-### screen
+### "screen" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -118,15 +123,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
 
-{{ EmbedLiveSample('screen', "300", "350") }}
+{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
 
-### overlay
+### "overlay" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -136,15 +140,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
 
-{{ EmbedLiveSample('overlay', "300", "350") }}
+{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
 
-### darken
+### "darken" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -154,15 +157,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
 
-{{ EmbedLiveSample('darken', "300", "350") }}
+{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
 
-### lighten
+### "lighten" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -172,15 +174,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
 
-{{ EmbedLiveSample('lighten', "300", "350") }}
+{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
 
-### color-dodge
+### "color-dodge" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -190,15 +191,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
 
-{{ EmbedLiveSample('color-dodge', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
 
-### color-burn
+### "color-burn" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -208,15 +208,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
 
-{{ EmbedLiveSample('color-burn', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
 
-### hard-light
+### "hard-light" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -226,15 +225,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
 
-{{ EmbedLiveSample('hard-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
 
-### soft-light
+### "soft-light" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -244,15 +242,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
 
-{{ EmbedLiveSample('soft-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
 
-### difference
+### "difference" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -262,15 +259,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
 
-{{ EmbedLiveSample('difference', "300", "350") }}
+{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
 
-### exclusion
+### "exclusion" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -280,15 +276,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
 
-{{ EmbedLiveSample('exclusion', "300", "350") }}
+{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
 
-### hue
+### "hue" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -298,15 +293,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
 
-{{ EmbedLiveSample('hue', "300", "350") }}
+{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
 
-### saturation
+### "saturation" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -316,15 +310,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
 
-{{ EmbedLiveSample('saturation', "300", "350") }}
+{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
 
-### color
+### "color" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -334,15 +327,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
 
-{{ EmbedLiveSample('color', "300", "350") }}
+{{ EmbedLiveSample('Example using "color"', "300", "350") }}
 
-### luminosity
+### "luminosity" の使用例
 
 ```html hidden
 <div id="div"></div>
@@ -352,15 +344,14 @@ slug: Web/CSS/blend-mode
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```
 
-{{ EmbedLiveSample('luminosity', "300", "350") }}
+{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
 
-<h3 id="Blend_mode_comparison">混合モードの比較</h3>
+### 混合モードの比較
 
 次の例の `<div>` には、 Firefox のロゴと線形グラデーションの 2 つの背景画像を設定してあります。その下に `<select>` メニューがあって `background-blend-mode` を変更することができ、それが `<div>` に適用されますので、様々な混合モードの効果を比較することができます。
 
@@ -395,8 +386,8 @@ slug: Web/CSS/blend-mode
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center, linear-gradient(to bottom, blue, orange);
 }
 ```
 

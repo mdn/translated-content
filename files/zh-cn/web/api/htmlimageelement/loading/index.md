@@ -2,6 +2,7 @@
 title: HTMLImageElement.loading
 slug: Web/API/HTMLImageElement/loading
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} 的 **`loading`** 属性为一个字符串，它的值会提示 {{Glossary("用户代理")}} 告诉浏览器不在{{Glossary("可视视口")}}内的图片该如何加载。这样一来，通过推迟图片加载仅让其在需要的时候加载而非页面初始载入时立刻加载，优化了页面的载入。
@@ -38,7 +39,7 @@ htmlImageElement.loading = eagerOrLazy;
 
 当一个加载被 `loading` 属性设为 `lazy` 的图片最后加载时，浏览器会根据{{HTMLElement("img")}} 元素的尺寸和图片自身大小重排文档，更新被图片影响的元素的位置。
 
-为了防止重排发生，你需要使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 属性明确设置图片大小。通过这样建立固有长宽比，你防止了元素的移位。取决于实际的加载时间和重排，移位造成的最小的影响可能只是使用户困惑和不适，最坏的影响则是导致用户点错目标。
+为了防止重排发生，你需要使用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性明确设置图片大小。通过这样建立固有长宽比，你防止了元素的移位。取决于实际的加载时间和重排，移位造成的最小的影响可能只是使用户困惑和不适，最坏的影响则是导致用户点错目标。
 
 ## 示例
 
@@ -68,11 +69,10 @@ function addImageToList(url) {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.loading")}}
+{{Compat}}
 
 ## 参见
 
-- The {{HTMLElement("img")}} element
-- [Web performance](/zh-CN/docs/Learn/Performance) in the MDN Learning Area
-- [Lazy loading](/zh-CN/docs/Web/Performance/Lazy_loading) in the MDN web performance guide
-- {{SectionOnPage("/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages", "Use lazy loading for images")}}
+- {{HTMLElement("img")}} 元素
+- MDN 学习专区中的 [Web 性能](/zh-CN/docs/Learn/Performance)
+- MDN web 性能指南中的[懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)

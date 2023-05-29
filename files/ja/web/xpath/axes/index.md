@@ -1,14 +1,8 @@
 ---
 title: 軸
 slug: Web/XPath/Axes
-tags:
-  - Transforming_XML_with_XSLT
-  - XPath
-  - XPath_Reference
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Axes
 ---
+
 {{ XsltRef() }} [XPath](/ja/docs/Web/XPath) 仕様では 13 種類の軸 (Axis) が定められています。軸はコンテキストノードとの関連性を表し、ツリー上でのノードのコンテキストノードからの相対的な位置を示すのに用いられます。
 
 XPath 式の使用に関するより詳しい情報は、 [XSLT による XML の変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)の記事の最後の[さらなる読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT#for_further_reading)の節を参照してください。また、[XPath 仕様書の 'axes' の節](https://www.w3.org/TR/xpath-30/#axes)も参照してください。

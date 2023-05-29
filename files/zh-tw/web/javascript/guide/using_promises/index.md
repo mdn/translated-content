@@ -2,6 +2,7 @@
 title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 {{jsxref("Promise")}} 是一個表示非同步運算的最終完成或失敗的物件。由於多數人使用預建立的 Promise，這個導覽會先講解回傳 Promise 的使用方式，之後再介紹如何建立。
@@ -41,7 +42,7 @@ doSomething().then(successCallback, failureCallback);
 
 不如舊做法，一個 Promise 有這些保證：
 
-- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/EventLoop#Run-to-completion)前呼叫。
+- Callback 不會在[當次的迴圈運行結束](/zh-TW/docs/Web/JavaScript/Event_Loop#執行到完成（run-to-completion）)前呼叫。
 - Callback 用 .then 添加，在非同步運算結束*後*呼叫，像前面那樣。
 - 複 Callback 可以透過重複呼叫 .then 達成。
 
@@ -184,7 +185,7 @@ async function foo() {
 }
 ```
 
-這基於 Promise，例如 `doSomething()`和之前一樣。你可以閱讀在[這裡](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)閱讀更多。
+這基於 Promise，例如 `doSomething()` 和之前一樣。你可以閱讀在[這裡](https://developers.google.com/web/fundamentals/getting-started/primers/async-functions)閱讀更多。
 
 Promise 藉由捕捉所有錯誤，包含例外和程式錯誤，解決了 Callback 地獄的缺點。這是非同步運算的基本特性。
 

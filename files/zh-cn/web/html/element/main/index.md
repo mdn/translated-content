@@ -2,7 +2,8 @@
 title: <main>
 slug: Web/HTML/Element/main
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。
 
@@ -100,7 +101,7 @@ HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的�
 </main>
 ```
 
-{{Compat("html.elements.main")}}
+{{Compat}}
 
 ## 参见
 

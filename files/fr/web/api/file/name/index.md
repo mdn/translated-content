@@ -5,6 +5,7 @@ translation_of: Web/API/File/name
 original_slug: Web/API/File/fileName
 browser-compat: api.File.name
 ---
+
 {{APIRef("File API")}}
 
 Cette propriété renvoie le nom du fichier représenté par l'objet [`File`](/fr/docs/Web/API/File) courant. Pour des raisons de sécurité, le chemin du fichier est exclu de cette propriété.

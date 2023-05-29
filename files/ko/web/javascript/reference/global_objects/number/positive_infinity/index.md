@@ -1,13 +1,8 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef}}
 
 **`Number.POSITIVE_INFINITY`** 속성은 양의 무한대를 나타냅니다.
@@ -20,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 
 `POSITIVE_INFINITY`는 수학에서의 무한대와 약간 다릅니다.
 
-- `POSITIVIE_INFINITY`를 포함한 아무 양의 수와 `POSITIVE_INFINITY`를 곱한 결과는 `POSITIVE_INFINITY`입니다.
+- `POSITIVE_INFINITY`를 포함한 아무 양의 수와 `POSITIVE_INFINITY`를 곱한 결과는 `POSITIVE_INFINITY`입니다.
 - {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}를 포함한 아무 음의 수와 `POSITIVE_INFINITY`를 곱한 결과는 {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}입니다.
 - 아무 양의 수를 `POSITIVE_INFINITY`로 나눈 결과는 0입니다.
 - 아무 음의 수를 `POSITIVE_INFINITY`로 나눈 결과는 음의 부호를 가진 0입니다.

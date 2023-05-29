@@ -2,6 +2,7 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 `StyleSheetList` インターフェイスは {{domxref("StyleSheet")}} のリストを表します。
@@ -37,9 +38,7 @@ const allCSS = [...document.styleSheets]
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                     | 備考 |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName("CSSOM", "#the-stylesheetlist-interface", 'CSSStyleSheetList')}} | {{Spec2("CSSOM")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

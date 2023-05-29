@@ -1,33 +1,30 @@
 ---
 title: <br>
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
+
 ## Sumário
 
 O elemento HTML _quebra-de-linha_ \<br> produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.
 
-Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/CSS "CSS") {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
+Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a propiedade [CSS](/pt-BR/docs/CSS) {{cssxref('margin')}} ou o elemento {{HTMLElement("p")}}.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content_categories"
+          href="/pt-BR/docs/HTML/Content_categories"
           >Categorias de Conteúdo</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Conteúdo de Fluxo</a
         >,
         <a
-          href="/en-US/docs/HTML/Content_categories#Phrasing_content"
-          title="HTML/Content categories#Phrasing content"
+          href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -48,8 +45,7 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
       <td>
         Qualquer elemento que aceita
         <a
-          href="/en-US/docs/HTML/Content_categories#Phrasing_content"
-          title="HTML/Content_categories#Phrasing_content"
+          href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -63,13 +59,13 @@ Não use \<br> para aumentar o espaço entre as linhas de texto; para isso use a
 
 ## Atributos
 
-Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
 
   - : Indica onde começar a próxima linha depois da quebra.
 
-    > **Note:** **Nota de Uso:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propiedade CSS {{CSSxref('clear')}} em vez disso.
+    > **Nota:** Este atributo está obsoleto em HTML 5 e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
 
 ## Exemplo
 
@@ -83,10 +79,10 @@ USA
 
 Saída do HTML acima:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
+Mozilla Foundation<br>
+1981 Landings Drive<br>
+Building K<br>
+Mountain View, CA 94043-0801<br>
 USA
 
 ## Especificações
@@ -106,4 +102,4 @@ USA
 - O elemento {{HTMLElement("address")}}
 - O elemento {{HTMLElement("p")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

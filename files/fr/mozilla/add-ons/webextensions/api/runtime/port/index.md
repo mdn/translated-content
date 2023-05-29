@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
+
 {{AddonSidebar()}}
 
 Un objet `Port` represente une extrémité d'une connexion entre deux contextes spécifiques, qui peut-être utilisée pour échanger des messages.
@@ -48,7 +49,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `object`. Si le port a été déconnecté en raison d'une erreur, il sera défini sur un objet avec un `message`, de propriété de chaîne, vous donnant plus d'informations sur l'erreur. Voir `onDisconnect`.
 - `onDisconnect`
 
-  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété  `error` donnant plus d'informations sur l'erreur :
+  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété `error` donnant plus d'informations sur l'erreur :
 
     ```js
     port.onDisconnect.addListener((p) => {
@@ -58,7 +59,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     });
     ```
 
-    Notez que dans Google Chrome `port.error` n'est pas supporté: utilisez plutôt  {{WebExtAPIRef("runtime.lastError")}} pour obtenir le message d'erreur.
+    Notez que dans Google Chrome `port.error` n'est pas supporté: utilisez plutôt {{WebExtAPIRef("runtime.lastError")}} pour obtenir le message d'erreur.
 
 - `onMessage`
   - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura envoyé un message à ce port. L'écouteur recevra l'objet JSON envoyé par l'autre extrémité.
@@ -67,9 +68,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `sender`{{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.Port")}}
+{{Compat}}
 
 ## Exemples
 
@@ -186,7 +187,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -213,4 +215,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

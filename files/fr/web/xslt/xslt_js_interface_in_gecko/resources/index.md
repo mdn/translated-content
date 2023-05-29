@@ -4,6 +4,7 @@ slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Ressources
 ---
+
 1. [Introduction](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko)
 2. [Les liaisons JavaScript/XSLT](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Les_liaisons_JavaScript%2f%2fXSLT)
 3. [Exemple basique](/fr/docs/L'interface_XSLT%2f%2fJavaScript_dans_Gecko/Exemple_basique)

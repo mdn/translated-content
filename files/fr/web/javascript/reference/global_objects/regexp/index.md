@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp
 browser-compat: javascript.builtins.RegExp
 ---
+
 {{JSRef}}
 
 Un objet **RegExp** est utilisé pour étudier les correspondances d'un texte avec un motif donné.

@@ -2,6 +2,7 @@
 title: progress event
 slug: Web/API/XMLHttpRequest/progress_event
 ---
+
 {{APIRef}}
 
 **`progress`**事件会在请求接收到数据的时候被周期性触发。
@@ -92,7 +93,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () => {
@@ -100,7 +101,7 @@ xhrButtonError.addEventListener('click', () => {
 });
 
 xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });
 ```
 
@@ -114,7 +115,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.progress_event")}}
+{{Compat}}
 
 ## 相关链接
 

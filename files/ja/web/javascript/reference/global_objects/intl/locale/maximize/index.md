@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.maximize()`** メソッドは、既存の値に基づいてロケールの言語、文字体系、地域の最も可能性の近い値を取得します。

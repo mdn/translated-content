@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Segmenter.supportedLocalesOf()`** renvoie un tableau contenant les locales, parmi celles fournies en argument, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.

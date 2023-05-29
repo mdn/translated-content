@@ -1,11 +1,6 @@
 ---
 title: 전역 객체
 slug: Glossary/Global_object
-tags:
-  - CodingScripting
-  - 용어
-  - 전역 객체
-translation_of: Glossary/Global_object
 ---
 전역 객체 {{glossary("object")}} 는 전역 범위 {{glossary("global scope")}} 에 항상 존재하는 객체를 의미합니다.
 
@@ -26,7 +21,7 @@ var foo = "foobar";
 foo === window.foo; // Returns: true
 ```
 
-전역 객체로 `foo` 변수를 선언한 뒤, 우리는 `foo` 변수명을 사용해 전역 객체인 ` window``.foo ` 의 프로퍼티로 `window` 객체에서 그것의 값에 직접 접근할 수 있습니다.,
+전역 객체로 `foo` 변수를 선언한 뒤, 우리는 `foo` 변수명을 사용해 전역 객체인 `window.foo` 의 프로퍼티로 `window` 객체에서 그것의 값에 직접 접근할 수 있습니다.,
 
 #### 설명:
 

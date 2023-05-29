@@ -1,12 +1,15 @@
 ---
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.src`** プロパティは、 HTML のメディア要素の `src` 属性の値を反映します。これは、要素で使用するメディアリソースの URL を示します。
 
-> **Note:** この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮されます。
+> **メモ:** この要素が現在実際に使用しているメディアリソースの URL を知る最善の方法は、{{domxref("HTMLMediaElement.currentSrc", "currentSrc")}} 属性の値を調べることです。 これは、（{{HTMLElement("source")}} 要素を表す）{{domxref("HTMLSourceElement")}} で提供されるリストからの最良または優先メディアリソースの選択も考慮されます。
 
 ## 値
 
@@ -15,7 +18,7 @@ slug: Web/API/HTMLMediaElement/src
 ## 例
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 console.log(obj.src); // ""
 ```
 

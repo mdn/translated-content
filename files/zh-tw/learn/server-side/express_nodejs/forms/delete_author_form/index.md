@@ -2,6 +2,7 @@
 title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
+
 此子文檔展示，如何定義頁面以刪除 `Author`對象。
 
 正如[表單設計](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所討論的那樣，我們的策略是，只允許刪除“未被其他對象引用” 的對象（在這種情況下，這意味著如果作者`Author`被一本書`Book`引用，我們將不允許刪除作者）。在實現方面，這意味著，表單需要在刪除作者之前，先確認沒有關聯的書籍。如果存在關聯的書籍，則應顯示它們，並說明在刪除`Author`對象之前，必須刪除它們。
@@ -12,24 +13,32 @@ Open **/controllers/authorController.js**. Find the exported `author_delete_get(
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.author==null) { // No results.
-            res.redirect('/catalog/authors');
-        }
-        // Successful, so render.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_delete_get = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        res.redirect("/catalog/authors");
+      }
+      // Successful, so render.
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    }
+  );
 };
 ```
 
@@ -51,32 +60,41 @@ Find the exported `author_delete_post()` controller method, and replace it with 
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-          Author.findById(req.body.authorid).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.body.authorid }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        // Success
-        if (results.authors_books.length > 0) {
-            // Author has books. Render in same way as for GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-            return;
-        }
-        else {
-            // Author has no books. Delete object and redirect to the list of authors.
-            Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
-                if (err) { return next(err); }
-                // Success - go to author list
-                res.redirect('/catalog/authors')
-            })
-        }
-    });
+exports.author_delete_post = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.body.authorid).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.body.authorid }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      // Success
+      if (results.authors_books.length > 0) {
+        // Author has books. Render in same way as for GET route.
+        res.render("author_delete", {
+          title: "Delete Author",
+          author: results.author,
+          author_books: results.authors_books,
+        });
+        return;
+      } else {
+        // Author has no books. Delete object and redirect to the list of authors.
+        Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
+          if (err) {
+            return next(err);
+          }
+          // Success - go to author list
+          res.redirect("/catalog/authors");
+        });
+      }
+    }
+  );
 };
 ```
 
@@ -88,7 +106,7 @@ First we validate that an id has been provided (this is sent via the form body p
 
 Create **/views/author_delete.pug** and copy in the text below.
 
-```html
+```pug
 extends layout
 
 block content
@@ -132,7 +150,7 @@ Next we will add a **Delete** control to the _Author detail_ view (the detail pa
 
 Open the **author_detail.pug** view and add the following lines at the bottom.
 
-```html
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author

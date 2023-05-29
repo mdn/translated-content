@@ -3,6 +3,7 @@ title: Écrire un serveur WebSocket en Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
+
 ## Introduction
 
 Cet exemple montre comment créer un serveur d'API WebSocket API utilisant Java d'Oracle.
@@ -61,7 +62,7 @@ Méthode :
 write(byte[] b, int off, int len)
 ```
 
-En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'octets fourni.
+En débutant à partir de la position `off`, écrit `len` octets du tableau d'octets fourni.
 
 ### InputStream
 

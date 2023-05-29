@@ -2,6 +2,7 @@
 title: document.characterSet
 slug: Web/API/Document/characterSet
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.characterSet`** 只读属性返回当前文档的字符编码。该字符编码是用于渲染此文档的字符集，可能与该页面指定的编码不同。（用户可以重写编码方式。）
@@ -27,4 +28,4 @@ var string = document.characterSet
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.characterSet")}}
+{{Compat}}

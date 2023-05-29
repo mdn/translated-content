@@ -2,6 +2,7 @@
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 **`Document.queryCommandSupported()`** メソッドは、指定しされたエディターコマンドにブラウザーが対応しているかどうかを報告します。

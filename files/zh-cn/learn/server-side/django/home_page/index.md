@@ -3,6 +3,7 @@ title: 'Django Tutorial Part 5: 主页构建'
 slug: Learn/Server-side/Django/Home_page
 original_slug: learn/Server-side/Django/主页构建
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 我们现在可以添加代码来显示我们的第一个完整页面 - [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。
@@ -13,7 +14,7 @@ original_slug: learn/Server-side/Django/主页构建
       <th scope="row">前提：</th>
       <td>
         读 the
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >. 完成上章节 (including
         <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site"
@@ -54,7 +55,7 @@ original_slug: learn/Server-side/Django/主页构建
 - `catalog/` — 主页
 - `catalog/books/` — 书单页
 - `catalog/authors/` — 作者页
-- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `／catalog／book／3`，第三本书。
+- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `/catalog/book/3`，第三本书。
 - `catalog/author/<id>` — 主键字段 ID 的具体作者（默认） —详细视图。如下例子 `/catalog/author/11`，第 11 个作者。
 
 前三个 URL 用于列出索引，书籍和作者。这些不会对任何附加信息进行编码，而返回的结果将取决于数据库中的内容，运行获取信息的查询将始终保持一致。
@@ -95,9 +96,9 @@ urlpatterns = [
 > ]
 > ```
 >
-> 每当 Django 使用 include() （[`django.conf.urls.include()），`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)`它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。`
+> 每当 Django 使用 include() （[`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)），它排除与该点匹配 URL 的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。
 >
-> 匹配的 URL 实际上是 `catalog/`+<空字符串> （`/catalog/` 假定是因为 `include()`是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用`/catalog/。`
+> 匹配的 URL 实际上是 `catalog/`+<空字符串> （`/catalog/` 假定是因为 `include()` 是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用`/catalog/`。
 
 此函数还说明了一个`name`参数，此唯一标识指定 URL 映射。你可以使用 "reverse" 映射—去动态创建指定映射设计处理的资源的一个 URL。例如，我们现在可以通过在我们的模版中创建以下链接到我们的主页：
 
@@ -346,7 +347,7 @@ return render(
 
 在我们的下一篇文章中，我们将基于我们的知识来创建其他四个页面。
 
-## 也可以看看
+## 参见
 
 - [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/1.10/intro/tutorial03/) (Django docs)
 - [URL 调度程序](https://docs.djangoproject.com/en/1.10/topics/http/urls/) (Django docs)

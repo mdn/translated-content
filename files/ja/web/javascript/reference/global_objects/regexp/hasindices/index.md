@@ -2,6 +2,7 @@
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 ---
+
 {{JSRef}}
 
 **`hasIndices`** プロパティは、その正規表現で "`d`" フラグが使用されたかどうかを示します。 `hasIndices` はそれぞれの正規表現インスタンスの読み取り専用プロパティです。

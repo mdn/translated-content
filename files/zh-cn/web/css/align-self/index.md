@@ -2,6 +2,7 @@
 title: align-self
 slug: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`align-self`** 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 [`align-items`](/zh-CN/docs/Web/CSS/align-items) 的值。In Grid, it aligns the item inside the [grid area](/zh-CN/docs/Glossary/Grid_Areas). 在 Flexbox 中，会按照 [cross axis](/zh-CN/docs/Glossary/Cross_Axis)（当前 flex 元素排列方向的垂直方向）进行排列。
@@ -116,7 +117,7 @@ div:nth-child(3) {
 
 ### 结果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -128,8 +129,8 @@ div:nth-child(3) {
 
 ## 参考
 
-- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- CSS Flexbox 指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox 指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
 - CSS Grid 指南：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - {{cssxref("align-items")}} 属性

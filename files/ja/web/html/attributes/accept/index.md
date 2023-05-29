@@ -2,6 +2,7 @@
 title: 'HTML 属性: accept'
 slug: Web/HTML/Attributes/accept
 ---
+
 {{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。 accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。
@@ -92,7 +93,7 @@ div {
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **Note:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
+> **メモ:** この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 
@@ -102,7 +103,7 @@ div {
 
 多くの場合は、ユーザーが任意の種別のファイルを選択できるようにするのではなく、特定の種別のファイルを選択できるようにしたいものです。例えば、ファイル入力でユーザーがプロフィール画像をアップロードできる場合、 {{Glossary("JPEG")}} や {{Glossary("PNG")}} などのウェブ互換の画像形式を選択させたいと思うでしょう。/p>
 
-許容されるファイル種別は、 {{htmlattrxref("accept","input/file")}} 属性で許容されるファイル拡張子や MIME タイプのカンマ区切りのリストを取ることで指定することができます。いくつかの例を示します。
+許容されるファイル種別は、 [`accept`](/ja/docs/Web/HTML/Element/input/file#accept) 属性で許容されるファイル拡張子や MIME タイプのカンマ区切りのリストを取ることで指定することができます。いくつかの例を示します。
 
 - `accept="image/png"` または `accept=".png"` — PNG ファイルを受け付ける。
 - `accept="image/png, image/jpeg"` または `accept=".png, .jpg, .jpeg"` — PNG または JPEG ファイルを受け付ける。
@@ -134,10 +135,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'accept attribute')}} | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

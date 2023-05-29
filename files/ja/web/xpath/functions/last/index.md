@@ -1,11 +1,8 @@
 ---
 title: last
 slug: Web/XPath/Functions/last
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/last
 ---
+
 {{ XsltRef() }}
 
 `last` 関数は、式評価コンテキストのコンテキストサイズに等しい数値を返します。

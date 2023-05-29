@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

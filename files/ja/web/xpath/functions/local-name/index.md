@@ -1,11 +1,8 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/local-name
 ---
+
 {{ XsltRef() }}
 
 `local-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。

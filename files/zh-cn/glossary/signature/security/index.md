@@ -2,6 +2,7 @@
 title: 签名（安全）
 slug: Glossary/Signature/Security
 ---
+
 **签名**或*数字签名*是 {{glossary("protocol","协议")}}，表明消息是真实的。
 
 从给定消息的{{glossary("hash")}}，**签名过程**首先使用实体的私有{{glossary("key")}}生成链接到签名实体的数字签名。
@@ -22,4 +23,4 @@ slug: Glossary/Signature/Security
 
 ### 技术参考
 
-- [信息安全基础 ​​​​​​​](/zh-CN/docs/Web/Security/Information_Security_Basics)
+- [信息安全基础](/zh-CN/docs/Web/Security/Information_Security_Basics)

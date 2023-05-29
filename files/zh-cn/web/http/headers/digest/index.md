@@ -2,6 +2,7 @@
 title: Digest
 slug: Web/HTTP/Headers/Digest
 ---
+
 {{HTTPSidebar}}
 
 **`Digest`** 响应 HTTP 头提供了请求资源一个 {{Glossary("摘要")}} 。

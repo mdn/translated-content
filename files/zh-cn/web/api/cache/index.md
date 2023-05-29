@@ -2,9 +2,10 @@
 title: Cache
 slug: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-**`Cache`** 接口为缓存的 [`Request`](http://fetch.spec.whatwg.org/#request) / `Response` 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中， 但是它不必一定要配合 service worker 使用。
+**`Cache`** 接口为缓存的 [`Request`](http://fetch.spec.whatwg.org/#request) / `Response` 对象对提供存储机制，例如，作为{{domxref("ServiceWorker")}} 生命周期的一部分。请注意，Cache 接口像 workers 一样，是暴露在 window 作用域下的。尽管它被定义在 service worker 的标准中，但是它不必一定要配合 service worker 使用。
 
 一个域可以有多个命名 Cache 对象。你需要在你的脚本 (例如，在 {{domxref("ServiceWorker")}} 中) 中处理缓存更新的方式。除非明确地更新缓存，否则缓存将不会被更新；除非删除，否则缓存数据不会过期。使用 {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开一个 Cache 对象，再使用 Cache 对象的方法去处理缓存。
 
@@ -41,13 +42,13 @@ slug: Web/API/Cache
 
 此代码段来自 [service worker selective caching sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (请参阅 [selective caching live](https://googlechrome.github.io/samples/service-worker/selective-caching/)) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以`font/开始的`Content-Type 头的{{domxref("Cache")}}对象。
 
-代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。 如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
+代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
 
-代码处理从{{domxref("Globalfetch.fetch","fetch()")}} 操作抛出的异常。 请注意，HTTP 错误响应（例如 404）不会触发异常。 它将返回一个具有相应错误代码集的正常响应对象。
+代码处理从{{domxref("Globalfetch.fetch","fetch()")}} 操作抛出的异常。请注意，HTTP 错误响应（例如 404）不会触发异常。它将返回一个具有相应错误代码集的正常响应对象。
 
-该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。 虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。 它将缓存的速记标识符映射到特定的版本化缓存名称。 代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。
+该代码片段还展示了服务工作线程使用的缓存版本控制的最佳实践。虽然在这个例子中只有一个缓存，但同样的方法可用于多个缓存。它将缓存的速记标识符映射到特定的版本化缓存名称。代码还会删除命名不在 CURRENT_CACHES 中的所有缓存。
 
-> **备注：** 在 Chrome 中，请访问 chrome://inspect/#service-workers ，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
+> **备注：** 在 Chrome 中，请访问 chrome://inspect/#service-workers，然后单击注册的服务工作线程下面的“inspect”链接，查看 [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) 脚本正在执行的各种操作的日志记录。
 
 ```js
 var CACHE_VERSION = 1;
@@ -109,7 +110,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache")}}
+{{Compat}}
 
 ## 参见
 

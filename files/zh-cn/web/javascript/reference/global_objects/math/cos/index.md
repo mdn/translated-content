@@ -2,6 +2,7 @@
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -27,7 +28,7 @@ Math.cos(x)
 
 ## 示例
 
-### 例子：使用 `Math.cos`
+### 示例：使用 `Math.cos`
 
 ```js
 Math.cos(0);           // 1

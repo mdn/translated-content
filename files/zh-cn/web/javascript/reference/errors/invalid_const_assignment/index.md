@@ -2,6 +2,7 @@
 title: 'TypeError: invalid assignment to const "x"'
 slug: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

@@ -1,13 +1,8 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.hidden`** 읽기 전용 속성은 페이지가 숨겨졌는지 여부를 {{jsxref("Boolean")}} 값으로 나타냅니다.

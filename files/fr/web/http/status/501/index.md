@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/501
 translation_of: Web/HTTP/Status/501
 browser-compat: http.status.501
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse HTTP d'erreur serveur **`501 Not Implemented`** indique que le serveur ne prend pas en charge les fonctionnalités nécessaires pour réaliser la requête.

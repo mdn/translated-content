@@ -3,11 +3,12 @@ title: Navigator.product
 slug: Web/API/Navigator/product
 original_slug: Web/API/NavigatorID/product
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`Navigator.product`** プロパティの値は、どのブラウザーでも常に "`Gecko`" です。このプロパティは互換性のためだけに維持されています。
 
-> **Note:** このプロパティが実際の製品名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Gecko`" を返します。
+> **メモ:** このプロパティが実際の製品名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Gecko`" を返します。
 
 ## 構文
 

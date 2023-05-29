@@ -2,6 +2,7 @@
 title: background-color
 slug: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 **`background-color`** [CSS](/zh-TW/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
@@ -33,17 +34,11 @@ background-color: inherit;
 ### HTML
 
 ```html
-<div class="exampleone">
- Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">
-  Lorem ipsum dolor sit amet, consectetuer
-</div>
+<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
@@ -55,13 +50,13 @@ background-color: inherit;
 }
 
 .exampletwo {
-  background-color: rgb(153,102,153);
-  color: rgb(255,255,204);
+  background-color: rgb(153, 102, 153);
+  color: rgb(255, 255, 204);
 }
 
 .examplethree {
   background-color: #777799;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -77,7 +72,7 @@ background-color: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## 延伸閱讀
 

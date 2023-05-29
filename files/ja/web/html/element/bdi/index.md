@@ -2,7 +2,8 @@
 title: '<bdi>: 書字方向分離要素'
 slug: Web/HTML/Element/bdi
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の**書字方向分離要素** (**`<bdi>`**) は、ブラウザーの書字方向アルゴリズムにこのテキストが周囲のテキストから独立していると扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入し、挿入されるテキストの書字方向が不明な場合に便利です。
 
@@ -29,7 +30,7 @@ EMBEDDED-TEXT - 1st place
 1 - EMBEDDED-TEXTst place
 ```
 
-さらに、 `EMBEDDED-TEXT` の書字方向が分かる場合は、 {{htmlattrxref("dir")}} 属性のついた {{HTMLElement("span")}} で `EMBEDDED-TEXT` を囲むことでこの問題を修正できます。しかし、書字方向が分からない場合は - 例えば、 `EMBEDDED-TEXT` がデータベースから読み込まれたり、ユーザーに入力されたりするものであれば - `<bdi>` を使用して、 `EMBEDDED-TEXT` の書字方向が周囲に影響されることを防ぐべきです。
+さらに、 `EMBEDDED-TEXT` の書字方向が分かる場合は、 [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性のついた {{HTMLElement("span")}} で `EMBEDDED-TEXT` を囲むことでこの問題を修正できます。しかし、書字方向が分からない場合は - 例えば、 `EMBEDDED-TEXT` がデータベースから読み込まれたり、ユーザーに入力されたりするものであれば - `<bdi>` を使用して、 `EMBEDDED-TEXT` の書字方向が周囲に影響されることを防ぐべきです。
 
 同様の視覚効果は、 CSS の {{cssxref("unicode-bidi", "unicode-bidi: isolate")}} を {{HTMLElement("span")}} またはその他の文字書式のための要素に付けることで達成できますが、これは意味が含まれず、ブラウザーは CSS の整形を無視することが許されているので、 HTML ではこのアプローチを使用しないでください。
 
@@ -167,10 +168,7 @@ body {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-bdi-element', '&lt;bdi&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-bdi-element', '&lt;bdi&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

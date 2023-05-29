@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.stroke()`** はキャンバス 2D API のメソッドで、現在のあるいは渡されたパスを、現在の線のスタイルで描画します。

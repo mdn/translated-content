@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/orientation
 ---
+
 {{CSSRef}}
 
 **`orientation`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée pour vérifier l'orientation de la zone d'affichage (_viewport_) (ou la boîte de la page pour les média paginés).
@@ -60,11 +61,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS4 Media Queries')}} | Aucune modification. |
-| {{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.orientation")}}
+{{Compat}}

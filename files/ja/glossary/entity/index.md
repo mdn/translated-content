@@ -2,9 +2,10 @@
 title: Entity (エンティティ)
 slug: Glossary/Entity
 ---
+
 {{glossary("HTML")}} **エンティティ**とは、アンパサンド (`&`) で始まりセミコロン (`;`)で終わるテキスト (文字列) のひと固まりです。エンティティは（通常は HTML コードとして解釈される）予約済み文字や、(ノーブレークスペースのように) 見えない文字を表示するためによく使用されます。標準キーボードでは入力が難しい文字の代わりに使用することもできます。
 
-> **Note:** 多くの文字は覚えやすいエンティティです。例えば、コピーライト記号 (`©`) のエンティティは `&copy;` です。覚えにくものとしては、`&#8212;` や `&#x2014;` があります。[リファレンス表](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)や[デコーダーツール](https://mothereff.in/html-entities)を使用してみてください。
+> **メモ:** 多くの文字は覚えやすいエンティティです。例えば、コピーライト記号 (`©`) のエンティティは `&copy;` です。覚えにくものとしては、`&#8212;` や `&#x2014;` があります。[リファレンス表](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)や[デコーダーツール](https://mothereff.in/html-entities)を使用してみてください。
 
 ## 予約済み文字
 

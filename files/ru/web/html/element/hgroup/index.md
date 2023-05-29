@@ -3,9 +3,9 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}{{seeCompatTable}}
+{{HTMLSidebar}}{{seeCompatTable}}
 
-> **Примечание:** **Примечание использования:** Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега `<hgroup>` на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать [подзаголовки, альтернативные заголовки и слоганы](http://www.w3.org/TR/html5/common-idioms.html#sub-head).
+> **Примечание:** Этот элемент был удалён из HTML5 (W3C) спецификации , но до сих пор остаётся в спецификации WHATWG. Он частично встроен в большинство браузеров, хотя бы поэтому вряд ли уйдёт. Поскольку схематический алгоритм не реализован ни в одном браузере, семантика тега `<hgroup>` на практике реализована только теоретически. Спецификация HTML5 (W3C) даёт совет как обозначать [подзаголовки, альтернативные заголовки и слоганы](http://www.w3.org/TR/html5/common-idioms.html#sub-head).
 
 HTML \<hgroup> Элемент (HTML Headings Group Element - Элемент Группы Заголовков HTML) представляет заголовок раздела. Он определяет один заголовок, который участвует в схеме документа как заголовок явно или неявно заданного раздела, к которому он принадлежит.
 
@@ -13,16 +13,16 @@ HTML \<hgroup> Элемент (HTML Headings Group Element - Элемент Гр
 
 Поэтому этот элемент группирует несколько заголовков, внося лишь основной текст в план документа. Он позволяет связывать вторичные заголовки, такие как подзаголовки, альтернативные заголовки или даже теги, с основным заголовком, без загрязнения структуры документа.
 
-| Категория информации      | [Flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), heading content, palpable content.                                                               |
+| Категория информации      | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), heading content, palpable content.                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
 | Tag omission              | {{no_tag_omission}}                                                                                                                                                                               |
-| Permitted parent elements | Any element that accepts [flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").                                                                         |
+| Permitted parent elements | Any element that accepts [flow content](/ru/docs/HTML/Content_categories#Flow_content).                                                                         |
 | DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                                                   |
 
 ## Атрибуты
 
-This element only includes the [global attributes](/ru/docs/HTML/Global_attributes "HTML/Global attributes").
+This element only includes the [global attributes](/ru/docs/HTML/Global_attributes).
 
 ## Примеры
 

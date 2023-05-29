@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Learn/Performance
 ---
+
 {{LearnSidebar}}
 
 La création de sites Web nécessite HTML, CSS, et JavaScript. Pour créer des sites Web et des applications que les gens veulent utiliser, qui attirent et fidélisent les utilisateurs, vous devez créer une bonne expérience utilisateur. Une bonne expérience utilisateur consiste à s'assurer que le contenu est rapide à charger et réactif à l'interaction de l'utilisateur. Ceci est connu sous le nom de **performance web**, et dans ce module, vous vous concentrerez sur les principes fondamentaux de la création de sites Web performants.

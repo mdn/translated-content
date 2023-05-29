@@ -2,6 +2,7 @@
 title: URL API
 slug: Web/API/URL_API
 ---
+
 {{DefaultAPISidebar("URL API")}}
 
 URL API 是一个 URL 标准的组件，它定义了有效的{{Glossary("URL", "Uniform Resource Locator")}}和访问、操作 URL 的 API。URL 标准还定义了像域名、主机和 IP 地址等概念，并尝试以标准的方式去描述用于以键/值对的形式提交 web 表单内容的遗留`application/x-www-form-urlencoded` {{Glossary("MIME type")}} 。
@@ -56,10 +57,8 @@ try {
 
 URL API 是一个简单的 API，它的名字只有几个接口：
 
--
 - [`URL`](/zh-CN/docs/Web/API/URL)
 - [`URLSearchParams`](/zh-CN/docs/Web/API/URLSearchParams)
--
 
 该规范的旧版本包括一个名为{{domxref("URLUtilsReadOnly")}}的接口，该接口已经合并到{{domxref("WorkerLocation")}} 接口中。
 
@@ -97,7 +96,7 @@ function fillTableWithParameters(tbl) {
 
 ## 浏览器兼容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 另见
 

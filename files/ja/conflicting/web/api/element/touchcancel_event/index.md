@@ -3,6 +3,7 @@ title: 'Document: touchcancel イベント'
 slug: conflicting/Web/API/Element/touchcancel_event
 original_slug: Web/API/Document/touchcancel_event
 ---
+
 {{APIRef}}
 
 `touchcancel` イベントは、1 つ以上のタッチ点が実装特有の規則で破棄されたとき (例えば、作成されたタッチ点の数が多すぎるなど) に発生します。

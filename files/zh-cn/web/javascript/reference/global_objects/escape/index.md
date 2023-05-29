@@ -2,6 +2,7 @@
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
 ---
+
 {{jsSidebar("Objects")}} {{deprecated_header}}
 
 ## 概览
@@ -23,7 +24,7 @@ escape(str)
 
 `escape` 函数是全局对象的属性。特色字符如：`@*_+-./` 被排除在外。
 
-字符的 16 进制格式值，当该值小于等于 0xFF 时，用一个 2 位转义序列: `%xx` 表示。大于的话则使用 4 位序列：%**u**xxxx 表示。
+字符的 16 进制格式值，当该值小于等于 0xFF 时，用一个 2 位转义序列：`%xx` 表示。大于的话则使用 4 位序列：%**u**xxxx 表示。
 
 ## 示例
 

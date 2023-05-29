@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noscript
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<noscript>`** définit un fragment HTML qui doit être affiché si les fonctionnalités de script ne sont pas prises en charge ou si elles sont désactivées.
 

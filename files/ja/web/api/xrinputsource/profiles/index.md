@@ -2,11 +2,12 @@
 title: XRInputSource.profiles
 slug: Web/API/XRInputSource/profiles
 ---
+
 {{APIRef("WebXR")}}{{securecontext_header}}
 
 {{domxref("XRInputSource")}} の **`profiles`** 読み取り専用プロパティは、文字列の配列を返します。 各文字列は、入力ソースの構成プロファイルを記述します。 プロファイル文字列は、具体性の高い順にリストされ、最も具体的なプロファイルが最初にリストされます。
 
-> **Note:** **注**: WebXR セッションがインラインモードの場合、`profiles` リストは常に空です。
+> **メモ:** WebXR セッションがインラインモードの場合、`profiles` リストは常に空です。
 
 ## 構文
 
@@ -33,9 +34,7 @@ WebXR 入力プロファイルレジストリー（[WebXR Input Profiles Registr
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrinputsource-profiles','XRInputSource.profiles')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

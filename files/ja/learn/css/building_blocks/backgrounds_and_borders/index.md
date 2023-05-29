@@ -2,6 +2,7 @@
 title: 背景と枠線
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 このレッスンでは、CSS の背景・枠線モジュールの機能を使ったクリエイティブな表現方法をいくつか見ていきます。グラデーション、背景画像、角の丸めを加えることを通じて、CSS を使ったスタイリングの多様な課題に対する解答が得られるでしょう。
@@ -27,7 +28,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{cssxref("background-color")}} プロパティは、要素の背景色を定義します。このプロパティは、有効な[\<color>](/ja/docs/Web/CSS/color_value)値を受け入れます。`background-color`は、要素の [**Content box**, **Padding box**](/ja/docs/Learn/CSS/Building_blocks/The_box_model#Parts_of_a_box) の範囲でコンテンツの下に広がります。
 
-次の例では、さまざまな色の値値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
+次の例では、さまざまな色の値を使用して、ボックス(`.box`)、見出し(`h2`)、および {{htmlelement("span")}} 要素に背景色を指定しています。
 
 **利用可能な [\<color>](/ja/docs/Web/CSS/color_value) を使ってみましょう。**
 
@@ -84,7 +85,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{cssxref("background-position")}} プロパティを適用すると、そのボックス上で背景画像を表示する位置を選択できます。このプロパティでは、ボックスの左上隅を`(0, 0)`として、水平方向の座標軸(**horisontal axis**)を`x`軸(**`x` axis**, 複数形は axes）、垂直方向の座標軸(**vertical axis**)を`y`軸(**`y` axis**)とする座標系にそって画像を配置します。
 
-> **Note:** デフォルトの`background-position`の値は`(0, 0)`です。
+> **メモ:** デフォルトの`background-position`の値は`(0, 0)`です。
 
 最も一般的な`background-position`の値は、2 個の値をとります—水平方向、垂直方向の順で値を指定します。
 
@@ -132,7 +133,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
 
-> **Note:** `background-position` は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。
+> **メモ:** `background-position` は {{cssxref("background-position-x")}} および {{cssxref("background-position-y")}} の一括指定プロパティで、それぞれの座標軸の方向の位置を個別に設定できます。
 
 ### グラデーション背景
 
@@ -150,7 +151,7 @@ CSS の {{cssxref("background")}} プロパティは、このレッスンで説�
 
 これを行うと、背景画像が互いに重なり合う可能性があります。背景は、最後に指定したものが一番下に置かれ、先のものが順に上に重ねられます。
 
-> **Note:** グラデーションを通常の背景画像と同じように重ね合わせることができます。
+> **メモ:** グラデーションを通常の背景画像と同じように重ね合わせることができます。
 
 他の`background-*`プロパティも、`background-image`と同じ方法でコンマ区切りの値を持つことができます:
 
@@ -241,7 +242,7 @@ background-position: 10px 20px,  top right;
 }
 ```
 
-> **Note:** top, right, bottom, left の各方向の枠線を指定するプロパティには、HTML 文書の書字モード（writing mode）と結びついた*論理*プロパティ（_logical_ property）が割り当てられています（書字モードは、左から右、右から左、上から下といったテキストの方向を制御するものです）。次のレッスンでは、さまざまなテキストの方向の処理について説明します。
+> **メモ:** top, right, bottom, left の各方向の枠線を指定するプロパティには、HTML 文書の書字モード（writing mode）と結びついた*論理*プロパティ（_logical_ property）が割り当てられています（書字モードは、左から右、右から左、上から下といったテキストの方向を制御するものです）。次のレッスンでは、さまざまなテキストの方向の処理について説明します。
 
 枠線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる枠線スタイルを使用しています。枠線の色、幅、スタイルを試して、枠線の動作を確認しましょう。
 
@@ -281,7 +282,7 @@ background-position: 10px 20px,  top right;
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%',650)}}
 
-> **Note:** [ここで正解を確認できます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分の力で解答してみてください！
+> **メモ:** [ここで正解を確認できます](https://github.com/mdn/css-examples/blob/master/learn/solutions.md)が、まずは自分の力で解答してみてください！
 
 ## まとめ
 
@@ -290,24 +291,3 @@ background-position: 10px 20px,  top right;
 次のレッスンでは、ドキュメントの書字モードが CSS とどのように相互作用するかを説明します。テキストが左から右以外の方向に流れる場合に何が起こるのでしょうか？
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

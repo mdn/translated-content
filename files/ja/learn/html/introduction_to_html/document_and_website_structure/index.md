@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 {{glossary("HTML")}} は、ページの個々の部分（「段落」や「画像」など）を定義するだけでなく、ウェブサイトの領域を定義するために使用される多数のブロックレベル要素（「ヘッダー」、「ナビゲーションメニュー」、「メインコンテンツ列」など）も備えています。この記事では、基本的なウェブサイト構造を計画し、この構造を表す HTML を記述する方法について説明します。
@@ -60,7 +61,7 @@ l10n:
 
 なぜならビジュアルがすべてを伝えるわけではないからです。私たちはナビゲーションメニューや関連リンクなど、コンテンツの最も有用な部分に目の見えるユーザーの注意を引くために、色とフォントサイズを使用します。しかし、例えば「ピンク」や「大きいフォント」のような概念があまり有用ではないと思われる視覚障碍者についてはどうでしょうか。
 
-> **Note:** 色覚障碍者は[世界の人口の約 4 ％](http://www.color-blindness.com/2006/04/28/colorblind-population/)を占めています。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2012 年には[全世界で 2 億 8,500 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 70 億人](https://en.wikipedia.org/wiki/World_population#/media/File:World_population_history.svg)でした）。
+> **メモ:** 色覚障碍者は[世界の人口の約 4 ％](http://www.color-blindness.com/2006/04/28/colorblind-population/)を占めています。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2012 年には[全世界で 2 億 8,500 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 70 億人](https://en.wikipedia.org/wiki/World_population#/media/File:World_population_history.svg)でした）。
 
 HTML コードでは、それらの*機能*に基づいてコンテンツのセクションをマークアップすることができます — 画面リーダーのような支援技術はそれらの要素を認識し、「メインナビゲーションを見つける」や「メインコンテンツを見つける」といった作業を手助けすることができます。
 コースの前半で述べたように、[適切な役割に適切な要素構造とセマンティクスを使用しないことによる影響](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#なぜ構造が必要なのか)は多くあります。
@@ -177,7 +178,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 
 ### 非意味的なラッパー
 
-時にはいくつかのアイテムをまとめたり、コンテンツをラップしたりするための理想的な意味的要素が見つからない場合があります。いくつかの {{glossary("CSS")}} や {{glossary("JavaScript")}} を持つ単一のエンティティとしてそれらすべてに影響を与えるために単に要素のセットを一緒にグループ化したいことがあります。このような場合に、 HTML は {{HTMLElement("div")}} と {{HTMLElement("span")}} 要素を提供します。これらを適切な {{htmlattrxref('class')}} 属性と一緒に使用して、簡単にターゲティングできるようにそれらに何らかの種類のラベルを提供することをお勧めします。
+時にはいくつかのアイテムをまとめたり、コンテンツをラップしたりするための理想的な意味的要素が見つからない場合があります。いくつかの {{glossary("CSS")}} や {{glossary("JavaScript")}} を持つ単一のエンティティとしてそれらすべてに影響を与えるために単に要素のセットを一緒にグループ化したいことがあります。このような場合に、 HTML は {{HTMLElement("div")}} と {{HTMLElement("span")}} 要素を提供します。これらを適切な [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性と一緒に使用して、簡単にターゲティングできるようにそれらに何らかの種類のラベルを提供することをお勧めします。
 
 {{HTMLElement("span")}} はインラインの非意味的要素です。コンテンツをラップするより良い意味的なテキスト要素が思いつかないか、または特定の意味を加えたくない場合にだけ使うべきです。例えば、
 
@@ -209,7 +210,7 @@ play, the lights should be down low]</span>.</p>
 
 これは必ずしも `<aside>` ではありません。必ずしもページのメインコンテンツに関連しているわけではないからです（どこからでも見られるようにしたいのです）。ページのメインコンテンツの一部ではないので、`<section>` の使用を特に保証するものではありません。したがって、この場合は `<div>` で問題ありません。画面リーダーのユーザーが見つけやすいように、道標として見出しを追加しました。
 
-> **Warning:** div はとても便利に使用できるため、つい使いすぎてしまいがちです。意味的な価値を持たないので、 HTML コードを煩雑にするだけです。これらを使用するのは、意味的にもっと良い解決策がない場合に限るように注意し、使用箇所を最小限に抑えるようにしなければ、文書の更新や維持に苦労することになります。
+> **警告:** div はとても便利に使用できるため、つい使いすぎてしまいがちです。意味的な価値を持たないので、 HTML コードを煩雑にするだけです。これらを使用するのは、意味的にもっと良い解決策がない場合に限るように注意し、使用箇所を最小限に抑えるようにしなければ、文書の更新や維持に苦労することになります。
 
 ### 改行と水平線
 
@@ -264,7 +265,7 @@ and his markup didn't read very well.</p>
 
 自身が作成したウェブサイトのために上記のアクティブラーニングを実行してみてください。何についてサイトを作りたいですか？
 
-> **Note:** 作業をどこかに保存してください。後で必要になるかもしれません。
+> **メモ:** 作業をどこかに保存してください。後で必要になるかもしれません。
 
 ## まとめ
 
@@ -275,15 +276,3 @@ and his markup didn't read very well.</p>
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements): HTML の意味的要素と HTML のアウトラインアルゴリズムの上級ガイド。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

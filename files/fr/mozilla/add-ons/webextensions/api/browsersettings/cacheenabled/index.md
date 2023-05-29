@@ -12,15 +12,16 @@ tags:
   - cacheEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver globalement le cache du navigateur.
 
 La valeur sous-jacente est un booléen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.cacheEnabled")}}
+{{Compat}}
 
 ## Exemples
 

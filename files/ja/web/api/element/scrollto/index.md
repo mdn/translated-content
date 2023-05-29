@@ -2,6 +2,7 @@
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 ---
+
 {{APIRef}}
 
 **`scrollTo()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素内を指定された座標までスクロールします。
@@ -40,9 +41,7 @@ element.scrollTo({
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-element-scrollto-options-options', 'element.scrollTo()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

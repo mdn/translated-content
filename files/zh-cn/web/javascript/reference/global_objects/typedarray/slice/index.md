@@ -2,16 +2,19 @@
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
+
 {{JSRef}}
 
-**`slice()`**方法将一个 typed array 的一部分浅拷贝到一个新的 typed array 对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}}相同的算法。_TypedArray 指_ [typed array types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)中的一员 .
+**`slice()`** 方法将一个类型化数组的一部分浅拷贝到一个新的类型化数组对象中并返回。此方法采用与 {{jsxref("Array.prototype.slice()")}} 相同的算法。_TypedArray_ 指[类型化数组的类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)中的一员。
 
 {{EmbedInteractiveExample("pages/js/typedarray-slice.html")}}
 
 ## 语法
 
-```plain
-typedarray.slice([begin[, end]])
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
 ```
 
 ## 参数
@@ -60,7 +63,7 @@ if (!Uint8Array.prototype.slice) {
 
 这不是一个完整的 polyfill，因为它返回的是一个 Array 的实例而不是 Uint8Array，所以它没有 TypedArrays 应有的一些属性。
 
-如果你要在不支持 `Object.defineProperty` 的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 `Array.prototype` 中那些方法的 polyfill ，因为你没法让它们不可枚举。
+如果你要在不支持 `Object.defineProperty` 的老旧 JavaScript 引擎上支持这个特性，最好不要去实现 `Array.prototype` 中那些方法的 polyfill，因为你没法让它们不可枚举。
 
 ## 规范
 

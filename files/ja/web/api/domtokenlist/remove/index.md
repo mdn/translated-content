@@ -2,6 +2,7 @@
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`remove()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リストから指定されたトークンを取り除きます。

@@ -2,6 +2,7 @@
 title: Referer ヘッダーのプライバシーとセキュリティの考慮事項
 slug: Web/Security/Referer_header:_privacy_and_security_concerns
 ---
+
 [HTTP の Referer ヘッダー](/ja/docs/Web/HTTP/Headers/Referer)にまつわるプライバシーとセキュリティのリスクがあります。この記事ではこれらを説明し、これらのリスクを回避するためのアドバイスを提案します。
 
 ## リファラー問題

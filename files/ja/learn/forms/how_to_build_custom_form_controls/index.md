@@ -5,13 +5,14 @@ l10n:
   sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
 original_slug: Learn/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}
 
 HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、あなた独自のコントロールを作成するしかありません。
 
 本記事では、そのようなコントロールの作り方を見ていきます。その目的のため、次の例に取り組みます: {{HTMLElement("select")}} 要素の再構築です。このほかに独自コントロール作成をどういう方法でするか、いつするか、またそれが意味をなすのかや、コントロール作成が必須なときに何に気をつけるべきかを扱います。
 
-> **Note:** ここではコントロールの構築に注目しており、汎用かつ再利用可能なコードの作成法は見ていきません。それには JavaScript の重要なコードや未知のコンテキストでの DOM 操作が組み合わされており、本記事の対象から外れます。
+> **メモ:** ここではコントロールの構築に注目しており、汎用かつ再利用可能なコードの作成法は見ていきません。それには JavaScript の重要なコードや未知のコンテキストでの DOM 操作が組み合わされており、本記事の対象から外れます。
 
 ## デザイン、構造、セマンティクス
 
@@ -30,8 +31,6 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 - ページを読み込む
 - コントロールはアクティブであったが、ユーザーがコントロール以外のどこかをクリックした
 - コントロールはアクティブであったが、キーボードを使用して別のコントロールにフォーカスを移した (例: <kbd>Tab</kbd> キー)
-
-
 
 **コントロールは以下のときにアクティブ状態になります。**
 
@@ -76,7 +75,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 - [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
-> **Note:** さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd> キー で実現できますが、この例では実装しません。しかし、仕組みはすでに `click` イベント向けに実装されていますので、行うのは簡単です。
+> **メモ:** さらにほとんどのシステムでは、使用できる選択肢すべてを見るために {{HTMLElement("select")}} 要素を開く手段があります (これは {{HTMLElement("select")}} 要素をマウスでクリックするのと同じです)。これは Windows では <kbd>Alt</kbd> + <kbd>Down</kbd> キー で実現できますが、この例では実装しません。しかし、仕組みはすでに `click` イベント向けに実装されていますので、行うのは簡単です。
 
 ## HTML の構造とセマンティクスの定義
 
@@ -168,7 +167,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-> **Note:** 選択肢のリストに高さと幅を与えないように `transform: scale(1, 0)` も使えます。
+> **メモ:** 選択肢のリストに高さと幅を与えないように `transform: scale(1, 0)` も使えます。
 
 ### 美化
 
@@ -318,7 +317,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 デザインや構造の準備ができましたので、コントロールが実際に動作するようにするための JavaScript コードを記述できます。
 
-> **Warning:** 以下は教育目的のコードであり、そのままで使用するべきではありません。ご覧のとおり、さまざまな箇所に将来性のないものや古いブラウザーで動作しないものがあります。また、本番のコードでは最適化すべき冗長な箇所もあります。
+> **警告:** 以下は教育目的のコードであり、そのままで使用するべきではありません。ご覧のとおり、さまざまな箇所に将来性のないものや古いブラウザーで動作しないものがあります。また、本番のコードでは最適化すべき冗長な箇所もあります。
 
 ### なぜ動作しないのか?
 
@@ -420,7 +419,7 @@ window.addEventListener("load", () => {
   </tbody>
 </table>
 
-> **Note:** コードを本当に汎用かつ再利用可能にしたい場合はクラスを切り替えるのではなく、単に {{HTMLElement("select")}} 要素を隠すためのコントロールのクラスを追加して、ページ内にあるすべての {{HTMLElement("select")}} 要素の後ろにカスタムコントロールを表す DOM ツリーを動的に追加する方がはるかによいでしょう。
+> **メモ:** コードを本当に汎用かつ再利用可能にしたい場合はクラスを切り替えるのではなく、単に {{HTMLElement("select")}} 要素を隠すためのコントロールのクラスを追加して、ページ内にあるすべての {{HTMLElement("select")}} 要素の後ろにカスタムコントロールを表す DOM ツリーを動的に追加する方がはるかによいでしょう。
 
 ### 作業をより簡単に
 
@@ -688,7 +687,7 @@ window.addEventListener('load', () => {
 
 ### `role` 属性
 
-[ARIA](/ja/docs/Web/Accessibility/ARIA "docs/Web/Accessibility/ARIA") で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
+[ARIA](/ja/docs/Web/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
 
 また、ARIA は標準の HTML マークアップにデフォルトで適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
@@ -710,7 +709,7 @@ window.addEventListener('load', () => {
 </div>
 ```
 
-> **Note:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
+> **メモ:** `role` 属性と `class` 属性の両方を含める方法は、[CSS 属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)に対応しない古いブラウザーをサポートしたい場合にのみ必要です。
 
 ### `aria-selected` 属性
 
@@ -843,25 +842,3 @@ JavaScript なしで少しの CSS にて、ラジオボタンのリストをス�
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
 ラジオボタン、独自 JavaScript 、またはサードパーティライブラリーで代替コントロールを作る場合、アクセシブルかつ機能への耐性を高めましょう。すなわち Web 標準の実装状況がまちまちである、多様なブラウザーで良好に動作できるようにすることが必要です。楽しんでください!
-
-## このモジュール
-
-### 学習コース
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -2,6 +2,7 @@
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
+
 {{JSRef}}
 
 **`String.fromCodePoint()`** 静的メソッドは指定されたコードポイントのシーケンスを使って生成された文字列を返します。

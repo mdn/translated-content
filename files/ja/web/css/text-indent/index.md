@@ -2,6 +2,7 @@
 title: text-indent
 slug: Web/CSS/text-indent
 ---
+
 {{CSSRef}}
 
 **`text-indent`** は CSS のプロパティで、ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定します。

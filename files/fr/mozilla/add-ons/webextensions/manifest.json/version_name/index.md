@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -30,6 +31,6 @@ En plus du champ [version](/fr/Add-ons/WebExtensions/manifest.json/version), qui
 
 Si aucun **version_name** n'est présent, le champ de **version** sera également utilisé à des fins d'affichage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.version_name")}}
+{{Compat}}

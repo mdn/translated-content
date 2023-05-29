@@ -2,6 +2,7 @@
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 **`forEach()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。
@@ -35,7 +36,7 @@ forEach(callback, thisArg);
 
 ## 例
 
-次の例では、 {{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。 `forEach()` を使用して値を含む反復子を取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
+次の例では、 {{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。 `forEach()` を使用して値を含むイテレーターを取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
 
 ### HTML
 

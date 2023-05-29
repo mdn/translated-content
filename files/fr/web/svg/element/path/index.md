@@ -5,6 +5,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 L'élément `path` est l'élément générique pour définir une forme. Toutes les formes basiques peuvent aussi être faites à partir de `path`.
@@ -51,7 +52,7 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/DOM/SVGPathElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.path")}}
+{{Compat}}
 
 ## Voir aussi
 

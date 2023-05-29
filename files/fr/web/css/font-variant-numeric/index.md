@@ -4,6 +4,7 @@ slug: Web/CSS/font-variant-numeric
 translation_of: Web/CSS/font-variant-numeric
 browser-compat: css.properties.font-variant-numeric
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.

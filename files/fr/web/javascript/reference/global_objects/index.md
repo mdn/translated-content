@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects
 original_slug: Web/JavaScript/Reference/Objets_globaux
 ---
+
 {{jsSidebar("Objects")}}
 
 Cette partie référence tous les objets natifs standards JavaScript, avec leurs propriétés et méthodes.

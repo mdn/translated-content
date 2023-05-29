@@ -1,10 +1,8 @@
 ---
 title: 숫자와 날짜
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 이 장에서는 JavaScript에서 숫자와 날짜를 사용하기 위한 개념과 객체, 함수에 대해 소개합니다. 그리고 숫자를 10진법, 2진법, 16진법 등의 다양한 형태로 표현하는 방법과 더불어 {{jsxref("Math")}} 객체를 사용해 다양한 수학 연산을 수행하는 방법을 알 수 있습니다.
@@ -37,7 +35,7 @@ JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data
 
 ### 2진수
 
-2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
+2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -62,7 +60,7 @@ ECMAScript 5의 Strict 모드는 8 진수 구문을 금지합니다. 8 진수 �
 
 ### 16진수
 
-16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
+16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -303,7 +301,7 @@ Math.sin(1.56)
 
 ## `Date` 객체
 
-자바스크립트에는 날짜 데이터 타입이 없습니다. 그러나, {{jsxref ( "Date")}} 객체와 그 메소드를 사용하여 응용 프로그램에서 날짜와 시간을 처리 할 수 ​​있습니다. `Date` 객체에는 날짜 설정, 가져 오기 및 조작을위한 많은 메소드가 있습니다. 속성(properties)이 없습니다.
+자바스크립트에는 날짜 데이터 타입이 없습니다. 그러나, {{jsxref ( "Date")}} 객체와 그 메소드를 사용하여 응용 프로그램에서 날짜와 시간을 처리 할 수 있습니다. `Date` 객체에는 날짜 설정, 가져 오기 및 조작을위한 많은 메소드가 있습니다. 속성(properties)이 없습니다.
 
 자바스크립트는 자바와 비슷하게 날짜를 처리합니다. 두 언어에는 동일한 날짜 메소드가 많으며 두 언어 모두 1970 년 1 월 1 일 00:00:00 이후의 밀리 초 수로 날짜를 저장합니다. 유닉스 타임 스탬프는 1970 년 1 월 1 일 00:00:00 이후의 초 수입니다.
 

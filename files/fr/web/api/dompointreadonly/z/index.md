@@ -12,6 +12,7 @@ tags:
   - z
 translation_of: Web/API/DOMPointReadOnly/z
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`z`** de l'interface **`DOMPointReadOnly`** représente la coordonnée z d'un point.

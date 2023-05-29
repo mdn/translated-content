@@ -1,13 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - Reference
-  - Storage
-  - Web Storage
-translation_of: Web/API/Storage
 ---
 {{APIRef("Web Storage API")}}
 
@@ -65,7 +58,7 @@ function setStyles() {
 }
 ```
 
-> **참고:** 실제 작동 예제는 저희의 [Web Storage Demo](https://github.com/mdn/web-storage-demo)에서 볼 수 있습니다.
+> **참고:** 실제 작동 예제는 저희의 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)에서 볼 수 있습니다.
 
 ## 명세
 

@@ -1,14 +1,8 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-  - 웹 접근성
-  - 접근성
-translation_of: Web/Accessibility/ARIA
 ---
+
 **접근가능한 리치 인터넷 어플리케이션**(Accessible Rich Internet Applications, **ARIA**)은 장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션(특히 JavaScript를 사용하여 개발한 경우)에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말합니다.
 
 ARIA는 HTML을 보충해, 일반적으로 보조 기술이 알 수 없는 상호작용 및 흔히 쓰이는 어플리케이션 위젯에 필요한 정보를 제공합니다. 예를 들어 ARIA는 HTML4에서의 탐색 랜드마크, JavaScript 위젯, 폼 힌트 및 오류 메시지, 실시간 콘텐츠 업데이트 등을 접근 가능한 형태로 제공합니다.

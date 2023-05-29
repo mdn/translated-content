@@ -2,6 +2,7 @@
 title: 测试你的技能：网格布局
 slug: Learn/CSS/CSS_layout/Grid_skills
 ---
+
 {{LearnSidebar}}
 
 此任务的目的是让你使用 CSS 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
@@ -26,7 +27,7 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 在此例中，我们已经定义好了一个 grid, 请通过修改下面两个子元素的 CSS 规则，导致它们跨过彼此的网格轨道; 第二个 item 应该在第一个 item 之上 (如下图所示).
 
-![盒子中的两个元素, 其中一个元素覆盖在另一个元素上.](grid-task2.png)
+![盒子中的两个元素，其中一个元素覆盖在另一个元素上.](grid-task2.png)
 
 尝试更新下面的实时代码以复现上面的示例：
 
@@ -56,7 +57,7 @@ slug: Learn/CSS/CSS_layout/Grid_skills
 
 ![两行卡片，每个卡片有一个图像和一组标签.](grid-task4.png)
 
-尝试更新下面的实时代码以复现上面的示例:
+尝试更新下面的实时代码以复现上面的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
 

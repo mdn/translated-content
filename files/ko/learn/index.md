@@ -130,7 +130,7 @@ GitHub의 마스터 버전에 변경사항이 생겼을 땐 `learning-area` 저�
 - [Mozilla 개발자 뉴스레터](https://www.mozilla.org/en-US/newsletter/developer/)
   - : 웹 개발자를 위한 Mozilla의 뉴스레터입니다. 모둔 수준의 개발자에게 유용합니다.
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : Web 개발자 지망생을 위한 훌륭한 자료  — 짧은 강좌와 대화형 테스트, 자동화된 평가로 지도하는 인터랙티브 환경에서 JavaScript를 배웁니다. 처음 40개 강좌는 무료이며, 한번의 작은 금액 지불로 전체코스를 수강할 수 있습니다.
+  - : Web 개발자 지망생을 위한 훌륭한 자료 — 짧은 강좌와 대화형 테스트, 자동화된 평가로 지도하는 인터랙티브 환경에서 JavaScript를 배웁니다. 처음 40개 강좌는 무료이며, 한번의 작은 금액 지불로 전체코스를 수강할 수 있습니다.
 - [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
   - : [Jérémie Patonnier](https://twitter.com/JeremiePat)가 만든 웹 개발을 초보자가 기본을 쌓기에 좋은 강의
 - [Codecademy](https://www.codecademy.com/)

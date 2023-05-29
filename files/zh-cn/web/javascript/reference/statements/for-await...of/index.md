@@ -2,9 +2,10 @@
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
 ---
+
 {{jsSidebar("Statements")}}
 
-**`for await...of` 语句**创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括: 内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。
+**`for await...of` 语句**创建一个循环，该循环遍历异步可迭代对象以及同步可迭代对象，包括：内置的 {{jsxref("String")}}, {{jsxref("Array")}}，类似数组对象 (例如 {{jsxref("Functions/arguments", "arguments")}} 或 {{DOMxRef("NodeList")}})，{{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}} 和用户定义的异步/同步迭代器。它使用对象的每个不同属性的值调用要执行的语句来调用自定义迭代钩子。
 
 类似于 {{jsxref("Operators/await", "await")}} 运算符一样，该语句只能在一个{{jsxref("Statements/async_function", "async function", "异步函数", 1)}} 内部使用。
 
@@ -23,7 +24,7 @@ for await (variable of iterable) {
 - `iterable`
   - : 被迭代枚举其属性的对象。与 for...of 相比，这里的对象可以返回 `Promise`，如果是这样，那么 `variable` 将是 `Promise` 所包含的值，否则是值本身。
 
-## 例子
+## 示例
 
 ### 迭代异步可迭代对象
 

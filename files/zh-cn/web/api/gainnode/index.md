@@ -2,6 +2,7 @@
 title: GainNode
 slug: Web/API/GainNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`GainNode`** 接口表示音量的变化。它是一个 {{domxref("AudioNode")}} 音频处理模块，在输出前使用给定*增益*应用到输入。一个 `GainNode` 始终只有一个输入和一个输出，两者拥有同样数量的声道。

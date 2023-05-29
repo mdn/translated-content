@@ -1,16 +1,9 @@
 ---
 title: Funciones
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Funciones
-  - Guía
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Funciones
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 Las funciones son uno de los bloques de construcción fundamentales en JavaScript. Una función en JavaScript es similar a un procedimiento — un conjunto de instrucciones que realiza una tarea o calcula un valor, pero para que un procedimiento califique como función, debe tomar alguna entrada y devolver una salida donde hay alguna relación obvia entre la entrada y la salida. Para usar una función, debes definirla en algún lugar del ámbito desde el que deseas llamarla.
@@ -67,16 +60,20 @@ Si bien la declaración de función anterior sintácticamente es una declaració
 Esta función puede ser **anónima**; no tiene por qué tener un nombre. Por ejemplo, la función `square` se podría haber definido como:
 
 ```js
-const square = function(number) { return number * number }
-var x = square(4) // x obtiene el valor 16
+const square = function (number) {
+  return number * number;
+};
+var x = square(4); // x obtiene el valor 16
 ```
 
 Sin embargo, _puedes_ proporcionar un nombre con una expresión `function`. Proporcionar un nombre permite que la función se refiera a sí misma y también facilita la identificación de la función en el seguimiento de la pila de un depurador:
 
 ```js
-const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
-console.log(factorial(3))
+console.log(factorial(3));
 ```
 
 Las expresiones `function` son convenientes cuando se pasa una función como argumento a otra función. El siguiente ejemplo muestra una función `map` que debería recibir una función como primer argumento y un arreglo como segundo argumento.
@@ -85,8 +82,7 @@ Las expresiones `function` son convenientes cuando se pasa una función como arg
 function map(f, a) {
   let result = []; // Crea un nuevo arreglo
   let i; // Declara una variable
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -97,15 +93,14 @@ En el siguiente código, la función recibe una función definida por una expres
 function map(f, a) {
   let result = []; // Crea un nuevo arreglo
   let i; // Declara una variable
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
-const f = function(x) {
-   return x * x * x;
-}
+const f = function (x) {
+  return x * x * x;
+};
 let numbers = [0, 1, 2, 5, 10];
-let cube = map(f,numbers);
+let cube = map(f, numbers);
 console.log(cube);
 ```
 
@@ -116,15 +111,15 @@ En JavaScript, una función se puede definir en función de una condición. Por 
 ```js
 var myFunc;
 if (num === 0) {
-  myFunc = function(theObject) {
-    theObject.make = 'Toyota';
-  }
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
 Además de definir funciones como se describe aquí, también puedes usar el constructor {{JSxRef("Function")}} para crear funciones a partir de una cadena en tiempo de ejecución, muy al estilo de {{JSxRef("eval", "eval()")}}.
 
-Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en {{JSxRef("../Guide/Working_with_Objects", "Trabajar con objetos")}}.
+Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en {{JSxRef("Guide/Working_with_Objects", "Trabajar con objetos")}}.
 
 ## Llamar funciones
 
@@ -143,7 +138,9 @@ Las funciones deben estar _dentro del ámbito_ cuando se llaman, pero la declara
 ```js
 console.log(square(5));
 /* ... */
-function square(n) { return n * n }
+function square(n) {
+  return n * n;
+}
 ```
 
 El ámbito de una función es la función en la que se declara (o el programa completo, si se declara en el nivel superior).
@@ -158,16 +155,14 @@ El ámbito de una función es la función en la que se declara (o el programa co
 > }
 > ```
 
-Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en {{JSxRef("../Guide/Working_with_Objects", "Trabajar con objetos", "#Objetos_y_propiedades")}} es un ejemplo de una función que toma un objeto como argumento.
+Los argumentos de una función no se limitan a cadenas y números. Puedes pasar objetos completos a una función. La función `show_props()` (definida en {{JSxRef("Guide/Working_with_Objects", "Trabajar con objetos", "#Objetos_y_propiedades")}} es un ejemplo de una función que toma un objeto como argumento.
 
 Una función se puede llamar a sí misma. Por ejemplo, aquí hay una función que calcula factoriales de forma recursiva:
 
 ```js
 function factorial(n) {
-  if ((n === 0) || (n === 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+  if (n === 0 || n === 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -195,8 +190,8 @@ En otras palabras, una función definida en el ámbito global puede acceder a to
 ```js
 // Las siguientes variables se definen en el ámbito global
 var num1 = 20,
-    num2 = 3,
-    name = 'Chamahk';
+  num2 = 3,
+  name = "Chamahk";
 
 // Esta función está definida en el ámbito global
 function multiply() {
@@ -208,10 +203,10 @@ multiply(); // Devuelve 60
 // Un ejemplo de función anidada
 function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
-    return name + ' anotó ' + (num1 + num2);
+    return name + " anotó " + (num1 + num2);
   }
 
   return add();
@@ -234,8 +229,8 @@ Por ejemplo, considera la siguiente definición de función:
 
 ```js
 var foo = function bar() {
-   // las instrucciones van aquí
-}
+  // las instrucciones van aquí
+};
 ```
 
 Dentro del cuerpo de la función, todos los siguientes son equivalentes:
@@ -250,9 +245,10 @@ Por ejemplo, el siguiente bucle...
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" es la condición del bucle
-   // hacer cosas
-   x++;
+while (x < 10) {
+  // "x < 10" es la condición del bucle
+  // hacer cosas
+  x++;
 }
 ```
 
@@ -260,7 +256,8 @@ while (x < 10) { // "x < 10" es la condición del bucle
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" es la condición de salida (equivalente a "!(x < 10)")
+  if (x >= 10)
+    // "x >= 10" es la condición de salida (equivalente a "!(x < 10)")
     return;
   // hacer cosas
   loop(x + 1); // la llamada recursiva
@@ -268,11 +265,12 @@ function loop(x) {
 loop(0);
 ```
 
-Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como {{web.link("/es/docs/DOM", "DOM")}}) es más fácil a través de la recursividad:
+Sin embargo, algunos algoritmos no pueden ser simples bucles iterativos. Por ejemplo, obtener todos los nodos de una estructura de árbol (como [DOM](/es/docs/DOM)) es más fácil a través de la recursividad:
 
 ```js
 function walkTree(node) {
-  if (node == null) //
+  if (node == null)
+    //
     return;
   // hacer algo con el nodo
   for (var i = 0; i < node.childNodes.length; i++) {
@@ -289,11 +287,10 @@ De hecho, la recursividad en sí misma usa una pila: la pila de funciones. El co
 
 ```js
 function foo(i) {
-  if (i < 0)
-    return;
-  console.log('inicio: ' + i);
+  if (i < 0) return;
+  console.log("inicio: " + i);
   foo(i - 1);
-  console.log('fin: ' + i);
+  console.log("fin: " + i);
 }
 foo(3);
 
@@ -347,7 +344,7 @@ function outside(x) {
   return inside;
 }
 fn_inside = outside(3); // Piensa en ello como: dame una función que agregue 3 a lo que sea que le des
-                        // eso
+// eso
 result = fn_inside(5); // devuelve 8
 
 result1 = outside(3)(5); // devuelve 8
@@ -421,81 +418,86 @@ Sin embargo, la función externa _no_ tiene acceso a las variables y funciones d
 Además, dado que la función interna tiene acceso a el ámbito de la función externa, las variables y funciones definidas en la función externa vivirán más que la duración de la ejecución de la función externa, si la función interna logra sobrevivir más allá de la vida de la función externa. Se crea un cierre cuando la función interna de alguna manera se pone a disposición de cualquier ámbito fuera de la función externa.
 
 ```js
-var pet = function(name) {   // La función externa define una variable llamada "name"
-  var getName = function() {
-    return name;             // La función interna tiene acceso a la variable
-                             // "name" de la función externa
-  }
-  return getName;            // Devuelve la función interna, exponiéndola así a ámbitos externos
-}
-myPet = pet('Vivie');
+var pet = function (name) {
+  // La función externa define una variable llamada "name"
+  var getName = function () {
+    return name; // La función interna tiene acceso a la variable
+    // "name" de la función externa
+  };
+  return getName; // Devuelve la función interna, exponiéndola así a ámbitos externos
+};
+myPet = pet("Vivie");
 
-myPet();                     // Devuelve "Vivie"
+myPet(); // Devuelve "Vivie"
 ```
 
 Puede ser mucho más complejo que el código anterior. Se puede devolver un objeto que contiene métodos para manipular las variables internas de la función externa.
 
 ```js
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-        newSex.toLowerCase() === 'female')) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
-var pet = createPet('Vivie');
-pet.getName();                  // Vivie
+var pet = createPet("Vivie");
+pet.getName(); // Vivie
 
-pet.setName('Oliver');
-pet.setSex('male');
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.setName("Oliver");
+pet.setSex("male");
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
 En el código anterior, la variable `name` de la función externa es accesible para las funciones internas, y no hay otra forma de acceder a las variables internas excepto a través de las funciones internas. Las variables internas de las funciones internas actúan como almacenes seguros para los argumentos y variables externos. Contienen datos "persistentes" y "encapsulados" para que trabajen las funciones internas. Las funciones ni siquiera tienen que estar asignadas a una variable o tener un nombre.
 
 ```js
-var getCode = (function() {
-  var apiCode = '0]Eal(eh&2';    // Un código que no queremos que los externos puedan modificar...
+var getCode = (function () {
+  var apiCode = "0]Eal(eh&2"; // Un código que no queremos que los externos puedan modificar...
 
-  return function() {
+  return function () {
     return apiCode;
   };
 })();
 
-getCode();    // Devuelve el apiCode
+getCode(); // Devuelve el apiCode
 ```
 
-> **Nota:** **Precaución** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
+> **Nota:** ¡Hay una serie de trampas a tener en cuenta al usar cierres!
 >
 > Si una función encerrada define una variable con el mismo nombre que una variable en el ámbito externo, entonces no hay forma de hacer referencia a la variable en el ámbito externo nuevamente. (La variable de ámbito interno "anula" la externa, hasta que el programa sale de el ámbito interno).
 >
 > ```js example-bad
-> var createPet = function(name) { // La función externa define una variable llamada "name".
+> var createPet = function (name) {
+>   // La función externa define una variable llamada "name".
 >   return {
->     setName: function(name) { // La función envolvente también define una variable llamada "name".
+>     setName: function (name) {
+>       // La función envolvente también define una variable llamada "name".
 >       name = name; // ¿Cómo accedemos al "name" definido por la función externa?
->     }
->   }
-> }
+>     },
+>   };
+> };
 > ```
 
 ## Usar el objeto `arguments`
@@ -503,7 +505,7 @@ getCode();    // Devuelve el apiCode
 El `arguments` de una función se mantiene en un objeto similar a un arreglo. Dentro de una función, puedes abordar los argumentos que se le pasan de la siguiente manera:
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 donde `i` es el número ordinal del argumento, comenzando en `0`. Entonces, el primer argumento que se pasa a una función sería `arguments[0]`. El número total de argumentos se indica mediante `arguments.length`.
@@ -514,13 +516,13 @@ Por ejemplo, considera una función que concatena varias cadenas. El único argu
 
 ```js
 function myConcat(separator) {
-   var result = ''; // inicia list
-   var i;
-   // itera a través de arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  var result = ""; // inicia list
+  var i;
+  // itera a través de arguments
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
@@ -528,13 +530,13 @@ Puedes pasar cualquier número de argumentos a esta función, y concatena cada a
 
 ```js
 // devuelve "red, orange, blue, "
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // devuelve "elephant; giraffe; lion; cheetah"
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // devuelve "sage. basil. oregano. pepper. perejil. "
-myConcat('. ', 'salvia', 'albahaca', 'orégano', 'pimienta', 'perejil');
+myConcat(". ", "salvia", "albahaca", "orégano", "pimienta", "perejil");
 ```
 
 > **Nota:** La variable `arguments` es "similar a un arreglo", pero no es un arreglo. Es similar a un arreglo en el sentido de que tiene un índice numerado y una propiedad `length`. Sin embargo, _no_ posee todos los métodos de manipulación de arreglos.
@@ -557,7 +559,7 @@ En el siguiente ejemplo, si no se proporciona ningún valor para `b`, su valor s
 
 ```js
 function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
   return a * b;
 }
@@ -587,7 +589,7 @@ En el siguiente ejemplo, la función `multiply` usa _parámetros `rest`_ para re
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -596,7 +598,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Funciones Flecha
 
-Una {{JSxRef("Funciones/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operadores/this", "this")}}, {{JSxRef("Funciones/arguments", "arguments")}}, {{JSxRef("Operadores/super", "super")}} o {{JSxRef("../Operadores/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+Una {{JSxRef("Funciones/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operadores/this", "this")}}, {{JSxRef("Funciones/arguments", "arguments")}}, {{JSxRef("Operadores/super", "super")}} o {{JSxRef("Operadores/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
 Dos factores influyeron en la introducción de las funciones flecha: _funciones más cortas_ y _no vinculantes_ de `this`.
 
@@ -605,18 +607,15 @@ Dos factores influyeron en la introducción de las funciones flecha: _funciones 
 En algunos patrones funcionales, las funciones más cortas son bienvenidas. Compara:
 
 ```js
-var a = [
-  'Hidrógeno',
-  'Helio',
-  'Litio',
-  'Berilio'
-];
+var a = ["Hidrógeno", "Helio", "Litio", "Berilio"];
 
-var a2 = a.map(function(s) { return s.length; });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 
 console.log(a2); // logs [8, 6, 7, 9]
 
-var a3 = a.map(s => s.length);
+var a3 = a.map((s) => s.length);
 
 console.log(a3); // logs [8, 6, 7, 9]
 ```
@@ -646,7 +645,7 @@ En ECMAScript 3/5, este problema se solucionó asignando el valor en `this` a un
 ```js
 function Person() {
   var self = this; // Algunos eligen `that` en lugar de` self`.
-                   // Elige uno y se congruente.
+  // Elige uno y se congruente.
   self.age = 0;
 
   setInterval(function growUp() {

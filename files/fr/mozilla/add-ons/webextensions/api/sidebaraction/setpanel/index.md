@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
+
 {{AddonSidebar()}}
 
 Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui définit le contenu de cette barre latérale.
@@ -20,9 +21,9 @@ Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui d�
 
 Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action).
 
-Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel"_.
+Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel".
 
-Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée.  Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
+Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée. Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
 
 Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les options `tabId` et `windowId`, alors ceci définit le _"panneau global"_. Le panneau global apparaîtra alors dans tous les onglets qui n'ont pas d'ensemble de panneaux spécifiques aux onglets et dont la fenêtre n'a pas de panneau spécifique à une fenêtre.
 
@@ -83,11 +84,11 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
+## Compatibilité des navigateurs
+
+{{Compat}}
+
 {{WebExtExamples}}
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.sidebarAction.setPanel",2)}}
 
 > **Note :**
 >
@@ -95,7 +96,8 @@ browser.browserAction.onClicked.addListener(() => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -122,4 +124,4 @@ browser.browserAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

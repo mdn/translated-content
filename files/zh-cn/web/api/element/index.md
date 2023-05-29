@@ -2,6 +2,7 @@
 title: Element
 slug: Web/API/Element
 ---
+
 {{APIRef("DOM")}}
 
 **`Element`** 是一个通用性非常强的基类，所有 {{DOMxRef("Document")}} 对象下的对象都继承自它。这个接口描述了所有相同种类的元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。例如， {{DOMxRef("HTMLElement")}} 接口是所有 HTML 元素的基本接口，而 {{DOMxRef("SVGElement")}} 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。
@@ -40,7 +41,7 @@ slug: Web/API/Element
   - : 是一个 {{DOMxRef("DOMString")}} 表示这个元素名称本地化的部分。
 - {{DOMxRef("Element.namespaceURI")}} {{readonlyInline}}
 
-  - : 元素对应的 namespace URI ，如果没有则返回 `null`
+  - : 元素对应的 namespace URI，如果没有则返回 `null`
 
     > **备注：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
 
@@ -93,9 +94,9 @@ _The `Element` interface includes the following property, defined on the {{DOMxR
 ### 事件句柄
 
 - {{domxref("Element.onfullscreenchange")}}
-  - : 事件 {{event("fullscreenchange")}} 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
+  - : 事件 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
 - {{domxref("Element.onfullscreenerror")}}
-  - : 事件 {{event("fullscreenerror")}} 的回调方法，在进入全屏模式过程中出现错误时触发。
+  - : 事件 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 的回调方法，在进入全屏模式过程中出现错误时触发。
 
 ## 方法
 
@@ -109,8 +110,6 @@ _Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DO
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Creates a [shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) on on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}
@@ -220,8 +219,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{DOMxRef("Element/show_event", "show")}}
-  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/zh-CN/DOM/element.contextmenu) attribute. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{DOMxRef("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
@@ -263,22 +260,22 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Fullscreen events
 
-- `{{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}`
+- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
-- `{{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}`
+- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
 
 ### 键盘事件
 
-- `{{DOMxRef("Element/keydown_event", "keydown")}}`
+- {{DOMxRef("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- `{{DOMxRef("Element/keypress_event", "keypress")}}`
+- {{DOMxRef("Element/keypress_event", "keypress")}}
   - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
-- `{{DOMxRef("Element/keyup_event", "keyup")}}`
+- {{DOMxRef("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 
@@ -349,4 +346,4 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## 浏览器兼容性
 
-{{Compat("api.Element")}}
+{{Compat}}

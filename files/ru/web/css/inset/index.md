@@ -7,7 +7,7 @@ translation_of: Web/CSS/inset
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-Свойство [CSS](/ru/docs/Web/CSS "CSS") **`inset`** определяет логический блок и встроенные начальное и конечное смещения элемента, которые отображают физическое смещение, зависящее от способа записи, направления и ориентации текста. Оно соответствует свойствам {{cssxref("top")}} и {{cssxref("bottom")}}, или {{cssxref("right")}} и {{cssxref("left")}}, в зависимости от значений, определённых для {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
+Свойство [CSS](/ru/docs/Web/CSS) **`inset`** определяет логический блок и встроенные начальное и конечное смещения элемента, которые отображают физическое смещение, зависящее от способа записи, направления и ориентации текста. Оно соответствует свойствам {{cssxref("top")}} и {{cssxref("bottom")}}, или {{cssxref("right")}} и {{cssxref("left")}}, в зависимости от значений, определённых для {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
 
 ```css
 /* <length> значения */

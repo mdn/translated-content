@@ -2,6 +2,7 @@
 title: MessageChannel
 slug: Web/API/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 [Channel Messaging API](/ja/docs/Web/API/Channel_Messaging_API) の **`MessageChannel`** インターフェースは、新しいメッセージチャンネルを作成し、2 つの {{domxref("MessagePort")}} プロパティを通して、その間でデータを送信できます。
@@ -47,9 +48,7 @@ function handleMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                   | 策定状況                         | 備考                                                            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#message-channels','MessageChannel')}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

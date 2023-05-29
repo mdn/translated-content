@@ -2,6 +2,7 @@
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}
 
 WebExtensions 을 통해 사용자가 브라우저를 사용하는 동안 축적된 데이터를 삭제할 수 있는 기능을 제공합니다.
@@ -57,7 +58,7 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Gets the current value of settings in the browser's "Clear History" feature.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

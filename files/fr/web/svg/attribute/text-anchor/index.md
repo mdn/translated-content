@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Attribute/text-anchor
 browser-compat: svg.attributes.presentation.text-anchor
 ---
+
 {{SVGRef}}
 
 L'attribut **`text-anchor`** est utilisé pour aligner (alignement de début, de milieu ou de fin) une chaîne de texte préformaté ou un texte auto-enveloppé dont la zone d'enveloppement est déterminée à partir de la propriété [`inline-size`](/fr/docs/Web/SVG/Attribute/inline-size) par rapport à un point donné. Elle ne s'applique pas aux autres types de texte auto-enveloppé. Pour ces cas, vous devez utiliser [`text-align`](/fr/docs/Web/CSS/text-align). Pour le texte à plusieurs lignes, l'alignement a lieu pour chaque ligne.

@@ -2,6 +2,7 @@
 title: Document.location
 slug: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.location`** は読み取り専用のプロパティで、この文書の URL に関する情報を持った {{domxref("Location")}} オブジェクトを返します。これはその URL を変更したり他の URL を読み込んだりするためのメソッドも提供しています。
@@ -30,10 +31,7 @@ console.log(document.location);
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Document.location")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Document.location")}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,9 +2,10 @@
 title: GlobalEventHandlers.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
-The **`onlostpointercapture`** {{event("Event_handlers", "event handler")}} property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the {{event("lostpointercapture")}} event type.
+The **`onlostpointercapture`** event handler property of the {{domxref("GlobalEventHandlers")}} interface returns the event handler (function) for the `lostpointercapture` event type.
 
 **语法**
 
@@ -12,7 +13,7 @@ The **`onlostpointercapture`** {{event("Event_handlers", "event handler")}} prop
 window.onlostpointercapture = functionReference
 ```
 
-## 例子
+## 示例
 
 ```js
 <html>
@@ -32,14 +33,24 @@ function init() {
 </html>
 ```
 
-**规范**
+## 规范
 
 {{Specifications}}
 
-**浏览器兼容性**
+## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onlostpointercapture")}}
+{{Compat}}
 
-## See also
+## 参见
 
-- {{ event("lostpointercapture") }}
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/zh-CN/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

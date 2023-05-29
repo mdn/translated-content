@@ -2,6 +2,7 @@
 title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
 ---
+
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
 设备加速对象可以提供有关设备沿三个轴（x、y、z）的加速度的信息。

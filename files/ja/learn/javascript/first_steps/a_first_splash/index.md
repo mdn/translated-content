@@ -2,6 +2,7 @@
 title: JavaScriptへの最初のダイブ
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。
@@ -12,7 +13,7 @@ JavaScript の理論、そしてそれを使ってできることについて学
 
 ここでは、JavaScript (とその他のプログラミング言語) がどのように動くのかという高度なコンセプトを紹介したいので、一度ですべての詳細を理解する必要はありません。詳細については続く記事にてご紹介しますので！
 
-> **Note:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
+> **メモ:** JavaScript の機能として紹介する、関数や繰り返しなどの機能は、ほとんどが他のプログラミング言語にもあります。書き方は異なりますが、コンセプトは大体同じです。
 
 ## プログラマーのように考える
 
@@ -230,7 +231,7 @@ let resetButton;
 
 - 最後の 2 つの変数はプレイヤーが予想した回数を記録するため 1 を (プレイヤーが何回予想したかの回数を追跡します) 、そしてまだ存在していない(あとで追加する)リセットボタンへの参照を保持します。
 
-> **Note:** 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
+> **メモ:** 変数や定数についてはこのコースの間に、[次の記事](/ja/docs/user:chrisdavidmills/variables)を始めとして何度も出てきます。
 
 ### 関数
 
@@ -254,7 +255,7 @@ checkGuess();
 
 <kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
 
-> **Note:** 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
+> **メモ:** 関数についても[このコースの後の方で](/ja/docs/Learn/JavaScript/Building_blocks/Functions)詳しく学びます。
 
 ### 演算子
 
@@ -345,7 +346,7 @@ true/false テスト（例えば条件内 - [below](#conditionals)参照）を�
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>
@@ -590,15 +591,3 @@ guessField.focus();
 これで数字当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。(最後のプログラムは[こちらでも遊べます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。) もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
-
-## このモジュール
-
-- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
-- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
-- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
-- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

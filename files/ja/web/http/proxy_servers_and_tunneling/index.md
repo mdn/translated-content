@@ -1,13 +1,8 @@
 ---
 title: プロキシサーバーとトンネリング
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
-translation_of: Web/HTTP/Proxy_servers_and_tunneling
 ---
+
 {{HTTPSidebar}}
 
 インターネットのさまざまなネットワークを移動するときに、プロキシサーバーと HTTP トンネルは、 World Wide Web 上のコンテンツへのアクセスを容易にしています。プロキシはユーザーのローカルコンピュータ、またはユーザーのコンピュータとインターネット上の送信先サーバーの間の任意の場所に配置できます。このページではプロキシに関するいくつかの基本を概説し、いくつかの設定オプションを紹介します。

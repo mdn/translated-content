@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/redirectCount
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`redirectCount`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le nombre de redirections depuis la dernière navigation sans redirection dans le contexte de navigation actuel.

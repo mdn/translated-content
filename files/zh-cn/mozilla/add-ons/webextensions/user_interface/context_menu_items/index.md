@@ -2,6 +2,7 @@
 title: Context menu items
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
+
 {{AddonSidebar}}
 
 This user interface option adds one or more items to a browser context menu. This is the context menu available when a user right-clicks on a web page. Tabs can have context menus also, available through the [browser.menus API](/zh-CN/Add-ons/WebExtensions/API/menus).
@@ -45,5 +46,5 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use context menu items:
 
-- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) adds several items to the browser's context menu.
-- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) adds a context menu item to links that copies the URL to the clipboard, as plain text and rich HTML.
+- [menu-demo](https://github.com/mdn/webextensions-examples/tree/main/menu-demo) adds several items to the browser's context menu.
+- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types) adds a context menu item to links that copies the URL to the clipboard, as plain text and rich HTML.

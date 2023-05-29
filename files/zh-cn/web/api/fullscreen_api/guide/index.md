@@ -2,6 +2,7 @@
 title: 全屏指南
 slug: Web/API/Fullscreen_API/Guide
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 本文主要说明如何使用全屏 API 将给定元素设置为全屏模式，以及如何检测浏览器何时进入或退出全屏模式。
@@ -41,15 +42,15 @@ if (elem.requestFullscreen) {
 }
 ```
 
-另一方面，如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中， 并使用 CSS 规则调整内部的元素，从而达到你想要的样式。
+另一方面，如果你尝试在在 Gecko 上模拟 WebKit 的行为，你需要把你想要呈现的元素放在另一个实际调整为全屏幕的元素中，并使用 CSS 规则调整内部的元素，从而达到你想要的样式。
 
 ### 通知
 
-当成功进入全屏模式时，包含该元素的文档会收到一个 {{Event("fullscreenchange")}} 事件。当退出全屏模式时，文档会再一次收到 {{Event("fullscreenchange")}} 事件。注意此 {{Event("fullscreenchange")}} 事件，不管在文档进入和退出全屏模式时，都不会提供任何信息，但如果文档的 {{DOMxRef("document.fullscreenElement", "fullscreenElement")}} 为非空（`null`），即处于全屏模式中。
+当成功进入全屏模式时，包含该元素的文档会收到一个 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件。当退出全屏模式时，文档会再一次收到 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件。注意此 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件，不管在文档进入和退出全屏模式时，都不会提供任何信息，但如果文档的 {{DOMxRef("document.fullscreenElement", "fullscreenElement")}} 为非空（`null`），即处于全屏模式中。
 
 ### 当全屏请求失败时
 
-你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性，可选择是否将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求是无效的。而相应元素会收到一个 `mozfullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
+你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性，可选择是否将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求是无效的。而相应元素会收到一个 `mozfullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
 
 > **备注：** 全屏请求必须在事件处理函数中调用，否则将会被拒绝。
 
@@ -76,7 +77,7 @@ if (elem.requestFullscreen) {
 
 在这个例子中，网页中显示了一个视频。按下 <kbd>Return</kbd> 或 <kbd>Enter</kbd> 键让用户在视频的窗口显示和全屏显示之间切换。
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### 监听 <kbd>Enter</kbd> 键
 
@@ -142,4 +143,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

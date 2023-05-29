@@ -1,6 +1,6 @@
 ---
 title: Utiliser les objets
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 tags:
   - Beginner
   - Comparing object
@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Working_with_Objects
 original_slug: Web/JavaScript/Guide/Utiliser_les_objets
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript est conçu autour d'un paradigme simple, basé sur les objets. Un objet est un ensemble de propriétés et une propriété est une association entre un nom (aussi appelé _clé_) et une valeur. La valeur d'une propriété peut être une fonction, auquel cas la propriété peut être appelée « méthode ». En plus des objets natifs fournis par l'environnement, il est possible de construire ses propres objets. Ce chapitre aborde la manipulation d'objets, l'utilisation des propriétés, fonctions et méthodes, il explique également comment créer ses objets.
@@ -153,7 +154,7 @@ On peut créer des objets avec une fonction qui est un constructeur, mais on peu
 La syntaxe utilisée avec les initialisateurs d'objets est la suivante :
 
 ```js
-let obj = { 
+let obj = {
   propriete_1:   valeur_1,   // propriete_# peut être un identifiant
             2:   valeur_2,   // ou un nombre
             // ...,

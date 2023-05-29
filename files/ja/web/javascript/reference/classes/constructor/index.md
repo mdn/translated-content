@@ -2,6 +2,7 @@
 title: コンストラクター
 slug: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 `constructor` メソッドは、 {{jsxref("Statements/class", "class")}} で作成されたオブジェクトの生成と初期化のための特殊なメソッドです。
@@ -166,9 +167,7 @@ console.log(newInstance.name); //Polygon
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

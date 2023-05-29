@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -36,6 +37,6 @@ Actuellement, cela doit toujours être 2.
 "manifest_version": 2
 ```
 
-## Comptabilité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.manifest_version")}}
+{{Compat}}

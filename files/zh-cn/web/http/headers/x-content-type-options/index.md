@@ -2,6 +2,7 @@
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 **`X-Content-Type-Options`** HTTP 消息头相当于一个提示标志，被服务器用来提示客户端一定要遵循在 {{HTTPHeader("Content-Type")}} 首部中对 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的设定，而不能对其进行修改。这就禁用了客户端的 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing)行为，换句话说，也就是意味着网站管理员确定自己的设置没有问题。

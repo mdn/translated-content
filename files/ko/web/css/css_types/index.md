@@ -1,13 +1,6 @@
 ---
 title: CSS 자료형
 slug: Web/CSS/CSS_Types
-tags:
-  - CSS
-  - CSS Data Type
-  - Overview
-  - Reference
-  - 자료형
-translation_of: Web/CSS/CSS_Types
 ---
 {{cssref}}
 

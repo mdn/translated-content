@@ -2,6 +2,7 @@
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
 ---
+
 {{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
 **`timeOrigin`** は {{domxref("Performance")}} インターフェイスの読み取り専用プロパティで、パフォーマンス測定の開始時刻の高解像度タイムスタンプを返します。

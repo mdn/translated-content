@@ -1,17 +1,9 @@
 ---
 title: 미디어 쿼리 사용하기
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - Advanced
-  - CSS
-  - Guide
-  - Media
-  - Media Queries
-  - Responsive Design
-  - Web
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/Media_queries
 ---
+
 {{cssref}}
 
 **미디어 쿼리**는 단말기의 유형(출력물 vs. 화면)과, 어떤 특성이나 수치(화면 해상도, {{glossary("viewport", "뷰포트")}} 너비 등)에 따라 웹 사이트나 앱의 스타일을 수정할 때 유용합니다.

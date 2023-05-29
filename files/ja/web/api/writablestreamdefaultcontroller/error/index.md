@@ -2,6 +2,7 @@
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。
@@ -52,9 +53,7 @@ const writableStream = new WritableStream({
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Streams","#ws-default-controller-error","error()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

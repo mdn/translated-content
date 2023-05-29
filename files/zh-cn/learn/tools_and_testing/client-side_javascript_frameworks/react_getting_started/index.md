@@ -3,6 +3,7 @@ title: React 入门
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 本文会引导我们进入一段 React 学习之旅。我们将逐步了解有关它的背景和用例的一些细节，在自己的电脑上建起基本的 React 工具链，创建并使用一个简单的入门应用程序，以学习一些关于 React 在此过程中如何工作的知识。
@@ -13,12 +14,12 @@ slug: >-
       <th scope="row">先决条件：</th>
       <td>
         <p>
-          熟悉核心 <a href="/en-US/docs/Learn/HTML">HTML</a>，<a
-            href="/en-US/docs/Learn/CSS"
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
+            href="/zh-CN/docs/Learn/CSS"
             >CSS</a
           >
-          和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >终端/命令行</a
           >。
         </p>
@@ -129,7 +130,7 @@ const header = React.createElement("header", null,
 npx create-react-app moz-todo-react
 ```
 
-这句命令创建了一个名为 `moz-todo-react` 的文件夹， 并在此文件夹里做了如下工作：
+这句命令创建了一个名为 `moz-todo-react` 的文件夹，并在此文件夹里做了如下工作：
 
 - 为你的应用程序安装了一些 npm 包；
 - 写入 react 应用启动所需要的脚本文件；
@@ -146,7 +147,7 @@ npx create-react-app moz-todo-react
 
 处理完成之后，你可以 `cd` 到 `moz-todo-react` 文件夹下，然后键入 `npm start` 命令并回车，先前由 create-react-app 创建的脚本会启动一个地服务 <localhost:3000>，并打开你的默认浏览器来访问这个服务。成功启动浏览器的话，你的浏览器上会显示如下画面：
 
-![Firefox MacOS的屏幕截图，打开到localhost：3000，显示了默认的create-react-app应用程序](default-create-react-app.png)
+![Firefox MacOS 的屏幕截图，打开到 localhost：3000，显示了默认的 create-react-app 应用程序](default-create-react-app.png)
 
 ### 应用结构
 
@@ -179,7 +180,7 @@ moz-todo-react
 
 目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 这一篇教程。
 
-文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。 不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
 
 ## 探索第一个 React 组件 — `<App/>`
 
@@ -215,7 +216,7 @@ function App() {
 export default App;
 ```
 
-文件 `App.js` 主要由三部分组成： 顶部的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，中间的 `App` 组件，以及底部的 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句。大多数 React 组件都遵循这个模式。
+文件 `App.js` 主要由三部分组成：顶部的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，中间的 `App` 组件，以及底部的 [`export`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句。大多数 React 组件都遵循这个模式。
 
 ### import 语句
 
@@ -270,7 +271,7 @@ function App() {
 
 App 方法返回一个 JSX 表达式，这个表达式定义了浏览器最终要渲染的 DOM。
 
-表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其它任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其它的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
+表达式中的元素就像以前写的 HTML 一样，都拥有属性，并且遵循 `attribute="value"` 的模式。在第三行，开始标签 [`<div>`](/zh-CN/docs/Web/HTML/Element/div) 有着 `className` 属性。这个属性与在 HTML 中的 [`class`](/zh-CN/docs/Web/HTML/Global_attributes/class) 属性相同，但是由于 JSX 就是 JavaScript, 我们不能使用 `class` 属性 - 这个是关键字，意味着 JavaScript 已经用它执行其他任务，使用 `class` 属性将会在我们的代码中产生冲突。由于同样的原因，一些其他的 HTML 属性在 JSX 中也有着不同的书写方式，当我们碰到它们时，我们将会详述。
 
 把第 6 行的 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 标签内容改为 "Hello, world!" 并保存文件。你会发现这个改变也会立即在浏览器的`http://localhost:3000` 中同步渲染。现在删掉 [`<a>`](/zh-CN/docs/Web/HTML/Element/a) 标签并保存，"Learn React"链接也会同样被删除。
 
@@ -293,7 +294,7 @@ function App() {
 
 ### Export 语句
 
-在 `App.js` 文件的最底部， `export default App` 语句使得 `App` 组件能被其它模块使用。
+在 `App.js` 文件的最底部， `export default App` 语句使得 `App` 组件能被其他模块使用。
 
 ## Interrogating the index
 
@@ -314,7 +315,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 ```
 
-就像 `App.js` 一样，这个文件一开始 import 了所有的 JS 模块和其它运行所需要的资源。`src/index.css`定义了运用于整个 app 的 global style。我们可以看到我们的 `App` 组件也被 imported 了，这是在 `App.js` 底部的语句让 import `App` 变得可行。
+就像 `App.js` 一样，这个文件一开始 import 了所有的 JS 模块和其他运行所需要的资源。`src/index.css`定义了运用于整个 app 的 global style。我们可以看到我们的 `App` 组件也被 imported 了，这是在 `App.js` 底部的语句让 import `App` 变得可行。
 
 第七行调用 React 的 `ReactDOM.render()` 函数，并传入两个参数：
 
@@ -413,7 +414,7 @@ function App() {
 }
 ```
 
-改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其它参数一样，您可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在您的 `subject` 之后，以及 `return` 之前，您的代码应如下所示：
+改变 `App` 的函数签名，让它接收 `props` 作为一个参数。就像其他参数一样，您可以把 `props` 放在 `console.log()` 中，让其在浏览器打印出来。把它放在您的 `subject` 之后，以及 `return` 之前，您的代码应如下所示：
 
 ```js
 function App(props) {
@@ -452,45 +453,10 @@ function App(props) {
 
 在 React 中：
 
-- 组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其它组件使用。
+- 组件可以 import 它们需要的模块，并且在文件底部将自身 export，以让其他组件使用。
 - 组件是用 `PascalCase` 也就是帕斯卡命名法命名的。
 - 通过把变量放在大括号中，您可以读取 JSX 的变量，如`{so}`
 - 一些 JSX 属性与 HTML 属性不相同，这样就不会与 JavaScript 的保留字相冲突，比如说，在 HTML 中的 `class` 会在 JSX 中转译为 `className`。注意这些属性都是驼峰式命名的。
 - Props 就像属性一样写在组件里，并且传入组件。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [在 Ember 中路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 资源和故障排除](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加新的待办事项表单：Vue 事件，方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [使用 CSS 样式化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算的属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染：编辑现有待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [使用 Vue 裁判进行焦点管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)

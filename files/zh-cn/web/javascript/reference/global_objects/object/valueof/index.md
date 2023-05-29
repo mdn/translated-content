@@ -2,128 +2,95 @@
 title: Object.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 ---
+
 {{JSRef}}
 
-**`valueOf()`** 方法返回指定对象的原始值。
+{{jsxref("Object")}} 的 **`valueOf()`** 方法将 `this` 值转换[为一个对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)。此方法旨在用于自定义[类型转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)的逻辑时，重写派生类对象。
+
+{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
 
 ## 语法
 
-```plain
-object.valueOf()
+```js-nolint
+valueOf()
 ```
+
+### 参数
+
+无。
 
 ### 返回值
 
-返回值为该对象的原始值。
+`this` 值，将其转换为一个对象。
+
+> **备注：** 为了使 `valueOf` 在类型转换期间有用，它必须返回一个原始值。因为所有原始类型都有它们自己的 `valueOf()` 方法，调用 `aPrimitiveValue.valueOf()` 通常不会调用 `Object.prototype.valueOf()`。
 
 ## 描述
 
-JavaScript 调用 `valueOf` 方法将对象转换为原始值。你很少需要自己调用 `valueOf` 方法；当遇到要预期的原始值的对象时，JavaScript 会自动调用它。
+JavaScript 调用 `valueOf` 方法[将对象转换为一个原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)。你很少需要自己去调用 `valueOf` 方法；当遇到需要原始值的对象时，JavaScript 会自己调用它。
 
-默认情况下，`valueOf` 方法由 {{jsxref("Object")}} 后面的每个对象继承。 每个内置的核心对象都会覆盖此方法以返回适当的值。如果对象没有原始值，则 `valueOf` 将返回对象本身。
+该方法由[数字转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制数字类型转换)和[原始值转换](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)优先调用，但是[字符串转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)会优先调用 `toString()`，并且 `toString()` 非常可能返回一个字符串类型（即使原始实现了 {{jsxref("Object.prototype.toString()")}}），所以 `valueOf()` 在这种情况下通常不会被调用。
 
-JavaScript 的许多内置对象都重写了该函数，以实现更适合自身的功能需要。因此，不同类型对象的 valueOf() 方法的返回值和返回值类型均可能不同。
-
-| **对象** | **返回值**                                               |
-| -------- | -------------------------------------------------------- |
-| Array    | 返回数组对象本身。                                       |
-| Boolean  | 布尔值。                                                 |
-| Date     | 存储的时间是从 1970 年 1 月 1 日午夜开始计的毫秒数 UTC。 |
-| Function | 函数本身。                                               |
-| Number   | 数字值。                                                 |
-| Object   | 对象本身。这是默认情况。                                 |
-| String   | 字符串值。                                               |
-|          | Math 和 Error 对象没有 valueOf 方法。                    |
-
-你可以在自己的代码中使用 `valueOf` 将内置对象转换为原始值。创建自定义对象时，可以覆盖 `Object.prototype.valueOf()` 来调用自定义方法，而不是默认 {{jsxref("Object")}} 方法。
-
-### 覆盖自定义对象的 `valueOf` 方法
-
-你可以创建一个取代 `valueOf` 方法的函数，你的方法必须不能传入参数。
-
-假设你有个对象叫 `MyNumberType` 而你想为它创建一个 `valueOf` 方法。下面的代码为 `valueOf` 方法赋予了一个自定义函数：
-
-```js
-MyNumberType.prototype.valueOf = function() { return customPrimitiveValue; };
-```
-
-有了这样的一个方法，下一次每当 `MyNumberType` 要被转换为原始类型值时，JavaScript 在此之前会自动调用自定义的 `valueOf` 方法。
-
-`valueOf` 方法一般都会被 JavaScript 自动调用，但你也可以像下面代码那样自己调用：
-
-```js
-myNumberType.valueOf()
-```
-
-> **备注：** 字符串上下文中的对象通过 {{jsxref("Object.toString", "toString()")}}方法转换，这与使用`valueOf`转换为原始字符串的 {{jsxref("String")}} 对象不同。所有对象都能转换成一个 “`[object 类型]`” 这种格式的字符串。但是很多对象不能转换为数字，布尔或函数。
+所有继承自 `Object.prototype` 的对象（当然，除了 [`null`-prototype 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)之外）都继承 `toString()` 方法。对于这些对象，`Object.prototype.valueOf()` 基本的实现是没有效果的：它返回对象自身，它的返回值将永远不会被任何[原始值转换算法](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)使用。许多内置对象返回一个适当的原始值覆盖这个方法。当你创建一个自定义对象，你可以调用一个自定义方法去覆盖 `valueOf()`，以至于你自定义的对象可以转换为一个原始值。总的来说，`valueOf()` 用于返回对象最有意义的值——与 `toString()` 不同，它不需要是字符串。或者，你可以增加一个 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，该方法允许对转换过程有更多的控制，并且对于任意的类型转换，且总是优先于 `valueOf` 或 `toString`。
 
 ## 示例
 
-### 使用 `valueOf`
+### 使用 valueOf()
+
+原始的 `valueOf()` 方法会返回 `this` 值本身，如果尚未转换为对象，则转换为对象。因此它的返回值将从不会被任何原始值转换算法使用。
 
 ```js
-// Array：返回数组对象本身
-var array = ["ABC", true, 12, -5];
-console.log(array.valueOf() === array);   // true
+const obj = { foo: 1 };
+console.log(obj.valueOf() === obj); // true
 
-// Date：当前时间距 1970 年 1 月 1 日午夜的毫秒数
-var date = new Date(2013, 7, 18, 23, 11, 59, 230);
-console.log(date.valueOf());   // 1376838719230
-
-// Number：返回数字值
-var num = 15.26540;
-console.log(num.valueOf());   // 15.2654
-
-// 布尔：返回布尔值 true 或 false
-var bool = true;
-console.log(bool.valueOf() === bool);   // true
-
-// new 一个 Boolean 对象
-var newBool = new Boolean(true);
-// valueOf() 返回的是 true，两者的值相等
-console.log(newBool.valueOf() == newBool);   // true
-// 但是不全等，两者类型不相等，前者是 boolean 类型，后者是 object 类型
-console.log(newBool.valueOf() === newBool);   // false
-
-// Function：返回函数本身
-function foo(){}
-console.log( foo.valueOf() === foo );   // true
-var foo2 =  new Function("x", "y", "return x + y;");
-console.log( foo2.valueOf() );
-/*
-ƒ anonymous(x,y
-) {
-return x + y;
-}
-*/
-
-// Object：返回对象本身
-var obj = {name: "张三", age: 18};
-console.log( obj.valueOf() === obj );   // true
-
-// String：返回字符串值
-var str = "http://www.xyz.com";
-console.log( str.valueOf() === str );   // true
-
-// new 一个字符串对象
-var str2 = new String("http://www.xyz.com");
-// 两者的值相等，但不全等，因为类型不同，前者为 string 类型，后者为 object 类型
-console.log( str2.valueOf() === str2 );   // false
+console.log(Object.prototype.valueOf.call("primitive"));
+// [String: 'primitive'] (a wrapper object)
 ```
 
-### 改写 .prototype.valueof
+### 为自定义对象重写 valueOf
+
+你可以创建一个要调用的函数来代替默认的 `valueOf` 方法。你的函数不应该传任何参数，因为它在类型转换期间调用时，不会传递任何参数。
+
+例如，你可以增加一个 `valueOf` 方法到你自定义的 `Box` 类中。
 
 ```js
-function MyNumberType(n) {
-    this.number = n;
+class Box {
+  #value;
+  constructor(value) {
+    this.#value = value;
+  }
+  valueOf() {
+    return this.#value;
+  }
 }
+```
 
-MyNumberType.prototype.valueOf = function() {
-    return this.number;
-};
+有了前面的代码，每当 `Box` 类型的对象在表示为原始值（但不是字符串）的上下文中使用时，JavaScript 会自动调用之前代码中定义的函数。
 
-var myObj = new MyNumberType(4);
-myObj + 3; // 7
+```js
+const box = new Box(123);
+console.log(box + 456); // 579
+console.log(box == 123); // true
+```
+
+对象的 `valueOf` 方法通常由 JavaScript 调用，但是你可以自己调用它，如下所示：
+
+```js
+box.valueOf();
+```
+
+### 在对象上使用一元加运算符
+
+[一元加](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)对其操作数会执行[强制数字转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)，对于大多数没有 [`@@toPrimitive`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 的对象，意味这调用它的 `valueOf()`。然而，如果对象没有一个自定义的 `valueOf()` 方法，基本的实现将会导致 `valueOf()` 被忽略，转而使用 `toString()` 的返回值。
+
+```js
++new Date(); // the current timestamp; same as new Date().getTime()
++{}; // NaN (toString() returns "[object Object]")
++[]; // 0 (toString() returns an empty string list)
++[1]; // 1 (toString() returns "1")
++[1, 2]; // NaN (toString() returns "1,2")
++new Set([1]); // NaN (toString() returns "[object Set]")
++{ valueOf: () => 42 }; // 42
 ```
 
 ## 规范
@@ -134,7 +101,8 @@ myObj + 3; // 7
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}
 - {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("Symbol.toPrimitive")}}

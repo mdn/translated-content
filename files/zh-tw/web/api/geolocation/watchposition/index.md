@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.watchPosition()`** 這個方法是用來註冊一個處理的函式，當使用者的裝置位置更新時，這個函式所傳入的回呼函式(callback function) 就會自動被呼叫。你也可以選擇性的定義錯誤時哪些錯誤回呼函式(error callback function) 需要被呼叫。
@@ -10,8 +11,10 @@ slug: Web/API/Geolocation/watchPosition
 
 ## 語法
 
-```plain
-id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### 參數
@@ -65,7 +68,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 瀏覽器的相容性
 
-{{Compat("api.Geolocation.watchPosition")}}
+{{Compat}}
 
 ## 請參考
 

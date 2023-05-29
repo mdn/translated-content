@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
 Le constructeur **`DataView()`** permet de construire des objets [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView).

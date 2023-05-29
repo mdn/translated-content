@@ -2,6 +2,7 @@
 title: <display-box>
 slug: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
@@ -83,9 +84,7 @@ p.secret {
 
 ## 仕様書
 
-| 仕様書                                                                            | 状態                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-box', 'display-box')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

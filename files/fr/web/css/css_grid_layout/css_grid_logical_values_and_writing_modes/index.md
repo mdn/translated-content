@@ -5,6 +5,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Mod
 original_slug: >-
   Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité","Web/CSS/CSS_Grid_Layout")}}

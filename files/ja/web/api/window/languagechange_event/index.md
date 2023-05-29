@@ -2,6 +2,7 @@
 title: 'Window: languagechange イベント'
 slug: Web/API/Window/languagechange_event
 ---
+
 {{APIRef}}
 
 **`languagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。
@@ -49,9 +50,7 @@ window.onlanguagechange = function(event) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                 |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{ SpecName('HTML WHATWG', 'indices.html#event-languagechange', 'languagechange') }} | {{ Spec2('HTML WHATWG') }} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

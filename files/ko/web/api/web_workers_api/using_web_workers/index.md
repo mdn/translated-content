@@ -1,9 +1,9 @@
 ---
 title: 웹 워커 사용하기
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/basic_usage
 ---
+
 웹 워커는 웹 컨텐츠를 위해서 백그라운드 스레드에서 스크립트를 실행할 간편한 방법을 제공합니다. 워커 스레드는 사용자 인터페이스(UI)를 방해하지 않고 작업을 수행할 수 있습니다. 또한 워커는 ( `responseXML` 과 `channel`속성이 언제나 null이지만) [`XMLHttpRequest`](/en/nsIXMLHttpRequest) 를 사용하여 I/O작업을 수행할 수도 있습니다. 워커는 생성이 된 후에 생성자가 명시한 이벤트 핸들러로 메세지를 올려서 자신의 하위 작업(spawning task)에 메세지를 전달할 수 도 있습니다. 본 글에서 전용 워커와 공유 워커에 대하여 소개합니다.
 
 ## Web Workers API
@@ -88,8 +88,6 @@ myWorker.onmessage = function(e) {
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
 
-> **참고:** **Note**: The URI passed as a parameter to the `Worker` constructor must obey the [same-origin policy](/ko/docs/Web/Security/Same-origin_policy) .There is currently disagreement among browsers vendors on what URIs are of the same-origin; Gecko 10.0 {{geckoRelease("10.0")}} and later do allow data URIs and Internet Explorer 10 does not allow Blob URIs as a valid script for workers.
-
 > **참고:** Notice that `onmessage` and `postMessage()` need to be hung off the `Worker` object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
 
 > **참고:** When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read [Transferring data to and from workers: further details](#transferring_data_to_and_from_workers_further_details) for a much more thorough explanation.
@@ -152,7 +150,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 > **참고:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
-> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).
+> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Spawning a shared worker
 
@@ -231,7 +229,7 @@ Workers are considered to have their own execution context, distinct from the do
 Content-Security-Policy: script-src 'self'
 ```
 
-Among other things, this will prevent any scripts it includes from using [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
+Among other things, this will prevent any scripts it includes from using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
 
 To specify a content security policy for the worker, set a [Content-Security-Policy](/ko/docs/Web/HTTP/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
 
@@ -763,7 +761,7 @@ The web page creates a `div` element with the ID `result` , which gets used to d
 
 Finally, a message is sent to the worker to start it.
 
-[Try this example](https://developer.mozilla.org/samples/workers/fibonacci).
+[Try this example](/samples/workers/fibonacci).
 
 ### Performing web I/O in the background
 
@@ -778,7 +776,7 @@ As multi-core computers become increasingly common, it's often useful to divide 
 In addition to dedicated and shared web workers, there are other types of worker available:
 
 - [ServiceWorkers](/ko/docs/Web/API/ServiceWorker_API) essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.
-- Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](https://developer.mozilla.org/en/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
+- Chrome Workers are a Firefox-only type of worker that you can use if you are developing add-ons and want to use workers in extensions and have access to [js-ctypes](/en/js-ctypes) in your worker. See {{domxref("ChromeWorker")}} for more details.
 - [Audio Workers](/ko/docs/Web/API/Web_Audio_API#Audio_Workers) provide the ability for direct scripted audio processing to be done in a web worker context.
 
 ## Functions and interfaces available in workers
@@ -794,13 +792,13 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 > **참고:** For a complete list of functions available to workers, see [Functions and interfaces available to workers](/ko/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 ## See also
 
-- [`Worker`](https://developer.mozilla.org/en-US/docs/Web/API/Worker) interface
-- [`SharedWorker`](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) interface
+- [`Worker`](/en-US/docs/Web/API/Worker) interface
+- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/ko/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
 - [Advanced concepts and examples](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

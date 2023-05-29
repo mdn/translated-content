@@ -2,6 +2,7 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。
@@ -17,7 +18,7 @@ Object.fromEntries(iterable);
 ### 引数
 
 - `iterable`
-  - : [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)を実装している {{jsxref("Array")}} や {{jsxref("Map")}} やその他の反復処理可能なオブジェクトです。
+  - : [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装している {{jsxref("Array")}} や {{jsxref("Map")}} やその他の反復処理可能なオブジェクトです。
 
 ### 返値
 
@@ -53,7 +54,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### オブジェクトの変形
 
-`Object.fromEntries`、逆のメソッド {{jsxref("Object.entries()")}}、[配列操作メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2)を使用して、以下のようにオブジェクトを変形することができます。
+`Object.fromEntries`、逆のメソッド {{jsxref("Object.entries()")}}、[配列操作メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#インスタンスメソッド)を使用して、以下のようにオブジェクトを変形することができます。
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };
@@ -69,9 +70,7 @@ console.log(object2);
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

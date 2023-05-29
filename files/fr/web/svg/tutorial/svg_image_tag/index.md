@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 original_slug: Web/SVG/Tutoriel/SVG_Image_Tag
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/polices_SVG", "Web/SVG/Tutoriel/Tools_for_SVG") }}
 
 L'élément SVG {{ SVGElement("image") }} permet d'afficher des images pixélisées au sein d'un objet SVG.

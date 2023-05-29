@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/color
 ---
+
 {{SVGRef}}
 
 L'attribut `color` est utilisé pour définir indirectement une valeur potentielle (`currentColor`) pour les attributs {{ SVGAttr("fill") }}, {{ SVGAttr("stroke") }}, {{ SvgAttr("stop-color") }}, {{ SVGAttr("flood-color") }} et {{ SVGAttr("lighting-color") }}.
@@ -62,7 +63,7 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
 Les éléments suivants peuvent utiliser l'attribut `color`:
 
 - [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#Éléments_de_contenu_textuel) »
-- [Éléments de formes](/fr/docs/Web/SVG/Element#Éléments_de_formes)  »
+- [Éléments de formes](/fr/docs/Web/SVG/Element#Éléments_de_formes) »
 - {{ SVGElement("stop") }}
 - {{ SVGElement("feFlood") }}
 - {{ SVGElement("feDiffuseLighting") }}
@@ -70,4 +71,4 @@ Les éléments suivants peuvent utiliser l'attribut `color`:
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.presentation.color")}}
+{{Compat}}

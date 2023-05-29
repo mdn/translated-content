@@ -3,9 +3,10 @@ title: 代理自动配置文件（PAC）文件
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
+
 {{HTTPSidebar}}
 
-**代理自动配置（PAC）**文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
+**代理自动配置**（PAC）文件是一个 JavaScript 脚本，其核心是一个 JavaScript 函数，用来决定网页浏览请求（HTTP、HTTPS，和 FTP）应当直连目标地址，还是被转发给一个网页代理服务器并通过代理连接。PAC 文件中的核心 JavaScript 函数通常是这样定义的：
 
 ```js
 function FindProxyForURL(url, host) {
@@ -22,7 +23,7 @@ function FindProxyForURL(url, host)
 ### 参数
 
 - `url`
-  - : 要访问的 URL。URL 中类似 `https://` 这样的的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 `PacHttpsUrlStrippingEnabled` 为 `false` 来禁止这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
+  - : 要访问的 URL。`https://` URL 中的路径和查询组件已被去除。在 Chrome 浏览器（版本 52 至 73）中，你可以通过设置 `PacHttpsUrlStrippingEnabled` 为 `false` 来禁止这种行为，或者以 `--unsafe-pac-url` 命令行参数启动（自 Chrome 74 起，仅命令行参数有效，且在 Chrome 75 及之后的版本中无法禁用这种行为；至于 Chrome 81，路径剥离对 HTTP URL 不适用，但有意改变这一行为以适应 HTTPS）；在 Firefox 浏览器中，对应的选项是 `network.proxy.autoconfig_url.include_path`。
 - `host`
   - : 从 URL 中提取得到的主机名。这只是为了方便；它与 `://` 之后到第一个 `:` 或 `/` 之前的字符串相同。端口号不包括在此参数中，必要时可以自行从 URL 中提取。
 
@@ -88,7 +89,7 @@ application/x-ns-proxy-autoconfig
 
 > **备注：** PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
 >
-> - 本文档末尾的示例都是完整的，使用时不需要增加任何其它代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
+> - 本文档末尾的示例都是完整的，使用时不需要增加任何其他代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
 
 ## 预定义的函数与环境
 
@@ -130,7 +131,7 @@ application/x-ns-proxy-autoconfig
 > **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
-> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
+> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org`。
 >
 >   - 该命令中， `host` 参数为 `www.mozilla.org` ， `url` 参数为`http://www.mozilla.org`。
 
@@ -700,7 +701,7 @@ function FindProxyForURL(url, host) {
 >
 > ```
 
-> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
+> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
 ## 历史与实现
 

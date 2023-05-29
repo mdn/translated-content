@@ -2,6 +2,7 @@
 title: cursor
 slug: Web/CSS/cursor
 ---
+
 {{CSSRef}}
 
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
@@ -62,7 +63,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td></td>
           <td>
             <p>
-              浏览器根据当前内容决定指针样式<br />例如当是内容是文字时使用 text 样式
+              浏览器根据当前内容决定指针样式<br />例如当内容是文字时使用 text 样式
             </p>
           </td>
         </tr>
@@ -95,14 +96,14 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
         <tr style="cursor: progress">
           <td><code>progress</code></td>
           <td><img alt="progress.gif" src="progress.gif" /></td>
-          <td>程序后台繁忙，用户仍可交互 (与<code>wait相反</code>).</td>
+          <td>程序后台繁忙，用户仍可交互 (与<code>wait 相反</code>).</td>
         </tr>
         <tr style="cursor: wait">
           <td><code>wait</code></td>
           <td><img alt="wait.gif" src="wait.gif" /></td>
           <td>
             程序繁忙，用户不可交互
-            (与<code>progress相反</code>).图标一般为沙漏或者表。
+            (与<code>progress 相反</code>).图标一般为沙漏或者表。
           </td>
         </tr>
         <tr style="cursor: cell">
@@ -146,7 +147,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>no-drop</code></td>
           <td><img alt="no-drop.gif" class="lwrap" src="no-drop.gif" /></td>
           <td>
-            当前位置不能扔下<br />{{ bug("275173") }}Windows 或 Mac OS X 中
+            当前位置不能扔下<br /><a href="https://bugzil.la/275173">Firefox bug 275173</a>Windows 或 Mac OS X 中
             "no-drop 与 not-allowed 相同".
           </td>
         </tr>
@@ -173,7 +174,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td><code>all-scroll</code></td>
           <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
           <td>
-            元素可任意方向滚动（平移）.<br />{{ bug("275174") }}Windows
+            元素可任意方向滚动（平移）.<br /><a href="https://bugzil.la/275174">Firefox bug 275174</a>Windows
             中，"<em>all-scroll</em> 与 <em>move 相同</em>".
           </td>
         </tr>
@@ -199,7 +200,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
             />
           </td>
           <td rowspan="8" style="cursor: auto">
-            某条边将被移动。例如元素盒的东南角被移动时<code>使用se-resize</code>
+            某条边将被移动。例如元素盒的东南角被移动时<code>使用 se-resize</code>
           </td>
         </tr>
         <tr style="cursor: e-resize">

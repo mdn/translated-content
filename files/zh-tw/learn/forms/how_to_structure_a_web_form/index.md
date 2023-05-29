@@ -3,6 +3,7 @@ title: 如何建構 HTML 表單
 slug: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 有了基礎後，我們就能探討表單元素，所提供的結構與文意之詳細資訊；還有各表單部份的相異之處。
@@ -51,15 +52,15 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
   <fieldset>
     <legend>Fruit juice size</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Small</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Medium</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Large</label>
     </p>
   </fieldset>
@@ -79,7 +80,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 正如上篇文章中所見，{{HTMLElement("label")}} 元素是定義 HTML 表單控件的正式方法。如果要構建無障礙的表單，這是最重要的元素：正確實做後，螢幕閱讀器會說出表單元素標籤、以及相關說明，同時也對有視力的用戶很有用。以這個例子為例，我們在上一篇文章中看過：
 
 ```html
-<label for="name">Name:</label> <input type="text" id="name" name="user_name">
+<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
 ```
 
 在 `<label>` 元素透過 `for` 屬性與 `<input>` 元素的 `id` 屬性正確連結後，螢幕閱讀器就會讀出「Name, edit text」這樣的文字。
@@ -88,7 +89,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 
 ```html
 <label for="name">
-  Name: <input type="text" id="name" name="user_name">
+  Name: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -105,11 +106,11 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
     <label for="taste_1">I like cherry</label>
   </p>
   <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
     <label for="taste_2">I like banana</label>
   </p>
 </form>
@@ -129,27 +130,31 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 <!-- So this: -->
 <div>
   <label for="username">Name:</label>
-  <input id="username" type="text" name="username">
-  <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
+  <input id="username" type="text" name="username" />
+  <label for="username"
+    ><abbr title="required" aria-label="required">*</abbr></label
+  >
 </div>
 
 <!-- would be better done like this: -->
 <div>
   <label for="username">
     <span>Name:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" />
     <abbr title="required" aria-label="required">*</abbr>
   </label>
 </div>
 
 <!-- But this is probably best: -->
 <div>
-  <label for="username">Name: <abbr title="required" aria-label="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+  <label for="username"
+    >Name: <abbr title="required" aria-label="required">*</abbr></label
+  >
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
-{{EmbedLiveSample("Multiple_labels", 120, 120)}}
+{{EmbedLiveSample("多個標籤", 120, 120)}}
 
 The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
 
@@ -180,121 +185,123 @@ Let's put these ideas into practice and build a slightly more involved form — 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
 2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
 3. Next, create your form by adding the outer {{htmlelement("form")}} element:
 
-    ```html
-    <form>
-
-    </form>
-    ```
+   ```html
+   <form></form>
+   ```
 
 4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
 
-    ```html
-    <h1>Payment form</h1>
-    <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
-    ```
+   ```html
+   <h1>Payment form</h1>
+   <p>
+     Required fields are followed by
+     <strong><abbr title="required">*</abbr></strong
+     >.
+   </p>
+   ```
 
 5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of two radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
-    ```html
-    <section>
-        <h2>Contact information</h2>
-        <fieldset>
-          <legend>Title</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K" >
-                  King
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Q">
-                  Queen
-                </label>
-              </li>
-              <li>
-                <label for="title_3">
-                  <input type="radio" id="title_3" name="title" value="J">
-                  Joker
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Name: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <span>E-mail: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Password: </span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Contact information</h2>
+     <fieldset>
+       <legend>Title</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="K" />
+             King
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Q" />
+             Queen
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="J" />
+             Joker
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Name: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="text" id="name" name="username" />
+     </p>
+     <p>
+       <label for="mail">
+         <span>E-mail: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Password: </span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="password" id="pwd" name="password" />
+     </p>
+   </section>
+   ```
 
 6. The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/zh-TW/docs/Learn/Forms/HTML5_input_types).
 
-    Enter the following below the previous section:
+   Enter the following below the previous section:
 
-    ```html
-    <section>
-        <h2>Payment information</h2>
-        <p>
-          <label for="card">
-            <span>Card type:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Card number:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="tel" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Expiration date:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>formatted as mm/dd/yyyy</em>
-          </label>
-          <input type="date" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Payment information</h2>
+     <p>
+       <label for="card">
+         <span>Card type:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Card number:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" />
+     </p>
+     <p>
+       <label for="date">
+         <span>Expiration date:</span>
+         <strong><abbr title="required">*</abbr></strong>
+         <em>formatted as mm/dd/yyyy</em>
+       </label>
+       <input type="date" id="date" name="expiration" />
+     </p>
+   </section>
+   ```
 
 7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
 
-    ```html
-    <p> <button type="submit">Validate the payment</button> </p>
-    ```
+   ```html
+   <p><button type="submit">Validate the payment</button></p>
+   ```
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample("主動學習：建立表單結構","100%",620)}}
 
 ## 結論
 
@@ -305,22 +312,3 @@ You can see the finished form in action below (also find it on GitHub — see ou
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
-
-## 在本模塊
-
-- [Your first form](/zh-TW/docs/Learn/Forms/Your_first_form)
-- [How to structure a web form](/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Basic native form controls](/zh-TW/docs/Learn/Forms/Basic_native_form_controls)
-- [The HTML5 input types](/zh-TW/docs/Learn/Forms/HTML5_input_types)
-- [Other form controls](/zh-TW/docs/Learn/Forms/Other_form_controls)
-- [Styling web forms](/zh-TW/docs/Learn/Forms/Styling_web_forms)
-- [Advanced form styling](/zh-TW/docs/Learn/Forms/Advanced_form_styling)
-- [UI pseudo-classes](/zh-TW/docs/Learn/Forms/UI_pseudo-classes)
-- [Client-side form validation](/zh-TW/docs/Learn/Forms/Form_validation)
-- [Sending form data](/zh-TW/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### Advanced Topics
-
-- [How to build custom form controls](/zh-TW/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/zh-TW/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/zh-TW/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

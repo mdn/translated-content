@@ -2,6 +2,7 @@
 title: Document.referrer
 slug: Web/API/Document/referrer
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.referrer`** プロパティは、このページへリンクしていたページの [URI](http://www.w3.org/Addressing/#background) を返します。
@@ -20,9 +21,7 @@ var referrer = document.referrer;
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#dom-document-referrer-dev', 'document.referrer')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

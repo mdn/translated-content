@@ -1,8 +1,8 @@
 ---
 title: Using CSS transitions
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}
 
 **CSS transitions** provê uma forma de controlar a velocidade de uma animação quando há mudanças de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo. Por exemplo, se você mudar a cor de um elemento de branco para preto, a alteração será instantanea. Utilizando transições CSS, as alterações acontecem em uma intervalo de tempo que seguem uma curva de aceleração, e todas podem ser personalizadas
@@ -17,9 +17,9 @@ Animações CSS permitem que você decida quais propriedades animar (listando-os
 
 Você mesmo pode definir qual propriedade será transicionada e de qual maneira. E isso permite a criação de transições complexas. Como não faz sentido animar algumas propriedades, existe uma lista finita [com propriedades que podem ser transicionadas](/pt-BR/docs/Web/CSS/CSS_animated_properties).
 
-> **Note:** Observação: A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
+> **Nota:** A lista de propriedades que podem ser animadas sofre alterações a medida que a especificação se desenvolve.
 
-> **Note:** O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico,` podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
+> **Nota:** O valor `automatico` , geralmente é complexo. A especificação recomenda não animar com valores automaticos. Alguns [user agents](/pt-BR/docs/Web/HTTP/Headers/User-Agent), como aqueles baseados no Genko, implementam esse requisito, como aqueles baseados no WebKit, são menos rigosos. Animações CSS que utlizam o valor `automatico`, podem levar resultados imprevisiveis, dependendo do Browser e da versão, e isso pode ser evitado.
 
 ## Definindo transições
 
@@ -297,7 +297,7 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
 
 - {{cssxref("transition-timing-function")}}
 
-  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As[ timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).
+  - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/timing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](http://easings.net/).
 
     `transition-timing-function: ease`
 
@@ -979,7 +979,7 @@ Este CSS estabelece a aparência do menu, com as cores de fundo e texto mudando 
 
 ## Exemplos JavaScript
 
-> **Note:** Cuidados devem ser tomados ao usar uma transição imediatamente após:
+> **Nota:** Cuidados devem ser tomados ao usar uma transição imediatamente após:
 >
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
@@ -1032,9 +1032,6 @@ Você pode usar o evento {{event("transitionend")}} para detectar a uma animaç�
 
 - `propertyName`
   - : A string indicando o nome da propriedade CSS cuja transição será completada
-
-<!---->
-
 - `elapsedTime`
   - : A float indicating the number of seconds the transition had been running at the time the event fired. This value isn't affected by the value of {{cssxref("transition-delay")}}.
 
@@ -1051,7 +1048,7 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **Note:** **Observação**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
+> **Nota:**: O evento `transitionend` não dispara se a transição é abortada antes de a transição ser concluída, porque o efeito é feito com {{cssxref("display")}}`: none`
 
 ## Especificações
 

@@ -1,20 +1,6 @@
 ---
 title: console.debug()
 slug: Web/API/console/debug
-tags:
-  - API
-  - Debug
-  - Debugging
-  - Developer Tools
-  - Logging
-  - Method
-  - Reference
-  - console
-  - log
-  - output
-  - print
-browser-compat: api.console.debug
-translation_of: Web/API/Console/debug
 ---
 {{APIRef("Console API")}}
 

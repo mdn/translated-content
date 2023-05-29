@@ -2,6 +2,7 @@
 title: 快捷選單項
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 ---
+
 {{AddonSidebar}}
 
 這個用戶介面添加一個或多個項目到瀏覽器的快捷選單。這是用戶在網頁上點擊右鍵時出現的選單。頁籤也可以透過 [browser.menus API](/zh-TW/Add-ons/WebExtensions/API/menus) 使用快捷選單。
@@ -21,11 +22,14 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 現在你可以在你套件的後端腳本處添加（修改／刪除）選單項目。建立一個選單項目你要指定 id，標題以及它應該隸屬於哪個選單：
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated
+);
 ```
 
 接著你的套件會監聽選單項目的點擊。送出有關項目點擊、點擊環境以及發生點擊頁籤的資訊可以用來使用恰當的套件功能。

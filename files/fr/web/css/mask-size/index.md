@@ -4,6 +4,7 @@ slug: Web/CSS/mask-size
 translation_of: Web/CSS/mask-size
 browser-compat: css.properties.mask-size
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-size`** définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.

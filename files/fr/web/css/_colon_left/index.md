@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/:left
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:left`**, liée à la règle {{cssxref("@page")}}, permet de cibler les pages de gauche lors d'une impression. Ceci permet de mettre en forme spécifiquement les pages de gauche.
@@ -38,14 +39,11 @@ La position de la page soit à gauche ou à droite dépend de la direction d'éc
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':left')}} | {{Spec2('CSS3 Paged Media')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':left')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
+
 {{JSRef}}
 
 **`Int8Array`** 类型数组表示二进制补码 8 位有符号整数的数组。内容初始化为 0。一旦建立，你可以使用对象的方法引用数组中的元素，或使用标准数组索引语法 ( 即，使用括号注释)。
@@ -23,8 +24,6 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中每个元素的大小。在 `Int8Array` 中这个值为 1。
 - Int8Array.length
   - : 此属性为固定值属性，值为 3。查看 {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}} 获得获取数组内元素个数方法。
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
-  - : 返回构造器方法名称。在 Int8Array 类型中此值为 "Int8Array"。
 - {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
   - : _TypedArray_ 对象的构造原型。
 
@@ -103,7 +102,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.values", "Int8Array.prototype.values()")}}
   - : 返回一个数组迭代器对象，该迭代器会包含所有数组元素的值。参照 {{jsxref("Array.prototype.values()")}}
 - {{jsxref("TypedArray.toLocaleString", "Int8Array.prototype.toLocaleString()")}}
-  - : 返回一个由所有数组元素组合而成的本地化后的字符串. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+  - : 返回一个由所有数组元素组合而成的本地化后的字符串。See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int8Array.prototype.toString()")}}
   - : 返回一个由所有数组元素组合而成的字符串。参照 {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]()")}}

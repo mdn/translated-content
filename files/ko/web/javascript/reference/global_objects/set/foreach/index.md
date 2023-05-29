@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 메서드는 주어진 함수를 `Set` 요소 각각에 대해 삽입 순서대로 실행합니다.

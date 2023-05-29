@@ -11,6 +11,7 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut {{htmlattrxref("sandbox", "iframe")}} des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
@@ -82,14 +83,11 @@ Content-Security-Policy: sandbox allow-scripts;
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-sandbox", "sandbox")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-sandbox", "sandbox")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.sandbox")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,15 +2,16 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef}}
 
-**`Math.floor()`** 返回小于或等于一个给定数字的最大整数。
+**`Math.floor()`** 函数总是返回小于等于一个给定数字的最大整数。
 
-> **备注：** 可以理解 **`Math.floor()`**为向下取整
+{{EmbedInteractiveExample("pages/js/math-floor.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 Math.floor(x)
 ```
 
@@ -21,102 +22,90 @@ Math.floor(x)
 
 ### 返回值
 
-一个表示小于或等于指定数字的最大整数的数字。
+小于等于 `x` 的最大整数。它的值与 [`-Math.ceil(-x)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil) 相同。
 
 ## 描述
 
-由于 `floor` 是 `Math` 的一个静态方法，你总是应该像这样使用它 `Math.floor()`，而不是作为你创建的一个 Math 对象的一种方法（Math 不是一个构造函数）。
+因为 `floor()` 是 `Math` 的静态方法，所以你应始终使用 `Math.floor()`，而不是作为你创建的 `Math` 对象的方法（`Math` 不是构造函数）。
 
 ## 示例
 
-### 例子：使用 `Math.floor`
+### 使用 Math.floor()
 
 ```js
-Math.floor( 45.95);
-// 45
-Math.floor( 45.05);
-// 45
-Math.floor( 4 );
-// 4
-Math.floor(-45.05);
-// -46
-Math.floor(-45.95);
-// -46
+Math.floor(-Infinity); // -Infinity
+Math.floor(-45.95); // -46
+Math.floor(-45.05); // -46
+Math.floor(-0); // -0
+Math.floor(0); // 0
+Math.floor(4); //   4
+Math.floor(45.05); //  45
+Math.floor(45.95); //  45
+Math.floor(Infinity); // Infinity
 ```
 
-### 例子：十进制调整
+### 十进制调整
+
+在本例中，我们实现了一个名为 `decimalAdjust()` 的方法，它是 `Math.floor()`、{{jsxref("Math.ceil()")}} 和 {{jsxref("Math.round()")}} 的增强方法。三个 `Math` 函数总是将输入调整为个位数，`decimalAdjust` 接受 `exp` 参数，该参数指定小数点左侧应该调整的位数。例如，`-1` 表示它将在小数点后留下一位数字（如 "× 10<sup>-1</sup>"）。此外，它还允许你通过 `type` 参数选择调整方式——`round`、`bottom` 或 `ceiling`。
+
+它是这样做的：将数字乘以 10 的幂，然后四舍五入到最接近的整数，然后除以 10 的幂。为了更好地保持精度，它利用了数字的 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 方法，该方法使用科学记数法表示任意数字（如 `6.02e23`）。
 
 ```js
-// Closure
-(function(){
+/**
+ * Adjusts a number to the specified digit.
+ *
+ * @param {"round" | "floor" | "ceil"} type The type of adjustment.
+ * @param {number} value The number.
+ * @param {number} exp The exponent (the 10 logarithm of the adjustment base).
+ * @returns {number} The adjusted value.
+ */
+function decimalAdjust(type, value, exp) {
+  type = String(type);
+  if (!["round", "floor", "ceil"].includes(type)) {
+    throw new TypeError(
+      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+    );
+  }
+  exp = Number(exp);
+  value = Number(value);
+  if (exp % 1 !== 0 || Number.isNaN(value)) {
+    return NaN;
+  } else if (exp === 0) {
+    return Math[type](value);
+  }
+  const [magnitude, exponent = 0] = value.toString().split("e");
+  const adjustedValue = Math[type](`${magnitude}e${exponent - exp}`);
+  // Shift back
+  const [newMagnitude, newExponent = 0] = adjustedValue.toString().split("e");
+  return Number(`${newMagnitude}e${+newExponent + exp}`);
+}
 
-  /**
-   * Decimal adjustment of a number.
-   *
-   * @param  {String}  type  The type of adjustment.
-   * @param  {Number}  value  The number.
-   * @param  {Integer}  exp    The exponent (the 10 logarithm of the adjustment base).
-   * @returns  {Number}      The adjusted value.
-   */
-  function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
-    if (typeof exp === 'undefined' || +exp === 0) {
-      return Math[type](value);
-    }
-    value = +value;
-    exp = +exp;
-    // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
-      return NaN;
-    }
-    // Shift
-    value = value.toString().split('e');
-    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
-    // Shift back
-    value = value.toString().split('e');
-    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
-  }
-
-  // Decimal round
-  if (!Math.round10) {
-    Math.round10 = function(value, exp) {
-      return decimalAdjust('round', value, exp);
-    };
-  }
-  // Decimal floor
-  if (!Math.floor10) {
-    Math.floor10 = function(value, exp) {
-      return decimalAdjust('floor', value, exp);
-    };
-  }
-  // Decimal ceil
-  if (!Math.ceil10) {
-    Math.ceil10 = function(value, exp) {
-      return decimalAdjust('ceil', value, exp);
-    };
-  }
-
-})();
+// Decimal round
+const round10 = (value, exp) => decimalAdjust("round", value, exp);
+// Decimal floor
+const floor10 = (value, exp) => decimalAdjust("floor", value, exp);
+// Decimal ceil
+const ceil10 = (value, exp) => decimalAdjust("ceil", value, exp);
 
 // Round
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
+round10(55.55, -1); // 55.6
+round10(55.549, -1); // 55.5
+round10(55, 1); // 60
+round10(54.9, 1); // 50
+round10(-55.55, -1); // -55.5
+round10(-55.551, -1); // -55.6
+round10(-55, 1); // -50
+round10(-55.1, 1); // -60
 // Floor
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
+floor10(55.59, -1); // 55.5
+floor10(59, 1); // 50
+floor10(-55.51, -1); // -55.6
+floor10(-51, 1); // -60
 // Ceil
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+ceil10(55.51, -1); // 55.6
+ceil10(51, 1); // 60
+ceil10(-55.59, -1); // -55.5
+ceil10(-59, 1); // -50
 ```
 
 ## 规范
@@ -127,10 +116,9 @@ Math.ceil10(-59, 1); // -50
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
-- {{jsxref("Math.abs")}}
+- {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.round()")}}
 - {{jsxref("Math.sign()")}}

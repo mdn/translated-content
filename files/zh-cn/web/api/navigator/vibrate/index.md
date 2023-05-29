@@ -2,6 +2,7 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Navigator.vibrate()`** 方法使设备（有震动硬件）产生有频率的震动。若设备不支持震动，该方法将无效。若某震动方式已经在进行中（当该方法调用时），则前一个震动方式停止，新的取而代之。
@@ -32,7 +33,7 @@ window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 更多
 

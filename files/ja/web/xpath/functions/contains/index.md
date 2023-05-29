@@ -1,11 +1,8 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/contains
 ---
+
 {{ XsltRef() }}
 
 `contains` 関数は、第 1 引数の文字列に第 2 引数の文字列が含まれているかどうかを判定し、論理値 true または false を返します。

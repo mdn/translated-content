@@ -3,6 +3,7 @@ title: Stratégies pour mener à bien vos tests
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des tests sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé ?", "Quels sont les problèmes les plus communs que vous allez rencontrer ?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes ?"
@@ -296,14 +297,3 @@ Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

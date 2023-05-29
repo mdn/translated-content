@@ -2,6 +2,7 @@
 title: DataTransferItem.webkitGetAsEntry()
 slug: Web/API/DataTransferItem/webkitGetAsEntry
 ---
+
 {{APIRef("HTML Drag and Drop API")}}{{Non-standard_header}}
 
 如果由文件描述的项目[`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)是文件，则`webkitGetAsEntry()`返回[`FileSystemFileEntry`](/zh-CN/docs/Web/API/FileSystemFileEntry)或[`FileSystemDirectoryEntry`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry)表示它。如果该项不是文件，`null`则返回。
@@ -26,11 +27,11 @@ DataTransferItem.webkitGetAsEntry();
 
 在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/Events/drop)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
 
-### HTML 内容
+### HTML
 
 HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
 
-```
+```html
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
@@ -45,11 +46,11 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
 </ul>
 ```
 
-### CSS 内容
+### CSS
 
 此处显示示例使用的样式。
 
-```
+```css
 #dropzone {
   text-align: center;
   width: 300px;
@@ -75,7 +76,7 @@ body {
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 首先，让我们看一下递归`scanFiles()`函数。该函数将[`FileSystemEntry`](/zh-CN/docs/Web/API/FileSystemEntry)表示要扫描和处理的文件系统中的条目（`item`参数）和插入内容列表（`container`参数）的元素作为输入。
 
@@ -144,9 +145,9 @@ dropzone.addEventListener("drop", function(event) {
 
 ### 结果
 
-你可以通过下面的尝试看看它是如何工作的。 找到一些文件和目录并将其拖入，然后查看生成的输出。
+你可以通过下面的尝试看看它是如何工作的。找到一些文件和目录并将其拖入，然后查看生成的输出。
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{ EmbedLiveSample('示例', 600, 400) }}
 
 ## 规范
 
@@ -154,12 +155,12 @@ dropzone.addEventListener("drop", function(event) {
 
 ## 浏览器兼容性
 
-{{COMPAT("api.DataTransferItem.webkitGetAsEntry")}}
+{{Compat}}
 
-## 也可以看看
+## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("DataTransferItem")}}
 - {{domxref("FileSystemEntry")}}，{{domxref("FileSystemFileEntry")}}和{{domxref("FileSystemDirectoryEntry")}}
-- 活动：{{event("dragover")}}和{{event("drop")}}
+- 活动：[`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)和[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)

@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/noframes
 ---
-{{HTMLRef}}{{deprecated_header}}
+
+{{HTMLSidebar}}{{deprecated_header}}
 
 L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui ne supportent pas les éléments {{HTMLElement("frame")}}, ou qui sont configurés afin de ne pas les supporter.
 

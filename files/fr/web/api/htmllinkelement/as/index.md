@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.as
 translation_of: Web/API/HTMLLinkElement/as
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`as`** de l'interface [`HTMLLinkElement`](/fr/docs/Web/API/HTMLLinkElement) renvoie une chaîne représentant le type de contenu chargé par le lien HTML, parmi `"script"`, `"style"`, `"image"`, `"video"`, `"audio"`, `"track"`, `"font"`, `"fetch"`.

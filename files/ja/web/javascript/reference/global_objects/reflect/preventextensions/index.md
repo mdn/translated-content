@@ -2,6 +2,7 @@
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.preventExtensions()`** メソッドは、すでにプロパティが追加されたオブジェクトに、新しいプロパティを抑制します (つまり、オブジェクトのさらなる拡張を抑制します)。 {{jsxref("Object.preventExtensions()")}} に似ていますが、[違いがあります](#Difference_from_Object.preventExtensions)。
@@ -61,9 +62,7 @@ Object.preventExtensions(1)
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,9 +1,9 @@
 ---
 title: Cómo crear widgets de formularios personalizados
 slug: Learn/Forms/How_to_build_custom_form_controls
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/como_crear_widgets_de_formularios_personalizados
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/HTML/Forms/The_native_form_widgets) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Advanced_styling_for_HTML_forms) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
@@ -287,13 +287,13 @@ So here's the result with our three states:
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
@@ -394,10 +394,10 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
@@ -570,7 +570,7 @@ At that point, our widget will change state according to our design, but its val
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_3")}}                       |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
 
 ### Handling the widget's value
@@ -670,7 +670,7 @@ With that, we're done! Here's the result:
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_4")}}                       |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
 
 But wait a second, are we really done?
@@ -737,7 +737,7 @@ Here is the final result of all these changes (you'll get a better feel for this
 
 | Live example                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                             |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
 | [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Conclusion
@@ -754,17 +754,3 @@ Here are a few libraries you should consider before coding your own:
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 
 {{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/es/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/es/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/es/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/es/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/es/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/es/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/es/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

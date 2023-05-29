@@ -12,6 +12,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 ---
+
 {{AddonSidebar()}}
 
 Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.
@@ -40,9 +41,9 @@ var retrieving = browser.sessions.getWindowValue(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined` si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.getWindowValue", 10)}}
+{{Compat}}
 
 ## Exemples
 

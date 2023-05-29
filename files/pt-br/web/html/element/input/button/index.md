@@ -1,27 +1,15 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Documentação
-  - Element
-  - Elementos Input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Referencia
-  - Tipos de Input
-  - botões
-  - button
-  - formulários
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
 
-Elementos {{HTMLElement("input")}} do tipo **`button` **são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
+{{HTMLSidebar}}
+
+Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** **Nota**: Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
+> **Nota:** Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
 
 <table class="properties">
   <tbody>
@@ -75,7 +63,7 @@ Se você não especificar um `value`, você obtém um botão vazio:
 
 ## Usando buttons
 
-Elementos `<input type="button">` não possuem comportamento padrão (seu primos,` <input type="submit">` e [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
+Elementos `<input type="button">` não possuem comportamento padrão (seu primos, `<input type="submit">` e [`<input type="reset">`](/pt-BR/docs/Web/HTML/Element/input/reset) são usados para submeter e resetar formulários). Para que botões possam fazer algo, você tem de escrever um código em JavaScript para fazê-lo trabalhar.
 
 ### Um simples botão
 
@@ -329,7 +317,7 @@ draw();
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Veja também
 

@@ -2,6 +2,7 @@
 title: Element.scrollBy()
 slug: Web/API/Element/scrollBy
 ---
+
 {{APIRef}}
 
 **`scrollBy()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された量だけ要素をスクロールします。
@@ -41,9 +42,7 @@ element.scrollBy({
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{ SpecName('CSSOM View', '#dom-element-scrollby-options-options', 'element.scrollBy()') }} | {{ Spec2('CSSOM View') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

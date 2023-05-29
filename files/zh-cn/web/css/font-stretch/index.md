@@ -2,9 +2,8 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 **`font-stretch`** 属性为字体定义一个正常或经过伸缩变形的字体外观，这个属性并不会通过伸展/缩小而改变字体的几何外形，如{{cssxref("font-feature-settings")}}和{{cssxref("font-variant")}}属性，它仅仅意味着当有多种字体可供选择时，会为字体选择最适合的大小。
 
@@ -83,4 +82,4 @@ The CSS property `font-stretch` was initially defined in CSS 2, but dropped in C
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-stretch")}}
+{{Compat}}

@@ -1,6 +1,6 @@
 ---
 title: Notification.icon
-slug: Web/API/notification/icon
+slug: Web/API/Notification/icon
 tags:
   - API
   - API Notifications
@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/icon
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`icon`** de l'interface {{domxref ("Notification")}} contient l'URL d'une icône à afficher dans le cadre de la notification, comme définis à l'aide de l'option `icon` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification"," Notification()")}}.

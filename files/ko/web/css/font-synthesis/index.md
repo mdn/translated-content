@@ -1,13 +1,6 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/font-synthesis
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef}}
 
 **`substring()`** メソッドは `string` オブジェクトの開始・終了位置の間、または文字列の最後までの部分集合を返します。
@@ -153,9 +154,7 @@ function replaceString(oldS, newS, fullS) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.substring', 'String.prototype.substring')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

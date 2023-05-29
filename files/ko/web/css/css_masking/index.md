@@ -1,12 +1,6 @@
 ---
 title: CSS Masking
 slug: Web/CSS/CSS_Masking
-tags:
-  - CSS
-  - CSS Masking
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Masking
 original_slug: Web/CSS/CSS_Masks
 ---
 {{CSSRef}}
@@ -38,9 +32,6 @@ original_slug: Web/CSS/CSS_Masks
 - {{cssxref("mask-size")}}
 - {{cssxref("mask-type")}}
 
-## 명세
+## 명세서
 
-| 명세                                                                             | 상태                         | 설명      |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------- |
-| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |           |
-| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | 초기 정의 |
+{{Specifications}}

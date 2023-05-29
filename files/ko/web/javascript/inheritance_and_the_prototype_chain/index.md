@@ -1,12 +1,6 @@
 ---
 title: 상속과 프로토타입
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - JavaScript
-  - 객체지향
-  - 상속
-  - 중급
-translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 ---
 {{jsSidebar("Advanced")}}
@@ -99,7 +93,7 @@ console.log(p.m()); // 13
 
 위에서 언급했듯이, 자바스크립트에서 함수는 속성을 가질 수 있다. 모든 함수에는 `prototype`이라는 특수한 속성이 있다. 아래의 예제 코드는 독립적이라는 것에 유의하자. (아래의 코드 이외에는 웹페이지에 다른 자바스크립트가 없다고 가정하는 것이 좋다.)
 
-최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](https://developer.mozilla.org/ko-KR/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
+최적의 실습을 위해서 콘솔을 열고 "Console" 탭으로 이동하여 아래의 JavaScript 코드를 복사하여 붙여넣은 다음 , 엔터키를 눌러 실행할 것을 적극 권한다. (콘솔은 대부분 웹 브라우저의 Developer Tools에 포함되어있다. 자세한 내용은 [Firefox Developer Tools](/ko/docs/Tools), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/), [Edge DevTools](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide) 에서 확인할 수 있다. )
 
 ```
     function doSomething(){}

@@ -2,6 +2,7 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleSheet`** 接口代表一个 [CSS](/zh-CN/docs/Web/CSS) 样式表，并允许检查和编辑样式表中的规则列表。它从父类型 {{domxref("StyleSheet")}} 继承属性和方法。
@@ -53,7 +54,7 @@ h1, h2 {
 _这些遗留属性是很久以前由微软提出的，不应该再使用，但这些属性短期内不会被移除。_
 
 - {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}
-  - : `rules` 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}， 其中包含样式表中所有规则的一个最新列表。
+  - : `rules` 属性的功能与标准的{{domxref("CSSStyleSheet.cssRules", "cssRules")}}属性相同；它返回一个实时的 {{domxref("CSSRuleList")}}，其中包含样式表中所有规则的一个最新列表。
 
 ## 遗留方法
 
@@ -92,7 +93,7 @@ _这些遗留方法是很久以前由微软提出的，应尽量避免使用，�
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet")}}
+{{Compat}}
 
 ## 参见
 

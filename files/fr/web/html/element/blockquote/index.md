@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/blockquote
 browser-compat: html.elements.blockquote
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique que le texte contenu dans l'élément est une citation longue. Le texte est généralement affiché avec une indentation (voir [les notes](#usage_notes) ci-après). Une URL indiquant la source de la citation peut être donnée grâce à l'attribut **`cite`** tandis qu'un texte représentant la source peut être donné via l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite).
 
@@ -102,7 +103,7 @@ Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](
 
 Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Element/q).
 
-## Exemple
+## Exemples
 
 Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un passage de [RFC 1149 <i lang="en">A Standard for the Transmission of IP Datagrams on Avian Carriers</i>](https://datatracker.ietf.org/doc/html/rfc1149).
 
@@ -122,9 +123,9 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 </blockquote>
 ```
 
-Le résultat de cet extrait HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample("Exemple", 640, 200)}}
+{{EmbedLiveSample("", 640, 200)}}
 
 ## Spécifications
 

@@ -2,6 +2,7 @@
 title: URL.searchParams
 slug: Web/API/URL/searchParams
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`searchParams`** 読み取り専用プロパティは、URL に含まれる GET デコードされたクエリー引数へのアクセスを可能にする {{domxref("URLSearchParams")}} オブジェクトを返します。
@@ -30,9 +31,7 @@ let age = parseInt(params.get('age')); // 数値 18 です。
 
 ## 仕様
 
-| 仕様                                                                             | 状態                 | コメント |
-| -------------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-searchparams', 'searchParams')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

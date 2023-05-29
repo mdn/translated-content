@@ -1,8 +1,9 @@
 ---
 title: 背景画像の拡大縮小
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
+
 {{CSSRef}}
 
 **{{cssxref("background-size")}}** は CSS のプロパティで、要素の背景画像の大きさを変更し、画像の幅や高さから見た完全な大きさの画像をタイル表示するという既定の動作を変更することができます。こうすることで、画像を必要に応じて拡大したり縮小したりすることができます。

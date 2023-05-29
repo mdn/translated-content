@@ -1,15 +1,8 @@
 ---
 title: Window.console
 slug: Web/API/Window/console
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Window
-  - console
-translation_of: Web/API/Window/console
 ---
+
 {{APIRef}}
 
 **`Window.console`** 속성은 브라우저 콘솔에 로그를 남길 수 있는 메서드를 가진 {{domxref("Console")}} 객체의 참조를 반환합니다. 콘솔 메서드는 디버깅 용도로만 사용해야 하며, 엔드유저에게 정보를 제공할 의도를 가져션 안됩니다.

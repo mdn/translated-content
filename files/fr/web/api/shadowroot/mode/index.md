@@ -10,6 +10,7 @@ tags:
   - shadow dom
 translation_of: Web/API/ShadowRoot/mode
 ---
+
 {{APIRef("Shadow DOM")}}
 
 La propriété **`mode`**, rattachée à l'interface {{domxref("ShadowRoot")}}, indique son mode. Celui-ci peut valoir `open` ou `closed` et indique si les fonctionnalités internes de la racine sont accessibles en JavaScript.

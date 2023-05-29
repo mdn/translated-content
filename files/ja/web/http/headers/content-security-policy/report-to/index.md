@@ -1,22 +1,15 @@
 ---
-title: 'CSP: report-to'
+title: "CSP: report-to"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
-tags:
-  - CSP
-  - Content Security Policy
-  - Content-Security-Policy
-  - HTTP
-  - Reporting
-  - Security
-  - report-to
-browser-compat: http.headers.Content-Security-Policy.report-to
-translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
+
 {{HTTPSidebar}}
 
-`Content-Security-Policy` の **_`Report-To`_** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。
+`Content-Security-Policy` の **`Report-To`** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。
 
-```html
+```http
 Content-Security-Policy: …; report-to groupname
 ```
 
@@ -42,7 +35,7 @@ Content-Security-Policy: …; report-to groupname
 
 ## 構文
 
-```
+```http
 Content-Security-Policy: report-to <json-field-value>;
 ```
 
@@ -50,7 +43,7 @@ Content-Security-Policy: report-to <json-field-value>;
 
 詳しい情報や例は、 {{HTTPHeader("Content-Security-Policy-Report-Only")}} を参照してください。
 
-```
+```http
 Report-To: { "group": "csp-endpoint",
               "max_age": 10886400,
               "endpoints": [
@@ -64,7 +57,7 @@ Report-To: { "group": "csp-endpoint",
 Content-Security-Policy: …; report-to csp-endpoint
 ```
 
-```
+```http
 Report-To: { "group": "endpoint-1",
               "max_age": 10886400,
               "endpoints": [
@@ -75,7 +68,7 @@ Report-To: { "group": "endpoint-1",
 Content-Security-Policy: …; report-to endpoint-1
 ```
 
-```
+```http
 Reporting-Endpoints: endpoint-1="https://example.com/reports"
 
 Content-Security-Policy: …; report-to endpoint-1

@@ -13,6 +13,7 @@ tags:
   - local
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
+
 {{AddonSidebar()}}
 
 Représente la zone de stockage `local`. Les éléments stockés `localement` sont locaux sur la machine sur laquelle l'extension a été installée.
@@ -30,22 +31,22 @@ Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est r
 
 ## Méthodes
 
-L'objet `local` local implémente les méthodes définies sur le type  {{WebExtAPIRef("storage.StorageArea")}} :
+L'objet `local` local implémente les méthodes définies sur le type {{WebExtAPIRef("storage.StorageArea")}} :
 
 - {{WebExtAPIRef("storage.StorageArea.get()")}}
   - : Récupère un ou plusieurs éléments de la zone de stockage.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
   - : Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.
 - {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement  {{WebExtAPIRef("storage.onChanged")}} se déclenche.
+  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement {{WebExtAPIRef("storage.onChanged")}} se déclenche.
 - {{WebExtAPIRef("storage.StorageArea.remove()")}}
   - : Supprime un ou plusieurs éléments de la zone de stockage..
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Supprime tous les éléments de la zone de stockage.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.local")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -55,7 +56,8 @@ L'objet `local` local implémente les méthodes définies sur le type  {{WebExtA
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -82,4 +84,4 @@ L'objet `local` local implémente les méthodes définies sur le type  {{WebExtA
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

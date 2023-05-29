@@ -2,6 +2,7 @@
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.getBoundingClientRect()`** 方法返回一个 {{domxref("DOMRect")}} 对象，其提供了元素的大小及其相对于[视口](/zh-CN/docs/Glossary/Viewport)的位置。

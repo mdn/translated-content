@@ -2,6 +2,7 @@
 title: SyncEvent
 slug: Web/API/SyncEvent
 ---
+
 {{APIRef("Service Workers API")}} {{Non-standard_header}}
 
 **`SyncEvent`** インターフェイスは、 ServiceWorker の {{domxref("ServiceWorkerGlobalScope")}} でディスパッチされる同期アクションを表します。

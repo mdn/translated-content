@@ -2,6 +2,7 @@
 title: 'Document: cut イベント'
 slug: Web/API/Document/cut_event
 ---
+
 {{APIRef}}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を実行したときに発生します。
@@ -39,9 +40,7 @@ document.addEventListener('cut', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

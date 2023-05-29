@@ -9,6 +9,7 @@ tags:
   - Racine
 translation_of: Web/API/Node/getRootNode
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`getRootNode()`** de l'interface {{domxref("Node")}} renvoie le contexte de la racine de l'objet, qui peut optionnellement inclure la racine "shadow" si elle est disponible.

@@ -1,22 +1,12 @@
 ---
 title: Manejo de archivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Archivos
-  - Guía
-  - HTML
-  - Novato
-  - Principiante
-  - Scripting
-  - Sitios Web
-  - l10n:priority
-  - teorias
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/Manejando_los_archivos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente {{web.link("/es/Learn/Getting_started_with_the_web/Publishing_your_website", "los cargues en un servidor")}}. El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
+Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente [los cargues en un servidor](/es/Learn/Getting_started_with_the_web/Publishing_your_website). El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
 
 ## ¿Dónde debería estar tu sitio web en tu computadora?
 
@@ -47,29 +37,29 @@ A continuación, veamos qué estructura debería tener tu sitio de prueba. Las c
 
 ## Rutas de archivo
 
-Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de archivo entre ellos, básicamente una ruta, para que un archivo sepa dónde está otro. Para demostrarlo, insertaremos un poco de HTML en nuestro archivo `index.html` y haremos que muestre la imagen que elegiste en el artículo {{web.link("/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Imágenes", "¿Cómo se verá tu sitio web?")}}
+Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de archivo entre ellos, básicamente una ruta, para que un archivo sepa dónde está otro. Para demostrarlo, insertaremos un poco de HTML en nuestro archivo `index.html` y haremos que muestre la imagen que elegiste en el artículo [¿Cómo se verá tu sitio web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Imágenes)
 
 1. Copia la imagen que elegiste anteriormente en tu directorio `images`.
 2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Mi página de prueba</title>
-      </head>
-      <body>
-        <img src="" alt="Mi imagen de prueba">
-      </body>
-    </html>
-    ```
+   ```html
+   <!DOCTYPE html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Mi página de prueba</title>
+     </head>
+     <body>
+       <img src="" alt="Mi imagen de prueba" />
+     </body>
+   </html>
+   ```
 
 3. La línea `<img src="" alt="Mi imagen de prueba">` es el código HTML que inserta una imagen en la página. Necesitamos decirle al HTML dónde está la imagen. La imagen está dentro del directorio _images_, que está en el mismo directorio que `index.html`. Para recorrer la estructura del archivo desde `index.html` hasta nuestra imagen, la ruta del archivo que necesitamos es `images/nombre-archivo-imagen`. Por ejemplo, nuestra imagen se llama `firefox-icon.png`, por lo que la ruta del archivo es `images/firefox-icon.png`.
 4. Inserta la ruta del archivo en tu código HTML entre las comillas dobles del código `src=""`.
 5. Guarda tu archivo HTML, luego cárgalo en tu navegador web (haz doble clic en el archivo). ¡Deberías ver tu nueva página web mostrando tu imagen!
 
-![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](website-screenshot.png)
 
 Algunas reglas generales para las rutas de archivo:
 
@@ -86,17 +76,6 @@ Por ahora, esto es todo lo que necesitas saber.
 
 Eso es todo por ahora. La estructura de tu directorio debería verse así:
 
-![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- {{web.link("/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico", "Instalación de software básico")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like", "¿Cómo se verá tu sitio web?")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/Manejando_los_archivos", "Manejo de archivos")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/HTML_basics", "Conceptos básicos de HTML")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/CSS_basics", "Conceptos básicos de CSS")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/JavaScript_basics", "Conceptos básicos de JavaScript")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/Publishing_your_website", "Publicar tu sitio web")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web", "Cómo funciona la Web")}}

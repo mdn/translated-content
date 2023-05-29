@@ -2,6 +2,7 @@
 title: 箭头函数
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
+
 {{jsSidebar("Functions")}}
 
 **箭头函数表达式**的语法比[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)更简洁，并且没有自己的[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)，[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)或[`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target)。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
@@ -185,7 +186,7 @@ var arr = () => arguments[0];
 arr(); // 1
 
 function foo(n) {
-  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象. arguments[0] 是 n，即传给 foo 函数的第一个参数
+  var f = () => arguments[0] + n; // 隐式绑定 foo 函数的 arguments 对象。arguments[0] 是 n，即传给 foo 函数的第一个参数
   return f();
 }
 
@@ -315,7 +316,7 @@ var func = ()
 // SyntaxError: expected expression, got '=>'
 ```
 
-但是，可以通过在 ‘=>’ 之后换行，或者用 ‘( )’、'{ }'来实现换行，如下：
+但是，可以通过在‘=>’之后换行，或者用‘( )’、'{ }'来实现换行，如下：
 
 ```js
 var func = (a, b, c) =>
@@ -340,7 +341,7 @@ var func = (
 
 ## 解析顺序
 
-虽然箭头函数中的箭头不是运算符，但箭头函数具有与常规函数不同的特殊[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)解析规则。
+虽然箭头函数中的箭头不是运算符，但箭头函数具有与常规函数不同的特殊[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)解析规则。
 
 ```js
 let callback;
@@ -450,7 +451,7 @@ v();    //1
 v();    //2
 
 
-//箭头函数体的闭包（ i=0 是默认参数）
+//箭头函数体的闭包（i=0 是默认参数）
 var Add = (i=0) => {return (() => (++i) )};
 var v = Add();
 v();           //1

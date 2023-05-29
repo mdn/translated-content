@@ -1,12 +1,6 @@
 ---
 title: JavaScript의 타입과 자료구조
 slug: Web/JavaScript/Data_structures
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-  - Types
-translation_of: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More")}}

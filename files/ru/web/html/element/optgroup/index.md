@@ -9,6 +9,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/optgroup
 ---
+
 **HTML-элемент `<optgroup>` **позволяет группировать опции, находящиеся внутри элемента {{HTMLElement("select")}}.
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                                                                                                                                |
@@ -19,7 +20,7 @@ translation_of: Web/HTML/Element/optgroup
 | Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                |
 | DOM-интерфейс                                          | {{domxref("HTMLOptGroupElement")}}                                                                                                                                       |
 
-{{Note("Элементы optgroup не могут быть вложенными друг в друга.")}}
+> **Примечание:** Элементы optgroup не могут быть вложенными друг в друга.
 
 ## Атрибуты
 
@@ -65,4 +66,4 @@ translation_of: Web/HTML/Element/optgroup
 
 - Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

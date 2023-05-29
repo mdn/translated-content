@@ -2,6 +2,7 @@
 title: <filter-function>
 slug: Web/CSS/filter-function
 ---
+
 {{CSSRef}}
 
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
@@ -72,7 +73,7 @@ slug: Web/CSS/filter-function
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
 }
 
 li {

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/class
 original_slug: Web/JavaScript/Reference/Opérateurs/class
 ---
+
 {{JSSidebar("Operators")}}
 
 Une **expression de classe** est un moyen de définir une classe avec ECMASCript 2015 (ES6). Semblable aux [expressions de fonctions](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function), les expressions de classes peuvent être nommées ou anonymes. Si l'expression est nommée, le nom de la classe ne sera local que pour le corps de la fonction. Cette syntaxe n'est qu'un « sucre syntaxique » pour faciliter l'écriture du code, elle ne modifie en aucun cas le modèle d'héritage utilisé par JavaScript qui est un modèle à base de prototypes.
@@ -69,16 +70,11 @@ Toto.name;       // "TotoNommé"
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                     |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                     |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Voir aussi
 

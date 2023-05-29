@@ -2,15 +2,16 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 User-Agent 請求標頭（request header）含有能令網路協議同級層（peer）識別發出該[用戶代理](/zh-TW/docs/Glossary/User_agent)請求的軟體類型或版本號、該軟體使用的作業系統、還有軟體開發者的字詞串。
 
 > **備註：** 請讀讀[透過用戶代理偵測瀏覽器](/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent)以理解為什麼給不同的瀏覽器不同的頁面或服務是餿主意。
 
-| 標頭類型                                         | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | 否                                       |
+| 標頭類型                              | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | 否                             |
 
 ## 語法
 
@@ -117,7 +118,7 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.User-Agent")}}
+{{Compat}}
 
 ## 參閱
 

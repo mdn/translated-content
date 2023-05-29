@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Operators")}}
 
 Les mots-clés **`async function*`** peuvent être utilisés afin de créer une fonction génératrice asynchrone au sein d'une expression.
@@ -49,7 +50,7 @@ Une expression `async function*` est très proche et possède quasiment la même
 
 ## Exemples
 
-### Utiliser `async function*`
+### Utiliser async function\*
 
 L'exemple qui suit définit une fonction génératrice asynchrone anonyme et l'affecte à `x`. Cette fonction génère le carré de son argument&nbsp;:
 

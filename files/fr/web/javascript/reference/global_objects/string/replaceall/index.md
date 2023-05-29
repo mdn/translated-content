@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/replaceAll
 ---
+
 {{JSRef}}
 
 La méthode **`replaceAll()`** retourne une nouvelle chaîne de caractères dans laquelle toutes les occurrences d'un motif donné ont été remplacées par une chaîne de remplacement. L'argument `pattern` fournit pour décrire le motif peut être une chaîne de caractères ou une expression rationnelle ([`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)), l'argument `replacement` peut être une chaîne de caractères ou une fonction qui sera appelée pour chaque correspondance.
@@ -134,13 +135,11 @@ L'exemple suivant, utilisant le marqueur `g`, fonctionnera :
 
 ## Spécifications
 
-| Spécification                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.replaceall', 'String.prototype.replaceAll')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.replaceAll")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: afterprint
 slug: Web/API/Window/afterprint_event
 ---
+
 在相关联的文档已开始打印或打印预览已关闭之后，触发 `afterprint`事件。
 
 ## 基本信息

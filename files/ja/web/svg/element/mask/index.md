@@ -1,12 +1,8 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/mask
 ---
+
 {{SVGRef}}
 
 The **`<mask>`** element defines an alpha mask for compositing the current object into the background. A mask is used/referenced using the {{SVGAttr("mask")}} property.
@@ -72,10 +68,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様書                                                                               | ステータス                   | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('CSS Masks', '#MaskElement', '&lt;mask&gt;')}}         | {{Spec2('CSS Masks')}} |          |
-| {{SpecName('SVG1.1', 'masking.html#Masking', '&lt;mask&gt;')}} | {{Spec2('SVG1.1')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

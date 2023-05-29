@@ -1,9 +1,10 @@
 ---
 title: <input type="tel">
-slug: Web/HTML/Element/Input/tel
+slug: Web/HTML/Element/input/tel
 translation_of: Web/HTML/Element/input/tel
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элемент типа **`tel`** используется чтобы разрешить пользователю вводить и редактировать номер телефона. В отличии от[`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) и [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url) , введённое значение не проверяется автоматически по определённом формату, перед тем как форма может быть отправлена , потому что форматы телефонных номеров сильно различаются по всему миру
 
@@ -90,7 +91,7 @@ One of the main advantages of `<input type="tel">` is that it causes mobile brow
 
 | Firefox for Android                                                                             | WebKit iOS (Safari/Chrome/Firefox)                                                                    |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| ![Firefox for Android screen shot](https://mdn.mozillademos.org/files/15441/fx-android-tel.png) | ![Firefox for iOS screenshot](https://mdn.mozillademos.org/files/15603/iphone-tel-keyboard-50pct.png) |
+| ![Firefox for Android screen shot](fx-android-tel.png) | ![Firefox for iOS screenshot](iphone-tel-keyboard-50pct.png) |
 
 ### A simple tel input
 
@@ -181,7 +182,7 @@ With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s 
 
 Here's a screenshot of what that might look like:
 
-![](https://mdn.mozillademos.org/files/15605/phone-number-with-options.png)
+![](phone-number-with-options.png)
 
 ## Validation
 

@@ -2,6 +2,7 @@
 title: caption-side
 slug: Web/CSS/caption-side
 ---
+
 {{CSSRef}}
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。

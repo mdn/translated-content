@@ -12,6 +12,7 @@ tags:
   - données
 translation_of: Web/API/Document/createCDATASection
 ---
+
 {{APIRef("DOM")}}
 
 `createCDATASection()` crée un nouveau noeud de section CDATA et le renvoie.

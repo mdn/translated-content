@@ -7,7 +7,7 @@ slug: Web/HTML/Element/plaintext
 
 **`<plaintext>`** は [HTML](/ja/docs/Web/HTML) の要素で、開始タグ以降のすべてを生のテキストとして表示し、それ以降の HTML を無視します。開始タグ以降は全て生のテキスト扱いになるので、終了タグはありません。
 
-> **Warning:** この要素は使用しないで下さい。
+> **警告:** この要素は使用しないで下さい。
 >
 > - `<plaintext>` は HTML 2 より非推奨となっており、全てのブラウザーが実装しているわけではありません。実装しているブラウザーでも、一貫していません。
 > - `<plaintext>` は HTML 5 で廃止されています。この要素を受け付けるブラウザーは {{HTMLElement("pre")}} 要素と同様に扱い、内部の HTML を解釈する場合もあります。
@@ -36,4 +36,4 @@ slug: Web/HTML/Element/plaintext
 - {{HTMLElement("pre")}} 及び {{HTMLElement("code")}} 要素を代わりに使用してください。
 - {{HTMLElement("plaintext")}} と似た {{HTMLElement("listing")}} と {{HTMLElement("xmp")}} も廃止されています。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

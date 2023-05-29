@@ -1,9 +1,9 @@
 ---
 title: 벽돌 만들기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Collision_detection")}}

@@ -3,6 +3,7 @@ title: ServiceWorkerContainer.getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
 translation_of: Web/API/ServiceWorkerContainer/getRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`getRegistration()`** de l'interface {{domxref("ServiceWorkerContainer")}} fournis un objet {{domxref("ServiceWorkerRegistration")}} dont la porté inclue l'URL du document. Cette méthode retourne une {{jsxref("Promise")}} qui se résout avec un {{domxref("ServiceWorkerRegistration")}} ou `undefined`.

@@ -2,7 +2,8 @@
 title: '<fieldset>: フィールドセット要素'
 slug: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
@@ -14,15 +15,15 @@ slug: Web/HTML/Element/fieldset
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : この論理型属性が設定されている場合、 \<fieldset> の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素の中のフォーム要素は無効になりません。
-- {{htmlattrdef("form")}}
-  - : {{HTMLElement("form")}} 要素の {{htmlattrxref("id")}} 属性を指定し、 `<fieldset>` 要素はたとえその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
-- {{htmlattrdef("name")}}
+- `form`
+  - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を指定し、 `<fieldset>` 要素はたとえその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
+- `name`
 
   - : グループに関連付けられた名前です。
 
-    > **Note:** fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
+    > **メモ:** fieldset 要素自身のラベルの役割は、その最初の子要素として配置した {{HTMLElement("legend")}} 要素が担います。
 
 ## CSS でのスタイル付け
 
@@ -118,13 +119,13 @@ slug: Web/HTML/Element/fieldset
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("radiogroup")}},
-        {{ARIARole("presentation")}}, {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
@@ -136,11 +137,7 @@ slug: Web/HTML/Element/fieldset
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                  |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}     | {{Spec2('HTML WHATWG')}} | `fieldset` 要素を定義 |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}             | {{Spec2('HTML4.01')}}     | 初回定義              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

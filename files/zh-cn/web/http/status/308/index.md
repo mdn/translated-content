@@ -2,6 +2,7 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中， **308 Permanent Redirect**（永久重定向）是表示重定向的响应状态码，说明请求的资源已经被永久的移动到了由 {{HTTPHeader("Location")}} 首部指定的 URL 上。浏览器会进行重定向，同时搜索引擎也会更新其链接（用 SEO 的行话来说，意思是“链接汁”（link juice）被传递到了新的 URL）。

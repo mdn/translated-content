@@ -3,6 +3,7 @@ title: RTCIceServer
 slug: Web/API/RTCIceServer
 translation_of: Web/API/RTCIceServer
 ---
+
 {{APIRef("WebRTC")}}
 
 RTCIceServer définit comment se connecter à un serveur ICE unique (comme un serveur {{Glossary("STUN")}} ou {{Glossary("TURN")}}). Il comprend à la fois l'URL et les éventuelle informations d'identification nécessaires pour se connecter au serveur.
@@ -60,7 +61,7 @@ Une fois l'objet de configuration créé, il est passé dans le constructeur {{d
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.RTCIceServer")}}
+{{Compat}}
 
 ## Voir aussi
 

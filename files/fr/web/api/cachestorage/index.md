@@ -11,6 +11,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 L'interface `CacheStorage` représente le stockage des objets {{domxref("Cache")}}.

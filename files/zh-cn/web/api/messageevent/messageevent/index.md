@@ -2,6 +2,7 @@
 title: MessageEvent.MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent()`** 构造函数创建一个新的 {{domxref("MessageEvent")}} 对象实例。
@@ -16,7 +17,7 @@ var messageEvent = new MessageEvent(type, init);
 
 - type
   - : 要创建的 `MessageEvent` 的类型。这可能是 XXX 中的一个
-- **`init` **{{optional_inline}}
+- **`init`** {{optional_inline}}
 
   - : 可以包含以下属性的 dictionary 对象：
 
@@ -40,7 +41,7 @@ var myMessage = new MessageEvent('worker', {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent.MessageEvent")}}
+{{Compat}}
 
 ## 另见
 

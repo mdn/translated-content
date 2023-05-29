@@ -1,13 +1,8 @@
 ---
 title: <pattern>
 slug: Web/SVG/Element/pattern
-tags:
-  - 要素
-  - SVG
-  - SVG コンテナー
-browser-compat: svg.elements.pattern
-translation_of: Web/SVG/Element/pattern
 ---
+
 {{SVGRef}}
 
 **`<pattern>`** 要素は、ある領域をカバーするために、x座標とy座標の間隔を繰り返して (「タイル」) 再描画することができるグラフィックオブジェクトを定義します。
@@ -47,7 +42,7 @@ html,body,svg { height:100% }
   - : この属性は {{SVGElement("pattern")}} の内容物の座標系を定義します。
     *値の型*: `userSpaceOnUse`|`objectBoundingBox`; *既定値*: `userSpaceOnUse`; *アニメーション*: **可**
 
-    > **Note:** この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
+    > **メモ:** この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
 - {{SVGAttr("patternTransform")}}
   - : この属性は、パターン座標系からターゲット座標系への任意の追加変換の定義が入ります。
     *値の型*: **[\<transform-list>](/ja/docs/Web/SVG/Content_type#transform-list)**; *既定値*: *none*; *アニメーション*: **可**
@@ -70,7 +65,7 @@ html,body,svg { height:100% }
   - : この属性は `<pattern>` 属性の既定値を提供するテンプレートパターンを参照します。
     *値の型*: [**\<URL>**](/ja/docs/Web/SVG/Content_type#url); *既定値*: *none*; *アニメーション*: **可**
 
-    > **Note:** `href` を実装しているブラウザーでは、 `href` と `xlink:href` を共に設定した場合、`xlink:href` は無視され `href` のみが使用されます。
+    > **メモ:** `href` を実装しているブラウザーでは、 `href` と `xlink:href` を共に設定した場合、`xlink:href` は無視され `href` のみが使用されます。
 - {{SVGAttr("y")}}
   - : この属性はパターンタイルの y 方向のシフト量を指定します。
     *値の型*: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; *既定値*: `0`; *アニメーション*: **可**

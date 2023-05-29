@@ -2,6 +2,7 @@
 title: 関数の戻り値
 slug: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 このコースでの関数の学習を終えるために、最後に議論しておくべき関数についての大事なコンセプトがあります。それは戻り値です。関数によっては意味のある値を返さないものもありますが、値を返すものも当然あります。それらの値が何であるか、あなたのコードの中でどのように利用するのか、またどのように関数に意味のある値を返させるのかについて理解することは重要です。これらについてすべてを以下で紹介します。
@@ -143,7 +144,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. コードを保存して、それをブラウザーで表示してみましょう。
 
-> **Note:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
+> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
 
 ## あなたの番です!
 
@@ -170,13 +171,3 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一般的な JavaScript のパターンは、ある関数を別の関数に*引数として*渡すことです。それは受け取った関数の中で呼び出されます。これについては、このコースの範疇を少し超えていますが、すぐにでも勉強する価値はあります。
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

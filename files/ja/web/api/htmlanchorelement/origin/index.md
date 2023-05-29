@@ -3,6 +3,7 @@ title: HTMLAnchorElement.origin
 slug: Web/API/HTMLAnchorElement/origin
 original_slug: Web/API/HTMLHyperlinkElementUtils/origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement.origin`** は読み取り専用プロパティで、表現している URL のオリジンを Unicode シリアル化した文字列です。

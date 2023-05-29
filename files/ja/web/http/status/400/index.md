@@ -1,19 +1,13 @@
 ---
 title: 400 Bad Request
 slug: Web/HTTP/Status/400
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/400
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`400 Bad Request`** レスポンスステータスコードは、何らかのクライアント側のエラーであると分かったために、サーバーがそのリクエストを処理しない (できない) ことを表します (例えば、リクエストの構文が正しくない、リクエストメッセージのフレーミングが無効、リクエスト経路に偽りがあるなど)。
 
-> **Warning:** クライアントは変更なしにこのリクエストを繰り返すべきではありません。
+> **警告:** クライアントは変更なしにこのリクエストを繰り返すべきではありません。
 
 ## ステータス
 

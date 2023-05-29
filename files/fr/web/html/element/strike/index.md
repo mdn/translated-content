@@ -8,7 +8,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/strike
 ---
-{{deprecated_header}}{{HTMLRef}}
+
+{{deprecated_header}}{{HTMLSidebar}}
 
 L'élément HTML **`<strike>`** permet de représenter du texte barré ou avec une ligne le traversant.
 

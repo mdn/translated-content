@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Animations/Using_CSS_animations
 translation_of: Web/CSS/CSS_Animations/Using_CSS_animations
 original_slug: Web/CSS/Animations_CSS/Utiliser_les_animations_CSS
 ---
+
 {{CSSRef}}
 
 Les **animations CSS** permettent de créer des transitions entre deux états de mise en forme. Une animation est décrite par deux choses : des propriétés propres à l'animation d'une part et un ensemble d'étapes (_keyframes_) qui indiquent l'état initial, final et éventuellement des états intermédiaires d'autre part.

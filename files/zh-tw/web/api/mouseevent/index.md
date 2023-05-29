@@ -2,9 +2,10 @@
 title: MouseEvent
 slug: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-**`MouseEvent`** 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 `MouseEvent` 實作事件包括了 {{event("click")}}、{{event("dblclick")}}、{{event("mouseup")}} 與 {{event("mousedown")}}。
+**`MouseEvent`** 介面表示了由使用者經指標裝置（如滑鼠）進行互動所發生的事件。常見的 `MouseEvent` 實作事件包括了 [`click`](/zh-TW/docs/Web/API/Element/click_event)、[`dblclick`](/zh-TW/docs/Web/API/Element/dblclick_event)、[`mouseup`](/zh-TW/docs/Web/API/Element/mouseup_event) 與 [`mousedown`](/zh-TW/docs/Web/API/Element/mousedown_event)。
 
 `MouseEvent` 繼承自 {{domxref("UIEvent")}}，而 `UIEvent` 則繼承自 {{domxref("Event")}}。雖然 {{domxref("MouseEvent.initMouseEvent()")}} 方法仍然向下相容新的瀏覽器，但現今應該使用 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} 建構式來建立 `MouseEvent` 物件。
 
@@ -34,9 +35,9 @@ _此介面也繼承了其父介面 {{domxref("UIEvent")}} 與 {{domxref("Event")
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : Returns `true` if the <kbd>meta</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : The X coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+  - : The X coordinate of the mouse pointer relative to the position of the last [`mousemove`](/zh-TW/docs/Web/API/Element/mousemove_event) event.
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : The Y coordinate of the mouse pointer relative to the position of the last {{event("mousemove")}} event.
+  - : The Y coordinate of the mouse pointer relative to the position of the last [`mousemove`](/zh-TW/docs/Web/API/Element/mousemove_event) event.
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : The X coordinate of the mouse pointer relative to the position of the padding edge of the target node.
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}
@@ -115,7 +116,7 @@ document.getElementById("button").addEventListener('click', simulateClick);
 
 Click on the button to see how the sample works:
 
-{{ EmbedLiveSample('Example', '', '', '') }}
+{{ EmbedLiveSample('範例') }}
 
 ## 規範
 
@@ -123,7 +124,7 @@ Click on the button to see how the sample works:
 
 ## 瀏覽器相容性
 
-{{Compat("api.MouseEvent")}}
+{{Compat}}
 
 ## 參見
 

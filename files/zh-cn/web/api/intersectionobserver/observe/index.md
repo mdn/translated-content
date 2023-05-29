@@ -2,9 +2,10 @@
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-{{domxref("IntersectionObserver")}} 对象的**`observe()`** 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根， 但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。
+{{domxref("IntersectionObserver")}} 对象的**`observe()`** 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根，但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。
 
 当指定元素的可见区域超过监听者的可见区域阈值之一时（阈值列表{{domxref("IntersectionObserver.thresholds")}}），监听者的回调会被传入代表当前发生的交叉变化{{domxref("IntersectionObserverEntry")}}并执行。请注意，这种设计允许通过调用一次回调，给回调传入 IntersectionObserverEntry 对象数组，来实现同时处理多个被监听元素的交叉变化。
 

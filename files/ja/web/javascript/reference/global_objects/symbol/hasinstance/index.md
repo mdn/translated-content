@@ -2,6 +2,7 @@
 title: Symbol.hasInstance
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 ---
+
 {{JSRef}}
 
 **`Symbol.hasInstance`** は、コンストラクターオブジェクトが、そのインスタンスのオブジェクトとして認識されるかどうかを決定するために使用されます。このシンボルで、{{jsxref("Operators/instanceof", "instanceof")}} 演算子の動作をカスタマイズすることができます。
@@ -47,9 +48,7 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 
 ## 仕様
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.hasinstance', 'Symbol.hasInstance')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 元素：click 事件
 slug: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 当定点设备的按钮（通常是鼠标的主键）在一个元素上被按下和放开时，`click` 事件就会被触发。
@@ -85,7 +86,7 @@ _该接口同样继承了其父级（{{domxref("UIEvent")}} 和 {{domxref("Event
 
 ### Internet Explorer
 
-IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 的元素覆盖在其它元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
+IE 8 和 9 中存在一个错误，在将 {{cssxref("background-color")}} 的计算值为 [`transparent`](/zh-CN/docs/Web/CSS/color_value#transparent_关键字) 的元素覆盖在其他元素之上时，该元素不会收到 `click` 事件。`click` 事件将只会在底层元素上触发。参见[在线演示](https://jsfiddle.net/YUKma/show/)。
 
 该错误的解决方案：
 

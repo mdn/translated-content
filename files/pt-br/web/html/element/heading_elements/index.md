@@ -1,9 +1,9 @@
 ---
 title: '<h1>–<h6>: Os elementos HTML de cabeçalho da seção'
 slug: Web/HTML/Element/Heading_Elements
-translation_of: Web/HTML/Element/Heading_Elements
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Os **elementos HTML** **`<h1>`–`<h6>`** representam seis níveis de título de seção. `<h1>` é o nível de seção mais alto e `<h6>` é o mais baixo.
 
@@ -16,14 +16,14 @@ Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais
 - _[Categorias do conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdos de cabeçalho, conteúdos palpáveis.
 - _Conteúdo permitido_ [Conteúdo com texto](/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content).
 - _Omissão de tag_ Não há, porém, as tags de abertura e fechamento são obrigatórias.
-- \_Elementos pais permitidos_Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdos de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content); ou como um elemento filho do grupo de elementos de cabeçalho {{HTMLElement("hgroup")}}
 - _Interface DOM_ {{domxref("HTMLHeadingElement")}}
 
 ## Atributos
 
 Esses elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-O atributo **align** está {{deprecated_inline}} no {{HTMLVersionInline(4.01)}} e {{obsolete_inline}} no {{HTMLVersionInline(5)}}.
+O atributo **align** está {{deprecated_inline}} no HTML 4 e no HTML 5.
 
 ## Exemplos
 
@@ -74,7 +74,7 @@ Aqui está o resultado deste código:
 
 Evite pular níveis de cabeçalhos: sempre comece com `<h1>`, depois `<h2>` e assim por diante. Tente, também, ter pelo menos um cabeçalho de primeiro nível em uma página..
 
-Em {{HTMLVersionInline(5)}}, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
+Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
 
 ## Especificações
 
@@ -88,12 +88,8 @@ Em {{HTMLVersionInline(5)}}, use o elemento {{HTMLElement("section")}} para defi
 
 {{Compat("html.elements.h1")}}
 
-##
-
 ## Veja também
 
 - {{HTMLElement("p")}}
 - {{HTMLElement("div")}}
 - {{HTMLElement("section")}}
-
-{{HTMLRef}}

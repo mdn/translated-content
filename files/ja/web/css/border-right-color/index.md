@@ -2,6 +2,7 @@
 title: border-right-color
 slug: Web/CSS/border-right-color
 ---
+
 {{CSSRef}}
 
 **`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。

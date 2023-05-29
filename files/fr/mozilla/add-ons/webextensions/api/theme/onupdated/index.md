@@ -9,6 +9,7 @@ tags:
   - WebExtensions;
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
+
 {{AddonSidebar()}}
 
 L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :
@@ -34,7 +35,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrête d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon  `false`.
+  - : Vérifie si `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -53,9 +54,9 @@ Les événements ont trois fonctions :
         - `windowId`{{optional_inline}}
           - : `integer`. L'ID de la fenêtre pour laquelle le thème a été mis à jour. Si cette propriété n'est pas présente, cela signifie que le thème a été mise à jour globalement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.onUpdated", 10)}}
+{{Compat}}
 
 ## Exemples
 

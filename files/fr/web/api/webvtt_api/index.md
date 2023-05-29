@@ -3,6 +3,7 @@ title: Format Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
 translation_of: Web/API/WebVTT_API
 ---
+
 {{DefaultAPISidebar("WebVTT")}}
 
 Le **format Web Video Text Tracks** (**WebVTT**) est un format qui permet d'afficher des pistes de texte qui varient avec le temps (comme des sous-titres) et qui est utilisé par l'élément HTML [`<track>`](/fr/docs/Web/HTML/Element/track). L'objectif principal des fichiers WebVTT est d'ajouter un calque de texte à une vidéo (représentée en HTML par [`<video>`](/fr/docs/Web/HTML/Element/video)). WebVTT est un format texte et les données doivent être encodées en [UTF-8](/fr/docs/Glossary/UTF-8). Les espaces et les tabulations peuvent être utilisés sans distinction. Il existe également une API qui permet de représenter ces pistes et les données nécessaires à la lecture du texte au bon moment.
@@ -174,7 +175,7 @@ video::cue(b) {
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`.  De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
 
 Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 
@@ -762,24 +763,8 @@ Où `p` et `a` sont les balises utilisées en HTML pour représenter les paragra
 
 ## Spécifications
 
-| Spécification                                                                  |
-| ------------------------------------------------------------------------------ |
-| [WebVTT&nbsp;: le format Web Video Text Tracks](https://w3c.github.io/webvtt/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Interface `VTTCue`
-
-{{Compat("api.VTTCue", 0)}}
-
-### Interface `TextTrack`
-
-{{Compat("api.TextTrack", 0)}}
-
-### Notes
-
-Avant Firefox 50, l'énumération `AlignSetting` (correspondant aux valeurs possibles de [`VTTCue.align`](/fr/docs/Web/API/VTTCue/align)) incluait par erreur la valeur `"middle"` au lieu de `"center"`. Ceci a été corrigé.
-
-WebVTT a été implémenté par Firefox 24 derrière la préférence `media.webvtt.enabled`, qui était désactivée par défaut. Cette fonctionnalité pouvait être activée en passant la préférence à `true`. WebVTT est activé par défaut à partir de Firefox 31 et peut être désactivé en passant la valeur de la préférence à `false`.
-
-Avant Firefox 58, le mot-clé `REGION` créait des objets [`VTTRegion`](/fr/docs/Web/API/VTTRegion), mais qui n'étaient pas utilisés. Firefox 58 prend complètement en charge `VTTRegion` et son utilisation&nbsp;; toutefois cette fonctionnalité est désactivée par défaut derrière la préférence `media.webvtt.regions.enabled` qu'il faut passer à `true` pour l'activer avec Firefox 58. Les régions sont activées par défaut à partir de Firefox 59 (voir les bugs [1338030](https://bugzilla.mozilla.org/show_bug.cgi?id=1338030) et [1415805](https://bugzilla.mozilla.org/show_bug.cgi?id=1415805)).
+{{Compat}}

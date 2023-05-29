@@ -1,19 +1,13 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - HTTP Header
-  - HTTP ヘッダー
-  - Reference
-  - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 **User-Agent** {{Glossary("request header", "リクエストヘッダー")}}は、サーバーやネットワークピアがアプリケーション、オペレーティングシステム、ベンダーや、リクエストしている{{Glossary("user agent", "ユーザーエージェント")}}のバージョン等を識別できるようにする特性文字列です。
 
-> **Warning:** ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)をお読みください。
+> **警告:** ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)をお読みください。
 
 <table class="properties">
   <tbody>

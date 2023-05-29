@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 original_slug: Web/JavaScript/Reference/Objets_globaux/Uint8ClampedArray
 browser-compat: javascript.builtins.Uint8ClampedArray
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'entiers non signés représentés sur 8 bits, dont les valeurs sont ramenées entre 0 et 255. Si une valeur non-entière est fournie, elle sera arrondie à l'entier le plus proche. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).

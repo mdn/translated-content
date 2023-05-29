@@ -2,6 +2,7 @@
 title: Performance.navigation
 slug: Web/API/Performance/navigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

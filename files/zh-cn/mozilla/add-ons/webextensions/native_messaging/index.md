@@ -2,6 +2,7 @@
 title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 ---
+
 {{AddonSidebar}}
 
 Native messaging 可以让 extension 与安装在用户计算机上的原生应用交换信息。原生应用仅需给 extension 提供服务，而无需在网页中可访问。一个常见的例子是密码管理器：原生应用负责存储和加密你的密码，并且和 extension 通信来填充网页中的表单字段。Native messaging 可以让 extension 拥有那些 WebExtensions APIs 所没有的功能，比如访问某些特定的硬件。
@@ -19,7 +20,7 @@ extension 必须在 manifest.json 中获得"nativeMessaging" [权限](/zh-CN/doc
 - 在 WebExtensions 中，原生应用的清单中的 "allowed_extensions" 字段是一个由 extension ID 组成的数组，而在 Chrome 中，清单中的 "allowed_origins" 字段是一个由 "chrome-extension" URLs 组成的数组
 - 原生应用清单的存储位置不一样
 
-Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/master/native-messaging)，文章中的大部分代码片段均出于此。
+Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensions-examples)有一个[完整的关于 native messaging 的例子](https://github.com/mdn/webextensions-examples/tree/main/native-messaging)，文章中的大部分代码片段均出于此。
 
 ## 安装
 

@@ -1,6 +1,6 @@
 ---
 title: Notification.close()
-slug: Web/API/notification/close
+slug: Web/API/Notification/close
 tags:
   - API
   - API Notifications
@@ -12,6 +12,7 @@ tags:
   - fermeture
 translation_of: Web/API/Notification/close
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée pour fermer / supprimer une notification précédemment affichée.

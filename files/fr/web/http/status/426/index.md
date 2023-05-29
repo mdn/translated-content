@@ -3,6 +3,7 @@ title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
 translation_of: Web/HTTP/Status/426
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`426 Upgrade Required`** indique que le serveur refuse de réaliser la requête en utilisant le protocole actuel mais qu'il sera peut-être disposé à le faire après que le client passe sur un protocole différent.
@@ -29,9 +30,11 @@ This service requires use of the HTTP/3.0 protocol
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.15: 426 Upgrade Required](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.15) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

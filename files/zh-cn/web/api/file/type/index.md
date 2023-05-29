@@ -2,6 +2,7 @@
 title: File.type
 slug: Web/API/File/type
 ---
+
 {{APIRef("File API")}}
 
 返回 {{domxref("File")}} 对象所表示文件的媒体类型（MIME）。
@@ -42,7 +43,7 @@ function showType(fileInput) {
 
 ## 浏览器兼容性
 
-{{Compat("api.File.type")}}
+{{Compat}}
 
 ## 另见
 

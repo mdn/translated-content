@@ -1,9 +1,9 @@
 ---
 title: <fieldset>
 slug: Web/HTML/Element/fieldset
-translation_of: Web/HTML/Element/fieldset
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como labels ({{HTMLElement("label")}}), dentro de um formulário web.
 
@@ -11,17 +11,17 @@ O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Categorias de Conteúdo</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de Conteúdo</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >,
         <a
-          href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
+          href="/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
           >sectioning root</a
-        >, <a href="/en-US/docs/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/en-US/docs/HTML/Content_categories#form-associated_content"
+        >, <a href="/pt-BR/docs/HTML/Content_categories#form_listed">listed</a>,
+        <a href="/pt-BR/docs/HTML/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -42,7 +42,7 @@ O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como
       <th scope="row">Elementos pai permitidos</th>
       <td>
         Qualquer elemento que aceita
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>
@@ -60,11 +60,11 @@ O **elemento** **HTML `<fieldset>`** é usado para agrupar elementos, assim como
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("disabled")}}
   - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
-- {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("form")}}
   - : Este atributo tem o valor do atributo **id** do elemento {{HTMLElement("form")}} com que se relaciona. Seu valor padrão é o **id** do elemento {{HTMLElement("form")}} mais próximo.
-- {{htmlattrdef("name")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("name")}}
 
   - : O nome associado com o grupo.
 

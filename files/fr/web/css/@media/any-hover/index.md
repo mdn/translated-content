@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/any-hover
 ---
+
 {{CSSRef}}
 
 **`any-hover`** est une caractéristique média CSS qui permet de vérifier si un mécanisme de saisie/d'entrée permet à l'utilisateur de survoler les éléments.
@@ -44,13 +45,11 @@ La caractéristique `any-hover` est définie avec un mot-clé parmi ceux de la l
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#descdef-media-any-hover', 'any-hover')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.any-hover")}}
+{{Compat}}
 
 ## Voir aussi
 

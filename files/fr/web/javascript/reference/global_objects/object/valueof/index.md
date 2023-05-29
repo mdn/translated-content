@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.
@@ -77,16 +78,11 @@ console.log(monObj + 3); // 7 car l'opération a implicitement utilisé valueOf
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

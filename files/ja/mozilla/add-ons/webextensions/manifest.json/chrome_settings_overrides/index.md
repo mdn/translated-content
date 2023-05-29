@@ -2,6 +2,7 @@
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 `chrome_settings_overrides` キーを使ってブラウザー設定を上書きします。2 つの設定が利用できます:

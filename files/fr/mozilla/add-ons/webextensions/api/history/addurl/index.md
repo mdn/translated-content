@@ -13,6 +13,7 @@ tags:
   - addUrl
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/addUrl
 ---
+
 {{AddonSidebar()}}
 
 Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
@@ -40,15 +41,15 @@ var addingUrl = browser.history.addUrl(
     - `transition`{{optional_inline}}
       - : {{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.
     - `visitTime`{{optional_inline}}
-      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une  [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
+      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.addUrl")}}
+{{Compat}}
 
 ## Exemples
 
@@ -116,7 +117,8 @@ addingUrl.then(onAdded);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -143,4 +145,4 @@ addingUrl.then(onAdded);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -2,6 +2,7 @@
 title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
+
 {{AddonSidebar}}拡張機能にグローバルなブラウザー設定の変更を可能にします。この API の各プロパティは {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} オブジェクトで、これはそれぞれの設定の変更能力を提供します。これはグローバルな設定のため、拡張機能で衝突が起きる可能性があります。衝突の処理方法の詳細は [`BrowserSetting.set()`](/ja/Add-ons/WebExtensions/API/types/BrowserSetting/set) の文書を見てください。
 
 この API を使うには "browserSettings" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)が必要です。

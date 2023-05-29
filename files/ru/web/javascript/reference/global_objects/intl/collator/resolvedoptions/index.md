@@ -1,0 +1,60 @@
+---
+title: Intl.Collator.prototype.resolvedOptions()
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+tags:
+  - Collator
+  - Internationalization
+  - JavaScript
+  - Method
+  - NeedsExample
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
+---
+
+{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+
+## Сводка
+
+Метод **`Intl.Collator.prototype.resolvedOptions()`** возвращает новый объект со свойствами, отражающими локаль и параметры сравнения строк, вычисленные во время инициализации соответствующего объекта {{jsxref("Global_Objects/Collator", "Collator")}}.
+
+## Синтаксис
+
+```
+collator.resolvedOptions()
+```
+
+## Описание
+
+Возвращает новый объект со свойствами, отражающими локаль и параметры сравнения строк, вычисленные во время инициализации соответствующего объекта {{jsxref("Global_Objects/Collator", "Collator")}}. Объект содержит следующие свойства:
+
+- `locale`
+  - : Языковая метка BCP 47 реально используемой локали. Если во входной языковой метке BCP 47 запрошены какие-либо расширения Unicode, приведшие к этой локали, запрошенные и поддерживаемые для этой локали пары ключ-значение также будут включены в свойство `locale`.
+- `usage`
+
+  `sensitivity`
+
+  `ignorePunctuation`
+
+  - : Значения, предоставленные для этих свойств в аргументе `options`, либо значения по умолчанию.
+
+- `collation`
+  - : Значение, запрошенное ключом расширения Unicode `"co"`, если он поддерживается для локали `locale`, либо значение `"default"`.
+- `numeric`
+
+  `caseFirst`
+
+  - : Значения, предоставленные для этих свойств в аргументе `options` или запрошенные ключами расширения Unicode `"kn"` и `"kf"`, либо значения по умолчанию. Если реализация не поддерживает эти свойства, они будут опущены.
+
+## Спецификации
+
+| Спецификация                                                                                                     | Статус                           | Комментарии              |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
+| {{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+
+## Совместимость с браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}

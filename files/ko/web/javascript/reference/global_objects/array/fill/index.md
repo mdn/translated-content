@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
 {{JSRef}}
 

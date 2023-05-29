@@ -2,6 +2,7 @@
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## 概述
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 
 ## 示例
 
-### 例子：使用 `global`
+### 示例：使用 `global`
 
 ```js
 var regex = new RegExp("foo", "g")

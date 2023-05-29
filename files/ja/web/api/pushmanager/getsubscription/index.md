@@ -2,23 +2,24 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
-{{domxref("PushManager")}} インターフェースの **`PushManager.getSubscription()`** メソッドは、既存のプッシュサブスクリプションを取得します。
+{{domxref("PushManager")}} インターフェイスの **`PushManager.getSubscription()`** メソッドは、既存のプッシュサブスクリプションを取得します。
 
 これは既存のプッシュサブスクリプションの詳細を含む {{domxref("PushSubscription")}} を解決する {{jsxref("Promise")}} を返します。既存のプッシュサブスクリプションが存在しない場合 `null` 値で解決されます。
 
 ## 構文
 
 ```js
-​PushManager.getSubscription().then(function(pushSubscription) { ... } );
+PushManager.getSubscription().then(function(pushSubscription) { ... } );
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 {{domxref("PushSubscription")}} オブジェクトで解決される {{jsxref("Promise")}}。
 
@@ -60,13 +61,11 @@ slug: Web/API/PushManager/getSubscription
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                             | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#widl-PushManager-getSubscription-Promise-PushSubscription', 'getSubscription()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushManager.getSubscription")}}
 

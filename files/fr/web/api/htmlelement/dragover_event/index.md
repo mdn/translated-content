@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/dragover_event
 translation_of: Web/API/Document/dragover_event
 original_slug: Web/API/Document/dragover_event
 ---
+
 {{APIRef}}
 
 L'événement **dragover** est déclenché lorsqu'un élément ou une sélection de texte est glissé jusqu'à une cible de dépôt valide (toutes les 100ms)

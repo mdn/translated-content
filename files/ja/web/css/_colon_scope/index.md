@@ -2,6 +2,7 @@
 title: ':scope'
 slug: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 **`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
@@ -17,7 +18,9 @@ slug: Web/CSS/:scope
 
 ## 構文
 
-{{csssyntax}}
+```
+:scope
+```
 
 ## 例
 

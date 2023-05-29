@@ -2,6 +2,7 @@
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 **`StylePropertyMapReadOnly`** は [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_Object_Model_API) のインターフェイスで、 {{domxref("CSSStyleDeclaration")}} の代替となる読み取り専用の CSS 宣言ブロックの表現を提供します。このインターフェイスのインスタンスを取得するには、 {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}} を使用してください。
@@ -24,9 +25,9 @@ slug: Web/API/StylePropertyMapReadOnly
 - {{domxref('StylePropertyMapReadOnly.has()')}}
   - : 指定されたプロパティが `StylePropertyMapReadOnly` オブジェクトにあるかどうかを示します。
 - {{domxref('StylePropertyMapReadOnly.keys()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目のキーを含む新しい*配列イテレーター*を返します。
 - {{domxref('StylePropertyMapReadOnly.values()')}}
-  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列反復子*を返します。
+  - : `StylePropertyMapReadOnly` 内のそれぞれの項目の値を含む新しい*配列イテレーター*を返します。
 
 ## 例
 

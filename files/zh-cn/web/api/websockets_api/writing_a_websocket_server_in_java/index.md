@@ -2,17 +2,18 @@
 title: Writing a WebSocket server in Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
+
 ## 引言
 
 你可以通过这个例子知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。
 
 虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个例子你可以看到使用 Java 来做这件事会更简单。
 
-这个服务符合协议[RFC 6455](http://tools.ietf.org/html/rfc6455)， 所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。
+这个服务符合协议[RFC 6455](http://tools.ietf.org/html/rfc6455)，所以它只处理 Chrome 版本 16，Firefox 11，IE 10 及更高版本的连接。
 
 ## 第一步
 
-WebSocket 通过[TCP（传输控制协议）](http://en.wikipedia.org/wiki/Transmission_Control_Protocol)通信. Java 的[ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) 类位于 java.net 包中。
+WebSocket 通过[TCP（传输控制协议）](http://en.wikipedia.org/wiki/Transmission_Control_Protocol)通信。Java 的[ServerSocket](http://docs.oracle.com/javase/8/docs/api/java/net/ServerSocket.html) 类位于 java.net 包中。
 
 ### ServerSocket
 
@@ -46,37 +47,35 @@ public class WebSocket {
       System.out.println("A client connected.");
 ```
 
-### Socket
+### Socket 方法
 
-方法：
+- `java.net.Socket.getInputStream()`
+  返回该 Socket 的输入流。
+- `java.net.Socket.getOutputStream()`
+  返回该 Socket 的输出流。
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getInputStream()`
-  返回这个 Socket 的输入流 InputStream
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)`getOutputStream()`
-  返回这个 Socket 的输出流 OutputStream
+### OutputStream 方法
 
-### OutputStream
+```java
+write(byte[] b, int off, int len)
+```
 
-方法：
+将指定字节数组从偏移量 `off` 开始的 `len` 字节写入此输出流。
 
-`write(byte[] b, int off, int len)`
+### InputStream 方法
 
-将从数组`b`中的下标*`off`*开始的*`len`*个字节写入此输出流。
+```java
+read(byte[] b, int off, int len)
+```
 
-### InputStream
-
-方法：
-
-`int read(byte[] b, int off, int len)`
-
-将输入流中最多 `len` 个字节写入`byte[] b`，写入起始下标为`off`。尝试读取多达 `len` 字节，但可能读取较少数量。以整数形式返回实际读取的字节数。
+从输入流中读取最多 _len_ 字节的数据到一个字节数组中。
 
 代码片段二：
 
 ```java
 InputStream in = client.getInputStream();
-      OutputStream out = client.getOutputStream();
-      Scanner s = new Scanner(in, "UTF-8");
+OutputStream out = client.getOutputStream();
+Scanner s = new Scanner(in, "UTF-8");
 ```
 
 ## 握手
@@ -130,7 +129,7 @@ FIN: 你可以分多次发送一个完整的消息。但现在为了简单，操
 
 \- 134:
 
-如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。 如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。
+如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。
 
 > **备注：** 我可以拿 128，因为第一位总是 1。
 

@@ -1,14 +1,8 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Web
-translation_of: Web/CSS/:active
 ---
+
 {{CSSRef}}
 
 **`:active`** [CSS](/ko/docs/Web/API/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 활성화한 요소(버튼 등)를 나타냅니다. 마우스를 사용하는 경우, "활성"이란 보통 마우스 버튼을 누르는 순간부터 떼는 시점까지를 의미합니다.

@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Quand on écrit des pages web et des applications, une des choses les plus courantes que l'on veut faire est de manipuler la structure du document d'une manière ou d'une autre. On le fait généralement en utilisant le <i lang="en">Document Object Model</i> (DOM), un ensemble d'API qui permettent de contrôler le HTML et le style — et qui utilisent massivement l'objet [`Document`](/fr/docs/Web/API/Document). Dans cet article, nous allons voir comment utiliser le DOM en détails, ainsi que quelques API intéressantes qui peuvent modifier votre environnement.
@@ -294,13 +295,3 @@ Il y a bien d'autres fonctionnalités que vous pouvez utiliser pour manipuler vo
 (Voir notre [Référence Web API](/fr/docs/Web/API) pour une liste complète des API web documentées sur MDN&nbsp;!)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- **Manipuler des documents**
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Les API tierces](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Les API vidéo et audio](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

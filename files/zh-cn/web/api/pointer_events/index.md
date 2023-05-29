@@ -2,13 +2,14 @@
 title: Pointer events 指针事件
 slug: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类*[指针事件](#term_pointer_event)*。
 
 指针事件 - Pointer events 是一类可以为定点设备所触发的 DOM 事件。它们被用来创建一个可以有效掌握各类输入设备（鼠标、触控笔和单点或多点的手指触摸）的统一的 DOM 事件模型。所谓 _[指针](#term_pointer)_ 是指一个可以明确指向屏幕上某一组坐标的硬件设备。建立这样一个单独的事件模型可以有效的简化 Web 站点与应用所需的工作，同时也便于提供更加一致与良好的用户体验，无需关心不同用户和场景在输入硬件上的差异。另外，对于某些需要处理特定设备的场景，指针事件也定义了一个 {{domxref("PointerEvent.pointerType","pointerType")}} 属性用以查看触发事件的设备类型。
 
-这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（`mousedown/pointerdown`, `mousemove/pointermove`, 等）。 因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。
+这些事件需要能够处理 {{domxref("MouseEvent","mouse events")}} 之类较为通用的指针输入（`mousedown/pointerdown`, `mousemove/pointermove`, 等）。因此，指针事件的类型，很大程度上类似于当前的鼠标事件类型。
 
 此外，一个指针事件，也同时包含了鼠标事件中所常见的属性（client coordinates, target element, button states，等）以及适用于其他输入设备的新属性：pressure, contact geometry, tilt，等等。实际上，{{domxref("PointerEvent")}} 接口继承了所有 {{domxref("MouseEvent","MouseEvent")}} 中的属性，以保障原有为鼠标事件所开发的内容能更加有效的迁移到指针事件。
 
@@ -17,17 +18,17 @@ slug: Web/API/Pointer_events
 - active buttons state
   - : The condition when a _[pointer](/zh-CN/docs/Web/API/Pointer_events#term_pointer)_ has a non-zero value for the `buttons` property. For example, in the case of a pen, when the pen has physical contact with the digitizer, or at least one button is depressed while hovering.
 - 活跃指针 - active pointer
-  - : 任意*[指针](#term_pointer)输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。*
-- 数位设备 - digitizer
+  - : 任意*[指针](#指针)*输入设备都可以产生事件。一个可以产生后继事件的指针可以被认为是一个活跃指针。例如，一个触摸笔处于压下状态时可以认为是活跃的，因为它接下来的抬起或移动都会产生额外的后继事件。
+- 数位设备
   - : 一个可以检测其表面接触行为的传感设备。通常来说，其所用的传感设备是一个可以感知由某些输入设备（如触控笔、压感笔、手指等）所提供的输入信息的可触摸屏幕。
-- 命中检测 - hit test
+- 命中检测
   - : 浏览器用以检测某一指针事件的目标元素的过程。通常来说，这一过程是通过比照出现在文档或屏幕媒介上的指针位置与视觉布局来实现的。
-- 指针 - pointer
+- 指针
   - : 某个呈现形式并不确定的硬件，该硬件可以指向一个（或一组）屏幕上特定坐标。典型的指针输入设备有鼠标、触控笔、手指触控点等。
-- 指针捕捉 - pointer capture
+- 指针捕捉
   - : 指针捕捉能够允许某些事件的产生。这些事件在指针将要重新指向一些并非通过命中检测而给定元素时触发。
-- 指针事件 - pointer event
-  - : 一个被*[指针](#term_pointer)所*触发 DOM 事件。
+- 指针事件
+  - : 一个被*[指针](#指针)*所触发 DOM 事件。
 
 ## 相关接口
 
@@ -54,18 +55,18 @@ slug: Web/API/Pointer_events
 
 指针事件有始终不同的事件类型，其中其中在鼠标事件中有相对应的语义话表示 (`down, up, move, over, out, enter, leave`)。以下是每个事件类型及所对应的{{domxref("GlobalEventHandlers","Global Event Handler")}}的基本介绍。
 
-| Event                                    | On Event Handler                                                                                         | Description                                                                                                                                                                                                                                              |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{event('pointerover')}}         | {{domxref('GlobalEventHandlers.onpointerover','onpointerover')}}                     | 当定点设备进入某个元素的[命中检测](#term_hit_test) 范围时触发。                                                                                                                                                                                          |
-| {{event('pointerenter')}}         | {{domxref('GlobalEventHandlers.onpointerenter','onpointerenter')}}                 | 当定点设备进入某个元素或其子元素的[命中检测](#term_hit_test)范围时，或做为某一类不支悬停（hover）状态的设备所触发的 poinerdown 事件的后续事件时所触发。(详情可见 pointerdown 事件类型).                                                                  |
-| {{event('pointerdown')}}         | {{domxref('GlobalEventHandlers.onpointerdown','onpointerdown')}}                     | 当某指针得以激活时触发。                                                                                                                                                                                                                                 |
-| {{event('pointermove')}}         | {{domxref('GlobalEventHandlers.onpointermove','onpointermove')}}                     | 当某指针改变其坐标时触发。                                                                                                                                                                                                                               |
-| {{event('pointerup')}}             | {{domxref('GlobalEventHandlers.onpointerup','onpointerup')}}                         | 当某指针不再活跃时触发。                                                                                                                                                                                                                                 |
-| {{event('pointercancel')}}     | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}}             | 当浏览器认为某指针不会再生成新的后续事件时触发（例如某设备不再活跃）                                                                                                                                                                                     |
-| {{event('pointerout')}}         | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}                     | 可能由若干原因触发该事件，包括：定位设备移出了某[命中检测](term_hit_test)的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）； 作为 pointercancel event 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。 |
-| {{event('pointerleave')}}         | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}                 | 当定点设备移出某元素的[命中检测](term_hit_test)边界时触发。对于笔形设备来说，当数位板检测到笔移出了悬浮范围时触发。                                                                                                                                      |
-| {{event('gotpointercapture')}} | {{domxref('GlobalEventHandlers.ongotpointercapture','ongotpointercapture')}}     | 当某元素接受到一个指针捕捉时触发。                                                                                                                                                                                                                       |
-| {{event('lostpointercapture')}} | {{domxref('GlobalEventHandlers.onlostpointercapture','onlostpointercapture')}} | 当针对某个指针的指针捕捉得到释放时触发。                                                                                                                                                                                                                 |
+| 事件                                                                  | 描述                                                                                                                                                                                                               |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('Element/pointerover_event', 'pointerover')}}               | 当定点设备进入某个元素的[命中检测](#命中检测) 范围时触发。                                                                                                                                                                |
+| {{domxref('Element/pointerenter_event', 'pointerenter')}}             | 当定点设备进入某个元素或其子元素的[命中检测](#命中检测)范围时，或做为某一类不支悬停（hover）状态的设备所触发的 poinerdown 事件的后续事件时所触发。（详情可见 pointerdown 事件类型）。                                                   |
+| {{domxref('Element/pointerdown_event', 'pointerdown')}}               | 当某指针得以激活时触发。                                                                                                                                                                                              |
+| {{domxref('Element/pointermove_event', 'pointermove')}}               | 当某指针改变其坐标时触发。                                                                                                                                                                                            |
+| {{domxref('Element/pointerup_event', 'pointerup')}}                   | 当某指针不再活跃时触发。                                                                                                                                                                                              |
+| {{domxref('Element/pointercancel_event', 'pointercancel')}}           | 当浏览器认为某指针不会再生成新的后续事件时触发（例如某设备不再活跃）                                                                                                                                                         |
+| {{domxref('Element/pointerout_event', 'pointerout')}}                 | 可能由若干原因触发该事件，包括：定位设备移出了某[命中检测](#命中检测)的边界；不支持悬浮状态的设备发生 pointerup 事件（见 pointerup 事件）；作为 pointercancel 事件的后续事件（见 pointercancel 事件）；当数位板检测到数位笔离开了悬浮区域时。 |
+| {{domxref('Element/pointerleave_event', 'pointerleave')}}             | 当定点设备移出某元素的[命中检测](#命中检测)边界时触发。对于笔形设备来说，当数位板检测到笔移出了悬浮范围时触发。                                                                                                                    |
+| {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}   | 当某元素接受到一个指针捕捉时触发。                                                                                                                                                                                      |
+| {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}} | 当针对某个指针的指针捕捉得到释放时触发。                                                                                                                                                                                 |
 
 ### Element 接口扩展
 
@@ -245,7 +246,7 @@ slug: Web/API/Pointer_events
 </html>
 ```
 
-以下例子展示了当{{event("pointercancel")}} 事件发生时，一个指针捕捉被释放对的过程。该例子中，浏览器在{{event("pointerup")}}或{{event("pointercancel")}}事件发生时，会自动执行这一释放。
+以下例子展示了当 {{domxref("Element/pointercancel_event", "pointercancel")}} 事件发生时，一个指针捕捉被释放对的过程。该例子中，浏览器在 {{domxref("Element/pointerup_event", "pointerup")}} 或 {{domxref("Element/pointercancel_event", "pointercancel")}} 事件发生时，会自动执行这一释放。
 
 ```html
 <html>
@@ -279,7 +280,7 @@ slug: Web/API/Pointer_events
 
 CSS 属性{{cssxref("touch-action")}}被用来指明浏览器是否应当对某一区域的触摸事件应用其默认行为（例如放大或旋转等）。这一属性可以被用在所有元素上，除了：不可替换的行内元素（inline elements）、表格行（table rows）、行组（row groups）、表格列（table columns）、列组（column groups）。
 
-属性值`auto`意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值`none`则会禁止某一区域的浏览器默认触摸行为。 属性值`pan-x`和`pan-y`表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值`manipulation`表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。
+属性值`auto`意味着浏览器可以自由应用其默认的触摸行为（对于特定区域），属性值`none`则会禁止某一区域的浏览器默认触摸行为。属性值`pan-x`和`pan-y`表示由某区域开始的触摸操作仅分别产生水平的或垂直的滚动。属性值`manipulation`表示希望浏览器认为某元素上的触摸行为仅用于滚动或放大。
 
 在下面的示例中，浏览器对于`div`元素的默认触摸响应行为将被禁止。
 
@@ -311,7 +312,7 @@ button#tiny {
 
 尽管指针事件接口允许应用程序去为各种指针输入设备创建更佳的用户体验，但事实上，目前的大多数 web 内容仍然是仅为支持鼠标输入而设计的。因此，即使一个浏览器支持了指针事件，它也仍然需要在这些仅支持鼠标设置网页在不做任何修改的情况下继续对其提供支持。理想情况下，通用的指针模型将使得应用不再需要专门为鼠标输入设计相应。然而，因为浏览器仍必须处理鼠标事件，所以可能仍留存一些需要加以处理的兼容性问题。这一部分包含了一些对于开发者可能有用的关于鼠标事件和指针事件的异同点。
 
-出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。 这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：
+出于对基于鼠标的内容的兼容性考虑，浏览器会将通用的指针事件映射成相应的鼠标事件。这一事件映射被乘坐兼容性鼠标事件。开发者可以通过取消 pointerdown 事件相应来阻止某一特定的兼容性鼠标事件的产生，但需要注意以下情况：
 
 - 鼠标事件仅在指针失效（when the pointer is down）的情况下可以被阻止。
 - 悬浮的指针（比如没有按键按下时的鼠标指针）的事件不能被阻止。
@@ -331,7 +332,7 @@ button#tiny {
 
 ## 浏览器兼容性
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
 在 [Pointer Events](https://w3c.github.io/pointerevents/) 规范中，{{cssxref("touch-action", "CSS touch-action")}} 定义了一些新的值，但目前支持这些新值的浏览器实现很有限。
 

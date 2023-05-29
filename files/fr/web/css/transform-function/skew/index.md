@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/skew()
 original_slug: Web/CSS/transform-function/skew()
 browser-compat: css.types.transform-function.skew
 ---
+
 {{CSSRef}}
 
 La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.

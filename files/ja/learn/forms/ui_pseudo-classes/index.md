@@ -4,6 +4,7 @@ slug: Learn/Forms/UI_pseudo-classes
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 これまでの記事では、様々なフォームコントロールのスタイル設定について、一般的な方法で説明しました。これには、例えばチェックボックスが選択されたときだけターゲットにするために `:checked` を使用するような、擬似クラスの使用方法も記載しました。この記事では、さまざまな状態のフォームをスタイル設定するために、現代のブラウザーで利用できるさまざまな UI 擬似クラスについて詳しく説明します。
@@ -44,11 +45,11 @@ l10n:
 - {{cssxref(':required')}} と {{cssxref(':optional')}}: 必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
 - {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 有効または無効なフォームコントロール（例: HTML の `disabled` 属性が設定されている）、および読み書き可能または読み取り専用のフォームコントロール（例: HTML の `readonly` 属性が設定されている）を対象としています。
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option)  要素などが対象です。）
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 `checked` 属性が設定されている [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 、または `selected` 属性が設定されている [`<option>`](/ja/docs/Web/HTML/Element/option) 要素などが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。他のいくつかは、非常に特殊なニッチな問題を解決することを目的としていたり、まだブラウザーがあまり対応していないものもあります。上に挙げたものはすべて、ブラウザーの対応がかなり進んでいますが、もちろん、フォームの実装を慎重にテストして、対象となるユーザーに動作することを確認する必要があります。
 
-> **Note:** ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今はフォーム検証に関して単純にしておくので、混乱することはありません。
+> **メモ:** ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今はフォーム検証に関して単純にしておくので、混乱することはありません。
 
 ## 入力が必須か否かによるスタイル設定
 
@@ -101,9 +102,9 @@ input:optional {
 
 次の節では、 `:required` を使用して必須項目を示すより良い例を見ていきます。これは、生成コンテンツを使用することについても掘り下げます。
 
-> **Note:** おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
+> **メモ:** おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
 
-> **Note:** 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性がある場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
+> **メモ:** 同じ名前のラジオボタン群の中の 1 つのラジオボタンに `required` 属性がある場合、すべてのラジオボタンは 1 つが選択されるまで無効ですが、属性が割り当てられたものだけが実際に {{cssxref(':required')}} に一致することになります。
 
 ## 擬似クラスでコンテンツを生成する
 
@@ -135,7 +136,7 @@ input[type="radio"]:checked::before {
 
 これは実に有用です。画面リーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
 
-> **Note:** これは、必要に応じて擬似クラスと擬似要素を組み合わせる方法も示しています。
+> **メモ:** これは、必要に応じて擬似クラスと擬似要素を組み合わせる方法も示しています。
 
 先ほどの必須/オプションの例に戻りますが、今回は入力自体の外観は変更しません。生成されたコンテンツを使用して、指示するラベルを追加します（[こちらでライブで確認](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)するか、[こちらでソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)を確認するかしてください。
 
@@ -196,7 +197,7 @@ input:required + span::after {
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
-フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/Guide/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
+フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
 
 ### :valid と :invalid
 
@@ -205,7 +206,7 @@ input:required + span::after {
 - 制約検証を行わないコントロールは常に有効であり、したがって `:valid` と一致します。
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
-- 現在の値が {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
+- 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
@@ -250,7 +251,7 @@ input:valid + span::before {
 
 先ほどと同様に、`<span>` を `position: relative` に設定し、生成されるコンテンツを相対的に配置できるようにします。そして、フォームのデータが有効か無効かによって、それぞれ緑色のチェックと赤色のクロスで、異なる生成コンテンツを絶対に配置するようにします。無効なデータに少し緊急性を追加するために、無効なときに入力に太い赤のボーダーを指定しました。
 
-> **Note:** ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
+> **メモ:** ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
 
 次のもので試してみてください。
 
@@ -260,9 +261,9 @@ input:valid + span::before {
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
-> **Note:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
+> **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 
 注目すべきは、データが範囲内にある入力欄は `:valid` 擬似クラスに一致し、データが範囲外である入力欄は `:invalid` 擬似クラスに一致することです。では、なぜこの 2 つが存在するのでしょうか？実に意味論上の問題です。範囲外であるということは無効であることを伝えるためのより具体的なものなので、入力が範囲外であるというと、単に「無効」と言うよりユーザーに役立つ可能性があります。両方を提供することもできます。
 
@@ -316,7 +317,7 @@ input:out-of-range + span::after {
 
 これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力欄は有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
 
-> **Note:** 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
+> **メモ:** 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
 
 ## 有効/無効や読み取り専用/読み書き可能の入力をスタイル設定する
 
@@ -453,7 +454,7 @@ Firefox はバージョン 78 まではこれらの擬似クラスに接頭辞�
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note:** また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
+> **メモ:** また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
 
 ## ラジオボタンとチェックボックスの状態 — チェック済み、既定、不定
 
@@ -543,7 +544,7 @@ input:default ~ span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **Note:** この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
+> **メモ:** この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
 
 `:indeterminate` の例では、既定値で選択されたラジオボタンがありません。これは重要なことで、もしあれば、スタイル設定する不定値の状態は存在しません。不確定なラジオボタンには以下の CSS でスタイルを設定しています。
 
@@ -570,9 +571,9 @@ input[type="radio"]:indeterminate {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **Note:** この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
+> **メモ:** この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
-> **Note:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
+> **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
 ## その他の擬似クラス
 
@@ -598,22 +599,3 @@ input[type="radio"]:indeterminate {
 これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn/Forms/Form_validation)に移動しましょう。
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

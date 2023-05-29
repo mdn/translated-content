@@ -2,6 +2,7 @@
 title: transition
 slug: Web/CSS/transition
 ---
+
 {{CSSRef}}
 
 **`transition`** [CSS](/zh-TW/docs/Web/CSS) 屬性是 {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, and {{ cssxref("transition-delay") }}的 [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)。
@@ -51,7 +52,7 @@ transition: unset;
 - 無或一個{{cssxref("&lt;single-transition-timing-function&gt;")}} 表示所使用的漸變函式。
 - 無、一個或兩個{{cssxref("&lt;time&gt;")}} 值。第一個值會被指派給{{cssxref("transition-duration")}}, 而第二個則被指派給{{cssxref("transition-delay")}}。
 
-當每個轉場設定不等長時，請參見 [當 property values list 之間不等長時...](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#當_property_value_list_之間並不等長時_...) 。簡而言之，多餘的描述(超過實際被執行的數量)會直接被忽略。
+當每個轉場設定不等長時，請參見 [當 property values list 之間不等長時...](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#當_property_value_list_之間並不等長時_...) 。簡而言之，多餘的描述(超過實際被執行的數量)會直接被忽略。
 
 ### 標準語法
 
@@ -59,7 +60,7 @@ transition: unset;
 
 ## 範例
 
-[CSS 轉場](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 有更多範例。
+[CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 有更多範例。
 
 ## 規範
 
@@ -69,9 +70,9 @@ transition: unset;
 
 ## 瀏覽器支援情況
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## 更多資訊
 
-- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

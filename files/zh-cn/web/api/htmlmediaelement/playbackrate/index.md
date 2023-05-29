@@ -2,9 +2,10 @@
 title: HTMLMediaElement.playbackRate
 slug: Web/API/HTMLMediaElement/playbackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.playbackRate`** 属性设置媒体文件播放时的速率。这用于实现让用户控制快放、慢放等。 正常播放速率乘以该值表示当前的播放速率，所以 1.0 表示一个正常的播放速率。
+**`HTMLMediaElement.playbackRate`** 属性设置媒体文件播放时的速率。这用于实现让用户控制快放、慢放等。正常播放速率乘以该值表示当前的播放速率，所以 1.0 表示一个正常的播放速率。
 
 将 `playbackRate` 设为负值**不可以**实现倒播。
 
@@ -23,7 +24,7 @@ audio.playbackRate = 1.0;
 
 ### 赋值说明
 
-浮点数 1.0 是 "正常速度"， 比 1.0 小的值使媒体文件播放的慢于正常速度，比 1.0 大的值使播放变得快于正常速度。
+浮点数 1.0 是 "正常速度"，比 1.0 小的值使媒体文件播放的慢于正常速度，比 1.0 大的值使播放变得快于正常速度。
 
 ## 示例
 
@@ -38,7 +39,7 @@ console.log(obj.playbackRate); // 1
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.playbackRate")}}
+{{Compat}}
 
 ## 请参阅
 

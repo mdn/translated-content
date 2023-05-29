@@ -2,6 +2,7 @@
 title: 3D games on the Web
 slug: Games/Techniques/3D_on_the_web
 ---
+
 {{GamesSidebar}}
 
 为了 web 上丰富的游戏体验，一个好武器是 webGL，并呈现在 HTML 的 {{htmlelement("canvas")}}元素上。WebGL 基本上是 Web 的 OpenGL ES 2.0 版本 — 作为一个 JavaScript API，它提供了能构建丰富的交互式动画和游戏的工具。你可以使用硬件加速的 JavaScript 生成和呈现动态 3D 图像。
@@ -63,7 +64,7 @@ Three.js，与任何其他库一样，它给了您一个巨大的便利：不必
 
 Whitestorm.js 是一个基于 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) 技术上的框架。它的主要区别是内置的物理引擎和插件系统 基于 NPM。请参阅 [Building up a basic demo with Whitestorm.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js) 了解更多信息、教程和例子制作基本的，甚至配合 Three.js 制作更复杂的应用程序或游戏。
 
-### 其它工具
+### 其他工具
 
 [Unity](http://unity3d.com/) 和 [Unreal](https://www.unrealengine.com/) 可以将你的游戏通过 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 输出到 WebGL，因此你可以自由地使用这些工具与技术来构建可被输出到 Web 上的游戏。
 

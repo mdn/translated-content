@@ -2,6 +2,7 @@
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
@@ -132,7 +133,7 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Firefox 規範註記
 
@@ -142,7 +143,7 @@ Older Firefox versions implement an older version of the generators proposal. In
 
 #### `IteratorResult` object returned instead of throwing
 
-Starting with Gecko 29 {{geckoRelease(29)}}, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an `IteratorResult` object like `{ value: undefined, done: true }` ({{bug(958951)}}).
+Starting with Gecko 29, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an `IteratorResult` object like `{ value: undefined, done: true }` ([Firefox bug 958951](https://bugzil.la/958951)).
 
 ## 參見
 

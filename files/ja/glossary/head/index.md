@@ -2,6 +2,7 @@
 title: Head
 slug: Glossary/Head
 ---
+
 **Head** **は** {{glossary("HTML")}} 文書の一部で、その文書の {{glossary("metadata", "メタデータ")}} 、例えば著者や、説明や、HTML に適用される {{glossary("CSS")}} や {{glossary("JavaScript")}} ファイルへのリンクといったものを含んでいます。
 
 ## 詳細情報

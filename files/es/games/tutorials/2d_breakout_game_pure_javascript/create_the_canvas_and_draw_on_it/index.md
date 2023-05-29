@@ -1,13 +1,10 @@
 ---
 title: Crea el lienzo (canvas) y dibuja en él
-slug: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: >-
-  Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it
+slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}
 
@@ -42,11 +39,11 @@ La estructura del documento HTML es muy simple, porque todo el juego se visualiz
 </html>
 ```
 
-En la cabecera (head) tenemos un `charset`, el título de la página {{htmlelement("title")}} y un poco de CSS básico. El {{htmlelement("body")}} contiene los elementos{{htmlelement("canvas")}} y {{htmlelement("script")}}. Representaremos el juego en el primero y escribiremos el código JavaScript que lo controla en el segundo. El elemento {{htmlelement("canvas")}} tiene el `id` `myCanvas` para que podamos hacer referencia a él con facilidad, y mide 480 píxeles de ancho por 320 de alto. Todo el código JavaScript que vamos a escribir en este tutorial lo pondremos entre las etiquetas `<script> y` `</script>`.
+En la cabecera (head) tenemos un `charset`, el título de la página {{htmlelement("title")}} y un poco de CSS básico. El {{htmlelement("body")}} contiene los elementos{{htmlelement("canvas")}} y {{htmlelement("script")}}. Representaremos el juego en el primero y escribiremos el código JavaScript que lo controla en el segundo. El elemento {{htmlelement("canvas")}} tiene el `id` `myCanvas` para que podamos hacer referencia a él con facilidad, y mide 480 píxeles de ancho por 320 de alto. Todo el código JavaScript que vamos a escribir en este tutorial lo pondremos entre las etiquetas `<script>` y `</script>`.
 
 ## El lienzo (canvas)
 
-Para que podamos visualizar los gráficos en el elemento {{htmlelement("canvas")}}, primero tenemos que preparar una referencia a él en JavaScript. Añade lo siguiente después de la etiqueta `<script>:`
+Para que podamos visualizar los gráficos en el elemento {{htmlelement("canvas")}}, primero tenemos que preparar una referencia a él en JavaScript. Añade lo siguiente después de la etiqueta `<script>`:
 
 ```js
 var canvas = document.getElementById("myCanvas");

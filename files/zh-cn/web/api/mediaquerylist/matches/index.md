@@ -2,6 +2,7 @@
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("MediaQueryList")}} 接口的 **`matches`** 只读属性是一个布尔值，如果 {{DOMxRef("document")}} 当前匹配媒体查询列表，该属性返回 `true`，否则返回 `false`。
@@ -46,8 +47,8 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 
 ## 参见
 
-- [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [在代码中使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

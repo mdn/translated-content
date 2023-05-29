@@ -2,6 +2,7 @@
 title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} インターフェイスの **`writeText()`**

@@ -9,6 +9,7 @@ translation_of: Plugins/Guide/Constants
 translation_of_original: NPAPI/Constants
 original_slug: Plugins/Guide/Constants
 ---
+
 Cette section est une référence au définitions utilisées par l'API Plug-in. Toutes les définitions proviennent de npapi.h.
 
 ### Codes Erreur

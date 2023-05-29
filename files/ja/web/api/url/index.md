@@ -2,6 +2,7 @@
 title: URL
 slug: Web/API/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL`** インターフェイスは、{{glossary("URL", "URL")}} の解析、構築、正規化、およびエンコードに使用します。 URL のコンポーネントを簡単に読み取って変更できるプロパティを提供することで機能します。 通常、新しい `URL` オブジェクトを作成するにはコンストラクターを呼び出すときに URL を文字列として指定するか、相対 URL とベース URL を指定します。その後、解析された URL のコンポーネントを簡単に読み取ったり、URL を変更したりすることができます。
@@ -24,7 +25,7 @@ slug: Web/API/URL
 - {{domxref("URL.hostname", "hostname")}}
   - : URL のドメインを含む {{domxref("USVString")}}。
 - {{domxref("URL.href", "href")}}
-  - : URL 全体を含む {{domxref("USVString")}} を返す文字列化関数です。
+  - : URL 全体を含む {{domxref("USVString")}} を返す{{Glossary("stringifier", "文字列化子")}}です。
 - {{domxref("URL.origin", "origin")}} {{readonlyInline}}
   - : URL のオリジン、つまりそのスキーム、ドメイン、およびポートを含む {{domxref("USVString")}} を返します。
 - {{domxref("URL.password", "password")}}
@@ -98,10 +99,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                         | 備考                                                                       |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName('File API', '#creating-revoking', 'URL')}} | {{Spec2('File API')}} | 静的メソッドの `URL.createObjectURL()` と `URL.revokeObjectURL()` の追加。 |
-| {{SpecName('URL', '#api', 'API')}}                             | {{Spec2('URL')}}         | 初回定義 (`URLUtils` を実装)。                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Element.closest()
 slug: Web/API/Element/closest
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`Element.closest()`** 方法用来获取：匹配特定选择器且离当前元素最近的祖先元素（也可以是当前元素本身）。如果匹配不到，则返回 `null`。
@@ -102,7 +103,7 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ### 兼容性说明
 
@@ -112,4 +113,4 @@ if (window.Element && !Element.prototype.closest) {
 
 - {{domxref("Element")}} 接口。
 - [选择器语法](/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors)
-- 其他相关选择器方法: {{domxref("element.querySelector()")}} and {{domxref("element.matches()")}}.
+- 其他相关选择器方法：{{domxref("element.querySelector()")}} and {{domxref("element.matches()")}}.

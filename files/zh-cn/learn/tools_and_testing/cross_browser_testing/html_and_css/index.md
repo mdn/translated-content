@@ -2,6 +2,7 @@
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -213,7 +214,7 @@ button:active {
 
 为了解决这个问题，我们添加了第二个 background-color 声明，它只是指定了一个十六进制颜色 - 这在旧版本的浏览器中得到了支持，并且在现代闪亮功能无法使用的情况下作为后备。访问此页面的浏览器首先应用第一个 background-color 值，当它到达第二个 background-color 声明时，如果它支持 RGBA 颜色，它将用这个值覆盖初始值。如果不是的话，它会忽略整个声明，继续前进。
 
-> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
+> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
 
 #### IE 条件注释
 
@@ -406,7 +407,7 @@ body {
 
 #### 响应式设计问题
 
-响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
+响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
 
 解决方案也是一个大问题 - 例如，移动设备不太可能需要比台式电脑大的图像，并且更可能具有较慢的互联网连接，并且甚至可能使昂贵的数据计划浪费带宽成为更多的问题。另外，不同的设备可以具有一系列不同的分辨率，这意味着较小的图像可以出现像素化。有许多技术可以让您解决这些问题，从简单的[移动第一媒体查询](/zh-CN/Apps/Progressive/Responsive/Mobile_first)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes)。
 
@@ -435,14 +436,3 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 现在您应该熟悉 Web 开发中主要的跨浏览器 HTML 和 CSS 问题，以及如何解决这些问题。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## In this module
-
-- [Introduction to cross browser testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

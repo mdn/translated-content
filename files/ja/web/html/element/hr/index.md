@@ -2,7 +2,8 @@
 title: '<hr>: 主題区切り (水平線) 要素'
 slug: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<hr>` 要素**は、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
@@ -44,12 +45,12 @@ slug: Web/HTML/Element/hr
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("separator")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role">separator</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        {{ARIARole("presentation")}} または {{ARIARole("none")}}
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>
       </td>
     </tr>
     <tr>
@@ -63,15 +64,15 @@ slug: Web/HTML/Element/hr
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 区切り線の配置を指定します。初期値は `left` です。
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 区切り線の色を色名、または 16 進数で指定します。
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : 網掛けをしないように指定します。
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 区切り線の高さをピクセル数で指定します。
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 区切り線の幅をピクセル数、あるいはパーセントで指定します。
 
 ## 例
@@ -102,11 +103,7 @@ slug: Web/HTML/Element/hr
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                   |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hr-element', '&lt;hr&gt;')}}     | {{Spec2('HTML WHATWG')}} | `<hr>` 要素の定義                                      |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-hr-element', '&lt;hr&gt;')}} | {{Spec2('HTML5 W3C')}}     |                                                        |
-| {{SpecName('HTML4.01', 'present/graphics.html#h-15.3', '&lt;hr&gt;')}}             | {{Spec2('HTML4.01')}}     | `align`, `noshade`, `size`, `width` 属性を非推奨にする |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

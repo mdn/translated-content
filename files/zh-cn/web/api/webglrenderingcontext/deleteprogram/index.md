@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.deleteProgram()`** 用于删除一个 {{domxref("WebGLProgram")}} 对象。如果该{{domxref("WebGLProgram")}} 对象已经被删除，该方法不会产生任何作用

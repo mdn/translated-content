@@ -3,6 +3,7 @@ title: 解决常见的无障碍问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 接下来，我们将关注无障碍，提供关于一些常见问题的信息，如何进行简单测试以及如何使用审核/自动化工具来查找无障碍问题。
@@ -12,12 +13,12 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/可访问性
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉<a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>,和<a
-          href="/en-US/docs/Learn/JavaScript"
+        熟悉<a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>,和<a
+          href="/zh-CN/docs/Learn/JavaScript"
           >JavaScript</a
         >语言; 理解<a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试原理</a
         >
       </td>
@@ -141,7 +142,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 1. 使用\<button>元素（默认情况下都是可以在 button 间使用 Tab 键）和 JavaScript 创建自定义控件，以连接其功能。有关此示例，请参见[Creating a cross-browser video player](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)。
 2. 通过 JavaScript 创建键盘快捷键，因此当你按键盘上的某些键时，功能被激活。请参阅[Desktop mouse and keyboard controls](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)，以获取一些可用于任何目的（比如游戏）的例子。
-3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 ​​WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
+3. 使用一些有趣的策略来伪造按钮行为。以我们的[fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)示例为例（[查看源码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。这里我们通过为每个假按钮赋予属性`tabindex="0"`（请参阅 WebAIM 的[tabindex 文章](http://webaim.org/techniques/keyboard/tabindex)以获取更多详细信息），使假的\<div>按钮能够被聚焦（包括通过制表符）。这使我们可以跳到按钮上，但不能通过回车键激活它们。为此，我们必须添加以下 JavaScript 代码：
 
     ```js
     document.onkeydown = function(e) {
@@ -242,7 +243,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 要处理内容定期更新的区域，可以使用`aria-live`属性，该属性标识更新区域。它的值指示屏幕阅读器如何处理更新内容：
 
-- `off:` 默认值。更新内容不被读出。
+- `off`: 默认值。更新内容不被读出。
 - `polite`: 当用户空闲时读出更新内容。
 - `assertive`: 尽快读出更新内容。
 - `rude`: 直接读出更新内容，即使会打断用户正常阅读。
@@ -275,7 +276,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 2. 使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
 3. 下滑，直到你看到错误/描述部分，如下图。
 
-![](https://mdn.mozillademos.org/files/14217/tenon-screenshot.png)
+![](tenon-screenshot.png)
 
 你还可以探索一些选项（请参阅页面顶部附近的*Show Options（译者注：显示选项）*链接），或者使用 Tenon 的 API。
 
@@ -310,7 +311,7 @@ aXe 也可以使用`npm`安装，并且可以与任务运行器（如[Grunt](htt
 
 #### VoiceOver
 
-VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。
+VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。我们在 Mac OS X 系统上测试了它。
 
 按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。
 
@@ -426,14 +427,3 @@ NVDA 有很多快捷键，我们没有全部列出来。只把测试网页无障
 下一篇文章，我们将详细介绍特征检测。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## 指南
-
-- [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [测试策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [实现特征检查](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [建立你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

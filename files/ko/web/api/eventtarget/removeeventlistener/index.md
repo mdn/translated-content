@@ -1,12 +1,8 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.removeEventListener
-translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("EventTarget")}} 인터페이스의 **`EventTarget.removeEventListener()`** 메서드는 {{domxref("EventTarget.addEventListener()")}}로 이벤트 대상에 등록한 수신기를 제거합니다. 제거 대상 수신기의 식별은 이벤트 유형, 수신기 함수 참조, 그리고 식별에 관련된 다양한 옵션을 사용해 이뤄집니다. [제거할 이벤트 수신기의 식별](#제거할_이벤트_수신기의_식별)을 참고하세요.

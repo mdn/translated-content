@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
 ---
+
 {{AddonSidebar()}}
 
 Affiche un objet JSON dans le volet de la barre latérale de l'extension.
@@ -43,9 +44,9 @@ var setting = browser.devtools.panels.setObject(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie sans arguments, une fois l'objet défini.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setObject", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -72,7 +73,8 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -99,4 +101,4 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

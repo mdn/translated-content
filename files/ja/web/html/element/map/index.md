@@ -3,7 +3,7 @@ title: '<map>: イメージマップ要素'
 slug: Web/HTML/Element/map
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップ（クリック可能なリンク領域）を定義するために {{HTMLElement("area")}} 要素とともに使用します。
 
@@ -58,8 +58,8 @@ slug: Web/HTML/Element/map
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持っています。
 
-- {{htmlattrdef("name")}}
-  - : `name` 属性は、マップを参照できるようにするための名前を指定します。この属性は必ず存在する必要があり、空白文字を含まない空でない値を持たなければなりません。 `name` 属性の値は、同じ文書内の他の `<map>` 要素の `name` 属性の値と同じであってはいけません。もし {{htmlattrxref("id")}} 属性も指定されている場合は、両方の属性が同じ値でなければなりません。
+- `name`
+  - : `name` 属性は、マップを参照できるようにするための名前を指定します。この属性は必ず存在する必要があり、空白文字を含まない空でない値を持たなければなりません。 `name` 属性の値は、同じ文書内の他の `<map>` 要素の `name` 属性の値と同じであってはいけません。もし [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性も指定されている場合は、両方の属性が同じ値でなければなりません。
 
 ## 例
 

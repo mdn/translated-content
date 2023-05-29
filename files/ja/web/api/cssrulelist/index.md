@@ -2,6 +2,7 @@
 title: CSSRuleList
 slug: Web/API/CSSRuleList
 ---
+
 {{ APIRef("CSSOM") }}
 
 `CSSRuleList` は読み取り専用の {{domxref("CSSRule")}} オブジェクトの順序付きコレクションを表します。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/store
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
@@ -57,13 +58,11 @@ console.log(float32[0]);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.store', 'Atomics.store')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.store")}}
+{{Compat}}
 
 ## Voir aussi
 

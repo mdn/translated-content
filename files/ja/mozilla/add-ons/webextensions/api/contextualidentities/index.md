@@ -2,6 +2,7 @@
 title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
+
 {{AddonSidebar}}
 
 contextual identities の操作: contextual identities を一覧、作成、削除、更新します。

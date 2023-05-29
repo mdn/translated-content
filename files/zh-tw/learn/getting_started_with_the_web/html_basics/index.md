@@ -2,6 +2,7 @@
 title: HTML 基礎
 slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標示語言」，是一種用來組織架構並呈現網頁內容的程式語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
@@ -66,7 +67,7 @@ My cat is very grumpy
 有些元素沒有內容，我們稱為「**空元素（empty elements）**」。 以這個圖片元素 {{htmlelement("img")}} 為例：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 它有兩個屬性，但是沒有結束標籤，也沒有裡面的內容。因為圖片元素是直接把圖檔嵌在 HTML 網頁上。
@@ -79,11 +80,11 @@ My cat is very grumpy
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="My test image" />
   </body>
 </html>
 ```
@@ -102,7 +103,7 @@ My cat is very grumpy
 再讓我們複習一下圖片元素：
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 如同我們前面提到，圖片元素是直接把圖檔嵌在 HTML 網頁上，它是透過圖片來源（`src` ，source）這個屬性，提供了連到圖片檔案的路徑。
@@ -157,7 +158,10 @@ My cat is very grumpy
 例如，我們想把以下這段文字變成清單：
 
 ```html
-<p>At Mozilla, we’re a global community of technologists, thinkers, and builders working together ... </p>
+<p>
+  At Mozilla, we’re a global community of technologists, thinkers, and builders
+  working together ...
+</p>
 ```
 
 寫法如下：
@@ -171,7 +175,7 @@ My cat is very grumpy
   <li>builders</li>
 </ul>
 
-<p>working together ... </p>
+<p>working together ...</p>
 ```
 
 **請試試在練習網頁，加上一個清單。**
@@ -183,21 +187,23 @@ My cat is very grumpy
 1. 選擇一些文字，例如「Mozilla Manifesto」。
 2. 把他們包在這個\<a> 元素裡：
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. 在\<a> element 中加上 href attribute 這個屬性：
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
 4. 屬性質就是你要連結網址：
 
-    ```html
-    <a href="https://www.mozilla.org/zh-TW/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/zh-TW/about/manifesto/"
+     >Mozilla Manifesto</a
+   >
+   ```
 
 網址的開頭使用`https://` 或 `http://` （網路文字傳送標準的不同）可能會給你不一樣的結果。因此，在寫連結時，請自己先點擊過，確認無誤。
 
@@ -216,14 +222,3 @@ My cat is very grumpy
 這篇文章觸及的是非常基本的 HTML 介紹，若你有興趣想進一步了解，歡迎參考 [HTML Learning page](/zh-TW/Learn/HTML)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

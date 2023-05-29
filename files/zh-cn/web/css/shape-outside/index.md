@@ -2,6 +2,7 @@
 title: shape-outside
 slug: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 **`shape-outside`** 的 [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个可以是非矩形的形状，相邻的内联内容应围绕该形状进行包装。默认情况下，内联内容包围其边距框; `shape-outside`提供了一种自定义此包装的方法，可以将文本包装在复杂对象周围而不是简单的框中。{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
@@ -59,7 +60,7 @@ shape-outside: unset;
 
   - : 提取并且计算指定 {{cssxref("&lt;image&gt;")}} 的 alpha 通道得出浮动区域（译者：即根据图片的非透明区域进行包裹）。就跟通过 {{cssxref("shape-image-threshold")}}来定义一样。
 
-    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用“匿名”模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin 。如果这导致出现没有有效的备份图像这样的网络错误， 产生的影响就跟指定了值 `none` 一样。
+    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用“匿名”模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin。如果这导致出现没有有效的备份图像这样的网络错误，产生的影响就跟指定了值 `none` 一样。
 
 ### 正式语法
 
@@ -141,11 +142,11 @@ p {
 
 ## 参见
 
-- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values)
-- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes)
+- [Overview of CSS Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [Shapes from Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_From_Box_Values)
+- [Basic Shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_Shapes)
+- [Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

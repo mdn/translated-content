@@ -2,19 +2,20 @@
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Cookie`** 是 HTTP 請求標頭，它的值包含由伺服器設定的 [HTTP cookies](/zh-TW/docs/Web/HTTP/Cookies) （透過 {{HTTPHeader("Set-Cookie")}} 標頭設定，或者透過 Javascript 的 {{domxref("Document.cookie")}} 設定）。
 
 `Cookie` 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## Syntax
 
-```html
+```http
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3
@@ -35,7 +36,7 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 
 ## Browser compatibility
 
-{{Compat("http.headers.Cookie")}}
+{{Compat}}
 
 ## See also
 

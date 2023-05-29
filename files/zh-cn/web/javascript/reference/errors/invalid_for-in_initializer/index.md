@@ -2,6 +2,7 @@
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -18,7 +19,7 @@ SyntaxError: for-in loop variable declaration may not have an initializer. (Chro
 
 ## 哪里出错了？
 
-在 [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环的头部存在初始化表达式。 也就是存在变量声明并且被赋值，例如 |`for (var i = 0 in obj)`|。在非严格模式下，这种在循环头部的变量声明会被静默忽略，语句的表现形式与 `|for (var i in obj)|`相同。而在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，会报语法错误。
+在 [for...in](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环的头部存在初始化表达式。也就是存在变量声明并且被赋值，例如 |`for (var i = 0 in obj)`|。在非严格模式下，这种在循环头部的变量声明会被静默忽略，语句的表现形式与 `|for (var i in obj)|`相同。而在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，会报语法错误。
 
 ## 示例
 

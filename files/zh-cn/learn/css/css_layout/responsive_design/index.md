@@ -2,6 +2,7 @@
 title: 响应式设计
 slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 早年设计 Web 时，页面是以适配特定的屏幕大小为考量创建的。如果用户正在使用比设计者考虑到的更小或者更大的屏幕，那么结果从多余的滚动条，到过长的行和没有被合理利用的空间，不一而足。随着人们使用的屏幕尺寸的种类越来越多，出现了响应式网页设计的概念（_responsive web design，RWD_），RWD 指的是允许 Web 页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践。这是改变我们设计多设备网页的方式的思想，在这篇文章里，我们将会帮你理解掌握它时所需知道的主要技能。
@@ -11,12 +12,12 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），以及对 CSS 工作方式的理解（学习<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
-        >和<a href="/en-US/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
           >CSS building blocks</a
         >）
       </td>
@@ -65,7 +66,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 1. 第一个是液态网格，这早先已由 Gillenwater 进行探讨，可以在 Marcotte 的文章《[Fluid Grids](https://alistapart.com/article/fluidgrids/)》（出版于 2009 年的《A List Apart》上）中读到。
 2. 第二个是[液态图像](http://unstoppablerobotninja.com/entry/fluid-images)的理念。通过使用相当简单的将设置`max-width`属性设置为`100%`的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。
-3. 第三个关键的组件是[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。
+3. 第三个关键的组件是[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。
 
 需要你理解的很重要的一点是**响应式 Web 设计不是单独的技术**，它是描述 Web 设计的一种方式、或者是一组最佳实践的一个词，它是用来建立可以**响应**查看内容的设备的样式的一个词。在 Marcotte's 原来的探索中，这意味着灵活网格（使用 float）和媒体查询，但是在这篇文章写就的几乎十年以后，Web 的响应式工作已经成为了默认做法。现代的 CSS 布局方式基本上就是响应式的，而且我们在 Web 平台上内置了新的东西，使得设计响应式站点变得容易。
 
@@ -89,7 +90,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 使用媒体查询时的一种通用方式是，为窄屏设备（例如移动设备）创建一个简单的单栏布局，然后检查是否是大些的屏幕，在你知道你有足够容纳的屏幕宽度的时候，开始采用一种多栏的布局。这经常被描述为**移动优先**设计。
 
-在 MDN 文档中的[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)中了解更多
+在 MDN 文档中的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)中了解更多
 
 ## 灵活网格
 
@@ -182,7 +183,7 @@ target / context = result
 
 ```css
 img {
-  max-width: 100%:
+  max-width: 100%;
 }
 ```
 
@@ -282,8 +283,6 @@ h1 {
 
 你应该避免使用`minimum-scale`、`maximum-scale`，尤其是将`user-scalable`设为`no`。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
 
-> **备注：** 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
-
 ## 小结
 
 响应式设计指的是一个响应浏览环境的网页或者应用设计。它涵盖了很多 CSS 和 HTML 的功能和技术，现在基本上就是我们默认建设网站的方式。想一下你在手机上访问的网站，遇到一个缩放的桌面版网站，或者你需要向侧边滚动来寻找东西的网站可能是相当不寻常的。这是因为 Web 已经迁移到了这种响应式设计的方式上。
@@ -291,18 +290,3 @@ h1 {
 在这些课里学到的布局方式的帮助下，实现响应式设计也变得愈加简单。如果你今天新近了解 Web 开发，那么你与响应式设计早期相比，手边有多得多的工具。因而，你有必要检查下你所引用的任何材料的年纪。尽管历史上的文章仍然有用，现代的 CSS 和 HTML 的使用让创建一个优雅且实用的设计变得远远更加容易，且无论你的访客使用什么设备浏览网站。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [媒体查询入门指南](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [传统布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [支持旧浏览器](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基本布局掌握测验](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

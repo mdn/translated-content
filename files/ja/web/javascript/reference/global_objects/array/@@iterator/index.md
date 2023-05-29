@@ -1,10 +1,13 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
+l10n:
+  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
 ---
+
 {{JSRef}}
 
-**`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。
+**`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。
 
 {{EmbedInteractiveExample("pages/js/array-iterator.html")}}
 
@@ -18,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 ### 返値
 
-{{jsxref("Array.prototype.values()", "values()")}} **反復子**によって与えられる初期値です。既定では、 `arr[Symbol.iterator]` を使うと {{jsxref("Array.prototype.values()", "values()")}} を返します。
+{{jsxref("Array.prototype.values()", "values()")}} **イテレーター**によって与えられる初期値です。既定では、 `arr[Symbol.iterator]` を使うと {{jsxref("Array.prototype.values()", "values()")}} を返します。
 
 ## 例
 
@@ -35,9 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 
 ```js
 const arr = ['a', 'b', 'c'];
-const eArr = arr[Symbol.iterator]();
+const arrIter = arr[Symbol.iterator]();
 const letterResult = document.getElementById('letterResult');
-for (const letter of eArr) {
+for (const letter of arrIter) {
   const li = document.createElement('li');
   li.textContent = letter;
   letterResult.appendChild(li);
@@ -46,24 +49,23 @@ for (const letter of eArr) {
 
 #### 結果
 
-{{EmbedLiveSample('Iteration_using_for...of_loop', '', '', '',
-  'Web/JavaScript/Reference/Global_Objects/Array/@@iterator')}}
+{{EmbedLiveSample('Iteration_using_for...of_loop')}}
 
 ### 他の反復方法
 
 ```js
 const arr = ['a', 'b', 'c', 'd', 'e'];
-const eArr = arr[Symbol.iterator]();
-console.log(eArr.next().value); // a
-console.log(eArr.next().value); // b
-console.log(eArr.next().value); // c
-console.log(eArr.next().value); // d
-console.log(eArr.next().value); // e
+const arrIter = arr[Symbol.iterator]();
+console.log(arrIter.next().value); // a
+console.log(arrIter.next().value); // b
+console.log(arrIter.next().value); // c
+console.log(arrIter.next().value); // d
+console.log(arrIter.next().value); // e
 ```
 
 ### 括弧表記の使用法
 
-この構文をドット記法 (`Array.prototype.values()`) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。反復子を受け取り、その値を反復処理する関数があるが、そのオブジェクトが \[Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これは [String](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) オブジェクトのような組み込みオブジェクトや、独自オブジェクトである可能性があります。
+この構文をドット記法 (`Array.prototype.values()`) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレーターを受け取り、その値を反復処理する関数があるが、そのオブジェクトが \[Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これは [String](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) オブジェクトのような組み込みオブジェクトや、独自オブジェクトである可能性があります。
 
 ```js
 function logIterable(it) {

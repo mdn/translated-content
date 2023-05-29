@@ -1,8 +1,9 @@
 ---
 title: Flexbox 的向下支持
-slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 ---
+
 {{CSSRef}}
 
 虽然弹性盒子被各种现代浏览器很好的支持，但是你或许还会遇到一些问题。在这个文档中，我们将会了解到浏览器支持弹性盒子的情况和一些潜在的问题，以及处理它们的资源和方法。

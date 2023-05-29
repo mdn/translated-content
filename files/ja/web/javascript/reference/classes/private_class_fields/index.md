@@ -2,6 +2,7 @@
 title: プライベートクラス機能
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 クラスのフィールドは既定で{{ jsxref('Classes/Public_class_fields','公開', '', 1) }}ですが、ハッシュ `#` 接頭辞を使ってプライベートクラスメンバーを生成することができます。これらのクラス機能のプライバシーのカプセル化は、JavaScript 自身によって行われます。
@@ -53,7 +54,7 @@ const instance = new ClassWithPrivateField()
 instance.#privateField === 42;   // Syntax error
 ```
 
-> **Note:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
+> **メモ:** [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド (またはプライベートメソッド) が欠けているかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
 
 パブリックフィールドのように、プライベートフィールドは基底クラスの構築辞典、またはサブクラス内で `super()` が呼び出される場面で追加されます。
 
@@ -228,7 +229,7 @@ console.log(Derived.publicStaticMethod2());
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 関連情報
 

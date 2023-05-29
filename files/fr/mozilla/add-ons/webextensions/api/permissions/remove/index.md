@@ -11,11 +11,12 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
+
 {{AddonSidebar()}}
 
 Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 
-L'argument `Permissions` peut contenir soit une propriété  `origins` ,qui est un tableau de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) , ou une propriété `permissions`, qui est un tableau de [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json.
+L'argument `Permissions` peut contenir soit une propriété `origins` ,qui est un tableau de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) , ou une propriété `permissions`, qui est un tableau de [permissions d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json.
 
 Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -36,10 +37,6 @@ var removing = browser.permissions.remove(
 
 Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si les permissions répertoriées dans l'argument `permissions` ont été supprimées, ou `false` dans le cas contraire.
 
-## Browser compatibility
-
-{{Compat("webextensions.api.permissions.remove")}}
-
 ## Exemples
 
 Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.
@@ -58,6 +55,10 @@ function remove() {
 
 document.querySelector("#remove").addEventListener("click", remove);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -2,6 +2,7 @@
 title: I18N(国際化対応)
 slug: Glossary/I18N
 ---
+
 i18n("internationalization"という 20 文字の単語より)(国際化対応)は、製品やサービスをどんなターゲット文化にも容易に適応させるベストプラクティスです。
 
 > **Internationalization(国際化対応)**とは、文化、地域、言語によって異なるターゲットオーディエンスに合わせて容易にローカライズできる製品、アプリケーション、または文書内容の設計と開発のことです。({{Glossary("W3C")}}の定義)
@@ -18,7 +19,7 @@ i18n("internationalization"という 20 文字の単語より)(国際化対応)�
 
 ### 一般知識
 
-- Wikipedia 上の記事：{{interwiki("wikipedia", "国際化と地域化")}}
+- Wikipedia 上の記事：[国際化と地域化](https://ja.wikipedia.org/wiki/国際化と地域化)
 
 ### 技術リファレンス
 

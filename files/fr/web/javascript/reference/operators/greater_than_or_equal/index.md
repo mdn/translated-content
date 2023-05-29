@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.greater_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur supérieur ou égal (`>=`) renvoie `true` si l'opérande gauche est supérieur ou égal à l'opérande droit et `false` sinon.

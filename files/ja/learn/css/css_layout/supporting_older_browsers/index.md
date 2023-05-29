@@ -2,6 +2,7 @@
 title: 古いブラウザーのサポート
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
@@ -71,7 +72,7 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 
 {{ EmbedLiveSample('Example1', '100%', '200') }}
 
-> **Note:** クリアされた項目がグリッド項目になると、{{cssxref("clear")}} プロパティも無効になります。 そのため、フッターがクリアされたレイアウトを作成し、それをグリッドレイアウトにすることができます。
+> **メモ:** クリアされた項目がグリッド項目になると、{{cssxref("clear")}} プロパティも無効になります。 そのため、フッターがクリアされたレイアウトを作成し、それをグリッドレイアウトにすることができます。
 
 ### 代替手段の方法
 
@@ -202,18 +203,3 @@ CSS グリッド仕様は、当初 Internet Explorer 10 で試作されました
 - [機能クエリの使用](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)（動画、英語）
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

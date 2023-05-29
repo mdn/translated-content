@@ -1,7 +1,6 @@
 ---
 title: Drag Operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/API/HTML_드래그_앤_드롭_API/Drag_operations
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -127,31 +126,6 @@ function dragWithCustomImage(event) {
 ```
 
 이 예제에서, 드래그 이미지를 표시할 캔버스를 하나 생성합니다. 캔버스는 너비가 와 높이가 모두 50 픽셀이고, 마우스 포인터가 이미지의 중앙에 위치하도록 옵셋(offsets)을 너비와 높이의 절반(25)으로 설정했습니다.
-
-Gecko 개발자일 경우 (Mozilla 어플리케이션 개발자든 add-on 개발자든 상관 없이), Gecko 9.0 {{geckoRelease("9.0")}}에 드래그 피드백 이미지로 XUL {{XULElem("panel")}} 요소를 사용할 수 있도록 하는 지원이 추가되었습니다. 간단히 {{XULElem("panel")}} 요소를 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 메서드로 전달하기만 하면 됩니다.
-
-다음 XUL {{XULElem("panel")}}를 살펴보시기 바랍니다:
-
-```xml
-<panel id="panel" style="opacity: 0.6">
-  <description id="pb">Drag Me</description>
-</panel>
-
-<vbox align="start" style="border: 1px solid black;" ondragstart="startDrag(event)">
-  <description>Drag Me</description>
-</vbox>
-```
-
-위의 예에서 사용자가 {{XULElem("vbox")}}를 클릭하고 드래그하기 시작하면, 아래의 `startDrag()` 함수가 호출됩니다.
-
-```js
-function startDrag(event) {
-  event.dataTransfer.setData("text/plain", "<strong>Body</strong>");
-  event.dataTransfer.setDragImage(document.getElementById("panel"), 20, 20);
-}
-```
-
-이 함수는 해당 패널을 드래그 이미지로 사용하고, HTML 형식의 "\<strong>Body\</strong>"을 데이터로 가집니다. 텍스트 편집기에 패널을 드랍하면 "**Body**"라는 텍스트가 드랍된 위치에 삽입됩니다.
 
 ## 드래그 효과
 
@@ -348,7 +322,7 @@ A drop can occur inside the same window or over another application. The `{{even
 
 After the `{{event("dragend")}}` event has finished propagating, the drag and drop operation is complete.
 
-\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801 "New D&D API: dragend is not dispatched if the source node was moved or removed during the drag session")
+\[1] In Gecko, {{event("dragend")}} is not dispatched if the source node is moved or removed during the drag (e.g. on drop or {{event("dragover")}}). [bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
 
 ## See also
 

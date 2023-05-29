@@ -2,6 +2,7 @@
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
+
 {{JSRef}}
 
 **`set()`** 方法根据指定的 `key` 和 `value` 在 `WeakMap`对象中添加新/更新元素。
@@ -25,7 +26,7 @@ wm.set(key, value);
 
 该`WeakMap`对象
 
-## 例子
+## 示例
 
 ### 使用 `set` 方法
 

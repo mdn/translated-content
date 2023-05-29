@@ -9,7 +9,8 @@ tags:
   - legend
 translation_of: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
 
@@ -17,11 +18,11 @@ translation_of: Web/HTML/Element/legend
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                    |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
+| Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
 | Пропуск тегов                                          | {{no_tag_omission}}                                               |
-| Разрешённые родители                                   | Является дочерним элементом тега {{HTMLElement("fieldset")}}  |
-| Разрешённые ARIA roles                                 | Нет                                                                    |
-| Взаимодействие с DOM                                   | {{domxref("HTMLLegendElement")}}                           |
+| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}  |
+| Допустимые ARIA-роли                                   | Нет                                                                    |
+| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                           |
 
 ## Атрибуты
 

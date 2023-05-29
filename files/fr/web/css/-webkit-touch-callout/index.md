@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-touch-callout
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
@@ -52,4 +53,4 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

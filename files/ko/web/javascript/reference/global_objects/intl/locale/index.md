@@ -1,15 +1,8 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a standard built-in property of the Intl object that represents a Unicode locale identifier.
@@ -42,11 +35,11 @@ The Intl.Locale object has the following properties and methods:
 - {{jsxref("Locale.prototype", "Intl.Locale.prototype")}}
   - : The prototype object for the `Locale` constructor.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

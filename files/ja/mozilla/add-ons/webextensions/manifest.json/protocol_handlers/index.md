@@ -2,6 +2,7 @@
 title: protocol_handlers
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

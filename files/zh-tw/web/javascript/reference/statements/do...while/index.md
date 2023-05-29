@@ -3,6 +3,7 @@ title: do...while 語法
 slug: Web/JavaScript/Reference/Statements/do...while
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/do...while_語法
 ---
+
 `do...while` 語法會反覆執行直到指定條件的求值結果為 false 為止。`do...while` 語法如下︰
 
 ```js

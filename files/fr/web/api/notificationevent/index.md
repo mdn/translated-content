@@ -9,6 +9,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/NotificationEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 L'interface **`NotificationEvent`** représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
@@ -34,7 +35,7 @@ _Cet objet hérite de propriétés grâce à son ancêtre : {{domxref("Event")}}
 _Cet objet hérite de méthodes grâce à son parent_ _{{domxref("ExtendableEvent")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Cette méthode allonge la durée de vie de l'évènement. Elle est conçue pour être appelée dans le gestionnaire d'évènement {{event("install")}} lors de l'installation (cf. {{domxref("ServiceWorkerRegistration.installing")}}) du _worker_ et dans le gestionnaire d'évènement {{event("active")}} pour le _worker_ actif (cf. {{domxref("ServiceWorkerRegistration.active")}}).
+  - : Cette méthode allonge la durée de vie de l'évènement et indique qu'une tâche est toujours en cours.
 
 ## Exemples
 

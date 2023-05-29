@@ -2,6 +2,7 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
+
 {{JSRef}}
 
 **`shift()`** 方法會移除並回傳陣列的**第一個**元素。此方法會改變陣列的長度。
@@ -64,7 +65,7 @@ while( (i = names.shift()) !== undefined ) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.shift")}}
+{{Compat}}
 
 ## 參見
 

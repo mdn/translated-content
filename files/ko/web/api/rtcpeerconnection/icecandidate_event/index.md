@@ -1,9 +1,9 @@
 ---
 title: RTCPeerConnection.onicecandidate
 slug: Web/API/RTCPeerConnection/icecandidate_event
-translation_of: Web/API/RTCPeerConnection/onicecandidate
 original_slug: Web/API/RTCPeerConnection/onicecandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 `RTCPeerConnection` 속성의 **{{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}** 는 {{domxref("RTCPeerConnection")}} 인스턴스에서 {{event("icecandidate")}} 이벤트 발생시에 호출 하려는 함수를 지정합니다. 이 이벤트는 로컬 {{Glossary("ICE")}} 에이전트가 signaling 서버를 통해 원격 피어에게 메세지를 전달 할 필요가 있을때 마다 발생합니다. 그리고 ICE 에이전트가 signaling에 사용되는 기술에 대한 구체사항을 모르더라도 원격 피어와의 네고시에이션을 수행하도록 도와줍니다. 어떤 메세징 기술을 선택하던간에, 이 메소드를 사용해서 원격 피어에 ICE candidate를 전달하는 과정을 간단하게 구현 할 수 있습니다.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 original_slug: Web/JavaScript/Reference/Erreurs/invalid_right_hand_side_instanceof_operand
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

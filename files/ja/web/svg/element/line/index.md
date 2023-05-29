@@ -1,14 +1,8 @@
 ---
 title: line
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-  - 要素
-translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 **`<line>`** 要素は SVG の基本図形であり、2 つの点をつなぐ直線を作成するために使用します。
@@ -67,10 +61,7 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                     | 備考                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('SVG2', 'shapes.html#LineElement', '&lt;line&gt;')}}     | {{Spec2('SVG2')}} | x1、y1、x2、y2 属性に{{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}を指定できるように変更 |
-| {{SpecName('SVG1.1', 'shapes.html#LineElement', '&lt;line&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義                                                                                                                                                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

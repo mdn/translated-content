@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/format
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur formate une date selon les options de locale et de format de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
@@ -85,15 +86,11 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-12.3.2', 'Intl.DateTimeFormat.format')}}                                         | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-12.3.2', 'Intl.DateTimeFormat.format')}}                                         | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.format', 'Intl.DateTimeFormat.format')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.format")}}
+{{Compat}}
 
 ## Voir aussi
 

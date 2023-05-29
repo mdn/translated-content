@@ -5,6 +5,7 @@ page-type: web-api-interface
 translation_of: Web/API/XSLTProcessor
 browser-compat: api.XSLTProcessor
 ---
+
 {{Non-standard_header}}{{SeeCompatTable}}{{APIRef("XSLT")}}
 
 Un objet **`XSLTProcessor`** applique une transformation de feuille de style [XSLT](/fr/docs/Web/XSLT) à un document XML pour générer un nouveau document XML. Il dispose de méthodes pour charger la feuille de style XSLT, donner des valeurs aux paramètres `<xsl:param>` et pour appliquer les transformations aux documents.

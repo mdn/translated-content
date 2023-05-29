@@ -2,6 +2,7 @@
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`substr()`** メソッドは、文字列の一部を、指定した位置から後方向に指定した文字数だけ返します。

@@ -2,6 +2,7 @@
 title: ReferenceError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 ---
+
 {{JSRef}}
 
 **`ReferenceError`** オブジェクトは、存在しない変数が参照されたときのエラーを表します。
@@ -57,9 +58,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: MouseEvent.mozInputSource
 slug: Web/API/MouseEvent/mozInputSource
 ---
+
 {{ APIRef() }}
 
 {{ Non-standard_header() }}

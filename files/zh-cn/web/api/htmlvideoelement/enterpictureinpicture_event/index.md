@@ -2,6 +2,7 @@
 title: 'HTMLVideoElement: enterpictureinpicture event'
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 ---
+
 {{APIRef("HTMLVideoElement")}}
 
 **`enterpictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式时触发。
@@ -10,7 +11,7 @@ slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称， 或者设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称，或者设置事件处理器属性。
 
 ```js
 addEventListener('enterpictureinpicture', event => { });

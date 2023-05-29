@@ -1,15 +1,9 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - Web
-  - prefers-color-scheme
-translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-> **Note:** Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-color-scheme) será substituída pela `light`.
+
+> **Nota:** Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](/pt-BR/docs/Web/CSS/@media/prefers-color-scheme) será substituída pela `light`.
 
 O **`prefers-color-scheme`** [CSS](/pt-BR/docs/CSS) [media feature](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) é usado para detectar se o usuário solicitou que o sistema use um tema de cores claras ou escuras.
 
@@ -83,4 +77,4 @@ Os elementos abaixo têm um tema de cores inicial. Eles podem ser mais temático
 - [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
 - Changing color schemes in [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) and [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019).
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Web/CSS/@media/")}}

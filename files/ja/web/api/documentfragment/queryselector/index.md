@@ -2,6 +2,7 @@
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 **`DocumentFragment.querySelector()`** メソッドは、指定されたセレクター群に一致する {{domxref("DocumentFragment")}} の中の最初の要素を（文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して）返します。一致するものがなければ `null` を返します。

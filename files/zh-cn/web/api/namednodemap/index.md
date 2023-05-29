@@ -2,6 +2,7 @@
 title: NamedNodeMap
 slug: Web/API/NamedNodeMap
 ---
+
 {{APIRef}}
 
 **`NamedNodeMap`** 接口表示属性节点 {{domxref("Attr")}} 对象的集合。尽管在 `NamedNodeMap` 里面的对象可以像数组一样通过索引来访问，但是它和 {{ domxref("NodeList") }} 不一样，对象的顺序没有指定。
@@ -32,9 +33,9 @@ _该接口没有继承任何方法。_
 - {{domxref("NamedNodeMap.getNamedItemNS()")}}
   - : 根据给定的命名空间参数和 name 参数返回一个 {{domxref("Attr")}} 对象。
 - {{domxref("NamedNodeMap.setNamedItemNS()")}}
-  - : 替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
+  - : 替换、添加给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象。
 - {{domxref("NamedNodeMap.removeNamedItemNS()")}}
-  - : 删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象 。
+  - : 删除给定命名空间参数和 name 参数的 {{domxref("Attr")}} 对象。
 
 ## 规范
 
@@ -42,7 +43,7 @@ _该接口没有继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.NamedNodeMap")}}
+{{Compat}}
 
 ## 相关链接
 

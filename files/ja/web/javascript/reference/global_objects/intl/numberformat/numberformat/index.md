@@ -2,6 +2,7 @@
 title: Intl.NumberFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の整形ができる {{jsxref("NumberFormat", "Intl.NumberFormat")}} オブジェクトを生成します。
@@ -224,9 +225,7 @@ new Intl.NumberFormat('bn', {
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl-numberformat-constructor', 'Intl.NumberFormat constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

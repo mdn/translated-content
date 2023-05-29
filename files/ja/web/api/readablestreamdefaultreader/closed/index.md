@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.closed
 slug: Web/API/ReadableStreamDefaultReader/closed
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`closed`** 読み取り専用プロパティは、ストリームが閉じられた場合、またはリーダーのロックが解除された場合に満たし、ストリームがエラーの場合に拒否する promise を返します。
@@ -28,9 +29,7 @@ reader.closed.then(() => {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-closed","closed")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

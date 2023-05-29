@@ -2,6 +2,7 @@
 title: DataView.prototype.getInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 ---
+
 {{JSRef}}
 
 **`getInt16()`** 方法从 {{jsxref("DataView")}} 相对于起始位置偏移 n 个字节处开始，获取一个 16-bit 数 (短整型，2 个字节)。
@@ -34,7 +35,7 @@ dataview.getInt16(byteOffset [, littleEndian])
 
 没有对齐约束; 多字节值可以从任何偏移量获取。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

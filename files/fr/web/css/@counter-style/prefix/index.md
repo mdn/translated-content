@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/prefix
 ---
+
 {{CSSRef}}
 
 Le descripteur **`prefix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, permet de définir un symbole qui sera ajouté comme préfixe à la représentation du marqueur. Si aucune valeur n'est fournie, la valeur utilisée par défaut sera la chaîne de caractères vide.
@@ -24,9 +25,13 @@ prefix: "Page";
 - `<symbol>`
   - : Définit le symbole à utilisé comme préfixe devant le marqueur du compteur de la liste. Cette valeur peut être une valeur de type {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}} ou {{cssxref("&lt;custom-ident&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -63,15 +68,11 @@ prefix: "Page";
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#descdef-counter-style-prefix', 'prefix')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.prefix")}}
+{{Compat}}
 
 ## Voir aussi
 

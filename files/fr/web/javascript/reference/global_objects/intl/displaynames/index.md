@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de fournir des traductions des noms de langues, régions et systèmes d'écriture.
@@ -120,13 +121,11 @@ nomsDevises.of('CNY'); // "人民幣"
 
 ## Spécifications
 
-| Spécification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DisplayNames")}}
+{{Compat}}
 
 ## Voir aussi
 

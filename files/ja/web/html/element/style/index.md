@@ -2,7 +2,8 @@
 title: '<style>: スタイル情報要素'
 slug: Web/HTML/Element/style
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<style>` 要素**は、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
@@ -18,22 +19,22 @@ slug: Web/HTML/Element/style
 
 この要素には[グローバル属性](/ja/docs/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("type")}}
+- `type`
   - : この属性は、スタイル言語を MIME タイプで定義します (文字セットは指定すべきではありません)。この属性は省略可能であり、省略した場合の既定値は `text/css` です。空文字列と `text/css` 以外の値は使用されません。 **注:** 現代のウェブ文書では、この属性を含める理由はほとんどありません。
-- {{htmlattrdef("media")}}
+- `media`
   - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリ](/ja/docs/Web/Guide/CSS/Media_queries)であり、省略した場合の既定値は `all` です。
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)内の行内スクリプトをホワイトリストに入れるために使われる暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
-- {{htmlattrdef("title")}}
+- `title`
   - : この属性は[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)のセットを指定します。
 
 ### 非推奨の属性
 
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
+- `scoped` {{non-standard_inline}} {{deprecated_inline}}
 
   - : この属性が指定された場合、スタイルは、その親要素および親要素の子要素にのみ適用されます。
 
-    > **Note:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
+    > **メモ:** この属性は、 <https://github.com/w3c/csswg-drafts/issues/3547> により、将来再導入されるかもしれません。今この属性を使用したい場合は、[ポリフィル](https://github.com/samthor/scoped)を利用することができます。
 
 ## 例
 
@@ -178,11 +179,7 @@ slug: Web/HTML/Element/style
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                                 | 備考                            |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
-| {{ SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style') }}         | {{ Spec2('HTML WHATWG') }} |                                 |
-| {{ SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style') }} | {{ Spec2('HTML5 W3C') }}     | `type` 属性が省略可能になった。 |
-| {{ SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style') }}                     | {{ Spec2('HTML4.01') }}     |                                 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

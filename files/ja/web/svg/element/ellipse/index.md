@@ -1,18 +1,13 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/ellipse
 ---
+
 {{SVGRef}}
 
 `ellipse` 要素は SVG の基本的な図形であり、中心となる座標と x 方向と y 方向の半径両方を指定し、楕円を生成します。
 
-> **Note:** 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
+> **メモ:** 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
 
 ```css hidden
 html,body,svg { height:100% }
@@ -44,7 +39,7 @@ html,body,svg { height:100% }
   - : この属性は、使用単位での単位合計パス長さを指定します。
     _Value type_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number) ; _デフォルト値_: _none_; _アニメーション_: **yes**
 
-> **Note:** SVG2 以降、`cx`、`cy`、`rx`、`ry` は、\_Geometry Propertie_s であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+> **メモ:** SVG2 以降、`cx`、`cy`、`rx`、`ry` は、Geometry Properties であり、これらの属性は要素の CSS プロパティとして使用することもできます。
 
 ### グローバル属性
 
@@ -67,10 +62,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                     | コメント                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------- |
-| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | `rx` と `ry` に `auto` を追加 |
-| {{SpecName('SVG1.1', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義                    |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

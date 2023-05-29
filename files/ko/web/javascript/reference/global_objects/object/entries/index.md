@@ -1,7 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}}
 
@@ -107,11 +106,11 @@ const obj = { foo: 'bar', baz: 42 };
 Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

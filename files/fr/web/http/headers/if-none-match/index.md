@@ -9,6 +9,7 @@ tags:
   - Requêtes Conditionnelles
 translation_of: Web/HTTP/Headers/If-None-Match
 ---
+
 L'en-tête de requête HTTP **`If-None-Match`** permet de conditionner la requête. Pour les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}, le serveur renvoie la ressource demandée, avec un statut {{HTTPStatus("200")}}, seulement si elle n'a pas un {{HTTPHeader("ETag")}} correspondant à ceux fournis. Pour les autres méthodes, la requête ne sera traitée que si l'{{HTTPHeader("ETag")}} de l'éventuelle ressource existante ne correspond à aucune des valeurs listées.
 
 Quand la condition échoue pour les méthodes {{HTTPMethod("GET")}} et {{HTTPMethod("HEAD")}}, le serveur doit retourner un code statut HTTP 304 (Not Modified). Pour les méthodes appliquant des changements côté serveur, le code statut 412 (Precondition Failed) est utilisé. Notez que le serveur générant une réponse 304 DOIT générer toutes les en-têtes qui auraient été envoyées avec une réponse 200 (OK) à la même requête : Cache-Control, Content-Location, Date, ETag, Expires, and Vary.
@@ -62,13 +63,11 @@ If-None-Match: *
 
 ## Spécifications
 
-| Spécification                                        | Title                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "If-None-Match", "3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.If-None-Match")}}
+{{Compat}}
 
 ## Voir aussi
 

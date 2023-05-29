@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/referrer
 ---
+
 {{APIRef}}
 
 ## Résumé

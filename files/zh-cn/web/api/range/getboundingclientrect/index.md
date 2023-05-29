@@ -2,6 +2,7 @@
 title: Range.getBoundingClientRect()
 slug: Web/API/Range/getBoundingClientRect
 ---
+
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
 **`Range.getBoundingClientRect()`** 返回一个 {{ domxref("DOMRect") }} 对象，该对象将范围中的内容包围起来；即该对象是一个将范围内所有元素的边界矩形包围起来的矩形（译者注：关于边界矩形，可以参考 [Minimum Bouding Rectangles](https://en.wikipedia.org/wiki/Minimum_bounding_rectangle)）。
@@ -54,7 +55,7 @@ highlight.style.height = `${clientRect.height}px`;
 
 ### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

@@ -2,6 +2,7 @@
 title: text-size-adjust
 slug: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`text-size-adjust`** は [CSS](/ja/docs/Web/API/CSS) のプロパティで、一部のモバイル端末で使われる、テキストの自動拡大アルゴリズムを制御します。他のブラウザーはこのプロパティを無視します。

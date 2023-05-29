@@ -1,12 +1,13 @@
 ---
-title: 開始寫我們的Svelte待辦清單應用程式
+title: 開始寫我們的 Svelte 待辦清單應用程式
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-現在我們已經對 Svelte 運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立`Todos.svelte`元件並寫一些靜態標記（markup）語言和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。
+現在我們已經對 Svelte 運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立 `Todos.svelte` 元件並寫一些靜態標記（markup）語言和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。
 
 我們想要讓使用者們能夠瀏覽、新增和刪除任務，也能註記它們以視為完成。這將是我們在走這個教學系列時會開發到的基本功能，此外，在開發過程中我們將會看到一些更進階的概念。
 
@@ -16,22 +17,24 @@ slug: >-
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          學習它，推薦你至少需熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a
-          >、<a href="/zh-TW/docs/Learn/CSS">CSS</a>與<a
-            href="/zh-TW/docs/Learn/JavaScript"
-            >JavaScript</a
-          >等程式語言且具備<a
+          推薦你至少需熟悉基本的
+          <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
+          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
+          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          等程式語言且具備<a
             href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >終端機/命令列環境</a
           >基本知識。
         </p>
-        <p>你將會需要node和npm來安裝此編譯器來建置你的應用程式。</p>
+        <p>
+          你將會需要一個安裝了 node 和 npm 的終端機來編譯和建置你的應用程式。
+        </p>
       </td>
     </tr>
     <tr>
       <th scope="row">學習目標：</th>
       <td>
-        為了學習如何建立一個Svelte元件，於另一個元件內渲染它，透過props傳遞資料並保存它的狀態。
+        學習如何建立一個 Svelte 元件並於另一個元件內渲染它，透過屬性（props）傳遞資料並保存它的狀態。
       </td>
     </tr>
   </tbody>
@@ -41,7 +44,7 @@ slug: >-
 
 ### Git
 
-複製 github 儲存庫（假如你還沒完成）如下：
+複製 Github 儲存庫（假如你還沒完成）如下：
 
 ```bash
 git clone https://github.com/opensas/mdn-svelte-tutorial.git
@@ -59,7 +62,7 @@ cd mdn-svelte-tutorial/02-starting-our-todo-app
 npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 ```
 
-記得執行`npm install && npm run dev`以開發模式來運行你的應用程式。
+記得執行 `npm install && npm run dev` 以開發模式來運行你的應用程式。
 
 ### REPL
 
@@ -76,77 +79,73 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 使用這個使用者介面，我們的使用者將能夠做到以下事情：
 
 - 瀏覽他們的任務。
-- 註記那些任務視為已完成或待辦理，而不是刪除它們。
-- 刪除那些任務。
-- 新增那些新任務。
+- 註記任務為已完成或待辦理，而不是刪除它們。
+- 刪除任務。
+- 新增任務。
 - 藉由狀態來過濾那些任務：全部、現行或已完成任務。
-- 編輯那些任務。
-- 註記全部任務視為現行或已完成狀態。
+- 編輯任務。
+- 註記全部任務為現行或已完成狀態。
 - 刪除全部已完成任務。
 
 ## 建立我們第一個元件
 
-建立`Todos.svelte`元件——這將包含我們的待辦任務。
+建立 `Todos.svelte` 元件——這將包含我們的待辦任務。
 
-1. 建立新資料夾——`src/components`。
+1. 建立新資料夾—— `src/components`。
 
-    > **備註：** 你可以把元件們放在`src`資料夾當中的任何地方，但放在`components`資料夾是比較常見的做法，也讓你可以更容易地找到元件們。
+   > **備註：** 你可以把元件們放在 `src` 資料夾當中的任何地方，但放在 `components` 資料夾是比較常見的做法，也讓你可以更容易地找到它們。
 
-2. 建立`src/components/Todos.svelte`檔案並包含以下內容：
+2. 建立 `src/components/Todos.svelte` 檔案並包含以下內容：
 
-    ```html
-    <h1>Svelte To-Do list</h1>
-    ```
+   ```html
+   <h1>Svelte To-Do list</h1>
+   ```
 
-3. 改變`public/index.html`中的`title`元素內容為*Svelte To-do list*：
+3. 改變 `public/index.html` 中的 `title` 元素內容為 _Svelte To-do list_：
 
-    ```html
-    <title>Svelte To-Do list</title>
-    ```
+   ```html
+   <title>Svelte To-Do list</title>
+   ```
 
-4. 打開`src/App.svelte`並替換為以下內容：
+4. 打開 `src/App.svelte` 並替換為以下內容：
 
-    ```html
-    <script>
-      import Todos from './components/Todos.svelte'
-    </script>
+   ```html
+   <script>
+     import Todos from "./components/Todos.svelte";
+   </script>
 
-    <Todos />
-    ```
+   <Todos />
+   ```
 
-5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台警示問題；以此例來看，當我們於`src/main.js`實例化`App`元件時，由於我們已經明確定義出`name`屬性，但並無實際在`App`中使用到。所以主控台現在應該會給你一個警示訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從`src/main.js`中移除`name`屬性；看起來應該要像是如下這樣：
+5. 在開發模式中，當定義屬性沒有存在於元件時，Svelte 將會在瀏覽器主控台發出警告；以此例來看，當我們於 `src/main.js` 實例化 `App` 元件時，由於我們已經明確定義出 `name` 屬性，但並無實際在 `App` 中使用到。所以主控台現在應該會給你一個警告訊息，如「\<App> was created with unknown prop 'name'」。而為了排除這個問題，從 `src/main.js` 中移除 `name` 屬性；看起來應該要像是如下這樣：
 
-    ```js
-    import App from './App.svelte'
+   ```js
+   import App from "./App.svelte";
 
-    const app = new App({
-      target: document.body
-    })
+   const app = new App({
+     target: document.body,
+   });
 
-    export default app
-    ```
+   export default app;
+   ```
 
-假如你現在檢查你的測試伺服器 URL，應該會看到`Todos.svelte`元件已經被渲染出如下畫面：
+假如你現在檢查你的測試伺服器 URL，應該會看到 `Todos.svelte` 元件已經被渲染出如下畫面：
 
 ![basic component rendering which a title that says 'Svelte to-do list'](02-todos-component-rendered.png)
 
 ## 加上靜態標記語言
 
-我們將會從應用程式的靜態標記語言表示開始，所以你將會看到它長什麼樣子。複製並貼上下面內容至`Todos.svelte`元件檔案以取代現有內容：
+我們將會從應用程式的靜態標記語言表示開始，所以你將會看到它長什麼樣子。複製並貼上下面內容至 `Todos.svelte` 元件檔案以取代現有內容：
 
 ```html
 <!-- Todos.svelte -->
 <div class="todoapp stack-large">
-
   <!-- NewTodo -->
   <form>
     <h2 class="label-wrapper">
-      <label for="todo-0" class="label__lg">
-        What needs to be done?
-      </label>
+      <label for="todo-0" class="label__lg"> What needs to be done? </label>
     </h2>
-    <input type="text" id="todo-0" autocomplete="off"
-      class="input input__lg" />
+    <input type="text" id="todo-0" autocomplete="off" class="input input__lg" />
     <button type="submit" disabled="" class="btn btn__primary btn__lg">
       Add
     </button>
@@ -176,7 +175,6 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 
   <!-- Todos -->
   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-
     <!-- todo-1 (editing mode) -->
     <li class="todo">
       <div class="stack-small">
@@ -185,16 +183,24 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
             <label for="todo-1" class="todo-label">
               New name for 'Create a Svelte starter app'
             </label>
-            <input type="text" id="todo-1" autocomplete="off" class="todo-text" />
+            <input
+              type="text"
+              id="todo-1"
+              autocomplete="off"
+              class="todo-text" />
           </div>
           <div class="btn-group">
             <button class="btn todo-cancel" type="button">
               Cancel
-              <span class="visually-hidden">renaming Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >renaming Create a Svelte starter app</span
+              >
             </button>
             <button class="btn btn__primary todo-edit" type="submit">
               Save
-              <span class="visually-hidden">new name for Create a Svelte starter app</span>
+              <span class="visually-hidden"
+                >new name for Create a Svelte starter app</span
+              >
             </button>
           </div>
         </form>
@@ -205,7 +211,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <li class="todo">
       <div class="stack-small">
         <div class="c-cb">
-          <input type="checkbox" id="todo-2" checked/>
+          <input type="checkbox" id="todo-2" checked />
           <label for="todo-2" class="todo-label">
             Create your first component
           </label>
@@ -235,11 +241,15 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
         <div class="btn-group">
           <button type="button" class="btn">
             Edit
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
           <button type="button" class="btn btn__danger">
             Delete
-            <span class="visually-hidden">Complete the rest of the tutorial</span>
+            <span class="visually-hidden"
+              >Complete the rest of the tutorial</span
+            >
           </button>
         </div>
       </div>
@@ -253,7 +263,6 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
     <button type="button" class="btn btn__primary">Check all</button>
     <button type="button" class="btn btn__primary">Remove completed</button>
   </div>
-
 </div>
 ```
 
@@ -285,37 +294,40 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
 </button>
 ```
 
-在這裡，`aria-pressed`告訴輔助技術（像是螢幕閱讀器）按鈕可以是兩狀態其中之一：`pressed`或`unpressed`。可以想像類似於開關狀態。設定數值為`true`時，意謂著按鈕預設是被按下的。
+在這裡，`aria-pressed` 告訴輔助技術（像是螢幕閱讀器）按鈕可以是兩狀態其中之一：`pressed` 或 `unpressed`。可以想像類似於開關狀態。設定數值為 `true` 時，意謂著按鈕預設是被按下的。
 
-`visually-hidden`類別現在還沒有效果，因為我們還沒引入任何 CSS。一旦引入我們的樣式後，對於可以看見的使用者們會隱藏那些具有此類別的元素並仍能夠讓那些螢幕閱讀器使用者來使用——這是因為這些文字並不需要給可以看見的使用者看到；它們提供更多資訊讓那些螢幕閱讀器使用者了解按鈕實際可以做什麼，而不需要借助一些額外的視覺環境來幫助他們。
+`visually-hidden` 類別現在還沒有效果，因為我們還沒引入任何 CSS。一旦引入我們的樣式後，對於可以看見的使用者們會隱藏那些具有此類別的元素並仍能夠讓那些螢幕閱讀器使用者來使用——這是因為這些文字並不需要給可以看見的使用者看到；它們提供更多資訊讓那些螢幕閱讀器使用者了解按鈕實際可以做什麼，而不需要借助一些額外的視覺環境來幫助他們。
 
-在往下看一點，你可以找到如下`<ul>`元素：
+在往下看一點，你可以找到如下 `<ul>` 元素：
 
 ```html
-<ul role="list" className="todo-list stack-large" aria-labelledby="list-heading">
+<ul
+  role="list"
+  className="todo-list stack-large"
+  aria-labelledby="list-heading"></ul>
 ```
 
-`role`屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>`會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原`<ul>`元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara’s 的「Fixing Lists」文章。
+`role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara’s 的「Fixing Lists」文章。
 
-`aria-labelledby`屬性則告訴輔助技術，我們把`<h2>`且`id`為`list-heading`作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。
+`aria-labelledby` 屬性則告訴輔助技術，我們把 `<h2>` 且 `id` 為 `list-heading` 作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。
 
 這似乎是討論 Svelte 如何處理無障礙性的好時機；讓我們繼續看下去。
 
 ## Svelte 無障礙性支援
 
-Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte 能靜態地分析我們的 HTML 範本，而當元件被編譯後，就能提出一些無障礙警示。
+Svelte 特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte 能靜態地分析我們的 HTML 範本，而當元件被編譯後，就能提出一些無障礙警告。
 
-無障礙性（縮寫為 a11y）一直以來不容易寫正確，但 Svelte 將會協助並警示你，假如你寫出了不容易閱讀的標記語言。
+無障礙性（縮寫為 a11y）一直以來不容易寫正確，但 Svelte 將會協助並警告你，假如你寫出了不容易閱讀的標記語言。
 
-舉例來說，假如我們新增`<img>`元素至我們的`todos.svelte`元件，但沒有對應的`alt`屬性時：
+舉例來說，假如我們新增 `<img>` 元素至我們的 `todos.svelte` 元件，但沒有對應的 `alt` 屬性時：
 
 ```html
 <h1>Svelte To-Do list</h1>
 
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-編譯器將會報出下列警示：
+編譯器將會報出下列警告：
 
 ```bash
 (!) Plugin svelte: A11y: <img> element should have an alt attribute
@@ -329,20 +341,20 @@ created public/build/bundle.js in 220ms
 [2020-07-15 04:07:43] waiting for changes...
 ```
 
-此外，在我們呼叫編譯器之前，編輯器也會顯示這個警示：
+此外，在我們呼叫編譯器之前，編輯器也會顯示這個警告：
 
 ![A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute](04-svelte-accessibility-support.png)
 
-你可以使用以`svelte-ignore`開頭的[註解](https://svelte.dev/docs#Comments)，來告訴 Svelte 去忽略下一個標記語言區塊的警示，像是如下：
+你可以使用以 `svelte-ignore` 開頭的[註解](https://svelte.dev/docs#Comments)，來告訴 Svelte 去忽略下一個標記語言區塊的警告，像是如下：
 
 ```html
 <!-- svelte-ignore a11y-missing-attribute -->
-<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A">
+<img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **備註：** 透過 VSCode 你可以點擊*Quick fix...*連結或按<kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個忽略註解。
+> **備註：** 透過 VSCode 你可以點擊 _Quick fix..._ 連結或按 <kbd>Ctrl</kbd> + <kbd>.</kbd> 來自動地加上這個忽略註解。
 
-假如你想要全域地關閉這個警示，可以在你的`rollup.config.js`檔案中調整`Svelte`外掛組態並補上這個`onwarn`處理器即可，像是如下：
+假如你想要全域地關閉這個警告，可以在你的 `rollup.config.js` 檔案中調整 `Svelte` 外掛組態並補上這個 `onwarn` 處理器即可，像是如下：
 
 ```js
 plugins: [
@@ -367,15 +379,15 @@ plugins: [
 ]
 ```
 
-在設計上，這些警示被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無 a11y 問題並讓你可以選擇排除特定警示。
+在設計上，這些警告被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢核你的標記語言有無 a11y 問題並讓你可以選擇排除特定警告。
 
-> **備註：** 假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
+> **備註：** 假如你有足夠充分的理由，則可以先停用這些警告，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶閱讀是很重要的。
 
-Svelte 透過[eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules)來檢核無障礙性規則，它是提供在 JSX 元素上許多無障礙性規則靜態檢核的一個 eslint 外掛。Svelte 企圖將它們全部實現於編譯器中，而大部分都已經移植至 Svelte 中。你可以在 GitHub 中看到[尚未實現的無障礙檢核](https://github.com/sveltejs/svelte/issues/820)。點選規則的連結可以查閱它們各自的涵義。
+Svelte 透過 [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules) 來檢核無障礙性規則，它是提供在 JSX 元素上許多無障礙性規則靜態檢核的一個 ESLint 外掛。Svelte 企圖將它們全部實現於編譯器中，而大部分都已經移植至 Svelte 中。你可以在 GitHub 中看到[尚未實現的無障礙檢核](https://github.com/sveltejs/svelte/issues/820)。點選規則的連結可以查閱它們各自的涵義。
 
 ## 為標記語言加上樣式
 
-讓我們來將待辦清單變得好看些。將以下內容取代至`public/global.css`檔案中：
+讓我們來將待辦清單變得好看些。將以下內容取代至 `public/global.css` 檔案中：
 
 ```css
 /* RESETS */
@@ -482,7 +494,7 @@ body {
 }
 .btn__primary:disabled {
   color: darkgrey;
-  background-color:#565656;
+  background-color: #565656;
 }
 .btn-group {
   display: flex;
@@ -698,7 +710,7 @@ cd mdn-svelte-tutorial/03-adding-dynamic-behavior
 npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 ```
 
-記得執行`npm install && npm run dev`以開發模式來運行你的應用程式。
+記得執行 `npm install && npm run dev` 以開發模式來運行你的應用程式。
 
 ### REPL
 
@@ -711,58 +723,3 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 隨著我們對標記語言加上樣式後，待辦清單應用程式開始逐漸成形，我們終於可以專注在需要實現的功能上了。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 於此模組中
-
-- [前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [元件化我們的 React 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 互動性：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 互動性：編輯、過濾、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Ember 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 應用程式結構及元件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 互動性：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 互動性：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 資源及偵錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [新增待辦表單：Vue 事件、方法、模型](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 條件式渲染：編輯已存在的待辦表單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [開始寫我們的 Svelte 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的動態行為：變數及屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [元件化我們的 Svelte 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [進階 Svelte：反應性、生命週期、無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [和 Svelte stores 共舞](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [開始我們的 Angular 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [樣式化我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [建立（待辦清單）項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [過濾我們的待辦項目](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [建置 Angular 應用程式及更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

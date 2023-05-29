@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 l10n:
   sourceCommit: 358158b18ad8c2b90b83fe4dc03bdd7fd2e423da
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML を書くのはいいのですが、何かがうまくいかず、コードのどこに誤りがあるのかがわからなくなったらどうしますか。この記事では、 HTML のエラーを探し、修正するのに役立つツールをいくつか紹介します。
@@ -57,7 +58,7 @@ HTML は Rust ほど理解するのが複雑ではありません。ブラウザ
 
 HTML 自体は構文エラーに悩まされません。ブラウザーが構文解析エラーを許容して解析するからです。つまり、構文エラーがあってもページは表示されます。ブラウザーには、誤って書かれたマークアップを解釈する方法を決定するための組み込みのルールがあるので、たとえそれが期待したものでなくても、実行することはできます。もちろん、これはまだ問題になる可能性があります。
 
-> **Note:** ウェブの世界が最初に構築されたとき、 HTML はそれほど厳格には解析されませんでした。これは、構文が絶対的に正しいことを確認するよりも、人々がコンテンツを公開できることのほうが重要であると判断されたためです。ウェブは、最初からもっと厳密なものであったなら、おそらく今日のような人気はなかったでしょう。
+> **メモ:** ウェブの世界が最初に構築されたとき、 HTML はそれほど厳格には解析されませんでした。これは、構文が絶対的に正しいことを確認するよりも、人々がコンテンツを公開できることのほうが重要であると判断されたためです。ウェブは、最初からもっと厳密なものであったなら、おそらく今日のような人気はなかったでしょう。
 
 ### アクティブラーニング: 許容コードの学習
 
@@ -91,7 +92,7 @@ HTML コードの寛容な性質を学習する時が来ました。
     - {{htmlelement("p","paragraph")}} と {{htmlelement("li","list item")}} 要素には終了タグがありません。上の画像を見ると、ある要素がどこで終わり、別の要素が始まるべきかを推測するのは簡単なので、これはマークアップのレンダリングにあまり悪い影響を与えていないようです。
     - 最初の {{htmlelement("strong")}} 要素には終了タグがありません。要素がどこで終了するのか分かりにくいので、もう少し問題があります。実際、残りのテキスト全体が強調されています。
     - `<strong>strong <em>strong emphasized?</strong> what is this?</em>` の部分は入れ子構造が間違っています。前の問題もあって、これがどのように解釈されたかを見分けるのは容易ではありません。
-    - {{htmlattrxref("href","a")}} 属性値に、閉じる二重引用符がありません。これが最大の問題を引き起こしているようです。リンクはまったくレンダリングされていません。
+    - [`href`](/ja/docs/Web/HTML/Element/a#href) 属性値に、閉じる二重引用符がありません。これが最大の問題を引き起こしているようです。リンクはまったくレンダリングされていません。
 
 5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[ブラウザー開発者ツールを見る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)をちょっと確認してください。
 6. DOM インスペクターでは、レンダリングされたマークアップがどのように見えるかを見ることができます。![Firefox の HTML インスペクターで、例の段落がハイライトされ、 "What causes errors in HTML?" というテキストが表示されています。ここでは、段落要素がブラウザーによって閉じられていることがわかります。](html-inspector.png)
@@ -154,7 +155,7 @@ HTML コードの寛容な性質を学習する時が来ました。
   example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **Note:** 閉じ引用符が抜けている属性は、文書の残りの部分が属性の内容として解釈されるため、開始要素になる可能性があります。
+  > **メモ:** 閉じ引用符が抜けている属性は、文書の残りの部分が属性の内容として解釈されるため、開始要素になる可能性があります。
 
 - "Unclosed element `ul`": {{htmlelement("ul")}} 要素は正しく閉じられているので、これはあまり役に立ちません。閉じ引用符がないために {{htmlelement("a")}} 要素が閉じられていないので、このエラーが発生しています。
 
@@ -170,15 +171,3 @@ HTML コードの寛容な性質を学習する時が来ました。
 また HTML モジュールの学習に関する記事の紹介の終わりにもなります。今、あなたは私たちの評価で自分自身をテストすることに進むことができます。最初のものは以下にリンクされています。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

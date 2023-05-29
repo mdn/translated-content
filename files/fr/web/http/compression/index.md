@@ -7,6 +7,7 @@ tags:
   - compression
 translation_of: Web/HTTP/Compression
 ---
+
 {{HTTPSidebar}}
 
 La compression est une méthode importante pour accroitre les performances d'un site web. Pour certaines pages, la réduction de la taille des éléments économise jusqu'à 70 % de la bande passante. Les algorithmes de compression s'améliorent d'années en années, les nouveaux algorithmes étant supportés à la fois par les serveurs et les clients.

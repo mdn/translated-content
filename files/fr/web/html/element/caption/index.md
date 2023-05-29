@@ -15,7 +15,8 @@ tags:
 translation_of: Web/HTML/Element/caption
 browser-compat: html.elements.caption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément **`<caption>`** définit la légende (ou le titre) d'un tableau.
 
@@ -106,7 +107,7 @@ Quand l'élément [`<table>`](/fr/docs/Web/HTML/Element/table) (étant le parent
 
 Utiliser la propriété [`background-color`](/fr/docs/Web/CSS/background-color) sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec `background-color` sur l'élément `<caption>` pour que celui-ci ait la même couleur.
 
-## Exemple
+## Exemples
 
 Cet exemple simple présente un tableau qui comprend une légende.
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`break-after`** définit la façon dont la page, la colonne ou la région se fragmente après la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
@@ -83,9 +84,13 @@ Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter
 - `avoid-region` {{experimental_inline}}
   - : Empêche toute rupture de région après boîte de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Synonymes pour `page-break-after`
 
@@ -144,20 +149,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                                                                                                                                                       |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-after', 'break-after')}} | {{Spec2('CSS3 Fragmentation')}} | Ajouts des mots-clés `recto` et `verso`. Le type de média pour cette propriété est passé de `paged` à `visual`. L'algorithme de rupture est précisé afin de gérer les différents types de rupture. |
-| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-after')}} | {{Spec2('CSS3 Regions')}}         | La spécification étend la propriété pour gérer les sauts de région. Les mots-clés `avoid-region` et `region` sont ajoutés.                                                                         |
-| {{SpecName('CSS3 Multicol', '#break-after', 'break-after')}}         | {{Spec2('CSS3 Multicol')}}     | Définition initiale. La spécification étend la propriété {{cssxref("page-break-after")}} de CSS 2.1 afin de gérer les sauts de page ou de colonne.                                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour une disposition multi-colonnes
-
-{{Compat("css.properties.break-after.multicol_context")}}
-
-### Prise en charge pour les média paginés
-
-{{Compat("css.properties.break-after.paged_context")}}
+{{Compat}}

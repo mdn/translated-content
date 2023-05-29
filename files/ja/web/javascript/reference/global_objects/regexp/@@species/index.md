@@ -2,6 +2,7 @@
 title: get RegExp[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 ---
+
 {{JSRef}}
 
 **`RegExp[@@species]`** アクセサープロパティは `RegExp` コンストラクターを返します。
@@ -35,9 +36,7 @@ class MyRegExp extends RegExp {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

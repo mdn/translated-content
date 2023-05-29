@@ -1,7 +1,8 @@
 ---
-title: What is accessibility?
+title: 什么是无障碍？
 slug: Learn/Accessibility/What_is_accessibility
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 本文作为本模块的开篇阐述了究竟什么是“无障碍” — 主要包括哪些用户群体是我们所需要和为什么需要考虑的，不同用户使用哪些工具与网页交互，以及我们在网站开发流程中如何构建无障碍。
@@ -45,7 +46,7 @@ slug: Learn/Accessibility/What_is_accessibility
 有视觉障碍的人包括盲人、视力水平低下者、色盲。许多视觉障碍人士使用屏幕放大镜，要么是物理放大镜或是软件缩放功能。现今大多数浏览器和操作系统都具备缩放功能。某些用户使用屏幕阅读器，这是一种可以大声朗读数字文本的软件。一些屏幕阅读器的示例如下：
 
 - 有些是付费产品，比如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) 和 [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
-- 有些是免费产品， 比如 [NVDA](http://www.nvaccess.org/) (Windows)， [ChromeVox](http://www.chromevox.com/) (Chrome, Windows 和 Mac OS X)， 和 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
+- 有些是免费产品，比如 [NVDA](http://www.nvaccess.org/) (Windows)， [ChromeVox](http://www.chromevox.com/) (Chrome, Windows 和 Mac OS X)，和 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - 有些内置在操作系统中，比如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS)， [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows)， [ChromeVox](http://www.chromevox.com/) (on Chrome OS)，和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 让自己熟悉屏幕阅读器是个好主意；您还应该设置一个屏幕阅读器并充分的使用它（盘它），以了解它是如何工作的。请参阅我们的[跨浏览器屏幕阅读器测试向导](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%B1%8F%E5%B9%95%E9%98%85%E8%AF%BB%E5%99%A8)，以了解更多使用它们的细节。下面的视频还提供了一个简单的例子说明了体验是怎样的。
@@ -159,17 +160,17 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
-## 在本模块中
+## 本章目录
 
-- [What is accessibility?](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
 
-## 另见
+## 参见
 
 - [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
 

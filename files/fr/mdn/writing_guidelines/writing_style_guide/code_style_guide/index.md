@@ -5,6 +5,7 @@ original_slug: MDN/Guidelines/Code_guidelines/General
 l10n:
   sourceCommit: b88cde84dd8596f6a56ee509d2a6b754a3e05ba0
 ---
+
 {{MDNSidebar}}
 
 Les règles qui sont décrites dans cet article concernent la mise en forme des exemples de code, quel que soit le langage de programmation concerné. Pour savoir quel contenu inclure lors de l'écriture d'exemples de code, veuillez vous référer [au guide stylistique](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#exemples_de_code).
@@ -135,7 +136,7 @@ Les règles qui suivent doivent être suivies pour s'assurer que les exemples de
 ### Taille pour l'affichage des résultats d'exemples de code
 
 - **La largeur doit être fixée à 100%**
-  - :  La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
+  - : La zone centrale principale pour afficher le contenu sur MDN a une largeur de 700px et les exemples de code embarqués doivent avoir un aspect correct avec cette largeur.
 - **La hauteur doit être inférieure à 700px**
   - : Nous recommandons d'utiliser cette hauteur maximale pour une meilleure lisibilité à l'écran.
 

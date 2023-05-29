@@ -2,6 +2,7 @@
 title: 介绍 CSS 布局
 slug: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Introduction
       <th scope="row">前提条件：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >”), 并且理解 CSS 的工作原理 (学习“<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >”).
       </td>
@@ -43,9 +44,9 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 每种技术都有它们的用途，各有优缺点，相互辅助。通过理解各个布局方法的设计理念，你能够找到构建你想要的网页需要的布局方案。
 
-## 正常布局流 (Normal flow)
+## 正常布局流
 
-正常布局流 (normal flow) 是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。让我们快速地看一个 HTML 的例子：
+正常布局流（normal flow）是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。让我们快速地看一个 HTML 的例子：
 
 ```html
 <p>I love my cat.</p>
@@ -61,7 +62,7 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 默认情况下，浏览器的显示如下：
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ EmbedLiveSample('正常布局流', '100%', 200) }}
 
 注意，HTML 元素完全按照源码中出现的先后次序显示——第一个段落、无序列表、第二个段落。
 
@@ -75,9 +76,9 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 - **{{cssxref("display")}}** 属性 — 标准的 value，比如`block`, `inline` 或者 `inline-block` 元素在正常布局流中的表现形式 (见 [Types of CSS boxes](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). 接着是全新的布局方式，通过设置`display`的值，比如 [CSS Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids) 和 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox).
 - **浮动**——应用 **{{cssxref("float")}}** 值，诸如 `left` 能够让块级元素互相并排成一行，而不是一个堆叠在另一个上面。
-- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其它值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
+- **{{cssxref("position")}}** 属性 — 允许你精准设置盒子中的盒子的位置，正常布局流中，默认为 `static` ，使用其他值会引起元素不同的布局方式，例如将元素固定到浏览器视口的左上角。
 - **表格布局**— 表格的布局方式可以用在非表格内容上，可以使用`display: table`和相关属性在非表元素上使用。
-- **多列布局**— 这个 [Multi-column layout](/zh-CN/docs/Web/CSS/CSS_Columns) 属性 可以让块按列布局，比如报纸的内容就是一列一列排布的。
+- **多列布局**— 这个 [Multi-column layout](/zh-CN/docs/Web/CSS/CSS_multicol_layout) 属性可以让块按列布局，比如报纸的内容就是一列一列排布的。
 
 ## display 属性
 
@@ -85,11 +86,11 @@ CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们�
 
 您可以更改此默认显示行为。例如，{{htmlelement("li")}}元素默认为`display:block`，这意味着在我们的英文文档中，列表项显示为一个在另一个之下。如果我们将显示值更改为`inline`，它们现在将显示在彼此旁边，就像单词在句子中所做的那样。事实上，您可以更改任何元素的`display`值，这意味着您可以根据它们的语义选择 html 元素，而不必关心它们的外观。他们的样子是你可以改变的。
 
-除了可以通过将一些内容从`block`转换为`inline`（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以`display`值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是`display`:`flex`和`display`:`grid`。
+除了可以通过将一些内容从`block`转换为`inline`（反之亦然）来更改默认表示形式之外，还有一些更大的布局方法以`display`值开始。但是，在使用这些属性时，通常需要调用其他属性。在讨论布局时，对我们来说最重要的两个值是 `display: flex` 和 `display: grid`。
 
 ## 弹性盒子
 
-Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用`display: flex` ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。
+Flexbox 是 CSS 弹性盒子布局模块（[Flexible Box Layout](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，你只需要在想要进行 flex 布局的父元素上应用`display: flex` ，所有直接子元素都将会按照 flex 进行布局。我们来看一个例子。
 
 ### 设置 display:flex
 
@@ -359,7 +360,7 @@ p {
 
 ### 相对定位
 
-相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果:
+相对定位 (relative positioning) 让你能够把一个正常布局流 (normal flow) 中的元素从它的默认位置按坐标进行相对移动。比如将一个图标往下调一点，以便放置文字。我们可以通过下面的规则添加相对定位来实现效果：
 
 ```css
 .positioned {

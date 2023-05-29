@@ -2,13 +2,14 @@
 title: '::-webkit-progress-inner-element'
 slug: Web/CSS/::-webkit-progress-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-webkit-progress-inner-element`** [CSS](/zh-CN/docs/Web/CSS) 伪元素选择了 {{HTMLElement("progress")}} 元素。他是 {{cssxref("::-webkit-progress-bar")}} 伪元素的父元素。
 
 > **备注：** 为了使 `::-webkit-progress-value` 生效， `<progress>` 元素的{{cssxref("-webkit-appearance")}} 需要设置为 `none` 。
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -28,9 +29,9 @@ progress {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", 200, 50)}}
+{{EmbedLiveSample("示例", 200, 50)}}
 
 应用了上述样式的进度条如下：
 
@@ -42,7 +43,7 @@ progress {
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.-webkit-progress-inner-element")}}
+{{Compat}}
 
 ## 参考
 

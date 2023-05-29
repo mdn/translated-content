@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** 介面提供控制 canvas 元素的屬性和方法. `HTMLCanvasElement` 介面也繼承了 {{domxref("HTMLElement")}} 介面的屬性和方法.
@@ -13,11 +14,11 @@ slug: Web/API/HTMLCanvasElement
 _從父代繼承的屬性，{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : Is a positive `integer` reflecting the {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used.
+  - : Is a positive `integer` reflecting the [`height`](/zh-TW/docs/Web/HTML/Element/canvas#height) HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : Is a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
+  - : Is a {{jsxref("Boolean")}} reflecting the [`moz-opaque`](/zh-TW/docs/Web/HTML/Element/canvas#moz-opaque) HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : Is a positive `integer` reflecting the {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used.
+  - : Is a positive `integer` reflecting the [`width`](/zh-TW/docs/Web/HTML/Element/canvas#width) HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
   - : Is a `function` that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
@@ -42,7 +43,7 @@ _從父代繼承的方法,_ _{{domxref("HTMLElement")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## See also
 

@@ -1,18 +1,18 @@
 ---
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
-translation_of: Web/HTML/Global_attributes/data-*
 ---
+
 > **Note:** {{HTMLSidebar("Global_attributes")}}
 
-Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML "en/HTML") e sua representação [DOM](/pt-BR/docs/DOM "en/DOM") . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
-O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](http://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
+Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/DOM) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
+O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](https://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
 
 - O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);
 - O nome não deve conter ponto e vírgula (`U+003A`);
 - O nome não deve conter letras maiúsculas.
 
-Observe que a propriedade {{domxref("HTMLElement.dataset")}} é uma {{domxref("DOMStringMap")}}, e o nome da custom data attribute _data-test-value_ será acessível através do `HTMLElement.dataset.testValue `( ou` HTMLElement.dataset["testValue"] `) e todo o traço (`U+002D`) será substituído pela capitalização(tornar maiúscula) da letra subsequente, deixando o nome no formato camelcase.
+Observe que a propriedade {{domxref("HTMLElement.dataset")}} é uma {{domxref("DOMStringMap")}}, e o nome da custom data attribute _data-test-value_ será acessível através do `HTMLElement.dataset.testValue` ( ou `HTMLElement.dataset["testValue"]` ) e todo o traço (`U+002D`) será substituído pela capitalização(tornar maiúscula) da letra subsequente, deixando o nome no formato camelcase.
 
 ### Uso
 

@@ -16,6 +16,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
 ---
+
 {{AddonSidebar()}}
 
 Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon de l'utilisateur.
@@ -35,7 +36,7 @@ Les événements ont trois fonctions:
 - `removeListener(listener)`
   - : Arrête d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute,  sinon `false`.
+  - : Vérifie si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -44,9 +45,9 @@ Les événements ont trois fonctions:
 - `callback`
   - : Fonction appelée lorsque cet événement se produit. Cette fonction sera passée sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden", 10)}}
+{{Compat}}
 
 ## Exemples
 

@@ -2,6 +2,7 @@
 title: background-clip
 slug: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 `background-clip` 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
@@ -77,7 +78,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample('Examples', 600, 580)}}
+{{EmbedLiveSample('示例', 600, 580)}}
 
 ## 规范
 
@@ -87,7 +88,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## 参见
 

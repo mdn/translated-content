@@ -2,13 +2,14 @@
 title: <main>
 slug: Web/HTML/Element/main
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<main>` 要素**は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-文書には {{htmlattrxref("hidden")}} 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
+文書には [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
 
 <table class="properties">
   <tbody>
@@ -118,7 +119,7 @@ slug: Web/HTML/Element/main
 
 スキップナビゲーションは、 "skipnav" とも呼ばれますが、支援技術のユーザーが繰り返されるコンテンツ (メインナビゲーション、情報バナー、等) の大きなセクションをすばやく飛ばすことができる技法です。これによって、ユーザーがページのメインコンテンツをより早くアクセスすることができます。
 
-{{htmlattrxref("id")}} 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
+[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
 
 ```html
 <body>
@@ -142,11 +143,7 @@ slug: Web/HTML/Element/main
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} |                                               |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

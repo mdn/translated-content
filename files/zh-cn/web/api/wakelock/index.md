@@ -2,6 +2,7 @@
 title: WakeLock
 slug: Web/API/WakeLock
 ---
+
 {{APIRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 **`WakeLock`** 接口允许一个文件获取屏幕唤醒锁定。
@@ -31,7 +32,7 @@ tryKeepScreenAlive(10);
 
 ## 浏览器兼容性
 
-{{Compat("api.WakeLock")}}
+{{Compat}}
 
 ## 相关链接
 

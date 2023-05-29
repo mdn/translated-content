@@ -2,6 +2,7 @@
 title: TextDecoderStream
 slug: Web/API/TextDecoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref('Encoding API','','',' ')}} 接口的 **`TextDecoderStream`** 方法将二进制编码（如 UTF-8 等）的文本流转换为字符串流。它与 {{domxref("TextDecoder")}} 的流形式等价。

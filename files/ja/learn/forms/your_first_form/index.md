@@ -4,6 +4,7 @@ slug: Learn/Forms/Your_first_form
 l10n:
   sourceCommit: 3c4825249f93a53f0fd2b0b6d0a371663086718e
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 このシリーズの最初の記事では、簡単なフォームの設計、HTML フォームコントロールとその他の HTML 要素を使用した正しい実装、 CSS によるとても簡単なスタイル付け、データをサーバーに送る方法を含めた、ウェブフォームを作成する本当に初歩的な経験をします。
@@ -65,12 +66,12 @@ l10n:
 </form>
 ```
 
-これは、フォームを正式に定義します。これは {{HTMLElement("section")}} や {{HTMLElement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性もにも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性は常に設定するのがふつうです。
+これは、フォームを正式に定義します。これは {{HTMLElement("section")}} や {{HTMLElement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性にも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性は常に設定するのがふつうです。
 
 - `action` 属性は、フォームで収集したデータを送信すべき場所 (URL) を定義します。
 - `method` 属性は、データを送信するために使用する HTTP メソッド（`get` または `post`）を定義します。
 
-> **Note:** これらの属性がどのように働くかについて、詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)で説明しています。
+> **メモ:** これらの属性がどのように働くかについて、詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)で説明しています。
 
 今のところは、上の {{htmlelement("form")}} 要素を HTML の {{htmlelement("body")}} に追加します。
 
@@ -157,13 +158,13 @@ l10n:
 - `reset` ボタンをクリックすると、直ちにすべてのフォームウィジェットを既定値にリセットします。 UX の観点では、このボタンは悪い行為であると考えられており、必要な理由がない限りこのボタンは使用しないようにしてください。
 - `button` ボタンをクリックすると*何もしません*! おかしなことのように見えますが、独自のボタンを作成するのに驚くほど役立ちます。 JavaScript でその機能を定義することができます。
 
-> **Note:** {{HTMLElement("input")}} 要素を使用して、対応する `type` を指定してボタンを作成することもできます。例えば `<input type="submit">` のように。{{HTMLElement("button")}} 要素との大きな違いは、{{HTMLElement("input")}} 要素ではラベルとしてプレーンテキストしか許容しませんが、{{HTMLElement("button")}} 要素ではすべての HTML コンテンツを使用して、もっと複雑でクリエイティブなボタンの内容を作成することができます。
+> **メモ:** {{HTMLElement("input")}} 要素を使用して、対応する `type` を指定してボタンを作成することもできます。例えば `<input type="submit">` のように。{{HTMLElement("button")}} 要素との大きな違いは、{{HTMLElement("input")}} 要素ではラベルとしてプレーンテキストしか許容しませんが、{{HTMLElement("button")}} 要素ではすべての HTML コンテンツを使用して、もっと複雑でクリエイティブなボタンの内容を作成することができます。
 
 ## 基本的なフォームの整形
 
 フォームの HTML コードの記述ができました。このフォームを保存してブラウザーで見てみてください。今のところ、かなり不格好であることがわかると思います。
 
-> **Note:** 作成した HTML コードが正しくないと思われる場合は、完成例と比較してみてください — [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) にあります ([ライブ版も参照](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html))。
+> **メモ:** 作成した HTML コードが正しくないと思われる場合は、完成例と比較してみてください — [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) にあります ([ライブ版も参照](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html))。
 
 フォームをきれいにスタイル付けするのは、なかなか難しいものです。フォームのスタイル付けを詳しく教えるのはこの記事の範囲外なので、とりあえず見た目が問題ないように CSS を追加してもらうだけにしておきましょう。
 
@@ -247,12 +248,12 @@ button {
 
 保存して再読み込みすると、フォームがよりきれいになりました。
 
-> **Note:** Github の [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) にあります([ライブ版も確認](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html))。
+> **メモ:** Github の [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) にあります([ライブ版も確認](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html))。
 
 ## ウェブサーバーへのデータの送信
 
 最後の、またもっともややこしいであろう部分が、サーバー側でのフォームデータの扱いです。
-{{HTMLElement("form")}} 要素は  [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性により、どこへどのようにデータを送信するかを定義できます。
+{{HTMLElement("form")}} 要素は [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性により、どこへどのようにデータを送信するかを定義できます。
 
 フォームコントロールには `name` をつけます。これらの名前はクライアント側とサーバー側の両側で重要です。ブラウザー側ではそれぞれのデータにどのような名前をつけるかを示すものであり、サーバー側では名前によってそれぞれのデータを扱うことができます。フォームデータは名前/値のペアとしてサーバーに送信されます。
 
@@ -384,22 +385,3 @@ button {
 これはほんの開始点です、しかし — さて、より深く見ていくときが来ました。ウェブフォームはここで見てきたものよりさらに強力であり、ガイドの他の記事で残りの部分を習得できます。
 
 {{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
-
-## このモジュール内
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 上級トピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

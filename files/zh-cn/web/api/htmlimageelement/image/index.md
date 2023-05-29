@@ -2,6 +2,7 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Image()`**函数将会创建一个新的{{domxref("HTMLImageElement")}}实例。
@@ -17,9 +18,9 @@ Image(width, height)
 ### 参数
 
 - width
-  - : 图片的宽度 (即 {{htmlattrxref("width", "img")}} 属性).
+  - : 图片的宽度 (即 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 属性).
 - height
-  - : 图片的高度 (即 {{htmlattrxref("height", "img")}} 属性).
+  - : 图片的高度 (即 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性).
 
 ## 示例
 
@@ -43,4 +44,4 @@ document.body.appendChild(myImage);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLImageElement.Image")}}
+{{Compat}}

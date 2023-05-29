@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.less_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur inférieur ou égal (`<=`) renvoie `true` si l'opérande gauche est inférieur ou égal à l'opérande droit et `false` sinon.

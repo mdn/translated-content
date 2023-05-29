@@ -1,14 +1,8 @@
 ---
 title: Gramática y Tipos
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - Guia(2)
-  - Guía
-  - JavaScript
-  - Variables
-  - literales
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 Este capítulo analiza la gramática básica de JavaScript, la declaración de variables, los tipos de datos y literales.
@@ -144,7 +138,7 @@ console.log(n * 32); // Registrará 0 en la consola
 
 Cuando declaras una variable fuera de cualquier función, se denomina variable _global_, porque está disponible para cualquier otro código en el documento actual. Cuando declaras una variable dentro de una función, se llama variable _local_, porque solo está disponible dentro de esa función.
 
-JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", "Checar")}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
+JavaScript anterior a ECMAScript 2015 no tiene el ámbito de la {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "declaración de bloque", "#Block_statement", "Checar")}}. Más bien, una variable declarada dentro de un bloque es local a la _función (o ámbito global)_ en el que reside el bloque.
 
 Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es el contexto global (o el contexto de la función si el código es parte de una función). El ámbito de `x` no se limita al bloque de instrucciones `if` inmediato.
 
@@ -181,11 +175,11 @@ var x = 3;
  * Ejemplo 2
  */
 // devolverá un valor de undefined
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   console.log(myVar); // undefined
-  var myvar = 'valor local';
+  var myVar = 'valor local';
 })();
 ```
 
@@ -202,12 +196,12 @@ x = 3;
 /**
  * Ejemplo 2
  */
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   var myVar;
   console.log(myVar); // undefined
-  myvar = 'valor local';
+  myVar = 'valor local';
 })();
 ```
 
@@ -395,11 +389,11 @@ El siguiente ejemplo crea el arreglo `coffees` con tres elementos y `length` de 
 let coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("../Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
+> **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
 
 Si creas un arreglo utilizando un literal en un script de nivel superior, JavaScript interpreta el arreglo cada vez que evalúa la expresión que contiene el arreglo literal. Además, cada vez que llamas a una función se crea un literal usado en ella.
 
-> **Nota:** Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("../Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
+> **Nota:** Los arreglos literales también son objetos `Array`. Consulta {{JSxRef("Array")}} y {{JSxRef("Guide/colecciones_indexadas", "Colecciones indexadas")}} para obtener detalles sobre los objetos `Array`.
 
 #### Comas adicionales en arreglos literales
 
@@ -445,7 +439,7 @@ Sin embargo, al escribir tu propio código, debes declarar explícitamente los e
 
 El tipo booleano tiene dos valores literales: `true` y `false`.
 
-> **Nota:** **Ten cuidado**: No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
+> **Nota:** No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}.El objeto `Boolean` es un contenedor alrededor del tipo de dato primitivo `Boolean`. Consulta {{JSxRef("Boolean")}} para obtener más información.
 
 ### Literales numéricos
 
@@ -567,7 +561,7 @@ var obj = {
 
 ### Expresiones regulares («RegExp») literales
 
-Un expresión regular literal (que se define en detalle {{JSxRef("../Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
+Un expresión regular literal (que se define en detalle {{JSxRef("Guide/Regular_Expressions", "más adelante")}}) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
 
 ```js
 var re = /ab+c/;
@@ -594,7 +588,7 @@ Puedes llamar a cualquiera de los métodos del objeto {{JSxRef("String")}} en un
 console.log("John's cat".length)  // En este caso, 10.
 ```
 
-En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ({{Interwiki("wikipedia", "Acento_grave")}}) en lugar de comillas simples o dobles.
+En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ([Acento_grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles.
 
 Las cadenas de las plantillas literales proporcionan azúcar sintáctica para construir cadenas. (Esto es similar a las funciones de interpolación de cadenas en Perl, Python y más).
 
@@ -709,10 +703,10 @@ y foo también.`
 
 Este capítulo se enfoca en la sintaxis básica para los tipos y las declaraciones. Para aprender mas acerca de las construcciones en el lenguaje JavaScript, ve también los siguientes capítulos en esta guía:
 
-- {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
-- {{JSxRef("../Guide/Bucles_e_iteracion", "Bucles e iteración")}}
-- {{JSxRef("../Guide/Funciones", "Funciones")}}
-- {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}}
+- {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
+- {{JSxRef("Guide/Bucles_e_iteracion", "Bucles e iteración")}}
+- {{JSxRef("Guide/Funciones", "Funciones")}}
+- {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}}
 
 En el próximo capítulo, veremos las construcciones de control de flujo y el manejo de errores.
 

@@ -2,6 +2,7 @@
 title: element.oncut
 slug: Web/API/HTMLElement/cut_event
 ---
+
 {{ ApiRef() }}
 
 ### 概述

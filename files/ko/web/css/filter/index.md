@@ -1,14 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - SVG
-  - SVG Filter
-  - recipe:css-property
-translation_of: Web/CSS/filter
 ---
 {{CSSRef}}
 
@@ -270,7 +262,7 @@ table.standard-table td {
 
 #### `contrast()`
 
-{{cssxref("filter-function/constrast", "constrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. `0%`일 경우 완전히 회색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지됩니다. `100%`보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
+{{cssxref("filter-function/contrast", "contrast()")}} 함수는 주어진 이미지의 대비를 조정합니다. `0%`일 경우 완전히 회색 이미지가 되고, `100%`일 경우 이미지가 그대로 유지됩니다. `100%`보다 큰 값도 허용되며, 이때는 대비가 더 큰 이미지가 생성됩니다. 보간 시 누락값은 `1`입니다.
 
 ```css
 filter: contrast(200%)

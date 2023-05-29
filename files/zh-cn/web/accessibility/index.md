@@ -2,6 +2,11 @@
 title: 无障碍
 slug: Web/Accessibility
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("zh-CN/docs/Web/Accessibility", 1)}}
+</section>
+
 在 Web 开发无障碍性意味着使尽可能多的人能够使用 Web 站点，即使这些人的能力是有限的。这里我们提供关于开发易访问的内容的信息。
 
 “无障碍性是最常用于描述设施或设施，帮助残疾人，如“轮椅”。这可以扩展到盲文标识、轮椅坡道，音频信号在人行横道，轮廓人行道，网站设计，等等。" [维基百科条目无障碍](http://en.wikipedia.org/wiki/Accessibility)
@@ -43,6 +48,6 @@ MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新�
 - [自动化无障碍测试](http://www-archive.mozilla.org/quality/embed/plans/accessibility/nsIAccessibleTestPlan.html)
 - [尖牙屏幕阅读模拟器](http://www.standards-schmandards.com/index.php?show/fangs)
 
-## 其它有用的网站
+## 其他有用的网站
 
 - [屏幕阅读器列表](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we)

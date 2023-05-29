@@ -2,6 +2,7 @@
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 ---
+
 {{JSRef}}
 
 该 **`ArrayBuffer[@@species]`** 访问器属性会返回 `ArrayBuffer` 构造器。

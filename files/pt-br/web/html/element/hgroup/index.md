@@ -1,11 +1,11 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}{{seeCompatTable}}
 
-O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements).
+{{HTMLSidebar}}{{seeCompatTable}}
+
+O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes níveis para uma seção do documento. Ele agrupa (é um container para) um conjunto de elementos [`<h1>–<h6>`](/pt-BR/docs/Web/HTML/Element/Heading_Elements).
 
 <table class="properties">
   <tbody>
@@ -13,8 +13,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
       <th scope="row">Categorias de conteudo</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -36,8 +35,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabeçalhos de diferentes n�
       <td>
         Any element that accepts
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>
@@ -90,13 +88,13 @@ Considere o documento HTML a seguir:
 
 Um esboço renderizado para esse documento seria como:
 
-![](https://mdn.mozillademos.org/files/14599/outline-colon.png)
+![](outline-colon.png)
 
 Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por dois pontos e espaço, seguido pelo título secundário, Living Standard - Last Update 12 August 2016.
 
 Ou, o esboço renderizado para aquele documento poderia ser como:
 
-![Rendered outline that includes an <hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
+![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
 
 Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 
@@ -120,4 +118,4 @@ Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido p
 ## See also
 
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
+- [Sections and outlines of an HTML5 document](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).

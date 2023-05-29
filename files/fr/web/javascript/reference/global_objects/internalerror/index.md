@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
 browser-compat: javascript.builtins.InternalError
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 L'objet **`InternalError`** indique qu'une erreur interne liée au moteur JavaScript s'est produite.

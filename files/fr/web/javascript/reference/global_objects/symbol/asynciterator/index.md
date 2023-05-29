@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/asyncIterator
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.asyncIterator`** définit l'itérateur asynchrone par défaut d'un objet. Si cette propriété est définie sur un objet, celui-ci est un itérable asynchrone et peut être utilisé avec une boucle [`for await...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of).
@@ -51,13 +52,11 @@ Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé `
 
 ## Spécifications
 
-| Spécification                                                                                        | État                     | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## Voir aussi
 

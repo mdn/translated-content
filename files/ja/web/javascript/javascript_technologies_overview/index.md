@@ -1,12 +1,8 @@
 ---
 title: JavaScript 技術概説
 slug: Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Beginner
-  - DOM
-  - JavaScript
-translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## はじめに
@@ -63,7 +59,7 @@ ECMAScript から見た場合に、DOM 仕様で定義されるオブジェク�
 
 ### HTML DOM
 
-ウェブのマークアップ言語である [HTML](http://www.whatwg.org/html) は、DOM に関しても規定しています。HTML は DOM Core 内で定義された抽象概念の上位レイヤーを形成し、更に要素の意味も定義しています。HTML DOM には HTML 要素の `className` プロパティ、あるいは {{domxref("document.body")}} といった API などが含まれます。
+ウェブのマークアップ言語である [HTML](https://www.whatwg.org/html) は、DOM に関しても規定しています。HTML は DOM Core 内で定義された抽象概念の上位レイヤーを形成し、更に要素の意味も定義しています。HTML DOM には HTML 要素の `className` プロパティ、あるいは {{domxref("document.body")}} といった API などが含まれます。
 
 HTML 仕様はドキュメント上の制約事項についても定義しています。例えば、「順序なしリストを意味する `ul` 要素のすべての子は、そのリストアイテムを意味する `li` 要素でなければならない」などです。一般に、標準で定義されていない要素や属性を使用することは禁止されています。
 
@@ -71,12 +67,12 @@ HTML 仕様はドキュメント上の制約事項についても定義してい
 
 ## その他の重要な API
 
-- `setTimeout` や `setInterval` 関数は HTML 標準の [`Window`](http://www.whatwg.org/html/#window) インターフェイスによって最初に規定されていました。
+- `setTimeout` や `setInterval` 関数は HTML 標準の [`Window`](https://www.whatwg.org/html/#window) インターフェイスによって最初に規定されていました。
 - [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) は非同期の HTTP リクエストを送ることを可能にする API です。
 - [CSS オブジェクト モデル](http://dev.w3.org/csswg/cssom/) (CSSOM) は CSS のルールをオブジェクトとして抽象化したものです。
-- [WebWorkers](http://www.whatwg.org/specs/web-workers/current-work/) は並列処理を可能にする API です。
-- [WebSockets](http://www.whatwg.org/C/#network) は双方向通信を可能にする API です。
-- [Canvas 2D コンテキスト](http://www.whatwg.org/html/#2dcontext)は{{htmlelement("canvas")}} 要素の描画 API です。
+- [WebWorkers](https://www.whatwg.org/specs/web-workers/current-work/) は並列処理を可能にする API です。
+- [WebSockets](https://www.whatwg.org/C/#network) は双方向通信を可能にする API です。
+- [Canvas 2D コンテキスト](https://www.whatwg.org/html/#2dcontext)は{{htmlelement("canvas")}} 要素の描画 API です。
 
 ### ブラウザーサポートについて
 

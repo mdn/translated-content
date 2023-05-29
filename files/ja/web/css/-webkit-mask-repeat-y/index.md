@@ -2,6 +2,7 @@
 title: '-webkit-mask-repeat-y'
 slug: Web/CSS/-webkit-mask-repeat-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 The `-webkit-mask-repeat-y` プロパティは、マスク画像を垂直方向に反復 (タイル) するかどうか、どのように反復するかを設定します。

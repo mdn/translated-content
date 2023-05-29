@@ -1,7 +1,8 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/Console/timeStamp
+slug: Web/API/console/timeStamp
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 向浏览器的 [Performance](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference) 或者 [Waterfall](/zh-CN/docs/Tools/Performance/Waterfall) 工具添加一个标记。这样可以让你将代码中的一个点和其他在时间轴上已记录的事件相关联，例如布局事件和绘制事件等。
@@ -23,7 +24,7 @@ console.timeStamp(label);
 
 ## Browser compatibility
 
-{{Compat("api.console.timeStamp")}}
+{{Compat}}
 
 ## See also
 

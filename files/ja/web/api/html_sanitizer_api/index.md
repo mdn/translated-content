@@ -4,6 +4,7 @@ slug: Web/API/HTML_Sanitizer_API
 l10n:
   sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 **HTML Sanitizer API** は、信頼できない HTML 文字列と {{domxref('Document')}} または {{domxref('DocumentFragment')}} オブジェクトを受け取り、それらを安全にドキュメントの DOM に挿入するためのサニタイズ処理を行うことができます。
@@ -99,7 +100,7 @@ console.log(sanitizedDiv.innerHTML)
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 
-> **Note:** どうしても文字列から文字列への操作を行いたい場合は `innerHTML` を使って文字列を抽出することができますが、文字列が適用されるときに正しいコンテキストを使用することを忘れてはいけません。
+> **メモ:** どうしても文字列から文字列への操作を行いたい場合は `innerHTML` を使って文字列を抽出することができますが、文字列が適用されるときに正しいコンテキストを使用することを忘れてはいけません。
 >
 > ```js
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";

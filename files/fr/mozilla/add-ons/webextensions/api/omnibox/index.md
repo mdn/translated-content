@@ -10,6 +10,7 @@ tags:
   - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'implémenter un comportement personnalisé lorsque l'utilisateur tape dans la barre d'adresse du navigateur.
@@ -19,10 +20,10 @@ Lorsque l'utilisateur se concentre sur la barre d'adresse du navigateur et comme
 L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions affichées dans la liste déroulante, lorsque l'utilisateur saisit un mot clé défini par l'extension. Cela fonctionne comme suit:...
 
 1. Tout d'abord, l'extension doit inclure une clé "[omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" dans le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) qui définit un mot-clé.
-2. Lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot-clé, suivi d'un espace, l'extension recevra un événement  {{WebExtAPIRef("omnibox.onInputStarted")}}.
-3. Facultativement, l'extension peut appeler  {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} pour définir la première suggestion qui sera affichée dans la liste déroulante de la barre d'adresse.
+2. Lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot-clé, suivi d'un espace, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputStarted")}}.
+3. Facultativement, l'extension peut appeler {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} pour définir la première suggestion qui sera affichée dans la liste déroulante de la barre d'adresse.
 4. Comme l'utilisateur continue à taper des caractères après cela, l'extension recevra {{WebExtAPIRef("omnibox.onInputChanged")}} événements. L'écouteur d'événement recevra la valeur actuelle que l'utilisateur a saisie et pourra remplir la liste déroulante de la barre d'adresse avec des suggestions. Si l'extension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, elle apparaît en premier dans la liste déroulante.
-5. Si l'utilisateur accepte une suggestion, l'extension recevra un événement  {{WebExtAPIRef("omnibox.onInputEntered")}}. L'écouteur d'événement recevra la suggestion acceptée.
+5. Si l'utilisateur accepte une suggestion, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputEntered")}}. L'écouteur d'événement recevra la suggestion acceptée.
 6. Si l'utilisateur supprime la liste déroulante, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputCancelled")}}.
 
 ## Types
@@ -48,9 +49,9 @@ L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions a
 - {{WebExtAPIRef("omnibox.onInputCancelled")}}
   - : Lancé lorsque l'utilisateur supprime la liste déroulante de la barre d'adresse, après avoir défini la barre d'adresse et tapé le mot clé omnibox de votre extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

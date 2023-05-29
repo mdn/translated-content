@@ -2,6 +2,7 @@
 title: Touch
 slug: Web/API/Touch
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`Touch`** 介面表示了一個於觸控裝置上接觸的單一觸碰點。觸碰點通常是由手指或觸控筆所接觸，而裝置可能為觸控螢幕或觸控板。
@@ -61,7 +62,7 @@ _This interface has no method and no parent, and doesn't inherits or implements 
 
 ## 瀏覽器相容性
 
-{{Compat("api.Touch")}}
+{{Compat}}
 
 ## 參見
 

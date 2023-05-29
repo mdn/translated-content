@@ -1,27 +1,16 @@
 ---
 title: Control de flujo y manejo de errores
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Control de flujo
-  - Guía
-  - JavaScript
-  - Lógica
-  - Manejo de errores
-  - Novato
-  - Principiantes
-  - Promesas
-  - declaraciones
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 original_slug: Web/JavaScript/Guide/Control_de_flujo_y_manejo_de_errores
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript admite un compacto conjunto de declaraciones, específicamente declaraciones de control de flujo, que puedes utilizar para incorporar una gran cantidad de interactividad en tu aplicación. Este capítulo proporciona una descripción de estas declaraciones.
 
 La {{JSxRef("Sentencias", "referencia de JavaScript")}} contiene detalles exhaustivos sobre las declaraciones de este capítulo. El carácter de punto y coma (`;`) se utiliza para separar declaraciones en código JavaScript.
 
-Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
+Todas las expresiones e instrucciones de JavaScript también son una declaración. Consulta {{JSxRef("Guide/Expressions_and_Operators", "Expresiones y operadores")}} para obtener información completa sobre las expresiones.
 
 ## Declaración de bloque
 
@@ -48,7 +37,7 @@ while (x < 10) {
 
 Aquí, `{ x++; }` es la declaración de bloque.
 
-> **Nota:** **Importante**: JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
+> **Nota:** JavaScript anterior a ECMAScript2015 (6a edición) **no** tiene ámbito de bloque. En JavaScript más antiguo, las variables introducidas dentro de un bloque tienen como ámbito la función o script que las contiene, y los efectos de establecerlas persisten más allá del bloque en sí mismo. En otras palabras, las _declaraciones de bloque no definen un ámbito_.
 >
 > Los bloques "independientes" en JavaScript pueden producir resultados completamente diferentes de los que producirían en C o Java. Por ejemplo:
 >
@@ -147,7 +136,7 @@ Los siguientes valores se evalúan como `false` (también conocidos como valores
 
 Todos los demás valores, incluidos todos los objetos, se evalúan como `true` cuando se pasan a una declaración condicional.
 
-> **Nota:** **Precaución**: ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
+> **Nota:** ¡No confundas los valores booleanos primitivos `true` y `false` con los valores `true` y `false` del objeto {{JSxRef("Boolean")}}!.Por ejemplo:```js
 > var b = new Boolean(false);
 > if (b) // esta condición se evalúa como verdadera
 > if (b == true) // esta condición se evalúa como false
@@ -166,8 +155,9 @@ function checkData() {
     return true;
   } else {
     alert(
-        'Introduce exactamente tres caracteres. ' +
-        `${document.form1.threeChar.value} no es válido.`);
+      "Introduce exactamente tres caracteres. " +
+        `${document.form1.threeChar.value} no es válido.`
+    );
     return false;
   }
 }
@@ -213,26 +203,26 @@ En el siguiente ejemplo, si `fruittype` se evalúa como '`Bananas`', el programa
 
 ```js
 switch (fruittype) {
-  case 'Oranges':
-    console.log('Las naranjas cuestan $0.59 la libra.');
+  case "Oranges":
+    console.log("Las naranjas cuestan $0.59 la libra.");
     break;
-  case 'Apples':
-    console.log('Las manzanas cuestan $0.32 la libra.');
+  case "Apples":
+    console.log("Las manzanas cuestan $0.32 la libra.");
     break;
-  case 'Bananas':
-    console.log('Los plátanos cuestan $0.48 la libra.');
+  case "Bananas":
+    console.log("Los plátanos cuestan $0.48 la libra.");
     break;
-  case 'Cherries':
-    console.log('Las cerezas cuestan $3.00 la libra.');
+  case "Cherries":
+    console.log("Las cerezas cuestan $3.00 la libra.");
     break;
-  case 'Mangoes':
-    console.log('Los mangos cuestan $0.56 la libra.');
+  case "Mangoes":
+    console.log("Los mangos cuestan $0.56 la libra.");
     break;
-  case 'Papayas':
-    console.log('Los mangos y las papayas cuestan $2.79 la libra.');
+  case "Papayas":
+    console.log("Los mangos y las papayas cuestan $2.79 la libra.");
     break;
   default:
-   console.log(`Lo sentimos, no tenemos ${fruittype}.`);
+    console.log(`Lo sentimos, no tenemos ${fruittype}.`);
 }
 console.log("¿Hay algo más que quieras?");
 ```
@@ -249,7 +239,7 @@ Puedes lanzar excepciones usando la instrucción `throw` y manejarlas usando las
 Casi cualquier objeto se puede lanzar en JavaScript. Sin embargo, no todos los objetos lanzados son iguales. Si bien es común lanzar números o cadenas como errores, con frecuencia es más efectivo usar uno de los tipos de excepción creados específicamente para este propósito:
 
 - {{JSxRef("Objetos_globales/Error", "excepciones ECMAScript", "#Tipos_Error")}}
-- La interfaz {{web.link("/es/docs/Web/API/DOMException", "DOMException")}} representa un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web y la interfaz {{web.link("/es/docs/Web/API/DOMError", "DOMError ")}} describe un objeto de error que contiene un nombre de error.
+- La interfaz [DOMException](/es/docs/Web/API/DOMException) representa un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web y la interfaz [DOMError](/es/docs/Web/API/DOMError) describe un objeto de error que contiene un nombre de error.
 
 ### Expresión `throw`
 
@@ -262,10 +252,14 @@ throw expression;
 Puedes lanzar cualquier expresión, no solo expresiones de un tipo específico. El siguiente código arroja varias excepciones de distintos tipos:
 
 ```js
-throw 'Error2';   // tipo String
-throw 42;         // tipo Number
-throw true;       // tipo Boolean
-throw {toString: function() { return "¡Soy un objeto!"; } };
+throw "Error2"; // tipo String
+throw 42; // tipo Number
+throw true; // tipo Boolean
+throw {
+  toString: function () {
+    return "¡Soy un objeto!";
+  },
+};
 ```
 
 > **Nota:** Puedes especificar un objeto cuando lanzas una excepción. A continuación, puedes hacer referencia a las propiedades del objeto en el bloque `catch`.
@@ -274,17 +268,17 @@ throw {toString: function() { return "¡Soy un objeto!"; } };
 // Crea un objeto tipo de UserException
 function UserException(message) {
   this.message = message;
-  this.name = 'UserException';
+  this.name = "UserException";
 }
 
 // Hacer que la excepción se convierta en una bonita cadena cuando se usa como cadena
 // (por ejemplo, por la consola de errores)
-UserException.prototype.toString = function() {
+UserException.prototype.toString = function () {
   return `${this.name}: "${this.message}"`;
-}
+};
 
 // Crea una instancia del tipo de objeto y tírala
-throw new UserException('Valor muy alto');
+throw new UserException("Valor muy alto");
 ```
 
 ### Declaración `try...catch`
@@ -300,20 +294,32 @@ El siguiente ejemplo usa una instrucción `try...catch`. El ejemplo llama a una 
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Ajusta el número de mes para el índice del arreglo (1 = Ene, 12 = Dic)
-  let months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul',
-                'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+  let months = [
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
-    throw 'InvalidMonthNo'; // aquí se usa la palabra clave throw
+    throw "InvalidMonthNo"; // aquí se usa la palabra clave throw
   }
 }
 
-try { // declaraciones para try
+try {
+  // declaraciones para try
   monthName = getMonthName(myMonth); // la función podría lanzar una excepción
-}
-catch (e) {
-  monthName = 'unknown';
+} catch (e) {
+  monthName = "unknown";
   logMyErrors(e); // pasar el objeto exception al controlador de errores (es decir, su propia función)
 }
 ```
@@ -336,15 +342,14 @@ Por ejemplo, el siguiente código lanza una excepción. Cuando ocurre la excepci
 
 ```js
 try {
-  throw 'myException'; // genera una excepción
-}
-catch (err) {
+  throw "myException"; // genera una excepción
+} catch (err) {
   // declaraciones para manejar cualquier excepción
-  logMyErrors(err);    // pasa el objeto exception al controlador de errores
+  logMyErrors(err); // pasa el objeto exception al controlador de errores
 }
 ```
 
-> **Nota:** **Mejores prácticas:** Cuando se registran errores en la consola dentro de un bloque `catch`, se usa `console.error()` en lugar de `console.log()` aconsejado para la depuración. Formatea el mensaje como un error y lo agrega a la lista de mensajes de error generados por la página.
+> **Nota:** Cuando se registran errores en la consola dentro de un bloque `catch`, se usa `console.error()` en lugar de `console.log()` aconsejado para la depuración. Formatea el mensaje como un error y lo agrega a la lista de mensajes de error generados por la página.
 
 #### El bloque `finally`
 
@@ -360,7 +365,7 @@ El siguiente ejemplo abre un archivo y luego ejecuta declaraciones que usan el a
 openMyFile();
 try {
   writeMyFile(theData); // Esto puede arrojar un error
-} catch(e) {
+} catch (e) {
   handleError(e); // Si ocurrió un error, manéjalo
 } finally {
   closeMyFile(); // Siempre cierra el recurso
@@ -373,19 +378,19 @@ Si el bloque `finally` devuelve un valor, este valor se convierte en el valor de
 function f() {
   try {
     console.log(0);
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log(1);
-    return true;    // esta declaración de retorno está suspendida
-                    // hasta que el bloque finally se haya completado
+    return true; // esta declaración de retorno está suspendida
+    // hasta que el bloque finally se haya completado
     console.log(2); // no alcanzable
   } finally {
     console.log(3);
-    return false;   // sobrescribe el "return" anterior
+    return false; // sobrescribe el "return" anterior
     console.log(4); // no alcanzable
   }
   // "return false" se ejecuta ahora
-  console.log(5);   // inalcanzable
+  console.log(5); // inalcanzable
 }
 console.log(f()); // 0, 1, 3, false
 ```
@@ -395,11 +400,11 @@ La sobrescritura de los valores devueltos por el bloque `finally` también se ap
 ```js
 function f() {
   try {
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log('captura "falso" interno');
     throw e; // esta instrucción throw se suspende hasta
-             // que el bloque finally se haya completado
+    // que el bloque finally se haya completado
   } finally {
     return false; // sobrescribe el "throw" anterior
   }
@@ -408,7 +413,7 @@ function f() {
 
 try {
   console.log(f());
-} catch(e) {
+} catch (e) {
   // ¡esto nunca se alcanza!
   // mientras se ejecuta f(), el bloque `finally` devuelve false,
   // que sobrescribe el `throw` dentro del `catch` anterior

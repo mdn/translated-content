@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/dy
 ---
+
 {{SVGRef}}
 
 L'attribut **`dy`** indique un décalage sur l'axe y de la position d'un élément ou de son contenu.

@@ -2,6 +2,7 @@
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetTop`** 为只读属性，它返回当前元素相对于其 {{domxref("HTMLElement.offsetParent","offsetParent")}} 元素的顶部内边距的距离。
@@ -33,7 +34,7 @@ if (topPos > 10) {
 
 ## Browser compatibility
 
-{{Compat("api.HTMLElement.offsetTop")}}
+{{Compat}}
 
 In compliance with the specification, this property will return `null` on Webkit if the element is hidden (the `style.display` of this element or any ancestor is `"none"`) or if the `style.position` of the element itself is set to `"fixed"`.
 

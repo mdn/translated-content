@@ -4,6 +4,7 @@ slug: Web/CSS/box-align
 translation_of: Web/CSS/box-align
 browser-compat: css.properties.box-align
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 >**Attention :** Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.

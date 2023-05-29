@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/values
 ---
+
 {{JSRef}}
 
 La méthode **`values()`** renvoie un nouvel objet **`Array Iterator`** qui contient les valeurs pour chaque indice du tableau. Cette méthode est l'implémentation par défaut de `Array.prototype[Symbol.Iterator]`.
@@ -67,14 +68,11 @@ console.log(eArr.next().value); // p
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.values', 'Array.prototype.values')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Voir aussi
 

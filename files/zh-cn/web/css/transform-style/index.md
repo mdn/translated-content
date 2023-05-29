@@ -2,6 +2,9 @@
 title: transform-style
 slug: Web/CSS/transform-style
 ---
+
+{{CSSRef}}
+
 {{SeeCompatTable}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`transform-style`** 设置元素的子元素是位于 3D 空间中还是平面中。
@@ -44,10 +47,8 @@ transform-style: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transform-style")}}
+{{Compat}}
 
 ## 另见
 
 - [Using CSS transforms](/zh-CN/docs/CSS/Using_CSS_transforms)
-
-{{CSSRef}}

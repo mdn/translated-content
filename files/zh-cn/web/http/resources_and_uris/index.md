@@ -2,6 +2,7 @@
 title: Resources and URIs
 slug: Web/HTTP/Resources_and_URIs
 ---
+
 {{HTTPSidebar}}
 
 HTTP 允许浏览器或[用户代理](/zh-CN/docs/Glossary/User_agent)与互联网上的不同*资源*进行通信。要做到这一点，需要知道资源的*身份*与*位置*。这两部分的信息用[URI](/zh-CN/docs/Glossary/URI)来定义。

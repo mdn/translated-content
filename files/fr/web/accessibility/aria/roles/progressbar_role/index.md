@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ---
+
 ### Description
 
 Cette technique présente l’utilisation du rôle [`progressbar`](https://www.w3.org/TR/wai-aria/#progressbar).

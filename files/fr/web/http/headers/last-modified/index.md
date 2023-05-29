@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 L'entête HTTP de réponse **`Last-Modified`** contient la date et l'heure à laquelle le serveur d'origine pense que la ressource a été modifiée pour la dernière fois. Il est utilisé comme un validateur pour déterminer si une ressource reçue et une stockée sont les mêmes. Moins précis qu'un entête {{HTTPHeader("ETag")}}, c'est un mécanisme de rechange. Les requêtes conditionnelles contenant des entêtes {{HTTPHeader("If-Modified-Since")}} ou {{HTTPHeader("If-Unmodified-Since")}} font usage de ce champ.
@@ -64,13 +65,11 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Spécification                                        | Titre                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibilité navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Last-Modified")}}
+{{Compat}}
 
 ## Voir aussi
 

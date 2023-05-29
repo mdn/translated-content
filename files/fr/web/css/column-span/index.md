@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-span
 ---
+
 {{CSSRef}}
 
 La propriété **`column-span`** permet à un élément de s'étendre sur toutes les colonnes lorsque la valeur de cette propriété est `all`. Un élément qui s'étend sur plus d'une colonne est appelé un élément étendu (_spanning element_).
@@ -33,9 +34,13 @@ column-span: unset;
 - `all`
   - : L'élément s'étend sur l'ensemble des colonnes. Le contenu du flux normal apparaissant avant l'élément est équilibré entre toutes les colonnes de façon automatique. L'élément établit un nouveau bloc de contexte de formatage.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -76,12 +81,8 @@ h2 {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#column-span', 'column-span')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

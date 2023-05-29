@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/overflow-inline
 ---
+
 {{CSSRef}}
 
 **`overflow-inline`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).
@@ -55,10 +56,8 @@ La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux d
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#mf-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.overflow-inline")}}
+{{Compat}}

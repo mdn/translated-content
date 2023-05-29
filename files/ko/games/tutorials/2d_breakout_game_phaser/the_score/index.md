@@ -1,15 +1,9 @@
 ---
 title: 득점
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
-tags:
-  - 게임
-  - 게임제작
-  - 득점
-  - 득점시스템
-  - 튜토리얼
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/The_score
 original_slug: Games/Tutorials/2D_breakout_game_Phaser/득점
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}

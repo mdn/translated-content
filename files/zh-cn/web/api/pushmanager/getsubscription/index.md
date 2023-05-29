@@ -2,6 +2,7 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} 接口的方法**`PushManager.getSubscription()`** 尝试获取已有的推送订阅。
@@ -11,7 +12,7 @@ slug: Web/API/PushManager/getSubscription
 ## 语法
 
 ```js
-​PushManager.getSubscription().then(function(pushSubscription) { ... } );
+PushManager.getSubscription().then(function(pushSubscription) { ... } );
 ```
 
 ### 参数

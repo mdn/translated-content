@@ -1,15 +1,8 @@
 ---
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-tags:
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
-browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
+
 {{JSRef}}
 
 @@iterator 속성의 초기값은 {{jsxref("TypedArray.prototype.values()", "values")}} 속성의 초기값과 같은 함수 객체입니다.

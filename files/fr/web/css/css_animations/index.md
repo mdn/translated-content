@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Animations
 original_slug: Web/CSS/Animations_CSS
 ---
+
 {{CSSRef}}
 
 Les **animations CSS** sont un module CSS qui définit la façon dont les valeurs des propriétés CSS peuvent être animées au fur et à mesure d'une période via des étapes intermédiaires (_keyframes_ en anglais). Le comportement de ces animations séquencées peut être défini en termes de durée, de nombre de répétitions et de la façon dont elles sont répétées.
@@ -40,15 +41,11 @@ Les **animations CSS** sont un module CSS qui définit la façon dont les valeur
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires         |
-| ---------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Propriété `animation`
-
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## Voir aussi
 

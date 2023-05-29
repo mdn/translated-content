@@ -1,11 +1,6 @@
 ---
 title: 특성
 slug: Glossary/Attribute
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-translation_of: Glossary/Attribute
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

@@ -1,18 +1,13 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Transfer-Encoding`** ヘッダーは、{{Glossary("Payload body","ペイロード本文")}}をユーザーに安全に転送するために使われる符号化方式を指定します。
 
-> **Note:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) は HTTP 1.1 のチャンク化した転送エンコードの仕組みに対応しておらず、新規にもっと効率的な、データストリーミングの仕組みを提供しています。
+> **メモ:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) は HTTP 1.1 のチャンク化した転送エンコードの仕組みに対応しておらず、新規にもっと効率的な、データストリーミングの仕組みを提供しています。
 
 `Transfer-Encoding` は[ホップバイホップヘッダー](/ja/docs/Web/HTTP/Headers#hbh)であり、リソース自体ではなく、二つのノード間のメッセージに適用されます。複数ノードコネクションのそれぞれの区間は、異なる `Transfer-Encoding` の値を使用することがあります。コネクション全体を通してデータを圧縮したい場合は、代わりにエンドトゥエンドの {{HTTPHeader("Content-Encoding")}} ヘッダーを使用してください。
 

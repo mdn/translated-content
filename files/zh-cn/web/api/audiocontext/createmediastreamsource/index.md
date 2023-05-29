@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}接口的 `createMediaStreamSource()` 方法用于创建一个新的 {{ domxref("MediaStreamAudioSourceNode") }} 对象，需要传入一个媒体流对象 (MediaStream 对象)(可以从 {{ domxref("navigator.getUserMedia") }} 获得 MediaStream 对象实例), 然后来自 MediaStream 的音频就可以被播放和操作。
@@ -30,7 +31,7 @@ var source = audioCtx.createMediaStreamSource(stream);
 
 {{ htmlelement("video") }} 元素下面滑动杆控制低音过滤器过滤的程度，滑动杆的值越大，低音更明显
 
-> **备注：** **注意：你可以查看** [在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者 [查看源码](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer)。
+> **备注：** 你可以查看[在线演示](https://mdn.github.io/webaudio-examples/stream-source-buffer/)，或者[查看源码](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer)。
 
 ```js
 var pre = document.querySelector('pre');
@@ -96,7 +97,7 @@ pre.innerHTML = myScript.innerHTML;
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext.createMediaStreamSource")}}
+{{Compat}}
 
 ## 查看更多
 

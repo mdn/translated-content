@@ -2,6 +2,7 @@
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLVideoElement`** 接口提供了用于操作视频对象的特殊属性和方法。它同时还继承了{{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性与方法。
@@ -15,15 +16,15 @@ slug: Web/API/HTMLVideoElement
 _继承了其父对象 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : 表达 HTML 属性 {{htmlattrxref("height", "video")}}的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
+  - : 表达 HTML 属性 [`height`](/zh-CN/docs/Web/HTML/Element/video#height)的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
 - {{domxref("HTMLVideoElement.poster")}}
-  - : 表达 HTML 属性 {{htmlattrxref("poster", "video")}}的值的一个{{domxref("DOMString")}} ，用于指定当视频无法播放时需要展示的图片。
+  - : 表达 HTML 属性 [`poster`](/zh-CN/docs/Web/HTML/Element/video#poster)的值的一个{{domxref("DOMString")}} ，用于指定当视频无法播放时需要展示的图片。
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : 返回一个`unsigned long` 值，以 CSS pixels 的单位给出视频资源的实际高度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的 ready state 是 `HAVE_NOTHING`，这个属性的值为 0。
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : 返回一个`unsigned long` 值，以 CSS pixels 的单位给出视频资源的实际宽度。这个值考虑了大小、对比度、明度、分辨率等，是由视频资源本身确定的。如果这个元素的 ready state 是 `HAVE_NOTHING`，这个属性的值为 0。
 - {{domxref("HTMLVideoElement.width")}}
-  - : 表达 HTML 属性 {{htmlattrxref("width", "video")}}的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
+  - : 表达 HTML 属性 [`width`](/zh-CN/docs/Web/HTML/Element/video#width)的值的一个{{domxref("DOMString")}} ，以 CSS pixels 的单位给出了显示区域的大小。
 
 ### Gecko 特定属性
 
@@ -32,7 +33,7 @@ _继承了其父对象 {{domxref("HTMLMediaElement")}} 和 {{domxref("HTMLElemen
 - {{domxref("HTMLVideoElement.mozDecodedFrames")}} {{readonlyInline}}{{non-standard_inline}}
   - : 返回一个 `unsigned long` 值，给出已经从媒体资源中解析，并解码为图像的视频帧数。
 - {{domxref("HTMLVideoElement.mozPresentedFrames")}} {{readonlyInline}}{{non-standard_inline}}
-  - : 返回一个 `unsigned long` 值，给出被置入绘制队列(pipeline)等待绘制的视频帧数。
+  - : 返回一个 `unsigned long` 值，给出被置入绘制队列 (pipeline) 等待绘制的视频帧数。
 - {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{readonlyInline}}{{non-standard_inline}}
   - : 返回一个 `unsigned long` 值，给出已经被绘制的视频帧数。
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{readonlyInline}}{{non-standard_inline}}
@@ -53,7 +54,7 @@ _继承了其父对象_ _{{domxref("HTMLMediaElement")}}和_ _{{domxref("HTMLEle
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLVideoElement")}}
+{{Compat}}
 
 ## 另见
 

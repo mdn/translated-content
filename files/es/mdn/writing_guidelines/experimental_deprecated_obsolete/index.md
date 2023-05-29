@@ -1,16 +1,10 @@
 ---
 title: MDN convenciones y definiciones
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-tags:
-  - Directrices
-  - Documentación
-  - Guía
-  - MDN
-  - Meta MDN
-translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
-{{MDNSidebar}}{{IncludeSubnav("/es/docs/MDN")}}
+
+{{MDNSidebar}}
 
 Este artículo define algunas convenciones y definiciones que se usan comúnmente en MDN, que pueden no ser obvias para algunas personas cuando las encuentran en la documentación.
 
@@ -111,8 +105,8 @@ A veces, durante el desarrollo de una nueva especificación, o en el transcurso 
 
 - Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores, pero _solo_ detrás de una preferencia o marca, no elimines el elemento de la documentación inmediatamente. En su lugar, marca el artículo como obsoleto de la siguiente manera:
 
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
-  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro {{TemplateLink("deprecated_inline")}} después del nombre del elemento en esa lista.
+  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_header.ejs) en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
+  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_inline.ejs) después del nombre del elemento en esa lista.
   - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega cuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y pronto se eliminará de los navegadores. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
   - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
   - Busca en MDN referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Agrega también cuadros de advertencia similares allí.
@@ -121,8 +115,8 @@ A veces, durante el desarrollo de una nueva especificación, o en el transcurso 
 
 - Si el elemento se implementó en una o más versiones de publicaciones de navegadores, sin que sea necesario cambiar una preferencia o una marca, marca el elemento como obsoleto, de la siguiente manera:
 
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro {{TemplateLink("deprecated_header")}} en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
-  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro {{TemplateLink("deprecated_inline")}} después del nombre del elemento en esa lista.
+  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_header.ejs) en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
+  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_inline.ejs) después del nombre del elemento en esa lista.
   - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega recuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y está obsoleto. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
   - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
   - Busca en MDN referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Agrega también cuadros de advertencia similares allí.
@@ -149,9 +143,9 @@ A veces, necesitas reutilizar el mismo texto en varias páginas (o deseas usar e
   4. Abre la interfaz de usuario del editor de la página donde deseas pegar.
   5. Pega el contenido del portapapeles.
 
-  > **Nota:** **Usuarios de Chrome:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
+  > **Nota:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
 
-- A veces, literalmente, deseas utilizar el mismo contenido en muchas páginas. En este caso, es mejor que coloques el contenido en una página y luego uses la macro {{TemplateLink("Page")}} para trasladar el material de una página a otra. De esta forma, siempre que se actualice el texto de la página fuente, la página de destino también se actualizará (es decir, esto sucederá en una actualización forzada o cuando la página destino pase por una reconstrucción programada).
+- A veces, literalmente, deseas utilizar el mismo contenido en muchas páginas. En este caso, es mejor que coloques el contenido en una página y luego uses la macro [`Page`](https://github.com/mdn/yari/tree/main/kumascript/macros/Page.ejs) para trasladar el material de una página a otra. De esta forma, siempre que se actualice el texto de la página fuente, la página de destino también se actualizará (es decir, esto sucederá en una actualización forzada o cuando la página destino pase por una reconstrucción programada).
 
 #### Copiar contenido de otro lugar
 

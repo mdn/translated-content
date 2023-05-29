@@ -2,6 +2,7 @@
 title: Animation.play()
 slug: Web/API/Animation/play
 ---
+
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
 
 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)的{{ domxref("Animation") }}接口中的**`play()`** 方法 可开始或恢复动画的播放。如果动画结束，则调用`play()`重新启动动画，从头开始播放。
@@ -61,7 +62,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.play")}}
+{{Compat}}
 
 ## 了解更多
 

@@ -2,6 +2,7 @@
 title: Document.fgColor
 slug: Web/API/Document/fgColor
 ---
+
 {{ApiRef}}{{Deprecated_header}}
 
 **`fgColor`** は、現在の文書の前景色またはテキストの色を取得または設定します。

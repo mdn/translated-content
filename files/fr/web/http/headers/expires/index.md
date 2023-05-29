@@ -3,6 +3,7 @@ title: Expires
 slug: Web/HTTP/Headers/Expires
 translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 Le header **`Expires`** contient la date/heure après laquelle la réponse est considérée comme dépréciée.
@@ -49,13 +50,11 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Spécifications
 
-| Specification                                | Title                                           |
-| -------------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Expires", "5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Expires")}}
+{{Compat}}
 
 ## Voir aussi
 

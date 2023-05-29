@@ -1,12 +1,8 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-tags:
-  - Constructor
-  - Reference
-browser-compat: api.EventTarget.EventTarget
-translation_of: Web/API/EventTarget/EventTarget
 ---
+
 {{APIRef("DOM")}}
 
 **`EventTarget()`** 생성자는 새로운 {{domxref("EventTarget")}} 객체 인스턴스를 생성합니다.

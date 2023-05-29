@@ -1,7 +1,10 @@
 ---
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer.isView()`** メソッドは、渡された値が `ArrayBuffer` のビューのうちの一つ、例えば[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)や {{jsxref("DataView")}} であるかどうかを判断します。
@@ -10,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 
 ## 構文
 
-```
+```js-nolint
 ArrayBuffer.isView(value)
 ```
 
@@ -46,13 +49,11 @@ ArrayBuffer.isView(dv); // true
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.ArrayBuffer.isView")}}
+{{Compat}}
 
 ## 関連情報
 

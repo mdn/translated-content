@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 browser-compat: http.headers.csp.Content-Security-Policy.base-uri
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément [`<base>`](/fr/docs/Web/HTML/Element/base). Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément [`<base>`](/fr/docs/Web/HTML/Element/base).

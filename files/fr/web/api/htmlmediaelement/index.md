@@ -10,6 +10,7 @@ tags:
   - Video
 translation_of: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLMediaElement`** ajoute à {{domxref("HTMLElement")}} les propriétés et les méthodes nécessaires pour prendre en charge les fonctionnalités de base liées aux médias qui sont communes aux vidéos et aux documents audios. {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}} héritent de cette interface.
@@ -55,7 +56,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.loop")}}
   - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("loop","video")}} (_boucle_), lequel indique si l'élément média doit recommencer quand il arrive à la fin.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("mediagroup","video")}}, lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un  {{domxref('MediaController')}} commun.
+  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("mediagroup","video")}}, lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un {{domxref('MediaController')}} commun.
 - {{domxref("HTMLMediaElement.mediaKeys")}}{{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet {{domxref("MediaKeys")}} ou `null`. `MediaKeys` est un ensemble de clés qu'un élément `HTMLMediaElement` associé peut utiliser pour déchiffrer les données du média pendant la lecture.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}}{{readonlyinline}} {{non-standard_inline}}
@@ -126,9 +127,9 @@ Ces attributs sont obsolètes et ne doivent plus être utilisés, même si un na
 ### Gestionnaires d'évènements obsolètes
 
 - {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'élément média est interrompu du fait du gestionnaire de canaux audio. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
+  - : définit le gestionnaire d'évènement appelé lorsque l'élément média est interrompu du fait du gestionnaire de canaux audio. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
 - {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : définit le {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) appelé lorsque l'interruption est terminée. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
+  - : définit le gestionnaire d'évènement appelé lorsque l'interruption est terminée. C'était une spécificité de Firefox, implémentée pour Firefox OS et supprimée à partir de Firefox 55.
 
 ## Méthodes
 
@@ -166,7 +167,7 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un navigateur les prend encore en charge.
 
 - {{domxref("HTMLMediaElement.mozLoadFrom()")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Cette méthode, disponible seulement pour les implémentations Mozilla, charge les données d'un autre élément de média. Ce fonctionnement est similaire à `load()` excepté qu'à la place d'exécuter l'algorithme normal de sélection de la ressource, la source est simplement définie sur  `currentSrc` de l'autre élément. Ceci est optimisé pour que cet élément accède à toutes les données mises en cache et en mémoire tampon de l'autre élément ; en fait, les deux éléments partagent les données téléchargées, de sorte que les données téléchargées par l'un ou l'autre élément sont disponibles pour les deux.
+  - : Cette méthode, disponible seulement pour les implémentations Mozilla, charge les données d'un autre élément de média. Ce fonctionnement est similaire à `load()` excepté qu'à la place d'exécuter l'algorithme normal de sélection de la ressource, la source est simplement définie sur `currentSrc` de l'autre élément. Ceci est optimisé pour que cet élément accède à toutes les données mises en cache et en mémoire tampon de l'autre élément ; en fait, les deux éléments partagent les données téléchargées, de sorte que les données téléchargées par l'un ou l'autre élément sont disponibles pour les deux.
 
 ## Spécifications
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Écrit une chaine de caractères suivie d'un retour de ligne.

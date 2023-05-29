@@ -2,6 +2,7 @@
 title: Selection.modify()
 slug: Web/API/Selection/modify
 ---
+
 {{ ApiRef("DOM") }}{{non-standard_header}}
 
 **`Selection.modify()`** 方法可以通过简单的文本命令来改变当前选区或光标位置。
@@ -23,7 +24,7 @@ sel.modify(alter, direction, granularity)
 
 > **备注：** Gecko **不支持** `"sentence"`, `"paragraph"`, `"sentenceboundary"`, `"paragraphboundary"` 和 `"documentboundary"`. Webkit 和 Blink 支持。
 
-> **备注：** 从{{Gecko("5.0")}}开始，不管是不是浏览器的默认行为，`"word"颗粒度不再包括`单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。
+> **备注：** 从 Gecko 5.0 开始，不管是不是浏览器的默认行为，`"word"` 颗粒度不再包括单词后面的空格。这让这个行为变得更加稳定，这也和之前的 Webkit 保持一致，然而不幸的是他们最近修改了这个默认行为。
 
 ## 例子
 
@@ -40,7 +41,7 @@ _无_
 
 ## 浏览器兼容性
 
-{{Compat("api.Selection.modify")}}
+{{Compat}}
 
 ## 相关链接
 

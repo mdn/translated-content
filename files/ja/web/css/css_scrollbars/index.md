@@ -2,6 +2,7 @@
 title: CSS スクロールバー
 slug: Web/CSS/CSS_Scrollbars
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS スクロールバー** (CSS Scrollbars) は、 2000 年に Windows の IE 5.5 で導入され、廃止されたスクロールバーの色のプロパティを標準化するためのものです。
@@ -45,9 +46,7 @@ Dandelion cucumber earthnut pea peanut soko zucchini.
 
 ## 仕様書
 
-| 仕様書                            | 状態                               | 備考             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS Scrollbars")}} | {{Spec2("CSS Scrollbars")}} | 初回定義 |
+{{Specifications}}
 
 ## アクセシビリティの考慮
 

@@ -2,6 +2,7 @@
 title: WebVR API
 slug: Web/API/WebVR_API
 ---
+
 {{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
 
 **WebVR API 能为虚拟现实设备的渲染提供支持 — 例如像 Oculus Rift 或者**HTC Vive **这样的头戴式设备与 Web apps 的连接。它能让开发者将位置和动作信息转换成 3D 场景中的运动。基于这项技术能产生很多有趣的应用，比如虚拟的产品展示，可交互的培训课程，以及超强沉浸感的第一人称游戏。**
@@ -14,7 +15,7 @@ slug: Web/API/WebVR_API
 
 Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDevices()")}} method. This returns an array of objects to represent the attached devices, which inherit from the general {{domxref("VRDevice")}} object — generally a head mounted display will have two devices — the head mounted display itself, represented by {{domxref("HMDVRDevice")}}, and a position sensor camera that keeps track of your head position, represented by {{domxref("PositionSensorVRDevice")}}.
 
-**连接到电脑的所有 VR 设备都将由 {{domxref("Navigator.getVRDevices()")}} 方法返回。 这个方法将返回一个包含了所有已连接设备的对象数组，每个设备对应一个对象， 该对象继承自 {{domxref("VRDevice")}} — 通常一个头显将包含两个设备 — 头显自身由 {{domxref("HMDVRDevice")}} 表示， 和一个跟踪头部位置的位置捕捉传感器，由 {{domxref("PositionSensorVRDevice")}} 表示。**
+**连接到电脑的所有 VR 设备都将由 {{domxref("Navigator.getVRDevices()")}} 方法返回。这个方法将返回一个包含了所有已连接设备的对象数组，每个设备对应一个对象，该对象继承自 {{domxref("VRDevice")}} — 通常一个头显将包含两个设备 — 头显自身由 {{domxref("HMDVRDevice")}} 表示，和一个跟踪头部位置的位置捕捉传感器，由 {{domxref("PositionSensorVRDevice")}} 表示。**
 
 The {{domxref("PositionSensorVRDevice")}} object contains the {{domxref("PositionSensorVRDevice.getState","getState()")}} method, which returns a {{domxref("VRPositionState")}} object — this represents the sensor’s state at a given timestamp, and includes properties containing useful data such as current velocity, acceleration, and orientation, useful for updating the rendering of a scene on each frame according to the movement of the VR head mounted display.
 
@@ -22,7 +23,7 @@ The {{domxref("PositionSensorVRDevice")}} object contains the {{domxref("Positio
 
 The {{domxref("HMDVRDevice.getEyeParameters()")}} method returns a {{domxref("VREyeParameters")}} object, which can be used to return field of view information — how much of the scene the head mounted display can see. The {{domxref("VREyeParameters.currentFieldOfView")}} returns a {{domxref("VRFieldOfView")}} object that contains 4 angles describing the current view from a center point. You can also change the field of view using {{domxref("HMDVRDevice.setFieldOfView()")}}.
 
-**{{domxref("HMDVRDevice.getEyeParameters()")}} 方法返回一个 {{domxref("VREyeParameters")}} 对象，可用于获取显示区域的信息 — 头显可以看到多少画面。 {{domxref("VREyeParameters.currentFieldOfView")}} 返回一个 {{domxref("VRFieldOfView")}} 对象 ，该对象包含了 4 个角度信息来描述当前的显示区域。你可以用 {{domxref("HMDVRDevice.setFieldOfView()")}} 来改变当前的显示区域。**
+**{{domxref("HMDVRDevice.getEyeParameters()")}} 方法返回一个 {{domxref("VREyeParameters")}} 对象，可用于获取显示区域的信息 — 头显可以看到多少画面。 {{domxref("VREyeParameters.currentFieldOfView")}} 返回一个 {{domxref("VRFieldOfView")}} 对象，该对象包含了 4 个角度信息来描述当前的显示区域。你可以用 {{domxref("HMDVRDevice.setFieldOfView()")}} 来改变当前的显示区域。**
 
 > **备注：** To find out more about using these interfaces in your own app, read [Using the WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API). To learn more about the basic concepts behind VR, read [WebVR concepts](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts).
 >

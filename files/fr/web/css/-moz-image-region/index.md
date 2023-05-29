@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/CSS/-moz-image-region
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 Pour certains éléments XUL et les pseudo-éléments qui utilisent une image grâce à la propriété {{cssxref("list-style-image")}}, la propriété **`-moz-image-region`** définit la partie de l'image qui est utilisée plutôt que l'image toute entière. Cela permet d'utiliser des images qui regroupent des _sprites_ afin d'améliorer les performances.
@@ -64,7 +65,7 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-image-region")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: Window.focus()
 slug: Web/API/Window/focus
 ---
+
 {{APIRef}}
 
 ## 概述

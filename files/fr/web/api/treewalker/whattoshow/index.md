@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/TreeWalker/whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`TreeWalker.whatToShow`** renvoie un `unsigned long` (_non signé long_) qui est un masque constitué de constantes décrivant les types de {{domxref("Node")}} à présenter. Les noeuds ne correspondant pas sont ignorés, mais leurs enfants peuvent être inclus s'ils sont pertinents. Les valeurs possibles sont :

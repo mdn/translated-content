@@ -2,6 +2,7 @@
 title: 'Window: hashchange イベント'
 slug: Web/API/Window/hashchange_event
 ---
+
 {{APIRef}}
 
 **`hashchange`** イベントは、 URL のフラグメント識別子 (URL の `#` 記号で始まり続く部分) が変化したときに発生します。
@@ -53,9 +54,7 @@ window.onhashchange = locationHashChanged;
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考               |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'indices.html#event-hashchange', 'hashchange')}} | {{Spec2('HTML WHATWG')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

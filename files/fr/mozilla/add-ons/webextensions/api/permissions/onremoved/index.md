@@ -11,6 +11,7 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Activé lorsque certaines permissions sont supprimés de l'extension.
@@ -30,7 +31,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur a supprimée.
 - `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré dans l'événement. Retourne `true` s'il écoute, sinon  `false`.
+  - : Vérifiez si `listener` est enregistré dans l'événement. Retourne `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -43,9 +44,9 @@ Les événements ont trois fonctions :
     - `permissions`
       - : L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 

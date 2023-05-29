@@ -2,6 +2,7 @@
 title: justify-content
 slug: Web/CSS/justify-content
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) **`justify-content`** 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。
@@ -45,7 +46,7 @@ justify-content: unset;
 
 {{cssinfo}}
 
-可以参考 [使用 CSS 弹性框](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)获取更多信息。
+可以参考 [使用 CSS 弹性框](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)获取更多信息。
 
 ## 语法
 
@@ -80,13 +81,13 @@ justify-content: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-### 语法格式
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### CSS content
+### CSS
 
 ```css
 #container {
@@ -133,18 +134,18 @@ justifyContent.addEventListener("change", function (evt) {
 });
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 140)}}
+{{EmbedLiveSample("示例", "100%", 140)}}
 
 ## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("css.properties.justify-content")}}
+{{Compat}}
 
 ## 参考
 
-- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)

@@ -3,6 +3,7 @@ title: HTML中的圖片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
@@ -32,18 +33,18 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
 舉例來說, 如果您的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
 ```html
-<img src="dinosaur.jpg">
+<img src="dinosaur.jpg" />
 ```
 
 如果圖片位於名為 images 的資料夾中，且該目錄與 HTML 頁面位於同一資料夾（Google 建議這樣的編排，以利於 SEO /索引目的），則應將其嵌入如下：
 
 ```html
-<img src="images/dinosaur.jpg">
+<img src="images/dinosaur.jpg" />
 ```
 
 像這樣.
@@ -53,7 +54,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 你也可以用絕對路徑 URL 來嵌入圖片，例如
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 但這麼做是沒有意義的，因為它只會使瀏覽器執行更多工作，瀏覽器需重複執行從 DNS 服務器中搜尋 IP 地址等等工作。您應將網站上的圖片與 HTML 存放在同一個伺服器上。
@@ -72,16 +73,17 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 > **備註：** \<img>和\<video>之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
 
-> **備註：** 您可以從在[Github](/zh-TW/docs/https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)上找到本節完成的示例（參見[開源碼](/zh-TW/docs/https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
+> **備註：** 您可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
 
 ### 替代性文字
 
 我們下一個要看的屬性是 alt。 它的功能算是圖片的文字描述，應用於因網路連接速度慢而無法看到/顯示圖片或需要長時間來跑圖等等情況。 例如，上面的程式碼我們可以像這樣修改：
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 測試替代文字最簡單方法是故意拼錯檔名。 例如，如果我們的圖片名稱為 dinosooooor.jpg，則瀏覽器將不會顯示該圖片，而是顯示 alt 文本：![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
@@ -96,7 +98,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 
 您應該在`alt`屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，您將損失什麼：
 
-- **裝飾：** 你可以用 [CSS\_背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
+- **裝飾：** 你可以用 [CSS 背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
 - **內容：** 如果您的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
 - **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，您可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
 - **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
@@ -110,11 +112,12 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 You can use the `width` and `height` attributes to specify the width and height of your image. You can find your image's width and height in a number of ways. For example on the Mac you can use <kbd>Cmd</kbd> + <kbd>I</kbd> to get the info display up for the image file. Returning to our example, we could do this:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 This doesn't result in much difference to the display, under normal circumstances. But if the image isn't being displayed, for example, the user has just navigated to the page, and the image hasn't yet loaded, you'll notice the browser is leaving a space for the image to appear in:
@@ -132,12 +135,13 @@ However, you shouldn't alter the size of your images using HTML attributes. If y
 As [with links](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 This gives us a tooltip on mouse hover, just like link titles:
@@ -169,19 +173,20 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 <img>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -208,10 +213,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -219,38 +224,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
+var htmlSolution =
+  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -262,8 +268,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -274,10 +283,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -295,11 +304,12 @@ Speaking of captions, there are a number of ways that you could add a caption to
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -311,19 +321,22 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 
 ```html
 <figure>
-  <img src="images/dinosaur.jpg"
-        alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-        width="400"
-        height="341">
+    width="400"
+    height="341" />
 
-  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
 </figure>
 ```
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **備註：** From an accessibility viewpoint, captions and {{htmlattrxref('alt','img')}} text have distinct roles. Captions benefit even people who can see the image, whereas {{htmlattrxref('alt','img')}} text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> **備註：** From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -345,18 +358,21 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="min-height: 100px; width: 95%"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -383,10 +399,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -394,38 +410,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+var htmlSolution =
+  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -437,8 +454,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -449,10 +469,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -466,7 +486,7 @@ textarea.onkeyup = function(){
 
 ## CSS 背景圖片
 
-您還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。 CSS[`background-image`](/zh-TW/docs/Web/CSS/background-image)屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
+您還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。CSS [`background-image`](/zh-TW/docs/Web/CSS/background-image) 屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
 
 ```css
 p {
@@ -482,19 +502,10 @@ p {
 
 ## 試試看!
 
-您已經來到了本文的末端，但是您還記得最重要的內容嗎？ 在繼續往下之前，這裡有些測驗讓您驗證看看您是否都學會了 — [測驗：HTML 圖像](/zh-TW/docs//zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 總結
 
 目前就是這樣啦。 我們已經詳細介紹了圖片和標題說明。 在下一篇文章中我們將進一步介紹，如何使用 HTML 將視頻和音頻嵌入在網頁中。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## 在這個主題中
-
-- [Images in HTML](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

@@ -2,6 +2,7 @@
 title: DataView.prototype.setFloat64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat64
 ---
+
 {{JSRef}}
 
 **`setFloat64()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 64-bit 数 (双精度浮点型)。
@@ -32,7 +33,7 @@ dataview.setFloat64(byteOffset, value [, littleEndian])
 - {{jsxref("RangeError")}}
   - : 如果 byteOffset 超出了视图能储存的值，就会抛出错误。
 
-## 例子
+## 示例
 
 ```js
 var buffer = new ArrayBuffer(8);

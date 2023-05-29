@@ -10,6 +10,7 @@ tags:
   - URI
 translation_of: Web/API/Node/lookupPrefix
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.lookupPrefix()`** renvoie une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le préfixe d'un URI d'un espace de nom donné, s'il est présent, et `null` sinon. Quand plusieurs préfixes sont possibles, le résultat dépend de l'implémentation.

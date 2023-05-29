@@ -1,14 +1,8 @@
 ---
 title: FileList
 slug: Web/API/FileList
-page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Files
-browser-compat: api.FileList
-translation_of: Web/API/FileList
 ---
+
 {{APIRef("File API")}}
 
 **`FileList`** 유형의 객체는 HTML {{htmlelement("input")}} 요소의 `files` 속성이나 [Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API)의 {{domxref("DataTransfer")}}에서 가져올 수 있으며, `<input type="file">` 요소로 선택했거나 웹 콘텐츠 위에 끌어다 놓은 파일 목록에 대한 접근을 제공합니다.

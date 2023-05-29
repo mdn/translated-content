@@ -2,6 +2,7 @@
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/E
 
 ## 示例
 
-### 例子：使用 `Math.E`
+### 示例：使用 `Math.E`
 
 下面的函数返回 e：
 

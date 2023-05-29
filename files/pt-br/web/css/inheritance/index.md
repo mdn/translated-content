@@ -1,20 +1,15 @@
 ---
 title: Herança
-slug: Web/CSS/inheritance
-tags:
-  - CSS
-  - Guide
-  - Guía
-  - Web
-translation_of: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
 ## Resumo
 
-O resumo de cada [definição de propriedade do CSS](/pt-BR/docs/Web/CSS/Reference "Referência CSS") diz se tal propriedade é herdada por padrão ("Inherited": sim) ou é não herdada por padrão ("Inherited": não). Isso controla o que ocorre quando nenhum valor é especificado para uma propriedade em um elemento.
+O resumo de cada [definição de propriedade do CSS](/pt-BR/docs/Web/CSS/Reference) diz se tal propriedade é herdada por padrão ("Inherited": sim) ou é não herdada por padrão ("Inherited": não). Isso controla o que ocorre quando nenhum valor é especificado para uma propriedade em um elemento.
 
 ## Propriedades herdadas
 
-Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemento, o elemento obtém o [valor computado](/pt-BR/docs/Web/CSS/computed_value "valor computado") desta propriedade em seu elemento pai. Apenas o elemento raiz do documento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value "valor inicial") dado no resumo da propriedade.
+Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemento, o elemento obtém o [valor computado](/pt-BR/docs/Web/CSS/computed_value) desta propriedade em seu elemento pai. Apenas o elemento raiz do documento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dado no resumo da propriedade.
 
 Um exemplo típico de uma propriedade herdada é a propriedade {{ Cssxref("color") }}. Dadas as seguintes regras de estilo:
 
@@ -32,7 +27,7 @@ As palavras "texto enfatizado" vão aparecer em verde, já que o elemento `em` h
 
 ## Propriedades não herdadas
 
-Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada de **reset property** em código Mozilla) é especificado em um elemento, o elemento obtém o [valor inicial](/pt-BR/docs/CSS/initial_value "valor inicial") desta propriedade (como especificado no resumo da propriedade).
+Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada de **reset property** em código Mozilla) é especificado em um elemento, o elemento obtém o [valor inicial](/pt-BR/docs/CSS/initial_value) desta propriedade (como especificado no resumo da propriedade).
 
 Um exemplo típico de uma propriedade não herdada é a propriedade {{ Cssxref("border") }}. Dadas as seguintes regras de estilo:
 
@@ -54,6 +49,5 @@ A palavra-chave {{ Cssxref("inherit") }} permite aos autores especificar explici
 
 ## Veja também
 
-- [Referência CSS](/pt-BR/docs/Web/CSS/Reference "Referência CSS")
-- {{ CSS_key_concepts() }}
+- [Referência CSS](/pt-BR/docs/Web/CSS/Reference)
 - {{ Cssxref("inherit") }}

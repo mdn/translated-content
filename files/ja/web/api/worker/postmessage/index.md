@@ -4,9 +4,10 @@ slug: Web/API/Worker/postMessage
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
+
 {{APIRef("Web Workers API")}}
 
-**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
+**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
 {{domxref("Worker")}} の `postMessage()` メソッドは {{domxref("MessagePort")}} の {{domxref("MessagePort.postMessage", "postMessage()")}} メソッドに委任して、受信する {{domxref("MessagePort")}} に対応するイベントループのタスクを追加します。
 
@@ -23,7 +24,7 @@ postMessage(message, transfer)
 
 - `message`
 
-  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または循環参照を含む場合は[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)アルゴリズムで扱う JavaScript オブジェクトが許可されます。
+  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
     `message` 引数が提供されて*いない*場合は、 `TypeError` が発生します。ワーカーに渡すデータが重要でない場合は、 `null` または `undefined` を明示的に渡すことができます。
 
@@ -57,7 +58,7 @@ second.onchange = () => {
 
 完全な例は、[簡単なワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) （[例を実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）を参照してください。
 
-> **Note:** **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
+> **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
 
 ### 移転を伴う例
 

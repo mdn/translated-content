@@ -1,23 +1,24 @@
 ---
 title: 重新介绍 JavaScript（JS 教程）
-slug: Web/JavaScript/Language_Overview
+slug: Web/JavaScript/Language_overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
-为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。 JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
+为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
 
 我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。
 
 几个月后，Microsoft 随 IE 3 发布推出了一个与之基本兼容的语言 JScript。又过了几个月，Netscape 将 JavaScript 提交至 [Ecma International](http://www.ecma-international.org)（一个欧洲标准化组织），{{Glossary("ECMAScript")}} 标准第一版便在 1997 年诞生了，随后在 1999 年以 [ECMAScript 第三版](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的形式进行了更新，从那之后这个标准没有发生过大的改动。由于委员会在语言特性的讨论上发生分歧，ECMAScript 第四版尚未推出便被废除，但随后于 2009 年 12 月发布的 ECMAScript 第五版引入了第四版草案加入的许多特性。第六版标准已经于 2015 年 6 月发布。
 
-> **备注：** 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript 。
+> **备注：** 由于这种用法更常见，从这里开始，我们将使用 JavaScript 来指代 ECMAScript。
 
 与大多数编程语言不同，JavaScript 没有输入或输出的概念。它是一个在宿主环境（host environment）下运行的脚本语言，任何与外界沟通的机制都是由宿主环境提供的。浏览器是最常见的宿主环境，但在非常多的其他程序中也包含 JavaScript 解释器，如 Adobe Acrobat、Adobe Photoshop、SVG 图像、Yahoo！的 Widget 引擎，[Node.js](http://nodejs.org) 之类的服务器端环境，NoSQL 数据库（如开源的 [Apache CouchDB](http://couchdb.apache.org)）、嵌入式计算机，以及包括 [GNOME](http://www.gnome.org)（注：GNU/Linux 上最流行的 GUI 之一）在内的桌面环境等等。
 
 ## 概览
 
-JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。
+JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。
 
 先从任何编程语言都不可缺少的组成部分——“类型”开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：
 
@@ -129,7 +130,7 @@ JavaScript 还有两个特殊值：[`Infinity`](/zh-CN/docs/Web/JavaScript/Refer
 -1 / 0; // -Infinity
 ```
 
-可以使用内置函数 [`isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite) 来判断一个变量是否是一个有穷数， 如果类型为`Infinity`, `-Infinity` 或 `NaN 则返回 false`：
+可以使用内置函数 [`isFinite()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite) 来判断一个变量是否是一个有穷数，如果类型为`Infinity`, `-Infinity` 或 `NaN 则返回 false`：
 
 ```js
 isFinite(1/0); // false
@@ -145,7 +146,7 @@ isFinite("0"); // true
 Number.isFinite("0"); // false
 ```
 
-> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同， 只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。
+> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同，只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。
 
 ## 字符串
 
@@ -224,7 +225,7 @@ var a;
 var name = "simon";
 ```
 
-一个使用 **`var` **声明变量的语句块的例子：
+一个使用 **`var`** 声明变量的语句块的例子：
 
 ```js
 // myVarVariable 在这里 *能* 被引用
@@ -238,7 +239,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 `undefined`。
 
-JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
+JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
 
 ## 运算符
 
@@ -250,7 +251,7 @@ x += 5; // 等价于 x = x + 5;
 
 可以使用 `++` 和 `--` 分别实现变量的自增和自减。两者都可以作为前缀或后缀操作符使用。
 
-[`+` 操作符](</zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#.E5.8A.A0.E6.B3.95_(.2B)>)还可以用来连接字符串：
+[`+` 操作符](</zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#.E5.8A.A0.E6.B3.95_(.2B)>) 还可以用来连接字符串：
 
 ```js
 "hello" + " world"; // hello world
@@ -369,7 +370,7 @@ switch(action) {
 }
 ```
 
-如果你不使用 `break` 语句，JavaScript 解释器将会执行之后 `case` 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 `break。`
+如果你不使用 `break` 语句，JavaScript 解释器将会执行之后 `case` 中的代码。除非是为了调试，一般你并不需要这个特性，所以大多数时候不要忘了加上 `break`。
 
 ```js
 switch(a) {
@@ -482,7 +483,7 @@ obj.for = 'Simon'; // 语法错误，因为 for 是一个预留关键字
 obj["for"] = 'Simon'; // 工作正常
 ```
 
-> **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。 这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
+> **备注：** 从 ECMAScript 5 开始，预留关键字可以作为对象的属性名（reserved words may be used as object property names "in the buff"）。这意味着当定义对象字面量时不需要用双引号了。参见 ES5 [Spec](http://es5.github.io/#x7.6.1).
 
 关于对象和原型的详情参见： [Object.prototype](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). 解释对象原型和对象原型链可以参见：[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
 
@@ -541,7 +542,7 @@ for (const currentValue of a) {
 }
 ```
 
-遍历数组的另一种方法是使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环， 然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 `Array.prototype` 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：
+遍历数组的另一种方法是使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环，然而这并不是遍历数组元素而是数组的索引。注意，如果哪个家伙直接向 `Array.prototype` 添加了新的属性，使用这样的循环这些属性也同样会被遍历。所以并不推荐使用这种方法遍历数组：
 
 ```js
 for (var i in a) {

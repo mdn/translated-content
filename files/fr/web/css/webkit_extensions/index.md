@@ -9,6 +9,7 @@ tags:
   - WebKit
 translation_of: Web/CSS/WebKit_Extensions
 ---
+
 {{CSSRef}}
 
 Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prennent en charge plusieurs **extensions spécifiques à [CSS](/fr/docs/Web/CSS)**. Ces extensions sont généralement préfixées par `-webkit`. Certaines propriétés préfixées par `-webkit` peuvent également fonctionner avec le préfixe `-apple`. Quelques unes de ces extensions sont préfixées avec `-epub`.

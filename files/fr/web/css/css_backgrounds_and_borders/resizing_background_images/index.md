@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
+
 {{CSSRef}}
 
 La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.

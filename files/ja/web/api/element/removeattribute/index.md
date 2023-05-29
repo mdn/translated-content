@@ -2,6 +2,7 @@
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 {{domxref("Element")}} の **`removeAttribute()`** メソッドは、指定された名前の属性を要素から削除します。
@@ -37,9 +38,7 @@ document.getElementById("div1").removeAttribute("align");
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-element-removeattribute', 'Element" removeAttribute')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

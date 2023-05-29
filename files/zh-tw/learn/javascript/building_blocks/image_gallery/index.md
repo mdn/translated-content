@@ -2,6 +2,7 @@
 title: 影像圖庫
 slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 現在我們已經看過了基本的 JavaScript 組建，我們將讓你做一個測試，從建立一個在很多網站上常見的事物 — JavaScript 基礎的影像圖庫，來測試你對迴圈、函數、條件式及事件的知識。
@@ -23,7 +24,7 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 
 要進行這個評量，你要先下載 [grab the ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) 檔案，解壓縮在你電腦中的某個檔案夾作為範例。
 
-> **備註：** 你也可以在某些網站進行評鑑，如 [JSBin](http://jsbin.com/) 或[Thimble](https://thimble.mozilla.org/)。你可以把這些 HTML、CSS 和 JavaScript 貼到這些線上編輯器中。如果你用了一個沒法把 JavaScript/CSS 分別放在不同面板的線上編輯器，你可以放心的把這些`<script>`/`<style>`元件改成 inline 貼進 HTML 網頁裡。
+> **備註：** 你也可以在某些網站進行評鑑，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。你可以把這些 HTML、CSS 和 JavaScript 貼到這些線上編輯器中。如果你用了一個沒法把 JavaScript/CSS 分別放在不同面板的線上編輯器，你可以放心的把這些`<script>`/`<style>`元件改成 inline 貼進 HTML 網頁裡。
 
 ## 專案簡報
 
@@ -33,14 +34,12 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 <h1>Image gallery example</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 完成後看起來像下圖：
@@ -92,7 +91,7 @@ That just leaves our darken/lighten `<button>` — we've already provided a line
 The following lines provide a basis for achieving the changes stipulated in points 2 and 3 above.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```

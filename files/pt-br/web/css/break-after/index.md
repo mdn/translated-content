@@ -1,8 +1,8 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 A propriedade **`break-after`** do [CSS](/pt-BR/docs/Web/CSS) configura como uma quebra de página, coluna ou região deve se comportar após renderizar um elemento. Se nenhum elemento foi renderizado, a propriedade é ignorada.
@@ -40,8 +40,8 @@ Each possible break point (in other words, each element boundary) is affected by
 
 To determine if a break must be done, the following rules are applied:
 
-1.  If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
-2.  If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
+1. If any of the three concerned values is a _forced break value_ (`always`, `left`, `right`, `page`, `column`, or `region`), it has precedence. If more than one of them are such a break, the one of the element that appears the latest in the flow is taken (i.e., the `break-before` value has precedence over the `break-after` value, which itself has precedence over the `break-inside` value).
+2. If any of the three concerned values is an _avoid break value_ (`avoid`, `avoid-page`, `avoid-region`, or `avoid-column`), no such break will be applied at that point.
 
 Once forced breaks have been applied, soft breaks may be added if needed, but not on element boundaries that resolve in a corresponding `avoid` value.
 
@@ -109,7 +109,7 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **Note:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
+> **Nota:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
 
 ## Specifications
 
@@ -121,10 +121,4 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 
 ## Browser compatibility
 
-### Support in multi-column layout
-
-{{Compat("css.properties.break-after.multicol_context")}}
-
-### Support in paged media
-
-{{Compat("css.properties.break-after.paged_context")}}
+{{Compat}}

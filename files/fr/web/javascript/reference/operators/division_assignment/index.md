@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.division_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de division et d'affectation (`/=`) divise la variable fournie par l'opérande gauche par la valeur indiquée par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.

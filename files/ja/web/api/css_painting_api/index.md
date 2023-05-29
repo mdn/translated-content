@@ -2,6 +2,7 @@
 title: CSS Painting API
 slug: Web/API/CSS_Painting_API
 ---
+
 {{DefaultAPISidebar("CSS Painting API")}}
 
 CSS Painting API（[CSS Houdini](/ja/docs/Web/Houdini) API の傘の一部）を使用すると、開発者は要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できます。
@@ -163,9 +164,7 @@ li:nth-of-type(3n+1) {
 
 ## 仕様
 
-| 仕様                                         | 状態                                     | コメント |
-| -------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('CSS Painting API')}} | {{Spec2('CSS Painting API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

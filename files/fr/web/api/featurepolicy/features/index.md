@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/features
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La méthode **`features()`** de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms de directives de fonctionnalités supportées par l'agent utilisateur. Une fonctionnalité dont le nom apparait dans la liste pourrait n'être pas autorisée par le Feature Policy du contexte courant d'exécution ou n'être pas accessible à cause des permissions de l'utilisateur.

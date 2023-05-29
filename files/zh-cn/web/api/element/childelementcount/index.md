@@ -2,6 +2,7 @@
 title: Element.childElementCount
 slug: Web/API/Element/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.childElementCount`** 只读属性返回一个***无符号长整型数字***，表示给定元素的子元素数。
@@ -84,7 +85,7 @@ if (foo.childElementCount > 0) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.childElementCount")}}
+{{Compat}}
 
 ## 规范
 

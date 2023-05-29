@@ -2,6 +2,7 @@
 title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Message

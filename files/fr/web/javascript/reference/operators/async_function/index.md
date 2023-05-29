@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Reference/Opérateurs/async_function
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`async function`** peut être utilisé pour définir une fonction asynchrone au sein d'une expression.
@@ -72,15 +73,11 @@ add(10).then(v => {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES2018', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2018')}}     |                      |
-| {{SpecName('ES2017', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2017')}}     | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.async_function_expression")}}
+{{Compat}}
 
 ## Voir aussi
 

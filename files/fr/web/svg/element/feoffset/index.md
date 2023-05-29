@@ -6,6 +6,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feOffset
 ---
+
 {{SVGRef}}
 
 La primitive de filtre **`<feOffset>`** permet de décaler l'image qu'elle a en entrée selon les attributs {{SVGAttr("dx")}} et {{SVGAttr("dy")}}.

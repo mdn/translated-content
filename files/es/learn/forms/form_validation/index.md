@@ -1,17 +1,9 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-tags:
-  - Ejemplo
-  - Guía
-  - HTML
-  - Intermedio
-  - JavaScript
-  - Web
-  - formulários
-translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Antes de enviar datos al servidor, es importante asegurarse de que se completan todos los controles de formulario requeridos, y en el formato correcto. Esto se denomina **validación de formulario en el lado del cliente** y ayuda a garantizar que los datos que se envían coinciden con los requisitos establecidos en los diversos controles de formulario. Este artículo te guiará por los conceptos básicos y ejemplos de validación de formularios en el lado del cliente.
@@ -801,19 +793,6 @@ La validación de formularios en el lado del cliente a veces requiere JavaScript
 Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
-
-## En este módulo
-
-- [Tu primer formulario](/es/docs/Learn/Forms/Your_first_form)
-- [Cómo estructurar un formulario web](/es/docs/Learn/Forms/How_to_structure_a_web_form)
-- [Los controles de formulario básicos originales](/es/docs/Learn/Forms/Basic_native_form_controls)
-- [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types)
-- [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls)
-- [Aplicar estilo a formularios web](/es/docs/Learn/Forms/Styling_web_forms)
-- [Aplicación de estilo a formularios avanzada](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Pseudoclases UI](/es/docs/Learn/Forms/UI_pseudo-classes)
-- [Validación de formularios en el lado del cliente](/es/docs/Learn/Forms/Form_validation)
-- [Enviar los datos de un formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Temas avanzados
 

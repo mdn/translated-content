@@ -1,7 +1,8 @@
 ---
 title: 外边距重叠
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 块的[上外边距 (margin-top)](/zh-CN/docs/Web/CSS/margin-top)和[下外边距 (margin-bottom)](/zh-CN/docs/Web/CSS/margin-bottom)有时合并 (折叠) 为单个边距，其大小为单个边距的最大值 (或如果它们相等，则仅为其中一个)，这种行为称为**边距折叠**。
@@ -60,7 +61,7 @@ p:nth-child(2){
 
 ```html
 <style>
-​​​​​​p {
+p {
   margin: 0;
 }
 div {
@@ -69,7 +70,7 @@ div {
 }
 </style>
 
-<p>上边界范围是 87 ...</p>
+<p>下边界范围是 87 ...</p>
 <div></div>
 <p>... 上边界范围是 87</p>
 ```
@@ -130,10 +131,10 @@ p {
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

@@ -8,6 +8,7 @@ tags:
 translation_of: Glossary/Compile
 original_slug: Glossaire/Compile
 ---
+
 La compilation est un processus consistant à transformer un programme informatique, écrit dans un langage donné, en un programme dans un autre langage (généralement en assembleur qui pourra être exécuté par l'ordinateur).
 
 ## Voir aussi

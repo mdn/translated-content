@@ -2,6 +2,7 @@
 title: Window.print()
 slug: Web/API/Window/print
 ---
+
 {{ ApiRef() }}
 
 ## 摘要

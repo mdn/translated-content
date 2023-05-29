@@ -2,6 +2,7 @@
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel()`** 构建函数用于创建一个 {{domxref("BroadcastChannel")}} 对象，并与对应的频道相关联。
@@ -34,7 +35,7 @@ bc.postMessage('New listening connected!');
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.BroadcastChannel")}}
+{{Compat}}
 
 ## 另见
 

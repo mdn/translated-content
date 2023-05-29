@@ -2,21 +2,22 @@
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェースの `toJSON()` メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。
+{{domxref("PushSubscription")}} インターフェイスの **`toJSON()`** メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。
 
 ## 構文
 
-```
-​mySubscription = subscription.toJSON()
+```js-nolint
+mySubscription = subscription.toJSON()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 JSON オブジェクト。現在、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
 
@@ -31,13 +32,11 @@ navigator.serviceWorker.ready.then(function(reg) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                 | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#pushsubscription-interface','PushSubscription (see serializer listed in the WebIDL)')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushSubscription.toJSON")}}
 

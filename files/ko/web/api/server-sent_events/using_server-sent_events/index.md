@@ -1,15 +1,6 @@
 ---
 title: Server-Sent Events 사용하기
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
@@ -56,7 +47,7 @@ evtSource.addEventListener("ping", function(event) {
 
 앞서 소개한 코드와 비슷하지만 `event` 필드에 "ping"이 설정된 메시지가 서버로부터 보내졌을 때만 자동으로 호출된다는 점이 다르다.
 
-<div class="notecard warning"><p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is <em>per browser</em> and is set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com</code> (per <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p></div>
+> **Warning:** When **not used over HTTP/2**, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is _per browser_ and is set to a very low number (6). The issue has been marked as "Won't fix" in [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) and [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to `www.example1.com` and another 6 SSE connections to `www.example2.com` (per [Stackoverflow](https://stackoverflow.com/a/5326159/1905229)). When using HTTP/2, the maximum number of simultaneous _HTTP streams_ is negotiated between the server and the client (defaults to 100).
 
 ## 서버에서의 이벤트 송신
 
@@ -190,7 +181,5 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 ```
 
 ## 브라우저 호환성
-
-### `EventSource`
 
 {{Compat}}

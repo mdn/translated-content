@@ -1,12 +1,8 @@
 ---
 title: 함수
 slug: Glossary/Function
-tags:
-  - 익명함수
-  - 즉시 실행 함수
-  - 함수
-translation_of: Glossary/Function
 ---
+
 **함수**는 다른 코드에서 또는 자신에 의해 호출되거나 함수 레퍼런스를 저장한 {{Glossary("variable", "변수")}}에 의해 호출될 수 있는 코드조각이다. 함수가 호출될 때 함수의 입력으로 {{Glossary("Argument", "인수")}} 가 전달되고 함수는 선택적으로 출력값을 반환할 수 있다. 또한 {{glossary("JavaScript")}}에서 함수는 {{glossary("object", "객체")}}가 될 수도 있다.
 
 함수명은 함수 선언문 또는 함수 표현식의 일부로써 선언된 {{Glossary("identifier","식별자")}}이다. 함수 이름의 {{Glossary("scope","범위")}}는 함수 이름의 선언식 또는 표현식인지에 따라 결정된다.
@@ -76,7 +72,7 @@ const loop = x => {
 // Declared functions can't be called immediately this way
 // Error (https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
 /*
-​function foo() {
+function foo() {
     console.log('Hello Foo');
 }();
 */

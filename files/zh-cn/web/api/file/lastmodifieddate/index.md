@@ -2,6 +2,7 @@
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API")}}
 
 ## 概述

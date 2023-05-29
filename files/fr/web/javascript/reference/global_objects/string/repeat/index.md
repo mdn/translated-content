@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/repeat
 ---
+
 {{JSRef}}
 
 La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
@@ -59,11 +60,8 @@ Une nouvelle chaîne de caractères composée du nombre indiqué de copies de la
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ES2015')}}     | Première définition. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.repeat")}}
+{{Compat}}

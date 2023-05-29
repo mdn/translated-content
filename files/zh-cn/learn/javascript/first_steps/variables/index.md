@@ -2,6 +2,7 @@
 title: 如何存储你需要的信息 — 变量
 slug: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习 JavaScript 的基础，了解如何使用 -- 变量。
@@ -42,7 +43,7 @@ button.onclick = function() {
 }
 ```
 
-{{ EmbedLiveSample('变量是什么', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('变量是什么？', '100%', 50) }}
 
 在上面的例子中，点击按钮之后，第一行代码会在屏幕上弹出一个对话框，让你输入名字，然后存储输入的名字到一个变量。第二行代码将会显示包含你名字的欢迎信息，你的名字就是从之前的变量里面读取的。
 
@@ -217,7 +218,7 @@ myName = 'Chris';
 myAge = 37;
 ```
 
-现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。 同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些：
+现在回到控制台并且尝试输入这几行。每输入一条你都应该确认一下控制台输出的变量是不是你刚赋的值。同样，你可以通过在控制台中输入变量的名称来返回该变量的值 — 再次尝试下这些：
 
 ```js
 myName;
@@ -230,7 +231,7 @@ myAge;
 let myName = 'Chris';
 ```
 
-这可能是大多数时间你都会使用的方式， 因为它要比在单独的两行上做两次操作要快。
+这可能是大多数时间你都会使用的方式，因为它要比在单独的两行上做两次操作要快。
 
 > **备注：** 如果你写一个声明和初始化变量的多行 JavaScript 代码的程序，你可以在初始化变量之后再实际声明它，并且它仍然可以工作。这是因为变量的声明通常在其余的代码执行之前完成。这叫做**顶置**—阅读[var hoisting](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)来了解更多细节。
 
@@ -308,7 +309,7 @@ myAge = 40;
 - 一个可靠的命名约定叫做 ["小写驼峰命名法"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms)，用来将多个单词组在一起，小写整个命名的第一个字母然后大写剩下单词的首字符。我们已经在文章中使用了这种命名方法。
 - 让变量名直观，它们描述了所包含的数据。不要只使用单一的字母/数字，或者长句。
 - 变量名大小写敏感——因此`myage`与`myAge`是 2 个不同的变量。
-- 最后也是最重要的一点—— 你应当避免使用 JavaScript 的保留字给变量命名。保留字，即是组成 JavaScript 的实际语法的单词！因此诸如 `var`, `function`, `let和` `for`等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。
+- 最后也是最重要的一点—— 你应当避免使用 JavaScript 的保留字给变量命名。保留字，即是组成 JavaScript 的实际语法的单词！因此诸如 `var`、`function`、`let` 和 `for` 等，都不能被作为变量名使用。浏览器将把它们识别为不同的代码项，因此你将得到错误。
 
 > **备注：** 你能从[词汇语法—关键字](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)找到一个相当完整的保留关键字列表来避免使用关键字当作变量。
 
@@ -442,15 +443,3 @@ typeof myNumber
 到目前为止，您应该了解了一些 JavaScript 变量以及如何创建它们。在下一篇文章中，我们将更详细地关注数字，了解如何在 JavaScript 中使用基础数学。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
-
-## 在此模块内
-
-- [What is JavaScript?](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

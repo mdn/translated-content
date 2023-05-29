@@ -2,14 +2,15 @@
 title: <time>
 slug: Web/HTML/Element/time
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datetime` 属性を使用して、機械可読な形式の日付を記述することができ、検索エンジンの結果を改善したりリマインダーなどの独自機能に使用したりすることができます。
 
 次のうちの一つを表します。
 
 - 24 時間制の時刻
-- {{interwiki("wikipedia", "グレゴリオ暦")}}の正確な日付 (時刻やタイムゾーンを伴うことも可能)
+- [グレゴリオ暦](https://ja.wikipedia.org/wiki/グレゴリオ暦)の正確な日付 (時刻やタイムゾーンを伴うことも可能)
 - [妥当な期間](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string)
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
@@ -72,7 +73,7 @@ HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datet
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : この属性は要素の日付や時刻を表し、下記に示す書式のうちの一つでなければなりません。
 
 ## 使用上のメモ
@@ -155,11 +156,7 @@ _datetime 値_ (機械可読な日時の値) は要素の `datetime` 属性の�
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5.1')}} から変更なし |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-time-element', '&lt;time&gt;')}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-time-element', '&lt;time&gt;')}}     | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

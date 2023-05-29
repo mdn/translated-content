@@ -1,15 +1,9 @@
 ---
 title: aside
 slug: Web/HTML/Element/aside
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - HTML:Referencia_de_elementos
-  - para_revisar
-translation_of: Web/HTML/Element/aside
 original_slug: Web/HTML/Elemento/aside
 ---
+
 El **elemento HTML `<aside>`** representa una sección de una página que consiste en contenido que está indirectamente relacionado con el contenido principal del documento. Estas secciones son a menudo representadas como barras laterales o como inserciones y contienen una explicación al margen como una definición de glosario, elementos relacionados indirectamente, como publicidad, la biografía del autor, o en aplicaciones web, la información de perfil o enlaces a blogs relacionados.
 
 > **Nota:** Notas de uso:
@@ -36,5 +30,3 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 
 - Otros elementos relacionados con esta sección: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
 - [Secciones y líneas generales de un documento HTML 5](/en/Sections_and_Outlines_of_an_HTML5_document) .
-
-{{ languages ( { "en": "en/HTML/Element/aside","es":"es/docs/HTML/Elemento/aside" } ) }}

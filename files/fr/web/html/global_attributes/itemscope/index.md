@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/itemscope
 original_slug: Web/HTML/Attributs_universels/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemscope`** fonctionne généralement avec l'attribut `itemtype` afin d'indiquer qu'un bloc HTML contient un objet donné. `itemscope` crée l'objet et définit la portée de l'`itemtype` associé. Il est possible d'associer un attribut `itemscope` à n'importe quel élément HTML.

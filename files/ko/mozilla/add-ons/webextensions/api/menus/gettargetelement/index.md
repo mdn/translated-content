@@ -3,6 +3,7 @@ title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement
 ---
+
 {{AddonSidebar}}
 
 주어진 `targetElementId`에 해당하는 요소를 돌려준다.
@@ -46,7 +47,7 @@ browser.menus.create({
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.getTargetElement")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** 方法會透過給定函式、測試陣列中是否至少有一個元素，通過該函式所實作的測試。這方法回傳的是布林值。
@@ -176,7 +177,7 @@ if (!Array.prototype.some) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## 參見
 

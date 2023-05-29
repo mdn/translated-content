@@ -2,6 +2,7 @@
 title: feGaussianBlur
 slug: Web/SVG/Element/feGaussianBlur
 ---
+
 {{SVGRef}}
 
 该滤镜对输入图像进行高斯模糊，属性{{ SVGAttr("stdDeviation") }}中指定的数量定义了钟形。
@@ -32,7 +33,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 该示例的结果如下所示：
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("简单示例",232,124)}}
 
 ### 投影示例
 
@@ -57,15 +58,15 @@ slug: Web/SVG/Element/feGaussianBlur
 
 该示例的结果如下所示：
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{EmbedLiveSample("投影示例",125,124)}}
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [滤镜属性](/en/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -76,7 +77,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 ## DOM 接口
 
-该元素实现了[`SVGFEGaussianBlurElement`](/en/DOM/SVGFEGaussianBlurElement)接口。
+该元素实现了[`SVGFEGaussianBlurElement`](/zh-CN/DOM/SVGFEGaussianBlurElement)接口。
 
 ## 参见
 
@@ -96,4 +97,4 @@ slug: Web/SVG/Element/feGaussianBlur
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/en-US/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)

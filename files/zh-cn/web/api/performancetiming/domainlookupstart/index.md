@@ -2,6 +2,7 @@
 title: PerformanceTiming.domainLookupStart
 slug: Web/API/PerformanceTiming/domainLookupStart
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

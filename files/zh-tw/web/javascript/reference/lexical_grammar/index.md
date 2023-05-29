@@ -2,6 +2,7 @@
 title: Lexical grammar
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
+
 {{JsSidebar("More")}}
 
 此篇介紹 Javascript 的 lexical grammar。ECMAScript 的原始碼從左到右被掃描並被轉換成一系列的輸入元素也就是 token、控制字元、行終止字元、註解或是空白字元。ECMAScript 也定義了一些特定的關鍵字和實體語法還有用來自動插入分號來結束陳述式的規則。
@@ -233,7 +234,7 @@ false
 0777 // 被解析成八進制, 十進制值為 511
 ```
 
-數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 {{bug(957513)}}。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
+數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzil.la/957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二進制
 
@@ -415,7 +416,7 @@ a + b;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.grammar")}}
+{{Compat}}
 
 ## 參閱
 

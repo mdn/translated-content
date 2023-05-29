@@ -2,6 +2,7 @@
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`min()`** は {{domxref('CSSNumericValue')}} インターフェイスのメソッドで、渡された値のうちで最も小さい値を返します。渡された値は同じ型でなければなりません。

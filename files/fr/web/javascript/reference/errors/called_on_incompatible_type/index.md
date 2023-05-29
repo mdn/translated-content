@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
 original_slug: Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

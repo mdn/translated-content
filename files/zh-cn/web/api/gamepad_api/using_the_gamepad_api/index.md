@@ -2,6 +2,7 @@
 title: 使用 Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}{{ SeeCompatTable() }}
 
 HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<canvas>` 、WebGL、 `<audio>` 和 `<video>` 这样的技术，随着 JavaScript 的逐渐成熟，许多以前需要 native code 来实现的功能现在都可以实现了。Gamepad(手柄) API 是开发人员和设计者识别和使用游戏控制板和其他游戏控制器的一种方法。
@@ -10,15 +11,15 @@ HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<ca
 
 ## 连接控制器
 
-当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 {{ event("gamepadconnected") }} 事件。 如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 {{ event("gamepadconnected") }} 事件。
+当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件。如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件。
 
 > **备注：** 在 Firefox 中，控制器只会暴露给与用户产生交互的可见页面。这有助于防止控制器被用于获取用户的指纹。一旦有一个手柄与页面产生交互，那么其他连接的控制器将自动对页面可见。
 
-你可以这样使用 {{ event("gamepadconnected") }} ：
+你可以这样使用 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) ：
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     e.gamepad.index, e.gamepad.id,
     e.gamepad.buttons.length, e.gamepad.axes.length);
 });
@@ -28,11 +29,11 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 断开控制器连接
 
-当控制器断开连接时，如果页面以前接收过该手柄的数据 (例如 {{ event("gamepadconnected") }})，那么第二个事件 {{ event("gamepaddisconnected") }} 将会分配至焦点页面：
+当控制器断开连接时，如果页面以前接收过该手柄的数据 (例如 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event))，那么第二个事件 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 将会分配至焦点页面：
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("控制器已从 %d 位断开: %s",
+  console.log("控制器已从 %d 位断开：%s",
     e.gamepad.index, e.gamepad.id);
 });
 ```
@@ -71,7 +72,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 ```js
 window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     gp.index, gp.id,
     gp.buttons.length, gp.axes.length);
 });
@@ -91,7 +92,7 @@ window.addEventListener("gamepadconnected", function(e) {
 - `axes`: 一个表示设备上坐标输入控件 (例如控制器摇杆) 的数组对象。数组中的每个值都是介于 -1.0 到 1.0 的浮点值，来表示坐标方向的最低 (-1.0) 和最大 (1.0) 值。
 - `timestamp`: 它将返回一个 {{ domxref("DOMHighResTimeStamp") }} ，该值表示上次更新此控制器数据的时间，以便开发者确定 `axes` 和 `button` 数据是否已从硬件更新。该值必须相对于 {{ domxref("PerformanceTiming") }} 接口的 `navigationStart` 对象。值是单调递增的，这意味着可以通过对比大小来确定数据更新的先后顺序，因为新的值始终比旧的值大。请注意 Firefox 当前不支持该属性。
 
-> **备注：** 出于安全原因，Gamepad 对象在 {{ event("gamepadconnected") }} 事件上可用而在 {{ domxref("Window") }} 对象上不可用。一旦我们得到了对它的引用，我们就可以获取其属性以了解有关控制器当前状态的信息。在后台，此对象将会在控制器状态更改时更新。
+> **备注：** 出于安全原因，Gamepad 对象在 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件上可用而在 {{ domxref("Window") }} 对象上不可用。一旦我们得到了对它的引用，我们就可以获取其属性以了解有关控制器当前状态的信息。在后台，此对象将会在控制器状态更改时更新。
 
 ### 使用按键信息
 
@@ -107,7 +108,7 @@ var a = 0;
 var b = 0;
 ```
 
-接下来我们使用 {{ event("gamepadconnected") }} 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}`[0]` 来抓取，输出控制器信息到我们“控制器信息”的 `div` 里，并开始 `gameLoop()` 函数来启动球的运动进程。
+接下来我们使用 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}`[0]` 来抓取，输出控制器信息到我们“控制器信息”的 `div` 里，并开始 `gameLoop()` 函数来启动球的运动进程。
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
@@ -118,7 +119,7 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-现在我们再使用 {{ event("gamepaddisconnected") }} 事件来检查如果控制器断开的情况。如果断开了，我们会停止 {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} 循环 (见下方) 并重置控制器信息到原来的样子。
+现在我们再使用 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件来检查如果控制器断开的情况。如果断开了，我们会停止 {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} 循环 (见下方) 并重置控制器信息到原来的样子。
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
@@ -191,11 +192,11 @@ function gameLoop() {
 
 ### 使用坐标方向 (axes) 信息
 
-**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value ，其他基本一样，Firefox 与 Chrome 均是。)**
+**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value，其他基本一样，Firefox 与 Chrome 均是。)**
 
 ## 完整的例子：显示控制器状态
 
-这个例子展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 {{ event("gamepadconnected") }} 和 {{ event("gamepaddisconnected") }} 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
+这个例子展示了怎样使用 {{ domxref("Gamepad") }} 对象，还有 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 和 [`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件显示所有已连接到系统的控制器的状态。你可以查看[在线演示](http://luser.github.io/gamepadtest/)并且可在 Github 上看到[完整的源代码](https://github.com/luser/gamepadtest)。
 
 ```js
 var haveEvents = 'ongamepadconnected' in window;
@@ -333,4 +334,4 @@ if (!haveEvents) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Gamepad")}}
+{{Compat}}

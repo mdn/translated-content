@@ -1,7 +1,8 @@
 ---
 title: CSS Backgrounds and Borders
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 ---
+
 {{CSSRef}}
 
 **CSS Backgrounds and Borders** 是 CSS 的一个模块，它可以让你为元素的背景和边框设置样式。背景可以用颜色或图像填充，剪裁或调整大小，以及以其他方式修改。边框可以用线条或图像装饰，并制成方形或圆形。此外，元素框可以用阴影装饰。
@@ -59,9 +60,9 @@ slug: Web/CSS/CSS_Backgrounds_and_Borders
 
 ## 工具
 
-- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Explains how to set one or more backgrounds on an element.
-- [Scaling background images](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images)
+- [Scaling background images](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_background_images)
   - : Describes how to change the size and repeating behavior of background images.
 - [Applying color to HTML elements using CSS](/zh-CN/docs/Web/HTML/Applying_color)
   - : An overview of how CSS color can be used in HTML, including for borders.
@@ -69,7 +70,7 @@ slug: Web/CSS/CSS_Backgrounds_and_Borders
   - : 此交互式工具让你以可视化方式创建边框图像（{{cssxref("border-image")}} 属性）。
 - [Border-radius 生成器](/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator)
   - : 此交互式工具让你以可视化方式创建圆角（{{cssxref("border-radius")}} 属性）。
-- [Box-shadow 生成器](/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator)
+- [Box-shadow 生成器](/zh-CN/docs/Web/CSS/CSS_box_model/Box-shadow_generator)
   - : 此交互式工具让你以可视化方式创建元素身后的阴影（{{cssxref("box-shadow")}} 属性）。
 
 ## 规范

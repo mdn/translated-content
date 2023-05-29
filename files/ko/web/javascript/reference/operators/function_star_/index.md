@@ -1,13 +1,8 @@
 ---
 title: function* expression
 slug: Web/JavaScript/Reference/Operators/function*
-tags:
-  - ECMAScript6
-  - Function
-  - Generator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function*`** keyword 는 표현식 내에서 generator function 을 정의합니다.
@@ -45,11 +40,11 @@ var x = function*(y) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

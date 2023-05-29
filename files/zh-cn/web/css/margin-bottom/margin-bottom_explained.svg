@@ -1,0 +1,16 @@
+<svg width="368" height="252" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#0066A6" d="M4 3h300v200H4z"/><path stroke="#4A4A4A" stroke-width="4" stroke-linejoin="round" d="M4 172h300v31H4z"/><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8" fill="#1897D9" d="M34 34h236v138H34z"/><path fill="#FFF" d="M67 65h170v76H67z"/><text font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#FFF">
+                <tspan x="88.129" y="22">Margin Area </tspan>
+                <tspan x="166.871" y="22" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">外边距区</tspan>
+            </text><text font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#FFF">
+                <tspan x="84.296" y="54">Padding Area </tspan>
+                <tspan x="171.704" y="54" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">内边距区</tspan>
+            </text><text font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#008BD7">
+                <tspan x="113.691" y="99">Content Area</tspan>
+                <tspan x="135" y="115" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">内容区</tspan>
+            </text><text font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#4A4A4A">
+                <tspan x="320.691" y="87">Border</tspan>
+                <tspan x="329" y="103" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">描边</tspan>
+            </text><text font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#4A4A4A">
+                <tspan x="108.145" y="224">margin-bottom</tspan>
+                <tspan x="43.5" y="240" font-family="PingFangSC-Semibold, PingFang SC" font-weight="500">底部外边距（其高度由该属性值定义）</tspan>
+            </text><circle stroke="#4A4A4A" stroke-width="4" cx="270" cy="93" r="6"/><path d="M276 93h40" stroke="#4A4A4A" stroke-width="4" stroke-linecap="round"/></g></svg>

@@ -1,16 +1,8 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - HTTP
-  - Hypertext
-  - Reference
-  - TCP/IP
-  - Web
-  - Web Development
-  - l10n:priority
-translation_of: Web/HTTP
 ---
+
 {{HTTPSidebar}}
 
 **_Hypertext Transfer Protocol (HTTP)_** は HTML などのハイパーメディア文書を転送するための[アプリケーション層](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4)プロトコルです。このプロトコルはウェブブラウザー(クライアント)とウェブサーバー間の通信を目的として設計されていますが、他の用途でも使用されることがあります。 HTTP は旧来の[クライアント・サーバーモデル](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%83%A2%E3%83%87%E3%83%AB)に則っており、クライアントはサーバーにリクエストを送信するためにポートを開き、サーバー側からのレスポンスが返ってくるまで待機します。 HTTP はいわゆる[ステートレスプロトコル](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%83%AC%E3%82%B9%E3%83%BB%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB)であり、つまりサーバーは二つのリクエスト間で何もデータを保持しません。 HTTP は多くの場合 TCP/IP 層上の通信で使用されますが、任意の信頼性がある[トランスポート層](https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%B1%A4)、すなわち、 UDP のように知らぬ間にメッセージが失われるようなことがないプロトコルでも使用されることがあります。 [RUDP](https://en.wikipedia.org/wiki/Reliable_User_Datagram_Protocol) — UDP に信頼性を追加したもの — も代替用として適合します。

@@ -2,6 +2,7 @@
 title: user-select
 slug: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`user-select`** 控制用户能否选中文本。除了文本框内，它对被载入为 {{Glossary("Chrome", "chrome")}} 的内容没有影响。
@@ -67,7 +68,7 @@ user-select: unset;
 
 > **备注：** CSS UI 4 已[将 `user-select` 的 `element` 属性值重命名为 `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -99,9 +100,9 @@ user-select: unset;
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -109,7 +110,7 @@ user-select: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.user-select")}}
+{{Compat}}
 
 ## 参见
 

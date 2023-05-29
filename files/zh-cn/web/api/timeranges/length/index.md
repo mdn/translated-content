@@ -2,6 +2,7 @@
 title: TimeRanges.length
 slug: Web/API/TimeRanges/length
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **`TimeRanges.length`** 返回对象中时间范围的个数。
@@ -40,4 +41,4 @@ if (buf.length == 1) {
 
 ## 浏览器兼容性
 
-{{Compat("api.TimeRanges.length")}}
+{{Compat}}

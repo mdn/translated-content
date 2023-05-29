@@ -2,6 +2,7 @@
 title: Clients.openWindow()
 slug: Web/API/Clients/openWindow
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow()`** 将抛出 InvalidAccessError.
@@ -59,4 +60,4 @@ onotificationclick = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.openWindow")}}
+{{Compat}}

@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 テキストの書式設定のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます。（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
@@ -219,7 +220,7 @@ HTML には引用をマークアップするための機能もあります。ど
 
 ### ブロック引用
 
-ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmlelement("blockquote")}} 要素で囲み、 {{htmlattrxref("cite", "blockquote")}} 属性の中に引用元を指す URL を記載する必要があります。例えば、以下のマークアップは MDN の `<blockquote>` 要素のページから引用しています。
+ブロックレベルの内容（段落、複数の段落、リストなど）の一部が他の場所から引用されている場合、それを示すために {{htmlelement("blockquote")}} 要素で囲み、 [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の中に引用元を指す URL を記載する必要があります。例えば、以下のマークアップは MDN の `<blockquote>` 要素のページから引用しています。
 
 ```html
 <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
@@ -255,7 +256,7 @@ for short quotations that don't require paragraph breaks.</q></p>
 
 ### 引用元
 
-{{htmlattrxref("cite", "blockquote")}} 属性の内容は有用そうに見えますが、残念ながらブラウザーや 画面リーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
+[`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性の内容は有用そうに見えますが、残念ながらブラウザーや 画面リーダーなどは、この属性を実際にはあまり使用してくれません。 JavaScript や CSS を使って自身の解決策を書かない限り、ブラウザーに `cite` の内容を表示させる方法はありません。もしページ上で引用元を利用できるようにしたいのであれば、リンクやその他の適切な方法で本文中に利用できるようにする必要があります。
 
 {{htmlelement("cite")}} 要素がありますが、これは引用されたリソースのタイトル、例えば書籍の名前を格納することを意味しています。しかし、 `<cite>` 内のテキストを何らかの方法で引用元とリンクできない理由はありません。
 
@@ -422,7 +423,7 @@ textarea.onkeyup = () => {
 
 ウェブを見て回っているときによく出会うもう一つの要素は {{htmlelement("abbr")}} です。これは略語や頭字語を囲むために使用されます。どちらかを記載する場合、最初の使用では、略語をマークアップする `<abbr>` と共に、プレーンテキストでその用語の完全な展開を提供してください。これは、ユーザーエージェントに内容をどのように告知／表示するかのヒントを提供すると同時に、すべてのユーザーにその略語の意味を知らせます。
 
-略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 {{htmlattrxref("title")}} 属性の値として用語の完全な展開形を提供してください。
+略語に加えて展開形を提供することにあまり意味がありません。略語や頭字語がかなり短縮された用語である場合、 [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性の値として用語の完全な展開形を提供してください。
 
 ### 略語の例
 
@@ -438,7 +439,7 @@ textarea.onkeyup = () => {
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
-> **Note:** 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
+> **メモ:** 以前のバージョンの HTML では {{htmlelement("acronym")}} 要素にも対応していましたが、省略形と頭字語の両方を表現するために `<abbr>` を使用することにしたため、 HTML 仕様から削除されました。`<acronym>` は使用すべきではありません。
 
 ### アクティブラーニング: 略語のマークアップ
 
@@ -602,7 +603,7 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 </address>
 ```
 
-> **Note:** {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
+> **メモ:** {{htmlelement("address")}} 要素は、最も近い {{htmlelement("article")}} または {{htmlelement("body")}} 要素で含まれる文書の連絡先情報を提供するためにのみ使用すべきです。サイト全体の連絡先を記載するためにサイトのフッターに使用したり、著者の連絡先を記載するために記事の中で使用することは正しいことですが、そのページの内容に関係のないアドレスのリストをマークアップすることはできません。
 
 ## 上付きと下付き
 
@@ -707,15 +708,3 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。より多くの HTML 要素を探すには、 [HTML 要素リファレンス](/ja/docs/Web/HTML/Element) を参照してください（[インラインテキスト意味づけ](/ja/docs/Web/HTML/Element#インラインテキスト意味付け)の節はよい出発点となることでしょう）。次の記事では、 HTML 要素を [HTML 文書のさまざまな部分を構造化する](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)ために使用する方法ついて見ていきます。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -1,19 +1,13 @@
 ---
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
-tags:
-  - HTTP
-  - Server error
-  - Status code
-  - サーバーエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/504
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`504 Gateway Timeout`** サーバーエラーレスポンスコードは、サーバーがゲートウェイまたはプロキシとして機能しているときに、リクエストを完了するために必要な上流のサーバーからのレスポンスが時間内に得られなかったことを示します。
 
-> **Note:** **メモ**: {{interwiki("wikipedia", "Gateway_(telecommunications)", "ゲートウェイ")}}はネットワーク内の様々なものを指す可能性があり、 504 エラーはふつう、自分で修正できるものではありませんが、アクセスしようとしているウェブサーバーやプロキシで修正する必要があります。
+> **メモ:** [ゲートウェイ](https://ja.wikipedia.org/wiki/ゲートウェイ)はネットワーク内の様々なものを指す可能性があり、 504 エラーはふつう、自分で修正できるものではありませんが、アクセスしようとしているウェブサーバーやプロキシで修正する必要があります。
 
 ## ステータス
 

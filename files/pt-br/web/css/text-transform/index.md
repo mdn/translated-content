@@ -1,8 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 A propriedade de CSS **`text-transform`** especifica como capitalizar um texto de um elemento. Pode ser usado para que o texto apareça com todas as letras maiúsculas ou todas minúsculas, ou com cada palavra em maiúscula.
@@ -28,7 +28,7 @@ The `text-transform` property takes into account language-specific case mapping 
 - In Dutch (`nl`), the `ij` digraph becomes `IJ`, even with `text-transform: capitalize`, which only put the first letter of a word in uppercase.
 - In Greek (`el`), vowels lose their accent when the whole word is in uppercase (`ά`/`Α`), except for the disjunctive eta (`ή`/`Ή`). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second vowel (`άι`/`ΑΪ`).
 - In Greek (`el`), the lowercase sigma character has two forms: `σ` and `ς`. `ς` is used only when sigma terminates a word. When applying `text-transform: lowercase` to an uppercase sigma (`Σ`), the browser needs to choose the right lowercase form based on context.
-- in Irish (`ga`), certain prefixed letters remain in lowercase when the base initial is capitalised, so for example `text-transform: uppercase` will change `ar aon tslí` to `AR AON tSLÍ` and not, as one might expect, `AR AON TSLÍ `(Firefox only). In some cases, a hyphen is also removed upon uppercasing: `an t-uisce` transforms to `AN tUISCE `(and the hyphen is correctly reinserted by `text-transform: lowercase`)
+- in Irish (`ga`), certain prefixed letters remain in lowercase when the base initial is capitalised, so for example `text-transform: uppercase` will change `ar aon tslí` to `AR AON tSLÍ` and not, as one might expect, `AR AON TSLÍ` (Firefox only). In some cases, a hyphen is also removed upon uppercasing: `an t-uisce` transforms to `AN tUISCE` (and the hyphen is correctly reinserted by `text-transform: lowercase`)
 
 The language is defined by the `lang` HTML attribute or the `xml:lang` XML attribute.
 
@@ -42,9 +42,9 @@ Support for these specific cases vary from one browser to the other, so check th
 
   - : Is a keyword forcing the first _letter_ of each word to be converted to uppercase. Other characters are unchanged; that is, they retain their original case as written in the element's text. A letter is any Unicode character part of the Letter or Number general categories {{experimental_inline}} : it excludes any punctuation marks or symbols at the beginning of the word.
 
-    > **Note:** Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
+    > **Nota:** Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
 
-    > **Note:** The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. There were differences between browsers in the way the first letter was calculated (Firefox considered - and \_ as letters, but not the others. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases). By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely defined behavior.
+    > **Nota:** The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. There were differences between browsers in the way the first letter was calculated (Firefox considered - and \_ as letters, but not the others. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters. Internet Explorer 9 was the closest to the CSS 2 definition, but with some weird cases). By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely defined behavior.
 
 - `uppercase`
   - : Is a keyword forcing all characters to be converted to uppercase.
@@ -61,7 +61,7 @@ Support for these specific cases vary from one browser to the other, so check th
 
 ## Examples
 
-### `none`
+### Example using "none"
 
 ```html
 <p>Initial String
@@ -81,7 +81,7 @@ strong { float: right; }
 
 This demonstrates no text transformation.
 
-{{ EmbedLiveSample('none', '100%', '100px') }}
+{{ EmbedLiveSample('Example using "none"', '100%', '100px') }}
 
 ### `capitalize` (General)
 

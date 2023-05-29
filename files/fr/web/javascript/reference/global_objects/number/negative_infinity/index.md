@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NEGATIVE_INFINITY
 ---
+
 {{JSRef}}
 
 La propriété **`Number.NEGATIVE_INFINITY`** représente l'infini négatif.
@@ -25,8 +26,8 @@ Cette valeur se comporte différemment de l'infini mathématique :
 - Toute valeur négative, y compris `NEGATIVE_INFINITY`, multipliée par `NEGATIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
 - Zéro multiplié par `NEGATIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
 - NaN multiplié par `NEGATIVE_INFINITY` sera égal à `NaN`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de  `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de  `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
 - `NEGATIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal à `NaN`.
 - Tout nombre positif divisé par `NEGATIVE_INFINITY` sera égal au zéro négatif.
 - Tout nombre négatif divisé par `NEGATIVE_INFINITY` sera égal au zéro positif.
@@ -49,16 +50,11 @@ if (petitNombre === Number.NEGATIVE_INFINITY) {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
+{{Compat}}
 
 ## Voir aussi
 

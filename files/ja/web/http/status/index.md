@@ -1,15 +1,8 @@
 ---
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Status
-tags:
-  - HTTP
-  - ランディング
-  - 概要
-  - リファレンス
-  - ステータスコード
-  - ウェブ
-translation_of: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。
@@ -23,7 +16,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 
 以下のステータスコードは [RFC 2616 の第 10 章](https://datatracker.ietf.org/doc/html/rfc2616#section-10)で定義されています。更新版の仕様書は [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-6) にあります。
 
-> **Note:** [この一覧](#情報レスポンス)にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
+> **メモ:** [この一覧](#情報レスポンス)にないレスポンスを受け取った場合、それは標準外のレスポンスであり、おそらくそのサーバーソフトウェアに固有のものです。
 
 ## 情報レスポンス
 

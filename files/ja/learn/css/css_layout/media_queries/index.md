@@ -2,6 +2,7 @@
 title: メディアクエリーの初心者向けガイド
 slug: Learn/CSS/CSS_layout/Media_queries
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
 **CSS メディアクエリー**（CSS Media Query）を使用すると、例えば、「ビューポートは 480 ピクセルよりも広い」というような、ブラウザーとデバイスの環境が指定した規則に一致する場合にのみ CSS を適用できます。 メディアクエリーは、ビューポートのサイズに応じて異なるレイアウトを作成できるため、レスポンシブ Web デザイン（responsive web design、RWD）の重要な部分ですが、例えば、ユーザーはマウスではなくタッチスクリーンを使用しているというような、サイトが実行されている環境に関する他のものを検出するためにも使用できます。 このレッスンでは、最初にメディアクエリーで使用される構文について学習し、次に単純なデザインでどのようにレスポンシブにするかを示す実際の例で使用してみます。
@@ -45,11 +46,11 @@ slug: Learn/CSS/CSS_layout/Media_queries
 }
 ```
 
-> **Note:** ここでのメディア種別は、いわゆる {{glossary("MIME type","MIME タイプ")}}とは異なります。
+> **メモ:** ここでのメディア種別は、いわゆる {{glossary("MIME type","MIME タイプ")}}とは異なります。
 
-> **Note:** レベル 3 のメディアクエリー仕様には、他にも多くのメディア種別が定義されています。 これらは非推奨であり、避けるべきです。
+> **メモ:** レベル 3 のメディアクエリー仕様には、他にも多くのメディア種別が定義されています。 これらは非推奨であり、避けるべきです。
 
-> **Note:** メディア種別はオプションです。 メディアクエリーでメディア種別を指定しない場合、メディアクエリーはデフォルトですべてのメディア種別用になります。
+> **メモ:** メディア種別はオプションです。 メディアクエリーでメディア種別を指定しない場合、メディアクエリーはデフォルトですべてのメディア種別用になります。
 
 ### メディア特性の規則
 
@@ -428,18 +429,3 @@ You've reached the end of this article, but can you remember the most important 
 また、さまざまなコンポーネントを追加して、メディアクエリーを追加するか、フレックスボックスやグリッドなどのレイアウト方法を使用するのがコンポーネントをレスポンシブにするのに最も適切な方法かどうかを試すこともできます。 多くの場合、正しい方法も間違った方法もありません。 あなたのデザインとコンテンツに最適な方法を試してみてください。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## このモジュール内の文書
-
-- [CSS レイアウト入門](/ja/docs/Learn/CSS/CSS_layout/Introduction)
-- [通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
-- [グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
-- [フロート](/ja/docs/Learn/CSS/CSS_layout/Floats)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [メディアクエリーの初心者向けガイド](/ja/docs/Learn/CSS/CSS_layout/Media_queries)
-- [過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [古いブラウザーのサポート](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [基礎的なレイアウトの理解](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

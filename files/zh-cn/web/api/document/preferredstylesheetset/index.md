@@ -2,6 +2,7 @@
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
 ---
+
 {{APIRef("DOM")}}
 
 **`preferredStyleSheetSet`** 属性会依网页作者的喜好回传阶层样式集。
@@ -32,7 +33,7 @@ if (document.preferredStyleSheetSet) {
 
 ## 浏览器相容性
 
-{{Compat("api.Document.preferredStyleSheetSet")}}
+{{Compat}}
 
 ## 参见
 

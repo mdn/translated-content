@@ -1,9 +1,9 @@
 ---
 title: Groups and Ranges
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 그룹(Groups)과 범위(ranges)는 표현 문자의 그룹과 범위를 나타냅니다.

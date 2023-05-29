@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 中的 **`box-sizing`** 属性定义了 {{glossary("user agent")}} 应该如何计算一个元素的总宽度和总高度。
@@ -32,7 +33,7 @@ box-sizing 属性可以被用来调整这些表现：
 ### 属性值
 
 - `content-box`
-  - : 默认值，标准盒子模型。{{Cssxref("width")}} 与 {{Cssxref("height")}} 只包括内容的宽和高，不包括边框（border），内边距（padding），外边距（margin）。注意：内边距、边框和外边距都在这个盒子的外部。 比如说，`.box {width: 350px; border: 10px solid black;}` 在浏览器中的渲染的实际宽度将是 370px。
+  - : 默认值，标准盒子模型。{{Cssxref("width")}} 与 {{Cssxref("height")}} 只包括内容的宽和高，不包括边框（border），内边距（padding），外边距（margin）。注意：内边距、边框和外边距都在这个盒子的外部。比如说，`.box {width: 350px; border: 10px solid black;}` 在浏览器中的渲染的实际宽度将是 370px。
 
     尺寸计算公式：
 
@@ -48,7 +49,7 @@ box-sizing 属性可以被用来调整这些表现：
     - `width` = border + padding + 内容的宽度
     - `height` = border + padding + 内容的高度
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -92,9 +93,9 @@ div {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples', 'auto', 300)}}
+{{EmbedLiveSample('示例', 'auto', 300)}}
 
 ## 规范
 
@@ -104,7 +105,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## 参见
 

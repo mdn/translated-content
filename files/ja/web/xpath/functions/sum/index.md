@@ -1,11 +1,8 @@
 ---
 title: sum
 slug: Web/XPath/Functions/sum
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/sum
 ---
+
 {{ XsltRef() }}
 
 `sum` 関数は、与えられたノード集合内のそれぞれのノードの数値としての値を合計した数値を返します。
@@ -18,7 +15,7 @@ sum(node-set )
 
 ### 引数
 
-- _`node-set`_
+- `node-set`
   - : 評価されるノード集合。 このノード集合内のそれぞれのノードが [number()](/ja/XPath/Functions/number) 関数に渡されたかのように評価され、その結果として得られた数値の合計が返される。
 
 ### 返値

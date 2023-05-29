@@ -1,17 +1,8 @@
 ---
 title: SVG の image 要素
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-tags:
-  - Beginner
-  - NeedsBeginnerUpdate
-  - NeedsContent
-  - NeedsUpdate
-  - SVG
-  - Tutorial
-  - チュートリアル
-  - 初心者
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 
 SVG の {{ SVGElement("image") }} 要素は、ラスター画像を SVG オブジェクト内に描画することを可能にします。

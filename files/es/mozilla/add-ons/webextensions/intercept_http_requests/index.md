@@ -1,8 +1,8 @@
 ---
 title: Interceptar peticiones HTTP
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-translation_of: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 ---
+
 {{AddonSidebar}}
 
 Para interceptar peticiones HTTP, utilice la API {{WebExtAPIRef("webRequest")}}. Esta API le permite agregar detector de eventos para varias etapas en la realización de las solicitudes HTTP. En los listeners, tu puedes:

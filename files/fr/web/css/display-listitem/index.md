@@ -7,6 +7,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-listitem
 ---
+
 {{CSSRef}}
 
 Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker`  dont le contenu est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
@@ -44,9 +45,7 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 
 ## Compatibilité des navigateurs
 
-### Prise en charge de `list-item`
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

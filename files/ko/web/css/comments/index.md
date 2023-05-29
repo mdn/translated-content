@@ -1,10 +1,6 @@
 ---
 title: Comments
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/Comments
 ---
 {{CSSRef}}
 

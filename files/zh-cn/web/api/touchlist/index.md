@@ -2,6 +2,7 @@
 title: TouchList
 slug: Web/API/TouchList
 ---
+
 {{ ApiRef("Touch Events") }}
 
 **`TouchList`** 接口代表一个触摸平面上所有触点的列表。例如，如果一个用户用三根手指接触屏幕（或者触控板），与之对应的 `TouchList` 会包含每根手指的 {{ domxref("Touch") }} 对象，总共三个。
@@ -26,9 +27,9 @@ slug: Web/API/TouchList
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.TouchList")}}
+{{Compat}}
 
 ## 相关链接
 

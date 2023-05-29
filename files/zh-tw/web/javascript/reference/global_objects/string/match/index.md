@@ -2,6 +2,7 @@
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
 The **`match()`** method retrieves the matches when matching a _string_ against a _regular expression_.
@@ -104,15 +105,15 @@ str3.match(null);       // returns ["null"]
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Firefox-specific notes
 
 - `flags` was a non standard second argument only available in Gecko : _str_.match(_regexp, flags_)
-- Starting with Gecko 27 {{geckoRelease(27)}}, this method has been adjusted to conform with the ECMAScript specification. When `match()` is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to `0` ({{bug(501739)}}).
-- Starting with Gecko 39 {{geckoRelease(39)}}, the non-standard `flags` argument is deprecated and throws a console warning ({{bug(1142351)}}).
-- Starting with Gecko 47 {{geckoRelease(47)}}, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ({{bug(1245801)}}).
-- Starting with Gecko 49 {{geckoRelease(49)}}, the non-standard `flags` argument is no longer supported ({{bug(1108382)}}).
+- Starting with Gecko 27, this method has been adjusted to conform with the ECMAScript specification. When `match()` is called with a global regular expression, the {{jsxref("RegExp.lastIndex")}} property (if specified) will be reset to `0` ([Firefox bug 501739](https://bugzil.la/501739)).
+- Starting with Gecko 39, the non-standard `flags` argument is deprecated and throws a console warning ([Firefox bug 1142351](https://bugzil.la/1142351)).
+- Starting with Gecko 47, the non-standard `flags` argument is no longer supported in non-release builds and will soon be removed entirely ([Firefox bug 1245801](https://bugzil.la/1245801)).
+- Starting with Gecko 49, the non-standard `flags` argument is no longer supported ([Firefox bug 1108382](https://bugzil.la/1108382)).
 
 ## See also
 

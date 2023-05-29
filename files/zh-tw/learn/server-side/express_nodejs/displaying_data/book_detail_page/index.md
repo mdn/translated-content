@@ -2,6 +2,7 @@
 title: 書本詳情頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
+
 *書本細節頁面*需要呈現一本指定書本(`Book`)的信息, 使用它的 `_id` 字段值(自動產生)做為識別，接著是圖書館中書本實例(`BookInstance`)的信息。無論我們在哪裡呈現一個作者、種類、或書本實例，都應該連結到它的細節頁面。
 
 ## Controller 控制器
@@ -10,32 +11,37 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 
 ```js
 // Display detail page for a specific book.
-exports.book_detail = function(req, res, next) {
-
-    async.parallel({
-        book: function(callback) {
-
-            Book.findById(req.params.id)
-              .populate('author')
-              .populate('genre')
-              .exec(callback);
-        },
-        book_instance: function(callback) {
-
-          BookInstance.find({ 'book': req.params.id })
+exports.book_detail = function (req, res, next) {
+  async.parallel(
+    {
+      book: function (callback) {
+        Book.findById(req.params.id)
+          .populate("author")
+          .populate("genre")
           .exec(callback);
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.book==null) { // No results.
-            var err = new Error('Book not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('book_detail', { title: 'Title', book:  results.book, book_instances: results.book_instance } );
-    });
-
+      },
+      book_instance: function (callback) {
+        BookInstance.find({ book: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.book == null) {
+        // No results.
+        var err = new Error("Book not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render.
+      res.render("book_detail", {
+        title: "Title",
+        book: results.book,
+        book_instances: results.book_instance,
+      });
+    }
+  );
 };
 ```
 

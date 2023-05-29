@@ -2,6 +2,7 @@
 title: 'Element: focus イベント'
 slug: Web/API/Element/focus_event
 ---
+
 {{APIRef}}
 
 **`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。このイベントと {{domxref("Element/focusin_event", "focusin")}} との違いは、 `focusin` がバブリングするのに対し `focus` はしないことです。

@@ -1,7 +1,10 @@
 ---
 title: 繼承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
+{{CSSRef}}
+
 ## 摘要
 
 每個 [CSS property definition](/zh-TW/docs/CSS/CSS_Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
@@ -13,7 +16,9 @@ When no value for an **inherited property** has been specified on an element, th
 A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:
 
 ```css
-p { color: green }
+p {
+  color: green;
+}
 ```
 
 HTML:
@@ -31,13 +36,15 @@ When no value for an **non-inherited property** (sometimes called a **reset prop
 A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:
 
 ```css
- p { border: medium solid }
+p {
+  border: medium solid;
+}
 ```
 
 HTML:
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
@@ -56,10 +63,10 @@ the words "emphasized text" will not have a border (since the initial value of {
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-TW/docs/Web/CSS/initial_value)

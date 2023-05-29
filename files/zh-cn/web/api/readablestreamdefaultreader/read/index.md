@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.read()
 slug: Web/API/ReadableStreamDefaultReader/read
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} 接口的 **`read()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 提供流的内部队列中下一个分块（以供访问）。
@@ -18,7 +19,7 @@ read()
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，其兑现/拒绝的结果取决于流的状态。不同的可能性如下:
+一个 {{jsxref("Promise")}}，其兑现/拒绝的结果取决于流的状态。不同的可能性如下：
 
 - 如果有分块可用，则 promise 将使用 `{ value: theChunk, done: false }` 形式的对象来兑现。
 - 如果流已经关闭，则 promise 将使用 `{ value: undefined, done: true }` 形式的对象来兑现。
@@ -31,7 +32,7 @@ read()
 
 ## 示例
 
-### 示例 1 - 简单的例子
+### 示例 1——简单的例子
 
 这个例子展示了基本的 API 使用方法，但是其不会尝试处理一些复杂的问题，如流中的分块不在行的末尾结束。
 
@@ -43,7 +44,7 @@ function fetchStream() {
   let charsReceived = 0;
   // read() 返回一个 promise，其会在接收到数据时被兑现
   reader.read().then(function processText({ done, value }) {
-    // 结果包含两个属性:
+    // 结果包含两个属性：
     // done  - 如果为 true，表示流已经返回所有的数据。
     // value - 一些数据，done 为 true 时，其值始终为 undefined。
     if (done) {
@@ -64,7 +65,7 @@ function fetchStream() {
 }
 ```
 
-### 示例 2 - 逐行处理文本
+### 示例 2——逐行处理文本
 
 这个示例向你展示如何获取一个文本文件并以流的形式处理文本中的每一行。它能够处理分块不在行的末尾结束的情况，并将 Uint8Array 转换为字符串。
 
@@ -109,3 +110,8 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

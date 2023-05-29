@@ -1,8 +1,8 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-translation_of: Web/CSS/border-left-color
 ---
+
 {{CSSRef}}
 
 The **`border-left-color`** CSS property sets the color of an element's left [border](/pt-BR/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.

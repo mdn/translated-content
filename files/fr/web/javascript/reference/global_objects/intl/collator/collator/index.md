@@ -3,6 +3,7 @@ title: Constructeur Intl.Collator()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.Collator()`** crée un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) qui permet de comparer des chaînes de caractères en prenant en compte la locale.
@@ -45,7 +46,7 @@ new Intl.Collator(locales, options)
         - `trad`
         - `unihan`
         - `zhuyin`
-        > **Note :**  Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
+        > **Note :** Cette option peut également être définie via la propriété "`collation`" du paramètre `options`.
     - `kn`
       - : Indique si une collation numérique devrait être utilisée (par exemple pour avoir "1" < "2" < "10"). Les valeurs possibles sont "`true`" et "`false`". Cette option peut également être indiquée via la propriété "`numeric`" du paramètre `options`.
     - `kf`

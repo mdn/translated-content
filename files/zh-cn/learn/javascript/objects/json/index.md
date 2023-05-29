@@ -2,6 +2,7 @@
 title: 使用 JSON
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScript 对象的标准格式，通常用于在网站上表示和传输数据（例如从服务器向客户端发送一些数据，因此可以将其显示在网页上）。您会经常遇到它，所以在本文中，我们向您提供使用 JavaScript 处理 JSON 的所有工作，包括访问 JSON 对象中的数据项并编写自己的 JSON。
@@ -12,11 +13,11 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
       <th scope="row">前提：</th>
       <td>
         计算机基础知识，HTML 和 CSS 基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> and
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >) 和 JS 面向对象基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >)。
       </td>
@@ -32,13 +33,13 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
 
 {{glossary("JSON")}} 是一种按照 JavaScript 对象语法的数据格式，这是 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford) 推广的。虽然它是基于 JavaScript 语法，但它独立于 JavaScript，这也是为什么许多程序环境能够读取（解读）和生成 JSON。
 
-JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。 这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
+JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中的数据，后者用于通过网络传输 JSON 数据。这不是一个大事件——JavaScript 提供一个全局的 可访问的 [JSON](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 对象来对这两种数据进行转换。
 
-一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`， 还有 {{glossary("MIME type")}} 用于 `application/json`.
+一个 JSON 对象可以被储存在它自己的文件中，这基本上就是一个文本文件，扩展名为 `.json`，还有 {{glossary("MIME type")}} 用于 `application/json`.
 
 ### JSON 结构
 
-我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。您可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其它的字面值对象。这允许您构造出一个对象树，如下：
+我们已经可以推测出 JSON 对象就是基于 JavaScript 对象，而且这几乎是正确的。您可以把 JavaScript 对象原原本本的写入 JSON 数据——字符串，数字，数组，布尔还有其他的字面值对象。这允许您构造出一个对象树，如下：
 
 ```json
 {
@@ -134,7 +135,7 @@ superHeroes["members"][1]["powers"][2]
 ]
 ```
 
-上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如`[0]["powers"][0]。`
+上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
 
 ### 其他注意事项
 
@@ -195,7 +196,7 @@ var section = document.querySelector('section');
     request.open('GET', requestURL);
     ```
 
-    这个函数至少含有两个参数，其它的是可选参数。对于示例我们只需要两个强制参数
+    这个函数至少含有两个参数，其他的是可选参数。对于示例我们只需要两个强制参数
 
     - HTTP 方法，网络连接时使用。这个示例中 [`GET`](/zh-CN/docs/Web/HTTP/Methods/GET) 就可以了，因为我们只要获得简单的数据。
     - URL，用于指向请求的地址。我们使用之前保存的变量。
@@ -219,7 +220,7 @@ var section = document.querySelector('section');
 
 这儿我们保存了相应我们请求的数据 (访问 [`response`](/zh-CN/docs/Web/API/XMLHttpRequest/response) 属性) 于变量 `superHeroes` ;这个变量现在含有 JSON！我们现在把`superHeroes`传给两个函数，第一个函数将会用正确的数据填充`<header>`，同时第二个函数将创建一个信息卡片，然后把它插入`<section>`中。
 
-我们把代码包在事件处理函数中，当请求对象`load`事件触发时执行代码 (`见onload`)，这是因为请求对象`load`事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
+我们把代码包在事件处理函数中，当请求对象 `load` 事件触发时执行代码 (见 {{domxref("XMLHttpRequest.load_event", "onload")}})，这是因为请求对象 `load` 事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
 
 ### 定位 header
 
@@ -282,7 +283,7 @@ function showHeroes(jsonObj) {
 
 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
 
-1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>。`
+1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>`。
 2. 设置 `<h2>` 为当前英雄的 `name`。
 3. 使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
 4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。

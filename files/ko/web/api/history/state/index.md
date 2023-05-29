@@ -1,8 +1,8 @@
 ---
 title: History.state
 slug: Web/API/History/state
-translation_of: Web/API/History/state
 ---
+
 {{APIRef("History API")}}
 
 **`History.state`** 속성은 현 history에 해당하는 state값을 나타냅니다.

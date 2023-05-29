@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.ondatachannel
 slug: Web/API/RTCPeerConnection/datachannel_event
-translation_of: Web/API/RTCPeerConnection/ondatachannel
 original_slug: Web/API/RTCPeerConnection/ondatachannel
 ---
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

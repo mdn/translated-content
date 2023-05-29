@@ -9,6 +9,7 @@ tags:
   - premiers pas
 translation_of: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets ou en français "Feuilles de style en cascade") est utilisé pour styliser et mettre en page des pages Web - par exemple, pour modifier la police, la couleur, la taille et l'espacement de votre contenu, le scinder en plusieurs colonnes ou ajouter des animations et autres éléments décoratifs. Ce module vous permet de commencer en douceur votre chemin vers la maîtrise de CSS avec les bases de son fonctionnement, de sa syntaxe et de la façon dont vous pouvez commencer à l'utiliser pour ajouter du style au HTML.

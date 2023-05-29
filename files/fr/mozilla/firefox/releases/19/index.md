@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/19
 original_slug: Mozilla/Firefox/Versions/19
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
@@ -17,7 +18,7 @@ Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont
 
 ### JavaScript
 
-- La méthode `size()`des objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ({{bug("807001")}})
+- La méthode `size()` des objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ({{bug("807001")}})
 - Les objets [`Map`](/fr/docs/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/JavaScript/Reference/Global_Objects/Set) ont maintenant une méthode `clear()`. ({{bug("805003")}})
 
 ### CSS
@@ -50,7 +51,7 @@ Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philip
 > **Note :** [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
 
 - `getBrowserSelection()` retourne dorénavant le texte sélectionné dans un input de type `text`. Ainsi, `gContextMenu.isTextSelected` vaudra `true` quand l'utilisateur sélectionne du texte depuis un champ texte qui n'est pas de type `password`. ({{bug("565717")}})
-- [Dict.jsm](/en/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/en/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) accepte maintenant les String JSON. [`Dict.toJSON()`](</en/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON()>) a été ajouté et retourne un String JSON. ({{bug("727967")}})
+- [Dict.jsm](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) accepte maintenant les String JSON. [`Dict.toJSON()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON) a été ajouté et retourne un String JSON. ({{bug("727967")}})
 
 ### Changements dans les intefaces
 

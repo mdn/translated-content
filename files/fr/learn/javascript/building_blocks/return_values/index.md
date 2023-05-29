@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks/Return_values
 original_slug: Apprendre/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Il y a un concept essentiel que nous devons aborder dans ce cours, pour être complet sur les fonctions: les valeurs de retour. Certaines fonctions ne retournent pas de valeur significative après avoir été exécutées, mais d'autres oui, il est important de comprendre ces valeurs, comment les utiliser dans votre code et comment faire pour que vos propres fonctions retournent des valeurs utiles. Nous aborderons tout cela dans cet article.
@@ -115,7 +116,7 @@ Les fonctions de la ligne sont évaluées en premières, et leurs valeurs de ret
 
 Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 
-1. Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte  {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
+1. Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
 2. Ajoutons quelques fonctions dans `<script>` . Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes:
 
     ```js
@@ -183,13 +184,3 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 - [Fonction Callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — Une façon courante en JavaScript consiste à passer une fonction à une autre en tant qu'argument, qui est alors appelée à l'intérieur de la première fonction. Cela va au delà de la portée de ce cours, mais mériterait d'être étudier rapidement.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## Dans ce module
-
-- [Prendre des décisions dans le code — conditions](/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals)
-- [Les boucles dans le code](/fr/docs/Apprendre/JavaScript/Building_blocks/Looping_code)
-- [Fonctions — Des blocs de code réutilisables](/fr/docs/Apprendre/JavaScript/Building_blocks/Fonctions)
-- [Construire vos propres fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Build_your_own_function)
-- [Valeurs de retour des fonctions](/fr/docs/Apprendre/JavaScript/Building_blocks/Return_values)
-- [Introduction aux événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements)
-- [Galerie d'images](/fr/docs/Apprendre/JavaScript/Building_blocks/Image_gallery)

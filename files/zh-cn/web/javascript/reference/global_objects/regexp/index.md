@@ -2,11 +2,12 @@
 title: RegExp(正则表达式)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 对象用于将文本与一个模式匹配。
 
-有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。
+有关正则表达式的介绍，请阅读 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/)中的[正则表达式章节](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)。
 
 ## 描述
 
@@ -185,17 +186,17 @@ let text = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let match = regex.exec(text);
-console.log(match[1]);  // prints "Образец"
+console.log(match[0]);  // prints "Образец"
 console.log(regex.lastIndex);  // prints "7"
 
 let match2 = regex.exec(text);
-console.log(match2[1]);  // prints "на" [did not print "text"]
+console.log(match2[0]);  // prints "на" [did not print "text"]
 console.log(regex.lastIndex);  // prints "15"
 
 // and so on
 ```
 
-[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
+[Unicode 属性转义特性](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)引入了一种解决方案，它允许使用像\p{scx=Cyrl}这样简单的语句。这里有一个外部资源，用来获取 Unicode 中的不同区块范围：[Regexp-unicode-block](http://kourge.net/projects/regexp-unicode-block)
 
 ### 从 URL 中提取子域名
 
@@ -216,6 +217,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 ## 相关链接
 
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)一节
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节
 - [String.prototype.match()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
 - [String.prototype.replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)

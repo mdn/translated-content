@@ -2,6 +2,7 @@
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("EventTarget")}} 的 **`dispatchEvent()`** 方法会向一个指定的事件目标派发一个 {{domxref("Event")}}，并以合适的顺序（同步地）调用所有受影响的 {{domxref("EventListener")}}。标准事件处理规则（包括事件捕获和可选的冒泡过程）同样适用于通过手动使用 `dispatchEvent()` 方法派发的事件。
@@ -10,7 +11,7 @@ slug: Web/API/EventTarget/dispatchEvent
 
 > **备注：** 在调用此方法时，{{domxref("Event.target")}} 属性默认为当前的 `EventTarget`。
 
-和经由浏览器触发，并通过[事件循环](/zh-CN/docs/Web/JavaScript/EventLoop)异步调用事件处理程序的“原生”事件不同，`dispatchEvent()` 会*同步*调用事件处理函数。在 `dispatchEvent()` 返回之前，所有监听该事件的事件处理程序将在代码继续前执行并返回。
+和经由浏览器触发，并通过[事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)异步调用事件处理程序的“原生”事件不同，`dispatchEvent()` 会*同步*调用事件处理函数。在 `dispatchEvent()` 返回之前，所有监听该事件的事件处理程序将在代码继续前执行并返回。
 
 ## 语法
 

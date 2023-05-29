@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBRequest/source
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`source`** est une propriété en lecture seule, rattachée à l'interface {{domxref("IDBRequest")}}, et qui indique la source de la requête (c'est-à-dire l'index ou le magasin d'objets utilisé). Si aucune source n'existe (par exemple car on a appelé {{domxref("indexedDB.open")}}), la propriété vaut `null`.
@@ -25,11 +26,11 @@ var IDBObjectStore = request.source;
 
 ### Valeur
 
-Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet  {{domxref("IDBCursor")}}.
+Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet {{domxref("IDBCursor")}}.
 
 ## Exemples
 
-Dans l'exemple qui suit, on récupère un enregistrement avec un titre donné depuis un magasin d'objets. Ensuite, on met à jour une des propriétés de cet enregistrement et on met à jour le magasin d'objets en insérant cet objet modifié. Lors de cette deuxième requête, on affiche la source dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([cf. l'exemple _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on récupère un enregistrement avec un titre donné depuis un magasin d'objets. Ensuite, on met à jour une des propriétés de cet enregistrement et on met à jour le magasin d'objets en insérant cet objet modifié. Lors de cette deuxième requête, on affiche la source dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([cf. l'exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var title = "Walk dog";
@@ -81,4 +82,4 @@ objectStoreTitleRequest.onsuccess = function() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

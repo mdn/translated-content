@@ -1,7 +1,10 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket.readyState`** は読み取り専用のプロパティで、 {{domxref("WebSocket")}} の「現在」の接続状態を返します。

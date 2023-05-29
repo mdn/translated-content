@@ -2,6 +2,7 @@
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
 ---
+
 {{ ApiRef() }}
 
 ### Event targets
@@ -84,7 +85,7 @@ There are 5 targets to consider:
         some reason other than an anonymous boundary crossing, this will be set
         to the target before the retargeting occurs. For example, mouse events
         are retargeted to their parent node when they happen over text nodes
-        ({{ Bug("185889") }}), and in that case <code>.target</code> will
+        ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will
         show the parent and <code>.explicitOriginalTarget</code> will show the
         text node.<br />Unlike <code>.originalTarget</code>,
         <code>.explicitOriginalTarget</code> will never contain anonymous
@@ -103,7 +104,7 @@ There are 5 targets to consider:
         {{ Non-standard_inline() }} The original target of the event,
         before any retargetings. See
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/zh-CN/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         for details.

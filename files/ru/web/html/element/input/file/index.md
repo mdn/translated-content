@@ -1,9 +1,10 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
+slug: Web/HTML/Element/input/file
 translation_of: Web/HTML/Element/input/file
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/HTML/Forms), или обработаны JavaScript и [File API](/ru/docs/Using_files_from_web_applications).
 
@@ -128,7 +129,7 @@ This produces a similar-looking output to the previous example:
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact nature differs across browsers and operating systems).
 
-![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](https://mdn.mozillademos.org/files/15183/file-chooser.png)
+![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](file-chooser.png)
 
 The `accept` attribute doesn't validate the types of the selected files; it simply provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
 
@@ -238,7 +239,7 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 
 - Use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
 - Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
-- Check to see if no files were selected, by checking if`curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
+- Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
 - If it is, we:

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toUpperCase
 ---
+
 {{JSRef}}
 
 La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
@@ -62,16 +63,11 @@ console.log(b); // Affiche 'TRUE' dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toUpperCase")}}
+{{Compat}}
 
 ## Voir aussi
 

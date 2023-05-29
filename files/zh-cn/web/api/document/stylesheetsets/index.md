@@ -2,6 +2,7 @@
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
 ---
+
 {{APIRef("DOM")}}
 
 返回一个所有当前可用样式表集的实时列表。

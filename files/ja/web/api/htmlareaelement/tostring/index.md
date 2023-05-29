@@ -3,6 +3,7 @@ title: HTMLAreaElement.toString()
 slug: Web/API/HTMLAreaElement/toString
 original_slug: Web/API/HTMLHyperlinkElementUtils/toString
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLAreaElement.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、 URL 全体の入った文字列を返します。 これは、 {{domxref("HTMLAreaElement.href")}} の読み取り専用バージョンです。

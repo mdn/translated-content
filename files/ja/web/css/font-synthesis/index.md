@@ -2,6 +2,7 @@
 title: font-synthesis
 slug: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 **`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、太字やイタリックの字体がない場合に、ブラウザーが合成してよいかどうかを制御します。

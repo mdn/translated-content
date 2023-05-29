@@ -1,14 +1,8 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/CSS) **`background-attachment`** 속성은 배경 이미지를 {{glossary("viewport", "뷰포트")}} 내에서 고정할지, 아니면 자신의 컨테이닝 블록과 함께 스크롤할지 지정합니다.
@@ -67,7 +61,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -104,8 +98,8 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"),
-      url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"),
+      url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

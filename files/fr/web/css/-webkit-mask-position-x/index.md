@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
@@ -76,7 +77,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-position-x")}}
+{{Compat}}
 
 ## Voir aussi
 

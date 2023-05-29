@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
@@ -48,9 +49,13 @@ text-decoration-style: unset;
 - `wavy`
   - : Dessine une ligne ondulée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -82,15 +87,11 @@ text-decoration-style: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-decoration-style")}}
+{{Compat}}
 
 ## Voir aussi
 

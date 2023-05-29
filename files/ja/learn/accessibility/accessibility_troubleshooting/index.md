@@ -2,6 +2,7 @@
 title: '評価: アクセシビリティのトラブルシューティング'
 slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。
@@ -22,7 +23,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 
 この評価の開始時点であなたがサイトを表示したとき、いくつかの違いや問題を見つけることでしょう。これは主にマークアップ中の違いが原因であり、CSS が正しく適用されずにスタイリングの問題を引き起こしています。心配しないでください。以降の節でそれらの問題を修正します！
 
-> **Note:** もし行き詰まって助けを求める場合 — ページ最下部の [Assessment or further help](#assessment_or_further_help) セクションを見てください。
+> **メモ:** もし行き詰まって助けを求める場合 — ページ最下部の [Assessment or further help](#assessment_or_further_help) セクションを見てください。
 
 ## プロジェクトの概要
 
@@ -38,7 +39,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 2. スクリーンリーダーのユーザーがナビゲートしやすいように、記事のテキストを変更できますか？
 3. サイトのナビゲーションメニュー ( `<div class="nav"></div>` で囲まれた部分) は正しい HTML5 セマンティック要素の中に入れることでよりアクセシブルになったかもしれません。どれを変更する必要がありますか？変更してください。
 
-> **Note:** タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。
+> **メモ:** タグをスタイル付けする CSS ルールセレクターは、セマンティック見出しのために適切に変更する必要があります。パラグラフ要素を加えると、スタイルもより良く見えることに気がつくでしょう。
 
 ### 画像
 
@@ -79,13 +80,3 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
     - 助けてもらいたい問題が見つかるような、タスクや評価のページのリンク
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティ成功事例](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

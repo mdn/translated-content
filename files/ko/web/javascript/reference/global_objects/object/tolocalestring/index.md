@@ -1,14 +1,8 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ---
+
 {{JSRef}}
 
 **`toLocaleString()`** 메서드는 객체로 된 문자열을 반환합니다. 이 메서드는 지역별로 다른 객체로 재정의되어 표시됩니다.

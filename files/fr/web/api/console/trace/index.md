@@ -1,6 +1,6 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
+slug: Web/API/console/trace
 tags:
   - API
   - DOM
@@ -11,6 +11,7 @@ tags:
   - trace
 translation_of: Web/API/Console/trace
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche la _stack trace_ dans la [Web Console](/fr/docs/Outils/Console_Web).

@@ -1,8 +1,8 @@
 ---
 title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
 
 有了基础知识，我们现在更详细地了解了用于为表单的不同部分提供结构和意义的元素。
@@ -13,7 +13,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
       <th scope="row">前提条件：</th>
       <td>
         基本的计算机能力，和基本的
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
         >。
       </td>
     </tr>
@@ -42,7 +42,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ## \<fieldset> 和 \<legend> 元素
 
-{{HTMLElement("fieldset")}}元素是一种方便的用于创建具有相同目的的小部件组的方式，出于样式和语义目的。 你可以在`<fieldset>`开口标签后加上一个 {{HTMLElement("legend")}}元素来给{{HTMLElement("fieldset")}} 标上标签。 {{HTMLElement("legend")}}的文本内容正式地描述了{{HTMLElement("fieldset")}}里所含有部件的用途。
+{{HTMLElement("fieldset")}}元素是一种方便的用于创建具有相同目的的小部件组的方式，出于样式和语义目的。你可以在`<fieldset>`开口标签后加上一个 {{HTMLElement("legend")}}元素来给{{HTMLElement("fieldset")}} 标上标签。 {{HTMLElement("legend")}}的文本内容正式地描述了{{HTMLElement("fieldset")}}里所含有部件的用途。
 
 许多辅助技术将使用{{HTMLElement("legend")}} 元素，就好像它是相应的 {{HTMLElement("fieldset")}} 元素里每个部件的标签的一部分。例如，在说出每个小部件的标签之前，像[Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp)或[NVDA](http://www.nvda-project.org/)这样的屏幕阅读器会朗读出 legend 的内容。
 
@@ -201,7 +201,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 5. 接下来，我们将在表单中添加一个更大的代码段，在我们之前的代码下面。在这里，您将看到，我们正在将联系人信息字段包装在一个单独的{{htmlelement("section")}}元素中。此外，我们有一组两个单选按钮，每个单选按钮都放在自己的列表中 ({{htmlelement("li")}})) 元素。最后，我们有两个标准文本{{htmlelement("input")}}和它们相关的{{htmlelement("label")}}元素，每个元素包含在{{htmlelement("p")}}中，加上输入密码的密码输入。现在将这些代码添加到您的表单中：
 
-    ```plain
+    ```html
     <section>
         <h2>Contact information</h2>
         <fieldset>
@@ -292,13 +292,13 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 您可以在下面看到已完成的表单 (你可以在 Github 上看到[源码](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html)和[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)）：
 
-{{EmbedLiveSample("a_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample("自主学习：构建一个表单结构","100%",620)}}
 
 ## 总结
 
 现在，您已经具备了正确地构造 HTML 表单所需的所有知识;下一篇文章将深入介绍各种不同类型的表单小部件，您将希望从用户那里收集信息。
 
-## 另见
+## 参见
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 

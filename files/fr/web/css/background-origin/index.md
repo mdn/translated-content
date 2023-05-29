@@ -4,6 +4,7 @@ slug: Web/CSS/background-origin
 browser-compat: css.properties.background-image
 translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).

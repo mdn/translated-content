@@ -2,6 +2,7 @@
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
+
 {{CSSRef}}
 
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。

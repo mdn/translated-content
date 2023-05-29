@@ -1,19 +1,17 @@
 ---
 title: SVG フォント
 slug: Web/SVG/Tutorial/SVG_fonts
-tags:
-  - Advanced
-  - NeedsUpdate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/SVG_fonts
+l10n:
+  sourceCommit: df7ea1f5b9ef703b49b1def4e13addf0d6e2a023
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Filter_effects", "Web/SVG/Tutorial/SVG_Image_Tag") }}
 
-SVG が規定された時点では、ブラウザーでウェブフォントの対応は普及していませんでした。しかし、テキストを正しく描画するためには、正しいフォントファイルへのアクセスが不可欠であるため、この機能を提供するためにフォント記述技術が SVG に追加されました。これは PostScript や OTF などの他のフォーマットとの互換性を目的としたものではなく、レンダリング時にグリフ情報を SVG に埋め込む簡単な手段です。
+SVG が規定された時点では、ブラウザーでウェブフォントへの対応は普及していませんでした。しかし、テキストを正しく描画するためには、正しいフォントファイルへのアクセスが不可欠であるため、この機能を提供するためにフォント記述技術が SVG に追加されました。これは PostScript や OTF などの他のフォーマットとの互換性を目的としたものではなく、レンダリング時に書体情報を SVG に埋め込む簡単な手段です。
 
-> **Note:** **SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。**
-> Internet Explorer [は実装を検討しておらず](https://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx)、 [Chrome 38 (および Opera 25) では機能がら削除されており](https://www.chromestatus.com/feature/5930075908210688)、 Firefox は [WOFF](/ja/docs/Web/Guide/WOFF) に集中するために[実装を無期限に延期しています](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)。しかし、 [Adobe SVG Viewer](https://www.adobe.com/svg/viewer/install/) プラグインや Batik、 Inkscape の一部など、他のツールは SVG フォントの埋め込みに対応しています。
+> **メモ:** SVG フォントは、現在 Safari と Android ブラウザーのみが対応しています。
+>
+> Internet Explorer は[実装を検討しておらず](https://arstechnica.com/information-technology/2010/03/platform-preview-gives-web-developers-first-taste-of-ie9/)、 [Chrome 38 (および Opera 25) では機能から削除されており](https://chromestatus.com/feature/5930075908210688)、 Firefox は [WOFF](/ja/docs/Web/Guide/WOFF) に集中するために[実装を無期限に延期しています](https://bugzilla.mozilla.org/show_bug.cgi?id=119490)。しかし、Batik や Inkscape の一部など、他のツールは SVG フォントの埋め込みに対応しています。
 
 SVG フォントを定義するためのベースは {{ SVGElement("font") }} 要素です。
 
@@ -21,18 +19,28 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 フォントに必要なすべての情報を得ることに、連携して関わる要素がいくつかあります。始めに ([仕様書](https://www.w3.org/TR/SVG/fonts.html#FontElement) で示されている) 宣言の例、その後に詳しい説明を示します。
 
-```
+```html
 <font id="Font1" horiz-adv-x="1000">
-  <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
-      units-per-em="1000" cap-height="600" x-height="400"
-      ascent="700" descent="300"
-      alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+  <font-face
+    font-family="Super Sans"
+    font-weight="bold"
+    font-style="normal"
+    units-per-em="1000"
+    cap-height="600"
+    x-height="400"
+    ascent="700"
+    descent="300"
+    alphabetic="0"
+    mathematical="350"
+    ideographic="400"
+    hanging="500">
     <font-face-src>
-      <font-face-name name="Super Sans Bold"/>
+      <font-face-name name="Super Sans Bold" />
     </font-face-src>
   </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
+  <!-- Outline of exclamation point glyph -->
+  <glyph unicode="!" horiz-adv-x="300"></glyph>
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>
@@ -50,7 +58,7 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 `font` の内部では、さらに {{ SVGElement("hkern") }} と {{ SVGElement("vkern") }} の 2 つの要素を定義することができます。それぞれ、少なくとも 2 つの文字 (`u1` および `u2` 属性) への参照と、それらの文字間の距離をどの程度縮めるかを決定する属性 `k` を持ちます。以下の例では、ユーザーエージェントに "A" と "V" の文字を標準的な文字間の距離よりも近づけるように指示しています。
 
-```
+```html
 <hkern u1="A" u2="V" k="20" />
 ```
 
@@ -58,7 +66,7 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 これはとても単純です。これまで説明したようにフォントの宣言をひとまとめに収めた場合は、`font-family` 属性を用いるだけでよいのです。
 
-```
+```html
 <font>
   <font-face font-family="Super Sans" />
   <!-- and so on -->
@@ -69,20 +77,20 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 ただし、どこでどのようにフォントを定義するかの自由のために、複数の方法を自由に組み合わせてもかまいません。
 
-### オプション: CSS @font-face の利用
+### オプション: CSS @font-face の使用
 
 リモートの (またはリモートでない) フォントの参照に `@font-face` を用いることができます。
 
-```
+```html
 <font id="Super_Sans">
   <!-- and so on -->
 </font>
 
-<style type="text/css">
-@font-face {
-  font-family: "Super Sans";
-  src: url(#Super_Sans);
-}
+<style>
+  @font-face {
+    font-family: "Super Sans";
+    src: url(#Super_Sans);
+  }
 </style>
 
 <text font-family="Super Sans">My text uses Super Sans</text>
@@ -92,7 +100,7 @@ SVG フォントを定義するためのベースは {{ SVGElement("font") }} �
 
 前に述べた `font-face-uri` で外部のフォントを参照することができ、高い再利用性を得ることができます。
 
-```
+```html
 <font>
   <font-face font-family="Super Sans">
     <font-face-src>

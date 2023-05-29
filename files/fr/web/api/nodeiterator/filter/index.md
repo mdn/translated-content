@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeIterator/filter
 ---
+
 {{APIRef("DOM")}}
 
 La méthode en lecture seule **`NodeIterator.filter`** renvoie un objet {{domxref("NodeFilter")}}, c'est-à-dire un objet implémentant la méthode `acceptNode(node)`, utilisée pour filtrer les noeuds.

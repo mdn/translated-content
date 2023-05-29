@@ -1,14 +1,8 @@
 ---
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
-tags:
-  - API
-  - AudioWorkletNode
-  - Constructor
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioWorkletNode()`** 생성자는 새로운 {{domxref("AudioWorkletNode")}} 객체를 생성하는데, 이는 사용자 정의 오디오 프로세싱을 수행하기 위해 JavaScript 함수를 사용하는 {{domxref("AudioNode")}}를 나타냅니다.

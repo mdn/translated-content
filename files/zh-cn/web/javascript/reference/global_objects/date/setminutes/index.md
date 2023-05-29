@@ -2,6 +2,7 @@
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`setMinutes()`** 方法根据本地时间为一个日期对象设置分钟数。
@@ -35,9 +36,9 @@ dateObj.setMinutes(minutesValue)
 
 如果有一个指定的参数超出了合理范围，`setMinutes` 会相应地更新日期对象中的时间信息。例如，为 `secondsValue` 指定 100，分钟数将会加 1，而秒数会为 40。
 
-## 例子
+## 示例
 
-### 例子：使用`setMinutes` 方法
+### 示例：使用`setMinutes` 方法
 
 ```js
 var theBigDay = new Date();

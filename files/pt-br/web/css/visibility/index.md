@@ -1,8 +1,8 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 A propriedade CSS de visibilidade pode mostrar ou ocultar um elemento sem afetar o layout de um documento (ou seja, o espaço é criado para elementos independentemente de serem visíveis ou não). A propriedade também pode ocultar linhas ou colunas em um {{HTMLElement("table")}}.
@@ -19,7 +19,7 @@ visibility: initial;
 visibility: unset;
 ```
 
-> **Note:** **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
+> **Nota:** Para ocultar um elemento ou removê-lo do layout do documento, defina a propriedade {{cssxref("display")}} como `none` em vez de usar `visibility`.
 
 {{cssinfo}}
 
@@ -35,10 +35,10 @@ A propriedade é especificada como um dos valores das palavras-chave listados ab
   - : The element box is invisible (not drawn), but still affects layout as normal. Descendants of the element will be visible if they have `visibility` set to `visible`. The element cannot receive focus (such as when navigating through [tab indexes](/pt-BR/docs/Web/HTML/Global_attributes/tabindex)).
 - `collapse`
 
-  - :&#x20;
+  - : The `collapse` keyword has different effects for different elements:
 
     - For {{HTMLElement("table")}} rows, columns, column groups, and row groups, the row(s) or column(s) are hidden and the space they would have occupied is removed (as if `{{Cssxref("display")}}: none` were applied to the column/row of the table). However, the size of other rows and columns is still calculated as though the cells in the collapsed row(s) or column(s) are present. This value allows for the fast removal of a row or column from a table without forcing the recalculation of widths and heights for the entire table.
-    - For [XUL](/pt-BR/docs/Mozilla/Tech/XUL) elements, the computed size of the element is always zero, regardless of other styles that would normally affect the size, although margins still take effect.
+    - Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.
     - For other elements, `collapse` is treated the same as `hidden`.
 
 ### Formal syntax

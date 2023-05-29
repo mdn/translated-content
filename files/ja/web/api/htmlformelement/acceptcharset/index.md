@@ -1,24 +1,28 @@
 ---
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
-{{APIRef}}概要
 
-`acceptCharset` は対象フォームでサポートされる文字エンコーディングのリストを返します。リストの各アイテムは、カンマか半角スペースで区切られます。
+{{APIRef("HTML DOM")}}
 
-## 構文
+**`HTMLFormElement.acceptCharset`** プロパティは、指定された {{htmlelement("form")}} 要素で対応している[文字エンコーディング](/ja/docs/Glossary/character_encoding) の一覧を表します。このリストは、カンマ区切りまたはスペース区切りで記述することができます。
 
-```
-string = form.acceptCharset;
-```
+## 値
+
+文字列です。
 
 ## 例
 
 ```js
-inputs = document.forms["myform"].acceptCharset
+let inputs = document.forms['myform'].acceptCharset;
 ```
 
 ## 仕様書
 
-- [HTML 5, Section 4.10.3: The Form Element](http://www.w3.org/TR/html5/forms.html#dom-form-acceptcharset)
-- [DOM Level 2 HTML: acceptCharset](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-19661795)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

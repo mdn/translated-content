@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/proto
 ---
+
 {{JSRef}}{{Deprecated_header}}
 
 > **Attention :** Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `obj.__proto__ = ...`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object.create()")}}.
@@ -120,18 +121,11 @@ Si la propriété `__proto__` de {{jsxref("Object.prototype")}} ne permet pas d'
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | État                         | Commentaires                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES2015', '#sec-object.prototype.__proto__', 'Object.prototype.__proto__')}}                                     | {{Spec2('ES2015')}}     | Incluse dans l'annexe (normative) pour le fonctionnalités additionneles d'ECMAScript pour les navigateurs web (note : la spécification codifie ce qui est déjà présent dans les implémentations). |
-| {{SpecName('ESDraft', '#sec-additional-properties-of-the-object.prototype-object', 'Object.prototype.__proto__')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.proto")}}
-
-## Notes de compatibilité
-
-Bien que la spécification ES2015 rende le support de `__proto__` nécessaire pour les navigateurs web, elle n'est pas obligatoire pour les autres environnements (bien que ce soit conseillé vu le caractère normatif de l'annexe). Si votre code doit être compatible avec un environnement qui n'est pas un navigateur web, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}} à la place.
+{{Compat}}
 
 ## Voir aussi
 

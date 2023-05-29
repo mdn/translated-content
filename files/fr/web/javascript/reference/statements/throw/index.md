@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/throw
 original_slug: Web/JavaScript/Reference/Instructions/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
@@ -161,16 +162,11 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4 |
-| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.throw")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: 內容腳本
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）
 
 [後端腳本](/zh-TW/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript APIs](/zh-TW/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。
@@ -69,9 +70,9 @@ document.body.appendChild(p);
 window.foo = "This global variable was added by a page script";
 
 // 重新定義內建的 window.confirm 函數
-window.confirm = function() {
+window.confirm = function () {
   alert("The page script has also redefined 'confirm'");
-}
+};
 ```
 
 接著、一個套件把 content script 插入頁面：
@@ -84,7 +85,7 @@ var pageScriptPara = document.getElementById("page-script-para");
 pageScriptPara.style.backgroundColor = "blue";
 
 // 看不見 page-script 增加的屬性
-console.log(window.foo);  // undefined
+console.log(window.foo); // undefined
 
 // 看見的是原有的形式
 window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
@@ -211,7 +212,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -224,10 +225,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "你點了個按鈕喲！",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "你點了個按鈕喲！",
+    message: message.url,
   });
 }
 ```
@@ -257,16 +258,16 @@ function notify(message) {
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "內容腳本傳喜訊"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "內容腳本傳喜訊" });
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener(function (m) {
   console.log("內容腳本收到來自後端腳本的訊息： ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "它們點了網頁！"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "它們點了網頁！" });
 });
 ```
 
@@ -275,7 +276,7 @@ document.body.addEventListener("click", function() {
 - 監聽來自內容腳本的連線請求
 - 當它收到連線請求：
 
-  - 將端口儲存在 `portFromCS 這個變數`
+  - 將端口儲存在 `portFromCS` 這個變數
   - 透過端口傳送訊息給內容腳本
   - 開始監聽並記錄端口上的訊息
 
@@ -288,17 +289,17 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "嘿！內容腳本！"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("後端腳本收到來自內容腳本的訊息：")
+  portFromCS.postMessage({ greeting: "嘿！內容腳本！" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log("後端腳本收到來自內容腳本的訊息：");
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "它們按了按鈕！"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "它們按了按鈕！" });
 });
 ```
 
@@ -309,19 +310,19 @@ browser.browserAction.onClicked.addListener(function() {
 ```js
 // background-script.js
 
-var ports = []
+var ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
-        p.postMessage({greeting: "它們按了按鈕！"})
-    })
+browser.browserAction.onClicked.addListener(function () {
+  ports.forEach((p) => {
+    p.postMessage({ greeting: "它們按了按鈕！" });
+  });
 });
 ```
 
@@ -348,11 +349,13 @@ function messageContentScript() {
 ```js
 // content-script.js
 
-window.addEventListener("message", function(event) {
-  if (event.source == window &&
-      event.data &&
-      event.data.direction == "from-page-script") {
-    alert("內容腳本收到訊息： \"" + event.data.message + "\"");
+window.addEventListener("message", function (event) {
+  if (
+    event.source == window &&
+    event.data &&
+    event.data.direction == "from-page-script"
+  ) {
+    alert('內容腳本收到訊息： "' + event.data.message + '"');
   }
 });
 ```
@@ -366,10 +369,12 @@ window.addEventListener("message", function(event) {
 > ```js
 > // content-script.js
 >
-> window.addEventListener("message", function(event) {
->   if (event.source == window &&
->       event.data.direction &&
->       event.data.direction == "from-page-script") {
+> window.addEventListener("message", function (event) {
+>   if (
+>     event.source == window &&
+>     event.data.direction &&
+>     event.data.direction == "from-page-script"
+>   ) {
 >     eval(event.data.message);
 >   }
 > });
@@ -391,15 +396,18 @@ window.addEventListener("message", function(event) {
 ```js
 // content-script.js
 
-window.eval('window.x = 1;');
-eval('window.y = 2');
+window.eval("window.x = 1;");
+eval("window.y = 2");
 
 console.log(`In content script, window.x: ${window.x}`);
 console.log(`In content script, window.y: ${window.y}`);
 
-window.postMessage({
-  message: "check"
-}, "*");
+window.postMessage(
+  {
+    message: "check",
+  },
+  "*"
+);
 ```
 
 這段程式碼透過 `window.eval()` 和 `eval()` 建立了些變數 x 和 y 、記錄下它們的值並且傳訊息給頁面。
@@ -407,7 +415,7 @@ window.postMessage({
 接收訊息這邊，頁面腳本記錄下一樣的值：
 
 ```js
-window.addEventListener("message", function(event) {
+window.addEventListener("message", function (event) {
   if (event.source === window && event.data && event.data.message === "check") {
     console.log(`In page script, window.x: ${window.x}`);
     console.log(`In page script, window.y: ${window.y}`);
@@ -442,13 +450,13 @@ In page script, window.y: undefined
 
 var original = console.log;
 
-console.log = function() {
+console.log = function () {
   original(true);
-}
+};
 ```
 
 ```js
 // content-script.js 呼叫被重新定義的版本
 
-window.eval('console.log(false)');
+window.eval("console.log(false)");
 ```

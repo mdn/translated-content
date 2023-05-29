@@ -1,9 +1,8 @@
 ---
 title: label
 slug: Web/JavaScript/Reference/Statements/label
-translation_of: Web/JavaScript/Reference/Statements/label
-browser-compat: javascript.statements.label
 ---
+
 {{jsSidebar("Statements")}}
 
 **레이블 구문**은 {{jsxref("Statements/break", "break")}}나 {{jsxref("Statements/continue", "continue")}} 구문과 함께 사용할 수 있다. 원하는 식별자로 구문 앞에 레이블을 추가할 수 있다.

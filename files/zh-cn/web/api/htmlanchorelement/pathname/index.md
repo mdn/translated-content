@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.pathname
 slug: Web/API/HTMLAnchorElement/pathname
 ---
+
 {{ApiRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.pathname`** 属性是一个 {{domxref("USVString")}} ，其中包含一个初始的'/'后跟 URL 的路径。
@@ -27,7 +28,7 @@ var result = anchor.pathname; // Returns:'/en-US/docs/HTMLHyperlinkElementUtils.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.pathname")}}
+{{Compat}}
 
 ## See also
 

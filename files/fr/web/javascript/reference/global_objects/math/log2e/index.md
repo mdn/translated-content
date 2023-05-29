@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LOG2E
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LOG2E`** représente la valeur du logarithme en base 2 de e, environ 1.442 :
@@ -37,16 +38,11 @@ getLog2e(); // 1.4426950408889634
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaires                                          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.4', 'Math.LOG2E')}}         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.log2e', 'Math.LOG2E')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.log2e', 'Math.LOG2E')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.LOG2E")}}
+{{Compat}}
 
 ## Voir aussi
 

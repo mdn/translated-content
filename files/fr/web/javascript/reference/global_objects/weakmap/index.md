@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap
 browser-compat: javascript.builtins.WeakMap
 ---
+
 {{JSRef}}
 
 L'objet **`WeakMap`** représente une collection de paires clé-valeur dont les clés sont des objets et pour lesquelles les références sont « faibles » et les valeurs des valeurs quelconques.
@@ -17,7 +18,7 @@ Les clés des objets `WeakMap` sont nécessairement du type `Object`. {{Glossary
 
 Les clés d'une `WeakMap` sont référencées _faiblement_. Cela signifie que s'il n'existe aucune autre référence «&nbsp;forte&nbsp;» vers la clé, l'élément (la clé et la valeur) sera retiré de la `WeakMap` par le ramasse-miettes.
 
-### Pourquoi *Weak*Map ?
+### Pourquoi WeakMap ?
 
 Avec un certain recul, on peut voir que cette API aurait pu être implémentée en JavaScript grâce à deux tableaux (un tableau pour stocker les clés, l'autre pour les valeurs) associées à 4 méthodes.
 

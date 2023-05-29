@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/multiline
 ---
+
 {{JSRef}}
 
 La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
@@ -32,20 +33,11 @@ console.log(regex.multiline); // true
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                       | Commentaires                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. Avec JavaScript 1.5 : `multiline` est une propriété liée à l'instance de {{jsxref("RegExp")}} et non à l'objet `RegExp`. |
-| {{SpecName('ES5.1', '#sec-15.10.7.4', 'RegExp.prototype.multiline')}}                                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                        |
-| {{SpecName('ES6', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}}         | {{Spec2('ES6')}}         | `multiline` est désormais un propriété du prototype sous forme d'accesseur plutôt qu'une propriété directement liée à l'instance.                                                      |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.multiline")}}
-
-## Notes de compatibilité
-
-- Avant Firefox 48 , une propriété globale non-standard `RegExp.multiline` existait en plus de la propriété `RegExp.prototype.multiline`. Elle a été retirée dans les nouvelles versions du moteur (cf. {{bug(1219757)}}). On utilisera la propriété décrite sur cette page ou le [marqueur `m`](</fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avancées_en_utilisant_les_drapeaux_(flags)>) à la place.
+{{Compat}}
 
 ## Voir aussi
 

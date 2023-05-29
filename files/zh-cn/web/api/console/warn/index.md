@@ -1,7 +1,8 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
+slug: Web/API/console/warn
 ---
+
 {{APIRef("Console API")}}
 
 向 Web 控制台输出一条警告信息。
@@ -32,9 +33,9 @@ console.warn(msg [, subst1, ..., substN]);
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.console.warn")}}
+{{Compat}}
 
 ## 相关链接
 

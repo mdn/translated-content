@@ -2,6 +2,7 @@
 title: AudioContext.createAnalyser()
 slug: Web/API/BaseAudioContext/createAnalyser
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}的`createAnalyser()`方法能创建一个{{ domxref("AnalyserNode") }}，可以用来获取音频时间和频率数据，以及实现数据可视化。
@@ -80,7 +81,7 @@ function draw() {
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.createAnalyser")}}
+{{Compat}}
 
 ## 另见
 

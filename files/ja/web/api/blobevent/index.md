@@ -2,6 +2,7 @@
 title: BlobEvent
 slug: Web/API/BlobEvent
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`BlobEvent`** インターフェイスは、{{domxref("Blob")}} に関連付けられたイベントを表します。 これらの blob は、一般的にメディアコンテンツと関連付けられますが、必ずしもそうとは限りません。
@@ -26,9 +27,7 @@ _自身の親 {{domxref("Event")}} からのプロパティを継承します。
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                                     | 備考       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording', '#blobevent-section', 'BlobEvent')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
@@ -38,4 +37,4 @@ _自身の親 {{domxref("Event")}} からのプロパティを継承します。
 
 - {{domxref("Event")}} 基本インターフェイス
 - [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API): メディアのチャンクの準備ができるたびに `BlobEvent` オブジェクトを送信します。
-- [Media​Stream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [MediaStream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

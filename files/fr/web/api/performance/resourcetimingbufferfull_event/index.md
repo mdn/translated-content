@@ -11,6 +11,7 @@ tags:
   - onresourcetimingbufferfull
 translation_of: Web/API/Performance/resourcetimingbufferfull_event
 ---
+
 {{APIRef}}
 
 L'événement `resourcetimingbufferfull` se déclenche lorsque la mémoire [tampon de synchronisation des ressources](/fr/docs/Web/API/Performance/setResourceTimingBufferSize) du navigateur est pleine.

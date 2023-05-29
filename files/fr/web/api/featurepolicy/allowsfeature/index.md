@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/FeaturePolicy/allowsFeature
 ---
+
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
 La méthode **`allowsFeature()`** de l'interface {{DOMxRef("FeaturePolicy")}} permet l'introspection de directives du Feature Policy sur lequel la méthode est appelée. Elle retourne un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité dont le nom de directive est fourni est permise dans le contexte spécifié (ou le contexte par défaut si aucun contexte n'est spécifié).

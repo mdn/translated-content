@@ -2,11 +2,12 @@
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
-**`values()`** メソッドは、新しい[反復子](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは  `Set` オブジェクトの各要素の値を挿入順に返します。
+**`values()`** メソッドは、新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。これは `Set` オブジェクトの各要素の値を挿入順に返します。
 
-> **Note:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
+> **メモ:** **`keys()`** メソッドは（{{jsxref("Map")}} オブジェクトと似せるため）このメソッドに対するエイリアスになっています。まったく同じように動作し、 `Set` の各要素の**値**を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
 
@@ -18,7 +19,7 @@ values()
 
 ### 返値
 
-新しい反復子オブジェクトで、この `Set` オブジェクト内のそれぞれの要素の値を返します。
+新しいイテレーターオブジェクトで、この `Set` オブジェクト内のそれぞれの要素の値を返します。
 
 ## 例
 

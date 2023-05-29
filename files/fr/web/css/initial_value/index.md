@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/initial_value
 original_slug: Web/CSS/Valeur_initiale
 ---
+
 {{CSSRef}}
 
 La **valeur initiale** d'une [propriété CSS](/fr/docs/Web/CSS/Reference) est définie par la spécification et varie selon [qu'une propriété est héritée ou non](/fr/docs/Web/CSS/Héritage).
@@ -18,10 +19,7 @@ Le mot-clé {{cssxref("initial")}} a été ajouté en CSS3 afin de permettre aux
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires          |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | --------------------- |
-| [CSS Cascade 4](https://drafts.csswg.org/css-cascade-4/#initial-values)                          |                          | Définition formelle.  |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "initial value")}} | {{Spec2("CSS2.1")}} | Définition implicite. |
+{{Specifications}}
 
 ## Voir aussi
 

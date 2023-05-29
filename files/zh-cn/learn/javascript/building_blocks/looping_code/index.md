@@ -1,7 +1,8 @@
 ---
-title: 循环吧代码
+title: 循环吧，代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
       <th scope="row">前提条件：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >（JS 的入门）.
       </td>
@@ -26,7 +27,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 ## 来一起循环
 
-循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>)一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
+循环，循环，循环。就与这些：[popular breakfast cereals](https://en.wikipedia.org/wiki/Froot_Loops), [roller coasters](https://en.wikipedia.org/wiki/Vertical_loop) and [musical production](<https://en.wikipedia.org/wiki/Loop_(music)>) 一样，类似存在于编程中。编程中的循环也是一直重复着去做一件事 - 此处循环便是编程中的术语。
 
 让我们来想一下下图，这位农夫考虑为他的家庭做一周的食物计划，他或许就需要执行一段循环：
 
@@ -235,16 +236,16 @@ para.textContent = info;
 这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：
 
 1. 迭代器`i`从 0 开始（`var i = 0`）。
-2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`<cats.length`仍然是真的，循环仍然运行。
+2. 循环将会一直运行直到它不再小于猫数组的长度。这很重要 - 退出条件显示循环仍然运行的条件。所以在这种情况下，`< cats.length` 仍然是真的，循环仍然运行。
 3. 在循环中，我们将当前的循环项（`cats[i]`是`cats[当前下标的任何东西]`）以及逗号和空格连接到`info`变量的末尾。所以：
 
-    1. 在第一次运行中，`i = 0`，所以`cats[0] +'，'将`被连接到`info("Bill")`上。
-    2. 在第二次运行中，`i = 1`，所以`cats[1] +'，'`将被连接到`info("Jeff")`上。
-    3. 等等。每次循环运行后，1 将被添加到 i（i ++），然后进程将再次启动。
+    1. 在第一次运行中，`i = 0`，所以 `cats[0] +', '` 将被连接到 `info("Bill")` 上。
+    2. 在第二次运行中，`i = 1`，所以 `cats[1] +', '` 将被连接到 `info("Jeff")` 上。
+    3. 等等。每次循环运行后，1 将被添加到 i（`i++`），然后进程将再次启动。
 
 4. 当等于`cats.length`时，循环将停止，浏览器将移动到循环下面的下一个代码位。
 
-> **备注：** 我们将退出条件设为`< cats.length`，而不是`<= cats.length`是因为计算机从 0 开始，而不是 1 - 开始时`i`是 0，并且逐步增加到 i`= 4`（最后一个数组的索引）。 `cats.length`返回 5，因为数组中有 5 个项目，但是我们不希望达到`i = 5`，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比`cats.length`（`i <`）少 1，而不是`cats.length`（`i <=`）。
+> **备注：** 我们将退出条件设为 `< cats.length`，而不是 `<= cats.length` 是因为计算机从 0 开始，而不是 1 - 开始时 `i` 是 0，并且逐步增加到 `i = 4`（最后一个数组的索引）。 `cats.length` 返回 5，因为数组中有 5 个项目，但是我们不希望达到 `i = 5`，因为这将返回未定义的最后一个项目（没有索引为 5 的数组项目）。所以我们想要比 `cats.length` 少 1（`i <`），而不是 `cats.length`（`i <=`）。
 
 > **备注：** 退出条件的一个常见错误是使它们使用“等于”(`===`) 而不是说“小于或等于”(`<=`)。如果我们想要运行我的循环到`i = 5`，退出条件将需要是`i <= cats.length`。如果我们设置为`i === cats.length`，循环将不会运行，因为在第一次循环迭代时 i 不等于 5，所以循环会立即停止。
 
@@ -680,7 +681,7 @@ for (initializer; exit-condition; final-expression) {
 ```plain
 initializer
 while (exit-condition) {
-  // code to run
+  // 要运行的代码
 
   final-expression
 }
@@ -691,7 +692,7 @@ while (exit-condition) {
 ```plain
 initializer
 do {
-  // code to run
+  // 要运行的代码
 
   final-expression
 } while (exit-condition)
@@ -716,13 +717,3 @@ do {
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## 在本单元中
-
-- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)

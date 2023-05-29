@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 ---
+
 {{CSSRef}}
 
 Les boîtes flexibles (<i lang="en">flexbox</i>) sont largement prises en charge par les navigateurs modernes. Toutefois, quelques problèmes peuvent survenir. Dans ce guide, nous verrons précisément quelle est la prise en charge des boîtes flexibles dans les navigateurs. Nous verrons les problèmes éventuels ainsi que les ressources et méthodes afin de créer des méthodes de contournement ou des alternatives.

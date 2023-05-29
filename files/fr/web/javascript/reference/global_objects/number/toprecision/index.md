@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toPrecision
 ---
+
 {{JSRef}}
 
 La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant un nombre avec la précision donnée.
@@ -60,16 +61,11 @@ console.log((1234.5).toPrecision(2)); // "1.2e+3"
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.7', 'Number.prototype.toPrecision')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.toprecision', 'Number.prototype.toPrecision')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.toPrecision")}}
+{{Compat}}
 
 ## Voir aussi
 

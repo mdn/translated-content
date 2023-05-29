@@ -1,14 +1,9 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
-tags:
-  - HTML-DOM
-  - Property
-  - Reference
-  - WindowEventHandlers
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
+
 {{APIRef("HTML DOM")}}{{domxref("WindowEventHandlers")}} 믹스인의 **WindowEventHandlers.onhashchange** 속성은
 
 **hashchange** 이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.
@@ -113,7 +108,7 @@ if(!window.HashChangeEvent)(function(){
 
 ## See also
 
-- [`hashchange`](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event) event
+- [`hashchange`](/en-US/docs/Web/API/Window/hashchange_event) event
 - [Manipulating the browser history](/ko/docs/DOM/Manipulating_the_browser_history)
 - [`history.pushState()` and `history.replaceState()`](/ko/docs/DOM/window.history) methods
 - {{domxref("WindowEventHandlers.onpopstate")}}

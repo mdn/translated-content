@@ -1,14 +1,11 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/content
 ---
+
 {{CSSRef}}
 
-A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element "CSS/Replaced_element") anônimos_.
+A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element) anônimos_.
 
 ```css
 /* Palavras-chave que não podem ser combinadas com outros valores */
@@ -61,7 +58,7 @@ content: unset;
   - : Uma URL que designa um recurso externo (como uma imagem). Se o recurso não puder ser exibido, ele será ignorado ou um _placeholder_ será exibido no seu lugar.
 - {{cssxref("&lt;counter&gt;")}}
 
-  - : O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função [`counter()`](/pt-BR/docs/Web/CSS/counter%28%29 "A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!") ou [`counters()`](/pt-BR/docs/Web/CSS/counters%28%29 "A documentação sobre este tópico ainda não foi escrita; por favor, considere dar a sua contribuição nela!").
+  - : O valor de um contador CSS, geralmente um número. Ele pode ser exibido usando a função [`counter()`](/pt-BR/docs/Web/CSS/counter%28%29) ou [`counters()`](/pt-BR/docs/Web/CSS/counters%28%29).
 
     A função `counter()` tem duas formas: 'counter(_nome_)' ou 'counter(_nome_, _estilo_)'. O texto gerado será o valor do contador mais próximo do nome fornecido no pseudoelemento. Ele será formatado com o estilo especificado (o padrão é `decimal`).
 
@@ -89,7 +86,7 @@ Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo
 ```html
 <h1>5</h1>
 <p>De acordo com o Sr. Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
+  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
     already existed - and had for a decade and a half.</q>
   Devemos entender que não há nada fundamentalmente errado em criar
@@ -219,7 +216,7 @@ a::after {
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png") ;
 }
 
 li {

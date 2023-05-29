@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Forms
 original_slug: Web/Guide/HTML/Formulaires
 ---
+
 {{learnSidebar}}
 
 Ce guide est constitué d'une série d'articles qui vous aideront à maîtriser les formulaires HTML. Les formulaires HTML sont des outils très puissants pour interagir avec l'utilisateur ; toutefois, à cause de raisons historiques et techniques, il n'est pas forcément évident de savoir comment les utiliser de manière optimale. Nous allons aborder tous les aspects des formulaires HTML, de la structure à la décoration, de la gestion des données aux widgets sur-mesure.

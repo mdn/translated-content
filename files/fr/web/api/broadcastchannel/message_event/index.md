@@ -7,6 +7,7 @@ browser-compat: api.BroadcastChannel.message_event
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
+
 {{APIRef}}
 
 L'évènement `message` est déclenché sur un objet [`BroadcastChannel`](/fr/docs/Web/API/BroadcastChannel) lorsqu'un message arrive sur le canal.
@@ -36,7 +37,7 @@ _En plus des propriétés listées ci-dessous, celles provenant de l'interface p
 - [`lastEventId`](/fr/docs/Web/API/MessageEvent/lastEventId) {{readonlyInline}}
   - : Une chaîne représentant l'identifiant unique pour l'évènement.
 - [`source`](/fr/docs/Web/API/MessageEvent/source) {{readonlyInline}}
-- : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
+  - : Un `MessageEventSource`, qui peut être soit un [`WindowProxy`](/fr/docs/Glossary/WindowProxy), un [`MessagePort`](/fr/docs/Web/API/MessagePort), ou un objet [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker) représentant l'émetteur du message.
 - [`ports`](/fr/docs/Web/API/MessageEvent/ports) {{readonlyInline}}
   - : Un tableau d'objets [`MessagePort`](/fr/docs/Web/API/MessagePort) représentant les ports associés au canal par lequel le message est envoyé (lorsque c'est approprié, par exemple, dans le canal de communication ou lorsqu'un message est envoyé à un <i lang="en">worker</i> partagé).
 

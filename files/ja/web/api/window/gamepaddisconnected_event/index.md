@@ -2,6 +2,7 @@
 title: gamepaddisconnected
 slug: Web/API/Window/gamepaddisconnected_event
 ---
+
 ゲームパッドが切断されたことをブラウザが検出すると、`gampaddisconnected` イベントが発生します。
 
 ## 一般的な情報

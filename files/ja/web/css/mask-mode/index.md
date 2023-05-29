@@ -2,6 +2,7 @@
 title: mask-mode
 slug: Web/CSS/mask-mode
 ---
+
 {{CSSRef}}
 
 **`mask-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("mask-image")}} で定義されたマスクを、輝度とアルファマスクのどちらで扱うかを設定します。

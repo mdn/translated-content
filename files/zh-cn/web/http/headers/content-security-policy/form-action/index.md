@@ -2,6 +2,7 @@
 title: 'CSP: form-action'
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) 的 **`form-action`** 指令能够限定当前页面中表单的提交地址。

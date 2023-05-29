@@ -2,6 +2,7 @@
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing ] after element list" は、配列の初期化構文のどこかにエラーがあった場合に発生します。閉じ括弧 ("`]`") やカンマ ("`,`") が抜けている可能性があります。

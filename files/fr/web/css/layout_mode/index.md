@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/Layout_mode
 original_slug: Web/CSS/Mode_de_mise_en_page
 ---
+
 {{CSSRef}}
 
 Un **mode de disposition CSS** (_layout mode_), parfois raccourci en « disposition » est un algorithme qui détermine la position et la taille des boîtes des éléments en fonction des interactions avec leurs voisins et leurs ancêtres. Il existe plusieurs modes de disposition :

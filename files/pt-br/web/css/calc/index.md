@@ -1,17 +1,9 @@
 ---
 title: calc()
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - Calculate
-  - Função
-  - Função CSS
-  - Layout
-  - Web
-  - calc
-translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 A função **`calc()`** [CSS](/pt-BR/docs/Web/CSS) permite você executar cálculos quando especificar os valores de propriedades no CSS. Pode ser utilizada em qualquer lugar , como {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, e {{cssxref("&lt;integer&gt;")}} é permitido.

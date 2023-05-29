@@ -2,22 +2,23 @@
 title: CSS 選擇器
 slug: Glossary/CSS_Selector
 ---
+
 **CSS 選擇器**是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。
 
 ## 範例
 
 ```html
-<div> I am inside of a div element. </div>
-<p> I am inside of a paragraph element. </p>
+<div>I am inside of a div element.</div>
+<p>I am inside of a paragraph element.</p>
 ```
 
 ```css
 div {
- color: green;
+  color: green;
 }
 
 p {
- color: red;
+  color: red;
 }
 ```
 

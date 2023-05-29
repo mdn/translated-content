@@ -11,6 +11,7 @@ translation_of: Web/Progressive_web_apps/Responsive/responsive_design_building_b
 translation_of_original: Web/Progressive_web_apps/Responsive
 original_slug: Web/Progressive_web_apps/Adaptative
 ---
+
 Les applications web adaptatives utilisent des technologies comme les media queries et viewport pour être sûre que leur interface convient avec tout les facteurs de forme: bureau, téléphone, tablette, ou peut importe ce qui viendra après.
 
 ## Guides

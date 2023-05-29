@@ -2,6 +2,7 @@
 title: Window.self
 slug: Web/API/Window/self
 ---
+
 {{ APIRef() }}
 
 ## 概述

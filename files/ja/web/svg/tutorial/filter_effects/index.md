@@ -1,13 +1,8 @@
 ---
 title: フィルター効果
 slug: Web/SVG/Tutorial/Filter_effects
-tags:
-  - 上級者
-  - NeedsContent
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Filter_effects
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
 
 基本的な図形では、ある効果を得るために必要な柔軟性が得られない場合があります。よくある例として、ドロップシャドウはグラデーションの組み合わせでは合理的に作成することができません。フィルターは、 SVG が高度な効果を作り出すための仕組みです。

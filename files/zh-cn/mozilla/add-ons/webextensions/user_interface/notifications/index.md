@@ -2,6 +2,7 @@
 title: 通知
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
+
 {{AddonSidebar}}
 
 通知允许你使用底层操作系统提供的通知服务来传达有关你的扩展或其内容的信息。
@@ -18,7 +19,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 "permissions": ["notifications"]
 ```
 
-接下来，你可以使用 {{WebExtAPIRef("notifications.create")}} 来创建一个通知，这里有一个来自 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 的简单示例：
+接下来，你可以使用 {{WebExtAPIRef("notifications.create")}} 来创建一个通知，这里有一个来自 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 的简单示例：
 
 ```js
 const title = browser.i18n.getMessage("notificationTitle");
@@ -47,4 +48,4 @@ browser.notifications.onClicked.addListener(handleClick);
 
 ## 示例
 
-GitHub 仓库 [webextensions-examples](https://github.com/mdn/webextensions-examples) 中包含了通知的实现示例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
+GitHub 仓库 [webextensions-examples](https://github.com/mdn/webextensions-examples) 中包含了通知的实现示例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)

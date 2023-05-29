@@ -3,6 +3,7 @@ title: Event.timeStamp
 slug: Web/API/Event/timeStamp
 translation_of: Web/API/Event/timeStamp
 ---
+
 {{ApiRef("DOM")}}
 
 Retourne le temps (en millisecondes) à partir duquel l'événement a été créé.

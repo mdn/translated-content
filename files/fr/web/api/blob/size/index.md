@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/File/fileSize
 original_slug: Web/API/File/fileSize
 ---
+
 {{APIRef("File API") }}{{non-standard_header}}
 
 ## Résumé

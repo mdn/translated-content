@@ -2,6 +2,7 @@
 title: 傻故事產生器
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 在本次評估中，您被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！
@@ -29,7 +30,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - 開啟右方網頁： [grab the HTML file](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) ，將 HTML 範本儲存到您的本地電腦的新資料夾中，並命名為`index.html` 。範本也包含相應的 CSS 檔案。
 - 開啟右方網頁： [page containing the raw text](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) ，並保持網頁開啟在瀏覽器的另一分頁上，以便稍後使用。
 
-> **備註：** 除了將檔案下載到自己的電腦中，您也能使用線上編輯程式的網頁，像是： [JSBin](http://jsbin.com/) 或者[Thimble](https://thimble.mozilla.org/) 來完成評估測驗。您可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果您使用的線上編輯器沒有獨立給 JavaScript 的編輯區，您也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
+> **備註：** 除了將檔案下載到自己的電腦中，您也能使用線上編輯程式的網頁，像是：[JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/) 來完成評估測驗。您可以將 HTML, CSS 以及 JavaScript 貼到前述的線上編輯器中。如果您使用的線上編輯器沒有獨立給 JavaScript 的編輯區，您也能透過`<script>`直接將 JS 語法放到 HTML 檔案中。
 
 ## 任務簡介
 
@@ -53,25 +54,25 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 基本設定：
 
 1. 在有`index.html`的資料夾中建立一個新檔案稱之為 `main.js`
-2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"​​​​​​`
+2. 請在`index.html`中引用第一點建立的外部 JavaScript 檔案，引用方法是在`</body>` tag 前插入一組 {{htmlelement("script")}}元素 ，並在 opening tag 上加入`src=" main.js"`
 
 初始化變數與函數：
 
 1. 在原始文件檔中(raw text file)，請複製標題 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 以下到第 2 點前的所有程式碼，並貼到`main.js`中。這給你三個變數來標記：文字輸入框 "Enter custom name" (輸入自定義名字) ，變數為 (`customName`) 與按鈕 "Generate random story"(產生隨機故事) ，變數為 (`randomize`), 以及 HTML 中接近 body 底部的 {{htmlelement("p")}} 元素，故事將會被複製進第三個變數(`story`)中。此外您還會得到一個函數稱為： `randomValueFromArray()` ，從命名中可以得知這是一個陣列，它會隨機提供一則儲存其中的故事。
 2. 接著讓我們查看原始文件檔中(raw text file)的第 2 點： "2. RAW TEXT STRINGS"。 其包含的這些字串在程式運行時會被放進來，請幫忙在`main.js`中將這些字串分別存進對應的變數裡：
 
-    1. 將第一行超級長的字串存進變數 `storyText`中。
-    2. 將第一組三個字串存進一陣列，並命名為`insertX`。
-    3. 將第二組三個字串存進一陣列，並命名為`insertY`.
-    4. 將第三組三個字串存進一陣列，並命名為`insertZ`.
+   1. 將第一行超級長的字串存進變數 `storyText`中。
+   2. 將第一組三個字串存進一陣列，並命名為`insertX`。
+   3. 將第二組三個字串存進一陣列，並命名為`insertY`。
+   4. 將第三組三個字串存進一陣列，並命名為`insertZ`。
 
 放置事件監聽器與未完善的函數：
 
 1. 再度回到原始文件檔中(raw text file)
 2. 複製第 3 標題，"3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" 以下的內容，並貼到 `main.js` 檔案中的最下方，這包含：
 
-    - 給變數`randomize`增加一個點擊事件監聽器(clickevent listener) ，所以當產生故事的按鈕被點擊，`result()`函數會運行 。
-    - 增加一個部分完成的函數 `result()` ，完成測驗您需要完善這個函數。
+   - 給變數`randomize`增加一個點擊事件監聽器（clickevent listener），所以當產生故事的按鈕被點擊，`result()` 函數會運行 。
+   - 增加一個部分完成的函數 `result()`，完成測驗您需要完善這個函數。
 
 完善 `result()` 函數：
 
@@ -81,10 +82,10 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 4. Inside the first `if` block, add another string replacement method call to replace the name 'Bob' found in the `newStory` string with the `name` variable. In this block we are saying "If a value has been entered into the `customName` text input, replace Bob in the story with that custom name."
 5. Inside the second `if` block, we are checking to see if the `uk` radio button has been selected. If so, we want to convert the weight and temperature values in the story from pounds and Fahrenheit into stones and centigrade. What you need to do is as follows:
 
-    1. Look up the formulae for converting pounds to stone, and Fahrenheit to centigrade.
-    2. Inside the line that defines the `weight` variable, replace 300 with a calculation that converts 300 pounds into stones. Concatenate `' stone'` onto the end of the result of the overall `Math.round()` call.
-    3. Inside the line that defines the `temperature` variable, replace 94 with a calculation that converts 94 Fahrenheit into centigrade. Concatenate `' centigrade'` onto the end of the result of the overall `Math.round()` call.
-    4. Just under the two variable definitions, add two more string replacement lines that replace '94 farenheit' with the contents of the `temperature` variable, and '300 pounds' with the contents of the `weight` variable.
+   1. Look up the formulae for converting pounds to stone, and Fahrenheit to centigrade.
+   2. Inside the line that defines the `weight` variable, replace 300 with a calculation that converts 300 pounds into stones. Concatenate `' stone'` onto the end of the result of the overall `Math.round()` call.
+   3. Inside the line that defines the `temperature` variable, replace 94 with a calculation that converts 94 Fahrenheit into centigrade. Concatenate `' centigrade'` onto the end of the result of the overall `Math.round()` call.
+   4. Just under the two variable definitions, add two more string replacement lines that replace '94 farenheit' with the contents of the `temperature` variable, and '300 pounds' with the contents of the `weight` variable.
 
 6. Finally, in the second-to-last line of the function, make the `textContent` property of the `story` variable (which references the paragraph) equal to `newStory`.
 
@@ -94,7 +95,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - If you are unsure whether the JavaScript is applied to your HTML properly, try removing everything else from the JavaScript file temporarily, adding in a simple bit of JavaScript that you know will create an obvious effect, then saving and refreshing. The following for example turns the background of the {{htmlelement("html")}} element red — so the entire browser window should go red if the JavaScript is applied properly:
 
   ```js
-  document.querySelector('html').style.backgroundColor = 'red';
+  document.querySelector("html").style.backgroundColor = "red";
   ```
 
 - [Math.round()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that simply rounds the result of a calculation to the nearest whole number.
@@ -105,15 +106,3 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 如果您將這個測驗視為正規課程的一部分，建議將成果提供您的老師或指導者以利幫助您達到最好的學習效益。如果您是自學者，您可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒您：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## 相關學習模組
-
-- [什麼是 JavaScript?](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [和 JavaScript 的第一次接觸](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [什麼出錯了？ JavaScript 的疑難排解（除錯）](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [儲存你需要的資訊 — 變數](/zh-TW/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 的基本運算— 數字 與 運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math)
-- [處理文字 — JavaScript 的字串](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods) [有用的字串方法](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays) [陣列](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)
-- [傻故事產生器](/zh-TW/docs/Learn/JavaScript/First_steps/Silly_story_generator)

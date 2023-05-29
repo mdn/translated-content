@@ -1,14 +1,6 @@
 ---
 title: CSS 선택자
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - Selectors
-  - 선택자
-translation_of: Web/CSS/CSS_Selectors
 ---
 {{CSSRef("Selectors")}}
 

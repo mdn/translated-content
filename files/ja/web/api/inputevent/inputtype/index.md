@@ -1,20 +1,17 @@
 ---
 title: InputEvent.inputType
 slug: Web/API/InputEvent/inputType
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
-{{APIRef("DOM Events")}}
 
-**`inputType`** は {{domxref("InputEvent")}} インターフェイスの読取専用プロパティで、編集可能なコンテンツの変更が行われた種別を返します。変更は例えば挿入、削除、テキスト整形などがあります。
+{{APIRef("UI Events")}}
 
-## 構文
+**`inputType`** は {{domxref("InputEvent")}} インターフェイスの読み取り専用プロパティで、編集可能なコンテンツの変更が行われた種別を返します。変更は例えば挿入、削除、テキスト整形などがあります。
 
-```
-var aString = inputEvent.inputType;
-```
+## 値
 
-### 値
-
-入力された入力種別を含む {{domxref("DOMString")}}。 `insertText`, `deleteContentBackward`, `insertFromPaste`, `formatBold` など、多くの値が考えられます。利用可能な入力種別の完全なリストは、[Input Events Level 1 仕様の Attributes の章](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)を参照してください。
+入力された入力種別を含む文字列です。`insertText`、`deleteContentBackward`、`insertFromPaste`、`formatBold` など、多くの値を取り得ます。利用可能な入力種別の完全なリストは、[Input Events Level 1 仕様の Attributes の章](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)を参照してください。
 
 ## 例
 
@@ -23,16 +20,20 @@ var aString = inputEvent.inputType;
 ### HTML
 
 ```html
-<p id="log">Input type: </p>
-<div contenteditable="true" style="margin: 20px;padding: 20px;border:2px dashed red;">
-  <p>Some sample text. Try inserting line breaks, or deleting text in different ways, or pasting different content in.</p>
-  <hr>
+<p id="log">入力種別:</p>
+<div
+  contenteditable="true"
+  style="margin: 20px;padding: 20px;border:2px dashed red;">
+  <p>
+    いくつかのサンプルテキストです。改行を入れたり、異なる形でテキストを削除したり、異なるコンテンツを貼り付けたりしてみてください。
+  </p>
+  <hr />
   <ul>
-    <li>A sample</li>
-    <li>bulleted</li>
-    <li>list.</li>
+    <li>サンプルの</li>
+    <li>箇条書き</li>
+    <li>リスト</li>
   </ul>
-  <p>Another paragraph.</p>
+  <p>他の段落</p>
 </div>
 ```
 
@@ -44,24 +45,22 @@ const editable = document.querySelector('div[contenteditable]');
 editable.addEventListener('input', logInputType);
 
 function logInputType(event) {
-  log.textContent = `Input type: ${event.inputType}`;
+  log.textContent = `入力種別: ${event.inputType}`;
 }
 ```
 
 ### 結果
 
-Try editing the text inside the `<div>` and see what happens.
+`<div>` 内のテキストを編集して、どうなるかを試してみてください。
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **Note:** **注**: もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
+> **メモ:** もっと詳細な例として [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) も参照してください。
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                         | 備考 |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---- |
-| {{SpecName('UI Events','#dom-inputevent-inputtype','inputType')}} | {{Spec2('UI Events')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.InputEvent.inputType")}}
+{{Compat}}

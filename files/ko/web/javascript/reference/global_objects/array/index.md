@@ -1,15 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - Class
-  - Example
-  - Global Objects
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 ---
 {{JSRef}}
 
@@ -135,9 +126,9 @@ JavaScript 배열의 인덱스는 0부터 시작합니다. 즉, 배열 첫 번�
 잘못된 인덱스를 사용하면 `undefined`를 반환합니다.
 
 ```js
-let arr = ['첫 번재 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
-console.log(arr[0])              // '첫 번재 요소입니다'를 기록
-console.log(arr[1])              // '두 번재 요소입니다'를 기록
+let arr = ['첫 번째 요소입니다', '두 번째 요소입니다', '마지막 요소입니다']
+console.log(arr[0])              // '첫 번째 요소입니다'를 기록
+console.log(arr[1])              // '두 번째 요소입니다'를 기록
 console.log(arr[arr.length - 1]) // '마지막 요소입니다'를 기록
 ```
 

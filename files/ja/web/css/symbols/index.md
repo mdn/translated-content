@@ -3,6 +3,7 @@ title: symbols()
 slug: Web/CSS/symbols
 original_slug: Web/CSS/symbols()
 ---
+
 {{CSSRef}}
 
 **`symbols()`** は CSS の関数で、カウンタースタイルをインラインで、 {{cssxref("list-style")}} のようなプロパティの値で直接定義することができます。 {{cssxref("@counter-style")}} とは異なり、 `symbols()` は*無名*です (すなわち一度しか使用できません)。 {{cssxref("@counter-style")}} よりも機能は劣りますが、より簡単でより短く書くことができます。

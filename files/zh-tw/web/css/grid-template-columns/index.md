@@ -2,9 +2,8 @@
 title: 网格模板列
 slug: Web/CSS/grid-template-columns
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 The `grid-template-columns` CSS property defines the line names and track sizing functions of the {{glossary("grid column", "grid columns")}}.
 
@@ -26,13 +25,16 @@ grid-template-columns: repeat(3, 200px);
 
 /* <auto-track-list> values */
 grid-template-columns: 200px repeat(auto-fill, 100px) 300px;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-columns: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-columns: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-columns:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-columns:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-columns:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Global values */
 grid-template-columns: inherit;
@@ -107,7 +109,7 @@ grid-template-columns: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## See also
 

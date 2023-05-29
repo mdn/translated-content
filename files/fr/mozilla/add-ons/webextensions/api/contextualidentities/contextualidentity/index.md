@@ -12,6 +12,7 @@ tags:
   - contextalIdentities
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
 ---
+
 {{AddonSidebar()}}
 
 Le type **`contextualIdentities.ContextualIdentity`** décrit une identité contextuelle unique.
@@ -63,6 +64,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `name`
   - : `string`. Nom de l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Notez que les noms ne doivent pas nécessairement être uniques .
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.ContextualIdentity")}}
+{{Compat}}

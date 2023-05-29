@@ -2,6 +2,7 @@
 title: URLSearchParams.entries()
 slug: Web/API/URLSearchParams/entries
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`entries()`** メソッドは、このオブジェクトに含まれるすべてのキー/値のペアを反復処理できる {{jsxref("Iteration_protocols","iterator")}} を返します。 各ペアのキーと値は {{domxref("USVString")}} オブジェクトです。
@@ -43,9 +44,7 @@ key2, value2
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "entries() (see \"iterable\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

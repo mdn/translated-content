@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/dx
 ---
+
 {{SVGRef}}
 
 L'attribut **`dx`** indique un décalage sur l'axe x de la position d'un élément ou de son contenu.

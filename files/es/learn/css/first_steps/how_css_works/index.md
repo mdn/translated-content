@@ -1,9 +1,9 @@
 ---
 title: Cómo funciona CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -52,7 +52,7 @@ Cuando un navegador muestra un documento, ha de combinar el contenido con la inf
 
 El siguiente diagrama ofrece una visión sencilla de este proceso.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## Acerca del DOM
 
@@ -170,11 +170,3 @@ En lecciones posteriores veremos muchas más formas de cómo admitir navegadores
 Casi has terminado este módulo; solo nos queda una cosa más por hacer. En el próximo artículo, [pondrás en práctica tu conocimiento nuevo](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge) para cambiar el estilo de un ejemplo y probarte con un poco de CSS en el proceso.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## En este módulo
-
-1. [¿Qué es CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

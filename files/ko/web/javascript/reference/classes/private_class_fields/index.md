@@ -1,12 +1,8 @@
 ---
 title: Private class fields
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Class
-  - JavaScript
-  - Private Field
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 class 의 속성(property)들은 기본적으로 public 하며 class 외부에서 읽히고 수정될 수 있다. 하지만, ES2019 에서는 해쉬 `#` prefix 를 추가해 private class 필드를 선언할 수 있게 되었다.
@@ -79,7 +75,7 @@ Private static 필드는 해당 필드를 선언한 class 에서만 접근할 �
 
 ### Private instance fields
 
-private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**,\*\* \*\*즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
+private 인스턴스 필드는 **# 이름 ('해쉬 이름' 으로 발음)**, 즉 `#` prefix 를 가진 식별자로 선언된다. `#` 은 그 이름 자체의 일부이며 선언과 접근 시에 모두 사용된다.
 
 캡슐화(encapsulation) 는 언어로부터 강제된다(enforced by the language). 즉, scope 밖에서 `#` 이름에 접근하는 것은 syntax error 이다.
 
@@ -162,7 +158,7 @@ private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 cl
 
     const instance = new ClassWithPrivateMethod()
     console.log(instance.getPrivateMessage())
-    // expected output: "hello worl​d"
+    // expected output: "hello world"
 ```
 
 private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:
@@ -185,14 +181,14 @@ private 인스턴스 메소드는 generator, async 그리고 async generator 함
     }
 
     new ClassWithPrivateAccessor();
-    // expected output: "✨hello worl​d✨"
+    // expected output: "✨hello world✨"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

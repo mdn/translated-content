@@ -2,6 +2,7 @@
 title: Chrome との非互換性
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 Webextension を用いた拡張機能は Chrome や Opera の拡張機能と互換性があるように設計されています。可能な限り、それぞれのブラウザー向けに書かれた拡張機能は最低限の変更で Firefox で実行できるように設計されています。

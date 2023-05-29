@@ -1,21 +1,17 @@
 ---
 title: 'HTML el atributo: multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Atributos
-  - Resticción de validación
-  - atributo
-translation_of: Web/HTML/Attributes/multiple
 original_slug: Web/HTML/Atributos/multiple
 ---
+
 El atributo booleano {{HTMLAttrxRef("multiple", "input")}}, si se establece, significa que el control del formulario acepta uno o más valores. Válido para los {{HTMLElement("input")}}s de tipo {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/file", "file")}} y {{HTMLElement("select")}}, la forma en que el usuario opta por valores múltiples depende del control del formulario.
 
 Dependiendo del tipo, el control de formulario puede tener una apariencia diferente si se establece el atributo {{HTMLAttrxRef("multiple", "input")}}. Para el {{HTMLElement("input")}} de tipo `file`, la mensajería nativa que proporciona el navegador es diferente. En Firefox, el {{HTMLElement("input")}} de tipo `file` dice "Ningún archivo seleccionado" cuando el atributo está presente y "Ningún archivo seleccionado", cuando no hay archivo seleccionado. La mayoría de los navegadores muestran un cuadro de lista de desplazamiento para un control {{HTMLElement("select")}} con el atributo {{HTMLAttrxRef("multiple", "input")}} establecido frente a un menú desplegable de una sola línea cuando se omite el atributo. El {{HTMLElement("input")}} {{HTMLElement("input/email", "email")}} muestra lo mismo, pero coincidirá con la pseudoclase {{CSSxRef(':invalid')}} si hay más de una dirección de correo electrónico separada por comas incluido si el atributo no está presente.
 
-Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es {{web.link("/es/docs/Web/HTML/Attributes/required", "required")}} también), una o más direcciones de correo electrónico separadas por comas.
+Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el tipo de entrada {{HTMLElement("input/email", "email")}}, el usuario puede incluir cero (si no es [required](/es/docs/Web/HTML/Attributes/required) también), una o más direcciones de correo electrónico separadas por comas.
 
 ```html
-<input type="email" multiple name="emails" id="emails">
+<input type="email" multiple name="emails" id="emails" />
 ```
 
 Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
@@ -23,7 +19,7 @@ Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el
 Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el tipo de entrada {{HTMLElement("input/file", "file")}}, el usuario puede seleccionar uno o más archivos. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic).
 
 ```html
-<input type="file" multiple name="uploads" id="uploads">
+<input type="file" multiple name="uploads" id="uploads" />
 ```
 
 Cuando se omite el atributo, el usuario solo puede seleccionar un único archivo por {{HTMLElement("input")}}.
@@ -50,7 +46,15 @@ Cuando se especifica {{HTMLAttrxRef("multiple", "input")}}, la mayoría de los n
 
 ```html
 <label for="emails">¿A quién deseas enviar un correo electrónico?</label>
-<input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64">
+<input
+  type="email"
+  multiple
+  name="emails"
+  id="emails"
+  list="drawfemails"
+  required
+  size="64"
+/>
 
 <datalist id="drawfemails">
   <option value="gruñón@woodworkers.com">Gruñón</option>
@@ -64,12 +68,14 @@ Cuando se especifica {{HTMLAttrxRef("multiple", "input")}}, la mayoría de los n
 ```
 
 ```css hidden
-input:invalid {border: red solid 3px;}
+input:invalid {
+  border: red solid 3px;
+}
 ```
 
-Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo {{web.link("/es/docs/Web/HTML/Attributes/required", "required")}} está presente, se requiere al menos una dirección de correo electrónico.
+Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo electrónico separadas por comas y formadas correctamente. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista. Si el atributo [required](/es/docs/Web/HTML/Attributes/required) está presente, se requiere al menos una dirección de correo electrónico.
 
-Algunos navegadores admiten la aparición de la {{web.link("/es/docs/Web/HTML/Attributes/list", "lista")}} de opciones del {{HTMLElement('datalist')}} para direcciones de correo electrónico posteriores cuando haya varias. Otros no lo hacen.
+Algunos navegadores admiten la aparición de la [lista](/es/docs/Web/HTML/Attributes/list) de opciones del {{HTMLElement('datalist')}} para direcciones de correo electrónico posteriores cuando haya varias. Otros no lo hacen.
 
 {{EmbedLiveSample("input_para_correoᵉ", 600, 80) }}
 
@@ -80,17 +86,21 @@ Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el {{HTMLElement("i
 ```html
 <form method="post" enctype="multipart/form-data">
   <p>
-    <label for="uploads">
-       Elige las imágenes que deseas cargar:
-    </label>
-    <input type="file" id="uploads" name="uploads" accept=".jpg, .jpeg, .png, .svg, .gif" multiple>
+    <label for="uploads"> Elige las imágenes que deseas cargar: </label>
+    <input
+      type="file"
+      id="uploads"
+      name="uploads"
+      accept=".jpg, .jpeg, .png, .svg, .gif"
+      multiple
+    />
   </p>
   <p>
     <label for="text">Elige un archivo de texto para cargar: </label>
-    <input type="file" id="text" name="text" accept=".txt">
- </p>
+    <input type="file" id="text" name="text" accept=".txt" />
+  </p>
   <p>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" />
   </p>
 </form>
 ```
@@ -99,7 +109,7 @@ Cuando se establece {{HTMLAttrxRef("multiple", "input")}} en el {{HTMLElement("i
 
 Nota la diferencia en la apariencia entre el ejemplo con {{HTMLAttrxRef("multiple", "input")}} establecido y el otro {{HTMLElement("input")}} sin `file`.
 
-Cuando se envía el formulario, utilizas el {{web.link("/es/docs/Web/HTML/Element/form", "method='get'")}} el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de {{web.link("/es/docs/Web/API/XMLHttpRequest/multipart", "multipart")}}, usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y {{web.link("/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_method_attribute", "envío de datos del formulario")}} para obtener más información.
+Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Element/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_method_attribute) para obtener más información.
 
 ### `select`
 
@@ -107,33 +117,33 @@ El atributo {{HTMLAttrxRef("multiple", "input")}} en el elemento {{HTMLElement("
 
 ```html
 <form method="get" action="#">
-<p>
- <label for="dwarfs">Selecciona los leñadores que te gusten:</label>
-  <select multiple name="drawfs" id="drawfs">
-    <option>gruñón@woodworkers.com</option>
-    <option>feliz@woodworkers.com</option>
-    <option>dormilón@woodworkers.com</option>
-    <option>tímido@woodworkers.com</option>
-    <option>estornudo@woodworkers.com</option>
-    <option>tontín@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
- <label for="favoriteOnly">Selecciona tu favorito:</label>
-  <select name="favoriteOnly" id="favoriteOnly">
-    <option>gruñón@woodworkers.com</option>
-    <option>feliz@woodworkers.com</option>
-    <option>dormilón@woodworkers.com</option>
-    <option>tímido@woodworkers.com</option>
-    <option>estornudo@woodworkers.com</option>
-    <option>tontín@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
-  <input type="submit" value="Enviar">
-</p>
+  <p>
+    <label for="dwarfs">Selecciona los leñadores que te gusten:</label>
+    <select multiple name="drawfs" id="drawfs">
+      <option>gruñón@woodworkers.com</option>
+      <option>feliz@woodworkers.com</option>
+      <option>dormilón@woodworkers.com</option>
+      <option>tímido@woodworkers.com</option>
+      <option>estornudo@woodworkers.com</option>
+      <option>tontín@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <label for="favoriteOnly">Selecciona tu favorito:</label>
+    <select name="favoriteOnly" id="favoriteOnly">
+      <option>gruñón@woodworkers.com</option>
+      <option>feliz@woodworkers.com</option>
+      <option>dormilón@woodworkers.com</option>
+      <option>tímido@woodworkers.com</option>
+      <option>estornudo@woodworkers.com</option>
+      <option>tontín@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Enviar" />
+  </p>
 </form>
 ```
 
@@ -160,19 +170,16 @@ Hay varias formas de seleccionar varias opciones en un elemento `<select>` con u
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-multiple', 'Atributo multiple')}} | {{ Spec2('HTML WHATWG') }} |            |
-| {{SpecName('HTML5 W3C', 'input.html#attr-input-multiple', 'Atributo multiple')}} | {{ Spec2('HTML5 W3C') }}     |            |
+{{Specifications}}
 
 ## Problemas de accesibilidad
 
 Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo {{HTMLAttrxRef("multiple", "input")}}, informa al usuario que se permiten múltiples valores y proporciona instrucciones sobre cómo proveer más valores, como "direcciones de correo electrónico separadas con una coma".
 
-Configurar {{web.link("/es/docs/Web/HTML/Attributes/size", "size")}}`="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
+Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección múltiple puedes hacer que aparezca como una única selección en algunos navegadores, pero luego no se expande en el enfoque, lo que perjudica la usabilidad. No hagas eso. Si cambias la apariencia de un `select`, e incluso si no lo haces, asegúrate de informar al usuario que se puede seleccionar más de una opción mediante otro método.
 
 ## Ve también
 
 - {{HTMLElement('input')}}
 - {{htmlelement('select')}}
-- {{web.link("/es/docs/Web/HTML/Element/input/email#Allowing_multiple_e-mail_addresses", "Permitir varias direcciones de correo electrónico")}}
+- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Element/input/email#Allowing_multiple_e-mail_addresses)

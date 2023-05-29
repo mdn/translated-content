@@ -1,15 +1,8 @@
 ---
 title: '고급 기법: 오디오 생성 및 시퀸싱'
 slug: Web/API/Web_Audio_API/Advanced_techniques
-tags:
-  - API
-  - Advanced
-  - Audio
-  - Guide
-  - Reference
-  - Web Audio API
-  - sequencer
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 이 자습서에서, 우리는 사운드 생성과 수정 뿐만 아니라, 타이밍과 스케쥴링도 다룰 것입니다. 우리는 샘플 로딩, 엔벨로프, 필터, 웨이브 테이블, 주파수 조정을 소개할 것입니다. 만약 여러분이 이 용어들에 익숙하고 Web Audio API 내에서의 이것들의 응용에 대한 입문을 찾고 있다면, 맞는 장소에 오셨습니다.

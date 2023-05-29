@@ -2,6 +2,7 @@
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
+
 {{JSRef}}
 
 **`codePointAt()`** 方法返回 一个 Unicode 编码点值的非负整数。
@@ -27,7 +28,7 @@ str.codePointAt(pos)
 
 Surrogate Pair 是 UTF-16 中用于扩展字符而使用的编码方式，是一种采用四个字节 (两个 UTF-16 编码) 来表示一个字符，称作代理对。
 
-## 例子
+## 示例
 
 ### 使用 `codePointAt()`
 

@@ -1,13 +1,10 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-translation_of: Web/API/Element/clientLeft
 ---
 {{ APIRef("DOM") }}
 
 엘리먼트의 왼쪽 테두리의 너비 (픽셀 단위)입니다. 엘리먼트의 텍스트 방향이 오른쪽에서 왼쪽이고 오버플로로 인해 왼쪽 수직 스크롤 막대가 렌더링되는 경우 수직 스크롤 막대의 너비가 포함됩니다. `clientLeft`는 왼쪽 여백 또는 왼쪽 패딩을 포함하지 않습니다. `clientLeft`는 읽기 전용입니다.
-
-[Gecko](en/Gecko) 기반 응용 프로그램은 Gecko 1.9부터 clientLeft를 지원합니다. ([Firefox 3](en/Firefox_3), {{ Bug(111207) }}에서 구현됨). 이 속성은 Firefox 2 이전 버전은 지원하지 않습니다.
 
 [`layout.scrollbar.side` 환경 설정](http://kb.mozillazine.org/Layout.scrollbar.side)이 1 또는 3으로 설정되고 텍스트 방향이 RTL로 설정된 경우 세로 스크롤 막대가 왼쪽에 배치되며 이는 clientLeft가 계산되는 방식에 영향을줍니다.
 
@@ -31,11 +28,11 @@ padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

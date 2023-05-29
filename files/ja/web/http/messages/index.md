@@ -1,13 +1,8 @@
 ---
 title: HTTP メッセージ
 slug: Web/HTTP/Messages
-tags:
-  - Guide
-  - HTTP
-  - WebMechanics
-  - ガイド
-translation_of: Web/HTTP/Messages
 ---
+
 {{HTTPSidebar}}
 
 HTTP メッセージは、サーバーとクライアントがデータを交換する手段です。クライアントが送信してサーバーにアクションを起こさせる*リクエスト*と、サーバーの回答である*レスポンス*の、2 種類のメッセージがあります。
@@ -61,7 +56,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 - *リクエストヘッダー*は、 {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, 指定するとリクエストを変更するもの ({{HTTPHeader("Accept-Language")}} など)、状況を示すもの ({{HTTPHeader("Referer")}} など)、条件を与えるもの ({{HTTPHeader("If-None")}} など) があります。
 - *エンティティヘッダー*は {{HTTPHeader("Content-Length")}} など、リクエストの本文に適用されます。当然ながら、リクエスト内に本文がない場合はこれらのヘッダーが送信されません。
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### 本文
 
@@ -94,7 +89,7 @@ HTTP レスポンスの開始行は*ステータス行*と呼ばれ、以下の�
 - *レスポンスヘッダー*は {{HTTPHeader("Vary")}} や {{HTTPHeader("Accept-Ranges")}} など、ステータス行で伝えられないサーバーの追加情報を与えます。
 - *エンティティヘッダー*は {{HTTPHeader("Content-Length")}} など、レスポンスの本文に適用されます。通常、レスポンス内に本文がない場合はこのようなヘッダーは送信されません。
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### 本文
 

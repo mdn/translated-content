@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/JavaScript
 original_slug: Apprendre/JavaScript
 ---
+
 {{LearnSidebar}}
 
 {{Glossary('JavaScript')}} est un langage de programmation qui vous permet de mettre en œuvre des éléments complexes sur des pages Web (une page Web contenant plus que de simples informations statiques). Chaque fois qu'une page affiche des mises à jour de contenu en temps réel, des cartes interactives, des animations graphiques 2D / 3D ou un juke-box vidéo défilant, etc. — vous pouvez parier que JavaScript est probablement impliqué.

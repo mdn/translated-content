@@ -2,13 +2,14 @@
 title: HTMLImageElement.align
 slug: Web/API/HTMLImageElement/align
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`align`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、コンテナーに対して画像をどのように配置するかを示す文字列です。
 
 代わりに CSS プロパティ {{cssxref("vertical-align")}} を使用する必要があり、その名前にもかかわらず実際に画像に対しても機能します。また、 {{cssxref("float")}} プロパティを使って、画像を左または右マージンに浮動させることができます。
 
-`align` プロパティは、HTML の {{htmlattrxref("align", "img")}} コンテンツ属性を反映します。
+`align` プロパティは、HTML の [`align`](/ja/docs/Web/HTML/Element/img#align) コンテンツ属性を反映します。
 
 ## 値
 

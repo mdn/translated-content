@@ -1,16 +1,8 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
-browser-compat: javascript.builtins.Math.trunc
 ---
+
 {{JSRef}}
 
 **`Math.trunc()`** 함수는 주어진 값의 소수부분을 제거하고 숫자의 정수부분을 반환합니다.

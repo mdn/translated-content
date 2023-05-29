@@ -2,6 +2,7 @@
 title: MediaSource.sourceBuffers
 slug: Web/API/MediaSource/sourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイス の **`sourceBuffers`** 読み取り専用プロパティは、この `MediaSource` に関連付けられた {{domxref("SourceBuffer")}} オブジェクトのリストを含む {{domxref("SourceBufferList")}} オブジェクトを返します。
@@ -41,9 +42,7 @@ function sourceOpen (_) {
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-mediasource-sourcebuffers', 'sourceBuffers')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

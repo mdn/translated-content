@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/preserve-space
 original_slug: Web/XSLT/preserve-space
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:preserve-space>` définit les éléments du document source pour lesquels les espaces doivent être préservées. Si il y a plus d'un élément, leurs noms doivent être séparés par des espaces. La politique par défaut est de conserver les espaces, cet élément n'est donc utile que pour contrer l'effet de `<xsl:strip-space>`.

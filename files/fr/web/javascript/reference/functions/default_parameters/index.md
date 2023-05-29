@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 original_slug: Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
@@ -155,7 +156,7 @@ sansDéfaut.call({value:"=^_^="});
 
 ### Les fonctions définies dans le corps d'une fonction
 
-À partir de Gecko 33 {{geckoRelease(33)}}. Les fonctions déclarées dans le corps de la fonction ne peuvent pas servir comme valeurs par défaut, cela lèvera une exception {{jsxref("ReferenceError")}} (plus précisément une {{jsxref("TypeError")}} avec SpiderMonkey, voir le {{bug(1022967)}}). Les paramètres par défaut sont exécutés en premier, les déclarations de fonctions présentes dans le corps de la fonction sont évaluées ensuite.
+À partir de Gecko 33, les fonctions déclarées dans le corps de la fonction ne peuvent pas servir comme valeurs par défaut, cela lèvera une exception {{jsxref("ReferenceError")}} (plus précisément une {{jsxref("TypeError")}} avec SpiderMonkey, voir le {{bug(1022967)}}). Les paramètres par défaut sont exécutés en premier, les déclarations de fonctions présentes dans le corps de la fonction sont évaluées ensuite.
 
 ```js
 // Ne fonctionnera pas, entraîne une ReferenceError.
@@ -166,7 +167,7 @@ function f(a = go()) {
 
 ### Utilisation de paramètres sans valeur par défaut après les paramètres par défaut
 
-Avant Gecko 26 ({{geckoRelease(26)}}, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le bug {{bug(777060)}}. Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
+Avant Gecko 26, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le bug {{bug(777060)}}. Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
 
 ```js
 function f(x=1, y) {
@@ -191,14 +192,11 @@ f(); // 6
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.default_parameters")}}
+{{Compat}}
 
 ## Voir aussi
 

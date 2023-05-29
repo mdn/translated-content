@@ -2,6 +2,7 @@
 title: バカ話ジェネレーター
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 この評価試験では、このモジュールを通して身に付けた知識を生かして、ランダムなバカ話を生成する楽しいアプリを作ります。楽しんでください！
@@ -17,7 +18,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - GitHub からサンプル用の [HTML ファイルを取って](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html)きて自分のコンピュータの新しいディレクトリーに `index.html` という名前で保存します。ここには見た目をきれいにするため、CSS も含まれています。
 - [この生テキストを含むページ](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt)に移動してどこか別のブラウザータブで開いたままにしておきます。後で必要となります。
 
-> **Note:** 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
+> **メモ:** 上記の手順に代わって、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価試験を実施できます。HTML、CSS、JavaScript をオンラインエディターにペーストできます。使っているオンラインエディターが独立した JavaScript パネルを持たない場合、HTML ページ内の `<script>` 要素内に書いても問題ありません。
 
 ## プロジェクトの要点
 
@@ -93,15 +94,3 @@ HTML および CSS と少しのテキストと JavaScript 関数があります�
 もし特定の組織の元でこのコースを受けているのなら、先生やメンターに出来たものを見せて、評価をお願いしてみましょう。もし自分だけでやっているのなら、[この評価試験のスレッド](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686)や、[Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルに評価をお願いしてみましょう。まずはやってみましょう。カンニングしても得られるものはないですよ！
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## このモジュール内の文書
-
-- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
-- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
-- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
-- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

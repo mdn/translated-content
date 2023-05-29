@@ -2,6 +2,7 @@
 title: Gamepad API
 slug: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}{{SeeCompatTable}}
 
 **Gamepad API** 可以给予开发者一种简单、统一的方式来识别并响应游戏控制器（手柄）。其中包含了三个接口、两个事件、一个特殊函数，用来响应控制器的连接与断开、获取其他关于控制器的信息以及识别当前是哪个按键或是哪个控制器被按下了。
@@ -34,9 +35,9 @@ slug: Web/API/Gamepad_API
 #### Window 事件
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : 表示当控制器连接时（当{{event('gamepadconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器连接时（当[`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件触发时）运行的处理程序。
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : 表示当控制器断开连接时（当{{event('gamepaddisconnected')}} 事件触发时）运行的处理程序。
+  - : 表示当控制器断开连接时（当[`gamepaddisconnected`](/zh-CN/docs/Web/API/Window/gamepaddisconnected_event) 事件触发时）运行的处理程序。
 
 ## 教程与指南
 
@@ -49,9 +50,9 @@ slug: Web/API/Gamepad_API
 
 ## 浏览器兼容性
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - [The Gamepad API](https://hacks.mozilla.org/2013/12/the-gamepad-api/) by Ted Mielczarek and Robert Nyman
 - [简单的 API 演示页面](http://luser.github.io/gamepadtest/) ([源码](https://github.com/luser/gamepadtest))

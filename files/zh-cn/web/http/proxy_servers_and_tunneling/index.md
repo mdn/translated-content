@@ -2,6 +2,7 @@
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
 ---
+
 {{HTTPSidebar}}
 
 当访问不同的网站时，代理服务器和 HTTP 管道帮助访问万维网 . 一个代理可以是用户的本地计算机，或者介于用户计算机和终端服务器之间的地方。本章节概述一些关于代理和相关配置选项的基础知识。
@@ -10,7 +11,7 @@ slug: Web/HTTP/Proxy_servers_and_tunneling
 
 ## 正向代理
 
-正向代理，也可以叫“网关” 或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。 他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。
+正向代理，也可以叫“网关”或者仅仅为一个或多个客户端提供代理服务的“代理”。在互联网上像这样的代理不计其数。他们存储并转发网络服务（如 DNS，网页）以减少和控制大家所使用的带宽。
 
 正向代理可以是匿名代理，并允许用户在浏览 web 或者使用其他服务时隐藏自己的 IP。 [TOR](https://www.torproject.org/) (洋葱路由), 匿名地在多个代理间路由因特网。
 
@@ -80,7 +81,7 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-See [Proxy Auto-Configuration (PAC)](/zh-/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) for more examples.
+参见[代理自动配置（PAC）](/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)以获取更多示例。
 
 ## 参见
 

@@ -3,6 +3,7 @@ title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
+
 {{ ApiRef() }}
 
 L'attribut en lecture seule **`element.scrollHeight`** est une mesure de la hauteur du contenu d'un élément qui inclut le contenu débordant et non visible à l'écran. La valeur `scrollHeight` est égale à la hauteur minimum dont l'élément aurait besoin pour que le contenu rentre dans le viewpoint sans utiliser de barre de défilement. Cela inclut les marges internes mais pas les marges externes.

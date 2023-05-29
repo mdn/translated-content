@@ -2,6 +2,7 @@
 title: NDEFRecord.id
 slug: Web/API/NDEFRecord/id
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`id`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードを識別するのに使用される絶対または相対 URL をレコード識別子として返します。

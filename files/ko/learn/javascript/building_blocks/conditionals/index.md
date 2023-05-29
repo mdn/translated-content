@@ -3,6 +3,7 @@ title: 판단 내리기 — 조건문
 slug: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Learn/JavaScript/Building_blocks/조건문
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 어떤 프로그래밍 언어든 코드는 의사 결정을 내리고 입력 내용에 따라 작업을 수행해야 합니다. 예를 들어 게임에서 플레이어의 생명 수치가 0이면 게임이 종료됩니다. 날씨 앱에서는 아침에 해가 뜬 그림을 보여주고 밤에는 달과 별을 보여줍니다. 이 문서에서는 JavaScript에서 조건문이 작동하는 방법을 살펴 보겠습니다.
@@ -771,13 +772,3 @@ textarea.onkeyup = function(){
 - [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- **판단 내리기 — 조건문**
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

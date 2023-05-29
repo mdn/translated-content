@@ -2,6 +2,7 @@
 title: HTMLLinkElement
 slug: Web/API/HTMLLinkElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLinkElement`** インターフェイスは、外部リソースの参照情報と、それらのリソースと文書の関係（またはその逆）を表します（[`<link>`](/ja/docs/Web/HTML/Element/link) 要素に対応します。 [`HTMLAnchorElement`](/ja/docs/Web/API/HTMLAnchorElement) で表される [`<a>`](/ja/docs/Web/HTML/Element/a) 要素と混同しないでください）。このオブジェクトは {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティとメソッドを継承します。
@@ -27,13 +28,13 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 - {{domxref("HTMLLinkElement.media")}}
   - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
-  - : 文字列で、使用するリファラーを示す HTML の {{htmlattrxref("referrerpolicy", "link")}} 属性を反映します。
+  - : 文字列で、使用するリファラーを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Element/link#referrerpolicy) 属性を反映します。
 - {{domxref("HTMLLinkElement.rel")}}
   - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : {{domxref("DOMTokenList")}} で、 HTML の {{htmlattrxref("rel", "link")}} 属性をトークンのリストとして反映します。
+  - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性をトークンのリストとして反映します。
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の {{htmlattrxref("sizes", "link")}} 属性を反映します。
+  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性を反映します。
 - {{domxref("HTMLLinkElement.sheet")}} {{readonlyInline}}
   - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
 - {{domxref("HTMLLinkElement.type")}}
@@ -47,7 +48,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
 
   - : 文字列で、リソースからこの文書に対してリンクされたリソースの逆相の関係を表します。
 
-    > **Note:** 現在、 W3C HTML 5.2 仕様では `rev` は廃止ではないとされていますが、 WHATWG living standard では廃止というラベルが貼られたままになっています。この矛盾が解決されるまでは、廃止であると考えるべきでしょう。
+    > **メモ:** 現在、 W3C HTML 5.2 仕様では `rev` は廃止ではないとされていますが、 WHATWG living standard では廃止というラベルが貼られたままになっています。この矛盾が解決されるまでは、廃止であると考えるべきでしょう。
 
 - {{domxref("HTMLLinkElement.target")}} {{deprecated_inline}}
   - : 文字列で、リソースが適用する対象フレームの名前を表します。

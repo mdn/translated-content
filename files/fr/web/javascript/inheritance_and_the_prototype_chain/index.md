@@ -10,9 +10,10 @@ tags:
 translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Héritage_et_chaîne_de_prototypes
 ---
+
 {{jsSidebar("Advanced")}}
 
-JavaScript peut prêter à confusion losqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé `class` a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).
+JavaScript peut prêter à confusion lorsqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé `class` a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).
 
 En ce qui concerne l'héritage, JavaScript n'utilise qu'une seule structure : les objets. Chaque objet possède une propriété privée qui contient un lien vers un autre objet appelé le **prototype**. Ce prototype possède également son prototype et ainsi de suite, jusqu'à ce qu'un objet ait {{jsxref("null")}} comme prototype. Par définition, `null` ne possède pas de prototype et est ainsi le dernier maillon de la **chaîne de prototype**.
 
@@ -211,7 +212,7 @@ Comme nous l'avons vu avant, la valeur de `__proto__` pour `uneInstance` est `fa
 
 Si `uneInstance` ne possède pas cette propriété, le moteur contrôlera la propriété sur la propriété `__proto__` de `uneInstance` (c'est-à-dire `faireUnTruc.prototype`). Si la propriété `__proto__` de `uneInstance` possède la propriété qu'on recherche, ce sera celle-ci qui sera utilisée.
 
-Si `__proto__` de `unTruc` ne possède pas la propriété recherchée, le moteur contrôle la propriété `__proto__` de la propriété `__proto__` de `uneInstance`. Par défaut, la propriété `__proto__` de n'importe quelle propriété `prototype` d'une fonction est  `window.Object.prototype`. Ainsi, la propriété `__proto__` de la propriété `__proto__` de  `uneInstance` (c'est-à-dire `__proto__` de `faireUnTruc.prototype` (c'est-à-dire. `Object.prototype`)) est contrôlée pour vérifier si la propriété y est présente.
+Si `__proto__` de `unTruc` ne possède pas la propriété recherchée, le moteur contrôle la propriété `__proto__` de la propriété `__proto__` de `uneInstance`. Par défaut, la propriété `__proto__` de n'importe quelle propriété `prototype` d'une fonction est `window.Object.prototype`. Ainsi, la propriété `__proto__` de la propriété `__proto__` de `uneInstance` (c'est-à-dire `__proto__` de `faireUnTruc.prototype` (c'est-à-dire. `Object.prototype`)) est contrôlée pour vérifier si la propriété y est présente.
 
 Si la propriété n'est pas trouvée sur la propriété `__proto__` de la propriété `__proto__` de `uneInstance`, c'est la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `uneInstance` qui est contrôlée. Cependant il y a un problème car la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `unTruc` n'existe pas. Autrement dit, toute la chaîne de prototype a été parcouru et on ne peut pas remonter d'un cran sur un autre `__proto__` et le moteur peut conclure que la propriété n'existe pas pour cet objet et renvoyer `undefined`.
 

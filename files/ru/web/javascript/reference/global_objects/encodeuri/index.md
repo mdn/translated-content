@@ -1,0 +1,80 @@
+---
+title: encodeURI()
+slug: Web/JavaScript/Reference/Global_Objects/encodeURI
+tags:
+  - JavaScript
+  - NeedsUpdate
+  - Reference
+  - URI
+translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
+---
+{{jsSidebar("Objects")}}
+
+Метод **encodeURI ()** кодирует универсальный идентификатор ресурса (URI), замещая некоторые символы на одну, две, три или четыре управляющие последовательности, представляющие UTF-8 кодировку символа (четыре управляющие последовательности будут использованы только для символов, состоящих из двух «суррогатных» символов).
+
+{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+
+## Синтаксис
+
+```
+encodeURI(URI)
+```
+
+### Параметры
+
+- `URI`
+  - : Полный {{Glossary("URI")}}.
+
+### Возвращаемое значение
+
+Новая строка, представляющая собой строку-параметр, закодированную в виде универсального идентификатора ресурса (URI).
+
+## Описание
+
+Предполагается, что URI является полным URI, поэтому метод не кодирует зарезервированные символы, имеющие особое значение в URI.
+
+encodeURI заменяет все символы, **кроме** следующих с соответствующими UTF-8 управляющими последовательностями:
+
+| Тип                       | Включения                                                              |
+| ------------------------- | ---------------------------------------------------------------------- |
+| Зарезервированные символы | `;` `,` `/` `?` `:` `@` `&` `=` `+` `$`                                |
+| Неэкранируемые символы    | латинские буквы, десятичные цифры, `-` `_` `.` `!` `~` `*` `'` `(` `)` |
+| Score                     | `#`                                                                    |
+
+Заметим, что `encodeURI` сам по себе не может сформировать правильные HTTP GET и POST запросы, такие как XMLHTTPRequests, потому, что "&", "+", и "=" не закодированы, которые воспринимаются как специальные символы в GET и POST запросах. {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, однако, кодирует эти символы
+
+Замечание: {{jsxref("Global_Objects/URIError", "URIError")}} будет брошена, если попытаться закодировать суррогат, который не является частью высоко-низкой пары, например:
+
+```js
+// низко-высокая пара - нормально
+console.log(encodeURIComponent('\uD800\uDFFF'));
+
+// один высокий суррогат бросит "URIError: malformed URI sequence"
+console.log(encodeURIComponent('\uD800'));
+
+// один низкий суррогат бросит "URIError: malformed URI sequence"
+console.log(encodeURIComponent('\uDFFF'));
+```
+
+Также заметим, что следуя наиболее свежей [RFC3986](http://tools.ietf.org/html/rfc3986) для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:
+
+```js
+function fixedEncodeURI (str) {
+    return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
+}
+```
+
+## Спецификация
+
+{{Specifications}}
+
+## Поддержка браузерами
+
+{{Compat}}
+
+## Смотрите также
+
+- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- Base62x

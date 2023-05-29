@@ -1,10 +1,8 @@
 ---
 title: count
 slug: Web/XPath/Functions/count
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/count
 ---
+
 {{ XsltRef() }}
 
 `count` 함수는 노드 집합의 노드 수를 세고 나서 정수로 반환합니다.

@@ -1,7 +1,8 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 `:first-child`是[CSS](/zh-TW/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
@@ -27,7 +28,7 @@ slug: Web/CSS/:first-child
 
 ```css
 span:first-child {
-    background-color: lime;
+  background-color: lime;
 }
 ```
 
@@ -50,11 +51,11 @@ span:first-child {
 #### CSS 內文
 
 ```css
-li{
-  color:red;
+li {
+  color: red;
 }
-li:first-child{
-  color:green;
+li:first-child {
+  color: green;
 }
 ```
 
@@ -68,7 +69,7 @@ li:first-child{
 
 ## 瀏覽器相容性
 
-{{Compat("css.selectors.first-child")}}
+{{Compat}}
 
 ## 參見
 

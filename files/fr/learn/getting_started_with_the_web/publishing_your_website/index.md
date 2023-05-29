@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
 
 Une fois que vous avez fini d'écrire le code et d'organiser les fichiers qui composent votre site, vous devez mettre le site en ligne, ainsi d'autres personnes pourront le trouver. Cet article décrit comment mettre votre extrait de code en ligne avec peu d'efforts.
@@ -91,14 +92,3 @@ Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github
 - [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installation des outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [Quel sera l'aspect de votre site web ?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Les bases de CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publier votre site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

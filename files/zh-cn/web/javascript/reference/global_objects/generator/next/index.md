@@ -2,6 +2,7 @@
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
 ---
+
 {{JSRef}}
 
 **`next()`** 方法返回一个包含属性 `done` 和 `value` 的对象。该方法也可以通过接受一个参数用以向生成器传值。
@@ -23,8 +24,8 @@ gen.next(value)
 
 - `done` (布尔类型)
 
-  - 如果迭代器超过迭代序列的末尾，则值为 `true`。 在这种情况下，`value` 可选地指定迭代器的返回值。
-  - 如果迭代器能够生成序列中的下一个值，则值为 `false`。 这相当于没有完全指定 `done` 属性。
+  - 如果迭代器超过迭代序列的末尾，则值为 `true`。在这种情况下，`value` 可选地指定迭代器的返回值。
+  - 如果迭代器能够生成序列中的下一个值，则值为 `false`。这相当于没有完全指定 `done` 属性。
 
 - `value` - 迭代器返回的任意的 JavaScript 值。当 `done` 的值为 `true` 时可以忽略该值。
 
@@ -76,7 +77,7 @@ g.next(2);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [迭代器与生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

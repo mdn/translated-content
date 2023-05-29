@@ -5,7 +5,8 @@ original_slug: MDN_at_ten/History_of_MDN
 i10n:
   sourceCommit: 356b0655db61fafedd864b54d39e04529b52fff4
 ---
-このトピックでは、MDN プロジェクトへの貢献者たちが、[developer.mozilla.org](https://developer.mozilla.org) の過去 10 年間と、来たる 10 年間を見ていきます。異なる Wiki ソフトウェア間の移行やドキュメンテーションコミュニティがどうやって育ってきたのか、またいくつかのこのサイトの歴史におけるハイライトについて取り上げます。また現在の課題や今年の MDN コミュニティの取り組みについても語ります。
+
+このトピックでは、MDN プロジェクトへの貢献者たちが、[developer.mozilla.org](/) の過去 10 年間と、来たる 10 年間を見ていきます。異なる Wiki ソフトウェア間の移行やドキュメンテーションコミュニティがどうやって育ってきたのか、またいくつかのこのサイトの歴史におけるハイライトについて取り上げます。また現在の課題や今年の MDN コミュニティの取り組みについても語ります。
 
 <div id="audio"><pre class="brush: html hidden">&#x3C;audio controls="controls">
   あなたのブラウザーにはオーディオプレイヤーが内蔵されていないようです。音声ファイルはここから取得して再生できます。 https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3

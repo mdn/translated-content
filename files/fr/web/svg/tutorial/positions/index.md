@@ -8,6 +8,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Positions
 original_slug: Web/SVG/Tutoriel/Positionnement
 ---
+
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
 
 ### La grille

@@ -12,6 +12,7 @@ tags:
   - uninstallModule
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
+
 {{AddonSidebar()}}
 
 Désinstalle le module PKCS #11 nommé de Firefox.
@@ -37,9 +38,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.uninstallModule", 10)}}
+{{Compat}}
 
 ## Exemples
 

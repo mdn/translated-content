@@ -10,6 +10,7 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de réponse HTTP **`Set-Cookie`** est utilisé pour envoyer un cookie depuis le serveur à l'agent utilisateur afin qu'il puisse le renvoyer dans l'avenir. Pour envoyer plusieurs cookies, on enverra plusieurs en-têtes `Set-Cookie` dans la même réponse.
@@ -186,18 +187,11 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Spécifications
 
-| Spécification                                                                                    | Titre                                                         |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | HTTP State Management Mechanism                               |
-| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Set-Cookie", 5)}}
-
-## Note de compatibilité
-
-- À partir de Chrome 52 et Firefox 52, les sites non sécurisés (`http:`) ne peuvent plus définir des cookies avec la directive `Secure`.
+{{Compat}}
 
 ## Voir aussi
 

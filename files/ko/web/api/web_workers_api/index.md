@@ -1,15 +1,8 @@
 ---
 title: Web Workers API
 slug: Web/API/Web_Workers_API
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
-  - 워커
-  - 웹 워커
-translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **웹 워커**(Web worker)는 스크립트 연산을 웹 어플리케이션의 주 실행 스레드와 분리된 별도의 백그라운드 스레드에서 실행할 수 있는 기술입니다. 웹 워커를 통해 무거운 작업을 분리된 스레드에서 처리하면 주 스레드(보통 UI 스레드)가 멈추거나 느려지지 않고 동작할 수 있습니다.

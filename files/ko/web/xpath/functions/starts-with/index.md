@@ -1,9 +1,6 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/starts-with
 ---
 {{ XsltRef() }}
 
@@ -17,17 +14,17 @@ starts-with(haystack ,needle)
 
 ### 인수
 
-- _`haystack`_
+- `haystack`
   - : 들여다볼(look in) 문자열.
-- _`needle`_
+- `needle`
   - : 찾을(look for) 문자열.
 
 ### 반환
 
 만약
-_`haystack`_
+`haystack`
 이
-_`needle`_
+`needle`
 로 시작하면 `true`. 그렇지 않으면, `false`.
 
 ### 정의

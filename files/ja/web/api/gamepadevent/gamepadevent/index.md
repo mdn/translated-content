@@ -2,6 +2,7 @@
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadEvent_`** コンストラクタは新規の {{domxref("GamepadEvent")}} オブジェクトを作成します。.
@@ -24,9 +25,7 @@ var gamepadEvent = new GamepadEvent(typeArg, options)
 
 ## 仕様書
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Gamepad','#gamepadevent-interface','GamepadEvent_')}} | {{Spec2('Gamepad')}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

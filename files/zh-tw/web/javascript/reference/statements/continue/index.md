@@ -3,9 +3,10 @@ title: continue 語法
 slug: Web/JavaScript/Reference/Statements/continue
 original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/continue_語法
 ---
-`continue` 語法可用來重新開始 ` while、do-while、for、``label ` 語法。
 
-- 當你使用沒加標籤的 `continue` 時，他會終止這一次的最內層的 `while、do-while`、`for` 語法的反覆過程，並繼續執行下一次的反覆過程。與 `break` 語法相較之下，`continue` 不會終止整個循環的執行。在 `while` 循環中，他會跳回條件處。在 `for` 循環中，他會跳回遞增表達式。
+`continue` 語法可用來重新開始 `while`、`do-while`、`for`、`label` 語法。
+
+- 當你使用沒加標籤的 `continue` 時，他會終止這一次的最內層的 `while`、`do-while`、`for` 語法的反覆過程，並繼續執行下一次的反覆過程。與 `break` 語法相較之下，`continue` 不會終止整個循環的執行。在 `while` 循環中，他會跳回條件處。在 `for` 循環中，他會跳回遞增表達式。
 - 當你使用加上標籤的 `continue` 時，他會跳到以 `label` 標記的循環語句。
 
 `continue` 語法如下︰

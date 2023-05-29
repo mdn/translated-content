@@ -4,6 +4,7 @@ slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 translation_of: Web/Events/Orientation_and_motion_data_explained
 original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
+
 {{DefaultAPISidebar("Device Orientation Events")}}
 
 Lorsqu'on utilise les données d'orientation et de déplacement, il est important de comprendre ce que signifient les valeurs fournies par le navigateur. Dans cet article, nous verrons les systèmes de coordonnées à l'œuvre et comment les utiliser.

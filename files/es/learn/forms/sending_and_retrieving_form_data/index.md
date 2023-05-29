@@ -1,9 +1,9 @@
 ---
 title: Sending form data
 slug: Learn/Forms/Sending_and_retrieving_form_data
-translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 {{LearnSidebar}} {{PreviousMenuNext("Aprende / HTML / Formularios / The_native_form_widgets", "Aprender / html / Formularios / Form_validation", "Aprender / html / Forms")}}
 
 En este artículo se analiza lo que sucede cuando un usuario envía un formulario - ¿A dónde van los datos y cómo los manejamos cuando llegan allí? - También tenemos en cuenta algunos de los problemas de seguridad asociados con el envío de los datos del formulario.
@@ -110,9 +110,9 @@ Considere la siguiente forma:
 </form>
 ```
 
-Dado que el método `GET`ha conseguido el recurso, verá en la URL lo siguiente en la barra de direcciones del navegador `www.foo.com/?say=Hi&to=Mom` cuando se envía el formulario.
+Dado que el método `GET` ha conseguido el recurso, verá en la URL lo siguiente en la barra de direcciones del navegador `www.foo.com/?say=Hi&to=Mom` cuando se envía el formulario.
 
-![](https://mdn.mozillademos.org/files/14685/url-parameters.png)
+![](url-parameters.png)
 
 Los datos se añaden a la URL como una serie de pares de nombre / valor. Después que la dirección web URL ha terminado, se incluye un signo de interrogación ( `?`) seguido de los pares de nombre / valor, cada uno separado por un signo ( `&`). En este caso estamos pasando dos piezas de datos en el servidor:
 
@@ -132,7 +132,7 @@ Anfitrión: foo.com
 
 El `POST` método es un poco diferente. Es el método que el navegador utiliza para comunicarse con el servidor cuando se pide una respuesta que tenga en cuenta los datos proporcionados en el cuerpo de la petición HTTP: "Hey servidor, echa un vistazo a estos datos y envíame de vuelta un resultado apropiado." Si un formulario se envía utilizando este método, los datos se anexan al cuerpo de la petición HTTP.
 
-Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET`del apartado anterior, pero con el {{htmlattrxref ( "método", "form")}} atributo establecido `post`.
+Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` del apartado anterior, pero con el {{htmlattrxref ( "método", "form")}} atributo establecido `post`.
 
 ```html
 <form action="http://foo.com" method="post">
@@ -169,11 +169,11 @@ La cabecera `Content-Length` indica el tamaño del cuerpo, y la cabecera `Conten
 
 Las peticiones HTTP nunca se muestran al usuario (si quieres verlos, es necesario utilizar herramientas como el [Monitor de red Firefox](/es/docs/Tools/Network_Monitor) o las [herramientas de desarrollo de Chrome](https://developers.google.com/chrome-developer-tools/) ). A modo de ejemplo, los datos del formulario se muestran a continuación en la pestaña de Chrome red:
 
-![](https://mdn.mozillademos.org/files/14691/network-monitor.png)
+![](network-monitor.png)
 
-Lo único que se muestra al usuario es la dirección URL llamada. Como mencionamos anteriormente, con una petición`GET` del usuario,se verán los datos en su barra de direcciones, pero con una petición `POST` no será de esta manera. Esto puede ser muy importante por dos razones:
+Lo único que se muestra al usuario es la dirección URL llamada. Como mencionamos anteriormente, con una petición `GET` del usuario,se verán los datos en su barra de direcciones, pero con una petición `POST` no será de esta manera. Esto puede ser muy importante por dos razones:
 
-1. Si necesita enviar una contraseña (o cualquier otra pieza sensible de los datos), nunca utilice el método`GET` o se arriesga a mostrar en la barra de direcciones, lo que sería muy inseguro.
+1. Si necesita enviar una contraseña (o cualquier otra pieza sensible de los datos), nunca utilice el método `GET` o se arriesga a mostrar en la barra de direcciones, lo que sería muy inseguro.
 2. Si necesita enviar una gran cantidad de datos, el método `POSt` es preferible debido a que algunos navegadores limitan los tamaños de las direcciones URL. Además, muchos servidores limitan la longitud de las URL que aceptan.
 
 ### En el lado Servidor: la recuperación de los datos
@@ -182,7 +182,7 @@ Sea cual sea el método HTTP que elija, el servidor recibe una cadena que será 
 
 #### Ejemplo: PHP Raw
 
-[PHP](http://php.net/) ofrece algunos objetos globales para acceder a los datos. Suponiendo que usted ha utilizado el método`POST`, el siguiente ejemplo sólo toma los datos y lo muestra al usuario. Por supuesto, lo que se hace con los datos depende de usted. Es posible visualizarlos, almacenarlos en una base de datos, enviarlos por correo electrónico, o procesarlos de alguna otra manera.
+[PHP](https://php.net/) ofrece algunos objetos globales para acceder a los datos. Suponiendo que usted ha utilizado el método `POST`, el siguiente ejemplo sólo toma los datos y lo muestra al usuario. Por supuesto, lo que se hace con los datos depende de usted. Es posible visualizarlos, almacenarlos en una base de datos, enviarlos por correo electrónico, o procesarlos de alguna otra manera.
 
 ```php
 <?php
@@ -195,9 +195,9 @@ Sea cual sea el método HTTP que elija, el servidor recibe una cadena que será 
 ?>
 ```
 
-Este ejemplo muestra una página con los datos que enviamos. Esto se puede ver en acción en nuestro archivo ejemplo [php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html) - que contiene un ejemplo similar en forma como el que hemos visto antes, con un `method`con parámetro `post`y un `action` con parámetro `php-example.php` Cuando se envía, envía los datos del formulario al script [php-ejemplo.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php) , que contiene el código de PHP que se ha visto en el bloque anterior. Cuando se ejecuta este código, la salida en el navegador es `Hi Mom`.
+Este ejemplo muestra una página con los datos que enviamos. Esto se puede ver en acción en nuestro archivo ejemplo [php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html) - que contiene un ejemplo similar en forma como el que hemos visto antes, con un `method` con parámetro `post` y un `action` con parámetro `php-example.php` Cuando se envía, envía los datos del formulario al script [php-ejemplo.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php) , que contiene el código de PHP que se ha visto en el bloque anterior. Cuando se ejecuta este código, la salida en el navegador es `Hi Mom`.
 
-![](https://mdn.mozillademos.org/files/14693/php-result.png)
+![](php-result.png)
 
 > **Nota:** Este ejemplo no funcionará cuando se carga en un navegador localmente - los navegadores no pueden interpretar código PHP, por lo que cuando se envía el formulario en el navegador sólo se puede ofrecer la descarga del archivo PHP para usted. Para conseguir que funcione, es necesario ejecutar el ejemplo a través de un servidor PHP de algún tipo. Buenas opciones para probar PHP locales son [MAMP](https://www.mamp.info/en/downloads/) (Mac y Windows) y [AMPPS](http://ampps.com/download) (Mac, Windows, Linux).
 
@@ -223,10 +223,10 @@ if __name__ == "__main__":
 
 Las dos plantillas de referencia en el código anterior son los siguientes:
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html) : La misma forma que hemos visto anteriormente en la [El método POST](#el_método_post) sección, pero con el `action`conjunto a `\{{ url_for('hello') }}`. (Esta es una [Jinja2](http://jinja.pocoo.org/docs/2.9/) plantilla, que es básicamente HTML, pero puede contener llamadas al código Python que ejecuta el servidor web que figura entre corchetes. `url_for('hello')`Básicamente está diciendo "redirigir a `/hello`cuando se envía el formulario").
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html) :Esta plantilla solo contiene una línea que representa los dos bits de datos que se le pasan cuando se procesa. Esto se hace a través de la función `hello()`que se ha visto anteriormente, y que se ejecuta cuando la URL`/hello` es accedida.
+- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html) : La misma forma que hemos visto anteriormente en la [El método POST](#el_método_post) sección, pero con el `action` conjunto a `\{{ url_for('hello') }}`. (Esta es una [Jinja2](https://jinja.pocoo.org/docs/2.9/) plantilla, que es básicamente HTML, pero puede contener llamadas al código Python que ejecuta el servidor web que figura entre corchetes. `url_for('hello')` Básicamente está diciendo "redirigir a `/hello` cuando se envía el formulario").
+- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html) :Esta plantilla solo contiene una línea que representa los dos bits de datos que se le pasan cuando se procesa. Esto se hace a través de la función `hello()` que se ha visto anteriormente, y que se ejecuta cuando la URL`/hello` es accedida.
 
-> **Nota:** Una vez más, este código no funcionará si sólo intenta cargarlo en un navegador directamente. Python funciona un poco diferente a PHP - Para ejecutar este código local que necesita para [instalar Python / PIP](/es/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) , a continuación, instalar el frasco utilizando `pip3 install flask`. En este punto, usted debe ser capaz de ejecutar el ejemplo utilizando `python3 python-example.py`, a continuación, deberá navegar a `localhost:5000`en su barra de direcciones.
+> **Nota:** Una vez más, este código no funcionará si sólo intenta cargarlo en un navegador directamente. Python funciona un poco diferente a PHP - Para ejecutar este código local que necesita para [instalar Python / PIP](/es/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) , a continuación, instalar el frasco utilizando `pip3 install flask`. En este punto, usted debe ser capaz de ejecutar el ejemplo utilizando `python3 python-example.py`, a continuación, deberá navegar a `localhost:5000` en su barra de direcciones.
 
 #### Otros lenguajes y frameworks
 
@@ -253,8 +253,8 @@ Este atributo le permite especificar el valor de la cabecera `Content-Type` HTTP
 
 Si desea enviar archivos, es necesario tomar tres pasos adicionales:
 
-- Ajuste el {{htmlattrxref ( "método", "form")}} atributo `POST`porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
-- Establecer el valor de {{htmlattrxref ( "enctype", "form")}} que `multipart/form-data`debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
+- Ajuste el {{htmlattrxref ( "método", "form")}} atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
+- Establecer el valor de {{htmlattrxref("enctype", "form")}} que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
 - Incluir uno o más widgets [selector de archivos](/es/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker) para permitir a los usuarios seleccionar el archivo (s) que será subido.
 
 Por ejemplo:

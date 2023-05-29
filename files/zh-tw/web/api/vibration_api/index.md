@@ -2,6 +2,7 @@
 title: Vibration API
 slug: Web/API/Vibration_API
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 目前大多數的行動裝置均具備振動硬體以搖晃裝置，讓軟體程式碼能對使用者產生實際反饋。**Vibration API** 即可讓 Web Apps 存取振動硬體。當然，若裝置並未支援振動硬體，就不會產生任何效果。
@@ -43,7 +44,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## 另可參閱
 

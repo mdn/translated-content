@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-width`** définit la largeur [du masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
@@ -61,18 +62,18 @@ La propriété `mask-border-width` peut être définie avec une, deux, trois ou 
 - `auto`
   - : La largeur du masque de bordure est égale à la largeur ou à la hauteur intrinsèque de la valeur {{cssxref("mask-border-slice")}} correspondante. Si l'image ne possède pas de dimension intrinsèque, c'est la valeur `border-width` qui est utilisée à la place.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#propdef-mask-border-width", "mask-border-width")}} | {{Spec2("CSS Masks")}} | Définition intiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-TBD
+{{Compat}}

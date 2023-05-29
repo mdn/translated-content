@@ -3,8 +3,9 @@ title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 original_slug: MDN/Structures/Page_types
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
+
 {{MDNSidebar}}
 
 MDN には繰り返し使用されるいくつかの種類のページがあります。
@@ -46,6 +47,12 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)までお問い合わせください。
 
+## フロントマターの page-type キー
+
+MDN ページの種類を明確に識別するために、フロントマターキー `page-type` を定義しました。下記リンクのテンプレートは、各ページ種類にどの `page-type` 値を設定すべきかを示しています。
+
+ページ種類の完全なリストは、[フロントマターの page-type キー](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key)を参照してください。
+
 ## API ランディングページ
 
 **{{Glossary("API")}} ランディングページ**では、特定の API が行うことの概要と、その API が提供する各インターフェイス、グローバル、関数などのドキュメントへのリンクが提供されます。
@@ -67,7 +74,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 
 ## API リファレンスページ
 
-> **Note:** *インターフェイスランディングページ*とも呼ばれます。
+> **メモ:** *インターフェイスランディングページ*とも呼ばれます。
 
 **API リファレンスページ**は、特定のインターフェイスやクラスのメンバーであるすべてのメソッド、プロパティ、イベントなどを列挙します。
 クラスまたはインターフェイスが何を行うか、または何のために使用されるかの概要を提供し、これらの各メンバーのドキュメントへのリンクを提供します。
@@ -161,7 +168,7 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 ### 例
 
 - [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [ウェブ音声 API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [ウェブオーディオ API の視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [CSS のカスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
 ## 用語集ページ

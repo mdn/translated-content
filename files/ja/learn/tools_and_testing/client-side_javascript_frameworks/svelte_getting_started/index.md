@@ -53,7 +53,7 @@ Svelte は HTML と CSS、そして JavaScript という昔ながらのウェブ
 
 現時点での主な欠点はまだ若いフレームワークであるということです。若いということは、そのエコシステムは成熟したフレームワークよりもツール、サポート、プラグイン、明確な使用パターンなどが限られており、求人も少ないです。しかし、今まで紹介した利点は、あなたが Svelte を探究することへの関心を持ってもらうのに十分なはずです。
 
-> **Note:** 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/blog/svelte-and-typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
+> **メモ:** 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/blog/svelte-and-typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
 
 このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://svelte.jp/tutorial/basics)で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
 
@@ -108,7 +108,7 @@ npm install
 npm run dev
 ```
 
-> **Note:** degit は魔法のようなものではありません。ただ最新バージョンにあたる git リポジトリーの内容をダウンロードして解凍しているだけです。これは `git clone` を使うよりもはるかに高速です。なぜならリポジトリーの履歴全てをダウンロードしたり、完全なローカルクローンを作ったりしないためです。
+> **メモ:** degit は魔法のようなものではありません。ただ最新バージョンにあたる git リポジトリーの内容をダウンロードして解凍しているだけです。これは `git clone` を使うよりもはるかに高速です。なぜならリポジトリーの履歴全てをダウンロードしたり、完全なローカルクローンを作ったりしないためです。
 
 `npm run dev` を実行すると Svelte がアプリケーションのコンパイルとビルドを行います。するとローカルサーバーとして `localhost:8080` が起動します。Svelte はファイルの更新を監視して、ソースファイルに変更があった場合、アプリを自動的に再コンパイルして更新を行います。なおブラウザーには次のように表示されます。
 
@@ -184,7 +184,7 @@ moz-todo-svelte
 <!-- ここにマークアップ (0 個以上の HTML 要素) を記述 -->
 ```
 
-> **Note:** コンポーネントの形式についての詳細は、[Svelte のドキュメント](https://svelte.jp/docs#component-format) を参照してください。
+> **メモ:** コンポーネントの形式についての詳細は、[Svelte のドキュメント](https://svelte.jp/docs#component-format) を参照してください。
 
 以上を踏まえてスターターテンプレートに付属の `src/App.svelte` ファイルを見てみましょう。以下のようになっているはずです。
 
@@ -284,7 +284,7 @@ Svelte ではコンポーネントの `<style>` ブロック内の CSS は、そ
 
 アプリをコンパイルする際、Svelte は `h1` のスタイル定義を `h1.svelte-1tky8bj` に変更します。そしてコンポーネント内全ての `<h1>` 要素を `<h1 class="svelte-1tky8bj">` に置き換え、そのコンポーネントが必要とするスタイルを取得できるようにします。
 
-> **Note:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` ドキュメント](https://svelte.jp/docs#component-format-style) を参照してください)。
+> **メモ:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` ドキュメント](https://svelte.jp/docs#component-format-style) を参照してください)。
 
 ## 少しだけ変更を加える
 
@@ -418,7 +418,7 @@ npm run dev
 
 Git と GitHub について詳しく知りたい場合は、有益なガイドへのリンクがまとめられている [Git と GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
 
-> **Note:** Git リポジトリーをクローンせずにファイルだけをダウンロードしたい場合は、`npx degit opensas/mdn-svelte-tutorial` のように degit ツールを使うことができます。`npx degit opensas/mdn-svelte-tutorial/01-getting-started` で特定のフォルダーをダウンロードすることもできます。degit はローカルの git リポジトリーを作成せずに指定したフォルダーのファイルだけをダウンロードします。
+> **メモ:** Git リポジトリーをクローンせずにファイルだけをダウンロードしたい場合は、`npx degit opensas/mdn-svelte-tutorial` のように degit ツールを使うことができます。`npx degit opensas/mdn-svelte-tutorial/01-getting-started` で特定のフォルダーをダウンロードすることもできます。degit はローカルの git リポジトリーを作成せずに指定したフォルダーのファイルだけをダウンロードします。
 
 ### Svelte REPL の活用
 
@@ -447,11 +447,11 @@ REPL を使い始めるには、ブラウザーを開いて <https://svelte.dev/
 
 REPL 上のファイルを変更するたびに Svelte はアプリを再コンパイルして Result タブを更新します。アプリを共有したい時は URL を共有してください。例えば、このチュートリアルシリーズの完成版アプリを実行している REPL へのリンクは <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2> です。
 
-> **Note:** URL で Svelte のバージョンを指定できることに注目してください。これは Svelte の特定のバージョンに関連する問題を報告する際に役立ちます。
+> **メモ:** URL で Svelte のバージョンを指定できることに注目してください。これは Svelte の特定のバージョンに関連する問題を報告する際に役立ちます。
 
 各記事の最初と最後に REPL を提供しているため、すぐにでもコーディングを開始することができます。
 
-> **Note:** 現在のところ、REPL はフォルダー名を正しく扱えません。もし REPL 上でチュートリアルを行っている場合は、ルートフォルダー内に全てのコンポーネントを作成してください。例えばコード中に `import Todos from './components/Todos.svelte'` などのパスを見つけたら、 `import Todos from './Todos.svelte'` などのフラットな URL に置き換えるだけです。
+> **メモ:** 現在のところ、REPL はフォルダー名を正しく扱えません。もし REPL 上でチュートリアルを行っている場合は、ルートフォルダー内に全てのコンポーネントを作成してください。例えばコード中に `import Todos from './components/Todos.svelte'` などのパスを見つけたら、 `import Todos from './Todos.svelte'` などのフラットな URL に置き換えるだけです。
 
 ## これまでのコード
 
@@ -498,58 +498,3 @@ Svelte の基礎知識:
 - トップレベルの変数に新しい値を代入するだけでリアクティビティが発動します。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## このモジュール
-
-- [Introduction to client-side frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Reactをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [React ToDoリストをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [React アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

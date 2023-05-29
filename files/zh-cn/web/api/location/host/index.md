@@ -2,6 +2,7 @@
 title: 'Location: host'
 slug: Web/API/Location/host
 ---
+
 {{ApiRef("Location")}}
 
 {{domxref("Location")}} 接口的 **`host`** 属性是包含了主机的一段 {{domxref("USVString")}}，其中包含：主机名，如果 URL 的端口号是非空的，还会跟上一个 `':'` ，最后是 URL 的端口号。
@@ -35,4 +36,4 @@ anchor.host == "developer.mozilla.org:4097"
 
 ## Browser compatibility
 
-{{Compat("api.Location.host")}}
+{{Compat}}

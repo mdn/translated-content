@@ -1,13 +1,8 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
 **`margin`** CSS 속성은 요소의 네 방향 [바깥 여백 영역](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)을 설정합니다. {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}의 단축 속성입니다.

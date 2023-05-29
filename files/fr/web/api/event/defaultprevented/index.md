@@ -8,6 +8,7 @@ tags:
   - Propriété
 translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{APIRef("DOM")}}
 
 ## Résumé

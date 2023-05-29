@@ -1,57 +1,63 @@
 ---
-title: window.cancelAnimationFrame
+title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
+l10n:
+  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
+
 {{APIRef}}
 
-## 概要
-
-{{domxref("window.requestAnimationFrame()")}} の呼び出しによりスケジュールされたフレームアニメーションのリクエストをキャンセルします。
+**`window.cancelAnimationFrame()`** メソッドは、以前に {{domxref("window.requestAnimationFrame()")}} の呼び出しによってスケジュールされたアニメーションフレームリクエストをキャンセルします。
 
 ## 構文
 
-```
-window.cancelAnimationFrame(requestID);
+```js-nolint
+cancelAnimationFrame(requestID)
 ```
 
 ### 引数
 
 - `requestID`
-  - : コールバックがリクエストした {{domxref("window.requestAnimationFrame()")}} の呼び出しにより返された ID 値。
+  - : コールバックをリクエストした {{domxref("window.requestAnimationFrame()")}} の呼び出しによって返された ID 値。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ```js
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                             window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // Firefox のみでサポート。他のブラウザーでは代わりに Date.now() などを使用してください。
+const start = Date.now();
 
-var myReq;
+let myReq;
 
 function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + 'px';
+  const progress = timestamp - start;
+  d.style.left = `${Math.min(progress / 10, 200)}px`;
   if (progress < 2000) {
+    // requestAnimationFrame を呼び出すたびに requestId を更新することが重要です
     myReq = requestAnimationFrame(step);
   }
 }
 myReq = requestAnimationFrame(step);
-
+// キャンセル処理は、最後の requestId を使用します
 cancelAnimationFrame(myReq);
 ```
 
-## ブラウザーの実装状況
+## 仕様書
 
-{{Compat("api.Window.cancelAnimationFrame")}}
+{{Specifications}}
 
-## 仕様
+## ブラウザーの互換性
 
-- {{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("window.mozAnimationStartTime")}}
 - {{domxref("window.requestAnimationFrame()")}}
+- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

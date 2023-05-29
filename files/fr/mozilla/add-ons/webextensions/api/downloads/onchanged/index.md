@@ -14,6 +14,7 @@ tags:
   - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
+
 {{AddonSidebar()}}
 
 L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
@@ -57,7 +58,7 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `id`
   - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
 - `url`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `filename`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `filename` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `danger`{{optional_inline}}
@@ -67,7 +68,7 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `startTime`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `startTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `endTime`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `state`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `canResume`{{optional_inline}}
@@ -79,13 +80,13 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `totalBytes`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant un changement dans un `totalBytes` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `fileSize`{{optional_inline}}
-  - : Un objet  {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un  `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `exists`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -109,7 +110,8 @@ browser.downloads.onChanged.addListener(handleChanged);
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -136,4 +138,4 @@ browser.downloads.onChanged.addListener(handleChanged);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-source
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-source`** définit l'image à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
@@ -37,9 +38,13 @@ mask-border-source: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : Une référence vers une image qu'on utilise pour le masque de la bordure.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -47,12 +52,8 @@ Voir la page {{cssxref("mask-border")}}.
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#propdef-mask-border-source", "mask-border-source")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-TBD
+{{Compat}}

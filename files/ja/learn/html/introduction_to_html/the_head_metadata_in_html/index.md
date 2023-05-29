@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
   sourceCommit: 4eed7cfb25979c09def6634b836eddc1485ce57b
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込まれてもウェブブラウザーには表示されない部分です。この部分には、例えば、 {{htmlelement("title")}} といった情報や {{glossary("CSS")}} へのリンク（HTML を CSS で修飾する場合）、独自のファビコンへのリンク、そしてほかのメタデータ（HTML を誰が書いたのかとかその HTML を表現する重要なキーワードなど）の情報を含んでいます。ウェブブラウザーは{{glossary("Head", "ヘッド")}}部の情報を、 HTML 文書を正しく描画するために使用します。この記事では、上記のすべてのことと、さらに、読者にマークアップ言語と頭に入れておくべきほかのコードについてよい基礎を与えます。
@@ -99,7 +100,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 ![英語と日本語を含むウェブページで、文字コードを latin に設定した場合。日本語の文字が正しく表示されません。](bad-encoding.png)
 
-> **Note:** ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
+> **メモ:** ブラウザーによっては（例えば Chrome では）自動的に正しくないエンコーディングを修正しますので、お使いのブラウザーによっては、この問題が見られないこともあります。それでもなお、その他のブラウザーでの問題を避けるため、とにかくページに `utf-8` エンコーディングを設定すべきです。
 
 ### アクティブラーニング: 文字エンコーディングで実験する
 
@@ -149,9 +150,9 @@ description は検索エンジンの結果ページにも使われます。練�
 
     ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **Note:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を良くする方法です。
+> **メモ:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を良くする方法です。
 
-> **Note:** 多くの `<meta>` 機能はもう使われていません。例えば、 keyword の `<meta>` 要素 (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
+> **メモ:** 多くの `<meta>` 機能はもう使われていません。例えば、 keyword の `<meta>` 要素 (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
 
 ### メタデータの他の種類
 
@@ -215,7 +216,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 
 これらの種類のアイコンをすべて実装することを今すぐには心配しないでください。これはかなり高度な機能であり、コースを進めるためにこのような知識があることを期待することはありません。そのため、他のウェブサイトのソースコードを閲覧しているときに、このようなものがあることに気付いたときのために、その内容を知っておくことが主な目的です。
 
-> **Note:** もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
+> **メモ:** もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
 
 ## HTML に CSS と JavaScript を追加する
 
@@ -233,7 +234,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
   <script src="my-js-file.js" defer></script>
   ```
 
-  **メモ**: `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
+  > **メモ:** `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
@@ -248,7 +249,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 - JavaScript が空のリストをページに追加しました。リスト内のどこかをクリックすると、ダイアログボックスが現れてリストの新しい要素となるテキストを入力するように求められます。 OK ボタンを押すと。リストに新しい要素が加わります。リストに既にある要素をクリックすると、ダイアログボックスが現れ要素の名前を変えることができます。
 - CSS によって背景は緑になり文字が大きくなっています。 JavaScript によってページに加えられたいくつかのコンテンツもスタイルが適用されます（黒い境界線の付いた赤いバーは、 JS が生成したリストに CSS が追加したスタイルです）。
 
-> **Note:** このアクティブラーニングで行きづまって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
+> **メモ:** このアクティブラーニングで行きづまって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
 
 ## 文書の主要な言語の設定
 
@@ -273,15 +274,3 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 これで HTML のヘッド部の弾丸ツアーは終了します。ここでできることは他にもたくさんありますが、この段階では徹底的なツアーでは退屈で混乱を招くことになるでしょうから、もっとも一般的なことに関する考えだけを紹介したかったのです。たった今、そこに到達しました。次の記事では、 [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)について説明します。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内の文書
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

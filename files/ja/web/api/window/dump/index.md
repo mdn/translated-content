@@ -2,6 +2,7 @@
 title: window.dump()
 slug: Web/API/Window/dump
 ---
+
 {{ ApiRef() }}
 
 {{Non-standard_header}}
@@ -36,7 +37,7 @@ Windows では、dump の出力を見るにはコンソールを開く必要が�
 firefox > console.txt 2>&1
 ```
 
-> **Note:** コンソールメッセージを、アプリケーションを起動したコンソールに表示させたいときは、[Gecko Console Redirector](https://github.com/matthewkastor/Redirector) を使用してください。プリコンパイルされたバイナリが <https://github.com/matthewkastor/Redirector/archive/master.zip> の ZIP アーカイブ内の `Redirector-master\Gecko\Console Redirector\bin\Release` に含まれています。すべての dll ファイルと exe ファイルをお好みの場所にコピーしてください。次に、`Console Redirector.exe /?` を実行します。
+> **メモ:** コンソールメッセージを、アプリケーションを起動したコンソールに表示させたいときは、[Gecko Console Redirector](https://github.com/matthewkastor/Redirector) を使用してください。プリコンパイルされたバイナリが <https://github.com/matthewkastor/Redirector/archive/master.zip> の ZIP アーカイブ内の `Redirector-master\Gecko\Console Redirector\bin\Release` に含まれています。すべての dll ファイルと exe ファイルをお好みの場所にコピーしてください。次に、`Console Redirector.exe /?` を実行します。
 
 ## 仕様
 

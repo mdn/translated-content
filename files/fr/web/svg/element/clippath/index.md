@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/clipPath
 ---
+
 {{SVGRef}}
 
 L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.

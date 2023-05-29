@@ -2,6 +2,7 @@
 title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.isContentEditable`** は読み取り専用のプロパティで、論理型であり、要素の内容が編集可能な場合は `true` を返します。それ以外の場合は `false` を返します。
@@ -44,4 +45,4 @@ document.getElementById('infoText2').innerHTML += document.getElementById('myTex
 ## 関連情報
 
 - {{domxref("HTMLElement/contentEditable")}}
-- {{htmlattrxref("contenteditable")}} グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性

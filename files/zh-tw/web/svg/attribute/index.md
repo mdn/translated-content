@@ -2,6 +2,9 @@
 title: SVG Attribute reference
 slug: Web/SVG/Attribute
 ---
+
+{{SVGRef}}
+
 « [SVG](/zh-TW/SVG) / [SVG Element reference](/zh-TW/SVG/Element) »
 
 ## SVG Attributes

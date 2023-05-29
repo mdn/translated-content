@@ -2,6 +2,7 @@
 title: screenshots
 slug: Web/Manifest/screenshots
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

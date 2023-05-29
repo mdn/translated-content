@@ -1,12 +1,8 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-tags:
-  - Property
-  - Read-only
-browser-compat: api.Event.defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`defaultPrevented`** 읽기 전용 속성은 {{domxref("Event.preventDefault()")}}로 이 이벤트를 취소했는지 나타내는 불리언 값을 반환합니다.

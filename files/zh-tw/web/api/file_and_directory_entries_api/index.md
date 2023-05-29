@@ -3,6 +3,7 @@ title: FileHandle API
 slug: Web/API/File_and_Directory_Entries_API
 original_slug: Web/API/File_Handle_API
 ---
+
 FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [File](/zh-TW/docs/DOM/File) API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。
 
 ## API
@@ -52,7 +53,7 @@ interface FileHandle
 ```
 
 - open(\[mode="readonly"])
-  - : 可回傳 [LockedFile](#LockedFile_interface)。`mode` 可為「` readonly」或「``readwrite」。 `
+  - : 可回傳 [LockedFile](#lockedfile_介面)。`mode` 可為「`readonly`」或「`readwrite`」。
 - getFile()
   - : 針對檔案而回傳 [DOMRequest](/zh-TW/docs/DOM/DOMRequest)。若成功，就會收到以 [File](/zh-TW/docs/DOM/File) 物件形式呈現的唯讀「snapshot」檔案內容 (可用於任何接受 [Blob](/zh-TW/docs/DOM/Blob) 的地方，如 [FileReader](/zh-TW/docs/DOM/FileReader) 或 [XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest) 等)。
 
@@ -112,7 +113,7 @@ interface LockedFile
 - getMetadata(parameters)
   - : 針對後設資料 (Metadata) 而回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `true`。目前僅有 `size` 與 `lastModified` 為可能的參數。
 - readAsArrayBuffer(size)
-  - : 針對既有` size `的 [ArrayBuffer](/zh-TW/docs/JavaScript/Typed_arrays/ArrayBuffer)，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
+  - : 針對既有 `size` 的 [ArrayBuffer](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
 - readAsText(size [, encoding])
   - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [FileRequest](/zh-TW/docs/WebAPI/FileHandle_API#FileRequest_interface)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/zh-TW/docs/DOM/FileReader) API 中的對等函式，也以相同方式運作。
 

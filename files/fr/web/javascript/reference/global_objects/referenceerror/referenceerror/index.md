@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
+
 {{JSRef}}
 
 Le constructeur **`ReferenceError()`** permet de créer des objets représentant une erreur qui se produit lorsque le code fait référence à une variable qui n'existe pas.

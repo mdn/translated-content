@@ -2,6 +2,7 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许由你自己为 {{domxref("Response")}} 提供一个 promise。
@@ -18,7 +19,7 @@ slug: Web/API/FetchEvent/respondWith
 
 过去，在所有情况下，一直使用 {{domxref("Request.url","FetchEvent.request.url")}} 作为最终的 URL。提供的 {{domxref("Response.url")}} 实际上被忽略了。
 
-例如，这意味着，如果 service worker 拦截了一个样式表或者 worker 脚本，那么提供的 {{domxref("Response.url")}} 将会用于解决任何与 {{cssxref("@import")}} 或 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} 相关的子资源加载（{{bug(1222008)}}）。
+例如，这意味着，如果 service worker 拦截了一个样式表或者 worker 脚本，那么提供的 {{domxref("Response.url")}} 将会用于解决任何与 {{cssxref("@import")}} 或 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} 相关的子资源加载（[Firefox bug 1222008](https://bugzil.la/1222008)）。
 
 对于大多数网络请求的类型，此变更是没有影响的，因为你不能察觉到最终的 URL。然而，在一些方面确实很重要：
 

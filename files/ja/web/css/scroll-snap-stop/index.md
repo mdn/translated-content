@@ -2,6 +2,7 @@
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
 ---
+
 {{CSSRef}}
 
 **`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。

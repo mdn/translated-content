@@ -2,6 +2,7 @@
 title: 함수 — 코드 재사용
 slug: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 코딩에 있어서 또 하나의 필수적인 개념은 **함수**인데, 이는 하나의 일을 하는 코드 조각을 정의된 블록 안에 저장하고, 같은 코드를 여러 번 타이핑하기보다는, 하나의 짧은 명령을 사용하여 여러분이 그 함수가 필요할 때 언제든지 그 코드를 호출할 수 있게 합니다. 이 문서에서 우리는 기본 문법(syntax), 어떻게 함수를 호출하고(invoke) 정의하는지, 스코프(scope), 그리고 매개변수(parameter)와 같은 함수 뒤에 있는 핵심적인 개념들을 탐구할 것입니다.
@@ -440,13 +441,3 @@ function subFunction3(value) {
 - [기본 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 고급 개념 참고서
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단 내리기 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- **함수 — 코드 재사용**
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

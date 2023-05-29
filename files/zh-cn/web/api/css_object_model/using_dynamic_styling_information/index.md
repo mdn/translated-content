@@ -2,6 +2,7 @@
 title: 关于使用动态样式的信息
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，允许操作很多与 CSS 相关的信息。最初定义在 _DOM Level 2 Style_ 提议中，现在，这些接口形成了一个规范，_CSS 对象模型（CSSOM）_，旨在取代它。
@@ -34,7 +35,7 @@ The stylesheet declaration for the body's background color is modified via JavaS
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_a_stylesheet_rule') }}
+{{ EmbedLiveSample('通过 CSSOM 修改样式表') }}
 
 [DOM CSS Properties List](/zh-CN/docs/DOM/CSS) 中给出了 DOM 中 style 属性的可用属性列表。
 
@@ -86,7 +87,7 @@ function resetStyle(elemId) {
 </html>
 ```
 
-{{ EmbedLiveSample('Modify_an_element_style') }}
+{{ EmbedLiveSample('修改元素样式') }}
 
 `document.defaultView` 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看[Example 6: getComputedStyle](/zh-CN/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) 示例章节了解更多使用该方法的信息。.
 
@@ -120,7 +121,7 @@ function resetStyle(elemId) {
 </html>
 ```
 
-{{ EmbedLiveSample('DOM_Style_Object_code_sample') }}
+{{ EmbedLiveSample('DOM 样式对象') }}
 
 style 的 media 和 type 给不给出都可以。
 

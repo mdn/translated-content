@@ -11,6 +11,7 @@ tags:
   - Web API
 translation_of: Web/API/IDBObjectStore/getKey
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`getKey()`** de l'interface {{domxref("IDBObjectStore")}} retourne un objet {{domxref("IDBRequest")}}, et, dans un _thread_ séparé, retourne la clé sélectionnée par la requête spécifiée. Cela permet de retrouver un enregistrement spécifique depuis un espace de stockage déterminé.
@@ -79,4 +80,4 @@ openRequest.onsuccess = (event) => {
 - Réglage d'une fourchette de clés : {{domxref("IDBKeyRange")}}
 - Récupération et modification de vos données : {{domxref("IDBObjectStore")}}
 - Utilisation des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence : [Notifications des tâches](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple en direct](https://mdn.github.io/to-do-notifications/).)
+- Exemple de référence : [Notifications des tâches](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/).)

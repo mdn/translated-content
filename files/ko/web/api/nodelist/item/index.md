@@ -1,8 +1,8 @@
 ---
 title: NodeList.item()
 slug: Web/API/NodeList/item
-translation_of: Web/API/NodeList/item
 ---
+
 {{APIRef("DOM")}}
 
 [`NodeList`](/ko/docs/Web/API/NodeList) 의 node를 index로 돌려줍니다. 이 메서드는 인수(arguments)를 제공하는 한 exceptions 을 throw 하지 않습니다. index가 범위를 벗어나면 `null` 값이 반환되고, 인수가 제공되지 않으면 `TypeError` 가 throw 됩니다.
@@ -38,6 +38,6 @@ var firstTable = tables.item(1); // or simply tables[1] - returns the second tab
 
 [DOM Level 2 Core: NodeList.item()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

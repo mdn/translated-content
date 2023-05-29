@@ -13,6 +13,7 @@ tags:
   - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rappel.
@@ -38,19 +39,19 @@ var gettingCurrent = browser.windows.getCurrent(
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
-      - : Un ensemble d'objets `{{WebExtAPIRef('windows.WindowType')}}`. Si défini, le  {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panneau'` qui sont limités aux propres fenêtres de l'extension.
+      - : Un ensemble d'objets `{{WebExtAPIRef('windows.WindowType')}}`. Si défini, le {{WebExtAPIRef('windows.Window')}} retourné sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panneau'` qui sont limités aux propres fenêtres de l'extension.
 
 > **Note :**
 >
-> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de  `windowTypes` a été dépréciée à partir de Firefox 62.
+> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getCurrent",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -81,7 +82,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -108,4 +110,4 @@ browser.browserAction.onClicked.addListener((tab) => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

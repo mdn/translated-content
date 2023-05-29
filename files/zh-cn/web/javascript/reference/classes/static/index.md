@@ -2,6 +2,7 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 类（class）通过 **static** 关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
@@ -63,7 +64,7 @@ class StaticMethodCall {
 下面的例子说明了这几点：
 
 1. 静态方法如何在类上实现。
-2. 具有静态成员的类，可以被子类化 。
+2. 具有静态成员的类，可以被子类化。
 3. 什么情况下静态方法可以调用，什么情况下不能调用。
 
 ```js

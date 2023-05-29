@@ -2,6 +2,7 @@
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
 ---
+
 {{SVGRef}}
 
 The **`letter-spacing`** attribute controls spacing between text characters, in addition to any spacing from the {{SVGAttr("kerning")}} attribute.
@@ -12,7 +13,7 @@ If the attribute value has a unit identifier, such as `.25em` or `1%`, then the 
 
 **Note:** As a presentation attribute, `letter-spacing` can be used as a CSS property. See the {{cssxref("letter-spacing", "CSS letter-spacing")}} property for more information.
 
-As a presentation attribute, it can be applied to any element but it has effect only on the following eight elements: {{SVGElement("altGlyph")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}
+As a presentation attribute, it can be applied to any element but it has effect only on the following eight elements: {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, and {{SVGElement("tspan")}}
 
 ## 示例
 

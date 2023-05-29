@@ -2,6 +2,7 @@
 title: 通知
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
+
 {{AddonSidebar}}
 
 通知により、基本的なオペレーティングシステムの通知サービスを使用して、拡張機能またはそのコンテンツに関する情報を伝えることができます。

@@ -3,6 +3,9 @@ title: data URIs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
+
+{{HTTPSidebar}}
+
 `data` URIs, 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 文件定義, 允許作者在文件中嵌入檔案.
 
 ## 表達式
@@ -57,13 +60,15 @@ This function returns a base 64-encoded data URI from the passed [nsIFile](/zh-T
 ```js
 function generateDataURI(file) {
   var contentType = Components.classes["@mozilla.org/mime;1"]
-                              .getService(Components.interfaces.nsIMIMEService)
-                              .getTypeFromFile(file);
-  var inputStream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                              .createInstance(Components.interfaces.nsIFileInputStream);
+    .getService(Components.interfaces.nsIMIMEService)
+    .getTypeFromFile(file);
+  var inputStream = Components.classes[
+    "@mozilla.org/network/file-input-stream;1"
+  ].createInstance(Components.interfaces.nsIFileInputStream);
   inputStream.init(file, 0x01, 0600, 0);
-  var stream = Components.classes["@mozilla.org/binaryinputstream;1"]
-                         .createInstance(Components.interfaces.nsIBinaryInputStream);
+  var stream = Components.classes[
+    "@mozilla.org/binaryinputstream;1"
+  ].createInstance(Components.interfaces.nsIBinaryInputStream);
   stream.setInputStream(inputStream);
   var encoded = btoa(stream.readBytes(stream.available()));
   return "data:" + contentType + ";base64," + encoded;
@@ -72,7 +77,7 @@ function generateDataURI(file) {
 
 ## 安全
 
-> **備註：** Prior to {{Gecko("6.0")}}, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
+> **備註：** Prior to Gecko 6.0, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
 
 ## 常見的問題
 

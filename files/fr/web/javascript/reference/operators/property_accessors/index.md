@@ -1,6 +1,6 @@
 ---
 title: Accesseurs de propriétés
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 tags:
   - JavaScript
   - Opérateur
@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
+
 {{jsSidebar("Operators")}}
 
 Les **accesseurs de propriété** permettent de fournir un accès aux propriétés d'un objet en utilisant une notation avec un point ou une notation avec des crochets
@@ -75,7 +76,7 @@ Cette ligne fait exactement la même chose que l'exemple précédent.
 
 ### Noms de propriétés
 
-Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
+Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
 
 #### Exemples
 
@@ -93,7 +94,7 @@ objet[toto] = 'valeur';
 console.log(objet[truc]);
 ```
 
-Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
+Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](/fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
 
 ### Liaison de méthodes
 
@@ -117,16 +118,11 @@ x = document.formulaire[controle].value;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}}     | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-property-accessors', 'Accesseurs de propriété')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.1', 'Accesseurs de propriété')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES1', '#sec-11.2.1', 'Accesseurs de propriété')}}                 | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.property_accessors")}}
+{{Compat}}
 
 ## Voir aussi
 

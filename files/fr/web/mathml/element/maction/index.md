@@ -7,6 +7,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Element/maction
 ---
+
 L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
 L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
 
@@ -70,25 +71,8 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML3') }} | Définition actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML2') }} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.maction")}}
-
-### Notes relatives à Gecko
-
-- Avant Gecko 9.0 {{ geckoRelease("9.0") }} la valeur `restyle` (non-standard) était supportée pour l'attribut `actiontype`. Cette valeur a été retirée.
-- Avant Gecko 14.0 {{ geckoRelease("14.0") }} le type d'action `statusline` utilisait une syntaxe non-standard (voir ci-dessous). Cela a été résolu afin de respecter la spécification MathML.
-
-  ```html
-  <maction actiontype="statusline#(message)">
-    (expression)
-  </maction>
-  ```
-
-- Gecko 15.0 {{geckoRelease("15.0")}} ne prend en compte l'attribut `selection` seulement s'il est utilisé avec le type d'action `toggle`.
-- À partir de Gecko 16.0 {{geckoRelease("16.0")}} l'attribut `selection` est également pris en compte lorsqu'un `actiontype` inconnu est spécifié. Si un `actiontype` n'est pas spécifié (il est vide) ou que l'attribut `selection` est invalide, cela entraînera une erreur de balisage MathML (« invalid-markup »).
+{{Compat}}

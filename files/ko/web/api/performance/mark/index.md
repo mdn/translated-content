@@ -1,13 +1,8 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
-translation_of: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`mark()`** 메소드는 브라우저의 *performance entry buffer*에 주어진 이름으로 {{domxref("DOMHighResTimeStamp","timestamp")}}를 생성합니다. timestamp가 정의된 응용프로그램은 {{domxref("Performance")}} 인터페이스의 `getEntries*()` 메소드들을 통해 불러올 수 있습니다. ({{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}}, {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
@@ -65,10 +60,10 @@ console.log(monkeyEntries.length);
 performance.clearMarks();
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

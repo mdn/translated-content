@@ -2,9 +2,8 @@
 title: '-moz-image-rect'
 slug: Web/CSS/-moz-image-rect
 ---
-{{CSSRef}}{{Non-standard_Header}}
 
-## Summary
+{{CSSRef}}{{Non-standard_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/zh-CN/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background. This allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
 
@@ -62,7 +61,7 @@ Then the four boxes defining the segments of the image are defined. Let's look a
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
   width:133px;
   height:136px;
   position:absolute;
@@ -73,7 +72,7 @@ This is the top-left corner of the image. It defines a rectangle containing the 
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 100%, 50%, 50%);
+  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
   width:133px;
   height:136px;
   position:absolute;
@@ -86,13 +85,13 @@ The other corners follow a similar pattern:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 50%, 100%, 0%);
+  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
   width:133px;
   height:136px;
   position:absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
   width:133px;
   height:136px;
   position:absolute;
@@ -144,4 +143,4 @@ This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each el
 
 ## Browser compatibility
 
-{{Compat("css.types.-moz-image-rect")}}
+{{Compat}}

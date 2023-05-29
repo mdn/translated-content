@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
+
 {{CSSRef}}
 
 **Le module de disposition des boîtes flexibles CSS** (_CSS Flexible Box Layout_) est un module de CSS qui définit un modèle de boîtes optimisé pour la conception des interfaces utilisateurs. En utilisant le modèle des boîtes flexibles, les éléments d'une conteneur flexible peuvent être disposés dans n'importe quelle direction et étendre leurs dimensions (pour remplir un espace vide) ou se réduire pour éviter de dépasser en dehors de l'élément parent. On peut facilement manipuler les alignements horizontal et vertical des éléments fils. On peut aussi imbriquer plusieurs niveaux de boîtes flexibles afin de construire des dispositions en deux dimensions..
@@ -75,9 +76,7 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
 
 ## Spécifications
 
-| Spécification                        | État                                 | Commentaires         |
-| ------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Flexbox')}} | {{ Spec2('CSS3 Flexbox') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

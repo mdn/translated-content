@@ -2,6 +2,7 @@
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 當 HTML 文件（document）被切換到 [`designMode`](/zh-TW/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Element/input) 或 [`contentEditable`](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable) 元素。
@@ -52,11 +53,11 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `delete`
   - : 刪除目前選取的區域。
 - `enableAbsolutePositionEditor`
-  - : 啟用或停用用於移動絕對定位元素的抓取器。這個指令在 Firefox 63 Beta/Dev 版本中預設停用（{{bug(1449564)}}）。
+  - : 啟用或停用用於移動絕對定位元素的抓取器。這個指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `enableInlineTableEditing`
-  - : 啟用或停用表格的列 / 欄的插入及刪除。此指令在 Firefox 63 Beta/Dev 版本中預設停用 ({{bug(1449564)}})。
+  - : 啟用或停用表格的列 / 欄的插入及刪除。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `enableObjectResizing`
-  - : 啟用或停用圖片、表格、絕對定位元素、其他可重設大小物件的重設大小處理。此指令在 Firefox 63 Beta/Dev 版本中預設停用 ({{bug(1449564)}})。
+  - : 啟用或停用圖片、表格、絕對定位元素、其他可重設大小物件的重設大小處理。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `fontName`
   - : 變更選取區域或插入點的字型名稱。此指令需要字型名稱字串（如「Arial」）作為引數值。
 - `fontSize`
@@ -155,7 +156,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## 相關資訊
 

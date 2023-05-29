@@ -2,6 +2,7 @@
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** 属性指明函数的形参个数。
@@ -24,7 +25,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 ### `Function`.prototype 对象的属性
 
-{{jsxref("Function.prototype")}} 对象的 `length` 属性值为 0 。
+{{jsxref("Function.prototype")}} 对象的 `length` 属性值为 0。
 
 ## 示例
 

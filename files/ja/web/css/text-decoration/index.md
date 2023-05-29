@@ -2,6 +2,7 @@
 title: text-decoration
 slug: Web/CSS/text-decoration
 ---
+
 {{CSSRef}}
 
 **`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。

@@ -2,7 +2,8 @@
 title: WritableStreamDefaultWriter.desiredSize
 slug: Web/API/WritableStreamDefaultWriter/desiredSize
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的只读属性 **`desiredSize`** 返回填充满流的内部队列需要的大小。
 

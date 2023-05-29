@@ -2,6 +2,7 @@
 title: HTMLImageElement.width
 slug: Web/API/HTMLImageElement/width
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`width`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、画像が画面やプリンターなどの視覚媒体に描画または表示される場合は {{Glossary("CSS pixel", "CSS ピクセル")}}で、それ以外は画像のピクセル密度補正後の幅を表します。
@@ -15,7 +16,7 @@ slug: Web/API/HTMLImageElement/width
 
 ## 例
 
-この例では、 {{htmlattrxref("srcset", "img")}} 属性を使って、時計の画像に 2 種類の大きさの画像を用意しています。ひとつは幅 200px、もうひとつは幅 400px です。 {{htmlattrxref("sizes", "img")}} 属性は、ビューポートの幅を考慮して画像を描画する幅を指定するために提供されています。
+この例では、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性を使って、時計の画像に 2 種類の大きさの画像を用意しています。ひとつは幅 200px、もうひとつは幅 400px です。 [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性は、ビューポートの幅を考慮して画像を描画する幅を指定するために提供されています。
 
 ### HTML
 

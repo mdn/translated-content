@@ -1,14 +1,8 @@
 ---
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
-tags:
-  - API
-  - Channel messaging
-  - HTML API
-  - Overview
-  - Reference
-translation_of: Web/API/Channel_Messaging_API
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 The **Channel Messaging API** allows two separate scripts running in different browsing contexts attached to the same document (e.g., two IFrames, or the main document and an IFrame, two documents via a {{domxref("SharedWorker")}}, or two workers) to communicate directly, passing messages between one another through two-way channels (or pipes) with a port at each end.
@@ -41,11 +35,11 @@ Find out more about how to use this API in [Using channel messaging](/ko/docs/We
 - We have published a [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](http://mdn.github.io/dom-examples/channel-messaging-basic/)), which shows a really simple single message transfer between a page and an embedded {{htmlelement("iframe")}}.
 - You can also see a [multimessaging demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([run this live](http://mdn.github.io/dom-examples/channel-messaging-multimessage/)), which shows a slightly more complex setup that can send multiple messages between main page and IFrame.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

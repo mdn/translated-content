@@ -2,6 +2,7 @@
 title: CSS Masking
 slug: Web/CSS/CSS_Masking
 ---
+
 {{CSSRef}}
 
 **CSS Masking** 是一个 [CSS](/zh-CN/docs/Web/CSS) 模块，它定义了部分或完全隐藏视觉元素部分的方法，包括遮罩和剪裁。

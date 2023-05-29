@@ -2,6 +2,7 @@
 title: GeolocationCoordinates
 slug: Web/API/GeolocationCoordinates
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates`** インターフェイスは、地球上における端末の位置と高度、およびそれぞれの測位精度を表します。

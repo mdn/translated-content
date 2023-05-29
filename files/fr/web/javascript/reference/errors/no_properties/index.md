@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_properties
 original_slug: Web/JavaScript/Reference/Erreurs/No_properties
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

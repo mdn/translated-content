@@ -11,6 +11,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
+
 {{AddonSidebar}}
 
 Obtient et définit les propriétés de la barre latérale d'une extension.
@@ -18,7 +19,7 @@ Obtient et définit les propriétés de la barre latérale d'une extension.
 Une [barre latérale](/fr/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche ou à droite de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface utilisateur qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner une barre latérale à afficher. En utilisant la clé [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json, une extension peut définir sa propre barre latérale.
 En utilisant l'API `sidebarAction` décrite ici, une extension peut obtenir et définir les propriétés de la barre latérale.
 
-L'API `sidebarAction` est étroitement modélisée sur l'API  {{WebExtAPIRef("browserAction")}}.
+L'API `sidebarAction` est étroitement modélisée sur l'API {{WebExtAPIRef("browserAction")}}.
 
 L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/extensions/sidebar-action-api/) d'Opéra. Toutefois, notez que les éléments suivants ne sont pas encore pris en charge : `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, `onBlur`.
 
@@ -48,9 +49,9 @@ L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/e
 - {{WebExtAPIRef("sidebarAction.toggle()")}}
   - : Permet de basculer la visibilité de la barre latérale.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction")}}
+{{Compat}}
 
 ## Exemple extensions
 
@@ -62,7 +63,8 @@ L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/e
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -89,4 +91,4 @@ L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/e
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

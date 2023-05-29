@@ -2,6 +2,7 @@
 title: text-overflow
 slug: Web/CSS/text-overflow
 ---
+
 {{CSSRef}}
 
 **`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、非表示のあふれた内容をどのようにユーザーに知らせるのかを設定します。切り取られるか、省略記号 ('`…`') を表示するか、独自の文字列を表示するかです。

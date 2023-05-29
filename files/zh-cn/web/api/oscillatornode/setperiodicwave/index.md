@@ -2,6 +2,7 @@
 title: OscillatorNode.setPeriodicWave()
 slug: Web/API/OscillatorNode/setPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("OscillatorNode") }} 接口的 **`setPeriodicWave()`** 方法用来指向 {{domxref("PeriodicWave")}}，PeriodicWave 定义了一个周期性波形能够形成 oscillator 的输出，当{{domxref("OscillatorNode.type", "type")}} 是 `custom` 的时候。
@@ -17,7 +18,7 @@ OscillatorNode.setPeriodicWave(wave);
 ### 参数
 
 - `wave`
-  - : 一个 {{domxref("PeriodicWave")}} 对象， 表示特定的波形用来形成 oscillator 的输出。
+  - : 一个 {{domxref("PeriodicWave")}} 对象，表示特定的波形用来形成 oscillator 的输出。
 
 ### 返回值
 
@@ -60,7 +61,7 @@ osc.stop(2);
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.setPeriodicWave")}}
+{{Compat}}
 
 ## See also
 

@@ -10,6 +10,7 @@ tags:
   - request
 translation_of: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch API")}}
 
 Le constructeur **`Request()`** crée un nouvel objet {{domxref("Request")}}.

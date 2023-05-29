@@ -2,6 +2,7 @@
 title: Firefox 2 のセキュリティ
 slug: Mozilla/Firefox/Releases/2/Security_changes
 ---
+
 {{FirefoxSidebar}}
 
 この記事では、Firefox 2 のセキュリティに影響を与える変更点について説明しています。

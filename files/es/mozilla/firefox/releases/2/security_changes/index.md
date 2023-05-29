@@ -1,16 +1,12 @@
 ---
 title: Seguridad en Firefox 2
 slug: Mozilla/Firefox/Releases/2/Security_changes
-tags:
-  - Seguridad
-  - Todas_las_Categorías
-translation_of: Mozilla/Firefox/Releases/2/Security_changes
 original_slug: Seguridad_en_Firefox_2
 ---
 
 {{FirefoxSidebar}}
 
-[Firefox 2](es/Firefox_2) tiene tanto SSLv2 como la débil "exportación" de juegos de claves desactivados por defecto, en favor de SSLv3. Esto proporciona mejoras en la seguridad.
+[Firefox 2](/es/Firefox_2) tiene tanto SSLv2 como la débil "exportación" de juegos de claves desactivados por defecto, en favor de SSLv3. Esto proporciona mejoras en la seguridad.
 
 Los métodos preferidos de encriptación son `TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA` y `TLS_RSA_WITH_3DES_EDE_CBC_SHA`. Algunos sevidores se refieren a ellos como `SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA` y `SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
 

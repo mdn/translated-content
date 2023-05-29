@@ -2,11 +2,12 @@
 title: 使用 MediaStream 的录制 API
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 [媒体流 (音/视频) 录制 API](/zh-CN/docs/Web/API/MediaStream_Recording_API)让记录音频流或视频流信息更加容易。当使用[navigator.mediaDevices.getUserMedia()"](/zh-CN/docs/Web/API/Navigator/mediaDevices/getUserMedia)时，它提供了一种简单的方式从用户的输入设备中记录信息，并且可以马上在 web apps 中查看记录的信息。音/视频信息都可以被录制，可以分开也可以一块儿。本文针对于提供一个基础引导去让大家了解提供了这个 API 的 MediaRecorder 的界面。
 
-## 示例应用: Web 录音机
+## 示例应用：Web 录音机
 
 ![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
@@ -244,7 +245,7 @@ mediaRecorder.onstop = function(e) {
 </article>
 ```
 
-之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的{{htmlattrxref("src", "audio")}}属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
+之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的[`src`](/zh-CN/docs/Web/HTML/Element/audio#src)属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
 
 最后，我们监听删除按钮的 onclick 事件，以便能够删除整个剪辑 HTML 结构。
 
@@ -254,10 +255,10 @@ mediaRecorder.onstop = function(e) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 
 - [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API) landing page
-- `{{domxref("Navigator.getUserMedia()")}}`
+- {{domxref("Navigator.getUserMedia()")}}
 - [MediaRecorder API now supported by 65% of your website users](https://addpipe.com/blog/media-recorder-api-is-now-supported-by-65-of-all-desktop-internet-users/)

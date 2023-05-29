@@ -10,6 +10,7 @@ tags:
   - Élément(2)
 translation_of: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 L'élément `line` est un élément de la catégorie des formes simples SVG, utilisé pour créer une ligne connectant deux points.
@@ -61,7 +62,7 @@ Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.line")}}
+{{Compat}}
 
 ## Voir aussi
 

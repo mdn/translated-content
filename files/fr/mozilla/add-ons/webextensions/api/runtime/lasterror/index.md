@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
+
 {{AddonSidebar()}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
 
 ```js
@@ -22,7 +23,7 @@ gettingCookies.then(onGot, onError);
 
 La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant.
 
-Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
+Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
 
 ## Syntaxe
 
@@ -32,7 +33,7 @@ var myError = browser.runtime.lastError;  // null or Error object
 
 ### Valeur
 
-Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si  `lastError` n'a pas été défini, la valeur est `null`.
+Un objet [Error](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
 
 ## Examples
 
@@ -71,11 +72,11 @@ var setCookie = browser.cookies.set(
 setCookie.then(logCookie, logError);
 ```
 
-> **Note :** `runtime.lastError` est un alias pour  {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
+> **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.lastError")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -85,7 +86,8 @@ setCookie.then(logCookie, logError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +114,4 @@ setCookie.then(logCookie, logError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

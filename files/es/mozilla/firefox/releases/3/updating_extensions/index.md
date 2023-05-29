@@ -1,9 +1,6 @@
 ---
 title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Actualizar_extensiones_para_Firefox_3
 ---
 
@@ -35,7 +32,7 @@ Recuerda que en Firefox 3 no necesitas incluir el ".0" extra en el número de la
 
 Ha habido (y continuará habiendo) una serie de cambios en las APIs, lo que muy probablemente averiará algunas extensiones. Aún estamos trabajando para confeccionar una lista completa de estos cambios.
 
-Si tu extensión todavía usa un script [`Install.js`]("es/Install.js") en vez de un [manifiesto de instalación]("es/Manifiesto_de_instalaci%c3%b3n"), necesitas hacer la transición a un manifiesto de instalación lo más pronto posible. Firefox 3 no implementará el script `install.js` en documentos XPI.
+Si tu extensión todavía usa un script [`Install.js`](/es/Install.js) en vez de un [manifiesto de instalación](/es/Manifiesto_de_instalaci%c3%b3n), necesitas hacer la transición a un manifiesto de instalación lo más pronto posible. Firefox 3 no implementará el script `install.js` en documentos XPI.
 
 #### Agregar localizaciones al manifiesto de instalación
 
@@ -68,8 +65,8 @@ La API del Administrador de descargas ha cambiado ligeramente debido a la transi
 Si tu extensión tiene acceso a información de inicio de sesión de usuario en el Administrador de contraseñas, deberás actualizarla para poder utilizar la nueva API para el Administrador de inicio de sesión.
 
 - El artículo [Utilizar nsILoginManager](/es/Using_nsILoginManager) incluye ejemplos y hasta una demostración de cómo debes escribir extensiones que funcionen tanto con el Administrador de contraseñas como con el Administrador de inicio de sesión, de manera que ambos funcionen con Firefox 3 y versiones anteriores.
-- [`nsILoginInfo`](/en-US/nsILoginInfo)
-- [`nsILoginManager`](/en-US/nsILoginManager)
+- [`nsILoginInfo`](/es/nsILoginInfo)
+- [`nsILoginManager`](/es/nsILoginManager)
 
 También puedes sobrescribir el almacén del administrador de contraseñas interno si quieres ofrecer tu propia implementación del almacén de contraseñas en la extensión. Visita [Crear un módulo de almacenamiento para el Administrador de inicio de sesión](/es/Creating_a_Login_Manager_storage_module) para más detalles
 
@@ -100,7 +97,7 @@ Las siguientes interfaces han sido eliminadas en Gecko 1.9, el motor de renderiz
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (Lee el {{ Bug(386200) }})
+- `nsICloseAllWindows` (Lee el [Error 386200 en Firefox](https://bugzil.la/386200))
 
 ### Paso 4: Comprueba los cambios importantes en el chrome
 
@@ -138,7 +135,7 @@ O bien, emplear la siguiente técnica para hacer que la superposición funcione 
 
 _Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensión para que funcione con Firefox 3._
 
-- Por razones de seguridad, se ha dejado de implementar [`chrome://browser/base/utilityOverlay.js`](). Si lo estabas usando, deberás cambiarlo por [`chrome://browser/content/utilityOverlay.js`]().
+- Por razones de seguridad, se ha dejado de implementar `chrome://browser/base/utilityOverlay.js`. Si lo estabas usando, deberás cambiarlo por `chrome://browser/content/utilityOverlay.js`.
 - Para implementar [`nsIAboutModule`](/es/nsIAboutModule) ahora debes incluir el método `getURIFlags`. Visita [nsIAboutModule.idl](https://mxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) para consultar la documentación. Esto afecta a las extensiones que brinden nuevas URIs del tipo `about:`. ( [bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746) )
 - El elemento [tabbrowser](/en/XUL/tabbrowser) ya no forma parte del "conjunto de herramientas" ( [bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964) ). Esto significa que este elemento ya no está disponible en aplicaciones y extensiones XUL. Este elemento sigue siendo parte de la ventana principal de Firefox (browser.xul).
 - Es necesario documentar los cambios en [nsISupports proxies](/es/NsISupports_proxies) [\[1\]](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&rnum=1#939240fc3f5123a8) y posiblemente, también aquellos relacionados con el procesamiento de interfaces.

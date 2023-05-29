@@ -5,6 +5,7 @@ slug: >-
 original_slug: >-
   MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
+
 {{MDNSidebar}}
 
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。
@@ -414,7 +415,7 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `entries()` that returns an {{jsxref('iterator')}} on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
 - `values()` that returns an {{jsxref('iterator')}} on the values. E.g. {{domxref('FormData.values()')}}
 - `keys()` that returns an {{jsxref('iterator')}} on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 Such an iterator allows to use the syntax `for (var p in object)` as a shorthand of `for (var p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
@@ -423,7 +424,7 @@ Such an iterator allows to use the syntax `for (var p in object)` as a shorthand
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach()`, and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```
 setlike<valueType>

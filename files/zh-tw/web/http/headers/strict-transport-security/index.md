@@ -2,11 +2,14 @@
 title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
+{{HTTPSidebar}}
+
 **HTTP `Strict-Transport-Security`** 回應標頭（簡稱為 {{Glossary("HSTS")}}）告知瀏覽器應強制使用 HTTPS 以取代 HTTP。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Syntax
 
@@ -68,7 +71,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Browser compatibility
 
-{{Compat("http.headers.Strict-Transport-Security")}}
+{{Compat}}
 
 ## See also
 

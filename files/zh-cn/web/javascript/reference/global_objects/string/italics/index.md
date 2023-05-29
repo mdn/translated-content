@@ -2,6 +2,7 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 The **`italics()`** method creates an {{HTMLElement("i")}} HTML element that causes a string to be italic.

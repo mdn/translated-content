@@ -1,13 +1,6 @@
 ---
 title: <strong>
 slug: Web/HTML/Element/strong
-tags:
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Semântica HTML a nível de texto(2)
-  - Web
-translation_of: Web/HTML/Element/strong
 ---
 ```
 O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente mostrado em negrito.
@@ -17,14 +10,14 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias do conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flux content</a
-        >,<a href="/en-US/docs/HTML/Content_categories#Phrasing_content">
+        >,<a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content">
           Phrasing content</a
         >, conteúdo palpável.
       </td>
@@ -32,7 +25,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -45,10 +38,10 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
       <th scope="row">Permitted parents</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, ou qualquer elemento que aceite
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>
@@ -62,7 +55,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
       <td>
         {{domxref("HTMLElement")}} Até Gecko 1.9.2 (Firefox 4)
         inclusive, Firefox implementa a interface
-        <a href="/en-US/docs/DOM/span"><code>HTMLSpanElement</code></a> para
+        <a href="/pt-BR/docs/DOM/span"><code>HTMLSpanElement</code></a> para
         este elemento.
       </td>
     </tr>
@@ -75,7 +68,7 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 
 ## Notas de uso
 
-O elemento `<strong> `é utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.
+O elemento `<strong>` é utilizado em conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas). Podem ser sentenças que são de grande importância para toda a página, ou, você pode meramente tentar pontuar que algumas palavras são de grande importância, comparado ao conteúdo próximo.
 
 Tipicamente, estes elementos são renderizados por padrão, usando fontes em negrito. Contudo, ele não deve ser usado para simplesmente aplicar o estilo negrito; use o CSS {{cssxref("font-weight")}} para este propósito. Use o elemento {{HTMLElement("b")}} para chamar a atenção para certos textos sem a indicação de grande nível de importância. Use o elemento {{HTMLElement("em")}} para marcar textos que tem necessitam de ênfase.
 
@@ -118,10 +111,8 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 {{Compat("html.elements.strong")}}
 
-##
-
 ## Veja também
 
 - [HTML bold element](/pt-BR/docs/HTML/Element/b)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

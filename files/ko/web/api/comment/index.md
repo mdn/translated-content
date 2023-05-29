@@ -1,12 +1,8 @@
 ---
 title: Comment
 slug: Web/API/Comment
-tags:
-  - API
-  - DOM
-  - Reference
-translation_of: Web/API/Comment
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Comment`** 인터페이스는 마크업 내의 텍스트 표기인 주석을 나타냅니다. 주석은 화면에 보여지지 않지만 웹 페이지의 소스에서 확인할 수 있습니다. HTML과 XML에서 주석은 '`<!--`' 표기와 '`-->`' 사이의 내용입니다. XML의 주석 내용에는 '`--`'을 포함할 수 없습니다.

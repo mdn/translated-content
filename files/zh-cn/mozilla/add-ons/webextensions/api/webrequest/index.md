@@ -2,6 +2,7 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。
 
 ## 概况
@@ -10,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。
 
-所有的事件，接受`onErrorOccurred事件`, `addListener()`有三个参数 :
+所有的事件，接受 `onErrorOccurred` 事件，`addListener()` 有三个参数：
 
 - 监听本身
 - 一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒

@@ -2,6 +2,7 @@
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
 ---
+
 {{JSRef}}
 
 **`JSON`** 物件包含了解析、或是轉換為 [JavaScript Object Notation](http://json.org/)（{{glossary("JSON")}}）格式的方法。這物件不能被呼叫或建構；而除了它的兩個方法屬性以外，本身也沒有特別的功能。
@@ -142,7 +143,7 @@ More complex well-known [polyfills](http://remysharp.com/2010/10/08/what-is-a-po
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## 參見
 

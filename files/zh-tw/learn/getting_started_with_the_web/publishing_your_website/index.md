@@ -2,6 +2,7 @@
 title: 將你的網站發佈上線
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
 當你完成你的網頁程式碼後，你需要把它放到網路上，這樣人們才可以搜尋得到。這個章節將介紹如何快速的把你的程式碼放到網路上。
@@ -46,7 +47,7 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 試試以下網站，看看你能想到什麼點子：
 
 - [JSFiddle](https://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org)
+- [Glitch](https://glitch.com/)
 - [JS Bin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
@@ -58,15 +59,15 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 1. 首先註冊 [GitHub](https://github.com/) 並驗證電子郵件。
 2. 接著針對要上傳的檔案[建立一個 repository](https://github.com/new)。
-3. 在頁面的 _Repository name_ 標籤輸入 _username_.github.io，_username_ 是指你的用戶名。例如我們的好朋友 bobsmith 就會輸入 _bobsmith.github.io_.
-    另外，請勾選 _Initialize this repository with a README_ 後點選 _Create repository_。![](github-create-repo.png)
+3. 在頁面的 _Repository name_ 標籤輸入 _username_.github.io，_username_ 是指你的用戶名。例如我們的好朋友 bobsmith 就會輸入 _bobsmith.github.io_。
+   另外，請勾選 _Initialize this repository with a README_ 後點選 _Create repository_。![](github-create-repo.png)
 4. 之後，把網站內容拖曳到 repository 目錄，並勾選 _Commit changes_。
 
-    > **備註：** 請確定目錄內有 _index.html_ 檔案。
+   > **備註：** 請確定目錄內有 _index.html_ 檔案。
 
 5. 現在讓瀏覽器連到 _username_.github.io 來看看你的網站。例如你的用戶名字是 _chrisdavidmills_，就連到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
 
-    > **備註：** 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
+   > **備註：** 讓網站上線需要一點時間。如果網站沒有馬上運行，稍等一段時間後再試一次。
 
 想多理解的話，請參考 [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
 
@@ -79,14 +80,3 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## 在本模組內
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基礎](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基礎](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網路的運作方式](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

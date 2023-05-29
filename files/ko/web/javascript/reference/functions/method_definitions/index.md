@@ -1,14 +1,6 @@
 ---
 title: 메서드 정의
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Object
-  - Syntax
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-browser-compat: javascript.functions.method_definitions
 ---
 {{JsSidebar("Functions")}}
 

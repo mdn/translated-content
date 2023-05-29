@@ -3,6 +3,7 @@ title: 初心者のためのオブジェクト指向 JavaScript
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 基礎が片付いたところで、オブジェクト指向 JavaScript (OOJS) について取り上げます。この記事ではオブジェクト指向プログラミング (OOP) の基本的な視点を説明し、 JavaScript がどのようにコンストラクター関数を通じてオブジェクトクラスをエミュレートしているか、またどのようにオブジェクトインスタンスを生成しているかを紹介します。
@@ -45,13 +46,13 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 はじめに、[オブジェクト入門の最初の記事](/ja/docs/Learn/JavaScript/Objects/Basics)にある、人物の包括的なデータや機能を定義した、Person オブジェクトに戻りましょう。ある人物について知り得る事柄は数多くあります (住所、身長、靴のサイズ、DNA 情報、パスポート番号、顕著な人格特性など) が、このケースでは名前、年齢、性別、趣味を表示することに興味があるだけです。また、このデータに基づいた短い自己紹介や、挨拶をさせられるようにもしましょう。これは**抽象化** — より複雑な事物を、プログラムの目的に沿って簡単に操作できるように、その最も重要な側面を表現する、シンプルなモデルを作ること — として知られています。
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 ### 実際のオブジェクトの生成
 
 このクラスから、**オブジェクトインスタンス**を生成することができます。オブジェクトインスタンスは、クラスで定義されたデータや機能を持ったオブジェクトです。 Person クラスから、何名かの実際の人物を生成します。
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 クラスからオブジェクトインスタンスが生成されるとき、クラスの**コンストラクター関数**が生成のために実行されます。クラスからオブジェクトインスタンスが生成される過程を**インスタンス化**と呼びます。オブジェクトインスタンスは、クラスを**インスタンス化**したものです。
 
@@ -59,15 +60,15 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 このケースで求めているのは、包括的な人物ではなく、より特定のタイプである、教師と生徒です。OOP では、他のクラスを元にした新しいクラスを作ることができます。これらの新しい**子クラス**は、**親クラス**からデータやコード機能を**継承**することができ、すべてのオブジェクトタイプに共通する機能を、重複させるのではなく、再利用することができます。クラス間で機能が異なる場合は、必要に応じて特殊化された機能を直接定義することができます。
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm \[firstName]" (例：_Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に_ "Hello, my name is \[Prefix] \[lastName], and I teach \[Subject]." (例：_Hello, My name is Mr Griffiths, and I teach Chemistry) のように。_
 
-> **Note:** **注**: 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
+> **メモ:** 同じ機能を複数のオブジェクトタイプが実装する能力のことを示す用語に、**ポリモーフィズム**があります。不思議に感じているかも知れないので念のため。
 
 子クラスのオブジェクトインスタンスを生成しましょう。例：
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 記事の続きでは、OOP 理論が JavaScript でどのように実践されているかを見ていきます。
 
@@ -115,7 +116,7 @@ JavaScript でコンストラクターを通じてクラスを作り、そこか
 
 コンストラクター関数は、 JavaScript 版のクラスです。それは関数に期待される全ての機能を持っていますが、何も返さないし、明示的にオブジェクトを生成しもしないという点に注意してください。基本的には、プロパティとメソッドを定義するだけです。加えて、 `this` キーワードが使われていることにも注意してください。基本、オブジェクトインスタンスの 1 つが作成されるときにはいつでも、オブジェクトの `name` プロパティはコンストラクター呼び出しに渡される name 値と等しくなり、 `greeting()` メソッドもコンストラクター呼び出しに渡される name 値を使用します。
 
-> **Note:** **メモ**: 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
+> **メモ:** 通常、コンストラクター関数の名前は大文字で始まります。コードの中で、コンストラクター関数がより容易に認識されるようにするための慣習です。
 
 では、オブジェクトを生成するために、どのようにコンストラクターを呼び出したらよいでしょうか？
 
@@ -214,7 +215,7 @@ person1.bio()
 // etc.
 ```
 
-> **Note:** **メモ**: もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
+> **メモ:** もしこの工程で何らかのトラブルがあった場合は、あなたのコードを我々のバージョン ([oojs-class-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-finished.html)。[ライブサンプル](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-finished.html)も) と比べてみてください。
 
 ### さらなる練習
 
@@ -222,7 +223,7 @@ person1.bio()
 
 加えて、 `bio()` メソッドにはいくつかの問題点があります。人物が女性である、あるいは他の優先される性別分類の場合でも、その出力には常に "He" という代名詞が含まれています。また、 bio は `interests` 配列により多くのものが列挙されていても、2 つの趣味しか含みません。このクラス定義 (コンストラクター) の問題を、あなたはどのように修正することができますか？コンストラクター内に任意のコード (恐らく、いくつかの条件分岐やループが必要となるでしょう) を入れてみてください。性別や、趣味の数が 1、2、あるいは 2 よりも多いかどうかによって、文がどのように構築されるべきか考えてみてください。
 
-> **Note:** **注**: もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
+> **メモ:** もし行き詰まってしまった場合は、[GitHub に答えとなるリポジトリ](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html) ([ライブ](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)) があります。最初はあなた自身で書いてみてください！
 
 ## オブジェクトインスタンスを生成する他の方法
 
@@ -300,13 +301,3 @@ person1.bio()
 次の記事では、 JavaScript オブジェクトのプロトタイプについて紹介します。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
-
-## このモジュール内の文書
-
-- [オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)
-- [初心者のためのオブジェクト指向 JavaScript](/ja/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object のプロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [JavaScript での継承](/ja/docs/Learn/JavaScript/Objects/Inheritance)
-- [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
-- [オブジェクト作成の練習](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [バウンスボールに機能を追加する](/ja/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

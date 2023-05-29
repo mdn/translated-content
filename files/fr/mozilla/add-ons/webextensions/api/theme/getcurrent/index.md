@@ -12,6 +12,7 @@ tags:
   - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/Add-ons/WebExtensions/manifest.json/theme#colors).
@@ -35,9 +36,9 @@ var getting = browser.theme.getCurrent(
 
 Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.getCurrent", 10)}}
+{{Compat}}
 
 ## Exemples
 

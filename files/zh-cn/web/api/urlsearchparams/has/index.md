@@ -2,9 +2,10 @@
 title: URLSearchParams.has()
 slug: Web/API/URLSearchParams/has
 ---
-{{ApiRef("URL API")}}{{SeeCompatTable}}
 
-{{domxref("URLSearchParams")}} 的**has()** 方法返回一个 {{jsxref("Boolean")}} 表示一个指定的键名对应的值是否存在。
+{{ApiRef("URL API")}}
+
+{{domxref("URLSearchParams")}} 的 **`has()`** 方法返回一个布尔值，表示一个指定的键名对应的值是否存在。
 
 ## 语法
 
@@ -36,4 +37,4 @@ params.has('bar') === true; //true
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.has")}}
+{{Compat}}

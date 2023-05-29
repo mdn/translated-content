@@ -8,6 +8,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/auteur
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -39,4 +40,4 @@ Notez que Firefox ne supporte cette clé qu'à partir de la version 52 et que ce
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

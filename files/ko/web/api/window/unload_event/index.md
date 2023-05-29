@@ -1,13 +1,8 @@
 ---
 title: 'Window: unload 이벤트'
 slug: Web/API/Window/unload_event
-tags:
-  - Event
-  - Reference
-  - Window
-  - 이벤트
-translation_of: Web/API/Window/unload_event
 ---
+
 {{APIRef}}
 
 **`unload`** 이벤트는 문서나 하위 리소스가 언로딩 중일 때 발생합니다.

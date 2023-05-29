@@ -2,6 +2,7 @@
 title: Web audio 空间化基础
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
+
 正如大量的各种声音处理（或者其他）选择是不够的，WebAduioAPI 也包含了一些工具，可以让你模仿听众在声源周围移动时的声音差异，例如当你在 3D 游戏声源中移动时声音的平移。官方名词称为 **空间化**，这篇文章将会介绍如何实现这样一个系统的基础知识。
 
 ## 空间化的基础知识
@@ -144,7 +145,7 @@ const panner = new PannerNode(audioCtx, {
 ## 移动 boombox
 
 现在我们将在我们的“房间”中四处移动 boombox。我们已经设置了一些控件来执行此操作。我们可以左右移动，上下移动，来回移动；我们也可以旋转它。声音方向来自前面的 boombox 的扬声器，因此当我们旋转它时，我们可以改变声音的方向 - 即当音箱旋转 180 度并背向我们时，使其向后投射。
-我们需要为界面设置一些东西。首先，我们将获得我们想要移动的元素的引用，然后存储我们在设置 [CSS transforms](/zh-CN/docs/Web/CSS/CSS_Transforms) 来实际执行移动时将要更改的值的引用。
+我们需要为界面设置一些东西。首先，我们将获得我们想要移动的元素的引用，然后存储我们在设置 [CSS transforms](/zh-CN/docs/Web/CSS/CSS_transforms) 来实际执行移动时将要更改的值的引用。
 最后，我们将设置一些边界值，以便我们的 boombox 在任何方向上都不会走得太远：
 
 ```js
@@ -221,7 +222,7 @@ break;
 ```
 
 然而，我们的旋转值稍为复杂，因为我们需要在周围移动声音。我们不仅需要更新两个轴值（例如，如果围绕 x 轴旋转对象，则更新该对象的 y 和 z 坐标），还需要为此进行更多的数学运算。旋转是一个圆圈，我们需要 [`Math.sin`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) 和 [`Math.cos`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) 来帮助我们绘制这个圆圈。
-让我们设置一个旋转速率，我们将会将它转换为弧度范围的值，以便稍后在 `Math.sin` 和 `Math.cos` 中使用，当我们在旋转我们的 boombox ，需要计算出新的坐标时：
+让我们设置一个旋转速率，我们将会将它转换为弧度范围的值，以便稍后在 `Math.sin` 和 `Math.cos` 中使用，当我们在旋转我们的 boombox，需要计算出新的坐标时：
 
 ```js
 // set up rotation constants
@@ -417,7 +418,7 @@ moveControls.forEach(function(el) {
 
 希望本文能让你深入了解 Web Audio 空间化的工作原理，以及每个{{domxref("PannerNode")}} 属性的作用（其中有很多属性）。这些值有时难以操作，根据你的使用情况，可能需要一些时间才能使它们正确。
 
-> **备注：** 音频空间化在不同浏览器中的听起来略有不同。 panner 节点在底层做了一些非常复杂的数学运算；这里有 [许多测试](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true)，因此你可以跟踪不同平台上此节点的内部工作状态。
+> **备注：** 音频空间化在不同浏览器中的听起来略有不同。panner 节点在底层做了一些非常复杂的数学运算；这里有 [许多测试](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true)，因此你可以跟踪不同平台上此节点的内部工作状态。
 
 再次，您可以在 [这里查看最终的演示](https://mdn.github.io/webaudio-examples/spatialization/)，同时[最终的源代码在这里](https://github.com/mdn/webaudio-examples/tree/master/spatialization)。还有一个 [Codepen 的演示](https://codepen.io/Rumyra/pen/MqayoK?editors=0100)。
 

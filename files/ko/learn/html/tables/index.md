@@ -1,5 +1,5 @@
 ---
-title: HTML tables
+title: HTML 테이블
 slug: Learn/HTML/Tables
 ---
 {{LearnSidebar}}
@@ -10,7 +10,7 @@ HTML에서 매우 일반적인 작업으로 표 형식의 데이터를 구조화
 
 이 모듈을 시작하기 전에, 당신은 이미 HTML의 기본 지식을 가지고 있어야 합니다. — [Introduction to HTML](/ko/docs/Learn/HTML/Introduction_to_HTML).
 
-> **참고:** **노트**: 컴퓨터/태블릿/기타 장치에서 자신만의 파일들을 생성 할 수 없다면, 대부분의 예제 코드는 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서 시도해 볼 수 있습니다.
+> **참고:** 컴퓨터/태블릿/기타 장치에서 자신만의 파일들을 생성 할 수 없다면, 대부분의 예제 코드는 [JSBin](http://jsbin.com/) 또는 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서 시도해 볼 수 있습니다.
 
 ## 가이드
 

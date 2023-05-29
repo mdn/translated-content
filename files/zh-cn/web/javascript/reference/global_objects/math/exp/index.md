@@ -2,6 +2,7 @@
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -25,7 +26,7 @@ Math.exp(x)
 
 ## 示例
 
-### 例子：使用 `Math.exp`
+### 示例：使用 `Math.exp`
 
 ```js
 Math.exp(-1); // 0.36787944117144233

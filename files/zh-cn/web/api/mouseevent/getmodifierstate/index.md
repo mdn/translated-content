@@ -2,6 +2,7 @@
 title: MouseEvent.getModifierState()
 slug: Web/API/MouseEvent/getModifierState
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`MouseEvent.getModifierState()`** method returns the current state of the specified modifier key: `true` if the modifier is active (i.e., the modifier key is pressed or locked), otherwise, `false`.
@@ -11,7 +12,7 @@ See the document of {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.ge
 ## 语法
 
 ```plain
-var active =​ event.getModifierState(keyArg);
+var active = event.getModifierState(keyArg);
 ```
 
 ### 返回值
@@ -29,7 +30,7 @@ A {{jsxref("Boolean")}}
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.getModifierState")}}
+{{Compat}}
 
 ## See also
 

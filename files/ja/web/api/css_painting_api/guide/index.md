@@ -3,6 +3,7 @@ title: CSS Painting APIを使用する
 slug: Web/API/CSS_Painting_API/Guide
 original_slug: Web/API/CSS_Painting_API/ガイド
 ---
+
 CSS Paint API を用いると開発者がプログラムで画像を定義できます。CSS の [`background-image`](/ja/docs/Web/CSS/background-image), [`border-image`](/ja/docs/Web/CSS/border-image-source), [`mask-image`](/ja/docs/Web/CSS/mask-image) など CSS 画像を呼び出せる場所ならどこでも使用できるように設計されています。
 
 CSS スタイルシートで使用される画像をプログラムで作成するには、いくつかのステップを踏む必要があります:
@@ -92,7 +93,7 @@ CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intr
 <h1 class="fancy">My Cool Header</h1>
 ```
 
-以下の例は、[CSS Painting API をサポートしているブラウザー](/ja/docs//Web/API/PaintWorklet#Browser_compatibility)では上の画像のようになります。
+以下の例は、[CSS Painting API をサポートしているブラウザー](/ja/docs/Web/API/CSS/paintWorklet_static#ブラウザーの互換性)では上の画像のようになります。
 
 {{EmbedLiveSample("paintapi", 120, 120)}}
 

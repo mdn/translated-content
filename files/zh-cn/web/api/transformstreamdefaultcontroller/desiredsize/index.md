@@ -2,6 +2,7 @@
 title: TransformStreamDefaultController.desiredSize
 slug: Web/API/TransformStreamDefaultController/desiredSize
 ---
+
 {{DefaultAPISidebar("Streams API")}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的只读属性 **`desiredSize`** 返回填充满关联的 {{domxref("ReadableStream")}} 的内部队列所需要的大小。

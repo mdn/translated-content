@@ -2,6 +2,7 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 ---
+
 > **警告：** `createEvent` 使用的许多方法，如 `initCustomEvent`，都被废弃了。请使用 [event constructors](/zh-CN/docs/Web/API/CustomEvent) 来替代。
 
 {{ ApiRef("DOM") }}
@@ -15,7 +16,7 @@ var event = document.createEvent(type);
 ```
 
 - `event` 就是被创建的 [Event](/zh-CN/docs/DOM/event) 对象。
-- `type` 是一个字符串，表示要创建的事件类型。事件类型可能包括`"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, 或者 `"HTMLEvents"`。请查看 [Notes](#notes) 章节获取详细信息 。
+- `type` 是一个字符串，表示要创建的事件类型。事件类型可能包括`"UIEvents"`、`"MouseEvents"`、`"MutationEvents"` 或者 `"HTMLEvents"`。请查看[注意](#注意)小节获取详细信息。
 
 ## 示例
 
@@ -63,20 +64,20 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td>User Interface event module</td>
       <td><code>"UIEvents"</code></td>
-      <td><a href="/en-US/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
     </tr>
     <tr>
       <td>Mouse event module</td>
       <td><code>"MouseEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
+        <a href="/zh-CN/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
       </td>
     </tr>
     <tr>
       <td>Mutation event module</td>
       <td><code>"MutationEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMutationEvent"
+        <a href="/zh-CN/docs/DOM/event.initMutationEvent"
           >event.initMutationEvent</a
         >
       </td>
@@ -84,7 +85,7 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td>HTML event module</td>
       <td><code>"HTMLEvents"</code></td>
-      <td><a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initEvent">event.initEvent</a></td>
     </tr>
     <tr style="background-color: #eee">
       <td colspan="3">
@@ -96,20 +97,20 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td>User Interface event module</td>
       <td><code>"UIEvent"</code>, <code>"UIEvents"</code></td>
-      <td><a href="/en-US/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
     </tr>
     <tr>
       <td>Mouse event module</td>
       <td><code>"MouseEvent"</code>, <code>"MouseEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
+        <a href="/zh-CN/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
       </td>
     </tr>
     <tr>
       <td>Mutation event module</td>
       <td><code>"MutationEvent"</code>, <code>"MutationEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMutationEvent"
+        <a href="/zh-CN/docs/DOM/event.initMutationEvent"
           >event.initMutationEvent</a
         >
       </td>
@@ -120,7 +121,7 @@ _To-do: 添加事件名称到下表中。_
       </td>
       <td><code>"MutationNameEvent"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMutationNameEvent"
+        <a href="/zh-CN/docs/DOM/event.initMutationNameEvent"
           >event.initMutationNameEvent</a
         >
       </td>
@@ -131,7 +132,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"TextEvent"</code> (Gecko also supports <code>"TextEvents"</code>)
       </td>
       <td>
-        <a href="/en-US/docs/DOM/event.initTextEvent">event.initTextEvent</a>
+        <a href="/zh-CN/docs/DOM/event.initTextEvent">event.initTextEvent</a>
         (not implemented)
       </td>
     </tr>
@@ -142,7 +143,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"KeyEvents"</code>)
       </td>
       <td>
-        <a href="/en-US/docs/DOM/event.initKeyEvent">event.initKeyEvent</a>
+        <a href="/zh-CN/docs/DOM/event.initKeyEvent">event.initKeyEvent</a>
         (Gecko-specific; the DOM 3 Events working draft uses
         <code>initKeyboardEvent</code> instead)
       </td>
@@ -150,12 +151,12 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td>Custom event module</td>
       <td><code>"CustomEvent"</code></td>
-      <td><a href="/en-US/docs/DOM/CustomEvent">event.initCustomEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/CustomEvent">event.initCustomEvent</a></td>
     </tr>
     <tr>
       <td>Basic events module</td>
       <td><code>"Event"</code> (Gecko also supports <code>"Events"</code>)</td>
-      <td><a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initEvent">event.initEvent</a></td>
     </tr>
     <tr style="background-color: #eee">
       <td colspan="3">
@@ -169,14 +170,14 @@ _To-do: 添加事件名称到下表中。_
       <td>
         <code>"SVGEvents"</code> (Gecko also supports <code>"SVGEvent"</code>)
       </td>
-      <td><a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initEvent">event.initEvent</a></td>
     </tr>
     <tr>
       <td>
         <code>"SVGZoomEvents"</code> (Gecko also supports
         <code>"SVGZoomEvent"</code>)
       </td>
-      <td><a href="/en-US/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
+      <td><a href="/zh-CN/docs/DOM/event.initUIEvent">event.initUIEvent</a></td>
     </tr>
     <tr style="background-color: #eee">
       <td colspan="3">Other event types supported by Gecko</td>
@@ -185,7 +186,7 @@ _To-do: 添加事件名称到下表中。_
       <td rowspan="4">-</td>
       <td><code>"MessageEvent"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMessageEvent"
+        <a href="/zh-CN/docs/DOM/event.initMessageEvent"
           >event.initMessageEvent</a
         >
       </td>
@@ -193,13 +194,13 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td><code>"MouseScrollEvents"</code>, <code>"PopupEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
+        <a href="/zh-CN/docs/DOM/event.initMouseEvent">event.initMouseEvent</a>
       </td>
     </tr>
     <tr>
       <td><code>"PopupBlockedEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initPopupBlockedEvent"
+        <a href="/zh-CN/docs/DOM/event.initPopupBlockedEvent"
           >event.initPopupBlockedEvent</a
         >
       </td>
@@ -207,7 +208,7 @@ _To-do: 添加事件名称到下表中。_
     <tr>
       <td><code>"XULCommandEvent"</code>, <code>"XULCommandEvents"</code></td>
       <td>
-        <a href="/en-US/docs/DOM/event.initCommandEvent"
+        <a href="/zh-CN/docs/DOM/event.initCommandEvent"
           >event.initCommandEvent</a
         >
       </td>
@@ -216,7 +217,7 @@ _To-do: 添加事件名称到下表中。_
       <td>Progress Events</td>
       <td><code>"ProgressEvent"</code></td>
       <td>
-        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline("22.0")}}{{non-standard_inline()}}
+        {{domxref("ProgressEvent.initProgressEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -226,7 +227,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitAnimationEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("AnimationEvent.initAnimationEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
     <tr>
@@ -236,7 +237,7 @@ _To-do: 添加事件名称到下表中。_
         <code>"WebKitTransitionEvent"</code> for WebKit/Blink-based browsers)
       </td>
       <td>
-        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline("23.0")}}{{non-standard_inline()}}
+        {{domxref("TransitionEvent.initTransitionEvent()")}}{{deprecated_inline}}{{non-standard_inline()}}
       </td>
     </tr>
   </tbody>

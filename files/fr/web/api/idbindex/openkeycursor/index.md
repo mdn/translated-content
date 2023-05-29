@@ -10,6 +10,7 @@ tags:
   - openKeyCursor
 translation_of: Web/API/IDBIndex/openKeyCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`openKeyCursor()`** de {{domxref("IDBIndex")}} renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, crée un curseur sur l'intervalle de clé passé en argument pour l'index courant.
@@ -119,7 +120,7 @@ function displayDataByIndex() {
 };
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/to-do-notifications/) ([exemple](https://mdn.github.io/to-do-notifications/)).
+> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 

@@ -2,6 +2,7 @@
 title: 加算代入 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 加算代入演算子 (`+=`) は、右オペランドの値を変数に加算し、結果を変数に代入します。2 つのオペランドの型が加算代入演算子の動作を決定します。加算もしくは連結が可能です。

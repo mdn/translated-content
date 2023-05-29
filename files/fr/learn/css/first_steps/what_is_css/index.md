@@ -4,6 +4,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **[CSS](/fr/docs/Glossary/CSS)** (_Cascading Style Sheets_) permet de créer des pages web à l'apparence soignée. Cet article vous propose de lever le voile en expliquant ce qu'est CSS ; un exemple simple en présentera la syntaxe, puis quelques termes clés du langage seront introduits.
@@ -89,7 +90,7 @@ On retient facilement certaines valeurs, d'autres sont plus difficiles à mémor
 
 ## Modules CSS
 
-L'ensemble des fonctionnalités CSS est si important que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module *[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)*, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
+Il y a beaucoup de choses qu'on peut mettre en forme en utilisant CSS. C'est pour ça que le langage et ses spécifications ont été découpés en _modules_. En naviguant dans le site MDN vous croiserez ces modules&nbsp;: quand des pages de documentation sont regroupées, c'est la plupart du temps qu'elles réfèrent à un même module. Par exemple, jetez un œil à la référence MDN pour le module *[Backgrounds and Borders](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders)*, vous y trouverez ce pour quoi il a été conçu, les différentes propriétés et fonctionnalités qu'il regroupe. Vous trouverez aussi des liens vers la spécification CSS qui définit cette technologie (voir plus bas).
 
 À ce stade, inutile de se préoccuper de la structure de CSS (même s'il est parfois plus simple de trouver une information quand on a compris qu'une propriété est reliée à une famille d'autres propriétés au sein d'un même module de spécification).
 
@@ -113,18 +114,10 @@ Nous étudierons ce point plus en détail dans l'article sur [le fonctionnement 
 
 Voici, par exemple, le tableau de compatibilité pour la propriété [`font-family`](/fr/docs/Web/CSS/font-family).
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}
 
 ## Où continuer
 
 Maintenant que vous avez compris ce qu'est CSS, vous pourrez commencer à écrire vos premières règles de style dans la leçon [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started).
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
-
-## Dans ce module
-
-1. [Qu'est-ce que CSS&nbsp;?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS, comment ça marche&nbsp;?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleDateString()`** devuelve una cadena con una representación sensible al idioma de la parte de la fecha especificada en la zona horaria del agente de usuario.

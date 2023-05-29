@@ -4,6 +4,7 @@ slug: Web/CSS/mask-position
 translation_of: Web/CSS/mask-position
 browser-compat: css.properties.mask-position
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-position`** indique la position initiale pour chaque image de masque utilisée. Cette position est relative à l'origine définie via la propriété [`mask-origin`](/fr/docs/Web/CSS/mask-origin).

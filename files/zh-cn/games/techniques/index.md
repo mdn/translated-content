@@ -2,6 +2,7 @@
 title: Techniques for game development
 slug: Games/Techniques
 ---
+
 {{GamesSidebar}}
 
 这个页面为想要使用开放的网页技术来开发游戏的人列举出了必要的核心技术。

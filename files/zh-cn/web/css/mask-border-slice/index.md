@@ -2,6 +2,7 @@
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 ---
+
 {{CSSRef}}
 
 的[CSS](/zh-CN/docs/Web/CSS)属性除以{{cssxref("掩模边界源")}}成区域的图像集合。这些区域用于形成元素的[遮罩边框](/zh-CN/docs/Web/CSS/mask-border)的组成部分。**`mask-border-slice`**
@@ -52,7 +53,7 @@ mask-border-slice: unset;
 
 切片过程总共创建了九个区域：四个角，四个边缘和一个中间区域。四个切片线，从其各自的侧面设置了给定的距离，以控制区域的大小。
 
-[![由border-image或border-image-slice属性定义的九个区域](/files/3814/border-image-slice.png)](/files/3814/border-image-slice.png)
+[![由 border-image 或 border-image-slice 属性定义的九个区域](/files/3814/border-image-slice.png)](/files/3814/border-image-slice.png)
 
 上图说明了每个区域的位置。
 
@@ -112,6 +113,6 @@ mask-border-slice: 30 fill;
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [1 到 4 值语法的图解说明](/zh-CN/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases)

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 original_slug: Web/JavaScript/Reference/Erreurs/Reserved_identifier
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -2,6 +2,7 @@
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
 ---
+
 {{ ApiRef("DOM") }}
 
 指定されたノードのスコープで定義を尊重する名前空間を解決する `XPathNSResolver` を生成します。
@@ -30,9 +31,7 @@ nsResolver = document.createNSResolver(node);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM3 XPath', 'xpath.html#XPathEvaluator-createNSResolver', 'document.createNSResolver')}} | {{Spec2('DOM3 XPath')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

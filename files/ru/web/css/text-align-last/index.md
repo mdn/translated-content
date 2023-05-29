@@ -3,6 +3,7 @@ title: text-align-last
 slug: Web/CSS/text-align-last
 translation_of: Web/CSS/text-align-last
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Кратко
@@ -15,15 +16,17 @@ translation_of: Web/CSS/text-align-last
 
 [Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("text-align-last")}}
 
-    text-align-last: auto
-    text-align-last: start
-    text-align-last: end
-    text-align-last: left
-    text-align-last: right
-    text-align-last: center
-    text-align-last: justify
+```css
+text-align-last: auto
+text-align-last: start
+text-align-last: end
+text-align-last: left
+text-align-last: right
+text-align-last: center
+text-align-last: justify
 
-    text-align-last: inherit
+text-align-last: inherit
+```
 
 ### Значения
 

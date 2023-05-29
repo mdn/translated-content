@@ -3,6 +3,7 @@ title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在上、右、下、左设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
@@ -15,15 +16,15 @@ original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
       <th scope="row">先决条件：</th>
       <td>
         计算机基础知识，基本软件（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >basic software installed</a
         >），文件管理的基本知识（参见<a
-          href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >），HTML 基础（HTML 学习<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >）以及 CSS 基础（学习<a href="/en-US/docs/Learn/CSS/First_steps"
+        >）以及 CSS 基础（学习<a href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
         >）。
       </td>
@@ -134,24 +135,3 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 在下一部分，我们将会看一下 CSS 中的溢出。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

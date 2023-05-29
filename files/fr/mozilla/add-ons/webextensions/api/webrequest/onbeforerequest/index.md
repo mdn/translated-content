@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
+
 {{AddonSidebar()}}
 
 Cet événement est déclenché lorsqu'une demande est sur le point d'être faite et avant que les en-têtes ne soient disponibles. C'est un bon endroit pour écouter si vous voulez annuler ou rediriger la demande.
@@ -24,9 +25,9 @@ Pour annuler ou rediriger la requête, incluez d'abord `"blocking"` dans l'argum
 
 Si une extension veut rediriger une URL publique (par exemple HTTPS) ver une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 
-Lorsque plusieurs gestionnaires de blocage modifient une requête, une seule série de modifications prend effet. Les redirections et les annulations ont la même priorité. Ainsi, si vous avez annulé une requête, vous pouvez voir une autre requête avec la même  `requestId` à nouveau si un autre gestionnaire de blocage a redirigé la requête.
+Lorsque plusieurs gestionnaires de blocage modifient une requête, une seule série de modifications prend effet. Les redirections et les annulations ont la même priorité. Ainsi, si vous avez annulé une requête, vous pouvez voir une autre requête avec la même `requestId` à nouveau si un autre gestionnaire de blocage a redirigé la requête.
 
-A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une  [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
 Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
 
@@ -62,7 +63,7 @@ Les événements ont trois fonctions :
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
 
-    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés  `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+    Les retours : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"`est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir soit son `annulation`, soit ses propriétés `redirectUrl`. A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`,l'auditeur peut renvoyer une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
@@ -152,9 +153,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onBeforeRequest", 10)}}
+{{Compat}}
 
 ### Ordre de résolution DNS lorsque BlockingResponse est utilisé
 
@@ -162,7 +163,7 @@ En ce qui concerne la résolution DNS lorsque BlockingResponse est utilisé avec
 
 ## Exemples
 
-Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle  [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
+Ce code enregistre l'URL de chaque ressource demandée qui correspond au modèle [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#<all_urls>) :
 
 ```js
 function logURL(requestDetails) {
@@ -259,7 +260,8 @@ browser.webRequest.onBeforeRequest.addListener(
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -286,4 +288,4 @@ browser.webRequest.onBeforeRequest.addListener(
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

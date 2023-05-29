@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 l10n:
   sourceCommit: 8ea72d18cda0ced287d9955621061e20a99bb003
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 ウェブサイトは、テキストコンテンツ、コード、スタイルシート、メディアコンテンツなど、多くのファイルで構成されています。ウェブサイトを構築するときは、これらのファイルをローカルコンピューター上の適切な構造に組み立て、互いに呼び出すことができるようにして、最終的に[サーバーにアップロード](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)する前に、すべてのコンテンツを正しいものにする必要があります。「ファイルの扱い」では、ウェブサイトに適切なファイル構造を設定できるように、注意すべきいくつかの問題について説明します。
@@ -33,7 +34,7 @@ l10n:
 3. **`styles` フォルダー**: このフォルダーには、コンテンツのスタイルを設定するための CSS コード（例えばテキストと背景色の設定など）を入れます。 `styles` というフォルダーを `test-site` のフォルダーの中に作成してください。
 4. **`scripts` フォルダー**: このフォルダーには、サイトに対話機能を追加するために使用されるすべての JavaScript コード（クリックされたときにデータを読み込むボタンなど）が含まれます。 `scripts` というフォルダーを `test-site` のフォルダーの中に作成します。
 
-> **Note:** Windows では、既定で有効になっている**既知のファイルの種類の拡張子を表示しない**というオプションがあるため、ファイル名の表示に問題が発生することがあります。一般に、 Windows エクスプローラーで **\[フォルダーオプション...]** オプションを選択し、**\[登録されている拡張子は表示しない]** チェックボックスをオフにし、 **\[OK]** をクリックすることで、これをオフにすることができます。お使いの Windows のバージョンに関する詳細な情報については、ウェブで検索してください。
+> **メモ:** Windows では、既定で有効になっている**既知のファイルの種類の拡張子を表示しない**というオプションがあるため、ファイル名の表示に問題が発生することがあります。一般に、 Windows エクスプローラーで **\[フォルダーオプション...]** オプションを選択し、**\[登録されている拡張子は表示しない]** チェックボックスをオフにし、 **\[OK]** をクリックすることで、これをオフにすることができます。お使いの Windows のバージョンに関する詳細な情報については、ウェブで検索してください。
 
 ## ファイルパス
 
@@ -71,7 +72,7 @@ l10n:
 
 今のところ、これが知る必要があるすべてです。
 
-> **Note:** Windows のファイルシステムでは、スラッシュ (/) ではなくバックスラッシュまたは￥記号を使用します（例 : `C:\Windows`）。これは HTML では使用できません。Windows でウェブサイトを開発している場合でも、コード内ではスラッシュを使用する必要があります。
+> **メモ:** Windows のファイルシステムでは、スラッシュ (/) ではなくバックスラッシュまたは￥記号を使用します（例 : `C:\Windows`）。これは HTML では使用できません。Windows でウェブサイトを開発している場合でも、コード内ではスラッシュを使用する必要があります。
 
 ## 他にするべきこと
 
@@ -80,14 +81,3 @@ l10n:
 ![macOS X の finder におけるファイル構造。images フォルダーに画像が入っており、scripts と styles フォルダーは空で、あと index.html がある](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

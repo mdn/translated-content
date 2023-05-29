@@ -3,6 +3,7 @@ title: 测试你的技能：面向对象的 Javascript
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 original_slug: Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript
 ---
+
 {{learnsidebar}}这个测试的目的是为了评估你是否已经理解了我们的[适合初学者的 JavaScript 面向对象](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)，[对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)，和 [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)文章。
 
 > **备注：** 你可以尝试在下方的交互编辑器，但是若你下载源码或是使用在线工具例如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或 [Glitch](https://glitch.com/) 来进行这些项目的话，会更有帮助。
@@ -25,7 +26,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs1.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs1-download.html) to work in your own editor or in an online editor.
 
 ## OOJS 2
 
@@ -37,7 +38,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs2.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs2-download.html) to work in your own editor or in an online editor.
 
 ## OOJS 3
 
@@ -51,7 +52,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/oojs/oojs3.html", '100%', 400)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/oojs/oojs3-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/javascript/oojs/tasks/oojs/oojs3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

@@ -2,6 +2,7 @@
 title: Number.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回指定 {{jsxref("Number")}} 对象的字符串表示形式。
@@ -34,7 +35,7 @@ numObj.toString([radix])
 
 进行数字到字符串的转换时，建议**用小括号将要转换的目标括起来**，防止出错。
 
-## 例子
+## 示例
 
 ```js
 var count = 10;

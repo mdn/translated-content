@@ -1,14 +1,6 @@
 ---
 title: WebSocket을 이용하여 클라이언트 애플리케이션 작성하기
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - 가이드
-  - 네트워킹
-  - 예제
-  - 웹소켓
-  - 웹소켓API
-  - 클라이언트
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
 WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어 주는 기술입니다. 일반적인 웹소켓 클라이언트는 사용자의 브라우저일 것이지만, 그렇다고 해서 이 프로토콜이 플랫폼에 종속적이지는 않습니다.
@@ -44,7 +36,7 @@ WebSocket WebSocket(
 
 만약 연결 시도 중 에러가 발생하면, 먼저 "error"란 이름의 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onerror` 핸들러가 실행됩니다. 그 후에 연결이 종료되는 이유를 가리키는 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onclose` 핸들러가 실행됩니다.
 
-Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4")에 정의되어 있는 연결 종료 코드를 받게 됩니다.
+Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4)에 정의되어 있는 연결 종료 코드를 받게 됩니다.
 
 ### 예제
 
@@ -172,8 +164,6 @@ exampleSocket.onmessage = function(event) {
 ### Text data format
 
 웹소켓을 통해 전달되는 텍스트들은 UTF-8 포멧을 가집니다.
-
-Gecko 9.0 {{ geckoRelease("9.0") }} 먼저 버전들은 유효한 UTF-8 텍스트가 아닌 문자가 들어올 경우 연결이 종료되었습니다. 지금은 이 값들을 정상적으로 허용합니다.
 
 ## 연결을 종료하기
 

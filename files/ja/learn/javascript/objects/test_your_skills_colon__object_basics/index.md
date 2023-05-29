@@ -2,15 +2,16 @@
 title: 'スキルテスト: オブジェクトの基本'
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。
 
-> **Note:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
+> **メモ:** 以下のインタラクティブなエディターでソリューションを試すこともできますが、コードをダウンロードし、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/)や[Glitch](https://glitch.com/)のようなオンラインツールを使用してタスクを実行すると役立つ場合があります。
 >
 > 行き詰まった場合は、助けを求めてください — このページの下部にある評価またはさらなる支援セクションを参照してください。
 
-> **Note:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
+> **メモ:** 以下の例では、コードにエラーがある場合、ページの結果パネルに出力され、答えを見つけ出すのに役立ちます（ダウンロード可能なバージョンの場合は、ブラウザーの JavaScript コンソールに）
 
 ## オブジェクトの基本 1
 
@@ -24,7 +25,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics1.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## オブジェクトの基本 2
 
@@ -43,13 +44,13 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 `albums` 配列には、少なくとも 2 つのアルバムを含めること。
 
-​ これが終わったら、変数`bandInfo`に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。
+これが終わったら、変数`bandInfo`に、名前、国籍、活動年数、スタイル、最初のアルバムのタイトルと発売日などの少しの詳細を書き込みます。
 
 以下のライブコードを更新して、完成した例を再現してみてください。
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics2.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## オブジェクトの基本 3
 
@@ -65,7 +66,7 @@ slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/tasks/object-basics/object-basics3.html", '100%', 400)}}
 
-> **Note:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
+> **メモ:** [このタスクの開始点をダウンロード](https://github.com/mdn/learning-area/tree/master/javascript/oojs/tasks/object-basics/object-basics1-download.html)して、お好きなエディターまたはオンライン・エディターで作業してください。
 
 ## まとめとヘルプ
 

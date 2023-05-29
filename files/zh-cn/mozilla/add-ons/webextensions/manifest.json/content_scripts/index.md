@@ -2,6 +2,7 @@
 title: content_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -101,7 +102,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       </td>
       <td><code>Array</code></td>
       <td>
-        一个<a href="/en-US/Add-ons/WebExtensions/match_patterns"
+        一个<a href="/zh-CN/Add-ons/WebExtensions/match_patterns"
           >match patterns</a
         >的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a
         >。
@@ -149,7 +150,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       <td><code>Array</code></td>
       <td>
         <p>
-          一个<a href="/en-US/Add-ons/WebExtensions/match_patterns"
+          一个<a href="/zh-CN/Add-ons/WebExtensions/match_patterns"
             >match patterns</a
           >的数组，请参阅下面的<a href="#Matching_URL_patterns">匹配 URL 格式</a
           >。
@@ -195,9 +196,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 “content_scripts”键基于 URL 匹配将 content scripts 注入到网页上：如果网页的 URL 与键中的规则匹配，则将注入脚本。“content_scripts”中有四个属性，可以用于此规则：
 
 - `matches`: 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
-- `exclude_matches:` 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
+- `exclude_matches`: 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
 - `include_globs`: 一个关于[globs](#globs)的数组
-- `exclude_globs:` 一个关于[globs](#globs)的数组
+- `exclude_globs`: 一个关于[globs](#globs)的数组
 
 要匹配这些属性之一，网址必须与其数组中的至少一个项匹配。例如，指定一个属性：
 
@@ -254,4 +255,4 @@ content 脚本有相同的 DOM 视图，并按照它们在数组中出现的顺�
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.content_scripts")}}
+{{Compat}}

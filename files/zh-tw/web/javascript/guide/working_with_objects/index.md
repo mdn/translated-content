@@ -1,7 +1,8 @@
 ---
 title: 物件的使用
-slug: Web/JavaScript/Guide/Working_with_Objects
+slug: Web/JavaScript/Guide/Working_with_objects
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 
 JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or _key_) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.

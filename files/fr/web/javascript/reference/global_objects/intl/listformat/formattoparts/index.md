@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/formatToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.ListFormat.prototype.formatToParts()`** renvoie un tableau ({{jsxref("Array")}}) d'objets représentants les différentes composantes de la chaine de caractères qui est le résultat du formatage de la liste (selon les options de locale et de style indiquées).
@@ -57,13 +58,11 @@ console.table(myListFormat.formatToParts(fruits));
 
 ## Spécifications
 
-| Spécification                                                                                                                                       | État    | Commentaires |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------------ |
-| [`Intl.ListFormat.prototype.formatToParts` proposal](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.prototype.formatToParts) | Stage 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

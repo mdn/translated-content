@@ -1,7 +1,8 @@
 ---
 title: プロパティアクセサー
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット表記法またはブラケット表記法を使用します。
@@ -130,9 +131,7 @@ x = document.forms['form_name'].elements[strFormControl].value
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-property-accessors', 'Property Accessors')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

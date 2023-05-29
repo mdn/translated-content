@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_const_assignment
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_const_assignment
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

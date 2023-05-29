@@ -2,6 +2,7 @@
 title: 411 Length Required
 slug: Web/HTTP/Status/411
 ---
+
 {{HTTPSidebar}}
 
 超文本傳輸協定 (HTTP) **`411 Length Required`** 用戶端錯誤表示伺服器拒絕接收沒有定義 {{HTTPHeader("Content-Length")}} 頭的請求。

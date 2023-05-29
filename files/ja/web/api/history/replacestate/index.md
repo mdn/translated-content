@@ -2,6 +2,7 @@
 title: History.replaceState()
 slug: Web/API/History/replaceState
 ---
+
 {{APIRef("History API")}}
 
 **`History.replaceState()`** メソッドは、現在の履歴を編集し、メソッドに引数で渡された状態オブジェクトや URL で置き換えます。このメソッドは、ユーザーのアクションに応じて現在の履歴項目の状態オブジェクトや URL を更新したい場合に特に便利です。

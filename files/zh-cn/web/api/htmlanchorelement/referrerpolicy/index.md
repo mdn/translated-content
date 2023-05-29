@@ -2,9 +2,10 @@
 title: HTMLAnchorElement.referrer
 slug: Web/API/HTMLAnchorElement/referrerPolicy
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
-**`HTMLAnchorElement.referrer`** 属性对应于 HTML 中 {{HTMLElement("a")}} 标签的 {{htmlattrxref("referrer","a")}} 属性，它可以控制用户在点击这个链接时所发出的 HTTP 请求的 Referer 请求头的值。
+**`HTMLAnchorElement.referrer`** 属性对应于 HTML 中 {{HTMLElement("a")}} 标签的 [`referrer`](/zh-CN/docs/Web/HTML/Element/a#referrer) 属性，它可以控制用户在点击这个链接时所发出的 HTTP 请求的 Referer 请求头的值。
 
 ## 语法
 
@@ -38,7 +39,7 @@ div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAnchorElement.referrerPolicy")}}
+{{Compat}}
 
 ## 相关链接
 

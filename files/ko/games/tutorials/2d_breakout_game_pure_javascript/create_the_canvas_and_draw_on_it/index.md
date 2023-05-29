@@ -2,17 +2,9 @@
 title: 캔버스 생성과 그리기
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - 게임
-  - 비기너
-  - 자바스크립트
-  - 캔버스
-  - 튜토리얼
-translation_of: >-
-  Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기")}}

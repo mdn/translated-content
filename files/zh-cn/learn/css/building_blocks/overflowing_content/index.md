@@ -2,6 +2,7 @@
 title: 溢出的内容
 slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 本节课，我们来了解一下 CSS 中另外一个重要的概念——**溢出**。溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。
@@ -19,10 +20,10 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识，HTML 基础（学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），对 CSS 的工作原理有所了解（学习
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>.)
       </td>
     </tr>
     <tr>
@@ -103,24 +104,3 @@ CSS 中有所谓**块级排版上下文**（Block Formatting Context，BFC）**�
 这节短短的课已经介绍了溢出的概念，你现在明白，CSS 会尽力不让溢出的内容不可见，因为这会造成数据损失。你已经发现，你可以控制住潜在的溢出，同样，你也应该测试你的作品，确保你不会一下子就弄出令人困扰的溢出。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
-
-## 模块目录
-
-1. [层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [标签，类，ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [伪类和伪元素](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景与边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [处理不同文字方向的文本](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [在 CSS 中调整大小](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [图像、媒体和表单元素](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [组织 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Organizing)

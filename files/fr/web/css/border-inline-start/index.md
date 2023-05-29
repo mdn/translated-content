@@ -4,6 +4,7 @@ slug: Web/CSS/border-inline-start
 translation_of: Web/CSS/border-inline-start
 browser-compat: css.properties.border-inline-start
 ---
+
 {{CSSRef}}
 
 La propriété **`border-inline-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans le sens de lecture.

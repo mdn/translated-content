@@ -2,6 +2,7 @@
 title: PositionError
 slug: Web/API/GeolocationPositionError
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`PositionError`** 介面表示使用定位設備時發生錯誤的原因。
@@ -33,7 +34,7 @@ _`PositionError` 介面沒有繼承任何屬性_。
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPositionError")}}
+{{Compat}}
 
 ## 請參考
 

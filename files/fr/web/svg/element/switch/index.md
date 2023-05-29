@@ -7,6 +7,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/switch
 ---
+
 {{SVGRef}}
 
 L'élément `switch` évalue les attributs {{ SVGAttr("requiredFeatures") }}, {{ SVGAttr("requiredExtensions") }} et {{ SVGAttr("systemLanguage") }} de ses éléments enfants directs, dans l'ordre, puis affiche le premier élément pour lequel les attributs renvoient `true`. Tous les autres seront ignorés et donc non affichés. Si l'élément enfant est un élément conteneur tel que {{ SVGElement("g") }}, alors l'intégralité du contenu de cet enfant est soit traité/rendu soit ignoré/non rendu.

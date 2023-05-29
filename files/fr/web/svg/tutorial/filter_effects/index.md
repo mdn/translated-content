@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Filter_effects
 original_slug: Web/SVG/Tutoriel/filtres
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Contenu_embarque_SVG", "Web/SVG/Tutoriel/polices_SVG") }}
 
 Dans certaines situations, les formes de base n'offrent pas la flexibilité nécessaire pour obtenir un certain effet. Par exemple, les ombres portées ne peuvent raisonnablement pas être crées avec des gradients. Les filtres sont des mécanismes SVG qui permettent de créer effets plus sophistiqués.

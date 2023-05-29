@@ -1,15 +1,8 @@
 ---
 title: メタプログラミング
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 ECMAScript 2015 から、JavaScript には {{jsxref("Proxy")}} オブジェクトと {{jsxref("Reflect")}} オブジェクトがサポートされました。これらは基本的な言語操作 (例えば、プロパティ参照、代入、列挙、関数呼び出しなど) に割り込み、動作をカスタマイズすることができます。この 2 つのオブジェクトのおかげで、JavaScript でメタレベルのプログラミングが行えます。
@@ -32,7 +25,7 @@ p.a = 1
 console.log(p.a, p.b) // 1, 42
 ```
 
-この `Proxy` オブジェクトは _`target`_ (ここでは空オブジェクト) と _`handler`_ オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
+この `Proxy` オブジェクトは `target` (ここでは空オブジェクト) と `handler` オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
 
 それ以外の例は {{jsxref("Proxy")}} のリファレンスページを参照してください。
 
@@ -426,7 +419,7 @@ Reflect.has(Object, 'assign') // true
 
 ### より優れた `apply` 関数
 
-ES5 では、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
+ES5 では、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75])

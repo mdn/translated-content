@@ -2,6 +2,7 @@
 title: Web Storage API の使用
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 Web Storage API は、ブラウザーがキーと値のペアを安全に保存できる仕組みを提供します。
@@ -18,26 +19,26 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 ```
 
-> **Note:** **注**: Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
+> **メモ:** Web Storage API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されており、これは単純なオブジェクトをキーバリューストアとして使うという[落とし穴](http://www.2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
 
 Web Storage には、以下の 2 種類の仕組みがあります。
 
-- セッションストレージ (**`sessionStorage`**) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) に使用可能です。
+- セッションストレージ (**`sessionStorage`**) は、各オリジン毎に分割された保存領域を管理し、これはページセッションの間 (ブラウザーを開いている間、ページの再読み込みや復元を含む) 使用可能です。
 - ローカルストレージ (**`localStorage`**) も同様ですが、こちらはブラウザーを閉じたり再び開いたりしても持続します。
 
-これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、対応しているブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。同じ生成元に対して `sessionStorage` と `localStorage` は、別の Storage オブジェクトを使用します。これらは別々に制御されて機能します。
+これらの仕組みは {{domxref("Window.sessionStorage")}} および {{domxref("Window.localStorage")}} プロパティ (正確には、対応しているブラウザーは `Window` オブジェクトが `WindowLocalStorage` および `WindowSessionStorage` オブジェクトを実装しており、これらに `localStorage` および `sessionStorage` プロパティがあります) を通して使用でき、いずれかのプロパティを使用すると {{domxref("Storage")}} オブジェクトのインスタンスを生成して、データアイテムの保存、取り出し、削除ができます。同じ生成元に対して `sessionStorage` と `localStorage` は、別の `Storage` オブジェクトを使用します。これらは別々に制御されて機能します。
 
-よって例えば、始めに文書上で `localStorage` を呼び出すと {{domxref("Storage")}} が返ります。その後に文書上で `sessionStorage` を呼び出すと、別の {{domxref("Storage")}} オブジェクトが返ります。どちらも同じ方法で操作することができますが、操作は個別に行われます。
+よって例えば、始めに文書上で `localStorage` を呼び出すと {{domxref("Storage")}} オブジェクトが返ります。その後に文書上で `sessionStorage` を呼び出すと、別の {{domxref("Storage")}} オブジェクトが返ります。どちらも同じ方法で操作することができますが、操作は個別に行われます。
 
 ## localStorage の機能検出
 
 ローカルストレージを利用できるようにするには、まず対応済みであり、現在のブラウザーセッションで利用可能であるかを確かめるべきです。
 
-### 利用可能かどうかのを検証
+### 利用可能かどうかの検証
 
-ローカルストレージに対応しているブラウザーは、 window オブジェクトに localStorage という名称のプロパティを持っています。しかしさまざまな理由で、プロパティが存在すると主張するだけで例外が発生する可能性があります。ローカルストレージが存在していたとしても、さまざまなブラウザーがローカルストレージを無効化する設定を設けていますので、ローカルストレージが利用できる保証はありません。よってブラウザーがローカルストレージに*対応していても*、ページ上のスクリプトでは*利用できる状態ではない*場合があります。
+ローカルストレージに対応しているブラウザーは、 `window` オブジェクトに `localStorage` という名称のプロパティを持っています。しかし、単にプロパティが存在すると仮定してしまうと例外が発生する可能性があります。`localStorage` オブジェクトが存在していたとしても、さまざまなブラウザーがローカルストレージを無効化する設定を設けていますので、ローカルストレージが利用できる保証はありません。よってブラウザーがローカルストレージに*対応していても*、ページ上のスクリプトでは*利用できる状態ではない*場合があります。
 
-例えば Safari はプライベートブラウジングモードでは、容量が 0 で空のローカルストレージを提供しますので、事実上使用できません。逆に、正規の QuotaExceededError が発生した場合、これはストレージ領域を使い切ったことを意味しますが、ストレージは実際に*利用可能*です。機能検出時には、これらのシナリオを考慮に入れるべきです。
+例えば Safari はプライベートブラウジングモードでは、容量が 0 で空のローカルストレージを提供しますので、事実上使用できません。逆に、正規の `QuotaExceededError` が発生した場合、これはストレージ領域を使い切ったことを意味しますが、ストレージは実際に*利用可能*です。機能検出時には、これらのシナリオを考慮に入れるべきです。
 
 ローカルストレージに対応済みかつ使用可能であるかどうかを検出する関数を、以下に示します。
 
@@ -93,7 +94,7 @@ else {
 
 ![](event-output.png)
 
-> **Note:** **メモ**: 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
+> **メモ:** 上記のリンクから実際のページを参照することができます。また、[ソースコードも確認できます](https://github.com/mdn/dom-examples/tree/master/web-storage)。
 
 ### ストレージが存在しているかを確認する
 
@@ -161,7 +162,7 @@ imageForm.onchange = populateStorage;
 
 {{domxref("StorageEvent")}} は、{{domxref("Storage")}} オブジェクトが変更されるたびに発生します (sessionStorage の変更では発生しません) 。これは、変更を行ったページ上では効果がないでしょう。実際は、ストレージを使用するドメイン上の別のページで、ストレージの変更に同期するための手段です。別のドメイン上のページは、前述のストレージオブジェクトにアクセスできません。
 
-イベントページ ([events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js) をご覧ください) には、以下の JavaScript しかありません。
+イベントページ ([events.js](https://github.com/mdn/dom-examples/blob/master/web-storage/event.js) をご覧ください) の JavaScript はこれだけです。
 
 ```js
 window.addEventListener('storage', function(e) {
@@ -184,9 +185,7 @@ window.addEventListener('storage', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                             | 備考 |
-| ---------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#webstorage')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

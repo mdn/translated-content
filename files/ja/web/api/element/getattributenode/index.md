@@ -2,6 +2,7 @@
 title: Element.getAttributeNode()
 slug: Web/API/Element/getAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 この要素の指定された属性を、 `Attr` ノードとして返します。

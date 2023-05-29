@@ -2,6 +2,7 @@
 title: margin-trim
 slug: Web/CSS/margin-trim
 ---
+
 {{CSSRef}}
 
 `margin-trim` プロパティは、包含ブロックがその子のマージンを包含ブロックの縁に隣接する部分で切り取るすることを可能にします。

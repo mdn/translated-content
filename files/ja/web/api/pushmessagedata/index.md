@@ -2,22 +2,23 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-[Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェースは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。
+[Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェイスは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。
 
 [Fetch API](/ja/docs/Web/API/Fetch_API) の同様のメソッドが 1 回しか呼び出せないのと異なり、これらは複数回呼び出せます。
 
 Push API を通して受け取ったメッセージはプッシュサービスによって暗号化されて送信され、`PushMessageData` インターフェースのメソッドで利用可能になる前にブラウザーによって自動的に 復号化されます。
 
-## プロパティ
+## インスタンスプロパティ
 
 なし。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("PushMessageData.arrayBuffer()")}}
-  - : データを {{domxref("ArrayBuffer")}} オブジェクトとして抜き出します。
+  - : データを {{jsxref("ArrayBuffer")}} オブジェクトとして抜き出します。
 - {{domxref("PushMessageData.blob()")}}
   - : データを {{domxref("Blob")}} オブジェクトとして抜き出します。
 - {{domxref("PushMessageData.json()")}}
@@ -40,12 +41,10 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                             | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API', '#pushmessagedata-interface', 'PushMessageData')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushMessageData")}}

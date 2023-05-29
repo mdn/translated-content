@@ -3,6 +3,7 @@ title: 创建、绘制画布
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -38,7 +39,7 @@ HTML 文档的结构是非常简单的，我们的游戏将完全呈现在这个
 </html>
 ```
 
-在 head 标签中我们需要定义字符集（charset），标题（title）和一些基本的样式。在 body 标签中包含 canvas 标签和 javascript 标签，我们将在 javascript 标签中使用 JavaScript 代码来控制 canvas 标签中的内容展现。在 canvas 标签有一个名为 myCanvas 的 Id，根据这个属性我们可以很容易的获取到这个元素并设置他的宽为 480 像素，高为 320 像素。 之后我们会将所有的 JavaScript 代码全部写到 javascript 标签中（\<script>...\</script>）。
+在 head 标签中我们需要定义字符集（charset），标题（title）和一些基本的样式。在 body 标签中包含 canvas 标签和 javascript 标签，我们将在 javascript 标签中使用 JavaScript 代码来控制 canvas 标签中的内容展现。在 canvas 标签有一个名为 myCanvas 的 Id，根据这个属性我们可以很容易的获取到这个元素并设置他的宽为 480 像素，高为 320 像素。之后我们会将所有的 JavaScript 代码全部写到 javascript 标签中（\<script>...\</script>）。
 
 ## 画布的基本属性
 
@@ -75,7 +76,7 @@ ctx.closePath();
 
 正如你所见，我们再一次使用了 ctx.beginPath() 方法 和 ctx.closePath() 方法；在这两个方法中间，最重要的部分是 ctx.arc() 方法。它需要六个参数：
 
-- `圆心的 x` 和 `y` 轴坐标
+- 圆心的 `x` 和 `y` 轴坐标
 - 半径
 - 起始角度，结束角度。以弧度计（弧的圆形的三点钟位置是 0 度）
 - 规定应该逆时针还是顺时针绘图。false = 顺时针，true = 逆时针。（可选）

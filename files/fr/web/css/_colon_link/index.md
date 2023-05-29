@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:link
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:link`** permet de sélectionner les liens à l'intérieur d'éléments. Elle sélectionnera tout lien n'ayant pas été visité, même ceux qui seraient déjà mis en forme via des sélecteurs utilisant d'autres pseudo-classes comme {{cssxref(":hover")}}, {{cssxref(":active")}} ou {{cssxref(":visited")}}.
@@ -62,17 +63,11 @@ a:link {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                                                                                    |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-link', ':link')}} | {{Spec2('HTML WHATWG')}}     |                                                                                                                 |
-| {{SpecName('CSS4 Selectors', '#link', ':link')}}                             | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                                            |
-| {{SpecName('CSS3 Selectors', '#link', ':link')}}                             | {{Spec2('CSS3 Selectors')}} | Aucune modification.                                                                                            |
-| {{SpecName('CSS2.1', 'selector.html#link-pseudo-classes', ':link')}} | {{Spec2('CSS2.1')}}             | Levée de la restriction limitant l'utilisation de cette pseudo-classe à l'élément {{HTMLElement("a")}}. |
-| {{SpecName('CSS1', '#anchor-pseudo-classes', ':link')}}                     | {{Spec2('CSS1')}}             | Définition initiale.                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.link")}}
+{{Compat}}
 
 ## Voir aussi
 

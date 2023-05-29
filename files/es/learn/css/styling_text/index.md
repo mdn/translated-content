@@ -1,25 +1,8 @@
 ---
 title: Estilo de texto
 slug: Learn/CSS/Styling_text
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Fonts
-  - Landing
-  - Links
-  - Module
-  - NeedsTranslation
-  - Text
-  - TopicStub
-  - font
-  - letter
-  - line
-  - lists
-  - shadow
-  - web fonts
-translation_of: Learn/CSS/Styling_text
 ---
+
 {{LearnSidebar}}
 
 Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS para concentrarse es estilizar texto — una de las cosas más comunes que hará con CSS. Aquí observamos los fundamentos para estilizar texto, incluyendo la configuración de fuente, negrita, cursiva, linea y espacios entre letras, sombras paralelas y otras funciones de texto. Completamos el módulo observando la aplicación de fuentes personalizadas en su página, y el diseño de listas y enlaces.
@@ -28,7 +11,7 @@ Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS 
 
 Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Nota:** Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -47,5 +30,5 @@ Este módulo contiene los siguientes artículos, los cuales le enseñarán todos
 
 Las siguientes evaluaciones pondrán a prueba su comprensión de las técnicas del diseño de texto cubiertas en las guías anteriores.
 
-- [Escribiendo una página de inicio para la comunidad de la escuela](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribiendo una página de inicio para la comunidad de la escuela](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : En esta evaluación, pondremos a prueba su comprensión del estilo del texto haciendo que redacte el texto de la página principal de la escuela comunitaria.

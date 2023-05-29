@@ -2,7 +2,8 @@
 title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
@@ -16,21 +17,21 @@ slug: Web/HTML/Element/video
 
 他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
-    > **Note:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
+    > **メモ:** 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
     一部のブラウザー (Chrome 70.0 など) では、 `muted` 属性がないと autoplay は動作しません。
 
-- {{htmlattrdef("autopictureinpicture")}} {{experimental_inline}}
+- `autopictureinpicture` {{experimental_inline}}
   - : 論理属性で、 `true` であれば、ユーザーがこの文書と他の文書やアプリケーションとの間を行き来したときに、自動的にピクチャインピクチャモードに切り替わるようにすることを示します。
-- {{htmlattrdef("controls")}}
+- `controls`
   - : この属性が指定された場合、再生、音量、シーク、ポーズの各機能を制御するコントロールを表示します。
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}
+- `controlslist` {{experimental_inline}}
 
   - : [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性が指定されていると、ブラウザー自身のコントロールのセットを表示する場合（例えば `controls` 属性が設定されている場合）、メディア要素に表示するコントロールを選択するのを補助します。
 
@@ -38,7 +39,7 @@ slug: Web/HTML/Element/video
 
     [`disablepictureinpicture`](#attr-disablepictureinpicture) 属性を使用すると、ピクチャインピクチャモード（およびコントロール）を無効にすることができます。
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : 列挙型の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
 
@@ -49,25 +50,25 @@ slug: Web/HTML/Element/video
 
     この属性が存在しない場合、リソースは CORS なしのリクエストで（すなわち `Origin:` HTTP ヘッダーを送信せずに）取得され、 {{HTMLElement('canvas')}} 要素における汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
-- {{htmlattrdef("disablepictureinpicture")}} {{experimental_inline}}
+- `disablepictureinpicture` {{experimental_inline}}
   - : ブラウザーにピクチャインピクチャのコンテキストメニューを表示させないようにしたり、場合によっては自動的にピクチャインピクチャを要求しないようにします。
-- {{htmlattrdef("disableremoteplayback")}} {{experimental_inline}}
+- `disableremoteplayback` {{experimental_inline}}
 
   - : 論理属性で、有線（HDMI, DVI など）や無線（Miracast, Chromecast, DLNA, AirPlay など）を使用して接続された端末のリモート再生機能を無効にするために使用されます。
 
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 動画の表示領域の高さを、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します（絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）。
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 論理型の属性です。指定された場合、ブラウザーは動画の末尾に達すると、自動的に先頭に戻ります。
-- {{htmlattrdef("muted")}}
+- `muted`
   - : 論理型の属性で、動画に含まれる音声の既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` であり、動画再生時に音声も再生することを表します。
-- {{htmlattrdef("playsinline")}}
+- `playsinline`
   - : 論理属性で、動画を「インライン」で再生する、すなわち要素の再生領域内で再生するかを指定します。この属性がないことが、動画を常に全画面で再生するという意味*ではない*ことに注意してください。
-- {{htmlattrdef("poster")}}
+- `poster`
   - : 動画のダウンロード中に表示される画像の URL です。この属性が指定されない場合、最初のフレームが利用可能になるまで何も表示されず、その後、最初のフレームをポスターフレームとして表示します。
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : 列挙型の属性で、動画が再生される前に、どのコンテンツを読み込むとユーザーに最高の使い勝手をもたらすかについての作者の考えを、ブラウザーに対するヒントとしてを提供するためのものです。以下の値のうちひとつを持つことができます。
 
@@ -78,14 +79,14 @@ slug: Web/HTML/Element/video
 
     既定値はブラウザーごとに異なります。仕様書では `metadata` を設定するよう助言しています。
 
-    > **Note:**
+    > **メモ:**
     >
     > - `autoplay` 属性は `preload` より優先します。`autoplay` を指定すると、言うまでもなくブラウザーは動画を再生するためにダウンロードを始めなければなりません。
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
 
-- {{htmlattrdef("src")}}
+- `src`
   - : 埋め込む動画への URL を指定します。この属性は省略可能です。埋め込む動画の指定には、video 要素のブロック内で {{HTMLElement("source")}} を使用することもできます。
-- {{htmlattrdef("width")}}
+- `width`
   - : 動画の表示領域の幅を、 [CSS ピクセル値](https://drafts.csswg.org/css-values/#px)で指定します。 (絶対的な値に限ります。[パーセント値は不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))。
 
 ## イベント
@@ -435,14 +436,14 @@ AddType video/webm .webm
       <td>
         <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >, 記述コンテンツ, 埋め込みコンテンツ。 {{htmlattrxref("controls", "video")}} 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
+        >, 記述コンテンツ, 埋め込みコンテンツ。 <a href="/ja/docs/Web/HTML/Element/video#controls"><code>controls</code></a> 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
         <p>
-           要素が {{htmlattrxref("src", "video")}} 属性を持つ場合: 0 個以上の {{HTMLElement("track")}} 要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。
+           要素が <a href="/ja/docs/Web/HTML/Element/video#src"><code>src</code></a> 属性を持つ場合: 0 個以上の {{HTMLElement("track")}} 要素とそれに続く、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。
         </p>
         <p>
           その他の場合: 0 個以上の {{HTMLElement("source")}} 要素、0 個以上の {{HTMLElement("track")}} 要素、メディア要素を含まない透過的コンテンツ。すなわち {{HTMLElement("audio")}} 要素や {{HTMLElement("video")}} 要素を子要素として配置してはなりません。
@@ -467,7 +468,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td>{{ARIARole("application")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

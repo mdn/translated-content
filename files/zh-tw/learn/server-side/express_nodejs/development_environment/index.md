@@ -2,6 +2,7 @@
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 現在你已經了解 Express 的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和 Mac OS X 上的 Node/Express 開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發 Express 應用的入門需知。
@@ -67,8 +68,8 @@ Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代
 
 1. 下載需要的安裝檔：
 
-    1. 開啟 <https://nodejs.org/en/>
-    2. 對於大部分的使用者來說，直接下載 LTS 版本
+   1. 開啟 <https://nodejs.org/en/>
+   2. 對於大部分的使用者來說，直接下載 LTS 版本
 
 2. 下載完成後雙擊安裝檔，並照著安裝流程繼續。
 
@@ -103,33 +104,34 @@ NPM 應該會隨著 Node 一起安裝，可以用相同的方法進行測試:
 
 1. 複製以下的文字到名為**hellonode.js**的檔案中，目前我們只用到 Node 而已。
 
-    ```js
-    //載入HTTP模組
-    var http = require("http");
+   ```js
+   //載入HTTP模組
+   var http = require("http");
 
-    //創建HTTP 伺服器並監聽8000埠
-    http.createServer(function (request, response) {
-
+   //創建HTTP 伺服器並監聽8000埠
+   http
+     .createServer(function (request, response) {
        // Set the response HTTP header with HTTP status and Content type
-       response.writeHead(200, {'Content-Type': 'text/plain'});
+       response.writeHead(200, { "Content-Type": "text/plain" });
 
        // Send the response body "Hello World"
-       response.end('Hello World\n');
-    }).listen(8000);
+       response.end("Hello World\n");
+     })
+     .listen(8000);
 
-    // Print URL for accessing server
-    console.log('Server running at http://127.0.0.1:8000/')
-    ```
+   // Print URL for accessing server
+   console.log("Server running at http://127.0.0.1:8000/");
+   ```
 
-    這段程式載入『http』模組，並創建一個伺服器 (`createServer()`，並在 8000 埠上監聽 HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
+   這段程式載入『http』模組，並創建一個伺服器 (`createServer()`，並在 8000 埠上監聽 HTTP requests。 The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this simply returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
 2. > **備註：** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
 3. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
-    ```bash
-    >node hellonode.js
-    Server running at http://127.0.0.1:8000/
-    ```
+   ```bash
+   >node hellonode.js
+   Server running at http://127.0.0.1:8000/
+   ```
 
 4. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World".
 
@@ -149,83 +151,83 @@ The following steps show how you can use NPM to download a package, save it into
 
 1. First create a directory for your new application and navigate into it:
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted, ending with the license.
+   If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted, ending with the license.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. Now install the _Express_ library in the **myapp** directory. The package will automatically be saved to the dependencies list in your **package.json** file.
 
-    ```bash
-    npm install express
-    ```
+   ```bash
+   npm install express
+   ```
 
-    The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
+   The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.16.2"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.16.2"
+     }
+   }
+   ```
 
 4. To use the library you call the `require()` function as shown below.
 
-    ```plain
-    var express = require('express')
-    var app = express()
+   ```js
+   var express = require("express");
+   var app = express();
 
-    app.get('/', function (req, res) {
-      res.send('Hello World!')
-    })
+   app.get("/", function (req, res) {
+     res.send("Hello World!");
+   });
 
-    app.listen(8000, function () {
-      console.log('Example app listening on port 8000!')
-    })
-    ```
+   app.listen(8000, function () {
+     console.log("Example app listening on port 8000!");
+   });
+   ```
 
-    This code shows a minimal "HelloWorld" Express web application. This imports the "express" module and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
+   This code shows a minimal "HelloWorld" Express web application. This imports the "express" module and uses it to create a server (`app`) that listens for HTTP requests on port 8000 and prints a message to the console explaining what browser URL you can use to test the server. The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
-    Create a file named **index.js** in the root of the "myapp" application directory and give it the contents shown above.
+   Create a file named **index.js** in the root of the "myapp" application directory and give it the contents shown above.
 
 5. You can start the server by calling node with the script in your command prompt:
 
-    ```bash
-    >node index.js
-    Example app listening on port 8000
-    ```
+   ```bash
+   >node index.js
+   Example app listening on port 8000
+   ```
 
 6. Navigate to the URL (<http://127.0.0.1:8000/>). If everything is working, the browser should simply display the string "Hello World!".
 
@@ -367,15 +369,3 @@ We'll talk more about the generated app when we get to the article on generating
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

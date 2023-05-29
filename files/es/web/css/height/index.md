@@ -1,9 +1,8 @@
 ---
 title: height
 slug: Web/CSS/height
-browser-compat: css.properties.height
 l10n:
-  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2eabcebf471d56ef12239e2565f26d952e8a8cab2e
+  sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2e
 ---
 {{CSSRef}}
 

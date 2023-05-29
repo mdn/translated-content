@@ -3,6 +3,7 @@ title: 414 URI Too Long
 slug: Web/HTTP/Status/414
 translation_of: Web/HTTP/Status/414
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse HTTP **`414 URI Too Long`** indique que l'URI demandée par le client est plus longue que ce que le serveur est disposé à interpréter.
@@ -21,9 +22,11 @@ Il existe quelques rares cas de figure pour lesquels cela peut se produire&nbsp;
 
 ## Spécifications
 
-| Spécification                                                | Titre                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| [RFC 7231, section 6.5.12: 414 URI Too Long](https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12) | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

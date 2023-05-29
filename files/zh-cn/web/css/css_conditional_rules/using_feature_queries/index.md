@@ -1,7 +1,8 @@
 ---
 title: 使用特性查询
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
+
 {{CSSRef}}
 
 **特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
@@ -22,7 +23,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 {{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
 
-若你测试的是某个属性的新值，那么属性 - 值对中值的那一部分就更加关键。`display` 属性就是一个很好的例子。所有的浏览器都支持 `display` 属性，这可以追溯到 CSS1 中的 `display: block` 。 然而 `display: flex` 和 `display: grid` 这些值是新出现的。CSS 属性经常会有额外的新值加入，所以你必须检测属性与值的事实意味着你可以检测那些值的浏览器支持性。（原文：There are often additional values added to properties in CSS, and so the fact that you have to test for property and value means that you can detect support for these values.）
+若你测试的是某个属性的新值，那么属性 - 值对中值的那一部分就更加关键。`display` 属性就是一个很好的例子。所有的浏览器都支持 `display` 属性，这可以追溯到 CSS1 中的 `display: block` 。然而 `display: flex` 和 `display: grid` 这些值是新出现的。CSS 属性经常会有额外的新值加入，所以你必须检测属性与值的事实意味着你可以检测那些值的浏览器支持性。（原文：There are often additional values added to properties in CSS, and so the fact that you have to test for property and value means that you can detect support for these values.）
 
 ## 测试是否缺少支持
 
@@ -67,7 +68,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 `@supports` 规则测试浏览器是否能解析一个或多个属性以及其值，以及是否浏览器是否觉得支持这些属性以及其值。如果浏览器理解这些属性和值，那么它就会给一个肯定的回答。因此，特性查询不能检测浏览器是否**正确地表现**这些属性和值，以及是否没有 bug 存在。
 
-另外，特性查询无法检测*局部实现* （_partial implementations）。一个很好的例子就是_ `gap` 属性。 所有支持 CSS Grid 的浏览器都支持 `gap` 在 CSS Grid 中， 然而只有 Firefox 浏览器支持 Flexbox 中的 `gap`。 若你为了在 Flexbox 中使用 `gap` 属性而测试其浏览器支持，就算它还没有（在 Flexbox 中）实现你也会得到浏览器肯定的回答。
+另外，特性查询无法检测*局部实现* （_partial implementations）。一个很好的例子就是_ `gap` 属性。所有支持 CSS Grid 的浏览器都支持 `gap` 在 CSS Grid 中，然而只有 Firefox 浏览器支持 Flexbox 中的 `gap`。若你为了在 Flexbox 中使用 `gap` 属性而测试其浏览器支持，就算它还没有（在 Flexbox 中）实现你也会得到浏览器肯定的回答。
 
 ## 如何使用特性查询进行渐进式增强
 

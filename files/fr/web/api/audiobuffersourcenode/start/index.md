@@ -3,6 +3,7 @@ title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 translation_of: Web/API/AudioBufferSourceNode/start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode `start()` de l'interface {{ domxref("AudioBufferSourceNode") }} permet de planifier la lecture du buffer audio.

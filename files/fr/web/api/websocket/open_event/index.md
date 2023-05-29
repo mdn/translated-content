@@ -3,6 +3,7 @@ title: 'WebSocket : évènement open'
 slug: Web/API/WebSocket/open_event
 browser-compat: api.WebSocket.open_event
 ---
+
 {{APIRef}}
 
 L'évènement `open` est déclenché lorsqu'une connexion avec une `WebSocket` est ouverte.

@@ -3,11 +3,12 @@ title: テーブルのレイアウトが崩れている
 slug: orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
 original_slug: Web/Compatibility_FAQ/Broken_Table_Layout.html
 ---
+
 ## 概要
 
 テーブルのセル幅に統一性がなく、テーブル全体のレイアウトが崩れます。
 
-![](https://mdn.mozillademos.org/files/9963/0107_1.jpg) ![](https://mdn.mozillademos.org/files/9965/0107_2.jpg)
+![](0107_1.jpg) ![](0107_2.jpg)
 
 左：Firefox 右：他ブラウザ
 

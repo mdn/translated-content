@@ -2,6 +2,7 @@
 title: 疑似クラスと疑似要素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
 次に取り上げるセレクターのセットは、**疑似クラス**と**疑似要素**と呼ばれます。これらは多数あり、多くの場合、それらは非常に特定の目的に役立ちます。それらの使用方法がわかったら、リストを見て、達成しようとしているタスクに有効なものがあるかどうかを確認できます。ここでも、各セレクターに関連する MDN ページは、ブラウザーサポートの説明に役立ちます。
@@ -53,7 +54,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ::疑似要素名
 ```
 
-> **Note:** 一部の初期の疑似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の疑似要素をサポートしています。
+> **メモ:** 一部の初期の疑似要素では、単一のコロン構文が使用されていたため、コードまたは例でこれを見ることがあるでしょう。最新のブラウザーは、後方互換性のためにシングルまたはダブルコロン構文で初期の疑似要素をサポートしています。
 
 たとえば、段落の最初の行を選択する場合は、それを `<span>` 要素にラップして要素セレクターを使用できます。ただし、ラップした単語の数が親要素の幅よりも長いまたは短い場合は、失敗します。1 行にいくつの単語が収まるかわからない傾向があるため（画面の幅やフォントサイズが変わると、単語数が変わるため）、HTML を追加してこれを確実に行うことは不可能です。
 
@@ -135,10 +136,10 @@ CSS からテキストの文字列を挿入することは、実際には Web �
 | {{cssxref(":local-link")}}                 | 現在のドキュメントと同じサイトにあるページを指すリンクに一致します。                                                                                                                                                                                                                         |
 | {{cssxref(":is", ":is()")}}                 | 渡されたセレクターリスト内の任意のセレクターに一致します。                                                                                                                                                                                                                                   |
 | {{cssxref(":not")}}                             | このセレクターに値として渡されるセレクターで一致しないものと一致します。                                                                                                                                                                                                                     |
-| {{cssxref(":nth-​​child")}}             | 兄弟のリストの要素に一致します — 兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 は 1、3、5、7 番目などの要素に一致します。すべてが奇数です）。                                                                                                                                         |
-| {{cssxref(":nth-​​of-type")}}         | 特定のタイプの兄弟（ `<p>` 要素など）のリストの要素に一致します — 兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、その要素のタイプの 1、3、5 、7 番目などに一致します。すべて奇数です。）                                                                                     |
-| {{cssxref(":nth-​​last-child")}}     | 兄弟のリストの要素を末尾から逆に数えて一致させます。兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 はシーケンスの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。）                                                        |
-| {{cssxref(":nth-​​last-of-type")}} | 特定のタイプの兄弟のリスト（ `<p>` 要素など）の要素を最後から逆に数えて一致させます。兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、シーケンス内のそのタイプの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。） |
+| {{cssxref(":nth-child")}}             | 兄弟のリストの要素に一致します — 兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 は 1、3、5、7 番目などの要素に一致します。すべてが奇数です）。                                                                                                                                         |
+| {{cssxref(":nth-of-type")}}         | 特定のタイプの兄弟（ `<p>` 要素など）のリストの要素に一致します — 兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、その要素のタイプの 1、3、5 、7 番目などに一致します。すべて奇数です。）                                                                                     |
+| {{cssxref(":nth-last-child")}}     | 兄弟のリストの要素を末尾から逆に数えて一致させます。兄弟は*an+b*の形式の式で一致します（たとえば、2n + 1 はシーケンスの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。）                                                        |
+| {{cssxref(":nth-last-of-type")}} | 特定のタイプの兄弟のリスト（ `<p>` 要素など）の要素を最後から逆に数えて一致させます。兄弟は*、an+b*という形式の式で一致します（たとえば、2n + 1 は、シーケンス内のそのタイプの最後の要素、次にその 2 つ前の要素、次にその 2 つ前の要素などと一致します。最後から数えてすべての奇数の要素。） |
 | {{cssxref(":only-child")}}                 | 兄弟がない要素に一致します。                                                                                                                                                                                                                                                                 |
 | {{cssxref(":only-of-type")}}                 | 兄弟間でそのタイプの唯一の要素である要素に一致します。                                                                                                                                                                                                                                       |
 | {{cssxref(":optional")}}                     | 不要なフォーム要素に一致します。                                                                                                                                                                                                                                                             |
@@ -171,24 +172,3 @@ CSS からテキストの文字列を挿入することは、実際には Web �
 | {{cssxref("::spelling-error")}} | ブラウザーによってフラグが付けられた、スペルミスを含むドキュメントの一部に一致します。 |
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
-
-## このモジュールでは
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [タイプ、クラス、ID セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [疑似クラスと疑似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [コンビネーター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [異なるテキスト方向の処理](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [あふれるコンテンツ](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS でのアイテムのサイズ変更](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像、メディア、フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [スタイリングテーブル](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

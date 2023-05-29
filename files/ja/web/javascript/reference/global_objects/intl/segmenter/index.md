@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 l10n:
   sourceCommit: 9ce57d5046baf5d25c8eb066e60227f0fbd017cf
 ---
+
 {{JSRef}}
 
 **`Intl.Segmenter`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。

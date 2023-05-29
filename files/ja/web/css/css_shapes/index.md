@@ -1,7 +1,8 @@
 ---
 title: CSS シェイプ
-slug: Web/CSS/CSS_Shapes
+slug: Web/CSS/CSS_shapes
 ---
+
 {{CSSRef}}
 
 **CSS シェイプ**は、 CSS で使用する幾何学的な図形を記述します。[レベル 1 の仕様書](https://drafts.csswg.org/css-shapes/)では、 CSS シェイプは浮動状態の要素に適用されます。仕様書では浮動状態の要素においてシェイプを定義する様々な方法を定義しており、コンテンツの折り返し線が要素ボックスの矩形に従うのではなく、図形に回り込むようになります。
@@ -44,6 +45,4 @@ slug: Web/CSS/CSS_Shapes
 
 ## 仕様書
 
-| 仕様書                     | 状態                    | 備考     |
-| -------------------------- | ----------------------- | -------- |
-| {{SpecName("CSS Shapes")}} | {{Spec2("CSS Shapes")}} | 初回定義 |
+{{Specifications}}

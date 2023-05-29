@@ -1,10 +1,8 @@
 ---
 title: local-name
 slug: Web/XPath/Functions/local-name
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/local-name
 ---
+
 {{ XsltRef() }}
 
 `local-name` 함수는 인수로 준 노드 집합 안 첫 노드의 지역 이름을 나타내는 문자열을 반환합니다.

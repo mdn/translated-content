@@ -2,6 +2,7 @@
 title: 'Element: wheel イベント'
 slug: Web/API/Element/wheel_event
 ---
+
 {{APIRef}}
 
 **`wheel`** イベントは、ユーザーがポインティングデバイス (通常はマウス) のホイールボタンを回転させたときに発行されます。
@@ -31,7 +32,7 @@ slug: Web/API/Element/wheel_event
   </tbody>
 </table>
 
-> **Note:** **注:** `wheel` イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものであり、必ずしも `scroll` イベントを発行するわけではありません。その場合でも、ホイールイベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
+> **メモ:** `wheel` イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものであり、必ずしも `scroll` イベントを発行するわけではありません。その場合でも、ホイールイベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{domxref("Element.scrollLeft", "scrollLeft")}} や {{domxref("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
 
 ## 例
 
@@ -90,9 +91,7 @@ el.addEventListener('wheel', zoom);
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                         | 備考 |
-| ------------------------------------------------------------------------ | ---------------------------- | ---- |
-| {{SpecName('UI Events','#event-type-wheel','wheel')}} | {{Spec2('UI Events')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

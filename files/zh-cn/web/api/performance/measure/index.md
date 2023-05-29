@@ -2,9 +2,10 @@
 title: Performance.measure()
 slug: Web/API/Performance/measure
 ---
+
 {{APIRef("User Timing API")}}
 
-**`measure()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。 被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。
+**`measure()`** 方法在浏览器性能记录缓存中创建了一个名为{{domxref("DOMHighResTimeStamp","时间戳")}}的记录来记录两个特殊标志位（通常称为开始标志和结束标志）。被命名的{{domxref("DOMHighResTimeStamp","时间戳")}}称为一次测量（measure）。
 
 {{AvailableInWorkers}}
 
@@ -26,11 +27,11 @@ performance.measure(name, startMark, endMark);
 ### 参数
 
 - name
-  - : 一个 {{domxref("DOMString")}}， 代表测量的名字。
+  - : 一个 {{domxref("DOMString")}}，代表测量的名字。
 - startMark {{optional_inline}}
-  - : 一个 {{domxref("DOMString")}}， 代表测量的开始标志名字。 May also be the name of a {{domxref("PerformanceTiming")}} property.
+  - : 一个 {{domxref("DOMString")}}，代表测量的开始标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
 - endMark {{optional_inline}}
-  - : 一个{{domxref("DOMString")}}， 代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
+  - : 一个{{domxref("DOMString")}}，代表测量的结束标志名字。May also be the name of a {{domxref("PerformanceTiming")}} property.
 
 ### 返回值
 
@@ -74,4 +75,4 @@ setTimeout(function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.measure")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Navigator.xr
 slug: Web/API/Navigator/xr
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("Navigator")}} インターフェイスまたは {{domxref("WorkerNavigator")}} インターフェイスによって提供される **`xr`** 読み取り専用プロパティは、[WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) へのアクセスに使用できる {{domxref("XRSystem")}} オブジェクトを返します。
@@ -32,9 +33,7 @@ if ("xr" in window.navigator) {
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                     | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebXR","#navigator-xr-attribute","Navigator.xr")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

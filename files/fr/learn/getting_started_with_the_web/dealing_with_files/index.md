@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
 
@@ -79,21 +80,10 @@ Quelques règles générales à propos des chemins de fichier :
 
 Pour le moment, c'est tout ce qu'il y a à savoir.
 
-> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques  (« / ») dans votre code..
+> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques (« / ») dans votre code..
 
 ## Autre chose ?
 
 C'est tout ce qu'il y a à faire pour le moment en ce qui concerne les fichiers. Votre arborescence de fichiers devrait ressembler à cela :
 
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png){{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site", "Apprendre/Commencer_avec_le_web/Les_bases_HTML","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

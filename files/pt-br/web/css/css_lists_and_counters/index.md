@@ -1,15 +1,8 @@
 ---
 title: CSS Lists and Counters
 slug: Web/CSS/CSS_Lists_and_Counters
-tags:
-  - CSS
-  - CSS Lists and Counters
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
+
 {{CSSRef}}
 
 **CSS Lists and Counters** is a module of CSS that defines how lists are layed out, how the list marker can be styled and how authors can create new counters.
@@ -30,17 +23,15 @@ translation_of: Web/CSS/CSS_Lists_and_Counters
 
 - {{cssxref("@counter-style")}}
 
-  - :&#x20;
-
-    - {{cssxref("@counter-style/system","system")}}
-    - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-    - {{cssxref("@counter-style/negative", "negative")}}
-    - {{cssxref("@counter-style/prefix", "prefix")}}
-    - {{cssxref("@counter-style/suffix", "suffix")}}
-    - {{cssxref("@counter-style/range", "range")}}
-    - {{cssxref("@counter-style/pad", "pad")}}
-    - {{cssxref("@counter-style/speak-as", "speak-as")}}
-    - {{cssxref("@counter-style/fallback", "fallback")}}
+  - {{cssxref("@counter-style/system","system")}}
+  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+  - {{cssxref("@counter-style/negative", "negative")}}
+  - {{cssxref("@counter-style/prefix", "prefix")}}
+  - {{cssxref("@counter-style/suffix", "suffix")}}
+  - {{cssxref("@counter-style/range", "range")}}
+  - {{cssxref("@counter-style/pad", "pad")}}
+  - {{cssxref("@counter-style/speak-as", "speak-as")}}
+  - {{cssxref("@counter-style/fallback", "fallback")}}
 
 ## Guides
 

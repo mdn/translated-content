@@ -2,6 +2,7 @@
 title: DataView.prototype.setUint16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 ---
+
 {{JSRef}}
 
 **`setUint16()`** メソッドは、符号なし 16 ビット整数 (unsigned short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
@@ -45,9 +46,7 @@ dataview.getUint16(1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint16', 'DataView.prototype.setUint16')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: <aside>
 slug: Web/HTML/Element/aside
 ---
+
 **HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
 
 {{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
@@ -26,7 +27,7 @@ slug: Web/HTML/Element/aside
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("feed")}}, {{ARIARole("note")}}, {{ARIARole("presentation")}}, {{ARIARole("region")}}, {{ARIARole("search")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -41,7 +42,7 @@ slug: Web/HTML/Element/aside
 
 ## 使用说明
 
-- 不要使用 `<aside>` 元素去尾随括号内的文本 ，因为这种文本被认为是主要流内容的一部分。
+- 不要使用 `<aside>` 元素去尾随括号内的文本，因为这种文本被认为是主要流内容的一部分。
 
 ## 示例
 
@@ -74,4 +75,4 @@ slug: Web/HTML/Element/aside
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [使用 HTML 章节与大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

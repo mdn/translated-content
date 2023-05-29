@@ -1,15 +1,8 @@
 ---
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
-tags:
-  - Audio
-  - HTML5
-  - Media
-  - NeedsTranslation
-  - TopicStub
-  - Video
-translation_of: Web/Guide/Audio_and_video_delivery
 ---
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -302,7 +295,7 @@ window.onload = function() {
 }
 ```
 
-You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
+You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
 
 ## Other tips for audio/video
 
@@ -350,20 +343,20 @@ The time can be specified as a number of seconds (as a floating-point value) or 
 
 A few examples:
 
-- http\://example.com/video.ogv#t=10,20
+- `http://example.com/video.ogv#t=10,20`
   - : Specifies that the video should play the range 10 seconds through 20 seconds.
-- http\://example.com/video.ogv#t=,10.5
+- `http://example.com/video.ogv#t=,10.5`
   - : Specifies that the video should play from the beginning through 10.5 seconds.
-- http\://example.com/video.ogv#t=,02:00:00
+- `http://example.com/video.ogv#t=,02:00:00`
   - : Specifies that the video should play from the beginning through two hours.
-- http\://example.com/video.ogv#t=60
+- `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
-> **참고:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
+> **참고:** The playback range portion of the media element URI specification was added to Gecko 9.0. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
 
 ## Error handling
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Starting in Gecko 2.0, error handling has been revised to match the latest version of the HTML5 specification. Instead of the `error` event being dispatched to the media element itself, it now gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 

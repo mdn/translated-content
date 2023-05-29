@@ -10,6 +10,7 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/HTML
 original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
+
 {{MDNSidebar}}
 
 Les directives suivantes couvrent la manière d'écrire du HTML pour les exemples de code MDN.

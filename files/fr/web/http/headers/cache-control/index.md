@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Cache-Control
 l10n:
   sourceCommit: 2f22893feecd8ef6f4d6f7fa8458cf8c1734d921
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête HTTP **`Cache-Control`** contient des _directives_ (c'est-à-dire des instructions), dans les requêtes et dans les réponses, pour contrôler [la mise en cache](/fr/docs/Web/HTTP/Caching) dans les navigateurs et caches partagées (par exemple les <i lang="en">proxies</i>, CDN).

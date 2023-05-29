@@ -3,6 +3,7 @@ title: grayscale()
 slug: Web/CSS/filter-function/grayscale
 original_slug: Web/CSS/filter-function/grayscale()
 ---
+
 {{CSSRef}}
 
 **`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。

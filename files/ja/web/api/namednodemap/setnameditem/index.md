@@ -4,6 +4,7 @@ slug: Web/API/NamedNodeMap/setNamedItem
 l10n:
   sourceCommit: 6f983d8b9fa0081ba57ccab31a345a41ffccbbb1
 ---
+
 {{APIRef("DOM")}}
 
 **`setNamedItem()`** は {{domxref("NamedNodeMap")}} インターフェイスのメソッドで、名前によって識別される属性 ({{domxref("Attr")}}) をこのマップに設定します。

@@ -3,6 +3,7 @@ title: Constructeur Intl.ListFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.ListFormat()`** permet de créer des objets [`Intl.ListFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat) pour le formatage de listes adapté à la locale et aux options fournies.

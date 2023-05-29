@@ -2,6 +2,7 @@
 title: 書本清單頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 ---
+
 接下做我們將實作書本列表頁面。這個頁面需要呈現數據庫中所有書本的列表，包含每本書的作者、標題，標題將成為一個超連結，連到書本詳細內容頁面。
 
 ## 控制器
@@ -12,16 +13,16 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page
 
 ```js
 // Display list of all Books.
-exports.book_list = function(req, res, next) {
-
-  Book.find({}, 'title author')
-    .populate('author')
+exports.book_list = function (req, res, next) {
+  Book.find({}, "title author")
+    .populate("author")
     .exec(function (err, list_books) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('book_list', { title: 'Book List', book_list: list_books });
+      res.render("book_list", { title: "Book List", book_list: list_books });
     });
-
 };
 ```
 

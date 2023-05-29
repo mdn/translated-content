@@ -1,14 +1,8 @@
 ---
 title: dx
 slug: Web/SVG/Attribute/dx
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/dx
 ---
+
 « [SVG Attribute reference home](/ja/docs/Web/SVG/Attribute)
 
 `dx` 属性は、要素またはその中身の位置についての、x 軸に沿ったずれを表します。まさしくずらされるものは、この属性が設定される要素によります。

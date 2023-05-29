@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Float64Array
 ---
+
 {{JSRef}}
 
 Le constructeur **`Floa64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
@@ -151,15 +152,11 @@ var float64 = new Float64Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                       |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Première définition au sein d'un standard ECMAScript. `new` est nécessaire pour utiliser le constructeur.                             |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin qu'il utilise l'opération interne `ToIndex` ce qui permet de l'utiliser sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Float64Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

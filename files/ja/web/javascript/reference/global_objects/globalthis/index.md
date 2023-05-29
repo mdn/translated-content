@@ -2,6 +2,7 @@
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 **`globalThis`** はグローバルプロパティで、グローバルオブジェクトと同等であるグローバルな `this` が格納されています。
@@ -56,9 +57,7 @@ if (typeof globalThis.setTimeout !== 'function') {
 
 ## 仕様
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-globalthis", "globalThis")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

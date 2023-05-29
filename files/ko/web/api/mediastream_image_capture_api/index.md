@@ -1,16 +1,6 @@
 ---
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
-tags:
-  - API
-  - MediaStream
-  - MediaStream Image Capture API
-  - Overview
-  - Reference
-  - 비디오
-  - 사진
-  - 이미지
-translation_of: Web/API/MediaStream_Image_Capture_API
 ---
 {{DefaultAPISidebar("Image Capture API")}}
 

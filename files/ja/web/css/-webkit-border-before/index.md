@@ -2,6 +2,7 @@
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-border-before`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理ブロックの境界の先頭側のプロパティ値をスタイルシートの一箇所で設定するための一括指定プロパティです。

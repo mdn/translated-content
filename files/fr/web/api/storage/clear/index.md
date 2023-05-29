@@ -9,9 +9,10 @@ tags:
   - Stockage Web
 translation_of: Web/API/Storage/clear
 ---
+
 {{APIRef("Web Storage API")}}
 
-La méthode `clear()` de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.
+La méthode `clear()` de l'interface {{domxref("Storage")}}, lorsqu'elle est invoquée, vide toutes les clés stockées.
 
 ## Syntaxe
 

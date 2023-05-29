@@ -1,26 +1,26 @@
 ---
 title: meter
 slug: Web/HTML/Element/meter
-translation_of: Web/HTML/Element/meter
 ---
+
 ## Sumário
 
 O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de um intervalo conhecido ou um valor fracionário.
 
-> **Note:** **Nota de uso:** A não ser que o atributo **value** esteja entre 0 e 1(inclusive), o atributo **min** e o atributo **max** devem definir o intervalo de modo que o valor do atributo **value** esteja dentro dele.
+> **Note:** A não ser que o atributo **value** esteja entre 0 e 1(inclusive), o atributo **min** e o atributo **max** devem definir o intervalo de modo que o valor do atributo **value** esteja dentro dele.
 
 ## Contexto de uso
 
-| [Content categories](/en/HTML/Content_categories "en/HTML/Content categories") | [flow content](/en/HTML/Content_categories#flow_content "en/HTML/Content categories#flow content"), [phrasing content](/en/HTML/Content_categories#phrasing_content "en/HTML/Content categories#phrasing content"), [Labelable](/en/HTML/Content_categories#form-labelable "en/HTML/Content categories#form labelable") [Form-associated content](/en/HTML/Content_categories#form-associated "en/HTML/Content categories#form associated") |
+| [Content categories](/pt-BR/HTML/Content_categories) | [flow content](/pt-BR/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/HTML/Content_categories#phrasing_content), [Labelable](/pt-BR/HTML/Content_categories#form-labelable) [Form-associated content](/pt-BR/HTML/Content_categories#form-associated) |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Conteúdo permitido                                                             | [Phrasing content](/en/HTML/Content_categories#Phrasing_content "en/HTML/Content categories#Phrasing content"), mas nenhum elemento `meter` descendente.                                                                                                                                                                                                                                                                                    |
+| Conteúdo permitido                                                             | [Phrasing content](/pt-BR/HTML/Content_categories#Phrasing_content), mas nenhum elemento `meter` descendente.                                                                                                                                                                                                                                                                                    |
 | Tag omission                                                                   | Nenhuma, ambas as tags iniciais e finais são obrigatórias.                                                                                                                                                                                                                                                                                                                                                                                  |
 | Elementos pais permitidos                                                      | Qualquer elemento que aceite phrasing content.                                                                                                                                                                                                                                                                                                                                                                                              |
 | Documento normativo                                                            | [HTML5, section 4.10.8](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-meter-element)                                                                                                                                                                                                                                                                                                              |
 
 ## Atributos
 
-Como todos os elementos HTML, esse elemento suporta[ attributes](/en/HTML/Global_attributes "en/HTML/Global attributes").
+Como todos os elementos HTML, esse elemento suporta [attributes](/pt-BR/HTML/Global_attributes).
 
 - {{ htmlattrdef("value") }}
   - : O valor numérico atual. Ele deve estar entre os valores mínimos e máximo (o atributo **min** e o atributo **max**) se eles estiverem especificados. Se não especificado ou mal formatado, o valor é 0. Se especificado, mas fora do intervalo dado pelos atributos **min** e **max**, o valor é igual ao extremo do intervalo mais próximo.
@@ -35,7 +35,7 @@ Como todos os elementos HTML, esse elemento suporta[ attributes](/en/HTML/Global
 - {{ htmlattrdef("optimum") }}
   - : Esse atributo indica o valor numérico ótimo. Deve estar dentro do intervalo (definido pelos atributos **min** e **max**). Quando com os atributos **low** e **high**, ele indica a região do intervalo qu é considerada preferível. Por exemplo, se estiver entre os atributos **min** e **low**, então a parte inferior do intervalo é considerada como ótima.
 - {{ htmlattrdef("form") }}
-  - : Esse atributo associa o elemento com um elemento` form` que é dono de um elemento `meter`. Por exemplo, um elemento `meter` pode estar mostrando um intervalo correspondente a um elemento `input` do **type**(tipo) _number_. Esse atributo só é utilizado se o elemento `meter` está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento `form`.
+  - : Esse atributo associa o elemento com um elemento `form` que é dono de um elemento `meter`. Por exemplo, um elemento `meter` pode estar mostrando um intervalo correspondente a um elemento `input` do **type**(tipo) _number_. Esse atributo só é utilizado se o elemento `meter` está sendo utilizado como um elemento associado a um formulário; mesmo assim, ele pode se romitido se o elemento for um descendente de um elemento `form`.
 
 ## Exemplos
 

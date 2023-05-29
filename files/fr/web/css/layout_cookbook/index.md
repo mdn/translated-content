@@ -7,6 +7,7 @@ tags:
   - recettes
 translation_of: Web/CSS/Layout_cookbook
 ---
+
 {{CSSRef}}
 
 Le livre de recettes CSS vise à illustrer différents motifs qu'on retrouve fréquemment sur le Web et qu'on pourrait souhaiter implémenter pour son propre site. En plus de fournir du code qui peut servir de point de départ, ces recettes mettent en avant les différents outils et dispositions qui peuvent être utilisées et les choix à effectuer lors du développement.

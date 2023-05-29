@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.canvas`** 属性是 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 的一部分，是对与给定上下文关联的{{domxref("HTMLCanvasElement")}}对象的只读引用。如果没有 {{HTMLElement("canvas")}} 元素与之对应，对象值为{{jsxref("null")}} 。
@@ -34,7 +35,7 @@ ctx.canvas // HTMLCanvasElement
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.canvas")}}
+{{Compat}}
 
 ## 参见
 

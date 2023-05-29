@@ -1,13 +1,9 @@
 ---
 title: 기본 애니메이션
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/HTML/Canvas/Tutorial/Basic_animations
 ---
+
 {{HTMLElement("canvas")}} 요소는 자바스크립트로 제어하는 것이므로, 애니메이션도 쉽게 만들 수 있습니다. 복잡한 애니메이션을 만드는 것은 추가 작업이 더 필요하고, 앞으로 그에 대한 페이지도 머지 않아 추가되기를 기대합니다.
 
 도형은 한번 만들어 놓으면 그 모습 그대로 있다는 것이 애니메이션을 만들 때의 가장 큰 제약일 것입니다. 그 도형을 움직이고자 하면 그 도형뿐만이 아니라 그 도형이 그려지기 전에 그려진 모든 것을 다시 그려야 합니다. 복잡한 장면을 다시 그리는 것은 시간도 많이 걸리며, 코드를 실행하는 컴퓨터의 능력에 따라 달라집니다.
@@ -71,9 +67,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   setInterval(draw,100);
 }
 
@@ -120,7 +116,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
 
 #### 시계 애니메이션
 
@@ -236,7 +232,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
 
 #### 움직이는 파노라마 사진
 
@@ -248,7 +244,7 @@ var img = new Image();
 // 변수
 // 스크롤될 이미지, 방향, 속도를 바꾸려면 변수값을 바꾼다.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows,_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // 값이 작을 수록 빨라진다

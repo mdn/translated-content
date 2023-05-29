@@ -2,6 +2,7 @@
 title: XRInputSource.gripSpace
 slug: Web/API/XRInputSource/gripSpace
 ---
+
 {{securecontext_header}}{{APIRef("WebXR")}}
 
 {{domxref("XRInputSource")}} の **`gripSpace`** 読み取り専用プロパティは、ネイティブの原点がユーザーの手に保持している（またはユーザーの手の一部の）ように見える仮想オブジェクトのレンダリングに使用するポーズを追跡する {{domxref("XRSpace")}} を返します。 例えば、ユーザーが仮想の真っ直ぐな棒を持っている場合、この `XRSpace` のネイティブの原点は、ユーザーの拳のおおよその重心にあります。
@@ -18,7 +19,7 @@ var xrSpace = xrInputSource.gripSpace;
 
 コントローラーがまっすぐな棒のような形をしていて、ユーザーの拳で握られていると想像してみてください。 グリップ空間の本来の原点は、ユーザーの拳の重心にあり、ユーザーの手の位置を追跡します。
 
-**左手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](https://mdn.mozillademos.org/files/17260/GripSpace-LeftHand-Light.svg)**右手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](https://mdn.mozillademos.org/files/17261/GripSpace-RightHand-Light.svg)
+**左手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-lefthand-light.svg)**右手のグリップ空間の座標系。**![グリップ空間が、世界に対するプレーヤーの手のローカル座標系をどのように示しているかを示す図。](gripspace-righthand-light.svg)
 
 上の図に示すように、座標系は次のように方向付けられています。
 
@@ -46,9 +47,7 @@ for (let source in xrSession.inputSources) {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrinputsource-gripspace','XRInputSource.gripSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

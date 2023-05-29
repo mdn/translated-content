@@ -1,19 +1,8 @@
 ---
 title: Modo de exibição (display-mode)
 slug: Web/CSS/@media/display-mode
-tags:
-  - '@media'
-  - CSS
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-  - display
-  - display-moe
-  - funcionalidade de mídia
-  - manifesto das aplicações web
-translation_of: Web/CSS/@media/display-mode
 ---
+
 {{cssref}}
 
 O recurso de mídia CSS {{cssxref("@media")}} do modo de exibição pode ser usado para aplicar estilos com base no modo de exibição de um aplicativo. Você pode usar para prover uma consistente experiência de usuário entre abrir um site a partir de uma URL e um ícone desktop.

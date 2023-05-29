@@ -3,6 +3,7 @@ title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
 original_slug: Web/CSS/transform-function/rotate3d()
 ---
+
 {{CSSRef}}
 
 **`rotate3d()`** CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
@@ -42,9 +43,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
       <td colspan="1">
-        <a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"
+        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d()/transform-functions-rotate3d_cart.png"
           ><img
-            src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview"
+            src="transform-functions-rotate3d_cart.png"
             style="height: 47px; width: 510px" /></a
         ><math>
           <mfenced
@@ -87,9 +88,9 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
       <td colspan="1">
-        <a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"
+        <a href="/en-US/docs/Web/CSS/transform-function/rotate3d/transform-functions-rotate3d_hom4.png"
           ><img
-            src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview"
+            src="transform-functions-rotate3d_hom4.png"
             style="height: 61px; width: 522px"
         /></a>
       </td>

@@ -2,6 +2,7 @@
 title: NodeList.item
 slug: Web/API/NodeList/item
 ---
+
 {{ApiRef}}
 
 ## 概要

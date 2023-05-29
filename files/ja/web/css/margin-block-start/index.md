@@ -2,6 +2,7 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 ---
+
 {{CSSRef}}
 
 **`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。

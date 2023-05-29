@@ -2,6 +2,7 @@
 title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.offsetLeft`** プロパティは読み取り専用で、現在の要素の*左上隅*が {{domxref("HTMLElement.offsetParent")}} ノード内で左へオフセットされるピクセル数を返します。

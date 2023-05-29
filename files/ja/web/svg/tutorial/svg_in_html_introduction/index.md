@@ -1,13 +1,8 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - 中級者
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
+
 ## 概要
 
 この記事と関連する例では、インラインの [SVG](/ja/docs/SVG) をフォームの背景画像として使用する方法を示します。どのように [JavaScript](/ja/docs/JavaScript) と [CSS](/ja/docs/CSS) を利用すれば、通常の HTML を記述するのと同じ方法で画像を扱えるかを紹介しています。
@@ -73,7 +68,7 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 - 同一のスクリプトで HTML と SVG の双方を操作できます。
 - 文書は、完全に標準準拠です。
 
-> **Note:** DOM メソッドでリンクした画像を組み込まれた SVG 要素に追加するには、`href` の設定に `setAttributeNS` を使用してください。次の例のようにします:
+> **メモ:** DOM メソッドでリンクした画像を組み込まれた SVG 要素に追加するには、`href` の設定に `setAttributeNS` を使用してください。次の例のようにします:
 >
 > ```js
 >  var img = document.createElementNS("http://www.w3.org/2000/svg", "image");

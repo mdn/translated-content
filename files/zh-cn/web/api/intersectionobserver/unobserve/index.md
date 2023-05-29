@@ -2,6 +2,7 @@
 title: IntersectionObserver.unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}}的`unobserve()`
@@ -43,7 +44,7 @@ observer.unobserve(document.getElementById("elementToObserve"));
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
 - {{domxref("IntersectionObserver.observe()")}}

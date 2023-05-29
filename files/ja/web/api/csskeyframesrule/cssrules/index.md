@@ -2,6 +2,7 @@
 title: CSSKeyframesRule.cssRules
 slug: Web/API/CSSKeyframesRule/cssRules
 ---
+
 {{APIRef("CSSOM") }}
 
 **`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes {{cssxref("at-rule", "アットルール")}}のルールを返します。

@@ -2,6 +2,7 @@
 title: DOMPointReadOnly.z
 slug: Web/API/DOMPointReadOnly/z
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly`** インターフェイスの **`z`** プロパティは、空間の読み取り専用の点における置く息座標 z を保持します。

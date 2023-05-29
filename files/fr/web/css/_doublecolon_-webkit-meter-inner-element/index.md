@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-webkit-meter-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-meter-inner-element`** est un pseudo-élément qui permet de sélectionner et d'appliquer des styles au conteneur d'un élément {{htmlelement("meter")}}.
@@ -49,7 +50,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-inner-element")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/touch-action
 ---
+
 {{CSSRef}}
 
 La propriété **`touch-action`** définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.
@@ -30,7 +31,7 @@ touch-action: initial;
 touch-action: unset;
 ```
 
-Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement {{event("pointercancel")}} à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour {{event("pointermove")}}, {{event("pointerup")}}.
+Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour [`pointermove`](/fr/docs/Web/API/Element/pointermove_event), [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
 
 On utilise parfois cette propriété pour désactiver les interactions tactiles sur un élément pour un jeu ou une carte qui fournissent leur propre gestion tactile.
 
@@ -64,9 +65,13 @@ La propriété `touch-action` peut être définie grâce à :
 - `pinch-zoom`
   - : L'agent utilisateur peut considérer que les touches qui commencent sur l'élément n'ont pour but que de zoomer sur l'ancêtre le plus proche qui contient du contenu sur lequel on peut zoomer.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -97,7 +102,7 @@ ul > li {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement {{event("click")}} pour prendre en charge le zoom via la double-touche.
+> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
 
 ## Accessibilité
 
@@ -108,21 +113,15 @@ Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela 
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                             | {{Spec2('Compat')}}                     | Ajout de la valeur `pinch-zoom` pour la propriété.                                 |
-| {{SpecName('Pointer Events 2 Ext', '#additional-touch-action-values', 'touch-action')}} | {{Spec2('Pointer Events 2 Ext')}} | Ajout des valeurs `pan-left`, `pan-right`, `pan-up`, `pan-down` pour la propriété. |
-| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}         | {{Spec2('Pointer Events')}}         | Définition initiale.                                                               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("css.properties.touch-action")}}
+{{Compat}}
 
 ## Voir aussi
 
 - [Les événements de pointage](/fr/docs/Web/API/Pointer_events)
 - Un billet du blog WebKit : [une gestion plus responsive du toucher sur iOS (en anglais)](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
-- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](*https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
 - [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_Scroll_Snap)

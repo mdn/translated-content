@@ -2,6 +2,7 @@
 title: String.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
+
 {{JSRef}}
 
 **`[@@iterator]()`** メソッドは、文字列値のコードポイントを走査し、それぞれのコードポイントを文字列値として返すイテレーターオブジェクトを返します。
@@ -49,9 +50,7 @@ for (var v of str) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

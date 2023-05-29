@@ -2,11 +2,12 @@
 title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) API 有一个相当方便的模块可用于附加组件的国际化（[i18n](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n)）。我们将在本文中探讨其功能，并为它的运作方式提供一个实例。WebExtensions 的 i18n 系统类似常见的 i18n 用途 JavaScript 库，例如 [i18n.js](http://i18njs.com/)。
 
-> **备注：** 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 可在 GitHub 上查阅。在您阅读下列章节时，可参照它的代码。
+> **备注：** 本文中的 WebExtension 实例 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 可在 GitHub 上查阅。在阅读下列章节时，可参照它的代码。
 
 ## 剖析一个国际化的 WebExtension
 
@@ -52,7 +53,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 注意，如果子标签包含一个基本语言和一个区域变种，那么语言与变种之间通常会以连字号隔开，例如 "en-US"。但作为 `_locales` 的子目录，**它必须采用下划线来分隔**，如 "en_US"。
 
-因此[在我们这个示例应用](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales)中，我们有如下几个目录："en"（英语）、"de"（德语）、"nl"（荷兰语）以及 "ja"（日语）。每个目录都包含一个 `messages.json` 文件。
+因此[在我们这个示例应用](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales)中，我们有如下几个目录："en"（英语）、"de"（德语）、"nl"（荷兰语）以及 "ja"（日语）。每个目录都包含一个 `messages.json` 文件。
 
 现在我们来看其中一个文件（[\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)）的结构：
 
@@ -147,7 +148,7 @@ header {
 - {{WebExtAPIRef("i18n.getAcceptLanguages()")}} 和 {{WebExtAPIRef("i18n.getUILanguage()")}} 这两个方法可以在你需要根据语言区域自定义用户界面时使用 — 或许你希望根据用户想要的语言在首选项列表更高层显示首选项，或只显示和特定语言有关的文化信息，又或是按浏览器语言显示格式化过的日期。
 - {{WebExtAPIRef("i18n.detectLanguage()")}} 这个方法可以用来检测用户提交内容的语言，并将其正确格式化。
 
-在我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 示例中，[后台脚本](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js)包含下列代码：
+在我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 示例中，[后台脚本](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js)包含下列代码：
 
 ```js
 var title = browser.i18n.getMessage("notificationTitle");
@@ -171,13 +172,13 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 `"placeholders"` 这个成员定义了所有的占位符，以及它们所检索的来源。`"url"` 这个占位符指定了其内容取自 $1，它就是 `getMessage()` 第二个参数里的第一个值。由于占位符就叫做 `"url"`，我们就在实际的消息字符串中用 `$URL$` 调用它（`"name"` 用 `$NAME$` 调用也是一样的，以此类推）。对于多个占位符，你可以将其置于数组内，并作为第二个参数传递到 {{WebExtAPIRef("i18n.getMessage()")}} —`[a, b, c]`可替换为`$1`, `$2`, and `$3，以此类推，并置于` `messages.json` 内。
 
-接下来我们看一个例子：在 `en/messages.json 文件中`原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
+接下来我们看一个例子：在 `en/messages.json` 文件中原始的 `notificationContent` 消息字符串如下：in the `en/messages.json` file is
 
 ```
 您点击了 $URL$。
 ```
 
-我们可以看到链接点击后会打开 `https://developer.mozilla.org。`在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url" 占位符里的` `$URL$` 这个占位符。所以最后的消息字符串就变成了：
+我们可以看到链接点击后会打开 `https://developer.mozilla.org`。在 {{WebExtAPIRef("i18n.getMessage()")}} 调用后，第二个参数的内容就变成了 messages.json 里的 `$1`，并替换定义在 `"url"` 占位符里的 `$URL$` 这个占位符。所以最后的消息字符串就变成了：
 
 ```
 您点击了 https://developer.mozilla.org。
@@ -212,7 +213,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 }
 ```
 
-在本例中我们只是硬编码了占位符的内容，而不是从 `$1 这样的变量值中获取它。有时候你会遇到消息文件非常复杂，或者如果你想将文件里的不同值分离开来以便字符串可读性更好，`这种情况下它会很有用，这些值可通过编程来访问。
+在本例中我们只是硬编码了占位符的内容，而不是从 `$1` 这样的变量值中获取它。有时候你会遇到消息文件非常复杂，或者如果你想将文件里的不同值分离开来以便字符串可读性更好，这种情况下它会很有用，这些值可通过编程来访问。
 
 此外，你可使用这样的替代方式指定不想被翻译的一部分字符串，例如人名或公司名。
 
@@ -222,7 +223,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);
 
 1. 如果有精确匹配当前语言区域的 `messages.json` 文件，并且它包含该字符串，则返回它。
 2. 否则，如果当前语言区域有合格区域（例如 `en_US`）并且有一个无区域限定的 `messages.json` 文件（例如 `en`）且包含该字符串，则返回它。
-3. 否则，如果 `manifest.json 里包含` `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
+3. 否则，如果 `manifest.json` 里包含 `default_locale` 所对应的 `messages.json` 文件且包含该字符串，则返回它。
 4. 否则，返回一个空字符串。
 
 参见下列示例：
@@ -377,7 +378,7 @@ padding-left: 1.5em;
 
 ## 测试你的 WebExtension
 
-从 Firefox 45 开始，你可以临时安装磁盘上的 WebExtensions — 另见[从磁盘加载。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)按上述步骤操作，然后尝试我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) WebExtension。访问你喜欢的任何网站，然后点一下链接，查看是否有通知出现来显示所点击的链接网址。
+从 Firefox 45 开始，你可以临时安装磁盘上的 WebExtensions — 另见[从磁盘加载。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)按上述步骤操作，然后尝试我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) WebExtension。访问你喜欢的任何网站，然后点一下链接，查看是否有通知出现来显示所点击的链接网址。
 
 接下来，将 Firefox 的语言区域更改为你想测试的扩展支持的某个语言区域。
 

@@ -2,6 +2,7 @@
 title: justify-self
 slug: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。

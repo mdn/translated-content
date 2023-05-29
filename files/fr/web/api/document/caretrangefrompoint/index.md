@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 translation_of: Web/API/Document/caretRangeFromPoint
 browser-compat: api.Document.caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 La méthode **`caretRangeFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Range`](/fr/docs/Web/API/Range) correspondant au fragment de document situé aux coordonnées indiquées.

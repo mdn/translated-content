@@ -2,9 +2,10 @@
 title: クラスセレクター
 slug: Web/CSS/Class_selectors
 ---
+
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 {{htmlattrxref("class")}} 属性の内容に基づいて要素を選択します。
+[CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性の内容に基づいて要素を選択します。
 
 ```css
 /* class="spacious" であるすべての要素 */
@@ -70,12 +71,7 @@ li.spacious.elegant {
 
 ## 仕様書
 
-| 仕様書                                                                                | 状態                               | 備考            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS4 Selectors')}} | 変更なし         |
-| {{SpecName('CSS3 Selectors', '#class-html', 'class selectors')}}         | {{Spec2('CSS3 Selectors')}} |                    |
-| {{SpecName('CSS2.1', 'selector.html#class-html', 'child selectors')}} | {{Spec2('CSS2.1')}}             |                    |
-| {{SpecName('CSS1', '#class-as-selector', 'child selectors')}}             | {{Spec2('CSS1')}}             | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

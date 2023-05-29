@@ -2,6 +2,7 @@
 title: Headers.has()
 slug: Web/API/Headers/has
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Headers")}} 接口的 **`has()`**方法返回一个布尔值来声明一个 `Headers`对象 是否包含特定的头信息。
@@ -45,7 +46,7 @@ myHeaders.has('Accept-Encoding'); // Returns false
 
 ## Browser compatibility
 
-{{Compat("api.Headers.has")}}
+{{Compat}}
 
 ## See also
 

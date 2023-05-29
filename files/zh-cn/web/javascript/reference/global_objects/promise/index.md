@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 对象用于表示一个异步操作的最终完成（或失败）及其结果值。
@@ -22,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 待定状态的 Promise 对象要么会通过一个值*被兑现*，要么会通过一个原因（错误）*被拒绝*。当这些情况之一发生时，我们用 promise 的 `then` 方法排列起来的相关处理程序就会被调用。如果 promise 在一个相应的处理程序被绑定时就已经被兑现或被拒绝了，那么这个处理程序也同样会被调用，因此在完成异步操作和绑定处理方法之间不存在竞态条件。
 
-因为 `{{jsxref("Promise.then", "Promise.prototype.then")}}` 和  `{{jsxref("Promise.catch", "Promise.prototype.catch")}}` 方法返回的是 promise，所以它们可以被链式调用。
+因为 {{jsxref("Promise.then", "Promise.prototype.then")}} 和 {{jsxref("Promise.catch", "Promise.prototype.catch")}} 方法返回的是 promise，所以它们可以被链式调用。
 
 ![](promises.png)
 
@@ -32,7 +33,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 ### Promise 的链式调用
 
-我们可以用 `{{jsxref("Promise.prototype.then()")}}`、`{{jsxref("Promise.prototype.catch()")}}` 和 `{{jsxref("Promise.prototype.finally()")}}` 这些方法将进一步的操作与一个变为已敲定状态的 promise 关联起来。
+我们可以用 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 和 {{jsxref("Promise.prototype.finally()")}} 这些方法将进一步的操作与一个变为已敲定状态的 promise 关联起来。
 
 例如 `.then()` 方法需要两个参数，第一个参数作为处理已兑现状态的回调函数，而第二个参数则作为处理已拒绝状态的回调函数。每一个 `.then()` 方法还会返回一个新生成的 promise 对象，这个对象可被用作链式调用，就像这样：
 
@@ -207,7 +208,7 @@ window.addEventListener("message", (event) => {
   - : 返回一个状态为已拒绝的 `Promise` 对象，并将给定的失败信息传递给对应的处理函数。
 
 - {{jsxref("Promise.resolve", "Promise.resolve(value)")}}
-  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
+  - : 返回一个状态由给定 value 决定的 `Promise` 对象。如果该值是 thenable（即，带有 `then` 方法的对象），返回的 Promise 对象的最终状态由 then 方法执行结果决定；否则，返回的 Promise 对象状态为已兑现，并且将该 value 传递给对应的 then 方法。
 
     通常而言，如果你不知道一个值是否是 promise 对象，使用 {{JSxRef("Promise.resolve", "Promise.resolve(value)")}} 来返回一个 Promise 对象，这样就能将该 value 以 promise 对象形式使用。
 
@@ -245,11 +246,11 @@ myFirstPromise.then((successMessage) => {
 
 ### 不同场景的示例
 
-此示例展示了使用 promise 的多种方法，以及其可能发生的多种情况。要理解这一点，首先滚动到代码块的底部，然后查看 promise 调用链。在创建初始的 primise 后，可以接上一条 promise 调用链。该调用链由 `.then()` 组成，通常（但不一定）在末尾会有一个 `.catch()`，并可能会接上一个 `.finnaly()`。在本示例中，promise 调用链是由一个自定义的 `new Promise()` 构造并发起的；但在实践中，promise 调用链通常由一个 API 函数（由其他人编写的）返回的 promise 开始。
+此示例展示了使用 promise 的多种方法，以及其可能发生的多种情况。要理解这一点，首先滚动到代码块的底部，然后查看 promise 调用链。在创建初始的 promise 后，可以接上一条 promise 调用链。该调用链由 `.then()` 组成，通常（但不一定）在末尾会有一个 `.catch()`，并可能会接上一个 `.finally()`。在本示例中，promise 调用链是由一个自定义的 `new Promise()` 构造并发起的；但在实践中，promise 调用链通常由一个 API 函数（由其他人编写的）返回的 promise 开始。
 
 示例函数 `tetheredGetNumber()` 会在设置同步调用或者函数内部抛出异常时调用 `reject()`。函数 `promiseGetWord()` 展示了如何在 API 函数内部创建并返回一个 promise。
 
-请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promsie 会遍历所有的 `.then` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
+请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
 
 示例代码可以在 NodeJS 下运行。请通过查看实际发生的错误来理解代码。若要提高错误发生的概率，请该改变 `threshold` 的值。
 
@@ -393,7 +394,7 @@ if ("Promise" in window) {
 
 ### 使用 XHR 加载图像
 
-另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
+另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载一个图像的例子可在 MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) 仓库中找到。你也可以[看它的实例](https://mdn.github.io/js-examples/promises-test/)。每一步都有注释可以让你详细的了解 Promise 和 XHR 架构。
 
 ## 规范
 

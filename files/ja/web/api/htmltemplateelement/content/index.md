@@ -2,6 +2,7 @@
 title: HTMLTemplateElement.content
 slug: Web/API/HTMLTemplateElement/content
 ---
+
 {{APIRef("Web Components")}}
 
 **`HTMLTemplateElement.content`** プロパティは、 `<template>` 要素のテンプレートの内容 ({{domxref("DocumentFragment")}}) を返します。

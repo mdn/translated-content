@@ -1,8 +1,8 @@
 ---
 title: Type selectors
 slug: Web/CSS/Type_selectors
-translation_of: Web/CSS/Type_selectors
 ---
+
 {{CSSRef}}
 
 O **seletor de tipo** CSS corresponde aos elementos pelo nome do nó. Em outras palavras, ele seleciona todos os elementos do tipo fornecido em um documento.

@@ -4,6 +4,7 @@ title: >-
   initializer
 slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误信息

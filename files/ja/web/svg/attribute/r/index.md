@@ -1,11 +1,8 @@
 ---
 title: r
 slug: Web/SVG/Attribute/r
-tags:
-  - SVG
-  - SVG属性
-translation_of: Web/SVG/Attribute/r
 ---
+
 {{SVGRef}}
 
 **`r`** 属性は円の半径を定義します。
@@ -52,7 +49,7 @@ html,body,svg { height:100% }
 | デフォルト値         | `0`                                                                                                                    |
 | アニメーション可能か | Yes                                                                                                                    |
 
-> **Note:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
+> **メモ:** SVG2 からは、`r` は _幾何属性 (Geometry Property)_ です。これが意味することは、`r` 属性を `circle` の CSS 属性としても使える、ということです。
 
 ## radialGradient
 
@@ -67,9 +64,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                     | 備考                                                 |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
-| {{SpecName("SVG2", "geometry.html#R", "r")}}                                         | {{Spec2("SVG2")}} | Definition as a geometry property                    |
-| {{SpecName("SVG2", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG2")}} | Definition for SVG2 paint servers `<radialGradient>` |
-| {{SpecName("SVG1.1", "pservers.html#RadialGradientElementRAttribute", "r")}} | {{Spec2("SVG1.1")}} | Initial definition for `<radialGradient>`            |
-| {{SpecName("SVG1.1", "shapes.html#CircleElementRAttribute", "r")}}             | {{Spec2("SVG1.1")}} | Initial definition for `<circle>`                    |
+{{Specifications}}

@@ -1,14 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-browser-compat: javascript.builtins.Object.defineProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
 {{JSRef}}
 

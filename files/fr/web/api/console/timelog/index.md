@@ -1,6 +1,6 @@
 ---
 title: Console.timeLog()
-slug: Web/API/Console/timeLog
+slug: Web/API/console/timeLog
 tags:
   - API
   - Console Web
@@ -11,6 +11,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/timeLog
 ---
+
 {{APIRef("Console API")}}
 
 Affiche dans la console la valeur actuelle d'un timer précédemment appelé par {{domxref("console.time()")}}

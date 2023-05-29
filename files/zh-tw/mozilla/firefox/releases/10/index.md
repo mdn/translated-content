@@ -2,6 +2,7 @@
 title: Firefox 10 技術文件
 slug: Mozilla/Firefox/Releases/10
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -15,12 +16,12 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 ### HTML
 
 - The new HTML5 {{ HTMLElement("bdi") }} element, bi-directional isolation, allowing isolation of parts of text with a different directionality has been implemented. This is especially useful when displaying text with an unknown directionality, coming from a database for example, in the middle of text with a known, and potentially, different one.
-- You may now specify a fragment of "top" for the {{ htmlattrxref("href", "a") }} attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
+- You may now specify a fragment of "top" for the [`href`](/zh-TW/docs/Web/HTML/Element/a#href) attribute to create a link to the top of the page. This used to work, then went away for a while, and now it's back, for compatibility with the HTML5 specification. For example: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 
-- The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
-- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
+- The method `WeakMap.set()` now returns `undefined`, instead of itself.
+- A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See [Firefox bug 683838](https://bugzil.la/683838) if you want the gory details.
 - You can no longer use [E4X](/zh-TW/E4X) syntax while in [ECMAScript 5 strict mode](/zh-TW/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
@@ -86,7 +87,7 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 - The ESC key no longer incorrectly results in the {{ domxref("window.oninput") }} handler incorrectly getting called.
 - The {{ domxref("NameList") }} interface is no longer implemented; it previously had an implementation with no way to actually get access to one.
 - The {{ domxref("document.createProcessingInstruction()") }} method now works on HTML documents as well as XML documents. {{ domxref("ProcessingInstruction") }} nodes are still only supported on XML documents, but since nodes can be moved among documents, it's helpful to be able to create them on HTML documents as well.
-- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/zh-TW/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See {{ bug("707142#c13") }}
+- The {{ domxref("XMLHttpRequest") }} `responseType` "`moz-json`" [introduced in Firefox 9](/zh-TW/Firefox_9_for_developers#DOM) has been updated to the latest draft of the specification and has been unprefixed. See [Firefox bug 707142](https://bugzil.la/707142#c13)
 
 ### CSS
 
@@ -142,7 +143,7 @@ For an overview of likely issues that may arise when updating your add-ons to su
 
 ### Build system changes
 
-- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See {{ bug(559505) }} for progress on removing the last vestiges of RDF being required.
+- The `--disable-rdf` build option, which actually made it impossible to successfully build, has been removed. Work is ongoing on being able to actually remove RDF support entirely, but at present XUL still requires it to function. See [Firefox bug 559505](https://bugzil.la/559505) for progress on removing the last vestiges of RDF being required.
 - The `--disable-smil` build option has been removed.
 
 ### See also

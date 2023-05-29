@@ -2,6 +2,7 @@
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 `readAsText` 方法可以将 [Blob](/zh-CN/docs/Web/API/Blob) 或者 [File](/zh-CN/docs/Web/API/File) 对象转根据特殊的编码格式转化为内容 (字符串形式)

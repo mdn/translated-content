@@ -1,8 +1,8 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
 **`Object.values()`** 메소드는 전달된 파라미터 객체가 가지는 (열거 가능한) 속성의 값들로 이루어진 배열을 리턴합니다. 이 배열은 {{jsxref("Statements/for...in", "for...in")}} 구문과 동일한 순서를 가집니다. (for in 반복문은 프로토타입 체인 또한 열거한다는 점에서 차이가 있습니다.)
@@ -55,11 +55,11 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 `Object.values` 메소드는 구형 브라우저에서 지원하지 않습니다. 구형 브라우저와의 호환성을 고려하기 위해 폴리필을 찾아 볼 수 있습니다. [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 혹은 [es-shims/Object.values](https://github.com/es-shims/Object.values) 를 참조해보세요.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

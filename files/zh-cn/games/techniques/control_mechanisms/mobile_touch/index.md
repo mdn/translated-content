@@ -1,13 +1,13 @@
 ---
 title: 移动端触摸控制
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-original_slug: Games/Techniques/Control_mechanisms/移动端触摸控制
 ---
+
 {{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制 ，只要移动端支持触摸，你就可以尽情的玩。
+未来手游一定是 Web 的天下，许多开发在游戏开发过程中首先选择手游 — 既然如此，触摸控制是不可少的。我们将在本教程中了解怎样简单地在移动端 H5 游戏中实现触摸控制，只要移动端支持触摸，你就可以尽情的玩。
 
 **说明**：游戏 [Captain Rogers: Battle at Andromeda](http://rogers2.enclavegames.com/demo/) 是基于[Phaser](http://phaser.io/) 和 Phaser-based 管理控制，但它也可以用纯 JavaScript 实现。使用 Phaser 的好处它提供了辅助变量和方法可以直接调用，有助于快速的开发游戏，这需要根据项目实际情况选择。
 
@@ -23,7 +23,7 @@ el.addEventListener("touchend", handleEnd);
 el.addEventListener("touchcancel", handleCancel);
 ```
 
-这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。 事件如下所示：
+这样，在移动设备上屏幕上触摸游戏的 {{htmlelement("canvas")}} 将触发这些事件，因为我们就可以随意操控游戏（如：移动太空船）。事件如下所示：
 
 - [touchstart](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchstart) 当用户手指放在屏幕上触发。
 - [touchmove](/zh-CN/docs/Web/API/GlobalEventHandlers/ontouchmove) 当他们在屏幕上移动手指时触发。

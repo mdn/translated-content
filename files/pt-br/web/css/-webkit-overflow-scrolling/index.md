@@ -1,20 +1,8 @@
 ---
 title: '-webkit-overflow-scrolling'
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - CSS Property
-  - CSS Reference
-  - NeedsBrowserCompatibility
-  - NeedsLiveSample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Não-padrão
-  - Propriedade CSS
-  - Reference
-  - Referência CSS(3)
-translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumo

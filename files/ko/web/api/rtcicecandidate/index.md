@@ -1,8 +1,8 @@
 ---
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
-translation_of: Web/API/RTCIceCandidate
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCIceCandidate`** 인터페이스는 [WebRTC API](/ko/docs/Web/API/WebRTC_API)의 한 종류로서, {{domxref("RTCPeerConnection")}}을 구축 할 때 사용되기도하는 Internet Connectivity Establishment ({{Glossary("ICE")}})의 후보군 (candidate)를 말합니다.

@@ -1,7 +1,8 @@
 ---
 title: 色選択ツール
-slug: Web/CSS/CSS_Colors/Color_picker_tool
+slug: Web/CSS/CSS_colors/Color_picker_tool
 ---
+
 {{CSSRef}}
 
 このツールは、ウェブの独自の色を簡単に作成、調整、実験することができます。 HEXA 色, RGB (Red/Green/Blue), HSL (Hue/Saturation/Lightness) RGB など、 [CSS](/ja/docs/Web/CSS) で対応している様々な[色形式](/ja/docs/Web/CSS/color_value)に変換することもできます。アルファチャネルの制御も、 RGB (rgba) および HSL (hsla) 形式で対応しています。

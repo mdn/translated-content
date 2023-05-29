@@ -13,9 +13,10 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
 ---
+
 {{AddonSidebar()}}
 
-Décrit différents critères de filtrage des URL. Si tous les critères spécifiés dans les propriétés du filtre correspondent à l'URL, le filtre correspond. Les filtres sont souvent fournis aux méthodes API dans un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'UrlFilters. Par exemple, les écouteurs  [webNavigation](/fr/Add-ons/WebExtensions/API/webNavigation) peuvent être ajoutés avec un filtre qui est un objet avec une seule propriété url qui est un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) de UrlFilters, par exemple `{url:[UrlFilter,UrlFilter,...]}`. Si un filtre dans le tableau de UrlFilters correspond, il est considéré comme une correspondance pour le tableau. En effet, les critères spécifiés dans un seul filtre sont associés ensemble, alors que tous les filtres individuels dans un tableau sont où.
+Décrit différents critères de filtrage des URL. Si tous les critères spécifiés dans les propriétés du filtre correspondent à l'URL, le filtre correspond. Les filtres sont souvent fournis aux méthodes API dans un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'UrlFilters. Par exemple, les écouteurs [webNavigation](/fr/Add-ons/WebExtensions/API/webNavigation) peuvent être ajoutés avec un filtre qui est un objet avec une seule propriété url qui est un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) de UrlFilters, par exemple `{url:[UrlFilter,UrlFilter,...]}`. Si un filtre dans le tableau de UrlFilters correspond, il est considéré comme une correspondance pour le tableau. En effet, les critères spécifiés dans un seul filtre sont associés ensemble, alors que tous les filtres individuels dans un tableau sont où.
 
 Tous les critères sont sensibles à la casse.
 
@@ -29,7 +30,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
   - : `string`. Correspond si le [hostname](/fr/docs/Web/API/HTMLHyperlinkElementUtils/hostname) de l'URL contient la chaîne donnée.
 
-    - Pour tester si un composant de nom d'hôte commence par "foo", utilisez  `".foo"`. Cela correspond à "www\.foobar.com" et "foo.com", car un point implicite est ajouté au début du nom d'hôte.
+    - Pour tester si un composant de nom d'hôte commence par "foo", utilisez `".foo"`. Cela correspond à "www\.foobar.com" et "foo.com", car un point implicite est ajouté au début du nom d'hôte.
     - Pour tester si un composant de nom d'hôte se termine par "foo", utilisez `"foo."`.
     - Pour tester si un composant de nom d'hôte correspond exactement à "foo", utilisez `".foo."`.
 
@@ -42,7 +43,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
   - : `string`. Correspond si le nom d'hôte de l'URL se termine par une chaîne spécifiée.
 
     - Exemple: `".example.com"` correspond à "http\://www\.example.com/", mais pas à "http\://example.com/".
-    - Exemple: `"example.com"` correspond à "http\://www\.example.com/", et  "http\://fakeexample.com/".
+    - Exemple: `"example.com"` correspond à "http\://www\.example.com/", et "http\://fakeexample.com/".
 
 - `pathContains`{{optional_inline}}
   - : `string`. Correspond si le segment de chemin de l'URL contient une chaîne spécifiée.
@@ -66,7 +67,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
   - : `string`. Correspond si l'URL (sans l'identificateur de fragment) est égale à une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
 - `urlMatches`{{optional_inline}}
 
-  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) correspond à une  [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
+  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) correspond à une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
 
     - Par exemple : `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` correspond "http\://mozilla.org/", "https\://developer.mozilla.org/", "ftp\://foo.mozilla.org/", mais pas "https\://developer.fakemozilla.org/".
 
@@ -76,7 +77,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
   - : `string`. Correspond si l'URL (sans l'identificateur de fragment) commence par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
 
-    - Exemple: `"https://developer"` correspond "https\://developer.mozilla.org/" et  "https\://developers.facebook.com/".
+    - Exemple: `"https://developer"` correspond "https\://developer.mozilla.org/" et "https\://developers.facebook.com/".
 
 - `urlSuffix`{{optional_inline}}
   - : `string`. Correspond si l'URL (sans l'identificateur de fragment) se termine par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut. Notez qu'un slash "/" implicite est ajoutée après l'hôte, donc `"com/"` correspond "https\://example.com", mais pas `"com"`.
@@ -92,9 +93,9 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
     - Par exemple: `[80, 443, [1000, 1200]]` correspond à toutes les demandes sur les ports 80, 443, et dans la plage 1000-1200.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.UrlFilter")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -104,7 +105,8 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -131,4 +133,4 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

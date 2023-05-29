@@ -1,8 +1,9 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
+slug: Web/CSS/CSS_colors
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **CSS Color** 是一个处理颜色的 CSS 模块，包括颜色类型、颜色混合、不透明度、以及你如何将这些颜色和效果应用于 HTML 内容。
@@ -28,7 +29,7 @@ original_slug: Web/CSS/CSS_Color
 
 ## 工具
 
-- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [Color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : 该工具能让你创建、调整和试验自定义颜色变得简单。
 
 ## 规范

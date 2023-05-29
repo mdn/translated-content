@@ -3,6 +3,7 @@ title: Web 字体
 slug: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/为文本添加样式/Web_字体
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许您下载自定义字体和您的 web 页面，以允许更多不同的、自定义的文本样式。
@@ -13,12 +14,12 @@ original_slug: Learn/CSS/为文本添加样式/Web_字体
       <th scope="row">预备知识：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), CSS 基础 (学习<a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS 文本和字体基础 </a
         >。
       </td>

@@ -2,6 +2,7 @@
 title: InputEvent.data
 slug: Web/API/InputEvent/data
 ---
+
 {{SeeCompatTable}}{{APIRef("DOM Events")}}
 
 > **备注：** 请注意，**`data`** 属性在使用键盘输入时会返回输入的字符内容，但在粘贴、拖动时可能会返回 `null`，这取决于浏览器。浏览器也可能把一些数据保存在 {{domxref("InputEvent.dataTransfer")}}，而不是该 **`data`** 属性中。
@@ -39,7 +40,7 @@ editable.addEventListener('input', (e) => {
 });
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -47,4 +48,4 @@ editable.addEventListener('input', (e) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.InputEvent.data")}}
+{{Compat}}

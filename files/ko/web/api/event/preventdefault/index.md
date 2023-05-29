@@ -1,11 +1,6 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-tags:
-  - Method
-  - Reference
-translation_of: Web/API/Event/preventDefault
-browser-compat: api.Event.preventDefault
 ---
 {{apiref("DOM")}}
 
@@ -21,7 +16,7 @@ browser-compat: api.Event.preventDefault
 event.preventDefault();
 ```
 
-## 예제들
+## 예제
 
 ### 기본 클릭 동작 방지하기
 
@@ -86,7 +81,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### JavaScript
 
-이제 실제 작업을 수행할 JavaScript 코드입니다. 우선 {{event("keypress")}} 이벤트를 수신합니다.
+이제 실제 작업을 수행할 JavaScript 코드입니다. 우선 {{domxref("Element/keypress_event", "keypress")}} 이벤트를 수신합니다.
 
 ```js
 var myTextbox = document.getElementById('my-textbox');

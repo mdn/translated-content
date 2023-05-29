@@ -11,6 +11,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
+
 {{AddonSidebar()}}
 
 Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.
@@ -29,11 +30,11 @@ None.
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de  [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans  [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant  {{WebExtAPIRef("permissions.request()")}}.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans [`optional_permissions`](/fr/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant {{WebExtAPIRef("permissions.request()")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.getAll")}}
+{{Compat}}
 
 ## Exemples
 

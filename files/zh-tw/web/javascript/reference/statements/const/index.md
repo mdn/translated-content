@@ -2,6 +2,7 @@
 title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。{{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
 ## 語法
@@ -13,7 +14,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 - `nameN`
   - : 常數的名稱，可以是任何合法的 {{Glossary("identifier")}}。
 - `valueN`
-  - : 常數的值，可以是任何合法的 [expression](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions), 包括 function expression。
+  - : 常數的值，可以是任何合法的 expression，包括 function expression。
 
 ## 描述
 
@@ -94,7 +95,7 @@ MY_ARRAY = ['B'];
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.const")}}
+{{Compat}}
 
 ## 參閱
 

@@ -2,6 +2,7 @@
 title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "can't access lexical declaration \`_variable_' before
@@ -57,4 +58,4 @@ test();
 
 ## 関連情報
 
-- [let における一時的なデッドゾーンとエラー](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)
+- [let における一時的なデッドゾーンとエラー](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)

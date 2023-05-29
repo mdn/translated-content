@@ -2,13 +2,14 @@
 title: PushManager.registrations()
 slug: Web/API/PushManager/registrations
 ---
+
 {{deprecated_header}}{{ApiRef("Push API")}}
 
 **`registrations`** メソッドは、プッシュ通知の端点登録の存在に関してシステムに問い合わせするために使用します。
 
 ## 構文
 
-```
+```js-nolint
 var request = navigator.push.registrations();
 ```
 
@@ -50,9 +51,7 @@ req.onsuccess = function(e) {
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考                                 |
-| -------------------------------- | ---------------------------- | ------------------------------------ |
-| {{SpecName('Push API')}} | {{Spec2('Push API')}} | `PushManager` インターフェイスを定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,14 +1,8 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Components
-  - Window
-translation_of: Web/API/Window/customElements
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} 인터페이스의 **`customElements`** 읽기 전용 속성은 새로운 사용자 지정 요소를 등록하거나, 이전에 등록한 요소의 정보를 받아올 수 있는 {{domxref("CustomElementRegistry")}} 객체의 참조를 반환합니다.

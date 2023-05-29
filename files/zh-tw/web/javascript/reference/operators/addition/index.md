@@ -2,6 +2,7 @@
 title: 相加運算子 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 ---
+
 {{jsSidebar("Operators")}}
 
 相加運算子 (`+`) 用來處理數字的相加或是進行字串的串聯。

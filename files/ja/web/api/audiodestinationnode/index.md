@@ -2,6 +2,7 @@
 title: AudioDestinationNode
 slug: Web/API/AudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AudioDestinationNode`インターフェースは、指定のコンテキストの音声の最後の目的地 - 通常はあなたのデバイスのスピーカーを表します。`OfflineAudioContext`と共に使えば、オーディオデータを「録音」するノードにもできます。
@@ -44,7 +45,7 @@ _親の{{domxref("AudioNode")}}のプロパティを継承しています。_
 
 ## メソッド
 
-*固有のメソッドはありません。親の\_\_{{domxref("AudioNode")}}*のメソッドを継承しています。
+_固有のメソッドはありません。親の {{domxref("AudioNode")}} のメソッドを継承しています。_
 
 ## 例
 
@@ -61,9 +62,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 仕様
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-audiodestinationnode-interface', 'AudioDestinationNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

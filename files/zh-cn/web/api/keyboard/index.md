@@ -2,6 +2,7 @@
 title: Keyboard
 slug: Web/API/Keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`Keyboard`** interface of the the [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
@@ -44,4 +45,4 @@ if (navigator.keyboard) {
 
 ## Browser compatibility
 
-{{Compat("api.Keyboard")}}
+{{Compat}}

@@ -1,6 +1,6 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
+slug: Web/HTML/Element/input/color
 tags:
   - Color Picker
   - Element
@@ -14,7 +14,8 @@ tags:
   - color
 translation_of: Web/HTML/Element/input/color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы типа **`color`** предоставляют элемент пользовательского интерфейса, который позволяет пользователю указать цвет либо с помощью визуального интерфейса выбора цвета, либо путём ввода цвета в текстовое поле в шестнадцатеричном формате #rrggbb. Разрешены только простые цвета (без альфа-канала), хотя CSS colors имеет больше форматов, например названия цветов, функциональные обозначения и шестнадцатеричный формат с альфа-каналом.
 
@@ -78,13 +79,13 @@ colorWell.select();
 
 ### Вариации внешнего вида
 
-Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
+Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](input-color-safari.png)
 
-То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
+То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](input-color-firefox.png)
 
 В этом случае при нажатии на цветовой колодец отображается палитра цветов платформы, из которой вы можете выбрать нужный цвет (в данном случае это палитра macOS):
 
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
+![Screenshot of the element with the color picker open in Firefox Mac.](input-with-picker-firefox-mac.png)
 
 ## Validation
 
@@ -96,7 +97,7 @@ colorWell.select();
 
 ### HTML
 
-HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color `с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
+HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color` с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
 
 ```html
 <p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
@@ -138,7 +139,7 @@ function startup() {
 }
 ```
 
-Это возвращает ссылку на элемент color\*\* **`<input>`** \*\*в переменной `colorWell`, а затем устанавливает значение входного цвета в значение `defaultColor`. То цвет входное {{domxref("HTMLElement/input_event", "input")}} событие настроено, чтобы вызвать `updateFirst()` функцию и {{domxref("HTMLElement/change_event", "change")}} событие, вызывается `updateAll()`. Они оба видны ниже.
+Это возвращает ссылку на элемент color **`<input>`** в переменной `colorWell`, а затем устанавливает значение входного цвета в значение `defaultColor`. То цвет входное {{domxref("HTMLElement/input_event", "input")}} событие настроено, чтобы вызвать `updateFirst()` функцию и {{domxref("HTMLElement/change_event", "change")}} событие, вызывается `updateAll()`. Они оба видны ниже.
 
 Наконец, мы вызываем {{domxref ("HTMLInputElement.select", " select ()")}} для выбора текстового содержимого цветового ввода, если элемент управления реализован в виде текстового поля (это не имеет никакого эффекта, если вместо него предусмотрен интерфейс выбора цвета).
 

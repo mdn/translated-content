@@ -2,6 +2,7 @@
 title: RegExp.prototype.multiline
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## 概述
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 
 ## 示例
 
-### 例子：使用 `multiline`
+### 示例：使用 `multiline`
 
 ```js
 var regex = new RegExp("foo", "m")

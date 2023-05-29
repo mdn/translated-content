@@ -3,6 +3,7 @@ title: Fil d'exécution
 slug: Glossary/Thread
 translation_of: Glossary/Thread
 ---
+
 Dans les sciences de l'informatique, le **fil d'exécution** correspond au lancement de plusieurs tâches ou programmes au même moment. Chaque unité capable d'exécuter du code est nommée un **fil d'exécution**.
 
 Le **[fil d'exécution principal](/fr/docs/Glossary/Main_thread)** est celui qui est utilisé par le navigateur pour prendre en charge les évènements générés par l'internaute, le rendu et la peinture de la page, ainsi que pour lancer la majorité du code utilisé par une page ou une application web. Comme tout cela se passe au sein du fil principal, un site ou une application web lente ralentit aussi l'ensemble du navigateur. Pire, si un script lancé par un site ou une application entre dans une boucle infinie, le fonctionnement du navigateur tout entier sera suspendu. Ce ralentissement général du navigateur conduit à une expérience de navigation frustrante.

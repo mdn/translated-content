@@ -3,6 +3,7 @@ title: Gérer du texte — les chaînes de caractères en JavaScript
 slug: Learn/JavaScript/First_steps/Strings
 translation_of: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.
@@ -219,7 +220,7 @@ let bigmouth = 'Je n\'ai pas eu droit à prendre place...';
 bigmouth;
 ```
 
-Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. `\"`,  et il y a certains codes spéciaux à côté. Voyez  [Notations d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) pour plus de détails.
+Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de la même manière, par ex. `\"`, et il y a certains codes spéciaux à côté. Voyez [Notations d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) pour plus de détails.
 
 ## Concaténation de chaînes
 
@@ -234,7 +235,7 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
 
     Il en résulte que la variable nommée `joined` contient la valeur "Hello, comment allez‑vous&nbsp;?".
 
-2. Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe  `+`  entre chacune. Essayez ceci&nbsp;:
+2. Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe `+`  entre chacune. Essayez ceci&nbsp;:
 
     ```js
     let multiple = one + one + one + one + two;

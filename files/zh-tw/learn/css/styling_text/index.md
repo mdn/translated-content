@@ -2,6 +2,7 @@
 title: 文字樣式
 slug: Learn/CSS/Styling_text
 ---
+
 {{LearnSidebar}}
 
 託了 CSS 語言基礎的福，下一個讓你專攻的 CSS 主題是文字樣式——最常會在 CSS 使用的部分。讓我們來看看文字樣式的基礎知識，包含設定字形、粗細、斜體、行距與字距、陰影以及更多文字功能。我們會套用客製化字形、設定清單樣式和連結樣式到你的網頁來完成這個單元。
@@ -10,7 +11,7 @@ slug: Learn/CSS/Styling_text
 
 在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS) 討論的。
 
-> **備註：** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) or [Thimble](https://thimble.mozilla.org/).
+> **備註：** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) or [Glitch](https://glitch.com/).
 
 ## 指南
 

@@ -2,6 +2,7 @@
 title: Experimental features in Firefox
 slug: Mozilla/Firefox/Experimental_features
 ---
+
 {{FirefoxSidebar}}
 
 Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。实验性特性，例如所提议的可用的 Web 平台标准的实现。这个页面列出了 Firefox Nightly 中的一些新特性和启用方法等信息。在发布这些功能之前，你可以测试 Web 站点和应用程序，并确保一切都能与最新的 Web 技术功能协同工作。
@@ -68,7 +69,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>Positioned CSS Masks</strong><br />A subset of CSS Masks that
         includes
-        <a href="/en-US/docs/Web/CSS/CSS_Masks"
+        <a href="/zh-CN/docs/Web/CSS/CSS_Masks"
           >longhand properties of CSS Masks</a
         >, as well as a change in the shorthand property
       </td>
@@ -146,10 +147,10 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
         </p>
         <p>
           Firefox currently implements the <code>&#x3C;shape-box></code> values
-          ({{bug(1309467)}}) as well as the
-          <code>circle()</code> ({{bug(1311244)}}),
-          <code>ellipse()</code> ({{bug(1326406)}}), and
-          <code>polygon()</code> ({{bug(1326409)}}) functions.
+          (<a href="https://bugzil.la/1309467">Firefox bug 1309467</a>) as well as the
+          <code>circle()</code> (<a href="https://bugzil.la/1311244">Firefox bug 1311244</a>),
+          <code>ellipse()</code> (<a href="https://bugzil.la/1326406">Firefox bug 1326406</a>), and
+          <code>polygon()</code> (<a href="https://bugzil.la/1326409">Firefox bug 1326409</a>) functions.
         </p>
       </td>
       <td>关闭<br /><sub>(available since 53)</sub></td>
@@ -183,8 +184,8 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
           to specify how many columns an element spans across.
         </p>
         <p>
-          Firefox currently only parses the property ({{bug(1339298)}}),
-          it's not actually implemented yet ({{bug(616436)}}).
+          Firefox currently only parses the property (<a href="https://bugzil.la/1339298">Firefox bug 1339298</a>),
+          it's not actually implemented yet (<a href="https://bugzil.la/616436">Firefox bug 616436</a>).
         </p>
       </td>
       <td>
@@ -199,7 +200,7 @@ Mozilla 发布了测试的 nightly 版本，用于测试新的浏览器特性。
       <td>
         <strong>The <code>frames()</code> timing function</strong><br />See
         <a
-          href="/en-US/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
+          href="/zh-CN/docs/Web/CSS/single-transition-timing-function#The_frames()_class_of_timing-functions"
           >The frames() class of timing-functions</a
         >
         for more details.
@@ -251,7 +252,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>Mac 上的 WebVR API 1.1</strong><br /><a
-          href="/en-US/docs/Web/API/WebVR_API"
+          href="/zh-CN/docs/Web/API/WebVR_API"
           >WebVR API</a
         >
         允许你控制并和使用虚拟现实设备。
@@ -265,7 +266,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>游戏手柄扩展</strong><br /><a
-          href="/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
+          href="/zh-CN/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions"
           >The Gamepad Extensions</a
         >
         provide access to additional functionality such as pose information in
@@ -283,7 +284,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Experimental fetch controller/signal/observer interfaces</strong
         ><br />Also known as "cancellable fetch",
         <a
-          href="/en-US/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
+          href="/zh-CN/docs/Web/API/Fetch_API#Experimental_fetch_controllersignalobserver_interfaces"
           >these interfaces</a
         >
         contain functionality to allow fetch request operations to be observed
@@ -330,7 +331,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong><code>GeometryUtils.getBoxQuads()</code></strong>
-        ({{bug(917755)}})
+        (<a href="https://bugzil.la/917755">Firefox bug 917755</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -352,7 +353,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         >,<br /><strong><code>GeometryUtils.RectFromNode()</code></strong
         >, and<br /><code
           ><strong>GeometryUtils.convertQuadFromNode()</strong></code
-        ><br />({{bug(918189)}})
+        ><br />(<a href="https://bugzil.la/918189">Firefox bug 918189</a>)
       </td>
       <td>31</td>
       <td>31</td>
@@ -397,7 +398,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         <strong>Performance Observer API</strong><br />The
         {{domxref("PerformanceObserver")}} interface is used to
         <em>observe</em> performance measurement events and be notified of new
-        <a href="/en-US/docs/Web/API/PerformanceEntry">performance entries</a>
+        <a href="/zh-CN/docs/Web/API/PerformanceEntry">performance entries</a>
         as they are recorded in the browser's <em>performance timeline</em>.
       </td>
       <td>49</td>
@@ -409,7 +410,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong>WebVTT Regions API</strong><br /><a
-          href="/en-US/docs/Web/API/Web_Video_Text_Tracks_Format"
+          href="/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format"
           >WebVTT</a
         >
         regions are parts of the video viewport that provide a rendering area
@@ -505,7 +506,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Web_Animations_API"
+          ><a href="/zh-CN/docs/Web/API/Web_Animations_API"
             >Web Animations API: KeyframeEffect and KeyframeEffectReadOnly</a
           ></strong
         ><br />The
@@ -515,7 +516,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
         constructors can be used to clone existing
         {{domxref("KeyframeEffectReadOnly")}} object instances by
         being given the object to clone as their only parameter (see
-        {{bug(1273784)}}.)
+        <a href="https://bugzil.la/1273784">Firefox bug 1273784</a>.)
       </td>
       <td>52</td>
       <td>52</td>
@@ -540,7 +541,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
     <tr>
       <td>
         <strong
-          ><a href="/en-US/docs/Web/API/Payment_Request_API"
+          ><a href="/zh-CN/docs/Web/API/Payment_Request_API"
             >Payment Request API</a
           ></strong
         ><br />为网络支付提供的一个 API。
@@ -630,7 +631,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
       <td>
         <strong>Layout side panel</strong><br />The Layout side panel allows to
         inspect and manage different CSS layout types like
-        <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
+        <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
       </td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>

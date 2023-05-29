@@ -2,6 +2,7 @@
 title: border-left-color
 slug: Web/CSS/border-left-color
 ---
+
 {{CSSRef("CSS Borders")}}
 
 **`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。
@@ -32,11 +33,11 @@ border-left-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 左边框的颜色。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### 一个带边框的简单 div
 
@@ -63,19 +64,19 @@ border-left-color: unset;
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+{{EmbedLiveSample('一个带边框的简单 div')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("css.properties.border-left-color")}}
+{{Compat}}
 
-## See also
+## 参见
 
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.

@@ -8,6 +8,7 @@ tags:
   - requête
 translation_of: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête de requête HTTP **`Authorization`** contient les identifiants permettant l'authentification d'un utilisateur auprès d'un serveur, habituellement après que le serveur ait répondu avec un statut {{HTTPStatus("401")}} `Unauthorized` et l'en-tête {{HTTPHeader("WWW-Authenticate")}}
@@ -62,10 +63,11 @@ Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) a
 
 ## Spécifications
 
-| Spécification                                        | Titre                                  |
-| ---------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1 : Authentification            |
-| {{RFC("7617")}}                                 | Schéma d'Authentification HTTP 'Basic' |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir
 

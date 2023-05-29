@@ -2,6 +2,7 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 ---
+
 {{APIRef("DOM")}}
 
 **`AbortSignal`** 接口表示一个信号对象（signal object），它允许你通过 {{domxref("AbortController")}} 对象与 DOM 请求（如 Fetch）进行通信并在需要时将其中止。
@@ -74,7 +75,7 @@ function fetchVideo() {
 
 > **备注：** 当调用 `abort()` 时，`fetch()` promise 会以“`AbortError`”`DOMException` 拒绝。
 
-你可以[在 github 上找到一个完整、可运行的示例](https://github.com/mdn/dom-examples/tree/master/abort-api)；你也可以参见[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
+你可以[在 GitHub 上找到一个完整、可运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你也可以参见[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
 ### 中止超时的读取操作
 

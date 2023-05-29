@@ -2,9 +2,10 @@
 title: ':invalid'
 slug: Web/CSS/:invalid
 ---
+
 {{CSSRef}}
 
-**`:invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素や {{HTMLElement("form")}} 要素のうち内容が[検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗したものを表します。
+**`:invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素や {{HTMLElement("form")}} 要素のうち内容が[検証](/ja/docs/Web/HTML/Constraint_validation)に失敗したものを表します。
 
 ```css
 /* 無効な <input> を選択 */
@@ -17,7 +18,9 @@ input:invalid {
 
 ## 構文
 
-{{csssyntax}}
+```
+:invalid
+```
 
 ## 例
 

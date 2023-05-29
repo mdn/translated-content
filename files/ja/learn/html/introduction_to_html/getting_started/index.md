@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
 l10n:
   sourceCommit: a4c58f2ffffe6a19f36069202c7f5cccd833522a
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 この記事では HTML の不変的な基礎を扱って、始められるようにします。要素や属性などの重要な用語 (すでに聞き覚えはあるかもしれません)、それらが言語にどう組み込まれているか説明します。また、HTML 要素の構造、典型的な HTML ページの構造を見せて、その他の重要な基礎言語機能について説明します。それでは、 HTML の例とともに見ていきましょう。
@@ -47,7 +48,7 @@ My cat is very grumpy
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。しかし、すべての要素を小文字で書くことが、一貫性や信頼性、その他の理由のために最良の習慣です。
+> **メモ:** HTML の要素は大文字小文字を区別しません。つまり大文字でも小文字でも書くことができます。例えば {{htmlelement("title")}} 要素は `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` などと書くことができて、どれも正しく動作します。しかし、すべての要素を小文字で書くことが、一貫性や信頼性、その他の理由のために最良の習慣です。
 
 ## HTML 要素の構成
 
@@ -227,11 +228,11 @@ HTML の要素には知っておくべき 2 つの重要なカテゴリーがあ
 
 {{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **Note:** HTML5 においては要素のカテゴリーが再定義されています。詳しくは[要素のコンテンツカテゴリー](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)を参照してください。これらの定義は、以前の定義よりも正確で曖昧さもありませんが、新しい定義は、 _ブロック_ と _インライン_ よりも理解するのがかなり複雑です。この記事では、この 2 つの用語に留めます。
+> **メモ:** HTML5 においては要素のカテゴリーが再定義されています。詳しくは[要素のコンテンツカテゴリー](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)を参照してください。これらの定義は、以前の定義よりも正確で曖昧さもありませんが、新しい定義は、 _ブロック_ と _インライン_ よりも理解するのがかなり複雑です。この記事では、この 2 つの用語に留めます。
 
-> **Note:** この記事で使用している _ブロック_ と _インライン_ という用語は、 [CSS ボックスの種類](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブロックボックスとインラインボックス)と同じ名前ですが、混同しないでください。既定では名前が関係ありますが、 CSS の表示型を変更しても要素のカテゴリーは変わらず、どの要素を含むことができるか、どの要素に含まれるかは変わりません。 HTML5 でこれらの用語を削除した理由の 1 つは、このかなり一般的な混乱を防ぐためでした。
+> **メモ:** この記事で使用している _ブロック_ と _インライン_ という用語は、 [CSS ボックスの種類](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブロックボックスとインラインボックス)と同じ名前ですが、混同しないでください。既定では名前が関係ありますが、 CSS の表示型を変更しても要素のカテゴリーは変わらず、どの要素を含むことができるか、どの要素に含まれるかは変わりません。 HTML5 でこれらの用語を削除した理由の 1 つは、このかなり一般的な混乱を防ぐためでした。
 
-> **Note:** ブロックレベル要素とインライン要素の一覧を含む有用なリファレンスページがあります。[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
+> **メモ:** ブロックレベル要素とインライン要素の一覧を含む有用なリファレンスページがあります。[ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)と[インライン要素](/ja/docs/Web/HTML/Inline_elements)をご覧ください。
 
 ### 空要素
 
@@ -245,9 +246,9 @@ HTML の要素には知っておくべき 2 つの重要なカテゴリーがあ
 
 {{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
 
-> **Note:** 空要素 (Empty elements) は void 要素と呼ばれることもあります。
+> **メモ:** 空要素 (Empty elements) は void 要素と呼ばれることもあります。
 
-> **Note:** HTML では、例えば `<img src="images/cat.jpg" alt="cat" />` のように、空要素のタグの末尾に `/` を追加する必要はありません。しかし、これは有効な構文であり、 HTML を有効な XML にしたい場合に使うことがあります。
+> **メモ:** HTML では、例えば `<img src="images/cat.jpg" alt="cat" />` のように、空要素のタグの末尾に `/` を追加する必要はありません。しかし、これは有効な構文であり、 HTML を有効な XML にしたい場合に使うことがあります。
 
 ## 属性
 
@@ -409,7 +410,7 @@ textarea.onkeyup = () => {
 
 ### 論理属性
 
-沢山の HTML ソースを見ていくうちに、属性値のない属性を見かけることがあるでしょう。これは文法的に許されています。これらは「論理属性」と呼ばれています。論理属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、 {{htmlattrxref("disabled", "input")}} 属性は `input` 要素に指定することができる論理属性と考えてください。（これを使用して、ユーザーが入力できないようにフォームの入力要素を「無効」にします。無効にされた要素は、通常グレーアウトした外見になります。）
+沢山の HTML ソースを見ていくうちに、属性値のない属性を見かけることがあるでしょう。これは文法的に許されています。これらは「論理属性」と呼ばれています。論理属性は一般的に属性名と同じ属性値だけを取ることができます。例えば、 [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) 属性は `input` 要素に指定することができる論理属性と考えてください。（これを使用して、ユーザーが入力できないようにフォームの入力要素を「無効」にします。無効にされた要素は、通常グレーアウトした外見になります。）
 
 ```html
 <input type="text" disabled="disabled">
@@ -513,7 +514,7 @@ textarea.onkeyup = () => {
 
 2. `<html></html>`: {{htmlelement("html")}} 要素。ページ上のすべての内容を囲む要素です。ルート要素と呼ばれることもあります。
 3. `<head></head>`: {{htmlelement("head")}} 要素。この要素は、 HTML ページに記載する、ページが閲覧者に見せる**コンテンツではないもの**すべてを入れるコンテナーとして機能します。これには、検索結果に現れるキーワードやページの説明文、内容をスタイル設定するための CSS、文字セットの宣言などが記載されます。これについては、次の記事で詳しく説明します。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} この要素は、 {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} または {{htmlelement("title")}} など、他の HTML メタ関連の要素では表現できないメタデータを表現します。htmlattrxref("charset", "meta")}} 属性は、文書の文字セットを UTF-8 に設定します。これは、人間の書いた言語の大半の文字を含むものです。この設定により、ページは、それが含むかもしれないあらゆるテキスト内容を扱うことができます。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} この要素は、 {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} または {{htmlelement("title")}} など、他の HTML メタ関連の要素では表現できないメタデータを表現します。[`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性は、文書の文字セットを UTF-8 に設定します。これは、人間の書いた言語の大半の文字を含むものです。この設定により、ページは、それが含むかもしれないあらゆるテキスト内容を扱うことができます。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
 5. `<title></title>`: {{htmlelement("title")}} 要素。ページのタイトルを設定します。このタイトルは、ページが読み込まれたブラウザータブに表示されるタイトルです。また、ページタイトルは、そのページがブックマークされたときの説明にも使用されます。
 6. `<body></body>`: {{htmlelement("body")}} 要素。テキスト、画像、動画、ゲーム、再生可能な音声トラックなど、ページに表示される**すべての**コンテンツがこの中に記載されます。
 
@@ -526,7 +527,7 @@ textarea.onkeyup = () => {
 3. 新規テキストファイルの中で「貼り付け」します。
 4. `index.html` という名前でファイルを保存します。
 
-> **Note:** 元となる HTML テンプレートは [MDN 学習領域 GitHub リポジトリー](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)にも置いてあります。
+> **メモ:** 元となる HTML テンプレートは [MDN 学習領域 GitHub リポジトリー](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)にも置いてあります。
 
 ウェブブラウザーでこのファイルを開くとレンダリングされた HTML 文書が表示されます。コードを編集した場合は、ブラウザー上でページの更新（または、再読み込み）を行うと編集結果が反映されます。最初はこんな表示です。
 
@@ -683,7 +684,7 @@ textarea.onkeyup = () => {
 
 HTML 要素の内容でどれだけホワイトスペースを使用したとしても（1 つ以上の空白文字だけでなく、改行も含みます）、 HTML パーサーはコードをレンダリングする際に、ホワイトスペースの並びを 1 文字の空白に縮小します。では、なぜこれほど多くのホワイトスペースを使用するのでしょうか。その答えは、読みやすさにあります。
 
-> **Note:** 訳注: 全角空白はホワイトスペースに含まれず、空白の縮小の対象にもなりません。
+> **メモ:** 訳注: 全角空白はホワイトスペースに含まれず、空白の縮小の対象にもなりません。
 
 コードをきれいに整形すると、何をしようとしているのかがわかりやすくなります。この HTML では、入れ子になっている各要素を、中に入っている要素よりも空白 2 文字分多く字下げしています。整形スタイル（それぞれの字下げレベルを空白何文字分にするか、など）はあなた次第ですが、書式化は検討した方がいいでしょう。
 
@@ -715,7 +716,7 @@ HTMLでは、`<`、`>`、`"`、`'`、`&` の各文字が特殊文字として扱
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Note:** 他の記号に実体参照を使用する必要はありません。現代のブラウザーは、 HTML の[文字エンコーディングが UTF-8 に設定](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#html_文書の文字コードを指定する)されていれば、実際の記号を正しく扱うことができるからです。
+> **メモ:** 他の記号に実体参照を使用する必要はありません。現代のブラウザーは、 HTML の[文字エンコーディングが UTF-8 に設定](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#html_文書の文字コードを指定する)されていれば、実際の記号を正しく扱うことができるからです。
 
 ## HTML のコメント
 
@@ -739,22 +740,10 @@ HTML のコメントを書くには、特別なマーカーの `<!--` と `-->` 
 
 この時点で、あなたは HTML がどのようなものか、そしてどのように動作するのか、基本的なレベルで理解できたはずです。また、いくつかの要素や属性を書くことができるようになっているはずです。このモジュールの後続の記事では、ここで紹介したトピックのいくつかをさらに詳しく説明し、また、この言語の他の概念も表示する予定です。
 
-> **Note:** HTML を学び始めたら、 [CSS](/ja/docs/Learn/CSS) の基本を学ぶことも検討してみてください。 CSS は、ウェブページのスタイル設定に使用される言語です。例えば、フォントや色を変更したり、ページのレイアウトを変更したりすることができます。 HTML と CSS がうまく協調しながら動作することがおわかりいただけると思います。
+> **メモ:** HTML を学び始めたら、 [CSS](/ja/docs/Learn/CSS) の基本を学ぶことも検討してみてください。 CSS は、ウェブページのスタイル設定に使用される言語です。例えば、フォントや色を変更したり、ページのレイアウトを変更したりすることができます。 HTML と CSS がうまく協調しながら動作することがおわかりいただけると思います。
 
 ## 関連情報
 
 - [CSS を使って HTML 要素に色をつける](/ja/docs/Web/CSS/CSS_Colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

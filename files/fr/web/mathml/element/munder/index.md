@@ -3,6 +3,7 @@ title: <munder>
 slug: Web/MathML/Element/munder
 translation_of: Web/MathML/Element/munder
 ---
+
 {{MathMLRef()}}
 
 L'élément MathML `<munder>` est utilisé pour attacher un accent ou une limite sous une expression. La syntaxe est la suivante: `<munder> base script-en-dessous </munder>`
@@ -48,14 +49,11 @@ Rendu dans votre navigateur: <math><munder accentunder="true"><mrow><mi>x </mi><
 
 ## Spécifications
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.munder', 'munder') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.munder', 'munder') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.munder")}}
+{{Compat}}
 
 ## Voir aussi
 

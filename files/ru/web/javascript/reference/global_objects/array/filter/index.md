@@ -11,6 +11,7 @@ tags:
   - Polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 ---
+
 {{JSRef}}
 
 Метод **`filter()`** **создаёт новый массив со всеми элементами**, прошедшими проверку, задаваемую в передаваемой функции.

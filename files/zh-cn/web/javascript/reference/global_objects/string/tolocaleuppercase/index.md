@@ -2,6 +2,7 @@
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 ---
+
 {{JSRef}}
 
 **`toLocaleUpperCase()`** 方法根据本地主机语言环境把字符串转换为大写格式，并返回转换后的字符串。
@@ -19,7 +20,7 @@ str.toLocaleUpperCase([locale, locale, ...])
 ### 参数
 
 - `locale` {{optional_inline}}
-  - : The `locale` parameter indicates the locale to be used to convert to upper case according to any locale-specific case mappings. If multiple locales are given in an {{jsxref("Array")}}, the [best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment’s current locale.
+  - : The `locale` parameter indicates the locale to be used to convert to upper case according to any locale-specific case mappings. If multiple locales are given in an {{jsxref("Array")}}, the [best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale) is used. The default locale is the host environment's current locale.
 
 ### 返回值
 
@@ -37,7 +38,7 @@ The `toLocaleUpperCase()` method returns the value of the string converted to up
 Also notice that conversion is not necessarily a 1:1 character mapping, as some characters might result in two (or even more) characters when transformed to upper-case. Therefore the length of the result string can differ from the input length. This also implies that the conversion is not stable, so i.E. the following can return `false`:
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 
-## 例子
+## 示例
 
 ### 使用 `toLocaleUpperCase()`
 

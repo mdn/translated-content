@@ -2,6 +2,7 @@
 title: border-bottom
 slug: Web/CSS/border-bottom
 ---
+
 {{CSSRef}}
 
 border-bottom 简写属性把下边框的所有属性：{{Cssxref("border-bottom-color")}}，{{Cssxref("border-bottom-style")}} 与 {{Cssxref("border-bottom-width")}} 设置到了一个声明中。这些属性描述了元素的下边框样式。
@@ -41,7 +42,7 @@ border-bottom: medium dashed blue;
 - {{cssxref("&lt;color&gt;")}}
   - : 见 {{Cssxref("border-bottom-color")}}。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -64,7 +65,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -72,4 +73,4 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-bottom")}}
+{{Compat}}

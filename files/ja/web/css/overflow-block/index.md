@@ -2,11 +2,12 @@
 title: overflow-block
 slug: Web/CSS/overflow-block
 ---
+
 {{CSSRef}}
 
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、内容がブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、内容をはみ出させる、のいずれかになります。
 
-> **Note:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
+> **メモ:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
 
 ## 構文
 

@@ -2,6 +2,7 @@
 title: PositionError.code
 slug: Web/API/GeolocationPositionError/code
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`PositionError.code`** 是一個唯讀無符號整數(`unsigned short)表示錯誤碼` 。以下列出可能的值：
@@ -24,7 +25,7 @@ typeErr = poserr.code
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPositionError.code")}}
+{{Compat}}
 
 ## 請參考
 

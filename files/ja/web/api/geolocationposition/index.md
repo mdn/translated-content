@@ -2,6 +2,7 @@
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPosition`** インターフェイスは対象のデバイスのある時間における現在位置を表します。{{domxref("GeolocationCoordinates")}} オブジェクトで表される位置情報には、地球を表す楕円体上における平面座標のほかに、高度や速度といった情報も含まれます。

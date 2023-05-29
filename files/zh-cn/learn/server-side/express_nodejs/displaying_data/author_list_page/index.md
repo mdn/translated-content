@@ -1,14 +1,15 @@
 ---
-title: 作者清单面页、分类清单页面、与自我挑战
+title: 作者清单面页、分类清单页面挑战
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 作者列表页面，需要呈现数据库中所有作者的列表，有每位作者的名字，并连结到作者详细内容页面。出生与死亡日期应该在名字后面，并且在同一列。
 
 ## 控制器
 
 作者列表控制器函数，需要获取所有作者实例的列表，然后将这些实例传递给模板进行渲染。
 
-打开**/controllers/authorController.js**。在文件顶部附近，找到导出的`author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
+打开 **/controllers/authorController.js**。在文件顶部附近，找到导出的 `author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
 
 ```js
 // Display list of all Authors.
@@ -25,7 +26,7 @@ exports.author_list = function(req, res, next) {
 };
 ```
 
-该方法使用模型的 `find()`, `sort()` 和 `exec()` 函数，以返回所有`Author`对象，并按`family_name`的字母顺排列。传递给`exec()`方法的回调被调用，并将传入任何错误（或`null`）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现 **author_list**（.pug）模板，传递页面标题`title，`和作者列表（`author_list`）。
+该方法使用模型的 `find()`, `sort()` 和 `exec()` 函数，以返回所有 `Author` 对象，并按 `family_name` 的字母顺排列。传递给 `exec()` 方法的回调被调用，并将传入任何错误（或 `null`）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现 **author_list**（.pug）模板，传递页面标题 `title`，和作者列表（`author_list`）。
 
 ## 视图
 
@@ -47,7 +48,7 @@ block content
     li There are no authors.
 ```
 
-如同我们其它的模板，上面视图也依照着同样的模式。
+如同我们其他的模板，上面视图也依照着同样的模式。
 
 ## 它看起來像是？
 

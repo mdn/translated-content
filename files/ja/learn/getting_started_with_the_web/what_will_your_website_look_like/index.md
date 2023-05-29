@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
   sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 「_ウェブサイトをどんな外見にするか_」では、コードを書き始める前に、このウェブサイトについて計画したりデザインしたりすべき事柄について説明します。例えば「どんな情報をウェブサイトで提供するのか」「どのフォントや色を使いたいのか」「このウェブサイトは何をするのか」などです。
@@ -18,7 +19,7 @@ l10n:
 2. **主題についてどんな情報を表現しようとしていますか？** タイトルといくつかの段落、それからページに表示させたい画像を考えます。
 3. **ウェブサイトをどんな外見にしますか？** 簡単で大まかな言葉で言うと？背景色は？適切なフォントはフォーマル？漫画？太字で派手？繊細？
 
-> **Note:** 複雑なプロジェクトでは、色、フォント、ページのアイテム間の余白、適切な文体など、詳細なガイドラインが必要です。これは、デザインガイド、デザインシステム、ブランドブックなどと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
+> **メモ:** 複雑なプロジェクトでは、色、フォント、ページのアイテム間の余白、適切な文体など、詳細なガイドラインが必要です。これは、デザインガイド、デザインシステム、ブランドブックなどと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
 
 ## デザインをスケッチする
 
@@ -26,7 +27,7 @@ l10n:
 
 ![紙に描いたウェブサイトのラフ画とスケッチ](website-drawing-scan.png)
 
-> **Note:** 現実の複雑なウェブサイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディターや Web の技術を使って、デジタルのモックアップを作るのです。
+> **メモ:** 現実の複雑なウェブサイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディターや Web の技術を使って、デジタルのモックアップを作るのです。
 >
 > 多くの場合、ウェブの開発チームには、グラフィックデザイナーと{{Glossary("UX", "ユーザーエクスペリエンス")}} (UX) デザイナーがいます。グラフィックデザイナーは、ウェブサイトの見た目を作り上げます。 UX デザイナーは、もう少し抽象的な役割を持っていて、サイトを訪れるユーザーがウェブサイトでどういう経験をし、どのように操作するかということを考えます。
 
@@ -66,14 +67,3 @@ l10n:
 3. Google Fonts を使用する際の詳細については、[このページ](https://developers.google.com/fonts/docs/getting_started)を参照してください。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール内の文書
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

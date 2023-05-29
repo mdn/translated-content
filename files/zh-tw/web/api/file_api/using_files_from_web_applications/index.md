@@ -3,6 +3,7 @@ title: 在網頁應用程式中使用本地檔案
 slug: Web/API/File_API/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
+
 現在可以透過新增至 HTML5 DOM 的 File API 讓 web 內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用 HTML 的 [`input`](/zh-TW/DOM/HTMLInputElement) 元素，或是用拖曳檔案（drag and drop）的方式來完成。
 
 如果你想要使用 DOM 檔案 API 的文件擴展或是其他 Chrome 程式碼，你可以參考[使用 DOM 檔案 API 在 FireFox 外觀代碼中](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)。
@@ -43,7 +44,7 @@ var selectedFile = $('#input')[0].files[0];
 <input type="file" id="input" onchange="handleFiles(this.files)">
 ```
 
-當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 `{{domxref("File")}}` 的物件，裡面的東西就是使用者選取的檔案。
+當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 {{domxref("File")}} 的物件，裡面的東西就是使用者選取的檔案。
 
 如果你想要讓使用者一次選擇多個檔案，可以在 `input` 元素中使用 `multiple` 的屬性：
 
@@ -72,7 +73,7 @@ function handleFiles() {
 
 ## 獲得選取檔案的資訊
 
-由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 `{{domxref("File")}}` 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
+由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 {{domxref("File")}} 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
 
 ```js
 var numFiles = files.length;
@@ -100,7 +101,7 @@ for (var i = 0; i < files.length; i++) {
 
 ## 使用 click() 方法隱藏檔案輸入元素
 
-從 Gecko 2.0 {{ geckoRelease("2.0") }}開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
+從 Gecko 2.0 開始，為了顯示個人化開啟檔案的 UI 和使用者選擇的檔案可以隱藏 {{ HTMLElement("input") }} 元素和顯示個人化的設計。可以藉由設置 CSS 「display:none」 和對 {{ HTMLElement("input") }} 元素呼叫 `click()` 方法。
 
 HTML 如下：
 
@@ -204,7 +205,7 @@ function handleFiles(files) {
 
 ## 使用 object URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} 支援 DOM 的{{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法。可以藉由這些方法創建表示任何為 DOM [`File`](/zh-TW/DOM/File) 物件的 data URL 字串，包含了使用者電腦上的檔案。
+Gecko 2.0 支援 DOM 的{{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法。可以藉由這些方法創建表示任何為 DOM [`File`](/zh-TW/DOM/File) 物件的 data URL 字串，包含了使用者電腦上的檔案。
 
 可以使 [`File`](/zh-TW/DOM/File) 物件作為 HTML 元素 URL 的參考，創建 object URL 的方法：
 
@@ -220,7 +221,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## 範例：使用 object URLs 顯示圖片
 
-{{ geckoRelease("2.0") }}這個範例使用 object URLs 顯示圖像縮圖。此外也顯示了其他包含檔案名稱和檔案大小的訊息。[線上範例](/samples/domref/file-click-demo.html) (註:瀏覽器版本要求 11/22 之後的火狐版本)。
+這個範例使用 object URLs 顯示圖像縮圖。此外也顯示了其他包含檔案名稱和檔案大小的訊息。[線上範例](/samples/domref/file-click-demo.html) (註:瀏覽器版本要求 11/22 之後的火狐版本)。
 
 > **備註：** 這個 API 在較早的 Firefox 4 betas 存在但是 11/22 號後的版本有改變, 所以確定瀏覽器在最新的版本!
 
@@ -356,7 +357,7 @@ function FileUpload(img, file) {
 5. The `FileReader` object is used to convert the file to a binary string.
 6. Finally, when the content is loaded the `XMLHttpRequest` function `sendAsBinary()` is called to upload the file's content.
 
-> **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 {{ geckoRelease(31) }} 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
+> **備註：** 範例中非標準的 `sendAsBinary` 方法已經在 Gecko 31 廢棄且很快將會被移除。可以改使用標準的 `send(Blob data)。`
 
 ### 非同步處理上傳檔案的程序
 
@@ -401,9 +402,9 @@ _使用二進制數據時，這些程式碼還需要修改。_
 
 ## 你也可以參考這些文章
 
-- `{{domxref("File")}}`
+- {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileReader") }}
 - [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using the DOM File API in chrome code](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- `{{domxref("XMLHttpRequest")}}`
+- {{domxref("XMLHttpRequest")}}

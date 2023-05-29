@@ -2,6 +2,7 @@
 title: match
 slug: Web/EXSLT/regexp/match
 ---
+
 {{ XsltRef() }}
 
 `regexp:match()` performs regular expression matching on a string, returning the submatches found as a result.

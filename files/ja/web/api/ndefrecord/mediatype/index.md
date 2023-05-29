@@ -2,6 +2,7 @@
 title: NDEFRecord.mediaType
 slug: Web/API/NDEFRecord/mediaType
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`mediaType`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードの {{Glossary("MIME type", "MIME タイプ")}}を返します。この値は `recordType` が `"mime"` と等しくない場合は `null` になります。

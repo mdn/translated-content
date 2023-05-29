@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定数据块送入到关联的流中。
@@ -68,3 +69,8 @@ const stream = new ReadableStream({
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

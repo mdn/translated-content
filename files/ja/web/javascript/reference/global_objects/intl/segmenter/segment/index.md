@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 l10n:
   sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
+
 {{JSRef}}
 
 **`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。

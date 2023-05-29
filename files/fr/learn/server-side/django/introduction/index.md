@@ -7,6 +7,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 Dans ce premier article sur Django, nous allons répondre à la question suivante "Qu'est ce que Django ?", et nous vous montrerons en quoi cette infrastructure d'application (aussi appelée framework) est spéciale. Nous allons ensuite voir les principales fonctionnalités, mais aussi quelques fonctionnalités avancées que nous n'aurons malheureusement pas le temps de voir en détails dans ce module. Nous allons aussi vous montrer comment fonctionne une application Django (bien que nous n'ayons pas d'environnement où le tester) .
@@ -125,7 +126,7 @@ urlpatterns = [
 ]
 ```
 
-L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()`(les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
+L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()` (les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
 
 Le premier argument de chaque méthode est une route (pattern) qui sera reconnu.
 La méthode `path()` utilise des chevrons pour définir les parties de l'URL qui seront capturées et passées dans les fonctions vues comme arguments nommés. La fonction `re_path()` utilise une approche de correspondance de pattern flexible, connue sous le nom d'expression régulière. Nous parlerons de ces dernières dans un prochain article !
@@ -136,7 +137,7 @@ Le second argument est une autre fonction qui sera appelée quand le pattern ser
 
 Les vues sont le coeur des applications web. Elles reçoivent des requêtes HTTP de clients web et renvoient des réponses HTTP. Entretemps, elles mobilisent les autres ressources du framework pour accéder aux bases de données, préparer le rendu des templates, etc.
 
-L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet  `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
+L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
 
 ```python
 ## nom du fichier : view.py (fonction vue Django)
@@ -152,8 +153,8 @@ def index(request):
 
 > **Note :** Un peu de Python :
 >
-> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet  `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
-> - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**.  L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
+> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
+> - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**. L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
 
 Les vues sont généralement stockées dans un fichier nommé **views.py**.
 
@@ -184,13 +185,13 @@ class Team(models.Model):
 >
 > - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs *instances* spécifiques de ce type d'objet d'après le modèle d'une classe.
 >
->   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`.  Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
+>   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`. Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
 
 ### Requêter les données (views.py)
 
 Le modèle Django fournit une API de requête simplifiée qui nous permet de faire des recherches dans une base de données. Cette API peut inclure plusieurs champs à la fois en supportant plusieurs critères (e.g. exactement, insensible à la casse, supérieur à, etc.), et peut supporter des déclarations complexes (par exemple, vous pouvez spécifier une recherche sur les équipes U11 ayant un nom d'équipe commençant par "Fr" ou se terminant par "al").
 
-L'extrait de code ci-dessous montre une fonction vue (gestionnaire de ressources) affichant toutes nos équipes U09. La ligne en gras montre comment on peut utiliser l'API de requête pour filtrer tous les enregistrements où le champ `team_level` comprend strictement le texte 'U09' (notez comment ce critère est passé dans la fonction `filter()` comme argument, où le nom du champ et le type de correspondance sont séparés par un double underscore : **team_level\_\_exact**).
+L'extrait de code ci-dessous montre une fonction vue (gestionnaire de ressources) affichant toutes nos équipes U09. La ligne en gras montre comment on peut utiliser l'API de requête pour filtrer tous les enregistrements où le champ `team_level` comprend strictement le texte 'U09' (notez comment ce critère est passé dans la fonction `filter()` comme argument, où le nom du champ et le type de correspondance sont séparés par un double underscore : **`team_level__exact`**).
 
 ```python
 ## nom du fichier : views.py
@@ -250,21 +251,3 @@ Félicitations, vous avez atteint la première étape dans votre voyage avec Dja
 Vous avez déjà vu un peu de vrai code Django ci-dessus, mais à la différence du code côté client, vous aurez besoin de configurer un environnement de développement pour l'utiliser. C'est notre prochaine étape.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

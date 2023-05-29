@@ -3,6 +3,7 @@ title: イベントの作成と起動
 slug: Web/Events/Creating_and_triggering_events
 original_slug: Web/Events/Creating_and_triggering_events
 ---
+
 この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
 
 ## カスタムイベントの作成
@@ -112,7 +113,7 @@ textarea.addEventListener('input', function() {
 
 ### 組み込みイベントの起動
 
-この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html)。
+この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
 
 ```js
 function simulateClick() {

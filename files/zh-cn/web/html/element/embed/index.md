@@ -2,6 +2,7 @@
 title: <embed>：外部内容嵌入元素
 slug: Web/HTML/Element/embed
 ---
+
 **HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
 
 > **备注：** 这篇文档仅定义该元素在 HTML5 中定义的部分，不包含该元素之前的声明内容和非标准的实现。
@@ -28,7 +29,7 @@ slug: Web/HTML/Element/embed
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td>{{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM interface</th>
@@ -41,13 +42,13 @@ slug: Web/HTML/Element/embed
 
 这个元素的属性包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
-- {{htmlattrdef("src")}}
+- `src`
   - : 被嵌套的资源的 URL。
-- {{htmlattrdef("type")}}
+- `type`
   - : 用于选择插件实例化的 MIME 类型。
-- {{htmlattrdef("width")}}
+- `width`
   - : 资源显示的宽度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## 例子
@@ -62,12 +63,12 @@ slug: Web/HTML/Element/embed
 
 ## 浏览器兼容性
 
-> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 {{Bug("730768")}}）。建议使用 \<object> 或 \<iframe> 元素。
+> **备注：** 不同浏览器之间显示有差异。Blink 内核浏览器（Chrome，Opera）会显示 HTML 资源的内容，但 Firefox 会显示一条通知消息，指出内容需要一个插件（见 [Firefox bug 730768](https://bugzil.la/730768)）。建议使用 \<object> 或 \<iframe> 元素。
 
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## 参见
 
 - 其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

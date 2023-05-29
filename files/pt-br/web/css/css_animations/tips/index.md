@@ -1,14 +1,8 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - Animações CSS
-  - CSS
-  - Comofazer
-  - Exemplo
-  - Tutorial
-translation_of: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
+
 Animações CSS tornam possível fazer coisas incríveis com os elementos que compoem seus documentos e aplicativos. No entanto, existem coisas que você pode querer fazer que não são óbvias, ou jeitos espertos de fazer coisas que você pode não ter pensado de imediato. Esse artigo é uma coleção de dicas e truques que descobrimos que podem tornar seu trabalho mais fácil, incluindo como rodar uma animação parada novamente.
 
 ## Rode uma animação novamente
@@ -88,9 +82,9 @@ Isso parece esquisito, não parece? É porque a única maneira de executar uma a
 
 Aqui está o que acontece quando a função `play()` é chamada:
 
-1.  The box's list of CSS classes is reset to simply `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
-2.  To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
-3.  Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
+1. The box's list of CSS classes is reset to simply `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
+2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet! So...
+3. Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
 
 Claro, também precisamos adicionar um tratador de evento para o nosso botão de "rodar" para que ele de fato faça algo:
 

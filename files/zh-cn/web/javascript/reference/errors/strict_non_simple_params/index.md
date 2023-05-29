@@ -1,16 +1,17 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
-slug: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
+slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
 
 ```plain
 Firefox:
-句法错误: "use strict" 不允许在带默认参数的函数中
-句法错误: "use strict" 不允许在带 rest 参数的函数中
-句法错误: "use strict" 不允许在带解构参数的函数中
+句法错误："use strict" 不允许在带默认参数的函数中
+句法错误："use strict" 不允许在带 rest 参数的函数中
+句法错误："use strict" 不允许在带解构参数的函数中
 
 Chrome:
 句法错误：非法的'use strict'指令，在带有非简单参数列表的函数中
@@ -99,7 +100,7 @@ var callback = (() => {
 })();
 ```
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "函数语句", "", 1)}}

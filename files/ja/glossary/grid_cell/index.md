@@ -4,6 +4,7 @@ slug: Glossary/Grid_Cell
 l10n:
   sourceCommit: 4a9f9d2e9c1811ce3519a7061e906db9200a5e97
 ---
+
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)における CSS グリッドの最小単位が**グリッドセル**です。 4 つの交差する {{glossary("grid lines", "グリッド線")}} に囲まれた領域のことで、表におけるセルと考え方はほぼ同じです。
 
 ![Diagram showing an individual cell on the grid.](1_grid_cell.png)

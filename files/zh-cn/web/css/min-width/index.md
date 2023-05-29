@@ -2,7 +2,8 @@
 title: min-width
 slug: Web/CSS/min-width
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 ## 概述
 

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/isAutoLocale
 ---
+
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`isAutoLocale`**, rattachée à l'interface {{domxref("IDBIndex")}}, est un booléen qui indique si la valeur `locale` de l'index vaut `auto` (cf. [les paramètres optionnels de `createIndex()`](/fr/docs/Web/API/IDBObjectStore/createIndex#Paramètres)).
@@ -68,7 +69,7 @@ Actuellement, cette propriété ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBIndex.isAutoLocale")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -78,4 +79,4 @@ Actuellement, cette propriété ne fait partie d'aucune spécification.
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

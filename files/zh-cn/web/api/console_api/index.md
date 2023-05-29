@@ -2,6 +2,7 @@
 title: Console API
 slug: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 Console API 提供了允许开发人员执行调试任务的功能，例如在代码中的某个位置记录消息或变量值，或者计算任务完成所需的时间。

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-template-columns
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-template-columns`** définit les noms des lignes et les fonctions de taille (_track sizing_) pour les colonnes de la grille.
@@ -74,9 +75,13 @@ grid-template-columns: unset;
 - {{cssxref("repeat()","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}
   - : Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses colonnes pour lesquelles on réutilise un motif.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -113,15 +118,11 @@ grid-template-columns: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-columns", "grid-template-columns")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

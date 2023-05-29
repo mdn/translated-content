@@ -4,6 +4,7 @@ slug: Web/API/CanvasRenderingContext2D/save
 browser-compat: api.CanvasRenderingContext2D.save
 translation_of: Web/API/CanvasRenderingContext2D/save
 ---
+
 {{APIRef}}
 
 La méthode **`CanvasRenderingContext2D.save()`** de l'API Canvas 2D API enregistre l'état complet du canvas en plaçant l'état courant dans une stack.

@@ -1,15 +1,9 @@
 ---
 title: <url>
 slug: Web/CSS/url
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-translation_of: Web/CSS/url()
-translation_of_original: Web/CSS/url
 original_slug: Web/CSS/url()
 ---
+
 {{ CssRef() }}
 
 **`<url>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 이미지나 글꼴 등 리소스를 가리키는 문자열을 나타냅니다. URL은 {{ Cssxref("background-image") }}, {{ Cssxref("cursor") }}, {{ cssxref("list-style") }} 등 다양한 속성에서 사용할 수 있습니다.
@@ -28,7 +22,7 @@ original_slug: Web/CSS/url()
 <a_css_property>: url(http://mysite.example.com/mycursor.png)
 ```
 
-> **참고:** Firefox 15부터, 0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은 {{Bug(752230)}}을 참고하세요.
+> **참고:** Firefox 15부터, 0x7e을 초과하는 제어 문자는 URL을 따옴표로 둘러싸야 유요합니다. 자세한 내용은 [Firefox bug 752230](https://bugzil.la/752230)을 참고하세요.
 
 ## 예제
 

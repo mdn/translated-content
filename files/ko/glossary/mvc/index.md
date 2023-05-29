@@ -1,14 +1,8 @@
 ---
 title: MVC
 slug: Glossary/MVC
-tags:
-  - MVC
-  - 개요
-  - 모델 뷰 컨트롤러
-  - 용어
-  - 하부구조
-translation_of: Glossary/MVC
 ---
+
 **MVC** (모델-뷰-컨트롤러) 는 사용자 인터페이스, 데이터 및 논리 제어를 구현하는데 널리 사용되는 소프트웨어 디자인 패턴입니다. 소프트웨어의 비즈니스 로직과 화면을 구분하는데 중점을 두고 있습니다. 이러한 "관심사 분리" 는 더나은 업무의 분리와 향상된 관리를 제공합니다. MVC 에 기반을 둔 몇 가지 다른 디자인 패턴으로 MVVM (모델-뷰-뷰모델), MVP (모델-뷰-프리젠터), MVW (모델-뷰-왓에버) 가 있습니다.
 
 MVC 소프트웨어 디자인 패턴의 세 가지 부분은 다음과 같이 설명할 수 있습니다.
@@ -21,7 +15,7 @@ MVC 소프트웨어 디자인 패턴의 세 가지 부분은 다음과 같이 �
 
 간단한 쇼핑 리스트 앱이 있다고 상상해봅시다. 우리가 원하는 것은 이번 주에 사야할 각 항목의 이름, 개수, 가격의 목록입니다. MVC 를 사용해 이 기능의 일부를 구현하는 방법을 아래에서 설명할 것입니다.
 
-![Diagram to show the different parts of the mvc architecture.](https://mdn.mozillademos.org/files/16042/model-view-controller-light-blue.png)
+![Diagram to show the different parts of the mvc architecture.](model-view-controller-light-blue.png)
 
 ### 모델
 

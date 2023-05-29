@@ -6,6 +6,7 @@ tags:
   - SVG Attribute
 translation_of: Web/SVG/Attribute/cy
 ---
+
 {{SVGRef}}
 
 L'attribut **`cy`** définit la coordonnée de l'axe y pour le point central d'un élément.

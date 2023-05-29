@@ -2,6 +2,7 @@
 title: 遞減運算子 (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
 ---
+
 {{jsSidebar("Operators")}}
 
 遞減運算子 (`--`) 遞減（減一）它的運算元並將結果回傳。

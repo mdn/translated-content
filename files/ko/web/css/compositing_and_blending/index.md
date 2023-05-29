@@ -1,13 +1,6 @@
 ---
 title: Compositing and Blending
 slug: Web/CSS/Compositing_and_Blending
-tags:
-  - CSS
-  - Compositing and Blending
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/Compositing_and_Blending
 ---
 {{CSSRef}}
 
@@ -25,22 +18,10 @@ translation_of: Web/CSS/Compositing_and_Blending
 
 - {{cssxref("&lt;blend-mode&gt;")}}
 
-## 명세
+## 명세서
 
-| Specification                        | Status                           | Comment            |
-| ------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-### `background-blend-mode` 속성
-
-{{Compat("css.properties.background-blend-mode")}}
-
-### `isolation` 속성
-
-{{Compat("css.properties.isolation")}}
-
-### `mix-blend-mode` 속성
-
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

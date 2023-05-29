@@ -2,23 +2,24 @@
 title: PushSubscription.unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェースの `unsubscribe()` メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}} を返します。
+{{domxref("PushSubscription")}} インターフェイスの **`unsubscribe()`** メソッドは、現在のサブスクリプションが成功裏に登録解除されたときに {{jsxref("Boolean")}} で解決される{{jsxref("Promise")}} を返します。
 
 ## 構文
 
-```
-​PushSubscription.unsubscribe().then(function(Boolean) { ... });
+```js-nolint
+PushSubscription.unsubscribe().then(function(Boolean) { ... });
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-現在のサブスクリプションが成功裏に登録解除されたときに {{domxref("Boolean")}} で解決される{{domxref("Promise")}}。
+現在のサブスクリプションが成功裏に登録解除されたときに {{jsxref("Boolean")}} で解決される{{jsxref("Promise")}}。
 
 ## 例
 
@@ -34,13 +35,11 @@ navigator.serviceWorker.ready.then(function(reg) {
 });
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                         | 状態                         | コメント   |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('Push API','#widl-PushSubscription-unsubscribe-Promise-boolean','unsubscribe()')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushSubscription.unsubscribe")}}
 

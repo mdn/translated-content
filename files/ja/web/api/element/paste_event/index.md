@@ -2,6 +2,7 @@
 title: 'Element: paste イベント'
 slug: Web/API/Element/paste_event
 ---
+
 {{APIRef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスで「貼り付け」操作を行ったときに発生します。

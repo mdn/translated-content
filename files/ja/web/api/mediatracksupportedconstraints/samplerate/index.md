@@ -2,6 +2,7 @@
 title: MediaTrackSupportedConstraints.sampleRate
 slug: Web/API/MediaTrackSupportedConstraints/sampleRate
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 {{domxref("MediaTrackSupportedConstraints")}} 辞書の **`sampleRate`** プロパティは読み取り専用の論理値で、 {{domxref("MediaDevices.getSupportedConstraints()")}} が返すオブジェクトに存在（`true` に設定）するならば、{{Glossary("user agent", "ユーザーエージェント")}}が `sampleRate` 制約に対応しています。制約に対応していない場合、リストには含まれなくなりますので、この値が `false` になることはありません。

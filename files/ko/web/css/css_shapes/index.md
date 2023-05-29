@@ -1,13 +1,8 @@
 ---
 title: CSS Shapes
 slug: Web/CSS/CSS_Shapes
-tags:
-  - CSS
-  - CSS Shapes
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Shapes
 ---
+
 {{CSSRef}}
 
 **CSS Shapes**는 CSS에서 사용하기 위한 기하학적 도형을 설명한다. 레벌1 명세에 의하면 떠있는 요소에 CSS Shapes를 적용할 수 있다. 명세의 정의에 의하면 떠있는 요소의 모양을 정의 하거나 요소 상자의 사각형을 따르는 대신 테두리 선을 따라 감싸지도록 하는 방법 등 다양한 방법을 정의하고 있다.

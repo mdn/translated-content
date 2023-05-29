@@ -3,11 +3,12 @@ title: BaseAudioContext.createChannelMerger()
 slug: Web/API/BaseAudioContext/createChannelMerger
 original_slug: Web/API/AudioContext/createChannelMerger
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createChannelMerger()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelMergerNode")}} を作成します。これは複数の音声ストリームのチャンネルを一つの音声ストリームに結合します。
 
-> **Note:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ChannelMergerNode.ChannelMergerNode", "ChannelMergerNode()")}} コンストラクターは {{domxref("ChannelMergerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -50,7 +51,7 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  var dest = ac.createMediaStreamDestination();
 
  // ChannelMergerNode を使っているので、ステレオの MediaStream が
- // できました。これでウェブ音声グラフを WebRTC や MediaRecorder などに
+ // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
  // パイプするのに使えます。
  merger.connect(dest);
 });
@@ -66,4 +67,4 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

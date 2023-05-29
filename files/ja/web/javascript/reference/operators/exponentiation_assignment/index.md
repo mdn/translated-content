@@ -2,6 +2,7 @@
 title: べき乗代入 (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 べき乗代入演算子 (`**=`) は、変数の値を右オペランドでべき乗します。

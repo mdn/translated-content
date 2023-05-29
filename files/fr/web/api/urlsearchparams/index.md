@@ -3,6 +3,7 @@ title: URLSearchParams
 slug: Web/API/URLSearchParams
 translation_of: Web/API/URLSearchParams
 ---
+
 {{ApiRef("URL API")}}
 
 L’interface **`URLSearchParams`** définit des méthodes utilitaires pour travailler avec la _chaîne de requête_ (les paramètres `GET`) d’une URL.

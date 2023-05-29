@@ -2,6 +2,7 @@
 title: 문자열 다루기 — 문자열
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 다음으로, 프로그래밍에서 어떤 텍스트가 호출되는지 문자열에 대해 알아볼까요? 이 게시물에서는 문자열 작성, 문자열의 따옴표 이스케이프 및 문자열 결합과 같이 JavaScript를 배울 때 문자열에 대해 알아야 할 모든 일반적인 사항을 살펴보겠습니다.
@@ -79,7 +80,7 @@ slug: Learn/JavaScript/First_steps/Strings
     var badQuotes = 'What on earth?";
     ```
 
-3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다.  예를 들어, 아래 두 가지 모두 괜찮습니다.
+3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다. 예를 들어, 아래 두 가지 모두 괜찮습니다.
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';
@@ -199,15 +200,3 @@ button.onclick = function() {
 여기까지 자바스크립트에서 다루는 문자열의 기본이었습니다. 다음 글에서는 자바스크립트에서 문자열에 사용할 수 있는 기본 제공 메소드를 조작하는 방법에 대해 알아보겠습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

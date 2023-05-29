@@ -2,6 +2,7 @@
 title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
+
 {{AddonSidebar()}}
 
 新建一个 tab.
@@ -20,7 +21,7 @@ var creating = browser.tabs.create(
 
 - `createProperties`
   - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
-  
+
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
@@ -55,7 +56,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.create", 10)}}
+{{Compat}}
 
 ## 实例
 

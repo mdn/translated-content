@@ -2,97 +2,100 @@
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
-このモジュールは拡張機能と、それを実行する環境についての情報を提供します。
+このモジュールは拡張機能と実行環境の情報を提供します。
 
-またメッセージ API も提供し、それでは次のことができます:
+また以下のような機能を持つメッセージ API も提供します:
 
-- 拡張機能の別々の部分同士で通信する
-- 他の拡張機能と通信する
-- ネイティブアプリケーションと通信する
+- 拡張機能の別々の部分同士で通信します。メッセージのオプションについて詳しく知りたい場合は、[ワンオフメッセージとコネクションベースのメッセージとの選択](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#ワンオフメッセージとコネクションベースのメッセージとの選択)をご覧ください。
+- 他の拡張機能と通信します。
+- ネイティブアプリケーションと通信します。
 
 ## 型
 
 - {{WebExtAPIRef("runtime.Port")}}
-  - : Represents one end of a connection between two specific contexts, which can be used to exchange messages.
+  - : 2 つのコンテキスト間の接続の一方を表します。メッセージを交換するために使います。
 - {{WebExtAPIRef("runtime.MessageSender")}}
-  - : Contains information about the sender of a message or connection request.
+  - : 接続リクエストやメッセージの送信者の情報です。
 - {{WebExtAPIRef("runtime.PlatformOs")}}
-  - : Identifies the browser's operating system.
+  - : ブラウザーの OS の識別です。
 - {{WebExtAPIRef("runtime.PlatformArch")}}
-  - : Identifies the browser's processor architecture.
+  - : ブラウザーのプロセッサーアーキテクチャの識別です。
 - {{WebExtAPIRef("runtime.PlatformInfo")}}
-  - : Contains information about the platform the browser is running on.
+  - : ブラウザーが動作しているプラットフォームの情報です。
 - {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
-  - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
+  - : {{WebExtAPIRef("runtime.requestUpdateCheck()")}} を呼び出した結果です。
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
-  - : The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
+  - : {{WebExtAPIRef("runtime.onInstalled")}} イベントをディスパッチした理由です。
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
-  - : The reason that the {{WebExtAPIRef("runtime.onRestartRequired")}} event is being dispatched.
+  - : {{WebExtAPIRef("runtime.onRestartRequired")}} イベントをディスパッチした理由です。
 
 ## プロパティ
 
 - {{WebExtAPIRef("runtime.lastError")}}
-  - : This value is set when an asynchronous function has an error condition that it needs to report to its caller.
+  - : 呼び出し元に伝える必要があるエラーが非同期の関数で起こった時に、この値が設定されます。
 - {{WebExtAPIRef("runtime.id")}}
-  - : The ID of the extension.
+  - : 拡張機能の ID です。
 
 ## 関数
 
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
-  - : Retrieves the [Window](/ja/docs/Web/API/Window) object for the background page running inside the current extension.
+  - : 拡張機能が動作しているバックグラウンドページの [Window](/ja/docs/Web/API/Window) オブジェクトを取得します。
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : Opens your extension's [options page](/ja/Add-ons/WebExtensions/user_interface/Options_pages).
+  - : 拡張機能の[オプションページ](/ja/Add-ons/WebExtensions/user_interface/Options_pages)を開きます。
+- {{WebExtAPIRef("runtime.getFrameId()")}}
+  - : グローバルまたはフレーム要素のウィンドウのフレーム ID を取得します。
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Gets the complete [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, serialized as an object.
+  - : 完全な [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルを取得し、オブジェクトとしてシリアライズします。
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : Given a relative path from the [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, returns a fully-qualified URL.
+  - : [manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) からの相対パスを指定し、拡張機能に含まれるリソースの完全修飾の URL を返します。
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
-  - : Sets a URL to be visited when the extension is uninstalled.
+  - : 拡張機能がアンインストールされた時にアクセスさせる URL を設定します。
 - {{WebExtAPIRef("runtime.reload()")}}
-  - : Reloads the extension.
+  - : 拡張機能をリロードします。
 - {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
-  - : Checks for updates to this extension.
+  - : 拡張機能のアップデートを確認します。
 - {{WebExtAPIRef("runtime.connect()")}}
-  - : Establishes a connection from a content script to the main extension process, or from one extension to a different extension.
+  - : コンテンツスクリプトから同じ拡張機能の別の処理、または別の拡張機能への接続します。
 - {{WebExtAPIRef("runtime.connectNative()")}}
-  - : Connects the extension to a native application on the user's computer.
+  - : ユーザーのコンピューターに入っているネイティブアプリケーションと拡張機能を接続します。
 - {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Sends a single message to event listeners within your extension or a different extension. Similar to {{WebExtAPIRef('runtime.connect')}} but only sends a single message, with an optional response.
+  - : 拡張機能自身や別の拡張機能のイベントリスナーに 1 つのメッセージを送信します。 {{WebExtAPIRef('runtime.connect')}} と似ていますが、 {{WebExtAPIRef("runtime.sendMessage()")}} では 1 つのメッセージを送るだけで、オプションで応答可能です。
 - {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : Sends a single message from an extension to a native application.
+  - : 拡張機能からネイティプアプリケーションに 1 つのメッセージを送信します。
 - {{WebExtAPIRef("runtime.getPlatformInfo()")}}
-  - : Returns information about the current platform.
+  - : 現在のプラットフォーム情報を返します。
 - {{WebExtAPIRef("runtime.getBrowserInfo()")}}
-  - : Returns information about the browser in which this extension is installed.
+  - : 拡張機能がインストールされたブラウザーの情報を返します。
 - {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : Returns a DirectoryEntry for the package directory.
+  - : 拡張機能のディレクトリの [DirectoryEntry](/ja/docs/Web/API/FileSystemDirectoryEntry) オブジェクトを返します。
 
 ## イベント
 
 - {{WebExtAPIRef("runtime.onStartup")}}
-  - : Fired when a profile that has this extension installed first starts up. This event is not fired when an incognito profile is started.
+  - : 拡張機能がインストールされたプロフィールが最初に起動された時に発火します。このイベントは、プライベートプロフィールの起動では発火しません。
 - {{WebExtAPIRef("runtime.onInstalled")}}
-  - : Fired when the extension is first installed, when the extension is updated to a new version, and when the browser is updated to a new version.
+  - : 拡張機能が最初にインストールされた時、拡張機能やブラウザーが新しいバージョンに更新された時に発火します。
 - {{WebExtAPIRef("runtime.onSuspend")}}
-  - : Sent to the event page just before the extension is unloaded. This gives the extension an opportunity to do some cleanup.
+  - : 拡張機能がアンロードされる直前にイベントページに送信します。拡張機能をクリーンアップできます。
 - {{WebExtAPIRef("runtime.onSuspendCanceled")}}
-  - : Sent after {{WebExtAPIRef("runtime.onSuspend")}} to indicate that the extension won't be unloaded after all.
+  - : 拡張機能が結果的にアンロードされなかったことを示すため、 {{WebExtAPIRef("runtime.onSuspend")}} の後に送信します。
 - {{WebExtAPIRef("runtime.onUpdateAvailable")}}
-  - : Fired when an update is available, but isn't installed immediately because the extension is currently running.
+  - : 拡張機能が更新可能ですが現在実行中のため、すぐにインストールされない時に発火します。
 - {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}}
-  - : Fired when an update for the browser is available, but isn't installed immediately because a browser restart is required.
+  - : ブラウザーが更新可能ですが再起動が必要であるため、すぐにインストールされない時に発火します。
 - {{WebExtAPIRef("runtime.onConnect")}}
-  - : Fired when a connection is made with either an extension process or a content script.
+  - : 拡張機能の処理や コンテンツスクリプトと接続した時に発火します。
 - {{WebExtAPIRef("runtime.onConnectExternal")}}
-  - : Fired when a connection is made with another extension.
+  - : 別の拡張機能と接続した時に発火します。
 - {{WebExtAPIRef("runtime.onMessage")}}
-  - : Fired when a message is sent from either an extension process or a content script.
+  - : 拡張機能の処理や コンテンツスクリプトからメッセージが送信された時に発火します。
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
-  - : Fired when a message is sent from another extension. Cannot be used in a content script.
+  - : 別の拡張機能からメッセージが送信された時に発火します。コンテンツスクリプトでは使えません。
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
-  - : Fired when the device needs to be restarted.
+  - : デバイスの再起動が必要な時に発火します。
 
 ## ブラウザーの互換性
 
@@ -100,9 +103,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** この API は Chromium の [`chrome.runtime`](https://developer.chrome.com/extensions/runtime) API に基づいています。また、このドキュメントは [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -129,4 +133,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

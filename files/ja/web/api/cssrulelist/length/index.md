@@ -2,6 +2,7 @@
 title: CSSRuleList.length
 slug: Web/API/CSSRuleList/length
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`length`** は {{domxref("CSSRuleList")}} インターフェイスのプロパティで、リスト内の {{domxref("CSSRule")}} オブジェクトの数を返します。

@@ -2,6 +2,7 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 ---
+
 {{CSSRef}}
 
 **`font-variant-alternates`** CSS 属性控制备用字体的使用。这些替代字体可以通过{{cssxref("@font-feature-values")}}中定义的替代名称来引用。
@@ -102,6 +103,6 @@ p {
 
 不属于任何标准。
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("css.properties.font-variant-alternates")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: Text.splitText()
 slug: Web/API/Text/splitText
 translation_of: Web/API/Text/splitText
 ---
+
 {{apiref("DOM")}}
 
 La méthode **`Text.splitText()`** sépare le nœud {{domxref("Text")}} en deux nœuds au niveau de l’indice spécifié, et conserve les deux nœuds dans l’arbre en tant que voisins.

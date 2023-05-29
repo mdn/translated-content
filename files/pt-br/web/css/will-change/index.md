@@ -1,16 +1,8 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - CSS Will-change
-  - CSS3
-  - Propriedade CSS
-  - Referência(2)
-  - Transições
-  - otimização de css
-translation_of: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 ## Sumário

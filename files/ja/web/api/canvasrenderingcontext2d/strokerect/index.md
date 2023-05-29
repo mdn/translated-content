@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.strokeRect()`** はキャンバス 2D API のメソッドで、矩形の輪郭を現在の {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} とその他のコンテキスト設定によって描画します。

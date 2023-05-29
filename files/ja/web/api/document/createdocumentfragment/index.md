@@ -2,6 +2,7 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 新しい空の {{domxref("DocumentFragment")}} を作成し、そこに DOM ノードを追加して画面外の DOM ツリーを作成します。
@@ -62,9 +63,7 @@ element.appendChild(fragment);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-createdocumentfragment', 'Document.createDocumentFragment()')}} | {{Spec2('DOM WHATWG')}} | DOM 1 仕様書にて初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

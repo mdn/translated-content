@@ -11,6 +11,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
@@ -74,7 +75,7 @@ for(var c=0; c<brickColumnCount; c++) {
 }
 ```
 
-Nous vérifierons ensuite la valeur de la propriété `status` de chaque brique dans la fonction ` drawBricks``() ` avant de la dessiner. Si `status` vaut `1`, dessinez-la, mais s'il vaut `0`, la balle a été touchée et nous ne voulons pas la voir sur l'écran. Mettez à jour votre fonction ` drawBricks``() ` comme suit:
+Nous vérifierons ensuite la valeur de la propriété `status` de chaque brique dans la fonction `drawBricks()` avant de la dessiner. Si `status` vaut `1`, dessinez-la, mais s'il vaut `0`, la balle a été touchée et nous ne voulons pas la voir sur l'écran. Mettez à jour votre fonction `drawBricks()` comme suit:
 
 ```js
 function drawBricks() {

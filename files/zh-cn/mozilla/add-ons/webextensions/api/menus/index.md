@@ -3,6 +3,7 @@ title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
+
 {{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。
 
 ## 创建菜单项
@@ -30,7 +31,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 ![](menus-3.png)
 
-## 例子
+## 示例
 
 下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。
 
@@ -124,7 +125,7 @@ browser.menus.create({
 
 ## 浏览器兼容性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{ Compat }}
 
 {{WebExtExamples("h2")}}
 

@@ -2,6 +2,7 @@
 title: document.createAttribute()
 slug: Web/API/Document/createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.createAttribute()`** 方法创建并返回一个新的属性节点。这个对象创建一个实现了 {{domxref("Attr")}} 接口的节点。这个方式下 DOM 不限制节点能够添加的属性种类。

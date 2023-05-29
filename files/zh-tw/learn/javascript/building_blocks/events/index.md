@@ -3,6 +3,7 @@ title: Event attributes
 slug: Learn/JavaScript/Building_blocks/Events
 original_slug: Web/Guide/HTML/Event_attributes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 每一個 HTML 元素都可以放置事件屬性，以藉此於事件發生時能執行 JavaScript 程式。事件屬性的名稱都有一個前綴「on」，例如當使用者點選元素時要執行指定的 JavaScript，可以使用 `onclick` 屬性並把要執行的 JavaScript 當成屬性值。
@@ -22,13 +23,14 @@ This example appends text to an element each time time the {{HTMLElement("div")}
 > **備註：** This is an example of how not to do things, using one of these attributes.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
     </script>
   </head>
@@ -48,20 +50,23 @@ Try this example below:
 Instead, you should use {{domxref("EventTarget.addEventListener()")}}, as shown here:
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
 
       // Called when the page is done loading; this is where we do any setup we need,
       // such as creating event listeners for the elements in the page.
 
       function setup() {
-        document.getElementById("click").addEventListener("click", doSomething, true);
+        document
+          .getElementById("click")
+          .addEventListener("click", doSomething, true);
       }
 
       // Install an event handler on the window to receive the "load" event, which

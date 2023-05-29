@@ -5,6 +5,7 @@ original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開す
 l10n:
   sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
 
 ウェブサイトを構成するコードやファイルの整理が終わったら、それをオンラインで公開して、人々が見つけられるようにする必要があります。この記事では、簡単なサンプルコードを手軽にオンラインに公開する方法を説明します。
@@ -65,11 +66,11 @@ l10n:
     さらに、 _"Initialize this repository with a README"_ ボックスをチェックし、 _Create repository_ をクリックしてください。![](github-create-repo.png)
 4. ウェブサイトのフォルダーをリポジトリーの中にドラッグアンドドロップしたら、 _Commit changes_ をクリックしましょう。
 
-    > **Note:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
+    > **メモ:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
 
 5. では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザー名が chrisdavidmills なら、[chrisdavidmills.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
 
-    > **Note:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
+    > **メモ:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
 
 もっと詳しく知りたい人は [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages) を見てください。
 
@@ -82,14 +83,3 @@ l10n:
 - [Cheap or Free Static Website Hosting](https://alignedleft.com/resources/cheap-web-hosting) Scott Murray による利用できるサービスについての使えるアイデアがあります。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
-
-## このモジュール
-
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

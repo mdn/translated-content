@@ -2,6 +2,7 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 ---
+
 {{APIRef('Shadow DOM')}}
 
 **`ShadowRoot`** は Shadow DOM API のインターフェイスで、文書の DOM ツリーから分離してレンダリングされた部分ツリーのルートノードを指します。
@@ -13,7 +14,7 @@ slug: Web/API/ShadowRoot
 - {{domxref("ShadowRoot.activeElement")}} {{readonlyInline}}
   - : フォーカスを持っているシャドウツリー内の {{domxref('Element')}} を返します。
 - {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : シャドウが取り付けられたときに  `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
+  - : シャドウが取り付けられたときに `delegatesFocus` が設定されていたかどうかを示す論理値を返します ({{domxref("Element.attachShadow()")}} を参照)。
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
   - : このシャドウツリーで現在全画面モードになっている要素です。
 - {{domxref("ShadowRoot.host")}} {{readonlyinline}}
@@ -33,7 +34,7 @@ slug: Web/API/ShadowRoot
 ### イベントハンドラー
 
 - {{domxref("ShadowRoot.onslotchange")}}
-  - : [イベントハンドラー](/en-US/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
+  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} イベントが発行されたときに呼び出されるコードを表します。
 
 ## メソッド
 

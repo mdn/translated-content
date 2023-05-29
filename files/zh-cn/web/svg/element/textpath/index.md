@@ -2,9 +2,10 @@
 title: textPath
 slug: Web/SVG/Element/textPath
 ---
+
 {{SVGRef}}
 
-除了笔直地绘制一行文字以外， SVG 也可以根据 {{ SVGElement("path") }} 元素的形状来放置文字。 只要在`textPath`元素内部放置文本，并通过其`xlink:href`属性值引用{{ SVGElement("path") }}元素，我们就可以让文字块呈现在{{ SVGElement("path") }}元素给定的路径上了。
+除了笔直地绘制一行文字以外，SVG 也可以根据 {{ SVGElement("path") }} 元素的形状来放置文字。只要在`textPath`元素内部放置文本，并通过其`xlink:href`属性值引用{{ SVGElement("path") }}元素，我们就可以让文字块呈现在{{ SVGElement("path") }}元素给定的路径上了。
 
 ## 用法
 
@@ -40,17 +41,17 @@ slug: Web/SVG/Element/textPath
 
 即时结果：
 
-{{EmbedLiveSample("Example",500,175)}}
+{{EmbedLiveSample("示例",500,175)}}
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -64,4 +65,4 @@ slug: Web/SVG/Element/textPath
 
 ## DOM 接口
 
-该元素实现了[`SVGTextPathElement`](/en/DOM/SVGTextPathElement)接口。
+该元素实现了[`SVGTextPathElement`](/zh-CN/DOM/SVGTextPathElement)接口。

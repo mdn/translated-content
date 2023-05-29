@@ -3,11 +3,12 @@ title: 开始我们的 React 待办清单
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
-> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的React应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
+> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
 
 <table>
   <tbody>
@@ -237,13 +238,13 @@ function App(props) {
 </label>
 ```
 
-`<input/ >` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的HTML中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
+`<input/ >` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
 
-`htmlFor` 属性对应于HTML中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在JSX中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
+`htmlFor` 属性对应于 HTML 中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在 JSX 中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
 
-说明:
+说明：
 
-- 要在JSX属性中使用布尔值（`true` 和 `false`），你必须用大括号把它们括起来。如果你写 `defaultChecked="true"`，`defaultChecked` 的值将是 `"true"`——一个字符串字面。记住——这实际上是 JavaScript，而不是 HTML!
+- 要在 JSX 属性中使用布尔值（`true` 和 `false`），你必须用大括号把它们括起来。如果你写 `defaultChecked="true"`，`defaultChecked` 的值将是 `"true"`——一个字符串字面。记住——这实际上是 JavaScript，而不是 HTML!
 - 在前面的代码片段中使用的 `aria-pressed` 属性的值是 `"true"`，因为 `aria-pressed` 不是像 `checked` 那样是一个真正的布尔属性。
 
 ### 实现样式
@@ -552,58 +553,3 @@ body {
 现在，我们的待办清单应用程序终于看起来像一个真正的应用程序了！问题是：它实际上什么都没做。我们将在下一章开始解决这个问题。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 本章目录
-
-- [客户端架构介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [开始使用 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [开始我们的 React 待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [组件化我们的 React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 交互：事件和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 交互：编辑、筛选、条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 中的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [开始使用 Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 应用结构和组件化](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 交互性：Events, classes 和 state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 交互性：Footer functionality 和条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 资源和疑问解答](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [开始使用 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Vue 列表渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [待办事项表单：Vue 时间、方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [用 CSS 装饰 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [开始我们的 Svelte 待办清单应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 动态表现：变量和 props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [组织我们的 Svelte 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [高级 Svelte：响应式、生命周期和无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Svelte 存储](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 对 TypeScript 的支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [开始我们的 Angular todo 列表应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [样式化我们的 Angular 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [创建一个事项组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [筛选 todo 事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [构建 Angular 应用以及更多资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

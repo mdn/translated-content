@@ -2,6 +2,7 @@
 title: TransitionEvent
 slug: Web/API/TransitionEvent
 ---
+
 {{APIRef("CSSOM")}} {{SeeCompatTable}}
 
 **`TransitionEvent`** インターフェイスは、[トランジション](/ja/docs/Web/Guide/CSS/Using_CSS_transitions)に関する情報を提供するイベントを表します。
@@ -42,9 +43,7 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{ SpecName('CSS3 Transitions', '#interface-transitionevent', 'TransitionEvent') }} | {{ Spec2('CSS3 Transitions') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

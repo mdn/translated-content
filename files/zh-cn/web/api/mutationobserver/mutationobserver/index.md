@@ -2,6 +2,7 @@
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 DOM 规范中的 `MutationObserver()` 构造函数——是 {{domxref("MutationObserver")}} 接口内容的一部分——创建并返回一个新的观察器，它会在触发指定 DOM 事件时，调用指定的回调函数。MutationObserver 对 DOM 的观察不会立即启动；而必须先调用 {{domxref("MutationObserver.observe", "observe()")}} 方法来确定，要监听哪一部分的 DOM 以及要响应哪些更改。
@@ -76,4 +77,4 @@ observer.observe(targetNode, observerOptions);
 
 ## 浏览器兼容性
 
-{{Compat("api.MutationObserver.MutationObserver")}}
+{{Compat}}

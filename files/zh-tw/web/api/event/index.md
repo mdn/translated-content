@@ -2,6 +2,7 @@
 title: Event
 slug: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** 介面表示了一個在 DOM 物件上所發生的事件。
@@ -149,7 +150,7 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,11 +2,12 @@
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.createAttribute()`** は、新しい属性ノードを生成して返します。生成されたオブジェクトは {{domxref("Attr")}} を実装したノードです。この方法では DOM は、特定の要素にどんな種類の属性を追加できるかを強制しません。
 
-> **Note:** 引数に渡される文字列は小文字に変換されます。
+> **メモ:** 引数に渡される文字列は小文字に変換されます。
 
 ## 構文
 

@@ -1,9 +1,8 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
-browser-compat: javascript.builtins.Date.parse
 ---
+
 {{JSRef}}
 
 Date.parse () 메서드는 날짜의 문자열 표현을 구문 분석하고 1970 년 1 월 1 일 00:00:00 UTC 이후의 밀리 초 수를 반환하거나 문자열이 인식되지 않거나 경우에 따라 잘못된 날짜 값을 포함하는 경우 NaN을 반환합니다. (예 : 2015-02-31).

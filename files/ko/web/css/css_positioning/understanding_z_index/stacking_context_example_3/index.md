@@ -1,19 +1,16 @@
 ---
 title: 쌓임 맥락 예제3
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
-### 쌓임 맥락 예제3
+## 쌓임 맥락 예제3
 
 마지막 예제는 멀티 레벨 HTML 계층 구조에서 z-index 속성 값을 지정할때 생기는 문제에 대해 다룰 것이다.
 
 몇개의 position 속성 값이 지정된 3-레벨 계층 메뉴를 생각하자. 두번째 레벨과 세번째 레벨의 메뉴는 그들의 부모에 마우스를 갖다 대거나 클릭했을 때 보인다. 이 메뉴를 클래스 선택자를 통해 스타일링 해보자.
 
 만약 세 메뉴가 부분적으로 겹친다면 쌓임을 해결하는 것이 문제가 된다.
-
-![Stacking context example 3](/@api/deki/files/918/=Understanding_zindex_07.png)
 
 첫번째 레벨 메뉴는 position 속성 값만이 relative로 지정되어있다. 따라서 이는 쌓임 맥락을 형성하지 않는다. (역자: z-index 속성 값을 지정하지 않았다.)
 
@@ -45,7 +42,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_e
 
 > **참고:** **노트:** 소스 코드에는 두번째 레벨 메뉴와 세번째 레벨 메뉴들이 position 속성이 absolute로 지정된 컨테이너에 싸여있는 것을 볼 수 있다. 이는 여러개의 엘리먼트들의 위치를 한꺼번에 지정하는데 유용하다.
 
-### 예제 소스 코드
+## 예제
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -154,6 +151,10 @@ div.lev3 {
 
 </body></html>
 ```
+
+## 결과
+
+{{ EmbedLiveSample('예제', '320', '330') }}
 
 ### See also
 

@@ -2,6 +2,7 @@
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -27,7 +28,7 @@ Math.sin(x)
 
 ## 示例
 
-### 例子：使用 `Math.sin`
+### 示例：使用 `Math.sin`
 
 ```js
 Math.sin(0);           // 0

@@ -2,6 +2,7 @@
 title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
+
 {{JSRef}}
 
 静的な **`Reflect.setPrototypeOf()`** メソッドは、返値を除いて、 {{jsxref("Object.setPrototypeOf()")}} と同じメソッドです。これは指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) にほかのオブジェクト、または {{jsxref("null")}} を設定し、操作が成功したなら `true` を、そうでないなら `false` を返します。
@@ -54,9 +55,7 @@ Reflect.setPrototypeOf(target, proto)  // false
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,11 @@
 ---
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol
-browser-compat: javascript.builtins.Symbol
 l10n:
   sourceCommit: 54ae754f4d18601ee91f741c7b774d2238e2656e
 ---
+
 {{JSRef}}
 
 **`Symbol`** es un objeto incorporado cuyo constructor devuelve un `symbol` [primitivo](/es/docs/Glossary/Primitive) — también llamado **Symbol value** o simplemente **Symbol** — que está garantizado que sea único. Los Symbols se utilizan a menudo para añadir claves de propiedades únicas a un objeto que no sean iguales a las claves que cualquier otro código pueda añadir al objeto, y que están ocultas de cualquier mecanismo que otro código utilice normalmente para acceder al objeto. Esto permite una forma de {{Glossary("encapsulation")}} débil, o una forma débil de [ocultación de información](https://en.wikipedia.org/wiki/Information_hiding).

@@ -2,9 +2,8 @@
 title: grid-row
 slug: Web/CSS/grid-row
 ---
-{{CSSRef}}
 
-## Summary
+{{CSSRef}}
 
 The `grid-row` CSS property is a [shorthand](/zh-TW/docs/Web/CSS/Shorthand_properties) property for {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
@@ -101,7 +100,7 @@ grid-row: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-row")}}
+{{Compat}}
 
 ## See also
 

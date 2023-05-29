@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Images/Using_CSS_gradients
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/CSS/Utilisation_de_dégradés_CSS
 ---
+
 {{CSSRef}}
 
 Les **dégradés CSS** sont représentés par le type de donnée [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un sous-ensemble du type [`<image>`](/fr/docs/Web/CSS/image). L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de dégradés&nbsp;:

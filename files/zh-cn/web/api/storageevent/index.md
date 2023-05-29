@@ -2,15 +2,16 @@
 title: StorageEvent
 slug: Web/API/StorageEvent
 ---
+
 {{APIRef("Web Storage API")}}
 
-当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件.
+当前页面使用的 storage 被其他页面修改时会触发 StorageEvent 事件。
 
 \[译者：事件在同一个域下的不同页面之间触发，即在 A 页面注册了 storge 的监听处理，只有在跟 A 同域名下的 B 页面操作 storage 对象，A 页面才会被触发 storage 事件]
 
 {{InheritanceDiagram}}
 
-> **备注：** 尽管这个事件已经早在 {{ Gecko("2.0") }}时就已存在，但是并不符合规范。老的事件模型直到 `nsIDOMStorageEventObsolete` 确定才被表现出来。
+> **备注：** 尽管这个事件已经早在 Gecko 2.0 时就已存在，但是并不符合规范。老的事件模型直到 `nsIDOMStorageEventObsolete` 确定才被表现出来。
 
 ## 方法描述
 

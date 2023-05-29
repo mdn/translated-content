@@ -2,6 +2,7 @@
 title: URL.hash
 slug: Web/API/URL/hash
 ---
+
 {{ APIRef("URL API") }}
 
 {{domxref("URL")}} インターフェイスの **`hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く {{domxref("USVString")}} を返します。
@@ -12,7 +13,7 @@ slug: Web/API/URL/hash
 
 ## 構文
 
-```
+```js
 string = object.hash;
 object.hash = string;
 ```
@@ -23,16 +24,14 @@ object.hash = string;
 
 ## 例
 
-```html
+```js
 var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
 url.hash // '#Examples' を返します
 ```
 
 ## 仕様
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-hash', 'URL.hash')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

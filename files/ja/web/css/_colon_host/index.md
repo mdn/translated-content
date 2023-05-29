@@ -2,11 +2,12 @@
 title: ':host'
 slug: Web/CSS/:host
 ---
+
 {{ CSSRef }}
 
 **`:host`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、その CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します。 — 言い換えれば、シャドウ DOM の中からカスタム要素を選択できるようにします。
 
-> **Note:** これはシャドウ DOM の外で使われたときには効果がありません。
+> **メモ:** これはシャドウ DOM の外で使われたときには効果がありません。
 
 ```css
 /* シャドウのルートホストを選択 */
@@ -17,7 +18,7 @@ slug: Web/CSS/:host
 
 ## 構文
 
-```css
+```
 :host
 ```
 

@@ -2,6 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 `NodeList` 对象是节点的集合，通常是由属性，如{{domxref("Node.childNodes")}} 和 方法，如{{domxref("document.querySelectorAll")}} 返回的。
@@ -139,4 +140,4 @@ forEach.call(firstDiv.childNodes, function( divChild ){
 
 ## 浏览器兼容性
 
-{{Compat("api.NodeList")}}
+{{Compat}}

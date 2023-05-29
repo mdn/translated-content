@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: ''x'' is not iterable'
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-tags:
-  - JavaScript
-  - 레퍼런스
-  - 에러
-  - 타입에러
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

@@ -1,6 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
+slug: Web/API/console/warn
 tags:
   - API
   - DOM
@@ -10,6 +10,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/warn
 ---
+
 {{ APIRef("Console API") }}
 
 Affiche un message d'avertissement dans la console web.

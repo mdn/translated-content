@@ -1,7 +1,6 @@
 ---
 title: REST
 slug: Glossary/REST
-translation_of: Glossary/REST
 ---
 **REST(**Representational State Transfer)는 효율적, 안정적이며 확장가능한 분산시스템을 가져올 수 있는소프트웨어 아키텍처 디자인 제약의 모음을 나타냅니다. 그리고 그 제약들을 준수했을 때 그 시스템은 RESTful하다고 일컬어집니다.
 

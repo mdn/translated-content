@@ -1,13 +1,8 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Primary Expressions
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 JavaScript에서 **함수의 `this` 키워드**는 다른 언어와 조금 다르게 동작합니다. 또한 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)와 비엄격 모드에서도 일부 차이가 있습니다.

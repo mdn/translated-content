@@ -3,6 +3,7 @@ title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
 **Les promesses (ou <i lang="en">promises</i> en anglais)** sont une brique fondamentale pour la programmation asynchrone en JavaScript. Une promesse est un objet renvoyé par une fonction asynchrone et qui représente l'état courant de l'opération. Au moment où la promesse est renvoyée à l'appelant, l'opération n'est généralement pas terminée, mais la promesse fournit des méthodes pour gérer la réussite ou l'échec de l'opération.
@@ -165,12 +166,12 @@ Pour commencer, une promesse peut être dans l'un de ces trois états&nbsp;:
 
 - **En cours** (<i lang="en">pending</i> en anglais)
   - : La promesse a été créée et la fonction asynchrone associée n'a pas encore terminé son exécution, on ne sait pas si elle a réussi ou non. Il s'agit dans notre exemple de l'état de la promesse quand elle est renvoyée par l'appel à `fetch()`, et que la requête HTTP est toujours en cours.
-- **Tenue** (ou réussie ou <i lang="en">fullfilled</i> en anglais)
+- **Tenue** (ou réussie ou <i lang="en">fulfilled</i> en anglais)
   - : La fonction asynchrone a réussi. Lorsque la promesse est tenue, le gestionnaire passé à sa méthode `then()` est appelé.
 - **Rompue** (ou échouée ou <i lang="en">rejected</i> en anglais)
   - : La fonction asynchrone a échoué. Lorsqu'une promesse est rompue, c'est le gestionnaire passé à sa méthode `catch()` qui est appelé.
 
-On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la  requête.
+On notera ici que la réussite ou l'échec dépend de l'API en question. Ainsi, l'API `fetch()` considèrera qu'une requête a réussi dans le cas où le serveur renvoie une erreur HTTP comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404), mais qu'elle a échoué si une erreur réseau a empêché l'envoi de la requête.
 
 On utilise parfois le terme **réglée** (<i lang="en">settled</i> en anglais) pour désigner les deux cas de réussite et d'échec (autrement dit, pour dire que l'opération asynchrone n'est plus en cours).
 
@@ -369,11 +370,3 @@ De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/
 - [Parlons un peu de notre façon de parler des promesses (en anglais)](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
-
-## Dans ce module
-
-- [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **Comment utiliser les promesses**
-- [Implémenter une API utilisant les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Évaluation&nbsp;: ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

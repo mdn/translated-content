@@ -2,11 +2,12 @@
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
 ---
+
 {{APIRef("DOM Events")}}{{deprecated_header()}}
 
 这个只读的属性 **`KeyboardEvent.keyCode`** 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。
 
-你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。 不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。
+你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。
 
 > **备注：** 在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。
 
@@ -38,7 +39,7 @@ window.addEventListener("keydown", function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.keyCode")}}
+{{Compat}}
 
 ## 键码值
 
@@ -63,15 +64,15 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
   - 如果按备用键盘布局上的键输入一个 ASCII 字母或数字，请使用 keycode。
   - 否则，使用 0 或者根据下面的附加规则计算。
 
-从 Firefox 60 {{geckoRelease("60.0")}}开始，Gecko 会尽可能的根据以下规则额设置标点符号的 `keyCode` 值（当满足上述 7.1 或者 7.2 的时候）:
+从 Firefox 60 开始，Gecko 会尽可能的根据以下规则额设置标点符号的 `keyCode` 值（当满足上述 7.1 或者 7.2 的时候）:
 
-> **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190` （`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
+> **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190`（`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持世界上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 
 1. 如果运行 macOS 或者 Linux:
 
     1. 如果你当前的键盘布局不支持 ASCII 并且候选支持 ASCII 键盘布局可用。
 
-        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode。`
+        1. 如果候选支持 ASCII 的键盘布局仅通过未修改的键产生 ASCII 字符，请对该字符使用`keyCode`。
         2. 如果候选支持 ASCII 的键盘布局产生带有 Shift 键修饰符的 ASCII 字符，请对该字符使用`keyCode`。
         3. 否则，在美国键盘布局激活时，使用使用`keyCode`表示由按键产生的 ASCII 字符。
 
@@ -2513,7 +2514,7 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_TAB`                 | 0x09 (9)   | Tab key.                                                                                                                   |
 | `DOM_VK_CLEAR`               | 0x0C (12)  | "5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.                       |
 | `DOM_VK_RETURN`              | 0x0D (13)  | Return/enter key on the main keyboard.                                                                                     |
-| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see {{bug(969247)}}.)                                  |
+| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see [Firefox bug 969247](https://bugzil.la/969247).)                                  |
 | `DOM_VK_SHIFT`               | 0x10 (16)  | Shift key.                                                                                                                 |
 | `DOM_VK_CONTROL`             | 0x11 (17)  | Control key.                                                                                                               |
 | `DOM_VK_ALT`                 | 0x12 (18)  | Alt (Option on Mac) key.                                                                                                   |

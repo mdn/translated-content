@@ -2,7 +2,8 @@
 title: order
 slug: Web/CSS/order
 ---
-{{ CSSRef("CSS Flexible Boxes") }}
+
+{{CSSRef("CSS Flexible Boxes")}}
 
 ## 概述
 
@@ -12,7 +13,7 @@ slug: Web/CSS/order
 
 {{cssinfo}}
 
-参考 [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) 获取更多信息。
+参考 [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes) 获取更多信息。
 
 ## 语法
 
@@ -66,8 +67,8 @@ order: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## 参考
 
-- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)
+- [使用 CSS 弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)

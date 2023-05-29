@@ -2,6 +2,7 @@
 title: 語法與型別
 slug: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 本章討論 JavaScript 的基本語法與基礎資料類型、包括變數、常數、字元常數
@@ -662,7 +663,7 @@ This chapter focuses on basic syntax for declarations and types. To learn more a
 - [Control flow and error handling](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Loops and iteration](/zh-TW/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Functions](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 In the next chapter, we will have a look at control flow constructs and error handling.
 

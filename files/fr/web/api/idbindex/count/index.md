@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/count
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`count()`**, rattachée à l'interface {{domxref("IDBIndex")}}, renvoie un objet {{domxref("IDBRequest")}} et, dans un _thread_ séparé, renvoie le nombre d'enregistrements contenu dans un intervalle de clé.
@@ -66,7 +67,7 @@ Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets puis on
 
 `myIndex.count()` est alors utilisé afin de compter le nombre d'enregistrements dans l'index et le résultat de la requête est affiché dans la console au travers du gestionnaire d'évènements pour la réussite (`onsuccess`).
 
-Efin, on parcourt chaque enregistrement pour l'insérer dans un tableau HTML. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre dépôt [IDBIndex-example](https://github.com/mdn/IDBIndex-example) ([cf. la démonstration _live_](https://mdn.github.io/IDBIndex-example/)).
+Enfin, on parcourt chaque enregistrement pour l'insérer dans un tableau HTML. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre dépôt [IDBIndex-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex) ([cf. la démonstration _live_](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {
@@ -118,4 +119,4 @@ function displayDataByIndex() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

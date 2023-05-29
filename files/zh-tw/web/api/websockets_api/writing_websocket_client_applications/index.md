@@ -3,6 +3,7 @@ title: 製作 WebSocket 客戶端應用程式
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
+
 WebSocket 是一種讓瀏覽器與伺服器進行一段互動通訊的技術。使用這項技術的 Webapp 可以直接進行即時通訊而不需要不斷對資料更改進行輪詢（polling）。
 
 > **備註：** 當我們的系統架構可以寄存 WebSocket 範例之後，我們會提供聊天／伺服器系統實例的幾個範例。
@@ -89,7 +90,7 @@ function sendText() {
     type: "message",
     text: document.getElementById("text").value,
     id: clientID,
-    date: Date.now()
+    date: Date.now(),
   };
 
   mySocket.send(JSON.stringify(msg));
@@ -104,9 +105,9 @@ function sendText() {
 WebSockets 是一個事件驅動 API，當瀏覽器收到訊息時，一個「message」事件被傳入 `onmessage` 函數。使用以下方法開始傾聽傳入資料：
 
 ```js
-mySocket.onmessage = function(e) {
+mySocket.onmessage = function (e) {
   console.log(e.data);
-}
+};
 ```
 
 ### 接收並解讀 JSON 物件
@@ -120,30 +121,34 @@ mySocket.onmessage = function(e) {
 用來解讀傳入訊息的代碼可能像是：
 
 ```js
-connection.onmessage = function(evt) {
+connection.onmessage = function (evt) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(evt.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>使用者 <em>" + msg.name + "</em> 登入於 " + timeStr + "</b><br>";
+      text =
+        "<b>使用者 <em>" + msg.name + "</em> 登入於 " + timeStr + "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>由於你選取的名字已被人使用，你的使用者名稱已被設置為 <em>" + msg.name + "</em>。";
+      text =
+        "<b>由於你選取的名字已被人使用，你的使用者名稱已被設置為 <em>" +
+        msg.name +
+        "</em>。";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

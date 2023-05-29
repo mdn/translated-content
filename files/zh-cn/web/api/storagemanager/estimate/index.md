@@ -2,6 +2,7 @@
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 **`estimate()`**方法是{{domxref("StorageManager")}}的一个接口，用于估算某一个域名（或一个站点）下 Storage Manager 的总存储空间和已经使用了的存储空间。此方法为一个异步方法，如果此方法可用，那么其返回一个结果为 resolved 的{{jsxref("Promise")}}对象。resolved 接收的参数是一个带有已使用数据存储空间和总可用总存储空间的{{domxref("StorageEstimate")}}对象。
@@ -30,7 +31,7 @@ var estimatePromise = StorageManager.estimate();
 
 在这个示例中，我们使用 estimate() 得到目前所使用的存储空间占全部存储空间的百分比。
 
-### HTML 内容
+### HTML
 
 ```html
 <p>
@@ -39,7 +40,7 @@ var estimatePromise = StorageManager.estimate();
 </p>
 ```
 
-### JavaScript 内容
+### JavaScript
 
 ```js
 navigator.storage.estimate().then(function(estimate) {
@@ -50,7 +51,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ### 结果
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ EmbedLiveSample('示例', 600, 40) }}
 
 ## 规范
 
@@ -58,7 +59,7 @@ navigator.storage.estimate().then(function(estimate) {
 
 ## 浏览器兼容性
 
-{{Compat("api.StorageManager.estimate")}}
+{{Compat}}
 
 ## 参见
 

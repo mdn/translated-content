@@ -2,6 +2,7 @@
 title: GamepadPose
 slug: Web/API/GamepadPose
 ---
+
 {{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)的接口**`GamepadPose`** 表示 WebVR 的控制者在某个给定时间点的姿势， (包括方向、位置、速率、加速度信息)
@@ -37,7 +38,7 @@ TBD.
 
 ## Browser compatibility
 
-{{Compat("api.GamepadPose")}}
+{{Compat}}
 
 ## See also
 

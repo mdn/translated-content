@@ -9,9 +9,10 @@ tags:
   - Reference
 translation_of: Web/API/AnimationEvent/pseudoElement
 ---
+
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
 
-La propriété en lecture seule **`AnimationEvent.pseudoElement`** est une {{domxref("DOMString")}}, commençant par `'::'`, contenant le nom du [pseudo-élément](/fr/docs/CSS/Pseudo-éléments) sur lequel tourne l'animation. Si l'animation ne tourne pas sur un pseudo-élément, mais sur un élément, c'est une chaîne de caractère vide : ` ''``. `
+La propriété en lecture seule **`AnimationEvent.pseudoElement`** est une {{domxref("DOMString")}}, commençant par `'::'`, contenant le nom du [pseudo-élément](/fr/docs/CSS/Pseudo-éléments) sur lequel tourne l'animation. Si l'animation ne tourne pas sur un pseudo-élément, mais sur un élément, c'est une chaîne de caractère vide : `''`.
 
 ## Syntaxe
 

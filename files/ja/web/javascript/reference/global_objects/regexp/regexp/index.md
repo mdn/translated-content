@@ -2,6 +2,7 @@
 title: RegExp() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** コンストラクターは、パターンに従ったテキストを検索する正規表現オブジェクトを生成します。
@@ -71,13 +72,11 @@ new RegExp('ab+c', 'i') // コンストラクター
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.buffered`** 返回一个只读 {{domxref("TimeRanges")}} 对象 返回媒体已缓冲的区域
@@ -39,8 +40,8 @@ console.log(obj.buffered.end(0));//第一个缓存结束的区域
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.buffered")}}
+{{Compat}}
 
-## 也可以看看
+## 参见
 
 - The interface defining it, {{domxref("HTMLMediaElement")}}.

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/HTML/Microdata
 original_slug: Web/HTML/Microdonnées
 ---
+
 Les microdonnées (_microdata_) sont une partie de la spécification HTML du [WHATWG](/fr/docs/Glossary/WHATWG) qui est utilisée afin de fournir des métadonnées sur le contenu des pages web. Les moteurs de recherche, les robots (_crawlers_) d'analyse peuvent traiter les microdonnées d'une page web pour améliorer l'expérience de navigation. Les moteurs de recherches peuvent tirer parti des informations pour obtenir une meilleure pertinence. Les microdonnées sont structurées grâce à un vocabulaire permettant de décrire des objets qui sont des groupes de paires de noms/valeurs. Le but des microdonnées est de faciliter l'annotation des éléments HTML et d'être plus simple à utiliser que RDFa ou les microformats.
 
 Les microdonnées sont des groupes de paires nom-valeur. Ces groupes sont appelés des objets (_items_) et chaque paire nom-valeur est une propriété. Les objets et les propriétés s'inscrivent dans des éléments HTML classiques :

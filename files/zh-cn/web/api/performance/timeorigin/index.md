@@ -2,6 +2,7 @@
 title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
 ---
+
 {{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
 接口 {{domxref("Performance")}} 的只读属性 **`timeOrigin`** 返回一个表示 the performance measurement 开始时间的高精度 timestamp
@@ -22,4 +23,4 @@ var timeOrigin = performance.timeOrigin
 
 ## Browser Compatibility
 
-{{Compat("api.Performance.timeOrigin")}}
+{{Compat}}

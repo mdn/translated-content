@@ -2,6 +2,7 @@
 title: Reflect.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 静态方法 **`Reflect.getOwnPropertyDescriptor()`** 与 {{jsxref("Object.getOwnPropertyDescriptor()")}} 方法相似。如果在对象中存在，则返回给定的属性的属性描述符。否则返回 {{jsxref("undefined")}}。
@@ -29,7 +30,7 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
 ## 描述
 
-`Reflect.getOwnPropertyDescriptor`方法返回一个属性描述符，如果给定的属性存在于对象中，否则返回 {{jsxref("undefined")}} 。 与 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的唯一不同在于如何处理非对象目标。
+`Reflect.getOwnPropertyDescriptor`方法返回一个属性描述符，如果给定的属性存在于对象中，否则返回 {{jsxref("undefined")}} 。与 {{jsxref("Object.getOwnPropertyDescriptor()")}} 的唯一不同在于如何处理非对象目标。
 
 ## 示例
 

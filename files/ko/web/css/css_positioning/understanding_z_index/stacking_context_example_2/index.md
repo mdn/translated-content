@@ -1,15 +1,12 @@
 ---
 title: 쌓임 맥락 예제2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
 ### 쌓임 맥락 예제2
 
 굉장히 간단하지만 *쌓임 맥락*을 이해하는데 도움이 되는 예제를 하나 소개하려 한다. 이전 예제에서 본 4개의 DIV가 있다. 이번에는 두 레벨의 DIV 모두 z-index 속성 값을 지정했다.
-
-![Stacking context example 2](/@api/deki/files/917/=Understanding_zindex_06.png)
 
 z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 있다. 왜냐하면 DIV #2와 DIV #3은 같은 쌓임 맥락(루트 엘리먼트)에 속하고 DIV #2의 z-index 값이 더 크기 때문이다.
 
@@ -26,87 +23,98 @@ z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 �
 
 > **참고:** 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
 
-### 예제 소스 코드
+## 예제
+
+### HTML
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head><style type="text/css">
-
-div { font: 12px Arial; }
-
-span.bold { font-weight: bold; }
-
-#div2 { z-index: 2; }
-#div3 { z-index: 1; }
-#div4 { z-index: 10; }
-
-#div1,#div3 {
-   height: 80px;
-   position: relative;
-   border: 1px dashed #669966;
-   background-color: #ccffcc;
-   padding-left: 5px;
-}
-
-#div2 {
-   opacity: 0.8;
-   position: absolute;
-   width: 150px;
-   height: 200px;
-   top: 20px;
-   left: 170px;
-   border: 1px dashed #990000;
-   background-color: #ffdddd;
-   text-align: center;
-}
-
-#div4 {
-   opacity: 0.8;
-   position: absolute;
-   width: 200px;
-   height: 70px;
-   top: 65px;
-   left: 50px;
-   border: 1px dashed #000099;
-   background-color: #ddddff;
-   text-align: left;
-   padding-left: 10px;
-}
-
-
-</style></head>
-
-<body>
-
-<br />
-
 <div id="div1">
-<br /><span class="bold">DIV #1</span>
-<br />position: relative;
-   <div id="div2">
-   <br /><span class="bold">DIV #2</span>
-   <br />position: absolute;
-   <br />z-index: 2;
-   </div>
+  <br />
+  <span class="bold">DIV #1</span><br />
+  position: relative;
+  <div id="div2">
+    <br />
+    <span class="bold">DIV #2</span><br />
+    position: absolute;<br />
+    z-index: 2;
+  </div>
 </div>
 
 <br />
 
 <div id="div3">
-<br /><span class="bold">DIV #3</span>
-<br />position: relative;
-<br />z-index: 1;
-   <div id="div4">
-   <br /><span class="bold">DIV #4</span>
-   <br />position: absolute;
-   <br />z-index: 10;
-   </div>
+  <br />
+  <span class="bold">DIV #3</span><br />
+  position: relative;<br />
+  z-index: 1;
+  <div id="div4">
+    <br />
+    <span class="bold">DIV #4</span><br />
+    position: absolute;<br />
+    z-index: 10;
+  </div>
 </div>
-
-</body></html>
 ```
+
+### CSS
+
+```css
+div {
+  font: 12px Arial;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+#div2 {
+  z-index: 2;
+}
+#div3 {
+  z-index: 1;
+}
+#div4 {
+  z-index: 10;
+}
+
+#div1,
+#div3 {
+  height: 80px;
+  position: relative;
+  border: 1px dashed #669966;
+  background-color: #ccffcc;
+  padding-left: 5px;
+}
+
+#div2 {
+  opacity: 0.8;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 20px;
+  left: 170px;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
+  text-align: center;
+}
+
+#div4 {
+  opacity: 0.8;
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  top: 65px;
+  left: 50px;
+  border: 1px dashed #000099;
+  background-color: #ddddff;
+  text-align: left;
+  padding-left: 10px;
+}
+```
+
+## 결과
+
+{{ EmbedLiveSample('예제', '352', '270') }}
 
 ### See also
 

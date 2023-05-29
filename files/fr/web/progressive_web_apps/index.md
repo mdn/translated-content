@@ -3,6 +3,7 @@ title: Applications web progressives
 slug: Web/Progressive_web_apps
 translation_of: Web/Progressive_web_apps
 ---
+
 Les **applications web progressives** (ou <i lang="en">progressive web applications</i> en anglais, abrégées en PWAs) sont des applications web qui utilisent [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), [les manifestes](/fr/docs/Web/Manifest), et d'autres fonctionnalités de la plateforme web, avec [l'amélioration progressive](/fr/docs/Glossary/Progressive_Enhancement) pour fournir aux utilisatrices et utilisateurs une expérience équivalente à celle des applications natives.
 
 Les applications web progressives ont plusieurs [avantages](/fr/docs/Web/Progressive_web_apps/Introduction#avantages_des_applications_web)&nbsp;: elles peuvent être [installées](/fr/docs/Web/Progressive_web_apps/Introduction#installabilité), [améliorées progressivement](/fr/docs/Web/Progressive_web_apps/Introduction#prise_en_charge_de_lamelioration_progressive), [conçues de façon adaptative](/fr/docs/Web/Progressive_web_apps/Introduction#adaptativité), [maintenir l'engagement](/fr/docs/Web/Progressive_web_apps/Introduction#re-engagement), [être indiquées avec un lien](/fr/docs/Web/Progressive_web_apps/Introduction#decouvrabilite_avec_un_lien), [découvrables](/fr/docs/Web/Progressive_web_apps/Introduction#découvrabilité), [indépendantes de l'état du réseau](/fr/docs/Web/Progressive_web_apps/Introduction#indépendance_du_réseau), et [sécurisées](/fr/docs/Web/Progressive_web_apps/Introduction#sécurité).

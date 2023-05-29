@@ -12,6 +12,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
+
 {{AddonSidebar}}
 
 Renvoie les informations sur le navigateur dans lequel l'extension est installée.
@@ -37,9 +38,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - **`version`**: Chaîne représentant la version du navigateur, par exemple "51.0" or "51.0a2".
 - **`buildID`**: Chaine représentant la version spécifique du navigateur, par exemple "20161018004015".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.getBrowserInfo")}}
+{{Compat}}
 
 ## Exemples
 

@@ -3,6 +3,7 @@ title: scale
 slug: Web/CSS/scale
 translation_of: Web/CSS/scale
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`scale`** permet de mise à l'échelle individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
@@ -37,9 +38,13 @@ scale: 2 0.5 2;
 - `none`
   - : Cette valeur indique qu'aucune mise à l'échelle ne devrait être appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -91,15 +96,11 @@ div:hover .scale {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scale")}}
+{{Compat}}
 
 ## Voir aussi
 

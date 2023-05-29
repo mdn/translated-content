@@ -2,6 +2,7 @@
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 **`@@iterator`** 属性的初始值是和 {{jsxref("Array.prototype.values")}} 属性的初始值相同的对象。
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 arguments[Symbol.iterator]()
 ```
 
-## 实例
+## 示例
 
 ### 使用`for...of`循环的迭代
 

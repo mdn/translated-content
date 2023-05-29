@@ -2,6 +2,7 @@
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef}}
 
 **`constructor`** プロパティは、インスタンスオブジェクトを生成した {{jsxref("Object")}} のコンストラクター関数への参照を返します。なお、このプロパティの値は*関数そのものへの参照*であり、関数名を含んだ文字列ではありません。
@@ -199,7 +200,7 @@ Child.prototype = Object.create(ParentWithStatic.prototype)
 ...
 ```
 
-> **Note:** コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
+> **メモ:** コンストラクターを手動で更新したり設定したりすると、異なる結果や混乱する結果を導くことがあります。これを防ぐためには、それぞれの場合に応じて `constructor` の役割を定義することが必要です。多くの場合、 `constructor` 使用されず、再割り当ての必要はありません。
 
 ## 仕様書
 

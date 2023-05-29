@@ -2,6 +2,7 @@
 title: ':indeterminate'
 slug: Web/CSS/:indeterminate
 ---
+
 {{CSSRef}}
 
 **`:indeterminate`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、未確定の状態にあるフォーム要素を表します。例えばチェックボックスで HTML の [`indeterminate`](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性が `true` に設定されたもの、ラジオボタンでグループ内がすべて選択されていないもの、 {{HTMLElement("progress")}} 要素で中間の状態などです。
@@ -21,7 +22,9 @@ input:indeterminate {
 
 ## 構文
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## 例
 

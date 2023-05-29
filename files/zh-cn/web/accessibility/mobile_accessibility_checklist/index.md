@@ -2,6 +2,11 @@
 title: 移动无障碍清单
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+</section>
+
 该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 
 ## 颜色
@@ -11,7 +16,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
   - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
 
-- 颜色传递的信息，**必须**也通过其它方式标明（例如，链接文本中的下划线）
+- 颜色传递的信息，**必须**也通过其他方式标明（例如，链接文本中的下划线）
 
 > **备注：** Jon Snook 开发的 [颜色对比度检查器 - Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 可以轻松检查前景和背景的对比度。同样，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 这个工具能做类似的检查，并且会推荐你考虑使用类似的更好的对比度
 
@@ -36,7 +41,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - 应用中，每个展示的非文本元素都**必须**提供等效文本。
 
-  - 恰当的位置使用 _alt_ 和 _title_ （请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
+  - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
   - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
 - **必须**避免文本图像。
@@ -44,7 +49,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其它自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
 
 ## General Guidelines 常规指南
 

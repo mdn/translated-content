@@ -9,6 +9,7 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 Utilisez la clé `chrome_settings_overrides` pour remplacer certains paramètres du navigateur. Deux paramètres sont disponibles :
@@ -210,6 +211,6 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
   </tbody>
 </table>
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

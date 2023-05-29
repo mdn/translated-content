@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createProgram
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée et initialise un objet {{domxref("WebGLProgram")}}.

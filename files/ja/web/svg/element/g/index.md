@@ -1,13 +1,8 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/g
 ---
+
 {{SVGRef}}
 
 **`<g>`** [SVG](/ja/docs/Web/SVG) 要素は、他の SVG 要素をグループ化するために用いられるコンテナです。
@@ -55,10 +50,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                         | 状態                     | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}} | {{Spec2("SVG2")}} |            |
-| {{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}} | {{Spec2("SVG1.1")}} | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

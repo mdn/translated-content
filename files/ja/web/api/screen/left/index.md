@@ -2,6 +2,7 @@
 title: Screen.left
 slug: Web/API/Screen/left
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
 
 メイン画面の左端から現在の画面の左端までの距離をピクセル単位で返します。

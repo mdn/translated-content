@@ -2,6 +2,7 @@
 title: <gradient>
 slug: Web/CSS/gradient
 ---
+
 {{CSSRef}}
 
 **`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
@@ -20,7 +21,7 @@ CSS グラデーションは[自身の寸法を持ちません](/ja/docs/Web/CSS
 
 #### 放射グラデーション
 
-放射グラデーション (radical gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
+放射グラデーション (radial gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
 
 #### 反復グラデーション
 

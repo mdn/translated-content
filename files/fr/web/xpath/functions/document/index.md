@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/document
 original_slug: Web/XPath/Fonctions/document
 ---
+
 {{ XsltRef() }}
 
 La fonction `document` recherche un ensemble de nœuds dans un ou des documents externes et retourne l'ensemble de nœuds résultant.

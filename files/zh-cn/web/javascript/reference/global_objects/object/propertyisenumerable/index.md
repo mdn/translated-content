@@ -2,6 +2,7 @@
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
+
 {{JSRef}}
 
 **`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否可枚举。
@@ -27,7 +28,7 @@ obj.propertyIsEnumerable(prop)
 
 每个对象都有一个 `propertyIsEnumerable` 方法。此方法可以确定对象中指定的属性是否可以被 {{jsxref("Statements/for...in", "for...in")}} 循环枚举，但是通过原型链继承的属性除外。如果对象没有指定的属性，则此方法返回 `false`。
 
-## 例子
+## 示例
 
 ### `propertyIsEnumerable` 方法的基本用法
 

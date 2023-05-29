@@ -2,6 +2,7 @@
 title: 'RangeError: repeat count must be less than infinity'
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "repeat count must be less than infinity" は、 {{jsxref("String.prototype.repeat()")}} メソッドが使用され、 `count` 引数が無限大である場合に発生します。

@@ -1,7 +1,6 @@
 ---
 title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
 {{jsSidebar("More")}}
 
@@ -17,7 +16,7 @@ ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라,
 
 | Property            | Value                                                                                                                                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | object를 반환하는, arguments 없는 function. [iterator protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) 을 따른다. |
+| `[Symbol.iterator]` | object를 반환하는, arguments 없는 function. [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) 을 따른다. |
 
 어떠한 객체가 반복(Iterate)되어야 한다면 이 객체의 `@@iterator` 메소드가 인수없이 호출되고, 반환된 **iterator**는 반복을 통해서 획득할 값들을 얻을 때 사용됩니다.
 
@@ -136,7 +135,7 @@ someString + "";                              // "hi"
 
 ### 내장 iterables
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} 는 모두 내장 iterable이다. 이 객체들의 프로토타입 객체들은 모두 ` @@``iterator ` 메소드를 가지고 있기 때문이다.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} and {{jsxref("Set")}} 는 모두 내장 iterable이다. 이 객체들의 프로토타입 객체들은 모두 `@@iterator` 메소드를 가지고 있기 때문이다.
 
 ### 사용자 정의된 iterables
 
@@ -173,7 +172,7 @@ new WeakSet(function*() {
 
 ### Iterable과 함께 사용되는 문법
 
-[`for-of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator), `yield*와` [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)는 iterable과 함께 사용되는 구문(statements)과 표현(expressions)이다.
+[`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator), `yield*와` [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)는 iterable과 함께 사용되는 구문(statements)과 표현(expressions)이다.
 
 ```js
 for(let value of ["a", "b", "c"]){

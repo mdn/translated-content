@@ -2,6 +2,7 @@
 title: '-webkit-mask-position-x'
 slug: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-mask-position-x` は CSS のプロパティで、マスク画像の初期の水平方向の位置を設定します。

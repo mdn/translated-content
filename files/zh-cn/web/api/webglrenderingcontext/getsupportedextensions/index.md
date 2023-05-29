@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getSupportedExtensions()
 slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.getSupportedExtensions()`** 方法返回一个所有的支持 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 扩展的列表。

@@ -2,6 +2,7 @@
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`Proxy-Authenticate`** 是一个响应首部，指定了获取 {{Glossary("proxy server")}}（代理服务器）上的资源访问权限而采用的身份验证方式。代理服务器对请求进行验证，以便它进一步传递请求。

@@ -2,6 +2,7 @@
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 ---
+
 {{JSRef}}
 
 **`Math.atanh()`** 函数返回一个数值反双曲正切值，即：

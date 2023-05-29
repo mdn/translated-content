@@ -2,6 +2,7 @@
 title: Selection.deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 > **备注：** The **`Selection.deleteFromDocument()`** method deletes the actual text being represented by a selection object from the document's DOM.
@@ -26,7 +27,7 @@ A user selects the (imaginary) text "ve two ea" from "Rabbits have two ears." on
 
 ## Browser compatibility
 
-{{Compat("api.Selection.deleteFromDocument")}}
+{{Compat}}
 
 ## See also
 

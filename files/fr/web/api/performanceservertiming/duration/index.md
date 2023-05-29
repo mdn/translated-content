@@ -11,6 +11,7 @@ tags:
   - duration
 translation_of: Web/API/PerformanceServerTiming/duration
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`duration`** retourne un double qui contient la durée de la métrique spécifiée par le serveur, ou la valeur `0,0`.

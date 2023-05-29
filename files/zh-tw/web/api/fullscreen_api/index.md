@@ -2,6 +2,7 @@
 title: 使用全螢幕模式
 slug: Web/API/Fullscreen_API
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 全螢幕 API 提供一個簡便的方式使網頁可以使用佔用使用者的整個螢幕的方式來顯示內容。該 API 讓您能夠容易地指示瀏覽器使某個元素及其子系（如有）佔用整個螢幕，並隱藏螢幕上所有瀏覽器使用者介面及其他應用程式。
@@ -51,11 +52,11 @@ if (elem.requestFullscreen) {
 
 ### 通知
 
-如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
+如果成功進入全螢幕模式，包含該元素的文件將會接收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。當離開全螢幕模式時，則會收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。注意 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
 
 ### 全螢幕要求失敗
 
-並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
+並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen) 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
 
 > **備註：** 全螢幕要求必須在事件處理常式中呼叫，否則將會被拒絕。
 
@@ -158,5 +159,5 @@ These are some of the methods that browsers implemented before the standard was 
 - {{ domxref("document.mozFullScreenEnabled") }}
 - {{ cssxref(":-moz-full-screen") }}
 - {{ cssxref(":-moz-full-screen-ancestor") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen)
 - [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)

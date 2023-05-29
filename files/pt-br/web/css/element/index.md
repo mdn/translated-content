@@ -1,19 +1,12 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - Background
-  - CSS
-  - CSS4-images
-  - Função CSS
-  - Layout
-  - Web
-translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-A função [CSS](/pt-BR/docs/CSS "CSS") **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
+A função [CSS](/pt-BR/docs/CSS) **`element()`** define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é **_dinamica_**, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.
 
 Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um _background_.
 
@@ -32,7 +25,7 @@ Onde:
 
 ## Exemplos
 
-Esses exemplos podem ser [vistos em tempo real](/samples/cssref/moz-element.html "https://developer.mozilla.org/samples/cssref/moz-element.html") em versões do Firefox que suportam `-moz-element()`.
+Esses exemplos podem ser [vistos em tempo real](/samples/cssref/moz-element.html) em versões do Firefox que suportam `-moz-element()`.
 
 ### Um exemplo de alguma maneira real
 

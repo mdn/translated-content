@@ -1,28 +1,15 @@
 ---
 title: 数値と日付
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Calculation
-  - Dates
-  - FP
-  - Floating Point
-  - Floating-Point
-  - Guide
-  - Integer
-  - JavaScript
-  - Math
-  - Numbers
-  - Numeric
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 本章では、JavaScript で数値と日付の計算を実行するのに使われる概念、オブジェクト、関数について紹介します。これには 10 進数、2 進数、16 進数数値を含むそれぞれの基数で表された数値を使用することや、数値の幅広い種類の数学的演算を実行するグローバル {{jsxref("Math")}} オブジェクトの使い方も含みます。
 
 ## 数値
 
-JavaScript では、数値はすべて [64 ビット倍精度浮動小数点数のフォーマットである IEEE 754](https://ja.wikipedia.org/wiki/Double-precision_floating-point_format) (すなわち、±2−1022 と ±2+1023 の間、もしくはおよそ ±10−308 と ±10+308 の間の数値、53 ビットの精度による) にしたがって実装されています。±253 − 1 までの整数は正確に表現できます。
+JavaScript では、数値はすべて [64 ビット倍精度浮動小数点数のフォーマットである IEEE 754](https://ja.wikipedia.org/wiki/%E5%80%8D%E7%B2%BE%E5%BA%A6%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0) (すなわち、±2−1022 と ±2+1023 の間、もしくはおよそ ±10−308 と ±10+308 の間の数値、53 ビットの精度による) にしたがって実装されています。±253 − 1 までの整数は正確に表現できます。
 
 浮動小数点数の表現に加えて、数値型は 3 つの記号的な値を持っています。 `+`{{jsxref("Infinity")}}、`-`{{jsxref("Infinity")}}、{{jsxref("NaN")}}（非数、not-a-number）です。
 

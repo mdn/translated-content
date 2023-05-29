@@ -2,6 +2,9 @@
 title: HTML 属性参考
 slug: Web/HTML/Attributes
 ---
+
+{{HTMLSidebar("Attributes")}}
+
 HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配置元素或者以各种方式来调整元素的行为，进而满足用户所需的标准。
 
 ## 属性列表
@@ -46,7 +49,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/align">align</a></td>
       <td>
-        {{ HTMLElement("applet") }},
         {{ HTMLElement("caption") }}, {{ HTMLElement("col") }},
         {{ HTMLElement("colgroup") }},
         {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }},
@@ -60,13 +62,12 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/allow">allow</a></td>
       <td>{{ HTMLElement("iframe") }}</td>
-      <td>Specifies a feature-policy for the iframe.</td>
+      <td>Specifies a Permissions-Policy for the iframe.</td>
     </tr>
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/alt">alt</a></td>
       <td>
         <p>
-          {{ HTMLElement("applet") }},
           {{ HTMLElement("area") }}, {{ HTMLElement("img") }},
           {{ HTMLElement("input") }}
         </p>
@@ -105,7 +106,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -189,11 +189,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       </td>
     </tr>
     <tr>
-      <td>challenge</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>与公钥一起提交的挑战字符。</td>
-    </tr>
-    <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/charset">charset</a></td>
       <td>
         {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
@@ -221,19 +216,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td><a href="/zh-CN/docs/Web/HTML/Global_attributes/class">class</a></td>
       <td><a href="/en/HTML/Global_attributes">全局属性</a></td>
       <td>经常和 CSS 一起配合使用来修饰元素。</td>
-    </tr>
-    <tr>
-      <td><a href="/zh-CN/docs/Web/HTML/Attributes/code">code</a></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>标明被加载和执行的 applet 类文件的 URL。</td>
-    </tr>
-    <tr>
-      <td><a href="/zh-CN/docs/Web/HTML/Attributes/codebase">codebase</a></td>
-      <td>{{ HTMLElement("applet") }}</td>
-      <td>
-        指出存放 applet 类文件基本 URL 地址 (绝对或相对)，这些文件由 code
-        属性标明。
-      </td>
     </tr>
     <tr>
       <td>color</td>
@@ -398,7 +380,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -475,7 +456,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -591,11 +571,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td></td>
     </tr>
     <tr>
-      <td>keytype</td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
-    </tr>
-    <tr>
       <td>kind</td>
       <td>{{ HTMLElement("track") }}</td>
       <td>Specifies the kind of text track.</td>
@@ -624,7 +599,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       <td>loop</td>
       <td>
         {{ HTMLElement("audio") }},
-        {{ HTMLElement("bgsound") }},
         {{ HTMLElement("marquee") }},
         {{ HTMLElement("video") }}
       </td>
@@ -706,7 +680,6 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},

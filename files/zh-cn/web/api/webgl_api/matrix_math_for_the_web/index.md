@@ -2,15 +2,16 @@
 title: Matrix math for the web
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 矩阵可以用于表示空间中的对象的变换，并且是 Web 页面可视化的重要工具。本文探索如何创建并配合[CSS3 变换](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms)和 matrix3d 变换类型使用矩阵。
 
-虽然本文为了便于解释而使用了 CSS3， 矩阵却是许多技术中的核心概念， 包括 WebGL 和着色器。本文也是[MDN content kit](https://github.com/TatumCreative/mdn-matrix-math)的一部分。示例使用了一组全局对象 MDN 下的[工具函数](https://github.com/TatumCreative/mdn-webgl)。
+虽然本文为了便于解释而使用了 CSS3，矩阵却是许多技术中的核心概念，包括 WebGL 和着色器。本文也是[MDN content kit](https://github.com/TatumCreative/mdn-matrix-math)的一部分。示例使用了一组全局对象 MDN 下的[工具函数](https://github.com/TatumCreative/mdn-webgl)。
 
 ## 什么是变换矩阵？
 
-虽然存在许多类型的矩阵，但我们感兴趣的是三维变换矩阵。这种矩阵由一个 4x4 方阵，共 16 个值组成。在 JavaScript 中，可以很方便的用数组表示矩阵。比如典型的单位矩阵。单位阵乘上一个点或者矩阵， 其结果保持不变。
+虽然存在许多类型的矩阵，但我们感兴趣的是三维变换矩阵。这种矩阵由一个 4x4 方阵，共 16 个值组成。在 JavaScript 中，可以很方便的用数组表示矩阵。比如典型的单位矩阵。单位阵乘上一个点或者矩阵，其结果保持不变。
 
 ```js
 var identityMatrix = [
@@ -76,7 +77,7 @@ function multiplyMatrixAndPoint(matrix, point) {
 var identityResult = multiplyMatrixAndPoint(identityMatrix, [4,3,2,1]);
 ```
 
-返回同一个点并没有什么用处， 但还有一些其它的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
+返回同一个点并没有什么用处，但还有一些其他的矩阵可以作用于点，返回有用的结果。接下来我们将演示其中一些矩阵。
 
 ### 两个矩阵相乘
 
@@ -130,7 +131,7 @@ var identityMatrix = [
 var someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **警告：** 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组， 可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](http://glmatrix.net/)就是一个注重速度和性能的库。
+> **警告：** 这些函数是为了解释的清晰而编写，而不是为了速度或者内存管理。这些函数新建了大量数组，可能在实时运算时导致垃圾回收的巨大开销。在实际产品中最好使用优化过的函数。比如[glMatrix](http://glmatrix.net/)就是一个注重速度和性能的库。
 
 ## 平移矩阵
 
@@ -153,7 +154,7 @@ var translationMatrix = [
 
 ## 用矩阵操作 DOM
 
-一个非常简单的开始使用矩阵的方法是使用 CSS3 里的`matrix3d变换。首先，` 我们新建一个简单的{{htmlelement("div")}}并加上一些内容。这里样式没有展示出来，但我们将其设置成了页面居中且固定宽度与高度。我们同样为变换设定了动画以便清晰的观察发生的变化。
+一个非常简单的开始使用矩阵的方法是使用 CSS3 里的 `matrix3d` 变换。首先，我们新建一个简单的 {{htmlelement("div")}} 并加上一些内容。这里样式没有展示出来，但我们将其设置成了页面居中且固定宽度与高度。我们同样为变换设定了动画以便清晰的观察发生的变化。
 
 ```html
 <div id='move-me' class='transformable'>
@@ -186,7 +187,7 @@ moveMe.style.transform = matrix3dRule;
 
 ## 缩放矩阵
 
-缩放矩阵使对象的高度、宽度和深度三个维度的其中之一变大或变小。在典型（笛卡尔）坐标系中， 这将使得 x，y，z 坐标拉伸或收缩。
+缩放矩阵使对象的高度、宽度和深度三个维度的其中之一变大或变小。在典型（笛卡尔）坐标系中，这将使得 x，y，z 坐标拉伸或收缩。
 
 ```js
 var w = 1.5; // width  (x)
@@ -225,7 +226,7 @@ var transformedPoint = [
 ];
 ```
 
-我们可以将上述步骤表示为一个矩阵，并且单独应用到 x， y，和 z 坐标。下面是绕 Z 轴旋转的表示：
+我们可以将上述步骤表示为一个矩阵，并且单独应用到 x，y，和 z 坐标。下面是绕 Z 轴旋转的表示：
 
 ```js
 var sin = Math.sin;

@@ -2,7 +2,8 @@
 title: <header>
 slug: Web/HTML/Element/header
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<header>` 元素**用于展示介绍性内容，通常包含一组介绍性的或是辅助导航的实用元素。它可能包含一些标题元素，但也可能包含其他元素，比如 Logo、搜索框、作者名称，等等。
 
@@ -28,7 +29,7 @@ slug: Web/HTML/Element/header
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("group")}}，{{ARIARole("presentation")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>，<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

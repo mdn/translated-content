@@ -3,6 +3,7 @@ title: かっこいいボックス
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 この評価では、人目を引くボックスを作成しようとすることで、かっこいいボックスを作成する方法をさらに習得できます。
@@ -17,7 +18,7 @@ original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 
 - [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) と [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) のローカルコピーを作成します — それらを `index.html` と `style.css` として新しいディレクトリーに保存します。
 
-> **Note:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力できます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクトの概要
 
@@ -53,13 +54,3 @@ original_slug: Learn/CSS/Styling_boxes/A_cool_looking_box
 組織的コースの一環としてこの評価に従っている場合は、採点のために作品を教師や指導者に渡すことができるはずです。 自己学習をしている場合は、[この演習についてのディスカッションスレッド](https://discourse.mozilla.org/t/a-cool-looking-box-assessment/24685)や [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、かなり簡単に採点の手引きを得ることができます。 まず演習を試してみてください — 不正行為によって得られるものは何もありません！
 
 {{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
-
-## このモジュール内の文書
-
-- [ボックスモデルの復習](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap)
-- [背景](/ja/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [境界線](/ja/docs/Learn/CSS/Styling_boxes/Borders)
-- [表の装飾](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)
-- [ボックスの高度なエフェクト](/ja/docs/Learn/CSS/Styling_boxes/Advanced_box_effects)
-- [装飾的なレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [かっこいいボックス](/ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)

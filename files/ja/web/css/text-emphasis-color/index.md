@@ -2,6 +2,7 @@
 title: text-emphasis-color
 slug: Web/CSS/text-emphasis-color
 ---
+
 {{CSSRef}}
 
 **`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。

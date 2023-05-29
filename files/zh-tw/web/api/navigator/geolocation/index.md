@@ -2,6 +2,7 @@
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Navigator.geolocation`** 回傳一個唯讀的 {{domxref("Geolocation")}} 物件，透過這個物件可以存取設備的位置訊息。同時也允許網站或應用程式根據使用者的位置提供客製化的結果。
@@ -20,7 +21,7 @@ geo = navigator.geolocation
 
 ## 瀏覽器相容性
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## 請參考
 

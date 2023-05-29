@@ -1,16 +1,15 @@
 ---
 title: <style>
 slug: Web/HTML/Element/style
-translation_of: Web/HTML/Element/style
 ---
 ## Resumo
 
 O **elemento HTML \<style>** contém informações de estilo para um documento ou uma parte do documento. As informações de estilo específico estão contidas dentro deste elemento, geralmente no [CSS](/pt-BR/docs/Web/CSS).
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Metadata content](/pt-BR/docs/Web/HTML/Content_categories#Metadata_content), e se o atributo `scoped` é apresentado: [flow content ](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_[Metadata content](/pt-BR/docs/Web/HTML/Content_categories#Metadata_content), e se o atributo `scoped` é apresentado: [flow content](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
 - _Conteúdo Permitido_ Style information matching the language of the `type` attribute.
 - _Omissão de Tag_ {{no_tag_omission}}
-- \_Permitted parent elements_Qualquer elemento que aceite Metadata content.
+- _Permitted parent elements_ Qualquer elemento que aceite Metadata content.
 - _Interface DOM_ {{domxref("HTMLStyleElement")}}
 
 ## Atributos
@@ -76,4 +75,4 @@ body {
 
 - O elemento {{HTMLElement("link")}} que permite usar folhas de estilo externas.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

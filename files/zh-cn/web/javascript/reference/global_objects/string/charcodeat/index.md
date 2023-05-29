@@ -2,6 +2,7 @@
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 ---
+
 {{JSRef}}
 
 **`charCodeAt()`** 方法返回 `0` 到 `65535` 之间的整数，表示给定索引处的 UTF-16 代码单元

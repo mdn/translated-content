@@ -10,6 +10,7 @@ tags:
 translation_of: Web/Accessibility/Mobile_accessibility_checklist
 original_slug: Accessibilité/Checklist_accessibilite_mobile
 ---
+
 Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.
 
 ## La couleur

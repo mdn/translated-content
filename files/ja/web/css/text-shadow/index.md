@@ -2,6 +2,7 @@
 title: text-shadow
 slug: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
 **`text-shadow`** は CSS のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
@@ -105,7 +106,7 @@ text-shadow: unset;
 
 ### Quantum CSS のメモ
 
-- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ({{bug(726550)}})。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
+- Gecko には {{cssxref("transition")}} にバグがあり、色が指定された `text-shadow` から色が指定されていない `text-shadow` へのトランジションが動作しません ([Firefox バグ 726550](https://bugzil.la/726550))。これは Firefox の新しいパラレル CSS エンジン ([Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) とも呼ばれ、 Firefox 57 でリリースされる予定です) で修正されています。
 
 ## 関連情報
 

@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 browser-compat: css.types.transform-function.translate
 ---
+
 {{CSSRef}}
 
 La fonction **`translate()`** permet de déplacer un élément sur le plan représenté par le document. Cette transformation est définie à l'aide d'un vecteur dont les coordonnées définissent la quantité de déplacement sur chaque axe (horizontal et vertical).

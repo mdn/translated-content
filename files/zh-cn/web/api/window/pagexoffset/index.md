@@ -2,6 +2,7 @@
 title: Window.pageXOffset
 slug: Web/API/Window/pageXOffset
 ---
+
 {{ APIRef() }}
 
 这是 `scrollX 的别名`

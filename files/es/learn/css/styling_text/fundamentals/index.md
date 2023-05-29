@@ -1,8 +1,8 @@
 ---
 title: Fundamentos de texto y fuentes tipográficas
 slug: Learn/CSS/Styling_text/Fundamentals
-translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de estilos a textos con {{glossary("CSS")}}. Aquí trataremos en detalle todos los fundamentos básicos del diseño del texto y las fuentes tipográficas, incluyendo la configuración de su grosor, la familia y el estilo de letra, las propiedades abreviadas para los tipos de letra, la alineación del texto, el espaciado entre líneas y letras, y otros efectos.
@@ -691,11 +691,3 @@ window.addEventListener("load", drawOutput);
 Esperamos que hayas disfrutado jugando con el texto en este artículo. El próximo artículo te enseñará todo lo que necesitas saber sobre la aplicación de estilos de lista en HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## En este módulo
-
-- [Aplicar estilo al texto base y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Aplicación de estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Aplicación de estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
-- [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

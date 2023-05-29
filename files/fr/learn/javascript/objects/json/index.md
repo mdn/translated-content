@@ -12,6 +12,7 @@ tags:
   - Tutoriel
 translation_of: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 Le JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript. Il est habituellement utilisé pour structurer et transmettre des données sur des sites web (par exemple, envoyer des données depuis un serveur vers un client afin de les afficher sur une page web ou vice versa). Comme cette notation est extrêmement courante, cet article a pour but de vous donner les connaissances nécessaires pour travailler avec JSON en JavaScript, vous apprendre à analyser la syntaxe du JSON afin d'en extraire des données et écrire vos propres objets JSON.
@@ -210,7 +211,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     request.open('GET', requestURL);
     ```
 
-    Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles.  Deux suffiront pour notre exemple :
+    Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles. Deux suffiront pour notre exemple :
 
     - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
     - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
@@ -232,7 +233,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     }
     ```
 
-Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété [`response`](/fr/docs/Web/API/XMLHttpRequest/response)) dans la variable `superHeroes`&nbsp;; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le <`header>` avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la `<section>`.
+Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété [`response`](/fr/docs/Web/API/XMLHttpRequest/response)) dans la variable `superHeroes`&nbsp;; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le `<header>` avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la `<section>`.
 
 Nous avons encapsulé ce code dans un gestionnaire d'évènements qui s'exécutera quand l'évènement load sera déclenché sur l'objet request (voir [`onload`](/fr/docs/Web/API/XMLHttpRequestEventTarget/onload)) — simplement parce que l'évènement load est déclenché quand une réponse a été renvoyée avec succès ; en procédant de la sorte, nous serons certains que la propriété `request.response` sera disponible au moment où nous essayerons d'en faire quelque chose.
 
@@ -349,7 +350,7 @@ On commence par créer un objet JavaScript puis on vérifie son contenu avant de
 
 ## Résumé
 
-Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de création et d'analyse syntaxique (parsage)  du JSON et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
+Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de création et d'analyse syntaxique (parsage) du JSON et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
 
 ## Voir aussi
 

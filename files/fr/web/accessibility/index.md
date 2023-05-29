@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility
 original_slug: Accessibilité
 ---
+
 L’accessibilité dans le développement web signifie permettre l'utilisation des sites web par le plus grand nombre de personnes, même lorsque les capacités de ces personnes sont limitées d’une manière ou d'une autre. Voici quelques informations qui vous permettront de développer du contenu accessible.
 
 «&nbsp;**L'accessibilité du web** signifie que les personnes handicapées peuvent l'utiliser. Plus spécifiquement, elle signifie que ces gens peuvent percevoir, comprendre, naviguer, interagir avec le web, et y contribuer. L'accessibilité du web bénéficie également à d'autres, notamment les personnes âgées ayant des capacités diminuées dues au vieillissement. » ( [L'accessibilité du Web définie dans Wikipédia](http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web))

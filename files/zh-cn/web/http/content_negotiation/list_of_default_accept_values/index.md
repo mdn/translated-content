@@ -3,17 +3,18 @@ title: Accept 默认值
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 ---
+
 {{HTTPSidebar}}
 
 本文介绍了在一些特定输入和浏览器版本下的 HTTP [`Accept`](/zh-CN/docs/Web/HTTP/Headers/Accept) 头的默认值
 
 ## 默认值
 
-这些值将在上下文未设置其它信息时被使用。 注意：所有的浏览器都会添加 `*/*` MIME 类型以涵盖各种情况。这通常用于通过浏览器的地址栏或 HTML {{HTMLElement("a")}} 标签发起的请求。
+这些值将在上下文未设置其他信息时被使用。注意：所有的浏览器都会添加 `*/*` MIME 类型以涵盖各种情况。这通常用于通过浏览器的地址栏或 HTML {{HTMLElement("a")}} 标签发起的请求。
 
 | User Agent          | Value                                                                                                                                                                   | Comment                                                                                                                                           |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | `这个值可以通过network.http.accept.default` 参数来修改。                                                                                          |
+| Firefox             | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | 这个值可以通过 `network.http.accept.default` 参数来修改。                                                                                          |
 | Safari, Chrome      | `application/xml,application/xhtml+xml,text/html;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5`                                                                           | [source](http://www.newmediacampaigns.com/page/browser-rest-http-accept-headers)                                                                  |
 | Safari 5            | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                                                       | 这是对早期 `Accept` 头的改进，不再把 `image/png` 排在 `text/html` 之前。                                                                          |
 | Internet Explorer 8 | `image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/x-shockwave-flash, application/msword, */*` | 请参见 [IE and the Accept Header (IEInternals' MSDN blog)](http://blogs.msdn.com/b/ieinternals/archive/2009/07/01/ie-and-the-accept-header.aspx). |
@@ -22,7 +23,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 ## image 请求
 
-当请求一张图片时， 比如一个 HTML {{HTMLElement("img")}} 元素，用户代理通常会设置一个特定的媒体类型列表。
+当请求一张图片时，比如一个 HTML {{HTMLElement("img")}} 元素，用户代理通常会设置一个特定的媒体类型列表。
 
 | User Agent                     | Value                                                                 | Comment                                                                                                                                                                          |
 | ------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +35,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 ## video 请求
 
-通过 HTML {{HTMLElement("video")}} 元素请求一个 video 时， 大多数浏览器会使用特定值。
+通过 HTML {{HTMLElement("video")}} 元素请求一个 video 时，大多数浏览器会使用特定值。
 
 | User Agent                       | Value                                                                                              | Comment                                                                 |
 | -------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -45,7 +46,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 ## audio 请求
 
-通过 HTML {{HTMLElement("audio")}} 元素请求 audio 资源时， 大多数浏览器会使用特定值。
+通过 HTML {{HTMLElement("audio")}} 元素请求 audio 资源时，大多数浏览器会使用特定值。
 
 | User Agent                     | Value                                                                                        | Comment                                                               |
 | ------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
@@ -56,7 +57,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 ## scripts 请求
 
-当通过 {{HTMLElement("script")}} 元素请求 script 时， 一些浏览器使用特定值。
+当通过 {{HTMLElement("script")}} 元素请求 script 时，一些浏览器使用特定值。
 
 | User Agent                     | Value                               | Comment                                                                                                                                                                          |
 | ------------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +68,7 @@ original_slug: Web/HTTP/Content_negotiation/Accept_默认值
 
 ## CSS 请求
 
-当通过 `<link rel="stylesheet">` HTML 元素请求 CSS 样式表时， 大多数浏览器使用特定值。
+当通过 `<link rel="stylesheet">` HTML 元素请求 CSS 样式表时，大多数浏览器使用特定值。
 
 | User Agent                     | Value                                                                                                                               | Comment                                                                                                                                                                          |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

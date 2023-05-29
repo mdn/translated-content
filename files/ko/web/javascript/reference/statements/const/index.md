@@ -1,14 +1,8 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Statement
-  - constants
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
 **`const` 선언**은 블록 범위의 상수를 선언합니다. 상수의 값은 재할당할 수 없으며 다시 선언할 수도 없습니다.

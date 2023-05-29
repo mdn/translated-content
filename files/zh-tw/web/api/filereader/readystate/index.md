@@ -2,6 +2,7 @@
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
 ---
+
 {{APIRef("File API")}}
 
 提供目前讀取狀態
@@ -16,7 +17,11 @@ var state = instanceOfFileReader.readyState
 
 數字代表 {{domxref("FileReader")}} API 三個可能的狀態：
 
-{{page("/en-US/docs/Web/API/FileReader","State constants")}}
+| Value | State     | Description                                                   |
+| ----- | --------- | ------------------------------------------------------------- |
+| `0`   | `EMPTY`   | Reader has been created. None of the read methods called yet. |
+| `1`   | `LOADING` | A read method has been called.                                |
+| `2`   | `DONE`    | The operation is complete.                                    |
 
 ## 規格
 
@@ -24,7 +29,7 @@ var state = instanceOfFileReader.readyState
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader.readyState")}}
+{{Compat}}
 
 ## 閱讀更多
 

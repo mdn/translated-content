@@ -1,7 +1,8 @@
 ---
 title: Cacheable (キャッシュ可能)
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
+
 **キャッシュ可能**なレスポンス (応答) とは、キャッシュすることが可能な HTTP レスポンスで、後で取り出して使用するために格納され、サーバーへの新しいリクエスト (要求) を節約します。 すべての HTTP レスポンスがキャッシュされるわけではなく、キャッシュされる HTTP レスポンスには次の制約があります。
 
 - リクエストで使用されるメソッドは、それ自体が*キャッシュ可能*です ({{HTTPMethod("GET")}} メソッドまたは {{HTTPMethod("HEAD")}} メソッド)。 フレッシュネス (新鮮さ) が示され、{{HTTPHeader("Content-Location")}} ヘッダーが設定されている場合は、{{HTTPMethod("POST")}} または {{HTTPMethod("PATCH")}} リクエストへのレスポンスもキャッシュできますが、これはほとんど実装されていません。 (例えば、 Firefox は <https://bugzilla.mozilla.org/show_bug.cgi?id=109553> により、それをサポートしていません。) {{HTTPMethod("PUT")}} や {{HTTPMethod("DELETE")}} のような他のメソッドはキャッシュ可能ではなく、その結果をキャッシュすることはできません。

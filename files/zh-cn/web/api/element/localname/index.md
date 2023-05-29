@@ -2,6 +2,7 @@
 title: Element.localName
 slug: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** 只读属性，返回本地名称的。
@@ -50,7 +51,7 @@ name = element.localName
 
 ## 说明
 
-节点的本地名称是节点限定名的一部分出现在冒号之后。限定名通常当作特定 XML 文档命名空间的一部分。例如在限定名 `ecomm:partners 中 partners 是本地名，ecomm 是前缀。`
+节点的本地名称是节点限定名的一部分出现在冒号之后。限定名通常当作特定 XML 文档命名空间的一部分。例如在限定名 `ecomm:partners` 中 `partners` 是本地名，`ecomm` 是前缀。
 
 ```xml
 <ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
@@ -61,7 +62,7 @@ name = element.localName
 </ecomm:business>
 ```
 
-> **备注：** 在 {{Gecko("1.9.2")}} 之前，此属性返回 HTML DOM 的 HTML 元素本地名称的大写版本 (而不是 XML DOM 的 HTML 元素). 在最后一个版本，符合 HTML5 规范下，当 HTML DOM 的 HTML 或 XML DOMs 的 XHTML 的小写元素时此属性返回内部 DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回 HTML DOM 的 HTML 元素本地名称的大写版本。
+> **备注：** 在 Gecko 1.9.2 之前，此属性返回 HTML DOM 的 HTML 元素本地名称的大写版本 (而不是 XML DOM 的 HTML 元素). 在最后一个版本，符合 HTML5 规范下，当 HTML DOM 的 HTML 或 XML DOMs 的 XHTML 的小写元素时此属性返回内部 DOM storage。{{domxref("element.tagName","tagName")}} 属性仍然返回 HTML DOM 的 HTML 元素本地名称的大写版本。
 
 ## 规范
 
@@ -69,7 +70,7 @@ name = element.localName
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
 ## 相关链接
 

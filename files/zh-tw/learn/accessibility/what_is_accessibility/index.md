@@ -2,6 +2,7 @@
 title: 何謂無障礙網頁？
 slug: Learn/Accessibility/What_is_accessibility
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 這篇文章給「到底什麼是無障礙網頁」的模塊，開了個好起頭：以下將包括我們該考慮什麼樣的用戶以及理由、不同的人要在 web 用什麼工具互動、還有如何令無障礙網頁成為 web 開發的一部分。
@@ -162,13 +163,3 @@ slug: Learn/Accessibility/What_is_accessibility
 本文應當使你對無障礙網頁有著概括性的認知、明白其重要性、並在知道如何在工作流程中安排它。你也該對知道如何實做無障礙網頁的細節有興趣。我們將在下個章節開始闡明為什麼 HTML 是無障礙網頁的好基礎。
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## 在本模塊
-
-- [What is accessibility?](/zh-TW/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-TW/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/zh-TW/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/zh-TW/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/zh-TW/docs/Learn/Accessibility/Accessibility_troubleshooting)

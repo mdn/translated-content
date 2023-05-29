@@ -1,26 +1,17 @@
 ---
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
-tags:
-  - Elemento
-  - HTML
-  - MDN
-  - Referencia
-  - Web
-  - blogger
-  - português brasil
-  - tag
-translation_of: Web/HTML/Element/blockquote
 ---
+
 ## Sumário
 
 O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo (ver [Notas](/pt-BR/docs/HTML/Element/blockquote#Notes) sobre como mudá-lo). A URL para a fonte da citação pode ser dada usando o atributo **cite**, enquanto uma representação de texto da fonte pode ser dada usando o {{HTMLElement("cite")}} elemento.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), raiz selecionamento, conteúdo palpável.
-- _Conteúdo permitido_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content_categories#Phrasing_content").
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content), raiz selecionamento, conteúdo palpável.
+- _Conteúdo permitido_ [Fluxo de conteúdo](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _Tag Omissão_ {{no_tag_omission}}
-- \_Elementos permitidos_Qualquer elemento que aceita o [fluxo de conteúdo.](/pt-BR/docs/HTML/Content_categories#Flow_content)
-- \_Papéis ARIA permitidos_Qualquer
+- _Elementos permitidos_ Qualquer elemento que aceita o [fluxo de conteúdo.](/pt-BR/docs/HTML/Content_categories#Flow_content)
+- _Papéis ARIA permitidos_ Qualquer
 - _Interface DOM_ {{domxref("HTMLQuoteElement")}}
 
 ## Atributos
@@ -61,11 +52,9 @@ O código HTML acima vai resultar em:
 
 {{Compat("html.elements.blockquote")}}
 
-##
-
 ## Veja também
 
 - O elemento {{HTMLElement("q")}} para citações em linha.
 - O elemento {{HTMLElement("q")}} para citações de origem.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

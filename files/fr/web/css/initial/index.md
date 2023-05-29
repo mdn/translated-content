@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) spécifiée pour cette la propriété.
@@ -52,14 +53,11 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Cascade', '#initial', 'initial')}} | {{Spec2('CSS4 Cascade')}} | Aucun changement.    |
-| {{SpecName('CSS3 Cascade', '#initial', 'initial')}} | {{Spec2('CSS3 Cascade')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.initial")}}
+{{Compat}}
 
 ## Voir aussi
 

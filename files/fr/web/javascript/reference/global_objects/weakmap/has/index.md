@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet `WeakMap`.
@@ -44,14 +45,11 @@ wm.has("machin");  // renvoie false
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakMap.has")}}
+{{Compat}}
 
 ## Voir aussi
 

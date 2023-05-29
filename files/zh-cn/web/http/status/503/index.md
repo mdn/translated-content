@@ -2,6 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 **`503 Service Unavailable`** 是一种 HTTP 协议的服务器端错误状态代码，它表示服务器尚未处于可以接受请求的状态。

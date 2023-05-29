@@ -12,6 +12,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 Ajouter des écouteurs d'événement pour les différentes étapes d'une navigation. Une navigation se compose d'un cadre dans le navigateur passant d'une URL à l'autre, généralement (mais pas toujours) en réponse à une action de l'utilisateur comme cliquer sur un lien ou entrer une URL dans la barre d'adresse.
@@ -40,7 +41,7 @@ Chaque navigation est une transition d'URL dans un cadre de navigateur particuli
 
 L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
 
-L'écouteur d'événement `onCommitted`reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un  {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
+L'écouteur d'événement `onCommitted` reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
 
 Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
 
@@ -79,9 +80,9 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
   - : Lancé lorsque la page a utilisé l' [API d'histoirique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -91,7 +92,8 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +120,4 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

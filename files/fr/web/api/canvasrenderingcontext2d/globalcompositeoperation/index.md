@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
+
 {{APIRef}}
 
 La propriété **`CanvasRenderingContext2D.globalCompositeOperation`** de l'API Canvas 2D définit le type d'opération de composition à appliquer lors du tracé de nouvelles formes.

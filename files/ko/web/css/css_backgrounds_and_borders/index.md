@@ -1,14 +1,8 @@
 ---
 title: CSS 배경 및 테두리
 slug: Web/CSS/CSS_Backgrounds_and_Borders
-tags:
-  - CSS
-  - CSS Backgrounds and Borders
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 ---
+
 {{CSSRef}}
 
 **CSS Backgrounds and Borders** 모듈의 스타일은 배경에 색과 이미지를 채우거나, 기타 다른 방식으로 수정할 수 있습니다. 또한 테두리를 선이나 이미지로 장식할 수 있고, 직각 뿐 아니라 원형 테두리로 만들 수도 있습니다. (추가로, 요소 박스를 그림자로 꾸밀 수도 있습니다.)

@@ -1,13 +1,8 @@
 ---
 title: '-moz-image-region'
 slug: Web/CSS/-moz-image-region
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Non-standard
-translation_of: Web/CSS/-moz-image-region
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 XUL 요소와 가상요소들에 대하여 {{ Cssxref("list-style-image") }} 속성을 사용할때 이 속성은 전체이미지에서 사용되는 부분의 령역을 지정합니다. 이것은 요소들이 성능을 향상시키기 위해 같은 이미지의 서로다른 부분을 사용할수 있게 합니다.

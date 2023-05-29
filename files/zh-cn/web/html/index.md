@@ -2,9 +2,10 @@
 title: HTML（超文本标记语言）
 slug: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
-**HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其它技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
+**HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其他技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
 
 “超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
 
@@ -24,7 +25,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 
 - HTML 参考
   - : 在我们丰富的 [HTML 参考](/zh-CN/docs/Web/HTML/Reference)部分中，你可以找到在 HTML 中每一个元素和属性的详细信息。
-  
+
 > **标注：**
 >
 > #### 想要成为一名前端工程师？
@@ -51,11 +52,11 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 ## 高级主题
 
 - [CORS 处理跨域图片](/zh-CN/docs/Web/HTML/CORS_enabled_image)
-  - : 通过搭配 {{htmlattrxref("crossorigin", "img")}} 属性和适当的 {{glossary("CORS")}} 标头，在 {{HTMLElement("img")}} 元素中定义的图片可以从外部来源加载并在 {{HTMLElement("canvas")}} 元素中使用，就像是从本地源加载一样。
+  - : 通过搭配 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 属性和适当的 {{glossary("CORS")}} 标头，在 {{HTMLElement("img")}} 元素中定义的图片可以从外部来源加载并在 {{HTMLElement("canvas")}} 元素中使用，就像是从本地源加载一样。
 - [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
   - : 一些提供了对 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的支持的 HTML 元素，比如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 元素属性／attribute（`crossOrigin` 对象属性／property），该属性能使你配置其跨域获取资源的请求。
 - [使用 rel="preload" 预加载页面内容](/zh-CN/docs/Web/HTML/Link_types/preload)
-  - : {{htmlelement("link")}} 元素的 {{htmlattrxref("rel", "link")}} 属性的值 `preload` 允许你在 HTML 的 {{htmlelement("head")}} 部分声明一些（资源）获取请求，以指定那些在页面加载后即刻需要的资源。因此在浏览器的主渲染机制介入前，这些资源会在页面加载生命周期的早期阶段进行预加载。这样可以保证这些资源可被更早使用并减少阻塞页面初次渲染的可能性，从而提升性能。这篇文章提供了关于 `preload` 作用机制的基本指导。
+  - : {{htmlelement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性的值 `preload` 允许你在 HTML 的 {{htmlelement("head")}} 部分声明一些（资源）获取请求，以指定那些在页面加载后即刻需要的资源。因此在浏览器的主渲染机制介入前，这些资源会在页面加载生命周期的早期阶段进行预加载。这样可以保证这些资源可被更早使用并减少阻塞页面初次渲染的可能性，从而提升性能。这篇文章提供了关于 `preload` 作用机制的基本指导。
 
 ## 参考
 
@@ -67,8 +68,8 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
   - : HTML 元素都含有**属性**。这些额外的属性值可以通过各种途径对元素进行配置或调整其行为。
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
   - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，*包括那些没有在相关标准中出现的元素*。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
-- [内联元素](/zh-CN/docs/Web/HTML/Inline_elements)和[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)
-  - : HTML 元素通常是"内联"或"块级"元素。一个内联元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
+- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)和[块级元素](/zh-CN/docs/Glossary/Block-level_content)
+  - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Link_types)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
@@ -80,5 +81,5 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 
 ## 相关主题
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
   - : 这篇文章涵盖了大多数使用 CSS 为 HTML 内容增加颜色的方式，并列举了 HTML 文档里哪些部分可以进行上色以及这一操作需要使用哪些 CSS 属性。它包含了一些示例，配色建构工具的链接，以及其他内容。

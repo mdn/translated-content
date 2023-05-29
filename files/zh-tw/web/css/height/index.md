@@ -2,6 +2,7 @@
 title: height
 slug: Web/CSS/height
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -107,7 +108,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('範例')}}
 
 ## 規格
 
@@ -115,7 +116,7 @@ div {
 
 ## 瀏覽器兼容性
 
-{{Compat("css.properties.height")}}
+{{Compat}}
 
 ## See also
 

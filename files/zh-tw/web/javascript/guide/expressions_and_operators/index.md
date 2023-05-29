@@ -1,7 +1,8 @@
 ---
 title: 運算式與運算子
-slug: Web/JavaScript/Guide/Expressions_and_Operators
+slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
 
 這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.
@@ -94,7 +95,7 @@ var var2 = 4;
 
 | 運算子                                                                                                                  | 描述                                                                                                                                                              | 會回傳 True 的例子                   |
 | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                                       | ` 3 == var1``"3" == var1``3 == '3' ` |
+| [等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality) (`==`)                             | 假如運算元等價就回傳 True。                                                                                                                                       | `3 == var1` `"3" == var1` `3 == '3'` |
 | [不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality) (`!=`)                         | 假如運算元等價就回傳 True。                                                                                                                                       | `var1 != 4 var2 != "3"`              |
 | [嚴格等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity) (`===`)                        | 假如運算元具有相同型態且等價則回傳 True。參考 {{jsxref("Object.is")}} 及 [JS 中的等價性](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness)。 | `3 === var1`                         |
 | [嚴格不等於](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity) (`!==`)                   | 假如運算元具有相同型態但不等價，或是具有不同型態，回傳 True。                                                                                                     | `var1 !== "3" 3 !== '3'`             |
@@ -177,9 +178,9 @@ var var2 = 4;
 
 | 運算子                                                                                                                    | 描述                                                                                                                               | 範例                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [左移](</zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#<<_(Left_shift)>) (`<<`)                         | 這個運算子會將第 一個運算元的每個 bit 向左移動 第二個運算元所指定的 bit 數量。左邊超出的位數會被捨棄，右邊空出的位數以 0 補齊。    | `9<<2` 得到 36，因為 1001 向左移動 2 bits 會得到 100100， 也就是二進位的 36。                                                                |
-| [有號右移](</zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#>>_(Sign-propagating_right_shift)>) (`>>`)   | 這個運算子會將第 一個運算元的每個 bit 向右移動 第二個運算元所指定的 bit 數量。右邊超出的位數會被捨棄，左邊空出的位數以最高位補齊。 | `9>>2` 得到 2，因為 1001 向右移動 2 bits 會得到 10，也就是二進位的 2。 相同的， `-9>>2` 會得到 -3，因為最高位用來表示正負號的 bit 被保留了。 |
-| [以 0 填充的右移](</zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#>>>_(Zero-fill_right_shift)>) (`>>>`) | 這個運算子會將第 一個運算元的每個 bit 向右移動 第二個運算元所指定的 bit 數量。右邊超出的位數會被捨棄，左邊空出的位數以 0 補齊。    | `19>>>2 得到` 4， 因為 10011 向右移動 2 bits 會得到 100，是二進位的 4。對於非負的數字而言， 以 0 填充的右移 會得到和 有號右移相同的結果。    |
+| [左移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Left_shift) (`<<`)                         | 這個運算子會將第 一個運算元的每個 bit 向左移動 第二個運算元所指定的 bit 數量。左邊超出的位數會被捨棄，右邊空出的位數以 0 補齊。    | `9<<2` 得到 36，因為 1001 向左移動 2 bits 會得到 100100， 也就是二進位的 36。                                                                |
+| [有號右移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Right_shift) (`>>`)   | 這個運算子會將第 一個運算元的每個 bit 向右移動 第二個運算元所指定的 bit 數量。右邊超出的位數會被捨棄，左邊空出的位數以最高位補齊。 | `9>>2` 得到 2，因為 1001 向右移動 2 bits 會得到 10，也就是二進位的 2。 相同的， `-9>>2` 會得到 -3，因為最高位用來表示正負號的 bit 被保留了。 |
+| [以 0 填充的右移](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) (`>>>`) | 這個運算子會將第 一個運算元的每個 bit 向右移動 第二個運算元所指定的 bit 數量。右邊超出的位數會被捨棄，左邊空出的位數以 0 補齊。    | `19>>>2 得到` 4， 因為 10011 向右移動 2 bits 會得到 100，是二進位的 4。對於非負的數字而言， 以 0 填充的右移 會得到和 有號右移相同的結果。    |
 
 ### 邏輯運算子
 

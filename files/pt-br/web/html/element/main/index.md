@@ -1,30 +1,25 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/main
 ---
+
 ## Resumo
 
-O elemento **`<main>`**` define o conteúdo principal dentro do `{{HTMLElement("body")}} em seu documento ou aplicação. Entende-se como conteúdo principal aquele relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação. O mesmo deverá ser único na página, ou seja, dentro do elemento \<main> não deverão ser incluidas seções da página que sejam comuns a todo o site ou aplicação, tais como mecanismos de navegação, informações de copyright, logotipo e campos de busca` `(a não ser, é claro, caso a função principal do documento seja fazer algum tipo de busca).
+O elemento **`<main>`** define o conteúdo principal dentro do {{HTMLElement("body")}} em seu documento ou aplicação. Entende-se como conteúdo principal aquele relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação. O mesmo deverá ser único na página, ou seja, dentro do elemento \<main> não deverão ser incluidas seções da página que sejam comuns a todo o site ou aplicação, tais como mecanismos de navegação, informações de copyright, logotipo e campos de busca (a não ser, é claro, caso a função principal do documento seja fazer algum tipo de busca).
 
-> **Note:** **Nota:** `<main>` **não pode** ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
+> **Nota:** `<main>` **não pode** ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
 >
 > Autores **não devem** incluir mais de um elemento main no mesmo documento**.**
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), conteúdo palpável.
-- _Conteúdo permitido_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content").
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), conteúdo palpável.
+- _Conteúdo permitido_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content).
 - _Omissão de tag_ Nenhuma; ambas as tags de início e fim são obrigatórios.
-- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content "HTML/Content_categories#Flow_content"), mas não pode ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#Flow_content), mas não pode ser filho dos elementos {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, ou {{HTMLElement("nav")}}.
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Este elemento admite apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes "HTML/Atributos Globais").
+Este elemento admite apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplo
 

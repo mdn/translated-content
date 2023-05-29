@@ -13,6 +13,7 @@ tags:
   - onAlarm
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
 ---
+
 {{AddonSidebar}}
 
 Cet évènement est déclenché lorsque l'alarme se déclenche.
@@ -61,7 +62,7 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.onAlarm")}}
+{{Compat}}
 
 > **Note :**
 >

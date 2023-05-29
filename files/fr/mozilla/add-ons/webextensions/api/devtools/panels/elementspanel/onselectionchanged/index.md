@@ -16,6 +16,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged
 ---
+
 {{AddonSidebar()}}
 
 Appelles lorsque l'utilisateur sélectionne un élément de page différent pour l'inspection avec les outils de développement du navigateur, par exemple en sélectionnant l'élément de menu contextuel "Inspect Element" dans Firefox.
@@ -44,9 +45,9 @@ L'événement a trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lors de l'événement. La fonction ne passera pas d'arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged", 10)}}
+{{Compat}}
 
 ## Exemples
 

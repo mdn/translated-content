@@ -2,6 +2,7 @@
 title: origin
 slug: Web/SVG/Attribute/origin
 ---
+
 {{SVGRef}}
 
 该 **`origin`** 属性指定动画的运动原点。在 SVG 中无效。
@@ -19,6 +20,6 @@ slug: Web/SVG/Attribute/origin
 
 {{Specifications}}
 
-## 也可以看看
+## 参见
 
 - [`origin`SMIL 动画规范中的定义](https://www.w3.org/TR/smil-animation/#MotionOriginAttribute)

@@ -2,6 +2,7 @@
 title: String.prototype.substring()
 slug: Web/JavaScript/Reference/Global_Objects/String/substring
 ---
+
 {{JSRef}}
 
 **`substring()`** 方法返回一个字符串在开始索引到结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集。
@@ -35,7 +36,7 @@ str.substring(indexStart[, indexEnd])
 
 ## 示例
 
-### 例子：使用 `substring`
+### 示例：使用 `substring`
 
 下例使用 `substring` 输出字符串 "`Mozilla`" 中的字符：
 
@@ -81,7 +82,7 @@ var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 ```
 
-### 例子：替换一个字符串的子字符串
+### 示例：替换一个字符串的子字符串
 
 下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "`Brave New World`" 变成了 "`Brave New Web`"。
 

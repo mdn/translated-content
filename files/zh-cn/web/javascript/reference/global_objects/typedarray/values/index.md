@@ -2,9 +2,10 @@
 title: TypedArray.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 ---
+
 {{JSRef}}
 
-**`values()`**返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
+**`values()`** 返回新的 `Array Iterator` 对象，包含数组中每个下标处的值。
 
 ## 语法
 
@@ -52,7 +53,7 @@ console.log(eArr.next().value); // 50
 
 ## 另见
 
-- [JavaScript 类型化数组](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}

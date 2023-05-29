@@ -2,13 +2,14 @@
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
+
 {{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
 
 ## 概述
 
 返回调用指定函数的函数。
 
-该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-CN/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看{{ Bug("65683") }}), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
+该属性不是 ECMA-262 第 3 版标准的一部分。不过，[SpiderMonkey](/zh-CN/SpiderMonkey) (Mozilla 的 JavaScript 引擎) (查看[Firefox bug 65683](https://bugzil.la/65683)), V8 (Chrome 的 JavaScript 引擎) 和 JScript(IE 的 ECMAScript 实现) 都已经支持了它。
 
 ## 描述
 
@@ -42,7 +43,7 @@ stop.caller === g && f.caller === g && g.caller === f
 
 ```js
 var f = stop;
-var stack = "调用栈:";
+var stack = "调用栈：";
 while (f) {
   stack += "\n" + f.name;
   f = f.caller;
@@ -53,9 +54,9 @@ while (f) {
 
 有一个特殊属性 `__caller__`, 可以返回调用当前函数的函数的活动对象 (可以用来重现出整个调用栈), 但由于安全原因的考虑，该属性已被删除。
 
-## 例子
+## 示例
 
-### 例子：检测一个函数的 `caller` 属性的值
+### 示例：检测一个函数的 `caller` 属性的值
 
 下例用来得出一个函数是被谁调用的。
 

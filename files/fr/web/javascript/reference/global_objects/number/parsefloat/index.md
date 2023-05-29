@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseFloat
 ---
+
 {{JSRef}}
 
 La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caractères en un nombre flottant. Cette méthode possède un comportement identique à {{jsxref("parseFloat")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales).
@@ -51,14 +52,11 @@ if (Number.parseFloat === undefined) {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.parseFloat")}}
+{{Compat}}
 
 ## Voir aussi
 

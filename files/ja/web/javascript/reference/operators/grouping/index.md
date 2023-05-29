@@ -2,6 +2,7 @@
 title: グループ化演算子 ( )
 slug: Web/JavaScript/Reference/Operators/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 グループ化演算子 `( )` は、式での評価の優先順位を制御します。

@@ -9,6 +9,7 @@ tags:
   - Propriété
 translation_of: Web/API/TreeWalker/currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 La propriété **`TreeWalker.currentNode`** représente le {{domxref("Node")}} (_noeud_) sur lequel le {{domxref("TreeWalker")}} est actuellement pointé.

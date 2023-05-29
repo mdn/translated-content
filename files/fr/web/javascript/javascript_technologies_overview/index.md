@@ -7,6 +7,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## Introduction

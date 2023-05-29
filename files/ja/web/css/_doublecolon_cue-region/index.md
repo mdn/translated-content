@@ -2,6 +2,7 @@
 title: '::cue-region'
 slug: Web/CSS/::cue-region
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`::cue-region`** は [CSS](/ja/docs/Web/CSS)の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、選択された要素内にある {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} キューに一致します。これは VTT トラックのアルメディアで[字幕とその他のキューのスタイル付け](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)に利用できます。

@@ -12,11 +12,12 @@ tags:
   - removeCache
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
+
 {{AddonSidebar()}}
 
 Effacer le cache du navigateur.
 
-Notez que cette fonction puisse prendre un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.
+Notez que cette fonction puisse prendre un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -37,9 +38,9 @@ var removing = browser.browsingData.removeCache(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removeCache")}}
+{{Compat}}
 
 ## Exemples
 
@@ -66,7 +67,8 @@ then(onRemoved, onError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -93,4 +95,4 @@ then(onRemoved, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

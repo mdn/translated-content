@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.altitudeAccuracy
 slug: Web/API/GeolocationCoordinates/altitudeAccuracy
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.altitudeAccuracy`** は読み取り専用のプロパティで、厳密な正の `double` 値で、信頼度 95% の `altitude` の精度をメートル単位で表します。実装が高度の計測に対応していない場合、この値は `null` になります。

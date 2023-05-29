@@ -2,6 +2,7 @@
 title: Firefox 7 技術文件
 slug: Mozilla/Firefox/Releases/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.
@@ -10,11 +11,11 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### HTML
 
-- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since {{ gecko("2.0") }}.
+- The {{ domxref("HTMLHeadElement") }} `profile` property has been removed, this property has been deprecated since Gecko 2.0.
 - The {{ domxref("HTMLImageElement") }} `x` and `y` properties have been removed.
 - The {{ domxref("HTMLSelectElement") }} `add()` method `before` parameter is now optional.
-- The {{ HTMLElement("body") }} element's {{ htmlattrxref("background", "body") }} attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
-- The {{ HTMLElement("option") }} element's {{ htmlattrxref("label", "option") }} attribute now reflects the value of the element's text content if the attribute isn't specified.
+- The {{ HTMLElement("body") }} element's [`background`](/zh-TW/docs/Web/HTML/Element/body#background) attribute is no longer resolved as a URI; this is in compliance with the current HTML specification.
+- The {{ HTMLElement("option") }} element's [`label`](/zh-TW/docs/Web/HTML/Element/option#label) attribute now reflects the value of the element's text content if the attribute isn't specified.
 
 #### Canvas
 
@@ -131,7 +132,7 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 - The `nsIDOMWindow_2_0_BRANCH` interface has been merged into the `nsIDOMWindowInternal` interface.
 - `nsINavHistoryObserver` methods with URI parameters now require a GUID as well.
 - The `nsISHistory_2_0_BRANCH` interface has been merged into the `nsISHistory` interface.
-- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see {{ bug("661574") }} and {{ bug("661573") }})
+- `nsITelemetry` has a new method, `nsITelemetry.getHistogramById()` which returns a histogram by its ID, and a new attribute, `canRecord` which when set to `false` disables recording of telemetry statistics. Telemetry statistics are no longer recorded when in Private Browsing Mode. (see [Firefox bug 661574](https://bugzil.la/661574) and [Firefox bug 661573](https://bugzil.la/661573))
   Telemetry histograms defined with `nsITelemetry.newHistogram()` will not be reported in the telemetry ping.
 - The `nsIMemoryReporter` interface has been substantially changed; if you use it, you will need to make some adjustments to your code.
 - `nsIXMLHttpRequest`, headers set by `nsIXMLHttpRequest.setRequestHeader()` are sent with the request when following a redirect. Previously these headers would not be sent.

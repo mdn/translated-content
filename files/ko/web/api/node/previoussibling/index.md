@@ -1,8 +1,8 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-translation_of: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 `Node.previousSibling` 은 읽기전용 속성이며 현재 호출하는 노드가 속해 있는 부모의 {{domxref("Node.childNodes", "childNodes")}} 목록에서 특정 자식 노드를 리턴하거나 `childNodes` 목록의 첫번째 노드일 경우 Null값을 리턴합니다.`

@@ -2,6 +2,7 @@
 title: Server-side web frameworks
 slug: Learn/Server-side/First_steps/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 이전 기사에서는 웹 클라이언트와 서버 간의 통신 모습, HTTP 요청 및 응답의 성격, 서버 측 웹 애플리케이션이 웹 브라우저의 요청에 응답하기 위해 수행해야하는 작업에 대해 설명했습니다. 이러한 지식을 바탕으로, 지금 시간에는 웹 프레임 워크가 어떻게 그러한 작업을 간단히 만드는지 탐색하고, 당신의 첫 서버측 애플리케이션을 위한 프레임 워크를 어떻게 선택하는지 의견을 드리겠습니다.
@@ -120,7 +121,7 @@ class Team(models.Model):
 
 Django 모델은 데이터베이스 검색을 위한 간단한 쿼리를 제공 합니다. 다른 기준을 사용하여 한 번에 여러 필드와 일치시킬 수 있습니다. (예 : 대소 문자를 구분하지 않음,보다 큼, 등), 그리고 복잡한 명령문을 지원 할 수 있습니다 (예를 들어 당신이 "Fr"로 시작하거나 "al"로 끝나는 특별한 U11팀을 찾을 수 있습니다).
 
-두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 `team_level` 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. team_level\_\_exact ).
+두번째 코드 스니펫은 U09의 모든 팀을 보여주는 view function(요청 핸들러)을 보겠습니다. 이 경우 우리는 **`team_level`** 필드의 텍스트가 정확히 'U09'인 모든 레코드를 필터링하도록 지정합니다. ( 이 기준이 필드 이름과 일치 유형이 두 개의 밑줄로 구분 된 인수로 `filter()` 함수에 전달되는 방법을 아래에 기록하십시오. **`team_level__exact`** ).
 
 ```python
 #best/views.py
@@ -249,7 +250,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including:\*\* \*\*[Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://shopify.com/), [Airbnb](https://airbnb.com/), [Twitch](https://twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://hulu.com/), [Zendesk](https://zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -296,10 +297,3 @@ This article has shown that web frameworks can make it easier to develop and mai
 For the next article in this module we'll change direction slightly and consider web security.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/ko/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/ko/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/ko/docs/Learn/Server-side/First_steps/Website_security)

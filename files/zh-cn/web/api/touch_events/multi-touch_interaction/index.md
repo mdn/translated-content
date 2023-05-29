@@ -2,6 +2,7 @@
 title: 多点触控交互
 slug: Web/API/Touch_events/Multi-touch_interaction
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
@@ -10,7 +11,7 @@ A _live_ version of this application is available on [Github](https://mdn.github
 
 ## Example
 
-This example demonstrates using the {{event("touchstart")}}, {{event("touchmove")}}, {{event("touchcancel")}}, and {{event("touchend")}}) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
+This example demonstrates using the [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event), [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event), [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event), and [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event)) touch events for the following gestures: single touch, two (simultaneous) touches, more than two simultaneous touches, 1-finger swipe, and 2-finger move/pinch/swipe.
 
 ### Define touch targets
 
@@ -55,7 +56,7 @@ var tpCache = new Array();
 
 ### Register event handlers
 
-Event handlers are registered for all four touch event types. The {{event("touchend")}} and {{event("touchcancel")}} event types use the same handler.
+Event handlers are registered for all four touch event types. The [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) and [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) event types use the same handler.
 
 ```js
 function set_handlers(name) {
@@ -113,7 +114,7 @@ function handle_pinch_zoom(ev) {
 
 ### Touch start handler
 
-The {{event("touchstart")}} event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
+The [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) event handler caches touch points to support 2-touch gestures. It also calls {{domxref("Event.preventDefault","preventDefault()")}} to keep the browser from applying further event handling (for example, mouse event emulation).
 
 ```js
 function start_handler(ev) {
@@ -136,7 +137,7 @@ function start_handler(ev) {
 
 ### Touch move handler
 
-The {{event("touchmove")}} handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
+The [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) handler calls {{domxref("Event.preventDefault","preventDefault()")}} for the same reason mentioned above, and invokes the pinch/zoom handler.
 
 ```js
 function move_handler(ev) {
@@ -165,7 +166,7 @@ function move_handler(ev) {
 
 ### Touch end handler
 
-The {{event("touchend")}} handler restores the event target's background color back to its original color.
+The [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) handler restores the event target's background color back to its original color.
 
 ```js
 function end_handler(ev) {

@@ -3,6 +3,7 @@ title: Authentification HTTP
 slug: Web/HTTP/Authentication
 translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentification. Le schéma d'authentification HTTP le plus courant est « l'_authentification basique_ » (« _Basic authentication_ » en anglais). Cette page a pour but de présenter ce schéma d'authentification, et montre comment l'utiliser pour restreindre l'accès à votre serveur.

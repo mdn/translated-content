@@ -2,6 +2,7 @@
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 创建一个具有指定的命名空间 URI 和限定名称的元素。
@@ -18,12 +19,12 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### 参数
 
 - `namespaceURI`
-  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。 参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
+  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
 - `qualifiedName`
-  - : 指定要创建的元素的类型的字符串。 创建的元素的[nodeName](/zh-CN/docs/DOM/element.nodeName)属性使用 qualifiedName 的值进行初始化。
+  - : 指定要创建的元素的类型的字符串。创建的元素的[nodeName](/zh-CN/docs/DOM/element.nodeName)属性使用 qualifiedName 的值进行初始化。
 - `options`可选的
   - : 一个可选的包含单个属性的 ElementCreationOptions 对象，其值是预先使用 customElements.define() 定义的自定义元素的标签名称。为了向后兼容[自定义元素规范](https://www.w3.org/TR/custom-elements/)的早期版本，一些浏览器允许您在此使用字符串替代对象，其中字符串的值是自定义元素的标签名称。有关如何使用此参数的详情，请参阅[原生 HTML 元素](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml)。
-    新元素将被赋予一个属性，其值是自定义元素的标签名称。 自定义元素是实验中的功能，目前仅在某些浏览器中可用。
+    新元素将被赋予一个属性，其值是自定义元素的标签名称。自定义元素是实验中的功能，目前仅在某些浏览器中可用。
 
 ### 返回值
 
@@ -79,11 +80,11 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## 相关链接
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
-- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

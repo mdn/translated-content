@@ -3,6 +3,7 @@ title: ':blank'
 slug: Web/CSS/:blank
 original_slug: Web/CSS/:blank空白伪类
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **备注：** 使用 `:blank` 选择器被认为尚有一定风险，CSSWG 正在持续改进它。
@@ -21,7 +22,7 @@ original_slug: Web/CSS/:blank空白伪类
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.blank")}}
+{{Compat}}
 
 ## 参见
 

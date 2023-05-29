@@ -2,13 +2,14 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
+
 {{CSSRef}}
 
 如果您愿意为 Layout Cookbook 贡献示例文件，那么本页将通过阐释步骤指导您发布示例。
 
 ## 好的 recipe 是怎样的？
 
-**任何有用的 web 设计模式的最简版本。**您 CSS 文件中的每一行代码都应该有助于演示该模式， 省去无用的部分就是为了能让示例显得完美。这种想法就是，某个人既能将这种模式应用在网站中，又可以保持自己的风格。
+**任何有用的 web 设计模式的最简版本。**您 CSS 文件中的每一行代码都应该有助于演示该模式，省去无用的部分就是为了能让示例显得完美。这种想法就是，某个人既能将这种模式应用在网站中，又可以保持自己的风格。
 
 ## 发布 recipe 的步骤
 
@@ -68,7 +69,7 @@ Make a PR on the [CSS Examples repo](https://github.com/mdn/css-examples). This 
 
 ### 5. 创建您的页面
 
-Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages#Getting_page_creation_permissions), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/zh-CN/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template).
+Once your example is merged you can create your page. You will need an MDN account to do so with [page creation permissions](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#新建一个页面), and you can then create the page as a subpage of the CSS Cookbook page. [There is a template for Cookbook pages here](/zh-CN/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template).
 
 The template explains what should be part of each section, and you can refer to other cookbook examples for more help. If you click to edit any of those pages then you will be able to see things such as the macros used to embed compat data, and live examples.
 
@@ -78,5 +79,5 @@ If you need to ask any questions, or want someone to take a look at your page th
 
 ## See also
 
-- [Cookbook page template](/zh-CN/docs/user:chrisdavidmills/Layout_Cookbook_Home/Contribute_a_recipe/Cookbook_template)
+- [Cookbook page template](/zh-CN/docs/Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template)
 - [CSS Examples repo](https://github.com/mdn/css-examples)

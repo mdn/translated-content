@@ -2,6 +2,7 @@
 title: Cache.match()
 slug: Web/API/Cache/match
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("Cache")}} 接口的 **`match()`** 方法，返回一个 {{jsxref("Promise")}} 解析为 (resolve to) 与 {{domxref("Cache")}} 对象中的第一个匹配请求相关联的{{domxref("Response")}} 。如果没有找到匹配，{{jsxref("Promise")}} 解析为 {{jsxref("undefined")}}。
@@ -18,7 +19,7 @@ cache.match(request,{options}).then(function(response) {
 
 一个 {{jsxref("Promise")}} 对象，该对象解析为第一个匹配请求的 {{domxref("Response")}} 对象，如果没有匹配到，则解析到 {{jsxref("undefined")}} 。
 
-> **备注：** `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象） 而不是 `response[]` （所有响应对象组成的数组）。
+> **备注：** `Cache.match()` 基本上和 {{domxref("Cache.matchAll()")}} 一样，只不过 `Cache.match()` 只解析为 `response[0]` （第一个匹配的响应 (response) 对象）而不是 `response[]` （所有响应对象组成的数组）。
 
 ### 参数
 
@@ -28,10 +29,10 @@ cache.match(request,{options}).then(function(response) {
 
   - : 一个为 `match` 操作设置选项的对象。有效的选项如下：
 
-    - `ignoreSearch`: 一个 {{domxref("Boolean")}} 值用来设置是否忽略 url 中的 query 部分。例如，如果该参数设置为 `true` ，那么 `http://foo.com/?value=bar 中的` `?value=bar` 部分就会在匹配中被忽略。该选项默认为 `false`。
-    - `ignoreMethod`: 一个 {{domxref("Boolean")}} 值，如果设置为 `true`在匹配时就不会验证 {{domxref("Request")}} 对象的`http` 方法 (通常只允许是 `GET` 或 `HEAD` 。) 该参数默认值为 `false`。
+    - `ignoreSearch`: 一个 {{domxref("Boolean")}} 值用来设置是否忽略 url 中的 query 部分。例如，如果该参数设置为 `true` ，那么 `http://foo.com/?value=bar` 中的 `?value=bar` 部分就会在匹配中被忽略。该选项默认为 `false`。
+    - `ignoreMethod`: 一个 {{domxref("Boolean")}} 值，如果设置为 `true`在匹配时就不会验证 {{domxref("Request")}} 对象的`http` 方法 (通常只允许是 `GET` 或 `HEAD`。) 该参数默认值为 `false`。
     - `ignoreVary`: 一个 {{domxref("Boolean")}} 值，该值如果为 `true` 则匹配时不进行 `VARY` 部分的匹配。例如，如果一个 URL 匹配，此时无论{{domxref("Response")}}对象是否包含`VARY`头部，都会认为是成功匹配。该参数默认为 `false`。
-    - `cacheName`: 一个 {{domxref("DOMString")}} ，代表一个具体的要被搜索的缓存。注意该选项被 `Cache.match()`方法忽略。
+    - `cacheName`: 一个 {{domxref("DOMString")}} ，代表一个具体的要被搜索的缓存。注意该选项被 `Cache.match()` 方法忽略。
 
 ## 例子
 
@@ -39,7 +40,7 @@ cache.match(request,{options}).then(function(response) {
 
 下面的例子在请求失败时提供特定的数据。 `catch()` 在 `fetch()` 的调用抛出异常时触发。在 `catch()` 语句中， `match()`用来返回正确的响应。
 
-在这个例子中，我们决定只缓存通过 GET 取得的 HTML 文档. 如果 `if()` 条件是 false，那么这个 fetch 处理器就不会处理这个请求。如果还有其他的 fetch 处理器被注册，它们将有机会调用 `event.respondWith()` 如果没有 fetch 处理器调用 `event.respondWith()` ，该请求就会像没有 service worker 介入一样由浏览器处理。如果 `fetch()` 返回了有效的 HTTP 响应，相应码是 4xx 或 5xx，那么`catch()` 就**不会**被调用。
+在这个例子中，我们决定只缓存通过 GET 取得的 HTML 文档。如果 `if()` 条件是 false，那么这个 fetch 处理器就不会处理这个请求。如果还有其他的 fetch 处理器被注册，它们将有机会调用 `event.respondWith()` 如果没有 fetch 处理器调用 `event.respondWith()` ，该请求就会像没有 service worker 介入一样由浏览器处理。如果 `fetch()` 返回了有效的 HTTP 响应，相应码是 4xx 或 5xx，那么`catch()` 就**不会**被调用。
 
 ```js
 self.addEventListener('fetch', function(event) {
@@ -65,7 +66,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Cache.match")}}
+{{Compat}}
 
 ## 参阅
 

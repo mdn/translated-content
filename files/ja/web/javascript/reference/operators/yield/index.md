@@ -2,6 +2,7 @@
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
 ---
+
 {{jsSidebar("Operators")}}
 
 `yield` キーワードは、ジェネレーター関数 ({{jsxref("Statements/function*", "function*")}} または[古いジェネレーター関数](/ja/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)) を一時停止したり再開したりするために使用します。
@@ -15,7 +16,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 ```
 
 - `expression` {{optional_inline}}
-  - : [反復子プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復子_iterator_プロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
+  - : [イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)経由でジェネレーター関数が返す値を定義します。省略した場合、代わりに `undefined` が返されます。
 - `rv` {{optional_inline}}
   - : ジェネレーターの実行を再開する `next()` メソッドに渡したオプションの値を受け取ります。
 
@@ -38,7 +39,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 ジェネレーターのコードパス、 `yield` 演算子、新しい開始値を {{jsxref("Generator.prototype.next()")}} に渡すことで指定することができる機能により、ジェネレーターは大きな力と制御を提供します。
 
-> **Warning:** 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
+> **警告:** 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
 
 ## 例
 
@@ -55,7 +56,7 @@ function* countAppleSales () {
 }
 ```
 
-ジェネレーター関数が定義されると、ご覧のように反復子を構築するために使用されます。
+ジェネレーター関数が定義されると、ご覧のようにイテレーターを構築するために使用されます。
 
 ```js
 let appleStore = countAppleSales()  // Generator { }

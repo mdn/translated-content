@@ -1,14 +1,9 @@
 ---
 title: Seletores CSS
 slug: Web/CSS/CSS_Selectors
-tags:
-  - CSS
-  - Referência(2)
-  - Seletores
-  - Seletores CSS
-translation_of: Web/CSS/CSS_Selectors
 original_slug: Web/CSS/Seletores_CSS
 ---
+
 {{CSSRef}}
 
 Os Seletores definem quais elementos um conjunto de regras CSS se aplica.
@@ -50,7 +45,7 @@ Os Seletores definem quais elementos um conjunto de regras CSS se aplica.
     **Sintaxe:** `A > B`
     **Exemplo:** `ul > li` irá corresponder a todo elemento {{HTMLElement('li')}} que estiver diretamente dentro de um elemento {{HTMLElement('ul')}} especificado.
 - [Seletor de descendentes](/pt-BR/docs/Web/CSS/Descendant_selectors)
-  - : O combinador ``seleciona os nós que são filhos do elemento especificado anteriormente (não é necessário que seja um filho direto). **Sintaxe:** `A B`**Exemplo:**`div span` irá corresponder a todo e qualquer elemento {{HTMLElement('span')}} que estiver dentro do elemento {{HTMLElement('div')}}.
+  - : O combinador " " seleciona os nós que são filhos do elemento especificado anteriormente (não é necessário que seja um filho direto). **Sintaxe:** `A B`**Exemplo:**`div span` irá corresponder a todo e qualquer elemento {{HTMLElement('span')}} que estiver dentro do elemento {{HTMLElement('div')}}.
 
 ## Pseudo-classes
 

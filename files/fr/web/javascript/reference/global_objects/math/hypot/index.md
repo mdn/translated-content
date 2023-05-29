@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/hypot
 ---
+
 {{JSRef}}
 
 La fonction **`Math.hypot()`** renvoie la racine carrée de la somme des carrés de ses arguments. On peut également la définir avec la formule suivante :
@@ -36,7 +37,7 @@ La racine carrée de la somme des carrés des arguments. S'il existe un des argu
 
 ## Description
 
-`hypot()` étant une méthode statique de `Math`, il faut utiliser `Math.hypot()`et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`hypot()` étant une méthode statique de `Math`, il faut utiliser `Math.hypot()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 Si aucun argument n'est donné, le résultat sera +0.Si, parmi les arguments, au moins un ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.Si cette fonction est utilisée avec un argument : `Math.hypot(x)` sera équivalente à `Math.abs(x)`.
 
@@ -96,14 +97,11 @@ Math.hypot = function (x, y) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Voir aussi
 

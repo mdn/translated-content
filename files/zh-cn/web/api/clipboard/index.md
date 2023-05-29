@@ -2,6 +2,7 @@
 title: Clipboard
 slug: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}} {{SecureContext_Header}}
 
 **`Clipboard`** 接口实现了 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)，如果用户授予了相应的权限，其就能提供系统剪贴板的读写访问能力。在 Web 应用程序中，Clipboard API 可用于实现剪切、复制和粘贴功能。

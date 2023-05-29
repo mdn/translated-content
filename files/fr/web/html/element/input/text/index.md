@@ -1,10 +1,9 @@
 ---
 title: <input type="text">
-slug: Web/HTML/Element/Input/text
-translation_of: Web/HTML/Element/input/text
-browser-compat: html.elements.input.input-text
+slug: Web/HTML/Element/input/text
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.
 

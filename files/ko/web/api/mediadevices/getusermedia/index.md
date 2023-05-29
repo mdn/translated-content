@@ -1,17 +1,8 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaDevices")}} 인터페이스의 **`getUserMedia()`** 메서드는 사용자에게 미디어 입력 장치 사용 권한을 요청하며, 사용자가 수락하면 요청한 미디어 종류의 트랙을 포함한 {{domxref("MediaStream")}}을 반환합니다. 스트림은 카메라, 비디오 녹화 장치, 스크린 공유 장치 등 하드웨어와 가장 비디오 소스가 생성하는 비디오 트랙과, 마이크, A/D 변환기 등 물리적과 가상 오디오 장치가 생성하는 오디오 스트림, 그리고 그 외의 다른 종류의 스트림을 포함할 수 있습니다.
@@ -239,11 +230,11 @@ To use `getUserMedia()` in an installable app (for example, a [Firefox OS app](/
 
 See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) for more information.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

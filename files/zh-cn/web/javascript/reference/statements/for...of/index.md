@@ -2,9 +2,10 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
-**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
+**`for...of`语句**在[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（包括 {{jsxref("Array")}}，{{jsxref("Map")}}，{{jsxref("Set")}}，{{jsxref("String")}}，{{jsxref("TypedArray")}}，[arguments](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -37,7 +38,7 @@ for (let value of iterable) {
 // 31
 ```
 
-如果你不想修改语句块中的变量 , 也可以使用[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)。
+如果你不想修改语句块中的变量 , 也可以使用[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)代替[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)。
 
 ```js
 let iterable = [10, 20, 30];
@@ -227,7 +228,7 @@ for (var value of iterable) {
 
 {{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
-`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义要迭代的数据。
+`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义要迭代的数据。
 
 以下示例显示了与{{jsxref("Array")}}一起使用时，`for...of`循环和`for...in`循环之间的区别。
 
@@ -287,7 +288,7 @@ for (let i of iterable) {
 }
 ```
 
-该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
+该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
 
 ## 规范
 

@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.watchPosition()`** 用于注册监听器，在设备的地理位置发生改变的时候自动被调用。也可以选择特定的错误处理函数。
@@ -10,16 +11,18 @@ slug: Web/API/Geolocation/watchPosition
 
 ## 语法
 
-```plain
-id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### 参数
 
 - _success_
-  - : 成功时候的回调函数， 同时传入一个 {{domxref("Position")}} 对象当作参数。
+  - : 成功时候的回调函数，同时传入一个 {{domxref("Position")}} 对象当作参数。
 - _error_ {{optional_inline}}
-  - : 失败时候的回调函数，可选， 会传入一个 {{domxref("PositionError")}} 对象当作参数。
+  - : 失败时候的回调函数，可选，会传入一个 {{domxref("PositionError")}} 对象当作参数。
 - _options_ {{optional_inline}}
   - : 一个可选的 {{domxref("PositionOptions")}} 对象。
 

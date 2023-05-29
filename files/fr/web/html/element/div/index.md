@@ -14,7 +14,8 @@ tags:
 translation_of: Web/HTML/Element/div
 browser-compat: html.elements.div
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<div>`** (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de [CSS](/fr/docs/Web/CSS).
 
@@ -120,9 +121,9 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 </div>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
-{{EmbedLiveSample("Un_exemple_simple", "", 80)}}
+{{EmbedLiveSample("", "", 80)}}
 
 ### Un exemple mis en forme
 
@@ -151,7 +152,7 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 #### Résultat
 
-{{EmbedLiveSample("Un_exemple_mis_en_forme", "", 150)}}
+{{EmbedLiveSample("", "", 150)}}
 
 ## Accessibilité
 

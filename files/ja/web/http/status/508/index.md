@@ -1,15 +1,8 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
-tags:
-  - '508'
-  - HTTP
-  - Server error
-  - Status code
-  - サーバーエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/508
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) の **`508 Loop Detected`** レスポンスステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) プロトコルの文脈で発生する可能性があります。

@@ -1,19 +1,15 @@
 ---
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG 属性
-translation_of: Web/SVG/Attribute/marker-mid
 ---
+
 {{SVGRef}}
 
 **`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Element#Shape_elements)の中間の頂点すべてに描かれる矢印やマーカーを定義します。
 
 マーカーは、[パスデータ](/ja/docs/Web/SVG/Attribute/d#Path_commands)の最初と最後以外のすべての頂点に描画されます。
 
-> **Note:** **メモ:** プレゼンテーション属性なので、 `marker-mid` は CSS プロパティとして使用することができます。
+> **メモ:** プレゼンテーション属性なので、 `marker-mid` は CSS プロパティとして使用することができます。
 
 プレゼンテーション属性として任意の要素に適用できますが、 {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}} の 7 つの要素でのみ効果があります。
 
@@ -63,10 +59,7 @@ html, body, svg {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                     | 備考           |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------- |
-| {{SpecName("SVG2", "painting.html#MarkerEndProperty", "marker-mid")}}     | {{Spec2("SVG2")}} | 重要な変更なし |
-| {{SpecName("SVG1.1", "painting.html#MarkerEndProperty", "marker-mid")}} | {{Spec2("SVG1.1")}} | 初回定義       |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

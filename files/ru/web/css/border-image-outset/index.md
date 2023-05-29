@@ -3,6 +3,7 @@ title: border-image-outset
 slug: Web/CSS/border-image-outset
 translation_of: Web/CSS/border-image-outset
 ---
+
 {{CSSRef}}
 
 ## Описание

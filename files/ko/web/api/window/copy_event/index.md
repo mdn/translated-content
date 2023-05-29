@@ -1,16 +1,6 @@
 ---
 title: 'Window: copy 이벤트'
 slug: Web/API/Window/copy_event
-tags:
-  - API
-  - Clipboard API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - copy
-browser-compat: api.Window.copy_event
-translation_of: Web/API/Window/copy_event
 ---
 {{APIRef}}
 

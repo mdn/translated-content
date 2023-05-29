@@ -11,6 +11,7 @@ tags:
   - server-side
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
 
 Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).
@@ -52,7 +53,7 @@ Dans une perspective de développement de serveur web, Node présente un certain
 - Le JavaScript est un langage de programmation plutôt récent et bénéficie encore d'améliorations dans sa conception en comparaison à d'autres langages web côté serveur (Python, PHP, etc.). Beaucoup d'autres langages nouveaux et populaires compilent/convertissent en JavaScript pour pouvoir utiliser TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - Le gestionnaire de paquets (NPM) offre l'accès à des milliers de bibliothèques réutilisables. Il dispose d'une excellente résolution de dépendances et peut être utilisé pour automatiser la plupart des chaines de compilation.
 - Node.js est portable. Il est disponible sous Microsoft Windows, macOS, Linux, etc. De plus, il est bien supporté par beaucoup d'hébergeurs web qui fournissent souvent une infrastructure spécifique et une documentation pour héberger des sites Node.
-- Node possède une communauté et un écosystème très dynamiques eavec beaucoup de gens désireux d'aider.
+- Node possède une communauté et un écosystème très dynamiques avec beaucoup de gens désireux d'aider.
 
 Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'API Node HTTP.
 
@@ -535,15 +536,3 @@ Bien sûr, Express est délibérément un cadre d'application web très léger, 
 - [Gestion des erreurs](https://expressjs.com/fr/guide/error-handling.html) (docs Express)
 
 {{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
-
-## Dans ce module
-
-- [Introduction à Express/Node](/fr/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Configuration d'un environnement de développement Node (Express)](/fr/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Tutoriel Express : La bibliothèque locale du site Web](/fr/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Tutoriel Express, partie 2 : Création d'un squelette de site Web](/fr/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Tutoriel Express, partie 3 : Utilisation d'une base de données (avec Mongoose)](/fr/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Tutoriel Express, partie 4 : Routes et contrôleurs](/fr/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Tutoriel Express, partie 5 : Affichage des données de la bibliothèque](/fr/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Tutoriel Express, partie 6 : Travailler avec des formulaires](/fr/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Tutoriel Express, Partie 7 : Déploiement en production](/fr/docs/Learn/Server-side/Express_Nodejs/deployment)

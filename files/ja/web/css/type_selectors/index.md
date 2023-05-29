@@ -2,6 +2,7 @@
 title: 要素型セレクター
 slug: Web/CSS/Type_selectors
 ---
+
 {{CSSRef}}
 
 CSS の**要素型セレクター** (type selector) は、ノード名で要素を一致させます。つまり、文書内にある指定された型の要素をすべて選択します。

@@ -2,6 +2,7 @@
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
 ---
+
 {{AddonSidebar}}
 
 JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) and in any other documents bundled with the extension, including [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_action) or [page action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Page_actions) popups, [sidebars](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [options pages](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Options_pages), or [new tab pages](/zh-TW/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) (see the [list in the content script guide](/zh-TW/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
@@ -15,7 +16,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Many of the APIs are asynchronous, returning a [`Promise`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise):
@@ -29,9 +30,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 

@@ -2,6 +2,7 @@
 title: Request.bodyUsed
 slug: Web/API/Request/bodyUsed
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}} 接口的只读属性 **`bodyUsed`** 是一个布尔值，表示请求体是否已经被读取。

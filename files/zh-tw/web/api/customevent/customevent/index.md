@@ -2,6 +2,7 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 `CustomEvent()` constructor 可用來建立 {{domxref("CustomEvent")}}物件。

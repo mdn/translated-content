@@ -2,6 +2,7 @@
 title: PaymentRequest
 slug: Web/API/PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 **`PaymentRequest`** 介面是 [Payment Request API](/zh-TW/docs/Web/API/Payment_Request_API) 的主要切入點，它能讓網頁或 app 接受終端用戶的付款。
@@ -31,7 +32,7 @@ slug: Web/API/PaymentRequest
 - {{domxref('PaymentRequest.onpaymentmethodchange')}} {{securecontext_inline}}
   - : 針對付款方法（如 Apple Pay），用戶修改支付方式時觸發之，比方說從信用卡改為簽帳卡。
 - {{domxref('PaymentRequest.onmerchantvalidation')}} {{securecontext_inline}}
-  - : 針對付款方法（如 Apple Pay），本事件會呼叫 {{event("merchantvalidation")}} 事件，在用戶代理要求驗證付款商家或供應商是否合法時觸發之。
+  - : 針對付款方法（如 Apple Pay），本事件會呼叫 `merchantvalidation` 事件，在用戶代理要求驗證付款商家或供應商是否合法時觸發之。
 
 ## 方法
 
@@ -48,4 +49,4 @@ slug: Web/API/PaymentRequest
 
 ## 瀏覽器相容性
 
-{{Compat("api.PaymentRequest")}}
+{{Compat}}

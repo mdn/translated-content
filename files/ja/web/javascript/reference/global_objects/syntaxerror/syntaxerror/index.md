@@ -2,6 +2,7 @@
 title: SyntaxError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 ---
+
 {{JSRef}}
 
 **`SyntaxError`** オブジェクトは、文法的に無効なコードを解釈しようとしたときのエラーを表します。
@@ -57,9 +58,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

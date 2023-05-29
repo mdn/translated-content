@@ -2,6 +2,7 @@
 title: Web Audio API の使用
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 [Web Audio API](/ja/docs/Web/API/Web_Audio_API) の入門を見てみましょう。ここではいくつかの概念を短く確認してから、簡単な boombox の例で、音声トラックの読み込み、再生と一時停止、音量やステレオ位置の変更の方法を学びましょう。
@@ -45,7 +46,7 @@ const audioContext = new AudioContext();
 
 これを実行するとどうなるのでしょうか。 {{domxref("BaseAudioContext")}} が自動的に生成され、オンライン音声コンテキストに拡張されます。これを行うのは、ライブサウンドを再生しようとしているからです。
 
-> **Note:** 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
+> **メモ:** 音声データを処理したいだけ、例えば、バッファリングとストリーミングのみを行い再生するのでなければ、 {{domxref("OfflineAudioContext")}} を作成するようにしたほうが良いかもしれません。
 
 ## 音声の読み込み
 
@@ -55,7 +56,7 @@ const audioContext = new AudioContext();
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
 ```
 
-> **Note:** 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
+> **メモ:** 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
 
 Web Audio API を使用してできるすばらしいことをすべて利用するためには、この要素で入力元をつかみ、作成したコンテキストに*送り込む*ことが必要です。幸いにもちょうどこれを行うメソッド — {{domxref("AudioContext.createMediaElementSource")}} が存在します。
 
@@ -67,7 +68,7 @@ const audioElement = document.querySelector('audio');
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **Note:** 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
+> **メモ:** 上記の `<audio>` 要素は DOM 内では {{domxref("HTMLMediaElement")}} 型のオブジェクトで表され、これは独自の機能のセットを持っています。これらはすべてそのままです。 Web Audio API で音声を利用できるようにするだけです。
 
 ## 音声の制御
 
@@ -158,7 +159,7 @@ gain の既定値は 1 です。これは現在の音量を同じに維持しま
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">
 ```
 
-> **Note:** range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
+> **メモ:** range 入力は、音声ノードの値を更新するのに実に手軽な入力型です。 range の値を音声ノードの引数に直接設定したり、使用したりすることができます。
 
 それでは、ユーザーが値を変更したときに入力された値を取得して gain の値を更新するようにしましょう。
 
@@ -170,7 +171,7 @@ volumeControl.addEventListener('input', function() {
 }, false);
 ```
 
-> **Note:** ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
+> **メモ:** ノードオブジェクトの値 (例えば `GainNode.gain`) は単純な値ではなく、実際には {{domxref("AudioParam")}} 型のオブジェクト — これが引数と呼ばれています。なぜかといえば、 `GainNode.gain` の `value` プロパティを設定しなければならず、 `gain` を直接設定するだけではないからです。これによってはるかに柔軟になり、例えば特定の値のセットを引数で渡して、一定の期間にわたって変化させたりすることができます。
 
 素晴らしい、ユーザーがトラックの音量を追更新できるようになりました。ミュート機能を追加したい場合も gain ノードは完全なノードです。
 
@@ -193,7 +194,7 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **Note:** ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
+> **メモ:** ノードを作成するコンストラクターメソッドは、いまのところすべてのブラウザーで対応されている訳ではありません。古いファクトリメソッドの方がより広く対応されています。
 
 個々の値の範囲は -1 (はるか左) と 1 (はるか右) の間です。今回も range 型の入力でこの引数を変更できるようにしましょう。
 

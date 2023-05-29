@@ -2,6 +2,7 @@
 title: 'Express チュートリアル: 地域図書館の Web サイト'
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 実用的なチュートリアルシリーズの最初の記事では、これから学ぶことについて説明します。そして、私たちがこれから取り組んでいき、その後の記事で進化していく「地域図書館」のサンプルウェブサイトの概要を説明します。
@@ -44,22 +45,10 @@ _LocalLibrary_ は、この一連のチュートリアルの過程で作成お�
 
 あなたが立ち往生したならば、[Github のここ](https://github.com/mdn/express-locallibrary-tutorial)で ウェブサイトの完全に開発されたバージョンを見つけることができます。
 
-> **Note:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
+> **メモ:** この文書でテストされた Node、Express、および他のモジュールの特定のバージョンは、プロジェクト [package.json](https://github.com/mdn/express-locallibrary-tutorial/blob/master/package.json) にリストされています。
 
 ## まとめ
 
 _LocalLIbrary_ ウェブサイトと、これから学ぶことについて少し知りました。今度は私たちの例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)の作成を開始します。
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュールの中
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館のウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

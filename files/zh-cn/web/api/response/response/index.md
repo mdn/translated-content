@@ -2,6 +2,7 @@
 title: Response()
 slug: Web/API/Response/Response
 ---
+
 {{APIRef("Fetch")}}
 
 **`Response()`** 构造函数创建了一个新的 {{domxref("Response")}} 对象。
@@ -30,7 +31,7 @@ let myResponse = new Response(body, init);
   - : 一个参数 (options) 对象，包含要应用到 response 上的任何自定义设置。可能参数 (options) 是：
 
     - `status`: response 的状态码，例如：`200`.
-    - `statusText`: 和状态码关联的状态消息，例如: `OK`.
+    - `statusText`: 和状态码关联的状态消息，例如：`OK`.
     - `headers`: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)).
 
 ## 例子
@@ -49,7 +50,7 @@ var myResponse = new Response(myBlob,init);
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.Response")}}
+{{Compat}}
 
 ## See also
 

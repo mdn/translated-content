@@ -2,11 +2,12 @@
 title: 本地圖書館基礎模板
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template
 ---
+
 現在我們了解如何使用 Pug 拓展模板，讓我們開始項目，創建一個基礎模板。這個模板會有一個側邊欄，連結到本教程中將要創建的各個頁面（例如，呈現並創建書本、種類、作者等等），以及一個主要內容區域，我們將在每個頁面中進行覆寫。
 
 開啟 **/views/layout.pug** ，並以下列代碼，置換其內容。
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -56,9 +57,9 @@ html(lang='en')
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

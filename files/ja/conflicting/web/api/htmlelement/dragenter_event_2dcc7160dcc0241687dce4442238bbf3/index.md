@@ -4,6 +4,7 @@ slug: >-
   conflicting/Web/API/HTMLElement/dragenter_event_2dcc7160dcc0241687dce4442238bbf3
 original_slug: Web/API/Document/dragenter_event
 ---
+
 {{APIRef}}
 
 `dragenter` イベントは、ドラッグ中のイベントやテキストの選択範囲が、妥当なドロップターゲットに入ったときに発生します。

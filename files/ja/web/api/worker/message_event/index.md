@@ -4,6 +4,7 @@ slug: Web/API/Worker/message_event
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef}}
 
 `message` イベントは {{domxref('Worker')}} オブジェクトで、ワーカーの親がワーカーからメッセージを受け取ったとき（すなわち、ワーカーが [`DedicatedWorkerGlobalScope.postMessage()`](/ja/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) を用いてメッセージを送信したとき）に発生します。

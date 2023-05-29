@@ -2,6 +2,7 @@
 title: Response.url
 slug: Web/API/Response/url
 ---
+
 {{APIRef("Fetch")}}
 
 The **`url`** read-only property of the {{domxref("Response")}} interface contains the URL of the response. The value of the `url` property will be the final URL obtained after any redirects.
@@ -42,7 +43,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.url")}}
+{{Compat}}
 
 ## See also
 

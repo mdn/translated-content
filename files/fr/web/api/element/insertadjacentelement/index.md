@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/insertAdjacentElement
 ---
+
 {{APIRef("DOM")}}
 
 La méthode `insertAdjacentElement()` insère un noeud d'élément donné à une position donnée par rapport à l'élément sur lequel il est appelé.

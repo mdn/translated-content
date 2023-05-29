@@ -2,6 +2,7 @@
 title: animation
 slug: Web/CSS/animation
 ---
+
 {{CSSRef}}
 
 **`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
@@ -146,9 +147,9 @@ animation: slidein 3s;
 
 ### Quantum CSS のメモ
 
-- Gecko には、画面上でオフスクリーン要素をアニメーションさせたとき、遅延を指定すると、 Windows など一部のプラットフォームで再描画しないというバグがあります ({{bug(1383239)}})。これは Firefox の新しい並列 CSS エンジン（[Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) と呼ばれており、 Firefox 57 でリリースする計画です）で修正されています。
-- 他の Gecko のバグとして、 {{htmlelement("details")}} 要素が `open` 属性を使用しても、アニメーションが有効になっていると既定で開かないというものがあります ({{bug(1382124)}})。 Quantum CSS では修正されています。
-- さらに他のバグとして、 em の単位を使用してアニメーションする要素の親の {{cssxref("font-size")}} を変更しても影響されないというものがあります ({{bug(1254424)}})。 Quantum CSS では修正されています。
+- Gecko には、画面上でオフスクリーン要素をアニメーションさせたとき、遅延を指定すると、 Windows など一部のプラットフォームで再描画しないというバグがあります ([Firefox バグ 1383239](https://bugzil.la/1383239))。これは Firefox の新しい並列 CSS エンジン（[Quantum CSS](https://wiki.mozilla.org/Quantum) または [Stylo](https://wiki.mozilla.org/Quantum/Stylo) と呼ばれており、 Firefox 57 でリリースする計画です）で修正されています。
+- 他の Gecko のバグとして、 {{htmlelement("details")}} 要素が `open` 属性を使用しても、アニメーションが有効になっていると既定で開かないというものがあります ([Firefox バグ 1382124](https://bugzil.la/1382124))。 Quantum CSS では修正されています。
+- さらに他のバグとして、 em の単位を使用してアニメーションする要素の親の {{cssxref("font-size")}} を変更しても影響されないというものがあります ([Firefox バグ 1254424](https://bugzil.la/1254424))。 Quantum CSS では修正されています。
 
 ## 関連情報
 

@@ -2,13 +2,14 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadButton`** インタフェースはゲームパッドやその他のコントローラーの各ボタンを定義します。このインタフェースによって、コントローラー上で使用できるボタンの状態を確認することができます。
 
 `GamepadButton`オブジェクトは、{{domxref("Gamepad")}}インタフェースの`buttons` プロパティから取得できます。
 
-> **Note:** これは Firefox Gecko 28 以降の場合の説明であり、Chrome と以前の Firefox のバージョンでは、浮動小数点数の配列が返されます。
+> **メモ:** これは Firefox Gecko 28 以降の場合の説明であり、Chrome と以前の Firefox のバージョンでは、浮動小数点数の配列が返されます。
 
 ## プロパティ
 
@@ -58,9 +59,7 @@ function gameLoop() {
 
 ## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#gamepadbutton-interface", "GamepadButton")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

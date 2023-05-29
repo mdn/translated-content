@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/template
 original_slug: Web/XSLT/template
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:template>` définit un modèle produisant une sortie. Au moins l'un des atttributs match et set doit posséder une valeur.

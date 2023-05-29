@@ -2,6 +2,7 @@
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 **`continue()`** は {{domxref("IDBCursor")}} インターフェースのメソッドで、カーソルを現在の方向に次の位置、任意のキーパラメーターに一致するキーを持つアイテムまで進めます。キーを指定しない場合、カーソルはその方向に基づいて、すぐ隣の位置へ進みます。
@@ -10,7 +11,7 @@ slug: Web/API/IDBCursor/continue
 
 ## 構文
 
-```
+```js-nolint
 cursor.continue(key);
 ```
 
@@ -33,7 +34,7 @@ cursor.continue(key);
   <tbody>
     <tr>
       <td><code>TransactionInactiveError</code></td>
-      <td>この IDBCursor のトランザクションがアクティブではありません。</td>
+      <td>この `IDBCursor` のトランザクションがアクティブではありません。</td>
     </tr>
     <tr>
       <td><code>DataError</code></td>
@@ -63,9 +64,9 @@ cursor.continue(key);
 
 ## 例
 
-この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、 `cursor.value.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [IDBCursor の例](https://github.com/mdn/indexeddb-examples/tree/master/idbcursor) ([ライブデモを見る](https://mdn.github.io/indexeddb-examples/idbcursor/)) を参照してください。
+この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、`cursor.value.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [IDBCursor の例](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([ライブデモを見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)) を参照してください。
 
-```
+```js
 function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
@@ -79,7 +80,7 @@ function displayData() {
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log('全エントリーを表示しました。');
     }
   };
 };
@@ -87,10 +88,7 @@ function displayData() {
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}}     |      |
-| {{SpecName("IndexedDB 2", "#dom-idbcursor-continue", "continue()")}}                 | {{Spec2("IndexedDB 2")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -98,10 +96,10 @@ function displayData() {
 
 ## 関連情報
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションを使う: {{domxref("IDBTransaction")}}
-- キーの範囲設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルを使う: {{domxref("IDBCursor")}}
-- リファレンス　実例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションを使う : {{domxref("IDBTransaction")}}
+- キーの範囲設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルを使う : {{domxref("IDBCursor")}}
+- リファレンス 実例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -13,6 +13,7 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
+
 {{AddonSidebar()}}
 
 Crée un nouvel élément de menu, avec un objet d'options définissant les propriétés de l'élément.
@@ -97,7 +98,7 @@ browser.menus.create(
         Si le titre contient une esperluette "&" le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
 
         - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
-        - Si les caractères suivants sont la directive d'interpolation "%s" :  alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
+        - Si les caractères suivants sont la directive d'interpolation "%s" : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
         - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
 
         Seule la première esperluette sera utilisée pour définir une clé d'accès : les esperluettes suivantes ne seront pas affichées mais ne définiront pas les clés. Ainsi "\&A et \&B" seront affichés comme "A et B" et "A" comme clé d'accès.
@@ -179,15 +180,16 @@ browser.menus.onClicked.addListener(function(info, tab) {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
 > **Note :**
 >
 > Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -214,4 +216,4 @@ browser.menus.onClicked.addListener(function(info, tab) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

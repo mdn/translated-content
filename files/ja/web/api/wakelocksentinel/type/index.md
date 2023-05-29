@@ -2,6 +2,7 @@
 title: WakeLockSentinel.type
 slug: Web/API/WakeLockSentinel/type
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`type`** は {{domxref("WakeLockSentinel")}} インターフェイスの読み取り専用プロパティで、現在取得している {{domxref("WakeLockSentinel")}} の種別の文字列表現を返します。

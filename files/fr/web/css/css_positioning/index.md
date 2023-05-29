@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Positioning
 ---
+
 {{CSSRef}}
 
 **_CSS Positioned Layout_** (ou module CSS de disposition positionnée) est un module CSS qui définit comment positionner des éléments sur une page.
@@ -32,7 +33,4 @@ translation_of: Web/CSS/CSS_Positioning
 
 ## Spécifications
 
-| Spécification                                        | État                                     | Commentaires |
-| ---------------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('CSS3 Positioning')}}         | {{Spec2('CSS3 Positioning') }} |              |
-| {{SpecName('CSS2.1', 'visuren.html')}} | {{Spec2('CSS2.1')}}                 |              |
+{{Specifications}}

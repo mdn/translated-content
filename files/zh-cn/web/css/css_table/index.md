@@ -1,7 +1,8 @@
 ---
 title: CSS Table
-slug: Web/CSS/CSS_Table
+slug: Web/CSS/CSS_table
 ---
+
 {{CSSRef}}
 
 **CSS Table** 是一个定义如何展示表格数据的 CSS 模块。

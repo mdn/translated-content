@@ -8,6 +8,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@document
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [règle @ CSS](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.
@@ -67,11 +68,11 @@ Les valeurs échappées fournies à la fonction `regexp()` doivent être en outr
 
 ## Spécifications
 
-[Initialement](https://www.w3.org/TR/css3-conditional/) dans {{SpecName('CSS3 Conditional')}}, `@document` a [été repoussée](http://www.w3.org/TR/2012/WD-css3-conditional-20121213/#changes) au niveau 4.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.document")}}
+{{Compat}}
 
 ## Voir aussi
 

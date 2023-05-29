@@ -1,45 +1,53 @@
 ---
-title: 自增 (++)
+title: 自增（++）
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
+
 {{jsSidebar("Operators")}}
 
-自增运算符 (`++`) 将其操作数递增（加 1）并返回一个值。
+**自增**（**`++`**）运算符对其操作数进行自增（加一），并根据运算符的位置返回自增之前或之后的值。
 
 {{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
 ## 语法
 
-```plain
-Operator: x++ or ++x
+```js-nolint
+x++
+++x
 ```
 
 ## 描述
 
-如使用后置（Postfix）自增，操作符在操作数后（例如 `x++`）， 操作数会加一，然后返回加一之前的值。
+如果使用后缀式，即将运算符放在操作数的后面（例如 `x++`），操作数会加一，然后返回加一之前的值。
 
-如使用前置（Prefix）自增，操作符在操作数前（例如 `++x`）， 操作数会加一，然后返回加一之后的值。
+如果使用前缀式，即将运算符放在操作数的前面（例如 `++x`），操作数会加一，然后返回加一之后的值。
+
+自增运算符只能应用于引用的操作数（变量和对象属性，即有效的[赋值目标](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）。`++x` 本身的计算结果是一个值，而不是一个引用，因此不能将多个自增运算符链接在一起。
+
+```js example-bad
+++(++x); // SyntaxError: Invalid left-hand side expression in prefix operation
+```
 
 ## 示例
 
-### 后置自增 (Postfix increment)
+### 后缀式
 
 ```js
 let x = 3;
-y = x++;
+const y = x++;
 
-// y = 3
 // x = 4
+// y = 3
 ```
 
-### 前置自增 (Prefix increment)
+### 前缀式
 
 ```js
-let a = 2;
-b = ++a;
+let x = 3;
+const y = ++x;
 
-// a = 3
-// b = 3
+// x = 4
+// y = 4
 ```
 
 ## 规范
@@ -50,14 +58,14 @@ b = ++a;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Addition operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Exponentiation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [Decrement operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

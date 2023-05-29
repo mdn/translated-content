@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/Network_Information_API
 original_slug: WebAPI/Network_Information
 ---
+
 {{ SeeCompatTable() }}
 
 L'API Network Information (Informations réseau) fournit des informations sur la connexion de l'appareil : la bande-passante, si la connexion est mesurée ou non. Elle peut être utilisée pour choisir entre du contenu en haute définition ou en basse définition selon la connexion de l'utilisateur. L'API ne représente qu'un seul objet, ajouté au DOM : [`Navigator.connection`](/fr/docs/Web/API/Navigator/connection).
@@ -55,13 +56,7 @@ if (connection) {
 
 ## Compatibilité des navigateurs
 
-### `NetworkInformation`
-
-{{Compat("api.NetworkInformation")}}
-
-### `Navigator.connection`
-
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## Voir aussi
 

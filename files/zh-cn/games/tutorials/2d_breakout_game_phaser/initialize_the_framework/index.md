@@ -2,6 +2,7 @@
 title: Initialize the framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}
@@ -68,6 +69,6 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 下一步
 
-现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser， 让我们继续学习第二章： [scaling](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+现在我们已经完成了一个简单的 HTML 页面，并且学习了如何安装 Phaser，让我们继续学习第二章： [scaling](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser", "Games/Tutorials/2D_Breakout_game_Phaser/Scaling")}}

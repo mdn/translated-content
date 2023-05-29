@@ -2,6 +2,7 @@
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
 ---
+
 {{ APIRef("DOM") }}
 
 **`Element.clientHeight`** 唯讀屬性會回傳元素內部高度（像素），包含 padding 但並未包含水平滾動條、border、margin。
@@ -20,7 +21,7 @@ var h = element.clientHeight;
 
 ## 範例
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Image:Dimensions-client.png](dimensions-client.png)
 
 ## 規範
 

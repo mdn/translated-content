@@ -2,6 +2,7 @@
 title: MutationObserver
 slug: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` 提供開發人員一個方法，來對 [DOM](/zh-TW/docs/DOM) tree 的變動來作反應，這被設計用來替換在 DOM3 事件規範中的 [Mutation Events](/zh-TW/docs/DOM/Mutation_events)。
@@ -95,11 +96,11 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 | Property             | Type                               | Description                                                                                                                                                                                                                                |
 | -------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `type`               | `String`                           | Returns `attributes` if the mutation was an attribute mutation, `characterData` if it was a mutation to a `CharacterData` node, and `childList` if it was a mutation to the tree of nodes.                                                 |
-| `target`             | `{{domxref("Node")}}`         | Returns the node the mutation affected, depending on the `type`. For `attributes`, it is the element whose attribute changed. For `characterData`, it is the `CharacterData` node. For `childList`, it is the node whose children changed. |
-| `addedNodes`         | `{{domxref("NodeList")}}` | Return the nodes added. Will be an empty `NodeList` if no nodes were added.                                                                                                                                                                |
-| `removedNodes`       | `{{domxref("NodeList")}}` | Return the nodes removed. Will be an empty `NodeList` if no nodes were removed.                                                                                                                                                            |
-| `previousSibling`    | `{{domxref("Node")}}`         | Return the previous sibling of the added or removed nodes, or `null`.                                                                                                                                                                      |
-| `nextSibling`        | `{{domxref("Node")}}`         | Return the next sibling of the added or removed nodes, or `null`.                                                                                                                                                                          |
+| `target`             | {{domxref("Node")}}         | Returns the node the mutation affected, depending on the `type`. For `attributes`, it is the element whose attribute changed. For `characterData`, it is the `CharacterData` node. For `childList`, it is the node whose children changed. |
+| `addedNodes`         | {{domxref("NodeList")}} | Return the nodes added. Will be an empty `NodeList` if no nodes were added.                                                                                                                                                                |
+| `removedNodes`       | {{domxref("NodeList")}} | Return the nodes removed. Will be an empty `NodeList` if no nodes were removed.                                                                                                                                                            |
+| `previousSibling`    | {{domxref("Node")}}         | Return the previous sibling of the added or removed nodes, or `null`.                                                                                                                                                                      |
+| `nextSibling`        | {{domxref("Node")}}         | Return the next sibling of the added or removed nodes, or `null`.                                                                                                                                                                          |
 | `attributeName`      | `String`                           | Returns the local name of the changed attribute, or `null`.                                                                                                                                                                                |
 | `attributeNamespace` | `String`                           | Returns the namespace of the changed attribute, or `null`.                                                                                                                                                                                 |
 | `oldValue`           | `String`                           | The return value depends on the `type`. For `attributes`, it is the value of the changed attribute before the change. For `characterData`, it is the data of the changed node before the change. For `childList`, it is `null`.            |
@@ -139,4 +140,4 @@ observer.disconnect();
 
 ## Browser compatibility
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}

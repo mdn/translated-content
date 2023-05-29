@@ -1,7 +1,6 @@
 ---
 title: 'ServiceWorkerGlobalScope: notificationclick event'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
-translation_of: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 ---
 {{APIRef}}
 
@@ -61,11 +60,11 @@ self.onnotificationclick = function(event) {
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

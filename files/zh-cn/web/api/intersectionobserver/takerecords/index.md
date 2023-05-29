@@ -2,6 +2,7 @@
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} 的方法**`takeRecords()`** 返回一个 {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象的目标元素都包含每次相交的信息，可以显式通过调用此方法或隐式地通过观察者的回调自动调用。
@@ -32,7 +33,7 @@ None.
 
 ## Browser compatibility
 
-{{Compat("api.IntersectionObserver.takeRecords")}}
+{{Compat}}
 
 ## See also
 

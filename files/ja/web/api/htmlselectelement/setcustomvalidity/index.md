@@ -2,6 +2,7 @@
 title: HTMLSelectElement.setCustomValidity()
 slug: Web/API/HTMLSelectElement/setCustomValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.setCustomValidity()`** メソッドは、選択要素のカスタム検証メッセージを指定されたメッセージに設定します。要素にカスタム検証エラーが*ない*ことを示す場合は、空の文字列を使用します。
@@ -26,4 +27,4 @@ selectElt.setCustomValidity(string);
 
 ## 関連情報
 
-- [フォームの検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
+- [フォームの検証](/ja/docs/Web/HTML/Constraint_validation)

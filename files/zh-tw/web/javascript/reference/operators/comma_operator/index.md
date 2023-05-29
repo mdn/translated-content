@@ -1,7 +1,8 @@
 ---
 title: 逗號運算子
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 ---
+
 {{jsSidebar("Operators")}}
 
 The **comma operator** evaluates each of its operands (from left to right) and returns the value of the last operand.

@@ -8,6 +8,7 @@ tags:
   - Title
 translation_of: Web/API/SVGTitleElement
 ---
+
 {{APIRef("SVG")}}
 
 ## Interface DOM de l'élément SVG `title`

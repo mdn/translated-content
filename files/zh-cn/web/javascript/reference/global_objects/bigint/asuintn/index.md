@@ -2,6 +2,7 @@
 title: BigInt.asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
+
 {{JSRef}}
 
 **`BigInt.asUintN`** 静态方法将 `BigInt` 转换为一个 0 和 2^width-1 之间的无符号整数。
@@ -25,7 +26,7 @@ BigInt.asUintN(width, bigint);
 
 `bigint` 模 (modulo) `2^width` 作为无符号整数的值。
 
-## 例子
+## 示例
 
 ### 保持在 64 位范围内
 

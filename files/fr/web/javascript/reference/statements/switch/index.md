@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Reference/Instructions/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
@@ -257,16 +258,11 @@ Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans c
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.switch")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 ---
+
 {{JSRef}}
 
 对*正则表达式*匹配*字符串*时，**`[@@match]()`**方法用于获取匹配结果。

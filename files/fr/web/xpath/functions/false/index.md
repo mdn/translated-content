@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XPath/Functions/false
 original_slug: Web/XPath/Fonctions/false
 ---
+
 {{ XsltRef() }}
 
 La fonction `false` retourne le booléen `false`.

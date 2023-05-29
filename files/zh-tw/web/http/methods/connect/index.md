@@ -2,6 +2,7 @@
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。
@@ -13,9 +14,9 @@ slug: Web/HTTP/Methods/CONNECT
 | 請求具有 Body                                        | 否  |
 | ---------------------------------------------------- | --- |
 | 成功回覆具有 Body                                    | 是  |
-| {{Glossary("Safe")}}                         | 否  |
-| {{Glossary("Idempotent")}}                 | 否  |
-| {{Glossary("Cacheable")}}                     | 否  |
+| {{Glossary("Safe")}}                                 | 否  |
+| {{Glossary("Idempotent")}}                           | 否  |
+| {{Glossary("Cacheable")}}                            | 否  |
 | 可用於 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms) | 否  |
 
 ## 語法
@@ -40,7 +41,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 瀏覽器相容性
 
-{{Compat("http.methods.CONNECT")}}
+{{Compat}}
 
 ## 參見
 

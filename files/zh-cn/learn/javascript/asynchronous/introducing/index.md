@@ -292,11 +292,3 @@ doOperation();
 由于以上这些原因，大多数现代异步 API 都不使用回调。事实上，JavaScript 中异步编程的基础是 {{jsxref("Promise")}}，这也是我们下一篇文章要讲述的主题。
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## 本章目录
-
-- **异步 JavaScript 简介**
-- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [测验：序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

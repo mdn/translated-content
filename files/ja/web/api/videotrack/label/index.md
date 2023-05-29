@@ -2,6 +2,7 @@
 title: VideoTrack.label
 slug: Web/API/VideoTrack/label
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("VideoTrack")}}** の **`label`** プロパティは、動画トラックの判読可能なラベルがある場合はそれを指定する文字列を返します。 それ以外の場合は、空の文字列を返します。
@@ -46,9 +47,7 @@ function getTrackList(el) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-label', 'VideoTrack: label')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 'Express 教程 7: 部署到生产环境'
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 现在你已经创建（并测试）了一个不错的 [本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
@@ -12,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">预备知识：</th>
       <td>
         完成前面所有的指南主题，包括
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -219,7 +220,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 - 大多数情况下它只是可以工作，如果你最终喜欢它，并希望升级，那么扩展你的应用程序非常容易。
 
-虽然 Heroku 非常适合举办此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 ​​ 出免费套餐，可能会花费更多。
+虽然 Heroku 非常适合举办此演示，但它可能并不适合您的真实网站。Heroku 可以轻松设置和扩展，但代价是灵活性较低，而且一旦退 出免费套餐，可能会花费更多。
 
 ### Heroku 如何工作？
 
@@ -278,11 +279,11 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 将 Express 应用程序，复制到此文件夹中（不包括**/node_modules**，其中包含您应根据需要，从 NPM 获取的依赖项文件）。
 2. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
-3. ```bash
+    ```bash
     git add -A
     ```
 
-4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
+3. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
     ```plain
     > git status
@@ -294,13 +295,13 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
             new file:   ...
     ```
 
-5. 如果您满意，请将文件提交到本地存储库：
+4. 如果您满意，请将文件提交到本地存储库：
 
     ```bash
     git commit -m "First version of application moved into github"
     ```
 
-6. 然后使用以下内容，将本地存储库同步到 Github 网站：
+5. 然后使用以下内容，将本地存储库同步到 Github 网站：
 
     ```bash
     git push origin master
@@ -494,15 +495,3 @@ heroku ps   #Display dyno status
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 
 {{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程链接
-
-- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由与控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

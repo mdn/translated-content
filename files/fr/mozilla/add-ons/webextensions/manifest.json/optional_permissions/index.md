@@ -8,6 +8,7 @@ tags:
   - optional_permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -36,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 
 Utilisez la clé `optional_permissions` pour lister les permissions que vous souhaitez demander pour l'exécution, une fois que votre extension a été installée.
 
-La clé de [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) énumère les permissions dont votre extension a besoin si elle doit être installée. En revanche , `optional_permissions` liste les permissions dont votre extension n'a pas besoin au moment de l'installation, mais qu'il peut être nécessaire de demander pour l'exécution à un moment donné après son installation. Pour demander une permission, utilisez l'API  {{webextapiref("permissions")}} . La demande de permission peut présenter probablement à l'utilisateur une boîte de dialogue lui demandant d'accorder la permission à votre extension.
+La clé de [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) énumère les permissions dont votre extension a besoin si elle doit être installée. En revanche , `optional_permissions` liste les permissions dont votre extension n'a pas besoin au moment de l'installation, mais qu'il peut être nécessaire de demander pour l'exécution à un moment donné après son installation. Pour demander une permission, utilisez l'API {{webextapiref("permissions")}} . La demande de permission peut présenter probablement à l'utilisateur une boîte de dialogue lui demandant d'accorder la permission à votre extension.
 
 Pour des conseils sur la conception de votre demande d'autorisations d'exécution, afin de maximiser la probabilité que les utilisateurs les accordent, consultez la section, voir [Demander les permissions à éxécuter](/fr/docs/Mozilla/Add-ons/WebExtensions/demander_les_bonnes_permissions#Demander_les_permissions_à_éxécuter).
 
@@ -101,6 +102,6 @@ Activez l'extension pour demander l'accès aux éléments privilégiés de l'API
 
 Activez l'extension pour demander les deux permissions ci-dessus.
 
-## Comptabilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

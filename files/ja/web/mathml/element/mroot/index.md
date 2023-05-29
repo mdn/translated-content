@@ -2,6 +2,7 @@
 title: <mroot>
 slug: Web/MathML/Element/mroot
 ---
+
 {{MathMLRef}}
 
 MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するのに用いられます。引数は二つあり，構文は `<mroot> 基数 根指数 </mroot>` となります。
@@ -38,11 +39,7 @@ MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するの�
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考       |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName("MathMLCore", "#radicals-msqrt-mroot", "mroot")}}     | {{Spec2("MathMLCore")}} | 草稿の仕様 |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mroot', 'mroot') }} | {{ Spec2('MathML3') }}     | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mroot', 'mroot') }} | {{ Spec2('MathML2') }}     | 初回定義   |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

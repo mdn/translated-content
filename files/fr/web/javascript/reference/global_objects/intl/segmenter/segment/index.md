@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 browser-compat: javascript.builtins.Intl.Segmenter.segment
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Segmenter.prototype.segment()`** segmente une chaîne de caractères selon une locale et une granularité fournies par l'objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) courant.

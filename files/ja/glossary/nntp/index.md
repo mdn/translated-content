@@ -2,13 +2,14 @@
 title: NNTP
 slug: Glossary/NNTP
 ---
+
 **NNTP** (Network News Transfer Protocol) は、{{Glossary("Usenet")}} のメッセージをクライアントからサーバー、またはサーバー間で転送するために使用される{{Glossary("protocol","プロトコル")}}です。
 
 ## 関連項目
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "Network_News_Transfer_Protocol", "NNTP")}}
+- Wikipedia の[NNTP](https://ja.wikipedia.org/wiki/Network_News_Transfer_Protocol)
 
 ### 技術リファレンス
 

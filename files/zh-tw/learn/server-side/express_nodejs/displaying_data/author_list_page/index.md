@@ -2,6 +2,7 @@
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 作者列表頁面，需要呈現數據庫中所有作者的列表，有每位作者的名字，並連結到作者詳細內容頁面。出生與死亡日期應該在名字後面，並且在同一列。
 
 ## Controller 控制器
@@ -12,16 +13,19 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -59,7 +63,7 @@ Run the application and open your browser to <http://localhost:3000/>. Then sele
 >
 > `return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';`
 
-## Genre list page—challenge\![Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data$edit#Genre_list_page—challenge!)
+## Genre list page—challenge!
 
 In this section you should implement your own genre list page. The page should display a list of all genres in the database, with each genre linked to its associated detail page. A screenshot of the expected result is shown below.
 
@@ -70,7 +74,7 @@ The genre list controller function needs to get a list of all `Genre` instances,
 1. You will need to edit `genre_list()` in **/controllers/genreController.js**.
 2. The implementation is almost exactly the same as the `author_list()` controller.
 
-    - Sort the results by name, in ascending order.
+   - Sort the results by name, in ascending order.
 
 3. The template to be rendered should be named **genre_list.pug**.
 4. The template to be rendered should be passed the variables `title` ('Genre List') and `genre_list` (the list of genres returned from your `Genre.find()` callback.

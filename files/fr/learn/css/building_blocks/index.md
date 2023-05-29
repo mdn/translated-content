@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks
 original_slug: Apprendre/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 Ce cours fait suite aux [premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) : vous avez déjà acquis une bonne familiarité avec le langage et sa syntaxe, avec déjà des expériences d'utilisation de CSS. Il est donc temps d'approfondir le sujet. On examine ici les principes de cascade et d’héritage, tous les types de sélecteurs à notre disposition, les unités, le dimensionnement, les arrière-plans de style et les limites, le débogage, et bien d'autres choses.

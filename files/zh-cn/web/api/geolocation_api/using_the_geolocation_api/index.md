@@ -2,6 +2,7 @@
 title: 使用地理位置 API
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 地理位置 API 用于检索用户的位置，因此，利用地图 API，可以显示用户的位置。本文将阐述基础的使用方法。
@@ -95,7 +96,7 @@ function success(position) {
 }
 ```
 
-你也可以从 `GeolocationCoordinates` 对象中获取许多其它的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
+你也可以从 `GeolocationCoordinates` 对象中获取许多其他的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
 
 ## 错误处理
 

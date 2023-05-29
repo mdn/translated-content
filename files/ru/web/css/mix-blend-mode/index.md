@@ -7,6 +7,7 @@ tags:
   - CSS-свойство
 translation_of: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`mix-blend-mode`** определяет режим смешивания цветов выбранного элемента с низлежащими слоями.

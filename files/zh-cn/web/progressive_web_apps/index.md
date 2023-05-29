@@ -2,6 +2,7 @@
 title: 渐进式 Web 应用（PWA）
 slug: Web/Progressive_web_apps
 ---
+
 PWA（Progressive Web Apps，渐进式 Web 应用）运用现代的 Web API 以及传统的渐进式增强策略来创建跨平台 Web 应用程序。这些应用无处不在、功能丰富，使其具有与原生应用相同的用户体验优势。这组文档和指南告诉您有关 PWA 的所有信息。
 
 ## PWA 的优势
@@ -14,10 +15,10 @@ PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可�
 
 1. [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)
 2. [PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)
-3. [通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers)
-4. [让 PWA 易于安装](/zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs)
-5. [通过通知推送让 PWA 可重用](/zh-CN/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)
-6. [渐进式加载](/zh-CN/docs/Web/Progressive_web_apps/Loading)
+3. [通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
+4. [让 PWA 易于安装](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)
+5. [通过通知推送让 PWA 可重用](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push)
+6. [渐进式加载](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading)
 
 ## 技术指南
 
@@ -30,7 +31,7 @@ PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可�
 - [使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) — 换言之，Web 通知。
 - [响应式设计的构建模块](/zh-CN/docs/Web/Apps/Modern/Responsive/responsive_design_building_blocks) — 学习响应式设计的基础知识，也是现代应用布局的基本话题。
 - [移动优先](/zh-CN/docs/Web/Apps/Modern/Responsive/Mobile_first) — 在创建响应式应用程序布局时，通常将移动布局创建为默认并在顶部构建更宽的布局。
-- [“添加到主屏幕”指南](/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen) — 了解如何利用添加到主屏幕（A2HS）。
+- [“添加到主屏幕”指南](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) — 了解如何利用添加到主屏幕（A2HS）。
 
 ## 工具
 
@@ -40,7 +41,7 @@ PWA 是可被发现、易安装、可链接、独立于网络、渐进式、可�
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — 一个用于生成预缓存特定资源的 Service Worker 代码的模块。
 - [workbox](https://github.com/GoogleChrome/workbox) — sw-precache 的精神后继者，支持更高级的缓存策略和简易的预缓存功能。
 - [upup](https://www.talater.com/upup/) — 保证站点对用户永远在线的一段小脚本。
-- [The service worker cookbook](https://serviceworke.rs/) — 一系列关于 Service Worker 和推送的优秀章法，着眼于离线应用，而超乎离线应用。
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — 一系列关于 Service Worker 和推送的优秀章法，着眼于离线应用，而超乎离线应用。
 
 ## 相关链接
 

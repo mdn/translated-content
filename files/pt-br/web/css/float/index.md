@@ -1,17 +1,15 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 ## Resumo
 
 A propriedade **float** do CSS determina que um elemento deve ser retirado do seu fluxo normal e colocado ao longo do lado direito ou esquerdo do seu containêr, onde textos e elementos em linha irão se posicionar ao seu redor.
 
-Um elemento flutuante é um tipo de elemento cujo valor de `float `é diferente de `none.`
+Um elemento flutuante é um tipo de elemento cujo valor de `float` é diferente de `none.`
 
 {{cssinfo}}
 
@@ -34,7 +32,7 @@ Como `float` implica o uso the _block layout,_ ele modifica o valor computado de
 | `inline-flex`        | `inline-flex`, porém `float` não produz efeito em tais elementos |
 | _other_              | _unchanged_                                                      |
 
-> **Note:** **Nota**: Se você está se referindo a essa propriedade do Javascript como um membro do objeto {{domxref("element.style")}}, você deve referir-se a `cssFloat. `Observe também que as versões 8 e posteriores referem-se a `styleFloat. `Esta é uma exceção à regra de que o nome do membro DOM é o nome em estilo _camel-case_ do nome CSS separado por traço (e se deve ao fato de que "float" é uma palavra reservada em Javascript, tal qual a necessidade de especificar "class" como "className" e "for" como "htmlFor").
+> **Nota:** Se você está se referindo a essa propriedade do Javascript como um membro do objeto {{domxref("element.style")}}, você deve referir-se a `cssFloat`. Observe também que as versões 8 e posteriores referem-se a `styleFloat`. Esta é uma exceção à regra de que o nome do membro DOM é o nome em estilo _camel-case_ do nome CSS separado por traço (e se deve ao fato de que "float" é uma palavra reservada em Javascript, tal qual a necessidade de especificar "class" como "className" e "for" como "htmlFor").
 
 ## Sintaxe
 
@@ -76,6 +74,7 @@ float: unset;
 div { border: solid red;  max-width: 70ex; }
 h4  { float: left;  margin: 0; }
 ```
+
 ### HTML
 
 ```html
@@ -89,12 +88,6 @@ h4  { float: left;  margin: 0; }
 ```
 
 {{ EmbedLiveSample('Exemplos', '', '', '', 'Web/CSS/float') }}
-
-#### HELLO!
-
-This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text.
-
-###
 
 ### Como `floats` são posicionados
 
@@ -114,15 +107,15 @@ O jeito mais simples de limpar os floats neste exemplo é adicionar a propriedad
 h2.secondHeading { clear: both; }
 ```
 
-Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso` H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear `irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
+Porém, este método apenas funciona se não existirem outros elementos com o mesmo [block formatting context](/pt-BR/docs/Web/CSS/block_formatting_context) aos quais nós queiramos que o cabeçalho continue aparecendo ao lado horizontalmente. Se o nosso `H2` possui irmãos os quais são barras laterais flutuadas à esquerda e à direita, usar `clear` irá forçá-lo a aparecer abaixo das duas barras laterais, o que provavelmente não é o que queríamos.
 
-Se limpar `floats `em um elemento não é uma opção, uma outra abordagem é limitar o contexto de formatação do bloco do containêr flutuante. Referindo-se ao exemplo acima novamente, aparentemente todos os três quadrados vermelhos possuem um elemento paragrafo `P` . Nós podemos atribuir a propiedade {{Cssxref("overflow")}} neste paragrafo para `hidden` ou `auto` para obrigá-lo a expandir para contê-los, porém não permitirá que os mesmos parágrafos pulem fora do limite inferior.
+Se limpar `floats` em um elemento não é uma opção, uma outra abordagem é limitar o contexto de formatação do bloco do containêr flutuante. Referindo-se ao exemplo acima novamente, aparentemente todos os três quadrados vermelhos possuem um elemento paragrafo `P` . Nós podemos atribuir a propiedade {{Cssxref("overflow")}} neste paragrafo para `hidden` ou `auto` para obrigá-lo a expandir para contê-los, porém não permitirá que os mesmos parágrafos pulem fora do limite inferior.
 
 ```css
 p.withRedBoxes { overflow: hidden; height: auto; }
 ```
 
-> **Note:** **Nota:** Atribuir `overflow `para` scroll `irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height `como `auto `mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
+> **Nota:** Atribuir `overflow` para `scroll` irá conter também qualquer elemento filho flutuante, mas mostrará as barras de rolagem não importando o comprimento vertical do elemento. Aqui nós estamos atribuindo `height` como `auto` mesmo sendo este o padrão para indicar que o containêr deve crescer para acomodar seu conteúdo.
 
 ## Especificações
 

@@ -13,6 +13,7 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`remove()`** de l'API {{WebExtAPIRef("cookies")}} supprime un cookie, compte tenu de son nom et de son URL.
@@ -46,11 +47,11 @@ var removing = browser.cookies.remove(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`.  Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`. Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -85,7 +86,8 @@ getActive.then(removeCookie);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -112,4 +114,4 @@ getActive.then(removeCookie);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

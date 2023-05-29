@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.exponentiation
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.

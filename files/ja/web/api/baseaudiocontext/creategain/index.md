@@ -3,11 +3,12 @@ title: BaseAudioContext.createGain()
 slug: Web/API/BaseAudioContext/createGain
 original_slug: Web/API/AudioContext/createGain
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createGain()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、 {{ domxref("GainNode") }} を生成します。これは、音声グラフの全体的なゲイン（音量）を調整するのに使用します。
 
-> **Note:** {{domxref("GainNode.GainNode", "GainNode()")}} コンストラクターは {{domxref("GainNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("GainNode.GainNode", "GainNode()")}} コンストラクターは {{domxref("GainNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
@@ -95,4 +96,4 @@ function voiceMute() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,6 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，**`500 Internal Server Error`** 是表示服务器端错误的响应状态码，意味着所请求的服务器遇到意外的情况并阻止其执行请求。

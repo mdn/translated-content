@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它继承了{{domxref("HTMLElement")}}接口的方法和属性。
@@ -11,38 +12,38 @@ HTMLFormElement 接口可以创建或者修改{{HTMLElement("form")}}对象;它�
 _继承自父类的属性，{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("accept-charset", "form") }} HTML attribute, containing a list of character encodings that the server accepts.
+  - : Is a {{domxref("DOMString")}} that reflects the [`accept-charset`](/zh-CN/docs/Web/HTML/Element/form#accept-charset) HTML attribute, containing a list of character encodings that the server accepts.
 - {{domxref("HTMLFormElement.action")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`action`](/zh-CN/docs/Web/HTML/Element/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
+  - : Is a {{domxref("DOMString")}} that reflects the [`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.elements")}} {{readonlyinline}}
   - : Returns a live {{domxref("HTMLFormControlsCollection")}} containing all the form controls belonging to this form element.
 - {{domxref("HTMLFormElement.encoding")}}
   - : Is a synonym for `enctype`.
 - {{domxref("HTMLFormElement.enctype")}}
-  - : Is a {{domxref("DOMString")}} reflects the {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.
+  - : Is a {{domxref("DOMString")}} reflects the [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.
 - {{domxref("HTMLFormElement.length")}} {{readonlyinline}}
   - : Returns a `long` that represents the number of controls in the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : Is a {{domxref("DOMString")}} that reflects the [`method`](/zh-CN/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.name")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`name`](/zh-CN/docs/Web/HTML/Element/form#name) HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : Is a {{jsxref("Boolean")}} that reflects the {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating that the form should not be validated.
+  - : Is a {{jsxref("Boolean")}} that reflects the [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating that the form should not be validated.
 - {{domxref("HTMLFormElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 
 ## 方法
 
 _这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLFormElement.checkValidity()")}}
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
 - {{domxref("HTMLFormElement.item()")}}
   - : Gets the item in the `elements` collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.
 - {{domxref("HTMLFormElement.namedItem()")}}
-  - : 从元素集合中获取 `name` 或者 `id` 与指定名称匹配的项，没有匹配项则返回 null。您也可以像调用数组那样用圆括号或方括号来指定名称， 而不必显式地调用这个方法。
+  - : 从元素集合中获取 `name` 或者 `id` 与指定名称匹配的项，没有匹配项则返回 null。您也可以像调用数组那样用圆括号或方括号来指定名称，而不必显式地调用这个方法。
 - {{domxref("HTMLFormElement.submit()")}}
   - : Submits the form to the server.
 - {{domxref("HTMLFormElement.reset()")}}
@@ -177,7 +178,7 @@ If you want to know how to serialize and submit a form using the [`XMLHttpReques
 
 ## Browser compatibility
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## See also
 

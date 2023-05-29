@@ -1,25 +1,15 @@
 ---
 title: '-webkit-transition'
 slug: Web/CSS/@media/-webkit-transition
-tags:
-  - '@media'
-  - Blink
-  - CSS
-  - 非推奨
-  - 標準外
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-transition
-translation_of: Web/CSS/@media/-webkit-transition
 ---
+
 {{ CSSRef }} {{deprecated_header}} {{ Non-standard_header }}
 
 **`-webkit-transition`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、閲覧コンテキストが [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)に対応していれば値が `true` になります。 WebKit または Blink 以外を使用したブラウザーでは対応していません。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。ここでは `transition` と呼ばれるようになりました。
 
-> **Note:** このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
+> **メモ:** このメディア特性は使用しないでください。これは仕様化されておらず、広く実装されておらず、すべてのブラウザーから削除されています。代わりに {{cssxref("@supports")}} 特性クエリーを使用してください。
 
 ## 構文
 

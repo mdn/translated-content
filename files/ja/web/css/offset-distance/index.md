@@ -2,6 +2,7 @@
 title: offset-distance
 slug: Web/CSS/offset-distance
 ---
+
 {{CSSRef}}
 
 **`offset-distance`** は CSS プロパティで、 {{CSSxRef("offset-path")}} 上の要素を配置する位置を指定します。

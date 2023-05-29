@@ -2,6 +2,7 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 ---
+
 {{APIRef}}{{Non-standard_Header}}
 
 **`fullScreen`** は `Window` インターフェイスのプロパティで、そのウィンドウが全画面モードで表示されているかどうかを示します。

@@ -2,6 +2,7 @@
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 元素的 **Element.accessKey** 属性设置了这样一个按键——用户通过敲击这个键把焦点跳转到这个元素上。

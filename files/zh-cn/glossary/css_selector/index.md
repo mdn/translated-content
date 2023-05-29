@@ -2,6 +2,7 @@
 title: CSS 选择器
 slug: Glossary/CSS_Selector
 ---
+
 **CSS 选择器**是 CSS 规则的一部分，用于匹配文档中的元素。匹配的元素将会应用规则指定的样式。
 
 ## 示例

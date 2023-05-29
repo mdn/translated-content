@@ -1,15 +1,13 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - XPath
-translation_of: Web/XPath
 ---
-XPath는 XML Path Language를 나타내고 [XML](/ko/XML "ko/XML") 문서의 다른 부분을 주소 지정하는(가리키는) 유연한 방법을 제공하는 비XML 문법을 씁니다. 이와 동시에, 또한 패턴과 일치하는지 알아보기 위해 문서 안에 주소 지정된 노드를 검사하는데도 쓰일 수 있습니다.
 
-XPath는 주로 [XSLT](/ko/XSLT "ko/XSLT")에서 쓰입니다. 하지만 또한 [getElementById](/ko/DOM/document.getElementById "ko/DOM/document.getElementById") 메소드, [childNodes](/ko/DOM/element.childNodes "ko/DOM/element.childNodes") 특성들에 의존하는 대신 HTML과 [XUL](/ko/XUL "ko/XUL") 같은 다른 XML에 기반을 둔 언어 문서를 [DOM](/ko/DOM "ko/DOM")을 통해 항해하는 더 나은 강력한 방법으로도 쓰입니다. 다음은 모호합니다: 이는 확장기능 안에서 특히 쓸모 있습니다, 특히 [overlays](/ko/XUL_Overlays)를 고려하면.
+XPath는 XML Path Language를 나타내고 [XML](/ko/XML) 문서의 다른 부분을 주소 지정하는(가리키는) 유연한 방법을 제공하는 비XML 문법을 씁니다. 이와 동시에, 또한 패턴과 일치하는지 알아보기 위해 문서 안에 주소 지정된 노드를 검사하는데도 쓰일 수 있습니다.
 
-XPath는 XML 문서의 계층 구조를 항해하기 위해 경로 표기법(URL의 경우와 같이)을 씁니다. [URI](/ko/URI "ko/URI")와 XML 속성값에 쓰일 수 있도록 비XML 문법을 씁니다.
+XPath는 주로 [XSLT](/ko/XSLT)에서 쓰입니다. 하지만 또한 [getElementById](/ko/DOM/document.getElementById) 메소드, [childNodes](/ko/DOM/element.childNodes) 특성들에 의존하는 대신 HTML과 [XUL](/ko/XUL) 같은 다른 XML에 기반을 둔 언어 문서를 [DOM](/ko/DOM)을 통해 항해하는 더 나은 강력한 방법으로도 쓰입니다. 다음은 모호합니다: 이는 확장기능 안에서 특히 쓸모 있습니다, 특히 [overlays](/ko/XUL_Overlays)를 고려하면.
+
+XPath는 XML 문서의 계층 구조를 항해하기 위해 경로 표기법(URL의 경우와 같이)을 씁니다. [URI](/ko/URI)와 XML 속성값에 쓰일 수 있도록 비XML 문법을 씁니다.
 
 ## 문서
 

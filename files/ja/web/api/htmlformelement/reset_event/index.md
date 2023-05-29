@@ -1,31 +1,27 @@
 ---
-title: 'HTMLFormElement: reset イベント'
+title: "HTMLFormElement: reset イベント"
 slug: Web/API/HTMLFormElement/reset_event
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
+
 {{APIRef}}
 
 **`reset`** イベントは {{HTMLElement("form")}} がリセットされたときに発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>あり (ただし、バブリングしない単純なイベントとして指定されている)</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onreset")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
+
+```js
+addEventListener('reset', (event) => {});
+
+onreset = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
@@ -35,8 +31,8 @@ slug: Web/API/HTMLFormElement/reset_event
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="reset">Reset form</button>
 </form>
 <p id="log"></p>
@@ -60,16 +56,11 @@ form.addEventListener('reset', logReset);
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "indices.html#event-reset", "reset")}}             | {{Spec2("UI Events")}} | 変更なし |
-| {{SpecName("HTML5.2", "fullindex.html#eventdef-global-reset", "reset")}} | {{Spec2("HTML5.2")}} | 変更なし |
-| {{SpecName("HTML5.1", "fullindex.html#eventdef-global-reset", "reset")}} | {{Spec2("HTML5.1")}} | 変更なし |
-| {{SpecName("HTML5 W3C", "index.html#events-0", "reset")}}                     | {{Spec2("HTML5 W3C")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLFormElement.reset_event")}}
+{{Compat}}
 
 ## 関連情報
 

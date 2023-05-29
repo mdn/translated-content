@@ -1,9 +1,9 @@
 ---
 title: Array.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve un string representando el código fuente de un arreglo.
@@ -20,7 +20,7 @@ Un string representando el código fuente del arreglo.
 
 ## Descripción
 
-El método `toSource`r retorna los siguientes valores:
+El método `toSource` retorna los siguientes valores:
 
 - Para el objeto global {{jsxref("Array")}}, `toSource` devuelve el siguiente string indicando que el código fuente no está disponible:
 
@@ -46,14 +46,6 @@ var alpha = new Array('a', 'b', 'c');
 alpha.toSource();
 //devuelve ['a', 'b', 'c']
 ```
-
-## Especificaciones
-
-No hace parte de ningún estándar. Implementado en JavaScript 1.3.
-
-## Compatibilidad con navegadores
-
-{{Compat("javascript.builtins.Array.toSource")}}
 
 ## Ver también
 

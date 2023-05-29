@@ -10,6 +10,7 @@ tags:
   - TextEncoder
 translation_of: Web/API/TextEncoder
 ---
+
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 **`TextEncoder`** prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir [`StringView` – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés](/fr/Add-ons/Code_snippets/StringView).

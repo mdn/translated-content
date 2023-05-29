@@ -2,6 +2,7 @@
 title: Node.hasChildNodes
 slug: Web/API/Node/hasChildNodes
 ---
+
 {{ApiRef}}
 
 ### 概述

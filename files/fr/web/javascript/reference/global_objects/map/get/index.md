@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
+
 {{JSRef}}
 
 La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la valeur associée à la clé fournie est un objet, alors on obtient une référence à cet objet et tous changements apporté à cet objet sera aussi visible à l'intérieur de l'objet `Map`.
@@ -44,14 +45,11 @@ maMap.get("machin");   // Renvoie undefined.
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.get")}}
+{{Compat}}
 
 ## Voir aussi
 

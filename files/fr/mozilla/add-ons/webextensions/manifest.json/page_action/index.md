@@ -7,6 +7,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -282,9 +283,9 @@ Une action de page avec juste une icône spécifiée en 2 tailles différentes. 
 
 Une action de page avec une icône, un titre et une fenêtre contextuelle. Cette dernière s'affiche lorsque l'utilisateur clique sur l'icône.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.page_action")}}
+{{Compat}}
 
 ## Voir aussi
 

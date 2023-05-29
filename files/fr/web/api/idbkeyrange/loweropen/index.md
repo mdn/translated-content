@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/lowerOpen
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`lowerOpen`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un booléen qui inidque si l'intervalle est ouvert pour la borne inférieure (autrement dit, le booléen est vrai lorsque la borne n'est pas incluse et est faux sinon).
@@ -54,7 +55,7 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
@@ -72,4 +73,4 @@ function displayData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -2,13 +2,14 @@
 title: '<div>: コンテンツ区分要素'
 slug: Web/HTML/Element/div
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の コンテンツ区分要素** (**`<div>`**) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる (例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などの何らかのレイアウトモデルが適用されるなど) までは、コンテンツやレイアウトには影響を与えません。
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-`<div>` 要素は「純粋」なコンテナーとして、本質的には何も表しません。その代わり、 {{htmlattrxref("class")}} や {{htmlattrxref("id")}} を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を ({{htmlattrxref("lang")}} 属性を使用して) 示したりするために使用します。
+`<div>` 要素は「純粋」なコンテナーとして、本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Global_attributes#class) や [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を ([`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を使用して) 示したりするために使用します。
 
 <table class="properties">
   <tbody>
@@ -74,7 +75,7 @@ slug: Web/HTML/Element/div
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-> **Note:** **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や [CSS フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や [CSS フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 
@@ -101,7 +102,7 @@ slug: Web/HTML/Element/div
 
 ### スタイル付けを行う例
 
-この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に {{htmlattrxref("class")}} 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
+この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
 
 #### HTML
 
@@ -130,11 +131,7 @@ slug: Web/HTML/Element/div
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-div-element', '&lt;div&gt;')}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし。 |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-div-element', '&lt;div&gt;')}}     | {{Spec2('HTML5 W3C')}}     | `align` を廃止                       |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.4', '&lt;div&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

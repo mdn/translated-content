@@ -2,6 +2,7 @@
 title: Document.hasStorageAccess()
 slug: Web/API/Document/hasStorageAccess
 ---
+
 {{APIRef}}{{seecompattable}}{{domxref("Document")}}的**`hasStorageAccess()`** 方法返回了一个{{jsxref("Promise")}}来判断该文档是否有访问第一方储存的权限。
 
 通过 [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API) 获取更多信息。
@@ -41,7 +42,7 @@ The API is currently only at the proposal stage — the standardization process 
 
 ## Browser compatibility
 
-{{Compat("api.Document.hasStorageAccess")}}
+{{Compat}}
 
 ## See also
 

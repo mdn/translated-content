@@ -1,7 +1,8 @@
 ---
 title: 运算符优先级
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **运算符的优先级**决定了表达式中运算执行的先后顺序。优先级高的运算符会作为优先级低的运算符的操作数。
@@ -199,12 +200,12 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
         </tr>
         <tr>
             <td rowspan="5">18</td>
-            <td>{{jsxref("Operators/Property_Accessors", "成员访问", "#点号表示法", 1)}}</td>
+            <td>{{jsxref("Operators/Property_accessors", "成员访问", "#点号表示法", 1)}}</td>
             <td>从左到右</td>
             <td><code>… . …</code></td>
         </tr>
         <tr>
-            <td>{{jsxref("Operators/Property_Accessors", "需计算的成员访问", "#方括号表示法", 1)}}</td>
+            <td>{{jsxref("Operators/Property_accessors", "需计算的成员访问", "#方括号表示法", 1)}}</td>
             <td>从左到右</td>
             <td><code>… [ … ]</code></td>
         </tr>
@@ -336,7 +337,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… &lt;= …</code></td>
         </tr>
         <tr>
-            <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">大于 (&gt;)</a></td>
+            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than">大于 (&gt;)</a></td>
             <td><code>… &gt; …</code></td>
         </tr>
         <tr>
@@ -406,7 +407,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
         </tr>
         <tr>
             <td>3</td>
-            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">条件（三元）运算符</a></td>
+            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator">条件（三元）运算符</a></td>
             <td>从右到左</td>
             <td><code>… ? … : …</code></td>
         </tr>
@@ -463,7 +464,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
         </tr>
         <tr>
             <td>1</td>
-            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_Operator">逗号 / 序列</a></td>
+            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator">逗号 / 序列</a></td>
             <td>从左到右</td>
             <td><code>… , …</code></td>
         </tr>

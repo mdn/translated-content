@@ -2,6 +2,7 @@
 title: 減算代入 (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 減算代入演算子 (`-=`) は、変数から右辺のオペランドの値を減算し、結果を変数に代入します。

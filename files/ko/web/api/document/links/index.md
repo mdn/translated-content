@@ -1,14 +1,8 @@
 ---
 title: Document.links
 slug: Web/API/Document/links
-tags:
-  - Document
-  - Links
-  - a
-  - area
-  - href
-translation_of: Web/API/Document/links
 ---
+
 {{ APIRef("DOM") }}
 
 `links` 속성은 document 내에서 [href](/ko/docs/Web/API/URLUtils.href) attribute 를 가지는 모든 {{HTMLElement("area")}} 과 {{HTMLElement("a")}} element 들의 collection 을 반환한다.
@@ -31,13 +25,10 @@ for(var i = 0; i < links.length; i++) {
 }
 ```
 
-## Specifications
+## 명세서
 
-| Specification                                                                                | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('HTML WHATWG', '#dom-document-links', 'Document.links')}} | {{ Spec2('HTML WHATWG') }} |                    |
-| {{SpecName("DOM2 HTML", "html.html#ID-7068919", "document.links")}}     | {{Spec2("DOM2 HTML")}}         | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

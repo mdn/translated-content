@@ -2,6 +2,7 @@
 title: 'Window: rejectionhandled イベント'
 slug: Web/API/Window/rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`rejectionhandled`** イベントは、 JavaScript の {{jsxref("Promise")}} が拒否されたものの、その後で Promise の拒否が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxref("window")}} だが {{domxref("Worker")}} の場合もある) に送られます。これは、 Promise が拒否されたが拒否の手助けがないときに送信される {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。
@@ -41,9 +42,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#unhandled-promise-rejections', 'rejectionhandled')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 
@@ -51,7 +50,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 関連情報
 
-- {{SectionOnPage("/ja/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
+- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

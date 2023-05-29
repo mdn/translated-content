@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperty
 ---
+
 {{JSRef}}
 
 La méthode statique **`Object.defineProperty()`** permet de définir une nouvelle propriété ou de modifier une propriété existante, directement sur un objet. La méthode renvoie l'objet modifié.
@@ -70,7 +71,7 @@ Un descripteur d'accesseur possède les propriétés optionnelles suivantes :
 
 Si un descripteur ne possède aucune des clés `value`, `writable`, `get` ou `set`, il est considéré comme un descripteur de données. Si un descripteur possède à la fois une propriété `value` ou `writable` et une propriété `get` ou `set`, un exception sera déclenchée.
 
-Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object.prototype")}}, définir toutes les options explicitement ou faire pointer la propriété {{jsxref("Object.prototype.__proto__", "__proto__")}} vers {{jsxref("null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
+Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object.prototype")}}, définir toutes les options explicitement ou faire pointer la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) vers {{jsxref("null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
 
 ```js
 var obj = {};
@@ -163,7 +164,7 @@ Object.defineProperty(o, "conflit", { value: 0x9f91102,
 
 ### Modifier une propriété existante
 
-Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à  `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
+Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
 
 Si une propriété est non-configurable, son attribut `writable` ne peut être mis qu'à `false`.
 
@@ -343,66 +344,11 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">É tat</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}
-      </td>
-      <td>{{Spec2('ES5.1')}}</td>
-      <td>Définition initiale. Implémentée avec JavaScript 1.8.5.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}
-      </td>
-      <td>{{Spec2('ES6')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          {{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}}
-        </p>
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
-
-## Notes de compatibilité
-
-### Redéfinir la propriété `length` d'un tableau (`Array`)
-
-Il est possible de redéfinir la propriété {{jsxref("Array.length", "length")}} utilisée pour les tableaux, avec les restrictions vues. (La propriété `length` est initialement non-configurable, non-enumérable et accessible en écriture (`writable` vaut `true`)). Ainsi, sur un tableau, si rien n'a été fait, on peut modifier la valeur de la propriété `length` ou la rendre non accessible en écriture. Il n'est pas permis de changer son caractère énumérable ou configurable. Cependant, tous les navigateurs n'autorisent pas cette redéfinition.
-
-Les versions de Firefox 4 à 22 renverront une exception {{jsxref("TypeError")}} pour chaque tentative (licite ou non) de modification de la propriété `length` d'un tableau.
-
-Pour les versions de Chrome qui implémentent `Object.defineProperty()`, elles ignorent, dans certaines circonstances, une redéfinition de la propriété utilisant une valeur différente de la valeur courante de `length`. Sous certaines circonstances, le changement de l'accès en écriture n'aura aucun effet (et ne renverra aucune exception). Les méthodes relatives comme  {{jsxref("Array.prototype.push")}} ne respectent pas le non accès en écriture.
-
-Pour les versions de Safari qui implémentent `Object.defineProperty()` elles ignorent la redéfinition d'une valeur différente de la valeur courante. Toute tentative de modifier l'accès en écriture échouera silencieusement (aucune modification effective, aucune exception renvoyée).
-
-Seules les versions Internet Explorer 9 et supérieures et Firefox 23 et supérieures semblent supporter complètement la redéfinition de la propriété `length` pour les tableaux. À l'heure actuelle, il n'est pas conseillé de s'attendre à ce qu'une telle redéfinition fonctionne ou ne fonctionne pas. Même dans le cas où on peut supposer que cela fonctionne de façon cohérente : [ce n'est pas vraiment une bonne idée de le faire](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/) (en anglais).
-
-### Notes spécifiques relatives à Internet Explorer 8
-
-Internet Explorer 8 a implémenté une méthode `Object.defineProperty()` [uniquement utilisable sur les objets DOM](https://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx). Quelques éléments sont à noter :
-
-- L'utilisation de `Object.defineProperty()` sur les objets natifs renvoie une erreur.
-- Les attributs de propriétés doivent être définis avec certaines valeurs. `true` (pour `Configurable`), `true` (pour `enumerable`), `true` (pour `writable`) pour les descripteurs de données et `true` pour `configurable`, `false` pour `enumerable` pour les descripteurs d'accesseur. Fournir d'autres valeurs résultera en une erreur (à confirmer).
-- Pour modifier une propriété, il faut d'abord la supprimer. Si ça n'a pas été fait, elle reste telle quelle.
+{{Compat}}
 
 ## Voir aussi
 

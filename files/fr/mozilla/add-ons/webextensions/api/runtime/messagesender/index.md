@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
+
 {{AddonSidebar()}}
 
 Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.
@@ -26,17 +27,17 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `tab`{{optional_inline}}
   - : {{WebExtAPIRef('tabs.Tab')}}. Le {{WebExtAPIRef('tabs.Tab')}} qui a ouvert la connexion. Cette propriété ne sera présente que lorsque la connexion a été ouverte à partir d'un onglet (y compris les scripts de contenu).
 - `frameId`{{optional_inline}}
-  - : `integer`. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants.  Cela ne sera défini que lorsque l'`onglet` est défini.
+  - : `integer`. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants. Cela ne sera défini que lorsque l'`onglet` est défini.
 - `id`{{optional_inline}}
   - : `string`. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans manifest.json, then `id`  aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) qui apparaît dans l'URL de l'extension).
 - `url`{{optional_inline}}
-  - : `string`. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une  [page d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), une [page d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou une [action contextuelle](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions)), l'URL sera au format `"moz-extension://<extension-internal-id>/path/to/page.html"`. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera `"moz-extension://<extension-internal-id>/_generated_background_page.html"`. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'`url` sera l'URL de la page web. Si le script s'exécute dans un iframe, `url` sera l'URL de l'iframe.
+  - : `string`. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une [page d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), une [page d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages), ou une [action de navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2) ou une [action contextuelle](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Page_actions)), l'URL sera au format `"moz-extension://<extension-internal-id>/path/to/page.html"`. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera `"moz-extension://<extension-internal-id>/_generated_background_page.html"`. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'`url` sera l'URL de la page web. Si le script s'exécute dans un iframe, `url` sera l'URL de l'iframe.
 - `tlsChannelId`{{optional_inline}}
   - : `string`. L'ID de canal TLS de la page ou du cadre qui a ouvert la connexion, si demandé par l'extension, et si disponible.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.MessageSender")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -46,7 +47,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,4 +75,4 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

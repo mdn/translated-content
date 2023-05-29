@@ -2,6 +2,7 @@
 title: User agent (ユーザーエージェント)
 slug: Glossary/User_agent
 ---
+
 ユーザーエージェントは個人を表すコンピューターのプログラムで、例えば{{Glossary("World Wide Web", "ウェブ")}}における{{Glossary("Browser","ブラウザー")}}に当たるものです。
 
 ブラウザーのほかに、ウェブページをスクレイピングするボット、ダウンロードマネージャー、その他のウェブにアクセスするアプリがユーザーエージェントになる可能性もあります。ブラウザーはサーバーに対してリクエストを行う際に毎回、 {{Glossary("HTTP")}} の {{HTTPHeader("User-Agent")}} ヘッダーに、ユーザーエージェント (UA) 文字列と呼ばれる自分自身を識別する文字列を含めます。この文字列はブラウザー、バージョン番号、ホストのオペレーティングシステムなどを識別します。
@@ -16,7 +17,7 @@ slug: Glossary/User_agent
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "ユーザーエージェント")}}
+- Wikipedia の[ユーザーエージェント](https://ja.wikipedia.org/wiki/ユーザーエージェント)
 
 ### 技術リファレンス
 

@@ -2,6 +2,7 @@
 title: URL.password
 slug: Web/API/URL/password
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`password`** プロパティは、ドメイン名の前に指定されたパスワードを含む {{domxref("USVString")}} です。
@@ -30,9 +31,7 @@ var result = url.password; // 戻り値: "flabada"
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-password', 'URL.password')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

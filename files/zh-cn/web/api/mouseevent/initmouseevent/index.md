@@ -2,6 +2,7 @@
 title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 ---
+
 {{APIRef("DOM Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。
@@ -76,7 +77,7 @@ event.initMouseEvent(type, canBubble, cancelable, view,
 - _`button`_
   - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
 - _`relatedTarget`_
-  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其它的传 null。
+  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
 
 ## 示例
 
@@ -107,9 +108,7 @@ simulateClick();//Why it can not show "input" ?
 
 这里有个在线演示
 
-{{EmbedLiveSample('Example', 200, 36)}}
-
-{{ LiveSampleLink('Example', 'Link to live demo') }}
+{{EmbedLiveSample('示例', 200, 36)}}
 
 ## 规范
 

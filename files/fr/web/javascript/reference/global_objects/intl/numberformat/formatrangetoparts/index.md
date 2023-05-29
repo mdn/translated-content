@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToPar
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Numberformat.prototype.formatRangeToParts()`** permet de formater des chaînes de caractères produites par des objets `NumberFormat` en tenant compte de la locale.

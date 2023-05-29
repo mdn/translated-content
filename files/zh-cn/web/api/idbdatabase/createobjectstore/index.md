@@ -2,6 +2,7 @@
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBDatabase")}} 接口的 **`createObjectStore()`** 方法创建并返回一个新的 object store 或 index。
@@ -46,7 +47,7 @@ This method may raise a 此方法可能会抛出一个 {{domxref("DOMException")
 | Exception                  | Description                                                                                                                                                                         |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `InvalidStateError`        | 在非`versionchange`事务中调用时发生。在一些旧版本的 Webkit 浏览器，你必须先调用{{APIRef("IDBVersionChangeRequest.setVersion")}}方法。                               |
-| `TransactionInactiveError` | 如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 `InvalidStateError` 错误，这一问题现已修复（请参阅 {{Bug("1176165")}}）。 |
+| `TransactionInactiveError` | 如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 `InvalidStateError` 错误，这一问题现已修复（请参阅 [Firefox bug 1176165](https://bugzil.la/1176165)）。 |
 | `ConstraintError`          | 数据库中已存同名的对象存储（名字区分大小写）                                                                                                                                        |
 | `InvalidAccessError`       | 如果 `autoIncrement` 设置为 true，并且 keyPath 是空字符串或包含空字符串的数组。                                                                                                     |
 
@@ -102,4 +103,4 @@ This method may raise a 此方法可能会抛出一个 {{domxref("DOMException")
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

@@ -3,6 +3,7 @@ title: PWS/Cloud Foundry に LocalLibrary をインストールする
 slug: orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 original_slug: Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 ---
+
 {{LearnSidebar}}
 
 この記事では Pivotal Web Services の PaaS クラウドに*地域図書館*をインストールする方法の実際的なデモンストレーションを提供します。これは、チュートリアルのパート 7 で使用されている PaaS クラウドサービスである Heroku のフル機能のオープンソース代替です。PWS/Cloud Foundry は、Heroku (または別の PaaS クラウドサービス) に代わるものを探している場合、または単に何か違うことを試したい場合には、絶対にチェックする価値があります。
@@ -43,7 +44,7 @@ This post covers how to modify the LocalLibrary application from the tutorial fo
 - How to set environment variables for Node using the cf CLI.
 - How to look at logs, again using the cf CLI tool.
 
-So let's get started. You have two options, you can go through the tutorial from the [beginning](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:
+So let's get started. You have two options, you can go through the tutorial from the [beginning](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) or you can just download the completed project and modify it from there for use on PWS. To do the latter, you can do the following from a terminal:
 
 ```bash
 git clone https://github.com/mdn/express-locallibrary-tutorial
@@ -51,7 +52,7 @@ git clone https://github.com/mdn/express-locallibrary-tutorial
 
 You'll then need to follow the preparation steps listed in the [Getting your website ready to publish](/ja/docs/Learn/Server-side/Express_Nodejs/deployment#Getting_your_website_ready_to_publish) section of [Express Tutorial Part 7: Deploying to production](/ja/docs/Learn/Server-side/Express_Nodejs/deployment), before then following the steps listed below.
 
-> **Note:** This work flow is based on the [Mozilla Heroku work flow in the main Express/Node tutorial series](/ja/docs/Learn/Server-side/Express_Nodejs/deployment#Example_Installing_LocalLibrary_on_Heroku) for consistency, to help readers compare and contrast.
+> **メモ:** This work flow is based on the [Mozilla Heroku work flow in the main Express/Node tutorial series](/ja/docs/Learn/Server-side/Express_Nodejs/deployment#Example_Installing_LocalLibrary_on_Heroku) for consistency, to help readers compare and contrast.
 
 ## Modifying the LocalLibrary for PWS
 
@@ -198,7 +199,7 @@ cf push some-unique-name -m 256MB
 
 Note the `-m` flag we added is not required. We just included it so that we only use 256MB of memory to run the app. Node apps typically can run in 128 MB, but we are being safe. If we didn't specify the memory, the CLI would use the default 1 GB of memory, but we want to make sure your trial lasts longer. You should now see a bunch of text on the screen. It will indicate that the CLI is uploading all your files, that it's using the node buildpack, and it will start the app. If we're lucky, the app is now "running" on the site at the URL `https://some-unique-name.cfapps.io`. Open your browser and run the new website by going to that URL.
 
-> **Note:** The site will be running using our hardcoded development database at this time. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section we'll set it to use our new database.
+> **メモ:** The site will be running using our hardcoded development database at this time. Create some books and other objects, and check out whether the site is behaving as you expect. In the next section we'll set it to use our new database.
 
 ## Setting configuration variables
 

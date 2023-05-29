@@ -3,6 +3,7 @@ title: 样式列表
 slug: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/为文本添加样式/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [List 列表](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
@@ -210,12 +211,12 @@ ul li {
 
   - {{cssxref("background-image")}}: 充当项目符号的图片文件的参考路径
   - {{cssxref("background-position")}}: 这定义了所选元素背景中的图像将出现在哪里 - 在我们的示例中设置 `0 0`，这意味着项目符号将出现在每个列表项的最左上侧。
-  - {{cssxref("background-size")}}: 设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 1.6rem（16px），它非常吻合我们为项目符号设置的 20px 的填充， 16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
+  - {{cssxref("background-size")}}: 设置背景图片的大小。理想条件下，我们想要项目符号与列表项的大小相同（比列表项稍大或稍小亦可）。我们使用的尺寸为 1.6rem（16px），它非常吻合我们为项目符号设置的 20px 的填充，16px 加上 4px 的空格间距，可以使项目符号和列表项文本效果更好。
   - {{cssxref("background-repeat")}}：默认条件下，背景图片不断复制直到填满整个背景空间，在我们的例子中，背景图片只需复制一次，所以我们设置值为 `no-repeat`。
 
 效果显示如下：
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](image-bullets.png)
 
 ### list-style 速记
 
@@ -245,7 +246,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性允许你从 1 以外的数字开始计数。示例如下：
+[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。示例如下：
 
 ```html
 <ol start="4">
@@ -262,7 +263,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性将启动列表倒计数。示例如下：
+[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将启动列表倒计数。示例如下：
 
 ```html
 <ol start="4" reversed>
@@ -279,7 +280,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性允许设置列表项指定数值，示例如下：
+[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，示例如下：
 
 ```html
 <ol>
@@ -371,16 +372,16 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('主动学习：为嵌套式列表添加样式', 700, 800) }}
 
-## 另请参阅
+## 总结
+
+一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——为链接提供样式的各种技巧。
+
+## 参见
 
 CSS 计数器提供用于自定义列表计数和样式的高级工具，但它们相当复杂。如果你想更深入了解，请查看如下资源：
 
 - {{cssxref("@counter-style")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
-
-## 总结
-
-一旦你掌握一些相关的基础原则和特定属性，列表的样式还是相对容易理解的。在下篇文章中我们将转到另一话题——为链接提供样式的各种技巧。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}

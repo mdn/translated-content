@@ -2,6 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt`** 是一种内置对象，它提供了一种方法来表示大于 `2^53 - 1` 的整数。这原本是 Javascript 中可以用 {{JSxRef("Number")}} 表示的最大数字。**`BigInt`** 可以表示任意大的整数。
@@ -187,7 +188,7 @@ Boolean(12n)
 - {{JSxRef("BigInt.prototype.toString()")}}
   - : 返回以指定基数 (base) 表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。
 - {{JSxRef("BigInt.prototype.valueOf()")}}
-  - : 返回指定对象的基元值。 覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。
+  - : 返回指定对象的基元值。覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。
 
 ## 使用建议
 
@@ -214,7 +215,7 @@ JSON.stringify(BigInt(1));
 // '"1"'
 ```
 
-## 例子
+## 示例
 
 ### Calculating Primes
 
@@ -254,7 +255,7 @@ nthPrime(20n)
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.BigInt")}}
+{{Compat}}
 
 ## 相关链接
 

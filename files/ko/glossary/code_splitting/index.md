@@ -1,12 +1,6 @@
 ---
 title: Code splitting (코드분할)
 slug: Glossary/Code_splitting
-tags:
-  - Glossary
-  - Reference
-  - Web Performance
-  - code splitting
-  - latency
 ---
 
 **코드분할**은 번들한 여러 코드 혹은 컴포넌트를 분리하는 것입니다. 이렇게하면 필요에 따라 특정한 컴포넌트만 로딩하거나, 병렬로 로딩할 수 있습니다.

@@ -2,6 +2,7 @@
 title: FileReaderSync.readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
 ---
+
 {{APIRef("File API")}}
 
 `readAsDataURL()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的にデータ URL を表す文字列に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。

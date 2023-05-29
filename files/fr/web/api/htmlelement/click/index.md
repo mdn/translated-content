@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/click
 translation_of: Web/API/HTMLElement/click
 browser-compat: api.HTMLElement.click
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode **`HTMLElement.click()`** simule un clic de souris sur un élément.

@@ -3,6 +3,7 @@ title: JavaScript 言語情報
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
 original_slug: Web/JavaScript/Language_Resources
 ---
+
 {{JsSidebar}}
 
 **ECMAScript** は [JavaScript](/ja/docs/JavaScript) の基礎を成すスクリプト言語です。ECMAScript は標準化団体 [ECMA International](http://www.ecma-international.org/) によって **ECMA-262 および ECMA-402 specifications** として標準化されています。次のような ECMAScript 標準が承認済みおよび策定中です:

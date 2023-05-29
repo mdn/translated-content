@@ -2,6 +2,7 @@
 title: suspend
 slug: Web/API/OfflineAudioContext/suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`suspend()`** method of the {{ domxref("OfflineAudioContext") }} interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.
@@ -42,4 +43,4 @@ A {{jsxref("Promise")}} resolving to void.
 
 ## Browser compatibility
 
-{{Compat("api.OfflineAudioContext.suspend")}}
+{{Compat}}

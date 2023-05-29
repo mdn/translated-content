@@ -1,43 +1,31 @@
 ---
 title: 'HTMLMediaElement: pause イベント'
 slug: Web/API/HTMLMediaElement/pause_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `pause` イベントは、動作の一時停止のリクエストが処理され、動作が一時状態に入ったときに送信されるものであり、メディアが要素の {{domxref("HTMLMediaElement.pause", "pause()")}} の呼び出しを通して一時停止した後が最も一般的です。
 
 イベントは `pause()` メソッドから戻り、メディア要素の {{domxref("HTMLMediaElement.paused", "paused")}} プロパティが `true` に変化した後で一度送信されます。
 
-## 基本情報
+このイベントはキャンセル不可で、バブリングしません。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>Element</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onpause")}}</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('pause', (event) => {});
+
+onpause = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 

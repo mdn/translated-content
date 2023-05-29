@@ -1,12 +1,11 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/species
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-browser-compat: javascript.builtins.Symbol.species
 l10n:
   sourceCommit: 8bf018f0a39d012a0d98afe3f15e0ed0fb7c8ce5
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.

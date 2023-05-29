@@ -1,20 +1,13 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Estilos
-  - Landing
-  - Layout
-  - Referencia
-translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
-**CSS** (**_Cascading Style Sheets_ ou Folhas de Estilo em Cascata)** é uma linguagem de [estilo](/pt-BR/docs/Web/API/StyleSheet) usada para descrever a apresentação de um documento escrito em[ HTML](/pt-BR/HTML "HTML") ou em [XML](/pt-BR/docs/Glossary/XML "XML") (incluindo várias linguagens em XML como [SVG](/pt-BR/SVG "SVG"), [MathML](/pt-BR/docs/Web/MathML) ou [XHTML](/pt-BR/XHTML)). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.
+**CSS** (**_Cascading Style Sheets_ ou Folhas de Estilo em Cascata)** é uma linguagem de [estilo](/pt-BR/docs/Web/API/StyleSheet) usada para descrever a apresentação de um documento escrito em [HTML](/pt-BR/HTML) ou em [XML](/pt-BR/docs/Glossary/XML) (incluindo várias linguagens em XML como [SVG](/pt-BR/SVG), [MathML](/pt-BR/docs/Web/MathML) ou [XHTML](/pt-BR/XHTML)). O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.
 
-CSS é uma das principais linguagens da **open web** e é padronizada em navagadores web de acordo com as [especificação da W3C](http://w3.org/Style/CSS/#specs). Desenvolvido em níveis, o CSS1 está atualmente obsoleto, o CSS2.1 é uma recomendação e o [CSS3](/pt-BR/docs/Web/CSS/CSS3 "CSS3"), agora dividido em pequenos módulos, está progredindo para a sua padronização.
+CSS é uma das principais linguagens da **open web** e é padronizada em navegadores web de acordo com as [especificação da W3C](http://w3.org/Style/CSS/#specs). Desenvolvido em níveis, o CSS1 está atualmente obsoleto, o CSS2.1 é uma recomendação e o [CSS3](/pt-BR/docs/Web/CSS/CSS3), agora dividido em pequenos módulos, está progredindo para a sua padronização.
 
 - Introdução CSS
 
@@ -73,7 +66,7 @@ O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/Layout_cookbook) tem com
 - Você pode usar o [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/) para verificar se o seu CSS é válido. Essa é uma ferramenta indispensável de depuração.
 - [As Ferramentas do Firefox para desenvolvedores](/pt-BR/docs/Tools) permitem ver e editar o CSS de uma página ao vivo usando as ferramentas de [Inspeção](/pt-BR/docs/Tools/Page_Inspector) e [Editor de Estilo](/pt-BR/docs/Tools/Style_Editor).
 - [O complemento Web Developer](https://addons.mozilla.org/pt-BR/firefox/addon/60) para Firefox também permite a observação e edição de CSS ao vivo dos sites visualizados.
-- A comunidade web criou várias outras[ pequenas ferramentas CSS](/pt-BR/docs/Web/CSS/Tools) para você usar.
+- A comunidade web criou várias outras [pequenas ferramentas CSS](/pt-BR/docs/Web/CSS/Tools) para você usar.
 
 ## Veja também
 

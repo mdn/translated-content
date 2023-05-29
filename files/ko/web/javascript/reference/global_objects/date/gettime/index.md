@@ -1,8 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
-browser-compat: javascript.builtins.Date.getTime
 ---
 {{JSRef}}
 

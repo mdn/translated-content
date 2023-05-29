@@ -2,6 +2,7 @@
 title: 函數回傳值
 slug: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 我們將在本課程中討論最後一個基本概念，即關閉函數 - 回傳值。 有些函數在完成後沒有回傳重要值，但其他函數會，並且了解它們的值是什麼，如何在代碼中使用它們以及如何使自己的自定義函數返回有用值非常重要。 我們將在下面介紹所有這些內容。
@@ -36,8 +37,8 @@ slug: Learn/JavaScript/Building_blocks/Return_values
 **Return values** are just what they sound like — values returned by the function when it completes. You've already met return values a number of times, although you may not have thought about them explicitly. Let's return to some familiar code:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -58,10 +59,10 @@ To return a value from a custom function, you need to use ... wait for it ... th
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -72,7 +73,7 @@ Inside each loop iteration, three calls are made to the `random()` function, to 
 
 ```js
 function randomNumber(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -80,7 +81,7 @@ This could be written as follows:
 
 ```js
 function randomNumber(number) {
-  var result = Math.floor(Math.random()*number);
+  var result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -108,47 +109,57 @@ Let's have a go at writing our own functions featuring return values.
 1. First of all, make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element in which we have stored a reference to both HTML elements in two variables. This little page will allow you to enter a number into the text box, and display different numbers related to it in the paragraph below.
 2. Let's add some useful functions to this `<script>` element. Below the existing two lines of JavaScript, add the following function definitions:
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      var x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     var x = num;
+     while (x > 1) {
+       num *= x - 1;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
+   The `squared()` and `cubed()` functions are fairly obvious — they return the square or cube of the number given as a parameter. The `factorial()` function returns the [factorial](https://en.wikipedia.org/wiki/Factorial) of the given number.
 
 3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
-    ```js
-    input.onchange = function() {
-      var num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     var num = input.value;
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.
+   Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.
 
-    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.
+   Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.
 
-    If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
+   If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
 4. Save your code, load it in a browser, and try it out.
 
@@ -173,13 +184,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — a common JavaScript pattern is to pass a function into another function as an argument, which is then called inside the first function. This is a little beyond the scope of this course, but worth studying before too long.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/zh-TW/docs/Learn/JavaScript/Building_blocks/Image_gallery)

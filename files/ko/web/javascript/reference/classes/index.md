@@ -1,7 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 
@@ -396,7 +395,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 클래스는 재정의될 수 없습니다. 재정의를 시도하면 `SyntaxError` 가 발생합니다.
 
-이를 실험해보고 싶으면 FireFox Web Console (**Tools** > **Web Developer** > **Web Console**) 에서 같은 이름으로 클래스를 두번 정의하려고 해보세요. 다음과 같은 오류를 보게 될 겁니다. `SyntaxError: redeclaration of let ClassName;`. (See further discussion of this issue in {{Bug(1428672)}}.) Doing something similar in Chrome Developer Tools gives you a message like `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+이를 실험해보고 싶으면 FireFox Web Console (**Tools** > **Web Developer** > **Web Console**) 에서 같은 이름으로 클래스를 두번 정의하려고 해보세요. 다음과 같은 오류를 보게 될 겁니다. `SyntaxError: redeclaration of let ClassName;`. (See further discussion of this issue in [Firefox bug 1428672](https://bugzil.la/1428672).) Doing something similar in Chrome Developer Tools gives you a message like `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 명세
 

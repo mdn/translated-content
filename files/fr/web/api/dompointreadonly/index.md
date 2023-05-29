@@ -9,6 +9,7 @@ tags:
   - Quadrilatère
 translation_of: Web/API/DOMPointReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 L'interface **`DOMPointReadOnly`** spécifie les propriétés standard utilisées par {{domxref("DOMPoint")}} pour définir un point 2D ou 3D dans un système de coordonnées.

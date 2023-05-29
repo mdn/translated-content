@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.right_shift
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de **décalage binaire à droite (`>>`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la droite que le nombre indiqué par le second opérande. Les bits en excès à droite sont écartés. Pour le remplissage des bits par la gauche, c'est le bit le plus à gauche initialement qui est recopié autant de fois que nécessaire. Aussi, le bit le plus à gauche dans le résultat sera le même que le bit le plus à gauche de l'opérande et les deux valeurs auront donc le même signe.

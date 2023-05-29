@@ -2,6 +2,7 @@
 title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 ---
+
 Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
 
 ## Web 開発者向けの変更点一覧
@@ -47,11 +48,11 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 ### JavaScript
 
-- 正規表現を関数のように呼び出せなくなりました。この変更は WebKit チームと互換性の確保について話し合った結果行われたものです。({{ WebkitBug(28285) }} をお読みください。この機能は長いこと存在していたものの、少なくとも MDC ではドキュメント化されていませんでした。)
+- 正規表現を関数のように呼び出せなくなりました。この変更は WebKit チームと互換性の確保について話し合った結果行われたものです。([WebKit bug 28285](https://webkit.org/b/28285) をお読みください。この機能は長いこと存在していたものの、少なくとも MDC ではドキュメント化されていませんでした。)
 - [`Function.prototype.isGenerator()`](/ja/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) メソッドがサポートされました。個のメソッドによってある関数が [generator](/ja/docs/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators) であるかを調べられます。
 - chrome コード内に生成された DOM 文書が sandbox 内のスクリプトに現れなくなりました。
 - [予約語](/ja/docs/JavaScript/Reference/Reserved_Words) `class`, `enum`, `export`, `extends`, `import`, `super` はこれまで Strict Mode のみで予約されていましたが、Strict Mode ではない通常のモードでも予約語扱いになりました。
-- JSON パーサが書き直され、スピードと準拠度が向上しました。この書き直しには {{ bug("572279") }} の修正も含まれています。
+- JSON パーサが書き直され、スピードと準拠度が向上しました。この書き直しには [Firefox バグ 572279](https://bugzil.la/572279) の修正も含まれています。
 
 ### SVG
 
@@ -61,8 +62,8 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 ### HTTP
 
 - Firefox は `Keep-Alive` HTTP ヘッダを送信しないようになります。私たちはこのヘッダを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダに "keep-alive" を指定していたため重複しており、意味がなかったのです。
-- HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを {{ interwiki("wikipedia", "FIFO") }} と扱うのではなく、プール内の接続を {{ interwiki("wikipedia", "congestion window") }} (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
-- Firefox は `Content-Disposition` HTTP レスポンスヘッダについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は {{ bug(588781) }} をお読みください。
+- HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを [FIFO](https://ja.wikipedia.org/wiki/FIFO) と扱うのではなく、プール内の接続を [congestion window](https://en.wikipedia.org/wiki/congestion_window) (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
+- Firefox は `Content-Disposition` HTTP レスポンスヘッダについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は [Firefox バグ 588781](https://bugzil.la/588781) をお読みください。
 
 ### MathML
 
@@ -76,7 +77,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **Note:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 
@@ -91,7 +92,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 ### インターフェースの変更点
 
 - `nsIHttpChannelInternal` インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
-- {{ HTMLElement("canvas") }} エレメントの {{ htmlattrxref("width", "canvas") }} と {{ htmlattrxref("height", "canvas") }} 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
+- {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
 - `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
 - `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
 - `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。
@@ -105,10 +106,10 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 次にあげるインターフェースはもはや必要がないと判断されました。
 
-- `nsICiter` （{{ bug("633066") }} をご覧ください）
-- `nsIDOM3Document` （{{ bug("639849") }} をご覧ください。）
+- `nsICiter` （[Firefox バグ 633066](https://bugzil.la/633066) をご覧ください）
+- `nsIDOM3Document` （[Firefox バグ 639849](https://bugzil.la/639849) をご覧ください。）
 - `nsIFIXptrEvaluator`
-- `nsISelectElement` （{{ bug("619996") }} をご覧ください。）
+- `nsISelectElement` （[Firefox バグ 619996](https://bugzil.la/619996) をご覧ください。）
 
 ### デバッグの補助
 

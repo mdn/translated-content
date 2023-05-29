@@ -2,6 +2,7 @@
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。

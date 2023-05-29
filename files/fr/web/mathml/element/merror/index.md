@@ -7,6 +7,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Element/merror
 ---
+
 L'élément MathML `<merror>` est utilisé afin d'afficher des contenus en tant que messages d'erreur. Sous Firefox, ce message d'erreur est affiché de la même façon qu'un message d'erreur XML. Attention : cette erreur **n'est pas déclenchée** lorsque le contenu MahtML est incorrect ou mal formé. Ces deux cas de figure déclencheront une erreur d'analyse du XML (dans le cas de la notation XHTML de MathML), cette erreur n'ayant aucun lien avec `<merror>`.
 
 ## Attributs
@@ -40,11 +41,8 @@ L'élément MathML `<merror>` est utilisé afin d'afficher des contenus en tant 
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaires           |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML3') }} | Spécification actuelle |
-| {{ SpecName('MathML2', 'chapter3.html#presm.merror', 'merror') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.merror")}}
+{{Compat}}

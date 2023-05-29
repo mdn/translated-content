@@ -2,7 +2,8 @@
 title: '<bdo>: 双方向文字列上書き要素'
 slug: Web/HTML/Element/bdo
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 
@@ -77,7 +78,7 @@ slug: Web/HTML/Element/bdo
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("dir")}}
+- `dir`
 
   - : この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
 

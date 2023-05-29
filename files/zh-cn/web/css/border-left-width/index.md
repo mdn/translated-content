@@ -2,6 +2,7 @@
 title: border-left-width
 slug: Web/CSS/border-left-width
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 的 **`border-left-width`** 属性用来设置盒子的左边框的宽度。
@@ -43,7 +44,7 @@ border-left-width: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -70,7 +71,7 @@ div:nth-child(2) {
 
 ### 结果
 
-{{EmbedLiveSample('Example', '100%')}}
+{{EmbedLiveSample('示例', '100%')}}
 
 ## 规范
 
@@ -80,9 +81,9 @@ div:nth-child(2) {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-left-width")}}
+{{Compat}}
 
-## 其他
+## 参见
 
 - The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
 - The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.

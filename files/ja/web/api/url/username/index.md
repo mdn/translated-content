@@ -2,6 +2,7 @@
 title: URL.username
 slug: Web/API/URL/username
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`username`** プロパティは、ドメイン名の前に指定されたユーザー名を含む {{domxref("USVString")}} です。
@@ -28,9 +29,7 @@ var user = url.username; // 戻り値: 'anonymous'
 
 ## 仕様
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-username', 'username')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

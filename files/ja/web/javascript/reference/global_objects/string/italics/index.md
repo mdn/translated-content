@@ -2,6 +2,7 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`italics()`** メソッドは、文字列がイタリックになるように HTML の {{HTMLElement("i")}} 要素を生成します。
@@ -36,9 +37,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.italics', 'String.prototype.italics')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

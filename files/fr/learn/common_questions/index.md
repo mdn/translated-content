@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions
 original_slug: Apprendre/Common_questions
 ---
+
 {{LearnSidebar}}
 
 Cette section de la zone d'apprentissage est là pour fournir des réponses aux questions fréquentes qui peuvent survenir et qui ne concernent pas nécesserairement l'apprentissage du code (par exemple les articles sur [HTML](/fr/docs/Learn/HTML) ou [CSS](/fr/docs/Learn/CSS).) Ces articles sont conçus pour être lus de manière indépendante.
@@ -34,7 +35,7 @@ Cette section couvre les mécaniques du Web — les questions en relation avec l
 Questions relatives aux outils/logiciels que vous pouvez utiliser pour construire des sites web.
 
 - [Combien ça coûte de créer quelque chose sur le Web?](/fr/docs/Learn/Common_questions/How_much_does_it_cost)
-  - : Quand vous démarrez votre site web, vous pouvez ne rien dépenser ou alors complètement dépasser vos estimations.  Dans cet article nous aborderons le prix de chaque chose et de ce que vous aurez si vous payez (ou ne payez pas).
+  - : Quand vous démarrez votre site web, vous pouvez ne rien dépenser ou alors complètement dépasser vos estimations. Dans cet article nous aborderons le prix de chaque chose et de ce que vous aurez si vous payez (ou ne payez pas).
 - [Quel logiciel est nécessaire pour construire un site web?](/fr/docs/Learn/Common_questions/What_software_do_I_need)
   - : Dans cet article nous expliquerons quel logiciel est nécessaire pour l'édition, l'upload, ou pour la visualisation d'un site web.
 - [Quels sont les éditeurs disponibles?](/fr/docs/Learn/Common_questions/Available_text_editors)

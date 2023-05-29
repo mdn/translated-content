@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/set
 original_slug: Web/JavaScript/Reference/Fonctions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
@@ -99,21 +100,17 @@ console.log(obj.bidule); // "bidule"
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                          |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Définition initiale                   |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Ajout des noms de propriétés calculés |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{jsxref("Fonctions/get","get")}}
 - {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Définir des accesseurs et des mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), dans le Guide JavaScript

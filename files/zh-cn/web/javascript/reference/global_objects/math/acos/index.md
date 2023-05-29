@@ -2,6 +2,7 @@
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -29,7 +30,7 @@ Math.acos(x)
 
 ## 示例
 
-### 例子：使用 `Math.acos`
+### 示例：使用 `Math.acos`
 
 ```js
 Math.acos(-2);  // NaN

@@ -1,17 +1,13 @@
 ---
 title: <table>
 slug: Web/HTML/Element/table
-tags:
-  - Elemento
-  - Referencia
-  - tabelas
-translation_of: Web/HTML/Element/table
 ---
+
 ## Resumo
 
-O elemento HTML _Table\_\_ _(`<table>`) representa dados em duas dimensões ou mais.
+O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
 
-> **Note:** **Nota:** Antes da criação do [CSS](/pt-BR/docs/CSS "CSS"), os elementos HTML eram muitas vezes utilizados para alterar o layout da página. Esta prática tem sido desencorajada desde o HTML 4 e o elemento _Table_ não deve ser utilizado para fins de layout.
+> **Nota:** Antes da criação do [CSS](/pt-BR/docs/CSS), os elementos HTML eram muitas vezes utilizados para alterar o layout da página. Esta prática tem sido desencorajada desde o HTML 4 e o elemento _Table_ não deve ser utilizado para fins de layout.
 
 ## Contexto de uso
 
@@ -20,15 +16,13 @@ O elemento HTML _Table\_\_ _(`<table>`) representa dados em duas dimensões ou m
     <tr>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content categories"
+          href="/pt-BR/docs/HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >
       </td>
@@ -87,7 +81,7 @@ O elemento HTML _Table\_\_ _(`<table>`) representa dados em duas dimensões ou m
         >
         (<a
           class="external"
-          href="http://www.w3.org/TR/REC-html40/struct/tables.html#edef-TABLE"
+          href="https://www.w3.org/TR/REC-html40/struct/tables.html#edef-TABLE"
           >HTML4.01, section 11.2.1</a
         >)
       </td>
@@ -97,7 +91,7 @@ O elemento HTML _Table\_\_ _(`<table>`) representa dados em duas dimensões ou m
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("align")}} {{Deprecated_inline}}
 
@@ -107,15 +101,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "
     - center, significando que a tabela deve ser exibida centralizada no documento;
     - right, significando que a tabela deve ser exibida à direita do documento.
 
-    > **Note:**- **Não use estes atributos**, pois foram depreciados: o elemento {{HTMLElement("table")}} deve ser estilizado utilizando [CSS](/pt-BR/docs/CSS "CSS"). Para dar um efeito similar ao atributo align, a propriedade [CSS](/pt-BR/docs/CSS "CSS") "text-align" e "vertical-align" devem ser usadas.
+    > **Note:**- **Não use estes atributos**, pois foram depreciados: o elemento {{HTMLElement("table")}} deve ser estilizado utilizando [CSS](/pt-BR/docs/CSS). Para dar um efeito similar ao atributo align, a propriedade [CSS](/pt-BR/docs/CSS) "text-align" e "vertical-align" devem ser usadas.
     >
     > - Antes do Firefox 4, Firefox também suportava, somente em quirks mode, `os valores middle`, `absmiddle`, and `abscenter` `como sinônimos de center`_._
 
-<!---->
-
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : Este atributo define a cor de fundo da tabela e seu conteúdo. É um dos códigos hexadecimais de 6 dígitos como definido em [sRGB](http://www.w3.org/Graphics/Color/sRGB), prefixado por um '#'. Um dos textos das dezesseis cores predefinidas podem também ser utilizados:
+  - : Este atributo define a cor de fundo da tabela e seu conteúdo. É um dos códigos hexadecimais de 6 dígitos como definido em [sRGB](https://www.w3.org/Graphics/Color/sRGB), prefixado por um '#'. Um dos textos das dezesseis cores predefinidas podem também ser utilizados:
 
     |     | black = "#000000"   |     | green = "#008000"  |
     | --- | ------------------- | --- | ------------------ |
@@ -127,33 +119,25 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "
     |     | purple = "#800080"  |     | teal = "#008080"   |
     |     | fuchsia = "#FF00FF" |     | aqua = "#00FFFF"   |
 
-    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS "CSS"). To give a similar effect than the bgcolor attribute, the [CSS](/pt-BR/docs/CSS "CSS") property {{cssxref("background-color")}} should be used.
-
-<!---->
+    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect than the bgcolor attribute, the [CSS](/pt-BR/docs/CSS) property {{cssxref("background-color")}} should be used.
 
 - {{htmlattrdef("border")}} {{Deprecated_inline}}
 
   - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to 0, it implies that the {{htmlattrxref("frame", "table")}} attribute is set to void.
 
-    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS "CSS"). To give a similar effect than the border attribute, the [CSS](/pt-BR/docs/CSS "CSS") properties {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} and {{cssxref("border-style")}} should be used.
-
-<!---->
+    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect than the border attribute, the [CSS](/pt-BR/docs/CSS) properties {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} and {{cssxref("border-style")}} should be used.
 
 - {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
 
   - : This attribute defines the space between the content of a cell and the border, displayed or not, of it. If it is a pixel length, this pixel-sized space will be applied on all four sides; if it is a percentage length, the content will be centered and the total vertical space (top and bottom) will represent this percentage. The same is true for the total horizontal space (left and right).
 
-    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS "CSS"). To give a similar effect than the border attribute, use the [CSS](/pt-BR/docs/CSS "CSS") property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("padding")}} on the {{HTMLElement("td")}}.
-
-<!---->
+    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect than the border attribute, use the [CSS](/pt-BR/docs/CSS) property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("padding")}} on the {{HTMLElement("td")}}.
 
 - {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
 
   - : This attribute defines the size, in percentage or in pixels, of the space between two cells (both horizontally and vertically), between the top of the table and the cells of the first row, the left of the table and the first column, the right of the table and the last column and the bottom of the table and the last row.
 
-    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS "CSS"). To give a similar effect than the border attribute, use the [CSS](/pt-BR/docs/CSS "CSS") property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("margin")}} on the {{HTMLElement("td")}} element.
-
-<!---->
+    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect than the border attribute, use the [CSS](/pt-BR/docs/CSS) property {{cssxref("border-collapse")}} with the value collapse on the {{HTMLElement("table")}} element itself, and the property {{cssxref("margin")}} on the {{HTMLElement("td")}} element.
 
 - {{htmlattrdef("frame")}} {{Deprecated_inline}}
 
@@ -166,9 +150,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "
     |     | border |     | box    |
     |     | void   |     |        |
 
-    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS "CSS"). To give a similar effect than the frame attribute, use the [CSS](/pt-BR/docs/CSS "CSS") properties {{cssxref("border-style")}} and {{cssxref("border-width")}}.
-
-<!---->
+    > **Note:** **Usage note:** Do not use this attribute, as it has been deprecated: the {{HTMLElement("table")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect than the frame attribute, use the [CSS](/pt-BR/docs/CSS) properties {{cssxref("border-style")}} and {{cssxref("border-width")}}.
 
 - {{htmlattrdef("rules")}} {{Deprecated_inline()}}
 
@@ -182,9 +164,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "
 
     > **Note:** :- The styling of the rules is browser-dependant and cannot be modified.
     >
-    > - Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/pt-BR/docs/CSS "CSS"). use the [CSS](/pt-BR/docs/CSS "CSS") property {{cssxref("border")}} on the adequate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} or {{HTMLElement("colgroup")}} elements.
-
-<!---->
+    > - Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/pt-BR/docs/CSS). use the [CSS](/pt-BR/docs/CSS) property {{cssxref("border")}} on the adequate {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}} or {{HTMLElement("colgroup")}} elements.
 
 - {{htmlattrdef("summary")}} {{Deprecated_inline}}
 
@@ -198,17 +178,15 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "
     > - Include the {{HTMLElement("table")}} element in a {{HTMLElement("figure")}} element and add the description in prose inside a {{HTMLElement("figcaption")}} element.
     > - Adjust the table so that such description is no more needed, by using {{HTMLElement("th")}} and {{HTMLElement("thead")}} elements for example.
 
-<!---->
-
 - {{htmlattrdef("width")}} {{Deprecated_inline}}
 
   - : This attribute defines the width of the table. It may either be a pixel length or a percentage value, representing the percentage of the width of its container that the table should use.
 
-    > **Note:** **Usage Note:** Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/pt-BR/docs/CSS "CSS"). use the [CSS](/pt-BR/docs/CSS "CSS") property {{cssxref("width")}} instead.
+    > **Note:** **Usage Note:** Do not use this attribute, as it has been deprecated: the rules should be defined and styled using [CSS](/pt-BR/docs/CSS). use the [CSS](/pt-BR/docs/CSS) property {{cssxref("width")}} instead.
 
 ## DOM interface
 
-This element implements the [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement "DOM/HTMLTableElement") interface.
+This element implements the [`HTMLTableElement`](/pt-BR/docs/DOM/HTMLTableElement) interface.
 
 ## Examples
 
@@ -349,4 +327,4 @@ border: 1px solid black;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define alignment of text and cell content.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

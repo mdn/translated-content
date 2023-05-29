@@ -1,18 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - PrecisaDeCompatibilidadeDeNavegador
-  - PrecisadeCompatibilidadeMobile
-  - Propriedade CSS
-  - Reference
-  - Referencia
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 ## Resumo
@@ -54,7 +44,7 @@ width: unset;
   - : Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades.
 - `<percentage>`
   - : Especificado como {{cssxref("&lt;percentage&gt;")}} da largura do bloco contido. Se a largura do bloco contido depender da largura do elemento, o layout resultante é indefinido.
-- `border-box `{{experimental_inline}}
+- `border-box` {{experimental_inline}}
   - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o border box do elemento.
 - `content-box` {{experimental_inline}}
   - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o content box do elemento.
@@ -136,7 +126,7 @@ p.douradinho {
 
 {{EmbedLiveSample('Porcentagem', '500px', '64px')}}
 
-### max-content
+### Exemplo utilizando "max-content"
 
 ```css
 p.maxgreen {
@@ -151,9 +141,9 @@ p.maxgreen {
 <p class="maxgreen">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('max-content', '500px', '64px')}}
+{{EmbedLiveSample('Exemplo utilizando "max-content"', '500px', '64px')}}
 
-### min-content
+### Exemplo utilizando "min-content"
 
 ```css
 p.minblue {
@@ -167,7 +157,7 @@ p.minblue {
 <p class="minblue">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('min-content', '500px', '155px')}}
+{{EmbedLiveSample('Exemplo utilizando "min-content"', '500px', '155px')}}
 
 ## Especificações
 

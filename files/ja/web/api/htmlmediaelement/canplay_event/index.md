@@ -1,7 +1,10 @@
 ---
 title: 'HTMLMediaElement: canplay イベント'
 slug: Web/API/HTMLMediaElement/canplay_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplay` イベントは、ユーザーエージェントがメディアを再生できるようになったものの、追加のバッファリングのために停止することなくメディアの最後まで再生するには充分なデータが読み込まれていないとみられる場合に発生します。
@@ -13,9 +16,9 @@ slug: Web/API/HTMLMediaElement/canplay_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('canplay', event => { });
+addEventListener('canplay', (event) => { });
 
-oncanplay = event => { };
+oncanplay = (event) => { };
 ```
 
 ## イベント型

@@ -1,11 +1,9 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-translation_of: Web/HTML/Element/marquee
 ---
-{{HTMLRef}}
 
-{{obsolete_header}}
+{{HTMLSidebar}}
 
 O elemento html \<marquee> é usado para inserir uma área de rolagem de texto"scrolling" , similar a um letreiro. Você pode controlar o comportamento do conteúdo fornecendo alguns atributos extras.
 
@@ -13,24 +11,12 @@ O elemento html \<marquee> é usado para inserir uma área de rolagem de texto"s
 
 - {{htmlattrdef("behavior")}}
   - : Define como o texto é rolado dentro da área do letreiro. Os valores possíveis são scroll, slide e alternate. Se nenhum valor for especificado, o valor padrão será scroll.
-
-<!---->
-
 - {{htmlattrdef("bgcolor")}}
   - : Define a cor do plano de fundo do letreiro através do nome da cor (ex: red, blue) ou de um valor hexadecimal.
-
-<!---->
-
 - {{htmlattrdef("direction")}}
   - : Define a direção da rolagem do texto dentro do letreiro, os possíveis valores são: left, right, up & down. Se nenhum valor for especificado, o valor padrão será "left".
-
-<!---->
-
 - {{htmlattrdef("height")}}
   - : Define a altura do letreiro em pixeis ou em um valor percentual.
-
-<!---->
-
 - {{htmlattrdef("hspace")}}
   - : Aplica a margem horizontal.
 - {{htmlattrdef("loop")}}
@@ -50,9 +36,6 @@ O elemento html \<marquee> é usado para inserir uma área de rolagem de texto"s
 
 - {{htmlattrdef("onbounce")}}
   - : Dispara quando o letreiro alcança o final da sua posição de rolagem. Ele apenas dispara quando o comportamento está configurado como `alternate.`
-
-<!---->
-
 - {{htmlattrdef("onfinish")}}
   - : Dispara quando o letreiro terminar a quantidade de repetições definida pelo atributo loop. Só pode disparar quando o atributo loop estiver definido para algum número maior que 0, obviamente.
 - {{htmlattrdef("onstart")}}

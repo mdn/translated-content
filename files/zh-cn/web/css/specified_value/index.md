@@ -2,7 +2,8 @@
 title: 指定值
 slug: Web/CSS/specified_value
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 ## 概述
 

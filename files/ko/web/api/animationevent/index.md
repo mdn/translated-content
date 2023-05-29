@@ -1,15 +1,8 @@
 ---
 title: AnimationEvent
 slug: Web/API/AnimationEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Web Animations
-browser-compat: api.AnimationEvent
-translation_of: Web/API/AnimationEvent
 ---
+
 {{APIRef("Web Animations API")}}
 
 **`AnimationEvent`** 인터페이스는 [에니메이션](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)과 관련된 정보를 제공하는 이벤트를 나타냅니다.

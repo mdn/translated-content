@@ -3,6 +3,7 @@ title: 'Document: beforescriptexecute イベント'
 slug: Web/API/Document/beforescriptexecute_event
 original_slug: Web/API/Document/onbeforescriptexecute
 ---
+
 {{APIRef}}{{non-standard_header}}
 
 `beforescriptexecute` イベントは、静的な {{HTMLElement("script")}} が実行されようとするときに発行されます。このイベントは {{domxref("Node.appendChild()", "appendChild()")}} のように動的に要素が追加された場合には発行されません。
@@ -33,7 +34,7 @@ document.addEventListener('beforescriptexecute', starting, true);
 document.onbeforescriptexecute = starting;
 ```
 
-[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[ライブ例を表示](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 仕様書
 

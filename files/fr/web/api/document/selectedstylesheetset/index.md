@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
+
 {{ APIRef("DOM") }}
 
 Indique le nom du jeu de feuilles de styles actuellement utilisé.

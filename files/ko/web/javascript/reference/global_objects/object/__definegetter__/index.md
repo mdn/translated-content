@@ -1,8 +1,8 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
+
 {{JSRef}}
 
 > **경고:** 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.
@@ -59,21 +59,21 @@ Object.defineProperty(o, 'gimmeFive', {
 console.log(o.gimmeFive); // 5
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Operators/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS Guide: Defining Getters and Setters](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
-- {{bug(647423)}}
+- [Firefox bug 647423](https://bugzil.la/647423)

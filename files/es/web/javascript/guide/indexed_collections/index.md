@@ -1,15 +1,9 @@
 ---
 title: Colecciones indexadas
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Array
-  - Arreglo
-  - Guía
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
@@ -368,7 +362,7 @@ console.log(a.indexOf('z')) // logs -1, porque no se encontró 'z'
 {{jsxref("Array.lastIndexOf", "lastIndexOf(searchElement [, fromIndex])")}} funciona como `indexOf`, pero comienza al final y busca hacia atrás.
 
 ```js
-let​a = ['a', 'b', 'c', 'd', 'a', 'b']
+let a = ['a', 'b', 'c', 'd', 'a', 'b']
 console.log(a.lastIndexOf('b')) // registra 5
 
 // Ahora inténtalo de nuevo, comenzando desde antes de la última coincidencia
@@ -379,7 +373,7 @@ console.log(a.lastIndexOf('z'))    // registra -1
 {{jsxref("Array.forEach", "forEach(callback[, thisObject])")}} ejecuta `callback` en cada elemento del arreglo y devuelve `undefined`.
 
 ```js
-let​a = ['a', 'b', 'c']
+let a = ['a', 'b', 'c']
 a.forEach(function(elemento) { console.log(elemento) })
 // registra cada elemento por turno
 ```
@@ -435,7 +429,7 @@ Si `initialValue` _no_ es especificado, entonces `callback` los primeros dos val
 Si `callback` necesita acceso al índice del elemento que se está procesando, al acceder al arreglo completo, están disponibles como parámetros opcionales.
 
 ```js
-let​a = [10, 20, 30]
+let a = [10, 20, 30]
 let total = a.reduce(function(accumulator, currentValue) { return accumulator + currentValue }, 0)
 console.log(total) // Imprime 60
 ```
@@ -523,7 +517,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en **búferes** y **vistas**. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene un formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un **contexto** , es decir, un tipo de datos, un desplazamiento inicial y un número de elementos, que convierte los datos en un arreglo con tipo real.
 
-![Arreglos tipados en un <code>ArrayBuffer</code>](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Arreglos tipados en un <code>ArrayBuffer</code>](typed_arrays.png)
 
 ### `ArrayBuffer`
 
@@ -543,7 +537,7 @@ Las vistas de arreglos tipados tienen nombres autodescriptivos y proporcionan vi
 | {{jsxref("Int32Array")}}         | `-2147483648` a `2147483647`   | 4               | dos enteros complementarios de 32 bits con signo                                                | `long`                     | `int32_t`                        |
 | {{jsxref("Uint32Array")}}         | `0` a `4294967295`             | 4               | Enteros de 32 bits sin signo                                                                    | `long sin signo`           | `uint32_t`                       |
 | {{jsxref("Float32Array")}}     | `1.2`×`10-38` a `3.4`×`1038`   | 4               | Número de coma flotante IEEE de 32 bits (7 dígitos significativos, p. ej., `1.1234567`)         | `float sin restricciones`  | `float`                          |
-| {{jsxref("Float64Array")}}     | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo,`1.123 ... 15`) | `double sin restricciones` | `double`                         |
+| {{jsxref("Float64Array")}}     | `5.0`×`10-324` a `1.8`×`10308` | 8               | Número de coma flotante IEEE de 64 bits (16 dígitos significativos, por ejemplo, `1.123 ... 15`) | `double sin restricciones` | `double`                         |
 | {{jsxref("BigInt64Array")}}     | `-263` a `263-1`               | 8               | Dos enteros complementarios de 64 bits con signo                                                | `bigint`                   | `int64_t (long long con signo)`  |
 | {{jsxref("BigUint64Array")}}     | `0` a `264-1`                  | 8               | Entero de 64 bits sin signo                                                                     | `bigint`                   | `uint64_t (long long sin signo)` |
 

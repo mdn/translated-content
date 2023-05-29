@@ -2,6 +2,7 @@
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
 ---
+
 {{APIRef("DOM")}}
 
 **`toggle()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、渡されたトークンをリストから削除し、 `false` を返します。そのトークンが存在しなかった場合は、追加して `true` を返します。

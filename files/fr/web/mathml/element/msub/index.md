@@ -3,6 +3,7 @@ title: <msub>
 slug: Web/MathML/Element/msub
 translation_of: Web/MathML/Element/msub
 ---
+
 {{MathMLRef}}
 
 L'élément MathML `<msub>` est utilisé pour attaché un indice à une expression. On utilise la syntaxe suivante: `<msub> base indice </msub>`.
@@ -39,18 +40,11 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
 ## Spécifications
 
-| Specification                                                                    | Status                       | Comment                 |
-| -------------------------------------------------------------------------------- | ---------------------------- | ----------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML3') }} | Spécification actuelle  |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML2') }} | Spéficication initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.msub")}}
-
-## Notes spécifiques à Gecko
-
-- À partir de Gecko 26.0 {{geckoRelease("26")}} il ne sera bientôt plus possible d'utiliser `<none/>` comme un élément enfant. The rendering has been made more consistent with equivalent configurations of {{MathMLElement("msup")}} and {{MathMLElement("mmultiscripts")}} and a bug with an incorrect application of the `superscriptshift` attribute has been fixed (see {{bug("827713")}} for details).
+{{Compat}}
 
 ## Voir aussi
 

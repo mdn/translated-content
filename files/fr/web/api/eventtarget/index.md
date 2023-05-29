@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/EventTarget
 browser-compat: api.EventTarget
 ---
+
 {{ApiRef("DOM Events")}}
 
 `EventTarget` est une interface DOM implémentée par des objets qui peuvent recevoir des événements et peuvent avoir des écouteurs pour eux.

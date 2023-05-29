@@ -4,6 +4,7 @@ slug: Web/API/HTMLMediaElement/currentSrc
 browser-compat: api.HTMLMediaElement.currentSrc
 translation_of: Web/API/HTMLMediaElement/currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLMediaElement.currentSrc`** contient l'URL absolue de la ressource multimédia choisie. Cela peut se produire, par exemple, si le serveur web sélectionne un fichier multimédia en fonction de la résolution de l'affichage de l'utilisateur. La valeur est une chaîne vide si la propriété `networkState` est `EMPTY`.

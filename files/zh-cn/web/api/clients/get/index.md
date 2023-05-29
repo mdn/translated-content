@@ -2,6 +2,7 @@
 title: Clients.get()
 slug: Web/API/Clients/get
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("Clients")}} 接口的 **`get()`** 方法 获取给定 `id` 匹配的 Service Worker client，并在 {{jsxref("Promise")}} 中返回它。
@@ -37,4 +38,4 @@ self.clients.get(options).then(function(client) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.get")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 响应首部 **`Access-Control-Allow-Headers`** 用于 {{glossary("preflight request")}}（预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。
@@ -30,13 +31,13 @@ Access-Control-Allow-Headers: *
 
 **`*` (wildcard)**
 
-对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值“ `*`”仅作为特殊的通配符值。 在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ \*”。 请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。
+对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值“ `*`”仅作为特殊的通配符值。在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ \*”。请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。
 
 ## 示例
 
 ### 自定义的请求头
 
-下面是 `Access-Control-Allow-Headers` 标头的一个示例。 它表明，除了 CORS 安全清单列出的请求标头外，对服务器的 CORS 请求还支持名为 X-Custom-Header 的自定义标头。
+下面是 `Access-Control-Allow-Headers` 标头的一个示例。它表明，除了 CORS 安全清单列出的请求标头外，对服务器的 CORS 请求还支持名为 X-Custom-Header 的自定义标头。
 
 ```plain
 Access-Control-Allow-Headers: X-Custom-Header
@@ -93,7 +94,7 @@ If the requested method isn't supported, the server will respond with an error.
 - 在最新规范中提出的通配符 (\*)，尚未被如下浏览器实现：
 
   - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
+  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
   - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
 

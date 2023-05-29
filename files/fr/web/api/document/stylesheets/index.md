@@ -5,6 +5,7 @@ translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 translation_of_original: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
+
 {{APIRef}}
 
 La propriété **`Document.styleSheets`** est en lecture seule et retourne une liste [`StyleSheetList`](/fr/docs/Web/API/StyleSheetList) d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet), qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.

@@ -5,6 +5,7 @@ original_slug: MDN/Contribute/GitHub_best_practices
 l10n:
   sourceCommit: ca4de15aa8391a1e3fed7c651d5ee941051cb3fe
 ---
+
 {{MDNSidebar}}
 
 [Les tickets GitHub (ou <i lang="en">issues</i> en anglais)](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) sont utilisés afin de tracer l'ensemble des tâches à réaliser et qui ont un résultat attendu clair. Si vous avez trouvé un <i lang="en">bug</i> avec le contenu ou la plateforme, regardez si ce problème n'a pas déjà été remonté sur [le dépôt correspondant](/fr/docs/MDN/Community/Contributing/Our_repositories). Si ça n'est pas le cas, n'hésitez pas à rédiger un nouveau ticket en utilisant le modèle disponible sur le début.

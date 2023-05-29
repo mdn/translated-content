@@ -3,6 +3,7 @@ title: 'Test your skills: Multimedia and embedding'
 slug: >-
   Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 ---
+
 {{learnsidebar}}
 
 This aim of this skill test is to assess whether you've understood our [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) and [From object to iframe — other embedding technologies](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies) articles.
@@ -23,7 +24,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed1.html", '100%', 700)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed1-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed1-download.html) to work in your own editor or in an online editor.
 
 ## Multimedia and embedding 2
 
@@ -41,7 +42,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed2.html", '100%', 700)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html) to work in your own editor or in an online editor.
 
 ## Multimedia and embedding 3
 
@@ -54,7 +55,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed3.html", '100%', 700)}}
 
-> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed3-download.html) to work in your own editor or in an online editor.
+> **备注：** [Download the starting point for this task](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed3-download.html) to work in your own editor or in an online editor.
 
 ## Assessment or further help
 

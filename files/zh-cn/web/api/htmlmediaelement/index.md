@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素")}}来支持基础的媒体相关的能力，就像 audio 和 video 一样。{{domxref("HTMLVideoElement", "HTML 视频元素")}}和 {{domxref("HTMLAudioElement", "HTML 音频元素")}}元素都继承自此接口。{{InheritanceDiagram(600, 180)}}
 
 ## 特性
@@ -29,7 +30,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         <p>
-          表示{{ htmlattrxref("autoplay", "video") }}的 HTML
+          表示[`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)的 HTML
           属性，表明在视频加载可用时是否不中断地自动播放资源
         </p>
       </td>
@@ -56,7 +57,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("Boolean")}}</td>
       <td>
         映射在 HTML
-        标签。{{ htmlattrxref("controls", "video") }}属性控制是否显示用户播放界面的控制
+        标签。[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性控制是否显示用户播放界面的控制
         HTML
       </td>
     </tr>
@@ -69,7 +70,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
           href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
-        <a href="/en-US/docs/HTML/CORS_settings_attributes"
+        <a href="/zh-CN/docs/HTML/CORS_settings_attributes"
           >CORS settings attributes</a
         >
         查看更多详情
@@ -94,7 +95,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>defaultMuted</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        映射在 HTML 标签上。 {{ htmlattrxref("muted", "video") }}
+        映射在 HTML 标签上。 [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
         属性表示媒体声音被播放时是否应该被静音。这个属性不能动态设置静音/不静音，如果希望设置静音/不静音，请使用
         <code>muted</code> 属性
       </td>
@@ -143,7 +144,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>loop</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        会映射在 HTML 标签 {{ htmlattrxref("loop", "video") }} 属性
+        会映射在 HTML 标签 [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop) 属性
         , 决定该媒体是否循环播放。
       </td>
     </tr>
@@ -151,7 +152,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>mediaGroup</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        反映在 HTML {{ htmlattrxref("mediagroup", "video")}}
+        反映在 HTML [`mediagroup`](/zh-CN/docs/Web/HTML/Element/video#mediagroup)
         标签上。
         表示元素所归属的分组，同一组的媒体元素会共享同一个控制器（<code>controller</code>）。
       </td>
@@ -177,7 +178,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
         {{htmlelement("audio")}} or {{htmlelement("video")}}
         element will play in, on a Firefox OS device. See
         <a
-          href="/en-US/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
+          href="/zh-CN/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
           >Using the AudioChannels API</a
         >
         for more details.
@@ -229,7 +230,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("MediaStream")}}</td>
       <td>
         Lets you set or get the
-        <a href="/en-US/docs/WebRTC/MediaStream_API">Media Stream</a> to be
+        <a href="/zh-CN/docs/WebRTC/MediaStream_API">Media Stream</a> to be
         played or being played.
       </td>
     </tr>
@@ -314,10 +315,10 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>preload</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("preload", "video") }} HTML
+        Reflects the [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload) HTML
         attribute, indicating what data should be preloaded, if any. Possible
         values are: <code>none</code>, <code>metadata</code>, <code>auto</code>.
-        See {{ htmlattrxref("preload", "video") }} attribute
+        See [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload) attribute
         documentation for details.
       </td>
     </tr>
@@ -412,7 +413,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td><code>src</code></td>
       <td>{{ domxref("DOMString") }}</td>
       <td>
-        Reflects the {{ htmlattrxref("src", "video") }} HTML
+        Reflects the [`src`](/zh-CN/docs/Web/HTML/Element/video#src) HTML
         attribute, containing the URL of a media resource to use. Gecko
         implements a similar functionality for streams:
         <code>mozSrcObject</code>.
@@ -490,9 +491,9 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
           <p>
             <strong>Note:</strong> Previously
             <code>canPlayType('video/webm')</code> returned
-            <code>'probably'</code>. Starting with Gecko 28
-            {{geckoRelease(28)}}, it returns <code>'maybe'</code>.
-            ({{ bug(884275) }})
+            <code>'probably'</code>. Starting with Gecko 28,
+            it returns <code>'maybe'</code>.
+            (<a href="https://bugzil.la/884275">Firefox bug 884275</a>)
           </p>
         </div>
       </td>
@@ -585,7 +586,7 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

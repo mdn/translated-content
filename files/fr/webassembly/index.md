@@ -7,6 +7,7 @@ tags:
   - wasm
 translation_of: WebAssembly
 ---
+
 {{WebAssemblySidebar}}{{SeeCompatTable}}
 
 WebAssembly est un nouveau type de code qui peut être exécuté dans un navigateur web moderne. C'est un langage bas niveau, semblable à l'assembleur permettant d'atteindre des performances proches des applications natives (par exemple écrites en C/C++) tout en fonctionnant sur le Web. WebAssembly est conçu pour fonctionner en lien avec JavaScript.
@@ -49,9 +50,9 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 - {{jsxref("Objets_globaux/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
   - : La fonction `WebAssembly.instantiate()` représente l'API principale pour compiler et instancier le code WebAssembly. Cette méthode renvoie un `Module` ainsi que sa première `Instance`.
 - {{jsxref("Objets_globaux/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Un objet ` WebAssembly.``Memory ` est un tableau {{jsxref("Objets_globaux/ArrayBuffer", "ArrayBuffer")}} redimensionnable qui contient les octets de mémoire brute auxquels on peut accéder via une `Instance`.
+  - : Un objet `WebAssembly.Memory` est un tableau {{jsxref("Objets_globaux/ArrayBuffer", "ArrayBuffer")}} redimensionnable qui contient les octets de mémoire brute auxquels on peut accéder via une `Instance`.
 - {{jsxref("Objets_globaux/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : Un objet ` WebAssembly.``Table ` est un tableau typé contenant des valeurs opaques et qui peut être redimensionné. On peut accéder aux valeurs via un objet `Instance`.
+  - : Un objet `WebAssembly.Table` est un tableau typé contenant des valeurs opaques et qui peut être redimensionné. On peut accéder aux valeurs via un objet `Instance`.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : Crée un nouvel objet WebAssembly `CompileError`.
 - {{jsxref("WebAssembly.LinkError()")}}
@@ -66,13 +67,11 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires                                            |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour l'API JavaScript. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Voir aussi
 

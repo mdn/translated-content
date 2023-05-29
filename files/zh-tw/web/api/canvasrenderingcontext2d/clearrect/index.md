@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
 ---
+
 {{APIRef}}
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法可以設定指定矩形（經由坐標 _(x, y)_ 及大小 _(width, height)_）範圍內的所有像素為透明，清除所有先前繪製的內容。
@@ -103,7 +104,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ EmbedLiveSample('Using the clearRect method', 700, 400) }}
 
 ## 規範
 
@@ -111,7 +112,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 瀏覽器相容性
 
-{{Compat("api.CanvasRenderingContext2D.clearRect")}}
+{{Compat}}
 
 ## 參見
 

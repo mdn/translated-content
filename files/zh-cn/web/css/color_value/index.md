@@ -2,6 +2,7 @@
 title: <color>
 slug: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) `<color>` 表示一种[标准 RGB 色彩空间（sRGB color space）](http://en.wikipedia.org/wiki/SRGB)的颜色。一个颜色可以包括一个[alpha 通道](https://en.wikipedia.org/wiki/Alpha_compositing)透明度值，来表明颜色如何与它的背景色[混合（composite）](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending)。
@@ -26,7 +27,7 @@ slug: Web/CSS/color_value
 
 在使用关键字时有几个需要留意的注意事项：
 
-- 除了通常的 16 个 HTML 基本颜色，其它的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。
+- 除了通常的 16 个 HTML 基本颜色，其他的不能被用于 HTML。HTML 将通过一个特定的计算程序转换这些未知的值，这将导致成为完全不同的颜色。这些关键字应只被用于 SVG 和 CSS。
 - 未知的关键字会让 CSS 属性无效。无效的属性将被忽略，该颜色将没有作用。这是一个和 HTML 相比不同的行为。
 - 未使用关键字定义的颜色在 CSS 中有任意的透明度，它们是单实色。
 - 一些关键字表示同样的颜色：
@@ -43,9 +44,9 @@ slug: Web/CSS/color_value
 
 > **备注：** 可接受的关键字列表在 CSS 的演变过程中发生了改变：
 >
-> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_ （视频图形阵列色彩）。
+> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_（视频图形阵列色彩）。
 > - CSS 标准 2 增加了 `orange` 关键字。
-> - 从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_ 。
+> - 从一开始，浏览器接受其他的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_。
 > - CSS 颜色标准 4 添加可`rebeccapurple`关键字来[纪念 web 先锋 Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man)。
 
 ### `transparent` 关键字
@@ -78,11 +79,11 @@ slug: Web/CSS/color_value
 
 ##### 结果
 
-{{EmbedLiveSample('currentcolor_example')}}
+{{EmbedLiveSample('currentcolor 示例')}}
 
 ### RGB 颜色
 
-颜色可以使用红 - 绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：
+颜色可以使用红 - 绿 - 蓝（red-green-blue (RGB)）模式的两种方式被定义：
 
 #### 语法
 
@@ -353,7 +354,7 @@ inputElem.addEventListener('change', () => {
 
 #### 结果
 
-{{EmbedLiveSample('Color_value_tester','100%', 300)}}
+{{EmbedLiveSample('颜色值检测器','100%', 300)}}
 
 ### RGB 的多种语法
 
@@ -620,7 +621,7 @@ hsla(240 100% 50% / .05)      /*   5% opaque blue */
 hsla(240 100% 50% / 5%)       /*   5% opaque blue */
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 

@@ -3,6 +3,7 @@ title: '::-webkit-meter-optimum-value'
 slug: Web/CSS/::-webkit-meter-optimum-value
 translation_of: Web/CSS/::-webkit-meter-optimum-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-meter-optimum-value`** permet de mettre en forme l'élément {{HTMLElement("meter")}} lorsque la valeur de son attribut tombe dans l'intervalle haut. La couleur appliquée par défaut est le vert.
@@ -39,7 +40,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-optimum-value")}}
+{{Compat}}
 
 ## Voir aussi
 

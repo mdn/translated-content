@@ -2,6 +2,7 @@
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOutputElement`** インターフェイスは、 ({{domxref("HTMLElement")}} から継承したものより詳細に) {{HTMLElement("output")}} 要素のレイアウトと表示を操作するためのプロパティやメソッドを提供します。
@@ -15,13 +16,13 @@ _このインターフェイスは、親である {{domxref("HTMLElement")}} か
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : {{domxref("DOMString")}} で、要素の既定値を表し、初期値は空文字列です。
 - {{domxref("HTMLOutputElement.form")}}{{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の {{htmlattrxref("form", "output")}} 属性を反映します。
+  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Element/output#form) 属性を反映します。
 - {{domxref("HTMLOutputElement.htmlFor")}}{{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、 HTML の {{htmlattrxref("for", "output")}} 要素を反映し、計算値の `value` に貢献 (または他の形で影響) する同じ文書内の他の要素の ID のリストが入ります。
+  - : {{domxref("DOMTokenList")}} で、 HTML の [`for`](/ja/docs/Web/HTML/Element/output#for) 要素を反映し、計算値の `value` に貢献 (または他の形で影響) する同じ文書内の他の要素の ID のリストが入ります。
 - {{domxref("HTMLOutputElement.labels")}}{{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素です。
 - {{domxref("HTMLOutputElement.name")}}
-  - : {{domxref("DOMString")}} で、 HTML の {{htmlattrxref("name", "output")}} 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
+  - : {{domxref("DOMString")}} で、 HTML の [`name`](/ja/docs/Web/HTML/Element/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
 - {{domxref("HTMLOutputElement.type")}}{{ReadOnlyInline}}
   - : {{domxref("DOMString")}} で "`output`" です。
 - {{domxref("HTMLOutputElement.validationMessage")}}{{ReadOnlyInline}}
@@ -63,11 +64,7 @@ _このインターフェイスは、親である {{domxref("HTMLElement")}} か
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#htmloutputelement", "HTMLOutputElement")}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', "forms.html#the-output-element", "HTMLOutputElement")}} | {{Spec2('HTML5.1')}}     | 変更なし |
-| {{SpecName('HTML5 W3C', "forms.html#the-output-element", "HTMLOutputElement")}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

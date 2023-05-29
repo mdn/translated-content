@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Shorthand_properties
 original_slug: Web/CSS/Propriétés_raccourcies
 ---
+
 {{CSSRef}}
 
 _Les propriétés raccourcies sont des propriétés CSS qui permettent de définir la valeur de plusieurs propriétés via une seule déclaration. En manipulant des propriétés raccourcies, un développeur web peut créer des feuilles de style plus concises et plus lisibles, améliorant ainsi la maintenabilité_.

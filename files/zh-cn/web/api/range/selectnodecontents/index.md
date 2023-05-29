@@ -2,6 +2,7 @@
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
 ---
+
 {{ApiRef("DOM")}}
 
 **`Range.selectNodeContents()`** 方法用于设置 {{ domxref("Range") }}，使其包含一个 {{ domxref("Node") }} 的内容。
@@ -65,7 +66,7 @@ deselectButton.addEventListener('click', e => {
 
 #### 结果
 
-{{EmbedLiveSample("Live_sample")}}
+{{EmbedLiveSample("实时样例")}}
 
 ## 规范
 
@@ -73,7 +74,7 @@ deselectButton.addEventListener('click', e => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.selectNodeContents")}}
+{{Compat}}
 
 ## 参见
 

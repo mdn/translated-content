@@ -2,6 +2,7 @@
 title: XRReferenceSpaceEvent.transform
 slug: Web/API/XRReferenceSpaceEvent/transform
 ---
+
 {{APIRef("WebXR Device API")}}{{SecureContext_header}}
 
 {{domxref("XRReferenceSpaceEvent")}} の **`transform`** 読み取り専用プロパティは、イベントが表す変更が適用された後の、影響を受ける {{domxref("XRReferenceSpaceEvent.referenceSpace", "referenceSpace")}} のネイティブの原点の位置と向きを示します。 `transform` は古い座標系を使用して定義します。 これにより、座標をイベント前の座標系からイベント後の座標系に変換するために使用できます。
@@ -36,9 +37,7 @@ xrReferenceSpace.addEventListener("reset", event => {
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespaceevent-transform','XRReferenceSpaceEvent.transform')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

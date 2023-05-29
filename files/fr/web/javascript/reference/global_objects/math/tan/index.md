@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tan
 ---
+
 {{JSRef}}
 
 La fonction **`Math.tan()`** renvoie la tangente d'un nombre exprimant un angle en radians.
@@ -55,16 +56,11 @@ function getTanDeg(deg) {
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.18', 'Math.tan')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.tan', 'Math.tan')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.tan")}}
+{{Compat}}
 
 ## Voir aussi
 

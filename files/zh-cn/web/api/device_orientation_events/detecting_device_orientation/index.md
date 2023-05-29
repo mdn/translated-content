@@ -3,6 +3,7 @@ title: 检测设备方向
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
 original_slug: Web/Events/Detecting_device_orientation
 ---
+
 {{SeeCompatTable}}
 
 有越来越多的基于 web 的设备能够确定它们的方向; 也就是说，它们可以报告数据以指示基于重力方向的方向改变。特别地，手持设备如手机可以利用这些信息以自动旋转屏幕，保持内容直立，当设备旋转至横屏时（宽度大于高度），提供网页内容的横屏视图。
@@ -13,7 +14,7 @@ original_slug: Web/Events/Detecting_device_orientation
 
 ## 处理方向（orientation）事件
 
-要接收设备方向变化信息，只需要监听{{ event("deviceorientation") }}事件：
+要接收设备方向变化信息，只需要监听[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
 
 > **备注：** [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
@@ -51,12 +52,12 @@ function handleOrientation(orientData) {
 关于每一个轴的记录值表示的是相对于标准的坐标系，设备在某一个给定轴上的旋转量。[Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained) 这篇文章有更详细的描述，下面是对这篇文章的总结。
 
 - {{ domxref("DeviceOrientationEvent.alpha") }} 表示设备沿 z 轴上的旋转角度，范围为 0\~360。
-- {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为-180\~180。它描述的是设备由前向后旋转的情况。
-- {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为-90\~90。它描述的是设备由左向右旋转的情况。
+- {{ domxref("DeviceOrientationEvent.beta") }} 表示设备在 x 轴上的旋转角度，范围为 -180\~180。它描述的是设备由前向后旋转的情况。
+- {{ domxref("DeviceOrientationEvent.gamma") }} 表示设备在 y 轴上的旋转角度，范围为 -90\~90。它描述的是设备由左向右旋转的情况。
 
-### 例子
+### 示例
 
-这个例子会成功运行在支持检测自己方向的设备中的支持{{event("deviceorientation")}} 事件的浏览器中。
+这个例子会成功运行在支持检测自己方向的设备中的支持[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件的浏览器中。
 
 让我们想象一下有一个球在花园中：
 
@@ -128,15 +129,15 @@ window.addEventListener('deviceorientation', handleOrientation);
 
 输出结果：
 
-在{{LiveSampleLink("Orientation_example", "这里")}}以新窗口打开此示例；因为有些浏览器中的 {{event("deviceorientation")}} 事件不支持跨域。
+在{{LiveSampleLink("示例", "这里")}}以新窗口打开此示例；因为有些浏览器中的 [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event) 事件不支持跨域。
 
-{{EmbedLiveSample('Orientation_example', '230', '260')}}
+{{EmbedLiveSample('示例', '230', '260')}}
 
 > **警告：** Chrome 和 Firefox 处理角度的机制不同，所以某些轴上的方向是相反的。
 
 ## 处理移动（motion）事件
 
-移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：{{ event("devicemotion") }}
+移动事件的处理跟方向事件是一样的，除了他们有自己的事件名：[`devicemotion`](/zh-CN/docs/Web/API/Window/devicemotion_event)
 
 ```js
 window.addEventListener("devicemotion", handleMotion, true);

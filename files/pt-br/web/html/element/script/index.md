@@ -1,26 +1,26 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-translation_of: Web/HTML/Element/script
 ---
+
 O **elemento HTML `<script>`** é usado para incluir ou referenciar um script executável.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Conteúdo de metadados</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo fraseado</a
         >.
       </td>
@@ -37,10 +37,10 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >conteúdo de metadados</a
         >, ou qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -60,7 +60,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("async")}} {{HTMLVersionInline(5)}}
+- {{htmlattrdef("async")}}
 
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
 
@@ -85,22 +85,22 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - {{htmlattrdef("integrity")}}
   - : Contains inline metadata that a user agent can use to verify that a fetched resource has been delivered free of unexpected manipulation. See [Subresource Integrity](/pt-BR/docs/Web/Security/Subresource_Integrity).
 - {{htmlattrdef("nomodule")}} {{experimental_inline}}
-  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support[ ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
+  - : This Boolean attribute is set to indicate that the script should not be executed in browsers that support [ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) — in effect, this can be used to serve fallback scripts to older browsers that do not support modular JavaScript code.
 - {{htmlattrdef("src")}}
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document. If a `script` element has a `src` attribute specified, it should not have a script embedded inside its tags.
 - {{htmlattrdef("text")}}
-  - : Like the `textContent `attribute, this attribute sets the text content of the element. Unlike the `textContent `attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
+  - : Like the `textContent`attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - {{htmlattrdef("type")}}
 
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
     - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
-    - **`module`:** {{HTMLVersionInline(5)}} For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
+    - **`module`:** For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
     - **Any other value or MIME type:** Embedded content is treated as a data block which won't be processed by the browser. The `src` attribute will be ignored.
 
     Note that in Firefox you can use advanced features such as let statements and other features in later JS versions, by using `type=application/javascript;version=1.8` {{Non-standard_inline}}. Beware, however, that as this is a non-standard feature, this will most likely break support for other browsers, in particular Chromium-based browsers.
 
-    For how to include _exotic programming languages_, read about [Rosetta](https://developer.mozilla.org/en-US/Add-ons/Code_snippets/Rosetta).
+    For how to include _exotic programming languages_, read about [Rosetta](/pt-BR/Add-ons/Code_snippets/Rosetta).
 
 ### Atributos obsoletos
 
@@ -143,4 +143,4 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

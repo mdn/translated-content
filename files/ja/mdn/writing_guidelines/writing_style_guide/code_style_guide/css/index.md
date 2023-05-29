@@ -3,6 +3,7 @@ title: CSS のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
+
 {{MDNSidebar}}
 
 次のガイドラインでは、MDN コードの例として CSS を記述する方法について説明します。

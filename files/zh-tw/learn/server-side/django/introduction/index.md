@@ -2,6 +2,7 @@
 title: Django 介紹
 slug: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 在這第一篇 Django 文章中，我們將回答“什麼是 Django”這個問題，並概述這個網絡框架有什麼特性。我們將描述主要功能，包括一些高級功能，但我們並不會在本單元中詳細介紹。我們還會展示一些 Django 應用程序的主要構建模塊（儘管此時你還沒有要測試的開發環境）。
@@ -122,7 +123,7 @@ urlpatterns = [
 ]
 ```
 
-`urlpatterns`對像是`path()`和/或`re_path()`函數的列表（Python 列表使用方括號定義，其中項目用逗號分隔，可以有一個[可選的尾隨逗號](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples)。例如：\[`item1, item2, item3,` ]）。
+`urlpatterns` 對像是 `path()` 和/或 `re_path()` 函數的列表（Python 列表使用方括號定義，其中項目用逗號分隔，可以有一個[可選的尾隨逗號](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples)。例如：`[item1, item2, item3,]`）。
 
 兩種方法的第一個參數，是將要匹配的路由（模式）。`path()`方法使用尖括號，來定義將被捕獲、並作為命名參數傳遞給視圖函數的 URL 的部分。`re_path()`函數使用靈活的模式匹配方法，稱為正則表達式。我們將在後面的文章中討論這些內容！
 
@@ -187,7 +188,7 @@ class Team(models.Model):
 
 Django 模型提供了一個，用於搜索數據庫的簡單查詢 API。這可以使用不同的標準（例如，精確，不區分大小寫，大於等等）來匹配多個字段，並且可以支持複雜語句（例如，您可以在擁有一個團隊的**U11**團隊上指定搜索名稱以“Fr ”開頭或以“al”結尾）。
 
-代碼片段顯示了一個視圖函數（資源處理程序），用於顯示我們所有的**U09**團隊。**粗體**顯示如何使用模型查詢 API，過濾所有記錄，其中該 **team_level**字段，具有正確的文本“ **U09** ”（請注意，該條件如何 filter()作為參數傳遞給該函數，該字段名稱和匹配類型由雙下劃線： **team_level\_\_exact**）
+代碼片段顯示了一個視圖函數（資源處理程序），用於顯示我們所有的**U09**團隊。**粗體**顯示如何使用模型查詢 API，過濾所有記錄，其中該 **team_level**字段，具有正確的文本“ **U09** ”（請注意，該條件如何 filter()作為參數傳遞給該函數，該字段名稱和匹配類型由雙下劃線： **`team_level__exact`**）。
 
 ```python
 ## filename: views.py
@@ -247,21 +248,3 @@ def index(request):
 您已經看到上面的一些真正的 Django 代碼，但與客戶端代碼不同，您需要設置一個開發環境來運行它。這是我們的下一步。
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## 本教學連結
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

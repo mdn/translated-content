@@ -2,6 +2,7 @@
 title: Console API
 slug: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 Console API（コンソール API）には、開発者がデバッグ作業（メッセージ、コード内の設定点での変数の値、操作の完了にかかった時間などの記録）を実行できるようにする機能が用意されています。
@@ -35,13 +36,11 @@ console.log(myString)
 
 ## 仕様
 
-| 仕様                                 | 状態                             | コメント |
-| ------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## 関連情報
 

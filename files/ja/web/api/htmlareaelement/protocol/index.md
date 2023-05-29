@@ -3,6 +3,7 @@ title: HTMLAreaElement.protocol
 slug: Web/API/HTMLAreaElement/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.protocol`** プロパティは、 URL のプロトコルスキームを表す文字列で、最後の `':'` を含みます。

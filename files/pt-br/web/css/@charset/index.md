@@ -1,23 +1,23 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-translation_of: Web/CSS/@charset
 ---
+
 {{cssxref("&lt;string&gt;")}}{{ CSSRef() }}
 
 ## Resumo
 
 A regra `@charset` especifica a codificação de caracteres utilizada na folha de estilo. Deve ser o primeiro elemento na folha de estilo e não ser precedida de qualquer caráter; uma vez que não é uma declaração aninhada, ele não pode ser usado dentro de um grupo condicional de regras. Se vários `@charset` são definidos, apenas o primeiro é usado, e não pode ser usado dentro de um atributo de estilo em um elemento HTML ou dentro do elemento {{ HTMLElement("style") }}, onde o conjunto de caracteres da página HTML é relevante.
 
-Esta regra at ([at-rule](/pt-BR/CSS/At-rule "At-rule")) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.
+Esta regra at ([at-rule](/pt-BR/CSS/At-rule)) é útil quando se usa caracteres não ASCII em algumas propriedades CSS, como conteúdo.
 
 Como existem várias maneiras de definir a codificação de caracteres em uma folha de estilo, o navegador vai tentar os seguintes métodos na seguinte ordem (e parar assim que um produzir um resultado):
 
-1.  O valor do carácter de ordem de [byte Unicode](http://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte) colocado no início do arquivo.
-2.  O valor dado pelo atributo `charset` do `Content-Type:` cabeçalho HTTP ou o equivalente no protocolo usado para servir a folha de estilo.
-3.  O `@charset` CSS.
-4.  Use a codificação de caracteres definidos pelo documento referente: o atributo charset do elemento {{ HTMLElement("link") }}. Este método é obsoleto em HTML5 e não deve ser utilizado.
-5.  Assume que o documento é UTF-8.
+1. O valor do carácter de ordem de [byte Unicode](http://pt.wikipedia.org/wiki/Marca_de_ordem_de_byte) colocado no início do arquivo.
+2. O valor dado pelo atributo `charset` do `Content-Type:` cabeçalho HTTP ou o equivalente no protocolo usado para servir a folha de estilo.
+3. O `@charset` CSS.
+4. Use a codificação de caracteres definidos pelo documento referente: o atributo charset do elemento {{ HTMLElement("link") }}. Este método é obsoleto em HTML5 e não deve ser utilizado.
+5. Assume que o documento é UTF-8.
 
 ## Sintaxe
 

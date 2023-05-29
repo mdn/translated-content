@@ -2,6 +2,7 @@
 title: background-position-y
 slug: Web/CSS/background-position-y
 ---
+
 {{CSSRef}}
 
 **`background-position-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における垂直の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
@@ -82,7 +83,7 @@ div {
   width: 300px;
   height: 300px;
   background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom 10px;

@@ -7,11 +7,12 @@ tags:
   - css шрифты
 translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 ## Описание
 
-[CSS](/ru/docs/CSS "CSS") Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера` em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
+[CSS](/ru/docs/CSS) Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера `em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/font-size.html")}}
 
@@ -46,7 +47,7 @@ font-size: unset;
 
 Свойство `font-size` устанавливается одним из следующих способов:
 
-- Ключевым словом из перечня [абсолютных значений](/ru/docs/Web/CSS/font-size$edit#absolute-size) или [относительных значений](/ru/docs/Web/CSS/font-size$edit#relative-size)
+- Ключевым словом из перечня абсолютных значений или относительных значений
 - Как `<значение длины>` или `<процентное значение>`, по отношению к размеру родительского элемента.
 
 ### Значения
@@ -88,7 +89,9 @@ Another way of setting the font size is with `em` values. The size of an `em` va
 
 In order to calculate the em equivalent for any pixel value required, you can use this formula:
 
-    em = desired element pixel value / parent element font-size in pixels
+```
+em = desired element pixel value / parent element font-size in pixels
+```
 
 For example, suppose the font-size of the body of the page is set to 1em, with the browser standard of 1em = 16px; if the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).
 
@@ -164,16 +167,16 @@ span { font-size: 16px; }
 
 ```css
 .small {
-	font-size: xx-small;
+  font-size: xx-small;
 }
 .larger {
-	font-size: larger;
+  font-size: larger;
 }
 .point {
-	font-size: 24pt;
+  font-size: 24pt;
 }
 .percent {
-	font-size: 200%;
+  font-size: 200%;
 }
 ```
 

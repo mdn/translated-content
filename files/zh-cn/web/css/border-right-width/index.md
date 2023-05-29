@@ -2,6 +2,7 @@
 title: border-right-width
 slug: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 的**`border-right-width`** 用来设置盒子右边框的宽度。
@@ -43,7 +44,7 @@ border-right-width: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -70,7 +71,7 @@ div:nth-child(2) {
 
 ### 结果
 
-{{EmbedLiveSample('Example', '100%')}}
+{{EmbedLiveSample('示例', '100%')}}
 
 ## 规范
 
@@ -82,7 +83,7 @@ div:nth-child(2) {
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
 - The other border-right-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-right")}}, {{Cssxref("border-right-style")}}, and {{Cssxref("border-right-color")}}.

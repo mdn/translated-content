@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
+
 {{AddonSidebar()}}
 
 Ce type contient les données nécessaires pour :
@@ -70,9 +71,9 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.NotificationOptions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

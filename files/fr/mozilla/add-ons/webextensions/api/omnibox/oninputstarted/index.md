@@ -12,6 +12,7 @@ tags:
   - onInputStarted
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur commence à interagir avec votre extension en entrant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
@@ -42,9 +43,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.onInputStarted")}}
+{{Compat}}
 
 ## Exemples
 

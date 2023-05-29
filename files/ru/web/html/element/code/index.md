@@ -1,5 +1,5 @@
 ---
-title: '<code>: The Inline Code element'
+title: '<code>: элемент отображения кода'
 slug: Web/HTML/Element/code
 tags:
   - HTML
@@ -7,7 +7,8 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/code
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **Элемент HTML `<code>`** отображает его содержимое в стиле, предназначенном для указания на то, что текст является коротким фрагментом компьютерного кода. По умолчанию текст содержимого отображается с использованием шрифта монопространства по умолчанию {{Glossary("user agent", "пользовательского агента")}}.
 
@@ -24,7 +25,7 @@ translation_of: Web/HTML/Element/code
 
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes "HTML/Global attributes").
+Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes).
 
 ## Пример
 

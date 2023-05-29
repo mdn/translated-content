@@ -2,9 +2,10 @@
 title: '<abbr>: 略語要素'
 slug: Web/HTML/Element/abbr
 ---
-{{HTMLRef}}
 
-**HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で {{htmlattrxref("title")}} 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。
+{{HTMLSidebar}}
+
+**HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
@@ -64,7 +65,7 @@ slug: Web/HTML/Element/abbr
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみに対応しています。 {{htmlattrxref("title")}} 属性は `<abbr>` 要素と共に使用すると、特定の意味論的な意味を持ちます。これは完全な人間が読める形の説明または略語の完全形を含む*必要があります*。この文字列は、マウスポインターが要素の上で静止したとき、ブラウザーがツールチップとして表示することが良くあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみに対応しています。 [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性は `<abbr>` 要素と共に使用すると、特定の意味論的な意味を持ちます。これは完全な人間が読める形の説明または略語の完全形を含む*必要があります*。この文字列は、マウスポインターが要素の上で静止したとき、ブラウザーがツールチップとして表示することが良くあります。
 
 それぞれの `<abbr>`要素は他の独立しています。同じ文書内で他の省略形ではない表現の文字列に自動的に結びつかない場合は、 `title` を使用してください。
 
@@ -74,14 +75,14 @@ slug: Web/HTML/Element/abbr
 
 必ずしもすべての略語を `<abbr>` でマークアップする必要はありません。しかし、有用な場合がいくつかあります。
 
-- 略語が使用され、文書コンテンツの流れの外で完全形や定義を提供したい場合は、 `<abbr>` を適切な {{htmlattrxref("title")}} と共に使用してください。
+- 略語が使用され、文書コンテンツの流れの外で完全形や定義を提供したい場合は、 `<abbr>` を適切な [`title`](/ja/docs/Web/HTML/Global_attributes#title) と共に使用してください。
 - 読み手にとってなじみのない略語を定義する場合、用語を `<abbr>` を使用して表現し、 `title` 属性や行内文字列で定義を提供してください。
 - テキスト内に略語が存在し、意味の注釈が必要な場合、 `<abbr>` 要素は有用です。一方、これは整形やスクリプトの目的で使用することができます。
 - `<abbr>` は {{HTMLElement("dfn")}} との組み合わせで、略語や頭字語の用語の定義を行なうことができます。以下の[略語の定義](#defining_an_abbreviation)の例をご覧ください。
 
 ### 文法的な考慮事項
 
-{{interwiki("wikipedia", "数 (文法)", "文法的に数を表現する")}}言語（つまり、項目の数が文の文法に影響する言語）では、 `<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
+[文法的に数を表現する](https://ja.wikipedia.org/wiki/数_(文法))言語（つまり、項目の数が文の文法に影響する言語）では、 `<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
 
 ## 既定のスタイル
 
@@ -131,7 +132,7 @@ abbr {
 
 ### 完全形の提供
 
-{{htmlattrxref("title")}} 属性を追加することで、略語や頭字語の完全形や定義を提供することができます。
+[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を追加することで、略語や頭字語の完全形や定義を提供することができます。
 
 #### HTML
 
@@ -179,11 +180,7 @@ accessed.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-abbr-element', '&lt;abbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-abbr-element', '&lt;abbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

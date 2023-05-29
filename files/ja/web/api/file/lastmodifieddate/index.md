@@ -2,6 +2,7 @@
 title: File.lastModifiedDate
 slug: Web/API/File/lastModifiedDate
 ---
+
 {{APIRef("File API") }} {{deprecated_header}}
 
 **`File.lastModifiedDate`** 読み取り専用プロパティは、ファイルの最終更新日を返します。最終更新日がわからないファイルは、現在の日付を返します。

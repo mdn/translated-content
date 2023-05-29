@@ -2,7 +2,8 @@
 title: 伪元素
 slug: Web/CSS/Pseudo-elements
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 伪元素是一个附加至选择器末的关键词，允许你对被选择元素的特定部分修改样式。下例中的 {{CSSxRef("::first-line")}} 伪元素可改变段落首行文字的样式。
 
@@ -14,34 +15,66 @@ p::first-line {
 }
 ```
 
-> **备注：** 与伪元素比较，{{cssxref("pseudo-classes")}} 能够根据状态改变元素样式。
+> **备注：** 与伪元素比较，{{cssxref("pseudo-classes")}} 能够根据*状态*改变元素样式。
 
 ## 语法
 
-```
+```css
 selector::pseudo-element {
   property: value;
 }
 ```
 
-> **备注：** 一个选择器中只能使用一个伪元素。伪元素必须紧跟在语句中的简单选择器/基础选择器之后。
->
-> **注意：**按照规范，应该使用双冒号（`::`）而不是单个冒号（`:`），以便区分伪类和伪元素。但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。
+一个选择器中只能使用一个伪元素。伪元素必须紧跟在语句中的简单选择器/基础选择器之后。
 
-## 标准伪元素索引
+> **备注：** 按照规范，应该使用双冒号（`::`）而不是单个冒号（`:`），以便区分伪类和伪元素。但是，由于旧版本的 W3C 规范并未对此进行特别区分，因此目前绝大多数的浏览器都同时支持使用这两种方式来表示伪元素。
 
-- {{CSSxRef("::after", "::after (:after)")}}
-- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
-- {{CSSxRef("::before", "::before (:before)")}}
-- {{CSSxRef("::cue", "::cue (:cue)")}}
-- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
-- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+## 字母索引
+
+一组 CSS 规范定义的伪元素包括以下内容：
+
+A
+
+- {{CSSxRef("::after")}}
+
+B
+
+- {{CSSxRef("::backdrop")}}
+- {{CSSxRef("::before")}}
+
+C
+
+- {{CSSxRef("::cue")}}
+- {{CSSxRef("::cue-region")}}
+
+F
+
+- {{CSSxRef("::first-letter")}}
+- {{CSSxRef("::first-line")}}
+- {{CSSxRef("::file-selector-button")}}
+
+G
+
 - {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
-- {{CSSxRef("::marker")}} {{Experimental_Inline}}
-- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+
+M
+
+- {{CSSxRef("::marker")}}
+
+P
+
+- {{CSSxRef("::part", "::part()")}}
+- {{CSSxRef("::placeholder")}}
+
+S
+
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
 - {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+
+T
+
+- {{CSSxRef("::target-text")}} {{Experimental_Inline}}
 
 ## 规范
 
@@ -52,9 +85,9 @@ selector::pseudo-element {
 <table class="standard-table">
   <tbody>
     <tr>
-      <th>Browser</th>
-      <th>Lowest Version</th>
-      <th>Support of</th>
+      <th>浏览器</th>
+      <th>最低版本</th>
+      <th>支持的伪元素</th>
     </tr>
     <tr>
       <td rowspan="2">Internet Explorer</td>

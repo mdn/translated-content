@@ -2,7 +2,8 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 **`transform-origin`** CSS 属性让你更改一个元素变形的原点。
 
@@ -92,7 +93,7 @@ transform-origin: unset;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -429,7 +430,7 @@ transform-origin: 100% -30%;
 
 {{Cssinfo}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

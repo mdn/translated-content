@@ -1,8 +1,8 @@
 ---
 title: Notification
-slug: Web/API/notification
-translation_of: Web/API/Notification
+slug: Web/API/Notification
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/ko/docs/Web/API/Notifications_API)의 `Notification` 인터페이스는 사용자에게 데스크톱 알림을 설정하고 보여주는데 사용됩니다.
@@ -72,7 +72,7 @@ translation_of: Web/API/Notification
 #### Event handlers
 
 - {{domxref("Notification.onclick")}}
-  - : {{event("click")}} 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
+  - : [`click`](/ko/docs/Web/API/Element/click_event) 이벤트에 대한 핸들러입니다. 사용자가 알림을 클릭할 때 마다 호출됩니다.
 - {{domxref("Notification.onerror")}}
   - : {{event("error")}} 이벤트에 대한 핸들러입니다. 알림에 오류가 발생할 때 마다 호출됩니다.
 
@@ -161,11 +161,11 @@ function spawnNotification(theBody,theIcon,theTitle) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

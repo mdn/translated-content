@@ -1,12 +1,8 @@
 ---
 title: Line-based placement with CSS Grid
-slug: Web/CSS/CSS_Grid_Layout/Line-based_placement_with_CSS_grid
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
+
 [그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
 
 그리드를 연구할 때는 번호가 매겨진 라인부터 시작하는 것이 가장 논리적일 겁니다. 왜냐하면, 그리드 레이아웃을 쓸 때마다 거기엔 항상 번호가 매겨진 라인이 있기 때문입니다. 행과 열의 각 라인에는 번호가 매겨져 있으며, 라인에 번호를 매길 때는 1번부터 시작합니다. 그리드 라인은 문서의 작성 모드를 기준으로 번호가 매겨진다는 것을 명심하십시오. 영어와 같이 왼쪽에서 오른쪽으로 읽히는 언어로 쓰인 문서에서는 1번 라인이 그리드의 맨 왼쪽에 위치합니다. 반대로 오른쪽에서 왼쪽으로 읽히는 언어의 문서에서는 1번 라인이 그리드의 맨 오른쪽에 위치하게 됩니다. 문서 작성 모드와 그리드 사이의 상호 작용에 대해서는 나중에 자세히 알아보겠습니다.
@@ -17,7 +13,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 그리드 컨테이너 안에는 네 개의 자식 요소가 있습니다. 이것들을 아무런 조건 없이 그대로 그리드 위에 위치시키면, 자동 배치 규칙에 따라 각 아이템은 처음에 있는 네 개의 셀 위에 놓이게 됩니다. 여기서 [Firefox의 Grid Highlighter](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 그리드의 열과 행이 어떻게 정의되어 있는지 확인하실 수 있습니다.
 
-![Our Grid highlighted in DevTools](https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png)
+![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
 * {box-sizing: border-box;}

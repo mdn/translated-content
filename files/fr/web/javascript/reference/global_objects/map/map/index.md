@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/Map
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/Map
 browser-compat: javascript.builtins.Map.Map
 ---
+
 {{JSRef}}
 
 Le **constructeur `Map()`** permet de créer des objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map).

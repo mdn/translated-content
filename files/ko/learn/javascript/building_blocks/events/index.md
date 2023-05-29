@@ -2,6 +2,7 @@
 title: 이벤트 입문
 slug: Learn/JavaScript/Building_blocks/Events
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 이벤트(event)란 여러분이 프로그래밍하고 있는 시스템에서 일어나는 사건(action) 혹은 발생(occurrence)인데, 이는 여러분이 원한다면 그것들에 어떠한 방식으로 응답할 수 있도록 시스템이 말해주는 것입니다. 예를 들자면, 만약 유저가 웹페이지에 있는 버튼을 고른다면, 여러분은 그 사건에 인포메이션 박스를 표시함으로써 응답하기를 원할지도 모릅니다. 이 문서에서는, 우리는 이벤트에 대한 몇몇 중요한 개념을 논하고, 그것들이 브라우저에서 어떻게 작동하는지 살펴봅니다. 이것은 완전한 공부가 되지 않을 것입니다; 단지 지금 단계에서 여러분이 알아야 할 필요가 있는 것입니다.
@@ -538,7 +539,7 @@ video.onclick = function() {
 - 브라우저는 선택된 요소가 버블링 단계에 대해 그것에 등록된 `onclick` 이벤트 핸들러를 가지고 있는지 확인하기 위해 검사하고, 만약 그렇다면 실행합니다.
 - 그리고서 그것은 바로 다음의 조상 요소로 이동하고 같은 일을 하고, 그리고서 그 다음 요소로 이동하고, `<html>` 요소에 닿을 때까지 계속합니다.
 
-[![](bubbling-capturing.png)](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)
+[![](bubbling-capturing.png)](bubbling-capturing.png)
 
 (더 큰 도표를 보려면 이미지를 클릭하세요)
 
@@ -596,13 +597,3 @@ video.onclick = function(e) {
 - [이벤트 접근](https://www.quirksmode.org/js/events_access.html) (이벤트 객체에 대한 논의) — Peter-Paul Koch가 작성한 또 다른 뛰어나게 상세한 글
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단을 만드세요 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 재새용 가능한 코드 블록](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [자신만의 함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- **이벤트 입문**
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

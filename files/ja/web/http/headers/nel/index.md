@@ -1,19 +1,8 @@
 ---
 title: NEL
 slug: Web/HTTP/Headers/NEL
-tags:
-  - HTTP
-  - HTTP Header
-  - HTTP ヘッダー
-  - Network Error Logging
-  - Reference
-  - Response Header
-  - header
-  - ネットワークエラーログ記録
-  - ヘッダー
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/NEL
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`NEL`** レスポンスヘッダーは、ネットワークリクエストログ記録を構成するために使用されます。

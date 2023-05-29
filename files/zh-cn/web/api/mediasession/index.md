@@ -2,6 +2,7 @@
 title: MediaSession
 slug: Web/API/MediaSession
 ---
+
 {{SeeCompatTable}}{{APIRef("Media Session API")}}
 
 [Media Session API](/zh-CN/docs/Web/API/Media_Session_API) 的 **`MediaSession`** 接口允许页面为标准媒体交互提供自定义行为。
@@ -39,7 +40,7 @@ if ('mediaSession' in navigator){
 }
 ```
 
-下面例子为暂停和播放设置了时间句柄：
+下面例子为暂停和播放设置了事件句柄：
 
 ```js
 var audio = document.querySelector("#player");
@@ -65,4 +66,4 @@ function pause() {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaSession")}}
+{{Compat}}

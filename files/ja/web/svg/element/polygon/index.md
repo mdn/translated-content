@@ -1,18 +1,15 @@
 ---
 title: <polygon>
 slug: Web/SVG/Element/polygon
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/polygon
 ---
+
 {{SVGRef}}
 
 **`<polygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
 
 開いた図形については {{SVGElement("polyline")}} 要素をご覧ください。
+
+## 例
 
 ```css hidden
 html,body,svg { height:100% }
@@ -24,12 +21,11 @@ html,body,svg { height:100% }
   <polygon points="0,100 50,25 50,75 100,0" />
 
   <!-- 同じ多角形で線を持ち塗りつぶされない例 -->
-  <polygon points="100,100 150,25 150,75 200,0"
-            fill="none" stroke="black" />
+  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample('例', 100, 100)}}
 
 ## 属性
 
@@ -61,10 +57,7 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('SVG2', 'shapes.html#PolygonElement', '&lt;polygon&gt;')}}     | {{Spec2('SVG2')}} | 変更なし |
-| {{SpecName('SVG1.1', 'shapes.html#PolygonElement', '&lt;polygon&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

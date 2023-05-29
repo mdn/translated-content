@@ -2,6 +2,7 @@
 title: KeyboardEvent.location
 slug: Web/API/KeyboardEvent/location
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent.location`** 是一个只读属性，返回一个无符号的长整型 `unsigned long`，表示按键在键盘或其他设备上的位置
@@ -84,8 +85,8 @@ slug: Web/API/KeyboardEvent/location
         <div class="note">
           <strong>Note: </strong>Gecko always returns
           <code>DOM_KEY_LOCATION_MOBILE</code> on Android (Prior to 18), Maemo,
-          and <a href="/en-US/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a>.
-          However, at {{gecko("38")}}, this is dropped.
+          and <a href="/zh-CN/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a>.
+          However, at Gecko 38, this is dropped.
         </div>
       </td>
     </tr>
@@ -104,7 +105,7 @@ slug: Web/API/KeyboardEvent/location
           <strong>Note: </strong>Gecko never fires trusted key events with
           <code>DOM_KEY_LOCATION_JOYSTICK</code> except on Android. Starting 18,
           native key events on Android may have this value. However, at
-          {{gecko("38")}}, this is dropped.
+          Gecko 38, this is dropped.
         </div>
       </td>
     </tr>
@@ -131,7 +132,7 @@ function keyEvent(event) {
 
 ## Browser compatibility
 
-{{Compat("api.KeyboardEvent.location")}}
+{{Compat}}
 
 ## See also
 

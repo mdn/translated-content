@@ -13,6 +13,7 @@ translation_of: >-
 original_slug: >-
   Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tableau contenant l'ensemble des locales, parmi celles fournies en argument, qui sont prises en charge pour le formatage internationalisé du temps relatif, sans avoir à utiliser la locale par défaut de l'environnement d'exécution.
@@ -56,13 +57,11 @@ var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];var options = { localeMatcher: 
 
 ## Spécifications
 
-| Spécification                                                                                                                              | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.supportedLocalesOf) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

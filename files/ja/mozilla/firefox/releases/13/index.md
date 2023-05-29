@@ -2,22 +2,23 @@
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
 ---
+
 Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました。この記事は開発者に影響がある Firefox 13 での変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧
 
 ### HTML
 
-- テーブルの {{ htmlattrxref("cellspacing", "table") }} 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
+- テーブルの [`cellspacing`](/ja/docs/Web/HTML/Element/table#cellspacing) 属性は、Quirks モード以外でも Quirks モードと同様に解析するようになりました。これは値をパーセント値で指定した場合に、仕様書で実際はパーセント値が認められていないため代わりにピクセル数として扱うものです。
 - {{ htmlelement("wbr") }} 要素の双方向テキストに関する動作を修正しました。Unicode の `U+200B ZERO-WIDTH SPACE` 文字と同様の動作になり、従って親要素の双方向性に影響を与えません。
 - {{ Cssxref(":invalid") }} 疑似クラスを {{ htmlelement("form") }} 要素へ適用できるようになりました。
 
 ### CSS
 
 - {{ cssxref("&lt;angle&gt;") }} の単位 `turn` をサポートしました (`rotate()` などの CSS 関数で用います)。
-- {{ cssxref("background-position") }} で値を 3 - 4 個置く構文をサポートしました。"`right 10px bottom 20px`" といった表記で、背景画像を任意の角からずらすことができます。{{ bug("522607") }} をご覧ください。
+- {{ cssxref("background-position") }} で値を 3 - 4 個置く構文をサポートしました。"`right 10px bottom 20px`" といった表記で、背景画像を任意の角からずらすことができます。[Firefox バグ 522607](https://bugzil.la/522607) をご覧ください。
 - {{ cssxref("background-repeat") }} で値を 2 個置く構文をサポートしました。
-- {{ cssxref("border-radius","-moz-border-radius*") }} および {{ cssxref("box-shadow","-moz-box-shadow") }} のサポートを削除しました。代わりに著作者は接頭辞のない `border-radius` または `box-shadow` を使用してください。{{ bug("693510") }} をご覧ください。
+- {{ cssxref("border-radius","-moz-border-radius*") }} および {{ cssxref("box-shadow","-moz-box-shadow") }} のサポートを削除しました。代わりに著作者は接頭辞のない `border-radius` または `box-shadow` を使用してください。[Firefox バグ 693510](https://bugzil.la/693510) をご覧ください。
 - {{ cssxref("column-fill") }} プロパティが実装されました。（接頭辞付き）
 
 ### JavaScript
@@ -47,7 +48,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### SVG
 
-- {{ domxref("SVGStringList") }} DOM インタフェースが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。{{ bug("722071") }} をご覧ください。
+- {{ domxref("SVGStringList") }} DOM インタフェースが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。[Firefox バグ 722071](https://bugzil.la/722071) をご覧ください。
 
 ### WebGL
 
@@ -55,7 +56,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### MathML
 
-- {{ MathMLElement("mtable") }} 要素で `width` 属性をサポートしました ({{ bug("722880") }})。
+- {{ MathMLElement("mtable") }} 要素で `width` 属性をサポートしました ([Firefox バグ 722880](https://bugzil.la/722880))。
 - 数学的なテキストで [MathJax fonts](http://cdn.mathjax.org/mathjax/latest/fonts/HTML-CSS/TeX/otf/) をデフォルトフォントとして使用するようになりました。詳しくは [Fonts for Mozilla's MathML engine](/ja/Mozilla_MathML_Project/Fonts) をご覧ください。
 
 ### Developer tools
@@ -98,7 +99,7 @@ Firefox 13 より、Windows 版の Firefox は Windows XP Service Pack 2 以降�
 ### インタフェースの変更
 
 - `nsIScreen` インタフェースが、新たに引数 `rotation` を通して回転の制御をサポートしました。
-- `nsIPrefBranch2` インタフェースを `nsIPrefBranch` に統合しました ({{ bug("718255") }})。
+- `nsIPrefBranch2` インタフェースを `nsIPrefBranch` に統合しました ([Firefox バグ 718255](https://bugzil.la/718255))。
 - 以前のバージョンの Gecko で削除されたエイリアス `MozOpacity`、`MozOutline`、`MozOutlineStyle`、`MozOutlineWidth`、`MozOutlineOffset`、および `MozOutlineColor` を、`nsIDOMCSS2Properties` から削除しました。これは、エイリアスを削除した当初に行うべきでした。
 - `nsINavHistoryQueryOptions` の属性 `excludeItemIfParentHasAnnotation` を、対応するクエリ操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。
 

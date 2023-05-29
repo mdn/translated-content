@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/Instance
 original_slug: Glossaire/Instance
 ---
+
 Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une instance de ce constructeur.
 
 ## Voir aussi

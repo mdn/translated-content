@@ -9,6 +9,7 @@ tags:
   - Quadrilatère
 translation_of: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 Le constructeur **`DOMPoint()`** crée un nouvel objet {{domxref("DOMPoint")}}.

@@ -3,6 +3,7 @@ title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 ## Описание

@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/AnimationEvent/elapsedTime
 ---
+
 {{SeeCompatTable}}{{ apiref("AnimationEvent") }}
 
 ## Résumé

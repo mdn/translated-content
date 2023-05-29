@@ -2,7 +2,8 @@
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`text-decoration-color`** 用于设置文本修饰线的颜色，文本修饰线是通过 {{ cssxref("text-decoration-line") }} 属性指定的。
 
@@ -33,7 +34,7 @@ text-decoration-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 修饰文本的线的颜色。
 
-### 格式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -57,7 +58,7 @@ s {
 }
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## Accessibility concerns
 
@@ -75,9 +76,9 @@ Color alone should not be used to convey meaning. For example, change of text an
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.text-decoration-color")}}
+{{Compat}}
 
-## 另请参阅
+## 参见
 
 - 当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 - {{cssxref("&lt;color&gt;")}} 数据类型

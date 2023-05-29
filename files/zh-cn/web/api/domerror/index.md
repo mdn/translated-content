@@ -2,6 +2,7 @@
 title: DOMError
 slug: Web/API/DOMError
 ---
+
 {{ APIRef("DOM") }}{{deprecated_header}}
 
 **`DOMError`** 接口描述一个错误对象，该对象包含一个错误的名字。
@@ -43,6 +44,6 @@ slug: Web/API/DOMError
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{ domxref("DOMException") }}

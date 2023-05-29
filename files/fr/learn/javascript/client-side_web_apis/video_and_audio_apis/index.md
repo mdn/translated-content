@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
@@ -484,13 +485,3 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/HTML/Formats_pour_audio_video).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données du serveur](/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data)
-- [APIs tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage)

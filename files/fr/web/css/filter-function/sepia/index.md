@@ -5,6 +5,7 @@ translation_of: Web/CSS/filter-function/sepia()
 original_slug: Web/CSS/filter-function/sepia()
 browser-compat: css.types.filter-function.sepia
 ---
+
 {{cssref}}
 
 La fonction CSS **`sepia()`** convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vielli. Le résultat obtenu est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).

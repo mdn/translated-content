@@ -2,9 +2,10 @@
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 ---
+
 {{APIRef}}
 
-**`CanvasRenderingContext2D.bezierCurveTo()`** 是 Canvas 2D API 绘制三次贝赛尔曲线路径的方法。该方法需要三个点。 第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 `moveTo()` 进行修改。
+**`CanvasRenderingContext2D.bezierCurveTo()`** 是 Canvas 2D API 绘制三次贝赛尔曲线路径的方法。该方法需要三个点。第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 `moveTo()` 进行修改。
 
 ## 语法
 
@@ -31,7 +32,7 @@ void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
 
 ### 使用 `bezierCurveTo` 方法
 
-这是一段绘制贝赛尔曲线的简单的代码片段。 控制点是红色的， 开始和结束点是蓝色的。
+这是一段绘制贝赛尔曲线的简单的代码片段。控制点是红色的，开始和结束点是蓝色的。
 
 #### HTML
 
@@ -115,7 +116,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.bezierCurveTo")}}
+{{Compat}}
 
 ## 参见
 

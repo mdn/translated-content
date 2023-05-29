@@ -1,13 +1,6 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@charset
 ---
 {{ CSSRef }}
 
@@ -21,7 +14,7 @@ translation_of: Web/CSS/@charset
 
 스타일 시트의 문자 인코딩을 정의하는 여러 방법이 있기에, 브라우저는 다음과 같은 순서로 다음 방법을 시도합니다( 그리고 하나가 결과를 산출하자 마자 곧 멈춥니다):
 
-1. 파일의 시작 부분에 놓이는 [Unicode byte-order](http://en.wikipedia.org/wiki/Byte_order_mark "Byte_order_mark") 문자값.
+1. 파일의 시작 부분에 놓이는 [Unicode byte-order](http://en.wikipedia.org/wiki/Byte_order_mark) 문자값.
 2. `Content-Type:` HTTP 헤더의 `charset` attribute 또는 스타일 시트를 제공하는 데 쓰이는 프로토콜 등가물에 주어진 값.
 3. `@charset` CSS at-규칙.
 4. 참조하는 문서에 의해 정의된 문자 인코딩 사용: {{ HTMLElement("link") }} 요소의 `charset` attribute. 이 메서드는 HTML5에서 폐기(obsolete)되어 사용해서는 안됩니다.

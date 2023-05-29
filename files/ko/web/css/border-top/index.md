@@ -1,14 +1,8 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - 테두리
-translation_of: Web/CSS/border-top
 ---
+
 {{CSSRef}}
 
 **`border-top`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 위쪽 테두리를 설정합니다. {{cssxref("border-top-width")}}, {{cssxref("border-top-style")}}, {{cssxref("border-top-color")}}의 값을 지정합니다.

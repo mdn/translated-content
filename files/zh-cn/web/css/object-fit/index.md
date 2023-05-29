@@ -2,6 +2,7 @@
 title: object-fit
 slug: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性指定[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)（例如：{{HTMLElement("img")}} 或 {{HTMLElement("video")}}）的内容应该如何适应到其使用高度和宽度确定的框。
@@ -51,7 +52,7 @@ object-fit 属性由下列的值中的单独一个关键字来指定。
 
 ## 示例
 
-### 为图像设置 object-fill
+### 为图像设置 object-fit
 
 #### HTML
 
@@ -140,5 +141,5 @@ img {
 
 ## 参见
 
-- 其它与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}、{{cssxref("image-resolution")}}。
 - {{cssxref("background-size")}}

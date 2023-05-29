@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/set
 ---
+
 {{JSRef}}
 
 La méthode **`set()`** permet d'enregistrer plusieurs valeurs dans le tableau typé à partir d'un tableau donné.
@@ -54,15 +55,11 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                                 | {{Spec2('Typed Array')}} | Englobée avec ECMAScript 6.                     |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.set-array-offset', 'TypedArray.prototype.set')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.set")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,10 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
@@ -10,8 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 
 ## 構文
 
-```
-myMap.delete(key);
+```js-nolint
+delete(key)
 ```
 
 ### 引数
@@ -28,23 +31,20 @@ myMap.delete(key);
 ### delete() メソッドの使用
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'foo');
 
-myMap.delete('bar'); // 正常に削除出来れば true を返す
-myMap.has('bar');    // 存在しない要素を確認すると false を返す
+console.log(myMap.delete('bar')); // true を返す。正常に削除された。
+console.log(myMap.has('bar')); // false を返す。 "bar" の要素がもう存在しない。
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
-| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.delete")}}
+{{Compat}}
 
 ## 関連情報
 

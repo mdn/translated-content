@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthMask()`** 方法设置是否启用写入深度缓冲。
@@ -40,7 +41,7 @@ gl.getParameter(gl.DEPTH_WRITEMASK);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.depthMask")}}
+{{Compat}}
 
 ## 相关内容
 

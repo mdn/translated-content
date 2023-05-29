@@ -2,6 +2,7 @@
 title: 块格式化上下文
 slug: Web/Guide/CSS/Block_formatting_context
 ---
+
 {{ CSSRef }}
 
 **块格式化上下文**（Block Formatting Context，BFC）是 Web 页面的可视 CSS 渲染的一部分，是块级盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
@@ -18,8 +19,8 @@ slug: Web/Guide/CSS/Block_formatting_context
 - {{ cssxref("overflow") }} 值不为 `visible`、`clip` 的块元素
 - {{ cssxref("display") }} 值为 `flow-root` 的元素
 - {{ cssxref("contain") }} 值为 `layout`、`content` 或 `paint` 的元素
-- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
-- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
+- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_table) 容器
+- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_table) 容器
 - 多列容器（{{ cssxref("column-count") }} 或 {{ cssxref("column-width") }} 值不为 `auto`，包括`column-count` 为 `1`）
 - `column-span` 值为 `all` 的元素始终会创建一个新的 BFC，即使该元素没有包裹在一个多列容器中 ([规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))
 
@@ -27,7 +28,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 - 包含内部浮动
 - 排除外部浮动
-- 阻止 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- 阻止 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 
 > **备注：** flex/grid 容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的 flex/grid 格式上下文，除布局之外，它与块格式上下文类似。flex/grid 容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
 
@@ -43,7 +44,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 **使用 `overflow: auto`**
 
-在创建包含浮动元素的 BFC 时，通常的做法是设置父元素 `overflow: auto` 或者其它除默认的 `overflow: visible` 以外的值。`<div>` 元素变成布局中的迷你布局，任何子元素都会被包含进去。
+在创建包含浮动元素的 BFC 时，通常的做法是设置父元素 `overflow: auto` 或者其他除默认的 `overflow: visible` 以外的值。`<div>` 元素变成布局中的迷你布局，任何子元素都会被包含进去。
 
 使用 `overflow` 创建新的 BFC，是因为 `overflow` 属性会告诉浏览器应该怎样处理溢出的内容。如果使用它仅仅为了创建 BFC，你可能会遇到不希望出现的滚动条或阴影，需要注意。另外，对于后续的开发者，可能不清楚当时为什么使用 `overflow`，所以最好添加一些注释来解释为什么这样做。
 
@@ -156,7 +157,7 @@ section {
 
 ### 外边距重叠
 
-创建新的 BFC 避免两个相邻的 div 之间 [外边距重叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) 。
+创建新的 BFC 避免两个相邻元素之间的[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) 。
 
 #### HTML
 
@@ -200,10 +201,10 @@ section {
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)
     - [计算值](/zh-CN/docs/Web/CSS/computed_value)

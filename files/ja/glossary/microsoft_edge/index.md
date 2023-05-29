@@ -2,6 +2,7 @@
 title: Microsoft Edge
 slug: Glossary/Microsoft_Edge
 ---
+
 **Microsoft Edge** は、グラフィカルな無料の{{glossary("World Wide Web", "ウェブ")}}{{Glossary("browser", "ブラウザー")}}で、 Microsoft Windows に付属しており、マイクロソフトが 2014 年から開発しています。 Edge は、最初は Spartan として知られ、長い間使われた {{glossary("Microsoft Internet Explorer","Internet Explorer")}} を置き換えました。
 
 1. 関連情報

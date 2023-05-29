@@ -2,6 +2,7 @@
 title: window.prompt
 slug: Web/API/Window/prompt
 ---
+
 {{ ApiRef() }}
 
 ### 概述

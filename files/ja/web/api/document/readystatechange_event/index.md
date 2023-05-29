@@ -2,6 +2,7 @@
 title: 'Document: readystatechange イベント'
 slug: Web/API/Document/readystatechange_event
 ---
+
 {{APIRef}}
 
 **`readystatechange`** event は、文書の {{domxref("Document.readyState", "readyState")}} 属性が変化したときに発生します。
@@ -106,9 +107,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName("HTML WHATWG", "indices.html#event-readystatechange", "readystatechange")}} | {{Spec2("HTML WHATWG")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

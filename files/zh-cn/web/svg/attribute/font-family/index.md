@@ -2,11 +2,12 @@
 title: font-family
 slug: Web/SVG/Attribute/font-family
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute)
 
-`font-family` 属性 (attribute) 指出哪个字体集将被用来渲染文字， 在带优先级的字体集名称列表被指定，还有或没有泛指的字符集名称。(specified as a prioritized list of font family names and/or generic family names)。
+{{SVGRef}}
 
-作为一个表现层的属性，`font-family`属性也可以被直接用在 CSS 样式表中，详见 {{ cssxref("font-family","CSS font-family") }} 。
+`font-family` 属性指出哪个字体集将被用来渲染文字，在带优先级的字体集名称列表被指定，还有或没有泛指的字符集名称。
+
+作为一个表现层的属性，`font-family` 属性也可以被直接用在 CSS 样式表中，详见 {{ cssxref("font-family","CSS font-family") }} 。
 
 ## 使用上下文
 
@@ -36,7 +37,7 @@ p.class2{font-family:Arial,Helvetica;}
 
 以下元素可以使用`font-family` 属性 (attribute)
 
-- [Text content elements](/en/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
 
 ## 规范
 

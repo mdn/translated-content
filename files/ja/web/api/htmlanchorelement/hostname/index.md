@@ -3,6 +3,7 @@ title: HTMLAnchorElement.hostname
 slug: Web/API/HTMLAnchorElement/hostname
 original_slug: Web/API/HTMLHyperlinkElementUtils/hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.hostname`** プロパティは、URL のドメインを含む文字列です。

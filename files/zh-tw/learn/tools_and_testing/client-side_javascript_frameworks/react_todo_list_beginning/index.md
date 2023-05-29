@@ -3,6 +3,7 @@ title: Beginning our React todo list
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與您一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
 
 > **備註：** 如果您需要檢查自己的程式碼與範例之間的差異，可以連到 [todo-react repository](https://github.com/mdn/todo-react)，這裡有我們完整的程式碼。 Todo list 作品示範：<https://mdn.github.io/todo-react-build/>。
@@ -220,8 +221,7 @@ class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading"></ul>
 ```
 
 `role` 屬性會向科技輔具說明各種元素分別代表什麼用途。雖然瀏覽器預設`<ul>` 為清單，但是由於樣式表會破壞這個功能，因此需要使用`role` 屬性保留 "list" 清單這個意思。如果您想了解更多`role` 屬性的重要性，請參照[Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)。
@@ -231,10 +231,8 @@ class `visually-hidden` 在我們加入 CSS 前還不會有作用；當我們加
 最後，我們清單中的 labels 與 inputs 對 JSX 而言將會有些特別的屬性：
 
 ```html
-<input id="todo-0" type="checkbox" defaultChecked={true} />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<input id="todo-0" type="checkbox" defaultChecked="{true}" />
+<label className="todo-label" htmlFor="todo-0"> Eat </label>
 ```
 
 `<input/ >`中的 `defaultChecked` 屬性會讓 React 預設勾選某項目。假如我們同一般寫 HTML 一樣使用 `checked`，React 會紀錄一些：handling events on the checkbox 警告到瀏覽器 console 中，而這些是我們想避免的。不過先別擔心，我們在稍後討論事件的章節會教大家解決這個問題。
@@ -552,48 +550,3 @@ body {
 現在我們的待辦清單 app 終於比較像真正的 app 了！問題是它還沒真正提供功能，我們將在下一章解決這個問題。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 在本模塊
-
-- [前端框架簡介](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架的主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [開始學 React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [把 React app 組件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [響應性 React：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [響應性 React：編輯、過濾、條件式過濾](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [開始學 Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app 架構與組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [響應性 Ember：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [響應性 Ember：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 的路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 的資源與除錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [開始學 Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 組件的列表](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [寫一個 todo 表單：Vue 的事件、方法、model](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 的計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 的條件式渲染：編輯已存在的待辦](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [重點管理 Vue ref](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [開始學 Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [寫一個 Svelte 待辦清單(todp list app)](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的動態行為：變數與 props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [進階 Svelte：Reactivity、元件生命週期、網頁無障礙設定](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署與下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

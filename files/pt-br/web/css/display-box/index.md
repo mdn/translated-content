@@ -1,8 +1,8 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-translation_of: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 Essas palavras-chave definem se um elemento gera caixas de exibição.

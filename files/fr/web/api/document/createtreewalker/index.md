@@ -11,6 +11,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Document/createTreeWalker
 ---
+
 {{ApiRef("Document")}}
 
 La méthode de création **`Document.createTreeWalker()`** renvoie un nouvel objet {{domxref("TreeWalker")}}.

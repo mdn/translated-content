@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/API/GeolocationPosition
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 L'interface **`GeolocationPosition`** représente la position de l'appareil concerné à un instant donné. La position, représentée par un objet {{domxref("GeolocationCoordinates")}}, comprend la position 2D de l'appareil, sur un sphéroïde représentant la Terre, mais aussi son altitude et sa vitesse.

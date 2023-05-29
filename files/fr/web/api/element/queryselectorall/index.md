@@ -4,6 +4,7 @@ slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
 browser-compat: api.Element.querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`querySelectorAll()`** de [`Element`](/fr/docs/Web/API/Element) retourne une [`NodeList`](/fr/docs/Web/API/NodeList) statique (non-dynamique) des éléments correspondants au groupe de sélecteurs CSS spécifiés qui sont des descendants de l'élément sur lequel la méthode a été appelée.

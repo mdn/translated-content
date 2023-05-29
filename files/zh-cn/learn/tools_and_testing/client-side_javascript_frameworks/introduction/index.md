@@ -3,6 +3,7 @@ title: 客户端框架介绍
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。
@@ -24,7 +25,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 当 JavaScript 在 1996 发布以后，它给 web 增加了少许的交互性和乐趣，在那个时候，网页仍由静态文档组成。web 应该不仅仅是阅读的地方，更是创造的地方。JavaScript 变得越来越流行。使用 JavaScript 的开发者们创造工具来解决他们遇到的问题，并且将其打包成称为**库**的可复用组件，这样就能和他人共享解决方案。这种共享库的体系帮助塑造了 web 的增长。
 
-现在，JavaScript 是 web 的一部分，[95% 的网页都在使用](https://w3techs.com/technologies/details/cp-javascript)，而且 web 又是现代生活的一部分。用户在 web 上写文章，管理预算，听音乐，看电影，以及和相隔万里的人通过文字，音频，视频聊天来实时交流。 web 让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事。这些现代的，复杂的，具有交互性的网站通常被称为 **web 应用程序**。
+现在，JavaScript 是 web 的一部分，[95% 的网页都在使用](https://w3techs.com/technologies/details/cp-javascript)，而且 web 又是现代生活的一部分。用户在 web 上写文章，管理预算，听音乐，看电影，以及和相隔万里的人通过文字，音频，视频聊天来实时交流。web 让我们能够做到那些过去只能在电脑上安装本地应用程序才能做到的事。这些现代的，复杂的，具有交互性的网站通常被称为 **web 应用程序**。
 
 现代 JavaScript 框架的到来加快了打造高度动态化和交互性强的应用程序的速度。**框架**就是提供该如何构建应用程序的意见的库。这些意见能使应用具有可预测性和同质性。可预测性让软件能在扩展到很大规模的同时仍保持可维护性。可预测性和可维护性对于一个软件的长久健康运行是十分重要的。
 
@@ -58,7 +59,7 @@ Vue，就像 [AngularJS](https://angularjs.org/)，用它自己的代码拓展�
 
 ### React
 
-Facebook 在 2013 年发布了 React。在当时 React 已经被用于 Facebook 内部用来解决许多问题。严格来说 React 本身并不是框架，而是一个用来渲染用户界面组件的库。React 被用来组合*其它*用来构建应用的库——React 和 [React Native](https://reactnative.dev/) 让开发者能够用 JavaScript 构建移动应用；React 和 [ReactDOM](https://reactjs.org/docs/react-dom.html) 使他们能够被用来制作 web 应用程序等。
+Facebook 在 2013 年发布了 React。在当时 React 已经被用于 Facebook 内部用来解决许多问题。严格来说 React 本身并不是框架，而是一个用来渲染用户界面组件的库。React 被用来组合*其他*用来构建应用的库——React 和 [React Native](https://reactnative.dev/) 让开发者能够用 JavaScript 构建移动应用；React 和 [ReactDOM](https://reactjs.org/docs/react-dom.html) 使他们能够被用来制作 web 应用程序等。
 
 因为 React 和 ReactDOM 被经常放在一起使用，通俗地讲，React 可以被理解为是一个 JavaScript 框架。当你通读了这个模块时，我们将使用这种口语化的理解进行描述。
 
@@ -174,7 +175,7 @@ JavaScript 框架都提供了一种更具以*声明性*的方式地编写用户�
 
 你没看错。以上用了 JavaScript 框架的代码用了 6 行就实现了刚刚需要 32 行代码才能实现的功能。如果你对这里的大括号和 `v-` 属性不熟悉，没关系；你会在后面的模块中学习到 Vue 特有的语法。这里要指出的是，这段 Vue 代码看起来很像它所代表的用户界面，而原生 JavaScript 代码则不然。
 
-幸亏有了 Vue，让我们不必编写自己的函数来构建用户界面；我们仅仅需要向 Vue 描述每个项目应该是什么样子，然后 Vue 会以很好的、高效的方式帮我们处理好。因此熟悉 Vue 的开发者可以轻松的加入我们的项目，快速地搞清楚项目是如何运作的。不仅仅是 Vue：使用其它框架也可以提高团队和个人的效率。
+幸亏有了 Vue，让我们不必编写自己的函数来构建用户界面；我们仅仅需要向 Vue 描述每个项目应该是什么样子，然后 Vue 会以很好的、高效的方式帮我们处理好。因此熟悉 Vue 的开发者可以轻松的加入我们的项目，快速地搞清楚项目是如何运作的。不仅仅是 Vue：使用其他框架也可以提高团队和个人的效率。
 
 其实在原生 JavaScript 中也可以做*与此类似*的事情。[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)使得编写表示最终元素外观的 HTML 字符串变得容易起来。对于像创建上文示例的待办事项清单那样简单的应用来说，这可能是一种有用的方法，但它对于管理数千条数据记录，且可以在用户界面上渲染许多独特元素的大型应用程序来说，是难以维护的。
 
@@ -240,23 +241,23 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 本模块中讨论的每个框架都采用不同的 Web 应用程序开发方法。每一个都在定期改进或变化，各有利弊。选择合适的框架是一个依赖于团队和项目的过程，你应该自己做研究，发现什么适合你的需求。尽管如此，我们确定了你可能需要考虑的几个问题，以便更有效地研究你的选择：
 
-1. 框架支持哪些浏览器?
-2. 框架使用哪些领域特定语言?
+1. 框架支持哪些浏览器？
+2. 框架使用哪些领域特定语言？
 3. 该框架是否有强大的社区和良好的文档（和其他支持）可用？
 
 本节中的表提供了每个框架提供的浏览器支持以及它的 **DSL 语言** 的简要描述。
 广义上，领域专用语言（**DSL**）是与软件开发的特定领域相关的编程语言。在框架的环境中，DSL 是 JavaScript 或 HTML 的变体，使让使用该框架开发变得更容易。至关重要的是，没有一个框架要求开发者使用特定的 DSL，但它们几乎都是在设计时考虑特定的 DSL。选择不使用框架首选的 DSL 将意味着你错过了改善开发者体验的功能。
 
-在为任何新项目做出选择时，你应该认真考虑框架的模型和 DSL。不匹配的浏览器支持可能会成为用户的障碍；不匹配的DSL支持可能会成为你和你的团队成员的障碍。
+在为任何新项目做出选择时，你应该认真考虑框架的模型和 DSL。不匹配的浏览器支持可能会成为用户的障碍；不匹配的 DSL 支持可能会成为你和你的团队成员的障碍。
 
 | 框架 | 浏览器支持 | DSL 偏好 | 支持的 DSL         |
 | --------- | ----------------------------------- | ------------- | ---------------------- |
 | Angular   | IE9+                                | TypeScript    | 基于 HTML、TypeScript |
-| React     | 现代的浏览器 （IE9+ with Polyfills）      | JSX           | JSX、 TypeScript        |
+| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、TypeScript        |
 | Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
 | Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
 
-> **备注：** 我们描述为“基于HTML”的 DSL 没有官方名称。它们并不是真正的 DSL ，但它们是非标准的 HTML，所以我们认为它们值得强调。
+> **备注：** 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
 
 参考来源：
 
@@ -272,12 +273,12 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 不要只关注我们在这件事上的话——网上到处都有讨论。维基媒体基金会最近选择使用 Vue 作为其前端，并发布了关于框架采用方面的 [RFC](https://phabricator.wikimedia.org/T241180)。RFC 的作者 Eric Gardner 概述了维基媒体项目的需求，以及为什么这个框架是团队不错选择。这个 RFC 是一个很好的例子，说明在计划使用前端框架时，你应该做一点调查和研究。
 
-[JavaScript 状况调查](https://stateofjs.com/)包含了来自JavaScript 开发者的有效反馈。它涵盖了许多与 JavaScript 相关的主题，包括关于框架的使用和开发者对框架的好恶的数据。目前，好几年的数据可以让你感受到一个框架的受欢迎程度。
+[JavaScript 状况调查](https://stateofjs.com/)包含了来自 JavaScript 开发者的有效反馈。它涵盖了许多与 JavaScript 相关的主题，包括关于框架的使用和开发者对框架的好恶的数据。目前，好几年的数据可以让你感受到一个框架的受欢迎程度。
 Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.org/v2/guide/comparison.html)。在这种比较中可能有一些偏见（他们注意到了这一点），但尽管如此，它还是一个宝贵的资源。
 
 ## 客户端框架的替代方案
 
-如果你正在寻找工具来加快  Web开发过程，并且你知道你的项目不需要很多客户端 JavaScript ，你可以寻求其他几种构建 Web 的解决方案：
+如果你正在寻找工具来加快 Web 开发过程，并且你知道你的项目不需要很多客户端 JavaScript，你可以寻求其他几种构建 Web 的解决方案：
 
 - 内容管理系统
 - 服务端渲染
@@ -293,7 +294,7 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 
 **服务端渲染**（**SSR**）是一种应用程序体系结构，在该体系结构中，呈现单页应用程序是服务器的工作。这与客户端渲染相反，服务端渲染是构建 JavaScript 应用程序最常见、最直接的方式。服务端渲染对于客户端的设备压力更小，因为你只发送渲染过的 HTML 文件，但它比客户端渲染更加难以构建。
 
-本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系）， 给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
+本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系），给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
 
 > **备注：** 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的“官方”解决方案。
 
@@ -314,58 +315,3 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 我们的下一篇文章将深入到较低的层次，看看框架倾向于提供的特定类型的功能，以及它们的工作原理。
 
 {{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 本章目录
-
-- [客户端框架简介](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架的主要特点](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [React 待办事项清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [组织我们的 React 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 交互：事件和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 交互：编辑、过滤和条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 中的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Ember 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 应用结构](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 交互：事件、类和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 中的路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 资源和常见问题](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [创建第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染一个 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [添加一个新的待办表单: Vue 事件、方法、模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [用 CSS 样式化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 条件渲染：编辑存在的待办清单](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [使用 Vue ref 进行管理](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [开始我们的 Svelte 待办清单应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 动态表现：变量和 props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [组织我们的 Svelte 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [高级 Svelte：响应式、生命周期和无障碍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Svelte 存储](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 对 TypeScript 的支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入门](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [开始我们的 Angular 待办事项清单列表应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [样式化我们的 Angular 应用](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [创建一个事项组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [筛选待办事项](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [构建 Angular 应用以及更多资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

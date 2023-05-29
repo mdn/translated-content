@@ -1,8 +1,8 @@
 ---
 title: 简单头部
 slug: Glossary/Simple_header
-original_slug: Glossary/简单头部
 ---
+
 以下的 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)都可以被认为是简单头部：
 
 - {{HTTPHeader("Accept")}},

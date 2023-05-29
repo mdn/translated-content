@@ -2,9 +2,10 @@
 title: page-break-inside
 slug: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
-> **Warning:** このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
+> **警告:** このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
 
 CSS の **`page-break-inside`** プロパティは、現在の要素の*内側の* 改ページを調整します。
 

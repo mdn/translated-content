@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
+
 {{AddonSidebar()}}
 
 L'état de cette fenêtre du navigateur.
@@ -34,9 +35,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 
 Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation par défaut pour les fenêtres a été modifié pour exécuter les applications en plein écran au lieu des fenêtres "zoomées". `fullscreen` fait référence à la fois au navigateur fonctionnant en plein écran et lorsque le contenu dans un onglet utilise l'API Fullscreen.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.WindowState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
@@ -46,7 +47,8 @@ Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation 
 >
 > Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -73,4 +75,4 @@ Compatibilité macOS : A partir de macOS 10.10, le comportement de maximisation 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/rotateZ()
 original_slug: Web/CSS/transform-function/rotateZ()
 browser-compat: css.types.transform-function.rotateZ
 ---
+
 {{CSSRef}}
 
 La fonction **`rotateZ()`** définit une transformation qui déplace l'élément autour de l'axe Z, sans déformer cet élément. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.

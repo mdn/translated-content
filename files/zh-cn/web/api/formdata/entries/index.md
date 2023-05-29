@@ -2,6 +2,7 @@
 title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`FormData.entries()`** 方法返回一个 {{jsxref("Iteration_protocols",'iterator')}}对象，此对象可以遍历访问 FormData 中的键值对。其中键值对的 key 是一个 {{domxref("USVString")}} 对象；value 是一个 {{domxref("USVString")}} , 或者 {{domxref("Blob")}}对象。
@@ -43,9 +44,9 @@ key2, value2
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.FormData.entries")}}
+{{Compat}}
 
 ## 相关链接
 

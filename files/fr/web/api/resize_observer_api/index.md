@@ -13,6 +13,7 @@ tags:
   - observe
 translation_of: Web/API/Resize_Observer_API
 ---
+
 {{DefaultAPISidebar("Resize Observer API")}}
 
 L'API Resize Observer fournit un mécanisme performant par lequel du code peut surveiller les changements de dimensions d'un élément et un observateur recevoir des notifications chaque fois que les dimensions changent.

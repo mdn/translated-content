@@ -4,6 +4,7 @@ slug: Web/CSS/box-ordinal-group
 translation_of: Web/CSS/box-ordinal-group
 browser-compat: css.properties.box-ordinal-group
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) pour plus d'informations à propos du standard actuel.

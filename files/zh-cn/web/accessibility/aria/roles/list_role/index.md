@@ -1,7 +1,8 @@
 ---
 title: 'ARIA: list role'
-slug: Web/Accessibility/ARIA/Roles/List_role
+slug: Web/Accessibility/ARIA/Roles/list_role
 ---
+
 ARIA `list` 角色可用于标识项目列表。它通常与 `listitem` 角色结合使用，该角色用于标识包含在列表中的列表项。
 
 ```html
@@ -87,4 +88,10 @@ TBD
 - [ARIA: listitem role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA: group role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 
-<section id="Quick_links"><ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA roles**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

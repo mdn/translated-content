@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`getMilliseconds()`** renvoie les millièmes de secondes de la date renseignée d'après l'heure locale.
@@ -39,16 +40,11 @@ var ms = aujd.getMilliseconds();
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.9.5.24', 'Date.prototype.getMilliseconds')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.getmilliseconds', 'Date.prototype.getMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.getMilliseconds")}}
+{{Compat}}
 
 ## Voir aussi
 

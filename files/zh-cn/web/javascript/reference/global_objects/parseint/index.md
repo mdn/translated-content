@@ -2,6 +2,7 @@
 title: parseInt
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 **parseInt(_string_, _radix_)** 解析一个字符串并返回指定基数的十进制整数，`radix` 是 2-36 之间的整数，表示被解析字符串的基数。
@@ -64,7 +65,7 @@ parseInt('123', 5) // 将'123'看作 5 进制数，返回十进制数 38 => 1*5^
 
 ## 示例
 
-### 例子：使用 `parseInt`
+### 示例：使用 `parseInt`
 
 以下例子均返回`15`:
 
@@ -88,7 +89,7 @@ parseInt("12", 13);
 
 ```js
 parseInt("Hello", 8); // 根本就不是数值
-parseInt("546", 2);   // 除了 “0、1” 外，其它数字都不是有效二进制数字
+parseInt("546", 2);   // 除了“0、1”外，其他数字都不是有效二进制数字
 ```
 
 以下例子均返回 `-15`：

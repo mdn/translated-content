@@ -2,11 +2,12 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-**`KeyboardEvent`** 对象描述了用户与键盘的交互。 每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
+**`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。 当你需要处理文本输入的时候，使用 {{event("input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板， 键盘事件可能不会触发。
+> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。当你需要处理文本输入的时候，使用 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 ## 构造函数
 
@@ -158,7 +159,7 @@ The following events are based on the `KeyboardEvent` type. They can be delivere
 
 ## 用法说明
 
-There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
+There are three types of keyboard events: [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event), [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event), and [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event). For most keys, Gecko dispatches a sequence of key events like this:
 
 1. When the key is first pressed, the `keydown` event is sent.
 2. If the key is not a modifier key, the `keypress` event is sent.
@@ -170,7 +171,7 @@ Some keys toggle the state of an indicator light; these include keys such as Cap
 
 > **备注：** On Linux, Firefox 12 and earlier also dispatched the `keypress` event for these keys.
 
-However, a limitation of the macOS event model causes Caps Lock to dispatch only the `keydown` event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a `keypress` event; this inconsistent behavior was {{bug(602812)}}.
+However, a limitation of the macOS event model causes Caps Lock to dispatch only the `keydown` event. Num Lock was supported on some older laptop models (2007 models and older), but since then, macOS hasn't supported Num Lock even on external keyboards. On older MacBooks with a Num Lock key, that key doesn't generate any key events. Gecko does support the Scroll Lock key if an external keyboard which has an F14 key is connected. In certain older versions of Firefox, this key generated a `keypress` event; this inconsistent behavior was [Firefox bug 602812](https://bugzil.la/602812).
 
 ### Auto-repeat handling
 
@@ -202,7 +203,7 @@ In these environments, unfortunately, there's no way for web content to tell the
 
 #### Auto-repeat handling prior to Gecko 5.0
 
-Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent across platforms.
+Before Gecko 5.0, keyboard handling was less consistent across platforms.
 
 - Windows
   - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
@@ -265,11 +266,11 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ### 兼容性说明
 
-- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ({{bug(968056)}}), except for the&#x20;
+- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) ([Firefox bug 968056](https://bugzil.la/968056)), except for the&#x20;
 
   <kbd>Enter</kbd>
 

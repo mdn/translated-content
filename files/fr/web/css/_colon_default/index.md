@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:default`** représente un élément de l'interface utilisateur qui est l'élément par défaut parmi d'autres éléments semblables (par exemple le bouton par défaut d'un groupe de boutons).
@@ -74,13 +75,8 @@ input:default + label {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                                                     |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#selector-default', ':default')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                                             |
-| {{SpecName('HTML5 W3C', '#selector-default', ':default')}}     | {{Spec2('HTML5 W3C')}}         | La sémantique liée au HTML est définie et les contraintes de validation sont également définies. |
-| {{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                             |
-| {{SpecName('CSS3 Basic UI', '#pseudo-default', ':default')}} | {{Spec2('CSS3 Basic UI')}} | Définition initiale de la pseudo-classe mais pas de la sémantique associée.                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.default")}}
+{{Compat}}

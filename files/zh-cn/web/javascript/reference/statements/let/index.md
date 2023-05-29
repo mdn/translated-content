@@ -2,6 +2,7 @@
 title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`** 语句声明一个块级作用域的局部变量，并可以初始化为一个值（可选）。
@@ -139,7 +140,7 @@ switch(x) {
 }
 ```
 
-使用术语 “temporal” 是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在暂时性死区的外面。
+使用术语“temporal”是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在暂时性死区的外面。
 
 ```js
 {
@@ -203,7 +204,7 @@ function go(n) {
 go({a: [1, 2, 3]});
 ```
 
-### 其它情况
+### 其他情况
 
 用在块级作用域中，**`let`** 将变量的作用域限制在块内，而 `var` 声明的变量的作用域是在函数内。
 
@@ -245,7 +246,7 @@ let x = 1;
 
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
-- [变量提升 > `let` 和 `const` 的变量提升](/en-US/docs/Glossary/Hoisting#let_and_const_hoisting)
+- [变量提升 > `let` 和 `const` 的变量提升](/zh-CN/docs/Glossary/Hoisting#let_and_const_hoisting)
 - [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
 - [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)

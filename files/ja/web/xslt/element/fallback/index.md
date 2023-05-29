@@ -2,6 +2,7 @@
 title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
 ---
+
 {{ XsltRef() }}
 
 `<xsl:fallback>` 要素は指定された拡張子 (または、最終的には新しいバージョン) 要素がサポートされていない場合に使用するテンプレートを指定します。

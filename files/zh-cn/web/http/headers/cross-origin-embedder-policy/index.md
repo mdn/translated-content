@@ -2,9 +2,10 @@
 title: Cross-Origin-Embedder-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 ---
+
 {{HTTPSidebar}}
 
-HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 [CORP](</zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)或者 [CORS](/zh-CN/docs/Web/HTTP/CORS)) 的任何跨域资源 。
+HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 响应标头可防止文档加载未明确授予文档权限 (通过 [CORP](</zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) 或者 [CORS](/zh-CN/docs/Web/HTTP/CORS)) 的任何跨域资源。
 
 | Header type                                      | {{Glossary("Response header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

@@ -1,18 +1,8 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-tags:
-  - '@font-face'
-  - アットルール
-  - CSS
-  - CSS フォント
-  - フォント
-  - ニックネーム
-  - リファレンス
-  - 字体
-browser-compat: css.at-rules.font-face
-translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
@@ -122,7 +112,7 @@ translation_of: Web/CSS/@font-face
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
-      src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+      src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
     }
 
     body { font-family: "Bitstream Vera Serif Bold", serif }

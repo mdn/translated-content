@@ -2,6 +2,7 @@
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
 ---
+
 {{APIRef}}
 
 **`Node.nextSibling`** 是一个只读属性，返回其父节点的 {{domxref("Node.childNodes","childNodes")}} 列表中紧跟在其后面的节点，如果指定的节点为最后一个节点，则返回 `null`。
@@ -66,4 +67,4 @@ The possible inclusion of text nodes in the DOM must be allowed for when travers
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.nextSibling")}}
+{{Compat}}

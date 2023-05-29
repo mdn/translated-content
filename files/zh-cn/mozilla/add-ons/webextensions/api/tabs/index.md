@@ -2,6 +2,7 @@
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 与浏览器标签系统进行交互。
@@ -88,7 +89,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
   - : 为一个制定标签设置缩放选项。
 - {{WebExtAPIRef("tabs.update()")}}
-  - : 导航一个标签到新的地址，或是修改其它的属性。
+  - : 导航一个标签到新的地址，或是修改其他的属性。
 
 ## Events
 
@@ -121,7 +122,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs")}}
+{{Compat}}
 
 > **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >

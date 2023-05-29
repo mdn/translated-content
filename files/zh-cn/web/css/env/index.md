@@ -3,6 +3,7 @@ title: env()
 slug: Web/CSS/env
 original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 **`env()`** [CSS](/zh-CN/docs/Web/CSS) 函数以类似于 {{cssxref("var")}} 函数和 [custom properties](/zh-CN/docs/Web/CSS/--*) 的方式将用户代理定义的环境变量值插入你的 CSS 中。区别在于，环境变量除了由用户代理定义而不是由用户定义外，还被全局作用在文档中，而自定义属性则限定在声明它们的元素中。为了告诉浏览器使用屏幕上所有的可用空间，并以此使用`env()`变量，我们需要添加一个新的视口元值：
@@ -48,18 +49,18 @@ env(safe-area-inset-left, 1.4rem);
 
 **注意**: 不同于其他的 CSS 属性，用户代理定义的属性名字对大小写敏感。
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 下面的示例使用`env()`的第二个可选参数，如果环境变量不可用，该参数可让您设置备用值
 
 ```html
 <p>
   If the <code>env()</code> function is supported in your browser,
-  this paragraph’s text will have 50px of padding between it and
+  this paragraph's text will have 50px of padding between it and
   the left border — but not the top, right and bottom.
   This is because the accompanying CSS is the equivalent of
   <code>padding: 0 0 0 50px</code>, because, unlike other CSS
@@ -79,7 +80,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ### Example values
 
@@ -94,18 +95,17 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 
 **Note**: User agent properties are not reset by the [all](/zh-CN/docs/Web/CSS/all) property.
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
-## See also
+## 参见
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_Variables)
+- [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_cascading_variables)
 - [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

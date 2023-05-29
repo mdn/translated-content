@@ -2,9 +2,10 @@
 title: 数组
 slug: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
-在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。 现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
+在本模块的最后一篇文章中，我们将看看数组 —— 一种将一组数据存储在单个变量名下的优雅方式。现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -510,15 +511,3 @@ window.addEventListener('load', updateCode);
 - {{jsxref("Array")}} — Array 对象引用页面 - 有关此页面中讨论功能的详细参考指南等。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## 在本单元中
-
-- [What is JavaScript?](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/zh-CN/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)

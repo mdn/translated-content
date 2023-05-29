@@ -2,6 +2,7 @@
 title: DataTransfer
 slug: Web/API/DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 `DataTransfer` 对象用于保存拖动并放下（drag and drop）过程中的数据。它可以保存一项或多项数据，这些数据项可以是一种或者多种数据类型。关于拖放的更多信息，请参见 [Drag and Drop](/En/DragDrop/Drag_and_Drop).
@@ -26,7 +27,7 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
   - : 提供一个包含所有拖动数据列表的 {{domxref("DataTransferItemList")}} 对象。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : 一个提供 {{event("dragstart")}} 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
+  - : 一个提供 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
 
 ### Gecko 属性
 
@@ -89,12 +90,11 @@ slug: Web/API/DataTransfer
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer")}}
+{{Compat}}
 
 ## 参见
 
 - [拖与放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖动操作](HTML_Drag_and_Drop_API/Drag_operations)
 - [推荐拖动类型](HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖动多项](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer 测试 - 粘贴、拖放](https://codepen.io/tech_query/pen/MqGgap)

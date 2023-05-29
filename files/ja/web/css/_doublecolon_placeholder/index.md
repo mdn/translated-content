@@ -2,9 +2,10 @@
 title: '::placeholder'
 slug: Web/CSS/::placeholder
 ---
+
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の{{htmlattrxref("placeholder","input","プレイスホルダー文字列",1)}}を表します。
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
 
 ```css
 ::placeholder {
@@ -15,7 +16,7 @@ slug: Web/CSS/::placeholder
 
 セレクターに `::placeholder` を使ったルールを使用できるのは、{{cssxref("::first-line")}} 擬似要素に適用できる CSS プロパティだけです。
 
-> **Note:** 多くのブラウザーでは、プレイスホルダー文字列の外見は既定で半透明または明るい灰色です。
+> **メモ:** 多くのブラウザーでは、プレイスホルダー文字列の外見は既定で半透明または明るい灰色です。
 
 ## 構文
 
@@ -61,7 +62,7 @@ slug: Web/CSS/::placeholder
 
 ### ラベル
 
-プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 {{htmlattrxref("for", "label")}} および {{htmlattrxref("id")}} 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
+プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせを使用して入力欄とプログラム的に関連付けが行われていないラベルがないと、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
 - [MDN 基本的なフォームのヒント](/ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)

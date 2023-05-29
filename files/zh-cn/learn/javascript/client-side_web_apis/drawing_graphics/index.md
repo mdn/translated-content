@@ -2,6 +2,7 @@
 title: 绘图
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 浏览器包含一些非常强大的图形编程工具，从可缩放矢量图形（Scalable Vector Graphics，简称 [SVG](/zh-CN/docs/Web/SVG)）语言到用于在 HTML {{htmlelement("canvas")}} 元素上绘制图形的 API（参阅 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)）。本文对 {{htmlelement("canvas")}} 进行介绍，并提供更多的学习资源。
@@ -98,7 +99,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
     你还可以看到我们使用了多个等号为多个变量进行连续赋值，这在 JavaScript 中是允许的，很适合为多个变量同时赋一个相同的值。后文中你会发现，使用 `width` 和 `height` 变量可以更快捷地访问画布的长宽（比如在画布正中央绘制一条垂直线）。
 
-4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。 为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
+4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
 
     ```html
     <style>
@@ -353,7 +354,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 1. 同上，下载画布模板（[1_canvas_template.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/1_canvas_template.html)）以绘制新的示例。这里还需要在同一目录下保存一个示例图片文件：[firefox.png](https://github.com/mdn/learning-area/blob/master/javascript/apis/drawing-graphics/getting-started/firefox.png)。
 
-    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。 最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
+    {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
 
 2. 将图片源嵌入画布中，代码如下：
 
@@ -362,7 +363,7 @@ ctx.fillText('Canvas text', 50, 150);
     image.src = 'firefox.png';
     ```
 
-    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 {{htmlattrxref("src", "img")}} 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
+    这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造器创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
 
 3. 这次我们尝试用 `drawImage()` 函数来嵌入图片，应确保图片先载入完毕，否则运行会出错。可以通过 `onload` 事件处理器来达成，该函数只在图片调用完毕后才会调用。在上文代码末尾添加以下内容：
 
@@ -482,7 +483,7 @@ ctx.fillText('Canvas text', 50, 150);
 
 浏览器自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
 
-我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/master/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
+我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
 
 ```js
 function loop() {
@@ -508,7 +509,7 @@ loop();
 
 我们在代码底部运行了一次 `loop()` 函数，它启动了整个循环，绘制了第一帧动画。接着 `loop()` 函数接管了`requestAnimationFrame(loop)` 的调用工作，即运行下一帧、再下一帧……的动画。
 
-请注意每一帧我们都整体清除画布并重新渲染所有内容。（每帧创建一个新球（25 个封顶），然后绘制每个球，更新它们的位置，检查是否撞到了其它球。）向画布中绘制的新图形不能像 DOM 元素那样单独操作。你无法再画布中单独操作某一个球，因为只要绘制完毕了，它就是画布的一部分，而不是一个单独的球。你需要擦除再重画，可以将整帧擦除再重画整个画面，也可通过编程选择最小的部分进行擦除和重画。
+请注意每一帧我们都整体清除画布并重新渲染所有内容。（每帧创建一个新球（25 个封顶），然后绘制每个球，更新它们的位置，检查是否撞到了其他球。）向画布中绘制的新图形不能像 DOM 元素那样单独操作。你无法再画布中单独操作某一个球，因为只要绘制完毕了，它就是画布的一部分，而不是一个单独的球。你需要擦除再重画，可以将整帧擦除再重画整个画面，也可通过编程选择最小的部分进行擦除和重画。
 
 优化图形动画是另一个编程主题，需要好多奇技淫巧。这超出我们的讨论范围啦。
 
@@ -533,7 +534,7 @@ loop();
     ctx.translate(width/2, height/2);
     ```
 
-3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 {{htmlattrxref("src", "img")}} 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
+3. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
 
     ```js
     var image = new Image();
@@ -596,7 +597,7 @@ loop();
 
     将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
-    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。 如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
+    外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 
 9. 下一步要算出每帧 `posX` 的值，在上文代码末尾添加以下内容：
 
@@ -760,7 +761,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
     内容很多，我们来剥丝抽茧：
 
     - 首先，创建一个全局变量 `cube`，这样就可以在代码任意位置访问我们的魔方。
-    - 然后，创建一个 [`TextureLoader`](https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader) 对象，并调用 `load()`。这里 `load()` 包含两个参数（其它情况可以有更多参数）：需要调用的纹理图（PNG 文件）和纹理加载成功后调用的函数。
+    - 然后，创建一个 [`TextureLoader`](https://threejs.org/docs/index.html#Reference/Loaders/TextureLoader) 对象，并调用 `load()`。这里 `load()` 包含两个参数（其他情况可以有更多参数）：需要调用的纹理图（PNG 文件）和纹理加载成功后调用的函数。
     - 函数内部，我们用 [`texture`](https://threejs.org/docs/index.html#Reference/Textures/Texture) 对象的属性指明我们要在魔方的每个面渲染 2 × 2 的图片，然后创建一个 [`BoxGeometry`](https://threejs.org/docs/index.html#Reference/Geometries/BoxGeometry) 对象和一个 [`MeshLambertMaterial`](https://threejs.org/docs/index.html#Reference/Materials/MeshLambertMaterial) 对象，将两者作为 [`Mesh`](https://threejs.org/docs/index.html#Reference/Objects/Mesh) 的参数来创建我们的魔方。 [`Mesh`](https://threejs.org/docs/index.html#Reference/Objects/Mesh) 一般就需要两个参数：一个几何（形状）和一个素材（形状表面外观）。
     - 最后，将魔方添加进场景中，调用我们的 `draw()` 函数开始动画。
 
@@ -796,15 +797,15 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-cube)。
+你可以 [到 Github 下载最终代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
-> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/master/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> **备注：** 在我们的 GitHub repo 还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 小结
 
 此刻你以经了解了一些 Canvas 和 WebGL 图形编程的基本理念和简单应用，你一定产生了不少创作灵感，玩得开心！
 
-## 另请参阅
+## 参见
 
 本文我们只涉及到画布最为基本的内容，以下内容帮你探索更多：
 
@@ -819,13 +820,3 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)：用画布为 Web 音频 API 产生的音效提供实时的视觉效果。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## 本章目录
-
-- [web API 简介](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文档操作](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [从服务器获得数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [第三方 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [绘图](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [视频 API 和 音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

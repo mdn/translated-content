@@ -2,6 +2,7 @@
 title: Document.getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 指定された名前空間の指定されたタグ名を持つ要素のリストを返します。ルートノードを含め、文書全体が検索されます。
@@ -16,9 +17,9 @@ elements = document.getElementsByTagNameNS(namespace, name)
 - _namespace_ は検索する要素の名前空間 URI です ({{domxref("Node.namespaceURI", "element.namespaceURI")}} を参照)。
 - _name_ は検索する要素の局所名、またはすべての要素に一致する特殊な値 `*` です ({{domxref("Node.localName", "element.localName")}} を参照)。
 
-> **Note:** W3C の仕様書では `elements` は `NodeList` であるとされていますが、 Gecko および Internet Explorer ではこのメソッドは {{DOMxRef("HTMLCollection")}} を返します。 Opera は `NodeList` を返しますが、 `namedItem` メソッドを実装しているので、 `HTMLCollection` と同様になります。2012 年 1 月時点で、 WebKit ブラウザーのみが純粋な `NodeList` の値を返します。詳しくは [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) を参照してください。
+> **メモ:** W3C の仕様書では `elements` は `NodeList` であるとされていますが、 Gecko および Internet Explorer ではこのメソッドは {{DOMxRef("HTMLCollection")}} を返します。 Opera は `NodeList` を返しますが、 `namedItem` メソッドを実装しているので、 `HTMLCollection` と同様になります。2012 年 1 月時点で、 WebKit ブラウザーのみが純粋な `NodeList` の値を返します。詳しくは [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) を参照してください。
 
-> **Note:** 現在、このメソッドの引数は大文字と小文字を区別しますが、 Firefox 3.5 以前は大文字と小文字を区別していませんでした。詳しくは [Firefox 3.6 の開発者リリースノート](/ja/docs/Mozilla/Firefox/Releases/3.6#DOM)および {{domxref("Element.getElementsByTagNameNS")}} のブラウザーの互換性のメモをご覧ください。
+> **メモ:** 現在、このメソッドの引数は大文字と小文字を区別しますが、 Firefox 3.5 以前は大文字と小文字を区別していませんでした。詳しくは [Firefox 3.6 の開発者リリースノート](/ja/docs/Mozilla/Firefox/Releases/3.6#DOM)および {{domxref("Element.getElementsByTagNameNS")}} のブラウザーの互換性のメモをご覧ください。
 
 ## 例
 
@@ -126,9 +127,7 @@ function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-getelementsbytagnamens', 'document.getElementsByTagNameNS')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

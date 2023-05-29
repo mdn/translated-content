@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** 介面代表了 {{HTMLElement("select")}} HTML 元素。此介面也自 {{domxref("HTMLElement")}} 介面繼承了所有 HTML 元素的屬性及方法。
@@ -13,9 +14,9 @@ slug: Web/API/HTMLSelectElement
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("autofocus", "select")}} HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
+  - : A {{jsxref("Boolean")}} reflecting the [`autofocus`](/zh-TW/docs/Web/HTML/Element/select#autofocus) HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("disabled", "select")}} HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
+  - : A {{jsxref("Boolean")}} reflecting the [`disabled`](/zh-TW/docs/Web/HTML/Element/select#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLFormElement")}} referencing the form that this element is associated with. If the element is not associated with of a {{HTMLElement("form")}} element, then it returns `null`.
 - {{domxref("HTMLSelectElement.labels")}}{{ReadOnlyInline}}
@@ -23,19 +24,19 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{
 - {{domxref("HTMLSelectElement.length")}}
   - : An `unsigned long` The number of {{HTMLElement("option")}} elements in this `select` element.
 - {{domxref("HTMLSelectElement.multiple")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("multiple", "select")}} HTML attribute, which indicates whether multiple items can be selected.
+  - : A {{jsxref("Boolean")}} reflecting the [`multiple`](/zh-TW/docs/Web/HTML/Element/select#multiple) HTML attribute, which indicates whether multiple items can be selected.
 - {{domxref("HTMLSelectElement.name")}}
-  - : A {{domxref("DOMString")}} reflecting the {{htmlattrxref("name", "select")}} HTML attribute, containing the name of this control used by servers and DOM search functions.
+  - : A {{domxref("DOMString")}} reflecting the [`name`](/zh-TW/docs/Web/HTML/Element/select#name) HTML attribute, containing the name of this control used by servers and DOM search functions.
 - {{domxref("HTMLSelectElement.options")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLOptionsCollection")}} representing the set of {{HTMLElement("option")}} elements contained by this element.
 - {{domxref("HTMLSelectElement.required")}}
-  - : A {{jsxref("Boolean")}} reflecting the {{htmlattrxref("required", "select")}} HTML attribute, which indicates whether the user is required to select a value before submitting the form.
+  - : A {{jsxref("Boolean")}} reflecting the [`required`](/zh-TW/docs/Web/HTML/Element/select#required) HTML attribute, which indicates whether the user is required to select a value before submitting the form.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : A `long` reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
 - {{domxref("HTMLSelectElement.selectedOptions")}}{{ReadOnlyInline}}
   - : An {{domxref("HTMLCollection")}} representing the set of {{HTMLElement("option")}} elements that are selected.
 - {{domxref("HTMLSelectElement.size")}}
-  - : A `long` reflecting the {{htmlattrxref("size", "select")}} HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is true, in which case it is 4.
+  - : A `long` reflecting the [`size`](/zh-TW/docs/Web/HTML/Element/select#size) HTML attribute, which contains the number of visible items in the control. The default is 1, unless `multiple` is true, in which case it is 4.
 - {{domxref("HTMLSelectElement.type")}}{{ReadOnlyInline}}
   - : A {{domxref("DOMString")}} represeting the form control's type. When `multiple` is `true`, it returns `"select-multiple"`; otherwise, it returns `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}}{{ReadOnlyInline}}
@@ -56,7 +57,7 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 - {{domxref("HTMLSelectElement.blur()")}}{{Deprecated_Inline}}
   - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
-  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{event("invalid")}} event at the element (and returns `false`).
+  - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable [`invalid`](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event) event at the element (and returns `false`).
 - {{domxref("HTMLSelectElement.focus()")}}{{Deprecated_Inline}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
@@ -90,7 +91,7 @@ console.log(select.selectedIndex); // 1
 console.log(select.options[select.selectedIndex].value) // Second
 ```
 
-A better way to track changes to the user's selection is to watch for the {{event("change")}} event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/zh-TW/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
+A better way to track changes to the user's selection is to watch for the [`change`](/zh-TW/docs/Web/API/HTMLElement/change_event) event to occur on the `<select>`. This will tell you when the value changes, and you can then update anything you need to. See [the example provided](/zh-TW/docs/Web/Events/change#Example_Change_event_on_a_select) in the documentation for the `change` event for details.
 
 ## 規範
 
@@ -98,7 +99,7 @@ A better way to track changes to the user's selection is to watch for the {{even
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 參見
 

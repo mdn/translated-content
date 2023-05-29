@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`TypedArray[@@species]`** renvoie le constructeur [du tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -59,14 +60,11 @@ class MonTableauTypé extends Uint8Array {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

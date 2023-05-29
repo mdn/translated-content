@@ -3,7 +3,8 @@ title: '<u>: Элемент слабой аннотации (подчёркив�
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The HTML **Unarticulated Annotation Element** (**`<u>`**) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
 
@@ -33,7 +34,7 @@ Along with other pure styling elements, the original HTML Underline (`<u>`) elem
 
 ### Use cases
 
-Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
+Valid use cases for the `<u>` element include annotating spelling errors, applying a proper name mark to denote proper names in Chinese text, and other forms of annotation.
 
 You should _not_ use `<u>` to simply underline text for presentation purposes, or to denote titles of books.
 

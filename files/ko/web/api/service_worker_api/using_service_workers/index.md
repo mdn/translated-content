@@ -1,9 +1,9 @@
 ---
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 {{ SeeCompatTable() }}
 
@@ -11,11 +11,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 ## 서비스 워커에 앞서서...
 
-웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 [오프라인](https://developer.mozilla.org/en-US/Apps/Build/Offline) 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.
+웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 [오프라인](/en-US/Apps/Build/Offline) 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.
 
 직전의 시도였던 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) 을 참고하세요.
 
-> **참고:** Firefox 44에서 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ({{bug("1204581")}})
+> **참고:** Firefox 44에서 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ([Firefox bug 1204581](https://bugzil.la/1204581))
 
 서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. 서비스 워커 구문은 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 보다 복잡하지만, 자바스크립트를 사용해서 세밀하게 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다. (보통 [오프라인 우선](http://offlinefirst.org/) 이라고 함) 이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다.
 
@@ -41,11 +41,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 6. 다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다. `onactivate` 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.
 7. 이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 `register()` 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.
 
-![](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png)
+![](sw-lifecycle.png)
 
 The below graphic shows a summary of the available service worker events:
 
-![install, activate, message, fetch, sync, push](https://mdn.mozillademos.org/files/12632/sw-events.png)
+![install, activate, message, fetch, sync, push](sw-events.png)
 
 ### Promises
 
@@ -82,7 +82,7 @@ Now for a real example — what if we wanted to load images dynamically, but we 
 
 Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/promises-test/).)
 
-<div class="notecard note">A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.<p></p></div>
+> **Note:** A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
 
 ```js
 function imgLoad(url) {
@@ -138,7 +138,7 @@ This all happens asynchronously.
 
 To demonstrate just the very basics of registering and installing a service worker, we have created a simple demo called [sw-test](https://github.com/mdn/sw-test), which is a simple Star wars Lego image gallery. It uses a promise-powered function to read image data from a JSON object and load the images using Ajax, before displaying the images in a line down the page. We’ve kept things static and simple for now. It also registers, installs, and activates a service worker, and when more of the spec is supported by browsers it will cache all the files required so it will work offline!
 
-![](https://mdn.mozillademos.org/files/8243/demo-screenshot.png)
+![](demo-screenshot.png)
 
 You can see the [source code on GitHub](https://github.com/mdn/sw-test/), and [view the example live](https://mdn.github.io/sw-test/). The one bit we’ll call out here is the promise (see [app.js lines 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), which is a modified version of what you read about above, in the [Promises test demo](https://github.com/mdn/promises-test). It is different in the following ways:
 
@@ -189,7 +189,7 @@ This could be for the following reasons:
 2. The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app’s root directory. In our example, the worker is at `https://mdn.github.io/sw-test/sw.js`, and the app’s root is `https://mdn.github.io/sw-test/`. But the path needs to be written as `/sw-test/sw.js`, not `/sw.js`.
 3. The service worker being pointed to is on a different origin to that of your app. This is also not allowed.
 
-![](https://mdn.mozillademos.org/files/12630/important-notes.png)
+![](important-notes.png)
 
 Also note:
 
@@ -242,7 +242,7 @@ this.addEventListener('install', function(event) {
 
 Now you’ve got your site assets cached, you need to tell service workers to do something with the cached content. This is easily done with the `fetch` event.
 
-![](https://mdn.mozillademos.org/files/12634/sw-fetch.png)
+![](sw-fetch.png)
 
 A `fetch` event fires every time any resource controlled by a service worker is fetched, which includes the documents inside the specified scope, and any resources referenced in those documents (for example if `index.html` makes a cross origin request to embed an image, that still goes through its service worker.)
 
@@ -428,14 +428,14 @@ Firefox has also started to implement some useful tools related to service worke
 
 > **참고:** You may serve your app from `http://localhost` (e.g. using `me@localhost:/my/app$ python -m SimpleHTTPServer`) for local development. See [Security considerations](https://www.w3.org/TR/service-workers/#security-considerations)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
 ## See also
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
+- Download the [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/ko/docs/Web/Guide/Performance/Using_web_workers)

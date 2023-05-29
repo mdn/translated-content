@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
+
 {{AddonSidebar()}}
 
 Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.
@@ -32,19 +33,20 @@ Un {{jsxref("object")}} contenant une combinaison des champs suivants :
 - `url` {{optional_inline}}
   - : `string`. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.CreateDetails", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 
 > **Note :**
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -71,4 +73,4 @@ Un {{jsxref("object")}} contenant une combinaison des champs suivants :
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

@@ -1,7 +1,6 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
-translation_of: Glossary/UTF-8
 ---
 UTF-8(UCS Transformation Format 8)은 월드 와이드 웹의 가장 일반적인 {{Glossary("Character encoding", "문자 인코딩")}}이다. 각 문자는 1\~4바이트로 표시된다. UTF-8은 {{Glossary("ASCII")}}와 역호환되며 표준 유니코드 문자를 나타낼 수 있다.
 

@@ -2,7 +2,8 @@
 title: transform-origin
 slug: Web/CSS/transform-origin
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 [CSS](/zh-TW/docs/Web/CSS) 內的**`transform-origin`**屬性可以設定元素變化的原點。
 
@@ -98,104 +99,112 @@ The keywords are convenience shorthands and match the following {{cssxref("&lt;p
 
 ```html hidden
 <div class="container">
+  <div class="example">
+    <div class="box box1">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<div class="example">
-  <div class="box box1">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
-
-<pre>
+  <pre>
 transform: none;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box2">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box2">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box3">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box3">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box4">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box4">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box5">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box5">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box6">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box6">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box7">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box7">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box8">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box8">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box9">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box9">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-</pre>
+</pre
+  >
 
-<div class="example">
-  <div class="box box10">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box10">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-</pre>
-
+</pre
+  >
 </div>
 ```
 
@@ -283,7 +292,7 @@ transform-origin: 100% -30%;
 
 ## Browser compatibility
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## See also
 

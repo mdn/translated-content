@@ -3,6 +3,7 @@ title: ':checked'
 slug: Web/CSS/:checked
 translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/Input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
@@ -85,14 +86,8 @@ option:checked {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', '#selector-checked', ':checked')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                               |
-| {{SpecName('HTML5 W3C', '#selector-checked', ':checked')}}     | {{Spec2('HTML5 W3C')}}         | La sémantique relative au HTML est définie.                        |
-| {{SpecName('CSS4 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                               |
-| {{SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked')}} | {{Spec2('CSS3 Basic UI')}} | Lien avec la spécification de niveau 3 pour les sélecteurs.        |
-| {{SpecName('CSS3 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.checked")}}
+{{Compat}}

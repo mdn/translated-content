@@ -2,6 +2,7 @@
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 
 ## 示例
 
-### 例子：使用 `Math.LOG2E`
+### 示例：使用 `Math.LOG2E`
 
 下面的函数返回以 2 为底数，E 的对数：
 

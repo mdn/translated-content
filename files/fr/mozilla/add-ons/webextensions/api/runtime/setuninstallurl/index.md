@@ -13,6 +13,7 @@ tags:
   - setUninstallURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 ---
+
 {{AddonSidebar()}}
 
 Définit l'URL à visiter lorsque l'extension est déinstallée. Cela peut être utilisé pour nettoyer les données côté serveur, effectuer des analyses ou implémenter des enquêtes. L'URL peut contenir au maximum 255 caractères.
@@ -30,15 +31,15 @@ var settingUrl = browser.runtime.setUninstallURL(
 ### Paramètres
 
 - `url`
-  - : `string`. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma `http` ou `https`.  Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.
+  - : `string`. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma `http` ou `https`. Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.
 
 ### Valeur retournée
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque l'URL a été définie ou rejetée avec un message d'erreur si l'opération a échoué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.setUninstallURL")}}
+{{Compat}}
 
 ## Exemples
 
@@ -63,7 +64,8 @@ settingUrl.then(onSetURL, onError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -90,4 +92,4 @@ settingUrl.then(onSetURL, onError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

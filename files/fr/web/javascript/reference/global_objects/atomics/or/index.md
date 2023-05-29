@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/or
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
@@ -58,6 +59,7 @@ Par exemple, un OU binaire appliqué entre 5 et 1 (`5 | 1`) renvoie `0101`, ce q
 5  0101
 1  0001
    ----
+
 5  0101
 ```
 
@@ -74,13 +76,11 @@ Atomics.load(ta, 0);  // 3
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                   |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| {{SpecName('ESDraft', '#sec-atomics.or', 'Atomics.or')}} | {{Spec2('ESDraft')}} | Définition initiale avec 2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.or")}}
+{{Compat}}
 
 ## Voir aussi
 

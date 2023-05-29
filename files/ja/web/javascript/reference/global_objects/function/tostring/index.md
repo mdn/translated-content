@@ -2,6 +2,7 @@
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、関数のソースコードを表す文字列を返します。
@@ -124,9 +125,7 @@ Object.getOwnPropertyDescriptor({
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

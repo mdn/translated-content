@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 Dans cet article, nous allons préciser le concept d'images adaptatives — images qui s'adaptent aux appareils selon les différentes tailles d'écran, résolutions et autres caractéristiques de ce type — et examiner les outils fournis par HTML pour faciliter leur mise en œuvre. Les images adaptatives ne sont qu'une partie (elles préparent le terrain) de la conception de sites web adaptatifs, sujet sur lequel vous en apprendrez beaucoup plus dans un prochain module au sujet des CSS.
@@ -230,11 +231,3 @@ Cet article est aussi la conclusion de l'ensemble du module [Multimedia et inté
 - [`<source>`](/fr/docs/Web/HTML/Element/Source)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module
-
-- [Images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenus audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De `<object>` à `<iframe>` — autres techniques d'intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Ajout de graphiques vectoriels dans le web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Écran d'accueil Mozilla](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

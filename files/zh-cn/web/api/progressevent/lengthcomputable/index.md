@@ -2,9 +2,10 @@
 title: ProgressEvent.lengthComputable
 slug: Web/API/ProgressEvent/lengthComputable
 ---
+
 {{APIRef("DOM Events")}}
 
-**`ProgressEvent.lengthComputable`** 只读属性是一个布尔{{domxref("Boolean")}} 标志，表示{{domxref("ProgressEvent")}} 所关联的资源是否具有可以计算的长度。否则 ，{{domxref("ProgressEvent.total")}} 属性将是一个无意义的值。
+**`ProgressEvent.lengthComputable`** 只读属性是一个布尔{{domxref("Boolean")}} 标志，表示{{domxref("ProgressEvent")}} 所关联的资源是否具有可以计算的长度。否则，{{domxref("ProgressEvent.total")}} 属性将是一个无意义的值。
 
 ## 语法
 
@@ -18,7 +19,7 @@ flag = ProgressEvent.lengthComputable
 
 ## 浏览器兼容性
 
-{{Compat("api.ProgressEvent.lengthComputable")}}
+{{Compat}}
 
 ## See also
 

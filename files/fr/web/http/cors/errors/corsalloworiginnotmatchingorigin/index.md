@@ -4,6 +4,7 @@ slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginNeCorrespondPas
 ---
+
 {{HTTPSidebar}}
 
 ## Message

@@ -4,6 +4,7 @@ slug: Web/CSS/:host_function
 translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) функция-[псевдокласс](/ru/docs/Web/CSS/%D0%9F%D1%81%D0%B5%D0%B2%D0%B4%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B) **`:host()`** выбирает shadow хоста (носителя) [shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM)-a, который содержит CSS, используемый внутри (так что вы можете выбрать пользовательский элемент изнутри его shadow DOM) — но только если селектор, переданный как параметр функции, соответствует shadow хосту.

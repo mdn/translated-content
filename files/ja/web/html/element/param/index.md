@@ -2,7 +2,8 @@
 title: '<param>: オブジェクト引数要素'
 slug: Web/HTML/Element/param
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<param>` 要素**は、{{HTMLElement("object")}} 要素の引数を定義します。
 
@@ -61,16 +62,16 @@ slug: Web/HTML/Element/param
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 引数の名称。
-- {{htmlattrdef("value")}}
+- `value`
   - : 引数の値
 
 ### 非推奨の属性
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
 
@@ -84,11 +85,7 @@ slug: Web/HTML/Element/param
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-param-element', '&lt;param&gt;')}}         | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-param-element', '&lt;param&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.3.2', '&lt;param&gt;')}}                                 | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

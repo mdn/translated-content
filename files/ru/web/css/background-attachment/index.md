@@ -12,7 +12,7 @@ translation_of: Web/CSS/background-attachment
 
 ## Краткое описание
 
-Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/CSS "CSS") свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
+Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/CSS) свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
 
 {{cssinfo}}
 
@@ -64,7 +64,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -101,7 +101,7 @@ p {
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -121,4 +121,4 @@ p {
 
 ## Смотрите также
 
-- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds)

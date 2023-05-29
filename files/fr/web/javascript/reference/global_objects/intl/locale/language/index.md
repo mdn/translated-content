@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/language
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.language`** est une propriété fournie via un accesseur qui renvoie la langue associée à la locale.
@@ -43,13 +44,11 @@ console.log(langObj.language); // Affichera "es" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.language`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.language) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.language")}}
+{{Compat}}
 
 ## Voir aussi
 

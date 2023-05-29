@@ -1,8 +1,8 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-translation_of: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`letter-spacing`** específica o comportamento do espaçamento entre caracteres de texto.

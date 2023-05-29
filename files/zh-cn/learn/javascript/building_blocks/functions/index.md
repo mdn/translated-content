@@ -2,6 +2,7 @@
 title: 函数 - 可复用代码块
 slug: Learn/JavaScript/Building_blocks/Functions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 
 在 JavaScript 中另一个基本概念是**函数**, 它允许你在一个代码块中存储一段用于处理单任务的代码，然后在任何你需要的时候用一个简短的命令来调用，而不是把相同的代码写很多次。在本文中，我们将探索函数的基本概念，如基本语法、如何定义和调用、范围和参数。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
       <th scope="row">前提条件：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >（JS 的入门）。
       </td>
@@ -38,9 +39,9 @@ slug: Learn/JavaScript/Building_blocks/Functions
 var myText = 'I am a string';
 var newString = myText.replace('string', 'sausage');
 console.log(newString);
-// the replace() string function takes a string,
-// replaces one substring with another, and returns
-// a new string with the replacement made
+// replace() 字符串函数接受一个字符串，
+// 用另一个子字符串替换一个子字符串，并返回
+// 替换后的新字符串
 ```
 
 或者当我们操作一个数组的时候：
@@ -49,18 +50,18 @@ console.log(newString);
 var myArray = ['I', 'love', 'chocolate', 'frogs'];
 var madeAString = myArray.join(' ');
 console.log(madeAString);
-// the join() function takes an array, joins
-// all the array items together into a single
-// string, and returns this new string
+// join() 函数接受一个数组，将
+// 所有数组元素连接成一个单一的
+// 字符串，并返回这个新字符串
 ```
 
 或者当我们生成一个随机数时：
 
 ```js
 var myNumber = Math.random()
-// the random() function generates a random
-// number between 0 and 1, and returns that
-// number
+// random() 函数生成一个随机
+// 数字在 0 和 1 之间，并返回该
+// 数字
 ```
 
 ...我们已经使用过函数了！
@@ -73,7 +74,7 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ## 函数与方法
 
-程序员把函数称为对象**方法（method）**的一部分。你还不必了解 JavaScript 中已建构的对象在更深层次上是如何运作的——你可以等到下一小节，我们会教给你有关对象运作方式的一切。在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。
+程序员把函数称为对象**方法**（method）的一部分。你还不必了解 JavaScript 中已建构的对象在更深层次上是如何运作的——你可以等到下一小节，我们会教给你有关对象运作方式的一切。在我们继续前进之前，我们需要澄清一些有关方法和函数概念之间可能存在的误会——当你在网络上浏览相关信息的时候，你很可能会碰上这两个术语。
 
 到目前为止我们所使用的内置代码同属于这两种形式：函数和方法。你可以在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)查看内置函数，内置对象以及其相关方法的完整列表。
 
@@ -123,7 +124,7 @@ function myFunction() {
 }
 
 myFunction()
-// calls the function once
+// 调用一次该函数
 ```
 
 ## 匿名函数
@@ -198,8 +199,8 @@ function myGreeting() {
 ```js
 myButton.onclick = function() {
   alert('hello');
-  // I can put as much code
-  // inside here as I want
+  // 我可以在这里放入
+  // 尽可能多的代码
 }
 ```
 
@@ -229,11 +230,11 @@ var newString = myText.replace('string', 'sausage');
 还应该注意，有时参数不是必须的 —— 您不必指定它们。如果没有，该功能一般会采用某种默认行为。作为示例，数组 [join（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join)函数的参数是可选的：
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
+var myArray = ['我', '爱', '巧克力', '青蛙'];
 var madeAString = myArray.join(' ');
-// returns 'I love chocolate frogs'
+// 返回 '我 爱 巧克力 青蛙'
 var madeAString = myArray.join();
-// returns 'I,love,chocolate,frogs'
+// 返回 '我,爱,巧克力,青蛙'
 ```
 
 如果没有包含参数来指定加入/分隔符，默认情况下会使用逗号
@@ -275,7 +276,7 @@ function greeting() {
 
 这两个函数都使用 `greeting()` 形式调用，但是你只能访问到 first.js 文件的`greeting()`函数（第二个文件被忽视了）。另外，第二次尝试使用 `let` 关键字定义 `name` 变量导致了一个错误。
 
-> **备注：** 您可以参考这个例子 [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (查看完整 [源代码](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> **备注：** 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
 将代码锁定在函数中的部分避免了这样的问题，并被认为是最佳实践。
 
@@ -310,72 +311,72 @@ function greeting() {
 
 5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`，`b()`所以他们看起来像这样：
 
-```js
-function a() {
-  var y = 2;
-  output(y);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(y);
+    }
 
-function b() {
-  var z = 3;
-  output(z);
-}
-```
+    function b() {
+      var z = 3;
+      output(z);
+    }
+    ```
 
-保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
+    保存代码并重新加载到浏览器中，然后尝试从 JavaScript 控制台调用`a()`和`b()`函数：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
+    您应该看到页面中输出的`y`和`z`的值。这样就没问题，因为`output()`函数在其他函数的内部被调用 - 在这种情况下，输出变量的定义和函数的调用都在同一个作用域中（译者注：即函数作用域）。`output()`它可以从任何地方被调用，因为它在全局作用域中被定义。
 
-6.现在尝试更新您的代码，如下所示：
+6. 现在尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(x);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(x);
+    }
 
-function b() {
-  var z = 3;
-  output(x);
-}
-```
+    function b() {
+      var z = 3;
+      output(x);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+7. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
+    函数 `a()`和`b()`都应该输出 x---1 的值。这些没有问题，因为即使`output()`的调用与`x`的定义不在同一个作用域内，但`x`是一个全局变量，所以在所有代码中都可用。
 
-7.最后，尝试更新您的代码，如下所示：
+8. 最后，尝试更新您的代码，如下所示：
 
-```js
-function a() {
-  var y = 2;
-  output(z);
-}
+    ```js
+    function a() {
+      var y = 2;
+      output(z);
+    }
 
-function b() {
-  var z = 3;
-  output(y);
-}
-```
+    function b() {
+      var z = 3;
+      output(y);
+    }
+    ```
 
-再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
+9. 再次保存并重新加载，并在 JavaScript 控制台中再次尝试：
 
-```js
-a();
-b();
-```
+    ```js
+    a();
+    b();
+    ```
 
-这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
+    这次`a()`和`b()`调用都会返回那个令人讨厌的 "[ReferenceError: z is not defined](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — 这是因为`output()`函数的调用和输出变量的定义不在同一个函数作用域内 - 变量对这些函数调用是不可见的。
 
 > **备注：** 相同的范围规则不适用于循环（for（）{...}）和条件块（if（）{...}） - 它们看起来非常相似，但它们不一样！小心不要让这些困惑。
 

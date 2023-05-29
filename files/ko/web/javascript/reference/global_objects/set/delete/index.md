@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Set/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 메서드는 지정한 요소를 `Set` 객체에서 제거합니다.

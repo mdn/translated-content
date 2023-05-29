@@ -8,6 +8,7 @@ tags:
   - NeedsUpdate
 translation_of: Web/API/StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 L'interface StyleSheetList représente une liste de {{domxref("StyleSheet")}}.

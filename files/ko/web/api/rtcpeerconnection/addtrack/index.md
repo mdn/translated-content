@@ -1,13 +1,12 @@
 ---
 title: RTCPeerConnection.addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
-translation_of: Web/API/RTCPeerConnection/addTrack
 ---
 {{APIRef("WebRTC")}}
 
 {{domxref("RTCPeerConnection")}}의 메소드인 **`addTrack()`**은 다른 유저에게 전송될 트랙들의 묶음에 신규 미디어 트랙을 추가합니다.
 
-> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{event("negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}} 를 참조하십시오.
+> **참고:** **참조:** 연결 인터페이스에 트랙을 추가하게되면, {{event("negotiationneeded")}} 이벤트를 발생시켜 renegotiation을 하게 만듭니다. 자세한 사항은 [Starting negotiation](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) 를 참조하십시오.
 
 ## Syntax
 

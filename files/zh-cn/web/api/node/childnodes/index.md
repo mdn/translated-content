@@ -2,6 +2,7 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 ---
+
 {{ APIRef() }}
 
 ## 概述
@@ -45,7 +46,7 @@ while (box.firstChild)
 
 集合的元素是一个节点而不是字符串。要从集合的元素获取数据，你必须使用它们的属性（例如：用 `elementNodeReference.childNodes[1].nodeName` 获取它们的名称，等等）。
 
-`document`节点 (文档节点) 包含两个子节点： Doctype 声明和根节点。根节点通常为 `documentElement` 引用，且在 (X)HTML 文档中为 HTML 元素。
+`document`节点 (文档节点) 包含两个子节点：Doctype 声明和根节点。根节点通常为 `documentElement` 引用，且在 (X)HTML 文档中为 HTML 元素。
 
 ## 规范
 

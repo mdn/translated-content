@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.appendChild()`** ajoute un nœud à la fin de la liste des enfants d'un nœud parent spécifié. Si l'enfant donné est une référence à un nœud existant dans le document, `appendChild()` le déplace de sa position actuelle vers une nouvelle position (il n'est pas nécessaire de supprimer le noeud sur son noeud parent avant de l'ajouter à un autre).

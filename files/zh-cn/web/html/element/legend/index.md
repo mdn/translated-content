@@ -2,7 +2,8 @@
 title: <legend>
 slug: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
 
@@ -11,7 +12,7 @@ slug: Web/HTML/Element/legend
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/en-US/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
    <td>无。</td>
   </tr>
   <tr>
@@ -57,7 +58,7 @@ slug: Web/HTML/Element/legend
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
 - [ARIA: Form role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)

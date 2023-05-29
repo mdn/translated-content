@@ -2,6 +2,7 @@
 title: ':read-write'
 slug: Web/CSS/:read-write
 ---
+
 {{CSSRef}}
 
 **`:read-write`** [`CSS`](/zh-CN/docs/Web/CSS) [`伪类`](/zh-CN/docs/Web/CSS/Pseudo-classes) 代表一个元素（例如可输入文本的 input 元素）可以被用户编辑。
@@ -19,7 +20,7 @@ input:read-write {
 }
 ```
 
-> **备注：** 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 {{htmlattrxref("contenteditable")}} 属性的 {{htmlelement("p")}} 元素。
+> **备注：** 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的 {{htmlelement("p")}} 元素。
 
 ## 语法
 
@@ -48,9 +49,9 @@ p:read-write { background: lightgray; }
 p[contenteditable="true"] { color: blue; }
 ```
 
-### 输出
+### 结果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -58,9 +59,9 @@ p[contenteditable="true"] { color: blue; }
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.read-write")}}
+{{Compat}}
 
 ## 参见
 
 - {{cssxref(":read-only")}}
-- HTML {{htmlattrxref("contenteditable")}} attribute
+- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute

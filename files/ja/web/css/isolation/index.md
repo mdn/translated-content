@@ -2,6 +2,7 @@
 title: isolation
 slug: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`isolation`** プロパティは、要素が新しい{{glossary("stacking context", "重ね合わせコンテキスト")}}を生成する必要があるかどうかを定義します。

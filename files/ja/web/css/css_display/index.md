@@ -1,7 +1,8 @@
 ---
 title: CSS 表示方法
-slug: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 ---
+
 {{CSSRef}}
 
 **CSS 表示方法** (CSS Display) は CSS のモジュールの一つで、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
@@ -60,13 +61,7 @@ slug: Web/CSS/CSS_Display
 
 ## 仕様書
 
-| 仕様書                                                             | 状態                      | 備考                                                                     |
-| ------------------------------------------------------------------ | ------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName("CSS3 Display", "#the-display-properties", "display")}} | {{Spec2("CSS3 Display")}} | `run-in`, `flow`, `flow-root`, `contents` および複数のキーワード値を追加 |
-| {{SpecName("CSS2.1", "visuren.html#display-prop", "display")}}     | {{Spec2("CSS2.1")}}       | テーブルモデルの値と `inline-block` を追加                               |
-| {{SpecName("CSS1", "#display", "display")}}                        | {{Spec2("CSS1")}}         | 初回定義。基本的な値: `none`, `block`, `inline`, `list-item`             |
-
-CSS Display 仕様書 Level 3 に加え、他の仕様書でも display の様々な値の動作を定義しています。
+{{Specifications}}
 
 ## ブラウザーの互換性
 

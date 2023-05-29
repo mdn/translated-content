@@ -2,6 +2,7 @@
 title: GamepadEvent()
 slug: Web/API/GamepadEvent/GamepadEvent
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadEvent_`** 构造函数用于创建一个新的 {{domxref("GamepadEvent")}} 对象。

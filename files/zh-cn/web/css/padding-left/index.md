@@ -2,6 +2,7 @@
 title: padding-left
 slug: Web/CSS/padding-left
 ---
+
 {{CSSRef}}
 
 CSS 属性 **`padding-left`** 是指一个元素在内边距区域（padding area）中左边的宽度。内边距（padding）是指一个元素的内容和边框之间的区域。
@@ -61,10 +62,10 @@ padding-left: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.padding-left")}}
+{{Compat}}
 
 ## 另见
 
-- [Introduction to the CSS basic box model](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS basic box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand
 - The mapped logical properties: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, and {{cssxref("padding-inline-end")}} and the shorthands {{cssxref("padding-block")}} and {{cssxref("padding-inline")}}

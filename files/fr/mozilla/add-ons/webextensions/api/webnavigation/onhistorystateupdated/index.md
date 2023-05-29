@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.
@@ -49,7 +50,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
@@ -70,13 +71,13 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onHistoryStateUpdated")}}
+{{Compat}}
 
 ## Examples
 
-Logs les URL cibles et les informations de transition supplémentaires pour  `onHistoryStateUpdated`, si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
+Logs les URL cibles et les informations de transition supplémentaires pour `onHistoryStateUpdated`, si le nom d'hôte de l'URL cible contient "example.com" ou commence par "developer".
 
 ```js
 var filter = {
@@ -104,7 +105,8 @@ browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -131,4 +133,4 @@ browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

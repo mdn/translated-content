@@ -3,13 +3,14 @@ title: Gamepad
 slug: Web/API/Gamepad
 translation_of: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 L'interface **`Gamepad`** de l'[API Gamepad](/fr/docs/Web/API/Gamepad_API) définit une manette individuelle ou un autre contrôleur, autorisant l'accès à des informations telles que les boutons pressés, la position des axes et l'identifiant.
 
 Un objet `Gamepad` peut être retourné de deux manières :
 
-- Via la propriété `gamepad` des événements {{event("gamepadconnected")}} et {{event("gamepaddisconnected")}}.
+- Via la propriété `gamepad` des événements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event).
 - Ou en prenant n'importe quelle position dans le tableau retourné par la méthode {{domxref("Navigator.getGamepads()")}}.
 
 ## Propriétés

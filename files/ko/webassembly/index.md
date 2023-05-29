@@ -1,13 +1,6 @@
 ---
 title: 웹어셈블리
 slug: WebAssembly
-tags:
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}
 
@@ -26,7 +19,7 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
   - : 웹 어셈블리가 무엇인지, 왜 그렇게 유용한지, 어떻게 기존의 웹 플랫폼(혹은 그 이상)에 적응시켜 사용할 수 있는지 기본 개념을 알아봅시다.
 - [Compiling a New C/C++ Module to WebAssembly](/ko/docs/WebAssembly/C_to_wasm)
-  - : [Emscripten](/ko/docs/Mozilla/Projects/Emscripten/) 같은 도구를 사용해서 C/C++ 로 작성된 코드를 .wasm으로 컴파일할 수 있습니다. 어떻게 컴파일할 수 있는지 알아봅시다.
+  - : [Emscripten](https://emscripten.org/) 같은 도구를 사용해서 C/C++ 로 작성된 코드를 .wasm으로 컴파일할 수 있습니다. 어떻게 컴파일할 수 있는지 알아봅시다.
 - [Compiling an Existing C Module to WebAssembly](/ko/docs/WebAssembly/existing_C_to_wasm)
   - : WebAssembly의 핵심 기능은 기존의 C 라이브러리 개발 생태계을 활용해 개발자가 웹에서 사용할 수 있도록하는 것입니다.
 - [Compiling from Rust to WebAssembly](/ko/docs/WebAssembly/rust_to_wasm)
@@ -58,7 +51,7 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 - {{jsxref("Global_objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
   - : `WebAssembly.Memory` 객체는 사이즈 조절 가능한 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}로, `Instance`가 접근하는 메모리를 로우(raw) 바이트들로 들고있습니다.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : ` WebAssembly.``Table ` 객체는 `Instance`에 의해 접근되는 불투명한 값(함수 레퍼런스 등)들의 사이즈 조절 가능한, 형식지정된 배열입니다.
+  - : `WebAssembly.Table` 객체는 `Instance` 에 의해 접근되는 불투명한 값(함수 레퍼런스 등)들의 사이즈 조절 가능한, 형식지정된 배열입니다.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : 새 웹어셈블리 `CompileError` 객체를 생성합니다.
 - {{jsxref("WebAssembly.LinkError()")}}

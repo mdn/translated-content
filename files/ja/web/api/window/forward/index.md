@@ -2,6 +2,7 @@
 title: window.forward
 slug: Web/API/Window/forward
 ---
+
 {{ApiRef}}{{Non-standard_header}} {{deprecated_header}}
 
 ## 概要

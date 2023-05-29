@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
 original_slug: Web/CSS/overflow-anchor/Guide_ancrage_défilement
 ---
+
 {{CSSRef}}
 
 Lorsque vous naviguez sur le Web avec une connexion plus ou moins performante, vous avez déjà pu rencontrer le problème suivant : vous faites défiler verticalement le contenu d'une page qui est en cours de chargement puis, au milieu de votre lecture, le contenu se décale brutalement plus bas (parce que des images au-dessus ou d'autres éléments ont fini de charger et s'affichent enfin).
@@ -63,9 +64,7 @@ Les évènements en question sont les modifications des [valeurs calculées](/fr
 
 ## Compatibilité des navigateurs
 
-Si vous souhaitez appliquer une amélioration progressive et détecter si cette fonctionnalité est disponible dans le navigateur utilisé, vous pouvez utiliser [les requêtes de fonctionnalité](/fr/docs/Web/CSS/@supports) afin de tester la prise en charge de la propriété `overflow-anchor`.
-
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

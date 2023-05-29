@@ -2,6 +2,7 @@
 title: FileSystemDirectoryReader
 slug: Web/API/FileSystemDirectoryReader
 ---
+
 {{APIRef("File System API")}}{{Non-standard_header}}
 
 The `FileSystemDirectoryReader` interface of the [File and Directory Entries API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) lets you access the {{domxref("FileEntry")}}-based objects (generally {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}}) representing each entry in a directory.
@@ -21,7 +22,7 @@ This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
-{{Compat("api.FileSystemDirectoryReader")}}
+{{Compat}}
 
 ## See also
 

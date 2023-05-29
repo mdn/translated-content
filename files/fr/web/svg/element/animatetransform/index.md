@@ -7,6 +7,7 @@ tags:
   - SVG Animation
 translation_of: Web/SVG/Element/animateTransform
 ---
+
 {{SVGRef}}
 
 L'élément **`<animateTransform>`** permet d'animer un élement en appliquant une transformation: translation, mise à l'échelle, rotation et/ou inclinaison.

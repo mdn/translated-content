@@ -1,8 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 **`finally()`** 메소드는 {{jsxref("Promise")}} 객체를 반환합니다. Promise가 처리되면 충족되거나 거부되는지 여부에 관계없이 지정된 콜백 함수가 실행됩니다. 이것은 Promise가 성공적으로 수행 되었는지 거절되었는지에 관계없이 `Promise`가 처리 된 후에 코드가 무조건 한 번은 실행되는 것을 제공합니다.

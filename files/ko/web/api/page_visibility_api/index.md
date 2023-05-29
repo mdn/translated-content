@@ -1,12 +1,6 @@
 ---
 title: Page Visibility API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Documents
-  - Tutorials
-translation_of: Web/API/Page_Visibility_API
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 
@@ -80,11 +74,11 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
 ## Properties overview
 
-### `document.hidden` <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only</span>
+### `document.hidden` Read only
 
 페이지가 사용자에게 보이지 않는 것으로 간주되는 상태일 경우 `true` 를 반환하고, 그렇지 않을 경우 `false` 를 반환한다.
 
-### `document.visibilityState` <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only</span>
+### `document.visibilityState` Read only
 
 는 document 의 visibility 상태를 나타내는 `string`. 가능한 values:
 
@@ -106,7 +100,7 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
@@ -116,5 +110,5 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## See also
 
-- Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx "Page Visibility on IEBlog") on the IEBlog.
-- Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html "Page Visibility API by Google") by Google
+- Description of the [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) on the IEBlog.
+- Description of the [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) by Google

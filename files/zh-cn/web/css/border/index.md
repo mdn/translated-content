@@ -2,7 +2,8 @@
 title: border
 slug: Web/CSS/border
 ---
-{{ CSSRef() }}
+
+{{CSSRef}}
 
 ## 概览
 

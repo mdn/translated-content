@@ -1,6 +1,6 @@
 ---
 title: Chasse
-slug: Glossary/advance_measure
+slug: Glossary/Advance_measure
 translation_of: Glossary/advance_measure
 ---
 

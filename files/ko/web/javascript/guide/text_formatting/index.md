@@ -1,8 +1,8 @@
 ---
 title: 텍스트 서식
 slug: Web/JavaScript/Guide/Text_formatting
-translation_of: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 이 장에서는 JavaScript에서 문자열과 텍스트로 작업하는 방법을 소개합니다.
@@ -42,7 +42,7 @@ JavaScript의 {{Glossary("문자열")}} 유형은 원문의 데이터를 나타�
 
 #### 유니코드 코드 포인트 이스케이프
 
-ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사용하면 16 진수를 사용하여 모든 문자를 이스케이프 처리 할 수 ​​있으므로 최대 `0x10FFFF`의 유니 코드 코드 포인트를 사용할 수 있습니다. 간단한 유니 코드 이스케이프를 사용하면 동일한 결과를 얻기 위해서 서로 게이트를 별도로 작성해야하는 경우가 있습니다.
+ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사용하면 16 진수를 사용하여 모든 문자를 이스케이프 처리 할 수 있으므로 최대 `0x10FFFF`의 유니 코드 코드 포인트를 사용할 수 있습니다. 간단한 유니 코드 이스케이프를 사용하면 동일한 결과를 얻기 위해서 서로 게이트를 별도로 작성해야하는 경우가 있습니다.
 
 {{jsxref("String.fromCodePoint()")}} 나 {{jsxref("String.prototype.codePointAt()")}}를 참고하세요.
 

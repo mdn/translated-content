@@ -1,8 +1,8 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-translation_of: Web/CSS/box-shadow
 ---
+
 {{CSSRef}}
 
 O **`box-shadow`** é uma propriedade do CSS, é utilizado para adicionar efeitos de sombra em volta de um elemento. Você pode especificar mais de um efeito, os separando com virgulas.
@@ -59,7 +59,7 @@ box-shadow: inset 0 0 1em gold;
 box-shadow: inset 0 0 1em gold, 0 0 1em red;
 ```
 
-A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/en-US/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
+A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
 
 [Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
 
@@ -69,14 +69,14 @@ A propriedade box-shadow permite que você adicione uma sombra em quase qualquer
 
 Especificando uma única box-shadow usando:
 
-- Dois, três ou quatro valores para [`<length>`](/en-US/docs/Web/CSS/length).
+- Dois, três ou quatro valores para [`<length>`](/pt-BR/docs/Web/CSS/length).
 
-  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#\<offset-x\> \<offset-y\>>).
-  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#<blur-radius>).
-  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#<spread-radius>).
+  - Se apenas dois valores forem definidos, eles serão interpretados como valores de [`<offset-x><offset-y>`](<#offset-x_<offset-y).
+  - Se o terceiro valor for dados, é interpretado como [`<blur-radius>`](#blur-radius).
+  - Se o quarto valor for dados, é interpretado como [`<spread-radius>`](#spread-radius).
 
 - Opcionalmente, o atributo [`inset`](#inset).
-- Opcionalmente, o valor [`<color>`](#<color>).
+- Opcionalmente, o valor [`<color>`](#color).
 
 Para especificar mais de uma sombra, separe-as com virgula.
 

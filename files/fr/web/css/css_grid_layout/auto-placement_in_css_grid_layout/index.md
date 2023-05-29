@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille", "Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS","Web/CSS/CSS_Grid_Layout")}}
@@ -508,7 +509,7 @@ Le placement automatique peut être utile lorsqu'on a un ensemble d'objets qui s
 
 {{EmbedLiveSample('Les_cas_dutilisation_pour_le_placement_automatique', '500', '1300')}}
 
-Le placement automatique peut également aider à disposer des éléments d'interface utilisateur qui ont un ordre logique. Dans l'exemple suivant, on voit comment manipuler les listes de définition. Les listes de définition sont intéressantes car il n'y a pas de niveau de regroupement pour regrouper un terme et ses définitions. Dans cet exemple, on autorise le placement automatique mais on a une classe pour qu'un élément `dt` démarre sur la première ligne et que l'élément  `dd` sur la ligne 2. On s'assure ainsi que les termes sont bien en face de chaque définition, peu importe le nombre de définitions qu'on a pour un terme.
+Le placement automatique peut également aider à disposer des éléments d'interface utilisateur qui ont un ordre logique. Dans l'exemple suivant, on voit comment manipuler les listes de définition. Les listes de définition sont intéressantes car il n'y a pas de niveau de regroupement pour regrouper un terme et ses définitions. Dans cet exemple, on autorise le placement automatique mais on a une classe pour qu'un élément `dt` démarre sur la première ligne et que l'élément `dd` sur la ligne 2. On s'assure ainsi que les termes sont bien en face de chaque définition, peu importe le nombre de définitions qu'on a pour un terme.
 
 ### Autre exemple
 

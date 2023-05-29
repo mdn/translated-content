@@ -2,6 +2,7 @@
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.move()`** は、指定した {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} をブックマークツリー内の所望の位置に移すメソッドです。このメソッドにより、ブックマークを新しいフォルダの中や、同じフォルダ内の別の場所に移動させることができます。
@@ -65,9 +66,10 @@ function moveToFolder(bookmarkId, destinationId) {
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -94,4 +96,4 @@ function moveToFolder(bookmarkId, destinationId) {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

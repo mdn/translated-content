@@ -2,6 +2,7 @@
 title: Element.getAttribute()
 slug: Web/API/Element/getAttribute
 ---
+
 {{APIRef("DOM")}}
 
 ## 概要
@@ -37,7 +38,7 @@ alert(align);
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}
 
 ## 规范
 

@@ -2,6 +2,7 @@
 title: FileSystemDirectoryReader.readEntries()
 slug: Web/API/FileSystemDirectoryReader/readEntries
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 {{domxref("FileSystemDirectoryReader")}} 接口的 **`readEntries()`** 方法用于检索正在读取的目录中的目录条目，并将它们以数组的形式传递给提供的回调函数。

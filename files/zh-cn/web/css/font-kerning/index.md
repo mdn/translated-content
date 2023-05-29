@@ -2,6 +2,7 @@
 title: font-kerning
 slug: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 **`font-kerning`** CSS 属性设置是否使用字体中储存的字距信息。
@@ -37,7 +38,7 @@ _Kerning_（字距）定义了字母的分布情况。对于良好地规定了�
 - `none`
   - : 禁用字体中的字距信息。
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
@@ -84,7 +85,7 @@ kern.textContent = input.value; /* Initialize content */
 nokern.textContent = input.value;
 ```
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
 ## 规范
 
@@ -92,8 +93,8 @@ nokern.textContent = input.value;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
-## 参考
+## 参见
 
 - {{cssxref("font-variant")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}, {{cssxref("letter-spacing")}}

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/box-flex
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Attention :** Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations sur ce qui doit être utilisé à la place.
@@ -98,7 +99,7 @@ Cette propriété n'est pas une propriété standard. [Une ancienne version de l
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-flex")}}
+{{Compat}}
 
 ## Voir aussi
 

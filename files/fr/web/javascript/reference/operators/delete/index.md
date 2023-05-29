@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/delete
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_delete
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur **`delete`** permet de retirer une propriété d'un objet.
@@ -265,22 +266,11 @@ if (3 in arbres) {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-delete-operator', 'The delete Operator')}} | {{Spec2('ESDraft')}} |                                                      |
-| {{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}             | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES1', '#sec-11.4.1', 'The delete Operator')}}                 | {{Spec2('ES1')}}         | Définition initiale. Implémenté avec JavaScript 1.2. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.delete")}}
-
-## Notes de compatibilité
-
-Bien que l'ordre d'itération des objets soit laissé à l'implémentation selon le standard ECMAScript, il semblerait que la plupart des navigateurs utilise un ordre d'itération basé sur l'ordre d'ajout des propriétés (au moins pour les propriétés propres). Toutefois, pour Internet Explorer, lorsqu'on utilise `delete` sur une propriété puis qu'on redéfinit plus tard une propriété avec le même nom, l'ordre d'itération de cette propriété sera le même que précédemment (alors que dans les autres navigateurs, cette « nouvelle » propriété sera parcourue en dernier).
-
-Aussi, si on veut simuler un tableau associatif ordonné de façon transparente et pour plusieurs navigateurs, il faudra utiliser deux tableaux ou, mieux encore, un objet {{jsxref("Map")}} si celui-ci est disponible.
+{{Compat}}
 
 ## Voir aussi
 

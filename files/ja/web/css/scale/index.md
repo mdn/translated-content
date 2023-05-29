@@ -2,6 +2,7 @@
 title: scale
 slug: Web/CSS/scale
 ---
+
 {{CSSRef}}
 
 **`scale`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立しての拡大縮小変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で座標変換関数を指定する実際の順序を思い出す手間を軽減します。

@@ -2,6 +2,7 @@
 title: ReadableStream.pipeTo()
 slug: Web/API/ReadableStream/pipeTo
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`pipeTo()`** 方法通过管道将当前的 `ReadableStream` 中的数据传递给给定的 {{domxref("WritableStream")}} 并且返回一个 {{jsxref("Promise")}}，promise 在传输成功完成时兑现，在遇到任何错误时则会被拒绝。
@@ -60,3 +61,8 @@ fetch('png-logo.png')
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [链式管道传输](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#链式管道传输)

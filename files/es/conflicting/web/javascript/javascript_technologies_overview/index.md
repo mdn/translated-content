@@ -1,12 +1,9 @@
 ---
 title: Recursos de lenguaje JavaScript
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Avanzado
-  - JavaScript
-translation_of: Web/JavaScript/Language_Resources
 original_slug: Web/JavaScript/Language_Resources
 ---
+
 {{JsSidebar}}
 
 **ECMAScript** es el lenguaje de scripting que forma la base de [JavaScript](/es/docs/JavaScript). ECMAScript está estandarizado por la organización de estándares [ECMA Internacional](http://www.ecma-international.org/) en las especificaciones **ECMA-262 y ECMA-402**. Los siguientes estándares de ECMAScript han sido aprobados o estas siendo trabajados:

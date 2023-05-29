@@ -3,6 +3,7 @@ title: 样式化链接
 slug: Learn/CSS/Styling_text/Styling_links
 original_slug: Learn/CSS/为文本添加样式/Styling_links
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -96,7 +97,7 @@ p {
 - 当用户悬停或选择 (hover 或者 focused) 的时候，使链接有相应的变化，并且在链接被激活 (active) 的时候，变化会有一些不同。可以使用以下 CSS 属性关闭/更改默认样式：
 - {{cssxref("color")}} 文字的颜色
 - {{cssxref("cursor")}} 鼠标光标的样式，你不应该把这个关掉，除非你有非常好的理由。
-- {{cssxref("outline")}} 文字的轮廓 (轮廓有点像边框，唯一的区别是边框占用了盒模型的空间，而轮廓没有； 它只是设置在背景图片的顶部)。outline 是一个有用的辅助功能，所以在把它关掉之前考虑清楚；你至少应该将悬停 (hover) 状态的样式同时应用到选中 (focus) 状态上。
+- {{cssxref("outline")}} 文字的轮廓 (轮廓有点像边框，唯一的区别是边框占用了盒模型的空间，而轮廓没有；它只是设置在背景图片的顶部)。outline 是一个有用的辅助功能，所以在把它关掉之前考虑清楚；你至少应该将悬停 (hover) 状态的样式同时应用到选中 (focus) 状态上。
 
 > **备注：** 你不仅仅只限于上述属性来把样式应用到你的链接上，你可以用任何你喜欢的属性，就是不要搞得太疯狂！
 
@@ -335,7 +336,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background: url('external-link-52.png') no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -349,7 +350,7 @@ a[href*="http"] {
 
 最后，我们在链接上设置 {{cssxref("padding-right")}} ，为背景图片留出空间，这样就不会让它和文本重叠了。
 
-最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的[HTML 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors)——`a[href*="http"]` ——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 {{htmlattrxref("href","a")}} 属性，且属性的值包含 "http" 的 {{htmlelement("a")}}的元素。
+最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的[HTML 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors)——`a[href*="http"]` ——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值包含 "http" 的 {{htmlelement("a")}}的元素。
 
 就这样啦，尝试重新审视上面的动手练习部分，尝试这种新技术！
 

@@ -2,6 +2,7 @@
 title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
+
 {{JSRef}}
 
 **`Atomics`** オブジェクトは、静的なメソッドとして不可分操作を提供します。これらは {{jsxref("SharedArrayBuffer")}} および {{jsxref("ArrayBuffer")}} オブジェクトで使用されます。

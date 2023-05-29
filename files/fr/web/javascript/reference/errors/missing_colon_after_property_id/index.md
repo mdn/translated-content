@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_colon_after_property_id
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

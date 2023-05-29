@@ -2,31 +2,24 @@
 title: AudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
-{{domxref("AudioContext")}} 的 `sampleRate` 属性返回一个浮点数表示采样率（每秒采样数），同一个 AudioContext 中的所有节点采样率相同，所以不支持采样率转换。
+{{domxref("AudioContext")}} 的 `sampleRate` 属性返回一个表示采样率（每秒采样数）的浮点数，同一个音频上下文中的所有节点采样率相同，所以不支持采样率转换。
 
-## 语法
+## 值
 
-```js
-var audioCtx = new AudioContext();
-var mySampleRate = audioCtx.sampleRate;
-```
+一个浮点数。
 
-### 返回值
+## 示例
 
-A floating point number.
-
-## 例子
-
-> **备注：** 想要完整的 Web Audio 实例，可以查看[MDN Github repo](https://github.com/mdn/)上的 Web Audio Demo，比如[panner-node](https://github.com/mdn/panner-node)。不妨试试在浏览器控制台输入`audioCtx.sampleRate`
+> **备注：** 如果需要完整的 Web Audio 实现示例，可以查看 [MDN Github repo](https://github.com/mdn/webaudio-examples) 上的 Web 音频演示。不妨试试在浏览器控制台输入 `audioCtx.sampleRate`。
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
-// Older webkit/blink browsers require a prefix
+const audioCtx = new AudioContext();
+// 旧式的 webkit/blink 浏览器需要一个前缀
 
-...
+// …
 
 console.log(audioCtx.sampleRate);
 ```
@@ -37,8 +30,8 @@ console.log(audioCtx.sampleRate);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.sampleRate")}}
+{{Compat}}
 
-## 另见
+## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web 音频 API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -2,6 +2,7 @@
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
+
 {{AddonSidebar}}工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
 
 - 如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。
@@ -203,14 +204,14 @@ button/
 - [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Browser action examples:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
+  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/main/inpage-toolbar-ui)
+  - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/main/open-my-page-button)
 
 - [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
 - [`pageAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Page action examples:
 
-  - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chill-out](https://github.com/mdn/webextensions-examples/tree/main/chill-out)

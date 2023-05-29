@@ -2,6 +2,7 @@
 title: Document.location
 slug: Web/API/Document/location
 ---
+
 {{APIRef}}
 
 **`Document.location`** 是一个只读属性，返回一个 {{domxref("Location")}} 对象，包含有文档的 URL 相关的信息，并提供了改变该 URL 和加载其他 URL 的方法。
@@ -33,7 +34,7 @@ dump(document.location);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.location")}}
+{{Compat}}
 
 ## 相关链接
 

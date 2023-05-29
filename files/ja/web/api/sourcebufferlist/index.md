@@ -2,6 +2,7 @@
 title: SourceBufferList
 slug: Web/API/SourceBufferList
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 **`SourceBufferList`** インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナリストを表します。
@@ -35,9 +36,7 @@ _親インターフェイスである {{domxref("EventTarget")}} からメソッ
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#sourcebufferlist', 'SourceBufferList')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

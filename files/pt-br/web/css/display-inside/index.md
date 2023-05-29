@@ -1,8 +1,8 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-translation_of: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} type, que define o tipo de contexto de formatação que apresenta seu conteúdo (supondo que seja um elemento não substituído). Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-outside&gt;")}} palavras-chave.
@@ -35,7 +35,7 @@ O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaix
 - `ruby` {{Experimental_Inline}}
   - : O elemento se comporta como um elemento embutido e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como o HTML correspondente{{HTMLElement("ruby")}} elementos.
 
-> **Note:** **Nota: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando**`display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
+> **Nota:**: Navegadores que suportam a sintaxe de dois valores, encontrando apenas o valor interno, como quando `display: flex` or `display: grid` especificado, definirá seu valor externo como `block`. Isso resultará no comportamento esperado; por exemplo, se você especificar um elemento a ser `display: grid`, você esperaria que a caixa criada no contêiner da grade fosse uma caixa no nível do bloco.
 
 ### Sintaxe formal
 

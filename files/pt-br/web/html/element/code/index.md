@@ -1,9 +1,9 @@
 ---
 title: '<code>: O Elemento Inline Code'
 slug: Web/HTML/Element/code
-translation_of: Web/HTML/Element/code
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a indicar que o texto é um pequeno fragmento de código. Por padrão, o conteúdo é exibido utilizando a fonte monoespaçada padrão do {{Glossary("user agent", "user agent's")}}.
 
@@ -13,13 +13,13 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -27,7 +27,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -40,7 +40,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -62,7 +62,7 @@ O **elemento** **HTML `<code>` **apresenta seu conteúdo estilizado de maneira a
 
 ## Atributos
 
-Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes "HTML/Atributos Globais").
+Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Exemplo
 

@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<time>`** indique des durées exprimées en secondes ou en millisecondes. Il est par exemple utilisé dans les propriétés {{cssxref("animation")}}, {{cssxref("transition")}}.
@@ -49,12 +50,8 @@ La conversion entre `s` et `ms` suit la logique suivante : `1s = 1000ms`.
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires                         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS4 Values')}} |                                      |
-| {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Définition normative de `s` et `ms`  |
-| {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Définition informelle de `s` et `ms` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.time")}}
+{{Compat}}

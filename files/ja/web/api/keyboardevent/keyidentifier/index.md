@@ -1,7 +1,10 @@
 ---
 title: KeyboardEvent.keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
+
 {{APIRef("UI Events")}}{{non-standard_header}}{{deprecated_header}}
 
 非推奨の **`KeyboardEvent.keyIdentifier`** は読み取り専用のプロパティで、どのキーが押されたかを特定することができる「キー識別子」文字列を返します。非推奨でない置き替え先は {{domxref("KeyboardEvent.key")}} です。

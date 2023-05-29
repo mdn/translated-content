@@ -2,9 +2,10 @@
 title: HTMLDataElement.value
 slug: Web/API/HTMLDataElement/value
 ---
+
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 {{htmlattrxref("value", "data")}} HTML 属性的{{domxref("DOMString")}} 。
+{{domxref("HTMLDataElement")}} 接口的 **`value`** 属性返回反映 [`value`](/zh-CN/docs/Web/HTML/Element/data#value) HTML 属性的{{domxref("DOMString")}} 。
 
 ## Syntax
 
@@ -23,4 +24,4 @@ A {{domxref("DOMString")}}.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDataElement.value")}}
+{{Compat}}

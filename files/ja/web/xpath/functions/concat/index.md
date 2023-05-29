@@ -1,11 +1,8 @@
 ---
 title: concat
 slug: Web/XPath/Functions/concat
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/concat
 ---
+
 {{ XsltRef() }}
 
 `concat` 関数は 2 つ以上の文字列を連結し、その結果として得られる文字列を返します。

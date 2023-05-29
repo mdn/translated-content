@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。
@@ -34,7 +35,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 一個處於擱置狀態的 promise 能以一個值被實現（fulfilled），或是以一個原因或錯誤而被拒絕（rejected）。當上述任一狀態轉換發生時，那些透過 `then` 方法所繫結（associated）的處理函式列隊就會依序被調用。（若一個 promise 已被實現或拒絕，繫結（attached）於它的處理函式將立即被呼叫，因此完成非同步操作與繫結處理函式之間不存在競爭條件（race condition）。）
 
-由於 `{{jsxref("Promise.then", "Promise.prototype.then()")}}` 以及 `{{jsxref("Promise.catch", "Promise.prototype.catch()")}}` 方法都回傳 promise，它們可以被串接。
+由於 {{jsxref("Promise.then", "Promise.prototype.then()")}} 以及 {{jsxref("Promise.catch", "Promise.prototype.catch()")}} 方法都回傳 promise，它們可以被串接。
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
@@ -64,11 +65,19 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ### 屬性
 
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','屬性')}}
+- `Promise.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ### 方法
 
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','方法')}}
+See the [Microtask guide](/zh-TW/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how these methods use the Microtask queue and services.
+
+- {{jsxref("Promise.prototype.catch()")}}
+  - : Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
+- {{jsxref("Promise.prototype.then()")}}
+  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler `onFulfilled` or `onRejected` is not a function).
+- {{jsxref("Promise.prototype.finally()")}}
+  - : Appends a handler to the promise, and returns a new promise that is resolved when the original promise is resolved. The handler is called when the promise is settled, whether fulfilled or rejected.
 
 ## 建立 Promise
 
@@ -190,7 +199,7 @@ if ("Promise" in window) {
 
 這個範例從點擊按鈕開始。您的瀏覽器需要支援 Promise。在短時間內點擊按鈕許多次，您甚至將看到不同的 promises 一個接一個地被實現。
 
-{{EmbedLiveSample("Advanced_Example", "500", "200")}}
+{{EmbedLiveSample("進階範例", "500", "200")}}
 
 ## 使用 XHR 載入圖片
 
@@ -202,7 +211,7 @@ if ("Promise" in window) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise")}}
+{{Compat}}
 
 ## 參見
 

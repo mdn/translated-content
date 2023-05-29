@@ -2,11 +2,12 @@
 title: document.readyState
 slug: Web/API/Document/readyState
 ---
+
 {{APIRef("DOM")}}
 
-**`Document.readyState` **属性描述了{{ domxref("document") }} 的加载状态。
+**`Document.readyState`** 属性描述了{{ domxref("document") }} 的加载状态。
 
-当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 {{event("readystatechange")}} 事件。
+当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件。
 
 ## 语法
 
@@ -23,7 +24,7 @@ var string = document.readyState;
 - `interactive`（可交互）
   - : 文档已被解析，"**正在加载**"状态结束，但是诸如图像，样式表和框架之类的子资源仍在加载。
 - `complete`（完成）
-  - : 文档和所有子资源已完成加载。表示 {{event("load")}} 状态的事件即将被触发。
+  - : 文档和所有子资源已完成加载。表示 [`load`](/zh-CN/docs/Web/API/Window/load_event) 状态的事件即将被触发。
 
 ## 示例
 
@@ -94,6 +95,6 @@ document.addEventListener('readystatechange', event => {
 
 ## 参见
 
-- {{event("readystatechange")}} event
-- {{event("DOMContentLoaded")}} event
-- {{event("load")}} event
+- [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) event
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) event
+- [`load`](/zh-CN/docs/Web/API/Window/load_event) event

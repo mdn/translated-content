@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/416
 translation_of: Web/HTTP/Status/416
 browser-compat: http.status.416
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`416 Range Not Satisfiable`** indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) n'a aucun sens bien que sa syntaxe soit correcte.

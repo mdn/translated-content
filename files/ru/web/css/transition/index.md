@@ -11,7 +11,7 @@ translation_of: Web/CSS/transition
 ---
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS "CSS") **`transition`** - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.
+Свойство [CSS](/ru/docs/Web/CSS) **`transition`** - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -57,7 +57,7 @@ transition: unset;
 - ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию
 - ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.
 
-Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Когда_у_списков_значений_свойств_разные_длины "ru/CSS/CSS Transitions#Когда у списков значений свойств разные длины") когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
+Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#Когда_у_списков_значений_свойств_разные_длины) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
 
 ### Формальное описание синтаксиса
 
@@ -65,7 +65,7 @@ transition: unset;
 
 ## Примеры
 
-Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "/ru/CSS/CSS transitions").
+Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 ## Спецификации
 
@@ -79,5 +79,5 @@ transition: unset;
 
 ## Смотрите также
 
-- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions "ru/CSS/CSS transitions")
+- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

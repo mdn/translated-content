@@ -2,6 +2,7 @@
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
+
 {{AddonSidebar()}}
 
 `bookmarks.BookmarkTreeNode` 型のオブジェクトは、ブックマークツリー上のノード（ブックマーク / フォルダ）を表現するものです。子ノードは親フォルダの中で `index` に従って順序付けされます。
@@ -29,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 - `children` {{optional_inline}}
   - : 各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダ以外の場合は省略されます。
 
-> **Note:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
+> **メモ:** 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。
 
 ## ブラウザーの互換性
 
@@ -37,9 +38,10 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-update) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -66,4 +68,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->

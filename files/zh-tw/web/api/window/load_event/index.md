@@ -3,6 +3,9 @@ title: load
 slug: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
+
+{{APIRef}}
+
 `load` 事件發生在加載完目標資源、該資源依賴的其他資源時。
 
 ## 一般資訊
@@ -22,8 +25,8 @@ original_slug: Web/Events/load
 
 ## 屬性
 
-| Property                              | Type                                             | Description                                                                                   |
-| ------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Property                        | Type                                             | Description                                                                                   |
+| ------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}     | [`EventTarget`](/zh-TW/docs/Web/API/EventTarget) | The event target (the topmost target in the DOM tree).                                        |
 | `type` {{readonlyInline}}       | [`DOMString`](/zh-TW/docs/Web/API/DOMString)     | The type of event.                                                                            |
 | `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-TW/docs/Web/API/Boolean)         | Whether the event normally bubbles or not.                                                    |
@@ -35,7 +38,7 @@ original_slug: Web/Events/load
 
 ```html
 <script>
-  window.addEventListener("load", function(event) {
+  window.addEventListener("load", function (event) {
     console.log("All resources finished loading!");
   });
 </script>
@@ -47,8 +50,8 @@ original_slug: Web/Events/load
 
 ## 相關事件
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event)
+- [`readystatechange`](/zh-TW/docs/Web/API/Document/readystatechange_event)
+- [`load`](/zh-TW/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-TW/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-TW/docs/Web/API/Window/unload_event)

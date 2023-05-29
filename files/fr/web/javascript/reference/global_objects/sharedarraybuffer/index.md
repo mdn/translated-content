@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de données binaires brutes générique de longueur fixe. Il est semblable à l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), mais peut ici être utilisé pour créer différentes vues sur une même mémoire partagée. À la différence d'un `ArrayBuffer`, un `SharedArrayBuffer` n'est pas [un objet transférable](/fr/docs/Glossary/Transferable_objects).
@@ -16,7 +17,7 @@ L'objet **`SharedArrayBuffer`** est utilisé afin de représenter un tampon de d
 Pour partager une zone mémoire entre plusieurs objets
 `SharedArrayBuffer` d'un agent à un autre (ici un agent correspond au programme principal de la page web ou à l'un de ses <i lang="en">web workers</i>), on utilisera [`postMessage()`](/fr/docs/Web/API/Worker/postMessage) et [le clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers des objets `SharedArrayBuffer`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec  [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)). Cependant, le bloc de mémoire référencé par les deux objets `SharedArrayBuffer` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
+L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers des objets `SharedArrayBuffer`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)). Cependant, le bloc de mémoire référencé par les deux objets `SharedArrayBuffer` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
 
 ```js
 let sab = new SharedArrayBuffer(1024);

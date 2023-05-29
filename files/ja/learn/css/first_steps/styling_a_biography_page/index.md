@@ -3,6 +3,7 @@ title: 新しい知識を使う
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。
@@ -15,7 +16,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) といったオンラインエディタを使うこともできます。
 
-> **Note:** 注記: もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
+> **メモ:** もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
 
 ## CSS を少し試してみよう
 
@@ -40,7 +41,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 完成したら次の画像のようになるはずです。
 
-![](https://media.prod.mdn.mozit.cloud/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
+![](https://mdn.dev/archives/media/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
 
 それから、このページに書かれていない属性をみてみましょう。[MDN の CSS リファレンス](/ja/docs/Web/CSS/Reference) には冒険が待っています!
 
@@ -64,11 +65,3 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 最初のモジュールを修了しました。おめでとうございます。あなたはもう CSS の基本的な部分は理解できたはずです。そして、スタイルシートの挙動が分かるようになったはずです。次のモジュール、[CSS ブロック構築](/ja/docs/Learn/CSS/Building_blocks)ではいくつかの重要な部分を深く見ていきましょう。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## このモジュール内
-
-1. [What is CSS?](/ja/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Getting started with CSS](/ja/docs/Learn/CSS/First_steps/Getting_started)
-3. [How CSS is structured](/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [How CSS works](/ja/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Using your new knowledge](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

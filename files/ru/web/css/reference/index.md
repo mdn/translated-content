@@ -8,7 +8,7 @@ tags:
   - Стили
 translation_of: Web/CSS/Reference
 ---
-Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/At-rule), единицы измерения и селекторы [CSS](/ru/docs/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](/ru/docs/Web/CSS/Reference$edit#DOM_CSS).
+Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/At-rule), единицы измерения и селекторы [CSS](/ru/docs/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](/ru/docs/Web/CSS/Reference#DOM_CSS).
 
 Заметьте, что определения CSS-правил полностью (ASCII) [текста-ориентированы](https://www.w3.org/TR/css-syntax-3/#intro), в то время как определения правил DOM-CSS / CSSOM [объектно-ориентированы](https://www.w3.org/TR/cssom/#introduction).
 
@@ -20,12 +20,13 @@ translation_of: Web/CSS/Reference
 
 ### Стили
 
-    selectorlist { property: value; [more property:value; pairs] }
+```
+selectorlist { property: value; [more property:value; pairs] }
+```
 
-    ...где selectorlist: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
+...где selectorlist: selector[:pseudo-class] [::pseudo-element] [, more selectorlists]
 
-
-    Смотрите списки селекторов, псевдоэлементов и псевдоклассов ниже.
+Смотрите списки селекторов, псевдоэлементов и псевдоклассов ниже.
 
 #### Примеры
 
@@ -48,11 +49,11 @@ div.menu-bar li:hover > ul { display: block; }
 
 - Базовые селекторы
 
-  - [По тегу](/ru/docs/Web/CSS/Type_selectors)` elementname`
+  - [По тегу](/ru/docs/Web/CSS/Type_selectors) `elementname`
   - [По классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
   - [По ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
-  - [Универсальные](/ru/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [Универсальные](/ru/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
 - Комбинационные
 

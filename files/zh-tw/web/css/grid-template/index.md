@@ -2,6 +2,7 @@
 title: grid-template
 slug: Web/CSS/grid-template
 ---
+
 {{CSSRef}}
 
 的**`grid-template`**CSS 屬性是一個[速記屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用於定義{{glossary("grid column","grid columns")}}，{{glossary("grid rows","rows")}}，和{{glossary("grid areas","area")}}。
@@ -23,13 +24,16 @@ grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* grid-template-areas grid-template-rows / grid-template-column values */
-grid-template: "a a a"
-               "b b b";
-grid-template: "a a a" 20%
-               "b b b" auto;
-grid-template: [header-top] "a a a"     [header-bottom]
-                 [main-top] "b b b" 1fr [main-bottom]
-                            / auto 1fr auto;
+grid-template:
+  "a a a"
+  "b b b";
+grid-template:
+  "a a a" 20%
+  "b b b" auto;
+grid-template:
+  [header-top] "a a a" [header-bottom]
+  [main-top] "b b b" 1fr [main-bottom]
+  / auto 1fr auto;
 
 /* Global values */
 grid-template: inherit;
@@ -62,10 +66,11 @@ grid-template: unset;
   display: grid;
   width: 100%;
   height: 200px;
-  grid-template: [header-left] "head head" 30px [header-right]
-                 [main-left]   "nav  main" 1fr  [main-right]
-                 [footer-left] "nav  foot" 30px [footer-right]
-                 / 120px 1fr;
+  grid-template:
+    [header-left] "head head" 30px [header-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
+    / 120px 1fr;
 }
 
 header {
@@ -112,7 +117,7 @@ footer {
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template")}}
+{{Compat}}
 
 ## See also
 

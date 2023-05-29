@@ -2,6 +2,7 @@
 title: テキスト方向の操作
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 CSS の学習でこれまでに遭遇したプロパティと値の多くは、画面の物理的な大きさに関係しています。たとえば、ボックスの上下左右に border を作成します。これらの物理的大きさは、水平に表示されるコンテンツに非常にきちんとマッピングされ、デフォルトでは、ウェブは右から左への言語（アラビア語など）よりも左から右への言語（英語やフランス語など）をサポートする傾向があります。
@@ -32,7 +33,7 @@ CSS の書き込みモードは、テキストが水平方向または垂直方�
 
 [ブロックとインラインのレイアウト](/ja/docs/Learn/CSS/Building_blocks/The_box_model)、およびいくつかの要素がブロック要素として表示され、他の要素がインライン要素として表示されるという事実についてはすでに説明しました。上で説明したように、ブロックとインラインは、物理的な画面ではなく、ドキュメントの書き込みモードに関連付けられています。英語などのテキストを水平方向に表示する書き込みモードを使用している場合、ブロックはページの上から下にのみ表示されます。
 
-例を見れば、これはより明確になります。この次の例では、見出しと段落を含む 2 つのボックスがあります。 1 つ目は、`writing-mode: horizo​​ntal-tb`を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2 番目は`writing-mode: vertical-rl`を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。
+例を見れば、これはより明確になります。この次の例では、見出しと段落を含む 2 つのボックスがあります。 1 つ目は、`writing-mode: horizontal-tb`を使用します。これは、水平にページの上部から下部に向かって書き込まれる書き込みモードです。 2 番目は`writing-mode: vertical-rl`を使用します;これは、垂直に右から左に書き込まれる書き込みモードです。
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
 
@@ -109,24 +110,3 @@ CSS レイアウト、特に新しいレイアウトメソッドを検討し始�
 次のモジュールでは、CSS のオーバーフローについて詳しく見ていきます。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-1. [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [属性によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [擬似クラスおよび疑似要素によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [テキスト方向の操作](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [要素のはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [表のスタイリング](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,11 +1,6 @@
 ---
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-tags:
-  - Method
-  - Reference
-browser-compat: api.EventTarget.addEventListener
-translation_of: Web/API/EventTarget/addEventListener
 ---
 {{APIRef("DOM")}}
 

@@ -2,6 +2,7 @@
 title: 區塊
 slug: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 ## 總覽

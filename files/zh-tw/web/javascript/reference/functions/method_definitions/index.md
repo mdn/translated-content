@@ -2,6 +2,7 @@
 title: 方法定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 自 ECMAScript 2015 開始，引入了一種於物件初始器（objects initializers）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
@@ -182,7 +183,7 @@ console.log(bar.foo2()); // 2
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## 參見
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après soustraction (`-=`) calcule la soustraction de l'opérande gauche par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.

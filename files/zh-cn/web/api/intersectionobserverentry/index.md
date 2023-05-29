@@ -2,9 +2,10 @@
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 ---
+
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
-**`IntersectionObserverEntry 接口`** (从属于 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) ) 描述了目标元素与其根元素容器在某一特定过渡时刻的交叉状态. `IntersectionObserverEntry` 的实例作为 `entries` 参数被传递到一个 {{domxref("IntersectionObserver")}} 的回调函数中; 此外，这些对象只能通过调用{{domxref("IntersectionObserver.takeRecords()")}} 来获取。
+**`IntersectionObserverEntry 接口`** (从属于 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) ) 描述了目标元素与其根元素容器在某一特定过渡时刻的交叉状态。`IntersectionObserverEntry` 的实例作为 `entries` 参数被传递到一个 {{domxref("IntersectionObserver")}} 的回调函数中; 此外，这些对象只能通过调用{{domxref("IntersectionObserver.takeRecords()")}} 来获取。
 
 ## 属性
 
@@ -31,6 +32,6 @@ _此接口没有方法。_
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.IntersectionObserverEntry")}}
+{{Compat}}

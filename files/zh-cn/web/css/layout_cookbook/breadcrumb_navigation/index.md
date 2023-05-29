@@ -2,6 +2,7 @@
 title: 面包屑导航
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
+
 {{CSSRef}}
 
 面包屑导航通过提供返回起始页面的面包屑轨迹，帮助用户了解他们在网站中所处的位置。
@@ -24,14 +25,14 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## 无障碍访问问题
 
-我使用了 `aria-label` 和 `aria-current` 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。 详情请参见相关链接。
+我使用了 `aria-label` 和 `aria-current` 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。详情请参见相关链接。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
-- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
 - [提供面包屑路径](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [使用 aria-current 属性](https://tink.uk/using-the-aria-current-attribute/)

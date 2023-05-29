@@ -2,6 +2,7 @@
 title: 如何关闭表单自动填充
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
+
 本文介绍了网站如何禁用表单字段的自动完成功能。
 
 默认情况下，浏览器会记录用户网页上提交的 {{HTMLElement("input")}} 框的信息。这使得浏览器能够提供自动补全（在用户开始输入的时候给用户提供可能的内容）和自动填充（在加载的时候预先填充某些字段）功能。
@@ -62,6 +63,6 @@ autocomplete="off"
 
 如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 `autocomplete="new-password"`。
 
-这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 {{bug(1119063)}}）在这种情况下会停止自动填充；而 Firefox 70 版（见 {{bug(1565407)}}）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Attributes/autocomplete#浏览器兼容性)。
+这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 [Firefox bug 1119063](https://bugzil.la/1119063)）在这种情况下会停止自动填充；而 Firefox 70 版（见 [Firefox bug 1565407](https://bugzil.la/1565407)）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Attributes/autocomplete#浏览器兼容性)。
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}

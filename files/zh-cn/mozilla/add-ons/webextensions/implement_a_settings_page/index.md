@@ -3,6 +3,7 @@ title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 ---
+
 {{AddonSidebar}}
 
 设置页面可以让用户查看，修改扩展的一些设置。
@@ -147,7 +148,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 最后，更新"borderify.js" 来读取边框颜色：
 
-> **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()中的 item.color 必须改为 item[0].color。`
+> **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
 
 ```js
  function onError(error) {
@@ -194,4 +195,4 @@ settings/
 - 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
 
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

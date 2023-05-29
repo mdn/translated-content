@@ -9,6 +9,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRect/DOMRect
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 Le constructeur **`DOMRect()`** crée un nouvel objet {{domxref("DOMRect")}}.

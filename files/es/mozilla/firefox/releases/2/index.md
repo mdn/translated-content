@@ -1,23 +1,6 @@
 ---
 title: Firefox 2 para desarrolladores
 slug: Mozilla/Firefox/Releases/2
-tags:
-  - CSS
-  - Complementos
-  - DOM
-  - Desarrollo_Web
-  - Estándares_Web
-  - HTML
-  - JavaScript
-  - RDF
-  - SVG
-  - Servicios_Web_XML
-  - Todas_las_Categorías
-  - XML
-  - XSLT
-  - XUL
-  - extensiones
-translation_of: Mozilla/Firefox/Releases/2
 original_slug: Firefox_2_para_desarrolladores
 ---
 

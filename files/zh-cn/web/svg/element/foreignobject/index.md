@@ -2,6 +2,7 @@
 title: foreignObject
 slug: Web/SVG/Element/foreignObject
 ---
+
 {{SVGRef}}
 
 [SVG](/zh-CN/docs/Web/SVG)中的 **`<foreignObject>`** 元素允许包含来自不同的 XML 命名空间的元素。在浏览器的上下文中，很可能是 XHTML / HTML。

@@ -1,6 +1,6 @@
 ---
 title: <meter>
-slug: Web/HTML/Element/Meter
+slug: Web/HTML/Element/meter
 tags:
   - Element
   - Formulaires
@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/meter
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.
 

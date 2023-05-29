@@ -2,9 +2,10 @@
 title: 标准元数据名称
 slug: Web/HTML/Element/meta/name
 ---
-{{HTMLRef}}
 
-The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，{{htmlattrxref("name", "meta")}} 属性为元数据条目提供名称，而 {{htmlattrxref("content", "meta")}} 属性提供值。
+{{HTMLSidebar}}
+
+The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，[`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性为元数据条目提供名称，而 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性提供值。
 
 ### HTML 规范中定义的标准元数据名称
 
@@ -43,7 +44,7 @@ CSS 颜色调整规范（CSS Color Adjustment specification）定义了以下元
 
   浏览器将优先采用此元数据的值，然后再使用用户的浏览器或设备设置，来确定页面上的各种默认颜色和元素外观，例如背景色、前景色、窗体控件和滚动条。`<meta name="color-scheme">` 的主要用途是指示当前页面与浅色模式和深色模式的兼容性，以及选用这两种模式时的优先顺序。
 
-  `color-scheme` 的 {{htmlattrxref("content", "meta")}} 属性的值应当为以下值中的一个：
+  `color-scheme` 的 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性的值应当为以下值中的一个：
 
   - `normal`
     - : 该文档未指定（unaware of）配色方案，应当仅使用默认配色进行渲染。
@@ -85,10 +86,6 @@ CSS 设备适配规范（CSS Device Adaptation specification）定义了以下�
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-##### 参见
-
-  [`@viewport`](/zh-CN/docs/Web/CSS/@viewport) CSS @ 规则。
-
 ### 其他元数据名称
 
 The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions) contains a large set of non-standard metadata names that have not been formally accepted yet; however, some of the names included there are already used quite commonly in practice — including the following:
@@ -96,7 +93,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 - `creator`：当前文档的创建者，例如某个组织或者机构。如果有不止一个创建者，则应当使用多个名称为 `creator` 的 {{HTMLElement("meta")}} 元素。（而不是像关键词一样使用逗号分隔：关键词不应包含逗号，但创建者名称可能含有逗号。）
 - `googlebot`：`robots` 的替代名称，只被 Googlebot（Google 的网页爬虫/索引搜寻器）使用。
 - `publisher`：当前文档的发布者/出版者。
-- `robots`：爬虫、协作搜寻器，或者 “机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
+- `robots`：爬虫、协作搜寻器，或者“机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
 
   | 值             | 描述                                                                        | 被用于                                                                                                                                                                                                                                                                                           |
   | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

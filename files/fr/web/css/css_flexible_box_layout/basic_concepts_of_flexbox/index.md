@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox
 ---
+
 {{CSSRef}}
 
 Le module des boîtes flexibles, aussi appelé « _flexbox_ », a été conçu comme un modèle de disposition unidimensionnel et comme une méthode permettant de distribuer l'espace entre des objets d'une interface ainsi que de les aligner. Dans cet article, nous verrons les fonctionnalités principales des _flexbox_ que nous approfondirons ensuite dans d'autres articles.
@@ -140,7 +141,7 @@ Si les éléments n'ont pas de taille définie, c'est la taille du contenu qui e
 
 La propriété `flex-grow` est un entier positif qui, lorsqu'elle est définie, permet aux éléments flexibles de s'étendre à partir de la mesure de `flex-basis`. Ainsi, l'élément sera étiré et occupera l'espace disponible sur cet axe ou une part de cet espace si les autres éléments peuvent s'étendre également.
 
-Si on utilise`flex-grow: 1` pour les différents éléments de l'exemple précédent, l'espace disponible sera alors partagé de façon égale entre les éléments qui seront alors étirés pour occuper l'ensemble du conteneur le long de l'axe principal.
+Si on utilise `flex-grow: 1` pour les différents éléments de l'exemple précédent, l'espace disponible sera alors partagé de façon égale entre les éléments qui seront alors étirés pour occuper l'ensemble du conteneur le long de l'axe principal.
 
 La propriété `flex-grow` permet de répartir l'espace disponible en « parts ». Si, pour le premier élément, on indique `flex-grow` avec une valeur de 2 et, pour les autres éléments, `flex-grow` avec une valeur de 1, deux « parts » de l'espace disponible seront données au premier élément (il recevra donc 100 pixels parmi les 200 pixels restants) et une part sera fournie à chacun des autres éléments (soit 50 pixels chacun parmi les 200 pixels restants).
 

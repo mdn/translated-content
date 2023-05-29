@@ -2,6 +2,7 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
@@ -49,8 +50,8 @@ image-orientation: inherit
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.image-orientation")}}
+{{Compat}}
 
 ## 相关链接
 
-- 其它和图片相关的 CSS 属性：{{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- 其他和图片相关的 CSS 属性：{{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.

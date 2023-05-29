@@ -3,6 +3,7 @@ title: handler.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/isExtensible
 ---
+
 {{JSRef}}
 **handler.isExtensible()** 方法用于拦截对对象的 Object.isExtensible()。
 
@@ -19,7 +20,7 @@ var p = new Proxy(target, {
 
 ### 参数
 
-下列参数将会被传递给 `isExtensible`方法。 this 绑定在 handler 对象上。
+下列参数将会被传递给 `isExtensible`方法。this 绑定在 handler 对象上。
 
 - `target`
   - : 目标对象。

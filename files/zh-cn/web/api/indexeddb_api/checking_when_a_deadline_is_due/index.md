@@ -2,13 +2,14 @@
 title: Checking when a deadline is due
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 在本文中，我们将看一个复杂的示例，该示例涉及根据 IndexedDB 存储的截止日期检查当前时间和日期。这里的主要复杂因素是检查存储的截止日期信息（月，小时，日等）与 Date 对象的当前时间和日期。
 
 ![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/notification), and [Vibration](/zh-CN/docs/Web/Guide/API/Vibration) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](http://mdn.github.io/to-do-notifications/).
+The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/notification), and [Vibration](/zh-CN/docs/Web/Guide/API/Vibration) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## 基本问题
 

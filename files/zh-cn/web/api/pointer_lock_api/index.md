@@ -2,6 +2,7 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
+
 {{ SeeCompatTable() }}
 
 **指针锁定**(以前叫做鼠标锁定) 提供了一种输入方法，这种方法是基于鼠标随着时间推移的运动的（也就是，deltas），而不仅是鼠标光标的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。
@@ -92,7 +93,7 @@ function lockPointer() {
   // -- 这在以后可能会发生改变。
   elem.requestFullscreen = elem.requestFullscreen    ||
                            elem.mozRequestFullscreen ||
-                           elem.mozRequestFullScreen || // 较旧的 API 把 ‘S’ 大写
+                           elem.mozRequestFullScreen || // 较旧的 API 把‘S’大写
                            elem.webkitRequestFullscreen;
   elem.requestFullscreen();
 }
@@ -162,7 +163,7 @@ document.exitPointerLock();
 
 ## pointerlockchange 事件
 
-当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。 这是一个简单事件所以不包含任何的额外数据。
+当指针锁定状态改变时 - 例如，当调用 `requestPointerLock`, `exitPointerLock`，用户按下 ESC 键，等等。— `pointerlockchange` 事件被分发到 `document`。这是一个简单事件所以不包含任何的额外数据。
 
 > **备注：** 该事件目前在 Firefox 中使用前缀的格式是 `mozpointerlockchange` ，在 Chrome 中是 `webkitpointerlockchange`。
 
@@ -176,7 +177,7 @@ document.exitPointerLock();
 
 Pointer lock API 使用 movement 属性扩展了标准的 `MouseEvent`。
 
-```idl
+```webidl
 partial interface MouseEvent {
     readonly attribute long movementX;
     readonly attribute long movementY;
@@ -205,7 +206,7 @@ partial interface MouseEvent {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 参见
 

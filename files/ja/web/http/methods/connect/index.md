@@ -1,13 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.CONNECT
-translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `CONNECT` メソッド**は、リクエストしたリソースを用いて双方向の通信を開始します。これはトンネリングを開始するときに使用されます。

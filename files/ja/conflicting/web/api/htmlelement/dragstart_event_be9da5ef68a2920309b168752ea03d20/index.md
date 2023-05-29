@@ -4,6 +4,7 @@ slug: >-
   conflicting/Web/API/HTMLElement/dragstart_event_be9da5ef68a2920309b168752ea03d20
 original_slug: Web/API/Document/dragstart_event
 ---
+
 {{APIRef}}
 
 `dragstart` イベントは、ユーザーが要素や選択されたテキストをドラッグし始めたときに発生します。

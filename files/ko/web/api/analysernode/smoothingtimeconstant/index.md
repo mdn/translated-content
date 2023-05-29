@@ -1,15 +1,8 @@
 ---
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - smoothingTimeConstant
-browser-compat: api.AnalyserNode.smoothingTimeConstant
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 인터페이스의 **`smoothingTimeConstant`** 속성은 마지막 분석 프레임의 에버리징(averaging) 상수를 나타내는 double 값입니다. 이것은 기본적으로 현재 버퍼와 `AnalyserNode`가 처리한 마지막 버퍼 사이의 평균이고, 더욱 매끄러운 시간에 대한 값 변화의 집합을 결과로 낳습니다.

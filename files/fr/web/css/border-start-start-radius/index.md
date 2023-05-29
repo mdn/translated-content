@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-start-start-radius
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-start-start-radius`** définit le rayon de courbure de la bordure pour un angle d'un élément. Cette propriété logique correspond à une propriété physique de rayon de bordure selon la directionalité du texte et le mode d'écriture. Autrement dit, cette propriété concerne un angle différent selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -76,15 +77,11 @@ background-color: #fff;
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-start-start-radius", "border-start-start-radius")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-start-start-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

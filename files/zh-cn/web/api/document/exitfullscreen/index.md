@@ -2,6 +2,7 @@
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
 ---
+
 {{ApiRef("Fullscreen API")}}
 
 **`Document.exitFullscreen()`** 方法用于让当前文档退出全屏模式（原文表述不准确，详见备注）。调用这个方法会让文档回退到上一个调用{{domxref("Element.requestFullscreen()")}}方法进入全屏模式之前的状态。
@@ -33,7 +34,7 @@ document.onclick = function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.exitFullscreen")}}
+{{Compat}}
 
 ## 参阅
 
@@ -43,4 +44,4 @@ document.onclick = function (event) {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

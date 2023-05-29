@@ -11,15 +11,18 @@ tags:
 translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
+
 {{CSSRef}}
 
 Функция CSS rotate () определяет преобразование, которое перемещает элемент вокруг неподвижной точки (как определено свойством {{Cssxref ("transform-origin")}}, не деформируя его. Количество движения определяется заданным углом; если положительно, движение будет по часовой стрелке, если оно отрицательное, оно будет против часовой стрелки. Вращение на 180 ° называется _точечным отражением_.
 
-![](https://mdn.mozillademos.org/files/12113/rotate.png)
+![](rotate.png)
 
 ## Синтаксис
 
-    rotate(a)
+```
+rotate(a)
+```
 
 ## Значения
 

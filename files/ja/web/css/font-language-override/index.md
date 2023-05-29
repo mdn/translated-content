@@ -2,6 +2,7 @@
 title: font-language-override
 slug: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 **`font-language-override`** は CSS のプロパティで、書体で言語に固有の字形の使用を制御します。

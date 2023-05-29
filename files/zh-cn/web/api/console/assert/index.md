@@ -1,7 +1,8 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
+slug: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 如果断言为 false，则将一个错误消息写入控制台。如果断言是 `true`，没有任何反应。
@@ -49,7 +50,7 @@ for (let number = 2; number <= 5; number += 1) {
 // Assertion failed: {number: 5, errorMsg: "the # is not even"}
 ```
 
-请注意， 你可以在大多数浏览器中使用 console.log 进行格式化输出
+请注意，你可以在大多数浏览器中使用 console.log 进行格式化输出
 
 ```js
 console.log('the word is %s try number %d', 'foo', 123);

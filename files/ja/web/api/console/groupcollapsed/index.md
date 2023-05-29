@@ -4,6 +4,7 @@ slug: Web/API/console/groupCollapsed
 l10n:
   sourceCommit: 4fd581de2e31ac303a4628354c80f476ba9fd0e2
 ---
+
 {{APIRef("Console API")}}
 
 **`console.groupCollapsed()`** メソッドは、ウェブコンソールに新たなインライングループを作成します。 {{domxref("console.group()")}} とは異なり、新しいグループは折りたたまれた状態で作成されます。グループ内に作成された項目を表示するには、グループの隣にある展開ボタンを使用する必要があります。

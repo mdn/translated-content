@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@keyframes
 ---
+
 {{CSSRef}}
 
 La [règle](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
@@ -146,13 +147,11 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Animations_CSS/Utiliser_
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#keyframes', '@keyframes')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## Voir aussi
 

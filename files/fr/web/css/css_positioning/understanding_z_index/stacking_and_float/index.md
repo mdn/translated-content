@@ -4,6 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/Comprendre_z-index/Empilement_et_float
 ---
+
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
 
 ## L'empilement et les éléments flottants
@@ -31,7 +32,7 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 
 ## Code source de l'exemple
 
-### **HTML**
+### HTML
 
 ```html
 <div id="abs1">

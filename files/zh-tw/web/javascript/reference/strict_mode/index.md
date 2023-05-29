@@ -2,6 +2,7 @@
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 提供開發者語法嚴格、語法受限的模式 (strict mode) ，會影響語法的使用但沒支援受限模式的瀏覽器一樣可以跑，只是行為有很大的可能會跟你想的不一樣。所以別太依賴受限模式，除非你做過功能性測試。另外這個模式可以混用在普通模式裡，你可以利用這個特性慢慢把舊的程式碼轉變成完全嚴謹和低變化性的狀態。
@@ -98,7 +99,7 @@ delete Object.prototype; // throws a TypeError
 
 Fourth, strict mode prior to Gecko 34 requires that all properties named in an object literal be unique. Normal code may duplicate property names, with the last one determining the property's value. But since only the last one does anything, the duplication is simply a vector for bugs, if the code is modified to change the property value other than by changing the last instance. Duplicate property names are a syntax error in strict mode:
 
-> **備註：** This is no longer the case in ECMAScript 2015 ({{bug(1041128)}}).
+> **備註：** This is no longer the case in ECMAScript 2015 ([Firefox bug 1041128](https://bugzil.la/1041128)).
 
 ```js
 'use strict';

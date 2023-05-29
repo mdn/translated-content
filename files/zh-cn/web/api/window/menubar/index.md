@@ -2,6 +2,7 @@
 title: Window.menubar
 slug: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 ## 概要

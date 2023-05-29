@@ -12,11 +12,12 @@ tags:
   - onRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
+
 {{AddonSidebar()}}
 
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 
-Cet événement est étroitement modélisé sur les événements définis dans l'API  [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
+Cet événement est étroitement modélisé sur les événements définis dans l'API [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
 
 - l'écouteur qui sera appelé lorsque l'événement est déclenché.
 - Un objet [`RequestFilter`](/fr/Add-ons/WebExtensions/API/webRequest/RequestFilter) contrôlant quelles requêtes provoquent le déclenchement de l'événement.
@@ -64,7 +65,7 @@ Les événements ont trois fonctions :
     - Une `Promise` qui se résout en un objet `ProxyInfo`
     - Une `Promise` qui résout en un tableau d'objets `ProxyInfo`.
 
-    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets`ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
+    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets `ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
 
     S'il y a une erreur spécifiant les objets `proxy.ProxyInfo` objects, alors {{WebExtAPIRef("proxy.onError")}} sera appelé.
 
@@ -73,9 +74,9 @@ Les événements ont trois fonctions :
 - `extraInfoSpec` {{optional_inline}}
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, `"requestHeaders"`, pour inclure les en-têtes de demande dans l'objet de `details` transmis à l'écouteur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.onRequest", 10)}}
+{{Compat}}
 
 ## Exemples
 

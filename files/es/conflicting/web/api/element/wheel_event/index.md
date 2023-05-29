@@ -1,15 +1,9 @@
 ---
 title: Element.onwheel
 slug: conflicting/Web/API/Element/wheel_event
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onwheel
 original_slug: Web/API/GlobalEventHandlers/onwheel
 ---
+
 {{ ApiRef("DOM") }}
 
 {{ non-standard_header() }}

@@ -2,6 +2,7 @@
 title: Request.cache
 slug: Web/API/Request/cache
 ---
+
 {{APIRef("Fetch")}}
 
 **`cache`** 作为{{domxref("Request")}} 接口只读属性包含着请求的缓存模式。它控制着请求以何种方式与浏览器的 [HTTP](/zh-CN/docs/Web/HTTP/Caching) 缓存进行交互。
@@ -19,7 +20,7 @@ A `RequestCache` value. The available values are:
 - `default` — 浏览器从 HTTP 缓存中寻找匹配的请求。
 
   - 如果缓存匹配上并且有效（ [fresh](/zh-CN/docs/Web/HTTP/Caching#Freshness)）, 它将直接从缓存中返回资源。
-  - 如果缓存匹配上但已经过期 ，浏览器将会使用传统（ [conditional request](/zh-CN/docs/Web/HTTP/Conditional_requests) ）的请求方式去访问远程服务器 。如果服务器端显示资源没有改动，它将从缓存中返回资源。否则，如果服务器显示资源变动，那么重新从服务器下载资源更新缓存。
+  - 如果缓存匹配上但已经过期，浏览器将会使用传统（ [conditional request](/zh-CN/docs/Web/HTTP/Conditional_requests) ）的请求方式去访问远程服务器。如果服务器端显示资源没有改动，它将从缓存中返回资源。否则，如果服务器显示资源变动，那么重新从服务器下载资源更新缓存。
   - 如果缓存没有匹配，浏览器将会以普通方式请求，并且更新已经下载的资源缓存。
 
 - `no-store` — 浏览器直接从远程服务器获取资源，不查看缓存，并且不会使用下载的资源更新缓存。
@@ -74,7 +75,7 @@ fetch("some.json", {cache: "force-cache"})
 
 ## Browser compatibility
 
-{{Compat("api.Request.cache")}}
+{{Compat}}
 
 ## See also
 

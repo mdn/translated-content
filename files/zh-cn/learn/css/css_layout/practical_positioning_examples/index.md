@@ -2,6 +2,7 @@
 title: 定位实例练习
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
@@ -12,10 +13,10 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>预备知识：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
             >Introduction to CSS</a
           >.)
         </p>
@@ -231,7 +232,7 @@ function setTabHandler(tab, tabPos) {
 这些代码做了如下工作：
 
 - 首先我们保存所有的选项卡和所有的面板引用到两个变量中，名为 `tabs` 和 `panels`，这样此后我们可以容易地为它们做事。
-- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。 运行时， 函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
+- 然后我们使用 `for` 循环遍历所有的选项卡，并且在每一个上运行叫做`setTabHandler()` 的函数，此函数建立当每个选项卡被点击时应该发生的功能。运行时，函数会被传递选项卡，和一个索引数`i` 指明选项卡在`tabs` 数组中的位置。
 - 在 `setTabHandler()` 函数中，这个标签创建了一个 `onclick` 事件来处理点击，所以当标签被点击的时候，接下来会发生：
 
   - 用一个 `for` 循环清除所有标签当前存在的类。
@@ -314,7 +315,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
-在一开始，老规矩在我们的 Githib 代码仓库拷贝[hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)([源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html))。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
+在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 
 ```css
 <label for="toggle">❔</label>
@@ -411,12 +412,3 @@ input[type=checkbox]:checked + aside {
 这样完成了我们对定位的关注——现在，你应该理解基本机制的工作原理，同样理解了怎样应用这些知识去构建一些有趣的用户界面功能，不要由于你还未完全理解所有的知识而担心——定位是一个相当高级的话题，你可以随时读这篇文章来帮助你的理解。下一个主题我们将转向 Flexbox。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

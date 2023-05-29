@@ -3,6 +3,7 @@ title: 仕上げ
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
+
 {{GamesSidebar}}
 
 {{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
@@ -98,7 +99,7 @@ requestAnimationFrame(draw);
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
 
-> **Note:**: ライフの数とパドルでボールが跳ねる角度を替えてみましょう。
+> **メモ:** ライフの数とパドルでボールが跳ねる角度を替えてみましょう。
 
 ## ゲームクリア - 今のところは
 

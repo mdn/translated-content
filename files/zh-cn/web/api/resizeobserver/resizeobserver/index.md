@@ -1,37 +1,65 @@
 ---
-title: ResizeObserver.ResizeObserver()
+title: ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 ---
-{{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
-**`ResizeObserver`** 构造器创新一个新的 {{domxref("ResizeObserver")}} 对象，用于接收 {{domxref('Element')}}内容区域的改变 或 {{domxref('SVGElement')}} 的边界框改变改变。
+{{APIRef("Resize Observer API")}}
+
+**`ResizeObserver`** 构造函数创建一个新的 {{domxref("ResizeObserver")}} 对象，它可以用于监听 {{domxref('Element')}} 内容盒或边框盒或者 {{domxref('SVGElement')}} 边界尺寸的大小。
 
 ## 语法
 
-```plain
-var ResizeObserver = new ResizeObserver(callback)
+```js-nolint
+new ResizeObserver(callback)
 ```
 
 ### 参数
 
-- 回调函数
-  - : The method called whenever a resize occurs. The method is called with an array of {{domxref('ResizeObserverEntry')}} objects.
-    当尺寸发生变化时触发回调，使用{{domxref('ResizeObserverEntry')}}对象数组调用该方法。
+- `callback`
+
+  - : 每当观测的元素调整大小时，调用该函数。该函数接收两个参数：
+
+    - `entries`
+      - : 一个 {{domxref('ResizeObserverEntry')}} 对象数组，可以用于获取每个元素改变后的新尺寸。
+    - `observer`
+      - : 对 `ResizeObserver` 自身的引用，因此需要它的时候，你要从回调函数的内部访问。例如，这可用于在达到特定的情况时，自动取消对观察者的监听，但如果你不需要它，可以省略它。
+
+    回调通常遵循以下模式：
+
+    ```js
+    function callback(entries, observer) {
+      for (const entry of entries) {
+        // Do something to each entry
+        // and possibly something to the observer itself
+      }
+    }
+    ```
 
 ## 示例
 
-The following example shows the dimensions of a box inside it, as text, upon resizing.
-下面示例展示了 box 调整大小时，其内部文本显示为尺寸大小。
+以下片段取自 [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)（[见源码](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)）示例：
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    const boxEl = entry.target;
-    const dimensions = entry.contentRect;
-    boxEl.textContent = `${dimensions.width} x ${dimensions.height}`;
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
+      if (entry.contentBoxSize[0]) {
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize[0].inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize[0].inlineSize / 600)}rem`;
+      } else {
+        // legacy path
+        h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
+        pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+      }
+    } else {
+      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+    }
   }
+  console.log('Size changed');
 });
-resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
+
+resizeObserver.observe(divElem);
 ```
 
 ## 规范
@@ -40,4 +68,4 @@ resizeObserver.observe(document.querySelector('.box:nth-child(2)'));
 
 ## 浏览器兼容性
 
-{{Compat("api.ResizeObserver.ResizeObserver")}}
+{{Compat}}

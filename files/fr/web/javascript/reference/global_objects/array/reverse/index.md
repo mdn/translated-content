@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reverse
 ---
+
 {{JSRef}}
 
 La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
@@ -61,16 +62,11 @@ console.log(a); // {0: 3, 1: 2, 2 : 1, length: 3}
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.4.4.8', 'Array.prototype.reverse')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.reverse', 'Array.prototype.reverse')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## Voir aussi
 

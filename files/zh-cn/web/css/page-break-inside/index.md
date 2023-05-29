@@ -2,6 +2,7 @@
 title: page-break-inside
 slug: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
 **`page-break-inside`** CSS 属性调整当前元素内的分页符。

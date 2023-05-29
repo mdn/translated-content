@@ -2,9 +2,10 @@
 title: Performance.now()
 slug: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
-**`performance.now()`**方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}} 。
+**`performance.now()`** 方法返回一个精确到毫秒的 {{domxref("DOMHighResTimeStamp")}}。
 
 > **警告：** 这个时间戳实际上并不是高精度的。为了降低像[Spectre](https://spectreattack.com/)这样的安全威胁，各类浏览器对该类型的值做了不同程度上的四舍五入处理。（Firefox 从 Firefox 59 开始四舍五入到 2 毫秒精度）一些浏览器还可能对这个值作稍微的随机化处理。这个值的精度在未来的版本中可能会再次改善；浏览器开发者还在调查这些时间测定攻击和如何更好的缓解这些攻击。
 
@@ -29,7 +30,7 @@ const t = window.performance.now();
 const t0 = window.performance.now();
 doSomething();
 const t1 = window.performance.now();
-console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒.")
+console.log("doSomething 函数执行了" + (t1 - t0) + "毫秒。")
 ```
 
 和 JavaScript 中其他可用的时间类函数（比如[`Date.now`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/now)）不同的是，`window.performance.now()`返回的时间戳没有被限制在一毫秒的精确度内，相反，它们以浮点数的形式表示时间，精度最高可达微秒级。
@@ -50,7 +51,7 @@ performance.now();
 // ...
 
 
-// 降低时间经度 当 `privacy.resistFingerprinting` 启用
+// 降低时间精度 当 `privacy.resistFingerprinting` 启用
 performance.now();
 // 8865400
 // 8866200
@@ -75,7 +76,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 浏览器兼容性
 
-{{Compat("api.Performance.now")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -2,6 +2,7 @@
 title: 後裔選擇器
 slug: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 ## 簡介
@@ -17,20 +18,25 @@ selector1 selector2 { style properties }
 ## 範例
 
 ```css
-span { background-color: white; }
-div span { background-color: DodgerBlue; }
+span {
+  background-color: white;
+}
+div span {
+  background-color: DodgerBlue;
+}
 ```
 
 ```html
 <div>
-  <span>Span 1.
+  <span
+    >Span 1.
     <span>Span 2.</span>
   </span>
 </div>
 <span>Span 3.</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 50) }}
+{{ EmbedLiveSample('範例', 200, 50) }}
 
 ## Specifications
 
@@ -38,4 +44,4 @@ div span { background-color: DodgerBlue; }
 
 ## Browser compatibility
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}

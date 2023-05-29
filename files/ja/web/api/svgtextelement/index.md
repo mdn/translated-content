@@ -2,6 +2,7 @@
 title: SVGTextElement
 slug: Web/API/SVGTextElement
 ---
+
 ## SVGTextElement インタフェース
 
 `SVGTextElement` インタフェースは {{SVGElement("text")}} 要素に対応するインタフェースです。

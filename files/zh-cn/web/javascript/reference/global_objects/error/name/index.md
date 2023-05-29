@@ -2,6 +2,7 @@
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
 ---
+
 {{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
 ## 概述
@@ -14,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/name
 
 ## 示例
 
-### 例子：抛出一个自定义错误
+### 示例：抛出一个自定义错误
 
 ```js
 var e = new Error("Malformed input"); // e.name 默认是"Error"

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-aspect-ratio
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`device-aspect-ratio`** est une caractéristique média (cf. {{cssxref("@media")}}) dont la valeur correspond au ratio entre la largeur et la hauteur de l'appareil d'affichage.
@@ -32,11 +33,8 @@ article {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                                                            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#device-aspect-ratio', 'device-aspect-ratio')}} | {{Spec2('CSS4 Media Queries')}} | Dépréciation dans la spécification de niveau 4 pour les requêtes média. |
-| {{SpecName('CSS3 Media Queries', '#device-aspect-ratio', 'device-aspect-ratio')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale.                                                    |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.device-aspect-ratio")}}
+{{Compat}}

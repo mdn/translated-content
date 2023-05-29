@@ -2,6 +2,7 @@
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 信息
@@ -32,7 +33,7 @@ function f(arg) {
 // SyntaxError: redeclaration of formal parameter "arg"
 ```
 
-如果要更改函数体中的“arg”的值，可以像下面一样，但不需要再次声明同一个变量。 换句话说：你可以省略 let 关键字。 如果要创建一个新变量，则需要将其重命名，因为其与函数参数有冲突。
+如果要更改函数体中的“arg”的值，可以像下面一样，但不需要再次声明同一个变量。换句话说：你可以省略 let 关键字。如果要创建一个新变量，则需要将其重命名，因为其与函数参数有冲突。
 
 ```js example-good
 function f(arg) {
@@ -46,7 +47,7 @@ function f(arg) {
 
 ## 兼容性提醒
 
-- 在 Firefox 49 {{geckoRelease(49)}} 之前，会抛出的是 {{jsxref("TypeError")}} ({{bug(1275240)}})。
+- 在 Firefox 49 之前，会抛出的是 {{jsxref("TypeError")}}（[Firefox bug 1275240](https://bugzil.la/1275240)）。
 
 ## 相关
 

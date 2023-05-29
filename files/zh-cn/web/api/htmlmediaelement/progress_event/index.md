@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: progress event'
 slug: Web/API/HTMLMediaElement/progress_event
 ---
+
 {{APIRef}}
 
 **`progress`** 事件在浏览器加载一个资源的时候周期性触发。
@@ -29,9 +30,7 @@ slug: Web/API/HTMLMediaElement/progress_event
 
 ## 示例
 
-### 在线示例
-
-#### HTML
+### HTML
 
 ```html
 <div class="example">
@@ -82,7 +81,7 @@ video {
 }
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
 const loadVideo = document.querySelector('button');
@@ -114,9 +113,9 @@ loadVideo.addEventListener('click', () => {
 });
 ```
 
-#### 结果
+### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '250px') }}
+{{ EmbedLiveSample('示例', '100%', '250px') }}
 
 ## 规范
 

@@ -1,7 +1,8 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 ## 摘要
@@ -46,35 +47,39 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 這個範例指定一個可供下載的字型，並套用至 document 的整個 body。
 
-[檢視線上範例](/@api/deki/files/2935/=webfont-sample.html)
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Font Sample</title>
+    <style media="screen, print">
+      @font-face {
+        font-family: "Bitstream Vera Serif Bold";
+        src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+      }
 
-```plain
-<html>
-<head>
-  <title>Web Font Sample</title>
-  <style type="text/css" media="screen, print">
-    @font-face {
-      font-family: "Bitstream Vera Serif Bold";
-      src: url("https://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
-    }
-
-    body { font-family: "Bitstream Vera Serif Bold", serif }
-  </style>
-</head>
-<body>
-  This is Bitstream Vera Serif Bold.
-</body>
+      body {
+        font-family: "Bitstream Vera Serif Bold", serif;
+      }
+    </style>
+  </head>
+  <body>
+    This is Bitstream Vera Serif Bold.
+  </body>
 </html>
 ```
+
+{{EmbedGHLiveSample("css-examples/web-fonts/basic-web-font.html", '100%', '100')}}
 
 這個範例會套用使用者本地的 "Helvetica Neue Bold" 字型，只有當使用者未安裝該字型（兩種名稱都試過了），才會下載 "MgOpenModernaBold.ttf" 字型：
 
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"),
-  local("HelveticaNeue-Bold"),
-  url(MgOpenModernaBold.ttf);
+  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+    url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
 ```
@@ -93,7 +98,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 
 ## 瀏覽器相容性
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## 詳見
 

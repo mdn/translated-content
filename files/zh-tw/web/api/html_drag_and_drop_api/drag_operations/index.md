@@ -2,6 +2,7 @@
 title: 拖曳操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 本文會一一說明拖曳各步驟的作業。
@@ -16,8 +17,8 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
-- 在想要拖曳的元素上設定 `{{htmlattrxref("draggable")}}` 屬性為 `true`。
-- 註冊 `{{event("dragstart")}}` 事件之事件處理器。
+- 在想要拖曳的元素上設定 [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) 屬性為 `true`。
+- 註冊 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
 以下是一段簡單的範例。
@@ -93,7 +94,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 設定拖曳圖片
 
-當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/zh-TW/docs/DragDrop/DataTransfer#setDragImage.28.29)
+當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 來指定我們自己的拖曳使用圖片。
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -313,7 +314,7 @@ function doDrop(event)
 
 ## 參見
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

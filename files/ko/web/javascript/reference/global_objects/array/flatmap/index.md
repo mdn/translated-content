@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
-tags:
-  - Array
-  - Experimental
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 {{JSRef}} {{SeeCompatTable}}
 
@@ -73,7 +65,7 @@ arr1.map(x=>x.split(" "));
 // [["it's","Sunny","in"],[""],["California"]]
 
 arr1.flatMap(x => x.split(" "));
-// ["it's","Sunny","in","California"]
+// ["it's","Sunny","in","","California"]
 ```
 
 출력 리스트의 길이는 입력 리스트의 길이와 다를 수 있습니다.

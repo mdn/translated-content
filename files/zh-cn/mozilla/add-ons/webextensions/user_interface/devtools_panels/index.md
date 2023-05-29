@@ -2,6 +2,7 @@
 title: devtools panels
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
 > **备注：** This feature is available since Firefox 54.

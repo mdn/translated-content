@@ -1,16 +1,12 @@
 ---
-title: <br>
+title: '<br>: El elemento de salto de línea'
 slug: Web/HTML/Element/br
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/br
 original_slug: Web/HTML/Elemento/br
 ---
+
 ## Resumen
 
-El elemento HTML _l\_\_ine break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.
+El elemento HTML _line break_ `<br>` produce un salto de línea en el texto (retorno de carro). Es útil para escribir un poema o una dirección, donde la división de las líneas es significante.
 
 No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello utiliza la propiedad {{cssxref('margin')}} de [CSS](/es/docs/CSS) o el elemento {{HTMLElement("p")}}.
 
@@ -25,10 +21,10 @@ No utilices `<br>` para incrementar el espacio entre líneas de texto; para ello
 
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("clear")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("clear")}} {{Deprecated_Inline}}
   - : Indica donde empieza la siguiente línea después del salto.
 
-> **Nota:** **Nota de uso:** Este atributo está obsoleot en {{HTMLVersionInline(5)}} y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
+> **Nota:** Este atributo está obsoleto en HTML5 y **no debe utilizarse por los autores**. En su lugar utiliza la propiedad {{CSSxref('clear')}} de CSS.
 
 ## Ejemplo
 
@@ -50,19 +46,15 @@ USA
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-br-element', '&lt;br&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.2.1', '&lt;br&gt;')}}                     | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
-## Compatibilidad de navegador
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
-## Ver también
+## Véase también
 
 - Elemento {{HTMLElement("address")}}
 - Elemento {{HTMLElement("p")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

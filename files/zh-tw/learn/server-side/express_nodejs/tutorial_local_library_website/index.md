@@ -1,7 +1,8 @@
 ---
-title: 'Express 教學 1: 本地圖書館網站'
+title: "Express 教學 1: 本地圖書館網站"
 slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
 
 我們實作教程系列的第一篇文章，會說明將學到什麼東西，並提供「本地圖書館」範例網站的概述 。我們將在接下來的文章中一步一步完成這個網站。
@@ -68,15 +69,3 @@ _我們接下來將創建，並隨著本系列教程發展的網站，名字是�
 現在，你對本地圖書館網站以及將要學習的東西，有更多一點的認識，是時候開始創建一個 [骨架項目](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，以存放我們的範例。
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
-
-## 本系列教學
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

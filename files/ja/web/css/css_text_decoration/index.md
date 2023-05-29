@@ -1,7 +1,8 @@
 ---
 title: CSS テキスト装飾
-slug: Web/CSS/CSS_Text_Decoration
+slug: Web/CSS/CSS_text_decoration
 ---
+
 {{CSSRef}}
 
 **CSS テキスト装飾** (CSS Text Decoration) は CSS のモジュールの一つで、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。</p>
@@ -74,9 +75,4 @@ _なし。_
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | 備考            |
-| ------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Text Decoration')}} | {{Spec2('CSS4 Text Decoration')}} |                    |
-| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |                    |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | 初回定義 |
+{{Specifications}}

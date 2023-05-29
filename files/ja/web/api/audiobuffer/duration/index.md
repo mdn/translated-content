@@ -2,6 +2,7 @@
 title: AudioBuffer.duration
 slug: Web/API/AudioBuffer/duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`duration`** は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データの再生時間を秒数で表す double 値を返します。
@@ -47,4 +48,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -2,6 +2,7 @@
 title: URL.toString()
 slug: Web/API/URL/toString
 ---
+
 {{ApiRef("URL API")}}
 
 **`URL.toString()`** 字符串化方法返回一个包含完整 URL 的 {{domxref("USVString")}}。它的作用等同于只读的 {{domxref("URL.href")}}。
@@ -35,7 +36,7 @@ url.toString() // 应当返回字符串形式的 URL
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.toString")}}
+{{Compat}}
 
 ## 参见
 

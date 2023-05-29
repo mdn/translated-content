@@ -1,13 +1,8 @@
 ---
 title: Codificación de caracteres
-slug: Glossary/character_encoding
-tags:
-  - Caracter
-  - Caractères
-  - Codificación
-  - Glosario
-translation_of: Glossary/character_encoding
+slug: Glossary/Character_encoding
 ---
+
 Una codificación define cómo se traducen los bytes a texto y viceversa. Una secuencia de bytes se pueden interpretar de diferentes formas. Eligiendo una codificación en particular (como UTF-8), decimos como la secuencia de bytes debe ser interpretada.
 
 Por ejemplo, en HTML normalmente especificamos que la codificiación va a ser UTF-8 con la siguiente linea:
@@ -23,4 +18,4 @@ Con esto te aseguras de que usando caracteres propios de cualquier lenguaje huma
 ### Conocimientos generales
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- {{Interwiki("wikipedia", "Codificación_de_caracteres", "Codificación de caracteres")}} en Wikipedia
+- [Codificación de caracteres](https://es.wikipedia.org/wiki/Codificación_de_caracteres) en Wikipedia

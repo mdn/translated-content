@@ -2,6 +2,7 @@
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** 方法可以用来模拟鼠标左键单击一个元素。

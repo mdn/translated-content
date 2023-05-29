@@ -3,6 +3,7 @@ title: バナーと注意
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 original_slug: MDN/Structures/Banners_and_notices
 ---
+
 {{MDNSidebar}}
 
 時には、記事に特別な注意を加える必要があります。
@@ -17,7 +18,7 @@ original_slug: MDN/Structures/Banners_and_notices
 それが終わったら、プルリクエストを発行し、変更をレビューしてもらい、マージしてもらいます。
 それ以降、ページには適切なバナーが表示され、最新の記事を探すときにページタグを参照するマクロは、更新したページが非推奨であること、またはそのようなことを知ることができるようになります。
 
-> **Note:** 編集についてもっと知るには、[content リポジトリーの README](https://github.com/mdn/content) を見てください。
+> **メモ:** 編集についてもっと知るには、[content リポジトリーの README](https://github.com/mdn/content) を見てください。
 
 時には、項目リストや表の中の一つの項目に、廃止 (obsolete) や非推奨 (deprecated) などのフラグを立てたいことがあります。
 以下の各マクロには、そのための特別バージョンがあります。マクロ名の最後にある "\_header" を "\_inline"に変えてください。

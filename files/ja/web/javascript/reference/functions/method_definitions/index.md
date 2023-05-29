@@ -2,6 +2,7 @@
 title: メソッド定義
 slug: Web/JavaScript/Reference/Functions/Method_definitions
 ---
+
 {{JsSidebar("Functions")}}
 
 ECMAScript 2015 より、オブジェクトイニシャライザーのメソッド定義のための短い構文が導入されました。これは、メソッドの名前に割り当てられた関数の簡略構文です。

@@ -3,7 +3,7 @@ title: '<optgroup>: 選択肢グループ要素'
 slug: Web/HTML/Element/optgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢 ({{HTMLElement("option")}}) のグループを作成します。
 
@@ -33,7 +33,7 @@ slug: Web/HTML/Element/optgroup
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td>{{ARIARole("group")}}</td>
+      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
@@ -46,15 +46,15 @@ slug: Web/HTML/Element/optgroup
   </tbody>
 </table>
 
-> **Note:** optgroup 要素を入れ子にすることはできません。
+> **メモ:** optgroup 要素を入れ子にすることはできません。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : この論理属性が指定された場合、このオプショングループ内の項目のいずれも選択不能となります。多くの場合、ブラウザーはそのコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。
-- {{htmlattrdef("label")}}
+- `label`
   - : ブラウザーがユーザーインターフェイス上の選択肢にラベル付けするのに使用できるオプションのグループの名前。この要素を使用する場合には、この属性は必須です。
 
 ## 例

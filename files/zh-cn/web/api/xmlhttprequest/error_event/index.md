@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: error 事件'
 slug: Web/API/XMLHttpRequest/error_event
 ---
+
 {{APIRef}}
 
 当请求遇到错误时，将触发`error` 事件。
@@ -92,7 +93,7 @@ function runXHR(url) {
 }
 
 xhrButtonSuccess.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg');
+    runXHR('dgszyjnxcaipwzy.jpg');
 });
 
 xhrButtonError.addEventListener('click', () => {
@@ -100,7 +101,7 @@ xhrButtonError.addEventListener('click', () => {
 });
 
 xhrButtonAbort.addEventListener('click', () => {
-    runXHR('https://mdn.mozillademos.org/files/16553/DgsZYJNXcAIPwzy.jpg').abort();
+    runXHR('dgszyjnxcaipwzy.jpg').abort();
 });
 ```
 
@@ -114,9 +115,9 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.error_event")}}
+{{Compat}}
 
 ## 其他
 
-- 相关事件: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
 - [监视进度](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

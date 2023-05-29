@@ -2,6 +2,7 @@
 title: 更新书本表单
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 ---
+
 本文最后一部分演示如何定义一个页面，以更新书本（`Book`）对象。当更新一本书的时候，表单处理更像是创建一本书，除了你必须将表单填进 `GET` 路由，并附加上来自数据库的值。
 
 ## 控制器—get 路由
@@ -179,7 +180,7 @@ exports.book_update_post = [
 
 ![](locallibary_express_book_update_noerrors.png)
 
-> **备注：** 其它更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。
+> **备注：** 其他更新对象的页面，也可以用同样的方式处理。我们把这些更新页面的实作留下，做为自我挑战。
 
 ## 下一步
 

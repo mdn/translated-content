@@ -1,16 +1,8 @@
 ---
 title: History.length
 slug: Web/API/History/length
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - History API
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/History/length
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`History.length`** 읽기 전용 속성은 현재 페이지를 포함해, 세션 기록의 길이를 나타내는 정수를 반환합니다. 예를 들어, 새로운 탭에 막 불러온 페이지의 세션 기록 길이는 `1`입니다.

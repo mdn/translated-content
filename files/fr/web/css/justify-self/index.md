@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/justify-self
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.
@@ -168,21 +169,11 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Box Alignment', '#propdef-justify-slef', 'justify-self')}} | {{Spec2('CSS3 Box Alignment')}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles/_flexbox_
-
-{{Compat("css.properties.justify-self.flex_context")}}
-
-### Prise en charge pour les grilles CSS
-
-{{Compat("css.properties.justify-self.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

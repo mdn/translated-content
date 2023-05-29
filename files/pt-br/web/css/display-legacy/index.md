@@ -1,8 +1,8 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
-translation_of: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 O CSS 2 usou uma sintaxe de palavra-chave única para o `display` , exigindo palavras-chave separadas para variantes em nível de bloco e em linha do mesmo modo de layout. Esta página detalha esses valores.

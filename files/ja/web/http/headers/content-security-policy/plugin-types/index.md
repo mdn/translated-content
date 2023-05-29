@@ -1,22 +1,13 @@
 ---
-title: 'CSP: plugin-types'
+title: "CSP: plugin-types"
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Flash
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-browser-compat: http.headers.Content-Security-Policy.plugin-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+l10n:
+  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
 ---
-{{HTTPSidebar}}{{deprecated_header}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** ディレクティブは、文書に埋め込むことができるプラグインのセットを、読み込むことができるリソースの種類を制限することによって制限します。
+{{HTTPSidebar}}{{deprecated_header}}{{Non-standard_header}}
+
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`plugin-types`** ディレクティブは、文書に埋め込むことができるプラグインのセットを、読み込むことができるリソースの種類を制限することによって制限します。
 
 {{HTMLElement("embed")}}, {{HTMLElement("object")}}, {{HTMLElement("applet")}} の各要素のインスタンス化は、次の場合に失敗します。
 
@@ -36,7 +27,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** 
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
-      <td>なし。これを設定しないと何も許可されない。</td>
+      <td>なし。これを設定しないと何でも許可される。</td>
     </tr>
   </tbody>
 </table>
@@ -45,7 +36,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** 
 
 1 つ以上の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を `plugin-types` ポリシーに設定することができます。
 
-```
+```http
 Content-Security-Policy: plugin-types <type>/<subtype>;
 Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 ```
@@ -60,28 +51,14 @@ Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 全てのプラグインを不許可にするには、 {{CSP("object-src")}} ディレクティブを `'none'` に設定すればプラグインが不許可になります。 `plugin-types` ディレクティブは、 `object-src` でプラグインを許可している場合に限って使用することができます。
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
-```
-
-### Flash コンテンツの許可
-
-以下のコンテンツセキュリティポリシーは、
-
-```
-Content-Security-Policy: plugin-types application/x-shockwave-flash
-```
-
-次のような Flash オブジェクトの読み込みを許可します。
-
-```html
-<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
 ```
 
 ### Java アプレットの許可
 
 {{HTMLElement("applet")}} を読み込むには、 `application/x-java-applet` を指定する必要があります。
 
-```
+```http
 Content-Security-Policy: plugin-types application/x-java-applet
 ```
 

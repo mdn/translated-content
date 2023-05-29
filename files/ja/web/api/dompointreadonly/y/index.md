@@ -2,6 +2,7 @@
 title: DOMPointReadOnly.y
 slug: Web/API/DOMPointReadOnly/y
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPointReadOnly`** インターフェイスの **`y`** プロパティは、空間の読み取り専用の点における垂直座標 y を保持します。

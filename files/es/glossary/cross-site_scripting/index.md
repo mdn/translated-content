@@ -1,9 +1,9 @@
 ---
 title: Cross-site scripting
 slug: Glossary/Cross-site_scripting
-translation_of: Glossary/Cross-site_scripting
 ---
-Cross-site scripting (XSS) es una vulnerabilidad de seguridad que permite a un atacante inyectar en un sitio web código malicioso del lado del cliente. Este código es ejecutado por las vícitmas y permite a los atacante eludir los controles de acceso y hacerce pasar por usuarios. Según el Open Web Application Security Project, XSS fue la [séptima vulnerabilidad más común de las aplicaciones web](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf) en 2017.
+
+Cross-site scripting (XSS) es una vulnerabilidad de seguridad que permite a un atacante inyectar en un sitio web código malicioso del lado del cliente. Este código es ejecutado por las víctimas y permite a los atacante eludir los controles de acceso y hacerse pasar por usuarios. Según el Open Web Application Security Project, XSS fue la [séptima vulnerabilidad más común de las aplicaciones web](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf) en 2017.
 
 Estos ataques tienen éxito si la aplicación web no emplea suficiente validación o codificación. El navegador del usuario no puede detectar que el script malicioso no es confiable, por lo que da acceso a cookies, tokens de sesión u otra información sensible específica del sitio, o permite que el escript reescriba contenido {{glossary("HTML")}}.
 
@@ -24,7 +24,7 @@ Los ataques XSS se pueden clasificar en tres categorías: almacenados (también 
 
 ### Conocimientos generales
 
-- {{Interwiki("wikipedia", "Cross-site scripting")}} on Wikipedia
+- [Cross-site scripting](https://es.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 - [Another article about Cross-site scripting](http://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
 - [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)

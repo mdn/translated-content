@@ -2,6 +2,7 @@
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 **`DOMImplementation.createDocument()`方法创建并返回一个** {{domxref("XMLDocument")}}对象。
@@ -35,10 +36,10 @@ alert(doc.getElementById('abc')); // [object HTMLBodyElement]
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.DOMImplementation.createDocument")}}
+{{Compat}}
 
-## 另请参见
+## 参见
 
 - 归属它的 {{domxref("DOMImplementation")}} 接口。

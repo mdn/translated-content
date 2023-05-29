@@ -2,6 +2,7 @@
 title: 属性セレクター
 slug: Web/CSS/Attribute_selectors
 ---
+
 {{CSSRef}}
 
 CSS の**属性セレクター** (attribute selector) は、指定された属性が存在するかどうか、またはその値に基づいて要素を選択します。
@@ -40,7 +41,7 @@ a[class~="logo"] {
 - `[attr=value]`
   - : _attr_ という名前の属性の値が正確に _value_ である要素を表します。
 - `[attr~=value]`
-  - : _attr_ という名前の属性の値が正確に _value_ と一致する要素を表します。空白区切りの語のリストの形で、複数の _value_ を含めることができます。
+  - : _attr_ という名前の属性の値が空白区切りの語のリストであり、その内の 1 つが正確に _value_ と一致する要素を表します。
 - `[attr|=value]`
   - : _attr_ という名前の属性の値が正確に _value_ と一致するか、 _value_ で始まり直後にハイフン (`-` (U+002D)) が続く要素を表します。言語のサブコードの一致によく使われます。
 - `[attr^=value]`
@@ -168,7 +169,7 @@ div[data-lang="zh-TW"] {
 
 ### HTML 順序付きリスト
 
-HTML 仕様書では、 {{htmlattrxref("type", "input")}} 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の {{htmlattrxref("type", "ol")}} 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
+HTML 仕様書では、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく一致することを要求しており、順序付きリスト ({{HTMLElement("ol")}}) 要素の [`type`](/ja/docs/Web/HTML/Element/ol#type) 属性に使おうとすると、 [case-sensitive](#case-sensitive) 修飾子がなければ正しく動作しません。
 
 #### CSS
 

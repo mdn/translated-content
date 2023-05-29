@@ -2,6 +2,7 @@
 title: HTMLHyperlinkElementUtils.origin
 slug: Web/API/HTMLAnchorElement/origin
 ---
+
 {{APIRef("URL API")}}
 
 **`HTMLHyperlinkElementUtils.origin`** 只读属性是一个 {{domxref("USVString")}} ，其中包含代表 URL 的原始码的 Unicode 序列化，即：
@@ -31,7 +32,7 @@ var result = window.location.origin; // Returns:'https://developer.mozilla.org'
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement.origin")}}
+{{Compat}}
 
 ## See also
 

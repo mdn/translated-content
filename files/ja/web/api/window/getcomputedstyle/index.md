@@ -4,6 +4,7 @@ slug: Web/API/Window/getComputedStyle
 l10n:
   sourceCommit: 27e11bf5ee2425dc6b939d0d1825ac741414a688
 ---
+
 {{APIRef("CSSOM")}}
 
 **`Window.getComputedStyle()`** メソッドは、アクティブなスタイルシートを適用し、それらの値に含まれる可能性のある基本的な計算を解決した後、要素のすべての CSS プロパティの値を含むオブジェクトを返します。
@@ -34,7 +35,7 @@ _生きた_ {{DOMxRef("CSSStyleDeclaration")}} オブジェクトで、要素の
 
   - : 渡されたオブジェクトが {{DOMxRef("Element")}} ではないか、 `pseudoElt` が有効な擬似要素セレクターではないか、 {{CSSxRef("::part", "::part()")}} または {{CSSxRef("::slotted", "::slotted()")}} である場合。
 
-    > **Note:** 有効な擬似要素とは構文的に適切であることを指します。例えば `::unsupported` は擬似要素として対応されていませんが、有効と判断されます。さらに、最新の W3 標準では `::before` と `::after` のみを[明示的に対応しています](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle)が、CSS の WG 草案は[この値を制限していません](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)。 ブラウザーの互換性は様々かもしれません。
+    > **メモ:** 有効な擬似要素とは構文的に適切であることを指します。例えば `::unsupported` は擬似要素として対応されていませんが、有効と判断されます。さらに、最新の W3 標準では `::before` と `::after` のみを[明示的に対応しています](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle)が、CSS の WG 草案は[この値を制限していません](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)。 ブラウザーの互換性は様々かもしれません。
 
 ## 例
 

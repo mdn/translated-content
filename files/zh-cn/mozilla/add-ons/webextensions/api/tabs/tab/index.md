@@ -2,6 +2,7 @@
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
+
 {{AddonSidebar()}}
 
 **`tabs.Tab`** 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。
@@ -61,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

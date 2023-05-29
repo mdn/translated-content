@@ -2,6 +2,7 @@
 title: 跨浏览器测试介绍
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？”
@@ -11,9 +12,9 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
     <tr>
       <th scope="row">阅读基础：</th>
       <td>
-        熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -39,7 +40,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要您能兼容屏幕阅读器软件。
 
-其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的 — 参见 [要测试全部的吗？（Gotta test 'em all?）](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其它浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
+其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
 
 > **备注：** 后面会详细介绍防御性编程（code defensively）
 
@@ -107,7 +108,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 此时，你要修复一切发现的问题。
 
-接下来，你应该在所有浏览器上测试并集中精力排除跨浏览器问题（关于[determining your target browers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)，请查阅下一篇文章获取更多信息）。例如
+接下来，你应该在所有浏览器上测试并集中精力排除跨浏览器问题（关于[确定你的目标浏览器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)，请查阅下一篇文章获取更多信息）。例如
 
 - 尝试在所有现代桌面浏览器上测试最新的修改——包括（理想条件下，Windows、Mac、Linux 的）Firefox、Chrome、Opera、IE、Edge 和 Safari。
 - 在常用的手机和平板浏览器中测试（例如 iPhone/iPad 上的 iOS Safari、iPhone/iPad/Android 的 Chrome 和 Firefox）。
@@ -165,14 +166,3 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 本文应该能够让你对跨浏览器测试最重要的部分有一个更高层次的理解。有了这些知识的武装，你现在可以继续并开始学习跨浏览器测试策略了。
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## 指南
-
-- [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [测试策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [实现特征检查](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [建立你自己的自动化测试环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

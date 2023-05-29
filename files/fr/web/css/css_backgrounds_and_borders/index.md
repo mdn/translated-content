@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 ---
+
 {{CSSRef}}
 
 **_CSS Backgrounds and Borders_** est un module CSS qui permet de mettre en forme les bordures et arrière-plans des éléments. Les arrière-plans peuvent être dessinés avec une couleur ou une image, rognés, redimensionnés voire modifiés. Les bordures peuvent être décorées avec des lignes, des images, former des angles droits ou des angles courbes. Il est également possible de décorer les boîtes des éléments avec des ombres.
@@ -81,8 +82,4 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaires |
-| -------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('CSS3 Backgrounds')}} | {{Spec2('CSS3 Backgrounds')}} |              |
-| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |              |
-| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |              |
+{{Specifications}}

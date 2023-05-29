@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog
 ---
+
 ### Description
 
 Cette technique présente l’utilisation du rôle [`dialog (en)`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).

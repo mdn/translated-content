@@ -1,14 +1,8 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  - header
-translation_of: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Authorization`** リクエストヘッダーは、ユーザーエージェントがサーバーから認証を受けるための証明書を保持し、ふつうは、必ずではありませんが、サーバーが {{HTTPStatus("401")}} `Unauthorized` ステータスと {{HTTPHeader("WWW-Authenticate")}} ヘッダーを返した後に使われます。
@@ -52,7 +46,7 @@ Authorization: <type> <credentials>
     - コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
     - 結果の文字列は [base64](/ja/docs/Glossary/Base64) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-    > **Note:** **注**: Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
+    > **メモ:** Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
 
 ## 例
 

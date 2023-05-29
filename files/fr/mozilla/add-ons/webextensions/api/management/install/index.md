@@ -12,6 +12,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/install
 ---
+
 {{AddonSidebar()}}Installe et active une extension de thème à partir de l'URL donnée.
 
 Cette API nécessite la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
@@ -33,9 +34,9 @@ let {id} = await browser.management.install({url});
 
 Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.install")}}
+{{Compat}}
 
 ## Exemples
 

@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 Retourne un objet {{domxref("Range")}}.

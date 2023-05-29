@@ -1,17 +1,11 @@
 ---
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
+
 {{JSRef}}
 
-**`Reflect`\*\***`.has()`\*\* 정적 메서드는 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)의 함수판입니다.
+**`Reflect.has()`** 정적 메서드는 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)의 함수판입니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-has.html")}}
 

@@ -1,15 +1,9 @@
 ---
 title: NavigatorOnLine
 slug: orphaned/Web/API/NavigatorOnLine
-tags:
-  - API
-  - HTML-DOM
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/API/NavigatorOnLine
 original_slug: Web/API/NavigatorOnLine
-browser-compat: api.NavigatorOnLine
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`NavigatorOnLine`** interface contains methods and properties related to the connectivity status of the browser.

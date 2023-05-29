@@ -3,6 +3,7 @@ title: 'Document: DOMContentLoaded event'
 slug: Web/API/Document/DOMContentLoaded_event
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initial est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.

@@ -3,6 +3,7 @@ title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DisplayNames.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'instance de l'objet [`Intl.DisplayNames`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames) courant.

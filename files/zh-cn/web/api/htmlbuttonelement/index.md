@@ -2,9 +2,10 @@
 title: HTMLButtonElement
 slug: Web/API/HTMLButtonElement
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`HTMLButtonElement`** 接口提供操作 button 元素 （除了 {{HTMLElement("button")}} 对象，这个接口对继承了该对象的元素也有效）的属性和方法。
+**`HTMLButtonElement`** 接口提供操作 button 元素（除了 {{HTMLElement("button")}} 对象，这个接口对继承了该对象的元素也有效）的属性和方法。
 
 ## 属性
 
@@ -48,8 +49,8 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td><code>formAction</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        一个处理提交信息的URI资源地址。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的{{htmlattrxref("action", "form")}} 属性。
+        一个处理提交信息的 URI 资源地址。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
+        元素的[`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
       </td>
     </tr>
     <tr>
@@ -57,15 +58,15 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         表单要提交给服务器处理的内容的类型。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的{{htmlattrxref("enctype", "form")}} 属性。
+        元素的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
       </td>
     </tr>
     <tr>
       <td><code>formMethod</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        浏览器提交表单内容的HTTP方法。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("method", "form")}}属性。
+        浏览器提交表单内容的 HTTP 方法。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
+        元素的.[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性。
       </td>
     </tr>
     <tr>
@@ -73,7 +74,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("Boolean")}}</td>
       <td>
         表明这个表单提交时是否需要验证。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("novalidate", "form")}}属性。
+        元素的.[`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate)属性。
       </td>
     </tr>
     <tr>
@@ -81,7 +82,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         一个名字或关键字，用于表明显示服务器响应的页面。如果指定该属性，会覆盖拥有该元素的{{HTMLElement("form")}}
-        元素的.{{htmlattrxref("target", "form")}}属性。
+        元素的.[`target`](/zh-CN/docs/Web/HTML/Element/form#target)属性。
       </td>
     </tr>
     <tr>
@@ -89,7 +90,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td>{{domxref("NodeList")}}</td>
       <td>
         一个{{HTMLElement("label")}}
-        元素表，说明哪些标签是归属这个button的。
+        元素表，说明哪些标签是归属这个 button 的。
       </td>
     </tr>
     <tr>
@@ -101,13 +102,13 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td><code>name</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        提交到服务器时表单描述该对象的name。如果指定该属性，不能使用空字符串 。
+        提交到服务器时表单描述该对象的 name。如果指定该属性，不能使用空字符串。
       </td>
     </tr>
     <tr>
       <td><code>tabIndex</code></td>
       <td>long</td>
-      <td>用于表示该元素在tab按钮跳动过程中的序号的一个数字。</td>
+      <td>用于表示该元素在 tab 按钮跳动过程中的序号的一个数字。</td>
     </tr>
     <tr>
       <td><code>type</code></td>
@@ -122,7 +123,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
           <li><code>"reset"</code>: 用于重置（清空）表单。</li>
           <li>
             <code>"button"</code>:
-            什么都不做的按钮。通常通过Javascript挂载事件。
+            什么都不做的按钮。通常通过 Javascript 挂载事件。
           </li>
           <li>
             <code>"menu"</code>: 显示菜单的按钮
@@ -135,7 +136,7 @@ _从父对象{{domxref("HTMLElement")}}继承的属性。_
       <td><code>validationMessage</code> {{readonlyInline}}</td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        报告该控件不满足验证要求的，提示给用户的看的信息。如果这个控件没有验证约束(<code>willValidate</code>值为<code>false</code>)，或者满足验证的要求，那么这个属性为空字符串。
+        报告该控件不满足验证要求的，提示给用户的看的信息。如果这个控件没有验证约束 (<code>willValidate</code>值为<code>false</code>)，或者满足验证的要求，那么这个属性为空字符串。
       </td>
     </tr>
     <tr>
@@ -178,7 +179,7 @@ _从父对象{{domxref("HTMLElement")}}继承的方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLButtonElement")}}
+{{Compat}}
 
 ## 另见
 

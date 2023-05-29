@@ -2,6 +2,7 @@
 title: 事件介绍
 slug: Learn/JavaScript/Building_blocks/Events
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
 事件是您在编程时系统内发生的动作或者发生的事情，系统响应事件后，如果需要，您可以某种方式对事件做出回应。例如：如果用户在网页上单击一个按钮，您可能想通过显示一个信息框来响应这个动作。在这篇文章中，我们将讨论一些关于事件的重要概念，并且观察它们在浏览器上如何运行。这篇文章不会面面俱到，仅聚焦于您现阶段需要掌握的知识。
@@ -12,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Events
       <th scope="row">前提：</th>
       <td>
         基本电脑知识，对 HTML 和 CSS 的基本了解，及
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
@@ -89,7 +90,7 @@ btn.onclick = function() {
 
 比如，[Node.js](/zh-CN/docs/Learn/Server-side/Express_Nodejs) 是一种非常流行的允许开发者使用 JavaScript 来建造网络和服务器端应用的运行环境。[Node.js event model](https://nodejs.org/docs/latest-v5.x/api/events.html) 依赖定期监听事件的监听器和定期处理事件的处理器——虽然听起来好像差不多，但是实现两者的代码是非常不同的，Node.js 使用像 on ( ) 这样的函数来注册一个事件监听器，使用 once ( ) 这样函数来注册一个在运行一次之后注销的监听器。 [HTTP connect event docs](https://nodejs.org/docs/latest-v5.x/api/http.html#http_event_connect) 提供了很多例子。
 
-另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性是大驼峰的（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合， 参见 [runtime.onMessage page](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
+另外一个例子：您可以使用 JavaScript 来开发跨浏览器的插件（使用 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 开发技术。事件模型和网站的事件模型是相似的，仅有一点点不同——事件监听属性使用驼峰命名法（如`onMessage`而不是`onmessage`），还需要与 `addListener` 函数结合，参见 [runtime.onMessage page](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage#Examples) 上的一个例子。
 
 您现在不需要掌握这些，我们只想表明不同的编程环境下事件机制是不同的，
 
@@ -192,7 +193,7 @@ btn.addEventListener('click', bgChange);
 
 > **备注：** 您可以在[Github](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)上找到这个示例的完整源代码 (也可以 [在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html))。
 
-`在addEventListener()` 函数中，我们具体化了两个参数——我们想要将处理器应用上去的事件名称，和包含我们用来回应事件的函数的代码。注意将这些代码全部放到一个匿名函数中是可行的：
+在 `addEventListener()` 函数中，我们具体化了两个参数——我们想要将处理器应用上去的事件名称，和包含我们用来回应事件的函数的代码。注意将这些代码全部放到一个匿名函数中是可行的：
 
 ```js
 btn.addEventListener('click', function() {
@@ -266,11 +267,11 @@ btn.addEventListener('click', bgChange);
 
 > **备注：** 您可以在 Github 上查看这个示例的 [完整代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看 [实时演示](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
 
-在这里，您可以看到我们在函数中包括一个事件对象`e`，并在函数中设置背景颜色样式在`e.target上` - 它指的是按钮本身。事件对象 `e` 的`target`属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
+在这里，您可以看到我们在函数中包括一个事件对象`e`，并在函数中设置背景颜色样式在 `e.target` 上——它指的是按钮本身。事件对象 `e` 的 `target` 属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
 
 > **备注：** 您可以使用任何您喜欢的名称作为事件对象 - 您只需要选择一个名称，然后可以在事件处理函数中引用它。开发人员最常使用 e / evt / event，因为它们很简单易记。坚持标准总是很好。
 
-当您要在多个元素上设置相同的事件处理程序时，`e.target`非常有用，并且在发生事件时对所有元素执行某些操作。 例如，你可能有一组 16 块方格，当它们被点击时就会消失。用 e.target 总是能准确选择当前操作的东西（方格）并执行操作让它消失，而不是必须以更困难的方式选择它。在下面的示例中 (请参见[useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html)完整代码;也可以在线运行[running live](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)）我们使用 JavaScript 创建了 16 个`<div>`元素。接着我们使用 `document.querySelectorAll()`选择全部的元素，然后遍历每一个，为每一个元素都添加一个`onclick`单击事件，每当它们点击时就会为背景添加一个随机颜色。
+当您要在多个元素上设置相同的事件处理程序时，`e.target`非常有用，并且在发生事件时对所有元素执行某些操作。例如，你可能有一组 16 块方格，当它们被点击时就会消失。用 e.target 总是能准确选择当前操作的东西（方格）并执行操作让它消失，而不是必须以更困难的方式选择它。在下面的示例中 (请参见[useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html)完整代码;也可以在线运行[running live](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)）我们使用 JavaScript 创建了 16 个`<div>`元素。接着我们使用 `document.querySelectorAll()`选择全部的元素，然后遍历每一个，为每一个元素都添加一个`onclick`单击事件，每当它们点击时就会为背景添加一个随机颜色。
 
 ```js
 const divs = document.querySelectorAll('div');
@@ -432,7 +433,7 @@ div video {
 }
 ```
 
-当“button”元素按钮被单击时，将显示视频，它是通过将改变`<div>的`class 属性值从`hidden`变为`showing`(这个例子的 CSS 包含两个`class`，它们分别控制这个`<div>`盒子在屏幕上显示还是隐藏。)：
+当“button”元素按钮被单击时，将显示视频，它是通过将改变 `<div>` 的 class 属性值从 `hidden` 变为 `showing`(这个例子的 CSS 包含两个 `class`，它们分别控制这个 `<div>` 盒子在屏幕上显示还是隐藏。)：
 
 ```js
 const btn = document.querySelector('button');

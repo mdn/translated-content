@@ -4,6 +4,7 @@ slug: Web/API/console/timeLog
 l10n:
   sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
+
 {{APIRef("Console API")}}
 
 **`console.timeLog()`** メソッドは、前回 {{domxref("console.time()")}} を呼び出すことで起動したタイマーの現在の値をコンソールに記録します。

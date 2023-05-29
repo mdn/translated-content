@@ -2,6 +2,7 @@
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAudioElement`** 接口提供对 {{HTMLElement("audio")}} 元素的属性访问及一系列操控它的方法，它基于并从 {{domxref("HTMLMediaElement")}} 接口继承属性和方法。
@@ -62,7 +63,7 @@ audioElement.addEventListener('loadeddata', () => {
 
 ## 事件
 
-_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法. 使用_ [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
+_从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 继承方法。使用_ [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) _监听事件或者赋值一个事件监听器给这个接口的_ `oneventname` 属性。
 
 ## 规范
 
@@ -70,7 +71,7 @@ _从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLAudioElement")}}
+{{Compat}}
 
 ## 参见
 

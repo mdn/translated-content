@@ -2,9 +2,10 @@
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
 ---
+
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 的只读属性 **`complete`** 是一个布尔值， 表示图片是否完全加载完成。
+{{domxref("HTMLImageElement")}} 的只读属性 **`complete`** 是一个布尔值，表示图片是否完全加载完成。
 
 ## 语法
 
@@ -14,11 +15,11 @@ let doneLoading = htmlImageElement.complete;
 
 ### 值
 
-当图片完全加载完成时值为 `true` ； 否则，值为 `false`。
+当图片完全加载完成时值为 `true`；否则，值为 `false`。
 
 以下任意一条为 true 则认为图片完全加载完成：
 
-- Neither the {{htmlattrxref("src", "img")}} nor the {{htmlattrxref("srcset", "img")}} attribute is specified.
+- Neither the [`src`](/zh-CN/docs/Web/HTML/Element/img#src) nor the [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) attribute is specified.
 - The `srcset` attribute is absent and the `src` attribute, while specified, is the empty string (`""`).
 - The image resource has been fully fetched and has been queued for rendering/compositing.
 - The image element has previously determined that the image is fully available and ready for use.
@@ -43,7 +44,7 @@ async function loadImage(url, elem) {
   return new Promise((resolve, reject) => {
     elem.onload = () => resolve(elem);
     elem.onerror = reject;
-    elem.src = src;
+    elem.src = url;
   });
 }
 

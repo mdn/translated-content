@@ -1,11 +1,6 @@
 ---
 title: 원시 값
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-translation_of: Glossary/Primitive
 ---
 {{Glossary("JavaScript")}}에서 **원시 값**(primitive, 또는 원시 자료형)이란 {{Glossary("object", "객체")}}가 아니면서 {{glossary("method", "메서드")}}도 가지지 않는 데이터입니다. 원시 값에는 7종류, {{Glossary("string")}}, {{Glossary("number")}}, {{glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}}, 그리고 {{glossary("null")}}이 존재합니다.
 

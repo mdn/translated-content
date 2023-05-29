@@ -2,7 +2,8 @@
 title: <datalist>
 slug: Web/HTML/Element/datalist
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<datalist>` 要素**は、他のコントロールで利用可能な値を表現する一連の {{HTMLElement("option")}} 要素を含みます。
 
@@ -78,10 +79,7 @@ slug: Web/HTML/Element/datalist
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-datalist-element', '&lt;datalist&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-datalist-element', '&lt;datalist&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -94,5 +92,5 @@ slug: Web/HTML/Element/datalist
 
 ## 関連情報
 
-- {{HTMLElement("input")}} 要素、およびもっと具体的な {{htmlattrxref("list", "input")}} 属性
+- {{HTMLElement("input")}} 要素、およびもっと具体的な [`list`](/ja/docs/Web/HTML/Element/input#list) 属性
 - {{HTMLElement("option")}} 要素

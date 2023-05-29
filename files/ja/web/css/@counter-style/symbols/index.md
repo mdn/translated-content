@@ -1,16 +1,8 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.symbols
-translation_of: Web/CSS/@counter-style/symbols
 ---
+
 {{CSSRef}}
 
 **`symbols`** は [CSS](/ja/docs/Web/CSS) の記述子で、指定されたカウンターシステムがカウンター表現を構築するために使用する記号を指定するために使用します。

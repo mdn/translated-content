@@ -2,6 +2,7 @@
 title: Event()
 slug: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event()`** constructor 能用來建立一個 {{domxref("Event", "事件")}} 。
@@ -22,7 +23,7 @@ event = new Event(typeArg, eventInit);
 
     | 參數           | 可選 | 默認值  | 類型                           | 說明                              |
     | -------------- | ---- | ------- | ------------------------------ | --------------------------------- |
-    | `"bubbles"`    | ●    | `false` | `{{jsxref("Boolean")}}` | 表示該事件是否懸浮（bubble up）。 |
+    | `"bubbles"`    | ●    | `false` | {{jsxref("Boolean")}} | 表示該事件是否懸浮（bubble up）。 |
     | `"cancelable"` | ●    | `false` | {{jsxref("Boolean")}}   | 表示該事件是否已取消（canale）。  |
 
 ## 範例
@@ -39,7 +40,7 @@ document.dispatchEvent(ev);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
 ## 參見
 

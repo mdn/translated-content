@@ -1,9 +1,9 @@
 ---
 title: Microformatos
 slug: Web/HTML/microformats
-translation_of: Web/HTML/microformats
 original_slug: Web/HTML/microformatos
 ---
+
 {{HTMLSidebar}}
 
 [_Microformatos_](http://microformats.org/) (ás vezes abreviado como **μF**) são convenções utilizadas para incorporar convenções semânticas em HTML e providenciar uma API a ser usada por mecanismos de pesquisa, agregadores e outras ferramentas. Esses padrões mínimos de HTML são usados para marcar entidades que variam de informações fundamentais a específicas de domínio, como pessoas, organizações, eventos e locais.
@@ -47,7 +47,7 @@ Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são O
 
 - **"dt-\*" para propriedades de data e hora**, p.ex "dt-start", "dt-end", "dt-bday"
 
-  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern "value-class-pattern") and separate date time value parsing for readability.
+  - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" para propriedades da árvore de elementos** em que toda a hierarquia de elementos contidos é o valor, p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".
 
@@ -157,7 +157,7 @@ Exemplo de h-entry como uma postagem em blog:
   <p><span class="p-author h-card">
     <a href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106" ><img class="u-photo" src="https://quickthoughts.jgregorymcverry.com/file/2d6c9cfed7ac8e849f492b5bc7e6a630/thumb.jpg"/></a>
     <a class="p-name u-url" href="https://quickthoughts.jgregorymcverry.com/profile/jgmac1106">Greg McVerry</a></span>
-     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">a post on
+     Replied to <a class="u-in-reply-to" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/microformats">a post on
    <strong>developer.mozilla.org</strong> </a>:
   </p>
    <p class="p-name e-content">Hey thanks for making this microformats resource</p>
@@ -173,7 +173,7 @@ Exemplo de h-entry como uma postagem em blog:
     {
       "type": [ "h-entry" ],
       "properties": {
-        "in-reply-to": [ "https://developer.mozilla.org/en-US/docs/Web/HTML/microformats" ],
+        "in-reply-to": [ "https://developer.mozilla.org/pt-BR/docs/Web/HTML/microformats" ],
         "name": [ "Hey thanks for making this microformats resource" ],
         "url": [ "https://quickthoughts.jgregorymcverry.com/2019/05/31/hey-thanks-for-making-this-microformats-resource" ],
         "published": [ "2019-05-31T14:19:09+0000" ],
@@ -203,7 +203,7 @@ Exemplo de h-entry como uma postagem em blog:
 
 ### h-feed
 
-O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry "h-entry"), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
+O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed de posts de [h-entry](http://microformats.org/wiki/h-entry), como postagens completas em uma página inicial ou em páginas de arquivo, sumários ou outras listagens de postagens
 
 #### Exemplo h-feed
 

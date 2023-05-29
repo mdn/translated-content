@@ -2,6 +2,7 @@
 title: WebDAV
 slug: Glossary/WebDAV
 ---
+
 **WebDAV** (_Web Distributed Authoring and Versioning_) は Web 開発者がリモートでウェブクライントからコンテンツを更新できる {{Glossary("HTTP")}} 拡張機能です。
 
 WebDAV 単体で使われる事はまれで、{{Glossary("CalDAV")}}(リモートで使えるカレンダー） と{{Glossary("CardDAV")}}(リモートで使えるアドレス帳）の 2 つの拡張機能と共に使われるのが一般的です。
@@ -20,7 +21,7 @@ WebDAV を使用すると、クライアントから次の事ができます。
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "WebDAV")}}
+- Wikipedia の [WebDAV](https://ja.wikipedia.org/wiki/WebDAV)
 
 ### 技術リファレンス
 

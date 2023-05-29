@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feFuncR
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncR>`** doit être placée dans une balise {{SVGElement("feComponentTransfer")}} et elle définit la fonction de transfert pour le canal rouge de l'image en entrée.

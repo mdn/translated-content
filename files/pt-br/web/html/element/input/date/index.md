@@ -1,23 +1,12 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-tags:
-  - Date picker
-  - Elemento
-  - Elemento de entrada
-  - HTML
-  - Input
-  - NeedsCompatTable
-  - Referencia
-  - Selecionador de data
-  - Tipo de Input
-  - data
-translation_of: Web/HTML/Element/input/date
 original_slug: Web/HTML/Element/Input/data
 ---
-Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Element/input/time) e [`datetime-local`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
 
-A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja [Browser compatibility](#browser_compatibility) para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um [`<input type="text">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text) simples.
+Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Element/input/time) e [`datetime-local`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
+
+A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja [Browser compatibility](#browser_compatibility) para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text) simples.
 
 ```html
 <input id="date" type="date">
@@ -27,15 +16,15 @@ A interface do usuário do controle varia geralmente de navegador para navegador
 
 Entre os navegadores que suportam uma interface personalizada para selecionar datas é o controle de data do Chrome/Opera, que se parece com:
 
-![](https://mdn.mozillademos.org/files/14909/date-picker-chrome.png)
+![](date-picker-chrome.png)
 
 O controle de data do Edge se parece assim:
 
-![](https://mdn.mozillademos.org/files/14911/date-picker-edge.png)
+![](date-picker-edge.png)
 
 O controle de data do Firefox se parece assim:
 
-![Datepicker UI in firefox](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
+![Datepicker UI in firefox](firefox_datepicker.png)
 
 <table class="properties">
   <tbody>
@@ -184,7 +173,7 @@ Se você tentar submeter o formulário com uma data imcompleta (ou com uma data 
 
 Aqui tem uma captura de tela que mostra o resultado se seu navegador não suporta:
 
-![](https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png)
+![](date-picker-chrome-error-message.png)
 
 Aqui tem o CSS utilizado no exemplo acima. Nós usamos as propriedades CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} para estilizar a caixa de texto dependendo se o valor atual é válido ou não. Colocamos ícones num {{htmlelement("span")}} próximo a caixa de entrada, não dentro da caixa, porque no Chrome o conteúdo gerado é colocado dentro do controle do formulário, e não seria estilzado ou mostrado eficientemente.
 
@@ -217,7 +206,7 @@ input:valid+span:after {
 
 Como mencionado acima, o maior problema em usar caixas de entrada de data em tempo de escrita é o [suporte do navegador](#browser_compatibility). Por exemplo, o selecionador de data no Firefox para Android se parece com isso:
 
-![](https://mdn.mozillademos.org/files/14915/date-picker-fxa.png)
+![](date-picker-fxa.png)
 
 Navegadores que não suportam graciosamente rebaixa para uma caixa de texto comum, mas criam problemas em termos de consistência da interface do usuário (o controle apresentado será diferente) e a manipulação do dado.
 
@@ -316,7 +305,7 @@ Beside the attributes listed below, this element can have any of the [global att
 
   - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the elements's form owner. The following keywords have special meanings:
 
-    - \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.

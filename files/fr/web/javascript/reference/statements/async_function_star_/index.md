@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Statements/async_function*
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Statements")}}
 
 Une déclaration **`async function*`** définit _une fonction génératrice asynchrone_, qui renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator).

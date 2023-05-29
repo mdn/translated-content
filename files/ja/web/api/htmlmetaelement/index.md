@@ -2,6 +2,7 @@
 title: HTMLMetaElement
 slug: Web/API/HTMLMetaElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLMetaElement`** インターフェイスは、文書に関する説明的なメタデータが入ります。 {{domxref("HTMLElement")}} インターフェイスから、すべてのプロパティとメソッドを継承しています。

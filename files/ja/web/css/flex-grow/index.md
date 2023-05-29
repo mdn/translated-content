@@ -2,6 +2,7 @@
 title: flex-grow
 slug: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 **`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムの[主軸方向の寸法](https://www.w3.org/TR/css-flexbox/#main-size)のフレックス伸長係数を設定します。

@@ -1,16 +1,9 @@
 ---
-title: JavaScript 재입문하기 (JS ​튜토리얼)
-slug: Web/JavaScript/Language_Overview
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
-translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
+title: JavaScript 재입문하기 (JS 튜토리얼)
+slug: Web/JavaScript/Language_overview
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 어째서 재입문일까요? 왜냐하면, [JavaScript](/ko/docs/Glossary/JavaScript)는 [세계에서 가장 오해받고 있는 프로그래밍 언어](http://javascript.crockford.com/javascript.html)로 악명이 높기 때문입니다. 종종 장난감같다고 조롱당하기도했지만, 이 거짓말같은 단순함 아래에는 몇 가지의 강력한 언어 기능이 숨어 있습니다. Javascript는 현재 엄청나게 많은, 요즘 가장 뜨고있는 애플리케이션들에 사용되고 있어서, 웹 또는 모바일 개발자 누구에게라도 이 기술에 대한 깊은 지식이 중요한 기량이 된다는 것을 보여주고 있습니다.
@@ -37,7 +30,7 @@ JavaScript는 유형 및 연산자, 표준 내장 객체 및 메서드가 있는
 - [객체 (Object)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [기호 (Symbol)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (ES2015에 새롭게 추가)
 
-그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
+그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](/ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
 
 - [수 (Number)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
@@ -400,7 +393,7 @@ switch(a) {
 }
 ```
 
-default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은  `===` 연산자로 비교합니다.
+default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은 `===` 연산자로 비교합니다.
 
 ```js
 switch(1 + 3){
@@ -896,7 +889,7 @@ s.reversed(); // nomiS
 "This can now be reversed".reversed(); // desrever eb won nac sihT
 ```
 
-기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는  `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
+기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는 `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
 
 ```js
 var s = new Person("Simon", "Willison");

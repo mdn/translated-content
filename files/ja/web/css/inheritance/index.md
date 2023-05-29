@@ -1,7 +1,8 @@
 ---
 title: 継承
-slug: Web/CSS/inheritance
+slug: Web/CSS/Inheritance
 ---
+
 {{CSSRef}}
 
 CSS において、**継承** (inheritance) はある要素のあるプロパティに値が指定されなかった場合の挙動を制御します。

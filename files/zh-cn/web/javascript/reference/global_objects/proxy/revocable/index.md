@@ -2,6 +2,7 @@
 title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
+
 {{JSRef("Global_Objects", "Proxy")}}
 
 **`Proxy.revocable()`** 方法可以用来创建一个可撤销的代理对象。

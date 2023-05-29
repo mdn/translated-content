@@ -2,9 +2,10 @@
 title: Web Speech API
 slug: Web/API/Web_Speech_API
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
-Web Speech API 使您能够将语音数据合并到 Web 应用程序中。 Web Speech API 有两个部分：SpeechSynthesis 语音合成（文本到语音 TTS）和 SpeechRecognition 语音识别（异步语音识别）。
+Web Speech API 使您能够将语音数据合并到 Web 应用程序中。Web Speech API 有两个部分：SpeechSynthesis 语音合成（文本到语音 TTS）和 SpeechRecognition 语音识别（异步语音识别）。
 
 ## Web Speech 的概念及用法
 
@@ -26,7 +27,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 - {{domxref("SpeechRecognitionError")}}
   - : 表示语音识别服务发出的报错信息。
 - {{domxref("SpeechRecognitionEvent")}}
-  - : {{event("result")}} 和 {{event("nomatch")}} 的事件对象，包含了与语音识别过程中间或最终结果相关的全部数据。
+  - : {{domxref("SpeechRecognition.result_event", "result")}} 和 {{domxref("SpeechRecognition.nomatch_event", "nomatch")}} 的事件对象，包含了与语音识别过程中间或最终结果相关的全部数据。
 - {{domxref("SpeechGrammar")}}
   - : 我们将要交由语音识别服务进行识别的词汇或者词汇的模式。
 - {{domxref("SpeechGrammarList")}}
@@ -39,7 +40,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 ### 语音合成
 
 - {{domxref("SpeechSynthesis")}}
-  - : 语音合成服务的控制器接口，可用于获取设备上可用的合成语音，开始、暂停以及其它相关命令的信息。
+  - : 语音合成服务的控制器接口，可用于获取设备上可用的合成语音，开始、暂停以及其他相关命令的信息。
 - {{domxref("SpeechSynthesisErrorEvent")}}
   - : 包含了在发音服务处理 {{domxref("SpeechSynthesisUtterance")}} 对象过程中的信息及报错信息。
 - {{domxref("SpeechSynthesisEvent")}}
@@ -53,7 +54,7 @@ Web Speech API 使 Web 应用能够处理语音数据，该项 API 包含以下�
 
 ## 示例
 
-GitHub 上的 [Web Speech API repo](https://github.com/mdn/web-speech-api/) 的示例程序展示了语音识别及合成。
+GitHub 上的 [Web Speech API repo](https://github.com/mdn/dom-examples/tree/main/web-speech-api) 的示例程序展示了语音识别及合成。
 
 ## 规范
 

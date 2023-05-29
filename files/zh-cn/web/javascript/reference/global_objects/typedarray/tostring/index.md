@@ -2,14 +2,15 @@
 title: TypedArray.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 方法返回一个表示指定数组及其元素的字符串。这个方法的算法和 {{jsxref("Array.prototype.toString()")}} 一样。_TypedArray_ 在这是[typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 
-```plain
-typedarray.toString()
+```js-nolint
+values()
 ```
 
 ### 返回值

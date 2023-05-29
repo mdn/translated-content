@@ -2,6 +2,7 @@
 title: DOMPoint.z
 slug: Web/API/DOMPoint/z
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** 的 **`z`** 属性表示该点的深度坐标。 `z` 值为 0 表示屏幕平面，正值表示从屏幕前面向靠近用户的方向延伸，负值表示从屏幕后面向远离用户的方向延伸，除非改变了默认的轴方向。
@@ -22,7 +23,7 @@ var zPos = DOMPoint.z;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.z")}}
+{{Compat}}
 
 ## 相关链接
 

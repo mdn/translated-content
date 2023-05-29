@@ -2,13 +2,14 @@
 title: HTTP 请求范围
 slug: Web/HTTP/Range_requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议范围请求允许服务器只发送 HTTP 消息的一部分到客户端。范围请求在传送大的媒体文件，或者与文件下载的断点续传功能搭配使用时非常有用。
 
 ## 检测服务器端是否支持范围请求
 
-假如在响应中存在 {{HTTPHeader("Accept-Ranges")}} 首部（并且它的值不为 “none”），那么表示该服务器支持范围请求。例如，你可以使用 cURL 发送一个 {{HTTPMethod("HEAD")}} 请求来进行检测。
+假如在响应中存在 {{HTTPHeader("Accept-Ranges")}} 首部（并且它的值不为“none”），那么表示该服务器支持范围请求。例如，你可以使用 cURL 发送一个 {{HTTPMethod("HEAD")}} 请求来进行检测。
 
 ```plain
 curl -I http://i.imgur.com/z4d4kWk.jpg
@@ -19,7 +20,7 @@ Accept-Ranges: bytes
 Content-Length: 146515
 ```
 
-在上面的响应中， `Accept-Ranges: bytes` 表示界定范围的单位是 bytes 。这里 {{HTTPHeader("Content-Length")}} 也是有效信息，因为它提供了要检索的图片的完整大小。
+在上面的响应中， `Accept-Ranges: bytes` 表示界定范围的单位是 bytes。这里 {{HTTPHeader("Content-Length")}} 也是有效信息，因为它提供了要检索的图片的完整大小。
 
 如果站点未发送 `Accept-Ranges` 首部，那么它们有可能不支持范围请求。一些站点会明确将其值设置为 "none"，以此来表明不支持。在这种情况下，某些应用的下载管理器会将暂停按钮禁用。
 

@@ -2,6 +2,7 @@
 title: 'Express 教程 6: 使用表单'
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
 
 在此教程中我们会教你如何使用 Express 并且结合 Pug 来实现 HTML 表单，并且如何从数据库中创建，更新和删除文档。
@@ -13,7 +14,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
       <td>
         <p>
           完成前面所有的教程，包括
-          <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
+          <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
             >Express 教程第 5 章：展示图书馆数据</a
           >
         </p>
@@ -131,7 +132,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
   您还可以用菊花链式连接不同的验证器，并添加前面验证器为真时显示的消息。
 
-- ```js
+  ```js
   body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
@@ -254,15 +255,3 @@ Express, node, 与 NPM 上面的第三方套件，提供你需要的每样东西
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm 文档).
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程
-
-- [Express/Node 介绍](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [架设 Node (Express) 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express 教程：本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express 教程 2: 创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express 教程 3: 使用数据库 (Mongoose)](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express 教程 4: 路由与控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express 教程 7: 部署到生产环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/deployment)

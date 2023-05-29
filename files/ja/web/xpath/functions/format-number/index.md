@@ -1,11 +1,8 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/format-number
 ---
+
 {{ XsltRef() }}
 
 `format-number`関数は数値を評価し、与えられた形式の数値を表す文字列を返します。

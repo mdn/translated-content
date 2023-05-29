@@ -1,23 +1,19 @@
 ---
 title: CSSStyleDeclaration.cssFloat
 slug: Web/API/CSSStyleDeclaration/cssFloat
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
+
 {{APIRef("CSSOM")}}
 
 **`cssFloat`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を `float` を引数として呼び出したときの結果を返します。
 
 設定したときは、 {{DOMxRef("CSSStyleDeclaration.setProperty()")}} を `float` を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxref("float")}} プロパティで有効な値でなければなりません。
 
-## 構文
+## 値
 
-```js
-var float = CSSStyleDeclaration.cssFloat();
-CSSStyleDeclaration.cssFloat = "right"
-```
-
-### 値
-
-{{domxref('CSSOMString')}} です。
+文字列です。
 
 ## 例
 

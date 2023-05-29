@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule
 ---
+
 {{CSSRef}}
 
 Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) **`column-rule`** permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.
@@ -43,9 +44,13 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 - `<'column-rule-color'>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -77,12 +82,8 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Multicol', '#column-rule', 'column-rule')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-rule")}}
+{{Compat}}

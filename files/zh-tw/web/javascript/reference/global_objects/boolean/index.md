@@ -2,6 +2,7 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** 是布林值的包覆器。
@@ -74,13 +75,12 @@ var s = new Boolean(myString);      // 依舊為true
 
 所有 `Boolean` 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。
 
-### 屬性
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Properties')}}
-
 ### 方法
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype', 'Methods')}}
+- {{jsxref("Boolean.prototype.toString()")}}
+  - : Returns a string of either `true` or `false` depending upon the value of the object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Boolean.prototype.valueOf()")}}
+  - : Returns the primitive value of the {{jsxref("Boolean")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 
 ## 範例
 
@@ -111,7 +111,7 @@ var bObjProto = new Boolean({});
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Boolean")}}
+{{Compat}}
 
 ## 參見
 

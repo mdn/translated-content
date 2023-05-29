@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DateTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les heures et dates, calculées pendant l'initialisation de l'objet [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat).

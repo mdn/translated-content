@@ -2,6 +2,7 @@
 title: MediaSource.activeSourceBuffers
 slug: Web/API/MediaSource/activeSourceBuffers
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} 接口的只读属性 **`activeSourceBuffers`** 返回一个 {{domxref("SourceBufferList")}} 对象，该对象包含了 {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} 中的 {{domxref("SourceBuffer")}} 对象的子集——提供当前所选的视频轨道、启用的音频轨道和显示或者隐藏的字幕轨道的对象列表。

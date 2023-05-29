@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).
@@ -57,14 +58,11 @@ div :first-of-type {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Les éléments ciblés ne doivent pas nécessairement avoir de parent. |
-| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.first-of-type")}}
+{{Compat}}
 
 ## Voir aussi
 

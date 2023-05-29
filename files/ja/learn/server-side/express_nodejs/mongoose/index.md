@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 3: データベースの使用 (Mongoose を使用)'
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 この記事ではデータベースと、それらを Node/Express アプリケーションで使用する方法について簡単に紹介します。続いて、[Mongoose](https://mongoosejs.com/) を使用して[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) Web サイトへのデータベースアクセスを提供する方法を説明します。 オブジェクトスキーマとモデルの宣言方法、主なフィールドタイプ、および基本的な検証について説明します。また、モデルデータにアクセスするための主な方法についても簡単に説明します。
@@ -35,7 +36,7 @@ SQL、またはデータベースでサポートされているクエリ言語�
 
 ORM を使用する利点は、プログラマがデータベースのセマンティクスではなく JavaScript オブジェクトの観点から考え続けることができることです。これは、同じデータベースまたは異なる Web サイトで異なるデータベースを扱う必要がある場合に特に当てはまります。またデータの検証とチェックを実行するための明らかな場所を提供します。
 
-> **Note:** **Tip:** ODM/ORM を使用すると、多くの場合、開発と保守のコストが削減されます。ネイティブのクエリ言語に精通しているかパフォーマンスが最優先であるのでなければ、ODM の使用を積極的に検討するべきです。
+> **メモ:** **Tip:** ODM/ORM を使用すると、多くの場合、開発と保守のコストが削減されます。ネイティブのクエリ言語に精通しているかパフォーマンスが最優先であるのでなければ、ODM の使用を積極的に検討するべきです。
 
 ### どの ORM/ODM を使うべきですか？
 
@@ -59,7 +60,7 @@ NPM パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 
 この ODM とデータベースの組み合わせは、Node コミュニティで非常に人気があります。これは、ドキュメントの保存とクエリのシステムが JSON に非常に似ているため、JavaScript 開発者にはよく知られているためです。
 
-> **Note:** **Tip:** Mongoose を使用するために MongoDB を知っている必要はありませんが、[Mongoose のドキュメント](http://mongoosejs.com/docs/guide.html)の一部は、MongoDB に慣れている方が使いやすく理解しやすいものです。
+> **メモ:** **Tip:** Mongoose を使用するために MongoDB を知っている必要はありませんが、[Mongoose のドキュメント](http://mongoosejs.com/docs/guide.html)の一部は、MongoDB に慣れている方が使いやすく理解しやすいものです。
 
 このチュートリアルの残りの部分では、[ローカルライブラリ Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)の例の Mongoose スキーマとモデルを定義してアクセスする方法を示します。
 
@@ -79,17 +80,17 @@ Web サイト自体に選択肢をハードコーディングするのではな�
 
 この図には、モデル間の関係 (それらの多重度も含む) も示されています。多重度は、関係内に存在する可能性がある各モデルの番号 (最大および最小) を示す図上の番号です。たとえば、ボックス間の接続線は、`Book` と `Genre` が関連していることを示しています。`Book` モデルに近い数字は、ジャンルに 0 個以上の Book がある必要があることを示しており、線のもう一方の端にある`Genre` の隣の数字は、本に 0 個以上の関連する`Genre`があることを示しています。
 
-> **Note:** 下記の Mongoose 入門書で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
+> **メモ:** 下記の Mongoose 入門書で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
 
-![Mongoose Library Model  with correct cardinality](Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](Library%20Website%20-%20Mongoose_Express.png)
 
-> **Note:** 次のセクションでは、モデルの定義方法と使用方法を説明する基本的な入門書を提供します。お読みになったところで、上の図の各モデルをどのように構築するかを検討してください。
+> **メモ:** 次のセクションでは、モデルの定義方法と使用方法を説明する基本的な入門書を提供します。お読みになったところで、上の図の各モデルをどのように構築するかを検討してください。
 
 ## Mongoose 入門書
 
 このセクションでは、Mongoose を MongoDB データベースに接続する方法、スキーマとモデルを定義する方法、そして基本的なクエリを作成する方法の概要を説明します。
 
-> **Note:** この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](http://mongoosejs.com/docs/guide.html)に "大きく影響を受けています"。
+> **メモ:** この入門書は、npm の [Mongoose クイックスタート](https://www.npmjs.com/package/mongoose)と[公式ドキュメント](http://mongoosejs.com/docs/guide.html)に "大きく影響を受けています"。
 
 ### Mongoose と MongoDB のインストール
 
@@ -101,7 +102,7 @@ npm install mongoose
 
 Mongoose をインストールすると、MongoDB データベースドライバを含むすべての依存関係が追加されますが、MongoDB 自体はインストールされません。 MongoDB サーバをインストールする場合は、さまざまな OS 用の[インストーラをここからダウンロード](https://www.mongodb.com/download-center)してローカルにインストールできます。クラウドベースの MongoDB インスタンスを使用することもできます。
 
-> **Note:** このチュートリアルでは、mLab クラウドベースの Database as a Service [サンドボックス層](https://mlab.com/plans/pricing/)として使用してデータベースを提供します。これは開発に適しており、オペレーティングシステムの "インストール" に依存しないため (database-as-a-service も本番データベースに使用することができる 1 つのアプローチです)、チュートリアルに適しています。
+> **メモ:** このチュートリアルでは、mLab クラウドベースの Database as a Service [サンドボックス層](https://mlab.com/plans/pricing/)として使用してデータベースを提供します。これは開発に適しており、オペレーティングシステムの "インストール" に依存しないため (database-as-a-service も本番データベースに使用することができる 1 つのアプローチです)、チュートリアルに適しています。
 
 ### MongoDB への接続
 
@@ -125,7 +126,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 デフォルトの `Connection` オブジェクトは `mongoose.connection` で取得できます。接続されると、open イベントが `Connection` インスタンスで発生します。
 
-> **Note:** **Tip:** 追加のコネクションを作成する必要がある場合は、`mongoose.createConnection()` を使用できます。 これは `connect()` と同じ形式のデータベース URI (ホスト、データベース、ポート、オプションなど) を取り、`Connection` オブジェクトを返します。
+> **メモ:** **Tip:** 追加のコネクションを作成する必要がある場合は、`mongoose.createConnection()` を使用できます。 これは `connect()` と同じ形式のデータベース URI (ホスト、データベース、ポート、オプションなど) を取り、`Connection` オブジェクトを返します。
 
 ### モデルの定義と作成
 
@@ -133,7 +134,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 その後、スキーマは `mongoose.model()` メソッドを使用してモデルに "コンパイル" されます。モデルを作成したら、それを使用して特定のタイプのオブジェクトを検索、作成、更新、および削除できます。
 
-> **Note:** 各モデルは MongoDB データベース内のドキュメントのコレクションにマップされます。ドキュメントはモデル `Schema` で定義されたフィールド/スキーマタイプを含みます。
+> **メモ:** 各モデルは MongoDB データベース内のドキュメントのコレクションにマップされます。ドキュメントはモデル `Schema` で定義されたフィールド/スキーマタイプを含みます。
 
 #### スキーマの定義
 
@@ -173,7 +174,7 @@ var SomeModel = mongoose.model('SomeModel', SomeModelSchema );
 
 最初の引数はあなたのモデル用に作成されるコレクションの単数形の名前です (Mongoose は上記の SomeModel モデル用のデータベースコレクションを作成します)、そして 2 番目の引数はモデルの作成に使用したいスキーマです。
 
-> **Note:** モデルクラスを定義したら、それらを使用してレコードを作成、更新、または削除し、クエリを実行してすべてのレコードまたは特定のレコードのサブセットを取得できます。これを行う方法をモデルの使用セクションで、そしてビューを作成するときに示します。
+> **メモ:** モデルクラスを定義したら、それらを使用してレコードを作成、更新、または削除し、クエリを実行してすべてのレコードまたは特定のレコードのサブセットを取得できます。これを行う方法をモデルの使用セクションで、そしてビューを作成するときに示します。
 
 #### スキーマ型 (フィールド)
 
@@ -251,7 +252,7 @@ Mongoose はビルドインもしくはカスマイズしたバリデータや�
 
 Virtual properties are document properties that you can get and set but that do not get persisted to MongoDB. The getters are useful for formatting or combining fields, while setters are useful for de-composing a single value into multiple values for storage. The example in the documentation constructs (and deconstructs) a full name virtual property from a first and last name field, which is easier and cleaner than constructing a full name every time one is used in a template.
 
-> **Note:** We will use a virtual property in the library to define a unique URL for each model record using a path and the record's `_id` value.
+> **メモ:** We will use a virtual property in the library to define a unique URL for each model record using a path and the record's `_id` value.
 
 For more information see [Virtuals](http://mongoosejs.com/docs/guide.html#virtuals) (Mongoose documentation).
 
@@ -322,7 +323,7 @@ Athlete.find({ 'sport': 'Tennis' }, 'name age', function (err, athletes) {
 
 If you specify a callback, as shown above, the query will execute immediately. The callback will be invoked when the search completes.
 
-> **Note:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
+> **メモ:** All callbacks in Mongoose use the pattern `callback(error, result)`. If an error occurs executing the query, the `error` parameter will contain an error document and `result` will be null. If the query is successful, the `error` parameter will be null, and the `result` will be populated with the results of the query.
 
 If you don't specify a callback then the API will return a variable of type [Query](http://mongoosejs.com/docs/api.html#query-js). You can use this query object to build up your query and then execute it (with a callback) later using the `exec()` method.
 
@@ -365,7 +366,7 @@ The [find()](http://mongoosejs.com/docs/api.html#query_Query-find) method gets a
 - [`findOne()`](http://mongoosejs.com/docs/api.html#query_Query-findOne): Finds a single document that matches the specified criteria.
 - [`findByIdAndRemove()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndRemove), [`findByIdAndUpdate()`](http://mongoosejs.com/docs/api.html#model_Model.findByIdAndUpdate), [`findOneAndRemove()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndRemove), [`findOneAndUpdate()`](http://mongoosejs.com/docs/api.html#query_Query-findOneAndUpdate): Finds a single document by `id` or criteria and either update or remove it. These are useful convenience functions for updating and removing records.
 
-> **Note:** There is also a [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
+> **メモ:** There is also a [`count()`](http://mongoosejs.com/docs/api.html#model_Model.count) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
 There is a lot more you can do with queries. For more information see: [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs).
 
@@ -427,7 +428,7 @@ Story
 });
 ```
 
-> **Note:** Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our author to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
+> **メモ:** Astute readers will have noted that we added an author to our story, but we didn't do anything to add our story to our author's `stories` array. How then can we get all stories by a particular author? One way would be to add our author to the stories array, but this would result in us having two places where the information relating authors and stories needs to be maintained.
 >
 > A better way is to get the `_id` of our _author_, then use `find()` to search for this in the author field across all stories.
 >
@@ -480,7 +481,7 @@ Now that we understand something of what Mongoose can do and how we want to desi
 
 For this tutorial, we're going to use [mLab](https://mlab.com/welcome/)'s free cloud-hosted "[sandbox](https://mlab.com/plans/pricing/)" database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because mLab is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/pricing.html) and [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)).
 
-> **Note:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
+> **メモ:** If you prefer you can set up a MongoDb database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
 
 You will first need to [create an account](https://mlab.com/signup/) with mLab (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
@@ -603,7 +604,7 @@ module.exports = mongoose.model('Author', AuthorSchema);
 
 We've also declared a [virtual](#Virtual_properties) for the AuthorSchema named "url" that returns the absolute URL required to get a particular instance of the model — we'll use the property in our templates whenever we need to get a link to a particular author.
 
-> **Note:** Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.
+> **メモ:** Declaring our URLs as a virtual in the schema is a good idea because then the URL for an item only ever needs to be changed in one place.
 > At this point, a link using this URL wouldn't work, because we haven't got any routes handling code for individual model instances. We'll set those up in a later article!
 
 At the end of the module, we export the model.
@@ -698,7 +699,7 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-    > **Note:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
+    > **メモ:** You don't need to know how [populatedb.js](https://raw.githubusercontent.com/hamishwillee/express-locallibrary-tutorial/master/populatedb.js) works; it just adds sample data into the database.
 
 2. Enter the following commands in the project root to install the _async_ module that is required by the script (we'll discuss this in later tutorials, )
 
@@ -709,12 +710,12 @@ In order to test the models (and to create some example books and other items th
 3. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
     ```bash
-    node populatedb <your mongodb url>​​​​
+    node populatedb <your mongodb url>
     ```
 
 4. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** **Tip:** Go to your database on [mLab](https://mlab.com/home). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
+> **メモ:** **Tip:** Go to your database on [mLab](https://mlab.com/home). You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## まとめ
 
@@ -734,15 +735,3 @@ In order to test the models (and to create some example books and other items th
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose ドキュメント)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
-
-## このモジュール
-
-- [Express/Node のイントロダクション](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express チュートリアル: 地域図書館の Web サイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express チュートリアル Part 2: スケルトン Web サイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express チュートリアル Part 3: データベースを使う (Mongoose を使用)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express チュートリアル Part 5: ライブラリデータの表示](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express チュートリアル Part 6: フォームの操作](/ja/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express チュートリアル Part 7: プロダクションへのデプロイ](/ja/docs/Learn/Server-side/Express_Nodejs/deployment)

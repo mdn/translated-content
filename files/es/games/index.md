@@ -1,15 +1,8 @@
 ---
 title: Desarrollo de Videojuegos
 slug: Games
-tags:
-  - Apps
-  - Games
-  - NeedsContent
-  - TopicStub
-  - aplicaciones
-  - juegos
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 ## Introducción de los juegos para la Web

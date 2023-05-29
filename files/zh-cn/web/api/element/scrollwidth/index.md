@@ -1,10 +1,11 @@
 ---
 title: Element.scrollWidth
-slug: Web/API/element/scrollWidth
+slug: Web/API/Element/scrollWidth
 ---
+
 {{ APIRef("DOM") }}**`Element.scrollWidth`** 这个只读属性是元素内容宽度的一种度量，包括由于 overflow 溢出而在屏幕上不可见的内容。
 
-`scrollWidth`值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。 宽度的测量方式与{{domxref("Element.clientWidth", "clientWidth")}}相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条（如果存在）。 它还可以包括伪元素的宽度，例如{{cssxref("::before")}}或{{cssxref("::after")}}。 如果元素的内容可以适合而不需要水平滚动条，则其`scrollWidth`等于{{domxref("Element.clientWidth", "clientWidth")}}
+`scrollWidth`值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。宽度的测量方式与{{domxref("Element.clientWidth", "clientWidth")}}相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条（如果存在）。它还可以包括伪元素的宽度，例如{{cssxref("::before")}}或{{cssxref("::after")}}。如果元素的内容可以适合而不需要水平滚动条，则其`scrollWidth`等于{{domxref("Element.clientWidth", "clientWidth")}}
 
 > **备注：** 1. 这个属性会进行四舍五入并返回整数，如果你需要小数形式的值，使用{{ domxref("element.getBoundingClientRect()") }}_._
 >

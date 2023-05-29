@@ -1,7 +1,10 @@
 ---
-title: Node.cloneNode()
+title: "Node: cloneNode() メソッド"
 slug: Web/API/Node/cloneNode
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
+
 {{APIRef("DOM")}}
 
 **`cloneNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、このメソッドが呼び出されたノードの複製を返します。
@@ -9,7 +12,7 @@ slug: Web/API/Node/cloneNode
 
 ノードを複製すると、固有（インライン）のリスナーを含む、ノードのすべての属性とその値が複製されます。 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使って追加されたイベントリスナーや、要素のプロパティに代入されたイベントリスナー（例: `node.onclick = someFunction`）は複製されません。さらに、 {{HTMLElement("canvas")}} 要素では、描画された画像は複製されません。
 
-> **Warning:** `cloneNode()` を使用すると、文書内で要素の ID が重複する可能性があります。
+> **警告:** `cloneNode()` を使用すると、文書内で要素の ID が重複する可能性があります。
 >
 > 元のノードに `id` 属性があり、複製を同じ文書に配置する場合は、複製の ID が重複しないように変更してください。
 >
@@ -19,9 +22,9 @@ slug: Web/API/Node/cloneNode
 
 ## 構文
 
-```js
-cloneNode();
-cloneNode(deep);
+```js-nolint
+cloneNode()
+cloneNode(deep)
 ```
 
 ### 引数
@@ -33,7 +36,7 @@ cloneNode(deep);
     `false` の場合、このノードのみが複製されます。
     サブツリーは、そのノードに含まれているテキストも含め、複製されません。
 
-    なお、 `deep` は {{HTMLElement("img")}} や {{HTMLElement("input")}} のような空要素には効果がありません。
+    なお、 `deep` は {{HTMLElement("img")}} や {{HTMLElement("input")}} のような{{glossary("void element", "空要素")}}には効果がありません。
 
 ### 返値
 
@@ -43,8 +46,8 @@ cloneNode(deep);
 ## 例
 
 ```js
-let p = document.getElementById("para1")
-let p_prime = p.cloneNode(true)
+let p = document.getElementById("para1");
+let p_prime = p.cloneNode(true);
 ```
 
 ## 仕様書

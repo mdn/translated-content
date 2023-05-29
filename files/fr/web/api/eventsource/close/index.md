@@ -12,6 +12,7 @@ tags:
   - close
 translation_of: Web/API/EventSource/close
 ---
+
 {{APIRef('WebSockets API')}}
 
 La fonction **`close()`** de l'interface {{domxref("EventSource")}} coupe la connection, si existante, et affecte à la variable {{domxref("EventSource.readyState")}} la valeur `2` (closed).

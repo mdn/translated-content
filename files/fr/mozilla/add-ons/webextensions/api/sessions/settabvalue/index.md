@@ -12,6 +12,7 @@ tags:
   - setTabValue
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 ---
+
 {{AddonSidebar()}}
 
 Stocke une paire clé / valeur à associer à un onglet donné. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getTabValue")}}.
@@ -43,9 +44,9 @@ var storing = browser.sessions.setTabValue(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.setTabValue", 10)}}
+{{Compat}}
 
 ## Exemples
 

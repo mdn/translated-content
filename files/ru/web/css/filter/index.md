@@ -10,6 +10,7 @@ tags:
   - Ссылка
 translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание
@@ -18,7 +19,7 @@ translation_of: Web/CSS/filter
 
 В стандарт CSS включены несколько функций, которые обеспечивают предопределённые эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на [элемент фильтра SVG](/ru/docs/Web/SVG/Element/filter).
 
-> **Примечание:** **Предупреждение:** Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>), который с тех пор устарел.
+> **Примечание:** Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный ["filter"](<http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx>), который с тех пор устарел.
 
 {{cssinfo}}
 
@@ -48,11 +49,15 @@ filter: unset;
 
 С помощью функции, используйте:
 
-    filter: <filter-function> [<filter-function>]* | none
+```
+filter: <filter-function> [<filter-function>]* | none
+```
 
 Для ссылки на SVG {{SVGElement("filter")}} элемент, используйте:
 
-    filter: url(svg-url#element-id)
+```
+filter: url(svg-url#element-id)
+```
 
 ### Формальный синтаксис
 
@@ -611,7 +616,7 @@ table.standard-table td {
 
 ### `hue-rotate() [изменение оттенка]`
 
-Applies a hue rotation on the input image. The value of ‘`angle`’ defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg `leaves the input unchanged. If the ‘`angle`’ parameter is missing, a value of `0deg` is used. Though there is no maximum value, the effect of values above `360deg` wraps around.
+Applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged. If the `angle` parameter is missing, a value of `0deg` is used. Though there is no maximum value, the effect of values above `360deg` wraps around.
 
 ```css
 filter: hue-rotate(90deg)
@@ -702,7 +707,7 @@ table.standard-table td {
 
 ### `invert() [инвертирование]`
 
-Inverts the samples in the input image. The value of ‘`amount`’ defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the ‘`amount`’ parameter is missing, a value of `0` is used.
+Inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the `amount` parameter is missing, a value of `0` is used.
 
 ```css
 filter: invert(100%)
@@ -788,7 +793,7 @@ table.standard-table td {
 
 ### `opacity() [непрозрачность]`
 
-Applies transparency to the samples in the input image. The value of ‘`amount`’ defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. If the ‘`amount`’ parameter is missing, a value of `1` is used. This function is similar to the more established {{Cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
+Applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. If the `amount` parameter is missing, a value of `1` is used. This function is similar to the more established {{Cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ```css
 filter: opacity(50%)
@@ -872,7 +877,7 @@ table.standard-table td {
 
 ### `saturate() [насыщенность]`
 
-Saturates the input image. The value of ‘`amount`’ defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. If the ‘`amount`’ parameter is missing, a value of `1` is used.
+Saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. If the `amount` parameter is missing, a value of `1` is used.
 
 ```css
 filter: saturate(200%)
@@ -955,7 +960,7 @@ table.standard-table td {
 
 ### `sepia() [сепия]`
 
-Converts the input image to sepia. The value of ‘`amount`’ defines the proportion of the conversion. A value of 100% is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the ‘`amount`’ parameter is missing, a value of `0` is used.
+Converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of 100% is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the `amount` parameter is missing, a value of `0` is used.
 
 ```css
 filter: sepia(100%)

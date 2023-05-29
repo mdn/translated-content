@@ -2,6 +2,7 @@
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`Coordinates`** （坐标）接口表示设备在地球上的位置和海拔，以及计算这些属性的精确度。
@@ -35,7 +36,7 @@ _The `Coordinates` interface_ **doesn't inherit any property**.
 
 ## 浏览器兼容性
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## 请参见
 

@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 L'un des principaux buts de HTML est de structurer du texte et lui donner du sens (ce que l'on appelle la {{glossary("sémantique")}}) afin que le navigateur puisse l'afficher correctement. Cet article explique comment {{glossary("HTML")}} peut être utilisé pour structurer une page en ajoutant des titres et des paragraphes, en marquant des emphases, en créant des listes, et bien plus encore.
@@ -994,15 +995,3 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine&nbsp;; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- Fondamentaux du texte HTML
-- [Creation d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une Lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

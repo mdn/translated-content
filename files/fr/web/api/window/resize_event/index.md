@@ -6,6 +6,7 @@ translation_of_original: Web/API/Element.onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 browser-compat: api.GlobalEventHandlers.onresize
 ---
+
 {{ApiRef}}
 
 La propriété **`onresize`**,rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`resize`](/fr/docs/Web/API/Window/resize_event).

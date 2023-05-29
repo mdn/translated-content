@@ -5,6 +5,7 @@ translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
 browser-compat: css.types.transform-function.translateY
 ---
+
 {{CSSRef}}
 
 La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).

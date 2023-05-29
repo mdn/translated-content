@@ -1,17 +1,8 @@
 ---
 title: Quirks Mode e Standards Mode
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desenvolvimento Web
-  - Gecko
-  - Guia(2)
-  - Guía
-  - HTML
-  - Padrões Web
-  - Web Standars
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 Nos velhos dias da web, páginas eram tipicamente escritas em duas versões: Uma para o Netscape Navigator, e outra para o Microsoft Internet Explorer. Quando os padrões web foram criados pelo W3C, navegadores não puderam começar a usá-los imediatamente, pois isto iria quebrar a maior parte dos sites existentes na web. Portanto os navegadores introduziram dois modos para tratar os novos padrões em sites condescendentes diferentemente dos antigos sites legados.
 
 Existem agora três modos usados pelos mecanismos de layout nos navegadores web: "quirks mode" ("modo equivocado"), "almost standards mode" ("modo quase padrão"), e "full standards mode" ("modo de padrões completos"). Em **quirks mode**, o layout emula o comportamento não-padrão do Netscape Navigator 4 e do Internet Explorer 5 para Windows que é requerido para não quebrar o conteúdo existente na Web. No **full standards mode**, o comportamento é (espera-se) o descrito pelas especificações do HTML e CSS. No **almost standards mode**, há apenas um número muito pequeno de peculiaridades não-padrão implementadas.
@@ -42,7 +33,7 @@ Veja também uma descrição detalhada de [quando diferentes navegadores escolhe
 
 ### XHTML
 
-Se você servir sua página como [XHTML](/pt-BR/docs/XHTML "XHTML") usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/XHTML#Support "XHTML") de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
+Se você servir sua página como [XHTML](/pt-BR/docs/XHTML) usando o MIME type `application/xhtml+xml` no cabeçalho HTTP `Content-Type`, você não precisará de um DOCTYPE para ativar o _full standards mode_, já que tais documentos sempre usam este modo. Note porém que servir suas páginas como `application/xhtml+xml` irá fazer com que o Internet Explorer 8 (e anteriores) [mostre uma caixa de diálogo para download](/pt-BR/docs/XHTML#Support) de um formato desconhecido ao invés de exibir sua página, pois a primeira versão do Internet Explorer com suporte ao XHTML é o Internet Explorer 9.
 
 Se você servir conteúdo como XHTML usando o MIME type `text/html`, os navegadores irão lê-lo como HTML, e você precisará colocar o DOCTYPE para usar o _standards mode_.
 
@@ -54,4 +45,4 @@ No Internet Explorer, pressione _F12_, e procure por _Modo de Documento_.
 
 ## Quais as diferenças entre os modos?
 
-Veja a [lista de peculiaridades ("quirks")](/pt-BR/docs/Mozilla_Quirks_Mode_Behavior "Mozilla_Quirks_Mode_Behavior") e "[almost standards mode](/pt-BR/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode")" para entender a diferença entre estes modos.
+Veja a [lista de peculiaridades ("quirks")](/pt-BR/docs/Mozilla_Quirks_Mode_Behavior) e "[almost standards mode](/pt-BR/docs/Gecko's_"Almost_Standards"_Mode)" para entender a diferença entre estes modos.

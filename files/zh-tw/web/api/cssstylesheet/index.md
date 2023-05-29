@@ -2,6 +2,7 @@
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/zh-TW/docs/Web/CSS) style sheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
@@ -55,7 +56,7 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 
 ## Browser compatibility
 
-{{Compat("api.CSSStyleSheet")}}
+{{Compat}}
 
 ## See also
 

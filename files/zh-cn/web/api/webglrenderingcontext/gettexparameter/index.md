@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.getTexParameter()
 slug: Web/API/WebGLRenderingContext/getTexParameter
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.getTexParameter()`** 此[WebGL API](/zh-CN/docs/Web/API/WebGL_API)方法返回特定的纹理信息。

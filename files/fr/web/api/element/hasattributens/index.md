@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/hasAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 ## Résumé

@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
 ---
+
 {{APIRef}}
 
 资源没有被完全加载时就会触发 **`abort`** 事件，但错误不会触发该事件。
@@ -52,7 +53,7 @@ video.appendChild(source);
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.abort_event")}}
+{{Compat}}
 
 ## 参阅
 

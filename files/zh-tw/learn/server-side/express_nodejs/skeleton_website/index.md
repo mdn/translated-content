@@ -1,7 +1,8 @@
 ---
-title: 'Express 教學 2: 創建一個骨架網站'
+title: "Express 教學 2: 創建一個骨架網站"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -159,24 +160,24 @@ express express-locallibrary-tutorial --view=pug
 
 1. 首先安裝依賴項（`install`安裝命令，將獲取項目的 **package.json** 文件中列出的所有依賴項包）。
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. 然後運行該應用程序。
 
-    - 在 Windows 上，使用此命令:
+   - 在 Windows 上，使用此命令:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - 在 macOS 或 Linux，使用此命令:
+   - 在 macOS 或 Linux，使用此命令:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. 然後在瀏覽器中加載 <http://localhost:3000/> ，以訪問該應用程序。
 
@@ -333,7 +334,7 @@ npm install --save-dev nodemon
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **備註：** `require()` 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 **app.js** 模塊，並省略可選的（**.js**）文件擴展名。
@@ -356,31 +357,31 @@ module.exports = app;
 讓我們詳細了解 **app.js** 文件。首先，我們使用 `require()`將一些有用的 node 庫導入到文件中，其中包括我們先前使用 NPM 為應用程序下載的 express，serve-favicon，morgan，cookie-parser 和 body-parser；和 path 庫，它是解析文件和目錄路徑的核心 node 庫。
 
 ```js
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
 ```
 
 然後我們用 `require()`導入來自我們的路由目錄的模塊。這些模塊/文件包含用於處理特定的相關“路由”集合（URL 路徑）的代碼。當我們擴展骨架應用程序，例如列出圖書館中的所有書籍時，我們將添加一個新文件，來處理與書籍相關的路由。
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **備註：** 此時我們剛剛導入了模塊；我們還沒有真正使用過它的路由（在文件的更下方一點將使用到路由）。
 
-接下來，我們使用導入的 express 模塊 ​​，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 “pug” ）。
+接下來，我們使用導入的 express 模塊 ，創建應用程序 `app` 對象，然後使用它來設置視圖（模板）引擎。引擎的設置有兩個部分。首先我們設置 '`views`' 值，來指定模板將被存儲的文件夾（在這種情況下是子文件夾 **/views**）。然後我們設置 '`view engine`' 的值，來指定模板庫（在本例中為 “pug” ）。
 
 ```js
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 下一組函數調用 `app.use()`，將中間件的庫，添加到請求處理鏈中。除了我們之前導入的第三方庫之外，我們還使用 `express.static` 中間件，來使 Express 提供在項目根目錄下，**/public** 目錄中的所有靜態文件。
@@ -388,18 +389,18 @@ app.set('view engine', 'pug');
 ```js
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 現在所有其他中間件都已設置完畢，我們將（先前導入的）路由處理代碼，添加到請求處理鏈中。導入的代碼，將為網站的不同部分定義特定路由：
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **備註：** 上面指定的路徑 ('/' and '`/users`')，被視為定義在導入文件中的路由前綴。因此，例如，如果導入的用戶模塊 **users**為`/profile`定義了路由，則可以在 `/users/profile`中訪問該路由。我們將在後面的文章中，詳細討論路由。
@@ -408,21 +409,21 @@ app.use('/users', usersRouter);
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -434,15 +435,15 @@ module.exports = app;
 
 ### 路由
 
-路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ​​，並使用它獲取 `express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
+路由文檔 **/routes/users.js** 如下所示（路由文件共享一個類似的結構，所以我們不需要也顯示 **index.js**）。首先加載 express 模塊 ，並使用它獲取 `express.Router`對象。然後它在該對像上指定一個路由，最後從模塊中導出路由器（這就是允許將文件導入到 **app.js** 中的路由）。
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -460,8 +461,8 @@ module.exports = router;
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res) {
+  res.render("index", { title: "Express" });
 });
 ```
 
@@ -491,15 +492,3 @@ block content
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

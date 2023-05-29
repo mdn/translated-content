@@ -2,6 +2,7 @@
 title: text-shadow
 slug: Web/CSS/text-shadow
 ---
+
 {{CSSRef}}
 
 **`text-shadow`** 为文字添加阴影。可以为文字与 [`decoration`](/zh-CN/docs/Web/CSS/text-decoration) 添加多个阴影，阴影值之间用逗号隔开。每个阴影值由元素在 X 和 Y 方向的偏移量、模糊半径和颜色值组成。
@@ -35,7 +36,7 @@ text-shadow: unset;
 
 当阴影大于一个时要用逗号区别开阴影之间的参数。
 
-每个阴影都有两到三个 `<length>` 参数，以及一个与阴影颜色相关的 `<color>` 参数。前两个 `<length>` 参数，是以“文字中心”为原点的坐标轴，分别为 x 轴  `<offset-x>` 和 y 轴 `<offset-y>` 的值；如果有第三个 `<length>` 参数，则第三个数值为形成阴影效果的半径的数值 `<blur-radius>`。
+每个阴影都有两到三个 `<length>` 参数，以及一个与阴影颜色相关的 `<color>` 参数。前两个 `<length>` 参数，是以“文字中心”为原点的坐标轴，分别为 x 轴 `<offset-x>` 和 y 轴 `<offset-y>` 的值；如果有第三个 `<length>` 参数，则第三个数值为形成阴影效果的半径的数值 `<blur-radius>`。
 
 当所给的阴影大于一个时，阴影应用的顺序为从前到后，第一个指定的阴影在顶部。
 
@@ -108,4 +109,4 @@ text-shadow: unset;
 
 - {{cssxref("box-shadow")}}
 - The {{cssxref("&lt;color&gt;")}} data type (for specifying the shadow color)
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)

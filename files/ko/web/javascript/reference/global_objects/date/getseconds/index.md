@@ -1,17 +1,11 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
+
 {{JSRef}}
 
-**`getSeconds()` **메서드는 `Date` 객체의 초 값을 현지 시간에 맞춰 반환합니다.
+**`getSeconds()`** 메서드는 `Date` 객체의 초 값을 현지 시간에 맞춰 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
 

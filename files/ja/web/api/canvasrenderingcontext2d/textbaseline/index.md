@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textBaseline`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストのベースライン（基準線）を指定します。

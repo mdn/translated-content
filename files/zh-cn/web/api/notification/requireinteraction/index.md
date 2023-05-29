@@ -1,7 +1,8 @@
 ---
 title: Notification.requireInteraction
-slug: Web/API/notification/requireInteraction
+slug: Web/API/Notification/requireInteraction
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 {{domxref("Notification")}} 接口的 **`requireInteraction`** 属性是只读属性，它返回一个 {{jsxref("Boolean")}}（布尔值），指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。
@@ -28,9 +29,9 @@ function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Notification.requireInteraction")}}
+{{Compat}}
 
 ## 相关内容
 

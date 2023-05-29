@@ -10,6 +10,7 @@ tags:
   - contextemenu
 translation_of: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 L'évènement **`contextmenu`** est déclenché à partir d'un élément lorsque l'utilisateur tente d'ouvrir un menu contextuel. Cet évènement est généralement déclenché par un clic-droit ou en utilisant la touche du menu contextuel.

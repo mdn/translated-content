@@ -1,29 +1,24 @@
 ---
 title: Compilar
 slug: Glossary/Compile
-tags:
-  - CodingScripting
-  - Compilador
-  - Glossary
-  - compilar
-translation_of: Glossary/Compile
+l10n:
+  sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
-Compilar es el proceso de transformar un programa informático escrito en un {{Glossary("computer programming", "lenguaje")}} en un programa equivalente en otro formato. Al programa que se encarga de compilar se le llama compilador. A veces, a esta tarea se le llama "ensamblar" o "construir", lo que suele implicar otros procesos adicionales, e.j. empaquetarlo en formato binario.
 
-Normalmente, un compilador transforma un lenguaje de alto nivel como C o {{Glossary("Java")}}, el cual es legible por los humanos, en un lenguaje máquina que la CPU puede entender. algunos compiladores que traducen de un lenguaje a otro del mismo nivel son llamados transpiladores, por ejemplo al compilar de TypeScript a {{Glossary("JavaScript")}}. Son considerados herramientas de productividad.
+Compilar es el proceso de transformar un programa informático escrito en un {{Glossary("computer programming", "lenguaje")}} en un conjunto de instrucciones en otro formato o lenguaje. Un **compilador** es un programa de computadora que realiza dicha tarea.
 
-Muchos compiladores funcionan de forma anticipada (AOT) o en tiempo de ejecución (JIT). Como programador, normalmente llamas a los compiladores AOT mediante la linea de comandos o el {{Glossary("IDE")}} que estés usando. Un ejemplo es el famoso compilador "gcc".
+Normalmente, un compilador transforma código escrito en un lenguaje de alto nivel como [C++](https://es.wikipedia.org/wiki/C++), [Rust](https://es.wikipedia.org/wiki/Rust_(lenguaje_de_programaci%C3%B3n)) o [Java](https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)) en código ejecutable — llamado **código binario** o **código máquina**. [WebAssembly](/es/docs/WebAssembly), por ejemplo, es una forma de código binario ejecutable que [puede ser compilado desde código escrito en C++, Rust, C#, Go, Swift y muchos otros lenguajes](https://webassembly.org/getting-started/developers-guide/) y luego puede ser ejecutado en cualquier página web de cualquier navegador.
 
-Los compiladores JIT suelen ser transparentes para el programador. Por ejemplo en los exploradores: el motor javaScript de [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey), de FireFox tiene un JIT embebido que compila el JavaScript de una web a código máquina mientras navegas. Proyectos como [WebAssembly](/en-US/docs/WebAssembly) trabajan para mejorar esto.
+La mayoría de los compiladores realizan compilación anticipada (ahead-of-time, AOT) o en tiempo de ejecución (just-in-time, JIT).
 
-## Saber más
+El compilador GNU `gcc` es un ejemplo muy conocido de compilador AOT. Los compiladores AOT son invocados típicamente desde la línea de comandos en un ambiente shell (desde una terminal o una consola) o dentro de un [IDE](/es/docs/Glossary/IDE).
 
-### Conocimientos generales
+Los compiladores JIT no son invocados típicamente de forma directa, sino que se integran internamente en software de entornos de ejecución, con el propósito de mejorar el rendimiento. Por ejemplo, la mayoría de los navegadores de ahora usan motores JavaScript que tienen compiladores JIT integrados.
 
-- {{Interwiki("wikipedia", "Compiler")}} on Wikipedia
-- The [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
+Los compiladores también pueden traducir entre lenguajes de alto nivel — por ejemplo, de TypeScript a [JavaScript](/es/docs/Glossary/JavaScript) — en tal caso, a menudo se les denomina transpiladores.
 
-### Véase también
+## Véase también
 
-- [Base CS Introduction on Compilers](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-- [A big list of learning material on StackOverflow](http://stackoverflow.com/a/1672/133203)
+- [Compilar de C/C++ a WebAssembly](/es/docs/WebAssembly/C_to_wasm)
+- [Compilar de Rust a WebAssembly](/es/docs/WebAssembly/Rust_to_wasm)
+- Wikipedia: [Compilador](https://es.wikipedia.org/wiki/Compilador)

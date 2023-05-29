@@ -2,6 +2,7 @@
 title: 初めての拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 この記事では、Firefox 用の拡張機能をどのように作ればよいのか、その初めから最後までを一通り説明します。この拡張機能は "mozilla.org" とそのサブドメインから読み込まれたページに赤い枠を付けるだけです。
@@ -55,7 +56,7 @@ cd borderify
 - [コンテンツスクリプト関する詳細](/ja/Add-ons/WebExtensions/Content_scripts)
 - [マッチパターンに関する詳細](/ja/Add-ons/WebExtensions/Match_patterns)
 
-> **Warning:** [時折、あなたの拡張機能用に ID を指定する必要があります](/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID)。アドオンの ID が必要なとき、`manifest.json` 内に [`applications`](/ja/Add-ons/WebExtensions/manifest.json/applications) キーを入れて `gecko.id` プロパティをセットします:
+> **警告:** [時折、あなたの拡張機能用に ID を指定する必要があります](/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID)。アドオンの ID が必要なとき、`manifest.json` 内に [`applications`](/ja/Add-ons/WebExtensions/manifest.json/applications) キーを入れて `gecko.id` プロパティをセットします:
 >
 > ```json
 > "applications": {
@@ -124,7 +125,7 @@ Firefox の場合: [about:debugging](/ja/docs/Tools/about:debugging) ページ�
 
 {{EmbedYouTube("rxBQl2Z9IBQ")}}
 
-> **Note:** ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
+> **メモ:** ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
 
 もう少し実験をします。コンテンツスクリプトを編集して、枠線の色を変更したり、ページのコンテンツに何か他の操作を加えてみましょう。コンテンツスクリプトを保存し、"about:debugging"の"再読み込み"ボタンをクリックして拡張機能ファイルを再読み込みすると、加えた変更がすぐに反映されているはずです。
 

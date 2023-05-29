@@ -2,6 +2,7 @@
 title: 為彈跳彩球添增其他功能
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
@@ -23,7 +24,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 在開始之前，請先複製先前文章所提供的 [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css)、[main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) 等檔案，儲存於本端磁碟的新資料夾中。
 
-> **備註：** 你也可透過如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
+> **備註：** 你也可透過如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
 
 ## 專案簡介
 
@@ -57,7 +58,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 再來見見這個壞蛋 — `EvilCircle()`！這個遊戲要加入 1 個會吃球的邪惡圈，而且要透過繼承自 `Shape()` 的建構子來定義這個邪惡圈。你可能也想添增另個讓第二個玩家控制的圈圈，或許多加幾個由電腦控制的邪惡圈。當然，光一個邪惡圈並無法統治世界，但可為此遊戲增添不少樂趣。
 
-`EvilCircle()` 建構子應繼承 `Shape()` 的 ` x、``y、``exists。 `
+`EvilCircle()` 建構子應繼承 `Shape()` 的 `x`、`y`、`exists`。
 
 亦可定義自有的屬性如下：
 
@@ -92,17 +93,17 @@ This method will add an `onkeydown` event listener to the `window` object so tha
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if(e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if(e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if(e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if(e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
@@ -132,22 +133,22 @@ To implement the score counter, follow the following steps:
 1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
 2. In your CSS file, add the following rule at the bottom:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. In your JavaScript, make the following updates:
 
-    - Create a variable that stores a reference to the paragraph.
-    - Keep a count of the number of balls on screen in some way.
-    - Increment the count and display the updated number of balls each time a ball is added to the scene.
-    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - Create a variable that stores a reference to the paragraph.
+   - Keep a count of the number of balls on screen in some way.
+   - Increment the count and display the updated number of balls each time a ball is added to the scene.
+   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
 ## Hints and tips
 

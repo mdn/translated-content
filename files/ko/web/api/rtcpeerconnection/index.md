@@ -1,11 +1,10 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 {{APIRef('WebRTC')}}
 
-**`RTCPeerConnection` **인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.
+**`RTCPeerConnection`** 인터페이스는 로컬 컴퓨터와 원격 피어 간의 WebRTC 연결을 담당하며 원격 피어에 연결하기 위한 메서드들을 제공하고, 연결을 유지하고 연결 상태를 모니터링하며 더 이상 연결이 필요하지 않을 경우 연결을 종료합니다.
 
 {{InheritanceDiagram}}
 
@@ -226,11 +225,9 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
   </tbody>
 </table>
 
-## 사양
+## 명세서
 
-| 사양명                                                                                           | 상태                             | 설명       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}} | {{Spec2('WebRTC 1.0')}} | 초기 정의. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

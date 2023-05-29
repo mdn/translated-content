@@ -2,6 +2,7 @@
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHeadingElement`** インターフェイスは、 [`<h1>` から `<h6>` まで](/ja/docs/Web/HTML/Element/Heading_Elements)様々な見出し要素を表します。 {{domxref("HTMLElement")}} インターフェイスからメソッドとプロパティを継承しています。

@@ -2,6 +2,7 @@
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
 ---
+
 {{ apiref("Media Capture and Streams") }}
 
 {{ SeeCompatTable() }}
@@ -16,9 +17,7 @@ associatedBlob = BlobEvent.data
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                                     | 備考       |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------- |
-| {{SpecName('MediaStream Recording', '#dom-blobevent-data', 'BlobEvent.data')}} | {{Spec2('MediaStream Recording')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

@@ -3,6 +3,7 @@ title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
 translation_of: Web/CSS/:is
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Примечание:** `:matches()` был переименован в `:is()` в [CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258).
@@ -157,7 +158,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
 
 ### Упрощение селекторов разделов
 
-Псевдо-класс `:is()` особенно полезен при работе с [заголовками и разделами](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без `:is()`, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.
+Псевдо-класс `:is()` особенно полезен при работе с [заголовками и разделами](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) HTML5. C тех пор как {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, и {{HTMLElement("nav")}} обычно используют вместе, без `:is()`, стилизовать их, чтобы они соответствовали друг друг, может быть не просто.
 
 К примеру, без `:is()`, стилизовать все {{HTMLElement("h1")}} элементы на разных уровнях может бы очень сложно:
 
@@ -227,7 +228,7 @@ h1 {
 
 ### Разница между :is() и :where()
 
-Разница между этими двумя, в том что `:is()` учитывает спецификацию общего селектора (он принимает специфику своего самого конкретного аргумента), в то же время [`:where()`](/en-US/docs/Web/CSS/:where) имеет значение спецификации равное 0. Это можно увидеть на [примере на странице документации `:where()` ](/ru/docs/Web/CSS/:where#Examples).
+Разница между этими двумя, в том что `:is()` учитывает спецификацию общего селектора (он принимает специфику своего самого конкретного аргумента), в то же время [`:where()`](/en-US/docs/Web/CSS/:where) имеет значение спецификации равное 0. Это можно увидеть на [примере на странице документации `:where()`](/ru/docs/Web/CSS/:where#Examples).
 
 ## Спецификации
 

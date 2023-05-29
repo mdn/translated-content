@@ -2,6 +2,7 @@
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`DedicatedWorkerGlobalScope`** 对象（也就是 {{domxref("Worker")}} 全局作用域）可以通过 {{domxref("window.self","self")}} 关键字来访问。一些在 worker 全局作用域下不可用的全局函数、命名空间对象以及构造器，也可以通过此对象使用。在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)的 [Web Workers 可以使用的函数和类](/zh-CN/docs/Web/Guide/Needs_categorization/Functions_available_to_workers)页面中，有列举这些特性。
@@ -31,9 +32,9 @@ _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{dom
 _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{domxref("EventTarget")}} 继承事件处理器，因此，此接口也实现了来自 {{domxref("WindowTimers")}}、{{domxref("WindowBase64")}} 的事件处理器。_
 
 - {{domxref("DedicatedWorkerGlobalScope.onmessage")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("message")}} event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
+  - : Is an event handler representing the code to be called when the [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) event is raised. These events are of type {{domxref("MessageEvent")}} and will be called when the worker receives a message from the document that started it (i.e. from the {{domxref("Worker.postMessage")}} method.)
 - {{domxref("DedicatedWorkerGlobalScope.onmessageerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("messageerror")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`messageerror`](/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event) event is raised.
 
 ## 方法
 
@@ -81,7 +82,7 @@ _该接口从 {{domxref("WorkerGlobalScope")}} 接口以及它的父接口 {{dom
 
 ## 浏览器兼容性
 
-{{Compat("api.DedicatedWorkerGlobalScope")}}
+{{Compat}}
 
 ## 参见
 

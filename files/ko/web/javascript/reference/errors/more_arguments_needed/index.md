@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: More arguments needed'
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
-translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

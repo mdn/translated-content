@@ -1,13 +1,8 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - SEO
-  - buscadores
-  - busquedas
-  - posicionamiento web
-translation_of: Glossary/SEO
 ---
+
 **SEO** (Search Engine Optimization) también conocido como posicionamiento web, es el proceso de hacer un sitio web más visible en los resultados de búsqueda o mejorar el ranking de búsqueda.
 
 Los motores de búsqueda siguen los enlaces de una página a otra, y el índice del contenido encontrado. Al realizar una búsqueda, el motor de búsqueda muestra el contenido indexado en base a su tabla de contenidos organizándolos guiados por las reglas de su algoritmo. El cumplimiento de las directrices de los buscadores con exactitud no implica el correcto posicionamiento del proyecto asociado en los mejores resultados, pero sí la ausencia de una penalización por parte del algoritmo del buscador.
@@ -23,7 +18,7 @@ Métodos de SEO se dividen en dos grandes clases:
 
 ## Aprende más en
 
-- {{Interwiki("wikipedia", "SEO")}} on Wikipedia
+- [SEO](https://es.wikipedia.org/wiki/SEO) on Wikipedia
 
 ### Aprende SEO
 

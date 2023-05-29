@@ -1,14 +1,8 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/border-left-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-left-width`** 속성은 요소의 왼쪽 테두리 너비를 지정합니다.

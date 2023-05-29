@@ -2,65 +2,79 @@
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
+
 {{JSRef}}
 
-**RangeError**对象标明一个错误，当一个值不在其所允许的范围或者集合中。
-
-## 语法
-
-```plain
-new RangeError([message[, fileName[, lineNumber]]])
-```
-
-### 参数
-
-- `message`
-  - : 可选，可读的错误描述
-- `fileName` {{non-standard_inline}}
-  - : 可选，包含造成异常代码的文件名
-- `lineNumber` {{non-standard_inline}}
-  - : 可选，造成异常的代码所在的行数
+**`RangeError`** 对象表示一个特定值不在所允许的范围或者集合中的错误。
 
 ## 描述
 
-试图传递一个 number 参数给一个范围内不包含该 number 的函数时则会引发**RangeError**。当传递一个不合法的 length 值作为{{jsxref("Array")}} 构造器的参数创建数组，或者传递错误值到数值计算方法（{{jsxref("Number.toExponential()")}}，{{jsxref("Number.toFixed()")}} ，{{jsxref("Number.toPrecision()")}}），会出现**RangeError**。.
+试图将一个值作为参数传递给一个允许的范围不包含该值的函数会引发 `RangeError`。
 
-## 属性
+在以下的情况中，可能会遇到这个问题：
 
-- {{jsxref("RangeError.prototype")}}
-  - : `允许在RangeError对象上附加属性。`
+- 将不允许的字符串值传递给 {{jsxref("String.prototype.normalize()")}}，或
+- 尝试使用 {{jsxref("Array")}} 构造函数创建一个具有不合法的长度的字符串，或
+- 传递错误值到数值计算方法（{{jsxref("Number.toExponential()")}}、{{jsxref("Number.toFixed()")}} 或 {{jsxref("Number.toPrecision()")}}）。
 
-## 方法
+`RangeError` 是一个{{Glossary("serializable object", "可序列化对象")}}，所以可以使用 {{domxref("structuredClone()")}} 对它进行克隆，也可以使用 {{domxref("Worker/postMessage()", "postMessage()")}} 在 [Worker](/zh-CN/docs/Web/API/Worker) 之间拷贝它。
 
-`RangeError`全局对象没有自带方法，但它通过可以原型链继承一些方法。
+## 构造函数
 
-## `RangeError`实例
+- {{jsxref("RangeError/RangeError", "RangeError()")}}
+  - : 创建一个新的 `RangeError` 对象。
 
-### 属性
+## 实例属性
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
-### 方法
+## 示例
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
-
-## 例子
-
-### 使用`RangeError`
+### 使用 RangeError（对于数值）
 
 ```js
-var check = function(num) {
-  if (num < MIN || num > MAX) {
-    throw new RangeError('Parameter must be between ' + MIN + ' and ' + MAX);
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.")
   }
-};
+}
 
 try {
-  check(500);
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // 处理错误
+  }
 }
-catch (e) {
-  if (e instanceof RangeError) {
-    // 处理越界错误
+```
+
+### 使用 RangeError（对于其他的值）
+
+```js
+function check(value) {
+  if (!["apple", "banana", "carrot"].includes(value)) {
+    throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+  }
+}
+
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // 处理错误
   }
 }
 ```
@@ -73,11 +87,11 @@ catch (e) {
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
 - {{jsxref("Error")}}
-- {{jsxref("RangeError.prototype")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

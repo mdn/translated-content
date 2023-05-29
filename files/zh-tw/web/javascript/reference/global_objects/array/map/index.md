@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 方法會建立一個新的陣列，其內容為原陣列的每一個元素經由回呼函式運算後所回傳的結果之集合。
@@ -183,7 +184,7 @@ function returnInt(element) {
 
 ## Polyfill
 
-`map` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `map` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that `callback.call` evaluates to the original value of `{{jsxref("Function.prototype.call")}}`.
+`map` was added to the ECMA-262 standard in the 5th edition; as such it may not be present in all implementations of the standard. You can work around this by inserting the following code at the beginning of your scripts, allowing use of `map` in implementations which do not natively support it. This algorithm is exactly the one specified in ECMA-262, 5th edition, assuming {{jsxref("Object")}}, {{jsxref("TypeError")}}, and {{jsxref("Array")}} have their original values and that `callback.call` evaluates to the original value of {{jsxref("Function.prototype.call")}}.
 
 ```js
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
@@ -283,7 +284,7 @@ if (!Array.prototype.map) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## 參見
 

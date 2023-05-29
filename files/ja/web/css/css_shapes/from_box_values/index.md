@@ -1,7 +1,8 @@
 ---
 title: ボックス値からのシェイプ
-slug: Web/CSS/CSS_Shapes/From_box_values
+slug: Web/CSS/CSS_shapes/From_box_values
 ---
+
 {{CSSRef}}
 
 シェイプを作るのに直接的な方法が、 CSS ボックスモデルの値を使用することです。この記事では、これを行う方法を説明します。

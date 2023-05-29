@@ -2,6 +2,7 @@
 title: opacity
 slug: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -10,7 +11,7 @@ opacity 属性指定了一个元素的**不透明度**。换言之，opacity 属
 
 当 opacity 属性的值应用于某个元素上时，是把这个元素（包括它的内容）当成一个整体看待，即使这个值没有被子元素继承。因此，一个元素和它包含的子元素都会具有和元素背景相同的透明度，哪怕这个元素和它的子元素有不同的 opacity 属性值。
 
-使用 opacity 属性，当属性值不为 1 时，会把元素放置在一个新的[层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context)中。
+使用 opacity 属性，当属性值不为 1 时，会把元素放置在一个新的[层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context)中。
 
 {{cssinfo}}
 
@@ -43,7 +44,7 @@ opacity: inherit;
     | 任何一个位于 0.0-1.0 之间的 {{cssxref("&lt;number&gt;")}} | 元素半透明 (即元素后面的背景可见).       |
     | `1`                                                                  | 元素完全不透明 (即元素后面的背景不可见). |
 
-### 正式规则
+### 形式语法
 
 {{csssyntax("opacity")}}
 
@@ -70,7 +71,7 @@ div { background-color: yellow; }
 <div class="heavy">This is very easy to see.</div>
 ```
 
-{{EmbedLiveSample('Basic_example', '640', '64')}}
+{{EmbedLiveSample('基本示例', '640', '64')}}
 
 ### :hover 时 opacity 的不同
 
@@ -94,7 +95,7 @@ img.opacity:hover {
      class="opacity">
 ```
 
-{{EmbedLiveSample('Different_opacity_with_hover', '150', '175')}}
+{{EmbedLiveSample(':hover 时 opacity 的不同', '150', '175')}}
 
 ## 规范
 
@@ -104,6 +105,6 @@ img.opacity:hover {
 
 {{Compat}}
 
-## 阅读更多
+## 参见
 
 - [MSDN Microsoft's filter:alpha(opacity=xx)](http://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)

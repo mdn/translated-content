@@ -1,12 +1,8 @@
 ---
 title: 문 및 선언
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Statements")}}
 
 JavaScript 응용 프로그램은 적절한 구문을 갖는 문으로 구성됩니다. 한 문이 여러 줄에 걸칠 수 있습니다. 여러 문은 각 문이 세미콜론으로 구분된 경우 한 줄에 나올 수 있습니다. 이는 키워드 하나가 아니라, 키워드 그룹입니다.

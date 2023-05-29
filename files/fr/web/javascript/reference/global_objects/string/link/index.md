@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/link
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/link
 ---
+
 {{JSRef}}
 
 La méthode **`link()`** permet de créer une chaîne de caractères représentant un élément HTML {{HTMLElement("a")}}, ce qui permet d'afficher la chaîne de caractères comme un lien hypertexte vers une URL donnée.
@@ -49,18 +50,11 @@ console.log("Cliquer ici pour revenir sur " + texteAffiché.link(URL));
 
 ## Spécifications
 
-| Spécification                                                                                            | État                         | Commentaires                                                                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.link', 'String.prototype.link')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'Annexe B (normative) pour les fonctionnalités ECMAScript additionnelles concernant les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.link', 'String.prototype.link')}} | {{Spec2('ESDraft')}} | Définie dans l'Annexe B (normative) pour les fonctionnalités ECMAScript additionnelles concernant les navigateurs web.                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.link")}}
-
-## Notes relatives à Gecko
-
-- À partir de Gecko 17.0 {{geckoRelease("17")}} le symbole de double quote **"** est automatiquement remplacé par l'entité HTML de référence dans le paramètre `url`.
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: URL.origin
 slug: Web/API/URL/origin
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`origin`** 読み取り専用プロパティは、表現された URL のオリジンの Unicode シリアル化を含む {{domxref("USVString")}} を返します。 正確な構造は、次のように URL のタイプによって異なります。
@@ -31,9 +32,7 @@ url.origin; // 'https://mozilla.org' を返します
 
 ## 仕様
 
-| 仕様                                                                 | 状態                 | コメント |
-| -------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-origin', 'URL.origin')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -4,6 +4,7 @@ slug: Web/CSS/aspect-ratio
 translation_of: Web/CSS/aspect-ratio
 browser-compat: css.properties.aspect-ratio
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** définit un **ratio d'affichage préférentiel** pour la boîte, qui sera utilisé dans le calcul des tailles automatiques et pour d'autres fonctions de mise en page.

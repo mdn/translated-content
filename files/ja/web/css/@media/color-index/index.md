@@ -1,15 +1,8 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.color-index
-translation_of: Web/CSS/@media/color-index
 ---
+
 {{CSSRef}}
 
 **`color-index`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末の色参照テーブルの項目数を調べるために使用します。

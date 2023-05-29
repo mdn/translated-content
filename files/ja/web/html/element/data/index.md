@@ -2,7 +2,8 @@
 title: <data>
 slug: Web/HTML/Element/data
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<data>` 要素**は、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、 {{HTMLElement("time")}} 要素を使用する必要があります。
 
@@ -66,7 +67,7 @@ slug: Web/HTML/Element/data
 
 この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を含みます。
 
-- {{htmlattrdef("value")}}
+- `value`
   - : この属性は要素の内容を機械可読な形式で指定します。
 
 ## 例
@@ -84,10 +85,7 @@ slug: Web/HTML/Element/data
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-data-element', '&lt;data&gt;')}}             | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

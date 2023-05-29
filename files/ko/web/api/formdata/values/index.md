@@ -1,10 +1,8 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-page-type: web-api-instance-method
-browser-compat: api.FormData.values
-translation_of: Web/API/FormData/values
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData.values()`** 메서드는 이 객체에 포함 된 모든 value를 통과하는 {{jsxref("Iteration_protocols",'iterator')}}를 반환합니다. value는 {{domxref("USVString")}} 또는 {{domxref("Blob")}} 객체입니다.
@@ -42,11 +40,11 @@ value1
 value2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLElement/title
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propriété **`HTMLElement.title`** représente le titre de l'élément, le texte habituellement affiché dans une fenêtre contextuelle d''info-bulle' lorsque la souris survole le nœud affiché.

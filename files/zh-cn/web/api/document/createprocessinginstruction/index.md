@@ -2,6 +2,7 @@
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 `createProcessingInstruction()` 创建一个新的处理指令节点，并返回。
@@ -21,7 +22,7 @@ Processing instruction node = document.createProcessingInstruction(target, data)
 ### 异常
 
 - `NOT_SUPPORTED_ERR`
-  - : Thrown if you attempt to create a processing instruction node on an HTML document in Gecko 9 {{ geckoRelease("9.0") }} or earlier. In Gecko 10.0 {{ geckoRelease("10.0") }} and later, you can use this method on HTML documents.
+  - : Thrown if you attempt to create a processing instruction node on an HTML document in Gecko 9 or earlier. In Gecko 10.0 and later, you can use this method on HTML documents.
 - `DOM_INVALID_CHARACTER`
   - : Thrown if you try to add an invalid processing instruction target (it should be an XML name besides any case combination of the letters "xml") or if the closing processing instruction sequence ("?>") is added as part of the data, so unescaped user-provided data cannot be safely used without escaping or otherwise dealing with such situations.
 
@@ -35,7 +36,7 @@ var pi = docu.createProcessingInstruction('xml-stylesheet', 'href="mycss.css" ty
 docu.insertBefore(pi, docu.firstChild);
 
 alert(new XMLSerializer().serializeToString(docu));
-// 弹出框内容: <?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
+// 弹出框内容：<?xml-stylesheet href="mycss.css" type="text/css"?><xml/>
 ```
 
 ## 规范

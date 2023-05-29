@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/actual_value
 original_slug: Web/CSS/valeur_reelle
 ---
+
 {{CSSRef}}
 
 La **valeur réelle** d'une propriété CSS est la valeur utilisée par le moteur une fois que toutes les approximations ont été appliquées. Ainsi, un agent utillisateur ne pourra afficher des bordures qu'avec un nombre de pixels entier et pourra ainsi être forcé d'approximer [la valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e) pour l'épaisseur de la bordure.
@@ -24,9 +25,7 @@ La valeur réelle est la valeur finale obtenue lors de la détermination d'une p
 
 ## Spécifications
 
-| Spécification                                                                            | État                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -2,7 +2,10 @@
 title: mask-border-width
 slug: Web/CSS/mask-border-width
 ---
-{{CSSRef}}{{SeeCompatTable}}**`mask-border-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的 [mask border](/zh-CN/docs/Web/CSS/mask-border)的宽度
+
+{{CSSRef}}{{SeeCompatTable}}
+
+**`mask-border-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的 [mask border](/zh-CN/docs/Web/CSS/mask-border)的宽度
 
 ## 语法
 

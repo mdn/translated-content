@@ -3,6 +3,7 @@ title: MDN にリンクするには
 slug: orphaned/MDN/About/Linking_to_MDN
 original_slug: MDN/About/Linking_to_MDN
 ---
+
 {{MDNSidebar}}
 
 MDN にリンクするガイドラインやそもそもリンクして良いのか聞かれることがありますが、もちろん **OK です。MDN にリンクして頂いて構いません。**その際のガイドラインやベストプラクティスが必要であれば続けて読んでください。
@@ -68,4 +69,4 @@ MDN にリンクするガイドラインやそもそもリンクして良いの�
 
 ## Cross-Origin Resource Sharing
 
-私達は MDN の公開する全てのデータで [CORS](https://developer.mozilla.org/docs/HTTP/Access_control_CORS) を有効にしているつもりです。これにはほぼ全てのものが当てはまるはずです。もしあなたがなにか[cross-origin requests](https://developer.mozilla.org/docs/HTTP/Access_control_CORS)が使えない状態を発見したら、それは[修正すべきバグ](https://bugzilla.mozilla.org/form.mdn)です。
+私達は MDN の公開する全てのデータで [CORS](/ja/docs/HTTP/Access_control_CORS) を有効にしているつもりです。これにはほぼ全てのものが当てはまるはずです。もしあなたがなにか [cross-origin requests](/ja/docs/HTTP/Access_control_CORS) が使えない状態を発見したら、それは[修正すべきバグ](https://bugzilla.mozilla.org/form.mdn)です。

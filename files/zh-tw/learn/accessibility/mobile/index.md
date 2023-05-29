@@ -2,6 +2,7 @@
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 With web access on mobile devices being so popular, and popular platforms such as iOS and Android having fully fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
@@ -104,9 +105,9 @@ For example, with TalkBack turned on:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
-    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
+   - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between different items on the page.
 5. Swipe up and right with a smooth motion to enter the local content menu.
@@ -143,8 +144,8 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
 
-    - Release your fingers to select it.
-    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
+   - Release your fingers to select it.
+   - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
 The options available under the Rotor are context-sensitive — they will differ depending on what app or view you are in (see below for an example).
 
@@ -156,20 +157,20 @@ Let's have a go at web browsing with VoiceOver:
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
 
-    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
-    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
-    - Once you've finished, find the Enter key and press it.
+   - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
+   - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
+   - Once you've finished, find the Enter key and press it.
 
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
 
-    - _Speaking Rate_: Change the speaking rate.
-    - _Containers_: Move between different semantic containers on the page.
-    - _Headings_: Move between headings on the page.
-    - _Links_: Move between links on the page.
-    - _Form Controls_: Move between form controls on the page.
-    - _Language_: Move between different translations, if they are available.
+   - _Speaking Rate_: Change the speaking rate.
+   - _Containers_: Move between different semantic containers on the page.
+   - _Headings_: Move between headings on the page.
+   - _Links_: Move between links on the page.
+   - _Form Controls_: Move between form controls on the page.
+   - _Language_: Move between different translations, if they are available.
 
 7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
@@ -186,11 +187,11 @@ Alternatively, mouse-specific events such as [mousedown](/zh-TW/docs/Web/API/Glo
 If you try to control our [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) example with keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -198,12 +199,12 @@ document.onmouseup = stopMove;
 To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -218,7 +219,7 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 In particular, the most common problems that need to be addressed for mobile are:
 
-- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/zh-TW/docs/Web/CSS/Media_Queries), [viewport](/zh-TW/docs/Mozilla/Mobile/Viewport_meta_tag), and [flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox).
+- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/zh-TW/docs/Web/CSS/CSS_media_queries), [viewport](/zh-TW/docs/Mozilla/Mobile/Viewport_meta_tag), and [flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 
@@ -233,7 +234,7 @@ There are other important issues to consider when making sites more accessible o
 Using [viewport](/zh-TW/docs/Mozilla/Mobile/Viewport_meta_tag), it is possible to disable zoom. Alwasy ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="width=device-width; user-scalable=yes">
+<meta name="viewport" content="width=device-width; user-scalable=yes" />
 ```
 
 You should never set `user-scalable=no` if at all possible — many people rely on zoom to be able to see the content of your website, so taking this functionality away is a really bad idea. There are certain situations where zooming might break the UI; in such cases, if you feel that you absolutely need to disable zoom, you should provide some other kind of equivalent, such as a control for increasing the text size in a way that doesn't break your UI.
@@ -269,13 +270,3 @@ In this article we have provided you with some details about common mobile acces
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/zh-TW/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/zh-TW/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/zh-TW/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/zh-TW/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/zh-TW/docs/Learn/Accessibility/Accessibility_troubleshooting)

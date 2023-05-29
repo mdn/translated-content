@@ -2,6 +2,7 @@
 title: Access-Control-Request-Headers
 slug: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
+
 {{HTTPSidebar}}
 
 请求头 **`Access-Control-Request-Headers`** 出现于 {{glossary("preflight request")}}（预检请求）中，用于通知服务器在真正的请求中会采用哪些请求头。

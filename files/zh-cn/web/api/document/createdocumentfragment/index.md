@@ -2,6 +2,7 @@
 title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 创建一个新的空白的文档片段 ( [`DocumentFragment`](/zh-CN/docs/DOM/DocumentFragment))。
@@ -50,17 +51,17 @@ element.appendChild(fragment);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 600, 140)}}
+{{EmbedLiveSample("示例", 600, 140)}}
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Document.createDocumentFragment")}}
+{{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

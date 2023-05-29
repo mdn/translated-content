@@ -2,6 +2,7 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 ## 總覽
@@ -111,7 +112,7 @@ inner.length; // 0
 
 ## 瀏覽器相容性
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 \[1] Supported in Opera 15+ by enabling the "**Enable \<style scoped>**" or "**Enable experimental Web Platform features**" flag in `chrome://flags`.
 

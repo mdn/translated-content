@@ -1,14 +1,8 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-tags:
-  - HTTP
-  - Reference
-  - エラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/412
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`412 Precondition Failed`** クライアントエラーレスポンスコードは、ターゲットリソースへのアクセスが拒否されたことを示します。これは、 {{HTTPHeader("If-Unmodified-Since")}} または {{HTTPHeader("If-None-Match")}} ヘッダーで定義された条件が満たされていない場合に、 {{HTTPMethod("GET")}} もしくは {{HTTPMethod("HEAD")}} 以外のメソッドの条件付きリクエストで発生します。その場合、リクエスト (通常はリソースのアップロードまたは変更) を行うことができず、このエラーレスポンスが返されます。

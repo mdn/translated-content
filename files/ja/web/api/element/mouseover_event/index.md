@@ -2,6 +2,7 @@
 title: 'Element: mouseover イベント'
 slug: Web/API/Element/mouseover_event
 ---
+
 {{APIRef}}
 
 **`mouseover`** イベントは、ポインティングデバイス (マウスやトラックパッドなど) のカーソルが要素またはその子要素のうちの一つの上を移動したときに、その要素 ({{domxref("Element")}}) に発行されます。

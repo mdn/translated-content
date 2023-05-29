@@ -2,6 +2,7 @@
 title: SLD
 slug: Glossary/SLD
 ---
+
 SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD")}} 直下の階層のドメイン名です。
 
 例えば `mozilla.org` では、 `mozilla` が TLD の `.org` に対するセカンドレベルドメインです。
@@ -12,7 +13,7 @@ SLD (Second Level Domain; セカンドレベルドメイン) は {{Glossary("TLD
 
 1. Wikipedia articles
 
-    1. {{Interwiki("wikipedia", "セカンドレベルドメイン", "SLD")}}
+    1. [SLD](https://ja.wikipedia.org/wiki/セカンドレベルドメイン)
 
 2. [用語集](/ja/docs/Glossary)
 

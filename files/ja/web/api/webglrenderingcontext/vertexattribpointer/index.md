@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.vertexAttribPointer()`** メソッドは、現在 `gl.ARRAY_BUFFER` に結合されたバッファーを、現在の頂点バッファーオブジェクトの一般的な頂点属性に結合して、そのレイアウトを指定します。
@@ -197,10 +198,7 @@ gl.enableVertexAttribArray(locTexUV);
 
 ## 仕様書
 
-| 仕様                                                                                                             | 策定状況                             | コメント                        |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------- |
-| {{SpecName('WebGL', "#5.14.10", "vertexAttribPointer")}}                                     | {{Spec2('WebGL')}}             | 初回定義。                      |
-| {{SpecName('OpenGL ES 2.0', "glVertexAttribPointer.xml", "glVertexAttribPointer")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

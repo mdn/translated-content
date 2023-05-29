@@ -1,20 +1,8 @@
 ---
 title: 'CSS: カスケーディングスタイルシート'
 slug: Web/CSS
-tags:
-  - CSS
-  - Cascading Style Sheets
-  - Design
-  - Guide
-  - Landing
-  - Layout
-  - Reference
-  - Style Sheets
-  - Styles
-  - Stylesheets
-  - l10n:priority
-translation_of: Web/CSS
 ---
+
 {{CSSRef}}
 
 **カスケーディングスタイルシート** (Cascading Style Sheets) (**CSS**) は[スタイルシート](/ja/docs/Web/API/StyleSheet)言語であり、[HTML](/ja/docs/Web/HTML) や [XML](/ja/docs/XML_introduction) (方言である [SVG](/ja/docs/Web/SVG)、[MathML](/ja/docs/Web/MathML)、{{Glossary("XHTML")}} などを含む) で記述された文書の体裁や見栄えを表現するために用いられます。 CSS は、要素が画面上で (あるいは紙や音声といった別のメディア上で) どのように表現されるのかを定義します。
@@ -32,7 +20,13 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
 - CSS リファレンス
   - : CSS のすべてのプロパティや概念について記述された、熟練のウェブ開発者向けの [CSS リファレンス](/ja/docs/Web/CSS/Reference)です。
 
-> **Callout:** #### フロントエンドのウェブ開発者を目指している方へゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。[**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者を目指している方へ
+>
+> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
+>
+> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
 
 ## チュートリアル
 
@@ -85,7 +79,7 @@ CSS3 以降、仕様の範囲が大幅に拡大し、CSS モジュールごと�
 
 ## メタバグ
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Firefox バグ 1323667](https://bugzil.la/1323667)
 
 ## 関連情報
 

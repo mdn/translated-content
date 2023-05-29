@@ -1,7 +1,8 @@
 ---
-title: 'Django Tutorial Part 10: Testing a Django web application'
+title: "Django Tutorial Part 10: Testing a Django web application"
 slug: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 隨著網站的增長，他們越來越難以手動測試。不僅要進行更多的測試，而且隨著組件之間的互動，變得越來越複雜，一個區域的小改變，可能會影響到其他區域，所以需要做更多的改變，來確保一切正常運行，並且在進行更多更改時，不會引入錯誤。減輕這些問題的一種方法，是編寫自動化測試，每當您進行更改時，都可以輕鬆可靠地運行測試。本教程演示如何使用 Django 的測試框架，自動化您的網站的單元測試。
@@ -215,6 +216,7 @@ Traceback (most recent call last):
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
+
 Ran 3 tests in 0.075s
 
 FAILED (failures=1)
@@ -894,21 +896,3 @@ The next and final tutorial shows how you can deploy your wonderful (and fully t
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

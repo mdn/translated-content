@@ -1,12 +1,8 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - HTTP
-  - Informational
-  - ステータスコード
-translation_of: Web/HTTP/Status/100
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`100 Continue`** 情報ステータスレスポンスコードは、これまでのすべてが OK であり、クライアントが要求を続行するか、または要求がすでに終了している場合は無視することを示します。

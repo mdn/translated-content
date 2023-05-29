@@ -1,13 +1,8 @@
 ---
 title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptor()`** 메서드는 주어진 객체 _자신의 속성_(즉, 객체에 직접 제공하는 속성, 객체의 프로토타입 체인을 따라 존재하는 덕택에 제공하는 게 아닌)에 대한 속성 설명자(descriptor)를 반환합니다.

@@ -1,23 +1,6 @@
 ---
 title: Clipboard API
 slug: Web/API/Clipboard_API
-tags:
-  - API
-  - Async Clipboard API
-  - Clipboard
-  - Clipboard API
-  - Clipboard Event API
-  - ClipboardEvent
-  - ClipboardItem
-  - Cut
-  - Landing
-  - Reference
-  - copy
-  - paste
-  - 클립보드
-  - 복사
-  - 붙여넣기
-translation_of: Web/API/Clipboard_API
 ---
 {{DefaultAPISidebar("Clipboard API")}}
 
@@ -43,7 +26,7 @@ navigator.clipboard.readText().then(
 - {{domxref("Clipboard")}} {{securecontext_inline}}
   - : 시스템 클립보드에서 텍스트와 데이터를 읽고 쓸 수 있는 인터페이스를 제공합니다. 명세에서는 "Async Clipboard API"라고 부릅니다.
 - {{domxref("ClipboardEvent")}} {{securecontext_inline}}
-  - : {{event("cut")}}, {{event("copy")}}, {{event("paste")}} 이벤트처럼 클립보드 조작에 대한 정보를 제공하는 이벤트를 나타냅니다. 명세에서는 "Clipboard Event API"라고 부릅니다.
+  - : {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/paste_event", "paste")}} 이벤트처럼 클립보드 조작에 대한 정보를 제공하는 이벤트를 나타냅니다. 명세에서는 "Clipboard Event API"라고 부릅니다.
 - {{domxref("ClipboardItem")}} {{securecontext_inline}}
   - : 클립보드 데이터를 읽거나 쓸 때 데이터 형식을 나타낼 수 있습니다.
 
@@ -53,17 +36,7 @@ navigator.clipboard.readText().then(
 
 ## 브라우저 호환성
 
-### Clipboard
-
-{{Compat("api.Clipboard")}}
-
-### ClipboardEvent
-
-{{Compat("api.ClipboardEvent")}}
-
-### ClipboardItem
-
-{{Compat("api.ClipboardItem")}}
+{{Compat}}
 
 ## 같이 보기
 

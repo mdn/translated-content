@@ -2,6 +2,7 @@
 title: FileReader
 slug: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 藉由 `FileReader` 物件，Web 應用程式能以非同步（asynchronously）方式讀取儲存在用戶端的檔案（或原始資料暫存）內容，可以使用 {{domxref("File")}} 或 {{domxref("Blob")}} 物件指定要讀取的資料。
@@ -23,7 +24,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
   - : 此 {{domxref("DOMException")}} 類型的物件記錄了讀取資料時發生的錯誤資訊。
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
   - : 表示目前 `FileReader` 狀態的數字，其代表的意義為：
-  
+
     <table>
     <tbody>
     <tr>
@@ -49,17 +50,17 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 ### 事件處理器
 
 - {{domxref("FileReader.onabort")}}
-  - : {{event("abort")}} 事件處理器，於讀取被中斷時觸發。
+  - : [`abort`](/zh-TW/docs/Web/API/HTMLMediaElement/abort_event) 事件處理器，於讀取被中斷時觸發。
 - {{domxref("FileReader.onerror")}}
-  - : {{event("error")}} 事件處理器，於讀取發生錯誤時觸發。
+  - : [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件處理器，於讀取發生錯誤時觸發。
 - {{domxref("FileReader.onload")}}
-  - : {{event("load")}} 事件處理器，於讀取完成時觸發。
+  - : [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件處理器，於讀取完成時觸發。
 - {{domxref("FileReader.onloadstart")}}
-  - : {{event("loadstart")}} 事件處理器，於讀取開始時觸發。
+  - : [`loadstart`](/zh-TW/docs/Web/API/XMLHttpRequest/loadstart_event) 事件處理器，於讀取開始時觸發。
 - {{domxref("FileReader.onloadend")}}
-  - : {{event("loadend")}} 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
+  - : [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event) 事件處理器，於每一次讀取結束之後觸發（不論成功或失敗），會於 `onload` 或 `onerror` 事件處理器之後才執行。
 - {{domxref("FileReader.onprogress")}}
-  - : {{event("progress")}} 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
+  - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
 
 > **備註：** `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。
 
@@ -82,7 +83,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader")}}
+{{Compat}}
 
 ## 參見
 

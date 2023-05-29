@@ -2,6 +2,7 @@
 title: 便利な文字列メソッド
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 文字列の基本についてはすでに見ました。ここからはレベルを上げて、組み込みのメソッドを使用して文字列に対して実行できる便利な操作について考えてみましょう。例えば、文字列の長さを調べたり、繋げたり、分割したり、ある文字を他の文字に置き換えたりなどです。
@@ -105,7 +106,7 @@ browserType[browserType.length-1];
 
     この例は "zilla" という文字列を返します。なぜなら、2 の位置にある文字は z であり、2 番目の引数を指定していないため、3 文字目から最後までが部分文字列として戻ったのです。
 
-> **Note:** `slice()` の 2 番目の引数はオプション (任意指定) です。もし指定しなければ、元々の文字列の最後まで切り出しを行います。他にもオプションがありますので、さらに詳しく知りたければ{{jsxref("String.prototype.slice()", "slice()")}}のページで調べてみましょう。
+> **メモ:** `slice()` の 2 番目の引数はオプション (任意指定) です。もし指定しなければ、元々の文字列の最後まで切り出しを行います。他にもオプションがありますので、さらに詳しく知りたければ{{jsxref("String.prototype.slice()", "slice()")}}のページで調べてみましょう。
 
 ### 大文字・小文字の切り替え
 
@@ -314,7 +315,7 @@ textarea.onkeyup = function(){
 3. その新しい変数を部分文字列とし、小文字ばかりの文字列にある最初の文字を置換して、大文字化します。この置換処理の結果を別の新しい変数に格納します。
 4. `input` 変数ではなく、最終結果が `result` 変数の値に代入されるよう修正します。
 
-> **Note:** ヒント — 文字列メソッドのパラメーターは文字列リテラルである必要はありません。変数でもよいですし、メソッドが呼び出される変数であっても構いません。
+> **メモ:** ヒント — 文字列メソッドのパラメーターは文字列リテラルである必要はありません。変数でもよいですし、メソッドが呼び出される変数であっても構いません。
 
 ```html hidden
 <h2>出力結果</h2>
@@ -661,15 +662,3 @@ textarea.onkeyup = function(){
 プログラミング、特に JavaScript では単語や文を処理できるようになることが大事であるという現実から逃れることはできません。それはウェブサイトは人とのコミュニケーションがすべてとなるためです。この記事では、文字列を処理するのに当面知っておくべき基礎を解説しました。今後もっと複雑なトピックに進んで行くときに役立つはずです。次に、配列を見てみます。重要なデータ型のうち、短期間で押さえておくべき最後の 1 つです。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
-
-## このモジュール内
-
-- [JavaScript って何?](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript への最初のダイブ](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [何が間違っている? JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [必要な情報を保存する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript での数学入門 — 数値と演算子について](/ja/docs/Learn/JavaScript/First_steps/Math)
-- [テキストを扱う — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)
-- [便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)
-- [評価: バカ話ジェネレーター](/ja/docs/Learn/JavaScript/First_steps/Silly_story_generator)

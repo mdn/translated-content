@@ -1,9 +1,10 @@
 ---
 title: 弹性盒子与其他布局方法的联系
 slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+  Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系
 ---
+
 {{CSSRef}}
 
 在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。
@@ -28,7 +29,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法
 
 ## Writing Modes
 
-In the [Basic concepts of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
+In the [Basic concepts of flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, I explained that flexbox is **writing mode aware**. Writing modes are fully detailed in the CSS [Writing Modes specification](https://www.w3.org/TR/css-writing-modes-3/), which details how CSS supports the various different writing modes that exist internationally. We need to be aware of how this will impact our flex layouts as writing mode changes the direction that blocks are laid out in our document. Understanding **block** and **inline** directions is key to new layout methods.
 
 It is worth noting that we might want to change the writing mode of our document for reasons other than publishing content in a language that uses a different writing mode. See [this article](https://24ways.org/2016/css-writing-modes/) for a full description of writing modes and ways to use them, both for content in other languages and for creative reasons.
 
@@ -98,7 +99,7 @@ In the following live example I have a flex container with three child elements.
 
 By adding `display: contents` to the wrapper around the nested elements, you can see that that item has disappeared from the layout, allowing the two sub-children to be laid out as if they were direct children of the flex container. You can try removing the `display: contents` line to see it return.
 
-Note that this only removes the box from the layout; the sub-children don’t become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
+Note that this only removes the box from the layout; the sub-children don't become direct children in any other way. You can see that as I have used a direct child selector to add the background and borders to the flex items, this has not been applied to our nested children. They have been laid out as flex items, but as they are not direct children they do not get the other styling.
 
 > **警告：** Use of `display: contents` will also remove the element from the accessibility tree – screen readers will not see what's inside, just the same as if you used `display: none`. Use of `contents` should only be for presentational, not content, elements.
 

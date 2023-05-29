@@ -2,6 +2,7 @@
 title: モバイルアクセシビリティのチェックリスト
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
 このドキュメントは、モバイルアプリ開発者向けのアクセシビリティ要件の簡潔なチェックリストを提供します。 それはより多くのパターンが生じるにつれて絶えず進化することを意図しています。
 
 ## 色
@@ -18,7 +19,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - {{cssxref("opacity")}} がゼロ、{{cssxref("z-index")}} 順、画面外配置のようなコンテンツ非表示テクニックは、可視性を扱うためだけに使用**してはいけない**。
 - 現在の表示画面以外のものは、本当に見えないもの**でなければならない**（特に複数のカードを含む単一ページのアプリに関連します）。
 
-  - {{htmlattrxref("hidden")}} 属性、{{cssxref("visibility")}} スタイルプロパティ、または {{cssxref("display")}} スタイルプロパティを**使用します**。
+  - [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性、{{cssxref("visibility")}} スタイルプロパティ、または {{cssxref("display")}} スタイルプロパティを**使用します**。
   - 絶対に避けられない場合を除いて、`aria-hidden` 属性は使用**するべきではない**（SHOULD NOT）。
 
 ## フォーカス
@@ -34,7 +35,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - アプリ内の全ての非厳密で提示的な非テキスト要素には、同等のテキストを提供**しなければならない**。
 
-  - 必要に応じて {{htmlattrxref("alt","img")}} と {{htmlattrxref("title")}} を使用してください（良いガイドについては、[HTML の title 属性の使用](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)（英語）に関する Steve Faulkner の投稿を参照してください）。
+  - 必要に応じて [`alt`](/ja/docs/Web/HTML/Element/img#alt) と [`title`](/ja/docs/Web/HTML/Global_attributes#title) を使用してください（良いガイドについては、[HTML の title 属性の使用](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)（英語）に関する Steve Faulkner の投稿を参照してください）。
   - 上記の属性が適用できない場合は、`aria-label`、`aria-labelledby`、`aria-describedby` のような適切な [ARIA のプロパティ](https://www.w3.org/TR/wai-aria/#global_states)（英語）を使用してください。
 
 - テキストの画像は避け**なければならない**。
@@ -60,4 +61,4 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - タッチイベントハンドラは、`touchend` イベントでのみトリガ**されなければならない**。
 - タッチターゲットは、ユーザーが対話するのに十分な大きさ**でなければならない**（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)（英語）を参照してください）。
 
-> **Note:** **メモ**: [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。
+> **メモ:** [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。

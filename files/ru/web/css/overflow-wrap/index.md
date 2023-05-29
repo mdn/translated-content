@@ -3,6 +3,7 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 translation_of: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`overflow-wrap`** применяется к строковым элементам, устанавливая должен ли браузер расставлять переносы строк внутри неразрывной строки, чтобы избежать выхода текста за границы элемента.

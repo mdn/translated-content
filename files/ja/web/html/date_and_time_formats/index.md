@@ -2,11 +2,12 @@
 title: HTML で使われる日付や時刻の形式
 slug: Web/HTML/Date_and_time_formats
 ---
-{{HTMLRef}}
 
-一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 {{htmlattrxref("datetime", "ins")}} 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
+{{HTMLSidebar}}
 
-`<input>` については、 {{htmlattrxref("type", "input")}} の値で日付や時刻を表す文字列を含む {{htmlattrxref("value")}} を返すものは次の通りです。
+一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 [`datetime`](/ja/docs/Web/HTML/Element/ins#datetime) 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
+
+`<input>` については、 [`type`](/ja/docs/Web/HTML/Element/input#type) の値で日付や時刻を表す文字列を含む [`value`](/ja/docs/Web/HTML/Element/input#value) を返すものは次の通りです。
 
 - [`date`](/ja/docs/Web/HTML/Element/input/date)
 - [`datetime`](/ja/docs/Web/HTML/Element/input/datetime) {{deprecated_inline}}
@@ -102,11 +103,11 @@ slug: Web/HTML/Date_and_time_formats
 
 ## 基本
 
-HTML 要素で使用される文字列に関する日付や時刻のさまざまな形式を見てみる前に、これらの定義方法についての基本的な事実をいくつか理解してしておくと役に立ちます。 HTML では、日付や時刻の文字列に {{interwiki("wikipedia", "ISO 8601")}} 標準の一種を使用します。 HTML 仕様書には、実際に ISO 8601 よりも詳細に文字列を解析するアルゴリズムが含まれており、日付と時刻の外見について微妙な違いがある可能性があるので、文字列が実際に HTML と互換性があることを確認するためには、使用している形式の説明を確認する価値があります。
+HTML 要素で使用される文字列に関する日付や時刻のさまざまな形式を見てみる前に、これらの定義方法についての基本的な事実をいくつか理解してしておくと役に立ちます。 HTML では、日付や時刻の文字列に [ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) 標準の一種を使用します。 HTML 仕様書には、実際に ISO 8601 よりも詳細に文字列を解析するアルゴリズムが含まれており、日付と時刻の外見について微妙な違いがある可能性があるので、文字列が実際に HTML と互換性があることを確認するためには、使用している形式の説明を確認する価値があります。
 
 ### 文字セット
 
-HTML において、日付と時刻は常に {{interwiki("wikipedia", "ASCII")}} 文字セットを使用した文字列です。
+HTML において、日付と時刻は常に [ASCII](https://ja.wikipedia.org/wiki/ASCII) 文字セットを使用した文字列です。
 
 ### 年
 
@@ -120,7 +121,7 @@ HTML の日付の目的上、年は常に 4 桁以上の長さになります。
 
 #### 閏年
 
-**閏年**は 400 で割れる年、\_または\_4 で割れる年で 100 で割れない年です。暦年の長さは通常 365 日ですが、実際には地球が太陽の周りを一周するのにおよそ 365.2422 日かかります。閏年は、惑星の軌道上の実際の位置に合わせてカレンダーを調整するのに役立ちます。4 年ごとに 1 日を加えると、平均的な 1 年の長さは 365.25 日になり、これはほぼ正確に近くなります。
+**閏年**は 400 で割れる年、または 4 で割れる年で 100 で割れない年です。暦年の長さは通常 365 日ですが、実際には地球が太陽の周りを一周するのにおよそ 365.2422 日かかります。閏年は、惑星の軌道上の実際の位置に合わせてカレンダーを調整するのに役立ちます。4 年ごとに 1 日を加えると、平均的な 1 年の長さは 365.25 日になり、これはほぼ正確に近くなります。
 
 アルゴリズムの調整 (年を 400 で割ることができる場合は閏年とし、年を 100 で割ることができる場合はうるう年としない) は、平均をさらに正しい日数 (365.2425 日) に近づけるのに役立ちます。科学者たちは、残りの 1 万分の 3 日を処理し、地球の自転が自然に徐々に遅くなるのを補うために、閏秒をカレンダーに追加することがあります (真面目な話)。
 
@@ -223,7 +224,7 @@ There are some additional basic rules:
 
 A valid [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) string consists of a `date` string and a `time` string concatenated together with either the letter "`T`" or a space character separating them. No information about the time zone is included in the string; the date and time is presumed to be in the user's local time zone.
 
-When you set the {{htmlattrxref("value", "input")}} of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
+When you set the [`value`](/ja/docs/Web/HTML/Element/input#value) of a `datetime-local` input, the string is **normalized** into a standard form. Normalized `datetime` strings always use the letter "`T`" to separate the date and the time, and the time portion of the string is as short as possible. This is done by leaving out the seconds component if its value is `:00`.
 
 | Date/time string          | Normalized date/time string                            | Actual date and time               |
 | ------------------------- | ------------------------------------------------------ | ---------------------------------- |
@@ -251,8 +252,8 @@ A global date and time string specifies a date and time as well as the time zone
 
 A time zone offset string specifies the offset in either a positive or a negative number of hours and minutes from the standard time base. There are two standard time bases, which are very close to the same, but not exactly the same:
 
-- For dates after the establishment of {{interwiki("wikipedia", "Coordinated Universal Time")}} (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
-- For dates prior to UTC, the time base is instead expressed in terms of {{interwiki("wikipedia", "UT1")}}, which is the contemporary Earth solar time at the prime meridian.
+- For dates after the establishment of [Coordinated Universal Time](https://ja.wikipedia.org/wiki/Coordinated_Universal_Time) (UTC) in the early 1960s, the time base is `Z` and the offset indicates a particular time zone's offset from the time at the prime meridian at 0º longitude (which passes through the Royal Observatory at Greenwich, England).
+- For dates prior to UTC, the time base is instead expressed in terms of [UT1](https://ja.wikipedia.org/wiki/UT1), which is the contemporary Earth solar time at the prime meridian.
 
 The time zone string is appended immediately following the time in the date and time string. You can specify simply "`Z`" as the time zone offset string to indicate that the time is specified in UTC. Otherwise, the time zone string is constructed as follows:
 

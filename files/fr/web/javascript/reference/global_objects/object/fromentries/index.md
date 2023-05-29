@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/fromEntries
 ---
+
 {{JSRef}}
 
 La méthode **`Object.fromEntries()`** permet de transformer une liste de paires de clés/valeurs en un objet.
@@ -76,13 +77,11 @@ console.log(object2);
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2019. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## Voir aussi
 

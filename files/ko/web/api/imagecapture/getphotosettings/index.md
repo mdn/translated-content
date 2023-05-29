@@ -1,15 +1,8 @@
 ---
 title: ImageCapture.getPhotoSettings()
 slug: Web/API/ImageCapture/getPhotoSettings
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture API
-  - Method
-  - Reference
-translation_of: Web/API/ImageCapture/getPhotoSettings
 ---
+
 {{APIRef("MediaStream Image")}}
 
 {{domxref("ImageCapture")}} 인터페이스의 **`getPhotoSettings()`** 메서드는 현재 촬영 설정을 담은 {{domxref("PhotoSettings")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.

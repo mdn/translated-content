@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/order
 ---
+
 {{CSSRef}}
 
 La propriété **`order`** définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de `order`. Les éléments ayant la même valeur pour `order` seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.
@@ -34,9 +35,13 @@ order: unset;
 - `<integer>`
   - : Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -93,15 +98,11 @@ La propriété `order` créera une incohérence entre l'ordre de présentation v
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires         |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#order-property', 'order')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.order")}}
+{{Compat}}
 
 ## Voir aussi
 

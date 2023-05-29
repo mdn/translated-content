@@ -2,6 +2,7 @@
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`fileName`** 属性包含引发此错误的文件的路径。
@@ -10,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
 
 此非标准属性包含引发此错误的文件的路径。如果从调试器上下文调用，例如 Firefox Developer Tools，将会返回“debugger eval code”.
 
-## 例子
+## 示例
 
 ### 使用 `fileName`
 

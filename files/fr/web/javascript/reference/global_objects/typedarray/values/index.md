@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/values
 ---
+
 {{JSRef}}
 
 La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.
@@ -58,14 +59,11 @@ console.log(eArr.next().value); // 50
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.values")}}
+{{Compat}}
 
 ## Voir aussi
 

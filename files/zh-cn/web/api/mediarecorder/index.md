@@ -2,6 +2,7 @@
 title: MediaRecorder
 slug: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder`** 是 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 提供的用来进行媒体轻松录制的接口，他需要通过调用 {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} 构造方法进行实例化。
@@ -22,9 +23,9 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.ignoreMutedMedia")}}
   - : 用以指定 `MediaRecorder`是否录制无声的输入源。如果这个属性是 false. 录制器对象`MediaRecorder` 会录制无声的音频或者黑屏的视频，默认值是 false
 - {{domxref("MediaRecorder.videoBitsPerSecond")}} {{readonlyInline}}
-  - : 返回视频采用的编码比率。它可能和构造函数的设置比率不同. (if it was provided).
+  - : 返回视频采用的编码比率。它可能和构造函数的设置比率不同。(if it was provided).
 - {{domxref("MediaRecorder.audioBitsPerSecond")}} {{readonlyInline}}
-  - : 返回音频采用的编码比率，它可能和构造函数中设置的比率不同. (if it was provided).
+  - : 返回音频采用的编码比率，它可能和构造函数中设置的比率不同。(if it was provided).
 
 ## 方法
 
@@ -33,13 +34,13 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.pause()")}}
   - : 暂停媒体录制
 - {{domxref("MediaRecorder.requestData()")}}
-  - : 请求一个从开始到当前接收到的，存储为{{domxref("Blob")}}类型的录制内容. (或者是返回从上一次调用`requestData()` 方法之后到现在的内容). 调用这个方法后，录制将会继续进行，但是会创建一个新的`Blob`对象
+  - : 请求一个从开始到当前接收到的，存储为{{domxref("Blob")}}类型的录制内容。(或者是返回从上一次调用`requestData()` 方法之后到现在的内容). 调用这个方法后，录制将会继续进行，但是会创建一个新的`Blob`对象
 - {{domxref("MediaRecorder.resume()")}}
   - : 继续录制之前被暂停的录制动作。
 - {{domxref("MediaRecorder.start()")}}
   - : 开始录制媒体，这个方法调用时可以通过给`timeslice`参数设置一个毫秒值，如果设置这个毫秒值，那么录制的媒体会按照你设置的值进行分割成一个个单独的区块，而不是以默认的方式录制一个非常大的整块内容。
 - {{domxref("MediaRecorder.stop()")}}
-  - : 停止录制。同时触发{{event("dataavailable")}}事件，返回一个存储`Blob`内容的录制数据。之后不再记录
+  - : 停止录制。同时触发 {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} 事件，返回一个存储`Blob`内容的录制数据。之后不再记录
 
 ## 静态方法
 
@@ -49,17 +50,17 @@ slug: Web/API/MediaRecorder
 ## 事件处理
 
 - {{domxref("MediaRecorder.ondataavailable")}}
-  - : 调用它用来处理 {{event("dataavailable")}} 事件，该事件可用于获取录制的媒体资源 (在事件的 `data` 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)
+  - : 调用它用来处理 `dataavailable` 事件，该事件可用于获取录制的媒体资源 (在事件的 `data` 属性中会提供一个可用的 {{domxref("Blob")}} 对象.)
 - {{domxref("MediaRecorder.onerror")}}
-  - : An {{event("Event_handlers", "event handler")}} called to handle the {{event("recordingerror")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording.
+  - : An event handler called to handle the `recordingerror` event, including reporting errors that arise with media recording. These are fatal errors that stop recording.
 - {{domxref("MediaRecorder.onpause")}}
-  - : 用来处理 {{event("pause")}} 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.
+  - : 用来处理 [`pause`](/zh-CN/docs/Web/API/HTMLMediaElement/pause_event) 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.
 - {{domxref("MediaRecorder.onresume")}}
-  - : 用来处理 {{event("resume")}} 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.
+  - : 用来处理 `resume` 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.
 - {{domxref("MediaRecorder.onstart")}}
-  - : 用来处理 {{event("start")}} 事件，该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.
+  - : 用来处理 `start` 事件，该事件在媒体开始录制时触发（{{domxref("MediaRecorder.start()")}}）.
 - {{domxref("MediaRecorder.onstop")}}
-  - : 用来处理 {{event("stop")}} 事件，该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用{{domxref("MediaRecorder.stop()")}} 方法后触发。
+  - : 用来处理 `stop` 事件，该事件会在媒体录制结束时、媒体流（{{domxref("MediaStream")}}）结束时、或者调用 {{domxref("MediaRecorder.stop()")}} 方法后触发。
 
 ## 事件
 
@@ -152,7 +153,7 @@ if (navigator.mediaDevices) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

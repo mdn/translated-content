@@ -2,6 +2,7 @@
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
+
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("cookies")}} API 的 `OnChangedCause` 型別，代表觸發 cookie 資料變動的原因。
@@ -23,18 +24,23 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.OnChangedCause")}}
+{{Compat}}
 
 ## 示例
 
 你可以在 cookie 變更的時候監聽被通知的 {{WebExtAPIRef("cookies.onChanged")}} 事件。此監聽器 passed 含有 `cause` 屬性，值為 `OnChangeCaused` 字串的 `changeInfo` 物件：
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener(function (changeInfo) {
+  console.log(
+    "Cookie changed: " +
+      "\n * Cookie: " +
+      JSON.stringify(changeInfo.cookie) +
+      "\n * Cause: " +
+      changeInfo.cause +
+      "\n * Removed: " +
+      changeInfo.removed
+  );
 });
 ```
 

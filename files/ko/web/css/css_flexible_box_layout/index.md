@@ -1,14 +1,8 @@
 ---
 title: CSS Flexible Box Layout
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - Guide
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
+
 {{CSSRef}}
 
 **CSS Flexible Box Layout**은 사용자 인터페이스 디자인과 단방향 레이아웃에 최적화된 [CSS](/ko/docs/Web/CSS) 모듈입니다. 플렉스 레이아웃 모델에서는, 플렉스 컨테이너의 자식을 어떤 방향으로도 배치할 수 있으며, 자식의 크기도 유연하게("플렉시블") 빈 공간을 채우거나, 컨테이너를 넘어가지 않도록 줄어듭니다. 자식 간의 수평 및 수직 정렬 또한 쉽게 조작할 수 있습니다.

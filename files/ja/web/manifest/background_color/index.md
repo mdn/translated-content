@@ -2,6 +2,7 @@
 title: background_color
 slug: Web/Manifest/background_color
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">
@@ -21,7 +22,7 @@ slug: Web/Manifest/background_color
 
 したがって、 `background_color` はウェブアプリケーションを起動してからサイトのコンテンツを読み込むまでの間にスムーズに遷移できるよう、 CSS の {{cssxref("background-color")}} と一致させるべきです。
 
-> **Note:** `background_color` メンバーは、メインスタイルシートがネットワークまたはストレージメディアから読み込まれている間にだけ、ユーザーの操作感を向上させるためだけのものです。プログレッシブウェブアプリのスタイルシートが利用できるようになった後は、ユーザーエージェントが CSS の {{cssxref("background-color")}} プロパティとして使用されることはありません。
+> **メモ:** `background_color` メンバーは、メインスタイルシートがネットワークまたはストレージメディアから読み込まれている間にだけ、ユーザーの操作感を向上させるためだけのものです。プログレッシブウェブアプリのスタイルシートが利用できるようになった後は、ユーザーエージェントが CSS の {{cssxref("background-color")}} プロパティとして使用されることはありません。
 
 ## 例
 

@@ -2,6 +2,7 @@
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBuffer") }}接口的 copyFromChannel 方法将样本从 AudioBuffer 的指定通道复制到目标数组中
@@ -35,7 +36,7 @@ myArrayBuffer.copyFromChannel(anotherArray,1,0);
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioBuffer.copyFromChannel")}}
+{{Compat}}
 
 ## See also
 

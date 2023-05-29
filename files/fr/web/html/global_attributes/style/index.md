@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/style
 original_slug: Web/HTML/Attributs_universels/style
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** contient des déclarations [CSS](/fr/docs/Web/CSS) afin de mettre en forme l'élément. Attention, il est recommandé de définir les règles de mise en forme dans un ou plusieurs fichiers séparés. Cet attribut, ainsi que l'élément {{HTMLElement("style")}} ont simplement pour but de permettre une mise en forme rapide, notamment pour tester.

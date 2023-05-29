@@ -2,6 +2,7 @@
 title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
+
 {{FirefoxSidebar}}
 
 ## 介绍
@@ -73,7 +74,7 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 以下的示例演示了一个页面同时使用 `load` 和 `pageshow` 事件。这个示例页面行为如下：
 
 - 在除了 Firefox 1.5 的浏览器，以下在每次页面加载都发生：`load` 事件触发`onLoad` 函数，该函数调用 `onPageShow` 函数 (如同一个附加功能).
-- 在 Firefox 1.5，页面第一次加载时 `load` 事件和其他浏览器上运行一样。 除了， `pageshow` 事件的执行和 `persisted` 设置为 `false`，没有额外的行动发生。
+- 在 Firefox 1.5，页面第一次加载时 `load` 事件和其他浏览器上运行一样。除了， `pageshow` 事件的执行和 `persisted` 设置为 `false`，没有额外的行动发生。
 - 在 Firefox 1.5, 当页面从缓存中被加载，只有 `pageshow` 事件执行。随着 `persisted` 被设置为 `true`，只有 `onPageShow` 方法中的 JavaScript 行为被触发。
 
 在这个例子中：

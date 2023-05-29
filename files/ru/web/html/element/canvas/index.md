@@ -65,4 +65,4 @@ translation_of: Web/HTML/Element/canvas
 - [Canvas-related demos](/en-US/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

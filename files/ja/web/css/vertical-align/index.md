@@ -2,6 +2,7 @@
 title: vertical-align
 slug: Web/CSS/vertical-align
 ---
+
 {{CSSRef}}
 
 **`vertical-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。

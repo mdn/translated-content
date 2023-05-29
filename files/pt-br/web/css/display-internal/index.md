@@ -1,8 +1,8 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-translation_of: Web/CSS/display-internal
 ---
+
 {{CSSRef}}
 
 Alguns modelos de layout, como `table` e `ruby` Alguns modelos de layout, como possuem uma estrutura interna complexa, com várias funções diferentes que seus filhos e descendentes podem preencher. Esta página define os valores de exibição "internos", que só têm significado nesse modo de layout específico.

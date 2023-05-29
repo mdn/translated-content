@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.x
 slug: Web/API/DOMRectReadOnly/x
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`x`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、 `DOMRect` の原点の X 座標を表します。

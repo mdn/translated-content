@@ -2,7 +2,8 @@
 title: '<del>: 削除済み文字列要素'
 slug: Web/HTML/Element/del
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<del>` 要素**は、文書から削除された文字列の範囲を表します。これは例えば、「変更の追跡」や、ソースコードの差分情報を描画するときに使用することができます。 {{HTMLElement("ins")}} 要素は逆の目的に、文書に追加された文字列を示すために用いることができます。
 
@@ -69,9 +70,9 @@ slug: Web/HTML/Element/del
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 変更についての説明を記したリソース（例えば、議事録など）への URI を示す。
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : この属性は変更日時を示し、有効な日付文字列と任意の時刻文字列でなくてはなりません。値を時刻および日付の文字列として解釈できない場合は、要素に関連付けられたタイムスタンプはないものと解釈されます。日付のない文字列の書式については、[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)を参照してください。日付と時刻の両方を含んだ文字列の書式は、[地方時の日付と時刻の文字列](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)にあります。
 
 ## 例
@@ -118,11 +119,7 @@ del::after {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'edits.html#the-del-element', '&lt;del&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'edits.html#the-del-element', '&lt;del&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.4', '&lt;del&gt;')}}         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

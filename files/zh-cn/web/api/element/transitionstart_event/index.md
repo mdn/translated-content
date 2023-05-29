@@ -2,9 +2,10 @@
 title: 'HTMLElement: transitionstart 事件'
 slug: Web/API/Element/transitionstart_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
-**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 实际开始的时候触发， 或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
+**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 实际开始的时候触发，或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
 
 <table class="properties">
   <tbody>
@@ -91,7 +92,7 @@ transition.addEventListener('transitionend', function() {
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('运行实例', '100%', '150px') }}
 
 不同的地方是：
 
@@ -110,7 +111,7 @@ transition.addEventListener('transitionend', function() {
 
 - {{domxref("GlobalEventHandlers.ontransitionstart")}} 事件处理器
 - {{domxref("TransitionEvent")}} 接口
-- CSS 属性: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
-- 相关的事件: {{domxref("HTMLElement/transitionend_event", "transitionend")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
-- 在 {{domxref("Document")}} targets 上的此事件: {{domxref("Document/transitionstart_event", "transitionstart")}}
-- 在 {{domxref("Window")}} targets 上的此事件: {{domxref("Window/transitionstart_event", "transitionstart")}}
+- CSS 属性：{{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- 相关的事件：{{domxref("HTMLElement/transitionend_event", "transitionend")}}, {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}
+- 在 {{domxref("Document")}} targets 上的此事件：{{domxref("Document/transitionstart_event", "transitionstart")}}
+- 在 {{domxref("Window")}} targets 上的此事件：{{domxref("Window/transitionstart_event", "transitionstart")}}

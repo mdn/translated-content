@@ -1,13 +1,8 @@
 ---
 title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
-tags:
-  - 구문 에러
-  - 자바스크립트
-  - 정규식
-  - 플래그
-translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -86,5 +81,5 @@ let obj = {
 
 ## 같이 보기
 
-- [정규 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)
+- [정규 표현식](/ko/docs/Web/JavaScript/Guide/%EC%A0%95%EA%B7%9C%EC%8B%9D)
 - [XRegEx flags](http://xregexp.com/flags/) – 새로운 4개의 플래그(`n`, `s`, `x`, `A`)를 제공하는 정규 표현식 라이브러리

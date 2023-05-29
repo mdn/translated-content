@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBKeyRange
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBKeyRange`** de l'API [IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un intervalle continue sur un type de donnée utilisé pour représenter des clés. Les enregistrements peuvent être récupérés depuis des objets {{domxref("IDBObjectStore")}} et {{domxref("IDBIndex")}} grâce à des clés ou à des intervalles de clé. Il est possible de préciser les bornes inférieure et supérieure de l'intervalle. Si les clés sont des chaînes de caractères, on pourrait ainsi parcourir l'ensemble des valeurs pour l'intervalle A–Z.
@@ -20,15 +21,15 @@ Un intervalle de clé peut être une seule valeur ou un intervalle avec des born
 
 | Intervalle                         | Code                                                              |
 | ---------------------------------- | ----------------------------------------------------------------- |
-| Toutes les clés ≤ **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x)`             |
-| Toutes les clés < **x**            | {{domxref("IDBKeyRange.upperBound")}}`(x, true)`       |
-| Toutes les clés ≥ **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y)`             |
-| Toutes les clés > **y**            | {{domxref("IDBKeyRange.lowerBound")}}`(y, true)`       |
-| Toutes les clés ≥ **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y)`              |
-| Toutes les clés > **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, true, true)`  |
-| Toutes les clés > **x** && ≤ **y** | {{domxref("IDBKeyRange.bound")}}`(x, y, true, false)` |
-| Toutes les clés ≥ **x** &&< **y**  | {{domxref("IDBKeyRange.bound")}}`(x, y, false, true)` |
-| La clé = **z**                     | {{domxref("IDBKeyRange.only")}}`(z)`                     |
+| Toutes les clés ≥ **x**            | [`IDBKeyRange.lowerBound(x)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)             |
+| Toutes les clés > **x**            | [`IDBKeyRangelowerBound(x, true)`](/fr/docs/Web/API/IDBKeyRange/lowerBound)       |
+| Toutes les clés ≤ **y**            | [`IDBKeyRange.upperBound(y)`](/fr/docs/Web/API/IDBKeyRange/upperBound)             |
+| Toutes les clés < **y**            | [`IDBKeyRange.upperBound(y, true)`](/fr/docs/Web/API/IDBKeyRange/upperBound)       |
+| Toutes les clés ≥ **x** && ≤ **y** | [`IDBKeyRange.bound(x, y)`](/fr/docs/Web/API/IDBKeyRange/bound)              |
+| Toutes les clés > **x** &&< **y**  | [`IDBKeyRange.bound(x, y, true, true)`](/fr/docs/Web/API/IDBKeyRange/bound)  |
+| Toutes les clés > **x** && ≤ **y** | [`IDBKeyRange.bound(x, y, true, false)`](/fr/docs/Web/API/IDBKeyRange/bound) |
+| Toutes les clés ≥ **x** &&< **y**  | [`IDBKeyRange.bound(x, y, false, true)`](/fr/docs/Web/API/IDBKeyRange/bound) |
+| La clé = **z**                     | [`IDBKeyRange.only(z)`](/fr/docs/Web/API/IDBKeyRange/only)                     |
 
 Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
@@ -103,7 +104,7 @@ function displayData() {
   };
 ```
 
-> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/IDBKeyRange-example) ([ainsi que la démonstration associée](https://mdn.github.io/IDBKeyRange-example/)).
+> **Note :** Pour un exemple complet qui utilise les intervalles de clé, vous pouvez consulter [le dépôt GitHub IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) ([ainsi que la démonstration associée](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)).
 
 ## Spécifications
 
@@ -121,4 +122,4 @@ function displayData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

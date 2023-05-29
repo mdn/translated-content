@@ -2,6 +2,7 @@
 title: Request.method
 slug: Web/API/Request/method
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}}的只读属性**method**包含请求的方法 (`GET`, `POST`, etc.)
@@ -31,7 +32,7 @@ var myMethod = myRequest.method; // GET
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.method")}}
+{{Compat}}
 
 ## See also
 

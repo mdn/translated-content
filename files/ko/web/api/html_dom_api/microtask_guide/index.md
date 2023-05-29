@@ -1,23 +1,8 @@
 ---
 title: JavaScript의 queueMicrotask()와 함께 마이크로태스크 사용하기
 slug: Web/API/HTML_DOM_API/Microtask_guide
-tags:
-  - API
-  - Batch
-  - Guide
-  - HTML DOM
-  - JavaScript
-  - Microtask
-  - Queue
-  - Reference
-  - ServiceWorker
-  - SharedWorker
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-translation_of: Web/API/HTML_DOM_API/Microtask_guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 **마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/EventLoop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
@@ -28,7 +13,7 @@ JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promi
 
 ## 태스크 vs 마이크로태스크
 
-마이크로태스크를 올바르게 논하려면, 우선 JavaScript에서의 태스크란 무엇인지, 그리고 마이크로태스크가 태스크와 어떻게 다른지 아는 것이 유욯합니다. 다음은 짧고 간략한 설명이지만, 보다 자세히 알아보려면 [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth) 글을 확인해보세요.
+마이크로태스크를 올바르게 논하려면, 우선 JavaScript에서의 태스크란 무엇인지, 그리고 마이크로태스크가 태스크와 어떻게 다른지 아는 것이 유용합니다. 다음은 짧고 간략한 설명이지만, 보다 자세히 알아보려면 [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth) 글을 확인해보세요.
 
 ### 태스크
 

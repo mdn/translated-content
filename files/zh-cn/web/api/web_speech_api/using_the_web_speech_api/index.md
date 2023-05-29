@@ -2,28 +2,29 @@
 title: 使用 Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
+
 Web Speech API 提供了两类不同方向的函数——语音识别和语音合成 (也被称为文本转为语音，英语简写是 tts)——开启了有趣的新可用性和控制机制。这篇文章提供了这两个方向的简单介绍，并且都带有例子。
 
 ## Speech recognition
 
 Speech recognition(语音识别) 涉及三个过程：首先，需要设备的麦克风接收这段语音；其次，speech recognition service(语音识别服务器) 会根据一系列语法 (基本上，语法是你希望在具体的应用中能够识别出来的词汇) 来检查这段语音；最后，当一个单词或者短语被成功识别后，结果会以文本字符串的形式返回 (结果可以有多个)，以及更多的行为可以设置被触发。
 
-Web Speech API 有一个主要的控制接口——[`SpeechRecognition`](/zh-CN/docs/Web/API/SpeechRecognition)， 外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。
+Web Speech API 有一个主要的控制接口——[`SpeechRecognition`](/zh-CN/docs/Web/API/SpeechRecognition)，外加一些如表示语法、表示结果等等亲密相关的接口。通常，设备都有可使用的默认语音识别系统，大部分现代操作系统使用这个语音识别系统来处理语音命令，比如 Mac OS X 上的 Dictation，iOS 上的 Siri，Win10 上的 Cortana，Android Speech 等等。
 
 Demo
 
-为了简单展示 Web speech recognition 的作用，我们写了一个 demo——[Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer)。点击屏幕之后，说出 HTML 颜色关键字 (网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。
+为了简单展示 Web speech recognition 的作用，我们写了一个 demo——[Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer)。点击屏幕之后，说出 HTML 颜色关键字 (网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/web-speech-api/archive/master.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](http://mdn.github.io/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
+为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
 
 ### Browser support
 
 对于 Web Speech API speech recognition(语音识别) 的支持，在各浏览器中还不成熟，还在发展，现在主要的限制如下：
 
 - Firefox 桌面端和移动端在 Gecko 44+ 中都支持，并且是没有前缀的，它可以在`about:config` 中把 `media.webspeech.recognition.enable` 设置为 `true` 打开。权限设置/UI 还没有整理出来，所以权限还不能被用户使用，也就是不能用。不过很快会修复吧\~
-- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载， 或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
+- Firefox OS 2.5+ 也支持，但作为一个特权 API(privileged API) 需要权限，因此你需要在[manifest.webapp](/zh-CN/docs/Web/Apps/Build/Manifest) (也可以通过 WebIDE 下载，或者使应用得到验证后在 [Firefox Marketplace](https://marketplace.firefox.com/) 可使用) 如下设置：
 
   ```json
   "permissions": {
@@ -191,11 +192,11 @@ Web Speech API 对此有一个主要控制接口——[`SpeechSynthesis`](/zh-CN
 
 ### Demo
 
-为了展示 Web 语音合成的简单使用，我们提供了一个例子—— [Speak easy synthesis](https://github.com/mdn/web-speech-api/tree/gh-pages/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
+为了展示 Web 语音合成的简单使用，我们提供了一个例子—— [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-想跑这个例子，你可以 git clone Github 仓库中的部分 (或者[直接下载](https://github.com/mdn/web-speech-api/archive/master.zip))，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 [live demo URL](http://mdn.github.io/web-speech-api/speak-easy-synthesis/) ，像 Chrome 和 Firefox OS。
+想跑这个例子，你可以 git clone Github 仓库中的部分 (或者[直接下载](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) ，像 Chrome 和 Firefox OS。
 
 ### 浏览器支持
 

@@ -2,6 +2,7 @@
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 ---
+
 {{CSSRef}}
 
 **`<angle-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("&lt;angle&gt;")}} または {{Cssxref("&lt;percentage&gt;")}} が取りうる値を表します。

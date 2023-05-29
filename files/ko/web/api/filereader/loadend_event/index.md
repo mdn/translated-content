@@ -1,10 +1,8 @@
 ---
 title: 'FileReader: loadend event'
 slug: Web/API/FileReader/loadend_event
-page-type: web-api-event
-browser-compat: api.FileReader.loadend_event
-translation_of: Web/API/FileReader/loadend_event
 ---
+
 {{APIRef}}
 
 `loadend` 이벤트는 성공여부와 관계없이 파일읽기가 끝나면 실행됩니다.

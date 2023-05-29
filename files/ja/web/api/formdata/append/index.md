@@ -2,13 +2,14 @@
 title: FormData.append()
 slug: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 インターフェイスの **`append()`** メソッドは、FormData オブジェクト内の既存のキーに新しい値を追加するか、キーがまだ存在しない場合は追加します。
 
 {{domxref("FormData.set")}}との違いは、指定されたキーが既に存在する場合、{{domxref("FormData.set")}}はすべての既存の値を新しい値で上書きすることです。 一方、`append()`は、既存の値のセットの最後に新しい値を追加します。
 
-> **Note:** **注：このメソッドは Web Workers で使用できます。**
+> **メモ:** **このメソッドは Web Workers で使用できます。**
 
 ## Syntax
 
@@ -28,7 +29,7 @@ formData.append(name, value, filename);
 - `filename` {{optional_inline}}
   - : The filename reported to the server (a {{domxref("USVString")}}), when a {{domxref("Blob")}} or {{domxref("File")}} is passed as the second parameter. The default filename for {{domxref("Blob")}} objects is "blob". The default filename for {{domxref("File")}} objects is the file's filename.
 
-> **Note:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
+> **メモ:** If you specify a {{domxref("Blob")}} as the data to append to the `FormData` object, the filename that will be reported to the server in the "Content-Disposition" header used to vary from browser to browser.
 
 ### Returns
 
@@ -70,9 +71,7 @@ formData.getAll('name'); // ["true", "74", "John"]
 
 ## Specifications
 
-| Specification                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
 ## ブラウザの互換性
 

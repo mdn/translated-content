@@ -2,21 +2,22 @@
 title: Firefox 10 for developers
 slug: Mozilla/Firefox/Releases/10
 ---
+
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
-> **Note:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
+> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
 
 ## Web 開発者向けの変更点一覧
 
 ### HTML
 
 - 方向が異なるテキストの部分を分離することを可能にする、HTML5 の {{ HTMLElement("bdi") }} (bi-directional isolation) 要素が実装されました。これは、既知の方向のテキスト内に未知の方向のテキスト (例えばデータベースから取り出したテキストで、方向が異なる可能性がある) を表示する場合に特に有用です。
-- {{ htmlattrxref("href", "a") }} 属性に、ページ先頭へのリンクを作成するための断片 "top" を指定可能になりました。これは過去に動作していてその後一時的に削除されていましたが、HTML5 仕様書との互換性のため再び動作するようになりました。例: `<a href="#top">Return to top of page</a>`.
+- [`href`](/ja/docs/Web/HTML/Element/a#href) 属性に、ページ先頭へのリンクを作成するための断片 "top" を指定可能になりました。これは過去に動作していてその後一時的に削除されていましたが、HTML5 仕様書との互換性のため再び動作するようになりました。例: `<a href="#top">Return to top of page</a>`.
 
 ### JavaScript
 
-- `WeakMap.set()` メソッドの戻り値はそれ自身から _`undefined`_ に替わりました。
-- Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは {{ bug("683838") }} をご覧ください。
+- `WeakMap.set()` メソッドの戻り値はそれ自身から `undefined` に替わりました。
+- Firefox 7 以降で正規表現のハンドリングに関する不具合がありましたが、修正されました。詳しくは [Firefox バグ 683838](https://bugzil.la/683838) をご覧ください。
 - [ECMAScript 5 strict mode](/ja/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (すなわち、`"use strict;"` 以降) では、[E4X](/ja/docs/E4X) の構文を使用できなくなりました。
 
 ### DOM
@@ -82,7 +83,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
-- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。{{ bug("707142#c13") }} をご覧ください。
+- {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
 
 ### CSS
 
@@ -110,7 +111,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 アドオンを Firefox 10 へ対応させる際に発生すると思われる問題の概要に関しては、[Updating add-ons for Firefox 10](/ja/docs/Firefox/Updating_add-ons_for_Firefox_10) をご覧ください。
 
-> **Note:** 古い [`PRBool`](/ja/docs/PRBool) データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
+> **メモ:** 古い [`PRBool`](/ja/docs/PRBool) データ形式は退役されました。これを参照する文書では、どこでも代わりに標準 C++ `bool` 形式を使用します。現時点では文書が更新されていませんが、将来更新されますので留意してください。
 
 ### Manifests
 
@@ -138,7 +139,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### ビルドシステムの変更
 
-- 実際はビルドを成功できないようにしてしまう、`--disable-rdf` ビルドオプションが削除されました。RDF サポートの完全な削除を可能にする作業は進行中ですが、現在の XUL ではこの機能が必須です。RDF を必要とする最後の痕跡を削除する作業の進捗については {{ bug("559505") }} をご覧ください。
+- 実際はビルドを成功できないようにしてしまう、`--disable-rdf` ビルドオプションが削除されました。RDF サポートの完全な削除を可能にする作業は進行中ですが、現在の XUL ではこの機能が必須です。RDF を必要とする最後の痕跡を削除する作業の進捗については [Firefox バグ 559505](https://bugzil.la/559505) をご覧ください。
 - `--disable-smil` ビルドオプションは削除されました。
 
 ## 関連情報

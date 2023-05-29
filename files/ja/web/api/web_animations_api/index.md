@@ -2,6 +2,7 @@
 title: ウェブアニメーション API
 slug: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 Web Animation API を使うことで 、ウェブページの見た目の変更を同期させたり時間を調整すること、つまり DOM 要素のアニメーションが可能です。これらはタイミングモデルおよびアニメーションモデルという 2 つのモデルの組み合わせによって実現されます。
@@ -45,9 +46,7 @@ Web Animation API によって {{domxref("document")}} 及び {{domxref("element
 
 ## 仕様書
 
-| 仕様書                                   | 策定状況                             | コメント |
-| ---------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Animations')}} | {{Spec2('Web Animations')}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

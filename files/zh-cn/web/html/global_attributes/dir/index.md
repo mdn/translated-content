@@ -2,6 +2,7 @@
 title: dir
 slug: Web/HTML/Global_attributes/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)**dir**是一个指示元素中文本方向的枚举属性。它的取值如下：

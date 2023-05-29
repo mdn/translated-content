@@ -2,6 +2,7 @@
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -18,7 +19,7 @@ for octal literals use the \"0o\" prefix instead
 
 ## 哪里出错了？
 
-八进制字面量与八进制转义序列语法已经被废弃，在严格模式下会报语法错误（{{jsxref("SyntaxError")}}）。在 ECMAScript 2015 及以后的规范中，标准语法是前导 0 后面跟一个大写或小写的拉丁文字母 "O" (`0o` 或 `0O)。`
+八进制字面量与八进制转义序列语法已经被废弃，在严格模式下会报语法错误（{{jsxref("SyntaxError")}}）。在 ECMAScript 2015 及以后的规范中，标准语法是前导 0 后面跟一个大写或小写的拉丁文字母 "O" (`0o` 或 `0O)`。
 
 ## 示例
 
@@ -58,7 +59,6 @@ for octal literals use the \"0o\" prefix instead
 '\xA9';
 ```
 
-## 相关内容
+## 参见
 
 - [Lexical grammar](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [警告： 08/09 不是符合 ECMA-262 规范的八进制常量](/zh-CN/docs/Web/JavaScript/Reference/Errors/Bad_octal)

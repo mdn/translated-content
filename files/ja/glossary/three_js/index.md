@@ -8,5 +8,5 @@ three.js は {{Glossary("JavaScript")}} ベースの {{Glossary("WebGL")}} エ�
 
 ### 一般知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "Three.js")}}」
+- Wikipedia 上の記事「[Three.js](https://ja.wikipedia.org/wiki/Three.js)」
 - [three.js 公式サイト](http://threejs.org/)

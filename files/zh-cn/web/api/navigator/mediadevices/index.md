@@ -2,6 +2,7 @@
 title: Navigator.mediaDevices
 slug: Web/API/Navigator/mediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}mediaDevices 是 Navigator 只读属性，返回一个 {{domxref("MediaDevices")}} 对象，该对象可提供对相机和麦克风等媒体输入设备的连接访问，也包括屏幕共享。
 
 ## 语法
@@ -18,9 +19,9 @@ var mediaDevices = navigator.mediaDevices;
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.Navigator.mediaDevices")}}
+{{Compat}}
 
 ## 参考阅读
 

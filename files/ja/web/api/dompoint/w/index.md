@@ -2,6 +2,7 @@
 title: DOMPoint.w
 slug: Web/API/DOMPoint/w
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェースの **`w`** プロパティは、空間上のこの点の視点位置 w を保持します。

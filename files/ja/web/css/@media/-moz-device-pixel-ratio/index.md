@@ -1,22 +1,15 @@
 ---
 title: '-moz-device-pixel-ratio'
 slug: Web/CSS/@media/-moz-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - 標準外
-  - media feature
-browser-compat: css.at-rules.media.-moz-device-pixel-ratio
-translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
+
 {{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
 
 **`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の Gecko のみの[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 
-> **Warning:** この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
+> **警告:** この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
 
-> **Note:** このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
+> **メモ:** このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
 
 ## 構文
 
@@ -41,7 +34,7 @@ translation_of: Web/CSS/@media/-moz-device-pixel-ratio
        (min-resolution: 192dpi)             /* dppx のフォールバック */ </pre>
 ```
 
-> **Note:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
+> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
 
 ## 仕様書
 

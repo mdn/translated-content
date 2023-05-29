@@ -4,6 +4,7 @@ slug: Web/CSS/font-variant-alternates
 translation_of: Web/CSS/font-variant-alternates
 browser-compat: css.properties.font-variant-alternates
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`font-variant-alternates`** contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencés par les noms définis avec la règle @ [`@font-feature-values`](/fr/docs/Web/CSS/@font-feature-values).

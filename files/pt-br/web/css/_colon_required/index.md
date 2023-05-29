@@ -1,8 +1,8 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef }}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:required`** representa qualquer {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} contendo o atributo {{ htmlattrxref("required", "input") }}.
@@ -16,7 +16,7 @@ input:required {
 
 Esta pseudo-classe é utilizada para destacar campos que devem ter dados válidos antes do formulário ser submetido.
 
-> **Note:** **Nota:** A pseudo-classe {{cssxref(":optional")}} seleciona campos do formulário que são _opcionais_.
+> **Nota:** A pseudo-classe {{cssxref(":optional")}} seleciona campos do formulário que são _opcionais_.
 
 ## Sintaxe
 

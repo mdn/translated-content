@@ -2,6 +2,7 @@
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`toDateString()`** 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。
@@ -20,9 +21,9 @@ dateObj.toDateString()
 
 The `toDateString` method is especially useful because compliant engines implementing [ECMA-262](/zh-CN/docs/ECMAScript) may differ in the string obtained from `toString` for `Date` objects, as the format is implementation-dependent and simple string slicing approaches may not produce consistent results across multiple engines.
 
-## 例子
+## 示例
 
-### 例子：`toDateString` 方法的简单使用
+### 示例：`toDateString` 方法的简单使用
 
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);

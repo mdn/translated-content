@@ -1,14 +1,8 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/all
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/Using_CSS_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.

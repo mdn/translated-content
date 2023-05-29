@@ -1,8 +1,8 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-translation_of: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 Intersection Observer API는 타겟 요소와 상위 요소 또는 최상위 document 의 {{Glossary("viewport")}} 사이의 intersection 내의 변화를 비동기적으로 관찰하는 방법입니다.
@@ -508,11 +508,11 @@ Below is the resulting content. Scroll this page up and down and notice how the 
 
 There's an even more extensive example at [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

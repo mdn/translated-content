@@ -3,6 +3,7 @@ title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
 original_slug: Web/媒体/Autoplay_guide
 ---
+
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio APIs 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
@@ -51,7 +52,7 @@ audioElement.play();
 
 ### autoplay 属性
 
-想让内容自动播放的最简单方法是将{{htmlattrxref("autoplay", "audio")}}属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
+想让内容自动播放的最简单方法是将[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
 
 - 页面允许使用自动播放功能
 - 媒体元素已在页面加载期间创建
@@ -69,9 +70,9 @@ audioElement.play();
 
 #### 例子 2：检测自动播放失败
 
-如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
+如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
-如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。
+如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的[`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event)事件来轻松实现此目的。
 
 The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
 
@@ -81,7 +82,7 @@ Consider this HTML for a media element:
 <video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
 ```
 
-Here we have a {{HTMLElement("video")}} element whose {{htmlattrxref("autoplay", "video")}} attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
 
 `handleFirstPlay()` looks like this:
 
@@ -154,20 +155,20 @@ _More content will come soon; autoplay blocking is still being worked on at Mozi
 
 ## The autoplay feature policy
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
 You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
-> **备注：** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an {{htmlattrxref("allow", "iframe")}}, which sets a new feature policy for that frame and all frames nested within it.
+> **备注：** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow), which sets a new feature policy for that frame and all frames nested within it.
 
-When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's {{htmlattrxref("src", "iframe")}} attribute.
+When using the [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) attribute.
 
 ### Example: Allowing autoplay only from the document's domain
 
-To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
+To use the {{HTTPHeader("Permissions-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
 
 ```plain
-Feature-Policy: autoplay 'self'
+Permissions-Policy: autoplay 'self'
 ```
 
 To do the same for an {{HTMLElement("iframe")}}:
@@ -180,10 +181,10 @@ To do the same for an {{HTMLElement("iframe")}}:
 
 ### Example: Allowing autoplay and fullscreen mode
 
-Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Feature-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
 
 ```plain
-Feature-Policy: autoplay 'self'; fullscreen
+Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
@@ -196,10 +197,10 @@ The same permissions, grated using the `<iframe>` element's `allow` property, lo
 
 ### Example: Allowing autoplay from specific sources
 
-The `Feature-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
+The `Permissions-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
 
 ```plain
-Feature-Policy: autoplay 'self' https://example.media
+Permissions-Policy: autoplay 'self' https://example.media
 ```
 
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
@@ -216,7 +217,7 @@ An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy
 Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
 
 ```plain
-Feature-Policy: autoplay 'none'
+Permissions-Policy: autoplay 'none'
 ```
 
 Using the `<iframe>`'s `allow` attribute:
@@ -239,7 +240,7 @@ A common use case for autoplay is to automatically begin to play a video clip th
 <video src="/videos/awesomevid.webm" controls autoplay muted>
 ```
 
-This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the {{htmlattrxref("muted", "video")}} attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
+This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
 
 ## Browser configuration options
 

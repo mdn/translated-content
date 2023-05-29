@@ -4,6 +4,7 @@ slug: Web/API/Navigator/onLine
 translation_of: Web/API/Navigator/onLine
 browser-compat: api.Navigator.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété en lecture seule **`Navigator.onLine`** est un booléen indiquant le statut de connectivité du navigateur. `true` indique que le navigateur accède au réseau et `false` indique que le navigateur est hors ligne. Cette propriété est mise à jour lorsque la connectivité réseau change. La mise à jour se produit lorsque la personne suit un lien ou qu'un script effectue une requête vers une page distante. Ainsi, la propriété peut renvoyer `false` lorsqu'une personne clique sur un lien après avoir perdu l'accès à Internet.

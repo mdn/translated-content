@@ -1,7 +1,8 @@
 ---
 title: 條件運算子
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
+
 {{jsSidebar("Operators")}}
 
 **條件 (三元) 運算子** 是 JavaScript 唯一用到三個運算元的運算子：在一個條件後面會跟著一個問號 (`?`)，如果條件是 [truthy](/zh-TW/docs/Glossary/truthy)，在冒號(`:`)前的表達式會被執行，如果條件是 [falsy](/zh-TW/docs/Glossary/falsy)，在冒號後面的表達式會被執行，這個運算子常常被用來當作 [`if`](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else) 的簡潔寫法.
@@ -75,7 +76,7 @@ function example(…) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## 參見
 
@@ -83,4 +84,4 @@ function example(…) {
 - [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)

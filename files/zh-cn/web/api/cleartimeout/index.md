@@ -2,6 +2,7 @@
 title: clearTimeout()
 slug: Web/API/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 `WindowOrWorkerGlobalScope` 内置的 **`clearTimeout()`** 方法取消了先前通过调用{{domxref("setTimeout()")}}建立的定时器。
@@ -54,9 +55,9 @@ window.onclick = function() { alarm.setup() };
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.clearTimeout")}}
+{{Compat}}
 
 ## 更多
 

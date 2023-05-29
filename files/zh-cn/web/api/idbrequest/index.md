@@ -2,6 +2,7 @@
 title: IDBRequest
 slug: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过 request 的方式来实现。
@@ -70,7 +71,7 @@ request.onupgradeneeded= function(event) {
         <code><a name="attr_errorCode">error</a></code>
       </td>
       <td>
-        <code>readonly <a href="/en-US/docs/DOM/DOMError">DOMError</a></code>
+        <code>readonly <a href="/zh-CN/docs/DOM/DOMError">DOMError</a></code>
       </td>
       <td>
         <p>The following error codes are returned under certain conditions:</p>
@@ -177,7 +178,7 @@ request.onupgradeneeded= function(event) {
 
 ### `readyState` constants
 
-> **警告：** These constants are no longer available. You should use directly the string constants instead. ({{ bug(887524) }})
+> **警告：** These constants are no longer available. You should use directly the string constants instead. ([Firefox bug 887524](https://bugzil.la/887524))
 
 | Constant      | Value     | Description                                                         |
 | ------------- | --------- | ------------------------------------------------------------------- |

@@ -1,6 +1,6 @@
 ---
 title: Évènement
-slug: Glossary/event
+slug: Glossary/Event
 tags:
   - DOM
   - Encodage
@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/event
 original_slug: Glossaire/évènement
 ---
+
 Les évèhements sont des éléments actifs générés par les éléments [DOM](/fr/docs/Glossaire/DOM) qui peuvent être manipulés par un code Javascript.
 
 ## Voir aussi

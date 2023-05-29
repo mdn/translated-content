@@ -2,6 +2,7 @@
 title: Channel Messaging API
 slug: Web/API/Channel_Messaging_API
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 **Channel Messaging API** 允许两个不同的脚本运行在同一个文档的不同浏览器上下文（比如两个 iframe，或者文档主体和一个 iframe，使用 {{domxref("SharedWorker")}} 的两个文档，或者两个 worker）来直接通讯，在每端使用一个端口（port）通过双向频道（channel）向彼此传递消息。
@@ -31,8 +32,8 @@ slug: Web/API/Channel_Messaging_API
 
 ## 例子
 
-- 我们在 Github 上发布了 [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic)，在[这里](http://mdn.github.io/dom-examples/channel-messaging-basic/)直接尝试。这个例子展示了一次页面和嵌入 {{htmlelement("iframe")}} 间的真实而简易的消息传递。
-- 你也可以参考 [多个消息 demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-multimessage) ([在线演示](http://mdn.github.io/dom-examples/channel-messaging-multimessage/))。这个例子展示了稍微复杂些的设置，可以在主页面和 IFrame 之间传递多条消息。
+- 我们在 Github 上发布了 [channel messaging 基本演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，在[这里](http://mdn.github.io/dom-examples/channel-messaging-basic/)直接尝试。这个例子展示了一次页面和嵌入 {{htmlelement("iframe")}} 间的真实而简易的消息传递。
+- 你也可以参考[多个消息演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-multimessage)（[在线演示](http://mdn.github.io/dom-examples/channel-messaging-multimessage/)）。这个例子展示了稍微复杂些的设置，可以在主页面和 IFrame 之间传递多条消息。
 
 ## 规范
 

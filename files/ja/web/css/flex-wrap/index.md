@@ -2,6 +2,7 @@
 title: flex-wrap
 slug: Web/CSS/flex-wrap
 ---
+
 {{ CSSRef}}
 
 **`flex-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定します。折り返しを許可する場合は、行を積み重ねる方向の制御も可能です。

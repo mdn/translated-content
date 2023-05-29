@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 l10n:
   sourceCommit: 2ec681bd9ad77115496f551c62fee2ba50c9007f
 ---
+
 {{JSRef}}
 
 **`Intl.Segmenter.prototype.resolvedOptions()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。

@@ -1,50 +1,56 @@
 ---
 title: StyleSheet.href
 slug: Web/API/StyleSheet/href
+l10n:
+  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
-{{ApiRef}}
 
-## 概要
+{{APIRef("CSSOM")}}
 
-スタイルシートの URI を返します。
+**`href`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、スタイルシートの場所を返します。
 
-## 構文
+## 値
 
-```
-uri = stylesheet.href
-```
-
-- `uri` : スタイルシートの URI
+文字列で、このスタイルシートの URI を保持します。
 
 ## 例
 
-以下に示す HTML をローカルに配置して表示し、ボタンを押下した場合 `file:////C:/Windows/Desktop/example.css` などの様な文字列が表示されます。
+ローカルで下記のコードを実行してください。
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="example.css" />
-<script>
-function sref() {
-  alert(document.styleSheets[0].href);
-}
-</script>
-</head>
-
-<body>
-  <button onclick="sref()">alert(document.styleSheets[0].href) を実行</button>
-</body>
-
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>href example</title>
+    <link rel="styleSheet" href="example.css" />
+    <script>
+      function sref() {
+        alert(document.styleSheets[0].href);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="thunder">Thunder</div>
+    <button onclick="sref()">ss</button>
+  </body>
 </html>
 ```
 
-## 注記
+"file:////C:/Windows/Desktop/example.css" を返します。
 
-スタイルシートがリンクされたものである場合は、その {{HTMLElement("style")}} 要素の `href` 属性の示す位置が返ります。インラインスタイルのシートの場合の戻り値は `NULL` となります。
+## メモ
 
-このプロパティは Firefox 、 Opera 、 Google Chrome 、 Safari に於いては読取専用ですが、 Internet Explorer では読取 / 書込ともに可能となっています。
+スタイルシートがリンクされたスタイルシートの場合、この属性の値はその位置となります。
+インラインスタイルシートの場合、この属性の値は `NULL` です。
+
+このプロパティは Firefox、 Opera、 Google Chrome、 Safari では読み取り専用ですが、 Internet Explorer では読み取り / 書き込みともに可能となっています。
 
 ## 仕様書
 
-- [href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

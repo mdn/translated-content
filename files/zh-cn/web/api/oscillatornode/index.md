@@ -2,9 +2,10 @@
 title: OscillatorNode
 slug: Web/API/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
-**`OscillatorNode`** 接口表示一个振荡器，它产生一个周期的波形信号（如正弦波）。它是一个 {{domxref("AudioScheduledSourceNode")}} 音频处理模块， 这个模块会生成一个指定频率的波形信号（即一个固定的音调）
+**`OscillatorNode`** 接口表示一个振荡器，它产生一个周期的波形信号（如正弦波）。它是一个 {{domxref("AudioScheduledSourceNode")}} 音频处理模块，这个模块会生成一个指定频率的波形信号（即一个固定的音调）
 
 一个 `OscillatorNode` 对象是通过 {{domxref("AudioContext.createOscillator()")}} 方法创建的。它总是有一个输出，但没有输入。它的基础属性（定义见 {{domxref("AudioNode")}} ）默认如下：
 
@@ -36,18 +37,18 @@ slug: Web/API/OscillatorNode
 ## 构造函数
 
 - {{domxref("OscillatorNode.OscillatorNode", "OscillatorNode()")}}
-  - : 创建一个 OscillatorNode 对象的示例，为 node[属性](#属性)提供可选的一个定义默认值的对象. 如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。
+  - : 创建一个 OscillatorNode 对象的示例，为 node[属性](#属性)提供可选的一个定义默认值的对象。如果默认值可接受，你可以简单地调用{{domxref("AudioContext.createOscillator()")}}工厂方法。
 
 ## 属性
 
 _继承自父类_ _{{domxref("AudioScheduledSourceNode")}}，并添加下列属性：_
 
 - {{domxref("OscillatorNode.frequency")}}
-  - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹 hertz） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`)。 默认值是 440 Hz (基本的中 A 音高).
+  - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表了振动的频率（单位为赫兹 hertz） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`)。默认值是 440 Hz (基本的中 A 音高).
 - {{domxref("OscillatorNode.detune")}}
   - : 一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 对象的属性代表振动的音高微调（单位是 cent 音分） (虽然返回的`AudioParam 是只读的，但是它所表示的值是可以修改的`).。默认值是 0。
 - {{domxref("OscillatorNode.type")}}
-  - : 一个字符串，决定 `OscillatorNode 播放的声音的周期波形`; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。 基础值有 `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. 默认值是`"sine"。`
+  - : 一个字符串，决定 `OscillatorNode 播放的声音的周期波形`; 它的值可以是基础值中的一个或者用户使用 {{domxref("PeriodicWave")}}。不同的波形可以产生不同的声调。基础值有 `"sine"`、`"square"`、`"sawtooth"`、`"triangle"` 和 `"custom"`。默认值是 `"sine"`。
 
 ## 方法
 
@@ -79,7 +80,7 @@ oscillator.start();
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode")}}
+{{Compat}}
 
 ## See also
 

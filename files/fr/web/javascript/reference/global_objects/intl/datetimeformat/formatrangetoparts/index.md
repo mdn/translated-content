@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRangeToParts
 ---
+
 {{JSRef}}
 
 La fonction **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** permet, selon la locale utilisée, de représenter chaque élément de l'intervalle de dates via [`DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype).
@@ -56,10 +57,8 @@ fmt.formatRangeToParts(date1, date2);
 
 ## Spécifications
 
-| Specification                                                                                                                                        | Status  | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
-| [Intl.DateTimeFormat.prototype.formatRange](https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects) | Stage 3 |         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.formatRangeToParts")}}
+{{Compat}}

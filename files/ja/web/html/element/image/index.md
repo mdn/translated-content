@@ -2,12 +2,13 @@
 title: '<image>: 画像要素'
 slug: Web/HTML/Element/image
 ---
-{{HTMLRef}}{{deprecated_header}}
+
+{{HTMLSidebar}}{{deprecated_header}}
 
 **`<image>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("img")}} 要素の古く、対応が不十分な前身です。
 **使用しないでください**。
 
-ブラウザーによっては、これを自動的に {{HTMLElement("img")}} 要素に変換しようとし、 {{htmlattrxref("src", "img")}} 属性も指定されていれば成功することがあります。
+ブラウザーによっては、これを自動的に {{HTMLElement("img")}} 要素に変換しようとし、 [`src`](/ja/docs/Web/HTML/Element/img#src) 属性も指定されていれば成功することがあります。
 
 ## 仕様書
 

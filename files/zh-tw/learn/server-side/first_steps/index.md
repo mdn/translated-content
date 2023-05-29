@@ -2,6 +2,7 @@
 title: 伺服器端程式設計起步走
 slug: Learn/Server-side/First_steps
 ---
+
 {{LearnSidebar}}
 
 在我們的伺服器端程式設計模組內，我們會回答一些關於伺服器端編程的問題 ──「那是什麼？」、「它和用戶端程式設計有何不同？」、還有「為什麼它有用？」。接著，我們會比較各大熱門框架、並佐以一些如何選擇最適合框架的指引。最後，我們還會提供關於伺服器安全的進階介紹性文章。
@@ -22,9 +23,9 @@ slug: Learn/Server-side/First_steps
 
 ## 指引
 
-- [介紹伺服器端](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
+- [伺服器端介紹](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
   - : 歡迎來到 MDN 初學者的伺服器端程式設計課程！在這首篇文章中，我們將以很高的角度回答諸如「這是什麼？」、「它和用戶端程式設計有何不同？」、還有「為什麼它有用？」之類的問題。讀完以後，你會明白很多關於伺服器端程式設計的知識。
-- [用戶端概覽](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [用戶端概述](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
   - : 現在你知道了伺服器端程式設計的目標與益處，而我們現在要檢驗一些細節：當伺服器從瀏覽器那邊收到「動態請求」的時候，究竟發生了什麼事。因為大多數網站都用相近的方法處理請求與回應，所以這一點會幫助你理解自己在撰寫程式碼的時候要幹什麼。
 - [伺服器端網路框架](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
   - : 最後一篇文章介紹了伺服器端網路程式，為了回應來自瀏覽器的請求，究竟需要些什麼。現在，我們會告訴你網路框架如何簡化那些工作，並幫助你選定自己的第一個網路程式，要用上什麼樣的框架。

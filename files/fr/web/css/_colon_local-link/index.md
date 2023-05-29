@@ -4,6 +4,7 @@ slug: Web/CSS/:local-link
 translation_of: Web/CSS/:local-link
 browser-compat: css.selectors.local-link
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:local-link`** représente un lien vers le même document. Il s'agit donc d'un élément qui est l'ancre source d'un lien hypertexte dont la cible est une URL absolue correspondant à l'URL du document contenant l'élément.

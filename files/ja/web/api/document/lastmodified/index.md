@@ -2,6 +2,7 @@
 title: Document.lastModified
 slug: Web/API/Document/lastModified
 ---
+
 {{APIRef("DOM")}}
 
 **`lastModified`** は {{domxref("Document")}} インターフェイスのプロパティで、現在の文書が最後に更新された日付と時刻を含む文字列を返します。
@@ -66,15 +67,13 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 }
 ```
 
-> **Note:** WebKit は時刻の文字列を UTC で返します。 Gecko と Internet Explorer はローカルタイムゾーンで時刻を返します。 (参照: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> **メモ:** WebKit は時刻の文字列を UTC で返します。 Gecko と Internet Explorer はローカルタイムゾーンで時刻を返します。 (参照: [Bug 4363 – document.lastModified returns date in UTC time, but should return it in local time](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
 もし***外部のページ*が変更されたかどうか**を知りたい場合は、 [`XMLHttpRequest()` API についてのこの段落](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date)をお読みください。
 
 ## 仕様書
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-document-lastmodified', 'document.lastModified')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

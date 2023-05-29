@@ -2,7 +2,8 @@
 title: 服务端编程介绍
 slug: Learn/Server-side/First_steps/Introduction
 ---
-{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+
+{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 欢迎来到 MDN 为初学者准备的服务器端编程课程！在第一篇文章里面我们将会从一个较高的角度来看待服务器端编程，通过解答下面这些问题来实现这一点，比如：服务器端编程是什么？服务器端编程和客户端编程有何不同？还有，为什么服务器端编程这么有用？当你读完这篇文章后，你会理解通过服务器端编程实现的网站所能提供的额外的功能。
 
@@ -97,7 +98,7 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 
 想象一下，在亚马逊上提供着多少产品，在脸书上发布了多少帖子？为每一个产品和帖子都创建一个独立的静态页面将是完全不切实际的。
 
-服务器端编程则允许我们在数据库中存储信息，并且允许我们动态地创建和返回 HTML 和其他类型的文件（比如，PDF 文件和图片等）。我们也可以简单地传输数据 （{{glossary("JSON")}}、{{glossary("XML")}} 等），来让合适的客户端框架呈现（这样就减少了服务器的处理压力和需要被传输的数据总量）。
+服务器端编程则允许我们在数据库中存储信息，并且允许我们动态地创建和返回 HTML 和其他类型的文件（比如，PDF 文件和图片等）。我们也可以简单地传输数据（{{glossary("JSON")}}、{{glossary("XML")}} 等），来让合适的客户端框架呈现（这样就减少了服务器的处理压力和需要被传输的数据总量）。
 
 服务器的工作内容不仅限于从数据库发送信息，可能还会选择性地返回软件工具的结果，或者来自聊天服务的数据。内容甚至可以被定位到接受它的信息的客户端设备的类型。
 
@@ -183,10 +184,3 @@ web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站�
 在接下来的文章中我们会帮助你选择一个对于你的第一个网站来说最好的 web 框架；但是，再接下来我们稍微详细一点地带你过一遍主要的客户端 - 服务器交互行为。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## 在这个模块中
-
-- [Introduction to the server side](/zh-CN/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)

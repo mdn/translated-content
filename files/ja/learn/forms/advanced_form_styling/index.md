@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
 original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、 CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、ウェブフォームへのスタイル設定の闇の部分を見ていきます。
@@ -89,9 +90,9 @@ input {
 }
 ```
 
-下記の例ではお使いのシステムでどのように見えるかを示します。既定では左で、上記の CSS が適用されると右になります（その他のシステムでテストしたい場合は[ここも探してください](https://mdn.github.io/learning-area/html/forms/styling-examples/appearence-tester.html)）。
+下記の例ではお使いのシステムでどのように見えるかを示します。既定では左で、上記の CSS が適用されると右になります（その他のシステムでテストしたい場合は[ここも探してください](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html)）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearence-tester.html", '100%', 400)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
 たいていの場合、効果は枠線を除去し、 CSS でのスタイル設定を少し簡単にしますが、それは本質できありません。いくつかの場合 — 検索やラジオボタン/チェックボックスでは、もっと便利です。これを見ていきましょう。
 
@@ -109,13 +110,13 @@ input[type="search"] {
 
 下記の例では、2 つのスタイル設定された検索ボックスが見えます。右のものは `appearance: none;` が適用され、左はそうでありません。macOS の Safari で見ると左のものは正しいサイズでないように見えます。
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearence.html", '100%', 200)}}
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
 
 興味深いことに、検索フィールドで border/background をセットしてもこの問題を解決できます。下記のスタイル設定された検索ボックスは `appearance: none;` が適用されていませんが、前の例と同じ Safari の問題に悩まされていません。
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **Note:** 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
+> **メモ:** 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
 
 ### チェックボックスとラジオボタン
 
@@ -241,7 +242,7 @@ input[type="checkbox"]:disabled {
 
 {{cssxref("appearance")}} に対応していないブラウザーで、これらのチェックボックスを表示できます。カスタムデザインは失われますが、チェックボックスのままに見えて使用できます。
 
-> **Note:** Internet Explorer はどのバージョンでも `appearance` に対応していませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
+> **メモ:** Internet Explorer はどのバージョンでも `appearance` に対応していませんが、`input[type=checkbox]::-ms-check` にて IE のみチェックボックスをターゲットにできます。この手法は、`-ms-check` という名前にもかかわらず、ラジオボタンでも機能します。
 
 ## 「劣悪」要素に何ができるか
 
@@ -310,7 +311,7 @@ button {
 }
 ```
 
-> **Note:** 多数のブラウザーで同時にこの例をテストしたい場合、[ライブ版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html))。
+> **メモ:** 多数のブラウザーで同時にこの例をテストしたい場合、[ライブ版をここで見つけてください](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html) ([ソースコードも見てください](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html))。
 >
 > また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file#例) リファレンスページの例を簡単にしたバージョンです。
 
@@ -406,7 +407,7 @@ select {
 
 しかし、コントロールの内部部品（日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナーなど）はまったくスタイル設定できず、 `appearance: none;` を使ってもスタイルを除去できません。スタイル設定を完全に制御する必要がある場合は、カスタムコントロールを生成するライブラリーを使うか、自分で作らなければなりません。
 
-> **Note:** ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
+> **メモ:** ここでも[`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) は触れる価値があります、これもまた、値を増加/減少させるために使用することができるスピナーがあるので、同じ問題に悩まされる可能性があります。しかし、 `number` 型の場合、収集するデータはより単純で、代わりに `tel` 入力型を使用するのも簡単です。これは `text` のような外観ですが、タッチキーボードを搭載した機器ではテンキーを表示することができます。
 
 ### Range 入力型
 
@@ -497,22 +498,3 @@ HTML フォームで CSS を使用するのはまだ困難ですが、しばし�
 このガイドの次の記事では、現代のブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)を見ていきます。
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
-
-## このモジュール
-
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
-
-### 高度なトピック
-
-- [カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームコントロール向けの CSS プロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -1,13 +1,9 @@
 ---
 title: Espacio en blanco
 slug: Glossary/Whitespace
-tags:
-  - Glosario
-  - Gramática léxica
-  - espacioenblanco
-translation_of: Glossary/Whitespace
 original_slug: Glossary/Espacio_en_blanco
 ---
+
 El **espacio en blanco** es un conjunto de {{Glossary("Caracter", "caracteres")}} que se utiliza para mostrar espacios horizontales o verticales entre otros caracteres. A menudo se utilizan para separar fragmentos en {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}} y otros lenguajes informáticos.Los caracteres de espacio en blanco y su uso varía de un lenguaje a otro.
 
 ## En HTML
@@ -34,7 +30,7 @@ La [especificación del lenguaje ECMAScript® 2015](https://www.ecma-internation
   </li>
   <li>Artículos de Wikipedia
    <ol>
-    <li>{{interwiki("wikipedia", "El caracter de espacio en blanco")}}</li>
+    <li>[El caracter de espacio en blanco](https://es.wikipedia.org/wiki/El_caracter_de_espacio_en_blanco)</li>
    </ol>
   </li>
   <li><a href="/es/docs/Glossary">Glosario</a>

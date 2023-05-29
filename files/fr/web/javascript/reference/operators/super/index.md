@@ -12,6 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/super
 original_slug: Web/JavaScript/Reference/Opérateurs/super
 browser-compat: javascript.operators.super
 ---
+
 {{jsSidebar("Operators")}}
 
 Le mot-clé **`super`** est utilisé afin d'appeler ou d'accéder à des fonctions définies sur l'objet parent.

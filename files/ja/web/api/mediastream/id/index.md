@@ -2,6 +2,7 @@
 title: MediaStream.id
 slug: Web/API/MediaStream/id
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream.id()`** は読み取り専用プロパティであり、このオブジェクトの固有識別子 (GUID) である 36 文字で表現される {{domxref("DOMString")}} を返します。

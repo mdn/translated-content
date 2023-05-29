@@ -3,6 +3,7 @@ title: min()
 slug: Web/CSS/min
 original_slug: Web/CSS/min()
 ---
+
 {{CSSRef}}
 
 **`min()`** [CSS](/zh-CN/docs/Web/CSS) 方法允许你从逗号分隔符表达式中选择一个最小值作为 CSS 的属性值。`min()` 方法可以用于以下任何属性中 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}},{{CSSxRef("&lt;number&gt;")}}, 或者 {{CSSxRef("&lt;integer&gt;")}}。
@@ -26,11 +27,11 @@ width: min(1vw, 4em, 80px);
 - Oftentimes you will want to comine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 ### Growing images to a maximum size
 
@@ -81,7 +82,7 @@ form {
 </form>
 ```
 
-{{EmbedLiveSample("Setting_a_maximum_size_for_an_label_and_input", "100%", "80")}}
+{{EmbedLiveSample("给 label 和 input 设置最大值", "100%", "80")}}
 
 Think of the `min()` function as finding the maximum value allowed for a property.
 
@@ -106,7 +107,7 @@ small {
 
 ## Browser compatibility
 
-{{Compat("css.types.min")}}
+{{Compat}}
 
 ## See also
 

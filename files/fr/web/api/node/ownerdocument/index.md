@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Node.ownerDocument`** renvoie l'objet document de niveau supérieur pour ce nœud.

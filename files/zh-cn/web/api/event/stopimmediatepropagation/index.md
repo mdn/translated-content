@@ -2,6 +2,7 @@
 title: event.stopImmediatePropagation
 slug: Web/API/Event/stopImmediatePropagation
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 接口的 **`stopImmediatePropagation()`** 方法阻止监听同一事件的其他事件监听器被调用。
@@ -63,4 +64,4 @@ event.stopImmediatePropagation();
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.stopImmediatePropagation")}}
+{{Compat}}

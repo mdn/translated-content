@@ -24,9 +24,11 @@ p::first-line {
 
 ## Синтаксис
 
-    selector::pseudo-element {
-      property: value;
-    }
+```
+selector::pseudo-element {
+  property: value;
+}
+```
 
 В селекторе можно использовать только один псевдоэлемент. Он должен находиться после простых селекторов в выражении.
 

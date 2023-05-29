@@ -2,6 +2,7 @@
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 ---
+
 {{JSRef}}
 
 **`Math.LOG2E`** プロパティは 2 を底とした e の対数、約 1.442 を表します。
@@ -30,9 +31,7 @@ getLog2e(); // 1.4426950408889634
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log2e', 'Math.LOG2E')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,11 +2,12 @@
 title: ResizeObserver
 slug: Web/API/ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`ResizeObserver`** インターフェイスは、要素 ({{domxref('Element')}}) のコンテンツまたは境界ボックス、または {{domxref('SVGElement')}} のバウンディングボックスの大きさが変化したことを報告します。
 
-> **Note:** コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
+> **メモ:** コンテンツボックスは、コンテンツを配置できるボックスです。つまり、境界ボックスからパディングを引いたものです。境界とパディングの説明は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を参照してください。
 
 `ResizeObserver` は、無限のコールバックループとそれ自身のコールバック関数でサイズ変更することによって生じるであろう循環的な依存関係を避けます。これは、後続のフレームで DOM のより深い要素のみを処理することによって行われます。仕様に従っている場合、実装は描画の前およびレイアウトの後にリサイズイベントを呼び出します。
 

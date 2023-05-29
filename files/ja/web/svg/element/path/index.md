@@ -1,13 +1,8 @@
 ---
 title: <path>
 slug: Web/SVG/Element/path
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/path
 ---
+
 {{SVGRef}}
 
 **`<path>`** [SVG](/ja/docs/Web/SVG)要素は図形を定義する汎用的な要素です。全ての基本図形は path 要素によって定義されます。
@@ -62,11 +57,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName("SVG Paths", "#PathElement", "&lt;path&gt;")}}         | {{Spec2("SVG Paths")}} |            |
-| {{SpecName("SVG2", "paths.html#PathElement", "&lt;path&gt;")}} | {{Spec2("SVG2")}}     |            |
-| {{SpecName("SVG1.1", "paths.html#PathElement", "&lt;path&gt;")}} | {{Spec2("SVG1.1")}}     | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

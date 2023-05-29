@@ -2,11 +2,12 @@
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
 ---
+
 {{ ApiRef() }}
 
 ### 概述
 
-**previousElementSibling** 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回`null,`该属性是只读的。
+**`previousElementSibling`** 返回当前元素在其父元素的子元素节点中的前一个元素节点，如果该元素已经是第一个元素节点，则返回 `null`, 该属性是只读的。
 
 ### 语法
 
@@ -47,4 +48,4 @@ Siblings of div-03
 
 ### 浏览器兼容性
 
-{{Compat("api.Element.previousElementSibling")}}
+{{Compat}}

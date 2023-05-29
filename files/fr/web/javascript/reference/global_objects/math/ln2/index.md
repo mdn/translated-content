@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LN2
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LN2`** représente le logarithme naturel de 2, environ 0.693:
@@ -37,16 +38,11 @@ getLog2(256); // 8
 
 ## Spécifications
 
-| Spécification                                                        | Statut                       | Commentaires                                          |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.LN2")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -4,6 +4,7 @@ slug: Web/CSS/background-position
 browser-compat: css.properties.background-position
 translation_of: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 La propriété **`background-position`** permet de définir la position initiale, relative à l'origine définie par [`background-origin`](/fr/docs/Web/CSS/background-origin), pour chaque image d'arrière-plan.

@@ -1,30 +1,39 @@
 ---
-title: ServiceWorkerContainer.oncontrollerchange
+title: 'ServiceWorkerContainer: controllerchange イベント'
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
 original_slug: Web/API/ServiceWorkerContainer/oncontrollerchange
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-{{domxref("ServiceWorkerContainer")}} インターフェイスの **`oncontrollerchange`** プロパティは、{{Event("controllerchange")}} イベントが発生するたびに（文書に関連する {{domxref("ServiceWorkerRegistration")}} が新しいアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを取得したときに）発生するイベントハンドラーです。
+{{APIRef("Service Workers API")}}
+
+**`controllerchange`** は {{domxref("ServiceWorkerContainer")}} インターフェイスのイベントで、文書の関連する {{domxref("ServiceWorkerRegistration")}} が新しいアクティブ ({{domxref("ServiceWorkerRegistration.active","active")}}) ワーカーを取得したときに発生します。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('controllerchange', (event) => { });
+
+oncontrollerchange = (event) => { };
 ```
-serviceWorkerContainer.oncontrollerchange = function(controllerchangeevent) { ... }
-```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ```js
-// 未定
+// TBD
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-serviceworkercontainer-oncontrollerchange', 'ServiceWorkerContainer: oncontrollerchange')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerContainer.oncontrollerchange")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: NotificationEvent.NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 **`NotificationEvent()`** コンストラクターは、新しい {{domxref("NotificationEvent")}} オブジェクトを生成します。
@@ -29,9 +30,7 @@ var myNotificationEvent = new NotificationEvent(type, init);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                                     | 備考            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications','#dom-notificationevent-notificationevent','NotificationEvent() constructor')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

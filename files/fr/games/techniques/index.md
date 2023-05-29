@@ -7,6 +7,7 @@ tags:
   - Jeux
 translation_of: Games/Techniques
 ---
+
 {{GamesSidebar}}
 
 Cette page liste un ensemble de techniques utiles à toute personne qui voudrait développer un jeu vidéo à l'aide des technologies du web.

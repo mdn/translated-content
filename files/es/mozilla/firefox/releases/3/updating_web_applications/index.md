@@ -1,9 +1,6 @@
 ---
 title: Actualizar aplicaciones web para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 ---
 
@@ -51,15 +48,15 @@ Los valores de fuente en unidades em y ex solían ser afectadas por el tamaño m
 
 Los valores del tamaño de fuente en unidades em y ex ahora están basadas en un "tamaño de fuente intencionado" que no se ve afectado por el tamaño mínimo de fuente del usuario. En otras palabras, los tamaños de la fuente se calculan de acuerdo a las intenciones del diseñador y se ajustan al tamaño mínimo de fuente después de ello.
 
-Ver {{ Bug(322943) }} para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.
+Ver [Error 322943 en Firefox](https://bugzil.la/322943) para una demostración (se debe ver con un tamaño mínimo de fuente 6 para detectar la diferencia: las dos cajas en cascada se comportan diferente en Firefox 2, porque el tamaño de fuente basado en em "retorna" el tamaño mínimo de fuente.
 
 ### Cambios de seguridad
 
 #### Acceso Chrome
 
-En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes [`chrome://`]() usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos, lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.
+En versiones anteriores de Firefox, cualquier página web podía cargar scripts o imágenes `chrome://` usando el protocolo chrome. Entre otras cosas, esto hizo posible que algunos sitios no detectaran la presencia de complementos, lo cual podía ser usado para traspasar la seguridad del usuario saltando los complementos que agregaban medidas de seguridad al buscador.
 
-Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del [`chrome://browser/`]() y en espacio chrome://toolkit/. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.
+Firefox 3 solo permite contenido web para acceder a los elementos en los espacios del `chrome://browser/` y en espacio chrome://toolkit/. Estos archivos pretenden ser accesibles por el contenido web. Ahora cualquier otro contenido chrome es bloqueado para el sitio web.
 
 Hay, sin embargo, métodos para ciertas extensiones que puden ser accedidos por la web. Se puede especificar una bandera en su archivo chrome.manifest de esta manera:
 

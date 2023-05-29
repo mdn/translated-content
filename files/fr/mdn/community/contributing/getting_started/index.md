@@ -5,6 +5,7 @@ original_slug: MDN/Contribute/Getting_started
 l10n:
   sourceCommit: 2d6d6a1d9f8ba2073c9f8e1bbc6b4e20204fb53c
 ---
+
 {{MDNSidebar}}
 
 Nous sommes une communauté ouverte de développeuses et développeurs, d'écrivaines et d'écrivains techniques qui créent des ressources pour un Web meilleur, quelle que soit la marque, le navigateur ou la plate-forme. Tout le monde peut contribuer et chaque personne qui le fait améliore le projet. Ensemble, nous pouvons continuer à stimuler l'innovation sur le Web pour servir le bien commun. Cela commence ici, avec vous.

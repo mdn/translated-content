@@ -2,6 +2,7 @@
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList.keys()`** 方法返回 {{jsxref("Iteration_protocols",'iterator')}} ，此方法允许遍历这个对象中包含的所有的键，即使这个键是 `unsigned integer（无符号整数）`.
@@ -44,9 +45,9 @@ for(var key of list.keys()) {
 2
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
-{{Compat("api.NodeList.keys")}}
+{{Compat}}
 
 ## 相关链接
 

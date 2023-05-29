@@ -1,11 +1,8 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS Grid
-translation_of: Web/CSS/grid-template-columns
 ---
+
 A propriedade `grid-template-columns` do CSS define os nomes das linhas e funções de dimensionamento (track sizing) do {{glossary("grid column", "grid columns")}}.
 
 ```css
@@ -65,7 +62,7 @@ grid-template-columns: unset;
 
   - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 
-    > **Note:** Note: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
+    > **Nota:**: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
 
 - `{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}`
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
@@ -125,34 +122,34 @@ grid-template-columns: unset;
 - Guia do _layout_ em grade: _[Basic concepts of grid layout - Grid Tracks](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
 - Tutorial em vídeo: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
 
-1.  [**CSS**](/pt-BR/docs/Web/CSS)
-2.  **[Referência do CSS](/pt-BR/docs/Web/CSS/Reference)**
-3.  [CSS: Layout em grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
-4.  **Guia**
+1. [**CSS**](/pt-BR/docs/Web/CSS)
+2. **[Referência do CSS](/pt-BR/docs/Web/CSS/Reference)**
+3. [CSS: Layout em grid](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)
+4. **Guia**
 
-    1.  [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2.  [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3.  [Line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4.  [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5.  [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6.  [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7.  [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8.  [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9.  [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+    4. [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+    5. [Layout using named grid lines](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
+    6. [Auto-placement in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+    7. [Box alignment in grid layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+    8. [Grids, logical values and writing modes](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS Grid Layout and Accessibility](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
     10. [CSS Grid Layout and Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
     11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
-5.  **Propriedades**
+5. **Propriedades**
 
-    1.  [grid](/pt-BR/docs/Web/CSS/grid)
-    2.  [grid-area](/pt-BR/docs/Web/CSS/grid-area)
-    3.  [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
-    4.  [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
-    5.  [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
-    6.  [grid-column](/pt-BR/docs/Web/CSS/grid-column)
-    7.  [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
-    8.  [grid-column-gap](/pt-BR/docs/Web/CSS/grid-column-gap)
-    9.  [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
+    1. [grid](/pt-BR/docs/Web/CSS/grid)
+    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
+    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
+    4. [grid-auto-flow](/pt-BR/docs/Web/CSS/grid-auto-flow)
+    5. [grid-auto-rows](/pt-BR/docs/Web/CSS/grid-auto-rows)
+    6. [grid-column](/pt-BR/docs/Web/CSS/grid-column)
+    7. [grid-column-end](/pt-BR/docs/Web/CSS/grid-column-end)
+    8. [grid-column-gap](/pt-BR/docs/Web/CSS/grid-column-gap)
+    9. [grid-column-start](/pt-BR/docs/Web/CSS/grid-column-start)
     10. [grid-gap](/pt-BR/docs/Web/CSS/grid-gap)
     11. [grid-row](/pt-BR/docs/Web/CSS/grid-row)
     12. [grid-row-end](/pt-BR/docs/Web/CSS/grid-row-end)
@@ -163,12 +160,12 @@ grid-template-columns: unset;
     17. [grid-template-columns](/pt-BR/docs/Web/CSS/grid-template-columns)
     18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
-6.  **Glossário**
+6. **Glossário**
 
-    1.  [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
-    2.  [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
-    3.  [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
-    4.  [Grid areas](/pt-BR/docs/Glossary/Grid_areas)
-    5.  [Gutters](/pt-BR/docs/Glossary/Gutters)
-    6.  [Grid row](/pt-BR/docs/Glossary/Grid_rows)
-    7.  [Grid column](/pt-BR/docs/Glossary/Grid_column)
+    1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
+    2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
+    3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)
+    4. [Grid areas](/pt-BR/docs/Glossary/Grid_areas)
+    5. [Gutters](/pt-BR/docs/Glossary/Gutters)
+    6. [Grid row](/pt-BR/docs/Glossary/Grid_rows)
+    7. [Grid column](/pt-BR/docs/Glossary/Grid_column)

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 original_slug: Web/JavaScript/Reference/Objets_globaux/JSON
 ---
+
 {{JSRef}}
 
 L’objet **`JSON`** contient des méthodes pour interpréter du [JSON](https://json.org/) (JavaScript Object Notation) (voir également la page du glossaire {{glossary("JSON")}}) et convertir des valeurs en JSON. Il ne peut être appelé ou construit, et, en dehors de ses deux méthodes, n’a pas de fonctionnalité propre.
@@ -101,15 +102,11 @@ Des espaces blancs insignifiants peuvent être présents n’importe où sauf da
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}             | {{Spec2('ES5.1')}}     | Définition initiale. |
-| {{SpecName('ES6', '#sec-json-object', 'JSON')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-json-object', 'JSON')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Voir aussi
 

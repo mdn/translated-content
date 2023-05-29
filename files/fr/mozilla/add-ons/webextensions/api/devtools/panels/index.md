@@ -11,9 +11,10 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 ---
+
 {{AddonSidebar}}
 
-> **Note :** Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder  [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
+> **Note :** Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
 
 L'API devtools.panels permet à une extension devtools de définir son interface utilisateur à l'intérieur de la fenêtre devtools.
 
@@ -49,9 +50,9 @@ Comme toutes les API de devtools, cette API est uniquement disponible pour le co
 - [`devtools.panels.onThemeChanged`](/fr/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
   - : Mise en place lorsque le thème Devtools change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -61,7 +62,8 @@ Comme toutes les API de devtools, cette API est uniquement disponible pour le co
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,4 +90,4 @@ Comme toutes les API de devtools, cette API est uniquement disponible pour le co
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

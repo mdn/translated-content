@@ -1,13 +1,8 @@
 ---
 title: set
 slug: Web/SVG/Element/set
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Animation
-translation_of: Web/SVG/Element/set
 ---
+
 {{SVGRef}}
 
 ## 概要
@@ -42,10 +37,7 @@ translation_of: Web/SVG/Element/set
 
 ## 仕様
 
-| Specification                                                                        | Status                                   | Comment    |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{SpecName("SVG Animations 2", "#SetElement", "&lt;set&gt;")}} | {{Spec2("SVG Animations 2")}} |            |
-| {{SpecName('SVG1.1', 'animate.html#SetElement', '&lt;set&gt;')}} | {{Spec2('SVG1.1')}}                 | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

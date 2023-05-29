@@ -2,7 +2,8 @@
 title: WritableStreamDefaultWriter.ready
 slug: Web/API/WritableStreamDefaultWriter/ready
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的只读属性 **`ready`** 返回一个 {{jsxref("Promise")}}，当流填充内部队列的所需大小从非正数变为正数时兑现，表明它不再应用背压。
 

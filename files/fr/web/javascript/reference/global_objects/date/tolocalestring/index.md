@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleString
 browser-compat: javascript.builtins.Date.toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant la date selon une locale.

@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.
@@ -58,15 +59,11 @@ usedOptions.numeric;           // false
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}                                                 | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}                                                 | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.resolvedOptions', 'Intl.Collator.prototype.resolvedOptions')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Collator.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

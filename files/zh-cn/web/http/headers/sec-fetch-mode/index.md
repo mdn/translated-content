@@ -2,6 +2,7 @@
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
 ---
+
 {{HTTPSidebar}}
 
 **`Sec-Fetch-Mode`** 获取元数据标头表明了一个请求的模式。
@@ -49,7 +50,7 @@ Sec-Fetch-Mode: websocket
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
 - {{HTTPHeader("Sec-Fetch-User")}}

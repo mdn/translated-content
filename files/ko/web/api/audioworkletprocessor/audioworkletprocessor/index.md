@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Constructor
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.AudioWorkletProcessor
 ---
 {{APIRef("Web Audio API")}}
 

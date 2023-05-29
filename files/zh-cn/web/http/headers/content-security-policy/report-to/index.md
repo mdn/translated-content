@@ -2,7 +2,10 @@
 title: report-to
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
-_`Report-To`_ HTTP 响应头部指示客户端存储特定域名的报告端点。
+
+{{HTTPSidebar}}
+
+`Report-To` HTTP 响应头部指示客户端存储特定域名的报告端点。
 
 ```plain
 Content-Security-Policy: ...; report-to groupname
@@ -67,7 +70,7 @@ Browser compatibility
 
 The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
-{{Compat("http.headers.csp.report-to")}}
+{{Compat}}
 
 ## See also
 

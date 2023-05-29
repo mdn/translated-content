@@ -2,6 +2,7 @@
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
 ---
+
 {{CSSRef}}
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
@@ -72,7 +73,7 @@ p {
 }
 ```
 
-> **Note:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/TypeNetwork/Amstelvar/releases)できます。
+> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
 
 ## 仕様書
 

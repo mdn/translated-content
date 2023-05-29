@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/processing-instruction
 original_slug: Web/XSLT/processing-instruction
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:processing-instruction>` écrit une instruction de traitement dans le document de sortie.

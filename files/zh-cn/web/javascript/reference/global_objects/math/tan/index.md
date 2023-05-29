@@ -2,6 +2,7 @@
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述
@@ -27,7 +28,7 @@ Math.tan(x)
 
 ## 示例
 
-### 例子：使用 `Math.tan`
+### 示例：使用 `Math.tan`
 
 下面的函数返回变量 `x` 的正切值：
 

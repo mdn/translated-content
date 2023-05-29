@@ -2,6 +2,7 @@
 title: Algorithm (アルゴリズム)
 slug: Glossary/Algorithm
 ---
+
 アルゴリズムとは、ある機能を実行するための、独立した一連の命令です。
 
 言い換えれば、アルゴリズムは問題の解決方法を記述する方法であり、人間または機械によって反復的に解決されます。コンピューター科学者は「アルゴリズムの複雑性」や "Big O" 記法の概念でアルゴリズムの効率性を比較します。
@@ -19,7 +20,7 @@ slug: Glossary/Algorithm
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "アルゴリズム")}}
+- Wikipedia の [アルゴリズム](https://ja.wikipedia.org/wiki/アルゴリズム)
 
 ### 技術リファレンス
 

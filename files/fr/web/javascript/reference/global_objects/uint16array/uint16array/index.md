@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 browser-compat: javascript.builtins.Uint16Array.Uint16Array
 ---
+
 {{JSRef}}
 
 Le **constructeur `Uint16Array()`** permet de créer un nouveau tableau typé [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array) dont les éléments sont des nombres entiers non-signés, représentés sur 16 bits et utilisant le boutisme de la plateforme.

@@ -4,6 +4,7 @@ slug: Web/CSS/@font-face/ascent-override
 translation_of: Web/CSS/@font-face/ascent-override
 browser-compat: css.at-rules.font-face.ascent-override
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`ascent-override`** définit la mesure du jambage supérieur (ascendant) de la police (voir la [définition de jambage](https://fr.wikipedia.org/wiki/Jambage)). La mesure du jambage supérieur correspond à la distance verticale par rapport à la hauteur d'X (hauteur du caractère bas de casse, à l'exclusion des jambages inférieurs et supérieurs) que CSS doit utiliser pour agencer les boîtes dans un contexte de formatage en ligne.

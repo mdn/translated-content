@@ -10,6 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenX
 ---
+
 {{APIRef}}
 
 ## Résumé
@@ -35,7 +36,7 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.mozInnerScreenX")}}
+{{Compat}}
 
 ## Voir aussi
 

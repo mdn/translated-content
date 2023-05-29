@@ -2,6 +2,7 @@
 title: ReadableStream.cancel()
 slug: Web/API/ReadableStream/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} 接口的 **`cancel()`** 方法返回一个 {{jsxref("Promise")}}，这个 promise 会在流被取消的时候兑现。
@@ -94,3 +95,8 @@ fetch(url).then(response => {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)

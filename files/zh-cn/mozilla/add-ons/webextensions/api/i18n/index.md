@@ -2,6 +2,7 @@
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
+
 {{AddonSidebar}}
 
 国际化扩展的函数。您可以使用这些 api 从与扩展打包在一起的本地化文件中获取本地化字符串，查找浏览器的当前语言，并查找其 [Accept-Language header](/zh-CN/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header)头的值。
@@ -9,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 有关对扩展使用 i18n 的详细信息，请参阅：
 
 - [Internationalization](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization)国际化：使用 WebExtension i18n 系统的指南
-- [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。 此网页介绍`messages.json`
+- [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。此网页介绍`messages.json`
 
 ## 类型
 
@@ -29,7 +30,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

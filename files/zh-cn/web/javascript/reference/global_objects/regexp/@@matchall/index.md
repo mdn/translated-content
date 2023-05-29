@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 **`[@@matchAll]`**方法返回对字符串使用正则表达式的所有匹配项。
@@ -21,7 +22,7 @@ regexp[Symbol.matchAll](str)
 
 ### 返回值
 
-一个[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)。
+一个[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)。
 
 ## 描述
 
@@ -50,9 +51,9 @@ console.log(Array.from(result, x => x[0]));
 // ["2016", "01", "02"]
 ```
 
-### 在子类中使用`@@matchAll`
+### 在子类中使用 `@@matchAll`
 
-{{jsxref("RegExp")}}的子类可以重写`[@@matchAll]()`方法来修改默认行为。例如，返回一个{{jsxref("Array")}}而不是[iterator](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators):
+{{jsxref("RegExp")}} 的子类可以重写 `[@@matchAll]()` 方法来修改默认行为。例如，返回一个{{jsxref("Array", "数组", "", 1)}}而不是[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)：
 
 ```js
 class MyRegExp extends RegExp {
@@ -75,7 +76,7 @@ console.log(result[1]); // [ "2019-03-07", "2019", "03", "07" ]
 
 ## 浏览器兼容性
 
-{{Compat("javascript.builtins.RegExp.@@matchAll")}}
+{{Compat}}
 
 ## 相关链接
 
