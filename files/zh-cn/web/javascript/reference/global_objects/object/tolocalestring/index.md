@@ -50,7 +50,7 @@ const obj = {
 console.log(obj.toLocaleString()); // "My Object"
 ```
 
-### 数组重写的 toLocaleString()
+### Array 重写的 toLocaleString()
 
 {{jsxref("Array.prototype.toLocaleString()")}} 用于将数组值打印成字符串，通过调用每个元素的 `toLocaleString()` 方法，并使用特定于语言环境的分隔符拼接。例如：
 
@@ -64,7 +64,7 @@ const euroPrices = testArray.toLocaleString("fr", {
 // "4,00 €,7,00 €,10,00 €"
 ```
 
-### 日期对象重写的 toLocaleString()
+### Date 重写的 toLocaleString()
 
 {{jsxref("Date.prototype.toLocaleString()")}} 用于打印成更适合特定语言环境的日期显示。例如：
 
@@ -79,7 +79,7 @@ const frDate = testDate.toLocaleString("fr");
 // "29/05/2020, 18:04:24"
 ```
 
-### 数字重写的 toLocaleString()
+### Number 重写的 toLocaleString()
 
 {{jsxref("Number.prototype.toLocaleString()")}} 用于打印成更适合特定语言环境的数字显示，例如使用正确的分隔符。例如：
 
