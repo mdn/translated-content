@@ -81,7 +81,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 #### 调整背景图像的大小
 
-在上面的例子中，我们有一个很大的图像（*ballons.jpg*），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}} 属性，它可以设置[长度](/zh-CN/docs/Web/CSS/length)或[百分比](/zh-CN/docs/Web/CSS/percentage)值，来调整图像的大小以适应背景。
+在上面的例子中，我们有一个很大的图像（_ballons.jpg_），由于它比作为背景的元素大，所以最后被裁剪掉了。在这种情况下，我们可以使用 {{cssxref("background-size")}} 属性，它可以设置[长度](/zh-CN/docs/Web/CSS/length)或[百分比](/zh-CN/docs/Web/CSS/percentage)值，来调整图像的大小以适应背景。
 
 你也可以使用关键字：
 
