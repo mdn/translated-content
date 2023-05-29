@@ -24,7 +24,7 @@ str.startsWith(searchString[, position])
 
 ### 返回值
 
-如果在字符串的开头找到了给定的字符则返回**`true`**；否则返回**`false`**。
+如果在字符串的开头找到了给定的字符则返回 **`true`**；否则返回 **`false`**。
 
 ## 描述
 
