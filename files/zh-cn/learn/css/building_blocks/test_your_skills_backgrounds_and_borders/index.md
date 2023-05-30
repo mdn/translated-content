@@ -9,7 +9,7 @@ slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 
 > **备注：** 你可以在下面的互动编辑器中尝试解决方案。然而，下载代码并使用在线工具，如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 来完成任务可能会有所帮助。
 >
-> 如果你被卡住了，那就向我们寻求帮助吧——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)部分。
+> 如果你遇到了困难，那就向我们寻求帮助吧——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)部分。
 
 ## 任务 1
 
@@ -29,7 +29,7 @@ slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 
 > **标注：**
 >
-> [下载这项任务的起点](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html)，在你自己的编辑器或在线编辑器中完成测试。
+> [下载这项任务的初始代码](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html)，在你自己的编辑器或在线编辑器中完成测试。
 
 ## 任务 2
 
@@ -49,7 +49,7 @@ slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 
 > **标注：**
 >
-> [下载这项任务的起点](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds2-download.html)，在你自己的编辑器或在线编辑器中完成测试。
+> [下载这项任务的初始代码](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds2-download.html)，在你自己的编辑器或在线编辑器中完成测试。
 
 ## 评估或进一步帮助
 
