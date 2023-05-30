@@ -126,7 +126,7 @@ p.douradinho {
 
 {{EmbedLiveSample('Porcentagem', '500px', '64px')}}
 
-### max-content
+### Exemplo utilizando "max-content"
 
 ```css
 p.maxgreen {
@@ -141,9 +141,9 @@ p.maxgreen {
 <p class="maxgreen">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('max-content', '500px', '64px')}}
+{{EmbedLiveSample('Exemplo utilizando "max-content"', '500px', '64px')}}
 
-### min-content
+### Exemplo utilizando "min-content"
 
 ```css
 p.minblue {
@@ -157,7 +157,7 @@ p.minblue {
 <p class="minblue">A comunidade Mozilla produz diversos softwares incríveis.</p>
 ```
 
-{{EmbedLiveSample('min-content', '500px', '155px')}}
+{{EmbedLiveSample('Exemplo utilizando "min-content"', '500px', '155px')}}
 
 ## Especificações
 

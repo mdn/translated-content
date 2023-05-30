@@ -3,7 +3,7 @@ title: Grid Lines
 slug: Glossary/Grid_Lines
 ---
 
-使用[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
+使用[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)在显式网格中定义{{glossary("Grid tracks", "轨道")}}的同时会创建**网格线**。在下面的例子中，有一个三列两行的网格。它给了我们 4 条列线和 3 条行线。
 
 ## 示例
 
@@ -48,7 +48,7 @@ slug: Glossary/Grid_Lines
 
 {{ EmbedLiveSample('示例', '500', '250') }}
 
-网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
+网格线可以用它们的编号来寻址。在从左到右的语言比如英语中，列线 1 将位于网格的左侧，行线 1 将位于其顶部。线编号遵循文档的[写入模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)，因此在从右到左的语言中，列线 1 行将位于网格的右侧。下面的图片展示了该网格的线编号，假设语言是从左到右的。
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 
@@ -163,8 +163,8 @@ slug: Glossary/Grid_Lines
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- CSS Grid Layout Guide: _[Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
-- CSS Grid Layout Guide: _[CSS Grids, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes)_
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- CSS Grid Layout Guide: _[Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)_
+- CSS Grid Layout Guide: _[CSS Grids, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
 - [Definition of Grid Lines in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-line-concept)

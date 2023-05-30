@@ -191,6 +191,6 @@ article {
 
 ## 参见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - The {{CSSxRef("justify-items")}} property

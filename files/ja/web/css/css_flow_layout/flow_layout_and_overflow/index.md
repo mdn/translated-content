@@ -1,6 +1,6 @@
 ---
 title: フローレイアウトとオーバーフロー
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 ---
 
 コンテナーに収まらない量のコンテンツがある場合、オーバーフローが発生します。どのようにオーバーフローが動作するかを理解することは、 CSS で制約された寸法で要素を扱うのに重要です。このガイドでは、通常フローで作業中にオーバーフローがどのように起こるかを説明します。

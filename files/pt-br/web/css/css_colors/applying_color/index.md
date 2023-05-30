@@ -1,6 +1,6 @@
 ---
 title: Aplicando cores a elementos HTML usando CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +30,7 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("background-color")}}
   - : A cor de fundo do texto.
 - {{cssxref("text-shadow")}}
-  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja {{SectionOnPage("/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals", "Sombras projetadas em texto")}} para descobrir mais.
+  - : Configura um efeito de sombra aplicado ao texto. Entre as opções para os aspectos da sombra, está a cor base da sombra (que será então desfocada e mesclada com o plano de fundo, com base nos outros parâmetros). Veja [Sombras projetadas em texto](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals#sombras_projetadas_em_texto) para descobrir mais.
 - {{cssxref("text-decoration-color")}}
   - : Por padrão, as decorações de texto (como sublinhados, tachados, etc.) usam a propriedade `color` como suas cores. No entanto, você pode substituir esse comportamento e usar uma cor diferente para eles com a propriedade `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
@@ -53,7 +53,7 @@ Cada elemento é uma caixa com algum tipo de conteúdo e tem um fundo e uma bord
 
 ### Bordas
 
-Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte {{SectionOnPage("/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
+Qualquer elemento pode ter uma [borda](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) desenhada em torno dele. Uma borda de elemento básico é uma linha desenhada ao redor das bordas do conteúdo do elemento. Consulte [Propriedades do Box](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) para saber mais sobre a relação entre elementos e suas bordas, e o artigo [Estilizando bordas usando CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para saber mais sobre como aplicar estilos a bordas.
 
 Você pode usar a propriedade abreviada {{cssxref("border")}}, que permite configurar tudo sobre o borda de uma só vez (incluindo recursos não coloridos de bordas, como sua [largura](/pt-BR/docs/Web/CSS/border-width), [estilo](/pt-BR/docs/Web/CSS/border-style) (sólido, tracejado, etc.), e assim por diante.
 
@@ -87,7 +87,7 @@ Para uma discussão mais detalhada de cada um dos tipos de valor de cor, veja a 
 
 Um conjunto de nomes de cores padrão foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores se você optar por fazer isso e houver uma palavra-chave representando a cor exata que você deseja usar. As palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue` ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores misturadas, incluindo `lightseagreen`, `cornflowerblue` e `rebeccapurple`.
 
-Veja {{SectionOnPage("/pt-BR/docs/Web/CSS/color_value", "Palavras-chave de cor", "code")}} para uma lista de todas as palavras-chave de cores disponíveis.
+Veja [Palavras-chave de cores](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de-cores) para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### valores RGB
 

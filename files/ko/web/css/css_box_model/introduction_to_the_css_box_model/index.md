@@ -1,6 +1,6 @@
 ---
 title: CSS 기본 박스 모델 입문
-slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
 {{CSSRef}}

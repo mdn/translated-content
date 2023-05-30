@@ -19,8 +19,8 @@ slug: Web/Guide/CSS/Block_formatting_context
 - {{ cssxref("overflow") }} 值不为 `visible`、`clip` 的块元素
 - {{ cssxref("display") }} 值为 `flow-root` 的元素
 - {{ cssxref("contain") }} 值为 `layout`、`content` 或 `paint` 的元素
-- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
-- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_Table) 容器
+- 弹性元素（{{ cssxref("display") }} 值为 `flex` 或 `inline-flex` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_table) 容器
+- 网格元素（{{ cssxref("display") }} 值为 `grid` 或 `inline-grid` 元素的直接子元素），如果它们本身既不是 [flex](/zh-CN/docs/Glossary/Flex_Container)、[grid](/zh-CN/docs/Glossary/Grid_Container) 也不是 [table](/zh-CN/docs/Web/CSS/CSS_table) 容器
 - 多列容器（{{ cssxref("column-count") }} 或 {{ cssxref("column-width") }} 值不为 `auto`，包括`column-count` 为 `1`）
 - `column-span` 值为 `all` 的元素始终会创建一个新的 BFC，即使该元素没有包裹在一个多列容器中 ([规范变更](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://bugs.chromium.org/p/chromium/issues/detail?id=709362))
 
@@ -40,7 +40,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 为了更好的理解 BFC，我们先看看下面这些内容。
 
-在下面的例子中，我们让 `<div>` 元素浮动，并给它一个 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在 [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow) 中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
+在下面的例子中，我们让 `<div>` 元素浮动，并给它一个 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在 [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow) 中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
 
 **使用 `overflow: auto`**
 

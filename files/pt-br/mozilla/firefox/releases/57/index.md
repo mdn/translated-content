@@ -82,7 +82,7 @@ Sem mudanças.
 
 #### Media and WebRTC
 
-- Suporte para mensagens de tamanho arbitrário (até 1GiB, apesar de 256kiB é mais interoperável) está agora suportados em {{DOMxRef("RTCDataChannel")}} através do uso da flag end-of-record (EOR) em messagens SCTP. Veja {{SectionOnPage("/pt-BR/docs/Web/API/WebRTC_API/Using_data_channels", "Understanding message size limits")}} para mais informações ({{bug(979417)}}).
+- Suporte para mensagens de tamanho arbitrário (até 1GiB, apesar de 256kiB é mais interoperável) está agora suportados em {{DOMxRef("RTCDataChannel")}} através do uso da flag end-of-record (EOR) em messagens SCTP. Veja [Noções básicas sobre limites de tamanho de mensagem](/pt-BR/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) para mais informações ({{bug(979417)}}).
 
   > **Nota:** Porque o Firefox ainda não suporta o protocolo SCTP ndata que fornece a capacidade de intercalar mensagens SCTP de múltiplas fontes, o envio de objetos de dados grandes pode causar atrasos significativos em todos os outros tráfegos SCTP. Veja {{bug(1381145)}} para acompanhar o progresso na implementação e implementação do suporte a ndata no Firefox.
 

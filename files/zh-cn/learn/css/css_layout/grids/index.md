@@ -686,7 +686,7 @@ aside {
 
 ## 推荐阅读
 
-- [CSS 网格指南](/zh-CN/docs/Web/CSS/CSS_Grid_Layout#Guides)
+- [CSS 网格指南](/zh-CN/docs/Web/CSS/CSS_grid_layout#Guides)
 - [CSS 网格检查器：检查的你的网格版面](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
