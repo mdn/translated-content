@@ -7,9 +7,9 @@ slug: Web/API/Notification/actions
 
 {{domxref("Notification")}} 接口的只读属性 **`actions`** 提供了可供用户选择的以与通知交互的操作。
 
-设置操作使用 [`showNotification()`](/zh-CN/docs/Web/API/ServiceWorkerRegistration/showNotification) 方法和 [`Notification()`](/zh-CN/docs/Web/API/Notification/Notification) 构造函数的第二个参数的 `actions` 选项。
+使用 [`showNotification()`](/zh-CN/docs/Web/API/ServiceWorkerRegistration/showNotification) 方法和 [`Notification()`](/zh-CN/docs/Web/API/Notification/Notification) 构造函数的第二个参数的 `actions` 选项设置操作。
 
-> **备注：** 浏览器通常会限制它们为特定通知显示的最大操作数。检测 {{DOMxRef("Notification.maxActions")}} 静态属性以确定限制的数量。
+> **备注：** 浏览器通常会限制它们为特定通知显示的最大操作数。检测 {{DOMxRef("Notification.maxActions")}} 静态属性以确定限制的操作的数量。
 
 ## 值
 
@@ -32,5 +32,5 @@ slug: Web/API/Notification/actions
 
 ## 参见
 
-- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{DOMxRef("Notification.maxActions")}}
