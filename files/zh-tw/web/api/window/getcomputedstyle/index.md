@@ -58,20 +58,17 @@ var style = window.getComputedStyle(elem1, null);
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  var cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  var cs = window.getComputedStyle(elem, null);
   if (prop) {
-    console.log(prop+" : "+cs.getPropertyValue(prop));
+    console.log(prop + " : " + cs.getPropertyValue(prop));
     return;
   }
   var len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     var style = cs[i];
-    console.log(style+" : "+cs.getPropertyValue(style));
+    console.log(style + " : " + cs.getPropertyValue(style));
   }
-
 }
 ```
 
@@ -91,18 +88,18 @@ getComputedStyle can pull style info from pseudo-elements (for example, `::after
 
 ```html
 <style>
- h3::after {
-   content: ' rocks!';
- }
+  h3::after {
+    content: " rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      result   = getComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3"),
+    result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 

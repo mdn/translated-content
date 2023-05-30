@@ -1,6 +1,6 @@
 ---
 title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
+slug: Web/CSS/CSS_transforms
 page-type: css-module
 tags:
   - CSS
@@ -8,7 +8,6 @@ tags:
   - Guide
   - Overview
   - Reference
-spec-urls: https://drafts.csswg.org/css-transforms/
 translation_of: Web/CSS/CSS_Transforms
 ---
 

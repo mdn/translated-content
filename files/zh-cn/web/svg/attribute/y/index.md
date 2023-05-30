@@ -9,7 +9,6 @@ slug: Web/SVG/Attribute/y
 
 你可以在以下 SVG 元素中使用该属性：
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

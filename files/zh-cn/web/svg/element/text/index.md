@@ -95,8 +95,7 @@ SVG 文本还可以应用样式。
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("tref") }}
-- {{ SVGElement("altGlyph") }}

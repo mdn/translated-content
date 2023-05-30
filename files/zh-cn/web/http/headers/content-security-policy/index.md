@@ -43,7 +43,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : **media-src**：限制通过 {{HTMLElement("audio")}}、{{HTMLElement("video")}} 或 {{HTMLElement("track")}} 标签加载的媒体文件的源地址。
 - {{CSP("object-src")}}
-  - : **object-src**：限制 {{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}} 标签的源地址。
+  - : **object-src**：限制 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 标签的源地址。
 
 > **备注：** 被 `object-src` 控制的元素可能碰巧被当作遗留 HTML 元素，导致不支持新标准中的功能（例如 `<iframe>` 中的安全属性 `sandbox` 和 `allow`）。因此**建议**限制该指令的使用（比如，如果可行，将 `object-src` 显式设置为 `'none'`）。
 
@@ -71,16 +71,16 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("disown-opener")}} {{Deprecated_Inline}}
   - : 确保资源在导航的时候能够脱离父页面。（windown.opener 对象）Ensures a resource will disown its opener when navigated to.
 
-### 导航指令 | Navigation directives
+### 导航指令
 
 导航指令管理用户能打开的链接或者表单可提交的链接
 
 - {{CSP("form-action")}}
   - : 限制能被用来作为给定上下文的表单提交的目标 URL（说白了，就是限制 form 的 action 属性的链接地址）
 - {{CSP("frame-ancestors")}}
-  - : 指定可能嵌入页面的有效父项 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}}.
+  - : 指定可能嵌入页面的有效父项 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}}。
 - {{CSP("navigation-to")}} {{experimental_inline}}
-  - : 限制文档可以通过以下任何方式访问 URL (如 a, form, window\.location, window\.open 等)
+  - : 限制文档可以通过以下任何方式访问 URL，包括 {{HTMLElement("form")}}（如果未指定 {{CSP("form-action")}}）、{{HTMLElement("a")}}、{{DOMxRef("window.location")}}、{{DOMxRef("window.open")}} 等。
 
 ### 报告指令
 

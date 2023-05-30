@@ -1,17 +1,13 @@
 ---
-title: Client.type
+title: "Client: type プロパティ"
 slug: Web/API/Client/type
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("Client")}} インターフェイスの **`type`** 読み取り専用プロパティは、サービスワーカーが制御しているクライアントの種類を示します。
-
-## 構文
-
-```
-var myClientType = client.type;
-```
+**`type`** は {{domxref("Client")}} インターフェイスの読み取り専用プロパティで、サービスワーカーが制御しているクライアントの種類を示します。
 
 ### 値
 
@@ -24,21 +20,21 @@ var myClientType = client.type;
 ## 例
 
 ```js
-// サービスワーカークライアント（ドキュメントなど）
+// サービスワーカークライアント（文書など）
 function sendMessage(message) {
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
     // これは ServiceWorker.postMessage バージョンであることに注意してください
     navigator.serviceWorker.controller.postMessage(message);
-    window.serviceWorker.onMessage = function(e) {
+    window.serviceWorker.onMessage = (e) => {
       resolve(e.data);
     };
   });
 }
 
 // 制御するサービスワーカー
-self.addEventListener("message", function(e) {
+self.addEventListener("message", (e) => {
   // e.source はクライアントオブジェクトです
-  e.source.postMessage("こんにちは！ あなたのメッセージは: " + e.data);
+  e.source.postMessage(`こんにちは！ あなたのメッセージは: ${e.data}`);
   // type 値も投稿してクライアントに戻しましょう
   e.source.postMessage(e.source.type);
 });
@@ -50,4 +46,4 @@ self.addEventListener("message", function(e) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Client.type")}}
+{{Compat}}

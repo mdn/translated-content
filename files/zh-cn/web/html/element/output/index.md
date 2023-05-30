@@ -3,6 +3,8 @@ title: <output>
 slug: Web/HTML/Element/output
 ---
 
+{{HTMLSidebar}}
+
 **HTML `<output>` 标签**表示计算或用户操作的结果。
 
 <table class="properties">
@@ -65,6 +67,4 @@ slug: Web/HTML/Element/output
 
 ## 参见
 
-- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
-
-{{HTMLSidebar}}
+- Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.

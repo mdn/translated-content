@@ -51,7 +51,7 @@ transition-property: unset;
 
 ## 示例
 
-在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)中有几个示例可以参考。
+在 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)中有几个示例可以参考。
 
 ## 规范
 
@@ -63,5 +63,5 @@ transition-property: unset;
 
 ## 参见
 
-- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

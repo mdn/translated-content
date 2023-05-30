@@ -43,9 +43,9 @@ _このインターフェイスは親である {{domxref("HTMLElement")}} から
 _このインターフェイスは親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
 - {{domxref("HTMLFormElement.checkValidity", "checkValidity()")}}
-  - : この要素の子コントロールが[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)の対象となり、それらの制約を満たしている場合は `true` を返します。制約を満たさないコントロールがある場合は `false` を返します。制約を満たさないコントロールに対して、{{domxref("HTMLInputElement/invalid_event", "invalid")}} という名前のイベントを発生させます。イベントがキャンセルされない場合、そのようなコントロールは無効とみなされます。`false` にどう対応するかはプログラマー次第です。
+  - : この要素の子コントロールが[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象となり、それらの制約を満たしている場合は `true` を返します。制約を満たさないコントロールがある場合は `false` を返します。制約を満たさないコントロールに対して、{{domxref("HTMLInputElement/invalid_event", "invalid")}} という名前のイベントを発生させます。イベントがキャンセルされない場合、そのようなコントロールは無効とみなされます。`false` にどう対応するかはプログラマー次第です。
 - {{domxref("HTMLFormElement.reportValidity", "reportValidity()")}}
-  - : 要素の子コントロールがその[検証する制約](/ja/docs/Web/Guide/HTML/Constraint_validation)を満たしている場合、`true` を返します。`false` が返された場合、無効な子要素それぞれにキャンセル可能な {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生し、検証上の問題がユーザーに報告されます。
+  - : 要素の子コントロールがその[検証する制約](/ja/docs/Web/HTML/Constraint_validation)を満たしている場合、`true` を返します。`false` が返された場合、無効な子要素それぞれにキャンセル可能な {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生し、検証上の問題がユーザーに報告されます。
 - {{domxref("HTMLFormElement.requestSubmit", "requestSubmit()")}}
   - : 指定された送信ボタンとそれに対応する設定を使用してフォームを送信するよう要求します。
 - {{domxref("HTMLFormElement.reset", "reset()")}}

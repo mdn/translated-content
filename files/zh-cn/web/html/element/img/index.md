@@ -140,7 +140,7 @@ Web 最常用的图像格式是：
 - `sizes`
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
 
-    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。最后一项一定是被忽略的。
+    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#语法)。最后一项一定是被忽略的。
     2. 一个资源大小的值。
 
     媒体条件描述*视口*的属性，而不是*图像*的属性。例如，如果*视口*不高于 500px，则建议使用 1000px 宽的资源：`(max-height: 500px) 1000px`。

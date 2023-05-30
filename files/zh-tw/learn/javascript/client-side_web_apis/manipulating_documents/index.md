@@ -47,14 +47,19 @@ We have created a simple example page at [dom-example.html](https://github.com/m
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple DOM example</title>
   </head>
   <body>
-      <section>
-        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
-        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
-      </section>
+    <section>
+      <img
+        src="dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+    </section>
   </body>
 </html>
 ```
@@ -85,21 +90,21 @@ To start learning about DOM manipulation, let's begin with a practical example.
 2. Add a `<script></script>` element just above the closing `</body>` tag.
 3. To manipulate an element inside the DOM, you first need to select it and store a reference to it inside a variable. Inside your script element, add the following line:
 
-    ```js
-    var link = document.querySelector('a');
-    ```
+   ```js
+   var link = document.querySelector("a");
+   ```
 
 4. Now we have the element reference stored in a variable, we can start to manipulate it using properties and methods available to it (these are defined on interfaces like {{domxref("HTMLAnchorElement")}} in the case of {{htmlelement("a")}} element, its more general parent interface {{domxref("HTMLElement")}}, and {{domxref("Node")}} — which represents all nodes in a DOM). First of all, let's change the text inside the link by updating the value of the {{domxref("Node.textContent")}} property. Add the following line below the previous one:
 
-    ```js
-    link.textContent = 'Mozilla Developer Network';
-    ```
+   ```js
+   link.textContent = "Mozilla Developer Network";
+   ```
 
 5. We should also change the URL the link is pointing to, so that it doesn't go to the wrong place when it is clicked on. Add the following line, again at the bottom:
 
-    ```js
-    link.href = 'https://developer.mozilla.org';
-    ```
+   ```js
+   link.href = "https://developer.mozilla.org";
+   ```
 
 Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. {{domxref("Document.querySelector()")}} is the recommended modern approach, which is convenient because it allows you to select elements using CSS selectors. The above `querySelector()` call will match the first {{htmlelement("a")}} element that appears in the document. If you wanted to match and do things to multiple elements, you could use {{domxref("Document.querySelectorAll()")}}, which matches every element in the document that matches the selector, and stores references to them in an [array](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays)-like object called a NodeList.
 
@@ -116,35 +121,37 @@ The above has given you a little taste of what you can do, but let's go further 
 
 1. Going back to the current example, let's start by grabbing a reference to the our {{htmlelement("section")}} element — add the following code at the bottom of your existing script (do the same with the other lines too):
 
-    ```js
-    var sect = document.querySelector('section');
-    ```
+   ```js
+   var sect = document.querySelector("section");
+   ```
 
 2. Now let's create a new paragraph using {{domxref("Document.createElement()")}} and give it some text content in the same way as before:
 
-    ```js
-    var para = document.createElement('p');
-    para.textContent = 'We hope you enjoyed the ride.';
-    ```
+   ```js
+   var para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
+   ```
 
 3. You can now append the new paragraph at the end of the section using {{domxref("Node.appendChild()")}}:
 
-    ```js
-    sect.appendChild(para);
-    ```
+   ```js
+   sect.appendChild(para);
+   ```
 
 4. Finally for this part, let's add a text node to the paragraph the link sits inside, to round off the sentence nicely. First we will create the text node using {{domxref("Document.createTextNode()")}}:
 
-    ```js
-    var text = document.createTextNode(' — the premier source for web development knowledge.');
-    ```
+   ```js
+   var text = document.createTextNode(
+     " — the premier source for web development knowledge."
+   );
+   ```
 
 5. Now we'll grab a reference to the paragraph the link is inside, and append the text node to it:
 
-    ```js
-    var linkPara = document.querySelector('p');
-    linkPara.appendChild(text);
-    ```
+   ```js
+   var linkPara = document.querySelector("p");
+   linkPara.appendChild(text);
+   ```
 
 That's most of what you need for adding nodes to the DOM — you'll make a lot of use of these methods when building dynamic interfaces (we'll look at some examples later).
 
@@ -184,19 +191,22 @@ The first way is to add inline styles directly onto elements you want to dynamic
 
 1. As an example, try adding these lines to our ongoing example:
 
-    ```js
-    para.style.color = 'white';
-    para.style.backgroundColor = 'black';
-    para.style.padding = '10px';
-    para.style.width = '250px';
-    para.style.textAlign = 'center';
-    ```
+   ```js
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
+   ```
 
 2. Reload the page and you'll see that the styles have been applied to the paragraph. If you look at that paragraph in your browser's [Page Inspector/DOM inspector](/zh-TW/docs/Tools/Page_Inspector), you'll see that these lines are indeed adding inline styles to the document:
 
-    ```html
-    <p style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">We hope you enjoyed the ride.</p>
-    ```
+   ```html
+   <p
+     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
+     We hope you enjoyed the ride.
+   </p>
+   ```
 
 > **備註：** Notice how the JavaScript property versions of the CSS styles are written in lower camel case whereas the CSS versions are hyphenated (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
@@ -205,23 +215,23 @@ There is another common way to dynamically manipulate styles on your document, w
 1. Delete the previous five lines you added to the JavaScript.
 2. Add the following inside your HTML {{htmlelement("head")}}:
 
-    ```plain
-    <style>
-    .highlight {
-      color: white;
-      background-color: black;
-      padding: 10px;
-      width: 250px;
-      text-align: center;
-    }
-    </style>
-    ```
+   ```plain
+   <style>
+   .highlight {
+     color: white;
+     background-color: black;
+     padding: 10px;
+     width: 250px;
+     text-align: center;
+   }
+   </style>
+   ```
 
 3. Now we'll turn to a very useful method for general HTML manipulation — {{domxref("Element.setAttribute()")}} — this takes two arguments, the attribute you want to set on the element, and the value you want to set it to. In this case we will set a class name of highlight on our paragraph:
 
-    ```js
-    para.setAttribute('class', 'highlight');
-    ```
+   ```js
+   para.setAttribute("class", "highlight");
+   ```
 
 4. Refresh your page, and you'll see no change — the CSS is still applied to the paragraph, but this time by giving it a class that is selected by our CSS rule, not as inline CSS styles.
 
@@ -243,30 +253,30 @@ To start with, make a local copy of our [window-resize-example.html](https://git
 
 1. First of all, let's grab a reference to the div, and then grab the width and height of the viewport (the inner window, where your document is displayed) and store them in variables — these two values are handily contained in the {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}} properties. Add the following lines inside the existing {{htmlelement("script")}} element:
 
-    ```js
-    var div = document.querySelector('div');
-    var WIDTH = window.innerWidth;
-    var HEIGHT = window.innerHeight;
-    ```
+   ```js
+   var div = document.querySelector("div");
+   var WIDTH = window.innerWidth;
+   var HEIGHT = window.innerHeight;
+   ```
 
 2. Next, we'll dynamically alter the width and height of the div to equal that of the viewport. Add the following two lines below your first ones:
 
-    ```js
-    div.style.width = WIDTH + 'px';
-    div.style.height = HEIGHT + 'px';
-    ```
+   ```js
+   div.style.width = WIDTH + "px";
+   div.style.height = HEIGHT + "px";
+   ```
 
 3. Save and try refreshing your browser — you should now see the div become as big as your viewport, whatever size of screen your are using. If you now try resizing your window to make it bigger, you'll see that the div stays the same size — we are only setting it once.
 4. How about we use an event so that the div resizes as we resize the window? The {{domxref("Window")}} object has an event available on it called resize, which is fired every time the window is resized — let's access that via the {{domxref("Window.onresize")}} event handler and rerun our sizing code each time it changes. Add the following to the bottom of your code:
 
-    ```js
-    window.onresize = function() {
-      WIDTH = window.innerWidth;
-      HEIGHT = window.innerHeight;
-      div.style.width = WIDTH + 'px';
-      div.style.height = HEIGHT + 'px';
-    }
-    ```
+   ```js
+   window.onresize = function () {
+     WIDTH = window.innerWidth;
+     HEIGHT = window.innerHeight;
+     div.style.width = WIDTH + "px";
+     div.style.height = HEIGHT + "px";
+   };
+   ```
 
 > **備註：** If you get stuck, have a look at our [finished window resize example](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([see it live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
 

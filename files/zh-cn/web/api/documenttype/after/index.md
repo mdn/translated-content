@@ -1,12 +1,11 @@
 ---
-title: "文档类型：after() 方法"
+title: DocumentType：after() 方法
 slug: Web/API/DocumentType/after
 ---
 
 {{APIRef("DOM")}}
 
-**`DocumentType.after()`** 方法在 `DocumentType` 的父级的子列表中插入一组 {{domxref("Node")}} 对象或字符串，紧跟在 `DocumentType` 之后。
-字符串将作为等效的 {{domxref("Text")}} 节点插入。
+**`DocumentType.after()`** 方法在 `DocumentType` 的父级的子列表中插入一组 {{domxref("Node")}} 对象或字符串，紧跟在 `DocumentType` 之后。字符串将作为等效的 {{domxref("Text")}} 节点插入。
 
 ## 语法
 
@@ -23,7 +22,7 @@ after(param1, param2, /* … ,*/ paramN)
 
 ### 返回值
 
-None ({{jsxref("undefined")}})。
+无 ({{jsxref("undefined")}})。
 
 ### 异常
 
@@ -50,6 +49,6 @@ myDoc.childNodes;
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("DocumentType.before()")}}

@@ -130,7 +130,7 @@ img.middle { vertical-align: middle; }
 
 ## 参见
 
-- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item)
+- [Typical use cases of Flexbox, section "Center item"](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#Center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)
