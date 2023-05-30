@@ -1,6 +1,6 @@
 ---
 title: CSS 流式布局
-slug: Web/CSS/CSS_Flow_Layout
+slug: Web/CSS/CSS_flow_layout
 ---
 
 {{CSSRef}}

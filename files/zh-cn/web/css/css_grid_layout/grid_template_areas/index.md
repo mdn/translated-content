@@ -1,6 +1,6 @@
 ---
 title: 网格模板区域
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
 {{CSSRef}}
