@@ -28,7 +28,7 @@ Margins, borders, 以及 padding 的设置，在行的方向上是生效的。�
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **备注：** 此处使用了 logical, flow-relative properties — {{cssxref("padding-inline-start")}} ，而不是 {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties).
+> **备注：** 此处使用了 logical, flow-relative properties — {{cssxref("padding-inline-start")}}，而不是 {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ## 在块的方向上对齐
 

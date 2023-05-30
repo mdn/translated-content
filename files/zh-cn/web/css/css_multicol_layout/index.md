@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_multicol_layout
 
 ## 与分片的关系
 
-多列布局与[分页媒体](/zh-CN/docs/Web/CSS/CSS_Pages)密切相关，因为每一个列框都成为一个片段，就像一个打印的页面成为整个文档的片段一样。因此，现在 [CSS 分片](/zh-CN/docs/Web/CSS/CSS_fragmentation)规范中定义的属性需要控制内容如何在列之间断开。
+多列布局与[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)密切相关，因为每一个列框都成为一个片段，就像一个打印的页面成为整个文档的片段一样。因此，现在 [CSS 分片](/zh-CN/docs/Web/CSS/CSS_fragmentation)规范中定义的属性需要控制内容如何在列之间断开。
 
 ## 参考
 
@@ -62,4 +62,4 @@ slug: Web/CSS/CSS_multicol_layout
 其他 CSS 布局方法包括：
 
 - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)（CSS flexbox）
-- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)

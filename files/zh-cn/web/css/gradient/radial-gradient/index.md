@@ -113,7 +113,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ### 更多径向渐变示例
 
-请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)获取更多示例。
+请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)获取更多示例。
 
 ## 规范
 
@@ -125,7 +125,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 参见
 
-- [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 其他的渐变函数：{{cssxref("repeating-radial-gradient")}}、{{cssxref("linear-gradient")}}、{{cssxref("repeating-linear-gradient")}}、{{cssxref("conic-gradient")}}、{{cssxref("repeating-conic-gradient")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("_image","image()")}}
