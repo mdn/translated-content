@@ -69,7 +69,7 @@ evtSource.onmessage = (e) => {
 
 每个接收到的事件都会导致我们的 `EventSource` 对象的 `onmessage` 事件处理程序运行。它会创建一个新的 {{HTMLElement("li")}} 元素，并将消息的数据写入其中，然后将新元素附加到文档中已有的列表元素中。
 
-> **备注：** 在 Github 上有一个完整的示例——[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)
+> **备注：** 在 Github 上有一个完整的示例——[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
 要监听命名事件，你需要为每种类型的事件添加一个监听器。
 
