@@ -11,8 +11,8 @@ slug: Web/API/MessageChannel/MessageChannel
 
 ## 语法
 
-```plain
-var channel = new MessageChannel();
+```js
+new MessageChannel();
 ```
 
 ### 返回值
@@ -42,7 +42,7 @@ function handleMessage(e) {
 }
 ```
 
-要查看完整可运行的例子，参考我们在 Github 上的 [channel messaging basic demo](https://github.com/mdn/channel-messaging-basic-demo) ([在线运行](http://mdn.github.io/channel-messaging-basic-demo/))。
+有关更完整的运行示例，可以在 GitHub 上查看 [channel messaging 基本示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)（[也可以在线运行示例](https://mdn.github.io/dom-examples/channel-messaging-basic/)）。
 
 ## 规范
 

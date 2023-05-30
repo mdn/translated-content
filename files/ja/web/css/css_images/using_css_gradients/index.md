@@ -1,6 +1,6 @@
 ---
 title: CSS グラデーションの使用
-slug: Web/CSS/CSS_Images/Using_CSS_gradients
+slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
 {{CSSRef}}
