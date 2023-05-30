@@ -5,7 +5,7 @@ slug: Games
 
 {{GamesSidebar}}
 
-游戏是最流行的计算机活动之一。新技术不断发展已使开发出能在任何符合标准的 web 浏览器上运行更好更炫的游戏成为可能。
+游戏是最流行的计算机活动之一。新技术不断涌现，使得开发者有可能开发出更好、更强大、可以在任何符合标准的 web 浏览器运行的游戏。
 
 ## 开发网页游戏
 
@@ -17,7 +17,7 @@ slug: Games
 
 ## 将本地游戏移植到 web
 
-如果你是一个本地游戏开发者（例如使用 C++ 开发游戏），并且你对如何将这些游戏移植到 Web 感兴趣，你应该更多地了解 [Emscripten](https://emscripten.org/index.html) 工具——这是一个 LLVM 转 JavaScript 编译器。它能获取 LLVM 字节码（例如用 Clang 编译 C/C++ 或者其他语言生成的字节码）并将它们编译成 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 以在 Web 上运行。
+如果你是一个本地游戏开发者（例如使用 C++ 开发游戏），并且你对如何将这些游戏移植到 Web 感兴趣，你应该更多地了解 [Emscripten](https://emscripten.org/index.html) 工具——这是一个 LLVM 转 JavaScript 编译器。它能接受 LLVM 字节码（例如用 Clang 编译 C/C++ 或者其他语言生成的字节码）输入并将它们编译成 [asm.js](/zh-CN/docs/Games/Tools/asm.js) 以在 Web 上运行。
 
 要入门相关知识，请参阅：
 
