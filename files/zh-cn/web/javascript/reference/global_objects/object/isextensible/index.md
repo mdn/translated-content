@@ -22,7 +22,7 @@ Object.isExtensible(obj)
 
 ### 返回值
 
-指示给定对象是否可扩展的一个 {{jsxref("Boolean")}}。
+指示给定对象是否可扩展的一个{{jsxref("Boolean", "布尔值", "", 1)}}。
 
 ## 描述
 
