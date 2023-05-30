@@ -77,8 +77,7 @@ evtSource.onmessage = (e) => {
 const sse = new EventSource("/api/v1/sse");
 
 /*
- * This will listen only for events
- * similar to the following:
+ * 这将仅监听类似以下的事件
  *
  * event: notice
  * data: useful data
@@ -89,19 +88,15 @@ sse.addEventListener("notice", (e) => {
 });
 
 /*
- * Similarly, this will listen for events
- * with the field `event: update`
+ * 同理，以下代码将监听 `event: update` 事件
  */
 sse.addEventListener("update", (e) => {
   console.log(e.data);
 });
 
 /*
- * The event "message" is a special case, as it
- * will capture events without an event field
- * as well as events that have the specific type
- * `event: message` It will not trigger on any
- * other event type.
+ * "message" 事件是一个特例，因为它可以捕获没有 event 字段的事件，以及具有特定类型 "event：message" 的事件。
+ * 它不会触发任何其他类型的事件。
  */
 sse.addEventListener("message", (e) => {
   console.log(e.data);
