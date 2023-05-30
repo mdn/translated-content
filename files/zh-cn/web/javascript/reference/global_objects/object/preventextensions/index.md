@@ -26,13 +26,13 @@ Object.preventExtensions(obj)
 
 ## 描述
 
-如果一个对象可以添加新的属性，则这个对象是可扩展的。`Object.preventExtensions()` 将对象标记为不再可扩展，这样它将永远不会具有它被标记为不可扩展时持有的属性之外的属性。注意，一般来说，不可扩展对象的属性仍然可以被*删除*。尝试向不可扩展对象添加新属性将静默失败或抛出 {{jsxref("TypeError")}}（最常见的情况是在{{jsxref("Functions_and_function_scope/Strict_mode", "严格模式", "", 1)}}中，但不排除其他情况）。
+如果一个对象可以添加新的属性，则这个对象是可扩展的。`Object.preventExtensions()` 将对象标记为不再可扩展，这样它将永远不会具有它被标记为不可扩展时持有的属性之外的属性。注意，一般来说，不可扩展对象的属性仍然可以被*删除*。尝试向不可扩展对象添加新属性将静默失败，或在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中抛出 {{jsxref("TypeError")}}。
 
 与 [`Object.seal()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) 和 [`Object.freeze()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 不同，`Object.preventExtensions()` 调用了内在的 JavaScript 行为，不能用几个其他操作的组合替代。它还有它的 `Reflect` 对应方法（仅存在于内在操作中），[`Reflect.preventExtensions()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions)。
 
 `Object.preventExtensions()` 只能防止添加自身的属性。但其对象类型的原型依然可以添加新的属性。
 
-该方法使得目标对象的 `[[prototype]]` 不可变；任何重新赋值 `[[prototype]]` 操作都会抛出 `TypeError` 。这种行为只针对内部的 `[[prototype]]` 属性，目标对象的其他属性将保持可变。
+该方法使得目标对象的 `[[Prototype]]` 不可变；任何重新赋值 `[[Prototype]]` 操作都会抛出 `TypeError` 。这种行为只针对内部的 `[[Prototype]]` 属性，目标对象的其他属性将保持可变。
 
 一旦将对象变为不可扩展的对象，就再也不能使其可扩展。
 
@@ -50,7 +50,7 @@ obj === obj2; // true
 const empty = {};
 Object.isExtensible(empty); // true
 
-// ...但可以改变。
+// 可以将其改变为不可扩展的。
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // false
 
@@ -80,7 +80,7 @@ fixed.__proto__ = { oh: "hai" };
 
 ## 非对象参数
 
-在 ES5 中，如果参数不是一个对象类型（而是原始类型），将抛出 {{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为一个不可扩展的普通对象，因此会被直接返回。
+在 ES5 中，如果提供给该方法的参数不是一个对象类型（而是原始类型），将抛出 {{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被原样返回，因为原始类型是定义上不可变的。
 
 ```js
 Object.preventExtensions(1);
