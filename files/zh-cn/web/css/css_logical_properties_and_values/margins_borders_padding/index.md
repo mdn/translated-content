@@ -1,14 +1,13 @@
 ---
 title: 用于外边距、边框和内边距的逻辑属性
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}
 
 [逻辑属性与逻辑值规范](https://drafts.csswg.org/css-logical/)为各种外边距、边框和内边距属性及其简写属性定义了相对于流的对应关系。本指南介绍这些对应关系。
 
-如果你看过 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)的汇总页面就会看到那里列了一大堆属性。这主要是因为外边距、边框和内边距每个都有四个全称属性，还有所有的简写属性。
+如果你看过 [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)的汇总页面就会看到那里列了一大堆属性。这主要是因为外边距、边框和内边距每个都有四个全称属性，还有所有的简写属性。
 
 ## 外边距、边框和内边距的对应关系
 

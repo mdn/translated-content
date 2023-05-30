@@ -1,7 +1,6 @@
 ---
 title: CSS 网格，逻辑值和书写模式
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
 
 {{CSSRef}}
@@ -427,7 +426,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 
 ## 物理值和网格布局
 
-在构建网站时经常会遇到物理属性，尽管网格定位和对齐属性及它们的值都遵从书写模式，还是有很多时候即使在网格中也不得不使用物理属性和值。在 [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout) 一文中，演示了在网格区域中如何利用自动边距，而自动边距也是 flexbox 布局的一种技巧，尽管这样又把布局和物理空间纠结到了一起。
+在构建网站时经常会遇到物理属性，尽管网格定位和对齐属性及它们的值都遵从书写模式，还是有很多时候即使在网格中也不得不使用物理属性和值。在 [网格布局中的盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) 一文中，演示了在网格区域中如何利用自动边距，而自动边距也是 flexbox 布局的一种技巧，尽管这样又把布局和物理空间纠结到了一起。
 
 如果在网格区域中使用绝对定位，那么你就会使用物理偏移量调整网格区域中的项目的位置。关键是要掌握使用物理属性与逻辑属性的力度，举例来说，要衡量把 `ltr` 切换到 `rtl` 时你需要对 CSS 做多少修改。
 
@@ -435,4 +434,4 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 
 新的布局方法赋予使用逻辑值定位项目的能力，不过如果和使用物理属性的 `margin`、`padding` 属性混用，切记这些物理属性并不会依据书写模式来改变它们的显示效果。
 
-[CSS 逻辑属性规范](https://drafts.csswg.org/css-logical-props/) 的目标是改变现状，在未来的 CSS 中，{{cssxref("margin-left")}} 和 {{cssxref("margin-right")}} 将与[逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)相同。Firefox 已经实现了，所以你现在就可以在 Firefox 中试上一试。未来如果得到全面支持，那么通过网格学习到的“块和行内”的知识，你也能马上举一反三地用在其他地方了。
+[CSS 逻辑属性规范](https://drafts.csswg.org/css-logical-props/)的目标是改变现状，在未来的 CSS 中，{{cssxref("margin-left")}} 和 {{cssxref("margin-right")}} 将与[逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)相同。Firefox 已经实现了，所以你现在就可以在 Firefox 中试上一试。未来如果得到全面支持，那么通过网格学习到的“块和行内”的知识，你也能马上举一反三地用在其他地方了。

@@ -40,7 +40,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 为了更好的理解 BFC，我们先看看下面这些内容。
 
-在下面的例子中，我们让 `<div>` 元素浮动，并给它一个 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在 [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow) 中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
+在下面的例子中，我们让 `<div>` 元素浮动，并给它一个 `border` 效果。`<div>` 里的内容现在已经在浮动元素周围浮动起来了。由于浮动的元素比它旁边的元素高，所以 `<div>` 的边框穿出了浮动。正如我们在 [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow) 中解释的，浮动脱离了文档流，所以 `<div>` 的 `background` 和 `border` 仅仅包含了内容，不包含浮动。
 
 **使用 `overflow: auto`**
 

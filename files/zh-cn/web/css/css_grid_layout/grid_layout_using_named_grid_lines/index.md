@@ -1,7 +1,6 @@
 ---
 title: 使用命名线布局
-slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
+slug: Web/CSS/CSS_grid_layout/Grid_Grid_layout_using_named_grid_lines
 ---
 
 {{CSSRef}}

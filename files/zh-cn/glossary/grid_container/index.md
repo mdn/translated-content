@@ -20,4 +20,4 @@ slug: Glossary/Grid_Container
 
 ### 扩展阅读
 
-- CSS 网格布局：_[网格布局基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS 网格布局：_[网格布局基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

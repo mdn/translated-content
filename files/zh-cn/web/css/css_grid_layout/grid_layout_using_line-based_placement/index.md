@@ -1,12 +1,11 @@
 ---
 title: CSS 网格中基于线的定位
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
-original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 {{CSSRef}}
 
-在[探讨网格布局的基础概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)一文中，我们了解了如何使用线编号来排列元素，本文则会全面探索这个基础特性如何工作。
+在[探讨网格布局的基础概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)一文中，我们了解了如何使用线编号来排列元素，本文则会全面探索这个基础特性如何工作。
 
 了解编号线是最好的探索网格布局方式的起点，当你使用网格布局时，编号线总是存在。这些线从 1 开始按行和列编号。要注意的是网格是根据书写方向来编号的。在像英文这样从左至右书写的语言中，网格线的 1 是最左边的线。当使用从右至左书写的语言时，网格线 1 就是最右边的线。我们会在之后的文章中深入探讨书写模式和网格间的交互。
 

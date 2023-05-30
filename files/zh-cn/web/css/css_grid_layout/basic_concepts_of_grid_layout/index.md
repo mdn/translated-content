@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 {{CSSRef}}
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
+[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
 
 ## 什么是网格？
 
@@ -682,4 +682,4 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ## 下一步
 
-在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)。
+在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)。

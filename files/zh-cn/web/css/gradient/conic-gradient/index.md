@@ -211,7 +211,7 @@ div {
 
 ### 更多锥形渐变的例子
 
-更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)。
+更多示例请参见[使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)。
 
 ## 规范
 
@@ -223,7 +223,7 @@ div {
 
 ## 参见
 
-- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 其他渐变函数：{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}

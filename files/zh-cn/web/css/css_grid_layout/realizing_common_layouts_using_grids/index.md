@@ -1,12 +1,11 @@
 ---
 title: 利用 CSS 网格布局实现常用布局
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
 
-为了完善这组 CSS 网格布局指南，我将介绍几种不同的布局，它们演示了在使用网格布局进行设计时可以使用的一些不同技术。我们将看到一个使用 [grid-template-areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) 的示例，一个典型的 12 列灵活网格系统，以及一个使用自动布局的产品列表。正如您从这组示例中看到的，使用网格布局通常有不止一种方法来实现您想要的结果。选择对您正在解决的问题和需要实现的设计最有帮助的方法。
+为了完善这组 CSS 网格布局指南，我将介绍几种不同的布局，它们演示了在使用网格布局进行设计时可以使用的一些不同技术。我们将看到一个使用 [grid-template-areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) 的示例，一个典型的 12 列灵活网格系统，以及一个使用自动布局的产品列表。正如您从这组示例中看到的，使用网格布局通常有不止一种方法来实现您想要的结果。选择对您正在解决的问题和需要实现的设计最有帮助的方法。
 
 ## 使用网格模板区域的响应式布局，包含 1 到 3 个流动列
 
@@ -14,7 +13,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ![Image of the three different layouts created by redefining our grid at two breakpoints.](11-responsive-areas.png)
 
-我将使用我们在向导[网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)中了解到的命名模板区域来创建这个布局。
+我将使用我们在向导[网格模板区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)中了解到的命名模板区域来创建这个布局。
 
 我的标记是一个容器，其中包含用于标题、页脚、主要内容、导航、边栏和打算放置广告的块的元素。
 

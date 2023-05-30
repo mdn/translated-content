@@ -122,25 +122,25 @@ grid-auto-rows: unset;
 ## 参见
 
 - 相关的 CSS 属性： {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
+- 网格布局指南：_[网格布局中的自动定位 - 隐式网格中的行尺寸](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#Sizing_rows_in_the_implicit_grid)_
 - 视频教程：_[引入网格自动放置和排序](http://gridbyexample.com/video/series-auto-placement-order/)_
 
 1. [**CSS**](/zh-CN/docs/Web/CSS)
 2. [**CSS 参考**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
 4. **指南**
 
-    1. [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    2. [线性布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    3. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    4. [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    5. [风格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    6. [网格布局中的框 (盒子) 对齐](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    7. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    8. [CSS 网格布局和辅助功能](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    9. [CSS 网格布局与渐进式增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    10. [使用网格实现通用布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-    11. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+    1. [与其他布局方式的关系](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+    2. [线性布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+    3. [网格模板区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+    4. [使用命名网格行布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+    5. [风格布局中的自动定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+    6. [网格布局中的框 (盒子) 对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+    7. [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_grid_layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    8. [CSS 网格布局和辅助功能](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+    9. [CSS 网格布局与渐进式增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+    10. [使用网格实现通用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_CSS_grid_layout)
+    11. [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
 5. **属性**
 

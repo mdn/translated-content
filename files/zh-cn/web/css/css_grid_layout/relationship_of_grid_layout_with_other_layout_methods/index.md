@@ -1,7 +1,6 @@
 ---
 title: 网格布局和其他布局方法的联系
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 {{CSSRef}}

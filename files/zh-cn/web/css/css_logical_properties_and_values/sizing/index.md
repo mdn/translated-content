@@ -1,7 +1,6 @@
 ---
 title: 逻辑尺寸属性
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
-original_slug: Web/CSS/CSS_Logical_Properties/Sizing
 ---
 
 {{CSSRef}}

@@ -1,7 +1,6 @@
 ---
 title: CSS 逻辑属性与逻辑值
 slug: Web/CSS/CSS_logical_properties_and_values
-original_slug: Web/CSS/CSS_Logical_Properties
 ---
 
 {{CSSRef}}
@@ -114,10 +113,10 @@ original_slug: Web/CSS/CSS_Logical_Properties
 
 ## 指南
 
-- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [逻辑属性和逻辑值的基本概念](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [逻辑尺寸属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [用于外边距、边框和内边距的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [用于浮动和定位的逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
 
 ## 规范
 

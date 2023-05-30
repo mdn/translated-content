@@ -1,7 +1,6 @@
 ---
 title: Introduction to formatting contexts 格式化上下文简介
 slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 
 {{CSSRef}}
@@ -37,7 +36,7 @@ original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 
 让我们看看几个例子，来理解创建 BFC 的效果。
 
-在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南[guide to in-flow and out of flow elements](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
+在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南[guide to in-flow and out of flow elements](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -72,7 +71,7 @@ box model 不完全适用于参与内联格式上下文。在水平书写模式�
 
 ## 总结
 
-在本指南中，我们更详细地介绍了块和内联格式上下文以及创建块格式上下文（BFC）的重要主题。在下一个指南中，我们将了解正常流如何与不同的写入模式交互 [how normal flow interacts with different writing modes](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)。
+在本指南中，我们更详细地介绍了块和内联格式上下文以及创建块格式上下文（BFC）的重要主题。在下一个指南中，我们将了解正常流如何与不同的写入模式交互 [how normal flow interacts with different writing modes](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)。
 
 ## 另请参见
 

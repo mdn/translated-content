@@ -128,25 +128,25 @@ grid-template-rows: unset;
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Grid_Tracks)_
+- 网格布局指南：_[Basic concepts of grid layout - Grid Tracks](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Grid_Tracks)_
 - 视频教程：_[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
 
 1. [**CSS**](/zh-CN/docs/Web/CSS)
 2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)
 4. **Guides**
 
-    1. [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-    2. [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+    1. [Basics concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+    2. [Relationship to other layout methods](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+    3. [Line-based placement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+    4. [Grid template areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+    5. [Layout using named grid lines](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+    6. [Auto-placement in grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+    7. [Box alignment in grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+    8. [Grids, logical values and writing modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+    9. [CSS Grid Layout and Accessibility](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+    10. [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+    11. [Realizing common layouts using grids](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_CSS_grid_layout)
 
 5. **Properties**
 
