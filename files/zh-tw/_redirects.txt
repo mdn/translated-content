@@ -18,7 +18,7 @@
 /zh-TW/docs/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /zh-TW/docs/CSS_過渡	/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /zh-TW/docs/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
-/zh-TW/docs/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/zh-TW/docs/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-TW/docs/Core_JavaScript_1.5_教學	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/Core_JavaScript_1.5_教學/JavaScript_概要	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Core_JavaScript_1.5_教學/Unicode	/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types
@@ -381,7 +381,7 @@
 /zh-TW/docs/JavaScript_物件導向介紹	/zh-TW/docs/Learn/JavaScript/Objects
 /zh-TW/docs/JavaScript_語言的資源	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Learn/CSS/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
-/zh-TW/docs/Learn/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/zh-TW/docs/Learn/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-TW/docs/Learn/CSS/Getting_started	/en-US/docs/Learn/CSS/First_steps
 /zh-TW/docs/Learn/CSS/Getting_started/Layout	/zh-TW/docs/Learn/CSS/CSS_layout
 /zh-TW/docs/Learn/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -617,12 +617,14 @@
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
 /zh-TW/docs/Web/CSS/CSS_Color	/zh-TW/docs/Web/CSS/CSS_colors
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters	/zh-TW/docs/Web/CSS/CSS_lists
+/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation	/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-TW/docs/Web/CSS/CSS_Positioning	/zh-TW/docs/Web/CSS/CSS_positioned_layout
 /zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /zh-TW/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1	/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
 /zh-TW/docs/Web/CSS/CSS_Properties_Reference	/zh-TW/docs/Web/CSS/Reference#index
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
-/zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_Grid_Layout
+/zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_grid_layout
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
 /zh-TW/docs/Web/CSS/Media_Queries	/zh-TW/docs/Web/CSS/CSS_media_queries
@@ -651,7 +653,7 @@
 /zh-TW/docs/Web/Guide/API/WebRTC	/zh-TW/docs/Web/API/WebRTC_API
 /zh-TW/docs/Web/Guide/CSS	/zh-TW/docs/Learn/CSS
 /zh-TW/docs/Web/Guide/CSS/CSS_轉場	/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
-/zh-TW/docs/Web/Guide/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/zh-TW/docs/Web/Guide/CSS/Consistent_List_Indentation	/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-TW/docs/Web/Guide/CSS/Getting_started	/en-US/docs/Learn/CSS/First_steps
 /zh-TW/docs/Web/Guide/CSS/Getting_started/Layout	/zh-TW/docs/Learn/CSS/CSS_layout
 /zh-TW/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -895,6 +897,6 @@
 /zh-TW/docs/本地化	/zh-TW/docs/Glossary/Localization
 /zh-TW/docs/自網頁添加搜尋引擎	/zh-TW/docs/Web/OpenSearch
 /zh-TW/docs/製作_OpenSearch_搜尋模組	/zh-TW/docs/Web/OpenSearch
-/zh-TW/docs/調整列表縮排	/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+/zh-TW/docs/調整列表縮排	/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-TW/docs/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/Language_overview
 /zh-TW/docs/首頁	/zh-TW/docs/Web

@@ -1,6 +1,6 @@
 ---
 title: CSS格線布局
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 {{CSSRef}}
