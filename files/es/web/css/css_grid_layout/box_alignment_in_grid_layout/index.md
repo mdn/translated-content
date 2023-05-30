@@ -1,6 +1,7 @@
 ---
 title: Box alignment in CSS Grid Layout
-slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
+original_slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
 
 Si estás familiarizado con [flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
