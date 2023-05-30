@@ -260,7 +260,7 @@ div {
 
 ## 参见
 
-- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients), {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};
+- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};
 - Some properties where it can be used: {{cssxref("background-image")}}, {{cssxref("background")}};
 - [CSS Gradients Patterns Gallery, by Lea Verou](http://lea.verou.me/css3patterns/)
 - [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients).

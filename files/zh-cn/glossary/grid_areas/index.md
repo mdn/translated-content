@@ -3,7 +3,7 @@ title: Grid Areas
 slug: Glossary/Grid_Areas
 ---
 
-**网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元格")}}组成的一个矩形区域。当你使用[基于网格线位置](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)放置一个项目或者使用[命名的网格区域](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)定义区域时，网格区域被创建。
+**网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元格")}}组成的一个矩形区域。当你使用[基于网格线位置](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)放置一个项目或者使用[命名的网格区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)定义区域时，网格区域被创建。
 
 ![Image showing a highlighted grid area](1_grid_area.png)
 
@@ -70,6 +70,6 @@ slug: Glossary/Grid_Areas
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- CSS Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- CSS Grid Layout Guide: _[Grid template areas](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
 - [Definition of Grid Areas in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-area-concept)
