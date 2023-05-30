@@ -1,6 +1,6 @@
 ---
 title: CSS Lists and Counters
-slug: Web/CSS/CSS_Lists_and_Counters
+slug: Web/CSS/CSS_lists
 ---
 
 {{CSSRef}}
@@ -34,9 +34,9 @@ slug: Web/CSS/CSS_Lists_and_Counters
 
 ## 指南
 
-- [Consistent list indentation](/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation)
+- [Consistent list indentation](/zh-TW/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
   - : Explains how to reach a consistent indentation between different browsers.
-- [Using CSS counters](/zh-TW/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [Using CSS counters](/zh-TW/docs/Web/CSS/CSS_lists/Using_CSS_counters)
   - : Describes how to use counters to be able to use numbering outside of traditional list elements or to perform complex counting.
 
 ## 規範

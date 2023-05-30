@@ -46,7 +46,7 @@ slug: Web/CSS
   - [初始值](/zh-TW/docs/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/CSS/used_value)和[運作值](/zh-TW/docs/CSS/actual_value)
   - [CSS 簡寫屬性](/zh-TW/docs/CSS/Shorthand_properties)
   - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout)
+  - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout)
   - [媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries)
 
 ## CSS 開發工具

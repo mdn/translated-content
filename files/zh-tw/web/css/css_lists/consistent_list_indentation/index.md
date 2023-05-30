@@ -1,6 +1,6 @@
 ---
 title: 調整列表縮排
-slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+slug: Web/CSS/CSS_lists/Consistent_list_indentation
 ---
 
 {{CSSRef}}
