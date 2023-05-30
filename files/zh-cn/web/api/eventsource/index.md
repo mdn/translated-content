@@ -27,7 +27,7 @@ slug: Web/API/EventSource
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("EventSource.readyState")}} {{readonlyinline}}
-  - : 一个代表连接状态的数字。可能值是 `CONNECTING`（`0`），`OPEN`（`1`），或者 `CLOSED`（`2`）。
+  - : 一个代表连接状态的数字。可能值是 `CONNECTING`（`0`）、`OPEN`（`1`）或 `CLOSED`（`2`）。
 - {{domxref("EventSource.url")}} {{readonlyinline}}
   - : 一个表示事件源的 URL 字符串。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
