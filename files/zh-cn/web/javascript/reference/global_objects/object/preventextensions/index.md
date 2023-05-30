@@ -28,7 +28,7 @@ Object.preventExtensions(obj)
 
 如果一个对象可以添加新的属性，则这个对象是可扩展的。`Object.preventExtensions()` 将对象标记为不再可扩展，这样它将永远不会具有它被标记为不可扩展时持有的属性之外的属性。注意，一般来说，不可扩展对象的属性仍然可以被*删除*。尝试向不可扩展对象添加新属性将静默失败或抛出 {{jsxref("TypeError")}}（最常见的情况是在{{jsxref("Functions_and_function_scope/Strict_mode", "严格模式", "", 1)}}中，但不排除其他情况）。
 
-与 [`Object.seal()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) 和 [`Object.freeze()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 不同，`Object.preventExtensions()` 调用了内在的 JavaScript 行为，不能用几个其他操作的组合替代。它还有它的 `Reflect` 对应方法（仅存在于内在操作中），[`Reflect.preventExtensions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions)。
+与 [`Object.seal()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) 和 [`Object.freeze()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 不同，`Object.preventExtensions()` 调用了内在的 JavaScript 行为，不能用几个其他操作的组合替代。它还有它的 `Reflect` 对应方法（仅存在于内在操作中），[`Reflect.preventExtensions()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions)。
 
 `Object.preventExtensions()` 只能防止添加自身的属性。但其对象类型的原型依然可以添加新的属性。
 
@@ -64,7 +64,7 @@ Object.defineProperty(nonExtensible, "new", {
 // 在严格模式中，为一个不可扩展对象的新属性赋值会抛出 TypeError 异常。
 function fail() {
   "use strict";
-  // throws a TypeError
+  // 抛出 TypeError
   nonExtensible.newProperty = "FAIL";
 }
 fail();
@@ -80,7 +80,7 @@ fixed.__proto__ = { oh: "hai" };
 
 ## 非对象参数
 
-在 ES5 中，如果参数不是一个对象类型（而是原始类型），将抛出 {{jsxref("TypeError")}} 。在 ES2015 中，非对象参数将被视为一个不可扩展的普通对象，因此会被直接返回。
+在 ES5 中，如果参数不是一个对象类型（而是原始类型），将抛出 {{jsxref("TypeError")}}。在 ES2015 中，非对象参数将被视为一个不可扩展的普通对象，因此会被直接返回。
 
 ```js
 Object.preventExtensions(1);
