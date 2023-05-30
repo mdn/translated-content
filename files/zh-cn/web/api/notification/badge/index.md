@@ -9,7 +9,7 @@ slug: Web/API/Notification/badge
 
 ## 值
 
-包含一个 URL 的字符串。
+一个包含 URL 的字符串。
 
 ## 规范
 
