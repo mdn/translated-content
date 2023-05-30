@@ -71,7 +71,7 @@ evtSource.onmessage = (e) => {
 
 > **备注：** 在 Github 上有一个完整的示例——[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
-要监听命名事件，你需要为每种类型的事件添加一个监听器。
+要监听具名事件，你需要为每种类型的事件添加一个监听器。
 
 ```js
 const sse = new EventSource("/api/v1/sse");
