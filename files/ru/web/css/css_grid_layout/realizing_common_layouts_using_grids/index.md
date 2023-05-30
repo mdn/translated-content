@@ -1,7 +1,8 @@
 ---
 title: Realizing common layouts using CSS Grid Layout
-slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
 translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 Чтобы завершить набор руководств по CSS Grid Layout, я собираюсь пройтись по основным видам макетов, которые демонстрируют несколько различных методов, которые можно использовать при проектировании с помощью grid layout. Мы рассмотрим пример использования областей сетки-шаблона, типичную гибкую сеточную систему с 12 столбцами, а также список продуктов с использованием автоматического размещения. Как вы можете видеть из этого списка примеров, существует несколько способов достижения желаемого результата с помощью компоновки сетки. Выберите метод, который вы считаете наиболее полезным для решения проблем, которые вы решаете, и проектов, которые вам нужно реализовать.
