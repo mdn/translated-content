@@ -3445,6 +3445,7 @@
 /fr/docs/SVG:Tutoriel:Premiers_pas	/fr/docs/Web/SVG/Tutorial/Getting_Started
 /fr/docs/Server-sent_events	/fr/docs/Web/API/Server-sent_events
 /fr/docs/Server-sent_events/Using_server-sent_events	/fr/docs/Web/API/Server-sent_events/Using_server-sent_events
+/fr/docs/Sécurité/HTTP_Strict_Transport_Security	/fr/docs/Glossary/HSTS
 /fr/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
 /fr/docs/Tools/Accessibility_inspector	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html
