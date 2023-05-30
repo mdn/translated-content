@@ -1,9 +1,10 @@
 ---
 title: CSS grids, logical values and writing modes
-slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
+slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
+original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
+
 В этих руководствах я уже затронул важную особенность grid layout: поддержка различных режимов записи, встроенных в спецификацию. В этом руководстве мы рассмотрим эту особенность grid и других современных методов компоновки, немного узнав о режимах записи и логических и физических свойствах, когда мы это делаем.
 
 ## Логические и физические свойства и ценности

@@ -1,6 +1,6 @@
 ---
 title: CSS Lists and Counters
-slug: Web/CSS/CSS_Lists_and_Counters
+slug: Web/CSS/CSS_lists
 tags:
   - CSS
   - CSS Lists and Counters
@@ -9,6 +9,7 @@ tags:
   - Overview
   - TopicStub
 translation_of: Web/CSS/CSS_Lists_and_Counters
+original_slug: Web/CSS/CSS_Lists_and_Counters
 ---
 
 {{CSSRef}}
