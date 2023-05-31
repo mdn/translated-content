@@ -1,13 +1,13 @@
 ---
-title: "AudioListener: forwardY 属性"
+title: AudioListener：forwardY 属性
 slug: Web/API/AudioListener/forwardY
 ---
 
 {{ APIRef("Web Audio API") }}
 
-`forwardY` 只读属性属于 {{ domxref("AudioListener") }} 接口，它是一个 {{domxref("AudioParam")}}，表示定义监听者指向的前进方向的方向向量的 y 值。
+{{ domxref("AudioListener") }} 接口的 `forwardY` 只读属性是一个 {{domxref("AudioParam")}}，表示定义监听者指向的前进方向的方向向量的 y 值。
 
-> **注意：** 当与 {{domxref("PannerNode")}} 一起使用时，如果 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则参数为 _a-rate_；否则为 _k-rate_。
+> **备注：** 当与 {{domxref("PannerNode")}} 一起使用时，如果 {{domxref("PannerNode.panningModel", "panningModel")}} 设置为 equalpower，则参数为 _a-rate_；否则为 _k-rate_。
 
 ## 值
 
@@ -15,7 +15,7 @@ slug: Web/API/AudioListener/forwardY
 
 ## 示例
 
-查看 [BaseAudioContext.createPanner()](/zh-CN/docs/Web/API/BaseAudioContext/createPanner#examples) 以获取示例代码。
+查看 [BaseAudioContext.createPanner()](/zh-CN/docs/Web/API/BaseAudioContext/createPanner#示例) 以获取示例代码。
 
 ## 规范
 
