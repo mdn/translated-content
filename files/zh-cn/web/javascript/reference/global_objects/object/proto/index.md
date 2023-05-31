@@ -34,11 +34,11 @@ obj.__proto__
 
 `__proto__` 的 setter 允许修改一个对象的 `[[Prototype]]`。提供的值必须是一个对象或 {{JSxRef("Operators/null", "null")}}。提供任何其他值都不会产生任何作用。
 
-与 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 不同，它们始终作为 `Object` 的静态属性存在并始终反映 `[[Prototype]]` 内部属性。 `__proto__` 属性并不总是作为所有对象的属性存在，因此不能可靠地反映 `[[Prototype]]`。
+与 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 不同，它们始终作为 `Object` 的静态属性存在并始终反映 `[[Prototype]]` 内部属性。`__proto__` 属性并不总是作为所有对象的属性存在，因此不能可靠地反映 `[[Prototype]]`。
 
 `__proto__` 属性是 `Object.prototype` 上一个简单的访问器属性，由 getter 和 setter 函数组成。如果访问 `__proto__` 属性时最终查询到 `Object.prototype`，则会找到该属性，但如果没有查询 `Object.prototype`，则不会找到该属性。如果在查询 `Object.prototype` 之前就找到了其他的 `__proto__` 属性，则会覆盖 `Object.prototype` 上的 `__proto__` 属性。
 
-[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象) 不从 `Object.prototype` 继承任何属性，包括 `__proto__` 访问器属性。因此，如果您尝试在这样的对象上读取 `__proto__`，则无论对象的实际 `[[Prototype]]` 是什么，该值都将始终为 `undefined`，并且对 `__proto__` 的任何赋值都将创建一个名为 `__proto__` 的新属性，而不是设置对象的原型。此外，`__proto__` 可以通过 {{jsxref("Object.defineProperty()")}} 作为任何对象实例的自有属性重新定义，而不触发 setter。在这种情况下，`__proto__` 将不再是 `[[Prototype]]` 的访问器。因此，为设置和获取对象的 `[[Prototype]]`，请始终使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}}。
+[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)不从 `Object.prototype` 继承任何属性，包括 `__proto__` 访问器属性。因此，如果您尝试在这样的对象上读取 `__proto__`，则无论对象的实际 `[[Prototype]]` 是什么，该值都将始终为 `undefined`，并且对 `__proto__` 的任何赋值都将创建一个名为 `__proto__` 的新属性，而不是设置对象的原型。此外，`__proto__` 可以通过 {{jsxref("Object.defineProperty()")}} 作为任何对象实例的自有属性重新定义，而不触发 setter。在这种情况下，`__proto__` 将不再是 `[[Prototype]]` 的访问器。因此，为设置和获取对象的 `[[Prototype]]`，请始终使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}}。
 
 ## 示例
 
