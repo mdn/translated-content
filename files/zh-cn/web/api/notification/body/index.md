@@ -5,9 +5,9 @@ slug: Web/API/Notification/body
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的只读属性 **`body`** 返回了构造函数 {{domxref("Notification.Notification","Notification()")}} 实例化时参数所使用的 body 值。
+{{domxref("Notification")}} 接口的 **`body`** 只读属性指示通知的正文字符串，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `body` 选项中指定。
 
-### 值
+## 值
 
 一个字符串。
 
