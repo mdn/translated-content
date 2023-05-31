@@ -1,8 +1,9 @@
 ---
 title: Dimensionamiento para propiedades lógicas
-slug: Web/CSS/CSS_Logical_Properties/Sizing
-original_slug: Web/CSS/CSS_Logical_Properties/Dimensionamiento
+slug: Web/CSS/CSS_logical_properties_and_values/Sizing
+original_slug: Web/CSS/CSS_Logical_Properties/Sizing
 ---
+
 {{CSSRef}}
 
 En esta guía explicaremos las asignaciones relativas al flujo relativo entre las propiedades de dimensionamiento físico y lógico usados para dimensionar elementos en nuestras páginas.

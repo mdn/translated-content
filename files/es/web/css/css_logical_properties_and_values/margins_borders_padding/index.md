@@ -1,6 +1,7 @@
 ---
 title: Propiedades lógicas para márgenes, bordes y rellenos
-slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
+slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
+original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}
