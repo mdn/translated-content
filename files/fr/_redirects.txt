@@ -1838,7 +1838,6 @@
 /fr/docs/HTML/Element/Heading_Elements	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/HTML/Element/Img	/fr/docs/Web/HTML/Element/img
 /fr/docs/HTML/Element/Input	/fr/docs/Web/HTML/Element/Input
-/fr/docs/HTML/Element/Keygen	/fr/docs/orphaned/Web/HTML/Element/keygen
 /fr/docs/HTML/Element/Label	/fr/docs/Web/HTML/Element/label
 /fr/docs/HTML/Element/Legend	/fr/docs/Web/HTML/Element/legend
 /fr/docs/HTML/Element/Meter	/fr/docs/Web/HTML/Element/meter
@@ -1855,7 +1854,6 @@
 /fr/docs/HTML/Element/abbr	/fr/docs/Web/HTML/Element/abbr
 /fr/docs/HTML/Element/acronym	/fr/docs/Web/HTML/Element/acronym
 /fr/docs/HTML/Element/address	/fr/docs/Web/HTML/Element/address
-/fr/docs/HTML/Element/applet	/fr/docs/orphaned/Web/HTML/Element/applet
 /fr/docs/HTML/Element/area	/fr/docs/Web/HTML/Element/area
 /fr/docs/HTML/Element/article	/fr/docs/Web/HTML/Element/article
 /fr/docs/HTML/Element/aside	/fr/docs/Web/HTML/Element/aside
@@ -1865,9 +1863,8 @@
 /fr/docs/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_fonts
 /fr/docs/HTML/Element/bdi	/fr/docs/Web/HTML/Element/bdi
 /fr/docs/HTML/Element/bdo	/fr/docs/Web/HTML/Element/bdo
-/fr/docs/HTML/Element/bgsound	/fr/docs/conflicting/Web/HTML/Element/audio
+/fr/docs/HTML/Element/bgsound	/fr/docs/Web/HTML/Element/audio
 /fr/docs/HTML/Element/big	/fr/docs/Web/HTML/Element/big
-/fr/docs/HTML/Element/blink	/fr/docs/orphaned/Web/HTML/Element/blink
 /fr/docs/HTML/Element/blockquote	/fr/docs/Web/HTML/Element/blockquote
 /fr/docs/HTML/Element/body	/fr/docs/Web/HTML/Element/body
 /fr/docs/HTML/Element/br	/fr/docs/Web/HTML/Element/br
@@ -4812,10 +4809,8 @@
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
-/fr/docs/Web/HTML/Element/applet	/fr/docs/orphaned/Web/HTML/Element/applet
 /fr/docs/Web/HTML/Element/basefont	/fr/docs/Web/CSS/CSS_fonts
-/fr/docs/Web/HTML/Element/bgsound	/fr/docs/conflicting/Web/HTML/Element/audio
-/fr/docs/Web/HTML/Element/blink	/fr/docs/orphaned/Web/HTML/Element/blink
+/fr/docs/Web/HTML/Element/bgsound	/fr/docs/Web/HTML/Element/audio
 /fr/docs/Web/HTML/Element/content	/fr/docs/Web/HTML/Element/slot
 /fr/docs/Web/HTML/Element/h1	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h2	/fr/docs/Web/HTML/Element/Heading_Elements
@@ -4823,8 +4818,6 @@
 /fr/docs/Web/HTML/Element/h4	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h5	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h6	/fr/docs/Web/HTML/Element/Heading_Elements
-/fr/docs/Web/HTML/Element/keygen	/fr/docs/orphaned/Web/HTML/Element/keygen
-/fr/docs/Web/HTML/Element/spacer	/fr/docs/orphaned/Web/HTML/Element/spacer
 /fr/docs/Web/HTML/Element/video/canplaythrough_event	/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /fr/docs/Web/HTML/Element/video/durationchange_event	/fr/docs/Web/API/HTMLMediaElement/durationchange_event
 /fr/docs/Web/HTML/Formats_date_heure_HTML	/fr/docs/Web/HTML/Date_and_time_formats
@@ -5979,9 +5972,6 @@
 /fr/docs/Web/Reference/API	/fr/docs/Web/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
 /fr/docs/Web/SVG/Compatibility_sources	/fr/docs/Web/SVG
-/fr/docs/Web/SVG/Element/altGlyph	/fr/docs/orphaned/Web/SVG/Element/altGlyph
-/fr/docs/Web/SVG/Element/altGlyphDef	/fr/docs/orphaned/Web/SVG/Element/altGlyphDef
-/fr/docs/Web/SVG/Element/altGlyphItem	/fr/docs/orphaned/Web/SVG/Element/altGlyphItem
 /fr/docs/Web/SVG/Element/animateColor	/fr/docs/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
 /fr/docs/Web/SVG/Index	/fr/docs/Web/SVG
@@ -6579,6 +6569,7 @@
 /fr/docs/conflicting/Web/HTML	/fr/docs/Web/HTML
 /fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Attributes/rel
 /fr/docs/conflicting/Web/HTML/Element	/fr/docs/Web/HTML/Element
+/fr/docs/conflicting/Web/HTML/Element/audio	/fr/docs/Web/HTML/Element/audio
 /fr/docs/conflicting/Web/HTML/Element/input/datetime-local	/fr/docs/Web/HTML/Element/input/datetime-local
 /fr/docs/conflicting/Web/HTML/Element/slot	/fr/docs/Web/HTML/Element/slot
 /fr/docs/conflicting/Web/HTML/Global_attributes	/fr/docs/Web/HTML/Global_attributes
