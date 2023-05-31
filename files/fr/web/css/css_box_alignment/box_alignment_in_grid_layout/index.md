@@ -1,8 +1,6 @@
 ---
 title: L'alignement des boîtes avec une grille CSS
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
-l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout
 ---
 
 {{CSSRef}}

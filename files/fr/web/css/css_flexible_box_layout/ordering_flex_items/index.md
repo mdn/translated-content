@@ -1,8 +1,6 @@
 ---
 title: Ordonner les éléments flexibles
-slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 ---
 
 {{CSSRef}}

@@ -1,8 +1,6 @@
 ---
-title: 'L''alignement des boîtes pour les dispositions : en bloc, absolue, en tableau'
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
-l10n:
-  sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
+title: "L'alignement des boîtes pour les dispositions : en bloc, absolue, en tableau"
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 ---
 
 {{CSSRef}}
