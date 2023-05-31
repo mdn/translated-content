@@ -30,7 +30,7 @@ Object.preventExtensions(obj)
 
 与 [`Object.seal()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal) 和 [`Object.freeze()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze) 不同，`Object.preventExtensions()` 调用了内在的 JavaScript 行为，不能用几个其他操作的组合替代。它还有它的 `Reflect` 对应方法（仅存在于内在操作中），[`Reflect.preventExtensions()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions)。
 
-`Object.preventExtensions()` 只能防止添加自身的属性。但其对象类型的原型依然可以添加新的属性。
+`Object.preventExtensions()` 只能防止添加自有属性。但其对象类型的原型依然可以添加新的属性。
 
 该方法使得目标对象的 `[[Prototype]]` 不可变；任何重新赋值 `[[Prototype]]` 操作都会抛出 `TypeError` 。这种行为只针对内部的 `[[Prototype]]` 属性，目标对象的其他属性将保持可变。
 
