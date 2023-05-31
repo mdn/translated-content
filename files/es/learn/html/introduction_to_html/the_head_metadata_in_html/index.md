@@ -175,7 +175,7 @@ Por ejemplo, [Open Graph Data](http://ogp.me/) es un protocolo de metadatos que 
 ```html
 <meta
   property="og:image"
-  content="/mdn-social-share.png"
+  content="https://developer.mozilla.org/mdn-social-share.png"
 />
 <meta
   property="og:description"
