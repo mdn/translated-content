@@ -1,6 +1,8 @@
 ---
 title: Les concepts de base des grilles CSS
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+l10n:
+  sourceCommit: 3a22bb59de072d368ad47cf36f8c385f1f3494fe
 ---
 
 {{CSSRef}}
