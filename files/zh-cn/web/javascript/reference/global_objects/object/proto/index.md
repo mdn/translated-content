@@ -30,7 +30,7 @@ obj.__proto__
 
 ## 描述
 
-`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function.prototype")}}。您可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
+`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function.prototype")}}。你可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
 
 `__proto__` 的 setter 允许修改一个对象的 `[[Prototype]]`。提供的值必须是一个对象或 {{JSxRef("Operators/null", "null")}}。提供任何其他值都不会产生任何作用。
 
@@ -38,7 +38,7 @@ obj.__proto__
 
 `__proto__` 属性是 `Object.prototype` 上一个简单的访问器属性，由 getter 和 setter 函数组成。如果访问 `__proto__` 属性时最终查询到 `Object.prototype`，则会找到该属性，但如果没有查询 `Object.prototype`，则不会找到该属性。如果在查询 `Object.prototype` 之前就找到了其他的 `__proto__` 属性，则会覆盖 `Object.prototype` 上的 `__proto__` 属性。
 
-[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)不从 `Object.prototype` 继承任何属性，包括 `__proto__` 访问器属性。因此，如果您尝试在这样的对象上读取 `__proto__`，则无论对象的实际 `[[Prototype]]` 是什么，该值都将始终为 `undefined`，并且对 `__proto__` 的任何赋值都将创建一个名为 `__proto__` 的新属性，而不是设置对象的原型。此外，`__proto__` 可以通过 {{jsxref("Object.defineProperty()")}} 作为任何对象实例的自有属性重新定义，而不触发 setter。在这种情况下，`__proto__` 将不再是 `[[Prototype]]` 的访问器。因此，为设置和获取对象的 `[[Prototype]]`，请始终使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}}。
+[`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)不从 `Object.prototype` 继承任何属性，包括 `__proto__` 访问器属性。因此，如果你尝试在这样的对象上读取 `__proto__`，则无论对象的实际 `[[Prototype]]` 是什么，该值都将始终为 `undefined`，并且对 `__proto__` 的任何赋值都将创建一个名为 `__proto__` 的新属性，而不是设置对象的原型。此外，`__proto__` 可以通过 {{jsxref("Object.defineProperty()")}} 作为任何对象实例的自有属性重新定义，而不触发 setter。在这种情况下，`__proto__` 将不再是 `[[Prototype]]` 的访问器。因此，为设置和获取对象的 `[[Prototype]]`，请始终使用 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}}。
 
 ## 示例
 
@@ -49,8 +49,8 @@ function Circle() {}
 const shape = {};
 const circle = new Circle();
 
-// 设置该对象的原型链引用
-// 过时且不推荐使用的。这里只是举个例子，尽量不要在生产环境中这样做。
+// 设置该对象的原型
+// 已弃用。这里只是举个例子，请不要在生产环境中这样做。
 shape.__proto__ = circle;
 
 // 判断该对象的原型链引用是否属于 circle
