@@ -88,7 +88,7 @@ function change() {
 
 ## 想学习更多？
 
-现在你已经熟悉了 DOM 的基本概念，你可能想通过阅读[如何用 JavaScript 和 DOM 接口遍历 HTML 表个](/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces)来了解更多关于文档 API 的基本特性。
+现在你已经熟悉了 DOM 的基本概念，你可能想通过阅读[如何用 JavaScript 和 DOM 接口遍历 HTML 表格](/zh-CN/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces)来了解更多关于文档 API 的基本特性。
 
 ## 参见
 
