@@ -26,7 +26,7 @@ obj.__proto__
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果尝试设置一个[不可扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)对象或[不可变原型异类对象](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects)的原型，例如 `Object.prototype` 或 [`window`](/zh-CN/docs/Web/API/Window)，则会抛出错误。
+  - : 如果尝试设置一个[不可扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)对象或[不可修改原型的特异对象](https://tc39.es/ecma262/#sec-immutable-prototype-exotic-objects)的原型，例如 `Object.prototype` 或 [`window`](/zh-CN/docs/Web/API/Window)，则会抛出错误。
 
 ## 描述
 
