@@ -1,8 +1,9 @@
 ---
 title: Компиляция кода C/C++ в WebAssembly
-slug: WebAssembly/C_to_wasm
+slug: WebAssembly/C_to_Wasm
 translation_of: WebAssembly/C_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 После того как вы написали код на C / C ++, вы можете скомпилировать его в WebAssembly, например, с помощью инструмента [Emscripten](https://emscripten.org/). Давайте посмотрим, как это работает.
