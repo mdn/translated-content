@@ -1,5 +1,5 @@
 ---
-title: 使用 Javascript 和 DOM 接口遍历 HTML 表格
+title: 使用 JavaScript 和 DOM 接口遍历 HTML 表格
 slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
@@ -12,15 +12,17 @@ slug: >-
 
 ## 动态创建 HTML 表格
 
+### 示例
+
 在本示例中，当按钮被点击时，会向页面中添加一个表格。
 
-### HTML
+#### HTML
 
 ```html
 <input type="button" value="生成表格" onclick="generateTable()" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function generateTable() {
@@ -217,11 +219,11 @@ myTextNode = document.createTextNode("world");
 secondParagraph.appendChild(myTextNode);
 ```
 
-在测试了这个例子之后，我们注意到，hello 和 world 单词被组合在了一个：helloworld。事实上，当你看到 HTML 页面时，hello 和 world 两个文字节点看起来更像是一个节点。但是请记住它们在文档模型中的形式是两个节点。第二个节点是一个 `TEXT_NODE` 类型的新节点，也是第二个 `<p>` 标签的第二个子元素。下面的示意图将在文档树中展示最近创建的文本节点对象。
+在测试了这个例子之后，我们注意到，hello 和 world 单词被组合在了一起：helloworld。事实上，当你看到 HTML 页面时，hello 和 world 两个文字节点看起来更像是一个节点。但是请记住它们在文档模型中的形式是两个节点。第二个节点是一个 `TEXT_NODE` 类型的新节点，也是第二个 `<p>` 标签的第二个子元素。下面的示意图将在文档树中展示最近创建的文本节点对象。
 
 ![段落元素中的文本节点作为 DOM 树中的单独子元素](sample2b2.jpg)
 
-> **备注：** `createTextNode()` 和 `appendChild()` 是在 _hello_ 和 _world_ 这两个词之间加入空白的简单方法。另一个重要的注意点是，`appendChild` 方法将在最后一个子节点之后追加子节点，就像 _world_ 这个词已经被添加到 _hello_ 这个词之后一样。因此，如果你想在 _hello_ 和 _world_ 之间追加一个文本节点，你将需要使用 `insertBefore` 而不是`appendChild`。
+> **备注：** `createTextNode()` 和 `appendChild()` 是在 _hello_ 和 _world_ 这两个词之间加入空白的简单方法。另一个重要的注意点是，`appendChild` 方法将在最后一个子节点之后追加子节点，就像 _world_ 这个词已经被添加到 _hello_ 这个词之后一样。因此，如果你想在 _hello_ 和 _world_ 之间追加一个文本节点，你需要使用 `insertBefore` 而不是 `appendChild`。
 
 ### 使用文档对象和 createElement(..) 方法创建新的元素
 
@@ -252,15 +254,15 @@ myNewPTagNode.appendChild(myTextNode);
 
 ![创建并向对象树文本结构追加一个新的节点元素](sample2d.jpg)
 
-## 动态创建一个表格 (回到 Sample1.html)
+## 动态创建一个表格（回到 Sample1.html）
 
 这一段落的剩余部分我们将继续修改我们的 sample1.html。下面的图展示了我们在示例中创建的表格的对象树的结构。
 
-### 回顾一下 HTML 表格结构
+### 回顾 HTML 表格结构
 
 ![添加新节点元素后的 HTML 表格对象树结构](sample1-tabledom.jpg)
 
-### 创建元素节点并将他们插入到文档树中
+### 创建元素节点并将它们插入到文档树中
 
 sample1.html 中创建表格的基本步骤是：
 
@@ -310,7 +312,7 @@ sample1.html 中创建表格的基本步骤是：
         myTable.appendChild(myTableBody);
         // 将 <table> 附加至 <body> 中
         myBody.appendChild(myTable);
-        // 将 myTable 的 border 属性设为 2;
+        // 将 myTable 的 border 属性设为 2
         myTable.setAttribute("border", "2");
       }
     </script>
