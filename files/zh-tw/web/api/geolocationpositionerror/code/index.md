@@ -5,7 +5,7 @@ slug: Web/API/GeolocationPositionError/code
 
 {{APIRef("Geolocation API")}}
 
-**`PositionError.code`** 是一個唯讀無符號整數(`unsigned short)表示錯誤碼` 。以下列出可能的值：
+**`PositionError.code`** 是一個唯讀無符號整數（`unsigned short`）表示錯誤碼。以下列出可能的值：
 
 | 值  | 相對應的常數           | 描述                                                                                           |
 | --- | ---------------------- | ---------------------------------------------------------------------------------------------- |
