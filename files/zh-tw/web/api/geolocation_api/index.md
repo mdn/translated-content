@@ -30,7 +30,7 @@ if ("geolocation" in navigator) {
 > **備註：** 依預設值，[`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 將儘快回傳較低精確度的結果。若不論精確度而只要儘快獲得答案，則可使用 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。舉例來說，搭載 GPS 的裝置可能需要一段時間才能取得 GPS 定位資訊，所以可能將低精確度的資料 (IP 位置或 Wifi) 回傳至 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition)。
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
+navigator.geolocation.getCurrentPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
 });
 ```
@@ -44,10 +44,9 @@ navigator.geolocation.getCurrentPosition(function(position) {
 > **備註：** 不需啟動 [`getCurrentPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.getCurrentPosition) 呼叫，亦可使用 [`watchPosition()`](/zh-TW/docs/Web/API/window.navigator.geolocation.watchPosition)。
 
 ```js
-var watchID = navigator.geolocation.watchPosition(function(position) {
+var watchID = navigator.geolocation.watchPosition(function (position) {
   do_something(position.coords.latitude, position.coords.longitude);
-}
-);
+});
 ```
 
 `watchPosition()` 函式將回傳 1 組 ID 編號，專用以識別必要的定位監看員 (Watcher)。而此數值若搭配 `clearWatch()` 函式，即可停止觀看使用者的位置。
@@ -73,11 +72,15 @@ function geo_error() {
 
 var geo_options = {
   enableHighAccuracy: true,
-  maximumAge        : 30000,
-  timeout           : 27000
+  maximumAge: 30000,
+  timeout: 27000,
 };
 
-var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+var wpid = navigator.geolocation.watchPosition(
+  geo_success,
+  geo_error,
+  geo_options
+);
 ```
 
 現成的 watchPosition Demo：<http://www.thedotproduct.org/experiments/geo/>
@@ -91,7 +94,9 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_optio
 在呼叫 `getCurrentPosition()` 或 `watchPosition() 時，`若獲得錯誤回呼函式，則`錯誤回呼函式的第一組參數將為 PositionError 物件：`
 
 ```js
-function errorCallback(error) {  alert('ERROR(' + error.code + '): ' + error.message);};
+function errorCallback(error) {
+  alert("ERROR(" + error.code + "): " + error.message);
+}
 ```
 
 ## 地理位置定位實際範例
@@ -109,26 +114,36 @@ function errorCallback(error) {  alert('ERROR(' + error.code + '): ' + error.mes
 function geoFindMe() {
   var output = document.getElementById("out");
 
-  if (!navigator.geolocation){
+  if (!navigator.geolocation) {
     output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
     return;
   }
 
   function success(position) {
-    var latitude  = position.coords.latitude;
+    var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+    output.innerHTML =
+      "<p>Latitude is " +
+      latitude +
+      "° <br>Longitude is " +
+      longitude +
+      "°</p>";
 
     var img = new Image();
-    img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+    img.src =
+      "http://maps.googleapis.com/maps/api/staticmap?center=" +
+      latitude +
+      "," +
+      longitude +
+      "&zoom=13&size=300x300&sensor=false";
 
     output.appendChild(img);
-  };
+  }
 
   function error() {
     output.innerHTML = "Unable to retrieve your location";
-  };
+  }
 
   output.innerHTML = "<p>Locating…</p>";
 
@@ -148,67 +163,75 @@ addons.mozilla.org 上所提供的任何附加元件，只要使用地理位置�
 
 ```js
 function prompt(window, pref, message, callback) {
-    let branch = Components.classes["@mozilla.org/preferences-service;1"]
-                           .getService(Components.interfaces.nsIPrefBranch);
+  let branch = Components.classes[
+    "@mozilla.org/preferences-service;1"
+  ].getService(Components.interfaces.nsIPrefBranch);
 
-    if (branch.getPrefType(pref) === branch.PREF_STRING) {
-        switch (branch.getCharPref(pref)) {
-        case "always":
-            return callback(true);
-        case "never":
-            return callback(false);
-        }
+  if (branch.getPrefType(pref) === branch.PREF_STRING) {
+    switch (branch.getCharPref(pref)) {
+      case "always":
+        return callback(true);
+      case "never":
+        return callback(false);
     }
+  }
 
-    let done = false;
+  let done = false;
 
-    function remember(value, result) {
-        return function() {
-            done = true;
-            branch.setCharPref(pref, value);
-            callback(result);
+  function remember(value, result) {
+    return function () {
+      done = true;
+      branch.setCharPref(pref, value);
+      callback(result);
+    };
+  }
+
+  let self = window.PopupNotifications.show(
+    window.gBrowser.selectedBrowser,
+    "geolocation",
+    message,
+    "geo-notification-icon",
+    {
+      label: "Share Location",
+      accessKey: "S",
+      callback: function (notification) {
+        done = true;
+        callback(true);
+      },
+    },
+    [
+      {
+        label: "Always Share",
+        accessKey: "A",
+        callback: remember("always", true),
+      },
+      {
+        label: "Never Share",
+        accessKey: "N",
+        callback: remember("never", false),
+      },
+    ],
+    {
+      eventCallback: function (event) {
+        if (event === "dismissed") {
+          if (!done) callback(false);
+          done = true;
+          window.PopupNotifications.remove(self);
         }
+      },
+      persistWhileVisible: true,
     }
-
-    let self = window.PopupNotifications.show(
-        window.gBrowser.selectedBrowser,
-        "geolocation",
-        message,
-        "geo-notification-icon",
-        {
-            label: "Share Location",
-            accessKey: "S",
-            callback: function(notification) {
-                done = true;
-                callback(true);
-            }
-        }, [
-            {
-                label: "Always Share",
-                accessKey: "A",
-                callback: remember("always", true)
-            },
-            {
-                label: "Never Share",
-                accessKey: "N",
-                callback: remember("never", false)
-            }
-        ], {
-            eventCallback: function(event) {
-                if (event === "dismissed") {
-                    if (!done) callback(false);
-                    done = true;
-                    window.PopupNotifications.remove(self);
-                }
-            },
-            persistWhileVisible: true
-        });
+  );
 }
 
-prompt(window,
-       "extensions.foo-addon.allowGeolocation",
-       "Foo Add-on wants to know your location.",
-       function callback(allowed) { alert(allowed); });
+prompt(
+  window,
+  "extensions.foo-addon.allowGeolocation",
+  "Foo Add-on wants to know your location.",
+  function callback(allowed) {
+    alert(allowed);
+  }
+);
 ```
 
 ## 規範

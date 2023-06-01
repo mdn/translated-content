@@ -15,7 +15,7 @@ If the given child is a {{domxref("DocumentFragment")}}, the entire contents of 
 
 ## Syntax
 
-```plain
+```js
 var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 ```
 
@@ -31,30 +31,30 @@ If `referenceNode` is `null`, the `newNode` is inserted at the end of the list o
 
 ```html
 <div id="parentElement">
-   <span id="childElement">foo bar</span>
+  <span id="childElement">foo bar</span>
 </div>
 
 <script>
-// Create the new node to insert
-var newNode = document.createElement("span");
+  // Create the new node to insert
+  var newNode = document.createElement("span");
 
-// Get a reference to the parent node
-var parentDiv = document.getElementById("childElement").parentNode;
+  // Get a reference to the parent node
+  var parentDiv = document.getElementById("childElement").parentNode;
 
-// Begin test case [ 1 ] : Exist a childElement --> All working correctly
-var sp2 = document.getElementById("childElement");
-parentDiv.insertBefore(newNode, sp2);
-// End test case [ 1 ]
+  // Begin test case [ 1 ] : Exist a childElement --> All working correctly
+  var sp2 = document.getElementById("childElement");
+  parentDiv.insertBefore(newNode, sp2);
+  // End test case [ 1 ]
 
-// Begin test case [ 2 ] : childElement is of Type undefined
-var sp2 = undefined; // Not exist a node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-// End test case [ 2 ]
+  // Begin test case [ 2 ] : childElement is of Type undefined
+  var sp2 = undefined; // Not exist a node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
+  // End test case [ 2 ]
 
-// Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
-var sp2 = "undefined"; // Not exist a node of id "childElement"
-parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
-// End test case [ 3 ]
+  // Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
+  var sp2 = "undefined"; // Not exist a node of id "childElement"
+  parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
+  // End test case [ 3 ]
 </script>
 ```
 
@@ -71,16 +71,16 @@ parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
 </div>
 
 <script>
-// Create a new, plain <span> element
-var sp1 = document.createElement("span");
+  // Create a new, plain <span> element
+  var sp1 = document.createElement("span");
 
-// Get a reference to the element, before we want to insert the element
-var sp2 = document.getElementById("childElement");
-// Get a reference to the parent element
-var parentDiv = sp2.parentNode;
+  // Get a reference to the element, before we want to insert the element
+  var sp2 = document.getElementById("childElement");
+  // Get a reference to the parent element
+  var parentDiv = sp2.parentNode;
 
-// Insert the new element into the DOM before sp2
-parentDiv.insertBefore(sp1, sp2);
+  // Insert the new element into the DOM before sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
@@ -88,7 +88,7 @@ There is no `insertAfter` method. It can be emulated by combining the `insertBef
 
 In the previous example, `sp1` could be inserted after `sp2` using:
 
-```plain
+```js
 parentDiv.insertBefore(sp1, sp2.nextSibling);
 ```
 
@@ -100,7 +100,7 @@ Insert an element before the first child element, using the [firstChild](/zh-TW/
 
 ```js
 // Get a reference to the element in which we want to insert a new node
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 // Get a reference to the first child
 var theFirstChild = parentElement.firstChild;
 
