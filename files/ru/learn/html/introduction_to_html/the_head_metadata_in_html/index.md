@@ -165,7 +165,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 Например, [Протокол Open Graph](https://ruogp.me/) создан Facebook чтобы предоставить сайтам дополнительные возможности использования метаданных. В исходном коде MDN Web Docs вы можете найти строки:
 
 ```html
-<meta property="og:image" content="/static/img/opengraph-logo.72382e605ce3.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="Веб-документация на MDN предоставляет
 собой информацию об открытых веб-технологиях, включая HTML, CSS и различные API для веб-сайтов
 и прогрессивных веб-приложений. Также на сайте содержатся материалы для разработчиков о таких

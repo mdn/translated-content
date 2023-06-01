@@ -1,6 +1,6 @@
 ---
 title: CSS Backgrounds and Borders
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 tags:
   - Aperçu
   - CSS

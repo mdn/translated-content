@@ -1,6 +1,6 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
+slug: Web/CSS/CSS_colors
 tags:
   - Aperçu
   - CSS
