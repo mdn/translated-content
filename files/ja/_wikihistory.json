@@ -30356,7 +30356,7 @@
     "modified": "2020-10-15T21:52:54.116Z",
     "contributors": ["mfuji09", "mosh", "ukyo", "silverskyvicto", "dskmori"]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2020-12-01T09:43:46.511Z",
     "contributors": ["AK141-ishii", "dlwe", "yukpiz", "ukyo"]
   },
@@ -30488,11 +30488,11 @@
     "modified": "2019-03-23T22:13:00.551Z",
     "contributors": ["silverskyvicto", "ukyo"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2019-06-26T23:35:36.568Z",
     "contributors": ["Uemmra3", "mfuji09", "mosh", "silverskyvicto"]
   },
-  "WebAssembly/Text_format_to_wasm": {
+  "WebAssembly/Text_format_to_Wasm": {
     "modified": "2020-10-13T12:24:40.780Z",
     "contributors": [
       "mfuji09",
@@ -30518,7 +30518,7 @@
     "modified": "2019-03-23T22:12:17.955Z",
     "contributors": ["ukyo", "koba04"]
   },
-  "WebAssembly/existing_C_to_wasm": {
+  "WebAssembly/existing_C_to_Wasm": {
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
