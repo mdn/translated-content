@@ -7,19 +7,19 @@ slug: Web/API/Event
 
 **`Event`** 接口表示在 DOM 中出现的事件。
 
-一些事件是由用户触发的，例如鼠标或键盘事件；而其他事件常由 API 生成，例如指示动画已经完成运行的事件，视频已被暂停等等。事件也可以通过脚本代码触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
+一些事件是由用户触发的，例如鼠标或键盘事件；或者由 API 生成以表示异步任务的进度。事件也可以通过编程方式触发，例如对元素调用 [`HTMLElement.click()`](/zh-CN/docs/Web/API/HTMLElement/click) 方法，或者定义一些自定义事件，再使用 [`EventTarget.dispatchEvent()`](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法将自定义事件派发往指定的目标（target）。
 
-有许多不同类型的事件，其中一些使用基于 `Event` 主接口的二次接口。`Event` 本身包含适用于所有事件的属性和方法。
+有许多不同类型的事件，其中一些使用基于 `Event` 主接口的其他接口。`Event` 本身包含适用于所有事件的属性和方法。
 
-很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过[`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)方法可以将事件处理函数绑定到不同的[HTML elements](/zh-CN/docs/Web/HTML/Element)上 (比如`<button>`, `<div>`, `<span>`等等) 。这种绑定事件处理函数的方式基本替换了老版本中使用 HTML [event handler attributes](/zh-CN/docs/HTML/Global_attributes)来绑定事件处理函数的方式。除此之外，通过正确使用[`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener)方法，这些事件处理函数也能被移除。
+很多 DOM 元素可以被设计接收 (或者监听) 这些事件，并且执行代码去响应（或者处理）它们。通过 [`EventTarget.addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法可以将事件处理器绑定到不同的 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上（比如 `<button>`、`<div>`、`<span>` 等等）。这种方式基本替换了老版本中使用 HTML [事件处理器属性](/zh-CN/docs/HTML/Global_attributes)的方式。此外，在正确添加后，还可以使用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 方法移除这些事件处理器。
 
-> **备注：** 一个元素可以绑定多个事件处理函数，甚至是同一种类型的事件。尤其是这种分离的，并且相互独立的代码模块对同一个元素绑定事件处理函数，每一个模块代码都有着独立的目的。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放元素）
+> **备注：** 一个元素可以绑定多个事件处理器，甚至是对于完全相同的事件。尤其是相互独立的代码模块出于不同的目的附加事件处理器。（比如，一个网页同时有着广告模块和统计模块同时监听视频播放。）
 
-当有很多嵌套的元素，并且每一个元素都有着自己的事件处理函数，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定有相同类型的事件处理函数的时候。因为结构上的重叠，事件处理函数可能会依次被触发，触发的顺序取决于[事件冒泡和事件捕获](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)在每一个元素上的设置情况。
+当有很多嵌套的元素，每个元素都有着自己的事件处理器，事件处理过程会变得非常复杂。尤其当一个父元素和子元素绑定完全相同的事件时，因为结构上的重叠，事件在技术层面发生在两个元素中，触发的顺序取决于每个处理器的[事件冒泡和事件捕获](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)的设置。
 
-## 基于 `Event` 的接口
+## 基于 Event 的接口
 
-下面是主要基于`Event`接口的接口列表，每一个接口都设置了指向各自的 MDN API 说明的文档链接。
+下面是基于 `Event` 主接口的接口列表，每一个接口都设置了指向各自的 MDN API 参考中相应文档的链接。
 
 需要注意的是，所有的事件接口名称都是以“Event”结尾的。
 
