@@ -52,7 +52,7 @@ Object.defineProperty(hasProp, "fee", {
 });
 Object.isSealed(hasProp); // true
 
-// 密封一个对象最简单的方法，当然是 Object.seal。
+// 密封一个对象最简单的方法当然是 Object.seal。
 const sealed = {};
 Object.seal(sealed);
 Object.isSealed(sealed); // true
