@@ -33409,7 +33409,7 @@
       "disoul"
     ]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2020-11-17T22:59:58.305Z",
     "contributors": [
       "CGerAJ",
@@ -33496,7 +33496,7 @@
     "modified": "2019-03-18T20:54:50.799Z",
     "contributors": ["kingysu", "xgqfrms-GitHub"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2020-11-12T06:21:14.353Z",
     "contributors": [
       "longfangsong",
@@ -33508,7 +33508,7 @@
       "wymm0008"
     ]
   },
-  "WebAssembly/Text_format_to_wasm": {
+  "WebAssembly/Text_format_to_Wasm": {
     "modified": "2020-01-27T02:12:13.951Z",
     "contributors": ["coderzh", "acelan86", "xgqfrms-GitHub", "kingysu"]
   },
