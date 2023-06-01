@@ -38,7 +38,7 @@ slug: Web/SVG/Tutorial/Getting_Started
     - SVG 2 之前 `version` 属性和 `baseProfile` 属性用来供其他类型的验证识别 SVG 的版本。SVG 2 不推荐使用 `version` 和 `baseProfile` 这两个属性。
     - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course) 页面获取更多信息。
 
-2. 绘制一个完全覆盖图像区域的矩形  {{SVGElement("rect")}} ，把背景颜色设为红色。
+2. 绘制一个完全覆盖图像区域的矩形 {{SVGElement("rect")}} ，把背景颜色设为红色。
 3. 一个半径 80px 的绿色圆圈 {{SVGElement("circle")}} 绘制在红色矩形的正中央（向右偏移 150px，向下偏移 100px）。
 4. 绘制文字“SVG”。文字被填充为白色，通过设置居中的锚点把文字定位到期望的位置：在这种情况下，中心点应该对应于绿色圆圈的中点。还可以精细调整字体大小和垂直位置，确保最后的样式是美观的。
 
