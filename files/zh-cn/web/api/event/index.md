@@ -109,7 +109,6 @@ slug: Web/API/Event
 - {{domxref("Event.returnValue")}} {{deprecated_inline}}
   - : 为了确保现有网站继续工作，而仍然支持的历史属性。请改用 {{domxref("Event.preventDefault()")}} 和 {{domxref("Event.defaultPrevented")}}。
 - {{domxref("Event.composed", "Event.scoped")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : A boolean value indicating whether the given event will bubble across through the shadow root into the standard DOM. Use {{domxref("Event.composed", "composed")}} instead.
   - : 一个布尔值，指示给定事件是否会穿过影子根节点冒泡到标准 DOM。请改用 {{domxref("Event.composed", "composed")}}。
 
 ## 实例方法
