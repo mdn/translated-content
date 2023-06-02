@@ -1,6 +1,6 @@
 ---
 title: CSS Overflow
-slug: Web/CSS/CSS_Overflow
+slug: Web/CSS/CSS_overflow
 tags:
   - CSS
   - CSS Overflow

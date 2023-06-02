@@ -1,6 +1,6 @@
 ---
 title: CSS Namespaces
-slug: Web/CSS/CSS_Namespaces
+slug: Web/CSS/CSS_namespaces
 tags:
   - Aperçu
   - CSS

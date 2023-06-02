@@ -94,11 +94,11 @@ function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
   var cb = document.getElementById("checkbox"); //element to click on
   var canceled = !cb.dispatchEvent(evt);
-  if(canceled) {
+  if (canceled) {
     // A handler called preventDefault
     alert("canceled");
   } else {
@@ -106,12 +106,14 @@ function simulateClick() {
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> Checked</label>
-<p><button id="button">Click me</button>
+<p>
+  <label><input type="checkbox" id="checkbox" /> Checked</label>
+</p>
+<p><button id="button">Click me</button></p>
 ```
 
 Click on the button to see how the sample works:
