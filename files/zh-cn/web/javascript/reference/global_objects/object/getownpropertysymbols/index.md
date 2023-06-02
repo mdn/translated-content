@@ -62,4 +62,3 @@ console.log(objectSymbols[0]); // Symbol(a)
 - [`core-js` 中 `Object.getOwnPropertySymbols` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Symbol")}}
--
