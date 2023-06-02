@@ -22,7 +22,7 @@ Object.isSealed(obj)
 
 ### 返回值
 
-一个表示给定对象是否被密封的{{jsxref("Boolean", "布尔值", "", 1)}} 。
+一个表示给定对象是否被密封的{{jsxref("Boolean", "布尔值", "", 1)}}。
 
 ## 描述
 
