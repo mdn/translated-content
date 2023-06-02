@@ -17,7 +17,7 @@ MDN Web 文档社区的 Discord 服务器向公众开放。该服务器是了解
 
 你可以提出问题、寻求澄清，以及了解如何参与其中。你还可以根据自己的兴趣和专长加入特定的频道。
 
-在[此处](https://discord.gg/apa6Rn7uEj)加入 Discord 上的 MDN Web 文档社区。
+在[此处](https://discord.gg/aZqEtMrbr7)加入 Discord 上的 MDN Web 文档社区。
 
 ### Matrix 聊天室
 
