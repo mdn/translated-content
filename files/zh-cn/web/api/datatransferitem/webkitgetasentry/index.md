@@ -137,7 +137,7 @@ dropzone.addEventListener("drop", function(event) {
 }, false);
 ```
 
-这将获取[`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)表示从中删除的项目的对象列表`event.dataTransfer.items`。然后我们调用[`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)来防止事件在完成后被进一步处理。
+这将获取表示从 `event.dataTransfer.items` 中删除的项目的 {{domxref("DataTransferItem")}} 对象列表。然后我们调用 {{domxref("Event.preventDefault()")}} 来防止事件在完成后被进一步处理。
 
 现在是时候开始构建列表了。首先，通过设置[`listing.innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML)为空来清空列表。这使我们[`ul`](/zh-CN/docs/Web/API/Ul)开始插入目录条目为空。
 
