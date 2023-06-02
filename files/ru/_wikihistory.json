@@ -16343,7 +16343,7 @@
       "thatlldo"
     ]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2019-03-18T21:33:56.809Z",
     "contributors": ["thatlldo"]
   },
@@ -16375,7 +16375,7 @@
     "modified": "2019-06-12T11:14:54.085Z",
     "contributors": ["deadblackclover"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2020-06-11T14:27:31.970Z",
     "contributors": [
       "DuckerMan",
