@@ -20,7 +20,7 @@ __defineGetter__(prop, func)
 - `prop`
   - : `func` 所绑定的 getter 函数所对应的属性名称，以字符串形式表示。
 - `func`
-  - : 一个要绑定到指定属性的函数。
+  - : 绑定到指定属性查询的函数。
 
 ### 返回值
 
@@ -93,5 +93,5 @@ console.log(o.gimmeFive); // 5
 - [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)
-- [\[个人博文\] defineGetter\_\_ 和 \_\_defineSetter\_\_ 已被废弃](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
+- [\[博文\] \_\_defineGetter\_\_ 和 \_\_defineSetter\_\_ 已被弃用](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - [Firefox bug 647423](https://bugzil.la/647423)
