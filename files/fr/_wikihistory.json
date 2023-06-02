@@ -27584,7 +27584,7 @@
     "modified": "2019-03-23T22:14:12.769Z",
     "contributors": ["sylv1", "dattaz", "SphinxKnight"]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2019-10-28T10:12:05.168Z",
     "contributors": [
       "WhiteMoll",
