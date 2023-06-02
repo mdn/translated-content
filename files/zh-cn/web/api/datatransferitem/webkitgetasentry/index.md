@@ -9,7 +9,7 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 
 > **备注：** 此功能`webkitGetAsEntry()`在此时非包含 Firefox 的非 WebKit 浏览器中实现; 它可能会`getAsEntry()`在以后简单地重命名，所以你应该进行防御性编码，寻找两者。
 
-## [语法](/zh-CN/docs/Web/API/DataTransferItem/webkitGetAsEntry#Syntax)
+## 语法
 
 ```
 DataTransferItem.webkitGetAsEntry();
