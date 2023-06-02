@@ -9,9 +9,9 @@ Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的�
 
 ## Web Workers API
 
-一个 worker 是使用一个构造函数创建的一个对象 (e.g. {{domxref("Worker.Worker", "Worker()")}}) 运行一个命名的 JavaScript 文件 - 这个文件包含将在工作线程中运行的代码; workers 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}. 因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}}获取全局作用域 (而不是{{domxref("window.self","self")}}) 将返回错误。
+一个 worker 是使用一个构造函数创建的一个对象 (例如 {{domxref("Worker.Worker", "Worker()")}}) 运行一个命名的 JavaScript 文件——这个文件包含将在工作线程中运行的代码; workers 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}。因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}} 获取全局作用域 (而不是{{domxref("window.self","self")}}) 将返回错误。
 
-在专用 workers 的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了 worker 的上下文（专用 workers 是指标准 worker 仅在单一脚本中被使用；共享 worker 的上下文是{{domxref("SharedWorkerGlobalScope")}}对象）。一个专用 worker 仅仅能被首次生成它的脚本使用，而共享 worker 可以同时被多个脚本使用。
+在专用 workers 的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了 worker 的上下文（专用 workers 是指标准 worker 仅在单一脚本中被使用；共享 worker 的上下文是{{domxref("SharedWorkerGlobalScope")}}对象）。一个专用 worker 仅能被首次生成它的脚本使用，而共享 worker 可以同时被多个脚本使用。
 
 > **备注：** 参照 [The Web Workers API landing page](/zh-CN/docs/Web/API/Web_Workers_API) 获取 workers 的参考文档和更多指引。
 
@@ -23,7 +23,7 @@ workers 和主线程间的数据传递通过这样的消息机制进行——双
 
 ## 专用 worker
 
-如前文所述，一个专用 worker 仅仅能被生成它的脚本所使用。这一部分将探讨 [专用 worker 基础示例](https://github.com/mdn/simple-web-worker) ([运行专用 worker](https://mdn.github.io/simple-web-worker/)) 中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
+如前文所述，一个专用 worker 仅能被生成它的脚本所使用。这一部分将探讨 [专用 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([运行专用 worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)) 中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
 
 这个例子很小，但是我们决定在保持简单的同时向你介绍基础的 worker 概念。更多的细节会在之后的文章中进行讲解。
 
@@ -44,7 +44,7 @@ if (window.Worker) {
 创建一个新的 worker 很简单。你需要做的是调用{{domxref("Worker.Worker", "Worker()")}} 的构造器，指定一个脚本的 URI 来执行 worker 线程（main.js）：
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker('worker.js');
 ```
 
 ### 专用 worker 中消息的接收和发送
@@ -52,15 +52,15 @@ var myWorker = new Worker('worker.js');
 你可以通过{{domxref("Worker.postMessage", "postMessage()")}} 方法和{{domxref("Worker.onmessage", "onmessage")}}事件处理函数触发 workers 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（main.js）：
 
 ```js
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 这段代码中变量 first 和 second 代表 2 个{{htmlelement("input")}}元素；它们当中任意一个的值发生改变时，myWorker.postMessage(\[first.value,second.value]) 会将这 2 个值组成数组发送给 worker。你可以在消息中发送许多你想发送的东西。
@@ -68,12 +68,12 @@ second.onchange = function() {
 在 worker 中接收到消息后，我们可以写这样一个事件处理函数代码作为响应（worker.js）：
 
 ```js
-onmessage = function(e) {
-  console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-  console.log('Posting message back to main script');
+onmessage = (e) => {
+  console.log("Message received from main script");
+  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 onmessage 处理函数允许我们在任何时刻，一旦接收到消息就可以执行一些代码，代码中消息本身作为事件的 data 属性进行使用。这里我们简单的对这 2 个数字作乘法处理并再次使用 postMessage() 方法，将结果回传给主线程。
@@ -81,10 +81,10 @@ onmessage 处理函数允许我们在任何时刻，一旦接收到消息就可�
 回到主线程，我们再次使用 onmessage 以响应 worker 回传的消息：
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 在这里我们获取消息事件的 data，并且将它设置为 result 的 textContent，所以用户可以直接看到运算的结果。
@@ -134,8 +134,11 @@ Worker 线程能够访问一个全局函数`importScripts()`来引入脚本，�
 
 ```js
 importScripts();                        /* 什么都不引入 */
-importScripts('foo.js');                /* 只引入 "foo.js" */
-importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
+importScripts("foo.js");                /* 只引入 "foo.js" */
+importScripts("foo.js", "bar.js");      /* 引入两个脚本 */
+importScripts(
+  "//example.com/hello.js"
+); /* 你可以从其他来源导入脚本 */
 ```
 
 浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码 (包括使用 {{ domxref("window.setTimeout()") }} 异步执行的代码) 依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
@@ -144,7 +147,7 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 ## 共享 worker
 
-一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论[共享 worker 基础示例](https://github.com/mdn/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/simple-shared-worker/)）中的 javascript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。
+一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论[共享 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）中的 javascript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。
 
 这里，我们关注一下专用 worker 和共享 worker 之间的区别。在这个示例中有 2 个 HTML 页面，每个页面所包含的 javascript 代码使用的是同一个 worker。
 
@@ -154,15 +157,15 @@ importScripts('foo.js', 'bar.js');      /* 引入两个脚本 */
 
 ### 生成一个共享 worker
 
-生成一个新的共享 worker 与生成一个专用 worker 非常相似，只是构造器的名字不同（查看 [index.html](https://github.com/mdn/simple-shared-worker/blob/gh-pages/index.html) 和 [index2.html](https://mdn.github.io/simple-shared-worker/index2.html)）——生成共享 worker 的代码如下：
+生成一个新的共享 worker 与生成一个专用 worker 非常相似，只是构造器的名字不同（查看 [index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) 和 [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html)）——生成共享 worker 的代码如下：
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker('worker.js');
 ```
 
 一个非常大的区别在于，与一个共享 worker 通信必须通过端口对象——一个确切的打开的端口供脚本与 worker 通信（在专用 worker 中这一部分是隐式进行的）。
 
-在传递消息之前，端口连接必须被显式的打开，打开方式是使用 onmessage 事件处理函数或者 start() 方法。示例中的 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js) 文件没有调用了 start() 方法，这些调用并不那么重要是因为 onmessage 事件处理函数正在被使用。start() 方法的调用只在一种情况下需要，那就是消息事件被 addEventListener() 方法使用。
+在传递消息之前，端口连接必须被显式的打开，打开方式是使用 onmessage 事件处理函数或者 start() 方法。示例中的 [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) 和 [worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js) 文件没有调用了 start() 方法，这些调用并不那么重要是因为 onmessage 事件处理函数正在被使用。start() 方法的调用只在一种情况下需要，那就是消息事件被 addEventListener() 方法使用。
 
 在使用 start() 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 start() 方法。
 
@@ -176,26 +179,26 @@ port.start(); // worker 线程中的调用，假设 port 变量代表一个端�
 
 ### 共享 worker 中消息的接收和发送
 
-现在，消息可以像之前那样发送到 worker 了，但是`postMessage()` 方法必须被端口对象调用（你会再一次看到 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)中相似的结构）：
+现在，消息可以像之前那样发送到 worker 了，但是`postMessage()` 方法必须被端口对象调用（你会再一次看到 [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)中相似的结构）：
 
 ```js
-squareNumber.onchange = function() {
-  myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
-  console.log('Message posted to worker');
-}
+squareNumber.onchange = () => {
+  myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
+  console.log("Message posted to worker");
+};
 ```
 
-回到 worker 中，这里也有一些些复杂（[worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)）:
+回到 worker 中，这里也有一些些复杂（[worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/worker.js)）:
 
 ```js
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = (e) => {
+  const port = e.ports[0];
 
-  port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.onmessage = (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
     port.postMessage(workerResult);
-  }
-}
+  };
+};
 ```
 
 首先，当一个端口连接被创建时（例如：在父级线程中，设置 onmessage 事件处理函数，或者显式调用 start() 方法时），使用 onconnect 事件处理函数来执行代码。
@@ -204,13 +207,13 @@ onconnect = function(e) {
 
 然后，为端口添加一个消息处理函数用来做运算并回传结果给主线程。在 worker 线程中设置此消息处理函数也会隐式的打开与主线程的端口连接，因此这里跟前文一样，对 port.start() 的调用也是不必要的。
 
-最后，回到主脚本，我们处理消息（你会又一次看到 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)中相似的结构）：
+最后，回到主脚本，我们处理消息（你会又一次看到 [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)中相似的结构）：
 
 ```js
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = (e) => {
   result2.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 当一条消息通过端口回到 worker，我们检查结果的类型，然后将运算结果放入结果段落中合适的地方。
@@ -223,7 +226,7 @@ myWorker.port.onmessage = function(e) {
 
 有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的内容安全策略。我们来举个例子，假设一个 document 有如下头部声明：
 
-```
+```http
 Content-Security-Policy: script-src 'self'
 ```
 
@@ -240,43 +243,43 @@ Content-Security-Policy: script-src 'self'
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面 (反之亦然) 的通信过程中，变量的「_拷贝而非共享_」行为：
 
 ```js
-function emulateMessage (vVal) {
-    return eval("(" + JSON.stringify(vVal) + ")");
+function emulateMessage(vVal) {
+  return eval(`(${JSON.stringify(vVal)})`);
 }
 
 // Tests
 
 // test #1
-var example1 = new Number(3);
-alert(typeof example1); // object
-alert(typeof emulateMessage(example1)); // number
+const example1 = new Number(3);
+console.log(typeof example1); // object
+console.log(typeof emulateMessage(example1)); // number
 
 // test #2
-var example2 = true;
-alert(typeof example2); // boolean
-alert(typeof emulateMessage(example2)); // boolean
+const example2 = true;
+console.log(typeof example2); // boolean
+console.log(typeof emulateMessage(example2)); // boolean
 
 // test #3
-var example3 = new String("Hello World");
-alert(typeof example3); // object
-alert(typeof emulateMessage(example3)); // string
+const example3 = new String("Hello World");
+console.log(typeof example3); // object
+console.log(typeof emulateMessage(example3)); // string
 
 // test #4
-var example4 = {
-    "name": "John Smith",
-    "age": 43
+const example4 = {
+  name: "Carina Anand",
+  age: 43,
 };
-alert(typeof example4); // object
-alert(typeof emulateMessage(example4)); // object
+console.log(typeof example4); // object
+console.log(typeof emulateMessage(example4)); // object
 
 // test #5
-function Animal (sType, nAge) {
-    this.type = sType;
-    this.age = nAge;
+function Animal(type, age) {
+  this.type = type;
+  this.age = age;
 }
-var example5 = new Animal("Cat", 3);
-alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object
+const example5 = new Animal("Cat", 3);
+console.log(example5.constructor); // Animal
+console.log(emulateMessage(example5).constructor); // Object
 ```
 
 拷贝而并非共享的那个值称为 _消息_。再来谈谈 `worker`，你可以使用 `postMessage()` 将消息传递给主线程或从主线程传送回来。`message` 事件的 `data` 属性就包含了从 worker 传回来的数据。
@@ -284,10 +287,10 @@ alert(emulateMessage(example5).constructor); // Object
 **example.html**: (主页面):
 
 ```js
-var myWorker = new Worker("my_task.js");
+const myWorker = new Worker("my_task.js");
 
-myWorker.onmessage = function (oEvent) {
-  console.log("Worker said : " + oEvent.data);
+myWorker.onmessage = (event) => {
+  console.log(`Worker said : ${event.data}`);
 };
 
 myWorker.postMessage("ali");
@@ -296,10 +299,10 @@ myWorker.postMessage("ali");
 **my_task.js** (worker):
 
 ```js
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
-onmessage = function (oEvent) {
-  postMessage("Hi " + oEvent.data);
+onmessage = (event) => {
+  postMessage(`Hi, ${event.data}`);
 };
 ```
 
@@ -369,115 +372,124 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 
 首先，我们创建一个 QueryableWorker 的类，它接收 worker 的 url、一个默认侦听函数、和一个错误处理函数作为参数，这个类将会记录所有的侦听的列表并且帮助我们与 worker 进行通信。
 
-```
+```js
 function QueryableWorker(url, defaultListener, onError) {
-    var instance = this,
-        worker = new Worker(url),
-        listeners = {};
+  const instance = this;
+  const worker = new Worker(url);
+  const listeners = {};
 
-    this.defaultListener = defaultListener || function() {};
+  this.defaultListener = defaultListener ?? (() => {});
 
-    if (onError) {worker.onerror = onError;}
+  if (onError) {
+    worker.onerror = onError;
+  }
 
-    this.postMessage = function(message) {
-        worker.postMessage(message);
-    }
+  this.postMessage = (message) => {
+    worker.postMessage(message);
+  };
 
-    this.terminate = function() {
-        worker.terminate();
-    }
+  this.terminate = () => {
+    worker.terminate();
+  };
 }
 ```
 
 紧接着，我们写出新增和删除侦听的方法。
 
-```
-this.addListeners = function(name, listener) {
-    listeners[name] = listener;
-}
+```js
+this.addListeners = (name, listener) => {
+  listeners[name] = listener;
+};
 
-this.removeListeners = function(name) {
-    delete listeners[name];
-}
+this.removeListeners = (name) => {
+  delete listeners[name];
+};
 ```
 
 这里我们让 worker 处理 2 个这样的简单操作：区别 2 个数字并在 3 秒后弹框提示。为了完成这个操作，我们首先实现一个 sendQuery 方法，该方法可以查询 worker 是否真正有我们所需要的对应方法。
 
-```
-/*
-  This functions takes at least one argument, the method name we want to query.
-  Then we can pass in the arguments that the method needs.
- */
-this.sendQuery = function() {
-    if (arguments.length < 1) {
-         throw new TypeError('QueryableWorker.sendQuery takes at least one argument');
-         return;
-    }
-    worker.postMessage({
-        'queryMethod': arguments[0],
-        'queryArguments': Array.prototype.slice.call(arguments, 1)
-    });
-}
+```js
+// 该函数至少需要一个参数，即我们想要查询的方法名称。
+// 然后我们可以传入方法所需的参数。
+this.sendQuery = (queryMethod, ...queryMethodArguments) => {
+  if (!queryMethod) {
+    throw new TypeError(
+      "QueryableWorker.sendQuery takes at least one argument"
+    );
+  }
+  worker.postMessage({
+    queryMethod,
+    queryMethodArguments,
+  });
+};
 ```
 
 我们以`onmessage 方法作为`QueryableWorker 的结尾。如果 worker 有我们所需要的对应的方法，它就会返回相对应的侦听方法的名字以及所需要的参数，我们只需要在侦听列表`listeners 中找到它：`
 
-```
-worker.onmessage = function(event) {
-    if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethodListener') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
-        listeners[event.data.queryMethodListener].apply(instance, event.data.queryMethodArguments);
-    } else {
-        this.defaultListener.call(instance, event.data);
-    }
-}
+```js
+worker.onmessage = (event) => {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, "queryMethodListener") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
+  ) {
+    listeners[event.data.queryMethodListener].apply(
+      instance,
+      event.data.queryMethodArguments
+    );
+  } else {
+    this.defaultListener.call(instance, event.data);
+  }
+};
 ```
 
 现在回到 worker 中。首先我们需要一个能够完成这 2 个操作的方法：
 
-```
-var queryableFunctions = {
-    getDifference: function(a, b) {
-        reply('printStuff', a - b);
-    },
-    waitSomeTime: function() {
-        setTimeout(function() {
-            reply('doAlert', 3, 'seconds');
-        }, 3000);
-    }
+```js
+const queryableFunctions = {
+  getDifference(a, b) {
+    reply("printStuff", a - b);
+  },
+  waitSomeTime() {
+    setTimeout(() => {
+      reply("doAlert", 3, "seconds");
+    }, 3000);
+  },
+};
+
+function reply(queryMethodListener, ...queryMethodArguments) {
+  if (!queryMethodListener) {
+    throw new TypeError("reply - takes at least one argument");
+  }
+  postMessage({
+    queryMethodListener,
+    queryMethodArguments,
+  });
 }
 
-function reply() {
-    if (arguments.length < 1) {
-        throw new TypeError('reply - takes at least one argument');
-        return;
-    }
-    postMessage({
-        queryMethodListener: arguments[0],
-        queryMethodArguments: Array.prototype.slice.call(arguments, 1)
-    });
-}
-
-/* This method is called when main page calls QueryWorker's postMessage method directly*/
+// 当主页面直接调用 QueryWorker 的 postMessage 方法时，该方法被调用。
 function defaultReply(message) {
-    // do something
+  // 做点什么
 }
 ```
 
 `onmessage 方法也就很简单了：`
 
-```
-onmessage = function(event) {
-    if (event.data instanceof Object &&
-        event.data.hasOwnProperty('queryMethod') &&
-        event.data.hasOwnProperty('queryMethodArguments')) {
-        queryableFunctions[event.data.queryMethod]
-            .apply(self, event.data.queryMethodArguments);
-    } else {
-        defaultReply(event.data);
-    }
-}
+```js
+onmessage = (event) => {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
+  ) {
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments
+    );
+  } else {
+    defaultReply(event.data);
+  }
+};
 ```
 
 接下来给出一个完整的实现：
@@ -485,124 +497,163 @@ onmessage = function(event) {
 **example.html** (the main page):
 
 ```html
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8"  />
-<title>MDN Example - Queryable worker</title>
-<script type="text/javascript">
-  /*
-    QueryableWorker instances methods:
-     * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
-     * postMessage(string or JSON Data): see Worker.prototype.postMessage()
-     * terminate(): terminates the Worker
-     * addListener(name, function): adds a listener
-     * removeListener(name): removes a listener
-    QueryableWorker instances properties:
-     * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
-  */
-  function QueryableWorker (sURL, fDefListener, fOnError) {
-    var oInstance = this, oWorker = new Worker(sURL), oListeners = {};
-    this.defaultListener = fDefListener || function () {};
-    oWorker.onmessage = function (oEvent) {
-      if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("vo42t30") && oEvent.data.hasOwnProperty("rnb93qh")) {
-        oListeners[oEvent.data.vo42t30].apply(oInstance, oEvent.data.rnb93qh);
-      } else {
-        this.defaultListener.call(oInstance, oEvent.data);
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MDN Example - Queryable worker</title>
+    <script type="text/javascript">
+      // QueryableWorker 实例的方法：
+      //   * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc.): 调用一个 Worker 的可查询函数
+      //   * postMessage(string or JSON Data): 见 Worker.prototype.postMessage()
+      //   * terminate(): 终止 Worker
+      //   * addListener(name, function): 添加一个监听器
+      //   * removeListener(name): 移除一个监听器
+      // QueryableWorker 实例的属性：
+      //   * defaultListener: 默认监听器只在 Worker 直接调用 postMessage() 函数时执行
+      function QueryableWorker(url, defaultListener, onError) {
+        const instance = this;
+        const worker = new Worker(url);
+        const listeners = {};
+
+        this.defaultListener = defaultListener ?? (() => {});
+
+        if (onError) {
+          worker.onerror = onError;
+        }
+
+        this.postMessage = (message) => {
+          worker.postMessage(message);
+        };
+
+        this.terminate = () => {
+          worker.terminate();
+        };
+
+        this.addListener = (name, listener) => {
+          listeners[name] = listener;
+        };
+
+        this.removeListener = (name) => {
+          delete listeners[name];
+        };
+
+        // 这个函数至少需要一个参数，即我们想要查询的方法名称。
+        // 然后我们可以传入方法所需的参数。
+        this.sendQuery = (queryMethod, ...queryMethodArguments) => {
+          if (!queryMethod) {
+            throw new TypeError(
+              "QueryableWorker.sendQuery takes at least one argument"
+            );
+          }
+          worker.postMessage({
+            queryMethod,
+            queryMethodArguments,
+          });
+        };
+
+        worker.onmessage = (event) => {
+          if (
+            event.data instanceof Object &&
+            Object.hasOwn(event.data, "queryMethodListener") &&
+            Object.hasOwn(event.data, "queryMethodArguments")
+          ) {
+            listeners[event.data.queryMethodListener].apply(
+              instance,
+              event.data.queryMethodArguments
+            );
+          } else {
+            this.defaultListener.call(instance, event.data);
+          }
+        };
       }
-    };
-    if (fOnError) { oWorker.onerror = fOnError; }
-    this.sendQuery = function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-      if (arguments.length < 1) { throw new TypeError("QueryableWorker.sendQuery - not enough arguments"); return; }
-      oWorker.postMessage({ "bk4e1h0": arguments[0], "ktp3fm1": Array.prototype.slice.call(arguments, 1) });
-    };
-    this.postMessage = function (vMsg) {
-      //I just think there is no need to use call() method
-      //how about just oWorker.postMessage(vMsg);
-      //the same situation with terminate
-      //well,just a little faster,no search up the prototye chain
-      Worker.prototype.postMessage.call(oWorker, vMsg);
-    };
-    this.terminate = function () {
-      Worker.prototype.terminate.call(oWorker);
-    };
-    this.addListener = function (sName, fListener) {
-      oListeners[sName] = fListener;
-    };
-    this.removeListener = function (sName) {
-      delete oListeners[sName];
-    };
-  };
 
-  // your custom "queryable" worker
-  var oMyTask = new QueryableWorker("my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */);
+      // 你自定义的 "queryable" worker
+      const myTask = new QueryableWorker("my_task.js");
 
-  // your custom "listeners"
+      // 你自定义的 "listeners"
+      myTask.addListener("printStuff", (result) => {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(`The difference is ${result}!`)
+          );
+      });
 
-  oMyTask.addListener("printSomething", function (nResult) {
-    document.getElementById("firstLink").parentNode.appendChild(document.createTextNode(" The difference is " + nResult + "!"));
-  });
-
-  oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
-    alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
-  });
-</script>
-</head>
-<body>
-  <ul>
-    <li><a id="firstLink" href="javascript:oMyTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-    <li><a href="javascript:oMyTask.sendQuery('waitSomething');">Wait 3 seconds</a></li>
-    <li><a href="javascript:oMyTask.terminate();">terminate() the Worker</a></li>
-  </ul>
-</body>
+      myTask.addListener("doAlert", (time, unit) => {
+        alert(`Worker waited for ${time} ${unit} :-)`);
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:myTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.sendQuery('waitSomeTime');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:myTask.terminate();">terminate() the Worker</a>
+      </li>
+    </ul>
+  </body>
 </html>
 ```
 
 **my_task.js** (the worker):
 
 ```js
-// your custom PRIVATE functions
-
-function myPrivateFunc1 () {
-  // do something
-}
-
-function myPrivateFunc2 () {
-  // do something
-}
-
-// etc. etc.
-
-// your custom PUBLIC functions (i.e. queryable from the main page)
-
-var queryableFunctions = {
-  // example #1: get the difference between two numbers:
-  getDifference: function (nMinuend, nSubtrahend) {
-      reply("printSomething", nMinuend - nSubtrahend);
+const queryableFunctions = {
+  // 示例1：得到两个数字的差值：
+  getDifference(minuend, subtrahend) {
+    reply("printStuff", minuend - subtrahend);
   },
-  // example #2: wait three seconds
-  waitSomething: function () {
-      setTimeout(function() { reply("alertSomething", 3, "seconds"); }, 3000);
-  }
+
+  // 示例2：等待三秒
+  waitSomeTime() {
+    setTimeout(() => {
+      reply("doAlert", 3, "seconds");
+    }, 3000);
+  },
 };
 
-// system functions
+// 系统函数
 
-function defaultQuery (vMsg) {
-  // your default PUBLIC function executed only when main page calls the queryableWorker.postMessage() method directly
-  // do something
+function defaultReply(message) {
+  // 你的默认 PUBLIC 函数只在主页面直接调用 queryableWorker.postMessage() 方法时执行。
+  // 做点什么
 }
 
-function reply (/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
-  if (arguments.length < 1) { throw new TypeError("reply - not enough arguments"); return; }
-  postMessage({ "vo42t30": arguments[0], "rnb93qh": Array.prototype.slice.call(arguments, 1) });
+function reply(queryMethodListener, ...queryMethodArguments) {
+  if (!queryMethodListener) {
+    throw new TypeError("reply - not enough arguments");
+  }
+  postMessage({
+    queryMethodListener,
+    queryMethodArguments,
+  });
 }
 
-onmessage = function (oEvent) {
-  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("bk4e1h0") && oEvent.data.hasOwnProperty("ktp3fm1")) {
-    queryableFunctions[oEvent.data.bk4e1h0].apply(self, oEvent.data.ktp3fm1);
+onmessage = (event) => {
+  if (
+    event.data instanceof Object &&
+    Object.hasOwn(event.data, "queryMethod") &&
+    Object.hasOwn(event.data, "queryMethodArguments")
+  ) {
+    queryableFunctions[event.data.queryMethod].apply(
+      self,
+      event.data.queryMethodArguments
+    );
   } else {
-    defaultQuery(oEvent.data);
+    defaultReply(event.data);
   }
 };
 ```
@@ -614,12 +665,8 @@ onmessage = function (oEvent) {
 Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
 
 ```js
-// Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
-for (var i = 0; i < uInt8Array .length; ++i) {
-  uInt8Array[i] = i;
-}
-
+// 创建一个32MB的 "文件"，用从0到255的连续数值填充它 —— 32MB = 1024 * 1024 * 32
+const uInt8Array = new Uint8Array(1024 * 1024 * 32).map((v, i) => i);
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
@@ -631,52 +678,61 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-<meta charset="UTF-8" />
-<title>MDN Example - Embedded worker</title>
-<script type="text/js-worker">
-  // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
-  var myVar = "Hello World!";
-  // 剩下的 worker 代码写到这里。
-</script>
-<script type="text/javascript">
-  // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
-  function pageLog (sMsg) {
-    // 使用 fragment：这样浏览器只会进行一次渲染/重排。
-    var oFragm = document.createDocumentFragment();
-    oFragm.appendChild(document.createTextNode(sMsg));
-    oFragm.appendChild(document.createElement("br"));
-    document.querySelector("#logDisplay").appendChild(oFragm);
-  }
-</script>
-<script type="text/js-worker">
-  // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
-  onmessage = function (oEvent) {
-    postMessage(myVar);
-  };
-  // 剩下的 worker 代码写到这里。
-</script>
-<script type="text/javascript">
-  // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>MDN Example - Embedded worker</title>
+  <script type="text/js-worker">
+      // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
+      const myVar = 'Hello World!';
+      // 剩下的 worker 代码写到这里。
+    </script>
+  <script>
+    // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
+    function pageLog(sMsg) {
+      // 使用 fragment：这样浏览器只会进行一次渲染/重排。
+      const frag = document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(sMsg));
+      frag.appendChild(document.createElement("br"));
+      document.querySelector("#logDisplay").appendChild(frag);
+    }
+  </script>
+  <script type="text/js-worker">
+      // 该脚本不会被 JS 引擎解析，因为它的 mime-type 是 text/js-worker。
+      onmessage = (event) => {
+        postMessage(myVar);
+      };
+      // 剩下的 worker 代码写到这里。
+    </script>
+  <script>
+    // 该脚本会被 JS 引擎解析，因为它的 mime-type 是 text/javascript。
 
-  // 在过去...：
-  // 我们使用 blob builder
-  // ...但是现在我们使用 Blob...:
-  var blob = new Blob(Array.prototype.map.call(document.querySelectorAll("script[type=\"text\/js-worker\"]"), function (oScript) { return oScript.textContent; }),{type: "text/javascript"});
+    // 过去存在 blob builder，但现在我们使用Blob
+    const blob = new Blob(
+      Array.prototype.map.call(
+        document.querySelectorAll("script[type='text\/js-worker']"),
+        (script) => script.textContent,
+        { type: "text/javascript" }
+      )
+    );
 
-  // 创建一个新的 document.worker 属性，包含所有 "text/js-worker" 脚本。
-  document.worker = new Worker(window.URL.createObjectURL(blob));
+    // 创建一个新的 document.worker 属性，包含所有 "text/js-worker" 脚本。
+    document.worker = new Worker(window.URL.createObjectURL(blob));
 
-  document.worker.onmessage = function (oEvent) {
-    pageLog("Received: " + oEvent.data);
-  };
+    document.worker.onmessage = (event) => {
+      pageLog(`Received: ${event.data}`);
+    };
 
-  // 启动 worker.
-  window.onload = function() { document.worker.postMessage(""); };
-</script>
+    // 启动 worker。
+    window.onload = () => {
+      document.worker.postMessage("");
+    };
+  </script>
 </head>
-<body><div id="logDisplay"></div></body>
+<body>
+<div id="logDisplay"></div>
+</body>
 </html>
 ```
 
@@ -684,10 +740,10 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 这样也不足为奇，你仍然可以将一个函数转换为 blob，然后为这个 blob 生成 URL 对象。比如：
 
-```
+```js
 function fn2workerURL(fn) {
-  var blob = new Blob(['('+fn.toString()+')()'], {type: 'application/javascript'})
-  return URL.createObjectURL(blob)
+  const blob = new Blob([`(${fn.toString()})()`], { type: "text/javascript" });
+  return URL.createObjectURL(blob);
 }
 ```
 
@@ -704,34 +760,21 @@ worker 的一个优势在于能够执行处理器密集型的运算而不会阻�
 下面的 JavaScript 代码保存在「fibonacci.js」文件中，与下一节的 HTML 文件关联。
 
 ```js
-var results = [];
+self.onmessage = (e) => {
+  const userNum = Number(e.data);
+  fibonacci(userNum);
+};
 
-function resultReceiver(event) {
-  results.push(parseInt(event.data));
-  if (results.length == 2) {
-    postMessage(results[0] + results[1]);
+function fibonacci(num) {
+  let a = 1;
+  let b = 0;
+  while (num >= 0) {
+    [a, b] = [a + b, a];
+    num--;
   }
+
+  self.postMessage(b);
 }
-
-function errorReceiver(event) {
-  throw event.data;
-}
-
-onmessage = function(event) {
-  var n = parseInt(event.data);
-
-  if (n == 0 || n == 1) {
-    postMessage(n);
-    return;
-  }
-
-  for (var i = 1; i <= 2; i++) {
-    var worker = new Worker("fibonacci.js");
-    worker.onmessage = resultReceiver;
-    worker.onerror = errorReceiver;
-    worker.postMessage(n - i);
-  }
- };
 ```
 
 worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `postMessage() 时该函数会接收到发送过来的信息。`(注意，这么使用并不等同于定义一个同名的全局*变量* ，或是定义一个同名的*函数*。`var onmessage` 与 `function onmessage` 将会定义与该名字相同的全局属性，但是它们不会注册能够接收从创建 worker 的网页发送过来的消息的函数。) 这会启用递归，生成自己的新拷贝来处理计算的每一个循环。
@@ -740,45 +783,69 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 ```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8"  />
-    <title>Test threads fibonacci</title>
-  </head>
-  <body>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fibonacci number generator</title>
+  <style>
+    body {
+      width: 500px;
+    }
 
-  <div id="result"></div>
+    div,
+    p {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <div>
+    <label for="number"
+    >Enter a number that is an index position in the fibonacci sequence to
+      see what number is in that position (e.g. enter 5 and you'll get a
+      result of 8 — fibonacci index position 5 is 8).</label
+    >
+    <input type="number" id="number" />
+  </div>
+  <div>
+    <input type="submit" />
+  </div>
+</form>
 
-  <script language="javascript">
+<p id="result"></p>
 
-    var worker = new Worker("fibonacci.js");
+<script>
+  const form = document.querySelector("form");
+  const input = document.querySelector('input[type="number"]');
+  const result = document.querySelector("p#result");
+  const worker = new Worker("fibonacci.js");
 
-    worker.onmessage = function(event) {
-      document.getElementById("result").textContent = event.data;
-      dump("Got: " + event.data + "\n");
-    };
+  worker.onmessage = (event) => {
+    result.textContent = event.data;
+    console.log(`Got: ${event.data}`);
+  };
 
-    worker.onerror = function(error) {
-      dump("Worker error: " + error.message + "\n");
-      throw error;
-    };
+  worker.onerror = (error) => {
+    console.log(`Worker error: ${error.message}`);
+    throw error;
+  };
 
-    worker.postMessage("5");
-
-  </script>
-  </body>
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    worker.postMessage(input.value);
+    input.value = "";
+  };
+</script>
+</body>
 </html>
 ```
 
-网页创建了一个 `div` 元素，ID 为 `result` ，用它来显示运算结果，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为 [转储](</en/Debugging_JavaScript#dump()>) 错误信息。
+网页创建了一个 `div` 元素，ID 为 `result` ，用它来显示运算结果，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为将错误消息记录到 devtools 控制台。
 
 最后，向 worker 发送一条信息来启动它。
 
-[运行这个例子](/samples/workers/fibonacci)。
-
-### 在后台运行 web I/O
-
-你可以在 [在扩展中使用 worker](/En/Using_workers_in_extensions) 这篇文章中找到相关例子。
+[运行这个例子](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)。
 
 ### 划分任务给多个 worker
 
@@ -789,8 +856,15 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 除了专用和共享的 web worker，还有一些其他类型的 worker：
 
 - [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API) （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
-- Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且有在你的 worker 中访问 [js-ctypes](/zh-CN/js-ctypes) 的权限，你可以使用 Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。
 - [Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers) （音频 worker）使得在 web worker 上下文中直接完成脚本化音频处理成为可能。
+
+## 调试 worker threads
+
+大多数浏览器都允许你在 JavaScript 调试器中调试 Web Worker，其方式与调试主线程完全相同！例如，Firefox 和 Chrome 都列出了主线程和活动工作线程的 JavaScript 源文件，所有这些文件都可以打开以设置断点和日志点。
+要了解如何调试 Web Worker，请参阅每个浏览器的 JavaScript 调试器的文档：
+
+- [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## worker 中可用的函数和接口
 
@@ -803,6 +877,8 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 在一个 worker 中最主要的你不能做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过{{domxref("DedicatedWorkerGlobalScope.postMessage")}}回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
+> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>. 例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service workers 不支持这个方法，但在专用和共享 workers 中支持。
+
 > **备注：** 获取 worker 中完整的方法列表，请参阅[Functions and interfaces available to workers](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
 
 ## 规范
@@ -814,3 +890,4 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 - [`Worker`](/zh-CN/docs/Web/API/Worker) 接口
 - [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker) 接口
 - [worker 提供的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) 接口
