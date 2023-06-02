@@ -4,6 +4,17 @@
 
 ### CSS
 
+| 英文词汇         | 翻译    | 备注                     | 引用来源                                                 |
+| ---------------- | ------- | ------------------------ | -------------------------------------------------------- |
+| block            | 区块    | 用于表示布局、书写模式等 | <https://github.com/mdn/translated-content/issues/12632> |
+| block direction  | 块向    |                          | 同 `block`                                               |
+| block end/start  | 块末/首 |                          | 同 `block`                                               |
+| block-level      | 块级    |                          | 同 `block`                                               |
+| inline           | 行内    | 用于表示布局、书写模式等 | <https://github.com/mdn/translated-content/issues/12632> |
+| inline direction | 行向    |                          | 同 `inline`                                              |
+| inline end/start | 行末/首 |                          | 同 `inline`                                              |
+| inline-level     | 行级    |                          | 同 `inline`                                              |
+
 ### HTML
 
 | 英文词汇        | 翻译     | 备注 | 引用来源                                                                      |
