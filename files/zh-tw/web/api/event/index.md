@@ -32,7 +32,6 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 - {{domxref("DeviceLightEvent")}}
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}}
 - {{domxref("DOMTransactionEvent")}}
 - {{domxref("DragEvent")}}
 - {{domxref("EditingBeforeInputEvent")}}
@@ -69,7 +68,6 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 - {{domxref("TrackEvent")}}
 - {{domxref("TransitionEvent")}}
 - {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WheelEvent")}}
 

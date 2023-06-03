@@ -1,8 +1,6 @@
 ---
 title: C/C++ から WebAssembly へのコンパイル
-slug: WebAssembly/C_to_wasm
-l10n:
-  sourceCommit: 1bd75874286233173bdf69e5ec8e5ec4052fb0a6
+slug: WebAssembly/C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

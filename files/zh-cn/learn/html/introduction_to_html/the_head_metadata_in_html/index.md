@@ -162,7 +162,7 @@ description 也被使用在搜索引擎显示的结果页中。下面通过一�
 ```html
 <meta
   property="og:image"
-  content="https://developer.mozilla.org/static/img/opengraph-logo.png" />
+  content="https://developer.mozilla.org/mdn-social-share.png" />
 <meta
   property="og:description"
   content="The Mozilla Developer Network (MDN) provides

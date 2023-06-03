@@ -39,8 +39,8 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
 - The [WebSMS API](/zh-CN/API/WebSMS) has been updated and now supports a `read`attribute indicating whether an SMS text message is read or unread.
 - The [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) has been implemented.
 - The [`Blob`](/zh-CN/DOM/Blob) constructor now takes `ArrayBufferView` as a member of `blobParts` parameter in addition to `ArrayBuffer`. ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
-- The {{domxref("DeviceLightEvent")}} specified in the [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) has been implemented.
-- The {{domxref("DeviceProximityEvent")}} and {{domxref("UserProximityEvent")}} [Proximity Events](http://www.w3.org/TR/proximity/) have been implemented.
+- The {{domxref("DeviceLightEvent")}} specified in the [Ambient Light Events Working Draft](https://www.w3.org/TR/ambient-light/) has been implemented.
+- The `DeviceProximityEvent` and `UserProximityEvent` [Proximity Events](https://www.w3.org/TR/proximity/) have been implemented.
 - The {{domxref("File")}} `lastModifiedDate` property has been implemented. ([Firefox bug 673586](https://bugzil.la/673586))
 
 ### JavaScript

@@ -1,6 +1,6 @@
 ---
 title: Guide des polices variables
-slug: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 tags:
   - CSS
   - Fonts

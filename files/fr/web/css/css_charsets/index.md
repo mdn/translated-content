@@ -1,6 +1,6 @@
 ---
 title: Jeux de caractères CSS
-slug: Web/CSS/CSS_Charsets
+slug: Web/CSS/CSS_charsets
 tags:
   - Aperçu
   - CSS
