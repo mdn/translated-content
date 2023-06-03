@@ -2626,10 +2626,6 @@
     "modified": "2019-03-23T22:23:49.095Z",
     "contributors": ["jackblackevo"]
   },
-  "Web/API/Proximity_Events": {
-    "modified": "2019-03-23T23:26:18.756Z",
-    "contributors": ["jackblackevo", "teoli", "MashKao"]
-  },
   "Web/API/Range": {
     "modified": "2019-03-23T22:11:39.715Z",
     "contributors": ["jackblackevo"]

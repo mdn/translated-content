@@ -1,6 +1,6 @@
 ---
 title: Compteurs CSS
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 tags:
   - Avancé
   - CSS

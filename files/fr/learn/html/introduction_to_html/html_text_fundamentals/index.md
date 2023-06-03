@@ -736,7 +736,7 @@ function insertAtCaret(text) {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_mettre_des_balises_pour_une_recette_de_cuisine', 700, 500) }}
+{{ EmbedLiveSample('', 700, 1000) }}
 
 Si vous êtes bloqué, vous pouvez cliquer sur le bouton _Voir la solution_, ou alors regarder l'exemple [text-complete.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html) sur le dépôt GitHub.
 
@@ -944,7 +944,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_soulignez_l'important", 700, 500) }}
+{{ EmbedLiveSample("", 700, 700)}}
 
 ### Italique, gras, soulignement…
 
