@@ -1385,6 +1385,7 @@
 /zh-CN/docs/Web/API/DOMString/Binary	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/DOMTimeStamp	/zh-CN/docs/Glossary/Unix_time
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
+/zh-CN/docs/Web/API/DeviceProximityEvent	/zh-CN/docs/orphaned/Web/API/DeviceProximityEvent
 /zh-CN/docs/Web/API/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/Web/API/Document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
 /zh-CN/docs/Web/API/Document/async	/zh-CN/docs/Web/API/XMLDocument

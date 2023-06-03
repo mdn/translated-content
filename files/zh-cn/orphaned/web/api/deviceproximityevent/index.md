@@ -1,6 +1,7 @@
 ---
 title: DeviceProximityEvent
-slug: Web/API/DeviceProximityEvent
+slug: orphaned/Web/API/DeviceProximityEvent
+original_slug: Web/API/DeviceProximityEvent
 ---
 
 {{APIRef("Proximity Events")}}{{deprecated_header}}
