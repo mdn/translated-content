@@ -26,11 +26,11 @@ slug: Web/API/Notification/dir
 
 ```js
 const options = {
-  body: "Your code submission has received 3 new review comments.",
+  body: "您提交的代码收到了 3 条新的审阅意见。",
   dir: "rtl",
 };
 
-const n = new Notification("New review activity", options);
+const n = new Notification("新评论活动", options);
 
 console.log(n.dir); // "rtl"
 ```
