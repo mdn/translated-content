@@ -5,7 +5,7 @@ slug: Web/API/Notification/data
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 `data` 只读属性返回一个结构化的通知的数据，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定。
+{{domxref("Notification")}} 接口的 **`data`** 只读属性返回一个在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定的、结构化的通知的数据。
 
 通知的数据可以是任意你希望与通知关联的数据。
 
