@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 var step;
 for (step = 0; step < 5; step++) {
   // 執行五次：從step為0到4
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -53,7 +53,9 @@ for ([初始表達式]; [條件式]; [遞增表達式])
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -67,26 +69,28 @@ for ([初始表達式]; [條件式]; [遞增表達式])
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numberSelected = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Number of options selected: ' + howMany(document.selectForm.musicTypes))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Number of options selected: " + howMany(document.selectForm.musicTypes)
+    );
+  });
 </script>
 ```
 
 ## `do...while` 陳述式
 
-`do...while` 陳述式會不斷重複直到一個特定的條件判斷為false。一個do...while 陳述式看起來像以下：
+`do...while` 陳述式會不斷重複直到一個特定的條件判斷為 false。一個 do...while 陳述式看起來像以下：
 
 ```plain
 do
@@ -172,9 +176,8 @@ Label 的值可以是任何不是保留字的 JavaScript 識別字。你用 labe
 在這個範例，`markLoop這個label 識別一個while 迴圈。`
 
 ```js
-markLoop:
-while (theMark == true) {
-   doSomething();
+markLoop: while (theMark == true) {
+  doSomething();
 }
 ```
 
@@ -260,22 +263,20 @@ while (i < 5) {
 如果 continue 有了 checkiandj 的 label 程式會從 checkiandj 陳述式的頭開始繼續。
 
 ```js
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) == 0) {
-          continue checkj;
-        }
-        console.log(j + " is odd.");
-      }
-      console.log("i = " + i);
-      console.log("j = " + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 == 0) {
+      continue checkj;
+    }
+    console.log(j + " is odd.");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` 陳述式
@@ -306,8 +307,8 @@ function dump_props(obj, obj_name) {
 對於一個擁有 make 跟 model 屬性的物件 car 來說，執行結果是：
 
 ```js
-car.make = Ford
-car.model = Mustang
+car.make = Ford;
+car.model = Mustang;
 ```
 
 ### 陣列
@@ -331,11 +332,11 @@ let arr = [3, 5, 7];
 arr.foo = "hello";
 
 for (let i in arr) {
-   console.log(i); // logs "0", "1", "2", "foo"
+  console.log(i); // logs "0", "1", "2", "foo"
 }
 
 for (let i of arr) {
-   console.log(i); // logs 3, 5, 7
+  console.log(i); // logs 3, 5, 7
 }
 ```
 
