@@ -5,7 +5,7 @@ slug: Web/API/Notification/dir
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的只读属性 `dir` 表明通知的文本方向，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `dir` 选项中指定。
+{{domxref("Notification")}} 接口的 `dir` 只读属性表明通知的文本方向，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `dir` 选项中指定。
 
 ## 值
 
