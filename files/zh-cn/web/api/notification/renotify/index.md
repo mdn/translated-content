@@ -9,7 +9,7 @@ slug: Web/API/Notification/renotify
 
 ## 值
 
-一个 boolean 值。默认为 `false`；设为 `true` 将会重新通知用户。
+一个布尔值。默认值为 `false`；设为 `true` 将会重新通知用户。
 
 ## 例子
 
