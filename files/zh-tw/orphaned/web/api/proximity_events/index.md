@@ -1,6 +1,7 @@
 ---
 title: Proximity
-slug: Web/API/Proximity_Events
+slug: orphaned/Web/API/Proximity_Events
+original_slug: Web/API/Proximity_Events
 ---
 
 {{ SeeCompatTable }}
