@@ -15,11 +15,11 @@ Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的�
 
 > **备注：** 参见 [Web Workers API 落地页](/zh-CN/docs/Web/API/Web_Workers_API)以获取 worker 的参考文档和更多指引。
 
-在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量 window 对象之下的东西，包括 WebSockets，IndexedDB 以及 FireFox OS 专用的 Data Store API 等数据存储机制。查看[Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)获取详情。
+在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量 window 对象之下的东西，包括 WebSockets，IndexedDB 以及 FireFox OS 专用的 Data Store API 等数据存储机制。查看 [Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers) 获取详情。
 
-workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
+workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
 
-只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 XMLHttpRequest 的 responseXML 和 channel 属性总会返回 null。
+只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 XMLHttpRequest 的 responseXML 和 channel 属性总会返回 null。
 
 ## 专用 worker
 
@@ -95,7 +95,7 @@ myWorker.onmessage = (e) => {
 
 ### 终止 worker
 
-如果你需要从主线程中立刻终止一个运行中的 worker，可以调用 worker 的{{domxref("Worker", "terminate")}} 方法：
+如果你需要从主线程中立刻终止一个运行中的 worker，可以调用 worker 的 {{domxref("Worker", "terminate")}} 方法：
 
 ```js
 myWorker.terminate();
@@ -113,7 +113,7 @@ close();
 
 当 worker 出现运行中错误时，它的 `onerror` 事件处理函数会被调用。它会收到一个扩展了 `ErrorEvent` 接口的名为 `error`的事件。
 
-该事件不会冒泡并且可以被取消；为了防止触发默认动作，worker 可以调用错误事件的 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)方法。
+该事件不会冒泡并且可以被取消；为了防止触发默认动作，worker 可以调用错误事件的 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 方法。
 
 错误事件有以下三个用户关心的字段：
 
@@ -130,7 +130,7 @@ close();
 
 ### 引入脚本与库
 
-Worker 线程能够访问一个全局函数`importScripts()`来引入脚本，该函数接受 0 个或者多个 URI 作为参数来引入资源；以下例子都是合法的：
+Worker 线程能够访问一个全局函数 `importScripts()` 来引入脚本，该函数接受 0 个或者多个 URI 作为参数来引入资源；以下例子都是合法的：
 
 ```js
 importScripts();                        /* 什么都不引入 */
@@ -147,7 +147,7 @@ importScripts(
 
 ## 共享 worker
 
-一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论[共享 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）中的 JavaScript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。
+一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论 [共享 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）中的 JavaScript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。
 
 这里，我们关注一下专用 worker 和共享 worker 之间的区别。在这个示例中有 2 个 HTML 页面，每个页面所包含的 JavaScript 代码使用的是同一个 worker。
 
@@ -167,7 +167,7 @@ const myWorker = new SharedWorker('worker.js');
 
 在传递消息之前，端口连接必须被显式的打开，打开方式是使用 `onmessage` 事件处理函数或者 `start()` 方法。只有一种情况下需要调用 `start()` 方法，那就是 `message` 事件被 `addEventListener()` 方法使用。
 
-> **备注：** 在使用 start() 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 start() 方法。
+> **备注：** 在使用 `start()` 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 `start()` 方法。
 
 ```js
 myWorker.port.start();  // 父级线程中的调用
@@ -201,11 +201,11 @@ onconnect = (e) => {
 };
 ```
 
-首先，当一个端口连接被创建时（例如：在父级线程中，设置 onmessage 事件处理函数，或者显式调用 start() 方法时），使用 onconnect 事件处理函数来执行代码。
+首先，当一个端口连接被创建时（例如：在父级线程中，设置 `onmessage` 事件处理函数，或者显式调用 `start()` 方法时），使用 `onconnect` 事件处理函数来执行代码。
 
-使用事件的 ports 属性来获取端口并存储在变量中。
+使用事件的 `ports` 属性来获取端口并存储在变量中。
 
-然后，为端口添加一个消息处理函数用来做运算并回传结果给主线程。在 worker 线程中设置此消息处理函数也会隐式的打开与主线程的端口连接，因此这里跟前文一样，对 port.start() 的调用也是不必要的。
+然后，为端口添加一个 `onmessage` 处理函数用来做运算并回传结果给主线程。在 worker 线程中设置此 `onmessage` 处理函数也会隐式的打开与主线程的端口连接，因此这里跟前文一样，对 `port.start()` 的调用也是不必要的。
 
 最后，回到主脚本，我们处理消息（你会又一次看到 [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)中相似的结构）：
 
@@ -220,17 +220,17 @@ myWorker.port.onmessage = (e) => {
 
 ## 关于线程安全
 
-{{domxref("Worker")}}接口会生成真正的操作系统级别的线程，如果你不太小心，那么并发会对你的代码产生有趣的影响。然而，对于 web worker 来说，与其他线程的通信点会被很小心的控制，这意味着你很难引起并发问题。你没有办法去访问非线程安全的组件或者是 DOM，此外你还需要通过序列化对象来与线程交互特定的数据。所以你要是不费点劲儿，还真搞不出错误来。
+{{domxref("Worker")}} 接口会生成真正的操作系统级别的线程，如果你不太小心，那么并发会对你的代码产生有趣的影响。然而，对于 web worker 来说，与其他线程的通信点会被很小心的控制，这意味着你很难引起并发问题。你没有办法去访问非线程安全的组件或者是 DOM，此外你还需要通过序列化对象来与线程交互特定的数据。所以你要是不费点劲儿，还真搞不出错误来。
 
 ## 内容安全策略
 
-有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的内容安全策略。我们来举个例子，假设一个 document 有如下头部声明：
+有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的 [内容安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)。我们来举个例子，假设一个 document 有如下头部声明：
 
 ```http
 Content-Security-Policy: script-src 'self'
 ```
 
-这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 eval() 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 eval() 的。
+这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 `eval()` 的。
 
 为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身加上一个 [内容安全策略](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)。
 
@@ -238,7 +238,7 @@ Content-Security-Policy: script-src 'self'
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用 [结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的「_拷贝而非共享_」行为：
 
@@ -306,7 +306,7 @@ onmessage = (event) => {
 };
 ```
 
-[结构化拷贝](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
+[结构化拷贝](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
 
 ### 传递数据的例子
 
@@ -370,7 +370,7 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 
 如果你需要传输非常复杂的数据，还要同时在主页与 Worker 内调用多个方法，那么可以考虑创建一个类似下面的系统。
 
-首先，我们创建一个 QueryableWorker 的类，它接收 worker 的 url、一个默认侦听函数和一个错误处理函数作为参数，这个类将会记录所有的侦听的列表并且帮助我们与 worker 进行通信。
+首先，我们创建一个 `QueryableWorker` 的类，它接收 worker 的 URL、一个默认侦听函数和一个错误处理函数作为参数，这个类将会记录所有的侦听的列表并且帮助我们与 worker 进行通信。
 
 ```js
 function QueryableWorker(url, defaultListener, onError) {
@@ -406,7 +406,7 @@ this.removeListeners = (name) => {
 };
 ```
 
-这里我们让 worker 处理 2 个这样的简单操作：区别 2 个数字并在 3 秒后弹框提示。为了完成这个操作，我们首先实现一个 sendQuery 方法，该方法可以查询 worker 是否真正有我们所需要的对应方法。
+这里我们让 worker 处理 2 个这样的简单操作：区别 2 个数字并在 3 秒后弹框提示。为了完成这个操作，我们首先实现一个 `sendQuery` 方法，该方法可以查询 worker 是否真正有我们所需要的对应方法。
 
 ```js
 // 该函数至少需要一个参数，即我们想要查询的方法名称。
@@ -658,11 +658,13 @@ onmessage = (event) => {
 };
 ```
 
-这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名 "queryMethod"、"queryMethodListeners" 和 "queryMethodArguments" 可以是任何东西，只要它们在`QueryableWorker` 和 `worker`中保持一致。
+这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名 "queryMethod"、"queryMethodListeners" 和 "queryMethodArguments" 可以是任何东西，只要它们在 `QueryableWorker` 和 `worker` 中保持一致。
 
 ### 通过转让所有权 (可转让对象) 来传递数据
 
-Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象（[可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)）传递给一个 worker 从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会（完整无差的）传递给 Worker 上下文。
+现代浏览器包含另一种性能更高的方法来将特定类型的对象（[可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)）传递给一个 worker 从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。
+
+例如，当你将一个 {{jsxref("ArrayBuffer")}} 对象从主应用转让到 Worker 中，原始的 {{jsxref("ArrayBuffer")}} 被清除并且无法使用。它包含的内容会（完整无差的）传递给 Worker 上下文。
 
 ```js
 // 创建一个 32MB 的“文件”，用从 0 到 255 的连续数值填充它——32MB = 1024 * 1024 * 32
@@ -674,7 +676,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 特性，并且它的 `type` 特性没有指定成一个可运行的 `mime-type`，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 特性，并且它的 `type` 特性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>
@@ -749,7 +751,7 @@ function fn2workerURL(fn) {
 
 ## 更多示例
 
-本节提供了几个如何使用 DOM worker 的例子。
+本节提供了几个如何使用 web worker 的例子。
 
 ### 在后台执行运算
 
