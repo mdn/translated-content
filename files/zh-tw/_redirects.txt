@@ -873,7 +873,6 @@
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API
 /zh-TW/docs/WebAPI/Permissions	/zh-TW/docs/Web/API/Permissions_API
 /zh-TW/docs/WebAPI/Pointer_Lock	/zh-TW/docs/Web/API/Pointer_Lock_API
-/zh-TW/docs/WebAPI/Proximity	/zh-TW/docs/Web/API/Proximity_Events
 /zh-TW/docs/WebAPI/Using_Light_Events	/en-US/docs/Web/API/AmbientLightSensor
 /zh-TW/docs/WebAPI/Using_Web_Notifications	/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /zh-TW/docs/WebAPI/Vibration	/zh-TW/docs/Web/API/Vibration_API

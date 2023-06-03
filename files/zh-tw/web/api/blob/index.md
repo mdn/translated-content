@@ -39,8 +39,10 @@ slug: Web/API/Blob
 {{domxref("Blob.Blob", "Blob() constructor")}} 建構式允許由其它物件建立 blob 物件。以下的範例演示了以字串來建構 blob 物件：
 
 ```js
-var debug = {hello: "world"};
-var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'});
+var debug = { hello: "world" };
+var blob = new Blob([JSON.stringify(debug, null, 2)], {
+  type: "application/json",
+});
 ```
 
 > **警告：** 在 Blob 建構式出現之前，可以透過 {{domxref("BlobBuilder")}} 來建立 blob 物件（目前已不建議使用）：
@@ -49,7 +51,7 @@ var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'
 > var builder = new BlobBuilder();
 > var fileParts = ['<a id="a"><b id="b">hey!</b></a>'];
 > builder.append(fileParts[0]);
-> var myBlob = builder.getBlob('text/xml');
+> var myBlob = builder.getBlob("text/xml");
 > ```
 
 ### 藉型別陣列建構的 blob 來建立 URL
@@ -58,7 +60,7 @@ var blob = new Blob([JSON.stringify(debug, null, 2)], {type : 'application/json'
 
 ```js
 var typedArray = GetTheTypedArraySomehow();
-var blob = new Blob([typedArray], {type: 'application/octet-binary'}); // pass a useful mime type here
+var blob = new Blob([typedArray], { type: "application/octet-binary" }); // pass a useful mime type here
 var url = URL.createObjectURL(blob);
 // url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
 // now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
@@ -70,8 +72,8 @@ var url = URL.createObjectURL(blob);
 
 ```js
 var reader = new FileReader();
-reader.addEventListener("loadend", function() {
-   // reader.result contains the contents of blob as a typed array
+reader.addEventListener("loadend", function () {
+  // reader.result contains the contents of blob as a typed array
 });
 reader.readAsArrayBuffer(blob);
 ```

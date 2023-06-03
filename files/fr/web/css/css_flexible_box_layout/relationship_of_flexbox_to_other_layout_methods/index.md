@@ -1,7 +1,7 @@
 ---
 title: Les liens entre flexbox et les autres méthodes de disposition
 slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+  Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 tags:
   - CSS
   - Guide

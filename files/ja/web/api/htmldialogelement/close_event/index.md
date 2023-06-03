@@ -1,9 +1,9 @@
 ---
-title: 'HTMLDialogElement: close イベント'
+title: "HTMLDialogElement: close イベント"
 slug: Web/API/HTMLDialogElement/close_event
 original_slug: Web/API/GlobalEventHandlers/onclose
 l10n:
-  sourceCommit: 467a3bda135d24e4dafd3dc26fd812a4d48f7b3a
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef() }}
@@ -14,12 +14,12 @@ l10n:
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりします。
 
 ```js
-addEventListener('close', (event) => {});
+addEventListener("close", (event) => {});
 
-onclose = (event) => { };
+onclose = (event) => {};
 ```
 
 ## イベント型
@@ -35,7 +35,7 @@ onclose = (event) => { };
 ```html
 <dialog class="example-dialog">
   <form method="dialog">
-     <button>Close via method="dialog"</button>
+    <button>Close via method="dialog"</button>
   </form>
   <button class="close">Close via .close() method</button>
   <p>Or hit the <kbd>Esc</kbd> key</p>
@@ -56,22 +56,22 @@ div {
 #### JavaScript
 
 ```js
-const result = document.querySelector('.result');
+const result = document.querySelector(".result");
 
-const dialog = document.querySelector('.example-dialog');
-dialog.addEventListener('close', (event) => {
-    result.textContent = 'dialog was closed';
+const dialog = document.querySelector(".example-dialog");
+dialog.addEventListener("close", (event) => {
+  result.textContent = "dialog was closed";
 });
 
-const openDialog = document.querySelector('.open-dialog');
-openDialog.addEventListener('click', () => {
+const openDialog = document.querySelector(".open-dialog");
+openDialog.addEventListener("click", () => {
   dialog.showModal();
   result.textContent = "";
 });
 
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', () => {
-    dialog.close();
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  dialog.close();
 });
 ```
 

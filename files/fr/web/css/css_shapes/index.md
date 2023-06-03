@@ -1,6 +1,6 @@
 ---
 title: CSS Shapes
-slug: Web/CSS/CSS_Shapes
+slug: Web/CSS/CSS_shapes
 tags:
   - Aperçu
   - CSS

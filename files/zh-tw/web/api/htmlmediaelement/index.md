@@ -16,9 +16,11 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{domxref("AudioTrackList")}} 會列出包含在該媒體元素內部的{{domxref("AudioTrack")}}物件。
 - {{domxref("HTMLMediaElement.autoplay")}}
+
   - : 是一個布林值，表達了 HTML 中是否有[`autoplay`](/zh-TW/docs/Web/HTML/Element/video#autoplay)屬性；意即；表明是否只要在媒體可以播放且不中斷的時候，能夠自動播放。
 
     > **備註：** 在網站上自動播放音訊（或是有音訊的影片），可能是惱人的使用者體驗；因此，應該盡可能地避免。如果你必須要有自動播放的功能，你應該讓它是可選擇的（讓使用者特地去啟動）。 However, this can be useful when creating media elements whose source will be set at a later time, under user control.
+
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : 回傳一個{{domxref("TimeRanges")}}物件，表示媒體當下`buffered`屬性被瀏覽器存取時的緩存（如果有的話）區間。
 - {{domxref("HTMLMediaElement.controller")}}
@@ -88,9 +90,11 @@ _這個介面從{{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref(
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
   - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
+
   - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
 
     > **備註：** Gecko supports only single track playback, and the parsing of tracks' metadata is only available for media with the Ogg container format.
+
 - {{domxref("HTMLMediaElement.volume")}}
   - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
 

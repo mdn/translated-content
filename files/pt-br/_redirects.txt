@@ -727,7 +727,9 @@
 /pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores	/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool
 /pt-BR/docs/Web/CSS/CSS_Columns	/pt-BR/docs/Web/CSS/CSS_multicol_layout
 /pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox	/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/pt-BR/docs/Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS	/pt-BR/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
+/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout	/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+/pt-BR/docs/Web/CSS/CSS_Images/Implementando_sprites_de_imagens_em_CSS	/pt-BR/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+/pt-BR/docs/Web/CSS/CSS_Lists_and_Counters	/pt-BR/docs/Web/CSS/CSS_lists
 /pt-BR/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /pt-BR/docs/Web/CSS/CSS_Positioning	/pt-BR/docs/Web/CSS/CSS_positioned_layout
 /pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
