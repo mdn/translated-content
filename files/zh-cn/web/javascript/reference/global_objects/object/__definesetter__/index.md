@@ -68,7 +68,7 @@ console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
 ```
 
-你也可以使用 {{jsxref("Object.defineProperty()")}} 在对象创建后为其定义一个 setter。与 `__defineSetter__()` 相比，此方法允许你控制 setter 的可枚举性和可配置性，以及定义 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 属性。`Object.defineProperty()` 方法也适用于 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因为他们没有继承 `Object.prototype`，所以没有 `__defineSetter__()` 方法。
+你也可以使用 {{jsxref("Object.defineProperty()")}} 在对象创建后为其定义一个 setter。与 `__defineSetter__()` 相比，此方法允许你控制 setter 的可枚举性和可配置性，以及定义 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 属性。`Object.defineProperty()` 方法也适用于 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，因为它们没有继承 `Object.prototype`，所以没有 `__defineSetter__()` 方法。
 
 ```js
 const o = {};
