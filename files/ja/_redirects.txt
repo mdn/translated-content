@@ -687,8 +687,8 @@
 /ja/docs/DOM/Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
-/ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/DOM/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
+/ja/docs/DOM/UserProximityEvent	/ja/docs/orphaned/Web/API/UserProximityEvent
+/ja/docs/DOM/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent
 /ja/docs/DOM/Using_full-screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/DOM/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/DOM/Using_media_queries_from_code-redirect-1	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
@@ -2665,6 +2665,7 @@
 /ja/docs/Web/API/DataTransfer/mozTypesAt	/ja/docs/orphaned/Web/API/DataTransfer/mozTypesAt
 /ja/docs/Web/API/DataTransfer/mozUserCancelled	/ja/docs/orphaned/Web/API/DataTransfer/mozUserCancelled
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
+/ja/docs/Web/API/DeviceProximityEvent	/ja/docs/orphaned/Web/API/DeviceProximityEvent
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/animationcancel_event	/ja/docs/Web/API/Element/animationcancel_event
 /ja/docs/Web/API/Document/animationend_event	/ja/docs/Web/API/Element/animationend_event
@@ -3019,6 +3020,7 @@
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/Web/API/ProgressEvent
+/ja/docs/Web/API/Proximity_Events	/ja/docs/orphaned/Web/API/Proximity_Events
 /ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable	/ja/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable_static
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create
@@ -3085,8 +3087,9 @@
 /ja/docs/Web/API/URL/createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/URL/revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/USVString	/ja/docs/Glossary/String
-/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
+/ja/docs/Web/API/UserProximityEvent	/ja/docs/orphaned/Web/API/UserProximityEvent
+/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent
+/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/orphaned/Web/API/UserProximityEvent
 /ja/docs/Web/API/User_Timing_API	/ja/docs/Web/API/Performance_API/User_timing
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
 /ja/docs/Web/API/VRDevice/cancelAnimationFrame	/ja/docs/Web/API/VRDisplay/cancelAnimationFrame
@@ -4554,7 +4557,7 @@
 /ja/docs/WebAPI/Battery_Status	/ja/docs/Web/API/Battery_Status_API
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API
-/ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
+/ja/docs/WebAPI/Proximity	/ja/docs/orphaned/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/WebAssembly/Index	/ja/docs/WebAssembly

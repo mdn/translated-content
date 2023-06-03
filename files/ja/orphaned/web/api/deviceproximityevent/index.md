@@ -1,8 +1,7 @@
 ---
 title: DeviceProximityEvent
-slug: Web/API/DeviceProximityEvent
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+slug: orphaned/Web/API/DeviceProximityEvent
+original_slug: Web/API/DeviceProximityEvent
 ---
 
 {{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
