@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 使用正規表達式字面值（regular expression literal），包含兩個 `/` 字元之間的模式如下：
 
-```plain
+```js
 var re = /ab+c/;
 ```
 
@@ -21,8 +21,8 @@ var re = /ab+c/;
 
 或呼叫 {{jsxref("RegExp")}} 物件的建構函式，如下：
 
-```plain
-var re = new RegExp('ab+c');
+```js
+var re = new RegExp("ab+c");
 ```
 
 使用建構子函數供即時編譯正則表達式，當模式會異動、事先未知匹配模式、或者您將從其他地方取得時，使用建構子函數將較為合適。
@@ -56,7 +56,7 @@ var re = new RegExp('ab+c');
 | [`x(?!y)`](#special-negated-look-ahead)       | 符合'x'，且後接的不是'y'。'y'為否定'x'存在的意義，後面不行前功盡棄(negated lookahead)。 例如： `/\d+(?!\.)/` ，要找一個或多個數字時，在後面接的不是「點」的情況下成立。 `var result = /\d+(?!\.)/.exec("3.141")` ， result 執行出來為\[ '141', index: 2, input: '3.141']， index:2，代表 141 從 index = 2 開始。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | [`x\|y`](#special-or)                         | 符合「x」或「y」。舉例來說，`/green\|red/` 的話，會匹配 `"green apple"` 中的 `"green"` 以及 `"red apple."` 的 `"red"` 。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [`{n}`](#special-quantifier)                  | 規定符號確切發生的次數，n 為正整數例如：`/a{2}/`無法在 "candy" 找到、但 "caandy" 行；若字串擁有 2 個以上 "caaandy" 還是只會認前面 2 個。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [`{n,m}`](#special-quantifier-range)          | 搜尋條件：n 為至少、m 為至多，其 n、m 皆為正整數。若把 m 設定為 0，則為 Invalid regular expression。例如：`/a{1,3}/`無法在 "cndy" 匹配到；而在 "candy" 中的第 1 個"a"符合；在 "caaaaaaandy" 中的前 3 個 "aaa" 符合，雖然此串有許多 a，但只認前面 3 個。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [`{n,m}`](#special-quantifier-range)          | 搜尋條件：n 為至少、m 為至多，其 n、m 皆為正整數。若把 m 設定為 0，則為 Invalid regular expression。例如：`/a{1,3}/`無法在 "cndy" 匹配到；而在 "candy" 中的第 1 個"a"符合；在 "caaaaaaandy" 中的前 3 個 "aaa" 符合，雖然此串有許多 a，但只認前面 3 個。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | [`[xyz]`](#special-character-set)             | 字元的集合。此格式會匹配中括號內所有字元, including [escape sequences](/zh-TW/docs/JavaScript/Guide/Values,_variables,_and_literals#Unicode_escape_sequences)。特殊字元，例如點（`.`） 和米字號（`*`），在字元集合中不具特殊意義，所以不需轉換。若要設一個字元範圍的集合，可以使用橫線 `"-"` ，如下例所示： `[a-d]` 等同於 `[abcd]。`會匹配 "brisket" 的 "b" 、"city" 的 'c' ……等。 而`/[a-z.]+/` 和 `/[\w.]+/` 均可匹配字串 "test.i.ng" 。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | [`[^xyz]`](#special-negated-character-set)    | bracket 中寫入的字元將被否定，匹配非出現在 bracket 中的符號。 可用 '-' 來界定字元的範圍。一般直接表達的符號都可以使用這種方式。`[^abc]`可以寫作\[^`a-c]`. "brisket" 中找到 'r' 、"chop."中找到 'h'。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | [`[\b]`](#special-backspace)                  | 吻合倒退字元 (U+0008). (不會跟 \b 混淆)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -69,7 +69,7 @@ var re = new RegExp('ab+c');
 | [`\n`](#special-line-feed)                    | Matches a line feed (U+000A).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | [`\r`](#special-carriage-return)              | Matches a carriage return (U+000D).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | [`\s`](#special-white-space)                  | Matches a single white space character, including space, tab, form feed, line feed. Equivalent to `[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`.For example, `/\s\w*/` matches ' bar' in "foo bar."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| [`\S`](#special-non-white-space)              | Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\\u1680u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]`.For example, `/\S\w*/` matches 'foo' in "foo bar."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| [`\S`](#special-non-white-space)              | Matches a single character other than white space. Equivalent to `[^ \f\n\r\t\v\u00a0\\u1680u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]`.For example, `/\S\w*/` matches 'foo' in "foo bar."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | [`\t`](#special-tab)                          | Matches a tab (U+0009).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | [`\v`](#special-vertical-tab)                 | Matches a vertical tab (U+000B).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | [`\w`](#special-word)                         | 包含數字字母與底線，等同於`[A-Za-z0-9_]`。例如： `/\w/` 符合 'apple'中的 'a' 、'$5.28 中的 '5' 以及 '3D' 中的 '3'。For example, `/\w/` matches 'a' in "apple," '5' in "$5.28," and '3' in "3D."                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -81,9 +81,9 @@ var re = new RegExp('ab+c');
 
 Escaping user input that is to be treated as a literal string within a regular expression—that would otherwise be mistaken for a special character—can be accomplished by simple replacement:
 
-```plain
+```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string
 }
 ```
 
@@ -103,12 +103,12 @@ To match a substring without causing the matched part to be remembered, within t
 
 Regular expressions are used with the `RegExp` methods `test` and `exec` and with the `String` methods `match`, `replace`, `search`, and `split`. These methods are explained in detail in the [JavaScript reference](/zh-TW/docs/Web/JavaScript/Reference).
 
-| Method                                               | Description                                                                                                                        |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.exec", "exec")}}         | A `RegExp` method that executes a search for a match in a string. It returns an array of information or null on a mismatch.        |
-| {{jsxref("RegExp.test", "test")}}         | A `RegExp` method that tests for a match in a string. It returns true or false.                                                    |
+| Method                                  | Description                                                                                                                        |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.exec", "exec")}}       | A `RegExp` method that executes a search for a match in a string. It returns an array of information or null on a mismatch.        |
+| {{jsxref("RegExp.test", "test")}}       | A `RegExp` method that tests for a match in a string. It returns true or false.                                                    |
 | {{jsxref("String.match", "match")}}     | A `String` method that executes a search for a match in a string. It returns an array of information or null on a mismatch.        |
-| {{jsxref("String.search", "search")}}     | A `String` method that tests for a match in a string. It returns the index of the match, or -1 if the search fails.                |
+| {{jsxref("String.search", "search")}}   | A `String` method that tests for a match in a string. It returns the index of the match, or -1 if the search fails.                |
 | {{jsxref("String.replace", "replace")}} | A `String` method that executes a search for a match in a string, and replaces the matched substring with a replacement substring. |
 | {{jsxref("String.split", "split")}}     | A `String` method that uses a regular expression or a fixed string to break a string into an array of substrings.                  |
 
@@ -116,25 +116,25 @@ When you want to know whether a pattern is found in a string, use the `test` or 
 
 In the following example, the script uses the `exec` method to find a match in a string.
 
-```plain
+```js
 var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
+var myArray = myRe.exec("cdbbdbsbz");
 ```
 
 If you do not need to access the properties of the regular expression, an alternative way of creating `myArray` is with this script:
 
-```plain
-var myArray = /d(b+)d/g.exec('cdbbdbsbz'); // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
-    // the latter outputs Array [ "dbbd" ], while
-    // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ "dbbd", "bb" ].
-    // See below for further info (CTRL+F "The behavior associated with the".)
+```js
+var myArray = /d(b+)d/g.exec("cdbbdbsbz"); // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
+// the latter outputs Array [ "dbbd" ], while
+// /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ "dbbd", "bb" ].
+// See below for further info (CTRL+F "The behavior associated with the".)
 ```
 
 If you want to construct the regular expression from a string, yet another alternative is this script:
 
-```plain
-var myRe = new RegExp('d(b+)d', 'g');
-var myArray = myRe.exec('cdbbdbsbz');
+```js
+var myRe = new RegExp("d(b+)d", "g");
+var myArray = myRe.exec("cdbbdbsbz");
 ```
 
 With these scripts, the match succeeds and returns the array and updates the properties shown in the following table.
@@ -198,19 +198,19 @@ With these scripts, the match succeeds and returns the array and updates the pro
 
 As shown in the second form of this example, you can use a regular expression created with an object initializer without assigning it to a variable. If you do, however, every occurrence is a new regular expression. For this reason, if you use this form without assigning it to a variable, you cannot subsequently access the properties of that regular expression. For example, assume you have this script:
 
-```plain
+```js
 var myRe = /d(b+)d/g;
-var myArray = myRe.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + myRe.lastIndex);
+var myArray = myRe.exec("cdbbdbsbz");
+console.log("The value of lastIndex is " + myRe.lastIndex);
 
 // "The value of lastIndex is 5"
 ```
 
 However, if you have this script:
 
-```plain
-var myArray = /d(b+)d/g.exec('cdbbdbsbz');
-console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
+```js
+var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 
 // "The value of lastIndex is 0"
 ```
@@ -225,10 +225,10 @@ The number of possible parenthesized substrings is unlimited. The returned array
 
 下面這個 script 以 {{jsxref("String.replace", "replace()")}} 方法移轉字串位置。對於要被置換的文字內容，以 `$1` 和 `$2` 來代表先前 re 這個變數裡面，找出來綑綁且照順序來表示兩個子字串。
 
-```plain
+```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
 
 // "Smith, John"
@@ -238,33 +238,33 @@ console.log(newstr);
 
 Regular expressions have five optional flags that allow for global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-| Flag | Description                                                                                                                                        |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`  | Global search.                                                                                                                                     |
-| i    | Case-insensitive search.                                                                                                                           |
-| m    | Multi-line search.                                                                                                                                 |
-| u    | unicode; treat a pattern as a sequence of unicode code points                                                                                      |
+| Flag | Description                                                                                                                             |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`  | Global search.                                                                                                                          |
+| i    | Case-insensitive search.                                                                                                                |
+| m    | Multi-line search.                                                                                                                      |
+| u    | unicode; treat a pattern as a sequence of unicode code points                                                                           |
 | y    | Perform a "sticky" search that matches starting at the current position in the target string. See {{jsxref("RegExp.sticky", "sticky")}} |
 
 To include a flag with the regular expression, use this syntax:
 
-```plain
+```js
 var re = /pattern/flags;
 ```
 
 or
 
-```plain
-var re = new RegExp('pattern', 'flags');
+```js
+var re = new RegExp("pattern", "flags");
 ```
 
 Note that the flags are an integral part of a regular expression. They cannot be added or removed later.
 
 For example, `re = /\w+\s/g` creates a regular expression that looks for one or more characters followed by a space, and it looks for this combination throughout the string.
 
-```plain
+```js
 var re = /\w+\s/g;
-var str = 'fee fi fo fum';
+var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
 
@@ -273,22 +273,23 @@ console.log(myArray);
 
 You could replace the line:
 
-```plain
+```js
 var re = /\w+\s/g;
 ```
 
 with:
 
-```plain
-var re = new RegExp('\\w+\\s', 'g');
+```js
+var re = new RegExp("\\w+\\s", "g");
 ```
 
 and get the same result.
 
 The behavior associated with the '**`g`**' flag is different when the `.exec()` method is used. (The roles of "class" and "argument" get reversed: In the case of `.match()`, the string class (or data type) owns the method and the regular expression is just an argument, while in the case of `.exec()`, it is the regular expression that owns the method, with the string being the argument. Contrast _`str.match(re)`_ versus _`re.exec(str)`_.) The '**`g`**' flag is used with the **`.exec()`** method to get iterative progression.
 
-```plain
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
+```js
+var xArray;
+while ((xArray = re.exec(str))) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -305,12 +306,12 @@ The following examples show some uses of regular expressions.
 
 The following example illustrates the formation of regular expressions and the use of `string.split()` and `string.replace()`. It cleans a roughly formatted input string containing names (first name last) separated by blanks, tabs and exactly one semicolon. Finally, it reverses the name order (last name first) and sorts the list.
 
-```plain
+```js
 // The name string contains multiple spaces and tabs,
 // and may have multiple spaces between first and last names.
-var names = 'Orange Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ';
+var names = "Orange Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
-var output = ['---------- Original String\n', names + '\n'];
+var output = ["---------- Original String\n", names + "\n"];
 
 // Prepare two regular expression patterns and array storage.
 // Split the string into array elements.
@@ -340,30 +341,30 @@ var bySurnameList = [];
 // The variables $1 and $2 refer to the portions
 // memorized while matching the pattern.
 
-output.push('---------- After Split by Regular Expression');
+output.push("---------- After Split by Regular Expression");
 
 var i, len;
 for (i = 0, len = nameList.length; i < len; i++) {
   output.push(nameList[i]);
-  bySurnameList[i] = nameList[i].replace(pattern, '$2, $1');
+  bySurnameList[i] = nameList[i].replace(pattern, "$2, $1");
 }
 
 // Display the new array.
-output.push('---------- Names Reversed');
+output.push("---------- Names Reversed");
 for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
 // Sort by last name, then display the sorted array.
 bySurnameList.sort();
-output.push('---------- Sorted');
+output.push("---------- Sorted");
 for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
-output.push('---------- End');
+output.push("---------- End");
 
-console.log(output.join('\n'));
+console.log(output.join("\n"));
 ```
 
 ### 使用特殊字元驗證輸入
@@ -374,28 +375,34 @@ Within non-capturing parentheses `(?:` , the regular expression looks for three 
 
 The `Change` event activated when the user presses Enter sets the value of `RegExp.input`.
 
-```plain
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
       function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
-          window.alert(phoneInput.value + ' isn\'t a phone number with area code!');
-        else
-          window.alert('Thanks, your phone number is ' + OK[0]);
+          window.alert(
+            phoneInput.value + " isn't a phone number with area code!"
+          );
+        else window.alert("Thanks, your phone number is " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Enter your phone number (with area code) and then click "Check".
-        <br>The expected format is like ###-###-####.</p>
+    <p>
+      Enter your phone number (with area code) and then click "Check". <br />The
+      expected format is like ###-###-####.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Check
+      </button>
     </form>
   </body>
 </html>
