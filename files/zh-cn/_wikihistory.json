@@ -7757,10 +7757,6 @@
     "modified": "2019-03-23T22:09:56.370Z",
     "contributors": ["CGerAJ"]
   },
-  "Web/API/DeviceProximityEvent": {
-    "modified": "2019-03-18T21:47:06.146Z",
-    "contributors": ["MaxTime"]
-  },
   "Web/API/Document": {
     "modified": "2020-10-15T21:04:40.161Z",
     "contributors": [

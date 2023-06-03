@@ -27,7 +27,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 例如,讀取影像的藍色組成的值。從 pixel 的第 200 欄、第 50 行，你可以照著下面的步驟:
 
 ```js
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 使用`Uint8ClampedArray.length`屬性來讀取影像 pixel 的陣列大小
@@ -81,25 +81,33 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.src = "rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var color = document.getElementById('color');
+var color = document.getElementById("color");
 function pick(event) {
   var x = event.layerX;
   var y = event.layerY;
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
-  var rgba = 'rgba(' + data[0] + ', ' + data[1] +
-             ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-  color.style.background =  rgba;
+  var rgba =
+    "rgba(" +
+    data[0] +
+    ", " +
+    data[1] +
+    ", " +
+    data[2] +
+    ", " +
+    data[3] / 255 +
+    ")";
+  color.style.background = rgba;
   color.textContent = rgba;
 }
-canvas.addEventListener('mousemove', pick);
+canvas.addEventListener("mousemove", pick);
 ```
 
 {{ EmbedLiveSample('調色盤', 610, 240) }}
@@ -127,49 +135,49 @@ In this example we iterate over all pixels to change their values, then we put t
 ```html hidden
 <canvas id="canvas" width="300" height="227"></canvas>
 <div>
-  <input id="grayscalebtn" value="Grayscale" type="button">
-  <input id="invertbtn" value="Invert" type="button">
+  <input id="grayscalebtn" value="Grayscale" type="button" />
+  <input id="invertbtn" value="Invert" type="button" />
 </div>
 ```
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
   var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   var data = imageData.data;
 
-  var invert = function() {
+  var invert = function () {
     for (var i = 0; i < data.length; i += 4) {
-      data[i]     = 255 - data[i];     // red
+      data[i] = 255 - data[i]; // red
       data[i + 1] = 255 - data[i + 1]; // green
       data[i + 2] = 255 - data[i + 2]; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var grayscale = function() {
+  var grayscale = function () {
     for (var i = 0; i < data.length; i += 4) {
       var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-      data[i]     = avg; // red
+      data[i] = avg; // red
       data[i + 1] = avg; // green
       data[i + 2] = avg; // blue
     }
     ctx.putImageData(imageData, 0, 0);
   };
 
-  var invertbtn = document.getElementById('invertbtn');
-  invertbtn.addEventListener('click', invert);
-  var grayscalebtn = document.getElementById('grayscalebtn');
-  grayscalebtn.addEventListener('click', grayscale);
+  var invertbtn = document.getElementById("invertbtn");
+  invertbtn.addEventListener("click", invert);
+  var grayscalebtn = document.getElementById("grayscalebtn");
+  grayscalebtn.addEventListener("click", grayscale);
 }
 ```
 
@@ -182,9 +190,17 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.abs(x - 5),
+  Math.abs(y - 5),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200
+);
 ```
 
 Because anti-aliasing is enabled by default, we might want to disable the smoothing to see clear pixels. You can toggle the checkbox to see the effect of the `imageSmoothingEnabled` property (which needs prefixes for different browsers).
@@ -195,48 +211,53 @@ Because anti-aliasing is enabled by default, we might want to disable the smooth
 <canvas id="canvas" width="300" height="227"></canvas>
 <canvas id="zoom" width="300" height="227"></canvas>
 <div>
-<label for="smoothbtn">
-  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
-  Enable image smoothing
-</label>
+  <label for="smoothbtn">
+    <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn" />
+    Enable image smoothing
+  </label>
 </div>
 ```
 
 ```js
 var img = new Image();
-img.src = 'rhino.jpg';
-img.onload = function() {
+img.src = "rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var zoomctx = document.getElementById('zoom').getContext('2d');
+  img.style.display = "none";
+  var zoomctx = document.getElementById("zoom").getContext("2d");
 
-  var smoothbtn = document.getElementById('smoothbtn');
-  var toggleSmoothing = function(event) {
+  var smoothbtn = document.getElementById("smoothbtn");
+  var toggleSmoothing = function (event) {
     zoomctx.imageSmoothingEnabled = this.checked;
     zoomctx.mozImageSmoothingEnabled = this.checked;
     zoomctx.webkitImageSmoothingEnabled = this.checked;
     zoomctx.msImageSmoothingEnabled = this.checked;
   };
-  smoothbtn.addEventListener('change', toggleSmoothing);
+  smoothbtn.addEventListener("change", toggleSmoothing);
 
-  var zoom = function(event) {
+  var zoom = function (event) {
     var x = event.layerX;
     var y = event.layerY;
-    zoomctx.drawImage(canvas,
-                      Math.abs(x - 5),
-                      Math.abs(y - 5),
-                      10, 10,
-                      0, 0,
-                      200, 200);
+    zoomctx.drawImage(
+      canvas,
+      Math.abs(x - 5),
+      Math.abs(y - 5),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200
+    );
   };
 
-  canvas.addEventListener('mousemove', zoom);
+  canvas.addEventListener("mousemove", zoom);
 }
 ```
 
