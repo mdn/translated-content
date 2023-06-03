@@ -5043,9 +5043,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "orphaned/Web/API/Proximity_Events": {
-    "modified": "2019-03-23T23:26:18.756Z",
-    "contributors": ["jackblackevo", "teoli", "MashKao"]
   }
 }
