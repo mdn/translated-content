@@ -8,15 +8,15 @@ slug: Web/API/CanvasRenderingContext2D
 要取得此實作此介面的實體物件，可以於一個 `<canvas>` 元素上以 "2d" 為參數呼叫 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 方法：
 
 ```js
-var canvas = document.getElementById('mycanvas'); // in your HTML this element appears as <canvas id="mycanvas"></canvas>
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("mycanvas"); // in your HTML this element appears as <canvas id="mycanvas"></canvas>
+var ctx = canvas.getContext("2d");
 ```
 
 只要你有了 canvas 的 2D 繪製背景物件，你就可以在其中繪圖。 舉個例子：
 
 ```js
 ctx.fillStyle = "rgb(200,0,0)"; // sets the color to fill in the rectangle with
-ctx.fillRect(10, 10, 55, 50);   // draws the rectangle at position 10, 10 with a width of 55 and a height of 50
+ctx.fillRect(10, 10, 55, 50); // draws the rectangle at position 10, 10 with a width of 55 and a height of 50
 ```
 
 [canvas 教學](/zh-TW/docs/Web/API/Canvas_API/Tutorial)有更多資訊、範例，以及資源。

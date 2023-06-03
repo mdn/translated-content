@@ -61,9 +61,8 @@ document.body.innerHTML = "";
 This example fetches the document's current HTML markup and replaces the `"<"` characters with the HTML entity `"&lt;"`, thereby essentially converting the HTML into raw text. This is then wrapped in a {{HTMLElement("pre")}} element. Then the value of `innerHTML` is changed to this new string. As a result, the document contents are replaced with a display of the page's entire source code.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 #### Operational details
@@ -126,8 +125,14 @@ We add a second method that logs information about {{domxref("MouseEvent")}} bas
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```
