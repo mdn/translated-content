@@ -167,7 +167,7 @@ const myWorker = new SharedWorker('worker.js');
 
 在传递消息之前，端口连接必须被显式的打开，打开方式是使用 `onmessage` 事件处理函数或者 `start()` 方法。只有一种情况下需要调用 `start()` 方法，那就是 `message` 事件被 `addEventListener()` 方法使用。
 
-在使用 start() 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 start() 方法。
+> **备注：** 在使用 start() 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 start() 方法。
 
 ```js
 myWorker.port.start();  // 父级线程中的调用
@@ -658,7 +658,7 @@ onmessage = (event) => {
 };
 ```
 
-这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名"queryMethod", "queryMethodListeners","queryMethodArguments"可以是任何东西，只要它们在`QueryableWorker 和 worker`中保持一致。
+这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名 "queryMethod"、"queryMethodListeners" 和 "queryMethodArguments" 可以是任何东西，只要它们在`QueryableWorker` 和 `worker`中保持一致。
 
 ### 通过转让所有权 (可转让对象) 来传递数据
 
