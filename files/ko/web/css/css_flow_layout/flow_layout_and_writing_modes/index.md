@@ -1,6 +1,6 @@
 ---
 title: 대열 레이아웃과 쓰기 모드
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_쓰기_모드
 ---
 

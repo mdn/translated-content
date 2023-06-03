@@ -1,6 +1,7 @@
 ---
 title: 일관성있는 리스트 들여쓰기
-slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
+slug: Web/CSS/CSS_lists/Consistent_list_indentation
+original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}
