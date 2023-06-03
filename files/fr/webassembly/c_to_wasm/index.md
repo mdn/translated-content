@@ -1,6 +1,6 @@
 ---
 title: Compiler un nouveau module C/C++ en WebAssembly
-slug: WebAssembly/C_to_wasm
+slug: WebAssembly/C_to_Wasm
 tags:
   - C
   - C++

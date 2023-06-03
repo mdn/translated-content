@@ -36,7 +36,6 @@ slug: Web/API/Event
 - {{domxref("DeviceLightEvent")}}
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}}
 - {{domxref("DOMTransactionEvent")}}
 - {{domxref("DragEvent")}}
 - {{domxref("EditingBeforeInputEvent")}}
@@ -73,11 +72,10 @@ slug: Web/API/Event
 - {{domxref("TrackEvent")}}
 - {{domxref("TransitionEvent")}}
 - {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WheelEvent")}}
 
-## 构造器
+## 构造函数
 
 - {{domxref("Event.Event", "Event()")}}
   - : 创建并返回一个 `Event` 对象。

@@ -81,13 +81,13 @@ If an error occurs while trying to load or render the image, and an [`onerror`](
 
 ```js
 var img1 = new Image(); // HTML5 Constructor
-img1.src = 'image1.png';
-img1.alt = 'alt';
+img1.src = "image1.png";
+img1.alt = "alt";
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // use DOM HTMLImageElement
-img2.src = 'image2.jpg';
-img2.alt = 'alt text';
+var img2 = document.createElement("img"); // use DOM HTMLImageElement
+img2.src = "image2.jpg";
+img2.alt = "alt text";
 document.body.appendChild(img2);
 
 // using first image in the document

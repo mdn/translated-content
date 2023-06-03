@@ -164,7 +164,7 @@ started with developing web sites and applications.">
 [Open Graph Data](http://ogp.me/) 는 Facebook이 웹 사이트에 더 풍부한 메타 데이터를 제공하기 위해 발명한 메타 데이터 프로토콜이다. MDN 소스코드에서 다음과 같은 부분을 볼 수 있을 것이다.
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
 and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">

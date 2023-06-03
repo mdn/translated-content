@@ -1,6 +1,6 @@
 ---
 title: CSS Display
-slug: Web/CSS/CSS_Display
+slug: Web/CSS/CSS_display
 tags:
   - Aperçu
   - CSS
