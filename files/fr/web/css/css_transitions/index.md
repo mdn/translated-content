@@ -1,6 +1,6 @@
 ---
 title: Transitions CSS
-slug: Web/CSS/CSS_Transitions
+slug: Web/CSS/CSS_transitions
 tags:
   - Aperçu
   - CSS

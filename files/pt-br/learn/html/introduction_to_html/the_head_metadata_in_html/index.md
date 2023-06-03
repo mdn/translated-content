@@ -175,7 +175,7 @@ Ao navegar pela web, você também encontrará outros tipos de metadados. Muitos
 Por exemplo, [Open Graph Data](http://ogp.me/) é um protocolo de metadados que o Facebook inventou para fornecer metadados mais ricos para sites. No código-fonte MDN, você encontrará isso:
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="A Mozilla Developer Network (MDN) fornece
 informações sobre tecnologias Open Web, incluindo HTML, CSS e APIs para ambos os sites da Web
 e aplicativos HTML5. Ele também documenta produtos Mozilla, como o sistema operacional Firefox.">

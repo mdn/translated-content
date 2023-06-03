@@ -1,6 +1,6 @@
 ---
 title: CSS Counter Styles
-slug: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 tags:
   - Aperçu
   - CSS

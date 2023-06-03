@@ -20,11 +20,11 @@ slug: Web/API/Fetch_API/Using_Fetch
 用法簡單，如下:
 
 ```js
-fetch('http://example.com/movies.json')
-  .then(function(response) {
+fetch("http://example.com/movies.json")
+  .then(function (response) {
     return response.json();
   })
-  .then(function(myJson) {
+  .then(function (myJson) {
     console.log(myJson);
   });
 ```
@@ -48,26 +48,25 @@ Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Security/CSP/CSP_
 ```js
 // 來發個 POST Request:
 
-postData('http://example.com/answer', {answer: 42})
-  .then(data => console.log(data)) // JSON from `response.json()` call
-  .catch(error => console.error(error))
+postData("http://example.com/answer", { answer: 42 })
+  .then((data) => console.log(data)) // JSON from `response.json()` call
+  .catch((error) => console.error(error));
 
 function postData(url, data) {
   // Default options are marked with *
   return fetch(url, {
     body: JSON.stringify(data), // must match 'Content-Type' header
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, same-origin, *omit
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, same-origin, *omit
     headers: {
-      'user-agent': 'Mozilla/4.0 MDN Example',
-      'content-type': 'application/json'
+      "user-agent": "Mozilla/4.0 MDN Example",
+      "content-type": "application/json",
     },
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, cors, *same-origin
-    redirect: 'follow', // manual, *follow, error
-    referrer: 'no-referrer', // *client, no-referrer
-  })
-  .then(response => response.json()) // 輸出成 json
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, cors, *same-origin
+    redirect: "follow", // manual, *follow, error
+    referrer: "no-referrer", // *client, no-referrer
+  }).then((response) => response.json()); // 輸出成 json
 }
 ```
 
@@ -76,9 +75,9 @@ function postData(url, data) {
 要讓瀏覽器將 credentials 跟著 request 一起送出, 方式就是在 `init` object 加上 `credentials: 'include'`
 
 ```js
-fetch('https://example.com', {
-  credentials: 'include'
-})
+fetch("https://example.com", {
+  credentials: "include",
+});
 ```
 
 如果只想要把 credentials 發送給同源的 URL ，加上`credentials: 'same-origin'`。
@@ -86,17 +85,17 @@ fetch('https://example.com', {
 ```js
 // The calling script is on the origin 'https://example.com'
 
-fetch('https://example.com', {
-  credentials: 'same-origin'
-})
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
 ```
 
 或要確保瀏覽器不會帶著 credentials 請求，可以用 `credentials: 'omit'` 。
 
 ```js
-fetch('https://example.com', {
-  credentials: 'omit'
-})
+fetch("https://example.com", {
+  credentials: "omit",
+});
 ```
 
 ### 上傳 JSON 資料
@@ -104,18 +103,19 @@ fetch('https://example.com', {
 使用 {{domxref("GlobalFetch.fetch","fetch()")}} 來 POST JSON 格式的資料。
 
 ```js
-var url = 'https://example.com/profile';
-var data = {username: 'example'};
+var url = "https://example.com/profile";
+var data = { username: "example" };
 
 fetch(url, {
-  method: 'POST', // or 'PUT'
+  method: "POST", // or 'PUT'
   body: JSON.stringify(data), // data can be `string` or {object}!
   headers: new Headers({
-    'Content-Type': 'application/json'
-  })
-}).then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+    "Content-Type": "application/json",
+  }),
+})
+  .then((res) => res.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ### 上傳檔案
@@ -126,16 +126,16 @@ fetch(url, {
 var formData = new FormData();
 var fileField = document.querySelector("input[type='file']");
 
-formData.append('username', 'abc123');
-formData.append('avatar', fileField.files[0]);
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
 
-fetch('https://example.com/profile/avatar', {
-  method: 'PUT',
-  body: formData
+fetch("https://example.com/profile/avatar", {
+  method: "PUT",
+  body: formData,
 })
-.then(response => response.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+  .then((response) => response.json())
+  .catch((error) => console.error("Error:", error))
+  .then((response) => console.log("Success:", response));
 ```
 
 ### 如何確認 fetch 是否成功
@@ -145,17 +145,23 @@ fetch('https://example.com/profile/avatar', {
 因此, 確認`fetch()`是否成功的正確方式, 應包含檢查 promise resolved, 以及檢查{{domxref("Response.ok")}}的屬性是否為 true. 代碼如下例：
 
 ```js
-fetch('flowers.jpg').then(function(response) {
-  if(response.ok) {
-    return response.blob();
-  }
-  throw new Error('Network response was not ok.');
-}).then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-}).catch(function(error) {
-  console.log('There has been a problem with your fetch operation: ', error.message);
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    if (response.ok) {
+      return response.blob();
+    }
+    throw new Error("Network response was not ok.");
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  })
+  .catch(function (error) {
+    console.log(
+      "There has been a problem with your fetch operation: ",
+      error.message
+    );
+  });
 ```
 
 ### Supplying your own request object
@@ -165,19 +171,23 @@ Instead of passing a path to the resource you want to request into the `fetch()`
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 `Request()` accepts exactly the same parameters as the `fetch()` method. You can even pass in an existing request object to create a copy of it:
@@ -235,7 +245,7 @@ All of the Headers methods throw a `TypeError` if a header name is used that is 
 var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
+} catch (e) {
   console.log("Cannot pretend to be a bank!");
 }
 ```
@@ -243,15 +253,20 @@ try {
 A good use case for headers is checking whether the content type is correct before you process it further. For example:
 
 ```js
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, we haven't got JSON!");
   })
-  .then(function(json) { /* process your JSON further */ })
-  .catch(function(error) { console.log(error); });
+  .then(function (json) {
+    /* process your JSON further */
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 ```
 
 ### Guard
@@ -283,10 +298,11 @@ They can also be created programmatically via JavaScript, but this is only reall
 ```js
 var myBody = new Blob();
 
-addEventListener('fetch', function(event) { // ServiceWorker intercepting a fetch
+addEventListener("fetch", function (event) {
+  // ServiceWorker intercepting a fetch
   event.respondWith(
     new Response(myBody, {
-      headers: { "Content-Type" : "text/plain" }
+      headers: { "Content-Type": "text/plain" },
     })
   );
 });
@@ -320,10 +336,10 @@ This makes usage of non-textual data much easier than it was with XHR.
 Request bodies can be set by passing body parameters:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+var form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
+  body: form,
 });
 ```
 
@@ -335,9 +351,9 @@ Both request and response (and by extension the `fetch()` function), will try to
 
 ```js
 if (self.fetch) {
-    // run my fetch request here
+  // run my fetch request here
 } else {
-    // do something with XMLHttpRequest?
+  // do something with XMLHttpRequest?
 }
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Utiliser les requêtes de fonctionnalité (feature queries)
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 tags:
   - Amélioration progressive
   - CSS

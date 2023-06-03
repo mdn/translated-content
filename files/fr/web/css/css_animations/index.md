@@ -1,6 +1,6 @@
 ---
 title: Les animations CSS
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 tags:
   - CSS
   - Reference

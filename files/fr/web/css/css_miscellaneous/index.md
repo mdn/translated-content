@@ -1,6 +1,6 @@
 ---
 title: CSS Miscellaneous
-slug: Web/CSS/CSS_Miscellaneous
+slug: Web/CSS/CSS_miscellaneous
 tags:
   - Aperçu
   - CSS
