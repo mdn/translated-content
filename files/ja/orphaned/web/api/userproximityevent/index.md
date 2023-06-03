@@ -1,8 +1,7 @@
 ---
 title: UserProximityEvent
-slug: Web/API/UserProximityEvent
-l10n:
-  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
+slug: orphaned/Web/API/UserProximityEvent
+original_slug: Web/API/UserProximityEvent
 ---
 
 {{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}

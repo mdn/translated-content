@@ -1,9 +1,7 @@
 ---
 title: 近接イベント
-slug: Web/API/Proximity_Events
-original_slug: WebAPI/Proximity
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+slug: orphaned/Web/API/Proximity_Events
+original_slug: Web/API/Proximity_Events
 ---
 
 {{DefaultAPISidebar("Proximity Events")}}{{Deprecated_Header}}
