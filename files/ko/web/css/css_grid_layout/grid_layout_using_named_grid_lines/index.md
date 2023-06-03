@@ -1,6 +1,7 @@
 ---
 title: Layout using named grid lines
-slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
+slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
+original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 
 이전 가이드에선 그리드 트랙을 정의하면 생성되는 라인을 사용해서 아이템을 배치하는 법을 살펴보았으며, 또한 이름이 명명된 템플릿 영역을 가지고 어떻게 아이템들을 배치하는지도 알아보았습니다. 이번 가이드에선 이름이 주어진 라인을 쓰는 상황에서 이 두 가지 방법이 서로 어떻게 작용하는지 알아보겠습니다. 라인에 이름을 지어 주는 것이 매우 유용할 때도 있지만, 이름과 트랙 크기가 혼합돼서 사용되는 그리드 용법을 보고 있으면 매우 헷갈릴 수도 있습니다. 하지만 몇 가지 예제를 가지고 작업해 보시면 점점 명확해지면서 나중엔 작업하기도 훨씬 수월해지실 겁니다.
