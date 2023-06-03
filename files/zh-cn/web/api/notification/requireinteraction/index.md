@@ -1,29 +1,19 @@
 ---
-title: Notification.requireInteraction
+title: Notification：requireInteraction 属性
 slug: Web/API/Notification/requireInteraction
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 **`requireInteraction`** 属性是只读属性，它返回一个 {{jsxref("Boolean")}}（布尔值），指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。
+{{domxref("Notification")}} 接口的 **`requireInteraction`** 只读属性返回一个 boolean 值，指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。
 
-> **备注：** 此属性可以在创建通知时通过在 {{domxref("Notification.Notification()")}} 构造器的 options 参数接收的对象上设置 `requireInteraction` 属性为 `true` 来进行设置
+The **`requireInteraction`** read-only property of the {{domxref("Notification")}} interface returns a boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 
-## 语法
+> **备注：** 可以在创建通知时通过在 {{domxref("Notification.Notification()")}} 构造方法的 `requireInteraction` 选项设置为 `true` 来进行设置
 
-```js
-function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
-  var options = {
-      body: theBody, //通知正文
-      requireInteraction: shouldRequireInteraction //在此处设置 requireInteraction
-  }
-  var n = new Notification(theTitle,options);
-}
-```
+## 值
 
-### 值
-
-{{jsxref("Boolean")}}（布尔值）。
+一个 boolean 值。
 
 ## 规范
 
@@ -33,6 +23,6 @@ function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- [使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
