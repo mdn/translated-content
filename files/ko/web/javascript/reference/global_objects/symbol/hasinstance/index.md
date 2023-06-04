@@ -23,7 +23,7 @@ l10n:
 
 `instanceof` 연산자는 다음 알고리즘을 사용하여 `object instanceof constructor`의 반환 값을 계산합니다.
 
-1. `constructor`에 `@@hasInstance` 메서드가 있는 경우, 첫 번째 인수로 `object`를 사용하여 호출하고 [부울로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)된 결과를 반환합니다.
+1. `constructor`에 `@@hasInstance` 메서드가 있는 경우, 첫 번째 인수로 `object`를 사용하여 호출하고 [불리언으로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)된 결과를 반환합니다.
 `constructor`가 객체가 아니거나 `constructor[@@hasInstance]`가 `null`, `undefined`, 함수 중 하나가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
 
 2. 그렇지 않으면, `constructor`에 `@@hasInstance` 메서드가 없는 경우(`constructor[@@hasInstance]`가 `null` 또는 `undefined`),
