@@ -232,13 +232,13 @@ Content-Security-Policy: script-src 'self'
 
 这个声明有一部分作用在于，禁止它内部包含的脚本代码使用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 方法。然而，如果脚本代码创建了一个 worker，在 worker 上下文中执行的代码却是可以使用 `eval()` 的。
 
-为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身加上一个 [内容安全策略](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)。
+为了给 worker 指定内容安全策略，必须为发送 worker 代码的请求本身设置 [Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 响应标头。
 
-有一个例外情况，即 worker 脚本的源如果是一个全局性的唯一的标识符（例如，它的 URL 指定了数据模式或者 blob），worker 则会继承创建它的 document 或者 worker 的 CSP（Content security policy 内容安全策略）。
+有一个例外情况，即 worker 脚本的源如果是一个全局性的唯一的标识符（例如，它的 URL 协议为 data 或 blob），worker 则会继承创建它的 document 或者 worker 的 CSP。
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用 [结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的「_拷贝而非共享_」行为：
 
@@ -282,9 +282,9 @@ console.log(example5.constructor); // Animal
 console.log(emulateMessage(example5).constructor); // Object
 ```
 
-拷贝而并非共享的那个值称为 _消息_。再来谈谈 `worker`，你可以使用 `postMessage()` 将消息传递给主线程或从主线程传送回来。`message` 事件的 `data` 属性就包含了从 worker 传回来的数据。
+拷贝而并非共享的那个值称为*消息*（message）。再来谈谈 `worker`，你可以使用 `postMessage()` 将*消息*传递给主线程或从主线程传送回来。`message` 事件的 {{domxref("MessageEvent.data", "data")}} 属性就包含了从 worker 传回来的数据。
 
-**example.html**: (主页面):
+**example.html**（主页面）：
 
 ```js
 const myWorker = new Worker("my_task.js");
@@ -306,7 +306,7 @@ onmessage = (event) => {
 };
 ```
 
-[结构化拷贝](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm) 算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
+[结构化克隆](/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm)算法可以接收 JSON 数据以及一些 JSON 不能表示的数据——比如循环引用。
 
 ### 传递数据的例子
 
@@ -494,7 +494,7 @@ onmessage = (event) => {
 
 接下来给出一个完整的实现：
 
-**example.html** (the main page):
+**example.html**（主页面）：
 
 ```html
 <!DOCTYPE html>
@@ -608,7 +608,7 @@ onmessage = (event) => {
 </html>
 ```
 
-**my_task.js** (the worker):
+**my_task.js**（worker 文件）：
 
 ```js
 const queryableFunctions = {
@@ -660,9 +660,9 @@ onmessage = (event) => {
 
 这个实例中，可以对从主页面到 worker、以及 worker 到主页面之间传递的消息内容进行切换。而且属性名 "queryMethod"、"queryMethodListeners" 和 "queryMethodArguments" 可以是任何东西，只要它们在 `QueryableWorker` 和 `worker` 中保持一致。
 
-### 通过转让所有权 (可转让对象) 来传递数据
+### 通过转让所有权（可转移对象）来传递数据
 
-现代浏览器包含另一种性能更高的方法来将特定类型的对象（[可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)）传递给一个 worker 从 worker 传回。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。
+现代浏览器包含另一种性能更高的方法来将特定类型的对象传递给一个 worker 或从 worker 传回。[可转移对象](http://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大型数据集时会获得极大的性能提升。
 
 例如，当你将一个 {{jsxref("ArrayBuffer")}} 对象从主应用转让到 Worker 中，原始的 {{jsxref("ArrayBuffer")}} 被清除并且无法使用。它包含的内容会（完整无差的）传递给 Worker 上下文。
 
@@ -676,7 +676,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 特性，并且它的 `type` 特性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>
@@ -843,9 +843,9 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 </html>
 ```
 
-网页创建了一个 `div` 元素，ID 为 `result` ，用它来显示运算结果，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为将错误消息记录到 devtools 控制台。
+网页创建了一个 ID 为 `result` 的用于显示运算结果的 `div` 元素，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为将错误消息记录到 devtools 控制台。
 
-最后，向 worker 发送一条信息来启动它。
+最后，向 worker 发送一条消息来启动它。
 
 [运行这个例子](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)。
 
@@ -858,11 +858,11 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 除了专用和共享的 web worker，还有一些其他类型的 worker：
 
 - [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API) （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
-- [Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers) （音频 worker）使得在 web worker 上下文中直接完成脚本化音频处理成为可能。
+- [Audio Worklet](/zh-CN/docs/Web/API/Web_Audio_API#使用_javascript_处理音频) 提供了在 worklet（轻量级的 web worker）上下文中直接完成脚本化音频处理的可能性。
 
-## 调试 worker threads
+## 调试 worker 线程
 
-大多数浏览器都允许你在 JavaScript 调试器中调试 Web Worker，其方式与调试主线程完全相同！例如，Firefox 和 Chrome 都列出了主线程和活动工作线程的 JavaScript 源文件，所有这些文件都可以打开以设置断点和日志点。
+大多数浏览器都允许你在 JavaScript 调试器中调试 Web Worker，其方式与调试主线程*完全相同*！例如，Firefox 和 Chrome 都列出了主线程和活动 worker 线程的 JavaScript 源文件，所有这些文件都可以打开以设置断点和日志点。
 要了解如何调试 Web Worker，请参阅每个浏览器的 JavaScript 调试器的文档：
 
 - [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
@@ -870,18 +870,18 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 ## worker 中可用的函数和接口
 
-你可以在 web worker 中使用大多数的标准 javascript 特性，包括：
+你可以在 web worker 中使用大多数的标准 JavaScript 特性，包括：
 
 - {{domxref("Navigator")}}
 - {{domxref("XMLHttpRequest")}}
-- {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("WindowTimers.setTimeout")}} and {{domxref("WindowTimers.setInterval")}}
+- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 和 {{jsxref("Global_Objects/String", "String")}}
+- {{domxref("setTimeout()")}} 和 {{domxref("setInterval()")}}
 
-在一个 worker 中最主要的你不能做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
+在一个 worker 中最主要的你*不能*做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
 > **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 workers 中支持。
 
-> **备注：** 获取 worker 中完整的方法列表，请参阅 [Functions and interfaces available to workers](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
+> **备注：** 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
 
 ## 规范
 
@@ -892,4 +892,4 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 - [`Worker`](/zh-CN/docs/Web/API/Worker) 接口
 - [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker) 接口
 - [worker 提供的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
-- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) 接口
+- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 接口
