@@ -7,19 +7,21 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 
 Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
 
+本文详细介绍了如何使用 web worker。
+
 ## Web Workers API
 
-一个 worker 是使用一个构造函数创建的一个对象（例如 {{domxref("Worker.Worker", "Worker()")}}）运行一个命名的 JavaScript 文件——这个文件包含将在工作线程中运行的代码; workers 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}。因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}} 获取全局作用域（而不是{{domxref("window.self","self")}}）将返回错误。
+一个 worker 是使用一个构造函数创建的一个对象（例如 {{domxref("Worker.Worker", "Worker()")}}）运行一个命名的 JavaScript 文件——这个文件包含将在 worker 线程中运行的代码; worker 运行在另一个全局上下文中，不同于当前的{{domxref("window")}}。因此，在 {{domxref("Worker")}} 内通过 {{domxref("window")}} 获取全局作用域（而不是{{domxref("window.self","self")}}）将返回错误。
 
 在专用 worker 的情况下，{{domxref("DedicatedWorkerGlobalScope")}} 对象代表了 worker 的上下文（专用 worker 是指标准 worker 仅在单一脚本中被使用；共享 worker 的上下文是 {{domxref("SharedWorkerGlobalScope")}} 对象）。一个专用 worker 仅能被首次生成它的脚本使用，而共享 worker 可以同时被多个脚本使用。
 
 > **备注：** 参见 [Web Workers API 落地页](/zh-CN/docs/Web/API/Web_Workers_API)以获取 worker 的参考文档和更多指引。
 
-在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用{{domxref("window")}}对象的默认方法和属性。然而你可以使用大量 window 对象之下的东西，包括 WebSockets，IndexedDB 以及 FireFox OS 专用的 Data Store API 等数据存储机制。查看 [Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers) 获取详情。
+在 worker 线程中你可以运行任何你喜欢的代码，不过有一些例外情况。比如：在 worker 内，不能直接操作 DOM 节点，也不能使用 {{domxref("window")}} 对象的默认方法和属性。但是你可以使用大量 `window` 对象之下的东西，包括 [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)，以及 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 等数据存储机制。查看 [Web Workers 可以使用的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) 获取详情。
 
-workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 postMessage() 方法发送各自的消息，使用 onmessage 事件处理函数来响应消息（消息被包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
+workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 `postMessage()` 方法发送各自的消息，使用 `onmessage` 事件处理函数来响应消息（消息被包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
 
-只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 XMLHttpRequest 的 responseXML 和 channel 属性总会返回 null。
+只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性总会返回 `null`。
 
 ## 专用 worker
 
@@ -76,7 +78,7 @@ onmessage = (e) => {
 };
 ```
 
-`onmessage` 处理函数允许我们在任何时刻，一旦接收到消息就可以执行一些代码，代码中消息本身作为事件的 `data` 属性进行使用。这里我们简单的对这 2 个数字作乘法处理并再次使用 `postMessage()` 方法，将结果回传给主线程。
+`onmessage` 处理函数允许我们在收到消息时运行一些代码，消息本身在 `message` 事件 `data` 属性进行使用。这里我们简单的对这 2 个数字作乘法处理并再次使用 `postMessage()` 方法，将结果回传给主线程。
 
 回到主线程，我们再次使用 `onmessage` 以响应 worker 回传的消息：
 
@@ -89,9 +91,9 @@ myWorker.onmessage = (e) => {
 
 在这里我们获取消息事件的数据，并且将它设置为显示结果段落的 `textContent`，所以用户可以直接看到运算的结果。
 
-> **备注：** 在主线程中使用时，`onmessage`和`postMessage()` 必须挂在 worker 对象上，而在 worker 中使用时不用这样做。原因是，在 worker 内部，worker 是有效的全局作用域。
+> **备注：** 在主线程中使用时，`onmessage` 和 `postMessage()` 必须挂在 `worker` 对象上，而在 worker 中使用时不用这样做。原因是，在 worker 内部，worker 是有效的全局作用域。
 
-> **备注：** 当一个消息在主线程和 worker 之间传递时，它被复制或者转移了，而不是共享。请参阅[worker 中数据的接收与发送：详细介绍](#worker中数据的接收与发送：详细介绍) 获取更详尽的解释。
+> **备注：** 当一个消息在主线程和 worker 之间传递时，它被复制或者转移了，而不是共享。请参阅[worker 中数据的接收与发送：详细介绍](#worker_中数据的接收与发送：详细介绍) 获取更详尽的解释。
 
 ### 终止 worker
 
@@ -101,13 +103,7 @@ myWorker.onmessage = (e) => {
 myWorker.terminate();
 ```
 
-worker 线程会被立即杀死，不会有任何机会让它完成自己的操作或清理工作。
-
-而在 worker 线程中，workers 也可以调用自己的 {{domxref("WorkerGlobalScope", "close")}} 方法进行关闭：
-
-```js
-close();
-```
+worker 线程会被立即杀死。
 
 ### 处理错误
 
@@ -141,7 +137,7 @@ importScripts(
 ); /* 你可以从其他来源导入脚本 */
 ```
 
-浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码（包括使用 {{domxref("window.setTimeout()")}} 异步执行的代码）依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
+浏览器加载并运行每一个列出的脚本。每个脚本中的全局对象都能够被 worker 使用。如果脚本无法加载，将抛出 `NETWORK_ERROR` 异常，接下来的代码也无法执行。而之前执行的代码（包括使用 {{domxref("setTimeout()")}} 异步执行的代码）依然能够运行。`importScripts()` **之后**的函数声明依然会被保留，因为它们始终会在其他代码之前运行。
 
 > **备注：** 脚本的下载顺序不固定，但执行时会按照传入 `importScripts()` 中的文件名顺序进行。这个过程是同步完成的；直到所有脚本都下载并运行完毕，`importScripts()` 才会返回。
 
@@ -167,15 +163,7 @@ const myWorker = new SharedWorker('worker.js');
 
 在传递消息之前，端口连接必须被显式的打开，打开方式是使用 `onmessage` 事件处理函数或者 `start()` 方法。只有一种情况下需要调用 `start()` 方法，那就是 `message` 事件被 `addEventListener()` 方法使用。
 
-> **备注：** 在使用 `start()` 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用 `start()` 方法。
-
-```js
-myWorker.port.start();  // 父级线程中的调用
-```
-
-```js
-port.start(); // worker 线程中的调用，假设 port 变量代表一个端口
-```
+> **备注：** 在使用 `start()` 方法打开端口连接时，如果父级线程和 worker 线程需要双向通信，那么它们都需要调用该方法。
 
 ### 共享 worker 中消息的接收和发送
 
@@ -220,7 +208,9 @@ myWorker.port.onmessage = (e) => {
 
 ## 关于线程安全
 
-{{domxref("Worker")}} 接口会生成真正的操作系统级别的线程，如果你不太小心，那么并发会对你的代码产生有趣的影响。然而，对于 web worker 来说，与其他线程的通信点会被很小心的控制，这意味着你很难引起并发问题。你没有办法去访问非线程安全的组件或者是 DOM，此外你还需要通过序列化对象来与线程交互特定的数据。所以你要是不费点劲儿，还真搞不出错误来。
+{{domxref("Worker")}} 接口会生成真正的操作系统级别的线程，如果你不太小心，那么并发会对你的代码产生有趣的影响。
+
+然而，对于 web worker 来说，与其他线程的通信点会被很小心的控制，这意味着你很难引起并发问题。你没有办法去访问非线程安全的组件或者是 DOM，此外你还需要通过序列化对象来与线程交互特定的数据。所以你要是不费点劲儿，还真搞不出错误来。
 
 ## 内容安全策略
 
@@ -801,7 +791,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 除了专用和共享的 web worker，还有一些其他类型的 worker：
 
-- [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API) （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
+- [ServiceWorkers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
 - [Audio Worklet](/zh-CN/docs/Web/API/Web_Audio_API#使用_javascript_处理音频) 提供了在 worklet（轻量级的 web worker）上下文中直接完成脚本化音频处理的可能性。
 
 ## 调试 worker 线程
