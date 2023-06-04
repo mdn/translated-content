@@ -96,7 +96,7 @@ console.log(findGetter(obj2, "foo")); // [Function: get foo]
 
 {{Compat}}
 
-## 常见
+## 参见
 
 - [`core-js` 中 `Object.prototype.__lookupGetter__` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.prototype.__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
