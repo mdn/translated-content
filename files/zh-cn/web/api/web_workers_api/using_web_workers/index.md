@@ -310,63 +310,7 @@ onmessage = (event) => {
 
 ### 传递数据的例子
 
-#### 例子 #1：创建一个通用的「异步 [`eval()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval)」
-
-下面这个例子介绍了，如何在 worker 内使用 `eval()` 来按顺序执行**异步的**任何种类的 JavaScript 代码：
-
-```js
-// Syntax: asyncEval(code[, listener])
-
-var asyncEval = (function () {
-
-  var aListeners = [], oParser = new Worker("data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D");
-
-  oParser.onmessage = function (oEvent) {
-    if (aListeners[oEvent.data.id]) { aListeners[oEvent.data.id](oEvent.data.evaluated); }
-    delete aListeners[oEvent.data.id];
-  };
-
-
-  return function (sCode, fListener) {
-    aListeners.push(fListener || null);
-    oParser.postMessage({
-      "id": aListeners.length - 1,
-      "code": sCode
-    });
-  };
-
-})();
-```
-
-[data URL](/zh-CN/docs/Web/HTTP/data_URIs) 相当于一个网络请求，它有如下返回：
-
-```
-onmessage = function(oEvent) {
-  postMessage({
-    'id': oEvent.data.id,
-    'evaluated': eval(oEvent.data.code)
-  });
-}
-```
-
-示例使用：
-
-```js
-// asynchronous alert message...
-asyncEval("3 + 2", function (sMessage) {
-    alert("3 + 2 = " + sMessage);
-});
-
-// asynchronous print message...
-asyncEval("\"Hello World!!!\"", function (sHTML) {
-    document.body.appendChild(document.createTextNode(sHTML));
-});
-
-// asynchronous void...
-asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get\", \"http://www.mozilla.org/\", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()");
-```
-
-#### 例子 #2：传输 JSON 的高级方式和创建一个交换系统
+#### 例子 1：传输 JSON 的高级方式和创建一个交换系统
 
 如果你需要传输非常复杂的数据，还要同时在主页与 Worker 内调用多个方法，那么可以考虑创建一个类似下面的系统。
 
