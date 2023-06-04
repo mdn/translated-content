@@ -51,8 +51,6 @@ obj.__lookupGetter__("foo");
 
 ### 以标准方式查找属性的 getter
 
-## 附注
-
 应该使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API 来查找属性的 getter。与 `__lookupGetter__()` 相比，该方法允许查找 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 属性。`Object.getOwnPropertyDescriptor()` 方法还适用于 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)，它们不继承自 `Object.prototype`，因此没有 `__lookupGetter__()` 方法。如果 `__lookupGetter__()` 沿着原型链向上查找属性的行为很重要，则可以使用 {{jsxref("Object.getPrototypeOf()")}} 自行实现它。
 
 ```js
