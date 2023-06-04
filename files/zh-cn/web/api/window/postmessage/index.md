@@ -78,12 +78,12 @@ popup.postMessage("The user is 'bob' and the password is 'secret'",
                   "https://secure.example.net");
 
 // 假设当前页面没有改变 location，这条语句会成功添加 message 到发送队列中去（targetOrigin 设置对了）
-popup.postMessage("hello there!", "http://example.org");
+popup.postMessage("hello there!", "http://example.com");
 
 function receiveMessage(event)
 {
   // 我们能相信信息的发送者吗？(也许这个发送者和我们最初打开的不是同一个页面).
-  if (event.origin !== "http://example.org")
+  if (event.origin !== "http://example.com")
     return;
 
   // event.source 是我们通过 window.open 打开的弹出页面 popup
@@ -94,7 +94,7 @@ window.addEventListener("message", receiveMessage, false);
 
 ```js
 /*
- * 弹出页 popup 域名是<http://example.org>，以下是 script 标签中的代码：
+ * 弹出页 popup 域名是 http://example.com，以下是 script 标签中的代码：
  */
 
 //当 A 页面 postMessage 被调用后，这个 function 被 addEventListener 调用
