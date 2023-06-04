@@ -94,7 +94,7 @@ window.addEventListener("message", receiveMessage, false);
 
 ```js
 /*
- * 弹出页 popup 域名是http://example.com，以下是 script 标签中的代码：
+ * 弹出页 popup 域名是 http://example.com，以下是 script 标签中的代码：
  */
 
 //当 A 页面 postMessage 被调用后，这个 function 被 addEventListener 调用
