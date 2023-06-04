@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 
 ## 概述
 
-**备注：** 该特性已被弃用，建议使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API。该方法的行为仅在 Web 兼容性方面进行了规定，并不要求在任何平台上实现。它可能无法在所有地方正常工作。
+> **备注：** 该特性已被弃用，建议使用 {{jsxref("Object.getOwnPropertyDescriptor()")}} API。该方法的行为只是出于 web 兼容性进行了规定，在任何平台上都不要求实现该方法。它可能无法在所有地方正常工作。
 
 **`__lookupGetter__()`** 方法返回绑定到指定属性的 getter 函数。
 
