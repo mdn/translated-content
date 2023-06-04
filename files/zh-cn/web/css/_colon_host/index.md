@@ -5,12 +5,12 @@ slug: Web/CSS/:host
 
 {{CSSRef}}
 
-**`:host`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择包含其内部 CSS 的 [影子 DOM（shadow DOM)](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（shadow Host） —— 换句话说，这允许你从其影子 DOM 内部选择自定义元素。
+**`:host`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)选择包含其内部 CSS 的[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（shadow host）——换句话说，这允许你从其影子 DOM 内部选择自定义元素。
 
 > **备注：** 这不适用于在影子 DOM 之外使用。
 
 ```css
-/* 选择 shadow root 宿主 */
+/* 选择影子根宿主 */
 :host {
   font-weight: bold;
 }
@@ -26,9 +26,9 @@ slug: Web/CSS/:host
 
 ## 示例
 
-### 给影子 DOM 添加样式
+### 给影子宿主添加样式
 
-下面的片段摘自我们的 [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) 示例（[也可以在线查看](https://mdn.github.io/web-components-examples/host-selectors/)）。
+下面的片段摘自我们的 [host-selectors 示例](https://github.com/mdn/web-components-examples/tree/main/host-selectors)（[也可以在线查看](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
 在此示例中，我们有一个简单的自定义元素（`<context-span>`）你可以将其包装在文本周围：
 
