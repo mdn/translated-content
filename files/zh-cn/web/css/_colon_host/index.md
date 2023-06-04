@@ -70,6 +70,6 @@ style.textContent =
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/API/Web_components)
+- [Web 组件](/zh-CN/docs/Web/API/Web_components)
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
