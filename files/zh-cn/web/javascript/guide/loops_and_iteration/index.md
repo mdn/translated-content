@@ -47,7 +47,7 @@ for ([initialExpression]; [condition]; [incrementExpression])
 4. 如果有更新表达式 `incrementExpression`，执行更新表达式。
 5. 回到步骤 2。
 
-### **例子**
+### 示例
 
 下面的函数包含一个含有 `for` 循环去计算一个滑动列表中被选中项目的个数（一个 {{HTMLElement("select")}} 元素允许选择多项）。`for` 循环声明了变量 i 并将它的初始值设为 0。它检查 `i` 是否比 `<select>` 元素中的选项数量少，执行了随后的 `if` 语句，然后在每次完成循环后，`i` 的值增加 1。
 
@@ -97,7 +97,7 @@ while (condition);
 
 `statement` 在检查条件之前会执行一次。要执行多条语句（语句块），要使用块语句（`{ ... }`）包括起来。如果 `condition` 为真（true），`statement` 将再次执行。在每个执行的结尾会进行条件的检查。当 `condition` 为假（false），执行会停止并且把控制权交回给 `do...while` 后面的语句。
 
-### **例子**
+### 示例
 
 在下面的例子中，这个 `do` 循环将至少重复一次，并且一直重复直到 `i` 不再小于 5。
 
@@ -124,7 +124,7 @@ while (condition)
 
 要执行多条语句（语句块），要使用语句块 (`{ ... }`) 包括起来。
 
-### **例子 1**
+### 示例 1
 
 只要 `n` 小于 3，下面的 `while` 循环就会一直执行：
 
@@ -145,7 +145,7 @@ while (n < 3) {
 
 在三次完成后，条件 `n < 3` 的结果不再为真，所以循环终止了。
 
-### **例子 2**
+### 示例 2
 
 避免无穷循环（无限循环）。保证循环的条件结果最终会变成假；否则，循环永远不会停止。因为条件永远不会变成假值，下面这个 while 循环将会永远执行：
 
@@ -168,7 +168,7 @@ label :
 
 `label` 的值可以是任何的非保留字的 JavaScript 标识符， `statement` 可以是任意你想要标识的语句（块）。
 
-### **例子**
+### 示例
 
 在这个例子里，标记 `markLoop` 标识了一个 `while` 循环。
 
@@ -248,7 +248,7 @@ break [label];
 
 在语法中，被 `[]` 包裹的内容是可省略的，也就是 `label` 可以省略。若省略，则终止当前所在的循环或 `switch`；若不省略，则终止指定的 label 语句。
 
-### **例子** **1**
+### 示例 1
 
 下面的例子循环数组里的元素，直到找到一个等于 `theValue` 的值：
 
@@ -260,7 +260,7 @@ for (i = 0; i < a.length; i++) {
 }
 ```
 
-### **例子 2:** 终止一个 label
+### 示例 2：终止一个 label
 
 ```js
 var x = 0;
@@ -294,7 +294,7 @@ labelCancelLoops: while (true) {
 continue [label];
 ```
 
-### **例子 1**
+### 示例 1
 
 The following example shows a `while` loop with a `continue` statement that executes when the value of `i` is three. Thus, `n` takes on the values one, three, seven, and twelve.
 
@@ -326,7 +326,7 @@ while (i < 5) {
 // 1,3,6,10,15
 ```
 
-### **例子 2**
+### 示例 2
 
 一个被标签为 `checkiandj` 的语句包含了一个标签为 `checkj` 的语句。
 
@@ -371,7 +371,7 @@ for (variable in object) {
 }
 ```
 
-### **例子**
+### 示例
 
 下面的函数通过它的参数得到一个对象和这个对象的名字。然后循环这个对象的所有属性并且返回一个列出属性名和该属性值的字符串。
 
@@ -393,7 +393,7 @@ car.make = Ford
 car.model = Mustang
 ```
 
-### **数组**
+### 数组
 
 虽然使用 **for...in** 来迭代数组 {{jsxref("Array")}} 元素听起来很诱人，但是它返回的东西除了数字索引外，还有可能是你自定义的属性名字。因此还是用带有数字索引的传统的 {{jsxref("statements/for","for")}} 循环来迭代一个数组比较好，因为，如果你想改变数组对象，比如添加属性或者方法，**for...in** 语句迭代的是自定义的属性，而不是数组的元素。（译者注：下面的 `for...of` 语句，和 [`forEach()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)，也是理想的选择。）
 

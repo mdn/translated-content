@@ -117,9 +117,9 @@ function receiveMessage(event)
 window.addEventListener("message", receiveMessage, false);
 ```
 
-### **注意**
+### 注意
 
-任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。因此，用于接收消息的任何事件监听器**必须**首先使用 origin 和 source 属性来检查消息的发送者的身份。 **这不能低估：无法检查 origin 和 source 属性会导致跨站点脚本攻击。**
+任何窗口可以在任何其他窗口访问此方法，在任何时间，无论文档在窗口中的位置，向其发送消息。因此，用于接收消息的任何事件监听器**必须**首先使用 `origin` 和 `source` 属性来检查消息的发送者的身份。**无法检查 `origin` 和 `source` 属性会导致跨站点脚本攻击。**
 
 与任何异步调度的脚本（超时，用户生成的事件）一样，postMessage 的调用者不可能检测到侦听由 postMessage 发送的事件的事件处理程序何时抛出异常。
 
@@ -129,9 +129,9 @@ window.addEventListener("message", receiveMessage, false);
 
 当发送窗口包含 `javascript:` 或 `data:` URL 时，origin 属性的值是加载 URL 的脚本的
 
-### **在扩展**{{Non-standard_inline}}**中使用 window\.postMessage**
+### 在扩展中使用 window\.postMessage {{Non-standard_inline}}
 
-`window.postMessage`可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的`targetOrigin`参数当前被错误解释，使得将导致发送消息的唯一值为`“*”`。由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。最后，在文件中向页面发布消息：URL 当前要求`targetOrigin`参数为`“*”`。`file://`不能用作安全限制; 这个限制可能会在将来被修改。
+`window.postMessage` 可用于以 chrome 代码运行的 JavaScript（例如，在扩展和特权代码中），但是分派事件的 source 属性总是为空作为安全限制。（其他属性具有其期望值。）发送到位于 chrome：URL 的窗口的消息的 `targetOrigin` 参数当前被错误解释，使得将导致发送消息的唯一值为 `"*"`。由于此值是不安全的，当目标窗口可以导航到其他地方的恶意网站，建议 postMessage 不用于与 chrome：页面的沟通; 使用不同的方法（如打开窗口时的查询字符串）与 chrome 窗口进行通信。最后，在文件中向页面发布消息：URL 当前要求 `targetOrigin` 参数为 `"*"`。`file://`不能用作安全限制; 这个限制可能会在将来被修改。
 
 ## 规范
 
