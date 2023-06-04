@@ -32,7 +32,7 @@ __lookupGetter__(prop)
 
 `__lookupGetter__()` 沿着[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)向上查找指定的属性。如果原型链上的任何对象具有指定的[自有属性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)，则返回该属性的[属性描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)的 `get` 属性。如果该属性是数据属性，则返回 `undefined`。如果在整个原型链上都找不到该属性，也同样返回 `undefined`。
 
-`__lookupGetter__()` 在规范中被定义为 "规范可选"，这意味着不需要实现此功能。但是，所有主要的浏览器都实现了它，并且由于其持续使用，它不太可能被移除。如果浏览器实现了 `__lookupGetter__()`，它还需要实现 [`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)、[`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
+`__lookupGetter__()` 在规范中被定义为“规范可选”，这意味着不需要实现此特性。但是，所有主要的浏览器都实现了它，并且由于其持续使用，它不太可能被移除。如果浏览器实现了 `__lookupGetter__()`，它还需要实现 [`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)、[`__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
 
 ## 示例
 
