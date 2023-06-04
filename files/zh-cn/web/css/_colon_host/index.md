@@ -30,7 +30,7 @@ slug: Web/CSS/:host
 
 下面的片段摘自我们的 [host-selectors example](https://github.com/mdn/web-components-examples/tree/main/host-selectors) 示例（[也可以在线查看](https://mdn.github.io/web-components-examples/host-selectors/)）。
 
-在此示例中，我们有一个简单的自定义元素 —— `<context-span>` —— 你可以将其包装在文本周围：
+在此示例中，我们有一个简单的自定义元素（`<context-span>`）你可以将其包装在文本周围：
 
 ```html
 <h1>
