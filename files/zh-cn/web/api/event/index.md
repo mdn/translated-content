@@ -112,7 +112,7 @@ slug: Web/API/Event
 ## 实例方法
 
 - {{domxref("Event.composedPath()")}}
-  - : 返回事件的路径（将在该对象上调用监听器）。如果阴影根节点 (shadow root) 创建时 {{domxref("ShadowRoot.mode")}} 值为 closed，那么路径不会包括该根节点下阴影树 (shadow tree) 的节点。
+  - : 返回事件的路径（将在该对象上调用监听器）。如果阴影根（shadow root）节点创建时 {{domxref("ShadowRoot.mode")}} 值为 closed，那么路径不会包括该根节点下影子树（shadow tree）的节点。
 - {{domxref("event.preventDefault")}}
   - : 取消事件（如果该事件可取消）。
 - {{domxref("event.stopImmediatePropagation")}}
@@ -135,6 +135,6 @@ slug: Web/API/Event
 
 ## 参考
 
-- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Reference/Events)
+- 可用的事件类型：[Event 参考](/zh-CN/docs/Web/Events)
 - [Event 目标的比较](/zh-CN/docs/Web/API/Event/Comparison_of_Event_Targets)（目标 `target` vs 当前目标 `currentTarget` vs 相关目标 `relatedTarget` vs 初始目标 `originalTarget`）
-- [创建和触发自定义事件](/zh-CN/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- [创建和触发自定义事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
