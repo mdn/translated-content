@@ -5,7 +5,7 @@ slug: Web/Progressive_web_apps
 
 {{PWASidebar}}
 
-一个**渐进式 Web 应用**（Progressive Web Apps，PWA）是一个使用 web 平台技术构建的应用程序，但它提供的用户体验就像一个特定平台的应用程序。
+**渐进式 Web 应用**（Progressive Web Apps，PWA）是一个使用 web 平台技术构建的应用程序，但它提供的用户体验就像一个特定平台的应用程序。
 
 它像网站一样，PWA 可以从一个代码库在多个平台和设备上运行。它也像一个特定平台的应用程序一样，可以安装在设备上，可以离线和在后台运行，并且可以与设备和其他已安装的应用程序集成。
 
