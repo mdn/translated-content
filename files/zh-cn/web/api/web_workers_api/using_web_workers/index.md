@@ -5,7 +5,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
+Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，它们可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)（尽管 `responseXML` 和 `channel` 属性总是为空）或 [`fetch`](/zh-CN/docs/Web/API/Fetch_API)（没有这些限制）执行 I/O。一旦创建，一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理器（反之亦然）。
 
 本文详细介绍了如何使用 web worker。
 
@@ -21,29 +21,27 @@ Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的�
 
 workers 和主线程间的数据传递通过这样的消息机制进行——双方都使用 `postMessage()` 方法发送各自的消息，使用 `onmessage` 事件处理函数来响应消息（消息被包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件的 data 属性中）。这个过程中数据并不是被共享而是被复制。
 
-只要运行在同源的父页面中，workers 可以依次生成新的 workers；并且可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性总会返回 `null`。
+只要运行在同源的父页面中，worker 可以依次生成新的 worker；并且可以使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 进行网络 I/O，但是 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性总会返回 `null`。
 
 ## 专用 worker
 
-如前文所述，一个专用 worker 仅能被生成它的脚本所使用。这一部分将探讨 [专用 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)（[运行专用 worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
+如前文所述，一个专用 worker 仅能被生成它的脚本所使用。这一部分将探讨[专用 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)（[运行专用 worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）中的 JavaScript 代码：将你输入的 2 个数字作乘法。输入的数字会发送给一个专用 worker，由专用 worker 作乘法后，再返回给页面进行展示。
 
 这个例子很小，但是我们决定在保持简单的同时向你介绍基础的 worker 概念。更多的细节会在之后的文章中进行讲解。
 
 ### worker 特性检测
 
-为了更好的错误处理控制以及向下兼容，将你的 worker 运行代码包裹在以下代码中是一个很好的想法 (main.js)：
+为了更好的错误处理控制以及向下兼容，将你的 worker 运行代码包裹在以下代码中是一个很好的想法（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 if (window.Worker) {
-
-  ...
-
+  // …
 }
 ```
 
 ### 生成一个专用 worker
 
-创建一个新的 worker 很简单。你需要做的是调用 {{domxref("Worker.Worker", "Worker()")}} 的构造器，指定一个脚本的 URI 来执行 worker 线程（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
+创建一个新的 worker 很简单。你需要做的是调用 {{domxref("Worker.Worker", "Worker()")}} 构造器，指定一个脚本的 URI 来执行 worker 线程（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
 
 ```js
 const myWorker = new Worker('worker.js');
@@ -103,11 +101,11 @@ myWorker.onmessage = (e) => {
 myWorker.terminate();
 ```
 
-worker 线程会被立即杀死。
+worker 线程会被立即终止。
 
 ### 处理错误
 
-当 worker 出现运行中错误时，它的 `onerror` 事件处理函数会被调用。它会收到一个扩展了 `ErrorEvent` 接口的名为 `error`的事件。
+当 worker 出现运行中错误时，它的 `onerror` 事件处理函数会被调用。它会收到一个扩展了 `ErrorEvent` 接口的名为 `error` 的事件。
 
 该事件不会冒泡并且可以被取消；为了防止触发默认动作，worker 可以调用错误事件的 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault) 方法。
 
@@ -122,7 +120,7 @@ worker 线程会被立即杀死。
 
 ### 生成 subworker
 
-如果需要的话 worker 能够生成更多的 worker。这就是所谓的 subworker，它们必须托管在同源的父页面内。而且，subworker 解析 URI 时会相对于父 worker 的地址而不是自身页面的地址。这使得 worker 更容易记录它们之间的依赖关系。
+如果需要的话，worker 能够生成更多的 worker，这就是所谓的 subworker，它们必须托管在同源的父页面内。而且，subworker 解析 URI 时会相对于父 worker 的地址而不是自身页面的地址。这使得 worker 更容易记录它们之间的依赖关系。
 
 ### 引入脚本与库
 
@@ -143,7 +141,7 @@ importScripts(
 
 ## 共享 worker
 
-一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论 [共享 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）中的 JavaScript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本用同一个 worker 来完成实际需要的运算。
+一个共享 worker 可以被多个脚本使用——即使这些脚本正在被不同的 window、iframe 或者 worker 访问。这一部分，我们会讨论[共享 worker 基础示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）中的 JavaScript 代码：该示例与专用 worker 基础示例非常相像，只是有 2 个可用函数被存放在不同脚本文件中：两数相乘函数，以及求平方函数。这两个脚本使用同一个 worker 来完成实际需要的运算。
 
 这里，我们关注一下专用 worker 和共享 worker 之间的区别。在这个示例中有 2 个 HTML 页面，每个页面所包含的 JavaScript 代码使用的是同一个 worker。
 
@@ -204,7 +202,7 @@ myWorker.port.onmessage = (e) => {
 };
 ```
 
-当一条消息通过端口回到 worker，我们检查结果的类型，然后将运算结果放入结果段落中合适的地方。
+当一条消息通过端口回到 worker，我们将运算结果放入结果段落中合适的地方。
 
 ## 关于线程安全
 
@@ -214,7 +212,7 @@ myWorker.port.onmessage = (e) => {
 
 ## 内容安全策略
 
-有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的 [内容安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)。我们来举个例子，假设一个 document 有如下头部声明：
+有别于创建它的 document 对象，worker 有它自己的执行上下文。因此普遍来说，worker 并不受限于创建它的 document（或者父级 worker）的[内容安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)。我们来举个例子，假设一个 document 有如下头部声明：
 
 ```http
 Content-Security-Policy: script-src 'self'
@@ -230,7 +228,7 @@ Content-Security-Policy: script-src 'self'
 
 在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
 
-在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的「_拷贝而非共享_」行为：
+在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的“_拷贝而非共享_”行为：
 
 ```js
 function emulateMessage(vVal) {
@@ -286,7 +284,7 @@ myWorker.onmessage = (event) => {
 myWorker.postMessage("ali");
 ```
 
-**my_task.js** (worker):
+**my_task.js**（worker 文件）：
 
 ```js
 postMessage("I'm working before postMessage('ali').");
@@ -610,7 +608,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种「官方」的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入的网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。「数据块」是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种“官方”的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入道到网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。“数据块”是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>
@@ -693,7 +691,7 @@ worker 的一个优势在于能够执行处理器密集型的运算而不会阻�
 
 #### JavaScript 代码
 
-下面的 JavaScript 代码保存在「fibonacci.js」文件中，与下一节的 HTML 文件关联。
+下面的 JavaScript 代码保存在“fibonacci.js”文件中，与下一节的 HTML 文件关联。
 
 ```js
 self.onmessage = (e) => {
@@ -713,7 +711,7 @@ function fibonacci(num) {
 }
 ```
 
-worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `postMessage()` 时该函数会接收到发送过来的信息。（注意，这么使用并不等同定义一个同名的*函数*。`var onmessage`，`let onmessage` 与 `function onmessage` 将会定义与该名字相同的全局属性，但是它们不会注册能够接收从创建 worker 的网页发送过来的消息的函数。）这将执行数学运算，并最终将结果返回到主线程。
+worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `postMessage()` 时该函数会接收到发送过来的信息（注意，这么使用并不等同定义一个同名的*函数*。`var onmessage`、`let onmessage` 与 `function onmessage` 将会定义与该名字相同的全局属性，但是它们不会注册能够接收从创建 worker 的网页发送过来的消息的函数）。这将执行数学运算，并最终将结果返回到主线程。
 
 #### HTML 代码
 
@@ -777,11 +775,11 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 </html>
 ```
 
-网页创建了一个 ID 为 `result` 的用于显示运算结果的 `div` 元素，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为将错误消息记录到 devtools 控制台。
+网页创建了一个 ID 为 `result` 的用于显示运算结果的 `<div>` 元素，然后生成 worker。在生成 worker 后，`onmessage` 处理函数配置为通过设置 `div` 元素的内容来显示运算结果，然后 `onerror` 处理函数被设置为将错误消息记录到 devtools 控制台。
 
 最后，向 worker 发送一条消息来启动它。
 
-[运行这个例子](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)。
+[运行这个示例](https://mdn.github.io/dom-examples/web-workers/fibonacci-worker/)。
 
 ### 划分任务给多个 worker
 
@@ -791,12 +789,13 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 除了专用和共享的 web worker，还有一些其他类型的 worker：
 
-- [ServiceWorkers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
+- [ServiceWorkers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
 - [Audio Worklet](/zh-CN/docs/Web/API/Web_Audio_API#使用_javascript_处理音频) 提供了在 worklet（轻量级的 web worker）上下文中直接完成脚本化音频处理的可能性。
 
 ## 调试 worker 线程
 
 大多数浏览器都允许你在 JavaScript 调试器中调试 Web Worker，其方式与调试主线程*完全相同*！例如，Firefox 和 Chrome 都列出了主线程和活动 worker 线程的 JavaScript 源文件，所有这些文件都可以打开以设置断点和日志点。
+
 要了解如何调试 Web Worker，请参阅每个浏览器的 JavaScript 调试器的文档：
 
 - [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
@@ -813,7 +812,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 在一个 worker 中最主要的你*不能*做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
-> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 workers 中支持。
+> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
 
 > **备注：** 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
 
@@ -825,5 +824,5 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 - [`Worker`](/zh-CN/docs/Web/API/Worker) 接口
 - [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker) 接口
-- [worker 提供的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- [worker 可用的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
 - [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 接口
