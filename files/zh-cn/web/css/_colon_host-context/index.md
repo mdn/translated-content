@@ -73,7 +73,7 @@ style.textContent =
   ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
 ```
 
-`:host-context(h1) { font-style: italic; }` 和 `:host-context(h1):after { content: " - no links in headers!" }` 规则应用 `<h1>` 内部的 `<context-span>` 元素实例（在此实例中为影子宿主）。我们使用它来明确指出，在我们的设计中，自定义元素不应出现在 `<h1>` 内部。
+`:host-context(h1) { font-style: italic; }` 和 `:host-context(h1):after { content: " - no links in headers!" }` 规则应用 `<h1>` 内部的 `<context-span>` 元素实例（在此实例中为影子宿主）。我们使用它来明确指出：在我们的设计中，自定义元素不应出现在 `<h1>` 内部。
 
 ## 规范
 
