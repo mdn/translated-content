@@ -21,4 +21,4 @@ slug: Web/API/isSecureContext
 
 ## 参见
 
-- [Secure contexts](/zh-CN/docs/Web/Security/Secure_Contexts)
+- [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
