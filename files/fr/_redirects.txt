@@ -3954,6 +3954,7 @@
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/maximumAge	/fr/docs/Web/API/Geolocation/getCurrentPosition
 /fr/docs/Web/API/PositionOptions/timeout	/fr/docs/Web/API/Geolocation/getCurrentPosition
+/fr/docs/Web/API/Proximity_Events	/fr/docs/orphaned/Web/API/Proximity_Events
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/RandomSource/getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
 /fr/docs/Web/API/Référence_du_DOM_Gecko	/fr/docs/Web/API/Document_Object_Model
@@ -6130,7 +6131,7 @@
 /fr/docs/WebAPI/Battery_Status	/fr/docs/Web/API/Battery_status_API
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
-/fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events
+/fr/docs/WebAPI/Proximity	/fr/docs/orphaned/Web/API/Proximity_Events
 /fr/docs/WebGL	/fr/docs/Web/API/WebGL_API
 /fr/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /fr/docs/WebGL/Ajouter_des_couleurs_avec_les_shaders	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL

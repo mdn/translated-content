@@ -11529,10 +11529,6 @@
     "modified": "2019-03-18T21:40:23.342Z",
     "contributors": ["loella16"]
   },
-  "Web/API/Proximity_Events": {
-    "modified": "2019-03-23T23:28:24.540Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/API/PublicKeyCredential": {
     "modified": "2020-10-15T22:15:37.633Z",
     "contributors": ["SphinxKnight"]
@@ -27721,5 +27717,9 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "orphaned/Web/API/Proximity_Events": {
+    "modified": "2019-03-23T23:28:24.540Z",
+    "contributors": ["SphinxKnight"]
   }
 }

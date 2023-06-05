@@ -1,10 +1,10 @@
 ---
 title: Proximity
-slug: Web/API/Proximity_Events
+slug: orphaned/Web/API/Proximity_Events
 tags:
   - WebAPI
 translation_of: Web/API/Proximity_Events
-original_slug: WebAPI/Proximity
+original_slug: Web/API/Proximity_Events
 ---
 
 {{ SeeCompatTable }}
