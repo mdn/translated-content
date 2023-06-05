@@ -26,7 +26,7 @@ Object.getOwnPropertyDescriptors(obj)
 
 ## 描述
 
-该方法允许精确地查看对象的所有自有属性的描述。在 JavaScript 中，一个*属性*由一个字符串值的名称或一个 {{jsxref("Symbol")}} 和一个属性描述符组成。关于属性描述符类型及其特性的更多信息可以在 {{jsxref("Object.defineProperty()")}} 中找到。
+该方法允许查看对象的所有自有属性的精确描述。在 JavaScript 中，一个*属性*由一个字符串值的名称或一个 {{jsxref("Symbol")}} 和一个属性描述符组成。关于属性描述符类型及其特性的更多信息可以在 {{jsxref("Object.defineProperty()")}} 中找到。
 
 一个*属性描述符*是一个记录，具有以下一些特性：
 
@@ -41,7 +41,7 @@ Object.getOwnPropertyDescriptors(obj)
 - `configurable`
   - : 当且仅当此属性描述符的类型可以更改且该属性可以从相应对象中删除时，为 `true`。
 - `enumerable`
-  - : 当且仅当此属性在相应对象的属性枚举中显示时，为 `true`。
+  - : 当且仅当此属性在相应对象的属性枚举中出现时，为 `true`。
 
 ## 示例
 
