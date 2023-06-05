@@ -28,7 +28,7 @@ Object.getOwnPropertyDescriptor(obj, prop)
 
 ## 描述
 
-该方法允许精确地查看属性的描述。在 JavaScript 中，一个*属性*由一个字符串值的名称或一个 {{jsxref("Symbol")}} 和一个属性描述符组成。关于属性描述符类型及其特性的更多信息可以在 {{jsxref("Object.defineProperty()")}} 中找到。
+该方法允许查看属性的精确描述。在 JavaScript 中，一个*属性*由一个字符串值的名称或一个 {{jsxref("Symbol")}} 和一个属性描述符组成。关于属性描述符类型及其特性的更多信息可以在 {{jsxref("Object.defineProperty()")}} 中找到。
 
 一个*属性描述符*是一个记录，具有以下一些特性：
 
