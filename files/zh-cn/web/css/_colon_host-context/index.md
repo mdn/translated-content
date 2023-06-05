@@ -5,7 +5,7 @@ slug: Web/CSS/:host-context
 
 {{CSSRef}}
 
-**`:host-context()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数选择包含其所在的 CSS 的 [影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（shadow Host）（因此你可以从其影子 DOM 内部选择自定义元素）—— 但前提是作为函数参数的选择器与影子宿主的祖先在 DOM 层次结构中的位置匹配。
+**`:host-context()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数选择内部使用了该 CSS 的[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)的影子宿主（shadow host），因此你可以从其影子 DOM 内部选择自定义元素——但前提是作为函数参数的选择器与影子宿主的祖先在 DOM 层次结构中的位置匹配。
 
 换句话说，这允许自定义元素或其影子 DOM 内的任何内容根据其在外部 DOM 中的位置或应用于祖先元素的类/属性应用不同的样式。
 
