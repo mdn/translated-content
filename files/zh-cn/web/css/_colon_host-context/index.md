@@ -14,7 +14,7 @@ slug: Web/CSS/:host-context
 > **备注：** 这在影子 DOM 之外使用时无效。
 
 ```css
-/* 选择 shadow root 宿主，仅当它是给定的选择器参数的后代 */
+/* 选择影子根宿主，仅当它是给定的选择器参数的后代 */
 :host-context(h1) {
   font-weight: bold;
 }
