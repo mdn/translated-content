@@ -92,12 +92,12 @@ console.log(findSetter(obj2, "foo")); // [Function: set foo]
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`core-js` 中 `Object.prototype.__lookupSetter__` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - {{jsxref("Functions/set", "set")}} 语法
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
+- [JS 指南：定义 Getter 和 Setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)
