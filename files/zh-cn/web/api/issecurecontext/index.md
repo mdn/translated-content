@@ -5,7 +5,7 @@ slug: Web/API/isSecureContext
 
 {{APIRef()}}
 
-全局 **`isSecureContext`** 只读属性返回一个布尔值，指示当前[上下文是否是安全的](/zh-CN/docs/Web/Security/Secure_Contexts)，安全（`true`）或不安全（`false`）。
+全局只读属性 **`isSecureContext`** 返回一个布尔值，指示当前[上下文是安全的](/zh-CN/docs/Web/Security/Secure_Contexts)（`true`）还是不安全的（`false`）。
 
 ## 值
 
