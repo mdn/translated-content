@@ -5,7 +5,9 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
 
-事件是在您正在编程的系统中发生的事情，系统会告诉您有关这些事件的信息，以便您的代码能够对它们做出反应。例如：如果用户在网页上单击一个按钮，您可能想通过显示一个信息框来响应这个动作。在这篇文章中，我们将讨论一些关于事件的重要概念，并且观察它们在浏览器上如何运行。这篇文章不会面面俱到，仅聚焦于您现阶段需要掌握的知识。
+事件是你正在编程的系统中发生的事情，系统会告诉你有关这些事件的信息，以便你的代码能够对它们做出反应。
+
+例如：如果用户在网页上单击一个按钮，你可能想通过显示一个信息框来响应这个动作。在这篇文章中，我们将讨论一些关于事件的重要概念，并且观察它们在浏览器上如何运行。这篇文章不会面面俱到，仅聚焦于你现阶段需要掌握的知识。
 
 <table class="learn-box standard-table">
   <tbody>
