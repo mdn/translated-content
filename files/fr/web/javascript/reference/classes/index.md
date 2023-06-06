@@ -394,7 +394,7 @@ class Truc extends calculetteMixin(aleatoireMixin(Toto)) { }
 
 Une classe ne peut pas être redéfinie. Si vous testez votre code via l'éditeur multiligne JavaScript de Firefox (Outils > Développement web > Editeur multiligne JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : _redeclaration of let \<class-name>_.
 
-Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et exécuter. À ce sujet, voir le bug {{bug("1428672")}}.
+Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et exécuter. À ce sujet, voir le [bug Firefox 1428672](https://bugzil.la/1428672).
 
 ## Voir aussi
 

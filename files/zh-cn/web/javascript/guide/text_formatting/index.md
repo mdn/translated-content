@@ -160,18 +160,23 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 {{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式。(不同时区结果不同.)
 
 ```js
-const msPerDay = 24 * 60 * 60 * 1000;
+// July 17, 2014 00:00:00 UTC:
+const july172014 = new Date("2014-07-17");
 
-// July 17, 2014 00:00:00 UTC.
-const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));//2014-1970=44 年
-//这样创建日期真是醉人。。。还要自己计算天数。。。11 是闰年中多出的天数。。。
-//197 是 6×30+16(7 月的 16 天)+3(3 个大月)-2(2 月少 2 天)
-
-const options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+const options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
-console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
+// 本地时区会根据你的设置而有所不同。
+// 在 CEST（中欧夏令时）中，输出：07/17/14, 02:00 AM GMT+2。
+// 在 PDT（太平洋夏令时）中，输出：07/16/14, 05:00 PM GMT-7。
+console.log(americanDateTime(july172014));
 ```
 
 ### 数字格式化

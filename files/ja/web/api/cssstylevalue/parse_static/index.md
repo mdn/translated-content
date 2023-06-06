@@ -1,6 +1,7 @@
 ---
 title: CSSStyleValue.parse()
-slug: Web/API/CSSStyleValue/parse
+slug: Web/API/CSSStyleValue/parse_static
+original_slug: Web/API/CSSStyleValue/parse
 l10n:
   sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---

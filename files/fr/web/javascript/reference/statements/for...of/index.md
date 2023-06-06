@@ -288,7 +288,7 @@ Cette boucle parcourt les valeurs définies comme itérables par [l'objet itéra
 
 ### Attention à ne pas réutiliser les générateurs
 
-Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. {{bug("1147371")}}).
+Les générateurs ne doivent pas être réutilisés, même lorsque la boucle `for...of` a été interrompue (par exemple lorsque {{jsxref("Instructions/break","break")}} est utilisé). Lorsqu'on quitte une boucle, le générateur est clôturé et si on l'utilise à nouveau, il ne fournira aucun résultat. Firefox n'a pas encore implémenté ce comportement standard (cf. [bug Firefox 1147371](https://bugzil.la/1147371)).
 
 ```js
 var gen = (function *(){

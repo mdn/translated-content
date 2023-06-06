@@ -64,7 +64,7 @@ a + b;
 // après une instruction return sans point-virgule"
 ```
 
-> **Note :** À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le {{bug(1005110)}} pour plus d'informations.
+> **Note :** À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le [bug Firefox 1005110](https://bugzil.la/1005110) pour plus d'informations.
 
 Pour éviter ce problème et l'insertion automatique, on peut, si besoin, utiliser des parenthèses.
 

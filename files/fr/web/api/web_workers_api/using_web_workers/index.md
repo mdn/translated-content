@@ -150,7 +150,7 @@ Ici, nous nous intéresserons particulièrement aux différences entre les _work
 
 > **Note :** Si on peut accéder à un _worker_ partagé depuis différents contextes de navigations, ces contextes de navigation doivent néanmoins partager la même origine (même protocole, même hôte, même port).
 
-> **Note :** Dans Firefox, les _workers_ partagés ne peuvent pas être partagés entre les documents chargés en navigation privée et les documents chargés en navigation classique ({{bug(1177621)}}).
+> **Note :** Dans Firefox, les _workers_ partagés ne peuvent pas être partagés entre les documents chargés en navigation privée et les documents chargés en navigation classique ([bug Firefox 1177621](https://bugzil.la/1177621)).
 
 ### Initier un _worker_ partagé
 
