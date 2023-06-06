@@ -11,7 +11,7 @@ slug: Web/API/Element/scrollTop
 
 ```js
 // 獲得已經被滾動的距離(pixels)
-var  intElemScrollTop = someElement.scrollTop;
+var intElemScrollTop = someElement.scrollTop;
 ```
 
 `intElemScrollTop` 為 {{domxref("element")}}已經被滾動的距離(pixels ).

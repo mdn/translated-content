@@ -102,7 +102,7 @@ OneClass.apply(obj3, args);
 //     undefined
 ```
 
-## **举例**
+## 示例
 
 ### 使用 `Reflect.construct()`
 
@@ -120,7 +120,7 @@ d.getFullYear(); // 1776
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

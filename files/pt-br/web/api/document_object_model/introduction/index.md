@@ -170,13 +170,6 @@ A tabela a seguir descreve brevemente esses tipos de dados.
       <td>{{domxref("NamedNodeMap")}}</td>
       <td>
         <p>
-          é como um array, mas os itens são acessados por nome ou índice, embora
-          este último caso seja meramente uma conveniência para enumeração, já
-          que eles não estão em uma ordem específica na lista. Um namedNodeMap
-          possui um método item () para esse propósito, e você também pode
-          adicionar e remover itens de um namedNodeMap.
-        </p>
-        <p>
           Um <code>namedNodeMap</code> é como um array, mas os itens são
           acessados por nome ou índice, embora este último caso seja meramente
           uma conveniência para enumeração, já que eles não estão em uma ordem

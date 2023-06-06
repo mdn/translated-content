@@ -7757,10 +7757,6 @@
     "modified": "2019-03-23T22:09:56.370Z",
     "contributors": ["CGerAJ"]
   },
-  "Web/API/DeviceProximityEvent": {
-    "modified": "2019-03-18T21:47:06.146Z",
-    "contributors": ["MaxTime"]
-  },
   "Web/API/Document": {
     "modified": "2020-10-15T21:04:40.161Z",
     "contributors": [
@@ -13221,14 +13217,6 @@
   "Web/API/RTCSessionDescription": {
     "modified": "2019-09-10T06:45:22.765Z",
     "contributors": ["IsolatedTraveler", "SolitudeRA"]
-  },
-  "Web/API/RTCStats": {
-    "modified": "2020-10-15T22:31:33.896Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/id": {
-    "modified": "2020-10-15T22:31:33.589Z",
-    "contributors": ["alexwen.cn"]
   },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T22:31:34.788Z",
@@ -33409,7 +33397,7 @@
       "disoul"
     ]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2020-11-17T22:59:58.305Z",
     "contributors": [
       "CGerAJ",
@@ -33496,7 +33484,7 @@
     "modified": "2019-03-18T20:54:50.799Z",
     "contributors": ["kingysu", "xgqfrms-GitHub"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2020-11-12T06:21:14.353Z",
     "contributors": [
       "longfangsong",
@@ -33508,7 +33496,7 @@
       "wymm0008"
     ]
   },
-  "WebAssembly/Text_format_to_wasm": {
+  "WebAssembly/Text_format_to_Wasm": {
     "modified": "2020-01-27T02:12:13.951Z",
     "contributors": ["coderzh", "acelan86", "xgqfrms-GitHub", "kingysu"]
   },
