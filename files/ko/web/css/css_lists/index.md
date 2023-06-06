@@ -1,7 +1,9 @@
 ---
 title: CSS Lists and Counters
-slug: Web/CSS/CSS_Lists_and_Counters
+slug: Web/CSS/CSS_lists
+original_slug: Web/CSS/CSS_Lists_and_Counters
 ---
+
 {{CSSRef}}
 
 **CSS Lists**는 리스트 배치 방법, 리스트 마커를 스타일 할 수 있는 법을 정의하는 CSS 모듈입니다.

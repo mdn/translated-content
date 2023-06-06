@@ -13218,14 +13218,6 @@
     "modified": "2019-09-10T06:45:22.765Z",
     "contributors": ["IsolatedTraveler", "SolitudeRA"]
   },
-  "Web/API/RTCStats": {
-    "modified": "2020-10-15T22:31:33.896Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/id": {
-    "modified": "2020-10-15T22:31:33.589Z",
-    "contributors": ["alexwen.cn"]
-  },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T22:31:34.788Z",
     "contributors": ["alexwen.cn"]

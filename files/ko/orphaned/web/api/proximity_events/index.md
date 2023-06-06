@@ -1,7 +1,7 @@
 ---
 title: Proximity Events
-slug: Web/API/Proximity_Events
-original_slug: WebAPI/Proximity
+slug: orphaned/Web/API/Proximity_Events
+original_slug: Web/API/Proximity_Events
 ---
 
 {{DefaultAPISidebar("Proximity Events")}}{{Deprecated_Header}}

@@ -1,6 +1,7 @@
 ---
 title: Line-based placement with CSS Grid
-slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+original_slug: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 ---
 
 [그리드 레이아웃의 기본 개념을 다룬 문서](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)에서 라인 번호를 사용하여 그리드에 아이템을 배치하는 방법을 잠깐 살펴본 적이 있습니다. 이번 문서에서는 이 기본적 기능이 어떻게 작동하는지를 자세히 살펴보겠습니다.
