@@ -1,37 +1,33 @@
 ---
-title: 'Element: error イベント'
+title: "HTMLElement: error イベント"
+short-title: error
 slug: Web/API/HTMLElement/error_event
 original_slug: Web/API/Element/error_event
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
 
-`error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に {{domxref("Element")}} オブジェクトに発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
+`error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合に要素に発生します。例えば、スクリプトの実行エラーがあったり、画像が見つからないか無効であった場合などです。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}} または {{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onerror", "onerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかします。
+
+```js
+addEventListener("error", (event) => {});
+
+onerror = (event) => {};
+```
+
+## イベント型
 
 イベントオブジェクトは、ユーザーインターフェイス要素から生成された場合は {{domxref("UIEvent")}} のインスタンスとなり、それ以外の場合は {{domxref("Event")}} となります。
+
+{{InheritanceDiagram("UIEvent")}}
 
 ## 例
 
@@ -46,15 +42,20 @@ original_slug: Web/API/Element/error_event
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+  <label for="eventLog">Event log:</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
 ```css hidden
 body {
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .controls {
@@ -72,13 +73,14 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
 button {
   height: 2rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 img {
@@ -87,20 +89,20 @@ img {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
+const log = document.querySelector(".event-log-contents");
 
-const badImg = document.querySelector('.bad-img');
-badImg.addEventListener('error', (event) => {
-    log.textContent = log.textContent + `${event.type}: Loading image\n`;
-    console.log(event)
+const badImg = document.querySelector(".bad-img");
+badImg.addEventListener("error", (event) => {
+  log.textContent += `${event.type}: Loading image\n`;
+  console.log(event);
 });
 
-const imgError = document.querySelector('#img-error');
-imgError.addEventListener('click', () => {
-    badImg.setAttribute('src', 'i-dont-exist');
+const imgError = document.querySelector("#img-error");
+imgError.addEventListener("click", () => {
+  badImg.setAttribute("src", "i-dont-exist");
 });
 ```
 
@@ -118,4 +120,7 @@ imgError.addEventListener('click', () => {
 
 ## 関連情報
 
-- `Window` を対象としたこのイベント: {{domxref("Window/error_event", "error")}} イベント
+- 関連イベント:
+
+  - Window: {{domxref("Window/error_event", "error")}} イベント
+  - HTMLElement: {{domxref("HTMLElement/load_event", "load")}} イベント
