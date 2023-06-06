@@ -26,11 +26,11 @@ h1 {
 
 以下のライブサンプルでは、`<span>` に `display: flex` を適用しています。これはブロックレベルのボックスとなり、インライン方向に利用可能なすべての空間を占有しています。ここで、 `justify-content: space-between;` を使用すると、 2 つのフレックスアイテムの間にこの空間を入れることができます。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/span-flex.html", '100%', 440)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/span-flex.html", '100%', 440)}}
 
 インラインフレックスコンテナーを作成することができます。 `inline-flex` という単一の値を使ってフレックスコンテナーを作成すると、インラインレベルのボックスとフレックスの子が作成されます。この子はブロックレベルコンテナーのフレックスの子と同じように動作します。唯一変わったことは、親がインラインレベルボックスになったということです。したがって、他のインラインレベルのものと同様に動作し、ブロックレベルのボックスのように完全な幅（またはインライン軸のサイズ）を取りません。つまり、次のようなテキストがフレックスコンテナーと一緒に表示される可能性があります。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/inline-flex.html", '100%', 440)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-flex.html", '100%', 440)}}
 
 グリッドレイアウトで作業する場合も同様です。 `display: grid` を使用すると、ブロックレベルのボックスが表示され、直接の子にはグリッド整形コンテキストが作成されます。 `display: inline-grid` を使用すると、インラインレベルのボックスが作成され、子要素にグリッド整形コンテキストが作成されます。
 
@@ -40,7 +40,7 @@ h1 {
 
 つまり、 `display: flex` を設定して、フレックスの子を持つブロックレベルのボックスを作成する代わりに、 `display: block flex` を使用することになります。フレックスの子要素を持つインラインレベルのボックスを作成するには、 `display: inline-flex` の代わりに `display: inline flex` を使用します。以下の例は、 Firefox 70 以上で動作するもので、これらの値を示しています。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/two-value-flex.html", '100%', 640)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/multi-keyword-flex.html", '100%', 640)}}
 
 `display` の既存のすべての値に対応するものがあります。最も一般的なものを以下の表に示します。最も一般的なものを下の表に示します。完全なリストを見るには、 [`display` property specification](https://drafts.csswg.org/css-display/#display-value-summary) にある表を参照してください。
 
@@ -61,7 +61,7 @@ h1 {
 
 以下の例では、コンテナーの中に浮動しているアイテムがあります。浮動要素は枠のついたボックスで囲まれており、その中に浮動要素とテキストが一緒に入っています。もし `display: flow-root` という行を削除すると、浮動要素はボックスの底面からはみ出るようになります。 Firefox を使用している場合は、より新しい `display: block flow-root` に置き換えることで、単一の `flow-root` 値と同じことが実現できます。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 440)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 440)}}
 
 `flow-root` の値は、ブロックとインラインのレイアウトについて考えれば、理にかなっています。これは、[通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)と呼ばれることもあるようです。 HTML ページは新しい整形コンテキストを作成し（浮動要素やマージンが境界からはみ出さない）、コンテンツはブロックとインラインレイアウトを使用して、通常のフローで表示されます。グリッドやフレックスのコンテナーを作成すると、新しい整形コンテキスト（それぞれグリッド整形コンテキストとフレックス整形コンテキスト）も作成されます。しかし、浮動要素やマージンを含めてもブロックやインラインレイアウトを使い続けたい場合は、新しいフロールートを作成し、ブロックやインラインレイアウトでやり直すことができます。その位置から下方向は、すべて新しいフロールートの中に含まれます。
 
@@ -69,7 +69,7 @@ h1 {
 
 `display: inline-block` という値は、 CSS の初期から存在しています。この値を使用する理由は、例えばナビゲーションアイテムを作成する際に、インラインアイテムを要素から離して距離を置くことができるようにするため、または以下の例のようにインライン要素にパディング付きの背景を追加したい場合です。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/inline-block.html", '100%', 440)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-block.html", '100%', 440)}}
 
 しかし、 `display: inline-block` を持つ要素は、浮動要素も含むことになります。それは、インラインレベルのボックスの中にあるすべてのものを含みます。したがって、 `display: inline-block` は `display: flow-root` と全く同じですが、ブロックレベルのボックスではなく、インラインレベルのボックスで行います。新しい構文は、この値で何が起こっているかを正確に表現しています。上記の例では、 Firefox で `display: inline-block` を `display: inline flow-root` に変更しても同じ結果になります。
 
