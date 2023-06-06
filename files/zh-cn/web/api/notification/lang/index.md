@@ -11,7 +11,7 @@ slug: Web/API/Notification/lang
 
 ## 值
 
-一个指定语言标记的字符串。
+一个指定语言标签的字符串。
 
 ## 示例
 
