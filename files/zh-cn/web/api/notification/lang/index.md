@@ -25,7 +25,7 @@ const options = {
 
 const n = new Notification("新的评论活动", options);
 
-console.log(n.lang); // "en-US"
+console.log(n.lang); // "zh-Hans-CN"
 ```
 
 ## 规范
