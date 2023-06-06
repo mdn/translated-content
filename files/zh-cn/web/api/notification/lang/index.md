@@ -7,7 +7,7 @@ slug: Web/API/Notification/lang
 
 {{domxref("Notification")}} 接口的 **`lang`** 只读属性指示通知中使用的语言，在 {domxref("Notification.Notification","Notification()")}} 构造函数的 `lang` 参数中指定。
 
-语言本身是根据 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} 使用表示语言标签的字符串指定的。请参阅 Sitepoint [ISO 2 字母语言代码](https://www.sitepoint.com/iso-2-letter-language-codes/) 页面以获取简单参考。
+语言本身是根据 {{RFC(5646, "Tags for Identifying Languages（即 BCP 47）")}}使用表示语言标签的字符串指定的。请参阅 Sitepoint [ISO 2 字母语言代码](https://www.sitepoint.com/iso-2-letter-language-codes/) 页面以获取简单参考。
 
 ## 值
 
