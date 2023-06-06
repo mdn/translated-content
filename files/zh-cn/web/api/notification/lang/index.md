@@ -23,7 +23,7 @@ const options = {
   lang: "en-US",
 };
 
-const n = new Notification("New review activity", options);
+const n = new Notification("新的评论活动", options);
 
 console.log(n.lang); // "en-US"
 ```
