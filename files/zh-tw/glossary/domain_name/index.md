@@ -7,7 +7,7 @@ slug: Glossary/Domain_name
 
 ## 了解更多
 
-### **基礎知識**
+### 基礎知識
 
 - 維基百科上的 [域名](https://zh.wikipedia.org/wiki/Domain_name)
 - [理解域名](/zh-TW/Learn/Understanding_domain_names)

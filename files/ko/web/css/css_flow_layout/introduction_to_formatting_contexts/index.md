@@ -1,7 +1,9 @@
 ---
 title: 서식 상황 입문서
-slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
+slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
+
 {{CSSRef}}
 
 이 문서는 서식 상황의 개념을 소개합니다. 서식 상황에는 블록 서식 상황과 인라인 서식 상황, 가변 서식 상황을 포함한 여러 유형이 있습니다. 그들이 어떻게 동작하고 어떻게 그러한 동작을 활용할 수 있는지에 대한 기본 사항도 소개합니다.
