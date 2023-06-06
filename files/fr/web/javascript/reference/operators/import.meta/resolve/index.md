@@ -15,7 +15,7 @@ l10n:
 import.meta.resolve(nomModule)
 ```
 
-### Parameters
+### Paramètres
 
 - `nomModule`
   - : Une chaîne de caractères indiquant un module qui peut être importé. Il peut s'agir d'un chemin relatif (comme `"./lib/helper.js"`), d'un nom seul (par exemple `"mon-module"`), ou d'une URL absolue (telle que `"https://example.com/lib/helper.js"`).
