@@ -20,7 +20,7 @@ slug: Web/API/Notification/lang
 ```js
 const options = {
   body: "您提交的代码收到了 3 条新的审阅意见。",
-  lang: "en-US",
+  lang: "zh-Hans-CN",
 };
 
 const n = new Notification("新的评论活动", options);
