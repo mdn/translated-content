@@ -3,9 +3,9 @@ title: JavaScript 型別陣列
 slug: Web/JavaScript/Guide/Typed_arrays
 ---
 
-{{JsSidebar("Advanced")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Iterators_and_generators")}}
 
-當 Webapp 有了視頻、[音頻操作](/zh_tw/Introducing_the_Audio_API_Extension)及用 [WebSockets](/zh_tw/WebSockets) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh_tw/Core_JavaScript_1.5_教學/預先定義的核心物件/String_物件)並用 [`charCodeAt()`](/zh-TW/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
+當 Webapp 有了視頻、音頻操作，及用 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 存取原始資料等等的功能而變得越來越強大，讓 JavaScript 代碼可以快速、簡單地操作原始二進制資料的好處就越來越明顯。以前唯一的解法是視原始資料為[字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)並用 [`charCodeAt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt) 方法讀取資料緩衝的位元組。
 
 然而，由於需要多次型別轉換（特別是二進制資料並非以位元組計算，如 32 位元整數或浮點數），這個解法既慢又容易發生錯誤。
 
@@ -151,14 +151,6 @@ var typedArray = new Uint8Array([1, 2, 3, 4]),
 normalArray.length === 4;
 normalArray.constructor === Array;
 ```
-
-## 規範
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
 
 ## 參見
 
