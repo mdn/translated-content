@@ -5,7 +5,7 @@ slug: MDN/Community/Communication_channels
 
 {{MDNSidebar}}
 
-社区可以通过多重沟通渠道与 MDN Web 文档的员工联系并参与讨论。
+社区可以通过多种沟通渠道与 MDN Web 文档的员工联系并参与讨论。
 
 ## 聊天室
 
@@ -30,7 +30,7 @@ Matrix 聊天室是 Discord 服务器的替代品。
 
 ## GitHub 讨论
 
-MDN Web 文档的 [GitHub Discussions](https://github.com/orgs/mdn/discussions) 是一个寻找任何有关项目[公告](https://github.com/orgs/mdn/discussions/categories/announcements)的地方。
+MDN Web 文档的 [GitHub 讨论](https://github.com/orgs/mdn/discussions)是一个寻找任何有关项目[公告](https://github.com/orgs/mdn/discussions/categories/announcements)的地方。
 
 使用 GitHub 讨论来发布你的问题和建议。在开始一个话题时，请选择适当的[讨论类别](https://github.com/mdn/mdn-community#github-discussions)。你的回答问题可能对其他人在未来寻找类似信息时非常有用。
 
