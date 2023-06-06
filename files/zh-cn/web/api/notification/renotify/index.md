@@ -13,7 +13,7 @@ slug: Web/API/Notification/renotify
 
 ## 示例
 
-以下代码片段用于在一个通知被替换以后触发通报以重新通知用户；它创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
+以下代码片段用于在一个通知被替换以后触发重新向用户发送通知；它创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
 
 ```js
 const options = {
