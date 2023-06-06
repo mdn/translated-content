@@ -15,7 +15,7 @@ translation_of: Web/API/OffscreenCanvas
 
 L'interface `OffscreenCanvas` fournit un canevas qui peut être restitué hors écran. Il est disponible dans les contextes à la fois window et [worker](/fr-FR/docs/Web/API/Web_Workers_API).
 
-> **Note :** Cette API n'est actuellement implémentée que pour les contextes [WebGL1](/fr-FR/docs/Web/API/WebGLRenderingContext) et[WebGL2](/fr-FR/docs/Web/API/WebGL2RenderingContext). Voir {{bug(801176)}} pour le support de l'[API canvas](/fr-FR/docs/Web/API/Canvas_API) depuis les workers.
+> **Note :** Cette API n'est actuellement implémentée que pour les contextes [WebGL1](/fr-FR/docs/Web/API/WebGLRenderingContext) et[WebGL2](/fr-FR/docs/Web/API/WebGL2RenderingContext). Voir [bug Firefox 801176](https://bugzil.la/801176) pour le support de l'[API canvas](/fr-FR/docs/Web/API/Canvas_API) depuis les workers.
 
 ## Constructeur
 

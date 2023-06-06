@@ -56,8 +56,8 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
     > **Note :** Voici un rapide historique pour cette propriété :
     >
     > - Au début, `flex-basis:auto` signifiait « se référer à ma propriété `width` ou `height` »
-    > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le bug {{bug("1032922")}}.
-    > - Cette modification a été annulée avec le bug {{bug("1093316")}} afin qu'`auto` fasse à nouveau référence à la propriété `height` ou `width`. Le mot-clé `content` a été introduit pour déclencher un dimensionnement automatique (c'est le bug {{bug("1105111")}} qui couvre cette implémentation).
+    > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le [bug Firefox 1032922](https://bugzil.la/1032922).
+    > - Cette modification a été annulée avec le [bug Firefox 1093316](https://bugzil.la/1093316) afin qu'`auto` fasse à nouveau référence à la propriété `height` ou `width`. Le mot-clé `content` a été introduit pour déclencher un dimensionnement automatique (c'est le [bug Firefox 1105111](https://bugzil.la/1105111) qui couvre cette implémentation).
 
 ## Définition formelle
 
