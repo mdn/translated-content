@@ -173,9 +173,9 @@ const options = {
 };
 const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
-// 本地时区会根据您的设置而有所不同。
-// 在CEST（中欧夏令时）中，日志记录为：07/17/14，02:00 AM GMT+2。
-// 在PDT（太平洋夏令时）中，日志记录为：07/16/14，05:00 PM GMT-7。
+// 本地时区会根据你的设置而有所不同。
+// 在 CEST（中欧夏令时）中，输出：07/17/14, 02:00 AM GMT+2。
+// 在 PDT（太平洋夏令时）中，输出：07/16/14, 05:00 PM GMT-7。
 console.log(americanDateTime(july172014));
 ```
 
