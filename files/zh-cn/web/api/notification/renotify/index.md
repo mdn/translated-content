@@ -11,7 +11,7 @@ slug: Web/API/Notification/renotify
 
 一个布尔值。默认值为 `false`；设为 `true` 将会重新通知用户。
 
-## 例子
+## 示例
 
 以下代码片段用于在一个通知被替换以后触发通报以重新通知用户；它创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
 
