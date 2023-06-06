@@ -1736,6 +1736,8 @@
 /zh-CN/docs/Web/API/RTCPeerConnection/ondatachannel	/zh-CN/docs/Web/API/RTCPeerConnection/datachannel_event
 /zh-CN/docs/Web/API/RTCPeerConnection/onicecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
+/zh-CN/docs/Web/API/RTCStats	/zh-CN/docs/conflicting/Web/API/RTCStatsReport_fab6cd966663b4fab25a9afd3d742208
+/zh-CN/docs/Web/API/RTCStats/id	/zh-CN/docs/conflicting/Web/API/RTCStatsReport
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing

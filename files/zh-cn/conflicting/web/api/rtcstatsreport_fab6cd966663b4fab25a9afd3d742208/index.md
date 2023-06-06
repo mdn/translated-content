@@ -1,6 +1,7 @@
 ---
 title: RTCStats
-slug: Web/API/RTCStats
+slug: conflicting/Web/API/RTCStatsReport_fab6cd966663b4fab25a9afd3d742208
+original_slug: Web/API/RTCStats
 ---
 
 {{APIRef("WebRTC")}}

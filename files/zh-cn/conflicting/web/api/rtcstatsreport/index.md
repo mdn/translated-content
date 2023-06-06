@@ -1,6 +1,7 @@
 ---
 title: RTCStats.id
-slug: Web/API/RTCStats/id
+slug: conflicting/Web/API/RTCStatsReport
+original_slug: Web/API/RTCStats/id
 ---
 
 {{APIRef("WebRTC")}}
