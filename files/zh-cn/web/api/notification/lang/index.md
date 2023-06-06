@@ -19,7 +19,7 @@ slug: Web/API/Notification/lang
 
 ```js
 const options = {
-  body: "Your code submission has received 3 new review comments.",
+  body: "您提交的代码收到了 3 条新的审阅意见。",
   lang: "en-US",
 };
 
