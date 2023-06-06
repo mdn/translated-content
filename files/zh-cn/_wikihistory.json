@@ -33526,13 +33526,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/RTCStatsReport": {
-    "modified": "2020-10-15T22:31:33.589Z",
-    "contributors": ["alexwen.cn"]
-  },
-  "conflicting/Web/API/RTCStatsReport_fab6cd966663b4fab25a9afd3d742208": {
-    "modified": "2020-10-15T22:31:33.896Z",
-    "contributors": ["Sheppy"]
   }
 }
