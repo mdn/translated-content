@@ -91,4 +91,4 @@ Everyone participating in this project is expected to follow our [Code of Conduc
 
 When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
 
-[ask for help]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help
+[ask for help]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
