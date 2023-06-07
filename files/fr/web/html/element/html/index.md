@@ -17,11 +17,11 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("manifest")}}{{deprecated_inline}}
+- `manifest`{{deprecated_inline}}
   - : Définit l'URI d'un manifeste de ressources signifiant que les ressources devraient être mises en cache localement. Voir [Ressources hors-ligne dans Firefox](/fr/docs/Utiliser_Application_Cache) pour plus de détails.
-- {{htmlattrdef("version")}}{{deprecated_inline}}
+- `version`{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
-- {{htmlattrdef("xmlns")}}
+- `xmlns`
   - : Définit l'espace de noms XML du document. La valeur par défaut est "http\://www\.w3.org/1999/xhtml". Cet attribut est obligatoire dans un document XML et optionnel dans un document de type text/html.
 
 ## Exemples

@@ -35,13 +35,13 @@ On peut également créer un lien implicite en imbriquant l'élément `<input>` 
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("for")}}
+- `for`
 
   - : L'identifiant (la valeur de l'attribut {{htmlattrxref("id")}}) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
 
     > **Note :** Un élément label peut simultanément avoir un attribut `for` et contenir un élément de contrôle tant que l'attribut `for` pointe vers l'élément contenu.
 
-- {{htmlattrdef("form")}}
+- `form`
 
   - : L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément \<label> doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
 

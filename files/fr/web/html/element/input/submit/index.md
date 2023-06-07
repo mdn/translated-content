@@ -41,13 +41,13 @@ En complément des attributs pris en charge par l'ensemble des éléments {{HTML
 | [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) avant l'envoi des données au serveur. |
 | [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                                    |
 
-### {{htmlattrdef("formaction")}}
+### `formaction`
 
 Une chaîne de caractères représentant l'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut {{htmlattrxref("action", "form")}} du formulaire ({{HTMLElement("form")}}) propriétaire du champ `<input>`.
 
 Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
 
-### {{htmlattrdef("formenctype")}}
+### `formenctype`
 
 Une chaîne de caractères qui identifie la méthode d'encodage à utiliser pour l'envoi des données du formulaire au serveur. Trois valeurs sont autorisées :
 
@@ -62,7 +62,7 @@ Si cet attribut est défini, sa valeur prend la priorité sur l'attribut {{htmla
 
 Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
 
-### {{htmlattrdef("formmethod")}}
+### `formmethod`
 
 Une chaîne de caractères qui indique la méthode HTTP à utiliser lors de l'envoi des données du formulaire. Cette valeur prend la priorité sur l'attribut {{htmlattrxref("method", "form")}} du formulaire. Les valeurs autorisées sont :
 
@@ -75,13 +75,13 @@ Une chaîne de caractères qui indique la méthode HTTP à utiliser lors de l'en
 
 Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
 
-### {{htmlattrdef("formnovalidate")}}
+### `formnovalidate`
 
 Un attribut booléen qui, lorsqu'il est présent, indique que le formulaire ne devrait pas être validé avant d'être envoyé au serveur. Cet attribut prend la priorité sur l'attribut {{htmlattrxref("novalidate", "form")}} du formulaire parent.
 
 Cet attribut est également disponible pour les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et {{HTMLElement("button")}}.
 
-### {{htmlattrdef("formtarget")}}
+### `formtarget`
 
 Une chaîne de caractères qui indique un nom ou un mot-clé qui définit où afficher la réponse reçue depuis le serveur après l'envoi du formulaire. La chaîne de caractères doit correspondre au nom **d'un contexte de navigation** (un onglet, une fenêtre ou une {{HTMLElement("iframe")}}). La valeur de cet attribut prendra la priorité sur celle fournie par l'attribut {{htmlattrxref("target", "form")}} du formulaire ({{HTMLElement("form")}}) parent.
 

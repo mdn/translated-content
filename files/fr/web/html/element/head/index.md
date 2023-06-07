@@ -19,7 +19,7 @@ L'élément HTML **\<head>** fournit des informations générales (métadonnées
 
 Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("profile")}}{{deprecated_inline}}
+- `profile`{{deprecated_inline}}
   - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
 
 ## Exemples

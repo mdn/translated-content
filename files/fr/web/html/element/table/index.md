@@ -22,7 +22,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 ### Attributs dépréciés
 
-- {{htmlattrdef("align")}} {{Deprecated_inline}}
+- `align` {{Deprecated_inline}}
 
   - : Cet attribut énumérée indique la manière dont la table doit être aligné en regard du document qui la contient. Ile peut prendre les valeurs suivantes :
 
@@ -35,25 +35,25 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     > - **Cet attribut ne doit pas être utilisé** car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant [CSS](/fr/docs/CSS). Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés [CSS](/fr/docs/CSS) {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.
     > - Avant Firefox 4, Firefox supportait également, en mode quirks uniquement, les valeurs `middle`, `absmiddle`, et `abscenter` comme synonymes de `center`_._
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le [sRGB](https://www.w3.org/Graphics/Color/sRGB). Il est précédé d'un '#'. Un des [mots-clés préfédinis pour les couleurs](/fr/docs/Web/CSS/color_value#color_keywords) peut également être utilisé.
 
     > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.
 
-- {{htmlattrdef("border")}} {{Deprecated_inline}}
+- `border` {{Deprecated_inline}}
 
   - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut {{htmlattrxref("frame", "table")}} est vide.
 
     > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
 
-- {{htmlattrdef("cellpadding")}} {{Deprecated_inline}}
+- `cellpadding` {{Deprecated_inline}}
 
   - : Cet attribut définit la taille de l'espace entre le contenu d'une cellule et sa bordure, qu'lle soit affichée ou non. Si cet attribut est exprimé en pixels, le décalage sera appliqué sur les quatre côtés. S'il est exprimé en pourcents, le contenu sera centré verticalement et la somme des espaces en haut et en bas représentera le pourcentage, il en va de même pour l'espace horizontal (droite et gauche).
 
     > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.
 
-- {{htmlattrdef("cellspacing")}} {{Deprecated_inline}}
+- `cellspacing` {{Deprecated_inline}}
 
   - : Cet attribut définit la taille (en pourcents ou pixels) de l'espace (vertical et horizontal) entre deux cellules, entre la haut du tableau et les cellules de la première ligne, la gauche du tableau et les cellules de la première colonne, puis de la même manière pour le bas et le côté droit du tableau.
 
@@ -61,7 +61,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 <!---->
 
-- {{htmlattrdef("frame")}} {{Deprecated_inline}}
+- `frame` {{Deprecated_inline}}
 
   - : Cet attribut à valeurs multiples définit les côtés du tableau sur lesquels dessiner une bordure. Il peut prendre les valeurs suivantes : `above, hsides, lhs, border, void, below, vsides, rhs, box`.
 
@@ -69,7 +69,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 <!---->
 
-- {{htmlattrdef("rules")}} {{Deprecated_inline}}
+- `rules` {{Deprecated_inline}}
 
   - : Cet attribut à valeurs multiples définit la manière dont les traits doivent apparaître au sein du tableau. Il peut avoir les valeurs suivantes :
 
@@ -86,7 +86,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 <!---->
 
-- {{htmlattrdef("summary")}} {{Deprecated_inline}}
+- `summary` {{Deprecated_inline}}
 
   - : Cet attribut définit un texte alternatif à utiliser afin de décrire le tableau. Un tel texte peut être utilisé par un agent utilisateur qui ne pourrait pas afficher le tableau. Il est généralement utilisé pour les personnes souffrant d'une déficience visuelle, comme par exemple les aveugles qui navigueront sur des pages web en utilisant un écran Braille. Si l'information contenue dans cet attribut serait également utile aux autres utilisateurs, il faudra plutôt utiliser l'élément {{HTMLElement("caption")}}. L'attribut **`summary`** n'est pas obligatoire et peut être omis lorsqu'un élément {{HTMLElement("caption")}} remplit ce rôle.
 
@@ -101,7 +101,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 <!---->
 
-- {{htmlattrdef("width")}} {{Deprecated_inline}}
+- `width` {{Deprecated_inline}}
 
   - : Cet attribut définit la largeur du tableau. Elle peut être exprimée en pixels ou en pourcent (représentant alors la fraction du conteneur que le tableau peut occuper).
 

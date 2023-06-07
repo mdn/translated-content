@@ -19,9 +19,9 @@ L'élément HTML **`<progress>`** indique l'état de complétion d'une tâche et
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("max")}}
+- `max`
   - : Cet attribut indique la valeur correspondant à la complétion de la tâche. Si l'attribut `max` est présent, sa valeur doit être un nombre décimal supérieur à 0. La valeur par défaut est 1.
-- {{htmlattrdef("value")}}
+- `value`
   - : Cet attribut indique l'état actuel de complétion de la tâche avec une valeur numérique. La valeur de l'attribut doit être un nombre décimal compris entre 0 et `max`  (ou entre 0 et 1 si l'attribut `max` est absent). Si l'attribut `value` est absent, la barre de progression traduit un état indéterminé (la tâche est en cours et on ne sait pas la durée qu'elle prendra).
 
 > **Note :** La valeur minimale est toujours 0 et il n'existe pas d'attribut `min` pour l'élément `progress`. La propriété CSS {{cssxref("-moz-orient")}} peut être utilisée afin d'indiquer si barre de progression doit être affichée horizontalement (le comportement par défaut) ou verticalement.

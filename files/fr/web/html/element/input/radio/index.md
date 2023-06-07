@@ -121,13 +121,13 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 | [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
 | [`value`](#value) | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
 
-### {{htmlattrdef("checked")}}
+### `checked`
 
 Un attribut booléen qui indique si c'est ce champ radio qui est sélectionné parmi le groupe.
 
 À la différence des autres navigateurs, Firefox conservera [l'état coché dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un bouton radio au fur et à mesure des chargements de la page. On pourra utiliser l'attribut {{htmlattrxref("autocomplete","input")}} afin de contrôler cette fonctionnalité.
 
-### {{htmlattrdef("value")}}
+### `value`
 
 L'attribut `value` est partagé par l'ensemble des types d'élément {{HTMLElement("input")}}. Dans le cas d'un bouton radio, il a un rôle spécifique et permet d'associer un texte qui sera envoyé avec le formulaire pour représenter la valeur sélectionnée. Si la valeur de `value` n'est pas définie, ce sera la chaîne de caractères `"on"` qui sera envoyée.
 

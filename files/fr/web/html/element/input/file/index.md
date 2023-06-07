@@ -30,7 +30,7 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 | [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
 | [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
-### {{htmlattrdef("accept")}}
+### `accept`
 
 Une chaîne de caractères qui définit les types de fichier qui devraient être acceptés. Cette chaîne est une liste d'identifiants de type de fichier (cf. ci-après) séparés par des virgules. Un fichier pouvant avoir un format selon différentes extensions et types MIME, il est souvent utile de cibler plusieurs identifiants pour la bonne sélection du fichier.
 
@@ -41,17 +41,17 @@ Les fichiers Microsoft Word, par exemple, peuvent être identifiés de différen
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
 ```
 
-### {{htmlattrdef("capture")}}
+### `capture`
 
 Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut `accept` indique que le fichier est de ce type. Lorsque `capture` vaut `"user"`, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut `"environment"`, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.
 
 > **Note :** `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
 
-### {{htmlattrdef("files")}}
+### `files`
 
 Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si {{htmlattrxref("multiple", "input/file")}} est indiqué.
 
-### {{htmlattrdef("multiple")}}
+### `multiple`
 
 Lorsque cet attribut booléen est indiqué, le champ peut être utilisé afin de sélectionner plus d'un fichier.
 
@@ -63,7 +63,7 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
-### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+### `webkitdirectory` {{non-standard_inline}}
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que le contrôle permet de sélectionner un/des répertoires plutôt qu'un/des fichiers. Voir {{domxref("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
 
