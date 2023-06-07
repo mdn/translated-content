@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 ## 語法
 
 ```js
-+x
++x;
 ```
 
 ## 詳細說明
@@ -46,11 +46,13 @@ console.log(+y);
 ### 使用於非數字上
 
 ```js
-+true  // 1
-+false // 0
-+null  // 0
-+function(val){ return val } // NaN
-+1n    // throws TypeError: Cannot convert BigInt value to number
++true + // 1
+  false + // 0
+  null + // 0
+  function (val) {
+    return val;
+  } + // NaN
+  1n; // throws TypeError: Cannot convert BigInt value to number
 ```
 
 ## 規範

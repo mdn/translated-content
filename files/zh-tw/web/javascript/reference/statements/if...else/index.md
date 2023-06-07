@@ -77,10 +77,10 @@ if (b) // this condition is truthy
 
 ```js
 if (cipher_char === from_char) {
-   result = result + to_char;
-   x++;
+  result = result + to_char;
+  x++;
 } else {
-   result = result + clear_char;
+  result = result + clear_char;
 }
 ```
 
@@ -90,11 +90,11 @@ if (cipher_char === from_char) {
 
 ```js
 if (x > 5) {
- /* do the right thing */
+  /* do the right thing */
 } else if (x > 50) {
- /* do the right thing */
+  /* do the right thing */
 } else {
- /* do the right thing */
+  /* do the right thing */
 }
 ```
 
@@ -103,8 +103,8 @@ if (x > 5) {
 建議不要在條件表達式中直接對物件賦值，因為這會使人在瀏覽程式碼時很容易將賦值( assignment )與相等( equality )混淆。舉例而言，不要使用以下寫法：
 
 ```js example-bad
-if (x = y) {
-   /* do the right thing */
+if ((x = y)) {
+  /* do the right thing */
 }
 ```
 
@@ -112,7 +112,7 @@ if (x = y) {
 
 ```js example-good
 if ((x = y)) {
-   /* do the right thing */
+  /* do the right thing */
 }
 ```
 

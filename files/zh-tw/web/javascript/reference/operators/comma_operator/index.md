@@ -38,10 +38,10 @@ Note that the comma in assignments such as the `var` statement may appear not to
 ```js
 // Note that the following creates globals and is disallowed in strict mode.
 
-a = b = 3, c = 4; // Returns 4 in console
+(a = b = 3), (c = 4); // Returns 4 in console
 console.log(a); // 3 (left-most)
 
-x = (y = 5, z = 6); // Returns 6 in console
+x = ((y = 5), (z = 6)); // Returns 6 in console
 console.log(x); // 6 (right-most)
 ```
 
@@ -52,10 +52,10 @@ The comma operator is fully different from the comma within arrays, objects, and
 Another example that one could make with comma operator is processing before returning. As stated, only the last element will be returned but all others are going to be evaluated as well. So, one could do:
 
 ```js
-function myFunc () {
+function myFunc() {
   var x = 0;
 
-  return (x += 1, x); // the same as return ++x;
+  return (x += 1), x; // the same as return ++x;
 }
 ```
 

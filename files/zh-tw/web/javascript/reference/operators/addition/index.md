@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Addition
 ## 語法
 
 ```js
-x + y
+x + y;
 ```
 
 ## 範例
@@ -21,22 +21,22 @@ x + y
 
 ```js
 // Number + Number -> addition
-1 + 2 // 3
+1 + 2; // 3
 // Boolean + Number -> addition
-true + 1 // 2
+true + 1; // 2
 // Boolean + Boolean -> addition
-false + false // 0
+false + false; // 0
 ```
 
 ### 字串串聯
 
 ```js
 // String + String -> concatenation
-'foo' + 'bar' // "foobar"
+"foo" + "bar"; // "foobar"
 // Number + String -> concatenation
-5 + 'foo' // "5foo"
+5 + "foo"; // "5foo"
 // String + Boolean -> concatenation
-'foo' + false // "foofalse"
+"foo" + false; // "foofalse"
 ```
 
 ## 規範

@@ -7,8 +7,7 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循�
 `do...while` 語法會反覆執行直到指定條件的求值結果為 false 為止。`do...while` 語法如下︰
 
 ```js
-do
-   statement
+do statement;
 while (condition);
 ```
 
@@ -20,8 +19,8 @@ while (condition);
 
 ```js
 do {
-   i += 1;
-   document.write(i);
+  i += 1;
+  document.write(i);
 } while (i < 5);
 ```
 

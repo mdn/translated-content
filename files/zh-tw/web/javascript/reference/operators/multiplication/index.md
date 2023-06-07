@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 ## 語法
 
 ```js
-x * y
+x * y;
 ```
 
 ## 範例
@@ -20,21 +20,21 @@ x * y
 ### 乘以數字
 
 ```js
- 2 * 2      // 4
--2 * 2     // -4
+2 * 2 - // 4
+  2 * 2; // -4
 ```
 
 ### 乘以無限（Infinity）
 
 ```js
-Infinity * 0         // NaN
-Infinity * Infinity  // Infinity
+Infinity * 0; // NaN
+Infinity * Infinity; // Infinity
 ```
 
 ### 乘以非數字
 
 ```js
-'foo' * 2 // NaN
+"foo" * 2; // NaN
 ```
 
 ## 規範

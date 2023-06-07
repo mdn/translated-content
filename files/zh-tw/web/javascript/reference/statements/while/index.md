@@ -7,8 +7,7 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循�
 `while` 語法會執行他的語句，只要指定的條件的求值結果為 true。`while` 語法如下︰
 
 ```js
-while (condition)
-   statement
+while (condition) statement;
 ```
 
 如果條件變成 false，就停止執行循環內部的 `statement`，並把控制權移交給循環後面的語句。
@@ -25,8 +24,8 @@ while (condition)
 n = 0;
 x = 0;
 while (n < 3) {
-   n++;
-   x += n;
+  n++;
+  x += n;
 }
 ```
 
@@ -44,7 +43,7 @@ while (n < 3) {
 
 ```js
 while (true) {
-   alert("Hello, world");
+  alert("Hello, world");
 }
 ```
 
