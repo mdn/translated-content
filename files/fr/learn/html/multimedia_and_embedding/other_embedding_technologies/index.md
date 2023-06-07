@@ -1,21 +1,7 @@
 ---
 title: Des objets aux iframes — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - Flash
-  - Guide
-  - HTML
-  - Integration
-  - Multimédia et intégration
-  - Object
-  - embed
-  - iframe
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

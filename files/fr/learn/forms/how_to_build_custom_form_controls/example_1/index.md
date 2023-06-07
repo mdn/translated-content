@@ -1,12 +1,7 @@
 ---
 title: Exemple 1
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
-tags:
-  - Formulaires
-  - Guide
-  - HTML
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_1
-original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1
 ---
 

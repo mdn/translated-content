@@ -1,14 +1,6 @@
 ---
 title: Démarrer avec CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - CSS
-  - Classes
-  - Débutant
-  - Element
-  - Etat
-  - Syntaxe
-  - Sélecteurs
 translation_of: Learn/CSS/First_steps/Getting_started
 ---
 

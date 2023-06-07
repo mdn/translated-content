@@ -1,13 +1,7 @@
 ---
 title: Les frameworks web côté serveur
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Débutant
-  - Guide
-  - Server
-  - Web
 translation_of: Learn/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/Premiers_pas/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}

@@ -1,16 +1,7 @@
 ---
 title: Cours express sur la ligne de commande
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-tags:
-  - CLI
-  - Côté client
-  - Débutant
-  - Outils
-  - Terminal
-  - ligne de commande
-  - npm
 translation_of: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

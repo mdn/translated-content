@@ -1,18 +1,7 @@
 ---
 title: Structure de Site Web et de document
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Codage
-  - Disposition
-  - Débutant
-  - Guide
-  - HTML
-  - Page
-  - Site
-  - blocs
-  - sémantique
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure
 ---
 
 {{LearnSidebar}}

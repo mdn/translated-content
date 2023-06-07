@@ -1,19 +1,7 @@
 ---
 title: Envoyer et extraire les données des formulaires
 slug: Learn/Forms/Sending_and_retrieving_form_data
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Forms
-  - Guide
-  - HTML
-  - HTTP
-  - Headers
-  - Security
-  - Web
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
-original_slug: Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Forms/Form_validation", "Learn/Forms")}}

@@ -1,19 +1,7 @@
 ---
 title: Prendre des décisions dans le code — conditions
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Article
-  - CodingScripting
-  - Conditionnel
-  - Débutant
-  - JavaScript
-  - Switch
-  - conditions
-  - else
-  - if
-  - ternaire
 translation_of: Learn/JavaScript/Building_blocks/conditionals
-original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}

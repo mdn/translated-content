@@ -1,11 +1,7 @@
 ---
 title: Astuces de création de pages HTML à affichage rapide
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - HTML
-  - Performance
 translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide
 ---
 
 C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.

@@ -1,17 +1,7 @@
 ---
 title: Responsive design
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - Images
-  - Media Queries
-  - RWD
-  - Responsive web design
-  - Typographie
-  - flexbox
-  - grid
-  - grille fluide
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}

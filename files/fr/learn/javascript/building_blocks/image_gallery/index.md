@@ -1,19 +1,7 @@
 ---
 title: Galerie d'images
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Apprendre
-  - Boucles
-  - Débutant
-  - Evaluation
-  - Gestionnaire d'événement
-  - JavaScript
-  - conditions
-  - l10n:priority
-  - Écriture de code
-  - évènements
 translation_of: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

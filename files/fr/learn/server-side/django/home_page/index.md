@@ -1,17 +1,6 @@
 ---
 title: 'Django didactique Section 5: Créer la page d''accueil'
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Article
-  - Cadriciel
-  - Code
-  - Didactique
-  - Django (Vues)
-  - Django (gabarits)
-  - Débutant
-  - Programmation
-  - Python
-  - django
 translation_of: Learn/Server-side/Django/Home_page
 ---
 

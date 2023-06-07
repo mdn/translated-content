@@ -1,21 +1,7 @@
 ---
 title: Méthodes utiles pour les chaînes de caractères
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - JavaScript
-  - Longueur
-  - cas
-  - couper
-  - indexof
-  - majuscule
-  - minuscule
-  - remplacer
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

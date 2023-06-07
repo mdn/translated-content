@@ -1,17 +1,7 @@
 ---
 title: Table de compatibilité des propriétés pour les widgets de formulaire
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Avancé
-  - CSS
-  - Formulaires
-  - Guide
-  - HTML
-  - Indésirables
-  - Mises à jour
-  - Web
 translation_of: Learn/Forms/Property_compatibility_table_for_form_controls
-original_slug: Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets
 ---
 
 {{learnsidebar}}
