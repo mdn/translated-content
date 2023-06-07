@@ -1,16 +1,7 @@
 ---
 title: Mise en forme des formulaires HTML
 slug: Learn/Forms/Styling_web_forms
-tags:
-  - CSS
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Intermédiaire
-  - Web
 translation_of: Learn/Forms/Styling_web_forms
-original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}

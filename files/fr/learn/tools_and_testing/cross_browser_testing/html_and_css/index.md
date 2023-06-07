@@ -1,17 +1,7 @@
 ---
 title: Gérer les problèmes courants en HTML et CSS
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-tags:
-  - Apprentissage
-  - CSS
-  - Débutant
-  - HTML
-  - Sélecteurs
-  - linting
-  - navigateur croisé
-  - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}

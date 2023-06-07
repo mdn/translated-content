@@ -1,19 +1,7 @@
 ---
 title: Les images en HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Débutant
-  - Guide
-  - HTML
-  - Image
-  - Title
-  - alt text
-  - figcaption
-  - figure
-  - img
-  - src
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}

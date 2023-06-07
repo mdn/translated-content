@@ -2,7 +2,6 @@
 title: Exemples pratiques de positionnement
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
-original_slug: Apprendre/CSS/CSS_layout/Exemples_pratiques_de_positionnement
 ---
 
 {{LearnSidebar}}

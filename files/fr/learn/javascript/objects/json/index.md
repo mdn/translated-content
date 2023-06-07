@@ -1,15 +1,6 @@
 ---
 title: Manipuler des données JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - JSON
-  - JavaScript
-  - Manuel
-  - Objets
-  - Tutoriel
 translation_of: Learn/JavaScript/Objects/JSON
 ---
 

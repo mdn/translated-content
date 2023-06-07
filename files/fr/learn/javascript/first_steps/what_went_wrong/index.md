@@ -1,17 +1,6 @@
 ---
 title: Qu'est-ce qui n'a pas fonctionné ? Déboguer du code JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - Erreur
-  - JavaScript
-  - Tutoriel
-  - console.log
-  - débogage
-  - outils de développement
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 

@@ -2,7 +2,6 @@
 title: Mise en forme avancée des formulaires HTML
 slug: Learn/Forms/Advanced_form_styling
 translation_of: Learn/Forms/Advanced_form_styling
-original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}

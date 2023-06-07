@@ -1,15 +1,7 @@
 ---
 title: Accessibilité mobile
 slug: Learn/Accessibility/Mobile
-tags:
-  - Accessibilité
-  - Article
-  - Débutant
-  - Mobile
-  - responsive
-  - toucher
 translation_of: Learn/Accessibility/Mobile
-original_slug: Apprendre/a11y/Mobile
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

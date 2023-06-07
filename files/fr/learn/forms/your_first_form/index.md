@@ -1,17 +1,7 @@
 ---
 title: Mon premier formulaire HTML
 slug: Learn/Forms/Your_first_form
-tags:
-  - Apprentissage
-  - Codage
-  - Débutant
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms/Your_first_form
-original_slug: Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}

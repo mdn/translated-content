@@ -1,18 +1,7 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibilité
-  - Apprendre
-  - Audio
-  - Débutant
-  - HTML
-  - Images
-  - JavaScript
-  - Multimedia
-  - Video
 translation_of: Learn/Accessibility/Multimedia
-original_slug: Apprendre/a11y/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}

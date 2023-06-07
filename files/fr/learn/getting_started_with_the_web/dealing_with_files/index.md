@@ -1,16 +1,7 @@
 ---
 title: Gérer les fichiers
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Création site
-  - Débutant
-  - Fichiers
-  - Guide
-  - HTML
-  - Site Web
-  - Theorie
 translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
-original_slug: Apprendre/Commencer_avec_le_web/Gérer_les_fichiers
 ---
 
 {{LearnSidebar}}

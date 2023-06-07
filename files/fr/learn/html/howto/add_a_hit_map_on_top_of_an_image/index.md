@@ -1,13 +1,7 @@
 ---
 title: Ajouter une carte de zones cliquables sur une image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-tags:
-  - Guide
-  - HTML
-  - Intermediate
-  - Navigation
 translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-original_slug: Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image
 ---
 
 Dans cet article, nous verrons comment construire une carte imagée cliquable en commençant par les inconvénients de cette méthode.

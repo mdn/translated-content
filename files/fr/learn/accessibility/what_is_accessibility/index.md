@@ -1,21 +1,7 @@
 ---
 title: Qu'est ce que l'accessibilité?
 slug: Learn/Accessibility/What_is_accessibility
-tags:
-  - Accessibilité
-  - Aide technique
-  - Apprendre
-  - Article
-  - CSS
-  - Clavier
-  - Débutant
-  - HTML
-  - JavaScript
-  - Lecteur d'écran
-  - Outils
-  - Utilisateurs
 translation_of: Learn/Accessibility/What_is_accessibility
-original_slug: Apprendre/a11y/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

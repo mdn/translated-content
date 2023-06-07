@@ -1,15 +1,7 @@
 ---
 title: Ajouter des images vectorielles à une page web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Learn
-  - SVG
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-original_slug: Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_à_une_page_web
 ---
 
 {{LearnSidebar}}

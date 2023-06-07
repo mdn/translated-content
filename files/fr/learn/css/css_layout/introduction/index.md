@@ -1,21 +1,7 @@
 ---
 title: Introduction à la mise en page en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - Apprendre
-  - Article
-  - Boîtes flexibles
-  - CSS
-  - Débutant
-  - Flottants
-  - Flux
-  - Grille
-  - Intro
-  - Mise en page
-  - Positionnement
-  - Tableaux
 translation_of: Learn/CSS/CSS_layout/Introduction
-original_slug: Apprendre/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}

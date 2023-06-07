@@ -1,20 +1,7 @@
 ---
 title: Création d'hyperliens
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Apprendre
-  - Codage
-  - Débutant
-  - Guide
-  - HTML
-  - Liens
-  - Title
-  - URL
-  - absolu
-  - hyperliens
-  - relatif
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}

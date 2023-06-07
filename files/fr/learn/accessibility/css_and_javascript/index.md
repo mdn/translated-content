@@ -1,19 +1,7 @@
 ---
 title: Meilleures pratiques d'accessibilité CSS et JavaScript
 slug: Learn/Accessibility/CSS_and_JavaScript
-tags:
-  - Accessibilité
-  - Apprendre
-  - Article
-  - CSS
-  - Codage des scripts
-  - Guide
-  - JavaScript
-  - contraste
-  - couleur
-  - discret
 translation_of: Learn/Accessibility/CSS_and_JavaScript
-original_slug: Apprendre/a11y/CSS_and_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
