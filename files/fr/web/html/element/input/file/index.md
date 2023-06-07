@@ -132,7 +132,7 @@ Chaque objet `File` contient les informations suivantes :
 - `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossaire/Type_MIME) du fichier.
 - `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut {{htmlattrxref("webkitdirectory", "input")}}. _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
-> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. {{bug(1384030)}}).
+> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
 
 ### Restreindre les types de fichiers acceptés
 

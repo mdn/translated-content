@@ -142,10 +142,10 @@ Les propriétés qui suivent sont désormais des propriétés des instances de `
 - [Proxy.create](/fr/docs/Archive/Web/Old_Proxy_API) et [Proxy.createFunction](/fr/docs/Archive/Web/Old_Proxy_API) sont dépréciées. L'API {{jsxref("Objets_globaux/Proxy", "Proxy")}} doit être utilisée à la place.
 - Les trappes de captures suivantes sont obsolètes :
 
-  - `hasOwn` ({{bug(980565)}}, Firefox 33).
-  - `getEnumerablePropertyKeys` ({{bug(783829)}}, Firefox 37)
-  - `getOwnPropertyNames` ({{bug(1007334)}}, Firefox 33)
-  - `keys` ({{bug(1007334)}}, Firefox 33)
+  - `hasOwn` ([bug Firefox 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([bug Firefox 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([bug Firefox 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### Séquences d'échappement
 

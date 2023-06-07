@@ -64,7 +64,7 @@ Sur certains de ces événements, vous pouvez modifier la demande. Plus précis�
 
 Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.
 
-> **Attention :** Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir {{bug(1475832)}} pour plus de détails.
+> **Attention :** Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir le [bug Firefox 1475832](https://bugzil.la/1475832) pour plus de détails.
 
 ## Accéder aux informations de sécurité
 
