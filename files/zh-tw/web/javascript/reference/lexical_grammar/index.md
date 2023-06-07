@@ -208,65 +208,61 @@ function import() {} // 不合法.
 
 更多說明請參閱 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/null) 。
 
-```js
-null;
+```js-nolint
+null
 ```
 
 ### 布林值
 
 更多說明請參閱 [`Boolean`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Boolean) 。
 
-```js
-true;
-false;
+```js-nolint
+true
+false
 ```
 
 ### 數值
 
 #### 十進制
 
-```js
-1234567890;
-42;
+```js-nolint
+1234567890
+42
 
 // 謹慎使用前導零
-0888; // 888 被解析成十進制
-0777; // 被解析成八進制, 十進制值為 511
+0888 // 888 被解析成十進制
+0777 // 被解析成八進制, 十進制值為 511
 ```
 
 數值的實體語法可以可以以零 (`0`) 為首再街上其他十進制數字。然而一但零後面的的數字都小於 8 時，這個數值會被解讀成八進制數字，這個行為不會丟出例外，請參閱 [Firefox bug 957513](https://bugzil.la/957513)。也請參閱 [`parseInt()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt#Octal_interpretations_with_no_radix)。
 
 #### 二進制
 
-二進制數字的語法為一個起首零加上小寫或大小的拉丁字元"B" (`0b` 或 `0B`)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 `0b` 之後的數字不是 0 或 1，"0b 之後找不到二進制數字"的 [`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) 會被丟出。
+二進制數字的語法為一個起首零加上小寫或大小的拉丁字元「B」（`0b` 或 `0B`）。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 `0b` 之後的數字不是 0 或 1，「0b 之後找不到二進制數字」的 [`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) 會被丟出。
 
-```js
+```js-nolint
 var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 ```
 
 #### 八進制
 
-八進制數字的語法為一個起首零加上小寫或大小的拉丁字元"O" (`0o` 或 `0B`)。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 `0o` 之後的數字不是 (01234567) 其中之一，"0o 之後找不到八進制數字"的 SyntaxError 會被丟出。
+八進制數字的語法為一個起首零加上小寫或大小的拉丁字元「O」（`0o` 或 `0O`）。因為這個語法是在 ECMAScript 2015 才新增的，請參閱底下的瀏覽器相容表。如果 `0o` 之後的數字不是（01234567）其中之一，「0o 之後找不到八進制數字」的 SyntaxError 會被丟出。
 
-```js
-var n = 0o755; // 493
-var m = 0o644; // 420
-
-// 也可以省略'o/O'只寫一個前導0 (參閱上面十進位的提醒)
-0755;
-0644;
+```js-nolint
+0O755 // 493
+0o644 // 420
 ```
 
 #### 十六進制
 
 十六進制數字的語法為一個起首零加上小寫或大小的拉丁字元"X" (`0x` 或 `0X`)。如果 `0x` 之後的數字不是 (0123456789ABCDEF) 其中之一，"識別字緊接在數值實體語法後"的 SyntaxError 會被丟出。
 
-```js
-0xfffffffffffffffff; // 295147905179352830000
-0x123456789abcdef; // 81985529216486900
-0xa; // 10
+```js-nolint
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+0x123456789ABCDEF   // 81985529216486900
+0XA                 // 10
 ```
 
 ### 物件
@@ -290,29 +286,29 @@ var o = { a: a, b: b, c: c };
 
 更多說明請參閱 {{jsxref("Array")}} 。
 
-```js
-[1954, 1974, 1990, 2014];
+```js-nolint
+[1954, 1974, 1990, 2014]
 ```
 
 ### 字串
 
-```js
-"foo";
-"bar";
+```js-nolint
+"foo"
+"bar"
 ```
 
 #### 十六進制跳脫序列
 
-```js
-"\xA9"; // "©"
+```js-nolint
+"\xA9" // "©"
 ```
 
 #### Unicode 跳脫序列
 
 一個 Unicode 跳脫序列由 `\u` 接上 4 個十六進制的數值所組成。每一個十六進制的數值表示一個 UTF-16 編碼的 2 位元組字元。對於編碼位置在 0\~FFFF 之間的字元，其 Unicode 表示法與編碼位置相同。而更高的編碼位置需要兩個跳脫序列來表示，又稱為代理對(surrogate pair)，代理對表示的數值與編碼位置不同 ([代理對計算規則 wiki](https://en.wikipedia.org/wiki/UTF-16))。
 
-```js
-"\u00A9"; // "©"
+```js-nolint
+"\u00A9" // "©"
 ```
 
 #### Unicode 跳脫編碼位置
@@ -321,11 +317,11 @@ ECMAScript 2015 新增。使用 Unicode 跳脫編碼位置表示法，即可使�
 
 更多說明請參閱 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
 
-```js
-"\u{2F804}";
+```js-nolint
+"\u{2F804}"
 
 // 等價於代理對表示法
-"\uD87E\uDC04";
+"\uD87E\uDC04"
 ```
 
 ### 正規表達式
@@ -344,11 +340,15 @@ ECMAScript 2015 新增。使用 Unicode 跳脫編碼位置表示法，即可使�
 
 更多說明請參閱 [template strings](/zh-TW/docs/Web/JavaScript/Reference/template_strings) 。
 
-```js
-`string text``string text line 1
- string text line 2``string text ${expression} string text`;
+```js-nolint
+`string text`
 
-tag`string text ${expression} string text`;
+`string text line 1
+ string text line 2`
+
+`string text ${expression} string text`
+
+tag `string text ${expression} string text`
 ```
 
 ## 自動插入分號
@@ -379,9 +379,9 @@ ECMAScript 規格闡明 [自動插入分號的三個規則](https://tc39.github.
 
 在這裡 `++` 並不會被當作作用於變數`b`的 [後綴運算元](/zh-TW/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment)，因為行終止字元出現在`b` 和 `++`之間。
 
-```js
-a = b;
-++c;
+```js-nolint
+a = b
+++c
 
 // 會被 ASI 轉換成
 
@@ -398,9 +398,9 @@ a = b;
 - `yield`, `yield*`
 - `module`
 
-```js
-return;
-a + b;
+```js-nolint
+return
+a + b
 
 // 會被 ASI 轉換成
 
