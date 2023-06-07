@@ -46,7 +46,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
     - `false` qui indique que l'élément ne doit pas pouvoir être édité.
 
 - {{htmlattrdef("contextmenu")}}{{deprecated_inline}}
-  - : La valeur de cet attribut correspond à la valeur de l'attribut {{htmlattrxref("id","menu")}} d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
+  - : La valeur de cet attribut correspond à la valeur de l'attribut [id](/fr/docs/Web/HTML/Element/menu#id) d'un élément {{HTMLElement("menu")}} qui doit être utilisé comme menu contextuel par cet élément.
 - {{htmlattrdef("data-*")}}
   - : Cette classe d'attribut, appelée « attributs de données personnalisés », permet d'échanger des informations dans un format propriétaire entre le HTML et le DOM afin de pouvoir les manipuler via des langage de scripts. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'ensemble des attribut définis de cette façon.
 - {{htmlattrdef("dir")}}
@@ -79,7 +79,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - {{htmlattrdef("id")}}
   - : Cet attribut définit un identifiant, unique au sein de tout le document, ,pour un élément. Il doit permettre d'identifier un élément lorsqu'on crée un lien vers lui et/ou lorsque le manipule avec des scripts ou avec CSS.
 - {{htmlattrdef("inputmode")}}
-  - : Cet attribut fournit une indication au navigateur quant au type de contenu qui sera saisi dans le champ et qui aide à déterminer la configuration du clavier virtuel qui peut être affiché pour la saisie. Ce type est principalement utilisé pour les éléments {{HTMLElement("input")}} mais peut tout à fait être utilisé sur n'importe quel élément avec le mode {{htmlattrxref("contenteditable")}}.
+  - : Cet attribut fournit une indication au navigateur quant au type de contenu qui sera saisi dans le champ et qui aide à déterminer la configuration du clavier virtuel qui peut être affiché pour la saisie. Ce type est principalement utilisé pour les éléments {{HTMLElement("input")}} mais peut tout à fait être utilisé sur n'importe quel élément avec le mode [contenteditable](/fr/docs/Web/HTML/Global_attributes#contenteditable).
 - {{htmlattrdef("is")}}
   - : Cet attribut indique qu'un élément HTML standard devrait se comporter comme un élément personnalisé natif (voir [Manipuler les custom elements](/fr/docs/Web/Web_Components/Using_custom_elements) pour plus d'informations).
 - {{htmlattrdef("itemid")}}
@@ -97,7 +97,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - {{htmlattrdef("part")}} {{experimental_inline}}
   - : Une liste séparée par des espaces avec les noms des parties (_parts_) de l'élément. Les noms des parties permettent au CSS de cibler et de mettre en forme certains éléments d'un arbre _shadow_ via le pseudo-élément {{cssxref("::part")}}.
 - {{htmlattrdef("slot")}}
-  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut {{htmlattrxref("name", "slot")}} correspond à la valeur de l'attribut `slot`.
+  - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [name](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
 - {{htmlattrdef("spellcheck")}} {{experimental_inline}}
 
   - : Un attribut à valeur contrainte qui définit s'il faut détecter les fautes d'orthographe/grammaire dans le texte de l'élément. Les valeurs autorisées pour cet attribut sont :

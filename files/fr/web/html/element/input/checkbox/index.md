@@ -50,7 +50,7 @@ Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique 
 
 > **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 
-À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} peut être utilisé afin de contrôler cette fonctionnalité.
+À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [autocomplete](/fr/docs/Web/HTML/Element/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ### {{htmlattrdef("value")}}
 

@@ -25,7 +25,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - {{htmlattrdef("label")}}
   - : La valeur de cet attribut correspond au texte affiché pour expliquer l'option. Si cet attribut n'est pas défini, sa valeur correspondra à celle du texte contenu dans l'élément.
 - {{htmlattrdef("selected")}}
-  - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut {{htmlattrxref("multiple", "select")}} n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
+  - : S'il est présent, cet attribut booléen indique que l'option est sélectionnée à l'état initial. Si l'élément `<option>` est un élément descendant d'un élément {{HTMLElement("select")}} dont l'attribut [multiple](/fr/docs/Web/HTML/Element/select#multiple) n'est pas activé, seul une `<option>` de cet élément {{HTMLElement("select")}} peut être sélectionnée de cette façon.
 - {{htmlattrdef("value")}}
   - : Le contenu de cet attribut représente la valeur qu'on souhaite envoyer au formulaire lorsque l'option est sélectionnée. Si cet attribut n'est pas défini, la valeur sera le contenu texuel de l'élément `<option>`.
 

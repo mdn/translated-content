@@ -291,7 +291,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
           >contenu intégré</a
         >. Si l'élément a un attribut
-        {{htmlattrxref("controls", "video")}} :
+        [controls](/fr/docs/Web/HTML/Element/video#controls) :
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
           >contenu interactif</a
         >,
@@ -305,7 +305,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
       <td>
         <p>
           Si l'élément a un attribut
-          {{htmlattrxref("src", "video")}} : zéro ou plusieurs
+          [src](/fr/docs/Web/HTML/Element/video#src) : zéro ou plusieurs
           éléments {{HTMLElement("track")}} suivi par du contenu
           transparent qui ne contient pas d'élément
           {{HTMLElement("audio")}} ou {{HTMLElement("video")}}

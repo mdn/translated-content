@@ -16,9 +16,9 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 
 ### HTML
 
-- L'attribut {{htmlattrxref("reversed","ol")}} de l'élément {{HTMLElement("ol")}} est à présent supporté. ([bug Firefox 601912](https://bugzil.la/601912))
-- L'attribut {{htmlattrxref("crossorigin","link")}} de l'élément {{HTMLElement("link")}} est à présent supporté. ([bug Firefox 786564](https://bugzil.la/786564))
-- L'attribut {{htmlattrxref("allowfullscreen", "iframe")}} de {{HTMLElement("iframe")}} a été implémenté et son prédécesseur préfixé, {{htmlattrxref("mozallowfullscreen", "iframe")}}, est à présent obsolète.
+- L'attribut [reversed](/fr/docs/Web/HTML/Element/ol#reversed) de l'élément {{HTMLElement("ol")}} est à présent supporté. ([bug Firefox 601912](https://bugzil.la/601912))
+- L'attribut [crossorigin](/fr/docs/Web/HTML/Element/link#crossorigin) de l'élément {{HTMLElement("link")}} est à présent supporté. ([bug Firefox 786564](https://bugzil.la/786564))
+- L'attribut [allowfullscreen](/fr/docs/Web/HTML/Element/iframe#allowfullscreen) de {{HTMLElement("iframe")}} a été implémenté et son prédécesseur préfixé, [mozallowfullscreen](/fr/docs/Web/HTML/Element/iframe#mozallowfullscreen), est à présent obsolète.
 
 ### CSS
 

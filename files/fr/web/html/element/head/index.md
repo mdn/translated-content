@@ -54,7 +54,7 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
       <th scope="row">Contenu autorisé</th>
       <td>
         Si le document est un document source
-        ({{htmlattrxref("srcdoc", "iframe")}}) d'une
+        ([srcdoc](/fr/docs/Web/HTML/Element/iframe#srcdoc)) d'une
         {{HTMLElement("iframe")}} ou si l'information pour le titre est
         disponible via un protocole de plus haut niveau zéro ou plusieurs
         éléments de méta-données.<br />Sinon un ou plusieurs éléments de
