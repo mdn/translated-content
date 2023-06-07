@@ -87,7 +87,7 @@ Une autre façon d'utiliser l'API `OffscreenCanvas` est d'appeler {{domxref("HTM
 
 Afin de rendre les cadres visibles, vous pouvez appeler `commit()` sur ce `RenderingContext`, afin que les cadres soient renvoyés dans l'élément {{HTMLElement ("canvas")}} original.
 
-Notez que dans Firefox, cette API n'est actuellement implémentée que pour le [contexte WebGL](/fr-FR/docs/Web/API/WebGL_API) ({{domxref ("WebGLRenderingContext.commit()")}}). Pour la prise en charge de l'API Canvas 2D par les employés, voir {{bug (801176)}}.
+Notez que dans Firefox, cette API n'est actuellement implémentée que pour le [contexte WebGL](/fr-FR/docs/Web/API/WebGL_API) ({{domxref ("WebGLRenderingContext.commit()")}}). Pour la prise en charge de l'API Canvas 2D par les employés, voir le [bug Firefox 801176](https://bugzil.la/801176).
 
 main.js (code du thread principal) :
 
