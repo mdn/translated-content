@@ -19,7 +19,7 @@ split(separator, limit)
 ### 参数
 
 - `separator`
-  - : 描述每个分割应该发生在哪里的模式。可以是 `undefined`，一个字符串，或者一个具有 [`Symbol.split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) 方法的对象——典型的例子是{{jsxref("Global_Objects/RegExp", "正则表达式", "", 1)}。省略 `separator` 或传递 `undefined` 会导致 `split()` 返回一个只包含所调用字符串数组。所有不是 `undefined` 的值或具有 `@@split` 方法的对象都被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。
+  - : 描述每个分割应该发生在哪里的模式。可以是 `undefined`，一个字符串，或者一个具有 [`Symbol.split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/split) 方法的对象——典型的例子是{{jsxref("Global_Objects/RegExp", "正则表达式", "", 1)}}。省略 `separator` 或传递 `undefined` 会导致 `split()` 返回一个只包含所调用字符串数组。所有不是 `undefined` 的值或具有 `@@split` 方法的对象都被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。
 - `limit` {{optional_inline}}
   - : 一个非负整数，指定数组中包含的子字符串的数量限制。当提供此参数时，split 方法会在指定 `separator` 每次出现时分割该字符串，但在已经有 `limit` 个元素时停止分割。任何剩余的文本都不会包含在数组中。
     - 如果在达到极限之前就达到了字符串的末端，那么数组包含的条目可能少于 `limit`。
