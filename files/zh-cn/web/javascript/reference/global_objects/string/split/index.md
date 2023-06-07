@@ -37,7 +37,7 @@ split(separator, limit)
 
 > **备注：** `"".split("")` 是唯一一种字符串作为 `separator` 参数传入的生成空数组的方法。
 
-> **警告：** 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代用对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
+> **警告：** 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme clusters](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代用对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
 
 如果 `separator` 是一个匹配空字符串的正则表达式，匹配是由 UTF-16 代码单位还是 Unicode 代码点分割，取决于是否设置了 [`u`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) 标志。
 
