@@ -1,10 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/column-count
 ---
 

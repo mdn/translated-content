@@ -1,10 +1,6 @@
 ---
 title: mfrac
 slug: Web/MathML/Element/mfrac
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/mfrac
 ---
 

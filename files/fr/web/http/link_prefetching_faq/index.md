@@ -1,13 +1,7 @@
 ---
 title: FAQ sur le préchargement des liens
 slug: Web/HTTP/Link_prefetching_FAQ
-tags:
-  - Développement_Web
-  - Gecko
-  - HTML
-  - HTTP
 translation_of: Web/HTTP/Link_prefetching_FAQ
-original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 ---
 
 ### Qu’est ce que le préchargement de liens&nbsp;?

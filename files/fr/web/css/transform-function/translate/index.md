@@ -2,8 +2,6 @@
 title: translate()
 slug: Web/CSS/transform-function/translate
 translation_of: Web/CSS/transform-function/translate()
-original_slug: Web/CSS/transform-function/translate()
-browser-compat: css.types.transform-function.translate
 ---
 
 {{CSSRef}}

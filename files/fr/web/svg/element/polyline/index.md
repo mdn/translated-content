@@ -1,11 +1,6 @@
 ---
 title: <polyline>
 slug: Web/SVG/Element/polyline
-tags:
-  - Element
-  - Graphisme
-  - Reference
-  - SVG
 translation_of: Web/SVG/Element/polyline
 ---
 

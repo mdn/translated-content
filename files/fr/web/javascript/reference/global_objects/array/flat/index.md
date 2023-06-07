@@ -2,8 +2,6 @@
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/flat
-browser-compat: javascript.builtins.Array.flat
 l10n:
   sourceCommit: f6fe4043bfc7ace3b8caa757547b7d0cb3ad5cc1
 ---

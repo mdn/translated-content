@@ -2,7 +2,6 @@
 title: ':host-context()'
 slug: Web/CSS/:host-context
 translation_of: 
-browser-compat: css.selectors.host-context
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---

@@ -1,16 +1,6 @@
 ---
 title: 'CSP: require-trusted-types-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - Sécurité
-  - TrustedTypes
-  - require-trusted-types-for
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
 ---
 

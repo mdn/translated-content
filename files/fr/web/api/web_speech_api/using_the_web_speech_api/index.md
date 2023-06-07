@@ -1,15 +1,6 @@
 ---
 title: Utiliser l'API Web Speech
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-tags:
-  - API
-  - API Web Speech
-  - Guide
-  - Tutoriel
-  - Utilisation
-  - reconnaissance
-  - synthèse
-  - vocale
 translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-moz-color-swatch
 ---
 

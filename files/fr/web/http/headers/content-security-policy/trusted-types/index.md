@@ -1,15 +1,6 @@
 ---
 title: 'CSP: trusted-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - Sécurité
-  - source
-  - trusted-types
 translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
 

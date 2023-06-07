@@ -1,10 +1,6 @@
 ---
 title: height
 slug: Web/CSS/@media/height
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/height
 ---
 

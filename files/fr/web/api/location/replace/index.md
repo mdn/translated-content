@@ -1,11 +1,6 @@
 ---
 title: Location.replace()
 slug: Web/API/Location/replace
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: Web/API/Location/replace
 ---
 

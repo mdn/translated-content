@@ -1,11 +1,7 @@
 ---
 title: Paths
 slug: Web/SVG/Tutorial/Paths
-tags:
-  - SVG
-  - SVG:Tutoriel
 translation_of: Web/SVG/Tutorial/Paths
-original_slug: Web/SVG/Tutoriel/Paths
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}

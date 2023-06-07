@@ -1,11 +1,7 @@
 ---
 title: Valeurs et unités CSS
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - Reference
 translation_of: Web/CSS/CSS_Values_and_Units
-original_slug: Web/CSS/Valeurs_et_unités_CSS
 ---
 
 {{CSSRef}}

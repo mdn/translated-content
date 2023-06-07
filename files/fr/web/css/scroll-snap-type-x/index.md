@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-type-x
 ---
 

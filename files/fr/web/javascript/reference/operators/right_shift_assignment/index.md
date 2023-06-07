@@ -1,13 +1,6 @@
 ---
 title: Affectation après décalage à droite (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.right_shift_assignment
 ---
 
 {{jsSidebar("Operators")}}

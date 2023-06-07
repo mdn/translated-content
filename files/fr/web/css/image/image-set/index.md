@@ -2,7 +2,6 @@
 title: image-set()
 slug: Web/CSS/image/image-set
 translation_of: Web/CSS/image/image-set
-browser-compat: css.types.image.image-set
 ---
 
 {{CSSRef}}

@@ -1,8 +1,6 @@
 ---
 title: table.caption
 slug: Web/API/HTMLTableElement/caption
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLTableElement/caption
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: Ressources et spécifications sur HTTP
 slug: Web/HTTP/Resources_and_specifications
-tags:
-  - Guide
-  - HTTP
 translation_of: Web/HTTP/Resources_and_specifications
 ---
 

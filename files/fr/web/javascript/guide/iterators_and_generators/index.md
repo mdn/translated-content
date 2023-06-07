@@ -1,12 +1,7 @@
 ---
 title: Itérateurs et générateurs
 slug: Web/JavaScript/Guide/Iterators_and_generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
 translation_of: Web/JavaScript/Guide/Iterators_and_Generators
-original_slug: Web/JavaScript/Guide/iterateurs_et_generateurs
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Utiliser_les_promesses", "Web/JavaScript/Guide/Métaprogrammation")}}

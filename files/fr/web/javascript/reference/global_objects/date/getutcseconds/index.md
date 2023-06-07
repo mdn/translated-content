@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCSeconds
 ---
 
 {{JSRef}}

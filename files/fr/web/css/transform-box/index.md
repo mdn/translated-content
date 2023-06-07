@@ -1,12 +1,6 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform-box
 ---
 

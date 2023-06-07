@@ -2,7 +2,6 @@
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
 translation_of: Web/API/HTMLElement/offsetTop
-browser-compat: api.HTMLElement.offsetTop
 ---
 
 {{APIRef("HTML DOM")}}

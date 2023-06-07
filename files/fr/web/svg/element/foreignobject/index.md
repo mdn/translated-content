@@ -1,10 +1,6 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Element/foreignObject
-tags:
-  - Element
-  - Reference
-  - SVG
 translation_of: Web/SVG/Element/foreignObject
 ---
 

@@ -1,11 +1,8 @@
 ---
 title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-tags:
-  - WebRTC
 translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of_original: Web/API/WebRTC_API/WebRTC_basics
-original_slug: Web/Guide/API/WebRTC/WebRTC_basics
 ---
 
 Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne

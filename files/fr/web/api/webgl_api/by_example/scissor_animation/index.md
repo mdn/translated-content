@@ -1,15 +1,7 @@
 ---
 title: Créer une animation avec découpe et applique
 slug: Web/API/WebGL_API/By_example/Scissor_animation
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Scissor_animation
-original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_avec_découpe_et_applique
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Modèle_1","Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle")}}

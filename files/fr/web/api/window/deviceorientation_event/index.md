@@ -1,13 +1,7 @@
 ---
 title: 'Window : l''événement deviceorientation'
 slug: Web/API/Window/deviceorientation_event
-tags:
-  - Device Orientation API
-  - Sensors
-  - Window Event
-  - events
 translation_of: Web/API/Window/deviceorientation_event
-original_slug: FUEL/Window/deviceorientation
 ---
 
 {{APIRef}}

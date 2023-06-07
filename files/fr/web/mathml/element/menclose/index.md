@@ -1,10 +1,6 @@
 ---
 title: menclose
 slug: Web/MathML/Element/menclose
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/menclose
 ---
 

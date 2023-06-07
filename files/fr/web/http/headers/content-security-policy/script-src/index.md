@@ -2,7 +2,6 @@
 title: 'CSP : script-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
-browser-compat: http.headers.csp.Content-Security-Policy.script-src
 ---
 
 {{HTTPSidebar}}

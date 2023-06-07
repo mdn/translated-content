@@ -1,8 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
 

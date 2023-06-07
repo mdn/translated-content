@@ -1,11 +1,7 @@
 ---
 title: Médias paginés
 slug: Web/CSS/Paged_Media
-tags:
-  - CSS
-  - Reference
 translation_of: Web/CSS/Paged_Media
-original_slug: Web/CSS/Média_paginés
 ---
 
 {{CSSRef}}

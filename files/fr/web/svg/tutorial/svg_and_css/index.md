@@ -1,17 +1,7 @@
 ---
 title: SVG et CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-tags:
-  - CSS
-  - CSS:Getting_Started
-  - Example
-  - Guide
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Web
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
-original_slug: CSS/Premiers_pas/Graphiques_SVG
 ---
 
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.

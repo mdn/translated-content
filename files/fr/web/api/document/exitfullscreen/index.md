@@ -1,12 +1,6 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-tags:
-  - API
-  - Affichage
-  - DOM
-  - Méthodes
-  - Plein écran
 translation_of: Web/API/Document/exitFullscreen
 ---
 

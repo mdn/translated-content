@@ -1,15 +1,6 @@
 ---
 title: WindowClient.navigate()
 slug: Web/API/WindowClient/navigate
-tags:
-  - API
-  - Client
-  - Expérimentale
-  - Method
-  - Navigate
-  - Reference
-  - Service Workers
-  - WindowClient
 translation_of: Web/API/WindowClient/navigate
 ---
 

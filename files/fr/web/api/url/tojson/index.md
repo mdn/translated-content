@@ -1,12 +1,6 @@
 ---
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
-tags:
-  - API
-  - Méthode
-  - Reference
-  - URL
-  - toJSON()
 translation_of: Web/API/URL/toJSON
 ---
 

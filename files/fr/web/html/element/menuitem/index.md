@@ -1,12 +1,6 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Déprécié
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/menuitem
 ---
 

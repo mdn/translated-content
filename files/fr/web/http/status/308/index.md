@@ -2,7 +2,6 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 translation_of: Web/HTTP/Status/308
-browser-compat: http.status.308
 ---
 
 {{HTTPSidebar}}

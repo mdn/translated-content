@@ -1,12 +1,6 @@
 ---
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
-tags:
-  - API
-  - Cible
-  - Constructeur
-  - DOM
-  - évènements
 translation_of: Web/API/EventTarget/EventTarget
 ---
 

@@ -2,7 +2,6 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 translation_of: Web/HTML/Element/input/image
-browser-compat: html.elements.input.type_image
 ---
 
 {{HTMLSidebar}}

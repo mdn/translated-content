@@ -1,12 +1,7 @@
 ---
 title: Mise en cache HTTP
 slug: Web/HTTP/Caching
-tags:
-  - Guide
-  - HTTP
-  - Le cache
 translation_of: Web/HTTP/Caching
-original_slug: Web/HTTP/Cache
 ---
 
 {{HTTPSidebar}}

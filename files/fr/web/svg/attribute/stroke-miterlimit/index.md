@@ -1,9 +1,6 @@
 ---
 title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/stroke-miterlimit
 ---
 

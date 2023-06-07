@@ -1,13 +1,7 @@
 ---
 title: Fonctions fléchées
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - Fonctions
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
-original_slug: Web/JavaScript/Reference/Fonctions/Fonctions_fléchées
 ---
 
 {{jsSidebar("Functions")}}

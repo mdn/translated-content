@@ -1,13 +1,7 @@
 ---
 title: Expression async function
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - Function
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/async_function
-original_slug: Web/JavaScript/Reference/Opérateurs/async_function
 ---
 
 {{jsSidebar("Operators")}}

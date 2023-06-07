@@ -1,14 +1,7 @@
 ---
 title: Array.prototype[@@unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@unscopables
 ---
 
 {{JSRef}}

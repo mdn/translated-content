@@ -1,18 +1,6 @@
 ---
 title: 'CSP: upgrade-insecure-requests'
 slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - Upgrade
-  - request
-  - requête
-  - upgrade-insecure-requests
 translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 ---
 

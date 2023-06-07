@@ -2,7 +2,6 @@
 title: border-image-width
 slug: Web/CSS/border-image-width
 translation_of: Web/CSS/border-image-width
-browser-compat: css.properties.border-image-width
 ---
 
 {{CSSRef}}

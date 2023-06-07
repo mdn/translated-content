@@ -1,9 +1,6 @@
 ---
 title: <feImage>
 slug: Web/SVG/Element/feImage
-tags:
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feImage
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: 'Window: vrdisplaypresentchange event'
 slug: Web/API/Window/vrdisplaypresentchange_event
-tags:
-  - Evènement
-  - Reference
-  - WebVR
-  - onvrdisplaypresentchange
-  - vrdisplaypresentchange
 translation_of: Web/API/Window/vrdisplaypresentchange_event
 ---
 

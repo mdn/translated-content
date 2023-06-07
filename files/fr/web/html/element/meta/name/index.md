@@ -2,7 +2,6 @@
 title: Noms des métadonnées standard
 slug: Web/HTML/Element/meta/name
 translation_of: Web/HTML/Element/meta/name
-browser-compat: html.elements.meta.name
 ---
 
 {{HTMLSidebar}}

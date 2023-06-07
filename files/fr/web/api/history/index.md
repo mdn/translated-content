@@ -1,9 +1,6 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - DOM
-  - HTML-DOM
 translation_of: Web/API/History
 ---
 

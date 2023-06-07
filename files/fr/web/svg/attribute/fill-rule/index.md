@@ -1,9 +1,6 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/fill-rule
 ---
 

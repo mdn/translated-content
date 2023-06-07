@@ -2,7 +2,6 @@
 title: 'CSP : form-action'
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
-browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
 
 {{HTTPSidebar}}

@@ -1,14 +1,7 @@
 ---
 title: NON binaire (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
-browser-compat: javascript.operators.bitwise_not
 ---
 
 {{jsSidebar("Operators")}}

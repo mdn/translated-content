@@ -1,10 +1,6 @@
 ---
 title: ':nth-last-child'
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:nth-last-child
 ---
 

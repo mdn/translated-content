@@ -1,9 +1,6 @@
 ---
 title: dy
 slug: Web/SVG/Attribute/dy
-tags:
-  - SVG
-  - SVG Attribute
 translation_of: Web/SVG/Attribute/dy
 ---
 

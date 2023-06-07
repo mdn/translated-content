@@ -1,13 +1,6 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
-tags:
-  - API
-  - AnimationEvent
-  - CSS Animations
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/AnimationEvent/animationName
 ---
 

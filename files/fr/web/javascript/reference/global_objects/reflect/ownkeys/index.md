@@ -1,14 +1,7 @@
 ---
 title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/ownKeys
 ---
 
 {{JSRef}}

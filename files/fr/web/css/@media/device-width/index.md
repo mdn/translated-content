@@ -1,11 +1,6 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
-tags:
-  - CSS
-  - Caractéristique média
-  - Déprécié
-  - Reference
 translation_of: Web/CSS/@media/device-width
 ---
 

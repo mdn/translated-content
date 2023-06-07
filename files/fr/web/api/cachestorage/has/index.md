@@ -1,15 +1,6 @@
 ---
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - has
 translation_of: Web/API/CacheStorage/has
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
-tags:
-  - Element
-  - SVG
-  - SVG Animation
 translation_of: Web/SVG/Element/mpath
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-tags:
-  - API
-  - Propriété
-  - Reference
-  - URL
-  - protocole
 translation_of: Web/API/URL/protocol
 ---
 

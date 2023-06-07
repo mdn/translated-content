@@ -1,12 +1,6 @@
 ---
 title: IDBFactory.open()
 slug: Web/API/IDBFactory/open
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/open
 ---
 

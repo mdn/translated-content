@@ -2,7 +2,6 @@
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
 translation_of: Web/HTTP/Status/451
-browser-compat: http.status.451
 ---
 
 {{HTTPSidebar}}

@@ -2,7 +2,6 @@
 title: Constructeur ArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
-browser-compat: javascript.builtins.ArrayBuffer.ArrayBuffer
 ---
 
 {{JSRef}}

@@ -1,12 +1,6 @@
 ---
 title: scroll
 slug: Web/API/Document/scroll_event
-tags:
-  - API
-  - Event Handler
-  - Reference
-  - events
-  - requestAnimationFrame
 translation_of: Web/API/Document/scroll_event
 ---
 

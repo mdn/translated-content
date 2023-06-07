@@ -1,16 +1,7 @@
 ---
 title: Utiliser les objets
 slug: Web/JavaScript/Guide/Working_with_objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
 translation_of: Web/JavaScript/Guide/Working_with_Objects
-original_slug: Web/JavaScript/Guide/Utiliser_les_objets
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

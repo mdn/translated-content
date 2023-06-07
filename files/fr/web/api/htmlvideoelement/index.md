@@ -1,13 +1,6 @@
 ---
 title: HTMLVideoElement
 slug: Web/API/HTMLVideoElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Interface
-  - Reference
-  - Video
 translation_of: Web/API/HTMLVideoElement
 ---
 

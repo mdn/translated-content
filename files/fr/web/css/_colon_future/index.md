@@ -2,7 +2,6 @@
 title: ':future'
 slug: Web/CSS/:future
 translation_of: Web/CSS/:future
-browser-compat: css.selectors.future
 ---
 
 {{CSSRef}}

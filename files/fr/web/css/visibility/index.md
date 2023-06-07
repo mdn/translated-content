@@ -1,10 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/visibility
 ---
 

@@ -2,7 +2,6 @@
 title: Constructeur Number()
 slug: Web/JavaScript/Reference/Global_Objects/Number/Number
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/Number
-browser-compat: javascript.builtins.Number.Number
 ---
 
 {{JSRef}}

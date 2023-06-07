@@ -1,13 +1,7 @@
 ---
 title: calc
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Web
 translation_of: Web/CSS/calc()
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}

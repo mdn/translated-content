@@ -1,20 +1,7 @@
 ---
 title: '<a> : l''élément d''ancre'
 slug: Web/HTML/Element/a
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/a
-browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - Reference
-  - Type
-  - Type de donnée
 translation_of: Web/CSS/length
 ---
 

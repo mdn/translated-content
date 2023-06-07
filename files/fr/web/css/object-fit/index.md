@@ -2,7 +2,6 @@
 title: object-fit
 slug: Web/CSS/object-fit
 translation_of: Web/CSS/object-fit
-browser-compat: css.properties.object-fit
 ---
 
 {{CSSRef}}

@@ -1,12 +1,7 @@
 ---
 title: Concepts relatifs au viewport
 slug: Web/CSS/Viewport_concepts
-tags:
-  - CSS
-  - Guide
-  - viewport
 translation_of: Web/CSS/Viewport_concepts
-original_slug: Web/CSS/Concepts_viewport
 ---
 
 {{CSSRef}}

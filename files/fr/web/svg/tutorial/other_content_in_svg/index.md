@@ -2,7 +2,6 @@
 title: Contenu embarqué dans le SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
 translation_of: Web/SVG/Tutorial/Other_content_in_SVG
-original_slug: Web/SVG/Tutoriel/Contenu_embarque_SVG
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}

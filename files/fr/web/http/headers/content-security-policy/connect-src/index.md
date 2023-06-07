@@ -2,7 +2,6 @@
 title: 'CSP : connect-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
-browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
 
 {{HTTPSidebar}}

@@ -1,14 +1,7 @@
 ---
 title: window.atob
 slug: Web/API/atob
-tags:
-  - API
-  - DOM
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - atob
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
-original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 
 {{APIRef ("HTML DOM")}}

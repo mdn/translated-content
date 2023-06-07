@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - fetchStart
 translation_of: Web/API/PerformanceResourceTiming/fetchStart
 ---
 

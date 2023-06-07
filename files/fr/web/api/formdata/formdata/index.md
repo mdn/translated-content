@@ -1,13 +1,6 @@
 ---
 title: FormData()
 slug: Web/API/FormData/FormData
-tags:
-  - API
-  - Constructeur
-  - FormData
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/FormData/FormData
 ---
 

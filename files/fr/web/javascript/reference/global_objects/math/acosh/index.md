@@ -1,14 +1,7 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acosh
 ---
 
 {{JSRef}}

@@ -1,10 +1,6 @@
 ---
 title: Éditer du MathML
 slug: Web/MathML/Authoring
-tags:
-  - Beginner
-  - MathML
-  - MathML Project
 translation_of: Web/MathML/Authoring
 ---
 

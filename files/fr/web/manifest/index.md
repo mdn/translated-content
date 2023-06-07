@@ -1,9 +1,6 @@
 ---
 title: Manifeste des applications web
 slug: Web/Manifest
-tags:
-  - Applications
-  - Manifeste
 translation_of: Web/Manifest
 ---
 

@@ -2,7 +2,6 @@
 title: caption-side
 slug: Web/CSS/caption-side
 translation_of: Web/CSS/caption-side
-browser-compat: css.properties.caption-side
 ---
 
 {{CSSRef}}

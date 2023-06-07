@@ -1,14 +1,7 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
 translation_of: Web/HTML/Global_attributes/itemprop
-original_slug: Web/HTML/Attributs_universels/itemprop
 ---
 
 {{HTMLSidebar("Global_attributes")}}

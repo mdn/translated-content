@@ -1,10 +1,6 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/overflow-inline
 ---
 

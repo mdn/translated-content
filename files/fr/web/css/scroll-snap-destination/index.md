@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
-tags:
-  - CSS
-  - Déprécié
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-destination
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: HTMLCanvasElement.getContext()
 slug: Web/API/HTMLCanvasElement/getContext
-tags:
-  - API
-  - Canevas
-  - HTMLCanvasElement
-  - Méthode
-  - Reference
 translation_of: Web/API/HTMLCanvasElement/getContext
 ---
 

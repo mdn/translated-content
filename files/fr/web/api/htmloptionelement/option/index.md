@@ -1,11 +1,6 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
-tags:
-  - API
-  - Constructeur
-  - HTML DOM
-  - HTMLOptionElement
 translation_of: Web/API/HTMLOptionElement/Option
 ---
 

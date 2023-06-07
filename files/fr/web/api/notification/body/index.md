@@ -1,14 +1,6 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
-tags:
-  - API
-  - API Notifications
-  - Corps
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/body
 ---
 

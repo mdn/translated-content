@@ -1,11 +1,6 @@
 ---
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Étiquettes
 translation_of: Web/API/HTMLInputElement/labels
 ---
 

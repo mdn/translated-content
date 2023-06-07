@@ -1,12 +1,7 @@
 ---
 title: Propriétés logiques pour le dimensionnement
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
 translation_of: Web/CSS/CSS_Logical_Properties/Sizing
-original_slug: Web/CSS/CSS_Logical_Properties/Sizing
 ---
 
 {{CSSRef}}

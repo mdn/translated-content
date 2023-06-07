@@ -1,18 +1,7 @@
 ---
 title: '<dl> : l''élément de liste de descriptions'
 slug: Web/HTML/Element/dl
-tags:
-  - Definition List
-  - Description list
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/dl
-browser-compat: html.elements.dl
 ---
 
 {{HTMLSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-points-x
 slug: Web/CSS/scroll-snap-points-x
-tags:
-  - CSS
-  - Déprécié
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-points-x
 ---
 

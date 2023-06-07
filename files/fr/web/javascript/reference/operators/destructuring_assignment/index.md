@@ -1,18 +1,7 @@
 ---
 title: Affecter par décomposition
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuration
-  - Affectation de déstructuration
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Caractéristiques de la langue
-  - Déstructuration des objets imbriqués et des tableaux
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition
 ---
 
 {{jsSidebar("Operators")}}

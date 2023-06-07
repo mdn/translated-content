@@ -1,13 +1,7 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/pow
 ---
 
 {{JSRef}}

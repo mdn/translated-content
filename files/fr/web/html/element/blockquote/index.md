@@ -1,19 +1,7 @@
 ---
 title: '<blockquote> : l''élément de bloc de citation'
 slug: Web/HTML/Element/blockquote
-tags:
-  - Blockquote
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning root
-  - Quotations
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/blockquote
-browser-compat: html.elements.blockquote
 ---
 
 {{HTMLSidebar}}

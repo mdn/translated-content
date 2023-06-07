@@ -1,12 +1,6 @@
 ---
 title: URL.toString()
 slug: Web/API/URL/toString
-tags:
-  - API
-  - Méthode
-  - Reference
-  - URL
-  - toString()
 translation_of: Web/API/URL/toString
 ---
 

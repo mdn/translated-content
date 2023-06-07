@@ -1,10 +1,6 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/break-inside
 ---
 

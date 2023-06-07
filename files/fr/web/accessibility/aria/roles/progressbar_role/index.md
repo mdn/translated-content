@@ -1,12 +1,7 @@
 ---
 title: Utiliser le rôle progressbar
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
-tags:
-  - ARIA
-  - Accessibilité
-  - Rôle
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ---
 
 ### Description

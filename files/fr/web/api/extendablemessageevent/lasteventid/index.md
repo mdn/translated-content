@@ -1,14 +1,6 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
-tags:
-  - API
-  - Experimental
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - lastEventID
 translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
 

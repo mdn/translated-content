@@ -1,11 +1,6 @@
 ---
 title: '-webkit-animation'
 slug: Web/CSS/@media/-webkit-animation
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Reference
 translation_of: Web/CSS/@media/-webkit-animation
 ---
 

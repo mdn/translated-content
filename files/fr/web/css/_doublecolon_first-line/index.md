@@ -1,10 +1,6 @@
 ---
 title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::first-line
 ---
 

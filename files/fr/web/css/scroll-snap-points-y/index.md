@@ -1,12 +1,6 @@
 ---
 title: scroll-snap-points-y
 slug: Web/CSS/scroll-snap-points-y
-tags:
-  - CSS
-  - Déprécié
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-points-y
 ---
 

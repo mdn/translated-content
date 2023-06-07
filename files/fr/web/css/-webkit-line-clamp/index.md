@@ -1,9 +1,6 @@
 ---
 title: '-webkit-line-clamp'
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - CSS
-  - Propriété
 translation_of: Web/CSS/-webkit-line-clamp
 ---
 

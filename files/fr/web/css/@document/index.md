@@ -1,11 +1,6 @@
 ---
 title: '@document'
 slug: Web/CSS/@document
-tags:
-  - At-rule
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@document
 ---
 

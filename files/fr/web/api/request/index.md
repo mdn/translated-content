@@ -1,15 +1,6 @@
 ---
 title: Request
 slug: Web/API/Request
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - TopicStub
-  - request
 translation_of: Web/API/Request
 ---
 

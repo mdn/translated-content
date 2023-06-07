@@ -1,10 +1,6 @@
 ---
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feComposite
 ---
 

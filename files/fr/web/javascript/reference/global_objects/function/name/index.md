@@ -1,14 +1,7 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-tags:
-  - ECMAScript 2015
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/name
 ---
 
 {{JSRef}}

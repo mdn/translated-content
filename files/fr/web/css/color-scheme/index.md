@@ -2,7 +2,6 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 translation_of: Web/CSS/color-scheme
-browser-compat: css.properties.color-scheme
 ---
 
 {{CSSRef}}

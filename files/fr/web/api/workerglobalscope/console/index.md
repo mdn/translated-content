@@ -1,13 +1,6 @@
 ---
 title: WorkerGlobalScope.console
 slug: Web/API/WorkerGlobalScope/console
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Web Workers
-  - WorkerGlobalScope
-  - lecture seule
 translation_of: Web/API/WorkerGlobalScope/console
 ---
 

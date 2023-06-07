@@ -1,10 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/resolution
 ---
 

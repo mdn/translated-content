@@ -1,13 +1,7 @@
 ---
 title: Fonctions
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Débutant
-  - Functions
-  - Guide
-  - JavaScript
 translation_of: Web/JavaScript/Guide/Functions
-original_slug: Web/JavaScript/Guide/Fonctions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}

@@ -2,7 +2,6 @@
 title: pageshow
 slug: Web/API/Window/pageshow_event
 translation_of: Web/API/Window/pageshow_event
-original_slug: Web/Events/pageshow
 ---
 
 L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de session est atteinte (cela comprend les boutons précédent / suivant ainsi que l’affichage initial de la page après l’évènement `onload`).

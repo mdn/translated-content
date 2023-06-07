@@ -1,14 +1,6 @@
 ---
 title: Animation SVG avec SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
-tags:
-  - Animation
-  - Firefox 4
-  - Gecko 2.0
-  - HTML Animation
-  - SVG
-  - SVG Animation
-  - XML
 translation_of: Web/SVG/SVG_animation_with_SMIL
 ---
 

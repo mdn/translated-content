@@ -1,12 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/label
 ---
 

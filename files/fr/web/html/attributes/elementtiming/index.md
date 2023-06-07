@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : elementtiming'
 slug: Web/HTML/Attributes/elementtiming
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - elementtiming
-  - Performance
-  - Reference
 translation_of: Web/HTML/Attributes/elementtiming
 ---
 

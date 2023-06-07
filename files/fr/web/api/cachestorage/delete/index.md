@@ -1,14 +1,6 @@
 ---
 title: CacheStorage.delete()
 slug: Web/API/CacheStorage/delete
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
 translation_of: Web/API/CacheStorage/delete
 ---
 

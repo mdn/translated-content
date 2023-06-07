@@ -1,11 +1,6 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/place-content
 ---
 

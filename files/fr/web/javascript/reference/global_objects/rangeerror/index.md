@@ -2,8 +2,6 @@
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
-original_slug: Web/JavaScript/Reference/Objets_globaux/RangeError
-browser-compat: javascript.builtins.RangeError
 ---
 
 {{JSRef}}

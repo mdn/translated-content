@@ -2,7 +2,6 @@
 title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
-browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
 
 {{JSRef}}

@@ -2,8 +2,6 @@
 title: grayscale()
 slug: Web/CSS/filter-function/grayscale
 translation_of: Web/CSS/filter-function/grayscale()
-original_slug: Web/CSS/filter-function/grayscale()
-browser-compat: css.types.filter-function.grayscale
 ---
 
 {{CSSRef}}

@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
-tags:
-  - API
-  - Performance Timeline API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceEntry/name
 ---
 

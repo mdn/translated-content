@@ -2,7 +2,6 @@
 title: FinalizationRegistry.prototype.unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
-browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
 
 {{JSRef}}
