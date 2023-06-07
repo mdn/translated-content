@@ -1,11 +1,7 @@
 ---
 title: Firefox 21 pour les développeurs
 slug: Mozilla/Firefox/Releases/21
-tags:
-  - Firefox
-  - Firefox 21
 translation_of: Mozilla/Firefox/Releases/21
-original_slug: Mozilla/Firefox/Versions/21
 ---
 
 {{FirefoxSidebar}}

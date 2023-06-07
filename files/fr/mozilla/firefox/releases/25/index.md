@@ -1,12 +1,6 @@
 ---
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
-tags:
-  - Beginner
-  - Firefox
-  - Firefox 25
-  - Guide
-  - TopicStub
 translation_of: Mozilla/Firefox/Releases/25
 ---
 

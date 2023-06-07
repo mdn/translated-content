@@ -1,16 +1,6 @@
 ---
 title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-  - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
 

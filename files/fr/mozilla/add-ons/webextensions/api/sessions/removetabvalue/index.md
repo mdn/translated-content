@@ -1,15 +1,6 @@
 ---
 title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeTabValue
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 ---
 

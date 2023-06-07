@@ -1,16 +1,6 @@
 ---
 title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - TransitionQualifier
-  - Type
-  - WebExtensions
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 ---
 

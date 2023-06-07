@@ -1,11 +1,7 @@
 ---
 title: Firefox 41 pour développeurs
 slug: Mozilla/Firefox/Releases/41
-tags:
-  - Firefox
-  - Versions
 translation_of: Mozilla/Firefox/Releases/41
-original_slug: Mozilla/Firefox/Versions/41
 ---
 
 {{FirefoxSidebar}}

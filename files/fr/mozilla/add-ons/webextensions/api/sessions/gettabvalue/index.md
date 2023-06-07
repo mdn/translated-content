@@ -1,15 +1,6 @@
 ---
 title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTabValue
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 ---
 

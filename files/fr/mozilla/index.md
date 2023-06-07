@@ -1,14 +1,6 @@
 ---
 title: Mozilla
 slug: Mozilla
-tags:
-  - Add-ons
-  - Apps
-  - Avancé
-  - Codage
-  - Extensions
-  - Localisation
-  - Mozilla
 translation_of: Mozilla
 ---
 

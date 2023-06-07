@@ -1,9 +1,6 @@
 ---
 title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
-tags:
-  - NeedsTranslation
-  - TopicStub
 translation_of: Mozilla/Firefox/Releases/32
 ---
 

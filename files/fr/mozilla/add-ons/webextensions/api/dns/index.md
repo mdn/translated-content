@@ -1,12 +1,6 @@
 ---
 title: dns
 slug: Mozilla/Add-ons/WebExtensions/API/dns
-tags:
-  - API
-  - Add-ons
-  - DNS
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/dns
 ---
 

@@ -1,17 +1,6 @@
 ---
 title: tabs.onSelectionChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSelectionChanged
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
 ---
 
