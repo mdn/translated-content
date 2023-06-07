@@ -32,10 +32,14 @@ slug: Web/Progressive_web_apps
   - : 描述了如何为 PWA 设置背景和主题颜色。
 - [显示徽章](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)
   - : 描述了如何在 PWA 的图标上显示一个徽章：例如，让用户知道他们收到了新的消息。
+- [将常用 app 动作暴露为快捷方式](/zh-CN/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)
+  - : 描述了如何为可从操作系统的应用程序快捷菜单中启动的 PWA 公开常见的动作。
 - [在应用间共享数据](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)
   - : 描述了 PWA 如何通过使用操作系统的应用共享机制来相互共享数据。
 - [从你的 PWA 中触发安装](/zh-CN/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
   - : 描述了开发者如何提供自己的用户界面来邀请用户安装他们的 PWA。
+- [将文件与你的 PWA 建立联系](/zh-CN/docs/Web/Progressive_web_apps/How_to/Associate_files_with_your_PWA)
+  - : 描述了如何在文件类型和你的 PWA 之间建立关联，以便当用户点击文件时，启动你的 PWA 来处理它。
 
 ## 参考
 
