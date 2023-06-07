@@ -1,16 +1,7 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: WebAssembly/JavaScript_interface/Instance/exports
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Propriété
-  - Reference
-  - WebAssembly
-  - instance
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 
 {{WebAssemblySidebar}}
