@@ -20,7 +20,7 @@ l10n:
 - {{domxref("MediaDeviceInfo.kind")}} {{ReadOnlyInline}}
   - : `"videoinput"`、`"audioinput"`、`"audiooutput"` の何れかの列挙値を返します。
 - {{domxref("MediaDeviceInfo.label")}} {{ReadOnlyInline}}
-  - : この危機を記述する文字列を返します（例えば "External USB Webcam"）。
+  - : この機器を記述する文字列を返します（例えば "External USB Webcam"）。
 
 > **メモ:** セキュリティのため、`label` フィールドはアクティブなメディアストリームが存在するか、メディア機器への継続的な権限をユーザーが付与しない限り、常に空欄になります。機器ラベルの組み合わせによって、ユーザーを識別するための[フィンガープリント](/ja/docs/Glossary/Fingerprinting)の一部として利用することができてしまいます。
 
