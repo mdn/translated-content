@@ -3,7 +3,7 @@ title: 使用可读流
 slug: Web/API/Streams_API/Using_readable_streams
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Stream API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
