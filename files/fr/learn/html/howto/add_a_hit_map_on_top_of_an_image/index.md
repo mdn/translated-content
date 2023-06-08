@@ -57,9 +57,9 @@ N'importe quelle image ne fera pas l'affaire pour construire une telle carte.
 - L'image doit indiquer de façon claire où commencent et où se terminent les différentes régions.
 - Les différentes zones de la cartes doivent être suffisamment grandes pour qu'on puisse cliquer ou appuyer dessus, quelle que soit la taille de l'écran utilisé. [Une image de 72 pixels CSS de long et de large](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) est un minimum acceptable (pour voir le problème posé par de trop petites régions : [50languages.com](http://www.goethe-verlag.com/book2/), où les grandes régions sont suffisamment grande mais où, pour l'Albanie et l'Estonie, c'est beaucoup plus compliqué
 
-On insère une image [de la même façon que d'habitude](/fr/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut [alt](/fr/docs/Web/HTML/Element/img#alt)). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents [alt](/fr/docs/Web/HTML/Element/area#alt) sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
+On insère une image [de la même façon que d'habitude](/fr/Learn/HTML/Howto/Add_images_to_a_webpage) (avec un élément {{htmlelement("img")}} et un texte dans l'attribut [`alt`](/fr/docs/Web/HTML/Element/img#alt)). Si l'image n'est présente qu'à des fins de navigations, `alt` peut être laissé vide : `alt=""`, si les valeurs pour les différents [`alt`](/fr/docs/Web/HTML/Element/area#alt) sont bien renseignés dans les éléments {{htmlelement('area')}} que nous allons présenter.
 
-Cette image contiendra une attribut spécial [usemap](/fr/docs/Web/HTML/Element/img#usemap). Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
+Cette image contiendra une attribut spécial [`usemap`](/fr/docs/Web/HTML/Element/img#usemap). Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
 
 ```html
 <img
@@ -70,7 +70,7 @@ Cette image contiendra une attribut spécial [usemap](/fr/docs/Web/HTML/Element/
 
 ### Étape 2 : Activer les régions actives
 
-Dans cette étape, nous allons remplir le code de l'élément {{htmlelement('map')}}. Celui-ci n'a besoin que d'un seul attribut : [name](/fr/docs/Web/HTML/Element/map#name) dont la valeur doit correspondre à celle utilisée pour l'attribut `usemap` vue juste avant :
+Dans cette étape, nous allons remplir le code de l'élément {{htmlelement('map')}}. Celui-ci n'a besoin que d'un seul attribut : [`name`](/fr/docs/Web/HTML/Element/map#name) dont la valeur doit correspondre à celle utilisée pour l'attribut `usemap` vue juste avant :
 
 ```html
 <map name="exemple-map-1">
@@ -96,9 +96,9 @@ Les éléments `<area>` sont des éléments vides mais qui utilisent quatres att
 
     Dans le cas où les définitions de certaines régions se chevauchent, ce sera l'ordre des zones qui donnera la priorité.
 
-- [href](/fr/docs/Web/HTML/Element/area#href)
+- [`href`](/fr/docs/Web/HTML/Element/area#href)
   - : Cet attribut est l'URL de la ressource vers laquelle on crée un lien. Elle peut être laissée vide si on ne souhaite pas créer de lien pour cette région.
-- [alt](/fr/docs/Web/HTML/Element/area#alt)
+- [`alt`](/fr/docs/Web/HTML/Element/area#alt)
 
   - : Un attribut obligatoire qui indique aux personnes la direction ou le rôle du lien. Ce texte `alt` ne sera affiché que lorsque l'image ne sera pas disponible. Pour plus d'informations, voir [nos conseils pour écrire des hyperliens accessibles.](/fr/Apprendre/HTML/Comment/Créer_un_hyperlien#Écrire_des_liens_accessibles)
 
