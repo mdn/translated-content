@@ -23,7 +23,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - {{htmlattrdef("media")}}
   - : [Une requête média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) pour sélectionner la source du média. Cet attribut doit uniquement être utilisé pour un élément {{HTMLElement("picture")}}.
 - {{htmlattrdef("sizes")}}
-  - : Cet attribut est une liste de chaîne de caractères, séparées par des virgules, dont chacune décrit une condition de taille. Cette information est utilisée par le navigateur, avant la disposition de la page, pour déterminer quelle image parmi celles définies via l'attribut {{htmlattrxref("srcset", "source")}}. Cet attribut aura un effet uniquement lorsque l'élément {{HTMLElement("source")}} est un élément fils direct d'un élément {{HTMLElement("picture")}}.
+  - : Cet attribut est une liste de chaîne de caractères, séparées par des virgules, dont chacune décrit une condition de taille. Cette information est utilisée par le navigateur, avant la disposition de la page, pour déterminer quelle image parmi celles définies via l'attribut [`srcset`](/fr/docs/Web/HTML/Element/source#srcset). Cet attribut aura un effet uniquement lorsque l'élément {{HTMLElement("source")}} est un élément fils direct d'un élément {{HTMLElement("picture")}}.
 - {{htmlattrdef("src")}}
   - : Cet attribut est obligatoire pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Il définit l'adresse de la ressource. La valeur de cet attribut est ignorée lorsque l'élément `<source>` est à l'intérieur d'un élément{{HTMLElement("picture")}}.
 - {{htmlattrdef("srcset")}}
