@@ -5,9 +5,9 @@ slug: Web/Progressive_web_apps
 
 {{PWASidebar}}
 
-**渐进式 Web 应用**（Progressive Web Apps，PWA）是一个使用 web 平台技术构建的应用程序，但它提供的用户体验就像一个特定平台的应用程序。
+**渐进式 Web 应用**（Progressive Web App，PWA）是一个使用 web 平台技术构建的应用程序，但它提供的用户体验就像一个特定平台的应用程序。
 
-它像网站一样，PWA 可以从一个代码库在多个平台和设备上运行。它也像一个特定平台的应用程序一样，可以安装在设备上，可以离线和在后台运行，并且可以与设备和其他已安装的应用程序集成。
+它像网站一样，PWA 可以通过一个代码库在多个平台和设备上运行。它也像一个特定平台的应用程序一样，可以安装在设备上，可以离线和在后台运行，并且可以与设备和其他已安装的应用程序集成。
 
 ## 指南
 
@@ -33,7 +33,7 @@ slug: Web/Progressive_web_apps
 - [显示徽章](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)
   - : 描述了如何在 PWA 的图标上显示一个徽章：例如，让用户知道他们收到了新的消息。
 - [将常用 app 动作暴露为快捷方式](/zh-CN/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)
-  - : 描述了如何为可从操作系统的应用程序快捷菜单中启动的 PWA 公开常见的动作。
+  - : 描述了如何为可从操作系统的应用程序快捷菜单中启动的 PWA 暴露常见的动作。
 - [在应用间共享数据](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)
   - : 描述了 PWA 如何通过使用操作系统的应用共享机制来相互共享数据。
 - [从你的 PWA 中触发安装](/zh-CN/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt)
