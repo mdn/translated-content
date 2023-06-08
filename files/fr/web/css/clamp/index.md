@@ -43,7 +43,7 @@ La valeur préférée correspond à la valeur qui sera utilisée si elle est sup
 
 La valeur maximale est la borne supérieure des valeurs autorisées. C'est cette valeur qui sera utilisée si la valeur préférée lui est supérieure.
 
-Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informationsn), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
+Les expressions passées en paramètres peuvent utiliser des fonctions mathématiques (voir {{CSSxRef("calc")}} pour plus d'informations), des valeurs littérales ou d'autres expressions ( {{CSSxRef("attr", "attr()")}} par exemple) tant que le résultat de cette expression est évalué avec un type valide. Il est aussi possible d'utiliser des expressions mathématiques sans `calc()` et il est également possible d'ajouter des parenthèses pour prioriser correctement les opérations imbriquées.
 
 Il est possible d'utiliser différentes unités pour chacune des valeurs des expressions.
 
