@@ -16,7 +16,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`lang`** permet
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-Même lorsque l'attribut **`lang`** est défini, il peut ne pas être pris en compte. En effet, l'attribut {{htmlattrxref("xml:lang")}} aura la priorité sur celui-ci.
+Même lorsque l'attribut **`lang`** est défini, il peut ne pas être pris en compte. En effet, l'attribut [`xml:lang`](/fr/docs/Web/HTML/Global_attributes#xml:lang) aura la priorité sur celui-ci.
 
 Pour la pseudo-classe CSS {{cssxref(":lang")}}, deux noms de langues invalides sont considérés différents si les noms utilisés sont différents. Par exemple, alors que `:lang(fr)` permet l'appariement avec les déclarations (valides) `lang="fr-BE"` ou `lang="fr-CH"`, un encodage (invalide) comme `:lang(xyzzy)` ne permet pas l'appariement avec une déclaration (invalide) comme `lang="xyzzy-Zorp!"`.
 
