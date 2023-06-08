@@ -47,5 +47,5 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 - HTTP [内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)
 - [不要再用 Accept-Charset 了](https://hsivonen.fi/accept-charset/)
-- 用来表示内容协商结果的消息头：{{HTTPHeader("Content-Type")}}
-- 其他类似消息头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}}
+- 用来表示内容协商结果的标头：{{HTTPHeader("Content-Type")}}
+- 其他类似的标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}}

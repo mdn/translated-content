@@ -41,5 +41,5 @@ original_slug: Web/CSS/CSS_Color
 - [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块及 {{cssxref("print-color-adjust")}} 属性。
 - 定义 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像类型的 [CSS 图像](/zh-CN/docs/Web/CSS/CSS_Images) 模块。
 - [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
-- [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) SVG 元素
+- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Element/feColorMatrix) SVG 元素
 - [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#颜色)
