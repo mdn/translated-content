@@ -11,10 +11,6 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 > **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
 
-## 浏览器支持
-
-你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[链式管道传输](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
-
 ## 寻找一些示例
 
 我们将在这篇文章中看到各种示例，它们取自我们的 [dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) 仓库。你可以在那里发现各种源代码，以及关联的示例。
