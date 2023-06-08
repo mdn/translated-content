@@ -250,12 +250,6 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## 浏览器兼容性
-
-{{Compat}}
-
-> **备注：** 自定义属性的前缀 `var-` 是早期标准规定的，后期改为了 `--`。Firefox 31 和以后的版本遵循新的标准。（[Firefox bug 985838](https://bugzil.la/985838)）
-
 ## 参见
 
 - {{cssxref("--*", "Custom properties")}}
