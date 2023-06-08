@@ -79,7 +79,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - {{htmlattrdef("id")}}
   - : Cet attribut définit un identifiant, unique au sein de tout le document, ,pour un élément. Il doit permettre d'identifier un élément lorsqu'on crée un lien vers lui et/ou lorsque le manipule avec des scripts ou avec CSS.
 - {{htmlattrdef("inputmode")}}
-  - : Cet attribut fournit une indication au navigateur quant au type de contenu qui sera saisi dans le champ et qui aide à déterminer la configuration du clavier virtuel qui peut être affiché pour la saisie. Ce type est principalement utilisé pour les éléments {{HTMLElement("input")}} mais peut tout à fait être utilisé sur n'importe quel élément avec le mode [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable).
+  - : Cet attribut fournit une indication au navigateur quant au type de contenu qui sera saisi dans le champ et qui aide à déterminer la configuration du clavier virtuel qui peut être affiché pour la saisie. Ce type est principalement utilisé pour les éléments {{HTMLElement("input")}} mais peut tout à fait être utilisé sur n'importe quel élément avec le mode [`contenteditable`](#contenteditable).
 - {{htmlattrdef("is")}}
   - : Cet attribut indique qu'un élément HTML standard devrait se comporter comme un élément personnalisé natif (voir [Manipuler les custom elements](/fr/docs/Web/Web_Components/Using_custom_elements) pour plus d'informations).
 - {{htmlattrdef("itemid")}}

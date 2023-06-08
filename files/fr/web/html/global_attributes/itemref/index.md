@@ -73,6 +73,5 @@ Au format [JSON-LD](https://json-ld.org/) :
 
   - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
   - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
   - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)

@@ -227,7 +227,7 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
   - : Si défini à la valeur 1, demande à l'explorateur de tracer une bordure entre cadres, c'est le comportement par défaut. 0 supprime la bordure. L'utilisation d'un tel attribut n'est plus trop recommandée, car le même résultat peut être obtenu en mieux avec {{cssxref('border')}}`: none;` dans le {{Glossary('CSS')}}.
 - [`src`](/fr/docs/Web/HTML/Element/iframe#src)
   - : Cet attribut, comme avec {{htmlelement("video")}} ou {{htmlelement("img")}}, contient un chemin vers l'URL du document à intégrer.
-- [`width`](/fr/docs/Web/HTML/Element/iframe#width) and [`height`](/fr/docs/Web/HTML/Element/iframe#height)
+- [`width`](/fr/docs/Web/HTML/Element/iframe#width) et [`height`](/fr/docs/Web/HTML/Element/iframe#height)
   - : Ces attributs définissent la largeur et la hauteur souhaitée pour `<iframe>`.
 - **Contenu de repli**
   - : Comme pour d'autres éléments semblables, tels {{htmlelement("video")}}, vous pouvez préciser un contenu de repli entre les balises ouvrantes et fermantes `<iframe></iframe>` qui seront affichées si l'explorateur ne prend pas en charge `<iframe>`. Dans notre cas nous avons mis un lien vers une page. Il est peu vraisemblable que vous rencontriez de nos jours un explorateur qui ne prenne pas en charge `<iframe>`.

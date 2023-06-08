@@ -298,7 +298,7 @@ draw();
       <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
-      <td><strong>Attributs pris charge</strong></td>
+      <td><strong>Attributs pris en charge</strong></td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>

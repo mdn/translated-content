@@ -92,4 +92,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## Voir aussi
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [sandbox](/fr/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements
+- [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements

@@ -88,4 +88,3 @@ itemtype = URL
   - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
   - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
