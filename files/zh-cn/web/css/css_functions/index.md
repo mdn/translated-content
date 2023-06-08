@@ -179,10 +179,6 @@ V
 
 - {{CSSxRef("var")}}
 
-## 规范
-
-{{Specifications}}
-
 ## 参见
 
 - [CSS Values and Units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
