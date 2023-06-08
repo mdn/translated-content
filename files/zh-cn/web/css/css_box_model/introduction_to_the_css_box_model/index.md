@@ -43,10 +43,6 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 - [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Cascade)
 - [层叠和继承](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
 
-## 规范
-
-{{Specifications}}
-
 ## 参见
 
 - CSS 重要概念：
