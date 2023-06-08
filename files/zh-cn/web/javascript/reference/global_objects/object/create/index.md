@@ -81,7 +81,7 @@ rect.move(1, 1); // 打印 'Shape moved.'
 
 ### 使用 Object.create() 的 propertyObject 参数
 
-`Object.create()` 方法允许对对象创建过程进行精细的控制。实际上，[对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)是 `Object.create()` 的一种语法糖。使用 `Object.create()`，我们可以创建具有指定原型和某些属性的对象。请注意，第二个参数将键映射到*属性描述符*，这意味着你还可以控制每个属性的可枚举性、可配置性等，而这在字面量初始化对象语法中是做不到的。
+`Object.create()` 方法允许对对象创建过程进行精细的控制。实际上，[字面量初始化对象语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)是 `Object.create()` 的一种语法糖。使用 `Object.create()`，我们可以创建具有指定原型和某些属性的对象。请注意，第二个参数将键映射到*属性描述符*，这意味着你还可以控制每个属性的可枚举性、可配置性等，而这在字面量初始化对象语法中是做不到的。
 
 ```js
 o = {};
