@@ -160,7 +160,7 @@ HTTP 响应的一个例子：
 
 ## 基于 HTTP 的 API
 
- {{domxref("XMLHttpRequest")}} 是基于 HTTP 的最常用 API，可用于在 {{Glossary("user agent","用户代理)}} 和服务端之间交换数据。现代 {{domxref("Fetch API")}} 提供相同的功能，并具有更强大和灵活的功能集。
+ {{domxref("XMLHttpRequest")}} 是基于 HTTP 的最常用 API，可用于在 {{Glossary("user agent","用户代理")}} 和服务端之间交换数据。现代 {{domxref("Fetch API")}} 提供相同的功能，并具有更强大和灵活的功能集。
 
 另一种 API，[server-sent events](/zh-CN/docs/Web/API/Server-sent_events)，是一种单向服务，允许服务端借助作为 HTTP 传输机制向客户端发送事件。使用 {{domxref("EventSource")}} 接口，客户端可打开连接并创建事件处理器。客户端浏览器自动将 HTTP 流里到达的消息转换为适当的 {{domxref("Event")}} 对象。继而将已知{{domxref("Event.type", "类型")}}的事件，传递给先前注册过的事件处理器，其他未指明类型的事件则传递给 {{domxref("EventSource.message_event", "onmessage 事件")}}处理器。
 
