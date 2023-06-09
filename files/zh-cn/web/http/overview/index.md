@@ -73,7 +73,7 @@ HTTP 是无状态的：在同一个连接中，两个执行成功的请求之间
 
 为了减轻这个缺陷，HTTP/1.1 引入了*流水线*（已被证明难以实现）和*持久化连接*：可以通过 {{HTTPHeader("Connection")}} 标头来部分控制底层的 TCP 连接。HTTP/2 则更进一步，通过在一个连接中复合多个消息，让这个连接始终平缓并更加高效。
 
-为了设计一种更匹配 HTTP 的传输层协议，各种实验正在进行中。例如，Google 正在测试一种基于 UDP 构建，更可靠、高效的传输层协议——[QUIC](https://en.wikipedia.org/wiki/QUIC)。
+为了设计一种更匹配 HTTP 的传输层协议，各种实验正在进行中。例如，Google 正在测试一种基于 UDP 构建，更可靠、高效的传输层协议——[QUIC](https://zh.wikipedia.org/wiki/QUIC)。
 
 ## HTTP 能控制什么
 
