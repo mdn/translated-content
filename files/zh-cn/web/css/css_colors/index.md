@@ -36,11 +36,10 @@ original_slug: Web/CSS/CSS_Color
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
-- 有与颜色有关属性的其他规范：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}} 和 {{cssxref("column-rule-color")}}
-- 在 CSS 中，渐变不是颜色，而是[图像](/zh-CN/docs/Web/CSS/CSS_images)。
+- [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块及 {{cssxref("print-color-adjust")}} 属性。
+- 定义 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像类型的 [CSS 图像](/zh-CN/docs/Web/CSS/CSS_Images) 模块。
+- [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
+- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Element/feColorMatrix) SVG 元素
+- [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#颜色)

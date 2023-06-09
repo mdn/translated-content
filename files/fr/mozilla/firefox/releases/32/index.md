@@ -35,7 +35,7 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it set `dom.image.srcset.enable` to `true` ([bug Firefox 870021](https://bugzil.la/870021)).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) property, To activate it set `dom.image.srcset.enable` to `true` ([bug Firefox 870021](https://bugzil.la/870021)).
 - [**id**](/fr/docs/Web/HTML/Global_attributes/id) and [**class**](/fr/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/fr/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ([bug Firefox 741295](https://bugzil.la/741295)).
 
 ### JavaScript

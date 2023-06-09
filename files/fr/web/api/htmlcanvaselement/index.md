@@ -16,8 +16,8 @@ _Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
 
 | Nom      | Type            | Description                                                                                                                                     |
 | -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | `unsigned long` | Représente l'attribut HTML {{htmlattrxref("height", "canvas")}}, qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML {{htmlattrxref("width", "canvas")}}, qui spécifie la largeur de l'espace des coordonnées en pixels CSS. |
+| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
+| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS. |
 
 ## Méthodes
 

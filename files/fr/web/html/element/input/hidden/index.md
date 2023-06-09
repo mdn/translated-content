@@ -21,7 +21,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
 
 > **Attention :** Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type `hidden` ne doit donc pas être utilisé comme mécanisme de sécurité.
 
@@ -163,7 +163,7 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+      <td><a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>

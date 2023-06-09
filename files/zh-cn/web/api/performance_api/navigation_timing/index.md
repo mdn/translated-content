@@ -4,7 +4,7 @@ slug: Web/API/Performance_API/Navigation_timing
 original_slug: Web/API/Navigation_timing_API
 ---
 
-{{DefaultAPISidebar("Navigation Timing")}}
+{{DefaultAPISidebar("Performance API")}}
 
 **Navigation Timing API** 提供了可用于衡量一个网站性能的数据。与用于相同目的的其他基于 JavaScript 的机制不同，该 API 可以提供可以更有用和更准确的端到端延迟数据。
 
@@ -93,11 +93,3 @@ var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
 ```
 var connectTime = perfData.responseEnd - perfData.requestStart;
 ```
-
-## 规范
-
-- [https://w3c.github.io/navigation-timing/](http://www.w3.org/TR/navigation-timing/)
-
-## 浏览器兼容性
-
-{{Compat}}
