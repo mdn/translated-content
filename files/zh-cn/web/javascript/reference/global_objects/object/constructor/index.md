@@ -132,7 +132,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 由于重新赋值了 `Child.prototype`，`Child` 实例的 `constructor` 将是 `Parent`。
 
-通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh_CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
+通常情况下，这不是什么大问题——JavaScript 几乎从不读取对象的 `constructor` 属性。唯一的例外是在使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 创建类的新实例时，但这种情况很少见，并且你应该使用 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 语法来子类化内置对象。
 
 然而，在某些调用使用 `constructor` 从实例中访问原始类时，确保 `Child.prototype.constructor` 总是指向 `Child` 本身非常重要。考虑这种情况：对象具有 `create()` 方法来创建自身。
 
@@ -180,7 +180,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // 跑起来没毛病
 ```
 
-请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh_CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
+请注意，当手动添加 `constructor` 属性时，将属性设置为[不可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)非常重要，这将确保 `constructor` 就不会在 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环中被访问——尽管通常情况下不会被访问。
 
 如果上面的代码看起来太死板，你也可以考虑使用 [`Object.setPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) 来操作原型链。
 
