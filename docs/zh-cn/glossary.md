@@ -2,6 +2,15 @@
 
 ## 特定领域术语
 
+### API
+
+| 英文词汇    | 翻译     | 备注                                              | 引用来源                                                                       |
+| ----------- | -------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| light DOM   | 常规 DOM | 与影子 DOM 相对                                   | 同 shadow DOM                                                                  |
+| shadow DOM  | 影子 DOM | DOM 节点的附属树，在常规 DOM 中不可见（web 组件） | <https://github.com/mdn/translated-content/pull/13432#issuecomment-1575018754> |
+| shadow host | 影子宿主 | web 组件的宿主元素                                | 同 shadow DOM                                                                  |
+| shadow tree | 影子树   | 隐藏的 DOM 子树                                   | 同 shadow DOM                                                                  |
+
 ### CSS
 
 | 英文词汇         | 翻译    | 备注                     | 引用来源                                                 |
