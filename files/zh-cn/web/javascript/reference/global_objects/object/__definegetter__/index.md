@@ -35,7 +35,7 @@ __defineGetter__(prop, func)
 
 所有继承自 `Object.prototype` 的对象（也就是除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象）都会继承 `__defineGetter__()` 方法。该方法允许在一个已存在的对象上定义一个 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。这相当于使用 [`Object.defineProperty(obj, prop, { get: func, configurable: true, enumerable: true })`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 方法，这意味着该属性是可枚举和可配置的，而且如果存在，则保留任何现有的 setter。
 
-`__defineGetter__()` 在规范中被定义为“规范性可选项”，这意味着不需要任何实现来实现它。然而，所有主要的浏览器都实现了它，并且由于它的持续使用，它不太可能被删除。如果一个浏览器实现了 `__defineGetter__()`，那么它还需要实现 [`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
+`__defineGetter__()` 在规范中被定义为“可选规范”，这意味着不需要任何实现来实现它。然而，所有主要的浏览器都实现了它，并且由于它的持续使用，它不太可能被删除。如果一个浏览器实现了 `__defineGetter__()`，那么它还需要实现 [`__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__lookupSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) 和 [`__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 方法。
 
 ## 示例
 
