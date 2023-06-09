@@ -12,8 +12,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你应该已经知道
-        <a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">互联网是怎么工作的</a
+        你应该已经知道<a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">互联网是怎么工作的</a
         >，并且<a
           href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >了解网页、网站、web 服务器和搜索引擎的区别是什么</a
