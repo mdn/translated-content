@@ -17,7 +17,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
         >，并且<a
           href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >了解网页、网站、web 服务器和搜索引擎的区别是什么</a
-        >
+        >。
       </td>
     </tr>
     <tr>
@@ -29,7 +29,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 
 ## 概述
 
-*网络服务器*（Web server）一词可以代指硬件或软件，或者是它们协同工作的整体。
+*web 服务器*一词可以代指硬件或软件，或者是它们协同工作的整体。
 
 1. 硬件部分，web 服务器是一台存储了 web 服务器软件以及网站的组成文件（比如，HTML 文档、图片、CSS 样式表和 JavaScript 文件）的计算机。它接入到互联网并且支持与其他连接到互联网的设备进行物理数据的交互。
 2. 软件部分，web 服务器包括控制网络用户如何访问托管文件的几个部分，至少是一台 *HTTP 服务器*。一台 HTTP 服务器是一种能够理解 {{Glossary("URL")}}（网络地址）和 {{Glossary("HTTP")}}（浏览器用来查看网页的协议）的软件。一个 HTTP 服务器可以通过它所存储的网站域名进行访问，并将这些托管网站的内容传递给最终用户的设备。
@@ -72,7 +72,7 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 {{Glossary("Protocol", "协议")}}是一套为了在两台计算机间交流而制定的规则。HTTP 是一个文本化的（textual），无状态的（stateless）协议。
 
 - 文本化
-  - : 所有的命令都是纯文本的（plain-text），人类可读（human-readable）。
+  - : 所有的命令都是纯文本（plain-text）且人类可读（human-readable）的。
 - 无状态
   - : 无论是服务器还是客户都不会记住之前的交流。举个例子，仅依靠 HTTP，服务器不能记住你输入的密码或者你正处于业务中的哪一步。你需要一个应用服务器来进行这样的工作。（我们会在其他文章中涵盖这类的技术。）
 
