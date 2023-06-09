@@ -166,6 +166,6 @@ HTTP 响应的一个例子：
 
 ## 总结
 
-HTTP 是一种简单、易用、具有可扩展性的协议，其 Client-Server 模式的结构，加上能够增加标头的能力，使得 HTTP 随 Web 中不断扩展的能力一起发展。
+HTTP 是一种简单、易用、具有可扩展性的协议，其客户端-服务器模式的结构，加上能够增加标头的能力，使得 HTTP 随 Web 中不断扩展的能力一起发展。
 
 虽然增加了一些复杂度——为了提高性能，HTTP/2 将 HTTP 报文嵌入到帧中——但是报文的基本结构自 HTTP/1.0 起仍保持不变。会话流依旧简单，通过一个简单的 [HTTP 消息监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)就可以查看和纠错。
