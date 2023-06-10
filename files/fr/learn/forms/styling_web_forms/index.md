@@ -46,7 +46,7 @@ Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou mul
 
 L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.
 
-Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu {{htmlattrxref("placeholder", "input")}} ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
+Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu [`placeholder`](/fr/docs/Web/HTML/Element/input#placeholder) ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
 
 Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 

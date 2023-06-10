@@ -72,7 +72,7 @@ Vous pouvez simplement faire référence à un fichier SVG au sein de l'élémen
 
 ### Inconvénients
 
-- Pour les navigateurs historiques qui existaient avant la démocratisation de SVG (Internet Explorer 8, Android 2.3 et autres), on pourra utiliser une image PNG ou JPG dans l'attribut `src` en combinaison avec l'attribut {{htmlattrxref("srcset","img")}} :
+- Pour les navigateurs historiques qui existaient avant la démocratisation de SVG (Internet Explorer 8, Android 2.3 et autres), on pourra utiliser une image PNG ou JPG dans l'attribut `src` en combinaison avec l'attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) :
 
   ```html
   <img src="equilateral.png" alt="un triangle dont tous les côtés sont égaux" srcset="equilateral.svg"/>

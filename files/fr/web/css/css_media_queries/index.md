@@ -14,7 +14,7 @@ original_slug: Web/CSS/Media_Queries
 
 Les requêtes média, plus souvent appelées **_media queries,_** sont un outil de _responsive design_ qui permet d'adapter la feuille de style CSS en fonction de différents paramètres ou caractéristiques de l'appareil. Par exemple, on pourra appliquer différents styles si l'écran de l'appareil utilisé pour consulter le document est plus petit qu'une taille donnée ou si l'utilisateur tient son appareil en mode portrait ou paysage. La règle @ (ou _at-rule_) {{cssxref("@media")}} est utilisée afin d'appliquer les styles de façon conditionnelle.
 
-De plus, la syntaxe des requêtes média est également employée dans d'autres contextes, notamment l'attribut {{htmlattrxref("media", "source")}} de l'élément {{HTMLElement("source")}} qui permet de définir une chaîne de caractères contenant une requête média afin de choisir le fichier source utilisé pour une image grâce à l'élément HTML {{HTMLElement("picture")}}.
+De plus, la syntaxe des requêtes média est également employée dans d'autres contextes, notamment l'attribut [`media`](/fr/docs/Web/HTML/Element/source#media) de l'élément {{HTMLElement("source")}} qui permet de définir une chaîne de caractères contenant une requête média afin de choisir le fichier source utilisé pour une image grâce à l'élément HTML {{HTMLElement("picture")}}.
 
 De plus, la méthode du DOM {{domxref("Window.matchMedia()")}} peut être utilisée afin de tester le résultat d'une requête média pour la fenêtre courante. On peut également utiliser la méthode {{domxref("MediaQueryList.addListener()")}} afin de recevoir une notification lorsque l'état de la requête évolue. Grâce à cette fonctionnalité, un site ou une application peut réagir aux changements de configuration, d'orientation ou d'état.
 
