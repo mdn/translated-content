@@ -7,6 +7,6 @@ slug: Glossary/Card_sorting
 
 ## 了解更多
 
-### **常识**
+### 常识
 
 - [Card sorting](https://zh.wikipedia.org/wiki/Card_sorting) on Wikipedia

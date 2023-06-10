@@ -6798,10 +6798,6 @@
     "modified": "2019-03-23T22:45:47.956Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "Web/API/DeviceProximityEvent": {
-    "modified": "2020-10-15T21:53:01.564Z",
-    "contributors": ["mfuji09", "yyss", "YuichiNukiyama"]
-  },
   "Web/API/Device_Memory_API": {
     "modified": "2020-10-15T22:28:37.534Z",
     "contributors": ["Wind1808"]
@@ -11796,10 +11792,6 @@
     "modified": "2020-10-15T21:48:50.276Z",
     "contributors": ["Uemmra3", "YuichiNukiyama"]
   },
-  "Web/API/Proximity_Events": {
-    "modified": "2020-10-15T21:25:12.920Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
   "Web/API/PublicKeyCredential": {
     "modified": "2020-10-15T22:16:00.529Z",
     "contributors": ["mfuji09", "SphinxKnight"]
@@ -13249,10 +13241,6 @@
   "Web/API/URL_API": {
     "modified": "2020-10-15T22:23:51.539Z",
     "contributors": ["mfuji09", "Wind1808"]
-  },
-  "Web/API/UserProximityEvent": {
-    "modified": "2020-10-15T21:22:31.047Z",
-    "contributors": ["mfuji09", "yyss", "AshfaqHossain", "ethertank"]
   },
   "Web/API/VRDisplay": {
     "modified": "2020-10-15T21:40:29.390Z",

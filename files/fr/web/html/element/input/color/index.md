@@ -13,7 +13,7 @@ L'apparence du contrôle de sélection des couleurs peut grandement varier d'un 
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un élément `<input type="color">` est une chaîne de caractères sur 7 caractères qui correspond au code de la couleur en représentation hexadécimale RGB. Autrement dit, le premier caractère est un croisillon (#) , les deux suivants indiquent la composante rouge (R) de la couleur, les deux suivants indiquent la couleur verte (G pour _Green_ en anglais) et les deux suivants indiquent la composante bleue (B) de la couleur. La valeur respecte nécessairement ce format et n'est jamais vide.
 
 > **Note :** Si la valeur saisie n'est pas un code hexadécimal RGB d'une couleur opaque valide, c'est la valeur `"#000000"` (c'est-à-dire la couleur noire) qui sera utilisée. Il est notamment impossible d'utiliser les noms de couleurs CSS ou des fonctions CSS afin de définir cette valeur. Il faut garder à l'esprit que HTML et CSS sont deux langages séparés, définis par des spécifications distinctes. De plus, les couleurs avec un canal alpha ne sont pas prises en charges, utiliser un code avec une notation sur 9 caractères entraînera également l'utilisation de `"#000000"`.
 
@@ -159,8 +159,8 @@ Cela permet de modifier la couleur de chaque bloc {{HTMLElement("p")}} du docume
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}} et
-        {{htmlattrxref("list", "input")}}.
+        <a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a> et
+        <a href="/fr/docs/Web/HTML/Element/input#list"><code>list</code></a>.
       </td>
     </tr>
     <tr>

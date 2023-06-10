@@ -44,15 +44,15 @@ En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLEle
 | [`checked`](#checked) | Un attribut booléen. Si celui-ci est présent, la case à cocher sera cochée.                                                          |
 | [`value`](#value) | La chaîne de caractères qui sera utilisée pour représenter la valeur lorsque celle-ci sera envoyée au serveur si la case est cochée. |
 
-### {{htmlattrdef("checked")}}
+### `checked`
 
 Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
 
 > **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 
-À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} peut être utilisé afin de contrôler cette fonctionnalité.
+À la différence des autres navigateurs, Firefox [conserve l'état coché placé dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un champ `<input>` après les rechargements de la page. L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/input#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
-### {{htmlattrdef("value")}}
+### `value`
 
 L'attribut `value` est partagé par l'ensemble des éléments `<input>` mais il a un rôle spécifique pour les champs de type `checkbox` : lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut.
 

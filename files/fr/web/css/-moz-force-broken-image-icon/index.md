@@ -64,4 +64,4 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Voir aussi
 
-- {{Bug(58646)}}
+- [bug Firefox 58646](https://bugzil.la/58646)

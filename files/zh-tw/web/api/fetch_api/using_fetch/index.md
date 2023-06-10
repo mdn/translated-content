@@ -357,18 +357,6 @@ if (self.fetch) {
 }
 ```
 
-## Polyfill
-
-在不支援 Fetch 的瀏覽器, 可改用 [Fetch Polyfill](https://github.com/github/fetch) 來重新支持缺少的 fetch 功能。
-
-## 技術指標
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
 - [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API)

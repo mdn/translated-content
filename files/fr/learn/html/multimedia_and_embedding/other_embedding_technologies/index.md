@@ -221,17 +221,17 @@ Il y a de sérieux [problèmes de sécurité](#problèmes_de_sécurité) à pren
 
 Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisation d'un `<iframe>`&nbsp;:
 
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : Si activé, `<iframe>` pourra être mis en mode plein écran avec [Full Screen API](/fr/docs/Web/API/Fullscreen_API) (un peu hors‑sujet dans cet article).
-- {{htmlattrxref('frameborder','iframe')}}
+- [`frameborder`](/fr/docs/Web/HTML/Element/iframe#frameborder)
   - : Si défini à la valeur 1, demande à l'explorateur de tracer une bordure entre cadres, c'est le comportement par défaut. 0 supprime la bordure. L'utilisation d'un tel attribut n'est plus trop recommandée, car le même résultat peut être obtenu en mieux avec {{cssxref('border')}}`: none;` dans le {{Glossary('CSS')}}.
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/fr/docs/Web/HTML/Element/iframe#src)
   - : Cet attribut, comme avec {{htmlelement("video")}} ou {{htmlelement("img")}}, contient un chemin vers l'URL du document à intégrer.
-- {{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}
+- [`width`](/fr/docs/Web/HTML/Element/iframe#width) et [`height`](/fr/docs/Web/HTML/Element/iframe#height)
   - : Ces attributs définissent la largeur et la hauteur souhaitée pour `<iframe>`.
 - **Contenu de repli**
   - : Comme pour d'autres éléments semblables, tels {{htmlelement("video")}}, vous pouvez préciser un contenu de repli entre les balises ouvrantes et fermantes `<iframe></iframe>` qui seront affichées si l'explorateur ne prend pas en charge `<iframe>`. Dans notre cas nous avons mis un lien vers une page. Il est peu vraisemblable que vous rencontriez de nos jours un explorateur qui ne prenne pas en charge `<iframe>`.
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox)
   - : Cet attribut n'est fonctionnel que dans des explorateurs un peu plus récents, contrairement aux autres attributs de `<iframe>` (par ex. IE 10 et au‑delà). Il requiert des paramètres de sécurité renforcés&nbsp;; nous vous en disons plus dans le paragraphe suivant.
 
 > **Note :** Afin d'améliorer la vitesse, il est pertinent de définir l'attribut `src` de `iframe` avec JavaScript après que le chargement du contenu principal est effectué. La page est utilisable plus tôt et le temps de chargement officiel de la page est diminué (une métrique {{glossary("SEO")}} importante).
@@ -267,11 +267,11 @@ L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être
 
 #### Toujours utiliser l'attribut `sandbox`
 
-Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
+Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [`sandbox`](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
 
 Un contenu en dehors du «&nbsp;bac à sable&nbsp;» peut faire beaucoup trop de choses (exécuter du JavaScript, soumettre des formulaires, des fenêtres «&nbsp;popup&nbsp;», etc.). Par défaut, vous devez imposer toute restriction disponible avec un attribut `sandbox` sans paramètres, comme montré dans notre exemple précédent.
 
-Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une (en tant que valeur de l'attribut `sandbox=""`) — voir l'entrée de référence {{htmlattrxref('sandbox','iframe')}} pour toutes les options disponibles. Il est important de noter que vous ne devez _jamais_ mettre à la fois les valeurs `allow-scripts` et `allow-same-origin` aux attributs de la «&nbsp;sandbox&nbsp;» — dans ce cas,, le contenu intégré pourrait contourner la politique de sécurité originelle qui empêche les sites d'exécuter des scripts et donc utiliser JavaScript pour désactiver complètement le «&nbsp;bac à sable&nbsp;».
+Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une (en tant que valeur de l'attribut `sandbox=""`) — voir l'entrée de référence [sandbox](/fr/docs/Web/HTML/Element/iframe#sandbox) pour toutes les options disponibles. Il est important de noter que vous ne devez _jamais_ mettre à la fois les valeurs `allow-scripts` et `allow-same-origin` aux attributs de la «&nbsp;sandbox&nbsp;» — dans ce cas,, le contenu intégré pourrait contourner la politique de sécurité originelle qui empêche les sites d'exécuter des scripts et donc utiliser JavaScript pour désactiver complètement le «&nbsp;bac à sable&nbsp;».
 
 > **Note :** Mettre le code dans le «&nbsp;bac à sable&nbsp;» n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
 
@@ -293,13 +293,13 @@ Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce m
 
 |                                                                                      | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} du contenu à intégrer                                       | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
-| {{glossary("type MIME", 'type de media')}} _précis_ du contenu intégré | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
-| hauteur et largeur (en pixels CSS) de la boîte contrôlée par le greffon              | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
+| {{glossary("URL")}} du contenu à intégrer                                       | [`src`](/fr/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/fr/docs/Web/HTML/Element/object#data)                                                  |
+| {{glossary("type MIME", 'type de media')}} _précis_ du contenu intégré | [`type`](/fr/docs/Web/HTML/Element/embed#type)                                              | [`type`](/fr/docs/Web/HTML/Element/object#type)                                                  |
+| hauteur et largeur (en pixels CSS) de la boîte contrôlée par le greffon              | [`height`](/fr/docs/Web/HTML/Element/embed#height) [`width`](/fr/docs/Web/HTML/Element/embed#width) | [`height`](/fr/docs/Web/HTML/Element/object#height) [`width`](/fr/docs/Web/HTML/Element/object#width) |
 | noms et valeurs à passer en paramètre au greffon                                     | attributs adéquats avec ces noms et valeurs                                               | éléments de la simple balise {{htmlelement("param")}}, contenus dans `<object>`       |
 | contenu HTML indépendant en repli en cas de ressources inaccessibles                 | non pris en charge (`<noembed>` a été abandonné)                                          | contenu dans `<object>`, après `les éléments <param>`                                         |
 
-> **Note :** `<object>` requiert un attribut `data`, un attribut `type`, ou les deux. Si vous utilisez les deux, vous devez aussi utiliser l'attribut {{htmlattrxref('typemustmatch','object')}} (uniquement implémenté dans Firefox, au moment de la rédaction du présent document). `typemustmatch` empêche le fichier incorporé d'être exécuté avant que l'attribut `type` indique le type exact de média. `typemustmatch`  peut donc conférer d'importants avantages sur le plan de la sécurité quand vous intégrez du contenu de diverses {{glossary("origin","origines")}} (il peut empêcher un attaquant d'exécuter n'importe quel script par l'intermédiaire du greffon).
+> **Note :** `<object>` requiert un attribut `data`, un attribut `type`, ou les deux. Si vous utilisez les deux, vous devez aussi utiliser l'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) (uniquement implémenté dans Firefox, au moment de la rédaction du présent document). `typemustmatch` empêche le fichier incorporé d'être exécuté avant que l'attribut `type` indique le type exact de média. `typemustmatch`  peut donc conférer d'importants avantages sur le plan de la sécurité quand vous intégrez du contenu de diverses {{glossary("origin","origines")}} (il peut empêcher un attaquant d'exécuter n'importe quel script par l'intermédiaire du greffon).
 
 Voici un exemple utilisant l'élément {{htmlelement("embed")}} pour intégrer un film Flash (voyez ceci [en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) ainsi que [le code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) également):
 

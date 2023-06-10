@@ -12,7 +12,8 @@ Battery Status API 是以 [`window.navigator.battery`](/zh-TW/docs/Web/API/windo
 在此範例中，我們將分別監聽 [chargingchange](/zh-TW/docs/Web/Reference/Events/chargingchange) 與 [levelchange](/zh-TW/docs/Web/Reference/Events/levelchange) 事件，而看到充電狀態 (不論是否插電進行充電) 與電池容量的變化。
 
 ```js
-var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+var battery =
+  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
 function updateBatteryStatus() {
   console.log("Battery status: " + battery.level * 100 + " %");

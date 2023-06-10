@@ -19,7 +19,7 @@ L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'o
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : Le nom de l'emplacement créé.
 

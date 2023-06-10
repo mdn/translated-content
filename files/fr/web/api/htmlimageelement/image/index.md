@@ -23,9 +23,9 @@ Image(width, height)
 ### Paramètres
 
 - width
-  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("width", "img")}})
+  - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut [`width`](/fr/docs/Web/HTML/Element/img#width))
 - height
-  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut {{htmlattrxref("height", "img")}}).
+  - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut [`height`](/fr/docs/Web/HTML/Element/img#height)).
 
 ## Exemples
 

@@ -28,24 +28,24 @@ slug: Web/API/Canvas_API/Tutorial/Transformations
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0,0,150,150);   // Draw a rectangle with default settings
-  ctx.save();                  // Save the default state
+  ctx.fillRect(0, 0, 150, 150); // Draw a rectangle with default settings
+  ctx.save(); // Save the default state
 
-  ctx.fillStyle = '#09F'       // Make changes to the settings
-  ctx.fillRect(15,15,120,120); // Draw a rectangle with new settings
+  ctx.fillStyle = "#09F"; // Make changes to the settings
+  ctx.fillRect(15, 15, 120, 120); // Draw a rectangle with new settings
 
-  ctx.save();                  // Save the current state
-  ctx.fillStyle = '#FFF'       // Make changes to the settings
+  ctx.save(); // Save the current state
+  ctx.fillStyle = "#FFF"; // Make changes to the settings
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30,30,90,90);   // Draw a rectangle with new settings
+  ctx.fillRect(30, 30, 90, 90); // Draw a rectangle with new settings
 
-  ctx.restore();               // Restore previous state
-  ctx.fillRect(45,45,60,60);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore previous state
+  ctx.fillRect(45, 45, 60, 60); // Draw a rectangle with restored settings
 
-  ctx.restore();               // Restore original state
-  ctx.fillRect(60,60,30,30);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore original state
+  ctx.fillRect(60, 60, 30, 30); // Draw a rectangle with restored settings
 }
 ```
 
@@ -90,34 +90,43 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.fillRect(0,0,300,300);
-  for (var i=0;i<3;i++) {
-    for (var j=0;j<3;j++) {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.fillRect(0, 0, 300, 300);
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
       ctx.save();
       ctx.strokeStyle = "#9CFF00";
-      ctx.translate(50+j*100,50+i*100);
-      drawSpirograph(ctx,20*(j+2)/(j+1),-8*(i+3)/(i+1),10);
+      ctx.translate(50 + j * 100, 50 + i * 100);
+      drawSpirograph(
+        ctx,
+        (20 * (j + 2)) / (j + 1),
+        (-8 * (i + 3)) / (i + 1),
+        10
+      );
       ctx.restore();
     }
   }
 }
 
-function drawSpirograph(ctx,R,r,O){
-  var x1 = R-O;
+function drawSpirograph(ctx, R, r, O) {
+  var x1 = R - O;
   var y1 = 0;
-  var i  = 1;
+  var i = 1;
   ctx.beginPath();
-  ctx.moveTo(x1,y1);
+  ctx.moveTo(x1, y1);
   do {
-    if (i>20000) break;
-    var x2 = (R+r)*Math.cos(i*Math.PI/72) - (r+O)*Math.cos(((R+r)/r)*(i*Math.PI/72))
-    var y2 = (R+r)*Math.sin(i*Math.PI/72) - (r+O)*Math.sin(((R+r)/r)*(i*Math.PI/72))
-    ctx.lineTo(x2,y2);
+    if (i > 20000) break;
+    var x2 =
+      (R + r) * Math.cos((i * Math.PI) / 72) -
+      (r + O) * Math.cos(((R + r) / r) * ((i * Math.PI) / 72));
+    var y2 =
+      (R + r) * Math.sin((i * Math.PI) / 72) -
+      (r + O) * Math.sin(((R + r) / r) * ((i * Math.PI) / 72));
+    ctx.lineTo(x2, y2);
     x1 = x2;
     y1 = y2;
     i++;
-  } while (x2 != R-O && y2 != 0 );
+  } while (x2 != R - O && y2 != 0);
   ctx.stroke();
 }
 ```
@@ -149,17 +158,19 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.translate(75,75);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.translate(75, 75);
 
-  for (var i=1;i<6;i++){ // Loop through rings (from inside to out)
+  for (var i = 1; i < 6; i++) {
+    // Loop through rings (from inside to out)
     ctx.save();
-    ctx.fillStyle = 'rgb('+(51*i)+','+(255-51*i)+',255)';
+    ctx.fillStyle = "rgb(" + 51 * i + "," + (255 - 51 * i) + ",255)";
 
-    for (var j=0;j<i*6;j++){ // draw individual dots
-      ctx.rotate(Math.PI*2/(i*6));
+    for (var j = 0; j < i * 6; j++) {
+      // draw individual dots
+      ctx.rotate((Math.PI * 2) / (i * 6));
       ctx.beginPath();
-      ctx.arc(0,i*12.5,5,0,Math.PI*2,true);
+      ctx.arc(0, i * 12.5, 5, 0, Math.PI * 2, true);
       ctx.fill();
     }
 
@@ -195,73 +206,76 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.strokeStyle = "#fc0";
   ctx.lineWidth = 1.5;
-  ctx.fillRect(0,0,300,300);
+  ctx.fillRect(0, 0, 300, 300);
 
   // Uniform scaling
-  ctx.save()
-  ctx.translate(50,50);
-  drawSpirograph(ctx,22,6,5);
+  ctx.save();
+  ctx.translate(50, 50);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(100,0);
-  ctx.scale(0.75,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(100, 0);
+  ctx.scale(0.75, 0.75);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(133.333,0);
-  ctx.scale(0.75,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(133.333, 0);
+  ctx.scale(0.75, 0.75);
+  drawSpirograph(ctx, 22, 6, 5);
   ctx.restore();
 
   // Non uniform scaling (y direction)
   ctx.strokeStyle = "#0cf";
-  ctx.save()
-  ctx.translate(50,150);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.save();
+  ctx.translate(50, 150);
+  ctx.scale(1, 0.75);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(100,0);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(100, 0);
+  ctx.scale(1, 0.75);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(100,0);
-  ctx.scale(1,0.75);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(100, 0);
+  ctx.scale(1, 0.75);
+  drawSpirograph(ctx, 22, 6, 5);
   ctx.restore();
 
   // Non uniform scaling (x direction)
   ctx.strokeStyle = "#cf0";
-  ctx.save()
-  ctx.translate(50,250);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
+  ctx.save();
+  ctx.translate(50, 250);
+  ctx.scale(0.75, 1);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(133.333,0);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(133.333, 0);
+  ctx.scale(0.75, 1);
+  drawSpirograph(ctx, 22, 6, 5);
 
-  ctx.translate(177.777,0);
-  ctx.scale(0.75,1);
-  drawSpirograph(ctx,22,6,5);
+  ctx.translate(177.777, 0);
+  ctx.scale(0.75, 1);
+  drawSpirograph(ctx, 22, 6, 5);
   ctx.restore();
-
 }
-function drawSpirograph(ctx,R,r,O){
-  var x1 = R-O;
+function drawSpirograph(ctx, R, r, O) {
+  var x1 = R - O;
   var y1 = 0;
-  var i  = 1;
+  var i = 1;
   ctx.beginPath();
-  ctx.moveTo(x1,y1);
+  ctx.moveTo(x1, y1);
   do {
-    if (i>20000) break;
-    var x2 = (R+r)*Math.cos(i*Math.PI/72) - (r+O)*Math.cos(((R+r)/r)*(i*Math.PI/72))
-    var y2 = (R+r)*Math.sin(i*Math.PI/72) - (r+O)*Math.sin(((R+r)/r)*(i*Math.PI/72))
-    ctx.lineTo(x2,y2);
+    if (i > 20000) break;
+    var x2 =
+      (R + r) * Math.cos((i * Math.PI) / 72) -
+      (r + O) * Math.cos(((R + r) / r) * ((i * Math.PI) / 72));
+    var y2 =
+      (R + r) * Math.sin((i * Math.PI) / 72) -
+      (r + O) * Math.sin(((R + r) / r) * ((i * Math.PI) / 72));
+    ctx.lineTo(x2, y2);
     x1 = x2;
     y1 = y2;
     i++;
-  } while (x2 != R-O && y2 != 0 );
+  } while (x2 != R - O && y2 != 0);
   ctx.stroke();
 }
 ```
@@ -293,14 +307,14 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  var sin = Math.sin(Math.PI/6);
-  var cos = Math.cos(Math.PI/6);
+  var sin = Math.sin(Math.PI / 6);
+  var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
-  for (var i=0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
+  for (var i = 0; i <= 12; i++) {
+    c = Math.floor((255 / 12) * i);
     ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);

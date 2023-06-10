@@ -15,21 +15,22 @@ To get to the `style` objects from the `document`, you can use the {{domxref("do
 
 ```html
 <html>
-<head>
-<title>Modifying a stylesheet rule with CSSOM</title>
-<style type="text/css">
-body {
- background-color: red;
-}
-</style>
-<script type="text/javascript">
-var stylesheet = document.styleSheets[1];
-stylesheet.cssRules[0].style.backgroundColor="blue";
-</script>
-</head>
-<body>
-The stylesheet declaration for the body's background color is modified via JavaScript.
-</body>
+  <head>
+    <title>Modifying a stylesheet rule with CSSOM</title>
+    <style type="text/css">
+      body {
+        background-color: red;
+      }
+    </style>
+    <script type="text/javascript">
+      var stylesheet = document.styleSheets[1];
+      stylesheet.cssRules[0].style.backgroundColor = "blue";
+    </script>
+  </head>
+  <body>
+    The stylesheet declaration for the body's background color is modified via
+    JavaScript.
+  </body>
 </html>
 ```
 
@@ -49,39 +50,36 @@ To change a particular element's style, you can adapt the following example for 
 
 ```html
 <html>
-<head>
-<title>simple style example</title>
+  <head>
+    <title>simple style example</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function alterStyle(elem) {
+        elem.style.background = "green";
+      }
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
-}
+      function resetStyle(elemId) {
+        elem = document.getElementById(elemId);
+        elem.style.background = "white";
+      }
+    </script>
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
-}
-</script>
+    <style type="text/css">
+      #p1 {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
 
-<style type="text/css">
-#p1 {
-  border: solid blue 2px;
-}
-</style>
-</head>
+  <body>
+    <!-- passes a reference to the element's object as parameter 'this'. -->
+    <p id="p1" onclick="alterStyle(this);">
+      Click here to change background color.
+    </p>
 
-<body>
-
-<!-- passes a reference to the element's object as parameter 'this'. -->
-<p id="p1" onclick="alterStyle(this);">
- Click here to change background color.
-</p>
-
-<!-- passes the 'p1' id of another element's style to modify. -->
-<button onclick="resetStyle('p1');">Reset background color</button>
-
-</body>
+    <!-- passes the 'p1' id of another element's style to modify. -->
+    <button onclick="resetStyle('p1');">Reset background color</button>
+  </body>
 </html>
 ```
 
@@ -98,24 +96,24 @@ More important than the two properties noted here is the use of the `style` obje
 ```html hidden
 <!DOCTYPE html>
 <html>
- <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function stilo() {
-      document.getElementById('d').style.color = 'orange';
-    }
-    function resetStyle() {
-      document.getElementById('d').style.color = 'black';
-    }
-  </script>
- </head>
+  <head>
+    <title>style Property Example</title>
+    <link rel="StyleSheet" href="example.css" type="text/css" />
+    <script type="text/javascript">
+      function stilo() {
+        document.getElementById("d").style.color = "orange";
+      }
+      function resetStyle() {
+        document.getElementById("d").style.color = "black";
+      }
+    </script>
+  </head>
 
- <body>
-  <div id="d" class="thunder">Thunder</div>
-  <button onclick="stilo()">Click here to change text color</button>
-  <button onclick="resetStyle()">Reset text color</button>
- </body>
+  <body>
+    <div id="d" class="thunder">Thunder</div>
+    <button onclick="stilo()">Click here to change text color</button>
+    <button onclick="resetStyle()">Reset text color</button>
+  </body>
 </html>
 ```
 
@@ -128,8 +126,8 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/zh-TW/DOM/element.setAttribute) method to specify the CSS property and its value.
 
 ```js
-var el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+var el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 Be aware, however, that `setAttribute` removes all other style properties that may already have been defined in the element's style object. If the `some-element` element above had an in–line style attribute of say `style="font-size: 18px"`, that value would be removed by the use of `setAttribute`.

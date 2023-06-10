@@ -1,7 +1,8 @@
 ---
 title: Rust를 WebAssembly로 컴파일하기
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 여러분이 Rust 코드를 가지고 있다면 WebAssembly로 컴파일 할 수 있습니다. 이 튜토리얼은 Rust 프로젝트를 컴파일하여 기존 웹 애플리케이션에서 사용하기 위해 알아야 할 모든 것을 설명합니다.

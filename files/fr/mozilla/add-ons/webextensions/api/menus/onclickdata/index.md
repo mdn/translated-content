@@ -53,7 +53,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `srcUrl` {{optional_inline}}
   - : `string`. Sera présent pour les éléments avec une URL "src".
 - `targetElementId`{{optional_inline}}
-  - : `integer`. Un identificateur de l'élément, le cas échéant, sur lequel le menu contextuel a été créé. Utilisez {{WebExtAPIRef("menus.getTargetElement()")}} dans le script de contenu pour localiser l'élément. Notez que ce n'est pas l'attribut [id](/fr/docs/Web/HTML/Attributs_universels/id) de l'élément page.
+  - : `integer`. Un identificateur de l'élément, le cas échéant, sur lequel le menu contextuel a été créé. Utilisez {{WebExtAPIRef("menus.getTargetElement()")}} dans le script de contenu pour localiser l'élément. Notez que ce n'est pas l'attribut [`id`](/fr/docs/Web/HTML/Attributs_universels/id) de l'élément page.
 - `viewType` {{optional_inline}}
   - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. Le type de vue de l'extension.
 - `wasChecked` {{optional_inline}}

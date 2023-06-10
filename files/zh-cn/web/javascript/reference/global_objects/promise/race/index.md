@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 Promise.race(iterable);
 ```
 
-### **参数**
+### 参数
 
 - iterable
   - : 可迭代对象，类似{{jsxref("Array")}}。详见 [iterable](/zh-CN/docs/Web/JavaScript/Guide/iterable)。

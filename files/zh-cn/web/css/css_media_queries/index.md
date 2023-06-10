@@ -45,10 +45,6 @@ slug: Web/CSS/CSS_media_queries
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.

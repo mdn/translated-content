@@ -1731,11 +1731,14 @@
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
 /zh-CN/docs/Web/API/PositionOptions	/zh-CN/docs/Web/API/Geolocation/getCurrentPosition
 /zh-CN/docs/Web/API/PositionOptions/timeout	/zh-CN/docs/Web/API/Geolocation/getCurrentPosition
+/zh-CN/docs/Web/API/PushManager/supportedContentEncodings	/zh-CN/docs/Web/API/PushManager/supportedContentEncodings_static
 /zh-CN/docs/Web/API/RTCConfiguration	/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /zh-CN/docs/Web/API/RTCPeerConnection/onaddstream	/zh-CN/docs/Web/API/RTCPeerConnection/addstream_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ondatachannel	/zh-CN/docs/Web/API/RTCPeerConnection/datachannel_event
 /zh-CN/docs/Web/API/RTCPeerConnection/onicecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
+/zh-CN/docs/Web/API/RTCStats	/zh-CN/docs/Web/API/RTCStatsReport
+/zh-CN/docs/Web/API/RTCStats/id	/zh-CN/docs/Web/API/RTCStatsReport
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
