@@ -70,7 +70,7 @@ Dans l'élément {{htmlelement("article")}} (juste en-dessous de la balise d'ouv
 
 ### Ajouter des images adaptatives aux liens vers les ressources externes
 
-Dans l'élément {{htmlelement("div")}} de la catégorie `further-info` vous trouverez quatre autres éléments {{htmlelement("a")}} — chacun d'eux liant vers une page intéressante traitant de Mozilla. Pour compléter cette section, vous devrez insérer un élément {{htmlelement("img")}} dans ceux contenant les attributs {{htmlattrxref("src", "img")}}, {{htmlattrxref("alt", "img")}}, {{htmlattrxref("srcset", "img")}} et {{htmlattrxref("sizes", "img")}} adéquats.
+Dans l'élément {{htmlelement("div")}} de la catégorie `further-info` vous trouverez quatre autres éléments {{htmlelement("a")}} — chacun d'eux liant vers une page intéressante traitant de Mozilla. Pour compléter cette section, vous devrez insérer un élément {{htmlelement("img")}} dans ceux contenant les attributs [`src`](/fr/docs/Web/HTML/Element/img#src), [`alt`](/fr/docs/Web/HTML/Element/img#alt), [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#sizes) adéquats.
 
 Dans tous les cas (sauf un — lequel serait naturellement adaptatif ?) nous voulons que le navigateur desserve la version 120px de large quand la largeur du cadre est de 480px ou moins, ou la version 400px de large dans les autres cas.
 
