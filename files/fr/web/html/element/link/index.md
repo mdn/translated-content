@@ -127,14 +127,14 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : Cet attribut indique la relation qui existe entre le document et la ressource liée. Cet attribut doit être une liste de [types de lien](/fr/docs/Web/HTML/Types_de_lien), séparés par des espaces. La plupart du temps, cet attribut est utilisé pour caractériser un lien vers une feuille de style et il vaut alors `stylesheet` quand l'attribut `href` reçoit l'URL de la feuille de style à charger. WebTV supporte également la valeur `next` qui permet de précharger la page suivante d'une série de pages.
 - `sizes`
 
-  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque {{htmlattrxref("rel","link")}} contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
+  - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](/fr/docs/Web/HTML/Element/link#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
 
     - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
     > **Note :**
     >
-    > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, {{htmlattrxref("sizes")}} ne contient qu'un seul élément.
+    > - La plupart des format d'icône permettent simplement de stocker une seule icône, c'est pour cela que, la plupart du temps, [`sizes`](/fr/docs/Web/HTML/Global_attributes#sizes) ne contient qu'un seul élément.
     > - Safari sur iOS ne prend pas en charge cet attribut mais utilise des types de lien non-standards pour définir l'icône utilisé dans la barre du site ou pour le lancer : `apple-touch-icon` et `apple-touch-startup-icon`.
 
 - `title`
@@ -156,9 +156,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
 - `rev`{{deprecated_inline}}
 
-  - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut {{htmlattrxref("href", "link")}}). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par {{htmlattrxref("rel", "link")}}.
+  - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](/fr/docs/Web/HTML/Element/link#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Types_de_lien) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](/fr/docs/Web/HTML/Element/link#rel).
 
-    > **Note :** cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut {{htmlattrxref("rel", "link")}} avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Types_de_lien), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
+    > **Note :** cet attribut est obsolète en HTML5 **et ne doit pas être utilisé**. Pour obtenir le même effet, on utilisera l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) avec la valeur réciproque [pour le type de lien](/fr/docs/Web/HTML/Types_de_lien), (`made` devrait par exemple être remplacé par `author`). Cet attribut ne signifie pas « révision » et ne doit pas être utilisé comme un numéro de version.
 
     > **Note :** La spécification actuelle de HTML 5.2 du W3C n'indique plus l'attribut `rev` comme obsolète. En revanche, la spécification du WHATWG le considère toujours comme obsolète. Tant que cette incohérence n'est pas résolue, mieux vaut considérer cet attribut comme obsolète.
 
@@ -233,7 +233,7 @@ De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Préchar
         >
       </th>
       <td>
-        Contenu de métadonnées. Si {{htmlattrxref("itemprop")}} est
+        Contenu de métadonnées. Si <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est
         présent :
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
@@ -259,7 +259,7 @@ De nombreux exemples avec `<link rel="preload">` peuvent être lus sur [Préchar
       <th>Parents autorisés</th>
       <td>
         Tout élément qui accepte des éléments de métadonnées. Si l'attribut
-        {{htmlattrxref("itemprop")}} est présent, tout élément qui
+        <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est présent, tout élément qui
         accepte du
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
