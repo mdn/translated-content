@@ -6,7 +6,7 @@ original_slug: Web/HTML/Link_types/manifest
 browser-compat: html.elements.link.rel.manifest
 ---
 
-Le mot-clé **`manifest`** de l'attribut {{HTMLAttrxRef("rel", "link")}} de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un [manifeste d'application web](/fr/docs/Web/Manifest).
+Le mot-clé **`manifest`** de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de l'élément {{HTMLElement("link")}} est une information indiquant que la ressource ciblée est un [manifeste d'application web](/fr/docs/Web/Manifest).
 
 ## Spécifications
 

@@ -33,7 +33,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `image`
   - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
-  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut {{htmlattrxref("srcset", "img")}} d'un élement `<img>`.
+  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) d'un élement `<img>`.
 
 <!---->
 
@@ -51,7 +51,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
   - : Requêtes envoyées par plugins.
 - `ping`
 
-  - : Demandes envoyées à l'URL donnée dans l'attribut {{htmlattrxref("ping", "a")}} d'un hyperlien, lorsque l'hyperlien est suivi.
+  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
 

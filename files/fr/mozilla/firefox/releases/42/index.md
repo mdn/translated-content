@@ -35,7 +35,7 @@ Points forts:
 
 ### HTML
 
-- Prise en charge expérimentale de l'attribut {{htmlattrxref("referrer", "input")}} de {{HTMLElement("img")}} ([bug Firefox 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([bug Firefox 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ([bug Firefox 1174913](https://bugzil.la/1174913)). Il n'y a aucun effet par défaut, le `network.http.enablePerElementReferrer` étant `false` par défaut.
+- Prise en charge expérimentale de l'attribut [`referrer`](/fr/docs/Web/HTML/Element/input#referrer) de {{HTMLElement("img")}} ([bug Firefox 1166910](https://bugzil.la/1166910)), {{htmlElement("iframe")}} ([bug Firefox 1175736](https://bugzil.la/1175736)), {{HTMLElement("a")}} et {{HTMLElement("area")}} ont été ajoutés ([bug Firefox 1174913](https://bugzil.la/1174913)). Il n'y a aucun effet par défaut, le `network.http.enablePerElementReferrer` étant `false` par défaut.
 
 ### JavaScript
 
@@ -47,7 +47,7 @@ Points forts:
 
 #### DOM & HTML DOM
 
-- Les images avec une {{HTMLattrxref('id', 'img')}} ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : `<img id="login">` n'est plus accessible en tant que `window.login`. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ([bug Firefox 959992](https://bugzil.la/959992)).
+- Les images avec une [`id`](/fr/docs/Web/HTML/Element/img#id) ne sont plus répertoriées comme propriété de l'interface {{domxref("Window")}} : `<img id="login">` n'est plus accessible en tant que `window.login`. Ce comportement a été introduit dans Firefox 26 et a été supprimé pour correspondre à une modification ultérieure de la spécification ([bug Firefox 959992](https://bugzil.la/959992)).
 - {{domxref('MouseEvent.offsetX')}} et {{domxref('MouseEvent.offsetY')}} ont été ajoutés ([bug Firefox 69787](https://bugzil.la/69787)).
 - L'interface {{domxref("HTMLInputElement")}} a été étendue expérimentalement pour gérer le téléchargement des répertoires ([bug Firefox 1164310](https://bugzil.la/1164310)). Ces quatre membres peuvent être exposés en définissant la préférence `dom.input.dirpicker` sur `true`:
 
