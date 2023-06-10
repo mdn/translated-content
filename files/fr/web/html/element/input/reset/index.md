@@ -61,9 +61,9 @@ Pour essayer, saisissez un peu de texte dans le champ puis appuyez sur le bouton
 
 ### Ajouter un raccourci au bouton
 
-Les raccourcis claviers permettent de déclencher un bouton grâce à une touche ou à une combinaison de touches sur le clavier. Pour ajouter un raccourci clavier à un bouton de réinitialisation, il suffit d'utiliser l'attribut {{htmlattrxref("accesskey")}}.
+Les raccourcis claviers permettent de déclencher un bouton grâce à une touche ou à une combinaison de touches sur le clavier. Pour ajouter un raccourci clavier à un bouton de réinitialisation, il suffit d'utiliser l'attribut [`accesskey`](/fr/docs/Web/HTML/Global_attributes#accesskey).
 
-Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à {{htmlattrxref("accesskey")}} pour le détails).
+Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur <kbd>r</kbd> et d'autres touches propres au navigateur et au système d'exploitation, se référer à [`accesskey`](/fr/docs/Web/HTML/Global_attributes#accesskey) pour le détails).
 
 ```html
 <form>
@@ -84,7 +84,7 @@ Dans cet exemple, on utilise la touche <kbd>r</kbd> (il faudra donc appuyer sur 
 
 ### Désactiver/Activer un bouton
 
-Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut {{htmlattrxref("disabled")}} sur l'élément :
+Pour désactiver un bouton de réinitialisation, il suffit d'appliquer l'attribut [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) sur l'élément :
 
 ```html
 <input type="reset" value="Désactivé" disabled>
@@ -94,7 +94,7 @@ On peut activer/désactiver le bouton lors de la navigation sur la page avec Jav
 
 > **Note :** Pour plus d'exemples concernant l'activation/la désactivation de bouton, vous pouvez consulter la page [`<input type="button">`](/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton).
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.
+> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -117,8 +117,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} et
-        {{htmlattrxref("value", "input")}}
+        <a href="/fr/docs/Web/HTML/Element/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>

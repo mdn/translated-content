@@ -36,7 +36,7 @@ onconnect = function(e) {
 
 Pour l'exemple complet en fonctionnement, voir [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
 
-> **Note :** La propriété `data` de l'objet évènement est `null` dans Firefox. À partir de la version 65, elle est initialisée comme une chaîne vide, selon les spécifications ({{bug(1508824)}}).
+> **Note :** La propriété `data` de l'objet évènement est `null` dans Firefox. À partir de la version 65, elle est initialisée comme une chaîne vide, selon les spécifications ([bug Firefox 1508824](https://bugzil.la/1508824)).
 
 ## Spécifications
 
