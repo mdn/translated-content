@@ -24,7 +24,7 @@ l10n:
 
 - [`:lang()`](/ja/docs/Web/CSS/:lang) 疑似クラスで、言語コードのマッチングに接頭辞マッチング方式に代わって、文字列マッチング方式 (`*` ワイルドカードを含む) を使用するようになりました。
   また、複数の言語にマッチする、カンマ区切りの言語リストをサポートしました ([Firefox bug 1121792](https://bugzil.la/1121792))。
-- 文字を記号に置き換えることができる、[-webkit-text-security](/ja/Web/CSS/-webkit-text-security) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([Firefox bug 1826629](https://bugzil.la/1826629))。 
+- 文字を記号に置き換えることができる、[-webkit-text-security](/ja/Web/CSS/-webkit-text-security) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([Firefox bug 1826629](https://bugzil.la/1826629))。
 - [`calc()`](/ja/docs/Web/CSS/calc) 関数内で、定数 `infinity` および `NaN` をサポートしました ([Firefox bug 1830759](https://bugzil.la/1830759))。
 
 ### JavaScript
