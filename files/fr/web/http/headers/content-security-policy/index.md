@@ -91,7 +91,7 @@ Les directives de document permettent de paramétrer les propriétés d'un docum
 - {{CSP("plugin-types")}}
   - : Restreint le type de plugin qui peut être intégré dans un document en limitant le type de ressource qui peut être chargé.
 - {{CSP("sandbox")}}
-  - : Active un bac-à-sable (_sandbox_) pour la ressource visée. Cela fonctionne de façon analogue à l'attribut {{htmlattrxref("sandbox", "iframe")}} de {{HTMLElement("iframe")}}.
+  - : Active un bac-à-sable (_sandbox_) pour la ressource visée. Cela fonctionne de façon analogue à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de {{HTMLElement("iframe")}}.
 
 ### Directives de navigation
 

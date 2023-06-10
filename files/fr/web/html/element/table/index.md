@@ -43,7 +43,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 - {{htmlattrdef("border")}} {{Deprecated_inline}}
 
-  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut {{htmlattrxref("frame", "table")}} est vide.
+  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](/fr/docs/Web/HTML/Element/table#frame) est vide.
 
     > **Note :** Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
 
@@ -242,7 +242,7 @@ Une telle légende fournit une aide pour les personnes qui naviguent avec des ou
 
 ### Portées des lignes et des colonnes
 
-L'attribut {{htmlattrxref("scope","th")}} peut être redondant dans certains contextes où la portée peut être déterminée avec les autres éléments. Toutefois de nombreux lecteurs d'écran utilisent cet attribut pour répliquer l'organisation générale du tableau. Dans les tableaux plus complexes, `scope` pourra être utilisé afin de fournir les informations nécessaires à l'organisation (tant au moteur HTML qu'aux outils d'assistance).
+L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant dans certains contextes où la portée peut être déterminée avec les autres éléments. Toutefois de nombreux lecteurs d'écran utilisent cet attribut pour répliquer l'organisation générale du tableau. Dans les tableaux plus complexes, `scope` pourra être utilisé afin de fournir les informations nécessaires à l'organisation (tant au moteur HTML qu'aux outils d'assistance).
 
 #### Exemples
 
@@ -285,11 +285,11 @@ Ajouter `scope="col"` sur un élément {{HTMLElement("th")}} permettra d'aider �
 
 ### Tableaux complexes
 
-Les technologies d'assistance telles que les lecteurs d'écran peuvent rencontrer des difficultés lors de l'analyse de tableaux complexes où les cellules d'en-tête ne sont pas associées aux données de façon clairement verticale ou horizontale. Généralement, cela se traduit par la présence des attributs {{htmlattrxref("colspan","td")}} et {{htmlattrxref("rowspan","td")}}.
+Les technologies d'assistance telles que les lecteurs d'écran peuvent rencontrer des difficultés lors de l'analyse de tableaux complexes où les cellules d'en-tête ne sont pas associées aux données de façon clairement verticale ou horizontale. Généralement, cela se traduit par la présence des attributs [`colspan`](/fr/docs/Web/HTML/Element/td#colspan) et [`rowspan`](/fr/docs/Web/HTML/Element/td#rowspan).
 
 Si possible, on présentera le tableau différemment, en le divisant en plusieurs tableaux simples qui ne nécessitent pas l'utilisation des atttributs `colspan` et `rowspan`. En plus d'aider à la compréhension pour les personnes qui utilisent des outils d'assistance, cela pourra bénéficier aux personnes souffrant de troubles cognitifs.
 
-Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers","td")}} afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
+Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
 
 - [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
