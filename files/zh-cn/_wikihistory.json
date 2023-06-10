@@ -13086,7 +13086,7 @@
     "modified": "2019-03-23T22:30:26.556Z",
     "contributors": ["jiraiya"]
   },
-  "Web/API/PushManager/supportedContentEncodings": {
+  "Web/API/PushManager/supportedContentEncodings_static": {
     "modified": "2020-10-15T22:14:59.278Z",
     "contributors": ["chenqingyue"]
   },
