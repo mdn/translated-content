@@ -18,7 +18,7 @@ p:lang(en) {
 }
 ```
 
-> **Примечание:** В HTML язык определяется комбинацией атрибута {{htmlattrxref("lang")}}, элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
+> **Примечание:** В HTML язык определяется комбинацией атрибута [`lang`](/ru/docs/Web/HTML/Global_attributes#lang), элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
 
 ## Синтаксис
 
@@ -66,5 +66,5 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 ## Также смотрите
 
 - Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML {{htmlattrxref("lang")}} attribute
+- HTML [`lang`](/ru/docs/Web/HTML/Global_attributes#lang) attribute
 - [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)

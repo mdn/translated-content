@@ -29,7 +29,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Представляет тип MIME сценария. Он отражает атрибут
-        {{htmlattrxref("type","script")}}.
+        [`type`](/ru/docs/Web/HTML/Element/script#type).
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Получает и отдаёт URL внешнего скрипта. Он отражает атрибут
-        {{htmlattrxref("src","script")}}.
+        [`src`](/ru/docs/Web/HTML/Element/script#src).
       </td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Представляет кодировку символов внешнего скрипта. Он отражает атрибут
-        {{htmlattrxref("charset","script")}}.
+        [`charset`](/ru/docs/Web/HTML/Element/script#charset).
       </td>
     </tr>
     <tr>
@@ -196,7 +196,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         {{domxref("DOMString")}}, который отражает HTML атрибут
-        {{htmlattrxref("referrerPolicy", "script")}}
+        [`referrerPolicy`](/ru/docs/Web/HTML/Element/script#referrerPolicy)
         указывающий, какой реферер использовать при извлечении скриптов и
         выборках, выполненных сценариев.
       </td>

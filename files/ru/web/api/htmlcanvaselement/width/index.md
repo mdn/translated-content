@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLCanvasElement/width
 {{APIRef("Canvas API")}}
 
 Свойство **`HTMLCanvasElement.width`** — это положительное
-`целое число`, отображающее значение HTML атрибута {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} в CSS пикселях.
+`целое число`, отображающее значение HTML атрибута [`width`](/ru/docs/Web/HTML/Element/canvas#width) элемента {{HTMLElement("canvas")}} в CSS пикселях.
 Если атрибут не указан или для него задано недопустимое значение, например отрицательное, то используется значение по умолчанию `300`.
 
 Одно из двух свойств (другое — {{domxref("HTMLCanvasElement.height")}}), контролирующих размер холста.
