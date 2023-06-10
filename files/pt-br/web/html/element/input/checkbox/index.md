@@ -28,7 +28,7 @@ slug: Web/HTML/Element/input/checkbox
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
-      <td>{{htmlattrxref ("checked", "input")}}</td>
+      <td>[`checked`](/pt-BR/docs/Web/HTML/Element/input#checked)</td>
     </tr>
     <tr>
       <td><strong>Atributos IDL</strong></td>
