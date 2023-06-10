@@ -1,19 +1,19 @@
 ---
-title: 遞增運算子 (++)
+title: 遞增運算子（++）
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
 
 {{jsSidebar("Operators")}}
 
-遞增運算子 (`++`) 遞增（加一）它的運算元並將結果回傳。
+遞增運算子（`++`）遞增（加一）它的運算元並將結果回傳。
 
 {{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
 ## 語法
 
-```js
-x++;
-++x;
+```js-nolint
+x++
+++x
 ```
 
 ## 詳細說明

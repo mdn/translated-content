@@ -1,19 +1,19 @@
 ---
-title: 遞減運算子 (--)
+title: 遞減運算子（--）
 slug: Web/JavaScript/Reference/Operators/Decrement
 ---
 
 {{jsSidebar("Operators")}}
 
-遞減運算子 (`--`) 遞減（減一）它的運算元並將結果回傳。
+遞減運算子（`--`）遞減（減一）它的運算元並將結果回傳。
 
 {{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
 
 ## 語法
 
-```js
-x--;
---x;
+```js-nolint
+x--
+--x
 ```
 
 ## 詳細說明

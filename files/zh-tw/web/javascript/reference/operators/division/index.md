@@ -1,18 +1,18 @@
 ---
-title: 相除運算子 (/)
+title: 相除運算子（/）
 slug: Web/JavaScript/Reference/Operators/Division
 ---
 
 {{jsSidebar("Operators")}}
 
-相除運算子 (`/`) 是用來將兩個值進行相除並取得其商數。其中左運算元是被除數；右運算元是除數。
+相除運算子（`/`）是用來將兩個值進行相除並取得其商數。其中左運算元是被除數；右運算元是除數。
 
 {{EmbedInteractiveExample("pages/js/expressions-division.html")}}
 
 ## 語法
 
-```js
-x / y;
+```js-nolint
+x / y
 ```
 
 ## 範例

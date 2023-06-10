@@ -1,18 +1,18 @@
 ---
-title: 相加運算子 (+)
+title: 相加運算子（+）
 slug: Web/JavaScript/Reference/Operators/Addition
 ---
 
 {{jsSidebar("Operators")}}
 
-相加運算子 (`+`) 用來處理數字的相加或是進行字串的串聯。
+相加運算子（`+`）用來處理數字的相加或是進行字串的串聯。
 
 {{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
 
 ## 語法
 
-```js
-x + y;
+```js-nolint
+x + y
 ```
 
 ## 範例

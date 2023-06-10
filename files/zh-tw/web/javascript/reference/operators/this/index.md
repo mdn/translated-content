@@ -13,7 +13,7 @@ JavaScript **函式內的 `this` 關鍵字**表現，和其他語言相比略有
 
 ## 語法
 
-```plain
+```js-nolint
 this
 ```
 
@@ -72,30 +72,30 @@ f2() === undefined; //true
 
 要從某個語境訪問另一個 `this` 語境的值，請使用 [call](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [apply](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply):
 
-```plain
+```js
 // 物件可以被當作call或apply的第一個參數，而this會綁定該物件
-var obj = {a: 'Custom'};
+var obj = { a: "Custom" };
 
 // 此屬性a為全域物件
-var a = 'Global';
+var a = "Global";
 
 function whatsThis(arg) {
-  return this.a;  // this 值取決於此函數如何被呼叫
+  return this.a; // this 值取決於此函數如何被呼叫
 }
 
-whatsThis();          // 'Global'
-whatsThis.call(obj);  // 'Custom'
+whatsThis(); // 'Global'
+whatsThis.call(obj); // 'Custom'
 whatsThis.apply(obj); // 'Custom'
 ```
 
 當函式內部調用 `this` 關鍵字時，其值會和所有繼承自 `Function.prototype` 並使用 [`call`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 或 [`apply`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法呼叫的特定物件綁定。
 
-```plain
+```js
 function add(c, d) {
   return this.a + this.b + c + d;
 }
 
-var o = {a: 1, b: 3};
+var o = { a: 1, b: 3 };
 
 // 第一個參數（parameter）是調用了 this 的物件，
 // 後續參數（parameters）會作為函式呼叫內的參數（arguments）而通過
@@ -121,18 +121,18 @@ bar.call("foo"); // [Object String]
 
 ECMAScript 5 導入了 [`Function.prototype.bind`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)。呼叫 `f.bind(someObject)` 會建立和 `f` 的主體與作用域相同之新函式；但無論函數怎麼被調用，原始函數的 `this` 在新函數將永遠與 `bind` 的第一個參數綁定起來。
 
-```plain
+```js
 function f() {
   return this.a;
 }
 
-var g = f.bind({a: 'azerty'});
+var g = f.bind({ a: "azerty" });
 console.log(g()); // azerty
 
-var h = g.bind({a: 'yoo'}); // bind 只能使用一次！
+var h = g.bind({ a: "yoo" }); // bind 只能使用一次！
 console.log(h()); // azerty
 
-var o = {a: 37, f: f, g: g, h: h};
+var o = { a: 37, f: f, g: g, h: h };
 console.log(o.f(), o.g(), o.h()); // 37, azerty, azerty
 ```
 
@@ -243,7 +243,7 @@ p.b = 4;
 console.log(p.f()); // 5
 ```
 
-在這個示例中，分配給變數`p` 的物件沒有自己的 `f` 屬性， 它(p)繼承了它(o)的原型。但是查找 `f` 最終在 `o`上找到它的成員名為 f 並不重要。查找開始作為 `p.f`的引用，所以 `this` 在函式內部物件的值被當作是`p`的引用。也就是說，`f` 作為 `p`的調用方法以來， 它的 `this` 指的就是 `p`. 這是一個非常有趣的 JavaScript's 原型繼承特性。
+在這個示例中，分配給變數 `p` 的物件沒有自己的 `f` 屬性，`p` 繼承了 `o` 的原型。但是查找 `f` 最終在 `o`上找到它的成員名為 f 並不重要。查找開始作為 `p.f` 的引用，所以 `this` 在函式內部物件的值被當作是`p`的引用。也就是說，`f` 作為 `p`的調用方法以來，它的 `this` 指的就是 `p`。這是一個非常有趣的 JavaScript 原型繼承特性。
 
 #### 帶著 getter 或 setter 的 `this`
 
@@ -342,13 +342,13 @@ for (var i = 0; i < elements.length; i++) {
 
 當程式碼從行內的 [on 事件處理器](/zh-TW/docs/Web/Guide/Events/Event_handlers)呼叫的話，`this` 就會設在監聽器所置的 DOM 元素：
 
-```js
+```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>
 ```
 
 上方的 alert 會秀出 `button`。但請注意只有外層程式碼的 `this` 要這樣設定：
 
-```js
+```html
 <button onclick="alert((function(){return this})());">Show inner this</button>
 ```
 
