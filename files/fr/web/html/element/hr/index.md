@@ -23,15 +23,15 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 
 ### Attributs dépréciés, obsolètes ou non-standard
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : Définit l'alignement de la ligne horizontale sur la page. Si aucune valeur n'est renseignée, la valeur prise par défaut est `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : Définit la couleur à utiliser pour la ligne horizontale, grâce à un nom de couleur SVG ou à un code hexadécimal (précédé d'un #).
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : Avec cet attribut, la ligne horizontale n'aura pas d'ombre.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : Définit la hauteur de la ligne, exprimée en pixels.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : Définit la longueur de la ligne, exprimée par une valeur en pixels ou en pourcents.
 
 ## Exemples
