@@ -41,7 +41,7 @@ slug: Web/HTML/Element/textarea
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
 
-    If the **autocomplete** attribute is not specified on an textarea element, then the browser uses the **autocomplete** attribute value of the `<textarea>` element's form owner. The form owner is either the `form` element that this `<textarea>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the {{htmlattrxref("autocomplete", "form")}} attribute in {{HTMLElement("form")}}.
+    If the **autocomplete** attribute is not specified on an textarea element, then the browser uses the **autocomplete** attribute value of the `<textarea>` element's form owner. The form owner is either the `form` element that this `<textarea>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - {{ htmlattrdef("autofocus") }}
   - : 이 불리언 속성은 페이지가 로드 됬을때, 포커스를 오버라이드(예:사용자가 다른 컨트롤에 타이핑) 하지 않는다면, 폼 컨트롤이 입력 포커스를 받을지를 지정합니다.문서에서 오직 하나의 폼 관련 요소만이 이 속성이 지정될수 있습니다.

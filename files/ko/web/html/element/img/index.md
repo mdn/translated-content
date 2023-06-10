@@ -16,9 +16,9 @@ slug: Web/HTML/Element/img
 
 다양한 목적을 위한 많은 수의 속성이 더 존재합니다.
 
-- [Referrer](/ko/docs/Web/HTTP/Headers/Referrer-Policy) {{glossary("CORS")}} control for security and privacy: see {{htmlattrxref("crossorigin", "img")}} and {{htmlattrxref("referrerpolicy", "img")}}.
-- Setting an {{glossary("intrinsic size")}} using {{htmlattrxref("width", "img")}}, {{htmlattrxref("height", "img")}}, and {{htmlattrxref("intrinsicsize", "img")}}: this sets the space taken up by an image to ensure the page layout is stable before it loads.
-- Responsive image hints with {{htmlattrxref("sizes", "img")}} and {{htmlattrxref("srcset", "img")}} (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- [Referrer](/ko/docs/Web/HTTP/Headers/Referrer-Policy) {{glossary("CORS")}} control for security and privacy: see [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) and [`referrerpolicy`](/ko/docs/Web/HTML/Element/img#referrerpolicy).
+- Setting an {{glossary("intrinsic size")}} using [`width`](/ko/docs/Web/HTML/Element/img#width), [`height`](/ko/docs/Web/HTML/Element/img#height), and [`intrinsicsize`](/ko/docs/Web/HTML/Element/img#intrinsicsize): this sets the space taken up by an image to ensure the page layout is stable before it loads.
+- Responsive image hints with [`sizes`](/ko/docs/Web/HTML/Element/img#sizes) and [`srcset`](/ko/docs/Web/HTML/Element/img#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
 
 ## 지원하는 이미지 형식
 
@@ -26,9 +26,9 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 이미지를 가져올 수 없을 때
 
-이미지를 불러오거나 그릴 때 오류가 발생했고, {{htmlattrxref("onerror")}} 속성에 오류 처리기를 등록했다면 {{event("error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
+이미지를 불러오거나 그릴 때 오류가 발생했고, [`onerror`](/ko/docs/Web/HTML/Global_attributes#onerror) 속성에 오류 처리기를 등록했다면 {{event("error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
 
-- {{htmlattrxref("src", "img")}} 속성이 비었거나 {{jsxref("null")}}임.
+- [`src`](/ko/docs/Web/HTML/Element/img#src) 속성이 비었거나 {{jsxref("null")}}임.
 - `src`의 URL이 현재 사용자가 보는 페이지의 URL과 같음.
 - 지정한 이미지가 손상돼 불러올 수 없음.
 - 이미지의 메타데이터가 손상돼 원본 크기를 알아낼 수 없고, `<img>` 요소의 속성에도 크기를 지정하지 않음.
@@ -87,7 +87,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 - {{htmlattrdef("ismap")}}
   - : 이미지가 [서버 사이드 맵](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%A7%B5)의 일부인지 나타냄. 서버 사이드 맵에 속하는 경우, 사용자가 이미지에서 클릭한 위치를 서버로 전송합니다.
 
-  > **참고:** 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 {{htmlattrxref("href", "a")}} 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
+  > **참고:** 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
 
 - {{htmlattrdef("loading")}}
   - : 브라우저가 이미지를 불러올 때 사용할 방식을 지정합니다.
@@ -157,12 +157,12 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
 - {{htmlattrdef("longdesc")}} {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/ko/docs/Web/HTML/Global_attributes#id).
 
     > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
+  - : A name for the element. Use the [`id`](/ko/docs/Web/HTML/Global_attributes#id) attribute instead.
 - {{htmlattrdef("vspace")}} {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
@@ -203,7 +203,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ### `srcset` 특성 사용하기
 
-이번 예제에서는 {{htmlattrxref("srcset", "img")}} 특성에 고해상도 버전 로고를 추가했습니다. 그러면 고해상도 장치에서는 일반 `src` 이미지 대신 고해상도 이미지를 사용합니다. `srcset` 특성을 지원하는 {{glossary("user agent", "사용자 에이전트")}}는 `src` 특성을 `srcset` `1x` 로 간주합니다.
+이번 예제에서는 [`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 특성에 고해상도 버전 로고를 추가했습니다. 그러면 고해상도 장치에서는 일반 `src` 이미지 대신 고해상도 이미지를 사용합니다. `srcset` 특성을 지원하는 {{glossary("user agent", "사용자 에이전트")}}는 `src` 특성을 `srcset` `1x` 로 간주합니다.
 
 ```html
 <img src="favicon72.png"
@@ -215,7 +215,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ### `srcset`과 `sizes` 특성 사용하기
 
-{{htmlattrxref("srcset", "img")}}를 지원하는 {{glossary("user agent", "사용자 에이전트")}}는, `srcset`에 `w` 서술자를 사용한 경우 `src` 특성을 무시합니다. 다음 코드는 미디어 조건 `(max-width: 600px)`을 만족할 때 200px 너비의 이미지를 불러오고, 그 외의 경우엔 다른 이미지(400px)를 불러옵니다.
+[`srcset`](/ko/docs/Web/HTML/Element/img#srcset)를 지원하는 {{glossary("user agent", "사용자 에이전트")}}는, `srcset`에 `w` 서술자를 사용한 경우 `src` 특성을 무시합니다. 다음 코드는 미디어 조건 `(max-width: 600px)`을 만족할 때 200px 너비의 이미지를 불러오고, 그 외의 경우엔 다른 이미지(400px)를 불러옵니다.
 
 ```html
 <img src="clock-demo-200px.png"
@@ -237,7 +237,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ### 적합한 대체 설명 작성
 
-{{htmlattrxref("alt", "img")}} 특성의 값은 이미지 콘텐츠를 간단하고 명료하게 설명해야 합니다. 그러나 이미지의 존재 여부나, 이미지 파일의 이름을 나타내서는 안됩니다. 이미지를 텍스트로 설명할 방법이 없어서 의도적으로 `alt`를 지정하지 않은 경우, 해당 이미지가 나타내려는 바를 알려줄 수 있는 다른 방법을 고려해보세요.
+[`alt`](/ko/docs/Web/HTML/Element/img#alt) 특성의 값은 이미지 콘텐츠를 간단하고 명료하게 설명해야 합니다. 그러나 이미지의 존재 여부나, 이미지 파일의 이름을 나타내서는 안됩니다. 이미지를 텍스트로 설명할 방법이 없어서 의도적으로 `alt`를 지정하지 않은 경우, 해당 이미지가 나타내려는 바를 알려줄 수 있는 다른 방법을 고려해보세요.
 
 #### 부적절
 
@@ -261,7 +261,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ### `title` 특성
 
-{{htmlattrxref("title")}} 특성은 {{htmlattrxref("alt", "img")}} 특성을 적합하게 대체할 수 없습니다. 또한, `alt`의 값을 `title`에도 반복하는 것을 피해야 합니다. 같은 값을 지정할 경우 일부 스크린 리더가 설명을 두 번씩 읽게 되므로 사용자가 혼란스러울 수 있습니다.
+[`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성은 [`alt`](/ko/docs/Web/HTML/Element/img#alt) 특성을 적합하게 대체할 수 없습니다. 또한, `alt`의 값을 `title`에도 반복하는 것을 피해야 합니다. 같은 값을 지정할 경우 일부 스크린 리더가 설명을 두 번씩 읽게 되므로 사용자가 혼란스러울 수 있습니다.
 
 `title` 요소를 사용해 `alt` 설명에 대한 부연 설명을 제공해서도 안됩니다. 이미지가 설명을 필요로 하는 경우 {{htmlelement("figure")}}와 {{htmlelement("figcaption")}} 요소를 사용하세요.
 

@@ -395,7 +395,7 @@ textarea.onkeyup = function(){
 
 ### 참과 거짓 속성(Boolean attributes)
 
-때때로 값이 없는 속성을 볼 수 있을텐데 이것은 허용되는 것입니다. 이를 불 속성이라고 하며, 일반적으로 그 속성의 이름과 동일한 하나의 값만을 가질 수 있습니다. 예를 들어 {{htmlattrxref("disabled", "input")}} 속성을 양식 입력 요소에 할당하면 사용자가 데이터를 입력할 수 없도록 비활성화(회색으로 표시) 할 수 있습니다.
+때때로 값이 없는 속성을 볼 수 있을텐데 이것은 허용되는 것입니다. 이를 불 속성이라고 하며, 일반적으로 그 속성의 이름과 동일한 하나의 값만을 가질 수 있습니다. 예를 들어 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) 속성을 양식 입력 요소에 할당하면 사용자가 데이터를 입력할 수 없도록 비활성화(회색으로 표시) 할 수 있습니다.
 
 ```
 <input type="text" disabled="disabled">

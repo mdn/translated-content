@@ -73,7 +73,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 </table>
 ```
 
-{{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
+[`scope`](/ko/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
 
 ![](table-unstyled.png)
 

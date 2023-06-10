@@ -32,7 +32,7 @@ CSS 선언 블록을 시각화하면 다음과 같습니다.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **참고:** CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML {{htmlattrxref("style")}} 특성의 값으로 사용할 수 있습니다.
+> **참고:** CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
 
 ## CSS 규칙집합
 

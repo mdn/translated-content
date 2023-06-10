@@ -245,7 +245,7 @@ Sometimes you might want to count differently on an ordered list — e.g. starti
 
 ### start
 
-The {{htmlattrxref("start","ol")}} attribute allows you to start the list counting from a number other than 1. The following example:
+The [`start`](/ko/docs/Web/HTML/Element/ol#start) attribute allows you to start the list counting from a number other than 1. The following example:
 
 ```html
 <ol start="4">
@@ -262,7 +262,7 @@ Gives you this output:
 
 ### reversed
 
-The {{htmlattrxref("reversed","ol")}} attribute will start the list counting down instead of up. The following example:
+The [`reversed`](/ko/docs/Web/HTML/Element/ol#reversed) attribute will start the list counting down instead of up. The following example:
 
 ```html
 <ol start="4" reversed>
@@ -281,7 +281,7 @@ Gives you this output:
 
 ### value
 
-The {{htmlattrxref("value","ol")}} attribute allows you to set your list items to specific numerical values. The following example:
+The [`value`](/ko/docs/Web/HTML/Element/ol#value) attribute allows you to set your list items to specific numerical values. The following example:
 
 ```html
 <ol>

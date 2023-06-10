@@ -57,7 +57,7 @@ original_slug: Web/Web_Components
 
   - : The following extensions are defined:
 
-    - {{htmlattrxref("is")}} 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
+    - [`is`](/ko/docs/Web/HTML/Global_attributes#is) 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
     - {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
 
 - CSS 수도(pseudo) 클래스

@@ -48,7 +48,7 @@ slug: Web/HTML/Element/object
 - {{htmlattrdef("typemustmatch")}}
   - : **type**와 리소스의 실제 [컨텐츠 타입](/ko/docs/Glossary/Content_type)이 일치해야되는지를 나타내는 불리언 속성
 - {{htmlattrdef("usemap")}}
-  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 {{htmlattrxref("name", "map")}} 값이 붙음
+  - : {{HTMLElement("map")}} 요소에 대한 해쉬-이름 참조; #와 그 뒤에 map 요소의 [`name`](/ko/docs/Web/HTML/Element/map#name) 값이 붙음
 - {{htmlattrdef("width")}}
   - : 표시될 리소스의 가로 길이를 CSS 픽셀단위로 지정합니다.
 

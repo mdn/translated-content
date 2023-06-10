@@ -16,23 +16,23 @@ slug: Web/API/ValidityState
 - `customError` {{ReadOnlyInline}}
   - : {{domxref('HTMLObjectElement.setCustomValidity', 'setCustomValidity()')}} 메서드를 사용해 요소의 사용자 지정 유효성 메시지를 비어있지 않은 문자열로 설정했는지를 나타내는 {{jsxref("Boolean")}} 값입니다.
 - {{domxref("ValidityState.patternMismatch", "patternMismatch")}} {{ReadOnlyInline}}
-  - : 값이 주어진 {{htmlattrxref("pattern", "input")}} 특성을 만족하지 못하는지 나타내는 {{jsxref("Boolean")}} 값입니다 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
+  - : 값이 주어진 [`pattern`](/ko/docs/Web/HTML/Element/input#pattern) 특성을 만족하지 못하는지 나타내는 {{jsxref("Boolean")}} 값입니다 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} {{ReadOnlyInline}}
-  - : 값이 주어진 {{htmlattrxref("max", "input")}} 특성보다 큰지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
+  - : 값이 주어진 [`max`](/ko/docs/Web/HTML/Element/input#max) 특성보다 큰지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} {{ReadOnlyInline}}
-  - : 값이 주어진 {{htmlattrxref("min", "input")}} 특성보다 작은지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
+  - : 값이 주어진 [`min`](/ko/docs/Web/HTML/Element/input#min) 특성보다 작은지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.stepMismatch", "stepMismatch")}} {{ReadOnlyInline}}
-  - : 값이 주어진 {{htmlattrxref("step", "input")}} 특성의 규칙을 만족하지 않는지 (즉, 값을 스텝 값으로 나눌 수 없는지) 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
+  - : 값이 주어진 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성의 규칙을 만족하지 않는지 (즉, 값을 스텝 값으로 나눌 수 없는지) 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.tooLong", "tooLong")}} {{ReadOnlyInline}}
   - : 값이 {{domxref("HTMLInputElement")}} 또는 {{domxref("HTMLTextAreaElement")}} 객체의 `maxlength` 값보다 긴지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.tooShort", "tooShort")}} {{ReadOnlyInline}}
   - : 값이 {{domxref("HTMLInputElement")}} 또는 {{domxref("HTMLTextAreaElement")}} 객체의 `minLength` 값보다 짧은지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}}와 {{cssxref(":out-of-range")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.typeMismatch", "typeMismatch")}} {{ReadOnlyInline}}
-  - : 값이 입력 유형에서 요구하는 형식({{htmlattrxref("type", "input")}}이 `email`이나 `url`인 경우)에 맞지 않는지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
+  - : 값이 입력 유형에서 요구하는 형식([`type`](/ko/docs/Web/HTML/Element/input#type)이 `email`이나 `url`인 경우)에 맞지 않는지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
 - `valid` {{ReadOnlyInline}}
   - : 요소가 모든 유효성 제약을 만족하여 유효한 상태인지 나타내는 {{jsxref("Boolean")}} 값입니다. 참일 경우 CSS {{cssxref(":valid")}} 의사 클래스를, 거짓일 경우 {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
 - {{domxref("ValidityState.valueMissing", "valueMissing")}} {{ReadOnlyInline}}
-  - : 요소가 {{htmlattrxref("required", "input")}} 특성을 가지고 있지만 값은 없는 경우 참인 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
+  - : 요소가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가지고 있지만 값은 없는 경우 참인 {{jsxref("Boolean")}} 값입니다. 참일 경우, CSS {{cssxref(":invalid")}} 의사 클래스를 만족합니다.
 
 ## 명세
 

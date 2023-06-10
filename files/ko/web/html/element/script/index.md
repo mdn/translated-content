@@ -132,7 +132,7 @@ slug: Web/HTML/Element/script
 
 ## 참고
 
-브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 {{htmlattrxref("async", "script")}}, {{htmlattrxref("defer", "script")}}, `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
+브라우저가 구문 분석을 진행하다 인라인 스크립트 또는 [`async`](/ko/docs/Web/HTML/Element/script#async), [`defer`](/ko/docs/Web/HTML/Element/script#defer), `type="module"` 특성이 없는 스크립트에 도달하면 스크립트를 가져온 후 실행하기 전까지 분석을 중단합니다.
 
 스크립트는 `text/javascript` MIME 유형을 설정해야 하나, 브라우저는 관대한 규칙을 적용하여 이미지 형태(`image/*`), 비디오 형태(`video/*`), 오디오 형태(`audio/*`), `text/csv` 형태로 스크립트를 불러오려는 경우만 차단하고 나머지는 허용합니다. 스크립트를 차단한 경우 {{event("load")}} 대신 {{event("error")}} 이벤트를 요소에 전송합니다.
 
@@ -156,7 +156,7 @@ slug: Web/HTML/Element/script
 
 ### 모듈 대체 스크립트
 
-{{htmlattrxref("type", "script")}} 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
+[`type`](/ko/docs/Web/HTML/Element/script#type) 특성이 `module`을 지원하는 브라우저는 `nomodule` 특성을 가진 모든 `<script>`를 무시합니다. 그러므로 모듈 스크립트를 사용하면서도, 미지원 브라우저를 위한 대체 스크립트를 `nomodule`로 표시해 제공할 수 있습니다.
 
 ```js
 <script type="module" src="main.mjs"></script>

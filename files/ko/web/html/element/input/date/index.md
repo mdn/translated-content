@@ -48,10 +48,10 @@ Firefox의 날짜 컨트롤입니다.
     <tr>
       <td><strong>지원하는 공통 특성</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ Firefox의 날짜 컨트롤입니다.
 
 날짜 입력 칸의 값은 입력한 날짜를 나타내는 {{domxref("DOMString")}}입니다. 날짜는 유효한 날짜 문자열 문서에서 설명하듯, ISO8601을 따르는 서식을 취합니다.
 
-{{htmlattrxref("value", "input")}} 특성에 날짜를 지정해서 입력 칸의 기본값을 지정할 수 있습니다.
+[`value`](/ko/docs/Web/HTML/Element/input#value) 특성에 날짜를 지정해서 입력 칸의 기본값을 지정할 수 있습니다.
 
 ```html
 <input type="date" value="2017-06-01">
@@ -109,19 +109,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 
 ### {{htmlattrdef("max")}}
 
-받을 수 있는 제일 나중 날짜. 입력받은 {{htmlattrxref("value", "input")}}가 `max`보다 더 나중이라면 유효성 검증에 실패합니다. `max`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최댓값을 지정하지 않은 것으로 간주합니다.
+받을 수 있는 제일 나중 날짜. 입력받은 [`value`](/ko/docs/Web/HTML/Element/input#value)가 `max`보다 더 나중이라면 유효성 검증에 실패합니다. `max`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최댓값을 지정하지 않은 것으로 간주합니다.
 
 `max`와 `min` 특성을 모두 사용할 경우, `max`는 `min`과 **동일하거나 이후**인 날짜 문자열이어야 합니다.
 
 ### {{htmlattrdef("min")}}
 
-받을 수 있는 제일 이전 날짜. 입력받은 {{htmlattrxref("value", "input")}}가 `min`보다 더 이전이라면 유효성 검증에 실패합니다. `min`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최솟값을 지정하지 않은 것으로 간주합니다.
+받을 수 있는 제일 이전 날짜. 입력받은 [`value`](/ko/docs/Web/HTML/Element/input#value)가 `min`보다 더 이전이라면 유효성 검증에 실패합니다. `min`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최솟값을 지정하지 않은 것으로 간주합니다.
 
 `max`와 `min` 특성을 모두 사용할 경우, `min`은 `max`와 **동일하거나 이전**인 날짜 문자열이어야 합니다.
 
 ### {{htmlattrdef("step")}}
 
-The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.
+The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/ko/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
@@ -160,7 +160,7 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 ### 최대와 최소 날짜 설정
 
-{{htmlattrxref("min", "input")}}과 {{htmlattrxref("max", "input")}} 특성을 사용하면 사용자가 선택할 수 있는 날짜를 제한할 수 있습니다. 다음 코드에서는 최소 날짜 `2017-04-01`, 최대 날짜 `2017-04-30`을 지정합니다.
+[`min`](/ko/docs/Web/HTML/Element/input#min)과 [`max`](/ko/docs/Web/HTML/Element/input#max) 특성을 사용하면 사용자가 선택할 수 있는 날짜를 제한할 수 있습니다. 다음 코드에서는 최소 날짜 `2017-04-01`, 최대 날짜 `2017-04-30`을 지정합니다.
 
 ```html
 <form>
@@ -174,19 +174,19 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 실행 결과에서 2017년 4월의 날짜만 선택 가능함을 볼 수 있습니다. 입력 칸의 연과 월은 편집이 불가능해지며, 날짜 선택 위젯에서도 2017년 4월 바깥의 날짜는 선택할 수 없습니다.
 
-> **참고:** 원래 {{htmlattrxref("step", "input")}} 특성을 사용해 날짜를 증감할 때 늘어날 일 수를 조절할 수 있어야 하고, 이를 이용해 토요일만 선택 가능하게 하는 등의 처리가 가능해야 합니다. 그러나 지금은 아무 브라우저에서도 구현하고 있지 않습니다.
+> **참고:** 원래 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성을 사용해 날짜를 증감할 때 늘어날 일 수를 조절할 수 있어야 하고, 이를 이용해 토요일만 선택 가능하게 하는 등의 처리가 가능해야 합니다. 그러나 지금은 아무 브라우저에서도 구현하고 있지 않습니다.
 
 ### 입력 칸 크기 조절
 
-`<input type="date">`는 {{htmlattrxref("size", "input")}} 등의 크기 조절 특성을 지원하지 않습니다. [CSS](/ko/docs/Web/CSS)를 사용하세요.
+`<input type="date">`는 [`size`](/ko/docs/Web/HTML/Element/input#size) 등의 크기 조절 특성을 지원하지 않습니다. [CSS](/ko/docs/Web/CSS)를 사용하세요.
 
 ## 유효성 검사
 
 `<input type="date">`는 기본값에선 값의 형식 외에 다른 유효성 검사는 수행하지 않습니다. 보통 날짜 입력 칸의 인터페이스가 날짜 이외의 값을 처음부터 허용하지 않는 것이 유용하긴 하나, 아무 값을 입력하지 않을 수도 있고, 미지원 브라우저에서 텍스트 입력 칸으로 대체된 경우 4월 32일처럼 유효하지 않은 날짜도 입력할 수 있습니다.
 
-{{htmlattrxref("min", "input")}}과 {{htmlattrxref("max", "input")}}를 사용해 가능한 날짜 범위를 제한([최대와 최소 날짜 설정](#최대와_최소_날짜_설정))한 경우, 지원하는 브라우저에서는 범위 밖의 값을 받았을 때 오류를 표시합니다. 그러나 브라우저가 온전히 지원하지 않을 수도 있기 때문에, 제출받은 값을 이중으로 검증하는 것이 필요합니다.
+[`min`](/ko/docs/Web/HTML/Element/input#min)과 [`max`](/ko/docs/Web/HTML/Element/input#max)를 사용해 가능한 날짜 범위를 제한([최대와 최소 날짜 설정](#최대와_최소_날짜_설정))한 경우, 지원하는 브라우저에서는 범위 밖의 값을 받았을 때 오류를 표시합니다. 그러나 브라우저가 온전히 지원하지 않을 수도 있기 때문에, 제출받은 값을 이중으로 검증하는 것이 필요합니다.
 
-{{htmlattrxref("required", "input")}} 특성을 사용해 값을 필수로 요구할 수도 있으며, 빈 입력 칸을 제출하려고 하면 오류를 표시합니다. required는 대부분의 브라우저에서, 텍스트 입력 칸으로 대체되더라도 지원하고 있습니다.
+[`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 사용해 값을 필수로 요구할 수도 있으며, 빈 입력 칸을 제출하려고 하면 오류를 표시합니다. required는 대부분의 브라우저에서, 텍스트 입력 칸으로 대체되더라도 지원하고 있습니다.
 
 최소/최대 날짜와 필수 검증 예제를 보겠습니다.
 
@@ -252,7 +252,7 @@ input:valid+span::after {
 - `dd/mm/yyyy`
 - `mm-dd-yyyy`
 
-해결하는 방법 중 하나는 날짜 입력 칸에 {{htmlattrxref("pattern", "input")}} 특성을 사용하는 것입니다. 날짜 입력 칸은 사용하지 않는 특성이지만 텍스트 입력 칸으로 대체된 경우에는 사용하기 때문인데, 미지원 브라우저에서 다음 코드를 확인해보세요.
+해결하는 방법 중 하나는 날짜 입력 칸에 [`pattern`](/ko/docs/Web/HTML/Element/input#pattern) 특성을 사용하는 것입니다. 날짜 입력 칸은 사용하지 않는 특성이지만 텍스트 입력 칸으로 대체된 경우에는 사용하기 때문인데, 미지원 브라우저에서 다음 코드를 확인해보세요.
 
 ```html
 <form>

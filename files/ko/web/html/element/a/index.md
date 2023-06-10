@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**HTML `<a>` 요소**(앵커 요소)는 {{htmlattrxref("href", "a")}} 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
+**HTML `<a>` 요소**(앵커 요소)는 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/a
 - {{htmlattrdef("type")}}
   - : 링크 URL의 {{Glossary("MIME type")}}에 대한 힌트. 특별한 내장 기능은 없습니다.
 
-<div class="hidden"><h3 id="Obsolete_attributes">Obsolete attributes</h3><dl><dt id="charset">{{HTMLAttrDef("charset")}}{{deprecated_inline}}</dt><dd>Hinted at the <a href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the linked URL.<div class="note"><p><strong>Note:</strong> This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type:</code></a> header on the linked URL.</p></div></dd><dt id="coords">{{HTMLAttrDef("coords")}}{{deprecated_inline}}</dt><dd>Used with <a href="#shape">the <code>shape</code> attribute</a>. A comma-separated list of coordinates.</dd><dt id="name">{{HTMLAttrDef("name")}}{{deprecated_inline}}</dt><dd>Was required to define a possible target location in a page. In HTML 4.01, <code>id</code> and <code>name</code> could both be used on <code>&#x3C;a></code>, as long as they had identical values.<div class="note"><p><strong>Note:</strong> Use the global attribute {{HTMLAttrxRef("id")}} instead.</p></div></dd><dt id="rev">{{HTMLAttrDef("rev")}}{{deprecated_inline}}</dt><dd>Specified a reverse link; the opposite of <a href="#rel">the <code>rel</code> attribute</a>. Deprecated for being very confusing.</dd><dt id="shape">{{HTMLAttrDef("shape")}}{{deprecated_inline}}</dt><dd>The shape of the hyperlink’s region in an image map.<div class="note"><strong>Note:</strong> Use the {{HTMLElement("area")}} element for image maps instead.</div></dd></dl></div>
+<div class="hidden"><h3 id="Obsolete_attributes">Obsolete attributes</h3><dl><dt id="charset">{{HTMLAttrDef("charset")}}{{deprecated_inline}}</dt><dd>Hinted at the <a href="/en-US/docs/Glossary/character_encoding">character encoding</a> of the linked URL.<div class="note"><p><strong>Note:</strong> This attribute is obsolete and <strong>should not be used by authors</strong>. Use the HTTP <a href="/en-US/docs/Web/HTTP/Headers/Content-Type"><code>Content-Type:</code></a> header on the linked URL.</p></div></dd><dt id="coords">{{HTMLAttrDef("coords")}}{{deprecated_inline}}</dt><dd>Used with <a href="#shape">the <code>shape</code> attribute</a>. A comma-separated list of coordinates.</dd><dt id="name">{{HTMLAttrDef("name")}}{{deprecated_inline}}</dt><dd>Was required to define a possible target location in a page. In HTML 4.01, <code>id</code> and <code>name</code> could both be used on <code>&#x3C;a></code>, as long as they had identical values.<div class="note"><p><strong>Note:</strong> Use the global attribute <a href="/ko/docs/Web/HTML/Global_attributes#id"><code>id</code></a> instead.</p></div></dd><dt id="rev">{{HTMLAttrDef("rev")}}{{deprecated_inline}}</dt><dd>Specified a reverse link; the opposite of <a href="#rel">the <code>rel</code> attribute</a>. Deprecated for being very confusing.</dd><dt id="shape">{{HTMLAttrDef("shape")}}{{deprecated_inline}}</dt><dd>The shape of the hyperlink’s region in an image map.<div class="note"><strong>Note:</strong> Use the {{HTMLElement("area")}} element for image maps instead.</div></dd></dl></div>
 
 ## 속성
 
@@ -235,7 +235,7 @@ a { display: block; margin-bottom: 0.5em }
 
 ### `download` 특성으로 `<canvas>`를 PNG로 저장하기
 
-{{htmlattrxref("download", "a")}} 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
+[`download`](/ko/docs/Web/HTML/Element/a#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
 
 #### 저장 링크를 가진 그림판 예제
 
@@ -362,7 +362,7 @@ document.querySelector('a').addEventListener('click', event =>
 </a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 {{HTMLAttrxRef("alt", "img", "대체 텍스트", 1)}}를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">

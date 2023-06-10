@@ -15,15 +15,15 @@ slug: Web/API/HTMLVideoElement
 _{{domxref("HTMLMediaElement")}}와_ _{{domxref("HTMLElement")}}의 속성들도 상속 받습니다._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : 표시 영역의 높이를 나타내는 HTML Attribute {{htmlattrxref("height", "video")}}의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
+  - : 표시 영역의 높이를 나타내는 HTML Attribute [`height`](/ko/docs/Web/HTML/Element/video#height)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : 비디오 데이터가 없을 때 보여줄 이미지를 지정하는 HTML Attribute {{htmlattrxref("poster", "video")}}의 값을 {{domxref("DOMString")}}로 반환합니다.
+  - : 비디오 데이터가 없을 때 보여줄 이미지를 지정하는 HTML Attribute [`poster`](/ko/docs/Web/HTML/Element/video#poster)의 값을 {{domxref("DOMString")}}로 반환합니다.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : 비디오의 height를 부호 없는 정수로 나타낸 값을 반환합니다. 비디오가 없는 경우 0을 반환합니다.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : 비디오의 width를 부호 없는 정수로 나타낸 값을 반환합니다. 비디오가 없는 경우 0을 반환합니다.
 - {{domxref("HTMLVideoElement.width")}}
-  - : 표시 영역의 높이를 나타내는 HTML Attribute {{htmlattrxref("width", "video")}}의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
+  - : 표시 영역의 높이를 나타내는 HTML Attribute [`width`](/ko/docs/Web/HTML/Element/video#width)의 값을 {{domxref("DOMString")}}으로 반환합니다. 단위는 pixel입니다.
 
 ### Gecko 전용 속성
 

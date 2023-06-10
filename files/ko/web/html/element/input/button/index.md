@@ -21,13 +21,13 @@ slug: Web/HTML/Element/input/button
     </tr>
     <tr>
       <td>이벤트</td>
-      <td>[`click`](/ko/docs/Web/API/Element/click_event)</td>
+      <td><a href="/ko/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
       <td>지원하는 공용 특성</td>
       <td>
-        {{htmlattrxref("type", "input")}},
-        {{htmlattrxref("value", "input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#type"><code>type</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ slug: Web/HTML/Element/input/button
 
 ## 값
 
-`<input type="button">` 요소의 {{htmlattrxref("value", "input")}} 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
+`<input type="button">` 요소의 [`value`](/ko/docs/Web/HTML/Element/input#value) 특성은 버튼의 레이블로 사용할 {{domxref("DOMString")}}을 담습니다.
 
 ```html
 <input type="button" value="클릭하세요">
@@ -97,7 +97,7 @@ function updateBtn() {
 
 ### 버튼에 키보드 단축키 추가하기
 
-접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, {{htmlattrxref("accesskey")}} 전역 특성을 추가하는 것입니다.
+접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, [`accesskey`](/ko/docs/Web/HTML/Global_attributes#accesskey) 전역 특성을 추가하는 것입니다.
 
 이번 예제에서는 이전 예제에 더해 <kbd>s</kbd> 키를 접근 키로 지정합니다. (브라우저/운영체제에 따라 특정 조합키를 같이 눌러야 할 수도 있습니다. [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey) 문서를 방문해 조합키 목록을 확인하세요.)
 
@@ -131,7 +131,7 @@ function updateBtn() {
 
 ### 버튼 활성화와 비활성화
 
-버튼을 비활성화하려면 간단히 {{htmlattrxref("disabled")}} 전역 특성을 지정하는 것으로 충분합니다.
+버튼을 비활성화하려면 간단히 [`disabled`](/ko/docs/Web/HTML/Global_attributes#disabled) 전역 특성을 지정하는 것으로 충분합니다.
 
 ```html
 <input type="button" value="Disable me" disabled>

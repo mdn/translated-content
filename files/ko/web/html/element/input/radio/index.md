@@ -53,11 +53,11 @@ The `value` attribute is a {{domxref("DOMString")}} containing the radio button'
 
 ### 라디오 그룹 정의하기
 
-A radio group is defined by giving each of radio buttons in the group the same {{htmlattrxref("name", "input")}}. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+A radio group is defined by giving each of radio buttons in the group the same [`name`](/ko/docs/Web/HTML/Element/input#name). Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
 
 You can have as many radio groups on a page as you like, as long as each has its own unique `name`.
 
-For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the `name` property set to `contact` but one with the {{htmlattrxref("value", "input")}} `email`, one with the value `phone`, and one with the value `mail`. The user never sees the `value` or the `name` (unless you expressly add code to display it).
+For example, if your form needs to ask the user for their preferred contact method, you might create three radio buttons, each with the `name` property set to `contact` but one with the [`value`](/ko/docs/Web/HTML/Element/input#value) `email`, one with the value `phone`, and one with the value `mail`. The user never sees the `value` or the `name` (unless you expressly add code to display it).
 
 The resulting HTML looks like this:
 
@@ -83,7 +83,7 @@ The resulting HTML looks like this:
 </form>
 ```
 
-Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's {{htmlattrxref("for", "label")}} attribute to associate the labels with the radio buttons.
+Here you see the three radio buttons, each with the `name` set to `contact` and each with a unique `value` that uniquely identifies that individual radio button within the group. They each also have a unique {{domxref("Element.id", "id")}}, which is used by the {{HTMLElement("label")}} element's [`for`](/ko/docs/Web/HTML/Element/label#for) attribute to associate the labels with the radio buttons.
 
 You can try out this example here:
 
@@ -157,7 +157,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
 A Boolean attribute which, if present, indicates that this radio button is the currently selected one in the group.
 
-Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 ### {{htmlattrdef("value")}}
 

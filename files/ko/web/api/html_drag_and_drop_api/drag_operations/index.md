@@ -17,7 +17,7 @@ HTML에서 이미지나 링크 그리고 선택(selections)에 대한 기본 행
 
 다른 HTML 요소를 드래그할 수 있게 하려면 세 가지가 이루어져야 합니다:
 
-- 드래그가 가능하도록 만들고자 하는 요소에 대한 `{{htmlattrxref("draggable")}}` 속성이 `true`로 설정되어야 합니다.
+- 드래그가 가능하도록 만들고자 하는 요소에 대한 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성이 `true`로 설정되어야 합니다.
 - `{{event("dragstart")}}` 이벤트에 대한 리스너를 추가합니다.
 - 위에서 정의한 리스너에 {{domxref("DataTransfer.setData","Set the drag data")}}를 설정합니다.
 
@@ -29,11 +29,11 @@ HTML에서 이미지나 링크 그리고 선택(selections)에 대한 기본 행
 </div>
 ```
 
-요소를 드래그할 수 있게 하기 위해서는 `{{htmlattrxref("draggable")}}` 속성이 true로 설정되어야 합니다. 이 속성이 생략되거나 false로 설정되면 해당 요소는 드래그할 수 없으며, 대신 텍스트가 선택됩니다. `{{htmlattrxref("draggable")}}` 속성은 이미지나 링크를 포함한 어떤 요소에서도 사용할 수 있습니다. 하지만, 이미지나 링크에 대해서는 기본값이 true로 설정되어 있으므로 이들 요소에 대해 드래깅할 수 없게 만들 경우에만 `{{htmlattrxref("draggable")}}` 속성의 값을 false로 설정하면 됩니다.
+요소를 드래그할 수 있게 하기 위해서는 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성이 true로 설정되어야 합니다. 이 속성이 생략되거나 false로 설정되면 해당 요소는 드래그할 수 없으며, 대신 텍스트가 선택됩니다. `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성은 이미지나 링크를 포함한 어떤 요소에서도 사용할 수 있습니다. 하지만, 이미지나 링크에 대해서는 기본값이 true로 설정되어 있으므로 이들 요소에 대해 드래깅할 수 없게 만들 경우에만 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성의 값을 false로 설정하면 됩니다.
 
 어떤 요소가 드래그 가능한 경우, 해당 요소 내의 텍스트나 다른 요소는 마우스를 클릭하고 드래그하는 통상적인 방식으로는 선택할 수 없게 됩니다. 대신, 사용자가 <kbd>alt</kbd> 키를 누른채로 마우스로 텍스트를 선택하거나 키보드를 이용해 선택할 수 있습니다.
 
-XUL 요소에 대해서는 `{{htmlattrxref("draggable")}}` 속성을 사용할 필요가 없으며, 모든 XUL 요소는 드래그가 가능합니다.
+XUL 요소에 대해서는 `[`draggable`](/ko/docs/Web/HTML/Global_attributes#draggable)` 속성을 사용할 필요가 없으며, 모든 XUL 요소는 드래그가 가능합니다.
 
 ```html
 <button label="Drag Me" ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');">

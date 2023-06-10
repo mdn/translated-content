@@ -50,7 +50,7 @@ audioElement.play();
 
 ### autoplay 속성
 
-가장 간단한 자동 재생 방법은 {{HTMLElement("audio")}}나 {{HTMLElement("video")}} 엘리먼트에 {{htmlattrxref("autoplay", "audio")}} 속성을 추가하는 겁니다. 이는 {{domxref("HTMLMediaElement.autoplay", "autoplay")}} 속성을 `true`로 지정하며, `autoplay`가 `true`면 아래 조건이 만족된 직후부터 자동 재생을 시도합니다:
+가장 간단한 자동 재생 방법은 {{HTMLElement("audio")}}나 {{HTMLElement("video")}} 엘리먼트에 [`autoplay`](/ko/docs/Web/HTML/Element/audio#autoplay) 속성을 추가하는 겁니다. 이는 {{domxref("HTMLMediaElement.autoplay", "autoplay")}} 속성을 `true`로 지정하며, `autoplay`가 `true`면 아래 조건이 만족된 직후부터 자동 재생을 시도합니다:
 
 - 페이지가 자동 재생 기능을 허용할 때
 - 페이지 로드 중에 엘리먼트가 생성될 때
@@ -68,7 +68,7 @@ audioElement.play();
 
 #### 예제 2: 자동재생 실패 탐지
 
-자동 재생 기능이 중요하거나, 자동 재생 실패 시 앱에 큰 영향이 가해진다면, 여러분은 아마도 자동 재생이 실패하는 시점을 알고 싶을겁니다. 안타깝게도 {{htmlattrxref("autoplay", "audio")}} 속성을 사용하는 경우, 자동 재생 성공 여부를 알아내는 것이 쉽지 않습니다. 자동 재생 실패 시 발생하는 이벤트가 없기 때문이죠. 게다가 익셉션 또는 콜백, 심지어 자동 재생이 되었을 때 켜지는 플래그조차 없습니다. 여러분이 할 수 있는 건 몇 가지 변수를 체크하거나 경험적으로 자동 재생이 동작했는지 판단할 수 밖에 없습니다.
+자동 재생 기능이 중요하거나, 자동 재생 실패 시 앱에 큰 영향이 가해진다면, 여러분은 아마도 자동 재생이 실패하는 시점을 알고 싶을겁니다. 안타깝게도 [`autoplay`](/ko/docs/Web/HTML/Element/audio#autoplay) 속성을 사용하는 경우, 자동 재생 성공 여부를 알아내는 것이 쉽지 않습니다. 자동 재생 실패 시 발생하는 이벤트가 없기 때문이죠. 게다가 익셉션 또는 콜백, 심지어 자동 재생이 되었을 때 켜지는 플래그조차 없습니다. 여러분이 할 수 있는 건 몇 가지 변수를 체크하거나 경험적으로 자동 재생이 동작했는지 판단할 수 밖에 없습니다.
 
 더 좋은 방법으로는 앱의 동작 방식을 자동 재생 실패를 탐지하기보다 성공을 탐지하는 방향으로 조정하는 것입니다. 이 방법은 간단한데, 미디어 엘리먼트에서 {{event("play")}} 가 발생하길 기다리는 것입니다.
 
@@ -80,7 +80,7 @@ audioElement.play();
 <video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)>
 ```
 
-{{HTMLElement("video")}} 엘리먼트에 {{htmlattrxref("autoplay", "video")}} 속성이 설정되어 있으며, {{domxref("HTMLMediaElement.onplay", "onplay")}} 이벤트 핸들러도 지정되어 있습니다; 이벤트는 `handleFirstPlay()` 함수로 전달되며 `play` 이벤트를 인자로 받습니다.
+{{HTMLElement("video")}} 엘리먼트에 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성이 설정되어 있으며, {{domxref("HTMLMediaElement.onplay", "onplay")}} 이벤트 핸들러도 지정되어 있습니다; 이벤트는 `handleFirstPlay()` 함수로 전달되며 `play` 이벤트를 인자로 받습니다.
 
 `handleFirstPlay()` 는 아래와 같습니다:
 
@@ -157,9 +157,9 @@ _상세한 내용 추가 예정; 모질라는 아직 자동 재생 방지 기능
 
 `'none'`으로 지정하여 전역으로 자동 재생을 막을 수 있습니다. `'*'` 는 모든 도메인에서 전송된 미디어를 자동 재생하도록 허용합니다. 오리진은 하나의 space 문자로 구분 됩니다.
 
-> **참고:** 명시된 feature policy는 현재 문서와 내부의 모든 {{HTMLElement("iframe")}}에 적용됩니다. 단 {{htmlattrxref("allow", "iframe")}} 어트리뷰트를 가진 iframe과 해당 프레임의 내부 프레임은 새로운 feature policy가 적용되며 상위의 feature policy는 무시됩니다.
+> **참고:** 명시된 feature policy는 현재 문서와 내부의 모든 {{HTMLElement("iframe")}}에 적용됩니다. 단 [`allow`](/ko/docs/Web/HTML/Element/iframe#allow) 어트리뷰트를 가진 iframe과 해당 프레임의 내부 프레임은 새로운 feature policy가 적용되며 상위의 feature policy는 무시됩니다.
 
-`<iframe>`에 {{htmlattrxref("allow", "iframe")}}를 추가하여 해당 프레임과 내부 프레임에 feature policy를 적용하면, {{htmlattrxref("src", "iframe")}} 어트리뷰트에서 지정된 도메인에서만 미디어를 자동 재생 하도록 허용할 수 있습니다.
+`<iframe>`에 [`allow`](/ko/docs/Web/HTML/Element/iframe#allow)를 추가하여 해당 프레임과 내부 프레임에 feature policy를 적용하면, [`src`](/ko/docs/Web/HTML/Element/iframe#src) 어트리뷰트에서 지정된 도메인에서만 미디어를 자동 재생 하도록 허용할 수 있습니다.
 
 ### 예시: document의 domain에서만 자동 재생 허용
 
@@ -238,7 +238,7 @@ Feature-Policy: autoplay 'none'
 <video src="/videos/awesomevid.webm" controls autoplay muted>
 ```
 
-이 비디오 엘리먼트는 user control 어트리뷰트가 설정되어 있습니다 (보통 재생/일시정지, 비디오 타임라인 탐색, 볼륨 컨트롤, 음소거 등); 또한 {{htmlattrxref("muted", "video")}} 어트리뷰트가 포함되어 있어 자동 재생 되지만 음소거 상태입니다. 하지만 사용자는 볼륨 버튼을 클릭하여 음소거를 해제할 수 있죠.
+이 비디오 엘리먼트는 user control 어트리뷰트가 설정되어 있습니다 (보통 재생/일시정지, 비디오 타임라인 탐색, 볼륨 컨트롤, 음소거 등); 또한 [`muted`](/ko/docs/Web/HTML/Element/video#muted) 어트리뷰트가 포함되어 있어 자동 재생 되지만 음소거 상태입니다. 하지만 사용자는 볼륨 버튼을 클릭하여 음소거를 해제할 수 있죠.
 
 ## 브라우저 설정 옵션
 

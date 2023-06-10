@@ -36,7 +36,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
   <tbody>
     <tr>
       <td style="white-space: nowrap">
-        {{htmlattrxref("accept-charset","form")}}
+        <a href="/ko/docs/Web/HTML/Element/form#accept-charset"><code>accept-charset</code></a>
       </td>
       <td><code>UNKNOWN</code></td>
       <td>
@@ -51,12 +51,12 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("action","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#action"><code>action</code></a></td>
       <td></td>
       <td>폼을 통해서 전송한 정보를 처리하는 웹페이지의 URL</td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("autocomplete","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#autocomplete"><code>autocomplete</code></a></td>
       <td><code>on</code></td>
       <td>
         이 속성은 이 폼안에 있는 위젯들의 기본값이 브라우저에 의해 자동 완성
@@ -65,7 +65,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("enctype","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a></td>
       <td><code>application/x-www-form-urlencoded</code></td>
       <td>
         \<code>method</code> 속성이 <code>post 값으로 지정되면</code>, 서버로
@@ -88,7 +88,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("method","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#method"><code>method</code></a></td>
       <td><code>get</code></td>
       <td>
         <span style="line-height: 1.5"
@@ -102,7 +102,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("name","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#name"><code>name</code></a></td>
       <td></td>
       <td>
         폼의 이름이다. 이 속성값은 반드시 문서의 폼 사이에서 고유해야하며 빈
@@ -115,14 +115,14 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("novalidate","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a></td>
       <td>(<em>false</em>)</td>
       <td>
         이 불리언 속성은 폼이 전송 할떄 유효성 검사를 할수 없음을 나타낸다.
       </td>
     </tr>
     <tr>
-      <td>{{htmlattrxref("target","form")}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/form#target"><code>target</code></a></td>
       <td><code>_self</code></td>
       <td>
         폼 요청을 전송한후 응답을 어떻게 받을것인지 지정한다. 예를들어
@@ -190,7 +190,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 | 속성 이름                                            | 기본값    | 설명                                                                                                                                                                                                                                                                                    |
 | ---------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("disabled","fieldset")}} | (_false_) | 만약 이 불리언 속성이 설정되면 폼은(첫번째 {{ HTMLElement("legend") }}요소에 있는 요소는 예외이다. ) 이것에 파생된 요소를 사용하거나 편집 할 수없게된다. 그리고 마우스 클릭같은 어떠한 브라우저 이벤트들도 받지 않을것이다. 일반적으로 브라우저는 회색으로 이를 표시할 것이다. |
+| [`disabled`](/ko/docs/Web/HTML/Element/fieldset#disabled) | (_false_) | 만약 이 불리언 속성이 설정되면 폼은(첫번째 {{ HTMLElement("legend") }}요소에 있는 요소는 예외이다. ) 이것에 파생된 요소를 사용하거나 편집 할 수없게된다. 그리고 마우스 클릭같은 어떠한 브라우저 이벤트들도 받지 않을것이다. 일반적으로 브라우저는 회색으로 이를 표시할 것이다. |
 
 ### The \<label> element
 
@@ -202,7 +202,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 | 속성 명                                  | 기본값 | 설명                                                                                                                                               |
 | ---------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("for","label")}} |        | {{HTMLElement("label")}} 요소와 같은 문서에 있는 위젯의 라벨의 ID . 문서안의 ID와 for속성 값이 같으면 그 라벨 요소는 그 위젯의 라벨이된다. |
+| [`for`](/ko/docs/Web/HTML/Element/label#for) |        | {{HTMLElement("label")}} 요소와 같은 문서에 있는 위젯의 라벨의 ID . 문서안의 ID와 for속성 값이 같으면 그 라벨 요소는 그 위젯의 라벨이된다. |
 
 요소는 for속성으로 지정한 위젯과 묶여진다. for속성은 해당 위젯의 실제 id 속성을 참조한다. 위젯은 요소로 둘러싸게 할수 있지만 이 경우 몇가지 보조 기술이 라벨과 위젯의 암시적인 관계를 이해하지 못하기 떄문에 for 속성을 고려 해봐야한다.
 
@@ -262,7 +262,7 @@ HTML 폼들은 그 유연성으로 인해 HTML 중 복잡한 구조를 가지고
 
 | Attribute name                               | Default value | Description                                                                                              |
 | -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("for","output")}} |               | 스페이스로 구분된 다른 요소의 ID로 설정하고 이 요소들에 값을 입력을 계산하는데 기여한다.(또는 다른 효과) |
+| [`for`](/ko/docs/Web/HTML/Element/output#for) |               | 스페이스로 구분된 다른 요소의 ID로 설정하고 이 요소들에 값을 입력을 계산하는데 기여한다.(또는 다른 효과) |
 
 ### form이 사용되는 일반적인 form 구조
 
@@ -392,15 +392,15 @@ This is all summarized in the following table (for a full list of all attributes
       </td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}},
-        {{htmlattrxref("spellcheck","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#spellcheck"><code>spellcheck</code></a>
       </td>
     </tr>
     <tr>
@@ -408,15 +408,15 @@ This is all summarized in the following table (for a full list of all attributes
       <td>하나 또는 여러개 이메일 주소를 작성하기 위해 사용되는 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("multiple","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -424,12 +424,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>텍스트 필드의 값을 가리기 위해 사용되는 텍스트 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -437,16 +437,16 @@ This is all summarized in the following table (for a full list of all attributes
       <td>검색 하기 위한 텍스트 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("autosave","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}},
-        {{htmlattrxref("spellcheck","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#autosave"><code>autosave</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#spellcheck"><code>spellcheck</code></a>
       </td>
     </tr>
     <tr>
@@ -454,14 +454,14 @@ This is all summarized in the following table (for a full list of all attributes
       <td>전화 번호를 입력할 수 있는 텍스트 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -469,14 +469,14 @@ This is all summarized in the following table (for a full list of all attributes
       <td>절대 URL을 다루기 위한 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("maxlength","input")}},
-        {{htmlattrxref("pattern","input")}},
-        {{htmlattrxref("placeholder","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("size","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -487,8 +487,8 @@ This is all summarized in the following table (for a full list of all attributes
       <td>체크박스</td>
       <td></td>
       <td>
-        {{htmlattrxref("checked","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#checked"><code>checked</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -496,9 +496,9 @@ This is all summarized in the following table (for a full list of all attributes
       <td>색상을 입력 받기위한 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -506,9 +506,9 @@ This is all summarized in the following table (for a full list of all attributes
       <td>A control that lets the user select a file.</td>
       <td></td>
       <td>
-        {{htmlattrxref("accept","input")}},
-        {{htmlattrxref("multiple","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#accept"><code>accept</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -522,13 +522,13 @@ This is all summarized in the following table (for a full list of all attributes
       <td>소숫점을 입력받는 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("step","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -536,8 +536,8 @@ This is all summarized in the following table (for a full list of all attributes
       <td>라디오 버튼. 그룹 중 한가지만 선택하기 위한 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("checked","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#checked"><code>checked</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -545,12 +545,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>정확하지 않는 숫자를 입력받기 위한 필드</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("required","input")}},
-        {{htmlattrxref("step","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -561,12 +561,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>(년, 원, 일)날짜를 입력 받을 수 잇는 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -577,12 +577,12 @@ This is all summarized in the following table (for a full list of all attributes
       </td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -590,12 +590,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>타임존 기반이 아닌 날짜와 시간을 입력받기 위한 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -603,12 +603,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>타임존 기반이 아닌 달과 년도를 입력 받기 위한 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -616,12 +616,12 @@ This is all summarized in the following table (for a full list of all attributes
       <td>타임존 기반이 아닌 시간을 입력 받기 위한 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -632,12 +632,12 @@ This is all summarized in the following table (for a full list of all attributes
       </td>
       <td></td>
       <td>
-        {{htmlattrxref("autocomplete","input")}},
-        {{htmlattrxref("list","input")}},
-        {{htmlattrxref("max","input")}},
-        {{htmlattrxref("min","input")}},
-        {{htmlattrxref("readonly","input")}},
-        {{htmlattrxref("required","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#min"><code>min</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#required"><code>required</code></a>
       </td>
     </tr>
     <tr>
@@ -648,28 +648,28 @@ This is all summarized in the following table (for a full list of all attributes
       <td>기본 행동이 없는 누르는 버튼</td>
       <td></td>
       <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
       <td><code>image</code></td>
       <td>그래픽적인 전송버튼</td>
       <td>
-        {{htmlattrxref("src","input")}},
-        {{htmlattrxref("alt","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#alt"><code>alt</code></a>
       </td>
       <td>
-        {{htmlattrxref("width","input")}},
-        {{htmlattrxref("height","input")}},
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
@@ -677,11 +677,11 @@ This is all summarized in the following table (for a full list of all attributes
       <td>폼의 내용을 초기화 하는 컨트롤</td>
       <td></td>
       <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
@@ -689,11 +689,11 @@ This is all summarized in the following table (for a full list of all attributes
       <td>폼을 전송하는 버튼</td>
       <td></td>
       <td>
-        {{htmlattrxref("formaction","input")}},
-        {{htmlattrxref("formenctype","input")}},
-        {{htmlattrxref("formmethod","input")}},
-        {{htmlattrxref("formnovalidate","input")}},
-        {{htmlattrxref("formtarget","input")}}
+        <a href="/ko/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a>,
+        <a href="/ko/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
   </tbody>
@@ -709,9 +709,9 @@ This is all summarized in the following table (for a full list of all attributes
 
 | Attribute name                                   | 기본값 | 설명                                                                    |
 | ------------------------------------------------ | ------ | ----------------------------------------------------------------------- |
-| {{htmlattrxref("cols","textarea")}} | `20`   | 보여지는 문자 너비의 평균을 기준으로 텍스트 컨트롤의 너비               |
-| {{htmlattrxref("rows","textarea")}} |        | 보여지는 텍스트 행의 수                                                 |
-| {{htmlattrxref("wrap","textarea")}} | `soft` | hard, soft 이 둘중 하나의 값으로 어떻게 텍스트를 둘러쌀것인지 나타낸다. |
+| [`cols`](/ko/docs/Web/HTML/Element/textarea#cols) | `20`   | 보여지는 문자 너비의 평균을 기준으로 텍스트 컨트롤의 너비               |
+| [`rows`](/ko/docs/Web/HTML/Element/textarea#rows) |        | 보여지는 텍스트 행의 수                                                 |
+| [`wrap`](/ko/docs/Web/HTML/Element/textarea#wrap) | `soft` | hard, soft 이 둘중 하나의 값으로 어떻게 텍스트를 둘러쌀것인지 나타낸다. |
 
 {{HTMLElement("textarea")}} 요소는 {{HTMLElement("input")}} 요소와 다르게 작동한다. {{HTMLElement("input")}} 요소는 자동으로 닫히는 요소이다. 이는 자식 요소를 가질 수 없다는 것을 의미한다. 이와 반대로 요소는 text 콘텐츠를 자식으로 가질 수 있는 일반적인 요소이다.
 
@@ -771,12 +771,12 @@ Let's take an example:
 
 | 속성 이름                                        | 기본값    | 설명                                                                                                                   |
 | ------------------------------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("label","option")}}     |           | 이 속성은 옵션을 설명하는 라벨의 텍스트이다. 만약 라벨 속성이 정의되지 않으면 이 값은 요소의 텍스트 콘텐츠로 설정된다. |
-| {{htmlattrxref("selected","option")}} | (_false_) | 만약 이 속성이 불리언 값으로 설정되는 경우 처음에 선택된 상태로 시작하게된다.                                          |
+| [`label`](/ko/docs/Web/HTML/Element/option#label)     |           | 이 속성은 옵션을 설명하는 라벨의 텍스트이다. 만약 라벨 속성이 정의되지 않으면 이 값은 요소의 텍스트 콘텐츠로 설정된다. |
+| [`selected`](/ko/docs/Web/HTML/Element/option#selected) | (_false_) | 만약 이 속성이 불리언 값으로 설정되는 경우 처음에 선택된 상태로 시작하게된다.                                          |
 
 | Attribute name                                   | Default value | Description                                                        |
 | ------------------------------------------------ | ------------- | ------------------------------------------------------------------ |
-| {{htmlattrxref("label","optgroup")}} |               | The name of the group of options. **This attribute is mandatory.** |
+| [`label`](/ko/docs/Web/HTML/Element/optgroup#label) |               | The name of the group of options. **This attribute is mandatory.** |
 
 ### \<datalist>요소
 
@@ -823,15 +823,15 @@ Let's take an example:
 
 | Attribute name                                   | Default value   | Description                                                    |
 | ------------------------------------------------ | --------------- | -------------------------------------------------------------- |
-| {{htmlattrxref("min","meter")}}         | 0               | The lower numeric bound of the measured range.                 |
-| {{htmlattrxref("max","meter")}}         | 1               | The upper numeric bound of the measured range.                 |
-| {{htmlattrxref("low","meter")}}         | the `min` value | The upper numeric bound of the low end of the measured range.  |
-| {{htmlattrxref("high","meter")}}     | the `max` value | The lower numeric bound of the high end of the measured range. |
-| {{htmlattrxref("optimum","meter")}} |                 | The optimal numeric value.                                     |
+| [`min`](/ko/docs/Web/HTML/Element/meter#min)         | 0               | The lower numeric bound of the measured range.                 |
+| [`max`](/ko/docs/Web/HTML/Element/meter#max)         | 1               | The upper numeric bound of the measured range.                 |
+| [`low`](/ko/docs/Web/HTML/Element/meter#low)         | the `min` value | The upper numeric bound of the low end of the measured range.  |
+| [`high`](/ko/docs/Web/HTML/Element/meter#high)     | the `max` value | The lower numeric bound of the high end of the measured range. |
+| [`optimum`](/ko/docs/Web/HTML/Element/meter#optimum) |                 | The optimal numeric value.                                     |
 
 | Attribute name                               | Default value | Description                                                                                                                                  |
 | -------------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("max","progress")}} |               | This attribute describes how much work the task indicated by the {{HTMLElement("progress")}} element requires before it's complete. |
+| [`max`](/ko/docs/Web/HTML/Element/progress#max) |               | This attribute describes how much work the task indicated by the {{HTMLElement("progress")}} element requires before it's complete. |
 
 ### The \<button> element
 
@@ -841,16 +841,16 @@ Let's take an example:
 - 리셋 버튼은 폼의 모든 위젯들을 기본 값으로 재설정한다. 폼 사용자 경험 관점에서 이 버튼을 사용하는것은 좋지 않은 사례로 간주되고 이를 피해야 한다. 이것은 사용자가 단순히 실수로 한것이 모든 작업을 잃게 할 수 있다.
 - 익명 버튼은 어떠한 의미도 없는 대신 자바스크립트를 이용하여 다룰 수 있다..
 
-**{HTMLElement("button")}} 요소의 속성**
+**{{HTMLElement("button")}} 요소의 속성**
 
 | 속성 이름                                                | 기본값   | 설명                                                                                                            |
 | -------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------- |
-| {{htmlattrxref("type","button")}}             | `submit` | 버튼의 타입. `button`, `reset`, `submit 이 있다.`                                                               |
-| {{htmlattrxref("formaction","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 action 속성에 오버라이드 된다.     |
-| {{htmlattrxref("formenctype","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 enctype 속성에 오버라이드 된다.    |
-| {{htmlattrxref("formmethod","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 method 속성에 오버라이드 된다.     |
-| {{htmlattrxref("formnovalidate","button")}} |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 novalidate 속성에 오버라이드 된다. |
-| {{htmlattrxref("formtarget","button")}}     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 target 속성에 오버라이드 된다.     |
+| [`type`](/ko/docs/Web/HTML/Element/button#type)             | `submit` | 버튼의 타입. `button`, `reset`, `submit 이 있다.`                                                               |
+| [`formaction`](/ko/docs/Web/HTML/Element/button#formaction)     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 action 속성에 오버라이드 된다.     |
+| [`formenctype`](/ko/docs/Web/HTML/Element/button#formenctype)     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 enctype 속성에 오버라이드 된다.    |
+| [`formmethod`](/ko/docs/Web/HTML/Element/button#formmethod)     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 method 속성에 오버라이드 된다.     |
+| [`formnovalidate`](/ko/docs/Web/HTML/Element/button#formnovalidate) |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 novalidate 속성에 오버라이드 된다. |
+| [`formtarget`](/ko/docs/Web/HTML/Element/button#formtarget)     |          | 만약 버튼이 submit 버튼이면 이 속성은 {{HTMLElement("form")}}요소의 target 속성에 오버라이드 된다.     |
 
 기술적으로 말하면 {{HTMLElement("button")}} 요소와 {{HTMLElement("input")}} 요소의 속성에 정의된 버튼 요소는 거의 차이가 없다. 단 한가지 차이점은 버튼 자체의 라벨 이다.요소 안에서는 라벨은 오직 문자 데이터로만 나타 낼 수 있지만 {{HTMLElement("button")}} 요소에서는 어떠한 HTML이 될 수있다. 그래서 이에 따른 스타일을 디자인 할 수있다.
 

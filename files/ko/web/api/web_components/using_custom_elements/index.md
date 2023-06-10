@@ -48,7 +48,7 @@ class WordCount extends HTMLParagraphElement {
 두 종류의 사용자 정의 요소가 있습니다.
 
 - **독립적인 사용자 정의 요소**는 독립적입니다. 이 유형의 요소는 표준 HTML 요소를 상속받지 않습니다. 이러한 요소는 페이지에서 말 그대로 HTML 요소로 작성됨으로써 사용됩니다. 예를 들어 `<popup-info>`, 혹은 `document.createElement("popup-info")`.
-- **사용자 정의된 내장 요소**는 기본 HTML 요소를 상속받습니다. 이러한 요소를 생성하기 위해서는, (위의 예제에서 암시되었듯이) 어떤 요소를 이것이 확장하는지 명시해야 하며, 이러한 요소는 기본 요소를 작성함으로써 사용되나 {{htmlattrxref("is")}} 특성 (혹은 속성) 에 사용자 정의 요소의 이름을 명시해야 합니다. 예를 들어 `<p is="word-count">`, 혹은 `document.createElement("p", { is: "word-count" })`.
+- **사용자 정의된 내장 요소**는 기본 HTML 요소를 상속받습니다. 이러한 요소를 생성하기 위해서는, (위의 예제에서 암시되었듯이) 어떤 요소를 이것이 확장하는지 명시해야 하며, 이러한 요소는 기본 요소를 작성함으로써 사용되나 [`is`](/ko/docs/Web/HTML/Global_attributes#is) 특성 (혹은 속성) 에 사용자 정의 요소의 이름을 명시해야 합니다. 예를 들어 `<p is="word-count">`, 혹은 `document.createElement("p", { is: "word-count" })`.
 
 ## 몇 가지 간단한 예제 살펴보기
 

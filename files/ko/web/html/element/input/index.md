@@ -11,7 +11,7 @@ slug: Web/HTML/Element/input
 
 ## `<input>` 유형
 
-`<input>` 요소의 동작 방식은 {{htmlattrxref("type")}} 특성에 따라 현격히 달라지므로, 각각의 유형은 별도의 참고 문서에서 더 자세히 확인할 수 있습니다. 특성을 지정하지 않은 경우, 기본값은 `text`입니다.
+`<input>` 요소의 동작 방식은 [`type`](/ko/docs/Web/HTML/Global_attributes#type) 특성에 따라 현격히 달라지므로, 각각의 유형은 별도의 참고 문서에서 더 자세히 확인할 수 있습니다. 특성을 지정하지 않은 경우, 기본값은 `text`입니다.
 
 가능한 유형은 다음과 같습니다.
 
@@ -32,7 +32,7 @@ slug: Web/HTML/Element/input
     <tr>
       <td>{{HTMLElement("input/button", "button")}}</td>
       <td>
-        기본 행동을 가지지 않으며 {{htmlattrxref("value", "input")}}을
+        기본 행동을 가지지 않으며 <a href="/ko/docs/Web/HTML/Element/input#value"><code>value</code></a>을
         레이블로 사용하는 푸시 버튼.
       </td>
       <td id="examplebutton">
@@ -112,7 +112,7 @@ slug: Web/HTML/Element/input
       <td>{{HTMLElement("input/file", "file")}}</td>
       <td>
         파일을 지정할 수 있는 컨트롤.
-        {{htmlattrxref("accept", "input")}} 특성을 사용하면
+        <a href="/ko/docs/Web/HTML/Element/input#accept"><code>accept</code></a> 특성을 사용하면
         허용하는 파일 유형을 지정할 수 있습니다.
       </td>
       <td id="examplefile">
@@ -324,7 +324,7 @@ slug: Web/HTML/Element/input
 
 ## 속성
 
-`<input>` 요소가 강력한 이유는 바로 다양한 속성 때문입니다. 그 중에서도, 위의 표에서 확인할 수 있는 {{htmlattrxref("type", "input")}} 속성이 제일 중요합니다. 모든 `<input>` 요소는 유형에 상관하지 않고 {{domxref("HTMLInputElement")}} 인터페이스에 기반하므로, 기술적으로는 모든 `<input>`이 동일한 속성을 가집니다. 그러나 사실 대부분의 속성은 일부 유형에서만 효과를 보입니다. 게다가, 어떤 속성은 유형별로 그 영향이 달라집니다.
+`<input>` 요소가 강력한 이유는 바로 다양한 속성 때문입니다. 그 중에서도, 위의 표에서 확인할 수 있는 [`type`](/ko/docs/Web/HTML/Element/input#type) 속성이 제일 중요합니다. 모든 `<input>` 요소는 유형에 상관하지 않고 {{domxref("HTMLInputElement")}} 인터페이스에 기반하므로, 기술적으로는 모든 `<input>`이 동일한 속성을 가집니다. 그러나 사실 대부분의 속성은 일부 유형에서만 효과를 보입니다. 게다가, 어떤 속성은 유형별로 그 영향이 달라집니다.
 
 여기에서는 모든 속성값들에 대해 간략한 설명을 담은 표를 제공합니다. 이 표 다음에는 각각의 속성을 더욱 상세하게 설명하는 목록이 나오는데, 그들이 연관된 input 유형과 함께 나옵니다. 대부분의 혹은 모든 input 유형에 공통적인 속성들은 그 아래 더욱 상세하게 설명되어 있습니다. 몇몇 input 유형에만 특정하게 해당하는 속성들이나 모든 유형에 공통적으로 해당하지만 특정 유형에 사용될 때 특정한 행동양식을 나타내는 속성들은 그 유형의 해당 페이지에 대신 기술되어 있습니다. 이 요소에는 글로벌 속성들도 포함됩니다. input에 관련된 특별히 중요한 속성들은 하이라이트로 표시되었습니다.
 
@@ -419,11 +419,11 @@ A few additional non-standard attributes are listed following the descriptions o
 
     Specifically, disabled inputs do not receive the [`click`](/ko/docs/Web/API/Element/click_event) event, and disabled inputs are not submitted with the form.
 
-    > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
+    > **참고:** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/ko/docs/Web/HTML/Element/input#autocomplete) attribute to control this feature.
 
 - {{htmlattrdef("form")}}
 
-  - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the {{htmlattrxref("id")}} of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.
+  - : A string specifying the {{HTMLElement("form")}} element with which the input is associated (that is, its **form owner**). This string's value, if present, must match the [`id`](/ko/docs/Web/HTML/Global_attributes#id) of a `<form>` element in the same document. If this attribute isn't specified, the `<input>` element is associated with the nearest containing form, if any.
 
     The `form` attribute lets you place an input anywhere in the document but have it included with a form elsewhere in the document.
 
@@ -448,7 +448,7 @@ A few additional non-standard attributes are listed following the descriptions o
     `text`, `tel`, `url`, `email`, `numeric`, `decimal`, and `search`
 - {{htmlattrdef("list")}}
 
-  - : The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
+  - : The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/ko/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
 
     ```html hidden
     <datalist id="colorsxx">
@@ -498,7 +498,7 @@ A few additional non-standard attributes are listed following the descriptions o
     See the {{htmlelement('datalist')}} element.
 
 - [{{htmlattrdef("max")}}](/ko/docs/Web/HTML/Attributes/max)
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the greatest value in the range of permitted values. If the [`value`](/ko/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `max` attribute isn't a number, then the element has no maximum value.
 - {{htmlattrdef("maxlength")}}
 
   - : Valid for `text`, `search`, `url`, `tel`, `email`, and `password`, it defines the maximum number of characters (as UTF-16 code units) the user can enter into the field. This must be an integer value 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the field has no maximum length. This value must also be greater than or equal to the value of `minlength`.
@@ -507,7 +507,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - {{htmlattrdef("min")}}
 
-  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the {{htmlattrxref("value", "input")}} entered into the element is less than this this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
+  - : Valid for `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`, it defines the most negative value in the range of permitted values. If the [`value`](/ko/docs/Web/HTML/Element/input#value) entered into the element is less than this this, the element fails [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). If the value of the `min` attribute isn't a number, then the element has no minimum value.
 
     This value must be less than or equal to the value of the `max` attribute. If the `min` attribute is present by is not specified or is invalid, no `min` value is applied. If the `min` attribute is valid and a non-empty value is less than the minimum allowed by the `min` attribute, constraint validation will prevent form submission. See [Client-side validation](#client-side_validation) for more information.
 
@@ -559,11 +559,11 @@ When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} 
 
 - {{htmlattrdef("pattern")}}
 
-  - : The `pattern` attribute, when specified, is a regular expression that the input's {{htmlattrxref("value")}} must match in order for the value to pass [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
+  - : The `pattern` attribute, when specified, is a regular expression that the input's [`value`](/ko/docs/Web/HTML/Global_attributes#value) must match in order for the value to pass [constraint validation](/ko/docs/Web/Guide/HTML/HTML5/Constraint_validation). It must be a valid JavaScript regular expression, as used by the {{jsxref("RegExp")}} type, and as documented in our [guide on regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions); the `'u'` flag is specified when compiling the regular expression, so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text.
 
     If the `pattern` attribute is present but is not specified or is invalid, no regular expression is applied and this attribute is ignored completely. If the pattern attribute is valid and a non-empty value does not match the pattern, constraint validation will prevent form submission.
 
-    > **참고:** **Tip:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a {{htmlattrxref("title", "input")}} attribute to explain what the requirements are to match the pattern; most browsers will display this title as as a tooltip The visible explanation is required for accessibilty. The tooltip is an enhancement.
+    > **참고:** **Tip:** If using the `pattern` attribute, inform the user about the expected format by including explanatory text nearby. You can also include a [`title`](/ko/docs/Web/HTML/Element/input#title) attribute to explain what the requirements are to match the pattern; most browsers will display this title as as a tooltip The visible explanation is required for accessibilty. The tooltip is an enhancement.
 
     See [Client-side validation](#client-side_validation) for more information.
 

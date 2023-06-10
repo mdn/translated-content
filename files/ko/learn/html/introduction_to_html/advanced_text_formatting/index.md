@@ -186,7 +186,7 @@ The quote element — `<q>` — is "intended for short quotations that don't req
 
 ### Citations
 
-{{htmlattrxref("cite","blockquote")}}요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 `<cite>` 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — `<cite>` 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.
+[`cite`](/ko/docs/Web/HTML/Element/blockquote#cite)요소의 컨텐츠는 유용하게 보이지만 안타깝게도 브라우저, 스크린 리더 등은 이를 이용해서 할 수 있는 것이 많지 않습니다. 브라우저는 javascript나 CSS로 여러분이 직접 해결책을 제시하지 않는다면 `cite` 컨텐츠를 화면에 표시할 방법이 없습니다. 페이지에서 인용 출처를 화면에 나타나게 하고 싶다면 `<cite>` 요소를 사용하는 것이 더 좋습니다. 이는 이름 그대로 출처를 포함하기 위해서 사용됩니다. — `<cite>` 요소 안에 있는 출처에 대한 링크를 연결할 수 있습니다.
 
 ```html
 <p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">

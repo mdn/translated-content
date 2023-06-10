@@ -5,7 +5,7 @@ slug: Web/HTML/Element/blockquote
 
 {{HTMLSidebar}}
 
-**HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 {{htmlattrxref("cite", "blockquote")}} 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
+**HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 [`cite`](/ko/docs/Web/HTML/Element/blockquote#cite) 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 

@@ -14,7 +14,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 {{htmlattrxref ( "width", "canvas")}}와 {{htmlattrxref ( "height", "canvas")}}의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
+{{HTMLElement ( "canvas")}}는 처음에는 src 및 alt 속성이 없다는 점만 제외하면 {{HTMLElement ( "img")}} 요소처럼 보입니다. 실제로 `<canvas>` 요소에는 [`width`](/ko/docs/Web/HTML/Element/canvas#width)와 [`height`](/ko/docs/Web/HTML/Element/canvas#height)의 두 속성만 있습니다. 이것들은 모두 선택사항이며 {{Glossary ( "DOM")}} [프로퍼티](/ko/docs/Web/API/HTMLCanvasElement)를 사용하여 설정할 수도 있습니다. width 및 height 속성을 지정하지 않으면 캔버스의 처음 너비는 **300 픽셀**이고 높이는 **150 픽셀**입니다. 요소는 {{Glossary ( "CSS")}}에 의해 임의로 크기를 정할 수 있지만 렌더링하는 동안 이미지는 레이아웃 크기에 맞게 크기가 조정됩니다. CSS 크기 지정이 초기 캔버스의 비율을 고려하지 않으면 왜곡되어 나타납니다 .
 
 > **참고:** **노트:** 만약 렌더링이 왜곡된 것처럼 보이는 경우 CSS를 사용하지 않고 `<canvas>` 속성에서 `width` 및 `height` 속성을 명시적으로 지정하십시오.
 

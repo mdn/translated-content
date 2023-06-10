@@ -48,7 +48,7 @@ slug: Web/HTML/Element/area
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
       <td>
-        {{htmlattrxref("href", "area")}} 특성이 존재하면
+        <a href="/ko/docs/Web/HTML/Element/area#href"><code>href</code></a> 특성이 존재하면
         <a href='/ko/docs/Web/Accessibility/ARIA/Roles/link_role'><code>link</code></a>, 그 외의 경우
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
           >대응하는 역할 없음</a
@@ -71,7 +71,7 @@ slug: Web/HTML/Element/area
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("alt")}}
-  - : 이미지를 출력하지 않는 브라우저에서 대신 표시할 대안 텍스트입니다. 텍스트의 내용은 대안 텍스트 없이 이미지만 표시할 때와 동일한 수준의 선택지를 나타낼 수 있어야 합니다. {{htmlattrxref("href", "area")}} 특성이 존재할 경우 필수 사항입니다.
+  - : 이미지를 출력하지 않는 브라우저에서 대신 표시할 대안 텍스트입니다. 텍스트의 내용은 대안 텍스트 없이 이미지만 표시할 때와 동일한 수준의 선택지를 나타낼 수 있어야 합니다. [`href`](/ko/docs/Web/HTML/Element/area#href) 특성이 존재할 경우 필수 사항입니다.
 
 - {{htmlattrdef("coords")}}
 
@@ -85,12 +85,12 @@ slug: Web/HTML/Element/area
 
 - {{htmlattrdef("download")}}
 
-특성이 존재할 경우, 이 하이퍼링크는 리소스 다운로드 용도로 사용하는 것을 의도했음을 나타냅니다. {{htmlelement("a")}}의 {{htmlattrxref("download", "a")}} 특성 설명에서 전체 설명을 볼 수 있습니다.</dl>
+특성이 존재할 경우, 이 하이퍼링크는 리소스 다운로드 용도로 사용하는 것을 의도했음을 나타냅니다. {{htmlelement("a")}}의 [`download`](/ko/docs/Web/HTML/Element/a#download) 특성 설명에서 전체 설명을 볼 수 있습니다.</dl>
 
 - {{htmlattrdef("href")}}
   - : `<area>` 하이퍼링크의 대상입니다. 유효한 URL이야 합니다. 생략할 경우, 이 `<area>` 요소는 하이퍼링크를 나타내지 않습니다.
 - {{htmlattrdef("hreflang")}}
-  - : 연결한 리소스의 언어를 나타냅니다. 가능한 값은 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. {{htmlattrxref("href", "area")}} 특성이 존재할 때만 사용하세요.
+  - : 연결한 리소스의 언어를 나타냅니다. 가능한 값은 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)에 따릅니다. [`href`](/ko/docs/Web/HTML/Element/area#href) 특성이 존재할 때만 사용하세요.
 - {{htmlattrdef("ping")}}
   - : 하이퍼링크를 따라갈 때, 백그라운드에서 브라우저가 {{HTTPMethod("POST")}} 요청을 본문 `PING`으로 전송할 URL의 목록입니다. 공백으로 구분하며 주로 추적용으로 사용합니다.
 

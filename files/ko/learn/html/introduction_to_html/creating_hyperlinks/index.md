@@ -46,7 +46,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ## 링크의 구조
 
-A basic link is created by wrapping the text (or other content, see [Block level links](#block_level_links)) you want to turn into a link inside an {{htmlelement("a")}} element, and giving it an {{htmlattrxref("href", "a")}} 속성은 (also known as a **target**) 사이트의 주소가 포함된 링크를 당신에게 줍니다.
+A basic link is created by wrapping the text (or other content, see [Block level links](#block_level_links)) you want to turn into a link inside an {{htmlelement("a")}} element, and giving it an [`href`](/ko/docs/Web/HTML/Element/a#href) 속성은 (also known as a **target**) 사이트의 주소가 포함된 링크를 당신에게 줍니다.
 
 ```html
 <p>I'm creating a link to
@@ -135,7 +135,7 @@ Find details on our <a href="contacts.html">contacts page</a>.</p>
 
 ### Document fragments(문서 조각)
 
-문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 링크 할 수 있다. 그것을 하기 위해서 먼저 당신은 링크를 시키고 싶은 태그에 {{htmlattrxref("id")}} 속성을 넣어 주어야한다. 일반적으로는 특정 헤드라인에 연결하는 것이 타당하다.
+문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 링크 할 수 있다. 그것을 하기 위해서 먼저 당신은 링크를 시키고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성을 넣어 주어야한다. 일반적으로는 특정 헤드라인에 연결하는 것이 타당하다.
 
 예제:
 
@@ -300,7 +300,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 이렇게 되면 다음과 같은 링크가 생성된다: [Send email to nowhere](mailto:nowhere@mozilla.org).
 
-사실, 이메일 주소는 심지어 선택사항이다. 그것을 생략하면(즉, 당신의 {{htmlattrxref("href", "a")}} 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열린다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용하다.
+사실, 이메일 주소는 심지어 선택사항이다. 그것을 생략하면(즉, 당신의 [`href`](/ko/docs/Web/HTML/Element/a#href) 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열린다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용하다.
 
 ### 세부 사항 지정하기
 

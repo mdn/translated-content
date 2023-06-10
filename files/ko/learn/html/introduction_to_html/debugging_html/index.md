@@ -94,7 +94,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
     - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
     - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasised.
     - This section is badly nested: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
-    - The {{htmlattrxref("href","a")}} attribute value has a missing closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
+    - The [`href`](/ko/docs/Web/HTML/Element/a#href) attribute value has a missing closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
 5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/ko/docs/Learn/Discover_browser_developer_tools).
 6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)

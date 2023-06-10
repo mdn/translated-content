@@ -232,15 +232,15 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/ko/docs/Web/CSS/border)
   - : 이를 적용하면, `<iframe>` 은 테두리 없이 표시됩니다. 적용하지 않으면 브라우저는 `<iframe>`을 기본적으로 테두리가 있는 상태로 표시하는데, 일반적으로 바람직하지는 않습니다.
-- {{htmlattrxref('allowfullscreen','iframe')}}
+- [`allowfullscreen`](/ko/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : 이를 설정하면, `<iframe>`에서 [Fullscreen API](/ko/docs/Web/API/Fullscreen_API)를 통해 전제화면 모드를 실행할 수 있습니다. Fullscreen API는 본문에서 다루는 범위를 넘어선 내용입니다.
-- {{htmlattrxref('src','iframe')}}
+- [`src`](/ko/docs/Web/HTML/Element/iframe#src)
   - : {{htmlelement("video")}}/{{htmlelement("img")}}와 마찬가지로 삽입될 문서의 URL 경로를 저장합니다.
-- {{htmlattrxref('width','iframe')}} 와 {{htmlattrxref('height','iframe')}}
+- [`width`](/ko/docs/Web/HTML/Element/iframe#width) 와 [`height`](/ko/docs/Web/HTML/Element/iframe#height)
   - : iframe 요소에 원하는 너비와 높이를 설정할 수 있습니다.
 - 대체 콘텐츠
   - : {{htmlelement("video")}} 요소와 같이 유사한 다른 요소들과 마찬가지로, `<iframe></iframe>` 여닫는 태그 사이에 대체 콘텐츠를 추가하여 브라우저가 `<iframe>`을 지원하지 않는 경우 대체 콘텐츠를 표시할 수 있습니다. 위 예시에서는 해당 페이지로 이동하는 링크를 추가하였습니다. 요즘 `<iframe>`을 지원하지 않는 브라우저를 마주칠 일은 거의 없겠지만요.
-- {{htmlattrxref('sandbox','iframe')}}
+- [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox)
   - : IE 10 이상에서 지원되는`<iframe>`의 다른 기능보다 이 특성은 상대적으로 최신 브라우저에서 작동하며 높은 보안 설정을 요구합니다. 이에 대해서는 다음 내용에서 다룰 예정입니다.
 
 > **참고:** 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
@@ -280,7 +280,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 샌드박스를 적용하지 않은 콘텐츠는 JavaScript를 실행하거나, 폼을 제출하거나, 새 창을 띄우는 등의 작업을 할 수 있습니다. 이전 예시에서 보았듯 기본적으로 `sandbox` 특성을 파라미터 없이 사용하여 가능한 모든 제약을 부과해야 합니다.
 
-꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. {{htmlattrxref('sandbox','iframe')}} 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
+꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox) 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
 
 > **참고:** 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
 
@@ -311,25 +311,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>삽입된 콘텐츠의 {{glossary("URL")}}</td>
-      <td>{{htmlattrxref('src','embed')}}</td>
-      <td>{{htmlattrxref('data','object')}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         삽입된 콘텐츠의 정확한 {{glossary("MIME type", 'media type')}}
       </td>
-      <td>{{htmlattrxref('type','embed')}}</td>
-      <td>{{htmlattrxref('type','object')}}</td>
+      <td><a href="/ko/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         플러그인이 제어하는 박스의 높이와 너비(CSS 픽셀단위)
       </td>
       <td>
-        {{htmlattrxref('height','embed')}}<br />{{htmlattrxref('width','embed')}}
+        <a href="/ko/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-        {{htmlattrxref('height','object')}}<br />{{htmlattrxref('width','object')}}
+        <a href="/ko/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

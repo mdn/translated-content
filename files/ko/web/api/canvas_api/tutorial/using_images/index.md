@@ -42,7 +42,7 @@ canvas API는 아래의 데이터 타입을 이미지 소스로 사용 할 수 �
 
 ### 다른 도메인의 이미지 사용하기
 
-Using the {{htmlattrxref("crossorigin", "img")}} attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/ko/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+Using the [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/ko/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ### 다른 캔버스 요소 (canvas elements) 사용하기
 

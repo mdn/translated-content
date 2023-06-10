@@ -26,4 +26,4 @@ Internet Explorer에서 `contenteditable`은 {{htmlelement("table")}}, {{htmlele
 
 - [콘텐츠를 편집 가능하게 만들기](/ko/docs/Web/Guide/HTML/Editable_content)
 - {{domxref("HTMLElement.isContentEditable")}}
-- {{htmlattrxref("contenteditable")}} 전역 속성
+- [`contenteditable`](/ko/docs/Web/HTML/Global_attributes#contenteditable) 전역 속성
