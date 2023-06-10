@@ -2,6 +2,7 @@
 title: 空元素
 slug: Glossary/Void_element
 ---
+
 一个**空元素**（empty element）可能是 HTML、SVG，或者 MathML 里的一个不能存在子节点（例如内嵌的元素或者元素内的文本）的{{Glossary("element", "元素")}}。
 
 [HTML](https://www.w3.org/html/wg/drafts/html/CR/)，[SVG](https://www.w3.org/TR/SVG2/) 和 [MathML](https://www.w3.org/Math/draft-spec/) 的规范都详细定义了每个元素能包含的具体内容（define very precisely what each element can contain）。许多组合是没有任何语义含义的，比如一个 {{HTMLElement("audio")}} 元素嵌套在一个 {{HTMLElement("hr")}} 元素里。
@@ -18,7 +19,6 @@ slug: Glossary/Void_element
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}}（HTML 5.2 草案已移除该元素）
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}}

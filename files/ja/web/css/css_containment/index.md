@@ -1,6 +1,6 @@
 ---
 title: CSS 封じ込め
-slug: Web/CSS/CSS_Containment
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}

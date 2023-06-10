@@ -576,7 +576,7 @@ function useDatabase(db) {
 
 IndexedDB 使用同源原则，这意味着它把存储空间绑定到了创建它的站点的源（典型情况下，就是站点的域或是子域），所以它不能被任何其他源访问。
 
-第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)（参见 {{bug("1147821")}}）。
+第三方窗口内容（比如 {{htmlelement("iframe")}} 内容）可以访问它所嵌入的源的 IndexedDB 仓库，除非浏览器被设置成[从不接受第三方 cookies](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)（参见 [Firefox bug 1147821](https://bugzil.la/1147821)）。
 
 ## 浏览器关闭警告
 

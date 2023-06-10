@@ -1,6 +1,6 @@
 ---
 title: CSS Basic User Interface
-slug: Web/CSS/CSS_Basic_User_Interface
+slug: Web/CSS/CSS_basic_user_interface
 tags:
   - Aperçu
   - CSS

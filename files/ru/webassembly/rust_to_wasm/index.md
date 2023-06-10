@@ -1,8 +1,9 @@
 ---
 title: Компиляция Rust в WebAssembly
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 translation_of: WebAssembly/Rust_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Если уже вы написали некоторый код на Rust, вы можете скомпилировать его в WebAssembly! Из этого руководства вы узнаете всё, что вам нужно знать, чтобы скомпилировать проект на Rust в wasm и использовать его в существующем веб-приложении.

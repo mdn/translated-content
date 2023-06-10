@@ -1,6 +1,6 @@
 ---
 title: OpenType フォント特性の手引き
-slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
+slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 ---
 
 {{CSSRef}}

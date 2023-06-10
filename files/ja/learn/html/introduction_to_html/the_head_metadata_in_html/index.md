@@ -161,7 +161,7 @@ description は検索エンジンの結果ページにも使われます。練�
 例えば、 [Open Graph Data](https://ogp.me/) は Facebook が開発した、ウェブサイトにより豊富なメタデータを与えるメタデータプロトコルです。 MDN Web Docs のソースコードでは、次のようなものがあります。
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
 and HTML Apps. It also documents Mozilla products, like Firefox OS.">
@@ -234,7 +234,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
   <script src="my-js-file.js" defer></script>
   ```
 
-  **メモ**: `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
+  > **メモ:** `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 

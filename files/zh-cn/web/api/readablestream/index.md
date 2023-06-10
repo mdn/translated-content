@@ -3,7 +3,7 @@ title: ReadableStream
 slug: Web/API/ReadableStream
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Streams")}}
 
 [Stream API](/zh-CN/docs/Web/API/Streams_API) 中的 `ReadableStream` 接口表示可读的字节数据流。[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 通过 {{domxref("Response")}} 的属性 {{domxref("Body.body", "body")}} 提供了一个具体的 `ReadableStream` 对象。
 
@@ -126,5 +126,8 @@ console.log(total);
 
 ## 参见
 
+- [Stream API 概念](/zh-CN/docs/Web/API/Streams_API)
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
-- [web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) 或 [sd-streams](https://github.com/stardazed/sd-streams)——polyfill
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) 或 [sd-streams](https://github.com/stardazed/sd-streams)——polyfill

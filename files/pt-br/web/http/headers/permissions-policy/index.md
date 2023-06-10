@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Feature-Policy
 
 {{HTTPSidebar}}
 
-O cabeçalho HTTP **`Feature-Policy`** provém um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
+O cabeçalho HTTP **`Feature-Policy`** provê um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
 
 > **Nota:** Este cabeçalho ainda está em estado experimental, e é sujeito a mudança a qualquer momento. Tenha cautela quando implementando isso no seu site. O cabeçalho agora foi renomeado para `Permissions-Policy` na especificação, e este artigo irá eventualmente ser atualizado para refletir estas atualizações.
 

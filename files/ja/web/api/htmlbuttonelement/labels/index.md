@@ -1,6 +1,8 @@
 ---
-title: HTMLButtonElement.labels
+title: "HTMLButtonElement: labels プロパティ"
 slug: Web/API/HTMLButtonElement/labels
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("DOM")}}
@@ -25,15 +27,17 @@ slug: Web/API/HTMLButtonElement/labels
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("test");
-  for(var i = 0; i < button.labels.length; i++) {
-    console.log(button.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of button.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+### 結果
+
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## 仕様書
 

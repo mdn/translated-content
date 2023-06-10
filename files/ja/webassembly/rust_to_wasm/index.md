@@ -1,8 +1,6 @@
 ---
 title: Rust から WebAssembly にコンパイルする
-slug: WebAssembly/Rust_to_wasm
-l10n:
-  sourceCommit: 51f2cde58fff4a44242577b2540bdfdfc525dda4
+slug: WebAssembly/Rust_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

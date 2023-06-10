@@ -28,7 +28,7 @@ A new `DataView` object representing the specified data buffer.
 
 ### Errors thrown
 
-- `{{jsxref("RangeError")}}`
+- {{jsxref("RangeError")}}
   - : Thrown if the `byteOffset` and `byteLength` result in the specified view extending past the end of the buffer.
 
 ## 描述

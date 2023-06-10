@@ -49,7 +49,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
     - `off` : l'utilisateur doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
     - `on` : le navigateur peut compléter la saisie de l'utilisateur en fonction de ce que l'utilisateur a déjà saisi précédemment sur ce champ.
 
-    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut {{htmlattrxref("autocomplete", "form")}} de l'élément {{HTMLElement("form")}}.
+    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) de l'élément {{HTMLElement("form")}}.
 
 - {{htmlattrdef("autofocus")}}
   - : Cet attribut permet d'indiquer que ce contrôle doit recevoir le focus au chargement de la page. Seul un élément de formulaire au sein d'un document peut avoir cet attribut déclaré.

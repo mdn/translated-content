@@ -251,7 +251,7 @@ float mozMeasureText(
 var text = "Sample String";
 var width = ctx.canvas.width;
 var len = ctx.mozMeasureText(text);
-ctx.translate((width - len)/2, 0);
+ctx.translate((width - len) / 2, 0);
 ctx.mozDrawText(text);
 ```
 
@@ -278,8 +278,8 @@ void mozPathText(
 ctx.fillStyle = "green";
 ctx.strokeStyle = "black";
 ctx.mozPathText("Sample String");
-ctx.fill()
-ctx.stroke()
+ctx.fill();
+ctx.stroke();
 ```
 
 這個範例繪出文字“Sample String”，填充顏色是綠色，外框顏色是黑色。

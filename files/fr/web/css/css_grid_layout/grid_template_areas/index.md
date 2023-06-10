@@ -1,6 +1,6 @@
 ---
 title: Définir des zones sur une grille
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 translation_of: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
 original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 ---

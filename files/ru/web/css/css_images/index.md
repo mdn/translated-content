@@ -1,11 +1,12 @@
 ---
 title: CSS Images
-slug: Web/CSS/CSS_Images
+slug: Web/CSS/CSS_images
 tags:
   - CSS Images
   - CSS руководство
 translation_of: Web/CSS/CSS_Images
 ---
+
 {{CSSRef}}
 
 **CSS Images** - модуль в CSS, который определяет, какие типы изображений можно использовать (тип {{cssxref("&lt;image&gt;")}}, содержащий URL, градиенты и другие типы изображений), как изменять их размер и как они, и другие замещённые элементы, взаимодействуют с другими моделями макетов.

@@ -1,6 +1,8 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/input/url
+l10n:
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{HTMLSidebar}}
@@ -13,54 +15,9 @@ slug: Web/HTML/Element/input/url
 
 `url` 型に対応していないブラウザーでは、 `url` 入力欄は標準の {{HTMLElement("input/text", "text")}} 入力欄で代替されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>URL を表す {{domxref("DOMString")}}、または空欄</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>list</code>, <code>value</code>, <code>selectionEnd</code>,
-        <code>selectionDirection</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は {{domxref("DOMString")}} で、自動的に URL の構文として検証されます。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
+{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、自動的に URL の構文として検証される文字列が入ります。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
 
 1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを表します。
 2. 単一の正しい形式の絶対 URL。 URL が実在する必要はありませんが、少なくとも正しい書式です。簡単に言えば、 `urlscheme://restofurl` の形です。
@@ -79,17 +36,17 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `url` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドの URL の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドの URL の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### minlength
 
 ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `url` 入力欄には最小文字数が設定されません。
 
-入力欄の URL の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄の URL の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -103,7 +60,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
 ### readonly
 
@@ -147,15 +104,13 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 ### mozactionhint
 
-Mozilla 拡張で Android 版 Firefox で対応しており、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。この情報は仮想キーボードの <kbd>Enter</kbd> キーにどのようなラベルを使用するかを決定するために使用されます。
+Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-> **メモ:** これはグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) として[標準化されています](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute)が、まだ広くは実装されていません。 Firefox の実装状態の変遷を確認するには、 [Firefox バグ 1490661](https://bugzil.la/1490661) を参照してください。
-
-許可されている値は `go`, `done`, `next`, `search`, `send` です。ブラウザーはこのヒントを使用して、 Enter キーにどのラベルを置くかを決定します。
+この属性は非推奨です。代わりにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
 
 ## URL 入力欄の使用
 
-URL 入力欄を `type` に適切な値 `url` を指定して作成すると、入力されたテキストが少なくとも正規の URL となり得る正しい形式であることを自動的に検証することができるようになります。これにより、ユーザが自分のウェブサイトのアドレスを間違って入力したり、無効なアドレスを入力したりすることを避けることができます。
+URL 入力欄を `type` に適切な値 `url` を指定して作成すると、入力されたテキストが少なくとも正規の URL となり得る正しい形式であることを自動的に検証することができるようになります。これにより、ユーザーが自分のウェブサイトのアドレスを間違って入力したり、無効なアドレスを入力したりすることを避けることができます。
 
 しかし、指定されたテキストが実際に存在する URL であるか、サイトのユーザーに対応しているか、またはその他の方法で受け入れられるかを確認するには、これだけでは不十分であることに注意することが重要です。これは、フィールドの値が URL として適切にフォーマットされていることを保証するものです。
 
@@ -166,7 +121,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 現在、この要素を実装しているすべてのブラウザーは、基本的な検証機能を備えた標準的なテキスト入力フィールドとして実装しています。最も基本的な形として、 URL 入力は次のように実装することができます。
 
 ```html
-<input id="myURL" name="myURL" type="url">
+<input id="myURL" name="myURL" type="url" />
 ```
 
 {{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
@@ -182,8 +137,11 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 ここでは、 `url` 入力欄に `http://www.example.com` というプレイスホルダーが設定されています。編集フィールドの内容を操作すると、プレイスホルダーが消えたり現れたりすることに注意してください。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       placeholder="http://www.example.com">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  placeholder="http://www.example.com" />
 ```
 
 {{ EmbedLiveSample('Placeholders', 600, 40) }}
@@ -197,8 +155,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `url` のエディットボックスの幅は 30 文字です。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30">
+<input id="myURL" name="myURL" type="url" size="30" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -210,8 +167,13 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 以下の例では、幅 30 文字の URL 入力ボックスを生成し、入力内容が 10 文字以上 80 文字以下であることを要求しています。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       size="30" minlength="10" maxlength="80">
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  size="30"
+  minlength="10"
+  maxlength="80" />
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
@@ -225,8 +187,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 他と同様に、 `url` 入力欄に [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を設定することで既定値を指定することができます。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       value="http://www.example.com">
+<input id="myURL" name="myURL" type="url" value="http://www.example.com" />
 ```
 
 {{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
@@ -236,15 +197,14 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 さらに一歩進んで、既定の選択肢のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる URL をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は URL 入力ボックスの対応する提案値となっています。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/">
-  <option value="http://www.google.com/">
-  <option value="http://www.microsoft.com/">
-  <option value="https://www.mozilla.org/">
-  <option value="http://w3.org/">
+  <option value="https://developer.mozilla.org/"></option>
+  <option value="http://www.google.com/"></option>
+  <option value="http://www.microsoft.com/"></option>
+  <option value="https://www.mozilla.org/"></option>
+  <option value="http://w3.org/"></option>
 </datalist>
 ```
 
@@ -257,15 +217,14 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 [`label`](/ja/docs/Web/HTML/Element/option#label) 属性を 1 つまたはすべての `<option>` 要素に設定することで、テキストのラベルを提供することができます。ブラウザーによっては、ラベルのみを表示するものもあれば、ラベルと URL の両方を表示するものもあります。
 
 ```html
-<input id="myURL" name="myURL" type="url"
-       list="defaultURLs">
+<input id="myURL" name="myURL" type="url" list="defaultURLs" />
 
 <datalist id="defaultURLs">
-  <option value="https://developer.mozilla.org/" label="MDN Web Docs">
-  <option value="http://www.google.com/" label="Google">
-  <option value="http://www.microsoft.com/" label="Microsoft">
-  <option value="https://www.mozilla.org/" label="Mozilla">
-  <option value="http://w3.org/" label="W3C">
+  <option value="https://developer.mozilla.org/" label="MDN Web Docs"></option>
+  <option value="http://www.google.com/" label="Google"></option>
+  <option value="http://www.microsoft.com/" label="Microsoft"></option>
+  <option value="https://www.mozilla.org/" label="Mozilla"></option>
+  <option value="http://w3.org/" label="W3C"></option>
 </datalist>
 ```
 
@@ -281,7 +240,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 `url` 入力型に対応しているブラウザーは、自動的に検証を行い、 URL の標準の書式に一致するテキストのみが入力ボックスに入力されることを保証します。
 
-URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Standard](https://url.spec.whatwg.org/) で定義されており、私たちの記事 [What is a URL?](/ja/docs/Learn/Common_questions/What_is_a_URL) で初めての人のために説明されています。
+URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Standard](https://url.spec.whatwg.org/) で定義されており、私たちの記事 [What is a URL?](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) で初めての人のために説明されています。
 
 ### URL を必須にする
 
@@ -289,8 +248,8 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 
 ```html
 <form>
-  <input id="myURL" name="myURL" type="url" required>
-  <button>Submit</button>
+  <input id="myURL" name="myURL" type="url" required />
+  <button>送信</button>
 </form>
 ```
 
@@ -310,41 +269,45 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 div {
   margin-bottom: 10px;
   position: relative;
-  }
+}
 
-  input[type="number"] {
-    width: 100px;
-  }
+input[type="number"] {
+  width: 100px;
+}
 
-  input + span {
-    padding-right: 30px;
-  }
+input + span {
+  padding-right: 30px;
+}
 
-  input:invalid+span:after {
-    position: absolute; content: '✖';
-    padding-left: 5px;
-  }
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
 
-  input:valid+span:after {
-    position: absolute;
-    content: '✓';
-    padding-left: 5px;
-  }
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 ```html
 <form>
   <div>
     <label for="myURL">Enter the problem website address:</label>
-    <input id="myURL" name="myURL" type="url"
-           required pattern=".*\.myco\..*"
-           title="The URL must be in a Myco domain">
+    <input
+      id="myURL"
+      name="myURL"
+      type="url"
+      required
+      pattern=".*\.myco\..*"
+      title="The URL must be in a Myco domain" />
     <span class="validity"></span>
   </div>
   <div>
     <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text"
-           required>
+    <input id="myComment" name="myComment" type="text" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -371,7 +334,64 @@ div {
 
 `url` 型の入力欄について他に言うことはありません。数々の例については、[パターンによる検証](#パターンによる検証)と [URL 入力欄の使用](#url_入力欄の使用)の節で確認してください。
 
-[GitHub 上のパターン検証の例](https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html) （[ライブ例](https://mdn.github.io/learning-area/html/forms/url-example/)も参照してください）もあります。
+[GitHub 上のパターン検証の例](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html)（[ライブ例](https://mdn.github.io/learning-area/html/forms/url-example/)も参照してください）もあります。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>URL を表す文字列、または空欄</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>list</code>, <code>value</code>, <code>selectionEnd</code>,
+        <code>selectionDirection</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><code>list</code> 属性がない場合:
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code><br>
+      <code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

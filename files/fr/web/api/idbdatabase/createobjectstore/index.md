@@ -50,7 +50,7 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 - `InvalidStateError`
   - : Cette exception {{domxref("DOMException")}} est levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler {{domxref("IDBVersionChangeRequest.setVersion")}}.
 - `TransactionInactiveError`
-  - : Cette exception {{domxref("DOMException")}} est levée si la méthode est appelée sur une base de données qui n'existe pas (elle a par exemple été effacée). Dans les versions antérieures à Firefox 41, ce dernier levait une erreur `InvalidStateError`, cela est désormais corrigé (cf. {{bug("1176165")}}).
+  - : Cette exception {{domxref("DOMException")}} est levée si la méthode est appelée sur une base de données qui n'existe pas (elle a par exemple été effacée). Dans les versions antérieures à Firefox 41, ce dernier levait une erreur `InvalidStateError`, cela est désormais corrigé (cf. [bug Firefox 1176165](https://bugzil.la/1176165)).
 - `ConstraintError`
   - : Un magasin d'objet portant le même nom (la casse est importante) existe déjà dans cette base de donnée.
 - `InvalidAccessError`

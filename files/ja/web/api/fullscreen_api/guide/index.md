@@ -93,7 +93,7 @@ if (elem.requestFullscreen) {
 
 この例では、ウェブページの中に動画を表示しています。<kbd>Return</kbd> または <kbd>Enter</kbd> キーを押すと、ユーザーは動画のウィンドウ表示と全画面表示を切り替えて表示することができます。
 
-[ライブ例の表示](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
+[ライブ例の表示](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Enter キーの監視
 

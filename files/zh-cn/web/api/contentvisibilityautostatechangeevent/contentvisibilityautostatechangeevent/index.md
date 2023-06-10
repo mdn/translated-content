@@ -20,7 +20,7 @@ new ContentVisibilityAutoStateChangeEvent(type, options)
 - `options` {{optional_inline}}
   - : 包含下列属性的对象：
     - `skipped`
-      - : 布尔值，若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_Containment#跳过其内容)则设置为 `true`，否则为 `false`。
+      - : 布尔值，若用户代理[跳过元素内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)则设置为 `true`，否则为 `false`。
 
 ## 示例
 
@@ -43,6 +43,6 @@ canvasElem.addEventListener("contentvisibilityautostatechange", (event) => {
 ## 参见
 
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件
-- [CSS 局限](/en-US/docs/Web/CSS/CSS_Containment)
+- [CSS 局限](/en-US/docs/Web/CSS/CSS_containment)
 - {{CSSXref("content-visibility")}} 属性
 - {{CSSXref("contain")}} 属性

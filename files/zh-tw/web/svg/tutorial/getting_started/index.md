@@ -3,6 +3,8 @@ title: 入門
 slug: Web/SVG/Tutorial/Getting_Started
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
 
 ### 一個簡單的例子
@@ -23,7 +25,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 </svg>
 ```
 
-複製這段程式碼，在一個文件裡貼上，給該文件起名為 demo1.svg，然後用 Firefox 打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點[這裡](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+複製這段程式碼，在一個文件裡貼上，給該文件起名為 demo1.svg，然後用 Firefox 打開它，會渲染成下面截圖的樣子。(Firefox 用户: 點[這裡](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![svgdemo1.png](svgdemo1.png)
 

@@ -185,5 +185,5 @@ slug: Web/CSS/@supports
 
 ## 参见
 
-- [Using feature queries](/zh-CN/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - The CSSOM class {{DOMxRef("CSSSupportsRule")}}, and the {{DOMxRef("CSS.supports()")}} method that allows the same check to be performed via JavaScript.

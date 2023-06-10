@@ -29,13 +29,13 @@ Flexbox 还可以对齐主轴或交叉轴上的项目，从而提供对一组项
 ### 延伸阅读
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Relationship of flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Flexbox Guide: _[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Flexbox Guide: _[Contrulling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Contrulling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- CSS Flexbox Guide: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Relationship of flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Flexbox Guide: _[Ordering flex items](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- CSS Flexbox Guide: _[Contrulling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Contrulling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- CSS Flexbox Guide: _[Typical use cases of flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)_
 
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 

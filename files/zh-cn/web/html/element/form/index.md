@@ -143,7 +143,7 @@ slug: Web/HTML/Element/form
 ## 参见
 
 - [HTML 表单指南](/zh-CN/docs/Web/Guide/HTML/Forms)
-- 还有其他的一些元素也用于创建表单：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}},{{HTMLElement("keygen")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}
+- 还有其他的一些元素也用于创建表单：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}
 - Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
 - [ARIA: Form role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)
 - [ARIA: Search role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role)

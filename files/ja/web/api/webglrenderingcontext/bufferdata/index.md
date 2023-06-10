@@ -27,7 +27,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 
     - `gl.ARRAY_BUFFER`: 頂点の属性を含むバッファーで、頂点座標、テクスチャ座標データや、頂点色データのようなものです。
     - `gl.ELEMENT_ARRAY_BUFFER`: 要素の位置指定に使用されるバッファーです。
-    - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合は、更にに以下の値を利用できます。
+    - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} を使用している場合は、更に以下の値を利用できます。
 
       - `gl.COPY_READ_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。
       - `gl.COPY_WRITE_BUFFER`: バッファーオブジェクトを他へコピーするためのバッファーです。

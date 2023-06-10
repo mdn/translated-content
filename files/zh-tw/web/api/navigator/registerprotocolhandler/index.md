@@ -22,9 +22,11 @@ window.navigator.registerProtocolHandler(protocol, url, title);
 - `protocol`
   - : The protocol the site wishes to handle, specified as a string. For example, you can register to handle SMS text message links by registering to handle the "sms" scheme.
 - `url`
+
   - : The URL of the handler, as a string. This string should include "%s" as a placeholder which will be replaced with the escaped URL of the document to be handled. This URL might be a true URL, or it could be a phone number, email address, or so forth.
 
     > **備註：** The handler's URL must use one of "http" or "https" as its scheme.
+
 - `title`
   - : A user-readable title string for the protocol handler. This will be displayed to the user in interface objects as needed.
 
@@ -66,9 +68,11 @@ Otherwise, the scheme must be one of the schemes on the whitelist below:
 If your web application is located at `http://www.google.co.uk`, you can register a protocol handler for it to handle "web+burger" links like this:
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "https://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "https://www.google.co.uk/?uri=%s",
+  "Burger handler"
+);
 ```
 
 This creates a handler that allows `web+burger://` links to direct the user to your web application, inserting the burger information specified in the link into the URL. Recall that this script must be run from the same domain (so any page location at `google.co.uk`) and the second argument passed must be of `http` or `https` scheme (in this example it is `https`) .

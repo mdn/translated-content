@@ -47,7 +47,7 @@ This method may raise a 此方法可能会抛出一个 {{domxref("DOMException")
 | Exception                  | Description                                                                                                                                                                         |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `InvalidStateError`        | 在非`versionchange`事务中调用时发生。在一些旧版本的 Webkit 浏览器，你必须先调用{{APIRef("IDBVersionChangeRequest.setVersion")}}方法。                               |
-| `TransactionInactiveError` | 如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 `InvalidStateError` 错误，这一问题现已修复（请参阅 {{Bug("1176165")}}）。 |
+| `TransactionInactiveError` | 如果对不存在的源数据库发出请求（例如，已被删除的）。此外，在 Firefox 版本小于 41 中，会抛出误导性的 `InvalidStateError` 错误，这一问题现已修复（请参阅 [Firefox bug 1176165](https://bugzil.la/1176165)）。 |
 | `ConstraintError`          | 数据库中已存同名的对象存储（名字区分大小写）                                                                                                                                        |
 | `InvalidAccessError`       | 如果 `autoIncrement` 设置为 true，并且 keyPath 是空字符串或包含空字符串的数组。                                                                                                     |
 

@@ -35,7 +35,7 @@ Aucune.
 ```js
 function load_resource() {
   var image = new Image();
-  image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
+  image.src = "https://developer.mozilla.org/mdn-social-share.png";
 }
 function clear_performance_timings() {
   if (performance === undefined) {

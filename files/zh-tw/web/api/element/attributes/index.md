@@ -34,39 +34,40 @@ The following example runs through the attribute nodes for the element in the do
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <title>Attributes example</title>
+    <script type="text/javascript">
+      function listAttributes() {
+        var paragraph = document.getElementById("paragraph");
+        var result = document.getElementById("result");
 
- <head>
-  <title>Attributes example</title>
-  <script type="text/javascript">
-   function listAttributes() {
-     var paragraph = document.getElementById("paragraph");
-     var result = document.getElementById("result");
+        // First, let's verify that the paragraph has some attributes
+        if (paragraph.hasAttributes()) {
+          var attrs = paragraph.attributes;
+          var output = "";
+          for (var i = attrs.length - 1; i >= 0; i--) {
+            output += attrs[i].name + "->" + attrs[i].value;
+          }
+          result.value = output;
+        } else {
+          result.value = "No attributes to show";
+        }
+      }
+    </script>
+  </head>
 
-     // First, let's verify that the paragraph has some attributes
-     if (paragraph.hasAttributes()) {
-       var attrs = paragraph.attributes;
-       var output = "";
-       for(var i = attrs.length - 1; i >= 0; i--) {
-         output += attrs[i].name + "->" + attrs[i].value;
-       }
-       result.value = output;
-     } else {
-       result.value = "No attributes to show";
-     }
-   }
-  </script>
- </head>
-
-<body>
- <p id="paragraph" style="color: green;">Sample Paragraph</p>
- <form action="">
-  <p>
-    <input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();">
-    <input id="result" type="text" value="">
-  </p>
- </form>
-</body>
+  <body>
+    <p id="paragraph" style="color: green;">Sample Paragraph</p>
+    <form action="">
+      <p>
+        <input
+          type="button"
+          value="Show first attribute name and value"
+          onclick="listAttributes();" />
+        <input id="result" type="text" value="" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 

@@ -92,7 +92,7 @@ var transaction = db.transaction(storeNames, mode);
               <p>
                 <strong>Note :</strong> Depuis Firefox 40, les transactions
                 IndexedDB diminuent en efficacité pour gagner en efficience (voir
-                {{Bug ( "1112702")}}.) Auparavant, dans une transaction en
+                le [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, dans une transaction en
                 <code><a href="#const_read_write">readwrite</a></code> l'événement
                 complete était déclanché seulement lorsque toutes les données
                 étaient écrites sur le disque. Maintenant l'événement

@@ -101,25 +101,25 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 示例如下：
 
-- 正确：我们可以学习 JavaScript——一种很酷的语言
-- 错误：我们可以学习 JavaScript--一种很酷的语言
-- 正确：以下示例是“可交互的”
-- 错误：以下示例是"可交互的"
+- 正确：`我们可以学习 JavaScript——一种很酷的语言`
+- 错误：`我们可以学习 JavaScript--一种很酷的语言`
+- 正确：`以下示例是“可交互的”`
+- 错误：`以下示例是"可交互的"`
 
 另外，请注意并列的词语间应使用顿号而非逗号：
 
-- 原文：a, b, and c
-- 宜：a、b 和 c
-- 不宜：a，b，和 c
+- 原文：`a, b, and c`
+- 宜：`a、b 和 c`
+- 不宜：`a，b，和 c`
 
 #### 常见中/英文标点
 
-| 名称 | 中文 | 英文 |
-| ---- | --- | ---- |
-| 括号 | （） | ()   |
-| 冒号 | ：   | :    |
-| 引号 | “”   | ""   |
-| 破折号 | —— | -- 、 — |
+| 名称   | 中文 | 英文    |
+| ------ | ---- | ------- |
+| 括号   | （） | ()      |
+| 冒号   | ：   | :       |
+| 引号   | “”   | ""      |
+| 破折号 | ——   | -- 、 — |
 
 简体中文标点符号参考资源：
 
@@ -132,12 +132,12 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 示例如下：
 
-- 正确：学习 Web 开发
-- 错误：学习Web开发
-- 正确：学习 JavaScript、HTML、CSS 等
-- 错误：学习 JavaScript、 HTML、 CSS 等
-- 正确：应用程序接口（API）
-- 错误：应用程序接口（ API ）
+- 正确：`学习 Web 开发`
+- 错误：`学习Web开发`
+- 正确：`学习 JavaScript、HTML、CSS 等`
+- 错误：`学习 JavaScript、 HTML、 CSS 等`
+- 正确：`应用程序接口（API）`
+- 错误：`应用程序接口（ API ）`
 
 对于链接文字和非链接文字部分，同样适用此规则：
 
@@ -148,8 +148,8 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 请注意，数字与中文之间也请保留空格：
 
-- 正确：需 10 个小时完成
-- 错误：需10个小时完成
+- 正确：`需 10 个小时完成`
+- 错误：`需10个小时完成`
 
 ### 排版
 
@@ -182,25 +182,25 @@ Like this.
 
 英文文档中，为了使语句的语法正确，会使用大量的复数形式。在中文翻译中，则无需保留这些复数的形式（未翻译的英文名词也同理）。
 
-- 原文：Application Programming Interfaces (APIs)
-- 宜：应用程序接口（API）
-- 不宜：应用程序接口（APIs）
-- 不宜：应用程序接口们（APIs）
+- 原文：`Application Programming Interfaces (APIs)`
+- 宜：`应用程序接口（API）`
+- 不宜：`应用程序接口（APIs）`
+- 不宜：`应用程序接口们（APIs）`
 
 ### 常用标题
 
 英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，我们作如下约定：
 
-| 英文 | 简体中文翻译 |
-| --- | ---------- |
-| Accessibility concerns | 无障碍考虑 |
-| Active learning | 动手练习 |
-| Browser compatibility | 浏览器兼容性 |
-| Examples | 示例 |
-| See also | 参见 |
-| Specifications | 规范 |
-| Technical summary | 技术概要 |
-| Usage notes | 使用说明 |
+| 英文                   | 简体中文翻译 |
+| ---------------------- | ------------ |
+| Accessibility concerns | 无障碍考虑   |
+| Active learning        | 动手练习     |
+| Browser compatibility  | 浏览器兼容性 |
+| Examples               | 示例         |
+| See also               | 参见         |
+| Specifications         | 规范         |
+| Technical summary      | 技术概要     |
+| Usage notes            | 使用说明     |
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [**浏览器兼容性表**]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables

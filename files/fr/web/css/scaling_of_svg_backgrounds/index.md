@@ -34,7 +34,7 @@ Cette image ne possède ni dimension ni proportion. Quelle que soit sa taille, i
 
 ![](no-dimensions-or-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
+[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3469/6587a382ffb2c944462a6b110b079496/no-dimensions-or-ratio.svg)
 
 ### Image sans proportion avec une dimension fixée
 
@@ -42,7 +42,7 @@ Cette image mesure 100 pixels de large mais n'a pas de hauteur ni de proportion 
 
 ![](100px-wide-no-height-or-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
+[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3468/af73bea307a10ffe2559df42fad199e3/100px-wide-no-height-or-ratio.svg)
 
 ### Image avec une dimension fixée et des proportions intrinsèques
 
@@ -52,7 +52,7 @@ On a ici un cas très proche de l'image pour laquelle on définit une largeur et
 
 ![](100px-height-3x4-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
+[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3467/fd0c534c506be06d52f0a954a59863a6/100px-height-3x4-ratio.svg)
 
 ### Image sans largeur ni hauteur mais avec des proportions intrinsèques
 
@@ -60,7 +60,7 @@ Cette image n'indique pas de hauteur ou de largeur mais un ratio intrinsèque de
 
 ![](no-dimensions-1x1-ratio.png)
 
-[Fichier SVG source](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
+[Fichier SVG source](https://mdn.dev/archives/media/attachments/2012/07/09/3466/a3398e03c058d99fb2b7837167cdbc26/no-dimensions-1x1-ratio.svg)
 
 ## Exemples de redimensionnement
 

@@ -3,13 +3,21 @@ title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-**`fill-rule`** 是一个外观属性，它定义了用来确定一个多边形内部区域的算法。
+**`fill-rule`** 是一个表现属性，它定义了用来确定一个多边形内部区域的算法。
 
-> **备注：** 作为一个外观属性，fill-rule 可以被用于 CSS。
+> **备注：** 作为一个表现属性，fill-rule 可以被用于 CSS。
 
-作为一个外观属性，它可以被应用于任何元素，但只会在这八个元素中有效：{{SVGElement('altGlyph')}}、{{SVGElement('path')}}、{{SVGElement('polygon')}}、{{SVGElement('polyline')}}、{{SVGElement('text')}}、{{SVGElement('textPath')}}、{{SVGElement('tref')}} 和 {{SVGElement('tspan')}}。
+作为一个表现属性，它可以被应用于任何元素，但只会在以下元素中有效：
+
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 如何判断一个路径组成的多边形的内部区域，从而给它上色，对于一个简单的、没有交错的路径来说，是很显然的；然而，对于一个更为复杂的路径，比如一条与自身相交的路径，或者是这条路径上的其中一段将另一段包围着，要解释什么是“内部”，就不再这么显然了。
 

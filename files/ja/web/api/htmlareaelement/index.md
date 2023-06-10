@@ -1,6 +1,8 @@
 ---
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,7 +11,7 @@ slug: Web/API/HTMLAreaElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
@@ -31,7 +33,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
   - : 文字列で、 HTML の [`href`](/ja/docs/Web/HTML/Element/area#href) 属性を反映し、リンク先リソースの有効な URL を含みます。
 - {{domxref("HTMLAreaElement.noHref")}} {{deprecated_inline}}
   - : 論理値のフラグで、領域がアクティブでない (`true`) かアクティブである (`false`) かを示します。
-- {{domxref("HTMLAreaElement.origin")}} {{readonlyInline}}
+- {{domxref("HTMLAreaElement.origin")}} {{ReadOnlyInline}}
   - : URL のオリジン、つまりスキーム（プロトコル）、ドメイン（ホスト名）、ポートを含む文字列を返します。
 - {{domxref("HTMLAreaElement.password")}}
   - : ドメイン名の前に指定されたパスワードを含む文字列を返します。
@@ -45,7 +47,7 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
   - : 文字列で、どのリファラーを使用するかを示す HTML の [`referrerpolicy`](/ja/docs/Web/HTML/Element/area#referrerpolicy) 属性を反映します。
 - {{domxref("HTMLAreaElement.rel")}}
   - : 文字列で、対象オブジェクトからリンク先オブジェクトへの関係を指定する HTML の [`rel`](/ja/docs/Web/HTML/Element/area#rel) 属性を反映します。
-- {{domxref("HTMLAreaElement.relList")}} {{readOnlyInline}}
+- {{domxref("HTMLAreaElement.relList")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Element/area#rel) 属性を反映し、現在の文書とリンクされたリソースとの関係を、トークンのリストで示したものを返します。
 - {{domxref("HTMLAreaElement.search")}}
   - : 参照する URL の検索要素（先頭の疑問符 ('`?`') を含む）をがあれば、それを表す文字列です。
@@ -55,12 +57,10 @@ _親である {{domxref("HTMLElement")}} からプロパティを継承してい
   - : 現在の文書のタブ移動ナビゲーション順序での要素の位置を含む `long` です。
 - {{domxref("HTMLAreaElement.target")}}
   - : 文字列で、リンク先リソースを表示する場所を示す HTML の [`target`](/ja/docs/Web/HTML/Element/area#target) 属性を反映します。
-- {{domxref("HTMLAreaElement.type")}}
-  - : 文字列で、リンク先リソースの MIME タイプを示す HTML の [`type`](/ja/docs/Web/HTML/Element/area#type) 属性を反映します。
 - {{domxref("HTMLAreaElement.username")}}
   - : ドメイン名の前に指定されたユーザー名を含む文字列です。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
 

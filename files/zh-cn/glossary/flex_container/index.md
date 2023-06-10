@@ -21,6 +21,6 @@ slug: Glossary/Flex_Container
 
 ### 拓展阅读
 
-- CSS 弹性盒指南：*[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)*
-- CSS 弹性盒指南：*[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)*
-- CSS 弹性盒指南：*[掌握弹性元素的折行](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)*
+- CSS 弹性盒指南：*[弹性盒的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)*
+- CSS 弹性盒指南：*[在弹性容器中对齐元素](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)*
+- CSS 弹性盒指南：*[掌握弹性元素的折行](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)*

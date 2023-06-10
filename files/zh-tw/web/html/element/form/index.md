@@ -108,7 +108,7 @@ This element includes the [global attributes](/zh-TW/docs/Web/HTML/Global_attrib
 ## See also
 
 - [HTML forms guide](/zh-TW/docs/Web/Guide/HTML/Forms)
-- Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+- Other elements that are used when creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 - Getting a list of the elements in the form: {{domxref("HTMLFormElement.elements")}}
 - [ARIA: Form role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Form_Role)
 - [ARIA: Search role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/Search_role)

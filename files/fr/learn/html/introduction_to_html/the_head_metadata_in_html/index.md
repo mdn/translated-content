@@ -171,7 +171,7 @@ En parcourant le web, vous trouverez d'autres types de métadonnées. Beaucoup d
 Par exemple, [Open Graph Data](https://ogp.me/) est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs. Dans le code source de MDN vous trouverez ceci :
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="MDN Web Docs fournit des
 informations sur les technologies web ouvertes comme HTML, CSS et les API
 utilisées pour les sites web et les applications web. On y trouve également

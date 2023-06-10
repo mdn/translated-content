@@ -1,193 +1,204 @@
 ---
 title: Utiliser des fichiers à partir d'applications web
 slug: Web/API/File_API/Using_files_from_web_applications
-tags:
-  - Files
-  - HTML5
-  - Téléchargement
-  - ajax upload
-translation_of: Web/API/File/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
+l10n:
+  sourceCommit: 144332479d3f90d12008866bc91df77da62451c2
 ---
 
 {{APIRef("File API")}}
 
-Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
+Grâce à l'API <i lang="en">File</i>, une application ou un site web peut demander à la personne de choisir des fichiers locaux et en lire les contenus. La sélection peut être effectuée à l'aide d'un élément [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) ou à l'aide d'un glisser-déposer.
 
-## Accéder au(x) fichier(s) sélectionné(s)
+## Accéder aux fichiers sélectionnés
 
-Examinez ce code HTML&nbsp;:
-
-```html
-<input type="file" id="input">
-```
-
-L'API File permet d'accèder à la {{ domxref("FileList") }} contenant les objets {{ domxref("File") }} qui correspondent aux fichiers selectionnés par l'utilisateur.
-
-Si l'utilisateur ne sélectionne qu'un seul fichier, on ne prendra en compte que le premier élément de la {{ domxref("FileList") }}.
-
-Pour accéder à un fichier sélectionné en utilisant un sélecteur DOM classique&nbsp;:
-
-```js
-var fichierSelectionne = document.getElementById('input').files[0];
-```
-
-Pour accèder à un fichier sélectionné en utilisant un sélecteur [jQuery](http://jquery.com/)&nbsp;:
-
-```js
-var fichierSelectionne = $('#input').get(0).files[0];
-
-var fichierSelectionne = $('#input')[0].files[0];
-```
-
-> **Note :** Si vous rencontrez une erreur "`files is undefined`"&nbsp;: vous n'avez pas sélectionné le bon élément HTML, en oubliant qu'un sélecteur jQuery renvoie une liste d'éléments DOM correspondants. Récupérez l'élément DOM pour appeler sa méthode "`files`".
-
-## Accéder au(x) fichier(s) sélectionné(s) sur un événement _change_
-
-Il est en outre possible (mais pas obligatoire) d'accéder à la {{ domxref("FileList") }} via l'événement `change`&nbsp;:
+Prenons ce fragment de HTML&nbsp;:
 
 ```html
-<input type="file" id="input" onchange="handleFiles(this.files)">
+<input type="file" id="input" multiple />
 ```
 
-La fonction `handleFiles()` est appelée avec un objet {{ domxref("FileList") }} contenant des objets {{ domxref("File") }} représentant les fichiers sélectionnés par l'utilisateur.
+L'API <i lang="en">File</i> permet d'accéder à un objet [`FileList`](/fr/docs/Web/API/FileList) qui contient des objets [`File`](/fr/docs/Web/API/File) représentant les fichiers sélectionnés par l'utilisatrice ou l'utilisateur.
 
-Si vous souhaitez permettre à l'utilisateur de sélectionner plusieurs fichiers simmultanément, utilisez simplement l'attribut `multiple` de l'élément `input`&nbsp;:
+L'attribut `multiple` placé sur l'élément `input` permet de sélectionner plusieurs fichiers.
 
-```html
-<input type="file" id="input" multiple onchange="handleFiles(this.files)">
-```
-
-La liste de fichiers passée à la fonction `handleFiles()` contient dans ce cas un seul objet {{ domxref("File") }} pour chaque fichier sélectionné par l'utilisateur.
-
-### Ajouter dynamiquement un gestionnaire d'événement _change_
-
-Dans le cas où votre champ input a été créé à l'aide d'une bibliothèque JavaScript comme [jQuery](http://www.jquery.com/), il vous faudra utiliser la méthode {{ domxref("EventTarget.addEventListener()") }} pour ajouter le gestionnaire d'événement `change`, comme cela&nbsp;:
+On peut accéder au premier fichier sélectionné grâce à un sélecteur DOM classique&nbsp;:
 
 ```js
-var inputElement = document.getElementById("inputField");
+const fichierSelectionne = document.getElementById("input").files[0];
+```
+
+### Accéder aux fichiers sélectionnés lors d'un évènement `change`
+
+Il est aussi possible (même si ça n'est pas obligatoire) d'accéder à la liste [`FileList`](/fr/docs/Web/API/FileList) lors de l'évènement `change`. Pour cela, on utilisera [`EventTarget.addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) pour ajouter un gestionnaire d'évènement sur `change`, comme ceci&nbsp;:
+
+```js
+const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
-  var fileList = this.files; /* Vous pouvez maintenant manipuler la liste de fichiers */
+  const fileList = this.files; /* on peut désormais manipuler la liste de fichiers */
 }
 ```
-
-Notez que dans ce cas la fonction `handleFiles()` est elle-même le gestionnaire d'événement, contrairement à l'exemple précédent où un gestionnaire d'événement l'appelle en lui passant un paramètre.
 
 ## Obtenir des informations sur le(s) fichier(s) sélectionné(s)
 
-L'objet {{ domxref("FileList") }} exposé par le DOM fournit la liste de tous les fichiers sélectionnés par l'utilisateur, chaque fichier étant identifié par un objet {{ domxref("File") }}. Vous pouvez en déterminer le nombre en récupérant la valeur de l'attribut `length` de la liste de fichiers&nbsp;:
+L'objet [`FileList`](/fr/docs/Web/API/FileList) fourni par le DOM liste l'ensemble des fichiers sélectionnés par la personne, chacun étant représenté par un objet [`File`](/fr/docs/Web/API/File). On peut connaître le nombre de fichiers sélectionnés en consultant la valeur de la propriété `length` de la liste&nbsp;:
 
 ```js
-var numFiles = files.length;
+const nbFichiers = fileList.length;
 ```
 
-Chaque objet {{ domxref("File") }} peut être simplement récupéré en accédant à la liste comme vous le feriez pour un tableau&nbsp;:
+Les objets [`File`](/fr/docs/Web/API/File) individuels peuvent être récupérés depuis la liste en utilisant les indices, comme pour un tableau.
 
-```js
-for (var i = 0, numFiles = files.length; i < numFiles; i++) {
-  var file = files[i];
-  ..
-}
-```
-
-La boucle parcourt l'ensemble des fichiers de la liste.
-
-L'objet {{ domxref("File") }} expose trois attributs accessibles en lecture seulement et contenant des informations utiles sur le fichier.
+Trois propriétés des objets [`File`](/fr/docs/Web/API/File) fournissent des informations utiles sur les fichiers.
 
 - `name`
-  - : Une chaîne de caractères contenant le nom du fichier uniquement, sans aucune information relative au chemin d'accès.
+  - : Le nom du fichier sous la forme d'une chaîne de caractères en lecture seule. Il s'agit uniquement du nom du fichier, aucune information n'est fournie sur l'emplacement.
 - `size`
-  - : La taille du fichier exprimée en octets, sous la forme d'un entier de 64 bits.
+  - : La taille du fichier, exprimée en octets, sous la forme d'un entier en lecture seule sur 64 bits.
 - `type`
-  - : Le type MIME du fichier sous la forme d'une chaîne de caractères, ou bien une chaîne vide `""` si le type ne peut pas être déterminé.
+  - : Le type MIME du fichier, sous la forme d'une chaîne de caractères en lecture seule ou `""` si le type du fichier n'a pu être déterminé.
 
-### Exemple&nbsp;: Afficher la taille d'un ou plusieurs fichiers
+### Exemple : indiquer la taille des fichiers
 
-L'exemple suivant montre une utilisation possible de la propriété `size`&nbsp;:
+Dans l'exemple qui suit, on illustre comment utiliser la propriété `size`.
+
+#### HTML
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>File(s) size</title>
-<script>
-function updateSize() {
-  var nBytes = 0,
-      oFiles = document.getElementById("uploadInput").files,
-      nFiles = oFiles.length;
-  for (var nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  var sOutput = nBytes + " bytes";
-  // partie de code facultative pour l'approximation des multiples
-  for (var aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-  }
-  // fin de la partie de code facultative
-  document.getElementById("fileNum").innerHTML = nFiles;
-  document.getElementById("fileSize").innerHTML = sOutput;
-}
-</script>
-</head>
-
-<body onload="updateSize();">
 <form name="uploadForm">
-<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
-<p><input type="submit" value="Send file"></p>
+  <div>
+    <input id="uploadInput" type="file" multiple />
+    <label for="fileNum">Fichiers sélectionnés&nbsp;:</label>
+    <output id="fileNum">0</output>;
+    <label for="fileSize">Taille totale&nbsp;:</label>
+    <output id="fileSize">0</output>
+  </div>
+  <div><input type="submit" value="Envoyer des fichiers" /></div>
 </form>
-</body>
-</html>
 ```
 
-## Utiliser des éléments _input_ masqués de type _file_ avec l'événement `click`
-
-Il est possible depuis Gecko 2.0 de masquer l'élément {{ HTMLElement("input") }} de type file, généralement considéré comme laid, et de présenter votre propre interface pour l'ouverture du sélecteur de fichiers et l'affichage du ou des fichiers sélectionnés par l'utilisateur. Vous devez pour cela attribuer à votre élément `input` un style incluant `display:none` et gérer l'événement `click` sur votre élément {{ HTMLElement("input") }}.
-
-Examinez cet extrait de code HTML&nbsp;:
-
-```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-<a href="#" id="fileSelect">Select some files</a>
-```
-
-Le code gérant l'événement `click` peut être écrit de cette façon&nbsp;:
+#### JavaScript
 
 ```js
-var fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem");
+const uploadInput = document.getElementById("uploadInput");
+uploadInput.addEventListener(
+  "change",
+  () => {
+    // Calcul de la taille totale
+    let numberOfBytes = 0;
+    for (const file of uploadInput.files) {
+      numberOfBytes += file.size;
+    }
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // empêche la navigation vers "#"
-}, false);
+    // Approximation à l'unité humaine la plus proche
+    const units = [
+      "o",
+      "Ko",
+      "Mo",
+      "Go",
+      "To",
+      "Po",
+      "Eo",
+      "Zo",
+      "Yo",
+    ];
+    const exponent = Math.min(
+      Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
+      units.length - 1
+    );
+    const approx = numberOfBytes / 1024 ** exponent;
+    const output =
+      exponent === 0
+        ? `${numberOfBytes} octets`
+        : `${approx.toFixed(3)} ${
+            units[exponent]
+          } (${numberOfBytes} octets)`;
+
+    document.getElementById("fileNum").textContent =
+      uploadInput.files.length;
+    document.getElementById("fileSize").textContent = output;
+  },
+  false
+);
 ```
 
-Vous pouvez bien sûr appliquer le style de votre choix au nouveau bouton d'ouverture du sélecteur de fichiers.
+## Masquer l'élément `<input>` et utiliser la méthode `click()`
 
-## Utiliser un élément _label_ pour activer un élément _input_ masqué de type _file_
+Il est possible de masquer l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et de présenter sa propre interface pour l'ouverture du sélecteur de fichiers et d'afficher par ailleurs la sélection de fichier. Pour obtenir ce résultat, on pourra mettre en forme le champ `<input>` avec `display:none` et appeler la méthode [`click()`](/fr/docs/Web/API/HTMLElement/click) sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
 
-Un élément {{ HTMLElement("label") }} peut être utilisé pour ouvrir le sélecteur de fichiers sans l'aide de JavaScript (méthode `click()`).
-
-Examinez ce morceau de code HTML&nbsp;:
+Prenons ce fragment de code HTML&nbsp;:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"> <label for="fileElem">Select some files</label>
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
+<button id="fileSelect" type="button">Choisissez des fichiers</button>
 ```
 
-Il n'y a pas besoin d'ajouter du code JavaScript pour l'appel à `fileElem.click()`. Vous pouvez dans ce cas aussi appliquer le style de votre choix à l'élément `label`.
-
-## Sélectionner des fichiers en utilisant _drag and drop_
-
-Vous pouvez aussi autoriser l'utilisateur à glisser-déposer (_drag and drop_) des fichiers dans votre application web.
-
-La première étape consiste définir une zone de dépôt. La délimitation exacte de la partie de votre page qui acceptera des dépôts dépend de la conception de votre application, mais il est facile d'autoriser un élément à capter des événements `drop`&nbsp;:
+Le code qui gère l'évènement `click` pourra ressembler à&nbsp;:
 
 ```js
-var dropbox;
+const fileSelect = document.getElementById("fileSelect");
+const fileElem = document.getElementById("fileElem");
+
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false
+);
+```
+
+Vous pouvez mettre en forme [`<button>`](/fr/docs/Web/HTML/Element/button) comme bon vous semble.
+
+## Utiliser un élément `<label>` pour déclencher un champ `<input type="file">` caché
+
+Afin d'ouvrir le sélecteur de fichier sans utiliser de JavaScript (c'est-à-dire sans la méthode `click()`), on pourra utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/label) à la place. Cependant, il faut ici que l'élément `<input>` ne soit pas masqué à l'aide de `display: none` (ni à l'aide de `visibility: hidden`), car le libellé ne serait alors pas accessible au clavier. Il faut utiliser [la technique `visually-hidden`](https://www.a11yproject.com/posts/how-to-hide-content/) à la place.
+
+Prenons ce fragment de code HTML&nbsp;:
+
+```html
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  class="visually-hidden" />
+<label for="fileElem">Choisissez des fichiers</label>
+```
+
+Et ce fragment de code CSS&nbsp;:
+
+```css
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+input.visually-hidden:is(:focus, :focus-within) + label {
+  outline: thin dotted;
+}
+```
+
+Il n'est ici pas nécessaire d'ajouter de code JavaScript pour invoquer `fileElem.click()`. On peut ici mettre en forme l'élément `<label>` comme bon nous semble. Il faudra fournir une indication visuelle pour l'état du focus sur le champ masqué sur le libellé, que ce soit un contour comme ci-avant (avec [`outline`](/fr/docs/Web/CSS/outline) ou une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)), ou une ombre portée ([`box-shadow`](/fr/docs/Web/CSS/box-shadow)).
+
+## Sélectionner des fichiers avec un glisser-déposer
+
+Il est aussi possible de permettre la sélection de fichier grâce au glisser-déposer.
+
+La première étape consiste à former une zone de dépôt. La zone de votre contenu qui acceptera le dépôt pourra varier selon le design de votre application, mais on pourra facilement construire un élément prêt à recevoir les évènements de dépôt&nbsp;:
+
+```js
+let dropbox;
 
 dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
@@ -195,9 +206,9 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
+Dans cet exemple, on utilise un élément avec l'identifiant `dropbox` comme zone de dépôt. Pour ce faire, on ajoute des gestionnaires d'évènements pour [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
-Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
+Nous n'avons pas à nous préoccuper de `dragenter` et `dragover` dans notre exemple, nous allons donc aller à l'essentiel et empêcher l'action par défaut du navigateur&nbsp;:
 
 ```js
 function dragenter(e) {
@@ -211,225 +222,273 @@ function dragover(e) {
 }
 ```
 
-La vraie magie est dans la fonction `drop()`&nbsp;:
+La partie vraiment intéressante se situe dans la fonction `drop()`&nbsp;:
 
 ```js
 function drop(e) {
   e.stopPropagation();
   e.preventDefault();
 
-  var dt = e.dataTransfer;
-  var files = dt.files;
+  const dt = e.dataTransfer;
+  const files = dt.files;
 
   handleFiles(files);
 }
 ```
 
-Nous récupérons ici le champ `dataTransfer` de l'événement puis nous en extrayons la liste des fichiers que nous passons à `handleFiles()`. À partir de ce point les fichiers se manipulent de la même façon, que l'utilisateur ait employé l'élément `input` ou le glisser-déposer.
+Ici, on récupère la propriété `dataTransfer` de l'évènement, puis on récupère la liste de fichiers à partir de celle-ci. On passe alors cette liste à la fonction `handleFiles()`. Désormais, on peut utiliser la même logique, que les fichiers aient été sélectionnés via un élément `<input>` ou avec un glisser-déposer.
 
-## Exemple&nbsp;: Afficher les miniatures d'images sélectionnées par l'utilisateur
+## Exemple : afficher des vignettes pour les images sélectionnées
 
-Admettons que vous développiez actuellement le prochain site génial de partage de photos, et que vous souhaitiez utiliser HTML5 pour afficher une prévisualisation miniature des images avant que l'utilisateur ne les télécharge vraiment sur le serveur. Vous pouvez définir votre élément `input` ou votre zone de dépôt comme étudié précédemment et les faire appeler une fonction telle que la fonction `handleFiles()` montrée ci-dessous&nbsp;:
+Prenons comme exemple un site web de partage de photos dans lequel on veut des vignettes de prévisualisation des images sélectionnées avant qu'elles soient effectivement enregistrées sur le site. On peut construire un élément `<input>` et/ou une zone de dépôt comme indiqué avant et appeler la fonction `handleFiles()` qui suit.
 
 ```js
 function handleFiles(files) {
-  for (var i = 0; i < files.length; i++) {
-    var file = files[i];
-    var imageType = /^image\//;
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
 
-    if (!imageType.test(file.type)) {
+    if (!file.type.startsWith("image/")) {
       continue;
     }
 
-    var img = document.createElement("img");
+    const img = document.createElement("img");
     img.classList.add("obj");
     img.file = file;
-    preview.appendChild(img); // En admettant que "preview" est l'élément div qui contiendra le contenu affiché.
+    preview.appendChild(img); // Où  "preview" correspond à l'élément div où on affiche le contenu.
 
-    var reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      img.src = e.target.result;
+    };
     reader.readAsDataURL(file);
   }
 }
 ```
 
-La boucle qui manipule dans notre cas les fichiers sélectionnés par l'utilisateur examine l'attribut type de chaque fichier et contrôle qu'il s'agit bien d'une image (en utilisant une expression régulière pour vérifier la correspondance du type MIME avec la chaîne "`image/*`"). Nous créons un nouvel élément img pour chaque fichier image. Vous pouvez utiliser du CSS pour définir d'agréables bordures ou effets d'ombres ou encore pour préciser la taille de l'image \[de l'élément `img`, NDT], même si cela n'est pas nécessaire ici.
+Dans la boucle qui parcourt les fichiers, on regarde la propriété `type` de chaque fichier afin de déterminer si son type MIME commence avec la chaîne de caractères "`image/`". Pour chaque fichier qui est une image, on crée un nouvel élément `img`. On pourra utiliser CSS pour mettre en forme les vignettes (y compris leur taille).
 
-La classe CSS `obj` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
+Chaque image se voit dotée de la classe `obj`, pour permettre de les identifier dans le DOM. On ajoute un attribut `file` à chaque image en y associant l'objet [`File`](/fr/docs/Web/API/File) correspondant. Cela permettra de récupérer les images pour les enregistrer plus tard. On utilise [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild) afin d'ajouter la vignette à la zone de prévisualisation dans le document.
 
-Nous définissons ensuite le {{ domxref("FileReader") }} qui gérera le chargement asynchrone de l'image et son lien à l'élément `img`. Après avoir créé le nouvel objet `FileReader`, nous définissons sa fonction `onload` pouis nous appelons `readAsDataURL()` pour démarrer l'opération de lecture en tâche de fond. Lorsque le chargement du fichier image est complètement terminé, son contenu est converti en `data`&nbsp;: c'est l'URL transmise à la fonction de rappel `onload`. Notre implémentation de cette procédure définit l'image chargée comme valeur de l'attribut `src` de l'élement `img`, faisant ainsi apparaître l'image dans la miniature à l'écran.
+Ensuite, on construit un objet [`FileReader`](/fr/docs/Web/API/FileReader) afin de gérer le chargement asynchrone de l'image et son rattachement à l'élément `<img>` correspondant. Après avoir créé ce nouvel objet, on paramètre sa fonction `onload` puis on appelle `readAsDataURL()` afin de commencer l'opération de lecture en arrière-plan. Lorsque le contenu du fichier image aura été chargé, il sera converti en une URL de données qui sera passée à la fonction de rappel `onload()`. Dans notre exemple, on change l'attribut `src` de l'élément `<img>` pour utiliser l'image chargée et la faire apparaître comme vignette à l'écran.
 
-## Utiliser un objet URLs
+## Utiliser des URL d'objets
 
-Gecko 2.0 introduit la prise en charge des méthodes du DOM {{ domxref("window.URL.createObjectURL()") }} et {{ domxref("window.URL.revokeObjectURL()") }}. Elles vous permettent de créer des chaînes d'URL simples qui peuvent être utilisées pour repérer n'importe quelle donnée pouvant être référencée à l'aide d'un objet DOM {{ domxref("File") }}, y compris des fichiers locaux sur l'ordinateur de l'utilisateur.
+Les méthodes [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL) et [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL) permet de créer des chaînes de caractères étant des URL référençant toute donnée à laquelle on accède via un objet [`File`](/fr/docs/Web/API/File) du DOM, y compris les fichiers locaux sur l'ordinateur de l'utilisatrice ou de l'utilisateur.
 
-Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez référencer un objet {{ domxref("File") }} par URL depuis HTML&nbsp;:
-
-```js
-var objectURL = window.URL.createObjectURL(fileObj);
-```
-
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }} si votre page les utilise de manière dynamique&nbsp;:
+Lorsqu'on dispose d'un objet [`File`](/fr/docs/Web/API/File) qu'on veut manipuler sous la forme d'une URL, on pourra créer une URL d'objet ainsi&nbsp;:
 
 ```js
-window.URL.revokeObjectURL(objectURL);
+const objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-## Exemple&nbsp;: Utilisation de l'objet URLs pour afficher des images
+Une URL d'objet est une chaîne de caractères identifiant l'objet [`File`](/fr/docs/Web/API/File). À chaque appel de [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL), c'est une URL d'objet unique qui est créée, mais si une URL d'objet avait déjà été créée pour un même objet. Chacune de ces URL doit être libérée. Cette libération a lieu automatiquement lorsque le document est déchargé. Si votre page utilise les URL d'objet dynamiquement, les URL doivent être libérées explicitement en appelant [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL)&nbsp;:
 
-Cet exemple utilise des objets URLs pour afficher des vignettes d'image. Il affiche en outre d'autres informations, dont leurs noms et leurs tailles.
+```js
+URL.revokeObjectURL(objectURL);
+```
 
-Le code HTML qui présente l'interface ressemble à ceci:
+### Utiliser des URL d'objets pour afficher des images
+
+Dans cet exemple, on utilise des URL d'objets pour afficher des vignettes d'image et on affiche également d'autres informations sur les fichiers comme leur nom ou leur taille.
+
+Voici le fragment de HTML pour l'interface utilisateur&nbsp;:
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
-<a href="#" id="fileSelect">Sélectionnez des fichiers</a>
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none" />
+<a href="#" id="fileSelect">Choisissez des fichiers</a>
 <div id="fileList">
   <p>Aucun fichier sélectionné !</p>
 </div>
 ```
 
-Ce code définit notre élément fichier {{ HTMLElement("input") }}, ainsi qu'un lien qui appelle le sélecteur de fichiers (l'élément `input` étant masqué pour éviter l'affichage de la si peu séduisante interface utilisateur). Vous pouvez vous reporter à la section [Utiliser des éléments `input` masqués de type `file` avec l'événement `click`](#utiliser_des_éléments_input_masqués_de_type_file_avec_lévénement_click) pour des explications détaillées sur cette partie de code ainsi que sur la méthode appelant le sélecteur de fichiers.
+Cela nous donne notre élément [`<input>`](/fr/docs/Web/HTML/Element/input) ainsi qu'un lien pour ouvrir le sélecteur de fichier (en effet, le champ de saisie est masqué, voir la section [Masquer l'élément `<input>` et utiliser la méthode `click()`](#using_hidden_file_input_elements_using_the_click_method) pour plus de détails).
 
-Voici la méthode `handleFiles()`&nbsp;:
+La méthode `handleFiles()` utilisée ici est la suivante&nbsp;:
 
 ```js
-window.URL = window.URL || window.webkitURL;
+const fileSelect = document.getElementById("fileSelect"),
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-var fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+fileSelect.addEventListener(
+  "click",
+  (e) => {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // Empêche la navigation jusqu'à "#"
+  },
+  false
+);
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // empêche la navigation vers "#"
-}, false);
+fileElem.addEventListener("change", handleFiles, false);
 
-function handleFiles(files) {
-  if (!files.length) {
+function handleFiles() {
+  if (!this.files.length) {
     fileList.innerHTML = "<p>Aucun fichier sélectionné !</p>";
   } else {
     fileList.innerHTML = "";
-    var list = document.createElement("ul");
+    const list = document.createElement("ul");
     fileList.appendChild(list);
-    for (var i = 0; i < files.length; i++) {
-      var li = document.createElement("li");
+    for (let i = 0; i < this.files.length; i++) {
+      const li = document.createElement("li");
       list.appendChild(li);
 
-      var img = document.createElement("img");
-      img.src = window.URL.createObjectURL(files[i]);
+      const img = document.createElement("img");
+      img.src = URL.createObjectURL(this.files[i]);
       img.height = 60;
-      img.onload = function() {
-        window.URL.revokeObjectURL(this.src);
-      }
+      img.onload = () => {
+        URL.revokeObjectURL(img.src);
+      };
       li.appendChild(img);
-      var info = document.createElement("span");
-      info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
+      const info = document.createElement("span");
+      info.innerHTML = `${this.files[i].name} : ${this.files[i].size} octets`;
       li.appendChild(info);
     }
   }
 }
 ```
 
-Nous commençons par la recherche de l'URL du {{ HTMLElement("div") }} dont l'ID est `fileList`, qui est le bloc dans lequel nous inérerons notre liste de fichiers, ainsi que les miniatures..
+Pour commencer, on récupère l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui a l'identifiant `fileList`. Il s'agit du bloc dans lequel on placera notre liste de fichier ainsi que nos vignettes.
 
-Si l'objet {{ domxref("FileList") }} passé à `handleFiles()` est `null`, nous définissons simplement le contenu HTML du bloc pour pour afficher "Aucun fichier sélectionné ! ". Nous commençons dans le cas contraire à construire notre liste de fichiers, comme ceci&nbsp;:
+Si l'objet [`FileList`](/fr/docs/Web/API/FileList) passé à `handleFiles()` vaut `null`, on met à jour le code HTML du bloc pour afficher «&nbsp;Aucun fichier sélectionné !&nbsp;». Sinon, on construit la liste de fichier comme suit&nbsp;:
 
-1. Une nouvelle liste non ordonnée ({{ HTMLElement("ul") }}) est créée.
-2. L'élement de la liste nouvellement créée est ajoutée dans le bloc {{ HTMLElement("div") }} en appelant sa méthode {{ domxref("Node.appendChild()") }}.
-3. Pour chaque {{ domxref("File") }} dans le {{ domxref("FileList") }} représenté par `files`&nbsp;:
+1. On crée un nouvel élément de liste non-ordonnée [`<ul>`](/fr/docs/Web/HTML/Element/ul).
+2. Cette nouvelle liste est insérée dans le bloc [`<div>`](/fr/docs/Web/HTML/Element/div) à l'aide de sa méthode [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild).
+3. Pour chaque fichier ([`File`](/fr/docs/Web/API/File)) dans la liste ([`FileList`](/fr/docs/Web/API/FileList)) représentée par `files`&nbsp;:
 
-    1. Création et ajout à la liste d'un nouvel élément de liste {{ HTMLElement("li") }}.
-    2. Création d'un nouvel élément image {{ HTMLElement("img") }}.
-    3. Définition d'un nouvel objet URL représentant le fichier comme source de l'image, en utilisant {{ domxref("window.URL.createObjectURL()") }} pour la création de l'URL du Blob.
-    4. Définition de la hauteur de l'image à 60 pixels.
-    5. Définition du gestionnaire pour l'événement `load` de l'image afin de libérer l'objet URL, devenu inutile une fois l'image chargée. La libération est effectuée en appelant la méthode {{ domxref("window.URL.revokeObjectURL()") }} avec en paramètre la chaîne de l'objet URL de l'attribut `img.src`.
-    6. Ajout du nouvel élément à la liste.
+   1. On crée un nouvel élément [`<li>`](/fr/docs/Web/HTML/Element/li) qu'on insère dans la liste.
+   2. On crée un nouvel élément [`<img>`](/fr/docs/Web/HTML/Element/img).
+   3. On définit la source de l'image afin d'utiliser la nouvelle URL d'objet représentant le fichier grâce à [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL).
+   4. On définit la hauteur de l'image à 60.
+   5. On fait le nécessaire pour que le gestionnaire d'évènement pour `load` libère l'URL d'objet qui ne sera plus nécessaire puisque l'image aura été chargée. Pour cela, on appelle la méthode [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL) à laquelle on passe la chaîne de caractères qu'est l'URL d'objet que contient `img.src`.
+   6. On ajoute le nouvel élément de la liste dans la liste.
 
-## Exemple&nbsp;: Télécharger sur le serveur un fichier sélectionné par l'utilisateur
+Voici le résultat de cet exemple&nbsp;:
 
-Vous pourriez en outre vouloir autoriser l'utilisateur à télécharger sur un serveur (_upload_) un ou plusieurs fichiers sélectionnés (tels que les images sélectionnées en suivant l'exemple précedent). Cette opération peut être très facilement effectuée de manière asynchrone.
+{{EmbedLiveSample('', '100%', '300px')}}
 
-### Créer les tâches de téléchargement
+## Exemple : enregistrer un fichier sélectionné côté serveur
 
-En poursuivant avec le code générant des miniatures de l'exemple précédent, rappelez-vous que chaque image de miniature s'est vue ajouter la classe CSS `obj`, ainsi que le {{ domxref("File") }} correspondant stocké dans l'attribut `file`. Cela nous permet de sélectionner très facilement toutes les images choisies par l'utilisateur pour le téléchargement à l'aide de {{ domxref("Document.querySelectorAll()") }}, comme cela&nbsp;:
+On peut également vouloir autoriser le téléversement (<i lang="en">upload</i>) des fichiers sélectionnés sur le serveur (comme les images sélectionnées dans l'exemple précédent). On peut faire ceci de façon asynchrone.
+
+### Créer les tâches de téléversement
+
+Si on poursuit avec le code de construction des vignettes de l'exemple précédent, on peut exploiter la classe `obj` de chaque vignette et manipuler la propriété `file` de chaque élément correspondant qui contient l'objet [`File`](/fr/docs/Web/API/File) correspondant. Cela nous permet de collecter toutes les images sélectionnées à l'aide de [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)&nbsp;:
 
 ```js
 function sendFiles() {
-  var imgs = document.querySelectorAll(".obj");
+  const imgs = document.querySelectorAll(".obj");
 
-  for (var i = 0; i < imgs.length; i++) {
+  for (let i = 0; i < imgs.length; i++) {
     new FileUpload(imgs[i], imgs[i].file);
   }
 }
 ```
 
-La ligne 2 crée un tableau, nommé `imgs`, de tous les éléments de la classe CSS `obj` dans le document&nbsp;; s'agit dans notre cas de toutes les miniatures d'images. Une fois la liste établie, c'est un jeu d'enfant de la parcourir et de créer une nouvelle instance de `FileUpload` pour chacun de ses éléments. Chacune de ces instances gère le téléchargement du fichier correspondant vers le serveur.
+À la deuxième ligne de ce fragment, on récupère un objet [`NodeList`](/fr/docs/Web/API/NodeList) appelé `imgs` qui contient tous les éléments du document ayant la classe `obj`. Ici, cela correspondra aux vignettes. Avec cette liste, on peut la parcourir et créer une nouvelle instance de `FileUpload` pour chaque, dont le rôle sera de gérer le téléversement du fichier correspondant vers le serveur.
 
-### Manipuler le processus de téléchargement pour un fichier
+### Gérer le processus de téléversement d'un fichier
 
-La fonction `FileUpload` accepte deux arguments&nbsp;: un élement image et un fichier à partir duquel les données de l'image sont lues.
+La fonction `FileUpload` prend deux arguments, un élément `<img>` et un fichier à partir duquel lire les données de l'image.
 
 ```js
 function FileUpload(img, file) {
-  var reader = new FileReader();
+  const reader = new FileReader();
   this.ctrl = createThrobber(img);
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   this.xhr = xhr;
 
-  var self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          var percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  const self = this;
+  this.xhr.upload.addEventListener(
+    "progress",
+    (e) => {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          var canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
-    xhr.sendAsBinary(evt.target.result);
+  xhr.upload.addEventListener(
+    "load",
+    (e) => {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = (evt) => {
+    xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
 }
+
+function createThrobber(img) {
+  const throbberWidth = 64;
+  const throbberHeight = 6;
+  const throbber = document.createElement("canvas");
+  throbber.classList.add("upload-progress");
+  throbber.setAttribute("width", throbberWidth);
+  throbber.setAttribute("height", throbberHeight);
+  img.parentNode.appendChild(throbber);
+  throbber.ctx = throbber.getContext("2d");
+  throbber.ctx.fillStyle = "orange";
+  throbber.update = (percent) => {
+    throbber.ctx.fillRect(
+      0,
+      0,
+      (throbberWidth * percent) / 100,
+      throbberHeight
+    );
+    if (percent === 100) {
+      throbber.ctx.fillStyle = "green";
+    }
+  };
+  throbber.update(0);
+  return throbber;
+}
 ```
 
-La fonction `FileUpload()` montrée ci-dessus crée un indicateur d'activité (_throbber_) pour l'affichage de la progression, ainsi qu'un {{ domxref("XMLHttpRequest") }} pour gérer le téléchargement des données.
+La fonction `FileUpload()` écrite ici crée un indicateur de progression puis crée une requête [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour gérer l'envoi des données.
 
-Il est nécessaire de prévoir quelques étapes préparatoires avant le téléchargement effectif des données&nbsp;:
+Avant d'envoyer effectivement les données, plusieurs étapes préparatoires ont lieu&nbsp;:
 
-1. Le processus d'écoute de l'événement `progress` du XMLHttpRequest est écrit de telle façon que l'indicateur d'activité affiche l'information de progression du téléchargement la plus récente.
-2. Le gestionnaire de l'événement `load` du XMLHttpRequest est écrit pour que l'indicateur d'activité affiche 100% afin d'être sûr atteigne effectivement les 100%, même en cas granularité anormale lors du processus. Le gestionnaire supprime ensuite l'indicateur devenu inutile, entraînant sa disparition à la fin normale du téléchargement.
-3. La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
-4. Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique&nbsp;; vous pouvez selon les cas définir ou ne définir aucun type MIME.
-5. L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
-6. La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
+1. Le gestionnaire d'évènement pour l'évènement `progress` de la requête `XMLHttpRequest` est utilisé pour mettre à jour l'indicateur de progression avec le pourcentage d'avancement, afin que l'indicateur soit à jour selon la progression.
+2. Le gestionnaire d'évènement pour l'évènement `load` de la requête `XMLHttpRequest` est utilisé pour mettre à jour l'indicateur de progression à 100% afin de s'assurer que l'indicateur atteint bien les 100%. Il retire l'indicateur visuel qui n'est plus utile ,qui disparaît alors à la fin du téléversement.
+3. La requête pour envoyer l'image au serveur est ouverte avec la méthode `open()` de `XMLHttpRequest`, ce qui génère une requête POST.
+4. Le type MIME pour l'envoi est défini en appelant la fonction `overrideMimeType()` de `XMLHttpRequest`. On utilise ici un type MIME générique. Selon votre cas d'usage, vous pourrez ou non avoir besoin de définir le type MIME.
+5. L'objet `FileReader` est utilisé pour convertir le fichier en une chaîne binaire.
+6. Enfin, lorsque le contenu est chargé, la méthode `send()` de la requête `XMLHttpRequest` est appelée afin d'envoyer le contenu du fichier vers le serveur.
 
-> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
+### Gérer le téléversement du fichier de façon asynchrone
 
-### Gérer le processus de téléchargement d'un fichier de manière asynchrone
+Dans l'exemple qui suit, on utilise du code PHP pour le serveur et du code JavaScript pour le client afin d'illustrer le téléversement asynchrone d'un fichier.
 
-Cet exemple utilise PHP pour la partie serveur et JavaScript pour la partie client. Il illustre comment gérer l'<i lang="en">upload</i> d'un fichier de façon asynchrone.
-
-```js
+```php
 <?php
-if (isset($_FILES['monFichier'])) {
+if (isset($_FILES['myFile'])) {
     // Exemple :
-    move_uploaded_file($_FILES['monFichier']['tmp_name'], "uploads/" . $_FILES['monFichier']['name']);
+    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
 ?><!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-    <title>dnd binary upload</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>dnd binary upload</title>
     <script type="application/javascript">
         function sendFile(file) {
             const uri = "/index.php";
@@ -437,24 +496,24 @@ if (isset($_FILES['monFichier'])) {
             const fd = new FormData();
 
             xhr.open("POST", uri, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    alert(xhr.responseText); // gestion de la réponse.
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert(xhr.responseText); // Gérer la réponse
                 }
             };
-            fd.append('monFichier', file);
-            // Initier un upload multipart/form-data
+            fd.append('myFile', file);
+            // Initier un téléversement multipart/form-data
             xhr.send(fd);
         }
 
-        window.onload = function() {
+        window.onload = () => {
             const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = function(event) {
+            dropzone.ondragover = dropzone.ondragenter = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
             }
 
-            dropzone.ondrop = function(event) {
+            dropzone.ondrop = (event) => {
                 event.stopPropagation();
                 event.preventDefault();
 
@@ -468,53 +527,30 @@ if (isset($_FILES['monFichier'])) {
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Glisser-déposer votre fichier ici…</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Glissez-déposez votre fichier ici.</div>
     </div>
 </body>
 </html>
 ```
 
-## Exemple&nbsp;: Utiliser un objet URLs pour afficher un PDF
+## Exemple : utiliser des URL d'objet avec les autres types de fichier
 
-Vous pouvez utiliser un objet URLs pour d'autres choses que les images&nbsp;! Ils peuvent être utilisés pour afficher des fichiers PDF incorporés ou toutes autres ressources affichables par le navigateur.
-
-Sous Firefox, la constante de configuration `pdfjs.disabled` doit être définie à `false` {{non-standard_inline()}} pour afficher les PDF encapsulés dans dans un {{ HTMLElement("iframe") }} plutôt que de s'en voir proposer le téléchargement sur le PC local.
-
-```html
-<iframe id="viewer">
-```
-
-Et voici comment modifier la valeur de l'attribut `src`&nbsp;:
+On peut manipuler les fichiers d'autres formats de la même façon. Voici comment prévisualiser des vidéos sélectionnées&nbsp;:
 
 ```js
-var obj_url = window.URL.createObjectURL(blob);
-var iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
-window.URL.revokeObjectURL(obj_url);
-```
-
-## Exemple&nbsp;: Utiliser un objet URLs avec d'autres types de fichiers
-
-Vous pouvez manipuler de la même façon des fichiers d'autres formats. Voici comment prévisualiser une vidéo téléchargée sur le serveur&nbsp;:
-
-```js
-var video = document.getElementById('video');
-var obj_url = window.URL.createObjectURL(blob);
+const video = document.getElementById("video");
+const obj_url = URL.createObjectURL(blob);
 video.src = obj_url;
-video.play()
-window.URL.revokeObjectURL(obj_url);
+video.play();
+URL.revokeObjectURL(obj_url);
 ```
-
-## Spécifications
-
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29) (HTML 5 working draft)
-- [File API](http://www.w3.org/TR/FileAPI/)
 
 ## Voir aussi
 
-- {{DOMxRef("File")}}
-- {{DOMxRef("FileList")}}
-- {{DOMxRef("FileReader")}}
-- {{DOMxRef("URL")}}
-- {{DOMxRef("XMLHttpRequest")}}
+- [`File`](/fr/docs/Web/API/File)
+- [`FileList`](/fr/docs/Web/API/FileList)
+- [`FileReader`](/fr/docs/Web/API/FileReader)
+- [`URL`](/fr/docs/Web/API/URL)
+- [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
+- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
 - [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

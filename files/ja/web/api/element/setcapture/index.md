@@ -76,7 +76,7 @@ setCapture(retargetToElement)
 </html>
 ```
 
-[ライブ例を表示](https://media.prod.mdn.mozit.cloud/samples/domref/mousecapture.html)
+[ライブ例を表示](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## メモ
 

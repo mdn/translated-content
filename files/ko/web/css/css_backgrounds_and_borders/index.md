@@ -1,6 +1,6 @@
 ---
 title: CSS 배경 및 테두리
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 ---
 
 {{CSSRef}}

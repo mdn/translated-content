@@ -29,7 +29,7 @@ _继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWo
 
 ## 示例
 
-在这个 [shared worker](https://github.com/mdn/simple-shared-worker) 例子中 ([运行 shared worker](http://mdn.github.io/simple-shared-worker/))，我们有两个 HTML 页面，每个页面中使用一些 JavaScript 来执行简单的计算。这些脚本使用相同的 shared worker 来执行计算 — 都可以访问这个 worker，即使脚本在不同窗口的两个页面内运行。
+在这个[基本的共享型 worker 示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) 中（[运行共享型 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)），我们有两个 HTML 页面，每个页面中使用一些 JavaScript 来执行简单的计算。这些脚本使用相同的 worker 文件来执行计算——每个脚本都可以访问这个 worker 文件，即使脚本所处的页面在不同的窗口下。
 
 下面的代码展示了如何通过 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} 方法来创建一个共享进程对象。
 

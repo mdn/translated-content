@@ -1,6 +1,8 @@
 ---
 title: Introducing asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
+l10n:
+  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
