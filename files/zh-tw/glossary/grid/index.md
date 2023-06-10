@@ -67,4 +67,4 @@ _CSS 格線_(CSS grid) 使用 `display: grid;` 值，你可以透過 {{cssxref("
 
 ### 參閱
 
-- CSS 格線布局教學：_[格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS 格線布局教學：_[格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

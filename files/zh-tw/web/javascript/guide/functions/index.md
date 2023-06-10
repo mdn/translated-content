@@ -38,57 +38,60 @@ function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-var mycar = {make: "Honda", model: "Accord", year: 1998},
-    x,
-    y;
+var mycar = { make: "Honda", model: "Accord", year: 1998 },
+  x,
+  y;
 
-x = mycar.make;     // x 的值為 "Honda"
+x = mycar.make; // x 的值為 "Honda"
 
 myFunc(mycar);
-y = mycar.make;     // y 的值為 "Toyota"
-                    // (屬性 make 被 function 改變)
+y = mycar.make; // y 的值為 "Toyota"
+// (屬性 make 被 function 改變)
 ```
 
 請注意，重新給參數指定一個對象(物件)，並不會對函式的外部有任何影響，因為這樣只是改變了參數的值，而不是改變了對象的一個屬性值：
 
 ```js
 function myFunc(theObject) {
-  theObject = {make: "Ford", model: "Focus", year: 2006};
+  theObject = { make: "Ford", model: "Focus", year: 2006 };
 }
 
-var mycar = {make: "Honda", model: "Accord", year: 1998},
-    x,
-    y;
+var mycar = { make: "Honda", model: "Accord", year: 1998 },
+  x,
+  y;
 
-x = mycar.make;     // x 的值為 "Honda"
+x = mycar.make; // x 的值為 "Honda"
 
 myFunc(mycar);
-y = mycar.make;     // y 的值還是 "Honda"
+y = mycar.make; // y 的值還是 "Honda"
 ```
 
 儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。這樣的函式可以是匿名的；它不必有名稱。例如，上面提到的函式 square 也可這樣來定義：
 
 ```js
-var square = function(number) {return number * number};
-var x = square(4) //x 的值為 16
+var square = function (number) {
+  return number * number;
+};
+var x = square(4); //x 的值為 16
 ```
 
 必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：
 
 ```js
-var factorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
+var factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
 console.log(factorial(3));
 ```
 
-函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫 map 的函式如何 被定義，而後呼叫一個匿名函式作為其第一個參數：
+函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫 map 的函式如何被定義，而後呼叫一個匿名函式作為其第一個參數：
 
 ```js
-function map(f,a) {
+function map(f, a) {
   var result = [], // Create a new Array
-      i;
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+    i;
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -96,11 +99,16 @@ function map(f,a) {
 下面的程式碼呼叫 map 函式並將一個匿名函式傳入作為第一個參數:
 
 ```js
-map(function(x) {return x * x * x}, [0, 1, 2, 5, 10]);
+map(
+  function (x) {
+    return x * x * x;
+  },
+  [0, 1, 2, 5, 10]
+);
 // 結果會回傳 [0, 1, 8, 125, 1000]
 ```
 
-除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object) 來定義, 類似 [`eval()`](/zh-TW/docs/JavaScript/Guide/Functions#eval_Function).
+除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/JavaScript/Guide/Predefined_Core_Objects#Function_Object) 來定義，類似 [`eval()`](/zh-TW/docs/JavaScript/Guide/Functions#eval_Function)。
 
 ## 呼叫函式
 
@@ -117,7 +125,9 @@ square(5);
 ```js
 console.log(square(5));
 /* ... */
-function square(n){return n*n}
+function square(n) {
+  return n * n;
+}
 ```
 
 The scope of a function is the function in which it is declared, or the entire program if it is declared at the top level. Note that this works only when defining the function using the above syntax (i.e. `function funcName(){}`). The code below will not work.
@@ -126,7 +136,7 @@ The scope of a function is the function in which it is declared, or the entire p
 console.log(square(5));
 square = function (n) {
   return n * n;
-}
+};
 ```
 
 The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The `show_props` function (defined in [Working with Objects](/zh-TW/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)) is an example of a function that takes an object as an argument.
@@ -134,11 +144,9 @@ The arguments of a function are not limited to strings and numbers. You can pass
 A function can be recursive; that is, it can call itself. For example, here is a function that computes factorials recursively:
 
 ```js
-function factorial(n){
-  if ((n == 0) || (n == 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+function factorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -162,8 +170,8 @@ Variables defined inside a function cannot be accessed from anywhere outside the
 ```js
 // The following variables are defined in the global scope
 var num1 = 20,
-    num2 = 3,
-    name = "Chamahk";
+  num2 = 3,
+  name = "Chamahk";
 
 // This function is defined in the global scope
 function multiply() {
@@ -173,9 +181,9 @@ function multiply() {
 multiply(); // Returns 60
 
 // A nested function example
-function getScore () {
+function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
     return name + " scored " + (num1 + num2);
@@ -192,78 +200,84 @@ getScore(); // Returns "Chamahk scored 5"
 閉包是 JavaScript 最強大的特性之一。JavaScript 允許巢狀函式（nesting of functions）並給予內部函式完全訪問（full access）所有變數、與外部函式定義的函式（還有所有外部函式內的變數與函式）不過，外部函式並不能訪問內部函式的變數與函式。這保障了內部函式的變數安全。另外，由於內部函式能訪問外部函式定義的變數與函式，將存活得比外部函式還久。A closure is created when the inner function is somehow made available to any scope outside the outer function.
 
 ```js
-var pet = function(name) {          // The outer function defines a variable called "name"
-      var getName = function() {
-        return name;                // The inner function has access to the "name" variable of the outer function
-      }
+var pet = function (name) {
+    // The outer function defines a variable called "name"
+    var getName = function () {
+      return name; // The inner function has access to the "name" variable of the outer function
+    };
 
-      return getName;               // Return the inner function, thereby exposing it to outer scopes
-    },
-    myPet = pet("Vivie");
+    return getName; // Return the inner function, thereby exposing it to outer scopes
+  },
+  myPet = pet("Vivie");
 
-myPet();                            // Returns "Vivie"
+myPet(); // Returns "Vivie"
 ```
 
 It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.
 
 ```js
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex == "string" && (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex == "string" &&
+        (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
 var pet = createPet("Vivie");
-pet.getName();                  // Vivie
+pet.getName(); // Vivie
 
 pet.setName("Oliver");
 pet.setSex("male");
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
 In the codes above, the `name` variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner function act as safe stores for the inner functions. They hold "persistent", yet secure, data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.
 
 ```js
-var getCode = (function(){
-  var secureCode = "0]Eal(eh&2";    // A code we do not want outsiders to be able to modify...
+var getCode = (function () {
+  var secureCode = "0]Eal(eh&2"; // A code we do not want outsiders to be able to modify...
 
   return function () {
     return secureCode;
   };
 })();
 
-getCode();    // Returns the secret code
+getCode(); // Returns the secret code
 ```
 
 There are, however, a number of pitfalls to watch out for when using closures. If an enclosed function defines a variable with the same name as the name of a variable in the outer scope, there is no way to refer to the variable in the outer scope again.
 
 ```js
-var createPet = function(name) {  // Outer function defines a variable called "name"
+var createPet = function (name) {
+  // Outer function defines a variable called "name"
   return {
-    setName: function(name) {    // Enclosed function also defines a variable called "name"
-      name = name;               // ??? How do we access the "name" defined by the outer function ???
-    }
-  }
-}
+    setName: function (name) {
+      // Enclosed function also defines a variable called "name"
+      name = name; // ??? How do we access the "name" defined by the outer function ???
+    },
+  };
+};
 ```
 
 The magical `this` variable is very tricky in closures. They have to be used carefully, as what `this` refers to depends completely on where the function was called, rather than where it was defined. An excellent and elaborate article on closures can be found [here](http://jibbering.com/faq/notes/closures/).
@@ -273,7 +287,7 @@ The magical `this` variable is very tricky in closures. They have to be used car
 The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 where `i` is the ordinal number of the argument, starting at zero. So, the first argument passed to a function would be `arguments[0]`. The total number of arguments is indicated by `arguments.length`.
@@ -284,13 +298,13 @@ For example, consider a function that concatenates several strings. The only for
 
 ```js
 function myConcat(separator) {
-   var result = "", // initialize list
-       i;
-   // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  var result = "", // initialize list
+    i;
+  // iterate through arguments
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
@@ -351,8 +365,8 @@ If the argument is `NaN`, positive infinity or negative infinity, this method re
 The following code checks client input to determine whether it is a finite number.
 
 ```js
-if(isFinite(ClientInput)){
-   /* take specific steps */
+if (isFinite(ClientInput)) {
+  /* take specific steps */
 }
 ```
 
@@ -374,9 +388,9 @@ The following code evaluates `floatValue` to determine if it is a number and the
 var floatValue = parseFloat(toFloat);
 
 if (isNaN(floatValue)) {
-   notFloat();
+  notFloat();
 } else {
-   isFloat();
+  isFloat();
 }
 ```
 
@@ -418,7 +432,7 @@ objRef = String(objRef);
 
 ```js
 var D = new Date(430054663215),
-    x;
+  x;
 x = String(D); // x 等於 "星期二 八月 18 04:37:43 GMT-0700  1983"
 ```
 
@@ -426,7 +440,7 @@ x = String(D); // x 等於 "星期二 八月 18 04:37:43 GMT-0700  1983"
 
 ```js
 var str = "12",
-    num;
+  num;
 num = Number(字串);
 ```
 
@@ -434,7 +448,7 @@ num = Number(字串);
 
 ```js
 var str = "12",
-    num;
+  num;
 document.write(typeof str);
 document.write("<br/>");
 num = Number(str);

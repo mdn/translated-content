@@ -148,7 +148,7 @@ L'objectif de cette permission est de permettre aux extensions de réaliser une 
 
 Notez que vous ne pouvez accéder qu'à l'onglet ou aux données qui s'y trouvaient au moment de l'interaction de l'utilisateur (par exemple le clic). Lorsque l'onglet actif s'éloigne, par exemple en raison d'un chargement terminé ou d'un autre événement, l'autorisation ne vous donne plus accès à l'onglet.
 
-Habituellement, l'onglet qui est accordé à `activeTab` est juste l'onglet actuellement actif, sauf dans un cas. L'API [`menus`](/fr/Add-ons/WebExtensions/API/menus) permet à une extension de créer un élément de menu qui s'affiche lorsque le contexte utilisateur clique sur un onglet (c'est-à-dire sur l'élément de l'onglet qui permet à l'utilisateur de passer d'un onglet à un autre). Si l'utilisateur clique sur un tel élément, la permission `activeTab` est accordée pour l'onglet sur lequel l'utilisateur a cliqué, même s'il ne s'agit pas de l'onglet actuellement actif (A partir de Firefox 63, {{bug(1446956)}}).
+Habituellement, l'onglet qui est accordé à `activeTab` est juste l'onglet actuellement actif, sauf dans un cas. L'API [`menus`](/fr/Add-ons/WebExtensions/API/menus) permet à une extension de créer un élément de menu qui s'affiche lorsque le contexte utilisateur clique sur un onglet (c'est-à-dire sur l'élément de l'onglet qui permet à l'utilisateur de passer d'un onglet à un autre). Si l'utilisateur clique sur un tel élément, la permission `activeTab` est accordée pour l'onglet sur lequel l'utilisateur a cliqué, même s'il ne s'agit pas de l'onglet actuellement actif (A partir de Firefox 63, [bug Firefox 1446956](https://bugzil.la/1446956)).
 
 ## Accès au presse-papiers
 

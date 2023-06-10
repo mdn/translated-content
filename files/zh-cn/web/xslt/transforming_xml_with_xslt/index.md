@@ -3,7 +3,7 @@ title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
-### [An Overview](cn/Transforming_XML_with_XSLT/An_Overview)
+### An Overview
 
 The separation of content and presentation is a key design feature of [XML](cn/XML). The structure of an XML document is designed to reflect and clarify important relationships among the individual aspects of the content itself, unhindered by a need to provide any indication about how this data should eventually be presented. This intelligent structuring is particularly important as more and more data transfers are automated and take place between highly heterogeneous machines linked by a network.
 
@@ -15,7 +15,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 
 ### XSLT/XPath reference
 
-#### [Elements](cn/XSLT/Elements)
+#### Elements
 
 - [xsl:apply-imports](cn/XSLT/apply-imports)
   _(supported)_
@@ -87,7 +87,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 - [xsl:with-param](cn/XSLT/with-param)
   _(supported)_
 
-#### [Axes](cn/XPath/Axes)
+#### Axes
 
 - [ancestor](cn/XPath/Axes/ancestor)
 - [ancestor-or-self](cn/XPath/Axes/ancestor-or-self)
@@ -104,7 +104,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 - [preceding-sibling](cn/XPath/Axes/preceding-sibling)
 - [self](cn/XPath/Axes/self)
 
-#### [Functions](cn/XPath/Functions)
+#### Functions
 
 - [boolean()](cn/XPath/Functions/boolean)
   _(supported)_
@@ -179,7 +179,7 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
 - [unparsed-entity-url()](cn/XPath/Functions/unparsed-entity-url)
   _(not supported)_
 
-### [For Further Reading](cn/Transforming_XML_with_XSLT/For_Further_Reading)
+### For Further Reading
 
 - [Books](cn/Transforming_XML_with_XSLT/For_Further_Reading#Books)
 - [Online](cn/Transforming_XML_with_XSLT/For_Further_Reading#Online)
@@ -189,10 +189,6 @@ Our focus here is on the second type of stylesheet that Gecko supports: the XSLT
   - [Articles](cn/Transforming_XML_with_XSLT/For_Further_Reading#Articles)
   - [Tutorials/Examples](cn/Transforming_XML_with_XSLT/For_Further_Reading#Tutorials.2FExamples)
   - [Mailing Lists/Newsgroups](cn/Transforming_XML_with_XSLT/For_Further_Reading#Mailing_Lists.2FNewsgroups)
-
-### [Resources](cn/Transforming_XML_with_XSLT/Resources)
-
-### [Index](cn/Transforming_XML_with_XSLT/Index)
 
 ### Original Document Information
 

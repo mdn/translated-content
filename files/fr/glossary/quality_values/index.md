@@ -44,7 +44,7 @@ Quelques syntaxes, comme celle de {{HTTPHeader("Accept")}}, autorisent des spéc
 
 ### Firefox
 
-À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ({{bug(672448)}}).
+À partir de Firefox 18, les valeurs du facteur de qualité sont fixées à 2 décimales. Elles étaient limitées à 1 décimale dans les versions antérieures ([bug Firefox 672448](https://bugzil.la/672448)).
 
 ## Plus d'informations
 

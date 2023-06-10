@@ -60,5 +60,5 @@ span {
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)
+- [正常流中的块向与行向布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [格式化上下文介绍](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)

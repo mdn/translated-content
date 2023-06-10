@@ -24,7 +24,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : A {{domxref("Boolean")}} reflecting the {{htmlattrxref("open", "dialog")}} HTML attribute, indicating whether the dialog is available for interaction.
+  - : A {{domxref("Boolean")}} reflecting the [`open`](/fr/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : A {{domxref("DOMString")}} that sets or returns the return value for the dialog.
 

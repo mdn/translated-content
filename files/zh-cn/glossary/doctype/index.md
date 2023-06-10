@@ -12,6 +12,6 @@ slug: Glossary/Doctype
 - [Document Type Declaration](https://zh.wikipedia.org/wiki/Document_type_declaration) 维基百科的解释
 - [Quirks Mode and Standards Mode](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) 怪异模式（兼容模式）和标准模式
 
-### **技术参考**
+### 技术参考
 
 - [Document.doctype](/zh-CN/docs/Web/API/Document/doctype), 一个返回 doctype 的 JavaScript 方法

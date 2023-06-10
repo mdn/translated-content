@@ -3,17 +3,13 @@ title: 使用可读流
 slug: Web/API/Streams_API/Using_readable_streams
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 作为一个 JavaScript 开发者，以编程的方式逐块地读取和操作从网络上获取的数据是非常实用的！但是你要如何使用 Stream API 的可读流功能呢？可以在这篇文章看到基本介绍。
 
 > **备注：** 本文要求你已理解可读流相关知识，并了解相关的高级概念，如果还不了解，建议你先查看[流的概念和简介](/zh-CN/docs/Web/API/Streams_API#概念和用法)以及掌握 [Stream API 概念](/zh-CN/docs/Web/API/Streams_API/Concepts)然后再阅读此文。
 
 > **备注：** 如果你正在查询关于可写流的信息，你可以尝试阅读[使用可写流](/zh-CN/docs/Web/API/Streams_API/Using_writable_streams)。
-
-## 浏览器支持
-
-你可以将 Fetch body 对象作为流来使用，并在当前的大多数浏览器中你可以创建自定义的可读流。[链式管道传输](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)的支持仍然不是很普遍，但是你可以检查浏览器兼容性表（例如，{{domxref("ReadableStream.pipeThrough()")}}）。
 
 ## 寻找一些示例
 

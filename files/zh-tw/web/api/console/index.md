@@ -10,7 +10,7 @@ The **`Console`** object provides access to the browser's debugging console (e.g
 The `Console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as simply `console`. For example:
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 This page documents the [Methods](#methods) available on the `Console` object and gives a few [Usage](#usage) examples.
@@ -26,9 +26,11 @@ This page documents the [Methods](#methods) available on the `Console` object an
 - {{domxref("Console.count()")}}
   - : Log the number of times this line has been called with the given label.
 - {{domxref("Console.debug()")}}
+
   - : An alias for `log()`.
 
     > **備註：** Starting with Chromium 58 this method only appears in Chromium browser consoles when level "Verbose" is selected.
+
 - {{domxref("Console.dir()")}} {{Non-standard_inline}}
   - : Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.
 - {{domxref("Console.dirxml()")}} {{Non-standard_inline}}
@@ -139,7 +141,10 @@ The output looks like this:
 You can use the `%c` directive to apply a CSS style to console output:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+);
 ```
 
 The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.![](css-styling.png)

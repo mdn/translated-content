@@ -1,6 +1,6 @@
 ---
 title: Les sprites CSS
-slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
+slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 tags:
   - Avancé
   - CSS

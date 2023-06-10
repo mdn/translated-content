@@ -1,6 +1,6 @@
 ---
 title: Formes simples
-slug: Web/CSS/CSS_Shapes/Basic_Shapes
+slug: Web/CSS/CSS_shapes/Basic_shapes
 tags:
   - CSS
   - CSS Shapes

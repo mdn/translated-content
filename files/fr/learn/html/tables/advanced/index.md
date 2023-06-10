@@ -63,7 +63,7 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 
 Le titre est placé directement sous la balise `<table>`.
 
-> **Note :** L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> **Note :** L'attribut [`summary`](/fr/docs/Web/HTML/Element/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 
@@ -97,7 +97,7 @@ Mettons en œuvre ces nouveaux éléments.
 2. Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
 3. Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
 4. Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
-5. Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}} pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
+5. Ensuite, ajoutez un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#colspan) pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
 6. Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
 
     ```css
@@ -363,7 +363,7 @@ Nous avons déjà traité des en-têtes dans notre article précédent — voir 
 
 ### L'attribut `scope`
 
-Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguïté un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
+Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope). Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguïté un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
 
 ```html
 <thead>
@@ -395,7 +395,7 @@ Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et pe
 
 ### Les attributs `id` et `headers`
 
-Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers", "td")}} pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
+Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
 
 1. Vous ajoutez un identifiant unique `id` à chaque élément `<th>`.
 2. Vous ajoutez un attribut `headers` à chaque élément `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.

@@ -75,7 +75,7 @@ Dans cette section, nous allons voir les premières étapes nécessaires aux fon
 
 ### Identifier ce qui peut être déplacé
 
-Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut {{htmlattrxref("draggable")}} ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
+Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
 
 ```html
 <script>
