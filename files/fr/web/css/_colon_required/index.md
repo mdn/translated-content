@@ -10,7 +10,7 @@ translation_of: Web/CSS/:required
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut {{htmlattrxref("required", "input")}} est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required) est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.
 
 ```css
 /* Cible les éléments <input> qui ont */
@@ -61,7 +61,7 @@ input:required {
 
 ## Accessibilité
 
-Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut {{htmlattrxref("input","required")}}. Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
+Si un formulaire ({{HTMLElement("form")}}) contient des champs ({{htmlelement("input")}}) optionnels, les champs obligatoires doivent être indiqués avec l'attribut [`input`](/fr/docs/Web/HTML/Element/required#input). Ainsi, les personnes utilisant des outils d'assistance (par exemple un lecteur d'écran) pourront savoir que ces champs ont besoin d'un contenu valide afin de pouvoir envoyer le formulaire.
 
 Les champs obligatoires devraient également être indiqués visuellement et cette indication ne doit pas uniquement être fournie avec une couleur. Généralement, un texte descriptif ou une icône est utilisé.
 
