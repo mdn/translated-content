@@ -44,10 +44,10 @@ O controle de data do Firefox se parece assim:
     <tr>
       <td><strong>Atributos Comuns Suportados</strong></td>
       <td>
-        [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete),
-        [`list`](/pt-BR/docs/Web/HTML/Element/input#list),
-        [`readonly`](/pt-BR/docs/Web/HTML/Element/input#readonly) e
-        [`step`](/pt-BR/docs/Web/HTML/Element/input#step)
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

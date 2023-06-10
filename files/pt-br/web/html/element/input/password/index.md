@@ -30,15 +30,15 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete),
-        [`inputmode`](/pt-BR/docs/Web/HTML/Element/input#inputmode),
-        [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength),
-        [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength),
-        [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern),
-        [`placeholder`](/pt-BR/docs/Web/HTML/Element/input#placeholder),
-        [`readonly`](/pt-BR/docs/Web/HTML/Element/input#readonly),
-        [`required`](/pt-BR/docs/Web/HTML/Element/input#required), e
-        [`size`](/pt-BR/docs/Web/HTML/Element/input#size)
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#required"><code>required</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>

@@ -451,7 +451,6 @@ Names are unordered relative to each other, but if a particular name has multipl
 - Other, microdata related, global attributes:
 
   - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/pt-BR/docs/Web/HTML/Global_attributes#itemprop)
   - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes#itemscope)
   - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes#itemtype)

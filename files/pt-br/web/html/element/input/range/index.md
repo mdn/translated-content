@@ -35,11 +35,11 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
       <td>
-        [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete),
-        [`list`](/pt-BR/docs/Web/HTML/Element/input#list),
-        [`max`](/pt-BR/docs/Web/HTML/Element/input#max),
-        [`min`](/pt-BR/docs/Web/HTML/Element/input#min), e
-        [`step`](/pt-BR/docs/Web/HTML/Element/input#step)
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#min"><code>min</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

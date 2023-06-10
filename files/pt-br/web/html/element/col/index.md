@@ -32,7 +32,7 @@ O elemento **HTML `<col>`** define uma tabela contendo colunas e sendo utilizada
         {{HTMLElement("colgroup")}} only, though it can be implicitly
         defined as its start tag is not mandatory. The
         {{HTMLElement("colgroup")}} must not have a
-        [`span`](/pt-BR/docs/Web/HTML/Element/colgroup#span) attribute.
+        <a href="/pt-BR/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>
