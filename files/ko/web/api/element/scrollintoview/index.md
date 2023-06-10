@@ -21,10 +21,10 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
   - : 불리언 값입니다.
 
     - `true`일 경우, 요소의 상단은 스크롤 가능한 조상 요소의 보이는 영역 상단에 정렬됩니다.
-      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`와 유사합니다.  
-       이 값이 기본 값입니다.
+      `scrollIntoViewOptions: {block: "start", inline: "nearest"}`와 일치합니다.
+      이 값이 기본 값입니다.
     - `false`일 경우, 요소의 하단은 스크롤 가능한 조상 요소의 보이는 영역 하단에 정렬됩니다.
-      `scrollIntoViewOptions: {block: "end", inline: "nearest"}`와 유사합니다.
+      `scrollIntoViewOptions: {block: "end", inline: "nearest"}`와 일치합니다.
 
 - `scrollIntoViewOptions` {{optional_inline}}
   {{experimental_inline}}
@@ -52,12 +52,12 @@ element.scrollIntoView(scrollIntoViewOptions); // Object parameter
 ## 예제
 
 ```js
-var element = document.getElementById("box");
+const element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+element.scrollIntoView({ block: "end" });
+element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 ```
 
 ## 참고
