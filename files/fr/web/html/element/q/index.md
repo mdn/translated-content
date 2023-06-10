@@ -21,7 +21,7 @@ L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation 
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : La valeur de cet attribut est une URL désignant la source du message ou de l'information citée. Cet attribut est prévu pour fournir des renseignements concernant le contexte ou la référence de cette citation.
 
 ## Exemples
