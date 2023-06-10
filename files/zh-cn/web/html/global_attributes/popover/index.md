@@ -9,7 +9,7 @@ slug: Web/HTML/Global_attributes/popover
 
 弹出式元素通过 `display: none` 被隐藏，直到通过调用/控制元素（即带有 [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget) 属性的 `<button>` 或 `<input type="button">`）或 {{domxref("HTMLElement.showPopover()")}} 调用打开。
 
-当打开时，弹出式元素将出现在所有其他元素之上，即在 {{glossary("top layer")}} 上，并且不会受到父元素的 {{cssxref('position')}} 或 {{cssxref('overflow')}} 样式的影响。
+当打开时，弹出式元素将出现在所有其他元素之上，即在{{glossary("top layer","顶层")}}上，并且不会受到父元素的 {{cssxref('position')}} 或 {{cssxref('overflow')}} 样式的影响。
 
 `popover` 属性可以有 [`"auto"`](/zh-CN/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss)（默认）或 [`"manual"`](/zh-CN/docs/Web/API/Popover_API/Using#using_manual_popover_state) 的取值。具有 `auto` 状态的弹窗可以通过在弹窗之外的区域进行选择，以达到“轻触关闭”的目的，并且通常一次仅允许屏幕上显示一个弹窗。相比之下，`manual` 弹窗必须始终明确隐藏，但可以用于菜单中嵌套弹窗等使用情况。
 
