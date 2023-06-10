@@ -28,15 +28,15 @@ original_slug: Web/HTML/Link_types
         <ul>
           <li>
             If the element is {{HTMLElement("link")}} and the
-            [`rel`](/ru/docs/Web/HTML/Element/link#rel) attribute also contains the
+            <a href="/ru/docs/Web/HTML/Element/link#rel"><code>rel</code></a> attribute also contains the
             <code>stylesheet</code> type, the link defines an
             <a href="/en-US/docs/Alternative_style_sheets"
               >alternative style sheet</a
-            >; in that case the [`title`](/ru/docs/Web/HTML/Element/link#title)
+            >; in that case the <a href="/ru/docs/Web/HTML/Element/link#title"><code>title</code></a>
             attribute must be present and not be the empty string.
           </li>
           <li>
-            If the [`type`](/ru/docs/Web/HTML/Element/link#type) is set to
+            If the <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a> is set to
             <code>application/rss+xml</code> or
             <code>application/atom+xml</code>, the link defines a
             <a href="/en-US/docs/RSS/Getting_Started/Syndicating"
@@ -49,16 +49,16 @@ original_slug: Web/HTML/Link_types
             <ul>
               <li>
                 for another medium, like a handheld device (if the
-                [`media`](/ru/docs/Web/HTML/Element/link#media) attribute is set)
+                <a href="/ru/docs/Web/HTML/Element/link#media"><code>media</code></a> attribute is set)
               </li>
               <li>
                 in another language (if the
-                [`hreflang`](/ru/docs/Web/HTML/Element/link#hreflang) attribute is
+                <a href="/ru/docs/Web/HTML/Element/link#hreflang"><code>hreflang</code></a> attribute is
                 set),
               </li>
               <li>
                 in another format, such as a PDF (if the
-                [`type`](/ru/docs/Web/HTML/Element/link#type) attribute is set)
+                <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a> attribute is set)
               </li>
               <li>a combination of these</li>
             </ul>
@@ -94,11 +94,11 @@ original_slug: Web/HTML/Link_types
         pages as robot harvesters will quickly lead to a lot of spam sent to the
         address. In that case, it is better to lead to a page containing a
         contact form.<br /><br />Although recognized, the
-        [`rev`](/ru/docs/Web/HTML/Element/link#rev) attribute on
+        <a href="/ru/docs/Web/HTML/Element/link#rev"><code>rev</code></a> attribute on
         {{HTMLElement("a")}}, {{HTMLElement("area")}}
         or{{HTMLElement("link")}} elements with a link type of
         <code>made</code> is incorrect and should be replaced by the
-        [`rel`](/ru/docs/Web/HTML/Element/link#rel) attribute with this link type.
+        <a href="/ru/docs/Web/HTML/Element/link#rel"><code>rel</code></a> attribute with this link type.
       </td>
       <td>
         {{HTMLElement("a")}}, {{HTMLElement("area")}},
@@ -189,16 +189,16 @@ original_slug: Web/HTML/Link_types
       <td>
         Defines a resource for representing the page in the user interface,
         usually an icon (auditory or visual).<br /><br />The
-        [`media`](/ru/docs/Web/HTML/Element/link#media),
-        [`type`](/ru/docs/Web/HTML/Element/link#type) and
-        [`sizes`](/ru/docs/Web/HTML/Element/link#sizes) attributes allow the
+        <a href="/ru/docs/Web/HTML/Element/link#media"><code>media</code></a>,
+        <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a> and
+        <a href="/ru/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attributes allow the
         browser to select the most appropriate icon for its context. If several
         resources match, the browser will select the last one declared, in tree
         order. As these attributes are merely hints, and the resources may be
         inappropriate upon further inspection, the browser will then select
         another one, if appropriate.<br /><br /><strong>Note:</strong> Apple's
         iOS does not use this link type, nor the
-        [`sizes`](/ru/docs/Web/HTML/Element/link#sizes) attribute, like others
+        <a href="/ru/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attribute, like others
         mobile browsers do, to select a webpage icon for Web Clip or a start-up
         placeholder. Instead it uses the non-standard
         <a
@@ -364,7 +364,7 @@ original_slug: Web/HTML/Link_types
       <td>
         Suggests that the browser fetch the linked resource in advance, as it is
         likely to be requested by the user. Starting with Firefox 44, the value
-        of the [`crossorigin`](/ru/docs/Web/HTML/Element/link#crossorigin) attribute is
+        of the <a href="/ru/docs/Web/HTML/Element/link#crossorigin"><code>crossorigin</code></a> attribute is
         taken into consideration, making it possible to make anonymous
         prefetches.<br /><br /><strong>Note:</strong> The
         <a href="/en-US/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
@@ -417,7 +417,7 @@ original_slug: Web/HTML/Link_types
       <td>
         Indicates that the hyperlink reference a document whose interface is
         specially designing for searching in this document, or site, and its
-        resources.<br /><br />If the [`type`](/ru/docs/Web/HTML/Element/link#type)
+        resources.<br /><br />If the <a href="/ru/docs/Web/HTML/Element/link#type"><code>type</code></a>
         attribute is set to
         <code>application/opensearchdescription+xml </code>the resource is an
         <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox"
@@ -442,7 +442,7 @@ original_slug: Web/HTML/Link_types
         an
         <a href="/en-US/docs/Alternative_style_sheets"
           >alternative style sheet</a
-        >; in that case the [`title`](/ru/docs/Web/HTML/Element/link#title)
+        >; in that case the <a href="/ru/docs/Web/HTML/Element/link#title"><code>title</code></a>
         attribute must be present and not be the empty string.
       </td>
       <td>{{HTMLElement("link")}}</td>
