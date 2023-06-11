@@ -27,7 +27,7 @@ CSS 可以使用媒体查询将样式应用在特定条件下。媒体查询对�
 
 默认情况下，浏览器假设每个指定的样式表都是阻塞渲染的。通过添加 `media` 属性附加[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，告诉浏览器何时应用样式表。当浏览器看到一个它知道只会用于特定场景的样式表时，它仍会下载样式，但不会阻塞渲染。通过将 CSS 分成多个文件，主要的阻塞渲染文件（本例中为 `styles.css`）的大小变得更小，从而减少了渲染被阻塞的时间。
 
-### 在 GPU 上呈现动画
+### 在 GPU 上渲染动画
 
 浏览器针对处理 CSS 动画进行了优化，可以很好地处理触发重排（因此也导致重绘）的动画属性。为了提高性能，可以将被动画化的节点从主线程移到 GPU 上。将导致合成的属性包括 3D 变换（[`transform: translateZ()`](/zh-CN/docs/Web/CSS/transform)、[`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d) 等）、动画变换、[`opacity`](/zh-CN/docs/Web/CSS/opacity)、[`position: fixed`](/zh-CN/docs/Web/CSS/position)、[`will-change`](/zh-CN/docs/Web/CSS/will-change) 和 [`filter`](/zh-CN/docs/Web/CSS/filter)。一些元素，例如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，也位于各自的图层上。将元素提升为图层（也称为合成）时，动画转换属性将在 GPU 中完成，从而改善性能，尤其是在移动设备上。
 
