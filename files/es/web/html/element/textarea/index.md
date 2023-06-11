@@ -34,7 +34,7 @@ Este elemento contiene [global attributes](/es/docs/HTML/Global_attributes).
     - `off`: El usuario debe explícitamente introducir el valor del campo para cada uso, o el documento proporciona su propio método de auto-completado; el navegador no completa automáticamente.
     - `on`: El navegador puede completar automáticamente el valor basándose en valores que el usuario haya insertado durante usos previos.
 
-    Si el atributo **autocomplete** no está definidio en el elemento textarea, entonces el navegador usa el valor del atributo **autocomplete** del propietario del elemento `<textarea>` . El propietario del formulario es o bien el elemento form del cual el \<textarea> es descendiente o el elemento form cuyo id está especificado en el atributo form del elemento. Para más información, ver el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
+    Si el atributo **autocomplete** no está definidio en el elemento textarea, entonces el navegador usa el valor del atributo **autocomplete** del propietario del elemento `<textarea>` . El propietario del formulario es o bien el elemento form del cual el \<textarea> es descendiente o el elemento form cuyo id está especificado en el atributo form del elemento. Para más información, ver el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
 - {{ htmlattrdef("autofocus") }}
   - : Este atributo booleano te permite especificar que un control de un formulario adquiera el foco cuando se carga la página, salvo que el usuario anule esto , por ejemplo tecleando en un control diferente. Sólo se puede especificar este atributo en los elementos asociados a formularios.
 - {{ htmlattrdef("cols") }}

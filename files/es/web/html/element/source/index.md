@@ -64,7 +64,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("sizes")}} {{experimental_inline}}
-  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en {{htmlattrxref("srcset", "source")}} se utilizará.
+  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](/es/docs/Web/HTML/Element/source#srcset) se utilizará.
     El atributo `sizes` tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 - {{htmlattrdef("src")}}
   - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.

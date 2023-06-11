@@ -24,7 +24,7 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
         <a
           href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
           >contenido textual</a
-        >. Si su atributo {{htmlattrxref("type", "input")}} no es
+        >. Si su atributo <a href="/es/docs/Web/HTML/Element/input#type"><code>type</code></a> no es
         <code>hidden</code>, entonces contenido etiquetable, contenido palpable.
       </td>
     </tr>
@@ -172,7 +172,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     Véase el [Estándar WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) para információn más detallada.
 
-    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.
+    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
 
     El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
 
@@ -195,27 +195,27 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
   - : Cuando el valor del atributo **type** es `radio` o `checkbox`, la presencia de este atributo Booleano indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.
 
-    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete).
 
 - {{htmlattrdef("disabled")}}
 
   - : Este atributo Booleano indica que el control no está disponible para interacción. En particular, el evento `click` [no será invocado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) en controles deshabilitados. De igual forma, el valor de un control deshabilitado no es enviado con el formulario.
 
-    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo {{htmlattrxref("autocomplete","input")}}.
+    En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete).
 
 - {{htmlattrdef("form")}}
   - : El elemento form al que está asociado el elemento (su _formulario propietario_). El valor del atributo debe ser el **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento `<input>` deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos `<input>` en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.
 - {{htmlattrdef("formaction")}}
-  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo {{htmlattrxref("action","form")}} del formulario al que pertenece el elemento.
+  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo [`action`](/es/docs/Web/HTML/Element/form#action) del formulario al que pertenece el elemento.
 - {{htmlattrdef("formenctype")}}
 
   - : Si el elemento es de tipo `submit` o `image`, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
 
     - `application/x-www-form-urlencoded`: El valor predeterminado si el atributo no es especificado.
-    - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo {{htmlattrxref("type","input")}} de valor `file`.
+    - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo [`type`](/es/docs/Web/HTML/Element/input#type) de valor `file`.
     - `text/plain`
 
-    Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("enctype","form")}} del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del formulario al que pertenece el elemento.
 
 - {{htmlattrdef("formmethod")}}
 
@@ -224,13 +224,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `post`: Los datos del formulario son incluidos en el cuerpo del formulario, y enviados al servidor.
     - `get`: Los datos del formulario son añadidos al URI del **form** con un símbolo '?' como separador, y el URI resultante es enviado al servidor. Se usa este método cuando el formulario no tiene efectos secundarios y contiene solamente caracteres ASCII.
 
-    Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("method","form")}} del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`method`](/es/docs/Web/HTML/Element/form#method) del formulario al que pertenece el elemento.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("novalidate","form")}} del formulario al que pertenece el elemento.
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) del formulario al que pertenece el elemento.
 - {{htmlattrdef("formtarget")}}
 
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("target", "form")}} del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo [`target`](/es/docs/Web/HTML/Element/form#target) del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
 
     - `_self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
     - `_blank`: Carga la respuesta en un contexto de navegación nuevo.
@@ -371,7 +371,7 @@ Nótese, sin embargo, que esto no es estándar, y no tendrá efecto en otros nav
 
 ### Usando mozactionhint en Firefox mobile
 
-Se puede usar el atributo {{htmlattrxref("mozactionhint", "input")}} para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
+Se puede usar el atributo [`mozactionhint`](/es/docs/Web/HTML/Element/input#mozactionhint) para especificar el texto para la etiqueta de la tecla Enter en el teclado virtual cuando el formulario es mostrado en Firefox mobile. Por ejemplo, para mostrar una etiqueta "Next", se puede hacer esto:
 
 ```html
 <input type="text" mozactionhint="next">

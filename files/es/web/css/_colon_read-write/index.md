@@ -20,7 +20,7 @@ input:read-write {
 }
 ```
 
-> **Nota:** Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con {{htmlattrxref("contenteditable")}} establecido en él.
+> **Nota:** Este selector no solo selecciona texto de {{htmlElement("input")}}; seleccionará _cualquier_ elemento que pueda editar el usuario, como un elemento {{htmlelement("p")}} con [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) establecido en él.
 
 ## Sintaxis
 
@@ -64,4 +64,4 @@ p[contenteditable="true"] { color: blue; }
 ## Ver también
 
 - {{cssxref(":read-only")}}
-- Atributo HTML {{htmlattrxref("contenteditable")}}
+- Atributo HTML [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable)
