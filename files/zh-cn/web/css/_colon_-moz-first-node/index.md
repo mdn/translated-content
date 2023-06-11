@@ -43,7 +43,7 @@ span:-moz-first-node {
 
 ### 结果
 
-{{EmbedLiveSample("语法")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
