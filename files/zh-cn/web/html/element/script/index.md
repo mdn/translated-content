@@ -103,7 +103,6 @@ slug: Web/HTML/Element/script
     - `strict-origin`：只在协议安全等级相同时（如 HTTPS→HTTPS）发送文档的源作为 referrer，目标安全性降低（如 HTTPS→HTTP）时不发送。
     - `strict-origin-when-cross-origin`：在执行同源请求时，发送完整的 URL，但只在协议安全级别保持不变（如 HTTPS→HTTPS）时发送源，而在目标安全性降低（如 HTTPS→HTTP）时不发送标头。
     - `unsafe-url`：referrer 将包含源*和*路径（但不包含[片段](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/hash)、[密码](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/password)和[用户名](/zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username)）。**这个值是不安全的**，因为它将 TLS 保护的资源的源和路径泄露给不安全的源。
-  
       > **注意**：空字符串（`""`）既是默认值，也是在不支持 `referrerpolicy` 的情况下的一个回退值。如果没有在 `<script>` 元素上明确指定 `referrerpolicy`，它将采用更高级别的 referrer 策略，即对整个文档或域设置的策略。如果没有更高级别的策略，空字符串将被视为等同于 `no-referrer-when-downgrade`。
 
 - `src`
@@ -111,7 +110,6 @@ slug: Web/HTML/Element/script
 - [**`type`**](/zh-CN/docs/Web/HTML/Element/script/type)
 
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
-  
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
       - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)中。
     - `module`
