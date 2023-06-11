@@ -55,7 +55,6 @@
 /zh-CN/docs/CSS/Understanding_z-index/Stacking_without_z-index	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /zh-CN/docs/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /zh-CN/docs/CSS/Universal_selectors	/zh-CN/docs/Web/CSS/Universal_selectors
-/zh-CN/docs/CSS/Using_CSS_gradients	/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/Value_definition_syntax
 /zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
 /zh-CN/docs/CSS/actual_value	/zh-CN/docs/Web/CSS/actual_value
