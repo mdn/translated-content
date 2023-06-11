@@ -37,7 +37,7 @@ td:-moz-drag-over {
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -50,4 +50,4 @@ td:-moz-drag-over {
 ## 参见
 
 - [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- [HTML 拖拽和拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [HTML 拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
