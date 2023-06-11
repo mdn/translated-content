@@ -65,9 +65,7 @@ slug: Web/HTML/Element/script
 - `defer`
 
   - : 这个布尔属性的设置是为了向浏览器表明，该脚本是要在文档被解析后，但在触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前执行的。
-  
     包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
-  
     > **警告：** 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），将不会生效。
     >
     > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)也不会生效——它们默认是 defer 的。
