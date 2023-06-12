@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.toReversed
+l10n:
+  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
 ---
 
 {{JSRef}}
