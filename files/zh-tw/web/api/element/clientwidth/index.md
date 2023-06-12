@@ -22,16 +22,16 @@ pixels = document.width;
 
 ```js
 function init() {
-    alert("文件的寬度是 " + document.width + " 像素。");
+  alert("文件的寬度是 " + document.width + " 像素。");
 }
 ```
 
 ## 其他替代
 
 ```js
-document.body.clientWidth              /* <body> 的寬度 */
-document.documentElement.clientWidth   /* <html> 的寬度 */
-window.innerWidth                      /* 視窗的寬度 */
+document.body.clientWidth; /* <body> 的寬度 */
+document.documentElement.clientWidth; /* <html> 的寬度 */
+window.innerWidth; /* 視窗的寬度 */
 ```
 
 ## 規範於

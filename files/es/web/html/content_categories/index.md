@@ -33,7 +33,7 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} {{HTMLAttrxRef("scoped", "style")}}
+- {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
 
 ### Contenido de sección
 
@@ -78,12 +78,12 @@ El contenido incrustado importa otro recurso o inserta contenido de otro lenguaj
 El contenido interactivo incluye elementos diseñados específicamente para la interacción del usuario. Los elementos que pertenecen a esta categoría incluyen: {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} y {{HTMLElement("textarea")}}.
 Algunos elementos pertenecen a esta categoría solo bajo condiciones específicas:
 
-- {{HTMLElement("audio")}}, si está presente el atributo {{HTMLAttrxRef("controls", "audio")}}
-- {{HTMLElement("img")}}, si está presente el atributo {{HTMLAttrxRef("usemap", "img")}}
-- {{HTMLElement("input")}}, si el atributo {{HTMLAttrxRef("type", "input")}} no está en estado oculto
-- {{HTMLElement("menu")}}, si el atributo {{HTMLAttrxRef("type", "menu")}} está en la barra de estado de herramientas
-- {{HTMLElement("object")}}, si está presente el atributo {{HTMLAttrxRef("usemap", "object")}}
-- {{HTMLElement("video")}}, si está presente el atributo {{HTMLAttrxRef("controls", "video")}}
+- {{HTMLElement("audio")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/audio#controls)
+- {{HTMLElement("img")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/img#usemap)
+- {{HTMLElement("input")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/input#type) no está en estado oculto
+- {{HTMLElement("menu")}}, si el atributo [`type`](/es/docs/Web/HTML/Element/menu#type) está en la barra de estado de herramientas
+- {{HTMLElement("object")}}, si está presente el atributo [`usemap`](/es/docs/Web/HTML/Element/object#usemap)
+- {{HTMLElement("video")}}, si está presente el atributo [`controls`](/es/docs/Web/HTML/Element/video#controls)
 
 ### Contenido palpable
 

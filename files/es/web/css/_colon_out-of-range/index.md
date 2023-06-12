@@ -5,7 +5,7 @@ slug: Web/CSS/:out-of-range
 
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max","input")}}.
+La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:out-of-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual está fuera de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
 
 ```css
 /* Selecciona cualquier <input>, pero solo cuando tiene un

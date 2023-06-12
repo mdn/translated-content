@@ -83,14 +83,6 @@ When discussing the various methods of listening to events,
 - **event listener** refers to a function or object registered via {{domxref("EventTarget.addEventListener()")}},
 - whereas **event handler** refers to a function registered via `on...` attributes or properties.
 
-## 規格
-
-{{Specifications}}
-
-## 瀏覽器相容性
-
-{{Compat}}
-
 ### Event handler changes in Firefox 9
 
 In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0.

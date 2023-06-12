@@ -10,7 +10,7 @@ translation_of: Web/CSS/:in-range
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}}.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [max](/fr/docs/Web/HTML/Element/input#max).
 
 ```css
 /* Cible n'importe quel élément <input>   */

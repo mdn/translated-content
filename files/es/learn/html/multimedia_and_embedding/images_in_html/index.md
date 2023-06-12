@@ -336,7 +336,7 @@ Una solución mejor es utilizar los elementos HTML5 {{htmlelement("figure")}} y 
 
 El elemento {{htmlelement("figcaption")}} dice al navegador, o a alguna tecnología de apoyo, que el texto que contiene describe la imagen que está contenida en el elemento {{htmlelement("figure")}}.
 
-> **Nota:** Desde el punto de vista de la accesibilidad, los pies de imagen y el texto alternativo {{htmlattrxref('alt','img')}} cumplen funciones diferentes. Los pies de imagen benefician incluso a quien puede ver la imagen, mientras que el texto {{htmlattrxref('alt','img')}} proporciona la misma función en una imagen ausente. Por tanto, los subtítulos y el texto `alt` no deberían decir lo mismo, porque ambos aparecen si la imagen no se muestra. Desactiva las imágenes en tu navegador y observa el resultado.
+> **Nota:** Desde el punto de vista de la accesibilidad, los pies de imagen y el texto alternativo [`alt`](/es/docs/Web/HTML/Element/img#alt) cumplen funciones diferentes. Los pies de imagen benefician incluso a quien puede ver la imagen, mientras que el texto [`alt`](/es/docs/Web/HTML/Element/img#alt) proporciona la misma función en una imagen ausente. Por tanto, los subtítulos y el texto `alt` no deberían decir lo mismo, porque ambos aparecen si la imagen no se muestra. Desactiva las imágenes en tu navegador y observa el resultado.
 
 El elemento _figure_ no ha de contener una imagen necesariamente. Es una unidad de contenido independiente que:
 
