@@ -90,7 +90,7 @@ slug: Web/HTML/Element/script
 - `integrity`
   - : 包含用户代理可用于验证所获取到资源的完整性的内联元数据。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `nomodule`
-  - : 这个布尔属性被设置来标明这个脚本不应该在支持 [ES modules](/zh-CN/docs/Web/JavaScript/Guide/Modules) 的浏览器中执行。实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。
+  - : 这个布尔属性被设置来标明这个脚本不应该在支持 [ES 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)的浏览器中执行。实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。
 - `nonce`
   - : 在 [script-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) 中允许脚本的一个一次性加密随机数（nonce）。服务器每次传输策略时都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 是至关重要的，因为绕过一个资源的策略是微不足道的。
 - `referrerpolicy`
