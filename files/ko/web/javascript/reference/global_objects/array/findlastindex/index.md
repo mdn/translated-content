@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.findLastIndex
+l10n:
+  sourceCommit: 34a34bee83fb4accf073ebc0c8cfc8eff956dc9b
 ---
 
 {{JSRef}}
