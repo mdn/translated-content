@@ -5,7 +5,7 @@ slug: Web/HTML/Element/script
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<script>`** 元素用于嵌入可执行代码或数据，这通常用作嵌入或者指向 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的 GLSL 着色器语言和 [JSON](/zh-CN/docs/Glossary/JSON)。
+[HTML](/zh-CN/docs/Web/HTML) **`<script>`** 元素用于嵌入可执行代码或数据，这通常用作嵌入或者引用 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的 GLSL 着色器语言和 [JSON](/zh-CN/docs/Glossary/JSON)。
 
 <table class="properties">
   <tbody>
@@ -65,8 +65,10 @@ slug: Web/HTML/Element/script
 - `defer`
 
   - : 这个布尔属性的设置是为了向浏览器表明，该脚本是要在文档被解析后，但在触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前执行的。
+
     包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
-    > **警告：** 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），将不会生效。
+
+    > **警告：** 本属性不应在缺少 `src` 属性的情况下使用（也就是内联脚本的情况下），这种情况下将不会生效。
     >
     > `defer` 属性对[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)也不会生效——它们默认是 defer 的。
 
@@ -115,7 +117,7 @@ slug: Web/HTML/Element/script
     - `module`
       - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
     - [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)
-      - : 此值代表元素体内包含导入映射表。导入映射表是一个 JSON 对象，开发者可以用它来控制浏览器在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)时如何解析模块标识符。
+      - : 此值代表元素体内包含导入映射（importmap）表。导入映射表是一个 JSON 对象，开发者可以用它来控制浏览器在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)时如何解析模块标识符。
     - **任何其他值**
       - : 所嵌入的内容被视为一个数据块，不会被浏览器处理。开发人员必须使用有效的 MIME 类型，但不是 JavaScript MIME 类型来表示数据块。所有其他属性，包括 `src` 均会被忽略。
 
@@ -126,7 +128,7 @@ slug: Web/HTML/Element/script
 ### 废弃的属性
 
 - `charset` {{Deprecated_inline}}
-  - : 如果存在，它的值必须是 ASCII 大小写不敏感的“`utf-8`”的匹配。没有必要指定 `charset` 属性，因为文档必须使用 UTF-8，而且 `script` 元素从文档中继承其字符编码。
+  - : 如果存在，它的值必须是 ASCII 大小写不敏感的“`utf-8`”的匹配。没有必要指定 `charset` 属性，因为文档必须使用 UTF-8，而且 `script` 元素从文档继承其字符编码。
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : 和 `type` 属性类似，这个属性定义脚本使用的语言。但是与 `type` 不同的是，这个属性的可能值从未被标准化过。请用 `type` 属性代替这个属性。
 
@@ -163,7 +165,7 @@ slug: Web/HTML/Element/script
 <script nomodule src="fallback.js"></script>
 ```
 
-### 导入带有导入映射（importmap）的模块
+### 使用导入映射导入模块
 
 在脚本中导入模块时，如果你不使用 [`type=importmap`](#importmap) 特性，那么每个模块都必须使用模块指定符来导入，该指定符可以是绝对的也可以是相对的 URL。在下面的例子中，第一个模块标识符（“./shapes/square.js”）是相对于文档的根 URL 解析的，而第二个是绝对 URL。
 
