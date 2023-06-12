@@ -26,7 +26,7 @@ slug: Web/CSS/:-moz-window-inactive
 ### HTML
 
 ```html
-<div id=“mybox”>
+<div id="mybox">
   <p>这是一个盒子！</p>
 </div>
 ```
@@ -47,7 +47,7 @@ slug: Web/CSS/:-moz-window-inactive
 
 ### 结果
 
-此代码的结果如下所示。 你也可以将其作为一个单独的页面查看 {{LiveSampleLink('示例', 'separate page')}}。
+此代码的结果如下所示。 你也可以打开一个新页面查看 {{LiveSampleLink('示例', 'separate page')}}。
 
 {{EmbedLiveSample('示例', 220, 220)}}
 
