@@ -26,7 +26,7 @@ structuredClone(value, options)
     이것은 모든 [구조화된 복제 가능한 타입](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)일 수 있습니다.
 - `options` {{optional_inline}}
   - : 다음 속성들을 가진 객체.
-    - `transter`
+    - `transfer`
       - : 반환된 객체로 복제되는 대신 이동될 [전송가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)의 배열
 
 ### 반환 값
