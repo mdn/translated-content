@@ -20,7 +20,7 @@ l10n:
 
   - {{cssxref("color_value/hsl","hsl()")}} 関数記法（[HSL 円筒座標系](https://ja.wikipedia.org/wiki/HSV%E8%89%B2%E7%A9%BA%E9%96%93)を使用）
 
-- {{cssxref("color_value/hwb","hwb()")}} 関数記法（[HWB 円筒座標系](https://en.wikipedia.org/wiki/HWB_color_model)を使用）
+  - {{cssxref("color_value/hwb","hwb()")}} 関数記法（[HWB 円筒座標系](https://en.wikipedia.org/wiki/HWB_color_model)を使用）
 
 - 以下の方法による任意の視覚可能な色:
 
