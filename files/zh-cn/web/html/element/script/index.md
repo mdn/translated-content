@@ -136,7 +136,7 @@ slug: Web/HTML/Element/script
 
 没有 [`async`](#async)、[`defer`](#defer) 或 `type="module"` 属性的脚本，以及没有 `type="module"` 属性的内联脚本，会在浏览器继续解析页面之前立即获取并执行。
 
-脚本应该以 `text/javascript` 的 MIME 类型提供，但浏览器比较宽容，只有在脚本以图像类型（`image/*`）、视频类型（`video/*`）、音频类型（`audio/*`）或 `text/csv` 提供时才会阻止它们。如果脚本受阻，将向该元素发送 {{domxref("Element/error_event", "error")}} 事件；否则，将发送 {{domxref("Element/load_event", "load")}} 事件。
+脚本应该以 `text/javascript` 的 MIME 类型提供，但浏览器比较宽容，只有在脚本以图像类型（`image/*`）、视频类型（`video/*`）、音频类型（`audio/*`）或 `text/csv` 提供时才会阻止它们。如果脚本受阻，将向该元素发送 {{domxref("HTMLElement/error_event", "error")}} 事件；否则，将发送 {{domxref("HTMLElement/load_event", "load")}} 事件。
 
 ## 示例
 
