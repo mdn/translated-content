@@ -22,7 +22,7 @@ l10n:
 
 추가적으로, 접근성 트리는 주로 요소와 함께 수행될 수 있는 것에 대한 정보를 포함합니다. 링크를 '추적'하거나 텍스트 인풋을 '입력'할 수 있습니다.
 
-**[접근성 객체 모델](https://wicg.github.io/aom/explainer.html) (AOM)** 은 웹 인큐베이터 커뮤니티 그룹(Web Incubator Community Group)에서 초안 형태를 유지하면서 접근성 시멘틱들을 더 쉽게 표현하고 계산된 접근성 트리에 읽기 접근을 가능성 있게 허용하는 API들을 배양하려고 합니다.
+2022년 4월 기준 아직은 초안 형태이나 웹 인큐베이터 커뮤니티 그룹(Web Incubator Community Group)에서 접근성 시멘틱들을 더 쉽게 표현하고 계산된 접근성 트리에 읽기 접근을 허용하는 API들을 만들어내기 위한 **[접근성 객체 모델](https://wicg.github.io/aom/explainer.html) (AOM)** 도 있습니다.
 
 ## 같이 보기
 
