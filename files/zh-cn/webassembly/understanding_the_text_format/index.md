@@ -104,7 +104,7 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 (func (param $p1 i32) (param $p2 f32) (local $loc i32) …)
 ```
 
-这里，使用 local.get $p1 就代替 local.get 0，访问参数 i32 变量时，就可以通过 $p1 进行访问。
+这里，使用 `local.get $p1` 就可以代替 `local.get 0`，访问参数 i32 变量时，就可以通过 $p1 进行访问。
 
 > **备注：** 当文本转换为二进制后，二进制中只包含整数。
 
