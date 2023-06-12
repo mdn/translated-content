@@ -85,7 +85,7 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 
 局部变量和参数能够被函数体使用 `local.get` 和 `local.set` 指令进行读写。
 
-local.get/local.set 指令使用数字索引来指向将被存取的条目：按照它们的声明顺序，参数在前，局部变量在后。因此，给定下面的函数：
+`local.get`/`local.set` 指令使用数字索引来指向将被存取的条目：按照它们的声明顺序，参数在前，局部变量在后。因此，给定下面的函数：
 
 ```wasm
 (func (param i32) (param f32) (local f64)
