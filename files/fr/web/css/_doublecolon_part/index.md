@@ -15,7 +15,7 @@ translation_of: Web/CSS/::part
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n’importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut {{HTMLAttrxRef("part")}} correspondant.
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::part`** représente n’importe quel élément dans un [arbre fantôme](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui a un attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) correspondant.
 
 ```css
 custom-element::part(foo) {
@@ -94,6 +94,6 @@ tabbed-custom-element::part(active tab) {
 
 ## Voir aussi
 
-- L’attribut {{HTMLAttrxRef("part")}} - Utilisé pour définir des parties qui peuvent être sélectionnées par le sélecteur `::part()`
-- L'attribut {{HTMLattrxref("exportparts")}} qui est utilisé pour exporter les parties d'un arbre _shadow_ imbriqué vers un arbre classique
+- L’attribut [`part`](/fr/docs/Web/HTML/Global_attributes#part) - Utilisé pour définir des parties qui peuvent être sélectionnées par le sélecteur `::part()`
+- L'attribut [`exportparts`](/fr/docs/Web/HTML/Global_attributes#exportparts) qui est utilisé pour exporter les parties d'un arbre _shadow_ imbriqué vers un arbre classique
 - [Utilisation de CSS Shadow : `::part` et `::theme`](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)

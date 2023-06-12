@@ -22,7 +22,7 @@ var elements = document.getElementsByTagName(name);
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
 - `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».
 
-> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une {{domxref("NodeList")}} dans les navigateurs WebKit. Voir {{bug(14869)}} pour plus de détails.
+> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une {{domxref("NodeList")}} dans les navigateurs WebKit. Voir [bug Firefox 14869](https://bugzil.la/14869) pour plus de détails.
 
 ## Exemple
 
@@ -91,7 +91,7 @@ Cliquer sur les boutons utilise `getElementsByTagName()` pour compter les élém
 
 ## Notes
 
-Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi {{Bug (499656)}}.
+Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi le [bug Firefox 499656](https://bugzil.la/499656).
 
 `document.getElementsByTagName()` est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.
 

@@ -200,7 +200,7 @@ Es bueno entender el significado global de todos los elementos definitorios de l
 
 ### Envolturas no semánticas
 
-A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ({{HTMLAttrxRef('class')}}), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
+A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ([`class`](/es/docs/Web/HTML/Global_attributes#class)), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
 
 {{HTMLElement("span")}} es un elemento no-semántico que se utiliza en el interior de una línea. Se utiliza cuando no se nos ocurre el uso de ningún otro elemento semántico de texto en el que incluir el contenido, o si no se desea añadir ningún significado específico. Por ejemplo:
 

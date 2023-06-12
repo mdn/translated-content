@@ -98,7 +98,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
   </tbody>
 </table>
 
-> **Note :** Voir le {{bug(1465256)}} pour la suppression de cette exigence inutile.
+> **Note :** Voir le [bug Firefox 1465256](https://bugzil.la/1465256) pour la suppression de cette exigence inutile.
 
 ## Compatibilité des navigateurs
 

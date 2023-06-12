@@ -25,9 +25,9 @@ user-modify: initial;
 user-modify: unset;
 ```
 
-> **Attention :** Cette propriété a été remplacée par l'attribut {{HTMLAttrxref("contenteditable")}}.
+> **Attention :** Cette propriété a été remplacée par l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable).
 
-Cette propriété est similaire à l'attribut HTML {{htmlattrxref("contenteditable")}}. Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
+Cette propriété est similaire à l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable). Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
 
 ## Syntaxe
 

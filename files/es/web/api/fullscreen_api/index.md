@@ -50,7 +50,7 @@ Cuando el modo de pantalla completa sea invocado exitosamente, el documento que 
 
 ### Cuando la solicitud de pantalla completa falla
 
-No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo {{ HTMLAttrXRef("allowfullscreen", "iframe") }} para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
+No es garantía que se pueda cambiar a modo de pantalla completa. Por ejemplo, los elementos {{ HTMLElement("iframe") }} tienen un atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen) para decidir si se permitirá que el contenido se muestre en pantalla completa. Además, ciertos tipos de contenido, como plug-ins en ventana, no pueden ser presentados en modo de pantalla completa. Intentar hacerlo con elementos que no lo permitan (o el padre o descendente de un elemento así), no funcionará. En su lugar, el elemento que solicitó la pantalla completa recibirá un evento `fullscreenerror`. En Firefox, cuando falla una solicitud de pantalla completa, el navegador registrará un mensaje de error en la consola, explicando la falla de la solicitud. En Chrome y versiones recientes de Opera, sin embargo, no se genera ninguna advertencia.
 
 > **Nota:** Las solicitudes de pantalla completa necesitan ser invocadas dentro de un manejador de eventos, o de otro modo, serán denegadas.
 
@@ -140,4 +140,4 @@ De momento, no todos los navegadores están implementando la versión sin prefij
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)

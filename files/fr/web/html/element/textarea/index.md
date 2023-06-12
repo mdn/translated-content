@@ -31,7 +31,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("autocapitalize")}} {{non-standard_inline}}
+- `autocapitalize` {{non-standard_inline}}
 
   - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles spour iOS 5 et les versions supérieures sont :
 
@@ -42,40 +42,40 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
     - `on` : {{deprecated_inline}} valeur dépréciée depuis iOS 5 et qui permettait d'activer la mise en majuscule automatique.
     - `off` : {{deprecated_inline}} valeur dépréciée depuis iOS 5 et qui permettait de désactiver la mise en majuscule automatique.
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
 
   - : Cet attribut indique si la valeur saisie doit automatiquement être complétée par le navigateur. Cet attribut à valeur contrainte peut prendre l'une de ces deux valeurs :
 
     - `off` : l'utilisateur doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
     - `on` : le navigateur peut compléter la saisie de l'utilisateur en fonction de ce que l'utilisateur a déjà saisi précédemment sur ce champ.
 
-    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut {{htmlattrxref("autocomplete", "form")}} de l'élément {{HTMLElement("form")}}.
+    Si l'attribut `autocomplete` n'est pas indiqué à même l'élément `<textarea>`, alors le navigateur utilise la valeur d'`autocomplete` pour le formulaire rattaché à cet élément (c'est-à-dire son élément ancêtre `<form>` ou le formulaire correspond à l'identifiant fourni par l'attribut `form`). Pour plus d'informations, se référer à la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/form#autocomplete) de l'élément {{HTMLElement("form")}}.
 
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : Cet attribut permet d'indiquer que ce contrôle doit recevoir le focus au chargement de la page. Seul un élément de formulaire au sein d'un document peut avoir cet attribut déclaré.
-- {{htmlattrdef("cols")}}
+- `cols`
   - : La largeur visible du contrôle de saisie, exprimée en largeur moyenne de caractères. La valeur utilisée doit être un entier positif. La valeur par défaut de cet attribut est 20.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Cet attribut booléen indique que le contrôle est désactivé et que l'utilisateur ne peut pas interagir avec ce contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état de son élément parent (par exemple de son éventuel élément parent {{HTMLElement("fieldset")}}). S'il n'existe pas d'élément englobant pour lequel l'attribut `disabled` est utilisé, le contrôle est alors actif.
-- {{htmlattrdef("form")}}
+- `form`
   - : L'élément de formulaire auquel l'élément `<textarea>` est rattaché. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut `id`) d'un élément {{HTMLElement("form")}} du même document. Si cet attribut n'est pas défini, l'élément `<textarea>` doit être un descendant d'un élément `<form>`. Cet attribut permet notamment de placer des éléments `<textarea>` où qu'on le veuille dans le document et pas uniquement comme des descendants des éléments de formulaire.
-- {{htmlattrdef("maxlength")}}
+- `maxlength`
   - : Le nombre maximum de caractères, exprimé en codets Unicode, que l'utilisateur peut saisir. Si cet attribut n'est pas utilisé, l'utilisateur peut saisir un nombre illimité de caractères..
-- {{htmlattrdef("minlength")}}
+- `minlength`
   - : Le nombre minimal que l'utilisateur doit saisir dans le champ, exprimé en codets Unicode.
-- {{htmlattrdef("name")}}
+- `name`
   - : Le nom associé au contrôle.
-- {{htmlattrdef("placeholder")}}
+- `placeholder`
   - : Une indication fournie à l'utilisateur sur la valeur qui peut être saisie dans le contrôle. Les retours à la ligne contenus dans la valeur de l'attribut doivent être interprétés comme des sauts de ligne lorsque l'indication est affichée pour l'utilisateur. Attention, les indications servent uniquement à indiquer le type de donnée qui peut être saisi dans un champ, elles n'ont pas à remplacer un élément {{HTMLElement("label")}}. (cf. {{HTMLElement("input")}} pour plus d'explications).
-- {{htmlattrdef("readonly")}}
+- `readonly`
   - : Cet attribut booléen indique que l'utilisateur ne peut pas modifier la valeur du contrôle. À la différence de l'attribut `disabled`, `readonly` n'empêche pas de cliquer ou de sélectionner le contrôle. La valeur d'un contrôle en lecture seule est tout de même envoyé avec les données du formulaire.
-- {{htmlattrdef("required")}}
+- `required`
   - : Cet attribut indique que l'utilisateur doit nécessairement saisir une valeur afin de pouvoir envoyer le formulaire.
-- {{htmlattrdef("rows")}}
+- `rows`
   - : Le nombre de lignes de texte visibles pour le contrôle.
-- {{htmlattrdef("spellcheck")}}
+- `spellcheck`
   - : Lorsque cet attribut vaut `true`, cela indique que la vérification orthographique et grammaticale doit être activée. La valeur `default` indique que l'élément doit suivre le comportement par défaut, éventuellement basé sur la valeur de l'attribut `spellcheck` de l'élément parent. Si cet attribut vaut `false`, le texte de l'élément ne doit pas être contrôlé.
-- {{htmlattrdef("wrap")}}
+- `wrap`
 
   - : Cet attribut à valeur contrainte indique la façon dont les retours à la ligne automatiques sont utilisés. Les valeurs possibles pour cet attribut sont :
 

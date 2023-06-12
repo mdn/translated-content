@@ -48,4 +48,4 @@ document.getElementById("infoText2").innerHTML += document.getElementById("myTex
 ## Voir aussi
 
 - {{domxref("element.contentEditable")}}
-- L'attribut global [contenteditable](/fr/docs/Web/HTML/Global_attributes/contenteditable).
+- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Global_attributes/contenteditable).

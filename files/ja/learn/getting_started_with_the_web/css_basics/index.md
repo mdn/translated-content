@@ -284,7 +284,7 @@ img {
 
 この記事のすべての手順に従っている場合は、次のようなページが表示されます。
 
-![Mozilla のロゴを中央に配置し、ヘッダーと段落を配置しています。これで、ページ全体の背景が青くになり、中央に配置されたメインコンテンツストリップの背景がオレンジになるなど、きれいなスタイルになりました。](website-screenshot-final.png)
+![Mozilla のロゴを中央に配置し、ヘッダーと段落を配置しています。これで、ページ全体の背景が青くなり、中央に配置されたメインコンテンツストリップの背景がオレンジになるなど、きれいなスタイルになりました。](website-screenshot-final.png)
 
 ([作成した結果はこちらから見ることができます](https://mdn.github.io/beginner-html-site-styled/)。) もしわからなくなった場合、[Github の完成したサンプルコード](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)と作業内容を常に比較することができます。
 

@@ -51,7 +51,7 @@ Les valeurs de taille de police (`font-size`) utilisant les unités em et ex ét
 
 Les valeurs de `font-size` sont à présent basées sur une «&nbsp;taille de police désirée&nbsp;» qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
 
-Consultez le {{ Bug(322943) }} pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
+Consultez le [bug Firefox 322943](https://bugzil.la/322943) pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
 
 ### Changements concernant la sécurité
 
