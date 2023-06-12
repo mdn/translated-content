@@ -74,7 +74,7 @@ slug: Web/HTML/Element/script
 
     包含 `defer` 属性的脚本会按照它们出现在文档中的顺序执行。
 
-    这个属性能够消除**解析器阻塞的 JavaScript**，在这种情况下，浏览器必须在继续解析之前加载和执行脚本。`async` 在这种情况下也有类似的效果。
+    这个属性能够消除**阻塞解析的 JavaScript**，在这种情况下，浏览器必须在继续解析之前加载和执行脚本。`async` 在这种情况下也有类似的效果。
 
 - `fetchpriority` {{Experimental_Inline}}
 
