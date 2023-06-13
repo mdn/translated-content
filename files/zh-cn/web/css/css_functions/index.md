@@ -307,7 +307,7 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : 定义三次贝塞尔曲线的缓动函数。
 - {{cssxref("easing-function#step_easing_function", "steps()")}}
-  - : 在过渡中迭代若干次“阶梯”，每个“阶梯”停留相同的时间。Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
+  - : 在过渡中迭代若干次“阶梯”，每个“阶梯”停留相同的时间。
 
 ## 动画函数
 
