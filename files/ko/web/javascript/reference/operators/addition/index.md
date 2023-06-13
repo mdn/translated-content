@@ -1,7 +1,10 @@
 ---
 title: 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
+l10n:
+  sourceCommit:93d2d79c1c68af93f2730d27cdea9d527eee0d7a
 ---
+
 {{jsSidebar("Operators")}}
 
 더하기 연산자(`+`)는 숫자 피연산자의 합을 구하거나, 문자열을 서로 연결합니다.
