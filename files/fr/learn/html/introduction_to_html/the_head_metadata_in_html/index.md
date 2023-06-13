@@ -250,7 +250,7 @@ Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes mainten
 2. Ouvrez le fichier HTML à la fois dans votre navigateur et votre éditeur de texte.
 3. En suivant les informations fournies ci-dessus, ajoutez les éléments {{htmlelement("link")}} et {{htmlelement("script")}} à votre HTML, afin que les CSS et le JavaScript soient appliqués au HTML.
 
-Si a été fait correctement, après avoir enregistré le HTML, puis actualisé la page, vous verrez que les choses ont changé :
+Si ç'a été fait correctement, après avoir enregistré le HTML, puis actualisé la page, vous verrez que les choses ont changé :
 
 ![Exemple montrant une page sur laquelle on a appliqué du CSS et du JavaScript. Le CSS a rendu la page verte, alors que le JavaScript a ajouté une liste dynamique à la page.](js-css-exemple.png)
 
