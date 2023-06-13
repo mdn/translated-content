@@ -1,38 +1,50 @@
 ---
-title: HTMLCanvasElement.toDataURL()
+title: "HTMLCanvasElement: toDataURL() メソッド"
 slug: Web/API/HTMLCanvasElement/toDataURL
+l10n:
+  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` パラメータ（デフォルトは[PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)形式）で指定される画像フォーマット形式の [data URI](/ja/docs/Web/HTTP/data_URIs) を返すメソッドです。返り値となる画像の解像度は 96 dpi です。
+**`HTMLCanvasElement.toDataURL()`** メソッドは、 `type` 引数で指定された形式で画像を表現したものが入った[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を返します。
 
-- キャンバスの幅か高さが、`0` もしくは [maximum canvas size](/ja/docs/Web/HTML/Element/canvas#Maximum_canvas_size) より大きい場合、文字列 `"data:,"`を返します。
-- `image/png` 形式を指定したにもかかわらず返り値が `data:image/png` で始まる場合、要求された形式には対応していません。
-- Chrome は `image/webp` 形式に対応します。
+希望するファイル形式や画像品質を指定することができます。
+ファイル形式を指定しなかった場合、または指定された形式に対応していない場合は、データは `image/png` として書き出されます。
+言い換えれば、他のリクエストされた `type` に対して、返値が `data:image/png` で始まる場合、その形式は対応していないということです。
+
+ブラウザーは `image/png` に対応している必要があります。多くのブラウザーは `image/jpeg` や `image/webp` などの他の形式にも対応しています。
+
+作成する画像データの解像度は、解像度メタデータのエンコーダーに対応したファイル形式の場合、 96dpi となります。
 
 ## 構文
 
-```
-canvas.toDataURL(type, encoderOptions);
+```js-nolint
+toDataURL()
+toDataURL(type)
+toDataURL(type, encoderOptions)
 ```
 
 ### 引数
 
 - `type` {{optional_inline}}
-  - : 画像フォーマットを示す {{domxref("DOMString")}} 。 指定しなかった場合、デフォルトのフォーマット形式は `image/png` です。
+  - : 文字列で、画像形式を表します。
+  既定の形式は `image/png` です。この形式は、指定された形式に対応していない場合にも使用されます。
 - `encoderOptions` {{optional_inline}}
-  - : `0` から `1` の間の {{jsxref("Number")}} で示す、 `image/jpeg` や `image/webp` のような非可逆圧縮を使う画像フォーマットの画質です。
-    この引数がその他の値だった場合、デフォルトの画質が使われます。デフォルト値は `0.92` です。その他の引数は無視されます。
+  - : `0` から `1` の間の数値であり、作成する画像が可逆圧縮（`image/jpeg` や `image/webp` など）であった場合の画像品質を示します。
+    このオプションが指定されなかったり、許可されている範囲外の数値であったりした場合は、ユーザーエージェントは既定の品質値を使用します。
 
 ### 返値
 
-要求された[data URI](/ja/docs/Web/HTTP/data_URIs)を含む {{domxref("DOMString")}} 。
+要求された[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) の入った文字列です。
+
+キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Element/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
 
 ### 例外
 
 - `SecurityError`
-  - : キャンバスのビットマップが origin clean ではありません。少なくとも一部、ドキュメントがロードされたサイト以外のサイトからロードされた、またはロードされた可能性のあるコンテンツを含んでいます。（訳注：いわゆる「汚染されたキャンバス」の問題です。[画像とキャンバスをオリジン間で利用できるようにする](/ja/docs/Web/HTML/CORS_enabled_image)もあわせて参照してください）
+  - : キャンバスのビットマップがオリジンクリーンではありません。
+    そのコンテンツの少なくとも一部が、文書そのものが読み込まれたサイトとは別のサイトから読み込まれたものであるか、その可能性があります。
 
 ## 例
 
@@ -45,8 +57,8 @@ canvas.toDataURL(type, encoderOptions);
 以下のコードによりキャンバスの Data URL を取得できます。
 
 ```js
-var canvas = document.getElementById('canvas');
-var dataURL = canvas.toDataURL();
+const canvas = document.getElementById("canvas");
+const dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
@@ -55,15 +67,15 @@ console.log(dataURL);
 ### JPEG の画質を設定する
 
 ```js
-var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
-// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
+// data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ…9oADAMBAAIRAxEAPwD/AD/6AP/Z"
+const mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
+const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
-### Example: Dynamically change images
+### 例: 動的に画像を変更
 
-You can use this technique in coordination with mouse events in order to dynamically change images (gray-scale vs. color in this example):
+マウスイベントと連携して使用することで、画像を動的に変化させることができます（この例では、グレースケールとカラー）。
 
 #### HTML
 
@@ -74,44 +86,46 @@ You can use this technique in coordination with mouse events in order to dynamic
 #### JavaScript
 
 ```js
-window.addEventListener('load', removeColors);
+window.addEventListener("load", removeColors);
 
 function showColorImg() {
-  this.style.display = 'none';
-  this.nextSibling.style.display = 'inline';
+  this.style.display = "none";
+  this.nextSibling.style.display = "inline";
 }
 
 function showGrayImg() {
-  this.previousSibling.style.display = 'inline';
-  this.style.display = 'none';
+  this.previousSibling.style.display = "inline";
+  this.style.display = "none";
 }
 
 function removeColors() {
-  var aImages = document.getElementsByClassName('grayscale'),
-      nImgsLen = aImages.length,
-      oCanvas = document.createElement('canvas'),
-      oCtx = oCanvas.getContext('2d');
-  for (var nWidth, nHeight, oImgData, oGrayImg, nPixel, aPix, nPixLen, nImgId = 0; nImgId < nImgsLen; nImgId++) {
-    oColorImg = aImages[nImgId];
-    nWidth = oColorImg.offsetWidth;
-    nHeight = oColorImg.offsetHeight;
-    oCanvas.width = nWidth;
-    oCanvas.height = nHeight;
-    oCtx.drawImage(oColorImg, 0, 0);
-    oImgData = oCtx.getImageData(0, 0, nWidth, nHeight);
-    aPix = oImgData.data;
-    nPixLen = aPix.length;
-    for (nPixel = 0; nPixel < nPixLen; nPixel += 4) {
-      aPix[nPixel + 2] = aPix[nPixel + 1] = aPix[nPixel] = (aPix[nPixel] + aPix[nPixel + 1] + aPix[nPixel + 2]) / 3;
+  const images = document.getElementsByClassName("grayscale");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  for (const colorImg of images) {
+    const width = colorImg.offsetWidth;
+    const height = colorImg.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(colorImg, 0, 0);
+    const imgData = ctx.getImageData(0, 0, width, height);
+    const pix = imgData.data;
+    const pixLen = pix.length;
+    for (let pixel = 0; pixel < pixLen; pixel += 4) {
+      pix[pixel + 2] =
+        pix[pixel + 1] =
+        pix[pixel] =
+          (pix[pixel] + pix[pixel + 1] + pix[pixel + 2]) / 3;
     }
-    oCtx.putImageData(oImgData, 0, 0);
-    oGrayImg = new Image();
-    oGrayImg.src = oCanvas.toDataURL();
-    oGrayImg.onmouseover = showColorImg;
-    oColorImg.onmouseout = showGrayImg;
-    oCtx.clearRect(0, 0, nWidth, nHeight);
-    oColorImg.style.display = "none";
-    oColorImg.parentNode.insertBefore(oGrayImg, oColorImg);
+    ctx.putImageData(imgData, 0, 0);
+    const grayImg = new Image();
+    grayImg.src = canvas.toDataURL();
+    grayImg.onmouseover = showColorImg;
+    colorImg.onmouseout = showGrayImg;
+    ctx.clearRect(0, 0, width, height);
+    colorImg.style.display = "none";
+    colorImg.parentNode.insertBefore(grayImg, colorImg);
   }
 }
 ```
@@ -122,9 +136,8 @@ function removeColors() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 関連情報
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- [Data URIs](/ja/docs/Web/HTTP/data_URIs) in the [HTTP](/ja/docs/Web/HTTP) reference.
+- [データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)（[HTTP](/ja/docs/Web/HTTP) リファレンス）

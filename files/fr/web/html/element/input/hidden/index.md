@@ -21,7 +21,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de l'élément contient une chaîne de caractères masquée qui est envoyée au serveur avec le formulaire. Cette valeur ne peut pas directement être éditée par l'utilisateur sur la page (mais elle est toujours accessible et modifiable via les outils de développement intégrés au navigateur).
 
 > **Attention :** Bien que la valeur ne soit pas affichée sur la page, elle est visible et modifiable par l'utilisateur si ce dernier utilise les outils de développements intégrés aux navigateurs (par exemple "Afficher la source"). Le type `hidden` ne doit donc pas être utilisé comme mécanisme de sécurité.
 
@@ -33,7 +33,7 @@ En complément des attributs communs à l'ensemble des éléments `<input>`, les
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`name`](#name) | À l'instar de l'ensemble des champs de saisie, ce sera le nom auquel associer la donnée lors de l'envoi du formulaire. Si la valeur spéciale `"_charset_"` est utilisée pour cet attribut, la valeur du champ sera l'encodage utilisé pour l'envoi du formulaire. |
 
-### {{htmlattrdef("name")}}
+### `name`
 
 Cet attribut fait partie des attributs communs à l'ensemble des éléments `<input>` mais il possède un comportement particulier pour les champs masqués. En effet, si cet attribut utilise la valeur spéciale `"_charset_"`, la valeur du champ envoyée avec le formulaire sera l'encodage utilisé pour l'envoi du formulaire.
 
@@ -163,7 +163,7 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td>{{htmlattrxref("autocomplete", "input")}}</td>
+      <td><a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>

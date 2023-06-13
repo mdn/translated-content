@@ -1,6 +1,6 @@
 ---
 title: CSS格線布局
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 ---
 
 {{CSSRef}}
@@ -128,18 +128,18 @@ slug: Web/CSS/CSS_Grid_Layout
 
 ## 指引
 
-- [格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
-- [格線布局與其它布局的關係](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-- [使用指定的格線命名排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [格線模板區域](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-- [Layout using named grid lines](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [使用指定的網格線排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-- [CSS 格線與漸進增強](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_)
+- [格線布局的基本概念](/zh-TW/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [格線布局與其它布局的關係](/zh-TW/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [使用指定的格線命名排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [格線模板區域](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- [Layout using named grid lines](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [使用指定的網格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_CSS_grid_layout)
+- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Box_Alignment_in_CSS_grid_layout)
+- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_grid_layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_grid_layout/CSS_grid_layout_and_Accessibility)
+- [CSS 格線與漸進增強](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Realising_common_layouts_using_CSS_Grid_)
 
 ## 外部資源
 

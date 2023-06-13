@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。
 
-我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)，可以同时处理行和列上的布局。
+我们说 flexbox 是一种一维的布局，是因为一个 flexbox 一次只能处理一个维度上的元素布局，一行或者一列。作为对比的是另外一个二维布局 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)，可以同时处理行和列上的布局。
 
 ## flexbox 的两根轴线
 

@@ -1,6 +1,6 @@
 ---
 title: Fusion des marges
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 tags:
   - CSS
   - Reference

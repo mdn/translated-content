@@ -17,6 +17,7 @@ l10n-fr:
 
 l10n-ja:
   - files/ja/**/*
+  - docs/ja/**/*
   - /.github/ISSUE_TEMPLATE/page-report-ja.yml
 
 l10n-ko:

@@ -65,5 +65,5 @@ slug: Glossary/Grid_Tracks
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: [Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- CSS Grid Layout Guide: [Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Definition of Grid Tracks in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)

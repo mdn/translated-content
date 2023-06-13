@@ -3,7 +3,7 @@ title: Grid Cell
 slug: Glossary/Grid_Cell
 ---
 
-在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)中，**网络单元格**是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
+在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中，**网络单元格**是 CSS 网格中的最小单元。它是四条{{glossary("grid lines","网格线")}}之间的空间，概念上非常像表格单元格。
 
 ![Diagram showing an individual cell on the grid.](1_grid_cell.png)
 
@@ -62,5 +62,5 @@ slug: Glossary/Grid_Cell
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
 - [Definition of Grid Cells in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)

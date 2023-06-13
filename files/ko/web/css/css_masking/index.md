@@ -1,8 +1,9 @@
 ---
 title: CSS Masking
-slug: Web/CSS/CSS_Masking
+slug: Web/CSS/CSS_masking
 original_slug: Web/CSS/CSS_Masks
 ---
+
 {{CSSRef}}
 
 **CSS Masking**은 마스킹 및 클리핑을 포함해 시각 요소의 부분 또는 전체를 숨기기 위한 수단을 정의하는 CSS 모듈입니다.

@@ -245,7 +245,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 > **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
 
 - {{jsxref("String.prototype.anchor()")}}
-  - : {{htmlattrxref("name", "a", "&lt;a name=\"name\"&gt;")}} (hipertexto destino)
+  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Element/a#name) (hipertexto destino)
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
@@ -255,13 +255,13 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 - {{jsxref("String.prototype.fixed()")}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}}
-  - : {{htmlattrxref("color", "font", "&lt;font color=\"color\"&gt;")}}
+  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Element/font#color)
 - {{jsxref("String.prototype.fontsize()")}}
-  - : {{htmlattrxref("size", "font", "&lt;font size=\"size\"&gt;")}}
+  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Element/font#size)
 - {{jsxref("String.prototype.italics()")}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}}
-  - : {{htmlattrxref("href", "a", "&lt;a href=\"url\"&gt;")}} (enlace a URL)
+  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Element/font#size) (enlace a URL)
 - {{jsxref("String.prototype.small()")}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}}

@@ -353,7 +353,7 @@ switch(expr) {
     // résultat attendu : "Les mangues et les papayes sont à 5,24 € le kilo."
     break;
   default:
-    console.log('Désolé, nous n'avons plus de ' + expr + '.');
+    console.log(`Désolé, nous n'avons plus de ${expr}.`);
 }
 ```
 

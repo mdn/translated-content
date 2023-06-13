@@ -30,7 +30,7 @@ var constructor = document.registerElement(tag-name, options);
 這是一個非常簡單的例子:
 
 ```js
-var Mytag = document.registerElement('my-tag');
+var Mytag = document.registerElement("my-tag");
 ```
 
 現在新的標籤已經在瀏覽器中註冊了. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
