@@ -23,7 +23,7 @@ selector {
 
 ## 转换函数
 
-{{CSSxRef("&lt;transform-function&gt;")}} CSS [数据类型](/zh-CN/doc/Web/CSS_Types)代表外观变换。它被用作 {{CSSxRef("transform")}} 属性的一个值。
+{{CSSxRef("&lt;transform-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)代表外观变换。它被用作 {{CSSxRef("transform")}} 属性的一个值。
 
 ### 转换函数
 
@@ -151,7 +151,7 @@ selector {
 
 ## 过滤器函数
 
-{{CSSxRef("&lt;filter-function&gt;")}} CSS [数据类型](/zh-CN/doc/Web/CSS_Types)表示可以改变输入图像的外观的图形效果。它被用于 {{CSSxRef("filter")}} 和 {{CSSxRef("backdrop-filter")}} 属性。
+{{CSSxRef("&lt;filter-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示可以改变输入图像的外观的图形效果。它被用于 {{CSSxRef("filter")}} 和 {{CSSxRef("backdrop-filter")}} 属性。
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : 增加图像的高斯模糊度。
@@ -176,7 +176,7 @@ selector {
 
 ## 颜色值函数
 
-{{CSSxRef("color_value","&lt;color&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS_Typs)指定了不同的颜色表示方法。
+{{CSSxRef("color_value","&lt;color&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)指定了不同的颜色表示方法。
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : 根据红、绿、蓝和 alpha（透明度）成分来定义一个给定的颜色。
